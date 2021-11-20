@@ -6,7 +6,7 @@
 label v10_chloe_gym:
     play music "music/v10/Scene 30/Track Scene 30_1.mp3" fadein 3
     # MC and Chloe are in the gym which happens to be empty, the lights are on and the door is unlocked
-    scene v10chg1 # TPP Show MC and Chloe at door to  gym, light are on, MC is pulling open the door
+    scene v10chg1 # TPP Show MC and Chloe at door to gym, light are on, MC is pulling open the door
     with fade
 
     pause 0.5
@@ -169,6 +169,7 @@ label v10_chloe_gym:
             "Look closer":
                 label v10s30_galleryScene:
                 $ v10_chloe_locker = True
+                #$ add_point(KCT.TROUBLEMAKER, sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex ])) ###Loyaltymod
                 scene v10chg6a # FPP Same angle as c10chg6a, Close up shot of Chloe's butt while she's bending over
                 with dissolve
 

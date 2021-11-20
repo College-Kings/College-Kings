@@ -1,39 +1,37 @@
 init python:
     # Emily's messages
     def v1_reply1():
-        setattr(store, "nohardfeelings", True)
-        grantAchievement("no_hard_feelings")
+        grant_achievement("no_hard_feelings")
 
-        contact_Emily.newMessage(_("Cool :)"))
+        emily.messenger.newMessage(_("Cool :)"))
 
     def v1_reply2():
-        setattr(store, "openwound", True)
-        grantAchievement("open_wound")
+        grant_achievement("open_wound")
 
-        addPoint("tm")
-        contact_Emily.newMessage(_("Ugh :/"))
+        add_point(KCT.TROUBLEMAKER)
+        emily.messenger.newMessage(_("Ugh :/"))
 
     # Julia messages
     def v1_reply3():
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
 
     def v1_reply4():
-        addPoint("bro")
+        add_point(KCT.BRO)
 
     # Lauren messages
     def v1_reply5():
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
 
     # Lauren messages
     def v1_reply6():
-        addPoint("bf")
-        contact_Lauren.newMessage(_("Cool :)"))
+        add_point(KCT.BOYFRIEND)
+        lauren.messenger.newMessage(_("Cool :)"))
 
     def v1_reply7():
-        addPoint("tm")
-        contact_Lauren.newMessage(_("Idk, it's just feels kinda weird now. Can we please just talk tomorrow?"))
-        contact_Lauren.addReply(_("Fine"))
-        contact_Lauren.newMessage(_(":)"))
+        add_point(KCT.TROUBLEMAKER)
+        lauren.messenger.newMessage(_("Idk, it's just feels kinda weird now. Can we please just talk tomorrow?"))
+        lauren.messenger.addReply(_("Fine"))
+        lauren.messenger.newMessage(_(":)"))
 
 label v1start:
 label starta: #for compatibility only
@@ -69,7 +67,7 @@ label starta: #for compatibility only
     $ kiwiiUsers["MC"]["username"] = name
 
     u "Hmm...?"
-
+    
     scene s2
     with dissolve
 
@@ -142,7 +140,7 @@ label starta: #for compatibility only
     scene v1jul1
     with dissolve
 
-    u "Oh you're dropping me off? I was gonna take the train."
+    u "Oh, you're dropping me off? I was gonna take the train."
 
     scene v1jul1a
     with dissolve
@@ -164,9 +162,9 @@ label starta: #for compatibility only
     u "(Huh?)"
     
     # Emily's messages
-    $ contact_Emily.newMessage(_("Hey...\nI know we haven't talked much after we broke up, but I just wanted to let you know that I didn't get into Stanford, so I'll be going to San Vallejo as well.\nGuess I'll see you there. :)"), queue=False)
-    $ contact_Emily.addReply(_("Yeah... I'll see you there."), v1_reply1)
-    $ contact_Emily.addReply(_("You cheated on me.\nGo to hell!"), v1_reply2)
+    $ emily.messenger.newMessage(_("Hey...\nI know we haven't talked much after we broke up, but I just wanted to let you know that I didn't get into Stanford, so I'll be going to San Vallejo as well.\nGuess I'll see you there. :)"), queue=False)
+    $ emily.messenger.addReply(_("Yeah... I'll see you there."), v1_reply1)
+    $ emily.messenger.addReply(_("You cheated on me.\nGo to hell!"), v1_reply2)
 
     show screen phoneTutorial
     call screen phone
@@ -205,7 +203,7 @@ label starta: #for compatibility only
             hide s14
             show s14a
             with dissolve
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "I don't know... it might be fun."
 
@@ -213,7 +211,7 @@ label starta: #for compatibility only
             hide s14
             show s14a
             with dissolve
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "No, I don't think so, Julia."
 
@@ -620,7 +618,7 @@ label starta: #for compatibility only
             u "Wow Elijah, way to start the fun."
 
             $ funofelijah = True
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s46b
             with dissolve
@@ -702,7 +700,7 @@ label starta: #for compatibility only
 
     menu:
         "Agree":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s50a
             with dissolve
@@ -717,7 +715,7 @@ label starta: #for compatibility only
             la "Not at all, pretty much any girl that's part of the Deer hates it."
 
         "Disagree":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s50a
             with dissolve
@@ -777,7 +775,7 @@ label starta: #for compatibility only
             la "I bet you think she's cute, don't you?"
 
         "Defend Autumn":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s50a
             with dissolve
@@ -806,7 +804,7 @@ label starta: #for compatibility only
             u "Only for the right girl."
 
         "Yeah, kinda":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s53a
             with dissolve
@@ -870,14 +868,13 @@ label starta: #for compatibility only
     scene s50 # freeroam
     with dissolve
 
-    $ contact_Julia.newMessage(_("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you"), queue=False)
-    $ contact_Julia.addReply(_("Love you too."), v1_reply3)
-    $ contact_Julia.addReply(_("Thanks, Julia :)"), v1_reply4)
+    $ julia.messenger.newMessage(_("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you"), queue=False)
+    $ julia.messenger.addReply(_("Love you too."), v1_reply3)
+    $ julia.messenger.addReply(_("Thanks, Julia :)"), v1_reply4)
 
     play sound "sounds/vibrate.mp3"
     
     # Enter free roam
-    $ freeRoam = True
     show screen freeRoamTutorial
     call screen v1_freeRoam1_1
     with dissolve
@@ -912,7 +909,7 @@ label starta: #for compatibility only
 
         menu:
             "She's hot.":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene s50ri2a
                 with dissolve
@@ -1048,7 +1045,7 @@ label starta: #for compatibility only
 
         menu:
             "So... the nerds?":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene s50el2a
                 with dissolve
@@ -1063,7 +1060,7 @@ label starta: #for compatibility only
                 el "Just get out of my face."
 
             "That's cool.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene s50el2a
                 with dissolve
@@ -1145,14 +1142,13 @@ label starta: #for compatibility only
 
         menu:
             "Flirt":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ v1_hitOnNora = True
 
                 scene s56no1a
                 with dissolve
 
-                $ keepitmoving = True
-                $ grantAchievement("keep_it_moving")
+                $ grant_achievement("keep_it_moving")
 
                 u "Actually, I knew that. I just wanted to talk to you 'cause you're really cute."
 
@@ -1210,13 +1206,10 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_3
 
 label efra:
-    $ freeRoam = False
     scene s59
     stop music fadeout 2.0
     play sound "sounds/knock.mp3"
     
-    "*Knock knock knock*"
-
     scene s60
     with dissolve
 
@@ -1260,7 +1253,7 @@ label efra:
     scene s63e
     with dissolve
 
-    u "Oh that's cool."
+    u "Oh, that's cool."
 
     scene s63d
     with dissolve
@@ -1308,7 +1301,7 @@ label efra:
 
     menu:
         "So, they're equally good?":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s63a
             with dissolve
@@ -1329,7 +1322,7 @@ label efra:
             with dissolve
 
         "The Wolves sound sick.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s64a
             with dissolve
@@ -1426,17 +1419,17 @@ label efra:
     scene s61a
     with dissolve
 
-    $ contact_Lauren.addReply(_("Hey Lauren, would you want to hang out with me and my friends tonight?"))
-    $ contact_Lauren.newMessage(_("Yeah sounds good :) Where do you wanna meet?"))
-    $ contact_Lauren.addReply(_("Just come to dorm 109 at 8"))
-    $ contact_Lauren.newMessage(_("Okay, will do"))
-    $ contact_Lauren.addReply(_("See you later, cutie"), v1_reply5)
-    $ contact_Lauren.addReply(_("Cool"))
+    $ lauren.messenger.addReply(_("Hey Lauren, would you want to hang out with me and my friends tonight?"))
+    $ lauren.messenger.newMessage(_("Yeah sounds good :) Where do you wanna meet?"))
+    $ lauren.messenger.addReply(_("Just come to dorm 109 at 8"))
+    $ lauren.messenger.newMessage(_("Okay, will do"))
+    $ lauren.messenger.addReply(_("See you later, cutie"), v1_reply5)
+    $ lauren.messenger.addReply(_("Cool"))
 
     label v1_phoneCheck1:
-        if contact_Lauren.getReplies():
+        if lauren.messenger.replies:
             call screen phone
-        if contact_Lauren.getReplies():
+        if lauren.messenger.replies:
             "(I should reply to Lauren.)"
 
             scene s61
@@ -1452,21 +1445,20 @@ label efra:
     scene s61a
     with dissolve
 
-    u "Okay man I did it."
+    u "Okay man, I did it."
 
     scene s61c
     with dissolve
 
     imre "Awesome! Get ready for a wild night, my man."
 
+    label continueonea: #for compatibility only
     scene s65
     with Fade(1, 0, 1)
     stop music fadeout 2.0
-    " "
 
-    label continueonea: #for compatibility only
     play sound "sounds/knock.mp3"
-    "*Knock knock knock*"
+    pause 0.75
 
     scene s66
     with dissolve
@@ -1503,10 +1495,9 @@ label efra:
         with dissolve
         u "Yeah, that's right. Good to see you again."
 
+    label talktorib: #for compatibility only
     scene s68
     with fade
-
-    label talktorib: #for compatibility only
     ri "Sooo, is it just us three for tonight?"
 
     scene s68a
@@ -1520,8 +1511,6 @@ label efra:
     u "Yeah, she should be here any minute."
 
     play sound "sounds/knock.mp3"
-
-    "*Knock knock knock*"
 
     scene s68a
     with dissolve
@@ -1693,7 +1682,7 @@ label efra:
             la "I guess we'll never know."
 
         "Dodged a bullet there.":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s73gr
             with dissolve
@@ -1705,10 +1694,10 @@ label efra:
 
             imre "Damn..."
 
+    label ao_bd: #for compatibility only
     scene s72f
     with dissolve
 
-    label ao_bd: #for compatibility only
     imre "Okay, it's your turn to dare someone, Lauren."
 
     scene s73bl
@@ -1722,7 +1711,7 @@ label efra:
     ri "Oh that's easy. Let's do it, Imre."
 
     scene s75
-    with fade
+    with dissolve
 
     imre "Great idea, Lauren!"
 
@@ -1730,8 +1719,7 @@ label efra:
     with hpunch
 
     play sound "sounds/slap.mp3"
-
-    "*Slap*"
+    pause 1.5
 
     scene s75b
     with dissolve
@@ -1764,7 +1752,7 @@ label efra:
 
     menu:
         "Take your shirt off":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s76
             with dissolve
@@ -1821,7 +1809,7 @@ label efra:
 
     menu:
         "Do it, or drink.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s71ef
             with dissolve
@@ -1838,7 +1826,7 @@ label efra:
             " "
 
         "You're right.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             
             scene s71ef
             with dissolve
@@ -1875,7 +1863,7 @@ label efra:
 
     menu:
         "Riley's mine.":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s79b
             with dissolve
@@ -1887,7 +1875,7 @@ label efra:
 
             menu:
                 "You're right, sorry.":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
 
                     scene s79a
                     with dissolve
@@ -1899,7 +1887,7 @@ label efra:
                     imre "It's fine bro, I get it. She is really cute."
 
                 "She wants me.":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     scene s79b
                     with dissolve
@@ -1926,7 +1914,7 @@ label efra:
                     jump at_bd
 
         "They're both hot.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s79
             with dissolve
@@ -1996,12 +1984,12 @@ label at_bd:
 
     ### Sex dream
     label sexdream1: #for compatibility only
+    show screen fantasyOverlay
     scene sda1  ### close to the kitchen counter
     with Fade (1,0,1)
 
     ri "Wow, you guys have a really nice house."
 
-    show screen fantasyOverlay
     scene sda1a
     with dissolve
 
@@ -2410,7 +2398,7 @@ label v1_nsfwSkipLabel1:
 
     menu:
         "Move in with me?":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s87a
             with dissolve
@@ -2428,7 +2416,7 @@ label v1_nsfwSkipLabel1:
             u "How about we go to the park this afternoon? I'll bring some sandwiches and we'll make your day better."
 
         "Bad roommates suck.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s87a
             with dissolve
@@ -2735,7 +2723,7 @@ label aw_bd:
 
     menu:
         "You're really beautiful.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "You know... you're really beautiful."
 
@@ -2744,7 +2732,7 @@ label aw_bd:
             la "Awww."
 
         "You're not ugly.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "You know... you're not ugly."
 
@@ -2767,9 +2755,7 @@ label aw_bd:
                 scene s90
                 with dissolve # kiss
                 $ v1_kissLauren = True
-
-                $ romeo = True
-                $ grantAchievement("romeo")
+                $ grant_achievement("romeo")
 
                 play sound "sounds/kiss.mp3"
 
@@ -2849,7 +2835,7 @@ label aw_bd:
     scene s95 # you falling onto bed
     with vpunch
 
-    "*Hmpf*"
+    pause 1
 
     scene s96 #showing Imre in front of your bed looking down on you
     with dissolve
@@ -2920,16 +2906,16 @@ label aw_bd:
     stop music fadeout 2.0
     play sound "sounds/vibrate.mp3"
 
-    $ contact_Ryan.newMessage(_("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"), queue=False)
-    $ contact_Ryan.addReply(_("Alright, but I'll only stay for a few hours."))
-    $ contact_Ryan.newMessage(_("Haha, trust me, you're not gonna want to leave once you see all the hot chicks there."))
-    $ contact_Ryan.newMessage(_("Just meet me in front of the Apes' frat house at 9."))
-    $ contact_Ryan.addReply(_("Okay, will do."))
+    $ ryan.messenger.newMessage(_("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"), queue=False)
+    $ ryan.messenger.addReply(_("Alright, but I'll only stay for a few hours."))
+    $ ryan.messenger.newMessage(_("Haha, trust me, you're not gonna want to leave once you see all the hot chicks there."))
+    $ ryan.messenger.newMessage(_("Just meet me in front of the Apes' frat house at 9."))
+    $ ryan.messenger.addReply(_("Okay, will do."))
 
     label repeata:
-        if contact_Ryan.getReplies():
-             call screen phone
-        if contact_Ryan.getReplies():
+        if ryan.messenger.replies:
+            call screen phone
+        if ryan.messenger.replies:
             u "(I should really check who texted me.)"
             jump repeata
 
@@ -3017,8 +3003,7 @@ label aw_bd:
     with dissolve
 
     u "Alright, let's go."
-
-    $ freeRoam = True
+    
     call screen v1_freeRoam2_1
 
 label v1_freeRoam2_sam:
@@ -3277,7 +3262,7 @@ label v1_freeRoam2_josh:
 
             menu:
                 "Say you're a fighter":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ v1_aubreywannafight = True
 
                     scene fr2jo2d
@@ -3326,7 +3311,7 @@ label v1_freeRoam2_josh:
                     u "Who's Grayson?"
 
         "Ask if she likes fighters":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene fr2jo2b
             with dissolve
@@ -3346,7 +3331,7 @@ label v1_freeRoam2_josh:
 
 
                 "I'll be the next Fight King.":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ v1_aubreywannafight = True
 
                     scene fr2jo2d
@@ -3447,10 +3432,10 @@ label v1_freeRoam2_camp:
     else:
         play sound "sounds/vibrate.mp3"
 
-        if not contact_Lauren.getMessage("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
-            $ contact_Lauren.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), queue=False)
-            $ contact_Lauren.addReply(_("Yeah, sure."), v1_reply6)
-            $ contact_Lauren.addReply(_("What is there to talk about?"), v1_reply7)
+        if not lauren.messenger.get_message("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
+            $ lauren.messenger.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), queue=False)
+            $ lauren.messenger.addReply(_("Yeah, sure."), v1_reply6)
+            $ lauren.messenger.addReply(_("What is there to talk about?"), v1_reply7)
 
         call screen v1_freeRoam2_4
 
@@ -3471,14 +3456,13 @@ label v1_freeRoam2_mason:
 
     menu:
         "Yeah, he better watch out.":
-            $ addPoint("tm")
-            $ addPoint("bro")
+            $ add_point(KCT.TROUBLEMAKER)
+            $ add_point(KCT.BRO)
 
             scene fr2ma1a
             with dissolve
 
-            $ bigmouth = True
-            $ grantAchievement("big_mouth")
+            $ grant_achievement("big_mouth")
                 
             u "Yeah, he better watch out, or I'll kick his ass."
 
@@ -3750,7 +3734,6 @@ label v1_freeRoam2_grayson2:
 
 label v1_freeRoam2_end:
 label fr2end: #for compatibility only
-    $ freeRoam = False
 
     stop music fadeout 2.0
     
@@ -3791,7 +3774,7 @@ label fr2end: #for compatibility only
 
     menu:
         "You're right, I'll talk to her.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s108e
             with dissolve
@@ -3832,7 +3815,7 @@ label fr2end: #for compatibility only
             scene s110 ### ryans hand on your back
             with dissolve
 
-            "*Push*"
+            pause 0.75
 
             scene s111 ### you stumbling into chloe and the guy
             with vpunch
@@ -3897,7 +3880,7 @@ label fr2end: #for compatibility only
 
     menu:
         "Apologize":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "I'm really sorry for interrupting your conversation."
 
@@ -3912,7 +3895,7 @@ label fr2end: #for compatibility only
             u "In that case, you're very welcome."
 
         "Make fun of him":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "Don't worry, I'm not gonna start talking about my rock collection."
 
@@ -3987,16 +3970,22 @@ label fr2end: #for compatibility only
 
     cl "One time a guy stole my underwear and somehow the dean found out about it."
 
+    scene s116a
+    with dissolve
+    
+    scene s116
+    with dissolve
+
     cl "Both of us then had to come to his office, so that the guy could apologize and give me my panties back right in front of the dean."
 
     cl "It was sooo embarrassing."
 
+    scene s116a
+    with dissolve
+
     menu:
         "Empathize":
-            $ addPoint("bf")
-
-            scene s116a
-            with dissolve
+            $ add_point(KCT.BOYFRIEND)
 
             u "Wow, that sounds awful."
 
@@ -4006,10 +3995,7 @@ label fr2end: #for compatibility only
             cl "It really was."
 
         "Poke fun":
-            $ addPoint("tm")
-
-            scene s116a
-            with dissolve
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Hahaha, sounds like the dean was into you."
 

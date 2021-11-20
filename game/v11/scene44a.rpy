@@ -5,7 +5,7 @@
 label v11_rose_underground:
     scene v11sub1 # TPP. Show MC sitting down next to ms. rose on subway
     with dissolve
-    play music "music/v11/Scene 44a/Track Scene 44a.mp3" fadein 2
+    play music "music/v11/Scene 16/Track Scene 16.mp3" fadein 2
     pause 1
 
     scene v11sub2 # FPP. Show ms rose, mouth open
@@ -85,6 +85,7 @@ label v11_rose_underground:
         with dissolve
 
         ro "I'll be sure to have your assigned room close to mine, because I plan on-"
+        
     else:
 
         scene v11sub2c
@@ -248,4 +249,3 @@ label v11_rose_underground:
     pause 1
     stop music fadeout 3
     jump v11_lobby_mrlee
-

@@ -3,6 +3,8 @@
 # Characters: Ms. Rose(Outfit 1), MC (Outfit 3), Chris(Outfit 2), Imre(Outfit 1), Finn(Outfit 3), 
 # Time: Friday Afternoon
 label v9_dinner_w_rose:
+    play music "music/v9/Scene 23/Track Scene 23.mp3" fadein 2
+
     scene v9damr1 # FPP. Fade in at Ms. Rose's house
     with fade
 
@@ -149,7 +151,7 @@ label v9_dinner_w_rose:
 
     menu:
         "Talk about working out":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v9damr9
             with dissolve
@@ -304,7 +306,7 @@ label v9_dinner_w_rose:
 
     menu:
         "Offer to help":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v9damr12f # FPP. Same camera as v9damr12, Show Ms. Rose now stood at the end of table, Imre seated to MC's right,neutral expressions,  Ms. Rose mouth closed, Imre mouth closed
             with dissolve

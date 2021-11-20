@@ -10,6 +10,8 @@ label v12_lauren_sex:
 
     pause 0.75
 
+    play music "music/v12/Scene 29/Track Scene 29_1.mp3" fadein 2
+
     if laurenrs:
         scene v12las2 # TPP. Show Lauren kissing MC, MC still sitting down
         with dissolve
@@ -84,7 +86,7 @@ label v12_lauren_sex:
     scene v12las1d
     with dissolve
 
-    la "Yes!, I'm gonna get changed also. I'll try not to take too long. *Chuckles*"
+    la "Yes! I'm gonna get changed also. I'll try not to take too long. *Chuckles*"
 
     scene v12las1c
     with dissolve
@@ -121,6 +123,9 @@ label v12_lauren_sex:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 29/Track Scene 29_2.mp3" fadein 2
+
     scene v12las9 # TPP. Show MC wearing his suit, looking at the mirror, smiling, posing seductively, mouth closed
     with dissolve
 
@@ -155,6 +160,9 @@ label v12_lauren_sex:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v12/Scene 29/Track Scene 29_3.mp3" fadein 2
 
     scene v12las14 # FPP. MC and Lauren in lobby, MC and Lauren looking at each other, Lauren embarassed, mouth closed, looking at the ground, blushing
     with dissolve
@@ -268,6 +276,9 @@ label v12_lauren_sex:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 29/Track Scene 29_4.mp3" fadein 2
+
     scene v12las22 # FPP. MC and Lauren inside the restaurant, standing next to each other, greeter in front of them MC looking at the greeter, greeter looking at Lauren, greeter slight smile, mouth open
     with dissolve
 
@@ -328,6 +339,7 @@ label v12_lauren_sex:
 
     menu:
         "Let her vent":
+            $ add_point(KCT.BRO)
             scene v12las23b
             with dissolve
 
@@ -336,14 +348,15 @@ label v12_lauren_sex:
             scene v12las22b
             with dissolve
 
-            greeter "My apologies, Madame. If we had an empty table I'd be happy to accommodate you, but unfortunately we do not."
+            greeter "My apologies, Madame. If we had an empty table I'd be happy to accommodate you, but unfortunately we are fully booked for tonight."
 
             scene v12las22c # FPP. Same as v12las22, greeter looking at MC, greeter slight smile, mouth closed
             with dissolve
 
-            u "It's not a problem sir. Thank you."
+            u "It's not a problem madam. Thank you."
 
         "Comfort her":
+            $ add_point(KCT.BOYFRIEND)
             $ v12_lauren_points += 1
 
             u "Lauren, relax. *Chuckles* I appreciate that you planned on doing this, and no matter how it happened, it's not a big deal. Don't stress."
@@ -354,7 +367,7 @@ label v12_lauren_sex:
             scene v12las22c
             with dissolve
 
-            u "Sir, thank you for everything."
+            u "Thank you for everything, Madam."
 
             scene v12las23b
             with dissolve
@@ -384,7 +397,7 @@ label v12_lauren_sex:
             scene v12las23a
             with dissolve
 
-            u "Haha, no worries. We'll have fun tonight regardless, have a good evening Sir."
+            u "Haha, no worries. We'll have fun tonight regardless, have a good evening Madam."
 
             scene v12las22c
             with dissolve
@@ -426,6 +439,9 @@ label v12_lauren_sex:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 29/Track Scene 29_5.mp3" fadein 2
+
     scene v12las28 # FPP. MC and Lauren standing in front of the game, Lauren looking at MC, MC looking at Lauren, Lauren slightly sad, mouth open
     with dissolve
 
@@ -456,6 +472,7 @@ label v12_lauren_sex:
 
     menu:
         "Talk to her":
+            $ add_point(KCT.BRO)
 
             u "I'm not. What actually matters to me is the amount of effort you've put into the night, not the way it's going. What's the saying? \"It's the thought that counts\"? *Chuckles*"
 
@@ -475,6 +492,7 @@ label v12_lauren_sex:
             la "That means a lot... Thank you, [name]."
 
         "Hold her":
+            $ add_point(KCT.BOYFRIEND)
             $ v12_lauren_points += 1
 
             scene v12las31b # FPP. Same as v12las31a, one of MC's around lauren, other hand holding lauren's hand, lauren sad, mouth closed
@@ -557,6 +575,9 @@ label v12_lauren_sex:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 29/Track Scene 29_6.mp3" fadein 2
+
     scene v12las36 # FPP. MC and Lauren in hotel lobby, looking at each other, Lauren slight smile, mouth open
     with dissolve
 
@@ -582,6 +603,7 @@ label v12_lauren_sex:
 
     menu:
         "We'll do this another day":
+            $ add_point(KCT.BRO)
 
             u "Lauren, you tried your best to make tonight special and I respect and love you for that. Just the fact that you did all of this proves how much you care about me and our relationship."
 
@@ -623,6 +645,7 @@ label v12_lauren_sex:
             jump v12_room_sneak
 
         "A little extra effort...":
+            $ add_point(KCT.BOYFRIEND)
             $ v12_lauren_points += 1
 
             scene v12las42 # TPP. Show MC trying to budge the door open, struggling, mouth open
@@ -639,6 +662,9 @@ label v12_lauren_sex:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
+            play music "music/v12/Scene 29/Track Scene 29_7.mp3" fadein 2
 
             scene v12las44 # FPP. MC and Lauren on the roof, looking at each other, Lauren smiling, mouth open
             with dissolve
@@ -772,7 +798,11 @@ label v12_lauren_sex:
                 $ v12_lauren_sex = True
 
                 if (kct == "loyal") and not (v12_lauren_points >= 3):
-                    call screen kctPopup
+                    call screen kct_popup
+
+                label v12_lauren_sex_sg:
+                
+                #$ add_point(KCT.TROUBLEMAKER, sum([ v11_rileysex, v11_chloe_sex, v12_lindsey_sex, v12_msrose_sex ])) ###Loyaltymod
 
                 scene v12las46e
                 with dissolve
@@ -781,6 +811,7 @@ label v12_lauren_sex:
 
                 scene v12las47
                 with dissolve
+                play sound "sounds/kiss.mp3"
 
                 pause
 
@@ -829,7 +860,7 @@ label v12_lauren_sex:
                 scene v12las51 # TPP. Show MC lying down in her bed, Lauren on top of him
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
                 scene v12las52 # FPP. MC looking at Lauren as she is on top of him, Lauren smiling, mouth open
                 with dissolve
@@ -846,10 +877,18 @@ label v12_lauren_sex:
 
                 la "*Chuckles* I'm sure he is."
 
+                stop music fadeout 3
+                play music "music/v12/Scene 29/Track Scene 29_8.mp3" fadein 2
+
                 scene v12las53 # TPP. Show Lauren removing her dress, MC starting to remove his shirt, both smiling, mouths closed
                 with dissolve
 
                 pause
+
+                if config_censored:
+                    call screen censoredPopup("v12s29_nsfwSkipLabel1")
+
+                show screen v12s29_lauren_sex_overlay
 
                 scene v12las53a # TPP. Same as v12las53, Show Lauren in her panties, stopping MC from removing his shirt, Lauren smiling, mouth open, MC smiling, mouth closed
                 with dissolve
@@ -881,204 +920,217 @@ label v12_lauren_sex:
 
                 pause
 
-                scene v12las54c # TPP. Same as v12las54b, MC kissing Lauren's lips, hand over her pussy
-                with dissolve
+                label v12s29_lauren_fingering: 
+                    scene v12las54c # TPP. Same as v12las54b, MC kissing Lauren's lips, hand over her pussy
+                    with dissolve
+                    play sound "sounds/kiss.mp3"
 
-                pause
+                    pause
 
-                image v12laufi = Movie(play="images/v12/Scene 29/v12laufi.webm", loop=True, image="images/v12/Scene 29/v12laufiStart.webp", start_image="images/v12/Scene 29/v12laufiStart.webp") # Lauren fingering
-                image v12laufif = Movie(play="images/v12/Scene 29/v12laufif.webm", loop=True, image="images/v12/Scene 29/v12laufiStart.webp", start_image="images/v12/Scene 29/v12laufiStart.webp") # Lauren fingering spedup
-                image v12laufi2 = Movie(play="images/v12/Scene 29/v12laufi2.webm", loop=True, image="images/v12/Scene 29/v12laufi2Start.webp", start_image="images/v12/Scene 29/v12laufi2Start.webp") # Lauren fingering TPP 2
-                image v12laufi2f = Movie(play="images/v12/Scene 29/v12laufi2f.webm", loop=True, image="images/v12/Scene 29/v12laufi2Start.webp", start_image="images/v12/Scene 29/v12laufi2Start.webp") # Lauren fingering TPP 2 spedup
+                    image v12laufi = Movie(play="images/v12/Scene 29/v12laufi.webm", loop=True, image="images/v12/Scene 29/v12laufiStart.webp", start_image="images/v12/Scene 29/v12laufiStart.webp") # Lauren fingering
+                    image v12laufif = Movie(play="images/v12/Scene 29/v12laufif.webm", loop=True, image="images/v12/Scene 29/v12laufiStart.webp", start_image="images/v12/Scene 29/v12laufiStart.webp") # Lauren fingering spedup
+                    image v12laufi2 = Movie(play="images/v12/Scene 29/v12laufi2.webm", loop=True, image="images/v12/Scene 29/v12laufi2Start.webp", start_image="images/v12/Scene 29/v12laufi2Start.webp") # Lauren fingering TPP 2
+                    image v12laufi2f = Movie(play="images/v12/Scene 29/v12laufi2f.webm", loop=True, image="images/v12/Scene 29/v12laufi2Start.webp", start_image="images/v12/Scene 29/v12laufi2Start.webp") # Lauren fingering TPP 2 spedup
 
-                scene v12laufi # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laufi # Ignore as animation
+                    with dissolve
+                    pause
 
-                la "Ahh, oh god... Please... be gentle."
+                    la "Ahh, oh god... Please... be gentle."
 
-                scene v12laufif # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laufif # Ignore as animation
+                    with dissolve
+                    pause
 
-                u "Yes, baby... Of course."
+                    u "Yes, baby... Of course."
 
-                scene v12laufi2 # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laufi2 # Ignore as animation
+                    with dissolve
+                    pause
 
-                la "Mmm, fuck... That feels good."
+                    la "Mmm, fuck... That feels good."
 
-                scene v12laufi2f # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laufi2f # Ignore as animation
+                    with dissolve
+                    pause
 
-                la "*Moans* Let me please you."
+                    la "*Moans* Let me please you."
 
-                scene v12las55 # TPP. Show MC laying on his back, Lauren moving down to suck him off, both smiling, mouths closed
-                with dissolve
+                    scene v12las55 # TPP. Show MC laying on his back, Lauren moving down to suck him off, both smiling, mouths closed
+                    with dissolve
 
-                pause
+                    pause
 
-                scene v12las56 # TPP. Show MC laying on his back, lauren with his dick in her hands, ready to suck him off, both smiling, mouths closed
-                with dissolve
+                    scene v12las56 # TPP. Show MC laying on his back, lauren with his dick in her hands, ready to suck him off, both smiling, mouths closed
+                    with dissolve
 
-                pause
+                    pause
 
-                image v12laubj = Movie(play="images/v12/Scene 29/v12laubj.webm", loop=True, image="images/v12/Scene 29/v12laubjStart.webp", start_image="images/v12/Scene 29/v12laubjStart.webp") # Lauren blowjob
-                image v12laubjf = Movie(play="images/v12/Scene 29/v12laubjf.webm", loop=True, image="images/v12/Scene 29/v12laubjStart.webp", start_image="images/v12/Scene 29/v12laubjStart.webp") # Lauren blowjob spedup
-                image v12laubj2 = Movie(play="images/v12/Scene 29/v12laubj2.webm", loop=True, image="images/v12/Scene 29/v12laubj2Start.webp", start_image="images/v12/Scene 29/v12laubj2Start.webp") # Lauren blowjob TPP 2
-                image v12laubj2f = Movie(play="images/v12/Scene 29/v12laubj2f.webm", loop=True, image="images/v12/Scene 29/v12laubj2Start.webp", start_image="images/v12/Scene 29/v12laubj2Start.webp") # Lauren blowjob TPP 2 spedup
+                label v12s29_lauren_blowjob:
+                    image v12laubj = Movie(play="images/v12/Scene 29/v12laubj.webm", loop=True, image="images/v12/Scene 29/v12laubjStart.webp", start_image="images/v12/Scene 29/v12laubjStart.webp") # Lauren blowjob
+                    image v12laubjf = Movie(play="images/v12/Scene 29/v12laubjf.webm", loop=True, image="images/v12/Scene 29/v12laubjStart.webp", start_image="images/v12/Scene 29/v12laubjStart.webp") # Lauren blowjob spedup
+                    image v12laubj2 = Movie(play="images/v12/Scene 29/v12laubj2.webm", loop=True, image="images/v12/Scene 29/v12laubj2Start.webp", start_image="images/v12/Scene 29/v12laubj2Start.webp") # Lauren blowjob TPP 2
+                    image v12laubj2f = Movie(play="images/v12/Scene 29/v12laubj2f.webm", loop=True, image="images/v12/Scene 29/v12laubj2Start.webp", start_image="images/v12/Scene 29/v12laubj2Start.webp") # Lauren blowjob TPP 2 spedup
 
-                scene v12laubj # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laubj # Ignore as animation
+                    with dissolve
+                    pause
 
-                u "L-Lauren... Fuck!"
+                    u "L-Lauren... Fuck!"
 
-                scene v12laubjf # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laubjf # Ignore as animation
+                    with dissolve
+                    pause
 
-                u "Damn... you're so fucking good at this, Lauren..."
+                    u "Damn... you're so fucking good at this, Lauren..."
 
-                scene v12laubj2 # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laubj2 # Ignore as animation
+                    with dissolve
+                    pause
 
-                u "This is the best fucking bl- Oh, god!"
+                    u "This is the best fucking bl- Oh, god!"
 
-                scene v12laubj2f # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laubj2f # Ignore as animation
+                    with dissolve
+                    pause
 
-                u "Lauren, w-wait!"
+                    u "Lauren, w-wait!"
 
-                scene v12las57 # FPP. MC looking at Lauren, she is worried, mouth open (she just finished sucking him off, check v12laubj for positioning)
-                with dissolve
+                    scene v12las57 # FPP. MC looking at Lauren, she is worried, mouth open (she just finished sucking him off, check v12laubj for positioning)
+                    with dissolve
 
-                la "What's wrong? Did I do okay?"
+                    la "What's wrong? Did I do okay?"
 
-                scene v12las57a # FPP. Same as v12las57, lauren slight smile, mouth closed
-                with dissolve
+                    scene v12las57a # FPP. Same as v12las57, lauren slight smile, mouth closed
+                    with dissolve
 
-                u "You did amazing."
+                    u "You did amazing."
 
-                scene v12las58 # TPP. Show MC kissing Lauren
-                with dissolve
+                    scene v12las58 # TPP. Show MC kissing Lauren
+                    with dissolve
+                    play sound "sounds/kiss.mp3"
 
-                pause
+                    pause
 
-                scene v12las59 # TPP. Show Lauren turning to lay on her back, MC turning to go on top of her, both smiling, mouths closed
-                with dissolve
+                    scene v12las59 # TPP. Show Lauren turning to lay on her back, MC turning to go on top of her, both smiling, mouths closed
+                    with dissolve
 
-                pause
-                
-                scene v12las60 # FPP. MC and Lauren in missionary position, MC looking at Lauren, Lauren slight smile, mouth open
-                with dissolve
+                    pause
+                    
+                    scene v12las60 # FPP. MC and Lauren in missionary position, MC looking at Lauren, Lauren slight smile, mouth open
+                    with dissolve
 
-                la "I'm ready... Please just, be slow."
+                    la "I'm ready... Please just, be slow."
 
-                scene v12las60a # FPP. Same as v12las60, lauren slight smile, mouth closed
-                with dissolve
+                    scene v12las60a # FPP. Same as v12las60, lauren slight smile, mouth closed
+                    with dissolve
 
-                u "I will."
+                    u "I will."
 
-                image v12laumi = Movie(play="images/v12/Scene 29/v12laumi.webm", loop=True, image="images/v12/Scene 29/v12laumiStart.webp", start_image="images/v12/Scene 29/v12laumiStart.webp") # Lauren missionary
-                image v12laumif = Movie(play="images/v12/Scene 29/v12laumif.webm", loop=True, image="images/v12/Scene 29/v12laumiStart.webp", start_image="images/v12/Scene 29/v12laumiStart.webp") # Lauren missionary spedup
-                image v12laumi2 = Movie(play="images/v12/Scene 29/v12laumi2.webm", loop=True, image="images/v12/Scene 29/v12laumi2Start.webp", start_image="images/v12/Scene 29/v12laumi2Start.webp") # Lauren missionary TPP 2
-                image v12laumi2f = Movie(play="images/v12/Scene 29/v12laumi2f.webm", loop=True, image="images/v12/Scene 29/v12laumi2Start.webp", start_image="images/v12/Scene 29/v12laumi2Start.webp") # Lauren missionary TPP 2 spedup
+                label v12s29_lauren_legs_up:
+                    image v12laumi = Movie(play="images/v12/Scene 29/v12laumi.webm", loop=True, image="images/v12/Scene 29/v12laumiStart.webp", start_image="images/v12/Scene 29/v12laumiStart.webp") # Lauren missionary
+                    image v12laumif = Movie(play="images/v12/Scene 29/v12laumif.webm", loop=True, image="images/v12/Scene 29/v12laumiStart.webp", start_image="images/v12/Scene 29/v12laumiStart.webp") # Lauren missionary spedup
+                    image v12laumi2 = Movie(play="images/v12/Scene 29/v12laumi2.webm", loop=True, image="images/v12/Scene 29/v12laumi2Start.webp", start_image="images/v12/Scene 29/v12laumi2Start.webp") # Lauren missionary TPP 2
+                    image v12laumi2f = Movie(play="images/v12/Scene 29/v12laumi2f.webm", loop=True, image="images/v12/Scene 29/v12laumi2Start.webp", start_image="images/v12/Scene 29/v12laumi2Start.webp") # Lauren missionary TPP 2 spedup
 
-                scene v12laumi # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laumi # Ignore as animation
+                    with dissolve
+                    pause
 
-                la "*Gasps* Ah! Oh... ah, fuck..."
+                    la "*Gasps* Ah! Oh... ah, fuck..."
 
-                scene v12laumif # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laumif # Ignore as animation
+                    with dissolve
+                    pause
 
-                la "*Heavy breathing* Ow... Haa... Fuck!"
+                    la "*Heavy breathing* Ow... Haa... Fuck!"
 
-                scene v12laumi2 # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laumi2 # Ignore as animation
+                    with dissolve
+                    pause
 
-                u "Are you okay? Do you like it?"
+                    u "Are you okay? Do you like it?"
 
-                la "Mhmm! Yes... Please, keep going!"
+                    la "Mhmm! Yes... Please, keep going!"
 
-                scene v12laumi2f # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laumi2f # Ignore as animation
+                    with dissolve
+                    pause
 
-                la "*Moans*"
+                    la "*Moans*"
 
-                scene v12las61 # TPP. Show Lauren and MC midway through switching places (Lauren will go on top and MC on bottom), both smiling, mouths closed
-                with dissolve
+                    scene v12las61 # TPP. Show Lauren and MC midway through switching places (Lauren will go on top and MC on bottom), both smiling, mouths closed
+                    with dissolve
 
-                pause
+                    pause
 
-                scene v12las62 # TPP. Show Lauren on top of MC, ready to ride him, both smiling, mouths closed
-                with dissolve
-                
-                pause
+                    scene v12las62 # TPP. Show Lauren on top of MC, ready to ride him, both smiling, mouths closed
+                    with dissolve
+                    
+                    pause
 
-                image v12laucg = Movie(play="images/v12/Scene 29/v12laucg.webm", loop=True, image="images/v12/Scene 29/v12laucgStart.webp", start_image="images/v12/Scene 29/v12laucgStart.webp") # Lauren cowgirl
-                image v12laucgf = Movie(play="images/v12/Scene 29/v12laucgf.webm", loop=True, image="images/v12/Scene 29/v12laucgStart.webp", start_image="images/v12/Scene 29/v12laucgStart.webp") # Lauren cowgirl spedup
-                image v12laucg2 = Movie(play="images/v12/Scene 29/v12laucg2.webm", loop=True, image="images/v12/Scene 29/v12laucg2Start.webp", start_image="images/v12/Scene 29/v12laucg2Start.webp") # Lauren cowgirl FPP
-                image v12laucg2f = Movie(play="images/v12/Scene 29/v12laucg2f.webm", loop=True, image="images/v12/Scene 29/v12laucg2Start.webp", start_image="images/v12/Scene 29/v12laucg2Start.webp") # Lauren cowgirl FPP spedup
+                label v12s29_lauren_cowgirl:
+                    image v12laucg = Movie(play="images/v12/Scene 29/v12laucg.webm", loop=True, image="images/v12/Scene 29/v12laucgStart.webp", start_image="images/v12/Scene 29/v12laucgStart.webp") # Lauren cowgirl
+                    image v12laucgf = Movie(play="images/v12/Scene 29/v12laucgf.webm", loop=True, image="images/v12/Scene 29/v12laucgStart.webp", start_image="images/v12/Scene 29/v12laucgStart.webp") # Lauren cowgirl spedup
+                    image v12laucg2 = Movie(play="images/v12/Scene 29/v12laucg2.webm", loop=True, image="images/v12/Scene 29/v12laucg2Start.webp", start_image="images/v12/Scene 29/v12laucg2Start.webp") # Lauren cowgirl FPP
+                    image v12laucg2f = Movie(play="images/v12/Scene 29/v12laucg2f.webm", loop=True, image="images/v12/Scene 29/v12laucg2Start.webp", start_image="images/v12/Scene 29/v12laucg2Start.webp") # Lauren cowgirl FPP spedup
 
-                scene v12laucg # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laucg # Ignore as animation
+                    with dissolve
+                    pause
 
-                u "This day..."
+                    u "This day..."
 
-                u "Could not have been..."
+                    u "Could not have been..."
 
-                scene v12laucgf # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laucgf # Ignore as animation
+                    with dissolve
+                    pause
 
-                u "Any fucking better..."
+                    u "Any fucking better..."
 
-                la "*Moans* Mhmm! I'll never forget it... Mmm, fuck..."
+                    la "*Moans* Mhmm! I'll never forget it... Mmm, fuck..."
 
-                scene v12laucg2 # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laucg2 # Ignore as animation
+                    with dissolve
+                    pause
 
-                la "Yes... Yes, [name]! I'm... I'm cu- *Gasps*"
-                
-                u "Damn it Lauren, you're so fucking tight..."
+                    la "Yes... Yes, [name]! I'm... I'm cu- *Gasps*"
+                    
+                    u "Damn it Lauren, you're so fucking tight..."
 
-                scene v12laucg2f # Ignore as animation
-                with dissolve
-                pause
+                    scene v12laucg2f # Ignore as animation
+                    with dissolve
+                    pause
 
-                u "And so fucking... Wet! I'm gonna cum..."
+                    u "And so fucking... Wet! I'm gonna cum..."
 
-                la "Mmm, yes! Don't pull out... Please... It's safe."
+                    la "Mmm, yes! Don't pull out... Please... It's safe."
 
-                scene v12las63 # TPP. Show MC cumming in Lauren as she rides him
-                with vpunch
+                    scene v12las63 # TPP. Show MC cumming in Lauren as she rides him
+                    with vpunch
 
-                pause
+                    pause
 
-                scene v12las64 # TPP. Closeup of Lauren's pussy filled with cum
-                with dissolve
+                    scene v12las64 # TPP. Closeup of Lauren's pussy filled with cum
+                    with dissolve
 
-                pause
+                    pause
 
                 scene v12las65 # TPP. Show Lauren rolling over to lay down next to MC
                 with dissolve
+
+                hide screen v12s29_lauren_sex_overlay
 
                 pause
 
                 scene v12las66 # FPP. MC and Lauren lieing down next to each other, looking at each other, Lauren smiling, mouth open, make her body a bit sweaty if possible
                 with dissolve
+
+                if laurenrs and not chloers and not aubreyrs and not evelynrs and not emilyrs and not rileyrs and not amberrs and not penelopers and not msrosers and not lindseyrs and not lindseyfirstkiss and not v11_fucked_candy and not v11_samantha_spa:
+                    $ grant_achievement("worth_the_wait")
+
+                $ laurenrs = True
 
                 la "Phew! Haha... That was absolutely perfect."
 
@@ -1115,22 +1167,27 @@ label v12_lauren_sex:
                 scene v12las67 # TPP. Show Lauren and MC getting out of the bed, both smiling, mouths closed
                 with dissolve
 
-                pause 0.75
+                pause
 
                 scene v12las68 # TPP. Show MC and Lauren getting dressed, both smiling, mouths closed
                 with dissolve
 
-                pause 0.75
+                pause
+                
+                label v12s29_nsfwSkipLabel1:
 
                 scene v12las69 # TPP. Show Lauren and MC walking towards the door of the hotel room, both smiling, mouths closed
                 with dissolve
 
-                pause 0.75
+                pause 1
 
                 scene v12las70 # TPP. Show MC getting out of the room, Lauren still inside, in front of the door, door open, both smiling, mouths closed
                 with dissolve
 
                 pause 0.75
+
+                stop music fadeout 3
+                play music "music/v12/Scene 29/Track Scene 29_9.mp3" fadein 2
 
                 scene v12las71 # FPP. MC outside the room, Lauren inside, both in front of door, looking at each other, Lauren smiling, mouth open
                 with dissolve
@@ -1144,13 +1201,17 @@ label v12_lauren_sex:
 
                 scene v12las72 # TPP. Show Lauren kissing MC
                 with dissolve
+                play sound "sounds/kiss.mp3"
 
                 pause
+
+                stop music fadeout 3
+                play music "music/v12/Scene 29/Track Scene 29_6.mp3" fadein 2
 
                 scene v12las71
                 with dissolve
 
-                la "I had so much fun tonight, but now I'm going to bed... If I don't leave now I'm gonna end up trying to stay with you all night. Roommate or not... *Chuckles*"
+                la "I had so much fun tonight, but now I'm going to bed... or else I'm gonna end up asking you to stay all night. Roommate or not... *Chuckles*"
 
                 la "Goodnight baby, I love you."
 
@@ -1164,9 +1225,13 @@ label v12_lauren_sex:
 
                 u "(Wow, Lauren and I actually fucking did it.)"
 
+                $ renpy.end_replay()
+
                 scene v12las73 # TPP. Show MC walking in hallway, smiling, mouth closed
                 with dissolve
 
                 pause 0.75
+
+                stop music fadeout 3
 
                 jump v12_room_sneak

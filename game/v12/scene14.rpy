@@ -2,13 +2,15 @@
 # Locations: Cafe
 # Characters: CHLOE (Outfit: 5), MC (Outfit: 5), FRENCH WAITRESS (Outfit: 1), RILEY (Outfit: 2)
 # Time: Morning
-# Phone Images: rileycatacombs.webp - Riley selfie at the catacomb entrance with a street sign behind her with "CATACOMBS" written on it, Riley smiling, mouth closed
+# Phone Images: rileycatacomb.webp - Riley selfie at the catacomb entrance with a street sign behind her with "CATACOMBS" written on it, Riley smiling, mouth closed
 
 label v12_chloe_cafe:
     scene v12chc1 # TPP. Show MC and Chloe going into the cafe, both smiling, mouths closed
     with dissolve
 
     pause 0.75
+
+    play music "music/v12/Scene 14/Track Scene 14 _ 14a.mp3" fadein 2
 
     scene v12chc2 # TPP. Show MC and Chloe approaching their table, both smiling, mouths closed
     with dissolve
@@ -204,12 +206,14 @@ label v12_chloe_cafe:
 
         menu:
             "It'd be nice":
+                $ add_point(KCT.BOYFRIEND)
                 scene v12chc5c
                 with dissolve
 
                 u "Mmm, yeah... It'd be nice. *Chuckles*"
 
             "Not really":
+                $ add_point(KCT.BRO)
                 scene v12chc5c
                 with dissolve
 
@@ -371,76 +375,82 @@ label v12_chloe_cafe:
 
     menu:
         "Tell her about Lindsey":
-                $ v12_told_chloe = True
+            $ add_point(KCT.TROUBLEMAKER)
+            $ v12_told_chloe = True
 
-                u "(I can't keep this from her.) *Sighs* There's something I need to tell you."
+            u "(I can't keep this from her.) *Sighs* There's something I need to tell you."
 
-                scene v12chc5m
-                with dissolve
+            scene v12chc5m
+            with dissolve
 
-                cl "What?"
+            cl "What?"
 
-                scene v12chc5n
-                with dissolve
+            scene v12chc5n
+            with dissolve
 
-                u "Don't quote me, please. And I don't want you doing anything rash. Can you promise me you won't freak out?"
+            u "Don't quote me, please. And I don't want you doing anything rash. Can you promise me you won't freak out?"
 
-                scene v12chc5k
-                with dissolve
+            scene v12chc5k
+            with dissolve
 
-                cl "You're making me nervous, [name]."
+            cl "You're making me nervous, [name]."
 
-                scene v12chc5l
-                with dissolve
+            scene v12chc5l
+            with dissolve
 
-                u "Just promise me you won't freak out."
+            u "Just promise me you won't freak out."
 
-                scene v12chc5
-                with dissolve
+            scene v12chc5
+            with dissolve
 
-                cl "For fucks sake... *Sighs* Fine, I won't freak out. Happy?"
+            cl "For fucks sake... *Sighs* Fine, I won't freak out. Happy?"
 
-                scene v12chc5o # FPP. Same as v12chc5, Chloe angry, mouth closed
-                with dissolve
+            scene v12chc5o # FPP. Same as v12chc5, Chloe angry, mouth closed
+            with dissolve
+            
+            if political_strategist: #for v11-12 compatibility purposes
+                $ v11_lindsey_run = True
+            
+            if v11_lindsey_run and v11_told_aubrey:
+                $ grant_achievement("thrown_to_the_lions")
+            
+            u "Good. Now, again, don't quote me. I'm not sure of all the details and I'm not even positive if this is truly her plan, but I heard that Lindsey's been considering running for President of the Chicks, against you."
+           
+            scene v12chc5p # FPP. Same as v12chc5o, Chloe angry, mouth open
+            with dissolve
 
-                u "Good. Now, again, don't quote me. I'm not sure of all the details and I'm not even positive if this is truly her plan, but I heard that Lindsey's been considering running for President of the Chicks, against you."
+            cl "WHY THE FUCK WOULD SHE DO THAT!?"
 
-                scene v12chc5p # FPP. Same as v12chc5o, Chloe angry, mouth open
-                with dissolve
+            scene v12chc5o
+            with dissolve
 
-                cl "WHY THE FUCK WOULD SHE DO THAT!?"
+            u "Calm down, please... You said you wouldn't freak out."
 
-                scene v12chc5o
-                with dissolve
+            scene v12chc5p
+            with dissolve
 
-                u "Calm down, please... You said you wouldn't freak out."
+            cl "*Deep breath* Why, the fuck, would she do that?"
 
-                scene v12chc5p
-                with dissolve
+            scene v12chc5o
+            with dissolve
 
-                cl "*Deep breath* Why, the fuck, would she do that?"
+            u "Something about the Chicks needing major changes in order to save the sorority from it's downhill spiral... And again, don't quote me."
 
-                scene v12chc5o
-                with dissolve
+            scene v12chc5p
+            with dissolve
 
-                u "Something about the Chicks needing major changes in order to save the sorority from it's downhill spiral... And again, don't quote me."
+            cl "Wow... I really can't believe she'd actually do that."
+            cl "You know what, I'm not gonna jump to any conclusions. If she really did plan on doing something like that she'd have to be a lunatic."
 
-                scene v12chc5p
-                with dissolve
+            scene v12chc5o
+            with dissolve
 
-                cl "Wow... I really can't believe she'd actually do that."
-                cl "You know what, I'm not gonna jump to any conclusions. If she really did plan on doing something like that she'd have to be a lunatic."
+            scene v12chc5p
+            with dissolve
 
-                scene v12chc5o
-                with dissolve
-
-                scene v12chc5p
-                with dissolve
-
-                cl "Rather than seeing how she can help she'd rather just take over? No way. This can't be real."
+            cl "Rather than seeing how she can help she'd rather just take over? No way. This can't be real."
 
         "Don't tell her about Lindsey":
-            
             u "(No way I'm telling her. She's not hearing that news from me.)"
 
             scene v12chc5n # FPP. Same as v12chc5m, Chloe slightly worried, mouth closed
@@ -575,17 +585,17 @@ label v12_chloe_cafe:
     scene v12chc10 # TPP. Show MC sitting down, looking down at his phone, neutral expression, mouth closed
     with dissolve
 
-    $ contact_Riley.newMessage("TREASURE HUNT TIME!", queue=False)
-    $ contact_Riley.addReply("Really... now?")
-    $ contact_Riley.newMessage("Yep, and I'm already at the spot of the next clue... I think.")
-    $ contact_Riley.newImgMessage("images/v12/Scene 14/rileycatacomb.webp") # Riley selfie at the catacomb entrance with a street sign behind her with the address of where she is at, Riley smiling, mouth closed
-    $ contact_Riley.newMessage("Meet me here :)")
-    $ contact_Riley.addReply("Okay, I'll be there soon.")
+    $ riley.messenger.newMessage("TREASURE HUNT TIME!", queue=False)
+    $ riley.messenger.addReply("Really... now?")
+    $ riley.messenger.newMessage("Yep, and I'm already at the spot of the next clue... I think.")
+    $ riley.messenger.newImgMessage("images/v12/Scene 14/rileycatacomb.webp") # Riley selfie at the catacomb entrance with a street sign behind her with the address of where she is at, Riley smiling, mouth closed
+    $ riley.messenger.newMessage("Meet me here :)")
+    $ riley.messenger.addReply("Okay, I'll be there soon.")
 
     label v12s14_PhoneContinueRiley:
-        if contact_Riley.getReplies():
+        if riley.messenger.replies:
             call screen phone
-        if contact_Riley.getReplies():
+        if riley.messenger.replies:
             u "(I should check my phone.)"
             jump v12s14_PhoneContinueRiley
 
@@ -648,5 +658,7 @@ label v12_chloe_cafe:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_riddle_riley #scene 15

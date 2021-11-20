@@ -8,13 +8,10 @@
 #screen 3: Penelope(Stood at the helm display)(to the right of screen 2)
 
 label v11s23_freeroamstart: # Start of freeroam
-    play music "music/v11/Scene 23/Track Scene 23.mp3" fadein 2
-    $ freeRoam = True
-
+    play music "music/v11/Scene 14/Track Scene 14.mp3" fadein 2
     call screen v11s23_entrance
     
 label v11s23_chris1:
-
     $ v11s23_chris1 = True
 
     scene v11frmch1 # FPP Show Chris talking on the phone, neutral expression, mouth closed
@@ -28,14 +25,12 @@ label v11s23_chris1:
     ch "Look man, I'm sorry but I need to handle this right now. I can't talk."
 
     if not joinwolves: # if Apes
-
         scene v11frmch1
         with dissolve
 
         u "Right, sorry."
     
     else: # if Wolves
-
         scene v11frmch1
         with dissolve
 
@@ -65,7 +60,6 @@ label v11s23_chris1:
 
     menu:
         "Mention Nora":
-
             scene v11frmch1d
             with dissolve
 
@@ -136,7 +130,6 @@ label v11s23_chris1:
     call screen v11s23_mid
 
 label v11s23_mrlee1:
-
     $ v11s23_mrlee1 = True
 
     scene v11frmlee1 # FPP Show Mr. Lee with bust behind him, Mr. Lee looking at MC, neutral expression, mouth open
@@ -250,7 +243,7 @@ label v11s23_mrlee1:
 
     menu:
         "Laugh":
-
+            $ add_point(KCT.TROUBLEMAKER)
             scene v11frmlee1a
             with dissolve
 
@@ -262,7 +255,7 @@ label v11s23_mrlee1:
             lee "It wasn't so funny back then."
 
         "Feel bad":
-
+            $ add_point(KCT.BRO)
             scene v11frmlee1b
             with dissolve
 
@@ -307,7 +300,6 @@ label v11s23_mrlee1:
     call screen v11s23_mid
 
 label v11s23_riley1:
-
     $ v11s23_riley1 = True
 
     scene v11frmri1 # FPP Show Riley leaning over barrier and reaching her arm out toward triceratops, Riley smiling with mouth closed
@@ -364,32 +356,31 @@ label v11s23_riley1:
     scene v11frmri2b
     with dissolve
 
-    u "Stand still while I go get Duncan's gun, then you can enjoy yourself."
+    u "Shooting off a random guy's gun isn't enough excitement? *Chuckles*"
 
     scene v11frmri2a
     with dissolve
 
-    ri "Hey, I said I was sorry. But I have to admit, it was kinda funny seeing you scream and beg like that. *Chuckles*"
+    ri "Yeah, no. Not really *Chuckles*"
 
     scene v11frmri2c # FPP Same angle as v11frmri2, Riley climbing back under ropes to get out of triceratops exhibit
     with dissolve
 
-    u "It was funny watching me scream and beg?"
+    u "You're lucky no one's watching you. You're gonna get us kicked outta here."
 
     scene v11frmri3 # FPP Show Riley looking at MC with a big smile, mouth open
     with dissolve
 
-    ri "RILEY PLEASE STOP, IT HURTS! *Laughs*"
+    ri "*Mocking voice* You're gonna get us kicked out of here! *Laughs*"
 
     menu:
         "Seek revenge":
-
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v11frmri3a # FPP Same angle as v11frmri3, Riley smiling with mouth closed
             with dissolve
             
-            u "Since you like seeing people in pain so much, we'll see how much you like it."
+            u "Haha, okay. I see how we're playing today."
 
             scene v11frmri3
             with dissolve
@@ -399,17 +390,15 @@ label v11s23_riley1:
             scene v11frmri3a
             with dissolve
 
-            u "Yeah, just a little bit of payback..."
+            u "Yeah, just a little bit of excitement..."
 
             if not rileyrs:
-
                 scene v11frmri3b # FPP Same angle as v11frmri3, Riley raising her eyebrow and smiling, mouth open
                 with dissolve
 
                 ri "You don't want to start a war, [name]. I never lose."
 
             else: # If rileyrs
-
                 scene v11frmri3c # FPP Same angle as v11frmri3, Riley leaning in close to MC, Riley has a sexy expression, mouth open
                 with dissolve
 
@@ -431,26 +420,25 @@ label v11s23_riley1:
                 ri "Now, if you were trying to be a bit more friendly instead... Just know I never lose."
     
         "Laugh it off":
-
             scene v11frmri3a
             with dissolve
 
-            u "*Laughs* That is not what I sound like."
+            u "*Laughs* And then you'll be upset when you've got nothing exciting to do. You'll be screaming for my attention..."
 
             scene v11frmri3
             with dissolve
 
-            ri "You have no idea what you sounded like over all that crying."
+            ri "*Chuckles*"
 
             scene v11frmri3a
             with dissolve
 
-            u "You would've been screaming too!"
+            u "See? It's true."
 
             scene v11frmri3
             with dissolve
 
-            ri "I only scream for one reason..."
+            ri "I only scream for one reason and it's not because I want attention..."
 
             scene v11frmri3a
             with dissolve
@@ -458,7 +446,6 @@ label v11s23_riley1:
             u "What's the reason then?"
 
             if not rileyrs:
-
                 scene v11frmri3b
                 with dissolve
 
@@ -485,7 +472,6 @@ label v11s23_riley1:
                 ri "Also, you don't want to start a war, [name]. I never lose."
             
             else: # if rileyrs
-
                 scene v11frmri3c
                 with dissolve
 
@@ -526,7 +512,6 @@ label v11s23_riley1:
 
     menu:
         "Snitch on Riley":
-
             scene v11frmri4
             with dissolve
 
@@ -563,7 +548,6 @@ label v11s23_riley1:
             ri "You just started a war, [name], I hope you're ready."
 
         "Don't snitch on Riley":
-
             scene v11frmri3a
             with dissolve
 
@@ -598,7 +582,6 @@ label v11s23_riley1:
     call screen v11s23_entrance
 
 label v11s23_penelope1:
-
     $ v11s23_penelope1 = True
 
     scene v11frmpe1 # FPP Show Penelope starting to walk away from helmet exhibit right as MC goes to talk to her
@@ -749,8 +732,8 @@ label v11s23_penelope1:
     if penelopers:
         menu:
             "Flirt":
-
-                $ addPoint("bf")
+                $ v11s23_penelope_date = True
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v11frmpe10
                 with dissolve
@@ -830,7 +813,6 @@ label v11s23_penelope1:
                 pe "Okay... you're a little funny."
 
             "Just being me":
-
                 scene v11frmpe10c
                 with dissolve
 
@@ -879,7 +861,6 @@ label v11s23_penelope1:
     else: # not penelopers
         menu:
             "Just being me":
-
                 scene v11frmpe10c
                 with dissolve
 
@@ -926,7 +907,6 @@ label v11s23_penelope1:
                 u "Nevermind... scratch that idea."
 
             "Make a joke":
-
                 scene v11frmpe10c
                 with dissolve
 
@@ -1072,8 +1052,6 @@ label v11s23_penelope1:
     call screen v11s23_helm
 
 label v11s23_freeroamend:
-    $ freeRoam = False
-
     scene v11frm1 # FPP Show Nora sitting on black seating looking annoyed and not looking at anything in particular, arms crossed over her chest, mouth closed
     #with dissolve
 
@@ -1116,10 +1094,9 @@ label v11s23_freeroamend:
 
     menu:
         "Agree":
-
             scene v11frm1b
             with dissolve
-
+    
             u "Yeah it's pretty boring, but maybe it'll get better."
 
             scene v11frm1a
@@ -1142,17 +1119,25 @@ label v11s23_freeroamend:
 
             no "At least someone enjoyed themselves. We literally wasted so much time here it's already starting to get dark."
 
-            scene v11frm4 # TPP Show all characters in scene getting on to shuttle bus
-            with dissolve
+            if v11_pen_goes_europe:
+                scene v11frm4 # TPP Show all characters in scene getting on to shuttle bus
+                with fade
+            else:
+                scene v11gtm8
+                with fade
 
+            pause 0.75
+
+            scene v11bb12
+            with fade
+            
             pause 0.75
 
             # Transition to Scene 25
             jump v11_hotel_bar
 
         "Sneak out":
-
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v11frm1b
             with dissolve

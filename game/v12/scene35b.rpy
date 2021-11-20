@@ -9,7 +9,9 @@ label v12_game_roommate:
         scene v12grm1 # FPP. MC lying on his bed, looking as Chloe walks out of the bathroom, Chloe slight smile, mouth closed
         with dissolve
 
-        pause 0.75
+        pause 1.25
+
+        play music "music/v12/Scene 35b/Track Scene 35b_1.mp3" fadein 2
 
         scene v12grm2 # FPP. MC lying on his bed, looking at Chloe, Chloe sitting on her bed, looking at MC, slight smile, mouth open
         with dissolve
@@ -242,17 +244,17 @@ label v12_game_roommate:
         scene v12grm4 # TPP. Same positioning as v12grm2h, show Chloe and MC playing on their phones, both smiling, mouths closed
         with dissolve
 
-        pause
+        pause 1.25
         
         scene v12grm4a # TPP. Same as v12grm4, different pose, show them laughing
         with dissolve
 
-        pause
+        pause 1.25
 
         scene v12grm4b # TPP. Same as v12grm4a, different pose, show them nudging each other, laughing
         with dissolve
 
-        pause
+        pause 1.25
 
         scene v12grm2e
         with dissolve
@@ -294,6 +296,7 @@ label v12_game_roommate:
 
         menu:
             "Kill parents for insurance":
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v12grm2f
                 with dissolve
 
@@ -340,6 +343,7 @@ label v12_game_roommate:
                 u "I guess so. *Laughs*"
 
             "Sell your house":
+                $ add_point(KCT.BOYFRIEND)
                 scene v12grm2d
                 with dissolve
 
@@ -433,7 +437,7 @@ label v12_game_roommate:
         scene v12grm2
         with dissolve
 
-        cl "Welcome to the real world. *chuckles*"
+        cl "Welcome to the real world. *Chuckles*"
 
         scene v12grm2a
         with dissolve
@@ -443,15 +447,17 @@ label v12_game_roommate:
         scene v12grm5 # TPP. Show MC tickling Chloe, Chloe laughing mouth open, MC smiling, mouth closed
         with dissolve
 
-        cl "OH MY GOD! *chuckles* STOP IT! [name]! PLEASE... PLEASE STOP! *Laughs*"
+        cl "OH MY GOD! *Chuckles* STOP IT! [name]! PLEASE... PLEASE STOP! *Laughs*"
 
         if chloegf or chloers:
-            scene v12grm2a
+            #scene v12grm2a
+            scene v12grm5
             with dissolve
 
             u "*Laughs*"
 
-            scene v12grm2
+            #scene v12grm2
+            scene v12grm7a
             with dissolve
 
             cl "Just for that, you can sleep by yourself tonight."
@@ -484,17 +490,19 @@ label v12_game_roommate:
             scene v12grm8 # TPP. Show MC and Chloe getting into MC's bed
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v12grm9 # TPP. Show MC and Chloe sleeping together
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v12grm9a # TPP. Same as v12grm9, different position
             with dissolve
 
-            pause 0.75
+            pause 1.25
+
+            stop music fadeout 3
 
             jump v12_lindsey_lobby
 
@@ -505,7 +513,8 @@ label v12_game_roommate:
             pause 0.75
 
             scene v12grm11 # FPP. MC on the floor, looking up at Chloe who is sitting on her bed, Chloe slight smile, mouth open
-            with dissolve
+            with vpunch
+            play sound "sounds/fall.mp3"
 
             cl "Oh my god, are you okay?! *Chuckles?*"
 
@@ -517,7 +526,7 @@ label v12_game_roommate:
             scene v12grm11
             with dissolve
 
-            cl "Sorry, my reflexes kicked in. *chuckles*"
+            cl "Sorry, my reflexes kicked in. *Chuckles*"
 
             scene v12grm12 # TPP. Show MC getting up from the floor, slight smile, mouth closed
             with dissolve
@@ -547,7 +556,7 @@ label v12_game_roommate:
             scene v12grm14 # FPP. MC lying down on his bed, Chloe lying down on her bed, MC looking at Chloe, Chloe looking at MC, Chloe slight smile, mouth open
             with dissolve
 
-            cl "Goodnight [name]."
+            cl "Goodnight, [name]."
 
             scene v12grm14a # FPP. Same as v12grm14, Chloe slight smile, mouth closed
             with dissolve
@@ -564,6 +573,8 @@ label v12_game_roommate:
 
             pause 0.75
 
+            stop music fadeout 3
+
             jump v12_lindsey_lobby
 
     else:
@@ -571,6 +582,8 @@ label v12_game_roommate:
         with dissolve
 
         ri "Steal anything else of mine while I was in the shower?"
+
+        play music "music/v12/Scene 35b/Track Scene 35b_2.mp3" fadein 2
 
         scene v12grm16 # FPP. Riley standing in front of MC's bed, Riley angry, mouth closed
         with dissolve
@@ -621,5 +634,7 @@ label v12_game_roommate:
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v12_lindsey_lobby #scene 36 

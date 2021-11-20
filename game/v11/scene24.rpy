@@ -14,7 +14,7 @@ label v11_big_ben:
 
     scene v11bb1 # FPP Show Nora, neutral expression, mouth closed
     with dissolve
-    play music "music/v11/Scene 24/Track Scene 24_1.mp3" fadein 2
+    play music "music/v11/Scene 5/Track Scene 5_5.mp3" fadein 2
     u "So, I know pretty much nothing about London..."
 
     scene v11bb1a # FPP Same angle as v11bb1, Nora with neutral expression, mouth open
@@ -264,10 +264,11 @@ label v11_big_ben:
     u "I'm pretty sure you-"
 
     # Big Ben rings very loudly
+    play sound "sounds/bells.mp3"
     scene v11bb9 # Show MC looking shocked, Nora looking at him, smiling with mouth closed
     with dissolve
 
-    pause 0.5
+    pause 3
     
     scene v11bb7c
     with dissolve
@@ -372,7 +373,7 @@ label v11_big_ben:
             u "You're what's beautiful Nora."
 
             scene v11bb9d # TPP Same angle as v11bb9, MC trying to kiss Nora, Nora pushing him back, looking very angry with mouth open
-            with dissolve            
+            with dissolve
 
             no "WHAT THE FUCK ARE YOU DOING!?"
 

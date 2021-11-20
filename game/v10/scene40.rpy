@@ -225,9 +225,9 @@ label v10_riley_sex:
                         jump v10_mc_pen_call # -Transition to Scene 41-
 
                     "Peek":
-
                         $ rileyrs = True
                         $ v10_ri_sex = True
+                        #$ add_point(KCT.TROUBLEMAKER, sum([ v9_em_dorm_scene, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker ])) ###Loyaltymod
 
                         scene v10srds1f
                         with dissolve
@@ -332,6 +332,7 @@ label v10_riley_sex:
             "Make a move":
                 $ rileyrs = True
                 $ v10_ri_sex = True
+                #$ add_point(KCT.TROUBLEMAKER, sum([ v9_em_dorm_scene, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker ])) ###Loyaltymod
 
                 scene v10srds4a # TPP. Same camera as v10srds4. Show MC and Riley. Both smiling, mouths closed. MC puts his hand on Riley's towel and drops it to the floor.
                 with dissolve
@@ -564,15 +565,15 @@ label v10_riley_sex:
 
     elif kct == "confident": # -If not rileyrs with KCT Confident #
 
-        call screen kctPopup
+        call screen kct_popup
 
         scene v10srds3a
         with dissolve
         menu:
             "Make a move":
-
                 $ rileyrs = True
                 $ v10_ri_sex = True
+                #$ add_point(KCT.TROUBLEMAKER, sum([ v9_em_dorm_scene, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker ])) ###Loyaltymod
 
                 scene v10srds1f
                 with dissolve
@@ -588,6 +589,9 @@ label v10_riley_sex:
                 with dissolve
 
                 pause 0.75
+
+                if config_censored:
+                    call screen censoredPopup("v10_mc_pen_call")
 
                 scene v10srds5
                 with dissolve
@@ -819,9 +823,9 @@ label v10_riley_sex:
                         jump v10_mc_pen_call # -Transition to Scene 41-
                     
                     "Peek":
-
                         $ rileyrs = True
                         $ v10_ri_sex = True
+                        #$ add_point(KCT.TROUBLEMAKER, sum([ v9_em_dorm_scene, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker ])) ###Loyaltymod
 
                         scene v10srds1f
                         with dissolve
@@ -837,6 +841,9 @@ label v10_riley_sex:
                         with dissolve
 
                         pause 0.75
+
+                        if config_censored:
+                            call screen censoredPopup("v10_mc_pen_call")
 
                         scene v10srds5
                         with dissolve

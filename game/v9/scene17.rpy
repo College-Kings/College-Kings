@@ -44,14 +44,14 @@ label v9_room_fri_morn:
 
         play sound "sounds/vibrate.mp3"
 
-        $ contact_Lauren.newMessage(_("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."), queue=False)
-        $ contact_Lauren.addReply(_("Sure, OMW!"))
-        $ contact_Lauren.newMessage(_("Ok :) See you soon!"))
+        $ lauren.messenger.newMessage(_("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."), queue=False)
+        $ lauren.messenger.addReply(_("Sure, OMW!"))
+        $ lauren.messenger.newMessage(_("Ok :) See you soon!"))
         
         label s17_PhoneContinueW:
-            if contact_Lauren.getReplies():
+            if lauren.messenger.replies:
                 call screen phone
-            if contact_Lauren.getReplies():
+            if lauren.messenger.replies:
                 "(I should text Lauren.)"
                 jump s17_PhoneContinueW
 
@@ -85,14 +85,14 @@ label v9_room_fri_morn:
 
         play sound "sounds/vibrate.mp3"
 
-        $ contact_Lauren.newMessage(_("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."), queue=False)
-        $ contact_Lauren.addReply(_("Sure, OMW!"))
-        $ contact_Lauren.newMessage(_("Ok :) See you soon!"))
+        $ lauren.messenger.newMessage(_("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."), queue=False)
+        $ lauren.messenger.addReply(_("Sure, OMW!"))
+        $ lauren.messenger.newMessage(_("Ok :) See you soon!"))
         
         label s17_PhoneContinueA:
-            if contact_Lauren.getReplies():
+            if lauren.messenger.replies:
                 call screen phone
-            if contact_Lauren.getReplies():
+            if lauren.messenger.replies:
                 "(I should text Lauren.)"
                 jump s17_PhoneContinueA
 

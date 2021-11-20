@@ -25,10 +25,10 @@ label for_w_gray:
 
     menu:
         "Ask questions":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump for_w_gray_q
         "Don't say anything":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             jump for_w_gray_no_q
 
 label for_w_gray_q:
@@ -67,10 +67,10 @@ label for_w_gray_cont:
 
     menu:
         "Go along with it":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             jump forest_fugazi
         "Stay quiet":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             jump forest_no_fugazi
 
 
@@ -177,7 +177,7 @@ label for_w_gray_cont_2:
 
         menu:
             "I definitely want to be an Ape":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 jump deffo_be_ape_for
             "I think I want to be an Ape":
                 jump maybe_be_ape_for
@@ -253,10 +253,10 @@ label for_w_gray_cont_3:
 
     menu:
         "Agree with Grayson":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             jump for_w_gray_agree
         "Tell Grayson you joined for the fights":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump for_w_gray_fights
 
 label for_w_gray_agree:
@@ -345,7 +345,7 @@ label for_w_gray_cont_4:
 
     menu:
         "Agree with Grayson":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             jump for_w_gray_agree_2
         "Hesitate":
             $ hesitantwgrayson = True

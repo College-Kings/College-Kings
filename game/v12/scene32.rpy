@@ -2,24 +2,41 @@
 # Locations: Sidewalk, Photoshoot with 2 sets and flower bouquet stand
 # Characters: MC (Outfit: 3), AUBREY (Outfit: 2), NAOMI (Outfit: 1), PHOTOGRAPHER (Outfit: 1)
 # Time: Morning
+# Phone Images: YES
+# v12aumcsexy (MC and Aubrey sexy pose)
+# v12aunaselfie (Aubrey and Naomi selfie wearing bras, both smiling, mouths closed)
+# v12aucar (Aubrey sexy pic on car)
+
+init python:
+    def v12s32kiwiiPost1_Reply1():
+        v12s32kiwiiPost1.newComment("Naomi", _("Hehe, you too! Hope to see you soon...;)"), numberLikes=renpy.random.randint(583, 912), queue=False)
+        v12s32kiwiiPost1.newComment("Chloe", _("OMG!?!?!?!"), numberLikes=renpy.random.randint(124,354), queue=False)
+        v12s32kiwiiPost1.newComment("Imre", _("Bro... Is that you?!"), mentions="MC", numberLikes=renpy.random.randint(53,93), queue=False)
+    
+    def v12s32kiwiiPost1_Reply2():
+        v12s32kiwiiPost1.newComment("Aubrey", _("You're so welcome... Today was amazing. <3"), numberLikes=renpy.random.randint(253, 462), queue=False)
+        v12s32kiwiiPost1.newComment("Chloe", _("OMG!?!?!?!"), numberLikes=renpy.random.randint(124,354), queue=False)
+        v12s32kiwiiPost1.newComment("Imre", _("Bro... Is that you?!"), mentions="MC", numberLikes=renpy.random.randint(53,93), queue=False)
 
 label v12s32:
 # -MC and Aubrey are walking along the sidewalk-
 
-    scene v12s32_1 # TPP  show mc and aubrey walking along the side walk, make sure Aubrey is on the side of the wall , not the street for easier backgrounds in FPP. Mc looking at aubrey, mc mouth open, curious
+    scene v12s32_1 # TPP show mc and aubrey walking along the side walk, make sure Aubrey is on the side of the wall, not the street for easier backgrounds in FPP. Mc looking at aubrey, mc mouth open, curious
     with fade
 
     u "So, where exactly are they doing the shoot?"
 
-    scene v12s32_2 # FPP, close up AUbrey looking at mc, but walking forwards. Aubrey slightly nervous  not smiling, mouth open
+    play music "music/v12/Scene 32/Track Scene 32_1.mp3" fadein 2
+
+    scene v12s32_2 # FPP, close up AUbrey looking at mc, but walking forwards. Aubrey slightly nervous not smiling, mouth open
     with dissolve
 
-    au "It's at an actual photography studio."
+    au "It's at a Lew's store."
 
     scene v12s32_2a # same as 2, mouth closed
     with dissolve
 
-    u "*Laughs* Tell me why I thought it was just at a random Lew's store..."
+    u "*Laughs* Tell me why I thought it was just at a random photography studio..."
 
     scene v12s32_2
     with dissolve
@@ -53,10 +70,13 @@ label v12s32:
 
     u "You're starting to actually scare me... *Chuckles*"
 
-    scene v12s32_3 # tpp Aubrey and mc enter the photoshoot place
+    scene v12s32_3 # tpp Aubrey and mc enter the photoshoot place
     with fade
 
     pause 0.7
+
+    stop music fadeout 3
+    play music "music/v12/Scene 32/Track Scene 32_2.mp3" fadein 2
 
     scene v12s32_4 # FPP shows photographer taking pictures of Naomi (Aubrey's sister)
     with dissolve
@@ -76,7 +96,7 @@ label v12s32:
     scene v12s32_6 # FPP show naomi walking towards AUbrey and mc, big smile, mouth open, looking at Aubrey
     with dissolve
 
-    na "Sister sister, with a mister mister! Oooooh...."
+    na "Sister sister, with a mister mister! Oooooh..."
 
     scene v12s32_7 #FPP show naomi close up standing, looking at mc (camera), mouth open, cheeky smile
     with dissolve
@@ -113,7 +133,7 @@ label v12s32:
     scene v12s32_5b
     with dissolve
 
-    au "No we aren't, we still have two minutes ‘til start..."
+    au "No we aren't, we still have two minutes 'til start..."
 
     scene v12s32_7b
     with dissolve
@@ -160,12 +180,12 @@ label v12s32:
 
     pg "Have you ever done modeling before?"
 
-    scene v12s32_5f # same as 5d, aubrey looking at photographer (off-screen), excited smile, mouth open
+    scene v12s32_5f # same as 5d, aubrey looking at photographer (off-screen), excited smile, mouth open
     with dissolve
 
     au "I have!"
 
-    scene v12s32_7d # same as 7b, naomi looking at photographer (off-screen) confident smile, mouth open
+    scene v12s32_7d # same as 7b, naomi looking at photographer (off-screen) confident smile, mouth open
     with dissolve
 
     na "Even if she hadn't, she's my sister. It's in her blood."
@@ -180,7 +200,7 @@ label v12s32:
 
     na "Well, today's the day!"
 
-    scene v12s32_10 # TPP naomi dragging mc towards the white backdrop setup
+    scene v12s32_10 # TPP naomi dragging mc towards the white backdrop setup
     with dissolve
 
     pause 0.7
@@ -195,7 +215,7 @@ label v12s32:
 
     na "Posing of course! I wanna see the skills. *Chuckles*"
 
-    scene v12s32_13 # FPP close up photographer, camera in hands not looking into his camera tho,  looking at aubrey, serious face, mouth open, explaining
+    scene v12s32_13 # FPP close up photographer, camera in hands not looking into his camera tho, looking at aubrey, serious face, mouth open, explaining
     with dissolve
 
     pg "Alright, alright! Listen up..."
@@ -207,7 +227,7 @@ label v12s32:
 
     u "Nope."
 
-    scene v12s32_14 # FPP close up Aubrey, (who's standing next to mc) looking at mc , slightly concerned for mc, whispering, mouth open
+    scene v12s32_14 # FPP close up Aubrey, (who's standing next to mc) looking at mc, slightly concerned for mc, whispering, mouth open
     with dissolve
 
     au "*Whisper* You're cool with all this right? I'm sorry if you feel kind of thrown into this, I just really wanted to do this shoot and I was too shy to come by myself."
@@ -242,6 +262,9 @@ label v12s32:
 
     pg "I want you posing together, get sexy!"
 
+    stop music fadeout 3
+    play music "music/v12/Scene 32/Track Scene 32_3.mp3" fadein 2
+
     scene v12s32_15 # TPP show Aubrey and mc, Aubrey looking at the camera, mc confused looking at aubrey, mouth open
     with dissolve
 
@@ -249,8 +272,8 @@ label v12s32:
 
     menu:
         "Turn your back to Aubrey":
-            $ addPoint("bf")
-            scene v12s32_15a #same 15,  MC crosses his arms and puts his back to Aubrey, aubrey a bit dissapointed, mouth upen
+            $ add_point(KCT.BRO)
+            scene v12s32_15a #same 15, MC crosses his arms and puts his back to Aubrey, aubrey a bit dissapointed, mouth upen
             with dissolve
 
             au "Oh, okay."
@@ -271,7 +294,7 @@ label v12s32:
             pg "I wouldn't call that sexy but, alright..."
 
         "Put your arms around Aubrey":
-
+            $ add_point(KCT.BOYFRIEND)
             scene v12s32_15c #same 15, Aubrey has her back to MC and he wraps his arms around her, squeezing her in tight, Aubrey smiles at him, mouth closed
             with dissolve
 
@@ -292,7 +315,7 @@ label v12s32:
 
             au "I think they like us. *Chuckles*"
 
-            scene v12s32_15e # same 15d, aubrey mouth closed, mc mouth open smiling
+            scene v12s32_15e # same 15d, aubrey mouth closed, mc mouth open smiling
             with dissolve
 
             u "And so do I."
@@ -327,7 +350,7 @@ label v12s32:
 
     pg "Alright, these are very good shots and I guarantee they'll help the brand a lot. I can't wait to get these on our store Kiwii. You two have Kiwii's, right?"
 
-    scene v12s32_14b # same 14, aubrey looking at photographer (off-screen), excited, mouth open
+    scene v12s32_14b # same 14, aubrey looking at photographer (off-screen), excited, mouth open
     with dissolve
 
     au "We do! I didn't know we were gonna get to be on the store page!"
@@ -362,7 +385,7 @@ label v12s32:
 
     pg "Off to the next set people!"
 
-    scene v12s32_16 # TPP show mc and aubrey walking towards the next set, the car chloe and mc rode in in front of a backdrop, both smiling
+    scene v12s32_16 # TPP show mc and aubrey walking towards the next set, the car chloe and mc rode in in front of a backdrop, both smiling
     with dissolve
 
     pause 0.7
@@ -387,7 +410,7 @@ label v12s32:
 
     pg "Ahh, my goddess..."
 
-    scene v12s32_20a # FPP close up Aubrey, who's standing next to you ,looking at naomi (off-screne), mouth close, slightly concerned expression
+    scene v12s32_20a # FPP close up Aubrey, who's standing next to you,looking at naomi (off-screne), mouth close, slightly concerned expression
     with dissolve
 
     u "She's confident!"
@@ -397,17 +420,17 @@ label v12s32:
 
     au "Sometimes too confident..."
 
-    scene v12s32_21 #FPP closeup  naomi, in front of the car, starts taking off her top (has bra beneath)
+    scene v12s32_21 #FPP closeup  naomi, in front of the car, starts taking off her top (has bra beneath)
     with dissolve
 
     pause 0.7
 
-    scene v12s32_21a #same as 21 naomi, now just in bra, smiling at mc
+    scene v12s32_21a #same as 21 naomi, now just in bra, smiling at mc
     with dissolve
 
     u "(Damn!)"
 
-    scene v12s32_21b # same 21, naomi poses seductively in front of the car in just her bra
+    scene v12s32_21b # same 21, naomi poses seductively in front of the car in just her bra
     with dissolve
 
     pause 0.7
@@ -417,12 +440,12 @@ label v12s32:
 
     pause 0.7
 
-    scene v12s32_18b # same 18a, close up photographer now taking pictures of  naomi (off screen), mouth open, excited
+    scene v12s32_18b # same 18a, close up photographer now taking pictures of naomi (off screen), mouth open, excited
     with dissolve
 
     pg "YES, MA'AM!! Give it to us..."
 
-    scene v12s32_21c # same 21, naomi poses seductively, in a different pose in front of the car in just her bra
+    scene v12s32_21c # same 21, naomi poses seductively, in a different pose in front of the car in just her bra
     with dissolve
 
     pause 0.7
@@ -459,13 +482,12 @@ label v12s32:
 
     menu:
         "Boost Aubrey":
-            $ addPoint ("tm")
-
+            $ add_point(KCT.TROUBLEMAKER)
             $ v12s32_Aubrey_Boost = True
+            $ aubrey.points += 1
 
             scene v12s32_21c 
             with dissolve
-
             u "You thought that was good? Aubrey can do that, and better... Get up there Aubrey!"
 
             scene v12s32_20b
@@ -483,33 +505,29 @@ label v12s32:
             u "*Whisper* You got this, just be yourself."
 
         "Leave it alone":
-            $ addPoint ("bro")
-
+            $ add_point(KCT.BRO)
             scene v12s32_21c 
             with dissolve
-
 
             u "(She's already pressured by her sister, I shouldn't add to it.)"
 
             scene v12s32_21d
             with dissolve
 
-            na "Hey Aubby, hope you were paying close attention ‘cause it's your turn."
+            na "Hey Aubby, hope you were paying close attention 'cause it's your turn."
 
             scene v12s32_20a
             with dissolve
 
             au "*Whisper to self* Let's get this over with."
 
-    if AubreyBoat0:
-
+    if aubrey.points == 0:
         scene v12s32_20
         with dissolve
 
         au "*Sighs* Fine..."
 
-    if AubreyBoat2:
-
+    if aubrey.points > 0:
         scene v12s32_20d # same as 20b, aubrey cute smile at mc, mouth open
         with dissolve
 
@@ -525,7 +543,7 @@ label v12s32:
 
         au "*Chuckles*"
 
-        scene v12s32_22 #TPP  aubrey kisses mc on the cheek
+        scene v12s32_22 #TPP aubrey kisses mc on the cheek
         with dissolve
 
         pause 0.7
@@ -535,7 +553,7 @@ label v12s32:
 
     pause 0.7
 
-    scene v12s32_24 # FPP closeup Aubrey makes a pose towards the camera in front of the car in her bra
+    scene v12s32_24 # FPP closeup Aubrey makes a pose towards the camera in front of the car in her bra
     with dissolve
 
     u "(Damn, she really is good!)"
@@ -562,7 +580,7 @@ label v12s32:
 
     pg "I don't know! This all seems all nat-u-ral!"
 
-    scene v12s32_24a # same 24, aubrey looking at the camera (off-screen), mouth open , smiling
+    scene v12s32_24a # same 24, aubrey looking at the camera (off-screen), mouth open, smiling
     with dissolve
 
     au "*Chuckles* Can I see the pictures?"
@@ -582,27 +600,28 @@ label v12s32:
 
     pause 0.7
 
+    stop music fadeout 3
+    play music "music/v12/Scene 32/Track Scene 32_4.mp3" fadein 2
+
     if v12s32_Aubrey_Boost:
         scene v12s32_27 # TPP show aubrey hugging mc, aubrey mouth open, cute smile
         with dissolve
 
-        $ aubrey.points += 1
-
         au "Thanks for the support, that was definitely the boost of confidence I needed."
 
-        scene v12s32_27a # same 27, aubrey mouth closed, mc mouth open smiling
+        scene v12s32_27a # same 27, aubrey mouth closed, mc mouth open smiling
         with dissolve
 
         u "Of course. I'll always be there for you."
 
-    scene v12s32_28 # FPP close up photographer looking at Aubrey (off-camera, standing near mc), mouth open ,thinking smile
+    scene v12s32_28 # FPP close up photographer looking at Aubrey (off-camera, standing near mc), mouth open,thinking smile
     with dissolve
 
     pg "Have you thought about going into modeling? I think you'd make an amazing Kiwii model... And if you're worried about looking like you're riding your sister's road to fame, don't."
 
     pg "With pictures like this... You'll make it all on your own."
 
-    scene v12s32_29 # FPP close up Aubrey, mouth open, smile , looking at photographer (off-camera)
+    scene v12s32_29 # FPP close up Aubrey, mouth open, smile, looking at photographer (off-camera)
     with dissolve
 
     au "I've always thought about it, even before my sister started modeling I wanted to, but when she started and blew up I never thought I could match her speed. I mean, look at her."
@@ -628,12 +647,12 @@ label v12s32:
 
     au "NAOMI!?"
 
-    scene v12s32_29c # same 29b, mouth closed
+    scene v12s32_29c # same 29b, mouth closed
     with dissolve
 
     u "Aubrey, you looked good doing that. Really fucking good!"
 
-    scene v12s32_29d # same 29b,  looking at mc (into the camera), cute smile ,mouth open
+    scene v12s32_29d # same 29b, looking at mc (into the camera), cute smile,mouth open
     with dissolve
 
     au "Do you... You actually mean that?"
@@ -663,7 +682,7 @@ label v12s32:
 
     na "*Sighs* Yeah, guess we're on that \"out with the old and in with the new\" type of vibe... C'mon Aubrey."
 
-    scene v12s32_31 #FPP  Aubrey and Naomi walk off with each other
+    scene v12s32_31 #FPP Aubrey and Naomi walk off with each other
     with dissolve
 
     pause 0.7
@@ -704,7 +723,7 @@ label v12s32:
     with dissolve
 
     pg "Don't just keep it in mind, act on it. Get her something. Make her see you. There's some flowers right there, feel free to grab a bouquet."
-    pg " Hell, if I can't get her, I'd rather you than no one. Make me proud!"
+    pg "Hell, if I can't get her, I'd rather you than no one. Make me proud!"
 
     scene v12s32_28d # same 28b, photographer walks off
     with dissolve
@@ -721,7 +740,7 @@ label v12s32:
 
     au "They got me all set up! I think my sister is a little salty because she's just packed up and left... She said she had somewhere to be and that we'll talk later. *Sighs*"
 
-    scene v12s32_33a # same 33, mouth closed
+    scene v12s32_33a # same 33, mouth closed
     with dissolve
 
     u "Guess it bothered her how great you were."
@@ -758,47 +777,63 @@ label v12s32:
 
     au "I wanna get back as soon as possible and show these to everyone. I posted a few on Kiwii and my sister did too. Let's hurry back."
 
+    python:
+        v12s32kiwiiPost1 = KiwiiPost("LewsOfficial", "v12/v12s32_15g.webp", _("New faces in our new pieces! Check out the new Lavish Line on our website ;)"), numberLikes=3889)
+        v12s32kiwiiPost1.newComment("Naomi", _("That's my baby sis! <3"), numberLikes=renpy.random.randint(952, 1512), queue=False)
+        v12s32kiwiiPost1.newComment("Aubrey", _("Thank you so much for having us! Can't wait for the future..."), numberLikes=renpy.random.randint(367, 526), queue=False)
+        v12s32kiwiiPost1.newComment("Chloe", _("OMG!?!?!?!"), numberLikes=renpy.random.randint(124,354), queue=False)
+        v12s32kiwiiPost1.newComment("Imre", _("Bro... Is that you?!"), mentions="MC", numberLikes=renpy.random.randint(53,93), queue=False)
 
-    # -Aubrey, her sister and Lew's posted their pics on Kiwii-
+        v12s32kiwiiPost2 = KiwiiPost("Naomi", "v12/v12s32_24.webp", _("When little sis visits you at work and leaves with your JOB! #ProudBigSis"), numberLikes=2107)
+        v12s32kiwiiPost2.newComment("Aubrey", _("Haha! I love you boo... Thank you for today :)"), mentions="Naomi", numberLikes=renpy.random.randint(278, 363), queue=False)
+        v12s32kiwiiPost2.newComment("Naomi", _("You're sooo welcome sissy. #ItRunsInTheFamily"), mentions="Aubrey", numberLikes=renpy.random.randint(747, 973), queue=False) 
+        v12s32kiwiiPost2.newComment("Nora", _("Hotties!! Hope you had an amazing time... Can't wait to see all the pics!"), numberLikes=renpy.random.randint(253, 462), queue=False)
+        v12s32kiwiiPost2.newComment("Chloe", _("JOB?!?!?!"), numberLikes=renpy.random.randint(245, 587), queue=False)
+        v12s32kiwiiPost2.newComment("Naomi", _("Thank you... <3"), numberLikes=renpy.random.randint(346, 579), queue=False)
+        v12s32kiwiiPost2.newComment("Aubrey", _("Thanks guys... I'll tell you all about it Chlo! Lol"), numberLikes=renpy.random.randint(253, 462), queue=False)
 
-    ### ERROR: KiwiiPost("LewsOfficial", "sexy pose of MC and Aubrey", "New faces in our new pieces! Check out the new Lavish Line on our website ;)", numberLikes=3889)
-    ### ERROR: kiwiiPost.newComment("Naomi", "That's my baby sis! <3")
-    ### ERROR: kiwiiPost.newComment("Aubrey", "Thank you so much for having us! Can't wait for the future...")
-    ### ERROR: kiwiiPost.addReply("Thanks for the invite! It was really nice to meet you...", mentions=”Naomi”)
-    ### ERROR: kiwiiPost.newComment("Naomi", "Hehe, you too! Hope to see you soon...;)")
-    ### ERROR: kiwiiPost.addReply("Had an amazing time today... Thank you, gorgeous!", mentions="Aubrey")
-    ### ERROR: kiwiiPost.newComment("Aubrey", "You're so welcome... Today was amazing. <3")
-    ### ERROR: kiwiiPost.newComment("Chloe", "OMG!?!?!?!")
-    ### ERROR: kiwiiPost.newComment("Imre", "Bro... Is that you?!”, mentions=”MC”)
+        v12s32kiwiiPost3 = KiwiiPost("Aubrey", "v12/v12s32_33.webp", _("You're looking at the newest Lew's model! #BestDayEver"), numberLikes=934)
+        v12s32kiwiiPost3.newComment("Naomi", _("Watch out world, there's two of us... ;)"), numberLikes=renpy.random.randint(532, 737), queue=False)
+        v12s32kiwiiPost3.newComment("Chloe", _("Holy shit, Aubs! Fucking HOTTTT!!!"), numberLikes=renpy.random.randint(320, 479), queue=False)
+        v12s32kiwiiPost3.newComment("Aubrey", _("Haha, thank you babes <3"), numberLikes=renpy.random.randint(253, 462), queue=False)
+        v12s32kiwiiPost3.addReply(_("Absolutely deserved."), numberLikes=renpy.random.randint(126, 367))
+        v12s32kiwiiPost3.newComment("Ryan", _("Holy..."), numberLikes=renpy.random.randint(78, 153))
+        v12s32kiwiiPost3.newComment("Imre", _("Pick up your jaw idiot! LOL"), mentions="Ryan", numberLikes=renpy.random.randint(69, 178))
 
-    ### ERROR: KiwiiPost("Naomi", "selfie in bra of Aubrey and Naomi", "When little sis visits you at work and leaves with your JOB! #ProudBigSis", numberLikes=2107)
-    ### ERROR: kiwiiPost.newComment("Aubrey", "Haha! I love you boo... Thank you for today :)", mentions=”Naomi”)
-    ### ERROR: kiwiiPost.newComment("Naomi", "You're sooo welcome sissy. #ItRunsInTheFamily")
-    ### ERROR: kiwiiPost.addReply("Even more beautiful in person...")
-    ### ERROR: kiwiiPost.addReply("Aww, love this pic of you guys!")
-    ### ERROR: kiwiiPost.newComment("Nora", "Hotties!! Hope you had an amazing time... Can't wait to see all the pics!”)
-    ### ERROR: kiwiiPost.newComment("Chloe", "JOB?!?!?!”)
-    ### ERROR: kiwiiPost.newComment("Naomi”, "Thank you... <3”)
-    ### ERROR: kiwiiPost.newComment("Aubrey", "Thanks guys... I'll tell you all about it Chlo! Lol”)
 
-    ### ERROR: KiwiiPost("Aubrey", "sexy pose on car", "You're looking at the newest Lew's model! #BestDayEver ", numberLikes=934)
-    ### ERROR: kiwiiPost.newComment("Naomi”, “Watch out world, there's two of us... ;)")
-    ### ERROR: kiwiiPost.newComment("Chloe”, “Holy shit, Aubs! Fucking HOTTTT!!!")
-    ### ERROR: kiwiiPost.newComment("Aubrey", "Haha, thank you babes <3”)
-    ### ERROR: kiwiiPost.addReply("Absolutely deserved.")
-    ### ERROR: kiwiiPost.newComment("Aubrey", ":) Thanks to you...”)
-    ### ERROR: kiwiiPost.newComment("Ryan”, "Holy...”)
-    ### ERROR: kiwiiPost.newComment("Imre”, "Pick up your jaw idiot! LOL”, mentions=”Ryan”)
+#    python:
+#        v12s32kiwiiPost1 = KiwiiPost("LewsOfficial", "v12/v12aumcsexy.webp", _("New faces in our new pieces! Check out the new Lavish Line on our website ;)"), numberLikes=3889)
+#        v12s32kiwiiPost1.newComment("Naomi", _("That's my baby sis! <3"), numberLikes=renpy.random.randint(952, 1512), queue=False)
+#        v12s32kiwiiPost1.newComment("Aubrey", _("Thank you so much for having us! Can't wait for the future..."), numberLikes=renpy.random.randint(367, 526), queue=False)
+#        v12s32kiwiiPost1.addReply(_("Thanks for the invite! It was really nice to meet you..."), v12s32kiwiiPost1_Reply1, mentions="Naomi", numberLikes=renpy.random.randint(278,421))
+#        v12s32kiwiiPost1.addReply(_("Had an amazing time today... Thank you, gorgeous!"), v12s32kiwiiPost1_Reply2, mentions="Aubrey")
+#
+#        v12s32kiwiiPost2 = KiwiiPost("Naomi", "v12/v12aunaselfie.webp", _("When little sis visits you at work and leaves with your JOB! #ProudBigSis"), numberLikes=2107)
+#        v12s32kiwiiPost2.newComment("Aubrey", _("Haha! I love you boo... Thank you for today :)"), mentions="Naomi", numberLikes=renpy.random.randint(278, 363), queue=False)
+#        v12s32kiwiiPost2.newComment("Naomi", _("You're sooo welcome sissy. #ItRunsInTheFamily"), mentions="Aubrey", numberLikes=renpy.random.randint(747, 973), queue=False) 
+#        v12s32kiwiiPost2.addReply(_("Even more beautiful in person..."), numberLikes=renpy.random.randint(562, 789))
+#        v12s32kiwiiPost2.addReply(_("Aww, love this pic of you guys!"), numberLikes=renpy.random.randint(578, 865))
+#        v12s32kiwiiPost2.newComment("Nora", _("Hotties!! Hope you had an amazing time... Can't wait to see all the pics!"), numberLikes=renpy.random.randint(253, 462))
+#        v12s32kiwiiPost2.newComment("Chloe", _("JOB?!?!?!"), numberLikes=renpy.random.randint(245, 587))
+#        v12s32kiwiiPost2.newComment("Naomi", _("Thank you... <3"), numberLikes=renpy.random.randint(346, 579))
+#        v12s32kiwiiPost2.newComment("Aubrey", _("Thanks guys... I'll tell you all about it Chlo! Lol"), numberLikes=renpy.random.randint(253, 462))
+#
+#        v12s32kiwiiPost3 = KiwiiPost("Aubrey", "v12/v12aucar.webp", _("You're looking at the newest Lew's model! #BestDayEver"), numberLikes=934)
+#        v12s32kiwiiPost3.newComment("Naomi", _("Watch out world, there's two of us... ;)"), numberLikes=renpy.random.randint(532, 737))
+#        v12s32kiwiiPost3.newComment("Chloe", _("Holy shit, Aubs! Fucking HOTTTT!!!"), numberLikes=renpy.random.randint(320, 479))
+#        v12s32kiwiiPost3.newComment("Aubrey", _("Haha, thank you babes <3"), numberLikes=renpy.random.randint(253, 462))
+#        v12s32kiwiiPost3.addReply(_("Absolutely deserved."), numberLikes=renpy.random.randint(126, 367))
+#        v12s32kiwiiPost3.newComment("Aubrey", _(":) Thanks to you..."), numberLikes=renpy.random.randint(167, 241))
+#        v12s32kiwiiPost3.newComment("Ryan", _("Holy..."), numberLikes=renpy.random.randint(78, 153))
+#        v12s32kiwiiPost3.newComment("Imre", _("Pick up your jaw idiot! LOL"), mentions="Ryan", numberLikes=renpy.random.randint(69, 178))
 
-    scene v12s32_33b # same 33, -Aubrey starts walking away-
+    scene v12s32_33b # same 33, -Aubrey starts walking away-
     with dissolve
 
     menu: 
         "Get Aubrey flowers":
             $ s12v32_get_aubrey_flowers = True
-
-            $ addPoint ("bf")
-
+            $ add_point(KCT.BOYFRIEND)
             u "Wait a minute, Aubrey."
 
             scene v12s32_33d # aubrey turns around, looks at mc, curious, mouth open
@@ -811,7 +846,7 @@ label v12s32:
 
             pause 0.75
 
-            scene v12s32_35 # FPP, mc extends Aubrey flowers (she doesn't take them yet) (show her face like a normal close up , looking at mc) (just show the flowers handed in first person), AUbrey surprised smiled
+            scene v12s32_35 # FPP, mc extends Aubrey flowers (she doesn't take them yet) (show her face like a normal close up, looking at mc) (just show the flowers handed in first person), AUbrey surprised smiled
             with dissolve
 
             u "Your first gift as a future Kiwii modeling star!"
@@ -831,12 +866,12 @@ label v12s32:
 
             au "For once [name], I'll try not to be an asshole. *Chuckles*"
 
-            scene v12s32_35d # same as 35, aubrey takes the flowers , mouth open, genuine smle
+            scene v12s32_35d # same as 35, aubrey takes the flowers, mouth open, genuine smle
             with dissolve
 
             au "Thank you."
 
-            scene v12s32_35e # same 35d , mouth closed
+            scene v12s32_35e # same 35d, mouth closed
             with dissolve
 
             u "You're very welcome."
@@ -850,11 +885,9 @@ label v12s32:
             with dissolve
 
         "Don't get her flowers":
-
-            $ addPoint ("bro")
-
             u "(That'd be doing too much... We're just friends.)"
 
     u "Right, let's go."
 
+    stop music fadeout 3
     jump v12s33 #scene 33

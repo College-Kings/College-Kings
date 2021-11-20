@@ -1,4 +1,4 @@
-# SCENE 19: MC wakes up to Chloe / Lindsey argument or Imre's scream
+# SCENE 19: MC wakes up to Chloe / Lindsey argument or Imre's scream
 # Locations: Hotel Room, Hotel Room Bathroom, Hotel Room Corridor, Hotel Lobby
 # Characters: IMRE (Outfit: 5/2), MC (Outfit: 11/9), NORA (Outfit: 3/1), AUBREY (Outfit: 5/1), CHLOE (Outfit: 2), LINDSEY (Outfit: 1), RILEY (Outfit: 5)
 # Time: Morning
@@ -17,6 +17,8 @@ label v12_party_wake_up:
 
     pause 0.75
 
+    play music "music/v12/Scene 19/Track Scene 19.mp3" fadein 2
+
     scene v12pwu2 # FPP. MC lying in the bed, looking at the bedroom door
     with vpunch
 
@@ -26,6 +28,7 @@ label v12_party_wake_up:
 
     scene v12pwu3 # TPP. Show MC opening the bathroom door and walking in, smiling, mouth closed
     with dissolve
+    play sound "sounds/dooropen.mp3"
 
     pause 0.75
 
@@ -345,5 +348,7 @@ label v12_party_wake_up:
         with dissolve
 
         pause 1
+
+    stop music fadeout 3
 
     jump v12_urban_exploring #scene 20

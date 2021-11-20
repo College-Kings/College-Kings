@@ -28,7 +28,7 @@ label josh_room:
 
     scene v8josh4b # Josh looking somewhat shady, mouth open
     with dissolve
-    jo "Coke deal, you know *sniffs*{w}, and I need someone I can trust to watch my ass, you know, in case they try to rob me."
+    jo "Coke deal, you know *sniffs*, and I need someone I can trust to watch my ass, you know, in case they try to rob me."
     jo "Normally, my cousin does it but he broke his arm so he can't do shit. Can I count on you?"
 
     scene v8josh4c # Same as v8josh4b but Josh mouth closed
@@ -45,8 +45,8 @@ label josh_room:
 
     menu:
         "Agree to help":
-            $ addPoint("tm")
-            $ addPoint("bro")
+            $ add_point(KCT.TROUBLEMAKER)
+            $ add_point(KCT.BRO)
             $ helpJosh = True
 
             u "Yeah, okay, I'll go. I can't let you do this alone."
@@ -80,7 +80,7 @@ label josh_room:
             jo "Yeah, see you then, bro!"
 
         "Say no":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Honestly, man, I don't think so. This isn't me and I don't want to get caught, especially with that shit."
 

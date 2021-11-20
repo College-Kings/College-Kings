@@ -7,35 +7,36 @@ label v12_penelope_roof:
     scene v12penr1 # TPP Show MC sitting on his bed looking down at his phone, in his hand
     with fade
 
+    play sound "sounds/vibrate.mp3"
     pause 1
 
     play music "music/v12/Scene 3/Track Scene 3_1.mp3" fadein 2
 
-    play sound "sounds/vibrate.mp3"
+    $ penelope.messenger.newMessage("Hey, are you up still?", queue=False)
+    $ penelope.messenger.newMessage("If you are, can you meet me in the hallway?", queue=False)
 
-    $ contact_Penelope.newMessage("Hey, are you up still?", queue=False)
-    $ contact_Penelope.newMessage("If you are, can you meet me in the hallway?", queue=False)
+    u "(It's Penelope.)"
 
     call screen phone
 
     menu:
         "Reply":
             if penelopers:
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
-            $ contact_Penelope.addReply("Yeah, one sec", func=None)
+            $ penelope.messenger.addReply("Yeah, one sec", func=None)
 
             label v12_penelope_roof_text:
-                if contact_Penelope.getReplies():
+                if penelope.messenger.replies:
                     call screen phone
-                if contact_Penelope.getReplies():
+                if penelope.messenger.replies:
                     u "(I should probably reply.)"
                     jump v12_penelope_roof_text
 
             scene v12penr2 # TPP Show MC leaving his hotel room
             with dissolve
 
-            pause 0.75
+            pause 1
 
             stop music fadeout 3
             play music "music/v12/Scene 3/Track Scene 3_2.mp3" fadein 2
@@ -168,13 +169,14 @@ label v12_penelope_roof:
 
             menu:
                 "Sure is":
+                    $ add_point(KCT.BRO)
                     scene v12penr11 # FPP View of MC, who is laying on his back looking up at the stars
                     with dissolve
 
                     u "It really is."
 
                 "You sure are":
-
+                    $ add_point(KCT.BOYFRIEND)
                     u "Yes, you are."
 
                     scene v12penr10a # FPP Same angle as v12penr10, Penelope looking back at MC, neutral expression, mouth open
@@ -287,10 +289,11 @@ label v12_penelope_roof:
 
             u "Do you think I'm a good guy?"
 
-            if laurenmad:
+            if (laurenrs and v11_aubrey_sex) or (v7_emily_bowling) or (caughtpeekingpenelope):
                 scene v12penr10a
                 with dissolve
 
+                $ grant_achievement("good_vs_evil")
                 pe "I think you struggle with right and wrong just like everyone does, but that doesn't mean you're good or bad. It means you're human."
 
             else:
@@ -310,7 +313,6 @@ label v12_penelope_roof:
             pe "Always."
 
             if penelopers:
-
                 pe "I kinda hope I end up marrying a guy like you."
 
                 scene v12penr10e
@@ -318,6 +320,7 @@ label v12_penelope_roof:
 
                 menu:
                     "Be shocked":
+                        $ add_point(KCT.BRO)
 
                         u "*Gulp*"
 
@@ -337,8 +340,9 @@ label v12_penelope_roof:
                         pe "*Laughs* Yeah, you've got a few other things to figure out before you start thinking about tying the knot."
 
                     "Be bold":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
+                        $ grant_achievement("a_person_like_me")
                         u "I'm a guy like me."
 
                         scene v12penr12 # TPP Show Penelope rolling over on top of MC
@@ -470,12 +474,15 @@ label v12_penelope_roof:
             pause 0.75
 
         "Don't reply":
-            $ addPoint("tm")
+            $ add_point(KCT.BRO)
 
             scene v12penr19 # FPP MC's view sitting on his bed, looking down at his phone, which he just turned off
             with dissolve
 
-            u "(Don't wanna take the chance that she may be needing help with one of her little Mr. Lee chores.)"
+            if not v12_chase_robber:
+                u "(Don't wanna take the chance that she may be needing help with the laundry or something... Haha.)"            
+            else:
+                u "(Don't wanna take the chance that she may be needing help with one of her little Mr. Lee chores.)"
 
             scene v12penr1b # TPP Same angle as v12penr1, MC putting his phone away
             with dissolve

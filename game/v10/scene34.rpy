@@ -5,10 +5,9 @@
 # Time: Day
 
 label v10_autumn_announcement:
-    
     scene v10samw1 # FPP. Show Autumn standing near the mud wrestling pool, smiling, mouth open.
     with dissolve
-
+    stop music fadeout 3
     play music "music/v10/Scene 34/Track Scene 34.mp3" fadein 3
 
     aut "Alright everyone, if you could all gather around."
@@ -88,7 +87,7 @@ label v10_autumn_announcement:
         "Root for Chloe":
             $ chloeLike += 1
             $ noraLike -= 1
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v10samw6 
             with dissolve
     
@@ -143,7 +142,7 @@ label v10_autumn_announcement:
             $ v10_cvn_cheer_emily = True
             $ forgiveemily = True
             $ emilyLike += 1
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v10samw6a
             with dissolve
 
@@ -160,7 +159,7 @@ label v10_autumn_announcement:
         "Root for Riley":
             $ amberLike -= 1
             $ rileyLike += 1
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             scene v10samw6b
             with dissolve
 

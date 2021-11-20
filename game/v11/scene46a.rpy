@@ -7,7 +7,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1 # FPP. Show Aubrey slight smile mouth closed
     with dissolve
     u "So, do you like fancy restaurants like this?"
-    play music "music/v11/Scene 46/Track Scene 46.mp3" fadein 2
+    play music "music/V10/Scene 40/Track Scene 40_2.mp3" fadein 2
     scene v11dwa1a # FPP. # FPP. Show Aubrey slight smile mouth open
     with dissolve
 
@@ -270,7 +270,6 @@ label v11_dinner_with_aubrey:
 
         menu:
             "Be More than friends":
-
                 scene v11dwa1
                 with dissolve
                 u "That's actually something I've been wanting to talk to you about."
@@ -332,6 +331,7 @@ label v11_dinner_with_aubrey:
                 with dissolve
 
                 au "Haha, it's fine. Just don't make things all awkward now."
+
             "Stay FWB":
                 scene v11dwa1d
                 with dissolve

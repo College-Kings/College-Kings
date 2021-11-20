@@ -5,24 +5,24 @@
 
 init python:
     def v9s32_reply1():
-        contact_Riley.newMessage(_("So you're coming?"))
-        contact_Riley.addReply(_("I hope so ;)"))
-        contact_Riley.newMessage(_("See you in a few!"))
+        riley.messenger.newMessage(_("So you're coming?"))
+        riley.messenger.addReply(_("I hope so ;)"))
+        riley.messenger.newMessage(_("See you in a few!"))
         setattr(store, "v9_sex_with_riley", True)
 
     def v9s32_reply2():
-        contact_Riley.newMessage(_("But? :o"))
-        contact_Riley.addReply(_("But I have to stay focused on the Brawl. There's a lot riding on my fight."))
-        contact_Riley.newMessage(_("Seriously?"))
-        contact_Riley.addReply(_("I'm so sorry. You know I would any other day. Really."))
-        contact_Riley.newMessage(_("Ok well, your loss."))
+        riley.messenger.newMessage(_("But? :o"))
+        riley.messenger.addReply(_("But I have to stay focused on the Brawl. There's a lot riding on my fight."))
+        riley.messenger.newMessage(_("Seriously?"))
+        riley.messenger.addReply(_("I'm so sorry. You know I would any other day. Really."))
+        riley.messenger.newMessage(_("Ok well, your loss."))
 
 label v9_sat_gym:
     scene v9atg1 # TPP. Show MC outside the Gym, neutral face, mouth closed
     with fade
     u "(I should probably freshen up my skills.)"
 
-    play music "music/v9/Scene 32/Track Scene 32.mp3" fadein 2
+    play music "music/v9/Scene 8/Track Scene 8_3.mp3" fadein 2
 
     menu:
         "Hit the gym":
@@ -55,7 +55,7 @@ label v9_sat_hit_gym:
 
         menu:
             "Convince her":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 jump v9_sat_hit_gym_convince
             "Forget it":
                 jump v9_sat_hit_gym_forget
@@ -81,8 +81,7 @@ label v9_sat_hit_gym:
             scene v9atg3b
             with dissolve
 
-            $ second_date = True
-            $ grantAchievement("second_date")
+            $ grant_achievement("second_date")
             u "Great, I'll text you."
 
             scene v9atg4 # TPP. Show MC walking away from Evelyn, evelyn still on weight bench, MC walking towards punching bag, both smiling mouth closed
@@ -157,16 +156,16 @@ label v9_sat_skip_gym:
 
         u "(Oh, who's that?)"
 
-        $ contact_Riley.newMessage(_("Hey, what's up? Wanna come over?"), queue=False)
-        $ contact_Riley.addReply(_("I really shouldn't. Big day tomorrow. Stressed out"))
-        $ contact_Riley.newMessage(_("Duh, that's why I'm asking)"))
-        $ contact_Riley.addReply(_("Well you shoulda led with that!"), v9s32_reply1)
-        $ contact_Riley.addReply(_("Man, I'd really love to but..."), v9s32_reply2)
+        $ riley.messenger.newMessage(_("Hey, what's up? Wanna come over?"), queue=False)
+        $ riley.messenger.addReply(_("I really shouldn't. Big day tomorrow. Stressed out"))
+        $ riley.messenger.newMessage(_("Duh, that's why I'm asking)"))
+        $ riley.messenger.addReply(_("Well you shoulda led with that!"), v9s32_reply1)
+        $ riley.messenger.addReply(_("Man, I'd really love to but..."), v9s32_reply2)
         
         label s32_PhoneContinue:
-            if contact_Riley.getReplies():
+            if riley.messenger.replies:
                 call screen phone
-            if contact_Riley.getReplies():
+            if riley.messenger.replies:
                 "(I should reply to Riley.)"
                 jump s32_PhoneContinue
 

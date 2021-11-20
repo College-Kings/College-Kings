@@ -3,9 +3,15 @@
 # Characters: MC (Outfit 9), Chloe (outfit 2)
 # Time: Night
 label v11_chloe_sex_scene:
+
+    #$ add_point(KCT.TROUBLEMAKER, sum([ v10_ri_sex, v11_fucked_candy, v11_aubrey_sex, v11_msrose_scene, v11_samantha_spa, v11_rileysex ])) ###Loyaltymod
+
+    if config_censored:
+        call screen censoredPopup("v11s41b_nsfwSkipLabel1")
+
     scene v11css1 # TPP. Mc and chloe removing their clothes
     with dissolve
-    play music "music/v11/Scene 41b/Track Scene 41b_1.mp3" fadein 2
+    play music "music/V10/Scene 17/Track Scene 17_2.mp3" fadein 2
     pause
 
     scene v11css1a # TPP. Chloe turning chloe against the wall kissing her neck
@@ -187,7 +193,7 @@ label v11_chloe_sex_scene:
 
     cl "I'll be right back, I'm gonna go clean up."
     stop music fadeout 3
-    play music "music/v11/Scene 41b/Track Scene 41b_2.mp3" fadein 2
+    play music "music/V10/Scene 41/Track Scene 41_2.mp3" fadein 2
     scene v11css6 # FPP. Chloe walks off to the bathroom
     with dissolve
 
@@ -213,6 +219,8 @@ label v11_chloe_sex_scene:
 
     pause 1.25
 
+    label v11s41b_nsfwSkipLabel1:
+
     scene v11css9 # TPP. Chloe and MC in bed, MC big spooning chloe
     with dissolve
 
@@ -230,4 +238,10 @@ label v11_chloe_sex_scene:
 
     $ renpy.end_replay()
     stop music fadeout 3
+    
+    scene black
+    with dissolve
+    
+    pause 2.5
+    
     jump v11_hotel_lobby_rose

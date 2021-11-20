@@ -6,7 +6,7 @@
 label v11_museum_tour:
     scene v11mt1 # TPP. Show Mr Lee, MC and Nora walking up to the museum, MC is in slight pain, Nora slightly annoyed, Mr Lee is smiling, all mouths closed
     with fade
-    play music "music/v11/Scene 22/Track Scene 22.mp3" fadein 2
+    play music "music/v11/Scene 11/Track Scene 11.mp3" fadein 2
     pause 0.75
 
     scene v11tm2 # TPP. Show Chris, Riley and MC standing next to each other inside the museum, Chris on his phone, MC is in slight pain, Riley is slightly smiling, Chris is smiling all mouths closed (Nora standing next to Chris, out of shot, Mr Lee in front of the students, out of shot)
@@ -20,7 +20,7 @@ label v11_museum_tour:
     lee "Ahh, the museum. Students, look around, are you not just... enthralled? The past is right here, before you in all its glory. Gaze upon these dinosaurs, students."
 
     lee "Those of us that study history have debated whether the world is actually billions of years old and these are real..."
-    lee "or if it's only thousands of years old and these are just put together parts of a scientist's imagination."
+    lee "Or if it's only thousands of years old and these are just put together parts of a scientist's imagination."
 
     scene v11tm4 # FPP. Same positioning as v11tm2, MC looking at Nora, she is rolling her eyes, mouth closed, slightly annoyed, looking at Mr Lee (Lee out of shot)
     with dissolve
@@ -66,20 +66,19 @@ label v11_museum_tour:
             no "Keep dreaming, [name]."
 
         "Not real":
-            $ just_a_theory = True
             $ noraLike += 1
             $ rileyLike -= 1
 
             scene v11tm5a # FPP. Same as v11tm5, but Riley looking at MC, mouth closed, slightly annoyed
             with dissolve
 
-            $ grantAchievement("just_a_theory")
+            $ grant_achievement("just_a_theory")
             u "Sorry Riley, they definitely aren't real."
 
             scene v11tm5b # FPP. Same as v11tm5a, Riley mouth open, slightly annoyed
             with dissolve
 
-            ri "Okay Mr. Scientist."
+            ri "Okay, Mr. Scientist."
     
     scene v11tm3
     with dissolve
@@ -158,4 +157,6 @@ label v11_museum_tour:
 
     ri "Sounds good."
     stop music fadeout 3
+    
+    $ v11s23_penelope_date = False #variable was introduced late and defaults as True to enhance playability of saves already in progress. This is an unavoidable toggle to False for new playthroughs that will make the variable act as intended.
     jump v11s23_freeroamstart

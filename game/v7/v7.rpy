@@ -1,69 +1,69 @@
 init python:
     def v7_kiwiiReply1():
         v7_kiwiiPost1.newComment("Cameron", _("Lol, pussy"), mentions="MC", numberLikes=renpy.random.randint(1, 10))
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
 
     def v7_kiwiiReply2():
         v7_kiwiiPost1.newComment("Imre", _("Slide into her DMs bro!"), mentions="MC", numberLikes=renpy.random.randint(5, 15))
-        addPoint("bro")
-        addPoint("tm")
+        add_point(KCT.BRO)
+        add_point(KCT.TROUBLEMAKER)
 
     def v7_kiwiiReply3():
-        addPoint("bf")
+        add_point(KCT.BOYFRIEND)
 
     def v7_kiwiiReply4():
         v7_kiwiiPost2.newComment("Autumn", _("Yeah, they really are"), mentions="MC", numberLikes=renpy.random.randint(8, 18))
     
     def v7_kiwiiReply5():
-        addPoint("bro")
+        add_point(KCT.BRO)
         v7_kiwiiPost3.newComment("Aubrey", _("Bring it on!"), mentions="MC", numberLikes=renpy.random.randint(15, 35))
 
     def v7_kiwiiReply6():
-        addPoint("tm")
+        add_point(KCT.TROUBLEMAKER)
         v7_kiwiiPost4.newComment("Josh", _("lol"), mentions="MC", numberLikes=renpy.random.randint(3, 7))
 
     def v7_msgReply1():
         setattr(store, "tellpenelope", True)
-        addPoint("bro")
-        contact_Penelope.newMessage(_("Okay..."))
+        add_point(KCT.BRO)
+        penelope.messenger.newMessage(_("Okay..."))
 
     def v7_msgReply2():
-        contact_Penelope.newMessage(_("Okay..."))
+        penelope.messenger.newMessage(_("Okay..."))
 
     def v7_msgReply3():
-        contact_Lauren.newMessage(_("How about now?"))
-        contact_Lauren.addReply(_("Sure, I'll come pick you up"))
-        contact_Lauren.newMessage(_("Great :)"))
+        lauren.messenger.newMessage(_("How about now?"))
+        lauren.messenger.addReply(_("Sure, I'll come pick you up"))
+        lauren.messenger.newMessage(_("Great :)"))
 
     def v7_msgReply4():
         setattr(store, "nobeach", True)
-        contact_Lauren.newMessage(_("Oh okay, another time then."))
+        lauren.messenger.newMessage(_("Oh okay, another time then."))
 
     def v7_msgReply5():
         setattr(store, "rileysex", True)
-        contact_Riley.newMessage(_("Yayyy"))
+        riley.messenger.newMessage(_("Yayyy"))
 
     def v7_msgReply6():
         setattr(store, "rileysex", False)
-        contact_Riley.newMessage(_("Oh oki"))
+        riley.messenger.newMessage(_("Oh oki"))
 
     def kiwii_firstTimeMessages():
         if emilyrs:
-            contact_Riley.addReply(_("We're not back together"))
-            contact_Riley.newMessage(_("Okay... just looked like it"))
-            contact_Riley.addReply(_("Well we're not."))
-            contact_Riley.newMessage(_("k"))
+            riley.messenger.addReply(_("We're not back together"))
+            riley.messenger.newMessage(_("Okay... just looked like it"))
+            riley.messenger.addReply(_("Well we're not."))
+            riley.messenger.newMessage(_("k"))
         if bowling and emilyrs:
-            contact_Penelope.newMessage(_("I didn't know you and Emily were a thing..."), queue=False)
-            contact_Penelope.addReply(_("We're not a thing"), v7_msgReply1)
-            contact_Penelope.addReply(_("It was a one time thing"), v7_msgReply2)
+            penelope.messenger.newMessage(_("I didn't know you and Emily were a thing..."), queue=False)
+            penelope.messenger.addReply(_("We're not a thing"), v7_msgReply1)
+            penelope.messenger.addReply(_("It was a one time thing"), v7_msgReply2)
         if emilyrs and laurenrs:
-            contact_Lauren.newMessage(_("I saw what Emily posted. I really thought you liked me..."), queue=False)
-            contact_Lauren.newMessage(_("I guess we're done now, so please just delete my number."), queue=False)
-            contact_Lauren.addReply(_("Lauren can we please just talk about it? I can explain"))
-            contact_Lauren.newMessage(_("What is there to talk about? How could you betray me like that?!"))
-            contact_Lauren.addReply(_("Please, it's just a big misunderstanding"))
-            contact_Lauren.newMessage(_("Fine. I'm in my dorm, we can talk now."))
+            lauren.messenger.newMessage(_("I saw what Emily posted. I really thought you liked me..."), queue=False)
+            lauren.messenger.newMessage(_("I guess we're done now, so please just delete my number."), queue=False)
+            lauren.messenger.addReply(_("Lauren can we please just talk about it? I can explain"))
+            lauren.messenger.newMessage(_("What is there to talk about? How could you betray me like that?!"))
+            lauren.messenger.addReply(_("Please, it's just a big misunderstanding"))
+            lauren.messenger.newMessage(_("Fine. I'm in my dorm, we can talk now."))
 
     def v7_msgReply7():
         setattr(store, "kiwii_firstTime", True)
@@ -266,8 +266,8 @@ label v7start:
 
     menu:
         "Why aren't you on here?":
-            $ addPoint("bro")
-            $ addPoint("tm")
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "So, I don't know if it's weird asking, but if you're not one of the Fight Kings, how come you're the current president?"
 
@@ -290,7 +290,7 @@ label v7start:
             u "Yeah, I can see that. But winning must be surreal too."
 
         "That's really impressive.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "That's really impressive. Winning the entire tournament must be surreal."
 
@@ -467,13 +467,12 @@ label v7start:
         menu:
             "Walk Riley home":
                 $ follownora = False
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene s683a
                 with dissolve
 
-                $ truetoself = True
-                $ grantAchievement("true_to_self")
+                $ grant_achievement("true_to_self")
                 
                 u "Uhh, yeah of course."
 
@@ -486,7 +485,7 @@ label v7start:
 
             "Go after Nora":
                 $ follownora = True
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene s683a
                 with dissolve
@@ -523,14 +522,14 @@ label v7start:
             "Go after Nora":
                 u "(I should go after her and make sure she's okay.)"
 
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ follownora = True
 
             "Leave her alone":
                 u "(I should leave her alone, she probably just wants to be alone right now.)"
                 u "(It's late anyway, I better go home.)"
 
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ follownora = False
 
                 jump conwalkhome
@@ -752,7 +751,7 @@ label hd_bd:
 
         if kct == "confident":
             $ noraclose = True
-            call screen kctPopup
+            call screen kct_popup
 
             scene s699f # nora curious smile
             with dissolve
@@ -1020,7 +1019,7 @@ label hd_ad:
     menu:
         "Keep it friendly":
             if laurenrs:
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
             u "I'm glad. A lot of the Wolves seem really cool. How's classes going? Finish the econ assignment yet?"
 
@@ -1095,9 +1094,9 @@ label hd_ad:
 
         "Start flirting":
             if laurenrs :
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "I'd imagine. Plus you saved the best for last."
 
@@ -1173,7 +1172,7 @@ label hd_ad:
             u "No worries, it was a nice walk."
 
             if kct == "confident":
-                call screen kctPopup
+                call screen kct_popup
 
             elif not rileykiss:
                 scene s708 # riley smiling
@@ -1204,9 +1203,9 @@ label hd_ad:
     menu:
         "Yeah, I'd like that.":
             if laurenrs or emilyrs:
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ rileyrs = True
 
             u "Yeah, I'd like that."
@@ -1315,7 +1314,7 @@ label hd_ad:
 
         "Uhm... I shouldn't.":
             if laurenrs or emilyrs:
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
             u "Uhm... I probably shouldn't. It's quite late."
 
@@ -1384,9 +1383,9 @@ label conyourdorm:
         $ v7_kiwiiPost4.addReply(_("No, we're not."), v7_kiwiiReply6, mentions="Josh", numberLikes=renpy.random.randint(5, 15))
 
         play sound "sounds/vibrate.mp3"
-        $ contact_Riley.newMessage(_("Are you and Emily back together?"), queue=False)
-        $ contact_Riley.addReply(_("What are you talking about???"), v7_msgReply7)
-        $ contact_Riley.newMessage(_("Check Kiwii..."))
+        $ riley.messenger.newMessage(_("Are you and Emily back together?"), queue=False)
+        $ riley.messenger.addReply(_("What are you talking about???"), v7_msgReply7)
+        $ riley.messenger.newMessage(_("Check Kiwii..."))
 
         pause 0.5
 
@@ -1396,9 +1395,12 @@ label conyourdorm:
         u "(What the hell?)"
 
         label phoneam:
-            if contact_Riley.getReplies():
-                call screen messager(contact_Riley)
-            if contact_Riley.getReplies():
+            if bowling and emilyrs:
+                $ v7_emily_bowling = True
+        
+            if riley.messenger.replies:
+                call screen messager(riley.messenger)
+            if riley.messenger.replies:
                 "(I need to respond to some of these messages.)"
                 jump phoneam
 
@@ -1406,11 +1408,11 @@ label conyourdorm:
                 "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam
 
-            if bowling and contact_Penelope.getReplies():
+            if bowling and penelope.messenger.replies:
                 "(I should answer Penelope.)"
                 jump phoneam
 
-            if laurenrs and contact_Lauren.getReplies():
+            if laurenrs and lauren.messenger.replies:
                 "(I should respond to Lauren.)"
                 jump phoneam
 
@@ -1430,7 +1432,7 @@ label conyourdorm:
 
         menu:
             "Be calm":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene s714
                 with dissolve
@@ -1545,7 +1547,7 @@ label conyourdorm:
                         jump thisbewalk
 
             "Get angry":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene s714b # mc angry mouth open
                 with dissolve
@@ -1619,10 +1621,10 @@ label conyourdorm:
 
     else:
         play sound "sounds/vibrate.mp3"
-        $ contact_Riley.newMessage(_("Hey, how come you're not on Kiwii?"), queue=False)
-        $ contact_Riley.addReply(_("What's that?"))
-        $ contact_Riley.newMessage(_("It's a new social media app, you should give it a try"))
-        $ contact_Riley.addReply(_("Okay, I'll have a look"), v7_msgReply7)
+        $ riley.messenger.newMessage(_("Hey, how come you're not on Kiwii?"), queue=False)
+        $ riley.messenger.addReply(_("What's that?"))
+        $ riley.messenger.newMessage(_("It's a new social media app, you should give it a try"))
+        $ riley.messenger.addReply(_("Okay, I'll have a look"), v7_msgReply7)
 
         pause 0.5
 
@@ -1632,9 +1634,9 @@ label conyourdorm:
         u "(Huh? What did Riley text me?)"
 
         label phonean:
-            if contact_Riley.getReplies():
-                call screen messager(contact_Riley)
-            if contact_Riley.getReplies():
+            if riley.messenger.replies:
+                call screen messager(riley.messenger)
+            if riley.messenger.replies:
                 u "(I should respond to Riley.)"
                 jump phonean
             
@@ -1665,7 +1667,7 @@ label apologylauren:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
 
@@ -1748,7 +1750,7 @@ label apologylauren:
 
     elif kct == "loyal":
         $ laurenmad = False
-        call screen kctPopup
+        call screen kct_popup
 
         scene s717
         with dissolve
@@ -1853,7 +1855,7 @@ label thisbelauren:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
 
@@ -1880,7 +1882,7 @@ label thisbelauren:
 
     menu:
         "Come clean about Emily":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "I'm just gonna come right out and say it."
 
@@ -1922,7 +1924,7 @@ label thisbelauren:
             menu:
                 "This won't happen again.":
                     $ laurenemily = 2
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     u "Like I said, it was a stupid mistake. After it happened, I realized that's not what I want at all."
 
@@ -1937,7 +1939,7 @@ label thisbelauren:
                     u "You. Of course I want you. That's all I want. I promise. It's never gonna happen again."
 
                     if kct == "loyal":
-                        call screen kctPopup
+                        call screen kct_popup
 
                         $ laurenrs = True
                         $ laurenmad = True
@@ -2037,8 +2039,8 @@ label thisbelauren:
 
                 "Open relationship?":
                     $ laurenemily = 3
-                    $ addPoint("bro")
-                    $ addPoint("tm")
+                    $ add_point(KCT.BRO)
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ laurenrs = False
                     $ laurenmad = True
                     $ autumnmad = True
@@ -2086,8 +2088,8 @@ label thisbelauren:
 
         "Deny the cheating":
             $ laurenemily = 1
-            $ addPoint("bro")
-            $ addPoint("tm")
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.TROUBLEMAKER)
             $ laurenrs = True
             $ laurenmad = False
 
@@ -2253,9 +2255,9 @@ label thisbewalk:
         menu:
             "Almost as cute as you.":
                 if laurenrs:
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                 else:
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                 u "Almost as cute as you."
 
@@ -2306,7 +2308,7 @@ label thisbewalk:
 
         menu:
             "Yes, of course.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ politics = True
 
                 u "Yes, of course. I guess we all have something. Am I right?"
@@ -2357,7 +2359,7 @@ label thisbewalk:
                 aut "Oh, alright. I'll definitely check it out."
 
             "No, not really.":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ politics = False
 
                 u "No, not really. I'm not really into politics myself."
@@ -2382,7 +2384,7 @@ label thisbewalk:
 
         menu:
             "Can I join?":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ protest = True
 
                 u "Really? Any chance I can join you?"
@@ -2410,7 +2412,7 @@ label thisbewalk:
                     u "Yeah, definitely. Just let me know when you're making them."
 
                 elif kct == "loyal":
-                    call screen kctPopup
+                    call screen kct_popup
 
                     $ signs = True
 
@@ -2446,7 +2448,7 @@ label thisbewalk:
                     with dissolve
 
             "That's really cool.":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ protest = False
                 $ signs = False
 
@@ -2554,36 +2556,36 @@ label thisbewalk:
         play sound "sounds/vibrate.mp3"
 
         if seenlauren and laurenrs:
-            $ contact_Lauren.newMessage(_("Wanna go now babe?"), queue=False)
-            $ contact_Lauren.addReply(_("Sure, I'll come pick you up"))
-            $ contact_Lauren.newMessage(_("Great :)"))
+            $ lauren.messenger.newMessage(_("Wanna go now babe?"), queue=False)
+            $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
+            $ lauren.messenger.newMessage(_("Great :)"))
 
         elif seenlauren:
-            $ contact_Lauren.newMessage(_("Wanna go now?"), queue=False)
-            $ contact_Lauren.addReply(_("Sure, I'll come pick you up"))
-            $ contact_Lauren.newMessage(_("Great :)"))
+            $ lauren.messenger.newMessage(_("Wanna go now?"), queue=False)
+            $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
+            $ lauren.messenger.newMessage(_("Great :)"))
 
         else:
-            $ contact_Lauren.newMessage(_("Hey :)"), queue=False)
+            $ lauren.messenger.newMessage(_("Hey :)"), queue=False)
 
             if laurenrs:
-                $ contact_Lauren.newMessage(_("You wanna go to the beach today?"), queue=False)
-                $ contact_Lauren.addReply(_("Sounds good, when were you thinking?"))
-                $ contact_Lauren.newMessage(_("How about now?"))
-                $ contact_Lauren.addReply(_("Sure, I'll come pick you up"))
-                $ contact_Lauren.newMessage(_("Great :)"))
+                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), queue=False)
+                $ lauren.messenger.addReply(_("Sounds good, when were you thinking?"))
+                $ lauren.messenger.newMessage(_("How about now?"))
+                $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
+                $ lauren.messenger.newMessage(_("Great :)"))
 
             else:
-                $ contact_Lauren.newMessage(_("You wanna go to the beach today?"), queue=False)
-                $ contact_Lauren.addReply(_("Sounds good, when were you thinking?"), v7_msgReply3)
-                $ contact_Lauren.addReply(_("Sorry, I can't I'm really busy today"), v7_msgReply4)
+                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), queue=False)
+                $ lauren.messenger.addReply(_("Sounds good, when were you thinking?"), v7_msgReply3)
+                $ lauren.messenger.addReply(_("Sorry, I can't I'm really busy today"), v7_msgReply4)
 
         " "
 
         label phoneao:
-            if contact_Lauren.getReplies():
+            if lauren.messenger.replies:
                 call screen phone
-            if contact_Lauren.getReplies():
+            if lauren.messenger.replies:
                 u "(I should probably reply.)"
                 jump phoneao
 
@@ -2656,7 +2658,7 @@ label beachlauren:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
 
@@ -2770,8 +2772,8 @@ label beachlauren:
         if imremad:
             menu:
                 "Tell her it's fine":
-                    $ addPoint("bro")
-                    $ addPoint("tm")
+                    $ add_point(KCT.BRO)
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     u "Good, great. You know how he is. It's just uhm... really good."
 
@@ -2794,7 +2796,7 @@ label beachlauren:
 
                 "Tell her he moved out":
                     $ laurenimre = True
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     u "Uhm... Imre and I had a fight and he moved out..."
 
@@ -3171,8 +3173,8 @@ label beachlauren:
         if imremad:
             menu:
                 "Tell her it's fine":
-                    $ addPoint("bro")
-                    $ addPoint("tm")
+                    $ add_point(KCT.BRO)
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     u "Good, great. You know how he is. It's just uhm... really good."
 
@@ -3195,7 +3197,7 @@ label beachlauren:
 
                 "Tell her he moved out":
                     $ laurenimre = True
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     u "Uhm... Imre and I had a fight and he moved out..."
 
@@ -3263,7 +3265,7 @@ label beachlauren:
 
         menu:
             "You're cute.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene s742e
                 with dissolve
@@ -3279,7 +3281,7 @@ label beachlauren:
                 with dissolve
 
                 if kct == "loyal":
-                    call screen kctPopup
+                    call screen kct_popup
 
                     menu:
                         "Kiss her":
@@ -3330,7 +3332,7 @@ label beachlauren:
                             u "Yeah, me too."
 
                         "Don't risk it":
-                            $ addPoint("bf")
+                            $ add_point(KCT.BOYFRIEND)
                             $ beachfirstkiss = False
 
                             u "*Chuckles*"
@@ -3339,7 +3341,7 @@ label beachlauren:
                     u "*Chuckles*"
 
             "I won't.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "I won't... don't worry."
 
@@ -3461,6 +3463,7 @@ label afterbeach:
     if not meetgrayson:
         u "(Wolves pledging starts soon... is it stupid of me to wanna pledge now? I didn't think frat life was for me..."
 
+        $ grant_achievement("wolfpack")
         u "(But after everything that happened I feel like I gotta at least try and get in, otherwise I'll miss out on too much.)"
 
     elif joinapes:
@@ -3479,19 +3482,13 @@ label afterbeach:
 
             menu:
                 "Pledge to the Apes":
-
-                    $ silverback = True
-                    $ grantAchievement("silverback")
-
+                    $ grant_achievement("silverback")
                     u "(Fuck it. I'm gonna be winner, no matter what it costs. Time to pledge to the Apes.)"
 
                     jump pledgeapes
 
                 "Pledge to the Wolves":
-
-                    $ wolfpack = True
-                    $ grantAchievement("wolfpack")
-
+                    $ grant_achievement("wolfpack")
                     u "(Grayson might kill me when he finds out, but I can't join the Apes. I gotta pledge to the Wolves.)"
 
     else:
@@ -3510,24 +3507,19 @@ label afterbeach:
 
         menu:
             "Pledge to the Apes":
-
-                $ silverback = True
-                $ grantAchievement("silverback")
-
+                $ grant_achievement("silverback")
                 u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
                 jump pledgeapes
 
             "Pledge to the Wolves":
-                $ wolfpack = True
-                $ grantAchievement("wolfpack")
-
+                $ grant_achievement("wolfpack")
                 u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
 
 
 ####### SCENE 13 PLEDGING THE WOLVES
 label pledgewolves:
-    $ addPoint("bro")
+    $ add_point(KCT.BRO)
     $ joinwolves = True
 
     scene s756 # Camera - third person, MC walking through town during evening wearing jeans
@@ -3664,7 +3656,7 @@ label pledgewolves:
     with dissolve
     ch "And fearless!"
 
-    play music"music/mindie1.mp3" fadein 3
+    play music "music/mindie1.mp3" fadein 3
     queue music [ "music/m6punk.mp3", "music/m15punk.mp3", "music/m16punk.mp3" ]
 
     scene s762a
@@ -3769,7 +3761,7 @@ label pledgewolves:
     menu:
         "Eliminate Imre":
             $ wolvesTask1 = False
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s768a
             with dissolve
@@ -3778,7 +3770,7 @@ label pledgewolves:
         "Decline":
             $ wolvesTask1 = True
             $ tasks += 1
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s768a
             with dissolve
@@ -3911,8 +3903,8 @@ label pledgewolves:
     menu:
         "Get the call":
             $ wolvesTask2 = False
-            $ addPoint("bf")
-            $ addPoint("tm")
+            $ add_point(KCT.BOYFRIEND)
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s779 # Close up of MC leaving out of the tub, mouth open
             with dissolve
@@ -3923,7 +3915,7 @@ label pledgewolves:
         "Continue the challenge":
             $ tasks += 1
             $ wolvesTask2 = True
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "I'll get it later. I'm in this to win."
             ch "That's the spirit!"
@@ -4330,8 +4322,8 @@ label aftercall:
     with dissolve
     menu:
         "Do it":
-            $ addPoint("tm")
-            $ addPoint("bro")
+            $ add_point(KCT.TROUBLEMAKER)
+            $ add_point(KCT.BRO)
 
             u "Why not, you should do it."
 
@@ -4348,7 +4340,7 @@ label aftercall:
             no "Okaaay, well I'll mark that down."
 
         "Of course not":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Isn't that obvious? You don't do it."
 
@@ -4441,10 +4433,10 @@ label aftercall:
         "Kiss her back":
             $ wolvesTask4 = False
             if laurenrs:
-                $ addPoint("tm", 2)
+                $ add_point(KCT.TROUBLEMAKER, 2)
             else:
-                $ addPoint("tm")
-                $ addPoint("bf")
+                $ add_point(KCT.TROUBLEMAKER)
+                $ add_point(KCT.BOYFRIEND)
 
             ### NEW ACHIEVEMENT UNLOCK? ###
             scene s793c # Nora still leaning into the MC. MC tilts forward his head and goes for a kiss
@@ -4490,9 +4482,9 @@ label aftercall:
         "Pull away":
             $ tasks += 1
             $ wolvesTask4 = True
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             if laurenrs:
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
             scene s793f # MC tilts back when Nora is tilting towards him. MC talking, Nora mouth closed
             with dissolve
@@ -4712,7 +4704,7 @@ label aftercall:
 
 ######## SCENE 14 APES
 label pledgeapes:
-    $ addPoint("tm", 3) # I think more TM points for joining the Apes makes sense
+    $ add_point(KCT.TROUBLEMAKER, 3) # I think more TM points for joining the Apes makes sense
     $ joinwolves = False
 
     scene s756 # Not a new render
@@ -4993,7 +4985,7 @@ label pledgeapes:
 
     menu:
         "Stand up to him":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ stoodUpToCam = True
 
             scene s843a # Cameron threatening and mouth closed
@@ -5037,7 +5029,7 @@ label pledgeapes:
             ca "Then get in the ring with me."
 
         "Hold yourself back":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ stoodUpToCam = False
             pause 0.5
 
@@ -5069,7 +5061,7 @@ label ep7_fight_cam:
     menu:
         "Punch him":
             $ punchedCam = True
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s846b # MC throws a punch but Cameron blocks it
             with hpunch
@@ -5094,8 +5086,8 @@ label ep7_fight_cam:
 
         "Retreat":
             $ punchedCam = False
-            $ addPoint("bf")
-            $ addPoint("bro")
+            $ add_point(KCT.BOYFRIEND)
+            $ add_point(KCT.BRO)
 
             scene s846c # Same as s846 but Cameron mouth closed
             with dissolve
@@ -5236,7 +5228,7 @@ label ep7_cam_picture:
     menu:
         "Take the slip":
             $ cameronSisNumber = True
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s856
             with dissolve
@@ -5248,7 +5240,7 @@ label ep7_cam_picture:
 
         "Decline":
             $ cameronSisNumber = False
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s856
             with dissolve
@@ -5317,14 +5309,14 @@ label ep7_cam_picture:
         "Call her":
             $ apesTask1 = True
             $ apesVids += 1
-            $ addPoint("bro")
-            $ addPoint("bf")
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.BOYFRIEND)
 
             u "Okay."
 
         "Refuse to do it":
             $ apesTask1 = False
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Nah, I'm not calling Chloe."
 
@@ -5453,14 +5445,14 @@ label after_pledges:
         menu:
             "Text her":
                 $ emilyText = True
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
-                $ contact_Emily.addReply(_("Hey, sorry I lost track of time. You up?"))
+                $ emily.messenger.addReply(_("Hey, sorry I lost track of time. You up?"))
 
                 label phonebb:
-                    if contact_Emily.getReplies():
+                    if emily.messenger.replies:
                         call screen phone
-                    if contact_Emily.getReplies():
+                    if emily.messenger.replies:
                         u "(I should text Emily that I lost track of time.)"
                         jump phonebb
 
@@ -5469,7 +5461,7 @@ label after_pledges:
             "Don't text her":
                 $ forgiveemily = False
                 $ emilyText = False
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "(Nah, I've had enough of her.)"
 
@@ -5495,8 +5487,8 @@ label after_pledges:
     if emilyText:
         play sound "sounds/vibrate.mp3"
         
-        $ contact_Emily.newMessage(_("It's okay. You'll get the surprise another time..."), queue=False)
-        $ contact_Emily.addReply(_("Exciting :)"))
+        $ emily.messenger.newMessage(_("It's okay. You'll get the surprise another time..."), queue=False)
+        $ emily.messenger.addReply(_("Exciting :)"))
 
     " "
 
@@ -5952,7 +5944,7 @@ label after_pledges:
 
         menu:
             "Defend yourself":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ madeFunOfLee = True
 
                 scene s886 # Camera - TPP (Similar to s884 but closer). MC confident and talking looking at Lee. Lee mouth closed and looking at the MC
@@ -6013,7 +6005,7 @@ label after_pledges:
                 jump after_history
 
             "Stay silent":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ madeFunOfLee = False
 
                 scene s886c # MC looking down in embarrassment. Lee looking at MC. Both mouths closed
@@ -6339,7 +6331,7 @@ label after_history:
 
     menu:
         "Make fun of his costume":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "You serious bro? Elvis? Is that how far you could think back? Hahaha."
 
@@ -6352,7 +6344,7 @@ label after_history:
             u "Disagree, but what's up?"
 
         "Just say hello":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "Hey, what's up?"
 
@@ -6410,7 +6402,7 @@ label after_history:
     menu:
         "Do it":
             $ apesTask2Try = True
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Fine! If you're that interested in looking at Mr. Lee's naked ass."
 
@@ -6420,7 +6412,7 @@ label after_history:
 
         "That's stupid and risky":
             $ apesTask2Try = False
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Nah, that's stupid as fuck. I'm not getting kicked out of school just to join the Apes."
 
@@ -6458,7 +6450,7 @@ label after_history:
     menu (fail_label="lee_pants_fail"): # 3 second timer default
         "Pull it":
             $ apesTask2Success = True
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ apesVids += 1
             stop sound
 
@@ -6488,8 +6480,7 @@ label after_history:
                 scene s907 # Camera - FPP. MC and Cameron running through the door. Cameron is in front of MC with his phone in his hand. MC is almost out of the door
                 with vpunch
 
-                $ leeway = True
-                $ grantAchievement("lee_way")
+                $ grant_achievement("lee_way")
 
                 lee "Who was that? {b}WHO WAS THAT?{/b}"
                 ca "HAHAHA! FUCKIN' ACES!"
@@ -6577,7 +6568,7 @@ label hc_asking_amber:
     with fade
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
     scene s919 # Camera - FPP. Amber opens the door and talking with a confused look
@@ -6618,7 +6609,7 @@ label hc_asking_amber:
     am "Sorry [name]."
 
     if kct == "popular":
-        call screen kctPopup
+        call screen kct_popup
 
         $ amberEcstasyOffer = True
 
@@ -6636,7 +6627,7 @@ label hc_asking_amber:
         am "How about we skip the dance together? I promise it'll be a lot more fun."
         menu:
             "Alright, I'm in.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ hcGirl = "amber"
                 $ amberrs = True
 
@@ -6656,7 +6647,7 @@ label hc_asking_amber:
                 jump after_hc_selection
 
             "I'd rather go to the dance.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene s919e
                 with dissolve
@@ -6885,7 +6876,7 @@ label hc_asking_chloe:
         $ hcGirl = "chloe"
 
         if not volleyball:
-            call screen kctPopup
+            call screen kct_popup
 
         scene s937d # chloe smiling eyebrow raised
         with dissolve
@@ -7025,7 +7016,7 @@ label hc_asking_lauren:
         $ hcGirl = "lauren"
         
         if not beachfirstkiss:
-            call screen kctPopup
+            call screen kct_popup
 
         $ laurenrs = True
 
@@ -7166,7 +7157,7 @@ label hc_asking_riley:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     scene s958a #mc gets on one knee, holds the glass slipper out in front of him
     with dissolve
@@ -7184,7 +7175,7 @@ label hc_asking_riley:
         $ hcGirl = "riley"
 
         if not rileyrs:
-            call screen kctPopup
+            call screen kct_popup
 
         $ rileyrs = True
 
@@ -7332,7 +7323,8 @@ label cameron_thurs_tasks:
     scene scc1a # TPP. As above but MC turns his head to look at door.
     with dissolve
 
-    "*Knock knock knock*"
+    pause 1.5
+    
     play sound "sounds/dooropen.mp3"
     scene scc2 # FPP. Show MC door, now open, Cameron stood in threshold, neutral expression.
     with dissolve
@@ -7513,7 +7505,7 @@ label cameron_thurs_tasks:
 
     menu:
         "Do it":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ apesVids += 1
 
             scene scc19 # TPP. Show MC grabbing the glue from Cameron, Cameron smile, MC mouth open.
@@ -7557,7 +7549,7 @@ label cameron_thurs_tasks:
             pause 0.5
 
         "Don't do it":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene scc18 # FPP. Show Cameron disappointed expression, mouth closed.
             with dissolve
@@ -7631,7 +7623,7 @@ label cameron_thurs_tasks:
 
     menu:
         "Do it":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene scc28 # TPP. Show MC and Cameron high fiving, smile on both faces, MC mouth open.
             with dissolve
@@ -7669,7 +7661,7 @@ label cameron_thurs_tasks:
             # CRICKET DROP TIMER
             menu (fail_label="av_crickets_no_drop"):
                 "Drop the crickets":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ apesVids += 1
 
                     scene scc31a # FPP. As above but, show MC arms turning the container of crickets upside down with them falling out.
@@ -7743,7 +7735,7 @@ label cameron_thurs_tasks:
                         ca "Yeah well, next time act faster. I don't have time for this bullshit."
 
         "Don't do it":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene scc27a # TPP. Show Cameron and MC back at campus stood together, Cameron angry expression.
             with dissolve
@@ -7964,7 +7956,7 @@ label v7_nsfwSkipLabel4:
     menu:
         "Console Samantha":
             $ consoledSam = True
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene scc72 # TPP. Show MC sat on the sidewalk next to Samantha, MC looking at Samantha mouth open, Samantha head in hands crying.
             with dissolve
@@ -8020,7 +8012,7 @@ label v7_nsfwSkipLabel4:
 
         "Leave her be":
             $ consoledSam = False
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
     label av_no_sam: #for compatibility only
     if apesVids > 3:
@@ -8923,16 +8915,16 @@ label rileytext:
     if rileyrs:
         play sound "sounds/vibrate.mp3"
 
-        $ contact_Riley.newMessage(_("Wanna come over? ;)"), queue=False)
-        $ contact_Riley.addReply(_("Sure, on my way :)"), v7_msgReply5)
-        $ contact_Riley.addReply(_("Sorry I'm really exhausted. Another time"), v7_msgReply6)
+        $ riley.messenger.newMessage(_("Wanna come over? ;)"), queue=False)
+        $ riley.messenger.addReply(_("Sure, on my way :)"), v7_msgReply5)
+        $ riley.messenger.addReply(_("Sorry I'm really exhausted. Another time"), v7_msgReply6)
         
         " "
 
         label rtnow:
-            if contact_Riley.getReplies():
+            if riley.messenger.replies:
                 call screen phone
-            if contact_Riley.getReplies():
+            if riley.messenger.replies:
                 u "(I should check my messages.)"
                 jump rtnow
 
@@ -8972,6 +8964,10 @@ label rileysexscene:
 
 # Pre-cursor to sex with Riley
     $ rileyrs = True
+    $ v7_rileysex = True
+    
+    #$ add_point(KCT.TROUBLEMAKER, sum([ aubreysex, aubreysex2, v6_emilysex ])) ###Loyaltymod
+    
     scene ridrm1 # You knocking on Riley's dorm door (third person)
     with dissolve
 
@@ -9010,8 +9006,6 @@ label rileysexscene:
     scene ridrm4 # Same as above but mouth closed now (first person)#
     with dissolve
     ri "Let me show you what I mean."
-
-    stop music fadeout 2.0
 
     scene ridrm4a # Same as above but mouth closed now (first person)#
     with dissolve
@@ -9274,21 +9268,21 @@ label v7_nsfwSkipLabel1:
 
 ########## SCENE 36 MAKING SIGNS W/ AUTUMN
 label signs_with_autumn:
-    $ contact_Autumn.newMessage(_("Hey, it's Autumn."), queue=False)
-    $ contact_Autumn.newMessage(_("I'm just about to start making signs. Do you still want to join?"), queue=False)
-    $ contact_Autumn.addReply(_("Yes, of course. I'd love to."))
-    $ contact_Autumn.newMessage(_("Great. I'm at the Deer's House. Do you know how to get there?"))
-    $ contact_Autumn.addReply(_("Yeah, I think I do. On my way."))
-    $ contact_Autumn.newMessage(_("Alright, see you soon."))
+    $ autumn.messenger.newMessage(_("Hey, it's Autumn."), queue=False)
+    $ autumn.messenger.newMessage(_("I'm just about to start making signs. Do you still want to join?"), queue=False)
+    $ autumn.messenger.addReply(_("Yes, of course. I'd love to."))
+    $ autumn.messenger.newMessage(_("Great. I'm at the Deer's House. Do you know how to get there?"))
+    $ autumn.messenger.addReply(_("Yeah, I think I do. On my way."))
+    $ autumn.messenger.newMessage(_("Alright, see you soon."))
 
     play sound "sounds/vibrate.mp3"
 
     " "
 
     label phoneba:
-        if contact_Autumn.getReplies():
+        if autumn.messenger.replies:
             call screen phone
-        if contact_Autumn.getReplies():
+        if autumn.messenger.replies:
             u "(I should probably check my messages.)"
             jump phoneba
 
@@ -9300,7 +9294,7 @@ label signs_with_autumn:
     with fade
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
 
@@ -9393,7 +9387,7 @@ label signs_with_autumn:
             u "Thanks."
 
         "Same something direct":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Men against misogyny."
 
@@ -9682,6 +9676,8 @@ label walking_through_hallways:
     pause 0.5
 
 ######## SCENE 38 BACK IN YOUR DORM FRIDAY EVENING
+    label v7_homecoming:
+
     if joinwolves:
         stop music fadeout 2.0
 
@@ -9780,7 +9776,8 @@ label amberhocodate:
     scene sfr4am2 #MC arrives at Amber's dorm step. He knocks
     with fade
     play sound "sounds/knock.mp3"
-    "*Knock knock knock*"
+    
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
     scene sfr4am3 #CLOSE UP Amber opens the door, excited mouth open
@@ -9864,8 +9861,7 @@ label amberhocodate:
     with dissolve
 
 label v7_nsfwSkipLabel5:
-    $ ecstatic = True
-    $ grantAchievement("ecstatic")
+    $ grant_achievement("ecstatic")
         
     u "Now what?"
 
@@ -10165,7 +10161,7 @@ label chloehocodate:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
     scene sfr4cl3 # close up nora opening the door indifferent in her dress
@@ -10443,7 +10439,7 @@ label chloehocodate:
 
     menu:
         "Aubrey":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             scene sfr4cl21a # aubrey looking at you smiling mouth closed
             with dissolve
 
@@ -10460,7 +10456,7 @@ label chloehocodate:
             au "This man's got taste!"
 
         "Lindsey":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "I'm gonna go with Lindsey. Sorry, Aubrey."
 
@@ -10489,8 +10485,8 @@ label chloehocodate:
 
     menu:
         "Ask something sexual":
-            $ addPoint("bro")
-            $ addPoint("tm")
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Would you rather have a threesome with two guys, or a guy and a girl?"
 
@@ -10518,7 +10514,7 @@ label chloehocodate:
             with dissolve
 
         "Ask something funny":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Would you rather fight 100 hamster sized zebras or one zebra sized hamster?"
 
@@ -10569,8 +10565,8 @@ label chloehocodate:
 
     menu:
         "Joke around":
-            $ addPoint("bro")
-            $ addPoint("tm")
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "And then on the other side of me, you're sitting. So that's really cool too."
 
@@ -10580,7 +10576,7 @@ label chloehocodate:
             cl "*Laughs* Oh wow! You're unbelievable."
 
         "Keep it romantic":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "We'll make this the best night ever."
 
@@ -10716,7 +10712,7 @@ label emilyhocodate:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
     scene sfr4em3 # close up emily opening the door in her dress smiling
@@ -10874,7 +10870,7 @@ label emilyhocodate:
 
     menu:
         "Of course.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "Of course. Dancing is like riding a bicycle. You don't unlearn that."
 
@@ -10886,7 +10882,7 @@ label emilyhocodate:
             em "Show me then."
 
         "I'm not sure.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "I'm not sure... I haven't properly done couple dancing since high school."
 
@@ -11155,7 +11151,7 @@ label laurenhocodate:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
     scene sfr4la1 # first personclose up lauren opens the door shy smile
@@ -11272,7 +11268,7 @@ label laurenhocodate:
 
     menu:
         "Keep it light":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "I'm not surprised."
 
@@ -11282,7 +11278,7 @@ label laurenhocodate:
             la "Oh wow."
 
         "Reassure her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "I'm sure you're not that bad."
 
@@ -11529,7 +11525,7 @@ label penelopehocodate:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     scene sfr4pe1a # you no longer knocking
     with dissolve
@@ -11538,7 +11534,7 @@ label penelopehocodate:
 
     menu:
         "Enter her room":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             play sound "sounds/dooropen.mp3"
             scene sfr4pe1b # showing mc entering her room, door still only half open, cant see penelope or much in the room
             with dissolve
@@ -11578,14 +11574,14 @@ label penelopehocodate:
             u "Wow You look... stunning."
 
         "Knock again":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene sfr4pe1 #you knocking on penelopes door
             with dissolve
 
             play sound "sounds/knock.mp3"
 
-            "*Knock knock knock*"
+            pause 1.5
 
             scene sfr4pe1a
             with dissolve
@@ -11690,7 +11686,7 @@ label penelopehocodate:
     menu:
         "Ask about sex toys":
             $ penelopesextoys = True
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Come on, were you hiding your sex toys?"
 
@@ -11734,7 +11730,7 @@ label penelopehocodate:
             pe "It was weird... but good. I don't know."
 
         "Ask about drugs":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "I bet it was weed."
 
@@ -11841,7 +11837,7 @@ label penelopehocodate:
     scene sfr4pe8d
     with dissolve
 
-    pe "No way, you were never cliff Jumping."
+    pe "No way, you were never cliff jumping."
 
     scene sfr4pe8e
     with dissolve
@@ -12017,7 +12013,7 @@ label rileyhocodate:
 
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
+    pause 1.5
 
     play sound "sounds/dooropen.mp3"
 
@@ -12375,7 +12371,6 @@ label rileyhocodate:
 ############# SCENE 45 HOMECOMING FREE ROAM
 ######
 label fr4:
-    $ freeRoam = True
     play music "music/mhoco1.mp3"
 
     queue music [ "music/mhoco2.mp3", "music/mhoco3.mp3", "music/mhoco4.mp3"]
@@ -12540,289 +12535,290 @@ label fr4chloedate:
 
     u "*Chuckles* True."
 
-    scene sfr4stage1 # close up ms rose on the stage on the microphone
-    with dissolve
+    if not v7_seencrowning:
+        scene sfr4stage1 # close up ms rose on the stage on the microphone
+        with dissolve
 
-    ro "Ahem. Hello... Hello... Hi!"
+        ro "Ahem. Hello... Hello... Hi!"
 
-    scene sfr4stage1a
-    with dissolve
+        scene sfr4stage1a
+        with dissolve
 
-    pause 0.5
+        pause 0.5
 
-    scene sfr4stage1
-    with dissolve
+        scene sfr4stage1
+        with dissolve
 
-    ro "So it's time for big announcement as you all know... time to announce the homecoming queen and king!"
+        ro "So it's time for big announcement as you all know... time to announce the homecoming queen and king!"
 
-    scene sfr4stage1a
-    with dissolve
+        scene sfr4stage1a
+        with dissolve
 
-    "*Crowd cheers and applauds*"
+        "*Crowd cheers and applauds*"
 
-    scene sfr4stage1
-    with dissolve
+        scene sfr4stage1
+        with dissolve
 
-    ro "And your homecoming king is..."
+        ro "And your homecoming king is..."
 
-    ro "Chris Smith!"
+        ro "Chris Smith!"
 
-    scene sfr4stage2 # chris walks up on stage
-    with dissolve
+        scene sfr4stage2 # chris walks up on stage
+        with dissolve
 
-    "*Crowd cheers and applauds*"
+        "*Crowd cheers and applauds*"
 
-    scene sfr4stage2a # chris on stage looking at the crowd
-    with dissolve
+        scene sfr4stage2a # chris on stage looking at the crowd
+        with dissolve
 
-    ch "Thank you! Thank you!"
+        ch "Thank you! Thank you!"
 
-    scene sfr4stage3 # ms rose puts a crown on chris' head
-    with dissolve
+        scene sfr4stage3 # ms rose puts a crown on chris' head
+        with dissolve
 
-    ro "Congratulations Chris!"
+        ro "Congratulations Chris!"
 
-    scene sfr4stage3a # ms rose turning to the crowd
-    with dissolve
+        scene sfr4stage3a # ms rose turning to the crowd
+        with dissolve
 
-    ro "Next up, your homecoming queen is..."
+        ro "Next up, your homecoming queen is..."
 
-    ro "Chloe Moralez!"
+        ro "Chloe Moralez!"
 
-    "*Crowd cheers and applauds*"
+        "*Crowd cheers and applauds*"
 
-    scene sfr4cl31
-    with dissolve
+        scene sfr4cl31
+        with dissolve
 
-    cl "That's my cue."
+        cl "That's my cue."
 
-    scene sfr4cl31a
-    with dissolve
+        scene sfr4cl31a
+        with dissolve
 
-    u "Go get 'em!"
+        u "Go get 'em!"
 
-    scene sfr4stage4#Chloe runs up on stage
-    with dissolve
+        scene sfr4stage4#Chloe runs up on stage
+        with dissolve
 
-    "*Crowd continues to cheer*"
+        "*Crowd continues to cheer*"
 
-    cl "Thanks guys!"
+        cl "Thanks guys!"
 
-    scene sfr4stage5 #Ms. Rose puts a tiara on her.
-    with dissolve
+        scene sfr4stage5 #Ms. Rose puts a tiara on her.
+        with dissolve
 
-    ro "Congrats Chloe!"
+        ro "Congrats Chloe!"
 
-    scene sfr4stage6 # ms rose turns to the crowd
-    with dissolve
+        scene sfr4stage6 # ms rose turns to the crowd
+        with dissolve
 
-    ro "Let's give it up for Chris and Chloe!!"
+        ro "Let's give it up for Chris and Chloe!!"
 
-    scene sfr4stage7 # chris and chloe hand in hand bow
-    with dissolve
-    "*Crowd cheers and applauds*"
+        scene sfr4stage7 # chris and chloe hand in hand bow
+        with dissolve
+        "*Crowd cheers and applauds*"
 
-    scene sfr4stage6
-    with dissolve
+        scene sfr4stage6
+        with dissolve
 
-    ro "Now it is a tradition that the king and queen dance with each other."
+        ro "Now it is a tradition that the king and queen dance with each other."
 
-    scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
-    with dissolve
+        scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
+        with dissolve
 
-    pause 0.5
+        pause 0.5
 
-    scene sfr4stage9 # showing Chloe and Chris slow dancing together
-    with dissolve
+        scene sfr4stage9 # showing Chloe and Chris slow dancing together
+        with dissolve
 
-    pause 0.5
+        pause 0.5
 
-    u "(Well this is great...)"
+        u "(Well this is great...)"
 
-    scene sfr4cl33 # showing Nora stand arms crossed in the corner
-    with dissolve
+        scene sfr4cl33 # showing Nora stand arms crossed in the corner
+        with dissolve
 
-    u "(Hmm...)"
+        u "(Hmm...)"
 
-    menu:
-        "Ask Nora to dance":
-            scene sfr4cl34 # showing mc walking over to nora
-            with dissolve
-
-            pause 0.5
-
-            scene sfr4cl35 # close up nora looking not at you
-            with dissolve
-
-            u "Hey... you wanna dance?"
-
-            scene sfr4cl35b # close up nora looking at you hesitant
-            with dissolve
-
-            no "Uhm..."
-
-            if not noramad and fr3nora:
-                #If Nora likes you:
-                no "Yeah, why not."
-
-                scene sfr4cl35c
-                with dissolve
-
-                u "Cool."
-
-                scene sfr4cl36 # TPP nora and mc slow dancing, nora slight smile
-                with Dissolve(1)
-
-                no "Guess we can't let our dates have all the fun."
-
-                scene sfr4cl36a
-                with dissolve
-
-                u "Exactly. You having a good night?"
-
-                scene sfr4cl36b # new pose
-                with dissolve
-
-                no "Can't complain, well not too much at least. But you know Chris, Mr. Popular."
-
-                scene sfr4cl36c
-                with dissolve
-
-                u "Well I'm glad you're at least having a good time."
-
-                scene sfr4cl36
-                with dissolve
-
-                no "Haha at least the best I could in this shitty place."
-
-                scene sfr4cl36a
-                with dissolve
-
-                u "Oh come on. It's not that bad."
-
-                scene sfr4cl36b
-                with dissolve
-
-                no "Well it's not hell if that's what you mean."
-
-                scene sfr4cl36c
-                with dissolve
-
-                u "Haha."
-
-                scene sfr4cl37 #Chloe and Chris walk up. they both have their tiara / crown in their hand no longer on their head
-                with dissolve
-
-                ch "You guys having fun?"
-
-                scene sfr4cl38a # close up chris smiling mouth closed
-                with dissolve
-
-                u "Haha yeah, congrats!"
-
-                scene sfr4cl38
-                with dissolve
-
-                ch "Yeah, yeah. Thanks man."
-
-                scene sfr4cl39 # showing chris and nora, chris talking to nora
-                with dissolve
-
-                ch "Wanna get a drink?"
-
-                scene sfr4cl39a
-                with dissolve
-
-                no "Sure."
-
-                scene sfr4cl40 #Chris and Nora walk off.
+        menu:
+            "Ask Nora to dance":
+                scene sfr4cl34 # showing mc walking over to nora
                 with dissolve
 
                 pause 0.5
 
-                scene sfr4cl41 # fpp close up chloe smiling at you
+                scene sfr4cl35 # close up nora looking not at you
                 with dissolve
 
-                cl "Now for that dance?"
+                u "Hey... you wanna dance?"
 
-                scene sfr4cl41a
+                scene sfr4cl35b # close up nora looking at you hesitant
                 with dissolve
 
-                u "Finally, haha."
+                no "Uhm..."
 
-                jump chloe_dance
+                if not noramad and fr3nora:
+                    #If Nora likes you:
+                    no "Yeah, why not."
 
-            elif not noramad:
-                no "I don't really feel like dancing, sorry."
+                    scene sfr4cl35c
+                    with dissolve
 
-                scene sfr4cl35c
-                with dissolve
+                    u "Cool."
 
-                u "Oh, okay."
+                    scene sfr4cl36 # TPP nora and mc slow dancing, nora slight smile
+                    with Dissolve(1)
 
-            else:
-                no "I don't."
+                    no "Guess we can't let our dates have all the fun."
 
-                scene sfr4cl35c
-                with dissolve
+                    scene sfr4cl36a
+                    with dissolve
 
-                u "Uh, okay..."
+                    u "Exactly. You having a good night?"
 
-        "Leave her be":
-            u "(I'll leave her be.)"
+                    scene sfr4cl36b # new pose
+                    with dissolve
 
-label walk_to_ryan:
-    scene sfr4cl42 #MC walks over to Ryan.
-    with dissolve
+                    no "Can't complain, well not too much at least. But you know Chris, Mr. Popular."
 
-    pause 0.5
+                    scene sfr4cl36c
+                    with dissolve
 
-    scene sfr4cl43 # close up ryan djing
-    with dissolve
+                    u "Well I'm glad you're at least having a good time."
 
-    u "Hey, what's up?"
+                    scene sfr4cl36
+                    with dissolve
 
-    scene sfr4cl43b # ryan looking up at you smiling
-    with dissolve
+                    no "Haha at least the best I could in this shitty place."
 
-    ry "Hey."
+                    scene sfr4cl36a
+                    with dissolve
 
-    scene sfr4cl43c
-    with dissolve
+                    u "Oh come on. It's not that bad."
 
-    u "How's the DJing?"
+                    scene sfr4cl36b
+                    with dissolve
 
-    scene sfr4cl43b
-    with dissolve
+                    no "Well it's not hell if that's what you mean."
 
-    ry "It's good, just wish there were more girls coming by, that's kinda why I offered to do it."
+                    scene sfr4cl36c
+                    with dissolve
 
-    scene sfr4cl43c
-    with dissolve
+                    u "Haha."
 
-    u "Haha, I feel you."
+                    scene sfr4cl37 #Chloe and Chris walk up. they both have their tiara / crown in their hand no longer on their head
+                    with dissolve
 
-    scene sfr4cl44 # close up chloe embarrassed smile, tiara in her hand not on her hand
-    with dissolve
+                    ch "You guys having fun?"
 
-    cl "Hey, sorry about that."
+                    scene sfr4cl38a # close up chris smiling mouth closed
+                    with dissolve
 
-    scene sfr4cl44a
-    with dissolve
+                    u "Haha yeah, congrats!"
 
-    u "Congrats!"
+                    scene sfr4cl38
+                    with dissolve
 
-    scene sfr4cl44
-    with dissolve
+                    ch "Yeah, yeah. Thanks man."
 
-    cl "Oh yeah, thanks!"
+                    scene sfr4cl39 # showing chris and nora, chris talking to nora
+                    with dissolve
 
-    cl "Now for that dance?"
+                    ch "Wanna get a drink?"
 
-    scene sfr4cl44a
-    with dissolve
+                    scene sfr4cl39a
+                    with dissolve
 
-    u "Finally, haha."
+                    no "Sure."
+
+                    scene sfr4cl40 #Chris and Nora walk off.
+                    with dissolve
+
+                    pause 0.5
+
+                    scene sfr4cl41 # fpp close up chloe smiling at you
+                    with dissolve
+
+                    cl "Now for that dance?"
+
+                    scene sfr4cl41a
+                    with dissolve
+
+                    u "Finally, haha."
+
+                    jump chloe_dance
+
+                elif not noramad:
+                    no "I don't really feel like dancing, sorry."
+
+                    scene sfr4cl35c
+                    with dissolve
+
+                    u "Oh, okay."
+
+                else:
+                    no "I don't."
+
+                    scene sfr4cl35c
+                    with dissolve
+
+                    u "Uh, okay..."
+
+            "Leave her be":
+                u "(I'll leave her be.)"
+
+        label walk_to_ryan:
+        scene sfr4cl42 #MC walks over to Ryan.
+        with dissolve
+
+        pause 0.5
+
+        scene sfr4cl43 # close up ryan djing
+        with dissolve
+
+        u "Hey, what's up?"
+
+        scene sfr4cl43b # ryan looking up at you smiling
+        with dissolve
+
+        ry "Hey."
+
+        scene sfr4cl43c
+        with dissolve
+
+        u "How's the DJing?"
+
+        scene sfr4cl43b
+        with dissolve
+
+        ry "It's good, just wish there were more girls coming by, that's kinda why I offered to do it."
+
+        scene sfr4cl43c
+        with dissolve
+
+        u "Haha, I feel you."
+
+        scene sfr4cl44 # close up chloe embarrassed smile, tiara in her hand not on her hand
+        with dissolve
+
+        cl "Hey, sorry about that."
+
+        scene sfr4cl44a
+        with dissolve
+
+        u "Congrats!"
+
+        scene sfr4cl44
+        with dissolve
+
+        cl "Oh yeah, thanks!"
+
+        cl "Now for that dance?"
+
+        scene sfr4cl44a
+        with dissolve
+
+        u "Finally, haha."
 
 label chloe_dance:
     play music "music/mlove2.mp3"
@@ -13200,114 +13196,115 @@ label fr4laurendate:
 
     la "Well, I'm glad you're back."
 
-    scene sfr4stage1 # close up ms rose on the stage on the microphone
-    with dissolve
-
-    ro "Ahem. Hello... Hello... Hi!"
-
-    scene sfr4stage1a
-    with dissolve
-
-    pause 0.5
-
-    scene sfr4stage1
-    with dissolve
-
-    ro "So it's time for big announcement as you all know... time to announce the homecoming queen and king!"
-
-    scene sfr4stage1a
-    with dissolve
-
-    "*Crowd cheers and applauds*"
-
-    scene sfr4stage1
-    with dissolve
-
-    ro "And your homecoming king is..."
-
-    ro "Chris Smith!"
-
-    scene sfr4stage2 # chris walks up on stage
-    with dissolve
-
-    "*Crowd cheers and applauds*"
-
-    scene sfr4stage2a # chris on stage looking at the crowd
-    with dissolve
-
-    ch "Thank you! Thank you!"
-
-    scene sfr4stage3 # ms rose puts a crown on chris' head
-    with dissolve
-
-    ro "Congratulations Chris!"
-
-    scene sfr4stage3a # ms rose turning to the crowd
-    with dissolve
-
-    ro "Next up, your homecoming queen is..."
-
-    ro "Chloe Moralez!"
-
-    "*Crowd cheers and applauds*"
-
-    if not chloesad:
-        scene sfr4stage4#Chloe runs up on stage
+    if not v7_seencrowning:
+        scene sfr4stage1 # close up ms rose on the stage on the microphone
         with dissolve
 
-        label fr4laurendatechloe:
-            "*Crowd continues to cheer*"
+        ro "Ahem. Hello... Hello... Hi!"
 
-            cl "Thanks guys!"
+        scene sfr4stage1a
+        with dissolve
 
-            scene sfr4stage5 #Ms. Rose puts a tiara on her.
-            with dissolve
-
-            ro "Congrats Chloe!"
-
-            scene sfr4stage6 # ms rose turns to the crowd
-            with dissolve
-
-            ro "Let's give it up for Chris and Chloe!!"
-
-            scene sfr4stage7 # chris and chloe hand in hand bow
-            with dissolve
-            "*Crowd cheers and applauds*"
-
-            scene sfr4stage6
-            with dissolve
-
-            ro "Now it is a tradition that the king and queen dance with each other."
-
-            scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
-            with dissolve
-
-            pause 0.5
-
-            scene sfr4stage9 # showing Chloe and Chris slow dancing together
-            with dissolve
-
-            pause 0.5
-
-    else:
         pause 0.5
 
-        ro "Chloe?... Chloe?"
-
-        scene sfr4la19b # lauren curious
+        scene sfr4stage1
         with dissolve
 
-        la "That's weird, where is she?"
+        ro "So it's time for big announcement as you all know... time to announce the homecoming queen and king!"
 
-        scene sfr4la19c
+        scene sfr4stage1a
         with dissolve
 
-        u "Who knows."
+        "*Crowd cheers and applauds*"
 
-        scene sfr4stage3a
+        scene sfr4stage1
         with dissolve
 
-        ro "Well, let's just start the dance back up then!"
+        ro "And your homecoming king is..."
+
+        ro "Chris Smith!"
+
+        scene sfr4stage2 # chris walks up on stage
+        with dissolve
+
+        "*Crowd cheers and applauds*"
+
+        scene sfr4stage2a # chris on stage looking at the crowd
+        with dissolve
+
+        ch "Thank you! Thank you!"
+
+        scene sfr4stage3 # ms rose puts a crown on chris' head
+        with dissolve
+
+        ro "Congratulations Chris!"
+
+        scene sfr4stage3a # ms rose turning to the crowd
+        with dissolve
+
+        ro "Next up, your homecoming queen is..."
+
+        ro "Chloe Moralez!"
+
+        "*Crowd cheers and applauds*"
+
+        if not chloesad:
+
+            label fr4laurendatechloe:
+                scene sfr4stage4#Chloe runs up on stage
+                with dissolve
+                "*Crowd continues to cheer*"
+
+                cl "Thanks guys!"
+
+                scene sfr4stage5 #Ms. Rose puts a tiara on her.
+                with dissolve
+
+                ro "Congrats Chloe!"
+
+                scene sfr4stage6 # ms rose turns to the crowd
+                with dissolve
+
+                ro "Let's give it up for Chris and Chloe!!"
+
+                scene sfr4stage7 # chris and chloe hand in hand bow
+                with dissolve
+                "*Crowd cheers and applauds*"
+
+                scene sfr4stage6
+                with dissolve
+
+                ro "Now it is a tradition that the king and queen dance with each other."
+
+                scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
+                with dissolve
+
+                pause 0.5
+
+                scene sfr4stage9 # showing Chloe and Chris slow dancing together
+                with dissolve
+
+                pause 0.5
+
+        else:
+            pause 0.5
+
+            ro "Chloe?... Chloe?"
+
+            scene sfr4la19b # lauren curious
+            with dissolve
+
+            la "That's weird, where is she?"
+
+            scene sfr4la19c
+            with dissolve
+
+            u "Who knows."
+
+            scene sfr4stage3a
+            with dissolve
+
+            ro "Well, let's just start the dance back up then!"
 
     play music "music/mlove2.mp3"
 
@@ -13445,140 +13442,141 @@ label fr4penelopedate:
 
     pe "Okay, yay." # Hi Steve!
 
-    scene sfr4stage1 # close up ms rose on the stage on the microphone
-    with dissolve
-
-    ro "Ahem. Hello... Hello... Hi!"
-
-    scene sfr4stage1a
-    with dissolve
-
-    pause 0.5
-
-    scene sfr4stage1
-    with dissolve
-
-    ro "So it's time for big announcement as you all know... time to announce the homecoming queen and king!"
-
-    scene sfr4stage1a
-    with dissolve
-
-    "*Crowd cheers and applauds*"
-
-    scene sfr4stage1
-    with dissolve
-
-    ro "And your homecoming king is..."
-
-    ro "Chris Smith!"
-
-    scene sfr4stage2 # chris walks up on stage
-    with dissolve
-
-    "*Crowd cheers and applauds*"
-
-    scene sfr4stage2a # chris on stage looking at the crowd
-    with dissolve
-
-    ch "Thank you! Thank you!"
-
-    scene sfr4stage3 # ms rose puts a crown on chris' head
-    with dissolve
-
-    ro "Congratulations Chris!"
-
-    scene sfr4stage3a # ms rose turning to the crowd
-    with dissolve
-
-    ro "Next up, your homecoming queen is..."
-
-    ro "Chloe Moralez!"
-
-    "*Crowd cheers and applauds*"
-
-    if not chloesad:
-
-        scene sfr4pe14d # penelope looking at the stage
+    if not v7_seencrowning:
+        scene sfr4stage1 # close up ms rose on the stage on the microphone
         with dissolve
 
-        pe "Aw that's good for her! Of course she would win it!"
+        ro "Ahem. Hello... Hello... Hi!"
 
-        scene sfr4pe14b
+        scene sfr4stage1a
         with dissolve
 
-        pe "I could never! I would be so nervous walking up like that."
-
-        scene sfr4pe14c
-        with dissolve
-
-        u "I'm sure you could."
-
-        scene sfr4pe14c
-        with dissolve
-
-        pe "Maybe in a million lifetimes."
-
-        scene sfr4stage4#Chloe runs up on stage
-        with dissolve
-
-        label fr4penelopedatechloe:
-            "*Crowd continues to cheer*"
-
-            cl "Thanks guys!"
-
-            scene sfr4stage5 #Ms. Rose puts a tiara on her.
-            with dissolve
-
-            ro "Congrats Chloe!"
-
-            scene sfr4stage6 # ms rose turns to the crowd
-            with dissolve
-
-            ro "Let's give it up for Chris and Chloe!!"
-
-            scene sfr4stage7 # chris and chloe hand in hand bow
-            with dissolve
-            "*Crowd cheers and applauds*"
-
-            scene sfr4stage6
-            with dissolve
-
-            ro "Now it is a tradition that the king and queen dance with each other."
-
-            scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
-            with dissolve
-
-            pause 0.5
-
-            scene sfr4stage9 # showing Chloe and Chris slow dancing together
-            with dissolve
-
-            pause 0.5
-
-    else:
         pause 0.5
 
-        ro "Chloe?... Chloe?"
-
-        scene sfr4pe14d
+        scene sfr4stage1
         with dissolve
 
-        pe "That's strange! I hope she's alright!"
+        ro "So it's time for big announcement as you all know... time to announce the homecoming queen and king!"
 
-        scene sfr4pe14b
+        scene sfr4stage1a
         with dissolve
 
-        pe "Maybe she was too nervous to come up. Oh my god, I would be too!"
+        "*Crowd cheers and applauds*"
 
-        scene sfr4pe14c
+        scene sfr4stage1
         with dissolve
 
-        u "Yeah, maybe."
+        ro "And your homecoming king is..."
 
-        scene sfr4stage3a
+        ro "Chris Smith!"
+
+        scene sfr4stage2 # chris walks up on stage
         with dissolve
 
-        ro "Well, let's just start the dance back up then!"
+        "*Crowd cheers and applauds*"
+
+        scene sfr4stage2a # chris on stage looking at the crowd
+        with dissolve
+
+        ch "Thank you! Thank you!"
+
+        scene sfr4stage3 # ms rose puts a crown on chris' head
+        with dissolve
+
+        ro "Congratulations Chris!"
+
+        scene sfr4stage3a # ms rose turning to the crowd
+        with dissolve
+
+        ro "Next up, your homecoming queen is..."
+
+        ro "Chloe Moralez!"
+
+        "*Crowd cheers and applauds*"
+
+        if not chloesad:
+
+            scene sfr4pe14d # penelope looking at the stage
+            with dissolve
+
+            pe "Aw that's good for her! Of course she would win it!"
+
+            scene sfr4pe14b
+            with dissolve
+
+            pe "I could never! I would be so nervous walking up like that."
+
+            scene sfr4pe14c
+            with dissolve
+
+            u "I'm sure you could."
+
+            scene sfr4pe14c
+            with dissolve
+
+            pe "Maybe in a million lifetimes."
+
+            label fr4penelopedatechloe:
+                scene sfr4stage4
+                with dissolve
+
+                "*Crowd continues to cheer*"
+
+                cl "Thanks guys!"
+
+                scene sfr4stage5 #Ms. Rose puts a tiara on her.
+                with dissolve
+
+                ro "Congrats Chloe!"
+
+                scene sfr4stage6 # ms rose turns to the crowd
+                with dissolve
+
+                ro "Let's give it up for Chris and Chloe!!"
+
+                scene sfr4stage7 # chris and chloe hand in hand bow
+                with dissolve
+                "*Crowd cheers and applauds*"
+
+                scene sfr4stage6
+                with dissolve
+
+                ro "Now it is a tradition that the king and queen dance with each other."
+
+                scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
+                with dissolve
+
+                pause 0.5
+
+                scene sfr4stage9 # showing Chloe and Chris slow dancing together
+                with dissolve
+
+                pause 0.5
+
+        else:
+            pause 0.5
+
+            ro "Chloe?... Chloe?"
+
+            scene sfr4pe14d
+            with dissolve
+
+            pe "That's strange! I hope she's alright!"
+
+            scene sfr4pe14b
+            with dissolve
+
+            pe "Maybe she was too nervous to come up. Oh my god, I would be too!"
+
+            scene sfr4pe14c
+            with dissolve
+
+            u "Yeah, maybe."
+
+            scene sfr4stage3a
+            with dissolve
+
+            ro "Well, let's just start the dance back up then!"
 
     play music "music/mlove2.mp3"
 
@@ -13597,12 +13595,12 @@ label fr4penelopedate:
     scene sfr4pe15b # penelope and mc slow dancing pose 2, penelope cute nervous
     with dissolve
 
-    pe "About everything. About going to homecoming with you. I don't know I didn't wanna disappoint you!"
+    pe "About everything. About going to homecoming with you. I don't know... I didn't wanna disappoint you!"
 
     scene sfr4pe15c
     with dissolve
 
-    u "Penelope come on! You could never disappoint me. I asked you for a reason."
+    u "Penelope, come on! You could never disappoint me. I asked you out for a reason."
 
     scene sfr4pe15
     with dissolve
@@ -13968,10 +13966,9 @@ label fr4rileydate:
 
     if not chloesad:
 
-        scene sfr4stage4#Chloe runs up on stage
-        with dissolve
-
         label fr4rileydatechloe:
+            scene sfr4stage4#Chloe runs up on stage
+            with dissolve
 
             "*Crowd continues to cheer*"
 
@@ -14111,7 +14108,7 @@ label fr4nora1:
 
         menu:
             "Give Chris advice":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "You ever thought of just taking her home?"
 
@@ -14156,7 +14153,7 @@ label fr4nora1:
                 u "Cool."
 
             "Agree":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 u "Yeah, seems like it. But you're enjoying yourself at least?"
 
                 scene sfr4no2
@@ -14243,7 +14240,7 @@ label fr4elijah1:
 
     menu:
         "Say hi to Elijah":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             u "Cool moves, man."
 
@@ -14258,8 +14255,8 @@ label fr4elijah1:
             u "*Chuckles* Keep it up."
 
         "Make fun of Elijah":
-            $ addPoint("tm")
-            $ addPoint("bro")
+            $ add_point(KCT.TROUBLEMAKER)
+            $ add_point(KCT.BRO)
 
 
             u "You dance like a clown, man."
@@ -14451,7 +14448,7 @@ label fr4aaron1:
 
     menu:
         "Back up Aaron":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             if joinwolves or hcGirl == "chloe":
                 u "Trust me, Aaron's a great guy and any girl would be lucky to go home with him."
@@ -14530,7 +14527,7 @@ label fr4aaron1:
                 u "Uhhh, bye."
 
         "Side with Lindsey":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             if joinwolves or hcGirl == "chloe":
                 u "You guys should stay. It's fun!"
@@ -14631,6 +14628,7 @@ label fr4aaron2:
 
 
 label fr4riley2:
+
     scene sfr4ri50 # showing riley getting a drink
 
     u "Hey."
@@ -14697,43 +14695,43 @@ label fr4riley2:
     "*Crowd cheers and applauds*"
 
     if not chloesad:
-        scene sfr4stage4#Chloe runs up on stage
-        with dissolve
-
         label fr4alonechloe:
 
-            "*Crowd continues to cheer*"
+            if not v7_seencrowning:
+                scene sfr4stage4#Chloe runs up on stage
+                with dissolve
+                "*Crowd continues to cheer*"
 
-            cl "Thanks guys!"
+                cl "Thanks guys!"
 
-            scene sfr4stage5 #Ms. Rose puts a tiara on her.
-            with dissolve
+                scene sfr4stage5 #Ms. Rose puts a tiara on her.
+                with dissolve
 
-            ro "Congrats Chloe!"
+                ro "Congrats Chloe!"
 
-            scene sfr4stage6 # ms rose turns to the crowd
-            with dissolve
+                scene sfr4stage6 # ms rose turns to the crowd
+                with dissolve
 
-            ro "Let's give it up for Chris and Chloe!!"
+                ro "Let's give it up for Chris and Chloe!!"
 
-            scene sfr4stage7 # chris and chloe hand in hand bow
-            with dissolve
-            "*Crowd cheers and applauds*"
+                scene sfr4stage7 # chris and chloe hand in hand bow
+                with dissolve
+                "*Crowd cheers and applauds*"
 
-            scene sfr4stage6
-            with dissolve
+                scene sfr4stage6
+                with dissolve
 
-            ro "Now it is a tradition that the king and queen dance with each other."
+                ro "Now it is a tradition that the king and queen dance with each other."
 
-            scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
-            with dissolve
+                scene sfr4stage8 # showing Chloe and Chris walking on to the dance floor together
+                with dissolve
 
-            pause 0.5
+                pause 0.5
 
-            scene sfr4stage9 # showing Chloe and Chris slow dancing together
-            with dissolve
+                scene sfr4stage9 # showing Chloe and Chris slow dancing together
+                with dissolve
 
-            pause 0.5
+                pause 0.5
 
     else:
         pause 0.5
@@ -14769,7 +14767,7 @@ label fr4riley2:
     with dissolve
 
     ri "Well we've been here for a few hours now and it's getting kinda boring."
-
+    $ v7_seencrowning = True
 
     if rileyrs and hcGirl == "alone":
 
@@ -14798,14 +14796,14 @@ label fr4riley2:
 
         menu:
             "Alright, let's go.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright. Let me tell my date that I gotta leave early and let's go."
 
                 jump fr4rileyending
 
             "I can't ditch my date.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ fr4noriley = True
 
                 u "Riley, I- I can't ditch my date like that."
@@ -14858,14 +14856,14 @@ label fr4riley2:
 
         menu:
             "Alright, let's go.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright. Let me tell my date that I gotta leave early and let's go."
 
                 jump fr4rileyending
 
             "I can't ditch my date.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ fr4noriley = True
 
                 u "*Chuckles* I can't ditch my date like that."
@@ -14925,7 +14923,7 @@ label fr4nora2:
 
         menu:
             "Agree with Nora.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "Sorry, that must suck. He should be spending time with you."
 
@@ -14960,7 +14958,7 @@ label fr4nora2:
                 u "Yeah, see ya."
 
             "Defend Chris.":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ fr3nora = False
 
                 u "I mean I get where he's coming from. He's got his own priorities to deal with too. And he's president of a frat-"
@@ -15215,8 +15213,10 @@ label fr4aubrey1:
 
         menu:
             "Alright, let's go.":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ bathroomblowjob = True
+
+                #$ add_point(KCT.TROUBLEMAKER, sum([ v6_emilysex, v7_rileysex ])) ###Loyaltymod
 
                 u "Yeah, alright. Let's go."
 
@@ -15311,7 +15311,7 @@ label fr4aubrey1:
                     jump labelfr4hallwaybathroom
 
             "I'm not really feeling it.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene sfr4ri39d # aubrey a bit disappointed
                 with dissolve
@@ -15401,8 +15401,8 @@ label fr4chloe1:
         "Defend Chloe":
             $ ryandefendchloe = True
             $ chloemad = False
-            $ addPoint("bf")
-            $ addPoint("tm")
+            $ add_point(KCT.BOYFRIEND)
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene sfr4cl48a
             with dissolve
@@ -15435,7 +15435,7 @@ label fr4chloe1:
             u "Shut up, man. Not cool."
 
         "Say nothing":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene sfr4cl49
             with dissolve
@@ -15881,8 +15881,8 @@ label fr4imre1:
     if joinwolves:
         menu:
             "Say something to Imre":
-                $ addPoint("bro")
-                $ addPoint("tm")
+                $ add_point(KCT.BRO)
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "*Laughs* Imre?"
 
@@ -15901,7 +15901,7 @@ label fr4imre1:
                 jump labelfr4hallwaybathroom
 
             "Leave them alone":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "(I should probably leave these two alone.)"
 
@@ -15993,7 +15993,7 @@ label fr4penelope1:
 
     menu:
         "I like your dress.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "I really like your dress."
 
@@ -16016,7 +16016,7 @@ label fr4penelope1:
             with dissolve
 
         "I'll let you get back.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
     u "Alright, well I'll let you get back to your friend. She sounds like she needs you more than I do."
 
@@ -16052,7 +16052,7 @@ label fr4penelope2:
 label fr4chloe2:
     $ fr4chloe2 = True
 
-    if not chloemad or ryandefendchloe:
+    if not chloemad:
         scene sfr4cl53a # fpp close up chloe mad
 
         u "You okay?"
@@ -16096,7 +16096,7 @@ label fr4chloe2:
 
         menu:
             "You got this.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "You got this."
 
@@ -16116,10 +16116,14 @@ label fr4chloe2:
                 with fade
 
                 if hcGirl == "alone":
-                    u "(I guess I'll watch it with someone.)"
+                    if not v7_seencrowning:
+                        u "(I guess I'll watch it with someone.)"
+                        
+                        scene sfr4stage4 #Chloe runs up on stage
+                        with fade
 
-                    scene sfr4stage4 #Chloe runs up on stage
-                    with fade
+                    else:
+                        u "(I guess I'll go back.)"
 
                     jump fr4alonechloe
 
@@ -16148,7 +16152,7 @@ label fr4chloe2:
                     jump fr4penelopedatechloe
 
             "Or we could just leave.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "Or we could just leave right now and not look back..."
 
@@ -16264,7 +16268,7 @@ label fr4grayson1:
 
         menu:
             "Don't do that.":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "Hey man, don't do that. That's a real dick move."
 
@@ -16280,7 +16284,7 @@ label fr4grayson1:
 
                 if kct == "confident":
                     $ preventgrayson = True
-                    call screen kctPopup
+                    call screen kct_popup
 
                     scene sfr4gr1b
                     with dissolve
@@ -16311,7 +16315,7 @@ label fr4grayson1:
                     u "*Sighs* Fine."
 
             "Alright, enjoy.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright, enjoy."
 
@@ -16355,7 +16359,7 @@ label fr4grayson1:
         menu:
             "Don't do that.":
                 $ preventgrayson = True
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "Hey man, don't do that. That's a real dick move."
 
@@ -16385,7 +16389,7 @@ label fr4grayson1:
                 pause 0.5
 
             "Alright, enjoy.":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright, enjoy."
 
@@ -16412,7 +16416,7 @@ label fr4lockerroomchloe:
 
         u "Chloe? You in there?"
 
-        if not chloemad or ryandefendchloe:
+        if not chloemad:
             scene sfr4cl51 # fpp close up of the door
             with dissolve
 
@@ -16462,26 +16466,33 @@ label fr4lockerroomchloe:
 
             cl "You're cute."
 
-            scene sfr4cl52d # chloe lookig at the wall where prom is on the other side
-            with dissolve
+            if not v7_seencrowning:
+                scene sfr4cl52d # chloe lookig at the wall where prom is on the other side
+                with dissolve
 
-            ro "*Muffled* And your homecoming queen is..."
+                ro "*Muffled* And your homecoming queen is..."
 
-            ro "*Muffled* Chloe Moralez!"
+                ro "*Muffled* Chloe Moralez!"
 
-            u "See? Everyone voted for you. The people love you. So forget about all those guys."
+                u "See? Everyone voted for you. The people love you. So forget about all those guys."
 
-            scene sfr4cl52b
-            with dissolve
+                scene sfr4cl52b
+                with dissolve
 
-            cl "I don't know if I can go on stage right now."
+                cl "I don't know if I can go on stage right now."
+                
+            else:
+                scene sfr4cl52b
+                with dissolve
+                
+                cl "I don't know if I can go back right now."
 
             scene sfr4cl52c
             with dissolve
 
             menu:
                 "Of course you can.":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     u "Of course you can."
 
@@ -16502,7 +16513,6 @@ label fr4lockerroomchloe:
 
                     if hcGirl == "alone":
                         u "(I guess I'll watch it with someone.)"
-
                         scene sfr4stage4#Chloe runs up on stage
                         with fade
 
@@ -16532,13 +16542,20 @@ label fr4lockerroomchloe:
 
                         jump fr4penelopedatechloe
 
+                    elif hcGirl == "emily":
+                        u "(I should probably get back to Emily.)"
+
+                        scene sfr4em20
+                        with fade
+                        jump fr4emilydate
+                        
                 "Let's get out of here.":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     u "You don't have to. Let's just get out of here."
 
                     if kct == "popular":
-                        call screen kctPopup
+                        call screen kct_popup
 
                         scene sfr4cl52b
                         with dissolve
@@ -16583,49 +16600,40 @@ label fr4lockerroomchloe:
                         scene sfr4cl52b
                         with dissolve
 
-                        cl "That's cute [name], but I think I have to go up there."
-
-                        scene sfr4cl52c
-                        with dissolve
-
-                        u "You sure?"
+                        cl "Yeah."
 
                         scene sfr4cl52e # chloe gone
                         with fade
 
                         if hcGirl == "alone":
-                            u "(I guess I'll watch it with someone.)"
-
-                            scene sfr4stage4#Chloe runs up on stage
-                            with fade
+                            u "(I guess I'll go back.)"
 
                             jump fr4alonechloe
 
                         elif hcGirl == "riley":
                             u "(I should probably get back to Riley.)"
 
-                            scene sfr4stage4
-                            with fade
-
                             jump fr4rileydatechloe
 
                         elif hcGirl == "lauren":
                             u "(I should probably get back to Lauren.)"
-
-                            scene sfr4stage4
-                            with fade
 
                             jump fr4laurendatechloe
 
                         elif hcGirl == "penelope":
                             u "(I should probably get back to Penelope.)"
 
-                            scene sfr4stage4
-                            with fade
-
                             jump fr4penelopedatechloe
 
+                        elif hcGirl == "emily":
+                            u "(I should probably get back to Emily.)"
+
+                            scene sfr4em20
+                            with fade
+                            jump fr4emilydate
+
                         else:
+                            pause 0.75 
                             jump labelfr4hallwaycorner
 
         else:
@@ -16655,7 +16663,7 @@ label fr4lockerroomchloe:
     else:
         scene sfr4cl51
 
-        if chloemad and not ryandefendchloe:
+        if chloemad:
             u "(I better leave her alone.)"
 
         else:
@@ -16987,8 +16995,7 @@ label fr4laurenending:
     scene sfr4la29
     with dissolve
 
-    $ slowandsteady = True
-    $ grantAchievement("slow_and_steady")
+    $ grant_achievement("slow_and_steady")
 
     la "I read that... if you cuddle in your underwear it increases the serotonin levels in your brain, which in turns means you live a longer, happier life."
 
@@ -17136,8 +17143,7 @@ label fr4rileyending2:
     scene sfr4ri57a #riley pats the bed,looking at you smiling
     with dissolve
 
-    $ playingwithfire = True
-    $ grantAchievement("playing_with_fire")
+    $ grant_achievement("playing_with_fire")
         
     ri "Sit down with me for a second."
 
@@ -17244,8 +17250,7 @@ label fr4chloeending:
     scene sfr4cl58 # tpp from behind: chloe opens the door to her room mc following
     with fade
 
-    $ homecomingqueen = True
-    $ grantAchievement("homecoming_queen")
+    $ grant_achievement("homecoming_queen")
 
     u "So this is your infamous room?"
 
@@ -17298,6 +17303,8 @@ label fr4chloeending:
     # towel drop sound #check - add towel.mp3 sound file
     play sound "sounds/towel.mp3"
 
+    #$ add_point(KCT.TROUBLEMAKER, sum([ aubreysex2, v6_emilysex, v7_rileysex, bathroomblowjob ])) ###Loyaltymod
+
     if config_censored and renpy.loadable("v8/scene2.rpy"):
         call screen censoredPopup("v8s2_nsfwSkipLabel1")
     elif config_censored:
@@ -17321,7 +17328,6 @@ label fr4amberending:
     jump v7end
 
 label v7end:
-    $ freeRoam = False
     if not renpy.loadable("v8/scene1.rpy"):
         scene savenow
         with Fade (1,0,1)

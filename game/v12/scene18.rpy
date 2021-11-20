@@ -13,6 +13,8 @@ label v12_slumber_party:
 
     pause 0.75
 
+    play music "music/v12/Scene 18/Track Scene 18_1.mp3" fadein 2
+
     scene v12slp2 # FPP. Aubrey, Imre, Aubrey and Lindsey in a circle talking to each other. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open (Only Aubrey in shot)
     with dissolve
 
@@ -165,6 +167,9 @@ label v12_slumber_party:
 
     imre "Time to party!"
 
+    stop music fadeout 3
+    play music "music/v12/Scene 18/Track Scene 18_2.mp3" fadein 2
+
     scene v12slp9a # FPP. Same as v12slp9, Imre normal pose, smiling, mouth closed
     with dissolve
 
@@ -178,7 +183,7 @@ label v12_slumber_party:
     scene v12slp10 # TPP. Show Imre plopping down on the bed, smiling, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12slp11 # FPP. MC standing near the beds, Riley standing next to MC, MC looking at Riley, Riley looking at Imre on the bed, Riley slightly annoyed, mouth open (Only Riley in shot)
     with dissolve
@@ -208,7 +213,7 @@ label v12_slumber_party:
     scene v12slp9c # FPP. Same as v12slp9, Aubrey, Lindsey, Amber, Chloe and Nora walking through the door, all smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.5
 
     scene v12slp12a # FPP. Same as v12slp12, Imre looking towards the door, smiling, mouth open
     with dissolve
@@ -233,7 +238,7 @@ label v12_slumber_party:
     scene v12slp9d # FPP. Same as v12slp9c, but Chris, Ryan and Charli are walking in, all smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12slp15 # FPP. Chris, Ryan and Charli standing next to each other near the door, MC looking at Chris, Chris waving, looking at MC, smiling, mouth open (Only Chris in shot, the other characters same positioning as v12slp13)
     with dissolve
@@ -303,12 +308,12 @@ label v12_slumber_party:
     scene v12slp18 # TPP. Show Lindsey and Aubrey hugging, both smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12slp14b # FPP. Same as v12slp14a, Lindsey looking at MC, Lindsey smiling, mouth open
     with dissolve
 
-    li "Thank you so much guys. This is really sweet and honestly such a perfect surprise"
+    li "Thank you so much guys. This is really sweet and honestly such a perfect surprise."
 
     scene v12slp12e # FPP. Same as v12slp12d, Imre looking at Lindsey's direction, Imre smirking, mouth open
     with dissolve
@@ -323,7 +328,7 @@ label v12_slumber_party:
     scene v12slp16a
     with dissolve
 
-    au "*Laughs* Let's have fun guys."
+    au "*Laughs* Let's have fun, guys."
 
     $ v12s18_kiwiiPost1 = KiwiiPost("Lindsey", "v12/lindsey_aubrey_pjs.webp", _("Couldn't have asked for a better night... <3"), numberLikes=571) # Lindsey Selfie with Aubrey in pajamas
     $ v12s18_kiwiiPost1.newComment("Aubrey", _("You're so welcome boo... Girls night again ASAP!"), mentions="Lindsey", numberLikes=renpy.random.randint(250,350), queue=False)
@@ -332,8 +337,6 @@ label v12_slumber_party:
     $ v12s18_kiwiiPost1.addReply(_("Just say when and where! Had a lot of fun :)"), mentions="Aubrey", numberLikes=renpy.random.randint(250, 330))
     $ v12s18_kiwiiPost1.addReply(_("You deserve the best! Glad you enjoyed it ;)"), mentions="Lindsey", numberLikes=renpy.random.randint(250, 330))
     $ v12s18_kiwiiPost1.newComment("Lindsey", _("Haha, thank you guys <3"), numberLikes=renpy.random.randint(150,300))
-
-    $ freeRoam = True
     call screen v12s18_room1
 
 # -Start of free roam-
@@ -341,7 +344,7 @@ label v12s18_bottlespin:
     $ v12s18_bottlespin_played = True
     
     scene v12slpbs1 # FPP. Aubrey, Nora, Chloe and Lindsey sitting down in a circle on the floor, MC standing up, MC and Aubrey looking at each other, Aubrey slight smile, mouth open (Only Aubrey in shot)
-    with fade
+    #with dissolve
 
     au "Hey [name], come over here and play with us?"
 
@@ -403,7 +406,7 @@ label v12s18_bottlespin:
     scene v12slpbs4a
     with dissolve
 
-    u "That's a lot of rules, but I'll try ro remember. *Chuckles*"
+    u "That's a lot of rules, but I'll try to remember. *Chuckles*"
 
     scene v12slpbs3a # FPP. Same as v12slpbs3, Imre slightly annoyed, mouth open
     with dissolve
@@ -495,7 +498,7 @@ label v12s18_bottlespin:
 
     play sound "sounds/kiss.mp3"
 
-    pause 0.75
+    pause 1.5
 
     scene v12slpbs5
     with dissolve
@@ -544,6 +547,7 @@ label v12s18_bottlespin:
 
     menu:
         "Kiss him":
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Fuck. Well, I'm not in the mood to get slapped, so let's get this over with."
 
@@ -602,6 +606,7 @@ label v12s18_bottlespin:
                 ch "Wish you were a Wolf, hitting like that."
 
         "Get slapped":
+            $ add_point(KCT.BRO)
             scene v12slpbs7f # FPP. Same as v12slpbs7b, Ryan slight smile, mouth closed
             with dissolve
 
@@ -657,19 +662,18 @@ label v12s18_bottlespin:
     scene v12slpbs12a # FPP. Same as v12slpbs12, Chris worried, mouth closed, looking at Nora
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12slpbs10b # FPP. Same as v12slpbs10, Nora looking at Chris, Nora slightly annoyed, mouth open
     with dissolve
 
     no "Don't make it weird, just play the game."
 
-    play sound "sounds/kiss.mp3"
-
     scene v12slpbs14 # TPP. Show Chris and Chloe kissing (try and make it look a bit passionate)
     with dissolve
+    play sound "sounds/kiss.mp3"
 
-    pause 0.75
+    pause 1.5
 
     scene v12slpbs10b
     with dissolve
@@ -691,12 +695,11 @@ label v12s18_bottlespin:
 
     ch "Ha, I am too."
 
-    play sound "sounds/kiss.mp3"
-
     scene v12slpbs15 # TPP. Show Chris and Nora kissing
     with dissolve
+    play sound "sounds/kiss.mp3"
 
-    pause 0.75
+    pause 1.5
 
     scene v12slpbs3g # FPP. Same as v12slpbs3, Imre looking at Nora, Imre slightly annoyed, mouth open
     with dissolve
@@ -706,7 +709,7 @@ label v12s18_bottlespin:
     scene v12slpbs5
     with dissolve
 
-    li "Aww, you wishing you got more kisses Imre?"
+    li "Aww, you wishing you got more kisses, Imre?"
 
     scene v12slpbs3c
     with dissolve
@@ -763,7 +766,8 @@ label v12s18_bottlespin:
     scene v12slpbs10b
     with dissolve
 
-    no "Fuck it, Chris... Go. Go answer your phone."
+    no "Fuck it, Chris..."
+    no "Go. Go answer your phone."
 
     scene v12slpbs12b
     with dissolve
@@ -772,6 +776,7 @@ label v12s18_bottlespin:
 
     stop sound
 
+    play sound "sounds/answercall.mp3"
     scene v12slpbs12e # FPP. Same as v12slpbs12b, Chris talking on his phone, worried, mouth open
     with dissolve
 
@@ -844,19 +849,19 @@ label v12s18_bottlespin:
 
     u "Oh, uhh-"
 
-    play sound "sounds/kiss.mp3"
-
     if noralikes:
         scene v12slpbs16 # TPP. Show Nora grabbing MC's face and kissing him (try and make this a bit passionate)
         with dissolve
+        play sound "sounds/kiss.mp3"
 
-        pause
+        pause 2.25
     
     else:
         scene v12slpbs16a # TPP. Same as v12slpbs16, less passionate of a kiss 
         with dissolve
+        play sound "sounds/kiss.mp3"
 
-        pause
+        pause 1
 
     scene v12slpbs10d # FPP. Same as v12slpbs10, Nora looking at Imre, Nora smiling, mouth open
     with dissolve
@@ -876,7 +881,7 @@ label v12s18_bottlespin:
     scene v12slpbs3i # FPP. Same as v12slpbs3h, Imre slight smile, mouth open, looking at Nora
     with dissolve
 
-    imre "Okay, you right, you right... C'mon on bottle gods!"
+    imre "Okay, you're right, you're right... C'mon on bottle gods!"
 
     scene v12slpbs8j # FPP. Same as v12slpbs8, Imre's hand on the bottle
     with dissolve
@@ -888,7 +893,7 @@ label v12s18_bottlespin:
 
     pause 0.75
 
-    scene v12slpbs8b
+    scene v12slpbs8ry
     with dissolve
 
     pause 0.75
@@ -972,10 +977,13 @@ label v12s18_bottlespin:
 
     au "Come here, sexy."
 
-    play sound "sounds/kiss.mp3"
 
     scene v12slpbs20 # TPP. Show Aubrey and Chloe kissing (Try and make it look hot)
     with dissolve
+
+    play sound "sounds/kiss.mp3"
+
+    pause 1.75
 
     imre "Hell yesss... This is exactly what I came for. *Chuckles*"
 
@@ -998,6 +1006,11 @@ label v12s18_bottlespin:
     with dissolve
 
     pause 0.75
+    
+    scene v12slpbs8l
+    with dissolve
+
+    pause 0.75
 
     scene v12slpbs8n # TPP. Same as v12slpbs8l, bottle pointing at Nora
     with dissolve
@@ -1014,12 +1027,12 @@ label v12s18_bottlespin:
 
     no "*Sighs*"
 
-    play sound "sounds/kiss.mp3"
-
     scene v12slpbs22 # TPP. Show Nora and Chloe sharing a quick peck on the lips
     with dissolve
 
-    pause
+    play sound "sounds/kiss.mp3"
+
+    pause 1.25
     
     scene v12slpbs10b
     with dissolve
@@ -1068,14 +1081,14 @@ label v12s18_fmk:
     $ v12s18_fmk_played = True
 
     scene v12slpfmk1 # FPP. Amber lying on the bed, MC standing in front of the bed, Amber looking at MC, Amber smiling, mouth open
-    with fade
+    #with dissolve
 
     am "There you are! Come play Fuck, Marry, Kill."
 
     scene v12slpfmk1a # FPP. Same as v12slpfmk1, Amber smiling, mouth closed
     with dissolve
 
-    u "Who's all playing?"
+    u "Who's playing?"
 
     scene v12slpfmk1b # FPP. Same as v12slpfmk1, Amber looking towards Imre's direction (check v12slpbs1b for Imre positioning), Amber smiling, mouth open
     with dissolve
@@ -1268,6 +1281,28 @@ label v12s18_fmk:
     u "(Hmm, who to marry?)"
 
     menu:
+        "Marry Amber":
+            $ add_point(KCT.BRO)
+            scene v12slpfmk4d
+            with dissolve
+
+            u "In that case, I'd have to go with... fuck Nora and marry Amber."
+
+            scene v12slpfmk4a
+            with dissolve
+
+            am "We wouldn't be married for long. *Chuckles*"
+
+            scene v12slpfmk4d
+            with dissolve
+
+            u "*Chuckles* Why not?"
+
+            scene v12slpfmk4a
+            with dissolve
+
+            am "Because this horse can't be tamed, baby."
+
         "Marry Nora":
             scene v12slpfmk5f # FPP. Same as v12slpfmk5c, Nora slight smile, mouth closed
             with dissolve
@@ -1303,27 +1338,6 @@ label v12s18_fmk:
             with dissolve
 
             am "*Laughs*"
-
-        "Marry Amber":
-            scene v12slpfmk4d
-            with dissolve
-
-            u "In that case, I'd have to go with... fuck Nora and marry Amber."
-
-            scene v12slpfmk4a
-            with dissolve
-
-            am "We wouldn't be married for long. *Chuckles*"
-
-            scene v12slpfmk4d
-            with dissolve
-
-            u "*Chuckles* Why not?"
-
-            scene v12slpfmk4a
-            with dissolve
-
-            am "Because this horse can't be tamed, baby."
 
     scene v12slpfmk5f
     with dissolve
@@ -1435,10 +1449,8 @@ label v12s18_fmk:
     call screen v12s18_room2
 
 label v12s18_bet: # END OF FREE ROAM
-    $ freeRoam = False
-
     scene v12slpbet1 # FPP. Amber lying on the bed, looking at MC, Amber slight smile, mouth open, MC standing in front of the bed
-    with dissolve
+    #with dissolve
 
     am "Come with me to the bathroom?"
 
@@ -1457,7 +1469,10 @@ label v12s18_bet: # END OF FREE ROAM
 
     pause 0.75
 
-    if v11_overtake_points <= 2: # MC lost the race
+    stop music fadeout 3
+    play music "music/v12/Scene 18/Track Scene 18_3.mp3" fadein 2
+
+    if v11_overtake_points < 2: # MC lost the race
         scene v12slpbet3 # FPP. MC and Amber now in the bathroom, looking at each other, Amber smiling, mouth open
         with dissolve
 
@@ -1526,17 +1541,18 @@ label v12s18_bet: # END OF FREE ROAM
         scene v12slpbet5a # TPP. Same as v12slpbet5, MC posing for a pic, he's completely nude, smiling, mouth closed
         with flash
 
-        pause 0.75
+        pause 1.25
 
         scene v12slpbet5b # TPP. Same as v12slpbet5a, different pose
         with flash
 
-        pause 0.75
+        $ grant_achievement("a_bet_is_a_bet")
+        pause
 
         scene v12slpbet5 
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         scene v12slpbet3
         with dissolve
@@ -1624,17 +1640,17 @@ label v12s18_bet: # END OF FREE ROAM
         scene v12slpbet8 # TPP. Show Amber posing for her naked pic, she's smiling, mouth closed
         with flash
 
-        pause 0.75
+        pause 1.25
 
         scene v12slpbet8a # TPP. Same as v12slpbet8, different pose
         with flash
 
-        pause 0.75
+        pause
 
         scene v12slpbet3d
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         scene v12slpbet3b
         with dissolve
@@ -1704,6 +1720,8 @@ label v12s18_bet: # END OF FREE ROAM
 
     u "Oh my god... *Chuckles*"
 
+    call screen phone
+
     scene v12slpbet3b
     with dissolve
 
@@ -1733,6 +1751,9 @@ label v12s18_bet: # END OF FREE ROAM
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v12/Scene 18/Track Scene 18_4.mp3" fadein 2
 
     scene v12slpbet10 # TPP. Show Aubrey and Riley sleeping on Riley's bed
     with dissolve
@@ -1855,6 +1876,7 @@ label v12s18_bet: # END OF FREE ROAM
 
     menu:
         "Cuddle":
+            $ add_point(KCT.BOYFRIEND)
             scene v12slpbet16b # TPP. Show MC cuddling with Amber, both smiling, mouths closed
             with dissolve
 
@@ -1872,7 +1894,7 @@ label v12s18_bet: # END OF FREE ROAM
 
             if amberrs or kct == "popular":
                 if not amberrs:
-                    call screen kctPopup
+                    call screen kct_popup
                 
                 scene v12slpbet17
                 with dissolve
@@ -1887,7 +1909,7 @@ label v12s18_bet: # END OF FREE ROAM
                 scene v12slpbet16c # TPP. Same as v12slpbet16b, MC and Amber sleeping cuddled up
                 with dissolve
 
-                pause 0.75
+                pause 1.75
 
             else:
                 scene v12slpbet17
@@ -1911,6 +1933,7 @@ label v12s18_bet: # END OF FREE ROAM
                 pause 0.75
 
         "Stay away":
+            $ add_point(KCT.BRO)
             scene v12slpbet18 # FPP. MC and Amber lying in bed, not cuddled up (check v12slpbet16a), MC looking at Amber, Amber's back turned to MC
             with dissolve
 
@@ -1920,5 +1943,7 @@ label v12s18_bet: # END OF FREE ROAM
             with dissolve
 
             pause 0.75
+    
+    stop music fadeout 3
 
     jump v12_party_wake_up #scene 19

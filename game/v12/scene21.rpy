@@ -10,6 +10,8 @@ label v12_nora_exploring:
 
     pause 0.75
 
+    play music "music/v12/Scene 21/Track Scene 21_1.mp3" fadein 2
+
     scene v12noe2 # FPP. MC sitting on the concrete block, Nora sitting on the ground. Both of them looking at each other, Nora slight smile, mouth closed
     with dissolve
 
@@ -50,16 +52,18 @@ label v12_nora_exploring:
 
     menu:
         "Not at all":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12noe2h # FPP. Same as v12noe2f, Nora taking a sip of her drink
             with dissolve
 
             u "No, not at all. *Chuckles* You're good."
 
         "A little surprising...":
+            $ add_point(KCT.BRO)
             scene v12noe2i # FPP. Same as v12noe2f, Nora slight smile, mouth closed
             with dissolve
 
-            u "I mean no, not really.  But you did surprise me a little bit..."
+            u "I mean no, not really. But you did surprise me a little bit..."
 
             scene v12noe2j # FPP. Same as v12noe2j, Nora slight smile, mouth open
             with dissolve
@@ -232,6 +236,7 @@ label v12_nora_exploring:
 
     menu:
         "Speak her language":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12noe6c
             with dissolve
 
@@ -309,6 +314,7 @@ label v12_nora_exploring:
             clady "You're... so kind! Thank you! Thank you..."
 
         "Tell her off":
+            $ add_point(KCT.BRO)
             scene v12noe6g # FPP. Same as v12noe6e, Nora slightly annoyed, mouth closed
             with dissolve
 
@@ -424,6 +430,9 @@ label v12_nora_exploring:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 21/Track Scene 21_2.mp3" fadein 2
+
     scene v12noe16 # FPP. MC and Nora standing next to each other in the room, Aubrey lying on her bed, with her phone, Imre drunk sitting on the floor, MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open (Only Aubrey in shot)
     with dissolve
 
@@ -498,5 +507,7 @@ label v12_nora_exploring:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_riley_room #scene 22

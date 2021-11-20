@@ -6,13 +6,16 @@
 label v11_bar_chloe_and_aubrey:
     scene v11caa1 # TPP. Show MC walking to the bar, mouth closed
     with fade
-    play music "music/v11/Scene 33/Track Scene 33.mp3" fadein 2
+    play music "music/v11/Scene 11/Track Scene 11.mp3" fadein 2
     pause 0.75
 
     scene v11caa2 # FPP. MC spots chloe and aubrey sitting at the bar holding beer, mouth closed
     with dissolve
 
+    play sound "sounds/swoosh.mp3"
     pause 0.75
+
+    show screen fantasyOverlay
 
     scene v11caa2a # FPP. same as 2,MC is approaching chloe and aubrey but charli steps in the middle of the way, mouth opened
     with dissolve
@@ -21,8 +24,14 @@ label v11_bar_chloe_and_aubrey:
     charli "First you thought I was being kind to the girls with a hidden agenda, but now that you know I'm gay you've lost the ability to connect those dots."
     charli "You can't comprehend being nice without an agenda, because you yourself aren't nice without an agenda."
 
+    play sound "sounds/swoosh.mp3"
+
+    pause 0.75
+    hide screen fantasyOverlay
+
     scene v11caa3 # TPP. MC murmors with a mad face, mouth opened
     with dissolve
+
 
     u "(I am a nice guy... agenda my ass.)"
 
@@ -79,7 +88,6 @@ label v11_bar_chloe_and_aubrey:
             with dissolve
 
             au "Now you're enjoying yourself. *Chuckles*"
-
 
         "Just water":
             scene v11caa8a

@@ -4,6 +4,7 @@ label v8_ri_start:
     stop music fadeout 2
 
     $ v8_riley_lewd_ending = True
+    #$ add_point(KCT.TROUBLEMAKER, sum([ aubreysex2, v6_emilysex, bathroomblowjob ])) ###Loyaltymod
 
     scene v8s25 # Same as sfr4ri55 (from v7) but MC talking now
     with dissolve
@@ -187,7 +188,7 @@ label v8s3_rileyLiftDoggy:
     scene v8ridg3f
     with dissolve
     ri "*Moans loudly*"
-    ri "Harder! Show me your... *moans*{w} best."
+    ri "Harder! Show me your... *moans* best."
     u "Ahh! Get your hands here."
 
 label v8s3_rileyDoggy:
@@ -212,7 +213,7 @@ label v8s3_rileyDoggy:
     u "Did you-"
     ri "Yes! *moans*"
     pause 2
-    ri "Cum in me. I want it.{w} Now!!!"
+    ri "Cum in me. I want it. Now!!!"
     u "You sure?"
     ri "Yes, I'm on the pill."
     pause 5

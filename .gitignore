@@ -1,4 +1,3 @@
-College Kings 10.0 Patch/
 .vscode/
 lib/
 renpy/
@@ -6,6 +5,7 @@ renpy/
 game/bugTesting/_bugTesting.txt
 game/cache/
 game/saves/
+game/script_version.txt
 
 CollegeKings.py
 CollegeKings.sh
@@ -15,6 +15,7 @@ log.txt
 Stored Script.txt
 traceback.txt
 project.json
+steam_appid.txt
 
 screenshot*
 
@@ -24,3 +25,4 @@ screenshot*
 *.zip
 *.exe
 *.bak
+.DS_Store

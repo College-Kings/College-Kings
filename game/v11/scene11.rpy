@@ -9,7 +9,7 @@ label v11_Amber_Penelope:
     play music "music/v11/Scene 11/Track Scene 11.mp3" fadein 2
     menu:
         "Tease her":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ v11_tease_amber += 1
             scene v11amp1
             with dissolve
@@ -27,7 +27,6 @@ label v11_Amber_Penelope:
             pause 0.5
 
         "Don't tease her":
-
             scene v11amp1
             with dissolve
 
@@ -111,6 +110,8 @@ label v11_Amber_Penelope:
 
     menu:
         "Of course":
+            $ v11_smoke_amber_amsterdam = True
+            
             scene v11amp1
             with dissolve
 
@@ -238,15 +239,14 @@ label v11_Amber_Penelope:
 
         menu:
             "Kiss her":
-                $ cross_your_heart = True
                 $ penelopers = True
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 play sound "sounds/kiss.mp3"
 
                 scene v11amp9a # TPP Same angle as v11amp9, MC with his hand on Penelope's cheek, kissing her on the lips
                 with dissolve
-                $ grantAchievement("cross_your_heart")
+                $ grant_achievement("cross_your_heart")
 
                 pause 1.75
                 

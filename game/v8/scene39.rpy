@@ -4,7 +4,6 @@
 # Time: Tuesday Night
 
 label hosp_climb_seb:
-
     scene v8shos1 # TPP. Show MC and Sebastian stood at the hospital, show the hospital, MC and Sebastian looking up at the top of it. Try and portray the scale of the hospital.
     with Fade(0.75, 0.25, 0.75)
 
@@ -60,8 +59,8 @@ label hosp_climb_seb:
 
     menu:
         "Climb the hospital":
-            $ addPoint("bro")
-            $ addPoint("tm")
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.TROUBLEMAKER)
             $ climbwseb = True
             jump climb_the_hos
         "Don't climb the hospital":

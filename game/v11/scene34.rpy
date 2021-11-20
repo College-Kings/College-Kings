@@ -4,10 +4,9 @@
 # Time: Day
 
 label v11_cardealership:
-
     scene v11cd1 # TPP. Shows MC and Chloe getting into the car dealership
     with fade
-    play music "music/v11/Scene 34/Track Scene 34_1.mp3" fadein 2
+    play music "music/v11/Scene 3/Track Scene 3.mp3" fadein 2
     pause 0.75
 
     scene v11cd2 # TPP. MC is looking for a car salesman, spotting one, him looking back at them
@@ -91,7 +90,6 @@ label v11_cardealership:
         with dissolve
         
         cl "Plus who knows, I may get used to calling you that..."
-
 
     scene v11cd6
     with dissolve
@@ -180,7 +178,7 @@ label v11_cardealership:
 
     u "Thank you."
     stop music fadeout 3
-    play music "music/v11/Scene 34/Track Scene 34_1.mp3" fadein 2
+    play music "music/V10/Scene 13/Track Scene 13.mp3" fadein 2
     scene v11cd15 # TPP. MC and chloe getting into the car
     with dissolve
 
@@ -376,6 +374,7 @@ label v11_cardealership:
     scene v11cd24 # TPP. Show's the car parking in location c (artist chooses location)
     with dissolve
 
+    stop sound
     pause 0.75
 
     scene v11cd25 # FPP. looking at chloe, mouth opened
@@ -510,7 +509,7 @@ label v11_cardealership:
                         scene v11cd33c # FPP. Chloe looks back at mc, mouth closed
                         with dissolve
                         stop music fadeout 3
-                        play music "music/v11/Scene 34/Track Scene 34_3.mp3" fadein 2
+                        play music "music/V10/Scene 11/Track Scene 11.mp3" fadein 2
                         u "Chloe, I've been captured by you since the moment I first saw you. Every day I think about you and hope that we can be together at all times."
                         u "I don't know what I'd do if one day you were just... gone. The truth is... I love you, Chloe, and I don't want to go another day without you being mine."
                         u "So with all that said, can we make it official? Will you be my girl?"
@@ -532,19 +531,18 @@ label v11_cardealership:
 
                             play sound "sounds/kiss.mp3"
 
-                            if laurenrs:
-                                $ two_timer = True
-                                $ grantAchievement("two_timer")
+                            if laurenrs and not v11_aubrey_sex:
+                                $ grant_achievement("two_timer")
                                                                 
                             else:
                                 pass
 
-                            pause 1.5
+                            pause 2.5
 
                             scene v11cd36 # FPP. MC sets chloe down, mouth closed
                             with dissolve
 
-                            if laurenrs:
+                            if laurenrs and not v11_aubrey_sex:
                                 u "(Damn, two girlfriends. This could get complicated fast.)"
 
                             u "Wow... c'mon, let's get this car back."
@@ -607,7 +605,7 @@ label v11_cardealership:
 
                     "Let's get the car back":
                         scene v11cd39
-                        with dissolve             
+                        with dissolve
 
                         u "C'mon, let's get this car back."
 

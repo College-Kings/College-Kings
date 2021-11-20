@@ -49,7 +49,7 @@ label v9_fri_training_w_wolves:
 
     pause 1
 
-    play music "music/v9/Scene 26 & 27/Track Scene 26 & 27.mp3" fadein 2
+    play music "music/v9/Scene 1 & 2/Track Scene 1 & 2.mp3" fadein 2
 
     scene v9tww5 # FPP. Show Chris, neutral expression, mouth open.
     with dissolve
@@ -61,7 +61,7 @@ label v9_fri_training_w_wolves:
 
     menu: 
         "Answer": 
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "The Brawl."
 
@@ -71,7 +71,7 @@ label v9_fri_training_w_wolves:
             ch "Right."
 
         "Keep quiet":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
     
             pause 1
 
@@ -106,7 +106,7 @@ label v9_fri_training_w_wolves:
 
     menu: 
         "Make joke": 
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "I think punching an Ape's thick skull is gonna be like hitting a wall."
 
@@ -116,7 +116,7 @@ label v9_fri_training_w_wolves:
             ch "Yes, I'm sure it will be."
 
         "Agree":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "(I don't want to interrupt.)"
    
@@ -273,7 +273,7 @@ label v9_fri_training_w_wolves:
         
         menu: 
             "Be cocky": 
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "Never know."
 
@@ -288,7 +288,7 @@ label v9_fri_training_w_wolves:
                 u "What's that?"
 
             "Agree":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "Yeah that was kinda lucky."
 
@@ -357,7 +357,7 @@ label v9_fri_training_w_wolves:
 
         menu: 
             "Hit first": 
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "Hit first."
 
@@ -377,7 +377,7 @@ label v9_fri_training_w_wolves:
                 ch "So you have to be ready for it."
 
             "Run":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "Run!"
 
@@ -440,7 +440,7 @@ label v9_fri_training_w_wolves:
 
         menu:
             "Act cool":
-                $ addPoint ("tm", 1)
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene v9tww15a
                 with dissolve
@@ -453,7 +453,7 @@ label v9_fri_training_w_wolves:
                 u "How?"
 
             "Ask for help":
-                $ addPoint ("bro", 1)
+                $ add_point(KCT.BRO)
 
                 u "I need it. I don't know what happened."
 
@@ -529,7 +529,7 @@ label v9_fri_training_w_wolves:
     
         menu:
             "Agree":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 u "Yeah, I know."
 
@@ -539,7 +539,7 @@ label v9_fri_training_w_wolves:
                 ch "So we use that to our advantage."
 
             "Defend yourself":
-                $ addPoint ("tm", 1)
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "I mean, it's not my first fight ever. I can still have some tricks up my sleeve."
 

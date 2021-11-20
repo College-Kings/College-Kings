@@ -5,7 +5,7 @@
 label v11_mc_amber_gokart:
     scene v11cam1 # TPP. MC and amber in the streets
     with dissolve
-    play music "music/v11/Scene 39/Track Scene 39_1.mp3" fadein 2
+    play music "music/V10/Scene 9/Track Scene 9.mp3" fadein 2
     pause 0.75
 
     scene v11cam2a # FPP. MC looks at amber, mouth opened (walking)
@@ -76,7 +76,7 @@ label v11_mc_amber_gokart:
     scene v11cam2
     with dissolve
 
-    u "*Sighs* You're brave, Amber.  I'll give you that, but I'm telling you right now... You're going to regret this."
+    u "*Sighs* You're brave, Amber. I'll give you that, but I'm telling you right now... You're going to regret this."
 
     scene v11cam2b
     with dissolve
@@ -146,7 +146,7 @@ label v11_mc_amber_gokart:
     scene v11cam6b
     with dissolve
 
-    clerk "Like, um.  Are you guys a couple?"
+    clerk "Like, um... Are you guys a couple?"
 
     scene v11cam6c 
     with dissolve
@@ -251,7 +251,7 @@ label v11_mc_amber_gokart:
     scene v11cam7
     with dissolve
 
-    u "Wow. This bet just got way more serious than I thought it'd  be."
+    u "Wow. This bet just got way more serious than I thought it'd be."
 
     scene v11cam7a
     with dissolve
@@ -282,6 +282,7 @@ label v11_mc_amber_gokart:
 
 
         "Be excited":
+            $ add_point(KCT.BRO)
             scene v11cam7
             with dissolve
 
@@ -420,6 +421,7 @@ label v11_mc_amber_gokart:
 
     menu:
         "Agree":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v11cam14a # FPP. looking at amber, mouth closed
             with dissolve
 
@@ -454,6 +456,7 @@ label v11_mc_amber_gokart:
             with dissolve
 
         "Disagree":
+            $ add_point(KCT.BOYFRIEND)
             scene v11cam14c # FPP. Same as 14, mouth closed
             with dissolve
 
@@ -485,7 +488,7 @@ label v11_mc_amber_gokart:
 
             am "Haha, fine. Let's do this race."
 
-    play music "music/v11/Scene 39/Track Scene 39_2.mp3" fadein 2
+    play music "music/V10/Scene 24/Track Scene 24_1.mp3" fadein 2
     scene v11cam15 # TPP. MC and amber hop in their karts, helmets on
     with dissolve
 
@@ -1002,7 +1005,7 @@ label v11_race_continue3:
 
         clerk "Hey babe, nice job! Have fun?"
     stop music fadeout 3
-    play music "music/v11/Scene 39/Track Scene 39_1.mp3" fadein 2
+    play music "music/V10/Scene 9/Track Scene 9.mp3" fadein 2
     scene v11cam14f # FPP. Same as v11cam14, Amber looking towards the clerk (Clerk positioned like v11cam42a), Amber annoyed, mouth open
     with dissolve
 
@@ -1018,6 +1021,8 @@ label v11_race_continue3:
 
     menu:
         "Stand up for Amber":
+            $ add_point(KCT.BOYFRIEND)
+            $ add_point(KCT.TROUBLEMAKER)
             $ amberLike += 1
 
             scene v11cam14f
@@ -1083,6 +1088,7 @@ label v11_race_continue3:
             u "At least we both had a good time, right?"
 
         "Let her handle it":
+            $ add_point(KCT.BRO)
             scene v11cam14f
             with dissolve
 
@@ -1134,6 +1140,7 @@ label v11_race_continue3:
 
     menu:
         "Tease":
+            $ add_point(KCT.TROUBLEMAKER)
             $ v11_tease_amber += 1
 
             u "You know what, if the job at Lew's doesn't work out, maybe you can work with our friend back there."

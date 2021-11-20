@@ -18,20 +18,20 @@ label v10_walk_jenny_text:
 
     u "(Phone buzzing, I should get that.)"
 
-    $ contact_Jenny.newMessage("Hey [name], this is Jenny, a friend of Penelope. I've noticed she's been acting a little off.", queue=False)
-    $ contact_Jenny.newMessage("Btw, I got your number from her phone when she was in the bathroom.", queue=False)
-    $ contact_Jenny.addReply("Hey... yeah, Penelope has actually been dealing with some pretty heavy stuff. Also, the number stealing is a tad creepy, haha.")
-    $ contact_Jenny.newMessage("I knew it!")
-    $ contact_Jenny.newMessage("I didn't know any other way to get in contact with her new friends...")
-    $ contact_Jenny.addReply("I think it's best to tell you about it all in person, if you're cool with that?")
-    $ contact_Jenny.newMessage("Sure, when and where?")
-    $ contact_Jenny.addReply("Cafe off of Stevenson Street tomorrow morning?")
-    $ contact_Jenny.newMessage("Sounds good to me, thanks [name]!")
+    $ jenny.messenger.newMessage("Hey [name], this is Jenny, a friend of Penelope. I've noticed she's been acting a little off.", queue=False)
+    $ jenny.messenger.newMessage("Btw, I got your number from her phone when she was in the bathroom.", queue=False)
+    $ jenny.messenger.addReply("Hey... yeah, Penelope has actually been dealing with some pretty heavy stuff. Also, the number stealing is a tad creepy, haha.")
+    $ jenny.messenger.newMessage("I knew it!")
+    $ jenny.messenger.newMessage("I didn't know any other way to get in contact with her new friends...")
+    $ jenny.messenger.addReply("I think it's best to tell you about it all in person, if you're cool with that?")
+    $ jenny.messenger.newMessage("Sure, when and where?")
+    $ jenny.messenger.addReply("Cafe off of Stevenson Street tomorrow morning?")
+    $ jenny.messenger.newMessage("Sounds good to me, thanks [name]!")
 
     label v10s19_PhoneContinue:
-        if contact_Jenny.getReplies():
+        if jenny.messenger.replies:
             call screen phone
-        if contact_Jenny.getReplies():
+        if jenny.messenger.replies:
             "(I should reply to Jenny.)"
             jump v10s19_PhoneContinue
 
@@ -41,22 +41,22 @@ label v10_walk_jenny_text:
         "Invite Penelope":
             $ penelopeLike += 1
             $ v10_inv_pen_cafe = True
-            $ addPoint("bf", 1)
+            $ add_point(KCT.BOYFRIEND)
 
             u "(Yeah, I should invite her. Best if she's the one that breaks the news to her.)"
 
-            $ contact_Penelope.addReply("Hey, you free for coffee at the cafe in the morning?")
-            $ contact_Penelope.newMessage("Special occasion?")
-            $ contact_Penelope.addReply("Honestly, if you're okay with talking about it, I just wanted to see how you were doing with all the school stuff.")
-            $ contact_Penelope.newMessage("That's sweet... thanks..")
-            $ contact_Penelope.addReply("So are you free to meet?")
-            $ contact_Penelope.newMessage("Yeah, of course. I'll see you in the morning.")
-            $ contact_Penelope.addReply("See ya!")
+            $ penelope.messenger.addReply("Hey, you free for coffee at the cafe in the morning?")
+            $ penelope.messenger.newMessage("Special occasion?")
+            $ penelope.messenger.addReply("Honestly, if you're okay with talking about it, I just wanted to see how you were doing with all the school stuff.")
+            $ penelope.messenger.newMessage("That's sweet... thanks..")
+            $ penelope.messenger.addReply("So are you free to meet?")
+            $ penelope.messenger.newMessage("Yeah, of course. I'll see you in the morning.")
+            $ penelope.messenger.addReply("See ya!")
 
             label v10s19_PhoneContinue1:
-                if contact_Penelope.getReplies():
+                if penelope.messenger.replies:
                     call screen phone
-                if contact_Penelope.getReplies():
+                if penelope.messenger.replies:
                     "(I should text to Penelope.)"
                     jump v10s19_PhoneContinue1
 
@@ -95,7 +95,6 @@ label v10_walk_jenny_text:
 
     menu:
         "Make a joke":
-
             u "Teachers have friends?"
 
             scene v10swjt5

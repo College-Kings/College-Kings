@@ -14,13 +14,13 @@ label mon_eve_room_josh:
         u "(Let's see who this is.)"
 
         if helpJosh:
-            $ contact_Josh.newMessage(_("Hey bro! It's time! Meet me at mine, okay?"), queue=False)
-            $ contact_Josh.addReply(_("Okay, I'm on my way."))
+            $ josh.messenger.newMessage(_("Hey bro! It's time! Meet me at mine, okay?"), queue=False)
+            $ josh.messenger.addReply(_("Okay, I'm on my way."))
 
             label v8s27_phoneContinue1:
-                if contact_Josh.getReplies():
+                if josh.messenger.replies:
                     call screen phone
-                if contact_Josh.getReplies():
+                if josh.messenger.replies:
                     u "I should really check my phone."
                     jump v8s27_phoneContinue1
 
@@ -88,15 +88,15 @@ label mon_eve_room_josh:
 
         else:
 
-            $ contact_Josh.newMessage(_("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man."), queue=False)
-            $ contact_Josh.addReply(_("Fuck! Are you ok??"))
-            $ contact_Josh.newMessage(_("No, man! I hurt everywhere! Plus my shit is gone!"))
-            $ contact_Josh.addReply(_("Hold on, I'll be right over"))
+            $ josh.messenger.newMessage(_("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man."), queue=False)
+            $ josh.messenger.addReply(_("Fuck! Are you ok??"))
+            $ josh.messenger.newMessage(_("No, man! I hurt everywhere! Plus my shit is gone!"))
+            $ josh.messenger.addReply(_("Hold on, I'll be right over"))
 
             label v8s27_phoneContinue2:
-                if contact_Josh.getReplies():
+                if josh.messenger.replies:
                     call screen phone
-                if contact_Josh.getReplies():
+                if josh.messenger.replies:
                     u "I should really check my phone."
                     jump v8s27_phoneContinue2
                     
@@ -123,13 +123,13 @@ label mon_eve_room_josh:
 
         if helpJosh:
 
-            $ contact_Josh.newMessage(_("Hey bro! It's time! Meet me at mine, okay?"), queue=False)
-            $ contact_Josh.addReply(_("Okay, I'm on my way."))
+            $ josh.messenger.newMessage(_("Hey bro! It's time! Meet me at mine, okay?"), queue=False)
+            $ josh.messenger.addReply(_("Okay, I'm on my way."))
 
             label v8s27_phoneContinue3:
-                if contact_Josh.getReplies():
+                if josh.messenger.replies:
                     call screen phone
-                if contact_Josh.getReplies():
+                if josh.messenger.replies:
                     u "I should really check my phone."
                     jump v8s27_phoneContinue3
                 
@@ -197,16 +197,16 @@ label mon_eve_room_josh:
             jump drug_deal_w_josh
 
         else:
-            $ contact_Josh.newMessage(_("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man."), queue=False)
-            $ contact_Josh.addReply(_("Fuck! Are you ok??"))
-            $ contact_Josh.newMessage(_("No, man! I hurt everywhere! Plus my shit is gone!"))
-            $ contact_Josh.addReply(_("Hold on, I'll be right over"))
+            $ josh.messenger.newMessage(_("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man."), queue=False)
+            $ josh.messenger.addReply(_("Fuck! Are you ok??"))
+            $ josh.messenger.newMessage(_("No, man! I hurt everywhere! Plus my shit is gone!"))
+            $ josh.messenger.addReply(_("Hold on, I'll be right over"))
 
             label v8s27_phoneContinue4:
 
-                if contact_Josh.getReplies():
+                if josh.messenger.replies:
                     call screen phone
-                if contact_Josh.getReplies():
+                if josh.messenger.replies:
                     u "I should really check my phone."
                     jump v8s27_phoneContinue4
                 

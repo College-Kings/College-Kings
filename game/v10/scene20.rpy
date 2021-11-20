@@ -6,14 +6,14 @@
 init python:
     def v10s20_reply1():
         setattr(store, "v10_simplr_known", True)
-        contact_Josh.newMessage("Then why are you acting clueless? Any good matches?")
-        contact_Josh.addReply("I haven't used it yet.", v10s20_reply2)
+        josh.messenger.newMessage("Then why are you acting clueless? Any good matches?")
+        josh.messenger.addReply("I haven't used it yet.", v10s20_reply2)
 
     def v10s20_reply2():
-        contact_Josh.newMessage("WHAT! I've been talking to so many hot chicks. What are you waiting for?")
-        contact_Josh.newMessage("Hop on it.")
-        contact_Josh.newMessage("You been under a rock? Get it and check it out. You probably won't get as many girls as me, but tell me how it goes.")
-        contact_Josh.addReply("Haha, okay.")
+        josh.messenger.newMessage("WHAT! I've been talking to so many hot chicks. What are you waiting for?")
+        josh.messenger.newMessage("Hop on it.")
+        josh.messenger.newMessage("You been under a rock? Get it and check it out. You probably won't get as many girls as me, but tell me how it goes.")
+        josh.messenger.addReply("Haha, okay.")
 
 label v10_room_mon_night:
     play music "music/v10/Scene 20/Track Scene 20.mp3" fadein 3
@@ -25,20 +25,20 @@ label v10_room_mon_night:
 
         play sound "sounds/vibrate.mp3"
 
-        $ contact_Josh.newMessage("So what do think!? Any good ones for you?", queue=False)
-        $ contact_Josh.addReply("What are you talking about?")
-        $ contact_Josh.newMessage("Wait, you don't know what I'm talking about? Everybody on campus knows about it. Except for you I guess.")
-        $ contact_Josh.addReply("What does everyone know about?")
-        $ contact_Josh.newMessage("The new dating app Simplr, they literally just launched.")
-        $ contact_Josh.newMessage("You really haven't heard about it?")
-        $ contact_Josh.addReply("Oh yeah, I heard.", v10s20_reply1)
-        $ contact_Josh.addReply("I have no idea what you're talking about.", v10s20_reply2)
+        $ josh.messenger.newMessage("So what do think!? Any good ones for you?", queue=False)
+        $ josh.messenger.addReply("What are you talking about?")
+        $ josh.messenger.newMessage("Wait, you don't know what I'm talking about? Everybody on campus knows about it. Except for you I guess.")
+        $ josh.messenger.addReply("What does everyone know about?")
+        $ josh.messenger.newMessage("The new dating app Simplr, they literally just launched.")
+        $ josh.messenger.newMessage("You really haven't heard about it?")
+        $ josh.messenger.addReply("Oh yeah, I heard.", v10s20_reply1)
+        $ josh.messenger.addReply("I have no idea what you're talking about.", v10s20_reply2)
 
         label v10s20_PhoneContinueW:
-            if contact_Josh.getReplies():
+            if josh.messenger.replies:
                 call screen phone
-            if contact_Josh.getReplies():
-                "(I should reply to Josh.)"
+            if josh.messenger.replies:
+                u "(I should reply to Josh.)"
                 jump v10s20_PhoneContinueW
 
         if v10_simplr_known:
@@ -75,27 +75,27 @@ label v10_room_mon_night:
         jump v10_cafe_w_jenny
 
     else:
-        scene v10smnr3 # TPP. Show mc in his Apes room chilling on his bed  on his phone.
+        scene v10smnr3 # TPP. Show mc in his Apes room chilling on his bed on his phone.
         with Fade(1, 0, 1)
 
         pause 0.75
 
         play sound "sounds/vibrate.mp3"
 
-        $ contact_Josh.newMessage("So what do think!? Any good ones for you?", queue=False)
-        $ contact_Josh.addReply("What are you talking about?")
-        $ contact_Josh.newMessage("Wait, you don't know what I'm talking about? Everybody on campus knows about it. Except for you I guess.")
-        $ contact_Josh.addReply("What does everyone know about?")
-        $ contact_Josh.newMessage("The new dating app Simplr, they literally just launched.")
-        $ contact_Josh.newMessage("You really haven't heard about it?")
-        $ contact_Josh.addReply("Oh yeah, I heard.", v10s20_reply1)
-        $ contact_Josh.addReply("I have no idea what you're talking about.", v10s20_reply2)
+        $ josh.messenger.newMessage("So what do think!? Any good ones for you?", queue=False)
+        $ josh.messenger.addReply("What are you talking about?")
+        $ josh.messenger.newMessage("Wait, you don't know what I'm talking about? Everybody on campus knows about it. Except for you I guess.")
+        $ josh.messenger.addReply("What does everyone know about?")
+        $ josh.messenger.newMessage("The new dating app Simplr, they literally just launched.")
+        $ josh.messenger.newMessage("You really haven't heard about it?")
+        $ josh.messenger.addReply("Oh yeah, I heard.", v10s20_reply1)
+        $ josh.messenger.addReply("I have no idea what you're talking about.", v10s20_reply2)
 
         label v10s20_PhoneContinue2:
-            if contact_Josh.getReplies():
+            if josh.messenger.replies:
                 call screen phone
-            if contact_Josh.getReplies():
-                "(I should reply to Josh.)"
+            if josh.messenger.replies:
+                u "(I should reply to Josh.)"
                 jump v10s20_PhoneContinue2
 
         if v10_simplr_known:
@@ -127,4 +127,4 @@ label v10_room_mon_night:
 
         pause 1
         stop music fadeout 3
-        jump v10_cafe_w_jenny        
+        jump v10_cafe_w_jenny

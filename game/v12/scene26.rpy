@@ -10,6 +10,8 @@ label v12_nora_chris_fight:
 
     pause 0.75
 
+    play music "music/v12/Scene 26/Track Scene 26.mp3" fadein 2
+
     scene v12ncf2 # FPP. MC and Ryan standing in front of each other in the lobby, Ryan slight smile, mouth open
     with dissolve
 
@@ -100,11 +102,13 @@ label v12_nora_chris_fight:
 
     no "Maybe if you weren't so focused on chasing after the man your daddy was, you'd be your own-"
 
+    play sound "sounds/hs.mp3"
     scene v12ncf4e # TPP. Same as v12ncf4, Chris pushing Nora, Chris very angry, mouth closed, Nora losing her balance, mouth closed, scared
     with hpunch
 
     pause 1.25
 
+    play sound "sounds/fall.mp3"
     scene v12ncf7 # TPP. Nora on the ground, mouth open, curled up on the ground, crying, Chris looking down at her, Chris very angry, mouth closed
     with vpunch
 
@@ -133,7 +137,7 @@ label v12_nora_chris_fight:
     scene v12ncf9
     with dissolve
 
-    cl "Because she wasn't hurting you and you pushed her hard! Are fucking stupid?!"
+    cl "Because she wasn't hurting you and you pushed her hard! Are you fucking stupid?!"
 
     scene v12ncf10
     with dissolve
@@ -193,10 +197,19 @@ label v12_nora_chris_fight:
     scene v12ncf14 # TPP. Show Chris going to walk out of the hotel, mouth closed, angry, holding his wrist, Nora walking towards the hotel rooms, Nora crying, mouth closed
     with dissolve
 
+    pause 0.75
+
     menu:
         "Go to Nora":
+            $ add_point(KCT.BOYFRIEND)
             $ v12_followed_nora = True
 
-            jump scene26b
+            stop music fadeout 3
+            jump v12_chase_nora #scene 26b
+
         "Go to Chris":
+            $ v12_help_chris += 1
+            $ add_point(KCT.BRO)
+
+            stop music fadeout 3
             jump v12_follow_chris #scene 26a

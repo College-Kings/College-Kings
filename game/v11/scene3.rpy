@@ -13,11 +13,13 @@ label v11_samantha_packing:
     with dissolve
 
     play sound "sounds/knock.mp3"
+    pause 1
 
+    play sound "sounds/dooropen.mp3"
     scene v11samp2a # FPP. MC is looking at Samantha at the door, which she is opening, she is moving in, neutral expression, mouth closed
     with dissolve
 
-    play sound "sounds/dooropen.mp3"
+    pause 0.75
 
     scene v11samp2b # FPP. Same cam as 2, Samantha is now inside the room, neutral expression, mouth closed
     with dissolve
@@ -97,11 +99,11 @@ label v11_samantha_packing:
     scene v11samp2d
     with dissolve
 
-    sa "No, but, I just wasn't expecting you to just leave. Rude."
+    sa "No, but I just wasn't expecting you to just leave. Rude."
 
     menu:
         "Invite her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ samLike += 1
             $ v11_invite_sam_europe = True
             scene v11samp2e
@@ -248,6 +250,7 @@ label v11_samantha_packing:
 
             u "(One more on the list.)"
 
+            play sound "sounds/dooropen.mp3"
             scene v11samp2j # FPP. Same as 2a, Samantha has her upper body appearing through the doorway, happy expression, mouth open, looking at MC
             with dissolve
 
@@ -312,6 +315,13 @@ label v11_samantha_packing:
             play sound "sounds/doorclose.mp3"
 
             u "(Woah.)"
+
+    scene v11samp2
+    with dissolve
+        
+    play sound "sounds/call.mp3"
+    pause 2.25
+            
     stop music fadeout 3
 
     jump v11_cafe_with_riley

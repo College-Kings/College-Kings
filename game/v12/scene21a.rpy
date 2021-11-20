@@ -8,17 +8,19 @@ label v12_nursing_aubrey:
     scene v12aun1 # TPP. Show MC and Aubrey going into the hotel room, MC helping Aubrey walk, Aubrey hurt her ankle, MC worried, mouth closed, Aubrey in pain, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
+
+    play music "music/v12/Scene 21a/Track Scene 21a.mp3" fadein 2
 
     scene v12aun2 # TPP. Show MC helping Aubrey sit down on the bed, Aubrey in pain, MC worried, both mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12aun3 # TPP. Show MC sitting down on the bed, Aubrey laying down on the bed with her feet on MC's lap. MC worried, Aubrey in pain, both of them looking at each other, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12aun4 # FPP. Same positioning as v12aun4, MC looking at Aubrey, Aubrey looking at MC, Aubrey in pain, mouth open
     with dissolve
@@ -185,6 +187,7 @@ label v12_nursing_aubrey:
 
     menu:
         "If I was your boyfriend...":
+            $ add_point(KCT.BOYFRIEND)
             $ v12_aubrey_gf = True
 
             scene v12aun4f
@@ -233,10 +236,11 @@ label v12_nursing_aubrey:
 
             au "*Chuckles* Fucking weirdo..."
 
+    play sound "sounds/doorclose.mp3"
     scene v12aun6 # FPP. MC looking at the hotel room door to the corridor, door is open, Imre is in front of it, looking at MC, he is smiling, mouth open, very excited
     with vpunch
 
-    imre "We're back bitches!"
+    imre "We're back, bitches!"
 
     scene v12aun6a # FPP. Same as v12aun6, Imre already in the room, not in shot, Nora at the door, annoyed, mouth open looking at Imre's direction
     with dissolve
@@ -273,7 +277,7 @@ label v12_nursing_aubrey:
 
     u "Yikes, Imre... What'd you do this time? *Chuckles*"
 
-    scene v12aun7
+    scene v12aun7a
     with dissolve
 
     no "I took my shirt off to sunbathe for a bit in my bra and he started inviting people over, selling tickets to watch me... Claiming they were paying to see a \"beautiful foreign girl sunbathe\"."

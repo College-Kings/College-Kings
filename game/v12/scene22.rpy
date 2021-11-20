@@ -10,6 +10,8 @@ label v12_riley_room:
 
     pause 1
 
+    play music "music/v12/Scene 22/Track Scene 22.mp3" fadein 2
+
     scene v12rir2 # FPP Show Riley, in hotel hallway, smiling with mouth open
     with dissolve
 
@@ -172,7 +174,7 @@ label v12_riley_room:
 
     ri "Let's see... Can't tell you something too personal. *Chuckles*"
 
-    scene v12rir12 # FPP View of MC, inside Riley's room looking at the door,  which is slightly open
+    scene v12rir12 # FPP View of MC, inside Riley's room looking at the door, which is slightly open
     with dissolve
     
     u "The door's open, someone could hear whatever you tell me. Walls are thin, remember?"
@@ -205,7 +207,7 @@ label v12_riley_room:
     scene v12rir11a
     with dissolve
 
-    ri "Yep, I just looked like a little blueberry. My glasses and the braces didn't help either. *Chuckles*"
+    ri "Yep, I just looked like a little blueberry. The braces didn't help either. *Chuckles*"
 
     scene v12rir11c
     with dissolve
@@ -298,6 +300,8 @@ label v12_riley_room:
 
         u "(Bastard was probably listening that whole fucking time...)"
 
+        jump v12_ms_rose_sex #scene 23
+
     else:
         scene v12rir11b
         with dissolve
@@ -326,4 +330,6 @@ label v12_riley_room:
 
         u "(Bastard was probably listening that whole fucking time...)"
 
-    jump v12_ms_rose_sex #scene 23
+        stop music fadeout 3
+        
+        jump v12_mc_chilling

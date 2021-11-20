@@ -6,9 +6,11 @@
 
 label v12_riley_ending:
     scene v12rie1 # TPP. MC sitting in same chair as v12lil12, slightly annoyed, mouth closed, Riley walking over to the empty chair, Riley slightly sad, mouth closed
-    with dissolve
+    with fade
 
     pause 0.75
+
+    play music "music/v12/Scene 37/Track Scene 37.mp3" fadein 2
 
     scene v12rie2 # FPP. Riley sitting down in the chair in front of MC, MC and Riley looking at each other, Riley slightly sad, mouth closed
     with dissolve
@@ -58,7 +60,7 @@ label v12_riley_ending:
     scene v12rie2
     with dissolve
 
-    u "Sounds good but, we'll see. *Chuckles*"
+    u "Sounds good, but we'll see... *Chuckles*"
 
     scene v12rie2c # FPP. Same as v12rie2a, Riley slightly angry, mouth open
     with dissolve
@@ -80,17 +82,18 @@ label v12_riley_ending:
 
     ri "Yeah I know, it was stupid to not think he could've done it, or anyone that may have been listening in for that matter."
 
-    scene v12rie2e # FPP. Same as v12rie2d, Riley smirking, mouth closed
+    scene v12rie2
+    #scene v12rie2e # FPP. Same as v12rie2d, Riley smirking, mouth closed
     with dissolve
 
     u "So, how are you gonna handle this?"
 
-    scene v12rie2f # FPP. Same as v12rie2e, Riley smirking, mouth open
+    scene v12rie2e # FPP. Same as v12rie2e, Riley smirking, mouth open
     with dissolve
 
     ri "With some stone cold revenge."
 
-    scene v12rie2e
+    scene v12rie2f
     with dissolve
 
     u "Oooo, revenge on Charli? I'm all in! What's the plan?"
@@ -99,6 +102,8 @@ label v12_riley_ending:
     with dissolve
 
     ri "Haha, so here's my plan..."
+
+    stop music fadeout 3
 
     jump end12
 

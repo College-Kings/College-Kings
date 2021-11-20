@@ -4,31 +4,6 @@
 # Time: Afternoon
 # Phone Images: images/v12/Scene 33/three_doors.png
 
-screen v12s33_sneak_off_overlay(sneak_label):
-    imagebutton:
-        idle "sneak_off_button"
-        hover "sneak_off_hover"
-        action Jump(sneak_label)
-
-screen v12s33_three_doors():
-    tag freeRoam
-    add "images/v12/Scene 33/three_doors.png" # needs to be rendered
-    imagebutton: # door 1
-        align (0, 0)
-        idle "images/v12/Scene 33/door1.png"
-        hover "images/v12/Scene 33/door1hover.png"
-        action Jump(v12s33_door1)
-    imagebutton: # door 2
-        align (0, 0)
-        idle "images/v12/Scene 33/door2.png"
-        hover "images/v12/Scene 33/door2hover.png"
-        action Jump(v12s33_door2)
-    imagebutton: # door 3
-        align (0, 0)
-        idle "images/v12/Scene 33/door3.png"
-        hover "images/v12/Scene 33/door3hover.png"
-        action Jump(v12s33_door3)
-
 label v12s33:
 # -MC and Aubrey arrive in the hotel lobby-
 # -Lindsey is already in a towel-
@@ -36,6 +11,8 @@ label v12s33:
     with dissolve
 
     pause 0.75
+
+    play music "music/v12/Scene 33/Track Scene 33_1.mp3" fadein 2
 
     scene v12s33_2 #FPP Lindsey in a towel walking towards you, slightly surprised mouth open (again don't show the empty hotel lobby in the background)
     with dissolve
@@ -47,7 +24,7 @@ label v12s33:
 
     au "We got carried away, is something going on?"
 
-    scene v12s33_4 # FPP Lindsey close up, neutral expression, mouth open
+    scene v12s33_4 # FPP Lindsey close up, neutral expression, mouth open
     with dissolve
 
     li "I would've texted you, but I was expecting you to already be back."
@@ -63,7 +40,7 @@ label v12s33:
 
     li "That's what I said when Nora told me, haha! We all have to go at the same time though, so they've been waiting on you guys."
 
-    scene v12s33_4a # same as 4, mouth closed
+    scene v12s33_4a # same as 4, mouth closed
     with dissolve
 
     u "No one thought to text or call us? *Chuckles*"
@@ -79,12 +56,12 @@ label v12s33:
 
     au "Thanks Lindsey."
 
-    scene v12s33_4d # same as 4, lindsey looking at aubrey, smiling ,mouth open
+    scene v12s33_4d # same as 4, lindsey looking at aubrey, smiling,mouth open
     with dissolve
 
     li "Of course."
 
-    scene v12s33_5 # FPP, shows Mr Lee, mouth open, neutral expression talking to mc  (again don't show the full lobby being empty)
+    scene v12s33_5 # FPP, shows Mr Lee, mouth open, neutral expression talking to mc (again don't show the full lobby being empty)
     with dissolve
 
     lee "Alright, it looks like Lindsey caught the two of you up. Everyone else has already been given instructions, so allow me to fill you in."
@@ -107,7 +84,7 @@ label v12s33:
 
     au "There's a sauna, right?"
 
-    scene v12s33_5b # same as 5, mr lee looking at aubrey, neutral expression ,mouth open
+    scene v12s33_5b # same as 5, mr lee looking at aubrey, neutral expression,mouth open
     with dissolve
 
     lee "Yes, a sauna and a one hour massage."
@@ -147,10 +124,10 @@ label v12s33:
     scene v12s33_4b
     with dissolve
 
-    li "He's starting to get a little irritated, but I think it's because he's getting homesick. He's starting to miss his wife; I heard him say it to Ms. Rose."
+    li "He's starting to get a little irritated, but I think it's because he's getting homesick. He's starting to miss his wife, I heard him say it to Ms. Rose."
     li "I think the church thing kinda hit home for him."
 
-    scene v12s33_4c # same as 4b, mouth closed
+    scene v12s33_4c # same as 4b, mouth closed
     with dissolve
 
     u "I always forget he's married, but yeah... I could see why he'd be on edge."
@@ -168,7 +145,10 @@ label v12s33:
     scene v12s33_7 # FPP Aubrey standing at the spa entra (inside the spa) in front of a towel stand and starts taking her clothes off
     with dissolve
 
-    pause 0.75
+    pause 1.25
+
+    stop music fadeout 3
+    play music "music/v12/Scene 33/Track Scene 33_2.mp3" fadein 2
 
     scene v12s33_7a # same as 7, AUbrey now without top (no bra), starting to take her pants off
     with dissolve
@@ -200,7 +180,7 @@ label v12s33:
 
     au "You're gonna get naked too, right? You can't use the sauna with clothes on, that's weird."
 
-    scene v12s33_9b # same as 9, Lindsey looking at mc, mouth open flirty smile
+    scene v12s33_9b # same as 9, Lindsey looking at mc, mouth open flirty smile
     with dissolve
 
     li "*Chuckles* That, I agree with."
@@ -230,6 +210,9 @@ label v12s33:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 33/Track Scene 33_3.mp3" fadein 2
+
     scene v12s33_12 #FPP showing close up of Ryan laying a massage table with his head looking at mc, mouth open, smiling, Ryan should have black hair here
     with dissolve
 
@@ -241,18 +224,18 @@ label v12s33:
     u "Haha, alright."
 
 # -MC hops on a table-
-# -Chris (with a bandaged hand) , Imre, Ryan and Mr. Lee are laying on a table with their faces down-
+# -Chris (with a bandaged hand), Imre, Ryan and Mr. Lee are laying on a table with their faces down-
 # -Josh and Cameron if present are sitting alone on a sofa-
 # -There's a sneak off button throughout the entire scene-
 
-    scene v12s33_16 # shows mc on a massage table, with his face down , same angle as 13
+    scene v12s33_16 # shows mc on a massage table, with his face down, same angle as 13
     with fade
 
     u "(I could always sneak off and see what the girls are doing if this gets too boring...)"
 
     show screen v12s33_sneak_off_overlay("v12s33_sneak_off1")
 
-    scene v12s33_13 #TPP close up angled top view of Imre laying on a massage table with face down (you shouldn't be able to see his face or other massage tables next to him), it needs to be so close that it onl;y shows Imre's heads and shoulders, but not his lower back, so that the picture works with or with masseuse there
+    scene v12s33_13 #TPP close up angled top view of Imre laying on a massage table with face down (you shouldn't be able to see his face or other massage tables next to him), it needs to be so close that it only shows Imre's heads and shoulders, but not his lower back, so that the picture works with or with masseuse there
     with dissolve
 
     imre "Where's the masseuse? I hope I get a lady! *Laughs*"
@@ -265,22 +248,22 @@ label v12s33:
     scene v12s33_13
     with dissolve
 
-    imre "I don't know about you, but I'd rather a woman's hands on me than a man."
+    imre "I don't know about you, but I'd rather have a woman's hands on me than a man's."
 
     scene v12s33_14
     with dissolve
 
     lee "The only woman's hands I care for are my wife's."
 
-    scene v12s33_15 # TPP same view as for Imre and Mr Lee, but for Chris 
+    scene v12s33_15 # TPP same view as for Imre and Mr Lee, but for Chris 
     with dissolve
 
-    ch "Commendable Mr. Lee."
+    ch "Commendable, Mr. Lee."
 
     scene v12s33_14
     with dissolve
 
-    lee "Your flattery won't win you any points with me Chris... We will still be discussing the other day's incident."
+    lee "Your flattery won't win you any points with me, Chris... We will still be discussing the other day's incident."
 
     scene v12s33_13
     with dissolve
@@ -292,7 +275,7 @@ label v12s33:
 
     lee "I agree."
 
-    scene v12s33_17 # TPP show two masseuses walk in, one a beautiful woman and the other a man, female masseuse mouth open, smiling
+    scene v12s33_17 # TPP show two masseuses walk in, one a beautiful woman and the other a man, female masseuse mouth open, smiling
     with dissolve
 
     lmass "Afternoon gentleman, hope you're all relaxing well and ready for your massages?"
@@ -307,7 +290,7 @@ label v12s33:
 
     lee "*Sighs* So embarrassing."
 
-    scene v12s33_18 # TPP close up of female masseuse, mouth open, neutral expression
+    scene v12s33_18 # TPP close up of female masseuse, mouth open, neutral expression
     with dissolve
 
     lmass "Haha. Massages last one hour hour. We ask that you relax and attempt to behave as if we aren't even here."
@@ -369,6 +352,7 @@ label v12s33:
 
     scene v12s33_19a # same as 19, the man masseuse cracks Imre's back hard with his elbow-
     with dissolve
+    play sound "sounds/hs.mp3"
 
     "*Crack*"
 
@@ -387,7 +371,7 @@ label v12s33:
 
     u "*Laughs*"
 
-    scene v12s33_20 # same angle as 13,14,15,16, for Ryan 
+    scene v12s33_20 # same angle as 13,14,15,16, for Ryan 
     with dissolve
 
     ry "*Laughs*"
@@ -431,10 +415,11 @@ label v12s33:
 
     scene v12s33_21a # same as 21, the man masseuse cracks Mr. Lee's back hard with his elbow just as he did Imre-
     with dissolve
+    play sound "sounds/hs.mp3"
 
     "*Crack*"
 
-    lee "OH, BUDDHA AND ALL THAT\"S GOOD! Please... don't push so hard."
+    lee "OH, BUDDHA AND ALL THAT'S GOOD! Please... don't push so hard."
 
     mmass "Sir, you have a serious knot."
 
@@ -446,7 +431,7 @@ label v12s33:
     scene v12s33_20
     with dissolve
 
-    ry "Kinda sounding like a wuss over there Mr. Lee."
+    ry "Kinda sounding like a wuss over there, Mr. Lee."
 
     scene v12s33_14
     with dissolve
@@ -455,6 +440,7 @@ label v12s33:
 
     scene v12s33_21b #same as 21 # -the man masseuse cracks Mr. Lee's neck in one direction-
     with dissolve
+    play sound "sounds/js.mp3"
 
     "*Crack*"
 
@@ -464,7 +450,8 @@ label v12s33:
 
     scene v12s33_21c #  same as 21b, He snaps Mr. Lee's neck again in the opposite direction-
     with dissolve
-
+    
+    play sound "sounds/hs.mp3"
     "*Crack*"
 
     lee "HOOO! Oh wow, that feels... amazing!"
@@ -503,7 +490,7 @@ label v12s33:
 
     u "Your face is corny."
 
-    scene v12s33_22 # TPP close up of female masseuse looking down massaging someone (don't show their body), laughing smile, mouth open
+    scene v12s33_22 # TPP close up of female masseuse looking down massaging someone (don't show their body), laughing smile, mouth open
     with dissolve
 
     lmass "*Chuckles* You guys are the most exciting bunch we've had."
@@ -556,9 +543,9 @@ label v12s33:
     scene v12s33_16
     with dissolve
 
-    u "Uhm.. not sure. Neck I guess?"
+    u "Uhm... not sure. Neck I guess?"
 
-    lmass "Alright I'll make sure to get to it in a bit."
+    lmass "Alright, I'll make sure to get to it in a bit."
 
     scene v12s33_24 # shows close up of clock at 15:45
     with dissolve
@@ -585,6 +572,10 @@ label v12s33:
     jump v12s33_sauna
 
 label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massage
+    hide screen v12s33_sneak_off_overlay
+
+    $ v12_sauna_sneak1 = True
+
     scene v12s33_16
     with dissolve
 
@@ -610,16 +601,25 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
+
+    if v12s33_door1 and v12s33_door2 and v12s33_door3:
+        jump v12s33_sauna
+
     call screen v12s33_three_doors
 
-    label v12s33_door1:
+label v12s33_door1:
 
     $ v12s33_door1 = True
 
     scene v12s33_27 # -FPP Ms. Rose, Lauren, Nora, and Riley sitting in the Sauna, all in towels, none of them looking at him, ideally show them sweating if possible-
-    with dissolve 
+    #with dissolve 
 
     u "*Whistles*"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 33/Track Scene 33_5.mp3" fadein 2
 
     scene v12s33_27a # now all looking at him, ms rose mouth open, suspicious look
     with dissolve
@@ -631,7 +631,23 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     u "Oh sorry, my bad. I was looking for the restroom."
 
-    call screen v12s33_three_doors
+    stop music fadeout 3
+    play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
+
+    if v12s33_door1 and v12s33_door2 and v12s33_door3:
+        scene v12s33_24a # same as 24, clock now at 16:00
+        with fade
+
+        pause 0.75
+
+        scene v12s33_18
+        with dissolve
+
+        lmass "Alright gentlemen, it is time for you to swap with the ladies."
+
+        jump v12s33_sauna
+    else:
+        call screen v12s33_three_doors
 
 # -MC leaves and is back at the free roam room-
 
@@ -646,12 +662,15 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     if v11_invite_sam_europe:
         scene v12s33_28a #FPP, same as 28 show Chloe and Aubrey and Samantha in Sauna (sweaty if possible), all looking at you, smiling (sit samantha at a spot where it looks natural whether she's there or not) (Chloe in towel, Aubrey naked, Samantha in towel)
-        with dissolve
+        #with dissolve
     else:
         scene v12s33_28 #FPP show Chloe and Aubrey in Sauna (sweaty if possible), both looking at you, smiling (Chloe in towel, Aubrey naked)
-        with dissolve
+        #with dissolve
+    
+    stop music fadeout 3
+    play music "music/v12/Scene 33/Track Scene 33_5.mp3" fadein 2
 
-    mc "Heyah, hope you don't mind me coming in."
+    u "Heyah, hope you don't mind me coming in."
 
     scene v12s33_29 #FPP close up Aubrey, Looking at Chloe (off-screen), laughing smile, mouth upen
     with dissolve
@@ -668,17 +687,17 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     u "What?"
 
-    scene v12s33_29b # same as 29, aubrey looking at mc, smiling mouth open
+    scene v12s33_29b # same as 29, aubrey looking at mc, smiling mouth open
     with dissolve
 
     au "Haha, we bet which boy would sneak off and try to come sit with us girls. I said you and Chloe said Imre."
 
-    scene v12s33_29c # same as 29b , mouth closed
+    scene v12s33_29c # same as 29b, mouth closed
     with dissolve
 
     u "Haha! Well, trust me. He wanted to, but Mr. Lee has him on lock and key."
 
-    scene v12s33_30b # same as 30, chloe smiling, mouth open
+    scene v12s33_30b # same as 30, chloe smiling, mouth open
     with dissolve
 
     cl "Didn't even consider Mr. Lee."
@@ -695,7 +714,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     if v11_invite_sam_europe:
 
-        scene v12s33_31 # FPP close up Sam looking at mc,  apologenic expression, mouth open
+        scene v12s33_31 # FPP close up Sam looking at mc, apologenic expression, mouth open
         with dissolve
 
         sa "Umm, [name]?"
@@ -739,7 +758,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
         scene v12s33_29c
         with dissolve
 
-    u "What have you guys been up to in here? So far it sounds like you were talking about us guys."
+    u "What have you been up to in here? So far it sounds like you were talking about us guys."
 
     scene v12s33_30b
     with dissolve
@@ -750,12 +769,11 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     with dissolve
 
     menu:
-
         "Not at all":
-            $ addPoint ("bro")
+            $ add_point(KCT.BRO)
             u "Not at all, you can talk about me all you want. I like knowing I'm on your mind... *Chuckles*"
 
-            scene v12s33_30f # same as 30b , chloe flirty, mouth open
+            scene v12s33_30f # same as 30b, chloe flirty, mouth open
             with dissolve
 
             cl "Ha... Is that so?"
@@ -785,10 +803,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
             u "Haha, alright... Noted."
 
-
         "Yes, haha":
-            $ addPoint ("bf")
-
             u "Yes, haha. Who knows what kind of crazy theories you girls may be coming up with?"
 
             scene v12s33_30b
@@ -826,13 +841,29 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     au "See ya, [name]."
 
-    scene v12s33_31
-    with dissolve
+    if v11_invite_sam_europe:
+        scene v12s33_31
+        with dissolve
+        sa "Bye, [name]."
 
-    sa "Bye, [name]."
+    stop music fadeout 3
+    play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
 
-    call screen v12s33_three_doors
+    if v12s33_door1 and v12s33_door2 and v12s33_door3:
+        scene v12s33_24a # same as 24, clock now at 16:00
+        with fade
 
+        pause 0.75
+
+        scene v12s33_18
+        with dissolve
+
+        lmass "Alright gentlemen, it is time for you to swap with the ladies."
+
+        jump v12s33_sauna
+    else:
+        call screen v12s33_three_doors
+        
 # -MC leaves and is back in the free roam area-
 
 # -if door 3
@@ -840,20 +871,22 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     label v12s33_door3:
     
-    $ v12s33_door2 = True
+    $ v12s33_door3 = True
 
     if v11_pen_goes_europe:
         scene v12s33_32 #FPP, show Amber, Lindsey and Penelope in Sauna (sweaty if possible), all looking at you, smiling, position Penelope so it doesn't look weird if she's there or not, Lindsey naked, Amber naked, Penelope in towel
-        with dissolve
+        #with dissolve
     else:
         scene v12s33_32a #FPP same as 32 without Penelope
-        with dissolve
+        #with dissolve
 
     u "Hey, ladies!"
 
-    if v11_pen_goes_europe:
+    stop music fadeout 3
+    play music "music/v12/Scene 33/Track Scene 33_5.mp3" fadein 2
 
-        scene v12s33_33 # FPP ,close up Penelope, smiling, mouth open, looking at mc
+    if v11_pen_goes_europe:
+        scene v12s33_33 # FPP,close up Penelope, smiling, mouth open, looking at mc
         with dissolve
   
         pe "Hey, [name]."
@@ -883,7 +916,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     am "Did you know most of the Chicks back at campus have already promised to vote for her?"
 
-    scene v12s33_35a #FPP close up , lindsey, looking at mc , genuine smile, mouth closed
+    scene v12s33_35a #FPP close up, lindsey, looking at mc, genuine smile, mouth closed
     with dissolve
 
     u "Wow, Lindsey... Really?"
@@ -967,15 +1000,30 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     am "Later."
 
     if v11_pen_goes_europe:
-
         scene v12s33_33
         with dissolve
 
         pe "Bye, [name]!"
+    
+    stop music fadeout 3
+    play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
 
-    call screen v12s33_three_doors
+    if v12s33_door1 and v12s33_door2 and v12s33_door3:
+        scene v12s33_24a # same as 24, clock now at 16:00
+        with fade
 
-    label v12s33_three_doors_back:
+        pause 0.75
+
+        scene v12s33_18
+        with dissolve
+
+        lmass "Alright gentlemen, it is time for you to swap with the ladies."
+
+        jump v12s33_sauna
+    else:
+        call screen v12s33_three_doors
+
+label v12s33_three_doors_back:
 
     scene v12s33_20
     with dissolve
@@ -1012,6 +1060,9 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 33/Track Scene 33_3.mp3" fadein 2
+
     scene v12s33_36 # Now the guys are in the sauna, show them sweaty if possible. All guys are in towels. TPP Close up Imre sitting in Sauna, annoyed, mouth open, looking forward but not straight at the camera
     with fade
     
@@ -1019,7 +1070,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     imre "Aww, hell no! How is this supposed to be relaxing? It's hot as hell in here, dude."
 
-    scene v12s33_37 # TPP close up Chris, sitting in Sauna, neutral expression, eyes closed facing forward, mouth open
+    scene v12s33_37 # TPP close up Chris, sitting in Sauna, neutral expression, eyes closed facing forward, mouth open
     with dissolve
 
     ch "Just try to enjoy it, man."
@@ -1052,7 +1103,7 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     scene v12s33_38
     with dissolve
 
-    lee "You know... Blunty? As much as you little rats annoy me, you're still like the sons I never had. It makes me happy to see that you're having a good time."
+    lee "You know... Bluntly? As much as you little rats annoy me, you're still like the sons I never had. It makes me happy to see that you're having a good time."
 
     scene v12s33_40
     with dissolve
@@ -1077,7 +1128,69 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     scene v12s33_38
     with dissolve
 
-    lee "That'll count as one. *Chuckles* Let's go back to silently relaxing, boys."
+    lee "That'll count as one..."
+
+    if joinwolves:
+        scene v12s33_39
+        with dissolve
+
+        pause 0.75
+
+        scene v12s33_40b
+        with dissolve
+
+        u "Oh yeah, Ryan! I forgot to ask why you decided to dye your hair..."
+
+        scene v12s33_36b
+        with dissolve
+
+        imre "He's trying to look as good as me, [name]. Tall, dark and handsome."
+
+        scene v12s33_39
+        with dissolve
+
+        ry "Uh, hell no... I lost a bet. \"Hashtag roasted ape\". Ha..."
+
+        scene v12s33_36b
+        with dissolve
+
+        imre "Wow, that was sad."
+
+        scene v12s33_40
+        with dissolve
+
+        u "*Laughs*"
+
+    else:
+        scene v12s33_36b
+        with dissolve
+
+        pause 0.75
+
+        scene v12s33_39
+        with dissolve
+
+        ry "Nice cupcake by the way, Imre. *Laughs* Is that the flavor of your nipples?"
+
+        scene v12s33_36
+        with dissolve
+
+        imre "Shut the hell up... It was a \"pick at random\" tattoo parlor, alright?"
+
+        scene v12s33_40b
+        with dissolve
+        
+        u "Haha, alright... I can't say it doesn't suit you, though."
+
+        scene v12s33_36
+        with dissolve
+
+        imre "Thanks... I think."
+    
+    scene v12s33_38
+    with dissolve
+
+    lee "*Chuckles* Alright, enough bantering. Let’s go back to silently relaxing, boys."
 
     scene v12s33_41 # close up show clock inside sauna at 16:15
     with dissolve
@@ -1118,30 +1231,44 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
 
     jump v12s33_after_sauna
 
-
     # -If MC presses the Sneak Off button during the sauna-
 
 label v12s33_sneak_off2:
+    hide screen v12s33_sneak_off_overlay
 
-    scene v12s33_40
-    with dissolve
+    if v12_sauna_sneak1:
+        scene v12s33_40
+        with dissolve
+        u "You guys are gonna think I'm playing around, but I seriously have to poop again."
 
-    u "You guys are gonna think I'm playing around, but I seriously have to poop again."
+        scene v12s33_36b
+        with dissolve
+        imre "Bro, there's no way... Unless you're sick?"
 
-    scene v12s33_36b
-    with dissolve
+        scene v12s33_40
+        with dissolve
+        u "Nah, I'm not sick."
 
-    imre "Bro, there's no way... Unless you're sick?"
+        scene v12s33_39
+        with dissolve
+        ry "If you're not sick then, there's no way you gotta use the restroom again."
 
-    scene v12s33_40
-    with dissolve
+    else:
+        scene v12s33_40
+        with dissolve
+        u "Sorry guys, I suddenly really gotta poop..."
 
-    u "Nah, I'm not sick."
+        scene v12s33_36b
+        with dissolve
+        imre "*Laughs* Gross dude! You don't need to announce it."
 
-    scene v12s33_39
-    with dissolve
+        scene v12s33_39
+        with dissolve
+        ry "*Laughs*"
 
-    ry "If you're not sick then, there's no way you gotta use the restroom again."
+        scene v12s33_38
+        with dissolve
+        lee "Please, [name], just go."
 
     scene v12s33_36b
     with dissolve
@@ -1173,6 +1300,9 @@ label v12s33_sneak_off2:
 
     u "Ha, alright then... I'll be back."
 
+    stop music fadeout 3
+    play music "music/v12/Scene 33/Track Scene 33_5.mp3" fadein 2
+
     scene v12s33_43 # TPP show mc crouching looking at the massage tables, where 5 girls are laying on. In this order (closest to mc first): Amber, Nora, Lindsey, Ms Rose, Chloe. They should be somewhat naked as you would be on a massage table, don't show the whole room as a lot of girls are missing.
     with fade
 
@@ -1183,7 +1313,7 @@ label v12s33_sneak_off2:
      
     pause 0.75
 
-    scene v12s33_45 # FPP show closeup of amber looking down at you from her massage table, laughing smile, mouth open, whispering
+    scene v12s33_45 # FPP show closeup of amber looking down at you from her massage table, laughing smile, mouth open, whispering
     with dissolve
 
     am "*Whisper* What on earth are you doing?! *Chuckles*"
@@ -1224,10 +1354,9 @@ label v12s33_sneak_off2:
     u "*Whisper* Haha, alright."
 
     menu:
-
         "Crawl to the next table":
-            $ addPoint ("tm")
-            scene v12s33_46 #TPP  MC crawls to the next table and sees Nora,  mc mouth open smiling, whispering 
+            $ add_point(KCT.TROUBLEMAKER)
+            scene v12s33_46 #TPP MC crawls to the next table and sees Nora, mc mouth open smiling, whispering 
             with dissolve
 
             u "*Whisper* Nora Nora, can I \"bora bora\" you?"
@@ -1262,25 +1391,25 @@ label v12s33_sneak_off2:
 
             ro "[name]! I don't believe you're supposed to be here."
 
-            scene v12s33_48a # same as 48, mouth closed
+            scene v12s33_48a # same as 48, mouth closed
             with dissolve
 
             u "My bad, I uhm... got lost."
 
         "Go back to the sauna":
-            $ addPoint ("bf")
+            pass
 
     scene v12s33_49 # TPP shows mc about to walk back into the Sauna (from outside the Sauna) (read the next image description before setting up)
     with fade
 
     pause 0.75
 
-    scene v12s33_50a # FPP Imre comes out of the Sauna, looking at mc, very sweaty, neutral face ,mouth closed
+    scene v12s33_50a # FPP Imre comes out of the Sauna, looking at mc, very sweaty, neutral face,mouth closed
     with dissolve
 
     u "What's going on?"
 
-    scene v12s33_50 # same as 50a, mouth open
+    scene v12s33_50 # same as 50a, mouth open
     with dissolve
 
     imre "We're leaving bro, it's hot as hell in here."
@@ -1289,9 +1418,9 @@ label v12s33_sneak_off2:
     with dissolve
 
     u "Oh, okay."
-    
+
+    stop music fadeout 3
     jump v12s33_after_sauna
 
 label v12s33_after_sauna:
-
     jump v12_amber_after_spa #scene 34

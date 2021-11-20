@@ -5,34 +5,39 @@
 # Ms. Rose flashback pic (used as a prop in a few renders): Ms. Rose and her husband with him having his hand over her waist. Rose is happy in the pic. Use a random model for the husband (his face won't be shown to the viewer) and maybe a different outfit for Rose.
 # Please look at the rpy file along with the render table to get a good idea of the scene's dynamics
 
-
 label msrose_moving:
+    $ penelope.messenger.addReply(_("Hey, how you holding up?"))
+    $ penelope.messenger.newMessage(_("Better, thanks to you"))
+    $ penelope.messenger.addReply(_("No problem. I'm here for you. Let me know if you need anything else."))
+    $ penelope.messenger.newMessage(_("Thank you! :)"))
 
-    $ contact_Penelope.addReply(_("Hey, how you holding up?"))
-    $ contact_Penelope.newMessage(_("Better, thanks to you"))
-    $ contact_Penelope.addReply(_("No problem. I'm here for you. Let me know if you need anything else."))
-    $ contact_Penelope.newMessage(_("Thank you! :)"))
+    scene v8smcrm99
+    with dissolve
+    pause 0.75
 
     scene v8rose1 # TPP. MC sitting on his bed in his room (Wolves) and looking at his phone. Neutral expression, mouth closed. If the floor is visible, there should be a few books strewn randomly
-    with Fade(0.75, 0.25, 0.75)
-    pause
+    with dissolve
     u "(Should I check how Penelope's doing?)"
 
     label phn_penelope6:
-        if contact_Penelope.getReplies():
+        if penelope.messenger.replies:
             call screen phone
-        if contact_Penelope.getReplies():
+        if penelope.messenger.replies:
             u "(I should talk to Penelope.)"
             jump phn_penelope6
 
 label phn_penelope6_done:
-    play sound "sounds/knock.mp3"
-    "*Knock knock knock*"
 
     scene v8rose1a # MC looking towards his room door (not visible in the shot) and talking
     with dissolve
+    play sound "sounds/knock.mp3"
+
+    pause 1.5
+
+    scene v8rose1a
     u "Come in!"
 
+    play sound "sounds/dooropen.mp3"
     scene v8rose2 # FPP. Chris walks in and is now standing somewhere near MC's bed. Serious expression, mouth open
     with dissolve
     ch "Hey man, you busy?"
@@ -69,11 +74,11 @@ label phn_penelope6_done:
 
     scene v8rose3 # TPP. Location: Ms Rose's house. Imre placing a huge carrying box into a moving truck outside her house (there should be more boxes inside of it already). Aaron walking towards the truck with a box in his hand
     with Fade(0.75, 0.25, 0.75)
-    pause
+    pause 1
 
     scene v8rose4 # TPP. Shot of MC and Chris standing in front of Rose who is looking upset. Finn can be seen walking towards the entrance with a box in hand
     with dissolve
-    pause
+    pause 1
 
     scene v8rose5 # FPP. Shot of Rose looking upset, but grateful and forcing a smile, mouth open. She's looking towards Chris (not visible in frame)
     with dissolve
@@ -144,7 +149,7 @@ label phn_penelope6_done:
 
     menu:
         "Stay to console her":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ consoledRose = True
 
             u "(This is important. There are enough Wolves to move boxes quickly.)"
@@ -195,7 +200,7 @@ label phn_penelope6_done:
             ro "Awww, this was from before the accident. Before everything... How did this happen?"
 
         "Focus on moving the boxes":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "Don't worry. We'll be out of here in no time."
             u "I'll uh... go and get more boxes."
@@ -366,7 +371,7 @@ label phn_penelope6_done:
 
     scene v8rose18 # Shot of Aaron and Finn loading stuff into the truck. The truck should be filled more than in v8rose3
     with dissolve
-    pause
+    pause 1
 
     scene black
     with Dissolve(2)

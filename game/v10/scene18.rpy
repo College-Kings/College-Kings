@@ -713,5 +713,4 @@ label v10_call_with_lauren2:
 
         stop music fadeout 3
 
-        jump v10_walk_jenny_text     # -Transition to Scene 19-
-
+        jump v10_walk_jenny_text # -Transition to Scene 19-

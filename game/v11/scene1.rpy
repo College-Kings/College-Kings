@@ -113,7 +113,7 @@ label v11_start:
     scene v11coc12
     with dissolve
 
-    de "And you agree to this manner of representation young lady?"
+    de "And you agree to this manner of representation, young lady?"
 
     scene v11coc15 # TPP. Show Penelope sat down mouth open, slightly nervous, looking at the board's direction
     with dissolve
@@ -562,12 +562,12 @@ label v11_start:
             scene v11coc20a
             with dissolve
 
-            pe "Yes ma'am I understand."
+            pe "Yes ma'am, I understand."
 
             scene v11coc14
             with dissolve
 
-            lee "One second there Dean. Miss Cross, before I ask you this question you understand that lying can result in causing harm to your case, yes?"
+            lee "One second there, Dean. Miss Cross, before I ask you this question you understand that lying can result in causing harm to your case, yes?"
 
             scene v11coc20b # TPP. Same as 20a, Penelope is looking at Mr Lee now
             with dissolve
@@ -671,7 +671,7 @@ label v11_start:
             u "No further comments. I know you as the board will make the right decision."
 
         "I won":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v11coc12b
             with dissolve
@@ -739,8 +739,6 @@ label v11_start:
     stop music fadeout 3
 
     play music "music/v11/Scene 1/Track Scene 1_4.mp3" fadein 2
-
-    $ freeRoam = True
     call screen v11s1_hallway1
 
 label v11s1_riley:
@@ -1055,8 +1053,6 @@ label v11s1_delib:
         # -Back to free roam-
 
 label v11_case_verdict:
-    $ freeRoam = False
-
     scene v11coc22a # TPP. Same as cam 22, MC, Jenny and Penelope walking back in the room, nervous expression, mouth closed
     #with dissolve
 
@@ -1075,7 +1071,6 @@ label v11_case_verdict:
 
     if v11s1_courtpoints >= 4:
         play music "music/v11/Scene 1/Track Scene 1_5.mp3" fadein 2
-        $ perry_mason = True
         $ v11_pen_goes_europe = True
         scene v11coc14b # TPP. Same as 14, Mr Lee looking at Penelope
         with dissolve
@@ -1106,7 +1101,7 @@ label v11_case_verdict:
         scene v11coc14b
         with dissolve
 
-        $ grantAchievement("perry_mason")
+        $ grant_achievement("perry_mason")
         lee "Don't thank us, thank your friend. He did a very good job representing you. We may just have a future lawyer in our midst."
 
         scene v11coc14c

@@ -9,6 +9,8 @@ label v12_paris_hotel:
     
     pause 0.75
 
+    play music "music/v12/Scene 11/Track Scene 11.mp3" fadein 2
+
     scene v12pht2 # FPP. Looking at imre, mouth opened
     with dissolve
 
@@ -17,7 +19,7 @@ label v12_paris_hotel:
     scene v12pht2a # FPP. Looking at ms rose, mouth opened
     with dissolve
 
-    ro "It's a chain hotel, Peace Hotels isn't just one hotel, there's hundreds of them all over the world."
+    ro "It's a chain hotel. Peace Hotels isn't just one hotel, there's hundreds of them all over the world."
 
     scene v12pht2
     with dissolve
@@ -41,6 +43,8 @@ label v12_paris_hotel:
 
     scene v12pht3 # FPP. Chris and Imre high five
     with dissolve
+
+    play sound "sounds/ks.mp3"
 
     pause 0.75
 
@@ -300,6 +304,7 @@ label v12_paris_hotel:
 
     menu:
         "Support her choice":
+            $ add_point(KCT.BOYFRIEND)
             scene v12pht9d
             with dissolve
 
@@ -309,7 +314,7 @@ label v12_paris_hotel:
             scene v12pht9e
             with dissolve
 
-            no "I really appreciate that. Like for real. Thanks, [name]"
+            no "I really appreciate that. Like for real. Thanks, [name]!"
 
             scene v12pht9d
             with dissolve
@@ -317,6 +322,8 @@ label v12_paris_hotel:
             u "That's what FRIENDS are for. *Chuckles*"
 
         "Help Chris":
+            $ v12_help_chris += 1
+            $ add_point(KCT.BRO)
             scene v12pht9d
             with dissolve
 
@@ -355,6 +362,7 @@ label v12_paris_hotel:
 
     menu:
         "Yes":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12pht9h
             with dissolve
 
@@ -366,6 +374,7 @@ label v12_paris_hotel:
             no "Haha, I'll think about it."
 
         "No":
+            $ add_point(KCT.BOYFRIEND)
             scene v12pht9h 
             with dissolve
 
@@ -403,7 +412,9 @@ label v12_paris_hotel:
 
     scene v12pht12 # TPP. MC at his hotel door
     with dissolve
+    play sound "sounds/dooropen.mp3"
 
     pause 0.75
+    stop music fadeout 3
 
     jump v12_room_chloe_riley #scene 12

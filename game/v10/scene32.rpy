@@ -24,16 +24,16 @@ label v10_tues_room_night:
 
             python:
                 if config_censored:
-                    contact_Lauren.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
+                    lauren.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
                 else:
-                    contact_Lauren.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
-                contact_Lauren.newMessage("Sweet Dreams ;)", queue=False)
-                contact_Lauren.addReply("They will be now.")
+                    lauren.messenger.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
+                lauren.messenger.newMessage("Sweet Dreams ;)", queue=False)
+                lauren.messenger.addReply("They will be now.")
 
             label v10s32_phoneCheckW:
-                if contact_Lauren.getReplies():
+                if lauren.messenger.replies:
                     call screen phone
-                if contact_Lauren.getReplies():
+                if lauren.messenger.replies:
                     u "(I should reply to Lauren)"
                     jump v10s32_phoneCheckW
 
@@ -58,7 +58,7 @@ label v10_tues_room_night:
         scene v10strn4 # TPP. Show MC waking up and stretching, now wearing underwear, now daylight.
         with dissolve
 
-        u "(Bright and fucking early! I'm so excited for this charity event. I need to get ready.)"
+        u "(I woke up so fucking early! But I'm so excited for this charity event. I should get ready.)"
 
         scene v10strn5 # TPP. Show MC leaving his Wolves room, now wearing outfit 10
         with fade
@@ -86,16 +86,16 @@ label v10_tues_room_night:
 
             python:
                 if config_censored:
-                    contact_Lauren.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
+                    lauren.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
                 else:
-                    contact_Lauren.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
-                contact_Lauren.newMessage("Sweet Dreams ;)", queue=False)
-                contact_Lauren.addReply("They will be now.")
+                    lauren.messenger.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
+                lauren.messenger.newMessage("Sweet Dreams ;)", queue=False)
+                lauren.messenger.addReply("They will be now.")
 
             label v10s32_phoneCheckA:
-                if contact_Lauren.getReplies():
+                if lauren.messenger.replies:
                     call screen phone
-                if contact_Lauren.getReplies():
+                if lauren.messenger.replies:
                     u "(I should reply to Lauren)"
                     jump v10s32_phoneCheckA
 
@@ -120,7 +120,7 @@ label v10_tues_room_night:
         scene v10strn9 # TPP. Show MC waking up and stretching, now wearing underwear, now daylight.
         with dissolve
 
-        u "(Bright and fucking early! I'm so excited for this charity event. I need to get ready.)"
+        u "(I woke up so fucking early! But I'm so excited for this charity event. I should get ready.)"
 
         scene v10strn10 # TPP. Show MC leaving his Wolves room, now wearing outfit 10
         with fade

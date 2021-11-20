@@ -4,7 +4,7 @@
 # Time: Evening
 
 label v11_hotel_bar_wolves:
-    play music "music/v11/Scene 26/Track Scene 26.mp3" fadein 2
+    play music "music/v11/Scene 5/Track Scene 5_6.mp3" fadein 2
     if v11s25_beer:
         scene v11hrs1 # TPP Show MC taking a drink of his beer
         with dissolve
@@ -116,9 +116,9 @@ label v11_hotel_bar_wolves:
         pause 0.5
 
         scene v11hrs8 # TPP Close up of Ms. Rose whispering in MC's ear, Ms. Rose smiling with mouth open
-        with dissolve        
+        with dissolve
 
-        ro "*Whisper* Speaking of what happens in London stays in London... Room 105, 10 minutes. Don't be late."
+        ro "*Whisper* Speaking of what happens in London stays in London... Room 404, 10 minutes. Don't be late."
 
         #play sound "sounds/kiss.mp3"
 
@@ -219,7 +219,7 @@ label v11_hotel_bar_wolves:
 
         menu:
             "Go to her room":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene v11hrs5a # TPP Same angle as v11hrs5, MC alone at bar, getting off of bar stool to leave
                 with dissolve
@@ -243,7 +243,6 @@ label v11_hotel_bar_wolves:
                 with dissolve
 
                 u "(*Sighs* This isn't right.)"
-
     jump v11_bartender_hotel_chat
 
 label v11_hotel_bar_apes:

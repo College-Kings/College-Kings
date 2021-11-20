@@ -6,15 +6,15 @@
 init python:
     def v11s4_reply1():
         setattr(store, "v11_talk_with_emily", True)
-        contact_Emily.newMessage("This is important, we need to talk now.")
-        contact_Emily.addReply("What's up?")
-        contact_Emily.newMessage("Meet me at the park.")
-        contact_Emily.addReply("Okay.")
+        emily.messenger.newMessage("This is important, we need to talk now.")
+        emily.messenger.addReply("What's up?")
+        emily.messenger.newMessage("Meet me at the park.")
+        emily.messenger.addReply("Okay.")
 
     def v11s4_reply2():
         setattr(store, "v11_talk_with_emily", True)
-        contact_Emily.newMessage("Meet me at the park.")
-        contact_Emily.addReply("Okay.")
+        emily.messenger.newMessage("Meet me at the park.")
+        emily.messenger.addReply("Okay.")
 
 label v11_emily_park:
     play music "music/v11/Scene 4/Track Scene 4_1.mp3" fadein 2
@@ -22,6 +22,7 @@ label v11_emily_park:
         scene v11seap1 # TPP. Show MC sitting down on his bed in WOLVES room and noticing that he got a text. Normal expression, mouth closed.
         with fade
 
+        play sound "sounds/vibrate.mp3"
         u "(I should see who that is.)"
 
         scene v11seap1a # TPP. Same camera as v11seap1. Show MC sitting down on his bed in WOLVES room and looking at his phone, normal expression, mouth closed.
@@ -33,6 +34,7 @@ label v11_emily_park:
         scene v11seap2 # TPP. Show MC sitting down on his bed in APES room and noticing that he got a text. Normal expression, mouth closed.
         with fade
 
+        play sound "sounds/vibrate.mp3"
         u "(I should see who that is.)"
 
         scene v11seap2b # TPP. Same camera as v10seap2. Show MC sitting down on his bed in APES room and looking at his phone, normal expression, mouth closed.
@@ -40,14 +42,14 @@ label v11_emily_park:
 
         pause 0.75
 
-    $ contact_Emily.newMessage("Hey, we need to talk.", queue=False)
-    $ contact_Emily.addReply("I'm pretty busy right now.", v11s4_reply1)
-    $ contact_Emily.addReply("What's up?", v11s4_reply2)
+    $ emily.messenger.newMessage("Hey, we need to talk.", queue=False)
+    $ emily.messenger.addReply("I'm pretty busy right now.", v11s4_reply1)
+    $ emily.messenger.addReply("What's up?", v11s4_reply2)
 
     label v11s4_PhoneContinueEmily1:
-        if contact_Emily.getReplies():
+        if emily.messenger.replies:
             call screen phone
-        if contact_Emily.getReplies():
+        if emily.messenger.replies:
             u "(I should check my phone.)"
             jump v11s4_PhoneContinueEmily1
 
@@ -117,7 +119,13 @@ label v11_emily_park:
     with dissolve
 
     em "I'm tired of seeing you with other girls. Call me jealous or whatever, but I can't be around anymore with you doing all that."
+
+    scene v11seap4a
+    with dissolve
     
+    scene v11seap4c
+    with dissolve
+
     em "I see the flirting, I see the way you look at them, I see, way too much. And I can't handle it."
     em "A friend of mine has been giving me a lot of good advice recently... and I think I need to start listening to him."
 
@@ -151,6 +159,7 @@ label v11_emily_park:
             u "Ugh, obviously your mind is made up."
         
         "Be friends":
+            $ add_point(KCT.BOYFRIEND)
             scene v11seap4d
             with dissolve
 
@@ -188,7 +197,7 @@ label v11_emily_park:
     scene v11seap4b
     with dissolve
 
-    em "That's all I wanted to say. Goodbye [name]."
+    em "That's all I wanted to say. Goodbye, [name]."
 
     scene v11seap4a
     with dissolve

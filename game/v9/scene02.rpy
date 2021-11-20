@@ -5,14 +5,14 @@
 
 init python:
     def v9s2_reply1():
-        contact_Ryan.newMessage(_("Damn right! You heading to the gym?"))
-        contact_Ryan.addReply(_("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there"))
-        contact_Ryan.newMessage(_("Me too. See ya there!"))
+        ryan.messenger.newMessage(_("Damn right! You heading to the gym?"))
+        ryan.messenger.addReply(_("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there"))
+        ryan.messenger.newMessage(_("Me too. See ya there!"))
 
     def v9s2_reply2():
-        contact_Ryan.newMessage(_("Lucky we did, huh? I think we got a hand up on those baby apes"))
-        contact_Ryan.addReply(_("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out"))
-        contact_Ryan.newMessage(_("Same! Talk soon"))
+        ryan.messenger.newMessage(_("Lucky we did, huh? I think we got a hand up on those baby apes"))
+        ryan.messenger.addReply(_("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out"))
+        ryan.messenger.newMessage(_("Same! Talk soon"))
 
 label v9_start_apes:
 
@@ -36,7 +36,7 @@ label v9_start_apes:
 
     menu:
         "Not a pledge anymore":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Not a pledge anymore."
 
@@ -69,7 +69,7 @@ label v9_start_apes:
             u "Something's going on. I just don't know what."
 
         "Let it slide":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "(Cam's just a dick. Not worth it.)"
             u "Do you know what's going on?"
@@ -120,7 +120,7 @@ label v9_start_apes:
 
     menu:
         "Defend your honor":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "I do fine. And they ALL call me Big Daddy."
 
@@ -141,7 +141,7 @@ label v9_start_apes:
             ca "That's for the Freshman Brawl! It's gonna be epic!"
 
         "Just ask him about the red square":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             u "What's up with the red square? That's all I wanna know."
 
@@ -167,7 +167,7 @@ label v9_start_apes:
 
     menu:
         "Excited reply":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ mcBrawlStance3 = True
 
             u "Pledge vs pledge!?"
@@ -202,7 +202,7 @@ label v9_start_apes:
             pause
 
         "Hesitant reply":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ mcBrawlStance3 = False
 
             u "(Bloodbath? I don't like the sound of that.)"
@@ -245,15 +245,15 @@ label v9_start_apes:
     with dissolve
     pause 0.5
 
-    $ contact_Ryan.addReply(_("You here yet?"))
-    $ contact_Ryan.newMessage(_("Yeah, you ready?"))
-    $ contact_Ryan.addReply(_("Hell no! But we need to get ready!"), v9s2_reply1)
-    $ contact_Ryan.addReply(_("I think so, actually. You and Cameron really helped"), v9s2_reply2)
+    $ ryan.messenger.addReply(_("You here yet?"))
+    $ ryan.messenger.newMessage(_("Yeah, you ready?"))
+    $ ryan.messenger.addReply(_("Hell no! But we need to get ready!"), v9s2_reply1)
+    $ ryan.messenger.addReply(_("I think so, actually. You and Cameron really helped"), v9s2_reply2)
 
     label v9_phn_ryan1:
-        if contact_Ryan.getReplies():
+        if ryan.messenger.replies:
             call screen phone
-        if contact_Ryan.getReplies():
+        if ryan.messenger.replies:
             u "(I should talk to Ryan.)"
             jump v9_phn_ryan1
 

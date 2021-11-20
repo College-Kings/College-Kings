@@ -13,17 +13,17 @@ label v9_dream_wakeup:
         with dissolve
         u "(God I hate dreams. Most of the time, they're good. But sometimes... they really suck.)"
 
-        $ contact_Riley.newMessage(_("Hey, [name]. You awake?"), queue=False)
-        $ contact_Riley.addReply(_("Hey Riley, yeah I'm up, is everything okay?"))
-        $ contact_Riley.newMessage(_("A couple of us wanted to go to the lake. Wanna join us?"))
-        $ contact_Riley.addReply(_("I dunno, feeling kind of crappy."))
-        $ contact_Riley.newMessage(_("Oh, c'mon, it's gonna be fun! :)"))
-        $ contact_Riley.addReply(_("Who's gonna be there?"))
-        $ contact_Riley.newMessage(_("Ryan and Aubrey."))
-        $ contact_Riley.addReply(_("I guess I could go. Could use some fresh air."))
-        $ contact_Riley.newMessage(_("You'll love it! Meet you in 30 minutes?"))
-        $ contact_Riley.addReply(_("Yeah, see ya soon."))
-        $ contact_Riley.newMessage(_("See you!"))
+        $ riley.messenger.newMessage(_("Hey, [name]. You awake?"), queue=False)
+        $ riley.messenger.addReply(_("Hey Riley, yeah I'm up, is everything okay?"))
+        $ riley.messenger.newMessage(_("A couple of us wanted to go to the lake. Wanna join us?"))
+        $ riley.messenger.addReply(_("I dunno, feeling kind of crappy."))
+        $ riley.messenger.newMessage(_("Oh, c'mon, it's gonna be fun! :)"))
+        $ riley.messenger.addReply(_("Who's gonna be there?"))
+        $ riley.messenger.newMessage(_("Ryan and Aubrey."))
+        $ riley.messenger.addReply(_("I guess I could go. Could use some fresh air."))
+        $ riley.messenger.newMessage(_("You'll love it! Meet you in 30 minutes?"))
+        $ riley.messenger.addReply(_("Yeah, see ya soon."))
+        $ riley.messenger.newMessage(_("See you!"))
 
         play sound "sounds/vibrate.mp3"
         u "(Hmm?)"
@@ -40,17 +40,17 @@ label v9_dream_wakeup:
         with dissolve
         u "(God I hate dreams. Most of the time, they're good. But sometimes... they really suck.)"
 
-        $ contact_Riley.newMessage(_("Hey, [name]. You awake?"), queue=False)
-        $ contact_Riley.addReply(_("Hey Riley, yeah I'm up, is everything okay?"))
-        $ contact_Riley.newMessage(_("A couple of us wanted to go to the lake. Wanna join us?"))
-        $ contact_Riley.addReply(_("I dunno, feeling kind of crappy."))
-        $ contact_Riley.newMessage(_("Oh, c'mon, it's gonna be fun! :)"))
-        $ contact_Riley.addReply(_("Who's gonna be there?"))
-        $ contact_Riley.newMessage(_("Ryan and Aubrey."))
-        $ contact_Riley.addReply(_("I guess I could go. Could use some fresh air."))
-        $ contact_Riley.newMessage(_("You'll love it! Meet you in 30 minutes?"))
-        $ contact_Riley.addReply(_("Yeah, see ya soon."))
-        $ contact_Riley.newMessage(_("See you!"))
+        $ riley.messenger.newMessage(_("Hey, [name]. You awake?"), queue=False)
+        $ riley.messenger.addReply(_("Hey Riley, yeah I'm up, is everything okay?"))
+        $ riley.messenger.newMessage(_("A couple of us wanted to go to the lake. Wanna join us?"))
+        $ riley.messenger.addReply(_("I dunno, feeling kind of crappy."))
+        $ riley.messenger.newMessage(_("Oh, c'mon, it's gonna be fun! :)"))
+        $ riley.messenger.addReply(_("Who's gonna be there?"))
+        $ riley.messenger.newMessage(_("Ryan and Aubrey."))
+        $ riley.messenger.addReply(_("I guess I could go. Could use some fresh air."))
+        $ riley.messenger.newMessage(_("You'll love it! Meet you in 30 minutes?"))
+        $ riley.messenger.addReply(_("Yeah, see ya soon."))
+        $ riley.messenger.newMessage(_("See you!"))
 
         play sound "sounds/vibrate.mp3"
         u "(Hmm?)"
@@ -59,9 +59,9 @@ label v9_dream_wakeup:
         with dissolve
 
     label v9_phn_riley1:
-        if contact_Riley.getReplies():
+        if riley.messenger.replies:
             call screen phone
-        if contact_Riley.getReplies():
+        if riley.messenger.replies:
             u "(I should talk to Riley.)"
             jump v9_phn_riley1
 

@@ -9,6 +9,8 @@ label v12s27a:
     with dissolve
     ry "That was some mess, wasn't it?"
 
+    play music "music/v12/Scene 27a/Track Scene 27a_1.mp3" fadein 2
+
     scene v12s27a_2a #FPP, Ryan now close up in front of mc, mouth closed, surprised smile
     with dissolve
 
@@ -163,7 +165,7 @@ label v12s27a:
 
     u "Ryan, are you sure you wanna do this?"
 
-    scene v12s27a_2j # same as 2, Ryan looking at his phone, smiling , mouth open
+    scene v12s27a_2j # same as 2, Ryan looking at his phone, smiling, mouth open
     with dissolve
 
     ry "I'll take that as a yes... Haha!"
@@ -182,12 +184,12 @@ label v12s27a:
     scene v12s27a_2l
     with dissolve
 
-    ry "Oh, umm.. I have a question for you. We need your help resolving a bet between me and [name]."
+    ry "Oh, umm... I have a question for you. We need your help resolving a bet between me and [name]."
 
     scene v12s27a_2m
     with dissolve
 
-    am "Uh, okay.... What's the bet?"
+    am "Uh, okay... What's the bet?"
 
     scene v12s27a_2l
     with dissolve
@@ -233,37 +235,40 @@ label v12s27a:
 
     u "Doesn't matter man, let's go get that hair done. I'm ready to see what you look like as a Roasted Ape. *Laughs*"
 
-    scene v12s27a_2f
+    scene v12s27a_2e
     with dissolve
 
     ry "Haha, man... You know I was just joking, right? We don't have to do this bet."
 
-    scene v12s27a_2g
+    #scene v12s27a_2g
+    scene v12s27a_2f
     with dissolve
 
     u "What do you mean we don't have to do it? We already did and you lost. *Laughs* So let's go."
 
-    scene v12s27a_2f
+    scene v12s27a_2e
     with dissolve
 
     ry "Please, [name]... I really don't think it's gonna look good."
 
-    scene v12s27a_2g
+    #scene v12s27a_2g
+    scene v12s27a_2f
     with dissolve
 
     u "Should've thought about that before you made the bet, bud. Live on the edge, die falling off. *Chuckles*"
 
-    scene v12s27a_2f
+    scene v12s27a_2e
     with dissolve
 
     ry "*Sighs*"
 
-    scene v12s27a_2g
+    #scene v12s27a_2g
+    scene v12s27a_2f
     with dissolve
 
     u "Lead the way!"
 
-    scene v12s27a_2f
+    scene v12s27a_2e
     with dissolve
 
     ry "*Sighs* Okay..."
@@ -278,12 +283,15 @@ label v12s27a:
 
     pause 0.7
 
-    scene v12s27a_5 # FPP shows barber, friendly smile, mouth open, looking at mc
+    scene v12s27a_5 # FPP shows barber, friendly smile, mouth open, looking at mc
     with dissolve
 
     barber "Bonjour!"
 
-    scene v12s27a_5a # same as 5, mouth closed
+    stop music fadeout 3
+    play music "music/v12/Scene 27a/Track Scene 27a_2.mp3" fadein 2
+
+    scene v12s27a_5a # same as 5, mouth closed
     with dissolve
 
     u "Hello, hello!"
@@ -298,12 +306,12 @@ label v12s27a:
 
     ry "I uhh... I want to dye my hair black."
 
-    scene v12s27a_5b # same as 5, barber looking at Ryan (Ryan off-screen), curious, mouth open
+    scene v12s27a_5b # same as 5, barber looking at Ryan (Ryan off-screen), curious, mouth open
     with dissolve
 
     barber "Oh boy... I sense your hesitation, my friend. Who is forcing you to do this?"
 
-    scene v12s27a_5c # same 5b, mouth closed
+    scene v12s27a_5c # same 5b, mouth closed
     with dissolve
 
     u "He chose this path on his own. *Chuckles*"
@@ -338,7 +346,7 @@ label v12s27a:
     scene v12s27a_5b
     with dissolve
 
-    barber "I... I don't know why you're bringing up Apes, but... Please, sit down while I work wonders."
+    barber "I... I don't know why you're bringing up apes, but... Please, sit down while I work wonders."
 
     scene v12s27a_7 #shows clock on barber wall: 4 pm
     with fade
@@ -371,9 +379,14 @@ label v12s27a:
 
     u "Let me just take some pictures for Kiwii..."
 
-    
-
-### ERROR: KiwiiPost("MC", "Ryan sitting in chair at salon not facing the mirror with black hair", "#RoastedApe", numberLikes=469)### ERROR: kiwiiPost.newComment("Imre", "Holy shit... You make it way to easy, Ryan!", mentions=”Ryan”)### ERROR: kiwiiPost.newComment("Amber", "Haha, yes! That's what you get, moron...”, mentions="Ryan")### ERROR: kiwiiPost.addReply("Haha, an Ape doesn't back down!")### ERROR: kiwiiPost.addReply("Aw, come on guys! It doesn't look... that bad... Lmao")
+    $ v12s27a_kiwiiPost1 = KiwiiPost("MC", "v12/roastedape.webp", _("#RoastedApe"), numberLikes=469)
+    $ v12s27a_kiwiiPost1.newComment("Imre", "Holy shit... You make it way too easy, Ryan!", mentions="Ryan", numberLikes=renpy.random.randint(250,350), queue=False)
+    $ v12s27a_kiwiiPost1.newComment("Amber", "Haha, yes! That's what you get, moron...", mentions="Ryan", numberLikes=renpy.random.randint(250,400), queue=False)
+   
+### ERROR: KiwiiPost("MC", "Ryan sitting in chair at salon not facing the mirror with black hair", "#RoastedApe", numberLikes=469)
+### ERROR: kiwiiPost.newComment("Imre", "Holy shit... You make it way to easy, Ryan!", mentions="Ryan")
+### ERROR: kiwiiPost.newComment("Amber", "Haha, yes! That's what you get, moron...”, mentions="Ryan")
+### ERROR: kiwiiPost.addReply("Haha, an Ape doesn't back down!")### ERROR: kiwiiPost.addReply("Aw, come on guys! It doesn't look... that bad... Lmao")
   
     scene v12s27a_8b # same as 8a, ryan mouth open, outraged, hiding his face behind his hands
     with dissolve
@@ -394,9 +407,8 @@ label v12s27a:
     with dissolve
 
     menu:
-
         "It's not a bad look":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             u "Honestly Ryan, it's not a bad look. It's actually pretty cool."
 
             scene v12s27a_8
@@ -404,9 +416,8 @@ label v12s27a:
 
             ry "*Sighs* I hope you're not just saying that..."
 
-
         "It's not your best look":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Well, honestly... It's not your best look, in my opinion."
 
@@ -434,7 +445,7 @@ label v12s27a:
 
     barber "A man should never pay for a cut he didn't desire, this one is on the house."
 
-    scene v12s27a_9a # same as 9, mouth closed
+    scene v12s27a_9a # same as 9, mouth closed
     with dissolve
 
     u "Look at that! Good karma for being a good sport..."
@@ -449,7 +460,7 @@ label v12s27a:
 
     ry "Let's get back, [name]."
 
-    scene v12s27a_10 #TPP, show mc and ryan leaving the barber shop, mc smiling ,ryan neutral
+    scene v12s27a_10 #TPP, show mc and ryan leaving the barber shop, mc smiling,ryan neutral
     with dissolve
 
     pause 0.7
@@ -463,7 +474,11 @@ label v12s27a:
 
     scene v12s27a_11a # TPP show mc and ryan in the hotel lobby, ryan looking at his phone annoyed
     with fade
+
     ry "Oh man, everyone on Kiwii keeps commenting \"#RoastedApe\"."
+
+    stop music fadeout 3
+    play music "music/v12/Scene 27a/Track Scene 27a_3.mp3" fadein 2
 
     scene v12s27a_12a # FPP show Ryan looking at mc, annoyed, mouth closed
     with dissolve
@@ -480,4 +495,6 @@ label v12s27a:
 
     u "Haha, later."
 
-jump v12_riley_lobby #scene 28
+    stop music fadeout 3
+
+    jump v12_riley_lobby #scene 28

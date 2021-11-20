@@ -5,41 +5,44 @@
 
 init python:
     def v11s5_reply1():
-        contact_Josh.newMessage("Really bro, that's lame.")
-        contact_Josh.addReply("No for real, I have to pack for the trip.")
+        josh.messenger.newMessage("Really bro, that's lame.")
+        josh.messenger.addReply("No for real, I have to pack for the trip.")
 
-        if not joshmad:
-            contact_Josh.newMessage("Fuck, me too.")
+        if josh_europe:
+            josh.messenger.newMessage("Fuck, me too.")
         else:
-            contact_Josh.newMessage("Whatever man!")
+            josh.messenger.newMessage("Whatever man!")
 
     def v11s5_reply2():
         setattr(store, "v11_josh_nightclub", True)
-        contact_Josh.newMessage("Let's Party!")
+        josh.messenger.newMessage("Let's party!")
 
 label v11_nightclub_with_josh:
-    scene v11swc1 # FPP. Show the Park, Show Emily just leaving
-    with fade
+    #scene v11seap4e # FPP. Show the Park, Show Emily just leaving
+    #with fade
 
-    play music "music/v11/Scene 5/Track Scene 5_1.mp3" fadein 2
+    scene v11swc31
+    with dissolve
+
+    play music "music/v11/Scene 4/Track Scene 4_1.mp3" fadein 2
     play sound "sounds/vibrate.mp3"
 
     u "(Let's see who this is.)"
 
-    $ contact_Josh.newMessage("WE GETTIN FUCKED UP TONIGHT!", queue = False)
-    $ contact_Josh.addReply("Who?")
-    $ contact_Josh.newMessage("You and me, meet me at the bar on Stevenson.")
-    $ contact_Josh.addReply("There's a lot of bars on Stevenson.")
-    $ contact_Josh.newMessage("The Hive duh!")
-    $ contact_Josh.addReply("Josh We can't even get in.")
-    $ contact_Josh.newMessage("With these fake IDs we can...")
-    $ contact_Josh.addReply("I can't be staying up anyway, I still have a ton of stuff to do tonight.", v11s5_reply1)
-    $ contact_Josh.addReply("LET'S FUCKING GOOOOO! OMW NOW!", v11s5_reply2)
+    $ josh.messenger.newMessage("WE GETTIN FUCKED UP TONIGHT!", queue = False)
+    $ josh.messenger.addReply("Who?")
+    $ josh.messenger.newMessage("You and me, meet me at the bar on Stevenson.")
+    $ josh.messenger.addReply("There's a lot of bars on Stevenson.")
+    $ josh.messenger.newMessage("The Hive duh!")
+    $ josh.messenger.addReply("Josh, we can't even get in.")
+    $ josh.messenger.newMessage("With these fake IDs we can...")
+    $ josh.messenger.addReply("I can't be staying up anyway, I still have a ton of stuff to do tonight.", v11s5_reply1)
+    $ josh.messenger.addReply("LET'S FUCKING GOOOOO! OMW NOW!", v11s5_reply2)
 
 label v11s4_PhoneContinueJosh1:
-    if contact_Josh.getReplies():
+    if josh.messenger.replies:
         call screen phone
-    if contact_Josh.getReplies():
+    if josh.messenger.replies:
         u "(I should check my phone.)"
         jump v11s4_PhoneContinueJosh1
 
@@ -47,15 +50,20 @@ label v11s4_PhoneContinueJosh1:
 
         u "(I'm going home and straight to bed.)"
 
+        scene v11swc32 # TPP. Show MC walking down the side walk (further down the street)
+        with dissolve
+
+        pause 0.75
+
+        scene v11swc33 # TPP. Show MC walking down the side walk (even further down the street)
+        with dissolve
+
+        pause 0.75
+
         jump v11_thurs_night_room
+
     else:
-
         u "(This is gonna be a fun ass night.)"
-
-    scene v11swc31 # TPP. Show MC walking down the side walk
-    with dissolve
-
-    pause 1 
 
     scene v11swc32 # TPP. Show MC walking down the side walk (further down the street)
     with dissolve
@@ -97,7 +105,7 @@ label v11s4_PhoneContinueJosh1:
 
     menu:
         "Cool":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v11swc3
             with dissolve
@@ -154,7 +162,7 @@ label v11s4_PhoneContinueJosh1:
     if not josh_europe:
         menu:
             "Invite to Europe":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ josh_europe = True
 
                 scene v11swc3
@@ -245,7 +253,7 @@ label v11s4_PhoneContinueJosh1:
 
     menu:
         "Henny":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v11swc6c # FPP Same angle as v11swc6b, Bartender mouth closed
             with dissolve
@@ -622,7 +630,7 @@ label v11s4_PhoneContinueJosh1:
     # If made Candy smile 3 or more times
 
     if candyLike < 3:
-        call screen kctPopup
+        call screen kct_popup
 
     scene v11swc6l
     with dissolve
@@ -719,6 +727,7 @@ label v11s4_PhoneContinueJosh1:
 
             scene v11swc16a # TPP Same angle as v11swc16, Show Dennis punching MC
             with dissolve
+            play sound "sounds/facepunch1.mp3"
 
             pause 0.75
             
@@ -758,13 +767,11 @@ label v11s4_PhoneContinueJosh1:
             $ v11_fucked_candy = True
             scene v11swc16e # TPP Same angle and characters as v11swc16, MC puts one hand on his waist, stands in a faminine way, and holds his other hand up, wrist limp
             with dissolve
-
-            pause 0.75
+            u "She's my cousin, dude."
 
     scene v11swc3i # FPP Show Dennis looking confused, mouth closed
     with dissolve
-
-    u "She's my cousin, dude."
+    pause 0.75
 
     scene v11swc3j # FPP Show Candy, laughing, mouth open
     with dissolve
@@ -789,7 +796,7 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc16f # TPP Same angle and characters as v11swc16, Dennis walking away from MC and Candy
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v11swc3j
     with dissolve
@@ -799,9 +806,10 @@ label v11s4_PhoneContinueJosh1:
     scene v11swc19 # TPP Show MC and Candy walking through a neighborhood to her house
     with fade
 
-    pause 0.75
+    pause 1
 
 label v11s5_galleryScene:
+    #$ add_point(KCT.TROUBLEMAKER, sum([ v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex ])) ###Loyaltymod
 
     scene v11swc20 # FPP At Candy's house, show Candy smiling, mouth closed
     with fade
@@ -832,11 +840,12 @@ label v11s5_galleryScene:
     scene v11swc22 # FPP Show Candy standing above MC, Candy smiling with mouth closed
     with dissolve
 
-    $ grantAchievement("candy_crusher")
+    $ grant_achievement("candy_crusher")
     u "Candy it is."
 
-    $ candy_crusher = True
-    
+    if config_censored:
+        call screen censoredPopup("v11s5_nsfwSkipLabel1")
+
     scene v11swc21a # TPP Same angle as v11swc21, Candy removing her clothing
     with dissolve
 
@@ -971,6 +980,8 @@ label v11s5_galleryScene:
 
     candy "That was exactly what I needed."
 
+    label v11s5_nsfwSkipLabel1:
+
     scene v11swc25 # FPP Show Candy, laying in bed, smiling with mouth closed
     with dissolve
 
@@ -979,7 +990,7 @@ label v11s5_galleryScene:
     scene v11swc25a # FPP Same angle as v11swc25, Candy looking scared
     with dissolve
 
-    dennis "ANGELINA!, WHO THE FUCK IS THAT IN THERE WITH YOU? I HEAR YOU IN THERE FUCKING!"
+    dennis "ANGELINA! WHO THE FUCK IS THAT IN THERE WITH YOU? I HEAR YOU IN THERE FUCKING!"
 
     scene v11swc21d # TPP Same angle as v11swc21, MC frantically putting his clothes on
     with dissolve
@@ -1032,8 +1043,9 @@ label v11s5_galleryScene:
 
             pause 0.75
 
-            scene v11swc29 # FPP MC's view while on the bedroom floor
-            with dissolve
+            if not config_censored:
+                scene v11swc29 # FPP MC's view while on the bedroom floor
+                with dissolve
     
             u "FUCK!"
 

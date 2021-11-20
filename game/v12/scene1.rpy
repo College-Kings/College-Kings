@@ -18,6 +18,8 @@ label v12_nora_robbed:
     
     menu:
         "Go to Nora":
+            $ add_point(KCT.BOYFRIEND)
+            
             scene v12nrb2 # TPP. MC runs to nora, Nora shocked, MC worries, mouths closed
             with dissolve
             
@@ -311,7 +313,7 @@ label v12_nora_robbed:
             pause 0.75
 
             stop music fadeout 3
-            play music "music/v12/Scene 1/Track Scene 1_4.mp3" fadein 2
+            play music "music/v11/Scene 6/Track Scene 6.mp3" fadein 2
 
             scene v12nrb15 # TPP. MC in his room
             with dissolve
@@ -324,6 +326,7 @@ label v12_nora_robbed:
             jump v12_nora_checks_mc #scene 2
 
         "Chase after robber":
+            $ add_point(KCT.TROUBLEMAKER)
             stop music fadeout 3
 
             jump v12_chase_robber #scene 1a

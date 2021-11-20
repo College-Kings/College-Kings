@@ -8,14 +8,16 @@ label v10_linds_room:
     scene v10slds1 # TPP. Show MC arriving at the door to Lindsey's house and knocking. Normal expression, mouth closed.
     with fade
 
+    play sound "sounds/knock.mp3"
+
     play music "music/v10/Scene 11/Track Scene 11.mp3" fadein 3
 
-    pause 0.5
+    pause 0.75
     
     scene v10slds1a # TPP. Same camera as v10slds1. Show MC and Lindsey. Lindsey answers the door. Sad expression, mouth closed.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v10slds2 # FPP. Lindsey just answered the door with MC standing outside. Show Lindsey, sad expression, mouth open.
     with dissolve
@@ -74,19 +76,19 @@ label v10_linds_room:
     scene v10slds3a
     with dissolve
 
-    u "Don't get me wrong it wasn't all that bad."
+    u "Don't get me wrong, it wasn't all that bad."
     u "Living as if you're an only child with a stepmother that's set on spoiling you."
     u "Lots of love and attention in order to make up for the lack of blood relation isn't the worst life in the world. *Chuckles*"
 
     scene v10slds3b # FPP. Same camera as v10slds3. Show Lindsey, uncomfortable expression, mouth closed.
     with dissolve
     
-    pause 0.5
+    pause 0.75
 
     scene v10slds3a
     with dissolve
 
-    u "I'm sorry I shouldn't be talking about me, I came over here for you. Mind telling me what's got you down?"
+    u "I'm sorry, I shouldn't be talking about me, I came over here for you. Mind telling me what's got you down?"
 
     scene v10slds3
     with dissolve
@@ -112,7 +114,7 @@ label v10_linds_room:
             scene v10slds3
             with dissolve
 
-            li "If you've heard about it then I'm sure others have as well *sighs* , we all know bad news travels faster than good news."
+            li "If you've heard about it then I'm sure others have as well *sighs*, we all know bad news travels faster than good news."
 
         "No, I had no clue":
             scene v10slds3a
@@ -170,7 +172,7 @@ label v10_linds_room:
     scene v10slds3d
     with dissolve
     menu:
-       "Keep listening":
+        "Keep listening":
 
             scene v10slds3c
             with dissolve
@@ -210,7 +212,7 @@ label v10_linds_room:
                     li "Honestly, just venting it all out already has me feeling a lot better."
 
 
-       "Make a joke":
+        "Make a joke":
             
             if kct == "confident": # RCS - if MC chooses 'Make a joke' with KCT confident
 
@@ -219,7 +221,7 @@ label v10_linds_room:
 
                 u "Hey, at least you're not gonna end up like that sailor that followed the North Star and ended up freezing to death in a snow storm, right?"
 
-                call screen kctPopup
+                call screen kct_popup
                 
                 scene v10slds3f # FPP. Same camera as v10slds3. Show Lindsey, with a somewhat amused smile, mouth open.
                 with dissolve
@@ -348,7 +350,7 @@ label v10_linds_room:
     scene v10slds3g # FPP. Same camera as v10slds3. Show Lindsey, looking away from MC with her hand on her ear, a bit of a thoughtful/shy expression, mouth closed.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v10slds3f
     with dissolve
@@ -367,7 +369,7 @@ label v10_linds_room:
                 with dissolve
                 u "I'd never say no to any attention you wanted to give."
 
-                call screen kctPopup
+                call screen kct_popup
 
                 scene v10slds3f
                 with dissolve

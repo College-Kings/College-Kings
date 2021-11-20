@@ -4,10 +4,10 @@
 # Time: Late Night (Day when specified in render description)
 
 label v11_roommate:
-    scene v11rm1 # TPP. Show MC walking in the lobby, he is slightly smiling, mouth closed
-    with fade
+    #scene v11rm1 # TPP. Show MC walking in the lobby, he is slightly smiling, mouth closed ###ERROR WRONG OUTFIT
+    #with fade
     play music "music/v11/Scene 19/Track Scene 19_1.mp3" fadein 2
-    pause 0.75
+    #pause 0.75
 
     scene v11rm2 # FPP. MC is standing in the lobby, he can see Chloe and Riley in the background (slightly close to the counter), Chloe is looking at her phone, Riley is reading a brochure
     with dissolve
@@ -461,7 +461,7 @@ label v11_roommate:
             scene v11rm14b # FPP. Same cam as v11rm14, Riley has her eyes closed, she is dancing, with her hand close to her mouth as if she was holding a microphone, mouth open, smiling
             with dissolve
 
-            ri "*Singing* \"Some people spend, most of their lives looking for someone to lean on.\""
+            ri "*Singing* \"Some people spend most of their lives looking for someone to lean on.\""
 
             scene v11rm14c # FPP. Same cam as v11rm14b, change Riley's dance position
             with dissolve
@@ -558,20 +558,37 @@ label v11_roommate:
 
             ri "Hmm, interesting... Well, you know how I'm, like, interested in girls? *Chuckles*"
 
-            scene v11rm21
-            with dissolve
+            if ending == "riley" and not v8_riley_lewd_ending:
+                scene v11rm21
+                with dissolve
 
-            u "Uh, yeah..."
+                u "Yeah, I remember."
 
-            scene v11rm21a
-            with dissolve
+                scene v11rm21a
+                with dissolve
 
-            ri "You look interested and awake now. *Chuckles* But yeah for real, I'm bi."
+                ri "I think it's been confirmed. *Chuckles*"
 
-            scene v11rm21
-            with dissolve
+                scene v11rm21
+                with dissolve
 
-            u "Well, congrats. How'd you find that out?"
+                u "Haha, by who?"            
+            
+            else:
+                scene v11rm21
+                with dissolve
+
+                u "Uh, yeah...?"
+
+                scene v11rm21a
+                with dissolve
+
+                ri "You look interested and awake now. *Chuckles* But yeah for real, I'm bi."
+
+                scene v11rm21
+                with dissolve
+
+                u "Well, congrats. How'd you find that out?"
 
             scene v11rm21a
             with dissolve
@@ -593,7 +610,7 @@ label v11_roommate:
 
             menu:
                 "Just tell her":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
                     $ rileyLike += 1
 
                     scene v11rm21c
@@ -607,7 +624,7 @@ label v11_roommate:
                     ri "You're probably right."
 
                 "Ease into it":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
 
                     scene v11rm21c
                     with dissolve
@@ -653,31 +670,6 @@ label v11_roommate:
                     u "*Laughs*"
 
         else:
-            scene v11rm14
-            with dissolve
-
-            u "Hey."
-
-            scene v11rm14a
-            with dissolve
-
-            ri "Hey, I'm surprised you chose to room with me over Chloe."
-
-            scene v11rm14
-            with dissolve
-
-            u "Why?"
-
-            scene v11rm14a
-            with dissolve
-
-            ri "Most guys would leap at an opportunity like that with her. But I guess you're not most guys."
-
-            scene v11rm14
-            with dissolve
-
-            u "Guess not."
-
             scene v11rm14a
             with dissolve
 
@@ -701,7 +693,7 @@ label v11_roommate:
             scene v11rm14b
             with dissolve
 
-            ri "*Singing* \"Some people spend, most of their lives looking for someone to lean on.\""
+            ri "*Singing* \"Some people spend most of their lives looking for someone to lean on.\""
 
             scene v11rm14c
             with dissolve
@@ -833,7 +825,7 @@ label v11_roommate:
 
             menu:
                 "Just tell her":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
                     $ rileyLike += 1
                     
                     scene v11rm21c
@@ -850,7 +842,7 @@ label v11_roommate:
                     with dissolve
 
                 "Ease into it":
-                    $ addPoint("bro")
+                    $ add_point(KCT.BRO)
 
                     scene v11rm21c
                     with dissolve

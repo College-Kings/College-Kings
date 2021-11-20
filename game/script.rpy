@@ -4,6 +4,8 @@ define config.console = True
 define config_debug = False
 define config_censored = False
 
+define config.version = "14.0.3{}".format('s' if config.enable_steam else "")
+
 define config.steam_appid = 1463120
 
 define _quit_slot = "99-1"
@@ -35,9 +37,9 @@ label splashscreen:
 label start:
 
     # Get Animation/Transform List
-    show nohardfeelings at achievementShow
-    $ achievementAtList = renpy.get_at_list("nohardfeelings")
-    hide nohardfeelings
+    show no_hard_feelings at achievementShow
+    $ achievementAtList = renpy.get_at_list("no_hard_feelings")
+    hide no_hard_feelings
 
     if config.developer:
         show screen bugTesting_Overlay

@@ -15,22 +15,22 @@ label drug_deal_w_josh:
     scene v8sdd2 # FPP. Show Josh turning his head to his side to look at MC (Camera). Josh slightly concerned expression, mouth open.
     with dissolve
 
-    jo "(quietly) Looks like we're a little early. Keep your eyes open and don't say anything, okay?"
+    jo "(Quietly) Looks like we're a little early. Keep your eyes open and don't say anything, okay?"
 
     scene v8sdd2a # FPP. Same camera as v8sdd2, Josh looking forward again, concerned expression, mouth closed.
     with dissolve
 
-    u "(quietly) Fuck, it stinks here."
+    u "(Quietly) Fuck, it stinks here."
 
     scene v8sdd2
     with dissolve
 
-    jo "(quietly) Yeah. You ready for this?"
+    jo "(Quietly) Yeah. You ready for this?"
 
     scene v8sdd2a
     with dissolve
 
-    u "(quietly) Yeah, okay. What do I do if..."
+    u "(Quietly) Yeah, okay. What do I do if..."
 
     scene v8sdd3 # TPP. Show Joe and Lars approaching MC and Josh from the door to their left (sabBuilding01Door), walking to their final position which should be infront of sabBuilding02. Josh and MC turn to look at them, Joe and Lars with thuggish/hard expressions, MC slight concerned expression, Josh neutral expression. Joe carrying metal pipe.
     with dissolve
@@ -101,7 +101,7 @@ label drug_deal_w_josh:
 
     menu:
         "Intervene":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             jump int_deal_w_josh
         "Don't intervene":
             jump no_int_deal_w_josh
@@ -115,7 +115,7 @@ label int_deal_w_josh:
     scene v8sdd8 # TPP. Show MC stepping between Lars and Josh, MC slight angry expression, Lars & Joe angry, Josh shocked, MC mouth open.
     with dissolve
 
-    u "Hey back off."
+    u "Hey, back off."
 
     scene v8sdd9 # FPP. Show Joe and Lars both looking at camera, Joe chuckling, Lars angry, Joe mouth open.
     with dissolve
@@ -258,7 +258,6 @@ label mc_LarsKickBlock: # MC Kicks Lars (Blocks)
 
 
 label mc_LarsJabsHit: # MC Jabs Lars (Hits/No Block)
-
 
     $ larsdmg += 1
     scene MC_Lars_Jab_hit
@@ -533,6 +532,7 @@ label no_int_deal_w_josh:
     jump check_on_josh
 
 label dodged_pipe:
+    $ v8_dodged_pipe = True
     scene v8sdd13 # TPP. Show MC ducking as Joe swings the pipe over his head, Lars stood directly behind MC.
     with dissolve
 
@@ -548,8 +548,7 @@ label dodged_pipe:
     scene v8sdd14 # TPP. Show MC looking up at Joe who is in shock, MC starts to stand up in preparation to plant a huge uppercut on Joe's chin. Lars on the ground. MC focused expression, MC mouth open.
     with dissolve
 
-    $ ip_man = True
-    $ grantAchievement("ip_man")
+    $ grant_achievement("ip_man")
 
     u "Fuck you!"
 
@@ -573,7 +572,7 @@ label dodged_pipe:
 
     menu:
         "Kick Joe":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump volley_joe
 
         "Walk away":
@@ -613,28 +612,28 @@ label beat_by_lars:
     scene v8sdd35 # TPP. Show MC falling to the ground after taking a punch from Lars.
     with vpunch
 
-    pause 0.5
+    pause 0.75
 
     scene v8sdd11a # TPP. Show Josh getting hit over the head by Joe with his metal pipe, MC lay on the ground, Lars looking down at MC with a smile, Josh wincing in pain falling to the ground.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v8sdd37 # FPP. Show Joe & Lars standing over MC with sinister smirk, Joe mouth open, both looking at camera.
     with dissolve
 
-    je "A valiant effort, hero, but not good enough. Let's go Lars."
+    je "A valiant effort, hero, but not good enough. Let's go, Lars."
     $ renpy.end_replay()
 
     scene v8sdd33 # TPP. Show Joe and Lars leaving the scene, one of them is grabbing the drugs from Josh.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v8sdd33a # TPP. Same camera as v8sdd38, Joe and Lars leaving the alley.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v8sdd34a # TPP. Show MC getting up from the ground, pain expression.
     with dissolve
@@ -653,7 +652,7 @@ label check_on_josh:
     scene v8sdd20 # TPP. Show MC walking over to Josh who is laying on the floor, Josh looking injured and bruised. From this point onwards Josh should have a bruised face and appear weak/injured.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v8sdd21 # FPP. Show Josh lay on the ground, Josh looking up at camera, Josh pain expression, mouth closed.
     with dissolve
@@ -670,13 +669,17 @@ label check_on_josh:
 
     u "We don't have time for this. We gotta go. C'mon, let's get you home."
 
-    scene v8sdd22 # TPP. Show MC helping Josh stand up, Josh really acting very injured.
-    with dissolve
+    if s28_fightWinner == "MC":
 
-    pause 0.5
+        scene v8sdd22 # TPP. Show MC helping Josh stand up, Josh really acting very injured.
+        with dissolve
 
-    scene v8sdd23 # TPP. Show MC and Josh leaving the alley, Josh's arm draped over MC's shoulder, MC's arm around Josh's side.
-    with dissolve
+        pause 0.75
+
+        scene v8sdd23 # TPP. Show MC and Josh leaving the alley, Josh's arm draped over MC's shoulder, MC's arm around Josh's side.
+        with dissolve
+
+        pause 0.75
 
     # -Transition to Scene 29-
     jump after_drugs

@@ -10,6 +10,8 @@ label v12_urban_exploring:
 
     pause 0.75
 
+    play music "music/v12/Scene 20/Track Scene 20.mp3" fadein 2
+
     scene v12uex2 # FPP Show outside of abandoned commercial bakery
     with dissolve
 
@@ -177,7 +179,7 @@ label v12_urban_exploring:
 
     menu:
         "Of course":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "*Chuckles* Of course I can."
 
@@ -217,7 +219,6 @@ label v12_urban_exploring:
             u "*Laughs*"
         
         "Just watch":
-
             u "I'm just here to watch, actually... I was more of a monkey bars and seesaw kind of kid. *Laughs*"
 
             scene v12uex4
@@ -279,7 +280,7 @@ label v12_urban_exploring:
     scene v12uex6b
     with dissolve
 
-    au "Haha, okay then; warning received, let's see it."
+    au "Haha, okay then. Warning received, let's see it."
 
     scene v12uex6a
     with dissolve
@@ -339,8 +340,7 @@ label v12_urban_exploring:
     scene v12uex13 # FPP Show Nora coming toward MC, about to crash into him
     with dissolve
 
-    # TIMED CHOICE - ADD CODE
-    menu:
+    menu (fail_label="v12s20_faillabel"):
         "Catch her":
             scene v12uex12a # TPP Same angle as v12uex12, show MC catching Nora from behind
             with dissolve
@@ -363,22 +363,23 @@ label v12_urban_exploring:
             u "Ha, don't worry about it."
 
         "Move":
-            $ addPoint("tm")
+            label v12s20_faillabel:
+                $ add_point(KCT.TROUBLEMAKER)
 
-            scene v12uex12b # TPP Same angle as v12uex12, show MC dodging out of the way of Nora
-            with dissolve
+                scene v12uex12b # TPP Same angle as v12uex12, show MC dodging out of the way of Nora
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
-            scene v12uex14 # FPP Show Nora sitting on the pavement with her hands on the ground behind her, as if she just landed hard, hurt expression, mouth open
-            with dissolve
+                scene v12uex14 # FPP Show Nora sitting on the pavement with her hands on the ground behind her, as if she just landed hard, hurt expression, mouth open
+                with dissolve
 
-            no "Ow! Fuck... I went way too fast. Sorry [name], almost took you with me. *Chuckles*"
+                no "Ow! Fuck... I went way too fast. Sorry [name], almost took you with me. *Chuckles*"
 
-            scene v12uex14a # FPP Same angle as v12uex14, Nora with embarrassed expression, mouth closed
-            with dissolve
+                scene v12uex14a # FPP Same angle as v12uex14, Nora with embarrassed expression, mouth closed
+                with dissolve
 
-            u "Haha, I made it out in time. You did come in pretty hot... *Laughs*"
+                u "Haha, I made it out in time. You did come in pretty hot... *Laughs*"
 
     scene v12uex3a
     with dissolve
@@ -460,6 +461,7 @@ label v12_urban_exploring:
 
     menu:
         "Walk Aubrey back to hotel":
+            $ add_point(KCT.BOYFRIEND)
 
             u "Of course, c'mon Aubrey. I'll walk you back."
 
@@ -497,11 +499,13 @@ label v12_urban_exploring:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
             
             jump v12_nursing_aubrey #scene 21a
 
         "Share a drink with Nora":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "Gotta be honest, cold drinks in the sun sounds pretty fucking nice. Imre, you're gonna have to walk Aubrey back."
 
@@ -524,5 +528,7 @@ label v12_urban_exploring:
             with dissolve
 
             pause 0.75
+        
+            stop music fadeout 3
 
             jump v12_nora_exploring #scene 21

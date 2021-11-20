@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v11_walk_or_ride:
-    play music "music/v11/Scene 37a/Track Scene 37a.mp3" fadein 2
+    play music "music/V10/Scene 17/Track Scene 17_1.mp3" fadein 2
     menu:
         "Ride with Mr. Lee":
             scene v11wap11 # TPP. Show MC running towards Mr Lee, MC screaming, mouth open, slightly worried
@@ -70,11 +70,9 @@ label v11_ride_with_mrlee:
 
     menu:
         "Imre":
-            
             u "I'd probably say Imre."
 
         "Ryan":
-            
             u "I'd probably say Ryan."
 
     scene v11wir2b # FPP Same angle as v11wir2, Mr. Lee with neutral expression, mouth open
@@ -120,7 +118,7 @@ label v11_ride_with_mrlee:
     pause 0.5
 
     scene v11wir4 # FPP Show Mr. Lee driving car, looking forward, neutral expression, mouth open
-    with dissolve    
+    with dissolve
 
     lee "[name], do you know what it means to be a man and act as an adult?"
 
@@ -129,11 +127,9 @@ label v11_ride_with_mrlee:
 
     menu:
         "Having responsibility":
-
             u "Well, those that have responsibilities don't have a choice but to act like an adult so I guess having responsibility."
 
         "Acting mature":
-            
             u "Well, to be either of those you have to act mature."
 
     scene v11wir4
@@ -209,11 +205,9 @@ label v11_ride_with_mrlee:
 
     menu:
         "Brotherhood":
-
             u "I enjoy the brotherhood, really. At the end of the day I know they all have my back."
 
         "Excitement":
-   
             u "Well honestly, I enjoy the excitement. At first I wasn't sure if I wanted to join a frat, but I'm glad I did."
             u "You never know what to expect and regardless of what crazy things may happen, at least you can never say you're bored. *Chuckles*"
 
@@ -309,7 +303,7 @@ label v11_ride_with_mrlee:
     pause 0.75
 
     scene v11wir6 # FPP Show Mr. Lee walking away from MC down the hall, away from the lobby
-    with dissolve    
+    with dissolve
 
     u "(I really respect that guy.)"
 
@@ -410,13 +404,13 @@ label v11_imre_and_ryan:
     menu:
         "Side with Imre":
             if joinwolves:
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
             u "Ryan, really? You remember what he said."
 
         "Side with Ryan":
             if not joinwolves:
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
             u "If he doesn't even remember it must not have been that serious."
 

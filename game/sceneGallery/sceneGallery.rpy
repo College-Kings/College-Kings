@@ -21,43 +21,78 @@ init python:
         return rv
 
     ## SCENE GALLERY ITEMS HERE
-    SceneGallery("sexdream1")
-    SceneGallery("v1_tomShoutBack")
-    SceneGallery("continuem")
-    SceneGallery("fkcon")
-    SceneGallery("aubreysexb")
-    SceneGallery("emsex_a")
-    SceneGallery("rileysexscene")
-    SceneGallery("brbj")
-    SceneGallery("v8_cl_start")
-    SceneGallery("v8_ri_start")
-    SceneGallery("hoco_amb_night")
-    SceneGallery("int_deal_w_josh")
-    SceneGallery("amber_sex_at_joshs")
-    SceneGallery("v9_aubrey_scene_lake")
-    SceneGallery("v9_emily_dorm")
-    SceneGallery("v9_ri_sex")
-    SceneGallery("v9_make_out_w_lin")
-        # v10.0
-    SceneGallery("v10_mc_vs_ryan_fight")
-    SceneGallery("v10_mc_vs_imre_fight")
-    SceneGallery("v10s17_galleryScene")
-    SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True})
-    SceneGallery("v10_amber_skatepark_sg")
-    SceneGallery("v10s30_galleryScene")
-    SceneGallery("v10s40_galleryScene", scope={"rileyrs": True})
+        # v1
+    if renpy.loadable("v1/v1.rpy"):
+        SceneGallery("sexdream1") #Riley, day 1, v1_sda
+        # v2
+    if renpy.loadable("v2/v2.rpy"):
+        SceneGallery("v1_tomShoutBack") #Tom
+        # v3
+    if renpy.loadable("v3/v3.rpy"):
+        SceneGallery("continuem") #Aubrey, day 4, v3_aubsex
+        # v5
+    if renpy.loadable("v5/v5.rpy"):
+        SceneGallery("fkcon") #Adam
+        # v6
+    if renpy.loadable("v6/v6.rpy"):
+        SceneGallery("emsex_a") #Emily, day 7, v6_emilysex
+        SceneGallery("aubreysexb") #Aubrey, day 7, aubreysex2
+        # v7
+    if renpy.loadable("v7/v7.rpy"):
+        SceneGallery("rileysexscene") #Riley, day 10, v7_rileysex
+        SceneGallery("brbj") #Aubrey, day 11, bathroomblowjob
+        # v8
+    if renpy.loadable("v8/scene1.rpy"):
+        SceneGallery("v8_cl_start") #2, Chloe, day 11, v8_chloesex
+        SceneGallery("v8_ri_start") #3, Riley, day 11, v8_riley_lewd_ending
+        SceneGallery("hoco_amb_night") #5, Amber, day 11, v8_hocoamber
+        SceneGallery("int_deal_w_josh") #28, Lars Joe
+        SceneGallery("amber_sex_at_joshs") #30, Amber, day 14, amberSexAtJoshs
+        # v9
+    if renpy.loadable("v9/scene01.rpy"):
+        SceneGallery("v9_aubrey_scene_lake") #7, Aubrey, day 16, v9_aubrey_lake
+        SceneGallery("v9_emily_dorm") #16, Emily, day 17, v9_em_dorm_scene
+        SceneGallery("v9_ri_sex") #34, Riley, day 19, v9_sex_with_riley
+        SceneGallery("v9_make_out_w_lin") #39, Lindsey, day 19, lindseyfirstkiss
+        # v10
+    if renpy.loadable("v10/scene1.rpy"):
+        SceneGallery("v10_mc_vs_ryan_fight") #6, Ryan
+        SceneGallery("v10_mc_vs_imre_fight") #7, Imre
+        SceneGallery("v10s17_galleryScene") #17, Aubrey, day 20, aubrey_bathroom_sex
+        SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #24, Lauren, day 21, v10_lauren_suck (otherwise forced) or v10_lauren_sg
+        SceneGallery("v10_amber_skatepark_sg") #26, Amber, day 21, v10_ambersex
+        SceneGallery("v10s30_galleryScene") #30, Chloe, day 22, v10_chloe_locker
+        SceneGallery("v10s40_galleryScene", scope={"rileyrs": True}) #40, Riley, day 23, v10_ri_sex
         # v11
-    SceneGallery("v11s5_galleryScene") #5
-    SceneGallery("v11_aubrey_plane_sex_sg") #13
-    SceneGallery("v11_ms_rose_sex_sg") #28
-    SceneGallery("v11s28a_galleryScene") #28a
-    SceneGallery("v11_riley_sex_sg") #35
-    SceneGallery("v11_chloe_sex_scene") #41b
+    if renpy.loadable("v11/scene1.rpy"):
+        SceneGallery("v11s5_galleryScene") #5, Candy, day 24, v11_fucked_candy
+        SceneGallery("v11_aubrey_plane_sex_sg") #13, Aubrey, day 26, v11_aubrey_sex
+        SceneGallery("v11_ms_rose_sex_sg") #28, Rose, day 27, v11_msrose_scene
+        SceneGallery("v11s28a_galleryScene") #28a, Samantha, day 27, v11_samantha_spa
+        SceneGallery("v11_riley_sex_sg") #35, Riley, day 28, v11_rileysex
+        SceneGallery("v11_chloe_sex_scene") #41b, Chloe, day 29, v11_chloe_sex
         #v12
-    SceneGallery("") #17, Lindsey
-    SceneGallery("") #23, Rose
-    SceneGallery("") #29, Lauren
-    SceneGallery("") #35a, Nora
+    if renpy.loadable("v12/scene1.rpy"):
+        SceneGallery("v12_lindsey_sex") #17, Lindsey, day 32, v12_lindsey_sex
+        SceneGallery("v12_ms_rose_sex_sg") #23, Rose, day 33, v12_msrose_sex
+        SceneGallery("v12_lauren_sex_sg") #29, Lauren, day 34, v12_lauren_sex
+        SceneGallery("v12_nora_sex") #35a, Nora, day 35, v12_nora_sex
+        #v13
+    if renpy.loadable("v13/scene1.rpy"):
+        SceneGallery("v13s16a") #16a, Riley, day 37, v13_rileysex
+        SceneGallery("v13s25_emmysg") #26, Emmy, day 38, v13_emmysex
+        SceneGallery("v13s40_sg") #40, Chloe, day 39, v13_chloe_sex
+        SceneGallery("v13s50a") #50a, Emily, day 40, v13_emilysex
+        #v14
+    if renpy.loadable("v14/scene1.rpy"):
+        SceneGallery("v14s01_sg") #1, Riley Aubrey, xx, v13_FirstThreesome
+        SceneGallery("v14s03c_sg") #3d, Satin, xx, v14_satin_sex
+        SceneGallery("v14s21a") #21a, Chloe, xx, v14_chloe_sex
+        SceneGallery("v14s25a") #25a, Amber, xx, v14_amber_sex
+        SceneGallery("v14s36_sg") #36, Jenny, xx, v14_jenny_sex
+        SceneGallery("v14s46a_sga", scope={"laurenrs": True}) #46a, Lauren good
+        SceneGallery("v14s46a_sgb", scope={"laurenrs": False}) #46a, Lauren bad
+        SceneGallery("v14s53_sg") #53a, Samantha, xx, v14_samantha_sex
 
 screen spoiler():
     modal True

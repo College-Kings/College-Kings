@@ -36,7 +36,7 @@ screen phoneIcon():
             # else:
             idle "images/phone/phoneIcon.webp"
             
-            if freeRoam:
+            if renpy.get_screen("free_roam"):
                 action Show("phone")
             else:
                 action Call("enterPhone")
@@ -51,19 +51,21 @@ screen phoneTemplate():
     add "images/phonescreen.webp"
 
     if renpy.get_screen("phone"):
+        # Click background to close phone
         button:
-            if freeRoam:
+            if renpy.get_screen("free_roam"):
                 action [Hide("tutorial"), Hide("phone")]
             else:
                 action [Hide("tutorial"), Return()]
 
         textbutton "Exit Phone":
             style "phonebutton"
-            if freeRoam:
+            if renpy.get_screen("free_roam"):
                 action [Hide("tutorial"), Hide("phone")]
             else:
                 action [Hide("tutorial"), Return()]
 
+    # Button to prevent phone closing on phone ui
     button:
         align (0.5, 0.5)
         xysize (400, 800)
@@ -102,10 +104,7 @@ screen phone():
                     vbox:
                         imagebutton:
                             idle Transform(app.img, size=(100, 100))
-                            if app.name == "Kiwii" and kiwii_firstTime:
-                                action Function(kiwii_firstTimeMessages)
-                            else:
-                                action [Function(renpy.retain_after_load), Show(app.homeScreen)]
+                            action [Function(renpy.retain_after_load), Show(app.homeScreen)]
                                 
                         text app.name style "applabels"
         

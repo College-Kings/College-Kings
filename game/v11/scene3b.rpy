@@ -35,6 +35,7 @@ label v11_cafe_with_riley:
     else:
         scene v11s3bris3 # TPP.Show MC talking on his phone in his apes bedroom, sat on the bed, mouth open
         with dissolve
+        stop sound
         u "Hello?"
 
         scene v11s3bris2
@@ -121,6 +122,7 @@ label v11_cafe_with_riley:
 
     menu:
         "Scare her":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v11s3bris9
             with dissolve
 
@@ -150,6 +152,7 @@ label v11_cafe_with_riley:
             u "I'm pretty sure Imre is scared of heights, but he has no problem with the plane."
 
         "Reassure her":
+            $ add_point(KCT.BOYFRIEND)
             scene v11s3bris9c
             with dissolve
             u "*Chuckles* If you need someone to hold your hand for the whole flight I will, but you really have nothing to worry about."
@@ -163,7 +166,7 @@ label v11_cafe_with_riley:
             scene v11s3bris9c
             with dissolve
 
-            u "Well, the elevation messes with your ears a bit. Kinda feels like you're underwater. You get rid of it by yawning, but  your ears sort of pop. For myself and most people that's the worst part."
+            u "Well, the elevation messes with your ears a bit. Kinda feels like you're underwater. You get rid of it by yawning, but your ears sort of pop. For myself and most people that's the worst part."
 
             scene v11s3bris9d
             with dissolve
@@ -233,7 +236,7 @@ label v11_cafe_with_riley:
     scene v11s3bris9e
     with dissolve
 
-    u "You know, the thing with the  giant air tube that lets you float?"
+    u "You know, the thing with the giant air tube that lets you float?"
 
     scene v11s3bris9f
     with dissolve
@@ -260,7 +263,7 @@ label v11_cafe_with_riley:
 
     charli "Hey [name]! Is this one of the close friends you were telling me about? I love your hair! Is that color natural?"
 
-    scene v11s3bris9g # FPP. same 9,  Show riley, smiling, mouth open, looking towards Charli
+    scene v11s3bris9g # FPP. same 9, Show riley, smiling, mouth open, looking towards Charli
     with dissolve
 
     ri "Oh, thank you so much! I'm Riley. And yeah, haha. it's natural... You're a friend of [name]?"
@@ -278,6 +281,7 @@ label v11_cafe_with_riley:
             u "Haha, maybe not yet, I mean we just met this morning..."
 
         "Of course":
+            $ add_point(KCT.BRO)
             scene v11s3bris10c
             with dissolve
             
@@ -348,7 +352,7 @@ label v11_cafe_with_riley:
 
     charli "I'm looking forward to it! I actually wasn't going to go, but [name] convinced me."
 
-    scene v11s3bris9g 
+    scene v11s3bris9f
     with dissolve
 
     ri "Well in that case, thank you [name]! *Chuckles*"
@@ -362,6 +366,9 @@ label v11_cafe_with_riley:
     with dissolve
 
     u "Later man."
+
+    scene v11s3bris9e
+    with dissolve
 
     u "Someone found a new best friend."
 
@@ -413,7 +420,7 @@ label v11_cafe_with_riley:
     scene v11s3bris11 # FPP. Show Riley leaving the cafe
     with dissolve
 
-    u "(I'm not  jealous, I just... I don't know. )"
+    u "(I'm not jealous, I just... I don't know. )"
     stop music fadeout 3
 
     jump v11_emily_park

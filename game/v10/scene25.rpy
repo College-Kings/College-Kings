@@ -57,7 +57,7 @@ label v10_ms_rose_fight:
 
     menu:
         "Speak up":
-            $ addPoint("bf", 1)
+            $ add_point(KCT.BOYFRIEND)
             $ v10_ms_r_interfere = True
             scene v10msf2 # FPP. Show MR Rose in foreground facing camera, Show MS rose at the door facing camera, Mr Rose Mouth closed, Ms rose mouth closed.
             with dissolve
@@ -105,23 +105,27 @@ label v10_ms_rose_fight:
             with dissolve
 
             pause 0.5
+
         "Stay quiet":
-            
-            scene v10msf2c
+            #scene v10msf2c
+            scene v10msf1a
             with dissolve
             ro "I SAID NO! What do you not understand? We are done, there's nothing for you to explain. I don't care about your money, your cars, none of that! Leave!"
 
-            scene v10msf2a
+            #scene v10msf2a
+            scene v10msf1
             with dissolve
 
             mrr "So that's it, you just want to give up on us?"
 
-            scene v10msf2c
+            #scene v10msf2c
+            scene v10msf1a
             with dissolve
 
             ro "I didn't give up on us Lucious, you did. Please, just go."
 
-            scene v10msf2a
+            #scene v10msf2a
+            scene v10msf1
             with dissolve
 
             mrr "When everything is said and done, you're gonna regret this."
@@ -129,6 +133,7 @@ label v10_ms_rose_fight:
             play music "music/v10/Scene 25/Track Scene 25_2.mp3" fadein 3
             scene v10msf3
             with dissolve
+            pause 0.75
     
     scene v10msf4 # FPP. Show MS rose, crying mouth open, FPP now from right infront of door to have conversation with ms rose.
     with dissolve
@@ -137,6 +142,7 @@ label v10_ms_rose_fight:
 
     menu:
         "Insult him":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v10msf4a # FPP. same camera as v10msf4, Show MS rose, crying mouth closed, FPP now from right infront of door to have conversation with ms rose.
             with dissolve
 
@@ -148,8 +154,6 @@ label v10_ms_rose_fight:
             ro "Tell me about it."
 
         "Comfort her":
-            $ addPoint("bf", 1)
-
             scene v10msf4a 
             with dissolve
 
@@ -212,8 +216,7 @@ label v10_ms_rose_fight:
     menu:
         "Make a move":
             $ v10_ms_r_kiss = True
-            $ kiss_teacher = True
-            $ addPoint("bf", 1)
+            $ add_point(KCT.BOYFRIEND)
             scene v10msf5a # TPP. same camera as v10msf5, Show MS rose. Touching MC on the cheek, smiling,MC hand on Ms Rose Waist.
             with dissolve
 
@@ -234,7 +237,7 @@ label v10_ms_rose_fight:
             scene v10msf5c # TPP. same camera as v10msf5, Show MS rose. Now having stepped back, embarrased smile, mouth open
             with dissolve
 
-            $ grantAchievement("forbidden_romance")
+            $ grant_achievement("forbidden_romance")
             ro "Wow uhm... thank you [name]. For everything. I need to get back to work. Really, thank you."
 
             scene v10msf4c # FPP. same camera as v10msf4, Now Show Ms Rose closing the door.

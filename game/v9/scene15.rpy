@@ -60,11 +60,11 @@ label v9_thur_room_w_cam_punch:
     $ s15KiwiiPost.newComment("Cameron", "Fuckin' A!", numberLikes=renpy.random.randint(100, 200), queue=False)
     $ s15KiwiiPost.newComment("Riley", "Knew he had it in him!", numberLikes=renpy.random.randint(200, 250), queue=False)
     
-    "(I should check Kiwii.)"
+    "(I should reply to that post on Kiwii.)"
 
     menu:
         "Brag":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump v9_thur_room_w_cam_brag
         "Be humble":
             jump v9_thur_room_w_cam_humble
@@ -155,7 +155,7 @@ label v9_thur_room_w_cam_cont1:
 
     menu:
         "Drink":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             jump v9_thur_room_w_cam_drink
         "Don't drink":
             jump v9_thur_room_w_cam_no_drink
@@ -256,17 +256,17 @@ label v9_thur_room_w_cam_no_punch:
     $ s15KiwiiPost.newComment("Cameron", "Ahhhh! Preview of Saturday's Freshman Brawl!", numberLikes=renpy.random.randint(150, 170), queue=False)
 
     label v9_s15_phoneExit_no_Punch:
-        if s15KiwiiPost.getReplies():
+        if s15KiwiiPost.replies:
             call screen phone
-        if s15KiwiiPost.getReplies():
-            "(I should check Kiwii.)"
+        if s15KiwiiPost.replies:
+            "(I should reply to that post on Kiwii.)"
             jump v9_s15_phoneExit_no_Punch
 
     menu:
         "Shrug it off":
             jump v9_thur_room_w_cam_shrugg_off
         "Get defensive":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump v9_thur_room_w_cam_defensive
 
 label v9_thur_room_w_cam_shrugg_off:
@@ -330,7 +330,7 @@ label v9_thur_room_w_cam_cont3:
 
     menu:
         "Protest":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump v9_thur_room_w_cam_protest
         "Follow orders":
             jump v9_thur_room_w_cam_follow

@@ -9,6 +9,8 @@ label v12_riddle_riley:
 
     pause 1.25
 
+    play music "music/v12/Scene 15/Track Scene 15_1.mp3" fadein 2
+
     scene v12rrl2 # FPP. MC looking at riley, mouth closed
     with dissolve
 
@@ -64,6 +66,9 @@ label v12_riddle_riley:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 15/Track Scene 15_2.mp3" fadein 2
+
     scene v12rrl4 # FPP. MC looking at riley, mouth closed
     with dissolve
 
@@ -109,6 +114,7 @@ label v12_riddle_riley:
 
     menu:
         "Keep looking":
+            $ add_point(KCT.BOYFRIEND)
             scene v12rrl10 # FPP. MC still searching looking at riley who is also still searching, mouth closed
             with dissolve
 
@@ -125,6 +131,7 @@ label v12_riddle_riley:
             u "Nope, still looking. I'm telling you Riley, there's nothing down h-"
 
         "Give up":
+            $ add_point(KCT.BRO)
             scene v12rrl11 # TPP. MC sits down
             with dissolve
 
@@ -305,7 +312,7 @@ label v12_riddle_riley:
 
     u "I have no fucking clue..."
 
-    scene v12rrl18 # TPP. Lights flickering on  as time passes
+    scene v12rrl18 # TPP. Lights flickering on as time passes
     with dissolve
 
     pause 0.75
@@ -368,7 +375,7 @@ label v12_riddle_riley:
 
     u "Look, that's the exit! C'mon."
 
-    scene v12rrl28a # FPP. Looking at riley, slight smile, mouth opened
+    scene v12rrl28 # FPP. Looking at riley, slight smile, mouth opened
     with dissolve
 
     ri "Finally..."
@@ -383,6 +390,10 @@ label v12_riddle_riley:
 
     pause 0.6
 
+    stop music fadeout 3
+    play music "music/v12/Scene 15/Track Scene 15_3.mp3" fadein 2
+
+    play sound "sounds/hs.mp3"
     scene v12rrl31 # FPP. Riley on the ground, looking hurt, hand on her leg, mouth opened
     with dissolve
 
@@ -410,6 +421,7 @@ label v12_riddle_riley:
 
     menu:
         "Help her walk":
+            $ add_point(KCT.BRO)
             scene v12rrl32 # TPP. MC helps riley stand up
             with dissolve
 
@@ -471,6 +483,7 @@ label v12_riddle_riley:
             pause 1
 
         "Carry her":
+            $ add_point(KCT.BOYFRIEND)
             scene v12rrl38 # TPP. MC Picks up riley
             with dissolve
 
@@ -503,6 +516,7 @@ label v12_riddle_riley:
 
             menu:
                 "Kiss her":
+                    $ add_point(KCT.BOYFRIEND)
                     $ v12_kiss_riley = True
 
                     scene v12rrl41 # TPP MC kisses Riley
@@ -516,7 +530,6 @@ label v12_riddle_riley:
                     with dissolve
 
                     ri "I'm definitely into the more hot and sexy vibes, but this was probably the most romantic thing I've ever experienced."
-
 
                 "Don't kiss her":
                     pass 
@@ -576,6 +589,7 @@ label v12_riddle_riley:
 
             menu:
                 "Hold her hand":
+                    $ add_point(KCT.BOYFRIEND)
                     scene v12rrl45 # TPP. MC and riley hold hands 
                     with dissolve
 
@@ -590,6 +604,7 @@ label v12_riddle_riley:
                     with dissolve
 
                 "Scratch your face":
+                    $ add_point(KCT.BRO)
                     scene v12rrl48 # TPP. MC scratches his face
                     with dissolve
 
@@ -604,5 +619,7 @@ label v12_riddle_riley:
                     with dissolve
 
                     pause 1
+    
+    stop music fadeout 3
 
     jump v12_valentine #scene 16

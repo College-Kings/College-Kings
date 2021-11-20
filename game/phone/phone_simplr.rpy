@@ -1,100 +1,114 @@
 init python:
+    import os
+
     class SimplrContact(Contact):
-            def __init__(self, name, profilePicture, profilePictureLarge, condition=True):
-                self.name = name
-                self.profilePicture = "images/phone/simplr/contacts/{}".format(profilePicture)
-                self.profilePictureLarge = "images/phone/simplr/contacts/{}".format(profilePictureLarge)
-                self.condition = condition
+        """
+        The Contact class for Simplr. Used to manage and create messages for simplr characters.
 
-                self.sentMessages = []
+        Attributes:
+            name (str): The display name for the character
+            profile_picture (str): The relative path for this character's contact profile picture
+            condition (str): A string repersenting a python condition which deems if the character unlocks 
+        """
+
+        def __init__(self, name, condition="True"):
+            self.name = name
+            self.condition = condition
+
+            self.profile_picture = "images/nonplayable_characters/{0}/{0}_profile_picture.webp".format(name.lower())
+
+            for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, name.lower(), "large_profile_pictures")):
+                self.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(name.lower(), filename) for filename in filenames]
+
+            self.sentMessages = []
+            self.pendingMessages = []
+
+            simplr_pendingContacts.append(self)
+
+        def removeContact(self):
+            simplr_pendingContacts.pop(0)
+
+        def likedContact(self):
+            self.removeContact()
+
+            if self.condition:
+                simplr_contacts.append(self)
+            
+        def newMessage(self, message, queue=True):
+            message = Message(self, message)
+
+            # Moves contact to the top when recieving a new message
+            if self in simplr_contacts:
+                simplr_contacts.insert(0, simplr_contacts.pop(simplr_contacts.index(self)))
+
+            # Add message to queue
+            if queue:
+                self.pendingMessages.append(message)
+            else:
                 self.pendingMessages = []
+                self.sentMessages.append(message)
 
-                simplr_pendingContacts.append(self)
+            if self in simplr_contacts: simplrApp.newNotification()
+            
+            return message
 
-            def removeContact(self):
-                simplr_pendingContacts.pop(0)
+        def newImgMessage(self, img, queue=True):
+            message = ImageMessage(self, img)
 
-            def likedContact(self):
-                self.removeContact()
+            # Moves contact to the top when recieving a new message
+            if self in simplr_contacts:
+                simplr_contacts.insert(0, simplr_contacts.pop(simplr_contacts.index(self)))
 
-                if self.condition:
-                    simplr_contacts.append(self)
-                
-            def newMessage(self, message, queue=True):
-                message = Message(self, message)
+            # Add message to queue
+            if queue:
+                self.pendingMessages.append(message)
+            else:
+                self.pendingMessages = []
+                self.sentMessages.append(message)
 
-                # Moves contact to the top when recieving a new message
-                if self in simplr_contacts:
-                    simplr_contacts.insert(0, simplr_contacts.pop(simplr_contacts.index(self)))
+            if self in simplr_contacts: simplrApp.newNotification()
 
-                # Add message to queue
-                if queue:
-                    self.pendingMessages.append(message)
-                else:
-                    self.pendingMessages = []
-                    self.sentMessages.append(message)
+            return message
 
-                if self in simplr_contacts: simplrApp.newNotification()
-                
-                return message
+        def addReply(self, message, func=None):
+            reply = Reply(message, func)
 
-            def newImgMessage(self, img, queue=True):
-                message = ImageMessage(self, img)
-
-                # Moves contact to the top when recieving a new message
-                if self in simplr_contacts:
-                    simplr_contacts.insert(0, simplr_contacts.pop(simplr_contacts.index(self)))
-
-                # Add message to queue
-                if queue:
-                    self.pendingMessages.append(message)
-                else:
-                    self.pendingMessages = []
-                    self.sentMessages.append(message)
-
-                if self in simplr_contacts: simplrApp.newNotification()
-
-                return message
-
-            def addReply(self, message, func=None):
-                reply = Reply(message, func)
-
-                # Append reply to last sent message
-                try:
-                    if self.pendingMessages:
-                        self.pendingMessages[-1].replies.append(reply)
-                    else:
-                        self.sentMessages[-1].replies.append(reply)
-                except IndexError:
-                    message = self.newMessage("", queue=False)
-                    message.replies.append(reply)
-
-            def addImgReply(self, image, func):
-                reply = ImgReply(image, func)
-
-                # Append reply to last sent message
-                try:
-                    if self.pendingMessages:
-                        self.pendingMessages[-1].replies.append(reply)
-                    else:
-                        self.sentMessages[-1].replies.append(reply)
-                except Exception:
-                    self.newMessage("", queue=False)
+            # Append reply to last sent message
+            try:
+                if self.pendingMessages:
                     self.pendingMessages[-1].replies.append(reply)
+                else:
+                    self.sentMessages[-1].replies.append(reply)
+            except IndexError:
+                message = self.newMessage("", queue=False)
+                message.replies.append(reply)
 
-            def seenMessage(self):
-                if not any([contact.getReplies() for contact in simplr_contacts]):
-                    simplrApp.seenNotification()
+        def addImgReply(self, image, func):
+            reply = ImgReply(image, func)
 
-            def getMessage(self, message):
-                for msg in self.sentMessages:
-                    try:
-                        if message == msg.message:
-                            return msg
-                    except AttributeError:
-                        if message == msg.image:
-                            return msg
-                return False
+            # Append reply to last sent message
+            try:
+                if self.pendingMessages:
+                    self.pendingMessages[-1].replies.append(reply)
+                else:
+                    self.sentMessages[-1].replies.append(reply)
+            except Exception:
+                self.newMessage("", queue=False)
+                self.pendingMessages[-1].replies.append(reply)
+
+        def seenMessage(self):
+            if not any([contact.replies for contact in simplr_contacts]):
+                simplrApp.seenNotification()
+
+        def getMessage(self, message):
+            for msg in self.sentMessages:
+                try:
+                    if message == msg.message:
+                        return msg
+                except AttributeError:
+                    if message == msg.image:
+                        return msg
+            return False
 
 init -1:
     default simplr_pendingContacts = []
@@ -134,8 +148,8 @@ screen simplr_app():
                     action Show("simplr_contacts")
 
             # Profile Picture
-            if simplr_contact:
-                add Transform(simplr_contact.profilePictureLarge, size=(362, 585)) align (0.5, 0.5)
+            if simplr_contact is not None:
+                add Transform(simplr_contact.large_profile_pictures[0], size=(362, 585)) align (0.5, 0.5)
 
             # Bottom UI
             hbox:
@@ -147,14 +161,14 @@ screen simplr_app():
                     yalign 0.5
                     idle "images/phone/simplr/appAssets/yesButton.webp"
                     hover "images/phone/simplr/appAssets/yesButtonHover.webp"
-                    if simplr_contact:
+                    if simplr_contact is not None:
                         action Function(simplr_contact.likedContact)
 
                 imagebutton:
                     yalign 0.5
                     idle "images/phone/simplr/appAssets/noButton.webp"
                     hover "images/phone/simplr/appAssets/noButtonHover.webp"
-                    if simplr_contact:
+                    if simplr_contact is not None:
                         action Function(simplr_contact.removeContact)
 
 
@@ -183,10 +197,14 @@ screen simplr_contacts():
                 fixed:
                     xysize(375, 74)
 
-                    add contact.profilePicture yalign 0.5 xpos 20
+                    if hasattr(contact, "profile_picture"):
+                        add Transform(contact.profile_picture, size=(55, 55)) yalign 0.5 xpos 20
+                    else:
+                        add Transform(contact.profilePicture, size=(55, 55)) yalign 0.5 xpos 20
+
                     text contact.name style "nametext" yalign 0.5 xpos 100
 
-                    if contact.getReplies():
+                    if contact.replies:
                         add "images/contactmsgnot.webp" yalign 0.5 xpos 275
 
                     imagebutton:
@@ -214,17 +232,24 @@ screen simplr_messenger(contact=None):
             vbox:
                 align (0.5, 0.5)
 
-                add contact.profilePicture xalign 0.5
+                if hasattr(contact, "profile_picture"):
+                    add Transform(contact.profile_picture, size=(55, 55)) xalign 0.5
+                else:
+                    add Transform(contact.profilePicture, size=(55, 55)) xalign 0.5
+
                 text contact.name style "nametext"
 
         viewport:
-            yinitial 1.0
+            yadjustment inf_adj
             mousewheel True
-            xysize(374, 556)
             pos(773, 282)
+            xysize(374, 556)
 
             vbox:
+                xsize 374
                 spacing 5
+
+                null height 5
                 
                 for message in contact.sentMessages:
                     if isinstance(message, Message) and message.message.strip():
@@ -242,14 +267,14 @@ screen simplr_messenger(contact=None):
                             style "msgright"
                             action Show("simplr_image", img=message.image)
 
-        if contact.getReplies():
+        if contact.replies:
                 hbox:
                     xalign 0.5
                     ypos 855
 
                     textbutton "Reply":
                         style "replybox"
-                        action Show("reply", contact=contact)
+                        action Show("simplr_reply", contact=contact)
 
 
 screen simplr_reply(contact=None):
@@ -259,17 +284,17 @@ screen simplr_reply(contact=None):
         yalign 0.84
         spacing 15
 
-        for reply in contact.getReplies():
+        for reply in contact.replies:
             if isinstance(reply, Reply):
                 textbutton reply.message:
                     style "replies_style"
-                    action [Hide("reply"), Function(contact.selectedReply, reply)]
+                    action [Hide("simplr_reply"), Function(contact.selectedReply, reply)]
 
             elif isinstance(reply, ImgReply):
                 imagebutton:
                     idle Transform(reply.image, zoom=0.15)
                     style "replies_style"
-                    action [Hide("reply"), Function(contact.selectedReply, reply)]
+                    action [Hide("simplr_reply"), Function(contact.selectedReply, reply)]
 
 
 screen simplr_image(img=None):

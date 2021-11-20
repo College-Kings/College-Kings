@@ -67,7 +67,7 @@ label v10_riley_vs_amber:
     ri "Kinda hurts."
 
     scene v10rva9
-    with dissolve    
+    with dissolve
 
     am "You can always give up."
 

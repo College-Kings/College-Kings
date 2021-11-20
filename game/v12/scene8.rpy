@@ -5,8 +5,13 @@
 # Phone Images: None
 
 label v12_murder_mystery_reveal:
+    hide screen murder_button_overlay
+
     scene v12mmr1 # FPP. Mr. Lee and Ms. Rose standing in front of the students, addressing them, only Mr. Lee in shot. Mr. Lee smiling, mouth open, looking at MC
     with dissolve
+
+    if (joinwolves and len(v12s7_killList) == 15) or len(v12s7_killList) == 16:
+        $ grant_achievement("mass_casualties")
 
     lee "Wow, that turned out a lot better than expected. I hope you all enjoyed yourselves. Was anyone surprised to learn [name] was my chosen murderer?"
 
@@ -65,7 +70,10 @@ label v12_murder_mystery_reveal:
     scene v12mmr1
     with dissolve
 
+    $ v12_murder_count = len(v12s7_killList)
     if len(v12s7_killList) >= 5:
+    
+        $ grant_achievement("killing_spree")
 
         lee "A total of [v12_murder_count] people were killed, so let's give our murderer a round of applause."
 
@@ -173,6 +181,8 @@ label v12_murder_mystery_reveal:
 
     menu:
         "Let Chris help her":
+            $ v12_help_chris += 1
+            $ add_point(KCT.BRO)
 
             u "(It's his girl, he's got her.)"
 
@@ -197,6 +207,7 @@ label v12_murder_mystery_reveal:
             pause 0.75
 
         "Hurry to help her":
+            $ add_point(KCT.BOYFRIEND)
             $ noralikes = True
             
             scene v12mmr9 # TPP. Show MC rushing to Nora, MC worried, mouth closed, Nora feeling sick, mouth closed
@@ -217,10 +228,7 @@ label v12_murder_mystery_reveal:
             scene v12mmr10
             with dissolve
 
-            u "Well don't worry I gotchu."
-
-            #scene v12mmr9a # FPP. Same as v12mmr9, MC rushing back to where he was standing in v12mmr1
-            #with dissolve
+            u "Well don't worry I got you."
 
             pause 0.75
 
@@ -274,13 +282,16 @@ label v12_murder_mystery_reveal:
 
     pause 0.75
 
-    scene v12mmr14 # TPP. Show MC halfway through sitting down on a seat, mouth closed, bored
+    image ferry_arrival = Movie(play="images/v12/Scene 7/animations/Ferry B - To France.webm", loop=False)
+    
+    scene ferry_arrival
     with fade
+    play sound "images/v12/Scene 7/animations/Track Scene - Ferry Ride (5 sec).mp3"
 
-    pause 1.25
+    pause 3.5
 
     scene v12mmr15 # TPP. Show MC sitting down, sleeping, mouth closed
-    with dissolve
+    with fade
 
     pause 0.75
 

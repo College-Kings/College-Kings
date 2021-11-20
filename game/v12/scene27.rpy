@@ -10,6 +10,8 @@ label v12s27:
 
     imre "Bro, did you hear what went down with Chris and Nora?! I swear she's starting to really do too much..."
 
+    play music "music/v12/Scene 27/Track Scene 27_1.mp3" fadein 2
+
     scene v12s27_2 # FPP, Imre standing in front of mc close up, slightly outraged
     with dissolve
 
@@ -25,12 +27,12 @@ label v12s27:
 
     u "Nothing really, I came down here to see if anything was going on."
 
-    scene v12s27_2d # same as 2b, imre smile, mouth open
+    scene v12s27_2d # same as 2b, imre smile, mouth open
     with dissolve
 
     imre "Haha, same! I kinda wanna do something exciting..."
 
-    scene v12s27_2e # same as 2d, mouth closed
+    scene v12s27_2e # same as 2d, mouth closed
     with dissolve
 
     u "*Laughs* Like what?"
@@ -85,17 +87,20 @@ label v12s27:
 
     imre "Oh fuck yeah! Let's go!"
 
-    scene v12s27_3 #TPP Imre and Mc walk to the tattoo parlor, mc talking to imre, both smiling , mc mouth open
+    scene v12s27_3 #TPP Imre and Mc walk to the tattoo parlor, mc talking to imre, both smiling, mc mouth open
     with fade
 
     u "You know where the place is?"
+
+    stop music fadeout 3
+    play music "music/v12/Scene 27/Track Scene 27_2.mp3" fadein 2
 
     scene v12s27_4 #FPP Imre close up looking at mc whilst walking, (so body is forwards and head is rotated towards mc, background doesn't need to move, so don't actually make him walk forwards each shot), laughing smile, mouth open
     with dissolve
 
     imre "Yeah, I saw it yesterday. That's the only reason I thought of it. *Chuckles*"
 
-    scene v12s27_4a # same as 4, mouth closed
+    scene v12s27_4a # same as 4, mouth closed
     with dissolve
 
     u "You know what you're gonna get?"
@@ -115,12 +120,15 @@ label v12s27:
 
     imre "*Chuckles* Guess so!"
 
-    scene v12s27_5 # TPP Imre and mc walking into the tattoo parlor
+    scene v12s27_5 # TPP Imre and mc walking into the tattoo parlor
     with dissolve
 
     pause 0.7
 
-    scene v12s27_6 # FPP shows closeup tattoo parlor looking at you, smiling, mouth open
+    stop music fadeout 3
+    play music "music/v12/Scene 27/Track Scene 27_3.mp3" fadein 2
+
+    scene v12s27_6 # FPP shows closeup tattoo parlor looking at you, smiling, mouth open
     with dissolve
 
     tattoo "Bonjour!"
@@ -145,7 +153,7 @@ label v12s27:
 
     tattoo "Not many, you'd be surprised."
 
-    scene v12s27_6a # same as 6, mouth closed
+    scene v12s27_6a # same as 6, mouth closed
     with dissolve
 
     u "Hmm, interesting..."
@@ -165,7 +173,7 @@ label v12s27:
 
     tattoo "*Chuckles* I see, well, let's start with why you want a tattoo."
 
-    scene v12s27_7b # same as 7, imre smiling, looking at tattoo parlor, mouth open
+    scene v12s27_7b # same as 7, imre smiling, looking at tattoo parlor, mouth open
     with dissolve
 
     imre "To remember our time in Paris, of course."
@@ -196,7 +204,7 @@ label v12s27:
 
     imre "Sounds cool to me! We'll do that."
 
-    scene v12s27_7c # same as 7b, mouth closed
+    scene v12s27_7c # same as 7b, mouth closed
     with dissolve
 
     u "What the fuck, I don't even get a choice? *Chuckles*"
@@ -234,7 +242,7 @@ label v12s27:
     scene v12s27_7
     with dissolve
 
-    imre "C'mon bro! Tell her something good, like how I'm a ladies man."
+    imre "C'mon bro! Tell him something good, like how I'm a ladies man."
 
     scene v12s27_6b
     with dissolve
@@ -300,7 +308,7 @@ label v12s27:
 
     tattoo "Sounds good, go ahead and lie down."
 
-    scene v12s27_8 # FPP Imre on the tattoo chair , stiff face, in pain, tattoo artist starting tattoo on his chest. - tattoo is gonna be a cupcake with the words "ladies man" under it-
+    scene v12s27_8 # FPP Imre on the tattoo chair, stiff face, in pain, tattoo artist starting tattoo on his chest. - tattoo is gonna be a cupcake with the words "ladies man" under it-
     with fade
 
     pause 0.7
@@ -320,12 +328,12 @@ label v12s27:
 
     imre "Let's gooooo!"
 
-    scene v12s27_8d # same as 8c, Imre mouth closed
+    scene v12s27_8d # same as 8c, Imre mouth closed
     with dissolve
 
-    u "Let me see man!"
+    u "Let me see, man!"
 
-    scene v12s27_9 # shows close up of tattoo
+    scene v12s27_9 # shows close up of tattoo
     with dissolve
 
     u "*Laughs*"
@@ -334,7 +342,7 @@ label v12s27:
 
     u "You asked for something memorable, and I promise you won't forget that."
 
-    scene v12s27_10 #FPP shows Imre, stood up looking either down at his chest or ideally into a mirror if there is one. Mouth open, upset
+    scene v12s27_10 #FPP shows Imre, stood up looking either down at his chest or ideally into a mirror if there is one. Mouth open, upset
     with dissolve
 
     imre "What the fuck!?"
@@ -364,7 +372,7 @@ label v12s27:
 
     u "*Laughs* Real nice design."
 
-    scene v12s27_10d # same as 10b, imre looking at mc, upset, mouth open
+    scene v12s27_10d # same as 10b, imre looking at mc, upset, mouth open
     with dissolve
 
     imre "Keep laughing, you're up next."
@@ -379,7 +387,7 @@ label v12s27:
 
     tattoo "I actually have run into a bit of a hurdle..."
 
-    scene v12s27_11c # same as 11b, mouth closed
+    scene v12s27_11c # same as 11b, mouth closed
     with dissolve
 
     u "What's wrong?"
@@ -394,7 +402,7 @@ label v12s27:
 
     imre "You gotta be fucking kidding me!"
 
-    scene v12s27_12 #FPP Imre storming out of the shop
+    scene v12s27_12 #FPP Imre storming out of the shop
     with dissolve
 
     u "Imre, wait!"
@@ -404,12 +412,15 @@ label v12s27:
 
     tattoo "Hey! One of you needs to pay!"
 
-    scene v12s27_14 # TPP close up of Imre, from the side, looking back at the tattooo parlor building, angry, mouth open
+    scene v12s27_14 # TPP close up of Imre, from the side, looking back at the tattooo parlor building, angry, mouth open
     with dissolve
 
     imre "I'm not paying for this shit!"
 
-    scene v12s27_15 # TPP Imre and mc walking back to the hotel, Imre mouth open angry, looking at mc, mc neutral expression
+    stop music fadeout 3
+    play music "music/v12/Scene 27/Track Scene 27_4.mp3" fadein 2
+
+    scene v12s27_15 # TPP Imre and mc walking back to the hotel, Imre mouth open angry, looking at mc, mc neutral expression
     with fade
 
     imre "What kind of tattoo artist runs out of ink?! Now I gotta walk around with this shitty ass tattoo and you get off scotch free."
@@ -419,11 +430,11 @@ label v12s27:
 
     menu:
         "It's not that bad":
-            $ addPoint ("bro")
+            $ add_point(KCT.BRO)
             
             u "Honestly man, you're freaking out way too much. Your tat isn't even really that bad. It's actually pretty sick if you ask me."
 
-            scene v12s27_16 # same as 16a, mouth open
+            scene v12s27_16 # same as 16a, mouth open
             with dissolve
 
             imre "You're just saying that so I'm not all pissed."
@@ -443,12 +454,12 @@ label v12s27:
 
             u "Yeah. Plus, it comes with an awesome story. *Chuckles*"
 
-            scene v12s27_16d # same as 16b , imre slight smile mouth open
+            scene v12s27_16d # same as 16b, imre slight smile mouth open
             with dissolve
 
             imre "Well, fuck!"
 
-            scene v12s27_16e # same as 16d, mouth closed
+            scene v12s27_16e # same as 16d, mouth closed
             with dissolve
 
             u "What?"
@@ -473,8 +484,7 @@ label v12s27:
 
             u "*Chuckles* Okay."
 
-        "Sorry man":
-            $ addPoint ("bf")
+        "Sorry, man":
             u "I'm sorry man, I know you don't like it but, at least you have a story to tell."
 
             scene v12s27_16
@@ -500,7 +510,7 @@ label v12s27:
             scene v12s27_16d
             with dissolve
 
-            imre "*Sighs* Whatever, dude Fuck off. *Laughs*"
+            imre "*Sighs* Whatever, dude. Fuck off. *Laughs*"
 
 # -Regardless of choice scene continued
 
@@ -510,9 +520,11 @@ label v12s27:
 
     imre "Alright man, I'ma go try and peel my skin off in my room. *Chuckles*"
 
-    scene v12s27_17a # same as 17, imre mouth closed, mc mouth open
+    scene v12s27_17a # same as 17, imre mouth closed, mc mouth open
     with dissolve
 
     u "Haha, alright man."
+
+    stop music fadeout 3
 
     jump v12_riley_lobby #scene 28

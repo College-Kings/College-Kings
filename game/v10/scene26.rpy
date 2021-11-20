@@ -7,8 +7,8 @@ init python:
 
     def v10s26_reply1():
         setattr(store, "v10_amber_condoms", True)
-        addPoint("bf")
-        contact_Amber.newMessage("Beer, obviously")
+        add_point(KCT.BOYFRIEND)
+        amber.messenger.newMessage("Beer, obviously")
 
 label v10_amber_skatepark:
     play music "music/v10/Scene 26/Track Scene 26_1.mp3" fadein 3
@@ -18,9 +18,9 @@ label v10_amber_skatepark:
 
     u "(I should get that.)"
 
-    $ contact_Amber.newMessage("Skatepark behind SVC, 10pm, bring a six pack.", queue=False)
-    $ contact_Amber.addReply("Condoms or beer?", v10s26_reply1)
-    $ contact_Amber.addReply("Alright sure")
+    $ amber.messenger.newMessage("Skatepark behind SVC, 10pm, bring a six pack.", queue=False)
+    $ amber.messenger.addReply("Condoms or beer?", v10s26_reply1)
+    $ amber.messenger.addReply("Alright sure")
 
     call screen phone
 
@@ -362,7 +362,6 @@ label v10_amber_skatepark:
     u "*Laughs*"
 
     if amberrs:
-
         label v10_amber_skatepark_sg:
         scene v10sasp5b # FPP. Same camera as v10sasp5. Show Amber leaning in to whisper into MC's ear, smiling, mouth open.
         with fade
@@ -384,9 +383,6 @@ label v10_amber_skatepark:
 
         u "*Whisper* Here?"
 
-        if config_censored:
-            call screen censoredPopup("v10s26_nsfwSkipLabel1")
-
         scene v10sasp5d # FPP. Same camera as v10sasp5. Show Amber looking down and attempting to pull MC's pants down. Smiling, mouth open.
         with dissolve
 
@@ -396,9 +392,12 @@ label v10_amber_skatepark:
         with dissolve
         menu:
             "Let her":
+                $ v10_ambersex = True
+                #$ add_point(KCT.TROUBLEMAKER, sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck ])) ###Loyaltymod
                 show screen v10s26_amberSexOverlay
 
-                $ rough_rider = True
+                if config_censored:
+                    call screen censoredPopup("v10s26_nsfwSkipLabel1")
 
                 stop music fadeout 3
                 play music "music/v10/Scene 26/Track Scene 26_2.mp3" fadein 3
@@ -409,7 +408,7 @@ label v10_amber_skatepark:
                     scene v10ambbj # ignore
                     with dissolve
 
-                    $ grantAchievement("rough_rider")
+                    $ grant_achievement("rough_rider")
                     u "Damn Amber!"
 
                     scene v10ambbj
@@ -653,7 +652,7 @@ label v10_amber_skatepark:
         menu:
             "Place hand on her leg":
                 if kct == "popular": # kct is popular
-                    call screen kctPopup
+                    call screen kct_popup
                     
                     scene v10sasp5j # FPP. Same camera as v10sasp5. Show Amber glancing down at her leg, smiling, mouth closed.
                     with dissolve
@@ -712,6 +711,8 @@ label v10_amber_skatepark:
                     menu:
                         "Let her":
                             $ amberrs = True
+                            $ v10_ambersex = True
+                            #$ add_point(KCT.TROUBLEMAKER, sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck ])) ###Loyaltymod
 
                             if config_censored:
                                 call screen censoredPopup("v10s26_nsfwSkipLabel1")
@@ -719,8 +720,7 @@ label v10_amber_skatepark:
                             scene v10ambbj
                             with dissolve
 
-                            $ rough_rider = True
-                            $ grantAchievement("rough_rider")
+                            $ grant_achievement("rough_rider")
 
                             u "Damn Amber!"
 

@@ -21,7 +21,6 @@ label v10_chloe_hallway:
     au "[name], settle an argument for us."
 
     if chloemad:
-
         scene v10such3a # FPP. Same as 3, Aubrey smile, Chloe slightly annoyed, Chloe mouth open.
         with dissolve
 
@@ -39,7 +38,7 @@ label v10_chloe_hallway:
 
         menu:
             "Cute":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "I'd say cute fits better..."
 
@@ -60,7 +59,7 @@ label v10_chloe_hallway:
                     cl "Ugh, I don't care what you think."
 
                 else:
-                    call screen kctPopup
+                    call screen kct_popup
 
                     u "No, sexy definitely describes her better."
 
@@ -84,7 +83,7 @@ label v10_chloe_hallway:
 
                     menu:
                         "Ask Chloe how she is":
-                            $ addPoint("bf")
+                            $ add_point(KCT.BOYFRIEND)
                             $ chloeLike += 1
 
                             u "So uhm... how have you been?"
@@ -129,17 +128,16 @@ label v10_chloe_hallway:
 
                             menu:
                                 "Have a Rematch":
-                                    $ addPoint("bf")
+                                    $ add_point(KCT.BOYFRIEND)
                                     $ v10_chloe_rematch = True
-                                    $ on_the_court = True
-                                    $ grantAchievement("on_the_court")
+                                    $ grant_achievement("on_the_court")
 
                                     u "Yeah let's go."
 
                                     jump v10_chloe_gym
 
                                 "Decline a Rematch":
-                                    $ addPoint("tm")
+                                    $ add_point(KCT.TROUBLEMAKER)
                                     $ chloeLike -= 1
 
                                     u "Uhm, I shouldn't, I have a lot to do. Sorry."
@@ -223,7 +221,7 @@ label v10_chloe_hallway:
 
             "Sexy":
                 $ v10_chloe_sexy = True
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ chloeLike += 1
 
                 u "Definitely gotta go with sexy."
@@ -278,11 +276,10 @@ label v10_chloe_hallway:
 
         menu:
             "Have a Rematch":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ v10_chloe_rematch = True
                 $ chloeLike += 1
-                $ on_the_court = True
-                $ grantAchievement("on_the_court")
+                $ grant_achievement("on_the_court")
 
                 u "Let's do it, but I won't be going easy on you."
 
@@ -301,7 +298,7 @@ label v10_chloe_hallway:
             "Decline a Rematch":
                 u "I shouldn't, I have a lot to do. Sorry."
 
-                scene v10such5
+                scene v10such5a
                 with dissolve
 
                 cl "Oh, yeah okay... no worries. Guess I'll see you around then."

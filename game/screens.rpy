@@ -4,6 +4,9 @@
 init python:
     yadjValue = float("inf")
     yadj = ui.adjustment()
+    
+    inf_adj = ui.adjustment()
+    inf_adj.value = float("inf")
 
 init offset = -1
 
@@ -210,7 +213,7 @@ style input:
 screen choice(items, seconds=3, fail_label=""):
     # Show KCT
     if showkct:
-        use kctChoice
+        use kct_choice
 
     image "gui/curves.webp"
     style_prefix "choice"
@@ -269,7 +272,7 @@ screen choice(items, seconds=3, fail_label=""):
 
     if config_debug:
         $ item = renpy.random.choice(items)
-        timer 0.1 action item.action
+        on "show" action item.action
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
@@ -320,16 +323,16 @@ screen quick_menu():
             textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
 
-    if renpy.loadable("bugTesting/bugTesting.rpy") and config.developer:
+    if config.developer:
         hbox:
             style_prefix "quick"
             align (1.0, 1.0)
 
             textbutton "Scene Select":
-                action ShowMenu("bugTesting_SceneSelect")
+                action Show("bugTesting_SceneSelect")
 
             textbutton "Cheats":
-                action ShowMenu("bugTesting_cheatMenu")
+                action Show("bugTesting_cheatMenu")
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
@@ -425,10 +428,7 @@ screen main_menu():
     tag menu
     style_prefix "main_menu"
 
-    if config.enable_steam:
-        add "gui/mainMenu/mainMenuBackgroundSteam.webp"
-    else:
-        add "gui/mainMenu/mainMenuBackground.webp"
+    add "gui/mainMenu/mainMenuBackground.webp"
 
     vbox:
         pos (520, 187)
@@ -452,6 +452,11 @@ screen main_menu():
             hover "gui/mainMenu/sceneHover.webp"
             action ShowMenu("spoiler")
 
+        imagebutton:
+            idle "gui/mainMenu/pathIdle.webp"
+            hover "gui/mainMenu/pathHover.webp"
+            action ShowMenu("spoiler_path_builder")
+
         hbox:
             spacing 23
 
@@ -465,19 +470,20 @@ screen main_menu():
                 hover "gui/mainMenu/quitHover.webp"
                 action Quit(confirm= main_menu)
 
+
     
     if config.enable_steam: # Steam Version
         vbox:
             pos (1619, 216)
-            spacing 200
+            spacing 25
 
             imagebutton:
-                idle "gui/mainMenu/patreonIdle.webp"
+                idle "gui/mainMenu/discordIdle.webp"
                 hover "gui/mainMenu/discordHover.webp"
                 action OpenURL("http://discord.collegekingsgame.com")
 
             imagebutton:
-                idle "gui/mainMenu/patreonIdle.webp"
+                idle "gui/mainMenu/websiteIdle.webp"
                 hover "gui/mainMenu/websiteHover.webp"
                 action OpenURL("http://collegekingsgame.com")
 
@@ -492,12 +498,12 @@ screen main_menu():
                 action OpenURL("https://www.patreon.com/collegekings")
 
             imagebutton:
-                idle "gui/mainMenu/patreonIdle.webp"
+                idle "gui/mainMenu/discordIdle.webp"
                 hover "gui/mainMenu/discordHover.webp"
                 action OpenURL("http://discord.collegekingsgame.com")
 
             imagebutton:
-                idle "gui/mainMenu/patreonIdle.webp"
+                idle "gui/mainMenu/websiteIdle.webp"
                 hover "gui/mainMenu/websiteHover.webp"
                 action OpenURL("http://collegekingsgame.com")
 
@@ -712,8 +718,9 @@ screen load():
 
 
 screen file_slots(title):
-
     default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    $ incompatible_game_versions = ["12.0.0", "0.6.4"]
+    $ incompatible_renpy_versions = ["7.4.8.1895", "7.4.7.1862"]
 
     use game_menu(title):
         
@@ -732,6 +739,12 @@ screen file_slots(title):
                     yalign 0.13
                     xalign 0.5
 
+                python:
+                    game_version = FileJson(1, key="_version") or ""
+                    renpy_version = FileJson(1, key="_renpy_version") or ""
+                    renpy_version = '.'.join(str(i) for i in renpy_version)
+                    file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
+
                 button:
                     style_prefix "slot"
                     align (0.5, 0.5)
@@ -740,7 +753,12 @@ screen file_slots(title):
 
                     has vbox
 
-                    add FileScreenshot(1) xalign 0.5
+                    if file_compatable:
+                        add FileScreenshot(1) xalign 0.5
+                        text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
+                    else:
+                        add "#000"
+                        text "INCOMPATIBLE" color "#f00" xalign 0.5
 
                     text FileTime(1, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
                         style "slot_time_text"
@@ -772,16 +790,28 @@ screen file_slots(title):
 
                     spacing gui.slot_spacing
 
-                    for i in range(gui.file_slot_cols * gui.file_slot_rows):
-                        
-                        $ slot = i + 1
+                    for slot in range(1, gui.file_slot_cols * gui.file_slot_rows + 1):
+                        python:
+                            game_version = FileJson(slot, key="_version") or ""
+                            renpy_version = FileJson(slot, key="_renpy_version") or ""
+                            renpy_version = '.'.join(str(i) for i in renpy_version)
+                            file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
                         button:
                             action FileAction(slot)
 
                             has vbox
 
-                            add FileScreenshot(slot) xalign 0.5
+                            fixed:
+                                xysize (384, 220)
+
+                                if file_compatable:
+                                    add FileScreenshot(slot) xalign 0.5
+                                    text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
+                                else:
+                                    add "#000"
+                                    text "INCOMPATIBLE" color "#f00" xalign 0.5
+                                
 
                             text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
                                 style "slot_time_text"
@@ -954,8 +984,9 @@ screen preferences():
         pos (975, 990)
         spacing 120
 
-        textbutton _("Change Language"):
-            action ShowMenu("changeLanguage")
+        if os.path.exists("game/tl"):
+            textbutton _("Change Language"):
+                action ShowMenu("changeLanguage")
 
         textbutton _("Return"):
             action Return()

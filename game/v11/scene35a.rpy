@@ -4,7 +4,7 @@
 # Time: Day
 
 label v11_chloe_hotel_room_amber_call:
-    play music "music/v11/Scene 35a/Track Scene 35a_1.mp3" fadein 2
+    play music "music/V10/Scene 40/Track Scene 40_2.mp3" fadein 2
     if chloemad and not v11_riley_roomate:
         scene v11hrc1 # TPP. MC is inside his hotel room, next to the door, mouth closed
         with fade
@@ -34,7 +34,7 @@ label v11_chloe_hotel_room_amber_call:
 
         am "I just wanna know what's up with Lauren."
 
-        if laurenmad: 
+        if v11_aubrey_sex and laurenrs: 
 
             scene v11hrc3 
             with dissolve

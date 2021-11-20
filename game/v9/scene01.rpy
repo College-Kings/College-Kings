@@ -5,14 +5,14 @@
 
 init python:
     def v9s1_reply1():
-        contact_Imre.newMessage(_("Damn right! You heading to the gym?"))
-        contact_Imre.addReply(_("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there"))
-        contact_Imre.newMessage(_("Me too. See ya there!"))
+        imre.messenger.newMessage(_("Damn right! You heading to the gym?"))
+        imre.messenger.addReply(_("Naw, I'm spent. But I have a feeling I'll be spending a lot of my time in there"))
+        imre.messenger.newMessage(_("Me too. See ya there!"))
 
     def v9s1_reply2():
-        contact_Imre.newMessage(_("Lucky we did, huh? I think we got a hand up on those baby apes"))
-        contact_Imre.addReply(_("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out"))
-        contact_Imre.newMessage(_("Same! Talk soon"))
+        imre.messenger.newMessage(_("Lucky we did, huh? I think we got a hand up on those baby apes"))
+        imre.messenger.addReply(_("Damn right! We got this! We need to hit the gym soon... after I get some sleep. I'm bout to pass out"))
+        imre.messenger.newMessage(_("Same! Talk soon"))
 
 label v9start:
     if joinwolves:
@@ -79,7 +79,7 @@ label v9_start_wolves:
 
     menu:
         "Excited reply":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ mcBrawlStance1 = True
 
             u "No shit! That's amazing!"
@@ -97,7 +97,7 @@ label v9_start_wolves:
             ch "Great! We're gonna need it if we plan on beating the Apes."
 
         "Hesitant reply":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ mcBrawlStance1 = False
 
             u "(I haven't been training enough for this.)"
@@ -156,7 +156,7 @@ label v9_start_wolves:
 
     menu:
         "Try to back out":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ mcBrawlStance2 = False
 
             u "I don't know... I'm not ready for something like this. A... BRAWL?"
@@ -177,7 +177,7 @@ label v9_start_wolves:
             stop music fadeout 3
 
         "Go with it":
-            # $ addPoint("tm")
+            # $ add_point(KCT.TROUBLEMAKER)
             $ mcBrawlStance2 = True
 
             u "Wow, trial by fire!"
@@ -211,15 +211,15 @@ label v9_start_wolves:
     with dissolve
     pause 0.5
 
-    $ contact_Imre.addReply(_("You here yet?"))
-    $ contact_Imre.newMessage(_("Yeah, you ready?"))
-    $ contact_Imre.addReply(_("Hell no! But we need to get ready!"), v9s1_reply1)
-    $ contact_Imre.addReply(_("I think so, actually. You and Sebastian really helped"), v9s1_reply2)
+    $ imre.messenger.addReply(_("You here yet?"))
+    $ imre.messenger.newMessage(_("Yeah, you ready?"))
+    $ imre.messenger.addReply(_("Hell no! But we need to get ready!"), v9s1_reply1)
+    $ imre.messenger.addReply(_("I think so, actually. You and Sebastian really helped"), v9s1_reply2)
     
     label v9_phn_imre1:
-        if contact_Imre.getReplies():
+        if imre.messenger.replies:
             call screen phone
-        if contact_Imre.getReplies():
+        if imre.messenger.replies:
             u "(I should talk to Imre.)"
             jump v9_phn_imre1
         

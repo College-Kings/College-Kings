@@ -10,6 +10,8 @@ label v12_ms_rose_sex:
 
     pause 0.75
 
+    play music "music/v12/Scene 23/Track Scene 23_1.mp3" fadein 2
+
     scene v12msr2 # FPP. MC and Ms. Rose in the hallway, MC and Ms. Rose looking at each other, Ms. Rose slight smile, mouth open
     with dissolve
 
@@ -110,15 +112,16 @@ label v12_ms_rose_sex:
         scene v12msr2b
         with dissolve
 
-        ro "As I said before, I have something special planned for us here in Paris. Want me to show you?"
+        if v11_underground_rose:
+            ro "As I said before, I have something special planned for us here in Paris. Want me to show you?"
+        else:
+            ro "I have something special planned for us here in Paris. Want me to show you?"
 
         scene v12msr2a
         with dissolve
 
         menu:
             "Not tonight":
-                $ addPoint("bf")
-
                 scene v12msr2c
                 with dissolve
 
@@ -150,8 +153,12 @@ label v12_ms_rose_sex:
                 pause 0.75
 
             "Let's go":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
+                #$ add_point(KCT.TROUBLEMAKER, sum([ v11_samantha_spa, v11_rileysex, v11_chloe_sex, v12_lindsey_sex ])) ###Loyaltymod
+                
                 $ v12_msrose_sex = True
+
+                label v12_ms_rose_sex_sg:
 
                 scene v12msr2c
                 with dissolve
@@ -168,7 +175,7 @@ label v12_ms_rose_sex:
 
                 pause 0.75
 
-                scene v12msr6 # TPP. Show MC and Ms. Rose getting into the care (Ms. Rose driving), both smiling, mouths closed
+                scene v12msr6 # TPP. Show MC and Ms. Rose getting into the car (Ms. Rose driving), both smiling, mouths closed
                 with dissolve
 
                 pause 0.75
@@ -187,6 +194,9 @@ label v12_ms_rose_sex:
                 with dissolve
 
                 pause 0.75
+
+                stop music fadeout 3
+                play music "music/v12/Scene 23/Track Scene 23_2.mp3" fadein 2
 
                 scene v12msr10 # FPP. MC and Ms. Rose in living room, looking at each other, Ms. Rose slight smile, mouth closed
                 with dissolve
@@ -252,6 +262,9 @@ label v12_ms_rose_sex:
                 with dissolve
 
                 u "Good... Fucking... God."
+
+                if config_censored:
+                    call screen censoredPopup("v12s23_nsfwSkipLabel1")
 
                 scene v12msr15a # FPP. Same as v12msr15, Ms. Rose topless, seductive look, mouth open
                 with dissolve
@@ -389,10 +402,10 @@ label v12_ms_rose_sex:
 
                 pause
 
-                image v12roshh = Movie(play="images/v12/Scene 35/v12roshh.webm", loop=True, image="images/v12/Scene 35/v12roshhStart.webp", start_image="images/v12/Scene 35/v12roshhStart.webp") # Rose hand doggy
-                image v12roshhf = Movie(play="images/v12/Scene 35/v12roshhf.webm", loop=True, image="images/v12/Scene 35/v12roshhStart.webp", start_image="images/v12/Scene 35/v12roshhStart.webp") # Rose hand doggy spedup
-                image v12roshh2 = Movie(play="images/v12/Scene 35/v12roshh2.webm", loop=True, image="images/v12/Scene 35/v12roshh2Start.webp", start_image="images/v12/Scene 35/v12roshh2Start.webp") # Rose hand doggy FPP
-                image v12roshh2f = Movie(play="images/v12/Scene 35/v12roshh2f.webm", loop=True, image="images/v12/Scene 35/v12roshh2Start.webp", start_image="images/v12/Scene 35/v12roshh2Start.webp") # Rose hand doggy FPP spedup
+                image v12roshh = Movie(play="images/v12/Scene 23/v12roshh.webm", loop=True, image="images/v12/Scene 23/v12roshhStart.webp", start_image="images/v12/Scene 23/v12roshhStart.webp") # Rose hand doggy
+                image v12roshhf = Movie(play="images/v12/Scene 23/v12roshhf.webm", loop=True, image="images/v12/Scene 23/v12roshhStart.webp", start_image="images/v12/Scene 23/v12roshhStart.webp") # Rose hand doggy spedup
+                image v12roshh2 = Movie(play="images/v12/Scene 23/v12roshh2.webm", loop=True, image="images/v12/Scene 23/v12roshh2Start.webp", start_image="images/v12/Scene 23/v12roshh2Start.webp") # Rose hand doggy FPP
+                image v12roshh2f = Movie(play="images/v12/Scene 23/v12roshh2f.webm", loop=True, image="images/v12/Scene 23/v12roshh2Start.webp", start_image="images/v12/Scene 23/v12roshh2Start.webp") # Rose hand doggy FPP spedup
 
                 scene v12roshh # Ignore as animation
                 with dissolve
@@ -422,7 +435,7 @@ label v12_ms_rose_sex:
                 with dissolve
                 pause
 
-                u "I'm... almost there! You're so... fuckiNG... HOT!"
+                u "I'm... almost there! You're so... FUCKING... HOT!"
 
                 ro "Do it inside, [name]! Fill me up... Please... I..."
 
@@ -459,6 +472,8 @@ label v12_ms_rose_sex:
 
                 ro "*Chuckles* I told you tonight would be special."
 
+                $ renpy.end_replay()
+
                 scene v12msr28 # FPP. MC looks at the bottle of wine on the black mantle
                 with dissolve
 
@@ -487,7 +502,7 @@ label v12_ms_rose_sex:
                 scene v12msr27
                 with dissolve
 
-                u "*Drowsy* I am starting to feel a little... Slower...."
+                u "*Drowsy* I am starting to feel a little... Slower..."
 
                 scene v12msr27a
                 with dissolve
@@ -497,7 +512,12 @@ label v12_ms_rose_sex:
                 scene v12msr27b # FPP. Same as v12msr27, screen blurry
                 with dissolve
 
-                u "I'm feeling... Really..."
+                u "I'm feeling... really..."
+
+                stop music fadeout 3
+                play music "music/v12/Scene 23/Track Scene 23_3.mp3" fadein 2
+
+                label v12s23_nsfwSkipLabel1:
 
                 scene black
                 with dissolve
@@ -571,5 +591,7 @@ label v12_ms_rose_sex:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_simplr_convo #scene 24

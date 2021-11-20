@@ -10,6 +10,8 @@ label v12_riley_cafe:
 
     pause 0.75
 
+    play music "music/v12/Scene 14/Track Scene 14 _ 14a.mp3" fadein 2
+
     scene v12ric2 # TPP. Show MC and Riley approaching their table, both smiling, mouths closed
     with dissolve
 
@@ -113,7 +115,7 @@ label v12_riley_cafe:
     scene v12ric4
     with dissolve
 
-    ri "I've never been to New York, but I've had New York style pizza. I bet New York pizza in York is so much better. That's the difference between a copy and the original."
+    ri "I've never been to New York, but I've had New York style pizza. I bet New York pizza in New York is so much better. That's the difference between a copy and the original."
 
     scene v12ric4a
     with dissolve
@@ -256,6 +258,7 @@ label v12_riley_cafe:
 
     menu:
         "I'd be able to tell":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12ric4a
             with dissolve
 
@@ -317,11 +320,12 @@ label v12_riley_cafe:
 
     menu:
         "Oh yeah, good idea":
-
+            $ add_point(KCT.BOYFRIEND)
             u "Almost forgot about that... Yeah, that's definitely the move."
 
-        "Ugh, Do we have to?":
-            
+        "Ugh, do we have to?":
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.TROUBLEMAKER)
             u "Oh yayyy, another boring treasure hunt."
 
     scene v12ric4a
@@ -508,5 +512,7 @@ label v12_riley_cafe:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_riddle_riley #scene 15

@@ -6,7 +6,7 @@
 label v11_sam_spa:
     scene v11sas1 # TPP. Show MC and Samantha walking in a corridor, both smiling, mouths closed
     with dissolve
-    play music "music/v11/Scene 28/Track Scene 28_1.mp3" fadein 2
+    play music "music/V10/Scene 41/Track Scene 41_2.mp3" fadein 2
     pause 1
 
     scene v11sas2 # TPP. Show MC and Sam walking into the spa, both smiling, mouths closed
@@ -64,7 +64,7 @@ label v11_sam_spa:
 
     menu:
         "Check her out":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v11sas3d # FPP. Same as v11sas3, but Samantha only in underwear
             with dissolve
@@ -490,6 +490,9 @@ label v11s28a_galleryScene:
 
     pause 1.25
 
+    if config_censored:
+        call screen censoredPopup("v11s28a_nsfwSkipLabel1")
+
     scene v11sas13d # FPP. Same as v11sas13c, Samantha with no bra, seductive look, mouth closed
     with dissolve
 
@@ -657,7 +660,6 @@ label v11s28a_galleryScene:
     menu:
         "Did drugs":
             $ v11_ex_drugs = True
-
             scene v11sas17
             with dissolve
 
@@ -677,7 +679,6 @@ label v11s28a_galleryScene:
     menu:
         "Her father":
             $ v11_ex_father = True
-
             scene v11sas17b
             with dissolve
 
@@ -716,7 +717,9 @@ label v11s28a_galleryScene:
 
     menu:
         "Massage her boob":
-            $ addPoint("tm")
+            $ v11_samantha_spa = True
+            $ add_point(KCT.TROUBLEMAKER)
+            #$ add_point(KCT.TROUBLEMAKER, sum([ v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex, v11_fucked_candy, v11_aubrey_sex ])) ###Loyaltymod
 
             scene v11sas18a # TPP. Same as v11sas18, MC has his hands over her boob, she is smiling, mouth closed
             with dissolve
@@ -744,7 +747,7 @@ label v11s28a_galleryScene:
             u "Oh."
 
         "Don't massage her boob":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v11sas18
             with dissolve
@@ -827,6 +830,8 @@ label v11s28a_galleryScene:
     with dissolve
 
     $ renpy.end_replay()
+    
+    label v11s28a_nsfwSkipLabel1:
     
     sa "Sorry... I don't know why, but I just got really tired all of a sudden."
 

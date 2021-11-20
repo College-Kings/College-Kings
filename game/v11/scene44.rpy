@@ -5,7 +5,7 @@
 label v11_nora_lingerie:
     scene v11nol1 # TPP. Show MC and Nora walking next to each other on the sidewalk, both slightly smiling, mouths closed
     with dissolve
-    play music "music/v11/Scene 44/Track Scene 44.mp3" fadein 2
+    play music "music/V10/Scene 22/Track Scene 22_2.mp3" fadein 2
     pause 0.75
 
     scene v11nol2 # FPP. MC standing next to Nora on the sidewalk, they're walking, MC and Nora looking at each other, Nora smiling, mouth closed
@@ -284,12 +284,10 @@ label v11_nora_lingerie:
 
     menu:
         "Pink":
-            $ pretty_in_pink = True
-
             scene v11nol12g # FPP. Same as v11nol12e, Nora mouth closed, sexy pose, smiling
             with dissolve
 
-            $ grantAchievement("pretty_in_pink")
+            $ grant_achievement("pretty_in_pink")
             u "You'd look good in either one, but if I had to choose I'd say pink."
             
         "White":

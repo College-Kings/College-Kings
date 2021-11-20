@@ -1,6 +1,8 @@
 ### SCENE 2: Chloe v7 ending continued
 label v8_cl_start:
     $ chloers = True
+    $ v8_chloesex = True
+
     # Note to renderers: Make sure the MC is in his suit and any other props are the same as Chloe's ending in v7
     stop music fadeout 3
 
@@ -182,7 +184,7 @@ label v8_cl_start:
     scene v8s21 # FPP. Chloe got out of bed and started getting into her casual clothes hurriedly, mouth open
     with dissolve
     cl "*Whispers* Quick! Get dressed."
-    li "Chlooeee? Open up! It's Lindsey!{w} Pleeaasee!"
+    li "Chlooeee? Open up! It's Lindsey! Pleeaasee!"
     cl "Coming, Lindsey!"
 
     scene v8s22d

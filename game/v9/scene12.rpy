@@ -22,7 +22,7 @@ label v9_hallway:
 
         u "(Ohhh goddamn, honey why are you so hot?)"
 
-        scene v9hlw2
+        scene v9hlw3a
         with dissolve
 
         pause 1
@@ -41,11 +41,11 @@ label v9_hallway:
 
     menu (fail_label="v9_hall_calm"): 
         "Apologize": 
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             jump v9_hall_apol
 
         "Tell him to calm down":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump v9_hall_calm
 
 label v9_hall_apol:
@@ -120,13 +120,12 @@ label v9_hall_cont1:
 
     menu (fail_label="v9_hall_no_punch"): 
         "Punch the guy": 
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ hl_punch = True
-            $ down_for_the_count = True
             jump v9_hall_punch
 
         "Don't punch the guy":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ hl_punch = False
             jump v9_hall_no_punch
 
@@ -134,7 +133,7 @@ label v9_hall_punch:
     scene v9hlw8a # TPP. Same camera as v9hlw8, show MC stepping back and looking the tough guy in the face, both angry.
     with dissolve
 
-    $ grantAchievement("back_down")
+    $ grant_achievement("back_down")
     u "(Nah, fuck this.)"
 
     scene v9hlw8b # TPP. Show MC swinging a punch into the tough guys stomach, the tough guy winces in pain.

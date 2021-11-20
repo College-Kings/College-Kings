@@ -17,14 +17,12 @@ label v10_cafe_w_jenny:
         scene v10scwj2 # TPP. Show MC waking up in his Apes room in underwear.
         with fade
 
-        u "(Damn, morning comes fast. I need to get ready and head over to the cafe.)"        
+        u "(Damn, morning comes fast. I need to get ready and head over to the cafe.)"
 
     scene v10scwj3 # TPP. Show MC walking towards a table in the café (now wearing outfit 9)
-    with dissolve
+    with fade
 
-    u "(I wonder what Jenny's gonna be like.)"
-    u "(She could be just as wild as Aubrey. I wonder what she looks like.)"
-    u "(I wonder if she's hot... Maybe I shouldn't be thinking like that... maybe.)"
+    u "(I wonder what Jenny's gonna be like. She could be just as wild as Aubrey. I wonder what she looks like. I wonder if she's hot... Maybe I shouldn't be thinking like that... maybe.)"
 
     scene v10scwj4 # TPP. Show MC looking around whilst taking a seat at a table. (Make sure it is the table with four seats. Move one seat to the side: https://prnt.sc/12q1qkd)
     with dissolve
@@ -79,8 +77,7 @@ label v10_cafe_w_jenny:
     scene v10scwj7 # FPP. Close up Jenny who is now sat in the chair opposite MC. Jenny slight smile, mouth open.
     with fade
 
-    jen "It's nice to finally meet you."
-    jen "I've heard a few things about you from Penelope, but not much."
+    jen "It's nice to finally meet you. I've heard a few things about you from Penelope, but not much."
 
     scene v10scwj7a # FPP. Same as 7, slight smile, mouth closed.
     with dissolve
@@ -116,9 +113,7 @@ label v10_cafe_w_jenny:
         scene v10scwj7c
         with dissolve
 
-        u "As we both know, Penelope is a really nice and caring person."
-        u "But sometimes, she cares a little too much..."
-        u "Her kindness just gets in the way of her judgment."
+        u "As we both know, Penelope is a really nice and caring person, but sometimes she cares a little too much... Her kindness just gets in the way of her judgment."
 
         scene v10scwj7
         with dissolve
@@ -149,18 +144,16 @@ label v10_cafe_w_jenny:
 
         if penHelpDean:
             scene v10scwj7e # FPP. Same as 7, slight worry, mouth closed.
-            with dissolve    
+            with dissolve
 
             u "When she told me I was pretty worried so I went to the dean to see what I could do. After our conversation things seemed better, but it's still pretty serious."
 
         scene v10scwj7d
         with dissolve
 
-        jen "So that's how I... oh my god, I should've known."
-        jen "There was no way I was getting accepted, I had already given up." 
+        jen "So that's how I... oh my god, I should've known. There was no way I was getting accepted, I had already given up." 
         jen "But Penelope just kept telling me not to worry about it and everything would work out."
-        jen "Wow, this is all my fault. She wouldn't be in this mess if it wasn't for me."
-        jen "*sigh* So much for being a good friend..."
+        jen "Wow, this is all my fault. She wouldn't be in this mess if it wasn't for me. *Sigh* So much for being a good friend..."
 
         scene v10scwj7e
         with dissolve
@@ -168,7 +161,7 @@ label v10_cafe_w_jenny:
         menu:
             "Reassure her":
                 $ v10_reassure_jenny = True
-                $ addPoint("bf", 1)
+                $ add_point(KCT.BOYFRIEND)
                 $ jennyLike += 1
 
                 u "Penelope always puts others before herself, even if you knew and tried to stop her, she probably still would've done it."
@@ -180,12 +173,11 @@ label v10_cafe_w_jenny:
 
             "Stay positive":
                 u "Let's try to stay positive. Focusing on the bad stuff isn't going to help. Let's just take it one step at a time."
-        
 
         scene v10scwj7b
         with dissolve
 
-        jen "You're right, I just wish she would've told me. Maybe I could've done something." 
+        jen "You're right, I just wish she would've told me. Maybe I could've done something."
         jen "Penelope must really trust you to confide in you, she tends to keep stuff like that to herself..."
 
         scene v10scwj7c
@@ -214,8 +206,8 @@ label v10_cafe_w_jenny:
 
         menu:
             "Flirt":
-                $ addPoint("bf", 1)
-                if kct == "confident":
+                $ add_point(KCT.BOYFRIEND)
+                if kct == "loyal":
                     $ jennyLike += 1
 
                 else:
@@ -295,10 +287,10 @@ label v10_cafe_w_jenny:
 
         menu:
             "Be helpful":
-                $ addPoint("bro", 1)
+                $ add_point(KCT.BRO)
 
                 scene v10scwj11
-                with dissolve                
+                with dissolve
 
                 u "A school hearing? This isn't over then. Much better than actual court."
 
@@ -312,11 +304,11 @@ label v10_cafe_w_jenny:
                 u "And if they don't then I'll just rob a bank for you. "
 
             "Be supportive":
-                $ addPoint("bf", 1)
+                $ add_point(KCT.BOYFRIEND)
                 $ penelopeLike += 1
 
                 scene v10scwj11
-                with dissolve                
+                with dissolve
 
                 u "I'm positive everything's gonna work out just fine."
 
@@ -447,8 +439,7 @@ label v10_cafe_w_jenny:
         scene v10scwj7c
         with dissolve
 
-        u "I'm not too sure how the whole thing works, but if it's anything like the hearings on TV."
-        u "You might be useful as a character witness. You know Penelope better than most people."
+        u "I'm not too sure how the whole thing works, but if it's anything like the hearings on TV. You might be useful as a character witness. You know Penelope better than most people."
 
         scene v10scwj7
         with dissolve
@@ -473,12 +464,11 @@ label v10_cafe_w_jenny:
         scene v10scwj7b
         with dissolve
 
-        jen "Yeah, I guess you're right I'm gonna have to head home now."
-        jen "But thank you so much for letting me know what was going on..."
+        jen "Yeah, I guess you're right I'm gonna have to head home now. But thank you so much for letting me know what was going on..."
         jen "I'll probably talk to Penelope later tonight."
 
         scene v10scwj7c
-        with dissolve        
+        with dissolve
 
         u "Sounds good."
 
@@ -520,7 +510,7 @@ label v10_cafe_w_jenny:
         jen "Oh, heyyy. I didn't know you were also coming."
 
         scene v10scwj19 # FPP. Show Jenny and Penelope (who is now sat down), both confused, mouths closed.
-        with dissolve  
+        with dissolve
 
         u "Yeah I should probably explain, I thought it'd be best if we all uhm... talked about the situation and laid everything out in the open."
 
@@ -534,55 +524,55 @@ label v10_cafe_w_jenny:
 
         jen "Can someone please fill me in, I'm starting to get worried."
 
-        scene v10scwj20
+        scene v10scwj20f
         with dissolve
 
         pe "I know I should've told you all of this before, or just not done it at all." 
 
         pe "But do you remember when you and I talked about you getting accepted to this school?"
 
-        scene v10scwj7d
+        scene v10scwj7f
         with dissolve
 
         jen "Yeah, I was super nervous about not getting in. Then you said don't worry cause everything would work out and it did. You were right."
 
-        scene v10scwj20
+        scene v10scwj20f
         with dissolve
 
         pe "Yeah well... it worked out because I did something. I sort of hacked into the school and made sure you got accepted."
 
-        scene v10scwj7d
+        scene v10scwj7f
         with dissolve
 
         jen "What???"
 
-        scene v10scwj20
+        scene v10scwj20f
         with dissolve
 
         pe "I know, but I couldn't have just sat by and let you not get in. They were going to deny you and you've been through enough already."
 
-        scene v10scwj7d
+        scene v10scwj7f
         with dissolve
 
         jen "Oh my god Penelope, so I'm the reason you've been so upset all this time?"
         jen "Why didn't you tell me? I didn't want you to do this in the first place!"
 
-        scene v10scwj20
+        scene v10scwj20f
         with dissolve
 
         pe "I made the decision to do what I did, it's not your fault."
 
-        scene v10scwj7d
+        scene v10scwj7f
         with dissolve
 
         jen "It's just- it's a lot to process."
 
-        scene v10scwj20
+        scene v10scwj20f
         with dissolve
 
         pe "I know and I'm sorry. Just this morning I actually got some more news from the school."
 
-        scene v10scwj20a # TPP. Same as 20, slight sad, mouth closed.
+        scene v10scwj20f # TPP. Same as 20, slight sad, mouth closed.
         with dissolve
 
         u "Good news?"
@@ -590,25 +580,24 @@ label v10_cafe_w_jenny:
         scene v10scwj20
         with dissolve
 
-        pe "Sadly, no. Part of my situation Jenny, as I already told [name], involves a fine of $15,000 the school is handing me."
+        pe "Sadly, no. Part of my situation involves a fine of $15,000 the school is handing me."
 
         pe "On Thursday there's going to be hearing with the disciplinary board."
 
-        scene v10scwj7d
+        scene v10scwj7f
         with dissolve
 
         jen "Shit. Penelope I-"
 
-        scene v10scwj20
+        scene v10scwj20f
         with dissolve
 
         pe "It's not your fault."
 
-        scene v10scwj20a
-        with dissolve
-
         menu:
             "Be helpful":
+                scene v10scwj20a
+                with dissolve
                 u "A school hearing? This isn't over then. Much better than actual court."
 
                 u "We have time to prepare and the hearing alone gives us an opportunity to explain the situation."
@@ -628,6 +617,8 @@ label v10_cafe_w_jenny:
                 u "Of course I will. Not only will I be there, but I'll defend you. Like your own personal lawyer!"
 
             "Be supportive":
+                scene v10scwj20a
+                with dissolve
                 u "I'm positive everything's gonna work out just fine."
 
                 scene v10scwj20
@@ -674,7 +665,7 @@ label v10_cafe_w_jenny:
         scene v10scwj7a
         with dissolve
 
-        u "I'm not too sure how the whole thing works, but Jenny you might be useful as a character witness. You know Penelope better than most people."
+        u "I'm not too sure how the whole thing works. But Jenny, you might be useful as a character witness. You know Penelope better than most people."
 
         scene v10scwj7
         with dissolve
@@ -701,14 +692,14 @@ label v10_cafe_w_jenny:
 
         u "I mean, I don't know how it works either, but I feel like someone's gotta do it, right? *Chuckles*"
 
-        scene v10scwj7
+        scene v10scwj7f
         with dissolve
 
-        jen "I guess that's true. It's a lot to process, but thanks for telling me guys. I'm really sorry about all this Penelope."
+        jen "I guess that's true. It's a lot to process, but thanks for telling me guys. I'm really sorry about all this, Penelope."
 
         jen "I have to head home now, cause I promised my mom I'd help her out, but I'll see you guys soon, okay?"
 
-        scene v10scwj20d
+        scene v10scwj20f
         with dissolve
 
         pe "Of course, I'm just glad you finally know."
@@ -718,7 +709,7 @@ label v10_cafe_w_jenny:
 
         jen "It was really nice meeting you, I'm glad I reached out."
 
-        scene v10scwj15a
+        scene v10scwj15
         with dissolve
 
         u "I am too."
@@ -733,12 +724,12 @@ label v10_cafe_w_jenny:
 
         pause 0.75
 
-        scene v10scwj15
+        scene v10scwj15a
         with dissolve
 
         jen "Bye guys."
 
-        scene v10scwj15a
+        scene v10scwj15
         with dissolve
 
         u "See ya."

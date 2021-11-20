@@ -91,12 +91,14 @@ label v12_docks:
 
     menu:
         "Not much":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v12dock6e # FPP. Same as v12dock6d, Riley looking at MC, slightly worried, mouth closed, different pose
             with dissolve
 
             u "Not much, we didn't really talk. What's going on?"
 
         "No":
+            $ add_point(KCT.BOYFRIEND)
             scene v12dock6e
             with dissolve
 

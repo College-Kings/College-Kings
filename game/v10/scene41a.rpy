@@ -4,7 +4,8 @@
 # Time: Thursday Morning
 
 label v10_waking_up_end:
-    play music "music/v10/Scene 41a/Track Scene 41a_1.mp3" fadein 3
+    play music "music/V10/Scene 22/Track Scene 22_1.mp3" fadein 3
+
     if joinwolves:
         scene v10end1 # TPP. Show MC waking up drowsy in his new Wolves room.
         with fade
@@ -20,10 +21,10 @@ label v10_waking_up_end:
         with dissolve
 
         python:
-            contact_Penelope.newMessage("Hey, do you mind coming by before the hearing starts?", queue=False)
-            contact_Penelope.newMessage("Hey! Where are you, the hearing is in two hours.", queue=False)
-            contact_Penelope.newMessage("WHERE ARE YOU THE HEARING IS IN 15 MINUTES!?", queue=False)
-            contact_Penelope.newMessage("OMG, WE'RE STARTING! WHERE ARE YOU?", queue=False)
+            penelope.messenger.newMessage("Hey, do you mind coming by before the hearing starts?", queue=False)
+            penelope.messenger.newMessage("Hey! Where are you, the hearing is in two hours.", queue=False)
+            penelope.messenger.newMessage("WHERE ARE YOU THE HEARING IS IN 15 MINUTES!?", queue=False)
+            penelope.messenger.newMessage("OMG, WE'RE STARTING! WHERE ARE YOU?", queue=False)
 
         u "(Oh shit, Penelope has been blowing me up.)"
         
@@ -59,10 +60,10 @@ label v10_waking_up_end:
         with dissolve
 
         python:
-            contact_Penelope.newMessage("Hey, do you mind coming by before the hearing starts?", queue=False)
-            contact_Penelope.newMessage("Hey! Where are you, the hearing is in two hours.", queue=False)
-            contact_Penelope.newMessage("WHERE ARE YOU THE HEARING IS IN 15 MINUTES!?", queue=False)
-            contact_Penelope.newMessage("OMG, WE'RE STARTING! WHERE ARE YOU?", queue=False)
+            penelope.messenger.newMessage("Hey, do you mind coming by before the hearing starts?", queue=False)
+            penelope.messenger.newMessage("Hey! Where are you, the hearing is in two hours.", queue=False)
+            penelope.messenger.newMessage("WHERE ARE YOU THE HEARING IS IN 15 MINUTES!?", queue=False)
+            penelope.messenger.newMessage("OMG, WE'RE STARTING! WHERE ARE YOU?", queue=False)
 
         u "(Oh shit, Penelope has been blowing me up.)"
 
@@ -91,5 +92,7 @@ label end10:
 
     if renpy.loadable("v11/scene1.rpy"):
         jump v11_start
+    elif config.enable_steam:
+        call screen steam_end(link="https://store.steampowered.com/app/1732640/College_Kings__Act_III/")
     else:
         jump gameEnd

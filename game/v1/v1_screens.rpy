@@ -112,7 +112,7 @@ screen v1_freeRoam1_3():
 
 
 screen v1_freeRoam2_1(): # outside
-    tag tag_freeRoam
+    tag free_roam
 
     if not v1_samTalk:
         add "images/s100.webp"
@@ -142,7 +142,7 @@ screen v1_freeRoam2_1(): # outside
 
 
 screen v1_freeRoam2_2():
-    tag tag_freeRoam
+    tag free_roam
 
     add "images/s102.webp"
 
@@ -196,7 +196,7 @@ screen v1_freeRoam2_2():
 
 
 screen v1_freeRoam2_3():
-    tag tag_freeRoam
+    tag free_roam
 
     add "images/s104.webp"
 
@@ -228,7 +228,7 @@ screen v1_freeRoam2_3():
         action Show("v1_freeRoam2_2")
 
 screen v1_freeRoam2_4():
-    tag tag_freeRoam
+    tag free_roam
 
     add "images/s106.webp"
 
@@ -248,7 +248,7 @@ screen v1_freeRoam2_4():
         action Show("v1_freeRoam2_2")
 
 screen v1_freeRoam2_5():
-    tag tag_freeRoam
+    tag free_roam
 
     add "images/s105.webp"
 

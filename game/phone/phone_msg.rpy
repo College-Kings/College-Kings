@@ -1,12 +1,17 @@
 init python:
     class Contact:
-        def __init__(self, name, profilePicture, locked=True):
+        def __init__(self, name, profile_picture, locked=True):
             self.name = name
-            self.profilePicture = "images/phone/messages/profilePictures/{}".format(profilePicture)
+            self.profile_picture = profile_picture
             self.locked = locked
             self.sentMessages = []
             self.pendingMessages = []
-            contacts.append(self)
+
+        @property
+        def replies(self):
+            try:
+                return self.sentMessages[-1].replies
+            except IndexError: return False
 
         def newMessage(self, message, queue=True):
             message = Message(self, message)
@@ -81,7 +86,7 @@ init python:
             self.unlock()
 
         def seenMessage(self):
-            if not any([contact.getReplies() for contact in contacts]):
+            if not any([contact.replies for contact in contacts]):
                 msgApp.seenNotification()
 
         def selectedReply(self, reply):
@@ -97,7 +102,7 @@ init python:
 
             # Send next queued message(s)
             try:
-                while not self.getReplies():
+                while not self.replies:
                     self.sentMessages.append(self.pendingMessages.pop(0))
             except IndexError: pass
 
@@ -106,12 +111,7 @@ init python:
                 contacts.append(self)
             self.locked = False
 
-        def getReplies(self):
-            try:
-                return self.sentMessages[-1].replies
-            except IndexError: return False
-
-        def getMessage(self, message):
+        def get_message(self, message):
             for msg in self.sentMessages:
                 try:
                     if message == msg.message:
@@ -121,12 +121,14 @@ init python:
                         return msg
             return False
 
+
     class Message:
         def __init__(self, contact, message):
             self.contact = contact
             self.message = message
             self.replies = []
             self.reply = None
+
 
     class ImageMessage:
         def __init__(self, contact, image):
@@ -135,11 +137,13 @@ init python:
             self.replies = []
             self.reply = None
 
+
     class Reply:
         def __init__(self, message, func=None, disabled=False):
             self.message = message
             self.func = func
             self.disabled = disabled
+
 
     class ImgReply:
         def __init__(self, image, func=None, disabled=False):
@@ -147,7 +151,7 @@ init python:
             self.func = func
             self.disabled = disabled
 
-init offset = -1
+
 default contacts = []
 
 screen contactsscreen():
@@ -176,11 +180,15 @@ screen contactsscreen():
                 if not contact.locked:
                     fixed:
                         xysize(375, 74)
+                        
+                        if hasattr(contact, "profile_picture"):
+                            add contact.profile_picture yalign 0.5 xpos 20
+                        else:
+                            add contact.profilePicture yalign 0.5 xpos 20
 
-                        add contact.profilePicture yalign 0.5 xpos 20
                         text contact.name style "nametext" yalign 0.5 xpos 100
 
-                        if contact.getReplies():
+                        if contact.replies:
                             add "images/contactmsgnot.webp" yalign 0.5 xpos 275
 
                         imagebutton:
@@ -213,7 +221,11 @@ screen messager(contact=None):
             vbox:
                 align (0.5, 0.5)
 
-                add contact.profilePicture xalign 0.5
+                if hasattr(contact, "profile_picture"):
+                    add contact.profile_picture xalign 0.5
+                else:
+                    add contact.profilePicture xalign 0.5
+
                 text contact.name style "nametext"
 
         viewport:
@@ -244,7 +256,7 @@ screen messager(contact=None):
                             style "msgright"
                             action Show("phone_image", img=message.image)
 
-        if contact.getReplies():
+        if contact.replies:
                 hbox:
                     xalign 0.5
                     ypos 855
@@ -254,7 +266,7 @@ screen messager(contact=None):
                         action Show("messenger_reply", contact=contact)
 
     if kiwii_firstTime:
-        timer 0.1 action Show("kiwiiPopup")
+        timer 0.01 action Show("kiwiiPopup")
 
 
 screen messenger_reply(contact=None):
@@ -265,7 +277,7 @@ screen messenger_reply(contact=None):
         yalign 0.84
         spacing 15
 
-        for reply in contact.getReplies():
+        for reply in contact.replies:
             if isinstance(reply, Reply):
                 textbutton reply.message:
                     if reply.disabled:

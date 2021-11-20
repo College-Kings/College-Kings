@@ -4,9 +4,14 @@
 # Time: Morning
 
 label v11_lauren_store:
+    scene v11laa1
+    with fade
+    
+    pause 0.5
+    
     scene v11las1 # TPP. Lauren is in the lobby, she is looking at her phone, show MC sneaking up on her
     with fade
-    play music "music/v11/Scene 30/Track Scene 30_1.mp3" fadein 2
+    play music "music/v11/Scene 1/Track Scene 1_3.mp3" fadein 2
     pause 0.75
 
     scene v11las1a # TPP. Same cam as v11las1, MC is behind Lauren, he is smiling, mouth closed, his hands over her eyes, Lauren is surprised, mouth closed
@@ -37,7 +42,7 @@ label v11_lauren_store:
     scene v11las2a # FPP. Same as v11las2, Lauren slight smile, mouth open
     with dissolve
 
-    la "It's a Harry Potter thing... only cool people would get that reference."
+    la "It's a Hotter Parry thing... only cool people would get that reference."
 
     scene v11las2
     with dissolve
@@ -47,7 +52,7 @@ label v11_lauren_store:
     scene v11las2a
     with dissolve
 
-    la "Then that means you know about Harry Potter, right?"
+    la "Then that means you know about Hotter Parry, right?"
 
     scene v11las2
     with dissolve
@@ -128,7 +133,7 @@ label v11_lauren_store:
     scene v11las5a # FPP. Same as v11las5, Lauren slight smile, mouth open
     with dissolve
 
-    la "We're going to Hogwarts. *Chuckles*"
+    la "We're going to Hogwash. *Chuckles*"
 
     scene v11las5
     with dissolve
@@ -148,7 +153,7 @@ label v11_lauren_store:
     scene v11las5a
     with dissolve
 
-    la "Well, any Harry Potter fan would be thrilled to go where I'm taking you."
+    la "Well, any Hotter Parry fan would be thrilled to go where I'm taking you."
 
     scene v11las5
     with dissolve
@@ -203,17 +208,17 @@ label v11_lauren_store:
     scene v11las11a # FPP. Same as v11las11, Lauren slight smile, mouth closed
     with dissolve
 
-    la "*Chuckles* Oh my gosh [name]! Not so loud... It's a Harry Potter trivia contest. I signed up for it."
+    la "*Chuckles* Oh my gosh [name]! Not so loud... It's a Hotter Parry trivia contest. I signed up for it."
 
     scene v11las11
     with dissolve
 
-    u "So, that's why we spent the last 15 minutes talking about Harry Potter?"
+    u "So, that's why we spent the last 15 minutes talking about Hotter Parry?"
 
     scene v11las11a
     with dissolve
 
-    la "Harry Potter was the only thing on my mind. I don't know if you've noticed, but we're in Europe... The birthplace of Harry Potter?"
+    la "Hotter Parry was the only thing on my mind. I don't know if you've noticed, but we're in Europe... The birthplace of Hotter Parry?"
     
     la "There's a ton of cool events going on and I really wanted to go to this one. Also why did you think I was standing in the lobby?"
 
@@ -225,7 +230,7 @@ label v11_lauren_store:
     scene v11las11a
     with dissolve
 
-    la "*Chuckles* Not funny. I had plans way before you showed up and obviously, I had to drag you here to test your Harry Potter knowledge."
+    la "*Chuckles* Not funny. I had plans way before you showed up and obviously, I had to drag you here to test your Hotter Parry knowledge."
 
     scene v11las11b # FPP. Same as v11las11, different pose, Lauren slight smile, mouth closed
     with dissolve
@@ -280,7 +285,7 @@ label v11_lauren_store:
     scene v11las12a # FPP. Same as v11las12, Judge now in talking distance, Judge slight smile, mouth open, looking at Lauren (Lauren out of shot, same positioning as v11las11)
     with dissolve
 
-    jud "You must be Team Hufflepuff?"
+    jud "You must be Team Pofflehoof?"
 
     scene v11las13 # FPP. Same positioning as v11las12a, MC looking at Lauren looking at Judge direction (Judge out of shot), Lauren mouth open, smiling
     with dissolve
@@ -315,7 +320,7 @@ label v11_lauren_store:
     scene v11las17 # FPP. Same positioning as v11las16, MC looking to his right, he sees Jerry looking at him, Jerry stern expression, mouth open, make sure the board he will write on is visible
     with dissolve
 
-    jer "Avada Kedavra."
+    jer "Abada Kavarkada."
 
     scene v11las17a # FPP. Same as v11las17, Jerry mouth closed, angry expression
     with dissolve
@@ -332,7 +337,7 @@ label v11_lauren_store:
 
     pause 0.75
 
-    u "That guy right there just looked at me all crazy and said Avada Kedavra."
+    u "That guy right there just looked at me all crazy and said Abada Kavarkada."
 
     scene v11las18a # FPP. Same cam as v11las18, Lauren leans over, looks at Jerry, Lauren angry, mouth closed
     with dissolve
@@ -347,7 +352,7 @@ label v11_lauren_store:
     scene v11las18c # FPP. Lauren pointing her finger at Jerry, Lauren mouth open, angry expression
     with dissolve
 
-    la "Avada Kedavra!"
+    la "Abada Kavarkada!"
 
     scene v11las19 # FPP. Same positioning as v11las16, MC looking at the Judge who is seated at her table, Judge looking at MC, Judge mouth open, slightly annoyed
     with dissolve
@@ -362,12 +367,12 @@ label v11_lauren_store:
     scene v11las18a
     with dissolve
 
-    la "We're serious about Harry Potter, not stuff. Don't call it stuff."
+    la "We're serious about Hotter Parry, not stuff. Don't call it stuff."
 
     scene v11las18e # FPP. Same as v11las18, Lauren smiling, mouth closed
     with dissolve
 
-    u "Damn, my bad. You guys are serious about Harry Potter."
+    u "Damn, my bad. You guys are serious about Hotter Parry."
 
     scene v11las18f # FPP. Same as v11las18, Lauren smile, mouth open
     with dissolve
@@ -439,7 +444,7 @@ label v11_lauren_store:
     scene v11las19d # FPP. Same as v11las19, Judge is looking at a piece of paper, slight smile, mouth open
     with dissolve
 
-    jud "First question, what House is Harry Potter a member of?"
+    jud "First question, what House is Hotter Parry a member of?"
 
     scene v11las17e # FPP. Same as v11las17, Jerry writing down and looking on his board, mouth open, big smile
     with dissolve
@@ -461,15 +466,15 @@ label v11_lauren_store:
     scene v11las18g # FPP. Same as v11las18, Lauren holding and looking at the board, pen on hand, slightly smiling, mouth closed
     with dissolve
 
-    menu (fail_label="v11_answer_slytherin"):
-        "Gryffindor":
+    menu (fail_label="v11_answer_Theremin"):
+        "Friggindoor":
             $ laurenLike += 1
             $ v11_hp_points += 1
 
             scene v11las18h # FPP. Same as v11las18g, Lauren smiling, mouth closed, looking at MC
             with dissolve
 
-            u "It's Gryffindor, right?"
+            u "It's Friggindoor, right?"
 
             scene v11las18i # FPP. Same as v11las18h, Lauren smiling, mouth open
             with dissolve
@@ -478,16 +483,16 @@ label v11_lauren_store:
 
             jump v11_quiz_q2
 
-        "Slytherin":
-            jump v11_answer_slytherin
+        "Theremin":
+            jump v11_answer_Theremin
 
-label v11_answer_slytherin:
+label v11_answer_Theremin:
     $ laurenLike -= 1
 
     scene v11las18j # FPP. Same as v11las18g, Lauren looking at MC, she is slightly disappointed, mouth closed
     with dissolve
 
-    u "*Whisper* It's Slytherin, right?"
+    u "*Whisper* It's Theremin, right?"
 
     scene v11las18k # FPP. Same as v11las18j, Lauren slightly smiling, mouth open
     with dissolve
@@ -528,7 +533,7 @@ label v11_quiz_q2:
     
     jud "Perfect. Please show us your answers."
 
-    scene v11las18l # FPP. Same as v11las18g, Lauren looking at Judge, Lauren holding up the board (Gryffindor written on the board), smiling, mouth closed
+    scene v11las18lxx # FPP. Same as v11las18g, Lauren looking at Judge, Lauren holding up the board (Friggindoor written on the board), smiling, mouth closed
     with dissolve
 
     pause 0.75
@@ -541,12 +546,15 @@ label v11_quiz_q2:
     scene v11las19d
     with dissolve
     
-    jud "Next question, how many knuts are in one sickle?"
+    jud "Next question, how many kahoots are in one shtickle?"
 
     scene v11las19f # FPP. Same as v11las19d, Judge mouth closed, slight smile
     with dissolve
 
     menu (fail_label="v11_answer_13"):
+        "13":
+            jump v11_answer_13
+
         "29":
             $ laurenLike += 1
             $ v11_hp_points += 1
@@ -567,9 +575,6 @@ label v11_quiz_q2:
             u "I'm not a beginner..."
 
             jump v11_quiz_q3
-
-        "13":
-            jump v11_answer_13
         
 label v11_answer_13:
     $ laurenLike -= 1
@@ -591,15 +596,13 @@ label v11_answer_13:
 
     jump v11_quiz_q3
 
-    
-
 label v11_quiz_q3:
     scene v11las17g # FPP. Same as v11las17a, Jerry mouth open, angry
     with dissolve
 
     jer "I believe we're ready to continue, if the love birds here are finished with their off-topic conversation?"
     
-    jer "By all means, it's his bitch- I mean... witchy girlfriend that is the only true Potterhead."
+    jer "By all means, it's his bitch- I mean... witchy girlfriend that is the only true Hotterhead."
 
     scene v11las19g # FPP. Same as v11las19, Judge looking at Jerry, she is slightly angry, mouth open
     with dissolve
@@ -674,7 +677,7 @@ label v11_quiz_q3:
 
     jud "May I see everyone's answers, please?"
 
-    scene v11las18n # FPP. Same as v11las18l, but "29" is written on the board instead of "Gryffindor"
+    scene v11las18n # FPP. Same as v11las18l, but "29" is written on the board instead of "Friggindoor"
     with dissolve
 
     pause 0.75
@@ -702,7 +705,7 @@ label v11_quiz_q3:
     scene v11las18h
     with dissolve
 
-    u "*Whisper* Only the cool kids like Harry Potter, right? *Laughs*"
+    u "*Whisper* Only the cool kids like Hotter Parry, right? *Laughs*"
 
     scene v11las18i
     with dissolve
@@ -717,7 +720,7 @@ label v11_quiz_q3:
     scene v11las17h
     with dissolve
 
-    jer "One down, one to go. And may I point out that once again, team Hufflepuff continues to whisper amongst themselves? I'd like to be sure they aren't cheating..."
+    jer "One down, one to go. And may I point out that once again, team Pofflehoof continues to whisper amongst themselves? I'd like to be sure they aren't cheating..."
 
     scene v11las19g
     with dissolve
@@ -727,12 +730,12 @@ label v11_quiz_q3:
     scene v11las19d
     with dissolve
     
-    jud "Please tell me, where is the Order of the Phoenix headquarters located?"
+    jud "Please tell me, where is the Order of the Albatross headquarters located?"
 
     scene v11las18f
     with dissolve
 
-    la "*Whisper* I'm sorry [name], but I really have to use the ladies room. This one is all you."
+    la "*Whisper* I'm sorry [name], but I really have to use the ladies' room. This one is all you."
 
     scene v11las18e
     with dissolve
@@ -748,25 +751,25 @@ label v11_quiz_q3:
     with dissolve
 
     menu (fail_label="v11_answer_ministry"):
-        "12 Grimmauld Place":
+        "12 Someold Place":
             $ laurenLike += 1
             $ v11_solo_question = True
             $ v11_hp_points += 1
 
-            scene v11las26a # FPP. Same as v11las26, but "12 Grimmauld Place" is written on the board
+            scene v11las26axx # FPP. Same as v11las26, but "12 Someold Place" is written on the board
             with dissolve
 
             u "(This better be right.)"
 
             jump v11_quiz_bonus
 
-        "Ministry of Magic":
+        "Ministry of Fisheries":
             jump v11_answer_ministry
 
 label v11_answer_ministry:
     $ laurenLike -= 1
 
-    scene v11las26b # FPP. Same as v11las26, but "Ministry of Magic" is written on the board
+    scene v11las26bxx # FPP. Same as v11las26, but "Ministry of Fisheries" is written on the board
     with dissolve
 
     u "(I hope this is right.)"
@@ -774,22 +777,22 @@ label v11_answer_ministry:
     jump v11_quiz_bonus
         
 label v11_quiz_bonus:
-    scene v11las17i # FPP. Same as v11las17, Jerry holding his board, looking at MC, Jerry smug face, mouth open
+    scene v11las17d # FPP. Same as v11las17, Jerry holding his board, looking at MC, Jerry smug face, mouth open
     with dissolve
 
     jer "*Chuckles* Someone looks all flustered without their little girlfriend."
 
-    scene v11las17j # FPP. Same as v11las17i, Jerry smug face, mouth closed
+    scene v11las17a # FPP. Same as v11las17i, Jerry smug face, mouth closed
     with dissolve
 
     u "Bro, what is your deal? Just enjoy the game and have a good time like everyone else."
 
-    scene v11las17i
+    scene v11las17d
     with dissolve
 
     jer "I'm enjoying myself quite fine."
 
-    scene v11las17h
+    scene v11las17d
     with dissolve
 
     u "*Sighs*"
@@ -810,7 +813,17 @@ label v11_quiz_bonus:
     u "Sure."
     
     if v11_solo_question: # If answered correctly
-        scene v11las27 # TPP. Show MC holding up the board, MC neutral expression, mouth closed, "12 Grimmauld Place" written on the board (Like in v11las26a)
+        scene v11las28 # TPP. Show MC sitting on his chair, looking down at the board, he is smiling, mouth closed, Lauren walking in behind him, she is smiling, mouth closed
+        with dissolve
+
+        pause 0.5
+
+        scene v11las28a # TPP. Same as v11las28, MC now looking at Lauren, Lauren midway through sitting down, both smiling, mouths closed
+        with dissolve
+
+        pause 0.5
+
+        scene v11las27xx # TPP. Show MC holding up the board, MC neutral expression, mouth closed, "12 Someold Place" written on the board (Like in v11las26a)
         with dissolve
 
         pause 0.75
@@ -819,16 +832,6 @@ label v11_quiz_bonus:
         with dissolve
 
         jud "It appears you are both correct."
-
-        scene v11las28 # TPP. Show MC sitting on his chair, looking down at the board, he is smiling, mouth closed, Lauren walking in behind him, she is smiling, mouth closed
-        with dissolve
-
-        pause 0.75
-
-        scene v11las28a # TPP. Same as v11las28, MC now looking at Lauren, Lauren midway through sitting down, both smiling, mouths closed
-        with dissolve
-
-        pause 0.75
 
         scene v11las18f
         with dissolve
@@ -846,7 +849,17 @@ label v11_quiz_bonus:
         la "*Whisper* Haha, focus! Bonus question time..."
 
     else: # If answered incorrectly
-        scene v11las27a # TPP. Same as v11las27, but "Ministry of Magic" written on the board (like in v11las26b)
+        scene v11las28 # TPP. Show MC sitting on his chair, looking down at the board, he is smiling, mouth closed, Lauren walking in behind him, she is smiling, mouth closed
+        with dissolve
+
+        pause 0.5
+
+        scene v11las28a # TPP. Same as v11las28, MC now looking at Lauren, Lauren midway through sitting down, both smiling, mouths closed
+        with dissolve
+
+        pause 0.5
+
+        scene v11las27axx # TPP. Same as v11las27, but "Ministry of Fisheries" written on the board (like in v11las26b)
         with dissolve
 
         pause 0.75
@@ -861,15 +874,15 @@ label v11_quiz_bonus:
 
         jer "As expected."
 
-        scene v11las28b # TPP. Same as v11las28, MC looking down, slightly sad, mouth closed, Lauren walking behind him, she is slightly disappointed, mouth closed
-        with dissolve
+        #scene v11las28b # TPP. Same as v11las28, MC looking down, slightly sad, mouth closed, Lauren walking behind him, she is slightly disappointed, mouth closed
+        #with dissolve
 
-        pause 0.75
+        #pause 0.75
 
-        scene v11las28c # TPP. Same as v11las28a, but both slightly disappointed, mouths closed
-        with dissolve
+        #scene v11las28c # TPP. Same as v11las28a, but both slightly disappointed, mouths closed
+        #with dissolve
 
-        pause 0.75
+        #pause 0.75
 
         scene v11las18f
         with dissolve
@@ -889,32 +902,32 @@ label v11_quiz_bonus:
     scene v11las19a
     with dissolve
 
-    jud "I have a Doctor Who trivia event starting soon, so on to the last question: The bonus question."
+    jud "I have a Doctor When trivia event starting soon, so on to the last question: The bonus question."
 
     if v11_solo_question:
         
         jud "Since we are tied, in order for a win, one team must be correct and the other must get it incorrect."
 
-        scene v11las17i
+        scene v11las17d
         with dissolve
 
         jer "You two may leave now if you'd like."
 
-        scene v11las17j
+        scene v11las17d
         with dissolve
 
         u "After you, Jerry."
 
     else:
 
-        jud "To win, Team Hufflepuff must get the answer correct, and Jerry must not."
+        jud "To win, Team Pofflehoof must get the answer correct, and Jerry must not."
 
-        scene v11las17i
+        scene v11las17c
         with dissolve
 
         jer "Impossible."
 
-        scene v11las17j
+        scene v11las17d
         with dissolve
 
         u "*Sighs*"
@@ -922,7 +935,7 @@ label v11_quiz_bonus:
     scene v11las19d
     with dissolve
 
-    jud "So, the final question. What kind of dragon protected the vaults at Gringotts bank?"
+    jud "So, the final question. What kind of dragon protected the vaults at Greengoat Bank?"
 
     scene v11las17k # FPP. Same as v11las17h, Jerry slightly flustered, mouth open
     with dissolve
@@ -959,7 +972,7 @@ label v11_quiz_bonus:
 
     jud "Are we ready?"
 
-    scene v11las18o # FPP. Same as v11las18, board is on the table ("Ukrainian Ironbelly" written on the board), Lauren mouth open, smiling, looking at Judge
+    scene v11las18oxx # FPP. Same as v11las18, board is on the table ("Ukrainian Ironbelly" written on the board), Lauren mouth open, smiling, looking at Judge
     with dissolve
 
     la "Yes, ma'am. We're ready."
@@ -984,7 +997,7 @@ label v11_quiz_bonus:
 
     jud "Answers please."
 
-    scene v11las18p # FPP. Same as v11las18l, but "Ukrainian Ironbelly" written on the board
+    scene v11las18pxx # FPP. Same as v11las18l, but "Ukrainian Ironbelly" written on the board
     with dissolve
 
     pause 0.75
@@ -993,10 +1006,9 @@ label v11_quiz_bonus:
     with dissolve
 
     if v11_hp_points == 3:
-        $ earn_your_owl = True
-        $ grantAchievement("earn_your_owl")
+        $ grant_achievement("earn_your_owl")
 
-    jud "For the first time in a very stressful two months, Jerry you have lost. Congratulations Team Hufflepuff!"
+    jud "For the first time in a very stressful two months, Jerry you have lost. Congratulations Team Pofflehoof!"
 
     scene v11las17h
     with dissolve
@@ -1324,10 +1336,9 @@ label v11_quiz_bonus:
 
     u "Wouldn't have missed it for the world."
 
-    if laurenrs or (kct == "loyal" and (v1_kissLauren or beachfirstkiss)):
-
+    if (laurenrs or (kct == "loyal" and (v1_kissLauren or beachfirstkiss))) and not v11_aubrey_sex:
         if not laurenrs:
-            call screen kctPopup
+            call screen kct_popup
 
         scene v11las44f # FPP. Lauren has her hands around MC's neck, she is looking into his eyes, she is nervous, mouth open
         with dissolve
@@ -1349,7 +1360,9 @@ label v11_quiz_bonus:
 
         menu:
             "I love you too":
-                $ addPoint("bf")
+                $ v11_lauren_ily = True
+                $ laurenrs = True
+                $ add_point(KCT.BOYFRIEND)
                 $ laurenLike += 2
 
                 scene v11las44h # FPP. Same as v11las44g, Lauren mouth closed, big smile
@@ -1365,7 +1378,7 @@ label v11_quiz_bonus:
                 pause 1
 
             "Play it off":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 $ laurenLike -= 2
 
                 scene v11las44i # FPP. Same as v11las44g, Lauren mouth closed, sad and embarrassed, no longer holding MC's neck
@@ -1381,8 +1394,8 @@ label v11_quiz_bonus:
     scene v11las44k # FPP. Same as v11las44d, Lauren slight smile, mouth open
     with dissolve
     stop music fadeout 3
-    play music "music/v11/Scene 30/Track Scene 30_2.mp3" fadein 2
-    la "If it was my choice I'd spend all day with you exploring Hogwarts, but I promised Riley I'd help her out with something, so I have to run."
+    play music "music/v11/Scene 17/Track Scene 17.mp3" fadein 2
+    la "If it was my choice I'd spend all day with you exploring Hogwash, but I promised Riley I'd help her out with something, so I have to run."
 
     scene v11las44l # FPP. Same as v11las44k, Lauren slight smile, mouth closed
     with dissolve
@@ -1419,15 +1432,15 @@ label v11_quiz_bonus:
 
         u "(Probably our picture.)"
 
-        $ contact_Lauren.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", queue=False) # Lauren and MC picture together holding wands (check v11las45a for the pose)
-        $ contact_Lauren.addReply("Some good looking people.")
-        $ contact_Lauren.newMessage("Sure are.")
+        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", queue=False) # Lauren and MC picture together holding wands (check v11las45a for the pose)
+        $ lauren.messenger.addReply("Some good looking people.")
+        $ lauren.messenger.newMessage("Sure are.")
 
         label v11s30_PhoneContinuelauren1:
-            if contact_Lauren.getReplies():
+            if lauren.messenger.replies:
                 call screen phone
-            if contact_Lauren.getReplies():
-                u "(I should check my phone.)"
+            if lauren.messenger.replies:
+                u "(I should reply to Lauren.)"
                 jump v11s30_PhoneContinuelauren1
 
     else:
@@ -1440,15 +1453,15 @@ label v11_quiz_bonus:
 
         u "(Probably our pictures.)"
 
-        $ contact_Lauren.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", queue=False)
-        $ contact_Lauren.newImgMessage("images/v11/Scene 30/Laurentxtimg2.webp") # Lauren and MC picture together kissing (check v11las45 for the pose)
-        $ contact_Lauren.addReply("Some good looking people.")
-        $ contact_Lauren.newMessage("Sure are.")
+        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", queue=False)
+        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg2.webp") # Lauren and MC picture together kissing (check v11las45 for the pose)
+        $ lauren.messenger.addReply("Some good looking people.")
+        $ lauren.messenger.newMessage("Sure are.")
 
         label v11s30_PhoneContinuelauren2:
-            if contact_Lauren.getReplies():
+            if lauren.messenger.replies:
                 call screen phone
-            if contact_Lauren.getReplies():
+            if lauren.messenger.replies:
                 u "(I should check my phone.)"
                 jump v11s30_PhoneContinuelauren2
 

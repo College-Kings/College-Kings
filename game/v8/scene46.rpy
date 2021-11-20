@@ -39,9 +39,9 @@ label v8_ending:
         scene v8send3a # TPP. Same camera as v8send3, MC checking his phone, looking confused.
         with dissolve
 
-        $ contact_Imre.newMessage(_("Dude, you see this shit on Kiwii?"), queue=False)
-        $ contact_Imre.addReply(_("No, what?"))
-        $ contact_Imre.newMessage(_("IDK, it's crazy"))
+        $ imre.messenger.newMessage(_("Dude, you see this shit on Kiwii?"), queue=False)
+        $ imre.messenger.addReply(_("No, what?"))
+        $ imre.messenger.newMessage(_("IDK, it's crazy"))
 
         $ newKiwiiPost = KiwiiPost("Chris", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
         $ newKiwiiPost = KiwiiPost("Grayson", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
@@ -93,9 +93,9 @@ label v8_ending:
         with dissolve
         
 
-        $ contact_Ryan.newMessage(_("What the hell's happening on Kiwii?"), queue=False)
-        $ contact_Ryan.addReply(_("I don't know. What is it?"))
-        $ contact_Ryan.newMessage(_("Fuckin check it out man. Crazy shit"))
+        $ ryan.messenger.newMessage(_("What the hell's happening on Kiwii?"), queue=False)
+        $ ryan.messenger.addReply(_("I don't know. What is it?"))
+        $ ryan.messenger.newMessage(_("Fuckin check it out man. Crazy shit"))
 
         $ newKiwiiPost = KiwiiPost("Chris", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
         $ newKiwiiPost = KiwiiPost("Grayson", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
@@ -105,9 +105,9 @@ label v8_ending:
         $ newKiwiiPost = KiwiiPost("Samantha", "v8/red_square.webp", "", numberLikes=renpy.random.randint(100, 200))
 
         label v8s46_phoneCheck:
-            if contact_Ryan.getReplies():
+            if ryan.messenger.replies:
                 call screen phone
-            if contact_Ryan.getReplies():
+            if ryan.messenger.replies:
                 u "I need to check my phone."
                 jump v8s46_phoneCheck
 

@@ -10,6 +10,8 @@ label v12_lindsey_lobby:
 
     pause 0.75
 
+    play music "music/v12/Scene 36/Track Scene 36_1.mp3" fadein 2
+
     play sound "sounds/knock.mp3"
 
     scene v12lil1a # TPP. Same as v12lil1, MC slightly startled, mouth closed, awake
@@ -27,6 +29,7 @@ label v12_lindsey_lobby:
 
     pause 0.75
 
+    play sound "sounds/dooropen.mp3"
     scene v12lil4 # FPP. MC looking at the door, hand on handle, going to open the door
     with dissolve
 
@@ -50,7 +53,7 @@ label v12_lindsey_lobby:
     scene v12lil4b
     with dissolve
 
-    u "Okay... You forget how to eat? *Chuckles*"
+    u "Okay... You forgot how to eat? *Chuckles*"
 
     scene v12lil4c
     with dissolve
@@ -150,7 +153,7 @@ label v12_lindsey_lobby:
     scene v12lil10 # FPP. Same positioning as v12lil9, MC looking at bartender, bartender looking at Lindsey, bartender slight smile, mouth open (Only Bartender in shot)
     with dissolve
 
-    bartender "I'm sorry, Madam but breakfast is closed."
+    bartender "I'm sorry Madam, but breakfast is closed."
 
     scene v12lil9a # FPP. Same as v12lil9, Lindsey slightly sad, mouth open
     with dissolve
@@ -177,6 +180,9 @@ label v12_lindsey_lobby:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 36/Track Scene 36_2.mp3" fadein 2
+
     scene v12lil12 # FPP. MC and Lindsey sitting down, looking at each other, Lindsey slightly worried, mouth open
     with dissolve
 
@@ -200,7 +206,7 @@ label v12_lindsey_lobby:
     scene v12lil12
     with dissolve
 
-    li "They have the same complaints I have. Most of us girls seem to be on the same page that Chloe's the problem."
+    li "They have the same complaints I have. Most of us girls seem to be on the same page that Chloe is the problem."
 
     scene v12lil12a
     with dissolve
@@ -285,7 +291,7 @@ label v12_lindsey_lobby:
     scene v12lil12j # FPP. Same as v12lil12i, Lindsey slight smile, mouth closed
     with dissolve
 
-    u "It was pretttty good."
+    u "It was preee-tttty good."
 
     scene v12lil12i
     with dissolve
@@ -306,5 +312,20 @@ label v12_lindsey_lobby:
     with dissolve
 
     pause 0.75
+    play sound "sounds/vibrate.mp3"
+
+    pause 2
+
+    $ riley.messenger.newMessage("Hey, I saw you were having breakfast with Lindsey, can you come to the cafe down the road when you're done? I have something to talk to you about in private.", queue=False)
+    $ riley.messenger.addReply("Sure, on my way", func=None)
+
+    label v12s36_riley_text:
+        if riley.messenger.replies:
+            call screen phone
+        if riley.messenger.replies:
+            u "(I should probably reply.)"
+            jump v12s36_riley_text
+
+    stop music fadeout 3
 
     jump v12_riley_ending #scene 37

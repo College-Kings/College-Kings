@@ -5,14 +5,14 @@
 
 init python:
     def v9s38_reply1():
-        contact_Lindsey.newMessage(_("Great. See ya soon"))
+        lindsey.messenger.newMessage(_("Great. See ya soon"))
         setattr(store, "hangOutWithLindsey", True)
 
     def v9s38_reply2():
-        contact_Lindsey.newMessage(_(":("))
-        contact_Lindsey.addReply(_("Please don't hate me. You know I want to. I really, really want to."))
-        contact_Lindsey.newMessage(_("No hard feelings. Bye"))
-        contact_Lindsey.addReply(_("Maybe after the fight?"))
+        lindsey.messenger.newMessage(_(":("))
+        lindsey.messenger.addReply(_("Please don't hate me. You know I want to. I really, really want to."))
+        lindsey.messenger.newMessage(_("No hard feelings. Bye"))
+        lindsey.messenger.addReply(_("Maybe after the fight?"))
 
 label v9_walk_li_txt:
     scene v9wlt1 # TPP. Show MC walking through the park on his own, looking stressed.
@@ -22,7 +22,7 @@ label v9_walk_li_txt:
 
     u "(I may need some help if they run into each other again)"
 
-    play music "music/v9/Scene 38/Track Scene 38.mp3" fadein 2
+    play music "music/v9/Scene 8/Track Scene 8_3.mp3" fadein 2
 
     scene v9wlt1a # TPP. Same camera as v9wlt1, MC checking his phone.
     with dissolve
@@ -31,18 +31,18 @@ label v9_walk_li_txt:
 
     u "(Please no more drama)"
 
-    $ contact_Lindsey.newMessage(_("Hey Freshmeat! How's it hangin?"), queue=False)
-    $ contact_Lindsey.addReply(_("Hey Linds ;)"))
-    $ contact_Lindsey.newMessage(_("I've decided to allow the nickname under one condition"))
-    $ contact_Lindsey.addReply(_("Really? And what's that?"))
-    $ contact_Lindsey.newMessage(_("Come hang out with me"))
-    $ contact_Lindsey.addReply(_("Hell yeah! Be right there, Linds!"), v9s38_reply1)
-    $ contact_Lindsey.addReply(_("Aww, I wish I could, but I gotta get ready for the brawl"), v9s38_reply2)
+    $ lindsey.messenger.newMessage(_("Hey Freshmeat! How's it hangin?"), queue=False)
+    $ lindsey.messenger.addReply(_("Hey Linds ;)"))
+    $ lindsey.messenger.newMessage(_("I've decided to allow the nickname under one condition"))
+    $ lindsey.messenger.addReply(_("Really? And what's that?"))
+    $ lindsey.messenger.newMessage(_("Come hang out with me"))
+    $ lindsey.messenger.addReply(_("Hell yeah! Be right there, Linds!"), v9s38_reply1)
+    $ lindsey.messenger.addReply(_("Aww, I wish I could, but I gotta get ready for the brawl"), v9s38_reply2)
     
     label s38_PhoneContinue:
-        if contact_Lindsey.getReplies():
+        if lindsey.messenger.replies:
             call screen phone
-        if contact_Lindsey.getReplies():
+        if lindsey.messenger.replies:
             "(I should reply to Lindsey.)"
             jump s38_PhoneContinue 
     

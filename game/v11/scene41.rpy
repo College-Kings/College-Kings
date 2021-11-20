@@ -6,7 +6,7 @@
 label v11_chloe_bathroom:
     scene v11chb1 # TPP. Show MC walking into the room, confused, mouth closed
     with dissolve
-    play music "music/v11/Scene 41/Track Scene 41_1.mp3" fadein 2
+    play music "music/V10/Scene 40/Track Scene 40_3.mp3" fadein 2
     cl "*Crying*"
 
     scene v11chb2 # TPP. Show MC walking up to the bathroom door, worried expression, mouth closed
@@ -236,9 +236,10 @@ label v11_chloe_bathroom:
 
             if chloers or chloegf or kct == "popular":
                 $ v11_chloe_sex = True
+                $ chloers = True
 
                 if not chloers and not chloegf:
-                    call screen kctPopup
+                    call screen kct_popup
                 stop music fadeout 3
                 jump v11_chloe_sex_scene
 

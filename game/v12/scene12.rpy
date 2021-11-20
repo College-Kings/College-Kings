@@ -5,11 +5,12 @@
 
 label v12_room_chloe_riley:
     if not v11_riley_roomate:
-
         scene v12crm2 # FPP. MC looking at chloe laying down on her bed, mouth closed
         with dissolve
 
         u "Hey, hey. Thanks for checking us in."
+
+        play music "music/v12/Scene 12/Track Scene 12_1.mp3" fadein 2
 
         scene v12crm2a # FPP. same as 2, smiling and mouth opened
         with dissolve
@@ -43,6 +44,7 @@ label v12_room_chloe_riley:
 
         menu:
             "Truth":
+                $ add_point(KCT.BOYFRIEND)
                 scene v12crm2
                 with dissolve
 
@@ -54,6 +56,7 @@ label v12_room_chloe_riley:
                 cl "Mhmm, sure. I'll be keeping my eyes on you."
 
             "Lie":
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v12crm2 
                 with dissolve
 
@@ -143,6 +146,13 @@ label v12_room_chloe_riley:
             scene v12crm7 # TPP. Image of MC sleeping
             with dissolve
 
+            pause 1
+
+            scene black
+            with dissolve
+            
+            pause 2
+
         else:
             scene v12crm8 # TPP. Chloe gets up out of her bed, lights off
             with dissolve
@@ -194,12 +204,19 @@ label v12_room_chloe_riley:
 
             pause 1.75
 
+            scene black
+            with dissolve
+            
+            pause 2
+
     else: 
 
         scene v12crm12 # FPP. Now in the room, riley on her bed, slight smile, mouth opened
         with dissolve
 
         ri "About time! What were you doing, plotting your next murder?"
+
+        play music "music/v12/Scene 12/Track Scene 12_2.mp3" fadein 2
 
         scene v12crm12a # FPP. looking at riley, mouth closed
         with dissolve
@@ -351,5 +368,12 @@ label v12_room_chloe_riley:
         with dissolve
 
         pause 1.25
+
+        scene black
+        with dissolve
+            
+        pause 2
+
+    stop music fadeout 3
 
     jump v12_cafe #scene 13

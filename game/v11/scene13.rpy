@@ -32,6 +32,7 @@ label v11_aubrey_plane_sex:
             "Go after her":
                 label v11_aubrey_plane_sex_sg:
                 $ v11_aubrey_sex = True
+                #$ add_point(KCT.TROUBLEMAKER, sum([ aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex, v11_fucked_candy ])) ###Loyaltymod
 
                 scene v11aub4
                 with dissolve
@@ -47,6 +48,10 @@ label v11_aubrey_plane_sex:
                 with dissolve
 
                 pause 0.75
+
+                if config_censored:
+                    call screen censoredPopup("v11s13_nsfwSkipLabel1")
+
                 stop music fadeout 3
                 play music "music/v11/Scene 13/Track Scene 13_2.mp3" fadein 2
                 scene v11aub8 # FPP. MC walks in the bathroom and sees Aubrey, she is naked, smiling seducrtively at him, mouth closed (Make sure it's not the plane one, use the other bathroom)
@@ -262,8 +267,6 @@ label v11_aubrey_plane_sex:
                 with dissolve
 
                 if laurenrs:
-                    $ laurenmad = True
-                   
                     pause 0.75
                     
                     scene v11aub17a # FPP. Same cam as v11aub17, door fully open, Lauren is very angry, mouth open
@@ -311,12 +314,14 @@ label v11_aubrey_plane_sex:
 
                 menu:
                     "No, not really":
+                        $ add_point(KCT.TROUBLEMAKER)
                         scene v11aub18a # FPP. Same as v11aub18, Aubrey mouth closed, slightly smiling
                         with dissolve
 
                         u "Uhm... I'm not sure I agree."
                         
                     "Kinda hot":
+                        $ add_point(KCT.BOYFRIEND)
                         scene v11aub18a
                         with dissolve
 
@@ -335,6 +340,8 @@ label v11_aubrey_plane_sex:
                 with dissolve
 
                 pause 1.25
+
+                label v11s13_nsfwSkipLabel1:
 
                 scene v11aub20 # FPP. Aubrey is poking her head through the bathroom door, MC is still inside (This render should use the plane bathroom)
                 with dissolve

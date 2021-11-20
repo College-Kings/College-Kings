@@ -147,7 +147,7 @@ label mon_morning_room:
 
         u "Ma'am, I am asking you to understand that not everyone is perfect, that we all make mistakes. I am asking that you be lenient with her. She did what she did from a good place. From her heart."
 
-        u "Wouldn't you do stupid things for those you care about?{w}... Ma'am."
+        u "Wouldn't you do stupid things for those you care about...? Ma'am."
 
         scene v8sdea10e # FPP. Same camera as v8sdea10, slight smile, mouth open.
         with dissolve

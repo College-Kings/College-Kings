@@ -10,6 +10,8 @@ label v12_chris_nora_room:
 
     pause 0.75
 
+    play music "music/v12/Scene 35/Track Scene 35.mp3" fadein 2
+
     scene v12cnr2 # TPP. Show MC walking into his room, mouth closed, neutral expression
     with dissolve
 
@@ -67,11 +69,9 @@ label v12_chris_nora_room:
 
     u "(It really seems like those two are coming to a crossroads. I'm sure she's pretty heated right now, I wonder if I should go talk to her.)"
 
-    scene v12cnr5b # TPP. Same as v12cnr5, MC confused, mouth closed
-    with dissolve
-
     menu:
         "Go to Nora":
+            $ add_point(KCT.BOYFRIEND)
             scene v12cnr10 # TPP. Show MC walking towards his hotel room door to the hallway, neutral expression, mouth closed
             with dissolve
 
@@ -82,10 +82,9 @@ label v12_chris_nora_room:
 
             pause 0.75
 
-            play sound "sounds/knock.mp3"
-
             scene v12cnr12 # TPP. Show MC knocking on Nora's door, MC slightly worried, mouth open
             with dissolve
+            play sound "sounds/knock.mp3"
 
             u "Nora, I... Are you alright?"
 
@@ -99,7 +98,7 @@ label v12_chris_nora_room:
 
             u "Nora..."
 
-            if not noralikes or (noralikes and v11_kiss_nora): # if Noralikes she lets him in after a bit. If not Noralikes he has to convince her and can fail. If mc made a move on Nora before, she is not letting him in.
+            if (not noralikes) or (noralikes and v11_kiss_nora): # if Noralikes she lets him in after a bit. If not Noralikes he has to convince her and can fail. If mc made a move on Nora before, she is not letting him in.
                 scene v12cnr13
                 with dissolve
 
@@ -120,6 +119,7 @@ label v12_chris_nora_room:
 
                 pause 0.75
 
+                play sound "sounds/doorclose.mp3"
                 scene v12cnr4
                 with dissolve
 
@@ -133,27 +133,33 @@ label v12_chris_nora_room:
                 jump v12_game_roommate
 
             else:
+                play sound "sounds/dooropen.mp3"
                 scene v12cnr12a # TPP. Same as v12cnr12, Door open, Nora inside the room, looking at MC who is outside, Nora crying, mouth closed, MC worried, mouth closed
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
                 scene v12cnr14 # TPP. Show Nora walking towards her bed, MC slightly behind her, Nora crying, mouth closed, MC worried, mouth closed
                 with dissolve
 
-                pause 0.75
+                pause 1
 
                 scene v12cnr15 # TPP. Show Nora and MC sitting next to each other on the bed, Nora crying, mouth closed, MC worried, mouth open, Nora looking down, MC looking at Nora
                 with dissolve
 
                 pause 0.75
 
-                jump v12_scene35a
+                stop music fadeout 3
+
+                jump v12_nora_room #scene 35a
 
         "Leave her alone":
+            $ add_point(KCT.BRO)
             scene v12cnr5
             with dissolve
 
             u "(It's not my place to get involved.)"
+
+            stop music fadeout 3
 
             jump v12_game_roommate #scene 35b

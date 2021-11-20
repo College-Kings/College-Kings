@@ -7,8 +7,6 @@ label v3start:
     stop music fadeout 2.0
     play sound "sounds/knock.mp3"
 
-    "*Knock knock knock*"
-
     u "(Who could that be?)"
 
     play music "music/mlove2.mp3"
@@ -146,7 +144,7 @@ label v3start:
 
     menu:
         "You're crazy.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s206c
             with dissolve
@@ -154,7 +152,7 @@ label v3start:
             u "Hahaha, man you're crazy."
 
         "That's not cool.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ notcool = True
 
             scene s206c
@@ -206,7 +204,7 @@ label v3start:
 
     menu:
         "Hell yeah.":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s208a
             with dissolve
@@ -506,7 +504,7 @@ label conl:
 
     menu:
         "Ask her about it":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             label cq_a: #for compatibility only
 
             scene s216 # chloe walking next to the volleyball
@@ -540,7 +538,7 @@ label conl:
             cl "Haha, good."
 
         "Don't question it":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             label cq_b: #for compatibility only
 
     scene s216c # cl grabs volleyball
@@ -602,7 +600,7 @@ label conl:
 
     menu:
         "Win the game":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             # volleybal hit sounds
 
@@ -634,7 +632,7 @@ label conl:
             u "I'm sure you'll get me next time."
 
         "Let her win":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s218c # you missing the ball
             with vpunch
@@ -689,8 +687,7 @@ label conl:
     scene s220c # chloe in shockc face
     with dissolve
 
-    "*Metal Door Sound*"
-
+    pause 0.75
     sec "Hello? Is there anyone in here?"
 
     scene s220d
@@ -725,7 +722,7 @@ label conl:
     play sound "sounds/switch.mp3"
     scene s223c # security out, lights off
 
-    "*Click*"
+    pause 0.75
 
     scene s222b
     with dissolve
@@ -772,7 +769,9 @@ label conl:
     scene s225  #Showing you in bed
     with Fade (2,0,2)
 
-    pause 1.0
+    pause 0.5
+    play sound "sounds/swoosh.mp3"
+    pause 0.5
 
     show screen fantasyOverlay
 
@@ -831,17 +830,17 @@ label conl:
 
     play sound "sounds/doorbell.mp3"
 
-    "*Doorbell rings*"
+    pause 1
 
     scene s228b
     with dissolve
 
-    pause 0.5
+    pause 1
 
     scene s229
     with dissolve
 
-    pause 0.5
+    pause 1
 
     play sound "sounds/dooropen.mp3"
     scene s230 # you open door and i's emily at night crying
@@ -860,7 +859,6 @@ label conl:
     pause 0.1
 
     hide glitch
-
     # GLITCH SOUND
 
     scene s231 # You arguing
@@ -890,12 +888,13 @@ label conl:
 
     u "NO! This is wrong. Just get out! Leave me alone!"
 
-    hide screen fantasyOverlay
+    play sound "sounds/swoosh.mp3"
 
     stop music fadeout 2.0
 
     scene s225a # you open your eyes
     with flash
+    hide screen fantasyOverlay
 
     u "*Breathing heavily*"
 
@@ -1060,7 +1059,7 @@ label conl:
 
     menu:
         "Show off":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             label cw_a: #for compatibility only
 
             scene s240
@@ -1165,7 +1164,7 @@ label conl:
 
         menu:
             "Approach her":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
                 label cx_a: #for compatibility only
 
                 scene s244
@@ -1270,7 +1269,7 @@ label conl:
                         u "(Damn, that didn't go as planned...)"
 
             "Leave it":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 label cx_ad: #for compatibility only
 
     scene s247 # imre coming back
@@ -1386,17 +1385,17 @@ label conl:
                 jump talkedout
 
             else: # caught and she's mad
-                $ contact_Aubrey.newMessage(_("I wanna talk about what happened yesterday."), queue=False)
-                $ contact_Aubrey.newMessage(_("Any chance that you could come over now?"))
-                $ contact_Aubrey.addReply(_("Yeah, I can."))
-                $ contact_Aubrey.newMessage(_("My room has a window facing the backyard. Can you climb in through there? I'll leave it open."))
-                $ contact_Aubrey.newMessage(_("I'd prefer if none of the girls saw you."))
-                $ contact_Aubrey.addReply(_("Uhm... sure."))
+                $ aubrey.messenger.newMessage(_("I wanna talk about what happened yesterday."), queue=False)
+                $ aubrey.messenger.newMessage(_("Any chance that you could come over now?"))
+                $ aubrey.messenger.addReply(_("Yeah, I can."))
+                $ aubrey.messenger.newMessage(_("My room has a window facing the backyard. Can you climb in through there? I'll leave it open."))
+                $ aubrey.messenger.newMessage(_("I'd prefer if none of the girls saw you."))
+                $ aubrey.messenger.addReply(_("Uhm... sure."))
 
                 label repeatk:
-                    if contact_Aubrey.getReplies():
+                    if aubrey.messenger.replies:
                         call screen phone
-                    if contact_Aubrey.getReplies():
+                    if aubrey.messenger.replies:
                         u "(I should probably check my phone.)"
                         jump repeatk
 
@@ -1527,8 +1526,8 @@ label conl:
                 label cy_b: #for compatibility only
                 menu:
                     "Take off your clothes":
-                        $ addPoint("bf")
-                        $ addPoint("bro")
+                        $ add_point(KCT.BOYFRIEND)
+                        $ add_point(KCT.BRO)
 
                         scene s256b #showing you pulling down your pants
                         with dissolve
@@ -1546,7 +1545,7 @@ label conl:
                         pause 0.5
 
                     "Refuse":
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         scene s254e
                         with dissolve
@@ -1580,20 +1579,20 @@ label conl:
 
         else: # not caught peeking but met
             label talkedout:
-                $ contact_Aubrey.newMessage(_("Hey, I really need your help."), queue=False)
-                $ contact_Aubrey.newMessage(_("Any chance that you could come over now?"), queue=False)
-                $ contact_Aubrey.addReply(_("Yeah, I'll be right there.."))
-                $ contact_Aubrey.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
-                $ contact_Aubrey.newMessage(_("I'll leave it open."))
-                $ contact_Aubrey.addReply(_("Uhm... sure."))
+                $ aubrey.messenger.newMessage(_("Hey, I really need your help."), queue=False)
+                $ aubrey.messenger.newMessage(_("Any chance that you could come over now?"), queue=False)
+                $ aubrey.messenger.addReply(_("Yeah, I'll be right there.."))
+                $ aubrey.messenger.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
+                $ aubrey.messenger.newMessage(_("I'll leave it open."))
+                $ aubrey.messenger.addReply(_("Uhm... sure."))
 
                 " "
 
                 call screen phone
                 label repeatl:
-                    if contact_Aubrey.getReplies():
+                    if aubrey.messenger.replies:
                         call screen phone
-                    if contact_Aubrey.getReplies():
+                    if aubrey.messenger.replies:
                         u "(I should probably check my phone.)"
                         jump repeatl
 
@@ -1716,7 +1715,7 @@ label conl:
 
                 menu:
                     "Truth":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         scene s254h
                         with dissolve
@@ -1781,8 +1780,8 @@ label conl:
 
 
                     "Dare":
-                        $ addPoint("tm")
-                        $ addPoint("bro")
+                        $ add_point(KCT.TROUBLEMAKER)
+                        $ add_point(KCT.BRO)
 
                 scene s254m
                 with dissolve
@@ -1840,17 +1839,17 @@ label conl:
                 au "Yeah..."
 
     else: # you didn't meet aubrey
-        $ contact_Aubrey.newMessage(_("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"), queue=False)
-        $ contact_Aubrey.newMessage(_("Wanna come over now?"), queue=False)
-        $ contact_Aubrey.addReply(_("Uhh... okay."))
-        $ contact_Aubrey.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
-        $ contact_Aubrey.newMessage(_("I'll leave it open."))
-        $ contact_Aubrey.addReply(_("Uhm... sure."))
+        $ aubrey.messenger.newMessage(_("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"), queue=False)
+        $ aubrey.messenger.newMessage(_("Wanna come over now?"), queue=False)
+        $ aubrey.messenger.addReply(_("Uhh... okay."))
+        $ aubrey.messenger.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
+        $ aubrey.messenger.newMessage(_("I'll leave it open."))
+        $ aubrey.messenger.addReply(_("Uhm... sure."))
 
         label repeatm:
-            if contact_Aubrey.getReplies():
+            if aubrey.messenger.replies:
                 call screen phone
-            if contact_Aubrey.getReplies():
+            if aubrey.messenger.replies:
                 u "(I should probably check my phone.)"
                 jump repeatm
 
@@ -1961,7 +1960,7 @@ label conl:
 
         menu:
             "Truth":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 scene s254h
                 with dissolve
@@ -2021,8 +2020,8 @@ label conl:
                 au "Okay, now it's your turn again."
 
             "Dare":
-                $ addPoint("tm")
-                $ addPoint("bro")
+                $ add_point(KCT.TROUBLEMAKER)
+                $ add_point(KCT.BRO)
 
         scene s254m
         with dissolve
@@ -2541,7 +2540,7 @@ label continuen:
 
     menu:
         "I'd love to.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s268a
             with dissolve
@@ -2549,7 +2548,7 @@ label continuen:
             u "Yeah, I'd love to."
 
         "I don't know...":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s268a
             with dissolve
@@ -2619,7 +2618,7 @@ label continueq:
         "Answer":
             stop sound
             play sound "sounds/answercall.mp3"
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s270b # you answer, hold phone next to your ear
             with dissolve
@@ -2653,7 +2652,7 @@ label continueq:
             menu:
                 "Shopping sounds great.":
                     $ meetjulia = True
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     u "Yeah, shopping sounds great, Julia."
 
@@ -2677,7 +2676,7 @@ label continueq:
                     play sound "sounds/rejectcall.mp3"
 
                 "I can't, sorry.":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     u "Sorry, Julia... I'm really busy this weekend."
 
@@ -2697,15 +2696,14 @@ label continueq:
             stop sound
             play sound "sounds/rejectcall.mp3"
 
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ dontanswerjulia = True
             # phone call declined sound
 
             scene s270
             with dissolve
 
-            $ notnowmom = True
-            $ grantAchievement("not_now_mom")
+            $ grant_achievement("not_now_mom")
                 
             u "(I don't really feel like talking to her right now.)"
 
@@ -2714,10 +2712,7 @@ label continueq:
     with fade
     play sound "sounds/knock.mp3"
 
-    # knock sound
-
-    "*Knock knock knock*"
-
+    pause 0.75
     scene s272 # showing you sitting on the side of bed pushing ready to stand up // camera angle to side of bed, looking at you from front
     with dissolve
 
@@ -2761,7 +2756,7 @@ label continueq:
 
     menu:
         "Compliment Riley":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s273d # Riley looking at ryan joking annoyed but her mouth is closed, ryan looking at her with a grin
             with dissolve
@@ -2786,7 +2781,7 @@ label continueq:
             u "Yeah, alright. Let me just change out of my gym clothes."
 
         "Agree with Ryan":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene s273d
             with dissolve
@@ -2928,7 +2923,7 @@ label continueq:
 
     menu:
         "Insult Ryan":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             
             u "Cause you were too fucking pussy to do it yourself."
 
@@ -2945,7 +2940,7 @@ label continueq:
             u "You don't know Chloe at all! You're just fucking jealous!"
 
         "Walk away":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
     scene s276b #RIley sad and concerned
     with dissolve
@@ -3037,7 +3032,7 @@ label continueq:
 
     menu:
         "I like her.":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene s281a
             with dissolve
@@ -3052,7 +3047,7 @@ label continueq:
             ri "Oh uhm... yeah, that sounds really good. I'm happy for you."
 
         "She's into me.":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene s281a
             with dissolve
@@ -3079,14 +3074,13 @@ label continueq:
             menu:
                 "Kiss her":
                     $ rileykiss = True
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     show rikiss2
                     pause(1)
                     play sound "sounds/kiss.mp3"
 
-                    $ lipsdontlie = True
-                    $ grantAchievement("lips_dont_lie")
+                    $ grant_achievement("lips_dont_lie")
                         
                     " "
 
@@ -3106,7 +3100,7 @@ label continueq:
                     ri "I'm glad you did."
 
                 "Don't kiss her":
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
 
                     ri "Just a really great guy."
 
@@ -3114,10 +3108,9 @@ label continueq:
 
                     u "Thanks, Riley."
 
+    label dj_bd: #for compatibility only
     scene s281
     with dissolve
-
-    label dj_bd: #for compatibility only
     ri "You know, Ryan is probably waiting for me to come back. Are you sure you wanna leave?"
 
     scene s281a
@@ -3150,13 +3143,13 @@ label continueq:
         scene s284 # Knocking on lauren's dorm
         with Fade (1,0,1)
         play sound "sounds/knock.mp3"
-
-        "*Knock knock knock*"
+        pause 1
 
         play sound "sounds/dooropen.mp3"
 
         scene s285 # Lauren oppens the door smiling
         with dissolve
+        pause 0.25
 
         la "Heyyy."
 
@@ -3198,7 +3191,7 @@ label continueq:
             menu:
                 "Tell her what happened.":
                     $ toldlauren = True
-                    $ addPoint("bf")
+                    $ add_point(KCT.BOYFRIEND)
                     $ laurenrs = False
 
                     u "(Lauren values honesty and we're not in a relationship yet, so she'll probably be understanding as long as I tell her the truth.)"
@@ -3256,15 +3249,14 @@ label continueq:
                     scene s287f # Lauren gone
                     with dissolve
 
-                    $ truthhurts = True
-                    $ grantAchievement("truth_hurts")
+                    $ grant_achievement("truth_hurts")
                         
                     u "(Fuck me... I guess that's what honesty gets you.)"
 
                     jump dk_ad
 
                 "Don't tell her.":
-                    $ addPoint("tm")
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     u "(Lauren seems to value loyalty, she might be upset if she finds out and I don't wanna ruin our date before it even started.)"
 
@@ -3352,7 +3344,7 @@ label continueq:
 
                 menu:
                     "Reach under her skirt":
-                        $ addPoint("tm")
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         scene s291a # same camera angle but your hand is under her skirt
                         with dissolve
@@ -3363,7 +3355,7 @@ label continueq:
 
                         menu:
                             "Keep going":
-                                $ addPoint("tm")
+                                $ add_point(KCT.TROUBLEMAKER)
                                 $ laurentoofar = True
                                 $ laurenrs = False
 
@@ -3404,7 +3396,7 @@ label continueq:
                                 jump dk_ad
 
                             "Stop":
-                                $ addPoint("bf")
+                                $ add_point(KCT.BOYFRIEND)
 
                                 scene s290b
                                 with dissolve
@@ -3419,7 +3411,7 @@ label continueq:
                                 pause 0.5
 
                     "Keep hands to yourself":
-                        $ addPoint("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         pause 1.0
 

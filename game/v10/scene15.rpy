@@ -8,21 +8,27 @@ label v10_call_with_lauren1:
         scene v10saow1 # TPP. Show MC in his Wolves bedroom, laying in his bed relaxing. He notices his phone buzzing. Curious/thoughtful expression, mouth closed.
         with fade
 
+        play sound "sounds/call.mp3"
+        
+        pause 1
+
         u "(Guess I should get that.)"
 
         scene v10saow1a # TPP. Same camera as v10saow1. Show MC in his Wolves bedroom, laying in his bed relaxing. He checks his phone to see who's calling. Curious/thoughtful expression, mouth closed.
         with dissolve
 
-        u "(Oh it's Lauren.)"
+        u "(Oh, it's Lauren.)"
 
         scene v10scwl1 # IGNORE, RENDER FROM SCENE 18.
         with dissolve
+        stop sound
+        play sound "sounds/answercall.mp3"
 
         u "Hello?"
 
         if laurenrs: # RCS - MC is a relationship with Lauren
             scene v10scwl1a # IGNORE, RENDER FROM SCENE 18
-            with dissolve    
+            with dissolve
             
             la "Heyyy, cutie, are you free right now?"
 
@@ -435,8 +441,7 @@ label v10_call_with_lauren1:
                     "Lion":
                         scene v10scwl2c 
                         with dissolve
-                        $ im_a_lion = True
-                        $ grantAchievement("rawr_im_a_lion")
+                        $ grant_achievement("rawr_im_a_lion")
                         u "Lion."
 
                 scene v10scwl2
@@ -549,10 +554,11 @@ label v10_call_with_lauren1:
 
                 u "I actually love Halloween, but I-"
 
+        play sound "sounds/twig.mp3"
         scene v10saow1b # TPP. Same camera as v10saow1. MC laying in his bed relaxing. He has the phone up to his ear, talking with Lauren. He looks over towards his window. Curious/thoughtful expression, mouth closed.
         with dissolve
         
-        pause 0.75
+        pause 1
 
         scene v10saow1c # TPP. Same camera as v10saow1. Show MC in his Wolves bedroom, laying in his bed relaxing. He puts the phone aside and gets up from his bed. Curious expression, mouth closed.
         with dissolve
@@ -572,7 +578,7 @@ label v10_call_with_lauren1:
         scene v10saow5 # FPP. MC is looking out the window. Show Aubrey outside in gym clothes, smiling, mouth closed.
         with fade
 
-        u "Hey What's up? Also, did you just throw a pebble at my window? *Chuckles*"
+        u "Hey, what's up? Also, did you just throw a pebble at my window? *Chuckles*"
 
         scene v10saow5a # FPP. Same camera as v10saow5. MC is looking out the window. Show Aubrey, smiling, mouth open.
         with dissolve
@@ -612,7 +618,7 @@ label v10_call_with_lauren1:
                     scene v10scwl1b
                     with dissolve
 
-                    u "No nothing's wrong, but I have to go. Apparently there's some frat thing coming up they wanna prep us for."
+                    u "No, nothing's wrong, but I have to go. Apparently there's some frat thing coming up they wanna prep us for."
 
                     scene v10scwl1c
                     with dissolve
@@ -622,7 +628,7 @@ label v10_call_with_lauren1:
                     scene v10scwl1b
                     with dissolve
 
-                    u "Bye Bye."
+                    u "Bye bye."
 
                     jump v10_aubrey_house
                 
@@ -783,7 +789,7 @@ label v10_call_with_lauren1:
 
         if laurenrs: # RCS - MC is a relationship with Lauren
             scene v10scwl1a # IGNORE, RENDER FROM SCENE 18
-            with dissolve    
+            with dissolve
             
             la "Heyyy, cutie, are you free right now?"
 
@@ -1194,11 +1200,10 @@ label v10_call_with_lauren1:
                         u "Gecko."
                     
                     "Lion":
-                        $ im_a_lion = True
                         scene v10saow3c
                         with dissolve
 
-                        $ grantAchievement("rawr_im_a_lion")
+                        $ grant_achievement("rawr_im_a_lion")
                         u "Lion."
 
                 scene v10saow3

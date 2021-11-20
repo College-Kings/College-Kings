@@ -1,4 +1,4 @@
-# SCENE 16: The story of Valantine
+# SCENE 16: The story of Valentine
 # Locations: Church, Hotel Lobby, Sidewalk
 # Characters: MC (Outfit: 5), RILEY (Outfit: 2), MR. LEE (Outfit: 1), LINDSEY (Outfit: 1), IMRE (Outfit: 1), BISHOP (Outfit: 1), NORA (Outfit: 1), CHARLI (Outfit: 1), CHRIS (Outfit: 1), CHLOE (Outfit: 5)
 # Time: Afternoon
@@ -9,6 +9,8 @@ label v12_valentine:
     with dissolve
 
     u "Home sweet home... *Laughs* Feeling alright?"
+
+    play music "music/v12/Scene 16/Track Scene 16_1.mp3" fadein 2
 
     scene v12val1a # FPP. Same as v12val1, Riley slight smile, mouth open
     with dissolve
@@ -138,7 +140,7 @@ label v12_valentine:
     scene v12val9a # FPP. Same as v12val9, Mr. Lee looking at Imre, Mr. Lee angry, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v12val10a # FPP. Same as v12val10, Imre worried, mouth open
     with dissolve
@@ -148,7 +150,10 @@ label v12_valentine:
     scene v12val11 # TPP. Show MC and Mr. Lee walking into the church, both slightly smiling, mouths closed, the bishop walking towards them (Bishop is around 50 years old), smiling, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
+
+    stop music fadeout 3
+    play music "music/v12/Scene 16/Track Scene 16_2.mp3" fadein 2
 
     scene v12val12 # FPP. MC, Mr. Lee and Nora standing next to each other, in front of them is the bishop, MC looking at bishop, bishop looking at Mr. lee, bishop smiling, mouth open (Only Bishop in shot)
     with dissolve
@@ -168,7 +173,7 @@ label v12_valentine:
     scene v12val14 # TPP. Show MC midway through sitting down at the front, Lindsey sitting down next to him, Chloe next to Lindsey, Imre next to MC, Charli next to Imre, Mr. Lee, Chris and Nora on the other bench. (Show only MC and Lindsey), both slightly smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12val15 # FPP. Same positioning as v12val14, bishop standing at the altar, MC looking at the bishop, bishop looking at MC, bishop slight smile, mouth open (Only bishop in shot)
     with dissolve
@@ -235,7 +240,7 @@ label v12_valentine:
     scene v12val15a
     with dissolve
 
-    bishop "Another common mistake. Cupid is the Roman God of love and within Greek mythology, he is the son of Aphrodite who is the God of Love in Greek mythology."
+    bishop "Another common mistake. Cupid is the Roman God of Love and within Greek mythology, he is the son of Aphrodite who is the God of Love in Greek mythology."
 
     scene v12val17a # FPP. Same as v12val17, Lindsey looking at MC, Lindsey slight smile, mouth closed
     with dissolve
@@ -310,7 +315,7 @@ label v12_valentine:
     scene v12val21
     with dissolve
 
-    ch "It's the Capital of Italy..."
+    ch "It's the capital of Italy..."
 
     scene v12val18b
     with dissolve
@@ -382,7 +387,7 @@ label v12_valentine:
     scene v12val15b
     with dissolve
 
-    bishop "Bare with me, my son."
+    bishop "Bear with me, my son."
     bishop "While in prison, prior to his execution, the jailer's blind daughter would bring him his meals and from that stemmed many conversations. From those many conversations, they fell in love."
     bishop "One day, Saint Valentine slid his hand through the bars of his cell, touched the lids of the girl's eyes and miraculously she could see."
 
@@ -511,7 +516,7 @@ label v12_valentine:
     scene v12val23 # TPP. Show Chris and Nora walking up to the altar, hands held, both smiling, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12val24 # FPP. Nora and Chris at the altar, standing in front of each other, bishop in front of them (mock wedding), bishop looking at Chris, bishop slight smile, mouth open, Chris and Nora smiling, mouths closed
     with dissolve
@@ -565,12 +570,12 @@ label v12_valentine:
     scene v12val26 # TPP. Show MC standing up in front of where he was seated, looking at Charli, MC smirking, mouth closed, Charli annoyed, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12val23a # TPP. Same as v12val23, but MC is walking towards the altar (No Nora or Chris), MC slight smile, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v12val27 # FPP. MC and Nora standing in front of each other at the altar, Bishop in front of both of them (mock wedding), other characters same positioning as v12val14, MC looking at bishop, bishop looking at MC, bishop slight smile, mouth open (only bishop in shot)
     with dissolve
@@ -602,7 +607,7 @@ label v12_valentine:
 
     menu:
         "Leave her be":
-
+            $ add_point(KCT.BRO)
             u "(Not the time, not in front of everyone.)"
 
             scene v12val29a # FPP. Same as v12val29, Lindsey looking at Nora, Lindsey smiling, excited, mouth open (screaming)
@@ -616,15 +621,20 @@ label v12_valentine:
             pause 0.75
 
         "Comfort her":
+            pause 0.5
+            $ add_point(KCT.BOYFRIEND)
             scene v12val31 # TPP. Show MC leaning in a whispering in Nora's ear, holding her hand, Nora slight smile, mouth closed, MC slight smile, mouth open
             with dissolve
 
             u "*Whisper* I know that bothered you, but try and roll it off your shoulder, yeah? Worry about what's in front of you, not what's down the hall."
 
+    stop music fadeout 3
+    play music "music/v12/Scene 16/Track Scene 16_3.mp3" fadein 2
+
     scene v12val30c # FPP. Same as v12val30, Nora looking at MC, Nora slight smile, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.5
 
     scene v12val27b # FPP. Same as v12val27, bishop looking at Nora, bishop slight smile, mouth open
     with dissolve
@@ -665,7 +675,7 @@ label v12_valentine:
         scene v12val30g # FPP. Same as v12val30c, Nora eyes tearing up (not crying, just tearing up), slight smile, mouth closed
         with dissolve
 
-        pause 0.75
+        pause 1.5
     
     scene v12val30e
     with dissolve
@@ -686,7 +696,7 @@ label v12_valentine:
         scene v12val32
         with dissolve
 
-        cl "*Whispers* Oh! Yeah, haha. He asked me out while we were in London... It was so cute,"
+        cl "*Whispers* Oh! Yeah, haha. He asked me out while we were in London... It was so cute."
 
         scene v12val29b
         with dissolve
@@ -708,13 +718,14 @@ label v12_valentine:
 
     menu:
         "Joke":
+            $ add_point(KCT.BRO)
             scene v12val30h # FPP. Same as v12val30c, different pose
             with dissolve
 
             u "Nora, I remember living alone on the streets with nothing but the clothes on my back."
             u "The day you came up to me, I thought I'd get a couple dollars for a chicken sandwich, but I ended up with the best digits I could have ever hoped for - the number to an opportunity."
 
-            scene v12val30c
+            scene v12val30g
             with dissolve
 
             u "I've been working for a few days now, and I don't get my first check until I've worked for two weeks but... I wanted to pay you back for helping me, so here I am. Swearing myself to you for eternity."
@@ -740,6 +751,7 @@ label v12_valentine:
             bishop "Haven't heard any vows like that before, but... Vows are vows I suppose."
 
         "Be serious":
+            $ add_point(KCT.BOYFRIEND)
             scene v12val30h
             with dissolve
 
@@ -770,21 +782,6 @@ label v12_valentine:
                 with dissolve
 
                 cl "*Whisper* Just making sure he knows that I'm the only girl he should be talking to like that. *Chuckles*"
-
-                scene v12val29b
-                with dissolve
-
-                li "*Whisper* Are you guys dating or something?"
-
-                scene v12val32
-                with dissolve
-
-                cl "*Whisper* Yes! He officially asked me out in London. It was so romantic..."
-
-                scene v12val29b
-                with dissolve
-
-                li "*Whisper* Aww, that's so cute! Tell me everything..."
 
             scene v12val27
             with dissolve
@@ -817,10 +814,11 @@ label v12_valentine:
 
         menu:
             "Fist bump":
+                $ add_point(KCT.BRO)
                 scene v12val30i # FPP. Same as v12val30c, MC has his fist extended, Nora slight smile, mouth closed, fist bumping MC
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
                 scene v12val27
                 with dissolve
@@ -828,23 +826,25 @@ label v12_valentine:
                 bishop "Very sweet, you two."
 
             "Kiss her cheek":
+                $ add_point(KCT.BOYFRIEND)
                 scene v12val35 # TPP. Show MC kissing Nora's cheek, Nora slight smile, blushing, mouth closed
                 with dissolve
 
                 play sound "sounds/kiss.mp3"
 
-                pause 0.75
+                pause 1.25
 
                 scene v12val27
                 with dissolve
 
+                $ grant_achievement("you_may_kiss_the_bride")
                 bishop "That was very sweet of you, young man."
         
     else:
         scene v12val30i
         with dissolve
 
-        pause 0.75
+        pause 1.5
 
         scene v12val27 
         with dissolve
@@ -951,8 +951,13 @@ label v12_valentine:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v12/Scene 16/Track Scene 16_4.mp3" fadein 2
+
     scene v12val42 # TPP. Show Charli walking next to MC, Imre and Lindsey walking in front of them, on sidewalk, all slightly smiling, mouths closed
     with dissolve
+
+    pause 0.75
 
     if chloegf and not laurenrs:
         scene v12val43 # FPP. Charli next to MC on the sidewalk, not walking, Charli and MC looking at each other, Charli slightly annoyed, mouth open
@@ -1010,5 +1015,7 @@ label v12_valentine:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v12_escape_room #scene 17

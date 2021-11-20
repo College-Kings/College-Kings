@@ -166,10 +166,10 @@ label sun_aft_apes_house:
 
     menu:
         "Side with Grayson":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             jump sun_aft_grayson
         "Side with Cameron":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ sideWithCameron = True
             jump sun_aft_cameron
 

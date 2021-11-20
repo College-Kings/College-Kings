@@ -6,7 +6,7 @@
 label v11_lindsey_park:
     scene v11lip1 # TPP. Show MC walking up to Lindsey, she is sitting down on the bench, slightly sad, mouth closed, looking at the trees, MC shown from behind
     with dissolve
-    play music "music/v11/Scene 31/Track Scene 31.mp3" fadein 2
+    play music "music/v11/Scene 9/Track Scene 9_2.mp3" fadein 2
     pause 0.75
 
     scene v11lip2 # TPP. Show MC midway through sitting down, MC and Lindsey now looking at each other, both slight smiles, mouths closed
@@ -110,7 +110,6 @@ label v11_lindsey_park:
     menu:
         "Defend Chloe":
             $ lindseyLike -= 1
-
             scene v11lip3b
             with dissolve
 
@@ -118,7 +117,6 @@ label v11_lindsey_park:
 
         "Don't defend Chloe":
             $ lindseyLike += 1
-
             scene v11lip3d
             with dissolve
 
@@ -135,7 +133,6 @@ label v11_lindsey_park:
     menu:
         "Support Chloe":
             $ lindseyLike -= 1
-
             scene v11lip3b
             with dissolve
 
@@ -169,14 +166,16 @@ label v11_lindsey_park:
             li "Always down for being held accountable."
 
         "Support Lindsey":
-            $ political_strategist = True
+            $ v11_lindsey_run = True
+            $ political_strategist = True #keep
             $ lindseyLike += 1
 
             scene v11lip3h # FPP. Same as v11lip3d, different pose
             with dissolve
 
-            if politics: 
-                $ grantAchievement("political_strategist")
+            if politics:
+                $ grant_achievement("political_strategist")
+
             u "I'm down to support you as long as all of this means a new beginning for the Chicks. I'm not in the business of switching out one problem for another, get what I'm saying?"
 
             scene v11lip3i # FPP. Same as v11lip3e, different pose
@@ -447,7 +446,7 @@ label v11_lindsey_park:
 
     pause 0.75
 
-    if laurenmad: # Requirements for apology scene
+    if v11_aubrey_sex and laurenrs: # Requirements for apology scene
 
         scene v11lip6 # TPP. Show MC sitting down he has a slightly relieved expression, mouth closed
         with dissolve

@@ -8,7 +8,6 @@ label v11_hotel_room:
     play sound "sounds/swoosh.mp3"
     scene s587
     with flash
-    play music "music/v11/Scene 29/Track Scene 29.mp3" fadein 2
     ri "He's coming!"
 
     scene s588  
@@ -40,7 +39,7 @@ label v11_hotel_room:
 
     menu (fail_label="v11timera"):
         "Save Lauren":
-            $ addPoint("bf")
+            $ add_point(KCT.BOYFRIEND)
             $ v11save = 1
 
             scene v11bane5 # Mc tackles Lauren out of the guns aim (replace bane like character for MC )
@@ -63,16 +62,18 @@ label v11_hotel_room:
             scene v11bane4a # FPP. Show charli on the floor screaming over Riley's dead body
             with dissolve
 
+            pause 1.5
+
             jump v11wakeupa
 
         "Save Riley":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
             $ v11save = 2
 
             scene v11bane6 # Mc tackles Riley out of the guns aim (replace bane character with MC, Mc should still be tackling Riley out the way)
             with dissolve
 
-            unknown "1..."
+            u "1..."
             play sound "sounds/fall.mp3"
 
             scene s595 # Mc and Riley on the ground terrified
@@ -89,7 +90,7 @@ label v11_hotel_room:
             scene v11bane4 # FPP. Show charli on the floor screaming over chloe's dead body
             with dissolve
             
-            pause 0.75
+            pause 1.5
             
             jump v11wakeupa
 
@@ -99,7 +100,7 @@ label v11timera:
     scene s596 # close up of your face terried
     with dissolve
 
-    unknown "1..."
+    u "1..."
     play sound "sounds/gun.mp3"
 
     scene s596a # Mc screaming terrified
@@ -128,10 +129,11 @@ label v11wakeupa:
 
         u "Oh, uh... yeah. Just a bad dream I guess... You're up early."
 
+        play music "music/v11/Scene 19/Track Scene 19_1.mp3" fadein 2
         scene v11bane3b # FPP. Same 3, chloe now looking at her suitcase accross the room, mouth open.
         with dissolve
 
-        cl "I'm trying to finish unpacking. Something I haven't had a chance to do some how, ha."
+        cl "I'm trying to finish unpacking. Something I haven't had a chance to do somehow, ha."
 
         scene v11hr3 # FPP. MC is now standing next to Chloe, Chloe looking at MC, Chloe mouth closed, slight smile
         with dissolve
@@ -305,6 +307,8 @@ label v11wakeupa:
 
         ri "[name]! Get up! You can't just sleep all day."
 
+        play music "music/v11/Scene 19/Track Scene 19_1.mp3" fadein 2
+
         scene v11hr9 # FPP. MC is lying in his bed, he is looking at Riley, who is standing next to him, she is slightly angry, mouth closed
         with fade
 
@@ -340,7 +344,7 @@ label v11wakeupa:
 
         menu:
             "Tease":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
                 $ rileyLike -= 1
 
                 scene v11hr11
@@ -354,7 +358,7 @@ label v11wakeupa:
                 ri "You wish."
 
             "Flirt":
-                $ addPoint("bf")
+                $ add_point(KCT.BOYFRIEND)
                 $ rileyLike += 1
 
                 scene v11hr11b # FPP. Same as v11hr11, Riley slightly smiling, mouth closed
@@ -434,20 +438,20 @@ label v11wakeupa:
 
         u "Haha."
 
-    scene v11hr12 # TPP. Show MC getting dressed (neutral expression, mouth closed) (only mc is in this shot)
-    with dissolve
+    #scene v11hr12 # TPP. Show MC getting dressed (neutral expression, mouth closed) (only mc is in this shot)
+    #with dissolve
 
-    pause 0.75
+    #pause 0.75
 
-    scene v11hr13 # TPP. Show MC going out the door of his hotel room (only mc is in this shot)
-    with dissolve
+    #scene v11hr13 # TPP. Show MC going out the door of his hotel room (only mc is in this shot)
+    #with dissolve
 
-    pause 0.75
+    #pause 0.75
 
-    scene v11hr14 # TPP. Show MC walking in the corridor outside his hotel room (only mc is in the shot)
-    with dissolve
+    #scene v11hr14 # TPP. Show MC walking in the corridor outside his hotel room (only mc is in the shot)
+    #with dissolve
 
-    pause 0.75
+    #pause 0.75
     stop music fadeout 3
     if v11_aubrey_sex and laurenrs:
         jump v11_lauren_apology
