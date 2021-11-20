@@ -253,7 +253,7 @@ label v14s45a:
 
     am "I mean, like... You're nice, and warm, like a blanket that wraps me up tight and makes me feel safe."
 
-    scene v14s45a_3b
+    scene v14s45a_3
     with dissolve
 
     u "(Holy shit, that's the cutest thing I've ever heard.)"
