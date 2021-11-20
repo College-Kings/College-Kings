@@ -288,9 +288,9 @@ label v11_cardealership:
 
     cl "Haha, [name], this is amazing."
 
-    if chloers: 
-       menu:
-           "Talk about \"us\"": 
+    if chloers:
+        menu:
+            "Talk about \"us\"": 
                 scene v11cd22a # FPP. looking at chloe, mouth closed
                 with dissolve
 
@@ -316,7 +316,7 @@ label v11_cardealership:
 
                 u "I'm glad you think so."
 
-           "Talk about cars":
+            "Talk about cars":
                 scene v11cd22a
                 with dissolve
              
