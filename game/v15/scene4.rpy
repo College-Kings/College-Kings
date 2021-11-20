@@ -166,7 +166,7 @@ label v15s4:
 
             play sound "sounds/slam.mp3"
 
-            scene v15s4_6a # FPP. Same as v15s4_6, Autumn putting down both the boxes on the reception center desk, neutral face, mouth closed.
+            scene v15s4_6c # FPP. Same as v15s4_6, Autumn putting down both the boxes on the reception center desk, neutral face, mouth closed.
             with vpunch
 
             au "Oh no..."
@@ -525,7 +525,7 @@ label v15s4:
                     if laurenrs:
                         u "(It would be weird if I checked out Autumn while I'm with Lauren...)"
             
-            scene v15s4_19 # FPP. MC turned around looking at the dog as him and Autumn are leaving, Autumn off-camera.
+            scene v15s4_63 # FPP. MC turned around looking at the dog as him and Autumn are leaving, Autumn off-camera.
             with dissolve    
 
             u "Bye, Blue!"
@@ -1045,7 +1045,7 @@ label v15s4:
 
     u "What do you mean? Ha, a farm is one the most ideal places for a dog to live... Right?"
 
-    scene v15s4_43d # FPP. Same as v15s4_43c, Autumn's body facing towards Oscar's owner, Autumn looking at MC, Autumn confused, mouth open,
+    scene v15s4_43i # FPP. Same as v15s4_43c, Autumn's body facing towards Oscar's owner, Autumn looking at MC, Autumn confused, mouth open,
     with dissolve
 
     au "Exactly."
