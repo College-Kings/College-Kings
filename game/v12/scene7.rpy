@@ -671,8 +671,7 @@ label v12s7_aubrey2:
             scene v12ferauh2a # TPP. same 2, mc mouth open
             with dissolve
             
-            if not pb:
-                $ grant_achievement("doctors_orders")
+            $ grant_achievement("doctors_orders")
             u "Oh... Yeah, this is definitely more interesting than a murder."
 
             scene v12ferauh3 # TPP. Show aubrey kissing mc, placing his hand on her ass.
@@ -912,8 +911,7 @@ label v12s7_riley1:
             scene v12ferri4a
             with dissolve
 
-            if not pb:
-                $ grant_achievement("zero_to_hero")
+            $ grant_achievement("zero_to_hero")
             u "I'm actually quite poor myself. My manager takes nearly all of my winnings and after expenses, I'm usually left with hardly anything."
 
             scene v12ferri4
@@ -2643,8 +2641,7 @@ label v12s7_imre_kill:
     scene v12ferim1b
     with dissolve
 
-    if not pb:
-        $ grant_achievement("mercy_killing")
+    $ grant_achievement("mercy_killing")
     imre "FREEDOM!!!"
 
     scene v12ferim1c
@@ -3282,8 +3279,7 @@ label v12s7_charli_kill:
     with dissolve
 
     if len(v12s7_killList) == v12s7_victims:
-        if not pb:
-            $ grant_achievement("best_for_last")
+        $ grant_achievement("best_for_last")
 
     u "Boom."
 
@@ -4911,8 +4907,7 @@ label v12s7_samantha_kill:
     scene v12fersam4 # TPP. Show mc, mouth open, pointing finger fun at sam.
     with dissolve
 
-    if not pb:
-        $ grant_achievement("talk_murder_to_me")
+    $ grant_achievement("talk_murder_to_me")
     u "Boom."
 
     stop music fadeout 3
@@ -6238,8 +6233,7 @@ label v12s7_mc_caught:
     play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
 
     if len(v12s7_killList) == 0:
-        if not pb:
-            $ grant_achievement("weapons_down")
+        $ grant_achievement("weapons_down")
 
     unknown "I found the murderer!"
 

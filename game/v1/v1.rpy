@@ -1,14 +1,12 @@
 init python:
     # Emily's messages
     def v1_reply1():
-        if not pb:
-            grant_achievement("no_hard_feelings")
+        grant_achievement("no_hard_feelings")
 
         emily.messenger.newMessage(_("Cool :)"))
 
     def v1_reply2():
-        if not pb:
-            grant_achievement("open_wound")
+        grant_achievement("open_wound")
 
         add_point(KCT.TROUBLEMAKER)
         emily.messenger.newMessage(_("Ugh :/"))
@@ -1150,8 +1148,7 @@ label starta: #for compatibility only
                 scene s56no1a
                 with dissolve
 
-                if not pb:
-                    $ grant_achievement("keep_it_moving")
+                $ grant_achievement("keep_it_moving")
 
                 u "Actually, I knew that. I just wanted to talk to you 'cause you're really cute."
 
@@ -2022,9 +2019,7 @@ label at_bd:
 
     if not config_censored:
 
-        call screen nsfw_Toggle("v1_exit")
-
-    label v1_exit:
+        call screen nsfw_Toggle
 
     if config_censored:
         call screen censoredPopup("v1_nsfwSkipLabel1")
@@ -2765,8 +2760,7 @@ label aw_bd:
                 with dissolve # kiss
                 $ v1_kissLauren = True
                 
-                if not pb:
-                    $ grant_achievement("romeo")
+                $ grant_achievement("romeo")
 
                 play sound "sounds/kiss.mp3"
 
@@ -3473,8 +3467,7 @@ label v1_freeRoam2_mason:
             scene fr2ma1a
             with dissolve
 
-            if not pb:
-                $ grant_achievement("big_mouth")
+            $ grant_achievement("big_mouth")
                 
             u "Yeah, he better watch out, or I'll kick his ass."
 

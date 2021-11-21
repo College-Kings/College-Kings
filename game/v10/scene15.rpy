@@ -442,8 +442,7 @@ label v10_call_with_lauren1:
                         scene v10scwl2c 
                         with dissolve
                         
-                        if not pb:
-                            $ grant_achievement("rawr_im_a_lion")
+                        $ grant_achievement("rawr_im_a_lion")
                         u "Lion."
 
                 scene v10scwl2
@@ -1205,8 +1204,7 @@ label v10_call_with_lauren1:
                         scene v10saow3c
                         with dissolve
 
-                        if not pb:
-                            $ grant_achievement("rawr_im_a_lion")
+                        $ grant_achievement("rawr_im_a_lion")
                         u "Lion."
 
                 scene v10saow3

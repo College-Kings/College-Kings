@@ -84,8 +84,7 @@ label v14s25:
             scene v14s25_4g # FPP. Same as v14s25_4f, Amber looking down as MC hands her the twezzlers candy, Amber slight smile, mouth open. 
             with dissolve
 
-            if not pb:
-                $ grant_achievement("how_did_you_know")
+            $ grant_achievement("how_did_you_know")
 
             am "How did you know these were my favorite?"
 

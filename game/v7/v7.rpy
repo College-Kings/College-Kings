@@ -472,8 +472,7 @@ label v7start:
                 scene s683a
                 with dissolve
 
-                if not pb:
-                    $ grant_achievement("true_to_self")
+                $ grant_achievement("true_to_self")
                 
                 u "Uhh, yeah of course."
 
@@ -3464,36 +3463,33 @@ label afterbeach:
     if not meetgrayson:
         u "(Wolves pledging starts soon... is it stupid of me to wanna pledge now? I didn't think frat life was for me..."
 
-        if not pb:
-            $ grant_achievement("wolfpack")
+        $ grant_achievement("wolfpack")
         u "(But after everything that happened I feel like I gotta at least try and get in, otherwise I'll miss out on too much.)"
 
     elif joinapes:
-            u "(Pledging starts soon, I told Grayson I'd join the Apes, but is that really the right call? I mean the Wolves party was sick...)"
+        u "(Pledging starts soon, I told Grayson I'd join the Apes, but is that really the right call? I mean the Wolves party was sick...)"
 
-            u "(But in the Apes, I can finally be someone. I can be a winner. Grayson may have done some questionable shit in the past, but he also said a lot of stuff that resonated with me...)"
+        u "(But in the Apes, I can finally be someone. I can be a winner. Grayson may have done some questionable shit in the past, but he also said a lot of stuff that resonated with me...)"
 
-            if imremad:
-                u "(On the other hand, Imre would hate me even more if I pledged the Apes...)"
-            else:
-                u "(On the other hand, Imre would hate me if I pledged the Apes...)"
+        if imremad:
+            u "(On the other hand, Imre would hate me even more if I pledged the Apes...)"
+        else:
+            u "(On the other hand, Imre would hate me if I pledged the Apes...)"
 
-            u "(When I came to San Vallejo I didn't even think frat life was for me, but after everything that happened I feel like I gotta at least try and get into one of these. Otherwise I'll miss out on too much.)"
+        u "(When I came to San Vallejo I didn't even think frat life was for me, but after everything that happened I feel like I gotta at least try and get into one of these. Otherwise I'll miss out on too much.)"
 
-            u "(Time to make a decision.)"
+        u "(Time to make a decision.)"
 
-            menu:
-                "Pledge to the Apes":
-                    if not pb:
-                        $ grant_achievement("silverback")
-                    u "(Fuck it. I'm gonna be winner, no matter what it costs. Time to pledge to the Apes.)"
+        menu:
+            "Pledge to the Apes":
+                $ grant_achievement("silverback")
+                u "(Fuck it. I'm gonna be winner, no matter what it costs. Time to pledge to the Apes.)"
 
-                    jump pledgeapes
+                jump pledgeapes
 
-                "Pledge to the Wolves":
-                    if not pb:
-                        $ grant_achievement("wolfpack")
-                    u "(Grayson might kill me when he finds out, but I can't join the Apes. I gotta pledge to the Wolves.)"
+            "Pledge to the Wolves":
+                $ grant_achievement("wolfpack")
+                u "(Grayson might kill me when he finds out, but I can't join the Apes. I gotta pledge to the Wolves.)"
 
     else:
         u "(Pledging starts soon, I told Grayson I wouldn't join the Apes, but is that really the right call? I mean he did say some things that really resonated with me...)"
@@ -3511,15 +3507,13 @@ label afterbeach:
 
         menu:
             "Pledge to the Apes":
-                if not pb:
-                    $ grant_achievement("silverback")
+                $ grant_achievement("silverback")
                 u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
                 jump pledgeapes
 
             "Pledge to the Wolves":
-                if not pb:
-                    $ grant_achievement("wolfpack")
+                $ grant_achievement("wolfpack")
                 u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
 
 
@@ -6486,8 +6480,7 @@ label after_history:
                 scene s907 # Camera - FPP. MC and Cameron running through the door. Cameron is in front of MC with his phone in his hand. MC is almost out of the door
                 with vpunch
 
-                if not pb:
-                    $ grant_achievement("lee_way")
+                $ grant_achievement("lee_way")
 
                 lee "Who was that? {b}WHO WAS THAT?{/b}"
                 ca "HAHAHA! FUCKIN' ACES!"
@@ -9870,8 +9863,7 @@ label amberhocodate:
     with dissolve
 
 label v7_nsfwSkipLabel5:
-    if not pb:
-        $ grant_achievement("ecstatic")
+    $ grant_achievement("ecstatic")
         
     u "Now what?"
 
@@ -17005,8 +16997,7 @@ label fr4laurenending:
     scene sfr4la29
     with dissolve
 
-    if not pb:
-        $ grant_achievement("slow_and_steady")
+    $ grant_achievement("slow_and_steady")
 
     la "I read that... if you cuddle in your underwear it increases the serotonin levels in your brain, which in turns means you live a longer, happier life."
 
@@ -17154,8 +17145,7 @@ label fr4rileyending2:
     scene sfr4ri57a #riley pats the bed,looking at you smiling
     with dissolve
 
-    if not pb:
-        $ grant_achievement("playing_with_fire")
+    $ grant_achievement("playing_with_fire")
         
     ri "Sit down with me for a second."
 
@@ -17262,8 +17252,7 @@ label fr4chloeending:
     scene sfr4cl58 # tpp from behind: chloe opens the door to her room mc following
     with fade
 
-    if not pb:
-        $ grant_achievement("homecoming_queen")
+    $ grant_achievement("homecoming_queen")
 
     u "So this is your infamous room?"
 

@@ -254,8 +254,7 @@ label v9_hc_demo_west:
 label v9_hc_demo_north:
 
     if the_king:
-        if not pb:
-            $ grant_achievement("king_of_the_north")
+        $ grant_achievement("king_of_the_north")
 
     u "North, Your Majesty."
 
