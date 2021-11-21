@@ -1101,7 +1101,8 @@ label v11_case_verdict:
         scene v11coc14b
         with dissolve
 
-        $ grant_achievement("perry_mason")
+        if not pb:
+            $ grant_achievement("perry_mason")
         lee "Don't thank us, thank your friend. He did a very good job representing you. We may just have a future lawyer in our midst."
 
         scene v11coc14c
@@ -1226,6 +1227,7 @@ label v11_case_verdict:
 
             pe "Thanks again, bye."
     else:
+        $ v11_pen_goes_europe = False
         play music "music/v11/Scene 1/Track Scene 1_6.mp3" fadein 2
         scene v11coc12
         with dissolve

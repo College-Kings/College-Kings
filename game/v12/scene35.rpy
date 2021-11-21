@@ -5,6 +5,7 @@
 # Phone Images: None
 
 label v12_chris_nora_room:
+    $ v12_nora_sex = False #pb variable
     scene v12cnr1 # TPP. Show MC walking in the hotel corridor, neutral expression, mouth closed
     with dissolve
 

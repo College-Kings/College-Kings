@@ -2703,7 +2703,8 @@ label continueq:
             scene s270
             with dissolve
 
-            $ grant_achievement("not_now_mom")
+            if not pb:
+                $ grant_achievement("not_now_mom")
                 
             u "(I don't really feel like talking to her right now.)"
 
@@ -3080,7 +3081,8 @@ label continueq:
                     pause(1)
                     play sound "sounds/kiss.mp3"
 
-                    $ grant_achievement("lips_dont_lie")
+                    if not pb:
+                        $ grant_achievement("lips_dont_lie")
                         
                     " "
 
@@ -3249,7 +3251,8 @@ label continueq:
                     scene s287f # Lauren gone
                     with dissolve
 
-                    $ grant_achievement("truth_hurts")
+                    if not pb:
+                        $ grant_achievement("truth_hurts")
                         
                     u "(Fuck me... I guess that's what honesty gets you.)"
 

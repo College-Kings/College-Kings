@@ -27,7 +27,8 @@ init python:
         lauren.messenger.newMessage(_("Great, I'll see you then :)"))
 
     def v2_reply6():
-        grant_achievement("mixed_feelings")
+        if not pb:
+            grant_achievement("mixed_feelings")
 
     # Josh messages
     def v2_reply7():
@@ -1060,7 +1061,8 @@ label tomFightStart:
 
 label youfinish:
     if reaction == 0.5:
-        $ grant_achievement("the_notorious")
+        if not pb:
+            $ grant_achievement("the_notorious")
             
     $ wintom = True
 
@@ -1217,7 +1219,8 @@ label meet_lauren2:
                 scene s130d # Lauren romancing at you holding your hand
                 with dissolve
 
-                $ grant_achievement("a_new_beginning")
+                if not pb:
+                    $ grant_achievement("a_new_beginning")
                     
                 la "Maybe you're right."
 
@@ -2105,7 +2108,8 @@ label bo_ad:
             scene s148b
             with dissolve
 
-            $ grant_achievement("over_it")
+            if not pb:
+                $ grant_achievement("over_it")
                 
             u "Sure, knock yourself out, man. We're not an item."
 

@@ -7,22 +7,14 @@ screen v12_girls():
         ypos 250
 
         imagebutton:
-            if True:
-                idle "images/v7/HCAmber.webp"
-                hover "images/v7/HCAmber2.webp"
-                action Jump("v12_jc_amber")
-            else:
-                idle "images/v7/HCAmber3.webp"
-                hover "images/v7/HCAmber23.webp"
+            idle "images/v7/HCAmber.webp"
+            hover "images/v7/HCAmber2.webp"
+            action Jump("v12_jc_amber")
 
         imagebutton:
-            if True:
-                idle "images/v7/HCAubrey.webp"
-                hover "images/v7/HCAubrey2.webp"
-                action Jump("v12_jc_aubrey")
-            else:
-                idle "images/v7/HCAubrey3.webp"
-                hover "images/v7/HCAubrey23.webp"
+            idle "images/v7/HCAubrey.webp"
+            hover "images/v7/HCAubrey2.webp"
+            action Jump("v12_jc_aubrey")
 
         imagebutton:
             if not chloemad:
@@ -44,40 +36,24 @@ screen v12_girls():
                 hover "images/v7/HCLauren23.webp"
 
         imagebutton:
-            if True:
-                idle "images/head shots/Lindsey1.webp"
-                hover "images/head shots/Lindsey2.webp"
-                action Jump("v12_jc_lindsey")
-            else:
-                idle "images/head shots/Lindsey1.webp"
-                hover "images/head shots/Lindsey2.webp"
+            idle "images/head shots/Lindsey1.webp"
+            hover "images/head shots/Lindsey2.webp"
+            action Jump("v12_jc_lindsey")
 
         imagebutton:
-            if True:
-                idle "images/head shots/Nora1.webp"
-                hover "images/head shots/Nora2.webp"
-                action Jump("v12_jc_nora")
-            else:
-                idle "images/head shots/Nora1.webp"
-                hover "images/head shots/Nora2.webp"
+            idle "images/head shots/Nora1.webp"
+            hover "images/head shots/Nora2.webp"
+            action Jump("v12_jc_nora")
 
         imagebutton:
-            if True:
-                idle "images/v7/HCPenelope.webp"
-                hover "images/v7/HCPenelope2.webp"
-                action Jump("v12_jc_penelope")
-            else:
-                idle "images/v7/HCPenelope3.webp"
-                hover "images/v7/HCPenelope23.webp"
+            idle "images/v7/HCPenelope.webp"
+            hover "images/v7/HCPenelope2.webp"
+            action Jump("v12_jc_penelope")
 
         imagebutton:
-            if True:
-                idle "images/v7/HCRiley.webp"
-                hover "images/v7/HCRiley2.webp"
-                action Jump("v12_jc_riley")
-            else:
-                idle "images/v7/HCRiley3.webp"
-                hover "images/v7/HCRiley23.webp"
+            idle "images/v7/HCRiley.webp"
+            hover "images/v7/HCRiley2.webp"
+            action Jump("v12_jc_riley")
 
         imagebutton:
             if v11_invite_sam_europe:

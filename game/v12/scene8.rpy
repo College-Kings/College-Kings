@@ -11,7 +11,8 @@ label v12_murder_mystery_reveal:
     with dissolve
 
     if (joinwolves and len(v12s7_killList) == 15) or len(v12s7_killList) == 16:
-        $ grant_achievement("mass_casualties")
+        if not pb:
+            $ grant_achievement("mass_casualties")
 
     lee "Wow, that turned out a lot better than expected. I hope you all enjoyed yourselves. Was anyone surprised to learn [name] was my chosen murderer?"
 
@@ -73,7 +74,8 @@ label v12_murder_mystery_reveal:
     $ v12_murder_count = len(v12s7_killList)
     if len(v12s7_killList) >= 5:
     
-        $ grant_achievement("killing_spree")
+        if not pb:
+            $ grant_achievement("killing_spree")
 
         lee "A total of [v12_murder_count] people were killed, so let's give our murderer a round of applause."
 

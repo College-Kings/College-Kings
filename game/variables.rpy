@@ -27,6 +27,8 @@ default enemyhealth = 0
     ## Free Roam
 default previous_location = ""
 
+default pb = False
+
 # KCT
 default locked_kct = False
 default kct = "confident"

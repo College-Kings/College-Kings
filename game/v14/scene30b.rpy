@@ -53,7 +53,7 @@ label v14s30b:
     scene v14s30b_2a
     with dissolve
 
-    u "*She is your VP..."
+    u "She is your VP..."
 
     scene v14s30b_2
     with dissolve

@@ -44,8 +44,8 @@ init python:
         return None
 
 
-define PB_WOLVES = PathBuilderItem(PathBuilderCatagories.FRATERNITY, "Wolves", "joinwolves", True)
-define PB_APES = PathBuilderItem(PathBuilderCatagories.FRATERNITY, "Apes", "joinwolves", False)
+define PB_WOLVES = PathBuilderItem(PathBuilderCatagories.FRATERNITY, "Wolves", ["pb", "joinwolves", "chloemad", "forgiveemily"], [True, True, False, True])
+define PB_APES = PathBuilderItem(PathBuilderCatagories.FRATERNITY, "Apes", ["pb", "joinwolves", "chloemad", "forgiveemily"], [True, False, False, True])
 
 define PB_LOYAL = PathBuilderItem(
     PathBuilderCatagories.KCT,
@@ -63,14 +63,14 @@ define PB_CONFIDENT = PathBuilderItem(
     ["kct", "bro", "boyfriend", "troublemaker"],
     ["confident", 0, 2, 2])
 
-define PB_CHLOE = PathBuilderItem(PathBuilderCatagories.GIRL, "Chloe", "chloegf", "toggle_variables")
-define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", "norars", "toggle_variables")
+define PB_CHLOE = PathBuilderItem(PathBuilderCatagories.GIRL, "Chloe", ["chloers", "chloegf", "ending", "hcGirl"], [True, True, "chloe", "chloe"])
+define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", ["norars", "noralikes", "v12_nora_sex"], [True, True, True])
 define PB_AUBREY = PathBuilderItem(PathBuilderCatagories.GIRL, "Aubrey", "aubreyrs", "toggle_variables")
 define PB_RILEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Riley", "rileyrs", "toggle_variables")
 define PB_LAUREN = PathBuilderItem(PathBuilderCatagories.GIRL, "Lauren", "laurenrs", "toggle_variables")
-define PB_PENELOPE = PathBuilderItem(PathBuilderCatagories.GIRL, "Penelope", "penelopers", "toggle_variables")
+define PB_PENELOPE = PathBuilderItem(PathBuilderCatagories.GIRL, "Penelope", ["penelopers", "v11_pen_goes_europe"], [True, True])
 define PB_AMBER = PathBuilderItem(PathBuilderCatagories.GIRL, "Amber", "amberrs", "toggle_variables")
-define PB_LINDSEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Lindsey", "lindseyrs", "toggle_variables")
+define PB_LINDSEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Lindsey", ["lindseyrs", "v12_lindsey_sex"], [True, True])
 define PB_MS_ROSE = PathBuilderItem(PathBuilderCatagories.GIRL, "Ms Rose", "msrosers", "toggle_variables")
 define PB_SAMANTHA = PathBuilderItem(PathBuilderCatagories.GIRL, "Samantha", "v11_samantha_spa", "toggle_variables")
 define PB_JENNY = PathBuilderItem(PathBuilderCatagories.GIRL, "Jenny", "jennyrs", "toggle_variables")
@@ -125,7 +125,7 @@ screen path_builder(catagory_step=1):
     default items = [item for item in pb_item if item.catagory == catagory]
 
     default start_location = "start"
-
+    
     use path_builder_base(header=catagory.value):
         vpgrid:
             cols 4
@@ -177,7 +177,7 @@ screen path_builder(catagory_step=1):
                 else:
                     action ShowMenu("main_menu")
 
-            textbutton "CONTINUE":          
+            textbutton "CONTINUE":
                 xalign 1.0
                 selected False
                 if catagory_step < len(PathBuilderCatagories):

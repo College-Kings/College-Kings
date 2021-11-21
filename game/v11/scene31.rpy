@@ -174,7 +174,8 @@ label v11_lindsey_park:
             with dissolve
 
             if politics:
-                $ grant_achievement("political_strategist")
+                if not pb:
+                    $ grant_achievement("political_strategist")
 
             u "I'm down to support you as long as all of this means a new beginning for the Chicks. I'm not in the business of switching out one problem for another, get what I'm saying?"
 

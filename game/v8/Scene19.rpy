@@ -6,7 +6,8 @@
 init python:
     def v8s19_reply1():
 
-        grant_achievement("text_with_an_s")
+        if not pb:
+            grant_achievement("text_with_an_s")
 
         amber.messenger.newMessage(_("It's only fair, right? Make us even"))
         if config_censored:

@@ -371,7 +371,8 @@ label v10_aubrey_house:
                 scene v10auh5e
                 with dissolve
 
-                $ grant_achievement("getting_clean")
+                if not pb:
+                    $ grant_achievement("getting_clean")
                 au "Your turn."
 
                 scene v10auh5i

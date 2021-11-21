@@ -246,7 +246,9 @@ label v11_Amber_Penelope:
 
                 scene v11amp9a # TPP Same angle as v11amp9, MC with his hand on Penelope's cheek, kissing her on the lips
                 with dissolve
-                $ grant_achievement("cross_your_heart")
+                
+                if not pb:
+                    $ grant_achievement("cross_your_heart")
 
                 pause 1.75
                 

@@ -705,7 +705,8 @@ label v14s23:
                     scene v14s23_2c
                     with dissolve
 
-                    $ grant_achievement("agree_to_disagree")
+                    if not pb:
+                        $ grant_achievement("agree_to_disagree")
                     ch "Don't change the plan because of me, it's really not a bad idea, but I don't wanna do it with you guys."
 
                     $ set_presidency_percent(v14_lindsey_popularity + 3) #tick
