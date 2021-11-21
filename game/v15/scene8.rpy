@@ -1,7 +1,7 @@
 # SCENE 8: Chloe phase 2 convo
 # Locations: Chloe's planning board room
 # Characters: CHLOE (Outfit: 2), MC (Outfit: 5)
-# Time: Afternoon
+# Time: Morning
 
 label v15s8:
     scene v15s8_1 # TPP. Show MC walking into the planning board room with Chloe, both slight smile, mouth closed.
