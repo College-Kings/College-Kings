@@ -345,8 +345,6 @@ label v14s26a:
 
     if v14_lauren_sabotage:
         u "(It's a sad day for honesty.)"
-    else:
-        pass
 
     scene v14s26_14 # Ignore as reused from another scene
     with dissolve
