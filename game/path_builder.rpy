@@ -76,9 +76,9 @@ define PB_SAMANTHA = PathBuilderItem(PathBuilderCatagories.GIRL, "Samantha", "v1
 define PB_JENNY = PathBuilderItem(PathBuilderCatagories.GIRL, "Jenny", "jennyrs", "toggle_variables")
 define PB_EMILY = PathBuilderItem(PathBuilderCatagories.GIRL, "Emily", "emilyrs", "toggle_variables")
 
-define PB_HOMECOMING = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Homecoming", "start_location", "v7_homecoming", "set_start_location")
-define PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Start of Act 3", "start_location", "v11_start", "set_start_location")
-define PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Start of Act 4", "start_location", "v14_start", "set_start_location")
+define PB_HOMECOMING = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 2 Start", "start_location", "v7_homecoming", "set_start_location")
+define PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 3 Start", "start_location", "v11_start", "set_start_location")
+define PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", "start_location", "v14_start", "set_start_location")
 
 
 screen spoiler_path_builder():
