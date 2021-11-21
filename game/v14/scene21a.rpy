@@ -25,27 +25,35 @@ label v14s21a:
 
     scene v14chlmkTPP1 # Chloe and MC making out
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - mk_slow_4loops.mp3", loop=True)
 
     pause
 
+    stop sound
     scene v14chlmkTPP1f # Same as above but faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - mk_fast_4loops.mp3", loop=True)
 
     pause
 
     image v14chlmkTPP2 = Movie(play="images/v14/Scene 21a/v14chlmkTPP2.webm", loop=True, image="images/v14/Scene 21a/v14chlmkTPP2.webp", start_image="images/v14/Scene 21a/v14chlmkTPP2.webp")
     image v14chlmkTPP2f = Movie(play="images/v14/Scene 21a/v14chlmkTPP2f.webm", loop=True, image="images/v14/Scene 21a/v14chlmkTPP2.webp", start_image="images/v14/Scene 21a/v14chlmkTPP2.webp")
 
+    stop sound
     scene v14chlmkTPP2 # Chloe and MC making out angle 2
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - mk_slow_4loops.mp3", loop=True)
 
     pause
 
+    stop sound
     scene v14chlmkTPP2f # Same as above but faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - mk_fast_4loops.mp3", loop=True)
 
     pause
 
+    stop sound
     scene v14s21a_2 # FPP Show Chloe removing the rest of her clothes
     with dissolve
 
@@ -106,27 +114,35 @@ label v14s21a:
 
     scene v14chlsmTPP1 # Against the wall
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - sm_slow_4loops.mp3", loop=True)
 
     cl "Oh, yes! *Moans* It feels like it's been way too long..."
 
+    stop sound
     scene v14chlsmTPP1f # Same as above but faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - sm_fast_4loops.mp3", loop=True)
 
     u "I... I needed this too..."
 
     image v14chlsmTPP2 = Movie(play="images/v14/Scene 21a/v14chlsmTPP2.webm", loop=True, image="images/v14/Scene 21a/v14chlsmTPP2.webp", start_image="images/v14/Scene 21a/v14chlsmTPP2.webp")
     image v14chlsmTPP2f = Movie(play="images/v14/Scene 21a/v14chlsmTPP2f.webm", loop=True, image="images/v14/Scene 21a/v14chlsmTPP2.webp", start_image="images/v14/Scene 21a/v14chlsmTPP2.webp")
 
+    stop sound
     scene v14chlsmTPP2 # Against the wall angle 2
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - sm_slow_4loops.mp3", loop=True)
 
     cl "So much has been going on, but... *Moans* Everything melts away... When I'm with you."
 
+    stop sound
     scene v14chlsmTPP2f # Same as above but faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - sm_fast_4loops.mp3", loop=True)
 
     pause
 
+    stop sound
     scene v14s21a_9 # TPP Chloe and MC kissing against the wall, MC gently choking Chloe, Chloe's eyes rolling back in pleasure, mouth open
     with dissolve
 
@@ -157,11 +173,14 @@ label v14s21a:
 
     scene v14chlcgFPP # Cowgirl
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - cg_slow_4loops.mp3", loop=True)
 
     u "Ssshittt, Chlo-"
 
+    stop sound
     scene v14chlcgFPPf # Same as above but faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - cg_fast_4loops.mp3", loop=True)
 
     cl "Is this hurting you?"
 
@@ -170,16 +189,21 @@ label v14s21a:
     image v14chlcgTPP = Movie(play="images/v14/Scene 21a/v14chlcgTPP.webm", loop=True, image="images/v14/Scene 21a/v14chlcgTPP.webp", start_image="images/v14/Scene 21a/v14chlcgTPP.webp")
     image v14chlcgTPPf = Movie(play="images/v14/Scene 21a/v14chlcgTPPf.webm", loop=True, image="images/v14/Scene 21a/v14chlcgTPP.webp", start_image="images/v14/Scene 21a/v14chlcgTPP.webp")
 
+    stop sound
     scene v14chlcgTPP # Cowgirl angle 2
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - cg_slow_4loops.mp3", loop=True)
 
     u "Don't stop."
 
+    stop sound
     scene v14chlcgTPPf # Same as above but faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - cg_fast_4loops.mp3", loop=True)
 
     cl "Ha... *Moans* O-Okay, oh... Fuck, [name]."
 
+    stop sound
     scene v14s21a_11a # TPP Same angle as 11, Chloe looking up toward the sky and arching her back as she orgasms, mouth open
     with dissolve
 
@@ -210,13 +234,16 @@ label v14s21a:
 
     scene v14chlffFPP # BJ
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - facefuck_slow_4loops.mp3", loop=True)
 
     u "Ah- Oh, shit... This feels amazing."
 
     cl "*Humming* Mmmm..."
 
+    stop sound
     scene v14chlffFPPf # Same as above but faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - facefuck_fast_4loops.mp3", loop=True)
 
     u "Chlo- *Moans*"
 
@@ -225,20 +252,25 @@ label v14s21a:
     image v14chlffTPP = Movie(play="images/v14/Scene 21a/v14chlffTPP.webm", loop=True, image="images/v14/Scene 21a/v14chlffTPP.webp", start_image="images/v14/Scene 21a/v14chlffTPP.webp")
     image v14chlffTPPf = Movie(play="images/v14/Scene 21a/v14chlffTPPf.webm", loop=True, image="images/v14/Scene 21a/v14chlffTPP.webp", start_image="images/v14/Scene 21a/v14chlffTPP.webp")
 
+    stop sound
     scene v14chlffTPP # BJ angle 2
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - facefuck_slow_4loops.mp3", loop=True)
 
     u "Chloe! You... You're- I'm..."
 
     u "I'm gonna... AH! Fuckkk!"
 
+    stop sound
     scene v14chlffTPPf # Same as above but faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 21a - facefuck_fast_4loops.mp3", loop=True)
 
     u "*Moans*"
 
     cl "Mmm!"
 
+    stop sound
     scene v14s21a_14 # FPP Show Chloe, sucking MC's dick as he cums in her mouth
     with dissolve
 
