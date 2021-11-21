@@ -702,3 +702,4 @@ default TraitPrankster = False
 default TraitHardass = False
 default v15_DamageLindseyRep = False
 default v15_LessChickTuition = False
+default v15s41_LetsGo = False
