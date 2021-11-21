@@ -2020,6 +2020,12 @@ label at_bd:
 
     play music "music/msexy.mp3"
 
+    if not config_censored:
+
+        call screen nsfw_Toggle("v1_exit")
+
+    label v1_exit:
+
     if config_censored:
         call screen censoredPopup("v1_nsfwSkipLabel1")
         

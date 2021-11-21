@@ -269,3 +269,36 @@ screen v1_freeRoam2_5():
         idle "images/fr2down.webp"
         hover "images/fr2downh.webp"
         action Show("v1_freeRoam2_2")
+
+screen nsfw_Toggle(jumplabel):
+    
+
+    add "gui/frame.webp":
+        align (0.5,0.5)
+        ysize 350
+
+    vbox:
+        xsize 700
+        align (0.5, 0.5)
+        spacing 20
+        text "Explicit Sex Scenes":
+            #color "#FFD166"
+            size 40
+            text_align 0.5
+            xalign 0.5
+
+        text "This game contains fully explicit sex scenes. These are not suitable for Twitch or Youtube. Please select if you'd like to enable explicit sex scenes.":
+            font "fonts/OpenSans.ttf"
+            size 25
+            text_align 0.5
+            xalign 0.5
+
+        hbox:
+            xalign 0.5
+            spacing 100
+            textbutton "Enable":
+                text_size 40
+                action [SetVariable("config_censored", False),Hide("nsfw_Toggle"), Jump (jumplabel)]
+            textbutton "Disable":
+                text_size 40
+                action [SetVariable("config_censored", True),Hide("nsfw_Toggle"), Jump (jumplabel)]
