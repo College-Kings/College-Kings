@@ -417,8 +417,7 @@ label v13s14b:
     scene v13s14b_24 # FPP MC's view as he carries Penelope toward the door to the club
     with dissolve
 
-    if not pb:
-        $ grant_achievement("funny_night")
+    $ grant_achievement("funny_night")
     u "Haha... Yes Penelope, you're flying."
 
     stop music fadeout 3

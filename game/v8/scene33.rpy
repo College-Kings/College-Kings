@@ -203,8 +203,7 @@ label cont_nora_hall_3:
 
 label hallway_help_nora:
 
-    if not pb:
-        $ grant_achievement("helping_hand")
+    $ grant_achievement("helping_hand")
     u "(I kinda like this nicer Nora.)"
 
     scene v8shal3c
