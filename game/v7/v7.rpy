@@ -9685,6 +9685,8 @@ label walking_through_hallways:
 ######## SCENE 38 BACK IN YOUR DORM FRIDAY EVENING
     label v7_homecoming:
 
+    show screen phoneIcon
+
     if joinwolves:
         stop music fadeout 2.0
 

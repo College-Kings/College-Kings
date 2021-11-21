@@ -4,6 +4,9 @@
 # Time: Night
 
 label v14_start:
+
+    show screen phoneIcon
+    
     if emmy.simplr.pendingMessages: #for compatibility with v12 players where emmy replies were not forced to be seen
         $ emmy.simplr.pendingMessages = []
         $ emmy.simplr.sentMessages[-1].replies = []
@@ -21,6 +24,10 @@ label v14s01:
     with dissolve
 
     u "(Are they seriously trying to have a threesome...?)"
+
+    call screen VoiceActing_Toggle("v14s01_exit")
+
+    label v14s01_exit:
 
     scene v14s01_1a # FPP. Same as v14s01_1, Riley and Aubrey removing their bras, they're looking at MC seductively, mouths closed
     with dissolve

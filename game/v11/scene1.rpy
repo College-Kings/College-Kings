@@ -1,4 +1,7 @@
 label v11_start:
+
+    show screen phoneIcon
+
     scene v11coc1 # FPP. Show entrance of college
     with fade
 
