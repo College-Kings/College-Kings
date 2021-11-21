@@ -343,10 +343,10 @@ label v14s26a:
 
     li "See you, [name]."
 
-    scene v14s26a_3
-    with dissolve
-
-    u "(It's a sad day for honesty.)"
+    if v14_lauren_sabotage:
+        u "(It's a sad day for honesty.)"
+    else:
+        pass
 
     scene v14s26_14 # Ignore as reused from another scene
     with dissolve
