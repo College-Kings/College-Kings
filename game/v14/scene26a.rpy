@@ -55,7 +55,7 @@ label v14s26a:
 
     li "Apparently not, [name]."
 
-    li "So far I've only made fifty bucks and that was all from my family. *Sighs*"
+    li "So far most of what I could sell as to my family. *Sighs*"
 
     scene v14s26a_2b
     with dissolve
