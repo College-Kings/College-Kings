@@ -31,30 +31,38 @@ label v14s53a:
 
     scene v14sambj # Ignore as animation
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 53a - bj_slow_2loops.mp3", loop=True)
     pause
 
     u "Oh, yes..."
 
+    stop sound
     scene v14sambjf # Ignore as animation
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 53a - bj_fast_4loops.mp3", loop=True)
     pause
 
     sa "*Gags*"
 
     u "*Moans* Fuuuuck..."
 
+    stop sound
     scene v14sambj2 # Ignore as animation
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 53a - bj_slow_2loops.mp3", loop=True)
     pause
 
     sa "*Muffled* You like that, baby?"
 
+    stop sound
     scene v14sambj2f # Ignore as animation
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 53a - bj_fast_4loops.mp3", loop=True)
     pause
 
     u "Ha... I love it."
 
+    stop sound
     scene v14s53a_3 # FPP. MC looking at Samantha, Samantha starting to sit up her hand on MC's lap, Samantha with a flirty smile, mouth closed.
     with dissolve
 
@@ -78,20 +86,24 @@ label v14s53a:
 
     scene v14samccg # Ignore as animation
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 53a - cg_slow_2loops.mp3", loop=True)
     pause
 
     sa "Ohhhhhhhhh, fuck!"
 
     sa "Yes! *Moans* This is exactly what I needed..."
 
+    stop sound
     scene v14samccgf # Ignore as animation
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 53a - cg_fast_4loops.mp3", loop=True)
     pause
 
     u "Ride me, baby..."
 
     sa "*Moans* You... *Gasps* You feel so fucking good."
 
+    stop sound
     scene v14s53a_6 # TPP. Close up of Samantha putting pills in her mouth while riding MC
     with dissolve
 
@@ -104,12 +116,14 @@ label v14s53a:
 
     scene v14samccg2 # Ignore as animation
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 53a - cg2_slow_2loops.mp3", loop=True)
     pause
 
     sa "*Giggles* Mmm..."
 
     u "*Panting* (She really does like to have a good time.) *Moans* Fuck, Sam. You're so-"
 
+    stop sound
     scene v14s53a_8 # TPP. Close up of Samantha's face as she moans while riding MC with her eyes closed.
     with vpunch
 
@@ -122,14 +136,17 @@ label v14s53a:
 
     scene v14samccg2 # Ignore as animation
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 53a - cg2_slow_2loops.mp3", loop=True)
     pause
 
     sa "*Panting* Cum inside of me."
 
     sa "I want to have your baby..."
     
+    stop sound
     scene v14samccg2f # Ignore as animation.
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 53a - cg2_fast_4loops.mp3", loop=True)
     pause
 
     u "What did you just say?"
@@ -141,6 +158,7 @@ label v14s53a:
     image v14samccgb2 = Movie(play="images/v14/Scene 53a/v14samccgb2.webm", loop=True, image="images/v14/Scene 53a/v14samccgb2Start.webp", start_image="images/v14/Scene 53a/v14samccgb2Start.webp")
     image v14samccgb2f = Movie(play="images/v14/Scene 53a/v14samccgb2f.webm", loop=True, image="images/v14/Scene 53a/v14samccgb2Start.webp", start_image="images/v14/Scene 53a/v14samccgb2Start.webp")
     
+    stop sound
     scene v14s53a_10 # TPP. Close up of Samantha's hand grabbing MC's hand as it is on her ass
     with dissolve
     
