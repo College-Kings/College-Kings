@@ -5,6 +5,7 @@
 
 label v14s03c:
     play music "music/v14/Track Scene 3c.mp3" fadein 2
+    $ v14s03c_music = True
 
     scene v14s03c_1 # TPP. Show MC walking in the Brothel bar, slight smile, mouth open.
     with dissolve
@@ -115,9 +116,7 @@ label v14s03c:
     with dissolve
 
     menu:
-
         "Good genes":
-
             $ add_point(KCT.BRO)
 
             u "Good genes. *Chuckles*"
@@ -128,7 +127,6 @@ label v14s03c:
             satin "Same here."
 
         "My friends dragged me here":
-
             $ add_point(KCT.BOYFRIEND)
 
             u "My friends dragged me in here."
@@ -307,6 +305,9 @@ label v14s03c:
         "Go with her":
             $ v14_satin_sex = True
             label v14s03c_sg:
+            
+            if not v14s03c_music:
+                play music "music/v14/Track Scene 3c.mp3" fadein 2
         
             $ add_point(KCT.TROUBLEMAKER)
 

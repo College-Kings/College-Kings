@@ -16,6 +16,7 @@ label v14_start:
     
 label v14s01:
     play music "music/v14/Track Scene 1_1.mp3" fadein 2
+    $ v14s01_music = True
     scene v14s01_1 # FPP. MC sitting on bed, looking at Riley and Aubrey making out, show some caressing between them
     with dissolve
 
@@ -37,6 +38,9 @@ label v14s01:
             $ add_point(KCT.TROUBLEMAKER)
             
             label v14s01_sg:
+                if not v14s01_music:
+                    play music "music/v14/Track Scene 1_1.mp3" fadein 2
+                
                 $ v13_FirstThreesome = True
                 u "I'm gonna feel much better after this."
 

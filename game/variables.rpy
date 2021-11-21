@@ -728,3 +728,5 @@ default v14s50_listen_to_aubrey_lindsey_2 = False
 default v14s50_listen_to_aubrey_lindsey_3 = False
 default v14s47_linds_passenger = False
 default v14s47_solo_passenger = False
+default v14s01_music = False
+default v14s03c_music = False
