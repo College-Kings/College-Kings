@@ -24,10 +24,10 @@ screen VoiceActing_Toggle():
             spacing 100
             textbutton "Enable":
                 text_size 40
-                sensitive True
+                selected False
                 action [SetVariable("voice_acted", True), Return()]
             textbutton "Disable":
                 text_size 40
-                sensitive True
+                selected False
                 action [SetVariable("voice_acted", False), Return()]
             
