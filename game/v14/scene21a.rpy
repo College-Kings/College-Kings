@@ -25,14 +25,16 @@ label v14s21a:
 
     scene v14chlmkTPP1 # Chloe and MC making out
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - mk_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - mk_slow_4loops.mp3", loop=True)
 
     pause
 
     stop sound
     scene v14chlmkTPP1f # Same as above but faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - mk_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - mk_fast_4loops.mp3", loop=True)
 
     pause
 
@@ -42,14 +44,16 @@ label v14s21a:
     stop sound
     scene v14chlmkTPP2 # Chloe and MC making out angle 2
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - mk_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - mk_slow_4loops.mp3", loop=True)
 
     pause
 
     stop sound
     scene v14chlmkTPP2f # Same as above but faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - mk_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - mk_fast_4loops.mp3", loop=True)
 
     pause
 
@@ -114,14 +118,16 @@ label v14s21a:
 
     scene v14chlsmTPP1 # Against the wall
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - sm_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - sm_slow_4loops.mp3", loop=True)
 
     cl "Oh, yes! *Moans* It feels like it's been way too long..."
 
     stop sound
     scene v14chlsmTPP1f # Same as above but faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - sm_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - sm_fast_4loops.mp3", loop=True)
 
     u "I... I needed this too..."
 
@@ -131,14 +137,16 @@ label v14s21a:
     stop sound
     scene v14chlsmTPP2 # Against the wall angle 2
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - sm_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - sm_slow_4loops.mp3", loop=True)
 
     cl "So much has been going on, but... *Moans* Everything melts away... When I'm with you."
 
     stop sound
     scene v14chlsmTPP2f # Same as above but faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - sm_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - sm_fast_4loops.mp3", loop=True)
 
     pause
 
@@ -173,14 +181,16 @@ label v14s21a:
 
     scene v14chlcgFPP # Cowgirl
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - cg_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - cg_slow_4loops.mp3", loop=True)
 
     u "Ssshittt, Chlo-"
 
     stop sound
     scene v14chlcgFPPf # Same as above but faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - cg_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - cg_fast_4loops.mp3", loop=True)
 
     cl "Is this hurting you?"
 
@@ -192,14 +202,16 @@ label v14s21a:
     stop sound
     scene v14chlcgTPP # Cowgirl angle 2
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - cg_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - cg_slow_4loops.mp3", loop=True)
 
     u "Don't stop."
 
     stop sound
     scene v14chlcgTPPf # Same as above but faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - cg_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - cg_fast_4loops.mp3", loop=True)
 
     cl "Ha... *Moans* O-Okay, oh... Fuck, [name]."
 
@@ -234,7 +246,8 @@ label v14s21a:
 
     scene v14chlffFPP # BJ
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - facefuck_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - facefuck_slow_4loops.mp3", loop=True)
 
     u "Ah- Oh, shit... This feels amazing."
 
@@ -243,7 +256,8 @@ label v14s21a:
     stop sound
     scene v14chlffFPPf # Same as above but faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - facefuck_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - facefuck_fast_4loops.mp3", loop=True)
 
     u "Chlo- *Moans*"
 
@@ -255,7 +269,8 @@ label v14s21a:
     stop sound
     scene v14chlffTPP # BJ angle 2
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - facefuck_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - facefuck_slow_4loops.mp3", loop=True)
 
     u "Chloe! You... You're- I'm..."
 
@@ -264,7 +279,8 @@ label v14s21a:
     stop sound
     scene v14chlffTPPf # Same as above but faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 21a - facefuck_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 21a - facefuck_fast_4loops.mp3", loop=True)
 
     u "*Moans*"
 

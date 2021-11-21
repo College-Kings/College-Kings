@@ -921,8 +921,8 @@ screen preferences():
 
     # Skip NSFW Scenes
     hbox:
-        pos (280, 680)
-        spacing 310
+        pos (180, 690)
+        spacing 85
 
         textbutton _("on"):
             action SetVariable("config_censored", True)
@@ -933,6 +933,21 @@ screen preferences():
             action SetVariable("config_censored", False)
             text_size 45
             text_selected_color "FFD166"
+
+    hbox:
+        pos (600, 690)
+        spacing 85
+
+        textbutton _("on"):
+            action SetVariable("voice_acted", True)
+            text_size 45
+            text_selected_color "FFD166"
+
+        textbutton _("off"):
+            action SetVariable("voice_acted", False)
+            text_size 45
+            text_selected_color "FFD166"
+
 
     # KCT settings
     hbox:

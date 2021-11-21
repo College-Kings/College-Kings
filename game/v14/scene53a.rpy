@@ -4,7 +4,6 @@
 # Time: Night
 
 label v14s53a:
-
     play music "music/v14/Track Scene 53a.mp3" fadein 2
     scene v14s53a_1 # TPP. Show MC pulling his pants down while sitting on the couch, Samantha next to him biting her lips as she looks at MC's crotch in a seductive sitting position.
     with dissolve
@@ -31,7 +30,8 @@ label v14s53a:
 
     scene v14sambj # Ignore as animation
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 53a - bj_slow_2loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 53a - bj_slow_2loops.mp3", loop=True)
     pause
 
     u "Oh, yes..."
@@ -39,7 +39,8 @@ label v14s53a:
     stop sound
     scene v14sambjf # Ignore as animation
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 53a - bj_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 53a - bj_fast_4loops.mp3", loop=True)
     pause
 
     sa "*Gags*"
@@ -49,7 +50,8 @@ label v14s53a:
     stop sound
     scene v14sambj2 # Ignore as animation
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 53a - bj_slow_2loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 53a - bj_slow_2loops.mp3", loop=True)
     pause
 
     sa "*Muffled* You like that, baby?"
@@ -57,7 +59,8 @@ label v14s53a:
     stop sound
     scene v14sambj2f # Ignore as animation
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 53a - bj_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 53a - bj_fast_4loops.mp3", loop=True)
     pause
 
     u "Ha... I love it."
@@ -86,7 +89,8 @@ label v14s53a:
 
     scene v14samccg # Ignore as animation
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 53a - cg_slow_2loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 53a - cg_slow_2loops.mp3", loop=True)
     pause
 
     sa "Ohhhhhhhhh, fuck!"
@@ -96,7 +100,8 @@ label v14s53a:
     stop sound
     scene v14samccgf # Ignore as animation
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 53a - cg_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 53a - cg_fast_4loops.mp3", loop=True)
     pause
 
     u "Ride me, baby..."
@@ -116,7 +121,8 @@ label v14s53a:
 
     scene v14samccg2 # Ignore as animation
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 53a - cg2_slow_2loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 53a - cg_slow_2loops.mp3", loop=True)
     pause
 
     sa "*Giggles* Mmm..."
@@ -136,7 +142,8 @@ label v14s53a:
 
     scene v14samccg2 # Ignore as animation
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 53a - cg2_slow_2loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 53a - cg_slow_2loops.mp3", loop=True)
     pause
 
     sa "*Panting* Cum inside of me."
@@ -146,7 +153,8 @@ label v14s53a:
     stop sound
     scene v14samccg2f # Ignore as animation.
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 53a - cg2_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 53a - cg_fast_4loops.mp3", loop=True)
     pause
 
     u "What did you just say?"
@@ -171,30 +179,42 @@ label v14s53a:
 
     scene v14samccgb # Ignore as animation
     with dissolve
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 53a - cg2_slow_2loops.mp3", loop=True)
     pause
 
     u "(She said she didn't take any of those pills, right?)"
 
     sa "*Moans*"
 
+    stop sound
     scene v14samccgbf # Ignore as animation
     with dissolve
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 53a - cg2_fast_4loops.mp3", loop=True)
     pause
 
     sa "*Panting* Yes! Yes... I'm- I... Fuck me!"
 
     u "Fuck... I'm gonna cum, Sam!"
 
+    stop sound
     scene v14samccgb2 # Ignore as animation
-    with dissolve 
+    with dissolve
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 53a - cg2_slow_2loops.mp3", loop=True)
     pause
 
     sa "Yeah? Do it then... Fuck me... *Moans*"
 
+    stop sound
     scene v14samccgb2f  # Ignore as animation
-    with dissolve 
+    with dissolve
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 53a - cg2_fast_4loops.mp3", loop=True)
     pause
 
+    stop sound
     scene v14s53a_12 # TPP. Close up on MC's face as he struggles to hold in his load, mouth open
     with dissolve 
     

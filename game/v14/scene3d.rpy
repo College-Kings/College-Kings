@@ -103,14 +103,16 @@ label v14s03d:
 
     scene v14satdtFPP # Ignore as animation
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 3d - bj_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 3d - bj_slow_4loops.mp3", loop=True)
 
     satin "*Gags* Mmmghh!"
 
     stop sound
     scene v14satdtFPPf # Ignore as animation
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 3d - bj_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 3d - bj_fast_4loops.mp3", loop=True)
 
     u "S-shit! You're a fucking professional! (She's deepthroating like a goddess.)"
 
@@ -121,14 +123,16 @@ label v14s03d:
     stop sound
     scene v14satdtTPP # Ignore as animation
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 3d - bj_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 3d - bj_slow_4loops.mp3", loop=True)
 
     u "*Moans* Satin... (If this is what being a \"nice guy\" gets you, then call me Mr. Nice Guy.)"
 
     stop sound
     scene v14satdtTPPf # Ignore as animation
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 3d - bj_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 3d - bj_fast_4loops.mp3", loop=True)
 
     pause
 
@@ -222,7 +226,8 @@ label v14s03d:
 
             scene v14satcgTPP1 # Ignore as animation
             with dissolve
-            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
 
             u "Oh f-fuck... You're soaking wet!"
 
@@ -231,7 +236,8 @@ label v14s03d:
             stop sound
             scene v14satcgTPP1f # Ignore as animation
             with dissolve
-            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
 
             u "I... *Moans* Damn, Satin..."
 
@@ -244,14 +250,16 @@ label v14s03d:
             stop sound
             scene v14satcgTPP2 # Ignore as animation
             with dissolve
-            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
 
             satin "Ha! *Panting* You must be enjoying yourself."
 
             stop sound
             scene v14satcgTPP2f # Ignore as animation
             with dissolve
-            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
 
             u "That's an understatement, baby."
 
@@ -268,14 +276,16 @@ label v14s03d:
 
             scene v14satrcgTPP1 # Ignore as animation
             with dissolve
-            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
 
             satin "*Moans* FUCK!"
 
             stop sound
             scene v14satrcgTPP1f # Ignore as animation
             with dissolve
-            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
 
             u "Your body is so... goddamn perfect. Mmm!"
 
@@ -286,7 +296,8 @@ label v14s03d:
             stop sound
             scene v14satrcgTPP2 # Ignore as animation
             with dissolve
-            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
 
             satin "*Moans* Thank you, but... please... stop talking."
 
@@ -295,7 +306,8 @@ label v14s03d:
             stop sound
             scene v14satrcgTPP2f # Ignore as animation
             with dissolve
-            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
 
             satin "*Whispers* Ahh, yes! Fuck me... Will!"
 
@@ -359,14 +371,16 @@ label v14s03d:
 
             scene v14satbpTPP1 # Ignore as animation
             with dissolve
-            $ renpy.sound.play("music/v14/va/Scene 3d - backplank_slow_2loops.mp3", loop=True)
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - backplank_slow_2loops.mp3", loop=True)
 
             satin "*Moans* So... fucking... good!"
 
             stop sound
             scene v14satbpTPP1f # Ignore as animation
             with dissolve
-            $ renpy.sound.play("music/v14/va/Scene 3d - backplank_fast_4loops.mp3", loop=True)
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - backplank_fast_4loops.mp3", loop=True)
 
             satin "*Whisper* Fuck me, Will! Oh, yes... F-fuck..."
 
@@ -379,7 +393,8 @@ label v14s03d:
             stop sound
             scene v14satbpTPP2 # Ignore as animation
             with dissolve
-            $ renpy.sound.play("music/v14/va/Scene 3d - backplank_slow_2loops.mp3", loop=True)
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - backplank_slow_2loops.mp3", loop=True)
 
             u "I'm... *Moans* I'm cumming... Fuckkk!"
 
@@ -388,7 +403,8 @@ label v14s03d:
             stop sound
             scene v14satbpTPP2f # Ignore as animation
             with dissolve
-            $ renpy.sound.play("music/v14/va/Scene 3d - backplank_fast_4loops.mp3", loop=True)
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - backplank_fast_4loops.mp3", loop=True)
 
             u "Mmm... AH I-, YES SATIN, YES!"
 

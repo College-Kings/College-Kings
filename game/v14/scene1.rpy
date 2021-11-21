@@ -77,7 +77,8 @@ label v14s01:
 
                 scene v14auridbj # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - dbj_slow_2loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - dbj_slow_2loops.mp3", loop=True)
                 pause
 
                 u "*Moans* Damn, ladies... That feels unbelievable."
@@ -85,7 +86,8 @@ label v14s01:
                 stop sound
                 scene v14auridbjf # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - dbj_fast_2loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - dbj_fast_2loops.mp3", loop=True)
                 pause
 
                 u "You two are so fucking beautiful."
@@ -93,7 +95,8 @@ label v14s01:
                 stop sound
                 scene v14auridbj2 # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - dbj_slow_2loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - dbj_slow_2loops.mp3", loop=True)
                 pause
 
                 u "Mmm, fuck! O-okay... Come here, now."
@@ -101,7 +104,8 @@ label v14s01:
                 stop sound
                 scene v14auridbj2f # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - dbj_fast_2loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - dbj_fast_2loops.mp3", loop=True)
                 pause
 
                 ri "Hehe... Yes, sir."
@@ -119,7 +123,8 @@ label v14s01:
 
                 scene v14aurircg # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - rcg_slow_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - rcg_slow_4loops.mp3", loop=True)
                 pause
 
                 ri "*Moans* Oh yes! It gets better... every... time!"
@@ -129,7 +134,8 @@ label v14s01:
                 stop sound
                 scene v14aurircgf # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - rcg_fast_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - rcg_fast_4loops.mp3", loop=True)
                 pause
 
                 au "Look at you, babe. You've definitely done this before."
@@ -139,7 +145,8 @@ label v14s01:
                 stop sound
                 scene v14aurircg2 # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - rcg_slow_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - rcg_slow_4loops.mp3", loop=True)
                 pause
 
                 u "*Moans* She does a... damn good job, too."
@@ -149,7 +156,8 @@ label v14s01:
                 stop sound
                 scene v14aurircg2f # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - rcg_fast_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - rcg_fast_4loops.mp3", loop=True)
                 pause
 
                 au "You know what? You haven't eaten in a long, long time, [name]."
@@ -179,7 +187,8 @@ label v14s01:
 
                 scene v14auridcg # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - dcg_slow_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - dcg_slow_4loops.mp3", loop=True)
                 pause
 
                 ri "Oh... F-f-fuuuuck... [name]!"
@@ -189,7 +198,8 @@ label v14s01:
                 stop sound
                 scene v14auridcgf # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - dcg_fast_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - dcg_fast_4loops.mp3", loop=True)
                 pause
 
                 u "*Moans*"
@@ -199,7 +209,8 @@ label v14s01:
                 stop sound
                 scene v14auridcg2 # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - dcg_slow_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - dcg_slow_4loops.mp3", loop=True)
                 pause
 
                 au "Ha... Mmm... She's right. *Moans*"
@@ -209,7 +220,8 @@ label v14s01:
                 stop sound
                 scene v14auridcg2f # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - dcg_fast_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - dcg_fast_4loops.mp3", loop=True)
                 pause
 
                 u "*Mumbles*"
@@ -234,7 +246,8 @@ label v14s01:
 
                 scene v14aurido # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - doral_slow_2loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - doral_slow_2loops.mp3", loop=True)
                 pause
 
                 u "Wow, I... I have the best fucking life... *Moans*"
@@ -242,7 +255,8 @@ label v14s01:
                 stop sound
                 scene v14auridof # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - doral_fast_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - doral_fast_4loops.mp3", loop=True)
                 pause
 
                 ri "*Chuckles*"
@@ -250,7 +264,8 @@ label v14s01:
                 stop sound
                 scene v14aurido2 # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - doral_slow_2loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - doral_slow_2loops.mp3", loop=True)
                 pause
 
                 u "Sh-shit... Mmmm, I'm getting ready to... *Moans*"
@@ -258,7 +273,8 @@ label v14s01:
                 stop sound
                 scene v14aurido2f # Ignore as animation
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 1 - doral_fast_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 1 - doral_fast_4loops.mp3", loop=True)
                 pause
                 au "Mmm! *Gags*"
 

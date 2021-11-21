@@ -86,14 +86,16 @@ label v14s25a:
 
     scene v14ambmFPP # Missionary
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - bm_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - bm_slow_4loops.mp3", loop=True)
 
     am "*Moans* It feels..."
   
     stop sound
     scene v14ambmFPPf # Missionary faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - bm_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - bm_fast_4loops.mp3", loop=True)
 
     pause
 
@@ -104,14 +106,16 @@ label v14s25a:
     stop sound
     scene v14ambmTPP # Missionary angle 2
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - bm_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - bm_slow_4loops.mp3", loop=True)
 
     am "So much better..."
 
     stop sound
     scene v14ambmTPPf # Missionary angle 2 faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - bm_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - bm_fast_4loops.mp3", loop=True)
 
     pause
 
@@ -123,14 +127,16 @@ label v14s25a:
     stop sound
     scene v14ambtbFPP # Butterfly
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - tb_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - tb_slow_4loops.mp3", loop=True)
 
     u "*Moans* Fuck..."
 
     stop sound
     scene v14ambtbFPPf # Butterly faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - tb_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - tb_fast_4loops.mp3", loop=True)
 
     am "When you're... High, haha... Mmmmhh!"
 
@@ -141,14 +147,16 @@ label v14s25a:
     stop sound
     scene v14ambtbTPP # Butterfly angle 2
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - tb_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - tb_slow_4loops.mp3", loop=True)
 
     u "Yes! You're so fucking amazing, Amber... Holy-"
 
     stop sound
     scene v14ambtbTPPf #Butterfly angle 2 faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - tb_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - tb_fast_4loops.mp3", loop=True)
 
     am "Fffffffuck!"
 
@@ -164,14 +172,16 @@ label v14s25a:
 
     scene v14ambrcgFPP # Reverse cowgirl
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - rcg_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - rcg_slow_4loops.mp3", loop=True)
 
     am "*Gasps* Mmmh!"
 
     stop sound
     scene v14ambrcgFPPf # Reverse cowgirl faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - rcg_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - rcg_fast_4loops.mp3", loop=True)
 
     am "*Panting* Why ride a horse when you can ride a cowboy? *Laughs*"
 
@@ -182,14 +192,16 @@ label v14s25a:
     stop sound
     scene v14ambrcgTPP # Reverse cowgirl angle 2
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - rcg_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - rcg_slow_4loops.mp3", loop=True)
 
     u "*Moans* Haha... Ride 'em cowgirl..."
 
     stop sound
     scene v14ambrcgTPPf # Reverse cowgirl angle 2 faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - rcg_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - rcg_fast_4loops.mp3", loop=True)
 
     pause
 
@@ -225,14 +237,16 @@ label v14s25a:
 
     scene v14ambjoFPP # Jerkoff
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - jo_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - jo_slow_4loops.mp3", loop=True)
 
     am "AHHHH!"
 
     stop sound
     scene v14ambjoFPPf # Jerkoff faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - jo_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - jo_fast_4loops.mp3", loop=True)
 
     u "*Whispers* All he had to do was aim..."
 
@@ -243,7 +257,8 @@ label v14s25a:
     stop sound
     scene v14ambjoTPP # Jerkoff angle 2
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - jo_slow_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - jo_slow_4loops.mp3", loop=True)
 
     u "Oh shittttt! It's coming..."
 
@@ -252,7 +267,8 @@ label v14s25a:
     stop sound
     scene v14ambjoTPPf # Jerkoff angle 2 faster
     with dissolve
-    $ renpy.sound.play("music/v14/va/Scene 25a - jo_fast_4loops.mp3", loop=True)
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 25a - jo_fast_4loops.mp3", loop=True)
 
     u "AHH! *Moans*"
 

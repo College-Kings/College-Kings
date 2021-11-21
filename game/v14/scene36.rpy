@@ -778,7 +778,8 @@ label v14s36:
 
                 scene v14jenmo # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - mo_slow_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - mo_slow_4loops.mp3", loop=True)
                 pause
 
                 u "We need to get these things off of you, don't we? Hmm..."
@@ -786,7 +787,8 @@ label v14s36:
                 stop sound
                 scene v14jenmof # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - mo_fast_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - mo_fast_4loops.mp3", loop=True)
                 pause
 
                 jen "*Chuckles* What are you-"
@@ -794,13 +796,15 @@ label v14s36:
                 stop sound
                 scene v14jenmo2 # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - mo_slow_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - mo_slow_4loops.mp3", loop=True)
                 pause
 
                 stop sound
                 scene v14jenmo2f # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - mo_fast_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - mo_fast_4loops.mp3", loop=True)
                 pause
 
                 stop sound
@@ -885,7 +889,8 @@ label v14s36:
 
                 scene v14jenbj # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - bj_slow_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - bj_slow_4loops.mp3", loop=True)
                 pause
 
                 u "Jenny- Fffffuck, Jenny..."
@@ -893,7 +898,8 @@ label v14s36:
                 stop sound
                 scene v14jenbjf # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - bj_fast_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - bj_fast_4loops.mp3", loop=True)
                 pause
 
                 u "*Moans* Yes, holy shit..."
@@ -901,7 +907,8 @@ label v14s36:
                 stop sound
                 scene v14jenbj2 # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - bj_slow_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - bj_slow_4loops.mp3", loop=True)
                 pause
 
                 jen "*Gags*"
@@ -909,7 +916,8 @@ label v14s36:
                 stop sound
                 scene v14jenbj2f # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - bj_fast_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - bj_fast_4loops.mp3", loop=True)
                 pause
 
                 u "Ha... I... Shhhit..."
@@ -939,7 +947,8 @@ label v14s36:
 
                 scene v14jencg # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - cg_slow_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - cg_slow_4loops.mp3", loop=True)
                 pause
 
                 jen "Fuck..."
@@ -947,7 +956,8 @@ label v14s36:
                 stop sound
                 scene v14jencgf # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - cg_fast_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - cg_fast_4loops.mp3", loop=True)
                 pause
 
                 u "Ha... You like that? *Moans*"
@@ -955,7 +965,8 @@ label v14s36:
                 stop sound
                 scene v14jencg # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - cg_slow_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - cg_slow_4loops.mp3", loop=True)
                 pause
 
                 jen "Yes... *Moans* Yes, [name]..."
@@ -963,7 +974,8 @@ label v14s36:
                 stop sound
                 scene v14jencg2f # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - cg_fast_4loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - cg_fast_4loops.mp3", loop=True)
                 pause
 
                 u "(These beautiful fucking tits...)"
@@ -994,7 +1006,8 @@ label v14s36:
 
                 scene v14jenjo # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - jo_slow_2loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - jo_slow_2loops.mp3", loop=True)
                 pause
 
                 u "Ahh, fuck... Jenny! You're... You're gonna make me cum... *Moans*"
@@ -1002,7 +1015,8 @@ label v14s36:
                 stop sound
                 scene v14jenjof # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - jo_fast_2loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - jo_fast_2loops.mp3", loop=True)
                 pause
 
                 jen "Am I?"
@@ -1010,7 +1024,8 @@ label v14s36:
                 stop sound
                 scene v14jenjo2 # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - jo_slow_2loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - jo_slow_2loops.mp3", loop=True)
                 pause
 
                 u "Mmm- Yes! Yes, y-you are..."
@@ -1020,7 +1035,8 @@ label v14s36:
                 stop sound
                 scene v14jenjo2f # Ignore as anim
                 with dissolve
-                $ renpy.sound.play("music/v14/va/Scene 36 - jo_fast_2loops.mp3", loop=True)
+                if voice_acted:
+                    $ renpy.sound.play("music/v14/va/Scene 36 - jo_fast_2loops.mp3", loop=True)
                 pause
 
                 jen "Do it then."
