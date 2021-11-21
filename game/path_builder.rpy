@@ -51,17 +51,17 @@ define PB_LOYAL = PathBuilderItem(
     PathBuilderCatagories.KCT,
     "Loyal",
     ["kct", "bro", "boyfriend", "troublemaker"],
-    ["loyal", 2, 2, 0])
+    ["loyal", 2, 2, 1])
 define PB_POPULAR = PathBuilderItem(
     PathBuilderCatagories.KCT,
     "Popular",
     ["kct", "bro", "boyfriend", "troublemaker"],
-    ["popular", 2, 0, 2])
+    ["popular", 2, 1, 2])
 define PB_CONFIDENT = PathBuilderItem(
     PathBuilderCatagories.KCT,
     "Confident",
     ["kct", "bro", "boyfriend", "troublemaker"],
-    ["confident", 0, 2, 2])
+    ["confident", 1, 2, 2])
 
 define PB_CHLOE = PathBuilderItem(PathBuilderCatagories.GIRL, "Chloe", ["chloers", "chloegf", "ending", "hcGirl"], [True, True, "chloe", "chloe"])
 define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", ["norars", "noralikes", "v12_nora_sex"], [True, True, True])
