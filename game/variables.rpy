@@ -8,7 +8,7 @@ define config.default_music_volume = 1
 define config.default_sfx_volume = 1
 default menu_set = set()
 default achievementAtList = None
-default voice_acted = False
+default voice_acted = True
 
     ## Phone
 define contacts_file_path = os.path.join(config.basedir, "game", "images", "nonplayable_characters")
