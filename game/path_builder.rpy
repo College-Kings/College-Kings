@@ -44,8 +44,8 @@ init python:
         return None
 
 
-define PB_WOLVES = PathBuilderItem(PathBuilderCatagories.FRATERNITY, "Wolves", ["pb", "joinwolves", "chloemad", "forgiveemily"], [True, True, False, True])
-define PB_APES = PathBuilderItem(PathBuilderCatagories.FRATERNITY, "Apes", ["pb", "joinwolves", "chloemad", "forgiveemily"], [True, False, False, True])
+define PB_WOLVES = PathBuilderItem(PathBuilderCatagories.FRATERNITY, "Wolves", ["pb", "joinwolves", "forgiveemily"], [True, True, True])
+define PB_APES = PathBuilderItem(PathBuilderCatagories.FRATERNITY, "Apes", ["pb", "joinwolves", "forgiveemily"], [True, False, True])
 
 define PB_LOYAL = PathBuilderItem(
     PathBuilderCatagories.KCT,
@@ -117,6 +117,7 @@ screen path_builder_base(header=""):
 
         transclude
 
+
 screen path_builder(catagory_step=1):
     tag menu
     modal True
@@ -180,6 +181,7 @@ screen path_builder(catagory_step=1):
             textbutton "CONTINUE":
                 xalign 1.0
                 selected False
+                sensitive any(all(getattr(store, variable) == value for variable, value in zip(item.variables, item.values)) for item in items)
                 if catagory_step < len(PathBuilderCatagories):
                     action Show("path_builder", None, catagory_step + 1)
                 elif start_location == "v7_homecoming":
