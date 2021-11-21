@@ -277,7 +277,7 @@ label v14s26:
     if v11_lindsey_slogan == 1:
         #Selfie with Lauren in front of slogan banner that says Lindsey, Returning The Promise
         $ v14s26_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14kw26.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! For the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
-        $ v14s26_kiwiiPost1.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
+        $ v14s26_kiwiiPost1.newComment("Lauren", "#Vote4Lindsey! <3", queue=False, numberLikes=382)
         $ v14s26_kiwiiPost1.newComment("Nora", "Cuties <3", queue=False)
         $ v14s26_kiwiiPost1.newComment("Imre", "Actually that cookie this morning made me shit myself!", queue=False)
         $ v14s26_kiwiiPost1.newComment("Chloe", "Eww...", queue=False)
