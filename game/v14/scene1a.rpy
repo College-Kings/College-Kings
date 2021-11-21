@@ -11,9 +11,7 @@ label v14s01a:
 
     pause
 
-    call screen VoiceActing_Toggle("v14s01a_exit")
-
-    label v14s01a_exit:
+    call screen VoiceActing_Toggle()
 
     scene v14s01a_1a # TPP. Same as v14s01a_1, Lindsey putting a finger on MC's lips (as if telling him to be quiet), MC confused, mouth closed, Lindsey smiling, mouth open
     with dissolve

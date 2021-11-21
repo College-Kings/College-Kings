@@ -1,6 +1,4 @@
-screen VoiceActing_Toggle(jumplabel):
-    
-
+screen VoiceActing_Toggle():
     add "gui/frame.webp":
         align (0.5,0.5)
         ysize 350
@@ -26,8 +24,10 @@ screen VoiceActing_Toggle(jumplabel):
             spacing 100
             textbutton "Enable":
                 text_size 40
-                action [SetVariable("voice_acted", True),Hide("VoiceActing_Toggle"), Jump (jumplabel)]
+                sensitive True
+                action [SetVariable("voice_acted", True), Return()]
             textbutton "Disable":
                 text_size 40
-                action [SetVariable("voice_acted", False),Hide("VoiceActing_Toggle"), Jump (jumplabel)]
+                sensitive True
+                action [SetVariable("voice_acted", False), Return()]
             

@@ -25,9 +25,7 @@ label v14s01:
 
     u "(Are they seriously trying to have a threesome...?)"
 
-    call screen VoiceActing_Toggle("v14s01_exit")
-
-    label v14s01_exit:
+    call screen VoiceActing_Toggle()
 
     scene v14s01_1a # FPP. Same as v14s01_1, Riley and Aubrey removing their bras, they're looking at MC seductively, mouths closed
     with dissolve
