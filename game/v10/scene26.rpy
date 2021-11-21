@@ -408,7 +408,7 @@ label v10_amber_skatepark:
                     scene v10ambbj # ignore
                     with dissolve
 
-                    if True:
+                    if not pb:
                         $ grant_achievement("rough_rider")
                     u "Damn Amber!"
 
@@ -721,7 +721,7 @@ label v10_amber_skatepark:
                             scene v10ambbj
                             with dissolve
 
-                            if True:
+                            if not pb:
                                 $ grant_achievement("rough_rider")
 
                             u "Damn Amber!"

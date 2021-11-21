@@ -293,7 +293,7 @@ label v12_penelope_roof:
                 scene v12penr10a
                 with dissolve
 
-                if True:
+                if not pb:
                     $ grant_achievement("good_vs_evil")
                 pe "I think you struggle with right and wrong just like everyone does, but that doesn't mean you're good or bad. It means you're human."
 
@@ -343,7 +343,7 @@ label v12_penelope_roof:
                     "Be bold":
                         $ add_point(KCT.BOYFRIEND)
 
-                        if True:
+                        if not pb:
                             $ grant_achievement("a_person_like_me")
                         u "I'm a guy like me."
 

@@ -472,7 +472,7 @@ label v7start:
                 scene s683a
                 with dissolve
 
-                if True:
+                if not pb:
                     $ grant_achievement("true_to_self")
                 
                 u "Uhh, yeah of course."
@@ -3464,7 +3464,7 @@ label afterbeach:
     if not meetgrayson:
         u "(Wolves pledging starts soon... is it stupid of me to wanna pledge now? I didn't think frat life was for me..."
 
-        if True:
+        if not pb:
             $ grant_achievement("wolfpack")
         u "(But after everything that happened I feel like I gotta at least try and get in, otherwise I'll miss out on too much.)"
 
@@ -3484,14 +3484,14 @@ label afterbeach:
 
             menu:
                 "Pledge to the Apes":
-                    if True:
+                    if not pb:
                         $ grant_achievement("silverback")
                     u "(Fuck it. I'm gonna be winner, no matter what it costs. Time to pledge to the Apes.)"
 
                     jump pledgeapes
 
                 "Pledge to the Wolves":
-                    if True:
+                    if not pb:
                         $ grant_achievement("wolfpack")
                     u "(Grayson might kill me when he finds out, but I can't join the Apes. I gotta pledge to the Wolves.)"
 
@@ -3511,14 +3511,14 @@ label afterbeach:
 
         menu:
             "Pledge to the Apes":
-                if True:
+                if not pb:
                     $ grant_achievement("silverback")
                 u "(Fuck it. I'm gonna be winner, no matter what it costs. I'ma go to the Apes' house and tell Grayson I changed my mind.)"
 
                 jump pledgeapes
 
             "Pledge to the Wolves":
-                if True:
+                if not pb:
                     $ grant_achievement("wolfpack")
                 u "(Nah, Grayson's done more than enough questionable shit. The Wolves been nothing but good to me. I'ma pledge to the Wolves.)"
 
@@ -6486,7 +6486,7 @@ label after_history:
                 scene s907 # Camera - FPP. MC and Cameron running through the door. Cameron is in front of MC with his phone in his hand. MC is almost out of the door
                 with vpunch
 
-                if True:
+                if not pb:
                     $ grant_achievement("lee_way")
 
                 lee "Who was that? {b}WHO WAS THAT?{/b}"
@@ -9868,7 +9868,7 @@ label amberhocodate:
     with dissolve
 
 label v7_nsfwSkipLabel5:
-    if True:
+    if not pb:
         $ grant_achievement("ecstatic")
         
     u "Now what?"
@@ -17003,7 +17003,7 @@ label fr4laurenending:
     scene sfr4la29
     with dissolve
 
-    if True:
+    if not pb:
         $ grant_achievement("slow_and_steady")
 
     la "I read that... if you cuddle in your underwear it increases the serotonin levels in your brain, which in turns means you live a longer, happier life."
@@ -17152,7 +17152,7 @@ label fr4rileyending2:
     scene sfr4ri57a #riley pats the bed,looking at you smiling
     with dissolve
 
-    if True:
+    if not pb:
         $ grant_achievement("playing_with_fire")
         
     ri "Sit down with me for a second."
@@ -17260,7 +17260,7 @@ label fr4chloeending:
     scene sfr4cl58 # tpp from behind: chloe opens the door to her room mc following
     with fade
 
-    if True:
+    if not pb:
         $ grant_achievement("homecoming_queen")
 
     u "So this is your infamous room?"

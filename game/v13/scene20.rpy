@@ -165,7 +165,7 @@ label v13s20_toothbrush:
             scene v13s20brush_5 # FPP. Same positioning as v13s20brush_4, MC sticking the toothbrush in the toilet
             with dissolve
 
-            if True:
+            if not pb:
                 $ grant_achievement("flush_flush")
             u "TASTE SHIT BITCH! *Chuckles*"
 

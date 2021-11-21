@@ -237,7 +237,7 @@ label v10_ms_rose_fight:
             scene v10msf5c # TPP. same camera as v10msf5, Show MS rose. Now having stepped back, embarrased smile, mouth open
             with dissolve
 
-            if True:
+            if not pb:
                 $ grant_achievement("forbidden_romance")
             ro "Wow uhm... thank you [name]. For everything. I need to get back to work. Really, thank you."
 

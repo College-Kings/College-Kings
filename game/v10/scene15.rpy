@@ -442,7 +442,7 @@ label v10_call_with_lauren1:
                         scene v10scwl2c 
                         with dissolve
                         
-                        if True:
+                        if not pb:
                             $ grant_achievement("rawr_im_a_lion")
                         u "Lion."
 
@@ -1205,7 +1205,7 @@ label v10_call_with_lauren1:
                         scene v10saow3c
                         with dissolve
 
-                        if True:
+                        if not pb:
                             $ grant_achievement("rawr_im_a_lion")
                         u "Lion."
 

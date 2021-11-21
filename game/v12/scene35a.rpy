@@ -696,7 +696,7 @@ label v12_nora_sex:
         with dissolve
 
         if v12_lindsey_sex and v12_nora_sex and v12_lauren_sex and v12_msrose_sex:
-            if True:
+            if not pb:
                 $ grant_achievement("city_of_love")
 
         u "You too..."
@@ -730,10 +730,10 @@ label v12_nora_sex:
         with dissolve
 
         if joinwolves:
-            if True:
+            if not pb:
                 $ grant_achievement("inside_job")
         else:
-            if True:
+            if not pb:
                 $ grant_achievement("all_is_fair_in_love_and_war")
 
         u "(I just had sex with Nora. NORA!!! I fucked Chris' girl! Wow... Gonna have to sleep on this one.)"

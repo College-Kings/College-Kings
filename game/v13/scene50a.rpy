@@ -141,7 +141,7 @@ label v13s50a:
     scene v13s50a_6a # FPP Same angle as 6, Emily turning her head to look back at MC, Emily smiling with her mouth open
     with dissolve
 
-    if True:
+    if not pb:
         $ grant_achievement("dammit_emily")
     em "Did you enjoy yourself? *Chuckles*"
 

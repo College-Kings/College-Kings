@@ -1114,7 +1114,7 @@ label v10s33_chloe1:
                 scene v10cfrcl1c
                 with dissolve
 
-                if True:
+                if not pb:
                     $ grant_achievement("hard_decisions")
                 u "She said a lot, but to sum up everything, she called you fake. Said you do a bunch of pretending for sympathy points from people."
 

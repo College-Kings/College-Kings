@@ -133,7 +133,7 @@ label v9_hall_punch:
     scene v9hlw8a # TPP. Same camera as v9hlw8, show MC stepping back and looking the tough guy in the face, both angry.
     with dissolve
 
-    if True:
+    if not pb:
         $ grant_achievement("back_down")
     u "(Nah, fuck this.)"
 

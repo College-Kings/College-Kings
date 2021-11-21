@@ -41,7 +41,7 @@ label v13s46:
             with dissolve
 
             if v13_told_emmy_city:
-                if True:
+                if not pb:
                     $ grant_achievement("urbanizer_womanizer")
 
             u "I don't hate being outside, but... *Chuckles* I'm definitely a city person."
@@ -450,7 +450,7 @@ label v13s46:
             scene v13s46_13b
             with dissolve
 
-            if True:
+            if not pb:
                 $ grant_achievement("voyeur")
             u "Okay, lead the way. *Chuckles*"
 

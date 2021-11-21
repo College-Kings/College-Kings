@@ -935,7 +935,7 @@ label v13s24_kourtney_date:
     scene v13s24_26a # FPP same as v13s24_26 kourtney instead of emmy
     with dissolve
 
-    if True:
+    if not pb:
         $ grant_achievement("romantic_heart")
     u "Let's go, Kourtney."
 

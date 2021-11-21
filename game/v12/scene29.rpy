@@ -1128,7 +1128,7 @@ label v12_lauren_sex:
                 with dissolve
 
                 if laurenrs and not chloers and not aubreyrs and not evelynrs and not emilyrs and not rileyrs and not amberrs and not penelopers and not msrosers and not lindseyrs and not lindseyfirstkiss and not v11_fucked_candy and not v11_samantha_spa:
-                    if True:
+                    if not pb:
                         $ grant_achievement("worth_the_wait")
 
                 $ laurenrs = True

@@ -200,7 +200,7 @@ label v14s18:
             $ v14_help_lindsey = True
 
             if v14_help_chloe:
-                if True:
+                if not pb:
                     $ grant_achievement("double_agent")
   
             u "From the very beginning I've been in support of your campaign, and I don't plan on stopping anytime soon."

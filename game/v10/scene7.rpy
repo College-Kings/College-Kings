@@ -413,7 +413,7 @@ label v10_mc_vs_imre_fight:
             scene v10mvi3 # FPP. Show Imre infront of camera in ring, mouth closed, hands raised ready to fight.
             with dissolve
 
-            if True:
+            if not pb:
                 $ grant_achievement("bros_before_blows")
             u "I don't think I can do this. I- I... I'm sorry guys."
 

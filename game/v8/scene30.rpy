@@ -26,7 +26,7 @@ label amber_sex_at_joshs:
     scene v8amber4a # Amber pulls back her head and is speaking now while looking into the MC's eyes seductively
     with dissolve
 
-    if True:
+    if not pb:
         $ grant_achievement("get_a_room")
 
     if ending == "amber":

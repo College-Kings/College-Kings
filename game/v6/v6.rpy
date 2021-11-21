@@ -258,7 +258,7 @@ label imrecona: # Find Imre
 
 label imreconb: # Help Imre
 
-    if True:
+    if not pb:
         $ grant_achievement("bros_before_hoes")
 
     u "(I need to help Imre, Adam will destroy him in his current condition.)"
@@ -862,7 +862,7 @@ label imrecond: # Meet Chloe
         "Trust her":
             $ add_point(KCT.BOYFRIEND)
             
-            if True:
+            if not pb:
                 $ grant_achievement("credulous")
 
             u "(I shouldn't spy on her. It's not right.)"
@@ -1765,7 +1765,7 @@ label continuebd:
             scene s510 # Mc arrives at his dorm, down at his door there's a flyer (Matt's design)
             with fade
 
-            if True:
+            if not pb:
                 $ grant_achievement("not_my_business")
 
     label nr_bb: #for compatibility only
@@ -2704,7 +2704,7 @@ label emsex_c:
     scene emvid1
     with dissolve
 
-    if True:
+    if not pb:
         $ grant_achievement("reignition")
 
     " "
@@ -2738,7 +2738,7 @@ label emsex_a:
     if not achievement.has("reignition"):
         play music "music/msexy.mp3"
 
-        if True:
+        if not pb:
             $ grant_achievement("reignition")
             
 
@@ -4856,7 +4856,7 @@ label afteraubrey:
                     with dissolve
                     # handshake clap sound
 
-                    if True:
+                    if not pb:
                         $ grant_achievement("monkey_business")
 
                     gr "That's what I'm talking about!"
@@ -5003,7 +5003,7 @@ label afteraubrey:
             $ meetgrayson = False
             $ add_point(KCT.BRO)
             
-            if True:
+            if not pb:
                 $ grant_achievement("seems_fishy")
 
             u "(Fuck Grayson, I'm not meeting him.)"
@@ -6598,7 +6598,7 @@ label wakeupa:
                 scene s658a # penelope blushing and smiling mouth closed
                 with dissolve
 
-                if True:
+                if not pb:
                     $ grant_achievement("strike")
                     
                 pe "*Giggles*"

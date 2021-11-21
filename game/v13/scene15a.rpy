@@ -168,7 +168,7 @@ label v13s15a:
 
         menu:
             "Stay with Riley":
-                if True:
+                if not pb:
                     $ grant_achievement("gentlemen_prefer_gingers")
                 u "Is that even a question?"
 

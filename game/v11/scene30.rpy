@@ -1006,7 +1006,7 @@ label v11_quiz_bonus:
     with dissolve
 
     if v11_hp_points == 3:
-        if True:
+        if not pb:
             $ grant_achievement("earn_your_owl")
 
     jud "For the first time in a very stressful two months, Jerry you have lost. Congratulations Team Pofflehoof!"

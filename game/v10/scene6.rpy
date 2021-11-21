@@ -420,7 +420,7 @@ label v10_mc_vs_ryan_fight:
             scene v10mvr6a
             with dissolve
 
-            if True:
+            if not pb:
                 $ grant_achievement("fright_club")
             u "I don't think I can do this. Sorry guys."
 

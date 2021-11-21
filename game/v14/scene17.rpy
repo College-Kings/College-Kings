@@ -712,7 +712,7 @@ label v14s17:
                         scene v14s17_10b
                         with dissolve
 
-                        if True:
+                        if not pb:
                             $ grant_achievement("beastie_boy")
 
                         u "You say that like it's nothing... Lauren, that's perfect. Everything will go south without you."

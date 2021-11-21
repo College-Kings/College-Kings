@@ -532,7 +532,7 @@ label v11_cardealership:
                             play sound "sounds/kiss.mp3"
 
                             if laurenrs and not v11_aubrey_sex:
-                                if True:
+                                if not pb:
                                     $ grant_achievement("two_timer")
                                                                 
                             else:

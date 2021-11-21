@@ -350,7 +350,7 @@ label v14s03c:
             scene v14s03c_4f
             with dissolve
 
-            if True:
+            if not pb:
                 $ grant_achievement("saving_ryans_privates")
 
             u "Please go save my friend."

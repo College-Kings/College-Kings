@@ -837,7 +837,7 @@ label v12_valentine:
                 scene v12val27
                 with dissolve
 
-                if True:
+                if not pb:
                     $ grant_achievement("you_may_kiss_the_bride")
                 bishop "That was very sweet of you, young man."
         

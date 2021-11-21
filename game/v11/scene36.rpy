@@ -29,7 +29,7 @@ label v11_imre_ryan_grapple:
             scene v11irg2 # TPP. Show MC grabbing Imre, Mr Lee grabbing Ryan, everyone angry, mouths closed
             with dissolve
 
-            if True:
+            if not pb:
                 $ grant_achievement("dont_just_stand_there")
             pause 1.75
 

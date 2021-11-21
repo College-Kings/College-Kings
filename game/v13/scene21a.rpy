@@ -14,7 +14,7 @@ label v13s21a:
     scene v13s21a_1 # FPP. MC looking at Mr. Lee, walking around furiously, mouth open
     with dissolve
 
-    if True:
+    if not pb:
         $ grant_achievement("he_is_done")
     lee "HE IS DONE!"
 

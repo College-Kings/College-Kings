@@ -215,10 +215,10 @@ label v12_follow_chris:
             $ v12_help_chris += 1
             if v12_help_chris >= 4:
                 if joinwolves:
-                    if True:
+                    if not pb:
                         $ grant_achievement("brotherhood_of_men")
                 else:
-                    if True:
+                    if not pb:
                         $ grant_achievement("best_frenemies")
             
             $ add_point(KCT.BRO)

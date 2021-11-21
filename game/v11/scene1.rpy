@@ -1101,7 +1101,7 @@ label v11_case_verdict:
         scene v11coc14b
         with dissolve
 
-        if True:
+        if not pb:
             $ grant_achievement("perry_mason")
         lee "Don't thank us, thank your friend. He did a very good job representing you. We may just have a future lawyer in our midst."
 
