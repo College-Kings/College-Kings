@@ -339,7 +339,8 @@ label v14s53:
             with dissolve
 
             if v14_amber_clean:
-                $ grant_achievement("clean_it_up")
+                if True:
+                    $ grant_achievement("clean_it_up")
 
             u "I know exactly what you mean, Sam. Look at me."
 
