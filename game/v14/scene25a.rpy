@@ -86,11 +86,14 @@ label v14s25a:
 
     scene v14ambmFPP # Missionary
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - bm_slow_4loops.mp3", loop=True)
 
     am "*Moans* It feels..."
   
+    stop sound
     scene v14ambmFPPf # Missionary faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - bm_fast_4loops.mp3", loop=True)
 
     pause
 
@@ -98,13 +101,17 @@ label v14s25a:
     image v14ambmTPP = Movie(play="images/v14/Scene 25a/v14ambmTPP.webm", loop=True, image="images/v14/Scene 25a/v14ambmTPP.webp", start_image="images/v14/Scene 25a/v14ambmTPP.webp")
     image v14ambmTPPf = Movie(play="images/v14/Scene 25a/v14ambmTPPf.webm", loop=True, image="images/v14/Scene 25a/v14ambmTPP.webp", start_image="images/v14/Scene 25a/v14ambmTPP.webp")
 
+    stop sound
     scene v14ambmTPP # Missionary angle 2
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - bm_slow_4loops.mp3", loop=True)
 
     am "So much better..."
 
+    stop sound
     scene v14ambmTPPf # Missionary angle 2 faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - bm_fast_4loops.mp3", loop=True)
 
     pause
 
@@ -113,13 +120,17 @@ label v14s25a:
     image v14ambtbFPP = Movie(play="images/v14/Scene 25a/v14ambtbFPP.webm", loop=True, image="images/v14/Scene 25a/v14ambtbFPP.webp", start_image="images/v14/Scene 25a/v14ambtbFPP.webp")
     image v14ambtbFPPf = Movie(play="images/v14/Scene 25a/v14ambtbFPPf.webm", loop=True, image="images/v14/Scene 25a/v14ambtbFPP.webp", start_image="images/v14/Scene 25a/v14ambtbFPP.webp")
 
+    stop sound
     scene v14ambtbFPP # Butterfly
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - tb_slow_4loops.mp3", loop=True)
 
     u "*Moans* Fuck..."
 
+    stop sound
     scene v14ambtbFPPf # Butterly faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - tb_fast_4loops.mp3", loop=True)
 
     am "When you're... High, haha... Mmmmhh!"
 
@@ -127,16 +138,21 @@ label v14s25a:
     image v14ambtbTPP = Movie(play="images/v14/Scene 25a/v14ambtbTPP.webm", loop=True, image="images/v14/Scene 25a/v14ambtbTPP.webp", start_image="images/v14/Scene 25a/v14ambtbTPP.webp")
     image v14ambtbTPPf = Movie(play="images/v14/Scene 25a/v14ambtbTPPf.webm", loop=True, image="images/v14/Scene 25a/v14ambtbTPP.webp", start_image="images/v14/Scene 25a/v14ambtbTPP.webp")
 
+    stop sound
     scene v14ambtbTPP # Butterfly angle 2
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - tb_slow_4loops.mp3", loop=True)
 
     u "Yes! You're so fucking amazing, Amber... Holy-"
 
+    stop sound
     scene v14ambtbTPPf #Butterfly angle 2 faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - tb_fast_4loops.mp3", loop=True)
 
     am "Fffffffuck!"
 
+    stop sound
     scene v14s25a_11 # TPP Amber now standing, pushing MC to sit down on the edge of the bed with his legs hanging off
     with dissolve
 
@@ -148,11 +164,14 @@ label v14s25a:
 
     scene v14ambrcgFPP # Reverse cowgirl
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - rcg_slow_4loops.mp3", loop=True)
 
     am "*Gasps* Mmmh!"
 
+    stop sound
     scene v14ambrcgFPPf # Reverse cowgirl faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - rcg_fast_4loops.mp3", loop=True)
 
     am "*Panting* Why ride a horse when you can ride a cowboy? *Laughs*"
 
@@ -160,16 +179,21 @@ label v14s25a:
     image v14ambrcgTPP = Movie(play="images/v14/Scene 25a/v14ambrcgTPP.webm", loop=True, image="images/v14/Scene 25a/v14ambrcgTPP.webp", start_image="images/v14/Scene 25a/v14ambrcgTPP.webp")
     image v14ambrcgTPPf = Movie(play="images/v14/Scene 25a/v14ambrcgTPPf.webm", loop=True, image="images/v14/Scene 25a/v14ambrcgTPP.webp", start_image="images/v14/Scene 25a/v14ambrcgTPP.webp")
 
+    stop sound
     scene v14ambrcgTPP # Reverse cowgirl angle 2
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - rcg_slow_4loops.mp3", loop=True)
 
     u "*Moans* Haha... Ride 'em cowgirl..."
 
+    stop sound
     scene v14ambrcgTPPf # Reverse cowgirl angle 2 faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - rcg_fast_4loops.mp3", loop=True)
 
     pause
 
+    stop sound
     scene v14s25a_11a # TPP Same angle as 11, Amber on MC in reverse cowgirl position, waving her hand in the air like a bull rider, mouth open
     with dissolve
 
@@ -201,11 +225,14 @@ label v14s25a:
 
     scene v14ambjoFPP # Jerkoff
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - jo_slow_4loops.mp3", loop=True)
 
     am "AHHHH!"
 
+    stop sound
     scene v14ambjoFPPf # Jerkoff faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - jo_fast_4loops.mp3", loop=True)
 
     u "*Whispers* All he had to do was aim..."
 
@@ -213,18 +240,23 @@ label v14s25a:
     image v14ambjoTPP = Movie(play="images/v14/Scene 25a/v14ambjoTPP.webm", loop=True, image="images/v14/Scene 25a/v14ambjoTPP.webp", start_image="images/v14/Scene 25a/v14ambjoTPP.webp")
     image v14ambjoTPPf = Movie(play="images/v14/Scene 25a/v14ambjoTPPf.webm", loop=True, image="images/v14/Scene 25a/v14ambjoTPP.webp", start_image="images/v14/Scene 25a/v14ambjoTPP.webp")
 
+    stop sound
     scene v14ambjoTPP # Jerkoff angle 2
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - jo_slow_4loops.mp3", loop=True)
 
     u "Oh shittttt! It's coming..."
 
     u "I'm cumming, Amb-."
 
+    stop sound
     scene v14ambjoTPPf # Jerkoff angle 2 faster
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 25a - jo_fast_4loops.mp3", loop=True)
 
     u "AHH! *Moans*"
 
+    stop sound
     scene v14s25a_14 # FPP MC cumming, most going into Amber's mouth, a bit on her face
     with dissolve
 
