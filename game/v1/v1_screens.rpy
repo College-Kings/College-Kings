@@ -270,7 +270,7 @@ screen v1_freeRoam2_5():
         hover "images/fr2downh.webp"
         action Show("v1_freeRoam2_2")
 
-screen nsfw_Toggle(jumplabel):
+screen nsfw_Toggle():
     
 
     add "gui/frame.webp":
@@ -298,7 +298,9 @@ screen nsfw_Toggle(jumplabel):
             spacing 100
             textbutton "Enable":
                 text_size 40
-                action [SetVariable("config_censored", False),Hide("nsfw_Toggle"), Jump (jumplabel)]
+                selected False
+                action [SetVariable("config_censored", False), Return()]
             textbutton "Disable":
                 text_size 40
-                action [SetVariable("config_censored", True),Hide("nsfw_Toggle"), Jump (jumplabel)]
+                selected False
+                action [SetVariable("config_censored", True), Return()]

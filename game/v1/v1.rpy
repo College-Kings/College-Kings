@@ -2022,9 +2022,7 @@ label at_bd:
 
     if not config_censored:
 
-        call screen nsfw_Toggle("v1_exit")
-
-    label v1_exit:
+        call screen nsfw_Toggle
 
     if config_censored:
         call screen censoredPopup("v1_nsfwSkipLabel1")
