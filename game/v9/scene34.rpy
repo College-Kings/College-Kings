@@ -87,8 +87,7 @@ label v9_ri_sex:
     scene v9ris6a # FPP. Same camera as v9ris6, seductive, mouth open.
     with dissolve
 
-    if not pb:
-        $ grant_achievement("cheat_day")
+    $ grant_achievement("cheat_day")
     ri "That's the most romantic thing anyone's ever said to me."
 
     scene v9ris7 # TPP. Show MC lying down on Riley's bed, Riley infront of him with her hands on his pants as if she's about to take them off.

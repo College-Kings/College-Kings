@@ -313,8 +313,7 @@ label v14s01:
                 scene v14s01_11d # FPP. Same as v14s01_11c, Aubrey and Riley mouths closed
                 with dissolve
 
-                if not pb:
-                    $ grant_achievement("ready_player_three")
+                $ grant_achievement("ready_player_three")
 
                 u "*Chuckles* I feel absolutely amazing. Thank you ladies."
 

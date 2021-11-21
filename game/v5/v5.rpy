@@ -781,8 +781,7 @@ label continuez:
                         $ laurenpublic = False
                         $ add_point(KCT.TROUBLEMAKER)
                         
-                        if not pb:
-                            $ grant_achievement("on_the_low")
+                        $ grant_achievement("on_the_low")
 
                         u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
 
@@ -1318,8 +1317,7 @@ label trolleybb: # you do press the lever
     with vpunch
 
     if trolleyb and la2:
-        if not pb:
-            $ grant_achievement("peta_public_enemy")
+        $ grant_achievement("peta_public_enemy")
 
     u "Ahh fuck!"
 
@@ -2153,8 +2151,7 @@ label continueaf:
                     $ laurenpublic = False
                     $ add_point(KCT.TROUBLEMAKER)
                     
-                    if not pb:
-                        $ grant_achievement("on_the_low")
+                    $ grant_achievement("on_the_low")
 
                     u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
 
@@ -3572,8 +3569,7 @@ label fl_a:  # tell the school
 
     stop music fadeout 2.0
 
-    if not pb:
-        $ grant_achievement("snitch")
+    $ grant_achievement("snitch")
 
     u "(I need to tell the school, it's the only way to sort this out.)"
 
