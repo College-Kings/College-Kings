@@ -3,6 +3,7 @@ define config.developer = True
 define config.console = True
 define config_debug = False
 define config_censored = False
+define voice_acted = False
 
 define config.version = "14.0.3{}".format('s' if config.enable_steam else "")
 
