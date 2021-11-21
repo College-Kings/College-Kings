@@ -181,8 +181,8 @@ screen path_builder(catagory_step=1):
             textbutton "CONTINUE":
                 xalign 1.0
                 selected False
-                sensitive any(all(getattr(store, variable) == value for variable, value in zip(item.variables, item.values)) for item in items)
                 if catagory_step < len(PathBuilderCatagories):
+                    sensitive any(all(getattr(store, variable) == value for variable, value in zip(item.variables, item.values)) for item in items)
                     action Show("path_builder", None, catagory_step + 1)
                 elif start_location == "v7_homecoming":
                     action Show("pb_select_homecoming_date")
