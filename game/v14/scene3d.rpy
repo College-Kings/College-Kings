@@ -103,11 +103,14 @@ label v14s03d:
 
     scene v14satdtFPP # Ignore as animation
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 3d - bj_slow_4loops.mp3", loop=True)
 
     satin "*Gags* Mmmghh!"
 
+    stop sound
     scene v14satdtFPPf # Ignore as animation
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 3d - bj_fast_4loops.mp3", loop=True)
 
     u "S-shit! You're a fucking professional! (She's deepthroating like a goddess.)"
 
@@ -115,16 +118,21 @@ label v14s03d:
     image v14satdtTPP = Movie(play="images/v14/Scene 3d/v14satdtTPP.webm", loop=True, image="images/v14/Scene 3d/v14satdtTPP.webp", start_image="images/v14/Scene 3d/v14satdtTPP.webp")
     image v14satdtTPPf = Movie(play="images/v14/Scene 3d/v14satdtTPPf.webm", loop=True, image="images/v14/Scene 3d/v14satdtTPP.webp", start_image="images/v14/Scene 3d/v14satdtTPP.webp")
 
+    stop sound
     scene v14satdtTPP # Ignore as animation
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 3d - bj_slow_4loops.mp3", loop=True)
 
     u "*Moans* Satin... (If this is what being a \"nice guy\" gets you, then call me Mr. Nice Guy.)"
 
+    stop sound
     scene v14satdtTPPf # Ignore as animation
     with dissolve
+    $ renpy.sound.play("music/v14/va/Scene 3d - bj_fast_4loops.mp3", loop=True)
 
     pause
 
+    stop sound
     scene v14s03d_4c # FPP Same angle as 4, Satin doing a new sexy pose, her mouth open
     with dissolve
 
@@ -214,13 +222,16 @@ label v14s03d:
 
             scene v14satcgTPP1 # Ignore as animation
             with dissolve
+            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
 
             u "Oh f-fuck... You're soaking wet!"
 
             satin "*Moans* I guess having a nice guy for once is turning me on quite a bit."
 
+            stop sound
             scene v14satcgTPP1f # Ignore as animation
             with dissolve
+            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
 
             u "I... *Moans* Damn, Satin..."
 
@@ -230,17 +241,22 @@ label v14s03d:
             image v14satcgTPP2 = Movie(play="images/v14/Scene 3d/v14satcgTPP2.webm", loop=True, image="images/v14/Scene 3d/v14satcgTPP2.webp", start_image="images/v14/Scene 3d/v14satcgTPP2.webp")
             image v14satcgTPP2f = Movie(play="images/v14/Scene 3d/v14satcgTPP2f.webm", loop=True, image="images/v14/Scene 3d/v14satcgTPP2.webp", start_image="images/v14/Scene 3d/v14satcgTPP2.webp")
 
+            stop sound
             scene v14satcgTPP2 # Ignore as animation
             with dissolve
+            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
 
             satin "Ha! *Panting* You must be enjoying yourself."
 
+            stop sound
             scene v14satcgTPP2f # Ignore as animation
             with dissolve
+            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
 
             u "That's an understatement, baby."
 
             # -Satin stands, turns around and performs reverse cowgirl while MC is seated-
+            stop sound
             scene v14s03d_12a # TPP Same angle as 12, Show Satin turning around to ride MC in reverse cowgirl
             with dissolve
 
@@ -252,11 +268,14 @@ label v14s03d:
 
             scene v14satrcgTPP1 # Ignore as animation
             with dissolve
+            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
 
             satin "*Moans* FUCK!"
 
+            stop sound
             scene v14satrcgTPP1f # Ignore as animation
             with dissolve
+            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
 
             u "Your body is so... goddamn perfect. Mmm!"
 
@@ -264,20 +283,25 @@ label v14s03d:
             image v14satrcgTPP2 = Movie(play="images/v14/Scene 3d/v14satrcgTPP2.webm", loop=True, image="images/v14/Scene 3d/v14satrcgTPP2.webp", start_image="images/v14/Scene 3d/v14satrcgTPP2.webp")
             image v14satrcgTPP2f = Movie(play="images/v14/Scene 3d/v14satrcgTPP2f.webm", loop=True, image="images/v14/Scene 3d/v14satrcgTPP2.webp", start_image="images/v14/Scene 3d/v14satrcgTPP2.webp")
 
+            stop sound
             scene v14satrcgTPP2 # Ignore as animation
             with dissolve
+            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
 
             satin "*Moans* Thank you, but... please... stop talking."
 
             u "(She wants me to just sit here?)"
 
+            stop sound
             scene v14satrcgTPP2f # Ignore as animation
             with dissolve
+            $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
 
             satin "*Whispers* Ahh, yes! Fuck me... Will!"
 
             u "(Will?!)"
 
+            stop sound
             scene v14s03d_13 # TPP Show satin standing in front of MC, holding his face in her hands and kissing him
             with dissolve
 
@@ -335,11 +359,14 @@ label v14s03d:
 
             scene v14satbpTPP1 # Ignore as animation
             with dissolve
+            $ renpy.sound.play("music/v14/va/Scene 3d - backplank_slow_2loops.mp3", loop=True)
 
             satin "*Moans* So... fucking... good!"
 
+            stop sound
             scene v14satbpTPP1f # Ignore as animation
             with dissolve
+            $ renpy.sound.play("music/v14/va/Scene 3d - backplank_fast_4loops.mp3", loop=True)
 
             satin "*Whisper* Fuck me, Will! Oh, yes... F-fuck..."
 
@@ -349,18 +376,23 @@ label v14s03d:
             image v14satbpTPP2 = Movie(play="images/v14/Scene 3d/v14satbpTPP2.webm", loop=True, image="images/v14/Scene 3d/v14satbpTPP2.webp", start_image="images/v14/Scene 3d/v14satbpTPP2.webp")
             image v14satbpTPP2f = Movie(play="images/v14/Scene 3d/v14satbpTPP2f.webm", loop=True, image="images/v14/Scene 3d/v14satbpTPP2.webp", start_image="images/v14/Scene 3d/v14satbpTPP2.webp")
 
+            stop sound
             scene v14satbpTPP2 # Ignore as animation
             with dissolve
+            $ renpy.sound.play("music/v14/va/Scene 3d - backplank_slow_2loops.mp3", loop=True)
 
             u "I'm... *Moans* I'm cumming... Fuckkk!"
 
             satin "Yes! Please... Cum in me!"
 
+            stop sound
             scene v14satbpTPP2f # Ignore as animation
             with dissolve
+            $ renpy.sound.play("music/v14/va/Scene 3d - backplank_fast_4loops.mp3", loop=True)
 
             u "Mmm... AH I-, YES SATIN, YES!"
 
+            stop sound
             scene v14s03d_16a # FPP Same angle as 16, MC cumming in Satin
             with dissolve
 
