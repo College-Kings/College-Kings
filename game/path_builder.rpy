@@ -44,8 +44,16 @@ init python:
         return None
 
 
-define PB_WOLVES = PathBuilderItem(PathBuilderCatagories.FRATERNITY, "Wolves", ["pb", "joinwolves", "chloemad", "forgiveemily"], [True, True, False, True])
-define PB_APES = PathBuilderItem(PathBuilderCatagories.FRATERNITY, "Apes", ["pb", "joinwolves", "chloemad", "forgiveemily"], [True, False, False, True])
+define PB_WOLVES = PathBuilderItem(
+    PathBuilderCatagories.FRATERNITY,
+    "Wolves",
+    ["path_builder", "joinwolves", "chloemad", "forgiveemily"],
+    [True, True, False, True])
+define PB_APES = PathBuilderItem(
+    PathBuilderCatagories.FRATERNITY,
+    "Apes",
+    ["path_builder", "joinwolves", "chloemad", "forgiveemily"],
+    [True, False, False, True])
 
 define PB_LOYAL = PathBuilderItem(
     PathBuilderCatagories.KCT,

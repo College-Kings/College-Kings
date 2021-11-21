@@ -27,7 +27,8 @@ default enemyhealth = 0
     ## Free Roam
 default previous_location = ""
 
-default pb = False
+    ## Path Builder
+default path_builder = False
 
 # KCT
 default locked_kct = False
