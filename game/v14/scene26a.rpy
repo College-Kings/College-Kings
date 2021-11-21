@@ -43,14 +43,14 @@ label v14s26a:
         scene v14s26a_2a
         with dissolve
 
-        li "I asked her but she ended up not feeling well enough to come over last night... Something about a stomach ache. *Sighs*"
+        li "I asked Lauren but she ended up not feeling well enough to come over last night... Something about a stomach ache. *Sighs*"
 
         scene v14s26a_2b
         with dissolve
 
     u "Well, what's going on? Everyone loves baked goods... *Laughs*"
 
-    scene v14s26a_2c # FPP. same as v14s26a_2a Show lindsey slightly upset
+    scene v14s26a_2a # FPP. same as v14s26a_2a Show lindsey slightly upset
     with dissolve
 
     li "Apparently not, [name]."
@@ -94,29 +94,30 @@ label v14s26a:
 
     li "Surprise, surprise!"
 
-    scene v14s26a_2g
-    with dissolve
+    if not v14_help_lindsey:
+        scene v14s26a_2g
+        with dissolve
 
-    u "Lindsey, I know this is important. Just try to breathe for-"
+        u "Lindsey, I know this is important. Just try to breathe for-"
 
-    scene v14s26a_2h # FPP same as v14s26a_2a lindsey is slightly sad, mouth open
-    with dissolve
+        scene v14s26a_2h # FPP same as v14s26a_2a lindsey is slightly sad, mouth open
+        with dissolve
 
-    li "I'm not trying to put this on you, [name] because it's not like the whole campaign depended on you, but..."
+        li "I'm not trying to put this on you, [name] because it's not like the whole campaign depended on you, but..."
 
-    li "I was counting on you, and this."
+        li "I was counting on you, and this."
 
-    scene v14s26a_2i # FPP. same as v14s26a_2h lindsey's mouth is closed
-    with dissolve
+        scene v14s26a_2i # FPP. same as v14s26a_2h lindsey's mouth is closed
+        with dissolve
 
-    u "I'm sorry Lindsey, but-"
+        u "I'm sorry Lindsey, but-"
 
-    scene v14s26a_2k # FPP. same as v14s26a_2g lindsey's mouth is is open
-    with dissolve
+        scene v14s26a_2k # FPP. same as v14s26a_2g lindsey's mouth is is open
+        with dissolve
 
-    li "Like I said before, I'm not interested in hearing your reasons for not being able to help me."
+        li "Like I said before, I'm not interested in hearing your reasons for not being able to help me."
 
-    li "Because honestly, if the reason isn't a good one it's just gonna upset me even more than I already am."
+        li "Because honestly, if the reason isn't a good one it's just gonna upset me even more than I already am."
 
     scene v14s26a_2g
     with dissolve
@@ -148,7 +149,7 @@ label v14s26a:
     scene v14s26a_2j # FPP. same as v14s26a_2a Lindsey grabs a cake and hands it to MC, no expression, mouth open
     with dissolve
 
-    li "Here."
+    li "Here. Take one for the ride."
 
     if v14_lauren_sabotage:
         scene v14s26a_2d
@@ -161,20 +162,22 @@ label v14s26a:
 
         u "(Damn, so that's how she sabotaged her. Good cooking, Lauren!)"
 
-        u "I'm sure it'll be fine... Thanks, Lindsey."
+    u "I'm sure it'll be fine... Thanks, Lindsey."
 
-        scene v14s26a_2h
-        with dissolve
+    scene v14s26a_2h
+    with dissolve
 
-        li "Yeah, of course."
+    li "Yeah, of course."
 
-        scene v14s26_7 # Ignore as reused from another scene
-        with dissolve
+    scene v14s26_7 # Ignore as reused from another scene
+    with fade
 
-        pause 0.75
+    pause 0.75
 
-        scene v14s26_8 # Ignore as reused from another scene
-        with dissolve
+    scene v14s26_8 # Ignore as reused from another scene
+    with dissolve
+    
+    pause 0.75
 
 # -Kiwii post of Lindsey's bake sale, 2 different renders needed for seperate slogans-
 
@@ -212,14 +215,10 @@ label v14s26a:
         $ v14s26a_kiwiiPost2.addReply("Thank you for the cake! Mine tastes perfectly fine :)", mentions="Lindsey")
         $ v14s26a_kiwiiPost2.newComment("Lindsey", "<3")
 
-    if False: ##just making sure it shows up on lint
-        scene v14kw26a
-        scene v14kw26a_1
-
     if not v14_amber_clean:
         play sound "sounds/vibrate.mp3"
 
-        scene v14s26_9 # Ignore as reused from another scene
+        scene v14s26_9
         with dissolve
 
         u "Hello?"
