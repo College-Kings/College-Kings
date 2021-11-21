@@ -73,12 +73,11 @@ label v14s36:
     with dissolve
 
     menu:
-
         "Happy to help":
             $ add_point(KCT.BOYFRIEND)
             u "Oh, happy to help... Is Penelope busy today?"
 
-        "Ouch that hurts":
+        "Ouch, that hurts":
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Ouch, can't believe I'm just a boredom reliever."
@@ -509,8 +508,6 @@ label v14s36:
 
             u "That'd be nice, yeah. Of course."
 
-
-
         "You're a spy?":
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -533,6 +530,7 @@ label v14s36:
             with dissolve
 
             jen "*Chuckles* Whatever."
+
     scene v14s36_4
     with dissolve
 
@@ -780,24 +778,32 @@ label v14s36:
 
                 scene v14jenmo # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - mo_slow_4loops.mp3", loop=True)
                 pause
 
                 u "We need to get these things off of you, don't we? Hmm..."
 
+                stop sound
                 scene v14jenmof # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - mo_fast_4loops.mp3", loop=True)
                 pause
 
                 jen "*Chuckles* What are you-"
 
+                stop sound
                 scene v14jenmo2 # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - mo_slow_4loops.mp3", loop=True)
                 pause
 
+                stop sound
                 scene v14jenmo2f # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - mo_fast_4loops.mp3", loop=True)
                 pause
 
+                stop sound
                 scene v14s36_99
                 with dissolve
 
@@ -879,34 +885,38 @@ label v14s36:
 
                 scene v14jenbj # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - bj_slow_4loops.mp3", loop=True)
                 pause
 
                 u "Jenny- Fffffuck, Jenny..."
 
+                stop sound
                 scene v14jenbjf # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - bj_fast_4loops.mp3", loop=True)
                 pause
 
                 u "*Moans* Yes, holy shit..."
 
+                stop sound
                 scene v14jenbj2 # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - bj_slow_4loops.mp3", loop=True)
                 pause
 
                 jen "*Gags*"
 
+                stop sound
                 scene v14jenbj2f # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - bj_fast_4loops.mp3", loop=True)
                 pause
 
                 u "Ha... I... Shhhit..."
 
-                scene v14jenbj2f # Ignore as anim
-                with dissolve
-                pause
-
                 u "You're so god damn sexy, Jenny... *Moans*"
 
+                stop sound
                 scene v14s36_lagsex_2b # TPP. same as v14s36_lagsex_2a Jenny stops, smiles, wipes her mouth, Mc full smile mouth closed
                 with dissolve
 
@@ -929,52 +939,44 @@ label v14s36:
 
                 scene v14jencg # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - cg_slow_4loops.mp3", loop=True)
                 pause
 
                 jen "Fuck..."
 
+                stop sound
                 scene v14jencgf # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - cg_fast_4loops.mp3", loop=True)
                 pause
 
                 u "Ha... You like that? *Moans*"
 
+                stop sound
                 scene v14jencg # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - cg_slow_4loops.mp3", loop=True)
                 pause
 
                 jen "Yes... *Moans* Yes, [name]..."
 
+                stop sound
                 scene v14jencg2f # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - cg_fast_4loops.mp3", loop=True)
                 pause
 
                 u "(These beautiful fucking tits...)"
 
-                scene v14jencg2f # Ignore as anim
-                with dissolve
-                pause
-
                 jen "*Gasps* Fuck, I'm- I'm cumming..."
-
-                scene v14jencg2f # Ignore as anim
-                with dissolve
-                pause
 
                 u "*Moans* Yes, baby..."
 
-                scene v14jencg2f # Ignore as anim
-                with dissolve
-                pause
-
                 jen "*Moans* Ohhh, fuck, [name]! *Panting* Fuck me, yes!"
-
-                scene v14jencg2f # Ignore as anim
-                with dissolve
-                pause
 
                 u "Mmm... Fuck, Jenny..."
 
+                stop sound
                 scene v14s36_lagsex_2e # TPP. same as v14s36_lagsex_2d Jenny stands up and offers MC a hand, both full smiles mouths open looking at each other
                 with dissolve
 
@@ -992,40 +994,40 @@ label v14s36:
 
                 scene v14jenjo # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - jo_slow_2loops.mp3", loop=True)
                 pause
 
                 u "Ahh, fuck... Jenny! You're... You're gonna make me cum... *Moans*"
 
+                stop sound
                 scene v14jenjof # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - jo_fast_2loops.mp3", loop=True)
                 pause
 
                 jen "Am I?"
 
+                stop sound
                 scene v14jenjo2 # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - jo_slow_2loops.mp3", loop=True)
                 pause
 
                 u "Mmm- Yes! Yes, y-you are..."
 
-                scene v14jenjo2 # Ignore as anim
-                with dissolve
-                pause
-
                 u "*Moans* Oh my fuck-"
 
+                stop sound
                 scene v14jenjo2f # Ignore as anim
                 with dissolve
+                $ renpy.sound.play("music/v14/va/Scene 36 - jo_fast_2loops.mp3", loop=True)
                 pause
 
                 jen "Do it then."
 
-                scene v14jenjo2f # Ignore as anim
-                with dissolve
-                pause
-
                 u "Mmm! Jenny... *Moans* I'm cumming..."
 
+                stop sound
                 scene v14s36_lagsex_3 # FPP. MC cums and Jenny is there to catch it with her mouth open, tongue out, eyes open looking directly at mc
                 with dissolve
 
