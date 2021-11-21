@@ -299,7 +299,7 @@ label v14s26a:
         with dissolve
 
         $ lindsey_board.money += 100
-        li "Double what I had when you left, $100. Honestly, this was a complete waste of time."
+        li "$100 for the day. Honestly, this was a complete waste of time."
 
         scene v14s26a_2b
         with dissolve
