@@ -38,7 +38,7 @@ label v15s7:
             cl "I don't know how I'm supposed to pay for- *Crying* I needed that money..."
 
 
-            scene v15s7_1 # FPP Same as 1a, Chloe's mouth closed
+            scene v15s7_1b # FPP Same as 1a, Chloe's mouth closed
             with dissolve
 
             u "(Well, fuck... So did we, ha.)"
