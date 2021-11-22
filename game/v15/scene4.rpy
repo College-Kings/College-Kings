@@ -110,7 +110,7 @@ label v15s4:
 
                     u "*Laughs*"
 
-                "I want one.":
+                "I want one":
                     $ AutumnFreeMug = True
                     scene v15s4_9a
                     with dissolve
@@ -185,7 +185,7 @@ label v15s4:
             au "It's going great so far! Can't you tell? Ha..."
 
             menu:
-                "I'm sorry.":
+                "I'm sorry":
                     $ AutumnLunchBreak = True
                     scene v15s4_9d # FPP. Same as v15s4_9c, Autumn frustrated face, mouth closed.
                     with dissolve
@@ -212,7 +212,7 @@ label v15s4:
 
                     au "This has nothing to do with you. *Chuckles* Thanks for being here."
                     
-                "Just breathe.":
+                "Just breathe":
                     scene v15s4_9d
                     with dissolve
 
@@ -307,7 +307,7 @@ label v15s4:
     au "Hi! Hello! *Chuckles* Cutie..."
 
     menu:
-        "Agree.":
+        "Agree":
             scene v15s4_13a # FPP. Same as v15s4_13, Autumn slight smile, mouth closed.
             with dissolve
 
@@ -318,7 +318,7 @@ label v15s4:
 
             au "How could someone give up on you, bud?"
 
-        "Flirt.":
+        "Flirt":
             $ add_point(KCT.BOYFRIEND)
             scene v15s4_13a
             with dissolve
@@ -359,7 +359,7 @@ label v15s4:
                 au "*Chuckles* Hopefully we can find you a good home."
 
     menu:
-        "Good luck.":
+        "Good luck":
             scene v15s4_13a
             with dissolve
 
@@ -493,7 +493,7 @@ label v15s4:
     au "You think we should change it to something else?"
 
     menu:
-        "No, don't change it.":
+        "No, don't change it":
             scene v15s4_12a
             with dissolve
 
@@ -510,7 +510,7 @@ label v15s4:
             au "Okay, Blue. I'll be back later to play with you and take you for a walk."
             
             menu:
-                "Peek.":
+                "Peek":
                     $ add_point(KCT.TROUBLEMAKER)
                     scene v15s4_19 # FPP. Similar to v15s4_18, Close up of Autumn's ass.
                     with dissolve
@@ -520,7 +520,7 @@ label v15s4:
                     if laurenrs:
                         u "(Is it weird to check out Lauren's sister?)"
 
-                "Don't peek.":
+                "Don't peek":
                     $ add_point(KCT.BOYFRIEND)
                     scene v15s4_18
                     with dissolve
@@ -534,7 +534,7 @@ label v15s4:
 
             u "Bye, Blue!"
 
-        "Yeah, lets change it.":
+        "Yeah, lets change it":
             scene v15s4_12a
             with dissolve
 
@@ -608,7 +608,7 @@ label v15s4:
     with dissolve
 
     menu:
-        "Make a joke.":
+        "Make a joke":
             scene v15s4_24 # FPP. MC looking up at Autumn, Autumn not looking at MC she conversates as she is putting up the banner, Autumn slight smile, mouth closed.
             with dissolve
 
@@ -639,7 +639,7 @@ label v15s4:
 
             au "*Laughs* You owe me for having to listen to that."
 
-        "Look at her ass.":
+        "Look at her ass":
             $ AutumnLunchBreak = False
             scene v15s4_24
             with dissolve
@@ -813,7 +813,7 @@ label v15s4:
     u "(Hmm... I could give her a good scare right now...)"
 
     menu:
-        "Pop a balloon.":
+        "Pop a balloon":
             $ TraitPrankster = True
             scene v15s4_40 # FPP. MC behind Autumn, holding a tack/pen/scissors(whatever we have available) and a balloon by Autumn's ear, Autumn unaware with her back turned.
             with dissolve
@@ -859,7 +859,7 @@ label v15s4:
 
             au "*Laughs* You're so annoying."
             
-        "Don't pop a balloon.":
+        "Don't pop a balloon":
                 u "(Not worth the chance of getting accidentally punched in the face...)"
 
                 scene v15s4_41 # TPP. Show MC with his back turned to Autumn looking at the balloons on the floor, both slight smile, mouth open.
@@ -1327,7 +1327,7 @@ label v15s4:
         au "Want a hit?"
 
         menu:
-            "Smoke weed.":
+            "Smoke weed":
                 $ SmokedWithAutumn = True
                 scene v15s4_59f
                 with dissolve
@@ -1369,7 +1369,7 @@ label v15s4:
 
                 u "*Inhaling* This is a nice bonding experience... Haha."
 
-            "Don't smoke weed.":
+            "Don't smoke weed":
                 scene v15s4_59f
                 with dissolve
 

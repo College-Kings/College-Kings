@@ -28,7 +28,7 @@ label v15s14:
     with dissolve
 
     menu:
-        "Say nothing.":
+        "Say nothing":
             u "..."
 
             scene v15s14_5a # FPp. Same as v15s14_5, Ms. Rose, Apologetic expression, mouth open
@@ -36,7 +36,7 @@ label v15s14:
 
             ro "Oh, is this the silent treatment?"
 
-        "Express you're not happy.":
+        "Express you're not happy":
             scene v15s14_5b # FPP. Same as v15s15_5a, Ms. Rose, Apologetic expression, mouth closed.
             with dissolve
 
@@ -67,7 +67,7 @@ label v15s14:
     u "It's been a while, I guess."
 
     menu:
-        "Don't drug me.":
+        "Don't drug me":
             scene v15s14_5b
             with dissolve
             
@@ -83,7 +83,7 @@ label v15s14:
 
             u "*Sighs*"
 
-        "Let's go.":
+        "Let's go":
             $ v15s14_LetsGo = True
 
             u "Okay, let's go."
