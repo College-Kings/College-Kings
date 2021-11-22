@@ -173,7 +173,7 @@ label v15s5:
                 with dissolve
             
             "Get angry":
-                $ add_point (KCT.BOYFRIEND)
+                $ add_point(KCT.BOYFRIEND)
                 scene v15s5_4b
                 with dissolve
                 

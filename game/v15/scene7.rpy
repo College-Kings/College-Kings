@@ -138,7 +138,7 @@ label v15s7:
 
             menu:
                 "You have a diary?":
-                    $ add_point (KCT.TROUBLEMAKER)
+                    $ add_point(KCT.TROUBLEMAKER)
 
                     scene v15s7_1b
                     with dissolve
@@ -256,7 +256,7 @@ label v15s7:
 
             menu:
                 "Sympathize":
-                    $ add_point (KCT.BOYFRIEND)
+                    $ add_point(KCT.BOYFRIEND)
 
                     scene v15s7_1b
                     with dissolve
