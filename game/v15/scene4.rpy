@@ -545,7 +545,12 @@ label v15s4:
 
             au "Okay, what should we call him then?"
 
-            $ dog_name = renpy.input(_("Choose the dog's name"), default=_("Blue")).strip() or _("Blue")
+            label v15s4_dog:
+            $ dog_name = renpy.input(_("Choose the dog's name:"), default=_("Blue")).strip() or _("Blue")
+
+            if dog_name.upper() == "BLUE":
+                u "(I should come up with a better name than that...)"
+                jump v15s4_dog
 
             scene v15s4_12a
             with dissolve
