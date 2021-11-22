@@ -29,6 +29,7 @@ default previous_location = ""
 
     ## Path Builder
 default path_builder = False
+default pb_name_set = False
 
 # voiceacting
 default voice_acted = True

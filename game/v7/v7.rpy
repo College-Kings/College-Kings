@@ -9678,6 +9678,10 @@ label walking_through_hallways:
 ######## SCENE 38 BACK IN YOUR DORM FRIDAY EVENING
     label v7_homecoming:
 
+    if path_builder and not pb_name_set:
+        $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
+        $ pb_name_set = True
+
     show screen phoneIcon
 
     if joinwolves:
