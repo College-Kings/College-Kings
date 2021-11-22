@@ -10,7 +10,7 @@ default menu_set = set()
 default achievementAtList = None
 
     ## Phone
-default contacts_file_path = os.path.join(config.basedir, "game", "images", "phone", "contacts")
+define contacts_file_path = os.path.join(config.basedir, "game", "images", "nonplayable_characters")
 
     ## Kiwii Vars
 default kiwiiUsers = kiwii_users()
@@ -27,7 +27,11 @@ default enemyhealth = 0
     ## Free Roam
 default previous_location = ""
 
+    ## Path Builder
+default path_builder = False
+
 # KCT
+default locked_kct = False
 default kct = "confident"
 default sortedKCT = ["confident", "loyal", "popular"]
 
@@ -275,7 +279,7 @@ default amberrs = False
 default penelopers = False
 default walkedRileyHome = False
 default amberEcstasyOffer = False # Whether Amber asked you to join her
-default hcGirl = "na"
+default hcGirl = "alone"
 default hcAsked = [] # hcAsked.append("girl_name") to add
 default consoledSam = False
 default emilyText = False
@@ -610,6 +614,30 @@ default v13s48_ryan_double_date = False
 default v13s9_go_to_concert = False
 
 # 14.0
+
+#BOARD
+##CHLOE
+default chloe_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/chloe_background.webp", money=1500)
+default v14_chloe_wolves = False ##APPROACH A
+default v14_realwolf = False ##TASK A2A
+default v14_plushwolf = False ##TASK A2B
+
+default v14_chloe_apes = False ##APPROACH B
+default v14_chloe_grayson = False ##TASK B2A
+default v14_chloe_cameron = False ##TASK B2B
+
+##LINDSEY
+default lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/lindsey_background.webp", money=200, style="lindsey_board")
+default v14_lindsey_sell = False ##APPROACH A
+default v14_pics_no_linds = False ##TASK A1A
+default v14_pics_with_linds = False ##TASK A1B
+
+default v14_lindsey_steal = False ##APPROACH B
+default v14_concert_distraction = False ##APPROACH B1A
+default v14_date_distraction = False ###APPROACH B1B
+
+
+##Rest of 14
 default AmberLoyal = False
 default AutumnTrust = False
 default chrissus = 0
@@ -625,7 +653,6 @@ default v14_amber_clean = False
 default v14_amber_sex = False
 default v14_ApesPostChloePics = True #They always post unless MC is an Ape and stops them.
 default v14_badsinging_Sam = False
-default v14_chloe_apes = False #Placeholder
 default v14_chloe_sex = False
 default v14_chloeSus = False
 default v14_chrissupport = 0 #3 = Full, 2 = Medium, 1 = Low
@@ -635,19 +662,13 @@ default v14_help_lindsey = False
 default v14_jenny_sex = False
 default v14_jennypoints = 0
 default v14_lauren_sabotage = False
-default v14_lindsey_car_sale = False #Placeholder for helping Lindsey sell her car
-default v14_lindsey_money_theft = False
 default v14_lindsey_popularity = 45 # Use `set_presidency_percent(amount)`.
-default v14_money_theft_concert_distraction = False # Placeholder for choosing the concert to distract Chloe
-default v14_money_theft_date_ditch = False # Placeholder for choosing to ditch the date you set up with Chloe to steal money
 default v14_noraWhere = False
 default v14_noraWorry = False
 default v14_PenArgScene = False
 default v14_penelope_date = False
 default v14_PenelopePartner = False
 default v14_PenRomScene = False
-default v14_pics_with_linds = False
-default v14_realwolf = False #Placeholder for choosing real wolf on planning board
 default v14_ryan_satin = False
 default v14_samantha_sex = False
 default v14_SamanthaDrugs = False
@@ -655,7 +676,6 @@ default v14_satin_sex = False
 default v14_talk_to_chris = False
 default v14s03a_left_cup = False
 default v14s03a_take_wallet = False
-default v14s22_steal_fund = False
 default v14s23_agree = False
 default v14s23_disagree = False
 default v14s24a_gummyfish = False
@@ -665,7 +685,6 @@ default v14s30b_pw_image_one = False  # MC chose the first photo of the Plush Wo
 default v14s30b_pw_image_two = False  # MC chose the second photo of the Plush Wolf for Chloe's kiwi post
 default v14s30b_rw_image_one = False  # MC chose the first photo of the Real Wolf for Chloe's kiwi post
 default v14s30b_rw_image_two = False  # MC chose the second photo of the Real Wolf for Chloe's kiwi post
-default v14s31_talkcameron = False # Placeholder still
 default v14s31b_smoke_weed_with_aubrey = False # s31b smoking weed with Aubrey at Ape's House
 default v14s31bTrustChloe = False # MC trust Chloe alone with Grayson
 default v14s37_focus_on_us = False # Tell Penelope to focus on them during the date.
@@ -676,22 +695,42 @@ default v14s47_linds_hips = False
 default v14s47_linds_hood = False
 default v14s47_linds_knees = False
 default v14s47_linds_trunk = False
-default v14s47_pics = 0
+default v14s47_car_pics = []
 default v14s47_solo_bird = False
 default v14s47_solo_driver = False
 default v14s47_solo_hood = False
 default v14s47_solo_no_bird = False
 default v14s47_solo_trunk = False
-default v14s48_lie = False # PLACEHOLDER - CHECK WITH OSCAR THE VARIABLE IN THE APP!
+default v14s48_car_description = CarDescription.LIE
 default v14s50_listen_to_aubrey_lindsey = False # MC choses to listen to Lindsey and Aubrey's conversation. 
 default v14s51_bathroom_window = False
 default v14s51_interaction = 0 
 default v14s51_kitchen_window = False
-default v14s51_take_300 = False
-default v14s51_take_900 = False
+default v14s51_take_cash_small = False
+default v14s51_take_cash_large = False
 default v14s51_take_diary = False
 default v14s51_take_money = False
 default v14_lauren_helps_lindsey = False
+default irisStrikes = 0
+default v14s4_tell_imre = False
+default v14s5a_riley_should_join_chicks = False
+default v14_samantha_cum = False
+
+default v14s48_car_price = 100
+
+default v14s47_passenger = False
+default v14s51_bedside = False
+default v14s51_desk = False
+default v14s51_closet = False 
+default v14s51_purse = False 
+default v14s51_pillow = False 
+default v14s50_listen_to_aubrey_lindsey_2 = False
+default v14s50_listen_to_aubrey_lindsey_3 = False
+default v14s47_linds_passenger = False
+default v14s47_solo_passenger = False
+default v14s01_music = False
+default v14s03c_music = False
+
 
 # 15.0
 default AutumnFreeMug = False
