@@ -6265,7 +6265,7 @@ label wakeupa:
         scene s635b
         with dissolve
 
-        pe "You mean Rufus? He was so cute."
+        pe "You mean Furrus? He was so cute."
 
         pe "And surprisingly helpful in most of their missions."
 
