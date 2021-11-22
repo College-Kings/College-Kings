@@ -733,6 +733,9 @@ default v14s03c_music = False
 
 
 # 15.0
+default AubreyFriend = False ##PLACEHOLDER??
+default Aubreyfwb = False ##PLACEHOLDER??
+default AubreyTamed = False ##PLACEHOLDER??
 default AutumnFreeMug = False
 default AutumnLunchBreak = False
 default dog_name = "Blue"
@@ -744,8 +747,10 @@ default TraitBoomer = False ##PLACEHOLDER??
 default TraitHardass = False
 default TraitPopculture = False ##PLACEHOLDER??
 default TraitPrankster = False
+default v15_Blame_Chris = False ##PLACEHOLDER??
 default v15_Blame_Nora = False ##PLACEHOLDER??
 default v15_DamageLindseyRep = False
 default v15_LessChickTuition = False
+default v15_Stuck_Up_For_Nora = False ##PLACEHOLDER??
 default v15s14_LetsGo = False
 default v15s7_chloe_empathize = False
