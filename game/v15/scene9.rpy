@@ -432,16 +432,16 @@ label v15s9:
         if v14s48_car_price >= 300 and v14s48_car_price <= 750 and v14_pics_with_linds or v14s48_car_price >= 300 and v14s48_car_price <= 550:
 
         # -if MC chose to sell the car for between $300 and $750 and Lindsey is in the photos OR MC chose to sell the car for between $300 and $550 and Lindsey is not in the photos
-            $ lindsey.newMessage("Hey! Somebody wants to check out the car and they sound really interested!", queue=False)
-            $ lindsey.newMessage("I'm meeting them now. Can you come to where we took the photos?", queue=False)
+            $ lindsey.messenger.newMessage("Hey! Somebody wants to check out the car and they sound really interested!", queue=False)
+            $ lindsey.messenger.newMessage("I'm meeting them now. Can you come to where we took the photos?", queue=False)
 
             if v14s48_car_description == CarDescription.LIE: # PLACEHOLDER - CHECK WITH OSCAR THE VARIABLE IN THE APP!
-                $ lindsey.addReply("See? Lying works in mysterious ways, haha OMW", func=None)
+                $ lindsey.messenger.addReply("See? Lying works in mysterious ways, haha OMW", func=None)
 
                 call screen phone
 
             else:
-                $ lindsey.addReply("Honesty is the best policy! Heading there now.", func=None)
+                $ lindsey.messenger.addReply("Honesty is the best policy! Heading there now.", func=None)
 
                 call screen phone
 
@@ -458,19 +458,19 @@ label v15s9:
         else:
         # -if MC chose to sell the car for anything over $750 and Lindsey is in the photos OR MC chose to sell the car for anything over $550 and Lindsey is not in the photos OR MC chose to sell the car for anything under $300 with photos either with or without Lindsey
 
-            $ lindsey.newMessage("24 hours is up! No interested buyers on the car... :(", queue=False)
-            $ lindsey.addReply("Ugh, that sucks! I'm sorry", func=None)
-            $ lindsey.newMessage("It sucks big time! I think we messed up on the price...", queue=False)
-            $ lindsey.addReply("Can we change the price and list it again?", func=None)
-            $ lindsey.newMessage("I thought about it, but it costs way too much. Let's just move on.", queue=False)
-            $ lindsey.addReply("Fuck, okay. What's next?", func=None)
-            $ lindsey.newMessage("Meet me at the janitor's closet and you'll find out ;)", queue=False)
+            $ lindsey.messenger.newMessage("24 hours is up! No interested buyers on the car... :(", queue=False)
+            $ lindsey.messenger.addReply("Ugh, that sucks! I'm sorry", func=None)
+            $ lindsey.messenger.newMessage("It sucks big time! I think we messed up on the price...", queue=False)
+            $ lindsey.messenger.addReply("Can we change the price and list it again?", func=None)
+            $ lindsey.messenger.newMessage("I thought about it, but it costs way too much. Let's just move on.", queue=False)
+            $ lindsey.messenger.addReply("Fuck, okay. What's next?", func=None)
+            $ lindsey.messenger.newMessage("Meet me at the janitor's closet and you'll find out ;)", queue=False)
 
             if lindseyfriend: #placeholder
-                $ lindsey.addReply("OMW", func=None)
+                $ lindsey.messenger.addReply("OMW", func=None)
 
             if lindseyrs:
-                $ lindsey.addReply("Be there soon ;)", func=None)
+                $ lindsey.messenger.addReply("Be there soon ;)", func=None)
 
             call screen phone
 

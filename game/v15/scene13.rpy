@@ -92,13 +92,13 @@ label v15s13:
         scene v15s13_2d # TPP. same as v15s13_2c MC puts down the donut on his WOLVES desk, pulls out his phone and checks his texts to see a message from Riley, slight smile, mouth closed, looking at his phone
         with dissolve
 
-        $ riley.newMessage("Hey! I'm assuming you'll be at Lauren's Halloween birthday party later?", queue=False)
-        $ riley.addReply("Yeah, I'll be there!", func=None)
-        $ riley.newMessage("Just FYI, the stores are running low on costumes so if you haven't got one already, hurry up and get one... lol", queue=False)
-        $ riley.addReply("Shit... I haven't got one yet, haha.", func=None)
-        $ riley.newMessage("Why am I not surprised? :D", queue=False)
-        $ riley.addReply("I'm on my way out now, wish me luck!", func=None)
-        $ riley.newMessage("Good luck! You're gonna need it...", queue=False)
+        $ riley.messenger.newMessage("Hey! I'm assuming you'll be at Lauren's Halloween birthday party later?", queue=False)
+        $ riley.messenger.addReply("Yeah, I'll be there!", func=None)
+        $ riley.messenger.newMessage("Just FYI, the stores are running low on costumes so if you haven't got one already, hurry up and get one... lol", queue=False)
+        $ riley.messenger.addReply("Shit... I haven't got one yet, haha.", func=None)
+        $ riley.messenger.newMessage("Why am I not surprised? :D", queue=False)
+        $ riley.messenger.addReply("I'm on my way out now, wish me luck!", func=None)
+        $ riley.messenger.newMessage("Good luck! You're gonna need it...", queue=False)
 
         call screen phone
 
@@ -293,13 +293,13 @@ label v15s13:
         scene v15s13_8d # TPP. same as v15s13_8c MC puts down the donut on his APES desk, pulls out his phone and checks his texts to see a message from Riley, slight smile, mouth closed, looking at his phone
         with dissolve
 
-        $ riley.newMessage("Hey! I'm assuming you'll be at Lauren's Halloween birthday party later?", queue=False)
-        $ riley.addReply("Yeah, I'll be there!", func=None)
-        $ riley.newMessage("Just FYI, the stores are running low on costumes so if you haven't got one already, hurry up and get one... lol", queue=False)
-        $ riley.addReply("Shit... I haven't got one yet, haha.", func=None)
-        $ riley.newMessage("Why am I not surprised? :D", queue=False)
-        $ riley.addReply("I'm on my way out now, wish me luck!", func=None)
-        $ riley.newMessage("Good luck! You're gonna need it...", queue=False)
+        $ riley.messenger.newMessage("Hey! I'm assuming you'll be at Lauren's Halloween birthday party later?", queue=False)
+        $ riley.messenger.addReply("Yeah, I'll be there!", func=None)
+        $ riley.messenger.newMessage("Just FYI, the stores are running low on costumes so if you haven't got one already, hurry up and get one... lol", queue=False)
+        $ riley.messenger.addReply("Shit... I haven't got one yet, haha.", func=None)
+        $ riley.messenger.newMessage("Why am I not surprised? :D", queue=False)
+        $ riley.messenger.addReply("I'm on my way out now, wish me luck!", func=None)
+        $ riley.messenger.newMessage("Good luck! You're gonna need it...", queue=False)
 
         call screen phone
 

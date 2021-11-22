@@ -517,9 +517,9 @@ label v15s1:
 
 # -MC checks his texts and there's a message from Autumn-
 
-    $ autumn.newMessage("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)")
-    $ autumn.addReply("Yeah, looking forward to it. See you there!")
-    $ autumn.addReply("Of course! I'll always be there if there's puppies, haha.")
+    $ autumn.messenger.newMessage("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)")
+    $ autumn.messenger.addReply("Yeah, looking forward to it. See you there!")
+    $ autumn.messenger.addReply("Of course! I'll always be there if there's puppies, haha.")
 
     call screen phone
 
@@ -546,7 +546,7 @@ label v15s1:
     u "(The hell?)"
 
 # -MC checks his texts and there's a message from Lauren-
-    $ lauren.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren")
+    $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren")
 
     call screen phone
 
