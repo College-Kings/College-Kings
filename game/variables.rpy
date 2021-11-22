@@ -694,14 +694,19 @@ default v14s51_take_money = False
 default v14_lauren_helps_lindsey = False
 
 # 15.0
-default AutumnLunchBreak = False
 default AutumnFreeMug = False
+default AutumnLunchBreak = False
+default dog_name = "Blue"
+default lindseyfriend = False ##PLACEHOLDER??
+default MadAtMsRose = False ##PLACEHOLDER??
 default SmokedWithAutumn = False
 default TraitAnimalLover = False
-default TraitPrankster = False
+default TraitBoomer = False ##PLACEHOLDER??
 default TraitHardass = False
+default TraitPopculture = False ##PLACEHOLDER??
+default TraitPrankster = False
+default v15_Blame_Nora = False ##PLACEHOLDER??
 default v15_DamageLindseyRep = False
 default v15_LessChickTuition = False
 default v15s14_LetsGo = False
-default dog_name = "Blue"
 default v15s7_chloe_empathize = False

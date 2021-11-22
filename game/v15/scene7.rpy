@@ -6,7 +6,7 @@
 label v15s7:
     # -1 random male and 1 random female student will be needed for the second half of this scene-
 
-    if (v14s51_take_diary or v14s51_take_money): # -if MC stole any of Chloe's money and/or her diary from her room
+    if v14s51_take_diary or v14s51_take_money: # -if MC stole any of Chloe's money and/or her diary from her room
         scene v15s7_1 # FPP At entrance to library, Chloe is obviously crying and doing a bad job of hiding it with her hand
         with dissolve
 
@@ -23,7 +23,7 @@ label v15s7:
 
             pause 0.75
 
-        if (v14s51_take_cash_large and not v14s51_take_cash_small): # -if the $900 was stolen
+        if v14s51_take_cash_large and not v14s51_take_cash_small: # -if the $900 was stolen
             scene v15s7_1a
             with dissolve
 
@@ -94,7 +94,7 @@ label v15s7:
             cl "It's not the end of the world but still, they were in my room. Someone was in my room..."
             cl "*Sobbing* It's so scary and creepy!"
 
-        elif (v14s51_take_cash_small and v14s51_take_cash_large): # -if $900 and $300 was stolen
+        elif v14s51_take_cash_small and v14s51_take_cash_large: # -if $900 and $300 was stolen
             scene v15s7_1a
             with dissolve
 
@@ -153,7 +153,7 @@ label v15s7:
                 
                     cl "Yes, [name]. I DID have a diary."
 
-                    if (chloegf or chloers): # -if ChloeGF or ChloeRS
+                    if chloegf or chloers: # -if ChloeGF or ChloeRS
                         scene v15s7_1a
                         with dissolve
 
@@ -202,7 +202,7 @@ label v15s7:
                     cl "But it's gone and I can't find it anywhere. Every single one of my most private thoughts are written down in there."
                     cl "I feel completely naked inside knowing that someone else is probably out there reading it. *Sniffles*"
 
-        elif (v14s51_take_diary and v14s51_take_cash_small and v14s51_take_cash_large): # -if $900, $300 and Chloe's diary was stolen
+        elif v14s51_take_diary and v14s51_take_cash_small and v14s51_take_cash_large: # -if $900, $300 and Chloe's diary was stolen
             scene v15s7_1a
             with dissolve
 
@@ -233,7 +233,7 @@ label v15s7:
 
             u "Oh fuck, Chloe. I'm so sorry..."
 
-            if (chloegf or chloers): # -If ChloeGF or ChloeRS
+            if chloegf or chloers: # -If ChloeGF or ChloeRS
                 scene v15s7_1a
                 with dissolve
 
@@ -357,13 +357,13 @@ label v15s7:
                 
             u "We won't. Don't even think about it."
 
-        if (chloers): # -if ChloeRs, they hug tightly
+        if chloers: # -if ChloeRs, they hug tightly
             scene v15s7_3 # TPP Chloe giving MC a tight hug
             with dissolve
 
             pause 1
 
-        elif (chloegf): # -if ChloeGF, A quick kiss before they hug
+        elif chloegf: # -if ChloeGF, A quick kiss before they hug
             scene v15s7_4 # TPP Chloe giving MC a kiss, a little bit of mascara still streaking her face
             with dissolve
 
