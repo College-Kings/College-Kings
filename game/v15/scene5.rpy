@@ -4,13 +4,12 @@
 # Time: Morning
 
 label v15s5:
-    
     if msrosers and v12_msrose_sex:
     # -MC is walking outside on campus, near the library-
         scene v15s5_1 # TPP. Show MC walking outside of campus near the library, MC slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s5_1a # TPP. Same as v15s5_1, Show MC walking he was just positioned walking, looking ahead of him, slight smile, mouth closed.
         with dissolve
@@ -20,24 +19,24 @@ label v15s5:
         scene v15s5_2 # TPP. Close up of just Ms. Rose walking in the oppisite direction towards MC, looking at MC, slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s5_2a # TPP. Same as v15s5_2, Ms. Rose standing in place a little bit up from where she was walking, pointing at a nearby classroom subtly, slight smile, mouth closed
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s5_2b # TPP. Same as v15s5_2a, Ms, Rose signing at MC with her finger to follow her to the classroom, slight smile, mouth closed.
         with dissolve
 
-        pause .5
+        pause 0.75
 
         play sound "sounds/doorclose.mp3"
 
         scene v15s5_3 # TPP. Show Ms. Rose leaning against the deck inside the classroom, MC standing near her by the desk, both slight smile, mouth closed.
         with fade
 
-        pause .25
+        pause 0.75
 
         scene v15s5_4 # FPP. MC looking at Ms. Rose leaning against the desk, Ms. Rose looking at MC, Ms. Rose worried smile, mouth open.
         with dissolve
@@ -76,31 +75,31 @@ label v15s5:
 
         ro "I don't. I just know that it's sometime soon."
 
-            if v14_amber_sex or v14s31b_smoke_weed_with_aubrey or v13_smoke_weed:
-                scene v15s5_4a
-                with dissolve
+        if v14_amber_sex or v14s31b_smoke_weed_with_aubrey or v13_smoke_weed:
+            scene v15s5_4a
+            with dissolve
 
-                u "Are they testing for weed?"
+            u "Are they testing for weed?"
 
-                scene v15s5_4
-                with dissolve
+            scene v15s5_4
+            with dissolve
 
-                ro "They will be testing for everything."
+            ro "They will be testing for everything."
 
-                ro "So, I just wanted to apologize in advance in case they find you positive for the drug I put in your drink while we were in Paris."
+            ro "So, I just wanted to apologize in advance in case they find you positive for the drug I put in your drink while we were in Paris."
 
-            else:
-                scene v15s5_4a
-                with dissolve
+        else:
+            scene v15s5_4a
+            with dissolve
 
-                u "I should be fine... I'm not worried."
+            u "I should be fine... I'm not worried."
 
-                scene v15s5_4
-                with dissolve
+            scene v15s5_4
+            with dissolve
 
-                ro "Well, I hope there's nothing to worry about."
+            ro "Well, I hope there's nothing to worry about."
 
-                ro "I just wanted to apologize in advance in case they find you positive for the drug I put in your drink while we were in Paris."
+            ro "I just wanted to apologize in advance in case they find you positive for the drug I put in your drink while we were in Paris."
 
         ro "I'm not sure how long it can stay in your system but... They might detect traces of it since these tests are very sophisticated."
 

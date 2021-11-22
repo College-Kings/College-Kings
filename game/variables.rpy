@@ -702,4 +702,6 @@ default TraitPrankster = False
 default TraitHardass = False
 default v15_DamageLindseyRep = False
 default v15_LessChickTuition = False
-default v15s41_LetsGo = False
+default v15s14_LetsGo = False
+default dog_name = "Blue"
+default v15s7_chloe_empathize = False

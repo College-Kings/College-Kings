@@ -16,12 +16,18 @@ label v15s13:
         scene v15s13_2 # TPP. MC is in his WOLVES bedroom and sits at his WOLVES study desk and opens a book to read, no expression, mouth closed, the bag of doughnuts can be seen on his desk
         with dissolve
 
+        pause 0.75
+
         scene v15s13_2a # TPP. same as v15s13_2 Mc leans back in his chair, one arm resting on his lap the other holding the book open in front of him
         with dissolve
 
+        pause 0.75
+        
         scene v15s13_2b # TPP. same as v15s13_2a drops both arms dangling to his sides still holding the book, mouth slightly open with an annoyed expression, rolling his eyes
         with dissolve
 
+        pause 0.75
+        
         scene v15s13_2c # TPP. same as v15s13_2 MC puts down the book, and grabs a donut
         with dissolve
 
@@ -46,7 +52,6 @@ label v15s13:
         with dissolve
 
         menu:
-
             "Agree with Imre":
                 $ add_point(KCT.BRO)
 
@@ -92,6 +97,7 @@ label v15s13:
         with dissolve
 
         play sound "sounds/vibrate.mp3"
+        pause 0.75
 
         scene v15s13_2d # TPP. same as v15s13_2c MC puts down the donut on his WOLVES desk, pulls out his phone and checks his texts to see a message from Riley, slight smile, mouth closed, looking at his phone
         with dissolve
@@ -115,7 +121,6 @@ label v15s13:
         with dissolve
 
         menu:
-
             "Eat the donut":
                 $ add_point(KCT.TROUBLEMAKER)
 
@@ -146,7 +151,6 @@ label v15s13:
         jump v15s17
 
     else:
-
         scene v15s13_7 # TPP. MC enters his APES bedroom, carrying a small bag of donuts, He leaves the door half open, slight smile, mouth closed
         with dissolve
 
@@ -155,12 +159,18 @@ label v15s13:
         scene v15s13_8 # TPP. MC is in his APES bedroom and sits at his APES study desk and opens a book to read, no expression, mouth closed, the bag of doughnuts can be seen on his desk
         with dissolve
 
+        pause 0.75
+        
         scene v15s13_8a # TPP. same as v15s13_8 Mc leans back in his chair, one arm resting on his lap the other holding the book open in front of him
         with dissolve
 
+        pause 0.75
+        
         scene v15s13_8b # TPP. same as v15s13_8a drops both arms dangling to his sides still holding the book, mouth slightly open with an annoyed expression, rolling his eyes
         with dissolve
 
+        pause 0.75
+        
         scene v15s13_8c # TPP. same as v15s13_8 MC puts down the book, and grabs a donut
         with dissolve
 
@@ -195,7 +205,6 @@ label v15s13:
         with dissolve
 
         menu:
-
             "A blueberry?":
                 $ TraitPopculture = True
                 $ add_point(KCT.BRO)
@@ -248,7 +257,6 @@ label v15s13:
         with dissolve
 
         menu:
-
             "I will":
                 $ add_point(KCT.BRO)
 
@@ -317,6 +325,7 @@ label v15s13:
         with dissolve
 
         play sound "sounds/vibrate.mp3"
+        pause 0.75
 
         scene v15s13_8d # TPP. same as v15s13_8c MC puts down the donut on his APES desk, pulls out his phone and checks his texts to see a message from Riley, slight smile, mouth closed, looking at his phone
         with dissolve
@@ -340,7 +349,6 @@ label v15s13:
         with dissolve
 
         menu:
-
             "Eat the donut":
                 $ add_point(KCT.TROUBLEMAKER)
 
@@ -368,4 +376,5 @@ label v15s13:
         scene v15s13_12 # show MC walking out of his APES bedroom, no expression, mouth closed
         with dissolve
 
+        pause 0.75
         jump v15s17

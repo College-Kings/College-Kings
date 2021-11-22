@@ -5,9 +5,7 @@
 # Render Count: 6 Unique Renders 33 Total
 
 label v15s1:
-
     if v13_imre_disloyal:
-
         scene v15s1_1 # TPP. Imre's looking fully angry, standing at the door close, MC is sitting at his study desk, turned in the chair, facing Imre
         with dissolve
 
@@ -47,11 +45,10 @@ label v15s1:
         with dissolve
 
         menu:
-
             "Blame Chris":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BOYFRIEND)
-                v15_Blame_Chris = True
+                $ v15_Blame_Chris = True
 
                 scene v15s1_3c # FPP. same as v15s1_3b Imre increases to a fully angry expression, Imre places his hands to his sides
                 with dissolve
@@ -74,7 +71,7 @@ label v15s1:
 
             "Blame Nora":
                 $ add_point(KCT.BRO)
-                v15_Blame_Nora = True
+                $ v15_Blame_Nora = True
 
                 scene v15s1_3
                 with dissolve
@@ -100,7 +97,7 @@ label v15s1:
 
         imre "*Sighs*"
 
-        if v15_Blame_Nora
+        if v15_Blame_Nora:
 
             scene v15s1_3e # FPP. same as v15s1_3b Imre raises his hand above his head in anger, while rolling his eyes, mouth is still open
             with dissolve
@@ -202,7 +199,6 @@ label v15s1:
         with dissolve
 
         menu:
-
             "They were on a break":
                 $ TraitPopculture = True
                 $ add_point(KCT.BRO)
@@ -242,76 +238,74 @@ label v15s1:
                 u "*Chuckles* Alright."
             
     else:
+        scene v15s1_2a # FPP. same as v15s1_2 MC is sitting at his study desk, looking at his phone. Imre enters the room. MC turns to Imre, and stays sat in the chair, Imre has a concerned expression, is not angry, mouth open, looking at mc
+        with dissolve
 
-    scene v15s1_2a # FPP. same as v15s1_2 MC is sitting at his study desk, looking at his phone. Imre enters the room. MC turns to Imre, and stays sat in the chair, Imre has a concerned expression, is not angry, mouth open, looking at mc
-    with dissolve
+        imre "I need to talk to someone about Chris and Nora... This is like when Ross and Rachel broke up, dude!"
 
-    imre "I need to talk to someone about Chris and Nora... This is like when Ross and Rachel broke up, dude!"
+        scene v15s1_3i
+        with dissolve
 
-    scene v15s1_3i
-    with dissolve
+        u "Ross and Rachel?"
 
-    u "Ross and Rachel?"
+        scene v15s1_3h
+        with dissolve
 
-    scene v15s1_3h
-    with dissolve
+        imre "Yeah. You know, that show about the group of friends? They fall in love, out of love, and there's a monkey..."
 
-    imre "Yeah. You know, that show about the group of friends? They fall in love, out of love, and there's a monkey..."
+        scene v15s1_3i
+        with dissolve
 
-    scene v15s1_3i
-    with dissolve
+        menu:
+            "Of course I know":
+                $ TraitPopculture = True
+                $ add_point(KCT.BRO)
 
-    menu:
+                scene v15s1_3i
+                with dissolve
 
-        "Of course I know":
-            $ TraitPopculture = True
-            $ add_point(KCT.BRO)
+                u "*Laughs* Yeah, of course I know"
 
-            scene v15s1_3i
-            with dissolve
+                scene v15s1_3k # FPP. same as v15s1_3h Imre is clutching his heart with one hand, holding his other fist above his head, head facing towards his fist, eyes closed, mouth is still open
+                with dissolve
 
-            u "*Laughs* Yeah, of course I know"
+                imre "Ah, man... My heart is being torn all over again."
 
-            scene v15s1_3k # FPP. same as v15s1_3h Imre is clutching his heart with one hand, holding his other fist above his head, head facing towards his fist, eyes closed, mouth is still open
-            with dissolve
+                scene v15s1_3i
+                with dissolve
 
-            imre "Ah, man... My heart is being torn all over again."
+                u "I didn't know how important their relationship was to you... *Chuckles*"
 
-            scene v15s1_3i
-            with dissolve
+                scene v15s1_3l # FPP. same as v15s1_3h Imre has no expression, mouth open, Imre has placed his hands to his sides
+                with dissolve
 
-            u "I didn't know how important their relationship was to you... *Chuckles*"
+                imre "*Sighs*"
 
-            scene v15s1_3l # FPP. same as v15s1_3h Imre has no expression, mouth open, Imre has placed his hands to his sides
-            with dissolve
+            "A monkey?":
+                $ TraitBoomer = True
+                $ add_point(KCT.TROUBLEMAKER)
 
-            imre "*Sighs*"
+                scene v15s1_3i
+                with dissolve
 
-        "A monkey?":
-            $ TraitBoomer = True
-            $ add_point(KCT.TROUBLEMAKER)
+                u "A monkey? What? *Laughs*"
 
-            scene v15s1_3i
-            with dissolve
+                scene v15s1_3h
+                with dissolve
 
-            u "A monkey? What? *Laughs*"
+                imre "You're kidding, right? Man... Girls love that shit."
 
-            scene v15s1_3h
-            with dissolve
+                imre "That's the only reason I watch it... So, I have something in common with girls, you know."
 
-            imre "You're kidding, right? Man... Girls love that shit."
+                scene v15s1_3i
+                with dissolve
 
-            imre "That's the only reason I watch it... So, I have something in common with girls, you know."
+                u "*Chuckles* Right...Yeah, no. I guess I don't watch a lot of television."
 
-            scene v15s1_3i
-            with dissolve
+                scene v15s1_3j
+                with dissolve
 
-            u "*Chuckles* Right...Yeah, no. I guess I don't watch a lot of television."
-
-            scene v15s1_3j
-            with dissolve
-
-            imre "*Sighs* Boomer..."
+                imre "*Sighs* Boomer..."
 
     scene v15s1_3l
     with dissolve
@@ -332,7 +326,6 @@ label v15s1:
     with dissolve
 
     menu:
-
         "Stick up for Nora":
             $ v15_Stuck_Up_For_Nora
             $ add_point(KCT.BOYFRIEND)
@@ -430,29 +423,27 @@ label v15s1:
 
             imre "But there's always a chance, dude. Just like Ross and Rachel."
 
-        if TraitPopculture:
+            if TraitPopculture:
+                scene v15s1_3h
+                with dissolve
 
-            scene v15s1_3h
+                u "*Chuckles*"
+
+            if TraitBoomer:
+                scene v15s1_3o # FPP. same as v15s1_3m Imre has a smug looking expression mouth is still closed
+                with dissolve
+
+                u "*Sighs*"
+
+            scene v15s1_3l
             with dissolve
 
-            u "*Chuckles*"
+            imre "If we don't do something, Nora's going to hook up with a random fuckboy and then that'll be the end of it forever."
 
-        if TraitBoomer:
-
-            scene v15s1_3o # FPP. same as v15s1_3m Imre has a smug looking expression mouth is still closed
+            scene v15s1_3m
             with dissolve
 
-            u "*Sighs*"
-
-        scene v15s1_3l
-        with dissolve
-
-        imre "If we don't do something, Nora's going to hook up with a random fuckboy and then that'll be the end of it forever."
-
-        scene v15s1_3m
-        with dissolve
-
-        u "It's not our place to decide what happens here, Imre."
+            u "It's not our place to decide what happens here, Imre."
 
     scene v15s1_3p # FPP. same as v15s1_3l Imre looks away from MC
     with dissolve
@@ -567,7 +558,6 @@ label v15s1:
     u "(The hell?)"
 
 # -MC checks his texts and there's a message from Lauren-
-
     $ lauren.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren")
 
     call screen phone
@@ -594,6 +584,8 @@ label v15s1:
 
     scene v15s1_5g # TPP. same as v15s1_5 MC has turned off the lights, his phone is now on the nightstand next to his bed, and has rested his head onto his pillow to go to sleep, eyes closed, mnouth closed
     with dissolve
+
+    pause 0.75
 
 # -Night to morning transition-
 
