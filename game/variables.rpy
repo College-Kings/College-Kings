@@ -30,6 +30,9 @@ default previous_location = ""
     ## Path Builder
 default path_builder = False
 
+# voiceacting
+default voice_acted = True
+
 # KCT
 default locked_kct = False
 default kct = "confident"
