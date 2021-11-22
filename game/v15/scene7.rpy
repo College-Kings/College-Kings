@@ -23,7 +23,7 @@ label v15s7:
 
             pause 0.75
 
-        if v14s51_take_cash_large and not v14s51_take_cash_small: # -if the $900 was stolen
+        if v14s51_take_cash_large and not v14s51_take_cash_small: # -if the large cash was stolen
             scene v15s7_1a
             with dissolve
 
@@ -34,9 +34,6 @@ label v15s7:
             with dissolve
 
             u "(Well, fuck... So did we, ha.)"
-
-            scene v15s7_1b
-            with dissolve
 
             u "Shit, Chloe... They took everything you had?"
 

@@ -108,6 +108,9 @@ label v15s8:
 
         cl "*Sighs*"
 
+        scene v15s8_3
+        with dissolve
+
     if v15_LessChickTuition:
         scene v15s8_3a
         with dissolve
@@ -128,9 +131,6 @@ label v15s8:
         with dissolve
 
         cl "Yeah, I'm all over it."
-
-    scene v15s8_3
-    with dissolve
 
     cl "Okay. Yeah. I'm happy with this!"
 

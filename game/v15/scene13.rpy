@@ -52,10 +52,6 @@ label v15s13:
         menu:
             "Agree with Imre":
                 $ add_point(KCT.BRO)
-
-                scene v15s13_3b
-                with dissolve
-
                 u "Yeah, I know... I'll do better next time."
 
                 scene v15s13_3a
@@ -75,10 +71,6 @@ label v15s13:
 
             "Dismiss Imre":
                 $ add_point(KCT.TROUBLEMAKER)
-
-                scene v15s13_3b
-                with dissolve
-
                 u "Why are you creeping outside my room, Imre? I'm trying to study here."
 
                 scene v15s13_3c
@@ -86,7 +78,7 @@ label v15s13:
 
                 imre "Whatever, man. Just showing that I care! Enjoy your high cholesterol."
 
-                scene v15s13_3c
+                scene v15s13_3b
                 with dissolve
 
                 u "I will. *Chuckles*"
@@ -115,16 +107,9 @@ label v15s13:
 
         u "(That's enough studying for right now anyway. Time to get Lauren's gift and find a costume!)"
 
-        scene v15s13_2e
-        with dissolve
-
         menu:
             "Eat the donut":
                 $ add_point(KCT.TROUBLEMAKER)
-
-                scene v15s13_2e
-                with dissolve
-
                 u "(I'll just do an extra gym session this week to even things out.) *Chuckles*"
 
                 scene v15s13_2f # TPP. same as v15s13_2e MC grabs the donut and shoves it in his mouth
@@ -132,10 +117,6 @@ label v15s13:
 
             "Don't eat the donut":
                 $ add_point(KCT.BRO)
-
-                scene v15s13_2e
-                with dissolve
-
                 u "(Next time I'll get a healthier snack...)"
             
         scene v15s13_5 # show MC standing up and throwing away the donut bag in his WOLVES room, no expression, mouth closed
@@ -206,10 +187,6 @@ label v15s13:
             "A blueberry?":
                 $ TraitPopculture = True
                 $ add_point(KCT.BRO)
-
-                scene v15s13_9b
-                with dissolve
-
                 u "Donuts turn you into blueberries?"
 
                 scene v15s13_9c # FPP. same as v15s13_9a Grayson has a laughing expression, mouth open
@@ -230,10 +207,6 @@ label v15s13:
             "Chocolate factory movie?":
                 $ TraitBoomer = True
                 $ add_point(KCT.TROUBLEMAKER)
-
-                scene v15s13_9b
-                with dissolve
-
                 u "Chocolate factory movie? Are you feeling okay? *Chuckles*"
 
                 scene v15s13_9a
@@ -257,10 +230,6 @@ label v15s13:
         menu:
             "I will":
                 $ add_point(KCT.BRO)
-
-                scene v15s13_9b
-                with dissolve
-
                 u "I know, I will. This is only my first just so you know."
 
                 scene v15s13_9c
@@ -293,10 +262,6 @@ label v15s13:
 
             "You don't eat donuts?":
                 $ add_point(KCT.TROUBLEMAKER)
-
-                scene v15s13_9b
-                with dissolve
-
                 u "Are you serious right now? You're telling me that you never have donuts, or cake, or cola?"
 
                 scene v15s13_9d
@@ -343,16 +308,9 @@ label v15s13:
 
         u "(That's enough studying for right now anyway. Time to get Lauren's gift and find a costume!)"
 
-        scene v15s13_8e
-        with dissolve
-
         menu:
             "Eat the donut":
                 $ add_point(KCT.TROUBLEMAKER)
-
-                scene v15s13_8e
-                with dissolve
-
                 u "(I'll just do an extra gym session this week to even things out.) *Chuckles*"
 
                 scene v15s13_8f # TPP. same as v15s13_8e MC grabs the donut and shoves it in his mouth
@@ -360,10 +318,6 @@ label v15s13:
 
             "Don't eat the donut":
                 $ add_point(KCT.BRO)
-
-                scene v15s13_8e
-                with dissolve
-
                 u "(Next time I'll get a healthier snack...)"
             
         scene v15s13_11 # show MC standing up and throwing away the donut bag in his APES room, no expression, mouth closed

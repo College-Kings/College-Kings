@@ -108,9 +108,6 @@ label v15s5:
         menu:
             "Be calm":
                 $ add_point(KCT.BRO)
-                scene v15s5_4
-                with dissolve
-
                 u "*Sighs*"
 
                 u "I'm sure it'll be okay."

@@ -336,6 +336,11 @@ label v15s4:
                 with dissolve
 
                 u "Yeah, for sure. Ha! She'd like that..."
+                
+                scene v15s4_13
+                with dissolve
+                
+                au "Hopefully we can find you a good home."
 
             else:
                 scene v15s4_13
@@ -351,12 +356,7 @@ label v15s4:
                 scene v15s4_13
                 with dissolve
 
-                au "*Chuckles*"
-
-    scene v15s4_13
-    with dissolve
-
-    au "Hopefully we can find you a good home."
+                au "*Chuckles* Hopefully we can find you a good home."
 
     menu:
         "Good luck.":
@@ -1152,6 +1152,11 @@ label v15s4:
 
             u "If only they'd realize that before they chose to adopt..."
 
+            scene v15s4_43
+            with dissolve
+            
+            au "Hopefully we can find the perfect owner for him at the re-opening."
+
         "Comfort Oscar":
             scene v15s4_48
             with dissolve
@@ -1182,10 +1187,7 @@ label v15s4:
 
             au "Ugh, I know right. That's the only downside of working here, haha."
 
-    scene v15s4_43
-    with dissolve
-
-    au "Hopefully we can find the perfect owner for him at the re-opening."
+            au "Hopefully we can find the perfect owner for him at the re-opening."
 
     scene v15s4_43a
     with dissolve
@@ -1261,9 +1263,6 @@ label v15s4:
         with dissolve
 
         u "(Got a pretty good workout this morning. Almost as good as the gym, haha.)"
-
-        scene v15s4_55
-        with vpunch
 
         au "Hey, weirdo! Over here!"
 

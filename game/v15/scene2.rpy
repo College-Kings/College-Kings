@@ -302,9 +302,6 @@ label v15s2:
             "(I should reply to Autumn.)"
             jump v15s2_PhoneContinue
 
-    scene v15s2_9a
-    with dissolve
-
     u "(Almost forgot about that... It'll be interesting to spend some one-on-one time with Autumn.)"
 
     u "(Should probably set an alarm...)"
@@ -328,13 +325,7 @@ label v15s2:
 
     call screen phone
 
-    scene v15s2_9a
-    with dissolve
-    
     u "(\"Dress to impress your ghoulish empress...\") *Chuckles*"
-
-    scene v15s2_9a
-    with dissolve
 
     u "(Guess I need to go gift shopping... Maybe Autumn can give me ideas on what Lauren would like, or I can just get her some kind of gift card... She likes books, I think?)"
 

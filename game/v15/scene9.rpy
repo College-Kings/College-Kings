@@ -90,9 +90,6 @@ label v15s9:
 
     u "Of course I'll come, yeah. But..."
 
-    scene v15s9_3b
-    with dissolve
-
     menu:
         "As friends":
             scene v15s9_3

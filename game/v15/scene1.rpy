@@ -104,7 +104,6 @@ label v15s1:
         imre "*Sighs*"
 
         if v15_Blame_Nora:
-
             scene v15s1_3e # FPP. same as v15s1_3b Imre raises his hand above his head in anger, while rolling his eyes, mouth is still open
             with dissolve
 
@@ -125,8 +124,9 @@ label v15s1:
 
             u "Alright, that's fair..."
 
-        scene v15s1_3
-        with dissolve
+        else:
+            scene v15s1_3
+            with dissolve
 
         u "Just, take some time to really think about it, Imre."
 
@@ -209,9 +209,6 @@ label v15s1:
                 $ TraitPopculture = True
                 $ add_point(KCT.BRO)
 
-                scene v15s1_3f
-                with dissolve
-
                 u "They were on a break, bro..."
 
                 scene v15s1_3h # FPP. same as v15s1_3a Imre has a happy expression, slight smile, mouth is still open
@@ -227,9 +224,6 @@ label v15s1:
             "Who?":
                 $ TraitBoomer = True
                 $ add_point(KCT.TROUBLEMAKER)
-
-                scene v15s1_3f
-                with dissolve
 
                 u "Who?"
 
@@ -267,9 +261,6 @@ label v15s1:
                 $ TraitPopculture = True
                 $ add_point(KCT.BRO)
 
-                scene v15s1_3i
-                with dissolve
-
                 u "*Laughs* Yeah, of course I know"
 
                 scene v15s1_3k # FPP. same as v15s1_3h Imre is clutching his heart with one hand, holding his other fist above his head, head facing towards his fist, eyes closed, mouth is still open
@@ -290,9 +281,6 @@ label v15s1:
             "A monkey?":
                 $ TraitBoomer = True
                 $ add_point(KCT.TROUBLEMAKER)
-
-                scene v15s1_3i
-                with dissolve
 
                 u "A monkey? What? *Laughs*"
 
@@ -336,9 +324,6 @@ label v15s1:
             $ v15_Stuck_Up_For_Nora
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
-
-            scene v15s1_3m
-            with dissolve
 
             u "Wait, this isn't all on Nora. Haha, what are you talking about?"
 
@@ -387,9 +372,6 @@ label v15s1:
         "Say nothing":
             $ add_point(KCT.BRO)
 
-            scene v15s1_3m
-            with dissolve
-
             u "Yeah?"
 
             scene v15s1_3l
@@ -430,7 +412,7 @@ label v15s1:
             imre "But there's always a chance, dude. Just like Ross and Rachel."
 
             if TraitPopculture:
-                scene v15s1_3h
+                scene v15s1_3o
                 with dissolve
 
                 u "*Chuckles*"
