@@ -27,7 +27,11 @@ label v15s7:
             scene v15s7_1a
             with dissolve
 
-            cl "Somebody stole my campaign money. *Sobbing* Nine hundred fucking dollars, [name]."
+            if v14_realwolf:
+                cl "Somebody stole my campaign money. *Sobbing* Nine hundred fucking dollars, [name]."
+            else:
+                cl "Somebody stole my campaign money. *Sobbing* Five hundred fucking dollars, [name]."
+            
             cl "I don't know how I'm supposed to pay for- *Crying* I needed that money..."
 
             scene v15s7_1b # FPP Same as 1a, Chloe's mouth closed
