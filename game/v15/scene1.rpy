@@ -4,6 +4,12 @@
 # Time: Night
 # Render Count: 6 Unique Renders 33 Total
 
+label v15_start:
+    if joinwolves:
+        jump v15s1
+    else:
+        jump v15s2
+
 label v15s1:
     if v13_imre_disloyal:
         scene v15s1_1 # TPP. Imre's looking fully angry, standing at the door close, MC is sitting at his study desk, turned in the chair, facing Imre
