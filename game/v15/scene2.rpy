@@ -324,9 +324,9 @@ label v15s2:
     scene v15s2_9a
     with dissolve
 
-    call screen phone
-
     $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren", queue=False)
+
+    call screen phone
 
     scene v15s2_9a
     with dissolve
