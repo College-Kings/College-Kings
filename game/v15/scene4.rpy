@@ -1029,7 +1029,7 @@ label v15s4:
     scene v15s4_49 # FPP. MC standing back up and looking up at Oscar's Owner,Oscar's owner looking at Autumn, Oscar's owner neutral face, mouth open.
     with dissolve
 
-    Oscars Owner "Actually... I'm sorry I have to do this, but I'm here to give Oscar back."
+    oscars_owner "Actually... I'm sorry I have to do this, but I'm here to give Oscar back."
 
     scene v15s4_43c # FPP. Same as v15s4_43b, Autumn looking at Oscar's owner, Autumn confused, mouth open,
     with dissolve
@@ -1039,11 +1039,11 @@ label v15s4:
     scene v15s4_49
     with dissolve
 
-    Oscars owner "Long story short, I'm moving upstate to take over my grandpa's farm."
+    oscars_owner "Long story short, I'm moving upstate to take over my grandpa's farm."
 
     u "(And?)"
 
-    Oscars owner "It's not exactly the best place for Oscar."
+    oscars_owner "It's not exactly the best place for Oscar."
 
     scene v15s4_49a # FPP. Same as v15s4_49, Oscar's owner looking at MC, Oscar's owner neutral face, mouth closed.
     with dissolve
@@ -1058,7 +1058,7 @@ label v15s4:
     scene v15s4_49
     with dissolve
 
-    Oscars owner "Yeah, except this is a weed farm..."
+    oscars_owner "Yeah, except this is a weed farm..."
 
     scene v15s4_43c
     with dissolve
@@ -1068,7 +1068,7 @@ label v15s4:
     scene v15s4_49
     with dissolve
 
-    Oscars owner "And he likes weed. Like, a lot. So-"
+    oscars_owner "And he likes weed. Like, a lot. So-"
 
     scene v15s4_43c
     with dissolve
@@ -1083,7 +1083,7 @@ label v15s4:
     scene v15s4_49b # FPP. Same as v15s4_49a, Oscar's owner looking at MC, Neutral face, mouth open.
     with dissolve
 
-    Oscars owner "I didn't exactly give it to him, no... It was an accident."
+    oscars_owner "I didn't exactly give it to him, no... It was an accident."
 
     scene v15s4_43c
     with dissolve

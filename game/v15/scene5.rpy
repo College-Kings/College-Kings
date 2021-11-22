@@ -265,7 +265,7 @@ label v15s5:
 
                 u "I need to go. This is... so fucked up."
 
-                play sound "sounds/doorclose/mp3"
+                play sound "sounds/doorclose.mp3"
 
                 scene v15s5_6
                 with dissolve
