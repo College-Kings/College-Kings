@@ -6240,12 +6240,12 @@ label wakeupa:
         scene s634e # penelope # turns around to type
         with dissolve
 
-        pe "Kim Possible."
+        pe "Pim Kossible."
 
         scene s635 # Penelope walking towards bowling ball holder
         with dissolve
 
-        u "Kim Possible? Like from the TV show?"
+        u "Pim Kossible? Like from the TV show?"
 
         scene s635a # Penelope looking at you hopeful, talking while picking up a bowling ball
         with dissolve
