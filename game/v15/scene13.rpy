@@ -5,9 +5,7 @@
 # Render Count: 12 Unique Renders, 33 Total
 
 label v15s13:
-
     if joinwolves:
-
         scene v15s13_1 # TPP. MC enters his WOLVES bedroom, carrying a small bag of donuts, He leaves the door half open, slight smile, mouth closed
         with dissolve
 
