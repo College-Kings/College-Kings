@@ -296,11 +296,11 @@ label v15s2:
     $ autumn.messenger.addReply(_("Of course! I'll always be there if there's puppies, haha."))
 
     label v15s2_PhoneContinue:
-            if autumn.messenger.replies:
-                call screen phone
-            if autumn.messenger.replies:
-                "(I should reply to Autumn.)"
-                jump v15s2_PhoneContinue
+        if autumn.messenger.replies:
+            call screen phone
+        if autumn.messenger.replies:
+            "(I should reply to Autumn.)"
+            jump v15s2_PhoneContinue
 
     scene v15s2_9a
     with dissolve
