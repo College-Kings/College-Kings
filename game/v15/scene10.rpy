@@ -73,7 +73,7 @@ label v15s10:
         scene v15s10_6 # TPP. Of the man pulling MC aside and facing their back towards Lindsey, Lindsey in the background looking at her phone not paying attention, Lindsey neutral face, mouth closed, the man slight smile, mouth closed, MC slight smile, mouth closed.
         with dissolve
 
-        pause
+        pause 0.75
 
         scene v15s10_7 # FPP. Just able to see the man next to him, the man looking at MC, the man slight smile, mouth open.
         with dissolve
@@ -200,7 +200,7 @@ label v15s10:
             scene v15s10_11 # TPP. Show MC and the man walking towards the car, Lindsey walking off to the side still looking at her phone.
             with dissolve
 
-            pause 
+            pause 0.75 
 
             scene v15s10_12 # FPP. The man looking at the car, neutral expression, mouth closed.
             with dissolve
@@ -375,7 +375,7 @@ label v15s10:
             scene v15s10_17 # FPP. MC looking at Lindsey, Lindsey standing by the driver side window looking at MC who is standing by the back driver side window, Lindsey looking at MC, Lindsey slight smile, mouth closed.
             with dissolve
 
-            pause
+            pause 0.75
 
             scene v15s10_18 # TPP. Close up of the window rolling down at halfway, seeing the man a little bit as he sits in the drive side window just his upper face.
             with dissolve

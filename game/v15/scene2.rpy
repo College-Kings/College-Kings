@@ -81,7 +81,7 @@ label v15s2:
         scene v15s2_3e # TPP. Same as v15s2_3d, Cameron taking the bag off of MC's head, Cameron serious face, mouth closed.
         with dissolve
 
-        pause
+        pause 1
         
         scene v15s2_4 # FPP. Cameron standing infront of MC, Cameron serious face, mouth open.
         with dissolve
