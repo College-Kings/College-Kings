@@ -1,8 +1,7 @@
 # SCENE 10: Creepy or Nice Car Buyer
 # Locations: Place where Lindsey's car photos were shot.
-# Characters: LINDSEY (Outfit: 1), MC (Outfit: 5), MALE BUYER (Outfit: x), FEMALE BUYER (Outfit: x)
+# Characters: LINDSEY (Outfit: 1), MC (Outfit: 5), male_buyer (Outfit: x), female_buyer (Outfit: x)
 # Time: Afternoon
-
 
 label v15s10:
 # -Car totals for this scene can be calculated via Oscar or the document that Cheex can give you access to-
@@ -11,17 +10,17 @@ label v15s10:
     scene v15s10_1 # TPP. Show MC walking down the sidewalk near where they took the picture for lindsey car, Slight smile, mouth closed.
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s10_2 # TPP. Show MC walking towards the car, Lindsey leaning against the car waiting, Lindsey on her phone, neutral face, mouth closed
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s10_3 # FPP. Show Lindsey turning her head as MC approaches her, Lindsey slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s10_4 # FPP. MC standing infront of Lindsey, Lindsey still leaning against the car, Lindsey slight smile, mouth open.
     with dissolve
@@ -42,12 +41,12 @@ label v15s10:
         scene v15s10_5 # FPP. Show a creepyish guy approaching, the man dressed in a smart casual sense, the man slight smile, mouth closed
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s10_5a # FPP. The man getting close and his attention set on Lindsey, the man creepy smile, mouth open.
         with dissolve
 
-        Male Buyer "Hey, pretty lady! I recognize you from the photos. Honestly, that's the only reason I'm here. *Laughs*"
+        male_buyer "Hey, pretty lady! I recognize you from the photos. Honestly, that's the only reason I'm here. *Laughs*"
 
         scene v15s10_4b # FPP. MC looking at Lindsey, Lindsey looking down at her phone, Lindsey weirded out face, mouth open.
         with dissolve
@@ -62,9 +61,9 @@ label v15s10:
         scene v15s10_5c # FPP. Same as v15s10_5b, The man slight smile, mouth open.
         with dissolve
 
-        Male Buyer "Hey, my dude!"
+        male_buyer "Hey, my dude!"
 
-        Male Buyer "Listen, I am fully interested in the car. Money is not a problem, so I'm happy to negotiate a price."
+        male_buyer "Listen, I am fully interested in the car. Money is not a problem, so I'm happy to negotiate a price."
 
         scene v15s10_5d # FPP. Same as v15s10_5c, The man slight smile, mouth closed.
         with dissolve
@@ -74,12 +73,12 @@ label v15s10:
         scene v15s10_6 # TPP. Of the man pulling MC aside and facing their back towards Lindsey, Lindsey in the background looking at her phone not paying attention, Lindsey neutral face, mouth closed, the man slight smile, mouth closed, MC slight smile, mouth closed.
         with dissolve
 
-        pause
+        pause 0.75
 
         scene v15s10_7 # FPP. Just able to see the man next to him, the man looking at MC, the man slight smile, mouth open.
         with dissolve
 
-        Male Buyer "Bro, this girl is worth whatever price you're asking for. It's like a two for one deal!"
+        male_buyer "Bro, this girl is worth whatever price you're asking for. It's like a two for one deal!"
 
         scene v15s10_7a # FPP. The man, slight smile, mouth closed.
         with dissolve
@@ -89,7 +88,7 @@ label v15s10:
         scene v15s10_7
         with dissolve
 
-        Male Buyer "Okay then, so give me her number. *Whispers* I'll slip you an extra fifty bucks."
+        male_buyer "Okay then, so give me her number. *Whispers* I'll slip you an extra fifty bucks."
 
         scene v15s10_8 # TPP.The man next to MC, MC turned around looking at Lindsey, MC slight smile, mouth open.
         with dissolve
@@ -99,7 +98,7 @@ label v15s10:
         scene v15s10_7b # FPP. Same as v15s10_7a, The man neutral expression, mouth open.
         with dissolve
 
-        Male Buyer "Dude what the fu- *Whispers* Not. Cool."
+        male_buyer "Dude what the fu- *Whispers* Not. Cool."
 
         scene v15s10_9 # TPP. Close up of Lindsey with a weirded out face looking at her phone still, mouth open.
         with dissolve
@@ -109,7 +108,7 @@ label v15s10:
         scene v15s10_7c # FPP. Same as v15s10_7b, The man looking back at Lindsey and pointing at MC, the man neutral face, mouth open.
         with dissolve
 
-        Male Buyer "This guy?"
+        male_buyer "This guy?"
 
         if lindseyrs:
             scene v15s10_10 # FPP. MC turned around looking at Lindsey (v15s10_8 just FFP), Lindsey looking straight ahead at MC while she leans against the car, winking at MC, slight smile, mouth open.
@@ -120,7 +119,7 @@ label v15s10:
             scene v15s10_7d # Same as v15s10_7c, still looking at Lindsey, the man slight smile, mouth open.
             with dissolve
 
-            Male Buyer "*Scoffs* Yeah, right!"
+            male_buyer "*Scoffs* Yeah, right!"
 
             scene v15s10_7b
             with dissolve
@@ -151,12 +150,12 @@ label v15s10:
         scene v15s10_7b
         with dissolve
 
-        Male Buyer "Oh, shit. Well, I gotta respect that. Don't want to be messing with a fighter's girl... Not after last time."
+        male_buyer "Oh, shit. Well, I gotta respect that. Don't want to be messing with a fighter's girl... Not after last time."
 
         scene v15s10_7d
         with dissolve
 
-        Male Buyer "You know, you don't even have to try... You can just stand pretty right there all day, just like in the photos."
+        male_buyer "You know, you don't even have to try... You can just stand pretty right there all day, just like in the photos."
 
         scene v15s10_10c # FPP. Same as v15s10_10b, Lindsey looking at her phone still, slightly weirded out, mouth open.
         with dissolve
@@ -166,14 +165,14 @@ label v15s10:
         scene v15s10_7d
         with dissolve
 
-        Male Buyer "Like, I really loved them."
+        male_buyer "Like, I really loved them."
 
-        Male Buyer "I printed that one out and stuck it on my wall."
+        male_buyer "I printed that one out and stuck it on my wall."
 
         scene v15s10_10d # FPP. Same as v15s10_10c, Lindsey disgusted, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s10_7a
         with dissolve
@@ -183,7 +182,7 @@ label v15s10:
         scene v15s10_7
         with dissolve
 
-        Male Buyer "No way, bro! Always show your appreciation to the babes, my friend, and you'll go far."
+        male_buyer "No way, bro! Always show your appreciation to the babes, my friend, and you'll go far."
 
         scene v15s10_7a
         with dissolve
@@ -193,21 +192,20 @@ label v15s10:
         scene v15s10_7
         with dissolve
 
-        Male Buyer "You know it!"
+        male_buyer "You know it!"
 
-        Male Buyer "Let me take a look at this piece of junk then."
+        male_buyer "Let me take a look at this piece of junk then."
 
         if v14s48_lie:
-
             scene v15s10_11 # TPP. Show MC and the man walking towards the car, Lindsey walking off to the side still looking at her phone.
             with dissolve
 
-            pause 
+            pause 0.75 
 
             scene v15s10_12 # FPP. The man looking at the car, neutral expression, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_12a # FPP. Same as v15s10_12, The man looking looking at MC, the man unamused, mouth closed.
             with dissolve
@@ -217,7 +215,7 @@ label v15s10:
             scene v15s10_12b # FPP. Same as v15s10_12, the man unamused, mouth open.
             with dissolve
 
-            Male Buyer "Exceptional my ass! This car does not fit the description in the advertisement at all. Are you sure this is the same car?"
+            male_buyer "Exceptional my ass! This car does not fit the description in the advertisement at all. Are you sure this is the same car?"
 
             scene v15s10_12a
             with dissolve
@@ -227,16 +225,16 @@ label v15s10:
             scene v15s10_12b
             with dissolve
 
-            Male Buyer "No, my dude... I'm looking right at it. You totally lied... I hate being lied to!"
+            male_buyer "No, my dude... I'm looking right at it. You totally lied... I hate being lied to!"
 
-            Male Buyer "This chunk of metal is on its last legs, and I need something to entice the babes... This ain't it."
+            male_buyer "This chunk of metal is on its last legs, and I need something to entice the babes... This ain't it."
 
-            Male Buyer "I'm out."
+            male_buyer "I'm out."
 
             scene v15s10_12c # FPP. Same as v15s10_12b, The man starting to walk away from the area, his face not shown.
             with dissolve
             
-            pause .25
+            pause 0.75
 
             scene v15s10_13 # FPP. MC looking at Lindsey, Lindsey in panic coming up with something, Lindsey looking past MC at the man, Lindsey slight smile, mouth open.
             with vpunch
@@ -256,17 +254,17 @@ label v15s10:
             scene v15s10_12c
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_12d # FPP. Same as v15s10_12c, The man stopped in place his back still turned.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_12c # FPP. The man walking back towards them and the car, looking past MC and staring straight at Lindsey, The man smiling, mouth open.
             with dissolve
 
-            Male Buyer "Oh, so you've changed your mind about me now, baby?"
+            male_buyer "Oh, so you've changed your mind about me now, baby?"
 
             scene v15s10_13c # FPP. Same as v15s10_13b, Lindsey looking past MC at the man, Lindsey slight smile, mouth open.
             with dissolve
@@ -278,7 +276,7 @@ label v15s10:
             scene v15s10_12d # FPP. Same as v15s10_12c, the man stopped next to MC by the car, looking over at Lindsey, the man smiling, mouth open.
             with dissolve
 
-            Male Buyer "For real? Seriously?!"
+            male_buyer "For real? Seriously?!"
 
             scene v15s10_13a
             with dissolve
@@ -293,11 +291,11 @@ label v15s10:
             scene v15s10_12d
             with dissolve
 
-            Male Buyer "Okay, umm... This still isn't the car I thought I was coming to see, I mean..."
+            male_buyer "Okay, umm... This still isn't the car I thought I was coming to see, I mean..."
 
-            Male Buyer "It needs a lot of work, but it does have potential."
+            male_buyer "It needs a lot of work, but it does have potential."
 
-            Male Buyer "This is the best I can do."
+            male_buyer "This is the best I can do."
 
         # -[CarTotal] pops up on screen based on the pay out sums (if lied, total they can receive is minus200$ off the car's worth price)-
         # Hi Oscar :D
@@ -305,7 +303,7 @@ label v15s10:
             scene v15s10_12e # FPP. Same as v15s10_12d, Man holding cash up, slight smile, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_14 # FPP. MC looking down at his hands counting the money.
             with dissolve
@@ -322,7 +320,7 @@ label v15s10:
                     scene v15s10_12g # FPP. Same as v15s10_12f, the man neutral face, mouth open.
                     with dissolve
 
-                    Male Buyer "I'm not going a cent higher, mister pants on fire..."
+                    male_buyer "I'm not going a cent higher, mister pants on fire..."
 
                     scene v15s10_12f
                     with dissolve
@@ -353,46 +351,46 @@ label v15s10:
             scene v15s10_12h # FPP. Same as v15s10_12g, looking at mc, slight smile, mouth open.
             with dissolve
 
-            Male Buyer "Great! It's been a pleasure doing business with you folks."
+            male_buyer "Great! It's been a pleasure doing business with you folks."
 
             scene v15s10_15 # TPP. Show Lindsey giving the man the keys, Lindsey neutral face, mouth closed, The man looking at Lindsey creepily, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             play sound "sounds/cardooropen.mp3"
 
             scene v15s10_16 # TPP. Just show the man opening the door to the car.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             play sound "sounds/doorclose.mp3"
 
             scene v15s10_16a # TPP. Same as v15s10_16, The man sitting in the car closing the door.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_17 # FPP. MC looking at Lindsey, Lindsey standing by the driver side window looking at MC who is standing by the back driver side window, Lindsey looking at MC, Lindsey slight smile, mouth closed.
             with dissolve
 
-            pause
+            pause 0.75
 
             scene v15s10_18 # TPP. Close up of the window rolling down at halfway, seeing the man a little bit as he sits in the drive side window just his upper face.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_19 # FPP. Angle that shows both Lindsey and the man. I'd say a little diagonal from the car. The window of the driver side rolled down all the way, the man looking out the window at lindsey, Lindsey not looking at him yet, The man looking at lindsey with a smile, mouth open.
             with dissolve
 
-            Male Buyer "So, what's your number, baby?"
+            male_buyer "So, what's your number, baby?"
 
             scene v15s10_19a # FPP. Same as v15s10_19a, Show Lindsey looking at MC, Lindsey disgusted face, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_19b # FPP. Same as v15s10_19a, Lindsey turned around looking at the man in the car, Lindsey neutral face, mouth open, the man slight smile, mouth closed.
             with dissolve
@@ -402,7 +400,7 @@ label v15s10:
             scene v15s10_19c # FPP. Same as v15s10_19b, The man holding out the money for Lindsey, neutral face, mouth open.
             with dissolve
 
-            Male Buyer "*Sighs*"
+            male_buyer "*Sighs*"
 
             scene v15s10_20 # TPP. Show a close up of the man looking excitedly at his phone typing in numbers, mouth closed.
             with dissolve
@@ -412,7 +410,7 @@ label v15s10:
             scene v15s10_19d # FPP. Same as v15s10_19c, The man looking out the window at Lindsey, the man confused, mouth open, Lindsey slight smile, mouth closed.
             with dissolve
 
-            Male Buyer "80085? That ain't no phone number! Boobs? It spells boobs!"
+            male_buyer "80085? That ain't no phone number! Boobs? It spells boobs!"
 
             scene v15s10_19b
             with dissolve
@@ -427,61 +425,61 @@ label v15s10:
             scene v15s10_19f # FPP. Same as v15s10_19e, Lindsey walking away from the car towards MC, slight smile, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_21 # TPP. Frontal shot of MC and Lindsey walking away as laughing as they look at each other, The man looking at them out the car in the background, slightly upset, his mouth open.
             with dissolve
 
-            Male Buyer "Hey!"
+            male_buyer "Hey!"
 
-            Male Buyer "That isn't cool!"
+            male_buyer "That isn't cool!"
 
             scene v15s10_22 # TPP. Shot of the man sitting in the car with the keys in the lock cylinder,the man frustrated, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             play sound "sounds/revving.mp3"
 
             scene v15s10_22a # TPP. Same as v15s10_22, The man turning the key in the lock cylinder.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_22
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_22a
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_22
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_22a
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_23 # TPP. Shot from behind the car smoke coming out of the exhaust because it finally started.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_24 # TPP. Show the man looking out the window for MC and Lindsey but they are no where in sight, the man frowning, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_25 # TPP. Lindsey and MC off on some other street stopped talking to each other.
             with fade
 
-            pause .25
+            pause 0.75
 
             scene v15s10_26 # FPP. MC looking at Lindsey, Lindsey looking at MC, Lindsey slight smile, mouth closed.
             with dissolve
@@ -537,12 +535,12 @@ label v15s10:
             scene v15s10_12a
             with dissolve
 
-            Male Buyer "Damn, son... You weren't lying in the advert about this thing needing some TLC. *Laughs*"
+            male_buyer "Damn, son... You weren't lying in the advert about this thing needing some TLC. *Laughs*"
 
             scene v15s10_12j # Same as v15s10_12b, The man looking at MC by the car, Slight smile, mouth open.
             with dissolve
 
-            Male Buyer "I appreciate your honesty on that, truly. Luckily, I've got the Benjamins to pump into it."
+            male_buyer "I appreciate your honesty on that, truly. Luckily, I've got the Benjamins to pump into it."
 
             scene v15s10_13c
             with dissolve
@@ -552,17 +550,17 @@ label v15s10:
             scene v15s10_12d
             with dissolve
 
-            Male Buyer "Oh, it'll be in soft, gentle hands, baby."
+            male_buyer "Oh, it'll be in soft, gentle hands, baby."
 
             scene v15s10_13f # FPP. Same as v15s10_13e, Lindsey looking at MC with a disgusted face looking like she is gagging.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_12j
             with dissolve
 
-            Male Buyer "I can take it to my cousin's workshop and get it pimped out, then we'll be good to go!"
+            male_buyer "I can take it to my cousin's workshop and get it pimped out, then we'll be good to go!"
 
             scene v15s10_12h # FPP. Same as v15s10_12j, The man slight smile, mouth closed.
             with dissolve
@@ -572,7 +570,7 @@ label v15s10:
             scene v15s10_12j
             with dissolve
 
-            Male Buyer "You have to be a visionary genius to see the potential in a car like this, good for you, I am one."
+            male_buyer "You have to be a visionary genius to see the potential in a car like this, good for you, I am one."
 
             scene v15s10_12h
             with dissolve
@@ -584,14 +582,14 @@ label v15s10:
             scene v15s10_12e
             with dissolve
 
-            Male Buyer "Here's my offer based on everything I'm seeing here. Plus a tip for the girl. *Chuckles*"
+            male_buyer "Here's my offer based on everything I'm seeing here. Plus a tip for the girl. *Chuckles*"
 
             scene v15s10_13g # FPP. Same as v15s10_13f, Lindsey rolling her eyes, unamused face, mouth closed.
             with dissolve
 
             li "Gee, thanks."
 
-            pause .25
+            pause 0.75
 
             scene v15s10_14
             with dissolve
@@ -608,7 +606,7 @@ label v15s10:
                     scene v15s10_12g
                     with dissolve
 
-                    Male Buyer "Bro, the car is worth what it's worth. No more, no less."
+                    male_buyer "Bro, the car is worth what it's worth. No more, no less."
 
                     scene v15s10_12f
                     with dissolve
@@ -618,7 +616,7 @@ label v15s10:
                     scene v15s10_12g
                     with dissolve
 
-                    Male Buyer "I can walk away with all the money that I came with. Maybe that would be better?"
+                    male_buyer "I can walk away with all the money that I came with. Maybe that would be better?"
 
                     scene v15s10_13d
                     with dissolve
@@ -638,7 +636,7 @@ label v15s10:
                     scene v15s10_12j
                     with dissolve
 
-                    Male Buyer "See? Now that's how you close a deal. Someone makes an offer, and you accept it."
+                    male_buyer "See? Now that's how you close a deal. Someone makes an offer, and you accept it."
 
                     scene v15s10_12h
                     with dissolve
@@ -651,18 +649,17 @@ label v15s10:
 
                     u "Okay, yeah. That's a good deal, great."
 
-
             scene v15s10_15 
             with dissolve
 
-            pause .25
+            pause 0.75
 
             play sound "sounds/cardooropen.mp3"
 
             scene v15s10_16
             with dissolve
 
-            pause .25
+            pause 0.75
 
             play sound "sounds/doorclose.mp3"
 
@@ -672,49 +669,49 @@ label v15s10:
             scene v15s10_21a # TPP. Same angle as v15s10_21, MC and Lindesy back facing away from the camera looking at the car as the man sits in it.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_22 
             with dissolve
 
-            pause .25
+            pause 0.75
 
             play sound "sounds/revving.mp3"
 
             scene v15s10_22a
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_22
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_22a
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_22
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_22a
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_23
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_28 # TPP. Show the car driving away.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_29 # FPP. MC looking at Lindsey in the spot the man and car gone, Lindsey looking at MC, Lindsey slight smile, mouth open.
             with dissolve
@@ -763,21 +760,20 @@ label v15s10:
             
             jump v15s12
     else:
-    
         scene v15s10_femalebuyer_1 # FPP. Show a shy hot woman looking to be in her mid 30s walking up to the area with the car, her clothes librarian like, gentle awkward smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s10_femalebuyer_1a # FPP. Same as v15s10_femalebuyer_1, The woman getting closer.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s10_femalebuyer_2 # FPP. MC looking at the Lady, Lindsey off camera, The lady looking at MC, gentle awkward smile, mouth closed.
         with dissolve
 
-        Female Buyer "..."
+        female_buyer "..."
 
         scene v15s10_femalebuyer_3 # FPP. MC looking at Lindsey who is leaning against the car, Lindsey looking at the lady(the lady off-camera), Lindsey slight smile, mouth open.
         with dissolve
@@ -787,7 +783,7 @@ label v15s10:
         scene v15s10_femalebuyer_2a # FPP. Same as v15s10_femalebuyer_2, The lady looking at Lindsey, gentle akward smile, mouth open.
         with dissolve
 
-        Female Buyer "Yes, that's right. You're the ones selling it?"
+        female_buyer "Yes, that's right. You're the ones selling it?"
 
         scene v15s10_femalebuyer_2
         with dissolve
@@ -797,7 +793,7 @@ label v15s10:
         scene v15s10_femalebuyer_2b # FPP. Same as v15s10_femalebuyer_2a, The lady looking at MC, gentle awkward smile, mouth open.
         with dissolve
 
-        Female Buyer "I can take a little look, but I already saw from the photos that it's a very nice car."
+        female_buyer "I can take a little look, but I already saw from the photos that it's a very nice car."
 
         scene v15s10_femalebuyer_2
         with dissolve
@@ -808,7 +804,7 @@ label v15s10:
             scene v15s10_femalebuyer_2a
             with dissolve
 
-            Female Buyer "I really loved the photos you took... Especially the one with the bird on the car. *Chuckles*"
+            female_buyer "I really loved the photos you took... Especially the one with the bird on the car. *Chuckles*"
 
             scene v15s10_femalebuyer_3
             with dissolve
@@ -818,9 +814,9 @@ label v15s10:
             scene v15s10_femalebuyer_2b
             with dissolve
 
-            Female Buyer "It was!"
+            female_buyer "It was!"
 
-            Female Buyer "I remember thinking if the bird likes the car... Then it's the right car for me..."
+            female_buyer "I remember thinking if the bird likes the car... Then it's the right car for me..."
 
             scene v15s10_femalebuyer_2
             with dissolve
@@ -830,7 +826,7 @@ label v15s10:
             scene v15s10_femalebuyer_2b
             with dissolve
 
-            Female Buyer "Is the bird here?"
+            female_buyer "Is the bird here?"
 
             scene v15s10_femalebuyer_2
             with dissolve
@@ -842,13 +838,12 @@ label v15s10:
             scene v15s10_femalebuyer_2b
             with dissolve
 
-            Female Buyer "Oh, that's a shame. He was magnificent..."
+            female_buyer "Oh, that's a shame. He was magnificent..."
 
         scene v15s10_femalebuyer_4 # FPP. MC looking at the lady as she is checking out the car, the lady gentle awkward smile, mouth closed.
         with dissolve
 
         if v14s48_lie:
-
             u "As you can see, it's a modern, imported, classic sports car. All original and in excellent condition."
 
             u "Just run your hand across that bodywork... They don't make them like this anymore."
@@ -861,7 +856,7 @@ label v15s10:
             scene v15s10_femalebuyer_4a # FPP. Same as v15s10_femalebuyer_4, The lady looking at MC, the lady unamused face, mouth open.
             with dissolve
 
-            Female Buyer "I know I might sound a little slow, but... I do know when I'm being lied to, young man."
+            female_buyer "I know I might sound a little slow, but... I do know when I'm being lied to, young man."
 
             scene v15s10_femalebuyer_4b # FPP. Same as v15s10_femalebuyer_4a, the lady unamused face, mouth closed.
             with dissolve
@@ -871,9 +866,9 @@ label v15s10:
             scene v15s10_femalebuyer_4a
             with dissolve
 
-            Female Buyer "Trash? I just ran my hand across the bodywork, and some of it is crumbling off."
+            female_buyer "Trash? I just ran my hand across the bodywork, and some of it is crumbling off."
 
-            Female Buyer "You need to start being honest with people."
+            female_buyer "You need to start being honest with people."
 
             scene v15s10_femalebuyer_4b
             with dissolve
@@ -883,7 +878,7 @@ label v15s10:
             scene v15s10_femalebuyer_4a
             with dissolve
 
-            Female Buyer "Be honest starting now or I'm walking away empty handed. I don't mind taking the bus for the rest of my life."
+            female_buyer "Be honest starting now or I'm walking away empty handed. I don't mind taking the bus for the rest of my life."
 
             scene v15s10_femalebuyer_5 # TPP. The lady starting to walk away, unamused face, mouth closed.
             with dissolve
@@ -893,7 +888,7 @@ label v15s10:
             scene v15s10_femalebuyer_4c # FPP. Same as v15s10_femalebuyer_4b, the lady slight smile, mouth open.
             with dissolve
 
-            Female Buyer "That's better."
+            female_buyer "That's better."
 
             scene v15s10_femalebuyer_3b # FPP. Same as v15s10_femalebuyer_3a, Lindsey looking at the lady, Lindsey neutral face, mouth closed.
             with dissolve
@@ -908,7 +903,7 @@ label v15s10:
             scene v15s10_femalebuyer_4c
             with dissolve
 
-            Female Buyer "That's what I do on the bus... I go from stop A to stop B... How ironic."
+            female_buyer "That's what I do on the bus... I go from stop A to stop B... How ironic."
 
             scene v15s10_femalebuyer_4b
             with dissolve
@@ -923,7 +918,7 @@ label v15s10:
             scene v15s10_femalebuyer_4d # FPP. Same as v15s10_femalebuyer_4c, The lady looking at lindsey, the lady unamused face, mouth open.
             with dissolve
 
-            Female Buyer "I do. It can be very stinky, depending who's on it."
+            female_buyer "I do. It can be very stinky, depending who's on it."
 
             scene v15s10_femalebuyer_4b
             with dissolve
@@ -935,7 +930,7 @@ label v15s10:
             scene v15s10_femalebuyer_4e # FPP. Same as v15s10_femalebuyer_4d, the lady looking at MC, the lady slight smile, mouth open.
             with dissolve
 
-            Female Buyer "I hadn't thought of that... An air freshener would be amazing. What scents do they make?"
+            female_buyer "I hadn't thought of that... An air freshener would be amazing. What scents do they make?"
 
             scene v15s10_femalebuyer_4f # FPP. Same as v15s10_femalebuyer_4e, the lady slight smile, mouth closed.
             with dissolve
@@ -950,7 +945,7 @@ label v15s10:
             scene v15s10_femalebuyer_4g # FPP. Same as v15s10_femalebuyer_4f, The lady looking at lindsey, slight smile, mouth open.
             with dissolve
 
-            Female Buyer "Bubble gum smell?!"
+            female_buyer "Bubble gum smell?!"
 
             scene v15s10_femalebuyer_4f
             with dissolve
@@ -960,7 +955,7 @@ label v15s10:
             scene v15s10_femalebuyer_4e
             with dissolve
 
-            Female Buyer "I love bubble-gum..."
+            female_buyer "I love bubble-gum..."
 
             scene v15s10_femalebuyer_3c
             with dissolve
@@ -975,7 +970,7 @@ label v15s10:
             scene v15s10_femalebuyer_4e
             with dissolve
 
-            Female Buyer "I can't overlook the things you've lied about, but I do love the idea of the bubble-gum smell when I'm driving. So, this is what I can offer..."
+            female_buyer "I can't overlook the things you've lied about, but I do love the idea of the bubble-gum smell when I'm driving. So, this is what I can offer..."
 
             scene v15s10_femalebuyer_4h # FPP. Same as v15s10_femalebuyer_4g, The lady holding up cash, looking at MC, slight smile, mouth closed.
             with dissolve
@@ -993,7 +988,7 @@ label v15s10:
                     scene v15s10_femalebuyer_4j # FPP. Same as v15s10_femalebuyer_4i, the lady with cash in her hand, neutral face, mouth open.
                     with dissolve
 
-                    Female Buyer "I've told you. I'm happy to take the bus forever, even if it is stinky. So, you can take my offer or I'm leaving."
+                    female_buyer "I've told you. I'm happy to take the bus forever, even if it is stinky. So, you can take my offer or I'm leaving."
 
                     scene v15s10_femalebuyer_4i
                     with dissolve
@@ -1014,66 +1009,66 @@ label v15s10:
             scene v15s10_femalebuyer_6 # TPP. Close up of the lady handing Lindsey the cash, faces not seen.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_femalebuyer_6a # TPP. Same as v15s10_femalebuyer_6, Lindsey putting the cash in her pocket.
             with dissolve
 
-            Female Buyer "Don't spend it all at once."
+            female_buyer "Don't spend it all at once."
 
             scene v15s10_femalebuyer_6b # TPP. Same as v15s10_femalebuyer_6a, Lindsey dropping the car keys in the ladies hand.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_femalebuyer_7 # TPP. Show MC and Lindsey, walking away from the area looking at each other smiling.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             play sound "sounds/revving.mp3"
 
             scene v15s10_femalebuyer_7a # TPP. Same as v15s10_femalebuyer_7, Show MC and Lindsey with their backs faced to the camera angle, looking back at the car.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_femalebuyer_8 # TPP. Show the Lady in the car with the key in the lock cylinder
             with dissolve
 
-            pause .25
+            pause 0.75
             
             play sound "sounds/revving.mp3"
 
             scene v15s10_femalebuyer_8a # TPP. Same as v15s10_femalebuyer_8, the lady turning the key in the lock cylinder
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_femalebuyer_8
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_femalebuyer_8a
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_femalebuyer_8
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_femalebuyer_9 # TPP. Shot of the back of the car, smoke coming out of the exhaust as it starts.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_femalebuyer_10 # TPP. Show the car driving away from the area.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s10_femalebuyer_11 # FPP. MC looking at Lindsey, Lindsey looking at MC, slight smile, mouth open.
             with dissolve
@@ -1109,34 +1104,35 @@ label v15s10:
             with dissolve
 
             jump v15s12
+
         else:
-        scene v15s10_femalebuyer_4e
-        with dissolve 
+            scene v15s10_femalebuyer_4e
+            with dissolve 
 
-        Female Buyer "The advert was right. This is a nice, old car, in need of some tough love and major attention."
+            female_buyer "The advert was right. This is a nice, old car, in need of some tough love and major attention."
 
-        scene v15s10_femalebuyer_4f
-        with dissolve
+            scene v15s10_femalebuyer_4f
+            with dissolve
 
-        u "It certainly is. I'm glad you can appreciate our honesty, ha."
+            u "It certainly is. I'm glad you can appreciate our honesty, ha."
 
-        scene v15s10_femalebuyer_4e
-        with dissolve
+            scene v15s10_femalebuyer_4e
+            with dissolve
 
-        Female Buyer "I like it. I think I'll call him Fred."
+            female_buyer "I like it. I think I'll call him Fred."
 
-        scene v15s10_femalebuyer_4f
-        with dissolve
+            scene v15s10_femalebuyer_4f
+            with dissolve
 
-        u "You're already naming him? So you're ready to buy?"
+            u "You're already naming him? So you're ready to buy?"
 
-        scene v15s10_femalebuyer_4e
-        with dissolve
+            scene v15s10_femalebuyer_4e
+            with dissolve
 
-        Female Buyer "I am. It's an honest price for an honest seller. Here's my total offer:"
+            female_buyer "I am. It's an honest price for an honest seller. Here's my total offer:"
 
-        scene v15s10_femalebuyer_4h
-        with dissolve
+            scene v15s10_femalebuyer_4h
+            with dissolve
 
     # -[CarTotal] pops up on screen based on the payout sums-
     # Oscar ;)
@@ -1150,7 +1146,7 @@ label v15s10:
                 scene v15s10_femalebuyer_4j
                 with dissolve
 
-                Female Buyer "This is a take it or leave it type of offer, young man."
+                female_buyer "This is a take it or leave it type of offer, young man."
 
                 scene v15s10_femalebuyer_4i
                 with dissolve
@@ -1162,7 +1158,7 @@ label v15s10:
 
                 li "Okay, we have a deal."
 
-                scene v15s10_femalebuyer_3d # FPP. Same as v15s10_female buyer_3, Lindsey looking at MC, slight smile, mouth closed.
+                scene v15s10_femalebuyer_3d # FPP. Same as v15s10_female_buyer_3, Lindsey looking at MC, slight smile, mouth closed.
                 with dissolve
 
                 u "Really?"
@@ -1181,64 +1177,63 @@ label v15s10:
         scene v15s10_femalebuyer_6 # TPP. Close up of the lady handing Lindsey the cash, faces not seen.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s10_femalebuyer_6a # TPP. Same as v15s10_femalebuyer_6, Lindsey putting the cash in her pocket.
         with dissolve
 
-        Female Buyer "Thank you, dear!"
+        female_buyer "Thank you, dear!"
 
         scene v15s10_femalebuyer_7
         with dissolve
 
-        Female Buyer "Let's go home, Fred."
+        female_buyer "Let's go home, Fred."
 
-        pause .25
+        pause 0.75
 
         play sound "sounds/revving.mp3"
 
         scene v15s10_femalebuyer_7a
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s10_femalebuyer_8
         with dissolve
 
-        pause .25
+        pause 0.75
         
         play sound "sounds/revving.mp3"
 
         scene v15s10_femalebuyer_8a
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s10_femalebuyer_8
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s10_femalebuyer_8a
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s10_femalebuyer_8
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s10_femalebuyer_9 
         with dissolve
 
-        pause .25
-        with dissolve
+        pause 0.75
 
         scene v15s10_femalebuyer_10 
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s10_femalebuyer_11 
         with dissolve
