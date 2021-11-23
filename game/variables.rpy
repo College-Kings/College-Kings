@@ -754,3 +754,4 @@ default v15_LessChickTuition = False
 default v15_Stuck_Up_For_Nora = False ##PLACEHOLDER??
 default v15s14_LetsGo = False
 default v15s7_chloe_empathize = False
+default v15_TookNote = False
