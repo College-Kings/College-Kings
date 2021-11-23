@@ -7,7 +7,7 @@ label v15s14:
     scene v15s14_1 # TPP. Show MC walking out of the College building, slight smile, mouth closed
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s14_2 # TPP. Show Ms Rose standing by her car waving at MC, Slight smile, mouth open.
     with vpunch
@@ -22,14 +22,13 @@ label v15s14:
     scene v15s14_4 # TPP. Shot from behind MC walking towards Ms Rose who is stood by her car, Ms Rose slight smile, mouth closed, MC's face not shown.
     with dissolve
 
-    pause .5
+    pause 0.75
 
     scene v15s14_5 # FPP. MC standing infront of Ms. Rose at her car, Ms. Rose, slight smile, mouth closed.
     with dissolve
 
     menu:
-        "Say nothing.":
-
+        "Say nothing":
             u "..."
 
             scene v15s14_5a # FPp. Same as v15s14_5, Ms. Rose, Apologetic expression, mouth open
@@ -37,11 +36,12 @@ label v15s14:
 
             ro "Oh, is this the silent treatment?"
 
-        "Express you're not happy.":
+        "Express you're not happy":
             scene v15s14_5b # FPP. Same as v15s15_5a, Ms. Rose, Apologetic expression, mouth closed.
             with dissolve
 
             u "I'm still far from happy about our conversation earlier."
+
     scene v15s14_5a
     with dissolve
 
@@ -67,7 +67,7 @@ label v15s14:
     u "It's been a while, I guess."
 
     menu:
-        "Don't drug me.":
+        "Don't drug me":
             scene v15s14_5b
             with dissolve
             
@@ -83,9 +83,8 @@ label v15s14:
 
             u "*Sighs*"
 
-
-        "Let's go.":
-            $ v15s41_LetsGo = True
+        "Let's go":
+            $ v15s14_LetsGo = True
 
             u "Okay, let's go."
 
@@ -97,32 +96,32 @@ label v15s14:
     scene v15s14_6 # TPP. Show MC and Ms. Rose getting into her car, MC neutral face, mouth closed, Ms Rose, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s14_7 # TPP. Close up of MC buckling his seatbelt in the passenger seat, neutral face, mouth closed.
     with dissolve
 
-    pause 
+    pause 1
 
     scene v15s14_8 # TPP. Nice aerial shot of the car leaving campus
     with fade
 
-    pause
+    pause 1
 
-    if v15s41_LetsGo:
+    if v15s14_LetsGo:
         scene v15s14_9 # FPP. Show Ms Rose's hand on MC's thigh near his crotch while she drives.
         with dissolve
 
-        pause
+        pause 1
 
     scene v15s14_10 # TPP. Show the car on a road near Ms Rose's house
     with fade
 
-    pause 
+    pause 1
 
     scene v15s14_11 # TPP. Shot of the car pulling into Ms. Rose's drive way.
     with dissolve
 
-    pause
+    pause 1
 
     jump v15s15

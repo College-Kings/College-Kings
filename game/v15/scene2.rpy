@@ -3,12 +3,7 @@
 # Characters: MC (Outfit: 1), CAMERON (Outfit: 3)
 # Time: Night
 
-def v15s2_reply1():
-
-def v15s2_reply2():
-
 label v15s2:
-
     scene v15s2_1 # FPP. Show the material of the bag over MC's head. (Maybe reuse the same images from the dungeon in v13)
     with dissolve
 
@@ -163,19 +158,17 @@ label v15s2:
                 with dissolve
 
             "Say nothing":
-
                 scene v15s2_5
                 with dissolve
-               
-        
+                       
         u "Night, Cameron. Get some rest, man."
 
         scene v15s2_5a # TPP. Same as v15s2_5, Cameron mouth open, MC mouth closed.
         with dissolve
 
         ca "Yeah, catch you later, [name]."
+
     else:
-    
         scene v15s2_3
         with dissolve
         
@@ -240,12 +233,12 @@ label v15s2:
         scene v15s2_3h # TPP. Same as v15s2_3g, Show Cameron storming off away from MC, Cameron angry, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s2_3i # TPP. Same as v15s2_3h, Show MC pulling the bag off his head.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s2_3j # TPP. Same as v15s2_3i, Show MC looking down at the bag that was on his head now in his hands, MC slightly worried, mouth closed.
         with dissolve
@@ -255,7 +248,6 @@ label v15s2:
         u "(So, this is what living with a psychopath is like? For fuck's sake...)"
 
         if v14_samantha_sex:
-
             u "(I wouldn't have made it out of that conversation alive if he knew what we actually did in there... Damn, we're so lucky he didn't hear us.)"
 
         scene v15s2_5b # Same as v15s2_5a, Show MC walking away no Cameron in sight. MC slightly worried, mouth closed.
@@ -266,22 +258,22 @@ label v15s2:
     scene v15s2_6 # TPP. Show MC in his room pulling the door closed, MC serious face, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s2_7 # TPP. Show MC standing in the middle of his room taking his shirt off, serious face, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s2_7a # TPP. Same as v15s2_7, MC taking off his pants now only in his underwear, serious face, mouth closed.
     with dissolve
 
-    pause .25 
+    pause 0.75 
 
     scene v15s2_8 # TPP. Show MC getting into his bed, serious face, mouth cloesd.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s2_9 # TPP. Aerial Camera view looking down at MC who is staring up at his ceiling, serious face, mouth closed.
     with dissolve
@@ -299,19 +291,16 @@ label v15s2:
     scene v15s2_9a # TPP. Show MC holding his phone up infront of his face, serious face, mouth closed.
     with dissolve
 
-    $ autumn.messenger.newMessage(_("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)"), queue =False)
-    $ autumn.messenger.addReply(_("Yeah, looking forward to it. See you there!"), v15s2_reply1)
-    $ autumn.messengeraddReply(_("Of course! I'll always be there if there's puppies, haha."), v15s2_reply2)
+    $ autumn.messenger.newMessage(_("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)"), queue=False)
+    $ autumn.messenger.addReply(_("Yeah, looking forward to it. See you there!"))
+    $ autumn.messenger.addReply(_("Of course! I'll always be there if there's puppies, haha."))
 
     label v15s2_PhoneContinue:
-            if autumn.messenger.replies:
-                call screen phone
-            if autumn.messenger.replies:
-                "(I should reply to Autumn.)"
-                jump v15s2_PhoneContinue
-
-    scene v15s2_9a
-    with dissolve
+        if autumn.messenger.replies:
+            call screen phone
+        if autumn.messenger.replies:
+            "(I should reply to Autumn.)"
+            jump v15s2_PhoneContinue
 
     u "(Almost forgot about that... It'll be interesting to spend some one-on-one time with Autumn.)"
 
@@ -332,24 +321,18 @@ label v15s2:
     scene v15s2_9a
     with dissolve
 
+    $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren", queue=False)
+
     call screen phone
 
-    $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren")
-
-    scene v15s2_9a
-    with dissolve
-    
     u "(\"Dress to impress your ghoulish empress...\") *Chuckles*"
-
-    scene v15s2_9a
-    with dissolve
 
     u "(Guess I need to go gift shopping... Maybe Autumn can give me ideas on what Lauren would like, or I can just get her some kind of gift card... She likes books, I think?)"
 
     scene v15s2_9c # TPP. Same as v15s2_9b, Show MC yawning and stretching while laying down, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s2_9d # TPP. Same as v15s2_9c, Show MC laying in a different position with his eyes closed.
     with dissolve
@@ -366,7 +349,7 @@ label v15s2:
 
     u "*Groans* (No time for a snooze today. Need to get up.)"
 
-    if v14_ApesPostChloePics:
+    if v14_ApesPostChloePics and not joinwolves:
         jump v15s3
     else: 
         jump v15s4

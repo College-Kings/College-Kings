@@ -17,12 +17,12 @@ label v15s4:
     scene v15s4_2 # TPP. Close up of just Autumn carrying two boxes one stacked on top of the other while she walks towards MC oblivious that he is at the entrance, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s4_2a # TPP. Same as v15s4_2, Autumn much closer to MC now not noticing him, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     menu:
         "Offer to help":
@@ -54,7 +54,7 @@ label v15s4:
             scene v15s4_4 # TPP. Show MC grabbing the top box that Autumn is carrying, both slight smile, mouth closed.
             with dissolve
         
-            pause .25
+            pause 0.75
 
             scene v15s4_3c # FPP. Same as v15s4_3b, MC looking at Autumn now carrying the heavier box that Autumn was carrying, Autumn slight smile, mouth open.
             with dissolve
@@ -66,7 +66,7 @@ label v15s4:
             scene v15s4_5 # TPP. Show MC and Autumn carrying the boxes into the reception are of the dog shelter, the reception center having no one else in it.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s4_6 # FPP. Show Autumn looking at MC as she sets the box she was carrying on the reception center desk, slight smile, mouth closed.
             with dissolve
@@ -86,7 +86,7 @@ label v15s4:
             scene v15s4_8 # FPP. MC putting the box up ontop of the reception desk.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s4_9 # FPP. MC looking at Autumn, Autumn looking at MC, Both not carrying a box anymore, Autumn slight smile, mouth open.
             with dissolve
@@ -110,7 +110,7 @@ label v15s4:
 
                     u "*Laughs*"
 
-                "I want one.":
+                "I want one":
                     $ AutumnFreeMug = True
                     scene v15s4_9a
                     with dissolve
@@ -143,6 +143,7 @@ label v15s4:
                     with dissolve
 
                     au "Haha, I'll give you a mug at the re-opening. Promise."
+
         "Say hello":
             scene v15s4_2
             with dissolve    
@@ -162,7 +163,7 @@ label v15s4:
             scene v15s4_5a # TPP. Same as v15s4_5, Autumn carrying both boxes, MC carrying none, both slight smile, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             play sound "sounds/slam.mp3"
 
@@ -184,7 +185,7 @@ label v15s4:
             au "It's going great so far! Can't you tell? Ha..."
 
             menu:
-                "I'm sorry.":
+                "I'm sorry":
                     $ AutumnLunchBreak = True
                     scene v15s4_9d # FPP. Same as v15s4_9c, Autumn frustrated face, mouth closed.
                     with dissolve
@@ -194,12 +195,12 @@ label v15s4:
                     scene v15s4_9e # FPP. Same as v15s4_9d, Autumn with her eyes closed inhaling deeply, mouth open.
                     with dissolve
 
-                    pause .25
+                    pause 0.75
 
                     scene v15s4_9f # FPP. Same as v15s4_9e, Autumn with her eyes closed exhaling deeply, mouth open.
                     with dissolve
 
-                    pause .25
+                    pause 0.75
 
                     scene v15s4_9g # FPP. Same as v15s4_9c, Autumn neutral face, mouth open.
                     with dissolve
@@ -211,7 +212,7 @@ label v15s4:
 
                     au "This has nothing to do with you. *Chuckles* Thanks for being here."
                     
-                "Just breathe.":
+                "Just breathe":
                     scene v15s4_9d
                     with dissolve
 
@@ -283,12 +284,12 @@ label v15s4:
     scene v15s4_10 # FPP. MC looking at Autum infront of one of the dog enclosures, Autumn slight smile , mouth closed.
     with fade
 
-    pause .25
+    pause 0.75
 
     scene v15s4_10a # FPP. Same as v15s4_10, Show Autumn opening the door, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s4_11 # FPP. Inside the dog enclosure looking at the dog. The dog a scrappy looking Male dog. The dog is a golden blonde color with its tongue hanging out, the dog dirty and needing to be cleaned.
     with dissolve
@@ -306,7 +307,7 @@ label v15s4:
     au "Hi! Hello! *Chuckles* Cutie..."
 
     menu:
-        "Agree.":
+        "Agree":
             scene v15s4_13a # FPP. Same as v15s4_13, Autumn slight smile, mouth closed.
             with dissolve
 
@@ -316,7 +317,8 @@ label v15s4:
             with dissolve
 
             au "How could someone give up on you, bud?"
-        "Flirt.":
+
+        "Flirt":
             $ add_point(KCT.BOYFRIEND)
             scene v15s4_13a
             with dissolve
@@ -334,6 +336,11 @@ label v15s4:
                 with dissolve
 
                 u "Yeah, for sure. Ha! She'd like that..."
+                
+                scene v15s4_13
+                with dissolve
+                
+                au "Hopefully we can find you a good home."
 
             else:
                 scene v15s4_13
@@ -349,15 +356,10 @@ label v15s4:
                 scene v15s4_13
                 with dissolve
 
-                au "*Chuckles*"
-
-    scene v15s4_13
-    with dissolve
-
-    au "Hopefully we can find you a good home."
+                au "*Chuckles* Hopefully we can find you a good home."
 
     menu:
-        "Good luck.":
+        "Good luck":
             scene v15s4_13a
             with dissolve
 
@@ -380,6 +382,7 @@ label v15s4:
 
             scene v15s4_14 # TPP. Close up of the dog licking Autumn's nose, Autumn slight smile, mouth closed.
             with dissolve
+
         "We will":
             $ TraitAnimalLover = True
             scene v15s4_13a
@@ -405,7 +408,7 @@ label v15s4:
             scene v15s4_16 # TPP. Close up of the dog licking MC's nose, MC slight smile, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s4_17 # TPP. Close up of Autumn looking at MC like she adores him, Autumn smile, mouth closed.
             with dissolve
@@ -490,7 +493,7 @@ label v15s4:
     au "You think we should change it to something else?"
 
     menu:
-        "No, don't change it.":
+        "No, don't change it":
             scene v15s4_12a
             with dissolve
 
@@ -507,7 +510,7 @@ label v15s4:
             au "Okay, Blue. I'll be back later to play with you and take you for a walk."
             
             menu:
-                "Peek.":
+                "Peek":
                     $ add_point(KCT.TROUBLEMAKER)
                     scene v15s4_19 # FPP. Similar to v15s4_18, Close up of Autumn's ass.
                     with dissolve
@@ -516,7 +519,8 @@ label v15s4:
 
                     if laurenrs:
                         u "(Is it weird to check out Lauren's sister?)"
-                "Don't peek.":
+
+                "Don't peek":
                     $ add_point(KCT.BOYFRIEND)
                     scene v15s4_18
                     with dissolve
@@ -530,7 +534,7 @@ label v15s4:
 
             u "Bye, Blue!"
 
-        "Yeah, lets change it.":
+        "Yeah, lets change it":
             scene v15s4_12a
             with dissolve
 
@@ -541,7 +545,12 @@ label v15s4:
 
             au "Okay, what should we call him then?"
 
-            # Call screen for player to type in the dog's new name
+            label v15s4_dog:
+            $ dog_name = renpy.input(_("Choose the dog's name:"), default=_("Blue")).strip() or _("Blue")
+
+            if dog_name.upper() == "BLUE":
+                u "(I should come up with a better name than that...)"
+                jump v15s4_dog
 
             scene v15s4_12a
             with dissolve
@@ -568,12 +577,12 @@ label v15s4:
             scene v15s4_18
             with dissolve
 
-            u "Bye, [dog-name]."
+            u "Bye, [dog_name]."
 
     scene v15s4_20 # TPP. Show MC and Autumn leaving the dog's enclosure, the dog in the background, both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s4_9a
     with fade 
@@ -588,7 +597,7 @@ label v15s4:
     scene v15s4_21 # TPP. Show Autumn and MC walking outside, both slight smile, mouth closed
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s4_22 # TPP. MC holding a ladder while Autumn is at the top of the ladder hanging up the banner, the banner says "GRAND RE-OPENING!" with pictures of dogs, bones, and paw prints on it.
     with fade
@@ -599,7 +608,7 @@ label v15s4:
     with dissolve
 
     menu:
-        "Make a joke.":
+        "Make a joke":
             scene v15s4_24 # FPP. MC looking up at Autumn, Autumn not looking at MC she conversates as she is putting up the banner, Autumn slight smile, mouth closed.
             with dissolve
 
@@ -629,7 +638,8 @@ label v15s4:
             with dissolve
 
             au "*Laughs* You owe me for having to listen to that."
-        "Look at her ass.":
+
+        "Look at her ass":
             $ AutumnLunchBreak = False
             scene v15s4_24
             with dissolve
@@ -639,7 +649,7 @@ label v15s4:
             scene v15s4_25 # TPP. Close up of Autumn's ass as she is reaching out to hang the banner on the ladder.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s4_24b # FPP. Same as v15s4_24a, Autumn looking down at MC while she is standing on the ladder, Autumn upset, mouth open
             with vpunch
@@ -670,12 +680,12 @@ label v15s4:
     scene v15s4_26 # TPP. Show Autumn climbing down the ladder slight smile, mouth closed.
     with dissolve
 
-    pause .75
+    pause 0.75
 
     scene v15s4_27 # TPP. Autumn and MC standing a bit back from the the Dog Shelter looking at the banner on display, both slight smile, mouth closed.
     with dissolve
 
-    pause .5
+    pause 0.75
 
     scene v15s4_28 # FPP. MC and Autumn standing where they were in v15s4_27, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth open.
     with dissolve
@@ -695,7 +705,7 @@ label v15s4:
     scene v15s4_29 # TPP. Show MC and Autumn high fiving, both slight smile, mouths closed.
     with dissolve
     
-    pause .25
+    pause 0.75
 
     scene v15s4_28
     with dissolve
@@ -710,22 +720,22 @@ label v15s4:
     scene v15s4_30 # TPP. Show just MC putting up a dog poster on the wall in the Shelter, slight smile, mouth closed
     with fade 
 
-    pause .5
+    pause 0.75
 
     scene v15s4_31 # TPP. Show just Autumn putting up a dog poster on the wall somewhere else in the Shelter, slight smile, mouth closed.
     with fade
 
-    pause .5 
+    pause 0.75 
 
     scene v15s4_32 # TPP. Show MC and Autumn putting down a table in an empty part of the Room against the wall, neutral expression, mouth closed.
     with fade
 
-    pause .5
+    pause 0.75
 
     scene v15s4_33 # TPP. Show MC and Autumn putting chairs down in the empty space arranging a waiting area.
     with fade
 
-    pause .5
+    pause 0.75
 
     scene v15s4_34 # FPP. MC and Autumn standing in the waiting area they just made, Autumn looking at MC, MC looking at Autumn, Autumn slight smile, mouth open.
     with dissolve
@@ -740,12 +750,12 @@ label v15s4:
     scene v15s4_35 # TPP. Show MC struggling to carry a potted plant while Autumn is sitting down pointing to a spot in the corner near the table and chairs, MC exhausted face, mouth closed, Autumn slight smile, mouth closed.
     with fade
 
-    pause .25
+    pause 0.75
 
     scene v15s4_36 # TPP. Show just MC putting down the potted plant in the corner, MC exhausted face, mouth closed
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s4_37 # FPP. MC standing infront of Autumn who is sitting down in a chair, Autumn looking up at MC, Autumn slight smile, mouth closed.
     with dissolve
@@ -770,7 +780,7 @@ label v15s4:
     scene v15s4_37b # FPP. Same as v15s4_37a, Autumn reaching into her pocket, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s4_37c # FPP. Same as v15s4_37b, Autumn looking at MC and holding a bag of balloons, slight smile, mouth open.
     with dissolve
@@ -785,17 +795,17 @@ label v15s4:
     scene v15s4_38 # TPP. Autumn and MC sitting next to each other, a few already blown up balloons on the floor, both blowing up balloons.
     with fade
 
-    pause .5
+    pause 0.75
 
     scene v15s4_23a # TPP. Same as v15s4_23, Autumn putting balloons on the banner, slight smile, mouth closed.
     with fade
 
-    pause .5
+    pause 0.75
 
     scene v15s4_38a # TPP. Same as v15s4_38, More balloons on the floor, Autumn and MC putting strings on balloons, both slight smile, mouth closed.
     with fade
 
-    pause .5
+    pause 0.75
 
     scene v15s4_39 # FPP. MC sitting looking up at Autumn, Autumn now standing up with her back turned to MC, putting a string on a balloon.
     with dissolve
@@ -803,19 +813,19 @@ label v15s4:
     u "(Hmm... I could give her a good scare right now...)"
 
     menu:
-        "Pop a balloon.":
+        "Pop a balloon":
             $ TraitPrankster = True
             scene v15s4_40 # FPP. MC behind Autumn, holding a tack/pen/scissors(whatever we have available) and a balloon by Autumn's ear, Autumn unaware with her back turned.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             play sound "sounds/slap.mp3"
 
             scene v15s4_40a # FPP. Same as v15s4_40, MC pushing the item into the balloon and popping it by Autumn's ear.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s4_40b # FPP. Same as v15s4_40a, Autumn's head turned to the side a little from the loud noise, her face visible to MC, Autumn scared, mouth open.
             with dissolve
@@ -849,18 +859,18 @@ label v15s4:
 
             au "*Laughs* You're so annoying."
             
-        "Don't pop a balloon.":
+        "Don't pop a balloon":
                 u "(Not worth the chance of getting accidentally punched in the face...)"
 
                 scene v15s4_41 # TPP. Show MC with his back turned to Autumn looking at the balloons on the floor, both slight smile, mouth open.
                 with dissolve
 
-                pause .25
+                pause 0.75
 
                 scene v15s4_41a # TPP. Show Autumn popping a balloon next to MC's ear, Autumn slight smile, mouth closed, MC scared, mouth open.
                 with dissolve
 
-                pause .25
+                pause 0.75
 
                 scene v15s4_40d
                 with dissolve
@@ -910,7 +920,7 @@ label v15s4:
     scene v15s4_44 # TPP. MC and Autumn standing next to each other looking at the room, both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s4_43a
     with dissolve
@@ -982,12 +992,12 @@ label v15s4:
     scene v15s4_45 # TPP. Close up of Oscar the dog and his owner walking into the shelter, Oscar's owner slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s4_45a # TPP. Same as v15s4_45, Oscar and his Owner walking to MC and Autumn.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s4_43b # FPP. Show Autumn facing and looking over and Oscar and his owner, slight smile, mouth open.
     with dissolve
@@ -1024,7 +1034,7 @@ label v15s4:
     scene v15s4_49 # FPP. MC standing back up and looking up at Oscar's Owner,Oscar's owner looking at Autumn, Oscar's owner neutral face, mouth open.
     with dissolve
 
-    Oscars Owner "Actually... I'm sorry I have to do this, but I'm here to give Oscar back."
+    oscars_owner "Actually... I'm sorry I have to do this, but I'm here to give Oscar back."
 
     scene v15s4_43c # FPP. Same as v15s4_43b, Autumn looking at Oscar's owner, Autumn confused, mouth open,
     with dissolve
@@ -1034,11 +1044,11 @@ label v15s4:
     scene v15s4_49
     with dissolve
 
-    Oscars owner "Long story short, I'm moving upstate to take over my grandpa's farm."
+    oscars_owner "Long story short, I'm moving upstate to take over my grandpa's farm."
 
     u "(And?)"
 
-    Oscars owner "It's not exactly the best place for Oscar."
+    oscars_owner "It's not exactly the best place for Oscar."
 
     scene v15s4_49a # FPP. Same as v15s4_49, Oscar's owner looking at MC, Oscar's owner neutral face, mouth closed.
     with dissolve
@@ -1053,7 +1063,7 @@ label v15s4:
     scene v15s4_49
     with dissolve
 
-    Oscars owner "Yeah, except this is a weed farm..."
+    oscars_owner "Yeah, except this is a weed farm..."
 
     scene v15s4_43c
     with dissolve
@@ -1063,7 +1073,7 @@ label v15s4:
     scene v15s4_49
     with dissolve
 
-    Oscars owner "And he likes weed. Like, a lot. So-"
+    oscars_owner "And he likes weed. Like, a lot. So-"
 
     scene v15s4_43c
     with dissolve
@@ -1078,7 +1088,7 @@ label v15s4:
     scene v15s4_49b # FPP. Same as v15s4_49a, Oscar's owner looking at MC, Neutral face, mouth open.
     with dissolve
 
-    Oscars owner "I didn't exactly give it to him, no... It was an accident."
+    oscars_owner "I didn't exactly give it to him, no... It was an accident."
 
     scene v15s4_43c
     with dissolve
@@ -1088,7 +1098,7 @@ label v15s4:
     scene v15s4_50 # TPP. Show Oscar's owner walking out of the shelter, waving while he exits.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s4_43d # FPP. Same as v15s4_43c, Autumn looking down at Oscar, Autumn upset, mouth open.
     with dissolve
@@ -1142,8 +1152,12 @@ label v15s4:
 
             u "If only they'd realize that before they chose to adopt..."
 
-        "Comfort Oscar":
+            scene v15s4_43
+            with dissolve
+            
+            au "Hopefully we can find the perfect owner for him at the re-opening."
 
+        "Comfort Oscar":
             scene v15s4_48
             with dissolve
 
@@ -1156,7 +1170,7 @@ label v15s4:
             scene v15s4_51 # TPP. Show Oscar hopping up and licking MC's face, MC slight smile, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s4_43
             with dissolve
@@ -1173,10 +1187,7 @@ label v15s4:
 
             au "Ugh, I know right. That's the only downside of working here, haha."
 
-    scene v15s4_43
-    with dissolve
-
-    au "Hopefully we can find the perfect owner for him at the re-opening."
+            au "Hopefully we can find the perfect owner for him at the re-opening."
 
     scene v15s4_43a
     with dissolve
@@ -1187,7 +1198,7 @@ label v15s4:
         scene v15s4_43
         with dissolve
 
-        au "Alright, I better get him fed and bathed before I go on break. I'm due for some "me time" *Laughs*"
+        au "Alright, I better get him fed and bathed before I go on break. I'm due for some \"me time\" *Laughs*"
 
         scene v15s4_43a
         with dissolve
@@ -1207,7 +1218,7 @@ label v15s4:
         scene v15s4_52 # TPP. Autumn and MC hugging, both slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s4_43
         with dissolve
@@ -1221,6 +1232,7 @@ label v15s4:
 
         scene v15s4_53 # TPP. Show MC walking out of the Dog Shelter waving as he goes, Autumn and Oscar watching him leave.
         with dissolve
+
     else:
         scene v15s4_43
         with dissolve
@@ -1245,15 +1257,12 @@ label v15s4:
         scene v15s4_54 # TPP. Show MC standing in the parking lot of the dog shelter waiting/
         with fade
 
-        pause .25
+        pause 0.75
 
         scene v15s4_55 # FPP. MC waiting for Autumn in the parking lot.
         with dissolve
 
         u "(Got a pretty good workout this morning. Almost as good as the gym, haha.)"
-
-        scene v15s4_55
-        with vpunch
 
         au "Hey, weirdo! Over here!"
 
@@ -1265,12 +1274,12 @@ label v15s4:
         scene v15s4_57 # FPP. MC further ahead from where he was walking towards Autumn who is starting to get in the car.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s4_58 # FPP. MC getting in the passenger seat, Autumn sitting in the driver seat with her door closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s4_59 # FPP. MC sitting in the passenger seat with his door closed, looking at Autumn in the driver seat, Autumn looking at MC, Autumn slight smile, mouth closed.
         with dissolve
@@ -1285,7 +1294,7 @@ label v15s4:
         scene v15s4_59b # FPP. Same as v15s4_59a, Show Autumn pulling out a joint and fancy lighter from her pocket, Autumn slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s4_59c # FPP. Same as v15s4_59b, Show Autumn holding the joint with her lips and lighting it.
         with dissolve
@@ -1305,7 +1314,7 @@ label v15s4:
         scene v15s4_59d
         with dissolve
 
-        au  *Chuckles* Yeah... No one has any idea what I am.
+        au "*Chuckles* Yeah... No one has any idea what I am."
 
         scene v15s4_59f # FPP. Same as v15s4_59d, Autumn looking at MC holding the joint, smoke coming off the joint, Autumn slight smile, mouth closed.
         with dissolve
@@ -1318,7 +1327,7 @@ label v15s4:
         au "Want a hit?"
 
         menu:
-            "Smoke weed.":
+            "Smoke weed":
                 $ SmokedWithAutumn = True
                 scene v15s4_59f
                 with dissolve
@@ -1328,39 +1337,39 @@ label v15s4:
                 scene v15s4_59g # FPP. Same as v15s4_59f, Autumn holding out the joint for MC, Autumn slight smile, mouth closed.
                 with dissolve
 
-                pause .25
+                pause 0.75
 
                 scene v15s4_59h # FPP. Same as v15s4_59g, MC taking the joint from Autumn, Autumn slight smile, mouth closed.
                 with dissolve
 
-                pause .25
+                pause 0.75
 
                 scene v15s4_60 # TPP. Show MC in the car taking a big puff of the joint.
                 with dissolve
 
-                pause .25
+                pause 0.75
 
                 scene v15s4_60a # TPP. Same as v15s4_60, MC blowing out the smoke.
                 with dissolve
 
-                pause .25
+                pause 0.75
 
                 scene v15s4_59h
                 with dissolve
 
-                pause .25
+                pause 0.75
 
                 scene v15s4_59g
                 with dissolve
                 
-                pause .25
+                pause 0.75
 
                 scene v15s4_59f
                 with dissolve
 
                 u "*Inhaling* This is a nice bonding experience... Haha."
 
-            "Don't smoke weed.":
+            "Don't smoke weed":
                 scene v15s4_59f
                 with dissolve
 
@@ -1374,7 +1383,7 @@ label v15s4:
         scene v15s4_59e
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s4_59f
         with dissolve
@@ -1400,57 +1409,58 @@ label v15s4:
             scene v15s4_59g # FPP. Same as v15s4_59f, Autumn holding out the joint for MC, Autumn slight smile, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s4_59h # FPP. Same as v15s4_59g, MC taking the joint from Autumn, Autumn slight smile, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s4_60 # TPP. Show MC in the car taking a big puff of the joint.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s4_60a # TPP. Same as v15s4_60, MC blowing out the smoke.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s4_59h
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s4_59g
             with dissolve
             
-            pause .25
+            pause 0.75
 
             scene v15s4_59f
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s4_59i # FPP. Same as v15s4_59h, Show Autumn pinching off the end of the joint for later, Autumn slight smile, mouth closed
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s4_59j # FPP. Same as v15s4_59i, Show Autumn putting away the joint and lighter into her pocket, Autumn slight smile, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
+
         else: 
             scene v15s4_59i # FPP. Same as v15s4_59h, Show Autumn pinching off the end of the joint for later, Autumn slight smile, mouth closed
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s4_59j # FPP. Same as v15s4_59i, Show Autumn putting away the joint and lighter into her pocket, Autumn slight smile, mouth closed.
             with dissolve
 
-            pause .25
+            pause 0.75
         
         scene v15s4_59a
         with dissolve
@@ -1567,10 +1577,12 @@ label v15s4:
         scene v15s4_61 # TPP. Show MC getting out of Autumn's car, MC slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s4_62 # TPP. Show MC a bit away from the car walking towards campus, slight smile, mouth closed.
         with dissolve
+
+        pause 0.75
 
         if msrosers:
             jump v15s5

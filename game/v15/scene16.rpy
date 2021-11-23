@@ -5,7 +5,6 @@
 
 label v15s16:
     if MadAtMsRose: #Placeholder for when scenes before are ready.
-
         scene v15s16_1 # TPP. Show MC walking out of Ms Rose's house, MC mad, mouth closed.
         with dissolve
 
@@ -30,8 +29,8 @@ label v15s16:
         with dissolve
 
         u "(Time for shopping.)"
-    else:
 
+    else:
         scene v15s16_1a # TPP. Same as v15s16_1, MC slight smile, mouth closed.
         with dissolve
 

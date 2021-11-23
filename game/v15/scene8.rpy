@@ -7,12 +7,12 @@ label v15s8:
     scene v15s8_1 # TPP. Show MC walking into the planning board room with Chloe, both slight smile, mouth closed.
     with fade
 
-    pause .25
+    pause 0.75
 
     scene v15s8_2 # TPP. Show MC and Chloe looking at each other standing infront of the planning board, both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s8_3 # FPP. MC and Chloe standing infront of the planning board, MC looking at Chloe, Chloe looking at MC, Chloe slight smile, mouth open.
     with dissolve
@@ -107,6 +107,10 @@ label v15s8:
         with dissolve
 
         cl "*Sighs*"
+
+        scene v15s8_3
+        with dissolve
+
     if v15_LessChickTuition:
         scene v15s8_3a
         with dissolve
@@ -127,9 +131,6 @@ label v15s8:
         with dissolve
 
         cl "Yeah, I'm all over it."
-
-    scene v15s8_3
-    with dissolve
 
     cl "Okay. Yeah. I'm happy with this!"
 
@@ -154,7 +155,6 @@ label v15s8:
     cl "No, I uh- I need to make a few phone calls."
 
     if v14s51_take_diary or v14s51_take_money:
-
         cl "And I still have to report the robbery to the dean, so..."
 
         scene v15s8_3a
@@ -168,6 +168,7 @@ label v15s8:
         with dissolve
 
         cl "I know. *Chuckles* You're the best."
+
     else:
         scene v15s8_3a
         with dissolve
@@ -209,28 +210,29 @@ label v15s8:
         scene v15s8_6 # FPP. Show Chloe getting close up and personal with MC, Chloe biting her lip, Flirting expression, mouth closed
         with dissolve
 
-        pause .25
+        pause 0.75
 
         play sound "sounds/kiss.mp3"
 
         scene v15s8_6a # FPP. Same as v15s8_6, Chloe kissing MC.
         with dissolve
 
-        pause .25
+        pause 0.75
 
     scene v15s8_7 # TPP. Show MC walking to leave the planning room, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s8_7a # TPP. Same as v15s8_7, MC starting to turn around.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     if v14s51_take_diary or v14s51_take_money:
         scene v15s8_8 # FPP. MC some distance away from Chloe looking at her. Chloe stressed on the phone, mouth closed.
         with dissolve
+
     else:
         scene v15s8_8a # FPP. Same as v15s8_8, Chloe on the phone winking at MC, slight smile, mouth closed.
         with dissolve
@@ -238,7 +240,7 @@ label v15s8:
     scene v15s8_7b # TPP. Same as v15s8_7, MC opening the door to the planning room to walk out.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s8_9 # TPP. Show MC leaving the library and entering into the hallway, MC slight smile, mouth closed.
     with fade

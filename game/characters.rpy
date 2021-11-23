@@ -151,3 +151,8 @@ define character.lady = Character("Lady", who_color="#ff8afb", who_outlines=[ (2
 define character.gentleman = Character("Gentleman", who_color="#147efb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.elm = Character("Elijah's mother", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.bird = Character("Bird", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+
+# 15.0
+define character.males = Character("males")
+define character.fems = Character("fems")
+define character.oscars_owner = Character("oscars_owner")
