@@ -156,3 +156,5 @@ define character.bird = Character("Bird", who_color="#5fc9f8", who_outlines=[ (2
 define character.males = Character("males")
 define character.fems = Character("fems")
 define character.oscars_owner = Character("oscars_owner")
+define character.male_buyer = Character("male_buyer")
+define character.female_buyer = Character("female_buyer")
