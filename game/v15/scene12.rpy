@@ -4,9 +4,7 @@
 # Time: Afternoon
 
 label v15s12:
-
     if v14s51_take_diary:
-
         # -MC and Lindsey are walking along the hallway, in the general direction of the janitor's closet-
         scene v15s12_1    # TPP. MC and Lindsey walking down the school hallway.
         with dissolve
@@ -46,7 +44,6 @@ label v15s12:
         li "And then there were a few interesting entries."
         
         if chloegf or chloers: # -if ChloeGF or ChloeRS
-
             scene v15s12_3    # TPP. MC worried, mouth closed. 
             with dissolve
 
@@ -102,8 +99,7 @@ label v15s12:
 
         li "*Scoffs* She's trying to trick me [name], so that she can publicly embarrass me... Can you believe that?"
 
-        if v14_help_chloe and v15s8_chole_pb_DamageLindseyRep: # -if MC is helping Chloe and chose the Embarrass Lindsey option on Chloe's planning board
-
+        if v14_help_chloe and v15s8_chloe_pb_DamageLindseyRep: # -if MC is helping Chloe and chose the Embarrass Lindsey option on Chloe's planning board
             scene v15s12_3
             with dissolve
 
@@ -119,8 +115,7 @@ label v15s12:
 
             li "*Sighs* I'm just glad I got this information ahead of time. Who knows what kind of trouble I just avoided."
 
-        if v14_help_chloe and not v15s8_chole_pb_DamageLindseyRep: # -if MC is helping Chloe and did not chose the Embarrass Lindsey option
-
+        elif v14_help_chloe: # -if MC is helping Chloe and did not chose the Embarrass Lindsey option
             scene v15s12_2i
             with dissolve
             
@@ -141,8 +136,7 @@ label v15s12:
 
             u "(Damn, I'm so glad we chose to not do that to her.)"
             
-        if not v14_help_chloe: # -if MC is not helping Chloe
-
+        else: # -if MC is not helping Chloe
             scene v15s12_2i
             with dissolve
 
@@ -184,8 +178,7 @@ label v15s12:
 
             li "Ha, yeah. I know... Me too."        
 
-        if cholegf: # -if ChloeGF
-
+        if chloegf: # -if ChloeGF
             scene v15s12_2e
             with dissolve
             
@@ -214,7 +207,6 @@ label v15s12:
         menu:
             "Tell me": # -if Tell me
                 # TODO - KCT and character points 
-
                 scene v15s12_2d
                 with dissolve
                 
@@ -279,7 +271,6 @@ label v15s12:
 
             "Not interested": # -if Not interested
                 # TODO: KCT and character points 
-
                 scene v15s12_2e
                 with dissolve
                 
@@ -293,8 +284,7 @@ label v15s12:
                 li "Yeah, fair enough, I respect that. That's why I wanted to ask."            
 
         # -regardless of previous choice, still if ChloeGF
-        if cholegf and lindseyrs:  # -if ChloeGF and LindseyRS
-
+        if chloegf and lindseyrs:  # -if ChloeGF and LindseyRS
             scene v15s12_2j
             with dissolve
 
@@ -326,10 +316,8 @@ label v15s12:
             # -event1 It's pretty serious (LindseyRS becomes LindseyFriend)
             # -event2 It's not that serious
             menu:                        
-
                 "It's pretty serious": # -if It's pretty serious (LindseyRS becomes LindseyFriend)
                     # TODO KCT and character points 
-
                     scene v15s12_2d
                     with dissolve
 
@@ -370,7 +358,6 @@ label v15s12:
 
                 "It's not that serious":  # -if It's not that serious
                     # TODO: KCT and Character points
-
                     scene v15s12_2d
                     with dissolve
 
@@ -412,7 +399,6 @@ label v15s12:
                     u "Haha, yeah. Of course."
 
         # -Regardless-
-
             scene v15s12_2
             with dissolve
             
@@ -468,7 +454,6 @@ label v15s12:
                 "VIP Night",
                 opinion="\"There's a few people on Chloe's side that I think I could sway... Their opinion of me isn't horrible, they just seem to perfer her... If we give them a spectacular night out, there's absolutely no way they'll be  able to choose her over me.\"")
 
-
             v15s12_lindsey_pb_fakeId = v15_lindsey_board.add_task("gameNight",
                 "Buy booze with fake ID",
                 opinion="\"Since neither of us are of the legal drinking age, we're gonna need a fake ID if we want booze. A friend of mine makes them, so I'll take care of that.\"",
@@ -487,7 +472,6 @@ label v15s12:
                 "Host the game night",
                 opinion="\"Once we got the games and (hopefully) the booze, all that's left is to make sure everyone has a good time and leaves wanting to vote for me.\"",
                 people=[mc, lindsey, autumn, aubrey])
-
 
             v15_lindsey_board.add_task("vipNight",
                 "Book a limousine & private club",
@@ -519,11 +503,9 @@ label v15s12:
             $ v15s12_lindsey_pb_wouldYouRather = v15_lindsey_board.selected_task == v15s12_lindsey_pb_wouldYouRather
             $ v15_s12_lindsey_pb_inviteSebastian = v15_lindsey_board.selected_task == v15_s12_lindsey_pb_inviteSebastian
 
-
         # End planning board (screen disappears)
 
         if v15s12_lindsey_pb_gameNight: # -if chose Game night
-
             scene v15s12_8b
             with dissolve
             
@@ -545,7 +527,6 @@ label v15s12:
             li "*Laughs* Exactly."
 
         else: # -if chose Host an exclusive VIP night
-
             scene v15s12_8a
             with dissolve
             
@@ -557,7 +538,6 @@ label v15s12:
             li "Haha, that's so true. It's going to be epic!"        
 
         # -Regardless-
-
         scene v15s12_8a
         with dissolve
 
@@ -574,7 +554,6 @@ label v15s12:
         li "Hehe, thank you!"        
 
         if lindseyrs: # -if LindseyRS
-
             # -Lindsey gives MC a passionate kiss-           
             scene v15s12_9    # FPP. Lindsey passionately kisses MC.
             with dissolve
@@ -599,7 +578,6 @@ label v15s12:
             u "Hey, I'm not complaining..."
 
     # -Regardless-
-
     scene v15s12_8b
     with dissolve
 
@@ -644,15 +622,11 @@ label v15s12_PhoneContinue:
     with dissolve
 
     u "(I'm a man on a mission. Find Lauren a gift and find a costume. Easy.)"
-
     
-    if rosers and v15s5_mc_angry_with_rose: # -if RoseRs and MC acted angry in v15.5
-
+    if msrosers and v15s5_mc_angry_with_rose: # -if RoseRs and MC acted angry in v15.5
         # -Transition to Scene 14-
         jump v15s14
 
     else: # -Otherwise-
-
         # -Transition to Scene 17-
         jump v15s17
-

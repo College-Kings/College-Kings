@@ -4,7 +4,7 @@
 # Time: Evening
 
 label v15s16:
-    if MadAtMsRose: #Placeholder for when scenes before are ready.
+    if v15s9_MadAtMsRose: #Placeholder for when scenes before are ready.
         scene v15s16_1 # TPP. Show MC walking out of Ms Rose's house, MC mad, mouth closed.
         with dissolve
 

@@ -737,7 +737,7 @@ default v14s03c_music = False
 # v15 PLanning board 
 
 # Choloe v15s8
-default v15s8_chole_pb_DamageLindseyRep = False  # checked in v15s12
+default v15s8_chloe_pb_DamageLindseyRep = False  # checked in v15s12
 
 
 # Lindsey v15s12
@@ -748,27 +748,28 @@ default v15s12_lindsey_pb_wouldYouRather = False    # True, Play Would You Rathe
 default v15_s12_lindsey_pb_inviteSebastian = False  # True, Invite Sebastian; False, Invite Grayson
 
 # Rest of 15 
-default AubreyFriend = False ##PLACEHOLDER??
-default Aubreyfwb = False ##PLACEHOLDER??
-default AubreyTamed = False ##PLACEHOLDER??
+default AubreyFriend = False 
+default Aubreyfwb = False 
+default AubreyTamed = False 
 default AutumnFreeMug = False
 default AutumnLunchBreak = False
 default dog_name = "Blue"
-default lindseyfriend = False ##PLACEHOLDER??
+default lindseyfriend = False 
 default v15s9_MadAtMsRose = False # checked in v15s12
+default v15s5_mc_angry_with_rose = False
 default SmokedWithAutumn = False
 default TraitAnimalLover = False
-default TraitBoomer = False ##PLACEHOLDER??
+default TraitBoomer = False 
 default TraitHardass = False
-default TraitPopculture = False ##PLACEHOLDER??
+default TraitPopculture = False 
 default TraitPrankster = False
-default v15_Blame_Chris = False ##PLACEHOLDER??
-default v15_Blame_Nora = False ##PLACEHOLDER??
+default v15_Blame_Chris = False 
+default v15_Blame_Nora = False 
 default v15_LessChickTuition = False
-default v15_Stuck_Up_For_Nora = False ##PLACEHOLDER??
+default v15_Stuck_Up_For_Nora = False 
 default v15s14_LetsGo = False
 default v15s7_chloe_empathize = False
 default v15_TookNotes = False
-default MrLeeMeeting = False ##PLACEHOLDER??
-default MsRoseMeeting = False ##PLACEHOLDER?? (redundancy check)
-default v15_MsRoseSex = False ##PLACEHOLDER??
+default MrLeeMeeting = False 
+default MsRoseMeeting = False #(redundancy check)
+default v15_MsRoseSex = False 
