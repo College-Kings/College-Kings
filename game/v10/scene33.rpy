@@ -3594,7 +3594,7 @@ label v10s33_riley2:
 
             u "Alright man, I'll leave you alone."
 
-            call screen v10s33_toilet
+        call screen v10s33_toilet
 
 label v10s33_emily1:
     $ v10s33_emily = True
