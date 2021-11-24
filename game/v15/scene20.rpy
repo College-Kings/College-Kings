@@ -3,17 +3,16 @@
 # Characters: CHLOE (Outfit: x), MC (Outfit: x)
 # Time: 
 
-
 label v15s20:
     scene v15s20_1 # TPP. Show MC walking into the Libray, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s20_2 # TPP. MC looking over at Chloe who is sitting down at a table in the library, both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s20_3 # FPP. MC standing over by the table, MC looking at Chloe, Chloe looking at MC, Chloe slight smile, mouth open.
     with dissolve
@@ -28,7 +27,7 @@ label v15s20:
     scene v15s20_4 # TPP. Show MC taking a seat next to Chloe, Both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s20_5 # FPP. MC sitting next to Chloe. Chloe looking at MC, MC looking at Chloe, Chloe slight smile, mouth closed.
     with dissolve
@@ -36,7 +35,6 @@ label v15s20:
     if chloegf:
         menu:
             "Ask for a kiss.":
-
                 u "I know you're super busy, but can your boyfriend get a kiss first? *Chuckles*"
 
                 scene v15s20_5a # FPP. Same as v15s20_5, Chloe slight smile, mouth open.
@@ -48,11 +46,9 @@ label v15s20:
                 with dissolve
 
             "Say nothing.":
-
                 u "(I was expecting a hello kiss, but I'll keep quiet about it... I don't want to throw her off her game.)"
 
     if MrLeeMeeting: # Placeholder if MC chose to meet with Mr. Lee.
-
         scene v15s20_5a
         with dissolve
 
@@ -118,7 +114,8 @@ label v15s20:
         with dissolve
 
         cl "Haha, shh! Come on, we need to focus."
-    if MsRoseMeeting: #Placeholder for if MC chose to meet with Ms Rose.
+
+    else: ###if MsRoseMeeting: #Placeholder for if MC chose to meet with Ms Rose.
         scene v15s20_5a
         with dissolve
 
@@ -246,7 +243,6 @@ label v15s20:
         menu:
             "Take the notes.":
                 $ v15_TookNotes = True
-
                 u "Yeah, we better take them. As long as we aren't staring at it the whole time, I think it's helpful to refer to."
 
                 scene v15s20_5a
@@ -258,8 +254,8 @@ label v15s20:
                 with dissolve
 
                 u "Got it."
-            "Don't take the notes.":
 
+            "Don't take the notes.":
                 u "Nah, I don't want to risk pissing anyone off. Besides, I remember it all anyway. You can put them away."
 
                 scene v15s20_5a
