@@ -5,7 +5,6 @@
 # Render Count: 
 
 label v15s17:
-
     scene v15s17_1 # TPP. MC enters the department store, slight smile, mouth closed
     with dissolve
 
@@ -26,8 +25,7 @@ label v15s17:
 
     u "Um, hi there."
 
-    if LaurenGF:
-
+    if laurenrs:
         scene v15s17_4
         with dissolve
 
@@ -44,7 +42,6 @@ label v15s17:
         u "(I don't know what he means by that, but...) Ha, sure."
 
     else:
-
         scene v15s17_4
         with dissolve
 
@@ -126,7 +123,6 @@ label v15s17:
     with dissolve
 
     menu:
-
         "Get Lauren $50 gift card":
             $ Lauren_Gift_1 = True
 
@@ -178,7 +174,6 @@ label v15s17:
             clerk "I'm sure she'll be very happy with it."
 
         "Other gift options":
-
             scene v15s17_4
             with dissolve
 
@@ -189,8 +184,7 @@ label v15s17:
 
             clerk "May I suggest jewelry?"
 
-            if LaurenGF and AutumnLunchBreak:
-
+            if laurenrs and AutumnLunchBreak:
                 scene v15s17_4f # FPP. same as v15s17_4d SC's mouth is closed
                 with dissolve
 
@@ -216,8 +210,7 @@ label v15s17:
 
                 u "Ha... Good one."
 
-            elif MadAtMsRose
-
+            elif MadAtMsRose:
                 scene v15s17_4
                 with dissolve
 
@@ -234,7 +227,6 @@ label v15s17:
                 u "Ms. Rose looked so proud of her new necklace and really seemed to enjoy showing it off to me... among other things..."
 
             if V15_MsRoseSex:
-
                 scene v15s17_15 # FPP. A Dreamlike Vision of MsRose fully nude in one of the sexual positions from Version 15 scene 15
                 with dissolve
 
@@ -281,7 +273,6 @@ label v15s17:
             clerk "Both beautiful items, and currently on sale for only $50."
 
             if LaurenFriend:
-
                 scene v15s17_8b # FPP. same as v15s17_8a SC's mouth is closed
                 with dissolve
 
@@ -292,8 +283,7 @@ label v15s17:
 
                 clerk "Jewelry is never too much, young man. If you buy this for her, she will be your friend forever!"
 
-            if LaurenGF:
-
+            if laurenrs:
                 scene v15s17_8b
                 with dissolve
 
@@ -313,16 +303,13 @@ label v15s17:
                 with dissolve
 
             menu:
-
                 "Emerald bracelet":
-
                     scene v15s17_8d # FPP. same as v15s17_8b MC is looking down at the jewlry case and points to the left towards the Emerald bracelet
                     with dissolve
 
                     u "I think this is the best one."
 
                 "Ruby choker necklace":
-
                     scene v15s17_8e # FPP. same as v15s17_8b MC is looking down at the jewlry case and points to the right towards the Ruby choker necklace
                     with dissolve
 
@@ -336,7 +323,6 @@ label v15s17:
             clerk "Now, are you sure about your gift? Ready to checkout?"
 
             if AutumnLunchBreak:
-
                 scene v15s17_8b
                 with dissolve
 
@@ -408,9 +394,7 @@ label v15s17:
                 u "(Autumn was pretty specific if I remember correctly.)"
 
                 menu:
-
                     "Brown horse, golden mane":
-
                         scene v15s17_10c # FPP. same as v15s17_10b MC is looking down at the horse case and points to the left towards the Brown horse, golden mane
                         with dissolve
 
@@ -422,7 +406,6 @@ label v15s17:
                         clerk "Excellent! The checkout is this way."
 
                     "White horse, black mane":
-
                         scene v15s17_10d # FPP. same as v15s17_10b MC is looking down at the horse case and points to the right towards the White horse, black mane
                         with dissolve
 
@@ -439,7 +422,6 @@ label v15s17:
                 pause 0.75
 
             else:
-
                 scene v15s17_8b
                 with dissolve
 
@@ -461,12 +443,10 @@ label v15s17:
             clerk "So, it's final decision time. What will it be?"
 
             if AutumnLunchBreak:
-
                 scene v15s17_11 # FPP. MC looks down at the counter and see's the gift card, both jewlry options, and both horse options
                 with dissolve
 
                 menu:
-
                     "Get Lauren $50 gift card":
                         $ Lauren_Gift_1 = True
 
@@ -498,12 +478,10 @@ label v15s17:
                         clerk "I'm sure she'll be very happy with it."
 
                     "Jewelry Gift":
-
                         scene v15s17_11b # FPP. same as v15s17_11 Close up shot of the Jewlry options
                         with dissolve
 
                         menu:
-
                             "Emerald bracelet":
                                 $ Lauren_Gift_2a = True
 
@@ -513,7 +491,7 @@ label v15s17:
                                 u "The emerald is too beautiful to turn away from."
 
                             "Ruby choker necklace":
-                                $ Lauren Gift_2b = True
+                                $ Lauren_Gift_2b = True
 
                                 scene v15s17_11e # FPP. same v15s17_11b MC holds up Ruby choker necklace
                                 with dissolve
@@ -526,12 +504,10 @@ label v15s17:
                         clerk "jewelry! She is going to love it, young man."
 
                     "Horse Gift":
-
                         scene v15s17_11c # FPP. same as v15s17_11 Close up shot of the horse options
                         with dissolve
 
                         menu:
-
                             "Brown horse, golden mane":
                                 $ Lauren_Gift_3a = True
 
@@ -569,12 +545,10 @@ label v15s17:
                         clerk "I'll go ahead and wrap it for you, no extra charge."
 
             else: 
-
                 scene v15s17_11a # FPP. same as v15s17_11 The horse options are NOT shown
                 with dissolve
 
                 menu:
-
                     "Get Lauren $50 gift card":
                         $ Lauren_Gift_1 = True
 
@@ -606,12 +580,10 @@ label v15s17:
                         clerk "I'm sure she'll be very happy with it."
 
                     "Jewelry Gift":
-
                         scene v15s17_11b
                         with dissolve
 
                         menu:
-
                             "Emerald bracelet":
                                 $ Lauren_Gift_2a = True
 
@@ -621,7 +593,7 @@ label v15s17:
                                 u "The emerald is too beautiful to turn away from."
 
                             "Ruby choker necklace":
-                                $ Lauren Gift_2b = True
+                                $ Lauren_Gift_2b = True
 
                                 scene v15s17_11e
                                 with dissolve
@@ -631,7 +603,7 @@ label v15s17:
                         scene v15s17_5c
                         with dissolve
 
-                        clerk "jewelry! She is going to love it, young man."
+                        clerk "Jewelry! She is going to love it, young man."
 
     scene v15s17_5f # FPP same as v15s17_5 SC has his back turned to the MC, He is wrapping the present
     with dissolve
