@@ -38,6 +38,8 @@ label v15s10:
     li "You'll be fine! I believe in you, [name]."
 
     if v14_pics_with_linds:
+        if v14s47_linds_hips:
+            $ v14s48_car_price += 50
         scene v15s10_5 # FPP. Show a creepyish guy approaching, the man dressed in a smart casual sense, the man slight smile, mouth closed
         with dissolve
 
@@ -197,6 +199,7 @@ label v15s10:
         male_buyer "Let me take a look at this piece of junk then."
 
         if v14s48_lie:
+            $ v14s48_car_price -= 200
             scene v15s10_11 # TPP. Show MC and the man walking towards the car, Lindsey walking off to the side still looking at her phone.
             with dissolve
 
@@ -801,6 +804,7 @@ label v15s10:
         u "(She seems like a really nice person; this should be easy.)"
 
         if v14s47_solo_bird:
+            $ v14s48_car_price += 50
             scene v15s10_femalebuyer_2a
             with dissolve
 
@@ -844,6 +848,7 @@ label v15s10:
         with dissolve
 
         if v14s48_lie:
+            $ v14s48_car_price -= 200
             u "As you can see, it's a modern, imported, classic sports car. All original and in excellent condition."
 
             u "Just run your hand across that bodywork... They don't make them like this anymore."
