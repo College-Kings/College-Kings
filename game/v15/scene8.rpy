@@ -75,7 +75,7 @@ label v15s8:
 
     u "I think that's the best way to go."
 
-    if v15_DamageLindseyRep:
+    if v15s8_chloe_pb_DamageLindseyRep:
         scene v15s8_3a
         with dissolve
 
