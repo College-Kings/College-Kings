@@ -206,7 +206,9 @@ label v15s12:
         # -event2 Not interested
         menu:
             "Tell me": # -if Tell me
-                # TODO - KCT and character points 
+                $ add_point(KCT.TROUBLEMAKER)# TODO - KCT and character points
+                $ chloe.points -= 1  
+                
                 scene v15s12_2d
                 with dissolve
                 
@@ -270,7 +272,9 @@ label v15s12:
                 li "No problem."
 
             "Not interested": # -if Not interested
-                # TODO: KCT and character points 
+                $ add_point(KCT.BOYFRIEND) # TODO: KCT and character points 
+                $ chloe.points += 1
+                
                 scene v15s12_2e
                 with dissolve
                 
@@ -317,7 +321,10 @@ label v15s12:
             # -event2 It's not that serious
             menu:                        
                 "It's pretty serious": # -if It's pretty serious (LindseyRS becomes LindseyFriend)
-                    # TODO KCT and character points 
+                    $ add_point(KCT.BOYFRINED) # TODO KCT and character points 
+                    $ chloe.points += 1
+                    $ lindsey.points -= 1
+
                     scene v15s12_2d
                     with dissolve
 
@@ -357,7 +364,10 @@ label v15s12:
                     u "(Sighs... Well, it needed to happen eventually, I guess.)"                
 
                 "It's not that serious":  # -if It's not that serious
-                    # TODO: KCT and Character points
+                    $ add_point(KCT.TROUBLEMAKER) # TODO: KCT and Character points
+                    $ lindsey.points += 1
+                    $ chloe.points -= 1
+
                     scene v15s12_2d
                     with dissolve
 
@@ -378,7 +388,7 @@ label v15s12:
                     scene v15s12_2e
                     with dissolve
 
-                    # -MC needs to be losing Loyal KCT here because he's lying through his teeth :)-
+                    $ add_point(KCT.TROUBLEMAKER) # -MC needs to be losing Loyal KCT here because he's lying through his teeth :)-
                     
                     li "So... Do you have other people on your mind?"                
 
