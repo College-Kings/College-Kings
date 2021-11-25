@@ -206,7 +206,7 @@ label v15s1:
 
         menu:
             "They were on a break":
-                $ TraitPopculture = True
+                $ QuirkPopculture = True
                 $ add_point(KCT.BRO)
 
                 u "They were on a break, bro..."
@@ -222,7 +222,7 @@ label v15s1:
                 u "Haha."
 
             "Who?":
-                $ TraitBoomer = True
+                $ QuirkBoomer = True
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Who?"
@@ -258,7 +258,7 @@ label v15s1:
 
         menu:
             "Of course I know":
-                $ TraitPopculture = True
+                $ QuirkPopculture = True
                 $ add_point(KCT.BRO)
 
                 u "*Laughs* Yeah, of course I know"
@@ -279,7 +279,7 @@ label v15s1:
                 imre "*Sighs*"
 
             "A monkey?":
-                $ TraitBoomer = True
+                $ QuirkBoomer = True
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "A monkey? What? *Laughs*"
@@ -411,13 +411,13 @@ label v15s1:
 
             imre "But there's always a chance, dude. Just like Ross and Rachel."
 
-            if TraitPopculture:
+            if QuirkPopculture:
                 scene v15s1_3o
                 with dissolve
 
                 u "*Chuckles*"
 
-            if TraitBoomer:
+            if QuirkBoomer:
                 scene v15s1_3o # FPP. same as v15s1_3m Imre has a smug looking expression mouth is still closed
                 with dissolve
 
