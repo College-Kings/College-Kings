@@ -286,9 +286,9 @@ label v11_cardealership:
 
     cl "Haha, [name], this is amazing."
 
-    if chloers: 
-       menu:
-           "Talk about \"us\"": 
+    if chloers:
+        menu:
+            "Talk about \"us\"": 
                 scene v11cd22a # FPP. looking at chloe, mouth closed
                 with dissolve
 
@@ -314,7 +314,7 @@ label v11_cardealership:
 
                 u "I'm glad you think so."
 
-           "Talk about cars":
+            "Talk about cars":
                 scene v11cd22a
                 with dissolve
              
@@ -514,7 +514,7 @@ label v11_cardealership:
                         u "I don't know what I'd do if one day you were just... gone. The truth is... I love you, Chloe, and I don't want to go another day without you being mine."
                         u "So with all that said, can we make it official? Will you be my girl?"
 
-                        if meetchloe and hcGirl == "chloe" and ending == "chloe":
+                        if chloegf or (meetchloe and hcGirl == "chloe" and ending == "chloe"): #chloegf in case of seeing this scene via pathbuilder
                             $ chloegf = True
                             scene v11cd33d # FPP, sanme as 33c, chloe looking excited, mouth opened
                             with dissolve

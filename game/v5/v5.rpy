@@ -780,6 +780,7 @@ label continuez:
                     "Sorry, not in public.":
                         $ laurenpublic = False
                         $ add_point(KCT.TROUBLEMAKER)
+                        
                         $ grant_achievement("on_the_low")
 
                         u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."
@@ -1317,7 +1318,6 @@ label trolleybb: # you do press the lever
 
     if trolleyb and la2:
         $ grant_achievement("peta_public_enemy")
-            
 
     u "Ahh fuck!"
 
@@ -2150,6 +2150,7 @@ label continueaf:
                 "Sorry, not in public.":
                     $ laurenpublic = False
                     $ add_point(KCT.TROUBLEMAKER)
+                    
                     $ grant_achievement("on_the_low")
 
                     u "Sorry, but can we just make sure we're alone before we do stuff like that. I just feel uncomfortable even just kissing in public."

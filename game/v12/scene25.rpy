@@ -190,7 +190,7 @@ label v12_jc_chloe:
     if volleyball and girl == "Chloe":
         scene v12juc3g
         with dissolve
-        ju "Chloe is the we got the volleyball at the shopping for, right?"
+        ju "Chloe is the we one got the volleyball at the shopping for, right?"
         
         scene v12juc3d
         with dissolve

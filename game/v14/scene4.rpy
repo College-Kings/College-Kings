@@ -4,6 +4,8 @@
 # Time: Night
 
 label v14s04:
+    play music "music/v14/Track Scene 4.mp3" fadein 2
+
     scene v14s04_1 # TPP. Show MC enteting the hotel lobby, neutral expression, mouth closed
     with dissolve
 
@@ -22,13 +24,22 @@ label v14s04:
     scene v14s04_4 # TPP. Show MC looking for Imre in the eating area of the hotel lobby, slightly annoyed, mouth closed
     with dissolve
 
-    u "(Fuck it, I'll talk to him later I guess.)"
+    menu:
+        "(I'll talk to him later)":
+            $ v14s4_tell_imre = True
+            $ add_point(KCT.BRO)
+            u "(Fuck it, I'll talk to him later I guess.)"
+
+        "(It's not that important)":
+            $ add_point(KCT.TROUBLEMAKER)
+            u "(Fuck it, I'll talk to him later I guess.)"
 
     scene v14s04_5 # TPP. Show MC walking through the hotel corridor, slightly annoyed, mouth closed
     with dissolve
 
     pause 0.75
 
+    stop music fadeout 3
     if v11_riley_roomate:
         jump v14s05a
 

@@ -8,19 +8,20 @@
 
 init python:
     def v14s47_kiwiiReply1():
-        v14s47_kiwiiPost1.newComment("Lindsey", "A new future for the Chicks, haha. :)")
+        v14s47_kiwiiPost1.newComment("Lindsey", "A new future for the Chicks, haha. :)", numberLikes=418)
 
     def v14s47_kiwiiReply2():
-        v14s47_kiwiiPost1.newComment("Lindsey", "Damn straight!")
+        v14s47_kiwiiPost1.newComment("Lindsey", "Damn straight!", numberLikes=314)
 
     def v14s47_kiwiiReply3():
-        v14s47_kiwiiPost2.newComment("Lindsey", "You're a dork.")
+        v14s47_kiwiiPost1.newComment("Lindsey", "You're a dork.", numberLikes=286)
     
     def v14s47_kiwiiReply4():
-        v14s47_kiwiiPost2.newComment("Lindsey", "Haha, I h8 you <3")
+        v14s47_kiwiiPost1.newComment("Lindsey", "Haha, I h8 you <3", numberLikes=266)
 
 label v14s47:
 
+    play music "music/v14/Track Scene 47_1.mp3" fadein 2
 # -Peace and Cheex can help with this scene: MC walks up to Lindsey and they have a convo by the car with a few images of the car. When MC is ready to take pictures we will go to a free roam shot of the car. Highlight the passenger side, driver side, hood, and trunk. MC chooses in any order where to take pics. Once they've taken the pic, revert back to the freeroam screen where their previous choice is now greyed out, and the other choices remain while ALSO having a "Finish" button in the bottom right. MC has to take one photo, but can choose whether to take all 4, or leave after each one. Revert back to the freeroam screen after each photo is taken, the player makes their choices, and when all 4 have been taken or if they click "finish", -if finish dialogue.
 
 # -MC approaches Lindsey who is standing next to a dirty (needs to be seen that it hasn't been washed b/c dialogue) old Volkswagen. They both smile when they see each other-
@@ -40,7 +41,7 @@ label v14s47:
     scene v14s47_2 # FPP. MC now standing in front of Lindsey, Lindsey looking at MC, mouth open, smiling
     with dissolve
 
-    li "There he is. *Chuckles*"
+    li "There he is."
 
     scene v14s47_3 # TPP. Show MC looking confused, but smiling, to his right, mouth open, Lindsey laughing
     with dissolve
@@ -51,7 +52,7 @@ label v14s47:
         scene v14s47_2
         with dissolve
 
-        li "A handsome man... Who's ready to take some photos, I hope? *Chuckles*"
+        li "A handsome man... Who's ready to take some photos, I hope?"
 
         play sound "sounds/kiss.mp3"
 
@@ -74,7 +75,7 @@ label v14s47:
             scene v14s47_6 # TPP. Show MC twirling Lindsey around, Lindsey smiling, mouth open, MC smiling, mouth closed
             with dissolve
 
-            li "*Chuckles* I said I'd get dressed up nice."
+            li "I said I'd get dressed up nice."
 
             scene v14s47_2a
             with dissolve
@@ -90,7 +91,7 @@ label v14s47:
             scene v14s47_6
             with dissolve
 
-            li "*Chuckles* Like what you see?"
+            li "Like what you see?"
 
             scene v14s47_2a
             with dissolve
@@ -115,7 +116,7 @@ label v14s47:
             scene v14s47_2a
             with dissolve
 
-            u "Oh, I will. *Chuckles* You look great."
+            u "Oh, I will. You look great."
 
         scene v14s47_2
         with dissolve
@@ -131,7 +132,7 @@ label v14s47:
         scene v14s47_2b
         with dissolve
 
-        li "My saviour. My hero. My-"
+        li "My savior. My hero. My-"
 
         scene v14s47_2c # FPP. Same as v14s47_2b, Lindsey mouth closed
         with dissolve
@@ -141,7 +142,7 @@ label v14s47:
         scene v14s47_2
         with dissolve
 
-        li "*Chuckles* Okay, no. I think that's enough praise for today..."
+        li "Okay, no. I think that's enough praise for today..."
 
         if v14_pics_with_linds:
             scene v14s47_2a
@@ -168,7 +169,7 @@ label v14s47:
             scene v14s47_2a
             with dissolve
 
-            u "*Chuckles* You look nice by the way. Going out tonight?"
+            u "You look nice by the way. Going out tonight?"
 
             scene v14s47_2
             with dissolve
@@ -198,12 +199,12 @@ label v14s47:
     scene v14s47_8 # FPP. MC and Lindsey standing next to each other, close to the car, bodies facing the car, but looking at each other, Lindsey smiling, mouth open
     with dissolve
 
-    li "Yep. *Chuckles* This was my high school graduation present from my grandpa."
+    li "Yep. This was my high school graduation present from my grandpa."
 
     scene v14s47_8a # FPP. Same as v14s47_8, Lindsey mouth closed
     with dissolve
 
-    u "Oh, really? *Chuckles* And you're selling it?"
+    u "Oh, really? And you're selling it?"
 
     scene v14s47_8b # FPP. Same as v14s47_8, Lindsey looking down, smiling, mouth open
     with dissolve
@@ -223,7 +224,7 @@ label v14s47:
     scene v14s47_8a
     with dissolve
 
-    u "Hm... Sounds like a nice Grandpa. *Chuckles*"
+    u "Hm... Sounds like a nice Grandpa."
 
     scene v14s47_8b
     with dissolve
@@ -238,7 +239,7 @@ label v14s47:
     scene v14s47_8c # FPP. Same as v14s47_8, Lindsey looking at the car, smiling, mouth open
     with dissolve
 
-    li "I haven't had time! *Chuckles* This thing has been sitting around collecting dust for-"
+    li "I haven't had time! This thing has been sitting around collecting dust for-"
 
     scene v14s47_8a
     with dissolve
@@ -253,10 +254,14 @@ label v14s47:
     scene v14s47_8a
     with dissolve
 
-    u "*Chuckles* Alright. You're the boss."
+    u "Alright, you're the boss."
 
     scene v14s47_10 # TPP. Show MC grabbing his phonem, getting ready to take pics, smiling, mouth closed
     with dissolve
+
+    stop music fadeout 3
+
+    play music "music/v14/Track Scene 47_2.mp3" fadein 2
 
     pause 0.75
 
@@ -269,7 +274,7 @@ label v14s47:
         scene v14s47_8
         with dissolve
 
-        li "Hell yeah! *Chuckles* I'm excited for this."
+        li "Hell yeah! I'm excited for this."
 
         scene v14s47_8a
         with dissolve
@@ -294,7 +299,7 @@ label v14s47:
         scene v14s47_8a
         with dissolve
 
-        u "Either that or... Desperate for four wheels and a piece of metal. *Chuckles*"
+        u "Either that or... Desperate for four wheels and a piece of metal."
 
         scene v14s47_8
         with dissolve
@@ -330,7 +335,7 @@ label v14s47:
         scene v14s47_8a
         with dissolve
 
-        u "Right... Some people can be so easily offended. *Chuckles*"
+        u "Right... Some people can be so easily offended."
 
         u "I kind of meant because of how gross it is, though. *Laughs*"
 
@@ -342,16 +347,15 @@ label v14s47:
         scene v14s47_11
         with dissolve
 
-        u "*Chuckles* Alright, let's start with..."
+        u "Alright, let's start with..."
     call screen v14s47_car
 
 label v14s47_hood:
     if v14_pics_with_linds:
         $ v14s47_linds_hood = True
-        $ v14s47_pics += 1
+        $ v14s47_car_pics.append("v14s47_hood_2.webp")
 
         scene v14s47_hood_1 # TPP. MC walking over to the position he'll take Lindsey's picture, Lindsey moving towards the side of the hood
-        with dissolve
 
         pause 0.75
 
@@ -389,10 +393,9 @@ label v14s47_hood:
     
     else:
         $ v14s47_solo_hood = True
-        $ v14s47_pics += 1
+        $ v14s47_car_pics.append("v14s47_hood_2b.webp")
 
         scene v14s47_hood_1
-        with dissolve
 
         pause 0.75
 
@@ -419,7 +422,7 @@ label v14s47_hood:
         scene v14s47_hood_5a
         with dissolve
 
-        u "Thank you. *Chuckles*"
+        u "Thank you."
 
         play sound "sounds/capture.mp3"
 
@@ -439,10 +442,9 @@ label v14s47_trunk:
     if v14_pics_with_linds:
 
         $ v14s47_linds_trunk = True
-        $ v14s47_pics += 1
+        $ v14s47_car_pics.append("v14s47_trunk_2b.webp")
 
         scene v14s47_trunk_1 # TPP. MC and Lindsey walking over to the trunk of the car, both smiling, mouths closed
-        with dissolve
 
         pause 0.75
 
@@ -459,7 +461,7 @@ label v14s47_trunk:
         scene v14s47_trunk_2
         with dissolve
 
-        li "*Chuckles* I can try."
+        li "I can try."
 
         scene v14s47_trunk_2b # FPP. Same as v14s47_trunk_2, Lindsey on the tip of her toes, to get her ass higher, Lindsey sexy smile, mouth closed
         with dissolve
@@ -480,17 +482,16 @@ label v14s47_trunk:
 
     else:
         $ v14s47_solo_trunk = True
-        $ v14s47_pics += 1
+        $ v14s47_car_pics.append("v14s47_trunk_2c.webp")
 
         scene v14s47_trunk_1
-        with dissolve
 
         pause 0.75
 
         scene v14s47_trunk_2c # FPP. Same as v14s47_trunk_2, but no Lindsey
         with dissolve
 
-        u "*Chuckles* It honestly kind of looks like a clown car from the circus."
+        u "It honestly kind of looks like a clown car from the circus."
 
         scene v14s47_trunk_3 # FPP. Lindsey standing next to MC, Lindsey looking at MC, smiling, mouth open
         with dissolve
@@ -510,7 +511,7 @@ label v14s47_trunk:
         scene v14s47_trunk_3c # FPP. Same as v14s47_trunk_3, Lindsey smirking, mouth closed
         with dissolve
 
-        u "Not if you're a clown. *Chuckles*"
+        u "Not if you're a clown."
 
         scene v14s47_trunk_3d # FPP. Same as v14s47_trunk_3c, Lindsey smirking, mouth open
         with dissolve
@@ -544,10 +545,9 @@ label v14s47_trunk:
 label v14s47_driver:
     if v14_pics_with_linds:
         $ v14s47_linds_driver = True
-        $ v14s47_pics += 1
+        $ v14s47_car_pics.append("v14s47_driver_2c.webp")
 
         scene v14s47_driver_1 # TPP. Show MC and Lindsey walking over to the driver side of the car, both smiling, mouths closed
-        with dissolve
 
         pause 0.75
 
@@ -573,7 +573,7 @@ label v14s47_driver:
         scene v14s47_driver_2c # FPP. Same as v14s47_driver_2, Lindsey posing by the door, sucking on the lollipop, making a sexy face at MC, mouth closed
         with dissolve
 
-        u "Holy shit, Linds... I wouldn't be able to turn down an offer like that either. *Chuckles*"
+        u "Holy shit, Linds... I wouldn't be able to turn down an offer like that either."
 
         scene v14s47_driver_2d # FPP. Same as v14s47_driver_2c, Lindsey mouth open
         with dissolve
@@ -605,14 +605,13 @@ label v14s47_driver:
         scene v14s47_driver_2c
         with dissolve
 
-        u "Beautiful. *Chuckles* What's next?"
+        u "Beautiful. What's next?"
     
     else:
         $ v14s47_solo_driver = True
-        $ v14s47_pics += 1
+        $ v14s47_car_pics.append("v14s47_driver_2e.webp")
 
         scene v14s47_driver_1
-        with dissolve
 
         pause 0.75
 
@@ -629,7 +628,7 @@ label v14s47_driver:
         scene v14s47_driver_4a # FPP. Same as v14s47_driver_4, Lindsey mouth open
         with dissolve
 
-        li "Ha, um... Pretty sure the action happens in the back seat. *Chuckles*"
+        li "Ha, um... Pretty sure the action happens in the back seat."
 
         scene v14s47_driver_4
         with dissolve
@@ -676,17 +675,18 @@ label v14s47_driver:
         scene v14s47_driver_4
         with dissolve
 
-        u "Beautiful. *Chuckles* What's next?"
+        u "Beautiful. What's next?"
     
     call screen v14s47_car
 
 label v14s47_passenger:
+    $ v14s47_passenger = True
     scene v14s47_passenger_1 # TPP. Show MC and Lindsey walking towards the passenger door
-    with dissolve
 
     pause 0.75
 
     if v14_pics_with_linds:
+        $ v14s47_linds_passenger = True
         scene v14s47_passenger_2 # FPP. Lindsey standing by the passenger door, MC looking at her (he's in a place where he can take her pic), Lindsey slightly confused, mouth open
         with dissolve
 
@@ -699,8 +699,9 @@ label v14s47_passenger:
 
         menu:
             "Hand on hips":
+                $ add_point(KCT.BOYFRIEND)
                 $ v14s47_linds_hips = True
-                $ v14s47_pics += 1
+                $ v14s47_car_pics.append("v14s47_passenger_2b.webp")
 
                 scene v14s47_passenger_2b # FPP. Same as v14s47_passenger_2, Lindsey mouth closed, smiling
                 with dissolve
@@ -710,7 +711,7 @@ label v14s47_passenger:
                 scene v14s47_passenger_2c # FPP. Same as v14s47_passenger_2b, Lindsey mouth open
                 with dissolve
 
-                li "Damn, okay Mr Photography..."
+                li "Damn, okay Mr. Photography..."
 
                 scene v14s47_passenger_2d # FPP. Same as v14s47_passenger_2b, Lindsey with one hand on her hip, another on the roof, smiling, mouth closed (a bit sexy, not too much)
                 with dissolve
@@ -729,29 +730,31 @@ label v14s47_passenger:
 
                 li "Alrighty... Anymore?"
 
-            "On her knees":
+            "Stand there and look pretty":
+                $ add_point(KCT.BRO)
+                $ add_point(KCT.TROUBLEMAKER)
                 $ v14s47_linds_knees = True
-                $ v14s47_pics += 1
+                $ v14s47_car_pics.append("v14s47_passenger_2e.webp")
 
                 scene v14s47_passenger_2b
                 with dissolve
 
-                u "Maybe get on your knees? Sit nice and pretty like a \"good girl\". *Laughs*"
+                u "Just... Stand there and look pretty or something. *Laughs*"
 
                 scene v14s47_passenger_2c
                 with dissolve
 
-                li "Oh fuck... *Chuckles* They're going to think the car comes with a sex slave, [name]."
+                li "Wow! Great idea, [name]. So creative..."
 
                 scene v14s47_passenger_2b
                 with dissolve
 
-                u "Hey. If that doesn't increase our total pay out, I'm not sure what will. *Laughs*"
+                u "Haha, sorry. You look great no matter what, so it doesn't technically matter."
 
                 scene v14s47_passenger_2c
                 with dissolve
 
-                li "Okay, I'm going down. This one should seal the deal... I hope."
+                li "Well, thank you, haha. I just hope the buyers think the same thing."
 
                 scene v14s47_passenger_2e # FPP. Same as v14s47_passenger_2b, Lindsey on her knees, hands on her thighs, posing sexily with a mischievous smile, mouth closed
                 with dissolve
@@ -777,6 +780,7 @@ label v14s47_passenger:
     
     else:
         scene v14s47_passenger_2f # FPP. Same as v14s47_passenger_2, Lindsey not in shot, there is a bird on the roof, looking at the camera
+        $ v14s47_solo_passenger = True
         with dissolve
 
         u "Oh- We have a photo-bombing bird!"
@@ -791,7 +795,7 @@ label v14s47_passenger:
         scene v14s47_passenger_4a # FPP. Same as v14s47_passenger_4, but Lindsey mouth open
         with dissolve
 
-        li "Hmm... Maybe the animal lovers will like it? *Chuckles*"
+        li "Hmm... Maybe the animal lovers will like it?"
 
         scene v14s47_passenger_4
         with dissolve
@@ -799,9 +803,9 @@ label v14s47_passenger:
         menu:
             "Scare bird away":
                 $ v14s47_solo_no_bird = True
-                $ v14s47_pics += 1
+                $ v14s47_car_pics.append("v14s47_passenger_2l.webp")
                 
-                u "Nah. Scare it away before it poops! *Chuckles*"
+                u "Nah. Scare it away before it poops!"
 
                 scene v14s47_passenger_2g # FPP. Same as v14s47_passenger_2f, Lindsey walking over to the brid, arms raised, mouth open, trying to scare it away (Lindsey was standing next to MC)
                 with dissolve
@@ -833,7 +837,7 @@ label v14s47_passenger:
 
                 pause
 
-                play sound "sounds/capture.mp3" 
+                play sound "sounds/capture.mp3"
 
                 scene v14s47_passenger_3
                 with flash
@@ -847,18 +851,17 @@ label v14s47_passenger:
 
             "Take photo with bird":
                 $ v14s47_solo_bird = True
-                $ v14s47_pics += 1
+                $ v14s47_car_pics.append("v14s47_passenger_2f.webp")
 
                 u "Yeah, Linds. A crazy bird lady might buy the car simply because he's sitting on it. *Chuckles*"
 
                 scene v14s47_passenger_4a
                 with dissolve
 
+                $ grant_achievement("say_chirp")
                 li "He is a cute little bird!"
 
-                play sound "sounds/capture.mp3" 
-
-                $ grant_achievement("say_chirp")
+                play sound "sounds/capture.mp3"
 
                 scene v14s47_passenger_3
                 with flash
@@ -870,11 +873,17 @@ label v14s47_passenger:
 
                 li "Alrighty... Any more?"
 
-label v14s47_end:
-    scene v14s47_end_1 # FPP. MC and Lindsey standing by the car, next to each other, Lindsey looking at MC, Lindsey smiling, mouth closed
-    with dissolve
+    call screen v14s47_car
 
-    if v14s47_pics < 4:
+label v14s47_end:
+
+    stop music fadeout 3
+
+    play music "music/v14/Track Scene 47_3.mp3" fadein 2
+
+    scene v14s47_end_1 # FPP. MC and Lindsey standing by the car, next to each other, Lindsey looking at MC, Lindsey smiling, mouth closed
+
+    if len(v14s47_car_pics) < 4:
         u "Okay, I think that's enough."
     
     else:
@@ -909,7 +918,7 @@ label v14s47_end:
         scene v14s47_end_1a
         with dissolve
 
-        li "Well, just... Don't say it out loud like that. *Chuckles*"
+        li "Well, just... Don't say it out loud like that."
 
         scene v14s47_end_1c
         with dissolve
@@ -955,7 +964,7 @@ label v14s47_end:
     scene v14s47_end_1c
     with dissolve
 
-    u "Are you reading my mind? *Chuckles*"
+    u "Are you reading my mind? "
 
     scene v14s47_end_1b
     with dissolve
@@ -992,26 +1001,19 @@ label v14s47_end:
 
     pause 0.75
 
-    if v14_pics_with_linds:
-        $ v14s47_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14s47_lindsey_kiwii.webp", "Making big moves ;)", numberLikes=720)
-        $ v14s47_kiwiiPost1.newComment("Nora", "Kick ass babe <3")
-        $ v14s47_kiwiiPost1.newComment("Aubrey", "Aww, look at your cute little button!")
-        $ v14s47_kiwiiPost1.newComment("Riley", "I have one too :) Hehe.")
-        $ v14s47_kiwiiPost1.newComment("Sebastian", "Looking all official now, Linds!")
-        $ v14s47_kiwiiPost1.addReply("Damn, she's cute... What is she selling? ;)", v14s47_kiwiiReply1)
-        $ v14s47_kiwiiPost1.addReply("#ThatsMyPresident", v14s47_kiwiiReply2)
-    
-    else:
-        $ v14s47_kiwiiPost2 = KiwiiPost("Lindsey", "v14/v14s47_nolindsey_kiwii.webp", "Feeling on top today :)", numberLikes=682)
-        $ v14s47_kiwiiPost2.newComment("Nora", "Kick ass babe <3")
-        $ v14s47_kiwiiPost2.newComment("Aubrey", "Aww, look at your cute little button!")
-        $ v14s47_kiwiiPost2.newComment("Riley", "I have one too :) Hehe.")
-        $ v14s47_kiwiiPost2.newComment("Sebastian", "Looking all official now, Linds!")
-        $ v14s47_kiwiiPost2.addReply("Liked, commenting, where do I subscribe",~v14s47_kiwiiReply3)
-        $ v14s47_kiwiiPost2.addReply("Oooh... ;)", v14s47_kiwiiReply4)
+    stop music fadeout 3
 
-    if False:
-        scene v14s47_lindsey_kiwii
-        scene v14s47_nolindsey_kiwii
+
+    $ v14s47_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14s47_lindsey_kiwii.webp", "Making big moves ;)", numberLikes=720)
+    $ v14s47_kiwiiPost1.newComment("Nora", "Kick ass babe <3", queue=False, numberLikes=259)
+    $ v14s47_kiwiiPost1.newComment("Aubrey", "Aww, look at your cute little button!", queue=False, numberLikes=623)
+    $ v14s47_kiwiiPost1.newComment("Riley", "I have one too :) Hehe.", queue=False, numberLikes=367)
+    $ v14s47_kiwiiPost1.newComment("Sebastian", "Looking all official now, Linds!", queue=False, numberLikes=108)
+    if v14_pics_with_linds:
+        $ v14s47_kiwiiPost1.addReply("Damn, she's cute... What is she selling? ;)", v14s47_kiwiiReply1, numberLikes=351)
+        $ v14s47_kiwiiPost1.addReply("#ThatsMyPresident", v14s47_kiwiiReply2, numberLikes=402)
+    else:
+        $ v14s47_kiwiiPost1.addReply("Liked, commenting, where do I subscribe", v14s47_kiwiiReply3, numberLikes=206)
+        $ v14s47_kiwiiPost1.addReply("Oooh... ;)", v14s47_kiwiiReply4, numberLikes=151)
 
     jump v14s48

@@ -1,4 +1,4 @@
-# SCENE 43a: Walk to Mr Lee's class with Penelope
+# SCENE 43a: Walk to Mr. Lee's class with Penelope
 # Locations: College, Mr. Lee Classroom
 # Characters: MC (Outfit: 1), PENELOPE (Outfit: 1)
 # Time: Morning
@@ -8,6 +8,8 @@ label v14s43a:
     with dissolve
 
     pause 0.75
+
+    play music "music/v14/Track Scene 43.mp3" fadein 2
 
     if penelopeloyal:
         scene v14s43a_2 # TPP. Show MC and Penelope walking together, holding hands, smiling, mouths closed, different location to v14s43a_1
@@ -56,7 +58,7 @@ label v14s43a:
     scene v14s43a_3a
     with dissolve
 
-    pe "[name]! *Chuckles*"
+    pe "[name]!"
 
     scene v14s43a_3
     with dissolve
@@ -81,14 +83,14 @@ label v14s43a:
     scene v14s43a_3
     with dissolve
 
-    u "Wouldn't I? *Chuckles*"
+    u "Wouldn't I?"
 
     scene v14s43a_3c # FPP. Same as v14s43a_3, Penelope rolling her eyes and laughing
     with dissolve
 
     pause 0.75
 
-    if emilyrs:
+    if v14_emily_ily:
         play sound "sounds/vibrate.mp3"
 
         scene v14s43_3 # TPP. Show MC walking through the school, close to where he was in v14s43_2, grabbing his phone, slightly confused, mouth closed
@@ -162,5 +164,7 @@ label v14s43a:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s43b

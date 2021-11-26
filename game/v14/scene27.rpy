@@ -9,6 +9,8 @@ label v14s27:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 27.mp3" fadein 2
+
     scene v14s27_1a # TPP. Same as v14s27_1, Getting closer as they walk towards each other, both slight smile, mouth closed.
     with dissolve
 
@@ -24,6 +26,9 @@ label v14s27:
         with dissolve
 
         u "What's up, Emily?"
+        
+        scene v14s27_2
+        with dissolve
 
     else:
         scene v14s27_2a
@@ -36,9 +41,6 @@ label v14s27:
 
         em "Ha, okay..."
     
-    scene v14s27_2
-    with dissolve
-
     em "It's actually good that I ran into you."
 
     scene v14s27_2a
@@ -64,19 +66,27 @@ label v14s27:
     scene v14s27_2a
     with dissolve
 
-    u "Is it that serious that you can't say it here?"
+    menu:
 
-    scene v14s27_2b # FPP. Same as v14s27_2, Emily slightly upset, mouth open.
-    with dissolve
+        "Of course":
+            $ add_point(KCT.BOYFRIEND)
+            u "Of course. Where do you wanna go?"
 
-    em "Oh my god, [name]. What the fuck?"
+        "Can't we speak here?":
+            $ add_point(KCT.TROUBLEMAKER)
+            u "Is it that serious that you can't say it here?"
 
-    em "Can you give me a single ounce of decency? All I asked was to speak to you in private, okay?"
+            scene v14s27_2b # FPP. Same as v14s27_2, Emily slightly upset, mouth open.
+            with dissolve
 
-    scene v14s27_2a
-    with dissolve
+            em "Oh my god, [name]. What the fuck?"
 
-    u "*Sighs* Okay, let's talk."
+            em "Can you give me a single ounce of decency? All I asked was to speak to you in private, okay?"
+
+            scene v14s27_2a
+            with dissolve
+
+            u "*Sighs* Okay, let's talk."
 
     scene v14s27_2
     with dissolve
@@ -92,5 +102,7 @@ label v14s27:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s28

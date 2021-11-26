@@ -4,6 +4,7 @@
 # Time: Afternoon
 
 label v14s46: # -MC is walking along the sidewalk when he gets a call from Lauren-
+    play music "music/v14/Track Scene 46.mp3" fadein 2
     scene v14s46_1 # TPP. MC, neutral expression, mouth closed, walking from the left to the right (facing right) on the side walk.
     with dissolve
 
@@ -14,7 +15,7 @@ label v14s46: # -MC is walking along the sidewalk when he gets a call from Laure
     scene v14s46_2 # FPP. MC, looking at his phone. (if Possible, have picture of Lauren show on the screen).
     with dissolve
 
-    u "(I'm famous today. *Chuckles*)"
+    u "(I'm famous today...)"
    
     play sound "sounds/answercall.mp3"
 
@@ -36,7 +37,7 @@ label v14s46: # -MC is walking along the sidewalk when he gets a call from Laure
     scene v14s46_4a # TPP. Same as v14s46_4, but Lauren with a different expression but still facing/looking slightly left.
     with dissolve
 
-    la "I learned the theory of hypnosis, and now I want to try and hypnotize someone... aka you. *Chuckles*"
+    la "I learned the theory of hypnosis, and now I want to try and hypnotize someone... aka you."
 
     scene v14s46_3
     with dissolve
@@ -71,6 +72,7 @@ label v14s46: # -MC is walking along the sidewalk when he gets a call from Laure
 
         pause 0.75
 
+        stop music fadeout 3
         jump v14s46a
 
     else: # -If helping Lindsey
@@ -106,7 +108,9 @@ label v14s46: # -MC is walking along the sidewalk when he gets a call from Laure
 
         pause 0.75
 
-        if not v14s22_steal_fund: # Sell Car Scene 47 
+        stop music fadeout 3
+
+        if v14_lindsey_sell: # Sell Car Scene 47 
             jump v14s47
 
         else: # Steal fund/distract Chloe Scene 49

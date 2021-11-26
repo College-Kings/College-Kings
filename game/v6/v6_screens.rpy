@@ -1,5 +1,5 @@
 screen v6_fr3garden():
-    tag tag_freeRoam
+    tag free_roam
     
     if not kimpuke:
         add "images/fr3garden.webp" # location picture
@@ -30,7 +30,7 @@ screen v6_fr3garden():
 
 
 screen v6_fr3downstairs():
-    tag tag_freeRoam
+    tag free_roam
 
     add "images/fr3downstairs.webp" # location picture
 
@@ -60,7 +60,7 @@ screen v6_fr3downstairs():
 
 
 screen v6_fr3livingroom():
-    tag tag_freeRoam
+    tag free_roam
 
     add "images/fr3livingroom.webp" # location picture
 
@@ -106,7 +106,7 @@ screen v6_fr3livingroom():
 
 
 screen v6_fr3kitchen():
-    tag tag_freeRoam
+    tag free_roam
 
     add "images/fr3kitchen.webp" # location picture
 
@@ -156,7 +156,7 @@ screen v6_fr3kitchen():
 
 
 screen v6_fr3kitchen2():
-    tag tag_freeRoam
+    tag free_roam
 
     add "images/fr3kitchen2.webp" # location picture
 
@@ -182,7 +182,7 @@ screen v6_fr3kitchen2():
 
 
 screen v6_fr3middleroom():
-    tag tag_freeRoam
+    tag free_roam
 
     add "images/fr3middleroom.webp" # location picture
 
@@ -207,7 +207,7 @@ screen v6_fr3middleroom():
 
 
 screen v6_fr3garage():
-    tag tag_freeRoam
+    tag free_roam
 
     if not kimpuke:
         add "images/fr3garage.webp" # location picture
@@ -248,7 +248,7 @@ screen v6_fr3garage():
 
 
 screen v6_fr3upstairs():
-    tag tag_freeRoam
+    tag free_roam
 
     add "images/fr3upstairs.webp" # location picture
 
@@ -283,7 +283,7 @@ screen v6_fr3upstairs():
 
 
 screen v6_fr3office():
-    tag tag_freeRoam
+    tag free_roam
 
     add "images/fr3office.webp" # location picture
 
@@ -320,7 +320,7 @@ screen v6_fr3office():
 
 
 screen v6_fr3roofroom():
-    tag tag_freeRoam
+    tag free_roam
 
     add "images/fr3roofroom.webp" # location picture
 

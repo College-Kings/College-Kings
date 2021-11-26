@@ -9,6 +9,8 @@ label v14s44:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 44.mp3" fadein 2
+
     scene v14s44_1a # TPP. Same as v14s44_1, Show MC squinting looking off at the distance, slight smile, mouth closed.
     with dissolve
 
@@ -96,6 +98,11 @@ label v14s44:
 
     menu:
         "Chloe":
+            if chloegf:
+                $ add_point(KCT.BOYFRIEND)
+            elif lindseyrs:
+                $ add_point(KCT.TROUBLEMAKER)
+            
             scene v14s44_4
             with dissolve
 
@@ -113,6 +120,10 @@ label v14s44:
             u "Ha. Yeah."
 
         "Lindsey":
+            if lindseyrs:
+                $ add_point(KCT.BOYFRIEND)
+            elif chloegf:
+                $ add_point(KCT.TROUBLEMAKER)
             scene v14s44_4
             with dissolve
 
@@ -205,6 +216,7 @@ label v14s44:
 
     menu:
         "Introduce yourself":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v14s44_10 # TPP. Show MC shaking Elijah's mom's hand, Elijah's mom slight smile, mouth closed, MC slight smile, mouth open.
             with dissolve
 
@@ -265,7 +277,7 @@ label v14s44:
             scene v14s44_9c
             with dissolve
 
-            elm "[name]. I'll remember that. *Chuckles*"
+            elm "[name]. I'll remember that."
 
             scene v14s44_9e # FPP. Same as v14s44_9c, Elijah's mom looking at MC, slight smile, mouth closed.
             with dissolve
@@ -304,7 +316,7 @@ label v14s44:
 
     play sound "sounds/doorclose.mp3"
 
-    u "(I did not expect Elijah's mom to be a complete fucking MILF?! God... Damn...)"
+    u "(I did not expect Elijah's mom to look like that. Damn...)"
 
     scene v14s44_6a # TPP. Same as v14s44_6a, Elijah's mom and Elijah in the car, the car backing out, both slight smile, mouth closed.
     with dissolve
@@ -365,10 +377,25 @@ label v14s44:
     scene v14s44_15
     with dissolve
 
-    u "She was pretty fucking hot. *Laughs*"
+    menu:
 
-    scene v14s44_15a
-    with dissolve
+        "She was pretty hot":
+            $ add_point(KCT.BRO)
+
+            u "She was pretty fucking hot. *Laughs*"
+
+            scene v14s44_15a
+            with dissolve
+
+        "Meh, not my type.":
+            $ add_point(KCT.TROUBLEMAKER)
+
+            u "Meh, she's not really my type."
+
+            scene v14s44_15a
+            with dissolve
+
+            imre "Are you kidding me???"
 
     imre "I'm gonna have to apologize to my mom..."
 
@@ -408,5 +435,7 @@ label v14s44:
     with dissolve
 
     u "(Forgot all about the Riley thing, I guess? Either that or he's avoiding the hell out of it, ha.)"
+
+    stop music fadeout 3
 
     jump v14s45

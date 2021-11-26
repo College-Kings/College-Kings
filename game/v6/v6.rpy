@@ -257,6 +257,7 @@ label imrecona: # Find Imre
     jump continuebb
 
 label imreconb: # Help Imre
+
     $ grant_achievement("bros_before_hoes")
 
     u "(I need to help Imre, Adam will destroy him in his current condition.)"
@@ -859,6 +860,7 @@ label imrecond: # Meet Chloe
 
         "Trust her":
             $ add_point(KCT.BOYFRIEND)
+            
             $ grant_achievement("credulous")
 
             u "(I shouldn't spy on her. It's not right.)"
@@ -4994,6 +4996,7 @@ label afteraubrey:
         "Stay home":
             $ meetgrayson = False
             $ add_point(KCT.BRO)
+            
             $ grant_achievement("seems_fishy")
 
             u "(Fuck Grayson, I'm not meeting him.)"
@@ -6237,12 +6240,12 @@ label wakeupa:
         scene s634e # penelope # turns around to type
         with dissolve
 
-        pe "Kim Possible."
+        pe "Pim Kossible."
 
         scene s635 # Penelope walking towards bowling ball holder
         with dissolve
 
-        u "Kim Possible? Like from the TV show?"
+        u "Pim Kossible? Like from the TV show?"
 
         scene s635a # Penelope looking at you hopeful, talking while picking up a bowling ball
         with dissolve
@@ -6262,7 +6265,7 @@ label wakeupa:
         scene s635b
         with dissolve
 
-        pe "You mean Rufus? He was so cute."
+        pe "You mean Furrus? He was so cute."
 
         pe "And surprisingly helpful in most of their missions."
 

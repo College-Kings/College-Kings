@@ -4,6 +4,8 @@
 # Time: Sunday
 
 label v14s03b:
+    play music "music/v14/Track Scene 3b.mp3" fadein 2
+
     scene v14s03b_1 # TPP Show MC, Imre, and Ryan coming in the brothel door, Imre pointing and looking toward the girls, mouth open
     with dissolve
 
@@ -27,7 +29,7 @@ label v14s03b:
     scene v14s03b_3a # FPP Same angle as 3, Imre farther away, almost to girls, ignoring MC and Ryan
     with dissolve
 
-    u "*Chuckles* Nevermind."
+    u "Nevermind."
 
     scene v14s03b_4 # FPP Show Ryan, looking at MC. Ryan has an awkward, embarrased expression, mouth open
     with dissolve
@@ -62,7 +64,8 @@ label v14s03b:
     scene v14s03b_5b # FPP Same angle as 5, Ryan is looking at MC, he looks confused and embarrased, mouth open
     with dissolve
 
-    ry "All I know is that I have a boner watching naked women walk around this room, but I have no idea what kind of place this is or what we're supposed to do here."
+    ry "All I know is that I have a boner watching naked women walk around this room."
+    ry "But I have no idea what kind of place this is or what we're supposed to do here."
 
     scene v14s03b_5a
     with dissolve
@@ -132,27 +135,39 @@ label v14s03b:
     scene v14s03b_5c
     with dissolve
 
-    u "*Laughs*"
+    menu:
 
-    scene v14s03b_5d # FPP Same angle as 5, Ryan looking at MC, looking angry, mouth open
-    with dissolve
+        "Take him seriously":
+            
+            $ add_point(KCT.BRO)
 
-    ry "*Whispers* Don't laugh!"
+            u "Oh shit."
 
-    scene v14s03b_5e # FPP Same as 5d, Ryan's mouth closed
-    with dissolve
+        "Take it as a joke":
 
-    u "Oh, you're being serious?"
+            $ add_point(KCT.TROUBLEMAKER)
 
-    scene v14s03b_5d
-    with dissolve
+            u "*Laughs*"
 
-    ry "Yeah, I am... dickhead."
+            scene v14s03b_5d # FPP Same angle as 5, Ryan looking at MC, looking angry, mouth open
+            with dissolve
 
-    scene v14s03b_5e
-    with dissolve
+            ry "*Whispers* Don't laugh!"
 
-    u "Oh damn..."
+            scene v14s03b_5e # FPP Same as 5d, Ryan's mouth closed
+            with dissolve
+
+            u "Oh, you're being serious?"
+
+            scene v14s03b_5d
+            with dissolve
+
+            ry "Yeah, I am... dickhead."
+
+            scene v14s03b_5e
+            with dissolve
+
+            u "Oh damn..."
 
     # -If blessed with Emily (extra dialog)
     # I HAVE NO IDEA WHAT VARIABLE THIS IS ASKING FOR
@@ -225,6 +240,7 @@ label v14s03b:
 
     menu:
         "Go for it":
+            $ add_point(KCT.TROUBLEMAKER)
             u "Well, no. Honestly, if it's just for practice then there's probably no better place than this. Just make sure that's really what you want to do."
 
             scene v14s03b_5b
@@ -235,9 +251,10 @@ label v14s03b:
             scene v14s03b_5c
             with dissolve
 
-            u "*Chuckles* Not at all. I think you should go for it."
+            u "Not at all. I think you should go for it."
 
         "Don't ruin your first time":
+            $ add_point(KCT.BRO)
             u "Well, honestly... I wouldn't want my first time to be in a brothel."
 
             scene v14s03b_5a
@@ -260,7 +277,7 @@ label v14s03b:
     scene v14s03b_8 # FPP Show Emerald, looking at MC and Ryan, smiling with mouth open
     with dissolve
 
-    emerald "Do you see any other handsome men around here? *Chuckles*"
+    emerald "Do you see any other handsome men around here?"
 
     scene v14s03b_8a # FPP Same as 8, Emerald's mouth closed
     with dissolve
@@ -302,4 +319,5 @@ label v14s03b:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s03c # -Transition to Scene 3c-

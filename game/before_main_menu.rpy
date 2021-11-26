@@ -8,39 +8,39 @@ label before_main_menu:
 
         # Create messenger contacts
         try: emily.messenger
-        except AttributeError: emily.create_contact("emilyprofilepic.webp", locked=False)
+        except AttributeError: emily.create_contact(locked=False)
         try: lauren.messenger
-        except AttributeError: lauren.create_contact("laurenprofilepic.webp")
+        except AttributeError: lauren.create_contact()
         try: julia.messenger
-        except AttributeError: julia.create_contact("juliaprofilepic.webp")
+        except AttributeError: julia.create_contact()
         try: ryan.messenger
-        except AttributeError: ryan.create_contact("ryanprofilepic.webp")
+        except AttributeError: ryan.create_contact()
         try: josh.messenger
-        except AttributeError: josh.create_contact("joshprofilepic.webp")
+        except AttributeError: josh.create_contact()
         try: aubrey.messenger
-        except AttributeError: aubrey.create_contact("aubreyprofilepic.webp")
+        except AttributeError: aubrey.create_contact()
         try: chloe.messenger
-        except AttributeError: chloe.create_contact("chloeprofilepic.webp")
+        except AttributeError: chloe.create_contact()
         try: amber.messenger
-        except AttributeError: amber.create_contact("amberprofilepic.webp")
+        except AttributeError: amber.create_contact()
         try: penelope.messenger
-        except AttributeError: penelope.create_contact("penelopeprofilepic.webp")
+        except AttributeError: penelope.create_contact()
         try: riley.messenger
-        except AttributeError: riley.create_contact("rileyprofilepic.webp")
+        except AttributeError: riley.create_contact()
         try: autumn.messenger
-        except AttributeError: autumn.create_contact("autumnprofilepic.webp")
+        except AttributeError: autumn.create_contact()
         try: imre.messenger
-        except AttributeError: imre.create_contact("imreprofilepic.webp")
+        except AttributeError: imre.create_contact()
         try: sebastian.messenger
-        except AttributeError: sebastian.create_contact("sebastianprofilepicture.webp")
+        except AttributeError: sebastian.create_contact()
         try: grayson.messenger
-        except AttributeError: grayson.create_contact("graysonprofilepicture.webp")
+        except AttributeError: grayson.create_contact()
         try: lindsey.messenger
-        except AttributeError: lindsey.create_contact("lindseyprofilepic.webp")
+        except AttributeError: lindsey.create_contact()
         try: jenny.messenger
-        except AttributeError: jenny.create_contact("jennyprofilepicture.webp")
+        except AttributeError: jenny.create_contact()
         try: nora.messenger
-        except AttributeError: nora.create_contact("noraprofilepicture.webp")
+        except AttributeError: nora.create_contact()
 
 
         # Create simplr contacts

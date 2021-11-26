@@ -948,6 +948,7 @@ label v4start:
             menu:
                 "Buy it":
                     $ volleyball = True
+                    
                     $ grant_achievement("rematch")
 
                     u "Yeah, you're right. Maybe I could give it to her when we talk about what Ryan said."

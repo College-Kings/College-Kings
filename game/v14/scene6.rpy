@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v14s06:
+    play music "music/v14/Track Scene 6.mp3" fadein 2
+
     scene black
     with fade
     
@@ -67,9 +69,6 @@ label v14s06:
         
         u "Oh shit, good idea!"
 
-    scene v14s06_7
-    with dissolve
-    
     u "Tell me, are we riding the bus or...?"
 
     scene v14s06_7a
@@ -77,47 +76,49 @@ label v14s06:
 
     imre "Yeah, we're riding the bus to the airport. Hurry up, bitch!"
 
-    scene v14s06_7b # FPP. Same as v14s06_7, Imre turning around to walk away
-    with dissolve
+    if v14s4_tell_imre:
 
-    u "Imre, wait!"
+        scene v14s06_7b # FPP. Same as v14s06_7, Imre turning around to walk away
+        with dissolve
 
-    scene v14s06_7a
-    with dissolve
+        u "Imre, wait!"
 
-    imre "Yeah?"
+        scene v14s06_7a
+        with dissolve
 
-    scene v14s06_7c # FPP. Same as v14s06_7, but Imre slightly annoyed
-    with dissolve
+        imre "Yeah?"
 
-    u "Look... I'm really sorry for last night. I know you were trying with Ryan and-"
+        scene v14s06_7c # FPP. Same as v14s06_7, but Imre slightly annoyed
+        with dissolve
 
-    scene v14s06_7d # FPP. Same as v14s06_7c, but Imre mouth open
-    with dissolve
+        u "Look... I'm really sorry for last night. I know you were trying with Ryan and-"
 
-    imre "[name], Ryan and I are done!"
+        scene v14s06_7d # FPP. Same as v14s06_7c, but Imre mouth open
+        with dissolve
 
-    imre "I'm trying to stay reserved, but in truth, I want to beat his ass. I'm just not sure if that'll give me the hint of justification I'm looking for."
+        imre "[name], Ryan and I are done!"
 
-    scene v14s06_7c
-    with dissolve
+        imre "I'm trying to stay reserved, but in truth, I want to beat his ass. I'm just not sure if that'll give me the hint of justification I'm looking for."
 
-    u "Are you gonna-"
+        scene v14s06_7c
+        with dissolve
 
-    scene v14s06_7d
-    with dissolve
+        u "Are you gonna-"
 
-    imre "He's gonna get what's coming to him, yeah."
+        scene v14s06_7d
+        with dissolve
 
-    scene v14s06_7b
-    with dissolve
+        imre "He's gonna get what's coming to him, yeah."
 
-    u "*Sighs*"
+        scene v14s06_7b
+        with dissolve
 
-    scene v14s06_8 # TPP. Show MC grabbing his bag, slightly worried, mouth closed
-    with dissolve
+        u "*Sighs*"
 
-    u "(Hopefully things are gonna start getting back to normal.)"
+        scene v14s06_8 # TPP. Show MC grabbing his bag, slightly worried, mouth closed
+        with dissolve
+
+        u "(Hopefully things are gonna start getting back to normal.)"
 
     scene v14s06_9 # TPP. Show MC leaving the room with his bag, slight smile, mouth closed
     with dissolve
@@ -143,7 +144,7 @@ label v14s06:
         scene v13s06_6
         with dissolve
         
-        u "*Chuckles* (This guy is on top of everything...)"
+        u "(This guy is on top of everything...)"
         
         scene v13s21_3
         with fade
@@ -155,4 +156,5 @@ label v14s06:
         
         u "Perfect. Thanks for everything, Luuk!"
 
+    stop music fadeout 3
     jump v14s07

@@ -4,6 +4,8 @@
 # Time: 
 
 label v14s03d:
+    play music "music/v14/Track Scene 3d_1.mp3" fadein 2
+
     scene v14s03d_1 # TPP View from behind Satin, show Satin pushing MC into a sitting position with a hand on his shoulder, Satin's mouth open if visible
     with dissolve
 
@@ -22,7 +24,7 @@ label v14s03d:
     scene v14s03d_2b # FPP Same angle as 2, Satin has one eyebrow raised, smiling with mouth open
     with dissolve
 
-    satin "Oh, and you aren't a virgin like your friend, right? *Chuckles*"
+    satin "Oh, and you aren't a virgin like your friend, right?"
 
     scene v14s03d_2c # FPP Same as 2b, Satin's mouth closed
     with dissolve
@@ -32,7 +34,7 @@ label v14s03d:
     scene v14s03d_2b
     with dissolve
 
-    satin "You said that with a puffed out chest. *Chuckles*"
+    satin "You said that with a puffed out chest."
 
     scene v14s03d_2c
     with dissolve
@@ -53,6 +55,9 @@ label v14s03d:
     with dissolve
 
     pause 0.75
+
+    if config_censored:
+        call screen censoredPopup("v14s03d_nsfwSkipLabel1")
 
     scene v14s03d_4 # FPP Show Satin removing her clothes
     with dissolve
@@ -98,32 +103,44 @@ label v14s03d:
 
     scene v14satdtFPP # Ignore as animation
     with dissolve
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 3d - bj_slow_4loops.mp3", loop=True)
 
     satin "*Gags* Mmmghh!"
 
+    stop sound
     scene v14satdtFPPf # Ignore as animation
     with dissolve
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 3d - bj_fast_4loops.mp3", loop=True)
 
     u "S-shit! You're a fucking professional! (She's deepthroating like a goddess.)"
 
     # From scene animations folder v14satdtTPP
-    image v14satdtTPP = Movie(play="images/v14/Scene 3d/v14satdtTPP.webm", loop=True, image="images/v14/Scene 3d/v14satdtFPP.webp", start_image="images/v14/Scene 3d/v14satdtFPP.webp")
-    image v14satdtTPPf = Movie(play="images/v14/Scene 3d/v14satdtTPPf.webm", loop=True, image="images/v14/Scene 3d/v14satdtFPP.webp", start_image="images/v14/Scene 3d/v14satdtFPP.webp")
+    image v14satdtTPP = Movie(play="images/v14/Scene 3d/v14satdtTPP.webm", loop=True, image="images/v14/Scene 3d/v14satdtTPP.webp", start_image="images/v14/Scene 3d/v14satdtTPP.webp")
+    image v14satdtTPPf = Movie(play="images/v14/Scene 3d/v14satdtTPPf.webm", loop=True, image="images/v14/Scene 3d/v14satdtTPP.webp", start_image="images/v14/Scene 3d/v14satdtTPP.webp")
 
+    stop sound
     scene v14satdtTPP # Ignore as animation
     with dissolve
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 3d - bj_slow_4loops.mp3", loop=True)
 
     u "*Moans* Satin... (If this is what being a \"nice guy\" gets you, then call me Mr. Nice Guy.)"
 
+    stop sound
     scene v14satdtTPPf # Ignore as animation
     with dissolve
+    if voice_acted:
+        $ renpy.sound.play("music/v14/va/Scene 3d - bj_fast_4loops.mp3", loop=True)
 
     pause
 
+    stop sound
     scene v14s03d_4c # FPP Same angle as 4, Satin doing a new sexy pose, her mouth open
     with dissolve
 
-    satin "So, you're liking what you see? *Chuckles*"
+    satin "So, you're liking what you see?"
 
     scene v14s03d_4a
     with dissolve
@@ -209,13 +226,18 @@ label v14s03d:
 
             scene v14satcgTPP1 # Ignore as animation
             with dissolve
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
 
             u "Oh f-fuck... You're soaking wet!"
 
             satin "*Moans* I guess having a nice guy for once is turning me on quite a bit."
 
+            stop sound
             scene v14satcgTPP1f # Ignore as animation
             with dissolve
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
 
             u "I... *Moans* Damn, Satin..."
 
@@ -225,17 +247,24 @@ label v14s03d:
             image v14satcgTPP2 = Movie(play="images/v14/Scene 3d/v14satcgTPP2.webm", loop=True, image="images/v14/Scene 3d/v14satcgTPP2.webp", start_image="images/v14/Scene 3d/v14satcgTPP2.webp")
             image v14satcgTPP2f = Movie(play="images/v14/Scene 3d/v14satcgTPP2f.webm", loop=True, image="images/v14/Scene 3d/v14satcgTPP2.webp", start_image="images/v14/Scene 3d/v14satcgTPP2.webp")
 
+            stop sound
             scene v14satcgTPP2 # Ignore as animation
             with dissolve
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
 
             satin "Ha! *Panting* You must be enjoying yourself."
 
-            scene v14satcgTPPf # Ignore as animation
+            stop sound
+            scene v14satcgTPP2f # Ignore as animation
             with dissolve
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
 
             u "That's an understatement, baby."
 
             # -Satin stands, turns around and performs reverse cowgirl while MC is seated-
+            stop sound
             scene v14s03d_12a # TPP Same angle as 12, Show Satin turning around to ride MC in reverse cowgirl
             with dissolve
 
@@ -247,11 +276,16 @@ label v14s03d:
 
             scene v14satrcgTPP1 # Ignore as animation
             with dissolve
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
 
             satin "*Moans* FUCK!"
 
+            stop sound
             scene v14satrcgTPP1f # Ignore as animation
             with dissolve
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
 
             u "Your body is so... goddamn perfect. Mmm!"
 
@@ -259,20 +293,27 @@ label v14s03d:
             image v14satrcgTPP2 = Movie(play="images/v14/Scene 3d/v14satrcgTPP2.webm", loop=True, image="images/v14/Scene 3d/v14satrcgTPP2.webp", start_image="images/v14/Scene 3d/v14satrcgTPP2.webp")
             image v14satrcgTPP2f = Movie(play="images/v14/Scene 3d/v14satrcgTPP2f.webm", loop=True, image="images/v14/Scene 3d/v14satrcgTPP2.webp", start_image="images/v14/Scene 3d/v14satrcgTPP2.webp")
 
+            stop sound
             scene v14satrcgTPP2 # Ignore as animation
             with dissolve
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_slow_4loops.mp3", loop=True)
 
             satin "*Moans* Thank you, but... please... stop talking."
 
-            u "(She wants me to just sit here? *Chuckles*)"
+            u "(She wants me to just sit here?)"
 
+            stop sound
             scene v14satrcgTPP2f # Ignore as animation
             with dissolve
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - cg_and_rcg_fast_8loops.mp3", loop=True)
 
             satin "*Whispers* Ahh, yes! Fuck me... Will!"
 
             u "(Will?!)"
 
+            stop sound
             scene v14s03d_13 # TPP Show satin standing in front of MC, holding his face in her hands and kissing him
             with dissolve
 
@@ -306,7 +347,7 @@ label v14s03d:
             scene v14s03d_15
             with dissolve
 
-            u "*Chuckles* Alright."
+            u "Alright."
 
             scene v14s03d_16 # FPP Close up on MC's dick entering Satin in a prone position
             with dissolve
@@ -330,11 +371,16 @@ label v14s03d:
 
             scene v14satbpTPP1 # Ignore as animation
             with dissolve
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - backplank_slow_2loops.mp3", loop=True)
 
             satin "*Moans* So... fucking... good!"
 
+            stop sound
             scene v14satbpTPP1f # Ignore as animation
             with dissolve
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - backplank_fast_4loops.mp3", loop=True)
 
             satin "*Whisper* Fuck me, Will! Oh, yes... F-fuck..."
 
@@ -344,18 +390,25 @@ label v14s03d:
             image v14satbpTPP2 = Movie(play="images/v14/Scene 3d/v14satbpTPP2.webm", loop=True, image="images/v14/Scene 3d/v14satbpTPP2.webp", start_image="images/v14/Scene 3d/v14satbpTPP2.webp")
             image v14satbpTPP2f = Movie(play="images/v14/Scene 3d/v14satbpTPP2f.webm", loop=True, image="images/v14/Scene 3d/v14satbpTPP2.webp", start_image="images/v14/Scene 3d/v14satbpTPP2.webp")
 
+            stop sound
             scene v14satbpTPP2 # Ignore as animation
             with dissolve
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - backplank_slow_2loops.mp3", loop=True)
 
             u "I'm... *Moans* I'm cumming... Fuckkk!"
 
             satin "Yes! Please... Cum in me!"
 
+            stop sound
             scene v14satbpTPP2f # Ignore as animation
             with dissolve
+            if voice_acted:
+                $ renpy.sound.play("music/v14/va/Scene 3d - backplank_fast_4loops.mp3", loop=True)
 
             u "Mmm... AH I-, YES SATIN, YES!"
 
+            stop sound
             scene v14s03d_16a # FPP Same angle as 16, MC cumming in Satin
             with dissolve
 
@@ -380,6 +433,9 @@ label v14s03d:
             with dissolve
 
             u "If I have to... *Laughs*"
+
+            stop music fadeout 3
+            play music "music/v14/Track Scene 3d_2.mp3" fadein 2
 
             scene v14s03d_17 # TPP MC and Satin standing up, Satin looking at MC, looking embarrased with her mouth open
             with dissolve
@@ -411,7 +467,7 @@ label v14s03d:
 
             satin "Oh my god... That's so embarrassing I-"
 
-            u "It's fine., Really. I get it."
+            u "It's fine, really. I get it."
 
             scene v14s03d_18e # FPP Same angle as 18, Satin looking at MC, she looks very sad, tears are filling up her eyes, mouth open
             with dissolve
@@ -433,6 +489,8 @@ label v14s03d:
 
             u "Uh, yeah. I'll go."
 
+            label v14s03d_nsfwSkipLabel1:
+
             scene v14s03d_10
             with dissolve
 
@@ -445,4 +503,5 @@ label v14s03d:
 
 $ renpy.end_replay()
 # -Regardless of choice scene continued
+stop music fadeout 3
 jump v14s03e # -Transition to Scene 3e

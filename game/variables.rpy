@@ -29,6 +29,10 @@ default previous_location = ""
 
     ## Path Builder
 default path_builder = False
+default pb_name_set = False
+
+# voiceacting
+default voice_acted = True
 
 # KCT
 default locked_kct = False
@@ -757,12 +761,14 @@ default dog_name = "Blue"
 default lindseyfriend = False 
 default v15s9_MadAtMsRose = False # checked in v15s12
 default v15s5_mc_angry_with_rose = False
+default MadAtMsRose = False
+default V15_MsRoseSex = False
 default SmokedWithAutumn = False
-default TraitAnimalLover = False
-default TraitBoomer = False 
-default TraitHardass = False
-default TraitPopculture = False 
-default TraitPrankster = False
+default QuirkAnimalLover = 0
+default QuirkBoomer = 0
+default QuirkHardass = 0
+default QuirkPopculture = 0
+default QuirkPrankster = 0
 default v15_Blame_Chris = False 
 default v15_Blame_Nora = False 
 default v15_LessChickTuition = False
@@ -773,3 +779,8 @@ default v15_TookNotes = False
 default MrLeeMeeting = False 
 default MsRoseMeeting = False #(redundancy check)
 default v15_MsRoseSex = False 
+default Lauren_Gift_1 = False
+default Lauren_Gift_2a = False
+default Lauren_Gift_2b = False
+default Lauren_Gift_3a = False
+default Lauren_Gift_3b = False

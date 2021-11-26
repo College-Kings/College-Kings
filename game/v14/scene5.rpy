@@ -4,6 +4,8 @@
 # Time: Evening 
 
 label v14s05:
+    play music "music/v14/Track Scene 5.mp3" fadein 2
+
     play sound "sounds/dooropen.mp3"
     pause 0.51
 
@@ -75,7 +77,7 @@ label v14s05:
     scene v14s05_3c # FPP. Chloe, neutral expression, mouth closed.
     with dissolve
 
-    u "*Chuckles* No, you're right..."
+    u "No, you're right..."
 
     scene v14s05_3 
     with dissolve
@@ -145,6 +147,8 @@ label v14s05:
 
         scene v14s05_6b # TPP. Same as v14s05_6a, but Chloe bending down, leaning in to give MC a kiss.
         with dissolve
+        
+        pause 0.75
 
         scene v14s05_7 # TPP. Close up (head shot), Chloe kissing MC while he is laying in bed.
         with dissolve
@@ -195,4 +199,5 @@ label v14s05:
     
     u "(And as quickly as it began, my day has concluded.)"
 
+    stop music fadeout 3
     jump v14s06

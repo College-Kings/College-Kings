@@ -4,10 +4,12 @@
 # Time: Evening
 
 label v14s13a:
+    play music "music/v14/Track Scene 13.mp3" fadein 2
+
     scene v14s13a_1 # TPP. Show MC walking into his room, carrying his luggage, smiling, mouth closed
     with fade
 
-    u "(Look at that beautiful bed... Oh, the things I'm gonna do to you.) *Chuckles*"
+    u "(Look at that beautiful bed... Oh, the things I'm gonna do to you.)"
 
     scene v14s13a_2 # TPP. Show MC inside his room, closing the door (door not fully closed yet), smiling, mouth closed
     with dissolve
@@ -77,12 +79,17 @@ label v14s13a:
     scene v14s13a_4b
     with dissolve
 
-    gr "That's on a need to know basis, and you do not need to know."
+    gr "All you need to know is that you should stay clean, be a good boy, and get into shape."
+    
+    scene v14s13a_4a
+    with dissolve
+    
+    u "Are we fighting soon?"
 
     scene v14s13a_4
     with dissolve
 
-    gr "Just be ready. Oh yeah, and welcome back. *Chuckles*"
+    gr "Just be ready. Oh yeah, and welcome back."
 
     scene v14s13a_5 # TPP. Show Grayson leaving, closing the door behind him, smiling, mouth closed
     with dissolve
@@ -109,4 +116,5 @@ label v14s13a:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s14a

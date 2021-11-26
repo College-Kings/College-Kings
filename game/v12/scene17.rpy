@@ -5,6 +5,7 @@
 # Phone Images: None
 
 label v12_escape_room:
+    $ v12_lindsey_sex = False #pathbuilder variable
     scene v12esr1 # FPP. MC, Charli, Imre, Lindsey and Aubrey in front of escape room building, MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open
     with dissolve
 

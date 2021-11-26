@@ -9,6 +9,8 @@ label v14s45a:
 
     u "Hey there. So, what's the news?"
 
+    play music "music/v14/Track Scene 45a_1.mp3" fadein 2
+
     if not v14_amber_clean:
         scene v14s45a_1a # FPP. Same as v14s45a_1, MC looking at Amber, Amber now looking at MC, Amber tired and high, Amber neutral expression, mouth open.
         with dissolve
@@ -26,7 +28,7 @@ label v14s45a:
         scene v14s45a_1a
         with dissolve
 
-        am "Just tired of it, honestly... It's not fun. *Chuckles*"
+        am "Just tired of it, honestly... It's not fun."
 
         am "I know it sounds kinda... Whatever, I think I'm gonna try to be a private dancer or something."
 
@@ -71,6 +73,7 @@ label v14s45a:
                 u "Ha, good. I'm glad I could help."
 
             "Why a stripper?":
+                $ add_point(KCT.BOYFRIEND)
                 scene v14s45a_1b
                 with dissolve
                 
@@ -137,7 +140,7 @@ label v14s45a:
         scene v14s45a_1c
         with dissolve
 
-        am "*Chuckles* I'm now the \"Assistant to the Manager\"."
+        am "I'm now the \"Assistant to the Manager\"."
 
         scene v14s45a_1d
         with dissolve
@@ -167,7 +170,7 @@ label v14s45a:
 
                 u "First, you just work at the rich kid shop, start wearing the rich kid clothes, and now you're moving up in the ranks?"
 
-                u "Should I call you Ma'am now, when I stop by? *Chuckles*"
+                u "Should I call you Ma'am now, when I stop by?"
 
                 scene v14s45a_1c
                 with dissolve
@@ -189,7 +192,7 @@ label v14s45a:
                 scene v14s45a_1d
                 with dissolve
 
-                u "Oh wow. I'm scared. *Chuckles*"
+                u "Oh wow. I'm scared."
 
             "Be supportive":
                 $ AmberLoyal = True
@@ -238,7 +241,7 @@ label v14s45a:
 
     am "I appreciate you, a lot."
 
-    am "You're like, a blanket. *Chuckles*"
+    am "You're like, a blanket."
 
     scene v14s45a_3b
     with dissolve
@@ -250,7 +253,7 @@ label v14s45a:
 
     am "I mean, like... You're nice, and warm, like a blanket that wraps me up tight and makes me feel safe."
 
-    scene v14s45a_3b
+    scene v14s45a_3
     with dissolve
 
     u "(Holy shit, that's the cutest thing I've ever heard.)"
@@ -356,7 +359,7 @@ label v14s45a:
     scene v14s45a_1c
     with dissolve
 
-    u "*Chuckles* Mmm, not bad."
+    u "Mmm, not bad."
 
     scene v14s45a_1d
     with dissolve
@@ -385,10 +388,13 @@ label v14s45a:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v14/Track Scene 45a_2.mp3" fadein 2
+
     scene v14s45a_6 # FPP. MC looking out at the park
     with dissolve
 
-    if v14_money_theft_concert_distraction: # Placeholder for choosing the concert to distract Chloe
+    if v14_concert_distraction: #choosing the concert to distract Chloe
         play sound "sounds/vibrate.mp3"
 
         u "(Let's check it out.)"
@@ -419,7 +425,7 @@ label v14s45a:
         scene v14s45a_9 # TPP. MC walking down the sidewalk near the park, slight smile, mouth closed
         with fade
 
-    elif v14_money_theft_date_ditch: # Placeholder for choosing to ditch the date you set up with Chloe to steal money
+    elif v14_date_distraction: #choosing to ditch the date you set up with Chloe to steal money
         play sound "sounds/call.mp3"
 
         pause 0.75
@@ -481,7 +487,7 @@ label v14s45a:
         scene v14s45a_9
         with dissolve
     
-    elif v14_lindsey_car_sale: #Placeholder for helping Lindsey sell her car.
+    elif v14_lindsey_sell: #helping Lindsey sell her car.
         play sound "sounds/call.mp3"
 
         pause 0.75
@@ -519,7 +525,7 @@ label v14s45a:
         scene v14s45a_10
         with dissolve
 
-        li "Oh damn, sorry. *Chuckles*"
+        li "Oh damn, sorry."
 
         if lindseyrs:
             scene v14s45a_10a
@@ -535,7 +541,7 @@ label v14s45a:
             scene v14s45a_10a
             with dissolve
 
-            u "Yeah, yeah... *Chuckles*"
+            u "Yeah, yeah..."
 
         else:
             scene v14s45a_10a
@@ -575,7 +581,7 @@ label v14s45a:
 
         pause 0.75
 
-    else:
+    else: #not helping Lindsey
         pause 0.75
     
         scene v14s45a_8
@@ -587,5 +593,7 @@ label v14s45a:
         with dissolve
 
         pause 0.75
+
+    stop music fadeout 3
 
     jump v14s46

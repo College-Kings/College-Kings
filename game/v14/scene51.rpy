@@ -17,10 +17,22 @@ init python:
         chloe.messenger.newMessage(_("I'll give you 10 more minutes. If you're still not here by then, I'm going home."))
 
 label v14s51:
+
+    play music "music/v14/Track Scene 51_1.mp3" fadein 2
     scene v14s51_1 # TPP. Show MC walking into Chloe's room and closing the door behind him, slight smile, mouth closed
     with dissolve
 
-    u "(I need to focus right now. Where would Chloe keep the money?)"
+    if v14s50_listen_to_aubrey_lindsey_2 or v14s50_listen_to_aubrey_lindsey_3:
+        
+        u "(Listening in for so long definitely cost me a lot of time. I won't be able to look through most of Chloe's stuff, so I really need to prioritize which locations I want to search.)"
+    elif v14s50_listen_to_aubrey_lindsey:
+
+        u "(Listening in may have cost me a bit of time, hopefully I'll still have enough to look through most Chloe's stuff, but I definitely won't be able to search everywhere.)"
+    
+    else:
+        u "(I think Lindsey will be able to hold Aubrey off a bit, so hopefully I'll have enough time to look everywhere.)"
+
+    u "(So... where would Chloe keep the money?)"
 
     scene v14s51_2 # FPP. MC standing in Chloes room, make sure the bedside table, desk drawer, closet, purse, and bed pillow are all in sight.
     with dissolve
@@ -35,24 +47,23 @@ label v14s51:
 # -Grey out areas that have been checked already, ad grey out all areas when MC has checked all allowed locations, giving them a button to continue-
 
 label v14s51_bedside_table:
+    $ v14s51_bedside = True
     $ v14s51_interaction += 1
     scene v14s51_bedside_1 # FPP. MC looking at her bedside table, on the table there is a lamp, lip balm, hand lotion, and a pink vibrator.
-    with dissolve
 
     u "(No money here. But there is a vibrator.)"
 
-    u "(Pretty basic bedside table for a woman... Wonder how often she uses that thing. *Chuckles* Let's search somewhere else.)"
+    u "(Pretty basic bedside table for a woman... Wonder how often she uses that thing... Let's search somewhere else.)"
 
-    if v14_money_theft_date_ditch and v14s51_interaction == 1:
+    if v14_date_distraction and v14s51_interaction == 1:
         jump v14s51_text
 
     else:
         call screen v14s51_room
 
 label v14s51_text:
-    if v14_money_theft_date_ditch and v14s51_interaction == 1: # Placeholder variable for using the date as distraction
+    if v14_date_distraction and v14s51_interaction == 1:
         scene v14s51_2
-        with dissolve
 
         play sound "sounds/vibrate.mp3"
 
@@ -85,9 +96,9 @@ label v14s51_text:
         call screen v14s51_room
 
 label v14s51_desk_drawer:
+    $ v14s51_desk = True
     $ v14s51_interaction += 1
     scene v14s51_deskdrawer_1 # FPP. MC looking at Chloe's Desk
-    with dissolve
 
     u "(Let's see what's hiding in this drawer.)"
 
@@ -109,24 +120,24 @@ label v14s51_desk_drawer:
     scene v14s51_deskdrawer_2c # FPP. Same as v14s51_deskdrawer_2b, Show MC holding the family photo with Chloe, her mom, her dad, and the pet pig.
     with dissolve
 
-    u "(This must be Chloe's parents. And she has a pig as a pet? I'm learning a lot about her today. *Chuckles*)"
+    u "(This must be Chloe's parents. And she has a pig as a pet? I'm learning a lot about her today...)"
 
     scene v14s51_deskdrawer_2d # FPP. Same as v14s51_deskdrawer_2c, MC with the photo flipped over, on the back it says Mom, Dad, Chloe and Porkchop with a heart.
     with dissolve
 
     u "(No money here though, so that's more time wasted. *Sighs*)"
 
-    if v14_money_theft_date_ditch and v14s51_interaction == 1:
+    if v14_date_distraction and v14s51_interaction == 1:
         jump v14s51_text
 
     else:
         call screen v14s51_room
 
 label v14s51_closet:
+    $ v14s51_closet = True
     $ v14s51_interaction += 1
 
     scene v14s51_closet_1 # FPP. MC looking in the open closet, a shoe box in sight on the top shelf.
-    with dissolve
 
     u "(A mystery box? Perfect.)"
 
@@ -143,37 +154,61 @@ label v14s51_closet:
     scene v14s51_closet_3a # FPP. Same as v14s51_closet_3, MC holding the opened box with a pair of shoes in them, in between the shoes a stack of cash.
     with dissolve
 
-    u "(Jackpot! That's $900, baby! *Laughs*)"
+    if v14_realwolf:
+        u "(Jackpot! That's $500, baby! *Laughs*)"
+    else:
+        u "(Jackpot! That's $900, baby! *Laughs*)"
 
     u "(I'm here for the money and all, but now that it's in my hands...)"
 
     u "(Can I really do this to her?)"
 
-    menu :
-        "Take the $900":
-            $ v14s51_take_money = True
-            $ v14s51_take_900 = True
-            scene v14s51_closet_3b # FPP. Same as v14s51_closet_3a, MC holding the money, the box not in sight
-            with fade
+    if v14_realwolf:
+        menu:
+            "Take the $500":
+                $ v14s51_take_money = True
+                $ v14s51_take_cash_large = True
+                $ lindsey_board.money += 500
+                $ chloe_board.money -= 500
+                scene v14s51_closet_3b # FPP. Same as v14s51_closet_3a, MC holding the money, the box not in sight
+                with fade
 
-            u "(I've come this far already. I'm here to help Lindsey, and that's what I'm going to do.)"
+                u "(I've come this far already. I'm here to help Lindsey, and that's what I'm going to do.)"
 
-        "Don't take the money":
-            scene v14s51_closet_3c # FPP. Same as v14s51_closet_3b, MC putting the lid back on the shoe box.
-            with dissolve
+            "Don't take the money":
+                scene v14s51_closet_3c # FPP. Same as v14s51_closet_3b, MC putting the lid back on the shoe box.
+                with dissolve
 
-            u "(I guess I'm having second thoughts about this... I can't take nearly a thousand dollars from Chloe's private closet. What the fuck was I thinking?)"
+                u "(I guess I'm having second thoughts about this... I can't take nearly a thousand dollars from Chloe's private closet. What the fuck was I thinking?)"
 
-    if v14_money_theft_date_ditch and v14s51_interaction == 1:
+    else:
+        menu:
+            "Take the $900":
+                $ v14s51_take_money = True
+                $ v14s51_take_cash_large = True
+                $ lindsey_board.money += 900
+                $ chloe_board.money -= 900
+                scene v14s51_closet_3b # FPP. Same as v14s51_closet_3a, MC holding the money, the box not in sight
+                with fade
+
+                u "(I've come this far already. I'm here to help Lindsey, and that's what I'm going to do.)"
+
+            "Don't take the money":
+                scene v14s51_closet_3c # FPP. Same as v14s51_closet_3b, MC putting the lid back on the shoe box.
+                with dissolve
+
+                u "(I guess I'm having second thoughts about this... I can't take nearly a thousand dollars from Chloe's private closet. What the fuck was I thinking?)"
+
+    if v14_date_distraction and v14s51_interaction == 1:
         jump v14s51_text
 
     else:
         call screen v14s51_room
 
 label v14s51_purse:
+    $ v14s51_purse = True
     $ v14s51_interaction += 1
     scene v14s51_purse_1 # FPP. MC standing near the purse and looking at the purse.
-    with dissolve
 
     u "(Surely this is too obvious...)"
 
@@ -205,35 +240,40 @@ label v14s51_purse:
     scene v14s51_purse_2c # FPP. Same as v14s51_purse_2b, MC holding a stack of cash that he pulled out of Chloe's purse
     with dissolve
     
-    u "(Oh shit! Cash in a purse? Who would have thought? *Chuckles*)"
+    u "(Oh shit! Cash in a purse? Who would have thought?)"
 
     u "($300 is a lot of money... Lindsey really needs it, but ultimately this is my choice.)"
 
     menu:
         "Take the $300":
+            $ add_point(KCT.TROUBLEMAKER)
             $ v14s51_take_money = True
-            $ v14s51_take_300 = True
+            $ v14s51_take_cash_small = True
+            $ lindsey_board.money += 300
+            $ chloe_board.money -= 300
+
             scene v14s51_purse_2d # FPP. Same as v14s51_purse_2c, MC holding just the money and not the purse
             with dissolve
 
             u "(If I don't take this money, I could be the reason Lindsey loses this race. I don't want it to be my fault.)"
 
         "Don't take the money":
+            $ add_point(KCT.BOYFRIEND)
             scene v14s51_purse_2
             with dissolve
 
             u "(I guess my conscience has caught up with me. It doesn't feel right to take it.)"
 
-    if v14_money_theft_date_ditch and v14s51_interaction == 1:
+    if v14_date_distraction and v14s51_interaction == 1:
         jump v14s51_text
 
     else:
         call screen v14s51_room
 
 label v14s51_pillow:
+    $ v14s51_pillow = True
     $ v14s51_interaction += 1
     scene v14s51_pillow_1 # FPP. MC standing at the side of her bed looking at her pillow, Next to the pillow sits the teddy bear from the hotel scene in Amsterdam.
-    with dissolve
 
     pause 
 
@@ -270,6 +310,7 @@ label v14s51_pillow:
 
     menu:
         "Take Chloe's diary":
+            $ add_point(KCT.TROUBLEMAKER)
             $ v14s51_take_diary = True
             scene v14s51_pillow_1a
             with dissolve 
@@ -277,12 +318,13 @@ label v14s51_pillow:
             u "(I think Lindsey will appreciate this little bonus item. Plus, I'm curious to see what we'll learn.)"
 
         "Don't take the diary":
+            $ add_point(KCT.BOYFRIEND)
             scene v14s51_pillow_3b # FPP. Same as v14s51_pillow_3a, MC putting the Diary back where it was
             with dissolve
 
             u "(There's going to be some extremely private things in here... It's best if I leave it.)"
     
-    if v14_money_theft_date_ditch and v14s51_interaction == 1:
+    if v14_date_distraction and v14s51_interaction == 1:
         jump v14s51_text
 
     else:
@@ -298,8 +340,8 @@ label v14s51_pillow:
 # -if MC chose to go to Chloe's room and did not keep listening, and has searched all 4 areas
 
 label v14s51_continue:
+    play sound "sounds/doorclose.mp3"
     scene v14s51_4 # TPP. Show MC slightly worried, mouth closed
-    with dissolve
 
     u "(Huh? What was that?)"
 
@@ -310,7 +352,11 @@ label v14s51_continue:
 
     u "(Sounds like some of the girls just got home. I need to get out of here, NOW!)"
 
-    scene v14s51_6 # TPP. Show MC carefully closing the door behind him as he leaves Chloe's room into the hallway of the Chick's house, slight worried face, mouth closed.
+    stop music fadeout 3
+
+    play music "music/v14/Track Scene 51_2.mp3" fadein 2
+
+    scene v14s51_6 # TPP. Show MC carefully closing the door behind him as he leaves Chloe's room into the hallway of the Chicks' house, slight worried face, mouth closed.
     with dissolve
 
     pause 
@@ -337,7 +383,7 @@ label v14s51_continue:
 
     pause 
 
-    scene v14s51_10 # TPP. Show MC entering into the Chick's bathroom that has a window in it.
+    scene v14s51_10 # TPP. Show MC entering into the Chicks' bathroom that has a window in it.
     with dissolve
 
     pause
@@ -363,7 +409,7 @@ label v14s51_continue:
 
             u "(Why am I even in here? I need to get the fuck out.)"
 
-            unknown "If it's you, make sure you lock the door this time... *Chuckles*"
+            unknown "If it's you, make sure you lock the door this time..."
 
             u "(These Chicks are wildin'.)"
 
@@ -496,7 +542,7 @@ label v14s51_continue:
 
             u "(I need to get the fuck out this house ASAP! Let's try the window.)"
 
-            unknown "If it's you, make sure you lock the door this time... *Chuckles*"
+            unknown "If it's you, make sure you lock the door this time..."
 
             u "(Lock the door... What do these Chicks get up to in private?)"
 
@@ -509,6 +555,7 @@ label v14s51_continue:
             
             menu:
                 "Peek":
+                    $ add_point(KCT.TROUBLEMAKER)
                     scene v14s51_31 # FPP. MC peaking over the Shower door, the unknown girl bent over facing away from MC.
                     with dissolve
 
@@ -527,13 +574,14 @@ label v14s51_continue:
                     scene v14s51_44 # FPP. Show MC looking at the window in the bathroom.
                     with dissolve
 
-                    u "(What a nice little treat. *Chuckles* Now it's time to get the fuck out of here.)"
+                    u "(What a nice little treat... Now it's time to get the fuck out of here.)"
 
                 "Don't peek":
+                    $ add_point(KCT.BOYFRIEND)
                     scene v14s51_32
                     with dissolve
 
-                    u "(No time for peeking, [name]. Don't even think about it. FOCUS []].)"
+                    u "(No time for peeking, [name]. Don't even think about it. FOCUS!)"
 
             scene v14s51_33 # FPP. Show MC opening the Bathroom window.
             with dissolve
@@ -567,8 +615,12 @@ label v14s51_continue:
 
             u "Phew!"
 
-    scene v14s51_38 # TPP. Show MC standing at the back of this chicks house looking at his phone, slight smile, mouth closed.
+    scene v14s51_38 # TPP. Show MC standing at the back of this Chicks house looking at his phone, slight smile, mouth closed.
     with dissolve
+
+    stop music fadeout 3
+
+    play music "music/v14/Track Scene 51_3.mp3" fadein 2
 
     u "(And now, a quick text to Lindsey...)"
 
@@ -582,7 +634,7 @@ label v14s51_continue:
             "(I should reply to Lindsey.)"
             jump v14s51Lindsey_PhoneContinue
 
-    if v14_money_theft_date_ditch:
+    if v14_date_distraction:
         play sound "sounds/vibrate.mp3"
 
         u "(Uh oh... it's a message from Chloe...)"
@@ -834,7 +886,7 @@ label v14s51_continue:
             scene v14s51_40a
             with dissolve
 
-            li "*Whispers* True, he probably can. *Chuckles*"
+            li "*Whispers* True, he probably can."
 
         scene v14s51_40
         with dissolve
@@ -863,10 +915,14 @@ label v14s51_continue:
             scene v14s51_43a # FPP. Same as v14s51_43, Lindsey kissing MC on the cheek
             with dissolve
 
+        pause 0.75
+
         scene v14s51_42a # FPP. Same as v14s51_42, Lindsey slight smile, mouth closed.
         with dissolve
     
         pause 0.75
+
+    stop music fadeout 3
     
     if joinwolves:
         jump v14s52

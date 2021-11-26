@@ -9,6 +9,8 @@ label v14s45:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 45.mp3" fadein 2
+
     play sound "sounds/vibrate.mp3"
 
     scene v14s45_2 # TPP. MC walking on the sidewalk (different position to v14s45_1), grabbing his phone, slight smile, mouth closed
@@ -56,5 +58,7 @@ label v14s45:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s45a

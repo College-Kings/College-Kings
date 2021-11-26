@@ -28,6 +28,9 @@ init python:
 
 
     def grant_achievement(_achievement):
+        if path_builder:
+            return
+            
         try:
             renpy.show(_achievement, at_list=achievementAtList)
         except TypeError: pass

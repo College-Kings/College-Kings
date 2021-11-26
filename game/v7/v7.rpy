@@ -3467,29 +3467,29 @@ label afterbeach:
         u "(But after everything that happened I feel like I gotta at least try and get in, otherwise I'll miss out on too much.)"
 
     elif joinapes:
-            u "(Pledging starts soon, I told Grayson I'd join the Apes, but is that really the right call? I mean the Wolves party was sick...)"
+        u "(Pledging starts soon, I told Grayson I'd join the Apes, but is that really the right call? I mean the Wolves party was sick...)"
 
-            u "(But in the Apes, I can finally be someone. I can be a winner. Grayson may have done some questionable shit in the past, but he also said a lot of stuff that resonated with me...)"
+        u "(But in the Apes, I can finally be someone. I can be a winner. Grayson may have done some questionable shit in the past, but he also said a lot of stuff that resonated with me...)"
 
-            if imremad:
-                u "(On the other hand, Imre would hate me even more if I pledged the Apes...)"
-            else:
-                u "(On the other hand, Imre would hate me if I pledged the Apes...)"
+        if imremad:
+            u "(On the other hand, Imre would hate me even more if I pledged the Apes...)"
+        else:
+            u "(On the other hand, Imre would hate me if I pledged the Apes...)"
 
-            u "(When I came to San Vallejo I didn't even think frat life was for me, but after everything that happened I feel like I gotta at least try and get into one of these. Otherwise I'll miss out on too much.)"
+        u "(When I came to San Vallejo I didn't even think frat life was for me, but after everything that happened I feel like I gotta at least try and get into one of these. Otherwise I'll miss out on too much.)"
 
-            u "(Time to make a decision.)"
+        u "(Time to make a decision.)"
 
-            menu:
-                "Pledge to the Apes":
-                    $ grant_achievement("silverback")
-                    u "(Fuck it. I'm gonna be winner, no matter what it costs. Time to pledge to the Apes.)"
+        menu:
+            "Pledge to the Apes":
+                $ grant_achievement("silverback")
+                u "(Fuck it. I'm gonna be winner, no matter what it costs. Time to pledge to the Apes.)"
 
-                    jump pledgeapes
+                jump pledgeapes
 
-                "Pledge to the Wolves":
-                    $ grant_achievement("wolfpack")
-                    u "(Grayson might kill me when he finds out, but I can't join the Apes. I gotta pledge to the Wolves.)"
+            "Pledge to the Wolves":
+                $ grant_achievement("wolfpack")
+                u "(Grayson might kill me when he finds out, but I can't join the Apes. I gotta pledge to the Wolves.)"
 
     else:
         u "(Pledging starts soon, I told Grayson I wouldn't join the Apes, but is that really the right call? I mean he did say some things that really resonated with me...)"
@@ -9676,6 +9676,14 @@ label walking_through_hallways:
     pause 0.5
 
 ######## SCENE 38 BACK IN YOUR DORM FRIDAY EVENING
+    label v7_homecoming:
+
+    if path_builder and not pb_name_set:
+        $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
+        $ pb_name_set = True
+
+    show screen phoneIcon
+
     if joinwolves:
         stop music fadeout 2.0
 
@@ -11835,7 +11843,7 @@ label penelopehocodate:
     scene sfr4pe8d
     with dissolve
 
-    pe "No way, you were never cliff Jumping."
+    pe "No way, you were never cliff jumping."
 
     scene sfr4pe8e
     with dissolve

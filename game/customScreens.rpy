@@ -263,6 +263,9 @@ screen getaccess():
 
         imagebutton:
             idle "images/get.webp"
+            hover "images/get.webp"
+            action OpenURL("https://www.patreon.com/collegekings")
+            align (0.5, 0.65)
 
         textbutton "Credits":
             action Jump("credits")

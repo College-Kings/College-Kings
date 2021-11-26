@@ -4,6 +4,8 @@
 # Time: Afternoon
 
 label v14s21:
+    play music "music/v14/Track Scene 21.mp3" fadein 2
+
     scene v14s21_1 # TPP. Show MC walking outside infront of the school, slight smile, mouth closed.
     with dissolve
 
@@ -27,7 +29,7 @@ label v14s21:
     scene v14s21_2b # FPP. Same as v14s21_2a, Chloe reaches MC and is standing still infront of him, Chloe looking at MC, Chloe slight smile, mouth closed.
     with dissolve
 
-    u "*Chuckles* What's happening? Something wrong?"
+    u "What's happening? Something wrong?"
 
     scene v14s21_2c # FPP. Same as v14s21_2b, Chloe slight smile, mouth open.
     with dissolve
@@ -51,6 +53,8 @@ label v14s21:
     scene v14s21_2b
     with dissolve
     
+    pause 0.01 #close and open mouth due to many dialogue lines
+    
     scene v14s21_2c
     with dissolve
 
@@ -60,6 +64,8 @@ label v14s21:
 
     scene v14s21_2b
     with dissolve
+    
+    pause 0.01 #close and open mouth due to many dialogue lines
     
     scene v14s21_2c
     with dissolve
@@ -108,7 +114,7 @@ label v14s21:
     scene v14s21_2g # FPP. Same as v14s21_2f, Chloe slight smile, mouth closed.
     with dissolve
 
-    u "*Chuckles* I do now, I suppose. Although, I'm not completely agreeing with you on that one..."
+    u "I do now, I suppose. Although, I'm not completely agreeing with you on that one..."
 
     scene v14s21_2f
     with dissolve
@@ -132,22 +138,34 @@ label v14s21:
     scene v14s21_2g
     with dissolve
 
-    u "I'm a patient man when it comes to the things I care about, Chloe. I know your situation and I understand that this campaign is more important right now."
+    menu:
+
+        "That does kinda suck.":
+
+            $ add_point(KCT.TROUBLEMAKER)
+
+            u "That does kinda suck. I guess we'll have to make the most out of the time we have."
+
+        "Don't worry about it.":
+
+            $ add_point(KCT.BOYFRIEND)
+
+            u "I'm a patient man when it comes to the things I care about, Chloe. I know your situation and I understand that this campaign is more important right now."
+
+            scene v14s21_2f
+            with dissolve
+
+            cl "*Sighs* You really are the best."
+
+            scene v14s21_2g
+            with dissolve
+
+            u "Thank you, you are too."
 
     scene v14s21_2f
     with dissolve
 
-    cl "*Sighs* You really are the best."
-
-    scene v14s21_2g
-    with dissolve
-
-    u "*Chuckles* Thank you, you are too."
-
-    scene v14s21_2f
-    with dissolve
-
-    cl "Haha. You know, I have some time right now..."
+    cl "You know, I have some time right now..."
 
     scene v14s21_2g
     with dissolve
@@ -233,6 +251,7 @@ label v14s21:
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
             $ v14_chloe_sex = True
+            stop music fadeout 3
             jump v14s21a
         
         "Pull back":
@@ -318,6 +337,7 @@ label v14s21:
             scene v14s21_8g # FPP. Same as v14s21_8f, Chloe walking away from MC.
             with dissolve
 
-            u "(She's something else. *Chuckles*)"
+            u "(She's something else.)"
 
+            stop music fadeout 3
             jump v14s21b
