@@ -9,7 +9,7 @@ label v14s40a:
 
     pause 0.75
 
-    play music "music/v14/Track Scene 40a.mp3" fadein 2
+    play music "music/v14/Track Scene 26.mp3" fadein 2
 
     scene v14s40a_2 # TPP. Show MC standing in his room putting on pants 
     with dissolve
