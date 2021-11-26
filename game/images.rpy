@@ -139,7 +139,6 @@ image s14c = "images/s14c.webp"
 image s15 = "images/s15.webp"
 image s16 = "images/s16.webp"
 image carback = Movie(play="images/carback.webm")
-image collegepan = Movie(play="images/collegepan.webm")
 image intro = Movie(play="images/intro.webm", loop=False)
 image adam1 = Movie(play="images/adamau.webm")
 image sdafj = Movie(play="images/sdafj.webm", image="images/s1")

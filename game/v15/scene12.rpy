@@ -456,6 +456,7 @@ label v15s12:
 
         #### Planning Board work goes here 
         python:
+            lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/lindsey_background.webp", money=200, style="lindsey_board")
             v15_lindsey_board.add_approach("gameNight",
                 "Game Night",
                 opinion="\"Hosting a game night would be the perfect excuse to get a few of Chloe's allies alone. We'll get booze, snacks, and make sure they have a fun night while also making it known that I'm so much better than Chloe\"")
