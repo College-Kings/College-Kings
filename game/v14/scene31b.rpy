@@ -232,7 +232,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v14/Track Scene 31b_2.mp3" fadein 2
+    play music "music/v14/Track Scene 3e.mp3" fadein 2
 
     scene v14s31b_8 # FPP. MC at the kitchen entrace with Chloe sees Aubrey and Grayson sitting at the table with a couple beers each, mouthes open slightly angry with the other (There is a vaping machine on the table next to Grayson).
     with dissolve
