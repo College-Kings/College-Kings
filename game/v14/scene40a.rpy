@@ -4,10 +4,12 @@
 # Time: Morning
 
 label v14s40a:
-    scene v14s40a_1 # TPP. A awaking MC slowly sitting up in bed, slight smile, mouth closed.
+    scene v14s40a_1
     with dissolve
 
-    pause
+    pause 0.75
+
+    play music "music/v14/Track Scene 40a.mp3" fadein 2
 
     scene v14s40a_2 # TPP. Show MC standing in his room putting on pants 
     with dissolve
@@ -46,6 +48,7 @@ label v14s40a:
 
     menu:
         "I don't hate it":
+            $ add_point(KCT.BOYFRIEND)
             scene v14s40a_5a
             with dissolve
 
@@ -71,7 +74,11 @@ label v14s40a:
 
             u "A little."
 
+            scene v14s40a_5
+            with dissolve
+
         "Don't do it again":
+            $ add_point(KCT.BRO)
             scene v14s40a_5a
             with dissolve
 
@@ -80,21 +87,21 @@ label v14s40a:
             scene v14s40a_5
             with dissolve
 
-            se "Your loss. *Chuckles*"
-
-    scene v14s40a_5
-    with dissolve
+            se "Your loss."
 
     se "Anyway... Just a little heads up. There may be a drug test coming up soon so make sure you're clean. Are you clean?"
 
     menu:
         "I'm clean":
+            $ add_point(KCT.BOYFRIEND)
             scene v14s40a_5a
             with dissolve
 
             u "I am, yeah."
 
         "I'm not clean":
+            $ add_point(KCT.BRO)
+            $ add_point(KCT.TROUBLEMAKER)
             scene v14s40a_5a
             with dissolve
     
@@ -124,5 +131,7 @@ label v14s40a:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s43

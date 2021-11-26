@@ -40,7 +40,6 @@ label v12_simplr_convo:
     u "(Haven't checked out Simplr in a while.)"
 
     if emmy.simplr in simplr_contacts:
-
         $ v12s24_emmymatch = True
 
         $ emmy.simplr.newMessage("Hey handsome, I was hoping I'd match with you. Where are you from?", queue=False)
@@ -54,7 +53,12 @@ label v12_simplr_convo:
         $ emmy.simplr.newMessage("Good, I know it's late so goodnight handsome ;)")
         $ emmy.simplr.addReply("Goodnight ;)")
 
-        call screen phone
+        label v12s24_PhoneContinueEmmy:
+            if emmy.simplr.replies:
+                call screen phone
+            if emmy.simplr.replies:
+                u "(I should check Simplr.)"
+                jump v12s24_PhoneContinueEmmy
 
         scene v12sic1a
         with dissolve

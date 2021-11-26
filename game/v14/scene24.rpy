@@ -4,6 +4,8 @@
 # Time: Evening (Tuesday)
 
 label v14s24:
+    play music "music/v14/Track Scene 24.mp3" fadein 2
+
     scene v14s24_1 # TPP. MC, slight smile, mouth closed. m walking down the side walk (similar to v14s23_7 but different angle)
     with dissolve
 
@@ -51,12 +53,14 @@ label v14s24:
 
         pause 0.75
 
+        stop music fadeout 3
         jump v14s24a 
 
     else:
-        scene v14s24_8 # TPP. MC walking down the side walk towards Amber's house.   
+        scene v14s24_8 # TPP. MC walking down the side walk towards Amber's house. 
         with dissolve
         
         pause 0.75
         
+        stop music fadeout 3
         jump v14s25

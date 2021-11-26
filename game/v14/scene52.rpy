@@ -12,6 +12,8 @@ init python:
         setattr(store, "v14_noraWorry", True)
 
 label v14s52:
+
+    play music "music/v14/Track Scene 52_1.mp3" fadein 2
     scene v14s52_1 # TPP. mc walks up and see's the wolves frat house
     with dissolve
 
@@ -45,6 +47,8 @@ label v14s52:
     scene v14s52_4 # TPP. MC follows Imre into the next room, no expressions, mouths closed
     with dissolve
 
+    pause 0.75
+
     scene v14s52_5 # TPP. In the next room, MC and Imre are standing in the back row by themselves from left to right, Sebastian, Aaron, Finn and Perry are standing in front of them in that order from left to right all of them are looking at Chris standing in front of them, Chris is looking at Mc, no expression, mouth open
     with dissolve
 
@@ -65,17 +69,14 @@ label v14s52:
 
     ch "I know this probably won't come as a shock."
 
-    scene v14s52_6a
-    with dissolve
-
     ch "I mean, it's no secret that Nora and I have been going through a difficult time lately."
 
-    scene v14s52_6
+    scene v14s52_6a
     with dissolve
 
     u "(No shit...)"
 
-    scene v14s52_6a
+    scene v14s52_6
     with dissolve
 
     ch "But we've decided to break up. Officially, for good. I thought you should all know."
@@ -84,13 +85,13 @@ label v14s52:
         scene v14s52_5a # TPP. same as v14s52_5 Mc and Imre are looking at each other, Mc no expression mouth closed Imre has a pissed off expression mouth closed, All the other Wolves have a shocked expression, mouths open, looking at Chris, Chris holding a hand behind his head with a look of disbelief in it himself, looking down and away from the wolves
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
     else:
         scene v14s52_5b # TPP. same as v14s52_5a All the Wolves have a shocked expression, mouths open, looking at Chris, Chris holding a hand behind his head with a look of disbelief in it himself, looking down and away from the wolves
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
     scene v14s52_7 # FPP. Show a close up shot of sebastian, Mc is standing behind Sebastian and can see his face from a back right angle, sebastian is looking at chris, no expression, mouth open
     with dissolve
@@ -165,7 +166,7 @@ label v14s52:
     scene v14s52_10 # TPP. Sebastian gives chris a hug, chris and sebastian full smiles mouths closed, Imre and Finn high five Full smiles mouths closed, Perry standing next to Imre and Finn with his hand up waiting for a high five full smile mouth closed, Aaron and mc looking at each other full smile's mc with a hand extended like his explaining something, mc mouth open Aaron mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v14s52_11 # FPP. close up shot of Aaron face to face with mc, half smile, mouth closed
     with dissolve
@@ -381,8 +382,8 @@ label v14s52:
 
 # -remember variable of what he sent for future scene. NoraWorry would be text2 or NoraWhere would be text1
 
-    $ nora.messenger.addReply("Hey, Nora. Just checking in since I haven't heard from you in a while... Where are you?", v14s52_reply1)
-    $ nora.messenger.addReply("Hey, you. I'm starting to worry that I haven't seen you around. At least let me know that he didn't hurt you... Please text me back, ASAP", v14s52_reply2)
+    $ nora.messenger.addReply(_("Hey, Nora. Just checking in since I haven't heard from you in a while... Where are you?"), v14s52_reply1)
+    $ nora.messenger.addReply(_("Hey, you. I'm starting to worry that I haven't seen you around. At least let me know that he didn't hurt you... Please text me back, ASAP"), v14s52_reply2)
 
     label v14s52_PhoneContinueNora:
         if nora.messenger.replies:
@@ -440,10 +441,15 @@ label v14s52:
     u "(What the fuck does that mean?!)"
 
     if v13_imre_disloyal:
+
         scene v14s52_17 # FPP. show a full size image of mc's wolves bedroom door closed
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
+
+        play music "music/v14/Track Scene 52_2.mp3" fadein 2
 
         scene v14s52_17a # FPP. same as v14s52_17 Imre walks through the door angry expression, mouth closed
         with dissolve
@@ -490,6 +496,8 @@ label v14s52:
 
         imre "Come the fuck on, [name]!"
 
+        stop music fadeout 3
+
         jump end14
 
     else: 
@@ -497,5 +505,7 @@ label v14s52:
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump end14

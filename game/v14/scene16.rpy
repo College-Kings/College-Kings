@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v14s16:
+    play music "music/v14/Track Scene 16.mp3" fadein 2
+    
     scene v14s16_1 # TPP. MC starting to turn around, Chloe running towards him from a distance, MC slight smile, mouth closed, Chloe slightly annoyed, mouth closed.
     with dissolve
 
@@ -96,12 +98,14 @@ label v14s16:
     scene v14s16_2
     with dissolve
 
-    cl "*Speaking fast* Like, what the actual fuck!? Am I missing something?! I have to win this race! She can't just, fuck everything up all because she doesn't trust me!"
+    cl "Like, what the actual fuck!? Am I missing something?!"
+    cl "I have to win this race! She can't just, fuck everything up all because she doesn't trust me!"
 
-    show screen loyalty_tutorial # Placeholder
-
-    hide screen loyalty_tutorial # Placeholder
-
+    scene v14s16_2a
+    with dissolve
+    
+    pause 0.01 #close and open mouth due to many dialogue lines
+    
     scene v14s16_2
     with dissolve
 
@@ -112,12 +116,16 @@ label v14s16:
     scene v14s16_2a
     with dissolve
     
+    pause 0.01 #close and open mouth due to many dialogue lines
+    
     scene v14s16_2
     with dissolve
 
     cl "I know I've asked you before, but this time I need a final answer. Are you going to help me with this campaign so I can beat Lindsey?"
 
-    cl "It would include planning campaign events like parties, making T-shirts, that kind of stuff."
+    call screen loyalty_tutorial # Placeholder
+
+    label after_loyalty_tutorial:
 
     if v13_help_chloe:
         cl "I remember how you said you'd support me before but..."
@@ -126,9 +134,6 @@ label v14s16:
     with dissolve
 
     cl "If you'd be willing to help me win, I'd be so grateful..."
-
-    scene v14s16_2b
-    with dissolve
 
     cl "I'd do anything to thank you."
 
@@ -157,13 +162,17 @@ label v14s16:
 
         u "(I think she means having an assistant in the bedroom...?!) I'm definitely following."
 
-    scene v14s16_2b
-    with dissolve
-
     cl "So, what's your answer? Will you help me try and win this campaign?"
 
     menu:
         "I'll help":
+            $ set_presidency_percent(v14_lindsey_popularity - 5)
+            if chloegf:
+                $ add_point(KCT.BOYFRIEND)
+            elif v12_lindsey_sex:
+                $ add_point(KCT.TROUBLEMAKER)
+            else:
+                $ add_point(KCT.BRO)
             $ v14_help_chloe = True
             scene v14s16_2e # FPP. Same as v14s16_2, Chloe slight smile, mouth closed.
             with dissolve
@@ -225,6 +234,11 @@ label v14s16:
                 pause 0.75
                 
         "I don't have the time":
+            if chloegf:
+                $ add_point(KCT.TROUBLEMAKER)
+            elif v12_lindsey_sex:
+                $ add_point(KCT.BOYFRIEND)
+                
             scene v14s16_2a
             with dissolve
 
@@ -325,4 +339,5 @@ label v14s16:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s17

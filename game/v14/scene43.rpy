@@ -1,4 +1,4 @@
-# SCENE 43: Walk to Mr Lee's class by yourself
+# SCENE 43: Walk to Mr. Lee's class by yourself
 # Locations: College, Mr. Lee Classroom
 # Characters: MC (Outfit: 1), PENELOPE (Outfit: 1)
 # Time: Morning
@@ -11,12 +11,14 @@ label v14s43:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 43.mp3" fadein 2
+
     scene v14s43_2 # TPP. Show MC walking through the school (different location), slight smile, mouth closed
     with dissolve
 
     pause 0.75
 
-    if emilyrs:
+    if v14_emily_ily:
         play sound "sounds/vibrate.mp3"
 
         scene v14s43_3 # TPP. Show MC walking through the school, close to where he was in v14s43_2, grabbing his phone, slightly confused, mouth closed
@@ -98,7 +100,7 @@ label v14s43:
         scene v14s43_6
         with dissolve
 
-        u "*Chuckles* On what?"
+        u "On what?"
 
         scene v14s43_6a
         with dissolve
@@ -123,7 +125,7 @@ label v14s43:
         scene v14s43_6a
         with dissolve
 
-        pe "Sit down already would you? People are starting to stare... *Laughs*"
+        pe "Sit down already, would you? People are starting to stare... *Laughs*"
 
     scene v14s43_8 # TPP. Show MC sitting down next to Penelope
     with dissolve
@@ -138,6 +140,8 @@ label v14s43:
     scene v14s43_9a # FPP. Same as v14s43_9, Penelope slight smile, mouth open
     with dissolve
 
-    pe "Thank you. *Chuckles*"
+    pe "Thank you."
+
+    stop music fadeout 3
 
     jump v14s43b

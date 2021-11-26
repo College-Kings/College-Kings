@@ -10,6 +10,8 @@ label v14s43c:
 
     pe "Honestly, I don't even need to read the pages. *Chuckles*"
 
+    play music "music/v14/Track Scene 43c.mp3" fadein 2
+
     scene v14s43c_1a # FPP. Penelope mouth closed
     with dissolve
 
@@ -82,6 +84,8 @@ label v14s43c:
 
                 scene v14s43c_2 # TPP. MC and Penelope still sitting on the stairs, MC leans in and kisses Penelope, one hand behind her head pulling her closer, Penelope has one hand up and touching Mc's chest and one on his leg
                 with dissolve
+                
+                pause 0.75
 
                 scene v14s43c_1c
                 with dissolve
@@ -126,7 +130,7 @@ label v14s43c:
     scene v14s43c_4 # FPP. Mc and Penelope are now standing up, show Penelope looking at MC, slight smile, mouth open
     with dissolve
 
-    pe "So, let's try and base it off of some actual history, since it's a history class. *Chuckles*"
+    pe "So, let's try and base it off of some actual history, since it's a history class."
 
     scene v14s43c_4a # FPP. same as v14s43c_4 Penelope mouth closed
     with dissolve
@@ -171,7 +175,8 @@ label v14s43c:
     scene v14s43c_4c # FPP. same as v14s43c_4 Penelope has a serious expression and holds a fist in the air, mouth open
     with dissolve
 
-    pe "*British accent* I didn't mean the hunt for food, I meant the hunt for traitors. We need to find those who wish to destroy our society and remove them as a threat."
+    pe "*British accent* I didn't mean the hunt for food, I meant the hunt for traitors."
+    pe "*British accent* We need to find those who wish to destroy our society and remove them as a threat."
 
     scene v14s43c_4d # FPP. same as v14s43c_4c Penelope has lowered her fist, mouth closed
     with dissolve
@@ -226,7 +231,7 @@ label v14s43c:
     scene v14s43c_1e # FPP. same as v14s43c_1 Penelope raises an eyebrow
     with dissolve
 
-    pe "*British accent* The meal they're serving tonight is supposed to be one to die for. *Chuckles*"
+    pe "*British accent* The meal they're serving tonight is supposed to be one to die for."
 
     scene v14s43c_1a
     with dissolve
@@ -392,6 +397,8 @@ label v14s43c:
 
         scene v14s43c_5e # TPP. same as v14s43c_5d Penelope kisses MC romantically, french kiss, Penelope has one hand behind mc's head and one on his cheek, Penelope's eyes are closed, Mc slightly shocked eyes open
         with dissolve
+        
+        pause 1.75
 
         scene v14s43c_1s # FPP. same as v14s43c_1c Penelope has slight tears in her eyes, mouth closed
         with dissolve
@@ -461,7 +468,7 @@ label v14s43c:
         scene v14s43c_6
         with dissolve
 
-        u "(She's lying on me? *Chuckles*)"
+        u "(She's lying on me?)"
 
         scene v14s43c_6
         with dissolve
@@ -475,6 +482,8 @@ label v14s43c:
 
         scene v14s43c_7 # FPP. Mc is laying down so the background would resemble as such, Penelope is still laying on top of MC, one hand over his cheek, full smile, and blushing looking at MC, mouth closed
         with dissolve
+        
+        pause 0.75
 
         scene v14s43c_7a # FPP. same as v14s43c_7 Penelope's mouth is closed
         with dissolve
@@ -484,7 +493,7 @@ label v14s43c:
         scene v14s43c_7
         with dissolve
 
-        pe "Gotta make it seem as real as possible. *Chuckles*"
+        pe "Gotta make it seem as real as possible, right?"
 
         scene v14s43c_3
         with dissolve
@@ -618,5 +627,7 @@ label v14s43c:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s44

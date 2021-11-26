@@ -9,10 +9,12 @@ label v14s42a:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 42a.mp3" fadein 2
+
     scene v14s42a_2 # FPP. MC now awake, looking at Penelope who is laying next to him, Penelope smiling, mouth closed
     with dissolve
 
-    u "*Yawns* Morning sunshine. *Chuckles* Did you sleep well?"
+    u "*Yawns* Morning sunshine. Did you sleep well?"
 
     scene v14s42a_2a # FPP. Same as v14s42a_2, Penelope mouth open, smiling
     with dissolve
@@ -27,7 +29,7 @@ label v14s42a:
     scene v14s42a_2a
     with dissolve
 
-    pe "I had a pretty good pillow. *Chuckles*"
+    pe "I had a pretty good pillow."
 
     scene v14s42a_2
     with dissolve
@@ -37,7 +39,7 @@ label v14s42a:
     scene v14s42a_2a
     with dissolve
 
-    pe "*Chuckles* I wanted to mention that, I'm sorry for last night."
+    pe "I wanted to mention that, I'm sorry for last night."
 
     scene v14s42a_2b # FPP. Same as v14s42a_2, Penelope slightly sad, mouth closed
     with dissolve
@@ -59,9 +61,6 @@ label v14s42a:
 
     pe "And then bringing you home and not doing anything..."
 
-    scene v14s42a_2c
-    with dissolve
-
     pe "I'm sure you were looking forward to something special."
 
     scene v14s42a_2b
@@ -79,6 +78,7 @@ label v14s42a:
 
     menu:
         "I wouldn't have changed a thing":
+            $ add_point(KCT.BOYFRIEND)
             $ penelopeloyal = True
 
             scene v14s42a_2
@@ -94,7 +94,7 @@ label v14s42a:
             scene v14s42a_2d # FPP. Same as v14s42a_2, Penelope different pose
             with dissolve
 
-            u "*Chuckles* Really."
+            u "Really."
 
             scene v14s42a_2e # FPP. Same as v14s42a_2d, Penelope smiling, mouth open
             with dissolve
@@ -109,9 +109,10 @@ label v14s42a:
             scene v14s42a_2e
             with dissolve
 
-            pe "Yes. *Chuckles* Yes it is."
+            pe "Yes. Yes it is."
 
         "Sex would've been nice":
+            $ add_point(KCT.BRO)
             scene v14s42a_2f # FPP. Same as v14s42a_2, Penelope slightly uncomfortable, mouth closed
             with dissolve
 
@@ -150,7 +151,7 @@ label v14s42a:
     scene v14s42a_2e
     with dissolve
 
-    pe "Oh my god! I got distracted and completely forgot. *Chuckles* Are we late?"
+    pe "Oh my god! I got distracted and completely forgot. Are we late?"
 
     scene v14s42a_2d
     with dissolve
@@ -206,5 +207,7 @@ label v14s42a:
     with dissolve
 
     u "*Laughs*"
+
+    stop music fadeout 3
 
     jump v14s43a

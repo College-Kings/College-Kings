@@ -105,6 +105,145 @@ label after_load:
         achApp.img = "images/phone/achievements/appAssets/achievementsIcon.webp"
         kiwiiApp.img = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
 
+        # Playable Character
+        mc.profile_picture = profile_pictures[0]
+
+
+        # NonPlayable Character
+        if isinstance(chloe, CustomCharacter):
+            char_points = chloe.points
+            char_stats = chloe.stats
+            chloe = NonPlayableCharacter("Chloe", "chloe.webp", messenger=True)
+            chloe.points = char_points
+            chloe.stats = char_stats
+        if isinstance(amber, CustomCharacter):
+            char_points = amber.points
+            char_stats = amber.stats
+            amber = NonPlayableCharacter("Amber", "amber.webp", messenger=True)
+            amber.points = char_points
+            amber.stats = char_stats
+        if isinstance(penelope, CustomCharacter):
+            char_points = penelope.points
+            char_stats = penelope.stats
+            penelope = NonPlayableCharacter("Penelope", "penelope.webp", messenger=True)
+            penelope.points = char_points
+            penelope.stats = char_stats
+        if isinstance(riley, CustomCharacter):
+            char_points = riley.points
+            char_stats = riley.stats
+            riley = NonPlayableCharacter("Riley", "riley.webp", messenger=True)
+            riley.points = char_points
+            riley.stats = char_stats
+        if isinstance(lindsey, CustomCharacter):
+            char_points = lindsey.points
+            char_stats = lindsey.stats
+            lindsey = NonPlayableCharacter("Lindsey", "lindsey.webp", messenger=True)
+            lindsey.points = char_points
+            lindsey.stats = char_stats
+        if isinstance(lauren, CustomCharacter):
+            char_points = lauren.points
+            char_stats = lauren.stats
+            lauren = NonPlayableCharacter("Lauren", "lauren.webp", messenger=True)
+            lauren.points = char_points
+            lauren.stats = char_stats
+        if isinstance(emily, CustomCharacter):
+            char_points = emily.points
+            char_stats = emily.stats
+            emily = NonPlayableCharacter("Emily", "emily.webp", messenger=True)
+            emily.points = char_points
+            emily.stats = char_stats
+        if isinstance(ms_rose, CustomCharacter):
+            char_points = ms_rose.points
+            char_stats = ms_rose.stats
+            ms_rose = NonPlayableCharacter("Ms Rose", "ms_rose.webp")
+            ms_rose.points = char_points
+            ms_rose.stats = char_stats
+        if isinstance(nora, CustomCharacter):
+            char_points = nora.points
+            char_stats = nora.stats
+            nora = NonPlayableCharacter("Ms Rose", "ms_rose.webp")
+            nora.points = char_points
+            nora.stats = char_stats
+        if isinstance(aubrey, CustomCharacter):
+            char_points = aubrey.points
+            char_stats = aubrey.stats
+            aubrey = NonPlayableCharacter("Aubrey", "aubrey.webp", messenger=True)
+            aubrey.points = char_points
+            aubrey.stats = char_stats
+        if isinstance(ryan, CustomCharacter):
+            char_points = ryan.points
+            char_stats = ryan.stats
+            ryan = NonPlayableCharacter("Ryan", "ryan.webp", messenger=True)
+            ryan.points = char_points
+            ryan.stats = char_stats
+        if isinstance(imre, CustomCharacter):
+            char_points = imre.points
+            char_stats = imre.stats
+            imre = NonPlayableCharacter("Imre", "imre.webp", messenger=True)
+            imre.points = char_points
+            imre.stats = char_stats
+        if isinstance(chris, CustomCharacter):
+            char_points = chris.points
+            char_stats = chris.stats
+            chris = NonPlayableCharacter("Chris", "chris.webp")
+            chris.points = char_points
+            chris.stats = char_stats
+        if isinstance(charli, CustomCharacter):
+            char_points = charli.points
+            char_stats = charli.stats
+            charli = NonPlayableCharacter("Charli", "charlie.webp")
+            charli.points = char_points
+            charli.stats = char_stats
+        if isinstance(cameron, CustomCharacter):
+            char_points = cameron.points
+            char_stats = cameron.stats
+            cameron = NonPlayableCharacter("Cameron", "cameron.webp")
+            cameron.points = char_points
+            cameron.stats = char_stats
+        if isinstance(josh, CustomCharacter):
+            char_points = josh.points
+            char_stats = josh.stats
+            josh = NonPlayableCharacter("Josh", "josh.webp", messenger=True)
+            josh.points = char_points
+            josh.stats = char_stats
+        if isinstance(julia, CustomCharacter):
+            char_points = julia.points
+            char_stats = julia.stats
+            julia = NonPlayableCharacter("Julia", "julia.webp", messenger=True)
+            julia.points = char_points
+            julia.stats = char_stats
+        if isinstance(evelyn, CustomCharacter):
+            char_points = evelyn.points
+            char_stats = evelyn.stats
+            evelyn = NonPlayableCharacter("Evelyn", "evelyn.webp")
+            evelyn.points = char_points
+            evelyn.stats = char_stats
+        if isinstance(autumn, CustomCharacter):
+            char_points = autumn.points
+            char_stats = autumn.stats
+            autumn = NonPlayableCharacter("Autumn", "autumn.webp", messenger=True)
+            autumn.points = char_points
+            autumn.stats = char_stats
+        if isinstance(sebastian, CustomCharacter):
+            char_points = sebastian.points
+            char_stats = sebastian.stats
+            sebastian = NonPlayableCharacter("Sebastian", "sebastian.webp", messenger=True)
+            sebastian.points = char_points
+            sebastian.stats = char_stats
+        if isinstance(grayson, CustomCharacter):
+            char_points = grayson.points
+            char_stats = grayson.stats
+            grayson = NonPlayableCharacter("Grayson", "grayson.webp", messenger=True)
+            grayson.points = char_points
+            grayson.stats = char_stats
+        if isinstance(jenny, CustomCharacter):
+            char_points = jenny.points
+            char_stats = jenny.stats
+            jenny = NonPlayableCharacter("Jenny", "jenny.webp", messenger=True)
+            jenny.points = char_points
+            jenny.stats = char_stats
+
+
         # Kiwii Users
         kiwiiUsers = kiwii_users()
 
@@ -126,6 +265,8 @@ label after_load:
         try: v11s9a_kiwiiPost1.img = "images/phone/kiwii/posts/v11/sebnaked.webp"
         except NameError: pass
         try: v11s9a_kiwiiPost2.img = "images/phone/kiwii/posts/v11/sebnaked.webp"
+        except NameError: pass
+        try: v13s49_kiwiiPost1.img = "images/phone/kiwii/posts/v13/aubrey_beach.webp"
         except NameError: pass
 
         for kiwiiPost in kiwiiPosts:
@@ -314,6 +455,13 @@ label after_load:
             del simplr_Emmy
         except NameError: pass
 
+        for contact in simplr_contacts + simplr_pendingContacts:
+            contact.profile_picture = "images/nonplayable_characters/{0}/{0}_profile_picture.webp".format(contact.name.lower())
+            
+            contact.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/1.webp".format(contact.name.lower())]
+            for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, contact.name.lower(), "large_profile_pictures")):
+                contact.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(contact.name.lower(), filename) for filename in filenames]
+
         
         # Items
         honey.insensitive_image = "images/v13/Scene35/sex_shop/honey_insensitive.webp"
@@ -329,42 +477,8 @@ label after_load:
         try: kiwiiPost1
         except NameError: kiwii_firstTime = False
 
-        # v12 Renpy Fixes:
-        try: chloe
-        except NameError: chloe = NonPlayableCharacter("Chloe", "chloe.webp")
-        try: amber
-        except NameError: amber = NonPlayableCharacter("Amber", "amber.webp")
-        try: penelope
-        except NameError: penelope = NonPlayableCharacter("Penelope", "penelope.webp")
-        try: riley
-        except NameError: riley = NonPlayableCharacter("Riley", "riley.webp")
-        try: lindsey
-        except NameError: lindsey = NonPlayableCharacter("Lindsey", "lindsey.webp")
-        try: lauren
-        except NameError: lauren = NonPlayableCharacter("Lauren", "lauren.webp")
-        try: samantha
-        except NameError: samantha = NonPlayableCharacter("Samantha", "samantha.webp")
-        try: emily
-        except NameError: emily = NonPlayableCharacter("Emily", "emily.webp")
-        try: ms_rose
-        except NameError: ms_rose = NonPlayableCharacter("Ms Rose", "ms_rose.webp")
-        try: nora
-        except NameError: nora = NonPlayableCharacter("Nora", "nora.webp")
-        try: aubrey
-        except NameError: aubrey = NonPlayableCharacter("Aubrey", "aubrey.webp")
-        try: ryan
-        except NameError: ryan = NonPlayableCharacter("Ryan", "ryan.webp")
-        try: imre
-        except NameError: imre = NonPlayableCharacter("Imre", "imre.webp")
-        try: chris
-        except NameError: chris = NonPlayableCharacter("Chris", "chris.webp")
-        try: charli
-        except NameError: charli = NonPlayableCharacter("Charli", "charli.webp")
-        try: cameron
-        except NameError: cameron = NonPlayableCharacter("Cameron", "cameron.webp")
-        try: josh
-        except NameError: josh = NonPlayableCharacter("Josh", "josh.webp")
 
+        # v12 Renpy Fixes:
         chloe.name = "Chloe"
         amber.name = "Amber"
         penelope.name = "Penelope"
@@ -382,6 +496,24 @@ label after_load:
         charli.name = "Charli"
         cameron.name = "Cameron"
         josh.name = "Josh"
+
+        chloe.profile_picture = "images/nonplayable_characters/profile_pictures/chloe.webp"
+        amber.profile_picture = "images/nonplayable_characters/profile_pictures/amber.webp"
+        penelope.profile_picture = "images/nonplayable_characters/profile_pictures/penelope.webp"
+        riley.profile_picture = "images/nonplayable_characters/profile_pictures/riley.webp"
+        lindsey.profile_picture = "images/nonplayable_characters/profile_pictures/lindsey.webp"
+        lauren.profile_picture = "images/nonplayable_characters/profile_pictures/lauren.webp"
+        samantha.profile_picture = "images/nonplayable_characters/profile_pictures/samantha.webp"
+        emily.profile_picture = "images/nonplayable_characters/profile_pictures/emily.webp"
+        ms_rose.profile_picture = "images/nonplayable_characters/profile_pictures/ms_rose.webp"
+        nora.profile_picture = "images/nonplayable_characters/profile_pictures/nora.webp"
+        aubrey.profile_picture = "images/nonplayable_characters/profile_pictures/aubrey.webp"
+        ryan.profile_picture = "images/nonplayable_characters/profile_pictures/ryan.webp"
+        imre.profile_picture = "images/nonplayable_characters/profile_pictures/imre.webp"
+        chris.profile_picture = "images/nonplayable_characters/profile_pictures/chris.webp"
+        charli.profile_picture = "images/nonplayable_characters/profile_pictures/charli.webp"
+        cameron.profile_picture = "images/nonplayable_characters/profile_pictures/cameron.webp"
+        josh.profile_picture = "images/nonplayable_characters/profile_pictures/josh.webp"
 
         try: v6_emilysex
         except NameError: v6_emilysex = False

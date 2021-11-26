@@ -10,6 +10,8 @@ label v14s30a:
 
     pause 0.5
 
+    play music "music/v14/Track Scene 30.mp3" fadein 2
+
     scene v14s30a_2 # TPP. MC finds Chloe in the woods with the Wolf Trainer at the photoshoot set, Chloe petting the wolf, All slight smile, mouth closed.
     with dissolve
 
@@ -58,7 +60,7 @@ label v14s30a:
     scene v14s30a_6
     with dissolve
 
-    wtrain "*Chuckles* Unimportant. Just know, your life lies safely in my hands."
+    wtrain "Well, that's unimportant. Just know, your life lies safely in my hands."
 
     scene v14s30a_6a
     with dissolve
@@ -115,7 +117,7 @@ label v14s30a:
     scene v14s30a_6
     with dissolve
 
-    wtrain "No man, this is a completely different wolf. *Chuckles*"
+    wtrain "No mate, this is a completely different wolf..."
 
     scene v14s30a_6a
     with dissolve
@@ -160,7 +162,7 @@ label v14s30a:
     scene v14s30a_5a
     with dissolve
 
-    cl "Make us look good. *Chuckles*"
+    cl "Make us look good."
 
     if chloegf:
         scene v14s30a_5
@@ -203,6 +205,7 @@ label v14s30a:
 
     menu:
         "Run":
+            $ add_point(KCT.BOYFRIEND)
             scene v14s30a_11 # TPP. MC walking backwards getting prepared to run, MC worried face, mouth open.
             with dissolve
 
@@ -236,7 +239,7 @@ label v14s30a:
             scene v14s30a_13
             with dissolve
 
-            wtrain "Australian thing... You must have some good meat. *Chuckles*"
+            wtrain "Australian thing... You must have some good meat."
 
             scene v14s30a_13b # TPP. Same as v14s30a_13, Chloe and Wolf Trainer looking towards MC, Wolf Trainer and Chloe slight smile, mouth closed.
             with dissolve
@@ -246,12 +249,13 @@ label v14s30a:
             scene v14s30a_13
             with dissolve
 
-            wtrain "Back back, Niko."
+            wtrain "Back! Back, Niko!"
 
             scene v14s30a_13c # TPP. Same as v14s30a_13b, The Wolf goes back to sitting next to Chloe, Both slight smile, mouth closed.
             with dissolve
 
         "Stay still":
+            $ add_point(KCT.BRO)
             scene v14s30a_10
             with dissolve
 
@@ -270,7 +274,7 @@ label v14s30a:
             scene v14s30a_13
             with dissolve
 
-            wtrain "Exactly what you're doing now, mate. Seems as though he just likes your meat! *Chuckles*"
+            wtrain "Exactly what you're doing now, mate. Seems as though he just likes your meat!"
 
             scene v14s30a_13d # TPP. Same as v14s30a_13, Chloe slight smile, mouth open, Wolf Trainer slight smile, mouth closed.
             with dissolve
@@ -290,6 +294,7 @@ label v14s30a:
             scene v14s30a_13c
             with dissolve
 
+    pause 0.75
 
     scene v14s30a_8
     with dissolve
@@ -306,23 +311,36 @@ label v14s30a:
 
     u "Fuck's sake... Never living that one down."
 
+    call screen take_picture("v14s30a_pic1")
+
+    label v14s30a_pic1:
+
     scene v14s30a_8b # TPP. Same as v14s30a_8a, Chloe posing with one hand on her hip and one hand on the wolf's head, Chloe smiling proudly, Mouth closed.
     with flash
 
-    pause 0.5
+    call screen take_picture("v14s30a_pic2")
 
+
+    label v14s30a_pic2:
+        
     scene v14s30a_8c # TPP. Same as v14s30a_8b, Chloe giving the wolf a high five, Chloe slight smile, mouth closed.
     with flash
 
-    pause 0.5
+    call screen take_picture("v14s30a_pic3")
+
+
+    label v14s30a_pic3:
 
     scene v14s30a_8d # TPP. Same as v14s30a_8c, Chloe with her hands in the shape of Wolf's claws acting scary for the camera, The wolf growling towards the camera, Chloe Intimidating face, mouth closed.
     with flash
 
-    pause 0.5
+    call screen take_picture("v14s30a_pic4")
+
+
+    label v14s30a_pic4:
 
     scene v14s30a_8
-    with dissolve
+    with flash
 
     u "Alright."
 
@@ -390,5 +408,7 @@ label v14s30a:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s30b

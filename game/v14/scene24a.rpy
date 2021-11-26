@@ -4,6 +4,8 @@
 # Time: Evening (Tuesday)
 
 label v14s24a:
+    play music "music/v14/Track Scene 24a_1.mp3" fadein 2
+
     scene v14s24a_1 # TPP. MC, smiling, walking towards the door of the gas station.
     with dissolve
 
@@ -39,10 +41,12 @@ label v14s24a:
 
     menu:
         "Twezzlers":
+            $ add_point(KCT.BOYFRIEND)
             scene v14s24a_8 # TPP. MC, smiling, grabs Twezzlers from the shelf.
             with dissolve
 
         "Gummy Fish":
+            $ add_point(KCT.BRO)
             $ v14s24a_gummyfish = True
             scene v14s24a_8a # Same as v14s24a but MC grabs Gummy Fish from the shelf.
             with dissolve
@@ -68,6 +72,9 @@ label v14s24a:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
+    play music "music/v14/Track Scene 24a_2.mp3" fadein 2
 
     scene v14s24a_11a # FPP. Same as v14s24a_11 but with Grayson (clerk), facing MC, slightly angry, mouth closed.
     with dissolve
@@ -132,7 +139,7 @@ label v14s24a:
     scene v14s24a_11a
     with dissolve
 
-    u "*Chuckles* Later man."
+    u "Haha, later man."
 
     scene v14s24a_12 # TPP. MC, big smile, mouth closed, pushing on the door to leave the store. Candy is either in pocket (not visible) or you need a bag. 
     with dissolve
@@ -144,9 +151,10 @@ label v14s24a:
 
     pause 0.75
     
-    scene v14s24a_14 # TPP. MC, smiling, walking down the side walk toward Amber's house. Candy is either in pocket or in a bag.  
+    scene v14s24a_14 # TPP. MC, smiling, walking down the side walk toward Amber's house. Candy is either in pocket or in a bag. 
     with dissolve
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s25

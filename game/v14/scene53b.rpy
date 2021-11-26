@@ -4,6 +4,7 @@
 # Time: Night
 
 label v14s53b:
+    play music "music/v14/Track Scene 53b_1.mp3" fadein 2
     scene v14s53b_1 # TPP. Show MC going to the door to leave the Apes Dream Room, tired, mouth closed
     with fade
 
@@ -13,10 +14,13 @@ label v14s53b:
     else:
         u "*Sighs* (I'm so ready for bed.)"
 
+    play sound "music/v14/Track Scene 53b_2 SFX Bag Over Head.mp3"
     scene v14s53b_2 # TPP. Show a bag coming over MC's head as he passes thought the door (don't show who is putting the bag on his head), show MC's shocked face as the bag comes on his head
     with vpunch
 
     pause
+
+    stop music fadeout 3
 
     jump end14
 

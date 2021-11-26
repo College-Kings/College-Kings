@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v14s14:
+    play music "music/v14/Track Scene 14.mp3" fadein 2
+
     scene black
     with fade
     
@@ -26,13 +28,15 @@ label v14s14:
     $ chloe.messenger.newMessage(_("I'm gonna need your help with the president thing, big time"), queue=False)
     play sound "sounds/vibrate.mp3"
 
-    pause 0.75
+    u "*Phone vibrates*"
 
     scene v14s14_2a # TPP. Same as v14s14_2, MC looking at his phone which he is now holding, confused face, mouth closed.
     with dissolve
 
     $ chloe.messenger.newMessage(_("[name]!!!"), queue=False)
     play sound "sounds/vibrate.mp3"
+
+    u "*Phone vibrates*"
 
     u "(Who's blowing up my phone?)"
 
@@ -65,4 +69,5 @@ label v14s14:
     
     pause 0.75
 
+    stop music fadeout 3
     jump v14s15

@@ -9,55 +9,63 @@ label v14s28:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 28.mp3" fadein 2
+
     if v13_emilysex:
-        scene v14s28_2 # FPP. Emily looking at MC, MC Looking at Emily, Emily worried smile, mouth open.
+        scene v14s28_2f # FPP. Emily looking at MC, MC Looking at Emily, Emily worried smile, mouth open.
         with dissolve
 
         em "So... You and I have been on and off, and on and off..."
 
         em "Seems like you don't mind fucking me but when it comes to actually being a nice person or resurrecting our relationship, you're not for it."
 
-        scene v14s28_2a # FPP. Same as v14s28_2, Emily worried smile, mouth closed.
+        scene v14s28_2e # FPP. Same as v14s28_2, Emily worried smile, mouth closed.
         with dissolve
 
         u "I-"
 
-        scene v14s28_2
+        scene v14s28_2c
         with dissolve
 
         em "Please, let me finish."
 
         em "I've made mistakes, not just the cheating either."
         
-        scene v14s28_2a
+        scene v14s28_2b
         with dissolve
         
-        scene v14s28_2
+        pause 0.01 #close and open mouth due to many dialogue lines
+        
+        scene v14s28_2c
         with dissolve
 
         em "I've made dozens of more mistakes since we've been in college, but regardless of that, I know how I feel and have always felt about you."
 
         em "I..."
 
-        scene v14s28_2a
+        scene v14s28_2b
         with dissolve
         
-        scene v14s28_2
+        pause 0.01 #close and open mouth due to many dialogue lines
+        
+        scene v14s28_2c
         with dissolve
 
         em "I love you, [name]."
 
         em "Even if you don't feel the same way."
 
-        scene v14s28_2a
+        scene v14s28_2b
         with dissolve
         
-        scene v14s28_2
+        pause 0.01 #close and open mouth due to many dialogue lines
+        
+        scene v14s28_2c
         with dissolve
 
         em "But deep down, of course... I hope that you still love me too."
 
-        scene v14s28_2a
+        scene v14s28_2b
         with dissolve
 
         u "(Oh... Fuck...)"
@@ -67,9 +75,6 @@ label v14s28:
                 $ add_point(KCT.BOYFRIEND)
                 $ v14_emily_ily = True
                 
-                scene v14s28_2a
-                with dissolve
-
                 u "Emily..."
 
                 u "I've had a hard time admitting to myself, let alone expressing to you, how I feel about you."
@@ -114,8 +119,6 @@ label v14s28:
 
             "It'll never work between us":
                 $ add_point(KCT.TROUBLEMAKER)
-                scene v14s28_2a
-                with dissolve
 
                 u "I'm not going to be rude or anything, but I have to be honest."
 
@@ -139,34 +142,51 @@ label v14s28:
 
                 em "This is exactly why I'm doing what I'm doing."
 
-    scene v14s28_2a
+    scene v14s28_2e
     with dissolve
 
     u "What's the news?"
 
-    scene v14s28_2
+    scene v14s28_2f
     with dissolve
 
     em "I've put a lot of thought into what I'm about to say..."
 
     em "I've talked it over with a lot of people, and I'm set in my decision."
 
-    scene v14s28_2a
+    scene v14s28_2e
     with dissolve
 
     u "Okay..."
 
-    scene v14s28_2
+    scene v14s28_2c
     with dissolve
 
     em "I-I'm transferring schools."
 
-    scene v14s28_2a
+    scene v14s28_2b
     with dissolve
 
-    u "Huh? Emily... Why?"
+    menu:
+        "Stay calm":
+            
+            u "What? Emily... Why?"
 
-    scene v14s28_2
+        "Be angry":
+
+            u "You're what? Why the fuck-"
+
+            scene v14s28_2c
+            with dissolve
+            
+            em "I don't want to argue. Please."
+
+            scene v14s28_2b
+            with dissolve
+            
+            u "*Sighs*"
+
+    scene v14s28_2c
     with dissolve
 
     em "I need a fresh start, [name]."
@@ -175,92 +195,92 @@ label v14s28:
 
     em "I need to just start over, I think."
 
-    scene v14s28_2a
+    scene v14s28_2b
     with dissolve
 
     u "*Sighs*"
 
     u "This is a really big decision."
 
-    scene v14s28_2
+    scene v14s28_2c
     with dissolve
 
     em "You're telling me? *Chuckles*"
 
-    scene v14s28_2a
+    scene v14s28_2b
     with dissolve
 
     u "You're sure about this?"
 
-    scene v14s28_2
+    scene v14s28_2c
     with dissolve
 
     em "Like I said, I'm set on my decision, I just..."
 
     em "I wanted to tell you in private."
 
-    scene v14s28_2a
+    scene v14s28_2b
     with dissolve
 
     u "I wasn't aware that you were even considering this."
 
-    scene v14s28_2
+    scene v14s28_2c
     with dissolve
 
     em "I know I didn't consult you on what my plans were, and that's just because I wanted to make the decision with a clear head."
 
-    scene v14s28_2a
+    scene v14s28_2b
     with dissolve
 
     u "I understand you wanting a fresh start, and I'm not gonna hold you back."
 
     u "Honestly, for you I feel like it's a great idea."
 
-    scene v14s28_2
+    scene v14s28_2c
     with dissolve
 
     em "Really?"
 
-    scene v14s28_2a
+    scene v14s28_2b
     with dissolve
 
     u "I do, yeah. It'll be good for you to start fresh."
 
-    scene v14s28_2
+    scene v14s28_2c
     with dissolve
 
     em "I'm happy to hear you say that. *Chuckles*"
 
-    scene v14s28_2a
+    scene v14s28_2b
     with dissolve
 
     u "Of course, when will you be leaving?"
 
-    scene v14s28_2
+    scene v14s28_2c
     with dissolve
 
     em "This weekend."
 
-    scene v14s28_2a
+    scene v14s28_2b
     with dissolve
 
     u "That soon? Jeez..."
 
-    scene v14s28_2
+    scene v14s28_2c
     with dissolve
 
     em "Yeah, honestly... I wasn't even going to tell you. *Laughs* I was just going to leave."
 
     em "I told myself that if fate wanted you to know, we'd bump into each other. And well, here we are."
 
-    scene v14s28_2a
+    scene v14s28_2b
     with dissolve
 
     u "Well, I'm glad you did."
 
     u "Regardless of our relationship, I would've been upset not knowing you'd left."
 
-    scene v14s28_2
+    scene v14s28_2c
     with dissolve
 
     em "In that case, I'm glad I told you."
@@ -271,6 +291,8 @@ label v14s28:
 
     scene v14s28_3a # TPP. Same as v14s28_3, Show MC and Emily giving eachother a casual hug, both slight smile, mouth closed.
     with dissolve
+
+    pause 0.75
 
     if v14_emily_ily:
         scene v14s28_2g # FPP. Same as v14s28_2f, Emily slight smile, mouth open.
@@ -364,5 +386,7 @@ label v14s28:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s29

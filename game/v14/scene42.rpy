@@ -10,6 +10,8 @@ label v14s42:
 
     pe "I can't lie, I'm really excited."
 
+    play music "music/v14/Track Scene 42.mp3" fadein 2
+
     scene v14s42_2 # FPP. Mc and Penelope are inside of Penelope's Dorm Room, Penelope is looking at MC, has a slight smile mouth closed 
     with dissolve
 
@@ -18,7 +20,7 @@ label v14s42:
     scene v14s42_2a # FPP. same as v14s42_2 Penelope mouth open
     with dissolve
 
-    pe "I just love sleepovers, honestly and I'm kind of a sucker for cuddling. *Chuckles*"
+    pe "I just love sleepovers, honestly and I'm kind of a sucker for cuddling."
 
     scene v14s42_2
     with dissolve
@@ -108,7 +110,7 @@ label v14s42:
     scene v14s42_8a
     with dissolve
 
-    pe "Hmm... Well, thank you I guess. *Chuckles*"
+    pe "Hmm... Well, thank you I guess."
 
     scene v14s42_9 # FPP. show Penelope turning the lights off, back turned to mc
     with dissolve
@@ -140,9 +142,6 @@ label v14s42:
 
     pe "Laying in bed snuggled up to a guy that I actually like..."
 
-    scene v14s42_12
-    with dissolve
-
     pe "Every guy in the past just... wasn't what I needed. It seemed like those were the only kind of guys I could get, though."
 
     scene v14s42_12a
@@ -163,7 +162,7 @@ label v14s42:
     scene v14s42_12
     with dissolve
 
-    pe "And those aren't the type of people I like laying next to. *Chuckles*"
+    pe "And those aren't the type of people I like laying next to."
 
     scene v14s42_12a
     with dissolve
@@ -173,7 +172,7 @@ label v14s42:
     scene v14s42_12b # FPP. same as v14s42_12 Penelope points at mc with the hand she was rubbing his chest with, increase to half smile, mouth open, lights are off
     with dissolve
 
-    pe "*Chuckles* I know what you're doing, but I'll play your little game."
+    pe "I know what you're doing, but I'll play your little game."
 
     scene v14s42_12c # FPP. same as v14s42_12a Penelope Rests her head on mc's shoulder, looking up at him, slight smile, mouth closed, lights are off
     with dissolve
@@ -193,12 +192,12 @@ label v14s42:
     scene v14s42_12d
     with dissolve
 
-    pe "Oh my gosh... *Chuckles*"
+    pe "Oh my gosh..."
 
     scene v14s42_12c
     with dissolve
 
-    u "Haha, sorry. Just marking off the list. *Chuckles*"
+    u "Haha, sorry. Just marking off the list."
 
     scene v14s42_12d
     with dissolve
@@ -256,9 +255,6 @@ label v14s42:
 
         u "*Sighs*"
 
-        scene v14s42_14b
-        with dissolve
-
         u "Hello?"
 
         scene v14s40_3 # Ignore as reused from another scene
@@ -300,9 +296,6 @@ label v14s42:
         with dissolve
 
         u "Well, there certainly is a first time for everything."
-
-        scene v14s40_4b # Ignore as reused from another scene
-        with dissolve
 
         u "(\"There's a first time for everything\", The fuck am I on about? I need sleep...)"
 
@@ -362,10 +355,7 @@ label v14s42:
                 scene v14s40_4b # Ignore as reused from another scene
                 with dissolve
 
-                u "Honestly, yeah. I'm just so tired. Sorry if what I said sounded weird, ignore my stupid talk. *Chuckles*"
-
-                scene v14s40_4b # Ignore as reused from another scene
-                with dissolve
+                u "Honestly, yeah. I'm just so tired. Sorry if what I said sounded weird, ignore my stupid talk."
 
                 u "So... did you watch porn while you touched yourself?"
 
@@ -397,7 +387,7 @@ label v14s42:
                 scene v14s40_4e # Ignore as reused from another scene
                 with dissolve
 
-                u "I'm always thinking about you. *Chuckles*"
+                u "I'm always thinking about you."
 
                 scene v14s40_4d # Ignore as reused from another scene
                 with dissolve
@@ -433,5 +423,7 @@ label v14s42:
     with fade
 
     pause 0.75
+    
+    stop music fadeout 3
 
     jump v14s42a

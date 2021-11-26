@@ -9,12 +9,14 @@ label v14s29:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 29.mp3" fadein 2
+
     play sound "sounds/call.mp3"
 
     scene v14s29_2 # TPP. Close up of MC looking at his phone while standing on the sidewalk, slight smile, mouth open.
     with vpunch
 
-    u "(And I know when my hotline bling!) *Chuckles*"
+    u "(And I know when my hotline bling!)"
 
     stop sound
     play sound "sounds/answercall.mp3"
@@ -32,7 +34,7 @@ label v14s29:
     scene v14s29_3a # TPP. Same as v14s29_3, Imre on the phone, Imre slight smile, mouth closed.
     with dissolve
 
-    if v14_talk_to_chris:
+    if v14_chloe_wolves:
         u "Sorry man, I'm doing the Wolves photoshoot with Chloe."
 
         scene v14s29_3
@@ -53,14 +55,16 @@ label v14s29:
         u "(I guess we'll do that another time.)"
 
         scene v14s29_4 # TPP. Show MC walking down the sidewalk towards the wolves house
-        with dissolve
+        with fade
+
+        pause 0.75
+
+        stop music fadeout 3
 
         if v14_realwolf:
-            pause 0.75
             jump v14s30a
 
         else:
-            pause 0.75
             jump v14s30
 
     elif not v14_help_chloe:
@@ -81,6 +85,8 @@ label v14s29:
 
         pause 0.75
 
+        stop music fadeout 3
+
         jump v14s32
         
     #elif not v14_talk_to_chris: #Placeholder for helping Chloe but didn't talk to Chris.
@@ -95,18 +101,20 @@ label v14s29:
         scene v14s29_3a
         with dissolve
 
-        u "*Chuckles* Okay."
+        u "Uhh.. O-okay..."
 
         play sound "sounds/rejectcall.mp3"
         
         scene v14s29_2
         with dissolve
 
-        u "(This dude's weird.) *Chuckles*"
+        u "(This dude's weird.)"
 
         scene v14s29_5 # TPP. Show MC standing on the sidewalk, slight smile, mouth closed.
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v14s31

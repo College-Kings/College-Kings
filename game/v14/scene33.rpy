@@ -4,16 +4,20 @@
 # Time: Evening
 
 label v14s33:
-    if joinwolves:
-        scene v14s12_5
-        with fade
-        
-        pause 0.75
+    if iris.simplr in simplr_contacts:
+        $ iris.simplr.newMessage("Hi... You're so cute. Haha", queue=False)
+        $ iris.simplr.newMessage("Sorry if that was too forward, lol", queue=False)
+        $ iris.simplr.newMessage("I guess what I mean is that I'm happy that we matched", queue=False)
+    elif iris.simplr in simplr_pendingContacts:
+        $ iris.simplr.removeContact()
 
+    if joinwolves:
         scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
         with fade
 
         pause 0.75
+
+        play music "music/v14/Track Scene 33.mp3" fadein 2
 
         scene v14s33_2 # TPP. Show MC looking at his phone while sitting on the bed in his Wolves Room, slight smile, mouth closed.
         with fade
@@ -23,6 +27,8 @@ label v14s33:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
 
             if penelopers and v11s23_penelope_date:
                 jump v14s34
@@ -60,10 +66,11 @@ label v14s33:
             scene v14s33_3
             with dissolve
 
-            la "Not much, I just miss you. *Chuckles* I've been thinking about you all night..."
+            la "Not much, I just miss you. I've been thinking about you all night..."
 
             menu:
                 "Want me to come over?":
+                    $ add_point(KCT.BRO)
                     scene v14s33_3a
                     with dissolve
 
@@ -111,10 +118,11 @@ label v14s33:
 
             la "I'm in bed naked, all alone, and I'm thinking I should try to watch some porn and..."
 
-            la "*Chuckles* I don't know... See what it does for me?"
+            la "I don't know... See what it does for me?"
 
             menu:
                 "Laugh":
+                    $ add_point(KCT.BOYFRIEND)
                     scene v14s33_3a
                     with dissolve
 
@@ -130,7 +138,7 @@ label v14s33:
                     scene v14s33_3a
                     with dissolve
 
-                    u "Well, be sure to tell me how it goes. *Chuckles*"
+                    u "Well, be sure to tell me how it goes."
 
                     scene v14s33_3
                     with dissolve
@@ -165,12 +173,16 @@ label v14s33:
 
                     pause 0.75
 
+                    stop music fadeout 3
+
                     if penelopers and v11s23_penelope_date:
                         jump v14s34
                     else:
                         jump v14s35
 
                 "Get excited":
+                    $ add_point(KCT.BRO)
+                    $ add_point(KCT.TROUBLEMAKER)
                     scene v14s33_3a
                     with dissolve
 
@@ -179,7 +191,7 @@ label v14s33:
                     scene v14s33_3
                     with dissolve
 
-                    la "*Chuckles* We think a lot alike."
+                    la "We think a lot alike."
 
                     scene v14s33_3a
                     with dissolve
@@ -194,12 +206,12 @@ label v14s33:
                     scene v14s33_3a
                     with dissolve
 
-                    u "O-Oh! *Chuckles* Well shit, I guess I'll let you go handle your biz."
+                    u "O-Oh! Well shit, I guess I'll let you go handle your biz."
 
                     scene v14s33_3
                     with dissolve
 
-                    la "When we get together again, I wanna talk about it. *Chuckles*"
+                    la "When we get together again, I wanna talk about it."
 
                     scene v14s33_3a
                     with dissolve
@@ -221,6 +233,8 @@ label v14s33:
                     u "(Lauren is watching porn for the first time...)"
 
                     pause 0.75
+
+                    stop music fadeout 3
                     
                     if penelopers and v11s23_penelope_date:
                         jump v14s34
@@ -229,15 +243,12 @@ label v14s33:
                         jump v14s35
 
     else:
-        scene v14s12_6
-        with fade
-        
-        pause 0.75
-    
         scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
         with fade
 
         pause 0.75
+
+        play music "music/v14/Track Scene 33.mp3" fadein 2
 
         scene v14s33_4 # TPP. Show MC looking at his phone while sitting on the bed in his Apes room, slight smile, mouth closed.
         with fade
@@ -249,6 +260,8 @@ label v14s33:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
 
             if penelopers and v11s23_penelope_date:
                 jump v14s34
@@ -284,10 +297,11 @@ label v14s33:
             scene v14s33_3
             with dissolve
 
-            la "Not much, I just miss you. *Chuckles* I've been thinking about you all night..."
+            la "Not much, I just miss you. I've been thinking about you all night..."
 
             menu:
                 "Want me to come over?":
+                    $ add_point(KCT.BRO)
                     scene v14s33_3a
                     with dissolve
 
@@ -334,10 +348,11 @@ label v14s33:
 
             la "I'm in bed naked, all alone, and I'm thinking I should try to watch some porn and..."
 
-            la "*Chuckles* I don't know... See what it does for me?"
+            la "I don't know... See what it does for me?"
 
             menu:
                 "Laugh":
+                    $ add_point(KCT.BRO)
                     scene v14s33_3a
                     with dissolve
 
@@ -353,7 +368,7 @@ label v14s33:
                     scene v14s33_3a
                     with dissolve
 
-                    u "Well, be sure to tell me how it goes. *Chuckles*"
+                    u "Well, be sure to tell me how it goes."
 
                     scene v14s33_3
                     with dissolve
@@ -377,7 +392,7 @@ label v14s33:
                     scene v14s33_3a
                     with dissolve
 
-                    u "Will do. *Chuckles*"
+                    u "Will do."
 
                     play sound "sounds/rejectcall.mp3"
 
@@ -387,6 +402,8 @@ label v14s33:
                     u "(Lauren watching porn for the first time? Haha! I hope she didn't take that the wrong way... But, damn...)"
 
                     pause 0.75
+
+                    stop music fadeout 3
 
                     if penelopers and v11s23_penelope_date:
                         jump v14s34
@@ -403,7 +420,7 @@ label v14s33:
                     scene v14s33_3
                     with dissolve
 
-                    la "*Chuckles* We think a lot alike."
+                    la "We think a lot alike."
 
                     scene v14s33_3a
                     with dissolve
@@ -418,12 +435,12 @@ label v14s33:
                     scene v14s33_3a
                     with dissolve
 
-                    u "O-Oh! *Chuckles* Well shit, I guess I'll let you go handle your biz."
+                    u "O-Oh! Well shit, I guess I'll let you go handle your biz."
 
                     scene v14s33_3
                     with dissolve
 
-                    la "When we get together again, I wanna talk about it. *Chuckles*"
+                    la "When we get together again, I wanna talk about it."
 
                     scene v14s33_3a
                     with dissolve
@@ -445,6 +462,8 @@ label v14s33:
                     u "(Lauren is watching porn for the first time...)"
 
                     pause 0.75
+
+                    stop music fadeout 3
                     
                     if penelopers and v11s23_penelope_date:
                         jump v14s34

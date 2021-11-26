@@ -9,6 +9,8 @@ label v14s39:
 
     u "Some people would just rather not deal with the confrontation."
 
+    play music "music/v14/Track Scene 38.mp3" fadein 2
+
     scene v14s39_1
     with dissolve
 
@@ -56,6 +58,8 @@ label v14s39:
 
     menu:
         "I'd wait":
+            $ add_point(KCT.BOYFRIEND)
+            $ add_point(KCT.TROUBLEMAKER)
             $ v14s39_id_wait = True
             scene v14s39_1a
             with dissolve
@@ -87,7 +91,7 @@ label v14s39:
 
             pe "Oh, haha, sorry. I thought you meant- Well, you know what I thought."
 
-            pe "Discussing it at home sounds perfect. *Chuckles*"
+            pe "Discussing it at home sounds perfect."
 
             scene v14s39_2a # FPP. Same as v14s39_2, Penelope slight smile, mouth closed.
             with dissolve
@@ -107,13 +111,14 @@ label v14s39:
             scene v14s39_2
             with dissolve
 
-            pe "*Chuckles* You're naughty..."
+            pe "You're naughty..."
 
         "Hell yeah!":
+            $ add_point(KCT.BRO)
             scene v14s39_1a
             with dissolve
         
-            u "Hell yeah, I would. *Chuckles* I don't care what the reason is. I wouldn't just let you talk to me like that in front of everyone."
+            u "Hell yeah, I would. I don't care what the reason is. I wouldn't just let you talk to me like that in front of everyone."
 
             scene v14s39_2
             with dissolve
@@ -165,7 +170,7 @@ label v14s39:
 
     u "Okay, I'm this way."
 
-    if v14s37_focus_on_us or kct == "loyal":
+    if v14s37_focus_on_us or kct == "confident":
         if not v14s37_focus_on_us:
             call screen kct_popup
 
@@ -179,7 +184,7 @@ label v14s39:
         scene v14s39_4c # FPP. Same as v14s39_4b, Penelope nervous smile, mouth closed.
         with dissolve
 
-        u "What do you want, Penelope? *Chuckles* Just say the words."
+        u "What do you want, Penelope? Just say the words."
 
         scene v14s39_4b
         with dissolve
@@ -194,7 +199,7 @@ label v14s39:
         scene v14s39_4d # FPP. Same as v14s39_4c, Penelope's arms extended out holding MC's, Penelope slight smile, mouth closed.
         with dissolve
 
-        u "*Chuckles* Okay, sure. What do you wanna do?"
+        u "Okay, sure. What do you wanna do?"
 
         scene v14s39_4e # FPP. Same as v14s39_4c, Still holding hands, Penelope slight smile, mouth open.
         with dissolve
@@ -253,6 +258,10 @@ label v14s39:
         scene v14s39_7 # TPP. Show MC and Penelope holding hands and walking down the sidewalk towards Penelope's dorm, both slight smile, mouth closed.
         with dissolve
 
+        pause 0.75
+
+        stop music fadeout 3
+
         jump v14s42
 
     else:
@@ -292,7 +301,7 @@ label v14s39:
 
             pe "I mean..."
 
-            pe "Maybe we can try this again? Maybe with a little more planning or something? *Chuckles*"
+            pe "Maybe we can try this again? Maybe with a little more planning or something?"
 
             scene v14s39_4a
             with dissolve
@@ -320,10 +329,9 @@ label v14s39:
 
         u "(*Sighs* That was a rocky night.)"
 
-        scene v14s39_9
-        with dissolve
-
         pause 0.75
+
+        stop music fadeout 3
 
         if joinwolves:
             jump v14s40

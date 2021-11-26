@@ -9,6 +9,10 @@ init python:
 
 
     def add_point(var, value=1):
+        # Don't update kct if kct is locked
+        if locked_kct:
+            return
+
         # Update the KCT variables
         setattr(store, var.value, getattr(store, var.value) + value)
         

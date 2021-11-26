@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v14s13:
+    play music "music/v14/Track Scene 13.mp3" fadein 2
+
     scene v14s13_1 # TPP. Show MC walking into his room, neutral expression, mouth closed
     with dissolve
 
@@ -12,7 +14,7 @@ label v14s13:
     scene v14s13_2 # TPP. MCs back facing the camera, looking at his bed
     with dissolve
     
-    u "(Look at that beautiful bed... Oh, the things I'm gonna do to you.) *Chuckles*"
+    u "(Look at that beautiful bed... Oh, the things I'm gonna do to you.)"
 
     scene v14s13_3 # TPP. Show MC looking at his desk, slight smile, mouth closed, Sebastian opening the door behind him, shirtless, slight smile, mouth closed
     with dissolve
@@ -149,4 +151,5 @@ label v14s13:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s14

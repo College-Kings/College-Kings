@@ -9,6 +9,8 @@ label v14s31a:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 31a.mp3" fadein 2
+
     scene v14s31a_2 # FPP Show Cameron working out outside of Apes' house
     with dissolve
 
@@ -27,7 +29,7 @@ label v14s31a:
     scene v14s31a_3b # FPP Same as 3a, Cameron's mouth closed
     with dissolve
 
-    u "Couldn't have said it better myself. *Chuckles*"
+    u "Couldn't have said it better myself."
 
     scene v14s31a_3a
     with dissolve
@@ -37,7 +39,7 @@ label v14s31a:
     scene v14s31a_3c # FPP Same angle as 3, Cameron laughing with his eyes closed
     with dissolve
 
-    ca "Ah! Couldn't have said that better myself. *Chuckles*"
+    ca "Ah! Couldn't have said that better myself."
 
     scene v14s31a_3b
     with dissolve
@@ -175,32 +177,39 @@ label v14s31a:
 
     u "Damn, okay... I mean, shit..."
 
-    u "I did have something I wanted to talk to you about, but I was enjoying our bonding experience."
+    menu:
 
-    scene v14s31a_3f
-    with dissolve
+        "Butter him up":
+            $ add_point(KCT.BOYFRIEND)
+            u "I did have something I wanted to talk to you about, but I was enjoying our bonding experience."
 
-    ca "I take working out too seriously for anyone to enjoy working out with me. Let alone call it a \"bonding experience.\""
+            scene v14s31a_3f
+            with dissolve
 
-    scene v14s31a_3e
-    with dissolve
+            ca "I take working out too seriously for anyone to enjoy working out with me. Let alone call it a \"bonding experience.\""
 
-    u "Ta-fucking-da! Here I am."
+            scene v14s31a_3e
+            with dissolve
 
-    u "Maybe if you didn't assume that no one enjoyed you, you'd find out that they actually do."
+            u "Ta-fucking-da! Here I am."
 
-    scene v14s31a_3f
-    with dissolve
+            u "Maybe if you didn't assume that no one enjoyed you, you'd find out that they actually do."
 
-    ca "Yeah, yeah."
+            scene v14s31a_3f
+            with dissolve
 
-    scene v14s31a_3d
-    with dissolve
+            ca "Yeah, yeah."
 
-    ca "What do you want?"
+            scene v14s31a_3d
+            with dissolve
 
-    scene v14s31a_3e
-    with dissolve
+            ca "What do you want?"
+
+            scene v14s31a_3e
+            with dissolve
+
+        "Cut to the chase":
+            $ add_point(KCT.BRO)
 
     u "I wanna talk to you about what everyone is talking about."
 
@@ -282,7 +291,7 @@ label v14s31a:
     scene v14s31a_3e
     with dissolve
 
-    u "*Chuckles* Of course."
+    u "Of course."
 
     scene v14s31a_3h
     with dissolve
@@ -299,6 +308,7 @@ label v14s31a:
 
     menu:
         "So Lindsey doesn't win":
+            $ add_point(KCT.BOYFRIEND)
             u "Duh, so Lindsey doesn't win."
 
             scene v14s31a_3a
@@ -406,6 +416,7 @@ label v14s31a:
 
     menu:
         "Say Chloe is the hotter chick":
+            $ add_point(KCT.BRO)
             u "Tell everyone Chloe is the hotter chick and that the hottest chick should be the Chicks president."
 
             scene v14s31a_3a
@@ -414,6 +425,7 @@ label v14s31a:
             ca "Yeah... Again, that means nothing to me."
 
         "Collaboration":
+            $ add_point(KCT.BOYFRIEND)
             u "I don't know exactly, we haven't decided just yet."
 
             u "Maybe just some sort of collaborative post on Kiwii would get the ball rolling and make people start talking."
@@ -484,6 +496,7 @@ label v14s31a:
     scene v14s31a_3i
     with dissolve
 
+    $ set_presidency_percent(v14_lindsey_popularity - 1)
     ca "Fine. I'll talk to Grayson."
 
     scene v14s31a_5f # FPP Same angle as 5, Chloe looking at Cameron, she looks very excited, like she's bouncing, mouth open
@@ -657,5 +670,7 @@ label v14s31a:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s33

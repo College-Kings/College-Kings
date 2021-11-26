@@ -89,7 +89,7 @@ label v15s12:
 
         li "So, believe it or not, she has this master plan to get me absolutely hammered and then somehow get a recording of me saying something shitty about her and the Chicks."
 
-        scene v1v15s12_2e   # FPP. Same as v15s12_2d, but mouth open.
+        scene v15s12_2e   # FPP. Same as v15s12_2d, but mouth open.
         with dissolve
 
         u "What the fuck?"
@@ -206,7 +206,9 @@ label v15s12:
         # -event2 Not interested
         menu:
             "Tell me": # -if Tell me
-                # TODO - KCT and character points 
+                $ add_point(KCT.TROUBLEMAKER)# TODO - KCT and character points
+                $ chloe.points -= 1  
+                
                 scene v15s12_2d
                 with dissolve
                 
@@ -270,7 +272,9 @@ label v15s12:
                 li "No problem."
 
             "Not interested": # -if Not interested
-                # TODO: KCT and character points 
+                $ add_point(KCT.BOYFRIEND) # TODO: KCT and character points 
+                $ chloe.points += 1
+                
                 scene v15s12_2e
                 with dissolve
                 
@@ -317,14 +321,17 @@ label v15s12:
             # -event2 It's not that serious
             menu:                        
                 "It's pretty serious": # -if It's pretty serious (LindseyRS becomes LindseyFriend)
-                    # TODO KCT and character points 
+                    $ add_point(KCT.BOYFRINED) # TODO KCT and character points 
+                    $ chloe.points += 1
+                    $ lindsey.points -= 1
+
                     scene v15s12_2d
                     with dissolve
 
                     u "It's pretty serious between us, yeah. Chloe and I get along really well, and-"
 
                     # -Lindsey disappointed but then hides her pain behind a fake smile-
-                    scene v15s12_2l
+                    scene v15s12_2l   # FPP. Same as v15s12_2, but disappointed, fake smile, mouth open.
                     with dissolve
 
                     li "Great! That's so good. I'm really, really glad... Thanks for telling me."
@@ -357,7 +364,10 @@ label v15s12:
                     u "(Sighs... Well, it needed to happen eventually, I guess.)"                
 
                 "It's not that serious":  # -if It's not that serious
-                    # TODO: KCT and Character points
+                    $ add_point(KCT.TROUBLEMAKER) # TODO: KCT and Character points
+                    $ lindsey.points += 1
+                    $ chloe.points -= 1
+
                     scene v15s12_2d
                     with dissolve
 
@@ -378,7 +388,7 @@ label v15s12:
                     scene v15s12_2e
                     with dissolve
 
-                    # -MC needs to be losing Loyal KCT here because he's lying through his teeth :)-
+                    $ add_point(KCT.TROUBLEMAKER) # -MC needs to be losing Loyal KCT here because he's lying through his teeth :)-
                     
                     li "So... Do you have other people on your mind?"                
 
@@ -599,7 +609,7 @@ label v15s12:
     scene v15s12_12   # TPP. MC in the hallway looking down at his phone in his hand.
     with dissolve
 
-    $ riley.newMessage("Hey! I'm assuming you'll be at Lauren's birthday party later?")
+    $ riley.newMessage("Hey! I'm assuming you'll be at Lauren's birthday party later?", queue=False)
     $ riley.addReply("Yeah, I'll be there.")
     $ riley.newMessage("Cool. FYI, the stores are running low on costumes, you need to hurry up and buy one! Lol")
     $ riley.addReply("Ah, shit... You're right.")

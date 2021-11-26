@@ -10,11 +10,15 @@ label v14s34:
 
         u "(Hmm, I wonder if Penelope would be down for a little date night tonight. I'll give her a call.)"
 
+        play music "music/v14/Track Scene 34.mp3" fadein 2
+
     else:
         scene v14s34_3 # TPP. MC sitting on his bed in his Apes room, slight smile, mouth closed.
         with dissolve
 
         u "(Hmm, I wonder if Penelope would be down for a little date night tonight. I'll give her a call.)"
+
+        play music "music/v14/Track Scene 34.mp3" fadein 2
 
     $ jenny.messenger.newMessage(_("Hey [name], you busy right now?"), queue =False)
     $ jenny.messenger.addReply(_("Why, what's up?"))
@@ -46,6 +50,8 @@ label v14s34:
 
     menu:
         "Accept Jenny's invite":
+            $ add_point(KCT.TROUBLEMAKER)
+            $ add_point(KCT.BRO)
             $ jenny.messenger.addReply(_("Okay sure, where's this lagoon at?"))
             $ jenny.messenger.newImgMessage("images/v14/Scene 35/v14s35_lagoon_pic.webp") #Picture of the Lagoon, somehow with a location marker in the photo
             $ jenny.messenger.newMessage(_("See you soon!"))
@@ -57,10 +63,12 @@ label v14s34:
                     u "(I should reply to Jenny.)"
                     jump v14s34_PhoneContinue2
         
-        
+            stop music fadeout 3
+            
             jump v14s35_afterinvite
 
         "Decline Jenny's invite":
+            $ add_point(KCT.BOYFRIEND)
             $ jennyfriend = True
             $ jenny.messenger.addReply(_("Sorry, I was already planning to go out with Penelope tonight."))
             $ jenny.messenger.newMessage(_("Oh!"))
@@ -109,7 +117,15 @@ label v14s34:
     scene v14s34_5a # TPP. Same as v14s34_5, Penelope slight tired smile, mouth closed.
     with dissolve
 
-    u "Hey, princess. Did I wake you?"
+    menu:
+
+        "Hey Princess...":
+            $ add_point(KCT.BOYFRIEND)
+            u "Hey, princess. Did I wake you?"
+
+        "Hey Penelope...":
+            $ add_point(KCT.BRO)
+            u "Hey, Penelope. Did I wake you?"
 
     scene v14s34_6 # TPP. Penelope sitting up in her bed holding the phone to her ear, one of her boobs popping out of her shirt, slight smile, mouth open
     with dissolve
@@ -123,8 +139,7 @@ label v14s34:
     
     u "*Chuckles* Good, because I was thinking we could try going on that date we talked about in London."
 
-    #scene v14s34_7 # TPP. Penelope standing up on her bed with the phone to her ear, slight smile, mouth closed.
-    scene v14s34_6
+    scene v14s34_7 # TPP. Penelope standing up on her bed with the phone to her ear, slight smile, mouth closed.
     with dissolve
 
     pe "R-Right now?"
@@ -212,5 +227,7 @@ label v14s34:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s37

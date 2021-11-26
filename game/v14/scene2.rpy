@@ -4,6 +4,7 @@
 # Time: Night
 
 label v14s02:
+    play music "music/v14/Track Scene 2_1.mp3" fadein 2
     scene v14s02_1 # TPP. show mc in the hotel lobby and looking around everywhere, no expression, mouth closed
     with dissolve
 
@@ -32,17 +33,34 @@ label v14s02:
     scene v14s02_2a # FPP. imre slight smile mouth closed
     with dissolve
 
-    u "Not at all. *Chuckles*"
+    menu:
 
-    scene v14s02_2
-    with dissolve
+        "A little bit":
 
-    imre "Damnit! I'll get you one day, for sure."
+            $ add_point(KCT.BOYFRIEND)
+
+            u "Maybe a little bit."
+
+            scene v14s02_2
+            with dissolve
+
+            imre "Haha, I knew it."
+
+        "Not at all":
+
+            $ add_point(KCT.TROUBLEMAKER)
+
+            u "Not at all, bro."
+
+            scene v14s02_2
+            with dissolve
+
+            imre "Damnit! I'll get you one day, for sure."
 
     scene v14s02_2a
     with dissolve
 
-    u "Whatever you say, haha. What are you doing tonight?"
+    u "Haha, what are you doing tonight?"
 
     scene v14s02_2
     with dissolve
@@ -148,5 +166,7 @@ label v14s02:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s03
