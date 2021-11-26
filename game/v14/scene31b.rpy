@@ -449,7 +449,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v14/Track Scene 31b_3.mp3" fadein 2
+    play music "music/v14/Track Scene 1_1.mp3" fadein 2
 
     scene v14s31b_16b # FPP. Aubrey, Chloe, and Grayson are in a line in front of MC, who can only see the back of their heads, the edges of the room, and the dim colored lights.
     with dissolve
