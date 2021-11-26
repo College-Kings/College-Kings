@@ -216,7 +216,7 @@ label v15s17:
 
                 u "Ha... Good one."
 
-            elif MadAtMsRose
+            elif MadAtMsRose:
 
                 scene v15s17_4
                 with dissolve
@@ -513,7 +513,7 @@ label v15s17:
                                 u "The emerald is too beautiful to turn away from."
 
                             "Ruby choker necklace":
-                                $ Lauren Gift_2b = True
+                                $ Lauren_Gift_2b = True
 
                                 scene v15s17_11e # FPP. same v15s17_11b MC holds up Ruby choker necklace
                                 with dissolve
@@ -621,7 +621,7 @@ label v15s17:
                                 u "The emerald is too beautiful to turn away from."
 
                             "Ruby choker necklace":
-                                $ Lauren Gift_2b = True
+                                $ Lauren_Gift_2b = True
 
                                 scene v15s17_11e
                                 with dissolve
