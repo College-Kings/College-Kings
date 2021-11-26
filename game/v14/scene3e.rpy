@@ -4,6 +4,8 @@
 # Time: Night
 
 label v14s03e:
+    play music "music/v14/Track Scene 3e.mp3" fadein 2
+
     if v14_ryan_satin: 
         scene v14s03e_1 # TPP. Show MC standing outside of room, neutral expression, mouth closed 
         with fade
@@ -38,12 +40,27 @@ label v14s03e:
         scene v14s03e_3
         with dissolve
 
-        u "Oh, good to hear..."
+        menu: 
 
-        scene v14s03e_3b # FPP. Same as v14s03e_3, mouth open
-        with dissolve
+            "Good to hear":
+                $ add_point(KCT.BRO)
+                u "Oh, good to hear..."
 
-        ry "Damn right it's good! She said I was the best virgin she's ever had."
+                scene v14s03e_3b # FPP. Same as v14s03e_3, mouth open
+                with dissolve
+
+                ry "Damn right it's good!" 
+
+            "Oof, poor Satin.":
+                $ add_point(KCT.TROUBLEMAKER)
+                u "Oof, poor Satin, haha."
+
+                scene v14s03e_3b # FPP. Same as v14s03e_3, mouth open
+                with dissolve
+
+                ry "Oh shut up." 
+        
+        ry "She said I was the best virgin she's ever had."
 
         scene v14s03e_3
         with dissolve
@@ -94,7 +111,7 @@ label v14s03e:
         scene v14s03e_6
         with dissolve
 
-        u "Oh, my bad. *Chuckles* I was, you know... busy. You weren't?"
+        u "Oh, my bad. I was, you know... busy. You weren't?"
 
         scene v14s03e_6a
         with dissolve
@@ -104,17 +121,35 @@ label v14s03e:
         scene v14s03e_6
         with dissolve
 
-        u "I'm glad you did."
+        menu:
+            "I'm glad you waited":
+                $ add_point(KCT.BRO)
+                u "I'm glad you did."
 
-        scene v14s03e_6b
-        with dissolve
+                scene v14s03e_6b
+                with dissolve
 
-        ry "Ha... Why are you glad?"
+                ry "Ha... Why are you glad?"
 
-        scene v14s03e_6
-        with dissolve
+                scene v14s03e_6
+                with dissolve
 
-        u "That girl you were talking to... She had herpes."
+                u "That girl you were talking to... She had herpes."
+
+            "You should've done it":
+                $ add_point(KCT.TROUBLEMAKER)
+
+                u "I don't know man, I think you should've done it."
+
+                scene v14s03e_6b
+                with dissolve
+
+                ry "Shit, you really think so?"
+
+                scene v14s03e_6
+                with dissolve
+
+                u "Although, that girl did have herpes."
 
         scene v14s03e_6c # FPP. Same as v14s03e_6a, angry expression, mouth open 
         with dissolve
@@ -131,7 +166,7 @@ label v14s03e:
 
         u "Sorry bro, I wasn't thinking with my head..."
 
-        u "I was thinking with my... head. *Chuckles*"
+        u "I was thinking with my... head."
 
         scene v14s03e_6f # FPP. Same as v14s03e_6c, annoyed expression
         with dissolve
@@ -238,7 +273,7 @@ label v14s03e:
     scene v14s03e_8f # FPP. Same as v14s03e_8d, different posture
     with dissolve
 
-    imre "Guess you're not so bad after all. *Chuckles*"
+    imre "Guess you're not so bad after all."
 
     scene v14s03e_9
     with dissolve
@@ -285,7 +320,15 @@ label v14s03e:
     scene v14s03e_12
     with dissolve
 
-    u "What the fuck?!"
+    menu:
+
+        "Laugh":
+            $ add_point(KCT.TROUBLEMAKER)
+            u "*Laughs* Oh god."
+
+        "Get mad":
+            $ add_point(KCT.BRO)
+            u "What the fuck?!"
 
     u "So you set Imre up? I thought you two were finally getting along."
 
@@ -296,6 +339,7 @@ label v14s03e:
 
     menu:
         "Tell Imre":
+            
             scene v14s03e_12c # FPP. Same as v14s03e_12, serious expression
             with dissolve
             
@@ -372,22 +416,34 @@ label v14s03e:
     scene v14s03e_20a # FPP. Same as v14s03e_20, slight smile, mouth closed
     with dissolve
 
-    u "Not cool, Ryan."
+    menu:
+        "That was hilarious":
+            $ add_point(KCT.TROUBLEMAKER)
+            u "Haha, that was hilarious."
 
-    scene v14s03e_20
-    with dissolve
+            scene v14s03e_20
+            with dissolve
 
-    ry "How is weaving every punch he throws, \"not cool\"?"
+            ry "Right???"
 
-    scene v14s03e_20a
-    with dissolve
+        "Not cool, Ryan":
+            $ add_point(KCT.BOYFRIEND)
+            u "Not cool, Ryan."
 
-    u "*Sighs* That's not what I'm talking about, and you know it."
+            scene v14s03e_20
+            with dissolve
 
-    scene v14s03e_20b # FPP. Same as v14s03e_20, serious expression 
-    with dissolve
+            ry "How is weaving every punch he throws, \"not cool\"?"
 
-    ry "Ha, alright [name]. Chill out."
+            scene v14s03e_20a
+            with dissolve
+
+            u "*Sighs* That's not what I'm talking about, and you know it."
+
+            scene v14s03e_20b # FPP. Same as v14s03e_20, serious expression 
+            with dissolve
+
+            ry "Ha, alright [name]. Chill out."
 
     scene v14s03e_21 # TPP. Show MC and Ryan leaving the brothal, both neutral expression, mouth closed 
     with dissolve
@@ -404,4 +460,5 @@ label v14s03e:
     
     pause 0.75
 
+    stop music fadeout 3
     jump v14s04

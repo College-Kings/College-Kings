@@ -130,6 +130,7 @@ label v10_chloe_hallway:
                                 "Have a Rematch":
                                     $ add_point(KCT.BOYFRIEND)
                                     $ v10_chloe_rematch = True
+                                    
                                     $ grant_achievement("on_the_court")
 
                                     u "Yeah let's go."
@@ -279,6 +280,7 @@ label v10_chloe_hallway:
                 $ add_point(KCT.BOYFRIEND)
                 $ v10_chloe_rematch = True
                 $ chloeLike += 1
+                
                 $ grant_achievement("on_the_court")
 
                 u "Let's do it, but I won't be going easy on you."

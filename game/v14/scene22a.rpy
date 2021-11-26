@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v14s22a:
+    play music "music/v14/Track Scene 22a.mp3" fadein 2
+
     scene v14s22a_1 # FPP. show just lindsey, looking at mc, half smile, mouth open, hand up gesture
     with dissolve
 
@@ -24,15 +26,12 @@ label v14s22a:
 
     u "Welcome to the world of fame, baby! *Chuckles*"
 
-    scene v14s22a_1a
-    with dissolve
-
     u "Everyone knows who you are now, Lindsey. That's what you wanted, right?"
 
     scene v14s22a_1
     with dissolve
 
-    li "It's what I needed, yes. If you ask me what I wanted we'd be speaking of fantasies. *Chuckles*"
+    li "It's what I needed, yes. If you ask me what I wanted we'd be speaking of fantasies."
 
     scene v14s22a_1a
     with dissolve
@@ -57,7 +56,7 @@ label v14s22a:
     scene v14s22a_1a
     with dissolve
 
-    u "*Chuckles* You know I'm here for you though."
+    u "You know I'm here for you though."
 
     scene v14s22a_1
     with dissolve
@@ -65,6 +64,9 @@ label v14s22a:
     li "Yeah, I know that."
 
     play sound "sounds/vibrate.mp3"
+
+    u "*Phone vibrates*"
+    
     scene v14s22a_1b
     with dissolve
 
@@ -101,13 +103,14 @@ label v14s22a:
 
         u "(Oh, right, Chloe's on her way to the Wolves house. Need to rush now.)"
 
+        stop music fadeout 3
         jump v14s23
 
     else:
         scene v14s22a_1a
         with dissolve
 
-        u "Yeah, oh well. It can wait. *Chuckles*"
+        u "Yeah, oh well. It can wait."
 
         scene v14s22a_1
         with dissolve
@@ -134,4 +137,5 @@ label v14s22a:
 
         u "(Let's see who this is...)"
 
+        stop music fadeout 3
         jump v14s24

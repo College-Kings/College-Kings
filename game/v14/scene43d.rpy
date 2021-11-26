@@ -10,6 +10,8 @@ label v14s43d:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 43c.mp3" fadein 2
+
     scene v14s43d_2 # FPP. MC and Riley sitting across from each other. MC looking at Riley, Riley looking at MC, Riley slight smile, mouth open.
     with dissolve
 
@@ -79,7 +81,7 @@ label v14s43d:
     scene v14s43d_2a
     with dissolve
 
-    u "*Chuckles* Alright, well... What ideas did you have for the scene?"
+    u "Alright, well... What ideas did you have for the scene?"
 
     scene v14s43d_2
     with dissolve
@@ -203,10 +205,11 @@ label v14s43d:
     scene v14s43d_2
     with dissolve
 
-    ri "You couldn't tell? Obviously I wanna do a little sub/dom action. *Chuckles*"
+    ri "You couldn't tell? Obviously I wanna do a little sub/dom action."
 
     menu:
         "I'm dominant": # ;)
+            $ add_point(KCT.BRO)
             scene v14s43d_2
             with dissolve
 
@@ -215,9 +218,10 @@ label v14s43d:
             scene v14s43d_2b
             with dissolve
 
-            ri "Oh... You like taking control, huh? *Chuckles*"
+            ri "Oh... You like taking control, huh?"
 
         "I'm submissive": # ;O 
+            $ add_point(KCT.BOYFRIEND)
             scene v14s43d_2
             with dissolve
             
@@ -226,7 +230,7 @@ label v14s43d:
             scene v14s43d_2b
             with dissolve
 
-            ri "You like being told what to do, huh? *Chuckles*"
+            ri "You like being told what to do, huh?"
 
             scene v14s43d_2c
             with dissolve
@@ -234,7 +238,7 @@ label v14s43d:
             u "Haha. Umm..."
 
     if v13_FirstThreesome:
-        u "You already know the answer to that question, I think. *Chuckles*"
+        u "You already know the answer to that question, I think."
 
         scene v14s43d_3 # TPP. Show MC winking at Riley, Both slight smile, mouth closed.
         with dissolve
@@ -259,7 +263,7 @@ label v14s43d:
     scene v14s43d_2
     with dissolve
 
-    ri "*Chuckles* Good start."
+    ri "Good start."
 
     ri "Also, we'll have to include at least something about history so that we don't mess it up by giving Mr. Lee the chance to interrupt."
 
@@ -313,7 +317,8 @@ label v14s43d:
     scene v14s43d_4 # TPP. Show Riley walking out of the classroom, slight smile, mouth closed.
     with dissolve
 
-    u "(Should've known she'd choose to do the whole thing on a whim... As long as I get a passing grade, she can have as much fun as she wants with the class, haha.)"
+    u "(Should've known she'd choose to do the whole thing on a whim...)"
+    u "(As long as I get a passing grade, she can have as much fun as she wants with the class, haha.)"
 
     scene v14s43d_5 # TPP. Show MC walking outside of the Campus building, slight smile, mouth closed
     with fade
@@ -324,5 +329,7 @@ label v14s43d:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s44

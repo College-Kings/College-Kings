@@ -1,4 +1,11 @@
 label v11_start:
+
+    if path_builder and not pb_name_set:
+        $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
+        $ pb_name_set = True
+
+    show screen phoneIcon
+
     scene v11coc1 # FPP. Show entrance of college
     with fade
 
@@ -1226,6 +1233,7 @@ label v11_case_verdict:
 
             pe "Thanks again, bye."
     else:
+        $ v11_pen_goes_europe = False
         play music "music/v11/Scene 1/Track Scene 1_6.mp3" fadein 2
         scene v11coc12
         with dissolve

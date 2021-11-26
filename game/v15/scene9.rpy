@@ -460,11 +460,11 @@ label v15s9:
 
             $ lindsey.messenger.newMessage("24 hours is up! No interested buyers on the car... :(", queue=False)
             $ lindsey.messenger.addReply("Ugh, that sucks! I'm sorry", func=None)
-            $ lindsey.messenger.newMessage("It sucks big time! I think we messed up on the price...", queue=False)
+            $ lindsey.messenger.newMessage("It sucks big time! I think we messed up on the price...")
             $ lindsey.messenger.addReply("Can we change the price and list it again?", func=None)
-            $ lindsey.messenger.newMessage("I thought about it, but it costs way too much. Let's just move on.", queue=False)
+            $ lindsey.messenger.newMessage("I thought about it, but it costs way too much. Let's just move on.")
             $ lindsey.messenger.addReply("Fuck, okay. What's next?", func=None)
-            $ lindsey.messenger.newMessage("Meet me at the janitor's closet and you'll find out ;)", queue=False)
+            $ lindsey.messenger.newMessage("Meet me at the janitor's closet and you'll find out ;)")
 
             if lindseyfriend: #placeholder
                 $ lindsey.messenger.addReply("OMW", func=None)

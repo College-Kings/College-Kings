@@ -8,9 +8,13 @@ label v14s35:
         scene v14s35_1 # TPP. Show MC chilling on his phone in his wolves room, slight smile, mouth closed.
         with dissolve
 
+        pause 0.75
+
     else:
         scene v14s35_2 # TPP. Show MC chilling on his phone in his apes room, slight smile, mouth closed.
         with dissolve
+        
+        pause 0.75
 
     play sound "sounds/vibrate.mp3"
 
@@ -22,9 +26,6 @@ label v14s35:
     $ jenny.messenger.addReply(_("Okay sure, where's this lagoon at?"))
     $ jenny.messenger.newImgMessage("images/v14/Scene 35/v14s35_lagoon_pic.webp") #Picture of the Lagoon, somehow with a location marker in the photo
     $ jenny.messenger.newMessage(_("See you soon!"))
-
-    if False: ### just making sure it shows up on lint
-        scene v14s35_lagoon_pic
 
     label v14s35_PhoneContinue:
         if jenny.messenger.replies:
@@ -43,6 +44,8 @@ label v14s35_afterinvite:
         with dissolve
 
         pause 0.75
+
+        play music "music/v14/Track Scene 35.mp3" fadein 2
 
         scene v14s35_3a # TPP. Same as v14s35_3, MC pulling up his swimming trunks still slightly naked, slight smile, mouth closed
         with dissolve
@@ -63,6 +66,8 @@ label v14s35_afterinvite:
 
         pause 0.75
 
+        play music "music/v14/Track Scene 35.mp3" fadein 2
+
         scene v14s35_4a # TPP. Same as v14s35_4, MC pulling up his swimming trunks still slightly naked, slight smile, mouth closed
         with dissolve
 
@@ -79,5 +84,7 @@ label v14s35_afterinvite:
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s36

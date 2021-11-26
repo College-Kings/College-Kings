@@ -11,6 +11,8 @@ label v14s37:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 37_1.mp3" fadein 2
+
     scene v14s37_2 # TPP. Show MC spotting Penelope in the dress she put on in scene 34 outside of the restraunt and walking towards her, both slight smile, mouth closed.
     with dissolve
 
@@ -21,15 +23,41 @@ label v14s37:
 
     pause 0.75
 
-    scene v14s37_3 # FPP. MC and Penlope outside of the restaurant, Penelope looking at MC, MC looking at Penelope, Penelope slight smile, mouth closed.
-    with dissolve
+    menu:
+        "Greet":
+            scene v14s37_3
+            with dissolve
 
-    u "Hey, Penelope. You look stunning."
+            u "Hey, you."
 
-    scene v14s37_3a # FPP. Same as v14s37_3, Penelope slight smile, mouth open.
-    with dissolve
+            scene v14s37_3a
+            with dissolve
 
-    pe "*Chuckles* Thank you. You too. As always."
+            pe "Hey, handsome."
+
+        "Greet with a compliment":
+            $ add_point(KCT.BOYFRIEND)
+            $ penelope.points += 1
+
+            scene v14s37_3
+            with dissolve
+
+            u "Hello, gorgeous."
+
+            scene v14s37_3a
+            with dissolve
+
+            pe "Haha, hi."
+
+            scene v14s37_3
+            with dissolve
+
+            u "You seriously look amazing."
+
+            scene v14s37_3a
+            with dissolve
+
+            pe "*Chuckles* Thank you. You too. As always."
 
     scene v14s37_3
     with dissolve
@@ -39,7 +67,7 @@ label v14s37:
     scene v14s37_3a
     with dissolve
 
-    pe "If I'm being honest, I started getting dressed as soon as you called and got here as quickly as I could. *Chuckles*"
+    pe "If I'm being honest, I started getting dressed as soon as you called and got here as quickly as I could."
 
     scene v14s37_3
     with dissolve
@@ -65,6 +93,9 @@ label v14s37:
     with dissolve
 
     pe "*Chuckles*"
+
+    stop music fadeout 3
+    play music "music/v14/Track Scene 37_2.mp3" fadein 2
 
     scene v14s37_5 # FPP. MC and Penelope standing next to each other at the front reception of the restaurant, Camera facing the host, Host slight smile, mouth open
     with dissolve
@@ -129,7 +160,7 @@ label v14s37:
     scene v14s37_10a # FPP. Same as v14s37_10, Penelope looking at MC, MC looking at Penelope, Penelope slight smile, mouth open.
     with dissolve
 
-    pe "I'll be honest... I'm not hungry at all. *Chuckles*"
+    pe "I'll be honest... I'm not hungry at all."
 
     scene v14s37_10b # FPP. Same as v14s37_10a, Penelope slight smile, mouth closed.
     with dissolve
@@ -139,7 +170,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "I just really like this place! *Chuckles* Is it bad if I don't order anything?"
+    pe "I just really like this place! Is it bad if I don't order anything?"
 
     scene v14s37_10b
     with dissolve
@@ -159,7 +190,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "I'm a trendsetter, [name]. *Chuckles* You can still order whatever you want, though."
+    pe "I'm a trendsetter, [name]. You can still order whatever you want, though."
 
     scene v14s37_10b
     with dissolve
@@ -184,7 +215,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "Guess that makes two of us. *Chuckles*"
+    pe "Guess that makes two of us."
 
     scene v14s37_9d # FPP. Same as v14s37_9c, the host putting the glasses of water on the table for Penelope and MC.
     with dissolve
@@ -209,12 +240,12 @@ label v14s37:
     scene v14s37_9b
     with dissolve
 
-    host "*Chuckles* I know what you mean. You two just enjoy your evening and if you want anything, just give me a holler."
+    host "I know what you mean. You two just enjoy your evening and if you want anything, just let me know."
 
     scene v14s37_9a
     with dissolve
 
-    u "We will, thank you. *Chuckles*"
+    u "We will, thank you."
 
     scene v14s37_9c
     with dissolve
@@ -274,7 +305,7 @@ label v14s37:
     scene v14s37_15
     with dissolve
 
-    lady "For suck's sake, you're like a child. That'll be all for now."
+    lady "For fuck's sake, you're like a child. That'll be all for now."
 
     scene v14s37_14a # TPP. Same as v14s37_14, Gentleman looking at the lady (Lady off-camera), gentleman slight frown, mouth open.
     with dissolve
@@ -394,7 +425,7 @@ label v14s37:
             scene v14s37_10d
             with dissolve
 
-            u "*Chuckles* I'm sorry. I just... I thought of a cartoon I used to watch that had a hall monitor episode, and it made me-"
+            u "I'm sorry. I just... I thought of a cartoon I used to watch that had a hall monitor episode, and it made me-"
 
             scene v14s37_10f # FPP. Same as v14s37_10c, Penelope neutral face as she is unamused, mouth closed.
             with dissolve
@@ -502,7 +533,7 @@ label v14s37:
     scene v14s37_10b
     with dissolve
 
-    u "Definitely feels like we didn't miss a beat. *Chuckles* Classes, frat stuff, Julia across the country... Everything just picked right back up."
+    u "Definitely feels like we didn't miss a beat. Classes, frat stuff, Julia across the country... Everything just picked right back up."
 
     scene v14s37_10m # FPP. Same as v14s37_10a, Penelope confused worried face, mouth open.
     with dissolve
@@ -537,7 +568,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "It's kinda weird listening to how involved you are in everything and here I am with nothing to do. *Chuckles*"
+    pe "It's kinda weird listening to how involved you are in everything and here I am with nothing to do."
 
     scene v14s37_10b
     with dissolve
@@ -552,7 +583,7 @@ label v14s37:
     scene v14s37_10b
     with dissolve
 
-    u "No? *Chuckles*"
+    u "No?"
 
     scene v14s37_10a
     with dissolve
@@ -607,7 +638,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "Yeah, I do. It pays really fucking good and literally no one else has applied in the last two weeks that the posting has been up."
+    pe "Yeah, I do. It pays really good and literally no one else has applied in the last two weeks that the posting has been up."
 
     scene v14s37_10b
     with dissolve
@@ -632,7 +663,7 @@ label v14s37:
     scene v14s37_10b
     with dissolve
 
-    u "Say something, Penelope."
+    u "Why don't you say something to the board?"
 
     scene v14s37_10a
     with dissolve
@@ -647,7 +678,7 @@ label v14s37:
     scene v14s37_10a
     with dissolve
 
-    pe "Fun for you maybe. *Chuckles*"
+    pe "Fun for you maybe."
 
     scene v14s37_10b
     with dissolve
@@ -662,7 +693,7 @@ label v14s37:
     scene v14s37_10b
     with dissolve
 
-    u "Good. And if it fails, I will gladly come running to your defense. *Chuckles*"
+    u "Good. And if it fails, I will gladly come running to your defense."
 
     scene v14s37_17 # TPP. Shot of both Penelope and MC starting to lean over the table to kiss each other.
     with dissolve
@@ -695,7 +726,7 @@ label v14s37:
 
     lady "And that's also why you can't keep a fucking job, you're a loser!"
 
-    if v14s37_focus_on_us or kct == "loyal":
+    if v14s37_focus_on_us or kct == "confident":
         scene v14s37_10h
         with dissolve
 
@@ -730,6 +761,9 @@ label v14s37:
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
+        play music "music/v14/Track Scene 37_1.mp3" fadein 2
 
         scene v14s39_1 # FPP. MC and Penelope walking down the side walk, Penelope looking at MC, MC looking at Penelope, Penlope neutral face, mouth open.
         with fade
@@ -802,6 +836,9 @@ label v14s37:
 
         pause 0.75
 
+        stop music fadeout 3
+        play music "music/v14/Track Scene 37_1.mp3" fadein 2
+
         #scene v14s37_24 # FPP. MC and Penelope on the sidewalk, Penelope looking at MC, MC looking at Penelope, Penelope slight smile, mouth closed.
         scene v14s39_1a
         with fade
@@ -824,5 +861,7 @@ label v14s37:
         with dissolve
 
         pe "That woman was so terrible! How could that man just sit there and take all of her shit?"
+    
+    stop music fadeout 3
 
     jump v14s39

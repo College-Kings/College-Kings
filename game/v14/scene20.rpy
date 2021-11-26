@@ -4,6 +4,8 @@
 # Time: Tuesday
 
 label v14s20:
+    play music "music/v14/Track Scene 20.mp3" fadein 2
+
     scene v14s20_1 # FPP Show Autumn, in school hallway, handing out candy to people walking by, smiling with mouth open
     with dissolve
 
@@ -12,7 +14,7 @@ label v14s20:
     scene v14s20_1a # FPP Same angle as 1, someone taking candy and saying something to Autumn, Autumn responding, smiling with mouth open
     with dissolve
 
-    aut "*Chuckles* Thank you so much!"
+    aut "Thank you so much!"
 
     scene v14s20_2 # FPP Autumn seeing MC and jogging up to him, with a big smile
     with dissolve
@@ -37,7 +39,7 @@ label v14s20:
     scene v14s20_3c # FPP Same angle as 3, Autumn looks embarrassed, mouth open
     with dissolve
     
-    aut "*Chuckles* I'm not kidnapping you, haha."
+    aut "I'm not kidnapping you, haha."
 
     scene v14s20_3a
     with dissolve
@@ -77,7 +79,8 @@ label v14s20:
     scene v14s20_3
     with dissolve
 
-    aut "We didn't really. We just had some major exterior renovations and they also renamed the place. It took a few weeks and we wanted to have a little celebration day for the community."
+    aut "We didn't really. We just had some major exterior renovations and they also renamed the place."
+    aut "It took a few weeks and we wanted to have a little celebration day for the community."
 
     scene v14s20_3a
     with dissolve
@@ -97,13 +100,28 @@ label v14s20:
     scene v14s20_3a
     with dissolve
 
-    u "The trip was really nice."
+    menu:
 
-    scene v14s20_3e # FPP Same angle as 3, Autumn's eyebrow raised, mouth closed
-    with dissolve
+        "It was great":
+            $ add_point(KCT.BRO)
 
-    u "Drama filled, fun filled, boredom filled. A little dose of everything. *Chuckles*"
+            u "The trip was great."
 
+            scene v14s20_3e # FPP Same angle as 3, Autumn's eyebrow raised, mouth closed
+            with dissolve
+
+            u "Drama, fun and excitement. A little dose of everything."
+
+        "It was alright":
+            $ add_point(KCT.TROUBLEMAKER)
+
+            u "Yeah it was alright."
+
+            scene v14s20_3e # FPP Same angle as 3, Autumn's eyebrow raised, mouth closed
+            with dissolve
+
+            u "A lot of drama, but otherwise quite fun."
+    
     scene v14s20_3f # FPP Same as 3e, Autumn's mouth open
     with dissolve
 
@@ -117,7 +135,8 @@ label v14s20:
     scene v14s20_3f
     with dissolve
 
-    aut "I know my sister as the \"risk free, never do a bad thing, sweetheart.\" She's definitely loosened up since you guys returned and I'm sure Amber had much to do with that. *Laughs*"
+    aut "I know my sister as the \"risk free, never do a bad thing, sweetheart.\""
+    aut "She's definitely loosened up since you guys returned and I'm sure Amber had much to do with that. *Laughs*"
 
     scene v14s20_3a
     with dissolve
@@ -148,7 +167,7 @@ label v14s20:
         scene v14s20_3a
         with dissolve
 
-        u "*Chuckles* Not completely..."
+        u "Not completely..."
 
     elif laurenrs:
         scene v14s20_3f
@@ -173,7 +192,7 @@ label v14s20:
                 scene v14s20_3
                 with dissolve
 
-                aut "And to think I bumped into you first on day one... *Chuckles* Guess I found my sister's boyfriend for her."
+                aut "And to think I bumped into you first on day one... Guess I found my sister's boyfriend for her."
 
                 scene v14s20_3a
                 with dissolve
@@ -198,7 +217,7 @@ label v14s20:
                 scene v14s20_3
                 with dissolve
 
-                aut "Of course. *Chuckles*"
+                aut "Of course."
 
             "It's going great":
                 # -It's going great (Creates AutumnTrust)
@@ -233,7 +252,7 @@ label v14s20:
 
         u "That girl can give anyone a good time, but she's very influential. She knows how to..."
 
-        u "...lure other people to the dark side. *Chuckles* If you know what I mean."
+        u "...lure other people to the dark side. If you know what I mean."
 
         scene v14s20_3f
         with dissolve
@@ -248,7 +267,7 @@ label v14s20:
         scene v14s20_3
         with dissolve
 
-        aut "*Chuckles* I'm glad to hear that. But, I don't worry much about her anymore. She's become very independent since the start of the semester."
+        aut "I'm glad to hear that. But, I don't worry much about her anymore. She's become very independent since the start of the semester."
 
         scene v14s20_3a
         with dissolve
@@ -274,7 +293,7 @@ label v14s20:
     scene v14s20_3a
     with dissolve
 
-    u "*Chuckles* You two are nothing alike."
+    u "You two are nothing alike."
 
     scene v14s20_3d
     with dissolve
@@ -289,12 +308,12 @@ label v14s20:
     scene v14s20_3f
     with dissolve
 
-    aut "Well... maybe one of us is adopted? That would be the shock of the century. *Chuckles*"
+    aut "Well... maybe one of us is adopted? That would be the shock of the century."
 
     scene v14s20_3e
     with dissolve
 
-    u "Indeed it would. *Chuckles* Your parents would have some explaining to do..."
+    u "Indeed it would. Your parents would have some explaining to do..."
 
     scene v14s20_3
     with dissolve
@@ -304,7 +323,7 @@ label v14s20:
     scene v14s20_3a
     with dissolve
 
-    u "Hero? *Chuckles* His name was Hero?"
+    u "Hero? His name was Hero?"
 
     scene v14s20_3
     with dissolve
@@ -339,7 +358,7 @@ label v14s20:
     scene v14s20_3
     with dissolve
 
-    aut "I only tell good stories. *Chuckles*"
+    aut "I only tell good stories."
 
     scene v14s20_3a
     with dissolve
@@ -354,7 +373,7 @@ label v14s20:
     scene v14s20_3a
     with dissolve
 
-    u "I've literally never seen you with anyone. Besides Lauren. Maybe. *Chuckles*"
+    u "I've literally never seen you with anyone. Besides Lauren. Maybe."
 
     scene v14s20_3g
     with dissolve
@@ -399,7 +418,7 @@ label v14s20:
     scene v14s20_3
     with dissolve
 
-    aut "*Chuckles* Thanks."
+    aut "Thanks."
 
     scene v14s20_3f
     with dissolve
@@ -409,7 +428,7 @@ label v14s20:
     scene v14s20_3e
     with dissolve
 
-    u "With me being close as I am to Lauren, yeah. It is a bit odd, isn't it? *Chuckles*"
+    u "With me being close as I am to Lauren, yeah. It is a bit odd, isn't it?"
 
     scene v14s20_3f
     with dissolve
@@ -421,17 +440,18 @@ label v14s20:
 
     menu:
         "We should hang out more":
-            u "We should just hang out more. *Laughs*"
+            $ add_point(KCT.TROUBLEMAKER)
+            u "We should just hang out more. *Chuckles*"
 
             scene v14s20_3
             with dissolve
 
-            aut "*Chuckles* You think so?"
+            aut "You think so?"
 
             scene v14s20_3a
             with dissolve
 
-            u "Yeah, I do. *Chuckles*"
+            u "Yeah, I do."
 
             scene v14s20_4 # TPP Autumn makes eye contact with MC, Autumn's mouth closed
             with dissolve
@@ -451,7 +471,7 @@ label v14s20:
             scene v14s20_3a
             with dissolve
 
-            u "I'll be waiting by the phone. *Chuckles*"
+            u "I'll be waiting by the phone."
 
             scene v14s20_3
             with dissolve
@@ -468,29 +488,28 @@ label v14s20:
 
             pause 0.75
 
-        "It was nice catching up":
-            u "It was really nice catching up with you, but I actually need to hurry. I've got this thing..."
-
             scene v14s20_3a
             with dissolve
 
-            aut "Oh, right, yeah! Don't let me make you late, go ahead. *Chuckles*"
+            u "Yeah, see ya."
+
+        "It was nice catching up":
+            $ add_point(KCT.BOYFRIEND)
+            u "It was really nice catching up with you, but I actually need to hurry. I've got this thing..."
 
             scene v14s20_3
             with dissolve
 
+            aut "Oh, right, yeah! Don't let me make you late, go ahead."
+
+            scene v14s20_3a
+            with dissolve
+
             u "*Chuckles* Thanks."
 
+            u "Yeah, see ya."
+
     # -Regardless of everything scene continued
-    scene v14s20_3
-    with dissolve
-
-    aut "So, I'll see you around?"
-
-    scene v14s20_3a
-    with dissolve
-
-    u "Yeah, see ya. *Chuckles*"
 
     scene v14s20_5 # FPP Show Autumn walking off down the hall toward more people
     with dissolve
@@ -502,6 +521,7 @@ label v14s20:
 
     pause 0.75
 
+    stop music fadeout 3
     # -Transition to Scene 21 if chloers/gf and Talk to Chris for Chloe-
     if (chloers or chloegf) and v14_talk_to_chris: # ADD TALK TO CHRIS VARIABLE TO SCENE 19a
         jump v14s21

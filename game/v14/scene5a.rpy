@@ -4,6 +4,8 @@
 # Time: Night
 
 label v14s05a:
+    play music "music/v14/Track Scene 5.mp3" fadein 2
+
     play sound "sounds/dooropen.mp3"
     pause 0.51
 
@@ -49,12 +51,12 @@ label v14s05a:
         scene v14s05a_7 # FPP. Riley just beside MC on her bedside sitting up straight, slight smile, mouth open
         with dissolve
 
-        ri "It was a crazy day too. *Chuckles*"
+        ri "It was a crazy day too."
 
         scene v14s05a_7a # FPP. Same as v14s05a_7, mouth closed
         with dissolve
 
-        u "That was definitely unexpected, but well appreciated of course. *Chuckles*"
+        u "That was definitely unexpected, but well appreciated of course."
 
         scene v14s05a_7
         with dissolve
@@ -144,7 +146,7 @@ label v14s05a:
         scene v14s05a_13
         with dissolve
 
-        u "*Chuckles* Goodnight Riley."
+        u "Goodnight Riley."
 
         scene v14s05a_13a
         with dissolve
@@ -199,12 +201,22 @@ label v14s05a:
         scene v14s05a_7a
         with dissolve
 
-        u "Okay, then... I wanna know how that goes. *Chuckles*"
+        menu:
+            "I think you should":
+                $ v14s5a_riley_should_join_chicks = True
+                $ add_point(KCT.BRO)
+
+                u "I think you should. You'd really fit in there."
+
+            "You sure it's for you?":
+                $ add_point(KCT.BOYFRIEND)
+
+                u "Hmm, are you sure it's for you?"
 
         scene v14s05a_7b
         with dissolve
 
-        ri "I'll keep you posted but for now, I'm going to sleep."
+        ri "I guess. I really don't know yet, to be honest. For now, I'm going to sleep."
 
         scene v14s05a_12
         with dissolve
@@ -233,12 +245,20 @@ label v14s05a:
 
         menu: 
             "Help Chloe":
+                if chloegf:
+                    $ add_point(KCT.BOYFRIEND)
+                elif v12_lindsey_sex:
+                    $ add_point(KCT.TROUBLEMAKER)
                 scene v14s05a_13
                 with dissolve
 
                 u "Well, I'd support Chloe."
 
             "Help Lindsey":
+                if v12_lindsey_sex:
+                    $ add_point(KCT.BOYFRIEND)
+                elif chloegf:
+                    $ add_point(KCT.TROUBLEMAKER)
                 scene v14s05a_13
                 with dissolve
 
@@ -274,4 +294,5 @@ label v14s05a:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s06

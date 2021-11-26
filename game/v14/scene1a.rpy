@@ -4,10 +4,14 @@
 # Time: Night
 
 label v14s01a:
+    play music "music/v14/Track Scene 1a_1.mp3" fadein 2
+
     scene v14s01a_1 # TPP. Same positioning as v13s62a_10a, MC moving in for a kiss on Lindsey (not kissing yet), Lindsey smiling, mouth closed
     with dissolve
 
     pause
+
+    call screen VoiceActing_Toggle()
 
     scene v14s01a_1a # TPP. Same as v14s01a_1, Lindsey putting a finger on MC's lips (as if telling him to be quiet), MC confused, mouth closed, Lindsey smiling, mouth open
     with dissolve
@@ -19,8 +23,11 @@ label v14s01a:
 
     u "Huh?"
 
+    stop music fadeout 3
+    play music "music/v14/Track Scene 1a_2.mp3" fadein 2
+
     scene v14s01a_2 # TPP. Show MC startled, waking up (still night time), he is laying on his bed, mouth open
-    with dissolve
+    with flash
 
     u "What the- holy shit...!"
 
@@ -30,7 +37,7 @@ label v14s01a:
     u "(A fucking dream?! Ugh! I need to get up and do something. I can't sleep right now, I don't care what time it is.)"
 
     scene v14s01a_4 # TPP. Show MC leaving the hotel room door, slightly annoyed, mouth closed
-    with dissolve
+    with fade
 
     u "(No more dreaming for me.)"
 
@@ -43,5 +50,7 @@ label v14s01a:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s02

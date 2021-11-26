@@ -4,6 +4,9 @@
 # Time: Night 
 
 label v14s03c:
+    play music "music/v14/Track Scene 3c.mp3" fadein 2
+    $ v14s03c_music = True
+
     scene v14s03c_1 # TPP. Show MC walking in the Brothel bar, slight smile, mouth open.
     with dissolve
 
@@ -37,7 +40,7 @@ label v14s03c:
     scene v14s03c_3
     with dissolve
 
-    madame "I'll be right back with your drinks. *Chuckles*"
+    madame "I'll be right back with your drinks."
 
     scene v14s03c_3a
     with dissolve
@@ -87,7 +90,7 @@ label v14s03c:
     scene v14s03c_4e # FPP. Same as v14s03c_4c, Satin slight smile, mouth open.
     with dissolve
 
-    satin "A guy in a place like this, is asking a girl if she's okay? That's a first. *Chuckles*"
+    satin "A guy in a place like this, is asking a girl if she's okay? That's a first..."
 
     scene v14s03c_4f # FPP. Same as v14s03c_4c, Satin slight smile, mouth closed
     with dissolve
@@ -112,12 +115,26 @@ label v14s03c:
     scene v14s03c_4f
     with dissolve
 
-    u "Good genes. *Chuckles*"
+    menu:
+        "Good genes":
+            $ add_point(KCT.BRO)
 
-    scene v14s03c_4e
-    with dissolve
+            u "Good genes. *Chuckles*"
 
-    satin "Same here. *Chuckles*"
+            scene v14s03c_4e
+            with dissolve
+
+            satin "Same here."
+
+        "My friends dragged me here":
+            $ add_point(KCT.BOYFRIEND)
+
+            u "My friends dragged me in here."
+
+            scene v14s03c_4e
+            with dissolve
+
+            satin "Haha, right."
 
     satin "So, what are you doing here at the bar all alone?"
 
@@ -126,7 +143,7 @@ label v14s03c:
 
     u "I came here with two of my buddies, actually."
 
-    u "One is off having a little fun somewhere else, or at least I hope... *Chuckles* And the other is hitting it off with that girl right... there."
+    u "One is off having a little fun somewhere else, or at least I hope... And the other is hitting it off with that girl right... there."
 
     scene v14s03c_5 # FPP. MC looking off past the bar pointing over at Ryan and Emerald, Ryan and Emerald both slight smile, mouth closed.
     with dissolve
@@ -151,7 +168,8 @@ label v14s03c:
     scene v14s03c_4f
     with dissolve
 
-    u "Well, it's actually the last pitstop of our vacation. My friend Imre is a jack rabbit, but Ryan over there is a virgin. Something I found out minutes ago, actually."
+    u "Well, it's actually the last pitstop of our vacation."
+    u "My friend Imre is a jack rabbit, but Ryan over there is a virgin. Something I found out minutes ago, actually."
 
     scene v14s03c_4e
     with dissolve
@@ -198,22 +216,29 @@ label v14s03c:
     scene v14s03c_4h # FPP. Same as v14s03c_4e, Satin different pose, slight smile, mouth open.
     with dissolve
 
-    satin "I like you, good genes. *Chuckles* You're not like most of the guys that walk in here."
+    satin "I like you. You're not like most of the guys that walk in here."
 
     scene v14s03c_4i # FPP. Same as v14s03c_4f, Satin different pose, slight smile, mouth closed.
     with dissolve
 
-    u "I try to be a little different. *Chuckles*"
+    u "I try to be a little different."
 
     scene v14s03c_4h
     with dissolve
 
-    satin "I'm curious though, did you come here looking for an escort?"
+    satin "I'm curious though, are you looking for an escort?"
 
     scene v14s03c_4i
     with dissolve
 
-    u "Oh, no. I don't have that kind of money."
+    menu:
+        "Yes, kinda":
+            $ add_point(KCT.BRO)
+            u "Yeah, but I don't have that kind of money."
+
+        "No, not really":
+            $ add_point(KCT.BOYFRIEND)
+            u "Oh, no. I don't have that kind of money."
 
     scene v14s03c_4h
     with dissolve
@@ -247,7 +272,7 @@ label v14s03c:
     scene v14s03c_4i
     with dissolve
 
-    u "Fair point. *Chuckles*"
+    u "Fair point."
 
     scene v14s03c_4e
     with dissolve
@@ -280,6 +305,9 @@ label v14s03c:
         "Go with her":
             $ v14_satin_sex = True
             label v14s03c_sg:
+            
+            if not v14s03c_music:
+                play music "music/v14/Track Scene 3c.mp3" fadein 2
         
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -301,13 +329,14 @@ label v14s03c:
             scene v14s03c_4l # FPP. Same as v14s03c_4k, Satin holding MC's hand, Satin flirting smile, mouth open.
             with dissolve
 
-            satin "Then follow me. *Chuckles*"
+            satin "Then follow me."
 
             scene v14s03c_6 # TPP. Show Satin holding MC's hand leading him towards the private booth, both slight smile, mouth closed.
             with dissolve
 
             pause 0.75
 
+            stop music fadeout 3
             jump v14s03d
            
         "Help Ryan":
@@ -354,11 +383,12 @@ label v14s03c:
             scene v14s03c_5d # FPP. Same as v14s03c_5c, Satin leading Ryan towards the private booth, Ryan excited expression looking at MC, mouth closed, Satin slight smile, mouth closed, Emerald sad expression, mouth closed.
             with dissolve
 
-            u "*Sighs* (I'll try to sit here and not be jealous.)"
+            u "(Can't believe I'm doing this for Ryan.)"
 
             scene v14s03c_3b
             with dissolve
 
             pause 0.75
 
+            stop music fadeout 3
             jump v14s03e

@@ -4,14 +4,13 @@
 # Time: Afternoon
 
 label v14s10:
+    play music "music/v14/Track Scene 10.mp3" fadein 2
+
     scene v14s10_1 # TPP. Show the plane taking off
     with fade
 
     pause 0.75
 
-    call screen v14_status
-
-label v14s10_continuation:
     scene v14s10_2 # TPP. Show MC and Riley sitting next to each other, Riley asleep on MC's shoulder, MC smiling, both mouths closed
     with dissolve
 
@@ -32,4 +31,5 @@ label v14s10_continuation:
 
     pause 1.5
 
+    stop music fadeout 3
     jump v14s11

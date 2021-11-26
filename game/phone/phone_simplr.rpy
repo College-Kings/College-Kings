@@ -15,11 +15,10 @@ init python:
             self.name = name
             self.condition = condition
 
-            self.profile_picture = os.path.join(contacts_file_path, name.lower(), "{}_profile_picture".format(name.lower()))
-            
-            self.large_profile_pictures = []
+            self.profile_picture = "images/nonplayable_characters/{0}/{0}_profile_picture.webp".format(name.lower())
+
             for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, name.lower(), "large_profile_pictures")):
-                self.large_profile_pictures.extend([os.path.join(dirpath, filename) for filename in filenames])
+                self.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(name.lower(), filename) for filename in filenames]
 
             self.sentMessages = []
             self.pendingMessages = []
@@ -149,10 +148,8 @@ screen simplr_app():
                     action Show("simplr_contacts")
 
             # Profile Picture
-            if (simplr_contact is not None) and (hasattr(simplr_contact, "profile_picture_large")):
-                add Transform(simplr_contact.profile_picture_large[0], size=(362, 585)) align (0.5, 0.5)
-            elif simplr_contact is not None:
-                add Transform(simplr_contact.profilePictureLarge, size=(362, 585)) align (0.5, 0.5)
+            if simplr_contact is not None:
+                add Transform(simplr_contact.large_profile_pictures[0], size=(362, 585)) align (0.5, 0.5)
 
             # Bottom UI
             hbox:
@@ -164,14 +161,14 @@ screen simplr_app():
                     yalign 0.5
                     idle "images/phone/simplr/appAssets/yesButton.webp"
                     hover "images/phone/simplr/appAssets/yesButtonHover.webp"
-                    if simplr_contact:
+                    if simplr_contact is not None:
                         action Function(simplr_contact.likedContact)
 
                 imagebutton:
                     yalign 0.5
                     idle "images/phone/simplr/appAssets/noButton.webp"
                     hover "images/phone/simplr/appAssets/noButtonHover.webp"
-                    if simplr_contact:
+                    if simplr_contact is not None:
                         action Function(simplr_contact.removeContact)
 
 
@@ -291,13 +288,13 @@ screen simplr_reply(contact=None):
             if isinstance(reply, Reply):
                 textbutton reply.message:
                     style "replies_style"
-                    action [Hide("reply"), Function(contact.selectedReply, reply)]
+                    action [Hide("simplr_reply"), Function(contact.selectedReply, reply)]
 
             elif isinstance(reply, ImgReply):
                 imagebutton:
                     idle Transform(reply.image, zoom=0.15)
                     style "replies_style"
-                    action [Hide("reply"), Function(contact.selectedReply, reply)]
+                    action [Hide("simplr_reply"), Function(contact.selectedReply, reply)]
 
 
 screen simplr_image(img=None):

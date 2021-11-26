@@ -4,6 +4,7 @@
 # Time: Evening
 
 label v14s46a:
+    play music "music/v14/Track Scene 46a_1.mp3" fadein 2
     scene v14s46a_1 # TPP. MC knocking on Lauren's door.
     with dissolve
 
@@ -17,7 +18,7 @@ label v14s46a:
     scene v14s46a_1b # FPP. Same as v14s46a_1a, but Lauren's mouth closed.
     with dissolve
 
-    u "Hello, Dr. Lauren. I'm here for my hypnosis appointment. *Chuckles*"
+    u "Hello, Dr. Lauren. I'm here for my hypnosis appointment."
 
     scene v14s46a_1a
     with dissolve
@@ -59,7 +60,7 @@ label v14s46a:
         scene v14s46a_4
         with dissolve
 
-        la "*Chuckles* We'll see about that..."
+        la "We'll see about that..."
 
     scene v14s46a_4a
     with dissolve
@@ -74,7 +75,13 @@ label v14s46a:
     scene v14s46a_4a
     with dissolve
 
-    u "*Chuckles* It's fine, I'm just teasing."
+    u "It's fine, I'm just teasing."
+
+    if laurenrs:
+        label v14s46a_sga:
+        
+    else:
+        label v14s46a_sgb:
 
     scene v14s46a_5 # TPP. MC lays on Lauren bed.
     with dissolve
@@ -94,7 +101,7 @@ label v14s46a:
     scene v14s46a_6a # TPP. Same as v14s46a_6 except MC, eyes closed, relaxed smile.
     with dissolve
 
-    la "*Speaking softly* Let's start by getting nice and relaxed with some breathing exercises."
+    la "*Softly* Let's start by getting nice and relaxed with some breathing exercises."
 
     scene v14s46a_7 # FPP. Lauren, smiling, mouth open.
     with dissolve
@@ -109,7 +116,7 @@ label v14s46a:
     scene v14s46a_7
     with dissolve
 
-    la "*Speaking softly* Hold it for 2 seconds..."
+    la "*Softly* Hold it for 2 seconds..."
 
     scene v14s46a_6b
     with dissolve
@@ -145,7 +152,7 @@ label v14s46a:
     scene v14s46a_6a
     with dissolve
 
-    la "*Speaking softly* And again. Breathe in... breathe out... in... out..."
+    la "*Softly* And again. Breathe in... breathe out... in... out..."
 
     scene v14s46a_6b
     with dissolve
@@ -155,19 +162,19 @@ label v14s46a:
     scene v14s46a_7
     with dissolve
 
-    la "*Speaking softly* You are now falling into deep relaxation..."
+    la "*Softly* You are now falling into deep relaxation..."
 
     scene v14s46a_6a
     with dissolve
 
-    la "*Speaking softly* Falling deeper and deeper..."
+    la "*Softly* Falling deeper and deeper..."
 
-    la "*Speaking softly* As you listen to the sound of my voice..."
+    la "*Softly* As you listen to the sound of my voice..."
 
     scene v14s46a_7
     with dissolve
 
-    la "*Speaking softly* My voice is all you can hear as you sink deeper and deeper... into a peaceful... pleasant... relaxing state."
+    la "*Softly* My voice is all you can hear as you sink deeper and deeper... into a peaceful... pleasant... relaxing state."
 
     scene v14s46a_6e # TPP. Same as v14s46a_6b, but MC laughing, eyes open, mouth open.
     with dissolve
@@ -186,26 +193,31 @@ label v14s46a:
 
     u "I'll try again."
 
+    stop music fadeout 3
+
     if laurenrs:
-        pass #  replace with -LaurenGF plays some incredibly calming meditation music with an ocean gently lapping from her phone or radio.
+        play music "music/v14/Track Scene 46a_2.mp3" fadein 2
+        #  replace with -LaurenGF plays some incredibly calming meditation music with an ocean gently lapping from her phone or radio.
      
     else: 
-        pass # replace with -LaurenFriend plays some incredibly calming meditation music with birds singing in the background from her phone or radio.
+        play music "music/v14/Track Scene 46a_3.mp3" fadein 2
+        # replace with -LaurenFriend plays some incredibly calming meditation music with birds singing in the background from her phone or radio.
 
     scene v14s46a_7
     with dissolve
 
-    la "*Speaking softly* You are starting to feel relaxed... You are feeling safe... And completely comfortable."
+    la "*Softly* You are starting to feel relaxed... You are feeling safe... And completely comfortable."
 
     scene v14s46a_8 # FPP. MC's perspective, head turned looking at Lauren, who is smiling, mouth open.
     with dissolve
 
-    la "*Speaking softly* As you drift off into a deep and pleasant state of relaxation, deeper and deeper... Listening and feeling the gentle caress of the natural elements around you."
+    la "*Softly* As you drift off into a deep and pleasant state of relaxation, deeper and deeper..."
+    la "*Softly* Listening and feeling the gentle caress of the natural elements around you."
 
     scene v14s46a_8a # FPP. Same as v14s46a_8, but Photoshop MC's vision closing his eyes 1/4 (simulate getting drowsy).
     with dissolve
 
-    la "*Speaking softly* The longer you listen to my voice, the deeper you sink into pure relaxation."
+    la "*Softly* The longer you listen to my voice, the deeper you sink into pure relaxation."
 
     scene v14s46a_8b # FPP. Same as v14s46a_8a, but Photoshop MC's vision closing his eyes 1/2.
     with dissolve
@@ -215,7 +227,7 @@ label v14s46a:
     scene v14s46a_8c # FPP. Same as v14s46a_8b, but Photoshop MC's vision closing his eyes 3/4
     with dissolve
 
-    la "*Speaking softly* Deeper and deeper..."
+    la "*Softly* Deeper and deeper..."
 
     la "*Whispers* More relaxed than you've ever felt before."
 
@@ -228,24 +240,25 @@ label v14s46a:
         scene v14s46a_7
         with dissolve
 
-        la "*Speaking softly* You are now walking along a beach. It's the most beautiful day. So sunny and warm, you can feel the light dancing on your skin."
+        la "*Softly* You are now walking along a beach. It's the most beautiful day. So sunny and warm, you can feel the light dancing on your skin."
 
-        la "*Speaking softly* The sand between your toes is soft to the touch and feels like a freshly dried blanket. You're calm. You're relaxed."
+        la "*Softly* The sand between your toes is soft to the touch and feels like a freshly dried blanket. You're calm... you're relaxed..."
 
         scene v14s46a_6a
         with dissolve
 
-        la "*Speaking softly* You've never felt this relaxed before... You're the happiest you've ever been."
+        la "*Softly* You've never felt this relaxed before... You're the happiest you've ever been."
 
         scene v14s46a_8d
         with dissolve
 
         u "(Zzzz...) *Heavy breathing*"
 
+        show screen fantasyOverlay
         scene v14s46a_9 # TPP. MC, wearing swim trunks, walking along a sandy beach, smiling.
         with dissolve
         
-        la "*Speaking softly* There's a girl in a bikini, laying on a beach towel. Do you see her?"
+        la "*Softly* There's a girl in a bikini, laying on a beach towel. Do you see her?"
 
         scene v14s46a_9a # TPP. Same as v14s46a_9, but MC looking left (as if searching for someone).
         with dissolve
@@ -272,17 +285,21 @@ label v14s46a:
         scene v14s46a_11 # TPP. MC, back to camera, walking towards Dream Girl, who is laying on her stomach on a towel on the beach with sun tan lotion.
         with dissolve
 
-        pause 0.75
+        pause 1.5
 
         scene v14s46a_12 # FPP. MC looking down at Dream Girl, laying on her stomach, sun tan lotion by her head, hair pulled to the side, tan body, bikini top untied showing a generous view of side boob.
         with dissolve
 
-        pause 0.75
+        pause 1.5
 
         scene v14s46a_13 # TPP. MC smiling, sitting behind dream girl, rubbing lotion on her back. Dream Girl, smiling, eyes closed.
         with dissolve
 
-        la "*Speaking softly* As you rub the lotion into her back, she removes her bikini top and turns around to face you. She's now asking you to massage the lotion into her breasts."
+        la "*Softly* As you rub the lotion into her back, she removes her bikini top and turns around to face you."
+        la "*Softly* She's now asking you to massage the lotion into her breasts."
+
+        if config_censored:
+            call screen censoredPopup("v14s46_nsfwSkipLabel1")
 
         scene v14s46a_14 # FPP. MC looking down at Dream Girl, eyes open, smiling sexy, laying on her back, breasts fully exposed, holding the bottle of lotion towards her breasts.
         with dissolve
@@ -292,7 +309,7 @@ label v14s46a:
         scene v14s46a_15 # FPP. MC looking down at Dream Girl, eyes closed, smiling sexy, hands to her side while MC's hands cup her breasts as if he's rubbing lotion on them (keep the nipples visible).
         with dissolve
 
-        la "*Speaking softly* Rubbing into her soft skin you can feel her nipples, getting excited by your touch."
+        la "*Softly* Rubbing into her soft skin you can feel her nipples, getting excited by your touch."
 
         scene v14s46a_16 # FPP. Close up on Dream Girl's nipple(s) showing the nipples slightly raised.
         with dissolve
@@ -309,10 +326,10 @@ label v14s46a:
 
         pause 0.75
 
-        scene v14s46a_17 # FPP. Close up of Dream Girl's hand feeling MC's dick that is bulging in his swim trunks.        
+        scene v14s46a_17 # FPP. Close up of Dream Girl's hand feeling MC's dick that is bulging in his swim trunks. 
         with dissolve
 
-        la "*Speaking softly* She feels your... pulsing cock. *Embarrassed giggle* It's hard. Your swim trunks feel like they're about to burst at the seams..."
+        la "*Softly* She feels your... pulsing cock. *Embarrassed giggle* It's hard. Your swim trunks feel like they're about to burst at the seams..."
 
         scene v14s46a_17a # FPP. Same as v14s46a_17, but slightly different hand position (as if Dream girl is rubbing MC's cock). 
         with dissolve
@@ -332,15 +349,23 @@ label v14s46a:
         scene v14s46a_18b # TPP. Same as v14s46a_18a, but Dream Girl's mouth all the way down on MC's erect cock.
         with dissolve
 
-        la "*Speaking softly* She slowly pulls them down and immediately takes your full, throbbing member in her mouth. She starts to suck on it, her soft lips hugging every inch of you. Sucking and sucking and sucking until–"
+        la "*Softly* She slowly pulls them down and immediately takes your full, throbbing member in her mouth."
+        la "*Softly* She starts to suck on it, her soft lips hugging every inch of you. Sucking and sucking and sucking until–"
 
         scene v14s46a_18c # FPP. Same as v14s46a_18b, but different camera angle (from MC's perspective looking down at her sucking his cock.)
         with vpunch
 
         u "*Moans* Fuck..."
 
+        label v14s46_nsfwSkipLabel1:
+
         la "*Laughs* Oh my God. I'm so sorry, I didn't think you'd-"
 
+        hide screen fantasyOverlay
+
+        stop music fadeout 3
+
+        play music "music/v14/Track Scene 46a_4.mp3" fadein 2
         scene v14s46a_6g # TPP. Same as v14s46a_6, but MC, mouth open, shocked, sitting up in bed (legs remain out), looking down at the large wet spot in the crotch of his pants, Lauren sitting next to him, look at his wet spt, laughing, mouth closed.
         with dissolve
 
@@ -351,7 +376,7 @@ label v14s46a:
 
         $ grant_achievement("your_eyelids_are_heavy")
 
-        la "*Chuckles** I'm so sorry! *Laughs* It was fun though, right? Did it feel real?"
+        la "I'm so sorry! *Laughs* It was fun though, right? Did it feel real?"
 
         scene v14s46a_6i # TPP. Same as v14s46a_6h, but MC mouth open and Lauren mouth closed.
         with dissolve
@@ -361,7 +386,7 @@ label v14s46a:
         scene v14s46a_7
         with dissolve
 
-        la "*Chuckles* That's so crazy... You can just go in the bathroom and clean yourself up, ha."
+        la "That's so crazy... You can just go in the bathroom and clean yourself up, ha."
 
         scene v14s46a_6i
         with dissolve
@@ -371,7 +396,7 @@ label v14s46a:
         scene v14s46a_6h
         with dissolve
 
-        la "I said sorry! *Chuckles*"
+        la "I said sorry!"
 
         scene v14s46a_19 # TPP. MC, frustrated, mouth closed, getting up from the bed with a large wet spot in his crotch, Lauren sitting next to the bed, smiling, mouth open.
         with dissolve
@@ -415,17 +440,18 @@ label v14s46a:
         scene v14s46a_22 # FPP. Lauren, smiling, mouth open.
         with dissolve
         
-        la "*Chuckles* I didn't know what was going to happen, [name]. I was just exploring."
+        la "I didn't know what was going to happen, [name]. I was just exploring."
 
         scene v14s46a_22a # FPP. Same as v14s46a_22, but Lauren's mouth closed.
         with dissolve
 
-        u "You were exploring and I was exploding. *Chuckles*"
+        u "You were exploring and I was exploding..."
 
         scene v14s46a_22
         with dissolve
 
         la "*Laughs*"
+        $ renpy.end_replay()
 
         scene v14s46a_22a
         with dissolve
@@ -452,7 +478,7 @@ label v14s46a:
                 scene v14s46a_22a
                 with dissolve
 
-                u "Of course I do. *Chuckles*"
+                u "Of course I do."
 
             "Even more":
                 $ v14s46a_love_lauren_more = True
@@ -461,7 +487,7 @@ label v14s46a:
                 scene v14s46a_22a
                 with dissolve
 
-                u "Even more than I did before. *Chuckles*"
+                u "Even more than I did before."
 
                 scene v14s46a_22b # FPP. Same as v14s46a_22, but Lauren's eyes are open wider, she wears a subtle sexy smile, mouth open.
                 with dissolve
@@ -513,45 +539,47 @@ label v14s46a:
             scene v14s46a_22
             with dissolve
 
-            la "I'm glad. *Chuckles*"
+            la "I'm glad."
 
     else: # -If LaurenFriend or else
         scene v14s46a_7
         with dissolve
 
-        la "*Speaking softly* You are now walking through a fresh, grassy field in your bare feet. It's the most beautiful day. So sunny and warm, you can feel the light dancing on your skin."
+        la "*Softly* You are now walking through a fresh, grassy field in your bare feet."
+        la "*Softly* It's the most beautiful day. So sunny and warm, you can feel the light dancing on your skin."
 
-        la "*Speaking softly* The grass between your toes is gentle to the touch. You're calm... You're relaxed... You're the happiest you've ever been..."
+        la "*Softly* The grass between your toes is gentle to the touch. You're calm... you're relaxed... you're the happiest you've ever been..."
 
         scene v14s46a_8d
         with dissolve
 
         u "*Zzzz...* *Heavy breathing*"
 
+        show screen fantasyOverlay
         scene v14s46a_24 # TPP. MC, smiling, mouth closed, walking BAREFOOT (normal clothes) through a green grassy field, with a bright sunny sky above him.
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         scene v14s46a_25 # FPP. MC looking out in the distance of the green grassy field, watching a horse trotting towards him.
         with dissolve
                 
-        la "*Speaking softly* You see a majestic horse trotting towards you. The closer it gets, the more calm you feel."
+        la "*Softly* You see a majestic horse trotting towards you. The closer it gets, the more calm you feel."
 
         scene v14s46a_26 # FPP. Close up of MC hand, holding a red apple.
         with dissolve
 
-        la "*Speaking softly* You notice you have an apple in your hand."
+        la "*Softly* You notice you have an apple in your hand."
 
         scene v14s46a_25a # FPP. MC looking at the horse standing in front of him, the horse is looking at the apple in MC's hand. 
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         scene v14s46a_27 # TPP. MC, smiling, relaxed mouth closed standing in the green grassy field, using his right hand to feed an apple to the horse.
         with dissolve
         
-        la "*Speaking softly* You feed it to the horse."
+        la "*Softly* You feed it to the horse."
 
         scene v14s46a_8d
         with dissolve
@@ -561,7 +589,7 @@ label v14s46a:
         scene v14s46a_27a # TPP. MC smiling, relaxed mouth closed standing in the green grassy field, with the bottom of MC's shirt stuck in the horse's mouth (or something to suggest the horse is eating his shirt) similar to v14s46a_27
         with dissolve
 
-        la "*Speaking softly* The horse has finished the apple, but he's still hungry... He starts to eat your shirt."
+        la "*Softly* The horse has finished the apple, but he's still hungry... He starts to eat your shirt."
 
         scene v14s46a_27b # TPP. Similar to v14s46a_27a with the horse still eating the shirt, but now half of MC's shirt is gone. 
         with dissolve
@@ -571,12 +599,12 @@ label v14s46a:
         scene v14s46a_27c # TPP. Simliar to v14s46a_27b but MC TOPLESS (NO SHIRT) and the horse still stands in front of MC.
         with dissolve
         
-        la "*Speaking softly* You can't stop him! In an instant, he's eaten your whole shirt..."
+        la "*Softly* You can't stop him! In an instant, he's eaten your whole shirt..."
 
         scene v14s46a_28 # TPP. MC with a slight frown, concerns, standing in the green grassy field TOPLESS (NO SHIRT).
         with dissolve
 
-        la "*Speaking softly* But he's not stopping there... He's hungry for something else now. Before you know it, he's chewing at your dick."
+        la "*Softly* But he's not stopping there... He's hungry for something else now. Before you know it, he's chewing at your dick."
 
         scene v14s46a_29 # TPP. MC mouth open, shocked awake, standing in the grassy field with his hands out trying to prevent the horse from nudging his critch with its nose.
         with dissolve
@@ -591,22 +619,28 @@ label v14s46a:
         scene v14s46a_31 # TPP. Green Grassy Field: Close up of the horse frowning (angry) and nipping at MC's crotch area.
         with dissolve
 
-        la "*Speaking softly* He's starting to get angry. You can feel his teeth trying to bite their way through the fabric of your jeans... but you can't move."
+        la "*Softly* He's starting to get angry. You can feel his teeth trying to bite their way through the fabric of your jeans... but you can't move."
 
         scene v14s46a_32 # TPP. MC shocked, standing in the green grassy field, naked with his hands covering his crotch 
         with dissolve
 
-        la "*Speaking softly* Your feet are glued to the ground as you try to push the horse away, but somehow he manages to rip off your pants."
+        la "*Softly* Your feet are glued to the ground as you try to push the horse away, but somehow he manages to rip off your pants."
 
         scene v14s46a_33 # TPP. CLOSEUP: Horse's mouth nipping towards MC's (naked) hands that are covering his crotch.
         with dissolve
 
-        la "*Speaking softly* The horse has his eyes on the prize now... Before you know it, he takes one quick bite towards your dick and-"
+        la "*Softly* The horse has his eyes on the prize now... Before you know it, he takes one quick bite towards your dick and-"
 
         scene v14s46a_34 # TPP. SHOT OF MC waste up: MC, mouth open, SCREAMING IN PAIN, hands down towards his crotch.
         with dissolve
 
         u "Aahhh! Fuck! Oww! M-My balls!"
+
+        hide screen fantasyOverlay
+
+        stop music fadeout 3
+
+        play music "music/v14/Track Scene 46a_4.mp3" fadein 2
 
         scene v14s46a_35 # TPP. MC, in Lauren's bed, shocked (liked he snapped out of a bad dream),sitting up but legs extended out on the bed, slightly angry, mouth open.
         with dissolve
@@ -616,7 +650,7 @@ label v14s46a:
         scene v14s46a_36 # FPP. MC looking at the foot of the bed seeing Lauren with a big smile, holding the straw side of the broom with the broom handle against MC's balls.
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         scene v14s46a_35
         with dissolve
@@ -658,6 +692,8 @@ label v14s46a:
 
         la "Haha! Perfect."
         
+    $ renpy.end_replay()
+
     scene v14s46a_38 # FPP. Lauren, smiling, mouth open, in her room.
     with dissolve
 
@@ -671,7 +707,7 @@ label v14s46a:
     scene v14s46a_38
     with dissolve
 
-    la "*Chuckles* Yeah..."
+    la "Yeah..."
 
     scene v14s46a_39 # TPP. Lauren, smiling, walks MC, smiling, both mouths closed, to the her dormroom door.
     with dissolve
@@ -696,7 +732,7 @@ label v14s46a:
     scene v14s46a_1b
     with dissolve
 
-    u "You're welcome, I guess. *Chuckles*"
+    u "You're welcome, I guess."
 
     scene v14s46a_1a
     with dissolve
@@ -706,7 +742,7 @@ label v14s46a:
     scene v14s46a_1b
     with dissolve
 
-    u "*Chuckles* Yeah sure, but if it's another hypnosis session... Maybe I'll send Imre instead."
+    u "Yeah sure, but if it's another hypnosis session... Maybe I'll send Imre instead."
 
     scene v14s46a_1a
     with dissolve
@@ -728,7 +764,10 @@ label v14s46a:
     scene v14s46a_42 # TPP. MC standing in front of Lauren's closed door.
     with dissolve
 
-    u "(Hmm, well that was interesting... *Chuckles*)"
+    u "(Hmm, well that was interesting...)"
+
+    stop music fadeout 3
+
 
     if joinwolves: # -If Wolves, transition to scene 52
         jump v14s52

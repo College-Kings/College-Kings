@@ -4,34 +4,50 @@
 # Time: Morning
 
 label v14s14a:
+    play music "music/v14/Track Scene 14.mp3" fadein 2
+
+    scene black
+    with fade
+    
+    pause 2
+
+    $ chloe.messenger.newMessage(_("You won't believe what I'm looking at right now!!!!"), queue=False)
     play sound "sounds/vibrate.mp3"
 
-    scene v14s14a_1 # TPP. MC wakes up to his phone vibrating, reaches one hand towards his phone on his night stand newt to his alarm clock, tired expression, mouth closed
-    with dissolve
+    u "*Phone vibrates*"
 
-    pause 0.75
+    scene v14s14a_1 # FPP. MC looking at his room as he is waking up. 
+    with fade
 
+    $ chloe.messenger.newMessage(_("Lindsey and I are NOT friends anymore."), queue=False)
     play sound "sounds/vibrate.mp3"
 
-    scene v14s14a_1a # TPP. same as v14s14a_1 MC no espression, picks up his phone
-    with dissolve
+    u "*Phone vibrates*"
 
     u "Mmm... Huh?"
 
-    scene v14s14a_1b # TPP. same as v14s14a_1a mc checks his phone
+    scene v14s14a_1a # TPP. MC sitting up on his bed, confused face, mouth closed.
     with dissolve
+
+    $ chloe.messenger.newMessage(_("I'm gonna need your help with the president thing, big time"), queue=False)
+    play sound "sounds/vibrate.mp3"
+
+    u "*Phone vibrates*"
+
+    scene v14s14a_1b # TPP. Same as v14s14_2, MC looking at his phone which he is now holding, confused face, mouth closed.
+    with dissolve
+
+    $ chloe.messenger.newMessage(_("[name]!!!"), queue=False)
+    play sound "sounds/vibrate.mp3"
+
+    u "*Phone vibrates*"
 
     u "(Who's blowing up my phone?)"
 
-    scene v14s14a_1b
-    with dissolve
+    $ chloe.messenger.newMessage(_("Right, you're probably asleep. When you read this, just meet me in the hall near Ms. Rose's classroom at 10."), queue=False)
 
-    $ chloe.messenger.newMessage(_("You won't believe what I'm looking at right now!!!! "))
-    $ chloe.messenger.newMessage(_("Lindsey and I are NOT friends anymore. "))
-    $ chloe.messenger.newMessage(_("I'm gonna need your help with the president thing, big time "))
-    $ chloe.messenger.newMessage(_("[name!u]!!! "))
-    $ chloe.messenger.newMessage(_("Right, you're probably asleep. When you read this, just meet me in the hall near Ms. Rose's classroom at 10. "))
-
+    call screen phone
+    
     scene v14s14a_1c # TPP. same as v14s14a_1b MC puts his phone away
     with dissolve
 
@@ -57,4 +73,5 @@ label v14s14a:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s15
