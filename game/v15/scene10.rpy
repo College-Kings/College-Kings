@@ -264,7 +264,7 @@ label v15s10:
 
             pause 0.75
 
-            scene v15s10_12c # FPP. The man walking back towards them and the car, looking past MC and staring straight at Lindsey, The man smiling, mouth open.
+            scene v15s10_12k # FPP. The man walking back towards them and the car, looking past MC and staring straight at Lindsey, The man smiling, mouth open.
             with dissolve
 
             male_buyer "Oh, so you've changed your mind about me now, baby?"
@@ -276,7 +276,7 @@ label v15s10:
 
             li "And maybe if you buy it, I'll give you my number after all."
 
-            scene v15s10_12d # FPP. Same as v15s10_12c, the man stopped next to MC by the car, looking over at Lindsey, the man smiling, mouth open.
+            scene v15s10_12l # FPP. Same as v15s10_12c, the man stopped next to MC by the car, looking over at Lindsey, the man smiling, mouth open.
             with dissolve
 
             male_buyer "For real? Seriously?!"
@@ -565,7 +565,7 @@ label v15s10:
 
             male_buyer "I can take it to my cousin's workshop and get it pimped out, then we'll be good to go!"
 
-            scene v15s10_12h # FPP. Same as v15s10_12j, The man slight smile, mouth closed.
+            scene v15s10_12m # FPP. Same as v15s10_12j, The man slight smile, mouth closed.
             with dissolve
 
             u "I'm glad you can see it's potential."
