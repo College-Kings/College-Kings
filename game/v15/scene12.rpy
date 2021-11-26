@@ -599,7 +599,7 @@ label v15s12:
     scene v15s12_12   # TPP. MC in the hallway looking down at his phone in his hand.
     with dissolve
 
-    $ riley.newMessage("Hey! I'm assuming you'll be at Lauren's birthday party later?")
+    $ riley.newMessage("Hey! I'm assuming you'll be at Lauren's birthday party later?", queue=False)
     $ riley.addReply("Yeah, I'll be there.")
     $ riley.newMessage("Cool. FYI, the stores are running low on costumes, you need to hurry up and buy one! Lol")
     $ riley.addReply("Ah, shit... You're right.")
