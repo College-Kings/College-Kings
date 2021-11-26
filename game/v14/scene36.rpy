@@ -655,7 +655,7 @@ label v14s36:
                 label v14s36_sg:
 
                 stop music fadeout 3
-                play music "music/v14/Track Scene 36_2.mp3" fadein 2
+                play music "music/v14/Track Scene 25a_1.mp3" fadein 2
 
                 scene v14s36_3h # TPP. same as v14s36_3d MC grabs Jenny's face and kisses her, both of their eyes are closed
                 with dissolve
