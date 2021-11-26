@@ -4,6 +4,8 @@
 # Time: Afternoon
 
 label v14s11:
+    play music "music/v14/Track Scene 11.mp3" fadein 2
+
     scene v14s11_1 # TPP. MC walks into the airport and closes his eyes as he takes a deep breath, slight smile
     with dissolve
 
@@ -15,7 +17,7 @@ label v14s11:
     u "(It feels so good to be back on home turf.)"
 
     if v13_charli_exposed:
-        scene v14s11_2 # FPP. MC looks over sees and overhears Mr. Lee talking to Ms. Rose, Mr Lee. extends one hand out slightly palm up, no expression mouth open, Ms. Rose. no expression, mouth closed
+        scene v14s11_2 # FPP. MC looks over sees and overhears Mr. Lee talking to Ms. Rose, Mr. Lee. extends one hand out slightly palm up, no expression mouth open, Ms. Rose. no expression, mouth closed
         with dissolve
 
         lee "Right, well... I need to be on my way! It's insisted that I attend Charli's meeting with the dean."
@@ -65,17 +67,14 @@ label v14s11:
             scene v14s11_3 #FPP. MC sees Charli with his bag leaving the airport, without speaking to anyone, Charli's back is turned
             with dissolve
 
-            u "(He came into our lives with a bang, trying to show his ass off, and look at him now... A sad dude, walking away all alone, just as he was when he first arrived.)"
-
-            u "(Definitely didn't like the guy, but I do get this weird feeling seeing him go.)"
-
         else:
             scene v14s11_3a #FPP. MC sees Charli with his bag leaving the airport, without speaking to anyone, Charli's back is turned
             with dissolve
 
-            u "(He came into our lives with a bang, trying to show his ass off, and look at him now... A sad dude, walking away all alone, just as he was when he first arrived.)"
+        u "(He came into our lives with a bang, trying to show his ass off, and look at him now...)"
+        u "(A sad dude, walking away all alone, just as he was when he first arrived.)"
 
-            u "(Definitely didn't like the guy, but I do get this weird feeling seeing him go.)"
+        u "(Definitely didn't like the guy, but I do get this weird feeling seeing him go.)"
 
     scene v14s11_4 # FPP. Mc turns around and see's Riley approaching him, Riley looking at mc, Riley no expression, mouth closed
     with dissolve
@@ -105,7 +104,7 @@ label v14s11:
     scene v14s11_4c # FPP. same as v14s11_4a Riley slight smile, mouth open, hand gesture
     with dissolve
 
-    ri "He definitely isn't the best human out there in my opinion. *Chuckles* Even when I was giving him a chance, I knew that deep down."
+    ri "He definitely isn't the best human out there in my opinion. Even when I was giving him a chance, I knew that deep down."
 
     scene v14s11_4b
     with dissolve
@@ -177,7 +176,7 @@ label v14s11:
     scene v14s11_4g # FPP. same as v14s11_4c Riley no hand gesture
     with dissolve
 
-    ri "*Chuckles* I am, I just need to head back home."
+    ri "I am, I just need to head back home."
 
     scene v14s11_4h # FPP. same as v14s11_4g Riley has a concerned expression
     with dissolve
@@ -197,7 +196,8 @@ label v14s11:
     scene v14s11_4g
     with dissolve
 
-    ri "Knowing Aubrey she probably doesn't wanna talk about that stuff right now either. Being around her is probably the safest way to stay out of any Chicks drama. *Chuckles*"
+    ri "Knowing Aubrey she probably doesn't wanna talk about that stuff right now either."
+    ri "Being around her is probably the safest way to stay out of any Chicks drama. *Chuckles*"
 
     if rileyrs:
         scene v14s11_4a
@@ -233,7 +233,7 @@ label v14s11:
         scene v14s11_4b
         with dissolve
 
-        u "I'm listening... *Chuckles*"
+        u "I'm listening..."
 
         scene v14s11_4i # FPP. same as v14s11_4a Riley is blushing, shy expression, slightly looking away from mc, mouth open
         with dissolve
@@ -265,7 +265,7 @@ label v14s11:
                 scene v14s11_4i
                 with dissolve
 
-                u "Well, for starters... It means a lot to me to know that the feeling is mutual. *Chuckles*"
+                u "Well, for starters... It means a lot to me to know that the feeling is mutual."
 
                 scene v14s11_4c
                 with dissolve
@@ -305,7 +305,7 @@ label v14s11:
                 scene v14s11_4m # FPP. same as v14s11_4l Riley mouth open, full smile, no hand gesture
                 with dissolve
 
-                ri "*Chuckles* Wow..."
+                ri "Wow..."
 
                 scene v14s11_4l
                 with dissolve
@@ -317,10 +317,7 @@ label v14s11:
 
                 ri "I don't know, I mean- Yes! That was definitely a good wow..."
 
-                scene v14s11_4m
-                with dissolve
-
-                ri "I guess I just didn't think you'd be open to something like that. It's kind of my fantasy... *Chuckles*"
+                ri "I guess I just didn't think you'd be open to something like that. It's kind of my fantasy..."
 
                 scene v14s11_4l
                 with dissolve
@@ -330,12 +327,12 @@ label v14s11:
                 scene v14s11_4n # FPP. same as v14s11_4m Riley non-aggressively shoves mc's shoulder
                 with dissolve
 
-                ri "*Chuckles* Stop it, loser! I'm actually really relieved."
+                ri "Stop it, loser! I'm actually really relieved."
 
                 scene v14s11_4l
                 with dissolve
 
-                u "Glad I could do that for you. *Chuckles*"
+                u "Glad I could do that for you."
 
                 scene v14s11_4m
                 with dissolve
@@ -368,9 +365,6 @@ label v14s11:
                 with dissolve
 
                 u "I'll be honest, I like you a lot Riley. The feelings are definitely mutual and I'm really happy you told me, but relationship-wise..."
-
-                scene v14s11_4b
-                with dissolve
 
                 u "I'm just not the sharing type, I guess."
 
@@ -433,9 +427,6 @@ label v14s11:
         scene v14s11_4o
         with dissolve
 
-    scene v14s11_4o
-    with dissolve
-
     u "(Guess I need to get home myself. I can barely think with all this jetlag.)"
 
     scene v14s11_6 # TPP. show mc walking through the airport, no expression, mouth closed
@@ -446,6 +437,15 @@ label v14s11:
     scene v14s11_6a # TPP. same as v14s11_6 Mc exiting the airport
     with dissolve
 
-    pause 0.75
+    pause
 
+    stop music
+
+    image act4intro = Movie(play="images/v14/Scene 11/Act_4_Intro.webm", loop=False)
+    scene act4intro
+    with fade
+    
+    pause 42.5
+    
+    stop music fadeout 3
     jump v14s12

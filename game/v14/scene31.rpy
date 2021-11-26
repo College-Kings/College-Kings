@@ -7,6 +7,8 @@ label v14s31:
     scene v14s31_1 # TPP Show MC holding and looking down at his phone
     with dissolve
 
+    play music "music/v14/Track Scene 31.mp3" fadein 2
+
     play sound "sounds/vibrate.mp3"
     pause
 
@@ -52,9 +54,11 @@ label v14s31:
 
     menu:
         "I got this":
-            u "Chloe, I got this. I know this is serious for you. I'm going to be on my best behavior. *Chuckles*"
+            $ add_point(KCT.BOYFRIEND)
+            u "Chloe, I got this. I know this is serious for you. I'm going to be on my best behavior."
 
         "Relax":
+            $ add_point(KCT.BRO)
             u "Chloe, relax. I'm doing the best I can for you, and that's exactly what I promised."
 
     # -Continue regardless of choice
@@ -108,8 +112,10 @@ label v14s31:
 
     pause 0.75
 
+    stop music fadeout 3
+
     # -Transition to Scene 31a/31b based on planning board choices-
-    if v14s31_talkcameron:
+    if v14_chloe_cameron:
         jump v14s31a
 
     else:

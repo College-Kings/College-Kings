@@ -11,6 +11,8 @@ label v14s26a:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 26.mp3" fadein 2
+
     scene v14s26a_2 # FPP. You can use the render from v14s26_2 because they are the same scene. Otherwise the description is as follows: Show lindsey behind the counter looking at mc, frustrated expression, mouth closed, also show 1 bar on each side of the counter holding up a banner, just show the botton part of the banner, don't show any wording the wording comes into play later
     with dissolve
 
@@ -41,30 +43,24 @@ label v14s26a:
         scene v14s26a_2a
         with dissolve
 
-        li "I asked her but she ended up not feeling well enough to come over last night... Something about a stomach ache. *Sighs*"
+        li "I asked Lauren but she ended up not feeling well enough to come over last night... Something about a stomach ache. *Sighs*"
 
-    scene v14s26a_2b
-    with dissolve
+        scene v14s26a_2b
+        with dissolve
 
     u "Well, what's going on? Everyone loves baked goods... *Laughs*"
 
-    scene v14s26a_2c # FPP. same as v14s26a_2a Show lindsey slightly upset
+    scene v14s26a_2a # FPP. same as v14s26a_2a Show lindsey slightly upset
     with dissolve
 
     li "Apparently not, [name]."
 
-    scene v14s26a_2c
-    with dissolve
-
-    li "So far I've only made fifty bucks and that was all from my family. *Sighs*"
+    li "So far most of what I could sell as to my family. *Sighs*"
 
     scene v14s26a_2b
     with dissolve
 
     u "Damn. Okay, well..."
-
-    scene v14s26a_2b
-    with dissolve
 
     u "Do you have a plan to get it going?"
 
@@ -76,7 +72,7 @@ label v14s26a:
     scene v14s26a_2d # FPP. same as v14s26a_2a lindsey slight smile, mouth open
     with dissolve
 
-    li "*Chuckles* If I get naked, stand on this table and start shaking my ass for sales."
+    li "If I get naked, stand on this table and start shaking my ass for sales."
 
     scene v14s26a_2e # FPP. same as v14s26a_2d lindsey mouth closed
     with dissolve
@@ -91,42 +87,37 @@ label v14s26a:
     scene v14s26a_2g # FPP. same as v14s26a_2f lindsey's decreased to slightly angry, mouth closed
     with dissolve
 
-    u "You're pretty pissed about this, aren't you? *Chuckles*"
+    u "You're pretty pissed about this, aren't you?"
 
     scene v14s26a_2f
     with dissolve
 
     li "Surprise, surprise!"
 
-    scene v14s26a_2g
-    with dissolve
+    if not v14_help_lindsey:
+        scene v14s26a_2g
+        with dissolve
 
-    u "Lindsey, I know this is important. Just try to breathe for-"
+        u "Lindsey, I know this is important. Just try to breathe for-"
 
-    scene v14s26a_2h # FPP same as v14s26a_2a lindsey is slightly sad, mouth open
-    with dissolve
+        scene v14s26a_2h # FPP same as v14s26a_2a lindsey is slightly sad, mouth open
+        with dissolve
 
-    li "I'm not trying to put this on you, [name] because it's not like the whole campaign depended on you, but..."
+        li "I'm not trying to put this on you, [name] because it's not like the whole campaign depended on you, but..."
 
-    scene v14s26a_2h
-    with dissolve
+        li "I was counting on you, and this."
 
-    li "I was counting on you, and this."
+        scene v14s26a_2i # FPP. same as v14s26a_2h lindsey's mouth is closed
+        with dissolve
 
-    scene v14s26a_2i # FPP. same as v14s26a_2h lindsey's mouth is closed
-    with dissolve
+        u "I'm sorry Lindsey, but-"
 
-    u "I'm sorry Lindsey, but-"
+        scene v14s26a_2k # FPP. same as v14s26a_2g lindsey's mouth is is open
+        with dissolve
 
-    scene v14s26a_2k # FPP. same as v14s26a_2g lindsey's mouth is is open
-    with dissolve
+        li "Like I said before, I'm not interested in hearing your reasons for not being able to help me."
 
-    li "Like I said before, I'm not interested in hearing your reasons for not being able to help me."
-
-    scene v14s26a_2k
-    with dissolve
-
-    li "Because honestly, if the reason isn't a good one it's just gonna upset me even more than I already am."
+        li "Because honestly, if the reason isn't a good one it's just gonna upset me even more than I already am."
 
     scene v14s26a_2g
     with dissolve
@@ -143,9 +134,6 @@ label v14s26a:
 
     li "*Sighs* Look, [name]. I'm not mad at you, okay?"
 
-    scene v14s26a_2a
-    with dissolve
-
     li "I don't want you thinking that."
 
     scene v14s26a_2c
@@ -161,7 +149,7 @@ label v14s26a:
     scene v14s26a_2j # FPP. same as v14s26a_2a Lindsey grabs a cake and hands it to MC, no expression, mouth open
     with dissolve
 
-    li "Here."
+    li "Here. Take one for the ride."
 
     if v14_lauren_sabotage:
         scene v14s26a_2d
@@ -174,23 +162,22 @@ label v14s26a:
 
         u "(Damn, so that's how she sabotaged her. Good cooking, Lauren!)"
 
-        scene v14s26a_2i
-        with dissolve
+    u "I'm sure it'll be fine... Thanks, Lindsey."
 
-        u "I'm sure it'll be fine... Thanks, Lindsey."
+    scene v14s26a_2h
+    with dissolve
 
-        scene v14s26a_2h
-        with dissolve
+    li "Yeah, of course."
 
-        li "Yeah, of course."
+    scene v14s26_7 # Ignore as reused from another scene
+    with fade
 
-        scene v14s26_7 # Ignore as reused from another scene
-        with dissolve
+    pause 0.75
 
-        pause 0.75
-
-        scene v14s26_8 # Ignore as reused from another scene
-        with dissolve
+    scene v14s26_8 # Ignore as reused from another scene
+    with dissolve
+    
+    pause 0.75
 
 # -Kiwii post of Lindsey's bake sale, 2 different renders needed for seperate slogans-
 
@@ -228,14 +215,10 @@ label v14s26a:
         $ v14s26a_kiwiiPost2.addReply("Thank you for the cake! Mine tastes perfectly fine :)", mentions="Lindsey")
         $ v14s26a_kiwiiPost2.newComment("Lindsey", "<3")
 
-    if False: ##just making sure it shows up on lint
-        scene v14kw26a
-        scene v14kw26a_1
-
     if not v14_amber_clean:
         play sound "sounds/vibrate.mp3"
 
-        scene v14s26_9 # Ignore as reused from another scene
+        scene v14s26_9
         with dissolve
 
         u "Hello?"
@@ -258,42 +241,26 @@ label v14s26a:
         scene v14s26_10c # Ignore as reused from another scene
         with dissolve
 
-        u "What? No. *Chuckles*"
-
-        scene v14s26_10c # Ignore as reused from another scene
-        with dissolve
+        u "What? No."
 
         u "Are you all good? What's going on?"
 
-        scene v14s26_10c # Ignore as reused from another scene
+        scene v14s26_10b # Ignore as reused from another scene
         with dissolve
 
         am "I'm fine, sorry..."
-
-        scene v14s26_10b # Ignore as reused from another scene
-        with dissolve
 
         am "I was just scared 'cause when I woke up you weren't here."
 
         scene v14s26_10c # Ignore as reused from another scene
         with dissolve
 
-        u "*Chuckles* That's okay."
-
-        scene v14s26_10d # Ignore as reused from another scene
-        with dissolve
-
-        am "I don't remember much from last night, ha. Did we have fun?"
-
-        scene v14s26_10c # Ignore as reused from another scene
-        with dissolve
-
-        u "*Chuckles* One of the best nights of my life."
+        u "Haha, I didn't wanna wake you."
 
         scene v14s26_10e # Ignore as reused from another scene
         with dissolve
 
-        am "Haha, well I'm glad. Sorry for panicking, talk to you later?"
+        am "Haha, oh ok. Sorry for panicking, talk to you later?"
 
         scene v14s26_10f # Ignore as reused from another scene
         with dissolve
@@ -303,7 +270,7 @@ label v14s26a:
         scene v14s26_11 # Ignore as reused from another scene
         with dissolve
 
-        u "(She's a handful.) *Chuckles*"
+        u "(She's a handful.)"
 
     scene v14s26_12 # Ignore as reused from another scene
     with dissolve
@@ -319,8 +286,7 @@ label v14s26a:
         scene v14s26a_2a
         with dissolve
 
-        $ set_presidency_percent(v14_lindsey_popularity + 1)
-
+        $ lindsey_board.money += 150
         li "*Sighs* It was a mini success, I banked $150 so, I'm not too mad."
 
         scene v14s26a_2b
@@ -332,17 +298,13 @@ label v14s26a:
         scene v14s26a_2a
         with dissolve
 
-        $ set_presidency_percent(v14_lindsey_popularity - 2)
-
-        li "Double what I had when you left, $100. Honestly, this was a complete waste of time."
+        $ lindsey_board.money += 100
+        li "$100 for the day. Honestly, this was a complete waste of time."
 
         scene v14s26a_2b
         with dissolve
 
         u "Hey... Trial and error, right?"
-
-        scene v14s26a_2b
-        with dissolve
 
         u "Plus, promoting your campaign and being out here doing this, is the entire point of having a bake sale, remember?"
 
@@ -359,7 +321,7 @@ label v14s26a:
     scene v14s26a_2d
     with dissolve
 
-    li "Yeah, I am. I'm ready for a nap. *Chuckles*"
+    li "Yeah, I am. I'm ready for a nap."
 
     scene v14s26a_2e
     with dissolve
@@ -381,10 +343,8 @@ label v14s26a:
 
     li "See you, [name]."
 
-    scene v14s26a_3
-    with dissolve
-
-    u "(It's a sad day for honesty.)"
+    if v14_lauren_sabotage:
+        u "(It's a sad day for honesty.)"
 
     scene v14s26_14 # Ignore as reused from another scene
     with dissolve
@@ -395,5 +355,7 @@ label v14s26a:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s27

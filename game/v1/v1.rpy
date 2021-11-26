@@ -67,7 +67,7 @@ label starta: #for compatibility only
     $ kiwiiUsers["MC"]["username"] = name
 
     u "Hmm...?"
-
+    
     scene s2
     with dissolve
 
@@ -2017,6 +2017,10 @@ label at_bd:
 
     play music "music/msexy.mp3"
 
+    if not config_censored:
+
+        call screen nsfw_Toggle
+
     if config_censored:
         call screen censoredPopup("v1_nsfwSkipLabel1")
         
@@ -2755,6 +2759,7 @@ label aw_bd:
                 scene s90
                 with dissolve # kiss
                 $ v1_kissLauren = True
+                
                 $ grant_achievement("romeo")
 
                 play sound "sounds/kiss.mp3"

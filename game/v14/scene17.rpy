@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v14s17:
+    play music "music/v14/Track Scene 17.mp3" fadein 2
+
     scene v14s17_1 # TPP. Show MC walking into class, slight smile, mouth closed
     with dissolve
 
@@ -22,7 +24,7 @@ label v14s17:
     scene v14s17_4 # FPP. Ms. Rose looking at MC, slight smile, mouth open
     with dissolve
 
-    ro "Hey [name], I'm sensing that you're a bit confused about the look of the classroom. *Chuckles*"
+    ro "Hey [name], I'm sensing that you're a bit confused about the look of the classroom."
 
     scene v14s17_4a # FPP. Same as v14s17_4, mouth closed
     with dissolve
@@ -63,7 +65,7 @@ label v14s17:
         scene v14s17_4a
         with dissolve
 
-        u "*Chuckles* I'll always find new ways to-"
+        u "I'll always find new ways to-"
 
         scene v14s17_5 # TPP. Show Ms. Rose slapping MC on his ass with her hand, Ms. Rose slight smile, mouth closed, MC, slight surprised expression, mouth closed
         with hpunch
@@ -73,7 +75,7 @@ label v14s17:
         scene v14s17_4d # FPP. Same as v14s17_4a, Smirking expression
         with dissolve
 
-        u "Ow! *Chuckles* What the hell-"
+        u "Ow! What the hell-"
 
         scene v14s17_4
         with dissolve
@@ -132,7 +134,7 @@ label v14s17:
         scene v14s17_8 # FPP. Lauren looking at MC, slight smile, mouth open 
         with dissolve
     
-        la "*Chuckles* Hey, you." 
+        la "Hey, you." 
 
     scene v14s17_8a # FPP. Same as v14s17_8, mouth closed
     with dissolve
@@ -142,12 +144,13 @@ label v14s17:
     scene v14s17_8b # FPP. Same as v14s17_8, slightly surprised expression
     with dissolve
 
-    la "*Chuckles* Wow..."
+    la "Wow..."
 
     scene v14s17_8
     with dissolve
 
-    la "I don't know if I should be offended that you think my life revolves only around my education, or flattered because that just means you consider me responsible... *Chuckles*"
+    la "I don't know if I should be offended that you think my life revolves only around my education..."
+    la "...or flattered because that just means you consider me responsible..."
 
     menu:
         "Joke":
@@ -170,7 +173,7 @@ label v14s17:
             scene v14s17_8c
             with dissolve
 
-            la "*Chuckles* Okay, okay... Fair enough."
+            la "Okay, okay... Fair enough."
 
         "Compliment":
             $ add_point(KCT.BOYFRIEND)
@@ -332,22 +335,39 @@ label v14s17:
     scene v14s17_10b
     with dissolve
 
-    u "Ooooohhh... *Coughs* Nerd! *Coughs*"
+    menu:
 
-    scene v14s17_10d
-    with dissolve
+        "Make fun of her":
 
-    la "Ugh, you are so rude! *Chuckles*"
+            $ add_point(KCT.TROUBLEMAKER)
 
-    scene v14s17_10e # FPP. Same as v14s17_10b, different posture 
-    with dissolve
+            u "Ooooohhh... *Coughs* Nerd! *Coughs*"
 
-    u "I mean, damn... Look at you getting in nice and good with the people on the inside."
+            scene v14s17_10d
+            with dissolve
 
-    scene v14s17_10a
-    with dissolve
+            la "Ugh, you are so rude! *Chuckles*"
 
-    la "Mhmm, that's more like it. *Chuckles*"
+            scene v14s17_10e # FPP. Same as v14s17_10b, different posture 
+            with dissolve
+
+            u "I mean, damn... Look at you getting in nice and good with the people on the inside."
+
+            scene v14s17_10a
+            with dissolve
+
+            la "Mhmm, that's more like it."
+
+        "Compliment her":
+
+            $ add_point(KCT.BOYFRIEND)
+
+            u "Damn, well done."
+
+            scene v14s17_10d
+            with dissolve
+
+            la "Haha, thank you."
 
     scene v14s17_10b
     with dissolve
@@ -362,12 +382,12 @@ label v14s17:
     scene v14s17_10d
     with dissolve
 
-    la "*Chuckles* No... We can talk."
+    la "No... We can talk."
 
     scene v14s17_10e
     with dissolve
 
-    u "Ooooh... *Chuckles* About what?"
+    u "Ooooh... About what?"
 
     scene v14s17_10a
     with dissolve
@@ -427,7 +447,7 @@ label v14s17:
     scene v14s17_10e
     with dissolve
 
-    u "*Chuckles* How could I miss 'em?"
+    u "How could I miss 'em?"
 
     scene v14s17_10a
     with dissolve
@@ -447,7 +467,7 @@ label v14s17:
     scene v14s17_10b
     with dissolve
 
-    u "Is this the part where you ask me what I think you should do? *Chuckles*"
+    u "Is this the part where you ask me what I think you should do?"
 
     scene v14s17_10d
     with dissolve
@@ -484,14 +504,15 @@ label v14s17:
             
                 scene v14s17_10g
                 with dissolve
-                
+             
+                $ set_presidency_percent(v14_lindsey_popularity + 3)
                 la "You're right. I guess in the end it's all about loyalty, huh?"
 
                 if v11_hp_points == 3:
                     scene v14s17_10b
                     with dissolve
 
-                    u "A true Pofflehoof... *Chuckles*"
+                    u "A true Pofflehoof..."
 
                     scene v14s17_10d
                     with dissolve
@@ -513,6 +534,7 @@ label v14s17:
                 scene v14s17_10h # FPP. Same as v14s17_10a, serious expression 
                 with dissolve
 
+                $ set_presidency_percent(v14_lindsey_popularity + 1)
                 la "I do want to think about it a bit more before I decide."
 
             scene v14s17_10e
@@ -535,9 +557,6 @@ label v14s17:
             with dissolve
 
             u "I seriously think it's best to just let Lindsey figure all of that out on her own."
-
-            scene v14s17_10b
-            with dissolve
 
             u "If she came to you for just another bake sale then it'd be different, but this is a bake sale with a hidden agenda."
 
@@ -570,6 +589,7 @@ label v14s17:
 
             menu:
                 "Ask Lauren to sabotage Lindsey":
+                    $ add_point(KCT.TROUBLEMAKER)
                     scene v14s17_10b
                     with dissolve
                     
@@ -656,6 +676,7 @@ label v14s17:
                         scene v14s17_10a
                         with dissolve
 
+                        $ set_presidency_percent(v14_lindsey_popularity - 2)
                         la "I guess you're that one person for me too. It must feel like Lindsey is crossing the line by running against Chloe, no?"
 
                         scene v14s17_10e
@@ -731,6 +752,7 @@ label v14s17:
                         scene v14s17_17 # FPP. Lauren Looking at MC, serious expression, mouth open
                         with dissolve
                         
+                        $ set_presidency_percent(v14_lindsey_popularity + 1)
                         la "Exactly, the most loyal person you know, and that's why you of all people should know that I wouldn't do something like that."
 
                         scene v14s17_17a # FPP. Same as v14s17_17, mouth closed
@@ -751,6 +773,8 @@ label v14s17:
                     jump v14s17_end
                 
                 "Don't ask her":
+                    $ add_point(KCT.BOYFRIEND)
+                    $ set_presidency_percent(v14_lindsey_popularity + 1) 
                     u "(I'm not getting involved in that...)"
                 
                     jump v14s17_end
@@ -769,12 +793,12 @@ label v14s17_end:
     scene v14s17_17c # FPP. Same as v14s17_17b, mouth closed
     with dissolve
 
-    u "Yeah, I will. You too. *Chuckles*"
+    u "Yeah, I will. You too."
 
     scene v14s17_17b
     with dissolve
 
-    la "*Chuckles* Bye..."
+    la "Bye..."
 
     scene v14s17_17c
     with dissolve
@@ -799,6 +823,7 @@ label v14s17_end:
 
         pause 0.75
 
+        stop music fadeout 3
         jump v14s18
 
     else: 
@@ -807,4 +832,5 @@ label v14s17_end:
 
         pause 0.75
 
+        stop music fadeout 3
         jump v14s18

@@ -1,5 +1,5 @@
 screen v11s1_hallway1():
-    tag tag_freeRoam
+    tag free_roam
 
     # Background
     if not v11s1_riley1:
@@ -41,7 +41,7 @@ screen v11s1_hallway1():
             hotspot (1324, 201, 134, 406) action Show("v11s1_hallway2") # Hallway 2
 
 screen v11s1_hallway2():
-    tag tag_freeRoam
+    tag free_roam
 
     # add "images/v11/scene 1/hall2.webp"
 

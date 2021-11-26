@@ -5,9 +5,11 @@
 
 label v14s41a:
     scene v14s41a_1 # TPP. Show mc waking up in bed shocked expression, mouth open
-    with dissolve
+    with fade
 
     gr "[name!u]! GET DOWN HERE!"
+
+    play music "music/v14/Track Scene 41a.mp3" fadein 2
 
     scene v14s41a_1a # TPP. same as v14s41a_1 mc is sitting on the side of his bed, slightly mad, mouth closed
     with dissolve
@@ -65,7 +67,7 @@ label v14s41a:
         scene v14s41a_5
         with dissolve
 
-        gr "We're here, for whatever I say we're here for. I don't know what's gotten into you lately, man."
+        gr "We're here for whatever I say we're here for. I don't know what's gotten into you lately, man."
 
         scene v14s41a_4b # FPP. same as v14s41a_4 Cameron avoids looking at Grayson, no expression, mouth closed
         with dissolve
@@ -80,7 +82,7 @@ label v14s41a:
         scene v14s41a_5b # FPP. same as v14s41a_5a Grayson is looking at Ryan, slight smile, mouth open
         with dissolve
 
-        gr "Opposite of that actually. Despite the rough past that Chloe and I have, we will not be sabotaging her in the race."
+        gr "Opposite of that, actually. Despite the rough past that Chloe and I have, we will not be sabotaging her in the race."
 
         scene v14s41a_6a # FPP. same as v14s41a_6 Ryan is slightly confused
         with dissolve
@@ -115,7 +117,8 @@ label v14s41a:
         scene v14s41a_5c
         with dissolve
 
-        gr "Look... Going against Chloe here isn't a good look for the Apes. If she ends up winning and we went after her, it'd backfire instantly and I don't want that. Make sense?"
+        gr "Look... Going against Chloe here isn't a good look for the Apes."
+        gr "If she ends up winning and we went after her, it'd backfire instantly and I don't want that. Make sense?"
 
         scene v14s41a_6
         with dissolve
@@ -141,6 +144,8 @@ label v14s41a:
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v14s43
 
@@ -198,7 +203,7 @@ label v14s41a:
         scene v14s41a_3b # FPP. same as v14s41a_3a A picture of Chloe in very seductive lingerie is projected on the TV screen, Ryan is looking at the TV screen and throws both his hands up in the air in excitement full smile mouth open, Cameron is looking, laughing, and pointing at the TV screen, Grayson is holding his phone in one hand with his other raised at the TV screen palm outward with a smug/grinning look on his face mouth closed
         with dissolve
 
-        pause 0.75
+        pause
 
         scene v14s41a_5j # FPP. same as v14s41a_5i Grayson is looking at MC, Grayson is still holding his phone, the image from v14s41a_3b is now on the TV screen behind Grayson, Grayson has a smug/grinning expression, mouth closed
         with dissolve
@@ -229,7 +234,7 @@ label v14s41a:
         scene v14s41a_5b
         with dissolve
 
-        gr "I have my ways, but that's not the point. The point is, this is what's gonna fuck Chloe up and make Lindsey win."
+        gr "It's from back in the day when we used to date, but that's not the point. The point is, this is what's gonna fuck Chloe up and make Lindsey win."
 
         scene v14s41a_4
         with dissolve
@@ -266,9 +271,6 @@ label v14s41a:
 
         gr "Okay fine. Everyone except pussy boy here, post it."
 
-        scene v14s41a_5k
-        with dissolve
-
         gr "Happy now?"
 
         scene v14s41a_5l # FPP. same as v14s41a_5k Grayson's mouth is closed
@@ -277,6 +279,9 @@ label v14s41a:
         menu:
             "Stay quiet":
                 $ add_point(KCT.TROUBLEMAKER)
+
+                if v14_chloe_cameron:
+                    u "(Even Cameron isn't speaking up, and he has an incentive to help Chloe win. I shouldn't press this further...)"
 
                 scene v14s41a_5a
                 with dissolve
@@ -304,7 +309,8 @@ label v14s41a:
                 scene v14s41a_5l
                 with dissolve
 
-                u "If you don't want her to win then fine, we'll stay out of the race. But sabotaging her isn't fair, it's not cool, and this photo is a complete invasion of privacy."
+                u "If you don't want her to win then fine, we'll stay out of the race."
+                u "But sabotaging her isn't fair, it's not cool, and this photo is a complete invasion of privacy."
 
                 scene v14s41a_6d # FPP. same as v14s41a_6b Ryan is now looking at mc, slightly angry, mouth open
                 with dissolve
@@ -339,10 +345,8 @@ label v14s41a:
                         $ add_point(KCT.BRO)
                         $ v14_ApesPostChloePics = False
 
-                        scene v14s41a_5l
-                        with dissolve
-
-                        u "You of all people should know that doing something like this is gonna give us a bad look. Putting something out there publically like that is just asking for a shitty situation."
+                        u "You of all people should know that doing something like this is gonna give us a bad look."
+                        u "Putting something out there publically like that is just asking for a shitty situation."
 
                         scene v14s41a_4c # FPP. same as v14s41a_4 Cameron is looking at MC, no expression, mouth open
                         with dissolve
@@ -362,17 +366,18 @@ label v14s41a:
                     "Not fair to Chloe":
                         $ add_point(KCT.BOYFRIEND)
 
-                        scene v14s41a_5l
-                        with dissolve
-
-                        u "As I said, it's not fair to Chloe. Having that photo posted all over Kiwii, and especially by all of her ex-boyfriend's frat members, would be a horrible experience for her."
+                        u "As I said, it's not fair to Chloe, having that photo posted all over Kiwii."
+                        u "And especially by all of her ex-boyfriend's frat members, it would be a horrible experience for her."
 
                         scene v14s41a_5a
                         with dissolve
 
                         gr "*Laughs* We don't give a fuck about all that. Feelings don't mean shit, [name]."
 
-                        if kct == "confident":
+                        if kct == "confident" or v14_chloe_cameron:
+                            if not v14_chloe_cameron:
+                                call screen kct_popup
+                        
                             $ v14_ApesPostChloePics = False
                             scene v14s41a_6a
                             with dissolve
@@ -404,6 +409,9 @@ label v14s41a:
                             with dissolve
 
                             ca "But I would give a shit if someone posted a photo like that of me, or even worse... Sam. Not sure if I can do this one, man."
+
+                            if v14_chloe_cameron:
+                                u "(Thanks for the help, bro. Looks like that pep talk got to him...)"
 
                             scene v14s41a_5
                             with dissolve
@@ -451,5 +459,7 @@ label v14s41a:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s43

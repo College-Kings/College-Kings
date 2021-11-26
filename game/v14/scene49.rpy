@@ -1,17 +1,20 @@
 # SCENE 49: Make sure Chloe is distracted with concert tickets for $100
-# Locations: Sidwalk to Chick's house, Lindsey's room
+# Locations: Sidwalk to Chicks' house, Lindsey's room
 # Characters: MC (Outfit: 1), LINDSEY (Outfit: x)
 # Time: 
 
 label v14s49:
-    scene v14s49_1 # TPP. Show MC walking down the sidewalk towards the Chick's house, slight smile, mouth closed.
+
+    play music "music/v14/Track Scene 49.mp3" fadein 2
+
+    scene v14s49_1 # TPP. Show MC walking down the sidewalk towards the Chicks' house, slight smile, mouth closed.
     with dissolve
 
     play sound "sounds/vibrate.mp3"
 
     u "(What do we have here?)"
 
-    if v14_money_theft_concert_distraction: #Placeholder for concert distraction
+    if v14_concert_distraction: #Placeholder for concert distraction
         scene v14s49_2 # TPP. MC stopped walking looking at his phone, slight smile, mouth closed.
         with dissolve
 
@@ -32,7 +35,7 @@ label v14s49:
                 "(I should reply to Lindsey.)"
                 jump v14s49Lindsey_PhoneContinue
 
-    elif v14_money_theft_date_ditch: #Placeholder for date ditch distraction
+    elif v14_date_distraction: #Placeholder for date ditch distraction
         scene v14s49_2a # TPP. MC holding the phone to his ear, slight smile, mouth open.
         with dissolve
 
@@ -52,7 +55,7 @@ label v14s49:
         scene v14s49_3
         with dissolve
 
-        li "I'll stay on the phone while you do it so we can make sure she actually takes the bait. *Chuckles*"
+        li "I'll stay on the phone while you do it so we can make sure she actually takes the bait."
 
         scene v14s49_3a
         with dissolve
@@ -63,14 +66,14 @@ label v14s49:
         with dissolve
 
         if chloegf:
-            $ chloe.messenger.addReply(_("Hey... Think I'm in the mood for a little Italian cuisine and a beautiful woman across from me..."), queue =False)
+            $ chloe.messenger.addReply(_("Hey... Think I'm in the mood for a little Italian cuisine and a beautiful woman across from me..."))
             $ chloe.messenger.newMessage(_("Haha, hi there Mr. Sweet Talk..."))
             $ chloe.messenger.newMessage(_("I could definitely eat, and... I suppose I'm down to see you ;)"))
             $ chloe.messenger.addReply(_("Well then, I suppose I'll see you soon :)"))
 
         else:
-            $ chloe.messenger.addReply(_("Hey... Think we can meet at that new Italian place, Classico Cuisine? I'm hungry and need some company."), queue =False)
-            $ chloe.messenger.newMessage(_("What am I, just a lunch buddy?"))
+            $ chloe.messenger.addReply(_("Hey... Think we can meet at that new Italian place, Classico Cuisine? I'm hungry and need some company."))
+            $ chloe.messenger.newMessage(_("What am I, just a meal buddy?"))
             $ chloe.messenger.addReply(_("Sorry, these are hungry person texts, haha."))
             $ chloe.messenger.newMessage(_("Haha, okay. Let's go now?"))
             $ chloe.messenger.addReply(_("Yeah, sounds great"))
@@ -120,9 +123,11 @@ label v14s49:
 
     pause 0.75
 
-    scene v14s49_4 # TPP. Show Mc further up the sidewalk walking towards the chick house.
+    scene v14s49_4 # TPP. Show Mc further up the sidewalk walking towards the Chicks' house.
     with dissolve
 
     u "(Time to commit the perfect crime.)"
 
+    stop music fadeout 3
+    
     jump v14s50

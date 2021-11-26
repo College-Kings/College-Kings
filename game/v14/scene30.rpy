@@ -9,6 +9,8 @@ label v14s30:
 
     pause 0.5
 
+    play music "music/v14/Track Scene 30.mp3" fadein 2
+
     scene v14s30_2 # TPP. Show MC finding Chloe in the woods pressing button on the camera, both slight smile, mouth closed.
     with dissolve
 
@@ -124,23 +126,34 @@ label v14s30:
 
     u "Okay, ready when you are."
 
+    call screen take_picture("v14s30_pic1")
+
+
+    label v14s30_pic1:
+
     scene v14s30_5a # TPP. Same as v14s30_5, Chloe posing with her hand on her hip, Chloe proud smile, mouth closed
     with flash
 
-    pause 0.75
+    call screen take_picture("v14s30_pic2")
+
+    label v14s30_pic2:
 
     scene v14s30_5b # TPP. Same as v14s30_5a, Chloe holding the plush wolf with one arm and her other hand in the air like she is cheering, slight smile, mouth closed.
     with flash
 
-    pause 0.75
+    call screen take_picture("v14s30_pic3")
+
+    label v14s30_pic3:
 
     scene v14s30_5c # TPP. Same as v14s30_5b, Chloe in a new pose, slight smile, mouth closed.
     with flash
 
-    pause 0.75
+    call screen take_picture("v14s30_pic4")
+
+    label v14s30_pic4:
 
     scene v14s30_5d # TPP. Chloe standing normally infront of the camera, slight smile, mouth closed.
-    with dissolve
+    with flash
 
     u "Okay, I think I've got a pretty good selection to choose from."
 
@@ -193,7 +206,7 @@ label v14s30:
     scene v14s30_6a
     with dissolve
 
-    cl "I try not to ask too many questions, you know? *Chuckles*"
+    cl "I try not to ask too many questions, you know?"
 
     cl "Alright, let's head back and look at these closely so we can pick a good one."
 
@@ -201,5 +214,7 @@ label v14s30:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s30b

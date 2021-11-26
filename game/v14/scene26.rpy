@@ -11,6 +11,8 @@ label v14s26:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 26.mp3" fadein 2
+
     scene v14s26_2 # FPP. Show lindsey behind the counter looking at mc, slight smile, mouth closed, also show 1 bar on each side of the counter holding up a banner, just show the botton part of the banner, don't show any wording the wording comes into play later
     with dissolve
 
@@ -54,7 +56,7 @@ label v14s26:
     scene v14s26_2b
     with dissolve
 
-    li "*Chuckles* Exactly, that's why this was such a good idea."
+    li "Exactly, that's why this was such a good idea."
 
     scene v14s26_2a
     with dissolve
@@ -91,11 +93,6 @@ label v14s26:
 
     la "Right behind you..."
 
-    scene v14s26_2e
-    with dissolve
-
-    pause 0.75
-
     scene v14s26_3 # FPP. MC swings around and sees Lauren, Lauren has her hands up with a scary expression on her face
     with dissolve
 
@@ -124,17 +121,38 @@ label v14s26:
     scene v14s26_5
     with dissolve
 
-    u "Wow, that's... Thanks. *Chuckles*"
+    menu:
+        "Oh thanks...":
+            scene v14s26_5
+            with dissolve
 
-    scene v14s26_5a
-    with dissolve
+            u "Wow, that's... Thanks. *Chuckles*"
+        
+            scene v14s26_5a
+            with dissolve
 
-    la "Of course! Just give me like five dollars."
+            la "Of course! Just give me like... five dollars."
 
-    scene v14s26_5
-    with dissolve
+            scene v14s26_5
+            with dissolve
 
-    u "Oh, I thought..."
+            u "Oh, I thought..."
+        
+        "I'm not hungry":
+            scene v14s26_5
+            with dissolve
+
+            u "Oh, no thanks, haha. I'm not hungry."
+
+            scene v14s26_5a
+            with dissolve
+
+            la "Good, cause that would've been five dollars!"
+
+            scene v14s26_5
+            with dissolve
+
+            u "Oh shit, okay..."
 
     scene v14s26_5b # FPP. same as v14s26_5 lauren mouth closed, lindeys mouth open
     with dissolve
@@ -154,12 +172,7 @@ label v14s26:
     scene v14s26_5
     with dissolve
 
-    u "Well, it's good to know I'm special. *Chuckles*"
-
-    scene v14s26_5
-    with dissolve
-
-    pause 0.75
+    u "Well, it's good to know I'm special."
 
     if v11_lindsey_slogan == 1:
         scene v14s26_6 # FPP. Mc looks up at the banner above the counter, The banner reads "Lindsey, Returning The Promise"
@@ -168,6 +181,8 @@ label v14s26:
     else:
         scene v14s26_6a # FPP. same as v14s26_6 The banner instead reads "Lindsey, Say Bye To The Bullshit"
         with dissolve
+
+    pause 0.75
 
     scene v14s26_5
     with dissolve
@@ -182,7 +197,7 @@ label v14s26:
     scene v14s26_5
     with dissolve
 
-    u "I didn't think you took what I said all that seriously, or even remembered. *Chuckles*"
+    u "I didn't think you took what I said all that seriously, or even remembered."
 
     scene v14s26_5c # FPP. same as v14s26_5 MC and Lindsey smile at each other
     with dissolve
@@ -203,9 +218,6 @@ label v14s26:
     with dissolve
 
     li "Haha, I don't know about [name], but if you join the Chicks I can help you, Lauren."
-
-    scene v14s26_5e
-    with dissolve
 
     li "Or I could even do some partnership work with the Deers, you know."
 
@@ -232,7 +244,7 @@ label v14s26:
     scene v14s26_5f # FPP. same as v14s26_5a Lindsey hands MC a cake
     with dissolve
 
-    la "Enjoy! It was made with love. *Chuckles*"
+    la "Enjoy! It was made with love."
 
     scene v14s26_5
     with dissolve
@@ -257,13 +269,15 @@ label v14s26:
     scene v14s26_8 # TPP. MC checks his phone
     with dissolve
 
+    pause 0.75
+
 # -Kiwii post of Lindsey's bake sale, 2 different renders needed for seperate slogans-
 
 # Kiwi Post: v14kw26 - Lindsey and Lauren Selfie in front of her banner (Lindsey, Returning The Promise) on the banner
     if v11_lindsey_slogan == 1:
         #Selfie with Lauren in front of slogan banner that says Lindsey, Returning The Promise
-        $ v14s26_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14kw26.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
-        $ v14s26_kiwiiPost1.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
+        $ v14s26_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14kw26.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! For the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
+        $ v14s26_kiwiiPost1.newComment("Lauren", "#Vote4Lindsey! <3", queue=False, numberLikes=382)
         $ v14s26_kiwiiPost1.newComment("Nora", "Cuties <3", queue=False)
         $ v14s26_kiwiiPost1.newComment("Imre", "Actually that cookie this morning made me shit myself!", queue=False)
         $ v14s26_kiwiiPost1.newComment("Chloe", "Eww...", queue=False)
@@ -278,7 +292,7 @@ label v14s26:
 # Kiwi Post: v14kw26_1 - Lindsey and Lauren Selfie in front of her banner (Lindsey, Say Bye To The Bullshit) on the banner
     else:
         #Selfie with Lauren in front of slogan banner that says Lindsey, Say Bye To The Bullshit
-        $ v14s26_kiwiiPost2 = KiwiiPost("Lindsey", "v14/v14kw26_1.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! All proceeds go to my campaign fund and to the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
+        $ v14s26_kiwiiPost2 = KiwiiPost("Lindsey", "v14/v14kw26_1.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! For the future of the Chicks! <3", mentions="Lauren", numberLikes=748)
         $ v14s26_kiwiiPost2.newComment("Lauren", "#Vote4Lindsey! <3", queue=False)
         $ v14s26_kiwiiPost2.newComment("Nora", "Cuties <3", queue=False)
         $ v14s26_kiwiiPost2.newComment("Imre", "Actually that cookie this morning made me shit myself!", queue=False)
@@ -290,10 +304,6 @@ label v14s26:
         $ v14s26_kiwiiPost2.addReply("Thank you for the cake! It's amazing you guys...", mentions="Lindsey")
         $ v14s26_kiwiiPost2.newComment("Lindsey", "<3")
         $ v14s26_kiwiiPost2.newComment("Lauren", ":)")
-
-    if False: ##just making sure it shows up on lint
-        scene v14kw26
-        scene v14kw26_1
 
     if not v14_amber_clean:
         play sound "sounds/vibrate.mp3"
@@ -323,25 +333,19 @@ label v14s26:
 
         u "What? No. *Chuckles*"
 
-        scene v14s26_10c
-        with dissolve
-
         u "Are you all good? What's going on?"
-
-        scene v14s26_10c
-        with dissolve
-
-        am "I'm fine, sorry..."
 
         scene v14s26_10b
         with dissolve
+
+        am "I'm fine, sorry..."
 
         am "I was just scared 'cause when I woke up you weren't here."
 
         scene v14s26_10c
         with dissolve
 
-        u "*Chuckles* That's okay."
+        u "That's okay."
 
         scene v14s26_10d # FPP. same as v14s26_10c show amber slight smile, mouth open
         with dissolve
@@ -351,7 +355,7 @@ label v14s26:
         scene v14s26_10c
         with dissolve
 
-        u "*Chuckles* One of the best nights of my life."
+        u "One of the best nights of my life."
 
         scene v14s26_10e # FPP. same as v14s26_10d show amber full smile, mouth open
         with dissolve
@@ -366,7 +370,7 @@ label v14s26:
         scene v14s26_11 # TPP. MC hangs up the phone, slight smile, mouth closed
         with dissolve
 
-        u "(She's a handful.) *Chuckles*"
+        u "(She's a handful.)"
 
     scene v14s26_12 # TPP. MC gets up and heads over to Lindsey's stand, Lauren has left
     with dissolve
@@ -381,8 +385,6 @@ label v14s26:
     scene v14s26_2b
     with dissolve
 
-    $ set_presidency_percent(v14_lindsey_popularity + 3)
-
     li "It went great! I'm closing up now."
 
     scene v14s26_2
@@ -393,17 +395,18 @@ label v14s26:
     scene v14s26_2b
     with dissolve
 
+    $ lindsey_board.money +=450
     li "I made $450... *Laughs*"
 
     scene v14s26_2
     with dissolve
 
-    u "*Chuckles* Damn, Linds! You made that in what... Like, two hours?"
+    u "Damn, Linds! You made that in what... Like, two hours?"
 
     scene v14s26_2a
     with dissolve
 
-    li "Just about, yeah. *Chuckles* If you don't include the hours we stayed up making these things last night."
+    li "Just about, yeah. If you don't include the hours we stayed up making these things last night."
 
     scene v14s26_2
     with dissolve
@@ -418,10 +421,7 @@ label v14s26:
     scene v14s26_2
     with dissolve
 
-    u "*Chuckles* Maybe..."
-
-    scene v14s26_2
-    with dissolve
+    u "Maybe..."
 
     u "Let me know when it's time for your next event and I'll be there."
 
@@ -450,5 +450,7 @@ label v14s26:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s27

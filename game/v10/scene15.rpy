@@ -441,6 +441,7 @@ label v10_call_with_lauren1:
                     "Lion":
                         scene v10scwl2c 
                         with dissolve
+                        
                         $ grant_achievement("rawr_im_a_lion")
                         u "Lion."
 

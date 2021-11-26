@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v14s08:
+    play music "music/v14/Track Scene 8.mp3" fadein 2
+
     scene v14s08_1 # TPP. mc sees the bus and walks towards it, slight smile, mouth closed
     with dissolve
 
@@ -19,34 +21,18 @@ label v14s08:
 
     u "Hey, hey! I know you're probably ready to get back."
 
-    scene v14s08_3a # FPP. same as v14s08_3 amber turns around and looks at mc, amber is crying, her make-up is running, and her mouth is closed
+    scene v14s08_3c # FPP. same as v14s08_3 amber turns around and looks at mc, amber is crying, her make-up is running, and her mouth is closed
     with dissolve
 
-    am "*Crying*"
+    am "*Sniffs*"
 
-    scene v14s08_3b # FPP. same as v14s08_3a amber rubs a hand across her face, clearing up the running make-up
-    with dissolve
-
-    u "(Oh shit... She's crying! Oh, fuck... What do I do here?)"
-
-    scene v14s08_3c # FPP. same as v14s08_3b amber has lowered her hand off her face, looking at mc slightly annoyed
-    with dissolve
+    u "(Oh shit... Was she crying? Oh, fuck... What do I do here?)"
 
     u "(I mean, for normal girls I'd just ask what's wrong but, with Amber... I don't want to get stabbed today, you know?)"
 
-    scene v14s08_3d # FPP. same as v14s08_3c amber mouth open
-    with dissolve
-
-    am "*Sniffles*"
-
-    scene v14s08_3c
-    with dissolve
-
     menu:
         "Ask her what's wrong":
-            scene v14s08_3c
-            with dissolve
-
+            $ add_point(KCT.BOYFRIEND)
             u "Hey, what's wrong?"
 
             scene v14s08_3d
@@ -86,6 +72,7 @@ label v14s08:
             pause 0.75
 
         "Leave her alone":
+            $ add_point(KCT.BRO)
             scene v14s08_3
             with dissolve
 
@@ -120,9 +107,6 @@ label v14s08:
             with dissolve
 
             am "Uh, [name]..."
-
-            scene v14s08_4b
-            with dissolve
 
             am "Thanks for minding your own business."
 
@@ -166,4 +150,5 @@ label v14s08:
 
     pause 0.75
 
+    stop music fadeout 3
     jump v14s09

@@ -226,7 +226,7 @@ label v11_ride_with_mrlee:
     with dissolve
 
     lee "*Sighs* As I was trying to explain earlier, I see much of my younger self in the situations that you students experience."
-    lee "If I'm able to help one of you or all of you, that makes it worth it. But I'm not going to baby anyone. Instead, I'll give you all clarity and a fair shot."
+    lee "If I'm able to help one of you or all of you, that makes it worth it. But I'm not going to babysit anyone. Instead, I'll give you all clarity and a fair shot."
 
     scene v11wir4b
     with dissolve

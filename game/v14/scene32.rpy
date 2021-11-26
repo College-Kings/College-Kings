@@ -9,6 +9,8 @@ label v14s32:
 
     pause 0.75
 
+    play music "music/v14/Track Scene 32.mp3" fadein 2
+
     play sound "sounds/hs.mp3"
 
     scene v14s32_2 # FPP. MC looking at Imre who is punching the punching bag, Imre slight smile, mouth closed.
@@ -78,12 +80,30 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "Ryan?"
+    menu:
 
-    scene v14s32_2e
-    with dissolve
+        "Chris":
 
-    imre "Bingo."
+            $ add_point(KCT.TROUBLEMAKER)
+
+            u "Chris?"
+
+            scene v14s32_2e
+            with dissolve
+
+            imre "What? No. Ryan."
+        
+
+        "Ryan":
+
+            $ add_point(KCT.BRO)
+
+            u "Ryan?"
+
+            scene v14s32_2e
+            with dissolve
+
+            imre "Bingo."
 
     scene v14s32_2d
     with dissolve
@@ -111,25 +131,40 @@ label v14s32:
 
     scene v14s32_2d
     with dissolve
+    
+    menu:
 
-    u "*Sighs*"
+        "You're right":
+            $ add_point(KCT.BRO)
 
-    u "It'd be really nice if you two just got along."
+            u "Yeah, I guess it is kinda messed up that Ryan doesn't tell the whole story."
 
-    scene v14s32_2e
-    with dissolve
+            scene v14s32_2e
+            with dissolve
 
-    imre "Not gonna happen, don't even start. I tried and he fucked me over again."
+            imre "Exactly. That's what I'm saying!"
 
-    scene v14s32_2d
-    with dissolve
+        "Please just get along":
 
-    u "Whatever man, but don't say I didn't tell you that this is going to cause more harm than good, for both of you."
+            $ add_point(KCT.BOYFRIEND)
+            u "*Sighs*"
 
-    scene v14s32_2e
-    with dissolve
+            u "It'd be really nice if you two just got along."
 
-    imre "Uh-huh."
+            scene v14s32_2e
+            with dissolve
+
+            imre "Not gonna happen, don't even start. I tried and he fucked me over again."
+
+            scene v14s32_2d
+            with dissolve
+
+            u "Whatever man, but don't say I didn't tell you that this is going to cause more harm than good, for both of you."
+
+            scene v14s32_2e
+            with dissolve
+
+            imre "Uh-huh."
 
     scene v14s32_2d
     with dissolve
@@ -221,7 +256,7 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "No, I'm just good. *Chuckles*"
+    u "No, I'm just good."
 
     scene v14s32_2e
     with dissolve
@@ -332,7 +367,7 @@ label v14s32:
     scene v14s32_6
     with dissolve
 
-    rub "As far as you know... *Chuckles*"
+    rub "As far as you know..."
 
     rub "Just kidding, haha. Sorry about that, though. It's been a while since we've all gotten home so maybe I'm just imagining things."
 
@@ -359,7 +394,7 @@ label v14s32:
     scene v14s32_6a
     with dissolve
 
-    u "Bye. Good luck finding your friend. *Chuckles*"
+    u "Bye. Good luck finding your friend."
 
     scene v14s32_5c # TPP. Same as v14s32_5b, Rubee starting to walk to the gym door.
     with dissolve
@@ -371,7 +406,7 @@ label v14s32:
     scene v14s32_5d # TPP. Same as v14s32_5c, Rubee holding the door open for herself and looking back at MC, slight smile, mouth open.
     with dissolve
 
-    rub "*Chuckles* Thanks!"
+    rub "Thanks!"
 
     play sound "sounds/doorclose.mp3"
 
@@ -388,7 +423,7 @@ label v14s32:
     scene v14s32_7a # FPP. Same as v14s32_7, Imre slight smile, mouth closed.
     with dissolve
 
-    u "Quit whispering compliments to them when they're standing right next to you? *Chuckles*"
+    u "Quit whispering compliments to them when they're standing right next to you?"
 
     scene v14s32_7
     with dissolve
@@ -425,7 +460,7 @@ label v14s32:
     scene v14s32_7
     with dissolve
 
-    imre "Is there really a difference? *chuckles*"
+    imre "Is there really a difference?"
 
     scene v14s32_7a
     with dissolve
@@ -451,13 +486,13 @@ label v14s32:
         imre "Chris got on board to have the Wolves support her because of me."
 
     if not v14_help_chloe:
-        $ v14s32_kiwiiPost1 = KiwiiPost("Chloe", "v14/v14s30b_pw_image_two.webp", _("I'd like to officially announce The Chick's partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
-        $ v14s32_kiwiiPost1.newComment("Chris", _("Haha, perfect! #Vote4Chloe"))
-        $ v14s32_kiwiiPost1.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chloe <3"))
-        $ v14s32_kiwiiPost1.newComment("Imre", _("Yessss!!!!!"))
-        $ v14s32_kiwiiPost1.newComment("Grayson", _("LMAO you're down bad, huh?"))
-        $ v14s32_kiwiiPost1.newComment("Chloe", _("Be civil at least, Grayson"), mentions="Grayson")
-        $ v14s32_kiwiiPost1.newComment("Riley", _("Omg! Can I have that thing?"))
+        $ v14s32_kiwiiPost1 = KiwiiPost("Chloe", "v14/v14s30b_pw_image_two.webp", _("I'd like to officially announce The Chicks' partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
+        $ v14s32_kiwiiPost1.newComment("Chris", _("Haha, perfect! #Vote4Chloe"), queue=False)
+        $ v14s32_kiwiiPost1.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chloe <3"), queue=False)
+        $ v14s32_kiwiiPost1.newComment("Imre", _("Yessss!!!!!"), queue=False)
+        $ v14s32_kiwiiPost1.newComment("Grayson", _("LMAO you're down bad, huh?"), queue=False)
+        $ v14s32_kiwiiPost1.newComment("Chloe", _("Be civil at least, Grayson"), mentions="Grayson", queue=False)
+        $ v14s32_kiwiiPost1.newComment("Riley", _("Omg! Can I have that thing?"), queue=False)
 
         $ set_presidency_percent(v14_lindsey_popularity - 2)
         imre "She just made an announcement on Kiwii, did you see it yet?"
@@ -481,7 +516,7 @@ label v14s32:
 
     u "(He's obviously hiding something.)"
 
-    u "*Chuckles* If you say so."
+    u "If you say so."
 
     scene v14s32_7
     with dissolve
@@ -506,7 +541,7 @@ label v14s32:
     scene v14s32_2d
     with dissolve
 
-    u "Wow, you thought about that for a long time, didn't you? *Chuckles*"
+    u "Wow, you thought about that for a long time, didn't you?"
 
     scene v14s32_2e
     with dissolve
@@ -771,5 +806,7 @@ label v14s32:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v14s33

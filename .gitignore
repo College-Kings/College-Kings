@@ -25,3 +25,4 @@ screenshot*
 *.zip
 *.exe
 *.bak
+.DS_Store
