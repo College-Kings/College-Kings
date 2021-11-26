@@ -111,7 +111,7 @@ screen spoiler_path_builder():
 
 
 screen path_builder_base(header=""):
-    add "images/path builder/path_builder_background.png"
+    add "images/path builder/path_builder_background.webp"
 
     text "PATH BUILDER":
         size 50
@@ -144,9 +144,9 @@ screen path_builder(catagory_step=1):
             for item in items:
                 vbox:
                     imagebutton:
-                        idle "images/path builder/pb_button.png"
-                        hover "images/path builder/pb_selected.png"
-                        selected_idle "images/path builder/pb_selected.png"
+                        idle "images/path builder/pb_button.webp"
+                        hover "images/path builder/pb_selected.webp"
+                        selected_idle "images/path builder/pb_selected.webp"
                         if item.func == "set_variables":
                             selected all(getattr(store, variable) == value for variable, value in zip(item.variables, item.values))
                             action Function(item.set_variables)
@@ -167,9 +167,9 @@ screen path_builder(catagory_step=1):
                 spacing 20
                 
                 imagebutton:
-                    idle "images/path builder/pb_tick.png"
-                    hover "images/path builder/pb_ticked.png"
-                    selected_idle "images/path builder/pb_ticked.png"
+                    idle "images/path builder/pb_tick.webp"
+                    hover "images/path builder/pb_ticked.webp"
+                    selected_idle "images/path builder/pb_ticked.webp"
                     action ToggleVariable("locked_kct")
 
                 text "Lock KCT (Prevent it from changing)":
@@ -220,9 +220,9 @@ screen pb_select_homecoming_date():
             for name, variable, value in items:
                 vbox:
                     imagebutton:
-                        idle "images/path builder/pb_button.png"
-                        hover "images/path builder/pb_selected.png"
-                        selected_idle "images/path builder/pb_selected.png"
+                        idle "images/path builder/pb_button.webp"
+                        hover "images/path builder/pb_selected.webp"
+                        selected_idle "images/path builder/pb_selected.webp"
                         action ToggleVariable(variable, value)
 
                     text name:
