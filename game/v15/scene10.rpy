@@ -344,6 +344,7 @@ label v15s10:
                     with dissolve
 
                     li "Yeah. We'll take it. We'll take anything we can get at this point."
+
                 "Accept offer.":
                     scene v15s10_14
                     with dissolve
@@ -534,6 +535,7 @@ label v15s10:
             with dissolve
 
             jump v15s12
+            
         else:
             scene v15s10_12a
             with dissolve
