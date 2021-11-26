@@ -38,7 +38,7 @@ label v11_rose_underground:
 
     u "Yeah. The quiet moments."
 
-    if msrosers:
+    if msrosers and joinwolves: #sanitizing pathbuilder input
         scene v11sub2
         with dissolve
 

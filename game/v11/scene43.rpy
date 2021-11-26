@@ -626,7 +626,7 @@ label v11_at_the_bank:
 
     ro "Will someone please explain to me exactly what has happened?"
 
-    if msrosers:
+    if msrosers and joinwolves: #sanitizing pathbuilder input
         scene v11bank18
         with dissolve
 
