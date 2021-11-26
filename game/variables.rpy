@@ -734,3 +734,53 @@ default v14s47_linds_passenger = False
 default v14s47_solo_passenger = False
 default v14s01_music = False
 default v14s03c_music = False
+
+
+# 15.0
+
+# v15 PLanning board 
+
+# Choloe v15s8
+default v15s8_chloe_pb_DamageLindseyRep = False  # checked in v15s12
+
+
+# Lindsey v15s12
+default v15_lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/lindsey_background.webp", money=200, style="lindsey_board")
+default v15s12_lindsey_pb_gameNight = False         # True, GameNight; False, VIPNight
+default v15s12_lindsey_pb_fakeId = False            # True, FakeIDl False, Limo/VIP rental
+default v15s12_lindsey_pb_wouldYouRather = False    # True, Play Would You Rather; False, Play Who's Most Likely To
+default v15_s12_lindsey_pb_inviteSebastian = False  # True, Invite Sebastian; False, Invite Grayson
+
+# Rest of 15 
+default AubreyFriend = False 
+default Aubreyfwb = False 
+default AubreyTamed = False 
+default AutumnFreeMug = False
+default AutumnLunchBreak = False
+default dog_name = "Blue"
+default lindseyfriend = False 
+default v15s9_MadAtMsRose = False # checked in v15s12
+default v15s5_mc_angry_with_rose = False
+default MadAtMsRose = False
+default V15_MsRoseSex = False
+default SmokedWithAutumn = False
+default QuirkAnimalLover = 0
+default QuirkBoomer = 0
+default QuirkHardass = 0
+default QuirkPopculture = 0
+default QuirkPrankster = 0
+default v15_Blame_Chris = False 
+default v15_Blame_Nora = False 
+default v15_LessChickTuition = False
+default v15_Stuck_Up_For_Nora = False 
+default v15s14_LetsGo = False
+default v15s7_chloe_empathize = False
+default v15_TookNotes = False
+default MrLeeMeeting = False 
+default MsRoseMeeting = False #(redundancy check)
+default v15_MsRoseSex = False 
+default Lauren_Gift_1 = False
+default Lauren_Gift_2a = False
+default Lauren_Gift_2b = False
+default Lauren_Gift_3a = False
+default Lauren_Gift_3b = False

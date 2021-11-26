@@ -1,4 +1,4 @@
-# SCENE 47: Take images of Lindsey car without Lindsey
+# SCENE 47: Take images of Lindsey car with/without Lindsey
 # Locations: 
 # Characters: LINDSEY (Outfit: 3), MC (Outfit: 1)
 # Time: Evening
