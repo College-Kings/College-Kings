@@ -620,7 +620,7 @@ label v14s51_continue:
 
     stop music fadeout 3
 
-    play music "music/v14/Track Scene 51_3.mp3" fadein 2
+    play music "music/v14/Track Scene 20.mp3" fadein 2
 
     u "(And now, a quick text to Lindsey...)"
 
