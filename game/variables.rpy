@@ -618,9 +618,7 @@ default v13s48_ryan_double_date = False
 default v13s9_go_to_concert = False
 
 # 14.0
-
-#BOARD
-##CHLOE
+## Chloe Planing Board
 default chloe_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/chloe_background.webp", money=1500)
 default v14_chloe_wolves = False ##APPROACH A
 default v14_realwolf = False ##TASK A2A
@@ -630,7 +628,7 @@ default v14_chloe_apes = False ##APPROACH B
 default v14_chloe_grayson = False ##TASK B2A
 default v14_chloe_cameron = False ##TASK B2B
 
-##LINDSEY
+## Lindsey Planing Board
 default lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/lindsey_background.webp", money=200, style="lindsey_board")
 default v14_lindsey_sell = False ##APPROACH A
 default v14_pics_no_linds = False ##TASK A1A
@@ -640,8 +638,6 @@ default v14_lindsey_steal = False ##APPROACH B
 default v14_concert_distraction = False ##APPROACH B1A
 default v14_date_distraction = False ###APPROACH B1B
 
-
-##Rest of 14
 default AmberLoyal = False
 default AutumnTrust = False
 default chrissus = 0
@@ -736,22 +732,16 @@ default v14s01_music = False
 default v14s03c_music = False
 
 
-# 15.0
-
-# v15 PLanning board 
-
-# Choloe v15s8
+# 15.0 
+# Chloe Planning Board (v15s8)
 default v15s8_chloe_pb_DamageLindseyRep = False  # checked in v15s12
 
-
-# Lindsey v15s12
-default v15_lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/lindsey_background.webp", money=200, style="lindsey_board")
+# Lindsey Planning Board (v15s12)
 default v15s12_lindsey_pb_gameNight = False         # True, GameNight; False, VIPNight
 default v15s12_lindsey_pb_fakeId = False            # True, FakeIDl False, Limo/VIP rental
 default v15s12_lindsey_pb_wouldYouRather = False    # True, Play Would You Rather; False, Play Who's Most Likely To
 default v15_s12_lindsey_pb_inviteSebastian = False  # True, Invite Sebastian; False, Invite Grayson
 
-# Rest of 15 
 default AubreyFriend = False 
 default Aubreyfwb = False 
 default AubreyTamed = False 
