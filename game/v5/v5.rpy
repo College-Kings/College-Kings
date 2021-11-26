@@ -99,7 +99,7 @@ label v5start:
 
                     u "*Drunk* My uhm, my friend, he- he said that Chloe did some shady shit in the past and I just had to find out the truth!"
 
-                    scene s374d# nora slight laugh, cocky
+                    scene s374d # nora slight laugh, cocky
                     with dissolve
 
                     no "And what did you find out?"
@@ -495,7 +495,7 @@ label jorepb:
 
                             u "My uhm, my friend said that Chloe did some shady shit in the past and I just had to find out the truth."
 
-                            scene s374d# nora slight laugh, cocky
+                            scene s374d # nora slight laugh, cocky
                             with dissolve
 
                             no "And what did you find out?"

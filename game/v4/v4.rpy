@@ -849,7 +849,7 @@ label v4start:
 
             ju "Honey, you in there?"
 
-            scene s321# FIrst person: looking at closed changing room door
+            scene s321 # FIrst person: looking at closed changing room door
             with dissolve
 
             u "Yeah, just wai-"

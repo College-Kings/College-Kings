@@ -2061,7 +2061,7 @@ label thisbelauren:
 
                     u "I mean yeah... I mean you'd be free to date other people as well. We could even try something with just a second girl-"
 
-                    scene s717h# Lauren slightly angry and in disbelief
+                    scene s717h # Lauren slightly angry and in disbelief
                     with dissolve
 
                     la "Okay, we're done."
@@ -6843,16 +6843,16 @@ label hc_asking_chloe:
     pause 0.5
 
     if volleyball:
-        scene s936# Camera - TPP. Chloe runs towards Mc who's kneeling on the path with the blue volleyball that says "Hoco?" on it
+        scene s936 # Camera - TPP. Chloe runs towards Mc who's kneeling on the path with the blue volleyball that says "Hoco?" on it
         with dissolve
 
     else:
-        scene s936a# Camera - TPP. Chloe runs towards Mc who's kneeling on the path with a rose
+        scene s936a # Camera - TPP. Chloe runs towards Mc who's kneeling on the path with a rose
         with dissolve
 
     pause 0.5
 
-    scene s937# FPP (you're kneeling, so looking up), Close up chloe looking at you smiling surprised
+    scene s937 # FPP (you're kneeling, so looking up), Close up chloe looking at you smiling surprised
     with dissolve
 
     cl "[name]?"
@@ -6862,7 +6862,7 @@ label hc_asking_chloe:
 
     u "Chloe, do you wanna go to homecoming with me?"
 
-    scene s937b# chloe hand on her forehead not sure what to do smiling
+    scene s937b # chloe hand on her forehead not sure what to do smiling
     with dissolve
 
     cl "[name], I have so much to do at the dance. I'm in charge of a lot of the planning and organizing, I don't know if I can-"
@@ -12603,7 +12603,7 @@ label fr4chloedate:
 
         u "Go get 'em!"
 
-        scene sfr4stage4#Chloe runs up on stage
+        scene sfr4stage4 #Chloe runs up on stage
         with dissolve
 
         "*Crowd continues to cheer*"
@@ -12895,7 +12895,7 @@ label chloe_dance:
 
     u "Haha, me too."
 
-    scene sfr4cl45h# chloe flirty pose 2
+    scene sfr4cl45h #chloe flirty pose 2
     with dissolve
 
     cl "And yet... I feel like I'd rather be somewhere else with you."
@@ -13257,7 +13257,7 @@ label fr4laurendate:
         if not chloesad:
 
             label fr4laurendatechloe:
-                scene sfr4stage4#Chloe runs up on stage
+                scene sfr4stage4 #Chloe runs up on stage
                 with dissolve
                 "*Crowd continues to cheer*"
 
@@ -13973,7 +13973,7 @@ label fr4rileydate:
     if not chloesad:
 
         label fr4rileydatechloe:
-            scene sfr4stage4#Chloe runs up on stage
+            scene sfr4stage4 #Chloe runs up on stage
             with dissolve
 
             "*Crowd continues to cheer*"
@@ -14704,7 +14704,7 @@ label fr4riley2:
         label fr4alonechloe:
 
             if not v7_seencrowning:
-                scene sfr4stage4#Chloe runs up on stage
+                scene sfr4stage4 #Chloe runs up on stage
                 with dissolve
                 "*Crowd continues to cheer*"
 
@@ -16519,7 +16519,7 @@ label fr4lockerroomchloe:
 
                     if hcGirl == "alone":
                         u "(I guess I'll watch it with someone.)"
-                        scene sfr4stage4#Chloe runs up on stage
+                        scene sfr4stage4 #Chloe runs up on stage
                         with fade
 
                         jump fr4alonechloe
@@ -17326,7 +17326,7 @@ label fr4chloeending:
 label fr4amberending:
     $ ending = "amber"
 
-    scene sfr4am12f# amber flirtatious
+    scene sfr4am12f # amber flirtatious
     with dissolve
 
     am "I have another idea of what might feel good..."

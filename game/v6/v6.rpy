@@ -6044,7 +6044,7 @@ label wakeupa:
         ri "So what did you think of the poetry slam as a whole?"
 
     elif perform == 1:
-        scene s629c# Riley smiling, emphatic mouth close
+        scene s629c # Riley smiling, emphatic mouth close
         with dissolve
 
         u "Oh god, I was awful."
