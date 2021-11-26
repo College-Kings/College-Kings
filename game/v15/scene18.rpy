@@ -221,10 +221,10 @@ label v15s18:
 
     u "I have no idea where I put that thing, dude. I think someone borrowed it or stole it."
 
-    if joinwolves and costume = 3:
+    if joinwolves and costume == 3:
         u "In fact, is that my fucking cowboy costume?"
 
-    if joinapes and costume = 3:
+    if joinapes and costume == 3:
         u "It looked exactly like yours actually... Is that-"
 
     scene v15s18_11d
