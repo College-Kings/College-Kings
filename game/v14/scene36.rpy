@@ -1125,7 +1125,7 @@ label v14s36:
                 pause 0.75
 
                 stop music fadeout 3
-                play music "music/v14/Track Scene 36_3.mp3" fadein 2
+                play music "music/v14/Track Scene 1a_2.mp3" fadein 2
 
                 scene v14s36_11 # FPP. Mc and Jenny are now both dressed, Jenny looking directly at mc, full smile, mouth open
                 with dissolve
