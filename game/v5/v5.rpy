@@ -2827,7 +2827,7 @@ label hospitala:
 
     label fk_a:
     stop music fadeout 2.0
-    image af2 = Movie(play="images/af2.webm", start_image="images/af2start.webp", image="images/af2pic.webp", loop = False)
+    image af2 = Movie(play="images/af2.webm", start_image="images/v5/af2start.webp", image="images/v5/af2pic.webp", loop = False)
 
 
     play sound "sounds/hs.mp3"

@@ -814,7 +814,7 @@ label conl:
     scene s227 # you kissing
     with dissolve
 
-    image glitch = ("images/glitch.webp")
+    image glitch = ("images/v3/glitch.webp")
 
     pause 0.5
 
