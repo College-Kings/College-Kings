@@ -4,7 +4,7 @@
 # Time: Night
 # Phone Images: None
 
-label v12_ms_rose_sex:
+label v12_ms_rose_sex: #can only get here if joinwolves
     scene v12msr1 # TPP. Show MC walking out of Riley's room into the hallway, slight smile, mouth closed
     with dissolve
 
