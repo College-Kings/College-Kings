@@ -389,7 +389,7 @@ label v14s45a:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v14/Track Scene 45a_2.mp3" fadein 2
+    play music "music/v14/Track Scene 30.mp3" fadein 2
 
     scene v14s45a_6 # FPP. MC looking out at the park
     with dissolve
