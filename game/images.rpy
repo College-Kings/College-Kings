@@ -206,7 +206,7 @@ image asexnew11 = Movie(play="images/v3/asexnew11.webm", image="images/v3/asexne
 image asexnew12 = Movie(play="images/v3/asexnew12.webm", image="images/v3/asexnew11end.webp", start_image="images/v3/asexnew11start.webp")
 image asexnew13 = Movie(play="images/v3/asexnew13.webm", loop=False, image="images/v3/asexnew13end.webp", start_image="images/v3/asexnew13start.webp")
 
-image rikiss2 = Movie(play="images/rikiss.webm", loop=False, image="images/rikiss.webp", start_image="images/rikiss.webp")
+image rikiss2 = Movie(play="images/v3/rikiss.webm", loop=False, image="images/v3/rikiss.webp", start_image="images/v3/rikiss.webp")
 
 # v4.0
 image s316 = "images/v4/s316.webp" # Julia looking forward talking smiling
