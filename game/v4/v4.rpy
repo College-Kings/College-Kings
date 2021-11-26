@@ -7,7 +7,7 @@ init python:
 
     def v4_reply2():
         josh.messenger.newMessage(_("Aww, come on. You'll be back by 11."))
-        josh.messenger.newImgMessage("images/text1.webp")
+        josh.messenger.newImgMessage("images/v4/text1.webp")
         josh.messenger.newMessage(_("I told my friend Amber about you and she really wants to meet you."))
         josh.messenger.addReply(_("Alright, I'll come."), v4_reply1)
         josh.messenger.addReply(_("Josh, I don't know, man. I don't wanna be late."), v4_reply3)

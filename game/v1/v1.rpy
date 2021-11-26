@@ -2074,8 +2074,8 @@ label at_bd:
 
                     ri "I was hoping you'd say that."
 
-                    image sdabj = Movie (play="images/sdabj.webm", loop = True, image = "images/s1")
-                    image sdabjf = Movie (play="images/sdabjf.webm", loop = True, image = "images/sda4e")
+                    image sdabj = Movie (play="images/v1/sdabj.webm", loop = True, image = "images/v1/sda4e")
+                    image sdabjf = Movie (play="images/v1/sdabjf.webm", loop = True, image = "images/v1/sda4e")
 
                     show sdabj
                     with fade

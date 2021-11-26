@@ -354,7 +354,7 @@ label imreconc: # Keep talking to Amber
     with fade
 
     $ amber.messenger.addReply(_("I'm all by myself now."))
-    $ amber.messenger.newImgMessage("images/text2.webp")
+    $ amber.messenger.newImgMessage("images/v6/text2.webp")
     $ amber.messenger.addReply(_("Woah, what was that for?"), v6_reply1)
     $ amber.messenger.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
@@ -1014,7 +1014,7 @@ label continuebb:
     
     $ amber.messenger.newMessage(_("Hey, you alone? xx"), queue=False)
     $ amber.messenger.addReply(_("Yeah, I'm in my dorm, why?"))
-    $ amber.messenger.newImgMessage("images/text2.webp")
+    $ amber.messenger.newImgMessage("images/v6/text2.webp")
     $ amber.messenger.addReply(_("Woah, what was that for?"), v6_reply1)
     $ amber.messenger.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
@@ -4437,7 +4437,7 @@ label afteraubrey:
         if config_censored:
             $ aubrey.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
         else:
-            $ aubrey.messenger.newImgMessage("images/text3.webp", queue=False)
+            $ aubrey.messenger.newImgMessage("images/v6/text3.webp", queue=False)
 
         if meetaubrey:
             $ aubrey.messenger.newMessage(_("Still shaking from earlier"), queue=False)
