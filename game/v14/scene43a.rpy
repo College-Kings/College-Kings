@@ -9,7 +9,7 @@ label v14s43a:
 
     pause 0.75
 
-    play music "music/v14/Track Scene 43.mp3" fadein 2
+    play music "music/v14/Track Scene 14.mp3" fadein 2
 
     if penelopeloyal:
         scene v14s43a_2 # TPP. Show MC and Penelope walking together, holding hands, smiling, mouths closed, different location to v14s43a_1
