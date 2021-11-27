@@ -9,7 +9,7 @@ label v14s32:
 
     pause 0.75
 
-    play music "music/v12/Scene 27/Track Scene 27_3.mp3" fadein 2
+    play music "music/v12/Track Scene 27_3.mp3" fadein 2
 
     play sound "sounds/hs.mp3"
 

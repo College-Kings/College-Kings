@@ -9,7 +9,7 @@ label v12_penelope_call:
 
     pause 0.75
 
-    play music "music/v12/Scene 3a/Track Scene 3a.mp3" fadein 2
+    play music "music/v12/Track Scene 3a.mp3" fadein 2
     
     play sound "sounds/call.mp3"
 

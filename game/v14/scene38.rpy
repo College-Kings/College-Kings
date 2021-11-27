@@ -9,7 +9,7 @@ label v14s38:
 
     pause 0.75
 
-    play music "music/v12/Scene 33/Track Scene 33_5.mp3" fadein 2
+    play music "music/v12/Track Scene 33_5.mp3" fadein 2
 
     scene v14s38_2 # FPP. Jenny, walking down the side walk, her back to MC.
     with dissolve

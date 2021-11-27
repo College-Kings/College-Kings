@@ -25,7 +25,7 @@ init python:
         simplr_contacts.remove(emmy.simplr)
 
 label v14s12:
-    play music "music/v12/Scene 33/Track Scene 33_2.mp3" fadein 2
+    play music "music/v12/Track Scene 33_2.mp3" fadein 2
 
     scene v14s12_1 # TPP. MC walking down the sidewalk back to San Vallejo, slight smile, mouth closed. 
     with fade

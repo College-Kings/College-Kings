@@ -9,7 +9,7 @@ label v12s27a:
     with dissolve
     ry "That was some mess, wasn't it?"
 
-    play music "music/v12/Scene 27a/Track Scene 27a_1.mp3" fadein 2
+    play music "music/v12/Track Scene 27a_1.mp3" fadein 2
 
     scene v12s27a_2a #FPP, Ryan now close up in front of mc, mouth closed, surprised smile
     with dissolve
@@ -289,7 +289,7 @@ label v12s27a:
     barber "Bonjour!"
 
     stop music fadeout 3
-    play music "music/v12/Scene 27/Track Scene 27_3.mp3" fadein 2
+    play music "music/v12/Track Scene 27_3.mp3" fadein 2
 
     scene v12s27a_5a # same as 5, mouth closed
     with dissolve
@@ -478,7 +478,7 @@ label v12s27a:
     ry "Oh man, everyone on Kiwii keeps commenting \"#RoastedApe\"."
 
     stop music fadeout 3
-    play music "music/v12/Scene 27a/Track Scene 27a_3.mp3" fadein 2
+    play music "music/v12/Track Scene 27a_3.mp3" fadein 2
 
     scene v12s27a_12a # FPP show Ryan looking at mc, annoyed, mouth closed
     with dissolve

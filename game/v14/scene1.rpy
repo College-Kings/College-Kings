@@ -22,7 +22,7 @@ label v14_start:
         jump v14s01a
     
 label v14s01:
-    play music "music/v12/Scene 23/Track Scene 23_2.mp3" fadein 2
+    play music "music/v12/Track Scene 23_2.mp3" fadein 2
     $ v14s01_music = True
     scene v14s01_1 # FPP. MC sitting on bed, looking at Riley and Aubrey making out, show some caressing between them
     with dissolve
@@ -48,7 +48,7 @@ label v14s01:
             
             label v14s01_sg:
                 if not v14s01_music:
-                    play music "music/v12/Scene 23/Track Scene 23_2.mp3" fadein 2
+                    play music "music/v12/Track Scene 23_2.mp3" fadein 2
                 
                 $ v13_FirstThreesome = True
                 u "I'm gonna feel much better after this."
@@ -339,7 +339,7 @@ label v14s01:
                 au "We may have to do this again, Riley."
 
                 stop music fadeout 3
-                play music "music/v12/Scene 35/Track Scene 35.mp3" fadein 2
+                play music "music/v12/Track Scene 35.mp3" fadein 2
 
                 scene v14s01_11g # FPP. Same as v14s01_11b, Riley mouth open, Aubrey mouth closed
                 with dissolve

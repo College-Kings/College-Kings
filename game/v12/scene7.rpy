@@ -25,7 +25,7 @@ label v12s7fr:
 
     lee "Students, please gather around. I have something very exciting to announce."
 
-    play music "music/v12/Scene 7/Track Scene 7_1.mp3" fadein 2
+    play music "music/v12/Track Scene 7_1.mp3" fadein 2
 
     scene v12fer2 # TPP. Show Aubrey,riley, mc, imre all mouths closed
     with dissolve
@@ -411,7 +411,7 @@ label v12s7fr:
         hide murder_tutorial3b
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_seating_front
 
@@ -427,7 +427,7 @@ label v12s7_aubrey1:
     au "Hey there, handsome. Please make sure you're being careful, okay? I'd hate for you to get hurt, but if you do find yourself needing some love and care, don't forget to come see your favorite nurse. *Chuckles*"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     scene v12ferau1a # FPP. Same 1, mouth closed
     with dissolve
@@ -582,7 +582,7 @@ label v12s7_aubrey1:
                 au "Good, and try not to take too long. Those injuries look very, very bad. *Chuckles*"
             
             stop music fadeout 3
-            play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+            play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
             call screen v12s7_balcony_right
             
@@ -609,7 +609,7 @@ label v12s7_aubrey1:
             au "Looking forward to it, Mr. Boxer."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_balcony_right
 
@@ -625,7 +625,7 @@ label v12s7_aubrey2:
     au "Finally! Took you long enough..."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_3.mp3" fadein 2
+    play music "music/v12/Track Scene 7_3.mp3" fadein 2
 
     scene v12ferauh1a # FPP. same 1, mouth closed
     with dissolve
@@ -719,7 +719,7 @@ label v12s7_aubrey2:
             pause 0.75
 
             stop music fadeout 3
-            play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+            play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
             call screen v12s7_bathroom
 
@@ -735,7 +735,7 @@ label v12s7_aubrey2:
             u "Boom."
 
             stop music fadeout 3
-            play music "music/v12/Scene 7/Track Scene 7_4.mp3" fadein 2
+            play music "music/v12/Track Scene 7_4.mp3" fadein 2
 
             scene v12ferauh6a # TPP. Show MC pointing finger gun at aubrey, mc mouth closed, aubrey mouth open
             with dissolve
@@ -776,12 +776,12 @@ label v12s7_aubrey2:
             pause 0.75
 
             stop music fadeout 3
-            play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+            play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
             call screen v12s7_bathroom
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
 label v12s7_riley1:
     $ v12s7_riley = True
@@ -802,7 +802,7 @@ label v12s7_riley1:
     cl "People like you never wanna pay your taxes but I barely have two pennies to rub together and I still have to pay mine."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
+    play music "music/v12/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferri2 # FPP. Show riley(from a distance as mc is overhearing the convo), smug look, looking at chloe out of shot, mouth open.
     with dissolve
@@ -1064,7 +1064,7 @@ label v12s7_riley1:
                 pause 0.75
     
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_left_viewpoint
 
@@ -1086,7 +1086,7 @@ label v12s7_chloe1:
     u "Well, well. If it isn't the richest woman alive."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_6.mp3" fadein 2
+    play music "music/v12/Track Scene 7_6.mp3" fadein 2
 
     scene v12ferch1a # FPP. same 1, mouth open
     with dissolve
@@ -1331,7 +1331,7 @@ label v12s7_chloe1:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+        play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
         call screen v12s7_left_viewpoint
 
@@ -1347,7 +1347,7 @@ label v12s7_chloe1:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+        play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
         call screen v12s7_left_viewpoint
 
@@ -1360,7 +1360,7 @@ label v12s7_chloe_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferch1d
     with dissolve
@@ -1413,7 +1413,7 @@ label v12s7_chloe_kill:
     u "*Chuckles*"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_left_viewpoint
 
@@ -1435,7 +1435,7 @@ label v12s7_riley3:
     u "Seeing you guys together again in the same exact location is a little suspicious."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
+    play music "music/v12/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferric2 # FPP. Show riley, slight smile, mouth open
     with dissolve
@@ -1554,7 +1554,7 @@ label v12s7_riley3:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     $ v12s7_endtalkList.append(riley)
 
@@ -1578,7 +1578,7 @@ label v12s7_riley3a:
     u "Still alive out here, huh?"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
+    play music "music/v12/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferril1a # FPP. Same 1, mouth open
     with dissolve
@@ -1665,7 +1665,7 @@ label v12s7_riley3a:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_left_viewpoint
 
@@ -1678,7 +1678,7 @@ label v12s7_riley_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferril4 # FPP. Show riley, slight smile, mouth open
     with dissolve
@@ -1714,7 +1714,7 @@ label v12s7_riley_kill:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_left_viewpoint
 
@@ -1733,7 +1733,7 @@ label v12s7_lauren1:
     u "There you are."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_8.mp3" fadein 2
+    play music "music/v12/Track Scene 7_8.mp3" fadein 2
 
     if laurenrs and v11_aubrey_sex:
         scene v12ferla1a # FPP. same 1, mouth open
@@ -1760,7 +1760,7 @@ label v12s7_lauren1:
                 u "Yeah uhm, I know you're mad right now but I gotta play the game so..."
 
                 stop music fadeout 3
-                play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+                play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
                 scene v12ferla2 # TPP. Show mc pointing finger gun at lauren, mouth open
                 with dissolve
@@ -1778,7 +1778,7 @@ label v12s7_lauren1:
                 u "(Damn, she's still really pissed.)"
         
         stop music fadeout 3
-        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+        play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
         call screen v12s7_seating_back
 
@@ -1962,7 +1962,7 @@ label v12s7_lauren1:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_seating_back
 
@@ -1975,7 +1975,7 @@ label v12s7_lauren_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferla1d
     with dissolve
@@ -2008,7 +2008,7 @@ label v12s7_lauren_kill:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_seating_back
 
@@ -2027,7 +2027,7 @@ label v12s7_ryan_imre1:
     ry "Wow, look at this beautiful day, if only my wife was just as beautiful."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
+    play music "music/v12/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferryi2 # FPP. Show imre from a distance looking at ryan off screen mouth open
     with dissolve
@@ -2280,7 +2280,7 @@ label v12s7_ryan_imre1:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_right_gallery_back
 
@@ -2299,7 +2299,7 @@ label v12s7_ryan1:
     u "Your wife still hasn't come back?"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
+    play music "music/v12/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferry1a # FPP. Same 1, mouth open
     with dissolve
@@ -2450,7 +2450,7 @@ label v12s7_ryan1:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_right_gallery_back
 
@@ -2463,7 +2463,7 @@ label v12s7_ryan_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferry1a
     with dissolve
@@ -2489,7 +2489,7 @@ label v12s7_ryan_kill:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_right_gallery_back
 
@@ -2505,7 +2505,7 @@ label v12s7_imre2:
     u "Hello Mrs."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_9.mp3" fadein 2
+    play music "music/v12/Track Scene 7_9.mp3" fadein 2
 
     scene v12ferim1a # FPP. Same 1, mouth open
     with dissolve
@@ -2613,7 +2613,7 @@ label v12s7_imre2:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_foyer
 
@@ -2626,7 +2626,7 @@ label v12s7_imre_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferim1b # FPP. same 1,new pose, mouth open
     with dissolve
@@ -2665,7 +2665,7 @@ label v12s7_imre_kill:
     u "(He's crazy. *Chuckles*)"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_foyer
 
@@ -2681,7 +2681,7 @@ label v12s7_lindsey_charlie1:
     u "Surprised we haven't crashed yet."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_10.mp3" fadein 2
+    play music "music/v12/Track Scene 7_10.mp3" fadein 2
 
     scene v12ferlich1a # FPP. Same 1, rolling eyes
     with dissolve
@@ -2954,7 +2954,7 @@ label v12s7_lindsey_charlie1:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_captains_room
 
@@ -2973,7 +2973,7 @@ label v12s7_lindsey2:
     li "Come over here citizen."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
+    play music "music/v12/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferli2 # TPP. Show mc walking closer to lindsey
     with dissolve
@@ -3176,7 +3176,7 @@ label v12s7_lindsey2:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     $ v12s7_endtalkList.append(lindsey)
 
@@ -3191,7 +3191,7 @@ label v12s7_lindsey_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferli8 # FPP. Show lindsey, slight smile, mouth open
     with dissolve
@@ -3222,7 +3222,7 @@ label v12s7_lindsey_kill:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_rear
 
@@ -3238,7 +3238,7 @@ label v12s7_charli2:
     u "Still alone huh?"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_10.mp3" fadein 2
+    play music "music/v12/Track Scene 7_10.mp3" fadein 2
 
     scene v12fercha1a # FPP. Same 1, mouth open
     with dissolve
@@ -3266,7 +3266,7 @@ label v12s7_charli2:
     charli "And you have the most annoying personality."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     $ v12s7_endtalkList.append(charli)
 
@@ -3284,7 +3284,7 @@ label v12s7_charli_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_4.mp3" fadein 2
+    play music "music/v12/Track Scene 7_4.mp3" fadein 2
 
     scene v12fercha1a
     with dissolve
@@ -3305,7 +3305,7 @@ label v12s7_charli_kill:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_captains_room
 
@@ -3324,7 +3324,7 @@ label v12s7_msrose1:
     ro "Hello there world-famous boxing champion."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_10.mp3" fadein 2
+    play music "music/v12/Track Scene 7_10.mp3" fadein 2
 
     scene v12fermsr1a # FPP. same 1, mouth closed
     with dissolve
@@ -3505,7 +3505,7 @@ label v12s7_msrose1:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_seating_front
 
@@ -3520,7 +3520,7 @@ label v12s7_ms_rose_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_4.mp3" fadein 2
+    play music "music/v12/Track Scene 7_4.mp3" fadein 2
 
     scene v12fermsr1b
     with dissolve
@@ -3573,7 +3573,7 @@ label v12s7_ms_rose_kill:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_seating_front
 
@@ -3589,7 +3589,7 @@ label v12s7_penelope1:
     u "Hey hey hey!"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_11.mp3" fadein 2
+    play music "music/v12/Track Scene 7_11.mp3" fadein 2
 
     scene v12ferpen1a # FPP. same 1, mouth open
     with dissolve
@@ -3826,7 +3826,7 @@ label v12s7_penelope1:
                 pause 0.75
 
                 stop music fadeout 3
-                play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+                play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
                 call screen v12s7_left_walkway_front
 
@@ -3837,7 +3837,7 @@ label v12s7_penelope1:
                 pause 0.75
 
                 stop music fadeout 3
-                play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+                play music "music/v12/Track Scene 7_2.mp3" fadein 2
                 
                 call screen v12s7_left_walkway_front
 
@@ -3849,7 +3849,7 @@ label v12s7_penelope_kill:
 
     u "Boom."
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferpen8 # TPP. Show Penelope hugging mc
     with dissolve
@@ -3877,7 +3877,7 @@ label v12s7_penelope_kill:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_left_walkway_front
 
@@ -3897,7 +3897,7 @@ label v12s7_amber1:
     am "Hey you!"
     
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_12.mp3" fadein 2
+    play music "music/v12/Track Scene 7_12.mp3" fadein 2
 
     scene v12feram1a # FPP. same 1, mouth closed
     with dissolve
@@ -4097,7 +4097,7 @@ label v12s7_amber1:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     $ v12s7_endtalkList.append(amber)
 
@@ -4112,7 +4112,7 @@ label v12s7_amber_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     scene v12feram3a
     with dissolve
@@ -4127,7 +4127,7 @@ label v12s7_amber_kill:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_right_gallery_front
 
@@ -4143,7 +4143,7 @@ label v12s7_riley2:
     u "What's going on?"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
+    play music "music/v12/Track Scene 7_5.mp3" fadein 2
 
     u "*Southern accent* I mean, what's going on?"
 
@@ -4297,7 +4297,7 @@ label v12s7_riley2:
     with dissolve
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     $ v12s7_endtalkList.append(riley)
 
@@ -4312,7 +4312,7 @@ label v12s7_riley_kill2:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     scene v12ferrile1a
     with dissolve
@@ -4350,7 +4350,7 @@ label v12s7_riley_kill2:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_right_gallery_front
 
@@ -4370,7 +4370,7 @@ label v12s7_riley2_amber:
     am "I'm just not ready for all that, I think you're really amazing, but I'm just not the relationship person."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
+    play music "music/v12/Track Scene 7_5.mp3" fadein 2
 
     scene v12feramb2 # Show riley, from a distance, looking at amber out of shot, mouth closed
     with dissolve
@@ -4428,7 +4428,7 @@ label v12s7_riley2_amber:
     pause 1
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_front_gallery
 
@@ -4447,7 +4447,7 @@ label v12s7_sam_cameron:
     sa "Hey hey boxer!"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_6.mp3" fadein 2
+    play music "music/v12/Track Scene 7_6.mp3" fadein 2
 
     scene v12fersaca1a # FPP. same 1, mouth closed
     with dissolve
@@ -4647,7 +4647,7 @@ label v12s7_sam_cameron:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_seating_front
 
@@ -4663,7 +4663,7 @@ label v12s7_sam2:
     u "No bodyguard?"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
+    play music "music/v12/Track Scene 7_5.mp3" fadein 2
 
     scene v12fersam1a # FPP. same 1, mouth open
     with dissolve
@@ -4897,7 +4897,7 @@ label v12s7_sam2:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
     
     call screen v12s7_right_walkway_back
 
@@ -4911,7 +4911,7 @@ label v12s7_samantha_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     scene v12fersam1c
     with dissolve
@@ -4979,7 +4979,7 @@ label v12s7_samantha_kill:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_right_walkway_back
 
@@ -4995,7 +4995,7 @@ label v12s7_cameron2:
     ca "Hey [name], get over here."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_12.mp3" fadein 2
+    play music "music/v12/Track Scene 7_12.mp3" fadein 2
 
     scene v12fercam2 # TPP. Show mc walking over to cameron
     with dissolve
@@ -5083,7 +5083,7 @@ label v12s7_cameron2:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_rear_gallery
 
@@ -5096,7 +5096,7 @@ label v12s7_cameron_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     scene v12fercam3a
     with dissolve
@@ -5109,7 +5109,7 @@ label v12s7_cameron_kill:
     u "Then why am I wasting my time with you?"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_rear_gallery
 
@@ -5131,7 +5131,7 @@ label v12s7_nora1:
     u "Hey, nice to meet you. I'm sure you recognize me."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
+    play music "music/v12/Track Scene 7_5.mp3" fadein 2
 
     scene v12fernor1a # FPP. same 1, mouth open
     with dissolve
@@ -5202,7 +5202,7 @@ label v12s7_nora1:
             with dissolve
 
             stop music fadeout 3
-            play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+            play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
             $ v12s7_endtalkList.append(nora)
 
@@ -5283,7 +5283,7 @@ label v12s7_nora1:
                     with dissolve
 
                     stop music fadeout 3
-                    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+                    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
                     $ v12s7_endtalkList.append(nora)
 
@@ -5350,7 +5350,7 @@ label v12s7_nora1:
                     pause 0.75
 
                     stop music fadeout 3
-                    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+                    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
                     $ v12s7_endtalkList.append(nora)
                     
@@ -5412,7 +5412,7 @@ label v12s7_nora1:
                     pause 0.75
 
                     stop music fadeout 3
-                    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+                    play music "music/v12/Track Scene 7_2.mp3" fadein 2
                     $ v12s7_endtalkList.append(nora)
 
                     call screen v12s7_balcony_left
@@ -5426,7 +5426,7 @@ label v12s7_nora_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     scene v12fernor5 # FPP. Show nora mouth closed, smiling
     with dissolve
@@ -5460,7 +5460,7 @@ label v12s7_nora_kill:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+        play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
         call screen v12s7_balcony_left
     else:
@@ -5480,7 +5480,7 @@ label v12s7_nora_kill:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+        play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
         call screen v12s7_balcony_left
 
@@ -5500,7 +5500,7 @@ label v12s7_chris1:
     u "What are you doing?"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_9.mp3" fadein 2
+    play music "music/v12/Track Scene 7_9.mp3" fadein 2
 
     if v12s7_emily and emily not in v12s7_killList:
         scene v12ferchr1a # FPP. Same 1, phone still in air, looking at mc, mouth open
@@ -5627,7 +5627,7 @@ label v12s7_chris1:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     $ v12s7_endtalkList.append(chris)
     call screen v12s7_kitchen
@@ -5641,7 +5641,7 @@ label v12s7_chris_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     if v12s7_emily and emily not in v12s7_killList:
         scene v12ferchr1c # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
@@ -5730,7 +5730,7 @@ label v12s7_chris_kill:
     u "(He's having a hard time.)"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_kitchen
 
@@ -5743,7 +5743,7 @@ label v12s7_mrlee:
     u "Hello there, you fan of boxing? If so, did you catch my last fight?"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_13.mp3" fadein 2
+    play music "music/v12/Track Scene 7_13.mp3" fadein 2
 
     scene v12ferlee1a # FPP. same 1, mouth open
     with dissolve
@@ -5771,7 +5771,7 @@ label v12s7_mrlee:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_rear_gallery
 
@@ -5792,7 +5792,7 @@ label v12s7_josh1:
     u "What are you supposed to be?"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
+    play music "music/v12/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferjo1a # FPP. same 1, mouth open
     with dissolve
@@ -5891,7 +5891,7 @@ label v12s7_josh1:
             pause 0.75
     
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_right_viewpoint
 
@@ -5907,7 +5907,7 @@ label v12s7_josh2:
     jo "Hey you there mister?"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
+    play music "music/v12/Track Scene 7_5.mp3" fadein 2
 
     scene v12ferjos2 # TPP. Show MC walking over to josh
     with dissolve
@@ -6046,7 +6046,7 @@ label v12s7_josh2:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_utility
 
@@ -6059,7 +6059,7 @@ label v12s7_josh_kill:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     if not v12s7_aubrey_moved:
         scene v12ferjos3a # FPP. Same 3, mouth open
@@ -6111,7 +6111,7 @@ label v12s7_josh_kill:
     u "(Freaking goofball.)"
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_utility
 
@@ -6127,7 +6127,7 @@ label v12s7_emily1:
     em "Hmmm, I can see it, when alone and solely alone the passengers will be swept away from the life they've always know."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_10.mp3" fadein 2
+    play music "music/v12/Track Scene 7_10.mp3" fadein 2
 
     scene v12ferem2 # TPP. Show mc walking closer to emily
     with dissolve
@@ -6165,7 +6165,7 @@ label v12s7_emily1:
     em "Good."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_seating_back
 
@@ -6181,7 +6181,7 @@ label v12s7_emily2:
     u "Hey."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_5.mp3" fadein 2
+    play music "music/v12/Track Scene 7_5.mp3" fadein 2
 
     scene v12feremi1a # FPP. same 1, mouth open
     with dissolve
@@ -6194,7 +6194,7 @@ label v12s7_emily2:
     u "I'm just trying to... *Sighs* Nevermind."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     $ v12s7_endtalkList.append(emily)
     call screen v12s7_bow
@@ -6208,7 +6208,7 @@ label v12s7_emily_kill:
     u "Boom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     scene v12feremi4 # FPP. Show emily, annoyed look, mouth open
     with dissolve
@@ -6221,7 +6221,7 @@ label v12s7_emily_kill:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_bow
 
@@ -6230,7 +6230,7 @@ label v12s7_mc_caught:
     hide screen murder_button_overlay
     
     stop music fadeout 3
-    play music "music/v12/Scene 7/Track Scene 7_7.mp3" fadein 2
+    play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
     if len(v12s7_killList) == 0:
         $ grant_achievement("weapons_down")
