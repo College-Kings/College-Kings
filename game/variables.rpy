@@ -212,14 +212,10 @@ default v7_rileysex = False
 default v8_chloesex = False
 default v8_hocoamber = False
 default v8AutProtest = False
-default openedUpToSeb = False
-default chloeMsg11Reply = 0
-default rejectedApesFun = False
 default penHelpDean = False
 default consoledRose = False
 default sideWithCameron = False
 default emilyArcade = 0
-default kissedEmilyArcade = False
 default helpJosh = False
 
     ## Fight Vars
@@ -280,7 +276,6 @@ default v10_cheerfornora = False
 default v10_lauren_suck = False
 default v10_chloe_locker = False
 default v10_ri_sex = False
-
     # Freeroam
 default v10s33_riley = False
 default v10s33_riley2 = False

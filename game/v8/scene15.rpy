@@ -90,17 +90,15 @@ label penelope_dorm_hack:
     with dissolve
 
     menu:
-        "Offer to help Penelope":
+        "Help Penelope":
             $ add_point(KCT.BOYFRIEND)
             $ penHelpDean = True
             jump help_pen
 
-        "Offer to support Penelope":
-            $ penHelpDean = False
+        "Leave":
             jump no_help_pen
 
 label help_pen:
-
     $ grant_achievement("thick_and_thin")
 
     u "If you want, I can talk to the dean on Monday on your behalf. I'm sure we could work something out if we tried and be smart about it."
@@ -156,7 +154,6 @@ label help_pen:
         jump mc_apes_sun_aft
 
 label no_help_pen:
-
     u "If you need me for anything, you know where to find me, okay? I have to get home and study, but text me any time."
 
     scene v8spen8b

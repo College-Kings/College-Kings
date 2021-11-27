@@ -119,7 +119,6 @@ label phn_chloe11_done:
     menu:
         "Party":
             $ add_point(KCT.TROUBLEMAKER)
-            $ rejectedApesFun = False
 
             scene v8apes25d
             with dissolve
@@ -135,7 +134,6 @@ label phn_chloe11_done:
 
         "Stay back and study":
             $ add_point(KCT.BOYFRIEND)
-            $ rejectedApesFun = True
 
             scene v8apes25d
             with dissolve

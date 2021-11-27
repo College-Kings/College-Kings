@@ -803,9 +803,9 @@ label em_arcade_1:
         "Kiss her":
             if laurenrs:
                 $ add_point(KCT.TROUBLEMAKER)
+
             else:
                 $ add_point(KCT.BOYFRIEND)
-            $ kissedEmilyArcade = True
 
             scene v8arcade24
             with dissolve
@@ -853,7 +853,6 @@ label em_arcade_1:
         "Good night":
             if laurenrs:
                 $ add_point(KCT.BOYFRIEND)
-            $ kissedEmilyArcade = False
 
             scene v8arcade23a
             with dissolve
@@ -1261,7 +1260,6 @@ label v8s20_nsfwSkipLabel1:
                 $ add_point(KCT.TROUBLEMAKER)
             else:
                 $ add_point(KCT.BOYFRIEND)
-            $ kissedEmilyArcade = True
 
             scene v8arcade24
             with dissolve
@@ -1309,7 +1307,6 @@ label v8s20_nsfwSkipLabel1:
         "Good night":
             if laurenrs:
                 $ add_point(KCT.BOYFRIEND)
-            $ kissedEmilyArcade = False
 
             scene v8arcade23a
             with dissolve

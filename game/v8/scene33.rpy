@@ -197,8 +197,8 @@ label cont_nora_hall_3:
             $ add_point(KCT.BOYFRIEND)
             $ helpedNora = True
             jump hallway_help_nora
+        
         "Don't help Nora":
-            $ helpedNora = False
             jump hallway_no_help_nora
 
 label hallway_help_nora:
