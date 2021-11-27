@@ -24,12 +24,12 @@ label v15s18:
     scene v15s18_4 # FPP. Show the door starting to open.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s18_4a # FPP. Same as v15s18_4, The door open Lauren standing at the door answering it, Lauren in her Spider Necklace costume looking at MC, Lauren slight smile, mouth closed
     with dissolve
     
-    pause .25
+    pause 0.75
 
     scene v15s18_4b # FPP. Same as v15s18_4a, Lauren looking down as she is checking out MC's outfit, Lauren slight shocked face, mouth open
     with dissolve
@@ -56,24 +56,24 @@ label v15s18:
     scene v15s18_4d # FPP. Same as v15s18_4c, Lauren stepped to the side laughing and holding the door open for MC, Lauren slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s18_5 # TPP. Show MC walking into the Deer's house, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     play sound "sounds/doorclose.mp3"
 
     scene v15s18_6 # TPP. Show of some of the decorations in the house
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s18_7 # TPP. More decorations in the house.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s18_8 # FPP. MC and Lauren inside the Deer's house. Lauren looking at MC, MC looking at Lauren, Lauren slight smile, mouth closed.
     with dissolve
@@ -88,26 +88,28 @@ label v15s18:
     scene v15s18_8
     with dissolve
 
-    u "Really. And also, Happy birthday."
+    u "Really. And also, happy birthday."
+
     if laurenrs: 
         scene v15s18_8b # FPP. Same as v15s18_8a, Lauren much closer to MC with her arms wrappe around his neck as she looks in his eyes, Lauren biting her lip, slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         play sound "sounds/kiss.mp3"
 
         scene v15s18_8c # FPP. Same as v15s18_8b, Lauren kissing MC
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s18_9 # TPP. Shot of MC and Lauren kissing
         with dissolve
 
-        pause .25
+        pause 0.75
 
         la "Thank you, [name]."
+
     else:
         scene v15s18_8
         with dissolve
@@ -122,7 +124,7 @@ label v15s18:
     scene v15s18_8e # FPP. Same as v15s18_8d, Lauren grabbing the gift as MC hands it over to her, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s18_8f # FPP. Same as v15s18_8e, Lauren holding the gift now looking at MC, Lauren slight smile, mouth open.
     with dissolve
@@ -151,24 +153,28 @@ label v15s18:
 
     scene v15s18_8h # FPP. Same as v15s18_8g, Show Lauren walking away to the room with the gifts holding MC's gift.
     with dissolve
+    
+    pause 0.75
 
     if laurenrs:
         scene v15s18_10 # FPP. Refer to v15s18_8h, Close up of Lauren's ass as she is walking away.
         with dissolve
+        
+        pause 0.75
 
     play sound "sounds/dooropen.mp3"
 
     scene v15s18_8h
     with dissolve
 
-    pause
+    pause 0.75
 
     play sound "sounds/doorclose.mp3"
 
     scene v15s18_11 # FPP. MC looking at the entrance door to the deer's house. Show Imre in his cowboy costume closing the door the deer's house as he enters, slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s18_11a # FPP. Same as v15s18_11, Imre with his hands in the air looking at the party, excited, mouth open.
     with vpunch
@@ -178,12 +184,12 @@ label v15s18:
     scene v15s18_11b # FPP. Same as v15s18_11b, Imre looking at MC, slight smile, mouth closed.
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s18_11c # FPP. Same as v15s18_11c, Imre looking down as he is looking at MC's whole costume, Imre jaw dropped.
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s18_11d # FPP. Same as v15s18_11c, Imre looking back up at MC's face, Imre slight smile, mouth open.
     with dissolve
@@ -215,12 +221,10 @@ label v15s18:
 
     u "I have no idea where I put that thing, dude. I think someone borrowed it or stole it."
 
-
-    if joinwolves and costume = 3:
-
+    if joinwolves and costume == 3:
         u "In fact, is that my fucking cowboy costume?"
-    if joinapes and costume = 3:
 
+    if joinapes and costume == 3:
         u "It looked exactly like yours actually... Is that-"
 
     scene v15s18_11d
@@ -252,37 +256,37 @@ label v15s18:
         scene v15s18_11f # FPP. Same as v15s18_11e, Imre looking back down to check out MC's whole costume, slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s18_11e
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s18_11f
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s18_11e
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s18_11f
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v15s18_11e
         with dissolve
 
-        pause 
+        pause 0.75
 
         scene v15s18_12 # TPP. Close up of MC's face, MC slightly weirded out, mouth closed.
         with dissolve
 
-        pause
+        pause 0.75
 
         scene v15s18_11e
         with dissolve
@@ -308,6 +312,7 @@ label v15s18:
         with dissolve
 
         u "*Laughs*"
+
     else:
         scene v15s18_11d
         with dissolve
@@ -427,6 +432,6 @@ label v15s18:
 
     u "(Hmm, I guess if I want to play Imre's little game I can... Otherwise, I'm just here to have a good night and celebrate Lauren.)"
 
-    pause
+    pause 0.75
 
     jump v15s18a
