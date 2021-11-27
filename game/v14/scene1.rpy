@@ -339,7 +339,7 @@ label v14s01:
                 au "We may have to do this again, Riley."
 
                 stop music fadeout 3
-                play music "music/v14/Track Scene 1_2.mp3" fadein 2
+                play music "music/v12/Scene 35/Track Scene 35.mp3" fadein 2
 
                 scene v14s01_11g # FPP. Same as v14s01_11b, Riley mouth open, Aubrey mouth closed
                 with dissolve
