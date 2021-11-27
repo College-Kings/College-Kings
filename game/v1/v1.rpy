@@ -4128,13 +4128,14 @@ label fr2end: #for compatibility only
     scene s121 #loooking at angry Grayson"
     with dissolve
 
-    " "
+    pause 0.5
     scene s120a
     with dissolve
     pause 0.5
 
     stop music
     #####punch
-    $ renpy.movie_cutscene("punchdemo.webm", loops=0)
+    scene black
+    $ renpy.movie_cutscene("v1/punchdemo.webm", loops=0)
 
 jump v2start

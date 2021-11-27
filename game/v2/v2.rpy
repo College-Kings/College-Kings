@@ -78,8 +78,10 @@ init python:
 
 label v2start:
     play music "music/muffledparty.mp3"
+    scene black
+    
     scene s121a
-    with Fade (1,0,1)
+    with fade
 
     cl "*Muffled* Why did you do that?! We were just talking!"
 
