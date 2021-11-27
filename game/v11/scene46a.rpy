@@ -21,7 +21,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1a
     with dissolve
 
-    au "We're gonna have to show some love to our Pimp Daddy Mr. Lee for spoiling all of us little sugar babies."
+    au "We're gonna have to show some love to our Pimp Daddy Mr. Lee for spoiling all of us little sugar babies."   
 
     scene v11dwa1
     with dissolve
