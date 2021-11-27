@@ -2782,7 +2782,6 @@ label continueab:
 
                 "Don't kiss her":
                     $ add_point(KCT.TROUBLEMAKER)
-                    $ kisskim = False
 
                     play sound "sounds/spit.mp3"
 
