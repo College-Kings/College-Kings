@@ -18,7 +18,7 @@ init python:
 
 label v14s51:
 
-    play music "music/v14/Track Scene 51_1.mp3" fadein 2
+    play music "music/v12/Scene 23/Track Scene 23_1.mp3" fadein 2
     scene v14s51_1 # TPP. Show MC walking into Chloe's room and closing the door behind him, slight smile, mouth closed
     with dissolve
 
