@@ -46,7 +46,7 @@ label penelope_dorm_hack:
 
     pe "*Sniffles* O-okay."
 
-    if fr4penelope:
+    if "penelope" in freeroam4:
         pe "Remember when you saw me in the hall at Hoco? And I was on the phone?"
 
         scene v8spen5b # FPP. Same camera as v8spen5, Penelope trying to compose herself, mouth closed.

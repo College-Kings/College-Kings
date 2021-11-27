@@ -12349,37 +12349,37 @@ label fr4:
 
 label labelfr4dancefloor:
     if hcGirl == "chloe":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorchloedatenonora
         else:
             scene fr4dancefloorchloedate
 
     elif hcGirl == "emily":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4danceflooremilydatenonora
         else:
             scene fr4danceflooremilydate
 
     elif hcGirl == "lauren":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorlaurendatenonora
         else:
             scene fr4dancefloorlaurendate
 
     elif hcGirl == "penelope":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorpenelopedatenonora
         else:
             scene fr4dancefloorpenelopedate
 
     elif hcGirl == "riley":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorrileydatenonora
         else:
             scene fr4dancefloorrileydate
 
     else:
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloornodatenonora
         else:
             scene fr4dancefloornodate
@@ -12388,24 +12388,23 @@ label labelfr4dancefloor:
 
 label labelfr4gymleft:
     if hcGirl == "chloe":
-        if fr4riley:
+        if "riley" in freeroam4:
             scene fr4gymleftnochloenoriley
         else:
             scene fr4gymleftnochloe
 
     elif hcGirl == "riley":
-
-        if fr4chloe:
+        if "chloe" in freeroam4:
             scene fr4gymleftnoriley
         else:
             scene fr4gymleftnochloenoriley
 
     else:
-        if fr4riley and fr4chloe:
+        if "riley" in freeroam4 and "chloe" in freeroam4:
             scene fr4gymleftnochloenoriley
-        elif fr4riley:
+        elif "riley" in freeroam4:
             scene fr4gymleftnoriley
-        elif fr4chloe:
+        elif "chloe" in freeroam4:
             scene fr4gymleftnochloe
         else:
             scene fr4gymleft
@@ -12421,11 +12420,11 @@ label labelfr4gymright:
     call screen fr4gymright
 
 label labelfr4gymentrance:
-    if fr4riley and not fr4noriley and fr4nora and not fr4nora2:
+    if "riley" in freeroam4 and not "riley2" in freeroam4 and "nora" in freeroam4 and not "nora2" in freeroam4:
         scene fr4gymentrancerileynora
-    elif fr4riley and not fr4noriley:
+    elif "riley" in freeroam4 and not "riley2" in freeroam4:
         scene fr4gymentranceriley
-    elif fr4nora and not fr4nora2:
+    elif "nora" in freeroam4 and not "nora2" in freeroam4:
         scene fr4gymentrancenora
     else:
         scene fr4gymentrance
@@ -12444,12 +12443,12 @@ label labelfr4hallwaybathroom:
 
 label labelfr4hallway:
     if not hcGirl == "penelope":
-        if fr4chloe and preventgrayson:
+        if "chloe" in freeroam4 and preventgrayson:
             scene fr4hallwaychloe
         else:
             scene fr4hallway
     else:
-        if fr4chloe and preventgrayson:
+        if "chloe" in freeroam4 and preventgrayson:
             scene fr4hallwaynopenelopechloe
         else:
             scene fr4hallwaynopenelope
@@ -12457,7 +12456,7 @@ label labelfr4hallway:
     call screen fr4hallway
 
 label labelfr4hallwaycorner:
-    if not fr4grayson:
+    if not "grayson" in freeroam4:
         scene fr4hallwaycorner
     elif preventgrayson:
         scene fr4hallwaycornernumber
@@ -13075,7 +13074,7 @@ label fr4emilydate:
     scene sfr4em28a
     with dissolve
 
-    if fr4noriley:
+    if "riley2" in freeroam4:
         u "Oh, hey Riley, didn't you say you wanted to go home?"
 
         scene sfr4em28
@@ -13778,7 +13777,7 @@ label fr4penelopedate:
     scene sfr4pe23a
     with dissolve
 
-    if fr4noriley:
+    if "riley2" in freeroam4:
         u "Back to my dorm. Didn't you say you were going home a lot earlier?"
 
         scene sfr4pe23
@@ -14032,7 +14031,7 @@ label fr4rileydate:
     jump fr4rileyending
 
 label fr4nora1:
-    $ fr4nora = True
+    $ freeroam4.add("nora")
     #MC approaches Chris and Nora on the dance floor.
 
     scene sfr4no1 # showing chris and Nora dancing
@@ -14161,37 +14160,37 @@ label fr4nora1:
 
 label fr4chris1:
     if hcGirl == "chloe":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorchloedatenonora
         else:
             scene fr4dancefloorchloedate
 
     elif hcGirl == "emily":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4danceflooremilydatenonora
         else:
             scene fr4danceflooremilydate
 
     elif hcGirl == "lauren":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorlaurendatenonora
         else:
             scene fr4dancefloorlaurendate
 
     elif hcGirl == "penelope":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorpenelopedatenonora
         else:
             scene fr4dancefloorpenelopedate
 
     elif hcGirl == "riley":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorrileydatenonora
         else:
             scene fr4dancefloorrileydate
 
     else:
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloornodatenonora
         else:
             scene fr4dancefloornodate
@@ -14201,7 +14200,7 @@ label fr4chris1:
     jump labelfr4dancefloor
 
 label fr4elijah1:
-    $ fr4elijah = True
+    $ freeroam4.add("elijah")
 
     scene sfr4el1 #Elijah is dancing really dorky with poet 1
 
@@ -14265,37 +14264,37 @@ label fr4elijah1:
 
 label fr4elijah2:
     if hcGirl == "chloe":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorchloedatenonora
         else:
             scene fr4dancefloorchloedate
 
     elif hcGirl == "emily":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4danceflooremilydatenonora
         else:
             scene fr4danceflooremilydate
 
     elif hcGirl == "lauren":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorlaurendatenonora
         else:
             scene fr4dancefloorlaurendate
 
     elif hcGirl == "penelope":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorpenelopedatenonora
         else:
             scene fr4dancefloorpenelopedate
 
     elif hcGirl == "riley":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorrileydatenonora
         else:
             scene fr4dancefloorrileydate
 
     else:
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloornodatenonora
         else:
             scene fr4dancefloornodate
@@ -14305,7 +14304,7 @@ label fr4elijah2:
     jump labelfr4dancefloor
 
 label fr4mason1:
-    $ fr4mason = True
+    $ freeroam4.add("mason")
 
     scene sfr4ma1 #showing mason and rg dancing, Mason is aggressively grabbing her ass. she's really enjoying
 
@@ -14317,37 +14316,37 @@ label fr4mason1:
 
 label fr4mason2:
     if hcGirl == "chloe":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorchloedatenonora
         else:
             scene fr4dancefloorchloedate
 
     elif hcGirl == "emily":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4danceflooremilydatenonora
         else:
             scene fr4danceflooremilydate
 
     elif hcGirl == "lauren":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorlaurendatenonora
         else:
             scene fr4dancefloorlaurendate
 
     elif hcGirl == "penelope":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorpenelopedatenonora
         else:
             scene fr4dancefloorpenelopedate
 
     elif hcGirl == "riley":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorrileydatenonora
         else:
             scene fr4dancefloorrileydate
 
     else:
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloornodatenonora
         else:
             scene fr4dancefloornodate
@@ -14358,37 +14357,37 @@ label fr4mason2:
 
 label fr4nora3:
     if hcGirl == "chloe":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorchloedatenonora
         else:
             scene fr4dancefloorchloedate
 
     elif hcGirl == "emily":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4danceflooremilydatenonora
         else:
             scene fr4danceflooremilydate
 
     elif hcGirl == "lauren":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorlaurendatenonora
         else:
             scene fr4dancefloorlaurendate
 
     elif hcGirl == "penelope":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorpenelopedatenonora
         else:
             scene fr4dancefloorpenelopedate
 
     elif hcGirl == "riley":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorrileydatenonora
         else:
             scene fr4dancefloorrileydate
 
     else:
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloornodatenonora
         else:
             scene fr4dancefloornodate
@@ -14399,7 +14398,7 @@ label fr4nora3:
 
     ### LOCATION 2: GYM ENTRANCE
 label fr4aaron1:
-    $ fr4aaron = True
+    $ freeroam4.add("aaron")
 
     scene sfr4aa1 # showing aaron trying to talk lindsey into something but she's not interested
 
@@ -14580,11 +14579,11 @@ label fr4aaron1:
     jump labelfr4gymentrance
 
 label fr4aaron2:
-    if fr4riley and not fr4noriley and fr4nora and not fr4nora2:
+    if "riley" in freeroam4 and not "riley2" in freeroam4 and "nora" in freeroam4 and not "nora2" in freeroam4:
         scene fr4gymentrancerileynora
-    elif fr4riley and not fr4noriley:
+    elif "riley" in freeroam4 and not "riley2" in freeroam4:
         scene fr4gymentranceriley
-    elif fr4nora and not fr4nora2:
+    elif "nora" in freeroam4 and not "nora2" in freeroam4:
         scene fr4gymentrancenora
     else:
         scene fr4gymentrance
@@ -14771,7 +14770,7 @@ label fr4riley2:
 
             "I can't ditch my date.":
                 $ add_point(KCT.BOYFRIEND)
-                $ fr4noriley = True
+                $ freeroam4.add("riley2")
 
                 u "Riley, I- I can't ditch my date like that."
 
@@ -14831,7 +14830,7 @@ label fr4riley2:
 
             "I can't ditch my date.":
                 $ add_point(KCT.BOYFRIEND)
-                $ fr4noriley = True
+                $ freeroam4.add("riley2")
 
                 u "*Chuckles* I can't ditch my date like that."
 
@@ -14858,7 +14857,7 @@ label fr4riley2:
                 jump labelfr4gymentrance
 
 label fr4nora2:
-    $ fr4nora2 = True
+    $ freeroam4.add("nora2")
 
     scene sfr4no4 # nora grabbing a drink
 
@@ -15020,7 +15019,7 @@ label fr4nora2:
 
     ### LOCATION 3: GYM LEFT SIDE
 label fr4riley1:
-    $ fr4riley = True
+    $ freeroam4.add("riley")
 
     scene sfr4ri34 #fpp Aubrey and Riley are taking pictures together and posing by kissing each other on the cheek.
 
@@ -15097,9 +15096,9 @@ label fr4riley1:
     jump labelfr4gymleft
 
 label fr4aubrey1:
-    $ fr4aubrey = True
+    $ freeroam4.add("aubrey")
 
-    if fr4riley:
+    if "riley" in freeroam4:
         scene sfr4ri39b # aubrey flirty
 
         au "*Chuckles* Weren't you gonna look around some more?"
@@ -15293,24 +15292,23 @@ label fr4aubrey1:
 
 label fr4aubrey2:
     if hcGirl == "chloe":
-        if fr4riley:
+        if "riley" in freeroam4:
             scene fr4gymleftnochloenoriley
         else:
             scene fr4gymleftnochloe
 
     elif hcGirl == "riley":
-
-        if fr4chloe:
+        if "chloe" in freeroam4:
             scene fr4gymleftnochloenoriley
         else:
             scene fr4gymleftnoriley
 
     else:
-        if fr4riley and fr4chloe:
+        if "riley" in freeroam4 and "chloe" in freeroam4:
             scene fr4gymleftnochloenoriley
-        elif fr4riley:
+        elif "riley" in freeroam4:
             scene fr4gymleftnoriley
-        elif fr4chloe:
+        elif "chloe" in freeroam4:
             scene fr4gymleftnochloe
         else:
             scene fr4gymleft
@@ -15320,8 +15318,8 @@ label fr4aubrey2:
     jump labelfr4gymleft
 
 label fr4chloe1:
-    $ fr4chloe = True
-    $ fr4grayson = True
+    $ freeroam4.add("chloe")
+    $ freeroam4.add("grayson")
 
     if preventgrayson:
         $ chloesad = True
@@ -15425,27 +15423,26 @@ label fr4chloe1:
     jump labelfr4gymleft
 
 label fr4ryan1:
-    $ fr4ryan = True
+    $ freeroam4.add("ryan")
 
     if hcGirl == "chloe":
-        if fr4riley:
+        if "riley" in freeroam4:
             scene fr4gymleftnochloenoriley
         else:
             scene fr4gymleftnochloe
 
     elif hcGirl == "riley":
-
-        if fr4chloe:
+        if "chloe" in freeroam4:
             scene fr4gymleftnoriley
         else:
             scene fr4gymleftnochloenoriley
 
     else:
-        if fr4riley and fr4chloe:
+        if "riley" in freeroam4 and "chloe" in freeroam4:
             scene fr4gymleftnochloenoriley
-        elif fr4riley:
+        elif "riley" in freeroam4:
             scene fr4gymleftnoriley
-        elif fr4chloe:
+        elif "chloe" in freeroam4:
             scene fr4gymleftnochloe
         else:
             scene fr4gymleft
@@ -15456,29 +15453,28 @@ label fr4ryan1:
 
 label fr4ryan3:
     if hcGirl == "chloe":
-        if fr4riley:
+        if "riley" in freeroam4:
             scene fr4gymleftnochloenoriley
         else:
             scene fr4gymleftnochloe
 
     elif hcGirl == "riley":
-
-        if fr4chloe:
+        if "chloe" in freeroam4:
             scene fr4gymleftnochloenoriley
         else:
             scene fr4gymleftnoriley
 
     else:
-        if fr4riley and fr4chloe:
+        if "riley" in freeroam4 and "chloe" in freeroam4:
             scene fr4gymleftnochloenoriley
-        elif fr4riley:
+        elif "riley" in freeroam4:
             scene fr4gymleftnoriley
-        elif fr4chloe:
+        elif "chloe" in freeroam4:
             scene fr4gymleftnochloe
         else:
             scene fr4gymleft
 
-    $ fr4ryan = True
+    $ freeroam4.add("ryan")
 
     u "(Not sure I could handle more Ryan right now.)"
 
@@ -15486,7 +15482,7 @@ label fr4ryan3:
 
     ### LOCATION 4: GYM RIGHT SIDE
 label fr4cameron1:
-    $ fr4cameron = True
+    $ freeroam4.add("cameron")
 
     scene sfr4ca1 # Cameron is turned away and the random girl looks annoyed
 
@@ -15572,10 +15568,9 @@ label fr4cameron2:
     jump labelfr4gymright
 
 label fr4lauren1:
+    $ freeroam4.add("lauren")
 
-    $ fr4lauren = True
     if not laurenmad:
-                
         scene sfr4la25 # fpp lauren & ms rose talking
 
         la "Yeah, I guess I was just having trouble with that one."
@@ -15746,7 +15741,7 @@ label fr4lauren2:
     jump labelfr4gymright
 
 label fr4msrose1:
-    $ fr4msrose = True
+    $ freeroam4.add("rose")
 
     scene sfr4la26b # ms rose looking at you smiling eye brow raised
 
@@ -15833,7 +15828,7 @@ label fr4msrose2:
     ### LOCATION 6: HALLWAYBATHROOM
 
 label fr4imre1:
-    $ fr4imre = True
+    $ freeroam4.add("imre")
 
     scene sfr4im1 # fpp the bathroom, you can see legs in one of the stalls
 
@@ -15884,7 +15879,7 @@ label fr4imre2:
 
     ### LOCATION 7: HALLWAY
 label fr4penelope1:
-    $ fr4penelope = True
+    $ freeroam4.add("penelope")
 
     scene sfr4pe24 #fpp penelope on hte phone turned away from you
 
@@ -15997,12 +15992,12 @@ label fr4penelope1:
 
 label fr4penelope2:
     if not hcGirl == "penelope":
-        if fr4chloe and preventgrayson:
+        if "chloe" in freeroam4 and preventgrayson:
             scene fr4hallwaychloe
         else:
             scene fr4hallway
     else:
-        if fr4chloe and preventgrayson:
+        if "chloe" in freeroam4 and preventgrayson:
             scene fr4hallwaynopenelopechloe
         else:
             scene fr4hallwaynopenelope
@@ -16013,7 +16008,7 @@ label fr4penelope2:
 
 
 label fr4chloe2:
-    $ fr4chloe2 = True
+    $ freeroam4.add("chloe2")
 
     if not chloemad:
         scene sfr4cl53a # fpp close up chloe mad
@@ -16194,7 +16189,7 @@ label fr4chloe3:
     ### LOCATION 8: HALLWAYCORNER
 
 label fr4grayson1:
-    $ fr4grayson = True
+    $ freeroam4.add("grayson")
 
     scene sfr4gr1 # grayson about to spray the wall
 
@@ -16372,8 +16367,8 @@ label fr4lockerroom:
 
 
 label fr4lockerroomchloe:
-    if not lockerroomchloe:
-        $ lockerroomchloe = True
+    if not "chloe2" in freeroam4:
+        $ freeroam4.add("chloe2")
 
         scene sfr4cl50 # mc knocking on lockerroom
 
@@ -16638,7 +16633,7 @@ label fr4lockerroomchloe:
 
     ### LOCATION 9: STAIRS
 label fr4emily1:
-    $ fr4emily = True
+    $ freeroam4.add("emily")
     $ forgiveemily = True
 
     scene sfr4em29 # showing mc and emily mc stnading behind emily, she doesn't see him
@@ -16729,7 +16724,7 @@ label fr4emily2:
 
     ### LOCATION 10: STREET
 label fr4samantha1:
-    $ fr4samantha = True
+    $ freeroam4.add("samantha")
 
     scene sfr4sa1 #fpp from the side / behind Samantha and Sebastian outside. You can't see their mouthThey are smoking a blunt and laughing.
 

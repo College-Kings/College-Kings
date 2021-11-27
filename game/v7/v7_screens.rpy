@@ -182,48 +182,47 @@ screen hc_select():
 
 # GYM
 screen fr4dancefloor():
-
     if hcGirl == "chloe":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             add "images/v7/fr4dancefloorchloedatenonora.webp"
         else:
             add "images/v7/fr4dancefloorchloedate.webp"
 
     elif hcGirl == "emily":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             add "images/v7/fr4danceflooremilydatenonora.webp"
         else:
             add "images/v7/fr4danceflooremilydate.webp"
 
     elif hcGirl == "lauren":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             add "images/v7/fr4dancefloorlaurendatenonora.webp"
         else:
             add "images/v7/fr4dancefloorlaurendate.webp"
 
     elif hcGirl == "penelope":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             add "images/v7/fr4dancefloorpenelopedatenonora.webp"
         else:
             add "images/v7/fr4dancefloorpenelopedate.webp"
 
     elif hcGirl == "riley":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             add "images/v7/fr4dancefloorrileydatenonora.webp"
         else:
             add "images/v7/fr4dancefloorrileydate.webp"
 
     else:
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             add "images/v7/fr4dancefloornodatenonora.webp"
         else:
             add "images/v7/fr4dancefloornodate.webp"
 
-    if not fr4nora or fr4nora2:
+    if not "nora" in freeroam4 or "nora2" in freeroam4:
         imagebutton:
             idle "images/v7/fr4dancefloornora.webp"
             hover "images/v7/fr4dancefloornorahover.webp"
-            if fr4nora2:
+            if "nora2" in freeroam4:
                 action Jump("fr4nora3")
             else:
                 action Jump("fr4nora1")
@@ -238,7 +237,7 @@ screen fr4dancefloor():
         pos (1100, 50)
         idle "images/v7/fr4dancefloorelijah.webp"
         hover "images/v7/fr4dancefloorelijahhover.webp"
-        if not fr4elijah:
+        if not "elijah" in freeroam4:
             action Jump("fr4elijah1")
         else:
             action Jump("fr4elijah2")
@@ -247,7 +246,7 @@ screen fr4dancefloor():
         pos (905, 85)
         idle "images/v7/fr4dancefloormason.webp"
         hover "images/v7/fr4dancefloormasonhover.webp"
-        if not fr4mason:
+        if not "mason" in freeroam4:
             action Jump("fr4mason1")
         else:
             action Jump("fr4mason2")
@@ -309,29 +308,29 @@ screen fr4dancefloor():
 screen fr4gymleft():
 
     if hcGirl == "chloe":
-        if fr4riley:
+        if "riley" in freeroam4:
             add "images/v7/fr4gymleftnochloenoriley.webp"
         else:
             add "images/v7/fr4gymleftnochloe.webp"
 
     elif hcGirl == "riley":
-        if fr4chloe:
+        if "chloe" in freeroam4:
             add "images/v7/fr4gymleftnochloenoriley.webp"
         else:
             add "images/v7/fr4gymleftnoriley.webp"
 
     else:
-        if fr4riley and fr4chloe:
+        if "riley" in freeroam4 and "chloe" in freeroam4:
             add "images/v7/fr4gymleftnochloenoriley.webp"
-        elif fr4riley:
+        elif "riley" in freeroam4:
             add "images/v7/fr4gymleftnoriley.webp"
-        elif fr4chloe:
+        elif "chloe" in freeroam4:
             add "images/v7/fr4gymleftnochloe.webp"
         else:
             add "images/v7/fr4gymleft.webp"
 
     if not hcGirl == "chloe":
-        if not fr4chloe:
+        if not "chloe" in freeroam4:
             imagebutton:
                 pos (375, 190)
                 idle "images/v7/fr4gymleftchloe.webp"
@@ -351,7 +350,7 @@ screen fr4gymleft():
             hover "images/v7/fr4gymleftryanhover.webp"
             action Jump("fr4ryan1")
 
-    if not hcGirl == "riley" and not fr4riley:
+    if not hcGirl == "riley" and not "riley" in freeroam4:
         imagebutton:
             pos (1485, 215)
             idle "images/v7/fr4gymleftriley.webp"
@@ -363,7 +362,7 @@ screen fr4gymleft():
             pos (1520, 225)
             idle "images/v7/fr4gymleftaubrey.webp"
             hover "images/v7/fr4gymleftaubreyhover.webp"
-            if not fr4aubrey:
+            if not "aubrey" in freeroam4:
                 action Jump("fr4aubrey1")
             else:
                 action Jump("fr4aubrey2")
@@ -387,7 +386,7 @@ screen fr4gymright():
             pos (1492, 355)
             idle "images/v7/fr4gymrightlauren.webp"
             hover "images/v7/fr4gymrightlaurenhover.webp"
-            if not fr4lauren:
+            if not "lauren" in freeroam4:
                 action Jump("fr4lauren1")
             else:
                 action Jump("fr4lauren2")
@@ -396,7 +395,7 @@ screen fr4gymright():
             pos (1775, 335)
             idle "images/v7/fr4gymrightmsrose.webp"
             hover "images/v7/fr4gymrightmsrosehover.webp"
-            if not fr4msrose:
+            if not "rose" in freeroam4:
                 action Jump("fr4msrose1")
             else:
                 action Jump("fr4msrose2")
@@ -405,7 +404,7 @@ screen fr4gymright():
         ypos 360
         idle "images/v7/fr4gymrightcameron.webp"
         hover "images/v7/fr4gymrightcameronhover.webp"
-        if not fr4cameron:
+        if not "cameron" in freeroam4:
             action Jump("fr4cameron1")
         else:
             action Jump("fr4cameron2")
@@ -419,23 +418,23 @@ screen fr4gymright():
 
 screen fr4gymentrance():
 
-    if fr4riley and not fr4noriley and fr4nora and not fr4nora2:
+    if "riley" in freeroam4 and not "riley2" in freeroam4 and "nora" in freeroam4 and not "nora2" in freeroam4:
         add "images/v7/fr4gymentrancerileynora.webp"
-    elif fr4riley and not fr4noriley:
+    elif "riley" in freeroam4 and not "riley2" in freeroam4:
         add "images/v7/fr4gymentranceriley.webp"
-    elif fr4nora and not fr4nora2:
+    elif "nora" in freeroam4 and not "nora2" in freeroam4:
         add "images/v7/fr4gymentrancenora.webp"
     else:
         add "images/v7/fr4gymentrance.webp"
 
-    if fr4riley and not fr4noriley:
+    if "riley" in freeroam4 and not "riley2" in freeroam4:
         imagebutton:
             pos (365, 318)
             idle "images/v7/fr4gymentrancerileyidle.webp"
             hover "images/v7/fr4gymentrancerileyhover.webp"
             action Show("v7_endFreeRoamConfirm", continueLabel="fr4riley2", girl="Riley")
 
-    if fr4nora and not fr4nora2:
+    if "nora" in freeroam4 and not "nora2" in freeroam4:
         imagebutton:
             ypos 315
             idle "images/v7/fr4gymentrancenoraidle.webp"
@@ -446,7 +445,7 @@ screen fr4gymentrance():
         pos (1235, 440)
         idle "images/v7/fr4gymentranceaaron.webp"
         hover "images/v7/fr4gymentranceaaronhover.webp"
-        if not fr4aaron:
+        if not "aaron" in freeroam4:
             action Jump("fr4aaron1")
         else:
             action Jump("fr4aaron2")
@@ -502,7 +501,7 @@ screen fr4hallwaybathroom():
         pos (737, 130)
         idle "images/v7/fr4hallwaybathroomdoor.webp"
         hover "images/v7/fr4hallwaybathroomdoorhover.webp"
-        if not fr4imre:
+        if not "imre" in freeroam4:
             action Jump("fr4imre1")
         else:
             action Jump("fr4imre2")
@@ -511,22 +510,22 @@ screen fr4hallwaybathroom():
 screen fr4hallway():
 
     if not hcGirl == "penelope":
-        if fr4chloe and preventgrayson:
+        if "chloe" in freeroam4 and preventgrayson:
             add "images/v7/fr4hallwaychloe.webp"
         else:
             add "images/v7/fr4hallway.webp"
     else:
-        if fr4chloe and preventgrayson:
+        if "chloe" in freeroam4 and preventgrayson:
             add "images/v7/fr4hallwaynopenelopechloe.webp"
         else:
             add "images/v7/fr4hallwaynopenelope.webp"
 
-    if fr4chloe and preventgrayson:
+    if "chloe" in freeroam4 and preventgrayson:
         imagebutton:
             pos (1035, 175)
             idle "images/v7/fr4hallwaychloeidle.webp"
             hover "images/v7/fr4hallwaychloehover.webp"
-            if not fr4chloe2:
+            if not "chloe2" in freeroam4:
                 action Show("v7_endFreeRoamConfirm", continueLabel="fr4chloe2", girl="Chloe")
             else:
                 action Jump("fr4chloe3")
@@ -536,7 +535,7 @@ screen fr4hallway():
             pos (535, 105)
             idle "images/v7/fr4hallwaypenelope.webp"
             hover "images/v7/fr4hallwaypenelopehover.webp"
-            if not fr4penelope:
+            if not "penelope" in freeroam4:
                 action Jump("fr4penelope1")
             else:
                 action Jump("fr4penelope2")
@@ -562,7 +561,7 @@ screen fr4hallway():
 
 screen fr4hallwaycorner():
 
-    if not fr4grayson:
+    if not "grayson" in freeroam4:
         add "images/v7/fr4hallwaycorner.webp"
     elif preventgrayson:
         add "images/v7/fr4hallwaycornernumber.webp"
@@ -573,12 +572,12 @@ screen fr4hallwaycorner():
         pos (875, 205)
         idle "images/v7/fr4hallwaycornerdoor.webp"
         hover "images/v7/fr4hallwaycornerdoorhover.webp"
-        if fr4chloe and not preventgrayson:
+        if "chloe" in freeroam4 and not preventgrayson:
             action Show("v7_endFreeRoamConfirm", continueLabel="fr4lockerroomchloe", girl="Chloe")
         else:
             action Jump("fr4lockerroom")
 
-    if not fr4grayson:
+    if not "grayson" in freeroam4:
         imagebutton:
             pos (320, 395)
             idle "images/v7/fr4hallwaycornergrayson.webp"
@@ -605,7 +604,7 @@ screen fr4outsidestairs():
             pos (520, 295)
             idle "images/v7/fr4outsidestairsemily.webp"
             hover "images/v7/fr4outsidestairsemilyhover.webp"
-            if not fr4emily:
+            if not "emily" in freeroam4:
                 action Jump("fr4emily1")
             else:
                 action Jump("fr4emily2")
@@ -631,7 +630,7 @@ screen fr4outsidestreet():
         pos (830, 340)
         idle "images/v7/fr4outsidestreetidle.webp"
         hover "images/v7/fr4outsidestreethover.webp"
-        if not fr4samantha:
+        if not "samantha" in freeroam4:
             action Jump("fr4samantha1")
         else:
             action Jump("fr4samantha2")
