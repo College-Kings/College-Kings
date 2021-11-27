@@ -208,7 +208,7 @@ label v10_chloe_gym:
 
                 pause 0.5
                 stop music fadeout 3
-                play music "music/v10/Track Scene 30_2.mp3" fadein 2
+                play music "music/v8/Track Scene 30.mp3" fadein 2
                 scene v10chg9a # TPP Same angle as v10chg8, Chloe looking seductive with mouth open
                 with dissolve
 
