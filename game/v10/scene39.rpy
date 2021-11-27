@@ -64,7 +64,7 @@ label v10_riley_walk:
         
         ri "Did you see Aubrey at the dancing booth? I had no idea she could dance like that."
 
-        if v10s33_aubrey: # -If spoke to Aubrey during freeroam
+        if not "aubrey" in freeroam6: # -If spoke to Aubrey during freeroam
             scene v10srwh3a
             with dissolve
 

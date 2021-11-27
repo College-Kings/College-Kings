@@ -165,7 +165,7 @@ label v11_sit_ryan_convo:
 
                 u "See? You got it all figured out. Now let me get some sleep."
 
-    elif not v10s33_ryan: # If didn't talk to Ryan at charity event
+    elif not "ryan" in freeroam6: # If didn't talk to Ryan at charity event
         scene v11src4
         with dissolve
 

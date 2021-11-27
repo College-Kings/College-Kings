@@ -2,21 +2,21 @@ screen v10s33_entrance():
     tag free_roam
 
     # Background
-    if not v10s33_toldChloe and v10s33_riley and not v10s33_ryan:
+    if not v10s33_toldChloe and "riley" in freeroam6 and not "ryan" in freeroam6:
         add "images/v10/scene 33/Ent1.webp"
-    if v10s33_toldChloe and v10s33_riley and not v10s33_ryan:
+    if v10s33_toldChloe and "riley" in freeroam6 and not "ryan" in freeroam6:
         add "images/v10/scene 33/Ent2.webp"
-    if v10s33_toldChloe and not v10s33_riley and not v10s33_ryan:
+    if v10s33_toldChloe and not "riley" in freeroam6 and not "ryan" in freeroam6:
         add "images/v10/scene 33/Ent3.webp"
-    if not v10s33_toldChloe and v10s33_riley and v10s33_ryan:
+    if not v10s33_toldChloe and "riley" in freeroam6 and "ryan" in freeroam6:
         add "images/v10/scene 33/Ent4.webp"
-    if not v10s33_toldChloe and not v10s33_riley and v10s33_ryan:
+    if not v10s33_toldChloe and not "riley" in freeroam6 and "ryan" in freeroam6:
         add "images/v10/scene 33/Ent5.webp"
-    if v10s33_toldChloe and not v10s33_riley and v10s33_ryan:
+    if v10s33_toldChloe and not "riley" in freeroam6 and "ryan" in freeroam6:
         add "images/v10/scene 33/Ent6.webp"
-    if not v10s33_toldChloe and not v10s33_riley and not v10s33_ryan:
+    if not v10s33_toldChloe and not "riley" in freeroam6 and not "ryan" in freeroam6:
         add "images/v10/scene 33/Ent7.webp"
-    if v10s33_toldChloe and v10s33_riley and v10s33_ryan:
+    if v10s33_toldChloe and "riley" in freeroam6 and "ryan" in freeroam6:
         add "images/v10/scene 33/Ent8.webp"
 
     # Cake statue - Right
@@ -56,7 +56,7 @@ screen v10s33_cakestatue():
             pos (1579, 324)
             idle "images/v10/scene 33/fr6laurenbake.webp"
             hover "images/v10/scene 33/fr6laurenbakehover.webp"
-            if not v10s33_lauren:
+            if not freeroam6.add("lauren"):
                 action Jump("v10s33_laurenbake1")
             else:
                 action Call("freeRoamSpokenToo", backgroundImg="v10cfrla1a", returnScreen="v10s33_cakestatue")
@@ -67,7 +67,7 @@ screen v10s33_cakestatue():
             pos (1182, 139)
             idle "images/v10/scene 33/fr6laurenstatue.webp"
             hover "images/v10/scene 33/fr6laurenstatuehover.webp"
-            if not v10s33_lauren:
+            if not freeroam6.add("lauren"):
                 action Jump("v10s33_laurenstatue1")
             else:
                 action Call("freeRoamSpokenToo", backgroundImg="v10cfrla3", returnScreen="v10s33_cakestatue")
@@ -101,7 +101,7 @@ screen v10s33_bench():
         pos (942, 420)
         idle "images/v10/scene 33/fr6emily.webp"
         hover "images/v10/scene 33/fr6emilyhover.webp"
-        if not v10s33_emily:
+        if not "emily" in freeroam6:
             action Jump("v10s33_emily1")
         else:
             action Call("freeRoamSpokenToo", backgroundImg="v10cfrem1a", returnScreen="v10s33_bench")
@@ -125,7 +125,7 @@ screen v10s33_toilet(): # NO
     tag free_roam
 
     # Background
-    if v10s33_ryan:
+    if "ryan" in freeroam6:
         add "images/v10/scene 33/fr6toiletwithryan.webp"
     else:
         add "images/v10/scene 33/fr6toilet.webp"
@@ -135,18 +135,18 @@ screen v10s33_toilet(): # NO
         pos (613, 207)
         idle "images/v10/scene 33/fr6evelyn.webp"
         hover "images/v10/scene 33/fr6evelynhover.webp"
-        if not v10s33_evelyn:
+        if not "evelyn" in freeroam6:
             action Jump("v10s33_evelyn1")
         else:
             action Call("freeRoamSpokenToo", backgroundImg="v10cfrev1a", returnScreen="v10s33_toilet")
 
     # Toilet Ryan
-    if v10s33_ryan:            
+    if "ryan" in freeroam6:            
         imagebutton: 
             pos (812, 253)
             idle "images/v10/scene 33/fr6toiletryan.webp"
             hover "images/v10/scene 33/fr6toiletryanhover.webp"
-            if not v10s33_ryanb:
+            if not "ryan2" in freeroam6:
                 action Jump("v10s33_toiletryan1")
             else:
                 action Call("freeRoamSpokenToo", backgroundImg="v10cfrry5", returnScreen="v10s33_toilet")
@@ -170,7 +170,7 @@ screen v10s33_bodypaint():
     tag free_roam
 
     # Background
-    if v10s33_riley:
+    if "riley" in freeroam6:
         add "images/v10/scene 33/fr6bodypaintnoriley.webp"
     else:
         add "images/v10/scene 33/fr6bodypaint.webp"
@@ -180,7 +180,7 @@ screen v10s33_bodypaint():
         pos (473, 315)
         idle "images/v10/scene 33/fr6msrose.webp"
         hover "images/v10/scene 33/fr6msrosehover.webp"
-        if not v10s33_msRose:
+        if not "rose" in freeroam6:
             action Jump("v10s33_msrose1")
         else:
             action Call("freeRoamSpokenToo", backgroundImg="v10cfrcfrro1", returnScreen="v10s33_bodypaint")
@@ -190,7 +190,7 @@ screen v10s33_bodypaint():
         pos (783, 346)
         idle "images/v10/scene 33/fr6lindsey.webp"
         hover "images/v10/scene 33/fr6lindseyhover.webp"
-        if not v10s33_lindsey:
+        if not "lindsey" in freeroam6:
             action Jump("v10s33_lindsey1")
         else:
             action Call("freeRoamSpokenToo", backgroundImg="v10cfrfrli1", returnScreen="v10s33_bodypaint")
@@ -214,7 +214,7 @@ screen v10s33_thrift():
     tag free_roam
 
     # Background
-    if v10s33_riley:
+    if "riley" in freeroam6:
         add "images/v10/scene 33/fr6thriftnoriley.webp"
     else:
         add "images/v10/scene 33/fr6thrift.webp"
@@ -227,7 +227,7 @@ screen v10s33_thrift():
         action Jump("v10s33_deergirl41")
 
     # Riley
-    if not v10s33_riley:                
+    if not "riley" in freeroam6:                
         imagebutton: 
             pos (391, 388)
             idle "images/v10/scene 33/fr6riley.webp"
@@ -253,13 +253,13 @@ screen v10s33_stagefromleft():
     tag free_roam
 
     # Background 
-    if v10s33_riley and v10s33_toldChloe:
+    if "riley" in freeroam6 and v10s33_toldChloe:
         add "images/v10/scene 33/fr6stagefromleftchloeandnoraatmudwrestlingwithrileyatstage.webp"
-    if v10s33_riley and not v10s33_toldChloe:
+    if "riley" in freeroam6 and not v10s33_toldChloe:
         add "images/v10/scene 33/fr6stagewithrileyatstage.webp"
-    if not v10s33_riley and v10s33_toldChloe:
+    if not "riley" in freeroam6 and v10s33_toldChloe:
         add "images/v10/scene 33/fr6stagefromleftchloeandnoraatmudwrestling.webp"
-    if not v10s33_riley and not v10s33_toldChloe:
+    if not "riley" in freeroam6 and not v10s33_toldChloe:
         add "images/v10/scene 33/fr6stageleft.webp"
 
     # Thrift - Bottom
@@ -281,18 +281,18 @@ screen v10s33_stage():
     tag free_roam
 
     # Background
-    if v10s33_riley:
+    if "riley" in freeroam6:
         add "images/v10/scene 33/fr6stagewithriley.webp"
     else:
         add "images/v10/scene 33/fr6stage.webp"
 
     # Aubrey
-    if not v10s33_riley:   
+    if not "riley" in freeroam6:   
         imagebutton: 
             pos (1282, 322)
             idle "images/v10/scene 33/fr6aubrey.webp"
             hover "images/v10/scene 33/fr6aubreyhover.webp"
-            if not v10s33_aubrey:
+            if not "aubrey" in freeroam6:
                 action Jump("v10s33_aubrey1")
             else:
                 action Call("freeRoamSpokenToo", backgroundImg="v10cfrau1", returnScreen="v10s33_stage")
@@ -313,7 +313,7 @@ screen v10s33_stage():
         pos (650, 195)
         idle "images/v10/scene 33/fr6deergirl1.webp"
         hover "images/v10/scene 33/fr6deergirl1hover.webp"
-        if not v10s33_deergirl1:
+        if not "rachel" in freeroam6:
             action Jump("v10s33_deergirl11")
         else:
             action Call("freeRoamSpokenToo", backgroundImg="v10cfrdg11", returnScreen="v10s33_stage")
@@ -354,7 +354,7 @@ screen v10s33_bagtoss():
         pos (89, 274)
         idle "images/v10/scene 33/fr6deergirl2.webp"
         hover "images/v10/scene 33/fr6deergirl2hover.webp"
-        if not v10s33_deergirl2:
+        if not "eleanor" in freeroam6:
             action Jump("v10s33_deergirl21")
         else:
             action Call("freeRoamSpokenToo", backgroundImg="v10cfrdg21", returnScreen="v10s33_bagtoss")
@@ -364,7 +364,7 @@ screen v10s33_bagtoss():
         pos (1032, 255)
         idle "images/v10/scene 33/fr6chris.webp"
         hover "images/v10/scene 33/fr6chrishover.webp"
-        if not v10s33_chris:
+        if not "chris" in freeroam6:
             action Jump("v10s33_chris1")
         else:
             action Call("freeRoamSpokenToo", backgroundImg="v10cfrch1", returnScreen="v10s33_bagtoss")
@@ -375,7 +375,7 @@ screen v10s33_bagtoss():
             pos (754, 293)
             idle "images/v10/scene 33/fr6nora.webp"
             hover "images/v10/scene 33/fr6norahover.webp"
-            if not v10s33_nora:
+            if not "nora" in freeroam6:
                 action Jump("v10s33_nora1")
             else:
                 action Call("freeRoamSpokenToo", backgroundImg="v10cfrno1", returnScreen="v10s33_bagtoss")
@@ -392,21 +392,21 @@ screen v10s33_centeraisle():
     tag free_roam
 
     # Background
-    if v10s33_toldChloe and v10s33_riley and v10s33_ryan:
+    if v10s33_toldChloe and "riley" in freeroam6 and "ryan" in freeroam6:
         add "images/v10/scene 33/Mid8.webp"
-    if v10s33_toldChloe and v10s33_riley and not v10s33_ryan:
+    if v10s33_toldChloe and "riley" in freeroam6 and not "ryan" in freeroam6:
         add "images/v10/scene 33/Mid2.webp"
-    if v10s33_toldChloe and not v10s33_riley and v10s33_ryan:
+    if v10s33_toldChloe and not "riley" in freeroam6 and "ryan" in freeroam6:
         add "images/v10/scene 33/Mid6.webp"
-    if v10s33_toldChloe and not v10s33_riley and not v10s33_ryan:
+    if v10s33_toldChloe and not "riley" in freeroam6 and not "ryan" in freeroam6:
         add "images/v10/scene 33/Mid3.webp"
-    if not v10s33_toldChloe and v10s33_riley and v10s33_ryan:
+    if not v10s33_toldChloe and "riley" in freeroam6 and "ryan" in freeroam6:
         add "images/v10/scene 33/Mid4.webp"
-    if not v10s33_toldChloe and v10s33_riley and not v10s33_ryan:
+    if not v10s33_toldChloe and "riley" in freeroam6 and not "ryan" in freeroam6:
         add "images/v10/scene 33/Mid1.webp"
-    if not v10s33_toldChloe and not v10s33_riley and v10s33_ryan:
+    if not v10s33_toldChloe and not "riley" in freeroam6 and "ryan" in freeroam6:
         add "images/v10/scene 33/Mid5.webp"
-    if not v10s33_toldChloe and not v10s33_riley and not v10s33_ryan:
+    if not v10s33_toldChloe and not "riley" in freeroam6 and not "ryan" in freeroam6:
         add "images/v10/scene 33/Mid7.webp"
 
     # Chloe
@@ -415,7 +415,7 @@ screen v10s33_centeraisle():
             pos (534, 331)
             idle "images/v10/scene 33/fr6chloe.webp"
             hover "images/v10/scene 33/fr6chloehover.webp"
-            if not v10s33_chloe:
+            if not "chloe" in freeroam6:
                 action Jump("v10s33_chloe1")
             else:
                 action Call("freeRoamSpokenToo", backgroundImg="v10cfrcl1", returnScreen="v10s33_centeraisle")
@@ -425,18 +425,18 @@ screen v10s33_centeraisle():
         pos (180, 338)
         idle "images/v10/scene 33/fr6deergirl3.webp"
         hover "images/v10/scene 33/fr6deergirl3hover.webp"
-        if not v10s33_deergirl3:
+        if not "karen" in freeroam6:
             action Jump("v10s33_deergirl31")
         else:
             action Call("freeRoamSpokenToo", backgroundImg="v10cfrdg31a", returnScreen="v10s33_centeraisle")
     
     # Ryan
-    if not v10s33_ryan:
+    if not "ryan" in freeroam6:
         imagebutton:
             pos (1290, 251)
             idle "images/v10/scene 33/fr6ryan.webp"
             hover "images/v10/scene 33/fr6ryanhover.webp"
-            if not v10s33_ryan:
+            if not "ryan" in freeroam6:
                 action Jump("v10s33_ryan1")
             else:
                 action Call("freeRoamSpokenToo", backgroundImg="v10cfrry1", returnScreen="v10s33_centeraisle")
@@ -477,7 +477,7 @@ screen v10s33_mudwrestling():
         pos (1607, 320)
         idle "images/v10/scene 33/fr6amber.webp"
         hover "images/v10/scene 33/fr6amberhover.webp"
-        if not v10s33_amber:
+        if not "amber" in freeroam6:
             action Jump("v10s33_amber1")
         else:
             action Call("freeRoamSpokenToo", backgroundImg="v10cfram1", returnScreen="v10s33_mudwrestling")
@@ -487,7 +487,7 @@ screen v10s33_mudwrestling():
         pos (1207, 299)
         idle "images/v10/scene 33/fr6autumn.webp"
         hover "images/v10/scene 33/fr6autumnhover.webp"
-        if not v10s33_autumn:
+        if not "autumn" in freeroam6:
             action Jump("v10s33_autumn1")
         else:
             action Show("endFreeRoamConfirm", continueLabel="v10_autumn_announcement")
