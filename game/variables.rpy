@@ -61,7 +61,6 @@ default laurenrs = False
 default phoneTutorialPage = 1
 default freeRoamTutorialPage = 1
 default funofelijah = False
-default juliaismom = 0
 default v1_laurenPoints = 0
 default v1_hitOnNora = False
 default simtomfight = False
