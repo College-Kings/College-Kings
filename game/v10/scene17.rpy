@@ -4,7 +4,7 @@
 # Time: Sunday evening
 
 label v10_aubrey_house:
-    play music "music/v10/Scene 17/Track Scene 17_1.mp3" fadein 3
+    play music "music/v10/Scene 17/Track Scene 17_1.mp3" fadein 2
     scene v10auh1 # FPP Show Aubrey, walking on sidewalk in the evening, slight smile, mouth closed
     with dissolve
 
@@ -271,7 +271,7 @@ label v10_aubrey_house:
                 scene v10auh2c # FPP Same angle and position as v10auh2b, Aubrey smiling with eyebrow raised, mouth open
                 with dissolve
                 stop music fadeout 3
-                play music "music/v10/Scene 17/Track Scene 17_2.mp3" fadein 3
+                play music "music/v10/Scene 17/Track Scene 17_2.mp3" fadein 2
                 au "*Chuckles* Of course."
 
                 scene v10auh3 # TPP Outside bathroom at Chicks house, show Aubrey grabbing MC to pull him toward the bathroom, both smiling

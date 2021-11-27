@@ -7,7 +7,7 @@ label v10_apes_samantha:
     scene v10ssap1 # TPP. Show MC in the Ape's living room. He's sitting on the couch, appearing exhausted, mouth closed.
     with fade
 
-    play music "music/v10/Scene 14/Track Scene 14.mp3" fadein 3
+    play music "music/v10/Scene 14/Track Scene 14.mp3" fadein 2
 
     u "(Shit I'm tired.)"
 

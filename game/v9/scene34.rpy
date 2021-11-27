@@ -100,7 +100,7 @@ label v9_ri_sex:
     scene v9ris7a # TPP. Same camera as v9ris7a, MC now wearing no pants, Riley looking at MC seductively.
     with dissolve
 
-    play music "music/v9/Scene 34/Track Scene 34_2.mp3" fadein 3
+    play music "music/v9/Scene 34/Track Scene 34_2.mp3" fadein 2
 
     pause 1
 
@@ -354,7 +354,7 @@ label v9s34_rileyCowgirl:
 
     u "Do you... need anything?"
 
-    play music "music/v9/Scene 34/Track Scene 34_3.mp3" fadein 3
+    play music "music/v9/Scene 34/Track Scene 34_3.mp3" fadein 2
 
     scene v9ris23a # FPP. Same camera as v9ris23, smile, mouth open.
     with dissolve

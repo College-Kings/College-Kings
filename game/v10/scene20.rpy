@@ -16,7 +16,7 @@ init python:
         josh.messenger.addReply("Haha, okay.")
 
 label v10_room_mon_night:
-    play music "music/v10/Scene 20/Track Scene 20.mp3" fadein 3
+    play music "music/v10/Scene 20/Track Scene 20.mp3" fadein 2
     if joinwolves:
         scene v10smnr1 # TPP. Show mc in his new Wolves room chilling on his bed on his phone.
         with Fade(1, 0, 1)

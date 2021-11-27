@@ -6,7 +6,7 @@
 label v10_imre_vs_caleb:
     scene v10ivc1 # TPP. Show MC walking towards the ring, Josh in ring in tux, mouths closed, nerutal expressions-
     with fade
-    play music "music/v10/Scene 2 & 3/Track Scene 2 & 3.mp3" fadein 3
+    play music "music/v10/Scene 2 & 3/Track Scene 2 & 3.mp3" fadein 2
     pause 0.5
 
     scene v10ivc2 # FPP. Show Josh in the ring, mouth closed, slight smile
