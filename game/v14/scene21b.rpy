@@ -9,7 +9,7 @@ init python:
         simplr_contacts.remove(beth.simplr)
 
 label v14s21b:
-    play music "music/v14/Track Scene 21b.mp3" fadein 2
+    play music "music/v13/Track Scene 45.mp3" fadein 2
 
     scene v14s21b_1 # TPP. Show the sky, it's midday
     with dissolve
