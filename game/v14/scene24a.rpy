@@ -4,7 +4,7 @@
 # Time: Evening (Tuesday)
 
 label v14s24a:
-    play music "music/v14/Track Scene 24a_1.mp3" fadein 2
+    play music "music/v12/Scene 33/Track Scene 33_5.mp3" fadein 2
 
     scene v14s24a_1 # TPP. MC, smiling, walking towards the door of the gas station.
     with dissolve
