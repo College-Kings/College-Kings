@@ -879,7 +879,7 @@ label v14s47_end:
 
     stop music fadeout 3
 
-    play music "music/v14/Track Scene 47_3.mp3" fadein 2
+    play music "music/v12/Scene 32/Track Scene 32_4.mp3" fadein 2
 
     scene v14s47_end_1 # FPP. MC and Lindsey standing by the car, next to each other, Lindsey looking at MC, Lindsey smiling, mouth closed
 
