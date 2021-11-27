@@ -304,7 +304,7 @@ label v14s25a:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v14/Track Scene 4.mp3" fadein 2
+    play music "music/v13/Track Scene 16a_2.mp3" fadein 2
 
     scene v14s25a_17 # TPP Show Amber laying on the bed next to MC, her mouth open
     with dissolve
