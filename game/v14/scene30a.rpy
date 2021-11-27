@@ -10,7 +10,7 @@ label v14s30a:
 
     pause 0.5
 
-    play music "music/v14/Track Scene 30.mp3" fadein 2
+    play music "music/v13/Track Scene 59_1.mp3" fadein 2
 
     scene v14s30a_2 # TPP. MC finds Chloe in the woods with the Wolf Trainer at the photoshoot set, Chloe petting the wolf, All slight smile, mouth closed.
     with dissolve
