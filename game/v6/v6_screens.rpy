@@ -1,7 +1,7 @@
 screen v6_fr3garden():
     tag free_roam
     
-    if not kimpuke:
+    if not upstairs == "amber":
         add "images/v6/fr3garden.webp" # location picture
 
         # Josh button
@@ -10,10 +10,10 @@ screen v6_fr3garden():
             idle "images/v6/fr3gardenjoshblank.webp"
             hover "images/v6/fr3gardenjosh.webp"
 
-            if not fr3josh:
+            if not "josh" in freeroam3:
                 action Jump("v6_fr3josh1")
 
-            elif relics >= 5 and upstairs == "nobody" and not askedkim: # Asking people for upstairs
+            elif relics >= 5 and upstairs == "nobody" and not "kim" in freeroam3asked: # Asking people for upstairs
                 action Jump("v6_fr3josh3")
             else:
                 action Jump("v6_fr3josh2")
@@ -70,7 +70,7 @@ screen v6_fr3livingroom():
         idle "images/v6/fr3livingroomsofablank.webp"
         hover "images/v6/fr3livingroomsofa.webp"
 
-        if not fr3guy:
+        if not "peter" in freeroam3:
             action Jump("v6_fr3guy1")
         else:
             action Jump("v6_fr3guy2")
@@ -81,7 +81,7 @@ screen v6_fr3livingroom():
         idle "images/v6/fr3livingroomaubreyblank.webp"
         hover "images/v6/fr3livingroomaubrey.webp"
 
-        if not fr3aubrey:
+        if not "aubrey" in freeroam3:
             action Jump("v6_fr3aubrey1")
         elif relics >= 5 and upstairs == "nobody": # Asking people for upstairs
             action Jump("v6_fr3aubrey3")
@@ -115,7 +115,7 @@ screen v6_fr3kitchen():
         idle "images/v6/fr3kitchenchrisblank.webp"
         hover "images/v6/fr3kitchenchrisn.webp"
 
-        if not fr3chris:
+        if not "chris" in freeroam3:
             action Jump("v6_fr3chris1")
         else:
             action Show("endFreeRoamConfirm", continueLabel="v6_fr3chris3")
@@ -125,7 +125,7 @@ screen v6_fr3kitchen():
         idle "images/v6/fr3kitchenmattblank.webp"
         hover "images/v6/fr3kitchenmatt.webp"
 
-        if not fr3matt:
+        if not "matt" in freeroam3:
             action Jump("v6_fr3matt1")
         else:
             action Jump("v6_fr3matt2")
@@ -147,9 +147,9 @@ screen v6_fr3kitchen():
         idle "images/v6/fr3kitchenrileyblank.webp"
         hover "images/v6/fr3kitchenriley.webp"
 
-        if not fr3riley:
+        if not "riley" in freeroam3:
             action Jump("v6_fr3riley1")
-        elif relics >= 5 and upstairs == "nobody" and not askedriley: # Asking people for upstairs
+        elif relics >= 5 and upstairs == "nobody" and not "riley" in freeroam3asked: # Asking people for upstairs
             action Jump("v6_fr3riley3")
         else:
             action Jump("v6_fr3riley2")
@@ -209,7 +209,7 @@ screen v6_fr3middleroom():
 screen v6_fr3garage():
     tag free_roam
 
-    if not kimpuke:
+    if not upstairs == "amber":
         add "images/v6/fr3garage.webp" # location picture
 
         imagebutton: #Amber button
@@ -217,10 +217,10 @@ screen v6_fr3garage():
             idle "images/v6/fr3garageamberblank.webp"
             hover "images/v6/fr3garageamber.webp"
 
-            if not fr3amber:
+            if not "amber" in freeroam3:
                 action Jump("v6_fr3amber1")
 
-            elif relics >= 5 and upstairs == "nobody" and not askedamber: #Asking people for upstairs
+            elif relics >= 5 and upstairs == "nobody" and not "amber" in freeroam3asked: #Asking people for upstairs
                 action Jump("v6_fr3amber3")
             else:
                 action Jump("v6_fr3amber2")
@@ -234,7 +234,7 @@ screen v6_fr3garage():
         idle "images/v6/fr3garagefightblank.webp"
         hover "images/v6/fr3garagefight.webp"
 
-        if not fr3sebastian:
+        if not "sebastian" in freeroam3:
             action Jump("v6_fr3sebastian1")
         else:
             action Jump("v6_fr3sebastian2")
@@ -276,7 +276,7 @@ screen v6_fr3upstairs():
         idle "images/v6/fr3upstairsleftblank.webp"
         hover "images/v6/fr3upstairsleft.webp"
 
-        if not fr3chloe:
+        if not "chloe" in freeroam3:
             action Jump("v6_fr3chloe1")
         else:
             action Jump("v6_fr3chloe2")
@@ -336,7 +336,7 @@ screen v6_fr3roofroom():
         idle "images/v6/fr3roofroomwindowblank.webp"
         hover "images/v6/fr3roofroomwindow.webp"
 
-        if not fr3nora:
+        if not "nora" in freeroam3:
             action Jump ("v6_fr3nora1")
         else:
             action Jump ("v6_fr3nora2")

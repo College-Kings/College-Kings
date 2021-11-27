@@ -419,7 +419,7 @@ label v7start:
 
         u "(I guess I'm going home without him.)"
 
-    if fr3riley and not askfinn and upstairs != "riley" and not joinapes:
+    if "riley" in freeroam3 and not askfinn and upstairs != "riley" and not joinapes:
         ri "[name]?"
 
         scene s683a #Closeup riley mouth closed standing in kitchen curious
@@ -458,7 +458,7 @@ label v7start:
 
     ch "I swear she finds new reasons to get upset every day."
 
-    if fr3riley and not askfinn:
+    if "riley" in freeroam3 and not askfinn:
         scene s683
         with dissolve
 
@@ -555,7 +555,7 @@ label hd_bd:
 
     pause 0.5
 
-    if not fr3nora:
+    if not "nora" in freeroam3:
         scene s699 # Close up Nora upset, a bit passive aggressive
         with dissolve
 
@@ -3973,7 +3973,7 @@ label chloe_call:
 
         u "(How weird...)"
 
-    elif fr3chloe:
+    elif "chloe" in freeroam3:
         cl "Hey [name]... just wanted to say thanks for yesterday."
 
         scene sphone1 # mc on the phone mouth open
@@ -4277,7 +4277,7 @@ label aftercall:
         with dissolve
         no "Okay well let's just get on with it then."
 
-    elif fr3nora:
+    elif "nora" in freeroam3:
         # happy
         scene s791b # Nora mouth open and smiling
         with dissolve
@@ -12663,7 +12663,7 @@ label fr4chloedate:
 
                 no "Uhm..."
 
-                if not noramad and fr3nora:
+                if not noramad and "nora" in freeroam3:
                     #If Nora likes you:
                     no "Yeah, why not."
 
@@ -14908,7 +14908,7 @@ label fr4nora2:
 
     pause 0.5
 
-    if not noramad and fr3nora:
+    if not noramad and "nora" in freeroam3:
         scene sfr4no5 # close up nora smile with a bit of holding back or "this dance is stupid" attitude
         with dissolve
 
@@ -14965,7 +14965,6 @@ label fr4nora2:
 
             "Defend Chris.":
                 $ add_point(KCT.BRO)
-                $ fr3nora = False
 
                 u "I mean I get where he's coming from. He's got his own priorities to deal with too. And he's president of a frat-"
 

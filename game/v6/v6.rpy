@@ -6996,7 +6996,7 @@ label wolvesfr2:
 # location 1- In front of wolves frat house:
 # *Clicking on Josh & Kim*
 label v6_fr3josh1:
-    $ fr3josh = True
+    $ freeroam3.add("josh")
 
     scene sfr3jo1 # opening: josh and kim sitting on porch super high, with some filled and some empty shots on the ground
 
@@ -7176,7 +7176,7 @@ label v6_fr3josh2:
 #*Clicking on Guy & Guy*
 #Two guys sit on a couch arguing.
 label v6_fr3guy1:
-    $ fr3guy = True
+    $ freeroam3.add("peter")
 
     scene sfr3guy1 #showing guy 1 and guy 2 on the couch having a discusison
 
@@ -7345,7 +7345,7 @@ label v6_fr3guy2:
 
 label v6_fr3aubrey1:
     #*If you click on Aubrey & Emily*
-    $ fr3aubrey = True
+    $ freeroam3.add("aubrey")
 
     scene sfr3au1 # Opening : EMily and aubrey standing with beer bottle, Aubrey mouth open curious smile
 
@@ -7823,7 +7823,7 @@ label v6_fr3dsbathroom:
 
 #LOcation 3: kitchen/ dining room
 label v6_fr3matt1:
-    $ fr3matt = True
+    $ freeroam3.add("matt")
 
     scene sfr3ma1 # close up matt looking at fridge
 
@@ -7861,7 +7861,7 @@ label v6_fr3matt2:
 
 
 label v6_fr3chris1:
-    $ fr3chris = True
+    $ freeroam3.add("chris")
 
     if fightadam: #If you fought Adam:
         scene sfr3ch1 # chris and guyc talking, chris back turned to you
@@ -8192,7 +8192,7 @@ label v6_fr3chris1:
 
 
 label v6_fr3riley1: #If you click on Riley and finn*
-    $ fr3riley = True
+    $ freeroam3.add("riley")
 
     scene sfr3ri1 #Riley and finn are sitting at the table talking.
 
@@ -8464,7 +8464,7 @@ label v6_fr3riley2:
 #*If you click on Guy #5 and Sebastian*
 #Sebastian is guiding Guy #5 through some punches., they're both not wearing a shirt
 label v6_fr3sebastian1:
-    $ fr3sebastian = True
+    $ freeroam3.add("sebastian")
 
     scene sfr3se1 # sebestian teaching guyd how to fight
 
@@ -8552,9 +8552,8 @@ label v6_fr3sebastian2:
 
     call screen v6_fr3garage
 
-
-label v6_fr3amber1:
-    $ fr3amber = True
+abel v6_fr3amber1:
+    $ freeroam3.add("amber")
 
     scene sfr3am1 #Amber is sitting watching the guys workout and drinking a beer
 
@@ -8695,7 +8694,7 @@ label v6_fr3amber2:
 #*If you click on Nora*
 #Nora is sitting on the rooftop smoking. MC comes and sits down next to her.
 label v6_fr3nora1:
-    $ fr3nora = True
+    $ freeroam3.add("nora")
 
     scene sfr3no1 #Nora is sitting on the rooftop smoking. MC comes and sits down next to her.
 
@@ -9079,10 +9078,9 @@ label v6_fr3nora2:
 
     call screen v6_fr3roofroom
 
-
 #Location 6: bathroom
 label v6_fr3chloe1:
-    $ fr3chloe = True
+    $ freeroam3.add("chloe")
 
     scene sfr3cl1 #in front of closed bathroom door
 
@@ -9363,12 +9361,12 @@ label v6_fr3chloe2:
 label v6_fr3office:
     scene fr3office
 
-    if not fr3office:
+    if not "office" in freeroam3:
         u "(This must be Chris' office.)"
 
         u "(It's filled with all of these historic Wolves' relics.)"
 
-    $ fr3office = True
+    $ freeroam3.add("office")
     
     if relics == 4:
         jump fr3relics
@@ -9441,20 +9439,19 @@ label v6_fr3books:
 
 label fr3relics:
     $ relics += 1
-
     scene fr3office
 
     u "(Empty room... All alone. This'd be the perfect place for some alone time with a girl... I should ask someone. Haha.)"
 
     u "(Who to ask though?)"
 
-    if fr3chloe and fr3nora:
+    if "chloe" in freeroam3 and "nora" in freeroam3:
         u "(Definitely not Chloe or Nora, they both seem too caught up in their fight.)"
 
-    elif fr3chloe:
+    elif "chloe" in freeroam3:
         u "(Definitely not Chloe, she seems too caught up in her fight with Nora.)"
 
-    elif fr3nora:
+    elif "nora" in freeroam3:
         u "(Definitely not Nora, she seems too caught up in her fight with Chloe.)"
 
     call screen v6_fr3office
@@ -9468,8 +9465,8 @@ label v6_fr3aubrey3:
 
     menu:
         "Ask Aubrey":
-            if not askedaubrey:
-                $ askedaubrey = True
+            if not "aubrey" in freeroam3asked:
+                $ freeroam3asked.add("aubrey")
 
                 u "Hey, Aubrey, can I talk to you for a second?"
 
@@ -9548,7 +9545,7 @@ label v6_fr3aubrey3:
                 u "(I've already asked Aubrey.)"
 
         "Ask Emily":
-            $ askedemily = True
+            $ freeroam3asked.add("emily")
 
             if forgiveemily:
                 $ upstairs = "emily"
@@ -9583,7 +9580,7 @@ label v6_fr3aubrey3:
 #*If you click on Amber*
 #MC walks up and sits next to Amber.
 label v6_fr3amber3:
-    $ askedamber = True
+    $ freeroam3asked.add("amber")
 
     scene sfr3am1
 
@@ -9665,7 +9662,7 @@ label v6_fr3amber3:
 #*If you click on Kim*
 #MC walks up to Kim.
 label v6_fr3josh3:
-    $ askedkim = True
+    $ freeroam3asked.add("kim")
     
     scene sfr3jo1
 
@@ -9715,11 +9712,10 @@ label v6_fr3josh3:
 
     call screen v6_fr3garden
 
-
 #*If you click on Riley*
 #MC walks up to Riley.
 label v6_fr3riley3:
-    $ askedriley = 0
+    $ freeroam3asked.add("riley")
     $ upstairs = "riley"
 
     scene sfr3ri1
@@ -10297,9 +10293,7 @@ label upstairsemily:
 
     call screen v6_fr3office
 
-
 label upstairsamber: # upstairs with amber
-    $ kimpuke = True
     
     scene sufr3am1 # amber looking at the bookshelves
     with fade
