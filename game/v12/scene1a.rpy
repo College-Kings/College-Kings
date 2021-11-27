@@ -10,7 +10,7 @@ label v12_chase_robber:
 
     pause 0.75
 
-    play music "music/v12/Scene 1a/Track Scene 1a_1.mp3" fadein 2
+    play music "music/v12/Scene 1/Track Scene 1_1.mp3" fadein 2
 
     scene v12car2 # TPP Show MC turning into an alley at a full run
     with dissolve
