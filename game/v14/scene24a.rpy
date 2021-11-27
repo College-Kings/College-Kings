@@ -74,7 +74,7 @@ label v14s24a:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v14/Track Scene 24a_2.mp3" fadein 2
+    play music "music/v12/Scene 34/Track Scene 34_2.mp3" fadein 2
 
     scene v14s24a_11a # FPP. Same as v14s24a_11 but with Grayson (clerk), facing MC, slightly angry, mouth closed.
     with dissolve
