@@ -104,7 +104,7 @@ label after_drugs:
     pause 1
 
     # $ renpy.music.set_volume(0.5, channel="ambience")
-    # play ambience "sounds/TV_amb.mp3" fadein 1
+    # play ambience "sounds/TV_amb.mp3" fadein 2
 
     scene v8josh21 # TPP. Show MC holding the remote and turning the TV on while sitting on the other couch (TV screen is on in this image). Neutral expression, mouth closed if his face is visible
     with dissolve

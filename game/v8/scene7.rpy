@@ -225,7 +225,7 @@ scene scaf8
 with dissolve
 u "Mhm. Can I have a bite? I'm starving."
 
-stop music fadeout 2
+stop music fadeout 3
 
 scene black
 with Dissolve(1)
@@ -305,7 +305,7 @@ label caf_prot_au:
 
     au "Yeah."
 
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene scaf14 # TPP. Show MC walking towards the cafe door, leaving the cafe, Camera from behind MC.
     with dissolve
@@ -391,7 +391,7 @@ label caf_no_prot_au:
     with dissolve
     pause 0.75
     
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene black
     with Dissolve(1)

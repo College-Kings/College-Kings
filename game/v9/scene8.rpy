@@ -100,7 +100,7 @@ label v9_driving_home_lake:
 
     ry "What?!"
 
-    stop music fadeout 1
+    stop music fadeout 3
 
     scene v9ghl1a
     with dissolve
@@ -249,12 +249,12 @@ label v9_driving_home_lake:
 
     u "No. The car battery has gone haywire, sparking and all. It was causing all the problems."
 
-    stop music fadeout 1
+    stop music fadeout 3
 
     scene v9ghl2
     with dissolve
 
-    play music "music/v9/Track Scene 8_3.mp3" fadein 1
+    play music "music/v9/Track Scene 8_3.mp3" fadein 2
 
     ri "Whaaaat?! You are joking, right!"
 
@@ -328,7 +328,7 @@ label v9_driving_home_lake:
 
     u "No, I just need to hear this now, haha."
 
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene black
     with fade

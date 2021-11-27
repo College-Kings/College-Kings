@@ -173,7 +173,7 @@ label v9_hall_punch:
     else: 
         u "But you've seen it, guys. He was asking for it. And totally deserved what he got. One less douchebag in the hallways, I guess."
 
-    stop music fadeout 2
+    stop music fadeout 3
     
     scene v9hlw12 # FPP. Show Lindsey and another girl who are a distance away from the camera, Lindsey looking at camera (MC). Lindsey smile.
     with dissolve
@@ -227,7 +227,7 @@ label v9_hall_punch:
 
     u "(I guess I will call you, Lindsey. Maybe. A bit later. Now I should get back to my room.)"
 
-    stop music fadeout 2
+    stop music fadeout 3
 
     jump thurs_aft_room
     
@@ -258,7 +258,7 @@ label v9_hall_no_punch:
 
     u "(Shit.)"
 
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene v9hlw23 # TPP. Show MC now sat up against the wall with a bleeding nose, Lindsey kneeling infront of MC, Lindsey concerned, mouth open.
     with dissolve
@@ -394,7 +394,7 @@ label v9_hall_no_punch:
     scene v9hlw32 # TPP. Show MC leaving the first aid room.
     with dissolve
 
-    stop music fadeout 2
+    stop music fadeout 3
 
     pause 1
 

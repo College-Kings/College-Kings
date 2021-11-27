@@ -5,7 +5,7 @@
 label hoco_amb_night:
     $ v8_hocoamber = True
     #$ add_point(KCT.TROUBLEMAKER, sum([ aubreysex2, v6_emilysex, v7_rileysex, bathroomblowjob ])) ###Loyaltymod
-    stop music fadeout 2
+    stop music fadeout 3
     if config_censored:
         call screen censoredPopup("v8s5_nsfwSkipLabel1")
 
@@ -283,7 +283,7 @@ label v8s5_nsfwSkipLabel1:
 
     am "Of course. Anytime."
 
-    stop music fadeout 2.5
+    stop music fadeout 3
 
     scene v8samb20 # TPP. Show MC leaving Amber's kitchen, Camera from behind MC.
     with dissolve

@@ -76,7 +76,7 @@ label v9_hc_demo:
 
     pause 1
 
-    stop music fadeout 1
+    stop music fadeout 3
 
     scene v9demo6 # TPP. Back in Mr. Lee's classroom, show Cameron looking at his phone, Mr. Lee, MC and Penelope looking it at sternly.
     with fade
@@ -292,6 +292,6 @@ label v9_hc_demo_cont3:
 
     ca "Yes, Your Majesty."
 
-    stop music fadeout 2
+    stop music fadeout 3
 
     jump v9_hc_return

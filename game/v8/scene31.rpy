@@ -299,7 +299,7 @@ label tec_end_time:
 
     ro "Who wants to tell the class what they know about the free market?"
 
-    stop music fadeout 2
+    stop music fadeout 3
 
     play sound "sounds/clock2.mp3"
     scene clocka

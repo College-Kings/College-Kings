@@ -107,7 +107,7 @@ label aec_rose_end:
 
     pause 0.5
 
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene v8saec8 # TPP. Show MC now wear the exit of the class room, MC smile waving to Ms. Rose, Ms. Rose smile waving back.
     with dissolve

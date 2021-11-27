@@ -1074,7 +1074,7 @@ label v11_case_verdict:
     with dissolve
 
     de "Please have a seat."
-    stop music fadeout 2
+    stop music fadeout 3
 
     if v11s1_courtpoints >= 4:
         play music "music/v11/Track Scene 1_5.mp3" fadein 2

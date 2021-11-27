@@ -305,7 +305,7 @@ label v9_hc_return:
         scene v9hc26a
         with dissolve
 
-    stop music fadeout 2
+    stop music fadeout 3
     
     scene clocka
     with fade
