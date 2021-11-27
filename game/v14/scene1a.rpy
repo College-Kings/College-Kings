@@ -24,7 +24,7 @@ label v14s01a:
     u "Huh?"
 
     stop music fadeout 3
-    play music "music/v14/Track Scene 1a_2.mp3" fadein 2
+    play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
 
     scene v14s01a_2 # TPP. Show MC startled, waking up (still night time), he is laying on his bed, mouth open
     with flash
