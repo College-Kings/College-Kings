@@ -75,17 +75,8 @@ default forgiveemily = False
 default costumeaubrey = False
 default v1_laurenKiss = False
 default v1_kissLauren = False
-
-    # Free roam 2
-default v1_samTalk = False
-default v1_fr2door = False
-default v1_joshTalk = False
+default freeroam2 = set()
 default v1_aubreywannafight = False
-default v1_graysonTalk = False
-default v1_courtneyTalk = False
-default v1_masonTalk = False
-default v1_katyTalk = False
-
 default caughtpeekingaubrey = False
 default caughtpeekingpenelope = False
 default try1done = False

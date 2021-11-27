@@ -114,7 +114,7 @@ screen v1_freeRoam1_3():
 screen v1_freeRoam2_1(): # outside
     tag free_roam
 
-    if not v1_samTalk:
+    if not "sam" in freeroam2:
         add "images/v1/s100.webp"
     else:
         add "images/v1/s100a.webp"
@@ -124,7 +124,7 @@ screen v1_freeRoam2_1(): # outside
         align (0.43, 1.0)
         idle "images/v1/fr2sam.webp"
         hover "images/v1/fr2samh.webp"
-        if not v1_samTalk:
+        if not "sam" in freeroam2:
             action Jump("v1_freeRoam2_sam")
         else:
             action Jump("v1_freeRoam2_sam2")
@@ -135,7 +135,7 @@ screen v1_freeRoam2_1(): # outside
         xalign 0.482
         idle "images/v1/fr2door.webp" #inside
         hover "images/v1/fr2doorh.webp"
-        if not v1_fr2door:
+        if not "door" in freeroam2:
             action Jump("v1_freeRoam2_door")
         else:
             action Show("v1_freeRoam2_2")
@@ -151,7 +151,7 @@ screen v1_freeRoam2_2():
         align (0.515, 1.0)
         idle "images/v1/fr2josh.webp"
         hover "images/v1/fr2joshh.webp"
-        if not v1_joshTalk:
+        if not "josh" in freeroam2:
             action Jump("v1_freeRoam2_josh")
         else:
             action Jump("v1_freeRoam2_josh2")
@@ -175,7 +175,7 @@ screen v1_freeRoam2_2():
         align (0.242, 0.4)
         idle "images/v1/fr2courtney.webp"
         hover "images/v1/fr2courtneyh.webp"
-        if not v1_courtneyTalk:
+        if not "courtney" in freeroam2:
             action Jump("v1_freeRoam2_courtney")
         else:
             action Jump("v1_freeRoam2_courtney2")
@@ -205,7 +205,7 @@ screen v1_freeRoam2_3():
         align (1.0, 1.0)
         idle "images/v1/fr2mason.webp"
         hover "images/v1/fr2masonh.webp"
-        if not v1_masonTalk:
+        if not "mason" in freeroam2:
             action Jump("v1_freeRoam2_mason")
         else:
             action Jump("v1_freeRoam2_mason2")
@@ -215,7 +215,7 @@ screen v1_freeRoam2_3():
         align (0.52, 0.38)
         idle "images/v1/fr2katy.webp"
         hover "images/v1/fr2katyh.webp"
-        if not v1_katyTalk:
+        if not "katy" in freeroam2:
             action Jump("v1_freeRoam2_katy")
         else:
             action Jump("v1_freeRoam2_katy2")
@@ -258,7 +258,7 @@ screen v1_freeRoam2_5():
         xalign 0.5
         idle "images/v1/fr2grayson.webp"
         hover "images/v1/fr2graysonh.webp"
-        if not v1_graysonTalk:
+        if not "grayson" in freeroam2:
             action Jump("v1_freeRoam2_grayson")
         else:
             action Jump("v1_freeRoam2_grayson2")

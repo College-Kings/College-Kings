@@ -3013,7 +3013,7 @@ label aw_bd:
     call screen v1_freeRoam2_1
 
 label v1_freeRoam2_sam:
-    $ v1_samTalk = True
+    $ freeroam2.add("sam")
 
     scene s101
     sam "... and that's why I purposefully lost that fight."
@@ -3078,11 +3078,12 @@ label v1_freeRoam2_sam2:
     call screen v1_freeRoam2_1
 
 label v1_freeRoam2_door:
+    $ freeroam2.add("door")
+    
     play music "music/mparty2.mp3"
 
     queue music [ "music/mparty3.mp3", "music/mparty4.mp3" ]
     
-    $ v1_fr2door = True
     scene s103
 
     ry "Alright man, I'm gonna look around, I'll see you in a bit."
@@ -3096,7 +3097,7 @@ label v1_freeRoam2_door:
     call screen v1_freeRoam2_2
 
 label v1_freeRoam2_pool:
-    if not v1_joshTalk:
+    if not "josh" in freeroam2:
         scene s102
 
         u "(I should talk to Josh first, I haven't seen him in a while.)"
@@ -3106,7 +3107,7 @@ label v1_freeRoam2_pool:
         call screen v1_freeRoam2_3
 
 label v1_freeRoam2_courtney:
-    $ v1_courtneyTalk = True
+    $ freeroam2.add("courtney")
 
     scene fr2co1
 
@@ -3168,7 +3169,7 @@ label v1_freeRoam2_courtney2:
     call screen v1_freeRoam2_2
 
 label v1_freeRoam2_josh:
-    $ v1_joshTalk = True
+    $ freeroam2.add("josh")
 
     scene fr2jo1a
 
@@ -3418,7 +3419,7 @@ label v1_freeRoam2_josh2:
     call screen v1_freeRoam2_2
 
 label v1_freeRoam2_stairs:
-    if not v1_joshTalk:
+    if not "josh" in freeroam2:
         scene s102
 
         u "(I should talk to Josh first, I haven't seen him in a while.)"
@@ -3428,7 +3429,7 @@ label v1_freeRoam2_stairs:
         call screen v1_freeRoam2_5
 
 label v1_freeRoam2_camp:
-    if not v1_joshTalk:
+    if not "josh" in freeroam2:
         scene s102
 
         u "(I should talk to Josh first, I haven't seen him in a while.)"
@@ -3446,7 +3447,7 @@ label v1_freeRoam2_camp:
         call screen v1_freeRoam2_4
 
 label v1_freeRoam2_mason:
-    $ v1_masonTalk = True
+    $ freeroam2.add("mason")
 
     scene fr2ma1
     ma "Eyyyy, you're the kid that tried to fight Cameron yesterday!"
@@ -3575,7 +3576,7 @@ label v1_freeRoam2_mason2:
     call screen v1_freeRoam2_3
 
 label v1_freeRoam2_katy:
-    $ v1_katyTalk = True
+    $ freeroam2.add("katy")
 
     scene fr2ka1
 
@@ -3668,7 +3669,7 @@ label v1_freeRoam2_katy2:
     call screen v1_freeRoam2_3
 
 label v1_freeRoam2_grayson:
-    $ v1_graysonTalk = True
+    $ freeroam2.add("grayson")
     
     scene fr2gr1
 
