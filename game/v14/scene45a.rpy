@@ -9,7 +9,7 @@ label v14s45a:
 
     u "Hey there. So, what's the news?"
 
-    play music "music/v14/Track Scene 45a_1.mp3" fadein 2
+    play music "music/v13/Track Scene 60_1.mp3" fadein 2
 
     if not v14_amber_clean:
         scene v14s45a_1a # FPP. Same as v14s45a_1, MC looking at Amber, Amber now looking at MC, Amber tired and high, Amber neutral expression, mouth open.
