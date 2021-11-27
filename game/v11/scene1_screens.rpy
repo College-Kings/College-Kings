@@ -2,7 +2,7 @@ screen v11s1_hallway1():
     tag free_roam
 
     # Background
-    if not v11s1_riley1:
+    if not "riley" in freeroam7:
         # add "images/v11/scene 1/hall1.webp"
 
         imagemap:
@@ -14,7 +14,7 @@ screen v11s1_hallway1():
 
             hotspot (379, 179, 332, 704) action Jump("v11s1_riley") # Speak to Riley
 
-            if not v11s1_delib1:
+            if not "delib" in freeroam7:
                 hotspot (18, 25, 282, 1049) action Jump("v11s1_delib") # Check door
             else:
                 hotspot (18, 25, 282, 1049) action Call("freeRoamSpokenToo", backgroundImg="hall1", returnScreen="v11s1_hallway1")
@@ -30,11 +30,11 @@ screen v11s1_hallway1():
             ground "images/v11/scene 1/hall1a.webp"
 
             alpha False
-            if not v11s1_jenny1:
+            if not "jenny" in freeroam7:
                 hotspot (1443, 264, 216, 488) action Jump("v11s1_jenny") # Speak to Jenny
             else:
                 hotspot (1443, 264, 216, 488) action Show("endFreeRoamConfirm", continueLabel="v11_case_verdict")
-            if not v11s1_delib1:
+            if not "delib" in freeroam7:
                 hotspot (18, 25, 282, 1049) action Jump("v11s1_delib") # Check door
             else:
                 hotspot (18, 25, 282, 1049) action Call("freeRoamSpokenToo", backgroundImg="hall1a", returnScreen="v11s1_hallway1")
@@ -51,7 +51,7 @@ screen v11s1_hallway2():
         ground "images/v11/scene 1/hall2.webp"
 
         alpha False
-        if not v11s1_mrrose1:
+        if not "mr rose" in freeroam7:
             hotspot (182, 221, 253, 555) action Jump("v11s1_mrrose") # Speak to Mr. Rose
         else:
             hotspot (182, 221, 253, 555) action Call("freeRoamSpokenToo", backgroundImg="hall2", returnScreen="v11s1_hallway2")

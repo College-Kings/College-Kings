@@ -663,14 +663,6 @@ label after_load:
         #v11 variables
         try: v11_pen_goes_europe
         except NameError: v11_pen_goes_europe = False
-        try: v11s1_riley1
-        except NameError: v11s1_riley1 = False
-        try: v11s1_mrrose1
-        except NameError: v11s1_mrrose1 = False
-        try: v11s1_jenny1
-        except NameError: v11s1_jenny1 = False
-        try: v11s1_delib1
-        except NameError: v11s1_delib1 = False
         try: v11s1_courtpoints
         except NameError: v11s1_courtpoints = 0
         try: sammad

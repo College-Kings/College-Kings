@@ -749,8 +749,7 @@ label v11_start:
     call screen v11s1_hallway1
 
 label v11s1_riley:
-    $ v11s1_riley1 = True
-
+    $ freeroam7.add("riley")
 
     if rileyrs:
         scene v11cocri1 # FPP. MC and Riley looking at each other, Riley has mouth closed, neutral expression
@@ -860,8 +859,8 @@ label v11s1_riley:
     call screen v11s1_hallway1
 
 label v11s1_mrrose:
-    if not v11s1_mrrose1:
-        $ v11s1_mrrose1 = True
+    if not "mr rose" in freeroam7:
+        $ freeroam7.add("mr rose")
 
         if joinwolves:
             scene v11cocmrr1a # FPP. Same as mrr1, but Mr Rose mouth closed
@@ -942,8 +941,7 @@ label v11s1_mrrose:
     ### ERROR: -If talk to Jenny ###
 
 label v11s1_jenny:
-
-    $ v11s1_jenny1 = True
+    $ freeroam7.add("jenny")
 
     scene v11cocjen1 # FPP. MC and Jenny looking at each other, Jenny has a worried expression, mouth closed
     #with dissolve
@@ -1018,8 +1016,8 @@ label v11s1_jenny:
     call screen v11s1_hallway1
 
 label v11s1_delib:
-    if not v11s1_delib1:
-        $ v11s1_delib1 = True
+    if not "delib" in freeroam7:
+        $ freeroam7.add("delib")
 
         scene v11coc17c
         #with dissolve
