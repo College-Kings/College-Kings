@@ -4,7 +4,7 @@
 # Time: Afternoon
 
 label v14s21:
-    play music "music/v14/Track Scene 21.mp3" fadein 2
+    play music "music/v13/Track Scene 30_1.mp3" fadein 2
 
     scene v14s21_1 # TPP. Show MC walking outside infront of the school, slight smile, mouth closed.
     with dissolve

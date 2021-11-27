@@ -9,7 +9,7 @@ label v14s30b:
 
     pause 0.75
 
-    play music "music/v14/Track Scene 21.mp3" fadein 2
+    play music "music/v13/Track Scene 30_1.mp3" fadein 2
 
     scene v14s30b_2 # FPP. MC looking at Chloe, Chloe looking down at her phone, Chloe slight smile, mouth open.
     with dissolve
