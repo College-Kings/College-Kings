@@ -1234,7 +1234,7 @@ label v11_case_verdict:
             pe "Thanks again, bye."
     else:
         $ v11_pen_goes_europe = False
-        play music "music/v11/Scene 1/Track Scene 1_6.mp3" fadein 2
+        play music "music/v11/Scene 1/Track Scene 1_1.mp3" fadein 2
         scene v11coc12
         with dissolve
 
