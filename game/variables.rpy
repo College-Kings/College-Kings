@@ -44,7 +44,7 @@ default boyfriend = 2
 default troublemaker = 1
 
 # 1.0 - 6.0
-default freeroam1 = []
+default freeroam1 = set()
 default v1_sda = False
 default evelynmove = False
 default name = "Alex"

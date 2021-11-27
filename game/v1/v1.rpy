@@ -881,7 +881,7 @@ label starta: #for compatibility only
     label fr1a2: #for compatibility only
 
     label v1_freeRoam1_riley:
-        $ freeroam1.append("riley")
+        $ freeroam1.add("riley")
         
         scene s50ri
 
@@ -987,7 +987,7 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_1
 
     label v1_freeRoam1_elijah:
-        $ freeroam1.append("elijah")
+        $ freeroam1.add("elijah")
 
         scene s50el
         u "Hey, you're Elijah right?"
@@ -1088,7 +1088,7 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_1
 
     label v1_freeRoam1_chris:
-        $ freeroam1.append("chris")
+        $ freeroam1.add("chris")
     
         scene s55ch1
         ch "Babe... you know I gotta prepare our rush party."
@@ -1133,7 +1133,7 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_2
 
     label v1_freeRoam1_nora:
-        $ freeroam1.append("nora")
+        $ freeroam1.add("nora")
     
         scene s56no1a
         u "Hey, could you tell me where the dorms are?"
@@ -1183,7 +1183,7 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_2
 
     label v1_freeRoam1_aubrey:
-        $ freeroam1.append("aubrey")
+        $ freeroam1.add("aubrey")
     
         if config_censored:
             call screen censoredPopup("v1_freeRoam1_aubrey2")
