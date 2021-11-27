@@ -141,7 +141,7 @@ label v14s23:
             ch "I don't think you get what's at stake here. Chloe-"
 
     stop music fadeout 3
-    play music "music/v14/Track Scene 23_2.mp3" fadein 2
+    play music "music/v12/Scene 18/Track Scene 18_3.mp3" fadein 2
 
     scene v14s23_1b # TPP. Same as v14s23_1a, Show MC and Chris sitting on the porch, Chloe running towards the porch back facing the camera, MC and Chris both slight smile, mouth closed.
     with dissolve
