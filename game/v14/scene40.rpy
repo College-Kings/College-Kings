@@ -10,7 +10,7 @@ label v14s40:
 
     u "(Finally, time for some sleep.)"
 
-    play music "music/v14/Track Scene 40.mp3" fadein 2
+    play music "music/v12/Scene 24/Track Scene 24.mp3" fadein 2
 
     if laurenrs:
         play sound "sounds/vibrate.mp3"
