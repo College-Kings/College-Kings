@@ -4,7 +4,7 @@
 # Time: Evening (Tuesday)
 
 label v14s24:
-    play music "music/v14/Track Scene 24.mp3" fadein 2
+    play music "music/v12/Scene 30/Track Scene 30.mp3" fadein 2
 
     scene v14s24_1 # TPP. MC, slight smile, mouth closed. m walking down the side walk (similar to v14s23_7 but different angle)
     with dissolve
