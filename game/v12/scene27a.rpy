@@ -289,7 +289,7 @@ label v12s27a:
     barber "Bonjour!"
 
     stop music fadeout 3
-    play music "music/v12/Scene 27a/Track Scene 27a_2.mp3" fadein 2
+    play music "music/v12/Scene 27/Track Scene 27_3.mp3" fadein 2
 
     scene v12s27a_5a # same as 5, mouth closed
     with dissolve
