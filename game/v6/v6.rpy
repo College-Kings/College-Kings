@@ -8550,7 +8550,7 @@ label v6_fr3sebastian2:
 
     call screen v6_fr3garage
 
-abel v6_fr3amber1:
+label v6_fr3amber1:
     $ freeroam3.add("amber")
 
     scene sfr3am1 #Amber is sitting watching the guys workout and drinking a beer
