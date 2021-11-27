@@ -23,7 +23,7 @@ label v14s53:
     u "(Is that Sam singing? Where's it coming from?)"
 
     stop music fadeout 3
-    play music "music/v14/Track Scene 1_1.mp3" fadein 2
+    play music "music/v12/Scene 23/Track Scene 23_2.mp3" fadein 2
     scene v14s53_3 # TPP. MC walks into the apes Dream Room to find Samantha alone on the couch. She has a bottle of beer in hand. She swigs from it, Mc slight smile, mouth closed looking at samantha
     with dissolve
 
