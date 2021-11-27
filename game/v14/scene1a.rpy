@@ -4,7 +4,7 @@
 # Time: Night
 
 label v14s01a:
-    play music "music/v14/Track Scene 1a_1.mp3" fadein 2
+    play music "music/v12/Scene 29/Track Scene 29_2.mp3" fadein 2
 
     scene v14s01a_1 # TPP. Same positioning as v13s62a_10a, MC moving in for a kiss on Lindsey (not kissing yet), Lindsey smiling, mouth closed
     with dissolve
