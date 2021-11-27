@@ -16,7 +16,6 @@ label v11_msrose_convo:
 
     menu:
         "Kiss her":
-            $ v11_msrose_kiss = True
             $ msrosers = True
 
             scene v11roc2 # TPP. MC gets very close to Ms Rose, Ms Rose's back is now on the wall, she is slightly smiling, mouth closed, looking at MC

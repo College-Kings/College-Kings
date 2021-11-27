@@ -113,7 +113,6 @@ label v11_lauren_airport_convo:
                 menu:
                     "Yes":
                         $ add_point(KCT.TROUBLEMAKER)
-                        $ v11_want_date_aubrey = True
 
                         scene v11laac2e
                         with dissolve

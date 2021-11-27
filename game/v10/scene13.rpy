@@ -86,8 +86,6 @@ label v10_wolves_redec:
         "Accept help":
             $ add_point(KCT.BRO)
 
-            $ v10_perry_help_room = True
-
             u "Yeah I'd love some help. Will go much faster haha."
 
             scene v10swhr5 # TPP. Show Perry and MC stood near a wall both looking around thinking about where to start, paint brushes in hand and tins of white paint next to them on the floor.

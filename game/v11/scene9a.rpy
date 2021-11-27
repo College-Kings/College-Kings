@@ -226,7 +226,6 @@ label v11_wolves_seb_prank:
             guyd "I honestly kinda feel bad."
 
         "Sure":
-            $ v11_pranked_seb = True
             $ add_point(KCT.TROUBLEMAKER)
 
             scene v11wsp4

@@ -73,7 +73,6 @@ label v10_talk_nora:
         if joinwolves:
             menu:
                 "Mention last night":
-                    $ v10_nora_talk_msr = True
                     scene v10hal1
                     with dissolve
 

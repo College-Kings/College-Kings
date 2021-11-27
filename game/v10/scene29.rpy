@@ -48,8 +48,6 @@ label v10_chloe_hallway:
                 cl "Ugh, who cares what you think?"
 
             "Sexy":
-                $ v10_chloe_sexy = True
-
                 if kct == "loyal" or kct == "confident":
                     u "No, sexy definitely describes her better."
 
@@ -221,7 +219,6 @@ label v10_chloe_hallway:
                 au "Anyways, I'm gonna head to class, see you guys."
 
             "Sexy":
-                $ v10_chloe_sexy = True
                 $ add_point(KCT.BOYFRIEND)
                 $ chloe.points += 1
 

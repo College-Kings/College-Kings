@@ -160,7 +160,6 @@ label v10_cafe_w_jenny:
 
         menu:
             "Reassure her":
-                $ v10_reassure_jenny = True
                 $ add_point(KCT.BOYFRIEND)
                 $ jenny.points += 1
 

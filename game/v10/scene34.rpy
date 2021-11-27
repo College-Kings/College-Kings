@@ -108,7 +108,7 @@ label v10_autumn_announcement:
         "Root for Nora":
             $ chloe.points -= 1
             $ nora.points += 1
-            $ v10_cvn_cheer_nora = True
+            $ v10_cheerfornora = True
             scene v10samw6 
             with dissolve
 
@@ -139,7 +139,6 @@ label v10_autumn_announcement:
             u "Okay Aubrey!"
 
         "Root for Emily":
-            $ v10_cvn_cheer_emily = True
             $ forgiveemily = True
             $ emily.points += 1
             $ add_point(KCT.BOYFRIEND)
@@ -173,7 +172,6 @@ label v10_autumn_announcement:
         "Root for Amber":
             $ amber.points += 1
             $ riley.points -= 1
-            $ v10_cvn_cheer_amber = True
 
             scene v10samw7 
             with dissolve

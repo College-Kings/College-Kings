@@ -413,7 +413,6 @@ label v10_call_with_lauren1:
                         u "Color, orange."
 
                     "Blue":
-                        $ v10_color_blue = True
                         scene v10scwl2c 
                         with dissolve
 
@@ -1175,7 +1174,6 @@ label v10_call_with_lauren1:
                         u "Color, orange."
 
                     "Blue":
-                        $ v10_color_blue = True
                         scene v10saow3c
                         with dissolve
 

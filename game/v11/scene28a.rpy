@@ -635,8 +635,6 @@ label v11s28a_galleryScene:
             u "*Chuckles*"
 
         "Madison":
-            $ v11_madison_ex = True
-
             scene v11sas16
             with dissolve
 
@@ -659,7 +657,6 @@ label v11s28a_galleryScene:
 
     menu:
         "Did drugs":
-            $ v11_ex_drugs = True
             scene v11sas17
             with dissolve
 
@@ -678,7 +675,6 @@ label v11s28a_galleryScene:
 
     menu:
         "Her father":
-            $ v11_ex_father = True
             scene v11sas17b
             with dissolve
 

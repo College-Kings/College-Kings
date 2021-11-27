@@ -100,7 +100,6 @@ label v12_chase_nora:
 
     menu:
         "Support Nora":
-            $ supported_nora = True
             $ nora.points += 1
 
             u "I'll be honest, I have nothing against Chris as a person. But since we've been in Europe, I've gotten to see into your relationship a bit more, and it makes me look at him a little differently."

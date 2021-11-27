@@ -291,8 +291,6 @@ label v11_nora_lingerie:
             u "You'd look good in either one, but if I had to choose I'd say pink."
             
         "White":
-            $ v11_nora_bra_white = True
-
             scene v11nol12g
             with dissolve
 

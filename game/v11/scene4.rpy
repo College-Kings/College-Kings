@@ -5,14 +5,12 @@
 
 init python:
     def v11s4_reply1():
-        setattr(store, "v11_talk_with_emily", True)
         emily.messenger.newMessage("This is important, we need to talk now.")
         emily.messenger.addReply("What's up?")
         emily.messenger.newMessage("Meet me at the park.")
         emily.messenger.addReply("Okay.")
 
     def v11s4_reply2():
-        setattr(store, "v11_talk_with_emily", True)
         emily.messenger.newMessage("Meet me at the park.")
         emily.messenger.addReply("Okay.")
 

@@ -108,7 +108,7 @@ label v10s35_nsfwSkipLabel1:
 
                 u "You did good. It was a nice match."
 
-                if v10_cvn_cheer_nora:
+                if v10_cheerfornora:
                     # -if cheered for Nora-
                     scene v10cvn9a
                     with dissolve

@@ -108,8 +108,6 @@ label v11_lauren_apology:
             u "*Sighs* I'll leave you be. Call me if you need anything."
 
         "Make a move":
-            $ v11_apology_kiss = True
-
             scene v11laa6c # FPP. Same as v11laa6b, MC is grabbing Lauren's cheek, she's crying, mouth closed
             with dissolve
 

@@ -34,8 +34,6 @@ label v10_emily_course:
             u "(No one taught me this in school...)"
 
         "Watch":
-            $ v10_watch_emi = True
-
             u "(I didn't know she was into first responder work.)"
 
             scene v10semi6 # FPP. Return to 2, MC now walks futher into the first responder class and everyone inside turns to look at him, Emily mouth open.
@@ -91,7 +89,6 @@ label v10_emily_course:
                     "Join Emily":
                         $ add_point(KCT.BOYFRIEND)
                         $ emily.points += 1
-                        $ v10_join_emi = True
                         $ forgiveemily = True
 
                         u "I'm sure I could try it out."
@@ -141,7 +138,6 @@ label v10_emily_course:
 
                         menu:
                             "Save Emily":
-                                $ v10_save_emi_cpr = True
                                 $ add_point(KCT.BOYFRIEND)
 
                                 u "Don't you die on us!"
@@ -175,8 +171,6 @@ label v10_emily_course:
                             "Agree with Emily":
                                 $ add_point(KCT.BOYFRIEND)
                                 $ emily.points += 1
-
-                                $ v10_emi_nurse = True
 
                                 u "Yeah, I could be down."
 
@@ -317,7 +311,6 @@ label v10_emily_course:
                     "Join Emily":
                         $ add_point(KCT.BOYFRIEND)
                         $ emily.points += 1
-                        $ v10_join_emi = True
                         $ forgiveemily = True
 
                         u "I'm sure I could try it out."
@@ -367,7 +360,6 @@ label v10_emily_course:
 
                         menu:
                             "Save Emily":
-                                $ v10_save_emi_cpr = True
                                 $ add_point(KCT.BOYFRIEND)
 
                                 u "Don't you die on us!"
@@ -401,8 +393,6 @@ label v10_emily_course:
                             "Agree with Emily":
                                 $ add_point(KCT.BOYFRIEND)
                                 $ emily.points += 1
-
-                                $ v10_emi_nurse = True
 
                                 u "Yeah, I could be down."
 

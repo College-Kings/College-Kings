@@ -533,8 +533,6 @@ label after_load:
         except NameError: v10_ambersex = False
         try: v11_samantha_spa
         except NameError: v11_samantha_spa = False
-        try: v11_lauren_ily
-        except NameError: v11_lauren_ily = False
         try: v11_underground_rose
         except NameError: v11_underground_rose = False
         try: v12_told_chloe
@@ -645,8 +643,6 @@ label after_load:
         except NameError: v12_nora_sex = False
         try: v12_nora_points
         except NameError: v12_nora_points = 0
-        try: supported_nora
-        except NameError: supported_nora = False
         try: v12_call_cameron
         except NameError: v12_call_cameron = False
         try: v12s33_door1
@@ -665,8 +661,6 @@ label after_load:
         except NameError: v12_girl = "na"
 
         #v11 variables
-        try: laurenLike
-        except NameError: laurenLike = 0
         try: v11_pen_goes_europe
         except NameError: v11_pen_goes_europe = False
         try: v11s1_riley1
@@ -683,8 +677,6 @@ label after_load:
         except NameError: sammad = False
         try: v11_invite_sam_europe
         except NameError: v11_invite_sam_europe = False
-        try: v11_talk_with_emily
-        except NameError: v11_talk_with_emily = False
         try: v11_josh_nightclub
         except NameError: v11_josh_nightclub = False
         try: candyLike
@@ -697,16 +689,10 @@ label after_load:
         except NameError: v11_tease_amber = 0
         try: v11_manhunt_winner
         except NameError: v11_manhunt_winner = "Ryan"
-        try: v11_pranked_seb
-        except NameError: v11_pranked_seb = False
         try: v11_aubrey_sex
         except NameError: v11_aubrey_sex = False
-        try: v11_want_date_aubrey
-        except NameError: v11_want_date_aubrey = False
         try: v11_riley_roomate
         except NameError: v11_riley_roomate = False
-        try: v11_msrose_kiss
-        except NameError: v11_msrose_kiss = False
         try: v11s23_chris1
         except NameError: v11s23_chris1 = False
         try: v11s23_riley1
@@ -721,20 +707,10 @@ label after_load:
         except NameError: v11_bartender_have_gf = False
         try: msrosers
         except NameError: msrosers = False
-        try: v11_madison_ex
-        except NameError: v11_madison_ex = False
-        try: v11_ex_drugs
-        except NameError: v11_ex_drugs = False
-        try: v11_ex_father
-        except NameError: v11_ex_father = False 
         try: v11_solo_question
         except NameError: v11_solo_question = False
-        try: v11_apology_kiss
-        except NameError: v11_apology_kiss = False
         try: v11_kiss_nora
         except NameError: v11_kiss_nora = False
-        try: v11_nora_bra_white
-        except NameError: v11_nora_bra_white = False
         try: v11_told_aubrey
         except NameError: v11_told_aubrey = False
         try: v11_chloe_sex
