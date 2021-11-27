@@ -9,7 +9,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
     pause 0.75
 
-    play music "music/v14/Track Scene 31b_1.mp3" fadein 2
+    play music "music/v13/Track Scene 58.mp3" fadein 2
 
     scene v14s31b_2 # TPP. MC, back to camera, standing in front of the Ape's house.
     with dissolve
@@ -1120,7 +1120,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
         u "Bye."
 
         stop music fadeout 3
-        play music "music/v14/Track Scene 31b_1.mp3" fadein 2
+        play music "music/v13/Track Scene 58.mp3" fadein 2
 
         if joinwolves:
             scene v14s31b_30 # TPP. In front of the Ape, Chloe on the side walk walking to the left, MC on the side walk walking right (away from each other), neutral, mouths closed.
@@ -1360,7 +1360,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v14/Track Scene 31b_1.mp3" fadein 2
+        play music "music/v13/Track Scene 58.mp3" fadein 2
 
         scene v14s31b_35 # Tpp./ MC walking out the front door of the Ape's House.
         with dissolve
