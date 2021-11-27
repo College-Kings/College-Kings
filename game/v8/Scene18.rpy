@@ -127,7 +127,7 @@ label sun_aft_apes_house:
 
     u "Just being a-"
 
-    stop music fadeout 0.5
+    stop music fadeout 3
 
     scene v8sahs9 # TPP. Show Samantha and MC looking at the door to Samantha's room, confused expressions (due to comotion downstairs), Samantha mouth open.
     with dissolve

@@ -563,7 +563,7 @@ u "Wake up, [name]. WAKE UP!"
 
 # play sound "sounds/suck_in_whoosh.mp3"
 # $ renpy.pause(renpy.music.get_duration(channel="sound")) 
-stop music fadeout 0.5
+stop music fadeout 3
 
 # scene black
 # with Dissolve(0.1)

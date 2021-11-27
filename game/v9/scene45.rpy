@@ -26,7 +26,7 @@ label v9_ending:
 
     pause 1
 
-    stop music fadeout 5
+    stop music fadeout 3
 
     scene v9end5 # TPP. Close up of MC's face, MC looking to the side, MC's face grows even more worried.
     with dissolve

@@ -130,7 +130,7 @@ label v11_nora_chris_plane:
 
     scene v11noch7 # TPP. MC is standing with his luggage in the plane corridor, he is looking towards the exit of the plane, mouth closed, slightly worried look
     with dissolve
-    stop music fadeout 5
+    stop music fadeout 3
     menu:
         "Chase after Nora":
             $ v11_check_on_nora = True
