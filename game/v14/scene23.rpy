@@ -4,7 +4,7 @@
 # Time: Evening 
 
 label v14s23:
-    play music "music/v14/Track Scene 23_1.mp3" fadein 2
+    play music "music/v12/Scene 18/Track Scene 18_4.mp3" fadein 2
 
     scene v14s23_1 # TPP. Show MC walking up to the steps of the wolves house and seeing Chris, Chris looking at the sky, Both slight smile, mouth closed.
     with fade
