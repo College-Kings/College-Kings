@@ -8,7 +8,7 @@ label v11_wolves_seb_prank:
     with fade
 
     pause 0.75
-    play music "music/v11/Scene 9a/Track Scene 9a_1.mp3" fadein 2
+    play music "music/v11/Track Scene 9a_1.mp3" fadein 2
     scene v11wsp2 # FPP. MC is walking in to the living room, he can not see anyone yet, just a bit of the inside of the living room
     with dissolve
 
@@ -464,7 +464,7 @@ label v11_wolves_seb_prank:
 
             pause 0.75
             stop music fadeout 3
-            play music "music/v11/Scene 9a/Track Scene 9a_2.mp3" fadein 2
+            play music "music/v11/Track Scene 9a_2.mp3" fadein 2
             scene v11wsp9a # TPP. Same cam as v11wsp9, MC is going down the stairs now
             with dissolve
 

@@ -6,7 +6,7 @@
 label v11_Amber_Penelope:
     scene v11amp1 # FPP In airport boarding area, show Amber, neutral expression, mouth closed
     with dissolve
-    play music "music/v11/Scene 11/Track Scene 11.mp3" fadein 2
+    play music "music/v11/Track Scene 11.mp3" fadein 2
     menu:
         "Tease her":
             $ add_point(KCT.TROUBLEMAKER)

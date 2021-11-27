@@ -6,7 +6,7 @@ label v11_chicks_house:
 
     scene v11chh1 # FPP. Show aubrey in hallway at chicks house, slight smile, mouth closed
     with fade
-    play music "music/v11/Scene 3/Track Scene 3.mp3" fadein 2
+    play music "music/v11/Track Scene 3.mp3" fadein 2
     u "I'm thirsty."
 
     scene v11chh1a # FPP. same 1, holding arms forward, mouth open

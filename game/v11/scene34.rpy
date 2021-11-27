@@ -6,7 +6,7 @@
 label v11_cardealership:
     scene v11cd1 # TPP. Shows MC and Chloe getting into the car dealership
     with fade
-    play music "music/v11/Scene 3/Track Scene 3.mp3" fadein 2
+    play music "music/v11/Track Scene 3.mp3" fadein 2
     pause 0.75
 
     scene v11cd2 # TPP. MC is looking for a car salesman, spotting one, him looking back at them

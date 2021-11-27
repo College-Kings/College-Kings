@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v11_hotel_lobby_rose:
-    play music "music/v11/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v11/Track Scene 7_2.mp3" fadein 2
     if v11_chloe_sex:
         scene black
         with vpunch

@@ -6,7 +6,7 @@ label v11_nora_airport_convo:
 
     scene v11nca1 # FPP. Show Charli approaching nora
     with dissolve
-    play music "music/v11/Scene 15/Track Scene 15.mp3" fadein 2
+    play music "music/v11/Track Scene 15.mp3" fadein 2
     u "(Oh...)"
 
     scene v11nca2 # FPP. Show charli and nora from a distance talking to each other, charlie mouth open, nora mouth closed
