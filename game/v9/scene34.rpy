@@ -354,7 +354,7 @@ label v9s34_rileyCowgirl:
 
     u "Do you... need anything?"
 
-    play music "music/v9/Scene 34/Track Scene 34_3.mp3" fadein 2
+    play music "music/v9/Scene 3/Track Scene 3.mp3" fadein 2
 
     scene v9ris23a # FPP. Same camera as v9ris23, smile, mouth open.
     with dissolve
