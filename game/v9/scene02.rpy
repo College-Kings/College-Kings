@@ -16,7 +16,7 @@ init python:
 
 label v9_start_apes:
 
-    play music "music/v9/Scene 1 & 2/Track Scene 1 & 2.mp3" fadein 2
+    play music "music/v9/Track Scene 1 & 2.mp3" fadein 2
 
     u "(I need to find out what's going on. This is insane!)"
 
@@ -237,7 +237,7 @@ label v9_start_apes:
     with Fade(0.75, 0.25, 0.75)
     pause 0.5
 
-    play music "music/v9/Scene 3/Track Scene 3.mp3" fadein 2
+    play music "music/v9/Track Scene 3.mp3" fadein 2
 
     u "(Better amp up my workouts. Ryan too.)"
 

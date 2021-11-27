@@ -22,7 +22,7 @@ label v9_walk_li_txt:
 
     u "(I may need some help if they run into each other again)"
 
-    play music "music/v9/Scene 8/Track Scene 8_3.mp3" fadein 2
+    play music "music/v9/Track Scene 8_3.mp3" fadein 2
 
     scene v9wlt1a # TPP. Same camera as v9wlt1, MC checking his phone.
     with dissolve

@@ -7,7 +7,7 @@ label v9_run_w_imre:
     scene v9rwi1 # TPP. Show Imre walking through MC's door into his room.
     with dissolve
 
-    play music "music/v9/Scene 36/Track Scene 36.mp3" fadein 2
+    play music "music/v9/Track Scene 36.mp3" fadein 2
 
     pause 1
 
