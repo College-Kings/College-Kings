@@ -137,7 +137,7 @@ label v14s03a:
             pause 0.75
             
             stop music fadeout 3
-            play music "music/v14/Track Scene 3a_2.mp3" fadein 2
+            play music "music/v13/Track Scene 29_2.mp3" fadein 2
 
             scene v14s03a_5a # TPP. Gambler grabs MC's arm to prevent him from leaving. 
             with dissolve
@@ -210,7 +210,7 @@ label v14s03a:
 
         "Give it a try": # -If Give it a try
             stop music fadeout 3
-            play music "music/v14/Track Scene 3a_2.mp3" fadein 2
+            play music "music/v13/Track Scene 29_2.mp3" fadein 2
 
             $ add_point(KCT.TROUBLEMAKER)
             scene v14s03a_2
