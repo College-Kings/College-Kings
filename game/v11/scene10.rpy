@@ -196,7 +196,7 @@ label v11_airport_arrival:
 
     menu:
         "Be hesitant":
-            $ rileyLike -= 1
+            $ riley.points -= 1
 
             scene v11aira10a
             with dissolve
@@ -210,7 +210,7 @@ label v11_airport_arrival:
 
         "Be excited":
             $ add_point(KCT.BRO)
-            $ rileyLike += 1
+            $ riley.points += 1
 
             scene v11aira10a
             with dissolve

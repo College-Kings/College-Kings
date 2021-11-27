@@ -256,20 +256,6 @@ default v9_aubrey_lake = False
 default v9_em_dorm_scene = False
 
 # 10.0
-default jennyLike = 0
-default penelopeLike = 0
-default mrleeLike = 0
-default chloeLike = 0
-default aubreyLike = 0
-default samLike = 0
-default msroseLike = 0
-default autumnLike = 0
-default emilyLike = 0
-default ryanLike = 0
-default noraLike = 0
-default amberLike = 0
-default rileyLike = 0
-default lindseyLike = 0
 default joshmad = False
 default v10_inv_pen_cafe = False
 default v10_simplr_known = False
@@ -362,7 +348,6 @@ default v10_lauren_sg = False
 # 11.0
 default candyLike = 0
 default chloegf = False
-default laurenLike = 0
 default msrosers = False
 default political_strategist = False
 default sammad = False

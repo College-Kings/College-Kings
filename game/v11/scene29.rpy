@@ -345,7 +345,7 @@ label v11wakeupa:
         menu:
             "Tease":
                 $ add_point(KCT.TROUBLEMAKER)
-                $ rileyLike -= 1
+                $ riley.points -= 1
 
                 scene v11hr11
                 with dissolve
@@ -359,7 +359,7 @@ label v11wakeupa:
 
             "Flirt":
                 $ add_point(KCT.BOYFRIEND)
-                $ rileyLike += 1
+                $ riley.points += 1
 
                 scene v11hr11b # FPP. Same as v11hr11, Riley slightly smiling, mouth closed
                 with dissolve

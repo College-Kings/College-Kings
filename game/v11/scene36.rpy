@@ -24,7 +24,7 @@ label v11_imre_ryan_grapple:
 
     menu:
         "Intervene":
-            $ mrleeLike += 1
+            $ mr_lee.points += 1
 
             scene v11irg2 # TPP. Show MC grabbing Imre, Mr Lee grabbing Ryan, everyone angry, mouths closed
             with dissolve
@@ -38,7 +38,7 @@ label v11_imre_ryan_grapple:
             pause 1.25
 
         "Don't intervene":
-            $ mrleeLike -= 1
+            $ mr_lee.points -= 1
 
             scene v11irg1d # FPP. Same as v11irg1, Ryan and Imre still grappling on the floor (different pose to v11irg1c), Mr Lee trying to break them up (different pose to v11irg1c), everyone angry, Ryan and Imre mouths closed, Mr Lee looking at MC, Lee mouth open
             with dissolve

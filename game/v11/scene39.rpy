@@ -1023,7 +1023,7 @@ label v11_race_continue3:
         "Stand up for Amber":
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
-            $ amberLike += 1
+            $ amber.points += 1
 
             scene v11cam14f
             with dissolve

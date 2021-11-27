@@ -611,7 +611,7 @@ label v11_roommate:
             menu:
                 "Just tell her":
                     $ add_point(KCT.BOYFRIEND)
-                    $ rileyLike += 1
+                    $ riley.points += 1
 
                     scene v11rm21c
                     with dissolve
@@ -826,7 +826,7 @@ label v11_roommate:
             menu:
                 "Just tell her":
                     $ add_point(KCT.BOYFRIEND)
-                    $ rileyLike += 1
+                    $ riley.points += 1
                     
                     scene v11rm21c
                     with dissolve

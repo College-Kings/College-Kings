@@ -39,7 +39,7 @@ label v10_walk_jenny_text:
 
     menu:
         "Invite Penelope":
-            $ penelopeLike += 1
+            $ penelope.points += 1
             $ v10_inv_pen_cafe = True
             $ add_point(KCT.BOYFRIEND)
 

@@ -110,7 +110,7 @@ label v10s33_autumn1:
         "Ask why":
             $ v10s33_autwhypledge = True
             $ add_point(KCT.BOYFRIEND)
-            $ autumnLike += 1
+            $ autumn.points += 1
             u "Why wouldn't you expect her to pledge?"
 
             scene v10cfraut1b
@@ -153,7 +153,7 @@ label v10s33_autumn1:
         
         "I'd be here without it":
             $ add_point(KCT.BOYFRIEND)
-            $ autumnLike += 1
+            $ autumn.points += 1
             u "I didn't even know about the mud wrestling until recently, I'd be here with or without it."
 
     scene v10cfraut1d
@@ -516,7 +516,7 @@ label v10s33_deergirl11:
             u "Sure."
             $ add_point(KCT.BOYFRIEND)
             $ v10s33_audance = True
-            $ aubreyLike += 1
+            $ aubrey.points += 1
             scene v10cfrau5 #TPP, Aubrey grabs MC holding his hands, they're both smiling, mouth closed
             with dissolve
 
@@ -555,7 +555,7 @@ label v10s33_deergirl11:
                     au "Someone's old school."
 
                 "Dip her":
-                    $ aubreyLike += 1
+                    $ aubrey.points += 1
                     scene v10cfrau5e #same 5b, mc dips aubrey start
                     with dissolve
 
@@ -592,7 +592,7 @@ label v10s33_deergirl11:
             au "I don't, high school prom date. *Laughs*"
 
         "No way":
-            $ aubreyLike -= 1
+            $ aubrey.points -= 1
             $ add_point(KCT.BRO)
             u "Oh no way, I don't wanna be an embarrassment. *Laughs*"
 
@@ -795,7 +795,7 @@ label v10s33_deergirl11:
 
     menu:
         "Hot":
-            $ aubreyLike += 1
+            $ aubrey.points += 1
             $ add_point(KCT.BRO)
             u "Hot."
 
@@ -876,7 +876,7 @@ label v10s33_deergirl11:
     if v10_help_nora_freeroam:
         menu:
             "Invite her to Europe":
-                $ aubreyLike += 1
+                $ aubrey.points += 1
 
                 $ add_point(KCT.BOYFRIEND)
 
@@ -925,7 +925,7 @@ label v10s33_deergirl11:
                 u "Great!"
 
             "Don't invite her":
-                $ aubreyLike -= 1
+                $ aubrey.points -= 1
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "(If she goes she goes, if she doesn't she doesn't.)"
@@ -1036,7 +1036,7 @@ label v10s33_chloe1:
     menu:
         "Date with Chloe":
             $ v10s33_date_w_chloe = True
-            $ chloeLike += 1
+            $ chloe.points += 1
             if chloers:
                 scene v10cfrcl1
                 with dissolve
@@ -1099,7 +1099,7 @@ label v10s33_chloe1:
     if v10_nora_bitch_about_chloe:
         menu:
             "Tell Chloe about Nora":
-                $ chloeLike += 1
+                $ chloe.points += 1
                 $ v10s33_toldChloe = True
                 scene v10cfrcl1c # FPP. same1,slight angry look, closed
                 with dissolve
@@ -1188,7 +1188,7 @@ label v10s33_chloe1:
 
                             menu:
                                 "Convince her":
-                                    $ chloeLike += 1
+                                    $ chloe.points += 1
                                     $ v10s33_convince_chloe = True
                                     scene v10cfrcl1
                                     with dissolve
@@ -1860,7 +1860,7 @@ label v10s33_deergirl21:
         menu:
             "Compliment":
                 $ add_point(KCT.BOYFRIEND)
-                $ lindseyLike += 1
+                $ lindsey.points += 1
                 u "Look at you! This alone is a reason to give all my money away."
 
                 scene v10cfrfrli1a # FPP. Same as 1, smile, mouth open.
@@ -2025,7 +2025,7 @@ label v10s33_deergirl21:
 
         menu:
             "Side with Mr. Lee":
-                $ mrleeLike += 1
+                $ mr_lee.points += 1
                 u "I overheard your conversation and I have to be honest, body painting is still pretty major. I know I love it."
 
                 scene v10cfrcfrro1c # FPP. Same as 1, both looking at camera (MC), both smile, lee mouth open.
@@ -2164,7 +2164,7 @@ label v10s33_deergirl21:
                             u "(I'm sure Nora will ask her if she wants her to go.)"
                         
             "Side with Ms. Rose":
-                $ msroseLike += 1
+                $ ms_rose.points += 1
                 $ v10s33_side_w_rose = True
             
                 u "I overheard your conversation and I have to be honest, body paint is sort of a kids game nowadays."
@@ -3455,7 +3455,7 @@ label v10s33_riley2:
         menu:
             "It's okay":
                 $ add_point(KCT.BRO)
-                $ ryanLike += 1
+                $ ryan.points += 1
                 $ v10s33_ryan_flirt_emily = True
 
                 u "Don't you think it's weird to date your friend's ex? You can do what you want though, it doesn't bother me."

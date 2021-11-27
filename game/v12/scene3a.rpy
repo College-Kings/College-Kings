@@ -187,7 +187,7 @@ label v12_penelope_call:
 
                 "I miss you":
                     $ add_point(KCT.BOYFRIEND)
-                    $ penelopeLike += 1
+                    $ penelope.points += 1
 
                     scene v12pec3c
                     with dissolve

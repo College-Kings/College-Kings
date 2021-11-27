@@ -84,6 +84,7 @@ default autumn = NonPlayableCharacter("Autumn", "autumn.webp", messenger=True)
 default sebastian = NonPlayableCharacter("Sebastian", "sebastian.webp", messenger=True)
 default grayson = NonPlayableCharacter("Grayson", "grayson.webp", messenger=True)
 default jenny = NonPlayableCharacter("Jenny", "jenny.webp", messenger=True)
+default mr_lee = NonPlayableCharacter("Mr Lee", "lee.webp")
 
 default beth = NonPlayableCharacter("Beth", "beth.webp", simplr=True)
 default iris = NonPlayableCharacter("Iris", "iris.webp", simplr=True)

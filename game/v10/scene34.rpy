@@ -85,8 +85,8 @@ label v10_autumn_announcement:
     with fade
     menu:
         "Root for Chloe":
-            $ chloeLike += 1
-            $ noraLike -= 1
+            $ chloe.points += 1
+            $ nora.points -= 1
             $ add_point(KCT.BOYFRIEND)
             scene v10samw6 
             with dissolve
@@ -106,8 +106,8 @@ label v10_autumn_announcement:
                 pause 0.75
         
         "Root for Nora":
-            $ chloeLike -= 1
-            $ noraLike += 1
+            $ chloe.points -= 1
+            $ nora.points += 1
             $ v10_cvn_cheer_nora = True
             scene v10samw6 
             with dissolve
@@ -132,7 +132,7 @@ label v10_autumn_announcement:
     with fade
     menu:
         "Root for Aubrey":
-            $ aubreyLike += 1
+            $ aubrey.points += 1
             scene v10samw7 
             with dissolve
 
@@ -141,7 +141,7 @@ label v10_autumn_announcement:
         "Root for Emily":
             $ v10_cvn_cheer_emily = True
             $ forgiveemily = True
-            $ emilyLike += 1
+            $ emily.points += 1
             $ add_point(KCT.BOYFRIEND)
             scene v10samw6a
             with dissolve
@@ -157,8 +157,8 @@ label v10_autumn_announcement:
     with fade
     menu:
         "Root for Riley":
-            $ amberLike -= 1
-            $ rileyLike += 1
+            $ amber.points -= 1
+            $ riley.points += 1
             $ add_point(KCT.BOYFRIEND)
             scene v10samw6b
             with dissolve
@@ -171,8 +171,8 @@ label v10_autumn_announcement:
             pause 0.75
 
         "Root for Amber":
-            $ amberLike += 1
-            $ rileyLike -= 1
+            $ amber.points += 1
+            $ riley.points -= 1
             $ v10_cvn_cheer_amber = True
 
             scene v10samw7 

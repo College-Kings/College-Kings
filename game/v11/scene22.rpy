@@ -52,8 +52,8 @@ label v11_museum_tour:
 
     menu:
         "Real":
-            $ noraLike -= 1
-            $ rileyLike += 1
+            $ nora.points -= 1
+            $ riley.points += 1
 
             scene v11tm4c # FPP. Same as v11tm4, Nora looking at MC, slightly annoyed, mouth closed
             with dissolve
@@ -66,8 +66,8 @@ label v11_museum_tour:
             no "Keep dreaming, [name]."
 
         "Not real":
-            $ noraLike += 1
-            $ rileyLike -= 1
+            $ nora.points += 1
+            $ riley.points -= 1
 
             scene v11tm5a # FPP. Same as v11tm5, but Riley looking at MC, mouth closed, slightly annoyed
             with dissolve

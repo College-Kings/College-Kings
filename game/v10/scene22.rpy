@@ -162,7 +162,7 @@ label v10_cafe_w_jenny:
             "Reassure her":
                 $ v10_reassure_jenny = True
                 $ add_point(KCT.BOYFRIEND)
-                $ jennyLike += 1
+                $ jenny.points += 1
 
                 u "Penelope always puts others before herself, even if you knew and tried to stop her, she probably still would've done it."
 
@@ -208,10 +208,10 @@ label v10_cafe_w_jenny:
             "Flirt":
                 $ add_point(KCT.BOYFRIEND)
                 if kct == "loyal":
-                    $ jennyLike += 1
+                    $ jenny.points += 1
 
                 else:
-                    $ jennyLike -= 1
+                    $ jenny.points -= 1
 
                 u "*Smirks* You're always welcome to join."
 
@@ -305,7 +305,7 @@ label v10_cafe_w_jenny:
 
             "Be supportive":
                 $ add_point(KCT.BOYFRIEND)
-                $ penelopeLike += 1
+                $ penelope.points += 1
 
                 scene v10scwj11
                 with dissolve

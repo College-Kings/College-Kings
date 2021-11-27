@@ -90,7 +90,7 @@ label v10_emily_course:
                 menu:
                     "Join Emily":
                         $ add_point(KCT.BOYFRIEND)
-                        $ emilyLike += 1
+                        $ emily.points += 1
                         $ v10_join_emi = True
                         $ forgiveemily = True
 
@@ -174,7 +174,7 @@ label v10_emily_course:
                         menu:
                             "Agree with Emily":
                                 $ add_point(KCT.BOYFRIEND)
-                                $ emilyLike += 1
+                                $ emily.points += 1
 
                                 $ v10_emi_nurse = True
 
@@ -316,7 +316,7 @@ label v10_emily_course:
                 menu:
                     "Join Emily":
                         $ add_point(KCT.BOYFRIEND)
-                        $ emilyLike += 1
+                        $ emily.points += 1
                         $ v10_join_emi = True
                         $ forgiveemily = True
 
@@ -400,7 +400,7 @@ label v10_emily_course:
                         menu:
                             "Agree with Emily":
                                 $ add_point(KCT.BOYFRIEND)
-                                $ emilyLike += 1
+                                $ emily.points += 1
 
                                 $ v10_emi_nurse = True
 

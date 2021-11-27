@@ -501,8 +501,8 @@ label v11_carriage_ride:
 
     menu:
         "Side with Nora":
-            $ noraLike += 1
-            $ chloeLike -= 1
+            $ nora.points += 1
+            $ chloe.points -= 1
 
             scene v11car11h # FPP. Same as v11car11, Chloe annoyed, mouth closed, looking at MC, different pose
             with dissolve
@@ -510,8 +510,8 @@ label v11_carriage_ride:
             u "I actually think it's really cool, too. I'm sure the benefits would outweigh the negatives. I already have nicknames for some of my frat bros in mind... *Chuckles*"
 
         "Side with Chloe":
-            $ noraLike -= 1
-            $ chloeLike += 1
+            $ nora.points -= 1
+            $ chloe.points += 1
 
             scene v11car14g # FPP. Same as v11car14, Nora annoyed, mouth closed, looking at MC, different pose
             with dissolve
