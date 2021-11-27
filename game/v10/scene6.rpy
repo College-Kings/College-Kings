@@ -4,7 +4,7 @@
 # Time: Saturday Night
 
 label v10_mc_vs_ryan_fight:
-    play music "music/v10/Scene 6 & 7/Track Scene 6 & 7.mp3" fadein 2
+    play music "music/v10/Track Scene 6 & 7.mp3" fadein 2
     scene v10mvr1 # FPP. Show imre and chris near ring, imre excited look, mouth open chris mouth closed
     with dissolve
 

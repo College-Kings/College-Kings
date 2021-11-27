@@ -10,7 +10,7 @@ label v10_linds_room:
 
     play sound "sounds/knock.mp3"
 
-    play music "music/v10/Scene 11/Track Scene 11.mp3" fadein 2
+    play music "music/v10/Track Scene 11.mp3" fadein 2
 
     pause 0.75
     

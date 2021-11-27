@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v11_walk_or_ride:
-    play music "music/V10/Scene 17/Track Scene 17_1.mp3" fadein 2
+    play music "music/v10/Track Scene 17_1.mp3" fadein 2
     menu:
         "Ride with Mr. Lee":
             scene v11wap11 # TPP. Show MC running towards Mr Lee, MC screaming, mouth open, slightly worried

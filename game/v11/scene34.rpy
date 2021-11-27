@@ -178,7 +178,7 @@ label v11_cardealership:
 
     u "Thank you."
     stop music fadeout 3
-    play music "music/V10/Scene 13/Track Scene 13.mp3" fadein 2
+    play music "music/v10/Track Scene 13.mp3" fadein 2
     scene v11cd15 # TPP. MC and chloe getting into the car
     with dissolve
 
@@ -509,7 +509,7 @@ label v11_cardealership:
                         scene v11cd33c # FPP. Chloe looks back at mc, mouth closed
                         with dissolve
                         stop music fadeout 3
-                        play music "music/V10/Scene 11/Track Scene 11.mp3" fadein 2
+                        play music "music/v10/Track Scene 11.mp3" fadein 2
                         u "Chloe, I've been captured by you since the moment I first saw you. Every day I think about you and hope that we can be together at all times."
                         u "I don't know what I'd do if one day you were just... gone. The truth is... I love you, Chloe, and I don't want to go another day without you being mine."
                         u "So with all that said, can we make it official? Will you be my girl?"

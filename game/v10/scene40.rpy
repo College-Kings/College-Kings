@@ -9,7 +9,7 @@ label v10_riley_sex:
 
     ri "Okay, I really wanna go get cleaned up so do you mind waiting here?"
 
-    play music "music/v10/Scene 40/Track Scene 40_1.mp3" fadein 2
+    play music "music/v10/Track Scene 40_1.mp3" fadein 2
 
     scene v10srds2 # FPP. Show Riley, smiling, mouth closed. She's still dirty.
     with dissolve
@@ -361,7 +361,7 @@ label v10_riley_sex:
                 with dissolve
 
                 stop music fadeout 3
-                play music "music/v10/Scene 40/Track Scene 40_2.mp3" fadein 2
+                play music "music/v10/Track Scene 40_2.mp3" fadein 2
 
                 u "Lie down."
                 
@@ -428,7 +428,7 @@ label v10_riley_sex:
                 pause 0.75
 
                 stop music fadeout 3
-                play music "music/v10/Scene 40/Track Scene 40_3.mp3" fadein 2
+                play music "music/v10/Track Scene 40_3.mp3" fadein 2
                 scene v10srds6a # TPP. Same camera as v10srds6. Show MC and Riley laying naked in bed together after sex. Both smiling, Riley mouth open.
                 with dissolve
 
@@ -612,7 +612,7 @@ label v10_riley_sex:
                 with dissolve
 
                 stop music fadeout 3
-                play music "music/v10/Scene 40/Track Scene 40_2.mp3" fadein 2
+                play music "music/v10/Track Scene 40_2.mp3" fadein 2
 
                 u "Lie down."
 
@@ -666,7 +666,7 @@ label v10_riley_sex:
                 ri "That was nice."
 
                 stop music fadeout 3
-                play music "music/v10/Scene 40/Track Scene 40_3.mp3" fadein 2
+                play music "music/v10/Track Scene 40_3.mp3" fadein 2
                 scene v10srds7
                 with dissolve
 

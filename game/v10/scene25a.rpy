@@ -7,7 +7,7 @@ label v10_sam_kitchen:
     with fade
     u "Samantha???"
 
-    play music "music/v10/Scene 25a/Track Scene 25a.mp3" fadein 2
+    play music "music/v10/Track Scene 25a.mp3" fadein 2
 
     pause 0.5
 

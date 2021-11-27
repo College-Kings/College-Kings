@@ -11,7 +11,7 @@ label v11_chloe_sex_scene:
 
     scene v11css1 # TPP. Mc and chloe removing their clothes
     with dissolve
-    play music "music/V10/Scene 17/Track Scene 17_2.mp3" fadein 2
+    play music "music/v10/Track Scene 17_2.mp3" fadein 2
     pause
 
     scene v11css1a # TPP. Chloe turning chloe against the wall kissing her neck
@@ -193,7 +193,7 @@ label v11_chloe_sex_scene:
 
     cl "I'll be right back, I'm gonna go clean up."
     stop music fadeout 3
-    play music "music/V10/Scene 41/Track Scene 41_2.mp3" fadein 2
+    play music "music/v10/Track Scene 41_2.mp3" fadein 2
     scene v11css6 # FPP. Chloe walks off to the bathroom
     with dissolve
 

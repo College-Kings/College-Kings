@@ -148,7 +148,7 @@ label v11_hotel_lobby_rose:
 
     pause 0.75
     stop music fadeout 3
-    play music "music/V10/Scene 27/Track Scene 27.mp3" fadein 2
+    play music "music/v10/Track Scene 27.mp3" fadein 2
     scene v11rol11 # TPP. Show Ms Rose mouth open, slight smile, standing next to Mr Lee, mouth closed, slight smile, show Imre, Riley and Nora standing next to each other (make sure Imre is on the edge, with some space in between him and the girl in the middle, MC will be standing in between the girl and Imre in v11rol12) (Ryan, Amber and some other people are out of shot and won't be used, but they're there, play with angles and hide the place where they're supposed to be)
     with dissolve
 
