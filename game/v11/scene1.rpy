@@ -692,7 +692,7 @@ label v11_start:
 
     stop music fadeout 3
 
-    play music "music/v11/Scene 1/Track Scene 1_3.mp3" fadein 2
+    play music "music/v11/Scene 1/Track Scene 1_1.mp3" fadein 2
 
     scene v11coc21 # TPP. Show MC, Jenny and Penelope standing next to the chairs, neutral expressions, mouths closed
     with dissolve

@@ -11,7 +11,7 @@ label v11_lauren_store:
     
     scene v11las1 # TPP. Lauren is in the lobby, she is looking at her phone, show MC sneaking up on her
     with fade
-    play music "music/v11/Scene 1/Track Scene 1_3.mp3" fadein 2
+    play music "music/v11/Scene 1/Track Scene 1_1.mp3" fadein 2
     pause 0.75
 
     scene v11las1a # TPP. Same cam as v11las1, MC is behind Lauren, he is smiling, mouth closed, his hands over her eyes, Lauren is surprised, mouth closed
