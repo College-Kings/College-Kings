@@ -4,7 +4,7 @@
 # Time: Night 
 
 label v14s25:
-    play music "music/v14/Track Scene 25_1.mp3" fadein 2
+    play music "music/v12/Scene 3/Track Scene 3_4.mp3" fadein 2
 
     scene v14s25_1 # TPP. Show MC walking up to the front door of Amber's home, MC neutral expression, mouth closed.
     with fade
