@@ -4,7 +4,7 @@
 # Time: Night
 
 label v14s03a:
-    play music "music/v14/Track Scene 3a_1.mp3" fadein 2
+    play music "music/v13/Track Scene 4.mp3" fadein 2
     
     scene v14s03a_1 # TPP. MC with Imre and Ryan right behind him, far away, walking towards the night gambler, MC/Gambler neutral expression, mouth closed,Ryan/Imre, smile, mouth closed
     with dissolve
