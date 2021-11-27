@@ -98,7 +98,6 @@ label v4start:
 
             menu:
                 "Let me help.":
-                    $ revengeadam = True
                     $ add_point(KCT.BRO)
 
                     scene s297a
@@ -161,7 +160,6 @@ label v4start:
         "Let's fuck him up.":
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
-            $ revengeadam = True
 
             scene s297a
             with dissolve
@@ -610,7 +608,6 @@ label v4start:
 
             "It was an accident.":
                 $ add_point(KCT.TROUBLEMAKER)
-                $ liejulia = True
 
                 scene s315a
                 with dissolve
@@ -2726,8 +2723,6 @@ label continueab:
                     "*Phone alarm ringing*"
 
         "Kim":
-            $ shotamber = False
-
             scene jomon16 # kim in bra ready for shot of her body
             with fade
 

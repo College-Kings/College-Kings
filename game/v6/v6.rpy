@@ -3649,7 +3649,6 @@ label fy_bd: # not gone to Emily's
                     pause 0.5
 
                 "Don't kiss her":
-                    $ kissevelyn = False
                     if laurenrs:
                         $ add_point(KCT.BOYFRIEND)
                     else:
@@ -4994,7 +4993,6 @@ label afteraubrey:
                     pause 0.5
 
         "Stay home":
-            $ meetgrayson = False
             $ add_point(KCT.BRO)
             
             $ grant_achievement("seems_fishy")
@@ -6606,7 +6604,6 @@ label wakeupa:
                 with dissolve
 
             "Say Goodbye":
-                $ kisspenelope = False
                 if laurenrs:
                     $ add_point(KCT.BOYFRIEND)
 
@@ -7072,7 +7069,6 @@ label v6_fr3josh1:
 
         "Decline":
             $ add_point(KCT.BOYFRIEND)
-            $ takeshot = False
 
             u "Nah, I'm good."
 
@@ -10303,6 +10299,8 @@ label upstairsemily:
 
 
 label upstairsamber: # upstairs with amber
+    $ kimpuke = True
+    
     scene sufr3am1 # amber looking at the bookshelves
     with fade
 
@@ -10436,7 +10434,6 @@ label upstairsamber: # upstairs with amber
 
     am "Okay, yeah. See you."
 
-    $ kimpuke = True
     call screen v6_fr3office
 
     #*You bring Riley into the office*
