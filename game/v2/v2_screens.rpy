@@ -1,9 +1,9 @@
 screen costumes():
-    add "images/costumes.webp"
+    add "images/v2/costumes.webp"
 
     imagebutton:
-        idle "images/try.webp"
-        hover "images/tryh.webp"
+        idle "images/v2/try.webp"
+        hover "images/v2/tryh.webp"
         pos (256, 802)
         if costumeaubrey and not caughtpeekingaubrey:
             action Jump("try1")
@@ -11,8 +11,8 @@ screen costumes():
             action Jump("try1p")
                 
     imagebutton:
-        idle "images/try.webp"
-        hover "images/tryh.webp"
+        idle "images/v2/try.webp"
+        hover "images/v2/tryh.webp"
         pos (738, 802)
         if costumeaubrey and not caughtpeekingaubrey:
             action Jump("try2")
@@ -20,8 +20,8 @@ screen costumes():
             action Jump("try2p")
 
     imagebutton:
-        idle "images/try.webp"
-        hover "images/tryh.webp"
+        idle "images/v2/try.webp"
+        hover "images/v2/tryh.webp"
         pos (1219, 802)
         if costumeaubrey and not caughtpeekingaubrey:
             action Jump("try3")
@@ -29,8 +29,8 @@ screen costumes():
             action Jump("try3p")
 
     imagebutton:
-        idle "images/try.webp"
-        hover "images/buyh.webp"
+        idle "images/v2/try.webp"
+        hover "images/v2/buyh.webp"
         pos (256, 935)
         if costumeaubrey and auboutfits <= 3:
             action Show("confirmBuy", exit="buy1")
@@ -42,8 +42,8 @@ screen costumes():
             action Jump("buy1p")
 
     imagebutton:
-        idle "images/try.webp"
-        hover "images/buyh.webp"
+        idle "images/v2/try.webp"
+        hover "images/v2/buyh.webp"
         pos (738, 935)
         if costumeaubrey and auboutfits <= 3:
             action Show("confirmBuy", exit="buy2")
@@ -55,8 +55,8 @@ screen costumes():
             action Jump("buy2p")
 
     imagebutton:
-        idle "images/try.webp"
-        hover "images/buyh.webp"
+        idle "images/v2/try.webp"
+        hover "images/v2/buyh.webp"
         pos (1219, 935)
         if costumeaubrey and auboutfits <= 3:
             action Show("confirmBuy", exit="buy3")

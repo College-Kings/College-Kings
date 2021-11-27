@@ -1,7 +1,7 @@
 screen youattack2():
 
     if adamstance == 1:
-        image "images/afstancejab.webp"
+        image "images/v5/afstancejab.webp"
 
         key q:
             action Jump ("adamjab1")
@@ -43,7 +43,7 @@ screen youattack2():
         timer reactiona action Jump("adamattack")
 
     if adamstance == 2:
-        image "images/afstancehook.webp"
+        image "images/v5/afstancehook.webp"
 
         key q:
             action Jump ("adamjab2")
@@ -85,7 +85,7 @@ screen youattack2():
         timer reactiona action Jump("adamattack")
 
     if adamstance == 3:
-        image "images/afstancebody.webp"
+        image "images/v5/afstancebody.webp"
 
         key q:
             action Jump ("adamjab2")
@@ -127,7 +127,7 @@ screen youattack2():
         timer reactiona action Jump("adamattack")
 
     if adamstance == 4:
-        image "images/afstancekick.webp"
+        image "images/v5/afstancekick.webp"
 
         key q:
             action Jump ("adamjab2")
@@ -173,7 +173,7 @@ screen youattack2():
 
 screen adamattack():
     if adamattack == 1:
-        image "images/af13pic.webp"
+        image "images/v5/af13pic.webp"
 
         key q:
             action Jump ("adamhookblocked")
@@ -215,7 +215,7 @@ screen adamattack():
         timer reaction action Jump("adamhookhit")
 
     if adamattack == 2:
-        image "images/af14pic.webp"
+        image "images/v5/af14pic.webp"
 
         key q:
             action Jump ("adamjabhit")
@@ -257,7 +257,7 @@ screen adamattack():
         timer reaction action Jump("adamjabhit")
 
     if adamattack == 3:
-        image "images/af15pic.webp"
+        image "images/v5/af15pic.webp"
 
         key q:
             action Jump ("adambodyhit")
@@ -299,7 +299,7 @@ screen adamattack():
         timer reaction action Jump("adambodyhit")
 
     if adamattack == 4:
-        image "images/af16pic.webp"
+        image "images/v5/af16pic.webp"
 
         key q:
             action Jump ("adamkickhit")
@@ -366,11 +366,11 @@ screen trolleyskip():
 
 
 screen trolleyProblem(option1, option2):
-    add "images/trolleylever.webp"
+    add "images/v5/trolleylever.webp"
 
     imagebutton:
-        idle "images/leverno.webp"
-        hover "images/lever.webp"
+        idle "images/v5/leverno.webp"
+        hover "images/v5/lever.webp"
         pos (125, 150)
         action Jump(option2)
 
