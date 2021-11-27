@@ -37,7 +37,6 @@ init python:
         aubrey.messenger.newMessage(_("Oh, okay"))
 
     def v6_reply9():
-        setattr(store, "homeworkout", True)
         amber.messenger.newMessage(_("Yeah maybe we should xx"))
 
     def v6_reply10():
@@ -1758,7 +1757,6 @@ label continuebd:
 
         "Don't disturb":
             $ add_point(KCT.TROUBLEMAKER)
-            $ checkonrose = False
 
             scene s510 # Mc arrives at his dorm, down at his door there's a flyer (Matt's design)
             with fade

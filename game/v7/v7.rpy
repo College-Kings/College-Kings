@@ -23,7 +23,6 @@ init python:
         v7_kiwiiPost4.newComment("Josh", _("lol"), mentions="MC", numberLikes=renpy.random.randint(3, 7))
 
     def v7_msgReply1():
-        setattr(store, "tellpenelope", True)
         add_point(KCT.BRO)
         penelope.messenger.newMessage(_("Okay..."))
 
@@ -70,10 +69,6 @@ init python:
 
 label start7: #for compatibility only
 label v7start:
-    if caughtpeekingpenelope and not caughtpeekingpenelopecounter:
-        $ penelopemad = True
-    elif penelopekiss:
-        $ penelopemad = True
 
 ######## SCENE 1 Chris in Wolves secret room
     scene s673 # #showing the room (not showing you or chris)with 6v large portraits and one empty frame on the wall
@@ -466,7 +461,6 @@ label v7start:
 
         menu:
             "Walk Riley home":
-                $ follownora = False
                 $ add_point(KCT.BRO)
 
                 scene s683a
@@ -484,7 +478,6 @@ label v7start:
                 jump hd_ad
 
             "Go after Nora":
-                $ follownora = True
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene s683a
@@ -520,17 +513,15 @@ label v7start:
 
         menu:
             "Go after Nora":
+                $ add_point(KCT.BOYFRIEND)
+
                 u "(I should go after her and make sure she's okay.)"
 
-                $ add_point(KCT.BOYFRIEND)
-                $ follownora = True
-
             "Leave her alone":
+                $ add_point(KCT.BRO)
+
                 u "(I should leave her alone, she probably just wants to be alone right now.)"
                 u "(It's late anyway, I better go home.)"
-
-                $ add_point(KCT.BRO)
-                $ follownora = False
 
                 jump conwalkhome
 
@@ -750,7 +741,6 @@ label hd_bd:
         u "Come on let's do something fun. It'll take your mind of things."
 
         if kct == "confident":
-            $ noraclose = True
             call screen kct_popup
 
             scene s699f # nora curious smile
@@ -2498,7 +2488,7 @@ label thisbewalk:
     pause 0.5
     play music "music/mhappy.mp3"
 
-    if penelopemad:
+    if (caughtpeekingpenelope and not caughtpeekingpenelopecounter) or penelopekiss:
         scene s731 # First person, Penelope sitting in front of your dorm door
         with dissolve
 
@@ -2795,7 +2785,6 @@ label beachlauren:
                     u "I mean he's teaching me how to fight and everything..."
 
                 "Tell her he moved out":
-                    $ laurenimre = True
                     $ add_point(KCT.BOYFRIEND)
 
                     u "Uhm... Imre and I had a fight and he moved out..."
@@ -3196,7 +3185,6 @@ label beachlauren:
                     u "I mean he's teaching me how to fight and everything..."
 
                 "Tell her he moved out":
-                    $ laurenimre = True
                     $ add_point(KCT.BOYFRIEND)
 
                     u "Uhm... Imre and I had a fight and he moved out..."
@@ -3760,7 +3748,6 @@ label pledgewolves:
     with dissolve
     menu:
         "Eliminate Imre":
-            $ wolvesTask1 = False
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s768a
@@ -3902,7 +3889,6 @@ label pledgewolves:
 
     menu:
         "Get the call":
-            $ wolvesTask2 = False
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -4190,8 +4176,6 @@ label aftercall:
                 ch "No need to explain. We appreciate your honesty."
 
             "False.":
-                $ wolvesTask3 = False
-
                 u "I didn't. False."
 
                 scene s786b # chris looking directly at you mouth open
@@ -4220,8 +4204,6 @@ label aftercall:
                 ch "No need to explain. We appreciate your honesty."
 
             "False.":
-                $ wolvesTask3 = False
-
                 u "I didn't. False."
 
                 scene s786b # chris looking directly at you mouth open
@@ -4431,7 +4413,6 @@ label aftercall:
 
     menu:
         "Kiss her back":
-            $ wolvesTask4 = False
             if laurenrs:
                 $ add_point(KCT.TROUBLEMAKER, 2)
             else:
@@ -4986,7 +4967,6 @@ label pledgeapes:
     menu:
         "Stand up to him":
             $ add_point(KCT.TROUBLEMAKER)
-            $ stoodUpToCam = True
 
             scene s843a # Cameron threatening and mouth closed
             with dissolve
@@ -5030,7 +5010,6 @@ label pledgeapes:
 
         "Hold yourself back":
             $ add_point(KCT.BRO)
-            $ stoodUpToCam = False
             pause 0.5
 
             scene s844a # MC holding in anger and clenching his fists. Cameron back to normal position and mouth open, with a smirk
@@ -5060,7 +5039,6 @@ label ep7_fight_cam:
 
     menu:
         "Punch him":
-            $ punchedCam = True
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s846b # MC throws a punch but Cameron blocks it
@@ -5085,7 +5063,6 @@ label ep7_fight_cam:
             pause 0.7
 
         "Retreat":
-            $ punchedCam = False
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.BRO)
 
@@ -5227,7 +5204,6 @@ label ep7_cam_picture:
 
     menu:
         "Take the slip":
-            $ cameronSisNumber = True
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s856
@@ -5239,7 +5215,6 @@ label ep7_cam_picture:
             gr "No problem. Just looking out."
 
         "Decline":
-            $ cameronSisNumber = False
             $ add_point(KCT.BRO)
 
             scene s856
@@ -5460,7 +5435,6 @@ label after_pledges:
 
             "Don't text her":
                 $ forgiveemily = False
-                $ emilyText = False
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "(Nah, I've had enough of her.)"
@@ -5945,7 +5919,6 @@ label after_pledges:
         menu:
             "Defend yourself":
                 $ add_point(KCT.TROUBLEMAKER)
-                $ madeFunOfLee = True
 
                 scene s886 # Camera - TPP (Similar to s884 but closer). MC confident and talking looking at Lee. Lee mouth closed and looking at the MC
                 with dissolve
@@ -6006,7 +5979,6 @@ label after_pledges:
 
             "Stay silent":
                 $ add_point(KCT.BOYFRIEND)
-                $ madeFunOfLee = False
 
                 scene s886c # MC looking down in embarrassment. Lee looking at MC. Both mouths closed
                 with dissolve
@@ -6611,8 +6583,6 @@ label hc_asking_amber:
     if kct == "popular":
         call screen kct_popup
 
-        $ amberEcstasyOffer = True
-
         scene s919d # Amber flirty and talking
         with dissolve
         am "But I might have a better idea. I mean definitely better than some lame-ass homecoming at least."
@@ -6672,8 +6642,6 @@ label hc_asking_amber:
                 call screen hc_select
 
     else:
-        $ amberEcstasyOffer = False
-
         scene s919c
         with dissolve
 
@@ -7955,7 +7923,6 @@ label v7_nsfwSkipLabel4:
 
     menu:
         "Console Samantha":
-            $ consoledSam = True
             $ add_point(KCT.BOYFRIEND)
 
             scene scc72 # TPP. Show MC sat on the sidewalk next to Samantha, MC looking at Samantha mouth open, Samantha head in hands crying.
@@ -8011,7 +7978,6 @@ label v7_nsfwSkipLabel4:
             sa "Thank you, really."
 
         "Leave her be":
-            $ consoledSam = False
             $ add_point(KCT.BRO)
 
     label av_no_sam: #for compatibility only
@@ -11691,7 +11657,6 @@ label penelopehocodate:
 
     menu:
         "Ask about sex toys":
-            $ penelopesextoys = True
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Come on, were you hiding your sex toys?"
@@ -11814,8 +11779,6 @@ label penelopehocodate:
             with dissolve
 
         "You didn't have six lizards.":
-            $ penelopetruths += 1
-
             u "You definitely did not have six lizards."
 
             scene sfr4pe8f # penelope innocent smille
@@ -11860,8 +11823,6 @@ label penelopehocodate:
 
     menu:
         "You didn't lose your virginity.":
-            $ penelopetruths += 1
-
             u "No way you lost your virginity at 14, that's a lie."
 
             scene sfr4pe8f # penelope innocent smille
@@ -15404,7 +15365,6 @@ label fr4chloe1:
 
     menu:
         "Defend Chloe":
-            $ ryandefendchloe = True
             $ chloemad = False
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
@@ -15670,8 +15630,6 @@ label fr4lauren1:
 
         menu:
             "Focus on Lauren":
-                $ focusonlauren = True
-
                 scene sfr4la27a
                 with dissolve
 
