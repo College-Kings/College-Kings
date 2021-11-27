@@ -4,8 +4,7 @@
 # Time: Evening 
 
 label v14s50:
-
-    play music "music/v14/Track Scene 34.mp3" fadein 2
+    play music "music/v13/Track Scene 40_2.mp3" fadein 2
     scene v14s50_1 # TPP. Camera over MC's left shoulder. MC standing in front door of the Chic's house.
     with dissolve
 
