@@ -320,13 +320,10 @@ default v11_solo_question = False
 default v11_tease_amber = 0
 default v11_told_aubrey = False
 default v11_underground_rose = False
-default freeroam7 = set()
+default freeroam7 = set() #Penelope Court
 default v11s1_courtpoints = 0
-default v11s23_chris1 = False
-default v11s23_mrlee1 = False
+default freeroam8 = set() #London Museum
 default v11s23_penelope_date = True # late addition, defaulting to True to enhance act 4 playability
-default v11s23_penelope1 = False
-default v11s23_riley1 = False
 default v11s25_beer = True
 
 # 12.0

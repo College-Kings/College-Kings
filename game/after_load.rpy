@@ -685,14 +685,6 @@ label after_load:
         except NameError: v11_aubrey_sex = False
         try: v11_riley_roomate
         except NameError: v11_riley_roomate = False
-        try: v11s23_chris1
-        except NameError: v11s23_chris1 = False
-        try: v11s23_riley1
-        except NameError: v11s23_riley1 = False
-        try: v11s23_mrlee1
-        except NameError: v11s23_mrlee1 = False
-        try: v11s23_penelope1
-        except NameError: v11s23_penelope1 = False
         try: v11s25_beer
         except NameError: v11s25_beer = True
         try: v11_bartender_have_gf
