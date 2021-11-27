@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v14s08:
-    play music "music/v14/Track Scene 8.mp3" fadein 2
+    play music "music/v11/Scene 20/Track Scene 20_2.mp3" fadein 2
 
     scene v14s08_1 # TPP. mc sees the bus and walks towards it, slight smile, mouth closed
     with dissolve
