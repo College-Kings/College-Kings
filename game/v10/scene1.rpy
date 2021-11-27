@@ -16,7 +16,6 @@ label v10start:
     pause 0.75
 
     if joinwolves:
-
         scene v10sta2 # FPP. Show Imre and ryan now standing in fighting stances both with fists raised, angry look on imre/ryan, ryan mouth closed, imre mouth open
         with dissolve
 
