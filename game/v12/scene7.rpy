@@ -416,7 +416,7 @@ label v12s7fr:
     call screen v12s7_seating_front
 
 label v12s7_aubrey1:
-    $ v12s7_aubrey = True
+    $ freeroam9.add("aubrey")
     $ v12s7_seenList = [nora]
 
     show screen murder_button_overlay(aubrey)
@@ -614,7 +614,7 @@ label v12s7_aubrey1:
     call screen v12s7_balcony_right
 
 label v12s7_aubrey2:
-    $ v12s7_aubrey2 = True
+    $ freeroam9.add("aubrey2")
     $ v12s7_seenList = []
 
     show screen murder_button_overlay(aubrey)
@@ -784,9 +784,9 @@ label v12s7_aubrey2:
     play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
 label v12s7_riley1:
-    $ v12s7_riley = True
+    $ freeroam9.add("riley")
 
-    if v12s7_josh or not josh_europe:
+    if "josh" in freeroam9 or not josh_europe:
         $ v12s7_seenList = [chloe]
     else:
         $ v12s7_seenList = [chloe, josh]
@@ -1071,11 +1071,11 @@ label v12s7_riley1:
     ### ERROR: -Back to free roam ###
 
 label v12s7_chloe1:
-    $ v12s7_chloe = True
+    $ freeroam9.add("chloe")
 
     $ v12s7_seenList = []
 
-    if josh_europe and not v12s7_josh:
+    if josh_europe and not "josh" in freeroam9:
         $ v12s7_seenList.append(josh)
 
     show screen murder_button_overlay(chloe)
@@ -1418,13 +1418,13 @@ label v12s7_chloe_kill:
     call screen v12s7_left_viewpoint
 
 label v12s7_riley3:
-    $ v12s7_riley3 = True
+    $ freeroam9.add("riley3")
 
     if riley in v12s7_endtalkList:
         $ v12s7_endtalkList.remove(riley)
 
     $ v12s7_seenList = [chloe]
-    if josh_europe and not v12s7_josh:
+    if josh_europe and not "josh" in freeroam9:
         $ v12s7_seenList.append(josh)
 
     show screen murder_button_overlay(riley)
@@ -1563,10 +1563,10 @@ label v12s7_riley3:
     ### ERROR: -Back to free roam ###
     
 label v12s7_riley3a:
-    $ v12s7_riley3 = True
+    $ freeroam9.add("riley3")
 
     $ v12s7_seenList = []
-    if josh_europe and not v12s7_josh:
+    if josh_europe and not "josh" in freeroam9:
         $ v12s7_seenList.append(josh)
 
     show screen murder_button_overlay(riley)
@@ -1719,10 +1719,10 @@ label v12s7_riley_kill:
     call screen v12s7_left_viewpoint
 
 label v12s7_lauren1:
-    $ v12s7_lauren = True
+    $ freeroam9.add("lauren")
 
     $ v12s7_seenList = []
-    if emily_europe and not v12s7_emily:
+    if emily_europe and not "emily" in freeroam9:
         $ v12s7_seenList.append(emily)
 
     show screen murder_button_overlay(lauren)
@@ -2013,10 +2013,10 @@ label v12s7_lauren_kill:
     call screen v12s7_seating_back
 
 label v12s7_ryan_imre1:
-    $ v12s7_imre = True
+    $ freeroam9.add("imre")
     
     $ v12s7_seenList = [ryan, imre, amber]
-    if v12s7_riley_moved and not v12s7_riley2:
+    if v12s7_riley_moved and not "riley2" in freeroam9:
         $ v12s7_seenList.remove(amber)
 
     show screen murder_button_overlay(imre)
@@ -2285,10 +2285,10 @@ label v12s7_ryan_imre1:
     call screen v12s7_right_gallery_back
 
 label v12s7_ryan1:
-    $ v12s7_ryan = True
+    $ freeroam9.add("ryan")
 
     $ v12s7_seenList = [amber]
-    if (v12s7_riley_moved and not v12s7_riley2) or amber in v12s7_killList:
+    if (v12s7_riley_moved and not "riley2" in freeroam9) or amber in v12s7_killList:
         $ v12s7_seenList = []
 
     show screen murder_button_overlay(ryan)
@@ -2494,7 +2494,7 @@ label v12s7_ryan_kill:
     call screen v12s7_right_gallery_back
 
 label v12s7_imre2:
-    $ v12s7_imre2 = True
+    $ freeroam9.add("imre2")
     $ v12s7_seenList = []
 
     show screen murder_button_overlay(imre)
@@ -2670,7 +2670,7 @@ label v12s7_imre_kill:
     call screen v12s7_foyer
 
 label v12s7_lindsey_charlie1:
-    $ v12s7_lindsey = True
+    $ freeroam9.add("lindsey")
     $ v12s7_seenList = [lindsey, charli]
 
     show screen murder_button_overlay(lindsey)
@@ -2962,7 +2962,7 @@ label v12s7_lindsey_charlie1:
     ### ERROR: -Back to free roam ###
 
 label v12s7_lindsey2:
-    $ v12s7_lindsey2 = True
+    $ freeroam9.add("lindsey2")
     $ v12s7_seenList = []
 
     show screen murder_button_overlay(lindsey)
@@ -3227,7 +3227,7 @@ label v12s7_lindsey_kill:
     call screen v12s7_rear
 
 label v12s7_charli2:
-    $ v12s7_charli = True
+    $ freeroam9.add("charli")
     $ v12s7_seenList = []
 
     show screen murder_button_overlay(charli)
@@ -3310,10 +3310,10 @@ label v12s7_charli_kill:
     call screen v12s7_captains_room
 
 label v12s7_msrose1:
-    $ v12s7_msrose = True
+    $ freeroam9.add("rose")
 
     $ v12s7_seenList = []
-    if v11_invite_sam_europe and not v12s7_samantha:
+    if v11_invite_sam_europe and not "samantha" in freeroam9:
         $ v12s7_seenList.append(samantha)
 
     show screen murder_button_overlay(ms_rose)
@@ -3578,7 +3578,7 @@ label v12s7_ms_rose_kill:
     call screen v12s7_seating_front
 
 label v12s7_penelope1:
-    $ v12s7_penelope = True
+    $ freeroam9.add("penelope")
     $ v12s7_seenList = []
 
     show screen murder_button_overlay(penelope)
@@ -3882,10 +3882,10 @@ label v12s7_penelope_kill:
     call screen v12s7_left_walkway_front
 
 label v12s7_amber1:
-    $ v12s7_amber = True
+    $ freeroam9.add("amber")
     
     $ v12s7_seenList = [imre, ryan]
-    if v12s7_imre:
+    if "imre" in freeroam9:
         $ v12s7_seenList = []
 
     show screen murder_button_overlay(amber)
@@ -4132,7 +4132,7 @@ label v12s7_amber_kill:
     call screen v12s7_right_gallery_front
 
 label v12s7_riley2:
-    $ v12s7_riley2 = True
+    $ freeroam9.add("riley2")
     $ v12s7_seenList = []
 
     show screen murder_button_overlay(riley)
@@ -4355,10 +4355,10 @@ label v12s7_riley_kill2:
     call screen v12s7_right_gallery_front
 
 label v12s7_riley2_amber:
-    $ v12s7_riley2 = True
+    $ freeroam9.add("riley2")
 
     $ v12s7_seenList = [amber, ryan, imre]
-    if v12s7_ryan:
+    if "ryan" in freeroam9:
         $ v12s7_seenList = [amber]
 
     show screen murder_button_overlay(riley)
@@ -4436,7 +4436,7 @@ label v12s7_riley2_amber:
     ### ERROR: -Back to free roam ###
 
 label v12s7_sam_cameron:
-    $ v12s7_samantha = True
+    $ freeroam9.add("samantha")
     $ v12s7_seenList = [ms_rose]
 
     show screen murder_button_overlay(samantha)
@@ -4652,7 +4652,7 @@ label v12s7_sam_cameron:
     call screen v12s7_seating_front
 
 label v12s7_sam2:
-    $ v12s7_samantha2 = True
+    $ freeroam9.add("samantha2")
     $ v12s7_seenList = []
 
     show screen murder_button_overlay(samantha)
@@ -4984,7 +4984,7 @@ label v12s7_samantha_kill:
     call screen v12s7_right_walkway_back
 
 label v12s7_cameron2:
-    $ v12s7_cameron = True
+    $ freeroam9.add("cameron")
     $ v12s7_seenList = []
 
     show screen murder_button_overlay(cameron)
@@ -5114,13 +5114,13 @@ label v12s7_cameron_kill:
     call screen v12s7_rear_gallery
 
 label v12s7_nora1:
-    $ v12s7_nora = True
+    $ freeroam9.add("nora")
     $ v12s7_seenList = []
 
     if not v12s7_aubrey_moved:
         $ v12s7_seenList.append(aubrey)
 
-    if v12s7_riley_moved and not v12s7_riley2:
+    if v12s7_riley_moved and not "riley2" in freeroam9:
         $ v12s7_seenList.append(riley)
 
     show screen murder_button_overlay(nora)
@@ -5485,12 +5485,12 @@ label v12s7_nora_kill:
         call screen v12s7_balcony_left
 
 label v12s7_chris1:
-    $ v12s7_chris = True
+    $ freeroam9.add("chris")
     $ v12s7_seenList = []
 
     show screen murder_button_overlay(chris)
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1 # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
         #with dissolve
     else:
@@ -5502,7 +5502,7 @@ label v12s7_chris1:
     stop music fadeout 3
     play music "music/v12/Track Scene 7_9.mp3" fadein 2
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1a # FPP. Same 1, phone still in air, looking at mc, mouth open
         with dissolve
     else:
@@ -5511,7 +5511,7 @@ label v12s7_chris1:
 
     ch "I'm trying to get a signal. I heard if you put foil around your phone in direct sunlight you'll get at least a bar of service. Do you know where I can find some foil?"
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1b # FPP. same 1, now facing mc phone by his side, mouth closed
         with dissolve
     else:
@@ -5520,7 +5520,7 @@ label v12s7_chris1:
 
     u "You need your phone that bad?"
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1c # FPP. Same 1b, mouth open
         with dissolve
     else:
@@ -5529,7 +5529,7 @@ label v12s7_chris1:
 
     ch "Yeah I do."
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1b
         with dissolve
     else:
@@ -5538,7 +5538,7 @@ label v12s7_chris1:
 
     u "You and Sebastian must be planning something big."
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1c
         with dissolve
     else:
@@ -5547,7 +5547,7 @@ label v12s7_chris1:
 
     ch "It's more than just us, what's going on is a serious tradition for both frats and something that needs one hundred percent focus and respect."
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1b
         with dissolve
     else:
@@ -5556,7 +5556,7 @@ label v12s7_chris1:
 
     u "Well man, your phone isn't going to work out here. It just won't."
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1c
         with dissolve
     else:
@@ -5565,7 +5565,7 @@ label v12s7_chris1:
 
     ch "*Sighs*"
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1b
         with dissolve
     else:
@@ -5617,7 +5617,7 @@ label v12s7_chris1:
 
     ch "Thanks."
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr3 # TPP. Show mc walking away
         with dissolve
     else:
@@ -5643,7 +5643,7 @@ label v12s7_chris_kill:
     stop music fadeout 3
     play music "music/v12/Track Scene 7_7.mp3" fadein 2
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1c # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
         with dissolve
     else:
@@ -5652,7 +5652,7 @@ label v12s7_chris_kill:
 
     ch "What are you doing?"
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1b # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
         with dissolve
     else:
@@ -5661,7 +5661,7 @@ label v12s7_chris_kill:
 
     u "I just killed you."
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1c # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
         with dissolve
     else:
@@ -5670,7 +5670,7 @@ label v12s7_chris_kill:
 
     ch "What are you talking about?"
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1b # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
         with dissolve
     else:
@@ -5679,7 +5679,7 @@ label v12s7_chris_kill:
 
     u "The game that we're all doing, I'm the killer, I just killed you."
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1c # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
         with dissolve
     else:
@@ -5688,7 +5688,7 @@ label v12s7_chris_kill:
 
     ch "Okay cool, I'm dead."
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1b # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
         with dissolve
     else:
@@ -5697,7 +5697,7 @@ label v12s7_chris_kill:
 
     u "*Chuckles* Bro, you gotta go sit in the hallway."
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1c # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
         with dissolve
     else:
@@ -5706,7 +5706,7 @@ label v12s7_chris_kill:
 
     ch "I'm really not tryna move."
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1b # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
         with dissolve
     else:
@@ -5715,7 +5715,7 @@ label v12s7_chris_kill:
 
     u "Those are the rules."
 
-    if v12s7_emily and emily not in v12s7_killList:
+    if "emily" in freeroam9 and emily not in v12s7_killList:
         scene v12ferchr1c # FPP. show chris, Chris is holding his phone up trying to get a signal, looking up at phone, mouth closed
         with dissolve
     else:
@@ -5735,7 +5735,7 @@ label v12s7_chris_kill:
     call screen v12s7_kitchen
 
 label v12s7_mrlee:
-    $ v12s7_mrlee = True
+    $ freeroam9.add("lee")
 
     scene v12ferlee1 # FPP. Show mr lee, neutral face, mouth closed
     #with dissolve
@@ -5776,10 +5776,10 @@ label v12s7_mrlee:
     call screen v12s7_rear_gallery
 
 label v12s7_josh1:
-    $ v12s7_josh = True
+    $ freeroam9.add("josh")
 
     $ v12s7_seenList = []
-    if (not v12s7_riley_moved or v12s7_riley2) and riley not in v12s7_killList:
+    if (not v12s7_riley_moved or "riley2" in freeroam9) and riley not in v12s7_killList:
         $ v12s7_seenList.append(riley)
     if chloe not in v12s7_killList:
         $ v12s7_seenList.append(chloe)
@@ -5896,7 +5896,7 @@ label v12s7_josh1:
     call screen v12s7_right_viewpoint
 
 label v12s7_josh2:
-    $ v12s7_josh2 = True
+    $ freeroam9.add("josh2")
     $ v12s7_seenList = []
 
     show screen murder_button_overlay(josh)
@@ -6116,7 +6116,7 @@ label v12s7_josh_kill:
     call screen v12s7_utility
 
 label v12s7_emily1:
-    $ v12s7_emily = True
+    $ freeroam9.add("emily")
     $ v12s7_seenList = [lauren]
 
     show screen murder_button_overlay(emily)
@@ -6170,7 +6170,7 @@ label v12s7_emily1:
     call screen v12s7_seating_back
 
 label v12s7_emily2:
-    $ v12s7_emily2 = True
+    $ freeroam9.add("emily2")
     $ v12s7_seenList = []
 
     show screen murder_button_overlay(emily)

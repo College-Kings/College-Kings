@@ -485,7 +485,7 @@ label v12_mc_chilling:
         menu:
             "Call Cameron":
                 $ add_point(KCT.BRO)
-                $ v12_call_cameron = True
+
                 scene v12mor23 # TPP. MC holding his phone, mouth closed
                 with dissolve
                 u "(*Sighs* He should at least know she's drunk.)"
@@ -782,7 +782,7 @@ label v12_mc_chilling:
         menu:
             "Call Cameron":
                 $ add_point(KCT.BRO)
-                $ v12_call_cameron = True
+
                 scene v12mor24d
                 with dissolve
 

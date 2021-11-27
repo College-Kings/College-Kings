@@ -517,7 +517,6 @@ label v12_riddle_riley:
             menu:
                 "Kiss her":
                     $ add_point(KCT.BOYFRIEND)
-                    $ v12_kiss_riley = True
 
                     scene v12rrl41 # TPP MC kisses Riley
                     with dissolve

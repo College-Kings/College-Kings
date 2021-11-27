@@ -537,10 +537,6 @@ label after_load:
         except NameError: v11_underground_rose = False
         try: v12_told_chloe
         except NameError: v12_told_chloe = False
-        try: v12_kiss_riley
-        except NameError: v12_kiss_riley = False
-        try: v12_amber_tell_riley
-        except NameError: v12_amber_tell_riley = False
         try: v12_fight_win
         except NameError: v12_fight_win = False
         try: v12_chase_robber
@@ -557,62 +553,8 @@ label after_load:
         except NameError: v11_lindsey_run = False
         try: v12_help_chris
         except NameError: v12_help_chris = 0
-
-        try: v12s7_lauren
-        except NameError: v12s7_lauren = False
-        try: v12s7_emily
-        except NameError: v12s7_emily = False
-        try: v12s7_emily2
-        except NameError: v12s7_emily2 = False
-        try: v12s7_samantha
-        except NameError: v12s7_samantha = False
-        try: v12s7_samantha2
-        except NameError: v12s7_samantha2 = False
-        try: v12s7_msrose
-        except NameError: v12s7_msrose = False
-        try: v12s7_penelope
-        except NameError: v12s7_penelope = False
-        try: v12s7_chris
-        except NameError: v12s7_chris = False
-        try: v12s7_imre
-        except NameError: v12s7_imre = False
-        try: v12s7_imre2
-        except NameError: v12s7_imre2 = False
-        try: v12s7_lindsey
-        except NameError: v12s7_lindsey = False
-        try: v12s7_lindsey2
-        except NameError: v12s7_lindsey2 = False
-        try: v12s7_josh
-        except NameError: v12s7_josh = False
-        try: v12s7_josh2
-        except NameError: v12s7_josh2 = False
-        try: v12s7_chloe
-        except NameError: v12s7_chloe = False
-        try: v12s7_riley
-        except NameError: v12s7_riley = False
         try: v12s7_riley_moved
         except NameError: v12s7_riley_moved = False
-        try: v12s7_riley2
-        except NameError: v12s7_riley2 = False
-        try: v12s7_riley3
-        except NameError: v12s7_riley3 = False
-        try: v12s7_mrlee
-        except NameError: v12s7_mrlee = False
-        try: v12s7_cameron
-        except NameError: v12s7_cameron = False
-        try: v12s7_ryan
-        except NameError: v12s7_ryan = False
-        try: v12s7_amber
-        except NameError: v12s7_amber = False
-        try: v12s7_aubrey
-        except NameError: v12s7_aubrey = False
-        try: v12s7_aubrey2
-        except NameError: v12s7_aubrey2 = False
-        try: v12s7_nora
-        except NameError: v12s7_nora = False
-        try: v12s7_charli
-        except NameError: v12s7_charli = False
-
         try: v12s7_lindsey_moved
         except NameError: v12s7_lindsey_moved = False
         try: v12s7_aubrey_moved
@@ -643,12 +585,8 @@ label after_load:
         except NameError: v12_nora_sex = False
         try: v12_nora_points
         except NameError: v12_nora_points = 0
-        try: v12_call_cameron
-        except NameError: v12_call_cameron = False
         try: v12s33_door1
         except NameError: v12s33_door1 = False
-        try: v12_call_cameron
-        except NameError: v12_call_cameron = False
         try: v12s33_door2
         except NameError: v12s33_door2 = False
         try: v12s33_door3

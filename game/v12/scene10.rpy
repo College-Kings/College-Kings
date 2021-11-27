@@ -213,7 +213,6 @@ label v12_amber_bus:
 
         "Say something":
             $ add_point(KCT.BRO)
-            $ v12_amber_tell_riley = True
 
             u "You should just get it over with and tell her what's up."
 
