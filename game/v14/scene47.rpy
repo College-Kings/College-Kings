@@ -261,7 +261,7 @@ label v14s47:
 
     stop music fadeout 3
 
-    play music "music/v14/Track Scene 47_2.mp3" fadein 2
+    play music "music/v12/Scene 32/Track Scene 32_2.mp3" fadein 2
 
     pause 0.75
 
