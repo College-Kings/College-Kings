@@ -13,7 +13,7 @@ label v13s16a:
 
     ri "I want you to do whatever you want to me..."
 
-    play music "music/v13/Track Scene 16a_1.mp3" fadein 2
+    play music "music/v12/Scene 35a/Track Scene 35a_1.mp3" fadein 2
 
     scene v13s16a_1a # FPP Same as 1, Riley's mouth closed
     with dissolve
