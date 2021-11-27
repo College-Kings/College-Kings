@@ -44,6 +44,7 @@ default boyfriend = 2
 default troublemaker = 1
 
 # 1.0 - 6.0
+default freeroam1 = []
 default v1_sda = False
 default evelynmove = False
 default name = "Alex"
@@ -59,13 +60,7 @@ default meetlauren = False
 default laurenrs = False
 default phoneTutorialPage = 1
 default freeRoamTutorialPage = 1
-default v1_freeRoam1_riley = False
-default v1_freeRoam1_elijah = False
-default v1_freeRoam1_nora = False
-default v1_freeRoam1_aubrey = False
 default funofelijah = False
-default v1_freeRoam1_chrisGone = False
-default v1_talkToRiley = False
 default juliaismom = 0
 default v1_laurenPoints = 0
 default v1_hitOnNora = False

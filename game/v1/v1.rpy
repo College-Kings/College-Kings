@@ -881,7 +881,7 @@ label starta: #for compatibility only
     label fr1a2: #for compatibility only
 
     label v1_freeRoam1_riley:
-        $ v1_talkToRiley = True
+        $ freeroam1.append("riley")
         
         scene s50ri
 
@@ -971,7 +971,6 @@ label starta: #for compatibility only
 
                 ri "Hmmm.. I'll think about it."
 
-        $ v1_freeRoam1_riley = True
         call screen v1_freeRoam1_1
         with dissolve
 
@@ -988,6 +987,8 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_1
 
     label v1_freeRoam1_elijah:
+        $ freeroam1.append("elijah")
+
         scene s50el
         u "Hey, you're Elijah right?"
 
@@ -1073,8 +1074,6 @@ label starta: #for compatibility only
 
                 el "Now go and bother someone else."
                 
-        $ v1_freeRoam1_elijah = True
-
         call screen v1_freeRoam1_1
 
     label v1_freeRoam1_elijah2:
@@ -1089,6 +1088,8 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_1
 
     label v1_freeRoam1_chris:
+        $ freeroam1.append("chris")
+    
         scene s55ch1
         ch "Babe... you know I gotta prepare our rush party."
 
@@ -1128,11 +1129,12 @@ label starta: #for compatibility only
         ch "Bye babe."
 
         no "Bye."
-        $ v1_freeRoam1_chrisGone = True
-        
+       
         call screen v1_freeRoam1_2
 
     label v1_freeRoam1_nora:
+        $ freeroam1.append("nora")
+    
         scene s56no1a
         u "Hey, could you tell me where the dorms are?"
 
@@ -1162,7 +1164,6 @@ label starta: #for compatibility only
 
                 u "Thanks."
 
-    $ v1_freeRoam1_nora = True
     call screen v1_freeRoam1_2
 
     label v1_freeRoam1_nora2:
@@ -1182,6 +1183,8 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_2
 
     label v1_freeRoam1_aubrey:
+        $ freeroam1.append("aubrey")
+    
         if config_censored:
             call screen censoredPopup("v1_freeRoam1_aubrey2")
 
@@ -1194,8 +1197,6 @@ label starta: #for compatibility only
         u "(Oh my god... she's so fucking hot.)"
         au "YESSSSS, FASTER!"
         u "(I should probably stop peeking, before I get caught.)"
-
-        $ v1_freeRoam1_aubrey = 1
         
         stop music fadeout 2.0
         call screen v1_freeRoam1_3
@@ -1473,7 +1474,7 @@ label efra:
     with dissolve
     imre "Hey, come on in Riley. This is my roommate [name]."
 
-    if v1_talkToRiley:
+    if "riley" in freeroam1:
         scene s67
         with dissolve
         ri "Yeah, we've met."
@@ -1928,7 +1929,7 @@ label efra:
 label at_bd:
     imre "And to be part of a frat."
 
-    if v1_freeRoam1_aubrey:
+    if "aubrey" in freeroam1:
         scene s79a
         with dissolve
 
@@ -3183,7 +3184,7 @@ label v1_freeRoam2_josh:
     scene fr2jo2b
     with dissolve
 
-    if v1_freeRoam1_aubrey:
+    if "aubrey" in freeroam1:
         u "(Holy shit, is this the girl that got fucked in the dorm opposite of ours?!)"
 
         u "(She's so fucking hot.)"

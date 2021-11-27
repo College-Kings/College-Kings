@@ -9,7 +9,7 @@ screen v1_freeRoam1_1():
         idle "images/v1/fr1riley.webp"
         hover "images/v1/fr1rileyhover.webp"
 
-        if not v1_freeRoam1_riley:
+        if not "riley" in freeroam1:
             action [Hide("freeRoamTutorial"), Jump("v1_freeRoam1_riley")]
         else:
             action Jump("v1_freeRoam1_riley2")
@@ -20,7 +20,7 @@ screen v1_freeRoam1_1():
         idle "images/v1/fr1elijah.webp"
         hover "images/v1/fr1elijahoverh.webp"
 
-        if not v1_freeRoam1_elijah:
+        if not "elijah" in freeroam1:
             action [Hide("freeRoamTutorial"), Jump("v1_freeRoam1_elijah")]
         else:
             action Jump("v1_freeRoam1_elijah2")
@@ -37,7 +37,7 @@ screen v1_freeRoam1_1():
 screen v1_freeRoam1_2():
     tag v1_freeRoam1
 
-    if not v1_freeRoam1_chrisGone:
+    if not "chris" in freeroam1:
         add "images/v1/s55.webp"
 
         # Chris + Nora characters
@@ -56,7 +56,7 @@ screen v1_freeRoam1_2():
             xalign 0.74
             idle "images/v1/fr1nora.webp"
             hover "images/v1/fr1norahover.webp"
-            if not v1_freeRoam1_nora:
+            if not "nora" in freeroam1:
                 action Jump("v1_freeRoam1_nora")
             else:
                 action Jump("v1_freeRoam1_nora2")
@@ -89,7 +89,7 @@ screen v1_freeRoam1_3():
         xalign 0.26
         idle "images/v1/fr1dorm.webp"
         hover "images/v1/fr1dormhover.webp"
-        if not v1_freeRoam1_aubrey:
+        if not "aubrey" in freeroam1:
             action Jump("v1_freeRoam1_aubrey")
         else:
             action Jump("v1_freeRoam1_aubrey2")
