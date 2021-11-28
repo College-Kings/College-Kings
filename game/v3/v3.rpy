@@ -239,7 +239,7 @@ label v3start:
 
         u "And before you ask, yes, she's hot."
 
-        if caughtpeekingaubrey:
+        if v2_caughtpeeking:
             scene s208a
             with dissolve
 
@@ -285,7 +285,7 @@ label v3start:
 
         u "Anyways, then I went costume shopping for Mr. Lee's class with her."
 
-        if caughtpeekingpenelope:
+        if v2_caughtpeeking:
             u "And we were having a great time..."
 
             scene s208a
@@ -1378,9 +1378,7 @@ label conl:
 
 
     if costumeaubrey: # did you meet aubrey?
-
-        if caughtpeekingaubrey: # did she catch you?
-
+        if v2_caughtpeeking: # did she catch you?
             if caughtpeekingaubreycounter: # did you talk your way out?
                 jump talkedout
 

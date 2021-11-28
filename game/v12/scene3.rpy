@@ -289,7 +289,7 @@ label v12_penelope_roof:
 
             u "Do you think I'm a good guy?"
 
-            if (laurenrs and v11_aubrey_sex) or (v7_emily_bowling) or (caughtpeekingpenelope):
+            if (laurenrs and v11_aubrey_sex) or (v7_emily_bowling) or (not costumeaubrey and v2_caughtpeeking):
                 scene v12penr10a
                 with dissolve
 

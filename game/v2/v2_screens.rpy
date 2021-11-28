@@ -5,27 +5,27 @@ screen costumes():
         idle "images/v2/try.webp"
         hover "images/v2/tryh.webp"
         pos (256, 802)
-        if costumeaubrey and not caughtpeekingaubrey:
+        if costumeaubrey and not v2_caughtpeeking:
             action Jump("try1")
-        elif not costumeaubrey and not caughtpeekingpenelope:
+        elif not costumeaubrey and not v2_caughtpeeking:
             action Jump("try1p")
                 
     imagebutton:
         idle "images/v2/try.webp"
         hover "images/v2/tryh.webp"
         pos (738, 802)
-        if costumeaubrey and not caughtpeekingaubrey:
+        if costumeaubrey and not v2_caughtpeeking:
             action Jump("try2")
-        elif not costumeaubrey and not caughtpeekingpenelope:
+        elif not costumeaubrey and not v2_caughtpeeking:
             action Jump("try2p")
 
     imagebutton:
         idle "images/v2/try.webp"
         hover "images/v2/tryh.webp"
         pos (1219, 802)
-        if costumeaubrey and not caughtpeekingaubrey:
+        if costumeaubrey and not v2_caughtpeeking:
             action Jump("try3")
-        elif not costumeaubrey and not caughtpeekingpenelope:
+        elif not costumeaubrey and not v2_caughtpeeking:
             action Jump("try3p")
 
     imagebutton:

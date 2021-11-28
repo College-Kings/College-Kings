@@ -2732,9 +2732,9 @@ label try1new:
                     if config_censored:
                         call screen censoredPopup("v2_nsfwSkipLabel1")
 
-                    $ caughtpeekingaubrey = renpy.random.choice([True, False])
+                    $ v2_caughtpeeking = renpy.random.choice([True, False])
 
-                    if not caughtpeekingaubrey:
+                    if not v2_caughtpeeking:
                         scene s164a # Aubrey changing good view
                         with dissolve
 
@@ -2872,9 +2872,9 @@ label try2new:
                     if config_censored:
                         call screen censoredPopup("v2_nsfwSkipLabel2")
 
-                    $ caughtpeekingaubrey = renpy.random.choice([True, False])
+                    $ v2_caughtpeeking = renpy.random.choice([True, False])
 
-                    if not caughtpeekingaubrey:
+                    if not v2_caughtpeeking:
                         scene s168a # Aubrey changing good view
                         with dissolve
 
@@ -3024,9 +3024,9 @@ label try3new:
                     if config_censored:
                         call screen censoredPopup("v2_nsfwSkipLabel3")
 
-                    $ caughtpeekingaubrey = renpy.random.choice([True, False])
+                    $ v2_caughtpeeking = renpy.random.choice([True, False])
 
-                    if not caughtpeekingaubrey:
+                    if not v2_caughtpeeking:
                         scene s172a # Aubrey changing good view
                         with dissolve
 
@@ -3261,9 +3261,9 @@ label try4new:
                     if config_censored:
                         call screen censoredPopup("v2_nsfwSkipLabel4")
 
-                    $ caughtpeekingpenelope = renpy.random.choice([True, False])
+                    $ v2_caughtpeeking = renpy.random.choice([True, False])
 
-                    if not caughtpeekingpenelope:
+                    if not v2_caughtpeeking:
                         scene s183a # pen changing good view
                         with dissolve
 
@@ -3406,9 +3406,9 @@ label try5new:
                     if config_censored:
                         call screen censoredPopup("v2_nsfwSkipLabel5")
 
-                    $ caughtpeekingpenelope = renpy.random.choice([True, False])
+                    $ v2_caughtpeeking = renpy.random.choice([True, False])
 
-                    if not caughtpeekingpenelope:
+                    if not v2_caughtpeeking:
                         scene s183a
                         with dissolve
 
@@ -3543,9 +3543,9 @@ label try6new:
                     if config_censored:
                         call screen censoredPopup("v2_nsfwSkipLabel6")
 
-                    $ caughtpeekingpenelope = renpy.random.choice([True, False])
+                    $ v2_caughtpeeking = renpy.random.choice([True, False])
 
-                    if not caughtpeekingpenelope:
+                    if not v2_caughtpeeking:
                         scene s180a # pen changing good view
                         with dissolve
 
@@ -3884,7 +3884,7 @@ label buy3:
     jump buyCont
 
 label buyCont:
-    if caughtpeekingaubrey:
+    if v2_caughtpeeking:
         jump eve1
 
     else:
@@ -3960,7 +3960,7 @@ label buy3p:
     jump v1_buyContinuePenelope
 
 label v1_buyContinuePenelope:
-    if caughtpeekingpenelope:
+    if v2_caughtpeeking:
         jump eve1
 
     else:
