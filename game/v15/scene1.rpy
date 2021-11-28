@@ -54,7 +54,7 @@ label v15s1:
             "Blame Chris":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BOYFRIEND)
-                $ v15_Blame_Chris = True
+                $ v15_blame_chris = True
 
                 scene v15s1_3c # FPP. same as v15s1_3b Imre increases to a fully angry expression, Imre places his hands to his sides
                 with dissolve
@@ -77,7 +77,7 @@ label v15s1:
 
             "Blame Nora":
                 $ add_point(KCT.BRO)
-                $ v15_Blame_Nora = True
+                $ v15_blame_nora = True
 
                 scene v15s1_3
                 with dissolve
@@ -103,7 +103,7 @@ label v15s1:
 
         imre "*Sighs*"
 
-        if v15_Blame_Nora:
+        if v15_blame_nora:
             scene v15s1_3e # FPP. same as v15s1_3b Imre raises his hand above his head in anger, while rolling his eyes, mouth is still open
             with dissolve
 
@@ -321,7 +321,7 @@ label v15s1:
 
     menu:
         "Stick up for Nora":
-            $ v15_Stuck_Up_For_Nora
+            $ v15_stuck_up_for_nora = True
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
 

@@ -84,7 +84,7 @@ label v15s14:
             u "*Sighs*"
 
         "Let's go":
-            $ v15s14_LetsGo = True
+            $ v15s14_lets_go = True
 
             u "Okay, let's go."
 
@@ -108,7 +108,7 @@ label v15s14:
 
     pause 1
 
-    if v15s14_LetsGo:
+    if v15s14_lets_go:
         scene v15s14_9 # FPP. Show Ms Rose's hand on MC's thigh near his crotch while she drives.
         with dissolve
 

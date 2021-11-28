@@ -1328,7 +1328,7 @@ label v15s4:
 
         menu:
             "Smoke weed":
-                $ SmokedWithAutumn = True
+                $ smoked_with_autumn = True
                 scene v15s4_59f
                 with dissolve
 
@@ -1405,7 +1405,7 @@ label v15s4:
 
         au "*Laughs* Sure, yeah. Let's go with that..."
 
-        if SmokedWithAutumn:
+        if smoked_with_autumn:
             scene v15s4_59g # FPP. Same as v15s4_59f, Autumn holding out the joint for MC, Autumn slight smile, mouth closed.
             with dissolve
 
