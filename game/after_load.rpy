@@ -601,8 +601,6 @@ label after_load:
         except NameError: v11_riley_roomate = False
         try: v11s25_beer
         except NameError: v11s25_beer = True
-        try: v11_bartender_have_gf
-        except NameError: v11_bartender_have_gf = False
         try: msrosers
         except NameError: msrosers = False
         try: v11_solo_question

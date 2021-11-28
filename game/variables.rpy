@@ -249,7 +249,6 @@ default sammad = False
 default v11_amber_sauna_convo = False
 default v11_aubrey_blue_outfit = False
 default v11_aubrey_sex = False
-default v11_bartender_have_gf = False
 default v11_check_on_nora = False
 default v11_chloe_sex = False
 default v11_fucked_candy = False
