@@ -224,7 +224,7 @@ label v15s18:
     if joinwolves and costume == 3:
         u "In fact, is that my fucking cowboy costume?"
 
-    if joinapes and costume == 3:
+    elif costume == 3:
         u "It looked exactly like yours actually... Is that-"
 
     scene v15s18_11d
