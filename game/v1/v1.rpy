@@ -166,9 +166,15 @@ label starta: #for compatibility only
     $ emily.messenger.addReply(_("Yeah... I'll see you there."), v1_reply1)
     $ emily.messenger.addReply(_("You cheated on me.\nGo to hell!"), v1_reply2)
 
-    show screen phoneTutorial
+    show screen tutorial([
+        "This is the phone screen. You can access your phone whenever the phone icon in the top right corner appears.",
+        "Blue dots show notifications. New notifications are usually accommpanied by a buzz sound. Currently you have a new message waiting for you.",
+        "How you reply to messages matters just as much as any other decision.",
+        "Over the course of the game you will also unlock all kinds of new apps, such as statistics or social media platforms.",
+        "Lastly, if you ever need to get to the homescreen, just click the bottom border of the phone, or the phone icon.",
+    ])
     call screen phone
-    hide screen phoneTutorial
+    hide screen tutorial
     
     stop music fadeout 3
     scene s11
@@ -197,7 +203,14 @@ label starta: #for compatibility only
 
     ju "You're not planning on joining one of those, are you?"
 
-    show screen kctTutorial
+    show screen tutorial([
+        "Your decisions strongly influence the way the story progresses and how other characters perceive you.",
+        "With each choice you'll either gain Bro, Boyfriend or Troublemaker points.",
+        "Bros put the squad first, boyfriends show strong affinity towards a few selected individuals and troublemakers seek thrills and take risks.",
+        "These points are then used to identify your Key Character Trait (KCT).  Each KCT will unlock different possibilities and choices, but you can only have one active at a time.",
+        "You can read more about each individual KCT in the Stats app on your phone.",
+    ])
+    
     menu:
         "Could be fun":
             hide s14
@@ -215,7 +228,7 @@ label starta: #for compatibility only
 
             u "No, I don't think so, Julia."
 
-    hide screen kctTutorial
+    hide screen tutorial
 
     label aa_db: #for compatibility only
     hide s14a
@@ -875,7 +888,11 @@ label starta: #for compatibility only
     play sound "sounds/vibrate.mp3"
     
     # Enter free roam
-    show screen freeRoamTutorial
+    show screen tutorial([
+        "At certain parts of the game, you'll unlock free roam.",
+        "During free roam, you choose where you go and who you want to talk to next.",
+        "You will also be able to use your phone and you might just find some hidden content."
+    ])
     call screen v1_freeRoam1_1
     with dissolve
     label fr1a2: #for compatibility only
