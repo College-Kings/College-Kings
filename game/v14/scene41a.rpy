@@ -295,6 +295,7 @@ label v14s41a:
 
             "Stand up for Chloe":
                 $ add_point(KCT.BOYFRIEND)
+                $ v14s41a_standup = True
 
                 scene v14s41a_5l
                 with dissolve

@@ -118,10 +118,6 @@ label v14s19:
 label v14s19_continue:
     $ v14_chloe_wolves = chloe_board.approach.id == "Wolves"
     $ v14_realwolf = chloe_board.selected_task == v14s19_real_wolf
-    $ v14_plushwolf = chloe_board.selected_task == v14s19_plush_wolf
-    
-    $ v14_chloe_apes = chloe_board.approach.id == "Apes"
-    $ v14_chloe_grayson = chloe_board.selected_task == v14s19_seduce_grayson
     $ v14_chloe_cameron = chloe_board.selected_task == v14s19_talk_cameron
 
     scene v14s19_99 # TPP. Show MC and Chloe standing infront of The Planning Board (a white board), both looking at the board, camera showing MC and Chloe, not the actual content of the board, MC and Chloe looking inquisitevely at the board, MC mouth open, Chloe mouth closed
@@ -129,7 +125,7 @@ label v14s19_continue:
 
     u "From the options we have, these are the final decisions I'd go with."
 
-    if v14_chloe_apes:
+    if (v14_help_chloe and not v14_chloe_wolves):
         cl "Getting the Apes to side with us could take a lot of convincing but..."
         cl "If we manage to pull it off, a Chicks and Apes alliance would make for an interesting future of the Chicks."
 

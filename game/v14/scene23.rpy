@@ -508,7 +508,6 @@ label v14s23:
 
             ch "That's what I'm-"
 
-    #elif v14_plushwolf: # Placeholder for choosing the plushie wolf on Planning board
     else:
         scene v14s23_4a
         with dissolve

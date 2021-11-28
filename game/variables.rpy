@@ -400,9 +400,9 @@ default v13s9_go_to_concert = False
 default chloe_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/chloe_background.webp", money=1500)
 default v14_chloe_wolves = False ##APPROACH A
 default v14_realwolf = False ##TASK A2A
-default v14_plushwolf = False ##TASK A2B
-default v14_chloe_apes = False ##APPROACH B
-default v14_chloe_grayson = False ##TASK B2A
+#default v14_plushwolf = False ##TASK A2B (v14_plushwolf = v14_chloe_wolves and not v14_realwolf)
+#default v14_chloe_apes = False ##APPROACH B (v14_chloe_apes = v14_help_chloe and not v14_chloe_wolves)
+#default v14_chloe_grayson = False ##TASK B2A (v14_chloe_grayson = (v14_help_chloe and not v14_chloe_wolves) and not v14_chloe_cameron)
 default v14_chloe_cameron = False ##TASK B2B
 
 ## Lindsey Planing Board
@@ -465,6 +465,7 @@ default v14s31b_smoke_weed_with_aubrey = False # s31b smoking weed with Aubrey a
 default v14s31bTrustChloe = False # MC trust Chloe alone with Grayson
 default v14s37_focus_on_us = False # Tell Penelope to focus on them during the date.
 default v14s39_id_wait = False # Tell Penelope you'd wait till they got home
+default v14s41a_standup = False #stand up for Chloe during the Apes meeting
 default v14s46a_love_lauren_more = False # MC love Lauren more because of her sex experimenting on MC.
 default v14s47_linds_driver = False
 default v14s47_linds_hips = False
