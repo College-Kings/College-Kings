@@ -15,6 +15,9 @@ init python:
                 "pop_culture": False,
                 "prankster": False,
                 "quirk_sensitive_stomach": False
+                "quirk_tough_tummy": False,
+                "quirk_hunter": False,
+                "quirk_not_hunter": False,
             }
 
             self.relationships = set()
@@ -35,4 +38,6 @@ init offset = 1
 default mc = PlayableCharacter(profile_pictures[0])
 
 default quirk_sensitive_stomach = False
+default quirk_tough_tummy = False
 default quirk_hunter = False
+default quirk_not_hunter = False
