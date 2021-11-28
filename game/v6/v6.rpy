@@ -54,14 +54,12 @@ label v6start:
             "Find Imre":
                 $ add_point(KCT.BRO)
                 $ chooseimre = True
-                $ meetchloe = False
 
                 jump imrecona
 
             "Keep talking to Amber":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ chooseimre = False
-                $ meetchloe = False
 
                 jump imreconc
 
@@ -70,7 +68,6 @@ label v6start:
             "Find Imre":
                 $ add_point(KCT.BRO)
                 $ chooseimre = True
-                $ meetchloe = False
 
                 jump imrecona
 
@@ -87,14 +84,12 @@ label v6start:
             "Help Imre":
                 $ add_point(KCT.BRO)
                 $ chooseimre = True
-                $ meetchloe = False
 
                 jump imreconb
 
             "Keep talking to Amber":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ chooseimre = False
-                $ meetchloe = False
 
                 jump imreconc
 
@@ -103,7 +98,6 @@ label v6start:
             "Help Imre":
                 $ add_point(KCT.BRO)
                 $ chooseimre = True
-                $ meetchloe = False
 
                 jump imreconb
 
@@ -1996,7 +1990,6 @@ label continuebd:
         menu:
             "It'll be an adventure":
                 $ add_point(KCT.BRO)
-                $ evelyndate = False
 
                 scene s524e
                 with dissolve
@@ -2246,7 +2239,6 @@ label continuebd:
 
                 menu:
                     "Fine, I'll come":
-                        $ meetemily = True
                         $ add_point(KCT.BOYFRIEND)
 
                         scene s531b # mc empathy
@@ -2336,7 +2328,6 @@ label continuebd:
                                 jump fz_b
 
                     "No. (Hang up)":
-                        $ meetemily = False
                         $ add_point(KCT.TROUBLEMAKER)
 
                         scene s531
@@ -2356,8 +2347,6 @@ label continuebd:
                         jump fy_bd
 
             else:
-                $ meetemily = True
-
                 scene s531b
                 with dissolve
 
@@ -2462,7 +2451,6 @@ label continuebd:
             stop sound
             play sound "sounds/rejectcall.mp3"
             $ add_point(KCT.TROUBLEMAKER)
-            $ meetemily = False
 
             scene s531d
             with dissolve
@@ -3686,7 +3674,7 @@ label fy_bd: # not gone to Emily's
                 u "(I should check my messages.)"
                 jump phoneag
 
-        if meetaubrey :
+        if meetaubrey:
             u "(I'll just go get changed and then it's straight to Aubrey's.)"
 
         else:
@@ -6556,7 +6544,7 @@ label wakeupa:
 
         menu:
             "Kiss her":
-                $ kisspenelope = True
+
                 if laurenrs:
                     $ add_point(KCT.TROUBLEMAKER)
                     $ add_point(KCT.BRO)
@@ -7222,7 +7210,6 @@ label v6_fr3guy1:
     menu:
         "Kylie":
             $ add_point(KCT.BRO)
-            $ kylie = True
 
             u "Yeah I agree, Kylie's way hotter."
 
@@ -7275,7 +7262,6 @@ label v6_fr3guy1:
 
         "Kourtney":
             $ add_point(KCT.BOYFRIEND)
-            $ kylie = False
 
             u "Definitely Kourtney."
 

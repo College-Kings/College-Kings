@@ -185,6 +185,7 @@ label v10_econ_class:
 
     scene v10eco8 # FPP. MC now stood infront of Ms rose at front of class, Show Ms. Rose, mouth open
     with dissolve
+
     if joinwolves:
         if v10_ms_r_kiss:
             ro "I just wanted to see how you were doing after... everything."
@@ -198,6 +199,7 @@ label v10_econ_class:
             with dissolve
 
             ro "Yeah, uhm. I'm actually really happy."
+
         else:
             ro "I just wanted to see how you were doing after... everything."
 

@@ -1913,7 +1913,6 @@ label thisbelauren:
 
             menu:
                 "This won't happen again":
-                    $ laurenemily = 2
                     $ add_point(KCT.BOYFRIEND)
 
                     u "Like I said, it was a stupid mistake. After it happened, I realized that's not what I want at all."
@@ -2028,7 +2027,6 @@ label thisbelauren:
                         u "(I need to go for a walk and clear my head.)"
 
                 "Open relationship?":
-                    $ laurenemily = 3
                     $ add_point(KCT.BRO)
                     $ add_point(KCT.TROUBLEMAKER)
                     $ laurenrs = False
@@ -2077,7 +2075,6 @@ label thisbelauren:
                     u "(I need to go for a walk and clear my head.)"
 
         "Deny the cheating":
-            $ laurenemily = 1
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
             $ laurenrs = True
@@ -6373,7 +6370,6 @@ label after_history:
 
     menu:
         "Do it":
-            $ apesTask2Try = True
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Fine! If you're that interested in looking at Mr. Lee's naked ass."
@@ -6383,7 +6379,6 @@ label after_history:
             ca "Haha, fuck you! Lemme get the cam running."
 
         "That's stupid and risky":
-            $ apesTask2Try = False
             $ add_point(KCT.BOYFRIEND)
 
             u "Nah, that's stupid as fuck. I'm not getting kicked out of school just to join the Apes."
@@ -6421,7 +6416,6 @@ label after_history:
 
     menu (fail_label="lee_pants_fail"): # 3 second timer default
         "Pull it":
-            $ apesTask2Success = True
             $ add_point(KCT.TROUBLEMAKER)
             $ apesVids += 1
             stop sound
@@ -6463,7 +6457,6 @@ label after_history:
             jump lee_pants_fail
 
 label lee_pants_fail:
-    $ apesTask2Success = False
     stop sound
     # No point changes here
 

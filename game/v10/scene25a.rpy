@@ -307,7 +307,6 @@ label v10_sam_kitchen:
     ca "Sam? Why are you sleeping on the couch?"
 
     if drinkWsam:
-
         scene v10skt8a # FPP. same camera as v10skt8, Show Cameron in the kitchen, angry look mouth open
         with dissolve
 

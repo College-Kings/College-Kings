@@ -1174,7 +1174,6 @@ label continuetrolley:
 label trolleyaa: # you don't press the lever
     stop sound
     $ add_point(KCT.BOYFRIEND)
-    $ trolleya = False
 
     scene s388 # hands away from lever
     with dissolve
@@ -1193,7 +1192,6 @@ label trolleyaa: # you don't press the lever
 label trolleyab: # you do press the lever
     stop sound
     $ add_point(KCT.BRO)
-    $ trolleya = True
     play sound "sounds/lever.mp3"
     scene s388e #you press lever
     with dissolve
@@ -1283,12 +1281,10 @@ label continueam:
             call screen trolleyProblem("trolleyba", "trolleybb")
 
         "I'd rather not":
-            $ trolleyskip = 2
             jump fb_b
 
 label trolleyba: # you don't press the lever
     stop sound
-    $ trolleyb = False
     $ add_point(KCT.TROUBLEMAKER)
     scene s388 # hands away from lever
     with dissolve
@@ -1316,7 +1312,7 @@ label trolleybb: # you do press the lever
     scene s390a # your face full of blood
     with vpunch
 
-    if trolleyb and "q2" in laurentest:
+    if "q2" in laurentest:
         $ grant_achievement("peta_public_enemy")
 
     u "Ahh fuck!"
@@ -1397,13 +1393,11 @@ label continuean:
             call screen trolleyProblem("trolleyca", "trolleycb")
 
         "I'd rather not":
-            $ trolleyskip = 1
 
             jump fb_b
 
 label trolleyca: # you don't press the lever
     stop sound
-    $ trolleyc = False
     $ add_point(KCT.BRO)
 
     scene s388 # hands away from lever
@@ -1422,7 +1416,6 @@ label trolleyca: # you don't press the lever
 
 label trolleycb: # you do press the lever
     stop sound
-    $ trolleyc = True
     $ add_point(KCT.BOYFRIEND)
     play sound "sounds/lever.mp3"
     scene s388e #you press lever
@@ -1525,7 +1518,6 @@ label continueao:
 
         "That was too far":
             $ add_point(KCT.TROUBLEMAKER)
-            $ laurenokay = False
 
             scene s382a
             with dissolve
@@ -1562,7 +1554,6 @@ label continueao:
             jump hospitala
 
 label skiptrolley:
-    $ trolleyskip = 3
     scene s382
     with fade
 
@@ -2793,7 +2784,6 @@ label hospitala:
                                     jump fl_a
 
                                 "Keep it to yourself":
-                                    $ tellschool = False
                                     $ add_point(KCT.BRO)
 
                                     jump fl_b
@@ -2810,14 +2800,11 @@ label hospitala:
 
             menu:
                 "Tell the school":
-
                     $ tellschool = True
                     $ add_point(KCT.BOYFRIEND)
                     jump fl_a
 
                 "Keep it to yourself":
-
-                    $ tellschool = False
                     $ add_point(KCT.BRO)
                     jump fl_b
 
@@ -3552,8 +3539,6 @@ label hospitala:
             jump adamattack
 
 label fl_b: # keep it to yourself
-    $ tellschool = False
-
     u "(It's best if I keep to myself. Telling the school would turn both Imre and Adam against me...)"
 
     stop music fadeout 2.0

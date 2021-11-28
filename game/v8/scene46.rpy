@@ -66,7 +66,7 @@ label v8_ending:
         if not hesitantwgrayson:
             u "(Grayson and I really hit it off in the woods, though that was some creepy shit. I think I made some headway with him, though)"
 
-        if hesitantwgrayson:
+        else:
             u "(Grayson was acting strange in the woods. Wonder what that was all about)"
 
         scene v8send6 # FPP. Show MC's phone on his bed, buzzing as if it has got a notification.
