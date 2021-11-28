@@ -10,7 +10,7 @@ screen v1_freeRoam1_1():
         hover "images/v1/fr1rileyhover.webp"
 
         if not "riley" in freeroam1:
-            action [Hide("freeRoamTutorial"), Jump("v1_freeRoam1_riley")]
+            action [Hide("tutorial"), Jump("v1_freeRoam1_riley")]
         else:
             action Jump("v1_freeRoam1_riley2")
 
@@ -21,7 +21,7 @@ screen v1_freeRoam1_1():
         hover "images/v1/fr1elijahoverh.webp"
 
         if not "elijah" in freeroam1:
-            action [Hide("freeRoamTutorial"), Jump("v1_freeRoam1_elijah")]
+            action [Hide("tutorial"), Jump("v1_freeRoam1_elijah")]
         else:
             action Jump("v1_freeRoam1_elijah2")
 
@@ -31,7 +31,7 @@ screen v1_freeRoam1_1():
         xalign 0.65
         idle "images/v1/fr1b.webp"
         hover "images/v1/fr1bhover.webp"
-        action [Hide("freeRoamTutorial"), Show("v1_freeRoam1_2")]
+        action [Hide("tutorial"), Show("v1_freeRoam1_2")]
 
 
 screen v1_freeRoam1_2():
