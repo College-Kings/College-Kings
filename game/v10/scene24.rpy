@@ -277,7 +277,7 @@ label v10_lauren_room:
         play music "music/v10/Track Scene 24_2.mp3" fadein 2
         menu:
             "Suck on her tits":
-                $ v10_lauren_suck = True
+                $ sceneList.add("v10_lauren")
 
                 # MC starts kissing around her boobs and nipples. Ensure this scene is detailed and long, kissing all over her upper body
                 image v10lautk = Movie(play="images/v10/Scene 24/v10lautk.webm", loop=True, image="images/v10/Scene 24/v10lautkStart.webp", start_image="images/v10/Scene 24/v10lautkStart.webp") # TPP MC tenderly kissing Lauren on upper chest, holding her breast and playing with her nipple

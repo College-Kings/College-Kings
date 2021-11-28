@@ -3,7 +3,7 @@
 # OUTFITS: SAME AS AMBER HOCO ENDING
 
 label hoco_amb_night:
-    $ v8_hocoamber = True
+    $ sceneList.add("v8_amber")
     stop music fadeout 3
     if config_censored:
         call screen censoredPopup("v8s5_nsfwSkipLabel1")

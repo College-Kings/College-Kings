@@ -226,7 +226,7 @@ label v10_riley_sex:
 
                     "Peek":
                         $ rileyrs = True
-                        $ v10_ri_sex = True
+                        $ sceneList.add("v10_riley")
 
                         scene v10srds1f
                         with dissolve
@@ -330,7 +330,7 @@ label v10_riley_sex:
                         u "It was."
             "Make a move":
                 $ rileyrs = True
-                $ v10_ri_sex = True
+                $ sceneList.add("v10_riley")
 
                 scene v10srds4a # TPP. Same camera as v10srds4. Show MC and Riley. Both smiling, mouths closed. MC puts his hand on Riley's towel and drops it to the floor.
                 with dissolve
@@ -570,7 +570,7 @@ label v10_riley_sex:
         menu:
             "Make a move":
                 $ rileyrs = True
-                $ v10_ri_sex = True
+                $ sceneList.add("v10_riley")
 
                 scene v10srds1f
                 with dissolve
@@ -821,7 +821,7 @@ label v10_riley_sex:
                     
                     "Peek":
                         $ rileyrs = True
-                        $ v10_ri_sex = True
+                        $ sceneList.add("v10_riley")
 
                         scene v10srds1f
                         with dissolve

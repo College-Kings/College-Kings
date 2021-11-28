@@ -392,7 +392,7 @@ label v10_amber_skatepark:
         with dissolve
         menu:
             "Let her":
-                $ v10_ambersex = True
+                $ sceneList.add("v10_amber")
                 show screen v10s26_amberSexOverlay
 
                 if config_censored:
@@ -710,7 +710,7 @@ label v10_amber_skatepark:
                     menu:
                         "Let her":
                             $ amberrs = True
-                            $ v10_ambersex = True
+                            $ sceneList.add("v10_amber")
 
                             if config_censored:
                                 call screen censoredPopup("v10s26_nsfwSkipLabel1")

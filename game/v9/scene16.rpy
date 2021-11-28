@@ -425,7 +425,7 @@ label v9_emily_dorm:
         menu:
             "Make a move on Emily":
                 u "(This feels like the right time)"
-                $ v9_em_dorm_scene = True
+                $ sceneList.add("v9_emily")
 
             "Head home":
                 scene v9emi37 # TPP. Show MC walking towards the exit of Emily's room, Emily in view still sat on the bed, cheeky grin, mouth open, MC smile, mouth closed.

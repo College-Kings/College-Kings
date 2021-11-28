@@ -45,23 +45,6 @@ default troublemaker = 1
 
 #Scenes
 default sceneList = set()
-default aubreysex2 = False
-default bathroomblowjob = False
-default v10_ambersex = False
-default v10_chloe_locker = False
-default v10_lauren_suck = False
-default v10_ri_sex = False
-default v11_rileysex = False
-default v13_chloe_sex = False
-default v13_rileysex = False
-default v3_aubsex = False
-default v6_emilysex = False
-default v7_rileysex = False
-default v8_chloesex = False
-default v8_hocoamber = False
-default v9_aubrey_lake = False
-default v9_em_dorm_scene = False
-default v14_satin_sex = False
 
 # 1.0 - 6.0
 default adamattack = 1

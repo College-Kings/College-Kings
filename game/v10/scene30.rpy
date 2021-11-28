@@ -168,7 +168,7 @@ label v10_chloe_gym:
         menu:
             "Look closer":
                 label v10s30_galleryScene:
-                $ v10_chloe_locker = True
+                $ sceneList.add("v10_chloe")
                 scene v10chg6a # FPP Same angle as c10chg6a, Close up shot of Chloe's butt while she's bending over
                 with dissolve
 

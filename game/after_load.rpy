@@ -515,20 +515,10 @@ label after_load:
         cameron.profile_picture = "images/nonplayable_characters/profile_pictures/cameron.webp"
         josh.profile_picture = "images/nonplayable_characters/profile_pictures/josh.webp"
 
-        try: v6_emilysex
-        except NameError: v6_emilysex = False
         try: v7_emily_bowling
         except NameError: v7_emily_bowling = False
-        try: v7_rileysex
-        except NameError: v7_rileysex = False
-        try: v8_chloesex
-        except NameError: v8_chloesex = False
-        try: v8_hocoamber
-        except NameError: v8_hocoamber = False
         try: v8_dodged_pipe
         except NameError: v8_dodged_pipe = False
-        try: v10_ambersex
-        except NameError: v10_ambersex = False
         try: v11_samantha_spa
         except NameError: v11_samantha_spa = False
         try: v11_underground_rose
@@ -633,8 +623,6 @@ label after_load:
         except NameError: v11_sit_with_lauren = True
         try: v11_msrose_scene
         except NameError: v11_msrose_scene = False
-        try: v11_rileysex
-        except NameError: v11_rileysex = False
         try: v11_overtake_points
         except NameError: v11_overtake_points = 0
         try: v11_hp_points
@@ -699,8 +687,6 @@ label after_load:
         except NameError: v13s9_go_to_concert = False
         try: v13s41_lindsey_points
         except NameError: v13s41_lindsey_points = 0
-        try: v13_rileysex
-        except NameError: v13_rileysex = False
         try: v13_emmysex
         except NameError: v13_emmysex = False
         try: v13_emilysex
@@ -713,8 +699,6 @@ label after_load:
         except NameError: v13s40fromgame = False
         try: v13_aubrey_vote
         except NameError: v13_aubrey_vote = "na"
-        try: v13_chloe_sex
-        except NameError: v13_chloe_sex = False
         try: v14_ryan_satin
         except NameError: v14_ryan_satin = False
 

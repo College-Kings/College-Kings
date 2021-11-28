@@ -457,7 +457,7 @@ label v11_riley_sex:
                 jump v11_imre_ryan_grapple
 
             "Do something about it":
-                $ v11_rileysex = True
+                $ sceneList.add("v11_riley")
                 $ riley.points += 1
 
                 u "Keep talking like that and I will."

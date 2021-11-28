@@ -760,7 +760,7 @@ label fr5aubrey1:
 
             if aubreyrs:
                 label v9_aubrey_scene_lake:
-                    $ v9_aubrey_lake = True
+                    $ sceneList.add("v9_aubrey")
 
                     scene v9slake6
                     with dissolve

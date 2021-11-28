@@ -8920,7 +8920,7 @@ label rileysexscene:
 
 # Pre-cursor to sex with Riley
     $ rileyrs = True
-    $ v7_rileysex = True
+    $ sceneList.add("v7_riley")
     
     scene ridrm1 # You knocking on Riley's dorm door (third person)
     with dissolve
@@ -15166,7 +15166,7 @@ label fr4aubrey1:
         menu:
             "Alright, let's go":
                 $ add_point(KCT.BRO)
-                $ bathroomblowjob = True
+                $ sceneList.add("v7_aubrey")
 
                 u "Yeah, alright. Let's go."
 

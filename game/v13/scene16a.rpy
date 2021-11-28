@@ -4,7 +4,7 @@
 # Time: Late night
 
 label v13s16a:
-    $ v13_rileysex = True
+    $ sceneList.add("v13_riley")
     $ rileyrs = True
 
     scene v13s16a_1 # FPP Show Riley in bed, MC on top of her and very close to her face. Riley with a sexy smile, mouth open

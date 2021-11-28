@@ -61,7 +61,7 @@ label v13s40:
 
     u "*Whispers* Lead the way."
 
-    $ v13_chloe_sex = True
+    $ sceneList.add("v13_chloe")
 
     scene v13s40_4 # TPP. Show Chloe grabbing MC's hand and walking through the hotel lobby, both slight smiles, mouths closed
     with dissolve

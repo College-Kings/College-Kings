@@ -2085,7 +2085,7 @@ label continuem: #for compatibility only
     menu:
         "Kiss her":
             $ aubreyrs = True
-            $ v3_aubsex = True
+            $ sceneList.add("v3_aubrey")
 
             stop music fadeout 2.0
             play music "music/msexy.mp3"

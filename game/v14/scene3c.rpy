@@ -302,7 +302,7 @@ label v14s03c:
 
     menu:
         "Go with her":
-            $ v14_satin_sex = True
+            $ sceneList.add("v14_satin")
             label v14s03c_sg:
                    
             $ add_point(KCT.TROUBLEMAKER)
