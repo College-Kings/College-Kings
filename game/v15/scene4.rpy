@@ -548,7 +548,7 @@ label v15s4:
             label v15s4_dog:
             $ dog_name = renpy.input(_("Choose the dog's name:"), default=_("Blue")).strip() or _("Blue")
 
-            if dog_name.upper() == "BLUE":
+            if dog_name.lower() == "blue":
                 u "(I should come up with a better name than that...)"
                 jump v15s4_dog
 

@@ -89,7 +89,7 @@ label v15s12:
 
         li "So, believe it or not, she has this master plan to get me absolutely hammered and then somehow get a recording of me saying something shitty about her and the Chicks."
 
-        scene v1v15s12_2e   # FPP. Same as v15s12_2d, but mouth open.
+        scene v15s12_2e   # FPP. Same as v15s12_2d, but mouth open.
         with dissolve
 
         u "What the fuck?"
@@ -331,7 +331,7 @@ label v15s12:
                     u "It's pretty serious between us, yeah. Chloe and I get along really well, and-"
 
                     # -Lindsey disappointed but then hides her pain behind a fake smile-
-                    scene v15s12_2l
+                    scene v15s12_2l   # FPP. Same as v15s12_2, but disappointed, fake smile, mouth open.
                     with dissolve
 
                     li "Great! That's so good. I'm really, really glad... Thanks for telling me."
@@ -610,7 +610,7 @@ label v15s12:
     scene v15s12_12   # TPP. MC in the hallway looking down at his phone in his hand.
     with dissolve
 
-    $ riley.newMessage("Hey! I'm assuming you'll be at Lauren's birthday party later?")
+    $ riley.newMessage("Hey! I'm assuming you'll be at Lauren's birthday party later?", queue=False)
     $ riley.addReply("Yeah, I'll be there.")
     $ riley.newMessage("Cool. FYI, the stores are running low on costumes, you need to hurry up and buy one! Lol")
     $ riley.addReply("Ah, shit... You're right.")
