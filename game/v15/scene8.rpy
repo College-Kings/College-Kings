@@ -69,6 +69,8 @@ label v15s8:
 
 # -Insert Planning Board with the options for phase 2-
 # -The planning board pops up and MC makes his choices from what's presented, close when finished-
+    python:
+        chloe_board = PlanningBoard("images/v15/chicks_presidency_race/planning_boards/chloe_background.webp", money=1500)
 
     scene v15s8_4a # TPP. Same as v15s8_4, MC slight smile, mouth open, Chloe slight smile, mouth closed.
     with dissolve 
