@@ -5,7 +5,6 @@
 
 label v11_ms_rose_sex:
     $ v11_msrose_scene = True
-    #$ add_point(KCT.TROUBLEMAKER, sum([ v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex, v11_fucked_candy, v11_aubrey_sex ])) ###Loyaltymod
 
     scene v11ros1 # TPP. Show MC walking thourgh the corridor, he is slightly nervous, mouth closed
     with fade

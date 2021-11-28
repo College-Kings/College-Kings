@@ -621,7 +621,6 @@ label after_drugs:
             "Go with her":
                 $ amberSexAtJoshs = True
                 $ amberrs = True
-                #$ add_point(KCT.TROUBLEMAKER, sum([ v7_rileysex, bathroomblowjob, v8_chloesex, v8_riley_lewd_ending ])) ###Loyaltymod
                 if laurenrs:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:

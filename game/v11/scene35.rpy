@@ -458,7 +458,6 @@ label v11_riley_sex:
 
             "Do something about it":
                 $ v11_rileysex = True
-                #$ add_point(KCT.TROUBLEMAKER, sum([ v10_chloe_locker, v11_fucked_candy, v11_aubrey_sex, v11_msrose_scene, v11_samantha_spa ])) ###Loyaltymod
                 $ riley.points += 1
 
                 u "Keep talking like that and I will."

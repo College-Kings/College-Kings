@@ -4,7 +4,6 @@ label v8_ri_start:
     stop music fadeout 3
 
     $ v8_riley_lewd_ending = True
-    #$ add_point(KCT.TROUBLEMAKER, sum([ aubreysex2, v6_emilysex, bathroomblowjob ])) ###Loyaltymod
 
     scene v8s25 # Same as sfr4ri55 (from v7) but MC talking now
     with dissolve

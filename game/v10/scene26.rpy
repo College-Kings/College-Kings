@@ -393,7 +393,6 @@ label v10_amber_skatepark:
         menu:
             "Let her":
                 $ v10_ambersex = True
-                #$ add_point(KCT.TROUBLEMAKER, sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck ])) ###Loyaltymod
                 show screen v10s26_amberSexOverlay
 
                 if config_censored:
@@ -712,7 +711,6 @@ label v10_amber_skatepark:
                         "Let her":
                             $ amberrs = True
                             $ v10_ambersex = True
-                            #$ add_point(KCT.TROUBLEMAKER, sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck ])) ###Loyaltymod
 
                             if config_censored:
                                 call screen censoredPopup("v10s26_nsfwSkipLabel1")

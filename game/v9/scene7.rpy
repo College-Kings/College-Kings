@@ -761,7 +761,6 @@ label fr5aubrey1:
             if aubreyrs:
                 label v9_aubrey_scene_lake:
                     $ v9_aubrey_lake = True
-                    #$ add_point(KCT.TROUBLEMAKER, sum([ v7_rileysex, v8_chloesex, v8_riley_lewd_ending, v8_hocoamber, amberSexAtJoshs ])) ###Loyaltymod
 
                     scene v9slake6
                     with dissolve

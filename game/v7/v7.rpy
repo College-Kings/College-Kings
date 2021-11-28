@@ -8932,8 +8932,6 @@ label rileysexscene:
     $ rileyrs = True
     $ v7_rileysex = True
     
-    #$ add_point(KCT.TROUBLEMAKER, sum([ aubreysex, aubreysex2, v6_emilysex ])) ###Loyaltymod
-    
     scene ridrm1 # You knocking on Riley's dorm door (third person)
     with dissolve
 
@@ -15181,8 +15179,6 @@ label fr4aubrey1:
                 $ add_point(KCT.BRO)
                 $ bathroomblowjob = True
 
-                #$ add_point(KCT.TROUBLEMAKER, sum([ v6_emilysex, v7_rileysex ])) ###Loyaltymod
-
                 u "Yeah, alright. Let's go."
 
                 if config_censored:
@@ -17260,8 +17256,6 @@ label fr4chloeending:
 
     # towel drop sound #check - add towel.mp3 sound file
     play sound "sounds/towel.mp3"
-
-    #$ add_point(KCT.TROUBLEMAKER, sum([ aubreysex2, v6_emilysex, v7_rileysex, bathroomblowjob ])) ###Loyaltymod
 
     if config_censored and renpy.loadable("v8/scene2.rpy"):
         call screen censoredPopup("v8s2_nsfwSkipLabel1")

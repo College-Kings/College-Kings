@@ -802,8 +802,6 @@ label v12_lauren_sex:
 
                 label v12_lauren_sex_sg:
                 
-                #$ add_point(KCT.TROUBLEMAKER, sum([ v11_rileysex, v11_chloe_sex, v12_lindsey_sex, v12_msrose_sex ])) ###Loyaltymod
-
                 scene v12las46e
                 with dissolve
 

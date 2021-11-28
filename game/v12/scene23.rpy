@@ -154,7 +154,6 @@ label v12_ms_rose_sex: #can only get here if joinwolves
 
             "Let's go":
                 $ add_point(KCT.TROUBLEMAKER)
-                #$ add_point(KCT.TROUBLEMAKER, sum([ v11_samantha_spa, v11_rileysex, v11_chloe_sex, v12_lindsey_sex ])) ###Loyaltymod
                 
                 $ v12_msrose_sex = True
 

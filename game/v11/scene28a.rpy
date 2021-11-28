@@ -715,7 +715,6 @@ label v11s28a_galleryScene:
         "Massage her boob":
             $ v11_samantha_spa = True
             $ add_point(KCT.TROUBLEMAKER)
-            #$ add_point(KCT.TROUBLEMAKER, sum([ v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex, v11_fucked_candy, v11_aubrey_sex ])) ###Loyaltymod
 
             scene v11sas18a # TPP. Same as v11sas18, MC has his hands over her boob, she is smiling, mouth closed
             with dissolve

@@ -32,7 +32,6 @@ label v11_aubrey_plane_sex:
             "Go after her":
                 label v11_aubrey_plane_sex_sg:
                 $ v11_aubrey_sex = True
-                #$ add_point(KCT.TROUBLEMAKER, sum([ aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex, v11_fucked_candy ])) ###Loyaltymod
 
                 scene v11aub4
                 with dissolve

@@ -2725,7 +2725,7 @@ label emsex_c:
 
 label emsex_a:
     $ v6_emilysex = True 
-    #$ add_point(KCT.TROUBLEMAKER, sum([ aubreysex ])) ###Loyaltymod    
+
     scene emvid2
     with dissolve
 
@@ -3990,8 +3990,6 @@ label fy_bd: # not gone to Emily's
 label aubreysexb: # aubreysex scene
     $ aubreyrs = True
     $ aubreysex2 = True
-
-    #$ add_point(KCT.TROUBLEMAKER, sum([ v6_emilysex ])) ###Loyaltymod
 
     stop music fadeout 2.0
     play music "music/msexy.mp3"

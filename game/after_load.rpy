@@ -581,8 +581,6 @@ label after_load:
         except NameError: v12_nora_sex = False
         try: v12_nora_points
         except NameError: v12_nora_points = 0
-        try: v12s33_door3
-        except NameError: v12s33_door3 = False
         try: v12s24_emmymatch
         except NameError: v12s24_emmymatch = False
         try: v12_sauna_sneak1

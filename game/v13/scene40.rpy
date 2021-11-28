@@ -62,7 +62,6 @@ label v13s40:
     u "*Whispers* Lead the way."
 
     $ v13_chloe_sex = True
-    #$ add_point(KCT.TROUBLEMAKER, sum([ v12_msrose_sex, v12_lauren_sex, v12_nora_sex, v13_rileysex, v13_emmysex ])) ###Loyaltymod
 
     scene v13s40_4 # TPP. Show Chloe grabbing MC's hand and walking through the hotel lobby, both slight smiles, mouths closed
     with dissolve

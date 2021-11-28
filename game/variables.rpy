@@ -401,7 +401,6 @@ default chloe_board = PlanningBoard("images/v14/chicks_presidency_race/planning_
 default v14_chloe_wolves = False ##APPROACH A
 default v14_realwolf = False ##TASK A2A
 default v14_plushwolf = False ##TASK A2B
-
 default v14_chloe_apes = False ##APPROACH B
 default v14_chloe_grayson = False ##TASK B2A
 default v14_chloe_cameron = False ##TASK B2B
@@ -411,7 +410,6 @@ default lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/plannin
 default v14_lindsey_sell = False ##APPROACH A
 default v14_pics_no_linds = False ##TASK A1A
 default v14_pics_with_linds = False ##TASK A1B
-
 default v14_lindsey_steal = False ##APPROACH B
 default v14_concert_distraction = False ##APPROACH B1A
 default v14_date_distraction = False ###APPROACH B1B

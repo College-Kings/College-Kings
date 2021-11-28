@@ -1020,6 +1020,7 @@ label v12s33_door1:
         lmass "Alright gentlemen, it is time for you to swap with the ladies."
 
         jump v12s33_sauna
+
     else:
         call screen v12s33_three_doors
 

@@ -170,7 +170,6 @@ label v13s25:
                         emmy "Don't be gentle."
 
                         stop music fadeout 3
-                        #$ add_point(KCT.TROUBLEMAKER, sum([ v12_lindsey_sex, v12_msrose_sex, v12_lauren_sex, v12_nora_sex, v13_rileysex ])) ###Loyaltymod
 
                         if config_censored:
                             call screen censoredPopup("v13s25_nsfwSkipLabel1")

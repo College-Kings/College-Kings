@@ -930,7 +930,6 @@ label v12_lindsey_kiss_or_not:
 label v12_lindsey_sex:
     $ v12_lindsey_sex = True
     $ lindseyrs = True
-    #$ add_point(KCT.TROUBLEMAKER, sum([ v11_aubrey_sex, v11_msrose_scene, v11_samantha_spa, v11_rileysex, v11_chloe_sex ])) ###Loyaltymod
 
     scene v12esr29g # FPP. Same as v12esr29c, Lindsey eyes open, slight smile, mouth open, face close to MC
     with dissolve

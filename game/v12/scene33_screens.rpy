@@ -19,5 +19,5 @@ screen v12s33_three_doors():
         if not "door2" in v12_saunadoors:
             hotspot (830, 283, 249, 583) action Jump("v12s33_door2")
         
-        if not v12s33_door3:
+        if not "door3" in v12_saunadoors:
             hotspot (1419, 284, 258, 580) action Jump("v12s33_door3")
