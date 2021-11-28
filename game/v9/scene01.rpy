@@ -80,7 +80,6 @@ label v9_start_wolves:
     menu:
         "Excited reply":
             $ add_point(KCT.TROUBLEMAKER)
-            $ mcBrawlStance1 = True
 
             u "No shit! That's amazing!"
 
@@ -98,7 +97,7 @@ label v9_start_wolves:
 
         "Hesitant reply":
             $ add_point(KCT.BOYFRIEND)
-            $ mcBrawlStance1 = False
+            $ v9_brawl_hesitant = True
 
             u "(I haven't been training enough for this.)"
             u "Um..."
@@ -157,7 +156,7 @@ label v9_start_wolves:
     menu:
         "Try to back out":
             $ add_point(KCT.BOYFRIEND)
-            $ mcBrawlStance2 = False
+            $ v9_brawl_hesitant = True
 
             u "I don't know... I'm not ready for something like this. A... BRAWL?"
 
@@ -178,7 +177,6 @@ label v9_start_wolves:
 
         "Go with it":
             # $ add_point(KCT.TROUBLEMAKER)
-            $ mcBrawlStance2 = True
 
             u "Wow, trial by fire!"
 
@@ -227,8 +225,9 @@ label v9_start_wolves:
     with dissolve
     u "(Freshman Brawl... sounds intense.)"
 
-    if mcBrawlStance1 and mcBrawlStance2:
+    if not v9_brawl_hesitant:
         u "(I think I got this.)"
+
     else:
         u "(I'm gonna get my ass kicked. I need to train hard the next few days.)"
 

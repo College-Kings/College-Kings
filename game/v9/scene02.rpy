@@ -168,7 +168,6 @@ label v9_start_apes:
     menu:
         "Excited reply":
             $ add_point(KCT.TROUBLEMAKER)
-            $ mcBrawlStance3 = True
 
             u "Pledge vs pledge!?"
 
@@ -202,8 +201,8 @@ label v9_start_apes:
             pause
 
         "Hesitant reply":
+            $ v9_brawl_hesitant = True
             $ add_point(KCT.BOYFRIEND)
-            $ mcBrawlStance3 = False
 
             u "(Bloodbath? I don't like the sound of that.)"
             u "Freshman Brawl? Sounds dangerous."
@@ -261,8 +260,9 @@ label v9_start_apes:
     with dissolve
     u "(Freshman Brawl... sounds intense.)"
 
-    if mcBrawlStance3:
+    if not v9_brawl_hesitant:
         u "(I think I got this.)"
+
     else:
         u "(I'm gonna get my ass kicked. I need to train hard the next few days.)"
 

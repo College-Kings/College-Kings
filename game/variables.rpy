@@ -202,11 +202,9 @@ default hangOutWithLindsey = False
 default hl_punch = False
 default joinAubreyLake = False
 default lindseyfirstkiss = False
-default mcBrawlStance1 = False
-default mcBrawlStance2 = False
-default mcBrawlStance3 = False
 default playCoolWLins = False
 default the_king = False
+default v9_brawl_hesitant = False
 default v9_sex_w_em = False
 default v9_sex_with_riley = False
 
