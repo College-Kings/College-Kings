@@ -362,7 +362,6 @@ default v13_after_party = False
 default v13_aubrey_concert = False
 default v13_charli_exposed = False
 default v13_chloe_sex = False
-default v13_chloesex = False
 default v13_cuddle_lauren = False
 default v13_cuddle_lauren_text = False
 default v13_emilysex = False

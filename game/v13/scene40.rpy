@@ -477,7 +477,6 @@ label v13s40_shoulder:
         
 label v13s40_end_free_roam:
     if len(chloeturnedon) >= 2:
-        $ v13_chloesex = True
     
         scene v13s40end_1 # FPP. MC standing next to Chloe, Chloe looking up at MC, Chloe smiling, mouth open
         #with dissolve
