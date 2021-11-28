@@ -185,7 +185,7 @@ label v5start:
 
     u "(Way to mess things up with Chloe... great fucking job, [name].)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s376 # you in bed laying on your side looking at the wall
     with Fade (2,0,2)
@@ -447,7 +447,7 @@ label jorepb:
             scene s372c # you turn your head
             with dissolve
 
-            stop music fadeout 2.0
+            stop music fadeout 3
 
             " "
 
@@ -581,7 +581,7 @@ label jorepb:
 
     u "(Way to mess things up with Chloe... great fucking job, [name].)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s376 # you in bed laying on your side looking at the wall
     with Fade (2,0,2)
@@ -1120,7 +1120,7 @@ label gokissb:
     call screen trolleyskip
 
 label continuetrolley:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     play music "sounds/train.mp3"
     scene s383a # you looking at lauren mouth closed on train
@@ -2185,7 +2185,7 @@ label continueaf:
     ############## Bus to hospital with Riley
 
 label hospitala:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     play music "sounds/bus.mp3"
     scene s399 #Riley and and MC are on the bus. They look at each other affectionately. MC readjusts awkwardly.
@@ -2231,7 +2231,7 @@ label hospitala:
     u "Mhmmm..."
 
     pause 0.5
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     play sound "sounds/busstop.mp3"
 
@@ -2310,7 +2310,7 @@ label hospitala:
     scene s406 #Riley, MC, and Imre walk back to the bus stop.
     with fade
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     pause 1.0
 
@@ -2442,7 +2442,7 @@ label hospitala:
     with dissolve
 
     pause 0.5
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s416 # Imre, Mc and Riley in front of your dorm
     with Fade(1,0,1)
@@ -2541,7 +2541,7 @@ label hospitala:
 
     u "Fuck..."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s419  # u pacing around in room
     with fade
@@ -2809,7 +2809,7 @@ label hospitala:
 ########## Adam fight
 
     label fk_a:
-    stop music fadeout 2.0
+    stop music fadeout 3
     image af2 = Movie(play="images/v5/af2.webm", start_image="images/v5/af2start.webp", image="images/v5/af2pic.webp", loop = False)
 
 
@@ -3539,7 +3539,7 @@ label hospitala:
 label fl_b: # keep it to yourself
     u "(It's best if I keep to myself. Telling the school would turn both Imre and Adam against me...)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     u "(I need to find Imre before he finds Adam.)"
 
@@ -3548,7 +3548,7 @@ label fl_b: # keep it to yourself
 label fl_a:  # tell the school
     $ tellschool = True
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     $ grant_achievement("snitch")
 
@@ -3671,7 +3671,7 @@ label fl_a:  # tell the school
     scene s426a # mc walks away
     with dissolve
 
-    stop music fadeout 0.5
+    stop music fadeout 3
 
     u "(I need to find Imre.)"
 
@@ -3751,7 +3751,7 @@ label youfinishadam: #### You beat adam
             scene s427
             with dissolve
 
-            stop music fadeout 2.0
+            stop music fadeout 3
 
             u "(Actually, I should probably go find Imre and tell him about what happened.)"
 
@@ -3947,7 +3947,7 @@ label adamfinish: ###Adam beats you
 
     u "(Actually, I should probably go find Imre and tell him about what happened.)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     u "(But first, I gotta wash the blood of my face.)"
 
@@ -4241,7 +4241,7 @@ label findimre:
         u "Alright. Good luck, man."
 
     label continueba: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s442 # you on a park bench depressed
     with Fade (1,0,1)

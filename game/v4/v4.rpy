@@ -189,7 +189,7 @@ label v4start:
             u "I'll see you then, get better soon."
 
     label dp_ad: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s298 # shows a cab in the night from outside with you in the back possibly not seeing you due to dark windows
     with Fade (1,0,1)
@@ -455,7 +455,7 @@ label v4start:
             ri "Not a problem at all."
 
     label dr_bd: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     ######### CHLOE DREAM:
 
@@ -512,7 +512,7 @@ label v4start:
 
     u "Ahhh! Stop! Stop!"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s225a # already in the game, no need to render again
     with flash
@@ -630,7 +630,7 @@ label v4start:
                 ju "Well that's a relief. Let's go shopping then."
 
         label du_bd: #for compatibility only
-        stop music fadeout 2.0
+        stop music fadeout 3
 
         ######### THE FOLLOWING IMAGES HAVE TO BE RENDERED WITH NOT BACKGROUND AS A VIDEO OF MOVING ROADS WILL BE INSERTED
         scene carback
@@ -783,7 +783,7 @@ label v4start:
             u "Thanks, Julia."
 
         label jucon2:
-            stop music fadeout 2.0
+            stop music fadeout 3
 
             scene s317 # you and julia at the start of clothing store there are some people there.
             with Fade (1,0,1)
@@ -1036,7 +1036,7 @@ label v4start:
 
         u "(Alright, all finished.)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s330
     with Fade (1,0,1)### you sitting on your bed with your phone in your hand //
@@ -1065,7 +1065,7 @@ label v4start:
     u "(The library should have it.)"
 
     #anchor
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s331 # you walking into library
     with Fade (1,0,1)
@@ -1438,7 +1438,7 @@ label autumnsita:
 
 label readmontagec: #for compatibility only
 label readmontagea:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s336 # you from front sitting down looking at the books cover.
     with fade
@@ -1583,7 +1583,7 @@ label readmontagea:
 
     u "(I'll get a coffee, otherwise I'll be tired for the rest of the day.)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene s342 # in front of cafe
     with Fade (1,0,1)
 
@@ -2153,7 +2153,7 @@ label el_ad:
     u "(I wonder what Penelope was doing on that laptop...)"
 
 label continueab:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     play sound "sounds/vibrate.mp3"
 
@@ -2178,7 +2178,7 @@ label continueab:
         u "(Okay, I need to make sure that I don't forget about meeting Chloe.)"
 
     label jorepa: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene s352
     with Fade (1,0,1)
 
@@ -2802,7 +2802,7 @@ label continueab:
 
     u "*Drunk* Maybe I- I'll come back later."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s367 # you walking at night
     with Fade (1,0,1)
@@ -2966,7 +2966,7 @@ label continueab:
     scene s372c # you turn your head
     with dissolve
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     " "
 

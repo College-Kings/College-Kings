@@ -51,7 +51,7 @@ label starta: #for compatibility only
     em "Anything."
 
     hide screen fantasyOverlay
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s1
     with Fade(1, 0, 1)
@@ -170,7 +170,7 @@ label starta: #for compatibility only
     call screen phone
     hide screen phoneTutorial
     
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene s11
     with dissolve
 
@@ -290,7 +290,7 @@ label starta: #for compatibility only
 
     u "(I wonder if he's still dealing...)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     car "*stops*"
 
@@ -361,7 +361,7 @@ label starta: #for compatibility only
     with dissolve
     ma "Dude, that's my sister you're talking about!"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s28
     with hpunch
@@ -399,7 +399,7 @@ label starta: #for compatibility only
 
     ca "Next time, Mommy won't be there to save you, asshole."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s33
     with dissolve
@@ -478,7 +478,7 @@ label starta: #for compatibility only
 
     u "(I should probably go to my induction class right now.)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s40
     with Fade(1, 0, 1) #you're late and everyone's looking at you rose bend over laptop
@@ -639,7 +639,7 @@ label starta: #for compatibility only
 
     ro "Now, let's move on to some of the boring administrative stuff..."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene clocka
     with fade
 
@@ -855,7 +855,7 @@ label starta: #for compatibility only
 
     la "Sounds good. I'll see you later."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
 # Part 5 Free roam in the halls
     scene s50 # hallway 1 without freeroam
@@ -1189,7 +1189,7 @@ label starta: #for compatibility only
             call screen censoredPopup("v1_freeRoam1_aubrey2")
 
         scene adamaubrey36
-        stop music fadeout 2.0
+        stop music fadeout 3
         play music "music/msexy.mp3"
         show adam1
 
@@ -1198,7 +1198,7 @@ label starta: #for compatibility only
         au "YESSSSS, FASTER!"
         u "(I should probably stop peeking, before I get caught.)"
         
-        stop music fadeout 2.0
+        stop music fadeout 3
         call screen v1_freeRoam1_3
 
     label v1_freeRoam1_aubrey2:
@@ -1208,7 +1208,7 @@ label starta: #for compatibility only
 
 label efra:
     scene s59
-    stop music fadeout 2.0
+    stop music fadeout 3
     play sound "sounds/knock.mp3"
     
     scene s60
@@ -1456,7 +1456,7 @@ label efra:
     label continueonea: #for compatibility only
     scene s65
     with Fade(1, 0, 1)
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     play sound "sounds/knock.mp3"
     pause 0.75
@@ -1854,7 +1854,7 @@ label efra:
 
     u "Alright, see ya."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     ### Late night talk with Imre.
     scene s80
@@ -1981,7 +1981,7 @@ label at_bd:
 
     u "Night."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     ### Sex dream
     label sexdream1: #for compatibility only
@@ -2236,7 +2236,7 @@ label at_bd:
 label v1_nsfwSkipLabel1:
     hide screen fantasyOverlay
 
-    stop music fadeout 2.0
+    stop music fadeout 3
     $ renpy.end_replay()
 
     ### Next morning in your dorm, Imre seems to be gone.
@@ -2350,7 +2350,7 @@ label v1_nsfwSkipLabel1:
     ro "Very well, I'm sorry to hear that."
     ro "Just sit down, so that we can get started on the material."
     #####clock video
-    stop music fadeout 2.0
+    stop music fadeout 3
     play sound "sounds/clock2.mp3"
     scene clocka
     with fade
@@ -2438,7 +2438,7 @@ label v1_nsfwSkipLabel1:
 
     scene s87b
     with dissolve
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     label au_bd: #for compatibility only
     la "Yeah, I'd like that."
@@ -2811,7 +2811,7 @@ label aw_bd:
         u "(Fuck... should I have kissed her? Now it's just weird between us.)"
 
     ### Back in your dorm with Imre
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     stop sound
 
@@ -2909,7 +2909,7 @@ label aw_bd:
     u "I guess..."
 
     scene s96c
-    stop music fadeout 2.0
+    stop music fadeout 3
     play sound "sounds/vibrate.mp3"
 
     $ ryan.messenger.newMessage(_("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"), queue=False)
@@ -2952,7 +2952,7 @@ label aw_bd:
 
     u "(Great... now I've fucked up two friendships today.)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     label nextscenef: #for compatibility only
     ### In front of the ape's house ryan is texting
@@ -3742,7 +3742,7 @@ label v1_freeRoam2_grayson2:
 label v1_freeRoam2_end:
 label fr2end: #for compatibility only
 
-    stop music fadeout 2.0
+    stop music fadeout 3
     
     scene chloelook:
         subpixel True
@@ -3937,7 +3937,7 @@ label fr2end: #for compatibility only
 
     u "Yeah, sounds great."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s114 ## walking on the outside , use night filter
     with fade
@@ -4088,7 +4088,7 @@ label fr2end: #for compatibility only
 
     cl "It's getting pretty cold. Should we go back inside?"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s117f
     with dissolve

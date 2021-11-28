@@ -183,6 +183,9 @@ label v11_big_ben:
 
     pause 0.75
 
+    stop music fadeout 3
+    play music "music/v10/Track Scene 24_2.mp3" fadein 2
+
     scene v11bb7 # FPP Show Nora looking up toward the clock tower, smiling with mouth open
     with dissolve
 

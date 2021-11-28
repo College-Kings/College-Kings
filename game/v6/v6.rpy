@@ -381,7 +381,7 @@ label imrecond: # Meet Chloe
             u "(I should reply to Chloe.)"
             jump phoneac
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     u "(Time to go swimming with the hottest girl in school...)"
 
@@ -1027,7 +1027,7 @@ label continuebd:
     with fade
 
     u "(I should probably go to bed now, I got class at 9 am tomorrow.)"
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene s484 # MC NO LONGER HAS BLACK EYE  in bed
     with Fade (1,0,1)
     play music "music/m15punk.mp3"
@@ -1095,7 +1095,7 @@ label continuebd:
 
             ro "Alright class, let's get started. Open your books to page 225."
 
-            stop music fadeout 2.0
+            stop music fadeout 3
             scene clocka
             with fade
 
@@ -1182,7 +1182,7 @@ label continuebd:
 
             ro "Alright class, let's get started. Open your books to page 225."
 
-            stop music fadeout 2.0
+            stop music fadeout 3
             scene clocka
             with fade
 
@@ -1283,7 +1283,7 @@ label continuebd:
 
             ro "Alright class, let's get started. Open your books to page 225."
 
-            stop music fadeout 2.0
+            stop music fadeout 3
             scene clocka
             with fade
 
@@ -1389,7 +1389,7 @@ label continuebd:
 
         ro "Alright class, let's get started. Open your books to page 225."
 
-        stop music fadeout 2.0
+        stop music fadeout 3
         scene clocka
         with fade
 
@@ -1640,7 +1640,7 @@ label continuebd:
 
     ry "Don't waste this chance, man."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene s503a # Grayson and Ryan gone.
     with dissolve
 
@@ -2178,7 +2178,7 @@ label continuebd:
 
     label continuebf: #for compatibility only
     label fw_a: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     play sound "sounds/call.mp3"
 
@@ -2894,7 +2894,7 @@ label emhead:
     scene emvid9
     with dissolve
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     em "*Really loud moan* Ahhhhh!"
 
@@ -2987,7 +2987,7 @@ label afteremily: #After emily
     u "(What just happened...?)"
 
 label fy_bd: # not gone to Emily's
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene s540 # you working on your desk
     with Fade (1,0,1)
 
@@ -3667,7 +3667,7 @@ label fy_bd: # not gone to Emily's
         " "
 
         label phoneag:
-            stop music fadeout 2.0
+            stop music fadeout 3
             if aubrey.messenger.replies:
                 call screen phone
             if aubrey.messenger.replies:
@@ -3978,7 +3978,7 @@ label aubreysexb: # aubreysex scene
     $ aubreyrs = True
     $ sceneList.add("v6_aubrey")
 
-    stop music fadeout 2.0
+    stop music fadeout 3
     play music "music/msexy.mp3"
 
     scene naubvid0
@@ -4339,7 +4339,7 @@ label naubclimax:
 
     scene naub20
     with fade
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     u "That was amazing."
 
@@ -4702,7 +4702,7 @@ label afteraubrey:
                     gr "We're here."
 
             label wehere: #for compatibility only
-            stop music fadeout 2.0
+            stop music fadeout 3
 
             scene s580 # Showing you and Grayson At night on a ledge, overlooking the city??? Or something else cool, Grayson looking into the distance
             with fade
@@ -4912,7 +4912,7 @@ label afteraubrey:
                     with dissolve
 
                     gr "Good. Trust me, this will change everything."
-                    stop music fadeout 2.0
+                    stop music fadeout 3
 
                 "I'm not in":
                     $ add_point(KCT.BRO)
@@ -4982,7 +4982,7 @@ label afteraubrey:
             u "(Fuck Grayson, I'm not meeting him.)"
 
     label aftergrayson: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s586 # you lying in bed at night staring at the ceiling
     with fade
@@ -5435,7 +5435,7 @@ label wakeupa:
 
         pause 0.5
     
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s610 # you back in your dorm doing work at your desk in your regular clothes, "a few hours later transition"
     with Fade (1,0,1)
@@ -6155,7 +6155,7 @@ label wakeupa:
 
         u "Thanks, see ya."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     if bowling: # Penelope bowling scene
         play music "music/m16punk.mp3"
@@ -6603,7 +6603,7 @@ label wakeupa:
         pause 1.0
 
     label readywolf: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
     play music "music/m6punk.mp3"
 
     if imremad:
@@ -10640,7 +10640,7 @@ label v6_fr3chris3: ### ENDING
     with dissolve
 
     u "Holy shit."
-    stop music fadeout 2.0
+    stop music fadeout 3
 
 if not renpy.loadable("v7/v7.rpy"):
     scene savenow

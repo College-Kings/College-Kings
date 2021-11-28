@@ -147,6 +147,9 @@ label v11_chloe_hotel_room_amber_call:
     with dissolve
 
     pause 0.75
+    
+    stop music fadeout 3
+    play music "music/v11/Track Scene 35a_2.mp3" fadein 2
 
     scene v11hrc8 # TPP. Chloe is shaking mc, waking him up
     with fade

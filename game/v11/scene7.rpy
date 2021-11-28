@@ -141,6 +141,9 @@ label v11_room_aubrey_shopping:
 
     au "Again, you said it, not me. *Laughs*"
 
+    stop music fadeout 3
+    play music "music/v11/Scene Track 7_3.mp3" fadein 2
+
     scene v11auw7 # TPP. Show MC and Aubrey walking through the door of Lew's shop. They're both smiling, mouths closed
     with dissolve
 

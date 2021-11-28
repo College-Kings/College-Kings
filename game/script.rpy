@@ -50,7 +50,7 @@ label start:
 
 label end_credits: # for compatibility
 label gameEnd:
-    stop music fadeout 2.0
+    stop music fadeout 3
     play music "music/vocal.mp3"
 
     if not config.enable_steam:

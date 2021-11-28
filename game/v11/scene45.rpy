@@ -105,6 +105,9 @@ label v11_lobby_mrlee:
 
     pause 1
 
+    stop music fadeout 3
+    play music "music/v11/Track Scene 45_2.mp3"
+
     scene v11lob22 # TPP. Show Mr Lee and a couple of the students walking through the entrance of the restraunt. 
     with dissolve
 
