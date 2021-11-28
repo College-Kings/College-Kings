@@ -16,7 +16,7 @@ label v13s20:
     call screen v13s20_room
 
 label v13s20_closet:
-    $ v13s20_frcloset = True
+    $ freeroam10.add("closet")
 
     scene v13s20clo_1 # TPP. Show MC walking towards the closet, mouth closed, smirking
     #with dissolve
@@ -68,7 +68,7 @@ label v13s20_closet:
     call screen v13s20_room
 
 label v13s20_bleach:
-    $ v13s20_frbleach = True
+    $ freeroam10.add("bleach")
 
     scene v13s20bleach_1 # TPP. Show MC bending over, opening the cabinet underneath the sink, slight smile, mouth open, bottle of bleach inside
     #with dissolve
@@ -137,7 +137,7 @@ label v13s20_bleach:
     call screen v13s20_bathroom
 
 label v13s20_toothbrush:
-    $ v13s20_frbrush = True
+    $ freeroam10.add("brush")
 
     scene v13s20brush_1 # TPP. MC grabbing the toothbrush, smirking, mouth closed
     #with dissolve

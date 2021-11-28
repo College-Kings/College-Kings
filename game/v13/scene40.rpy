@@ -153,7 +153,8 @@ label v13s40:
     call screen v13s40_chloe
 
 label v13s40_honey:
-    $ v13s40_chloe_turned_on += 1
+    $ chloeturnedon.add("honey")
+
     scene v13s40ho_1 # TPP. Show MC pouring the honey on Chloe's breasts, Chloe slight smile, mouth closed
     #with dissolve
 
@@ -203,7 +204,7 @@ label v13s40_honey:
     call screen v13s40_chloe
 
 label v13s40_feather:
-    $ v13s40_chloe_turned_on += 1
+    $ chloeturnedon.add("feather")
     scene v13s40fe_1 # TPP. Show MC taking the feather and placing it on her chest, Chloe smiling, mouth closed
     #with dissolve
 
@@ -252,7 +253,7 @@ label v13s40_feather:
     call screen v13s40_chloe
 
 label v13s40_spanker:
-    $ v13s40_chloe_turned_on += 1
+    $ chloeturnedon.add("spanker")
     scene v13s40sp_1 # TPP. Show MC untying Chloe, both smiling, mouths closed
     #with dissolve
 
@@ -346,9 +347,7 @@ label v13s40_neck:
 
     menu:
         "Choke":
-            if not v13s40_neckpoint:
-                $ v13s40_chloe_turned_on += 1
-                $ v13s40_neckpoint = True
+            $ chloeturnedon.add("neck")
 
             scene v13s40neck_2 # TPP. Close up of MC's hand choking Chloe's neck, Chloe smiling, mouth closed
             with dissolve
@@ -385,9 +384,7 @@ label v13s40_chest:
             pause
 
         "Massage":
-            if not v13s40_chestpoint:
-                $ v13s40_chloe_turned_on += 1
-                $ v13s40_chestpoint = True
+            $ chloeturnedon.add("chest")
 
             scene v13s40chest_3 # TPP. Show MC massaging Chloe's boobs, Chloe smiling, mouth closed
             with dissolve
@@ -412,9 +409,7 @@ label v13s40_back:
 
     menu:
         "Massage":
-            if not v13s40_backpoint:
-                $ v13s40_chloe_turned_on += 1
-                $ v13s40_backpoint = True
+            $ chloeturnedon.add("back")
 
             scene v13s40back_2 # TPP. MC massaging Chloe's back, Chloe smiling, mouth closed
             with dissolve
@@ -455,9 +450,7 @@ label v13s40_shoulder:
 
     menu:
         "Massage":
-            if not v13s40_shoulderpoint:
-                $ v13s40_chloe_turned_on += 1
-                $ v13s40_shoulderpoint = True
+            $ chloeturnedon.add("shoulder")
 
             scene v13s40shoulder_2 # TPP. Show MC massaging Chloe's shoulder, Chloe smiling, mouth closed
             with dissolve
@@ -470,7 +463,7 @@ label v13s40_shoulder:
             pause
 
         "Kiss":
-            $ v13s40_chloe_turned_on += 1
+            $ chloeturnedon.add("shoulder")
             scene v13s40shoulder_3 # TPP. Show MC kissing Chloe left shoulder, Chloe slight smile, mouth closed
             with dissolve
 
@@ -484,7 +477,7 @@ label v13s40_shoulder:
     call screen v13s40_chloe
         
 label v13s40_end_free_roam:
-    if v13s40_chloe_turned_on >= 2:
+    if len(chloeturnedon) >= 2
         $ v13_chloesex = True
     
         scene v13s40end_1 # FPP. MC standing next to Chloe, Chloe looking up at MC, Chloe smiling, mouth open

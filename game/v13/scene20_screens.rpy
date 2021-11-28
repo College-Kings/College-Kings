@@ -20,10 +20,10 @@ screen v13s20_bathroom():
         idle "images/v13/Scene20/Screens/v13s20_bathroom.webp"
         hover "images/v13/Scene20/Screens/v13s20_bathroom_hover.webp"
     
-        if not v13s20_frbrush:
+        if not "brush" in freeroam10:
             hotspot (1417, 303, 301, 224) action Jump("v13s20_toothbrush")
 
-        if not v13s20_frbleach:
+        if not "bleach" in freeroam10:
             hotspot (465, 630, 1103, 450) action Jump("v13s20_bleach")
 
         hotspot (307, 0, 1390, 284) action Show("v13s20_room")

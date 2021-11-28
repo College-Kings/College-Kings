@@ -711,8 +711,6 @@ label after_load:
         except NameError: v13_told_emmy_city = False
         try: v13_imre_disloyal
         except NameError: v13_imre_disloyal = False
-        try: v13s40_chloe_turned_on
-        except NameError: v13s40_chloe_turned_on = 0
         try: v13_perfume
         except NameError: v13_perfume = False
         try: v13_hugged_aubrey
@@ -731,24 +729,6 @@ label after_load:
         except NameError: v13_emilysex = False
         try: v13s20_bleach_suitcase
         except NameError: v13s20_bleach_suitcase = False
-        try: v13s20_frbleach
-        except NameError: v13s20_frbleach = False
-        try: v13s20_frcloset
-        except NameError: v13s20_frcloset = False
-        try: v13s20_frbrush
-        except NameError: v13s20_frbrush = False
-        try: v13s37_frnora
-        except NameError: v13s37_frnora = False
-        try: v13s37_frchris
-        except NameError: v13s37_frchris = False
-        try: v13s40_neckpoint
-        except NameError: v13s40_neckpoint = False
-        try: v13s40_chestpoint
-        except NameError: v13s40_chestpoint = False
-        try: v13s40_backpoint
-        except NameError: v13s40_backpoint = False
-        try: v13s40_shoulderpoint
-        except NameError: v13s40_shoulderpoint = False
         try: laurenrs_v11aubrey
         except NameError: laurenrs_v11aubrey = False
         try: v13s40fromgame
