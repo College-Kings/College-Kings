@@ -3235,7 +3235,7 @@ label try4done:
 
 
 label try4new:
-    $ penoutfits += 1
+    $ v2_outfits += 1
 
     scene s163 # in changing room
     with Fade (1,0,1)
@@ -3330,7 +3330,7 @@ label v2_nsfwSkipLabel4:
 
             pe "Yeah, it's kinda cool."
 
-            if penoutfits < 3:
+            if v2_outfits < 3:
                 pe "Should we try some other outfits?"
 
             else:
@@ -3349,7 +3349,7 @@ label v2_nsfwSkipLabel4:
 
             pe "I like it, but I'm not sure."
 
-            if penoutfits < 3:
+            if v2_outfits < 3:
                 pe "Should we try some other outfits?"
 
             else:
@@ -3381,7 +3381,7 @@ label try5done:
 
 
 label try5new:
-    $ penoutfits += 1
+    $ v2_outfits += 1
 
     scene s167 # in changing room
     with Fade (1,0,1)
@@ -3469,7 +3469,7 @@ label v2_nsfwSkipLabel5:
 
             pe "Haha, I'm sure that's the case."
 
-            if penoutfits < 3:
+            if v2_outfits < 3:
                 pe "Let's continue, I wanna try another outfit."
 
             else:
@@ -3485,7 +3485,7 @@ label v2_nsfwSkipLabel5:
 
             pe "That's a sweet idea. Maybe we can do something like that."
 
-            if penoutfits < 3:
+            if v2_outfits < 3:
                 pe "But let's check out the other outfits first."
 
             else:
@@ -3517,7 +3517,7 @@ label try6done:
     call screen costumes
 
 label try6new:
-    $ penoutfits += 1
+    $ v2_outfits += 1
 
     scene s171 # in changing room
     with Fade (1,0,1)
@@ -3617,7 +3617,7 @@ label v2_nsfwSkipLabel6:
 
     pe "Yeah... you should probably rethink that, haha."
 
-    if penoutfits < 3:
+    if v2_outfits < 3:
         pe "Let's check out something different."
 
     else:

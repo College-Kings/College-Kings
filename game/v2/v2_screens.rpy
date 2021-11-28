@@ -36,7 +36,7 @@ screen costumes():
             action Show("confirmBuy", exit="buy1")
         elif costumeaubrey:
             action Jump("buy1")
-        elif penoutfits <= 3:
+        elif v2_outfits <= 3:
             action Show("confirmBuy", exit="buy1p")
         else:
             action Jump("buy1p")
@@ -49,7 +49,7 @@ screen costumes():
             action Show("confirmBuy", exit="buy2")
         elif costumeaubrey:
             action Jump("buy2")
-        elif penoutfits <= 3:
+        elif v2_outfits <= 3:
             action Show("confirmBuy", exit="buy2p")
         else:
             action Jump("buy2p")
@@ -62,7 +62,7 @@ screen costumes():
             action Show("confirmBuy", exit="buy3")
         elif costumeaubrey:
             action Jump("buy3")
-        elif penoutfits <= 3:
+        elif v2_outfits <= 3:
             action Show("confirmBuy", exit="buy3p")
         else:
             action Jump("buy3p")
