@@ -13,7 +13,7 @@ init python:
                 "boomer": 0,
                 "hardass": 0,
                 "pop_culture": 0,
-                "prankster": 0
+                "prankster": 0,
                 "quirk_sensitive_stomach": 0
             }
 
