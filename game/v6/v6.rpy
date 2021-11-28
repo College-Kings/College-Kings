@@ -548,7 +548,7 @@ label imrecond: # Meet Chloe
     with dissolve
 
     menu:
-        "Just let it ring.":
+        "Just let it ring":
             $ add_point(KCT.TROUBLEMAKER)
             $ add_point(KCT.BOYFRIEND)
 
@@ -572,7 +572,7 @@ label imrecond: # Meet Chloe
 
             cl "I'll be right back."
 
-        "You should get that.":
+        "You should get that":
             $ add_point(KCT.BRO)
 
             scene s460a
@@ -1610,7 +1610,7 @@ label continuebd:
 
             gr "Join the Apes."
 
-        "I guess we are.":
+        "I guess we are":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s501e
@@ -1994,7 +1994,7 @@ label continuebd:
         ev "How so?"
 
         menu:
-            "It'll be an adventure.":
+            "It'll be an adventure":
                 $ add_point(KCT.BRO)
                 $ evelyndate = False
 
@@ -2039,7 +2039,7 @@ label continuebd:
 
                 u "Damnit."
 
-            "It'll be a nice dinner.":
+            "It'll be a nice dinner":
                 $ add_point(KCT.BOYFRIEND)
                 $ evelyndate = True
 
@@ -2245,7 +2245,7 @@ label continuebd:
                 em "[name], this is different. I promise. Please can you just come over? I'm in Dorm 17, Block A."
 
                 menu:
-                    "Fine, I'll come.":
+                    "Fine, I'll come":
                         $ meetemily = True
                         $ add_point(KCT.BOYFRIEND)
 
@@ -3836,7 +3836,7 @@ label fy_bd: # not gone to Emily's
         with dissolve
 
     menu:
-        "A few different girls.":
+        "A few different girls":
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -3865,7 +3865,7 @@ label fy_bd: # not gone to Emily's
                 with dissolve
 
                 menu:
-                    "I think you know.":
+                    "I think you know":
                         $ add_point(KCT.BRO)
                         $ add_point(KCT.TROUBLEMAKER)
 
@@ -3881,7 +3881,7 @@ label fy_bd: # not gone to Emily's
 
                         au "I think I do."
 
-                    "We're just friends.":
+                    "We're just friends":
                         $ add_point(KCT.BOYFRIEND)
                         $ add_point(KCT.TROUBLEMAKER)
 
@@ -3901,7 +3901,7 @@ label fy_bd: # not gone to Emily's
 
                         jump aubreytalk
 
-        "No one, really.":
+        "No one, really":
             $ add_point(KCT.BOYFRIEND)
 
             u "No one, really."
@@ -3931,7 +3931,7 @@ label fy_bd: # not gone to Emily's
                 with dissolve
 
                 menu:
-                    "You got me.":
+                    "You got me":
                         $ add_point(KCT.BRO)
                         $ add_point(KCT.TROUBLEMAKER)
 
@@ -3947,7 +3947,7 @@ label fy_bd: # not gone to Emily's
 
                         au "That's what I thought."
 
-                    "I'm not seducing you.":
+                    "I'm not seducing you":
                         $ add_point(KCT.BOYFRIEND)
                         $ add_point(KCT.TROUBLEMAKER)
 
@@ -4838,7 +4838,7 @@ label afteraubrey:
             with flash
 
             menu:
-                "I'm in.":
+                "I'm in":
                     $ add_point(KCT.TROUBLEMAKER)
                     $ joinapes = True
 
@@ -4930,7 +4930,7 @@ label afteraubrey:
                     gr "Good. Trust me, this will change everything."
                     stop music fadeout 2.0
 
-                "I'm not in.":
+                "I'm not in":
                     $ add_point(KCT.BRO)
                     $ joinapes = False
 
@@ -5848,7 +5848,7 @@ label wakeupa:
     with dissolve
 
     menu:
-        "Okay, I'll do it.":
+        "Okay, I'll do it":
             $ add_point(KCT.BRO)
             $ perform = 1
 
@@ -5880,7 +5880,7 @@ label wakeupa:
             with dissolve
 
             menu:
-                "Act out a lullaby.":
+                "Act out a lullaby":
                     $ add_point(KCT.BRO)
 
                     if kct == "confident":
@@ -5950,7 +5950,7 @@ label wakeupa:
 
                         "*Crowd applauds"
 
-                "Make something up.":
+                "Make something up":
                     $ add_point(KCT.TROUBLEMAKER)
 
                     scene s627g
@@ -5979,7 +5979,7 @@ label wakeupa:
 
                     "*Crowd applauds"
 
-        "No way I'm doing that.":
+        "No way I'm doing that":
             $ add_point(KCT.BOYFRIEND)
             $ perform = 0
 
@@ -7538,7 +7538,7 @@ label v6_fr3aubrey1:
         with dissolve
 
         menu:
-            "Anything for a girl like that.":
+            "Anything for a girl like that":
                 $ add_point(KCT.BOYFRIEND)
                 $ simp = True
 
@@ -7689,7 +7689,7 @@ label v6_fr3aubrey1:
         with dissolve
 
         menu:
-            "I was in love.":
+            "I was in love":
                 $ add_point(KCT.BOYFRIEND)
                 $ simp = True
 
@@ -7742,7 +7742,7 @@ label v6_fr3aubrey1:
 
                 au "Byeee."
 
-            "It was nothing.":
+            "It was nothing":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BRO)
                 $ simp = False
@@ -8600,7 +8600,7 @@ label v6_fr3amber1:
     with dissolve
 
     menu:
-        "You're such a tease.":
+        "You're such a tease":
             $ add_point(KCT.BRO)
 
             u "Wow. You're such a tease."
@@ -8613,7 +8613,7 @@ label v6_fr3amber1:
             scene sfr3am2c
             with dissolve
 
-        "Not gonna happen.":
+        "Not gonna happen":
             $ add_point(KCT.BOYFRIEND)
 
             u "Mhhh... I don't think that's gonna happen."
@@ -9193,7 +9193,7 @@ label v6_fr3chloe1:
     cl "*Crying* First Grayson, now Nora..."
 
     menu:
-        "Maybe you should step down.":
+        "Maybe you should step down":
             $ add_point(KCT.BOYFRIEND)
             $ chloemad = True
 
@@ -9255,7 +9255,7 @@ label v6_fr3chloe1:
 
             u "Fine..."
 
-        "Nora's being stupid.":
+        "Nora's being stupid":
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -9881,7 +9881,7 @@ label upstairsaubrey:
         u "*Chuckles* Yeah, probably a good call."
 
         menu:
-            "We could lock the door.":
+            "We could lock the door":
                 $ add_point(KCT.BRO)
                 $ add_point(KCT.TROUBLEMAKER)
 
@@ -9901,7 +9901,7 @@ label upstairsaubrey:
 
                 u "(I should probably talk to Chris soon.)"
 
-            "It was nice talking.":
+            "It was nice talking":
                 $ add_point(KCT.BOYFRIEND)
 
                 u "It was nice talking though."
@@ -10095,7 +10095,7 @@ label upstairsaubrey:
                 u "Damn... that's actually a good reason."
 
                 menu:
-                    "We could lock the door.":
+                    "We could lock the door":
                         $ add_point(KCT.BRO)
                         $ add_point(KCT.TROUBLEMAKER)
 
@@ -10113,7 +10113,7 @@ label upstairsaubrey:
 
                         u "(I should probably talk to Chris soon.)"
 
-                    "At least we got to talk.":
+                    "At least we got to talk":
                         $ add_point(KCT.BOYFRIEND)
 
                         u "At least we got to talk a bit, haha."
@@ -10128,7 +10128,7 @@ label upstairsaubrey:
 
                         u "(I should probably talk to Chris soon.)"
 
-            "I kinda get what he means.":
+            "I kinda get what he means":
                 $ add_point(KCT.BOYFRIEND)
                 $ simp = True
                 $ aubreyrs = False

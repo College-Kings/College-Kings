@@ -387,7 +387,7 @@ label v14s44:
             scene v14s44_15a
             with dissolve
 
-        "Meh, not my type.":
+        "Meh, not my type":
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Meh, she's not really my type."

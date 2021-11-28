@@ -143,7 +143,7 @@ label v3start:
     imre "Well... Not exactly, but I did manage to hide inside the girls' locker room."
 
     menu:
-        "You're crazy.":
+        "You're crazy":
             $ add_point(KCT.BRO)
 
             scene s206c
@@ -151,7 +151,7 @@ label v3start:
 
             u "Hahaha, man you're crazy."
 
-        "That's not cool.":
+        "That's not cool":
             $ add_point(KCT.BOYFRIEND)
             $ notcool = True
 
@@ -203,7 +203,7 @@ label v3start:
     imre "Oh shit, is she hot?"
 
     menu:
-        "Hell yeah.":
+        "Hell yeah":
             $ add_point(KCT.BRO)
 
             scene s208a
@@ -216,7 +216,7 @@ label v3start:
 
             imre "Well that's what I like to hear, go on."
 
-        "She's alright.":
+        "She's alright":
             scene s208a
             with dissolve
 
@@ -2539,7 +2539,7 @@ label continuen:
     la "Would you wanna be my test subject?"
 
     menu:
-        "I'd love to.":
+        "I'd love to":
             $ add_point(KCT.BOYFRIEND)
 
             scene s268a
@@ -2650,7 +2650,7 @@ label continueq:
             u "(Shit... if I meet her, she'll see my bruises and get really worried.)"
 
             menu:
-                "Shopping sounds great.":
+                "Shopping sounds great":
                     $ meetjulia = True
                     $ add_point(KCT.BOYFRIEND)
 
@@ -2675,7 +2675,7 @@ label continueq:
 
                     play sound "sounds/rejectcall.mp3"
 
-                "I can't, sorry.":
+                "I can't, sorry":
                     $ add_point(KCT.TROUBLEMAKER)
 
                     u "Sorry, Julia... I'm really busy this weekend."
@@ -3031,7 +3031,7 @@ label continueq:
     ri "So what's going on between you and Chloe? She's the president of the Chicks, right?"
 
     menu:
-        "I like her.":
+        "I like her":
             $ add_point(KCT.BOYFRIEND)
 
             scene s281a
@@ -3046,7 +3046,7 @@ label continueq:
 
             ri "Oh uhm... yeah, that sounds really good. I'm happy for you."
 
-        "She's into me.":
+        "She's into me":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s281a
@@ -3189,7 +3189,7 @@ label continueq:
             u "(Okay, time to make a decision. Should I tell her about what happened with Aubrey?)"
 
             menu:
-                "Tell her what happened.":
+                "Tell her what happened":
                     $ toldlauren = True
                     $ add_point(KCT.BOYFRIEND)
                     $ laurenrs = False
@@ -3255,7 +3255,7 @@ label continueq:
 
                     jump dk_ad
 
-                "Don't tell her.":
+                "Don't tell her":
                     $ add_point(KCT.TROUBLEMAKER)
 
                     u "(Lauren seems to value loyalty, she might be upset if she finds out and I don't wanna ruin our date before it even started.)"

@@ -138,7 +138,7 @@ label v2start:
     imre "If you knew how to fight, maybe he wouldn't fuck with you."
 
     menu:
-        "Hmm... maybe.":
+        "Hmm... maybe":
             $ add_point(KCT.BRO)
 
             scene s123d
@@ -149,7 +149,7 @@ label v2start:
             with dissolve
             imre "Just think about it, okay? I'll see you later."
 
-        "I'm not fighting.":
+        "I'm not fighting":
             $ add_point(KCT.BOYFRIEND)
 
             scene s123d
@@ -164,7 +164,7 @@ label v2start:
             imre "If he sees you looking at him wrong from now on, you'll end up in the hospital."
 
             menu:
-                "I'll think about it.":
+                "I'll think about it":
                     $ add_point(KCT.BRO)
 
                     scene s123d
@@ -175,7 +175,7 @@ label v2start:
                     with dissolve
                     imre "That's all I'm asking for. I'll see you later."
 
-                "I won't fight.":
+                "I won't fight":
                     $ add_point(KCT.BOYFRIEND)
 
                     scene s123d
@@ -1174,7 +1174,7 @@ label meet_lauren2:
     show screen influenceTutorial
 
     menu:
-        "There was something there.":
+        "There was something there":
             $ add_point(KCT.BOYFRIEND)
             
             if v1_laurenKiss and v1_laurenPoints == 2:
@@ -1262,7 +1262,7 @@ label meet_lauren2:
                 la "I don't wanna jeopardize our friendship."
 
                 menu:
-                    "Give me a chance.":
+                    "Give me a chance":
 
                         scene s130g
                         with dissolve
@@ -1288,7 +1288,7 @@ label meet_lauren2:
 
                             u "(I should probably wash the blood off my face before I go.)"
 
-                    "You're right.":
+                    "You're right":
 
                         scene s130g
                         with dissolve
@@ -1310,7 +1310,7 @@ label meet_lauren2:
 
                             u "(I should probably wash the blood off my face in the restroom before I go to class.)"
 
-        "Let's forget about it.":
+        "Let's forget about it":
             $ add_point(KCT.BRO)
             $ laawk = False
 
@@ -1810,7 +1810,7 @@ label history2:
     em "Can we please just hang out?"
 
     menu:
-        "Okay, I guess.":
+        "Okay, I guess":
             $ forgiveemily = True
             $ add_point(KCT.BOYFRIEND)
 
@@ -1836,7 +1836,7 @@ label history2:
 
             jump bo_ad
 
-        "No, sorry.":
+        "No, sorry":
             $ emilyandben = True
             $ forgiveemily = False
             $ add_point(KCT.TROUBLEMAKER)
@@ -1922,7 +1922,7 @@ label bo_ad:
 
             em "Maybe a little bit."
 
-        "I'm still single.":
+        "I'm still single":
             $ add_point(KCT.BOYFRIEND)
 
             hide s145
@@ -1958,7 +1958,7 @@ label bo_ad:
     em "Are you ever gonna stop bringing that up?"
 
     menu:
-        "It was adorable.":
+        "It was adorable":
             $ add_point(KCT.BOYFRIEND)
 
             hide s145c
@@ -1975,7 +1975,7 @@ label bo_ad:
 
             em "It was so thoughtful."
 
-        "It was so funny.":
+        "It was so funny":
             $ add_point(KCT.BRO)
 
             hide s145c
@@ -2100,7 +2100,7 @@ label bo_ad:
     ben "What? I'm 24."
 
     menu:
-        "Sure, knock yourself out.":
+        "Sure, knock yourself out":
             $ emilyandben = True
             $ add_point(KCT.BRO)
 
@@ -2121,7 +2121,7 @@ label bo_ad:
 
             u "Please don't..."
 
-        "Stay away from her.":
+        "Stay away from her":
             $ emilyandben = False
             $ add_point(KCT.BOYFRIEND)
 
@@ -2700,9 +2700,9 @@ label try1done:
     scene s163
     with Fade (1,0,1)
 
-    "(Yeah- still look the same as a viking as I did before.)"
+    u "(Yeah- still look the same as a viking as I did before.)"
 
-    "(I should really just choose a costume to buy.)"
+    u "(I should really just choose a costume to buy.)"
 
     call screen costumes
 
@@ -2777,7 +2777,7 @@ label v2_nsfwSkipLabel1:
     au "Haha, what do you think of my outfit?"
 
     menu:
-        "It's kinda hot.":
+        "It's kinda hot":
             $ add_point(KCT.BOYFRIEND)
 
             scene s166c
@@ -2804,7 +2804,7 @@ label v2_nsfwSkipLabel1:
 
                 au "Have you decided which one to buy yet?"
 
-        "It's definitely something.":
+        "It's definitely something":
             $ add_point(KCT.BRO)
 
             scene s166c
@@ -2838,9 +2838,9 @@ label try2done:
     scene s167
     with Fade (1,0,1)
 
-    "(I mean looking at the Knight costume now, I notice that...)"
+    u "(I mean looking at the Knight costume now, I notice that...)"
 
-    "(... it looks exactly the same as before.)"
+    u "(... it looks exactly the same as before.)"
 
     call screen costumes
 
@@ -2913,7 +2913,7 @@ label v2_nsfwSkipLabel2:
     u "Yours is uhhh..."
 
     menu:
-        "looking mighty fine.":
+        "looking mighty fine":
             $ add_point(KCT.BOYFRIEND)
 
             u "...looking mighty fine as well."
@@ -2940,7 +2940,7 @@ label v2_nsfwSkipLabel2:
             else:
                 au "Are you gonna buy this one?"
 
-        "certainly practical.":
+        "certainly practical":
             $ add_point(KCT.BRO)
 
             u "... certainly practical."
@@ -2993,7 +2993,7 @@ label try3done:
     scene s171
     with Fade (1,0,1)
 
-    "(The more I wear this, the more I feel like I would make a great cowboy.)"
+    u "(The more I wear this, the more I feel like I would make a great cowboy.)"
 
     call screen costumes
 
@@ -3057,7 +3057,7 @@ label v2_nsfwSkipLabel3:
     au "I'm not showing you this, haha."
 
     menu:
-        "Oh come on.":
+        "Oh come on":
             hide screen influenceTutorial
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -3105,7 +3105,7 @@ label v2_nsfwSkipLabel3:
 
             call screen costumes
 
-        "Fine.":
+        "Fine":
             hide screen influenceTutorial
             $ add_point(KCT.BOYFRIEND)
 
@@ -3227,9 +3227,9 @@ label try4done:
     scene s163
     with Fade (1,0,1)
 
-    "(Yeah- still look the same as a Viking as I did before.)"
+    u "(Yeah- still look the same as a Viking as I did before.)"
 
-    "(I should really just choose a costume to buy.)"
+    u "(I should really just choose a costume to buy.)"
 
     call screen costumes
 
@@ -3314,7 +3314,7 @@ label v2_nsfwSkipLabel4:
     pe "So uhm... what do you think of my outfit?"
 
     menu:
-        "You look beautiful.":
+        "You look beautiful":
             $ add_point(KCT.BOYFRIEND)
 
             scene s179a
@@ -3371,9 +3371,9 @@ label try5done:
     scene s167
     with Fade (1,0,1)
 
-    "(I mean looking at the Knight costume now, I notice that...)"
+    u "(I mean looking at the Knight costume now, I notice that...)"
 
-    "(... it looks exactly the same as before.)"
+    u "(... it looks exactly the same as before.)"
 
     call screen costumes
 
@@ -3509,7 +3509,7 @@ label try6done:
     scene s171
     with Fade (1,0,1)
 
-    "(The more I wear this, the more I feel like I would make a great cowboy.)"
+    u "(The more I wear this, the more I feel like I would make a great cowboy.)"
 
     call screen costumes
 
@@ -3574,7 +3574,7 @@ label v2_nsfwSkipLabel6:
 
 
     menu:
-        "Oh come on.":
+        "Oh come on":
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Oh come on, Penelope. I wanna see."
@@ -3585,7 +3585,7 @@ label v2_nsfwSkipLabel6:
 
             u "Alright, fine."
 
-        "Fine.":
+        "Fine":
             $ add_point(KCT.BOYFRIEND)
 
             u "Okay, fine."
@@ -4055,7 +4055,7 @@ label eve1:
     ev "Alright, here you go."
 
     menu:
-        "Make a move.":
+        "Make a move":
             $ evelynmove = True
             $ add_point(KCT.BRO)
 

@@ -140,13 +140,13 @@ label v14s21:
 
     menu:
 
-        "That does kinda suck.":
+        "That does kinda suck":
 
             $ add_point(KCT.TROUBLEMAKER)
 
             u "That does kinda suck. I guess we'll have to make the most out of the time we have."
 
-        "Don't worry about it.":
+        "Don't worry about it":
 
             $ add_point(KCT.BOYFRIEND)
 

@@ -51,7 +51,7 @@ label v14s03e:
 
                 ry "Damn right it's good!" 
 
-            "Oof, poor Satin.":
+            "Oof, poor Satin":
                 $ add_point(KCT.TROUBLEMAKER)
                 u "Oof, poor Satin, haha."
 

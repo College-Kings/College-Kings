@@ -81,7 +81,7 @@ label v4start:
     imre "Yeah whatever... *winces in pain* he caught me by surprise, it wasn't a fair fight."
 
     menu:
-        "You should be more careful.":
+        "You should be more careful":
             $ add_point(KCT.BOYFRIEND)
 
             scene s297a
@@ -97,7 +97,7 @@ label v4start:
             imre "I told you, it wasn't a fair fight! I'll fuck him up when I get out."
 
             menu:
-                "Let me help.":
+                "Let me help":
                     $ add_point(KCT.BRO)
 
                     scene s297a
@@ -127,7 +127,7 @@ label v4start:
 
                     u "I'll see you then, get better soon."
 
-                "That's a dumb idea.":
+                "That's a dumb idea":
                     $ add_point(KCT.BOYFRIEND)
 
                     scene s297a
@@ -157,7 +157,7 @@ label v4start:
 
                     u "I'll see you then, get better soon."
 
-        "Let's fuck him up.":
+        "Let's fuck him up":
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -571,7 +571,7 @@ label v4start:
         ju "Oh my god, honey! What happened to your eye??"
 
         menu:
-            "Someone punched me.":
+            "Someone punched me":
                 $ add_point(KCT.BOYFRIEND)
 
                 scene s315a
@@ -606,7 +606,7 @@ label v4start:
 
                 ju "Okay honey, let's go shopping then."
 
-            "It was an accident.":
+            "It was an accident":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene s315a
@@ -1632,7 +1632,7 @@ label readmontagea:
         pe "How did you know I was gonna be here?"
 
         menu:
-            "Magic Powers.":
+            "Magic Powers":
                 $ add_point(KCT.BRO)
 
                 scene s349d
@@ -1655,7 +1655,7 @@ label readmontagea:
 
                 u "Yeah, sure."
 
-            "I didn't.":
+            "I didn't":
                 $ add_point(KCT.BOYFRIEND)
 
                 scene s349d
@@ -1878,7 +1878,7 @@ label readmontagea:
         pe "How did you know I was gonna be here?"
 
         menu:
-            "Magic Powers.":
+            "Magic Powers":
                 $ add_point(KCT.BRO)
 
                 scene s345g
@@ -1898,7 +1898,7 @@ label readmontagea:
 
                 u "Yeah, sure."
 
-            "I didn't.":
+            "I didn't":
                 $ add_point(KCT.BOYFRIEND)
 
                 scene s345g
@@ -2008,7 +2008,7 @@ label ef_bd:
     u "Now we're getting into an interesting topic."
 
     menu:
-        "We should watch some.":
+        "We should watch some":
             $ add_point(KCT.TROUBLEMAKER)
 
             u "You know, we should watch some together sometime."
@@ -2028,7 +2028,7 @@ label ef_bd:
 
             pe "Right, thank you."
 
-        "You should try it.":
+        "You should try it":
             $ add_point(KCT.BRO)
 
             u "You know, you should try it sometime."
@@ -2116,7 +2116,7 @@ label ef_bd:
 
                     jump el_ad
 
-        "Yeah, it was nice.":
+        "Yeah, it was nice":
             $ bowling = False
 
     scene s350a
@@ -2274,7 +2274,7 @@ label continueab:
     jo "I see you've taken my spot."
 
     menu:
-        "I can move.":
+        "I can move":
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.BRO)
 
@@ -2288,7 +2288,7 @@ label continueab:
 
             jo "Hahaha, buddy I'm just kidding, stay put."
 
-        "It's my spot now.":
+        "It's my spot now":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s359a
@@ -2336,7 +2336,7 @@ label continueab:
     with dissolve
 
     menu:
-        "I'll join the Wolves.":
+        "I'll join the Wolves":
             $ add_point(KCT.BRO)
 
             u "I'll join the Wolves."
@@ -2346,7 +2346,7 @@ label continueab:
 
             jo "See? I knew he was a fighter."
 
-        "I don't know yet.":
+        "I don't know yet":
             $ add_point(KCT.BOYFRIEND)
 
             u "I don't know yet."
@@ -2395,7 +2395,7 @@ label continueab:
     jo "The rules are simple. The phone gives us tasks and how many sips to drink if we lose or are selected in some way or another."
 
     menu:
-        "Sounds good.":
+        "Sounds good":
             $ add_point(KCT.BRO)
 
             scene s361g
@@ -2403,7 +2403,7 @@ label continueab:
 
             u "Cool, sounds good."
 
-        "I should stop here.":
+        "I should stop here":
             $ add_point(KCT.BOYFRIEND)
 
             scene s361f
@@ -2417,7 +2417,7 @@ label continueab:
             am "Oh come on, just stay a bit longer. You never know what you might miss out on."
 
             menu:
-                "Alright, just for a bit.":
+                "Alright, just for a bit":
                     scene s357a
                     with dissolve
 
@@ -2428,7 +2428,7 @@ label continueab:
 
                     am "Good choice."
 
-                "Sorry, I really can't.":
+                "Sorry, I really can't":
                     scene s357a
                     with dissolve
 

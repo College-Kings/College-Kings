@@ -119,11 +119,11 @@ label v14s34:
 
     menu:
 
-        "Hey Princess...":
+        "Hey Princess":
             $ add_point(KCT.BOYFRIEND)
             u "Hey, princess. Did I wake you?"
 
-        "Hey Penelope...":
+        "Hey Penelope":
             $ add_point(KCT.BRO)
             u "Hey, Penelope. Did I wake you?"
 

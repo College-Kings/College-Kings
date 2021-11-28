@@ -908,7 +908,7 @@ label starta: #for compatibility only
         ri "So what did you think of Ms. Rose?"
 
         menu:
-            "She's hot.":
+            "She's hot":
                 $ add_point(KCT.BRO)
 
                 scene s50ri2a
@@ -950,7 +950,7 @@ label starta: #for compatibility only
 
                 ri "Hmmm.. I'll think about it."
 
-            "She seems nice.":
+            "She seems nice":
                 scene s50ri2a
                 with dissolve
 
@@ -1060,7 +1060,7 @@ label starta: #for compatibility only
 
                 el "Just get out of my face."
 
-            "That's cool.":
+            "That's cool":
                 $ add_point(KCT.BOYFRIEND)
 
                 scene s50el2a
@@ -1322,7 +1322,7 @@ label efra:
             scene s63d
             with dissolve
 
-        "The Wolves sound sick.":
+        "The Wolves sound sick":
             $ add_point(KCT.BRO)
 
             scene s64a
@@ -1671,7 +1671,7 @@ label efra:
     la "I think I'll drink."
 
     menu:
-        "You're missing out.":
+        "You're missing out":
             scene s73gr
             with dissolve
 
@@ -1682,7 +1682,7 @@ label efra:
 
             la "I guess we'll never know."
 
-        "Dodged a bullet there.":
+        "Dodged a bullet there":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s73gr
@@ -1809,7 +1809,7 @@ label efra:
     ri "So I feel like that dare is kinda unfair."
 
     menu:
-        "Do it, or drink.":
+        "Do it, or drink":
             $ add_point(KCT.BRO)
 
             scene s71ef
@@ -1826,7 +1826,7 @@ label efra:
 
             " "
 
-        "You're right.":
+        "You're right":
             $ add_point(KCT.BOYFRIEND)
             
             scene s71ef
@@ -1863,7 +1863,7 @@ label efra:
     imre "Man, I can't wait to bang this Riley chick."
 
     menu:
-        "Riley's mine.":
+        "Riley's mine":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s79b
@@ -1875,7 +1875,7 @@ label efra:
             imre "What the hell man?! I invited Riley. Back off."
 
             menu:
-                "You're right, sorry.":
+                "You're right, sorry":
                     $ add_point(KCT.BRO)
 
                     scene s79a
@@ -1887,7 +1887,7 @@ label efra:
 
                     imre "It's fine bro, I get it. She is really cute."
 
-                "She wants me.":
+                "She wants me":
                     $ add_point(KCT.TROUBLEMAKER)
 
                     scene s79b
@@ -1914,7 +1914,7 @@ label efra:
                     imre "Trust me, we're gonna bang so many chicks this year. All we need is confidence..."
                     jump at_bd
 
-        "They're both hot.":
+        "They're both hot":
             $ add_point(KCT.BRO)
 
             scene s79
@@ -2420,7 +2420,7 @@ label v1_nsfwSkipLabel1:
             with dissolve
             u "How about we go to the park this afternoon? I'll bring some sandwiches and we'll make your day better."
 
-        "Bad roommates suck.":
+        "Bad roommates suck":
             $ add_point(KCT.BRO)
 
             scene s87a
@@ -2520,7 +2520,7 @@ label v1_nsfwSkipLabel1:
     u "A couple huh?"
 
     menu:
-        "You could get any guy.":
+        "You could get any guy":
             scene s89d
             with dissolve
             u "I bet you could get any guy you want."
@@ -2529,7 +2529,7 @@ label v1_nsfwSkipLabel1:
             with dissolve
             la "Uhm... thanks. Not really though, haha."
 
-        "Yet, you're here with me.":
+        "Yet, you're here with me":
             $ v1_laurenPoints += 1
 
             scene s89d
@@ -2578,7 +2578,7 @@ label v1_nsfwSkipLabel1:
     la "Fine, but you have to start."
 
     menu:
-        "I'm still in love with my ex.":
+        "I'm still in love with my ex":
 
             scene s89d
             with dissolve
@@ -2602,7 +2602,7 @@ label v1_nsfwSkipLabel1:
 
             u "Now it's time for your secret."
 
-        "I've broken into an Ikea.":
+        "I've broken into an Ikea":
 
             $ v1_laurenPoints += 1
             scene s89d
@@ -2727,7 +2727,7 @@ label aw_bd:
 
 
     menu:
-        "You're really beautiful.":
+        "You're really beautiful":
             $ add_point(KCT.BOYFRIEND)
 
             u "You know... you're really beautiful."
@@ -2736,7 +2736,7 @@ label aw_bd:
             with dissolve
             la "Awww."
 
-        "You're not ugly.":
+        "You're not ugly":
             $ add_point(KCT.BRO)
 
             u "You know... you're not ugly."
@@ -3337,7 +3337,7 @@ label v1_freeRoam2_josh:
             menu:
 
 
-                "I'll be the next Fight King.":
+                "I'll be the next Fight King":
                     $ add_point(KCT.TROUBLEMAKER)
                     $ v1_aubreywannafight = True
 
@@ -3358,7 +3358,7 @@ label v1_freeRoam2_josh:
 
                     u "Who's Grayson?"
 
-                "No, that's not for me.":
+                "No, that's not for me":
                     scene fr2jo2b
                     with dissolve
 
@@ -3462,7 +3462,7 @@ label v1_freeRoam2_mason:
     jeremy "Damn, that takes balls, kid!"
 
     menu:
-        "Yeah, he better watch out.":
+        "Yeah, he better watch out":
             $ add_point(KCT.TROUBLEMAKER)
             $ add_point(KCT.BRO)
 
@@ -3511,7 +3511,7 @@ label v1_freeRoam2_mason:
 
             u "(Oh no, what have I gotten myself into?!)"
 
-        "I didn't wanna fight him.":
+        "I didn't wanna fight him":
             scene fr2ma1a
             with dissolve
 
@@ -3780,7 +3780,7 @@ label fr2end: #for compatibility only
     ry "Man, I don't know. Why don't you just go ask her yourself?"
 
     menu:
-        "You're right, I'll talk to her.":
+        "You're right, I'll talk to her":
             $ add_point(KCT.BRO)
 
             scene s108e
@@ -3808,7 +3808,7 @@ label fr2end: #for compatibility only
 
             cl "Hey, what's your name?"
 
-        "She's occupied.":
+        "She's occupied":
             scene s108c
             with dissolve
 

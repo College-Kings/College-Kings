@@ -122,7 +122,7 @@ label v14s26:
     with dissolve
 
     menu:
-        "Oh thanks...":
+        "Oh thanks":
             scene v14s26_5
             with dissolve
 

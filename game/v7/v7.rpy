@@ -284,7 +284,7 @@ label v7start:
 
             u "Yeah, I can see that. But winning must be surreal too."
 
-        "That's really impressive.":
+        "That's really impressive":
             $ add_point(KCT.BOYFRIEND)
 
             u "That's really impressive. Winning the entire tournament must be surreal."
@@ -1191,7 +1191,7 @@ label hd_ad:
     ri "Hey uhm... do you maybe wanna come in?"
 
     menu:
-        "Yeah, I'd like that.":
+        "Yeah, I'd like that":
             if laurenrs or emilyrs:
                 $ add_point(KCT.TROUBLEMAKER)
 
@@ -1302,7 +1302,7 @@ label hd_ad:
 
             pause 0.5
 
-        "Uhm... I shouldn't.":
+        "Uhm... I shouldn't":
             if laurenrs or emilyrs:
                 $ add_point(KCT.BOYFRIEND)
 
@@ -1391,19 +1391,19 @@ label conyourdorm:
             if riley.messenger.replies:
                 call screen messager(riley.messenger)
             if riley.messenger.replies:
-                "(I need to respond to some of these messages.)"
+                u "(I need to respond to some of these messages.)"
                 jump phoneam
 
             if kiwii_firstTime:
-                "(I should check out what Emily posted on Kiwii.)"
+                u "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam
 
             if bowling and penelope.messenger.replies:
-                "(I should answer Penelope.)"
+                u "(I should answer Penelope.)"
                 jump phoneam
 
             if laurenrs and lauren.messenger.replies:
-                "(I should respond to Lauren.)"
+                u "(I should respond to Lauren.)"
                 jump phoneam
 
         label continueee: #for compatibility only
@@ -1716,7 +1716,7 @@ label apologylauren:
 
                 u "Cool, see you then."
 
-            "I can't today.":
+            "I can't today":
                 $ nobeach = True
 
                 scene s717c
@@ -1776,7 +1776,7 @@ label apologylauren:
 
                 u "Cool, see you then."
 
-            "I can't today.":
+            "I can't today":
                 $ nobeach = True
 
                 scene s717c
@@ -1912,7 +1912,7 @@ label thisbelauren:
             with dissolve
 
             menu:
-                "This won't happen again.":
+                "This won't happen again":
                     $ laurenemily = 2
                     $ add_point(KCT.BOYFRIEND)
 
@@ -2243,7 +2243,7 @@ label thisbewalk:
         with dissolve
 
         menu:
-            "Almost as cute as you.":
+            "Almost as cute as you":
                 if laurenrs:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
@@ -2256,7 +2256,7 @@ label thisbewalk:
 
                 aut "Uhhh..."
 
-            "Yeah, he really is.":
+            "Yeah, he really is":
                 u "Yeah, he really is."
 
         scene s726 # mc looking down playing with oscar
@@ -2297,7 +2297,7 @@ label thisbewalk:
         with dissolve
 
         menu:
-            "Yes, of course.":
+            "Yes, of course":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ politics = True
 
@@ -2348,7 +2348,7 @@ label thisbewalk:
 
                 aut "Oh, alright. I'll definitely check it out."
 
-            "No, not really.":
+            "No, not really":
                 $ add_point(KCT.BRO)
                 $ politics = False
 
@@ -2437,7 +2437,7 @@ label thisbewalk:
                     scene s727
                     with dissolve
 
-            "That's really cool.":
+            "That's really cool":
                 $ add_point(KCT.BRO)
                 $ protest = False
                 $ signs = False
@@ -3252,7 +3252,7 @@ label beachlauren:
         la "I mean... I just don't want you to end up in the hospital."
 
         menu:
-            "You're cute.":
+            "You're cute":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene s742e
@@ -3328,7 +3328,7 @@ label beachlauren:
                 else:
                     u "*Chuckles*"
 
-            "I won't.":
+            "I won't":
                 $ add_point(KCT.BOYFRIEND)
 
                 u "I won't... don't worry."
@@ -4164,7 +4164,7 @@ label aftercall:
         u "(How the fuck do they even know about this?)"
 
         menu:
-            "True.":
+            "True":
                 $ wolvesTask3 = True
                 $ tasks += 1
 
@@ -4175,7 +4175,7 @@ label aftercall:
 
                 ch "No need to explain. We appreciate your honesty."
 
-            "False.":
+            "False":
                 u "I didn't. False."
 
                 scene s786b # chris looking directly at you mouth open
@@ -4192,7 +4192,7 @@ label aftercall:
         u "(Shit, if I say true, I'm gonna look a weakling... but if I say false and they know I'm lying I'll fail the challenge...)"
 
         menu:
-            "True.":
+            "True":
                 $ wolvesTask3 = True
                 $ tasks += 1
 
@@ -4203,7 +4203,7 @@ label aftercall:
 
                 ch "No need to explain. We appreciate your honesty."
 
-            "False.":
+            "False":
                 u "I didn't. False."
 
                 scene s786b # chris looking directly at you mouth open
@@ -6596,7 +6596,7 @@ label hc_asking_amber:
         am "*Whispers* I got some molly."
         am "How about we skip the dance together? I promise it'll be a lot more fun."
         menu:
-            "Alright, I'm in.":
+            "Alright, I'm in":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ hcGirl = "amber"
                 $ amberrs = True
@@ -6616,7 +6616,7 @@ label hc_asking_amber:
 
                 jump after_hc_selection
 
-            "I'd rather go to the dance.":
+            "I'd rather go to the dance":
                 $ add_point(KCT.BOYFRIEND)
 
                 scene s919e
@@ -10841,7 +10841,7 @@ label emilyhocodate:
     with dissolve
 
     menu:
-        "Of course.":
+        "Of course":
             $ add_point(KCT.BRO)
 
             u "Of course. Dancing is like riding a bicycle. You don't unlearn that."
@@ -10853,7 +10853,7 @@ label emilyhocodate:
 
             em "Show me then."
 
-        "I'm not sure.":
+        "I'm not sure":
             $ add_point(KCT.BOYFRIEND)
 
             u "I'm not sure... I haven't properly done couple dancing since high school."
@@ -11754,7 +11754,7 @@ label penelopehocodate:
     with dissolve
 
     menu:
-        "You didn't have four cats.":
+        "You didn't have four cats":
 
             u "You definitely did not have four cats."
 
@@ -11778,7 +11778,7 @@ label penelopehocodate:
             scene sfr4pe8a
             with dissolve
 
-        "You didn't have six lizards.":
+        "You didn't have six lizards":
             u "You definitely did not have six lizards."
 
             scene sfr4pe8f # penelope innocent smille
@@ -11822,7 +11822,7 @@ label penelopehocodate:
     with dissolve
 
     menu:
-        "You didn't lose your virginity.":
+        "You didn't lose your virginity":
             u "No way you lost your virginity at 14, that's a lie."
 
             scene sfr4pe8f # penelope innocent smille
@@ -11850,7 +11850,7 @@ label penelopehocodate:
 
             pe "*Laughs* I'm just kidding! You should have seen your face though."
 
-        "You didn't learn to drive.":
+        "You didn't learn to drive":
 
             u "No way you learned to drive that early. I guess you lost your virginity?"
 
@@ -14761,14 +14761,14 @@ label fr4riley2:
         with dissolve
 
         menu:
-            "Alright, let's go.":
+            "Alright, let's go":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright. Let me tell my date that I gotta leave early and let's go."
 
                 jump fr4rileyending
 
-            "I can't ditch my date.":
+            "I can't ditch my date":
                 $ add_point(KCT.BOYFRIEND)
                 $ freeroam4.add("riley2")
 
@@ -14821,14 +14821,14 @@ label fr4riley2:
         with dissolve
 
         menu:
-            "Alright, let's go.":
+            "Alright, let's go":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright. Let me tell my date that I gotta leave early and let's go."
 
                 jump fr4rileyending
 
-            "I can't ditch my date.":
+            "I can't ditch my date":
                 $ add_point(KCT.BOYFRIEND)
                 $ freeroam4.add("riley2")
 
@@ -14888,7 +14888,7 @@ label fr4nora2:
         with dissolve
 
         menu:
-            "Agree with Nora.":
+            "Agree with Nora":
                 $ add_point(KCT.BOYFRIEND)
 
                 u "Sorry, that must suck. He should be spending time with you."
@@ -14923,7 +14923,7 @@ label fr4nora2:
 
                 u "Yeah, see ya."
 
-            "Defend Chris.":
+            "Defend Chris":
                 $ add_point(KCT.BRO)
 
                 u "I mean I get where he's coming from. He's got his own priorities to deal with too. And he's president of a frat-"
@@ -15177,7 +15177,7 @@ label fr4aubrey1:
         with dissolve
 
         menu:
-            "Alright, let's go.":
+            "Alright, let's go":
                 $ add_point(KCT.BRO)
                 $ bathroomblowjob = True
 
@@ -15275,7 +15275,7 @@ label fr4aubrey1:
 
                     jump labelfr4hallwaybathroom
 
-            "I'm not really feeling it.":
+            "I'm not really feeling it":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene sfr4ri39d # aubrey a bit disappointed
@@ -15950,7 +15950,7 @@ label fr4penelope1:
     with dissolve
 
     menu:
-        "I like your dress.":
+        "I like your dress":
             $ add_point(KCT.BRO)
 
             u "I really like your dress."
@@ -15973,7 +15973,7 @@ label fr4penelope1:
             scene sfr4pe25a
             with dissolve
 
-        "I'll let you get back.":
+        "I'll let you get back":
             $ add_point(KCT.BOYFRIEND)
 
     u "Alright, well I'll let you get back to your friend. She sounds like she needs you more than I do."
@@ -16053,7 +16053,7 @@ label fr4chloe2:
         with dissolve
 
         menu:
-            "You got this.":
+            "You got this":
                 $ add_point(KCT.BOYFRIEND)
 
                 u "You got this."
@@ -16109,7 +16109,7 @@ label fr4chloe2:
 
                     jump fr4penelopedatechloe
 
-            "Or we could just leave.":
+            "Or we could just leave":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Or we could just leave right now and not look back..."
@@ -16225,7 +16225,7 @@ label fr4grayson1:
         with dissolve
 
         menu:
-            "Don't do that.":
+            "Don't do that":
                 $ add_point(KCT.BOYFRIEND)
 
                 u "Hey man, don't do that. That's a real dick move."
@@ -16272,7 +16272,7 @@ label fr4grayson1:
 
                     u "*Sighs* Fine."
 
-            "Alright, enjoy.":
+            "Alright, enjoy":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright, enjoy."
@@ -16315,7 +16315,7 @@ label fr4grayson1:
         with dissolve
 
         menu:
-            "Don't do that.":
+            "Don't do that":
                 $ preventgrayson = True
                 $ add_point(KCT.BOYFRIEND)
 
@@ -16346,7 +16346,7 @@ label fr4grayson1:
 
                 pause 0.5
 
-            "Alright, enjoy.":
+            "Alright, enjoy":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright, enjoy."
@@ -16449,7 +16449,7 @@ label fr4lockerroomchloe:
             with dissolve
 
             menu:
-                "Of course you can.":
+                "Of course you can":
                     $ add_point(KCT.BOYFRIEND)
 
                     u "Of course you can."
@@ -16507,7 +16507,7 @@ label fr4lockerroomchloe:
                         with fade
                         jump fr4emilydate
                         
-                "Let's get out of here.":
+                "Let's get out of here":
                     $ add_point(KCT.TROUBLEMAKER)
 
                     u "You don't have to. Let's just get out of here."

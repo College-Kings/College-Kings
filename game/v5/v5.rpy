@@ -63,7 +63,7 @@ label v5start:
     no "What are you doing here? And why did you just punch the wall?"
 
     menu:
-        "It's Chloe.":
+        "It's Chloe":
             scene s374a # nora close up questioning
             with dissolve
 
@@ -163,7 +163,7 @@ label v5start:
 
                     u "*Drunk* Night..."
 
-        "It's nothing.":
+        "It's nothing":
             scene s374a
             with dissolve
 
@@ -287,7 +287,7 @@ label jorepb:
     cl "I didn't do anything shady. Grayson is just spreading lies like he always is."
 
     menu:
-        "I believe you.":
+        "I believe you":
             $ add_point(KCT.BOYFRIEND)
             $ chloemad = False
 
@@ -357,7 +357,7 @@ label jorepb:
 
             jump newchloec
 
-        "You're lying.":
+        "You're lying":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s370a
@@ -459,7 +459,7 @@ label jorepb:
             no "What are you doing here? And why did you just punch the wall?"
 
             menu:
-                "It's Chloe.":
+                "It's Chloe":
                     scene s374a # nora close up questioning
                     with dissolve
 
@@ -559,7 +559,7 @@ label jorepb:
 
                             u "Night..."
 
-                "It's nothing.":
+                "It's nothing":
                     scene s374a
                     with dissolve
 
@@ -678,7 +678,7 @@ label newchloec:
             if amber.messenger.replies:
                 call screen phone
             if amber.messenger.replies:
-                "(Maybe it's Lauren and she wants to talk about what happened? I should definitely check.)"
+                u "(Maybe it's Lauren and she wants to talk about what happened? I should definitely check.)"
                 jump phoney
 
         jump continueaf
@@ -727,7 +727,7 @@ label continuez:
         u "(If we kiss in public, other girls are bound to find out that I'm dating Lauren.)"
 
         menu:
-            "Complaints? I love it.":
+            "Complaints? I love it":
                 $ laurenpublic = True
                 $ add_point(KCT.BOYFRIEND)
 
@@ -743,7 +743,7 @@ label continuez:
 
                 u "Hahaha, oops."
 
-            "I don't like kissing in public.":
+            "I don't like kissing in public":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Uhm, actually do you mind if we don't do that in public?"
@@ -777,7 +777,7 @@ label continuez:
                 u "(Shit, she's pushing back. But if I want to avoid other girls finding out about us, I can't just kiss her in public.)"
 
                 menu:
-                    "Sorry, not in public.":
+                    "Sorry, not in public":
                         $ laurenpublic = False
                         $ add_point(KCT.TROUBLEMAKER)
                         
@@ -793,7 +793,7 @@ label continuez:
                         scene s380c
                         with dissolve
 
-                    "Actually, a kiss is fine.":
+                    "Actually, a kiss is fine":
                         $ laurenpublic = True
 
                         u "Actually, you're right, sorry. A kiss is fine."
@@ -1072,7 +1072,7 @@ label gokissb:
     la "Have you heard of the trolley problem?"
 
     menu:
-        "Yes.":
+        "Yes":
             scene s382a
             with dissolve
 
@@ -1083,7 +1083,7 @@ label gokissb:
 
             la "Uhm yeah, that's broadly it."
 
-        "No.":
+        "No":
             scene s382a
             with dissolve
 
@@ -1223,7 +1223,7 @@ label continueam:
     la "Are you okay with doing another one?"
 
     menu:
-        "Yeah, let's do it.":
+        "Yeah, let's do it":
             scene s382a
             with dissolve
 
@@ -1282,7 +1282,7 @@ label continueam:
             play sound "sounds/countdown.mp3"
             call screen trolleyProblem("trolleyba", "trolleybb")
 
-        "I'd rather not.":
+        "I'd rather not":
             $ trolleyskip = 2
             jump fb_b
 
@@ -1336,7 +1336,7 @@ label continuean:
     la "Are you okay with doing the last one?"
 
     menu:
-        "Yeah, okay.":
+        "Yeah, okay":
             scene s382a
             with dissolve
 
@@ -1396,7 +1396,7 @@ label continuean:
             play sound "sounds/countdown.mp3"
             call screen trolleyProblem("trolleyca", "trolleycb")
 
-        "I'd rather not.":
+        "I'd rather not":
             $ trolleyskip = 1
 
             jump fb_b
@@ -1452,7 +1452,7 @@ label continueao:
     la "Sorry, I had to ask around in order to find a weak spot. My psych professor said this was essential for the last problem to work."
 
     menu:
-        "At least we're done now.":
+        "At least we're done now":
             $ add_point(KCT.BOYFRIEND)
 
             scene s382a
@@ -1523,7 +1523,7 @@ label continueao:
 
             jump hospitala
 
-        "That was too far.":
+        "That was too far":
             $ add_point(KCT.TROUBLEMAKER)
             $ laurenokay = False
 
@@ -2097,7 +2097,7 @@ label continueaf:
     u "(If we kiss in public, other girls are bound to find out that I'm dating Lauren.)"
 
     menu:
-        "Complaints? I love it.":
+        "Complaints? I love it":
             $ laurenpublic = True
             $ add_point(KCT.BOYFRIEND)
 
@@ -2113,7 +2113,7 @@ label continueaf:
             jump gokissb
 
 
-        "I don't like kissing in public.":
+        "I don't like kissing in public":
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Uhm, actually do you mind if we don't do that in public?"
@@ -2147,7 +2147,7 @@ label continueaf:
             u "(Shit, she's pushing back. But if I want to avoid other girls finding out about us, I can't just kiss her in public.)"
 
             menu:
-                "Sorry, not in public.":
+                "Sorry, not in public":
                     $ laurenpublic = False
                     $ add_point(KCT.TROUBLEMAKER)
                     
@@ -2164,7 +2164,7 @@ label continueaf:
 
                     jump gokissb
 
-                "Actually, a kiss is fine.":
+                "Actually, a kiss is fine":
                     $ laurenpublic = True
 
                     u "Actually, you're right, sorry. A kiss is fine."
@@ -3739,7 +3739,7 @@ label youfinishadam: #### You beat adam
     ch "Christ man, you're a natural. Have you considered joining a frat?"
 
     menu:
-        "Yeah, I'm interested.":
+        "Yeah, I'm interested":
             $ add_point(KCT.BRO)
 
             scene s428a
@@ -3776,7 +3776,7 @@ label youfinishadam: #### You beat adam
 
             jump findimre
 
-        "Not really.":
+        "Not really":
             $ add_point(KCT.BOYFRIEND)
 
             scene s428a
