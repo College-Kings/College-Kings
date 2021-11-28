@@ -1596,7 +1596,7 @@ label readmontagea:
     scene s343 # First person inside cafe # show penelope with coffe on laptop
     with dissolve
 
-    if (not costumeaubrey and caughtpeekingpenelope and caughtpeekingpenelopecounter) or (not caughtpeekingpenelope) : # costume w pen
+    if not (not costumeaubrey and v2_caughtpeeking and not v2_caughtpeekingcounter): # did not have bad outcome when shopping with penelope
         label continueaa: #for compatibility only
         u "(Oh, Penelope's here, I should probably say hi.)"
 
@@ -1673,7 +1673,7 @@ label readmontagea:
 
                 u "Yeah, sure."
 
-    elif not caughtpeekingpenelopecounter: # caught
+    elif (not costumeaubrey and v2_caughtpeeking and not v2_caughtpeekingcounter): # caught
         u "(Shit, Penelope's here. I wonder if she's still mad at me...)"
 
         u "(Maybe I should buy her something and apologize for peeking on her.)"
@@ -1686,7 +1686,7 @@ label readmontagea:
             "Buy Penelope a muffin":
                 $ add_point(KCT.BOYFRIEND)
                 $ muffin = True
-                $ caughtpeekingpenelopecounter = True
+                $ v2_caughtpeekingcounter = True
 
                 scene s344a
                 with dissolve

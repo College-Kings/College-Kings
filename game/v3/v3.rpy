@@ -1379,7 +1379,7 @@ label conl:
 
     if costumeaubrey: # did you meet aubrey?
         if v2_caughtpeeking: # did she catch you?
-            if caughtpeekingaubreycounter: # did you talk your way out?
+            if v2_caughtpeekingcounter: # did you talk your way out?
                 jump talkedout
 
             else: # caught and she's mad

@@ -2483,7 +2483,7 @@ label thisbewalk:
     pause 0.5
     play music "music/mhappy.mp3"
 
-    if ((not costumeaubrey and v2_caughtpeeking) and not caughtpeekingpenelopecounter) or penelopekiss:
+    if (not costumeaubrey and v2_caughtpeeking and not v2_caughtpeekingcounter) or penelopekiss:
         scene s731 # First person, Penelope sitting in front of your dorm door
         with dissolve
 

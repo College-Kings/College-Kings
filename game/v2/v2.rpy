@@ -3683,7 +3683,7 @@ label v1_caughtContinue:
     menu:
         "Apologize":
             $ add_point(KCT.BOYFRIEND)
-            $ caughtpeekingaubreycounter = True
+            $ v2_caughtpeekingcounter = True
 
             scene s177e
             with dissolve
@@ -3710,7 +3710,7 @@ label v1_caughtContinue:
             if kct == "confident":
                 call screen kct_popup
 
-                $ caughtpeekingaubreycounter = True
+                $ v2_caughtpeekingcounter = True
 
                 scene s177d # aub embarrassed
                 with dissolve
@@ -3833,7 +3833,7 @@ label v1_caughtContinue_pen:
             if kct == "confident":
                 call screen kct_popup
 
-                $ caughtpeekingpenelopecounter = True
+                $ v2_caughtpeekingcounter = True
 
                 scene s186d # pen embarrassed
                 with dissolve
