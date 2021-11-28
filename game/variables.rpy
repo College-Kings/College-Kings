@@ -27,6 +27,9 @@ default enemyhealth = 0
     ## Free Roam
 default previous_location = ""
 
+    ## Checklist
+default checklist = Checklist()
+
     ## Path Builder
 default path_builder = False
 default pb_name_set = False
@@ -447,7 +450,6 @@ default autumn_lunch_break = False # not used (28/08/2021)
 default dog_name = "Blue"
 default v15_lauren_gift = None
 default lindsey_friend = False # Placeholder?
-default v15s9_mad_at_ms_rose = False # Placeholder?
 default mr_lee_meeting = False # Placeholder?
 default ms_rose_meeting = False # (redundancy check) # not used (28/08/2021)
 default smoked_with_autumn = False
