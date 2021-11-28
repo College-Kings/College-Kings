@@ -22,11 +22,10 @@ label v14s51:
     scene v14s51_1 # TPP. Show MC walking into Chloe's room and closing the door behind him, slight smile, mouth closed
     with dissolve
 
-    if v14s50_listen_to_aubrey_lindsey_2 or v14s50_listen_to_aubrey_lindsey_3:
-        
+    if v14s50_listen_to_aubrey_lindsey >= 2:
         u "(Listening in for so long definitely cost me a lot of time. I won't be able to look through most of Chloe's stuff, so I really need to prioritize which locations I want to search.)"
-    elif v14s50_listen_to_aubrey_lindsey:
 
+    elif v14s50_listen_to_aubrey_lindsey == 1:
         u "(Listening in may have cost me a bit of time, hopefully I'll still have enough to look through most Chloe's stuff, but I definitely won't be able to search everywhere.)"
     
     else:

@@ -224,7 +224,7 @@ label v14s50:
 
         "Keep listening": # -if Keep listening
             $ add_point(KCT.BRO)
-            $ v14s50_listen_to_aubrey_lindsey = True
+            $ v14s50_listen_to_aubrey_lindsey += 1
             scene v14s50_11b
             with dissolve
 
@@ -300,7 +300,7 @@ label v14s50:
                     jump v14s51 # -Transition to Scene 51-
 
                 "Keep listening": # -if Keep listening
-                    $ v14s50_listen_to_aubrey_lindsey_2 = True
+                    $ v14s50_listen_to_aubrey_lindsey += 1
                     $ add_point(KCT.BRO)
                     scene v14s50_11
                     with dissolve
@@ -399,7 +399,7 @@ label v14s50:
                             jump v14s51 # -Transition to Scene 51-
 
                         "Keep listening": # -if Keep listening
-                            $ v14s50_listen_to_aubrey_lindsey_3 = True
+                            $ v14s50_listen_to_aubrey_lindsey += 1
                             $ add_point(KCT.BRO)
                             scene v14s50_11d
                             with dissolve

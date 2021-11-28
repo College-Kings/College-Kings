@@ -5,7 +5,7 @@ screen v14s51_room():
         idle "images/v14/Scene 51/v14s51_2.webp"
         hover "images/v14/Scene 51/v14s51_2_screen_hover.webp"
 
-        if v14s50_listen_to_aubrey_lindsey_3:
+        if v14s50_listen_to_aubrey_lindsey == 3:
             if v14s51_interaction < 2: #toggle 2 to 1 to enhance extra difficulty if MC stayed to listen for a third time.
                 if not v14s51_bedside:
                     imagebutton:
@@ -40,7 +40,7 @@ screen v14s51_room():
             else:
                 timer 0.75 action Jump("v14s51_continue")
 
-        elif v14s50_listen_to_aubrey_lindsey_2:
+        elif v14s50_listen_to_aubrey_lindsey == 2:
             if v14s51_interaction < 3:
                 if not v14s51_bedside:
                     imagebutton:
@@ -75,7 +75,7 @@ screen v14s51_room():
             else:
                 timer 0.75 action Jump("v14s51_continue")
 
-        elif v14s50_listen_to_aubrey_lindsey:
+        elif v14s50_listen_to_aubrey_lindsey == 1:
             if v14s51_interaction < 4:
                 if not v14s51_bedside:
                     imagebutton:
