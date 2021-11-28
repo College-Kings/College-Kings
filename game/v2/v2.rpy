@@ -2708,7 +2708,7 @@ label try1done:
 
 
 label try1new:
-    $ auboutfits += 1
+    $ v2_outfits += 1
 
     scene s163 # in changing room
     with Fade (1,0,1)
@@ -2792,7 +2792,7 @@ label v2_nsfwSkipLabel1:
 
             au "I think you've put me in the wrong time period, buddy."
 
-            if auboutfits < 3:
+            if v2_outfits < 3:
                 scene s166
                 with dissolve
 
@@ -2817,7 +2817,7 @@ label v2_nsfwSkipLabel1:
             scene s166
             with dissolve
 
-            if auboutfits < 3:
+            if v2_outfits < 3:
                 au "I'll guess I'll have to try some of the other outfits then."
 
             else:
@@ -2847,7 +2847,7 @@ label try2done:
 
 label try2new:
 
-    $ auboutfits += 1
+    $ v2_outfits += 1
 
     scene s167 # in changing room
     with Fade (1,0,1)
@@ -2934,7 +2934,7 @@ label v2_nsfwSkipLabel2:
 
             au "Hahaha, no. I was just joking."
 
-            if auboutfits < 3:
+            if v2_outfits < 3:
                 au "Let's switch outfits."
 
             else:
@@ -2967,7 +2967,7 @@ label v2_nsfwSkipLabel2:
 
             scene s170d
 
-            if auboutfits < 3:
+            if v2_outfits < 3:
                 au "Let's switch outfits."
 
             else:
@@ -2998,7 +2998,7 @@ label try3done:
     call screen costumes
 
 label try3new:
-    $ auboutfits += 1
+    $ v2_outfits += 1
 
     scene s171 # in changing room
     with Fade (1,0,1)

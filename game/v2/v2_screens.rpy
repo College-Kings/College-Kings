@@ -32,7 +32,7 @@ screen costumes():
         idle "images/v2/try.webp"
         hover "images/v2/buyh.webp"
         pos (256, 935)
-        if costumeaubrey and auboutfits <= 3:
+        if costumeaubrey and v2_outfits <= 3:
             action Show("confirmBuy", exit="buy1")
         elif costumeaubrey:
             action Jump("buy1")
@@ -45,7 +45,7 @@ screen costumes():
         idle "images/v2/try.webp"
         hover "images/v2/buyh.webp"
         pos (738, 935)
-        if costumeaubrey and auboutfits <= 3:
+        if costumeaubrey and v2_outfits <= 3:
             action Show("confirmBuy", exit="buy2")
         elif costumeaubrey:
             action Jump("buy2")
@@ -58,7 +58,7 @@ screen costumes():
         idle "images/v2/try.webp"
         hover "images/v2/buyh.webp"
         pos (1219, 935)
-        if costumeaubrey and auboutfits <= 3:
+        if costumeaubrey and v2_outfits <= 3:
             action Show("confirmBuy", exit="buy3")
         elif costumeaubrey:
             action Jump("buy3")
