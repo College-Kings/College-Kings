@@ -7,6 +7,8 @@ init python:
 
             self.money = 0
             self.inventory = Inventory()
+            self.relationships = set()
+            self.girlfriends = set()
 
         def add_item(self, item):
             if item.cost > self.money:
