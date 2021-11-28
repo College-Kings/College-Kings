@@ -206,7 +206,7 @@ label v15s1:
 
         menu:
             "They were on a break":
-                $ QuirkPopculture += 1
+                $ mc.quirks["pop_culture"] += 1
                 $ add_point(KCT.BRO)
 
                 u "They were on a break, bro..."
@@ -222,7 +222,7 @@ label v15s1:
                 u "Haha."
 
             "Who?":
-                $ QuirkBoomer += 1
+                $ mc.quirks["boomer"] += 1
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Who?"
@@ -258,7 +258,7 @@ label v15s1:
 
         menu:
             "Of course I know":
-                $ QuirkPopculture += 1
+                $ mc.quirks["pop_culture"] += 1
                 $ add_point(KCT.BRO)
 
                 u "*Laughs* Yeah, of course I know"
@@ -279,7 +279,7 @@ label v15s1:
                 imre "*Sighs*"
 
             "A monkey?":
-                $ QuirkBoomer += 1
+                $ mc.quirks["boomer"] += 1
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "A monkey? What? *Laughs*"
@@ -411,13 +411,13 @@ label v15s1:
 
             imre "But there's always a chance, dude. Just like Ross and Rachel."
 
-            if QuirkPopculture > QuirkBoomer:
+            if mc.quirks["pop_culture"] > mc.quirks["boomer"]:
                 scene v15s1_3o
                 with dissolve
 
                 u "*Chuckles*"
 
-            elif QuirkBoomer > QuirkPopculture:
+            elif mc.quirks["boomer"] > mc.quirks["pop_culture"]:
                 scene v15s1_3o # FPP. same as v15s1_3m Imre has a smug looking expression mouth is still closed
                 with dissolve
 
