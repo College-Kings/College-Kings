@@ -573,10 +573,8 @@ label after_load:
         except NameError: joshmadfr = False
         try: v12s7_victims
         except NameError: v12s7_victims = 12
-        try: v12s23a_poolsex
-        except NameError: v12s23a_poolsex = False
-        try: v12s23a_beatcameron
-        except NameError: v12s23a_beatcameron = False
+        try: v12s23a_sam
+        except NameError: v12s23a_sam = False
         try: v12_nora_sex
         except NameError: v12_nora_sex = False
         try: v12_nora_points

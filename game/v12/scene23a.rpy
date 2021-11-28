@@ -292,7 +292,7 @@ label v12_mc_chilling:
 
         menu:
             "Yes":
-                $ v12s23a_poolsex = True
+                $ v12s23a_sam += 1
                 scene v12mor13a 
                 with dissolve
                 
@@ -337,7 +337,7 @@ label v12_mc_chilling:
 
         menu:
             "I can beat Cameron":
-                $ v12s23a_beatcameron = True
+                $ v12s23a_sam += 1
                 $ add_point(KCT.TROUBLEMAKER)
                 
                 scene v12mor13a
@@ -357,7 +357,7 @@ label v12_mc_chilling:
 
                 sa "*Drunk* Ughhh, such a pussy. *Chuckles*"
 
-        if v12s23a_poolsex and v12s23a_beatcameron:
+        if v12s23a_sam == 2:
             scene v12mor13d
             with dissolve
             
