@@ -408,10 +408,10 @@ default v14_chloe_cameron = False ##TASK B2B
 ## Lindsey Planing Board
 default lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/lindsey_background.webp", money=200, style="lindsey_board")
 default v14_lindsey_sell = False ##APPROACH A
-default v14_pics_no_linds = False ##TASK A1A
+#default v14_pics_no_linds = False ##TASK A1A (v14_pics_no_linds = v14_lindsey_sell and not v14_pics_with_linds)
 default v14_pics_with_linds = False ##TASK A1B
-default v14_lindsey_steal = False ##APPROACH B
-default v14_concert_distraction = False ##APPROACH B1A
+#default v14_lindsey_steal = False ##APPROACH B (v14_lindsey_steal = v14_help_lindsey and not v14_lindsey_sell)
+#default v14_concert_distraction = False ##APPROACH B1A (v14_concert_distraction = (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction)
 default v14_date_distraction = False ###APPROACH B1B
 
 default AmberLoyal = False

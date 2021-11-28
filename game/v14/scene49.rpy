@@ -14,7 +14,7 @@ label v14s49:
 
     u "(What do we have here?)"
 
-    if v14_concert_distraction: #Placeholder for concert distraction
+    if (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction: #Placeholder for concert distraction
         scene v14s49_2 # TPP. MC stopped walking looking at his phone, slight smile, mouth closed.
         with dissolve
 
