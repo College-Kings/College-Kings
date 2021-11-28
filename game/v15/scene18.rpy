@@ -361,6 +361,12 @@ label v15s18:
     scene v15s18_13 # FPP. MC looking down at the paper in his hands, (writing can be added later in photoshop if need.) Challenge list: 1. Get Slapped, (Have this one crossed out because Imre already did it) 2. Have Sex, 3. Give Oral, 4. Get Orla, 5. Get a Handjob, 6. Finger a girl, 7. Make out, 8. Steal Someone's panties, 9. Find a condom.
     with dissolve
 
+    python:
+        checklist.add_item("Test1")
+        checklist.add_item("Test2")
+        checklist.add_item("Test3")
+
+    show screen checklist
     # -The Party Checklist UI pops up, showing the list of challenges-
     # -The UI list disappears when player chooses to close it-
  

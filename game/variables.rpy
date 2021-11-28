@@ -27,6 +27,9 @@ default enemyhealth = 0
     ## Free Roam
 default previous_location = ""
 
+    ## Checklist
+default checklist = Checklist()
+
     ## Path Builder
 default path_builder = False
 default pb_name_set = False
@@ -82,15 +85,11 @@ default freeroam1 = set()
 default freeroam2 = set()
 default freeroam3 = set()
 default freeroam3asked = set()
-default freeRoamTutorialPage = 1
 default funofelijah = False
 default girl = ""
 default imreforgives = False
 default imremad = False
-default influencetut = False
-default influenceTutorialPage = 1
 default joinapes = False
-default kctTutorialPage = 1
 default kissamber = False
 default laawk = True
 default laurenkissb = False
@@ -111,7 +110,6 @@ default noramad = False
 default notcool = False
 default penelopekiss = False
 default perform = 0
-default phoneTutorialPage = 1
 default q = "q"
 default r = "r"
 default realmode = False
@@ -415,18 +413,8 @@ default v14s47_solo_trunk = False
 default v14s48_car_description = CarDescription.LIE
 default v14s48_car_price = 100
 default v14s50_listen_to_aubrey_lindsey = 0 # MC choses to listen to Lindsey and Aubrey's conversation. 
-default v14s51_bathroom_window = False
-default v14s51_bedside = False
-default v14s51_closet = False 
-default v14s51_desk = False
-default v14s51_interaction = 0 
-default v14s51_kitchen_window = False
-default v14s51_pillow = False 
-default v14s51_purse = False 
-default v14s51_take_cash_large = False
-default v14s51_take_cash_small = False
-default v14s51_take_diary = False
-default v14s51_take_money = False
+default freeroam12 = set() #chloe heist
+default freeroam12stolen = set()
 default v14s5a_riley_should_join_chicks = False
 
 # 15.0 
@@ -447,7 +435,6 @@ default autumn_lunch_break = False # not used (28/08/2021)
 default dog_name = "Blue"
 default v15_lauren_gift = None
 default lindsey_friend = False # Placeholder?
-default v15s9_mad_at_ms_rose = False # Placeholder?
 default mr_lee_meeting = False # Placeholder?
 default ms_rose_meeting = False # (redundancy check) # not used (28/08/2021)
 default smoked_with_autumn = False

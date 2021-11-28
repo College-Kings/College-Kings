@@ -384,7 +384,7 @@ label v15s4:
             with dissolve
 
         "We will":
-            $ mc.quirks["animal_lover"] += 1
+            $ mc.quirks["animal_lover"] = True
             scene v15s4_13a
             with dissolve
 
@@ -814,7 +814,7 @@ label v15s4:
 
     menu:
         "Pop a balloon":
-            $ mc.quirks["prankster"] += 1
+            $ mc.quirks["prankster"] = True
             scene v15s4_40 # FPP. MC behind Autumn, holding a tack/pen/scissors(whatever we have available) and a balloon by Autumn's ear, Autumn unaware with her back turned.
             with dissolve
 
@@ -1126,7 +1126,7 @@ label v15s4:
 
     menu:
         "Threaten Oscar's owner":
-            $ mc.quirks["hardass"] += 1
+            $ mc.quirks["hardass"] = True
             scene v15s4_43g # FPP. Autumn looking at MC, Autumn upset, mouth closed.
             with dissolve
 

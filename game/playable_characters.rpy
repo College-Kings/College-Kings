@@ -9,15 +9,15 @@ init python:
             self.inventory = Inventory()
 
             self.quirks = {
-                "animal_lover": 0,
-                "boomer": 0,
-                "hardass": 0,
-                "pop_culture": 0,
-                "prankster": 0,
-                "quirk_sensitive_stomach": 0,
-                "quirk_tough_tummy": 0,
-                "quirk_hunter": 0,
-                "quirk_not_hunter": 0,
+                "animal_lover": False,
+                "boomer": False,
+                "hardass": False,
+                "pop_culture": False,
+                "prankster": False,
+                "quirk_sensitive_stomach": False
+                "quirk_tough_tummy": False,
+                "quirk_hunter": False,
+                "quirk_not_hunter": False,
             }
 
             self.relationships = set()

@@ -156,7 +156,7 @@ label v15s8:
 
     cl "No, I uh- I need to make a few phone calls."
 
-    if v14s51_take_diary or v14s51_take_money:
+    if "diary" in freeroam12stolen or ("cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen):
         cl "And I still have to report the robbery to the dean, so..."
 
         scene v15s8_3a
@@ -231,7 +231,7 @@ label v15s8:
 
     pause 0.75
 
-    if v14s51_take_diary or v14s51_take_money:
+    if "diary" in freeroam12stolen or ("cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen):
         scene v15s8_8 # FPP. MC some distance away from Chloe looking at her. Chloe stressed on the phone, mouth closed.
         with dissolve
 

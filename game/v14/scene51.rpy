@@ -46,22 +46,21 @@ label v14s51:
 # -Grey out areas that have been checked already, ad grey out all areas when MC has checked all allowed locations, giving them a button to continue-
 
 label v14s51_bedside_table:
-    $ v14s51_bedside = True
-    $ v14s51_interaction += 1
+    $ freeroam12.add("bedside")
     scene v14s51_bedside_1 # FPP. MC looking at her bedside table, on the table there is a lamp, lip balm, hand lotion, and a pink vibrator.
 
     u "(No money here. But there is a vibrator.)"
 
     u "(Pretty basic bedside table for a woman... Wonder how often she uses that thing... Let's search somewhere else.)"
 
-    if v14_date_distraction and v14s51_interaction == 1:
+    if v14_date_distraction and len(freeroam12) == 1:
         jump v14s51_text
 
     else:
         call screen v14s51_room
 
 label v14s51_text:
-    if v14_date_distraction and v14s51_interaction == 1:
+    if v14_date_distraction and len(freeroam12) == 1:
         scene v14s51_2
 
         play sound "sounds/vibrate.mp3"
@@ -92,8 +91,7 @@ label v14s51_text:
         call screen v14s51_room
 
 label v14s51_desk_drawer:
-    $ v14s51_desk = True
-    $ v14s51_interaction += 1
+    $ freeroam12.add("desk")
     scene v14s51_deskdrawer_1 # FPP. MC looking at Chloe's Desk
 
     u "(Let's see what's hiding in this drawer.)"
@@ -123,15 +121,14 @@ label v14s51_desk_drawer:
 
     u "(No money here though, so that's more time wasted. *Sighs*)"
 
-    if v14_date_distraction and v14s51_interaction == 1:
+    if v14_date_distraction and len(freeroam12) == 1:
         jump v14s51_text
 
     else:
         call screen v14s51_room
 
 label v14s51_closet:
-    $ v14s51_closet = True
-    $ v14s51_interaction += 1
+    $ freeroam12.add("closet")
 
     scene v14s51_closet_1 # FPP. MC looking in the open closet, a shoe box in sight on the top shelf.
 
@@ -162,8 +159,7 @@ label v14s51_closet:
     if v14_realwolf:
         menu:
             "Take the $500":
-                $ v14s51_take_money = True
-                $ v14s51_take_cash_large = True
+                $ freeroam12stolen.add("cash_large")
                 $ lindsey_board.money += 500
                 $ chloe_board.money -= 500
                 scene v14s51_closet_3b # FPP. Same as v14s51_closet_3a, MC holding the money, the box not in sight
@@ -180,8 +176,7 @@ label v14s51_closet:
     else:
         menu:
             "Take the $900":
-                $ v14s51_take_money = True
-                $ v14s51_take_cash_large = True
+                $ freeroam12stolen.add("cash_large")
                 $ lindsey_board.money += 900
                 $ chloe_board.money -= 900
                 scene v14s51_closet_3b # FPP. Same as v14s51_closet_3a, MC holding the money, the box not in sight
@@ -195,15 +190,14 @@ label v14s51_closet:
 
                 u "(I guess I'm having second thoughts about this... I can't take nearly a thousand dollars from Chloe's private closet. What the fuck was I thinking?)"
 
-    if v14_date_distraction and v14s51_interaction == 1:
+    if v14_date_distraction and len(freeroam12) == 1:
         jump v14s51_text
 
     else:
         call screen v14s51_room
 
 label v14s51_purse:
-    $ v14s51_purse = True
-    $ v14s51_interaction += 1
+    $ freeroam12.add("purse")
     scene v14s51_purse_1 # FPP. MC standing near the purse and looking at the purse.
 
     u "(Surely this is too obvious...)"
@@ -243,8 +237,7 @@ label v14s51_purse:
     menu:
         "Take the $300":
             $ add_point(KCT.TROUBLEMAKER)
-            $ v14s51_take_money = True
-            $ v14s51_take_cash_small = True
+            $ freeroam12stolen.add("cash_small")
             $ lindsey_board.money += 300
             $ chloe_board.money -= 300
 
@@ -260,15 +253,14 @@ label v14s51_purse:
 
             u "(I guess my conscience has caught up with me. It doesn't feel right to take it.)"
 
-    if v14_date_distraction and v14s51_interaction == 1:
+    if v14_date_distraction and len(freeroam12) == 1:
         jump v14s51_text
 
     else:
         call screen v14s51_room
 
 label v14s51_pillow:
-    $ v14s51_pillow = True
-    $ v14s51_interaction += 1
+    $ freeroam12.add("pillow")
     scene v14s51_pillow_1 # FPP. MC standing at the side of her bed looking at her pillow, Next to the pillow sits the teddy bear from the hotel scene in Amsterdam.
 
     pause 
@@ -307,9 +299,9 @@ label v14s51_pillow:
     menu:
         "Take Chloe's diary":
             $ add_point(KCT.TROUBLEMAKER)
-            $ v14s51_take_diary = True
+            $ freeroam12stolen.add("diary")
             scene v14s51_pillow_1a
-            with dissolve 
+            with dissolve
 
             u "(I think Lindsey will appreciate this little bonus item. Plus, I'm curious to see what we'll learn.)"
 
@@ -320,7 +312,7 @@ label v14s51_pillow:
 
             u "(There's going to be some extremely private things in here... It's best if I leave it.)"
     
-    if v14_date_distraction and v14s51_interaction == 1:
+    if v14_date_distraction and len(freeroam12) == 1:
         jump v14s51_text
 
     else:
@@ -401,7 +393,7 @@ label v14s51_continue:
 
     menu:
         "Return to the hallway":
-            $ v14s51_kitchen_window = True
+            $ freeroam12.add("kitchen_window")
 
             u "(Why am I even in here? I need to get the fuck out.)"
 
@@ -532,7 +524,7 @@ label v14s51_continue:
             u "(So lucky that the vase didn't smash... Holy shit.)"
 
         "Go out the window":
-            $ v14s51_bathroom_window = True
+            $ freeroam12.add("bathroom_window")
             scene v14s51_29 # TPP. Show MC Tip-toeing past the steamed up shower glass, slight worried face, mouth closed.
             with dissolve
 
@@ -666,7 +658,7 @@ label v14s51_continue:
 
     li "*Whispers* Thank God that's over!"
 
-    if v14s51_bathroom_window:
+    if "bathroom_window" in freeroam12:
         li "*Whispers* What was that loud bang?! Was that you?"
 
         scene v14s51_40
@@ -716,7 +708,7 @@ label v14s51_continue:
 
         u "*Whispers* Yeah, just about."
 
-    if v14s51_kitchen_window:
+    if "kitchen_window" in freeroam12:
         scene v14s51_40a
         with dissolve
 
@@ -732,7 +724,7 @@ label v14s51_continue:
 
         li "*Quiet chuckle* *Whispers* I'm proud of you."
 
-    if not v14s51_take_money and v14s51_take_diary:
+    if not ("cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen) and "diary" in freeroam12stolen:
         scene v14s51_40c # FPP. Same as v14s51_40, Lindsey slight frown, mouth closed.
         with dissolve
 
@@ -788,7 +780,7 @@ label v14s51_continue:
         scene v14s51_42 # TPP. Show MC walking away from Lindsey, MC Neutral face, mouth closed, Lindsey in the background, Lindsey slight frown, mouth closed.
         with dissolve
 
-    elif not v14s51_take_money:
+    elif not ("cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen):
         scene v14s51_40c
         with dissolve
 
@@ -824,8 +816,7 @@ label v14s51_continue:
         scene v14s51_42
         with dissolve
 
-    #if v14s51_take_money:
-    else:
+    else: #if take money
         scene v14s51_40
         with dissolve
 
@@ -851,7 +842,7 @@ label v14s51_continue:
 
         li "*Whispers* Of course! *Chuckles*"
 
-        if v14s51_take_diary:
+        if "diary" in freeroam12stolen:
             scene v14s51_40
             with dissolve
 
