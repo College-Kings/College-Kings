@@ -198,7 +198,6 @@ default dreamFightChoice = "na"
 default freeroam5 = set()
 default hangOutWithLindsey = False
 default hl_punch = False
-default joinAubreyLake = False
 default lindseyfirstkiss = False
 default playCoolWLins = False
 default the_king = False
