@@ -332,7 +332,6 @@ default v13_help_chloe = False
 default v13_hugged_aubrey = False
 default v13_imre_disloyal = False
 default v13_invite_samantha = False
-default v13_lauren_hospital = False
 default v13_lauren_smoke = False
 default v13_penelope_concert = False
 default v13_perfume = False

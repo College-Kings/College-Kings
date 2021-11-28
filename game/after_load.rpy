@@ -653,8 +653,6 @@ label after_load:
         except NameError: v13_lauren_smoke = False
         try: cameronBro
         except NameError: cameronBro = False
-        try: v13_lauren_hospital
-        except NameError: v13_lauren_hospital = False
         try: v13_charli_exposed
         except NameError: v13_charli_exposed = False
         try: v13_invite_samantha
