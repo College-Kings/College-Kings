@@ -6,7 +6,7 @@
 label v15s7:
     # -1 random male and 1 random female student will be needed for the second half of this scene-
 
-    if v14s51_take_diary or v14s51_take_money: # -if MC stole any of Chloe's money and/or her diary from her room
+    if "diary" in freeroam12stolen or ("cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen): # -if MC stole any of Chloe's money and/or her diary from her room
         scene v15s7_1 # FPP At entrance to library, Chloe is obviously crying and doing a bad job of hiding it with her hand
         with dissolve
 
@@ -23,7 +23,7 @@ label v15s7:
 
             pause 0.75
 
-        if v14s51_take_cash_large and not v14s51_take_cash_small: # -if the large cash was stolen
+        if "cash_large" in freeroam12stolen and not "cash_small" in freeroam12stolen: # -if the large cash was stolen
             scene v15s7_1a
             with dissolve
 
@@ -46,7 +46,7 @@ label v15s7:
 
             cl "Well, I still had a few hundred in my purse that they didn't find."
 
-            if v14s51_purse: # -If MC checked the purse in v14.51 but did not take the money
+            if "purse" in freeroam12: # -If MC checked the purse in v14.51 but did not take the money
                 scene v15s7_1
                 with dissolve
 
@@ -62,7 +62,7 @@ label v15s7:
 
             cl "They were in my room! What if they were there while I was sleeping? I could be dead right now, I- *Sobs*"
 
-        elif v14s51_take_cash_small and not v14s51_take_cash_large: # -if $300 was stolen
+        elif "cash_small" in freeroam12stolen and not "cash_large" in freeroam12stolen: # -if $300 was stolen
             scene v15s7_1a
             with dissolve
 
@@ -78,7 +78,7 @@ label v15s7:
 
             cl "*Sniffles* Yeah... Luckily, they didn't find my hidden stash with all the campaign money."
 
-            if v14s51_closet: # -If MC checked the closet in v14.51 but did not take the money
+            if "closet" in freeroam12: # -If MC checked the closet in v14.51 but did not take the money
                 scene v15s7_1
                 with dissolve
     
@@ -95,7 +95,7 @@ label v15s7:
             cl "It's not the end of the world but still, they were in my room. Someone was in my room..."
             cl "*Sobbing* It's so scary and creepy!"
 
-        elif v14s51_take_cash_small and v14s51_take_cash_large: # -if $900 and $300 was stolen
+        elif "cash_small" in freeroam12stolen and "cash_large" in freeroam12stolen: # -if $900 and $300 was stolen
             scene v15s7_1a
             with dissolve
 
@@ -126,7 +126,7 @@ label v15s7:
 
             cl "I can't win now, [name]. There's no way that I could win with zero dollars. *Cries*"
         
-        elif v14s51_take_diary and not v14s51_take_money: # -if ONLY Chloe's diary was stolen
+        elif "diary" in freeroam12stolen and not ("cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen): # -if ONLY Chloe's diary was stolen
             scene v15s7_1a
             with dissolve
 
@@ -203,7 +203,7 @@ label v15s7:
                     cl "But it's gone and I can't find it anywhere. Every single one of my most private thoughts are written down in there."
                     cl "I feel completely naked inside knowing that someone else is probably out there reading it. *Sniffles*"
 
-        elif v14s51_take_diary and v14s51_take_cash_small and v14s51_take_cash_large: # -if $900, $300 and Chloe's diary was stolen
+        elif "diary" in freeroam12stolen and "cash_small" in freeroam12stolen and "cash_large" in freeroam12stolen: # -if $900, $300 and Chloe's diary was stolen
             scene v15s7_1a
             with dissolve
 

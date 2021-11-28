@@ -4,7 +4,7 @@
 # Time: Afternoon
 
 label v15s12:
-    if v14s51_take_diary:
+    if "diary" in freeroam12stolen:
         # -MC and Lindsey are walking along the hallway, in the general direction of the janitor's closet-
         scene v15s12_1    # TPP. MC and Lindsey walking down the school hallway.
         with dissolve

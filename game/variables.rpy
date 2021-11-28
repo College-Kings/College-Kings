@@ -418,18 +418,8 @@ default v14s47_solo_trunk = False
 default v14s48_car_description = CarDescription.LIE
 default v14s48_car_price = 100
 default v14s50_listen_to_aubrey_lindsey = 0 # MC choses to listen to Lindsey and Aubrey's conversation. 
-default v14s51_bathroom_window = False
-default v14s51_bedside = False
-default v14s51_closet = False 
-default v14s51_desk = False
-default v14s51_interaction = 0 
-default v14s51_kitchen_window = False
-default v14s51_pillow = False 
-default v14s51_purse = False 
-default v14s51_take_cash_large = False
-default v14s51_take_cash_small = False
-default v14s51_take_diary = False
-default v14s51_take_money = False
+default freeroam12 = set() #chloe heist
+default freeroam12stolen = set()
 default v14s5a_riley_should_join_chicks = False
 
 # 15.0 

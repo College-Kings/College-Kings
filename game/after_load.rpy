@@ -477,6 +477,21 @@ label after_load:
         try: kiwiiPost1
         except NameError: kiwii_firstTime = False
 
+        try:
+            if v14s51_closet: freeroam12.add("closet")
+        except NameError: pass
+        try:
+            if v14s51_purse: freeroam12.add("purse")
+        except NameError: pass
+        try:
+            if v14s51_take_cash_large: freeroam12stolen.add("cash_large")
+        except NameError: pass
+        try:
+            if v14s51_take_cash_small: freeroam12stolen.add("cash_small")
+        except NameError: pass
+        try:
+            if v14s51_take_diary: freeroam12stolen.add("diary")
+        except NameError: pass
 
         # v12 Renpy Fixes:
         chloe.name = "Chloe"
