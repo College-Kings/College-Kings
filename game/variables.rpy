@@ -346,7 +346,6 @@ default v12s24_emmymatch = False
 default v12s32_Aubrey_Boost = False
 default v12_saunadoors = set()
 default v12s33_door2 = False
-default v12s33_door3 = False
 default freeroam9 = set() #Ferry
 default v12s7_aubrey_moved = False
 default v12s7_endtalkList = []
