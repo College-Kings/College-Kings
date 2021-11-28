@@ -194,7 +194,6 @@ default sideWithCameron = False
 default simLarsFight = False
 default v8_dodged_pipe = False
 default v8_riley_lewd_ending = False
-default v8AutProtest = False
 
 # 9.0
 default dreamFightChoice = "na"

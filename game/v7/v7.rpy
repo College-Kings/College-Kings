@@ -2435,7 +2435,6 @@ label thisbewalk:
 
             "That's really cool":
                 $ add_point(KCT.BRO)
-                $ protest = False
                 $ signs = False
 
                 u "That's really cool."
