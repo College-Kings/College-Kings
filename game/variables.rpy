@@ -472,5 +472,3 @@ default v15s18a_frpumpkin = False
 default v15s18a_aub_kiwii_smile = False
 default v15s18a_showlist_penelope_autumn = False # Show the party list to Penelope and Autumn.
 default v15s18a_lie = False 
-default quirk_sensitive_stomach = False
-default quirk_hunter = False
