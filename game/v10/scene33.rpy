@@ -2998,7 +2998,6 @@ label v10s33_riley2:
     if v10_help_nora_freeroam:
         menu:
             "Invite her to Europe":
-                $ v10s33_inv_amber_europe = True
                 u "Are you going on the Europe trip?"
 
                 scene v10cfram1d # same 1, amber curious, mouth open

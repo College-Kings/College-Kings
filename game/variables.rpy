@@ -258,7 +258,6 @@ default v10_simplr_known = False
 default v10s10_hangWLinds = False
 default v10s33_aubreyriley = False
 default v10s33_ev_date_now = False
-default v10s33_inv_amber_europe = False
 default v10s33_laurenBakeSale = False
 default v10s33_ryan_flirt_emily = False
 default v10s33_toldChloe = False

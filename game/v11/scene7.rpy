@@ -487,10 +487,7 @@ label v11_room_aubrey_shopping:
     scene v11auw13a # FPP. Same cas v11auw3, Aubrey mouth closed, smiling
     with dissolve
 
-    if v10s33_inv_amber_europe:
-        u "Yep."
-    else:
-        u "Hmmm, I think so."
+    u "Hmmm, I think so."
 
     scene v11auw13
     with dissolve
