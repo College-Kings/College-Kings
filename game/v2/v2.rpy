@@ -3217,10 +3217,10 @@ label cspe:
 
 ############ VIKING PENELOPE shop3
 label try1p: # viking
-    if try4done:
+    if try1done:
         jump try4done
     else:
-        $ try4done = True
+        $ try1done = True
         jump try4new
 
 label try4done:
@@ -3232,7 +3232,6 @@ label try4done:
     "(I should really just choose a costume to buy.)"
 
     call screen costumes
-
 
 label try4new:
     $ v2_outfits += 1
@@ -3357,16 +3356,15 @@ label v2_nsfwSkipLabel4:
 
     call screen costumes
 
-
 ######### VIKING PEN
 
 ############ KNIGHT PEN shop4
 label try2p:
 
-    if try5done:
+    if try2done:
         jump try5done
     else:
-        $ try5done = True
+        $ try2done = True
         jump try5new
 
 label try5done:
@@ -3378,7 +3376,6 @@ label try5done:
     "(... it looks exactly the same as before.)"
 
     call screen costumes
-
 
 label try5new:
     $ v2_outfits += 1
@@ -3502,10 +3499,10 @@ label v2_nsfwSkipLabel5:
 
 ############ COWBOY PEN shop5
 label try3p:
-    if try6done:
+    if try3done:
         jump try6done
     else:
-        $ try6done = True
+        $ try3done = True
         jump try6new
 
 label try6done:
