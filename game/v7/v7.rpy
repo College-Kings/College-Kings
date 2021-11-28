@@ -2347,7 +2347,6 @@ label thisbewalk:
 
             "No, not really":
                 $ add_point(KCT.BRO)
-                $ politics = False
 
                 u "No, not really. I'm not really into politics myself."
 
@@ -3752,8 +3751,7 @@ label pledgewolves:
             u "Fine. I'll do whatever it takes. You can eliminate Imre."
 
         "Decline":
-            $ wolvesTask1 = True
-            $ tasks += 1
+            $ wolvesTasks.add("task1")
             $ add_point(KCT.BRO)
 
             scene s768a
@@ -3768,7 +3766,7 @@ label pledgewolves:
     with dissolve
     u "Alright."
 
-    if wolvesTask1:
+    if "task1" in wolvesTasks:
         scene s768
         with dissolve
         guyc "And hey, good luck with the other tasks."
@@ -3788,9 +3786,10 @@ label pledgewolves:
     scene s766c # Chris looking slightly away from camera with mouth closed. Imre and Xavier looking at Chris with their mouths closed
     with dissolve
 
-    if not wolvesTask1:
+    if not "task1" in wolvesTasks:
         play sound "sounds/swoosh.mp3"
         u "(What the fuck!?)"
+        
     else:
         u "(Wow, good thing I didn't do it.)"
 
@@ -3896,8 +3895,7 @@ label pledgewolves:
             ch "And therefore Perry wins! Congrats Perry!"
 
         "Continue the challenge":
-            $ tasks += 1
-            $ wolvesTask2 = True
+            $ wolvesTasks.add("task2")
             $ add_point(KCT.BRO)
 
             u "I'll get it later. I'm in this to win."
@@ -4162,8 +4160,7 @@ label aftercall:
 
         menu:
             "True":
-                $ wolvesTask3 = True
-                $ tasks += 1
+                $ wolvesTasks.add("task3")
 
                 u "It's true, but-"
 
@@ -4190,8 +4187,7 @@ label aftercall:
 
         menu:
             "True":
-                $ wolvesTask3 = True
-                $ tasks += 1
+                $ wolvesTasks.add("task3")
 
                 u "It's true, but-"
 
@@ -4458,8 +4454,7 @@ label aftercall:
             no "Well, enjoy the rest of your night."
 
         "Pull away":
-            $ tasks += 1
-            $ wolvesTask4 = True
+            $ wolvesTasks.add("task4")
             $ add_point(KCT.BRO)
             if laurenrs:
                 $ add_point(KCT.BOYFRIEND)
@@ -4511,8 +4506,9 @@ label aftercall:
     scene s794 # Camera - first person. Nora moves to the door and knocks while talking
     with dissolve
 
-    if wolvesTask4:
+    if "task4" in wolvesTasks:
         no "Aaron, the test is done and he passed."
+
     else:
         no "Aaron, the test is done and he didn't pass."
 
@@ -4541,7 +4537,7 @@ label aftercall:
     scene s795 # close up of Aaron reading from some note
     with dissolve
 
-    if tasks >= 4:
+    if len(wolvesTasks) == 4:
         aa "The first place goes to..."
 
         scene s795a # Aaron looks up at you
@@ -4569,7 +4565,7 @@ label aftercall:
 
         aa "Perry."
 
-    elif tasks == 3:
+    elif len(wolvesTasks) == 3:
         aa "The first place goes to..."
 
         scene s795b
@@ -4616,6 +4612,7 @@ label aftercall:
         aa "Perry."
 
         scene s795
+        
         with dissolve
 
         aa "And the third place goes to..."
@@ -8139,7 +8136,7 @@ label wolves_ceremony:
     scene swc18 # FPP. Show everyone in scene clapping, variety of positive expressions.
     with dissolve
 
-    if tasks > 3: # MC, Imre, Perry
+    if len(wolvesTasks) == 4: # MC, Imre, Perry
         ch "First up... [name]!"
 
         scene swc19 # TPP. Show everone clapping/cheering. Show MC walking towards Chris who has Wolves jacket in hand, camera from behind MC looking at Wolves.
@@ -8216,7 +8213,7 @@ label wolves_ceremony:
         scene swc27 # TPP. Show everyone clapping, happy expressions.
         with dissolve
 
-    elif tasks == 3: # Imre, MC, Perry
+    elif len(wolvesTasks) == 3: # Imre, MC, Perry
         scene swc11 # FPP. Close up Chris with 2 wolves to his side in background. Chris mouth open.
         with dissolve
 
@@ -8320,7 +8317,7 @@ label wolves_ceremony:
         scene swc27 # TPP. As above, but no longer drinking, smiling/laughing instead.
         with dissolve
 
-    elif tasks < 3: # Imre, Perry, MC
+    else: # Imre, Perry, MC
         scene swc15 # FPP. Show Chris with 2 wolves to his side in the background. Chris mouth open, smile.
         with dissolve
 
@@ -8418,7 +8415,7 @@ label wolves_ceremony:
     scene swc58 # FPP. Show Sebastian approaching MC.
     with dissolve
 
-    if tasks > 3:
+    if len(wolvesTasks) == 4:
         scene swc59 # FPP. Close up Sebastian, mouth open smile.
         with dissolve
 
@@ -8477,7 +8474,7 @@ label wolves_ceremony:
         scene swc60 # FPP. Show Sebastian walking away.
         with dissolve
 
-    elif tasks <= 3:
+    else:
         scene swc59d # FPP. Close up Sebastian, mouth open.
         with dissolve
 
@@ -8549,7 +8546,7 @@ label wolves_ceremony:
     scene swc65 # TPP. Show MC walking towards Finn.
     with dissolve
 
-    if tasks >= 3:
+    if len(wolvesTasks) >= 3:
         scene swc66 # FPP. Close up Finn, mouth open.
         with dissolve
 
@@ -8603,7 +8600,7 @@ label wolves_ceremony:
         scene swc67 # TPP. Show MC walking away from Finn.
         with dissolve
 
-    elif tasks < 3:
+    else:
         scene swc66 # FPP. Close up Finn, mouth open, smile.
         with dissolve
 

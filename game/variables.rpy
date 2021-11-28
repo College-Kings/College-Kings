@@ -182,15 +182,11 @@ default rileyrs = False
 default rileysex = False
 default seenlauren = False
 default signs = False
-default tasks = 0
 default v7_emily_bowling = False
 default v7_rileysex = False
 default v7_seencrowning = False
 default walkedRileyHome = False
-default wolvesTask1 = False
-default wolvesTask2 = False
-default wolvesTask3 = False
-default wolvesTask4 = False
+default wolvesTasks = set()
 
 # 8.0
 default amberSexAtJoshs = False
