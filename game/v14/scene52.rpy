@@ -12,8 +12,7 @@ init python:
         setattr(store, "v14_noraWorry", True)
 
 label v14s52:
-
-    play music "music/v14/Track Scene 52_1.mp3" fadein 2
+    play music "music/v13/Track Scene 40_2.mp3" fadein 2
     scene v14s52_1 # TPP. mc walks up and see's the wolves frat house
     with dissolve
 
@@ -449,7 +448,7 @@ label v14s52:
 
         stop music fadeout 3
 
-        play music "music/v14/Track Scene 52_2.mp3" fadein 2
+        play music "music/v12/Track Scene 1_1.mp3" fadein 2
 
         scene v14s52_17a # FPP. same as v14s52_17 Imre walks through the door angry expression, mouth closed
         with dissolve

@@ -78,8 +78,10 @@ init python:
 
 label v2start:
     play music "music/muffledparty.mp3"
+    scene black
+    
     scene s121a
-    with Fade (1,0,1)
+    with fade
 
     cl "*Muffled* Why did you do that?! We were just talking!"
 
@@ -87,7 +89,7 @@ label v2start:
     with dissolve
     ry "*Muffled* [name]?! Are you okay??"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     # you wake up in your room with Imre
 
@@ -136,7 +138,7 @@ label v2start:
     imre "If you knew how to fight, maybe he wouldn't fuck with you."
 
     menu:
-        "Hmm... maybe.":
+        "Hmm... maybe":
             $ add_point(KCT.BRO)
 
             scene s123d
@@ -147,7 +149,7 @@ label v2start:
             with dissolve
             imre "Just think about it, okay? I'll see you later."
 
-        "I'm not fighting.":
+        "I'm not fighting":
             $ add_point(KCT.BOYFRIEND)
 
             scene s123d
@@ -162,7 +164,7 @@ label v2start:
             imre "If he sees you looking at him wrong from now on, you'll end up in the hospital."
 
             menu:
-                "I'll think about it.":
+                "I'll think about it":
                     $ add_point(KCT.BRO)
 
                     scene s123d
@@ -173,7 +175,7 @@ label v2start:
                     with dissolve
                     imre "That's all I'm asking for. I'll see you later."
 
-                "I won't fight.":
+                "I won't fight":
                     $ add_point(KCT.BOYFRIEND)
 
                     scene s123d
@@ -231,7 +233,7 @@ label v2start:
         u "(Maybe taking a walk will relax me.)"
 
     label walk1: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene s124
     with Fade (1,0,1)
 
@@ -304,7 +306,7 @@ label v1_tomShoutBack:
 
     tom "Fuck you!"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
 # Tom Fight
 label gb:
@@ -760,7 +762,7 @@ label tomFightStart:
             $ tomstance = renpy.random.choice([1, 2, 3])
             $ simyou = renpy.random.choice([1, 2, 3, 4])
 
-            if simtomfight == True:
+            if simtomfight:
                 if simtom == 1:
                     jump tomhookhit2
                 if simtom == 2:
@@ -786,7 +788,7 @@ label tomFightStart:
             $ tomstance = renpy.random.choice([1, 2, 3])
             $ simyou = renpy.random.choice([1, 2, 3, 4])
 
-            if simtomfight == True:
+            if simtomfight:
                 if simtom == 1:
                     jump tomjabhit2
                 if simtom == 2:
@@ -809,7 +811,7 @@ label tomFightStart:
             $ simyou = renpy.random.choice([1, 2, 3, 4])
 
 
-            if simtomfight == True:
+            if simtomfight:
                 if simtom == 1:
                     jump tomkickhit
                 if simtom == 2:
@@ -834,7 +836,7 @@ label tomFightStart:
         $ tomattack = renpy.random.choice([1, 2, 3])
         $ simtom = renpy.random.choice([1, 2, 3, 4])
 
-        if simtomfight == True:
+        if simtomfight:
             if tomstance == 1:
                 if simyou == 1:
                     jump tomkick2
@@ -869,7 +871,7 @@ label tomFightStart:
         $ stance = 1
         $ tomattack = renpy.random.choice([1, 2, 3])
         $ simtom = renpy.random.choice([1, 2, 3, 4])
-        if simtomfight == True:
+        if simtomfight:
             if tomstance == 1:
                 if simyou == 1:
                     jump tomkick2
@@ -907,7 +909,7 @@ label tomFightStart:
         $ stance = 1
         $ tomattack = renpy.random.choice([1, 2, 3])
         $ simtom = renpy.random.choice([1, 2, 3, 4])
-        if simtomfight == True:
+        if simtomfight:
             if tomstance == 1:
                 if simyou == 1:
                     jump tomkick2
@@ -942,7 +944,7 @@ label tomFightStart:
         $ stance = 1
         $ tomattack = renpy.random.choice([1, 2, 3])
         $ simtom = renpy.random.choice([1, 2, 3, 4])
-        if simtomfight == True:
+        if simtomfight:
             if tomstance == 1:
                 if simyou == 1:
                     jump tomkick2
@@ -980,7 +982,7 @@ label tomFightStart:
         $ stance = 1
         $ tomattack = renpy.random.choice([1, 2, 3])
         $ simtom = renpy.random.choice([1, 2, 3, 4])
-        if simtomfight == True:
+        if simtomfight:
             if tomstance == 1:
                 if simyou == 1:
                     jump tomkick2
@@ -1015,7 +1017,7 @@ label tomFightStart:
         $ stance = 1
         $ tomattack = renpy.random.choice([1, 2, 3])
         $ simtom = renpy.random.choice([1, 2, 3, 4])
-        if simtomfight == True:
+        if simtomfight:
             if tomstance == 1:
                 if simyou == 1:
                     jump tomkick2
@@ -1172,7 +1174,7 @@ label meet_lauren2:
     show screen influenceTutorial
 
     menu:
-        "There was something there.":
+        "There was something there":
             $ add_point(KCT.BOYFRIEND)
             
             if v1_laurenKiss and v1_laurenPoints == 2:
@@ -1260,7 +1262,7 @@ label meet_lauren2:
                 la "I don't wanna jeopardize our friendship."
 
                 menu:
-                    "Give me a chance.":
+                    "Give me a chance":
 
                         scene s130g
                         with dissolve
@@ -1286,7 +1288,7 @@ label meet_lauren2:
 
                             u "(I should probably wash the blood off my face before I go.)"
 
-                    "You're right.":
+                    "You're right":
 
                         scene s130g
                         with dissolve
@@ -1308,7 +1310,7 @@ label meet_lauren2:
 
                             u "(I should probably wash the blood off my face in the restroom before I go to class.)"
 
-        "Let's forget about it.":
+        "Let's forget about it":
             $ add_point(KCT.BRO)
             $ laawk = False
 
@@ -1358,7 +1360,7 @@ label meet_lauren2:
     scene s133
     with Fade (1,0,1)
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
 label historye: #for compatibility only
 label history2:
@@ -1622,7 +1624,7 @@ label history2:
 
     lee "You've got Mr. Cameron to thank for that."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene clocka
     with fade
 
@@ -1808,7 +1810,7 @@ label history2:
     em "Can we please just hang out?"
 
     menu:
-        "Okay, I guess.":
+        "Okay, I guess":
             $ forgiveemily = True
             $ add_point(KCT.BOYFRIEND)
 
@@ -1834,7 +1836,7 @@ label history2:
 
             jump bo_ad
 
-        "No, sorry.":
+        "No, sorry":
             $ emilyandben = True
             $ forgiveemily = False
             $ add_point(KCT.TROUBLEMAKER)
@@ -1920,7 +1922,7 @@ label bo_ad:
 
             em "Maybe a little bit."
 
-        "I'm still single.":
+        "I'm still single":
             $ add_point(KCT.BOYFRIEND)
 
             hide s145
@@ -1956,7 +1958,7 @@ label bo_ad:
     em "Are you ever gonna stop bringing that up?"
 
     menu:
-        "It was adorable.":
+        "It was adorable":
             $ add_point(KCT.BOYFRIEND)
 
             hide s145c
@@ -1973,7 +1975,7 @@ label bo_ad:
 
             em "It was so thoughtful."
 
-        "It was so funny.":
+        "It was so funny":
             $ add_point(KCT.BRO)
 
             hide s145c
@@ -2098,7 +2100,7 @@ label bo_ad:
     ben "What? I'm 24."
 
     menu:
-        "Sure, knock yourself out.":
+        "Sure, knock yourself out":
             $ emilyandben = True
             $ add_point(KCT.BRO)
 
@@ -2119,7 +2121,7 @@ label bo_ad:
 
             u "Please don't..."
 
-        "Stay away from her.":
+        "Stay away from her":
             $ emilyandben = False
             $ add_point(KCT.BOYFRIEND)
 
@@ -2318,7 +2320,7 @@ label bo_ad:
     em "Yeah, let's leave."
 
 label bo_bd:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s154 ## text from aubrey & you walking back alone
     with Fade (1,0,1)
@@ -2527,7 +2529,7 @@ label bo_bd:
 
         u "Yeah, definitely. See you later."
 
-        stop music fadeout 2.0
+        stop music fadeout 3
 
         jump csaub
 
@@ -2551,7 +2553,7 @@ label bo_bd:
 
         pe "I'd love that!"
 
-        stop music fadeout 2.0
+        stop music fadeout 3
 
         jump cspe
 
@@ -2612,7 +2614,7 @@ label csaub:
 
     au "Haha, I thought so. Let's go then."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s158 # at the clothing store # showing aubrey and u from behind
     with Fade (1,0,1)
@@ -2688,25 +2690,26 @@ label csaub:
 
 ############ VIKING AUBREY
 label try1: # viking
-    if try1done:
+    if "viking" in costumetried:
         jump try1done
+
     else:
-        $ try1done = True
+        $ costumetried.add("viking")
         jump try1new
 
 label try1done:
     scene s163
     with Fade (1,0,1)
 
-    "(Yeah- still look the same as a viking as I did before.)"
+    u "(Yeah- still look the same as a viking as I did before.)"
 
-    "(I should really just choose a costume to buy.)"
+    u "(I should really just choose a costume to buy.)"
 
     call screen costumes
 
 
 label try1new:
-    $ auboutfits += 1
+    $ v2_outfits += 1
 
     scene s163 # in changing room
     with Fade (1,0,1)
@@ -2729,9 +2732,9 @@ label try1new:
                     if config_censored:
                         call screen censoredPopup("v2_nsfwSkipLabel1")
 
-                    $ caughtpeekingaubrey = renpy.random.choice([True, False])
+                    $ v2_caughtpeeking = renpy.random.choice([True, False])
 
-                    if not caughtpeekingaubrey:
+                    if not v2_caughtpeeking:
                         scene s164a # Aubrey changing good view
                         with dissolve
 
@@ -2775,7 +2778,7 @@ label v2_nsfwSkipLabel1:
     au "Haha, what do you think of my outfit?"
 
     menu:
-        "It's kinda hot.":
+        "It's kinda hot":
             $ add_point(KCT.BOYFRIEND)
 
             scene s166c
@@ -2790,7 +2793,7 @@ label v2_nsfwSkipLabel1:
 
             au "I think you've put me in the wrong time period, buddy."
 
-            if auboutfits < 3:
+            if v2_outfits < 3:
                 scene s166
                 with dissolve
 
@@ -2802,7 +2805,7 @@ label v2_nsfwSkipLabel1:
 
                 au "Have you decided which one to buy yet?"
 
-        "It's definitely something.":
+        "It's definitely something":
             $ add_point(KCT.BRO)
 
             scene s166c
@@ -2815,7 +2818,7 @@ label v2_nsfwSkipLabel1:
             scene s166
             with dissolve
 
-            if auboutfits < 3:
+            if v2_outfits < 3:
                 au "I'll guess I'll have to try some of the other outfits then."
 
             else:
@@ -2826,26 +2829,27 @@ label v2_nsfwSkipLabel1:
 
 ############ KNIGHT AUBREY
 label try2:
-    if try2done == True:
+    if "knight" in costumetried:
         jump try2done
+        
     else:
-        $ try2done = True
+        $ costumetried.add("knight")
         jump try2new
 
 label try2done:
     scene s167
     with Fade (1,0,1)
 
-    "(I mean looking at the Knight costume now, I notice that...)"
+    u "(I mean looking at the Knight costume now, I notice that...)"
 
-    "(... it looks exactly the same as before.)"
+    u "(... it looks exactly the same as before.)"
 
     call screen costumes
 
 
 label try2new:
 
-    $ auboutfits += 1
+    $ v2_outfits += 1
 
     scene s167 # in changing room
     with Fade (1,0,1)
@@ -2868,9 +2872,9 @@ label try2new:
                     if config_censored:
                         call screen censoredPopup("v2_nsfwSkipLabel2")
 
-                    $ caughtpeekingaubrey = renpy.random.choice([True, False])
+                    $ v2_caughtpeeking = renpy.random.choice([True, False])
 
-                    if not caughtpeekingaubrey:
+                    if not v2_caughtpeeking:
                         scene s168a # Aubrey changing good view
                         with dissolve
 
@@ -2911,7 +2915,7 @@ label v2_nsfwSkipLabel2:
     u "Yours is uhhh..."
 
     menu:
-        "looking mighty fine.":
+        "looking mighty fine":
             $ add_point(KCT.BOYFRIEND)
 
             u "...looking mighty fine as well."
@@ -2932,13 +2936,13 @@ label v2_nsfwSkipLabel2:
 
             au "Hahaha, no. I was just joking."
 
-            if auboutfits < 3:
+            if v2_outfits < 3:
                 au "Let's switch outfits."
 
             else:
                 au "Are you gonna buy this one?"
 
-        "certainly practical.":
+        "certainly practical":
             $ add_point(KCT.BRO)
 
             u "... certainly practical."
@@ -2965,7 +2969,7 @@ label v2_nsfwSkipLabel2:
 
             scene s170d
 
-            if auboutfits < 3:
+            if v2_outfits < 3:
                 au "Let's switch outfits."
 
             else:
@@ -2981,22 +2985,23 @@ label v2_nsfwSkipLabel2:
 
 ############ COWBOY AUBREY
 label try3:
-    if try3done == True:
+    if "cowboy" in costumetried:
         jump try3done
+        
     else:
-        $ try3done = True
+        $ costumetried.add("cowboy")
         jump try3new
 
 label try3done:
     scene s171
     with Fade (1,0,1)
 
-    "(The more I wear this, the more I feel like I would make a great cowboy.)"
+    u "(The more I wear this, the more I feel like I would make a great cowboy.)"
 
     call screen costumes
 
 label try3new:
-    $ auboutfits += 1
+    $ v2_outfits += 1
 
     scene s171 # in changing room
     with Fade (1,0,1)
@@ -3019,9 +3024,9 @@ label try3new:
                     if config_censored:
                         call screen censoredPopup("v2_nsfwSkipLabel3")
 
-                    $ caughtpeekingaubrey = renpy.random.choice([True, False])
+                    $ v2_caughtpeeking = renpy.random.choice([True, False])
 
-                    if not caughtpeekingaubrey:
+                    if not v2_caughtpeeking:
                         scene s172a # Aubrey changing good view
                         with dissolve
 
@@ -3055,7 +3060,7 @@ label v2_nsfwSkipLabel3:
     au "I'm not showing you this, haha."
 
     menu:
-        "Oh come on.":
+        "Oh come on":
             hide screen influenceTutorial
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -3103,7 +3108,7 @@ label v2_nsfwSkipLabel3:
 
             call screen costumes
 
-        "Fine.":
+        "Fine":
             hide screen influenceTutorial
             $ add_point(KCT.BOYFRIEND)
 
@@ -3215,25 +3220,25 @@ label cspe:
 
 ############ VIKING PENELOPE shop3
 label try1p: # viking
-    if try4done:
+    if "viking" in costumetried:
         jump try4done
+
     else:
-        $ try4done = True
+        $ costumetried.add("viking")
         jump try4new
 
 label try4done:
     scene s163
     with Fade (1,0,1)
 
-    "(Yeah- still look the same as a Viking as I did before.)"
+    u "(Yeah- still look the same as a Viking as I did before.)"
 
-    "(I should really just choose a costume to buy.)"
+    u "(I should really just choose a costume to buy.)"
 
     call screen costumes
 
-
 label try4new:
-    $ penoutfits += 1
+    $ v2_outfits += 1
 
     scene s163 # in changing room
     with Fade (1,0,1)
@@ -3256,9 +3261,9 @@ label try4new:
                     if config_censored:
                         call screen censoredPopup("v2_nsfwSkipLabel4")
 
-                    $ caughtpeekingpenelope = renpy.random.choice([True, False])
+                    $ v2_caughtpeeking = renpy.random.choice([True, False])
 
-                    if not caughtpeekingpenelope:
+                    if not v2_caughtpeeking:
                         scene s183a # pen changing good view
                         with dissolve
 
@@ -3313,7 +3318,7 @@ label v2_nsfwSkipLabel4:
     pe "So uhm... what do you think of my outfit?"
 
     menu:
-        "You look beautiful.":
+        "You look beautiful":
             $ add_point(KCT.BOYFRIEND)
 
             scene s179a
@@ -3328,7 +3333,7 @@ label v2_nsfwSkipLabel4:
 
             pe "Yeah, it's kinda cool."
 
-            if penoutfits < 3:
+            if v2_outfits < 3:
                 pe "Should we try some other outfits?"
 
             else:
@@ -3347,7 +3352,7 @@ label v2_nsfwSkipLabel4:
 
             pe "I like it, but I'm not sure."
 
-            if penoutfits < 3:
+            if v2_outfits < 3:
                 pe "Should we try some other outfits?"
 
             else:
@@ -3355,31 +3360,30 @@ label v2_nsfwSkipLabel4:
 
     call screen costumes
 
-
 ######### VIKING PEN
 
 ############ KNIGHT PEN shop4
 label try2p:
 
-    if try5done:
+    if "knight" in costumetried:
         jump try5done
+        
     else:
-        $ try5done = True
+        $ costumetried.add("knight")
         jump try5new
 
 label try5done:
     scene s167
     with Fade (1,0,1)
 
-    "(I mean looking at the Knight costume now, I notice that...)"
+    u "(I mean looking at the Knight costume now, I notice that...)"
 
-    "(... it looks exactly the same as before.)"
+    u "(... it looks exactly the same as before.)"
 
     call screen costumes
 
-
 label try5new:
-    $ penoutfits += 1
+    $ v2_outfits += 1
 
     scene s167 # in changing room
     with Fade (1,0,1)
@@ -3402,9 +3406,9 @@ label try5new:
                     if config_censored:
                         call screen censoredPopup("v2_nsfwSkipLabel5")
 
-                    $ caughtpeekingpenelope = renpy.random.choice([True, False])
+                    $ v2_caughtpeeking = renpy.random.choice([True, False])
 
-                    if not caughtpeekingpenelope:
+                    if not v2_caughtpeeking:
                         scene s183a
                         with dissolve
 
@@ -3467,7 +3471,7 @@ label v2_nsfwSkipLabel5:
 
             pe "Haha, I'm sure that's the case."
 
-            if penoutfits < 3:
+            if v2_outfits < 3:
                 pe "Let's continue, I wanna try another outfit."
 
             else:
@@ -3483,7 +3487,7 @@ label v2_nsfwSkipLabel5:
 
             pe "That's a sweet idea. Maybe we can do something like that."
 
-            if penoutfits < 3:
+            if v2_outfits < 3:
                 pe "But let's check out the other outfits first."
 
             else:
@@ -3500,22 +3504,23 @@ label v2_nsfwSkipLabel5:
 
 ############ COWBOY PEN shop5
 label try3p:
-    if try6done:
+    if "cowboy" in costumetried:
         jump try6done
+        
     else:
-        $ try6done = True
+        $ costumetried.add("cowboy")
         jump try6new
 
 label try6done:
     scene s171
     with Fade (1,0,1)
 
-    "(The more I wear this, the more I feel like I would make a great cowboy.)"
+    u "(The more I wear this, the more I feel like I would make a great cowboy.)"
 
     call screen costumes
 
 label try6new:
-    $ penoutfits += 1
+    $ v2_outfits += 1
 
     scene s171 # in changing room
     with Fade (1,0,1)
@@ -3538,9 +3543,9 @@ label try6new:
                     if config_censored:
                         call screen censoredPopup("v2_nsfwSkipLabel6")
 
-                    $ caughtpeekingpenelope = renpy.random.choice([True, False])
+                    $ v2_caughtpeeking = renpy.random.choice([True, False])
 
-                    if not caughtpeekingpenelope:
+                    if not v2_caughtpeeking:
                         scene s180a # pen changing good view
                         with dissolve
 
@@ -3575,7 +3580,7 @@ label v2_nsfwSkipLabel6:
 
 
     menu:
-        "Oh come on.":
+        "Oh come on":
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Oh come on, Penelope. I wanna see."
@@ -3586,7 +3591,7 @@ label v2_nsfwSkipLabel6:
 
             u "Alright, fine."
 
-        "Fine.":
+        "Fine":
             $ add_point(KCT.BOYFRIEND)
 
             u "Okay, fine."
@@ -3615,7 +3620,7 @@ label v2_nsfwSkipLabel6:
 
     pe "Yeah... you should probably rethink that, haha."
 
-    if penoutfits < 3:
+    if v2_outfits < 3:
         pe "Let's check out something different."
 
     else:
@@ -3678,7 +3683,7 @@ label v1_caughtContinue:
     menu:
         "Apologize":
             $ add_point(KCT.BOYFRIEND)
-            $ caughtpeekingaubreycounter = True
+            $ v2_caughtpeekingcounter = True
 
             scene s177e
             with dissolve
@@ -3705,7 +3710,7 @@ label v1_caughtContinue:
             if kct == "confident":
                 call screen kct_popup
 
-                $ caughtpeekingaubreycounter = True
+                $ v2_caughtpeekingcounter = True
 
                 scene s177d # aub embarrassed
                 with dissolve
@@ -3828,7 +3833,7 @@ label v1_caughtContinue_pen:
             if kct == "confident":
                 call screen kct_popup
 
-                $ caughtpeekingpenelopecounter = True
+                $ v2_caughtpeekingcounter = True
 
                 scene s186d # pen embarrassed
                 with dissolve
@@ -3879,7 +3884,7 @@ label buy3:
     jump buyCont
 
 label buyCont:
-    if caughtpeekingaubrey:
+    if v2_caughtpeeking:
         jump eve1
 
     else:
@@ -3955,7 +3960,7 @@ label buy3p:
     jump v1_buyContinuePenelope
 
 label v1_buyContinuePenelope:
-    if caughtpeekingpenelope:
+    if v2_caughtpeeking:
         jump eve1
 
     else:
@@ -4056,7 +4061,7 @@ label eve1:
     ev "Alright, here you go."
 
     menu:
-        "Make a move.":
+        "Make a move":
             $ evelynmove = True
             $ add_point(KCT.BRO)
 
@@ -4160,7 +4165,7 @@ label eve1:
 
 label endshopb: #for compatibility only
 label v1_endShop:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s196
     with Fade (1,0,1)

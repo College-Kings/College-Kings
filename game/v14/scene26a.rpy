@@ -11,7 +11,7 @@ label v14s26a:
 
     pause 0.75
 
-    play music "music/v14/Track Scene 26.mp3" fadein 2
+    play music "music/v13/Track Scene 18.mp3" fadein 2
 
     scene v14s26a_2 # FPP. You can use the render from v14s26_2 because they are the same scene. Otherwise the description is as follows: Show lindsey behind the counter looking at mc, frustrated expression, mouth closed, also show 1 bar on each side of the counter holding up a banner, just show the botton part of the banner, don't show any wording the wording comes into play later
     with dissolve

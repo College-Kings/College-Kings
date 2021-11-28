@@ -13,7 +13,7 @@ screen iBuy():
 
     add "images/v14/iBuy/background.webp"
 
-    add "images/v14/iBuy/price_scale_background.png":
+    add "images/v14/iBuy/price_scale_background.webp":
         pos(301,865)
 
     hbox:

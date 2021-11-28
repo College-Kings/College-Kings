@@ -7,7 +7,7 @@ label v11_nora_chloe_hallway:
     scene v11nohall1 # TPP. Show MC walking in the hallway, camera should be behind MC, Nora is supposed to be in the background looking at the bulleting board
     with fade
 
-    play music "music/v11/Scene 2/Track Scene 2.mp3" fadein 2
+    play music "music/v11/Track Scene 2.mp3" fadein 2
 
     pause 0.75
 
@@ -65,7 +65,7 @@ label v11_nora_chloe_hallway:
 
     menu:
         "I'll be there":
-            $ noraLike += 1
+            $ nora.points += 1
             $ add_point(KCT.BOYFRIEND)
 
             scene v11nohall2b
@@ -119,7 +119,7 @@ label v11_nora_chloe_hallway:
     menu:
         "Defend Chloe":
             $ add_point(KCT.TROUBLEMAKER)
-            $ noraLike -= 1
+            $ nora.points -= 1
 
             scene v11nohall2d
             with dissolve
@@ -137,7 +137,7 @@ label v11_nora_chloe_hallway:
             u "No I just... nevermind."
 
         "Don't defend Chloe":
-            $ noraLike += 1
+            $ nora.points += 1
 
             scene v11nohall2b
             with dissolve
@@ -396,7 +396,7 @@ label v11_nora_chloe_hallway:
                         menu:
                             "Yes":
                                 $ add_point(KCT.BOYFRIEND)
-                                $ chloeLike += 1
+                                $ chloe.points += 1
 
                                 scene v11clhall1f
                                 with dissolve
@@ -623,7 +623,7 @@ label v11_nora_chloe_hallway:
                 menu:
                     "Yes":
                         $ add_point(KCT.BOYFRIEND)
-                        $ chloeLike += 1
+                        $ chloe.points += 1
 
                         scene v11clhall1f
                         with dissolve

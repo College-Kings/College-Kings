@@ -52,7 +52,7 @@ label v9_wolves_pre_fight:
 
     u "More than ready!"
 
-    play music "music/v9/Scene 14 & 15/Track Scene 14 & 15.mp3" fadein 2
+    play music "music/v9/Track Scene 14.mp3" fadein 2
 
     scene v9wpf5b # FPP. Same camera as v9wpf5, neutral expression, mouth open.
     with dissolve

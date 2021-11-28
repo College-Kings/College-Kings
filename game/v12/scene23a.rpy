@@ -11,7 +11,7 @@ label v12_mc_chilling:
 
         pause 0.75
 
-        play music "music/v12/Scene 23a/Track Scene 23a.mp3" fadein 2
+        play music "music/v12/Track Scene 23a.mp3" fadein 2
 
         scene v12mor2 # TPP. MC on the hotel hallway
         with dissolve
@@ -38,7 +38,7 @@ label v12_mc_chilling:
 
         pause 0.75
 
-        play music "music/v12/Scene 23a/Track Scene 23a.mp3" fadein 2
+        play music "music/v12/Track Scene 23a.mp3" fadein 2
 
         scene v12mor5
         with dissolve
@@ -292,7 +292,7 @@ label v12_mc_chilling:
 
         menu:
             "Yes":
-                $ v12s23a_poolsex = True
+                $ v12s23a_sam += 1
                 scene v12mor13a 
                 with dissolve
                 
@@ -337,7 +337,7 @@ label v12_mc_chilling:
 
         menu:
             "I can beat Cameron":
-                $ v12s23a_beatcameron = True
+                $ v12s23a_sam += 1
                 $ add_point(KCT.TROUBLEMAKER)
                 
                 scene v12mor13a
@@ -357,7 +357,7 @@ label v12_mc_chilling:
 
                 sa "*Drunk* Ughhh, such a pussy. *Chuckles*"
 
-        if v12s23a_poolsex and v12s23a_beatcameron:
+        if v12s23a_sam == 2:
             scene v12mor13d
             with dissolve
             
@@ -485,7 +485,7 @@ label v12_mc_chilling:
         menu:
             "Call Cameron":
                 $ add_point(KCT.BRO)
-                $ v12_call_cameron = True
+
                 scene v12mor23 # TPP. MC holding his phone, mouth closed
                 with dissolve
                 u "(*Sighs* He should at least know she's drunk.)"
@@ -782,7 +782,7 @@ label v12_mc_chilling:
         menu:
             "Call Cameron":
                 $ add_point(KCT.BRO)
-                $ v12_call_cameron = True
+
                 scene v12mor24d
                 with dissolve
 

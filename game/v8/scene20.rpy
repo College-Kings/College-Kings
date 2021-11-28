@@ -15,7 +15,7 @@ label emily_arcade:
 
     scene v8arcade1 # TPP. MC walking into the arcade building, Emily can be seen waiting for him inside
     with Fade(0.75, 0.25, 0.75)
-    play ambience "sounds/arcade_amb.mp3" fadein 3.0
+    play ambience "sounds/arcade_amb.mp3" fadein 2
     pause 1
 
     if emilyrs:
@@ -478,7 +478,7 @@ label em_arcade_2:
     with dissolve
     u "Don't you think I'll forget about it."
 
-    stop ambience fadeout 1.5
+    stop ambience fadeout 3
 
     scene v8arcade22 # TPP. MC and Emily walking in the hallway walking towards her dorm door
     with Fade(0.75, 0.25, 0.75)
@@ -790,7 +790,7 @@ label em_arcade_1:
     with dissolve
     em "Sure you did. Come on. Walk me home."
 
-    stop ambience fadeout 1.5
+    stop ambience fadeout 3
 
     scene v8arcade22
     with Fade(0.75, 0.25, 0.75)
@@ -803,9 +803,9 @@ label em_arcade_1:
         "Kiss her":
             if laurenrs:
                 $ add_point(KCT.TROUBLEMAKER)
+
             else:
                 $ add_point(KCT.BOYFRIEND)
-            $ kissedEmilyArcade = True
 
             scene v8arcade24
             with dissolve
@@ -853,7 +853,6 @@ label em_arcade_1:
         "Good night":
             if laurenrs:
                 $ add_point(KCT.BOYFRIEND)
-            $ kissedEmilyArcade = False
 
             scene v8arcade23a
             with dissolve
@@ -1246,7 +1245,7 @@ label v8s20_nsfwSkipLabel1:
     with dissolve
     em "Sure you did. Come on. Walk me home."
 
-    stop ambience fadeout 1.5
+    stop ambience fadeout 3
 
     scene v8arcade22
     with Fade(0.75, 0.25, 0.75)
@@ -1261,7 +1260,6 @@ label v8s20_nsfwSkipLabel1:
                 $ add_point(KCT.TROUBLEMAKER)
             else:
                 $ add_point(KCT.BOYFRIEND)
-            $ kissedEmilyArcade = True
 
             scene v8arcade24
             with dissolve
@@ -1309,7 +1307,6 @@ label v8s20_nsfwSkipLabel1:
         "Good night":
             if laurenrs:
                 $ add_point(KCT.BOYFRIEND)
-            $ kissedEmilyArcade = False
 
             scene v8arcade23a
             with dissolve
@@ -1601,7 +1598,7 @@ label em_arcade_3:
     with dissolve
     em "Sure you did. Come on. Walk me home."
 
-    stop ambience fadeout 1.5
+    stop ambience fadeout 3
 
     scene v8arcade22
     with Fade(0.75, 0.25, 0.75)

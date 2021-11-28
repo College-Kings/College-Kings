@@ -4,7 +4,7 @@
 # Time: Evening
 
 label v14s22:
-    play music "music/v14/Track Scene 22.mp3" fadein 2
+    play music "music/v13/Track Scene 24_1.mp3" fadein 2
 
     scene v14s22_1 # TPP. MC is walking on campus and stumbles upon the janitor's closet, slight smile, mouth closed
     with dissolve
@@ -235,17 +235,13 @@ label v14s22:
 label v14s22_continue:
     if lindsey_board.approach is not None:
         $ v14_lindsey_sell = lindsey_board.approach.id == "Sell"
-        $ v14_lindsey_steal = lindsey_board.approach.id == "Steal"
 
     if lindsey_board.selected_task is not None:
-        $ v14_pics_no_linds = lindsey_board.selected_task == v14s22_pics_no_linds
         $ v14_pics_with_linds = lindsey_board.selected_task == v14s22_pics_with_linds
-        $ v14_concert_distraction = lindsey_board.selected_task == v14s22_concert
         $ v14_date_distraction = lindsey_board.selected_task == v14s22_date
 
-    if v14_lindsey_steal:
+    if not v14_lindsey_sell: #if approach is not sell, then approach is steal
         jump v14s22_steal
-
 
 label v14s22_sell_car:
     scene v14s22_5

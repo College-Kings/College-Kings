@@ -185,7 +185,7 @@ label v15s13:
 
         menu:
             "A blueberry?":
-                $ QuirkPopculture += 1
+                $ mc.quirks["pop_culture"] += 1
                 $ add_point(KCT.BRO)
                 u "Donuts turn you into blueberries?"
 
@@ -205,7 +205,7 @@ label v15s13:
                 gr "Ha, fuck you."
 
             "Chocolate factory movie?":
-                $ QuirkBoomer += 1
+                $ mc.quirks["boomer"] += 1
                 $ add_point(KCT.TROUBLEMAKER)
                 u "Chocolate factory movie? Are you feeling okay? *Chuckles*"
 

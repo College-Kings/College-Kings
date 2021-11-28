@@ -6,7 +6,7 @@
 label v11_sit_ryan_convo:
     scene v11src1 # FPP View down the aisle from front of the plane, some people sitting, some standing, Ms. Rose standing with mouth open
     with dissolve
-    play music "music/v11/Scene 12/Track Scene 12.mp3" fadein 2
+    play music "music/v11/Track Scene 12.mp3" fadein 2
     ro "Alright, you know your seats. [name], you're sitting next to Ryan."
 
     scene v11src1a # FPP Same angle and characters as v11src1, Ms. Rose mouth closed
@@ -165,7 +165,7 @@ label v11_sit_ryan_convo:
 
                 u "See? You got it all figured out. Now let me get some sleep."
 
-    elif not v10s33_ryan: # If didn't talk to Ryan at charity event
+    elif not "ryan" in freeroam6: # If didn't talk to Ryan at charity event
         scene v11src4
         with dissolve
 

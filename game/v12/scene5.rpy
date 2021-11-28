@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v12_morning_london:
-    play music "music/v12/Scene 5/Track Scene 5.mp3" fadein 2
+    play music "music/v12/Track Scene 5.mp3" fadein 2
 
     if not v11_riley_roomate:
         if chloers or chloegf:

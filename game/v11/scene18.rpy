@@ -6,7 +6,7 @@
 label v11_msrose_convo:
     scene v11roc1 # FPP. Ms Rose and MC are in a secluded area, lookign at each other, Ms Rose is slightly embarrassed, mouth open (Ms Rose should have her back facing a wall, the wall should be relatively close)
     with fade
-    play music "music/v11/Scene 3/Track Scene 3.mp3" fadein 2
+    play music "music/v11/Track Scene 3.mp3" fadein 2
     ro "I wanted to apologize for my behavior. I shouldn't have let our relationship get inappropriate, and should've never treated you like anything more than a student."
 
     ro "From now on I'm going to keep things strictly professional."
@@ -16,7 +16,6 @@ label v11_msrose_convo:
 
     menu:
         "Kiss her":
-            $ v11_msrose_kiss = True
             $ msrosers = True
 
             scene v11roc2 # TPP. MC gets very close to Ms Rose, Ms Rose's back is now on the wall, she is slightly smiling, mouth closed, looking at MC

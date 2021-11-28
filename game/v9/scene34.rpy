@@ -4,11 +4,10 @@
 # Time: Saturday Morning
 
 label v9_ri_sex:
-    #$ add_point(KCT.TROUBLEMAKER, sum([ amberSexAtJoshs, v9_aubrey_lake, v9_em_dorm_scene ])) ###Loyaltymod
     scene v9ris1 # TPP. Show MC outside Riley's dorm knocking on the door.
     with fade
 
-    play music "music/v9/Scene 12/Track Scene 12_2.mp3" fadein 2
+    play music "music/v9/Track Scene 12_2.mp3" fadein 2
 
     pause 1
 
@@ -100,7 +99,7 @@ label v9_ri_sex:
     scene v9ris7a # TPP. Same camera as v9ris7a, MC now wearing no pants, Riley looking at MC seductively.
     with dissolve
 
-    play music "music/v9/Scene 34/Track Scene 34_2.mp3" fadein 3
+    play music "music/v9/Track Scene 34_2.mp3" fadein 2
 
     pause 1
 
@@ -354,7 +353,7 @@ label v9s34_rileyCowgirl:
 
     u "Do you... need anything?"
 
-    play music "music/v9/Scene 34/Track Scene 34_3.mp3" fadein 3
+    play music "music/v9/Track Scene 3.mp3" fadein 2
 
     scene v9ris23a # FPP. Same camera as v9ris23, smile, mouth open.
     with dissolve

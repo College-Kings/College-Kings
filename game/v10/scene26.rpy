@@ -11,7 +11,7 @@ init python:
         amber.messenger.newMessage("Beer, obviously")
 
 label v10_amber_skatepark:
-    play music "music/v10/Scene 26/Track Scene 26_1.mp3" fadein 3
+    play music "music/v10/Track Scene 26_1.mp3" fadein 2
 
     scene v10sasp14 # TPP. Show MC on sidewalk, walking home from rileys house.
     with fade
@@ -392,15 +392,14 @@ label v10_amber_skatepark:
         with dissolve
         menu:
             "Let her":
-                $ v10_ambersex = True
-                #$ add_point(KCT.TROUBLEMAKER, sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck ])) ###Loyaltymod
+                $ sceneList.add("v10_amber")
                 show screen v10s26_amberSexOverlay
 
                 if config_censored:
                     call screen censoredPopup("v10s26_nsfwSkipLabel1")
 
                 stop music fadeout 3
-                play music "music/v10/Scene 26/Track Scene 26_2.mp3" fadein 3
+                play music "music/v10/Track Scene 26_2.mp3" fadein 2
                 image v10ambbj = Movie(play="images/v10/Scene 26/v10ambbj.webm", loop=True, image="images/v10/Scene 26/v10ambbjStart.webp", start_image="images/v10/Scene 26/v10ambbjStart.webp") # TPP Amber sucking MC's cock on the top of the quater pipe
                 image v10ambbjf = Movie(play="images/v10/Scene 26/v10ambbjf.webm", loop=True, image="images/v10/Scene 26/v10ambbjStart.webp", start_image="images/v10/Scene 26/v10ambbjStart.webp")
 
@@ -711,8 +710,7 @@ label v10_amber_skatepark:
                     menu:
                         "Let her":
                             $ amberrs = True
-                            $ v10_ambersex = True
-                            #$ add_point(KCT.TROUBLEMAKER, sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck ])) ###Loyaltymod
+                            $ sceneList.add("v10_amber")
 
                             if config_censored:
                                 call screen censoredPopup("v10s26_nsfwSkipLabel1")

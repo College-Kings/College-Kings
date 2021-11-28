@@ -8,7 +8,7 @@ label v10_fight_result:
     with dissolve
     jo "*Laughs* In the words of Smokey, \"you got knocked the fuck out!\""
 
-    play music "music/v10/Scene 8/Track 8.mp3" fadein 3
+    play music "music/v10/Track Scene 8.mp3" fadein 2
 
     if joinwolves:
     # -If MC wins the fight against Ryan-

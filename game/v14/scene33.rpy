@@ -17,7 +17,7 @@ label v14s33:
 
         pause 0.75
 
-        play music "music/v14/Track Scene 33.mp3" fadein 2
+        play music "music/v13/Track Scene 40_3.mp3" fadein 2
 
         scene v14s33_2 # TPP. Show MC looking at his phone while sitting on the bed in his Wolves Room, slight smile, mouth closed.
         with fade
@@ -248,7 +248,7 @@ label v14s33:
 
         pause 0.75
 
-        play music "music/v14/Track Scene 33.mp3" fadein 2
+        play music "music/v13/Track Scene 40_3.mp3" fadein 2
 
         scene v14s33_4 # TPP. Show MC looking at his phone while sitting on the bed in his Apes room, slight smile, mouth closed.
         with fade

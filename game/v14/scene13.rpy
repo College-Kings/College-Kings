@@ -4,7 +4,7 @@
 # Time: Evening
 
 label v14s13:
-    play music "music/v14/Track Scene 13.mp3" fadein 2
+    play music "music/v12/Track Scene 23_2.mp3" fadein 2
 
     scene v14s13_1 # TPP. Show MC walking into his room, neutral expression, mouth closed
     with dissolve

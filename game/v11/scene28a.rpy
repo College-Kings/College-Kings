@@ -6,7 +6,7 @@
 label v11_sam_spa:
     scene v11sas1 # TPP. Show MC and Samantha walking in a corridor, both smiling, mouths closed
     with dissolve
-    play music "music/V10/Scene 41/Track Scene 41_2.mp3" fadein 2
+    play music "music/v10/Track Scene 41_2.mp3" fadein 2
     pause 1
 
     scene v11sas2 # TPP. Show MC and Sam walking into the spa, both smiling, mouths closed
@@ -635,8 +635,6 @@ label v11s28a_galleryScene:
             u "*Chuckles*"
 
         "Madison":
-            $ v11_madison_ex = True
-
             scene v11sas16
             with dissolve
 
@@ -659,7 +657,6 @@ label v11s28a_galleryScene:
 
     menu:
         "Did drugs":
-            $ v11_ex_drugs = True
             scene v11sas17
             with dissolve
 
@@ -678,7 +675,6 @@ label v11s28a_galleryScene:
 
     menu:
         "Her father":
-            $ v11_ex_father = True
             scene v11sas17b
             with dissolve
 
@@ -719,7 +715,6 @@ label v11s28a_galleryScene:
         "Massage her boob":
             $ v11_samantha_spa = True
             $ add_point(KCT.TROUBLEMAKER)
-            #$ add_point(KCT.TROUBLEMAKER, sum([ v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex, v11_fucked_candy, v11_aubrey_sex ])) ###Loyaltymod
 
             scene v11sas18a # TPP. Same as v11sas18, MC has his hands over her boob, she is smiling, mouth closed
             with dissolve

@@ -9,7 +9,7 @@ label v10_riley_sex:
 
     ri "Okay, I really wanna go get cleaned up so do you mind waiting here?"
 
-    play music "music/v10/Scene 40/Track Scene 40_1.mp3" fadein 3
+    play music "music/v10/Track Scene 40_1.mp3" fadein 2
 
     scene v10srds2 # FPP. Show Riley, smiling, mouth closed. She's still dirty.
     with dissolve
@@ -226,8 +226,7 @@ label v10_riley_sex:
 
                     "Peek":
                         $ rileyrs = True
-                        $ v10_ri_sex = True
-                        #$ add_point(KCT.TROUBLEMAKER, sum([ v9_em_dorm_scene, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker ])) ###Loyaltymod
+                        $ sceneList.add("v10_riley")
 
                         scene v10srds1f
                         with dissolve
@@ -331,8 +330,7 @@ label v10_riley_sex:
                         u "It was."
             "Make a move":
                 $ rileyrs = True
-                $ v10_ri_sex = True
-                #$ add_point(KCT.TROUBLEMAKER, sum([ v9_em_dorm_scene, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker ])) ###Loyaltymod
+                $ sceneList.add("v10_riley")
 
                 scene v10srds4a # TPP. Same camera as v10srds4. Show MC and Riley. Both smiling, mouths closed. MC puts his hand on Riley's towel and drops it to the floor.
                 with dissolve
@@ -361,7 +359,7 @@ label v10_riley_sex:
                 with dissolve
 
                 stop music fadeout 3
-                play music "music/v10/Scene 40/Track Scene 40_2.mp3" fadein 3
+                play music "music/v10/Track Scene 40_2.mp3" fadein 2
 
                 u "Lie down."
                 
@@ -428,7 +426,7 @@ label v10_riley_sex:
                 pause 0.75
 
                 stop music fadeout 3
-                play music "music/v10/Scene 40/Track Scene 40_3.mp3" fadein 3
+                play music "music/v10/Track Scene 40_3.mp3" fadein 2
                 scene v10srds6a # TPP. Same camera as v10srds6. Show MC and Riley laying naked in bed together after sex. Both smiling, Riley mouth open.
                 with dissolve
 
@@ -572,8 +570,7 @@ label v10_riley_sex:
         menu:
             "Make a move":
                 $ rileyrs = True
-                $ v10_ri_sex = True
-                #$ add_point(KCT.TROUBLEMAKER, sum([ v9_em_dorm_scene, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker ])) ###Loyaltymod
+                $ sceneList.add("v10_riley")
 
                 scene v10srds1f
                 with dissolve
@@ -612,7 +609,7 @@ label v10_riley_sex:
                 with dissolve
 
                 stop music fadeout 3
-                play music "music/v10/Scene 40/Track Scene 40_2.mp3" fadein 3
+                play music "music/v10/Track Scene 40_2.mp3" fadein 2
 
                 u "Lie down."
 
@@ -666,7 +663,7 @@ label v10_riley_sex:
                 ri "That was nice."
 
                 stop music fadeout 3
-                play music "music/v10/Scene 40/Track Scene 40_3.mp3" fadein 3
+                play music "music/v10/Track Scene 40_3.mp3" fadein 2
                 scene v10srds7
                 with dissolve
 
@@ -824,8 +821,7 @@ label v10_riley_sex:
                     
                     "Peek":
                         $ rileyrs = True
-                        $ v10_ri_sex = True
-                        #$ add_point(KCT.TROUBLEMAKER, sum([ v9_em_dorm_scene, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker ])) ###Loyaltymod
+                        $ sceneList.add("v10_riley")
 
                         scene v10srds1f
                         with dissolve

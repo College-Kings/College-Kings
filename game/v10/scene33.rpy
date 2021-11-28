@@ -19,13 +19,12 @@ label v10_charity_freeroam:
     with fade
 
     u "(Now this is an event!)"
-    play music "music/v10/Scene 33/Track Scene 33 - Free Roam.mp3" fadein 3
+    play music "music/v10/Track Scene 33.mp3" fadein 2
 
     jump v10s33_autumn1
 
 label v10s33_autumn1:
-
-    $ v10s33_autumn = True
+    $ freeroam6.add("autumn")
 
     scene v10cfraut1a #FPP Show Autumn, Looking at mc, smile with stressed eyes, mouth closed
     with dissolve
@@ -108,9 +107,8 @@ label v10s33_autumn1:
 
     menu:
         "Ask why":
-            $ v10s33_autwhypledge = True
             $ add_point(KCT.BOYFRIEND)
-            $ autumnLike += 1
+            $ autumn.points += 1
             u "Why wouldn't you expect her to pledge?"
 
             scene v10cfraut1b
@@ -147,13 +145,12 @@ label v10s33_autumn1:
 
     menu:
         "That's the main reason":
-            $ v10s33_authereformud = True
             $ add_point(KCT.BRO)
             u "I'll be sure to try the other things too, but it's definitely the main attraction."
         
         "I'd be here without it":
             $ add_point(KCT.BOYFRIEND)
-            $ autumnLike += 1
+            $ autumn.points += 1
             u "I didn't even know about the mud wrestling until recently, I'd be here with or without it."
 
     scene v10cfraut1d
@@ -220,7 +217,7 @@ label v10s33_autumn1:
     # -Transition to Scene 34-
 
 label v10s33_deergirl11:
-    $ v10s33_deergirl1 = True
+    $ freeroam6.add("rachel")
     
     scene v10cfrdg11 # FPP. Show dg1, looking towards perry out of shot, mouth open
     #with dissolve
@@ -424,7 +421,6 @@ label v10s33_deergirl11:
     if joinwolves:
         menu:
             "Make fun of Perry":
-                $ v10s33_make_fun_perry = True
                 scene v10cfrdg12c
                 with dissolve
 
@@ -449,8 +445,7 @@ label v10s33_deergirl11:
     call screen v10s33_stage
 
     label v10s33_aubrey1:
-
-    $ v10s33_aubrey = True
+    $ freeroam6.add("aubrey")
 
     scene v10cfrau1 #FPP, Aubrey is doing the Zero Two TikTok dance, refer to https://youtu.be/4b69koOYry4, left pose
 
@@ -515,8 +510,7 @@ label v10s33_deergirl11:
         "Sure":
             u "Sure."
             $ add_point(KCT.BOYFRIEND)
-            $ v10s33_audance = True
-            $ aubreyLike += 1
+            $ aubrey.points += 1
             scene v10cfrau5 #TPP, Aubrey grabs MC holding his hands, they're both smiling, mouth closed
             with dissolve
 
@@ -542,8 +536,6 @@ label v10s33_deergirl11:
 
             menu:
                 "Twirl her":
-                    $ v10s33_autwirl = True
-
                     scene v10cfrau5c #same 5b, mc twirls aubrey start
                     with dissolve
 
@@ -555,7 +547,7 @@ label v10s33_deergirl11:
                     au "Someone's old school."
 
                 "Dip her":
-                    $ aubreyLike += 1
+                    $ aubrey.points += 1
                     scene v10cfrau5e #same 5b, mc dips aubrey start
                     with dissolve
 
@@ -592,7 +584,7 @@ label v10s33_deergirl11:
             au "I don't, high school prom date. *Laughs*"
 
         "No way":
-            $ aubreyLike -= 1
+            $ aubrey.points -= 1
             $ add_point(KCT.BRO)
             u "Oh no way, I don't wanna be an embarrassment. *Laughs*"
 
@@ -795,7 +787,7 @@ label v10s33_deergirl11:
 
     menu:
         "Hot":
-            $ aubreyLike += 1
+            $ aubrey.points += 1
             $ add_point(KCT.BRO)
             u "Hot."
 
@@ -876,11 +868,8 @@ label v10s33_deergirl11:
     if v10_help_nora_freeroam:
         menu:
             "Invite her to Europe":
-                $ aubreyLike += 1
-
+                $ aubrey.points += 1
                 $ add_point(KCT.BOYFRIEND)
-
-                $ v10s33_inviteaubrey = True
 
                 u "Before I forget, do you know about the Europe trip?"
 
@@ -925,7 +914,7 @@ label v10s33_deergirl11:
                 u "Great!"
 
             "Don't invite her":
-                $ aubreyLike -= 1
+                $ aubrey.points -= 1
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "(If she goes she goes, if she doesn't she doesn't.)"
@@ -940,7 +929,7 @@ label v10s33_deergirl11:
     call screen v10s33_stage
 
 label v10s33_chloe1:
-    $ v10s33_chloe = True
+    $ freeroam6.add("chloe")
     if chloemad:
         scene v10cfrcl1 # FPP. Show Chloe, mouth closed
         
@@ -1035,8 +1024,7 @@ label v10s33_chloe1:
 
     menu:
         "Date with Chloe":
-            $ v10s33_date_w_chloe = True
-            $ chloeLike += 1
+            $ chloe.points += 1
             if chloers:
                 scene v10cfrcl1
                 with dissolve
@@ -1047,6 +1035,7 @@ label v10s33_chloe1:
                 with dissolve
 
                 cl "Anytime!"
+
             else:
                 scene v10cfrcl1
                 with dissolve
@@ -1099,7 +1088,7 @@ label v10s33_chloe1:
     if v10_nora_bitch_about_chloe:
         menu:
             "Tell Chloe about Nora":
-                $ chloeLike += 1
+                $ chloe.points += 1
                 $ v10s33_toldChloe = True
                 scene v10cfrcl1c # FPP. same1,slight angry look, closed
                 with dissolve
@@ -1175,7 +1164,6 @@ label v10s33_chloe1:
 
                     menu:
                         "Invite to Europe":
-                            $ v10s33_inv_chloe_eur = True
                             scene v10cfrcl1
                             with dissolve
                             
@@ -1188,8 +1176,7 @@ label v10s33_chloe1:
 
                             menu:
                                 "Convince her":
-                                    $ chloeLike += 1
-                                    $ v10s33_convince_chloe = True
+                                    $ chloe.points += 1
                                     scene v10cfrcl1
                                     with dissolve
 
@@ -1236,7 +1223,7 @@ label v10s33_chloe1:
 
 label v10s33_deergirl21:
 
-    $ v10s33_deergirl2 = True
+    $ freeroam6.add("eleanor")
     
     scene v10cfrdg21 #FPP Show DG2, Looking at mc, happy, cute smile, mouth open
 
@@ -1278,7 +1265,6 @@ label v10s33_deergirl21:
     menu:
         "Make a joke":
             $ add_point(KCT.BRO)
-            $ v10s33_dg2joke = True
 
             u "If I win the lingerie I get to see you in it right? *Chuckles*"
 
@@ -1346,7 +1332,7 @@ label v10s33_deergirl21:
 
     label v10s33_deergirl31:
 
-    $ v10s33_deergirl3 = True
+    $ freeroam6.add("karen")
 
     scene v10cfrdg31a #FPP, showing dg3, sitting if she's seated,looking at you, crazy smile with a hint of sadness, mouth closed
     #with dissolve
@@ -1422,7 +1408,7 @@ label v10s33_deergirl21:
     call screen v10s33_centeraisle
     
     label v10s33_laurenbake1:
-    $ v10s33_lauren = True
+    $ freeroam6.add("lauren")
 
     if laurenrs:
         scene v10cfrla1 #FPP Show Lauren, Looking at mc, happy smile, mouth open
@@ -1580,7 +1566,6 @@ label v10s33_deergirl21:
     u "I'm sure you people are gonna get hungry at some point."
 
     if laurenrs:
-        $ v10s33_inv_lauren_europe = True
         u "I know, I'd love some of... Lauren's Moist Muffins."
 
         scene v10cfrla1d
@@ -1609,7 +1594,6 @@ label v10s33_deergirl21:
         if v10_help_nora_freeroam:
             menu:
                 "Invite her to Europe":
-                    $ v10s33_inv_lauren_europe = True
                     $ add_point(KCT.BOYFRIEND)
 
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
@@ -1652,7 +1636,7 @@ label v10s33_deergirl21:
     call screen v10s33_cakestatue
 
     label v10s33_laurenstatue1:
-    $ v10s33_lauren = True
+    $ freeroam6.add("lauren")
 
     scene v10cfrla3 #FPP, lauren as statue, not looking at mc, mouth closed
     #with dissolve
@@ -1793,7 +1777,6 @@ label v10s33_deergirl21:
     u "So committed, we love to see it."
 
     if laurenrs:
-        $ v10s33_inv_lauren_europe = True
         u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
         scene v10cfrla3d
@@ -1810,7 +1793,6 @@ label v10s33_deergirl21:
         if v10_help_nora_freeroam:
             menu:
                 "Invite her to Europe":
-                    $ v10s33_inv_lauren_europe = True
                     $ add_point(KCT.BOYFRIEND)
 
                     u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
@@ -1853,14 +1835,14 @@ label v10s33_deergirl21:
     call screen v10s33_cakestatue
 
     label v10s33_lindsey1:
-        $ v10s33_lindsey = True
+        $ freeroam6.add("lindsey")
         
         scene v10cfrfrli1 # FPP. Show Lindsey stood by the body paint stand in a bikini. Lindsey looking at camera, smile, mouth closed.
 
         menu:
             "Compliment":
                 $ add_point(KCT.BOYFRIEND)
-                $ lindseyLike += 1
+                $ lindsey.points += 1
                 u "Look at you! This alone is a reason to give all my money away."
 
                 scene v10cfrfrli1a # FPP. Same as 1, smile, mouth open.
@@ -1960,8 +1942,6 @@ label v10s33_deergirl21:
                     "Don't paint Lindsey":
                         u "*Laughs* You should."
 
-                $ v10s33_lindsey_compliment = True
-
             "Ask how she's doing":
                 u "Hey Lindsey, how are you doing?"
 
@@ -2001,7 +1981,7 @@ label v10s33_deergirl21:
         call screen v10s33_bodypaint
 
     label v10s33_msrose1:
-        $ v10s33_msRose = True
+        $ freeroam6.add("rose")
 
         scene v10cfrcfrro1 # FPP. Close up Lee and Rose, infront of the body painting booth having a conversation with eachother. Lee mouth open.
 
@@ -2025,7 +2005,7 @@ label v10s33_deergirl21:
 
         menu:
             "Side with Mr. Lee":
-                $ mrleeLike += 1
+                $ mr_lee.points += 1
                 u "I overheard your conversation and I have to be honest, body painting is still pretty major. I know I love it."
 
                 scene v10cfrcfrro1c # FPP. Same as 1, both looking at camera (MC), both smile, lee mouth open.
@@ -2073,7 +2053,6 @@ label v10s33_deergirl21:
 
                 menu:
                     "Encourage her":
-                        $ v10s33_encourage_rose_paint = True
                         u "You sort of have to now, it's a matter of principle."
 
                         scene v10cfrcfrro3c # FPP. Same as 3, rose sigh, rose mouth open.
@@ -2141,8 +2120,6 @@ label v10s33_deergirl21:
                 if v10_help_nora_freeroam:
                     menu:
                         "Invite Ms. Rose to Europe":
-                            $ v10s33_inv_rose_europe = True
-
                             u "I wanted to ask you Ms. Rose, are you planning on going on the Europe trip?"
 
                             scene v10cfrcfrro1c
@@ -2164,8 +2141,7 @@ label v10s33_deergirl21:
                             u "(I'm sure Nora will ask her if she wants her to go.)"
                         
             "Side with Ms. Rose":
-                $ msroseLike += 1
-                $ v10s33_side_w_rose = True
+                $ ms_rose.points += 1
             
                 u "I overheard your conversation and I have to be honest, body paint is sort of a kids game nowadays."
                 u "It may have been major a long time ago, but living in castles and riding horses was major a long time ago too. Bag toss is better."
@@ -2188,7 +2164,7 @@ label v10s33_deergirl21:
         call screen v10s33_bodypaint
 
 label v10s33_riley1:
-    $ v10s33_riley = True
+    $ freeroam6.add("riley")
     
     scene v10cfrri1 # FPP. Show Riley at the thrift shop looking at a top, mouth open.
 
@@ -2397,7 +2373,6 @@ label v10s33_riley1:
 
     menu:
         "It looks good":
-            $ v10_ri_hat_good = True
             scene v10cfrri2e # FPP. same 2, cheeky smile,wearing a hat from here on, mouth closed
             with dissolve
             u "I wouldn't wear it, but on you it looks great."
@@ -2448,7 +2423,7 @@ label v10s33_riley1:
 
     ri "Like I said, I'm a kind person. *Chuckles* Have you been to the dance stand?"
 
-    if v10s33_deergirl1 or v10s33_aubrey:
+    if "rachel" in freeroam6 or v10s33_aubrey:
 
         scene v10cfrri2e
         with dissolve
@@ -2577,7 +2552,7 @@ label v10s33_riley2:
 
     ri "Never, let's do it. But we need more judges."
 
-    if v10s33_deergirl1:
+    if "rachel" in freeroam6:
     ### ERROR: -If spoke to DG1 and PERRY ###
         scene v10cfrriau3b # FPP. same 3a, mouth closed
         with dissolve
@@ -2932,7 +2907,7 @@ label v10s33_riley2:
 
         call screen v10s33_mudwrestling
 
-    $ v10s33_amber = True
+    $ freeroam6.add("amber")
     scene v10cfram1 #FPP Show Amber, Looking at mc, flirty smile, mouth open
     #with dissolve
 
@@ -3023,7 +2998,6 @@ label v10s33_riley2:
     if v10_help_nora_freeroam:
         menu:
             "Invite her to Europe":
-                $ v10s33_inv_amber_europe = True
                 u "Are you going on the Europe trip?"
 
                 scene v10cfram1d # same 1, amber curious, mouth open
@@ -3073,7 +3047,7 @@ label v10s33_riley2:
 
         call screen v10s33_bagtoss
 
-    $ v10s33_chris = True
+    $ freeroam6.add("chris")
     
     scene v10cfrch1 #FPP showing Aaron and Chris looking at each other, like they were talking
     #with dissolve
@@ -3115,7 +3089,6 @@ label v10s33_riley2:
 
     menu:
         "Play":
-            $ v10s33_playwithaaron = True
             scene v10cfrch2
             with dissolve
 
@@ -3211,7 +3184,7 @@ label v10s33_riley2:
     call screen v10s33_bagtoss
 
     label v10s33_nora1:
-    $ v10s33_nora = True
+    $ freeroam6.add("nora")
 
     scene v10cfrno1 # fpp, from the side, nora playing bag toss, mouth closed concentrated
     #with dissolve
@@ -3382,7 +3355,7 @@ label v10s33_riley2:
     call screen v10s33_bagtoss
 
     label v10s33_ryan1:
-        $ v10s33_ryan = True
+        $ freeroam6.add("ryan")
 
         scene v10cfrry1 # FPP. Close up Ryan stood by the central aisle, Ryan smile, mouth closed.
 
@@ -3455,7 +3428,7 @@ label v10s33_riley2:
         menu:
             "It's okay":
                 $ add_point(KCT.BRO)
-                $ ryanLike += 1
+                $ ryan.points += 1
                 $ v10s33_ryan_flirt_emily = True
 
                 u "Don't you think it's weird to date your friend's ex? You can do what you want though, it doesn't bother me."
@@ -3512,7 +3485,7 @@ label v10s33_riley2:
         call screen v10s33_centeraisle
 
     label v10s33_toiletryan1:
-        $ v10s33_ryanb = True
+        $ freeroam6.add("ryan2")
         scene v10cfrry5 # FPP. Show Ryan at the toilets, Ryan slight upset, mouth closed.
         u "(He looks upset.)"
 
@@ -3597,7 +3570,7 @@ label v10s33_riley2:
         call screen v10s33_toilet
 
 label v10s33_emily1:
-    $ v10s33_emily = True
+    $ freeroam6.add("emily")
 
     if not forgiveemily:
         if v10s33_toldChloe:
@@ -3715,10 +3688,10 @@ label v10s33_emily1:
     call screen v10s33_bench
     
     label v10s33_evelyn1:
-    if not evelynrs and evelyndate:
-        $ v10s33_evelyn = True
-        
-        if not v10s33_ryan:
+    $ freeroam6.add("evelyn")
+
+    if evelyndate and not evelynrs:
+        if not "ryan" in freeroam6:
             scene fr6toilet # toilet screen
         else:
             scene fr6toiletwithryan
@@ -3727,8 +3700,7 @@ label v10s33_emily1:
 
         call screen v10s33_toilet
 
-    elif not evelynrs and not evelyndate:
-        $ v10s33_evelyn = True
+    elif not evelyndate:
         scene v10cfrev1a #fpp, shows evelyn looking at mc, neutral expression mouth closed
 
         u "Out of everyone here, I'm most surprised to see you."
@@ -3768,7 +3740,6 @@ label v10s33_emily1:
         call screen v10s33_toilet
 
     else:
-        $ v10s33_evelyn = True
         scene v10cfrev1a
 
         u "Out of everyone here, I'm most surprised to see you."
@@ -3838,7 +3809,7 @@ label v10s33_emily1:
         call screen v10s33_toilet
 
 label v10s33_deergirl41:
-    if v10s33_riley:
+    if "riley" in freeroam6:
         scene fr6thriftnoriley
 
     else:

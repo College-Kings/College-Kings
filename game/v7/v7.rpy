@@ -23,7 +23,6 @@ init python:
         v7_kiwiiPost4.newComment("Josh", _("lol"), mentions="MC", numberLikes=renpy.random.randint(3, 7))
 
     def v7_msgReply1():
-        setattr(store, "tellpenelope", True)
         add_point(KCT.BRO)
         penelope.messenger.newMessage(_("Okay..."))
 
@@ -70,10 +69,6 @@ init python:
 
 label start7: #for compatibility only
 label v7start:
-    if caughtpeekingpenelope and not caughtpeekingpenelopecounter:
-        $ penelopemad = True
-    elif penelopekiss:
-        $ penelopemad = True
 
 ######## SCENE 1 Chris in Wolves secret room
     scene s673 # #showing the room (not showing you or chris)with 6v large portraits and one empty frame on the wall
@@ -289,7 +284,7 @@ label v7start:
 
             u "Yeah, I can see that. But winning must be surreal too."
 
-        "That's really impressive.":
+        "That's really impressive":
             $ add_point(KCT.BOYFRIEND)
 
             u "That's really impressive. Winning the entire tournament must be surreal."
@@ -331,7 +326,7 @@ label v7start:
 
     u "Yeah, alright. Thanks."
 
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene s674g # chris gone
     with fade
@@ -419,7 +414,7 @@ label v7start:
 
         u "(I guess I'm going home without him.)"
 
-    if fr3riley and not askfinn and upstairs != "riley" and not joinapes:
+    if "riley" in freeroam3 and not askfinn and upstairs != "riley" and not joinapes:
         ri "[name]?"
 
         scene s683a #Closeup riley mouth closed standing in kitchen curious
@@ -458,7 +453,7 @@ label v7start:
 
     ch "I swear she finds new reasons to get upset every day."
 
-    if fr3riley and not askfinn:
+    if "riley" in freeroam3 and not askfinn:
         scene s683
         with dissolve
 
@@ -466,7 +461,6 @@ label v7start:
 
         menu:
             "Walk Riley home":
-                $ follownora = False
                 $ add_point(KCT.BRO)
 
                 scene s683a
@@ -484,7 +478,6 @@ label v7start:
                 jump hd_ad
 
             "Go after Nora":
-                $ follownora = True
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene s683a
@@ -520,17 +513,15 @@ label v7start:
 
         menu:
             "Go after Nora":
+                $ add_point(KCT.BOYFRIEND)
+
                 u "(I should go after her and make sure she's okay.)"
 
-                $ add_point(KCT.BOYFRIEND)
-                $ follownora = True
-
             "Leave her alone":
+                $ add_point(KCT.BRO)
+
                 u "(I should leave her alone, she probably just wants to be alone right now.)"
                 u "(It's late anyway, I better go home.)"
-
-                $ add_point(KCT.BRO)
-                $ follownora = False
 
                 jump conwalkhome
 
@@ -555,7 +546,7 @@ label hd_bd:
 
     pause 0.5
 
-    if not fr3nora:
+    if not "nora" in freeroam3:
         scene s699 # Close up Nora upset, a bit passive aggressive
         with dissolve
 
@@ -750,7 +741,6 @@ label hd_bd:
         u "Come on let's do something fun. It'll take your mind of things."
 
         if kct == "confident":
-            $ noraclose = True
             call screen kct_popup
 
             scene s699f # nora curious smile
@@ -986,7 +976,7 @@ label hd_bd:
 
 ####### SCENE 4 Walking Home by yourself
 label conwalkhome:
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene s704 # mc walking home by himself at night
     with fade
@@ -998,7 +988,7 @@ label conwalkhome:
 ######## SCENE 5 Walking Riley Home
 label hd_ad:
     $ walkedRileyHome = True
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene s705 #Opening: You and Riley walking home at night
     with fade
@@ -1083,7 +1073,7 @@ label hd_ad:
 
             u "Yeah, good night. Sleep well."
 
-            stop music fadeout 2
+            stop music fadeout 3
 
             scene s709 # you walking through the dorm hallways to his dorm
             with fade
@@ -1185,7 +1175,7 @@ label hd_ad:
 
                 u "Yeah, good night. Sleep well."
 
-                stop music fadeout 2
+                stop music fadeout 3
 
                 scene s709 # you walking through the dorm hallways to his dorm
                 with fade
@@ -1201,7 +1191,7 @@ label hd_ad:
     ri "Hey uhm... do you maybe wanna come in?"
 
     menu:
-        "Yeah, I'd like that.":
+        "Yeah, I'd like that":
             if laurenrs or emilyrs:
                 $ add_point(KCT.TROUBLEMAKER)
 
@@ -1312,7 +1302,7 @@ label hd_ad:
 
             pause 0.5
 
-        "Uhm... I shouldn't.":
+        "Uhm... I shouldn't":
             if laurenrs or emilyrs:
                 $ add_point(KCT.BOYFRIEND)
 
@@ -1328,7 +1318,7 @@ label hd_ad:
 
             u "Yeah, good night."
 
-            stop music fadeout 2
+            stop music fadeout 3
 
             scene s709 # you walking through the dorm hallways to his dorm
             with fade
@@ -1401,19 +1391,19 @@ label conyourdorm:
             if riley.messenger.replies:
                 call screen messager(riley.messenger)
             if riley.messenger.replies:
-                "(I need to respond to some of these messages.)"
+                u "(I need to respond to some of these messages.)"
                 jump phoneam
 
             if kiwii_firstTime:
-                "(I should check out what Emily posted on Kiwii.)"
+                u "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam
 
             if bowling and penelope.messenger.replies:
-                "(I should answer Penelope.)"
+                u "(I should answer Penelope.)"
                 jump phoneam
 
             if laurenrs and lauren.messenger.replies:
-                "(I should respond to Lauren.)"
+                u "(I should respond to Lauren.)"
                 jump phoneam
 
         label continueee: #for compatibility only
@@ -1656,7 +1646,7 @@ label apologylauren:
     $ seenlauren = True
     $ laurenrs = False
 
-    stop music fadeout 2
+    stop music fadeout 3
     scene s715 # mc walking through dorm hallways
     with fade
 
@@ -1726,7 +1716,7 @@ label apologylauren:
 
                 u "Cool, see you then."
 
-            "I can't today.":
+            "I can't today":
                 $ nobeach = True
 
                 scene s717c
@@ -1786,7 +1776,7 @@ label apologylauren:
 
                 u "Cool, see you then."
 
-            "I can't today.":
+            "I can't today":
                 $ nobeach = True
 
                 scene s717c
@@ -1922,8 +1912,7 @@ label thisbelauren:
             with dissolve
 
             menu:
-                "This won't happen again.":
-                    $ laurenemily = 2
+                "This won't happen again":
                     $ add_point(KCT.BOYFRIEND)
 
                     u "Like I said, it was a stupid mistake. After it happened, I realized that's not what I want at all."
@@ -2038,7 +2027,6 @@ label thisbelauren:
                         u "(I need to go for a walk and clear my head.)"
 
                 "Open relationship?":
-                    $ laurenemily = 3
                     $ add_point(KCT.BRO)
                     $ add_point(KCT.TROUBLEMAKER)
                     $ laurenrs = False
@@ -2061,7 +2049,7 @@ label thisbelauren:
 
                     u "I mean yeah... I mean you'd be free to date other people as well. We could even try something with just a second girl-"
 
-                    scene s717h# Lauren slightly angry and in disbelief
+                    scene s717h # Lauren slightly angry and in disbelief
                     with dissolve
 
                     la "Okay, we're done."
@@ -2087,7 +2075,6 @@ label thisbelauren:
                     u "(I need to go for a walk and clear my head.)"
 
         "Deny the cheating":
-            $ laurenemily = 1
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
             $ laurenrs = True
@@ -2180,7 +2167,7 @@ label thisbelauren:
 label thisbewalk:
     scene s719 #mc on a walk outside in town
     with fade
-    stop music fadeout 2
+    stop music fadeout 3
 
     pause 0.5
 
@@ -2253,7 +2240,7 @@ label thisbewalk:
         with dissolve
 
         menu:
-            "Almost as cute as you.":
+            "Almost as cute as you":
                 if laurenrs:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
@@ -2266,7 +2253,7 @@ label thisbewalk:
 
                 aut "Uhhh..."
 
-            "Yeah, he really is.":
+            "Yeah, he really is":
                 u "Yeah, he really is."
 
         scene s726 # mc looking down playing with oscar
@@ -2307,7 +2294,7 @@ label thisbewalk:
         with dissolve
 
         menu:
-            "Yes, of course.":
+            "Yes, of course":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ politics = True
 
@@ -2358,9 +2345,8 @@ label thisbewalk:
 
                 aut "Oh, alright. I'll definitely check it out."
 
-            "No, not really.":
+            "No, not really":
                 $ add_point(KCT.BRO)
-                $ politics = False
 
                 u "No, not really. I'm not really into politics myself."
 
@@ -2447,9 +2433,8 @@ label thisbewalk:
                     scene s727
                     with dissolve
 
-            "That's really cool.":
+            "That's really cool":
                 $ add_point(KCT.BRO)
-                $ protest = False
                 $ signs = False
 
                 u "That's really cool."
@@ -2498,7 +2483,7 @@ label thisbewalk:
     pause 0.5
     play music "music/mhappy.mp3"
 
-    if penelopemad:
+    if (not costumeaubrey and v2_caughtpeeking and not v2_caughtpeekingcounter) or penelopekiss:
         scene s731 # First person, Penelope sitting in front of your dorm door
         with dissolve
 
@@ -2646,7 +2631,7 @@ label thisbewalk:
 
 ########### SCENE 11 Beach trip with Lauren
 label beachlauren:
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene s734 # mc walking through dorm hallways
     with fade
@@ -2795,7 +2780,6 @@ label beachlauren:
                     u "I mean he's teaching me how to fight and everything..."
 
                 "Tell her he moved out":
-                    $ laurenimre = True
                     $ add_point(KCT.BOYFRIEND)
 
                     u "Uhm... Imre and I had a fight and he moved out..."
@@ -3034,7 +3018,7 @@ label beachlauren:
 
         u "I'll see you later."
 
-        stop music fadeout 2
+        stop music fadeout 3
 
         scene s749d # Lauren genuine smile
         with dissolve
@@ -3196,7 +3180,6 @@ label beachlauren:
                     u "I mean he's teaching me how to fight and everything..."
 
                 "Tell her he moved out":
-                    $ laurenimre = True
                     $ add_point(KCT.BOYFRIEND)
 
                     u "Uhm... Imre and I had a fight and he moved out..."
@@ -3264,7 +3247,7 @@ label beachlauren:
         la "I mean... I just don't want you to end up in the hospital."
 
         menu:
-            "You're cute.":
+            "You're cute":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene s742e
@@ -3340,7 +3323,7 @@ label beachlauren:
                 else:
                     u "*Chuckles*"
 
-            "I won't.":
+            "I won't":
                 $ add_point(KCT.BOYFRIEND)
 
                 u "I won't... don't worry."
@@ -3430,7 +3413,7 @@ label beachlauren:
 
         scene s734 # mc walks back to his dorm through dorm halls
         with fade
-        stop music fadeout 2
+        stop music fadeout 3
 
         pause 0.5
 
@@ -3760,7 +3743,6 @@ label pledgewolves:
     with dissolve
     menu:
         "Eliminate Imre":
-            $ wolvesTask1 = False
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s768a
@@ -3768,8 +3750,7 @@ label pledgewolves:
             u "Fine. I'll do whatever it takes. You can eliminate Imre."
 
         "Decline":
-            $ wolvesTask1 = True
-            $ tasks += 1
+            $ wolvesTasks.add("task1")
             $ add_point(KCT.BRO)
 
             scene s768a
@@ -3784,7 +3765,7 @@ label pledgewolves:
     with dissolve
     u "Alright."
 
-    if wolvesTask1:
+    if "task1" in wolvesTasks:
         scene s768
         with dissolve
         guyc "And hey, good luck with the other tasks."
@@ -3804,9 +3785,10 @@ label pledgewolves:
     scene s766c # Chris looking slightly away from camera with mouth closed. Imre and Xavier looking at Chris with their mouths closed
     with dissolve
 
-    if not wolvesTask1:
+    if not "task1" in wolvesTasks:
         play sound "sounds/swoosh.mp3"
         u "(What the fuck!?)"
+        
     else:
         u "(Wow, good thing I didn't do it.)"
 
@@ -3902,7 +3884,6 @@ label pledgewolves:
 
     menu:
         "Get the call":
-            $ wolvesTask2 = False
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -3913,8 +3894,7 @@ label pledgewolves:
             ch "And therefore Perry wins! Congrats Perry!"
 
         "Continue the challenge":
-            $ tasks += 1
-            $ wolvesTask2 = True
+            $ wolvesTasks.add("task2")
             $ add_point(KCT.BRO)
 
             u "I'll get it later. I'm in this to win."
@@ -3973,7 +3953,7 @@ label chloe_call:
 
         u "(How weird...)"
 
-    elif fr3chloe:
+    elif "chloe" in freeroam3:
         cl "Hey [name]... just wanted to say thanks for yesterday."
 
         scene sphone1 # mc on the phone mouth open
@@ -4178,9 +4158,8 @@ label aftercall:
         u "(How the fuck do they even know about this?)"
 
         menu:
-            "True.":
-                $ wolvesTask3 = True
-                $ tasks += 1
+            "True":
+                $ wolvesTasks.add("task3")
 
                 u "It's true, but-"
 
@@ -4189,9 +4168,7 @@ label aftercall:
 
                 ch "No need to explain. We appreciate your honesty."
 
-            "False.":
-                $ wolvesTask3 = False
-
+            "False":
                 u "I didn't. False."
 
                 scene s786b # chris looking directly at you mouth open
@@ -4208,9 +4185,8 @@ label aftercall:
         u "(Shit, if I say true, I'm gonna look a weakling... but if I say false and they know I'm lying I'll fail the challenge...)"
 
         menu:
-            "True.":
-                $ wolvesTask3 = True
-                $ tasks += 1
+            "True":
+                $ wolvesTasks.add("task3")
 
                 u "It's true, but-"
 
@@ -4219,9 +4195,7 @@ label aftercall:
 
                 ch "No need to explain. We appreciate your honesty."
 
-            "False.":
-                $ wolvesTask3 = False
-
+            "False":
                 u "I didn't. False."
 
                 scene s786b # chris looking directly at you mouth open
@@ -4277,7 +4251,7 @@ label aftercall:
         with dissolve
         no "Okay well let's just get on with it then."
 
-    elif fr3nora:
+    elif "nora" in freeroam3:
         # happy
         scene s791b # Nora mouth open and smiling
         with dissolve
@@ -4391,7 +4365,7 @@ label aftercall:
     with dissolve
     u "Yeah, yeah."
 
-    # stop musicfadeout 2 #check - music change here to set mood?
+    # stop musicfadeout 3 #check - music change here to set mood?
 
     scene s792 # Camera - first person. Nora closer to MC (than s791, slightly more an arm's distance) with a cheeky smile, eyebrows slightly raised and eyes slightly squinted, mouth open
     with dissolve
@@ -4431,7 +4405,6 @@ label aftercall:
 
     menu:
         "Kiss her back":
-            $ wolvesTask4 = False
             if laurenrs:
                 $ add_point(KCT.TROUBLEMAKER, 2)
             else:
@@ -4480,8 +4453,7 @@ label aftercall:
             no "Well, enjoy the rest of your night."
 
         "Pull away":
-            $ tasks += 1
-            $ wolvesTask4 = True
+            $ wolvesTasks.add("task4")
             $ add_point(KCT.BRO)
             if laurenrs:
                 $ add_point(KCT.BOYFRIEND)
@@ -4533,8 +4505,9 @@ label aftercall:
     scene s794 # Camera - first person. Nora moves to the door and knocks while talking
     with dissolve
 
-    if wolvesTask4:
+    if "task4" in wolvesTasks:
         no "Aaron, the test is done and he passed."
+
     else:
         no "Aaron, the test is done and he didn't pass."
 
@@ -4563,7 +4536,7 @@ label aftercall:
     scene s795 # close up of Aaron reading from some note
     with dissolve
 
-    if tasks >= 4:
+    if len(wolvesTasks) == 4:
         aa "The first place goes to..."
 
         scene s795a # Aaron looks up at you
@@ -4591,7 +4564,7 @@ label aftercall:
 
         aa "Perry."
 
-    elif tasks == 3:
+    elif len(wolvesTasks) == 3:
         aa "The first place goes to..."
 
         scene s795b
@@ -4638,6 +4611,7 @@ label aftercall:
         aa "Perry."
 
         scene s795
+        
         with dissolve
 
         aa "And the third place goes to..."
@@ -4787,7 +4761,7 @@ label pledgeapes:
         with dissolve
         gr "Hey, hey."
 
-        stop music fadeout 2
+        stop music fadeout 3
 
         scene s828b # Grayson mouth open but looking towards the other pledges with a slightly arrogant smile
         with dissolve
@@ -4824,7 +4798,7 @@ label pledgeapes:
 
         gr "You made the right call. Come on inside."
 
-        stop music fadeout 2
+        stop music fadeout 3
 
         scene s829a
         with dissolve
@@ -4968,7 +4942,7 @@ label pledgeapes:
     gr "The deadline is 6PM on Saturday. All the videos will be presented then and I'll select the best three."
     gr "There's beers upstairs in the freezers if you want. Now start moving and get shit done!"
 
-    stop music fadeout 2
+    stop music fadeout 3
     scene s841 # Camera - TPP. Shot showing Sam, Ryan, Weasly, Sam cheering. Use different poses for everyone. Cameron is also in the shot but looks disappointed. Make him stand out a little
     with dissolve
     "*Claps and cheers*"
@@ -4986,7 +4960,6 @@ label pledgeapes:
     menu:
         "Stand up to him":
             $ add_point(KCT.TROUBLEMAKER)
-            $ stoodUpToCam = True
 
             scene s843a # Cameron threatening and mouth closed
             with dissolve
@@ -5030,13 +5003,12 @@ label pledgeapes:
 
         "Hold yourself back":
             $ add_point(KCT.BRO)
-            $ stoodUpToCam = False
             pause 0.5
 
             scene s844a # MC holding in anger and clenching his fists. Cameron back to normal position and mouth open, with a smirk
             with dissolve
             ca "Hmph. Thought so."
-            stop music fadeout 2
+            stop music fadeout 3
 
             ca "Come with me."
 
@@ -5060,7 +5032,6 @@ label ep7_fight_cam:
 
     menu:
         "Punch him":
-            $ punchedCam = True
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s846b # MC throws a punch but Cameron blocks it
@@ -5078,14 +5049,13 @@ label ep7_fight_cam:
             with dissolve
             ca "Come with me. I'm gonna show you something."
 
-            stop music fadeout 2
+            stop music fadeout 3
 
             scene s848a # Cameron turns back and starts walking away from MC (who is still on the ground)
             with dissolve
             pause 0.7
 
         "Retreat":
-            $ punchedCam = False
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.BRO)
 
@@ -5100,7 +5070,7 @@ label ep7_fight_cam:
             scene s846d # Cameron turns away from the MC and leaving the ring
             with dissolve
             u "Whatever man."
-            stop music fadeout 2
+            stop music fadeout 3
 
             ca "Come with me. I'm gonna show you something."
 
@@ -5227,7 +5197,6 @@ label ep7_cam_picture:
 
     menu:
         "Take the slip":
-            $ cameronSisNumber = True
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s856
@@ -5239,7 +5208,6 @@ label ep7_cam_picture:
             gr "No problem. Just looking out."
 
         "Decline":
-            $ cameronSisNumber = False
             $ add_point(KCT.BRO)
 
             scene s856
@@ -5307,7 +5275,6 @@ label ep7_cam_picture:
 
     menu:
         "Call her":
-            $ apesTask1 = True
             $ apesVids += 1
             $ add_point(KCT.BRO)
             $ add_point(KCT.BOYFRIEND)
@@ -5315,7 +5282,6 @@ label ep7_cam_picture:
             u "Okay."
 
         "Refuse to do it":
-            $ apesTask1 = False
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Nah, I'm not calling Chloe."
@@ -5431,8 +5397,9 @@ label after_pledges:
     scene s861 # Camera - TPP. MC walking home at night through the town after Apes pledging
     with fade
 
-    if apesTask1 or joinwolves:
+    if apesVids == 1 or joinwolves:
         pause 0.5
+
     else:
         u "(Fucking asshole.)"
 
@@ -5460,7 +5427,6 @@ label after_pledges:
 
             "Don't text her":
                 $ forgiveemily = False
-                $ emilyText = False
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "(Nah, I've had enough of her.)"
@@ -5945,7 +5911,6 @@ label after_pledges:
         menu:
             "Defend yourself":
                 $ add_point(KCT.TROUBLEMAKER)
-                $ madeFunOfLee = True
 
                 scene s886 # Camera - TPP (Similar to s884 but closer). MC confident and talking looking at Lee. Lee mouth closed and looking at the MC
                 with dissolve
@@ -6006,7 +5971,6 @@ label after_pledges:
 
             "Stay silent":
                 $ add_point(KCT.BOYFRIEND)
-                $ madeFunOfLee = False
 
                 scene s886c # MC looking down in embarrassment. Lee looking at MC. Both mouths closed
                 with dissolve
@@ -6348,7 +6312,7 @@ label after_history:
 
             u "Hey, what's up?"
 
-    if apesTask1:
+    if apesVids == 1:
         scene s901a
         with dissolve
         ca "Time for your next video. Let's see if you can handle this one."
@@ -6401,7 +6365,6 @@ label after_history:
 
     menu:
         "Do it":
-            $ apesTask2Try = True
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Fine! If you're that interested in looking at Mr. Lee's naked ass."
@@ -6411,7 +6374,6 @@ label after_history:
             ca "Haha, fuck you! Lemme get the cam running."
 
         "That's stupid and risky":
-            $ apesTask2Try = False
             $ add_point(KCT.BOYFRIEND)
 
             u "Nah, that's stupid as fuck. I'm not getting kicked out of school just to join the Apes."
@@ -6422,8 +6384,9 @@ label after_history:
 
             scene s901e # Cameron pissed and talking
             with dissolve
-            if apesTask1:
+            if apesVids == 1:
                 ca "You're a fuckin' loser."
+
             else:
                 ca "You're the biggest fuckin' loser of all time."
 
@@ -6449,7 +6412,6 @@ label after_history:
 
     menu (fail_label="lee_pants_fail"): # 3 second timer default
         "Pull it":
-            $ apesTask2Success = True
             $ add_point(KCT.TROUBLEMAKER)
             $ apesVids += 1
             stop sound
@@ -6491,7 +6453,6 @@ label after_history:
             jump lee_pants_fail
 
 label lee_pants_fail:
-    $ apesTask2Success = False
     stop sound
     # No point changes here
 
@@ -6611,8 +6572,6 @@ label hc_asking_amber:
     if kct == "popular":
         call screen kct_popup
 
-        $ amberEcstasyOffer = True
-
         scene s919d # Amber flirty and talking
         with dissolve
         am "But I might have a better idea. I mean definitely better than some lame-ass homecoming at least."
@@ -6626,7 +6585,7 @@ label hc_asking_amber:
         am "*Whispers* I got some molly."
         am "How about we skip the dance together? I promise it'll be a lot more fun."
         menu:
-            "Alright, I'm in.":
+            "Alright, I'm in":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ hcGirl = "amber"
                 $ amberrs = True
@@ -6646,7 +6605,7 @@ label hc_asking_amber:
 
                 jump after_hc_selection
 
-            "I'd rather go to the dance.":
+            "I'd rather go to the dance":
                 $ add_point(KCT.BOYFRIEND)
 
                 scene s919e
@@ -6672,8 +6631,6 @@ label hc_asking_amber:
                 call screen hc_select
 
     else:
-        $ amberEcstasyOffer = False
-
         scene s919c
         with dissolve
 
@@ -6843,16 +6800,16 @@ label hc_asking_chloe:
     pause 0.5
 
     if volleyball:
-        scene s936# Camera - TPP. Chloe runs towards Mc who's kneeling on the path with the blue volleyball that says "Hoco?" on it
+        scene s936 # Camera - TPP. Chloe runs towards Mc who's kneeling on the path with the blue volleyball that says "Hoco?" on it
         with dissolve
 
     else:
-        scene s936a# Camera - TPP. Chloe runs towards Mc who's kneeling on the path with a rose
+        scene s936a # Camera - TPP. Chloe runs towards Mc who's kneeling on the path with a rose
         with dissolve
 
     pause 0.5
 
-    scene s937# FPP (you're kneeling, so looking up), Close up chloe looking at you smiling surprised
+    scene s937 # FPP (you're kneeling, so looking up), Close up chloe looking at you smiling surprised
     with dissolve
 
     cl "[name]?"
@@ -6862,7 +6819,7 @@ label hc_asking_chloe:
 
     u "Chloe, do you wanna go to homecoming with me?"
 
-    scene s937b# chloe hand on her forehead not sure what to do smiling
+    scene s937b # chloe hand on her forehead not sure what to do smiling
     with dissolve
 
     cl "[name], I have so much to do at the dance. I'm in charge of a lot of the planning and organizing, I don't know if I can-"
@@ -7262,7 +7219,7 @@ label suit_rental:
     scene s993
     with dissolve
     clerk "Of course, sir. Follow me."
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene s994 #you walking out with a shopping bag
     with fade
@@ -7461,7 +7418,7 @@ label cameron_thurs_tasks:
 
     u "Damn, yeah."
 
-    stop music fadeout 2
+    stop music fadeout 3
     scene scc15b # FPP. Same as scc15a but Cameron gesturing MC with his hand to come with him. Mouth open.
     with dissolve
 
@@ -7955,7 +7912,6 @@ label v7_nsfwSkipLabel4:
 
     menu:
         "Console Samantha":
-            $ consoledSam = True
             $ add_point(KCT.BOYFRIEND)
 
             scene scc72 # TPP. Show MC sat on the sidewalk next to Samantha, MC looking at Samantha mouth open, Samantha head in hands crying.
@@ -8011,7 +7967,6 @@ label v7_nsfwSkipLabel4:
             sa "Thank you, really."
 
         "Leave her be":
-            $ consoledSam = False
             $ add_point(KCT.BRO)
 
     label av_no_sam: #for compatibility only
@@ -8026,7 +7981,7 @@ label v7_nsfwSkipLabel4:
 
         ca "Hey, time to go."
 
-        stop music fadeout 2
+        stop music fadeout 3
 
         scene scc75 # FPP. Same as above, Cameron mouth closed.
         with dissolve
@@ -8054,7 +8009,7 @@ label v7_nsfwSkipLabel4:
 
         sa "Ugh."
 
-        stop music fadeout 2
+        stop music fadeout 3
 
         scene scc78 # TPP. Show Samantha and Cameron walking away, MC stood up looking at them, mouth ope.
         with dissolve
@@ -8180,7 +8135,7 @@ label wolves_ceremony:
     scene swc18 # FPP. Show everyone in scene clapping, variety of positive expressions.
     with dissolve
 
-    if tasks > 3: # MC, Imre, Perry
+    if len(wolvesTasks) == 4: # MC, Imre, Perry
         ch "First up... [name]!"
 
         scene swc19 # TPP. Show everone clapping/cheering. Show MC walking towards Chris who has Wolves jacket in hand, camera from behind MC looking at Wolves.
@@ -8257,7 +8212,7 @@ label wolves_ceremony:
         scene swc27 # TPP. Show everyone clapping, happy expressions.
         with dissolve
 
-    elif tasks == 3: # Imre, MC, Perry
+    elif len(wolvesTasks) == 3: # Imre, MC, Perry
         scene swc11 # FPP. Close up Chris with 2 wolves to his side in background. Chris mouth open.
         with dissolve
 
@@ -8361,7 +8316,7 @@ label wolves_ceremony:
         scene swc27 # TPP. As above, but no longer drinking, smiling/laughing instead.
         with dissolve
 
-    elif tasks < 3: # Imre, Perry, MC
+    else: # Imre, Perry, MC
         scene swc15 # FPP. Show Chris with 2 wolves to his side in the background. Chris mouth open, smile.
         with dissolve
 
@@ -8459,7 +8414,7 @@ label wolves_ceremony:
     scene swc58 # FPP. Show Sebastian approaching MC.
     with dissolve
 
-    if tasks > 3:
+    if len(wolvesTasks) == 4:
         scene swc59 # FPP. Close up Sebastian, mouth open smile.
         with dissolve
 
@@ -8518,7 +8473,7 @@ label wolves_ceremony:
         scene swc60 # FPP. Show Sebastian walking away.
         with dissolve
 
-    elif tasks <= 3:
+    else:
         scene swc59d # FPP. Close up Sebastian, mouth open.
         with dissolve
 
@@ -8590,7 +8545,7 @@ label wolves_ceremony:
     scene swc65 # TPP. Show MC walking towards Finn.
     with dissolve
 
-    if tasks >= 3:
+    if len(wolvesTasks) >= 3:
         scene swc66 # FPP. Close up Finn, mouth open.
         with dissolve
 
@@ -8644,7 +8599,7 @@ label wolves_ceremony:
         scene swc67 # TPP. Show MC walking away from Finn.
         with dissolve
 
-    elif tasks < 3:
+    else:
         scene swc66 # FPP. Close up Finn, mouth open, smile.
         with dissolve
 
@@ -8949,14 +8904,14 @@ label rileytext:
 # It's thurday night
 label rileysexscene:
     if joinwolves:
-        stop music fadeout 2.0
+        stop music fadeout 3
         scene preri1 # You walking through the night to riley
         with fade
 
         pause 0.5
 
     else:
-        stop music fadeout 2.0
+        stop music fadeout 3
         scene preri2 # You walking through the dorms
         with fade
 
@@ -8964,9 +8919,7 @@ label rileysexscene:
 
 # Pre-cursor to sex with Riley
     $ rileyrs = True
-    $ v7_rileysex = True
-    
-    #$ add_point(KCT.TROUBLEMAKER, sum([ aubreysex, aubreysex2, v6_emilysex ])) ###Loyaltymod
+    $ sceneList.add("v7_riley")
     
     scene ridrm1 # You knocking on Riley's dorm door (third person)
     with dissolve
@@ -9151,7 +9104,7 @@ label riclimax:
 
     scene risex15 # As above but mouth closed
     with fade
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     ri "This was amazing."
     ri "I wish you could stay, but I think my roommate will be home soon."
@@ -9289,7 +9242,7 @@ label signs_with_autumn:
     u "(Alright, let's get going to Autumn's.)"
     
     u "(I should probably get going right away.)"
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene sas2 # TPP. Show MC knocking on the door of the Deer's house.
     with fade
     play sound "sounds/knock.mp3"
@@ -9685,7 +9638,7 @@ label walking_through_hallways:
     show screen phoneIcon
 
     if joinwolves:
-        stop music fadeout 2.0
+        stop music fadeout 3
 
         scene sfr4mc2 # mc in his wolves' room studying
         with fade
@@ -9693,7 +9646,7 @@ label walking_through_hallways:
         pause 0.5
 
     else:
-        stop music fadeout 2.0
+        stop music fadeout 3
         scene sfr4mc1 # mc in his dorm studying
         with fade
 
@@ -10875,7 +10828,7 @@ label emilyhocodate:
     with dissolve
 
     menu:
-        "Of course.":
+        "Of course":
             $ add_point(KCT.BRO)
 
             u "Of course. Dancing is like riding a bicycle. You don't unlearn that."
@@ -10887,7 +10840,7 @@ label emilyhocodate:
 
             em "Show me then."
 
-        "I'm not sure.":
+        "I'm not sure":
             $ add_point(KCT.BOYFRIEND)
 
             u "I'm not sure... I haven't properly done couple dancing since high school."
@@ -11691,7 +11644,6 @@ label penelopehocodate:
 
     menu:
         "Ask about sex toys":
-            $ penelopesextoys = True
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Come on, were you hiding your sex toys?"
@@ -11789,7 +11741,7 @@ label penelopehocodate:
     with dissolve
 
     menu:
-        "You didn't have four cats.":
+        "You didn't have four cats":
 
             u "You definitely did not have four cats."
 
@@ -11813,9 +11765,7 @@ label penelopehocodate:
             scene sfr4pe8a
             with dissolve
 
-        "You didn't have six lizards.":
-            $ penelopetruths += 1
-
+        "You didn't have six lizards":
             u "You definitely did not have six lizards."
 
             scene sfr4pe8f # penelope innocent smille
@@ -11859,9 +11809,7 @@ label penelopehocodate:
     with dissolve
 
     menu:
-        "You didn't lose your virginity.":
-            $ penelopetruths += 1
-
+        "You didn't lose your virginity":
             u "No way you lost your virginity at 14, that's a lie."
 
             scene sfr4pe8f # penelope innocent smille
@@ -11889,7 +11837,7 @@ label penelopehocodate:
 
             pe "*Laughs* I'm just kidding! You should have seen your face though."
 
-        "You didn't learn to drive.":
+        "You didn't learn to drive":
 
             u "No way you learned to drive that early. I guess you lost your virginity?"
 
@@ -12388,37 +12336,37 @@ label fr4:
 
 label labelfr4dancefloor:
     if hcGirl == "chloe":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorchloedatenonora
         else:
             scene fr4dancefloorchloedate
 
     elif hcGirl == "emily":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4danceflooremilydatenonora
         else:
             scene fr4danceflooremilydate
 
     elif hcGirl == "lauren":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorlaurendatenonora
         else:
             scene fr4dancefloorlaurendate
 
     elif hcGirl == "penelope":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorpenelopedatenonora
         else:
             scene fr4dancefloorpenelopedate
 
     elif hcGirl == "riley":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorrileydatenonora
         else:
             scene fr4dancefloorrileydate
 
     else:
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloornodatenonora
         else:
             scene fr4dancefloornodate
@@ -12427,24 +12375,23 @@ label labelfr4dancefloor:
 
 label labelfr4gymleft:
     if hcGirl == "chloe":
-        if fr4riley:
+        if "riley" in freeroam4:
             scene fr4gymleftnochloenoriley
         else:
             scene fr4gymleftnochloe
 
     elif hcGirl == "riley":
-
-        if fr4chloe:
+        if "chloe" in freeroam4:
             scene fr4gymleftnoriley
         else:
             scene fr4gymleftnochloenoriley
 
     else:
-        if fr4riley and fr4chloe:
+        if "riley" in freeroam4 and "chloe" in freeroam4:
             scene fr4gymleftnochloenoriley
-        elif fr4riley:
+        elif "riley" in freeroam4:
             scene fr4gymleftnoriley
-        elif fr4chloe:
+        elif "chloe" in freeroam4:
             scene fr4gymleftnochloe
         else:
             scene fr4gymleft
@@ -12460,11 +12407,11 @@ label labelfr4gymright:
     call screen fr4gymright
 
 label labelfr4gymentrance:
-    if fr4riley and not fr4noriley and fr4nora and not fr4nora2:
+    if "riley" in freeroam4 and not "riley2" in freeroam4 and "nora" in freeroam4 and not "nora2" in freeroam4:
         scene fr4gymentrancerileynora
-    elif fr4riley and not fr4noriley:
+    elif "riley" in freeroam4 and not "riley2" in freeroam4:
         scene fr4gymentranceriley
-    elif fr4nora and not fr4nora2:
+    elif "nora" in freeroam4 and not "nora2" in freeroam4:
         scene fr4gymentrancenora
     else:
         scene fr4gymentrance
@@ -12483,12 +12430,12 @@ label labelfr4hallwaybathroom:
 
 label labelfr4hallway:
     if not hcGirl == "penelope":
-        if fr4chloe and preventgrayson:
+        if "chloe" in freeroam4 and preventgrayson:
             scene fr4hallwaychloe
         else:
             scene fr4hallway
     else:
-        if fr4chloe and preventgrayson:
+        if "chloe" in freeroam4 and preventgrayson:
             scene fr4hallwaynopenelopechloe
         else:
             scene fr4hallwaynopenelope
@@ -12496,7 +12443,7 @@ label labelfr4hallway:
     call screen fr4hallway
 
 label labelfr4hallwaycorner:
-    if not fr4grayson:
+    if not "grayson" in freeroam4:
         scene fr4hallwaycorner
     elif preventgrayson:
         scene fr4hallwaycornernumber
@@ -12541,7 +12488,7 @@ label fr4chloedate:
 
     u "*Chuckles* True."
 
-    if not v7_seencrowning:
+    if not "crowning" in freeroam4:
         scene sfr4stage1 # close up ms rose on the stage on the microphone
         with dissolve
 
@@ -12603,7 +12550,7 @@ label fr4chloedate:
 
         u "Go get 'em!"
 
-        scene sfr4stage4#Chloe runs up on stage
+        scene sfr4stage4 #Chloe runs up on stage
         with dissolve
 
         "*Crowd continues to cheer*"
@@ -12663,7 +12610,7 @@ label fr4chloedate:
 
                 no "Uhm..."
 
-                if not noramad and fr3nora:
+                if not noramad and "nora" in freeroam3:
                     #If Nora likes you:
                     no "Yeah, why not."
 
@@ -12895,7 +12842,7 @@ label chloe_dance:
 
     u "Haha, me too."
 
-    scene sfr4cl45h# chloe flirty pose 2
+    scene sfr4cl45h #chloe flirty pose 2
     with dissolve
 
     cl "And yet... I feel like I'd rather be somewhere else with you."
@@ -13114,7 +13061,7 @@ label fr4emilydate:
     scene sfr4em28a
     with dissolve
 
-    if fr4noriley:
+    if "riley2" in freeroam4:
         u "Oh, hey Riley, didn't you say you wanted to go home?"
 
         scene sfr4em28
@@ -13202,7 +13149,7 @@ label fr4laurendate:
 
     la "Well, I'm glad you're back."
 
-    if not v7_seencrowning:
+    if not "crowning" in freeroam4:
         scene sfr4stage1 # close up ms rose on the stage on the microphone
         with dissolve
 
@@ -13257,7 +13204,7 @@ label fr4laurendate:
         if not chloesad:
 
             label fr4laurendatechloe:
-                scene sfr4stage4#Chloe runs up on stage
+                scene sfr4stage4 #Chloe runs up on stage
                 with dissolve
                 "*Crowd continues to cheer*"
 
@@ -13448,7 +13395,7 @@ label fr4penelopedate:
 
     pe "Okay, yay." # Hi Steve!
 
-    if not v7_seencrowning:
+    if not "crowning" in freeroam4:
         scene sfr4stage1 # close up ms rose on the stage on the microphone
         with dissolve
 
@@ -13817,7 +13764,7 @@ label fr4penelopedate:
     scene sfr4pe23a
     with dissolve
 
-    if fr4noriley:
+    if "riley2" in freeroam4:
         u "Back to my dorm. Didn't you say you were going home a lot earlier?"
 
         scene sfr4pe23
@@ -13973,7 +13920,7 @@ label fr4rileydate:
     if not chloesad:
 
         label fr4rileydatechloe:
-            scene sfr4stage4#Chloe runs up on stage
+            scene sfr4stage4 #Chloe runs up on stage
             with dissolve
 
             "*Crowd continues to cheer*"
@@ -14071,7 +14018,7 @@ label fr4rileydate:
     jump fr4rileyending
 
 label fr4nora1:
-    $ fr4nora = True
+    $ freeroam4.add("nora")
     #MC approaches Chris and Nora on the dance floor.
 
     scene sfr4no1 # showing chris and Nora dancing
@@ -14200,37 +14147,37 @@ label fr4nora1:
 
 label fr4chris1:
     if hcGirl == "chloe":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorchloedatenonora
         else:
             scene fr4dancefloorchloedate
 
     elif hcGirl == "emily":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4danceflooremilydatenonora
         else:
             scene fr4danceflooremilydate
 
     elif hcGirl == "lauren":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorlaurendatenonora
         else:
             scene fr4dancefloorlaurendate
 
     elif hcGirl == "penelope":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorpenelopedatenonora
         else:
             scene fr4dancefloorpenelopedate
 
     elif hcGirl == "riley":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorrileydatenonora
         else:
             scene fr4dancefloorrileydate
 
     else:
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloornodatenonora
         else:
             scene fr4dancefloornodate
@@ -14240,7 +14187,7 @@ label fr4chris1:
     jump labelfr4dancefloor
 
 label fr4elijah1:
-    $ fr4elijah = True
+    $ freeroam4.add("elijah")
 
     scene sfr4el1 #Elijah is dancing really dorky with poet 1
 
@@ -14304,37 +14251,37 @@ label fr4elijah1:
 
 label fr4elijah2:
     if hcGirl == "chloe":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorchloedatenonora
         else:
             scene fr4dancefloorchloedate
 
     elif hcGirl == "emily":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4danceflooremilydatenonora
         else:
             scene fr4danceflooremilydate
 
     elif hcGirl == "lauren":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorlaurendatenonora
         else:
             scene fr4dancefloorlaurendate
 
     elif hcGirl == "penelope":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorpenelopedatenonora
         else:
             scene fr4dancefloorpenelopedate
 
     elif hcGirl == "riley":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorrileydatenonora
         else:
             scene fr4dancefloorrileydate
 
     else:
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloornodatenonora
         else:
             scene fr4dancefloornodate
@@ -14344,7 +14291,7 @@ label fr4elijah2:
     jump labelfr4dancefloor
 
 label fr4mason1:
-    $ fr4mason = True
+    $ freeroam4.add("mason")
 
     scene sfr4ma1 #showing mason and rg dancing, Mason is aggressively grabbing her ass. she's really enjoying
 
@@ -14356,37 +14303,37 @@ label fr4mason1:
 
 label fr4mason2:
     if hcGirl == "chloe":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorchloedatenonora
         else:
             scene fr4dancefloorchloedate
 
     elif hcGirl == "emily":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4danceflooremilydatenonora
         else:
             scene fr4danceflooremilydate
 
     elif hcGirl == "lauren":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorlaurendatenonora
         else:
             scene fr4dancefloorlaurendate
 
     elif hcGirl == "penelope":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorpenelopedatenonora
         else:
             scene fr4dancefloorpenelopedate
 
     elif hcGirl == "riley":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorrileydatenonora
         else:
             scene fr4dancefloorrileydate
 
     else:
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloornodatenonora
         else:
             scene fr4dancefloornodate
@@ -14397,37 +14344,37 @@ label fr4mason2:
 
 label fr4nora3:
     if hcGirl == "chloe":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorchloedatenonora
         else:
             scene fr4dancefloorchloedate
 
     elif hcGirl == "emily":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4danceflooremilydatenonora
         else:
             scene fr4danceflooremilydate
 
     elif hcGirl == "lauren":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorlaurendatenonora
         else:
             scene fr4dancefloorlaurendate
 
     elif hcGirl == "penelope":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorpenelopedatenonora
         else:
             scene fr4dancefloorpenelopedate
 
     elif hcGirl == "riley":
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloorrileydatenonora
         else:
             scene fr4dancefloorrileydate
 
     else:
-        if fr4nora and not fr4nora2:
+        if "nora" in freeroam4 and not "nora2" in freeroam4:
             scene fr4dancefloornodatenonora
         else:
             scene fr4dancefloornodate
@@ -14438,7 +14385,7 @@ label fr4nora3:
 
     ### LOCATION 2: GYM ENTRANCE
 label fr4aaron1:
-    $ fr4aaron = True
+    $ freeroam4.add("aaron")
 
     scene sfr4aa1 # showing aaron trying to talk lindsey into something but she's not interested
 
@@ -14619,11 +14566,11 @@ label fr4aaron1:
     jump labelfr4gymentrance
 
 label fr4aaron2:
-    if fr4riley and not fr4noriley and fr4nora and not fr4nora2:
+    if "riley" in freeroam4 and not "riley2" in freeroam4 and "nora" in freeroam4 and not "nora2" in freeroam4:
         scene fr4gymentrancerileynora
-    elif fr4riley and not fr4noriley:
+    elif "riley" in freeroam4 and not "riley2" in freeroam4:
         scene fr4gymentranceriley
-    elif fr4nora and not fr4nora2:
+    elif "nora" in freeroam4 and not "nora2" in freeroam4:
         scene fr4gymentrancenora
     else:
         scene fr4gymentrance
@@ -14703,8 +14650,8 @@ label fr4riley2:
     if not chloesad:
         label fr4alonechloe:
 
-            if not v7_seencrowning:
-                scene sfr4stage4#Chloe runs up on stage
+            if not "crowning" in freeroam4:
+                scene sfr4stage4 #Chloe runs up on stage
                 with dissolve
                 "*Crowd continues to cheer*"
 
@@ -14773,10 +14720,9 @@ label fr4riley2:
     with dissolve
 
     ri "Well we've been here for a few hours now and it's getting kinda boring."
-    $ v7_seencrowning = True
+    $ freeroam4.add("crowning")
 
     if rileyrs and hcGirl == "alone":
-
         scene sfr4ri51b
         with dissolve
 
@@ -14801,16 +14747,16 @@ label fr4riley2:
         with dissolve
 
         menu:
-            "Alright, let's go.":
+            "Alright, let's go":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright. Let me tell my date that I gotta leave early and let's go."
 
                 jump fr4rileyending
 
-            "I can't ditch my date.":
+            "I can't ditch my date":
                 $ add_point(KCT.BOYFRIEND)
-                $ fr4noriley = True
+                $ freeroam4.add("riley2")
 
                 u "Riley, I- I can't ditch my date like that."
 
@@ -14861,16 +14807,16 @@ label fr4riley2:
         with dissolve
 
         menu:
-            "Alright, let's go.":
+            "Alright, let's go":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright. Let me tell my date that I gotta leave early and let's go."
 
                 jump fr4rileyending
 
-            "I can't ditch my date.":
+            "I can't ditch my date":
                 $ add_point(KCT.BOYFRIEND)
-                $ fr4noriley = True
+                $ freeroam4.add("riley2")
 
                 u "*Chuckles* I can't ditch my date like that."
 
@@ -14897,7 +14843,7 @@ label fr4riley2:
                 jump labelfr4gymentrance
 
 label fr4nora2:
-    $ fr4nora2 = True
+    $ freeroam4.add("nora2")
 
     scene sfr4no4 # nora grabbing a drink
 
@@ -14908,7 +14854,7 @@ label fr4nora2:
 
     pause 0.5
 
-    if not noramad and fr3nora:
+    if not noramad and "nora" in freeroam3:
         scene sfr4no5 # close up nora smile with a bit of holding back or "this dance is stupid" attitude
         with dissolve
 
@@ -14928,7 +14874,7 @@ label fr4nora2:
         with dissolve
 
         menu:
-            "Agree with Nora.":
+            "Agree with Nora":
                 $ add_point(KCT.BOYFRIEND)
 
                 u "Sorry, that must suck. He should be spending time with you."
@@ -14963,9 +14909,8 @@ label fr4nora2:
 
                 u "Yeah, see ya."
 
-            "Defend Chris.":
+            "Defend Chris":
                 $ add_point(KCT.BRO)
-                $ fr3nora = False
 
                 u "I mean I get where he's coming from. He's got his own priorities to deal with too. And he's president of a frat-"
 
@@ -15060,7 +15005,7 @@ label fr4nora2:
 
     ### LOCATION 3: GYM LEFT SIDE
 label fr4riley1:
-    $ fr4riley = True
+    $ freeroam4.add("riley")
 
     scene sfr4ri34 #fpp Aubrey and Riley are taking pictures together and posing by kissing each other on the cheek.
 
@@ -15137,9 +15082,9 @@ label fr4riley1:
     jump labelfr4gymleft
 
 label fr4aubrey1:
-    $ fr4aubrey = True
+    $ freeroam4.add("aubrey")
 
-    if fr4riley:
+    if "riley" in freeroam4:
         scene sfr4ri39b # aubrey flirty
 
         au "*Chuckles* Weren't you gonna look around some more?"
@@ -15218,11 +15163,9 @@ label fr4aubrey1:
         with dissolve
 
         menu:
-            "Alright, let's go.":
+            "Alright, let's go":
                 $ add_point(KCT.BRO)
-                $ bathroomblowjob = True
-
-                #$ add_point(KCT.TROUBLEMAKER, sum([ v6_emilysex, v7_rileysex ])) ###Loyaltymod
+                $ sceneList.add("v7_aubrey")
 
                 u "Yeah, alright. Let's go."
 
@@ -15316,7 +15259,7 @@ label fr4aubrey1:
 
                     jump labelfr4hallwaybathroom
 
-            "I'm not really feeling it.":
+            "I'm not really feeling it":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene sfr4ri39d # aubrey a bit disappointed
@@ -15333,24 +15276,23 @@ label fr4aubrey1:
 
 label fr4aubrey2:
     if hcGirl == "chloe":
-        if fr4riley:
+        if "riley" in freeroam4:
             scene fr4gymleftnochloenoriley
         else:
             scene fr4gymleftnochloe
 
     elif hcGirl == "riley":
-
-        if fr4chloe:
+        if "chloe" in freeroam4:
             scene fr4gymleftnochloenoriley
         else:
             scene fr4gymleftnoriley
 
     else:
-        if fr4riley and fr4chloe:
+        if "riley" in freeroam4 and "chloe" in freeroam4:
             scene fr4gymleftnochloenoriley
-        elif fr4riley:
+        elif "riley" in freeroam4:
             scene fr4gymleftnoriley
-        elif fr4chloe:
+        elif "chloe" in freeroam4:
             scene fr4gymleftnochloe
         else:
             scene fr4gymleft
@@ -15360,8 +15302,8 @@ label fr4aubrey2:
     jump labelfr4gymleft
 
 label fr4chloe1:
-    $ fr4chloe = True
-    $ fr4grayson = True
+    $ freeroam4.add("chloe")
+    $ freeroam4.add("grayson")
 
     if preventgrayson:
         $ chloesad = True
@@ -15405,7 +15347,6 @@ label fr4chloe1:
 
     menu:
         "Defend Chloe":
-            $ ryandefendchloe = True
             $ chloemad = False
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
@@ -15466,27 +15407,26 @@ label fr4chloe1:
     jump labelfr4gymleft
 
 label fr4ryan1:
-    $ fr4ryan = True
+    $ freeroam4.add("ryan")
 
     if hcGirl == "chloe":
-        if fr4riley:
+        if "riley" in freeroam4:
             scene fr4gymleftnochloenoriley
         else:
             scene fr4gymleftnochloe
 
     elif hcGirl == "riley":
-
-        if fr4chloe:
+        if "chloe" in freeroam4:
             scene fr4gymleftnoriley
         else:
             scene fr4gymleftnochloenoriley
 
     else:
-        if fr4riley and fr4chloe:
+        if "riley" in freeroam4 and "chloe" in freeroam4:
             scene fr4gymleftnochloenoriley
-        elif fr4riley:
+        elif "riley" in freeroam4:
             scene fr4gymleftnoriley
-        elif fr4chloe:
+        elif "chloe" in freeroam4:
             scene fr4gymleftnochloe
         else:
             scene fr4gymleft
@@ -15497,29 +15437,28 @@ label fr4ryan1:
 
 label fr4ryan3:
     if hcGirl == "chloe":
-        if fr4riley:
+        if "riley" in freeroam4:
             scene fr4gymleftnochloenoriley
         else:
             scene fr4gymleftnochloe
 
     elif hcGirl == "riley":
-
-        if fr4chloe:
+        if "chloe" in freeroam4:
             scene fr4gymleftnochloenoriley
         else:
             scene fr4gymleftnoriley
 
     else:
-        if fr4riley and fr4chloe:
+        if "riley" in freeroam4 and "chloe" in freeroam4:
             scene fr4gymleftnochloenoriley
-        elif fr4riley:
+        elif "riley" in freeroam4:
             scene fr4gymleftnoriley
-        elif fr4chloe:
+        elif "chloe" in freeroam4:
             scene fr4gymleftnochloe
         else:
             scene fr4gymleft
 
-    $ fr4ryan = True
+    $ freeroam4.add("ryan")
 
     u "(Not sure I could handle more Ryan right now.)"
 
@@ -15527,7 +15466,7 @@ label fr4ryan3:
 
     ### LOCATION 4: GYM RIGHT SIDE
 label fr4cameron1:
-    $ fr4cameron = True
+    $ freeroam4.add("cameron")
 
     scene sfr4ca1 # Cameron is turned away and the random girl looks annoyed
 
@@ -15613,10 +15552,9 @@ label fr4cameron2:
     jump labelfr4gymright
 
 label fr4lauren1:
+    $ freeroam4.add("lauren")
 
-    $ fr4lauren = True
     if not laurenmad:
-                
         scene sfr4la25 # fpp lauren & ms rose talking
 
         la "Yeah, I guess I was just having trouble with that one."
@@ -15671,8 +15609,6 @@ label fr4lauren1:
 
         menu:
             "Focus on Lauren":
-                $ focusonlauren = True
-
                 scene sfr4la27a
                 with dissolve
 
@@ -15789,7 +15725,7 @@ label fr4lauren2:
     jump labelfr4gymright
 
 label fr4msrose1:
-    $ fr4msrose = True
+    $ freeroam4.add("rose")
 
     scene sfr4la26b # ms rose looking at you smiling eye brow raised
 
@@ -15876,7 +15812,7 @@ label fr4msrose2:
     ### LOCATION 6: HALLWAYBATHROOM
 
 label fr4imre1:
-    $ fr4imre = True
+    $ freeroam4.add("imre")
 
     scene sfr4im1 # fpp the bathroom, you can see legs in one of the stalls
 
@@ -15927,7 +15863,7 @@ label fr4imre2:
 
     ### LOCATION 7: HALLWAY
 label fr4penelope1:
-    $ fr4penelope = True
+    $ freeroam4.add("penelope")
 
     scene sfr4pe24 #fpp penelope on hte phone turned away from you
 
@@ -15998,7 +15934,7 @@ label fr4penelope1:
     with dissolve
 
     menu:
-        "I like your dress.":
+        "I like your dress":
             $ add_point(KCT.BRO)
 
             u "I really like your dress."
@@ -16021,7 +15957,7 @@ label fr4penelope1:
             scene sfr4pe25a
             with dissolve
 
-        "I'll let you get back.":
+        "I'll let you get back":
             $ add_point(KCT.BOYFRIEND)
 
     u "Alright, well I'll let you get back to your friend. She sounds like she needs you more than I do."
@@ -16040,12 +15976,12 @@ label fr4penelope1:
 
 label fr4penelope2:
     if not hcGirl == "penelope":
-        if fr4chloe and preventgrayson:
+        if "chloe" in freeroam4 and preventgrayson:
             scene fr4hallwaychloe
         else:
             scene fr4hallway
     else:
-        if fr4chloe and preventgrayson:
+        if "chloe" in freeroam4 and preventgrayson:
             scene fr4hallwaynopenelopechloe
         else:
             scene fr4hallwaynopenelope
@@ -16056,7 +15992,7 @@ label fr4penelope2:
 
 
 label fr4chloe2:
-    $ fr4chloe2 = True
+    $ freeroam4.add("chloe2")
 
     if not chloemad:
         scene sfr4cl53a # fpp close up chloe mad
@@ -16101,7 +16037,7 @@ label fr4chloe2:
         with dissolve
 
         menu:
-            "You got this.":
+            "You got this":
                 $ add_point(KCT.BOYFRIEND)
 
                 u "You got this."
@@ -16122,7 +16058,7 @@ label fr4chloe2:
                 with fade
 
                 if hcGirl == "alone":
-                    if not v7_seencrowning:
+                    if not "crowning" in freeroam4:
                         u "(I guess I'll watch it with someone.)"
                         
                         scene sfr4stage4 #Chloe runs up on stage
@@ -16157,7 +16093,7 @@ label fr4chloe2:
 
                     jump fr4penelopedatechloe
 
-            "Or we could just leave.":
+            "Or we could just leave":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Or we could just leave right now and not look back..."
@@ -16237,7 +16173,7 @@ label fr4chloe3:
     ### LOCATION 8: HALLWAYCORNER
 
 label fr4grayson1:
-    $ fr4grayson = True
+    $ freeroam4.add("grayson")
 
     scene sfr4gr1 # grayson about to spray the wall
 
@@ -16273,7 +16209,7 @@ label fr4grayson1:
         with dissolve
 
         menu:
-            "Don't do that.":
+            "Don't do that":
                 $ add_point(KCT.BOYFRIEND)
 
                 u "Hey man, don't do that. That's a real dick move."
@@ -16320,7 +16256,7 @@ label fr4grayson1:
 
                     u "*Sighs* Fine."
 
-            "Alright, enjoy.":
+            "Alright, enjoy":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright, enjoy."
@@ -16363,7 +16299,7 @@ label fr4grayson1:
         with dissolve
 
         menu:
-            "Don't do that.":
+            "Don't do that":
                 $ preventgrayson = True
                 $ add_point(KCT.BOYFRIEND)
 
@@ -16394,7 +16330,7 @@ label fr4grayson1:
 
                 pause 0.5
 
-            "Alright, enjoy.":
+            "Alright, enjoy":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Alright, enjoy."
@@ -16415,8 +16351,8 @@ label fr4lockerroom:
 
 
 label fr4lockerroomchloe:
-    if not lockerroomchloe:
-        $ lockerroomchloe = True
+    if not "chloe2" in freeroam4:
+        $ freeroam4.add("chloe2")
 
         scene sfr4cl50 # mc knocking on lockerroom
 
@@ -16472,7 +16408,7 @@ label fr4lockerroomchloe:
 
             cl "You're cute."
 
-            if not v7_seencrowning:
+            if not "crowning" in freeroam4:
                 scene sfr4cl52d # chloe lookig at the wall where prom is on the other side
                 with dissolve
 
@@ -16497,7 +16433,7 @@ label fr4lockerroomchloe:
             with dissolve
 
             menu:
-                "Of course you can.":
+                "Of course you can":
                     $ add_point(KCT.BOYFRIEND)
 
                     u "Of course you can."
@@ -16519,7 +16455,7 @@ label fr4lockerroomchloe:
 
                     if hcGirl == "alone":
                         u "(I guess I'll watch it with someone.)"
-                        scene sfr4stage4#Chloe runs up on stage
+                        scene sfr4stage4 #Chloe runs up on stage
                         with fade
 
                         jump fr4alonechloe
@@ -16555,7 +16491,7 @@ label fr4lockerroomchloe:
                         with fade
                         jump fr4emilydate
                         
-                "Let's get out of here.":
+                "Let's get out of here":
                     $ add_point(KCT.TROUBLEMAKER)
 
                     u "You don't have to. Let's just get out of here."
@@ -16681,7 +16617,7 @@ label fr4lockerroomchloe:
 
     ### LOCATION 9: STAIRS
 label fr4emily1:
-    $ fr4emily = True
+    $ freeroam4.add("emily")
     $ forgiveemily = True
 
     scene sfr4em29 # showing mc and emily mc stnading behind emily, she doesn't see him
@@ -16772,7 +16708,7 @@ label fr4emily2:
 
     ### LOCATION 10: STREET
 label fr4samantha1:
-    $ fr4samantha = True
+    $ freeroam4.add("samantha")
 
     scene sfr4sa1 #fpp from the side / behind Samantha and Sebastian outside. You can't see their mouthThey are smoking a blunt and laughing.
 
@@ -17309,8 +17245,6 @@ label fr4chloeending:
     # towel drop sound #check - add towel.mp3 sound file
     play sound "sounds/towel.mp3"
 
-    #$ add_point(KCT.TROUBLEMAKER, sum([ aubreysex2, v6_emilysex, v7_rileysex, bathroomblowjob ])) ###Loyaltymod
-
     if config_censored and renpy.loadable("v8/scene2.rpy"):
         call screen censoredPopup("v8s2_nsfwSkipLabel1")
     elif config_censored:
@@ -17326,7 +17260,7 @@ label fr4chloeending:
 label fr4amberending:
     $ ending = "amber"
 
-    scene sfr4am12f# amber flirtatious
+    scene sfr4am12f # amber flirtatious
     with dissolve
 
     am "I have another idea of what might feel good..."

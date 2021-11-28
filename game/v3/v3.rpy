@@ -1,10 +1,10 @@
 label v3start:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s200 ## u reading a magazine on your bed (a couple hours later on cover)
     with Fade (1,0,1)
 
-    stop music fadeout 2.0
+    stop music fadeout 3
     play sound "sounds/knock.mp3"
 
     u "(Who could that be?)"
@@ -111,7 +111,7 @@ label v3start:
 
     cl "I'll see you at midnight. Don't be late."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s205 # Imre coming into the room
     with Fade (1,0,1)
@@ -143,7 +143,7 @@ label v3start:
     imre "Well... Not exactly, but I did manage to hide inside the girls' locker room."
 
     menu:
-        "You're crazy.":
+        "You're crazy":
             $ add_point(KCT.BRO)
 
             scene s206c
@@ -151,7 +151,7 @@ label v3start:
 
             u "Hahaha, man you're crazy."
 
-        "That's not cool.":
+        "That's not cool":
             $ add_point(KCT.BOYFRIEND)
             $ notcool = True
 
@@ -203,7 +203,7 @@ label v3start:
     imre "Oh shit, is she hot?"
 
     menu:
-        "Hell yeah.":
+        "Hell yeah":
             $ add_point(KCT.BRO)
 
             scene s208a
@@ -216,7 +216,7 @@ label v3start:
 
             imre "Well that's what I like to hear, go on."
 
-        "She's alright.":
+        "She's alright":
             scene s208a
             with dissolve
 
@@ -239,7 +239,7 @@ label v3start:
 
         u "And before you ask, yes, she's hot."
 
-        if caughtpeekingaubrey:
+        if v2_caughtpeeking:
             scene s208a
             with dissolve
 
@@ -285,7 +285,7 @@ label v3start:
 
         u "Anyways, then I went costume shopping for Mr. Lee's class with her."
 
-        if caughtpeekingpenelope:
+        if v2_caughtpeeking:
             u "And we were having a great time..."
 
             scene s208a
@@ -380,7 +380,7 @@ label conl:
     u "*Laughs*"
 
     ### Different Clock scene from 11 pm to 11:50 pm
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene clock2
     with fade
 
@@ -678,7 +678,7 @@ label conl:
 
     u "I certainly hope so."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     play sound "sounds/olddoor.mp3"
 
@@ -729,7 +729,7 @@ label conl:
 
     u "Wow, that was close."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s222c
     with dissolve
@@ -764,7 +764,7 @@ label conl:
 
     u "I'll see you, Chloe."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s225  #Showing you in bed
     with Fade (2,0,2)
@@ -814,7 +814,7 @@ label conl:
     scene s227 # you kissing
     with dissolve
 
-    image glitch = ("images/glitch.webp")
+    image glitch = ("images/v3/glitch.webp")
 
     pause 0.5
 
@@ -890,7 +890,7 @@ label conl:
 
     play sound "sounds/swoosh.mp3"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s225a # you open your eyes
     with flash
@@ -1378,10 +1378,8 @@ label conl:
 
 
     if costumeaubrey: # did you meet aubrey?
-
-        if caughtpeekingaubrey: # did she catch you?
-
-            if caughtpeekingaubreycounter: # did you talk your way out?
+        if v2_caughtpeeking: # did she catch you?
+            if v2_caughtpeekingcounter: # did you talk your way out?
                 jump talkedout
 
             else: # caught and she's mad
@@ -1416,7 +1414,7 @@ label conl:
 
                 imre "I'll see you, player."
 
-                stop music fadeout 2.0
+                stop music fadeout 3
 
                 scene s252 # you in Aubrey's backyard looking at the house
                 with Fade (1,0,1)
@@ -1613,7 +1611,7 @@ label conl:
 
                 imre "I'll see you, player."
 
-                stop music fadeout 2.0
+                stop music fadeout 3
 
                 scene s252 # you in Aubrey's backyard looking at the house
                 with Fade (1,0,1)
@@ -1870,7 +1868,7 @@ label conl:
 
         imre "I'll see you, player."
 
-        stop music fadeout 2.0
+        stop music fadeout 3
 
         scene s252 # you in Aubrey's backyard looking at the house
         with Fade (1,0,1)
@@ -2085,9 +2083,9 @@ label continuem: #for compatibility only
     menu:
         "Kiss her":
             $ aubreyrs = True
-            $ v3_aubsex = True
+            $ sceneList.add("v3_aubrey")
 
-            stop music fadeout 2.0
+            stop music fadeout 3
             play music "music/msexy.mp3"
 
             scene aub1
@@ -2232,7 +2230,7 @@ label continuem: #for compatibility only
 
             u "(Also, I barely know her...)"
 
-            stop music fadeout 2.0
+            stop music fadeout 3
 
             jump aubsexad
 
@@ -2388,7 +2386,7 @@ label acream:
 
     au "AHHHHHH!"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     hide screen aubsex
 
@@ -2442,7 +2440,7 @@ label acream:
 
     pause 0.5
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s264 # you going back to your dorm
     with Fade (1,0,1)
@@ -2539,7 +2537,7 @@ label continuen:
     la "Would you wanna be my test subject?"
 
     menu:
-        "I'd love to.":
+        "I'd love to":
             $ add_point(KCT.BOYFRIEND)
 
             scene s268a
@@ -2650,7 +2648,7 @@ label continueq:
             u "(Shit... if I meet her, she'll see my bruises and get really worried.)"
 
             menu:
-                "Shopping sounds great.":
+                "Shopping sounds great":
                     $ meetjulia = True
                     $ add_point(KCT.BOYFRIEND)
 
@@ -2675,7 +2673,7 @@ label continueq:
 
                     play sound "sounds/rejectcall.mp3"
 
-                "I can't, sorry.":
+                "I can't, sorry":
                     $ add_point(KCT.TROUBLEMAKER)
 
                     u "Sorry, Julia... I'm really busy this weekend."
@@ -2697,7 +2695,6 @@ label continueq:
             play sound "sounds/rejectcall.mp3"
 
             $ add_point(KCT.TROUBLEMAKER)
-            $ dontanswerjulia = True
             # phone call declined sound
 
             scene s270
@@ -2839,7 +2836,7 @@ label continueq:
 
     ry "Riley, I don't think [name] wants to get back into it with Grayson."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     ry "Any retribution will only make it worse."
 
@@ -2977,7 +2974,7 @@ label continueq:
 
     ri "Fine, then I'll go after him."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     ################
 
@@ -3031,7 +3028,7 @@ label continueq:
     ri "So what's going on between you and Chloe? She's the president of the Chicks, right?"
 
     menu:
-        "I like her.":
+        "I like her":
             $ add_point(KCT.BOYFRIEND)
 
             scene s281a
@@ -3046,7 +3043,7 @@ label continueq:
 
             ri "Oh uhm... yeah, that sounds really good. I'm happy for you."
 
-        "She's into me.":
+        "She's into me":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s281a
@@ -3128,7 +3125,7 @@ label continueq:
 
     u "Yeah, I'll see you."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     if laurenrs: #LAUREN MOVIES
         play music "music/mindie2.mp3"
@@ -3189,7 +3186,7 @@ label continueq:
             u "(Okay, time to make a decision. Should I tell her about what happened with Aubrey?)"
 
             menu:
-                "Tell her what happened.":
+                "Tell her what happened":
                     $ toldlauren = True
                     $ add_point(KCT.BOYFRIEND)
                     $ laurenrs = False
@@ -3255,7 +3252,7 @@ label continueq:
 
                     jump dk_ad
 
-                "Don't tell her.":
+                "Don't tell her":
                     $ add_point(KCT.TROUBLEMAKER)
 
                     u "(Lauren seems to value loyalty, she might be upset if she finds out and I don't wanna ruin our date before it even started.)"
@@ -3276,7 +3273,7 @@ label continueq:
 
         u "I'll make sure this date won't disappoint then."
 
-        stop music fadeout 2.0
+        stop music fadeout 3
 
         scene s289 # you two from front view in the last row at a cinema # check lighting
         with Fade (1,0,1)
@@ -3369,7 +3366,7 @@ label continueq:
 
                                 la "*Moans quietly*"
 
-                                stop music fadeout 2.0
+                                stop music fadeout 3
 
                                 play sound "sounds/slap.mp3"
 
@@ -3437,7 +3434,7 @@ label continueq:
                 pause 0.5
 
         # after movie
-        stop music fadeout 2.0
+        stop music fadeout 3
 
         scene lanew1 # walking through park at night
         with Fade (1,0,1)
@@ -3545,13 +3542,13 @@ label continueq:
 
         pause 0.5
 
-        stop music fadeout 2.0
+        stop music fadeout 3
 
     else:
         scene s282a  ## you in your dorm: It's the same day but It's nighttime now on laptop
         with Fade (1,0,1)
 
-        stop music fadeout 2.0
+        stop music fadeout 3
 
 
         pause 1
@@ -3560,7 +3557,7 @@ label continueq:
         jump continues
 
 label dk_ad:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s282b  ## you in your dorm: later that night on your laptop
     with Fade (1,0,1)
@@ -3606,6 +3603,6 @@ label continues: # This is after the date
 
     u "Yes, he's my roommate. What happened?!"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
 jump v4start

@@ -6,7 +6,7 @@
 label v11_carriage_ride:
     scene v11car1 # FPP. MC standing in the lobby next to the other students (Charli leaning on the wall, Imre, Lindsey, out of shot), looking at Mr Lee in front of the counter, Mr Lee slight smile, mouth open
     with dissolve
-    play music "music/V10/Scene 10/Track Scene 10.mp3" fadein 2
+    play music "music/v10/Track Scene 10.mp3" fadein 2
     lee "Settle down, everyone... If you haven't yet heard from your fellow students or myself, we have a planned event tonight. An event that I certainly will enjoy, and I believe you all will as well..."
 
     scene v11car2 # FPP. Same positioning as v11car1, MC looking at Imre, Imre looking at Mr Lee's direction, Imre slight grin, mouth open
@@ -501,8 +501,8 @@ label v11_carriage_ride:
 
     menu:
         "Side with Nora":
-            $ noraLike += 1
-            $ chloeLike -= 1
+            $ nora.points += 1
+            $ chloe.points -= 1
 
             scene v11car11h # FPP. Same as v11car11, Chloe annoyed, mouth closed, looking at MC, different pose
             with dissolve
@@ -510,8 +510,8 @@ label v11_carriage_ride:
             u "I actually think it's really cool, too. I'm sure the benefits would outweigh the negatives. I already have nicknames for some of my frat bros in mind... *Chuckles*"
 
         "Side with Chloe":
-            $ noraLike -= 1
-            $ chloeLike += 1
+            $ nora.points -= 1
+            $ chloe.points += 1
 
             scene v11car14g # FPP. Same as v11car14, Nora annoyed, mouth closed, looking at MC, different pose
             with dissolve

@@ -9,7 +9,7 @@ label v12_penelope_call:
 
     pause 0.75
 
-    play music "music/v12/Scene 3a/Track Scene 3a.mp3" fadein 2
+    play music "music/v12/Track Scene 3a.mp3" fadein 2
     
     play sound "sounds/call.mp3"
 
@@ -187,7 +187,7 @@ label v12_penelope_call:
 
                 "I miss you":
                     $ add_point(KCT.BOYFRIEND)
-                    $ penelopeLike += 1
+                    $ penelope.points += 1
 
                     scene v12pec3c
                     with dissolve

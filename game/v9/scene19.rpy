@@ -8,7 +8,7 @@ label v9_lau_dorm:
     scene v9lau1 # TPP. Show MC walking up the hallway to Lauren's dorm.
     with fade
 
-    play music "music/v9/Scene 8/Track Scene 8_1.mp3" fadein 2
+    play music "music/v9/Track Scene 8_1.mp3" fadein 2
 
     pause 0.8
 
@@ -95,7 +95,7 @@ label v9_lau_dorm:
     scene v9lau6a
     with dissolve
 
-    if laurenrs == True or beachfirstkiss == True:
+    if laurenrs or beachfirstkiss:
         menu:
             "Offer Lauren a back rub":
                 $ add_point(KCT.BOYFRIEND)
@@ -254,7 +254,7 @@ label v9_lau_dorm:
             scene v9lau6c
             with dissolve
 
-    if laurenrs == True or beachfirstkiss == True:
+    if laurenrs or beachfirstkiss:
         u "How about a hand job booth?"
 
         scene v9lau6e # FPP. Same camera as v9lau6, Lauren looks shocked, mouth closed.
@@ -422,7 +422,7 @@ label v9_lau_dorm:
     scene v9lau11 # FPP. Show Lauren (Who is now stood up in her room), Lauren looks stressed, mouth closed.
     with dissolve
 
-    if laurenrs == True or beachfirstkiss == True:
+    if laurenrs or beachfirstkiss:
         u "Whatever you choose, I'll be there with you."
 
         scene v9lau11a # FPP. Same camera as v9lau11, Lauren smile, mouth open.
@@ -506,7 +506,7 @@ label v9_lau_dorm:
     scene v9lau16 # FPP. Show Lauren, now stood near the door of her dorm, smile, mouth open.
     with dissolve
 
-    if laurenrs == True or beachfirstkiss == True:
+    if laurenrs or beachfirstkiss:
         la "You were a lifesaver."
 
         scene v9lau16a # FPP. Same camera as v9lau16, Lauren smile, mouth closed.

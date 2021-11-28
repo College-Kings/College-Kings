@@ -4,13 +4,13 @@
 # Time: Night
 # Phone Images: None
 
-label v12_ms_rose_sex:
+label v12_ms_rose_sex: #can only get here if joinwolves
     scene v12msr1 # TPP. Show MC walking out of Riley's room into the hallway, slight smile, mouth closed
     with dissolve
 
     pause 0.75
 
-    play music "music/v12/Scene 23/Track Scene 23_1.mp3" fadein 2
+    play music "music/v12/Track Scene 23_1.mp3" fadein 2
 
     scene v12msr2 # FPP. MC and Ms. Rose in the hallway, MC and Ms. Rose looking at each other, Ms. Rose slight smile, mouth open
     with dissolve
@@ -154,7 +154,6 @@ label v12_ms_rose_sex:
 
             "Let's go":
                 $ add_point(KCT.TROUBLEMAKER)
-                #$ add_point(KCT.TROUBLEMAKER, sum([ v11_samantha_spa, v11_rileysex, v11_chloe_sex, v12_lindsey_sex ])) ###Loyaltymod
                 
                 $ v12_msrose_sex = True
 
@@ -196,7 +195,7 @@ label v12_ms_rose_sex:
                 pause 0.75
 
                 stop music fadeout 3
-                play music "music/v12/Scene 23/Track Scene 23_2.mp3" fadein 2
+                play music "music/v12/Track Scene 23_2.mp3" fadein 2
 
                 scene v12msr10 # FPP. MC and Ms. Rose in living room, looking at each other, Ms. Rose slight smile, mouth closed
                 with dissolve
@@ -515,7 +514,7 @@ label v12_ms_rose_sex:
                 u "I'm feeling... really..."
 
                 stop music fadeout 3
-                play music "music/v12/Scene 23/Track Scene 23_3.mp3" fadein 2
+                play music "music/v12/Track Scene 23_3.mp3" fadein 2
 
                 label v12s23_nsfwSkipLabel1:
 

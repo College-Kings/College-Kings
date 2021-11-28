@@ -4,7 +4,7 @@
 # Time: Evening
 
 label v14s22a:
-    play music "music/v14/Track Scene 22a.mp3" fadein 2
+    play music "music/v13/Track Scene 39a.mp3" fadein 2
 
     scene v14s22a_1 # FPP. show just lindsey, looking at mc, half smile, mouth open, hand up gesture
     with dissolve

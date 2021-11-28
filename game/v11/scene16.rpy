@@ -4,7 +4,7 @@
 # Time: around 3am sunday morning (dark outside)
 
 label v11_lauren_airport_convo:
-    play music "music/v11/Scene 16/Track Scene 16.mp3" fadein 2
+    play music "music/v11/Track Scene 16.mp3" fadein 2
     if v11_aubrey_sex and laurenrs:
         scene v11laac1 # TPP. Show Lauren standing in the airport, looking at her phone, she is very angry, mouth closed, MC is in the background looking at her, walking towards her direction (he is relatively far away), MC mouth closed, worried expression (make sure diff location in airport to v11noac1)
         with fade
@@ -113,7 +113,6 @@ label v11_lauren_airport_convo:
                 menu:
                     "Yes":
                         $ add_point(KCT.TROUBLEMAKER)
-                        $ v11_want_date_aubrey = True
 
                         scene v11laac2e
                         with dissolve

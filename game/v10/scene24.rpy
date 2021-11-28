@@ -6,7 +6,7 @@
 label v10_lauren_room:
     scene v10lar1 # TPP Show MC knocking on Lauren's door.
     with fade
-    play music "music/v10/Scene 24/Track Scene 24_1.mp3" fadein 3
+    play music "music/v10/Track Scene 24_1.mp3" fadein 2
     play sound "sounds/knock.mp3"
     
     pause 0.5
@@ -205,8 +205,6 @@ label v10_lauren_room:
     u "You never know until you try."
 
     if laurenrs or v1_laurenKiss or laurenkissb: # If dating or have made out
-        $ v10_lauren_sg = True
-
         label v10_lauren_room_sg:
         scene v10lar3g # FPP Same angle as v10lar3, Lauren looking seductive, mouth open
         with dissolve
@@ -276,11 +274,10 @@ label v10_lauren_room:
 
         la "Oh [name]! *Moans*"
         stop music fadeout 3
-        play music "music/v10/Scene 24/Track Scene 24_2.mp3" fadein 3
+        play music "music/v10/Track Scene 24_2.mp3" fadein 2
         menu:
             "Suck on her tits":
-                $ v10_lauren_suck = True
-                #$ add_point(KCT.TROUBLEMAKER, sum([ v9_aubrey_lake, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex ])) ###Loyaltymod
+                $ sceneList.add("v10_lauren")
 
                 # MC starts kissing around her boobs and nipples. Ensure this scene is detailed and long, kissing all over her upper body
                 image v10lautk = Movie(play="images/v10/Scene 24/v10lautk.webm", loop=True, image="images/v10/Scene 24/v10lautkStart.webp", start_image="images/v10/Scene 24/v10lautkStart.webp") # TPP MC tenderly kissing Lauren on upper chest, holding her breast and playing with her nipple
@@ -353,7 +350,7 @@ label v10_lauren_room:
 
                     stop music fadeout 3
 
-                    play music "music/v10/Scene 24/Track Scene 24_3.mp3" fadein 3
+                    play music "music/v10/Track Scene 24_3.mp3" fadein 2
                     
                     la "[name], I... I don't think I'm ready. Sorry I just..."
 

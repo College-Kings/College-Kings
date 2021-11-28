@@ -6,7 +6,7 @@
 label v11_lauren_apology:
     scene v11laa1 # TPP. MC is walking through the hotel corridor, mouth closed, slightly sad
     with fade
-    play music "music/V10/Scene 40/Track Scene 40_3.mp3" fadein 2
+    play music "music/v10/Track Scene 40_3.mp3" fadein 2
     u "(*Sighs* I should try and talk to Lauren.)"
 
     scene v11laa1a # TPP. Same camera as v11laa1, but MC is now further down the corridor
@@ -108,8 +108,6 @@ label v11_lauren_apology:
             u "*Sighs* I'll leave you be. Call me if you need anything."
 
         "Make a move":
-            $ v11_apology_kiss = True
-
             scene v11laa6c # FPP. Same as v11laa6b, MC is grabbing Lauren's cheek, she's crying, mouth closed
             with dissolve
 

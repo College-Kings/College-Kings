@@ -1,10 +1,9 @@
 ### SCENE 3: v7 Riley romance ending continued
 label v8_ri_start:
     # Note to renderers: Make sure the MC is in his suit and Riley is in her HoCo dress. Any other props are the same as Riley's lewd ending in v7. Context: MC and Riley are both sitting on her bed in her room and she's whispering in his ear
-    stop music fadeout 2
+    stop music fadeout 3
 
     $ v8_riley_lewd_ending = True
-    #$ add_point(KCT.TROUBLEMAKER, sum([ aubreysex2, v6_emilysex, bathroomblowjob ])) ###Loyaltymod
 
     scene v8s25 # Same as sfr4ri55 (from v7) but MC talking now
     with dissolve
@@ -239,7 +238,7 @@ label v8s3_rileyDoggy:
 
     $ renpy.end_replay()
 
-    play music "music/mlove.mp3" fadein 3
+    play music "music/mlove.mp3" fadein 2
 
     scene v8s33a # Same as v8s33 but Riley mouth closed
     with dissolve

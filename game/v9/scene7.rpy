@@ -19,14 +19,14 @@ label v9_before_lake_fr:
     scene fr5lakefull
     with dissolve
 
-    play music "music/v9/Scene 7/Track Scene 7.mp3" fadein 3
+    play music "music/v9/Track Scene 7.mp3" fadein 2
 
     scene fr5lakefull
 
     call screen v9s7_lakeFull
 
 label fr5ryan1:
-    $ fr5ryan = True
+    $ freeroam5.add("ryan")
 
     if joinwolves:
         scene v9slake1 #FPP closeup ryan sitting on a picnic blanket, mouth closed, Ryan grinning looking at the girls (you can't see the girls)
@@ -425,7 +425,7 @@ label fr5ryan1:
     call screen v9s7_lakeFull
 
 label fr5riley1:
-    $ fr5riley = True
+    $ freeroam5.add("riley")
 
     scene v9slake2 #FPP Close up as if sitting next to Riley, you look at her from the side, Riley is sitting on the pier, with her legs hanging over the ledge, Riley looking at the lake. -
 
@@ -592,7 +592,7 @@ label fr5riley2:
 
 # -if you click on Aubrey-
 label fr5aubrey1:
-    $ fr5aubrey = True
+    $ freeroam5.add("aubrey")
 
     scene v9slake4a # FPP close up aubrey swimming in the lake, very close to you, looking at you still on land. You're standing so she's looking up smiling, mouth closed.
 
@@ -684,7 +684,6 @@ label fr5aubrey1:
 
         "Join her":
             $ add_point(KCT.BOYFRIEND)
-            $ joinAubreyLake = True
 
             u "Fine, let me just take my clothes off."
 
@@ -760,8 +759,7 @@ label fr5aubrey1:
 
             if aubreyrs:
                 label v9_aubrey_scene_lake:
-                    $ v9_aubrey_lake = True
-                    #$ add_point(KCT.TROUBLEMAKER, sum([ v7_rileysex, v8_chloesex, v8_riley_lewd_ending, v8_hocoamber, amberSexAtJoshs ])) ###Loyaltymod
+                    $ sceneList.add("v9_aubrey")
 
                     scene v9slake6
                     with dissolve
@@ -1000,7 +998,7 @@ label fr5aubrey2:
     # -if you click on the guy sleeping under the tree-
 
 label fr5treeguy1:
-    $ fr5treeguy = True
+    $ freeroam5.add("treeguy")
 
     scene v9slake10 # FPP close up of guy under the tree sleeping sitting leaned to the tree
 
@@ -1125,7 +1123,7 @@ label fr5treeguy2:
     # -if you click on the guy petting a dog-
 
 label fr5dogwalker1:
-    $ fr5dogwalker = True
+    $ freeroam5.add("dogwalker")
 
     scene v9slake11a #FPP close up of dogwalker petting his dog excited, looking at the dog, mouth closed
 
@@ -1325,7 +1323,7 @@ label fr5ryan3:
 
     ri "Today was certainly relaxing..."
 
-    if aubreyrs and joinAubreyLake:
+    if "v9_aubrey" in sceneList:
         scene v9slake14d #same as 14b, now aubrey looking at you slight smile mouth open
         with dissolve
 

@@ -51,7 +51,7 @@ label starta: #for compatibility only
     em "Anything."
 
     hide screen fantasyOverlay
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s1
     with Fade(1, 0, 1)
@@ -170,7 +170,7 @@ label starta: #for compatibility only
     call screen phone
     hide screen phoneTutorial
     
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene s11
     with dissolve
 
@@ -290,7 +290,7 @@ label starta: #for compatibility only
 
     u "(I wonder if he's still dealing...)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     car "*stops*"
 
@@ -361,7 +361,7 @@ label starta: #for compatibility only
     with dissolve
     ma "Dude, that's my sister you're talking about!"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s28
     with hpunch
@@ -399,7 +399,7 @@ label starta: #for compatibility only
 
     ca "Next time, Mommy won't be there to save you, asshole."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s33
     with dissolve
@@ -478,7 +478,7 @@ label starta: #for compatibility only
 
     u "(I should probably go to my induction class right now.)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s40
     with Fade(1, 0, 1) #you're late and everyone's looking at you rose bend over laptop
@@ -639,7 +639,7 @@ label starta: #for compatibility only
 
     ro "Now, let's move on to some of the boring administrative stuff..."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene clocka
     with fade
 
@@ -855,7 +855,7 @@ label starta: #for compatibility only
 
     la "Sounds good. I'll see you later."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
 # Part 5 Free roam in the halls
     scene s50 # hallway 1 without freeroam
@@ -881,7 +881,7 @@ label starta: #for compatibility only
     label fr1a2: #for compatibility only
 
     label v1_freeRoam1_riley:
-        $ v1_talkToRiley = True
+        $ freeroam1.add("riley")
         
         scene s50ri
 
@@ -908,7 +908,7 @@ label starta: #for compatibility only
         ri "So what did you think of Ms. Rose?"
 
         menu:
-            "She's hot.":
+            "She's hot":
                 $ add_point(KCT.BRO)
 
                 scene s50ri2a
@@ -950,7 +950,7 @@ label starta: #for compatibility only
 
                 ri "Hmmm.. I'll think about it."
 
-            "She seems nice.":
+            "She seems nice":
                 scene s50ri2a
                 with dissolve
 
@@ -971,7 +971,6 @@ label starta: #for compatibility only
 
                 ri "Hmmm.. I'll think about it."
 
-        $ v1_freeRoam1_riley = True
         call screen v1_freeRoam1_1
         with dissolve
 
@@ -988,6 +987,8 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_1
 
     label v1_freeRoam1_elijah:
+        $ freeroam1.add("elijah")
+
         scene s50el
         u "Hey, you're Elijah right?"
 
@@ -1059,7 +1060,7 @@ label starta: #for compatibility only
 
                 el "Just get out of my face."
 
-            "That's cool.":
+            "That's cool":
                 $ add_point(KCT.BOYFRIEND)
 
                 scene s50el2a
@@ -1073,8 +1074,6 @@ label starta: #for compatibility only
 
                 el "Now go and bother someone else."
                 
-        $ v1_freeRoam1_elijah = True
-
         call screen v1_freeRoam1_1
 
     label v1_freeRoam1_elijah2:
@@ -1089,6 +1088,8 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_1
 
     label v1_freeRoam1_chris:
+        $ freeroam1.add("chris")
+    
         scene s55ch1
         ch "Babe... you know I gotta prepare our rush party."
 
@@ -1128,11 +1129,12 @@ label starta: #for compatibility only
         ch "Bye babe."
 
         no "Bye."
-        $ v1_freeRoam1_chrisGone = True
-        
+       
         call screen v1_freeRoam1_2
 
     label v1_freeRoam1_nora:
+        $ freeroam1.add("nora")
+    
         scene s56no1a
         u "Hey, could you tell me where the dorms are?"
 
@@ -1162,7 +1164,6 @@ label starta: #for compatibility only
 
                 u "Thanks."
 
-    $ v1_freeRoam1_nora = True
     call screen v1_freeRoam1_2
 
     label v1_freeRoam1_nora2:
@@ -1182,11 +1183,13 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_2
 
     label v1_freeRoam1_aubrey:
+        $ freeroam1.add("aubrey")
+    
         if config_censored:
             call screen censoredPopup("v1_freeRoam1_aubrey2")
 
         scene adamaubrey36
-        stop music fadeout 2.0
+        stop music fadeout 3
         play music "music/msexy.mp3"
         show adam1
 
@@ -1194,10 +1197,8 @@ label starta: #for compatibility only
         u "(Oh my god... she's so fucking hot.)"
         au "YESSSSS, FASTER!"
         u "(I should probably stop peeking, before I get caught.)"
-
-        $ v1_freeRoam1_aubrey = 1
         
-        stop music fadeout 2.0
+        stop music fadeout 3
         call screen v1_freeRoam1_3
 
     label v1_freeRoam1_aubrey2:
@@ -1207,7 +1208,7 @@ label starta: #for compatibility only
 
 label efra:
     scene s59
-    stop music fadeout 2.0
+    stop music fadeout 3
     play sound "sounds/knock.mp3"
     
     scene s60
@@ -1321,7 +1322,7 @@ label efra:
             scene s63d
             with dissolve
 
-        "The Wolves sound sick.":
+        "The Wolves sound sick":
             $ add_point(KCT.BRO)
 
             scene s64a
@@ -1455,7 +1456,7 @@ label efra:
     label continueonea: #for compatibility only
     scene s65
     with Fade(1, 0, 1)
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     play sound "sounds/knock.mp3"
     pause 0.75
@@ -1473,7 +1474,7 @@ label efra:
     with dissolve
     imre "Hey, come on in Riley. This is my roommate [name]."
 
-    if v1_talkToRiley:
+    if "riley" in freeroam1:
         scene s67
         with dissolve
         ri "Yeah, we've met."
@@ -1670,7 +1671,7 @@ label efra:
     la "I think I'll drink."
 
     menu:
-        "You're missing out.":
+        "You're missing out":
             scene s73gr
             with dissolve
 
@@ -1681,7 +1682,7 @@ label efra:
 
             la "I guess we'll never know."
 
-        "Dodged a bullet there.":
+        "Dodged a bullet there":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s73gr
@@ -1808,7 +1809,7 @@ label efra:
     ri "So I feel like that dare is kinda unfair."
 
     menu:
-        "Do it, or drink.":
+        "Do it, or drink":
             $ add_point(KCT.BRO)
 
             scene s71ef
@@ -1825,7 +1826,7 @@ label efra:
 
             " "
 
-        "You're right.":
+        "You're right":
             $ add_point(KCT.BOYFRIEND)
             
             scene s71ef
@@ -1853,7 +1854,7 @@ label efra:
 
     u "Alright, see ya."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     ### Late night talk with Imre.
     scene s80
@@ -1862,7 +1863,7 @@ label efra:
     imre "Man, I can't wait to bang this Riley chick."
 
     menu:
-        "Riley's mine.":
+        "Riley's mine":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s79b
@@ -1874,7 +1875,7 @@ label efra:
             imre "What the hell man?! I invited Riley. Back off."
 
             menu:
-                "You're right, sorry.":
+                "You're right, sorry":
                     $ add_point(KCT.BRO)
 
                     scene s79a
@@ -1886,7 +1887,7 @@ label efra:
 
                     imre "It's fine bro, I get it. She is really cute."
 
-                "She wants me.":
+                "She wants me":
                     $ add_point(KCT.TROUBLEMAKER)
 
                     scene s79b
@@ -1913,7 +1914,7 @@ label efra:
                     imre "Trust me, we're gonna bang so many chicks this year. All we need is confidence..."
                     jump at_bd
 
-        "They're both hot.":
+        "They're both hot":
             $ add_point(KCT.BRO)
 
             scene s79
@@ -1928,7 +1929,7 @@ label efra:
 label at_bd:
     imre "And to be part of a frat."
 
-    if v1_freeRoam1_aubrey:
+    if "aubrey" in freeroam1:
         scene s79a
         with dissolve
 
@@ -1980,7 +1981,7 @@ label at_bd:
 
     u "Night."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     ### Sex dream
     label sexdream1: #for compatibility only
@@ -2041,7 +2042,7 @@ label at_bd:
 
     menu:
         "Keep dreaming":
-            $ v1_sda = True
+            $ sceneList.add("v1_riley")
 
             scene sda3a
             with fade
@@ -2074,8 +2075,8 @@ label at_bd:
 
                     ri "I was hoping you'd say that."
 
-                    image sdabj = Movie (play="images/sdabj.webm", loop = True, image = "images/s1")
-                    image sdabjf = Movie (play="images/sdabjf.webm", loop = True, image = "images/sda4e")
+                    image sdabj = Movie (play="images/v1/sdabj.webm", loop = True, image = "images/v1/sda4e")
+                    image sdabjf = Movie (play="images/v1/sdabjf.webm", loop = True, image = "images/v1/sda4e")
 
                     show sdabj
                     with fade
@@ -2235,11 +2236,11 @@ label at_bd:
 label v1_nsfwSkipLabel1:
     hide screen fantasyOverlay
 
-    stop music fadeout 2.0
+    stop music fadeout 3
     $ renpy.end_replay()
 
     ### Next morning in your dorm, Imre seems to be gone.
-    if v1_sda:
+    if "v1_riley" in sceneList:
         scene s81
         with Fade (1,0,1)
 
@@ -2349,7 +2350,7 @@ label v1_nsfwSkipLabel1:
     ro "Very well, I'm sorry to hear that."
     ro "Just sit down, so that we can get started on the material."
     #####clock video
-    stop music fadeout 2.0
+    stop music fadeout 3
     play sound "sounds/clock2.mp3"
     scene clocka
     with fade
@@ -2419,7 +2420,7 @@ label v1_nsfwSkipLabel1:
             with dissolve
             u "How about we go to the park this afternoon? I'll bring some sandwiches and we'll make your day better."
 
-        "Bad roommates suck.":
+        "Bad roommates suck":
             $ add_point(KCT.BRO)
 
             scene s87a
@@ -2437,7 +2438,7 @@ label v1_nsfwSkipLabel1:
 
     scene s87b
     with dissolve
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     label au_bd: #for compatibility only
     la "Yeah, I'd like that."
@@ -2519,7 +2520,7 @@ label v1_nsfwSkipLabel1:
     u "A couple huh?"
 
     menu:
-        "You could get any guy.":
+        "You could get any guy":
             scene s89d
             with dissolve
             u "I bet you could get any guy you want."
@@ -2528,7 +2529,7 @@ label v1_nsfwSkipLabel1:
             with dissolve
             la "Uhm... thanks. Not really though, haha."
 
-        "Yet, you're here with me.":
+        "Yet, you're here with me":
             $ v1_laurenPoints += 1
 
             scene s89d
@@ -2577,7 +2578,7 @@ label v1_nsfwSkipLabel1:
     la "Fine, but you have to start."
 
     menu:
-        "I'm still in love with my ex.":
+        "I'm still in love with my ex":
 
             scene s89d
             with dissolve
@@ -2601,7 +2602,7 @@ label v1_nsfwSkipLabel1:
 
             u "Now it's time for your secret."
 
-        "I've broken into an Ikea.":
+        "I've broken into an Ikea":
 
             $ v1_laurenPoints += 1
             scene s89d
@@ -2726,7 +2727,7 @@ label aw_bd:
 
 
     menu:
-        "You're really beautiful.":
+        "You're really beautiful":
             $ add_point(KCT.BOYFRIEND)
 
             u "You know... you're really beautiful."
@@ -2735,7 +2736,7 @@ label aw_bd:
             with dissolve
             la "Awww."
 
-        "You're not ugly.":
+        "You're not ugly":
             $ add_point(KCT.BRO)
 
             u "You know... you're not ugly."
@@ -2810,7 +2811,7 @@ label aw_bd:
         u "(Fuck... should I have kissed her? Now it's just weird between us.)"
 
     ### Back in your dorm with Imre
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     stop sound
 
@@ -2908,7 +2909,7 @@ label aw_bd:
     u "I guess..."
 
     scene s96c
-    stop music fadeout 2.0
+    stop music fadeout 3
     play sound "sounds/vibrate.mp3"
 
     $ ryan.messenger.newMessage(_("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"), queue=False)
@@ -2951,7 +2952,7 @@ label aw_bd:
 
     u "(Great... now I've fucked up two friendships today.)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     label nextscenef: #for compatibility only
     ### In front of the ape's house ryan is texting
@@ -3012,7 +3013,7 @@ label aw_bd:
     call screen v1_freeRoam2_1
 
 label v1_freeRoam2_sam:
-    $ v1_samTalk = True
+    $ freeroam2.add("sam")
 
     scene s101
     sam "... and that's why I purposefully lost that fight."
@@ -3077,11 +3078,12 @@ label v1_freeRoam2_sam2:
     call screen v1_freeRoam2_1
 
 label v1_freeRoam2_door:
+    $ freeroam2.add("door")
+    
     play music "music/mparty2.mp3"
 
     queue music [ "music/mparty3.mp3", "music/mparty4.mp3" ]
     
-    $ v1_fr2door = True
     scene s103
 
     ry "Alright man, I'm gonna look around, I'll see you in a bit."
@@ -3095,7 +3097,7 @@ label v1_freeRoam2_door:
     call screen v1_freeRoam2_2
 
 label v1_freeRoam2_pool:
-    if not v1_joshTalk:
+    if not "josh" in freeroam2:
         scene s102
 
         u "(I should talk to Josh first, I haven't seen him in a while.)"
@@ -3105,7 +3107,7 @@ label v1_freeRoam2_pool:
         call screen v1_freeRoam2_3
 
 label v1_freeRoam2_courtney:
-    $ v1_courtneyTalk = True
+    $ freeroam2.add("courtney")
 
     scene fr2co1
 
@@ -3167,7 +3169,7 @@ label v1_freeRoam2_courtney2:
     call screen v1_freeRoam2_2
 
 label v1_freeRoam2_josh:
-    $ v1_joshTalk = True
+    $ freeroam2.add("josh")
 
     scene fr2jo1a
 
@@ -3183,7 +3185,7 @@ label v1_freeRoam2_josh:
     scene fr2jo2b
     with dissolve
 
-    if v1_freeRoam1_aubrey:
+    if "aubrey" in freeroam1:
         u "(Holy shit, is this the girl that got fucked in the dorm opposite of ours?!)"
 
         u "(She's so fucking hot.)"
@@ -3335,7 +3337,7 @@ label v1_freeRoam2_josh:
             menu:
 
 
-                "I'll be the next Fight King.":
+                "I'll be the next Fight King":
                     $ add_point(KCT.TROUBLEMAKER)
                     $ v1_aubreywannafight = True
 
@@ -3356,7 +3358,7 @@ label v1_freeRoam2_josh:
 
                     u "Who's Grayson?"
 
-                "No, that's not for me.":
+                "No, that's not for me":
                     scene fr2jo2b
                     with dissolve
 
@@ -3417,7 +3419,7 @@ label v1_freeRoam2_josh2:
     call screen v1_freeRoam2_2
 
 label v1_freeRoam2_stairs:
-    if not v1_joshTalk:
+    if not "josh" in freeroam2:
         scene s102
 
         u "(I should talk to Josh first, I haven't seen him in a while.)"
@@ -3427,7 +3429,7 @@ label v1_freeRoam2_stairs:
         call screen v1_freeRoam2_5
 
 label v1_freeRoam2_camp:
-    if not v1_joshTalk:
+    if not "josh" in freeroam2:
         scene s102
 
         u "(I should talk to Josh first, I haven't seen him in a while.)"
@@ -3445,7 +3447,7 @@ label v1_freeRoam2_camp:
         call screen v1_freeRoam2_4
 
 label v1_freeRoam2_mason:
-    $ v1_masonTalk = True
+    $ freeroam2.add("mason")
 
     scene fr2ma1
     ma "Eyyyy, you're the kid that tried to fight Cameron yesterday!"
@@ -3460,7 +3462,7 @@ label v1_freeRoam2_mason:
     jeremy "Damn, that takes balls, kid!"
 
     menu:
-        "Yeah, he better watch out.":
+        "Yeah, he better watch out":
             $ add_point(KCT.TROUBLEMAKER)
             $ add_point(KCT.BRO)
 
@@ -3509,7 +3511,7 @@ label v1_freeRoam2_mason:
 
             u "(Oh no, what have I gotten myself into?!)"
 
-        "I didn't wanna fight him.":
+        "I didn't wanna fight him":
             scene fr2ma1a
             with dissolve
 
@@ -3574,7 +3576,7 @@ label v1_freeRoam2_mason2:
     call screen v1_freeRoam2_3
 
 label v1_freeRoam2_katy:
-    $ v1_katyTalk = True
+    $ freeroam2.add("katy")
 
     scene fr2ka1
 
@@ -3667,7 +3669,7 @@ label v1_freeRoam2_katy2:
     call screen v1_freeRoam2_3
 
 label v1_freeRoam2_grayson:
-    $ v1_graysonTalk = True
+    $ freeroam2.add("grayson")
     
     scene fr2gr1
 
@@ -3740,7 +3742,7 @@ label v1_freeRoam2_grayson2:
 label v1_freeRoam2_end:
 label fr2end: #for compatibility only
 
-    stop music fadeout 2.0
+    stop music fadeout 3
     
     scene chloelook:
         subpixel True
@@ -3778,7 +3780,7 @@ label fr2end: #for compatibility only
     ry "Man, I don't know. Why don't you just go ask her yourself?"
 
     menu:
-        "You're right, I'll talk to her.":
+        "You're right, I'll talk to her":
             $ add_point(KCT.BRO)
 
             scene s108e
@@ -3806,7 +3808,7 @@ label fr2end: #for compatibility only
 
             cl "Hey, what's your name?"
 
-        "She's occupied.":
+        "She's occupied":
             scene s108c
             with dissolve
 
@@ -3935,7 +3937,7 @@ label fr2end: #for compatibility only
 
     u "Yeah, sounds great."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s114 ## walking on the outside , use night filter
     with fade
@@ -4086,7 +4088,7 @@ label fr2end: #for compatibility only
 
     cl "It's getting pretty cold. Should we go back inside?"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s117f
     with dissolve
@@ -4128,13 +4130,14 @@ label fr2end: #for compatibility only
     scene s121 #loooking at angry Grayson"
     with dissolve
 
-    " "
+    pause 0.5
     scene s120a
     with dissolve
     pause 0.5
 
     stop music
     #####punch
-    $ renpy.movie_cutscene("punchdemo.webm", loops=0)
+    scene black
+    $ renpy.movie_cutscene("v1/punchdemo.webm", loops=0)
 
 jump v2start

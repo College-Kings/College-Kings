@@ -318,7 +318,6 @@ label v13s9:
             u "Haha, I'll do all I can."
 
         "Help Lindsey": # -If Help Lindsey  
-            $ v13_help_lindsey = True
             $ lindsey.points += 1
 
             scene v13s9_12e

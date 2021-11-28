@@ -6,7 +6,7 @@
 label v11_lindsey_park:
     scene v11lip1 # TPP. Show MC walking up to Lindsey, she is sitting down on the bench, slightly sad, mouth closed, looking at the trees, MC shown from behind
     with dissolve
-    play music "music/v11/Scene 9/Track Scene 9_2.mp3" fadein 2
+    play music "music/v11/Track Scene 9_2.mp3" fadein 2
     pause 0.75
 
     scene v11lip2 # TPP. Show MC midway through sitting down, MC and Lindsey now looking at each other, both slight smiles, mouths closed
@@ -109,14 +109,14 @@ label v11_lindsey_park:
 
     menu:
         "Defend Chloe":
-            $ lindseyLike -= 1
+            $ lindsey.points -= 1
             scene v11lip3b
             with dissolve
 
             u "Is it possible that with all the responsibility she has, it's hard for her to see her mistakes?"
 
         "Don't defend Chloe":
-            $ lindseyLike += 1
+            $ lindsey.points += 1
             scene v11lip3d
             with dissolve
 
@@ -132,7 +132,7 @@ label v11_lindsey_park:
 
     menu:
         "Support Chloe":
-            $ lindseyLike -= 1
+            $ lindsey.points -= 1
             scene v11lip3b
             with dissolve
 
@@ -168,7 +168,7 @@ label v11_lindsey_park:
         "Support Lindsey":
             $ v11_lindsey_run = True
             $ political_strategist = True #keep
-            $ lindseyLike += 1
+            $ lindsey.points += 1
 
             scene v11lip3h # FPP. Same as v11lip3d, different pose
             with dissolve

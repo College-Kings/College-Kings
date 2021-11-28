@@ -124,7 +124,7 @@ label v15s17:
 
     menu:
         "Get Lauren $50 gift card":
-            $ Lauren_Gift_1 = True
+            $ v15_lauren_gift = "$50 gift card"
 
             scene v15s17_4
             with dissolve
@@ -210,7 +210,7 @@ label v15s17:
 
                 u "Ha... Good one."
 
-            elif MadAtMsRose:
+            elif v15s9_mad_at_ms_rose:
 
                 scene v15s17_4
                 with dissolve
@@ -227,7 +227,7 @@ label v15s17:
 
                 u "Ms. Rose looked so proud of her new necklace and really seemed to enjoy showing it off to me... among other things..."
 
-            if V15_MsRoseSex:
+            if V15_ms_rose_sex:
                 scene v15s17_15 # FPP. A Dreamlike Vision of MsRose fully nude in one of the sexual positions from Version 15 scene 15
                 with dissolve
 
@@ -449,7 +449,7 @@ label v15s17:
 
                 menu:
                     "Get Lauren $50 gift card":
-                        $ Lauren_Gift_1 = True
+                        $ v15_lauren_gift = "$50 gift card"
 
                         scene v15s17_5
                         with dissolve
@@ -484,7 +484,7 @@ label v15s17:
 
                         menu:
                             "Emerald bracelet":
-                                $ Lauren_Gift_2a = True
+                                $ v15_lauren_gift = "emeral bracelet"
 
                                 scene v15s17_11d # FPP. same as v15s17_11b MC holds up the Emerald Bracelet
                                 with dissolve
@@ -492,7 +492,7 @@ label v15s17:
                                 u "The emerald is too beautiful to turn away from."
 
                             "Ruby choker necklace":
-                                $ Lauren_Gift_2b = True
+                                $ v15_lauren_gift = "ruby choker necklace"
 
                                 scene v15s17_11e # FPP. same v15s17_11b MC holds up Ruby choker necklace
                                 with dissolve
@@ -510,7 +510,7 @@ label v15s17:
 
                         menu:
                             "Brown horse, golden mane":
-                                $ Lauren_Gift_3a = True
+                                $ v15_lauren_gift = "brown horse, golden mane"
 
                                 scene v15s17_11f # FPP. same as v15s17_11c MC holds up the Brown horse, golden mane
                                 with dissolve
@@ -518,7 +518,7 @@ label v15s17:
                                 u "Definitely this one!"
 
                             "White horse, black mane":
-                                $ Lauren_Gift_3b = True
+                                $ v15_lauren_gift = "white horse, black mane"
 
                                 scene v15s17_11g # FPP. same as v15s17_11c MC holds up the White horse, black mane
                                 with dissolve
@@ -551,7 +551,7 @@ label v15s17:
 
                 menu:
                     "Get Lauren $50 gift card":
-                        $ Lauren_Gift_1 = True
+                        $ v15_lauren_gift = "$50 gift card"
 
                         scene v15s17_5
                         with dissolve
@@ -586,7 +586,7 @@ label v15s17:
 
                         menu:
                             "Emerald bracelet":
-                                $ Lauren_Gift_2a = True
+                                $ v15_lauren_gift = "emeral bracelet"
 
                                 scene v15s17_11d
                                 with dissolve
@@ -594,7 +594,7 @@ label v15s17:
                                 u "The emerald is too beautiful to turn away from."
 
                             "Ruby choker necklace":
-                                $ Lauren_Gift_2b = True
+                                $ v15_lauren_gift = "ruby choker necklace"
 
                                 scene v15s17_11e
                                 with dissolve

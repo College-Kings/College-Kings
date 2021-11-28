@@ -4,7 +4,7 @@
 # Time: Tuesday Morning
 
 label v10_chloe_hallway:
-    play music "music/v10/Scene 29/Track Scene 29.mp3" fadein 3
+    play music "music/v10/Track Scene 29.mp3" fadein 2
     scene v10such1 # TPP. Show MC walking down the school hallway after exiting econ class, to the side in the distance near lockers should be Chloe and Aubrey.
     with fade
 
@@ -48,8 +48,6 @@ label v10_chloe_hallway:
                 cl "Ugh, who cares what you think?"
 
             "Sexy":
-                $ v10_chloe_sexy = True
-
                 if kct == "loyal" or kct == "confident":
                     u "No, sexy definitely describes her better."
 
@@ -84,7 +82,7 @@ label v10_chloe_hallway:
                     menu:
                         "Ask Chloe how she is":
                             $ add_point(KCT.BOYFRIEND)
-                            $ chloeLike += 1
+                            $ chloe.points += 1
 
                             u "So uhm... how have you been?"
 
@@ -139,7 +137,7 @@ label v10_chloe_hallway:
 
                                 "Decline a Rematch":
                                     $ add_point(KCT.TROUBLEMAKER)
-                                    $ chloeLike -= 1
+                                    $ chloe.points -= 1
 
                                     u "Uhm, I shouldn't, I have a lot to do. Sorry."
 
@@ -205,7 +203,7 @@ label v10_chloe_hallway:
 
         menu:
             "Cute":
-                $ aubreyLike += 1
+                $ aubrey.points += 1
 
                 u "Cute. Definitely..."
 
@@ -221,9 +219,8 @@ label v10_chloe_hallway:
                 au "Anyways, I'm gonna head to class, see you guys."
 
             "Sexy":
-                $ v10_chloe_sexy = True
                 $ add_point(KCT.BOYFRIEND)
-                $ chloeLike += 1
+                $ chloe.points += 1
 
                 u "Definitely gotta go with sexy."
 
@@ -279,7 +276,7 @@ label v10_chloe_hallway:
             "Have a Rematch":
                 $ add_point(KCT.BOYFRIEND)
                 $ v10_chloe_rematch = True
-                $ chloeLike += 1
+                $ chloe.points += 1
                 
                 $ grant_achievement("on_the_court")
 

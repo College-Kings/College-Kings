@@ -4,7 +4,7 @@
 # Time: Evening
 
 label v14s46a:
-    play music "music/v14/Track Scene 46a_1.mp3" fadein 2
+    play music "music/v12/Track Scene 29_8.mp3" fadein 2
     scene v14s46a_1 # TPP. MC knocking on Lauren's door.
     with dissolve
 
@@ -365,7 +365,7 @@ label v14s46a:
 
         stop music fadeout 3
 
-        play music "music/v14/Track Scene 46a_4.mp3" fadein 2
+        play music "music/v12/Track Scene 18_3.mp3" fadein 2
         scene v14s46a_6g # TPP. Same as v14s46a_6, but MC, mouth open, shocked, sitting up in bed (legs remain out), looking down at the large wet spot in the crotch of his pants, Lauren sitting next to him, look at his wet spt, laughing, mouth closed.
         with dissolve
 
@@ -640,7 +640,7 @@ label v14s46a:
 
         stop music fadeout 3
 
-        play music "music/v14/Track Scene 46a_4.mp3" fadein 2
+        play music "music/v12/Track Scene 18_3.mp3" fadein 2
 
         scene v14s46a_35 # TPP. MC, in Lauren's bed, shocked (liked he snapped out of a bad dream),sitting up but legs extended out on the bed, slightly angry, mouth open.
         with dissolve

@@ -4,7 +4,7 @@
 # Time: Afternoon
 
 label v14s21:
-    play music "music/v14/Track Scene 21.mp3" fadein 2
+    play music "music/v13/Track Scene 30_1.mp3" fadein 2
 
     scene v14s21_1 # TPP. Show MC walking outside infront of the school, slight smile, mouth closed.
     with dissolve
@@ -140,13 +140,13 @@ label v14s21:
 
     menu:
 
-        "That does kinda suck.":
+        "That does kinda suck":
 
             $ add_point(KCT.TROUBLEMAKER)
 
             u "That does kinda suck. I guess we'll have to make the most out of the time we have."
 
-        "Don't worry about it.":
+        "Don't worry about it":
 
             $ add_point(KCT.BOYFRIEND)
 
@@ -250,7 +250,7 @@ label v14s21:
         "Continue":
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
-            $ v14_chloe_sex = True
+            $ sceneList.add("v14_chloe")
             stop music fadeout 3
             jump v14s21a
         

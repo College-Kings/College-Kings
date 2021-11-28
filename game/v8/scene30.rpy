@@ -64,7 +64,7 @@ label v8s30_amberBlowjob:
     else:
         am "Oh wow, I could get used to this."
 
-    play music "music/Erotic Track - Amber Getting It.mp3" fadein 3
+    play music "music/v8/Track Scene 30.mp3" fadein 2
 
     image v8am2bj1 = Movie(play="images/v8/Scene 30/v8am2bj1.webm", loop=True, image="images/v8/Scene 30/2ambj_000.webp", start_image="images/v8/Scene 30/2ambj_000.webp") # BJ TPP
     image v8am2bj1f = Movie(play="images/v8/Scene 30/v8am2bj1f.webm", loop=True, image="images/v8/Scene 30/2ambj_000.webp", start_image="images/v8/Scene 30/2ambj_000.webp")
@@ -270,7 +270,6 @@ label v8s30_nsfwSkipLabel1:
     with dissolve
 
     jump tues_morning_at_joshs
-
 
     ### Animation references:
     # Amber and MC in Josh's bedroom. FYI, in the beginning of the scene, MC is wearing outfit 3 (gray tee, jeans pant) and Amber is wearing outfit 3 (red top, jeans short). Mood of the scene - lustful and horniness as opposed to passionate.

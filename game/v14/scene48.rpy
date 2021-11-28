@@ -5,7 +5,7 @@
 
 label v14s48:
 
-    play music "music/v14/Track Scene 48.mp3" fadein 2
+    play music "music/v13/Track Scene 25.mp3" fadein 2
     scene v14s48_1 # TPP. Show MC and Lindsey entering the coffee shop, both smiling, mouths closed
     with dissolve
 

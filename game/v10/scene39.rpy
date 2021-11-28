@@ -6,7 +6,7 @@ label v10_riley_walk:
 
     scene v10srwh1 # FPP. Riley approaches MC from distance. She looks dirty, smiling, closed.
     with fade
-    play music "music/v10/Scene 39/Track Scene 39.mp3" fadein 3
+    play music "music/v10/Track Scene 39.mp3" fadein 2
     pause 0.75
 
     scene v10srwh1a # FPP. Same camera as v10srwh1. Show Riley, smiling, mouth open.
@@ -64,7 +64,7 @@ label v10_riley_walk:
         
         ri "Did you see Aubrey at the dancing booth? I had no idea she could dance like that."
 
-        if v10s33_aubrey: # -If spoke to Aubrey during freeroam
+        if not "aubrey" in freeroam6: # -If spoke to Aubrey during freeroam
             scene v10srwh3a
             with dissolve
 
@@ -93,7 +93,7 @@ label v10_riley_walk:
     
     ri "Now Aubrey on the other hand, she knows how to dance so I can only imagine. You know?"
 
-    if aubrey_bathroom_sex: # -If MC slept with aubrey
+    if aubreyrs: # -If MC slept with aubrey
         scene v10srwh3a
         with dissolve
 

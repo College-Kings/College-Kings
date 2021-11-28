@@ -7,7 +7,7 @@ label v10_sam_kitchen:
     with fade
     u "Samantha???"
 
-    play music "music/v10/Scene 25a/Track Scene 25a.mp3" fadein 3
+    play music "music/v10/Track Scene 25a.mp3" fadein 2
 
     pause 0.5
 
@@ -35,7 +35,7 @@ label v10_sam_kitchen:
         "Make her a cocktail":
             $ makeSamCock = True
             $ add_point(KCT.BOYFRIEND)
-            $ samLike += 1
+            $ samantha.points += 1
             scene v10skt2 
             with dissolve
             u "*Sighs* You're something else you know that? *Chuckles* I rushed all the way over here worried."
@@ -92,7 +92,7 @@ label v10_sam_kitchen:
                 "Drink with her":
                     $ drinkWsam = True
                     $ add_point(KCT.BOYFRIEND)
-                    $ samLike += 1
+                    $ samantha.points += 1
                     scene v10skt4a 
                     with dissolve
                     u "Scared? I'd never pass on a drink."
@@ -103,7 +103,7 @@ label v10_sam_kitchen:
                     sa "See! That's why I called you."
 
                 "Pass":
-                    $ samLike -= 1
+                    $ samantha.points -= 1
                     scene v10skt4a 
                     with dissolve
 
@@ -118,7 +118,7 @@ label v10_sam_kitchen:
                     with dissolve
 
         "Get mad":
-            $ samLike -= 1
+            $ samantha.points -= 1
             $ add_point(KCT.TROUBLEMAKER)
             scene v10skt2
             with dissolve
@@ -173,7 +173,7 @@ label v10_sam_kitchen:
     menu:
         "Tease her":
             $ add_point(KCT.BOYFRIEND)
-            $ samLike += 1
+            $ samantha.points += 1
             scene v10skt4a
             with dissolve
 
@@ -184,7 +184,7 @@ label v10_sam_kitchen:
 
             sa "I mean you're free to do what you want... As long as when I call you come running. *Chuckles*"
         "No":
-            $ samLike -= 1
+            $ samantha.points -= 1
             scene v10skt4a
             with dissolve
             u "No, I was uhm... doing things, you know. Not girl related things."
@@ -236,7 +236,7 @@ label v10_sam_kitchen:
 
     menu:
         "Lion":
-            $ samLike += 1
+            $ samantha.points += 1
             scene v10skt4a
             with dissolve
 
@@ -307,7 +307,6 @@ label v10_sam_kitchen:
     ca "Sam? Why are you sleeping on the couch?"
 
     if drinkWsam:
-
         scene v10skt8a # FPP. same camera as v10skt8, Show Cameron in the kitchen, angry look mouth open
         with dissolve
 

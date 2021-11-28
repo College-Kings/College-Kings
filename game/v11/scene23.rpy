@@ -8,11 +8,11 @@
 #screen 3: Penelope(Stood at the helm display)(to the right of screen 2)
 
 label v11s23_freeroamstart: # Start of freeroam
-    play music "music/v11/Scene 14/Track Scene 14.mp3" fadein 2
+    play music "music/v11/Track Scene 14.mp3" fadein 2
     call screen v11s23_entrance
     
 label v11s23_chris1:
-    $ v11s23_chris1 = True
+    $ freeroam8.add("chris")
 
     scene v11frmch1 # FPP Show Chris talking on the phone, neutral expression, mouth closed
     #with dissolve
@@ -130,7 +130,7 @@ label v11s23_chris1:
     call screen v11s23_mid
 
 label v11s23_mrlee1:
-    $ v11s23_mrlee1 = True
+    $ freeroam8.add("lee")
 
     scene v11frmlee1 # FPP Show Mr. Lee with bust behind him, Mr. Lee looking at MC, neutral expression, mouth open
     #with dissolve
@@ -300,7 +300,7 @@ label v11s23_mrlee1:
     call screen v11s23_mid
 
 label v11s23_riley1:
-    $ v11s23_riley1 = True
+    $ freeroam8.add("riley")
 
     scene v11frmri1 # FPP Show Riley leaning over barrier and reaching her arm out toward triceratops, Riley smiling with mouth closed
     #with dissolve
@@ -582,7 +582,7 @@ label v11s23_riley1:
     call screen v11s23_entrance
 
 label v11s23_penelope1:
-    $ v11s23_penelope1 = True
+    $ freeroam8.add("penelope")
 
     scene v11frmpe1 # FPP Show Penelope starting to walk away from helmet exhibit right as MC goes to talk to her
     #with dissolve

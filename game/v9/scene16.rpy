@@ -425,8 +425,7 @@ label v9_emily_dorm:
         menu:
             "Make a move on Emily":
                 u "(This feels like the right time)"
-                $ v9_em_dorm_scene = True
-                #$ add_point(KCT.TROUBLEMAKER, sum([ bathroomblowjob, v8_chloesex, v8_riley_lewd_ending, v8_hocoamber, amberSexAtJoshs, v9_aubrey_lake ])) ###Loyaltymod
+                $ sceneList.add("v9_emily")
 
             "Head home":
                 scene v9emi37 # TPP. Show MC walking towards the exit of Emily's room, Emily in view still sat on the bed, cheeky grin, mouth open, MC smile, mouth closed.
@@ -505,7 +504,7 @@ label v9_emily_dorm:
 
     u "Oh God. I've missed this."
 
-    play music "music/v9/Scene 16/Scene Track 16.mp3" fadein 2
+    play music "music/v9/Track Scene 16.mp3" fadein 2
 
     scene v9emi13b # FPP. Same camera as v9emi13, on her knees on the floor looking up at camera, seductive expression, Emily mouth open.
     with dissolve

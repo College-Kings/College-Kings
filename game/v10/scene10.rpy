@@ -10,7 +10,7 @@ init python:
         lindsey.messenger.addReply("On my way")
 
 label v10_sun_morn:
-    play music "music/v10/Scene 10/Track Scene 10.mp3" fadein 3
+    play music "music/v10/Track Scene 10.mp3" fadein 2
     if joinwolves:
         scene v10sum1 # TPP. Show MC in his Wolves bed looking up at the ceiling, MC looks tired.
         with fade

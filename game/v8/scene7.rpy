@@ -29,7 +29,7 @@ label caf_w_aub:
     scene scaf8 # FPP. Close up of Aubrey sat at cafe table, Aubrey slight smile.
     with dissolve
 
-    if aubreyrs == True:
+    if aubreyrs:
 
         u "How you doin?"
 
@@ -109,7 +109,6 @@ label caf_w_aub:
         au "You have a lot going on today?"
 
         if protest:
-
             play sound "sounds/call.mp3"
 
             scene scaf9 # TPP. Show MC and Aubrey, MC has his phone in hand as Autumn is calling him. Aubrey neutral expression, MC neutral expression mouth open.
@@ -129,7 +128,6 @@ label caf_w_aub:
             jump cafe_no_call
 
     else:
-
         u "Eating alone?"
 
         scene scaf8a
@@ -168,7 +166,6 @@ label caf_w_aub:
         au "I actually had a lot of fun at the dance."
 
         if ending != "amber":
-
             scene scaf8
             with dissolve
 
@@ -189,7 +186,6 @@ label caf_w_aub:
         au "So you got a lot going on today?"
 
         if protest:
-
             play sound "sounds/call.mp3"
 
             scene scaf9
@@ -199,6 +195,7 @@ label caf_w_aub:
 
             scene scaf9a # TPP. Same camera as scaf9a, Show MC walking away from the table now on the phone, MC mouth closed. Aubrey neutral expression mouth open.
             with dissolve
+            
             stop sound
             play sound "sounds/answercall.mp3"
             au "Okay."
@@ -209,33 +206,36 @@ label caf_w_aub:
             jump cafe_no_call
 
 label cafe_no_call:
-scene scaf8
-with dissolve
-if joinwolves:
-    u "Nothing in particular except for some of the Wolves' stuff."
-else:
-    u "Apes joining ceremony is tonight, so there's that."
-u "What about you?"
+    scene scaf8
+    with dissolve
 
-scene scaf8a
-with dissolve
-au "Same old, same old."
+    if joinwolves:
+        u "Nothing in particular except for some of the Wolves' stuff."
 
-scene scaf8
-with dissolve
-u "Mhm. Can I have a bite? I'm starving."
+    else:
+        u "Apes joining ceremony is tonight, so there's that."
 
-stop music fadeout 2
+    u "What about you?"
 
-scene black
-with Dissolve(1)
-pause 0.75
+    scene scaf8a
+    with dissolve
+    au "Same old, same old."
 
-if joinwolves:
-    jump after_prot_wolves
-else:
-    jump after_prot_dorm
+    scene scaf8
+    with dissolve
+    u "Mhm. Can I have a bite? I'm starving."
 
+    stop music fadeout 3
+
+    scene black
+    with Dissolve(1)
+    pause 0.75
+
+    if joinwolves:
+        jump after_prot_wolves
+
+    else:
+        jump after_prot_dorm
 
 label au_prot_call:
     scene scaf10 # TPP. Show MC stood in a corner of the café on the phone to Autumn, neutral expression, mouth open.
@@ -253,10 +253,9 @@ label au_prot_call:
     menu:
         "Go to the protest":
             $ add_point(KCT.BOYFRIEND)
-            $ v8AutProtest = True
             jump caf_prot_au
+
         "Don't go to the protest":
-            $ v8AutProtest = False
             jump caf_no_prot_au
 
 label caf_prot_au:
@@ -305,7 +304,7 @@ label caf_prot_au:
 
     au "Yeah."
 
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene scaf14 # TPP. Show MC walking towards the cafe door, leaving the cafe, Camera from behind MC.
     with dissolve
@@ -391,7 +390,7 @@ label caf_no_prot_au:
     with dissolve
     pause 0.75
     
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene black
     with Dissolve(1)
@@ -399,5 +398,6 @@ label caf_no_prot_au:
 
     if joinwolves:
         jump after_prot_wolves
+
     else:
         jump after_prot_dorm

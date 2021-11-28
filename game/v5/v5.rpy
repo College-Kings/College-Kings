@@ -63,7 +63,7 @@ label v5start:
     no "What are you doing here? And why did you just punch the wall?"
 
     menu:
-        "It's Chloe.":
+        "It's Chloe":
             scene s374a # nora close up questioning
             with dissolve
 
@@ -99,7 +99,7 @@ label v5start:
 
                     u "*Drunk* My uhm, my friend, he- he said that Chloe did some shady shit in the past and I just had to find out the truth!"
 
-                    scene s374d# nora slight laugh, cocky
+                    scene s374d # nora slight laugh, cocky
                     with dissolve
 
                     no "And what did you find out?"
@@ -163,7 +163,7 @@ label v5start:
 
                     u "*Drunk* Night..."
 
-        "It's nothing.":
+        "It's nothing":
             scene s374a
             with dissolve
 
@@ -185,7 +185,7 @@ label v5start:
 
     u "(Way to mess things up with Chloe... great fucking job, [name].)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s376 # you in bed laying on your side looking at the wall
     with Fade (2,0,2)
@@ -287,7 +287,7 @@ label jorepb:
     cl "I didn't do anything shady. Grayson is just spreading lies like he always is."
 
     menu:
-        "I believe you.":
+        "I believe you":
             $ add_point(KCT.BOYFRIEND)
             $ chloemad = False
 
@@ -357,7 +357,7 @@ label jorepb:
 
             jump newchloec
 
-        "You're lying.":
+        "You're lying":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s370a
@@ -447,7 +447,7 @@ label jorepb:
             scene s372c # you turn your head
             with dissolve
 
-            stop music fadeout 2.0
+            stop music fadeout 3
 
             " "
 
@@ -459,7 +459,7 @@ label jorepb:
             no "What are you doing here? And why did you just punch the wall?"
 
             menu:
-                "It's Chloe.":
+                "It's Chloe":
                     scene s374a # nora close up questioning
                     with dissolve
 
@@ -495,7 +495,7 @@ label jorepb:
 
                             u "My uhm, my friend said that Chloe did some shady shit in the past and I just had to find out the truth."
 
-                            scene s374d# nora slight laugh, cocky
+                            scene s374d # nora slight laugh, cocky
                             with dissolve
 
                             no "And what did you find out?"
@@ -559,7 +559,7 @@ label jorepb:
 
                             u "Night..."
 
-                "It's nothing.":
+                "It's nothing":
                     scene s374a
                     with dissolve
 
@@ -581,7 +581,7 @@ label jorepb:
 
     u "(Way to mess things up with Chloe... great fucking job, [name].)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s376 # you in bed laying on your side looking at the wall
     with Fade (2,0,2)
@@ -678,7 +678,7 @@ label newchloec:
             if amber.messenger.replies:
                 call screen phone
             if amber.messenger.replies:
-                "(Maybe it's Lauren and she wants to talk about what happened? I should definitely check.)"
+                u "(Maybe it's Lauren and she wants to talk about what happened? I should definitely check.)"
                 jump phoney
 
         jump continueaf
@@ -727,7 +727,7 @@ label continuez:
         u "(If we kiss in public, other girls are bound to find out that I'm dating Lauren.)"
 
         menu:
-            "Complaints? I love it.":
+            "Complaints? I love it":
                 $ laurenpublic = True
                 $ add_point(KCT.BOYFRIEND)
 
@@ -743,7 +743,7 @@ label continuez:
 
                 u "Hahaha, oops."
 
-            "I don't like kissing in public.":
+            "I don't like kissing in public":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Uhm, actually do you mind if we don't do that in public?"
@@ -777,7 +777,7 @@ label continuez:
                 u "(Shit, she's pushing back. But if I want to avoid other girls finding out about us, I can't just kiss her in public.)"
 
                 menu:
-                    "Sorry, not in public.":
+                    "Sorry, not in public":
                         $ laurenpublic = False
                         $ add_point(KCT.TROUBLEMAKER)
                         
@@ -793,7 +793,7 @@ label continuez:
                         scene s380c
                         with dissolve
 
-                    "Actually, a kiss is fine.":
+                    "Actually, a kiss is fine":
                         $ laurenpublic = True
 
                         u "Actually, you're right, sorry. A kiss is fine."
@@ -824,8 +824,6 @@ label continuez:
     u "Anyways, why exactly are we doing this in a classroom?"
 
 label continueag:
-    $ trolley = True
-
     scene s380
     with dissolve
 
@@ -881,6 +879,7 @@ label gokissb:
     menu:
         "Agree":
             $ add_point(KCT.BOYFRIEND)
+            $ laurentest.add("q1")
 
             scene s382a
             with dissolve
@@ -888,7 +887,6 @@ label gokissb:
             u "Agree."
 
         "Disagree":
-            $ la1 = False
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s382a
@@ -905,6 +903,7 @@ label gokissb:
         "Agree":
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.BRO)
+            $ laurentest.add("q2")
 
             scene s382a
             with dissolve
@@ -913,7 +912,6 @@ label gokissb:
 
         "Disagree":
             $ add_point(KCT.TROUBLEMAKER)
-            $ la2 = False
 
             scene s382a
             with dissolve
@@ -933,6 +931,7 @@ label gokissb:
     menu:
         "Agree":
             $ add_point(KCT.BOYFRIEND)
+            $ laurentest.add("q3")
 
             scene s382a
             with dissolve
@@ -1003,7 +1002,6 @@ label gokissb:
 
         "Disagree":
             $ add_point(KCT.BRO)
-            $ la3 = False
 
             scene s382a
             with dissolve
@@ -1072,7 +1070,7 @@ label gokissb:
     la "Have you heard of the trolley problem?"
 
     menu:
-        "Yes.":
+        "Yes":
             scene s382a
             with dissolve
 
@@ -1083,7 +1081,7 @@ label gokissb:
 
             la "Uhm yeah, that's broadly it."
 
-        "No.":
+        "No":
             scene s382a
             with dissolve
 
@@ -1122,7 +1120,7 @@ label gokissb:
     call screen trolleyskip
 
 label continuetrolley:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     play music "sounds/train.mp3"
     scene s383a # you looking at lauren mouth closed on train
@@ -1140,7 +1138,7 @@ label continuetrolley:
 
     u "Okay, yeah."
 
-    if la1:
+    if "q1" in laurentest:
         la "You said that you struggle making difficult decisions, let's see how that impacts your behavior in the following situation."
 
     else:
@@ -1174,7 +1172,6 @@ label continuetrolley:
 label trolleyaa: # you don't press the lever
     stop sound
     $ add_point(KCT.BOYFRIEND)
-    $ trolleya = False
 
     scene s388 # hands away from lever
     with dissolve
@@ -1193,7 +1190,6 @@ label trolleyaa: # you don't press the lever
 label trolleyab: # you do press the lever
     stop sound
     $ add_point(KCT.BRO)
-    $ trolleya = True
     play sound "sounds/lever.mp3"
     scene s388e #you press lever
     with dissolve
@@ -1223,7 +1219,7 @@ label continueam:
     la "Are you okay with doing another one?"
 
     menu:
-        "Yeah, let's do it.":
+        "Yeah, let's do it":
             scene s382a
             with dissolve
 
@@ -1251,7 +1247,7 @@ label continueam:
 
             u "Alright."
 
-            if la2:
+            if "q2" in laurentest:
                 la "You said that you consider yourself an animal lover. Let's test how much you really love animals."
 
             else:
@@ -1282,13 +1278,11 @@ label continueam:
             play sound "sounds/countdown.mp3"
             call screen trolleyProblem("trolleyba", "trolleybb")
 
-        "I'd rather not.":
-            $ trolleyskip = 2
+        "I'd rather not":
             jump fb_b
 
 label trolleyba: # you don't press the lever
     stop sound
-    $ trolleyb = False
     $ add_point(KCT.TROUBLEMAKER)
     scene s388 # hands away from lever
     with dissolve
@@ -1316,7 +1310,7 @@ label trolleybb: # you do press the lever
     scene s390a # your face full of blood
     with vpunch
 
-    if trolleyb and la2:
+    if "q2" in laurentest:
         $ grant_achievement("peta_public_enemy")
 
     u "Ahh fuck!"
@@ -1336,7 +1330,7 @@ label continuean:
     la "Are you okay with doing the last one?"
 
     menu:
-        "Yeah, okay.":
+        "Yeah, okay":
             scene s382a
             with dissolve
 
@@ -1363,7 +1357,7 @@ label continuean:
 
             u "Sure thing."
 
-            if la3:
+            if "q3" in laurentest:
                 la "You said that you consider yourself a relationship person, let's put that to the test."
 
             else:
@@ -1396,14 +1390,12 @@ label continuean:
             play sound "sounds/countdown.mp3"
             call screen trolleyProblem("trolleyca", "trolleycb")
 
-        "I'd rather not.":
-            $ trolleyskip = 1
+        "I'd rather not":
 
             jump fb_b
 
 label trolleyca: # you don't press the lever
     stop sound
-    $ trolleyc = False
     $ add_point(KCT.BRO)
 
     scene s388 # hands away from lever
@@ -1422,7 +1414,6 @@ label trolleyca: # you don't press the lever
 
 label trolleycb: # you do press the lever
     stop sound
-    $ trolleyc = True
     $ add_point(KCT.BOYFRIEND)
     play sound "sounds/lever.mp3"
     scene s388e #you press lever
@@ -1452,7 +1443,7 @@ label continueao:
     la "Sorry, I had to ask around in order to find a weak spot. My psych professor said this was essential for the last problem to work."
 
     menu:
-        "At least we're done now.":
+        "At least we're done now":
             $ add_point(KCT.BOYFRIEND)
 
             scene s382a
@@ -1523,9 +1514,8 @@ label continueao:
 
             jump hospitala
 
-        "That was too far.":
+        "That was too far":
             $ add_point(KCT.TROUBLEMAKER)
-            $ laurenokay = False
 
             scene s382a
             with dissolve
@@ -1562,7 +1552,6 @@ label continueao:
             jump hospitala
 
 label skiptrolley:
-    $ trolleyskip = 3
     scene s382
     with fade
 
@@ -2097,7 +2086,7 @@ label continueaf:
     u "(If we kiss in public, other girls are bound to find out that I'm dating Lauren.)"
 
     menu:
-        "Complaints? I love it.":
+        "Complaints? I love it":
             $ laurenpublic = True
             $ add_point(KCT.BOYFRIEND)
 
@@ -2113,7 +2102,7 @@ label continueaf:
             jump gokissb
 
 
-        "I don't like kissing in public.":
+        "I don't like kissing in public":
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Uhm, actually do you mind if we don't do that in public?"
@@ -2147,7 +2136,7 @@ label continueaf:
             u "(Shit, she's pushing back. But if I want to avoid other girls finding out about us, I can't just kiss her in public.)"
 
             menu:
-                "Sorry, not in public.":
+                "Sorry, not in public":
                     $ laurenpublic = False
                     $ add_point(KCT.TROUBLEMAKER)
                     
@@ -2164,7 +2153,7 @@ label continueaf:
 
                     jump gokissb
 
-                "Actually, a kiss is fine.":
+                "Actually, a kiss is fine":
                     $ laurenpublic = True
 
                     u "Actually, you're right, sorry. A kiss is fine."
@@ -2196,7 +2185,7 @@ label continueaf:
     ############## Bus to hospital with Riley
 
 label hospitala:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     play music "sounds/bus.mp3"
     scene s399 #Riley and and MC are on the bus. They look at each other affectionately. MC readjusts awkwardly.
@@ -2242,7 +2231,7 @@ label hospitala:
     u "Mhmmm..."
 
     pause 0.5
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     play sound "sounds/busstop.mp3"
 
@@ -2321,7 +2310,7 @@ label hospitala:
     scene s406 #Riley, MC, and Imre walk back to the bus stop.
     with fade
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     pause 1.0
 
@@ -2453,7 +2442,7 @@ label hospitala:
     with dissolve
 
     pause 0.5
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s416 # Imre, Mc and Riley in front of your dorm
     with Fade(1,0,1)
@@ -2552,7 +2541,7 @@ label hospitala:
 
     u "Fuck..."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s419  # u pacing around in room
     with fade
@@ -2714,7 +2703,6 @@ label hospitala:
     menu:
         "Confront Adam":
             $ add_point(KCT.BRO)
-            $ confrontadam = True
 
             scene s397
             with dissolve
@@ -2794,14 +2782,12 @@ label hospitala:
                                     jump fl_a
 
                                 "Keep it to yourself":
-                                    $ tellschool = False
                                     $ add_point(KCT.BRO)
 
                                     jump fl_b
 
         "Leave it":
             $ add_point(KCT.BOYFRIEND)
-            $ confrontadam = False
 
             scene s397b
             with dissolve
@@ -2812,22 +2798,19 @@ label hospitala:
 
             menu:
                 "Tell the school":
-
                     $ tellschool = True
                     $ add_point(KCT.BOYFRIEND)
                     jump fl_a
 
                 "Keep it to yourself":
-
-                    $ tellschool = False
                     $ add_point(KCT.BRO)
                     jump fl_b
 
 ########## Adam fight
 
     label fk_a:
-    stop music fadeout 2.0
-    image af2 = Movie(play="images/af2.webm", start_image="images/af2start.webp", image="images/af2pic.webp", loop = False)
+    stop music fadeout 3
+    image af2 = Movie(play="images/v5/af2.webm", start_image="images/v5/af2start.webp", image="images/v5/af2pic.webp", loop = False)
 
 
     play sound "sounds/hs.mp3"
@@ -2925,7 +2908,7 @@ label hospitala:
             $ adamstance = renpy.random.choice([1, 2, 3, 4])
             $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
 
-            if simadamfight == True:
+            if simadamfight:
                 if simadam == 1 or simadam == 2 or simadam == 3:
                     jump adamhookhit
                 if simadam == 4 or simadam == 5 or simadam == 6:
@@ -2946,7 +2929,7 @@ label hospitala:
             $ adamstance = renpy.random.choice([1, 2, 3, 4])
             $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
 
-            if simadamfight == True:
+            if simadamfight:
                 if simadam == 1 or simadam == 2 or simadam == 3:
                     jump adamjabhit
                 if simadam == 4 or simadam == 5 or simadam == 6:
@@ -2964,7 +2947,7 @@ label hospitala:
             $ adamstance = renpy.random.choice([1, 2, 3, 4])
             $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
 
-            if simadamfight == True:
+            if simadamfight:
                 if simadam == 1 or simadam == 2 or simadam == 3:
                     jump adambodyhit
                 if simadam == 4 or simadam == 5 or simadam == 6:
@@ -2982,7 +2965,7 @@ label hospitala:
             $ adamstance = renpy.random.choice([1, 2, 3, 4])
             $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
 
-            if simadamfight == True:
+            if simadamfight:
                 if simadam == 1 or simadam == 2 or simadam == 3:
                     jump adamkickhit
                 if simadam == 4 or simadam == 5 or simadam == 6:
@@ -3004,7 +2987,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2
@@ -3055,7 +3038,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2
@@ -3107,7 +3090,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2
@@ -3158,7 +3141,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2
@@ -3210,7 +3193,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2
@@ -3261,7 +3244,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2
@@ -3313,7 +3296,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2
@@ -3364,7 +3347,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2
@@ -3554,11 +3537,9 @@ label hospitala:
             jump adamattack
 
 label fl_b: # keep it to yourself
-    $ tellschool = False
-
     u "(It's best if I keep to myself. Telling the school would turn both Imre and Adam against me...)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     u "(I need to find Imre before he finds Adam.)"
 
@@ -3567,7 +3548,7 @@ label fl_b: # keep it to yourself
 label fl_a:  # tell the school
     $ tellschool = True
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     $ grant_achievement("snitch")
 
@@ -3690,7 +3671,7 @@ label fl_a:  # tell the school
     scene s426a # mc walks away
     with dissolve
 
-    stop music fadeout 0.5
+    stop music fadeout 3
 
     u "(I need to find Imre.)"
 
@@ -3739,7 +3720,7 @@ label youfinishadam: #### You beat adam
     ch "Christ man, you're a natural. Have you considered joining a frat?"
 
     menu:
-        "Yeah, I'm interested.":
+        "Yeah, I'm interested":
             $ add_point(KCT.BRO)
 
             scene s428a
@@ -3770,13 +3751,13 @@ label youfinishadam: #### You beat adam
             scene s427
             with dissolve
 
-            stop music fadeout 2.0
+            stop music fadeout 3
 
             u "(Actually, I should probably go find Imre and tell him about what happened.)"
 
             jump findimre
 
-        "Not really.":
+        "Not really":
             $ add_point(KCT.BOYFRIEND)
 
             scene s428a
@@ -3966,7 +3947,7 @@ label adamfinish: ###Adam beats you
 
     u "(Actually, I should probably go find Imre and tell him about what happened.)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     u "(But first, I gotta wash the blood of my face.)"
 
@@ -4260,7 +4241,7 @@ label findimre:
         u "Alright. Good luck, man."
 
     label continueba: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s442 # you on a park bench depressed
     with Fade (1,0,1)

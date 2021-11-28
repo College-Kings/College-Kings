@@ -67,7 +67,7 @@ label walk_home_w_gray:
 
         gr "Not just me."
 
-    if hesitantwgrayson:
+    else:
         gr "That's the best part!"
 
         scene v8swbg2b

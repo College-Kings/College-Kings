@@ -89,8 +89,7 @@ label v13s57:
 
     no "I'm out of money, so [name] was actually the one who paid for it."
 
-    if msrosers:
-
+    if msrosers and joinwolves: #sanitizing pathbuilder input
         scene v13s57_6 # TPP. Show Ms Rose sincerely hugging MC, Rose very grateful, Rose mouth open
         with dissolve
 

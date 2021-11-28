@@ -7,7 +7,7 @@ label v9_ending:
     scene v9end1 # TPP. Show MC walking near the exit of the warehouse.
     with fade
 
-    play music "music/v9/Scene 45/Track Scene 45.mp3" fadein 2
+    play music "music/v9/Track Scene 45.mp3" fadein 2
 
     pause 1
 
@@ -26,7 +26,7 @@ label v9_ending:
 
     pause 1
 
-    stop music fadeout 5
+    stop music fadeout 3
 
     scene v9end5 # TPP. Close up of MC's face, MC looking to the side, MC's face grows even more worried.
     with dissolve

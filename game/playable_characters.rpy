@@ -8,6 +8,17 @@ init python:
             self.money = 0
             self.inventory = Inventory()
 
+            self.quirks = {
+                "animal_lover": 0,
+                "boomer": 0,
+                "hardass": 0,
+                "pop_culture": 0,
+                "prankster": 0
+            }
+
+            self.relationships = set()
+            self.girlfriends = set()
+
         def add_item(self, item):
             if item.cost > self.money:
                 raise UnhandledTranscribingError("{} price is higher then user money".format(item.name))

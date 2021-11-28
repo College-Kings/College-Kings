@@ -4,19 +4,18 @@
 # Time: Saturday Night
  
 label v10start:
-   scene v10sta1 # FPP. Show Imre and ryan on the floor fighting, imre on bottom, ryan on top, angry faces, mouths closed
-   with dissolve
-   u "What are you guys doing!?"
+    scene v10sta1 # FPP. Show Imre and ryan on the floor fighting, imre on bottom, ryan on top, angry faces, mouths closed
+    with dissolve
+    u "What are you guys doing!?"
 
-   play music "music/v10/Scene 1/Track Scene 1.mp3" fadein 3
+    play music "music/v10/Track Scene 1.mp3" fadein 2
 
-   scene v10sta2 # FPP. Show MC trying to pull Ryan and imre apart, imre/ryan angry, mc worried look, mouths closed
-   with dissolve
- 
-   pause 0.75
- 
-   if joinwolves:
+    scene v10sta2 # FPP. Show MC trying to pull Ryan and imre apart, imre/ryan angry, mc worried look, mouths closed
+    with dissolve
 
+    pause 0.75
+
+    if joinwolves:
         scene v10sta2 # FPP. Show Imre and ryan now standing in fighting stances both with fists raised, angry look on imre/ryan, ryan mouth closed, imre mouth open
         with dissolve
 
@@ -27,7 +26,7 @@ label v10start:
 
         ry "You're gonna wish you hadn't called off your back up."
 
-   else:
+    else:
         scene v10sta2
         with dissolve
   
@@ -54,27 +53,28 @@ label v10start:
  
         ca "Why the fuck would you wrestle him?! Go for a fucking punch if you mean it!"
 
-   stop music fadeout 3
+    stop music fadeout 3
 
-   if joinwolves:
-       scene v10sta4a # FPP. Same Camera as v10sta4, imre now left scene, Show Sebastian near the warehouse doors facing camera, neutral look, mouth open
-       with dissolve
+    if joinwolves:
+        scene v10sta4a # FPP. Same Camera as v10sta4, imre now left scene, Show Sebastian near the warehouse doors facing camera, neutral look, mouth open
+        with dissolve
  
-       se "Why the fuck would you wrestle him?! Go for a fucking punch if you mean it!"
- 
-       jump v10_ryan_v_perry
-   else:
-       scene v10sta5 # FPP. Show Cameron Facing Camera, neutral look, mouth open
-       with dissolve
- 
-       ca "Don't you have a fight to get ready for?"
- 
-       scene v10sta5a # FPP. Same camera as v10sta5,Show Cameron Facing Camera, neutral look, mouth closed
-       with dissolve
- 
-       u "(This ought to be a fucking show.)"
- 
-       scene v10sta6 # TPP. Show MC back to camera heading towards warehouse
-       with dissolve
+        se "Why the fuck would you wrestle him?! Go for a fucking punch if you mean it!"
 
-       jump v10_imre_vs_caleb
+        jump v10_ryan_v_perry
+
+    else:
+        scene v10sta5 # FPP. Show Cameron Facing Camera, neutral look, mouth open
+        with dissolve
+
+        ca "Don't you have a fight to get ready for?"
+
+        scene v10sta5a # FPP. Same camera as v10sta5,Show Cameron Facing Camera, neutral look, mouth closed
+        with dissolve
+
+        u "(This ought to be a fucking show.)"
+
+        scene v10sta6 # TPP. Show MC back to camera heading towards warehouse
+        with dissolve
+
+        jump v10_imre_vs_caleb

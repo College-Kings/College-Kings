@@ -9,7 +9,7 @@ label v14s45a:
 
     u "Hey there. So, what's the news?"
 
-    play music "music/v14/Track Scene 45a_1.mp3" fadein 2
+    play music "music/v13/Track Scene 60_1.mp3" fadein 2
 
     if not v14_amber_clean:
         scene v14s45a_1a # FPP. Same as v14s45a_1, MC looking at Amber, Amber now looking at MC, Amber tired and high, Amber neutral expression, mouth open.
@@ -389,12 +389,12 @@ label v14s45a:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v14/Track Scene 45a_2.mp3" fadein 2
+    play music "music/v13/Track Scene 59_1.mp3" fadein 2
 
     scene v14s45a_6 # FPP. MC looking out at the park
     with dissolve
 
-    if v14_concert_distraction: #choosing the concert to distract Chloe
+    if (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction: #choosing the concert to distract Chloe
         play sound "sounds/vibrate.mp3"
 
         u "(Let's check it out.)"

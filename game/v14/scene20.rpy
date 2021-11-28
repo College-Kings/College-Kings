@@ -4,7 +4,7 @@
 # Time: Tuesday
 
 label v14s20:
-    play music "music/v14/Track Scene 20.mp3" fadein 2
+    play music "music/v13/Track Scene 21.mp3" fadein 2
 
     scene v14s20_1 # FPP Show Autumn, in school hallway, handing out candy to people walking by, smiling with mouth open
     with dissolve

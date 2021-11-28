@@ -5,7 +5,7 @@
 
 label v14s49:
 
-    play music "music/v14/Track Scene 49.mp3" fadein 2
+    play music "music/v13/Track Scene 23.mp3" fadein 2
 
     scene v14s49_1 # TPP. Show MC walking down the sidewalk towards the Chicks' house, slight smile, mouth closed.
     with dissolve
@@ -14,7 +14,7 @@ label v14s49:
 
     u "(What do we have here?)"
 
-    if v14_concert_distraction: #Placeholder for concert distraction
+    if (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction: #Placeholder for concert distraction
         scene v14s49_2 # TPP. MC stopped walking looking at his phone, slight smile, mouth closed.
         with dissolve
 

@@ -4,7 +4,7 @@
 # Time: Afternoon
 label v10_aft_walk_home:
 
-    play music "music/v10/Scene 23/Track Scene 23.mp3" fadein 3
+    play music "music/v10/Track Scene 23.mp3" fadein 2
 
     scene v10smwh1 # TPP. Show MC walking on the sidewalk. Normal expression, mouth closed.
     with fade

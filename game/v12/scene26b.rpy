@@ -10,7 +10,7 @@ label v12_chase_nora:
     
     pause 0.5
 
-    play music "music/v12/Scene 26b/Track Scene 26b.mp3" fadein 2
+    play music "music/v12/Track Scene 26b.mp3" fadein 2
     
     scene v12cn2 # TPP Show MC, at Nora's door, opening it
     with dissolve
@@ -100,7 +100,6 @@ label v12_chase_nora:
 
     menu:
         "Support Nora":
-            $ supported_nora = True
             $ nora.points += 1
 
             u "I'll be honest, I have nothing against Chris as a person. But since we've been in Europe, I've gotten to see into your relationship a bit more, and it makes me look at him a little differently."

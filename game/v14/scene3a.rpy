@@ -4,7 +4,7 @@
 # Time: Night
 
 label v14s03a:
-    play music "music/v14/Track Scene 3a_1.mp3" fadein 2
+    play music "music/v13/Track Scene 4.mp3" fadein 2
     
     scene v14s03a_1 # TPP. MC with Imre and Ryan right behind him, far away, walking towards the night gambler, MC/Gambler neutral expression, mouth closed,Ryan/Imre, smile, mouth closed
     with dissolve
@@ -137,7 +137,7 @@ label v14s03a:
             pause 0.75
             
             stop music fadeout 3
-            play music "music/v14/Track Scene 3a_2.mp3" fadein 2
+            play music "music/v13/Track Scene 29_2.mp3" fadein 2
 
             scene v14s03a_5a # TPP. Gambler grabs MC's arm to prevent him from leaving. 
             with dissolve
@@ -210,7 +210,7 @@ label v14s03a:
 
         "Give it a try": # -If Give it a try
             stop music fadeout 3
-            play music "music/v14/Track Scene 3a_2.mp3" fadein 2
+            play music "music/v13/Track Scene 29_2.mp3" fadein 2
 
             $ add_point(KCT.TROUBLEMAKER)
             scene v14s03a_2
@@ -289,7 +289,6 @@ label v14s03a:
             
             menu:
                 "Left cup": # -If Left cup
-                    $ v14s03a_left_cup = True
                     scene v14s03a_3h # FPP. Same as v14s03a_3g, but MC's hand points at the left cup.
                     with dissolve
 
@@ -298,6 +297,38 @@ label v14s03a:
                     scene v14s03a_3j # FPP Same as v14s03a_3g, but with Gambler's hand lifting up left cup and there's no ball.
                     with dissolve
                     
+                    pause 0.75
+
+                    scene v14s03a_2a
+                    with dissolve
+                    
+                    ngam "Sun just ain't shining on you today, brother man."
+
+                    scene v14s03a_4
+                    with dissolve
+
+                    imre "Wait, what?! Let me see the other cup!"
+                    
+                    scene v14s03a_2a
+                    with dissolve
+
+                    ngam "No problem."
+
+                    scene v14s03a_3l # FPP. Close up, Gambler tilts LEFT cup forward (like he is going to lift it up).
+                    with dissolve
+
+                    pause 0.75
+
+                    scene v14s03a_3m # FPP. Same as v14s03a_3l, but inside the Gambler's sleevethere is a the ball rolling out of it towards the titlted cup.
+                    with dissolve
+                    
+                    pause 1
+
+                    scene v14s03a_3n # FPP. Same as v14s03a_3l, but Gambler lifts up the LEFT cup and there is a ball under it.
+                    with dissolve
+
+                    pause 0.75
+
                 "Right cup": # -If Right cup
                     scene v14s03a_3i # FPP. Same as v14s03a_3g, but MC's hand points at the right cup.
                     with dissolve
@@ -307,56 +338,37 @@ label v14s03a:
                     scene v14s03a_3k # FPP Same as v14s03a_2g, but with Gamlber's hand lifting up right cup and there's no ball.
                     with dissolve
                     
-            # End cup choice
+                    pause 0.75
 
-            pause 0.75
+                    scene v14s03a_2a
+                    with dissolve
+                    
+                    ngam "Sun just ain't shining on you today, brother man."
 
-            scene v14s03a_2a
-            with dissolve
-            
-            ngam "Sun just ain't shining on you today, brother man."
+                    scene v14s03a_4
+                    with dissolve
 
-            scene v14s03a_4
-            with dissolve
+                    imre "Wait, what?! Let me see the other cup!"
+                    
+                    scene v14s03a_2a
+                    with dissolve
 
-            imre "Wait, what?! Let me see the other cup!"
-            
-            scene v14s03a_2a
-            with dissolve
+                    ngam "No problem."
 
-            ngam "No problem."
+                    scene v14s03a_3o # FPP. Close up, Gambler tilts RIGHT cup forward (like he is going to lift it up).
+                    with dissolve
 
-            if v14s03a_left_cup:
-                scene v14s03a_3l # FPP. Close up, Gambler tilts LEFT cup forward (like he is going to lift it up).
-                with dissolve
+                    pause 0.75
 
-                pause 0.75
+                    scene v14s03a_3p # FPP. Same as v14s03a_3o, but inside the Gambler's sleevethere is a the ball rolling out of it towards the titlted cup.
+                    with dissolve
 
-                scene v14s03a_3m # FPP. Same as v14s03a_3l, but inside the Gambler's sleevethere is a the ball rolling out of it towards the titlted cup.
-                with dissolve
-                
-                pause 1
+                    pause 1
 
-                scene v14s03a_3n # FPP. Same as v14s03a_3l, but Gambler lifts up the LEFT cup and there is a ball under it.
-                with dissolve
+                    scene v14s03a_3q # FPP. Same as v14s03a_3o, but Gambler lifts up the RIGHT cup and there is a ball under it.
+                    with dissolve
 
-                pause 0.75
-                
-            else:
-                scene v14s03a_3o # FPP. Close up, Gambler tilts RIGHT cup forward (like he is going to lift it up).
-                with dissolve
-
-                pause 0.75
-
-                scene v14s03a_3p # FPP. Same as v14s03a_3o, but inside the Gambler's sleevethere is a the ball rolling out of it towards the titlted cup.
-                with dissolve
-
-                pause 1
-
-                scene v14s03a_3q # FPP. Same as v14s03a_3o, but Gambler lifts up the RIGHT cup and there is a ball under it.
-                with dissolve
-
-                pause 0.75
+                    pause 0.75
 
             scene v14s03a_2
             with dissolve

@@ -23,6 +23,32 @@ init python:
             }
 
             self.points = 0
+            self._relationship = False
+            self._girlfriend = False
+
+        @property
+        def relationship(self):
+            return self._relationship
+
+        @relationship.setter
+        def relationship(self, value):
+            self._relationship = value
+            if value:
+                mc.relationships.add(self)
+            else:
+                mc.relationships.remove(self)
+
+        @property
+        def girlfriend(self):
+            return self._girlfriend
+
+        @girlfriend.setter
+        def girlfriend(self, value):
+            self._girlfriend = value
+            if value:
+                mc.girlfriends.add(self)
+            else:
+                mc.girlfriends.remove(self)
 
         def create_contact(self, locked=True):
             self.messenger = Contact(self.name, self.profile_picture, locked)
@@ -84,6 +110,7 @@ default autumn = NonPlayableCharacter("Autumn", "autumn.webp", messenger=True)
 default sebastian = NonPlayableCharacter("Sebastian", "sebastian.webp", messenger=True)
 default grayson = NonPlayableCharacter("Grayson", "grayson.webp", messenger=True)
 default jenny = NonPlayableCharacter("Jenny", "jenny.webp", messenger=True)
+default mr_lee = NonPlayableCharacter("Mr Lee", "lee.webp")
 
 default beth = NonPlayableCharacter("Beth", "beth.webp", simplr=True)
 default iris = NonPlayableCharacter("Iris", "iris.webp", simplr=True)

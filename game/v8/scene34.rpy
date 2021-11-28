@@ -101,7 +101,7 @@ label phn_chloe13:
         jump phn_chloe13
 
     if chloeSteakHouse:
-        stop music fadeout 2
+        stop music fadeout 3
         u "(Guess I'm meeting Chloe.)"
         jump steak_w_chloe
 

@@ -11,7 +11,7 @@ label v14s37:
 
     pause 0.75
 
-    play music "music/v14/Track Scene 37_1.mp3" fadein 2
+    play music "music/v13/Track Scene 42.mp3" fadein 2
 
     scene v14s37_2 # TPP. Show MC spotting Penelope in the dress she put on in scene 34 outside of the restraunt and walking towards her, both slight smile, mouth closed.
     with dissolve
@@ -95,7 +95,7 @@ label v14s37:
     pe "*Chuckles*"
 
     stop music fadeout 3
-    play music "music/v14/Track Scene 37_2.mp3" fadein 2
+    play music "music/v13/Track Scene 50_2.mp3" fadein 2
 
     scene v14s37_5 # FPP. MC and Penelope standing next to each other at the front reception of the restaurant, Camera facing the host, Host slight smile, mouth open
     with dissolve
@@ -763,7 +763,7 @@ label v14s37:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v14/Track Scene 37_1.mp3" fadein 2
+        play music "music/v13/Track Scene 42.mp3" fadein 2
 
         scene v14s39_1 # FPP. MC and Penelope walking down the side walk, Penelope looking at MC, MC looking at Penelope, Penlope neutral face, mouth open.
         with fade
@@ -837,7 +837,7 @@ label v14s37:
         pause 0.75
 
         stop music fadeout 3
-        play music "music/v14/Track Scene 37_1.mp3" fadein 2
+        play music "music/v13/Track Scene 42.mp3" fadein 2
 
         #scene v14s37_24 # FPP. MC and Penelope on the sidewalk, Penelope looking at MC, MC looking at Penelope, Penelope slight smile, mouth closed.
         scene v14s39_1a

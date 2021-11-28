@@ -6,7 +6,7 @@
 # It's probably best to look at the rpy file to get a better understand of the timeline of the renders.
 
 label drug_deal_w_josh:
-    stop music fadeout 2
+    stop music fadeout 3
     scene v8sdd1 # TPP. Show a long shot of the alley, Josh and MC, next to eachother walking down the alley cautiosly. Camera from behind Josh and MC.
     with fade
 

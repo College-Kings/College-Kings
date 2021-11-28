@@ -334,7 +334,7 @@ label prot_w_au_2:
 
     u "Yeah, anytime."
 
-    if evelynrs == True:
+    if evelynrs:
 
         scene v8sprot13 # TPP. Show Evelyn walking past MC, MC turns to look at Evenlyn walking past.
         with dissolve
@@ -548,7 +548,7 @@ label prot_w_au_end:
     with Dissolve(1)
     pause 0.5
 
-    if joinwolves == True:
+    if joinwolves:
         jump after_prot_wolves
 
     else:

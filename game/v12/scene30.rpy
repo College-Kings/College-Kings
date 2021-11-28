@@ -10,7 +10,7 @@ label v12_room_sneak:
 
     pause 0.75
 
-    play music "music/v12/Scene 30/Track Scene 30.mp3" fadein 2
+    play music "music/v12/Track Scene 30.mp3" fadein 2
 
     if not v11_riley_roomate:
         if chloers or chloegf:

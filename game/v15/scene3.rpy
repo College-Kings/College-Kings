@@ -106,13 +106,13 @@ label v15s3: # 3) Dean comes to Apes about posted image
 
     de "Oh, yes. I did hear that [name] was the only one smart enough to make the decision of not posting the photo."
 
+    scene v15s3_5
+    with dissolve
+
+    de "At least there is one of you who has some integrity..."
+
     # -if MC tried to stand up for Chloe (remember variable for future dean scene with Chloe)
-    if v14_chloe_apes: # JUST A GUESS - MAKE SURE THE CORRECT VARIABLE IS HERE
-        scene v15s3_5 
-        with dissolve
-
-        de "At least there is one of you who has some integrity..."
-
+    if v14s41a_standup:
         scene v15s3_6a # FPP Same angle as 6, Ryan holding his phone but looking at MC, neutral expression, mouth open
         with dissolve
 
@@ -213,10 +213,10 @@ label v15s3: # 3) Dean comes to Apes about posted image
     scene v15s3_6d # FPP Same as 6a, no phone
     with dissolve
 
-    ry "You mean me? This is what I get for joining this Apes. You don't get shit."
+    ry "You mean me? This is what I get for joining the Apes. You don't get shit."
 
     # -If MC tried to stop them from posting
-    if v14_chloe_apes: # JUST A GUESS - MAKE SURE THE CORRECT VARIABLE IS HERE
+    if v14s41a_standup: # JUST A GUESS - MAKE SURE THE CORRECT VARIABLE IS HERE
         scene v15s3_6e # FPP Same as 6d, Ryan's mouth closed
         with dissolve
         

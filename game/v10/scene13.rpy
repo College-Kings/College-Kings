@@ -17,7 +17,7 @@ label v10_wolves_redec:
 
     pause 0.75
 
-    play music "music/v10/Scene 13/Track Scene 13.mp3" fadein 3
+    play music "music/v10/Track Scene 13.mp3" fadein 2
 
     scene v10swhr2 # FPP. Show Chris stood in the Wolves hallway this angle must make sense for both whr1 & whr8, Chris neutral, mouth closed.
     with dissolve
@@ -85,8 +85,6 @@ label v10_wolves_redec:
     menu:
         "Accept help":
             $ add_point(KCT.BRO)
-
-            $ v10_perry_help_room = True
 
             u "Yeah I'd love some help. Will go much faster haha."
 

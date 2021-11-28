@@ -4,7 +4,7 @@ label v10_chloe_vs_nora:
     with dissolve
 
     cl "*Grunts*"
-    play music "music/v10/Scene 35/Track Scene 35.mp3" fadein 3
+    play music "music/v10/Track Scene 35.mp3" fadein 2
 
     scene v10cvn2 #second with Nora hitting Chloe's arms into the air off her shoulders
     with dissolve
@@ -108,7 +108,7 @@ label v10s35_nsfwSkipLabel1:
 
                 u "You did good. It was a nice match."
 
-                if v10_cvn_cheer_nora:
+                if v10_cheerfornora:
                     # -if cheered for Nora-
                     scene v10cvn9a
                     with dissolve

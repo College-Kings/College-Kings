@@ -113,7 +113,7 @@ label josh_room:
             pause 0.5
             u "(Fuck. I should go after him, but I don't want to get caught up in that shit. Guess I'll go back to my room.)"
 
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene v8josh6 # TPP. Show MC walking away from Josh's room, neutral expression, mouth closed
     with dissolve

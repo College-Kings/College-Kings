@@ -129,7 +129,7 @@ label v11wakeupa:
 
         u "Oh, uh... yeah. Just a bad dream I guess... You're up early."
 
-        play music "music/v11/Scene 19/Track Scene 19_1.mp3" fadein 2
+        play music "music/v11/Track Scene 19_1.mp3" fadein 2
         scene v11bane3b # FPP. Same 3, chloe now looking at her suitcase accross the room, mouth open.
         with dissolve
 
@@ -307,7 +307,7 @@ label v11wakeupa:
 
         ri "[name]! Get up! You can't just sleep all day."
 
-        play music "music/v11/Scene 19/Track Scene 19_1.mp3" fadein 2
+        play music "music/v11/Track Scene 19_1.mp3" fadein 2
 
         scene v11hr9 # FPP. MC is lying in his bed, he is looking at Riley, who is standing next to him, she is slightly angry, mouth closed
         with fade
@@ -345,7 +345,7 @@ label v11wakeupa:
         menu:
             "Tease":
                 $ add_point(KCT.TROUBLEMAKER)
-                $ rileyLike -= 1
+                $ riley.points -= 1
 
                 scene v11hr11
                 with dissolve
@@ -359,7 +359,7 @@ label v11wakeupa:
 
             "Flirt":
                 $ add_point(KCT.BOYFRIEND)
-                $ rileyLike += 1
+                $ riley.points += 1
 
                 scene v11hr11b # FPP. Same as v11hr11, Riley slightly smiling, mouth closed
                 with dissolve

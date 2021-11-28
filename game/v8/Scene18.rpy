@@ -127,7 +127,7 @@ label sun_aft_apes_house:
 
     u "Just being a-"
 
-    stop music fadeout 0.5
+    stop music fadeout 3
 
     scene v8sahs9 # TPP. Show Samantha and MC looking at the door to Samantha's room, confused expressions (due to comotion downstairs), Samantha mouth open.
     with dissolve
@@ -220,7 +220,7 @@ label sun_aft_grayson:
 
     ca "Like you care. Go kiss Grayson's ass some more. I'm outta here."
 
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene v8sahs16 # TPP. Show Cameron walking away from MC, Cameron really annoyed, mouth closed.
     with dissolve
@@ -278,7 +278,7 @@ label sun_aft_cameron:
 
     u "Hey Cameron, you okay?"
 
-    play music "music/m11punk.mp3" fadein 1
+    play music "music/m11punk.mp3" fadein 2
 
     scene v8sahs15c # FPP. Same camera as v8sahs15, Cameron neutral expression, mouth open.
     with dissolve

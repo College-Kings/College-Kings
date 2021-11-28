@@ -7,7 +7,7 @@ init python:
 
     def v4_reply2():
         josh.messenger.newMessage(_("Aww, come on. You'll be back by 11."))
-        josh.messenger.newImgMessage("images/text1.webp")
+        josh.messenger.newImgMessage("images/v4/text1.webp")
         josh.messenger.newMessage(_("I told my friend Amber about you and she really wants to meet you."))
         josh.messenger.addReply(_("Alright, I'll come."), v4_reply1)
         josh.messenger.addReply(_("Josh, I don't know, man. I don't wanna be late."), v4_reply3)
@@ -81,7 +81,7 @@ label v4start:
     imre "Yeah whatever... *winces in pain* he caught me by surprise, it wasn't a fair fight."
 
     menu:
-        "You should be more careful.":
+        "You should be more careful":
             $ add_point(KCT.BOYFRIEND)
 
             scene s297a
@@ -97,8 +97,7 @@ label v4start:
             imre "I told you, it wasn't a fair fight! I'll fuck him up when I get out."
 
             menu:
-                "Let me help.":
-                    $ revengeadam = True
+                "Let me help":
                     $ add_point(KCT.BRO)
 
                     scene s297a
@@ -128,7 +127,7 @@ label v4start:
 
                     u "I'll see you then, get better soon."
 
-                "That's a dumb idea.":
+                "That's a dumb idea":
                     $ add_point(KCT.BOYFRIEND)
 
                     scene s297a
@@ -158,10 +157,9 @@ label v4start:
 
                     u "I'll see you then, get better soon."
 
-        "Let's fuck him up.":
+        "Let's fuck him up":
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
-            $ revengeadam = True
 
             scene s297a
             with dissolve
@@ -191,7 +189,7 @@ label v4start:
             u "I'll see you then, get better soon."
 
     label dp_ad: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s298 # shows a cab in the night from outside with you in the back possibly not seeing you due to dark windows
     with Fade (1,0,1)
@@ -457,7 +455,7 @@ label v4start:
             ri "Not a problem at all."
 
     label dr_bd: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     ######### CHLOE DREAM:
 
@@ -514,7 +512,7 @@ label v4start:
 
     u "Ahhh! Stop! Stop!"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s225a # already in the game, no need to render again
     with flash
@@ -573,7 +571,7 @@ label v4start:
         ju "Oh my god, honey! What happened to your eye??"
 
         menu:
-            "Someone punched me.":
+            "Someone punched me":
                 $ add_point(KCT.BOYFRIEND)
 
                 scene s315a
@@ -608,9 +606,8 @@ label v4start:
 
                 ju "Okay honey, let's go shopping then."
 
-            "It was an accident.":
+            "It was an accident":
                 $ add_point(KCT.TROUBLEMAKER)
-                $ liejulia = True
 
                 scene s315a
                 with dissolve
@@ -633,7 +630,7 @@ label v4start:
                 ju "Well that's a relief. Let's go shopping then."
 
         label du_bd: #for compatibility only
-        stop music fadeout 2.0
+        stop music fadeout 3
 
         ######### THE FOLLOWING IMAGES HAVE TO BE RENDERED WITH NOT BACKGROUND AS A VIDEO OF MOVING ROADS WILL BE INSERTED
         scene carback
@@ -786,7 +783,7 @@ label v4start:
             u "Thanks, Julia."
 
         label jucon2:
-            stop music fadeout 2.0
+            stop music fadeout 3
 
             scene s317 # you and julia at the start of clothing store there are some people there.
             with Fade (1,0,1)
@@ -849,7 +846,7 @@ label v4start:
 
             ju "Honey, you in there?"
 
-            scene s321# FIrst person: looking at closed changing room door
+            scene s321 # FIrst person: looking at closed changing room door
             with dissolve
 
             u "Yeah, just wai-"
@@ -1039,7 +1036,7 @@ label v4start:
 
         u "(Alright, all finished.)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s330
     with Fade (1,0,1)### you sitting on your bed with your phone in your hand //
@@ -1068,7 +1065,7 @@ label v4start:
     u "(The library should have it.)"
 
     #anchor
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s331 # you walking into library
     with Fade (1,0,1)
@@ -1441,7 +1438,7 @@ label autumnsita:
 
 label readmontagec: #for compatibility only
 label readmontagea:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s336 # you from front sitting down looking at the books cover.
     with fade
@@ -1586,7 +1583,7 @@ label readmontagea:
 
     u "(I'll get a coffee, otherwise I'll be tired for the rest of the day.)"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene s342 # in front of cafe
     with Fade (1,0,1)
 
@@ -1599,7 +1596,7 @@ label readmontagea:
     scene s343 # First person inside cafe # show penelope with coffe on laptop
     with dissolve
 
-    if (not costumeaubrey and caughtpeekingpenelope and caughtpeekingpenelopecounter) or (not caughtpeekingpenelope) : # costume w pen
+    if not (not costumeaubrey and v2_caughtpeeking and not v2_caughtpeekingcounter): # did not have bad outcome when shopping with penelope
         label continueaa: #for compatibility only
         u "(Oh, Penelope's here, I should probably say hi.)"
 
@@ -1635,7 +1632,7 @@ label readmontagea:
         pe "How did you know I was gonna be here?"
 
         menu:
-            "Magic Powers.":
+            "Magic Powers":
                 $ add_point(KCT.BRO)
 
                 scene s349d
@@ -1658,7 +1655,7 @@ label readmontagea:
 
                 u "Yeah, sure."
 
-            "I didn't.":
+            "I didn't":
                 $ add_point(KCT.BOYFRIEND)
 
                 scene s349d
@@ -1676,7 +1673,7 @@ label readmontagea:
 
                 u "Yeah, sure."
 
-    elif not caughtpeekingpenelopecounter: # caught
+    elif (not costumeaubrey and v2_caughtpeeking and not v2_caughtpeekingcounter): # caught
         u "(Shit, Penelope's here. I wonder if she's still mad at me...)"
 
         u "(Maybe I should buy her something and apologize for peeking on her.)"
@@ -1689,7 +1686,7 @@ label readmontagea:
             "Buy Penelope a muffin":
                 $ add_point(KCT.BOYFRIEND)
                 $ muffin = True
-                $ caughtpeekingpenelopecounter = True
+                $ v2_caughtpeekingcounter = True
 
                 scene s344a
                 with dissolve
@@ -1881,7 +1878,7 @@ label readmontagea:
         pe "How did you know I was gonna be here?"
 
         menu:
-            "Magic Powers.":
+            "Magic Powers":
                 $ add_point(KCT.BRO)
 
                 scene s345g
@@ -1901,7 +1898,7 @@ label readmontagea:
 
                 u "Yeah, sure."
 
-            "I didn't.":
+            "I didn't":
                 $ add_point(KCT.BOYFRIEND)
 
                 scene s345g
@@ -2011,7 +2008,7 @@ label ef_bd:
     u "Now we're getting into an interesting topic."
 
     menu:
-        "We should watch some.":
+        "We should watch some":
             $ add_point(KCT.TROUBLEMAKER)
 
             u "You know, we should watch some together sometime."
@@ -2031,7 +2028,7 @@ label ef_bd:
 
             pe "Right, thank you."
 
-        "You should try it.":
+        "You should try it":
             $ add_point(KCT.BRO)
 
             u "You know, you should try it sometime."
@@ -2119,7 +2116,7 @@ label ef_bd:
 
                     jump el_ad
 
-        "Yeah, it was nice.":
+        "Yeah, it was nice":
             $ bowling = False
 
     scene s350a
@@ -2156,7 +2153,7 @@ label el_ad:
     u "(I wonder what Penelope was doing on that laptop...)"
 
 label continueab:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     play sound "sounds/vibrate.mp3"
 
@@ -2181,7 +2178,7 @@ label continueab:
         u "(Okay, I need to make sure that I don't forget about meeting Chloe.)"
 
     label jorepa: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene s352
     with Fade (1,0,1)
 
@@ -2277,7 +2274,7 @@ label continueab:
     jo "I see you've taken my spot."
 
     menu:
-        "I can move.":
+        "I can move":
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.BRO)
 
@@ -2291,7 +2288,7 @@ label continueab:
 
             jo "Hahaha, buddy I'm just kidding, stay put."
 
-        "It's my spot now.":
+        "It's my spot now":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s359a
@@ -2339,7 +2336,7 @@ label continueab:
     with dissolve
 
     menu:
-        "I'll join the Wolves.":
+        "I'll join the Wolves":
             $ add_point(KCT.BRO)
 
             u "I'll join the Wolves."
@@ -2349,7 +2346,7 @@ label continueab:
 
             jo "See? I knew he was a fighter."
 
-        "I don't know yet.":
+        "I don't know yet":
             $ add_point(KCT.BOYFRIEND)
 
             u "I don't know yet."
@@ -2398,7 +2395,7 @@ label continueab:
     jo "The rules are simple. The phone gives us tasks and how many sips to drink if we lose or are selected in some way or another."
 
     menu:
-        "Sounds good.":
+        "Sounds good":
             $ add_point(KCT.BRO)
 
             scene s361g
@@ -2406,7 +2403,7 @@ label continueab:
 
             u "Cool, sounds good."
 
-        "I should stop here.":
+        "I should stop here":
             $ add_point(KCT.BOYFRIEND)
 
             scene s361f
@@ -2420,7 +2417,7 @@ label continueab:
             am "Oh come on, just stay a bit longer. You never know what you might miss out on."
 
             menu:
-                "Alright, just for a bit.":
+                "Alright, just for a bit":
                     scene s357a
                     with dissolve
 
@@ -2431,7 +2428,7 @@ label continueab:
 
                     am "Good choice."
 
-                "Sorry, I really can't.":
+                "Sorry, I really can't":
                     scene s357a
                     with dissolve
 
@@ -2709,7 +2706,6 @@ label continueab:
 
                 "Don't kiss her":
                     $ add_point(KCT.TROUBLEMAKER)
-                    $ kissamber = False
 
                     play sound "sounds/spit.mp3"
 
@@ -2726,8 +2722,6 @@ label continueab:
                     "*Phone alarm ringing*"
 
         "Kim":
-            $ shotamber = False
-
             scene jomon16 # kim in bra ready for shot of her body
             with fade
 
@@ -2754,7 +2748,6 @@ label continueab:
             menu:
                 "Kiss her":
                     $ add_point(KCT.TROUBLEMAKER)
-                    $ kisskim = True
 
                     play sound "sounds/spit.mp3"
 
@@ -2782,7 +2775,6 @@ label continueab:
 
                 "Don't kiss her":
                     $ add_point(KCT.TROUBLEMAKER)
-                    $ kisskim = False
 
                     play sound "sounds/spit.mp3"
 
@@ -2810,7 +2802,7 @@ label continueab:
 
     u "*Drunk* Maybe I- I'll come back later."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s367 # you walking at night
     with Fade (1,0,1)
@@ -2974,7 +2966,7 @@ label continueab:
     scene s372c # you turn your head
     with dissolve
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     " "
 

@@ -37,7 +37,6 @@ init python:
         aubrey.messenger.newMessage(_("Oh, okay"))
 
     def v6_reply9():
-        setattr(store, "homeworkout", True)
         amber.messenger.newMessage(_("Yeah maybe we should xx"))
 
     def v6_reply10():
@@ -55,14 +54,12 @@ label v6start:
             "Find Imre":
                 $ add_point(KCT.BRO)
                 $ chooseimre = True
-                $ meetchloe = False
 
                 jump imrecona
 
             "Keep talking to Amber":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ chooseimre = False
-                $ meetchloe = False
 
                 jump imreconc
 
@@ -71,7 +68,6 @@ label v6start:
             "Find Imre":
                 $ add_point(KCT.BRO)
                 $ chooseimre = True
-                $ meetchloe = False
 
                 jump imrecona
 
@@ -88,14 +84,12 @@ label v6start:
             "Help Imre":
                 $ add_point(KCT.BRO)
                 $ chooseimre = True
-                $ meetchloe = False
 
                 jump imreconb
 
             "Keep talking to Amber":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ chooseimre = False
-                $ meetchloe = False
 
                 jump imreconc
 
@@ -104,7 +98,6 @@ label v6start:
             "Help Imre":
                 $ add_point(KCT.BRO)
                 $ chooseimre = True
-                $ meetchloe = False
 
                 jump imreconb
 
@@ -354,7 +347,7 @@ label imreconc: # Keep talking to Amber
     with fade
 
     $ amber.messenger.addReply(_("I'm all by myself now."))
-    $ amber.messenger.newImgMessage("images/text2.webp")
+    $ amber.messenger.newImgMessage("images/v6/text2.webp")
     $ amber.messenger.addReply(_("Woah, what was that for?"), v6_reply1)
     $ amber.messenger.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
@@ -388,7 +381,7 @@ label imrecond: # Meet Chloe
             u "(I should reply to Chloe.)"
             jump phoneac
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     u "(Time to go swimming with the hottest girl in school...)"
 
@@ -549,7 +542,7 @@ label imrecond: # Meet Chloe
     with dissolve
 
     menu:
-        "Just let it ring.":
+        "Just let it ring":
             $ add_point(KCT.TROUBLEMAKER)
             $ add_point(KCT.BOYFRIEND)
 
@@ -573,7 +566,7 @@ label imrecond: # Meet Chloe
 
             cl "I'll be right back."
 
-        "You should get that.":
+        "You should get that":
             $ add_point(KCT.BRO)
 
             scene s460a
@@ -1014,7 +1007,7 @@ label continuebb:
     
     $ amber.messenger.newMessage(_("Hey, you alone? xx"), queue=False)
     $ amber.messenger.addReply(_("Yeah, I'm in my dorm, why?"))
-    $ amber.messenger.newImgMessage("images/text2.webp")
+    $ amber.messenger.newImgMessage("images/v6/text2.webp")
     $ amber.messenger.addReply(_("Woah, what was that for?"), v6_reply1)
     $ amber.messenger.addReply(_("Oh wow, you're so fucking hot"), v6_reply4)
 
@@ -1034,7 +1027,7 @@ label continuebd:
     with fade
 
     u "(I should probably go to bed now, I got class at 9 am tomorrow.)"
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene s484 # MC NO LONGER HAS BLACK EYE  in bed
     with Fade (1,0,1)
     play music "music/m15punk.mp3"
@@ -1102,7 +1095,7 @@ label continuebd:
 
             ro "Alright class, let's get started. Open your books to page 225."
 
-            stop music fadeout 2.0
+            stop music fadeout 3
             scene clocka
             with fade
 
@@ -1189,7 +1182,7 @@ label continuebd:
 
             ro "Alright class, let's get started. Open your books to page 225."
 
-            stop music fadeout 2.0
+            stop music fadeout 3
             scene clocka
             with fade
 
@@ -1290,7 +1283,7 @@ label continuebd:
 
             ro "Alright class, let's get started. Open your books to page 225."
 
-            stop music fadeout 2.0
+            stop music fadeout 3
             scene clocka
             with fade
 
@@ -1396,7 +1389,7 @@ label continuebd:
 
         ro "Alright class, let's get started. Open your books to page 225."
 
-        stop music fadeout 2.0
+        stop music fadeout 3
         scene clocka
         with fade
 
@@ -1611,7 +1604,7 @@ label continuebd:
 
             gr "Join the Apes."
 
-        "I guess we are.":
+        "I guess we are":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s501e
@@ -1647,7 +1640,7 @@ label continuebd:
 
     ry "Don't waste this chance, man."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene s503a # Grayson and Ryan gone.
     with dissolve
 
@@ -1758,7 +1751,6 @@ label continuebd:
 
         "Don't disturb":
             $ add_point(KCT.TROUBLEMAKER)
-            $ checkonrose = False
 
             scene s510 # Mc arrives at his dorm, down at his door there's a flyer (Matt's design)
             with fade
@@ -1996,9 +1988,8 @@ label continuebd:
         ev "How so?"
 
         menu:
-            "It'll be an adventure.":
+            "It'll be an adventure":
                 $ add_point(KCT.BRO)
-                $ evelyndate = False
 
                 scene s524e
                 with dissolve
@@ -2041,7 +2032,7 @@ label continuebd:
 
                 u "Damnit."
 
-            "It'll be a nice dinner.":
+            "It'll be a nice dinner":
                 $ add_point(KCT.BOYFRIEND)
                 $ evelyndate = True
 
@@ -2187,7 +2178,7 @@ label continuebd:
 
     label continuebf: #for compatibility only
     label fw_a: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     play sound "sounds/call.mp3"
 
@@ -2247,8 +2238,7 @@ label continuebd:
                 em "[name], this is different. I promise. Please can you just come over? I'm in Dorm 17, Block A."
 
                 menu:
-                    "Fine, I'll come.":
-                        $ meetemily = True
+                    "Fine, I'll come":
                         $ add_point(KCT.BOYFRIEND)
 
                         scene s531b # mc empathy
@@ -2338,7 +2328,6 @@ label continuebd:
                                 jump fz_b
 
                     "No. (Hang up)":
-                        $ meetemily = False
                         $ add_point(KCT.TROUBLEMAKER)
 
                         scene s531
@@ -2358,8 +2347,6 @@ label continuebd:
                         jump fy_bd
 
             else:
-                $ meetemily = True
-
                 scene s531b
                 with dissolve
 
@@ -2464,7 +2451,6 @@ label continuebd:
             stop sound
             play sound "sounds/rejectcall.mp3"
             $ add_point(KCT.TROUBLEMAKER)
-            $ meetemily = False
 
             scene s531d
             with dissolve
@@ -2726,8 +2712,8 @@ label emsex_c:
     pause 0.5
 
 label emsex_a:
-    $ v6_emilysex = True 
-    #$ add_point(KCT.TROUBLEMAKER, sum([ aubreysex ])) ###Loyaltymod    
+    $ sceneList.add("v6_emily")
+
     scene emvid2
     with dissolve
 
@@ -2908,7 +2894,7 @@ label emhead:
     scene emvid9
     with dissolve
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     em "*Really loud moan* Ahhhhh!"
 
@@ -3001,7 +2987,7 @@ label afteremily: #After emily
     u "(What just happened...?)"
 
 label fy_bd: # not gone to Emily's
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene s540 # you working on your desk
     with Fade (1,0,1)
 
@@ -3626,7 +3612,6 @@ label fy_bd: # not gone to Emily's
 
             menu:
                 "Kiss her":
-                    $ kissevelyn = True
                     if laurenrs:
                         $ add_point(KCT.TROUBLEMAKER)
                     else:
@@ -3649,7 +3634,6 @@ label fy_bd: # not gone to Emily's
                     pause 0.5
 
                 "Don't kiss her":
-                    $ kissevelyn = False
                     if laurenrs:
                         $ add_point(KCT.BOYFRIEND)
                     else:
@@ -3683,14 +3667,14 @@ label fy_bd: # not gone to Emily's
         " "
 
         label phoneag:
-            stop music fadeout 2.0
+            stop music fadeout 3
             if aubrey.messenger.replies:
                 call screen phone
             if aubrey.messenger.replies:
                 u "(I should check my messages.)"
                 jump phoneag
 
-        if meetaubrey :
+        if meetaubrey:
             u "(I'll just go get changed and then it's straight to Aubrey's.)"
 
         else:
@@ -3839,7 +3823,7 @@ label fy_bd: # not gone to Emily's
         with dissolve
 
     menu:
-        "A few different girls.":
+        "A few different girls":
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -3868,7 +3852,7 @@ label fy_bd: # not gone to Emily's
                 with dissolve
 
                 menu:
-                    "I think you know.":
+                    "I think you know":
                         $ add_point(KCT.BRO)
                         $ add_point(KCT.TROUBLEMAKER)
 
@@ -3884,7 +3868,7 @@ label fy_bd: # not gone to Emily's
 
                         au "I think I do."
 
-                    "We're just friends.":
+                    "We're just friends":
                         $ add_point(KCT.BOYFRIEND)
                         $ add_point(KCT.TROUBLEMAKER)
 
@@ -3904,7 +3888,7 @@ label fy_bd: # not gone to Emily's
 
                         jump aubreytalk
 
-        "No one, really.":
+        "No one, really":
             $ add_point(KCT.BOYFRIEND)
 
             u "No one, really."
@@ -3934,7 +3918,7 @@ label fy_bd: # not gone to Emily's
                 with dissolve
 
                 menu:
-                    "You got me.":
+                    "You got me":
                         $ add_point(KCT.BRO)
                         $ add_point(KCT.TROUBLEMAKER)
 
@@ -3950,7 +3934,7 @@ label fy_bd: # not gone to Emily's
 
                         au "That's what I thought."
 
-                    "I'm not seducing you.":
+                    "I'm not seducing you":
                         $ add_point(KCT.BOYFRIEND)
                         $ add_point(KCT.TROUBLEMAKER)
 
@@ -3992,11 +3976,9 @@ label fy_bd: # not gone to Emily's
 
 label aubreysexb: # aubreysex scene
     $ aubreyrs = True
-    $ aubreysex2 = True
+    $ sceneList.add("v6_aubrey")
 
-    #$ add_point(KCT.TROUBLEMAKER, sum([ v6_emilysex ])) ###Loyaltymod
-
-    stop music fadeout 2.0
+    stop music fadeout 3
     play music "music/msexy.mp3"
 
     scene naubvid0
@@ -4357,7 +4339,7 @@ label naubclimax:
 
     scene naub20
     with fade
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     u "That was amazing."
 
@@ -4393,7 +4375,6 @@ label naubclimax:
 
 label aubreytalk:
     $ aubreyrs = False
-    $ aubreysex2 = False
 
     u "So uhm... how's third year treating you?"
 
@@ -4437,7 +4418,7 @@ label afteraubrey:
         if config_censored:
             $ aubrey.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
         else:
-            $ aubrey.messenger.newImgMessage("images/text3.webp", queue=False)
+            $ aubrey.messenger.newImgMessage("images/v6/text3.webp", queue=False)
 
         if meetaubrey:
             $ aubrey.messenger.newMessage(_("Still shaking from earlier"), queue=False)
@@ -4721,7 +4702,7 @@ label afteraubrey:
                     gr "We're here."
 
             label wehere: #for compatibility only
-            stop music fadeout 2.0
+            stop music fadeout 3
 
             scene s580 # Showing you and Grayson At night on a ledge, overlooking the city??? Or something else cool, Grayson looking into the distance
             with fade
@@ -4841,7 +4822,7 @@ label afteraubrey:
             with flash
 
             menu:
-                "I'm in.":
+                "I'm in":
                     $ add_point(KCT.TROUBLEMAKER)
                     $ joinapes = True
 
@@ -4931,9 +4912,9 @@ label afteraubrey:
                     with dissolve
 
                     gr "Good. Trust me, this will change everything."
-                    stop music fadeout 2.0
+                    stop music fadeout 3
 
-                "I'm not in.":
+                "I'm not in":
                     $ add_point(KCT.BRO)
                     $ joinapes = False
 
@@ -4994,7 +4975,6 @@ label afteraubrey:
                     pause 0.5
 
         "Stay home":
-            $ meetgrayson = False
             $ add_point(KCT.BRO)
             
             $ grant_achievement("seems_fishy")
@@ -5002,7 +4982,7 @@ label afteraubrey:
             u "(Fuck Grayson, I'm not meeting him.)"
 
     label aftergrayson: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s586 # you lying in bed at night staring at the ceiling
     with fade
@@ -5455,7 +5435,7 @@ label wakeupa:
 
         pause 0.5
     
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s610 # you back in your dorm doing work at your desk in your regular clothes, "a few hours later transition"
     with Fade (1,0,1)
@@ -5852,7 +5832,7 @@ label wakeupa:
     with dissolve
 
     menu:
-        "Okay, I'll do it.":
+        "Okay, I'll do it":
             $ add_point(KCT.BRO)
             $ perform = 1
 
@@ -5884,7 +5864,7 @@ label wakeupa:
             with dissolve
 
             menu:
-                "Act out a lullaby.":
+                "Act out a lullaby":
                     $ add_point(KCT.BRO)
 
                     if kct == "confident":
@@ -5954,7 +5934,7 @@ label wakeupa:
 
                         "*Crowd applauds"
 
-                "Make something up.":
+                "Make something up":
                     $ add_point(KCT.TROUBLEMAKER)
 
                     scene s627g
@@ -5983,7 +5963,7 @@ label wakeupa:
 
                     "*Crowd applauds"
 
-        "No way I'm doing that.":
+        "No way I'm doing that":
             $ add_point(KCT.BOYFRIEND)
             $ perform = 0
 
@@ -6044,7 +6024,7 @@ label wakeupa:
         ri "So what did you think of the poetry slam as a whole?"
 
     elif perform == 1:
-        scene s629c# Riley smiling, emphatic mouth close
+        scene s629c # Riley smiling, emphatic mouth close
         with dissolve
 
         u "Oh god, I was awful."
@@ -6175,7 +6155,7 @@ label wakeupa:
 
         u "Thanks, see ya."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     if bowling: # Penelope bowling scene
         play music "music/m16punk.mp3"
@@ -6564,7 +6544,7 @@ label wakeupa:
 
         menu:
             "Kiss her":
-                $ kisspenelope = True
+
                 if laurenrs:
                     $ add_point(KCT.TROUBLEMAKER)
                     $ add_point(KCT.BRO)
@@ -6606,7 +6586,6 @@ label wakeupa:
                 with dissolve
 
             "Say Goodbye":
-                $ kisspenelope = False
                 if laurenrs:
                     $ add_point(KCT.BOYFRIEND)
 
@@ -6624,7 +6603,7 @@ label wakeupa:
         pause 1.0
 
     label readywolf: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
     play music "music/m6punk.mp3"
 
     if imremad:
@@ -6999,7 +6978,7 @@ label wolvesfr2:
 # location 1- In front of wolves frat house:
 # *Clicking on Josh & Kim*
 label v6_fr3josh1:
-    $ fr3josh = True
+    $ freeroam3.add("josh")
 
     scene sfr3jo1 # opening: josh and kim sitting on porch super high, with some filled and some empty shots on the ground
 
@@ -7072,7 +7051,6 @@ label v6_fr3josh1:
 
         "Decline":
             $ add_point(KCT.BOYFRIEND)
-            $ takeshot = False
 
             u "Nah, I'm good."
 
@@ -7180,7 +7158,7 @@ label v6_fr3josh2:
 #*Clicking on Guy & Guy*
 #Two guys sit on a couch arguing.
 label v6_fr3guy1:
-    $ fr3guy = True
+    $ freeroam3.add("peter")
 
     scene sfr3guy1 #showing guy 1 and guy 2 on the couch having a discusison
 
@@ -7232,7 +7210,6 @@ label v6_fr3guy1:
     menu:
         "Kylie":
             $ add_point(KCT.BRO)
-            $ kylie = True
 
             u "Yeah I agree, Kylie's way hotter."
 
@@ -7285,7 +7262,6 @@ label v6_fr3guy1:
 
         "Kourtney":
             $ add_point(KCT.BOYFRIEND)
-            $ kylie = False
 
             u "Definitely Kourtney."
 
@@ -7349,7 +7325,7 @@ label v6_fr3guy2:
 
 label v6_fr3aubrey1:
     #*If you click on Aubrey & Emily*
-    $ fr3aubrey = True
+    $ freeroam3.add("aubrey")
 
     scene sfr3au1 # Opening : EMily and aubrey standing with beer bottle, Aubrey mouth open curious smile
 
@@ -7544,7 +7520,7 @@ label v6_fr3aubrey1:
         with dissolve
 
         menu:
-            "Anything for a girl like that.":
+            "Anything for a girl like that":
                 $ add_point(KCT.BOYFRIEND)
                 $ simp = True
 
@@ -7695,7 +7671,7 @@ label v6_fr3aubrey1:
         with dissolve
 
         menu:
-            "I was in love.":
+            "I was in love":
                 $ add_point(KCT.BOYFRIEND)
                 $ simp = True
 
@@ -7748,7 +7724,7 @@ label v6_fr3aubrey1:
 
                 au "Byeee."
 
-            "It was nothing.":
+            "It was nothing":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BRO)
                 $ simp = False
@@ -7827,7 +7803,7 @@ label v6_fr3dsbathroom:
 
 #LOcation 3: kitchen/ dining room
 label v6_fr3matt1:
-    $ fr3matt = True
+    $ freeroam3.add("matt")
 
     scene sfr3ma1 # close up matt looking at fridge
 
@@ -7865,7 +7841,7 @@ label v6_fr3matt2:
 
 
 label v6_fr3chris1:
-    $ fr3chris = True
+    $ freeroam3.add("chris")
 
     if fightadam: #If you fought Adam:
         scene sfr3ch1 # chris and guyc talking, chris back turned to you
@@ -8196,7 +8172,7 @@ label v6_fr3chris1:
 
 
 label v6_fr3riley1: #If you click on Riley and finn*
-    $ fr3riley = True
+    $ freeroam3.add("riley")
 
     scene sfr3ri1 #Riley and finn are sitting at the table talking.
 
@@ -8313,7 +8289,6 @@ label v6_fr3riley1: #If you click on Riley and finn*
     menu:
         "Ask Riley something":
             $ add_point(KCT.BOYFRIEND)
-            $ askfinn = False
 
             scene sfr3ri2a
             with dissolve
@@ -8468,7 +8443,7 @@ label v6_fr3riley2:
 #*If you click on Guy #5 and Sebastian*
 #Sebastian is guiding Guy #5 through some punches., they're both not wearing a shirt
 label v6_fr3sebastian1:
-    $ fr3sebastian = True
+    $ freeroam3.add("sebastian")
 
     scene sfr3se1 # sebestian teaching guyd how to fight
 
@@ -8556,9 +8531,8 @@ label v6_fr3sebastian2:
 
     call screen v6_fr3garage
 
-
 label v6_fr3amber1:
-    $ fr3amber = True
+    $ freeroam3.add("amber")
 
     scene sfr3am1 #Amber is sitting watching the guys workout and drinking a beer
 
@@ -8607,7 +8581,7 @@ label v6_fr3amber1:
     with dissolve
 
     menu:
-        "You're such a tease.":
+        "You're such a tease":
             $ add_point(KCT.BRO)
 
             u "Wow. You're such a tease."
@@ -8620,7 +8594,7 @@ label v6_fr3amber1:
             scene sfr3am2c
             with dissolve
 
-        "Not gonna happen.":
+        "Not gonna happen":
             $ add_point(KCT.BOYFRIEND)
 
             u "Mhhh... I don't think that's gonna happen."
@@ -8699,7 +8673,7 @@ label v6_fr3amber2:
 #*If you click on Nora*
 #Nora is sitting on the rooftop smoking. MC comes and sits down next to her.
 label v6_fr3nora1:
-    $ fr3nora = True
+    $ freeroam3.add("nora")
 
     scene sfr3no1 #Nora is sitting on the rooftop smoking. MC comes and sits down next to her.
 
@@ -9083,10 +9057,9 @@ label v6_fr3nora2:
 
     call screen v6_fr3roofroom
 
-
 #Location 6: bathroom
 label v6_fr3chloe1:
-    $ fr3chloe = True
+    $ freeroam3.add("chloe")
 
     scene sfr3cl1 #in front of closed bathroom door
 
@@ -9201,7 +9174,7 @@ label v6_fr3chloe1:
     cl "*Crying* First Grayson, now Nora..."
 
     menu:
-        "Maybe you should step down.":
+        "Maybe you should step down":
             $ add_point(KCT.BOYFRIEND)
             $ chloemad = True
 
@@ -9263,7 +9236,7 @@ label v6_fr3chloe1:
 
             u "Fine..."
 
-        "Nora's being stupid.":
+        "Nora's being stupid":
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -9367,12 +9340,12 @@ label v6_fr3chloe2:
 label v6_fr3office:
     scene fr3office
 
-    if not fr3office:
+    if not "office" in freeroam3:
         u "(This must be Chris' office.)"
 
         u "(It's filled with all of these historic Wolves' relics.)"
 
-    $ fr3office = True
+    $ freeroam3.add("office")
     
     if relics == 4:
         jump fr3relics
@@ -9445,20 +9418,19 @@ label v6_fr3books:
 
 label fr3relics:
     $ relics += 1
-
     scene fr3office
 
     u "(Empty room... All alone. This'd be the perfect place for some alone time with a girl... I should ask someone. Haha.)"
 
     u "(Who to ask though?)"
 
-    if fr3chloe and fr3nora:
+    if "chloe" in freeroam3 and "nora" in freeroam3:
         u "(Definitely not Chloe or Nora, they both seem too caught up in their fight.)"
 
-    elif fr3chloe:
+    elif "chloe" in freeroam3:
         u "(Definitely not Chloe, she seems too caught up in her fight with Nora.)"
 
-    elif fr3nora:
+    elif "nora" in freeroam3:
         u "(Definitely not Nora, she seems too caught up in her fight with Chloe.)"
 
     call screen v6_fr3office
@@ -9472,8 +9444,8 @@ label v6_fr3aubrey3:
 
     menu:
         "Ask Aubrey":
-            if not askedaubrey:
-                $ askedaubrey = True
+            if not "aubrey" in freeroam3asked:
+                $ freeroam3asked.add("aubrey")
 
                 u "Hey, Aubrey, can I talk to you for a second?"
 
@@ -9552,7 +9524,7 @@ label v6_fr3aubrey3:
                 u "(I've already asked Aubrey.)"
 
         "Ask Emily":
-            $ askedemily = True
+            $ freeroam3asked.add("emily")
 
             if forgiveemily:
                 $ upstairs = "emily"
@@ -9587,7 +9559,7 @@ label v6_fr3aubrey3:
 #*If you click on Amber*
 #MC walks up and sits next to Amber.
 label v6_fr3amber3:
-    $ askedamber = True
+    $ freeroam3asked.add("amber")
 
     scene sfr3am1
 
@@ -9669,7 +9641,7 @@ label v6_fr3amber3:
 #*If you click on Kim*
 #MC walks up to Kim.
 label v6_fr3josh3:
-    $ askedkim = True
+    $ freeroam3asked.add("kim")
     
     scene sfr3jo1
 
@@ -9719,11 +9691,10 @@ label v6_fr3josh3:
 
     call screen v6_fr3garden
 
-
 #*If you click on Riley*
 #MC walks up to Riley.
 label v6_fr3riley3:
-    $ askedriley = 0
+    $ freeroam3asked.add("riley")
     $ upstairs = "riley"
 
     scene sfr3ri1
@@ -9891,7 +9862,7 @@ label upstairsaubrey:
         u "*Chuckles* Yeah, probably a good call."
 
         menu:
-            "We could lock the door.":
+            "We could lock the door":
                 $ add_point(KCT.BRO)
                 $ add_point(KCT.TROUBLEMAKER)
 
@@ -9911,7 +9882,7 @@ label upstairsaubrey:
 
                 u "(I should probably talk to Chris soon.)"
 
-            "It was nice talking.":
+            "It was nice talking":
                 $ add_point(KCT.BOYFRIEND)
 
                 u "It was nice talking though."
@@ -10105,7 +10076,7 @@ label upstairsaubrey:
                 u "Damn... that's actually a good reason."
 
                 menu:
-                    "We could lock the door.":
+                    "We could lock the door":
                         $ add_point(KCT.BRO)
                         $ add_point(KCT.TROUBLEMAKER)
 
@@ -10123,7 +10094,7 @@ label upstairsaubrey:
 
                         u "(I should probably talk to Chris soon.)"
 
-                    "At least we got to talk.":
+                    "At least we got to talk":
                         $ add_point(KCT.BOYFRIEND)
 
                         u "At least we got to talk a bit, haha."
@@ -10138,7 +10109,7 @@ label upstairsaubrey:
 
                         u "(I should probably talk to Chris soon.)"
 
-            "I kinda get what he means.":
+            "I kinda get what he means":
                 $ add_point(KCT.BOYFRIEND)
                 $ simp = True
                 $ aubreyrs = False
@@ -10301,8 +10272,8 @@ label upstairsemily:
 
     call screen v6_fr3office
 
-
 label upstairsamber: # upstairs with amber
+    
     scene sufr3am1 # amber looking at the bookshelves
     with fade
 
@@ -10436,7 +10407,6 @@ label upstairsamber: # upstairs with amber
 
     am "Okay, yeah. See you."
 
-    $ kimpuke = True
     call screen v6_fr3office
 
     #*You bring Riley into the office*
@@ -10670,7 +10640,7 @@ label v6_fr3chris3: ### ENDING
     with dissolve
 
     u "Holy shit."
-    stop music fadeout 2.0
+    stop music fadeout 3
 
 if not renpy.loadable("v7/v7.rpy"):
     scene savenow

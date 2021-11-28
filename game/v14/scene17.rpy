@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v14s17:
-    play music "music/v14/Track Scene 17.mp3" fadein 2
+    play music "music/v12/Track Scene 26.mp3" fadein 2
 
     scene v14s17_1 # TPP. Show MC walking into class, slight smile, mouth closed
     with dissolve
@@ -56,7 +56,7 @@ label v14s17:
 
     u "That's pretty messed up to call Lauren the class clown behind her back..."
 
-    if msrosers:
+    if msrosers and joinwolves: #sanitizing pathbuilder input
         scene v14s17_4c
         with dissolve
 

@@ -9,7 +9,7 @@ label v14s41a:
 
     gr "[name!u]! GET DOWN HERE!"
 
-    play music "music/v14/Track Scene 41a.mp3" fadein 2
+    play music "music/v13/Track Scene 10.mp3" fadein 2
 
     scene v14s41a_1a # TPP. same as v14s41a_1 mc is sitting on the side of his bed, slightly mad, mouth closed
     with dissolve
@@ -295,6 +295,7 @@ label v14s41a:
 
             "Stand up for Chloe":
                 $ add_point(KCT.BOYFRIEND)
+                $ v14s41a_standup = True
 
                 scene v14s41a_5l
                 with dissolve

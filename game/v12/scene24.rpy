@@ -10,7 +10,7 @@ label v12_simplr_convo:
 
     pause 0.75
 
-    play music "music/v12/Scene 24/Track Scene 24.mp3" fadein 2
+    play music "music/v12/Track Scene 24.mp3" fadein 2
 
     if v12_msrose_sex:
         scene v12sic1a # TPP. Same as v12sic1, MC awake, looking at the ceiling, slight smile, mouth closed

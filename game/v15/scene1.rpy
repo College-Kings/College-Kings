@@ -54,7 +54,7 @@ label v15s1:
             "Blame Chris":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BOYFRIEND)
-                $ v15_Blame_Chris = True
+                $ v15_blame_chris = True
 
                 scene v15s1_3c # FPP. same as v15s1_3b Imre increases to a fully angry expression, Imre places his hands to his sides
                 with dissolve
@@ -77,7 +77,7 @@ label v15s1:
 
             "Blame Nora":
                 $ add_point(KCT.BRO)
-                $ v15_Blame_Nora = True
+                $ v15_blame_nora = True
 
                 scene v15s1_3
                 with dissolve
@@ -103,7 +103,7 @@ label v15s1:
 
         imre "*Sighs*"
 
-        if v15_Blame_Nora:
+        if v15_blame_nora:
             scene v15s1_3e # FPP. same as v15s1_3b Imre raises his hand above his head in anger, while rolling his eyes, mouth is still open
             with dissolve
 
@@ -206,7 +206,7 @@ label v15s1:
 
         menu:
             "They were on a break":
-                $ QuirkPopculture += 1
+                $ mc.quirks["pop_culture"] += 1
                 $ add_point(KCT.BRO)
 
                 u "They were on a break, bro..."
@@ -222,7 +222,7 @@ label v15s1:
                 u "Haha."
 
             "Who?":
-                $ QuirkBoomer += 1
+                $ mc.quirks["boomer"] += 1
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Who?"
@@ -258,7 +258,7 @@ label v15s1:
 
         menu:
             "Of course I know":
-                $ QuirkPopculture += 1
+                $ mc.quirks["pop_culture"] += 1
                 $ add_point(KCT.BRO)
 
                 u "*Laughs* Yeah, of course I know"
@@ -279,7 +279,7 @@ label v15s1:
                 imre "*Sighs*"
 
             "A monkey?":
-                $ QuirkBoomer += 1
+                $ mc.quirks["boomer"] += 1
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "A monkey? What? *Laughs*"
@@ -321,7 +321,7 @@ label v15s1:
 
     menu:
         "Stick up for Nora":
-            $ v15_Stuck_Up_For_Nora
+            $ v15_stuck_up_for_nora = True
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -411,13 +411,13 @@ label v15s1:
 
             imre "But there's always a chance, dude. Just like Ross and Rachel."
 
-            if QuirkPopculture > QuirkBoomer:
+            if mc.quirks["pop_culture"] > mc.quirks["boomer"]:
                 scene v15s1_3o
                 with dissolve
 
                 u "*Chuckles*"
 
-            elif QuirkBoomer > QuirkPopculture:
+            elif mc.quirks["boomer"] > mc.quirks["pop_culture"]:
                 scene v15s1_3o # FPP. same as v15s1_3m Imre has a smug looking expression mouth is still closed
                 with dissolve
 

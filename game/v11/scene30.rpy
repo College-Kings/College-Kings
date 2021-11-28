@@ -11,7 +11,7 @@ label v11_lauren_store:
     
     scene v11las1 # TPP. Lauren is in the lobby, she is looking at her phone, show MC sneaking up on her
     with fade
-    play music "music/v11/Scene 1/Track Scene 1_3.mp3" fadein 2
+    play music "music/v11/Track Scene 1_1.mp3" fadein 2
     pause 0.75
 
     scene v11las1a # TPP. Same cam as v11las1, MC is behind Lauren, he is smiling, mouth closed, his hands over her eyes, Lauren is surprised, mouth closed
@@ -468,7 +468,7 @@ label v11_lauren_store:
 
     menu (fail_label="v11_answer_Theremin"):
         "Friggindoor":
-            $ laurenLike += 1
+            $ lauren.points += 1
             $ v11_hp_points += 1
 
             scene v11las18h # FPP. Same as v11las18g, Lauren smiling, mouth closed, looking at MC
@@ -487,7 +487,7 @@ label v11_lauren_store:
             jump v11_answer_Theremin
 
 label v11_answer_Theremin:
-    $ laurenLike -= 1
+    $ lauren.points -= 1
 
     scene v11las18j # FPP. Same as v11las18g, Lauren looking at MC, she is slightly disappointed, mouth closed
     with dissolve
@@ -556,7 +556,7 @@ label v11_quiz_q2:
             jump v11_answer_13
 
         "29":
-            $ laurenLike += 1
+            $ lauren.points += 1
             $ v11_hp_points += 1
 
             scene v11las18h
@@ -577,7 +577,7 @@ label v11_quiz_q2:
             jump v11_quiz_q3
         
 label v11_answer_13:
-    $ laurenLike -= 1
+    $ lauren.points -= 1
 
     scene v11las18j
     with dissolve
@@ -752,7 +752,7 @@ label v11_quiz_q3:
 
     menu (fail_label="v11_answer_ministry"):
         "12 Someold Place":
-            $ laurenLike += 1
+            $ lauren.points += 1
             $ v11_solo_question = True
             $ v11_hp_points += 1
 
@@ -767,7 +767,7 @@ label v11_quiz_q3:
             jump v11_answer_ministry
 
 label v11_answer_ministry:
-    $ laurenLike -= 1
+    $ lauren.points -= 1
 
     scene v11las26bxx # FPP. Same as v11las26, but "Ministry of Fisheries" is written on the board
     with dissolve
@@ -1149,7 +1149,7 @@ label v11_quiz_bonus:
 
     menu:
         "7":
-            $ laurenLike += 1
+            $ lauren.points += 1
 
             scene v11las37a
             with dissolve
@@ -1162,7 +1162,7 @@ label v11_quiz_bonus:
             la "Yep, but there's eight movies."
 
         "8":
-            $ laurenLike -= 1
+            $ lauren.points -= 1
 
             scene v11las37b # FPP. Same as v11las37, Lauren slightly disappointed, mouth closed
             with dissolve
@@ -1360,10 +1360,9 @@ label v11_quiz_bonus:
 
         menu:
             "I love you too":
-                $ v11_lauren_ily = True
                 $ laurenrs = True
                 $ add_point(KCT.BOYFRIEND)
-                $ laurenLike += 2
+                $ lauren.points += 2
 
                 scene v11las44h # FPP. Same as v11las44g, Lauren mouth closed, big smile
                 with dissolve
@@ -1379,7 +1378,7 @@ label v11_quiz_bonus:
 
             "Play it off":
                 $ add_point(KCT.BRO)
-                $ laurenLike -= 2
+                $ lauren.points -= 2
 
                 scene v11las44i # FPP. Same as v11las44g, Lauren mouth closed, sad and embarrassed, no longer holding MC's neck
                 with dissolve
@@ -1394,7 +1393,7 @@ label v11_quiz_bonus:
     scene v11las44k # FPP. Same as v11las44d, Lauren slight smile, mouth open
     with dissolve
     stop music fadeout 3
-    play music "music/v11/Scene 17/Track Scene 17.mp3" fadein 2
+    play music "music/v11/Track Scene 17.mp3" fadein 2
     la "If it was my choice I'd spend all day with you exploring Hogwash, but I promised Riley I'd help her out with something, so I have to run."
 
     scene v11las44l # FPP. Same as v11las44k, Lauren slight smile, mouth closed

@@ -5,7 +5,7 @@
 # Render 9 Unique 62 Total
 
 label v14s53:
-    play music "music/v14/Track Scene 53_1.mp3" fadein 2
+    play music "music/v13/Track Scene 16a_2.mp3" fadein 2
 
     scene v14s53_1 # TPP. MC enters the Apes Frat house, slight smile, mouth closed
     with dissolve
@@ -23,7 +23,7 @@ label v14s53:
     u "(Is that Sam singing? Where's it coming from?)"
 
     stop music fadeout 3
-    play music "music/v14/Track Scene 53_2.mp3" fadein 2
+    play music "music/v12/Track Scene 23_2.mp3" fadein 2
     scene v14s53_3 # TPP. MC walks into the apes Dream Room to find Samantha alone on the couch. She has a bottle of beer in hand. She swigs from it, Mc slight smile, mouth closed looking at samantha
     with dissolve
 

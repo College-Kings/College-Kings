@@ -48,7 +48,7 @@ label v15s20:
             "Say nothing.":
                 u "(I was expecting a hello kiss, but I'll keep quiet about it... I don't want to throw her off her game.)"
 
-    if MrLeeMeeting: # Placeholder if MC chose to meet with Mr. Lee.
+    if mr_lee_meeting: # Placeholder if MC chose to meet with Mr. Lee.
         scene v15s20_5a
         with dissolve
 
@@ -191,7 +191,7 @@ label v15s20:
 
         u "(Well, she loves it in the bedroom... Or should I say kitchen...)"
 
-        if chloegf and v15_MsRoseSex:
+        if chloegf and V15_ms_rose_sex:
             scene v15s20_5d # FPP. Same as v15s20_5c, Chloe confused, mouth open.
             with dissolve
 
@@ -242,7 +242,7 @@ label v15s20:
 
         menu:
             "Take the notes.":
-                $ v15_TookNotes = True
+                $ v15_took_notes = True
                 u "Yeah, we better take them. As long as we aren't staring at it the whole time, I think it's helpful to refer to."
 
                 scene v15s20_5a

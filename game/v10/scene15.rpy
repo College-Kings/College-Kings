@@ -3,7 +3,7 @@
 # Characters: MC (Outfit 1), Lauren (Outfit 3), Aubrey (Outfit 3)
 # Time:
 label v10_call_with_lauren1:
-    play music "music/v10/Scene 15 & 18/Track Scene 15 & 18.mp3" fadein 3
+    play music "music/v10/Track Scene 15.mp3" fadein 2
     if joinwolves: # MC is a wolf, is that the correct variable name?
         scene v10saow1 # TPP. Show MC in his Wolves bedroom, laying in his bed relaxing. He notices his phone buzzing. Curious/thoughtful expression, mouth closed.
         with fade
@@ -413,7 +413,6 @@ label v10_call_with_lauren1:
                         u "Color, orange."
 
                     "Blue":
-                        $ v10_color_blue = True
                         scene v10scwl2c 
                         with dissolve
 
@@ -1175,7 +1174,6 @@ label v10_call_with_lauren1:
                         u "Color, orange."
 
                     "Blue":
-                        $ v10_color_blue = True
                         scene v10saow3c
                         with dissolve
 

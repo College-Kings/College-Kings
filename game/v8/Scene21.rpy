@@ -5,8 +5,7 @@
 # de = Dean
 
 label mon_morning_room:
-    
-    if joinwolves == True:
+    if joinwolves:
         scene v8sdea1 # TPP. Show MC waking up on his bed in Wolves room.
         with Fade(0.75, 0.25, 0.75)
 

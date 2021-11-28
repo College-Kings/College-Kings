@@ -6,7 +6,7 @@
 label v11_chloe_bathroom:
     scene v11chb1 # TPP. Show MC walking into the room, confused, mouth closed
     with dissolve
-    play music "music/V10/Scene 40/Track Scene 40_3.mp3" fadein 2
+    play music "music/v10/Track Scene 40_3.mp3" fadein 2
     cl "*Crying*"
 
     scene v11chb2 # TPP. Show MC walking up to the bathroom door, worried expression, mouth closed
@@ -235,7 +235,7 @@ label v11_chloe_bathroom:
             cl "*Moans*"
 
             if chloers or chloegf or kct == "popular":
-                $ v11_chloe_sex = True
+                $ sceneList.add("v11_chloe")
                 $ chloers = True
 
                 if not chloers and not chloegf:

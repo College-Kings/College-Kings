@@ -56,7 +56,7 @@ label v14s43b:
 
     lee "Good morning, students!"
 
-    play music "music/v14/Track Scene 43b.mp3" fadein 2
+    play music "music/v13/Track Scene 24_1.mp3" fadein 2
 
     scene v14s43b_2 # FPP. Mr. Lee walks further into the classroom, happy and cheery, mouth closed
     with dissolve

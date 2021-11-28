@@ -11,22 +11,21 @@ init python:
 
     def v14s51_reply2():
         if chloers or chloegf:
-            setattr(store, "v14_chloeSus", True)
+            setattr(store, "chloeSus", chloeSus +1)
         chloe.messenger.newMessage(_("I'm already full on breadsticks... Ugh! Hurry up, [name]. Please?"))
         chloe.messenger.addReply(_("I'll be there as soon as I can, Chloe."))
         chloe.messenger.newMessage(_("I'll give you 10 more minutes. If you're still not here by then, I'm going home."))
 
 label v14s51:
 
-    play music "music/v14/Track Scene 51_1.mp3" fadein 2
+    play music "music/v12/Track Scene 23_1.mp3" fadein 2
     scene v14s51_1 # TPP. Show MC walking into Chloe's room and closing the door behind him, slight smile, mouth closed
     with dissolve
 
-    if v14s50_listen_to_aubrey_lindsey_2 or v14s50_listen_to_aubrey_lindsey_3:
-        
+    if v14s50_listen_to_aubrey_lindsey >= 2:
         u "(Listening in for so long definitely cost me a lot of time. I won't be able to look through most of Chloe's stuff, so I really need to prioritize which locations I want to search.)"
-    elif v14s50_listen_to_aubrey_lindsey:
 
+    elif v14s50_listen_to_aubrey_lindsey == 1:
         u "(Listening in may have cost me a bit of time, hopefully I'll still have enough to look through most Chloe's stuff, but I definitely won't be able to search everywhere.)"
     
     else:
@@ -84,9 +83,6 @@ label v14s51_text:
             if chloe.messenger.replies:
                 "(I should reply to Chloe.)"
                 jump v14s51_PhoneContinue
-
-        if v14_chloeSus:
-            $ chloeSus += 1
 
         scene v14s51_3
         with dissolve
@@ -620,7 +616,7 @@ label v14s51_continue:
 
     stop music fadeout 3
 
-    play music "music/v14/Track Scene 51_3.mp3" fadein 2
+    play music "music/v13/Track Scene 21.mp3" fadein 2
 
     u "(And now, a quick text to Lindsey...)"
 

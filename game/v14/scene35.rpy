@@ -45,7 +45,7 @@ label v14s35_afterinvite:
 
         pause 0.75
 
-        play music "music/v14/Track Scene 35.mp3" fadein 2
+        play music "music/v13/Track Scene 40a.mp3" fadein 2
 
         scene v14s35_3a # TPP. Same as v14s35_3, MC pulling up his swimming trunks still slightly naked, slight smile, mouth closed
         with dissolve
@@ -66,7 +66,7 @@ label v14s35_afterinvite:
 
         pause 0.75
 
-        play music "music/v14/Track Scene 35.mp3" fadein 2
+        play music "music/v13/Track Scene 40a.mp3" fadein 2
 
         scene v14s35_4a # TPP. Same as v14s35_4, MC pulling up his swimming trunks still slightly naked, slight smile, mouth closed
         with dissolve

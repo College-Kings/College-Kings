@@ -9,7 +9,7 @@ label v14s25b:
 
     u "(I'm not used to being the first one awake...)"
 
-    play music "music/v14/Track Scene 25b.mp3" fadein 2
+    play music "music/v13/Track Scene 17.mp3" fadein 2
 
     scene v14s25b_2 # TPP. Show MC getting out of bed, neutral expression, mouth closed
     with dissolve

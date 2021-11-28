@@ -61,10 +61,9 @@ label work_with_seb:
     menu:
         "Open up to Sebastian":
             $ add_point(KCT.BRO)
-            $ openedUpToSeb = True
             jump wolves_gym_conf
+
         "Play it cool":
-            $ openedUpToSeb = False
             jump wolves_gym_cool
 
 label wolves_gym_conf:

@@ -10,7 +10,7 @@ label v14s34:
 
         u "(Hmm, I wonder if Penelope would be down for a little date night tonight. I'll give her a call.)"
 
-        play music "music/v14/Track Scene 34.mp3" fadein 2
+        play music "music/v13/Track Scene 40_2.mp3" fadein 2
 
     else:
         scene v14s34_3 # TPP. MC sitting on his bed in his Apes room, slight smile, mouth closed.
@@ -18,7 +18,7 @@ label v14s34:
 
         u "(Hmm, I wonder if Penelope would be down for a little date night tonight. I'll give her a call.)"
 
-        play music "music/v14/Track Scene 34.mp3" fadein 2
+        play music "music/v13/Track Scene 40_2.mp3" fadein 2
 
     $ jenny.messenger.newMessage(_("Hey [name], you busy right now?"), queue =False)
     $ jenny.messenger.addReply(_("Why, what's up?"))
@@ -119,11 +119,11 @@ label v14s34:
 
     menu:
 
-        "Hey Princess...":
+        "Hey Princess":
             $ add_point(KCT.BOYFRIEND)
             u "Hey, princess. Did I wake you?"
 
-        "Hey Penelope...":
+        "Hey Penelope":
             $ add_point(KCT.BRO)
             u "Hey, Penelope. Did I wake you?"
 

@@ -8,7 +8,7 @@ label room_wed_night:
         scene v9wnr1 # TPP. Show MC sitting on his Wolves bed looking tired.
         with fade
 
-        play music "music/v9/Scene 9/Track Scene 9.mp3" fadein 3
+        play music "music/v9/Track Scene 9.mp3" fadein 2
 
         pause 1
 
@@ -70,7 +70,7 @@ label room_wed_night:
         scene v9wnr8 # TPP. Show MC sitting on his Apes bed looking tired.
         with fade
 
-        play music "music/v9/Scene 9/Track Scene 9.mp3" fadein 3
+        play music "music/v9/Track Scene 9.mp3" fadein 2
 
         pause 1
 

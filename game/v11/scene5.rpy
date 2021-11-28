@@ -24,7 +24,7 @@ label v11_nightclub_with_josh:
     scene v11swc31
     with dissolve
 
-    play music "music/v11/Scene 4/Track Scene 4_1.mp3" fadein 2
+    play music "music/v11/Track Scene 4_1.mp3" fadein 2
     play sound "sounds/vibrate.mp3"
 
     u "(Let's see who this is.)"
@@ -79,7 +79,7 @@ label v11s4_PhoneContinueJosh1:
     with fade
 
     stop music fadeout 3
-    play music "music/v11/Scene 5/Track Scene 5_2.mp3" fadein 2
+    play music "music/v11/Track Scene 5_2.mp3" fadein 2
 
     jo "There he is. Ready to get fucked up?"
 
@@ -129,7 +129,7 @@ label v11s4_PhoneContinueJosh1:
             u "Fine. Hi, I'm John Smith. My stock dividends have treated me well, and I'm here to have a good time."
 
     stop music fadeout 3
-    play music "music/v11/Scene 5/Track Scene 5_3.mp3" fadein 2
+    play music "music/v11/Track Scene 5_3.mp3" fadein 2
 
     scene v11swc3b
     with dissolve
@@ -697,7 +697,7 @@ label v11s4_PhoneContinueJosh1:
 
     pause 0.75
     stop music fadeout 3
-    play music "music/v11/Scene 5/Track Scene 5_4.mp3" fadein 2
+    play music "music/v11/Track Scene 5_4.mp3" fadein 2
     scene v11swc16 # TPP Outside of bar, Dannis walking up to MC and Candy, Dennis looks angry with mouth open
     with dissolve
 
@@ -809,12 +809,11 @@ label v11s4_PhoneContinueJosh1:
     pause 1
 
 label v11s5_galleryScene:
-    #$ add_point(KCT.TROUBLEMAKER, sum([ v9_sex_with_riley, lindseyfirstkiss, aubrey_bathroom_sex, v10_lauren_suck, v10_ambersex, v10_chloe_locker, v10_ri_sex ])) ###Loyaltymod
 
     scene v11swc20 # FPP At Candy's house, show Candy smiling, mouth closed
     with fade
     stop music fadeout 3
-    play music "music/v11/Scene 5/Track Scene 5_5.mp3" fadein 2
+    play music "music/v11/Track Scene 5_5.mp3" fadein 2
     u "This is a nice place, you live here by yourself?"
 
     scene v11swc20a # FPP Same angle as v11swc20, Candy smiling with mouth open
@@ -855,7 +854,7 @@ label v11s5_galleryScene:
     with fade
 
     stop music fadeout 3
-    play music "music/v11/Scene 5/Track Scene 5_6.mp3" fadein 2
+    play music "music/v11/Track Scene 5_6.mp3" fadein 2
     pause 1.25
 
     image v11cbj = Movie(play="images/v11/Scene 5/v11canbj.webm", loop=True, image="images/v11/Scene 5/v11canbjStart.webp", start_image="images/v11/Scene 5/v11canbjStart.webp") # FPP Candy giving MC a blowjob
@@ -998,7 +997,7 @@ label v11s5_galleryScene:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v11/Scene 5/Track Scene 5_7.mp3" fadein 2
+    play music "music/v11/Track Scene 5_7.mp3" fadein 2
 
     scene v11swc26 # FPP View of the bedroom door
     with dissolve

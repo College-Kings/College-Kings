@@ -6,7 +6,7 @@
 label v11_at_the_bank:
     scene v11bank1 # TPP Show Amber, Riley, MC, Ryan, Ms. Rose, and Nora arriving at the bank, bank teller is waiting and waiving to them
     with fade
-    play music "music/v11/Scene 19/Track Scene 19_1.mp3" fadein 2
+    play music "music/v11/Track Scene 19_1.mp3" fadein 2
     pause 1
     
     scene v11bank1a # TPP Same angle as v11bank1, bank teller's mouth open
@@ -626,7 +626,7 @@ label v11_at_the_bank:
 
     ro "Will someone please explain to me exactly what has happened?"
 
-    if msrosers:
+    if msrosers and joinwolves: #sanitizing pathbuilder input
         scene v11bank18
         with dissolve
 

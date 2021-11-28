@@ -12,7 +12,7 @@ label v12s33:
 
     pause 0.75
 
-    play music "music/v12/Scene 33/Track Scene 33_1.mp3" fadein 2
+    play music "music/v12/Track Scene 33_1.mp3" fadein 2
 
     scene v12s33_2 #FPP Lindsey in a towel walking towards you, slightly surprised mouth open (again don't show the empty hotel lobby in the background)
     with dissolve
@@ -148,7 +148,7 @@ label v12s33:
     pause 1.25
 
     stop music fadeout 3
-    play music "music/v12/Scene 33/Track Scene 33_2.mp3" fadein 2
+    play music "music/v12/Track Scene 33_2.mp3" fadein 2
 
     scene v12s33_7a # same as 7, AUbrey now without top (no bra), starting to take her pants off
     with dissolve
@@ -211,7 +211,7 @@ label v12s33:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 33/Track Scene 33_3.mp3" fadein 2
+    play music "music/v12/Track Scene 33_3.mp3" fadein 2
 
     scene v12s33_12 #FPP showing close up of Ryan laying a massage table with his head looking at mc, mouth open, smiling, Ryan should have black hair here
     with dissolve
@@ -602,16 +602,16 @@ label v12s33_sneak_off1: # -If Mc presses the Sneak Off button during the massag
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
+    play music "music/v12/Track Scene 33_4.mp3" fadein 2
 
-    if v12s33_door1 and v12s33_door2 and v12s33_door3:
+    if len(v12_saunadoors) == 3:
         jump v12s33_sauna
 
     call screen v12s33_three_doors
 
 label v12s33_door1:
 
-    $ v12s33_door1 = True
+    $ v12_saunadoors.add("door1")
 
     scene v12s33_27 # -FPP Ms. Rose, Lauren, Nora, and Riley sitting in the Sauna, all in towels, none of them looking at him, ideally show them sweating if possible-
     #with dissolve 
@@ -619,7 +619,7 @@ label v12s33_door1:
     u "*Whistles*"
 
     stop music fadeout 3
-    play music "music/v12/Scene 33/Track Scene 33_5.mp3" fadein 2
+    play music "music/v12/Track Scene 33_5.mp3" fadein 2
 
     scene v12s33_27a # now all looking at him, ms rose mouth open, suspicious look
     with dissolve
@@ -632,9 +632,9 @@ label v12s33_door1:
     u "Oh sorry, my bad. I was looking for the restroom."
 
     stop music fadeout 3
-    play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
+    play music "music/v12/Track Scene 33_4.mp3" fadein 2
 
-    if v12s33_door1 and v12s33_door2 and v12s33_door3:
+    if len(v12_saunadoors) == 3:
         scene v12s33_24a # same as 24, clock now at 16:00
         with fade
 
@@ -658,7 +658,7 @@ label v12s33_door1:
 
     label v12s33_door2:
 
-    $ v12s33_door2 = True
+    $ v12_saunadoors.add("door2")
 
     if v11_invite_sam_europe:
         scene v12s33_28a #FPP, same as 28 show Chloe and Aubrey and Samantha in Sauna (sweaty if possible), all looking at you, smiling (sit samantha at a spot where it looks natural whether she's there or not) (Chloe in towel, Aubrey naked, Samantha in towel)
@@ -668,7 +668,7 @@ label v12s33_door1:
         #with dissolve
     
     stop music fadeout 3
-    play music "music/v12/Scene 33/Track Scene 33_5.mp3" fadein 2
+    play music "music/v12/Track Scene 33_5.mp3" fadein 2
 
     u "Heyah, hope you don't mind me coming in."
 
@@ -847,9 +847,9 @@ label v12s33_door1:
         sa "Bye, [name]."
 
     stop music fadeout 3
-    play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
+    play music "music/v12/Track Scene 33_4.mp3" fadein 2
 
-    if v12s33_door1 and v12s33_door2 and v12s33_door3:
+    if len(v12_saunadoors) == 3:
         scene v12s33_24a # same as 24, clock now at 16:00
         with fade
 
@@ -871,7 +871,7 @@ label v12s33_door1:
 
     label v12s33_door3:
     
-    $ v12s33_door3 = True
+    $ v12_saunadoors.add("door3")
 
     if v11_pen_goes_europe:
         scene v12s33_32 #FPP, show Amber, Lindsey and Penelope in Sauna (sweaty if possible), all looking at you, smiling, position Penelope so it doesn't look weird if she's there or not, Lindsey naked, Amber naked, Penelope in towel
@@ -883,7 +883,7 @@ label v12s33_door1:
     u "Hey, ladies!"
 
     stop music fadeout 3
-    play music "music/v12/Scene 33/Track Scene 33_5.mp3" fadein 2
+    play music "music/v12/Track Scene 33_5.mp3" fadein 2
 
     if v11_pen_goes_europe:
         scene v12s33_33 # FPP,close up Penelope, smiling, mouth open, looking at mc
@@ -1006,9 +1006,9 @@ label v12s33_door1:
         pe "Bye, [name]!"
     
     stop music fadeout 3
-    play music "music/v12/Scene 33/Track Scene 33_4.mp3" fadein 2
+    play music "music/v12/Track Scene 33_4.mp3" fadein 2
 
-    if v12s33_door1 and v12s33_door2 and v12s33_door3:
+    if len(v12_saunadoors) == 3:
         scene v12s33_24a # same as 24, clock now at 16:00
         with fade
 
@@ -1020,6 +1020,7 @@ label v12s33_door1:
         lmass "Alright gentlemen, it is time for you to swap with the ladies."
 
         jump v12s33_sauna
+
     else:
         call screen v12s33_three_doors
 
@@ -1061,7 +1062,7 @@ label v12s33_three_doors_back:
     pause 0.75
 
     stop music fadeout 3
-    play music "music/v12/Scene 33/Track Scene 33_3.mp3" fadein 2
+    play music "music/v12/Track Scene 33_3.mp3" fadein 2
 
     scene v12s33_36 # Now the guys are in the sauna, show them sweaty if possible. All guys are in towels. TPP Close up Imre sitting in Sauna, annoyed, mouth open, looking forward but not straight at the camera
     with fade
@@ -1301,7 +1302,7 @@ label v12s33_sneak_off2:
     u "Ha, alright then... I'll be back."
 
     stop music fadeout 3
-    play music "music/v12/Scene 33/Track Scene 33_5.mp3" fadein 2
+    play music "music/v12/Track Scene 33_5.mp3" fadein 2
 
     scene v12s33_43 # TPP show mc crouching looking at the massage tables, where 5 girls are laying on. In this order (closest to mc first): Amber, Nora, Lindsey, Ms Rose, Chloe. They should be somewhat naked as you would be on a massage table, don't show the whole room as a lot of girls are missing.
     with fade

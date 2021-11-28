@@ -114,7 +114,7 @@ label v13s37:
     call screen v13s37_garden1
 
 label v13s37_nora:
-    $ v13s37_frnora = True
+    $ freeroam11.add("nora")
 
     scene v13s37no_1 # TPP. Show MC approaching Nora, she's sitting and hiding behind a big rock, hiding, both mouths closed, MC slight smile, Nora slightly sad
     #with dissolve
@@ -563,7 +563,7 @@ label v13s37_nora:
     call screen v13s37_garden1
 
 label v13s37_chris:
-    $ v13s37_frchris = True
+    $ freeroam11.add("chris")
 
     if chrismad:
         scene v13s37ch_1 # TPP. Show MC walking over to Chris, Chris slightly angry, mouth closed, MC slight smile, mouth closed

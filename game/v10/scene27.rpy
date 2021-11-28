@@ -5,7 +5,7 @@
     # -MC wakes up and hears his alarm going off-
 
 label v10_econ_class:
-    play music "music/v10/Scene 27/Track Scene 27.mp3" fadein 3
+    play music "music/v10/Track Scene 27.mp3" fadein 2
     if joinwolves:
         scene v10eco1 # TPP. Show MC in his room, Slight worried face, mouth closed (wolves)
         with fade
@@ -185,6 +185,7 @@ label v10_econ_class:
 
     scene v10eco8 # FPP. MC now stood infront of Ms rose at front of class, Show Ms. Rose, mouth open
     with dissolve
+
     if joinwolves:
         if v10_ms_r_kiss:
             ro "I just wanted to see how you were doing after... everything."
@@ -198,6 +199,7 @@ label v10_econ_class:
             with dissolve
 
             ro "Yeah, uhm. I'm actually really happy."
+
         else:
             ro "I just wanted to see how you were doing after... everything."
 

@@ -10,7 +10,7 @@ label v11_start:
     with fade
 
     pause 0.75
-    play music "music/v11/Scene 1/Track Scene 1_1.mp3" fadein 2
+    play music "music/v11/Track Scene 1_1.mp3" fadein 2
     scene v11coc1a # TPP. Same cam 1, MC now in shot running towards entrance
     with dissolve
 
@@ -41,7 +41,7 @@ label v11_start:
 
     pe "He hasn't texted me back all morning, the odds of him showing up now are one in a million."
     stop music fadeout 3
-    play music "music/v11/Scene 1/Track Scene 1_2.mp3" fadein 2
+    play music "music/v11/Track Scene 1_2.mp3" fadein 2
     scene v11coc5 # TPP. Show MC walking into the room (Camera behind MC, Penelope and Jenny in background, Penelope turned to look at MC)
     with dissolve
 
@@ -692,7 +692,7 @@ label v11_start:
 
     stop music fadeout 3
 
-    play music "music/v11/Scene 1/Track Scene 1_3.mp3" fadein 2
+    play music "music/v11/Track Scene 1_1.mp3" fadein 2
 
     scene v11coc21 # TPP. Show MC, Jenny and Penelope standing next to the chairs, neutral expressions, mouths closed
     with dissolve
@@ -745,12 +745,11 @@ label v11_start:
     pause 0.75
     stop music fadeout 3
 
-    play music "music/v11/Scene 1/Track Scene 1_4.mp3" fadein 2
+    play music "music/v11/Track Scene 1_4.mp3" fadein 2
     call screen v11s1_hallway1
 
 label v11s1_riley:
-    $ v11s1_riley1 = True
-
+    $ freeroam7.add("riley")
 
     if rileyrs:
         scene v11cocri1 # FPP. MC and Riley looking at each other, Riley has mouth closed, neutral expression
@@ -860,8 +859,8 @@ label v11s1_riley:
     call screen v11s1_hallway1
 
 label v11s1_mrrose:
-    if not v11s1_mrrose1:
-        $ v11s1_mrrose1 = True
+    if not "mr rose" in freeroam7:
+        $ freeroam7.add("mr rose")
 
         if joinwolves:
             scene v11cocmrr1a # FPP. Same as mrr1, but Mr Rose mouth closed
@@ -942,8 +941,7 @@ label v11s1_mrrose:
     ### ERROR: -If talk to Jenny ###
 
 label v11s1_jenny:
-
-    $ v11s1_jenny1 = True
+    $ freeroam7.add("jenny")
 
     scene v11cocjen1 # FPP. MC and Jenny looking at each other, Jenny has a worried expression, mouth closed
     #with dissolve
@@ -1018,8 +1016,8 @@ label v11s1_jenny:
     call screen v11s1_hallway1
 
 label v11s1_delib:
-    if not v11s1_delib1:
-        $ v11s1_delib1 = True
+    if not "delib" in freeroam7:
+        $ freeroam7.add("delib")
 
         scene v11coc17c
         #with dissolve
@@ -1074,10 +1072,10 @@ label v11_case_verdict:
     with dissolve
 
     de "Please have a seat."
-    stop music fadeout 2
+    stop music fadeout 3
 
     if v11s1_courtpoints >= 4:
-        play music "music/v11/Scene 1/Track Scene 1_5.mp3" fadein 2
+        play music "music/v11/Track Scene 1_5.mp3" fadein 2
         $ v11_pen_goes_europe = True
         scene v11coc14b # TPP. Same as 14, Mr Lee looking at Penelope
         with dissolve
@@ -1234,7 +1232,7 @@ label v11_case_verdict:
             pe "Thanks again, bye."
     else:
         $ v11_pen_goes_europe = False
-        play music "music/v11/Scene 1/Track Scene 1_6.mp3" fadein 2
+        play music "music/v11/Track Scene 1_1.mp3" fadein 2
         scene v11coc12
         with dissolve
 

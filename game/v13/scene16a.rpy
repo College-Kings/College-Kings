@@ -4,16 +4,15 @@
 # Time: Late night
 
 label v13s16a:
-    $ v13_rileysex = True
+    $ sceneList.add("v13_riley")
     $ rileyrs = True
-    #$ add_point(KCT.TROUBLEMAKER, sum([ v12_lindsey_sex, v12_msrose_sex, v12_lauren_sex, v12_nora_sex ])) ###Loyaltymod
 
     scene v13s16a_1 # FPP Show Riley in bed, MC on top of her and very close to her face. Riley with a sexy smile, mouth open
     with dissolve
 
     ri "I want you to do whatever you want to me..."
 
-    play music "music/v13/Track Scene 16a_1.mp3" fadein 2
+    play music "music/v12/Track Scene 35a_1.mp3" fadein 2
 
     scene v13s16a_1a # FPP Same as 1, Riley's mouth closed
     with dissolve

@@ -4,7 +4,7 @@
 # Time: Friday Morning
 
 label v11_room_aubrey_shopping:
-    play music "music/v11/Scene 7/Track Scene 7_1.mp3" fadein 2
+    play music "music/v11/Track Scene 7_1.mp3" fadein 2
     if joinwolves:
         scene v11auw1 # TPP. Show MC sitting on his bed, as if he had just woken up, he's tired and yawning (New Wolves room)
         with fade
@@ -95,7 +95,7 @@ label v11_room_aubrey_shopping:
 
     au "Hurry, it's windy out here."
     stop music fadeout 3
-    play music "music/v11/Scene 7/Track Scene 7_2.mp3" fadein 2
+    play music "music/v11/Track Scene 7_2.mp3" fadein 2
     scene v11auw5 # TPP. Show MC and Aubrey walking on the sidewalk (around the city, near where Lew's will be) both of them mouth closed, happy expression
     with fade
 
@@ -140,6 +140,9 @@ label v11_room_aubrey_shopping:
     with dissolve
 
     au "Again, you said it, not me. *Laughs*"
+
+    stop music fadeout 3
+    play music "music/v11/Scene Track 7_3.mp3" fadein 2
 
     scene v11auw7 # TPP. Show MC and Aubrey walking through the door of Lew's shop. They're both smiling, mouths closed
     with dissolve
@@ -406,7 +409,7 @@ label v11_room_aubrey_shopping:
 
     menu:
         "Of course":
-            $ amberLike += 1
+            $ amber.points += 1
             $ add_point(KCT.BOYFRIEND)
 
             scene v11auw11b # FPP. Same cam as v11auw11, Amber mouth closed, slight smile
@@ -431,7 +434,7 @@ label v11_room_aubrey_shopping:
 
         "Tease":
             $ add_point(KCT.TROUBLEMAKER)
-            $ amberLike -= 1
+            $ amber.points -= 1
             $ v11_tease_amber += 1
 
             scene v11auw11a
@@ -487,10 +490,7 @@ label v11_room_aubrey_shopping:
     scene v11auw13a # FPP. Same cas v11auw3, Aubrey mouth closed, smiling
     with dissolve
 
-    if v10s33_inv_amber_europe:
-        u "Yep."
-    else:
-        u "Hmmm, I think so."
+    u "Hmmm, I think so."
 
     scene v11auw13
     with dissolve

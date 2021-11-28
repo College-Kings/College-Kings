@@ -1,15 +1,15 @@
 screen v1_freeRoam1_1():
     tag v1_freeRoam1
 
-    add "images/s50.webp"
+    add "images/v1/s50.webp"
 
     # Riley character
     imagebutton:
         align (0.86, 0.12)
-        idle "images/fr1riley.webp"
-        hover "images/fr1rileyhover.webp"
+        idle "images/v1/fr1riley.webp"
+        hover "images/v1/fr1rileyhover.webp"
 
-        if not v1_freeRoam1_riley:
+        if not "riley" in freeroam1:
             action [Hide("freeRoamTutorial"), Jump("v1_freeRoam1_riley")]
         else:
             action Jump("v1_freeRoam1_riley2")
@@ -17,10 +17,10 @@ screen v1_freeRoam1_1():
     # Elijah character
     imagebutton:
         align (0.335, 0.195)
-        idle "images/fr1elijah.webp"
-        hover "images/fr1elijahoverh.webp"
+        idle "images/v1/fr1elijah.webp"
+        hover "images/v1/fr1elijahoverh.webp"
 
-        if not v1_freeRoam1_elijah:
+        if not "elijah" in freeroam1:
             action [Hide("freeRoamTutorial"), Jump("v1_freeRoam1_elijah")]
         else:
             action Jump("v1_freeRoam1_elijah2")
@@ -29,34 +29,34 @@ screen v1_freeRoam1_1():
     imagebutton:
         yalign 0.07
         xalign 0.65
-        idle "images/fr1b.webp"
-        hover "images/fr1bhover.webp"
+        idle "images/v1/fr1b.webp"
+        hover "images/v1/fr1bhover.webp"
         action [Hide("freeRoamTutorial"), Show("v1_freeRoam1_2")]
 
 
 screen v1_freeRoam1_2():
     tag v1_freeRoam1
 
-    if not v1_freeRoam1_chrisGone:
-        add "images/s55.webp"
+    if not "chris" in freeroam1:
+        add "images/v1/s55.webp"
 
         # Chris + Nora characters
         imagebutton:
             align (0.685, 0.5)
-            idle "images/fr1chris.webp"
-            hover "images/fr1chrishover.webp"
+            idle "images/v1/fr1chris.webp"
+            hover "images/v1/fr1chrishover.webp"
             action Jump("v1_freeRoam1_chris")
 
     else:
-        add "images/s56.webp"
+        add "images/v1/s56.webp"
 
         # Nora character
         imagebutton:
             yalign 0.53
             xalign 0.74
-            idle "images/fr1nora.webp"
-            hover "images/fr1norahover.webp"
-            if not v1_freeRoam1_nora:
+            idle "images/v1/fr1nora.webp"
+            hover "images/v1/fr1norahover.webp"
+            if not "nora" in freeroam1:
                 action Jump("v1_freeRoam1_nora")
             else:
                 action Jump("v1_freeRoam1_nora2")
@@ -65,31 +65,31 @@ screen v1_freeRoam1_2():
     imagebutton:
         yalign 0.38
         xalign 0.21
-        idle "images/fr1c.webp"
-        hover "images/fr1chover.webp"
+        idle "images/v1/fr1c.webp"
+        hover "images/v1/fr1chover.webp"
         action Show("v1_freeRoam1_3")
 
     # Back
     imagebutton:
         yalign 1.0
         xalign 0.23
-        idle "images/backchris.webp"
-        hover "images/backchrishover.webp"
+        idle "images/v1/backchris.webp"
+        hover "images/v1/backchrishover.webp"
         action Show("v1_freeRoam1_1")
 
 
 screen v1_freeRoam1_3():
     tag v1_freeRoam1
 
-    add "images/s58.webp"
+    add "images/v1/s58.webp"
 
     # Left Dorm
     imagebutton:
         yalign 0.025
         xalign 0.26
-        idle "images/fr1dorm.webp"
-        hover "images/fr1dormhover.webp"
-        if not v1_freeRoam1_aubrey:
+        idle "images/v1/fr1dorm.webp"
+        hover "images/v1/fr1dormhover.webp"
+        if not "aubrey" in freeroam1:
             action Jump("v1_freeRoam1_aubrey")
         else:
             action Jump("v1_freeRoam1_aubrey2")
@@ -98,33 +98,33 @@ screen v1_freeRoam1_3():
     imagebutton:
         yalign 0.05
         xalign 0.82
-        idle "images/fr1yours.webp"
-        hover "images/fr1yourshover.webp"
+        idle "images/v1/fr1yours.webp"
+        hover "images/v1/fr1yourshover.webp"
         action Show("endFreeRoamConfirm", continueLabel="efra")
 
     # Back
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/dormback.webp"
-        hover "images/dormbackhover.webp"
+        idle "images/v1/dormback.webp"
+        hover "images/v1/dormbackhover.webp"
         action Show("v1_freeRoam1_2")
 
 
 screen v1_freeRoam2_1(): # outside
     tag free_roam
 
-    if not v1_samTalk:
-        add "images/s100.webp"
+    if not "sam" in freeroam2:
+        add "images/v1/s100.webp"
     else:
-        add "images/s100a.webp"
+        add "images/v1/s100a.webp"
 
     # Sam + Karen characters
     imagebutton:
         align (0.43, 1.0)
-        idle "images/fr2sam.webp"
-        hover "images/fr2samh.webp"
-        if not v1_samTalk:
+        idle "images/v1/fr2sam.webp"
+        hover "images/v1/fr2samh.webp"
+        if not "sam" in freeroam2:
             action Jump("v1_freeRoam2_sam")
         else:
             action Jump("v1_freeRoam2_sam2")
@@ -133,9 +133,9 @@ screen v1_freeRoam2_1(): # outside
     imagebutton:
         yalign 0
         xalign 0.482
-        idle "images/fr2door.webp" #inside
-        hover "images/fr2doorh.webp"
-        if not v1_fr2door:
+        idle "images/v1/fr2door.webp" #inside
+        hover "images/v1/fr2doorh.webp"
+        if not "door" in freeroam2:
             action Jump("v1_freeRoam2_door")
         else:
             action Show("v1_freeRoam2_2")
@@ -144,14 +144,14 @@ screen v1_freeRoam2_1(): # outside
 screen v1_freeRoam2_2():
     tag free_roam
 
-    add "images/s102.webp"
+    add "images/v1/s102.webp"
 
     # Josh + Aubrey
     imagebutton:
         align (0.515, 1.0)
-        idle "images/fr2josh.webp"
-        hover "images/fr2joshh.webp"
-        if not v1_joshTalk:
+        idle "images/v1/fr2josh.webp"
+        hover "images/v1/fr2joshh.webp"
+        if not "josh" in freeroam2:
             action Jump("v1_freeRoam2_josh")
         else:
             action Jump("v1_freeRoam2_josh2")
@@ -159,23 +159,23 @@ screen v1_freeRoam2_2():
     # Pool room
     imagebutton:
         align (1.0, 1.0)
-        idle "images/fr2pool.webp"
-        hover "images/fr2poolh.webp"
+        idle "images/v1/fr2pool.webp"
+        hover "images/v1/fr2poolh.webp"
         action Jump("v1_freeRoam2_pool")
 
     # Back outside
     imagebutton:
         align (0.5, 1.0)
-        idle "images/fr2outside.webp" 
-        hover "images/fr2outsideh.webp"
+        idle "images/v1/fr2outside.webp" 
+        hover "images/v1/fr2outsideh.webp"
         action Show("v1_freeRoam2_1")
 
     # Courtney character
     imagebutton:
         align (0.242, 0.4)
-        idle "images/fr2courtney.webp"
-        hover "images/fr2courtneyh.webp"
-        if not v1_courtneyTalk:
+        idle "images/v1/fr2courtney.webp"
+        hover "images/v1/fr2courtneyh.webp"
+        if not "courtney" in freeroam2:
             action Jump("v1_freeRoam2_courtney")
         else:
             action Jump("v1_freeRoam2_courtney2")
@@ -183,29 +183,29 @@ screen v1_freeRoam2_2():
     # Left room
     imagebutton:
         align (0, 1.0)
-        idle "images/fr2camp.webp"
-        hover "images/fr2camph.webp"
+        idle "images/v1/fr2camp.webp"
+        hover "images/v1/fr2camph.webp"
         action Jump("v1_freeRoam2_camp")
 
     # Stairs
     imagebutton:
         align (0.42, 0)
-        idle "images/fr2stairs.webp"
-        hover "images/fr2stairsh.webp"
+        idle "images/v1/fr2stairs.webp"
+        hover "images/v1/fr2stairsh.webp"
         action Jump("v1_freeRoam2_stairs")
 
 
 screen v1_freeRoam2_3():
     tag free_roam
 
-    add "images/s104.webp"
+    add "images/v1/s104.webp"
 
     # Mason character
     imagebutton:
         align (1.0, 1.0)
-        idle "images/fr2mason.webp"
-        hover "images/fr2masonh.webp"
-        if not v1_masonTalk:
+        idle "images/v1/fr2mason.webp"
+        hover "images/v1/fr2masonh.webp"
+        if not "mason" in freeroam2:
             action Jump("v1_freeRoam2_mason")
         else:
             action Jump("v1_freeRoam2_mason2")
@@ -213,9 +213,9 @@ screen v1_freeRoam2_3():
     # Katy character
     imagebutton:
         align (0.52, 0.38)
-        idle "images/fr2katy.webp"
-        hover "images/fr2katyh.webp"
-        if not v1_katyTalk:
+        idle "images/v1/fr2katy.webp"
+        hover "images/v1/fr2katyh.webp"
+        if not "katy" in freeroam2:
             action Jump("v1_freeRoam2_katy")
         else:
             action Jump("v1_freeRoam2_katy2")
@@ -223,42 +223,42 @@ screen v1_freeRoam2_3():
     # Back - Hallway
     imagebutton:
         align (0.5, 1.0)
-        idle "images/backpool.webp"
-        hover "images/backpoolh.webp"
+        idle "images/v1/backpool.webp"
+        hover "images/v1/backpoolh.webp"
         action Show("v1_freeRoam2_2")
 
 screen v1_freeRoam2_4():
     tag free_roam
 
-    add "images/s106.webp"
+    add "images/v1/s106.webp"
 
     # Chloe character
     imagebutton:
         yalign 1.0
         xalign 0.21
-        idle "images/fr2chloe.webp"
-        hover "images/fr2chloeh.webp"
+        idle "images/v1/fr2chloe.webp"
+        hover "images/v1/fr2chloeh.webp"
         action Show("endFreeRoamConfirm", continueLabel="v1_freeRoam2_end")
 
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr2campback.webp"
-        hover "images/fr2campbackh.webp"
+        idle "images/v1/fr2campback.webp"
+        hover "images/v1/fr2campbackh.webp"
         action Show("v1_freeRoam2_2")
 
 screen v1_freeRoam2_5():
     tag free_roam
 
-    add "images/s105.webp"
+    add "images/v1/s105.webp"
 
     # Grayson room
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr2grayson.webp"
-        hover "images/fr2graysonh.webp"
-        if not v1_graysonTalk:
+        idle "images/v1/fr2grayson.webp"
+        hover "images/v1/fr2graysonh.webp"
+        if not "grayson" in freeroam2:
             action Jump("v1_freeRoam2_grayson")
         else:
             action Jump("v1_freeRoam2_grayson2")
@@ -266,8 +266,8 @@ screen v1_freeRoam2_5():
     imagebutton:
         yalign 1.0
         xalign 0.5
-        idle "images/fr2down.webp"
-        hover "images/fr2downh.webp"
+        idle "images/v1/fr2down.webp"
+        hover "images/v1/fr2downh.webp"
         action Show("v1_freeRoam2_2")
 
 screen nsfw_Toggle():

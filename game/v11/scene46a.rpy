@@ -7,7 +7,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1 # FPP. Show Aubrey slight smile mouth closed
     with dissolve
     u "So, do you like fancy restaurants like this?"
-    play music "music/V10/Scene 40/Track Scene 40_2.mp3" fadein 2
+    play music "music/v10/Track Scene 40_2.mp3" fadein 2
     scene v11dwa1a # FPP. # FPP. Show Aubrey slight smile mouth open
     with dissolve
 
@@ -21,7 +21,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1a
     with dissolve
 
-    au "We're gonna have to show some love to our Pimp Daddy Mr. Lee for spoiling all of us little sugar babies."
+    au "We're gonna have to show some love to our Pimp Daddy Mr. Lee for spoiling all of us little sugar babies."   
 
     scene v11dwa1
     with dissolve

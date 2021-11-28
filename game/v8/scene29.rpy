@@ -104,7 +104,7 @@ label after_drugs:
     pause 1
 
     # $ renpy.music.set_volume(0.5, channel="ambience")
-    # play ambience "sounds/TV_amb.mp3" fadein 1
+    # play ambience "sounds/TV_amb.mp3" fadein 2
 
     scene v8josh21 # TPP. Show MC holding the remote and turning the TV on while sitting on the other couch (TV screen is on in this image). Neutral expression, mouth closed if his face is visible
     with dissolve
@@ -619,9 +619,8 @@ label after_drugs:
 
         menu:
             "Go with her":
-                $ amberSexAtJoshs = True
+                $ sceneList.add("v8_amber2")
                 $ amberrs = True
-                #$ add_point(KCT.TROUBLEMAKER, sum([ v7_rileysex, bathroomblowjob, v8_chloesex, v8_riley_lewd_ending ])) ###Loyaltymod
                 if laurenrs:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
@@ -656,7 +655,7 @@ label after_drugs:
         jump tues_morning_at_joshs
 
 label tues_morning_at_joshs:
-    if amberSexAtJoshs:
+    if "v8_amber2" in sceneList:
         scene v8josh36 # TPP. (For context, it's morning now and everyone except MC woke up) Showing MC waking up on the bed (in Josh's bedroom, upstairs) in underwear
         with Fade(0.75, 0.25, 0.75)
         pause 0.5

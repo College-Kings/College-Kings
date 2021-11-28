@@ -9,7 +9,7 @@ label v14s42a:
 
     pause 0.75
 
-    play music "music/v14/Track Scene 42a.mp3" fadein 2
+    play music "music/v12/Track Scene 26b.mp3" fadein 2
 
     scene v14s42a_2 # FPP. MC now awake, looking at Penelope who is laying next to him, Penelope smiling, mouth closed
     with dissolve

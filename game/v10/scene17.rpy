@@ -4,7 +4,7 @@
 # Time: Sunday evening
 
 label v10_aubrey_house:
-    play music "music/v10/Scene 17/Track Scene 17_1.mp3" fadein 3
+    play music "music/v10/Track Scene 17_1.mp3" fadein 2
     scene v10auh1 # FPP Show Aubrey, walking on sidewalk in the evening, slight smile, mouth closed
     with dissolve
 
@@ -260,8 +260,7 @@ label v10_aubrey_house:
             $ add_point(KCT.TROUBLEMAKER)
             if aubreyrs: # Aubrey relationship check
                 label v10s17_galleryScene:
-                $ aubrey_bathroom_sex = True
-                #$ add_point(KCT.TROUBLEMAKER, sum([ amberSexAtJoshs, v9_em_dorm_scene, v9_sex_with_riley, lindseyfirstkiss ])) ###Loyaltymod
+                $ sceneList.add("v10_aubrey")
                 
                 scene v10auh2b # FPP Same angle as v10auh2, show Aubrey at door to bathroom, turning to look at MC, mouth closed
                 with dissolve
@@ -271,7 +270,7 @@ label v10_aubrey_house:
                 scene v10auh2c # FPP Same angle and position as v10auh2b, Aubrey smiling with eyebrow raised, mouth open
                 with dissolve
                 stop music fadeout 3
-                play music "music/v10/Scene 17/Track Scene 17_2.mp3" fadein 3
+                play music "music/v10/Track Scene 17_2.mp3" fadein 2
                 au "*Chuckles* Of course."
 
                 scene v10auh3 # TPP Outside bathroom at Chicks house, show Aubrey grabbing MC to pull him toward the bathroom, both smiling
@@ -799,7 +798,7 @@ label v10_aubrey_room:
 
             u "You really should do acting! *Laughs*"
 
-            if aubrey_bathroom_sex:
+            if "v10_aubrey" in sceneList:
                 scene v10auh8e # Same angle as v10auh8, Aubrey with eyebrow raised, slight smile, mouth open
                 with dissolve
 

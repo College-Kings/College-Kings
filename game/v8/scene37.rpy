@@ -4,7 +4,7 @@
 # Time: Tuesday Evening
 
 label v8_tues_evening:
-    stop music fadeout 2
+    stop music fadeout 3
     if joinwolves:
         scene v8ster1 # TPP. Show MC sat at his desk in his Wolves room, make sure MC's phone is visible on the desk. MC studying.
         with fade
