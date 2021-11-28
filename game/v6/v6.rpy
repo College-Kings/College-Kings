@@ -8289,7 +8289,6 @@ label v6_fr3riley1: #If you click on Riley and finn*
     menu:
         "Ask Riley something":
             $ add_point(KCT.BOYFRIEND)
-            $ askfinn = False
 
             scene sfr3ri2a
             with dissolve

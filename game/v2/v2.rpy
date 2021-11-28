@@ -2690,10 +2690,11 @@ label csaub:
 
 ############ VIKING AUBREY
 label try1: # viking
-    if try1done:
+    if "viking" in costumetried:
         jump try1done
+
     else:
-        $ try1done = True
+        $ costumetried.add("viking")
         jump try1new
 
 label try1done:
@@ -2828,10 +2829,11 @@ label v2_nsfwSkipLabel1:
 
 ############ KNIGHT AUBREY
 label try2:
-    if try2done == True:
+    if "knight" in costumetried:
         jump try2done
+        
     else:
-        $ try2done = True
+        $ costumetried.add("knight")
         jump try2new
 
 label try2done:
@@ -2983,10 +2985,11 @@ label v2_nsfwSkipLabel2:
 
 ############ COWBOY AUBREY
 label try3:
-    if try3done == True:
+    if "cowboy" in costumetried:
         jump try3done
+        
     else:
-        $ try3done = True
+        $ costumetried.add("cowboy")
         jump try3new
 
 label try3done:
@@ -3217,10 +3220,11 @@ label cspe:
 
 ############ VIKING PENELOPE shop3
 label try1p: # viking
-    if try1done:
+    if "viking" in costumetried:
         jump try4done
+
     else:
-        $ try1done = True
+        $ costumetried.add("viking")
         jump try4new
 
 label try4done:
@@ -3361,10 +3365,11 @@ label v2_nsfwSkipLabel4:
 ############ KNIGHT PEN shop4
 label try2p:
 
-    if try2done:
+    if "knight" in costumetried:
         jump try5done
+        
     else:
-        $ try2done = True
+        $ costumetried.add("knight")
         jump try5new
 
 label try5done:
@@ -3499,10 +3504,11 @@ label v2_nsfwSkipLabel5:
 
 ############ COWBOY PEN shop5
 label try3p:
-    if try3done:
+    if "cowboy" in costumetried:
         jump try6done
+        
     else:
-        $ try3done = True
+        $ costumetried.add("cowboy")
         jump try6new
 
 label try6done:

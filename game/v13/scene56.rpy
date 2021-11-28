@@ -345,14 +345,12 @@ label v13s56:
     u "(She really is a great person deep down.)"
 
     if v13_perfume:
-
         scene v13s56_8 # FPP. MC puts perfume back on shelf
         with dissolve
 
         pause 0.75
 
     else:
-
         scene v13s56_8a # FPP. same as v13s56_8 MC puts bonsai back on shelf instead
         with dissolve
 
@@ -416,6 +414,7 @@ label v13s56:
     if v13_perfume:
         scene v13s56_1b_b # TPP. same as v13s56_1a nora and MC's backs are turned
         with dissolve
+
     else:
         scene v13s56_1b_a # TPP. same as v13s56_1a nora and MC's backs are turned
         with dissolve   
@@ -425,6 +424,7 @@ label v13s56:
     if v13_perfume:
         scene v13s56_1c_a # TPP. same as v13s56_1 nora and MC's backs are turned
         with dissolve
+
     else:
         scene v13s56_1c_b # TPP. same as v13s56_1 nora and MC's backs are turned
         with dissolve
@@ -434,6 +434,7 @@ label v13s56:
     if v13_perfume:
         scene v13s56_10a # TPP. MC and nora arrive at the hotel front door and walk in, both slight smiles, mouths closed, street perspective
         with dissolve
+
     else:
         scene v13s56_10 # TPP. MC and nora arrive at the hotel front door and walk in, both slight smiles, mouths closed, street perspective
         with dissolve
@@ -443,6 +444,7 @@ label v13s56:
     if v13_perfume:
         scene v13s56_11b # TPP. MC and nora walk into the lobby, slight smiles, mouths closed, lobby perspective facing hotel front door
         with dissolve
+
     else:
         scene v13s56_11a # TPP. MC and nora walk into the lobby, slight smiles, mouths closed, lobby perspective facing hotel front door
         with dissolve
@@ -453,5 +455,6 @@ label v13s56:
 
     if v13_perfume:
         jump v13s57
+
     else:
         jump v13s57a
