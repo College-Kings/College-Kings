@@ -5,25 +5,27 @@
 
 label v10_mc_vs_ryan_fight:
     play music "music/v10/Track Scene 6.mp3" fadein 2
-    scene v10mvr1 # FPP. Show imre and chris near ring, imre excited look, mouth open chris mouth closed
-    with dissolve
+    
+    if False:
+        scene v10mvr1 # FPP. Show imre and chris near ring, imre excited look, mouth open chris mouth closed
+        with dissolve
 
-    imre "Holy shit man, did you see that shit!? I was planning on doing that one-two thing Sebastian showed me but I guess the one was enough!"
+        imre "Holy shit man, did you see that shit!? I was planning on doing that one-two thing Sebastian showed me but I guess the one was enough!"
 
-    scene v10mvr1a # FPP. Same camera as v10mvr1, Show imre and chris near ring, imre excited look, mouth closed chris mouth closed
-    with dissolve
+        scene v10mvr1a # FPP. Same camera as v10mvr1, Show imre and chris near ring, imre excited look, mouth closed chris mouth closed
+        with dissolve
 
-    u "*Laughs* Yeah man, that was fucking sick!"
+        u "*Laughs* Yeah man, that was fucking sick!"
 
-    scene v10mvr1
-    with dissolve
-    # -Imre starts dancing-
-    imre "*Sings* I'm getting me some pussy after that! I'm getting me some pussy! I'm getting me some pussy!"
+        scene v10mvr1
+        with dissolve
+        # -Imre starts dancing-
+        imre "*Sings* I'm getting me some pussy after that! I'm getting me some pussy! I'm getting me some pussy!"
 
-    scene v10mvr1b # FPP. Same camera as v10mvr1, Show imre and chris near ring, excited look, imre mouth closed Chris mouth open
-    with dissolve
+        scene v10mvr1b # FPP. Same camera as v10mvr1, Show imre and chris near ring, excited look, imre mouth closed Chris mouth open
+        with dissolve
 
-    ch "Imre did good out there, but don't let his win distract you."
+        ch "Imre did good out there, but don't let his win distract you."
 
     scene v10mvr2 # FPP. Show Jost leant against the edge of the ring, slight smile, mouth open
     with dissolve
