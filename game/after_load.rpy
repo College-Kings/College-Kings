@@ -579,8 +579,6 @@ label after_load:
         except NameError: v11_pen_goes_europe = False
         try: v11s1_courtpoints
         except NameError: v11s1_courtpoints = 0
-        try: sammad
-        except NameError: sammad = False
         try: v11_invite_sam_europe
         except NameError: v11_invite_sam_europe = False
         try: v11_josh_nightclub

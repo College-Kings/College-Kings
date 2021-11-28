@@ -245,7 +245,6 @@ default freeroam7 = set() #Penelope Court
 default freeroam8 = set() #London Museum
 default msrosers = False
 default political_strategist = False
-default sammad = False
 default v11_amber_sauna_convo = False
 default v11_aubrey_blue_outfit = False
 default v11_aubrey_sex = False
