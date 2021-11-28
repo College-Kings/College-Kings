@@ -5276,7 +5276,6 @@ label ep7_cam_picture:
 
     menu:
         "Call her":
-            $ apesTask1 = True
             $ apesVids += 1
             $ add_point(KCT.BRO)
             $ add_point(KCT.BOYFRIEND)
@@ -5284,7 +5283,6 @@ label ep7_cam_picture:
             u "Okay."
 
         "Refuse to do it":
-            $ apesTask1 = False
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Nah, I'm not calling Chloe."
@@ -5400,8 +5398,9 @@ label after_pledges:
     scene s861 # Camera - TPP. MC walking home at night through the town after Apes pledging
     with fade
 
-    if apesTask1 or joinwolves:
+    if apesVids == 1 or joinwolves:
         pause 0.5
+
     else:
         u "(Fucking asshole.)"
 
@@ -6314,7 +6313,7 @@ label after_history:
 
             u "Hey, what's up?"
 
-    if apesTask1:
+    if apesVids == 1:
         scene s901a
         with dissolve
         ca "Time for your next video. Let's see if you can handle this one."
@@ -6386,8 +6385,9 @@ label after_history:
 
             scene s901e # Cameron pissed and talking
             with dissolve
-            if apesTask1:
+            if apesVids == 1:
                 ca "You're a fuckin' loser."
+
             else:
                 ca "You're the biggest fuckin' loser of all time."
 

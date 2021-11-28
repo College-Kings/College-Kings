@@ -159,7 +159,6 @@ default youHealth = 5
 
 # 7.0
 default amberrs = False
-default apesTask1 = False # Cameron telling MC to call Chloe
 default apesVids = 0
 default beachfirstkiss = False
 default chloers = False
