@@ -881,6 +881,7 @@ label gokissb:
     menu:
         "Agree":
             $ add_point(KCT.BOYFRIEND)
+            $ laurentest.add("q1")
 
             scene s382a
             with dissolve
@@ -888,7 +889,6 @@ label gokissb:
             u "Agree."
 
         "Disagree":
-            $ la1 = False
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s382a
@@ -905,6 +905,7 @@ label gokissb:
         "Agree":
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.BRO)
+            $ laurentest.add("q2")
 
             scene s382a
             with dissolve
@@ -913,7 +914,6 @@ label gokissb:
 
         "Disagree":
             $ add_point(KCT.TROUBLEMAKER)
-            $ la2 = False
 
             scene s382a
             with dissolve
@@ -933,6 +933,7 @@ label gokissb:
     menu:
         "Agree":
             $ add_point(KCT.BOYFRIEND)
+            $ laurentest.add("q3")
 
             scene s382a
             with dissolve
@@ -1003,7 +1004,6 @@ label gokissb:
 
         "Disagree":
             $ add_point(KCT.BRO)
-            $ la3 = False
 
             scene s382a
             with dissolve
@@ -1140,7 +1140,7 @@ label continuetrolley:
 
     u "Okay, yeah."
 
-    if la1:
+    if "q1" in laurentest:
         la "You said that you struggle making difficult decisions, let's see how that impacts your behavior in the following situation."
 
     else:
@@ -1251,7 +1251,7 @@ label continueam:
 
             u "Alright."
 
-            if la2:
+            if "q2" in laurentest:
                 la "You said that you consider yourself an animal lover. Let's test how much you really love animals."
 
             else:
@@ -1316,7 +1316,7 @@ label trolleybb: # you do press the lever
     scene s390a # your face full of blood
     with vpunch
 
-    if trolleyb and la2:
+    if trolleyb and "q2" in laurentest:
         $ grant_achievement("peta_public_enemy")
 
     u "Ahh fuck!"
@@ -1363,7 +1363,7 @@ label continuean:
 
             u "Sure thing."
 
-            if la3:
+            if "q3" in laurentest:
                 la "You said that you consider yourself a relationship person, let's put that to the test."
 
             else:
@@ -2714,7 +2714,6 @@ label hospitala:
     menu:
         "Confront Adam":
             $ add_point(KCT.BRO)
-            $ confrontadam = True
 
             scene s397
             with dissolve
@@ -2801,7 +2800,6 @@ label hospitala:
 
         "Leave it":
             $ add_point(KCT.BOYFRIEND)
-            $ confrontadam = False
 
             scene s397b
             with dissolve

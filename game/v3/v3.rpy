@@ -2697,7 +2697,6 @@ label continueq:
             play sound "sounds/rejectcall.mp3"
 
             $ add_point(KCT.TROUBLEMAKER)
-            $ dontanswerjulia = True
             # phone call declined sound
 
             scene s270

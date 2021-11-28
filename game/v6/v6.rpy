@@ -3624,7 +3624,6 @@ label fy_bd: # not gone to Emily's
 
             menu:
                 "Kiss her":
-                    $ kissevelyn = True
                     if laurenrs:
                         $ add_point(KCT.TROUBLEMAKER)
                     else:
@@ -4388,7 +4387,6 @@ label naubclimax:
 
 label aubreytalk:
     $ aubreyrs = False
-    $ aubreysex2 = False
 
     u "So uhm... how's third year treating you?"
 
