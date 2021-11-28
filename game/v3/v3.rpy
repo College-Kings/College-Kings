@@ -1,10 +1,10 @@
 label v3start:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s200 ## u reading a magazine on your bed (a couple hours later on cover)
     with Fade (1,0,1)
 
-    stop music fadeout 2.0
+    stop music fadeout 3
     play sound "sounds/knock.mp3"
 
     u "(Who could that be?)"
@@ -111,7 +111,7 @@ label v3start:
 
     cl "I'll see you at midnight. Don't be late."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s205 # Imre coming into the room
     with Fade (1,0,1)
@@ -380,7 +380,7 @@ label conl:
     u "*Laughs*"
 
     ### Different Clock scene from 11 pm to 11:50 pm
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene clock2
     with fade
 
@@ -678,7 +678,7 @@ label conl:
 
     u "I certainly hope so."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     play sound "sounds/olddoor.mp3"
 
@@ -729,7 +729,7 @@ label conl:
 
     u "Wow, that was close."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s222c
     with dissolve
@@ -764,7 +764,7 @@ label conl:
 
     u "I'll see you, Chloe."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s225  #Showing you in bed
     with Fade (2,0,2)
@@ -890,7 +890,7 @@ label conl:
 
     play sound "sounds/swoosh.mp3"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s225a # you open your eyes
     with flash
@@ -1414,7 +1414,7 @@ label conl:
 
                 imre "I'll see you, player."
 
-                stop music fadeout 2.0
+                stop music fadeout 3
 
                 scene s252 # you in Aubrey's backyard looking at the house
                 with Fade (1,0,1)
@@ -1611,7 +1611,7 @@ label conl:
 
                 imre "I'll see you, player."
 
-                stop music fadeout 2.0
+                stop music fadeout 3
 
                 scene s252 # you in Aubrey's backyard looking at the house
                 with Fade (1,0,1)
@@ -1868,7 +1868,7 @@ label conl:
 
         imre "I'll see you, player."
 
-        stop music fadeout 2.0
+        stop music fadeout 3
 
         scene s252 # you in Aubrey's backyard looking at the house
         with Fade (1,0,1)
@@ -2085,7 +2085,7 @@ label continuem: #for compatibility only
             $ aubreyrs = True
             $ sceneList.add("v3_aubrey")
 
-            stop music fadeout 2.0
+            stop music fadeout 3
             play music "music/msexy.mp3"
 
             scene aub1
@@ -2230,7 +2230,7 @@ label continuem: #for compatibility only
 
             u "(Also, I barely know her...)"
 
-            stop music fadeout 2.0
+            stop music fadeout 3
 
             jump aubsexad
 
@@ -2386,7 +2386,7 @@ label acream:
 
     au "AHHHHHH!"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     hide screen aubsex
 
@@ -2440,7 +2440,7 @@ label acream:
 
     pause 0.5
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s264 # you going back to your dorm
     with Fade (1,0,1)
@@ -2836,7 +2836,7 @@ label continueq:
 
     ry "Riley, I don't think [name] wants to get back into it with Grayson."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     ry "Any retribution will only make it worse."
 
@@ -2974,7 +2974,7 @@ label continueq:
 
     ri "Fine, then I'll go after him."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     ################
 
@@ -3125,7 +3125,7 @@ label continueq:
 
     u "Yeah, I'll see you."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     if laurenrs: #LAUREN MOVIES
         play music "music/mindie2.mp3"
@@ -3273,7 +3273,7 @@ label continueq:
 
         u "I'll make sure this date won't disappoint then."
 
-        stop music fadeout 2.0
+        stop music fadeout 3
 
         scene s289 # you two from front view in the last row at a cinema # check lighting
         with Fade (1,0,1)
@@ -3366,7 +3366,7 @@ label continueq:
 
                                 la "*Moans quietly*"
 
-                                stop music fadeout 2.0
+                                stop music fadeout 3
 
                                 play sound "sounds/slap.mp3"
 
@@ -3434,7 +3434,7 @@ label continueq:
                 pause 0.5
 
         # after movie
-        stop music fadeout 2.0
+        stop music fadeout 3
 
         scene lanew1 # walking through park at night
         with Fade (1,0,1)
@@ -3542,13 +3542,13 @@ label continueq:
 
         pause 0.5
 
-        stop music fadeout 2.0
+        stop music fadeout 3
 
     else:
         scene s282a  ## you in your dorm: It's the same day but It's nighttime now on laptop
         with Fade (1,0,1)
 
-        stop music fadeout 2.0
+        stop music fadeout 3
 
 
         pause 1
@@ -3557,7 +3557,7 @@ label continueq:
         jump continues
 
 label dk_ad:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s282b  ## you in your dorm: later that night on your laptop
     with Fade (1,0,1)
@@ -3603,6 +3603,6 @@ label continues: # This is after the date
 
     u "Yes, he's my roommate. What happened?!"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
 jump v4start

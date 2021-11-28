@@ -267,8 +267,6 @@ label v11_samantha_packing:
             sa "Okay, just making sure."
 
         "Don't invite her":
-            $ sammad = True
-
             scene v11samp2e
             with dissolve
 

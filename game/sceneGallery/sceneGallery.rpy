@@ -23,7 +23,7 @@ init python:
     ## SCENE GALLERY ITEMS HERE
         # v1
     if renpy.loadable("v1/v1.rpy"):
-        SceneGallery("sexdream1") #Riley, day 1, v1_sda
+        SceneGallery("sexdream1") #Riley, day 1
         # v2
     if renpy.loadable("v2/v2.rpy"):
         SceneGallery("v1_tomShoutBack") #Tom
@@ -47,7 +47,7 @@ init python:
         SceneGallery("v8_ri_start") #3, Riley, day 11, v8_riley_lewd_ending
         SceneGallery("hoco_amb_night") #5, Amber, day 11
         SceneGallery("int_deal_w_josh") #28, Lars Joe
-        SceneGallery("amber_sex_at_joshs") #30, Amber, day 14, amberSexAtJoshs
+        SceneGallery("amber_sex_at_joshs") #30, Amber, day 14
         # v9
     if renpy.loadable("v9/scene01.rpy"):
         SceneGallery("v9_aubrey_scene_lake") #7, Aubrey, day 16
@@ -58,7 +58,7 @@ init python:
     if renpy.loadable("v10/scene1.rpy"):
         SceneGallery("v10_mc_vs_ryan_fight") #6, Ryan
         SceneGallery("v10_mc_vs_imre_fight") #7, Imre
-        SceneGallery("v10s17_galleryScene") #17, Aubrey, day 20, aubrey_bathroom_sex
+        SceneGallery("v10s17_galleryScene") #17, Aubrey, day 20
         SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #24, Lauren, day 21
         SceneGallery("v10_amber_skatepark_sg") #26, Amber, day 21
         SceneGallery("v10s30_galleryScene") #30, Chloe, day 22
@@ -70,7 +70,7 @@ init python:
         SceneGallery("v11_ms_rose_sex_sg") #28, Rose, day 27, v11_msrose_scene
         SceneGallery("v11s28a_galleryScene") #28a, Samantha, day 27, v11_samantha_spa
         SceneGallery("v11_riley_sex_sg") #35, Riley, day 28
-        SceneGallery("v11_chloe_sex_scene") #41b, Chloe, day 29, v11_chloe_sex
+        SceneGallery("v11_chloe_sex_scene") #41b, Chloe, day 29
         #v12
     if renpy.loadable("v12/scene1.rpy"):
         SceneGallery("v12_lindsey_sex") #17, Lindsey, day 32, v12_lindsey_sex
@@ -87,7 +87,7 @@ init python:
     if renpy.loadable("v14/scene1.rpy"):
         SceneGallery("v14s01") #1, Riley Aubrey, xx, v13_FirstThreesome
         SceneGallery("v14s03c_sg") #3d, Satin, xx
-        SceneGallery("v14s21a") #21a, Chloe, xx, v14_chloe_sex
+        SceneGallery("v14s21a") #21a, Chloe, xx
         SceneGallery("v14s25a") #25a, Amber, xx, v14_amber_sex
         SceneGallery("v14s36_sg") #36, Jenny, xx, v14_jenny_sex
         SceneGallery("v14s46a_sga", scope={"laurenrs": True}) #46a, Lauren good

@@ -579,8 +579,6 @@ label after_load:
         except NameError: v11_pen_goes_europe = False
         try: v11s1_courtpoints
         except NameError: v11s1_courtpoints = 0
-        try: sammad
-        except NameError: sammad = False
         try: v11_invite_sam_europe
         except NameError: v11_invite_sam_europe = False
         try: v11_josh_nightclub
@@ -601,8 +599,6 @@ label after_load:
         except NameError: v11_riley_roomate = False
         try: v11s25_beer
         except NameError: v11s25_beer = True
-        try: v11_bartender_have_gf
-        except NameError: v11_bartender_have_gf = False
         try: msrosers
         except NameError: msrosers = False
         try: v11_solo_question
@@ -611,8 +607,6 @@ label after_load:
         except NameError: v11_kiss_nora = False
         try: v11_told_aubrey
         except NameError: v11_told_aubrey = False
-        try: v11_chloe_sex
-        except NameError: v11_chloe_sex = False
         try: chloegf
         except NameError: chloegf = False
         try: v11_lindsey_slogan

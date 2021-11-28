@@ -89,7 +89,7 @@ label v2start:
     with dissolve
     ry "*Muffled* [name]?! Are you okay??"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     # you wake up in your room with Imre
 
@@ -233,7 +233,7 @@ label v2start:
         u "(Maybe taking a walk will relax me.)"
 
     label walk1: #for compatibility only
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene s124
     with Fade (1,0,1)
 
@@ -306,7 +306,7 @@ label v1_tomShoutBack:
 
     tom "Fuck you!"
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
 # Tom Fight
 label gb:
@@ -1360,7 +1360,7 @@ label meet_lauren2:
     scene s133
     with Fade (1,0,1)
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
 label historye: #for compatibility only
 label history2:
@@ -1624,7 +1624,7 @@ label history2:
 
     lee "You've got Mr. Cameron to thank for that."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene clocka
     with fade
 
@@ -2320,7 +2320,7 @@ label bo_ad:
     em "Yeah, let's leave."
 
 label bo_bd:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s154 ## text from aubrey & you walking back alone
     with Fade (1,0,1)
@@ -2529,7 +2529,7 @@ label bo_bd:
 
         u "Yeah, definitely. See you later."
 
-        stop music fadeout 2.0
+        stop music fadeout 3
 
         jump csaub
 
@@ -2553,7 +2553,7 @@ label bo_bd:
 
         pe "I'd love that!"
 
-        stop music fadeout 2.0
+        stop music fadeout 3
 
         jump cspe
 
@@ -2614,7 +2614,7 @@ label csaub:
 
     au "Haha, I thought so. Let's go then."
 
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s158 # at the clothing store # showing aubrey and u from behind
     with Fade (1,0,1)
@@ -4165,7 +4165,7 @@ label eve1:
 
 label endshopb: #for compatibility only
 label v1_endShop:
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     scene s196
     with Fade (1,0,1)

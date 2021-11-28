@@ -326,7 +326,7 @@ label v7start:
 
     u "Yeah, alright. Thanks."
 
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene s674g # chris gone
     with fade
@@ -976,7 +976,7 @@ label hd_bd:
 
 ####### SCENE 4 Walking Home by yourself
 label conwalkhome:
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene s704 # mc walking home by himself at night
     with fade
@@ -988,7 +988,7 @@ label conwalkhome:
 ######## SCENE 5 Walking Riley Home
 label hd_ad:
     $ walkedRileyHome = True
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene s705 #Opening: You and Riley walking home at night
     with fade
@@ -1073,7 +1073,7 @@ label hd_ad:
 
             u "Yeah, good night. Sleep well."
 
-            stop music fadeout 2
+            stop music fadeout 3
 
             scene s709 # you walking through the dorm hallways to his dorm
             with fade
@@ -1175,7 +1175,7 @@ label hd_ad:
 
                 u "Yeah, good night. Sleep well."
 
-                stop music fadeout 2
+                stop music fadeout 3
 
                 scene s709 # you walking through the dorm hallways to his dorm
                 with fade
@@ -1318,7 +1318,7 @@ label hd_ad:
 
             u "Yeah, good night."
 
-            stop music fadeout 2
+            stop music fadeout 3
 
             scene s709 # you walking through the dorm hallways to his dorm
             with fade
@@ -1646,7 +1646,7 @@ label apologylauren:
     $ seenlauren = True
     $ laurenrs = False
 
-    stop music fadeout 2
+    stop music fadeout 3
     scene s715 # mc walking through dorm hallways
     with fade
 
@@ -2167,7 +2167,7 @@ label thisbelauren:
 label thisbewalk:
     scene s719 #mc on a walk outside in town
     with fade
-    stop music fadeout 2
+    stop music fadeout 3
 
     pause 0.5
 
@@ -2631,7 +2631,7 @@ label thisbewalk:
 
 ########### SCENE 11 Beach trip with Lauren
 label beachlauren:
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene s734 # mc walking through dorm hallways
     with fade
@@ -3018,7 +3018,7 @@ label beachlauren:
 
         u "I'll see you later."
 
-        stop music fadeout 2
+        stop music fadeout 3
 
         scene s749d # Lauren genuine smile
         with dissolve
@@ -3413,7 +3413,7 @@ label beachlauren:
 
         scene s734 # mc walks back to his dorm through dorm halls
         with fade
-        stop music fadeout 2
+        stop music fadeout 3
 
         pause 0.5
 
@@ -4365,7 +4365,7 @@ label aftercall:
     with dissolve
     u "Yeah, yeah."
 
-    # stop musicfadeout 2 #check - music change here to set mood?
+    # stop musicfadeout 3 #check - music change here to set mood?
 
     scene s792 # Camera - first person. Nora closer to MC (than s791, slightly more an arm's distance) with a cheeky smile, eyebrows slightly raised and eyes slightly squinted, mouth open
     with dissolve
@@ -4761,7 +4761,7 @@ label pledgeapes:
         with dissolve
         gr "Hey, hey."
 
-        stop music fadeout 2
+        stop music fadeout 3
 
         scene s828b # Grayson mouth open but looking towards the other pledges with a slightly arrogant smile
         with dissolve
@@ -4798,7 +4798,7 @@ label pledgeapes:
 
         gr "You made the right call. Come on inside."
 
-        stop music fadeout 2
+        stop music fadeout 3
 
         scene s829a
         with dissolve
@@ -4942,7 +4942,7 @@ label pledgeapes:
     gr "The deadline is 6PM on Saturday. All the videos will be presented then and I'll select the best three."
     gr "There's beers upstairs in the freezers if you want. Now start moving and get shit done!"
 
-    stop music fadeout 2
+    stop music fadeout 3
     scene s841 # Camera - TPP. Shot showing Sam, Ryan, Weasly, Sam cheering. Use different poses for everyone. Cameron is also in the shot but looks disappointed. Make him stand out a little
     with dissolve
     "*Claps and cheers*"
@@ -5008,7 +5008,7 @@ label pledgeapes:
             scene s844a # MC holding in anger and clenching his fists. Cameron back to normal position and mouth open, with a smirk
             with dissolve
             ca "Hmph. Thought so."
-            stop music fadeout 2
+            stop music fadeout 3
 
             ca "Come with me."
 
@@ -5049,7 +5049,7 @@ label ep7_fight_cam:
             with dissolve
             ca "Come with me. I'm gonna show you something."
 
-            stop music fadeout 2
+            stop music fadeout 3
 
             scene s848a # Cameron turns back and starts walking away from MC (who is still on the ground)
             with dissolve
@@ -5070,7 +5070,7 @@ label ep7_fight_cam:
             scene s846d # Cameron turns away from the MC and leaving the ring
             with dissolve
             u "Whatever man."
-            stop music fadeout 2
+            stop music fadeout 3
 
             ca "Come with me. I'm gonna show you something."
 
@@ -7219,7 +7219,7 @@ label suit_rental:
     scene s993
     with dissolve
     clerk "Of course, sir. Follow me."
-    stop music fadeout 2
+    stop music fadeout 3
 
     scene s994 #you walking out with a shopping bag
     with fade
@@ -7418,7 +7418,7 @@ label cameron_thurs_tasks:
 
     u "Damn, yeah."
 
-    stop music fadeout 2
+    stop music fadeout 3
     scene scc15b # FPP. Same as scc15a but Cameron gesturing MC with his hand to come with him. Mouth open.
     with dissolve
 
@@ -7981,7 +7981,7 @@ label v7_nsfwSkipLabel4:
 
         ca "Hey, time to go."
 
-        stop music fadeout 2
+        stop music fadeout 3
 
         scene scc75 # FPP. Same as above, Cameron mouth closed.
         with dissolve
@@ -8009,7 +8009,7 @@ label v7_nsfwSkipLabel4:
 
         sa "Ugh."
 
-        stop music fadeout 2
+        stop music fadeout 3
 
         scene scc78 # TPP. Show Samantha and Cameron walking away, MC stood up looking at them, mouth ope.
         with dissolve
@@ -8904,14 +8904,14 @@ label rileytext:
 # It's thurday night
 label rileysexscene:
     if joinwolves:
-        stop music fadeout 2.0
+        stop music fadeout 3
         scene preri1 # You walking through the night to riley
         with fade
 
         pause 0.5
 
     else:
-        stop music fadeout 2.0
+        stop music fadeout 3
         scene preri2 # You walking through the dorms
         with fade
 
@@ -9104,7 +9104,7 @@ label riclimax:
 
     scene risex15 # As above but mouth closed
     with fade
-    stop music fadeout 2.0
+    stop music fadeout 3
 
     ri "This was amazing."
     ri "I wish you could stay, but I think my roommate will be home soon."
@@ -9242,7 +9242,7 @@ label signs_with_autumn:
     u "(Alright, let's get going to Autumn's.)"
     
     u "(I should probably get going right away.)"
-    stop music fadeout 2.0
+    stop music fadeout 3
     scene sas2 # TPP. Show MC knocking on the door of the Deer's house.
     with fade
     play sound "sounds/knock.mp3"
@@ -9638,7 +9638,7 @@ label walking_through_hallways:
     show screen phoneIcon
 
     if joinwolves:
-        stop music fadeout 2.0
+        stop music fadeout 3
 
         scene sfr4mc2 # mc in his wolves' room studying
         with fade
@@ -9646,7 +9646,7 @@ label walking_through_hallways:
         pause 0.5
 
     else:
-        stop music fadeout 2.0
+        stop music fadeout 3
         scene sfr4mc1 # mc in his dorm studying
         with fade
 

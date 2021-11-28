@@ -684,7 +684,6 @@ label fr5aubrey1:
 
         "Join her":
             $ add_point(KCT.BOYFRIEND)
-            $ joinAubreyLake = True
 
             u "Fine, let me just take my clothes off."
 
@@ -1324,7 +1323,7 @@ label fr5ryan3:
 
     ri "Today was certainly relaxing..."
 
-    if aubreyrs and joinAubreyLake:
+    if "v9_aubrey" in sceneList:
         scene v9slake14d #same as 14b, now aubrey looking at you slight smile mouth open
         with dissolve
 

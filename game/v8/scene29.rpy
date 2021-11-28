@@ -619,7 +619,7 @@ label after_drugs:
 
         menu:
             "Go with her":
-                $ amberSexAtJoshs = True
+                $ sceneList.add("v8_amber2")
                 $ amberrs = True
                 if laurenrs:
                     $ add_point(KCT.TROUBLEMAKER)
@@ -655,7 +655,7 @@ label after_drugs:
         jump tues_morning_at_joshs
 
 label tues_morning_at_joshs:
-    if amberSexAtJoshs:
+    if "v8_amber2" in sceneList:
         scene v8josh36 # TPP. (For context, it's morning now and everyone except MC woke up) Showing MC waking up on the bed (in Josh's bedroom, upstairs) in underwear
         with Fade(0.75, 0.25, 0.75)
         pause 0.5

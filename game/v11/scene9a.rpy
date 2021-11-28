@@ -253,6 +253,9 @@ label v11_wolves_seb_prank:
 
             imre "*Whisper* It's time man!"
 
+            stop music fadeout 3
+            play music "music/v11/Track Scene 9_3.mp3" fadein 2
+
             scene v11wsp13a # FPP. Same as v11wsp13, Imre mouth closed
             with dissolve
 

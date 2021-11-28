@@ -260,7 +260,7 @@ label v10_aubrey_house:
             $ add_point(KCT.TROUBLEMAKER)
             if aubreyrs: # Aubrey relationship check
                 label v10s17_galleryScene:
-                $ aubrey_bathroom_sex = True
+                $ sceneList.add("v10_aubrey")
                 
                 scene v10auh2b # FPP Same angle as v10auh2, show Aubrey at door to bathroom, turning to look at MC, mouth closed
                 with dissolve
@@ -798,7 +798,7 @@ label v10_aubrey_room:
 
             u "You really should do acting! *Laughs*"
 
-            if aubrey_bathroom_sex:
+            if "v10_aubrey" in sceneList:
                 scene v10auh8e # Same angle as v10auh8, Aubrey with eyebrow raised, slight smile, mouth open
                 with dissolve
 

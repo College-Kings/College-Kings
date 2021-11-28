@@ -235,7 +235,7 @@ label v11_chloe_bathroom:
             cl "*Moans*"
 
             if chloers or chloegf or kct == "popular":
-                $ v11_chloe_sex = True
+                $ sceneList.add("v11_chloe")
                 $ chloers = True
 
                 if not chloers and not chloegf:
