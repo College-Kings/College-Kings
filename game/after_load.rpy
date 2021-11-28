@@ -561,10 +561,6 @@ label after_load:
         except NameError: v12s7_aubrey_moved = False
         try: v12_lindsey_sex
         except NameError: v12_lindsey_sex = False
-        try: v12s18_bottlespin_played
-        except NameError: v12s18_bottlespin_played = False
-        try: v12s18_fmk_played
-        except NameError: v12s18_fmk_played = False
         try: v12_lauren_sex
         except NameError: v12_lauren_sex = False
         try: v12_lauren_points
@@ -585,10 +581,6 @@ label after_load:
         except NameError: v12_nora_sex = False
         try: v12_nora_points
         except NameError: v12_nora_points = 0
-        try: v12s33_door1
-        except NameError: v12s33_door1 = False
-        try: v12s33_door2
-        except NameError: v12s33_door2 = False
         try: v12s33_door3
         except NameError: v12s33_door3 = False
         try: v12s24_emmymatch

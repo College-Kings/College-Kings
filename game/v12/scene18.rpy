@@ -341,7 +341,7 @@ label v12_slumber_party:
 
 # -Start of free roam-
 label v12s18_bottlespin:
-    $ v12s18_bottlespin_played = True
+    $ v12_slumberparty.add("bottle")
     
     scene v12slpbs1 # FPP. Aubrey, Nora, Chloe and Lindsey sitting down in a circle on the floor, MC standing up, MC and Aubrey looking at each other, Aubrey slight smile, mouth open (Only Aubrey in shot)
     #with dissolve
@@ -1078,7 +1078,7 @@ label v12s18_bottlespin:
     call screen v12s18_room1
 
 label v12s18_fmk:
-    $ v12s18_fmk_played = True
+    $ v12_slumberparty.add("fmk")
 
     scene v12slpfmk1 # FPP. Amber lying on the bed, MC standing in front of the bed, Amber looking at MC, Amber smiling, mouth open
     #with dissolve

@@ -13,10 +13,10 @@ screen v12s33_three_doors():
         idle "images/v12/Scene 33/Buttons/SaunaDoors.webp"
         hover "images/v12/Scene 33/Buttons/SaunaDoors_hover.webp"
 
-        if not v12s33_door1:
+        if not "door1" in v12_saunadoors:
             hotspot (219, 281, 265, 587) action Jump("v12s33_door1")
         
-        if not v12s33_door2:
+        if not "door2" in v12_saunadoors:
             hotspot (830, 283, 249, 583) action Jump("v12s33_door2")
         
         if not v12s33_door3:

@@ -2,7 +2,7 @@ screen v12s18_room1():
     tag free_roam
 
     imagemap:
-        if not v12s18_bottlespin_played:
+        if not "bottle" in v12_slumberparty:
             idle "images/v12/scene 18/Screens/v12s18Room1.webp"
             hover "images/v12/scene 18/Screens/v12s18Room1Hover.webp"
 
@@ -24,7 +24,7 @@ screen v12s18_room2():
         idle "images/v12/scene 18/Screens/v12s18Room2.webp"
         hover "images/v12/scene 18/Screens/v12s18Room2Hover.webp"
 
-        if not v12s18_fmk_played:
+        if not "fmk" in v12_slumberparty:
             hotspot (849, 70, 477, 759) action Jump("v12s18_fmk") # Play Fuck, Marry, Kill
         else:
             hotspot (849, 70, 477, 759) action Show("endFreeRoamConfirm", continueLabel="v12s18_bet") # End freeroam
