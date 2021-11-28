@@ -217,12 +217,6 @@ default consoledRose = False
 default sideWithCameron = False
 default emilyArcade = 0
 default helpJosh = False
-
-    ## Fight Vars
-default larsdmg = 0
-default simLarsFight = False
-default s28_fightWinner = "MC"
-
 default amberSexOfferAtJoshs = False
 default amberSexAtJoshs = False
 default noralikes = False
@@ -231,6 +225,9 @@ default chloeSteakHouse = False
 default climbwseb = False
 default hesitantwgrayson = False
 default v8_riley_lewd_ending = False
+default larsdmg = 0
+default simLarsFight = False
+default s28_fightWinner = "MC"
 default v8_dodged_pipe = False
 
 # 9.0
@@ -503,9 +500,7 @@ default irisStrikes = 0
 default v14s4_tell_imre = False
 default v14s5a_riley_should_join_chicks = False
 default v14_samantha_cum = False
-
 default v14s48_car_price = 100
-
 default v14s47_passenger = False
 default v14s51_bedside = False
 default v14s51_desk = False
@@ -518,7 +513,6 @@ default v14s47_linds_passenger = False
 default v14s47_solo_passenger = False
 default v14s01_music = False
 default v14s03c_music = False
-
 
 # 15.0 
 # Chloe Planning Board (v15s8)
