@@ -98,9 +98,9 @@ label v15s9:
             u "It's just as friends, right? Or do I have to pretend to be your boyfriend? *Laughs*"
 
             if v13s48_canoeing_as_date:
-                $ AubreyTamed = False
-                $ Aubreyfwb = False
-                $ AubreyFriend = True
+                $ aubrey_tamed = False
+                $ aubrey_fwb = False
+                $ aubrey_friend = True
 
                 scene v15s9_3e # FPP. same as v15s9_3d Aubrey has a disapointed expression, looking away from MC
                 with dissolve
@@ -123,7 +123,7 @@ label v15s9:
                 au "Ha..."
 
             else:
-                $ Aubreyfwb = True
+                $ aubrey_fwb = True
 
                 scene v15s9_3f # FPP. same as v15s9_3d Aubrey puts a hand to her chest in relief, head tilted slightly upward and looking away, facial expression is that of relief, slight smile, mouth open
                 with dissolve
@@ -157,7 +157,7 @@ label v15s9:
             u "I'd like to come as your date if that's okay."
 
             if v13s48_canoeing_as_date:
-                $ AubreyTamed = True
+                $ aubrey_tamed = True
 
                 scene v15s9_3g # FPP. same as v15s9_3b Aubrey slightly blushes, head slightly tilted down, looking at mc, full smile, mouth closed
                 with dissolve
@@ -223,7 +223,7 @@ label v15s9:
                 with dissolve
 
             else:
-                $ Aubreyfwb = True
+                $ aubrey_fwb = True
 
                 scene v15s9_3m # FPP. same as v15s9_3f Aubreys head is tilted slightly to the side, looking at Mc like a lost puppy, slight smile mouth closed with a slightly curled bottom lip
                 with dissolve
@@ -466,7 +466,7 @@ label v15s9:
             $ lindsey.messenger.addReply("Fuck, okay. What's next?", func=None)
             $ lindsey.messenger.newMessage("Meet me at the janitor's closet and you'll find out ;)")
 
-            if lindseyfriend: #placeholder
+            if lindsey_friend: #placeholder
                 $ lindsey.messenger.addReply("OMW", func=None)
 
             if lindseyrs:
@@ -491,7 +491,7 @@ label v15s9:
 
             jump v15s12
 
-    elif msrosers and v12_msrose_sex and v15s9_MadAtMsRose:
+    elif msrosers and v12_msrose_sex and v15s9_mad_at_ms_rose:
         scene v15s9_1h
         with dissolve
 

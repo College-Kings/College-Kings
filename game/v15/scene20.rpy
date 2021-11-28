@@ -48,7 +48,7 @@ label v15s20:
             "Say nothing.":
                 u "(I was expecting a hello kiss, but I'll keep quiet about it... I don't want to throw her off her game.)"
 
-    if MrLeeMeeting: # Placeholder if MC chose to meet with Mr. Lee.
+    if mr_lee_meeting: # Placeholder if MC chose to meet with Mr. Lee.
         scene v15s20_5a
         with dissolve
 

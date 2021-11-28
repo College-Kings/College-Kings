@@ -456,63 +456,64 @@ label v15s12:
 
         #### Planning Board work goes here 
         python:
-            lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/lindsey_background.webp", money=200, style="lindsey_board")
-            v15_lindsey_board.add_approach("gameNight",
+            lindsey_board = PlanningBoard("images/v15/chicks_presidency_race/planning_boards/lindsey_background.webp", money=200, style="lindsey_board")
+
+            lindsey_board.add_approach("Game Night",
                 "Game Night",
                 opinion="\"Hosting a game night would be the perfect excuse to get a few of Chloe's allies alone. We'll get booze, snacks, and make sure they have a fun night while also making it known that I'm so much better than Chloe\"")
 
-            v15_lindsey_board.add_approach("vipNight",
+            lindsey_board.add_approach("VIP Night",
                 "VIP Night",
                 opinion="\"There's a few people on Chloe's side that I think I could sway... Their opinion of me isn't horrible, they just seem to perfer her... If we give them a spectacular night out, there's absolutely no way they'll be  able to choose her over me.\"")
 
-            v15s12_lindsey_pb_fakeId = v15_lindsey_board.add_task("gameNight",
+            v15s12_lindsey_pb_fakeId = lindsey_board.add_task("Game Night",
                 "Buy booze with fake ID",
                 opinion="\"Since neither of us are of the legal drinking age, we're gonna need a fake ID if we want booze. A friend of mine makes them, so I'll take care of that.\"",
                 people=[mc, lindsey],
                 cost=100)
 
-            v15_lindsey_board.add_subtask("gameNight",
+            lindsey_board.add_subtask("Game Night",
                 "Who's Most Likely...",
                 opinion="\"\"Who's Most Likely To\" is always a fun game to play with a group of people. We'll laugh, learn, a bit about each other and maybe some secrets will come out as well.\"")
 
-            v15s12_lindsey_pb_wouldYouRather = v15_lindsey_board.add_subtask("gameNight",
+            v15s12_lindsey_pb_wouldYouRather = lindsey_board.add_subtask("Game Night",
                 "Would You Rather",
                 opinion="\"\"Would you rather\" is the easiest game to play when you want to get the conversation rolling. Hopefully we get a few laughs and maybe some secrets out of them as well.\"")
 
-            v15_lindsey_board.add_task("gameNight",
+            lindsey_board.add_task("Game Night",
                 "Host the game night",
                 opinion="\"Once we got the games and (hopefully) the booze, all that's left is to make sure everyone has a good time and leaves wanting to vote for me.\"",
                 people=[mc, lindsey, autumn, aubrey])
 
-            v15_lindsey_board.add_task("vipNight",
+            lindsey_board.add_task("VIP Night",
                 "Book a limousine & private club",
                 "\"It takes a pretty big chunk out of my campaign fund, but this limo rental and VIP room at the nearest nightclub are going to blow our friends out of the fucking waters. I can't wait to spoil them all night.\"",
                 cost=800)
 
-            v15_s12_lindsey_pb_inviteSebastian = v15_lindsey_board.add_subtask("vipNight",
+            v15_s12_lindsey_pb_inviteSebastian = lindsey_board.add_subtask("VIP Night",
                 "Invite Aubrey, Autumn, and Sebastian",
                 opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The third person I want to invite is Sebastian. We're pretty close, but in the end he has to vote the way the Wolves do. If we can convince him to support me, and ask others to; Seb being on my side would mean more support from the Wolves.\"",
                 people=[aubrey, autumn, sebastian])
 
-            v15_lindsey_board.add_subtask("vipNight",
+            lindsey_board.add_subtask("VIP Night",
                 "Invite Aubrey, Autumn, and Grayson",
                 opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The last person I'm thinking about inviting is Grayson. He already has this burning hatred for Chloe, mixed with a little bit of horniness but stil... I think he's closer to boarding the Lindsey train than we think, and Grayson being on my side would mean support from the Apes.\"",
                 people=[aubrey, autumn, grayson])
 
-            v15_lindsey_board.add_task("vipNight",
+            lindsey_board.add_task("VIP Night",
                 "Host exclusive VIP Night",
                 opinion="\"Finally, a night to remember! Our main focus during the night out is the three people we want to impress. Keeping them satisfied and entertained all night is the only goal besides having a damn good time.\"",
                 people=[mc, lindsey, aubrey, autumn]) # Can't add Sebastian or Grayson here because we're loading the menu before the player can select. 
 
-        call screen planning_board(v15_lindsey_board)
+        call screen planning_board(lindsey_board)
 
-        if v15_lindsey_board.approach is not None:
-            $ v15s12_lindsey_pb_gameNight = v15_lindsey_board.approach.id == "gameNight"
+        if lindsey_board.approach is not None:
+            $ v15s12_lindsey_pb_gameNight = lindsey_board.approach.id == "gameNight"
 
-        if v15_lindsey_board.selected_task is not None:
-            $ v15s12_lindsey_pb_fakeId = v15_lindsey_board.selected_task  == v15s12_lindsey_pb_fakeId
-            $ v15s12_lindsey_pb_wouldYouRather = v15_lindsey_board.selected_task == v15s12_lindsey_pb_wouldYouRather
-            $ v15_s12_lindsey_pb_inviteSebastian = v15_lindsey_board.selected_task == v15_s12_lindsey_pb_inviteSebastian
+        if lindsey_board.selected_task is not None:
+            $ v15s12_lindsey_pb_fakeId = lindsey_board.selected_task  == v15s12_lindsey_pb_fakeId
+            $ v15s12_lindsey_pb_wouldYouRather = lindsey_board.selected_task == v15s12_lindsey_pb_wouldYouRather
+            $ v15_s12_lindsey_pb_inviteSebastian = lindsey_board.selected_task == v15_s12_lindsey_pb_inviteSebastian
 
         # End planning board (screen disappears)
 
