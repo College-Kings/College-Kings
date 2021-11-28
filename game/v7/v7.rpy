@@ -12489,7 +12489,7 @@ label fr4chloedate:
 
     u "*Chuckles* True."
 
-    if not v7_seencrowning:
+    if not "crowning" in freeroam4:
         scene sfr4stage1 # close up ms rose on the stage on the microphone
         with dissolve
 
@@ -13150,7 +13150,7 @@ label fr4laurendate:
 
     la "Well, I'm glad you're back."
 
-    if not v7_seencrowning:
+    if not "crowning" in freeroam4:
         scene sfr4stage1 # close up ms rose on the stage on the microphone
         with dissolve
 
@@ -13396,7 +13396,7 @@ label fr4penelopedate:
 
     pe "Okay, yay." # Hi Steve!
 
-    if not v7_seencrowning:
+    if not "crowning" in freeroam4:
         scene sfr4stage1 # close up ms rose on the stage on the microphone
         with dissolve
 
@@ -14651,7 +14651,7 @@ label fr4riley2:
     if not chloesad:
         label fr4alonechloe:
 
-            if not v7_seencrowning:
+            if not "crowning" in freeroam4:
                 scene sfr4stage4 #Chloe runs up on stage
                 with dissolve
                 "*Crowd continues to cheer*"
@@ -14721,10 +14721,9 @@ label fr4riley2:
     with dissolve
 
     ri "Well we've been here for a few hours now and it's getting kinda boring."
-    $ v7_seencrowning = True
+    $ freeroam4.add("crowning")
 
     if rileyrs and hcGirl == "alone":
-
         scene sfr4ri51b
         with dissolve
 
@@ -16060,7 +16059,7 @@ label fr4chloe2:
                 with fade
 
                 if hcGirl == "alone":
-                    if not v7_seencrowning:
+                    if not "crowning" in freeroam4:
                         u "(I guess I'll watch it with someone.)"
                         
                         scene sfr4stage4 #Chloe runs up on stage
@@ -16410,7 +16409,7 @@ label fr4lockerroomchloe:
 
             cl "You're cute."
 
-            if not v7_seencrowning:
+            if not "crowning" in freeroam4:
                 scene sfr4cl52d # chloe lookig at the wall where prom is on the other side
                 with dissolve
 

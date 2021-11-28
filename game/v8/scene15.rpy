@@ -92,7 +92,6 @@ label penelope_dorm_hack:
     menu:
         "Help Penelope":
             $ add_point(KCT.BOYFRIEND)
-            $ penHelpDean = True
             jump help_pen
 
         "Leave":
@@ -150,6 +149,7 @@ label help_pen:
  
     if joinwolves:
         jump mc_wolves_sun_aft
+
     else:
         jump mc_apes_sun_aft
 
@@ -187,5 +187,6 @@ label no_help_pen:
     # SCENE 16 #
     if joinwolves:
         jump mc_wolves_sun_aft
+
     else:
         jump mc_apes_sun_aft

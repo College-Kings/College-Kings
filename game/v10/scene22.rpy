@@ -142,11 +142,10 @@ label v10_cafe_w_jenny:
 
         jen "She did what???"
 
-        if penHelpDean:
-            scene v10scwj7e # FPP. Same as 7, slight worry, mouth closed.
-            with dissolve
+        scene v10scwj7e # FPP. Same as 7, slight worry, mouth closed.
+        with dissolve
 
-            u "When she told me I was pretty worried so I went to the dean to see what I could do. After our conversation things seemed better, but it's still pretty serious."
+        u "When she told me I was pretty worried so I went to the dean to see what I could do. After our conversation things seemed better, but it's still pretty serious."
 
         scene v10scwj7d
         with dissolve

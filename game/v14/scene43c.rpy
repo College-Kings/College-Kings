@@ -98,7 +98,6 @@ label v14s43c:
             pe "It's settled then, romantic scene it is."
 
         "Argument scene":
-            $ v14_PenArgScene = True
             $ add_point(KCT.TROUBLEMAKER)
             $ add_point(KCT.BRO)
 

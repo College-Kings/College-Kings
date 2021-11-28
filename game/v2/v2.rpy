@@ -762,7 +762,7 @@ label tomFightStart:
             $ tomstance = renpy.random.choice([1, 2, 3])
             $ simyou = renpy.random.choice([1, 2, 3, 4])
 
-            if simtomfight == True:
+            if simtomfight:
                 if simtom == 1:
                     jump tomhookhit2
                 if simtom == 2:
@@ -788,7 +788,7 @@ label tomFightStart:
             $ tomstance = renpy.random.choice([1, 2, 3])
             $ simyou = renpy.random.choice([1, 2, 3, 4])
 
-            if simtomfight == True:
+            if simtomfight:
                 if simtom == 1:
                     jump tomjabhit2
                 if simtom == 2:
@@ -811,7 +811,7 @@ label tomFightStart:
             $ simyou = renpy.random.choice([1, 2, 3, 4])
 
 
-            if simtomfight == True:
+            if simtomfight:
                 if simtom == 1:
                     jump tomkickhit
                 if simtom == 2:
@@ -836,7 +836,7 @@ label tomFightStart:
         $ tomattack = renpy.random.choice([1, 2, 3])
         $ simtom = renpy.random.choice([1, 2, 3, 4])
 
-        if simtomfight == True:
+        if simtomfight:
             if tomstance == 1:
                 if simyou == 1:
                     jump tomkick2
@@ -871,7 +871,7 @@ label tomFightStart:
         $ stance = 1
         $ tomattack = renpy.random.choice([1, 2, 3])
         $ simtom = renpy.random.choice([1, 2, 3, 4])
-        if simtomfight == True:
+        if simtomfight:
             if tomstance == 1:
                 if simyou == 1:
                     jump tomkick2
@@ -909,7 +909,7 @@ label tomFightStart:
         $ stance = 1
         $ tomattack = renpy.random.choice([1, 2, 3])
         $ simtom = renpy.random.choice([1, 2, 3, 4])
-        if simtomfight == True:
+        if simtomfight:
             if tomstance == 1:
                 if simyou == 1:
                     jump tomkick2
@@ -944,7 +944,7 @@ label tomFightStart:
         $ stance = 1
         $ tomattack = renpy.random.choice([1, 2, 3])
         $ simtom = renpy.random.choice([1, 2, 3, 4])
-        if simtomfight == True:
+        if simtomfight:
             if tomstance == 1:
                 if simyou == 1:
                     jump tomkick2
@@ -982,7 +982,7 @@ label tomFightStart:
         $ stance = 1
         $ tomattack = renpy.random.choice([1, 2, 3])
         $ simtom = renpy.random.choice([1, 2, 3, 4])
-        if simtomfight == True:
+        if simtomfight:
             if tomstance == 1:
                 if simyou == 1:
                     jump tomkick2
@@ -1017,7 +1017,7 @@ label tomFightStart:
         $ stance = 1
         $ tomattack = renpy.random.choice([1, 2, 3])
         $ simtom = renpy.random.choice([1, 2, 3, 4])
-        if simtomfight == True:
+        if simtomfight:
             if tomstance == 1:
                 if simyou == 1:
                     jump tomkick2

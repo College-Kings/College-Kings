@@ -23,7 +23,7 @@ label v14_start:
     
 label v14s01:
     play music "music/v12/Track Scene 23_2.mp3" fadein 2
-    $ v14s01_music = True
+
     scene v14s01_1 # FPP. MC sitting on bed, looking at Riley and Aubrey making out, show some caressing between them
     with dissolve
 
@@ -46,7 +46,6 @@ label v14s01:
         "We're doing this":
             $ add_point(KCT.TROUBLEMAKER)
             
-            label v14s01_sg:
                 if not v14s01_music:
                     play music "music/v12/Track Scene 23_2.mp3" fadein 2
                 
@@ -473,6 +472,7 @@ label v14s01:
 
             u "*Sighs* (My sleep schedule is gonna be fucked if I start waking up at night time. Oh well.)"
 
+    $ renpy.end_replay()
     scene v14s01_17
     with dissolve
 

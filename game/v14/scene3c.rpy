@@ -5,7 +5,6 @@
 
 label v14s03c:
     play music "music/v13/Track Scene 62a.mp3" fadein 2
-    $ v14s03c_music = True
 
     scene v14s03c_1 # TPP. Show MC walking in the Brothel bar, slight smile, mouth open.
     with dissolve
@@ -305,10 +304,7 @@ label v14s03c:
         "Go with her":
             $ v14_satin_sex = True
             label v14s03c_sg:
-            
-            if not v14s03c_music:
-                play music "music/v13/Track Scene 62a.mp3" fadein 2
-        
+                   
             $ add_point(KCT.TROUBLEMAKER)
 
             scene v14s03c_4f

@@ -271,7 +271,6 @@ label v8s30_nsfwSkipLabel1:
 
     jump tues_morning_at_joshs
 
-
     ### Animation references:
     # Amber and MC in Josh's bedroom. FYI, in the beginning of the scene, MC is wearing outfit 3 (gray tee, jeans pant) and Amber is wearing outfit 3 (red top, jeans short). Mood of the scene - lustful and horniness as opposed to passionate.
     #

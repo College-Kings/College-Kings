@@ -375,7 +375,7 @@ label v13s24:
     menu:
         "No kids for me":
             $ add_point(KCT.BRO)
-            $ v13_told_emmy_no_kids_for_me = True
+            $ v13_emmy_points += 1
             u "Yeah, I'm on the no kids vibe at the moment too. Guess it's just not something I think about."
 
             scene v13s24_16d # FPP. same as v13s24_16b emmy head tilted, playing with her hair, happy smile
@@ -414,7 +414,11 @@ label v13s24:
 
     menu:
         "City":
-            $ v13_told_emmy_city = True
+            $ v13_emmy_points += 2
+            
+            if v13_emmy_points == 3:
+                $ emmyrs = True
+            
             scene v13s24_16b
             with dissolve
 
@@ -470,9 +474,6 @@ label v13s24:
     with dissolve
 
     pause 0.75
-
-    if v13_told_emmy_no_kids_for_me and v13_told_emmy_city:
-        $ emmyrs = True
 
     scene v13s24_10
     with dissolve

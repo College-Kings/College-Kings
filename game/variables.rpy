@@ -45,12 +45,23 @@ default troublemaker = 1
 
 #Scenes
 default sceneList = set()
+default aubreysex2 = False
 default bathroomblowjob = False
+default v10_ambersex = False
+default v10_chloe_locker = False
+default v10_lauren_suck = False
+default v10_ri_sex = False
+default v11_rileysex = False
+default v13_chloe_sex = False
+default v13_rileysex = False
 default v3_aubsex = False
 default v6_emilysex = False
-default aubreysex2 = False
+default v7_rileysex = False
 default v8_chloesex = False
-default v13_rileysex = False
+default v8_hocoamber = False
+default v9_aubrey_lake = False
+default v9_em_dorm_scene = False
+default v14_satin_sex = False
 
 # 1.0 - 6.0
 default adamattack = 1
@@ -141,7 +152,6 @@ default toldlauren = False
 default tomattack = 1
 default tomdmg = 0
 default tomstance = 1
-default trolley = False
 default trolleyb = False
 default upstairs = "nobody"
 default v1_aubreywannafight = False
@@ -181,8 +191,6 @@ default rileysex = False
 default seenlauren = False
 default signs = False
 default v7_emily_bowling = False
-default v7_rileysex = False
-default v7_seencrowning = False
 default walkedRileyHome = False
 default wolvesTasks = set()
 
@@ -198,12 +206,10 @@ default helpJosh = False
 default hesitantwgrayson = False
 default larsdmg = 0
 default noralikes = False
-default penHelpDean = False
 default s28_fightWinner = "MC"
 default sideWithCameron = False
 default simLarsFight = False
 default v8_dodged_pipe = False
-default v8_hocoamber = False
 default v8_riley_lewd_ending = False
 default v8AutProtest = False
 
@@ -219,8 +225,6 @@ default mcBrawlStance2 = False
 default mcBrawlStance3 = False
 default playCoolWLins = False
 default the_king = False
-default v9_aubrey_lake = False
-default v9_em_dorm_scene = False
 default v9_sex_w_em = False
 default v9_sex_with_riley = False
 
@@ -236,21 +240,16 @@ default sadlind_reaction = False
 default skater = False
 default v10_amber_awkward = False
 default v10_amber_condoms = False
-default v10_ambersex = False
 default v10_cheerfornora = False
-default v10_chloe_locker = False
 default v10_chloe_rematch = False
 default v10_help_nora_freeroam = False
 default v10_imre_fight = False
 default v10_imre_win = False
 default v10_inv_pen_cafe = False
 default v10_josh_alley_yes = False
-default v10_lauren_sg = False
-default v10_lauren_suck = False
 default v10_ms_r_interfere = False
 default v10_ms_r_kiss = False
 default v10_nora_bitch_about_chloe = False
-default v10_ri_sex = False
 default v10_ryan_fight = False
 default v10_ryan_win = False
 default v10_simplr_known = False
@@ -287,7 +286,6 @@ default v11_msrose_scene = False
 default v11_overtake_points = 0
 default v11_pen_goes_europe = False
 default v11_riley_roomate = False
-default v11_rileysex = False
 default v11_samantha_spa = False
 default v11_sit_with_lauren = True
 default v11_smoke_amber_amsterdam = False
@@ -346,13 +344,11 @@ default laurenrs_v11aubrey = False
 default v13_after_party = False
 default v13_aubrey_concert = False
 default v13_charli_exposed = False
-default v13_chloe_sex = False
 default v13_cuddle_lauren = False
 default v13_cuddle_lauren_text = False
 default v13_emilysex = False
 default v13_emmysex = False
 default v13_help_chloe = False
-default v13_help_lindsey = False
 default v13_hugged_aubrey = False
 default v13_imre_disloyal = False
 default v13_invite_samantha = False
@@ -361,8 +357,7 @@ default v13_lauren_smoke = False
 default v13_penelope_concert = False
 default v13_perfume = False
 default v13_smoke_weed = False
-default v13_told_emmy_city = False
-default v13_told_emmy_no_kids_for_me = False
+default v13_emmy_points = 0
 default v13s16_lauren_points = 0
 default v13s20_bleach_suitcase = False
 default v13s40fromgame = False
@@ -375,21 +370,15 @@ default v13s9_go_to_concert = False
 # 14.0
 ## Chloe Planing Board
 default chloe_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/chloe_background.webp", money=1500)
-default v14_chloe_wolves = False ##APPROACH A
-default v14_realwolf = False ##TASK A2A
-#default v14_plushwolf = False ##TASK A2B (v14_plushwolf = v14_chloe_wolves and not v14_realwolf)
-#default v14_chloe_apes = False ##APPROACH B (v14_chloe_apes = v14_help_chloe and not v14_chloe_wolves)
-#default v14_chloe_grayson = False ##TASK B2A (v14_chloe_grayson = (v14_help_chloe and not v14_chloe_wolves) and not v14_chloe_cameron)
-default v14_chloe_cameron = False ##TASK B2B
+default v14_chloe_wolves = False ##APPROACH A (v14_chloe_apes = v14_help_chloe and not v14_chloe_wolves)
+default v14_realwolf = False ##TASK A2A (v14_plushwolf = v14_chloe_wolves and not v14_realwolf)
+default v14_chloe_cameron = False ##TASK B2B (v14_chloe_grayson = (v14_help_chloe and not v14_chloe_wolves) and not v14_chloe_cameron)
 
 ## Lindsey Planing Board
 default lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/planning_boards/lindsey_background.webp", money=200, style="lindsey_board")
-default v14_lindsey_sell = False ##APPROACH A
-#default v14_pics_no_linds = False ##TASK A1A (v14_pics_no_linds = v14_lindsey_sell and not v14_pics_with_linds)
-default v14_pics_with_linds = False ##TASK A1B
-#default v14_lindsey_steal = False ##APPROACH B (v14_lindsey_steal = v14_help_lindsey and not v14_lindsey_sell)
-#default v14_concert_distraction = False ##APPROACH B1A (v14_concert_distraction = (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction)
-default v14_date_distraction = False ###APPROACH B1B
+default v14_lindsey_sell = False ##APPROACH A (v14_lindsey_steal = v14_help_lindsey and not v14_lindsey_sell)
+default v14_pics_with_linds = False ##TASK A1B (v14_pics_no_linds = v14_lindsey_sell and not v14_pics_with_linds)
+default v14_date_distraction = False ###APPROACH B1B (v14_concert_distraction = (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction)
 
 default AmberLoyal = False
 default AutumnTrust = False
@@ -419,7 +408,6 @@ default v14_lauren_sabotage = False
 default v14_lindsey_popularity = 45 # Use `set_presidency_percent(amount)`.
 default v14_noraWhere = False
 default v14_noraWorry = False
-default v14_PenArgScene = False
 default v14_penelope_date = False
 default v14_PenelopePartner = False
 default v14_PenRomScene = False
@@ -427,12 +415,8 @@ default v14_ryan_satin = False
 default v14_samantha_cum = False
 default v14_samantha_sex = False
 default v14_SamanthaDrugs = False
-default v14_satin_sex = False
 default v14_talk_to_chris = False
-default v14s01_music = False
-default v14s03a_left_cup = False
 default v14s03a_take_wallet = False
-default v14s03c_music = False
 default v14s23_agree = False
 default v14s23_disagree = False
 default v14s24a_gummyfish = False

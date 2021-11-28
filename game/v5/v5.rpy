@@ -824,8 +824,6 @@ label continuez:
     u "Anyways, why exactly are we doing this in a classroom?"
 
 label continueag:
-    $ trolley = True
-
     scene s380
     with dissolve
 
@@ -2910,7 +2908,7 @@ label hospitala:
             $ adamstance = renpy.random.choice([1, 2, 3, 4])
             $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
 
-            if simadamfight == True:
+            if simadamfight:
                 if simadam == 1 or simadam == 2 or simadam == 3:
                     jump adamhookhit
                 if simadam == 4 or simadam == 5 or simadam == 6:
@@ -2931,7 +2929,7 @@ label hospitala:
             $ adamstance = renpy.random.choice([1, 2, 3, 4])
             $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
 
-            if simadamfight == True:
+            if simadamfight:
                 if simadam == 1 or simadam == 2 or simadam == 3:
                     jump adamjabhit
                 if simadam == 4 or simadam == 5 or simadam == 6:
@@ -2949,7 +2947,7 @@ label hospitala:
             $ adamstance = renpy.random.choice([1, 2, 3, 4])
             $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
 
-            if simadamfight == True:
+            if simadamfight:
                 if simadam == 1 or simadam == 2 or simadam == 3:
                     jump adambodyhit
                 if simadam == 4 or simadam == 5 or simadam == 6:
@@ -2967,7 +2965,7 @@ label hospitala:
             $ adamstance = renpy.random.choice([1, 2, 3, 4])
             $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
 
-            if simadamfight == True:
+            if simadamfight:
                 if simadam == 1 or simadam == 2 or simadam == 3:
                     jump adamkickhit
                 if simadam == 4 or simadam == 5 or simadam == 6:
@@ -2989,7 +2987,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2
@@ -3040,7 +3038,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2
@@ -3092,7 +3090,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2
@@ -3143,7 +3141,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2
@@ -3195,7 +3193,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2
@@ -3246,7 +3244,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2
@@ -3298,7 +3296,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2
@@ -3349,7 +3347,7 @@ label hospitala:
         $ adamattack = renpy.random.choice([1, 2, 3, 4])
         $ simadam = renpy.random.choice([1, 2, 3, 4])
 
-        if simadamfight == True:
+        if simadamfight:
             if adamstance == 1:
                 if simyou == 1:
                     jump adambody2

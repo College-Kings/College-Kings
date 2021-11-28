@@ -59,7 +59,7 @@ init python:
         SceneGallery("v10_mc_vs_ryan_fight") #6, Ryan
         SceneGallery("v10_mc_vs_imre_fight") #7, Imre
         SceneGallery("v10s17_galleryScene") #17, Aubrey, day 20, aubrey_bathroom_sex
-        SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #24, Lauren, day 21, v10_lauren_suck (otherwise forced) or v10_lauren_sg
+        SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #24, Lauren, day 21, v10_lauren_suck (otherwise forced)
         SceneGallery("v10_amber_skatepark_sg") #26, Amber, day 21, v10_ambersex
         SceneGallery("v10s30_galleryScene") #30, Chloe, day 22, v10_chloe_locker
         SceneGallery("v10s40_galleryScene", scope={"rileyrs": True}) #40, Riley, day 23, v10_ri_sex
@@ -85,7 +85,7 @@ init python:
         SceneGallery("v13s50a") #50a, Emily, day 40, v13_emilysex
         #v14
     if renpy.loadable("v14/scene1.rpy"):
-        SceneGallery("v14s01_sg") #1, Riley Aubrey, xx, v13_FirstThreesome
+        SceneGallery("v14s01") #1, Riley Aubrey, xx, v13_FirstThreesome
         SceneGallery("v14s03c_sg") #3d, Satin, xx, v14_satin_sex
         SceneGallery("v14s21a") #21a, Chloe, xx, v14_chloe_sex
         SceneGallery("v14s25a") #25a, Amber, xx, v14_amber_sex

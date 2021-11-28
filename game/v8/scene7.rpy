@@ -29,7 +29,7 @@ label caf_w_aub:
     scene scaf8 # FPP. Close up of Aubrey sat at cafe table, Aubrey slight smile.
     with dissolve
 
-    if aubreyrs == True:
+    if aubreyrs:
 
         u "How you doin?"
 

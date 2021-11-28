@@ -517,8 +517,6 @@ label after_load:
 
         try: v6_emilysex
         except NameError: v6_emilysex = False
-        try: v7_seencrowning
-        except NameError: v7_seencrowning = False
         try: v7_emily_bowling
         except NameError: v7_emily_bowling = False
         try: v7_rileysex
@@ -647,8 +645,6 @@ label after_load:
         except NameError: emily_europe = False
         try: v11_check_on_nora
         except NameError: v11_check_on_nora = False
-        try: v10_lauren_sg
-        except NameError: v10_lauren_sg = False
 
         # v13 Errors
         try: v13_penelope_concert
@@ -685,18 +681,14 @@ label after_load:
         except NameError: v13s48_canoeing_as_date = False
         try: v13_help_chloe
         except NameError: v13_help_chloe = False
-        try: v13_help_lindsey
-        except NameError: v13_help_lindsey = False
         try: emmyrs
         except NameError: emmyrs = False
         try: kourtneyrs
         except NameError: kourtneyrs = False
         try: aryssars
         except NameError: aryssars = False
-        try: v13_told_emmy_no_kids_for_me
-        except NameError: v13_told_emmy_no_kids_for_me = False
-        try: v13_told_emmy_city
-        except NameError: v13_told_emmy_city = False
+        try: v13_emmy_points
+        except NameError: v13_emmy_points = 0
         try: v13_imre_disloyal
         except NameError: v13_imre_disloyal = False
         try: v13_perfume
