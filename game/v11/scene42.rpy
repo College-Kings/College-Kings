@@ -5,7 +5,7 @@
 
 label v11_hotel_lobby_rose:
     play music "music/v11/Track Scene 7_2.mp3" fadein 2
-    if v11_chloe_sex:
+    if "v11_chloe" in sceneList:
         scene black
         with vpunch
 
@@ -51,7 +51,7 @@ label v11_hotel_lobby_rose:
 
         u "Let's go."
 
-    elif not v11_riley_roomate and not v11_chloe_sex:
+    elif not v11_riley_roomate and not "v11_chloe" in sceneList:
         scene black
         with vpunch
 

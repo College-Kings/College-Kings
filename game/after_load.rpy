@@ -607,8 +607,6 @@ label after_load:
         except NameError: v11_kiss_nora = False
         try: v11_told_aubrey
         except NameError: v11_told_aubrey = False
-        try: v11_chloe_sex
-        except NameError: v11_chloe_sex = False
         try: chloegf
         except NameError: chloegf = False
         try: v11_lindsey_slogan

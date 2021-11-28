@@ -140,7 +140,6 @@ default v1_hitOnNora = False
 default v1_kissLauren = False
 default v1_laurenKiss = False
 default v1_laurenPoints = 0
-default v1_sda = False
 default v2_outfits = 0
 default volleyball = False
 default w = "w"
@@ -176,7 +175,6 @@ default walkedRileyHome = False
 default wolvesTasks = set()
 
 # 8.0
-default amberSexAtJoshs = False
 default amberSexOfferAtJoshs = False
 default chloeSteakHouse = False
 default climbwseb = False
@@ -206,7 +204,6 @@ default v9_sex_w_em = False
 default v9_sex_with_riley = False
 
 # 10.0
-default aubrey_bathroom_sex = False
 default drinkWsam = False
 default emily_europe = False
 default freeroam6 = set()
@@ -248,7 +245,6 @@ default v11_amber_sauna_convo = False
 default v11_aubrey_blue_outfit = False
 default v11_aubrey_sex = False
 default v11_check_on_nora = False
-default v11_chloe_sex = False
 default v11_fucked_candy = False
 default v11_hp_points = 0
 default v11_invite_sam_europe = False
@@ -369,8 +365,6 @@ default v14_amber_clean = False
 default v14_amber_sex = False
 default v14_ApesPostChloePics = True #They always post unless MC is an Ape and stops them.
 default v14_badsinging_Sam = False
-default v14_chloe_sex = False
-default v14_chloeSus = False
 default v14_chrissupport = 0 #3 = Full, 2 = Medium, 1 = Low
 default v14_emily_ily = False
 default v14_help_chloe = False

@@ -11,7 +11,7 @@ init python:
 
     def v14s51_reply2():
         if chloers or chloegf:
-            setattr(store, "v14_chloeSus", True)
+            setattr(store, "chloeSus", chloeSus +1)
         chloe.messenger.newMessage(_("I'm already full on breadsticks... Ugh! Hurry up, [name]. Please?"))
         chloe.messenger.addReply(_("I'll be there as soon as I can, Chloe."))
         chloe.messenger.newMessage(_("I'll give you 10 more minutes. If you're still not here by then, I'm going home."))
@@ -83,9 +83,6 @@ label v14s51_text:
             if chloe.messenger.replies:
                 "(I should reply to Chloe.)"
                 jump v14s51_PhoneContinue
-
-        if v14_chloeSus:
-            $ chloeSus += 1
 
         scene v14s51_3
         with dissolve

@@ -2042,7 +2042,7 @@ label at_bd:
 
     menu:
         "Keep dreaming":
-            $ v1_sda = True
+            $ sceneList.add("v1_riley")
 
             scene sda3a
             with fade
@@ -2240,7 +2240,7 @@ label v1_nsfwSkipLabel1:
     $ renpy.end_replay()
 
     ### Next morning in your dorm, Imre seems to be gone.
-    if v1_sda:
+    if "v1_riley" in sceneList:
         scene s81
         with Fade (1,0,1)
 
