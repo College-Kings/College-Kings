@@ -162,7 +162,7 @@ label starta: #for compatibility only
     u "(Huh?)"
     
     # Emily's messages
-    $ emily.messenger.newMessage(_("Hey...\nI know we haven't talked much after we broke up, but I just wanted to let you know that I didn't get into Stanford, so I'll be going to San Vallejo as well.\nGuess I'll see you there. :)"), queue=False)
+    $ emily.messenger.newMessage(_("Hey...\nI know we haven't talked much after we broke up, but I just wanted to let you know that I didn't get into Stanford, so I'll be going to San Vallejo as well.\nGuess I'll see you there. :)"))
     $ emily.messenger.addReply(_("Yeah... I'll see you there."), v1_reply1)
     $ emily.messenger.addReply(_("You cheated on me.\nGo to hell!"), v1_reply2)
 
@@ -3456,7 +3456,7 @@ label v1_freeRoam2_camp:
     else:
         play sound "sounds/vibrate.mp3"
 
-        if not lauren.messenger.get_message("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
+        if not lauren.messenger.find_message("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
             $ lauren.messenger.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), queue=False)
             $ lauren.messenger.addReply(_("Yeah, sure."), v1_reply6)
             $ lauren.messenger.addReply(_("What is there to talk about?"), v1_reply7)

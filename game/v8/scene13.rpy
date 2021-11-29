@@ -171,7 +171,7 @@ label phn_chloe11_done:
     with dissolve
     ry "Woohoooo!"
 
-    if chloe.messenger.get_message("Guess you'll have to wait and see ;)"):
+    if chloe.messenger.find_message("Guess you'll have to wait and see ;)"):
         scene v8apes28 # FPP. MC inside the room now and he notices Chloe and Caleb chitchatting
         with dissolve
         u "(Oh, Chloe is here.)"
