@@ -1,6 +1,4 @@
 init python:
-    from enum import Enum
-
     class CarDescription(Enum):
         LIE = 1
         TRUTH = 2
