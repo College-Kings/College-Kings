@@ -110,6 +110,53 @@ label after_load:
 
 
         # NonPlayable Character
+        try: chloe
+        except NameError: chloe = NonPlayableCharacter("Chloe", "chloe.webp")
+        try: amber
+        except NameError: amber = NonPlayableCharacter("Amber", "amber.webp")
+        try: penelope
+        except NameError: penelope = NonPlayableCharacter("Penelope", "penelope.webp")
+        try: riley
+        except NameError: riley = NonPlayableCharacter("Riley", "riley.webp")
+        try: lindsey
+        except NameError: lindsey = NonPlayableCharacter("Lindsey", "lindsey.webp")
+        try: lauren
+        except NameError: lauren = NonPlayableCharacter("Lauren", "lauren.webp")
+        try: emily
+        except NameError: emily = NonPlayableCharacter("Emily", "emily.webp")
+        try: ms_rose
+        except NameError: ms_rose = NonPlayableCharacter("Ms Rose", "ms_rose.webp")
+        try: nora
+        except NameError: nora = NonPlayableCharacter("Nora", "nora.webp")
+        try: aubrey
+        except NameError: aubrey = NonPlayableCharacter("Aubrey", "aubrey.webp")
+        try: ryan
+        except NameError: ryan = NonPlayableCharacter("Ryan", "ryan.webp")
+        try: imre
+        except NameError: imre = NonPlayableCharacter("Imre", "imre.webp")
+        try: chris
+        except NameError: chris = NonPlayableCharacter("Chris", "chris.webp")
+        try: charli
+        except NameError: charli = NonPlayableCharacter("Charli", "charli.webp")
+        try: cameron
+        except NameError: cameron = NonPlayableCharacter("Cameron", "cameron.webp")
+        try: josh
+        except NameError: josh = NonPlayableCharacter("Josh", "josh.webp")
+        try: julia
+        except NameError: julia = NonPlayableCharacter("Julia", "julia.webp")
+        try: evelyn
+        except NameError: evelyn = NonPlayableCharacter("Evelyn", "evelyn.webp")
+        try: autumn
+        except NameError: autumn = NonPlayableCharacter("Autumn", "autumn.webp")
+        try: sebastian
+        except NameError: sebastian = NonPlayableCharacter("Sebastian", "sebastian.webp")
+        try: grayson
+        except NameError: grayson = NonPlayableCharacter("Grayson", "grayson.webp")
+        try: jenny
+        except NameError: jenny = NonPlayableCharacter("Jenny", "jenny.webp")
+        try: samantha
+        except NameError: samantha = NonPlayableCharacter("Samantha", "samantha.webp")
+
         if isinstance(chloe, CustomCharacter):
             char_points = chloe.points
             char_stats = chloe.stats
