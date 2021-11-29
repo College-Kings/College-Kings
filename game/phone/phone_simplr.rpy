@@ -11,9 +11,9 @@ init python:
             condition (str): A string repersenting a python condition which deems if the character unlocks 
         """
 
-        def __init__(self, name, condition="True"):
+        def __init__(self, name):
             self.name = name
-            self.condition = condition
+            self.condition = True
 
             self.profile_picture = "images/nonplayable_characters/{0}/{0}_profile_picture.webp".format(name.lower())
 
@@ -22,8 +22,6 @@ init python:
 
             self.sentMessages = []
             self.pendingMessages = []
-
-            simplr_pendingContacts.append(self)
 
         def removeContact(self):
             simplr_pendingContacts.pop(0)

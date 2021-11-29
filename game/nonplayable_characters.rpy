@@ -8,13 +8,13 @@ init python:
             profile_picture (str): The file name for the characters profile picture, located in "images/nonplayable_characters/profile_pictures/"
         """
 
-        def __init__(self, name, profile_picture, messenger=False, simplr=False):
+        def __init__(self, name, profile_picture):
             self.name = name
             self.name = name.replace(" ", "_")
             self.profile_picture = "images/nonplayable_characters/profile_pictures/{}".format(profile_picture)
 
-            if messenger: self.create_contact()
-            if simplr: self.create_simplr()
+            self._messenger = None
+            self._simplr = None
 
             self.stats = {
                 "Competitive": None,
@@ -50,12 +50,19 @@ init python:
             else:
                 mc.girlfriends.remove(self)
 
-        def create_contact(self, locked=True):
-            self.messenger = Contact(self.name, self.profile_picture, locked)
-            contacts.append(self.messenger)
-        
-        def create_simplr(self, condition="True"):
-            self.simplr = SimplrContact(self.name, condition)
+        @property
+        def messenger(self):
+            if self._messenger is None:
+                self._messenger = Contact(self.name, self.profile_picture, locked)
+                contacts.append(self.messenger)
+            return self._messenger
+
+        @property
+        def simplr(self):
+            if self._simplr is None:
+                self._simplr = SimplrContact(self.name)
+                simplr_pendingContacts.append(self._simplr)
+            return self._simplr
 
         def kill(self):
             # Check Competitive stat
@@ -85,8 +92,6 @@ init python:
 
         def reset_points(self):
             self.points = 0
-
-init offset = 1
 
 default chloe = NonPlayableCharacter("Chloe", "chloe.webp", messenger=True)
 default amber = NonPlayableCharacter("Amber", "amber.webp", messenger=True)
