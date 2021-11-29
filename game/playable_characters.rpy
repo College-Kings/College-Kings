@@ -14,7 +14,7 @@ init python:
                 "hardass": False,
                 "pop_culture": False,
                 "prankster": False,
-                "quirk_sensitive_stomach": False
+                "quirk_sensitive_stomach": False,
                 "quirk_tough_tummy": False,
                 "quirk_hunter": False,
                 "quirk_not_hunter": False,
