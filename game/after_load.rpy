@@ -90,6 +90,8 @@ label after_load:
         # Disable skip transitions
         preferences.transitions = 2
 
+        renpy.music.stop(channel=u'music') ### temporary emergency break
+
         # Playable Character
         mc.profile_picture = profile_pictures[0]
 
