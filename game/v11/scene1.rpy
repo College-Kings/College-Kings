@@ -4,7 +4,7 @@ label v11_start:
         $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
         $ pb_name_set = True
 
-    show screen phoneIcon
+    show screen phone_icon
 
     scene v11coc1 # FPP. Show entrance of college
     with fade
