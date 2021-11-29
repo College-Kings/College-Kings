@@ -38,7 +38,7 @@ label v15s10:
     li "You'll be fine! I believe in you, [name]."
 
     if v14_pics_with_linds:
-        if v14s47_linds_hips:
+        if "v14s47_passenger_2b.webp" in v14s47_car_pics:
             $ v14s48_car_price += 50
         scene v15s10_5 # FPP. Show a creepyish guy approaching, the man dressed in a smart casual sense, the man slight smile, mouth closed
         with dissolve
@@ -805,7 +805,7 @@ label v15s10:
 
         u "(She seems like a really nice person; this should be easy.)"
 
-        if v14s47_solo_bird:
+        if "v14s47_passenger_2f.webp" in v14s47_car_pics:
             $ v14s48_car_price += 50
             scene v15s10_femalebuyer_2a
             with dissolve

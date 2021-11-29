@@ -352,7 +352,6 @@ label v14s47:
 
 label v14s47_hood:
     if v14_pics_with_linds:
-        $ v14s47_linds_hood = True
         $ v14s47_car_pics.append("v14s47_hood_2.webp")
 
         scene v14s47_hood_1 # TPP. MC walking over to the position he'll take Lindsey's picture, Lindsey moving towards the side of the hood
@@ -392,7 +391,6 @@ label v14s47_hood:
         li "Nice. Now what?"
     
     else:
-        $ v14s47_solo_hood = True
         $ v14s47_car_pics.append("v14s47_hood_2b.webp")
 
         scene v14s47_hood_1
@@ -440,8 +438,6 @@ label v14s47_hood:
 
 label v14s47_trunk:
     if v14_pics_with_linds:
-
-        $ v14s47_linds_trunk = True
         $ v14s47_car_pics.append("v14s47_trunk_2b.webp")
 
         scene v14s47_trunk_1 # TPP. MC and Lindsey walking over to the trunk of the car, both smiling, mouths closed
@@ -481,7 +477,6 @@ label v14s47_trunk:
         li "Okay. What's next?"
 
     else:
-        $ v14s47_solo_trunk = True
         $ v14s47_car_pics.append("v14s47_trunk_2c.webp")
 
         scene v14s47_trunk_1
@@ -544,7 +539,6 @@ label v14s47_trunk:
 
 label v14s47_driver:
     if v14_pics_with_linds:
-        $ v14s47_linds_driver = True
         $ v14s47_car_pics.append("v14s47_driver_2c.webp")
 
         scene v14s47_driver_1 # TPP. Show MC and Lindsey walking over to the driver side of the car, both smiling, mouths closed
@@ -608,7 +602,6 @@ label v14s47_driver:
         u "Beautiful. What's next?"
     
     else:
-        $ v14s47_solo_driver = True
         $ v14s47_car_pics.append("v14s47_driver_2e.webp")
 
         scene v14s47_driver_1
@@ -680,13 +673,11 @@ label v14s47_driver:
     call screen v14s47_car
 
 label v14s47_passenger:
-    $ v14s47_passenger = True
     scene v14s47_passenger_1 # TPP. Show MC and Lindsey walking towards the passenger door
 
     pause 0.75
 
     if v14_pics_with_linds:
-        $ v14s47_linds_passenger = True
         scene v14s47_passenger_2 # FPP. Lindsey standing by the passenger door, MC looking at her (he's in a place where he can take her pic), Lindsey slightly confused, mouth open
         with dissolve
 
@@ -700,7 +691,6 @@ label v14s47_passenger:
         menu:
             "Hand on hips":
                 $ add_point(KCT.BOYFRIEND)
-                $ v14s47_linds_hips = True
                 $ v14s47_car_pics.append("v14s47_passenger_2b.webp")
 
                 scene v14s47_passenger_2b # FPP. Same as v14s47_passenger_2, Lindsey mouth closed, smiling
@@ -733,7 +723,6 @@ label v14s47_passenger:
             "Stand there and look pretty":
                 $ add_point(KCT.BRO)
                 $ add_point(KCT.TROUBLEMAKER)
-                $ v14s47_linds_knees = True
                 $ v14s47_car_pics.append("v14s47_passenger_2e.webp")
 
                 scene v14s47_passenger_2b
@@ -780,7 +769,6 @@ label v14s47_passenger:
     
     else:
         scene v14s47_passenger_2f # FPP. Same as v14s47_passenger_2, Lindsey not in shot, there is a bird on the roof, looking at the camera
-        $ v14s47_solo_passenger = True
         with dissolve
 
         u "Oh- We have a photo-bombing bird!"
@@ -802,7 +790,6 @@ label v14s47_passenger:
 
         menu:
             "Scare bird away":
-                $ v14s47_solo_no_bird = True
                 $ v14s47_car_pics.append("v14s47_passenger_2l.webp")
                 
                 u "Nah. Scare it away before it poops!"
@@ -850,7 +837,6 @@ label v14s47_passenger:
                 li "Alrighty... Anymore?"
 
             "Take photo with bird":
-                $ v14s47_solo_bird = True
                 $ v14s47_car_pics.append("v14s47_passenger_2f.webp")
 
                 u "Yeah, Linds. A crazy bird lady might buy the car simply because he's sitting on it. *Chuckles*"

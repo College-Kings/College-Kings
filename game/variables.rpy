@@ -1,13 +1,16 @@
 init python:
     import os
 
-
 ## Init
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
 define config.default_sfx_volume = 1
 default menu_set = set()
 default achievementAtList = None
+
+default name = "Alex"
+default realmode = False
+default showkct = True
 
     ## Phone
 define contacts_file_path = os.path.join(config.basedir, "game", "images", "nonplayable_characters")
@@ -55,6 +58,28 @@ default adamdmg = 0
 default adamfight = 5
 default adamstance = 1
 default adamtut = False
+default difficulty = None
+default e = "e"
+default fightadam = False
+default fighttom = False
+default firstfight = True
+default moveuppercut = False
+default q = "q"
+default r = "r"
+default simadam = 1
+default simadamfight = True
+default simtom = 1
+default simtomfight = False
+default simyou = 1
+default stance = 0
+default tomattack = 1
+default tomdmg = 0
+default tomstance = 1
+default w = "w"
+default winadam = False
+default youDamage = 0
+default youHealth = 5
+
 default apologize = False
 default askfinn = False
 default aubreyrs = False
@@ -69,17 +94,12 @@ default chooseimre = True
 default costume = 1
 default costumetried = set()
 default costumeaubrey = False
-default difficulty = None
-default e = "e"
 default emilyandben = False
 default emilyrs = False
 default evelyndate = False
 default evelynmove = False
 default evelynnumber = False
 default evelynrs = False
-default fightadam = False
-default fighttom = False
-default firstfight = True
 default forgiveemily = False
 default freeroam1 = set()
 default freeroam2 = set()
@@ -103,34 +123,19 @@ default meetchloe = False
 default meetgrayson = False
 default meetjulia = False
 default meetlauren = False
-default moveuppercut = False
 default muffin = False
-default name = "Alex"
 default noramad = False
 default notcool = False
 default penelopekiss = False
 default perform = 0
-default q = "q"
-default r = "r"
-default realmode = False
 default relics = 0
 default rileykiss = False
 default save = 0
-default showkct = True
-default simadam = 1
-default simadamfight = True
 default simp = False
-default simtom = 1
-default simtomfight = False
-default simyou = 1
-default stance = 0
 default statsPage = 0
 default takeshot = False
 default tellschool = False
 default toldlauren = False
-default tomattack = 1
-default tomdmg = 0
-default tomstance = 1
 default trolleyb = False
 default upstairs = "nobody"
 default v1_aubreywannafight = False
@@ -140,10 +145,6 @@ default v1_laurenKiss = False
 default v1_laurenPoints = 0
 default v2_outfits = 0
 default volleyball = False
-default w = "w"
-default winadam = False
-default youDamage = 0
-default youHealth = 5
 
 # 7.0
 default amberrs = False
@@ -397,19 +398,6 @@ default v14s4_tell_imre = False
 default v14s41a_standup = False #stand up for Chloe during the Apes meeting
 default v14s46a_love_lauren_more = False # MC love Lauren more because of her sex experimenting on MC.
 default v14s47_car_pics = []
-default v14s47_linds_driver = False
-default v14s47_linds_hips = False
-default v14s47_linds_hood = False
-default v14s47_linds_knees = False
-default v14s47_linds_passenger = False
-default v14s47_linds_trunk = False
-default v14s47_passenger = False
-default v14s47_solo_bird = False
-default v14s47_solo_driver = False
-default v14s47_solo_hood = False
-default v14s47_solo_no_bird = False
-default v14s47_solo_passenger = False
-default v14s47_solo_trunk = False
 default v14s48_car_description = CarDescription.LIE
 default v14s48_car_price = 100
 default v14s50_listen_to_aubrey_lindsey = 0 # MC choses to listen to Lindsey and Aubrey's conversation. 
