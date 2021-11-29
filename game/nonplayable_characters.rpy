@@ -53,9 +53,13 @@ init python:
         @property
         def messenger(self):
             if self._messenger is None:
-                self._messenger = Contact(self.name, self.profile_picture, locked)
+                self._messenger = Contact(self.name, self.profile_picture)
                 contacts.append(self.messenger)
             return self._messenger
+
+        @messenger.setter
+        def messenger(self, value):
+            self._messenger = value
 
         @property
         def simplr(self):
@@ -63,6 +67,10 @@ init python:
                 self._simplr = SimplrContact(self.name)
                 simplr_pendingContacts.append(self._simplr)
             return self._simplr
+
+        @simplr.setter
+        def simplr(self, value):
+            self._simplr = value
 
         def kill(self):
             # Check Competitive stat
