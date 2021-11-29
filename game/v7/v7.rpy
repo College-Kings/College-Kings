@@ -8032,6 +8032,8 @@ label wolves_ceremony:
     with fade
     play music "music/muffledparty.mp3"
 
+    pause 0.75
+
     if not imremad:
         scene swc1 # FPP. Close up on Finn, mouth open with smile, welcoming gesture with hand.
         with dissolve
@@ -8413,6 +8415,8 @@ label wolves_ceremony:
 
     scene swc58 # FPP. Show Sebastian approaching MC.
     with dissolve
+
+    label wolves_ceremony_2:
 
     if len(wolvesTasks) == 4:
         scene swc59 # FPP. Close up Sebastian, mouth open smile.
