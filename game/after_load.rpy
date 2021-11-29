@@ -105,6 +105,8 @@ label after_load:
         achApp.img = "images/phone/achievements/appAssets/achievementsIcon.webp"
         kiwiiApp.img = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
 
+        renpy.music.stop(channel=u'music') ### temporary emergency break
+
         # Playable Character
         mc.profile_picture = profile_pictures[0]
 
