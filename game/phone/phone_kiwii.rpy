@@ -173,7 +173,7 @@ screen kiwiiTemplate():
     modal True
     zorder 200
 
-    use phoneTemplate:
+    use base_phone:
         add Transform("images/phone/kiwii/AppAssets/Background.webp", size=(376, 744)) at truecenter
 
         transclude
