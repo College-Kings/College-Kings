@@ -1,6 +1,4 @@
 python early:
-    import os
-
     if renpy.loadable("customCharacters.rpy"):
         os.remove(os.path.join(config.basedir, "game", "customCharacters.rpy"))
     if renpy.loadable("customCharacters.rpyc"):
@@ -91,19 +89,6 @@ label after_load:
     python:
         # Disable skip transitions
         preferences.transitions = 2
-
-        # Applications
-        for app in applications:
-            try: app.img = app.image
-            except AttributeError: pass
-
-            try: app.homeScreen = app.screen
-            except AttributeError: pass
-
-        msgApp.img = "images/phone/messages/appAssets/messagesIcon.webp"
-        statsApp.img = "images/phone/stats/appAssets/statsIcon.webp"
-        achApp.img = "images/phone/achievements/appAssets/achievementsIcon.webp"
-        kiwiiApp.img = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
 
         # Playable Character
         mc.profile_picture = profile_pictures[0]
@@ -371,17 +356,12 @@ label after_load:
 
 
         # Contacts
-        for contact in contacts:
+        for contact in messenger.contacts:
             try: contact.pendingMessages
             except AttributeError: contact.pendingMessages = []
 
             try: contact.sentMessages
             except AttributeError: contact.sentMessages = []
-
-            contact.profile_picture = "images/nonplayable_characters/profile_pictures/{}.webp".format(contact.name.lower())
-
-            try: contact.profilePicture = "images/nonplayable_characters/profile_pictures/chloe.webp"
-            except: pass
 
             # Messages
             try:
@@ -558,24 +538,6 @@ label after_load:
         charli.name = "Charli"
         cameron.name = "Cameron"
         josh.name = "Josh"
-
-        chloe.profile_picture = "images/nonplayable_characters/profile_pictures/chloe.webp"
-        amber.profile_picture = "images/nonplayable_characters/profile_pictures/amber.webp"
-        penelope.profile_picture = "images/nonplayable_characters/profile_pictures/penelope.webp"
-        riley.profile_picture = "images/nonplayable_characters/profile_pictures/riley.webp"
-        lindsey.profile_picture = "images/nonplayable_characters/profile_pictures/lindsey.webp"
-        lauren.profile_picture = "images/nonplayable_characters/profile_pictures/lauren.webp"
-        samantha.profile_picture = "images/nonplayable_characters/profile_pictures/samantha.webp"
-        emily.profile_picture = "images/nonplayable_characters/profile_pictures/emily.webp"
-        ms_rose.profile_picture = "images/nonplayable_characters/profile_pictures/ms_rose.webp"
-        nora.profile_picture = "images/nonplayable_characters/profile_pictures/nora.webp"
-        aubrey.profile_picture = "images/nonplayable_characters/profile_pictures/aubrey.webp"
-        ryan.profile_picture = "images/nonplayable_characters/profile_pictures/ryan.webp"
-        imre.profile_picture = "images/nonplayable_characters/profile_pictures/imre.webp"
-        chris.profile_picture = "images/nonplayable_characters/profile_pictures/chris.webp"
-        charli.profile_picture = "images/nonplayable_characters/profile_pictures/charli.webp"
-        cameron.profile_picture = "images/nonplayable_characters/profile_pictures/cameron.webp"
-        josh.profile_picture = "images/nonplayable_characters/profile_pictures/josh.webp"
 
         try: v7_emily_bowling
         except NameError: v7_emily_bowling = False
@@ -761,7 +723,7 @@ label after_load:
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
     hide no_hard_feelings
 
-    show screen phoneIcon
+    show screen phone_icon
     hide screen getaccess
 
     if config.developer:
