@@ -1,4 +1,26 @@
 init python:
+    class Relationship(Enum):
+        FRIEND = 0
+        FWB = 1
+        GIRLFRIEND = 2
+        AWKWARD = 3
+        BRO = 4
+        DATE = 5
+        FORGIVE = 6
+        FUN = 7
+        HANGOUT = 8
+        KISS = 9
+        LIKES = 10
+        LOYAL = 11
+        MAD = 12
+        PUBLIC = 13
+        SAD = 14
+        STRIKES = 15
+        SUSPICIOUS = 16
+        TAMED = 17
+        TRUST = 18
+
+
     class NonPlayableCharacter:
         """
         Custom character class primarily used for managing all the character specific function of the game.
@@ -8,10 +30,9 @@ init python:
             profile_picture (str): The file name for the characters profile picture, located in "images/nonplayable_characters/profile_pictures/"
         """
 
-        def __init__(self, name, profile_picture):
+        def __init__(self, name):
             self.name = name
             self.name = name.replace(" ", "_")
-            self.profile_picture = "images/nonplayable_characters/profile_pictures/{}".format(profile_picture)
 
             self._messenger = None
             self._simplr = None
@@ -23,38 +44,37 @@ init python:
             }
 
             self.points = 0
-            self._relationship = False
-            self._girlfriend = False
+            self._relationship = Relationship.FRIEND
 
         @property
         def relationship(self):
-            return self._relationship
+            try: return self._relationship
+            except AttributeError: return Relationship.FRIEND
 
         @relationship.setter
         def relationship(self, value):
             self._relationship = value
-            if value:
+            
+            if value == Relationship.GIRLFRIEND:
                 mc.relationships.add(self)
-            else:
-                mc.relationships.remove(self)
-
-        @property
-        def girlfriend(self):
-            return self._girlfriend
-
-        @girlfriend.setter
-        def girlfriend(self, value):
-            self._girlfriend = value
-            if value:
                 mc.girlfriends.add(self)
+
+            elif value == Relationship.FWB:
+                try: mc.relationships.remove(self)
+                except KeyError: pass
+                mc.relationships.add(self)
+
             else:
-                mc.girlfriends.remove(self)
+                try:
+                    mc.relationships.remove(self)
+                    mc.girlfriends.remove(self)
+                except KeyError: pass
 
         @property
         def messenger(self):
             if self._messenger is None:
                 self._messenger = Contact(self.name, self.profile_picture)
-                contacts.append(self.messenger)
+                messenger.contacts.append(self.messenger)
             return self._messenger
 
         @messenger.setter
@@ -71,6 +91,10 @@ init python:
         @simplr.setter
         def simplr(self, value):
             self._simplr = value
+
+        @property
+        def profile_picture(self):
+            return "images/nonplayable_characters/profile_pictures/{}.webp".format(self.name.lower())
 
         def kill(self):
             # Check Competitive stat
@@ -101,35 +125,35 @@ init python:
         def reset_points(self):
             self.points = 0
 
-default chloe = NonPlayableCharacter("Chloe", "chloe.webp")
-default amber = NonPlayableCharacter("Amber", "amber.webp")
-default penelope = NonPlayableCharacter("Penelope", "penelope.webp")
-default riley = NonPlayableCharacter("Riley", "riley.webp")
-default lindsey = NonPlayableCharacter("Lindsey", "lindsey.webp")
-default lauren = NonPlayableCharacter("Lauren", "lauren.webp")
-default emily = NonPlayableCharacter("Emily", "emily.webp")
-default ms_rose = NonPlayableCharacter("Ms Rose", "ms_rose.webp")
-default nora = NonPlayableCharacter("Nora", "nora.webp")
-default aubrey = NonPlayableCharacter("Aubrey", "aubrey.webp")
-default ryan = NonPlayableCharacter("Ryan", "ryan.webp")
-default imre = NonPlayableCharacter("Imre", "imre.webp")
-default chris = NonPlayableCharacter("Chris", "chris.webp")
-default charli = NonPlayableCharacter("Charli", "charlie.webp")
-default cameron = NonPlayableCharacter("Cameron", "cameron.webp")
-default josh = NonPlayableCharacter("Josh", "josh.webp")
-default julia = NonPlayableCharacter("Julia", "julia.webp")
-default evelyn = NonPlayableCharacter("Evelyn", "evelyn.webp")
-default autumn = NonPlayableCharacter("Autumn", "autumn.webp")
-default sebastian = NonPlayableCharacter("Sebastian", "sebastian.webp")
-default grayson = NonPlayableCharacter("Grayson", "grayson.webp")
-default jenny = NonPlayableCharacter("Jenny", "jenny.webp")
-default mr_lee = NonPlayableCharacter("Mr Lee", "lee.webp")
+default chloe = NonPlayableCharacter("Chloe")
+default amber = NonPlayableCharacter("Amber")
+default penelope = NonPlayableCharacter("Penelope")
+default riley = NonPlayableCharacter("Riley")
+default lindsey = NonPlayableCharacter("Lindsey")
+default lauren = NonPlayableCharacter("Lauren")
+default emily = NonPlayableCharacter("Emily")
+default ms_rose = NonPlayableCharacter("Ms Rose")
+default nora = NonPlayableCharacter("Nora")
+default aubrey = NonPlayableCharacter("Aubrey")
+default ryan = NonPlayableCharacter("Ryan")
+default imre = NonPlayableCharacter("Imre")
+default chris = NonPlayableCharacter("Chris")
+default charli = NonPlayableCharacter("Charli")
+default cameron = NonPlayableCharacter("Cameron")
+default josh = NonPlayableCharacter("Josh")
+default julia = NonPlayableCharacter("Julia")
+default evelyn = NonPlayableCharacter("Evelyn")
+default autumn = NonPlayableCharacter("Autumn")
+default sebastian = NonPlayableCharacter("Sebastian")
+default grayson = NonPlayableCharacter("Grayson")
+default jenny = NonPlayableCharacter("Jenny")
+default mr_lee = NonPlayableCharacter("Mr Lee")
 
-default beth = NonPlayableCharacter("Beth", "beth.webp")
-default iris = NonPlayableCharacter("Iris", "iris.webp")
-default samantha = NonPlayableCharacter("Samantha", "samantha.webp")
-default emmy = NonPlayableCharacter("Emmy", "emmy.webp")
+default beth = NonPlayableCharacter("Beth")
+default iris = NonPlayableCharacter("Iris")
+default samantha = NonPlayableCharacter("Samantha")
+default emmy = NonPlayableCharacter("Emmy")
 
-default wolf = NonPlayableCharacter("Wolf", "wolf.webp")
-default trainer = NonPlayableCharacter("Trainer", "trainer.webp")
-default buyer = NonPlayableCharacter("Buyer", "buyer.webp")
+default wolf = NonPlayableCharacter("Wolf")
+default trainer = NonPlayableCharacter("Trainer")
+default buyer = NonPlayableCharacter("Buyer")
