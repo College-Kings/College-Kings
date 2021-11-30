@@ -4,16 +4,16 @@ init python:
         Creates a post for the in game phone app, Kiwii
 
         Attributes:
-            user (str): 
-            img (str): 
+            user (NonPlayableCharacter): 
+            image (str): 
             message (str, optional):
-            mentions (list, optional): 
+            mentions (list<NonPlayableCharacter>, optional): 
             numberLikes (int, optional):
         """
 
-        def __init__(self, user, img, message="", mentions=None, numberLikes=renpy.random.randint(250, 500)):
+        def __init__(self, user, image, message="", mentions=None, numberLikes=renpy.random.randint(250, 500)):
             self.user = user
-            self.img = "images/phone/kiwii/posts/{}".format(img)
+            self.image = "images/phone/kiwii/posts/{}".format(image)
             self.message = message
 
             if isinstance(mentions, basestring): self.mentions = [mentions]
@@ -33,11 +33,11 @@ init python:
 
         @property
         def username(self):
-            return kiwiiUsers[self.user]["username"]
+            return self.user.username
 
         @property
         def profile_picture(self):
-            return kiwiiUsers[self.user]["profile_picture"]
+            return self.user.profile_picture
 
         @property
         def replies(self):
@@ -72,15 +72,15 @@ init python:
                     self.pendingComments[-1].replies.append(reply)
                 else:
                     self.sentComments[-1].replies.append(reply)
-            except Exception:
-                message = self.newComment("MC", "", queue=False)
+            except Exception as e:
+                message = self.newComment(mc, "", queue=False)
                 message.replies.append(reply)
 
             kiwiiApp.notification = True
             return reply
 
         def selectedReply(self, reply):
-            self.newComment("MC", reply.message, reply.numberLikes, reply.mentions, queue=False)
+            self.newComment(mc, reply.message, reply.numberLikes, reply.mentions, queue=False)
             self.sentComments[-1].reply = reply
             self.sentComments[-1].replies = []
 
@@ -97,7 +97,7 @@ init python:
             except IndexError: pass
 
         def get_message(self):
-            usernames = [kiwiiUsers[mention]["username"] for mention in self.mentions]
+            usernames = [mention.username for mention in self.mentions]
 
             message = ", @".join(usernames)
             if usernames: message = "{{color=#3498DB}}{{b}}@{users}{{/b}}{{/color}} {text}".format(users=message, text=self.message)
@@ -159,12 +159,12 @@ init python:
 
 init -100:
     define profile_pictures = [
-        "images/phone/kiwii/profile_pictures/mcpp1.webp",
-        "images/phone/kiwii/profile_pictures/mcpp2.webp",
-        "images/phone/kiwii/profile_pictures/mcpp3.webp",
-        "images/phone/kiwii/profile_pictures/mcpp4.webp"
+        "images/nonplayable_characters/profile_pictures/mcpp1.webp",
+        "images/nonplayable_characters/profile_pictures/mcpp2.webp",
+        "images/nonplayable_characters/profile_pictures/mcpp3.webp",
+        "images/nonplayable_characters/profile_pictures/mcpp4.webp"
         ]
-    default profile_pictures_count = 0
+    default profile_pictures_index = 0
 
     default kiwiiPosts = []
     default liked_kiwiPosts = []
@@ -204,28 +204,28 @@ screen kiwiiTemplate():
             action Show("kiwiiApp")
 
 screen kiwiiPreferences():
-    tag phoneTag
+    tag phone_tag
     modal True
     zorder 200
 
-    $ kiwiiUsers["MC"]["profile_picture"] = profile_pictures[profile_pictures_count]
+    $ mc.profile_picture = profile_pictures[profile_pictures_index]
 
     use kiwiiTemplate:
 
-        add Transform(kiwiiUsers["MC"]["profile_picture"], zoom=0.2) align(0.5, 0.3)
+        add Transform(mc.profile_picture, zoom=0.2) align(0.5, 0.3)
 
         hbox:
             spacing 50
             align(0.5, 0.48)
 
             textbutton "<":
-                if profile_pictures_count > 0:
-                    action SetVariable("profile_pictures_count", profile_pictures_count - 1)
+                if profile_pictures_index > 0:
+                    action SetVariable("profile_pictures_index", profile_pictures_index - 1)
                 text_style "kiwii_PrefTextButton"
 
             textbutton ">":
-                if profile_pictures_count + 1 < len(profile_pictures):
-                    action SetVariable("profile_pictures_count", profile_pictures_count + 1)
+                if profile_pictures_index + 1 < len(profile_pictures):
+                    action SetVariable("profile_pictures_index", profile_pictures_index + 1)
                 text_style "kiwii_PrefTextButton"
 
         vbox:
@@ -233,8 +233,8 @@ screen kiwiiPreferences():
 
             text "Username:" style "kiwii_ProfileName" xalign 0.5
             input:
-                value DictInputValue(kiwiiUsers["MC"], "username")
-                default kiwiiUsers["MC"]["username"]
+                value FieldInputValue(mc, "username")
+                default name
                 length 15
                 color "#006400"
                 outlines [ (absolute(0), "#000", absolute(0), absolute(0)) ]
@@ -249,7 +249,7 @@ screen kiwiiPreferences():
 
 
 screen kiwiiApp():
-    tag phoneTag
+    tag phone_tag
     zorder 200
 
     $ kiwiiApp.notification = False
@@ -284,8 +284,8 @@ screen kiwiiApp():
                         spacing 5
 
                         imagebutton:
-                            idle Transform(post.img, zoom=0.17)
-                            action Show("kiwii_image", img=post.img)
+                            idle Transform(post.image, zoom=0.17)
+                            action Show("kiwii_image", img=post.image)
                         text post.get_message() style "kiwii_CommentText" xalign 0.5
 
                     hbox:
@@ -315,7 +315,7 @@ screen kiwiiApp():
 
 
 screen kiwiiPost(post):
-    tag phoneTag
+    tag phone_tag
     zorder 200
 
     use kiwiiTemplate:
@@ -323,8 +323,8 @@ screen kiwiiPost(post):
         imagebutton:
             xalign 0.5
             ypos 265
-            idle Transform(post.img, size=(376, 212))
-            action Show("kiwii_image", img=post.img)
+            idle Transform(post.image, size=(376, 212))
+            action Show("kiwii_image", img=post.image)
 
         viewport:
             mousewheel True
@@ -380,7 +380,7 @@ screen kiwiiPost(post):
                         action Function(post.selectedReply, reply)
 
 screen liked_kiwii():
-    tag phoneTag
+    tag phone_tag
     zorder 200
 
     $ liked_kiwiPosts = filter(lambda post: post.liked, kiwiiPosts)
@@ -415,8 +415,8 @@ screen liked_kiwii():
                         spacing 5
 
                         imagebutton:
-                            idle Transform(post.img, zoom=0.17)
-                            action Show("kiwii_image", img=post.img)
+                            idle Transform(post.image, zoom=0.17)
+                            action Show("kiwii_image", img=post.image)
                         text post.message style "kiwii_CommentText" xalign 0.5
 
                     hbox:
