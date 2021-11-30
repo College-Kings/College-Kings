@@ -1,7 +1,4 @@
 init python:
-    from enum import Enum
-
-
     class KCT(Enum):
         BRO = "bro"
         BOYFRIEND = "boyfriend"

@@ -1,6 +1,4 @@
 init python:
-    import os
-
     class SimplrContact(Contact):
         """
         The Contact class for Simplr. Used to manage and create messages for simplr characters.
@@ -46,7 +44,7 @@ init python:
                 self.pendingMessages = []
                 self.sentMessages.append(message)
 
-            if self in simplr_contacts: simplrApp.newNotification()
+            if self in simplr_contacts: simplrApp.notification = True
             
             return message
 
@@ -64,7 +62,7 @@ init python:
                 self.pendingMessages = []
                 self.sentMessages.append(message)
 
-            if self in simplr_contacts: simplrApp.newNotification()
+            if self in simplr_contacts: simplrApp.notification = True
 
             return message
 
@@ -95,8 +93,8 @@ init python:
                 self.pendingMessages[-1].replies.append(reply)
 
         def seenMessage(self):
-            if not any([contact.replies for contact in simplr_contacts]):
-                simplrApp.seenNotification()
+            if not any(contact.replies for contact in simplr_contacts):
+                simplrApp.notification = False
 
         def getMessage(self, message):
             for msg in self.sentMessages:
@@ -118,7 +116,7 @@ screen simplr_app():
         try: simplr_contact = simplr_pendingContacts[0]
         except IndexError: simplr_contact = None
 
-    use phoneTemplate:
+    use base_phone:
         fixed:
             pos (770, 168)
             xysize (375, 740)
@@ -173,7 +171,7 @@ screen simplr_app():
 screen simplr_contacts():
     tag phoneTag
 
-    use phoneTemplate:
+    use base_phone:
 
         add "images/contactsscreen.webp" at truecenter # Contact Screen Background
 
@@ -213,7 +211,7 @@ screen simplr_contacts():
 screen simplr_messenger(contact=None):
     tag phoneTag
 
-    use phoneTemplate:
+    use base_phone:
 
         add "images/msg.webp" at truecenter # Messenger Screen Background
 

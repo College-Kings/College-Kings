@@ -1,6 +1,3 @@
-init python:
-    import os
-
 ## Init
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
@@ -159,7 +156,6 @@ default freeroam4 = set()
 default hcAsked = [] # hcAsked.append("girl_name") to add
 default hcGirl = "alone"
 default joinwolves = False
-default kiwii = False
 default nobeach = False
 default penelopers = False
 default politics = False

@@ -119,7 +119,7 @@ label sun_eve_room:
                     u "I should reply to Emily"
                     jump v8s19_phoneCheck1
 
-            if emily.messenger.get_message("Great! See you there!"):
+            if emily.messenger.find_message("Great! See you there!"):
                 jump emily_arcade
 
             scene v8sser1a # TPP. Same camera as v8sser1, show MC lying on his side as if to go to sleep.
@@ -187,7 +187,7 @@ label sun_eve_room:
                     u "I should reply to Emily"
                     jump v8s19_phoneCheck2
 
-            if emily.messenger.get_message("Great! See you there!"):
+            if emily.messenger.find_message("Great! See you there!"):
                 jump emily_arcade
 
             scene v8sser4a # TPP. Same camera as v8sser4, show MC lying on his side as if to go to sleep.

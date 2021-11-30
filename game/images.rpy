@@ -3,6 +3,9 @@ image splashone = "images/splash1.webp"
 image splashtwo = "images/splash2.webp"
 image splashthree = "images/splash 3.webp"
 
+# Phone
+image phone_white_background = "images/phone/white_background.webp"
+
 # Achievements
 image no_hard_feelings = "images/achievements/v1/nohardfeelings.webp"
 image open_wound = "images/achievements/v1/openwound.webp"

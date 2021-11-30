@@ -1,9 +1,11 @@
 label before_main_menu:
     python:
-        msgApp.img = "images/phone/messages/appAssets/messagesIcon.webp"
-        statsApp.img = "images/phone/stats/appAssets/statsIcon.webp"
-        achApp.img = "images/phone/achievements/appAssets/achievementsIcon.webp"
-        kiwiiApp.img = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
+        # Phone Setup
+        phone.applications.append(messenger)
+        phone.applications.append(stats_app)
+        phone.applications.append(achievement_app)
+        phone.applications.append(kiwii)
+        phone.applications.append(simplr_app)
 
         # Set up murder mystery stats
         chloe.stats["Competitive"] = True

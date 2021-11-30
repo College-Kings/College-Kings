@@ -62,7 +62,7 @@ init python:
         return [item.catagory for item in cheatItems if not (item.catagory in seen or seen.add(item.catagory))]
 
     def unlockPhoneContacts():
-        for contact in contacts:
+        for contact in messenger.contacts:
             contact.unlock()
 
 

@@ -1,37 +1,40 @@
 init python:
     class Contact:
-        def __init__(self, name, profile_picture, locked=True):
+        def __init__(self, name, locked=True):
             self.name = name
-            self.profile_picture = profile_picture
             self.locked = locked
-            self.sentMessages = []
-            self.pendingMessages = []
+            self.sent_messages = []
+            self.pending_messages = []
+
+        @property
+        def profile_picture(self):
+            return "images/nonplayable_characters/profile_pictures/{}.webp".format(self.name.lower())
 
         @property
         def replies(self):
             try:
-                return self.sentMessages[-1].replies
+                return self.sent_messages[-1].replies
             except IndexError: return False
 
-        def newMessage(self, message, queue=True):
+        def new_message(self, message, force_send=False):
             message = Message(self, message)
 
-            try: contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
-            except Exception: pass
+            # Moves contact to the top when recieving a new message
+            messenger.contacts.insert(0, messenger.contacts.pop(messenger.contacts.index(self)))
 
             # Add message to queue
-            if queue:
-                self.pendingMessages.append(message)
+            if self.replies and not force_send:
+                self.pending_messages.append(message)
             else:
                 self.pendingMessages = []
-                self.sentMessages.append(message)
+                self.sent_messages.append(message)
 
             self.unlock()
-            msgApp.newNotification()
+            messenger.notification = True
             
             return message
 
-        def newImgMessage(self, img, queue=True):
+        def new_image_message(self, img, queue=True):
             message = ImageMessage(self, img)
 
             try: contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
@@ -42,14 +45,14 @@ init python:
                 self.pendingMessages.append(message)
             else:
                 self.pendingMessages = []
-                self.sentMessages.append(message)
+                self.sent_messages.append(message)
 
             self.unlock()
-            msgApp.newNotification()
+            messenger.notification = True
 
             return message
 
-        def addReply(self, message, func=None, newMessage=False, disabled=False):
+        def add_reply(self, message, func=None, newMessage=False, disabled=False):
             reply = Reply(message, func, disabled)
 
             # Append reply to last sent message
@@ -60,14 +63,14 @@ init python:
                 elif self.pendingMessages:
                     self.pendingMessages[-1].replies.append(reply)
                 else:
-                    self.sentMessages[-1].replies.append(reply)
+                    self.sent_messages[-1].replies.append(reply)
             except IndexError:
                 message = self.newMessage("", queue=False)
                 message.replies.append(reply)
 
             self.unlock()
 
-        def addImgReply(self, img, func=None, newMessage=False, disabled=False):
+        def add_image_reply(self, img, func=None, newMessage=False, disabled=False):
             reply = ImgReply(img, func, disabled)
 
             # Append reply to last sent message
@@ -78,21 +81,17 @@ init python:
                 elif self.pendingMessages:
                     self.pendingMessages[-1].replies.append(reply)
                 else:
-                    self.sentMessages[-1].replies.append(reply)
+                    self.sent_messages[-1].replies.append(reply)
             except IndexError:
                 message = self.newMessage("", queue=False)
                 message.replies.append(reply)
 
             self.unlock()
 
-        def seenMessage(self):
-            if not any([contact.replies for contact in contacts]):
-                msgApp.seenNotification()
-
-        def selectedReply(self, reply):
-            self.sentMessages.append(reply)
-            self.sentMessages[-1].reply = reply
-            self.sentMessages[-1].replies = []
+        def selected_reply(self, reply):
+            self.sent_messages.append(reply)
+            self.sent_messages[-1].reply = reply
+            self.sent_messages[-1].replies = []
 
             try:
                 reply.func()
@@ -103,16 +102,20 @@ init python:
             # Send next queued message(s)
             try:
                 while not self.replies:
-                    self.sentMessages.append(self.pendingMessages.pop(0))
+                    self.sent_messages.append(self.pendingMessages.pop(0))
             except IndexError: pass
 
+            # Check if all replies been sent
+            if not any([contact.replies for contact in messenger.contacts]):
+                messenger.notification = False
+
         def unlock(self):
-            if self not in contacts:
-                contacts.append(self)
+            if self not in messenger.contacts:
+                messenger.contacts.append(self)
             self.locked = False
 
-        def get_message(self, message):
-            for msg in self.sentMessages:
+        def find_message(self, message):
+            for msg in self.sent_messages:
                 try:
                     if message == msg.message:
                         return msg
@@ -120,6 +123,19 @@ init python:
                     if message == msg.image:
                         return msg
             return False
+
+        ## Backwards compatibility
+        def newMessage(self, message, queue=True):
+            return self.new_message(message, queue)
+
+        def NewImgMessage(self, img, queue=True):
+            return self.new_image_message(img, queue)
+
+        def addReply(self, message, func=None, newMessage=False, disabled=False):
+            return self.add_reply(message, func, newMessage, disabled)
+
+        def addImgReply(self, img, func=None, newMessage=False, disabled=False):
+            return self.add_image_reply(img, func, newMessage, disabled)
 
 
     class Message:
@@ -152,15 +168,12 @@ init python:
             self.disabled = disabled
 
 
-default contacts = []
+screen messenger_contacts():
+    tag phone_tag
 
-screen contactsscreen():
-    tag phoneTag
-    zorder 200
+    use base_phone:
 
-    use phoneTemplate:
-
-        add "images/contactsscreen.webp" at truecenter ## Contact Screen Background
+        add "images/phone/contacts_screen.webp" at truecenter
 
         fixed:
             xysize(375, 78)
@@ -173,18 +186,15 @@ screen contactsscreen():
             mousewheel True
             draggable True
             scrollbars "vertical"
-            xysize(375, 663)
-            pos(772, 247)
+            xysize (375, 663)
+            pos (772, 247)
 
-            for contact in contacts:
+            for contact in messenger.contacts:
                 if not contact.locked:
                     fixed:
                         xysize(375, 74)
                         
-                        if hasattr(contact, "profile_picture"):
-                            add contact.profile_picture yalign 0.5 xpos 20
-                        else:
-                            add contact.profilePicture yalign 0.5 xpos 20
+                        add contact.profile_picture yalign 0.5 xpos 20
 
                         text contact.name style "nametext" yalign 0.5 xpos 100
 
@@ -193,18 +203,18 @@ screen contactsscreen():
 
                         imagebutton:
                             idle "images/contactbutton.webp" align(0.5, 0.5)
-                            action [Function(renpy.retain_after_load), Function(contact.seenMessage), Show("messager", contact=contact)]
+                            action [Function(renpy.retain_after_load), Show("messager", contact=contact)]
 
 
 screen messager(contact=None):
-    tag phoneTag
-    modal True
+    tag phone_tag
     zorder 200
+    modal True
 
     python:
         yadj.value = yadjValue
 
-    use phoneTemplate:
+    use base_phone:
 
         add "images/msg.webp" at truecenter ## Messenger Screen Background
 
@@ -215,7 +225,7 @@ screen messager(contact=None):
 
             imagebutton:
                 idle "images/msgarrow.webp"
-                action [Show("contactsscreen"), Hide("messager"), Hide("messenger_reply")]
+                action [Show("messenger_contacts"), Hide("messenger_reply")]
                 yalign 0.5
 
             vbox:
@@ -240,7 +250,7 @@ screen messager(contact=None):
 
                 null height 5
 
-                for message in contact.sentMessages:
+                for message in contact.sent_messages:
                     if isinstance(message, Message) and message.message.strip():
                         textbutton message.message style "msgleft"
                     elif isinstance(message, ImageMessage):
@@ -285,7 +295,7 @@ screen messenger_reply(contact=None):
                         text_style "replies_style_text"
                     else:
                         style "replies_style"
-                        action [Hide("messenger_reply"), Function(contact.selectedReply, reply)]
+                        action [Hide("messenger_reply"), Function(contact.selected_reply, reply)]
 
             elif isinstance(reply, ImgReply):
                 imagebutton:
@@ -294,7 +304,7 @@ screen messenger_reply(contact=None):
                         style "reply_disabled"
                     else:
                         style "replies_style"
-                        action [Hide("messenger_reply"), Function(contact.selectedReply, reply)]
+                        action [Hide("messenger_reply"), Function(contact.selected_reply, reply)]
 
 
 screen phone_image(img=None):

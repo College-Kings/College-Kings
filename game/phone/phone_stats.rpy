@@ -17,7 +17,7 @@ screen stats():
     tag phoneTag
     zorder 200
 
-    use phoneTemplate:
+    use base_phone:
 
         add "images/phone/whiteBackground.webp" at truecenter
 
