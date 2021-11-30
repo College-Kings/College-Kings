@@ -1297,10 +1297,10 @@ label v11_case_verdict:
     scene v11coc27 # TPP. Third person view of MC, he is alone and has a tired expression, mouth closed, in the hallway
     with dissolve
 
-    $ v11s1_kiwiiPost = KiwiiPost("Autumn", "v11/v11_autumn_kiwii.webp", _("Best charity event yet, thanks for all the donations!"), numberLikes=256)
-    $ v11s1_kiwiiPost.newComment("Aubrey", _("So psyched!"), queue=False)
-    $ v11s1_kiwiiPost.newComment("Cameron", _("What you doing later? ;)"), queue=False)
-    $ v11s1_kiwiiPost.newComment("Lindsey", _("It was an awesome day!"), queue=False)
+    $ v11s1_kiwiiPost = KiwiiPost(autumn, "v11/v11_autumn_kiwii.webp", _("Best charity event yet, thanks for all the donations!"), numberLikes=256)
+    $ v11s1_kiwiiPost.newComment(aubrey, _("So psyched!"), queue=False)
+    $ v11s1_kiwiiPost.newComment(cameron, _("What you doing later? ;)"), queue=False)
+    $ v11s1_kiwiiPost.newComment(lindsey, _("It was an awesome day!"), queue=False)
     $ v11s1_kiwiiPost.addReply(_("Wish I could see more mud wrestling!"), numberLikes=321)
     $ v11s1_kiwiiPost.addReply(_("Thanks for doing the event Autumn!"), numberLikes=518)
 
