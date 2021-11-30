@@ -71,7 +71,6 @@ init python:
     ButtonCheat("General", "Chloe Mad", "chloemad")
     ButtonCheat("General", "Nora Mad", "noramad")
     ButtonCheat("General", "Lauren Mad", "laurenmad")
-    ButtonCheat("General", "Penelope Mad", "penelopemad")
     ButtonCheat("General", "Imre Mad", "imremad")
     ButtonCheat("General", "Lauren Rs", "laurenrs")
     ButtonCheat("General", "Aubrey Rs", "aubreyrs")
