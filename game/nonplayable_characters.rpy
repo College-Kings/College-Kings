@@ -30,9 +30,10 @@ init python:
             profile_picture (str): The file name for the characters profile picture, located in "images/nonplayable_characters/profile_pictures/"
         """
 
-        def __init__(self, name):
+        def __init__(self, name, username=None):
             self.name = name
             self.name = name.replace(" ", "_")
+            self.username = username
 
             self._messenger = None
             self._simplr = None
@@ -125,33 +126,44 @@ init python:
         def reset_points(self):
             self.points = 0
 
-default chloe = NonPlayableCharacter("Chloe")
-default amber = NonPlayableCharacter("Amber")
-default penelope = NonPlayableCharacter("Penelope")
-default riley = NonPlayableCharacter("Riley")
-default lindsey = NonPlayableCharacter("Lindsey")
-default lauren = NonPlayableCharacter("Lauren")
-default emily = NonPlayableCharacter("Emily")
+default chloe = NonPlayableCharacter("Chloe", "Chloe101")
+default amber = NonPlayableCharacter("Amber", "Amber_xx")
+default penelope = NonPlayableCharacter("Penelope", "Penelopeeps")
+default riley = NonPlayableCharacter("Riley", "RileyReads")
+default lindsey = NonPlayableCharacter("Lindsey", "LindsLou")
+default lauren = NonPlayableCharacter("Lauren", "LoLoLauren")
+default emily = NonPlayableCharacter("Emily", "emilyyyy")
 default ms_rose = NonPlayableCharacter("Ms Rose")
-default nora = NonPlayableCharacter("Nora")
-default aubrey = NonPlayableCharacter("Aubrey")
-default ryan = NonPlayableCharacter("Ryan")
-default imre = NonPlayableCharacter("Imre")
-default chris = NonPlayableCharacter("Chris")
-default charli = NonPlayableCharacter("Charli")
-default cameron = NonPlayableCharacter("Cameron")
-default josh = NonPlayableCharacter("Josh")
+default nora = NonPlayableCharacter("Nora", "Nora_12")
+default aubrey = NonPlayableCharacter("Aubrey", "Aubs123")
+default ryan = NonPlayableCharacter("Ryan", "Ryanator")
+default imre = NonPlayableCharacter("Imre", "BadBoyImre")
+default chris = NonPlayableCharacter("Chris", "Chriscuit")
+default charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
+default cameron = NonPlayableCharacter("Cameron", "Cameroon")
+default josh = NonPlayableCharacter("Josh", "Josh80085")
 default julia = NonPlayableCharacter("Julia")
 default evelyn = NonPlayableCharacter("Evelyn")
-default autumn = NonPlayableCharacter("Autumn")
-default sebastian = NonPlayableCharacter("Sebastian")
-default grayson = NonPlayableCharacter("Grayson")
+default autumn = NonPlayableCharacter("Autumn", "Its_Fall")
+default sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
+default grayson = NonPlayableCharacter("Grayson", "G-rayson")
 default jenny = NonPlayableCharacter("Jenny")
 default mr_lee = NonPlayableCharacter("Mr Lee")
 
+default adam = NonPlayableCharacter("Adam", "A.D.A.M.")
+default mason = NonPlayableCharacter("Mason", "Mason_Mas")
+default elijah = NonPlayableCharacter("Elijah", "Elijah_Woods")
+default kim = NonPlayableCharacter("Kim", "KimPlausible")
+default caleb = NonPlayableCharacter("Caleb", "Aleb")
+default parker = NonPlayableCharacter("Parker", "Parker")
+default kai = NonPlayableCharacter("Kai", "KaiCriesWith2Ply")
+default aaron = NonPlayableCharacter("Aaron", "DoubleARon")
+default naomi = NonPlayableCharacter("Naomi", "NaomiXMarie")
+default lews_official = NonPlayableCharacter("LewsOfficial", "LewsOfficial")
+
 default beth = NonPlayableCharacter("Beth")
 default iris = NonPlayableCharacter("Iris")
-default samantha = NonPlayableCharacter("Samantha")
+default samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam")
 default emmy = NonPlayableCharacter("Emmy")
 
 default wolf = NonPlayableCharacter("Wolf")
