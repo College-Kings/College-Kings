@@ -14,7 +14,7 @@ init python:
     StatsInfo("Confident", "Confident individuals don’t rely on others to join them in their actions. They don’t crave their friends' approval, however they can be perceived as egotistical.", "#fc3d39")
 
 screen stats():
-    tag phoneTag
+    tag phone_tag
     zorder 200
 
     use base_phone:

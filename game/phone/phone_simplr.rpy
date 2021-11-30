@@ -111,7 +111,7 @@ init -1:
     default simplr_contacts = []
 
 screen simplr_app():
-    tag phoneTag
+    tag phone_tag
     python:
         try: simplr_contact = simplr_pendingContacts[0]
         except IndexError: simplr_contact = None
@@ -169,7 +169,7 @@ screen simplr_app():
 
 
 screen simplr_contacts():
-    tag phoneTag
+    tag phone_tag
 
     use base_phone:
 
@@ -209,7 +209,7 @@ screen simplr_contacts():
 
 
 screen simplr_messenger(contact=None):
-    tag phoneTag
+    tag phone_tag
 
     use base_phone:
 
