@@ -9,18 +9,6 @@ init python:
             self.money = 0
             self.inventory = Inventory()
 
-            self.quirks = {
-                "animal_lover": False,
-                "boomer": False,
-                "hardass": False,
-                "pop_culture": False,
-                "prankster": False,
-                "sensitive_stomach": False,
-                "tough_tummy": False,
-                "hunter": False,
-                "not_hunter": False,
-            }
-
             self.relationships = set()
             self.girlfriends = set()
 
