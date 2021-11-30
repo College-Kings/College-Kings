@@ -63,8 +63,7 @@ label starta: #for compatibility only
 
     play music "music/m15punk.mp3"
 
-    $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
-    $ kiwiiUsers["MC"]["username"] = name
+    $ mc.name = name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
 
     u "Hmm...?"
     
