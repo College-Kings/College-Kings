@@ -277,10 +277,6 @@ label after_load:
             jenny.points = char_points
             jenny.stats = char_stats
 
-
-        # Kiwii Users
-        kiwiiUsers = kiwii_users()
-
         # Kiwii Posts
         try: v11s1_kiwiiPost.img = "images/phone/kiwii/posts/v11/v11_autumn_kiwii.webp"
         except NameError: pass
