@@ -5,6 +5,7 @@ init python:
         def __init__(self, profile_picture):
             self.profile_picture = profile_picture
 
+            self.username = self.name
             self.money = 0
             self.inventory = Inventory()
 
@@ -22,6 +23,10 @@ init python:
 
             self.relationships = set()
             self.girlfriends = set()
+
+        @property
+        def name(self):
+            return store.name
 
         def add_item(self, item):
             if item.cost > self.money:
