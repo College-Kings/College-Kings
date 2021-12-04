@@ -6,7 +6,7 @@
 label v13s35_buy_item_dialog(item):
     scene v13s35_sex_shop
 
-    if (cuffs not in mc.inventory.items) and (mc.money - item.cost < cuffs.cost):
+    if (cuffs not in mc.inventory) and (mc.money - item.cost < cuffs.cost):
         u "Only have a bit of money left, better get the cuffs."
     else:
         $ mc.add_item(item)

@@ -17,13 +17,10 @@ init python:
             return store.name
 
         def add_item(self, item):
-            if item.cost > self.money:
-                raise UnhandledTranscribingError("{} price is higher then user money".format(item.name))
-
             self.inventory.items.append(item)
 
         def has_item(self, item):
-            return (item in self.inventory.items)
+            return (item in self.inventory)
 
 
 init offset = 1

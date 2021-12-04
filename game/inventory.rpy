@@ -5,8 +5,14 @@ init python:
         def __init__(self):
             self.items = []
 
+        def __contains__(self, item):
+            return item in self.items
+
         def __getitem__(self, index):
             return self.items[index]
+
+        def __iter__(self):
+            return self.items
 
     class Item:
         """Item class used to repersent an interactable Item
