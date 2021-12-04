@@ -4,7 +4,9 @@ init python:
 
         def __init__(self):
             self.items = []
-            
+
+        def __getitem__(self, index):
+            return self.items[index]
 
     class Item:
         """Item class used to repersent an interactable Item
