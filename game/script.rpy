@@ -8,6 +8,7 @@ define config.version = "14.9.0{}".format('s' if config.enable_steam else "")
 
 define config.steam_appid = 1463120
 
+define config.gl2 = True
 define _quit_slot = "99-1"
 
 label splashscreen:
