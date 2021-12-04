@@ -132,7 +132,9 @@ screen bugTesting_cheatMenu():
     imagebutton:
         action Hide("bugTesting_cheatMenu"), Hide("bugTesting_cheatMenuValues"), SetVariable("quick_menu", True)
         idle "/bugTesting/images/cheatMenuBackButton.webp"
-        hover im.MatrixColor("/bugTesting/images/cheatMenuBackButton.webp", im.matrix.brightness(0.2))
+        hover Transform("/bugTesting/images/cheatMenuBackButton.webp", matrixcolor=BrightnessMatrix(0.2))
+        selected False
+        sensitive True
         pos (1666, 50)
 
 

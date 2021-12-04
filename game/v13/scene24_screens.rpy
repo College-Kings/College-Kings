@@ -1,21 +1,21 @@
 screen v13s24_girl():
 
     if not emmyrs and not kourtneyrs and not aryssars:
-        add im.Blur("images/v13/scene24/v13s24_20a.webp", 5)
+        add Transform("images/v13/scene24/v13s24_20a.webp", blur=15)
     elif emmyrs and kourtneyrs and aryssars:
-        add im.Blur("images/v13/scene24/v13s24_20b.webp", 5)
+        add Transform("images/v13/scene24/v13s24_20b.webp", blur=15)
     elif emmyrs and kourtneyrs:
-        add im.Blur("images/v13/scene24/v13s24_20c.webp", 5)
+        add Transform("images/v13/scene24/v13s24_20c.webp", blur=15)
     elif emmyrs and aryssars:
-        add im.Blur("images/v13/scene24/v13s24_20d.webp", 5)
+        add Transform("images/v13/scene24/v13s24_20d.webp", blur=15)
     elif kourtneyrs and aryssars:
-        add im.Blur("images/v13/scene24/v13s24_20e.webp", 5)
+        add Transform("images/v13/scene24/v13s24_20e.webp", blur=15)
     elif emmyrs:
-        add im.Blur("images/v13/scene24/v13s24_20f.webp", 5)
+        add Transform("images/v13/scene24/v13s24_20f.webp", blur=15)
     elif kourtneyrs:
-        add im.Blur("images/v13/scene24/v13s24_20g.webp", 5)
+        add Transform("images/v13/scene24/v13s24_20g.webp", blur=15)
     elif aryssars:
-        add im.Blur("images/v13/scene24/v13s24_20h.webp", 5)
+        add Transform("images/v13/scene24/v13s24_20h.webp", blur=15)
 
     hbox:
         align (0.5, 0.5)
