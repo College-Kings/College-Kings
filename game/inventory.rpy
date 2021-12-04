@@ -14,6 +14,10 @@ init python:
         def __iter__(self):
             return self.items
 
+        def reset(self):
+            self.items = []
+
+
     class Item:
         """Item class used to repersent an interactable Item
         
