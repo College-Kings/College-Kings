@@ -7,7 +7,7 @@ init python:
             return self.checklist[index]
 
         def __iter__(self):
-            return self.checklist
+            return iter(self.checklist)
 
         def add_item(self, name):
             self.checklist.append(ChecklistItem(name))
@@ -36,7 +36,7 @@ screen checklist():
     tag checklist
     
     vbox:
-        for item in checklist.checklist:
+        for item in checklist:
             text item.name:
                 if item.completed:
                     color "#0f0"

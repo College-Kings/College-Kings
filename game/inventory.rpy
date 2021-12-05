@@ -12,7 +12,7 @@ init python:
             return self.items[index]
 
         def __iter__(self):
-            return self.items
+            return iter(self.items)
 
         def reset(self):
             self.items = []
