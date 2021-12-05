@@ -3,10 +3,16 @@ init python:
         def __init__(self):
             self.checklist = []
 
+        def __getitem__(self, index):
+            return self.checklist[index]
+
+        def __iter__(self):
+            return self.checklist
+
         def add_item(self, name):
             self.checklist.append(ChecklistItem(name))
 
-        def reset_checklist(self):
+        def reset(self):
             self.checklist = []
 
 
