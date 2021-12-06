@@ -210,17 +210,17 @@ label v15s18b:
 
                 "Get offended.":
 
-                    scene v15s18b_10 # TPP. Frontal view of just MC, MC looking to his left, Arm expressions like he is mad, MC upset, mouth open.
+                    scene v15s18b_17 # TPP. Frontal view of just MC, MC looking to his left, Arm expressions like he is mad, MC upset, mouth open.
                     with dissolve
 
                     u "Do you guys think you can stop shitting on me for a minute?"
 
-                    scene v15s18b_10a # TPP. Frontal view of just MC, MC looking to his right, Arm expressions like he is mad, MC upset, mouth open.
+                    scene v15s18b_17a # TPP. Frontal view of just MC, MC looking to his right, Arm expressions like he is mad, MC upset, mouth open.
                     with dissolve
 
                     u "I barely had any time to find a costume, let alone a gift."
 
-                    scene v15s18b_11 # TPP. Just a shot of Chris, slight smile mouth open.
+                    scene v15s18b_18 # TPP. Just a shot of Chris, slight smile mouth open.
                     with dissolve
 
                     ch "We can tell, haha."
@@ -230,7 +230,7 @@ label v15s18b:
 
                     u "*Sighs*"
 
-                    scene v15s18b_5d # FPP. Lauren looking at MC, MC looking at Lauren, Lauren fake smile, mouth open.
+                    scene v15s18b_5d
                     with dissolve
 
                     la "Well, thanks anyway. I guess it's the thought that counts, right?"

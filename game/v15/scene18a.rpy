@@ -1785,7 +1785,7 @@ label v15s18a_Riley:
 
             ri "Do you like it hard and fast...?"
 
-            scene v15rileyhj # Ignore as animation.
+            scene v15rileyhj # Ignore as animation
             with dissolve
             pause
 
@@ -1848,7 +1848,7 @@ label v15s18a_Riley:
 
             u "I'm gonna cum."
 
-            scene v15rileyhj2f
+            scene v15rileyhj2f # Ignore as animation
             with dissolve
             pause
 
@@ -1863,7 +1863,7 @@ label v15s18a_Riley:
 
             u "Fuuuckkk... *Groans*"
 
-            scene v15rileyhj2f
+            scene v15rileyhj2f # Ignore as animation
             with dissolve
             pause 
 
@@ -2151,15 +2151,10 @@ label v15s18a_ChrisAmber
 
                 am "This is my kind of party list, haha! Imagine if everyone had this list..."
 
-                scene v15s18aamber_5a # FPP
+                scene v15s18aamber_5a # FPP. Just Amber and MC's hands, Amber handing MC the challenge paper, MC grabbing the paper.
                 with dissolve
 
                 u "It would be an orgy party. *Laughs*"
-
-                scene v15s18aamber_5 # FPP. Just Amber and MC's hands, Amber handing MC the challenge paper, MC grabbing the paper.
-                with dissolve
-
-                pause 
 
                 scene v15s18aamber_3a
                 with dissolve     
@@ -2305,7 +2300,7 @@ label v15s18a_ChrisAmber
 
                     am "*Gags*"
 
-                    scene v15s18aamber_bj2f
+                    scene v15amberbj2f # Ignore as animation
                     with dissolve
                     pause
 
