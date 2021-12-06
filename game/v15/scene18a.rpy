@@ -7,8 +7,6 @@ label v15s18a:
     # -Refer to images on Miro for exact placement, but Downstairs: Aubrey at the bar, Imre & Lauren on the couch, Riley in the kitchen, Chris & Amber on bar stools at kitchen counter; Upstairs: Ryan in the bathroom, Autumn & Penelope in Autumn's bedroom
     # -Clickable Objects (placement is irrelevant to plot, available to click on during both free roams): A bronze deer statue, A photo of Autumn and Lauren, A carved Halloween pumpkin, A Deer scarf wall hanging-
     # -Characters are greyed out after they are spoken too besides Lauren. She needs to stay highlighted as she is the way to end the free roam-
-    scene v15s18a_1 # TPP. Show MC standing at the bottom of the stairs and at the end of the fridge, slight smile, mouth closed. (Refer to Miro for the placement I am talking about.)
-    with dissolve
 
     $ v15s18a_kiwiiPost1 = KiwiiPost("Lauren", Steamy and spooky photo of her costume before the party begins, _("Feeling one year older ;)"), numberLikes=854)
     $ v15s18a_kiwiiPost1.newComment("Lindsey", _("Holy fuck, babe! You look spectacular, I hope you have the most amazing birthday <3"), queue=False)
