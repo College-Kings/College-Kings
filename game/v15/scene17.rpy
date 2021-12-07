@@ -8,12 +8,12 @@ label v15s17:
     scene v15s17_1 # TPP. MC enters the department store, slight smile, mouth closed
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v15s17_2 # TPP. MC walks through the aisles, looking at random items as he passes through. Not 100% sure what he's looking for, confused expresion, mouth closed
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v15s17_3 # TPP. A store clerk, a smiling Asian man, mouth open, suddenly appears in front of him, Mc happy expression mouth closed, show a cash register in the distance
     with dissolve
@@ -144,7 +144,7 @@ label v15s17:
             scene v15s17_3a # same as v15s17_3 MC follows the Store Clerk (SC) to the cash register, SC is wallking in front of MC rolling his eyes, expression of disbelief, holding a gift card, MC has a slight smile, mouth closed
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v15s17_5 # SC is standing behind a cash register, DON'T show the counter and ONLY show the top of the cash register, looking at MC, slight smile, mouth open
             with dissolve
@@ -256,12 +256,12 @@ label v15s17:
             scene v15s17_6 # TPP. MC follows the Store Clerk to another aisle, both slight smiles, mouths closed, happy expressions
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v15s17_7 # TPP. SC extends an arm palm up towards a jewlry case, looking at MC half smile, mouth open, MC is looking at the Jewlry case, slight smile mouth closed, show the Emerald bracelet on the left and the ruby choker necklace on the right in the jewlry case
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v15s17_8 # FPP. Show SC standing behind the jewlry case, half smile, mouth open, looking at the jewlry, show the Emerald bracelet on the left and the ruby choker necklace on the right in the jewlry case
             with dissolve
@@ -332,7 +332,7 @@ label v15s17:
                 scene v15s17_9 # TPP. Show SC still standing behind the jewlry case, annoyed expression, rolling up a sleeve to look at his watch, MC has with hand on chin, thinking pose, looking away from the SC
                 with dissolve
 
-                pause 0.5
+                pause 0.75
 
                 scene v15s17_8b
                 with dissolve
@@ -362,12 +362,12 @@ label v15s17:
                 scene v15s17_6a # TPP. same as v15s17_6 MC follows the Store Clerk to different aisle
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s17_7a # TPP. same as v15s17_7 But instead of the jewlery the horses are inside the case, the Brown horse golden mane is on the left of the case, and the White horse black mane is on the right of the horse case
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s17_10 # FPP. Show SC standing behind the horse case, half smile, mouth open, looking at the horses, show the Brown horse golden mane on the left and the White horse black mane on the right in the horse case
                 with dissolve
@@ -676,17 +676,17 @@ label v15s17:
     scene v15s17_5l # FPP. same as v15s17_5 MC hands the SC his credit card
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s17_5b
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s17_5m # FPP. same as v15s17_5l SC hands MC his credit card and his bag of purchases, DON'T show what's in the bag
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s17_5d
     with dissolve
@@ -701,12 +701,12 @@ label v15s17:
     scene v15s17_12 # FPP. The SC is standing behind the cash register looking and waving goodbye with a big smile as MC as MC walks away carrying the shopping bag slight smile mouth closed
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s17_13 # FPP. MC exits the store carrying his shopping bag, slight smile, mouth closed
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s17_14 # FPP. MC is seen walking on the sidewalk still carrying his shopping bag, slight smile, mouth closed
     with fade

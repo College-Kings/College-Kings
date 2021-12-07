@@ -60,6 +60,7 @@ label v15s23:
     if not aubreyrs:
         $ aubrey.messenger.addReply("Haha ok, see you soon :) ")
         $ aubrey.messenger.newMessage("Perfect ;)")
+
     else:
         $ aubrey.messenger.addReply("I just showered actually, so I smell amazing")
         $ aubrey.messenger.addReply("But I accept your invitation...")

@@ -8,20 +8,24 @@ label v15s18a:
     # -Clickable Objects (placement is irrelevant to plot, available to click on during both free roams): A bronze deer statue, A photo of Autumn and Lauren, A carved Halloween pumpkin, A Deer scarf wall hanging-
     # -Characters are greyed out after they are spoken too besides Lauren. She needs to stay highlighted as she is the way to end the free roam-
 
-    $ v15s18a_kiwiiPost1 = KiwiiPost("Lauren", Steamy and spooky photo of her costume before the party begins, _("Feeling one year older ;)"), numberLikes=854)
+    $ v15s18a_kiwiiPost1 = KiwiiPost("Lauren", "Steamy and spooky photo of her costume before the party begins", _("Feeling one year older ;)"), numberLikes=854)
     $ v15s18a_kiwiiPost1.newComment("Lindsey", _("Holy fuck, babe! You look spectacular, I hope you have the most amazing birthday <3"), queue=False)
     $ v15s18a_kiwiiPost1.newComment("Autumn", _("Can't wait to celebrate! Happy Birthday, Renny <33"), queue=False)
     $ v15s18a_kiwiiPost1.newComment("Chloe", _("Sorry I couldn't be there! I'm just so busy... Enjoy yourself and have the night of your life! Happy birthday :)"), queue=False)
     $ v15s18a_kiwiiPost1.newComment("Amber", _("YES!! That costume is everything! Happy b-day hottie, see you in a bit <3"), queue=False)
     $ v15s18a_kiwiiPost1.newComment("Lauren", _("Thank you ladies!!"), queue=False)
 
-    $ v15s18a_kiwiiPost2 = KiwiiPost("Autumn", Photo of halloween decorations for the party whether its inside or outside the house, _("Spooky sister season :)"), numberLikes=743)
+    $ v15s18a_kiwiiPost2 = KiwiiPost("Autumn", "Photo of halloween decorations for the party whether its inside or outside the house", _("Spooky sister season :)"), numberLikes=743)
     $ v15s18a_kiwiiPost2.newComment("Penelope", _("I'll never understand your decorating skills... I'm so excited for tonight!"), queue=False)
     $ v15s18a_kiwiiPost2.newComment("Lauren", _("The house looks absolutely perfect, I couldn't have asked for more! Love u <3"), queue=False)
     $ v15s18a_kiwiiPost2.newComment("Riley", _("So fucking cool! You're planning my wedding one day, Autumn..."), queue=False)
     $ v15s18a_kiwiiPost2.newComment("Autumn", _("Haha, sounds great!"), queue=False)
 
     pause
+    
+    if False:
+        scene v15s18_kiwii_lauren
+        scene v15s18_kiwii_autumn
 
     call screen v15s18a_room
 
@@ -349,7 +353,7 @@ label v15s18a_Aubrey:
             au "Mhmm! Enjoy the party."
 
     if v15s18a_aub_kiwii_smile:
-        $ v15s18a_kiwiiPost3 = KiwiiPost("Aubrey", Selfie with MC smiling at halloween party, _("Spooky season? More like stripper season ;)"), numberLikes=2492)
+        $ v15s18a_kiwiiPost3 = KiwiiPost("Aubrey", "Selfie with MC smiling at halloween party", _("Spooky season? More like stripper season ;)"), numberLikes=2492)
         $ v15s18a_kiwiiPost3.newComment("Chloe", _("O. M. G."), queue=False)
         $ v15s18a_kiwiiPost3.newComment("Naomi", _("Hahahaha! I have to come to one of these parties soon..."), queue=False)
         if apes:
@@ -360,8 +364,9 @@ label v15s18a_Aubrey:
         $ v15s18a_kiwiiPost3.newComment("Lauren", _("Hehe, thank you!! You guys are the best <3"), queue=False)
         $ v15s18a_kiwiiPost3.addReply(_("Now taking appointments... ;)"))
         $ v15s18a_kiwiiPost3.newComment("Naomi", _("Can I book you for my birthday party, too? ;D"), queue=False)
+
     else:
-        $ v15s18a_kiwiiPost4 = KiwiiPost("Aubrey", Selfie with non-smiling MC at halloween party, _("I think something's wrong with our stripper... Is he supposed to be this sad? </3"), numberLikes=2415)
+        $ v15s18a_kiwiiPost4 = KiwiiPost("Aubrey", "Selfie with non-smiling MC at halloween party", _("I think something's wrong with our stripper... Is he supposed to be this sad? </3"), numberLikes=2415)
         $ v15s18a_kiwiiPost4.newComment("Chloe", _("O. M. G."), queue=False)
         $ v15s18a_kiwiiPost4.newComment("Naomi", _("Aww! You need to cheer him up, little sis! Or I will... ;)"), queue=False)
         if apes:
@@ -374,6 +379,10 @@ label v15s18a_Aubrey:
         $ v15s18a_kiwiiPost4.newComment("Naomi", _("Can I book you for my birthday party, too? ;D"), queue=False)
 
     pause
+    
+    if False:
+        scene v15s18_kiwii_aubrey1
+        scene v15s18_kiwii_aubrey2
 
     call screen v15s18a_bar
 
@@ -1032,48 +1041,48 @@ label v15s18a_AutumPenelope:
 
             u "*Sighs* No, I wasn't lying."
 
-        scene v15s18apen_7b
+    scene v15s18apen_7b
+    with dissolve
+
+    u "Anyway, time for me to catch up with the others."
+
+    pause 
+    
+    scene v15s18apen_6a
+    with dissolve
+
+    u "Anyway, time for me to catch up with the others."
+
+    scene v15s18apen_6
+    with dissolve
+
+    pe "Catch you later!"
+
+    scene v15s18apen_7a
+    with dissolve
+
+    aut "Have fun."
+
+    scene v15s18apen_9 # TPP. MC waving as he starts leaving the room, Penelope and Autumn back to looking at the computer in the background
+    with dissolve
+
+    u "You too, ladies!"
+
+    play sound "sounds/doorclose.mp3"
+
+    if v15s18a_showlist_penelope_autumn:
+        scene v15s18apen_10 # TPP. MC standing outside Autumn's room, slight smile, mouth closed.
         with dissolve
 
-        u "Anyway, time for me to catch up with the others."
+        u "(The sexless checklist, huh? It's worth the practice, I think. *Chuckles*)"
 
-        pause 
-        
-        scene v15s18apen_6a
+        u "(Maybe I should keep the real name of the game to myself, wouldn't wanna harm Imre's ego now, would we? Hehe...)"
+
+    else:
+        scene v15s18apen_10
         with dissolve
 
-        u "Anyway, time for me to catch up with the others."
-
-        scene v15s18apen_6
-        with dissolve
-
-        pe "Catch you later!"
-
-        scene v15s18apen_7a
-        with dissolve
-
-        aut "Have fun."
-
-        scene v15s18apen_9 # TPP. MC waving as he starts leaving the room, Penelope and Autumn back to looking at the computer in the background
-        with dissolve
-
-        u "You too, ladies!"
-
-        play sound "sounds/doorclose.mp3"
-
-        if v15s18a_showlist_penelope_autumn:
-            scene v15s18apen_10 # TPP. MC standing outside Autumn's room, slight smile, mouth closed.
-            with dissolve
-
-            u "(The sexless checklist, huh? It's worth the practice, I think. *Chuckles*)"
-
-            u "(Maybe I should keep the real name of the game to myself, wouldn't wanna harm Imre's ego now, would we? Hehe...)"
-
-        else:
-            scene v15s18apen_10
-            with dissolve
-
-            u "(Maybe we can bring up the list later with Autumn or Penelope.)"
+        u "(Maybe we can bring up the list later with Autumn or Penelope.)"
 
     pause
 
@@ -1924,14 +1933,14 @@ label v15s18a_Riley:
             scene v15s18ariley_12a # TPP. MC putting his costume back on, slight smile, mouth closed.
             with dissolve
 
-        pause
+    pause
 
-        call screen v15s18a_upstairsroom
+    call screen v15s18a_upstairsroom
 
 # Ground Floor
 # location 6- Kitchen counter stools
 # *Clicking on Chris and Amber*
-label v15s18a_ChrisAmber
+label v15s18a_ChrisAmber:
     $ v15s18a_frchrisamber = True
 
     scene v15s18aamber_1 # TPP. MC walking towards the Kitchen stools Amber is sitting on, Chris talking to Amber, Chris slight smile, mouth open, Amber slight smile, mouth closed.

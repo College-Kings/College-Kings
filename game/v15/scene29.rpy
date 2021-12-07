@@ -5,11 +5,10 @@
 # Render Count: 5 Unique, 14 total
 
 label v15s29:
-
     scene v15s29_1 # TPP. MC walks into his wolve's bedroom, slight smile, mouth closed
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s29_2 # TPP. MC changes into boxers, gets into bed, slight smile, mouth closed
     with dissolve
@@ -31,8 +30,7 @@ label v15s29:
     scene v15s29_3
     with dissolve
 
-    if v15_told_Emily_I_Love_You
-
+    if v15_told_Emily_I_Love_You:
         scene v15s29_3b # TPP. Mc looks at his phone on the nightstand, slight smile, mouth closed
         with dissolve
 
@@ -59,21 +57,11 @@ label v15s29:
         with dissolve
 
         menu:
-            "Don't Sext Emily":
-
-                $ emily.addReply("Not really in the mood... I'm sorry", func=None)
-                $ emily.newMessage("Oh, okay. No worries. I'll talk to you soon, I miss you <3", queue=False)
-                $ emily.addReply("You too, night :)", func=None)
-
-                scene v15s29_4
-                with dissolve
-
             "Sext Emily":
-
                 scene v15s29_4
                 with dissolve
 
-                pause 0.5
+                pause 0.75
 
                 scene v15s29_4a # FPP. same as v15s29_4 MC has pulled out his dick and started stroking it
                 with dissolve
@@ -108,17 +96,17 @@ label v15s29:
                 scene v15s29_4a
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s29_4b # FPP. same as v15s29_4a Mc's hand is stroking the bottom part of the shaft of his dick
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s29_4c # FPP. same as v15s29_4b Mc's hand is stroking the top part of the the shaft of his dick
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s29_4d # FPP. same as v15s29_4c Mc blows a huge load all over his hand
                 with dissolve
@@ -144,16 +132,24 @@ label v15s29:
                 scene v15s29_4f # same as v15s29_4d FPP. MC wipes his dick clean of cum
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s29_3
                 with dissolve
 
                 u "(Okay, now I'm super relaxed... Haha. Time for sleep.)"
 
+            "Don't Sext Emily":
+                $ emily.addReply("Not really in the mood... I'm sorry", func=None)
+                $ emily.newMessage("Oh, okay. No worries. I'll talk to you soon, I miss you <3", queue=False)
+                $ emily.addReply("You too, night :)", func=None)
+
+                scene v15s29_4
+                with dissolve
+
     scene v15s29_5 # TPP. lights are out, and MC has laid down to go to sleep, no expression, eyes closed
     with fade
 
-    pause 0.50
+    pause 0.75
 
     jump v15s31

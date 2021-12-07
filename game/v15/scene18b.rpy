@@ -275,7 +275,7 @@ label v15s18b:
 
         u "You're welcome, I'm happy you like it."
 
-    if v15_lauren_gift = "brown horse, golden mane"
+    if v15_lauren_gift == "brown horse, golden mane":
         scene v15s18b_3i 
         with dissolve
 
