@@ -399,6 +399,7 @@ default v14s50_listen_to_aubrey_lindsey = 0 # MC choses to listen to Lindsey and
 default freeroam12 = set() #chloe heist
 default freeroam12stolen = set()
 default v14s5a_riley_should_join_chicks = False
+default v14_Samantha_clean = False # Placeholder?
 
 # 15.0 
 # Chloe Planning Board (v15s8)
@@ -440,5 +441,7 @@ default v15s18a_frdeer = False
 default v15s18a_frphoto = False 
 default v15s18a_frpumpkin = False
 default v15s18a_aub_kiwii_smile = False
+default v15s18a_gag = False
 default v15s18a_showlist_penelope_autumn = False # Show the party list to Penelope and Autumn.
 default v15s18a_lie = False 
+default v15_told_Emily_I_Love_You = False # Placeholder?

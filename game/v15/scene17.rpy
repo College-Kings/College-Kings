@@ -484,7 +484,7 @@ label v15s17:
 
                         menu:
                             "Emerald bracelet":
-                                $ v15_lauren_gift = "emeral bracelet"
+                                $ v15_lauren_gift = "emerald bracelet"
 
                                 scene v15s17_11d # FPP. same as v15s17_11b MC holds up the Emerald Bracelet
                                 with dissolve
@@ -586,7 +586,7 @@ label v15s17:
 
                         menu:
                             "Emerald bracelet":
-                                $ v15_lauren_gift = "emeral bracelet"
+                                $ v15_lauren_gift = "emerald bracelet"
 
                                 scene v15s17_11d
                                 with dissolve
