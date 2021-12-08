@@ -457,6 +457,7 @@ default v15s18a_frchrisamber = False
 default v15s18a_frdeer = False
 default v15s18a_frphoto = False 
 default v15s18a_frpumpkin = False
+default v15s18_partytask = 0
 default v15s18a_aub_kiwii_smile = False
 default v15s18a_gag = False
 default v15s18a_showlist_penelope_autumn = False # Show the party list to Penelope and Autumn.
