@@ -67,7 +67,7 @@ label v15s27:  # -MC walks out of the Chicks house-
 
     u "Hello?"
 
-    scene v15s27_4    # FPP. Jenny sitting at the bar with a booths behind her (Samantha is sitting in the booth behind her but Samantha's face is blocked by Jenny), holding her phonein her right hand, smiling, buzzed from drinking, mouth open [Underground Bar]. There is a drink on the bar in front of her left hand.
+    scene v15s27_4    # TPP. Jenny sitting at the bar with a booths behind her (Samantha is sitting in the booth behind her but Samantha's face is blocked by Jenny), holding her phonein her right hand, smiling, buzzed from drinking, mouth open [Underground Bar]. There is a drink on the bar in front of her left hand.
     with dissolve
 
     jen "Hey, [name]! What are you up to right now?"
@@ -87,7 +87,7 @@ label v15s27:  # -MC walks out of the Chicks house-
 
     u "Us?"
 
-    scene v15s27_4a   # FPP. Jenny sitting at the bar blocking Samantha in the booth, phone to her ear (right hand), holding a drink (left hand), smiling mouth open [Underground Bar].
+    scene v15s27_4a   # TPP. Jenny sitting at the bar blocking Samantha in the booth, phone to her ear (right hand), holding a drink (left hand), smiling mouth open [Underground Bar].
     with dissolve
 
     jen "Me and Penelope! Your two favorite girls?!"
@@ -107,7 +107,7 @@ label v15s27:  # -MC walks out of the Chicks house-
 
     u "But seriously, I think I'm just going to get into bed early tonight."
 
-    scene v15s27_4b   # FPP. Jenny sitting at the bar blocking Samantha in the booth behind her, phone to her ear (right hand), her hand around her drink (left hand) that is on the bar, smiling mouth open [Underground bar].
+    scene v15s27_4b   # TPP. Jenny sitting at the bar blocking Samantha in the booth behind her, phone to her ear (right hand), her hand around her drink (left hand) that is on the bar, smiling mouth open [Underground bar].
     with dissolve
 
     jen "Oh, come on Grandpa! There's a new underground bar that just opened up, and they're not checking IDs!"
@@ -117,37 +117,37 @@ label v15s27:  # -MC walks out of the Chicks house-
 
     jen "Let's get our drink on!"
 
-    scene v15s27_4c   # FPP. Jenny switches the phone to her other hand (left hand) and ear, her headed turned toward the right off screen, smiling mouth open. Drink is on the bar [Underground Bar]. 
+    scene v15s27_4c   # TPP. Jenny switches the phone to her other hand (left hand) and ear, her headed turned toward the right off screen, smiling mouth open. Drink is on the bar [Underground Bar]. 
     with dissolve
 
     pause 0.75
 
-    scene v15s27_4d   # FPP. Jenny gestures for someone to come toward her, smiling mouth opened. Drink is on the bar [Underground Bar]
+    scene v15s27_4d   # TPP. Jenny gestures for someone to come toward her, smiling mouth opened. Drink is on the bar [Underground Bar]
     with dissolve
 
     pause 0.75
 
-    scene v15s27_4e   # FPP. Penelope enter the scene from player's left (Jenny's right), Penelope is buzzed from drinking and smiling mouth closed. Jenny smiling, holding her phone (left hand), mouth closed, drink on the bar. [Underground Bar].
+    scene v15s27_4e   # TPP. Penelope enter the scene from player's left (Jenny's right), Penelope is buzzed from drinking and smiling mouth closed. Jenny smiling, holding her phone (left hand), mouth closed, drink on the bar. [Underground Bar].
     with dissolve
 
     pause 0.75
 
-    scene v15s27_4f   # FPP. Penelope smiling, mouth closd, grabbing for Jenny's phone (left hand) while Jenny pulls away from her revealing Samantha sitting in the booth behind them. Penelope and Jenny smiling mouths closed. Jenny's drink is on the bar [Underground Bar].
+    scene v15s27_4f   # TPP. Penelope smiling, mouth closd, grabbing for Jenny's phone (left hand) while Jenny pulls away from her revealing Samantha sitting in the booth behind them. Penelope and Jenny smiling mouths closed. Jenny's drink is on the bar [Underground Bar].
     with dissolve
 
     pause 0.75
 
-    scene v15s27_4g   # FPP. Jenny switches her phone to her right hand (closest to Penelope) as Penelope continues to pull Jenny's hand with the phone closer to her. Samantha is blocked from view for the remainder of the scene. Both girls are smiling mouths closed [Underground Bar].
+    scene v15s27_4g   # TPP. Jenny switches her phone to her right hand (closest to Penelope) as Penelope continues to pull Jenny's hand with the phone closer to her. Samantha is blocked from view for the remainder of the scene. Both girls are smiling mouths closed [Underground Bar].
     with dissolve
 
     pause 0.75 
     
-    scene v15s27_4h   # FPP. Penelope leaning in towards Jenny's phone (Jenny's right hand), smiling mouth open, talking into the phone. Jenny's holding her drink in her left hand smiling, mouth closed [Underground Bar].
+    scene v15s27_4h   # TPP. Penelope leaning in towards Jenny's phone (Jenny's right hand), smiling mouth open, talking into the phone. Jenny's holding her drink in her left hand smiling, mouth closed [Underground Bar].
     with dissolve
 
     pe "Yeah, [name]! Don't be a boring old man for once! You can go slipper shopping tomorrow. *Laughs*"
 
-    scene v15s27_4i   # FPP. Penelope leaning in towards Jenny's phone (Jenny's right hand), smiling mouth closed. Jenny's holding her drink in her left hand smiling, mouth open, leaning toward her phone [Underground Bar].
+    scene v15s27_4i   # TPP. Penelope leaning in towards Jenny's phone (Jenny's right hand), smiling mouth closed. Jenny's holding her drink in her left hand smiling, mouth open, leaning toward her phone [Underground Bar].
     with dissolve
 
     jen "*Laughs* Good one."
