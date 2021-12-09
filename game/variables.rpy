@@ -463,3 +463,4 @@ default v15s18a_gag = False
 default v15s18a_showlist_penelope_autumn = False # Show the party list to Penelope and Autumn.
 default v15s18a_lie = False 
 default v15_told_Emily_I_Love_You = False # Placeholder?
+default v15s18e_cum_in_lauren # Noted to be remembered 
