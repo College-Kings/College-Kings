@@ -464,3 +464,4 @@ default v15s18a_showlist_penelope_autumn = False # Show the party list to Penelo
 default v15s18a_lie = False 
 default v15_told_Emily_I_Love_You = False # Placeholder?
 default v15s18e_cum_in_lauren # Noted to be remembered 
+default v15_ph_riley_upset = False  # placeholder ?? (set in s26?? ; read in v15s27)
