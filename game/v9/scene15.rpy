@@ -56,10 +56,11 @@ label v9_thur_room_w_cam_punch:
     with dissolve
     u "What? No. I've just been chilling. What's going on?"
 
+    call screen phone
+
     $ v9s15KiwiiPost1 = KiwiiPost("Grayson", "v9/v9hlw8c.webp", "That's my boy! Go [name]! Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
     $ v9s15KiwiiPost1.newComment("Cameron", "Fuckin' A!", numberLikes=renpy.random.randint(100, 200), queue=False)
     $ v9s15KiwiiPost1.newComment("Riley", "Knew he had it in him!", numberLikes=renpy.random.randint(200, 250), queue=False)
-
 
     menu:
         "Brag":
@@ -249,6 +250,8 @@ label v9_thur_room_w_cam_no_punch:
     scene v9trc4f
     with dissolve
     sa "You better check it."
+
+    call screen phone
 
     $ v9s15KiwiiPost2 = KiwiiPost("Sebastian", "v9/v9hlw20.webp", "", numberLikes=renpy.random.randint(100, 200))
     $ v9s15KiwiiPost2.newComment("Chris", "Wow, hope he's OK!", numberLikes=renpy.random.randint(100, 200), queue=False)
