@@ -40,7 +40,7 @@ label v15s30:
 
         u "(She's a wild one... I just hope things between Cameron and I stay cool.)"
 
-    scene v15s30_3a
+    scene v15s30_3a # TPP. same as v15s30_3 MC Yawns
     with dissolve
 
     u "(Tomorrow is a big day with Aubrey. I'd better get a good night's sleep.)"
