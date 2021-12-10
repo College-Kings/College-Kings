@@ -32,6 +32,7 @@ label v9_room_fri_aft:
             if v9s20KiwiiPost1.replies:
                 "(I should reply to that post on Kiwii.)"
                 jump s20_phoneExit1
+
         jump v9_room_fri_aft_contW
 
     else:
