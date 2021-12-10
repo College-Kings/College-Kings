@@ -1,6 +1,6 @@
 # SCENE 27: MC gets a call from Jenny
 # Locations: Front of chics house (outside), Underground bar
-# Characters: MC (Outfit: 9, JENNY (Outfit: x), PENELOPE (Outfit: 3), SAMANTHA (Outfit: 1)
+# Characters: MC (Outfit: 9, JENNY (Outfit: 4), PENELOPE (Outfit: 7), SAMANTHA (Outfit: 1)
 # Time: Evening
 
 label v15s27:  # -MC walks out of the Chicks house-
