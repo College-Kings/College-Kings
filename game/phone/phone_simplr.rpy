@@ -21,7 +21,7 @@ init python:
 
         @property
         def profile_picture(self):
-            return "images/nonplayable_characters/{0}/{0}_profile_picture.webp".format(name.lower())
+            return "images/nonplayable_characters/{0}/{0}_profile_picture.webp".format(self.name.lower())
 
         def removeContact(self):
             simplr_pendingContacts.pop(0)
