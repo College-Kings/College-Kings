@@ -440,8 +440,13 @@ default v15s18a_frchrisamber = False
 default v15s18a_frdeer = False
 default v15s18a_frphoto = False 
 default v15s18a_frpumpkin = False
+default v15s18_partytask = 0
 default v15s18a_aub_kiwii_smile = False
 default v15s18a_gag = False
 default v15s18a_showlist_penelope_autumn = False # Show the party list to Penelope and Autumn.
 default v15s18a_lie = False 
 default v15_told_Emily_I_Love_You = False # Placeholder?
+default v15s18e_cum_in_lauren # Noted to be remembered 
+default v15s24_nancy_dick = False
+default v15s24_alcohol = False
+default v15_ph_riley_upset = False  # placeholder ?? (set in s26?? ; read in v15s27)

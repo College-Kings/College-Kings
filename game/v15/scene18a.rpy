@@ -2,7 +2,7 @@
 # Locations: Deer's House/Rooms
 # Characters: MC (Outfit: Stripper Costume), AUBREY (Outfit: Clown Costume), RYAN (Outfit: Elvis Costume), AUTUMN (Outfit: Mummy), PENELOPE (Outfit: Sexy Witch), LAUREN (Outfit: Spider necklace costume), IMRE (Outfit: Cowboy Costume), RILEY (Outfit: Schoolgirl Costume), CHRIS (Outfit: Boxer Costume), AMBER (Outfit: Black bloody nurse costume)
 # Time: Night
-
+default v15s18_mention_list = False
 label v15s18a:
     # -Refer to images on Miro for exact placement, but Downstairs: Aubrey at the bar, Imre & Lauren on the couch, Riley in the kitchen, Chris & Amber on bar stools at kitchen counter; Upstairs: Ryan in the bathroom, Autumn & Penelope in Autumn's bedroom
     # -Clickable Objects (placement is irrelevant to plot, available to click on during both free roams): A bronze deer statue, A photo of Autumn and Lauren, A carved Halloween pumpkin, A Deer scarf wall hanging-
@@ -262,6 +262,7 @@ label v15s18a_Aubrey:
 
     menu:
         "Mention the list.":
+            $ v15s18_mention_list_aubrey = True
             $ add_point(KCT.TROUBLEMAKER)
             scene v15s18aaub_2
             with dissolve
@@ -1673,6 +1674,8 @@ label v15s18a_Riley:
             ri "Okay, sure thing."
 
         "Yeah, I do.":
+            $ v15s18_partytask += 1
+
             scene v15s18ariley_2i
             with dissolve
 
@@ -2182,6 +2185,8 @@ label v15s18a_ChrisAmber:
 
                     am "Good luck!"
                 else:
+                    $ v15s18_partytask += 1
+
                     scene v15s18aamber_3c
                     with dissolve
 
