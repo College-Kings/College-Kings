@@ -59,13 +59,8 @@ label v9_thur_room_w_cam_punch:
     $ v9s15KiwiiPost1 = KiwiiPost("Grayson", "v9/v9hlw8c.webp", "That's my boy! Go [name]! Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
     $ v9s15KiwiiPost1.newComment("Cameron", "Fuckin' A!", numberLikes=renpy.random.randint(100, 200), queue=False)
     $ v9s15KiwiiPost1.newComment("Riley", "Knew he had it in him!", numberLikes=renpy.random.randint(200, 250), queue=False)
-    
-    label v9_s15_phoneExit_no_Punch1:
-    if v9s15KiwiiPost1.replies:
-        call screen phone
-    if v9s15KiwiiPost1.replies:
-        "(I should reply to that post on Kiwii.)"
-        jump v9_s15_phoneExit_no_Punch1
+
+    call screen phone
 
     menu:
         "Brag":
@@ -260,13 +255,8 @@ label v9_thur_room_w_cam_no_punch:
     $ v9s15KiwiiPost2.newComment("Chris", "Wow, hope he's OK!", numberLikes=renpy.random.randint(100, 200), queue=False)
     $ v9s15KiwiiPost2.newComment("Cameron", "Ahhhh! Preview of Saturday's Freshman Brawl!", numberLikes=renpy.random.randint(150, 170), queue=False)
 
-    label v9_s15_phoneExit_no_Punch2:
-        if v9s15KiwiiPost2.replies:
-            call screen phone
-        if v9s15KiwiiPost2.replies:
-            "(I should reply to that post on Kiwii.)"
-            jump v9_s15_phoneExit_no_Punch2
-
+    call screen phone
+    
     menu:
         "Shrug it off":
             jump v9_thur_room_w_cam_shrugg_off
