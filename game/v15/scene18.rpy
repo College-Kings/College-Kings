@@ -214,7 +214,7 @@ label v15s18:
     scene v15s18_11d
     with dissolve
 
-    imre "Why didn't you just wear the same costume you got for Mr Lee's class?"
+    imre "Why didn't you just wear the same costume you got for Mr. Lee's class?"
 
     scene v15s18_11e
     with dissolve
@@ -396,7 +396,7 @@ label v15s18:
     with dissolve
 
     menu:
-        "Seems difficult.":
+        "Seems difficult":
             $ add_point(KCT.BRO)
 
             u "That does seem kinda difficult, ha."
@@ -411,7 +411,7 @@ label v15s18:
 
             u "What an honor it would be to receive that title. *Laughs*"
 
-        "Looks easy.":
+        "Looks easy":
             $ add_point(KCT.TROUBLEMAKER)
             
             u "It looks too easy... Is there a longer list?"

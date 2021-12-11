@@ -6,7 +6,7 @@
 label v15s7:
     # -1 random male and 1 random female student will be needed for the second half of this scene-
 
-    if "diary" in freeroam12stolen or ("cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen): # -if MC stole any of Chloe's money and/or her diary from her room
+    if "diary" in freeroam12stolen or "cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen: # -if MC stole any of Chloe's money and/or her diary from her room
         scene v15s7_1 # FPP At entrance to library, Chloe is obviously crying and doing a bad job of hiding it with her hand
         with dissolve
 
@@ -28,9 +28,10 @@ label v15s7:
             with dissolve
 
             if v14_realwolf:
-                cl "Somebody stole my campaign money. *Sobbing* Nine hundred fucking dollars, [name]."
-            else:
                 cl "Somebody stole my campaign money. *Sobbing* Five hundred fucking dollars, [name]."
+
+            else:
+                cl "Somebody stole my campaign money. *Sobbing* Nine hundred fucking dollars, [name]."
             
             cl "I don't know how I'm supposed to pay for- *Crying* I needed that money..."
 
@@ -362,13 +363,13 @@ label v15s7:
             scene v15s7_3 # TPP Chloe giving MC a tight hug
             with dissolve
 
-            pause 1
+            pause 1.25
 
         elif chloegf: # -if ChloeGF, A quick kiss before they hug
             scene v15s7_4 # TPP Chloe giving MC a kiss, a little bit of mascara still streaking her face
             with dissolve
 
-            pause 0.75
+            pause 1.75
 
             scene v15s7_3
             with dissolve
@@ -379,7 +380,7 @@ label v15s7:
             scene v15s7_3a # TPP Chloe giving MC a quick, friendly hug
             with dissolve
 
-            pause 0.75
+            pause 1
 
         scene v15s7_1i # FPP Same as 1h, Chloe's mouth open
         with dissolve
@@ -391,7 +392,6 @@ label v15s7:
 
         u "Haha, good."
 
-        # VERIFY THAT THIS IS THE CORRECT VARIABLE
         if v14_help_chloe: # -if MC is helping Chloe with planning board
             scene v15s7_1i
             with dissolve
@@ -466,7 +466,7 @@ label v15s7:
             scene v15s7_1h
             with dissolve
 
-            u "See ya, Chlo."
+            u "See ya, Chloe."
 
             scene v15s7_7 # FPP Show Chloe walking into the library
             with dissolve
@@ -479,7 +479,7 @@ label v15s7:
         scene v15s7_8 # FPP At entrance to library, Chloe is talking to two random students, a man and a woman. Chloe smiling with mouth open
         with dissolve
 
-        cl "...Yeah, Lindsey has some nice posters, I'll give her that..."
+        cl "...yeah, Lindsey has some nice posters, I'll give her that..."
 
         scene v15s7_8a # FPP Same angle as 8, Chloe holding up a finger to make a point, looking at the other random student, smiling with mouth open
         with dissolve
@@ -519,6 +519,7 @@ label v15s7:
         scene v15s7_11 # FPP Show the two random students walking away down the hall
         with dissolve
 
+        $ set_presidency_percent(v14_lindsey_popularity - 2)
         u "Two more votes for Chloe!"
 
         scene v15s7_8b
@@ -598,7 +599,7 @@ label v15s7:
                 scene v15s7_8f
                 with dissolve
 
-                cl "I wish I could come though; I miss you..."
+                cl "I wish I could come though. I miss you..."
 
                 scene v15s7_6
                 with dissolve
@@ -623,7 +624,7 @@ label v15s7:
             scene v15s7_8c
             with dissolve
 
-            u "Bye, Chlo. Good luck."
+            u "Bye, Chloe. Good luck."
 
             scene v15s7_8b
             with dissolve

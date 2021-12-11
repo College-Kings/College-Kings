@@ -478,7 +478,7 @@ label v15s17:
 
                         clerk "I'm sure she'll be very happy with it."
 
-                    "Jewelry Gift":
+                    "Jewelry gift":
                         scene v15s17_11b # FPP. same as v15s17_11 Close up shot of the Jewlry options
                         with dissolve
 
@@ -504,7 +504,7 @@ label v15s17:
 
                         clerk "jewelry! She is going to love it, young man."
 
-                    "Horse Gift":
+                    "Horse gift":
                         scene v15s17_11c # FPP. same as v15s17_11 Close up shot of the horse options
                         with dissolve
 
@@ -580,7 +580,7 @@ label v15s17:
 
                         clerk "I'm sure she'll be very happy with it."
 
-                    "Jewelry Gift":
+                    "Jewelry gift":
                         scene v15s17_11b
                         with dissolve
 

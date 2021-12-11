@@ -4,9 +4,8 @@
 # Time: Night
 
 label v15s18c:
-    $ freeRoam = True 
-
     call screen v15s18c_couch
+
 label v15s18c_riley:
     scene v15s18c_ri_1 # TPP. Show MC walking into the bathroom, Riley adjusting her make up in front of the mirror, MC slightly startled, Riley slightly startled, both mouths closed
     with dissolve
@@ -36,7 +35,7 @@ label v15s18c_riley:
     scene v15s18c_ri_2b # FPP. Same as v15s18c_ri_2, Riley now turned to MC, not looking through the mirror anymore, Riley smiling, mouth open
     with dissolve
 
-    if v15_lauren_gift = "$50 gift card" and lauren.relationship == Relationship.FRIEND:
+    if v15_lauren_gift == "$50 gift card" and lauren.relationship == Relationship.FRIEND:
 
         ri "I can't believe you bought the same gift card as Imre..."
 
@@ -52,7 +51,7 @@ label v15s18c_riley:
 
         ri "Haha, I wouldn't worry about it. Some people are really difficult to shop for."
     
-    elif v15_lauren_gift = "$50 gift card" and lauren.relationship == Relationship.GIRLFRIEND:
+    elif v15_lauren_gift == "$50 gift card" and lauren.relationship == Relationship.GIRLFRIEND:
         scene v15s18c_ri_2b
         with dissolve
 
@@ -144,7 +143,7 @@ label v15s18c_riley:
 
         ri "Anytime."
 
-    elif v15_lauren_gift = "white horse, black mane":
+    elif v15_lauren_gift == "white horse, black mane":
         scene v15s18c_ri_2b
         with dissolve
 
@@ -175,7 +174,7 @@ label v15s18c_riley:
 
         ri "Of course it's true, why would I speak in lies?"
     
-    elif v15_lauren_gift = "brown horse, golden mane":
+    elif v15_lauren_gift == "brown horse, golden mane":
         scene v15s18c_ri_2b
         with dissolve
 
@@ -226,7 +225,7 @@ label v15s18c_riley:
 
         ri "Why thank you, although I don't think we'll need it. Hehe..."
     
-    elif v15_lauren_gift = "emerald bracelet" or v15_lauren_gift = "ruby choker necklace" and lauren.relationship = Relationship.GIRLFRIEND:
+    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace" and lauren.relationship == Relationship.GIRLFRIEND:
         scene v15s18c_ri_2b
         with dissolve
 
@@ -258,7 +257,7 @@ label v15s18c_riley:
             scene v15s18c_ri_2i # FPP. Same as v15s18c_ri_2f, Riley slightly sad, looking down, mouth closed
             with dissolve
 
-            pause
+            pause 0.75
 
         scene v15s18c_ri_2f
         with dissolve
@@ -270,11 +269,11 @@ label v15s18c_riley:
 
         u "Ha, yeah hopefully."
     
-    elif v15_lauren_gift = "emerald bracelet" or v15_lauren_gift = "ruby choker necklace" and lauren.relationship = Relationship.FRIEND:
+    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace" and lauren.relationship == Relationship.FRIEND:
         scene v15s18c_ri_2b
         with dissolve
 
-        ri "So, romantic jewellery? *Giggles* For a friend?"
+        ri "So, romantic jewelry? *Giggles* For a friend?"
 
         scene v15s18c_ri_2c
         with dissolve
@@ -286,7 +285,7 @@ label v15s18c_riley:
         scene v15s18c_ri_2g
         with dissolve
 
-        u "And the sales guy was all \"She'll be a friend for life!\" if I got her jewellery... *Sighs"
+        u "And the sales guy was all \"She'll be a friend for life!\" if I got her jewelry... *Sighs"
 
         scene v15s18c_ri_2f
         with dissolve
@@ -326,7 +325,7 @@ label v15s18c_riley:
         scene v15s18c_ri_2k
         with dissolve
 
-        ri "Righttt.... I wouldn't hate it either. Just a little creepy. *Chuckles*"
+        ri "Righttt... I wouldn't hate it either. Just a little creepy. *Chuckles*"
 
         scene v15s18c_ri_2j
         with dissolve
@@ -406,7 +405,7 @@ label v15s18c_imre_aubrey:
 
     imre "I know sarcasm when I hear it, Aubrey."
 
-    if v15_lauren_gift = "$50 gift card":
+    if v15_lauren_gift == "$50 gift card":
         scene v15s18c_imau_5
         with dissolve
 
@@ -477,7 +476,7 @@ label v15s18c_imre_aubrey:
 
         pause 0.75
 
-    elif v15_lauren_gift = "brown horse, golden mane" or v15_lauren_gift = "white horse, black mane":
+    elif v15_lauren_gift == "brown horse, golden mane" or v15_lauren_gift == "white horse, black mane":
         scene v15s18c_imau_6
         with dissolve
 
@@ -513,11 +512,11 @@ label v15s18c_imre_aubrey:
 
         pause 0.75
 
-    elif v15_lauren_gift = "emerald bracelet" or v15_lauren_gift = "ruby choker necklace" and lauren.relationship = Relationship.GIRLFRIEND:
+    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace" and lauren.relationship == Relationship.GIRLFRIEND:
         scene v15s18c_imau_6
         with dissolve
 
-        au "An actual good gift was the jewellery that [name] got."
+        au "An actual good gift was the jewelry that [name] got."
 
         scene v15s18c_imau_6b
         with dissolve
@@ -537,7 +536,7 @@ label v15s18c_imre_aubrey:
         scene v15s18c_imau_5a
         with dissolve
 
-        u "What's better than jewellery?"
+        u "What's better than jewelry?"
 
         scene v15s18c_imau_5b
         with dissolve
@@ -547,7 +546,7 @@ label v15s18c_imre_aubrey:
         scene v15s18c_imau_6
         with dissolve
 
-        au "Go ahead, Imre. Name one. Name one thing that's better than jewellery."
+        au "Go ahead, Imre. Name one. Name one thing that's better than jewelry."
 
         scene v15s18c_imau_5
         with dissolve
@@ -559,11 +558,11 @@ label v15s18c_imre_aubrey:
 
         pause 0.75
 
-    elif v15_lauren_gift = "emerald bracelet" or v15_lauren_gift = "ruby choker necklace" and lauren.relationship = Relationship.FRIEND:
+    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace" and lauren.relationship == Relationship.FRIEND:
         scene v15s18c_imau_5c # FPP. Same as v15s18c_imau_5b, Imre slight smile, mouth open
         with dissolve
 
-        imre "At least I didn't buy her a romantic piece of jewellery, haha! That was so fucking awkward, dude."
+        imre "At least I didn't buy her a romantic piece of jewelry, haha! That was so fucking awkward, dude."
 
         scene v15s18c_imau_5d # FPP. Same as v15s18c_5c, Imre slight smile, mouth closed
         with dissolve
@@ -573,9 +572,9 @@ label v15s18c_imre_aubrey:
         scene v15s18c_imau_6
         with dissolve
 
-        au "I think getting creepy jewellery is much better than getting a plain piece of plastic with money on it..."
+        au "I think getting creepy jewelry is much better than getting a plain piece of plastic with money on it..."
 
-        u "(Creepy jewellery?)"
+        u "(Creepy jewelry?)"
 
         scene v15s18c_imau_5
         with dissolve
@@ -709,6 +708,7 @@ label v15s18c_imre_aubrey:
                 pause 0.75
 
                 scene v15s18c_imau_6f # FPP. Same as v15s18c_imau_6c, Aubrey looking at the list, slightly surprised, mouth open
+                with dissolve
 
                 au "Oh! Haha..."
 
@@ -761,7 +761,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_13 # TPP. Close up of Aubrey removing the bottom half of her costume
     with dissolve
 
-    pause  
+    pause 0.75 
 
     scene v15s18c_imau_14 # TPP. Close up of Aubrey getting on the bed, mouth open, sexy expression
     with dissolve
@@ -781,22 +781,22 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_16 # TPP. Show MC joining Aubrey in bed, both looking sexily at each other, mouths closed
     with dissolve
 
-    pause  
+    pause 0.75 
 
     scene v15s18c_imau_17 # TPP. Show MC and Aubrey making out
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s18c_imau_17a # TPP. Same as v15s18c_imau_17, making out more passionately, MC grabbing her breasts
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s18c_imau_18 # TPP. Show MC kissing Aubrey's neck, Aubrey biting her lip, mouth closed
     with dissolve
 
-    pause  
+    pause 0.75 
 
     scene v15s18c_imau_19 # TPP. Show MC kissing Aubrey's abdomen, Aubrey mouth open, moaning
     with dissolve
@@ -826,7 +826,7 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfin # IGNORE AS ANIMATION
     with dissolve
-    pause  
+    pause 0.75 
 
     au "Oh... Shhit... *Moans*"
 
@@ -836,7 +836,7 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfinf # IGNORE AS ANIMATION
     with dissolve
-    pause
+    pause 0.75
    
     au "*Moans* Yes... [name], please..."
 
@@ -851,7 +851,7 @@ label v15s18c_imre_aubrey:
         "Keep her quiet":
             scene v15aubfin2 # IGNORE AS ANIMATION
             with dissolve
-            pause  
+            pause 0.75 
 
             u "Shh, shh, shh..."
 
@@ -859,14 +859,14 @@ label v15s18c_imre_aubrey:
 
             scene v15saubfin2f # IGNORE AS ANIMATION
             with dissolve
-            pause
+            pause 0.75
 
             au "*Moans* N-no."
     
         "Let her be loud":
             scene v15aubfin2
             with dissolve
-            pause
+            pause 0.75
 
             u "Ha, scream for me."
 
@@ -874,7 +874,7 @@ label v15s18c_imre_aubrey:
 
             scene v15aubfin2f
             with dissolve
-            pause
+            pause 0.75
 
             au "Fuck... You don't want that... Haha... *Moans*"
 
@@ -883,7 +883,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_23 # TPP. Show MC positioning himself so he can cover Aubrey's mouth with one hand while he fingers her with the other hand
     with dissolve
 
-    pause  
+    pause 0.75 
     
     image v15aubfing = Movie(play="images/v15/Scene 18c/v15aubfing.webm", loop=True, image="images/v15/Scene 18c/v15aubfingStart.webp", start_image="images/v15/Scene 18c/v15aubfingStart.webp") 
     image v15aubfingf = Movie(play="images/v15/Scene 18c/v15aubfingf.webm", loop=True, image="images/v15/Scene 18c/v15aubfingStart.webp", start_image="images/v15/Scene 18c/v15aubfingStart.webp") 
@@ -892,25 +892,25 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfing # IGNORE AS ANIMATION
     with dissolve
-    pause  
+    pause 0.75 
 
     au "Mmm!"
 
     scene v15aubfingf # IGNORE AS ANIMATION
     with dissolve
-    pause 
+    pause 0.75 
 
     u "Faster?"
 
     scene v15aubfing2 # IGNORE AS ANIMATION
     with dissolve
-    pause 
+    pause 0.75 
 
     au "*Moans*"
 
     scene v15aubfing2f # IGNORE AS ANIMATION
     with dissolve
-    pause 
+    pause 0.75 
 
     u "You're so wet..."
 
@@ -923,7 +923,7 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfin
     with dissolve
-    pause
+    pause 0.75
 
     au "Ffffuck... [name]."
 
@@ -931,7 +931,7 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfinf
     with dissolve
-    pause
+    pause 0.75
 
     au "*Whispers* Yes..."
 
@@ -939,13 +939,13 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfin2
     with dissolve
-    pause
+    pause 0.75
 
     au "Mmm, yes... *Moans* I-"
 
     scene v15aubfin2f
     with dissolve
-    pause
+    pause 0.75
 
     au "Fuck... Oh, [name]..."
 
@@ -989,7 +989,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_27 # TPP. Show Aubrey taking MC's hands towards her mouth, mouth closed, sexy expression
     with dissolve
 
-    pause  
+    pause 0.75 
 
     scene v15s18c_imau_28 # TPP. Show Aubrey licking MC's hands
     with dissolve
@@ -1024,12 +1024,12 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_30 # TPP. Show Aubrey moving to stand up in front of MC, both sexy expressions, mouths closed
     with dissolve
 
-    pause  
+    pause 0.75 
 
     scene v15s18c_imau_31 # TPP. Show Aubrey giving MC a passionate kiss
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s18c_imau_32 # FPP. Aubrey standing in front of MC, Aubrey mouth closed, sexy expression
     with dissolve
@@ -1055,14 +1055,14 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_33 # TPP. Close up of Aubrey getting dressed (pulling her panties up)
     with dissolve
 
-    pause 
+    pause 0.75 
 
     scene v15s18c_imau_34 # FPP. MC watches as Aubrey walks out of the room, she looks back at him over her shoulders, sexy expression, winking, mouth closed
     with dissolve
 
     u "*Exhales* (Damn, what a night so far.)"
 
-    scene v15s18c_imau_35  # TPP. Show MC walking towards the door, mouth closed, smiling
+    scene v15s18c_imau_35 # TPP. Show MC walking towards the door, mouth closed, smiling
     with dissolve
 
     pause 0.75
@@ -1094,7 +1094,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_37 # TPP. Show MC leaving the room, smiling, mouth closed
     with dissolve
 
-    pause  
+    pause 0.75 
 
     call screen v15s18a_upstairsroom
 
@@ -1190,14 +1190,6 @@ label v15s18c_ryan:
     u "(Oh, wait! I need that condom if I want to complete the list...)"
 
     menu:
-        "Don't take it":
-            scene v15s18c_ry_2
-            with dissolve
-
-            u "(Ah, I can't do that to him...)"
-
-            u "(He's probably had that thing for a few years, it'd be like stealing his best friend. *Laughs*)"
-
         "Take the condom":
             scene v15s18c_ry_4 # TPP. Show MC slowly grabbing the condom out of Ryan's pocket (it's fully in the poocket still)
             with dissolve
@@ -1230,6 +1222,14 @@ label v15s18c_ryan:
 
             ry "*Snoring*"
 
+        "Don't take it":
+            scene v15s18c_ry_2
+            with dissolve
+
+            u "(Ah, I can't do that to him...)"
+
+            u "(He's probably had that thing for a few years, it'd be like stealing his best friend. *Laughs*)"
+
     scene v15s18c_ry_6
     with dissolve
 
@@ -1238,7 +1238,7 @@ label v15s18c_ryan:
     scene v15s18c_ry_7 # TPP. Show MC walking away from Ryan, smiling, mouth closed
     with dissolve
 
-    pause  
+    pause 0.75 
 
     call screen v15s18a_upstairsroom
 
@@ -1417,7 +1417,7 @@ label v15s18c_lauren:
         scene v15s18c_la_5 # TPP. Show Lauren giving MC a kiss
         with dissolve
 
-        pause  
+        pause 0.75 
 
         scene v15s18c_la_6 # FPP. Lauren now standing right in front of MC, slight smile, mouth open
         with dissolve
@@ -1502,7 +1502,7 @@ label v15s18c_autumn_amber:
     scene v15s18c_auam_2 # TPP. Show MC walking up to them at the bar, Amber rolling her eyes sarcastically, both mouths closed, smiling
     with dissolve
 
-    pause  
+    pause 0.75 
 
     scene v15s18c_auam_3 # FPP. MC standing in front of them, Amber and Autumn looking at each other, Amber mouth open, smiling, Autumn mouth closed, smiling
     with dissolve
@@ -1613,6 +1613,22 @@ label v15s18c_autumn_amber:
 
     if not v15s18a_showlist_penelope_autumn:
         menu:
+            "Mention the list":
+
+                u "Well, you might have already heard, but I have this list of challenges that I've been working on."
+
+                scene v15s18c_auam_5a
+                with dissolve
+
+                aut "Haha, yeah? I think I might have overheard something about that."
+
+                scene v15s18c_auam_5
+                with dissolve
+
+                u "Oh... *Chuckles*"
+
+                u "Well, I do have an easy one left, if you'd like to help me out?"
+        
             "Don't mention the list":
 
                 u "(Eh, I don't want to get Autumn involved in this...)"
@@ -1691,22 +1707,6 @@ label v15s18c_autumn_amber:
 
                 call screen v15s18a_upstairsroom
 
-            "Mention the list":
-
-                u "Well, you might have already heard, but I have this list of challenges that I've been working on."
-
-                scene v15s18c_auam_5a
-                with dissolve
-
-                aut "Haha, yeah? I think I might have overheard something about that."
-
-                scene v15s18c_auam_5
-                with dissolve
-
-                u "Oh... *Chuckles*"
-
-                u "Well, I do have an easy one left, if you'd like to help me out?"
-        
     else:
         scene v15s18c_auam_5a
         with dissolve
@@ -1727,11 +1727,11 @@ label v15s18c_autumn_amber:
     with dissolve
 
     menu:
-        "Nevermind":
+        "Never mind":
 
             u "(I can't ask Autumn to make out with me! What am I thinking?)"
 
-            u "Actually, it's okay, haha. Nevermind."
+            u "Actually, it's okay, haha. Never mind."
 
             scene v15s18c_auam_5c
             with dissolve
@@ -1844,7 +1844,6 @@ label v15s18c_autumn_amber:
                     u "Yup. Got it."
 
                     jump v15s18c_autumn_kiss
-                    
 
             else:
                 if not kct == "loyal":
@@ -1893,7 +1892,7 @@ label v15s18c_autumn_amber:
 
                     u "(Well, that could've gone worse...)"
                 
-                elif kct == "loyal" and v11_cheated_lauren:
+                elif kct == "loyal" and laurenrs_v11aubrey:
                     scene v15s18c_auam_5a
                     with dissolve
 
@@ -1997,22 +1996,22 @@ label v15s18c_autumn_kiss:
     scene v15s18c_auam_11 # TPP. Show MC and Autumn kissing (no tongue)
     with dissolve
 
-    pause  
+    pause 0.75 
 
     scene v15s18c_auam_12 # TPP. MC and Autumn kissing (still no tongue), MC now putting his hand on her waist
     with dissolve
 
-    pause  
+    pause 0.75 
 
     scene v15s18c_auam_13 # TPP. MC and Autumn kissing (no tongue), MC now reaching for her ass
     with dissolve
 
-    pause  
+    pause 0.75 
 
     scene v15s18c_auam_14 # TPP. Show Autumn pulling back and removing MC's hand from her ass, both slight smiles, mouths closed
     with dissolve
 
-    pause  
+    pause 0.75 
 
     scene v15s18c_auam_10
     with dissolve
@@ -2293,12 +2292,12 @@ label v15s18c_chris_penelope:
                 scene v15s18c_chpe_10 # TPP. Show Penelope taking her dress off, sexy expression and pose, mouth closed
                 with dissolve
 
-                pause  
+                pause 0.75 
 
                 scene v15s18c_chpe_11 # TPP. Show Penelope getting into bed, MC getting on his knees in front of her, sexy expressions, mouths closed (Penelope naked)
                 with dissolve
 
-                pause  
+                pause 0.75 
 
                 scene v15s18c_chpe_12 # FPP. MC kneeling in front of Penelope, her lags hanging off the bed, Penelope sexy expression, mouth open
                 with dissolve
@@ -2314,7 +2313,7 @@ label v15s18c_chris_penelope:
 
                 scene v15penor # IGNORE AS ANIMATION
                 with dissolve
-                pause
+                pause 0.75
 
                 pe "*Chuckles* Mmm..."
 
@@ -2324,7 +2323,7 @@ label v15s18c_chris_penelope:
 
                 scene v15penorf # IGNORE AS ANIMATION
                 with dissolve
-                pause
+                pause 0.75
 
                 u "Do you like it when I taste you?"
 
@@ -2335,17 +2334,17 @@ label v15s18c_chris_penelope:
 
                 scene v15penor2 # IGNORE AS ANIMATION
                 with dissolve
-                pause
+                pause 0.75
 
                 pe "You really know what you're doing... Ha! Down there..."
 
                 u "*Muffled* Mhmm..."
 
-                pe "Yes, yes! *Moans* Just like that...."
+                pe "Yes, yes! *Moans* Just like that..."
 
                 scene v15penor2f # IGNORE AS ANIMATION
                 with dissolve
-                pause
+                pause 0.75
 
                 pe "Oh, I can't believe we're doing this."
 
@@ -2378,17 +2377,17 @@ label v15s18c_chris_penelope:
                 scene v15s18c_chpe_15 # TPP. MC climbs up on top of Penelope, both sexy expressions, mouths closed
                 with dissolve
 
-                pause
+                pause 0.75
 
                 scene v15s18c_chpe_16 # TPP. MC on top of Penelope, they're kissing
                 with dissolve
 
-                pause  
+                pause 0.75 
 
                 scene v15s18c_chpe_17 # TPP. MC getting off the bed, Penelope still laying down, both sexy expressions, mouths closed
                 with dissolve
 
-                pause  
+                pause 0.75 
 
                 scene v15s18c_chpe_18 # FPP. MC standing in front of Penelope, Penelope laying down, Penelope mouth open, smiling
                 with dissolve
@@ -2428,6 +2427,7 @@ label v15s18c_chris_penelope:
                 pause 0.75
 
                 scene v15s18c_chpe_21 # FPP. MC and Penelope in the room, Penelope standing by the door, smiling, mouth open
+                with dissolve
 
                 pe "Ready?"
 

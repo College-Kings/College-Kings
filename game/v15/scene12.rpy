@@ -6,22 +6,22 @@
 label v15s12:
     if "diary" in freeroam12stolen:
         # -MC and Lindsey are walking along the hallway, in the general direction of the janitor's closet-
-        scene v15s12_1    # TPP. MC and Lindsey walking down the school hallway.
+        scene v15s12_1 # TPP. MC and Lindsey walking down the school hallway.
         with dissolve
         
         pause 0.75
 
-        scene v15s12_2    # FPP. Lindsey, happy, smiling, leaning in to whisper to MC, mouth open [Checkpoint A]. 
+        scene v15s12_2 # FPP. Lindsey, happy, smiling, leaning in to whisper to MC, mouth open [Checkpoint A]. 
         with dissolve 
 
         li "Oh! *Whispers* I forgot to tell you, I got Chloe's diary open."
 
-        scene v15s12_2a   # FPP. Lindsey, happy, smiling, leaning in to whisper to MC, mouth closed [Checkpoint A].
+        scene v15s12_2a # FPP. Lindsey, happy, smiling, leaning in to whisper to MC, mouth closed [Checkpoint A].
         with dissolve
 
         u "*Whispers* Oh shit! You actually got it open?"
 
-        scene v15s12_2b   # FPP. Lindsey, happy, smiling mouth open, winking at MC [Checkpoint A].
+        scene v15s12_2b # FPP. Lindsey, happy, smiling mouth open, winking at MC [Checkpoint A].
         with dissolve
 
         li "Of course I got it open, haha."
@@ -31,25 +31,25 @@ label v15s12:
 
         u "*Chuckles* Nice, Linds. So, what did you find?"
 
-        scene v15s12_2c   # FPP. Lindsey, happy, smiling mouth open [Checkpoint A].
+        scene v15s12_2c # FPP. Lindsey, happy, smiling mouth open [Checkpoint A].
         with dissolve
 
         li "Well, it's kind of just filled with a lot of boring everyday thoughts about college and guys."    
 
         li "Like whether or not she should change her style, her hair color..."
 
-        scene v15s12_3    # FPP. Lindsey, smiling mischeviously. mouth open [Checkpoint B].
+        scene v15s12_3 # FPP. Lindsey, smiling mischeviously. mouth open [Checkpoint B].
         with dissolve
 
         li "And then there were a few interesting entries."
         
         if chloegf or chloers: # -if ChloeGF or ChloeRS
-            scene v15s12_3a   # TPP. MC worried, mouth closed [Checkpoint B].
+            scene v15s12_3a # TPP. MC worried, mouth closed [Checkpoint B].
             with dissolve
 
             u "(*Gulps*)"
 
-        scene v15s12_3b   # FPP. Lindsey, smiling mischeviously. mouth closed [Checkpoint B].
+        scene v15s12_3b # FPP. Lindsey, smiling mischeviously. mouth closed [Checkpoint B].
         with dissolve
 
         u "Such as...?"
@@ -59,22 +59,22 @@ label v15s12:
 
         li "Oh... Just a few small details about her campaign plans!"
 
-        scene v15s12_3c   # FPP. Lindsey slightly surprised mouth closed [Checkpoint B].
+        scene v15s12_3c # FPP. Lindsey slightly surprised mouth closed [Checkpoint B].
         with dissolve
 
         u "What?! She wrote everything in there? That's like a pot of gold, haha."
 
-        scene v15s12_3d   # FPP. Lindsey slightly surprised mouth open [Checkpoint B].
+        scene v15s12_3d # FPP. Lindsey slightly surprised mouth open [Checkpoint B].
         with dissolve
 
         li "Yes! I know, I literally got handed the inside scoop on her next big idea. Unless for some reason she decides not to follow through with this plan."
 
-        scene v15s12_3e   # FPP. Lindsey happy, smiling, mouth closed [Checkpoint B].
+        scene v15s12_3e # FPP. Lindsey happy, smiling, mouth closed [Checkpoint B].
         with dissolve
 
         u "Well, you're welc-"
 
-        scene v15s12_3f   # FPP. Lindsey happy, smiling, mouth open [Checkpoint B].
+        scene v15s12_3f # FPP. Lindsey happy, smiling, mouth open [Checkpoint B].
         with dissolve
 
         li "Thank you. Tremendously."
@@ -84,28 +84,28 @@ label v15s12:
 
         u "Yeah, of course. *Chuckles*"
 
-        scene v15s12_4    # FPP. Lindsey neutral expression mouth open [Checkpoint C].
+        scene v15s12_4 # FPP. Lindsey neutral expression mouth open [Checkpoint C].
         with dissolve
 
         li "So, believe it or not, she has this master plan to get me absolutely hammered and then somehow get a recording of me saying something shitty about her and the Chicks."
 
-        scene v15s12_4a  	# FPP. Lindsey neutral expression mouth closed [Checkpoint C]. 
+        scene v15s12_4a # FPP. Lindsey neutral expression mouth closed [Checkpoint C]. 
         with dissolve
 
         u "What the fuck?"
 
-        scene v15s12_4b   # FPP. Lindsey slightly angry mouth open [Checkpoint C].
+        scene v15s12_4b # FPP. Lindsey slightly angry mouth open [Checkpoint C].
         with dissolve
 
         li "*Scoffs* She's trying to trick me [name], so that she can publicly embarrass me... Can you believe that?"
 
         if v14_help_chloe and v15s8_chloe_pb_DamageLindseyRep: # -if MC is helping Chloe and chose the Embarrass Lindsey option on Chloe's planning board
-            scene v15s12_4c   # TPP. MC worried, mouth closed [Checkpoint C].
+            scene v15s12_4c # TPP. MC worried, mouth closed [Checkpoint C].
             with dissolve
 
             u "(Oh, I can believe it... What the fuck was Chloe thinking just writing down the plan?!)"
 
-            scene v15s12_4d   # FPP. Lindsey slightly angry mouth closed [Checkpoint C].
+            scene v15s12_4d # FPP. Lindsey slightly angry mouth closed [Checkpoint C].
             with dissolve
 
             u "No... I can't. That's really shitty."
@@ -131,7 +131,7 @@ label v15s12:
 
             li "But now I know to stay away from alcohol and Chloe until the whole thing is over..."
 
-            scene v15s12_4e   # TPP. MC neutral expression, mouth closed [Checkpoint C]. 
+            scene v15s12_4e # TPP. MC neutral expression, mouth closed [Checkpoint C]. 
             with dissolve
 
             u "(Damn, I'm so glad we chose to not do that to her.)"
@@ -157,28 +157,28 @@ label v15s12:
 
             u "She just doesn't have the votes."
 
-            scene v15s12_4f   # FPP. Lindsey happy, smiling, mouth open [Checkpoint C].
+            scene v15s12_4f # FPP. Lindsey happy, smiling, mouth open [Checkpoint C].
             with dissolve
 
             li "Exactly. We do."
 
             # -They are looking very pleased with themselves-
-            scene v15s12_4g   # TPP. Camera facing MC and Lindsey walking down the hall, glancing at each other, smiling, mouths closed [Checkpoint C].
+            scene v15s12_4g # TPP. Camera facing MC and Lindsey walking down the hall, glancing at each other, smiling, mouths closed [Checkpoint C].
             with dissolve
 
             pause 0.75
 
-            scene v15s12_5    # FPP. Lindsey neutral expression mouth closed [Checkpoint D]. 
+            scene v15s12_5 # FPP. Lindsey neutral expression mouth closed [Checkpoint D]. 
             with dissolve
 
             u "I'm glad that taking her diary was worth it... I felt bad for a second there."
 
-            scene v15s12_5a   # FPP. Lindsey neutral expression mouth open [Checkpoint D].
+            scene v15s12_5a # FPP. Lindsey neutral expression mouth open [Checkpoint D].
             with dissolve
 
             li "Ha, yeah. I know... Me too."        
 
-        if chloegf: # -if ChloeGF                        
+        if chloegf: # -if ChloeGf 
             li "And... There was something else too."
 
             scene v15s12_5
@@ -193,7 +193,7 @@ label v15s12:
             
             li "It's about her past with Grayson and the big breakup."
 
-            scene v15s12_5b   # TPP. MC worried, mouth closed [Checkpoint D].
+            scene v15s12_5b # TPP. MC worried, mouth closed [Checkpoint D].
             with dissolve
 
             u "(*Sighs* Do I want to know?)"       
@@ -204,7 +204,7 @@ label v15s12:
         menu:
             "Tell me": # -if Tell me
                 $ add_point(KCT.TROUBLEMAKER)# TODO - KCT and character points
-                $ chloe.points -= 1  
+                $ chloe.points -= 1 
                 
                 scene v15s12_5
                 with dissolve
@@ -228,12 +228,12 @@ label v15s12:
 
                 li "If she was ever seen talking to another guy, he would instantly accuse her of cheating and that would lead to an argument..."
 
-                scene v15s12_5c   # FPP. Lindsey concerned mouth open [Checkpoint D].
+                scene v15s12_5c # FPP. Lindsey concerned mouth open [Checkpoint D].
                 with dissolve
 
                 li "After a while, she realized she had to stop dating him if she didn't want to be yelled at and untrusted all day."
 
-                scene v15s12_5d   # FPP. Lindsey concerned mouth closed [Checkpoint D].
+                scene v15s12_5d # FPP. Lindsey concerned mouth closed [Checkpoint D].
                 with dissolve
 
                 u "*Sighs* That's so toxic."
@@ -248,12 +248,12 @@ label v15s12:
 
                 li "But to be fair, this is only one side of the story. I guess you would have to steal Grayson's diary to get the full picture, haha."
 
-                scene v15s12_5e   # FPP. Lindsey, happy, smiling, mouth closed [Checkpoint D].
+                scene v15s12_5e # FPP. Lindsey, happy, smiling, mouth closed [Checkpoint D].
                 with dissolve
 
                 u "*Laughs* Yeah, I don't think he's the type to keep it under his pillow though..."
 
-                scene v15s12_5f   # FPP. Lindsey, happy, smiling, mouth open [Checkpoint D]. 
+                scene v15s12_5f # FPP. Lindsey, happy, smiling, mouth open [Checkpoint D]. 
                 with dissolve
 
                 li "*Chuckles* What a horrible hiding spot."
@@ -285,13 +285,13 @@ label v15s12:
                 li "Yeah, fair enough, I respect that. That's why I wanted to ask."            
 
         # -regardless of previous choice, still if ChloeGF
-        if chloegf and lindseyrs:  # -if ChloeGF and LindseyRS
-            scene v15s12_6    # FPP. Lindsey concerned mouth open [Checkpoint E].
+        if chloegf and lindseyrs: # -if ChloeGF and LindseyRS
+            scene v15s12_6 # FPP. Lindsey concerned mouth open [Checkpoint E].
             with dissolve
 
             li "So, real quick, just to rip off the band-aid, haha..."
 
-            scene v15s12_6a   # TPP. MC worried, mouth closed [Checkpoint E].
+            scene v15s12_6a # TPP. MC worried, mouth closed [Checkpoint E].
             with dissolve
 
             u "(Oh shit.)"
@@ -301,7 +301,7 @@ label v15s12:
 
             li "You and Chloe are together, she's told just about everyone. *Chuckles* So, where does that leave us?"
 
-            scene v15s12_6b   # FPP. Lindsey concerned mouth closed [Checkpoint E].
+            scene v15s12_6b # FPP. Lindsey concerned mouth closed [Checkpoint E].
             with dissolve
 
             u "I-"
@@ -316,24 +316,24 @@ label v15s12:
             # -MC chooses event1 or event2
             # -event1 It's pretty serious (LindseyRS becomes LindseyFriend)
             # -event2 It's not that serious
-            menu:                        
+            menu: 
                 "It's pretty serious": # -if It's pretty serious (LindseyRS becomes LindseyFriend)
-                    $ add_point(KCT.BOYFRINED) # TODO KCT and character points 
+                    $ add_point(KCT.BOYFRIEND) # TODO KCT and character points 
                     $ chloe.points += 1
                     $ lindsey.points -= 1
 
-                    scene v15s12_6c   # FPP. Lindsey neutral expression mouth closed [Checkpoint E]. 
+                    scene v15s12_6c # FPP. Lindsey neutral expression mouth closed [Checkpoint E]. 
                     with dissolve
 
                     u "It's pretty serious between us, yeah. Chloe and I get along really well, and-"
 
                     # -Lindsey disappointed but then hides her pain behind a fake smile-
-                    scene v15s12_6d   # FPP. Lindsey disappointed fake smile mouth open [Checkpoint E].
+                    scene v15s12_6d # FPP. Lindsey disappointed fake smile mouth open [Checkpoint E].
                     with dissolve
 
                     li "Great! That's so good. I'm really, really glad... Thanks for telling me."
 
-                    scene v15s12_6e   # FPP. Lindsey disappointed fake smile mouth closed [Checkpoint E].
+                    scene v15s12_6e # FPP. Lindsey disappointed fake smile mouth closed [Checkpoint E].
                     with dissolve
 
                     u "Yeah, of course. I'm sorry if-"
@@ -355,12 +355,12 @@ label v15s12:
 
                     li "Let's move on. We're good. I promise."
 
-                    scene v15s12_6f   # TPP. MC neutral expression, mouth closed [Checkpoint E]. 
+                    scene v15s12_6f # TPP. MC neutral expression, mouth closed [Checkpoint E]. 
                     with dissolve
 
                     u "(Sighs... Well, it needed to happen eventually, I guess.)"                
 
-                "It's not that serious":  # -if It's not that serious
+                "It's not that serious": # -if It's not that serious
                     $ add_point(KCT.TROUBLEMAKER) # TODO: KCT and Character points
                     $ lindsey.points += 1
                     $ chloe.points -= 1
@@ -370,7 +370,7 @@ label v15s12:
 
                     u "Lindsey... No."
 
-                    scene v15s12_6g   # FPP. Lindsey neutral expression mouth open [Checkpoint E].
+                    scene v15s12_6g # FPP. Lindsey neutral expression mouth open [Checkpoint E].
                     with dissolve
 
                     li "No?"
@@ -394,24 +394,24 @@ label v15s12:
 
                     u "Ha, you can say that... At least one."
 
-                    scene v15s12_6h   # FPP. Lindsey, happy, smiling, mouth open [Checkpoint E]. 
+                    scene v15s12_6h # FPP. Lindsey, happy, smiling, mouth open [Checkpoint E]. 
                     with dissolve
 
                     # -Lindsey very happy-
                     li "Okay. Cool. *Chuckles* Thanks for letting me know."
 
-                    scene v15s12_6i   # FPP. Lindsey, happy, smiling, mouth closed [Checkpoint E].
+                    scene v15s12_6i # FPP. Lindsey, happy, smiling, mouth closed [Checkpoint E].
                     with dissolve
 
                     u "Haha, yeah. Of course."
 
         # -Regardless- Checkpoint F
-            scene v15s12_7     # TPP. MC walks through the Janitor door closet and Lindsey follows behind him [Checkpoint F].
+            scene v15s12_7 # TPP. MC walks through the Janitor door closet and Lindsey follows behind him [Checkpoint F].
             with dissolve
             
             li "Here we go... After you, sir."
 
-            scene v15s12_7a    # TPP. Lindsey closes the door behind her [Checkpoint F].
+            scene v15s12_7a # TPP. Lindsey closes the door behind her [Checkpoint F].
             with dissolve
 
             u "Why thank you, madam..."
@@ -429,17 +429,17 @@ label v15s12:
         pause 0.75
 
         # -Lindsey points at the planning board-
-        scene v15s12_8    # FPP. Lindsey smiling, mouth open, pointing at the planning board [Janitor's closet].
+        scene v15s12_8 # FPP. Lindsey smiling, mouth open, pointing at the planning board [Janitor's closet].
         with dissolve
 
         li "So, here's what I'm thinking... Basically, our focus this time is to gain more allies. Allies that we can trust to support us now, during the election, and also in the future, when I'm president of the Chicks."
 
-        scene v15s12_8b   # FPP. Same as v15s12_8a, but mouth closed [Janitor's closet].
+        scene v15s12_8b # FPP. Same as v15s12_8a, but mouth closed [Janitor's closet].
         with dissolve
 
         u "Haha, damn straight!"
 
-        scene v15s12_8a   # FPP. Same as v15s12_8, but not pointing at the board, smiling mouth open [Janitor's closet].
+        scene v15s12_8a # FPP. Same as v15s12_8, but not pointing at the board, smiling mouth open [Janitor's closet].
         with dissolve
 
         li "So basically, it's just who you think should come, and what the best way to gain their support would be."
@@ -461,7 +461,7 @@ label v15s12:
 
             lindsey_board.add_approach("VIP Night",
                 "VIP Night",
-                opinion="\"There's a few people on Chloe's side that I think I could sway... Their opinion of me isn't horrible, they just seem to perfer her... If we give them a spectacular night out, there's absolutely no way they'll be  able to choose her over me.\"")
+                opinion="\"There's a few people on Chloe's side that I think I could sway... Their opinion of me isn't horrible, they just seem to prefer her... If we give them a spectacular night out, there's absolutely no way they'll be able to choose her over me.\"")
 
             v15s12_lindsey_pb_fakeId = lindsey_board.add_task("Game Night",
                 "Buy booze with fake ID",
@@ -494,7 +494,7 @@ label v15s12:
 
             lindsey_board.add_subtask("VIP Night",
                 "Invite Aubrey, Autumn, and Grayson",
-                opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The last person I'm thinking about inviting is Grayson. He already has this burning hatred for Chloe, mixed with a little bit of horniness but stil... I think he's closer to boarding the Lindsey train than we think, and Grayson being on my side would mean support from the Apes.\"",
+                opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The last person I'm thinking about inviting is Grayson. He already has this burning hatred for Chloe, mixed with a little bit of horniness but still... I think he's closer to boarding the Lindsey train than we think, and Grayson being on my side would mean support from the Apes.\"",
                 people=[aubrey, autumn, grayson])
 
             lindsey_board.add_task("VIP Night",
@@ -508,7 +508,7 @@ label v15s12:
             $ v15s12_lindsey_pb_gameNight = lindsey_board.approach.id == "gameNight"
 
         if lindsey_board.selected_task is not None:
-            $ v15s12_lindsey_pb_fakeId = lindsey_board.selected_task  == v15s12_lindsey_pb_fakeId
+            $ v15s12_lindsey_pb_fakeId = lindsey_board.selected_task == v15s12_lindsey_pb_fakeId
             $ v15s12_lindsey_pb_wouldYouRather = lindsey_board.selected_task == v15s12_lindsey_pb_wouldYouRather
             $ v15_s12_lindsey_pb_inviteSebastian = lindsey_board.selected_task == v15_s12_lindsey_pb_inviteSebastian
 
@@ -564,14 +564,14 @@ label v15s12:
 
         if lindseyrs: # -if LindseyRS
             # -Lindsey gives MC a passionate kiss-           
-            scene v15s12_9    # FPP. Lindsey passionately kisses MC [Janitor's closet].
+            scene v15s12_9 # FPP. Lindsey passionately kisses MC [Janitor's closet].
             with dissolve
 
             play sound "sounds/kiss.mp3"
 
-            pause 0.75        
+            pause 0.75 
 
-            scene v15s12_9a   # FPP. Lindsy happy, smiling, mouth closed looking at MC [Janitor's closet].  
+            scene v15s12_9a # FPP. Lindsy happy, smiling, mouth closed looking at MC [Janitor's closet].
             with dissolve
 
             u "Mmm, coffee again this morning?"
@@ -593,30 +593,30 @@ label v15s12:
     u "I'll see you in a bit."
 
     # -MC leaves the janitor's closet, leaving Lindsey watching him go with a smile-
-    scene v15s12_10   # TPP. MC smiling mouth closed exiting through the Janitor door with Lindsey smiling, mouth closed watching him leave [Checkpoint F].
+    scene v15s12_10 # TPP. MC smiling mouth closed exiting through the Janitor door with Lindsey smiling, mouth closed watching him leave [Checkpoint F].
     with dissolve
 
     pause 0.75
 
     # -Now MC is walking along the hallway-
-    scene v15s12_11   # TPP. MC walking down the school hallways [Checkpoint E].
+    scene v15s12_11 # TPP. MC walking down the school hallways [Checkpoint E].
     with dissolve
 
     pause 0.75
 
     # -MC's phone vibrates-
-    scene v15s12_12   # TPP. MC in the hallway looking down at his phone in his hand [Checkpoint E].
+    scene v15s12_12 # TPP. MC in the hallway looking down at his phone in his hand [Checkpoint E].
     with dissolve
 
-    $ riley.newMessage("Hey! I'm assuming you'll be at Lauren's birthday party later?", queue=False)
-    $ riley.addReply("Yeah, I'll be there.")
-    $ riley.newMessage("Cool. FYI, the stores are running low on costumes, you need to hurry up and buy one! Lol")
-    $ riley.addReply("Ah, shit... You're right.")
-    $ riley.newMessage("Of course I am ;)")
-    $ riley.addReply("I'd be lost without you")
-    $ riley.newMessage("Oh trust me, I know... hehe. See you soon!")
-    $ riley.addReply("Thanks red!")
-    $ riley.newMessage("Haha, welcome nerd!")
+    $ riley.messenger.newMessage("Hey! I'm assuming you'll be at Lauren's birthday party later?", queue=False)
+    $ riley.messenger.addReply("Yeah, I'll be there.")
+    $ riley.messenger.newMessage("Cool. FYI, the stores are running low on costumes, you need to hurry up and buy one! Lol")
+    $ riley.messenger.addReply("Ah, shit... You're right.")
+    $ riley.messenger.newMessage("Of course I am ;)")
+    $ riley.messenger.addReply("I'd be lost without you")
+    $ riley.messenger.newMessage("Oh trust me, I know... hehe. See you soon!")
+    $ riley.messenger.addReply("Thanks red!")
+    $ riley.messenger.newMessage("Haha, welcome nerd!")
 
 label v15s12_PhoneContinue:
     if riley.messenger.replies:
@@ -627,7 +627,7 @@ label v15s12_PhoneContinue:
         jump v15s12_PhoneContinue
 
     # -MC exits his texts, puts his phone away, continues walking-
-    scene v15s12_13   # TPP. MC puts his phone in his pocket [Checkpoint E].
+    scene v15s12_13 # TPP. MC puts his phone in his pocket [Checkpoint E].
     with dissolve
 
     u "(I'm a man on a mission. Find Lauren a gift and find a costume. Easy.)"

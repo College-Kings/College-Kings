@@ -486,7 +486,7 @@ label v14s52:
         imre "I'm not listening to any lame-ass excuses either."
 
         scene v14s52_16h # TPP. same as v14s52_16g Imre slams his fist against the wall, mc and imre looking at each other with angry expressions, mouth's closed
-        with dissolve
+        with hpunch
 
         pause 0.75
 

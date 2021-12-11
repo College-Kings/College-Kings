@@ -206,7 +206,7 @@ label v15s8:
     scene v15s8_5 # TPP. Show MC winking at Chloe as she is holding her phone.
     with dissolve
 
-    u "Bye, Chlo."
+    u "Bye, Chloe."
 
     if chloegf:
         scene v15s8_6 # FPP. Show Chloe getting close up and personal with MC, Chloe biting her lip, Flirting expression, mouth closed
@@ -246,5 +246,7 @@ label v15s8:
 
     scene v15s8_9 # TPP. Show MC leaving the library and entering into the hallway, MC slight smile, mouth closed.
     with fade
+    
+    pause 0.75
 
     jump v15s9

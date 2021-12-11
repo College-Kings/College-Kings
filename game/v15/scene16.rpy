@@ -1,11 +1,11 @@
 # SCENE 16: MC leaves mad or not mad
-# Locations: Outside Ms Rose's house on the way to Lauren's party
+# Locations: Outside Ms. Rose's house on the way to Lauren's party
 # Characters: MC (Outfit: 5)
 # Time: Evening
 
 label v15s16:
     if v15s9_mad_at_ms_rose: #Placeholder for when scenes before are ready.
-        scene v15s16_1 # TPP. Show MC walking out of Ms Rose's house, MC mad, mouth closed.
+        scene v15s16_1 # TPP. Show MC walking out of Ms. Rose's house, MC mad, mouth closed.
         with dissolve
 
         u "(I know she was trying, but- Seriously???"

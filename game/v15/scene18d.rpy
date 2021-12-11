@@ -9,12 +9,12 @@ label v15s18d:
     scene v15s18d_1 # TPP. Show Lauren holding the door open for all the guest to leave, Lauren slight smile, mouth closed.
     with fade (1,0,1)
 
-    pause 
+    pause 0.75 
     
     scene v15s18d_2 # TPP. Show MC standing by the stairs with a drink in his hand watching people leave, slight smile, mouth closed
     with dissolve 
 
-    pause  
+    pause 0.75 
 
     scene v15s18d_3 # TPP. Show Chris stopped at Lauren holding the door open, Both slight smile, Chris mouth open, Lauren mouth closed.
     with dissolve 
@@ -34,12 +34,12 @@ label v15s18d:
     scene v15s18d_4 # TPP. Show Chris exitting the house and leaving the party, slight smile, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75 
 
     scene v15s18d_2a # TPP. Show MC standing by the stairs with a drink Imre stepping infront of him.
     with dissolve 
 
-    pause  
+    pause 0.75 
 
     scene v15s18d_5 # FPP. MC looking at Imre, Imre looking at MC, Imre slight smile, mouth open.
     with dissolve 
@@ -61,7 +61,7 @@ label v15s18d:
         scene v15s18d_7 # TPP. Shot of Imre putting the challenge list in his pocket while infront of MC, slight smile, mouth closed.
         with dissolve 
 
-        pause
+        pause 0.75
 
         scene v15s18d_5b # FPP. MC looking at Imre, the list gone, Imre looking at MC, Imre slight smile, mouth closed.
         with dissolve
@@ -100,7 +100,7 @@ label v15s18d:
         scene v15s18d_7
         with dissolve
 
-        pause  
+        pause 0.75 
 
         scene v15s18d_5
         with dissolve
@@ -126,7 +126,7 @@ label v15s18d:
         scene v15s18d_7
         with dissolve
 
-        pause  
+        pause 0.75 
 
         scene v15s18d_5
         with dissolve
@@ -154,7 +154,7 @@ label v15s18d:
     scene v15s18d_8 # FPP. Show Lauren walking over to MC and Imre, Lauren slightly confused, mouth open.
     with dissolve
 
-    pause  
+    pause 0.75 
 
     scene v15s18d_5d # FPP. MC looking at Imre, Imre looking at Lauren, Imre slight smile, mouth open.
     with dissolve 
@@ -171,17 +171,17 @@ label v15s18d:
     scene v15s18d_9 # TPP. Show Imre walking towards the front door of the Deer's house, slight smile, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75 
 
     scene v15s18d_10 # FPP. MC looking past Lauren at Imre, Imre at the front door looking at MC, Imre holding up his pointer finger and his other hand into a clenched fist as he is imitating intercourse, Imre slight smile, mouth closed.
     with dissolve 
 
-    pause  
+    pause 0.75 
 
     scene v15s18d_10a # FPP. MC looking past Lauren at Imre, Imre at the front door looking at MC, Imre putting his pointer finger into his other hand that is a clenched fist as he is imitating intercours, Imre slight smile, mouth closed.
     with dissolve 
 
-    pause  
+    pause 0.75 
 
     scene v15s18d_8b # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre in the background, Lauren confused smile, mouth open.
     with dissolve 
@@ -196,12 +196,12 @@ label v15s18d:
     scene v15s18d_10b # FPP. MC looking past Lauren at Imre, Imre at the front door looking at MC, Imre flipping off MC, laughing.
     with dissolve
 
-    pause  
+    pause 0.75 
 
     scene v15s18d_11 # TPP. Show Imre walking away from the house, slight smile, mouth closed.
     with dissolve 
 
-    pause  
+    pause 0.75 
 
     scene v15s18d_8d # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren confused smile, mouth open.
     with dissolve
@@ -214,114 +214,6 @@ label v15s18d:
     u "(Fuck.) Um, yeah. That's basically what he was suggesting, haha."
 
     menu:
-        "Don't try to have sex.":
-
-            u "But I don't want to do that to you, just ignore him. He's trying to get me to play this stupid game."
-
-            if not laurenrs:
-                $ add_point(KCT.BOYFRIEND)
-                scene v15s18d_8f # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren slight smile, mouth open.
-                with dissolve
-
-                la "Haha, yeah... I figured that's what you were going to say."
-            else:
-
-                scene v15s18d_8g # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren confused, mouth open.
-                with dissolve 
-
-                la "You don't want to have sex with your girlfriend on her birthday?"
-
-            scene v15s18d_8e
-            with dissolve
-
-            u "I'm kind of struggling to keep my eyes open right now, haha."
-
-            scene v15s18d_8f
-            with dissolve
-
-            la "Ah, okay. *Chuckles*"
-
-            scene v15s18d_8h # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren slight smile, mouth closed.
-            with dissolve
-
-            u "It's been a long day, but what an amazing party! Did you enjoy it?"
-
-            scene v15s18d_8f
-            with dissolve
-
-            la "Yeah, it was great! I'm so happy everyone had a good time."
-            
-            if not laurenrs:
-
-                la "You don't have to go home tonight, by the way. You can just sleep on the couch if you want."
-
-                scene v15s18d_8h
-                with dissolve
-
-                u "That would be great, actually."
-
-                scene v15s18d_8f
-                with dissolve
-
-                la "I'm gonna grab you a pillow and a blanket, I'll be right back."
-
-                scene v15s18d_8h
-                with dissolve
-
-                u "Thanks, Lauren."
-
-                scene v15s18d_12 # TPP. Show Lauren walking up the stairs empty handed.
-                with dissolve
-
-                pause  
-
-                scene v15s18d_12a # TPP. Show Lauren walking down the stairs with a blanket and pillow.
-                with fade (1,0,1)
-
-                pause  
-
-                scene v15s18d_8f
-                with dissolve
-
-                la "Sleep tight!"
-
-                scene v15s18d_8h
-                with dissolve
-
-                u "You too, birthday girl. Goodnight."
-
-                scene v15s18d_13 # TPP. Show just MC sitting on the couch with the blanket and pillow the lights in the room on, slight smile, mouth closed
-                with dissolve
-
-                pause  
-
-                scene v15s18d_13a # TPP. Show just MC sitting on the couch with the blanket and pillow the lights in the room off, slight smile, mouth closed
-                with dissolve
-
-                pause 
-            else:
-                scene v15s18d_8f
-                with dissolve
-
-                la "Let's head to bed now, yeah? I'm ready for a cozy birthday sleep... You can be the big spoon."
-
-                scene v15s18d_8h
-                with dissolve
-
-                u "Haha... Okay, little spoon. Let's go."
-
-                scene v15s18d_14 # TPP. Show MC kissing Lauren's forehead, Lauren slight smile, eyes closed, mouth closed.
-                with dissolve
-
-                pause 
-
-                scene v15s18d_12b # TPP. Show Lauren and MC walking up the stairs, both slight smile, mouth closed.
-                with dissolve 
-
-                pause
-
-            jump v15s18f
-
         "Try to have sex.":
             $ add_point(KCT.BRO)
             
@@ -332,7 +224,7 @@ label v15s18d:
 
             if laurenrs:
                 $ add_point(KCT.BOYFRIEND)
-                if v15_lauren_gift = "$50 gift card":
+                if v15_lauren_gift == "$50 gift card":
                     scene v15s18d_8i # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren fake smile, mouth open.
                     with dissolve
 
@@ -378,7 +270,7 @@ label v15s18d:
                     scene v15s18d_12b
                     with dissolve 
                     
-                    pause  
+                    pause 0.75 
 
                     jump v15s18f
                 else:
@@ -402,7 +294,7 @@ label v15s18d:
                     scene v15s18d_14a # TPP. Show MC and Lauren having a passionate kiss
                     with dissolve
 
-                    pause  
+                    pause 0.75 
 
                     scene v15s18d_8f
                     with dissolve
@@ -419,8 +311,7 @@ label v15s18d:
 
                     jump v15s18e
             else: 
-                if KCT == "Loyal" and not v12_lauren_sex:
-
+                if kct == "loyal" and not v12_lauren_sex:
                     scene v15s18d_8f
                     with dissolve
 
@@ -462,8 +353,8 @@ label v15s18d:
                     with dissolve
 
                     jump v15s18e
+                
                 else:
-
                     scene v15s18d_8f
                     with dissolve
 
@@ -491,12 +382,12 @@ label v15s18d:
                     scene v15s18d_12
                     with dissolve
 
-                    pause  
+                    pause 0.75 
 
                     scene v15s18d_12a 
                     with dissolve 
 
-                    pause  
+                    pause 0.75 
 
                     scene v15s18d_8f
                     with dissolve
@@ -511,11 +402,118 @@ label v15s18d:
                     scene v15s18d_13 # TPP. Show just MC sitting on the couch with the blanket and pillow the lights in the room on, slight smile, mouth closed
                     with dissolve
 
-                    pause  
+                    pause 0.75 
 
                     scene v15s18d_13a # TPP. Show just MC sitting on the couch with the blanket and pillow the lights in the room off, slight smile, mouth closed
                     with dissolve
 
-                    pause  
+                    pause 0.75 
                     
                     jump v15s18f
+
+        "Don't try to have sex":
+            u "But I don't want to do that to you, just ignore him. He's trying to get me to play this stupid game."
+
+            if not laurenrs:
+                $ add_point(KCT.BOYFRIEND)
+                scene v15s18d_8f # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren slight smile, mouth open.
+                with dissolve
+
+                la "Haha, yeah... I figured that's what you were going to say."
+
+            else:
+                scene v15s18d_8g # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren confused, mouth open.
+                with dissolve 
+
+                la "You don't want to have sex with your girlfriend on her birthday?"
+
+            scene v15s18d_8e
+            with dissolve
+
+            u "I'm kind of struggling to keep my eyes open right now, haha."
+
+            scene v15s18d_8f
+            with dissolve
+
+            la "Ah, okay. *Chuckles*"
+
+            scene v15s18d_8h # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren slight smile, mouth closed.
+            with dissolve
+
+            u "It's been a long day, but what an amazing party! Did you enjoy it?"
+
+            scene v15s18d_8f
+            with dissolve
+
+            la "Yeah, it was great! I'm so happy everyone had a good time."
+            
+            if not laurenrs:
+                la "You don't have to go home tonight, by the way. You can just sleep on the couch if you want."
+
+                scene v15s18d_8h
+                with dissolve
+
+                u "That would be great, actually."
+
+                scene v15s18d_8f
+                with dissolve
+
+                la "I'm gonna grab you a pillow and a blanket, I'll be right back."
+
+                scene v15s18d_8h
+                with dissolve
+
+                u "Thanks, Lauren."
+
+                scene v15s18d_12 # TPP. Show Lauren walking up the stairs empty handed.
+                with dissolve
+
+                pause 0.75 
+
+                scene v15s18d_12a # TPP. Show Lauren walking down the stairs with a blanket and pillow.
+                with fade (1,0,1)
+
+                pause 0.75 
+
+                scene v15s18d_8f
+                with dissolve
+
+                la "Sleep tight!"
+
+                scene v15s18d_8h
+                with dissolve
+
+                u "You too, birthday girl. Goodnight."
+
+                scene v15s18d_13 # TPP. Show just MC sitting on the couch with the blanket and pillow the lights in the room on, slight smile, mouth closed
+                with dissolve
+
+                pause 0.75 
+
+                scene v15s18d_13a # TPP. Show just MC sitting on the couch with the blanket and pillow the lights in the room off, slight smile, mouth closed
+                with dissolve
+
+                pause 0.75 
+
+            else:
+                scene v15s18d_8f
+                with dissolve
+
+                la "Let's head to bed now, yeah? I'm ready for a cozy birthday sleep... You can be the big spoon."
+
+                scene v15s18d_8h
+                with dissolve
+
+                u "Haha... Okay, little spoon. Let's go."
+
+                scene v15s18d_14 # TPP. Show MC kissing Lauren's forehead, Lauren slight smile, eyes closed, mouth closed.
+                with dissolve
+
+                pause 0.75 
+
+                scene v15s18d_12b # TPP. Show Lauren and MC walking up the stairs, both slight smile, mouth closed.
+                with dissolve 
+
+                pause 0.75
+
+            jump v15s18f

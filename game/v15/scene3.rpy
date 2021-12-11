@@ -67,7 +67,7 @@ label v15s3: # 3) Dean comes to Apes about posted image
     scene v15s3_8 # FPP Show Grayson looking up at Dean, worried/remorseful expression, mouth open
     with dissolve
 
-    gr "I said I'm sorry, Mrs Harrison. It was just a stupid prank-"
+    gr "I said I'm sorry, Mrs. Harrison. It was just a stupid prank-"
 
     scene v15s3_5a
     with dissolve
@@ -89,7 +89,7 @@ label v15s3: # 3) Dean comes to Apes about posted image
 
     de "An apology is just a start."
 
-    de "What I need from you all right now, is to delete the posts and the photos from your phone."
+    de "What I need from you all right now, is to delete the posts and the photos from your phones."
 
     scene v15s3_4
     with dissolve
@@ -168,7 +168,7 @@ label v15s3: # 3) Dean comes to Apes about posted image
     scene v15s3_5a
     with dissolve
 
-    de "The Apes reputation is also the reputation of SVC. We want it to have a good reputation. Remember that."
+    de "The Apes' reputation is also the reputation of SVC. We want it to have a good reputation. Remember that."
 
     scene v15s3_9 # FPP Show dean walking out the front door of the Apes' house
     with dissolve
@@ -252,6 +252,6 @@ label v15s3: # 3) Dean comes to Apes about posted image
     scene v15s3_11 # TPP Show MC leaving out the front door of the Apes' house
     with dissolve
 
-    pause 0.75
+    u "(I'll just go check on Autumn at the shelter...)"
 
     jump v15s4 # -Transition to Scene 4-

@@ -203,7 +203,7 @@ label v15s2:
         scene v15s2_3a
         with dissolve
 
-        ca "Stop... Talking..."
+        ca "Stop... talking..."
 
         scene v15s2_3
         with dissolve
@@ -243,7 +243,7 @@ label v15s2:
         scene v15s2_3j # TPP. Same as v15s2_3i, Show MC looking down at the bag that was on his head now in his hands, MC slightly worried, mouth closed.
         with dissolve
 
-        u "(Fuck! *Panting*)"
+        u "(Fuck!) *Panting*"
 
         u "(So, this is what living with a psychopath is like? For fuck's sake...)"
 
@@ -299,7 +299,7 @@ label v15s2:
         if autumn.messenger.replies:
             call screen phone
         if autumn.messenger.replies:
-            "(I should reply to Autumn.)"
+            u "(I should reply to Autumn.)"
             jump v15s2_PhoneContinue
 
     u "(Almost forgot about that... It'll be interesting to spend some one-on-one time with Autumn.)"
@@ -311,6 +311,8 @@ label v15s2:
     scene v15s2_9b # TPP. Same as v15s2_9, MC closing his eyes getting ready for bed, neutral face, mouth closed.
     with dissolve
 
+    $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren", queue=False)
+
     play sound "sounds/vibrate.mp3"
 
     scene v15s2_9
@@ -320,8 +322,6 @@ label v15s2:
 
     scene v15s2_9a
     with dissolve
-
-    $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren", queue=False)
 
     call screen phone
 
@@ -342,14 +342,21 @@ label v15s2:
 # -Add the night to morning transition-
 # -Night to morning transition-
 
-    play sound "sounds/phonealarm.mp3"
+    scene black
+    with dissolve
+    
+    pause 2
 
     scene v15s2_10 # FPP. Just a black screen
     with dissolve
 
+    play sound "sounds/phonealarm.mp3"
     u "*Groans* (No time for a snooze today. Need to get up.)"
+
+    stop sound
 
     if v14_ApesPostChloePics and not joinwolves:
         jump v15s3
+
     else: 
         jump v15s4

@@ -3,10 +3,9 @@
 # Characters: MC (Outfit: 5), Chloe (Outfit: 2)
 # Time: Friday
 
-
 label v15s6:
     scene v15s6_1 # TPP Show MC walking in school hallway toward library
-    with dissolve
+    with fade
 
     pause 1
 
@@ -17,7 +16,6 @@ label v15s6:
 
         u "(There's Chloe. Oh shit- Is she crying?)"
         u "(What happened this time... *Sighs*)"
-
 
     else: # -if MC stole nothing from Chloe's room or never went to Chloe's room
 

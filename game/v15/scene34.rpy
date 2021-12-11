@@ -4,7 +4,6 @@
 # Time: Afternoon
 
 label v15s34:
-
     if joinwolves:
         play sound "sounds/dooropen.mp3"
 
@@ -20,6 +19,7 @@ label v15s34:
             u "(Well, I'm glad that's over. I'm not surprised Aubrey didn't want to ride home with me.)"
 
             u "(I just hope I can fix things between us.)"
+
         else:
             play sound "sounds/doorclose.mp3"
 
@@ -34,39 +34,39 @@ label v15s34:
         scene v15s34_3 # TPP. Show MC taking off the top part of his suit in the middle of his wolves room.
         with dissolve
 
-        pause  
+        pause 0.75 
 
         scene v15s34_3a # TPP. MC's top gone, MC taking off the bottom part of his suit in the middle of his wolves room, slight smile, mouth closed.
         with dissolve
 
-        pause  
+        pause 0.75 
 
         scene v15s34_3b # TPP. MC standing in the middle of his wolves room in just his underwear, slight smile, mouth closed.
-        with dissolve  
+        with dissolve 
 
-        pause  
+        pause 0.75 
 
         scene v15s34_3c # TPP. MC standing in the middle of his wolves room putting on his shirt.
-        with dissolve  
+        with dissolve 
 
-        pause  
+        pause 0.75 
 
         scene v15s34_3d # TPP. MC standing in the middle of his wolves room putting on his pants, slight smile, mouth closed.
         with dissolve 
 
-        pause  
+        pause 0.75 
 
         play sound "sounds/vibrate.mp3"
 
         scene v15s34_3e # TPP. Show MC standing in the middle of his wolves room in the entire Outfit: 2, slight smile, mouth closed.
         with dissolve 
 
-        pause  
+        pause 0.75 
 
         scene v15s34_4 # TPP. Close up of MC in his wolves room pulling out his phone, slight smile, mouth closed.
         with dissolve 
 
-        pause  
+        pause 0.75 
 
         scene v15s34_4a # TPP. Close up of MC in his wolves room looking at his phone, slight smile, mouth close.
         with dissolve 
@@ -88,7 +88,7 @@ label v15s34:
             if lindsey.messenger.replies:
                 call screen phone
             if lindsey.messenger.replies:
-                "(I should reply to Lindsey)"
+                u "(I should reply to Lindsey)"
                 jump v15s34_PhoneContinue
 
         scene v15s34_3e 
@@ -103,7 +103,7 @@ label v15s34:
 
         play sound "sounds/doorclose.mp3"
 
-        pause 
+        pause 0.75 
 
         if v15s12_lindsey_pb_gamenight or not v14_help_lindsey:
             jump v15s35
@@ -125,6 +125,7 @@ label v15s34:
             u "(Well, I'm glad that's over. I'm not surprised Aubrey didn't want to ride home with me.)"
 
             u "(I just hope I can fix things between us.)"
+
         else:
             play sound "sounds/doorclose.mp3"
 
@@ -139,39 +140,39 @@ label v15s34:
         scene v15s34_8 # TPP. Show MC taking off the top part of his suit in the middle of his apes room.
         with dissolve
 
-        pause  
+        pause 0.75 
 
         scene v15s34_8a # TPP. MC's top gone, MC taking off the bottom part of his suit in the middle of his apes room, slight smile, mouth closed.
         with dissolve
 
-        pause  
+        pause 0.75 
 
         scene v15s34_8b # TPP. MC standing in the middle of his apes room in just his underwear, slight smile, mouth closed.
-        with dissolve  
+        with dissolve 
 
-        pause  
+        pause 0.75 
 
         scene v15s34_8c # TPP. MC standing in the middle of his apes room putting on his shirt.
-        with dissolve  
+        with dissolve 
 
-        pause  
+        pause 0.75 
 
         scene v15s34_8d # TPP. MC standing in the middle of his apes room putting on his pants, slight smile, mouth closed.
         with dissolve 
 
-        pause  
+        pause 0.75 
 
         play sound "sounds/vibrate.mp3"
 
         scene v15s34_8e # TPP. Show MC standing in the middle of his apes room in the entire Outfit: 2, slight smile, mouth closed.
         with dissolve 
 
-        pause  
+        pause 0.75 
 
         scene v15s34_9 # TPP. Close up of MC in his apes room pulling out his phone, slight smile, mouth closed.
         with dissolve 
 
-        pause  
+        pause 0.75 
 
         scene v15s34_9a # TPP. Close up of MC in his apes room looking at his phone, slight smile, mouth close.
         with dissolve 
@@ -183,18 +184,19 @@ label v15s34:
             else:
                 $ lindsey.messenger.newMessage("Hey, I hope you're ready for our VIP night. We'll be picking you up in the limo in about 15 minutes!", queue=False)
                 $ lindsey.messenger.addReply("Yeah, let's get our VIP party on! See you soon :)", func=None)
+
         else:
             $ lindsey.messenger.newMessage("Hey, I'm having a game night to help secure some extra influence and votes for my campaign. Someone bailed on me at the last minute, so... Wanna come take their place? :)", queue=False)
             $ lindsey.messenger.addReply("Hey! Yeah, sounds fun.")
             $ lindsey.messenger.newMessage("Amazing! Be at the chicks house in 15 minutes :)")
             $ lindsey.messenger.addReply("Haha, that soon? Damn, okay. I'm OMW!", func=None)
 
-        label v15s34_PhoneContinue:
+        label v15s34_PhoneContinueL:
             if lindsey.messenger.replies:
                 call screen phone
             if lindsey.messenger.replies:
-                "(I should reply to Lindsey)"
-                jump v15s34_PhoneContinue
+                u "(I should reply to Lindsey)"
+                jump v15s34_PhoneContinueL
 
         scene v15s34_8e 
         with dissolve 
@@ -208,9 +210,10 @@ label v15s34:
 
         play sound "sounds/doorclose.mp3"
 
-        pause 
+        pause 0.75 
 
         if v15s12_lindsey_pb_gamenight or not v14_help_lindsey:
             jump v15s35
-        if not v15s12_lindsey_pb_gamenight and v14_help_lindsey:
+
+        else: ###if not v15s12_lindsey_pb_gamenight and v14_help_lindsey:
             jump v15s38

@@ -4,11 +4,10 @@
 # Time: Night
 
 label v15s36:
-
     scene v15s36_1 # TPP. Shot of MC and Autumn walking down the street, both slight smile, mouth closed.
     with fade
 
-    pause  
+    pause 0.75
 
     scene v15s36_2 # FPP. MC and Autumn walking down the street, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth open.
     with dissolve 
@@ -38,7 +37,7 @@ label v15s36:
     scene v15s36_3 # TPP. Closer up shot of MC and Autumn further down the street smiling at each other as they walk, both mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s36_4 # FPP. MC and Autumn further down the street, new set of houses in the background, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth closed.
     with dissolve
@@ -54,12 +53,12 @@ label v15s36:
     with dissolve
 
     menu:
-        "Maybe.":
+        "Maybe":
             $ add_point(KCT.BRO)
 
             u "Erm, maybe?"
 
-        "I'm really curious.":
+        "I'm really curious":
             $ add_point(KCT.BOYFRIEND)
 
             u "Well, I'm curious about getting to know the real Autumn, but I know it's a sensitive issue."
@@ -87,7 +86,7 @@ label v15s36:
         scene v15s36_4
         with dissolve
 
-        u "Yeah, I get tht. No worries..."
+        u "Yeah, I get it. No worries..."
 
         u "So, what was your favorite question from the game tonight?"
 
@@ -101,7 +100,7 @@ label v15s36:
 
         u "*Laughs*"
 
-        if gamenight = "would you rather": # Placeholder for the game being would you rather.
+        if gamenight == "would you rather": # Placeholder for the game being would you rather.
             scene v15s36_5
             with dissolve
 
@@ -143,7 +142,8 @@ label v15s36:
             with dissolve
 
             u "*Laughs* Good advice, thanks."
-        elif gamenight = "most likely to":
+
+        elif gamenight == "most likely to":
             scene v15s36_5
             with dissolve
 
@@ -249,7 +249,7 @@ label v15s36:
         with dissolve
 
         menu:
-            "I'd like that.":
+            "I'd like that":
 
                 u "Honestly, I'd really like that... I feel the same way."
 
@@ -319,12 +319,12 @@ label v15s36:
                     scene v15s36_7 # TPP. Show Autumn and MC stopped on the side walk looking at each other both slight smile, mouth closed.
                     with dissolve
 
-                    pause  
+                    pause 0.75
 
                     scene v15s36_8 # FPP. MC and Autumn further down the street, new set of houses in the background, MC and Autumn standing still on the side walk, MC looking at Autumn, Autumn looking down at the ground, Autumn biting her lip. 
                     with dissolve
 
-                    pause  
+                    pause 0.75 
 
                     scene v15s36_8a # FPP. MC looking at Autumn, Autumn looking at MC, Autumn nervous smile, mouth open.
                     with dissolve 
@@ -334,31 +334,31 @@ label v15s36:
                     scene v15s36_8b # FPP. MC looking at Autumn, Autumn looking at MC, Autumn stepped closer to MC, Autumn flirty, mouth closed.
                     with dissolve 
 
-                    pause  
+                    pause 0.75 
 
                     play sound "sounds/kiss.mp3"
 
                     scene v15s36_8c # FPP. Autumn kissing MC 
                     with dissolve
 
-                    pause  
+                    pause 0.75 
 
                     scene v15s36_8d # FPP. Autumn stepped back again, MC looking at Autumn, Autumn looking at Mc, Autumn biting her lip.
                     with dissolve 
 
-                    pause  
+                    pause 0.75 
 
                     scene v15s36_8b 
                     with dissolve
 
-                    pause  
+                    pause 0.75 
 
                     play sound "sounds/kiss.mp3"
 
                     scene v15s36_9 # TPP. MC and Autumn kissing on the sidewalk, MC with his hands on Autumn's waist, Autumn's arms wrappped around MC's neck.
                     with dissolve 
 
-                    pause  
+                    pause 0.75 
 
                     scene v15s36_8e # FPP. Autumn stepped back, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth closed. 
                     with dissolve 
@@ -368,7 +368,7 @@ label v15s36:
                     scene v15s36_8f # FPP. Autumn stepped back, MC looking at Autumn, Autumn looking at MC, Autumn now blushing, Autumn slight smile, mouth closed. 
                     with dissolve
 
-            "It's not a good idea.":
+            "It's not a good idea":
                 scene v15s36_5a
                 with dissolve
 
@@ -423,12 +423,12 @@ label v15s36:
     scene v15s36_10 # TPP. Show MC and Autumn arriving at the Deer's house front.
     with fade 
 
-    pause  
+    pause 0.75 
 
     scene v15s36_11 # FPP. MC and Autumn at the front of the Deer's house, Autumn looking at MC, MC looking at Autumn, Autumn slight smile, mouth open.
     with dissolve 
 
-    aut "Here we are.... Thanks for walking me home."
+    aut "Here we are... Thanks for walking me home."
 
     scene v15s36_11a # FPP. MC and Autumn at the front of the Deer's house, Autumn looking at MC, MC looking at Autumn, Autumn slight smile, mouth open.
     with dissolve
@@ -448,35 +448,35 @@ label v15s36:
     scene v15s36_11b # FPP. Show Autumn walking away to the deer's house.
     with dissolve
 
-        if autumnrs:
-            scene v15s36_11c # FPP. Show Autumn stopping in place.
-            with dissolve  
-
-            pause 
-
-            scene v15s36_11d # FPP. Show Autumn walking back towards MC, slight smile, mouth closed.
-            with dissolve 
-
-            pause 
-
-            scene v15s36_11a 
-            with dissolve 
-
-            pause  
-
-            scene v15s36_11e # FPP. Autumn kissing MC on the cheek.
-            with dissolve
-
-        play sound "sounds/dooropen.mp3"
-
-        scene v15s36_11f # FPP. Autumn opening the door to the Deer's house and walking in.
+    if autumnrs:
+        scene v15s36_11c # FPP. Show Autumn stopping in place.
         with dissolve
 
-        pause
+        pause 0.75 
 
-        play sound "sounds/doorclose.mp3"
-
-        scene v15s36_11g # FPP. The door closing behind Autumn as she enters.
+        scene v15s36_11d # FPP. Show Autumn walking back towards MC, slight smile, mouth closed.
         with dissolve 
 
-        jump v15s37
+        pause 0.75 
+
+        scene v15s36_11a 
+        with dissolve 
+
+        pause 0.75 
+
+        scene v15s36_11e # FPP. Autumn kissing MC on the cheek.
+        with dissolve
+
+    play sound "sounds/dooropen.mp3"
+
+    scene v15s36_11f # FPP. Autumn opening the door to the Deer's house and walking in.
+    with dissolve
+
+    pause 0.75
+
+    play sound "sounds/doorclose.mp3"
+
+    scene v15s36_11g # FPP. The door closing behind Autumn as she enters.
+    with dissolve 
+
+    jump v15s37

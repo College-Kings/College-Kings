@@ -34,7 +34,7 @@ label v15s20:
 
     if chloegf:
         menu:
-            "Ask for a kiss.":
+            "Ask for a kiss":
                 u "I know you're super busy, but can your boyfriend get a kiss first? *Chuckles*"
 
                 scene v15s20_5a # FPP. Same as v15s20_5, Chloe slight smile, mouth open.
@@ -45,7 +45,7 @@ label v15s20:
                 scene v15s20_6 # TPP. Show MC and Chloe having a quick kiss.
                 with dissolve
 
-            "Say nothing.":
+            "Say nothing":
                 u "(I was expecting a hello kiss, but I'll keep quiet about it... I don't want to throw her off her game.)"
 
     if mr_lee_meeting: # Placeholder if MC chose to meet with Mr. Lee.
@@ -64,10 +64,10 @@ label v15s20:
 
         cl "Thanks, so here's my game plan so far... I've written down some notes."
 
-        # -The UI pops up showing Mr Lee's character brief-
+        # -The UI pops up showing Mr. Lee's character brief-
         # For you Oscar <3
 
-        cl "We already have a good idea what Mr Lee is all about. He likes professionalism and manners."
+        cl "We already have a good idea what Mr. Lee is all about. He likes professionalism and manners."
 
         cl "He's very detail-orientated and likes to talk about his philosophy on life..."
 
@@ -115,11 +115,11 @@ label v15s20:
 
         cl "Haha, shh! Come on, we need to focus."
 
-    else: ###if MsRoseMeeting: #Placeholder for if MC chose to meet with Ms Rose.
+    else: ###if MsRoseMeeting: #Placeholder for if MC chose to meet with Ms. Rose.
         scene v15s20_5a
         with dissolve
 
-        cl "When Ms Rose arrives, we can head over to the meeting room I booked."
+        cl "When Ms. Rose arrives, we can head over to the meeting room I booked."
 
         scene v15s20_5
         with dissolve
@@ -131,10 +131,10 @@ label v15s20:
 
         cl "I've also written down some notes for the meeting."
 
-        # -The UI pops up showing Ms Rose's character brief-
+        # -The UI pops up showing Ms. Rose's character brief-
         # Oscar :D <3
 
-        cl "Basically, Ms Rose is all about the girls. She loves to support other women, to help them reach their goals, etc..."
+        cl "Basically, Ms. Rose is all about the girls. She loves to support other women, to help them reach their goals, etc..."
 
         cl "So personally, I think she'll like the idea of reduced tuition for all Chicks."
 
@@ -170,7 +170,7 @@ label v15s20:
         scene v15s20_5b
         with dissolve
 
-        cl "I can see Ms Rose bringing her up in the conversation, because she's a Chick, and her stepdaughter..."
+        cl "I can see Ms. Rose bringing her up in the conversation, because she's a Chick, and her stepdaughter..."
 
         cl "But I'd like to make sure we avoid that. This isn't about Nora. So, whatever you do, don't mention her."
 
@@ -241,7 +241,7 @@ label v15s20:
         with dissolve
 
         menu:
-            "Take the notes.":
+            "Take the notes":
                 $ v15_took_notes = True
                 u "Yeah, we better take them. As long as we aren't staring at it the whole time, I think it's helpful to refer to."
 
@@ -255,7 +255,7 @@ label v15s20:
 
                 u "Got it."
 
-            "Don't take the notes.":
+            "Don't take the notes":
                 u "Nah, I don't want to risk pissing anyone off. Besides, I remember it all anyway. You can put them away."
 
                 scene v15s20_5a

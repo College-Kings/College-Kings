@@ -314,7 +314,7 @@ label v15s10:
             u "(That's two hundred dollars less than what this thing is worth! What should I do here?)"
 
             menu:
-                "Refuse offer.":
+                "Refuse offer":
                     scene v15s10_12f # FPP. same as v15s10_12e, Man not holding cash anymore, neutral face, mouth closed.
                     with dissolve
 
@@ -345,7 +345,7 @@ label v15s10:
 
                     li "Yeah. We'll take it. We'll take anything we can get at this point."
 
-                "Accept offer.":
+                "Accept offer":
                     scene v15s10_14
                     with dissolve
 
@@ -602,7 +602,7 @@ label v15s10:
             # Hi Again Oscar! :D
 
             menu:
-                "Refuse offer.":
+                "Refuse offer":
                     scene v15s10_12f
                     with dissolve
 
@@ -648,7 +648,7 @@ label v15s10:
 
                     u "(What a clown.)"
 
-                "Accept the offer.":
+                "Accept offer":
                     scene v15s10_12h
                     with dissolve
 
@@ -986,7 +986,7 @@ label v15s10:
             # Third times a charm. Hi Oscar :D
 
             menu:
-                "Refuse offer.":
+                "Refuse offer":
                     scene v15s10_femalebuyer_4i # FPP. Same as v15s10_femalebuyer_4h, the lady with cash in her hand still, looking at MC, neutral face, mouth closed.
                     with dissolve
 
@@ -1007,7 +1007,7 @@ label v15s10:
 
                     li "Let's just take it. It's a fair price, I guess."
 
-                "Accept the offer.":
+                "Accept offer":
                     scene v15s10_femalebuyer_4k # FPP. Same as v15s10_femalebuyer_4j, the lady with cash in her hand, slight smile, mouth closed.
                     with dissolve
 
@@ -1144,7 +1144,7 @@ label v15s10:
     # -[CarTotal] pops up on screen based on the payout sums-
     # Oscar ;)
         menu:
-            "Refuse offer.":
+            "Refuse offer":
                 scene v15s10_femalebuyer_4i
                 with dissolve
 
@@ -1175,7 +1175,7 @@ label v15s10:
 
                 li "Yeah, it's going to a good owner, and we need whatever we can get."
 
-            "Accept the offer.":
+            "Accept the offer":
                 scene v15s10_femalebuyer_4k
                 with dissolve
     
@@ -1284,5 +1284,7 @@ label v15s10:
 
         scene v15s10_femalebuyer_12
         with dissolve
+
+        pause 0.75
 
         jump v15s12

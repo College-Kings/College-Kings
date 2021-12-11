@@ -153,8 +153,9 @@ define character.elm = Character("Elijah's mother", who_color="#fc3158", who_out
 define character.bird = Character("Bird", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 
 # 15.0
-define character.males = Character("males")
-define character.fems = Character("fems")
-define character.oscars_owner = Character("oscars_owner")
+define character.males = Character("Male student", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.fems = Character("Female student", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.oscars_owner = Character("Oscar's owner", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.male_buyer = Character("male_buyer")
 define character.female_buyer = Character("female_buyer")
+define character.cashier = Character("cashier")

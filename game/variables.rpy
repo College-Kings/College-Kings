@@ -367,7 +367,7 @@ default v14_jenny_sex = False
 default v14_jennypoints = 0
 default v14_lauren_helps_lindsey = False
 default v14_lauren_sabotage = False
-default v14_lindsey_popularity = 45 # Use `set_presidency_percent(amount)`.
+default v14_lindsey_popularity = 45 # Use set_presidency_percent(amount).
 default v14_noraWhere = False
 default v14_noraWorry = False
 default v14_penelope_date = False
@@ -384,7 +384,7 @@ default v14s23_disagree = False
 default v14s24a_gummyfish = False
 default v14s25_letherstay = False
 default v14s30b_image = 0
-default v14s30b_its_perfect = False  # Telling Chloe that the caption is perfect
+default v14s30b_its_perfect = False # Telling Chloe that the caption is perfect
 default v14s31b_smoke_weed_with_aubrey = False # s31b smoking weed with Aubrey at Ape's House
 default v14s31bTrustChloe = False # MC trust Chloe alone with Grayson
 default v14s37_focus_on_us = False # Tell Penelope to focus on them during the date.
@@ -403,13 +403,13 @@ default v14_Samantha_clean = False # Placeholder?
 
 # 15.0 
 # Chloe Planning Board (v15s8)
-default v15s8_chloe_pb_DamageLindseyRep = False  # checked in v15s12
+default v15s8_chloe_pb_DamageLindseyRep = False # checked in v15s12
 
 # Lindsey Planning Board (v15s12)
-default v15s12_lindsey_pb_gameNight = False         # True, GameNight; False, VIPNight
-default v15s12_lindsey_pb_fakeId = False            # True, FakeIDl False, Limo/VIP rental
-default v15s12_lindsey_pb_wouldYouRather = False    # True, Play Would You Rather; False, Play Who's Most Likely To
-default v15_s12_lindsey_pb_inviteSebastian = False  # True, Invite Sebastian; False, Invite Grayson
+default v15s12_lindsey_pb_gameNight = False # True, GameNight; False, VIPNight
+default v15s12_lindsey_pb_fakeId = False # True, FakeIDl False, Limo/VIP rental
+default v15s12_lindsey_pb_wouldYouRather = False # True, Play Would You Rather; False, Play Who's Most Likely To
+default v15_s12_lindsey_pb_inviteSebastian = False # True, Invite Sebastian; False, Invite Grayson
 
 default aubrey_friend = False 
 default aubrey_fwb = False 
@@ -422,8 +422,7 @@ default lindsey_friend = False # Placeholder?
 default mr_lee_meeting = False # Placeholder?
 default ms_rose_meeting = False # (redundancy check) # not used (28/08/2021)
 default smoked_with_autumn = False
-default v15_blame_chris = False 
-default v15_blame_nora = False 
+default v15_blame_nora = False ### blame_chris = (v13_imre_disloyal and not v15_blame_nora)
 default v15_less_chick_tuition = False # not used (28/08/2021)
 default V15_ms_rose_sex = False # Placeholder?
 default v15_stuck_up_for_nora = False # not used (28/08/2021)
@@ -446,9 +445,10 @@ default v15s18a_gag = False
 default v15s18a_showlist_penelope_autumn = False # Show the party list to Penelope and Autumn.
 default v15s18a_lie = False 
 default v15_told_Emily_I_Love_You = False # Placeholder?
-default v15s18e_cum_in_lauren # Noted to be remembered 
+default v15s18e_cum_in_lauren = False # Noted to be remembered 
 default v15s24_nancy_dick = False
 default v15s24_alcohol = False
 default v15_ph_riley_upset = False  # placeholder ?? (set in s26?? ; read in v15s27)
-default autumnloyal = False 
+default autumnloyal = False
 default autumnrs = False
+default v15s18_mention_list = False

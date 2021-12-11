@@ -30,7 +30,7 @@ label v15s1:
         scene v15s1_3a # FPP. same as v15s1_3 Imre's mouth is open, holding a fist up towards mc
         with dissolve
 
-        imre "Loyalty, fucker! Chris has no idea that the real reason why he and Nora broke up, is because you were interfering with their relationship."
+        imre "Loyalty, fucker! Chris has no idea that the real reason why he and Nora broke up is because you were interfering with their relationship."
 
         scene v15s1_3
         with dissolve
@@ -47,14 +47,10 @@ label v15s1:
 
         u "The only person to blame for their breakup is..."
 
-        scene v15s1_3b
-        with dissolve
-
         menu:
             "Blame Chris":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BOYFRIEND)
-                $ v15_blame_chris = True
 
                 scene v15s1_3c # FPP. same as v15s1_3b Imre increases to a fully angry expression, Imre places his hands to his sides
                 with dissolve
@@ -87,7 +83,7 @@ label v15s1:
                 scene v15s1_3a
                 with dissolve
 
-                imre "So, the fact that you stood on the side lines looking like a knight in shining armor, has nothing to do with why they broke up?"
+                imre "So, the fact that you stood on the side lines looking like a knight in shining armor, that has nothing to do with why they broke up?"
 
                 imre "Ha! That's what you're trying to say to me?"
             
@@ -128,7 +124,7 @@ label v15s1:
             scene v15s1_3
             with dissolve
 
-        u "Just, take some time to really think about it, Imre."
+        u "Just take some time to really think about it, Imre."
 
         scene v15s1_3a
         with dissolve
@@ -177,7 +173,7 @@ label v15s1:
         scene v15s1_3f
         with dissolve
 
-        imre "You're lucky I came to talk to you first, man... Cause I was more than ready to tell him everything I know."
+        imre "You're lucky I came to talk to you first, man... 'Cause I was more than ready to tell him everything I know."
 
         scene v15s1_3g
         with dissolve
@@ -448,12 +444,9 @@ label v15s1:
 
     imre "Okay, fine..."
 
-    scene v15s1_3m
-    with dissolve
-
     imre "I guess you're right. I just don't like it when things change around here, you know?"
 
-    scene v15s1_3l
+    scene v15s1_3m
     with dissolve
 
     u "I know. You'll grow up one day. *Laughs*"
@@ -521,8 +514,13 @@ label v15s1:
     $ autumn.messenger.addReply("Yeah, looking forward to it. See you there!")
     $ autumn.messenger.addReply("Of course! I'll always be there if there's puppies, haha.")
 
-    call screen phone
-
+    label v15s1_PhoneContinue:
+        if autumn.messenger.replies:
+            call screen phone
+        if autumn.messenger.replies:
+            u "(I should reply to Autumn.)"
+            jump v15s1_PhoneContinue
+            
     scene v15s1_5b
     with dissolve
 
@@ -574,14 +572,18 @@ label v15s1:
     with dissolve
 
     pause 0.75
+    
+    scene black
+    with dissolve
+    
+    pause 2
 
 # -Night to morning transition-
-
     scene v15s1_6 # FPP. Show just a black screen (MC's POV, eyes closed). Phone alarm sounds
     with dissolve
 
+    play sound "sounds/phonealarm.mp3"
     u "*Groans* (No time for snoozing today... Need to get up.)"
 
-    play sound "sounds/vibrate.mp3"
-
+    stop sound
     jump v15s4
