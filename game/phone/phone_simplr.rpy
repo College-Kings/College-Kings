@@ -13,13 +13,15 @@ init python:
             self.name = name
             self.condition = True
 
-            self.profile_picture = "images/nonplayable_characters/{0}/{0}_profile_picture.webp".format(name.lower())
-
             for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, name.lower(), "large_profile_pictures")):
                 self.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(name.lower(), filename) for filename in filenames]
 
             self.sentMessages = []
             self.pendingMessages = []
+
+        @property
+        def profile_picture(self):
+            return "images/nonplayable_characters/{0}/{0}_profile_picture.webp".format(name.lower())
 
         def removeContact(self):
             simplr_pendingContacts.pop(0)
