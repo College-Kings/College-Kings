@@ -234,7 +234,7 @@ label starta: #for compatibility only
     show s15
     with dissolve
 
-    $ statsApp.unlock()
+    $ stats_app.unlock()
 
     ju "Fraternities can be dangerous, honey."
     
