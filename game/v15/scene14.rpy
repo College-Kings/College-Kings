@@ -83,36 +83,53 @@ label v15s14:
 
             u "*Sighs*"
 
-        "Let's go":
-            $ v15s14_lets_go = True
+            scene v15s14_5c
+            with dissolve
 
+            ro "Hop in!"
+
+            scene v15s14_6 # TPP. Show MC and Ms. Rose getting into her car, MC neutral face, mouth closed, Ms. Rose, slight smile, mouth closed.
+            with dissolve
+
+            pause 0.75
+
+            scene v15s14_7 # TPP. Close up of MC buckling his seatbelt in the passenger seat, neutral face, mouth closed.
+            with dissolve
+
+            pause 1
+
+            scene v15s14_8 # TPP. Nice aerial shot of the car leaving campus
+            with fade
+
+            pause 1
+
+        "Let's go":
             u "Okay, let's go."
 
-    scene v15s14_5c
-    with dissolve
+            scene v15s14_5c
+            with dissolve
 
-    ro "Hop in!"
+            ro "Hop in!"
 
-    scene v15s14_6 # TPP. Show MC and Ms. Rose getting into her car, MC neutral face, mouth closed, Ms. Rose, slight smile, mouth closed.
-    with dissolve
+            scene v15s14_6 # TPP. Show MC and Ms. Rose getting into her car, MC neutral face, mouth closed, Ms. Rose, slight smile, mouth closed.
+            with dissolve
 
-    pause 0.75
+            pause 0.75
 
-    scene v15s14_7 # TPP. Close up of MC buckling his seatbelt in the passenger seat, neutral face, mouth closed.
-    with dissolve
+            scene v15s14_7 # TPP. Close up of MC buckling his seatbelt in the passenger seat, neutral face, mouth closed.
+            with dissolve
 
-    pause 1
+            pause 1
 
-    scene v15s14_8 # TPP. Nice aerial shot of the car leaving campus
-    with fade
+            scene v15s14_8 # TPP. Nice aerial shot of the car leaving campus
+            with fade
 
-    pause 1
+            pause 1
 
-    if v15s14_lets_go:
-        scene v15s14_9 # FPP. Show Ms. Rose's hand on MC's thigh near his crotch while she drives.
-        with dissolve
+            scene v15s14_9 # FPP. Show Ms. Rose's hand on MC's thigh near his crotch while she drives.
+            with dissolve
 
-        pause 1
+            pause 1
 
     scene v15s14_10 # TPP. Show the car on a road near Ms. Rose's house
     with fade

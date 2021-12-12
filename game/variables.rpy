@@ -422,7 +422,6 @@ default v15_less_chick_tuition = False # not used (28/08/2021)
 default V15_ms_rose_sex = False # Placeholder?
 default v15_stuck_up_for_nora = False # not used (28/08/2021)
 default v15_took_notes = False # not used (28/08/2021)
-default v15s14_lets_go = False
 default v15s5_mc_angry_with_rose = False # Placeholder?
 default v15s7_chloe_empathize = False
 default v15_mad_at_ms_rose = False
