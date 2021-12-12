@@ -184,7 +184,7 @@ label v15s17:
 
             clerk "May I suggest jewelry?"
 
-            if laurenrs and AutumnLunchBreak:
+            if laurenrs and v15_autumn_lunchbreak:
                 scene v15s17_4f # FPP. same as v15s17_4d SC's mouth is closed
                 with dissolve
 
@@ -323,7 +323,7 @@ label v15s17:
 
             clerk "Now, are you sure about your gift? Ready to checkout?"
 
-            if AutumnLunchBreak:
+            if v15_autumn_lunchbreak:
                 scene v15s17_8b
                 with dissolve
 
@@ -443,7 +443,7 @@ label v15s17:
 
             clerk "So, it's final decision time. What will it be?"
 
-            if AutumnLunchBreak:
+            if v15_autumn_lunchbreak:
                 scene v15s17_11 # FPP. MC looks down at the counter and see's the gift card, both jewlry options, and both horse options
                 with dissolve
 

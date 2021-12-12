@@ -677,7 +677,7 @@ label v15s18a_AutumPenelope:
 
     aut "So, did you end up finding Lauren a good gift?"
 
-    if not AutumnLunchBreak:
+    if not v15_autumn_lunchbreak:
         scene v15s18apen_7b
         with dissolve
 
