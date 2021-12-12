@@ -49,7 +49,7 @@ init python:
     # v2.0
     Achievement("mixed_feelings", "Decline Lauren")
     Achievement("the_notorious", "Win your first fight")
-    Achievement("a_new beginning", "Lauren likes you")
+    Achievement("a_new_beginning", "Lauren likes you")
     Achievement("over_it", "Let Benjamin make a move")
 
     # v3.0
