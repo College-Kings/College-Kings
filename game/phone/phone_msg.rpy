@@ -26,7 +26,7 @@ init python:
             if self.replies and not force_send:
                 self.pending_messages.append(message)
             else:
-                self.pendingMessages = []
+                self.pending_messages = []
                 self.sent_messages.append(message)
 
             self.unlock()
@@ -42,9 +42,9 @@ init python:
 
             # Add message to queue
             if queue:
-                self.pendingMessages.append(message)
+                self.pending_messages.append(message)
             else:
-                self.pendingMessages = []
+                self.pending_messages = []
                 self.sent_messages.append(message)
 
             self.unlock()
@@ -60,8 +60,8 @@ init python:
                 if newMessage:
                     self.newMessage("")
                     message.replies.append(reply)
-                elif self.pendingMessages:
-                    self.pendingMessages[-1].replies.append(reply)
+                elif self.pending_messages:
+                    self.pending_messages[-1].replies.append(reply)
                 else:
                     self.sent_messages[-1].replies.append(reply)
             except IndexError:
@@ -78,8 +78,8 @@ init python:
                 if newMessage:
                     message = self.newMessage("")
                     message.replies.append(reply)
-                elif self.pendingMessages:
-                    self.pendingMessages[-1].replies.append(reply)
+                elif self.pending_messages:
+                    self.pending_messages[-1].replies.append(reply)
                 else:
                     self.sent_messages[-1].replies.append(reply)
             except IndexError:
@@ -102,7 +102,7 @@ init python:
             # Send next queued message(s)
             try:
                 while not self.replies:
-                    self.sent_messages.append(self.pendingMessages.pop(0))
+                    self.sent_messages.append(self.pending_messages.pop(0))
             except IndexError: pass
 
             # Check if all replies been sent

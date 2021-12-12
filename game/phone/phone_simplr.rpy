@@ -17,7 +17,7 @@ init python:
                 self.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(name.lower(), filename) for filename in filenames]
 
             self.sentMessages = []
-            self.pendingMessages = []
+            self.pending_messages = []
 
         @property
         def profile_picture(self):
@@ -41,9 +41,9 @@ init python:
 
             # Add message to queue
             if queue:
-                self.pendingMessages.append(message)
+                self.pending_messages.append(message)
             else:
-                self.pendingMessages = []
+                self.pending_messages = []
                 self.sentMessages.append(message)
 
             if self in simplr_contacts: simplrApp.notification = True
@@ -59,9 +59,9 @@ init python:
 
             # Add message to queue
             if queue:
-                self.pendingMessages.append(message)
+                self.pending_messages.append(message)
             else:
-                self.pendingMessages = []
+                self.pending_messages = []
                 self.sentMessages.append(message)
 
             if self in simplr_contacts: simplrApp.notification = True
@@ -73,8 +73,8 @@ init python:
 
             # Append reply to last sent message
             try:
-                if self.pendingMessages:
-                    self.pendingMessages[-1].replies.append(reply)
+                if self.pending_messages:
+                    self.pending_messages[-1].replies.append(reply)
                 else:
                     self.sentMessages[-1].replies.append(reply)
             except IndexError:
@@ -86,13 +86,13 @@ init python:
 
             # Append reply to last sent message
             try:
-                if self.pendingMessages:
-                    self.pendingMessages[-1].replies.append(reply)
+                if self.pending_messages:
+                    self.pending_messages[-1].replies.append(reply)
                 else:
                     self.sentMessages[-1].replies.append(reply)
             except Exception:
                 self.newMessage("", queue=False)
-                self.pendingMessages[-1].replies.append(reply)
+                self.pending_messages[-1].replies.append(reply)
 
         def seenMessage(self):
             if not any(contact.replies for contact in simplr_contacts):

@@ -11,8 +11,8 @@ label v14_start:
 
     show screen phone_icon
     
-    if emmy.simplr.pendingMessages: #for compatibility with v12 players where emmy replies were not forced to be seen
-        $ emmy.simplr.pendingMessages = []
+    if emmy.simplr.pending_messages: #for compatibility with v12 players where emmy replies were not forced to be seen
+        $ emmy.simplr.pending_messages = []
         $ emmy.simplr.sentMessages[-1].replies = []
 
     if aubreyrs and rileyrs:

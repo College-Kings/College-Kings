@@ -355,8 +355,8 @@ label after_load:
 
         # Contacts
         for contact in messenger.contacts:
-            try: contact.pendingMessages
-            except AttributeError: contact.pendingMessages = []
+            try: contact.pending_messages
+            except AttributeError: contact.pending_messages = []
 
             try: contact.sentMessages
             except AttributeError: contact.sentMessages = []
