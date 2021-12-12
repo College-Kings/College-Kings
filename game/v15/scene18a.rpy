@@ -1894,7 +1894,7 @@ label v15s18a_Riley:
 
             ri "You're welcome."
 
-            play sound "sound/kiss.mp3"
+            play sound "sounds/kiss.mp3"
 
             scene v15s18ariley_13d # FPP. Riley kissing MC on the cheek
             with dissolve

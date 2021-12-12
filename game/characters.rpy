@@ -159,3 +159,5 @@ define character.oscars_owner = Character("Oscar's owner", who_color="#5fc9f8", 
 define character.male_buyer = Character("male_buyer")
 define character.female_buyer = Character("female_buyer")
 define character.cashier = Character("cashier")
+define character.mactor = Character("male actor")
+define character.factor = Character("female actor")

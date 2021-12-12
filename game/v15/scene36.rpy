@@ -101,7 +101,7 @@ label v15s36:
 
         u "*Laughs*"
 
-        if gamenight = "would you rather": # Placeholder for the game being would you rather.
+        if gamenight == "would you rather": # Placeholder for the game being would you rather.
             scene v15s36_5
             with dissolve
 
@@ -143,7 +143,7 @@ label v15s36:
             with dissolve
 
             u "*Laughs* Good advice, thanks."
-        elif gamenight = "most likely to":
+        elif gamenight == "most likely to":
             scene v15s36_5
             with dissolve
 
