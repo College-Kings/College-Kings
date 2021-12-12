@@ -1175,7 +1175,7 @@ label v15s10:
 
                 li "Yeah, it's going to a good owner, and we need whatever we can get."
 
-            "Accept the offer":
+            "Accept offer":
                 scene v15s10_femalebuyer_4k
                 with dissolve
     
