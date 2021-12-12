@@ -416,7 +416,6 @@ default aubrey_fwb = False
 default aubrey_tamed = False 
 default dog_name = "Blue"
 default v15_lauren_gift = None
-default lindsey_friend = False # Placeholder?
 default mr_lee_meeting = False # Placeholder?
 default ms_rose_meeting = False # (redundancy check) # not used (28/08/2021)
 default v15_blame_nora = False ### blame_chris = (v13_imre_disloyal and not v15_blame_nora)
