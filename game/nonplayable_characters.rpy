@@ -33,7 +33,11 @@ init python:
         def __init__(self, name, username=None):
             self.name = name
             self.name = name.replace(" ", "_")
-            self.username = username
+            
+            if username is None:
+                self._username = name
+            else:
+                self._username = username
 
             self._messenger = None
             self._simplr = None
@@ -46,6 +50,19 @@ init python:
 
             self.points = 0
             self._relationship = Relationship.FRIEND
+
+        @property
+        def username(self):
+            try:
+                if self._username is not None:
+                    return self._username
+            except AttributeError: pass
+
+            return self.name
+
+        @username.setter
+        def username(self, value):
+            self._username = value
 
         @property
         def relationship(self):
@@ -96,6 +113,26 @@ init python:
         @property
         def profile_picture(self):
             return "images/nonplayable_characters/profile_pictures/{}.webp".format(self.name.lower())
+
+        def __after_load__(self):
+            try: messenger = self._messenger
+            except AttributeError: messenger = None
+            try: simplr = self._simplr
+            except AttributeError: simplr = None
+            try: stats = self.stats
+            except AttributeError: stats = { "Competitive": None, "Vindictive": [], "Talkative": None }
+            try: points = self.points
+            except AttributeError: points = 0
+            try: relationship = self._relationship
+            except AttributeError: relationship = Relationship.FRIEND
+
+            self.__init__(self.name, self.username)
+
+            self._messenger = messenger
+            self._simplr = simplr
+            self.stats = stats
+            self.points = points
+            self._relationship = relationship
 
         def kill(self):
             # Check Competitive stat
@@ -155,11 +192,11 @@ default mason = NonPlayableCharacter("Mason", "Mason_Mas")
 default elijah = NonPlayableCharacter("Elijah", "Elijah_Woods")
 default kim = NonPlayableCharacter("Kim", "KimPlausible")
 default caleb = NonPlayableCharacter("Caleb", "Aleb")
-default parker = NonPlayableCharacter("Parker", "Parker")
+default parker = NonPlayableCharacter("Parker")
 default kai = NonPlayableCharacter("Kai", "KaiCriesWith2Ply")
 default aaron = NonPlayableCharacter("Aaron", "DoubleARon")
 default naomi = NonPlayableCharacter("Naomi", "NaomiXMarie")
-default lews_official = NonPlayableCharacter("LewsOfficial", "LewsOfficial")
+default lews_official = NonPlayableCharacter("LewsOfficial")
 
 default beth = NonPlayableCharacter("Beth")
 default iris = NonPlayableCharacter("Iris")
