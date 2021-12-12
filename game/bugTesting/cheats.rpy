@@ -98,7 +98,7 @@ init python:
     ButtonCheat("FR4", "Go with Penelope", "hcGirl", true_value="penelope", false_value="Cheat Error")
     ButtonCheat("FR4", "Go with Riley", "hcGirl", true_value="riley", false_value="Cheat Error")
 
-    ButtonCheat("Phone", "Unlock Kiwii", "kiwiiApp.locked", true_value=False, false_value=True)
+    ButtonCheat("Phone", "Unlock Kiwii", "kiwii.locked", true_value=False, false_value=True)
     ButtonCheat("Phone", "Unlock Simplr", "simplrApp.locked", true_value=False, false_value=True)
 
     FunctionCheat("Phone", "Unlock Phone Contacts", unlockPhoneContacts)
