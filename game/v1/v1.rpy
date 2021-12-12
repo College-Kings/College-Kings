@@ -63,7 +63,7 @@ label starta: #for compatibility only
 
     play music "music/m15punk.mp3"
 
-    $ mc.name = name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
+    $ mc.username = name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
 
     u "Hmm...?"
     
