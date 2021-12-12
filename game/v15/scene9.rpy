@@ -461,11 +461,10 @@ label v15s9:
             $ lindsey.messenger.addReply("Fuck, okay. What's next?", func=None)
             $ lindsey.messenger.newMessage("Meet me at the janitor's closet and you'll find out ;)")
 
-            if lindsey_friend: #placeholder
-                $ lindsey.messenger.addReply("OMW", func=None)
-
             if lindseyrs:
                 $ lindsey.messenger.addReply("Be there soon ;)", func=None)
+            else: #placeholder
+                $ lindsey.messenger.addReply("OMW", func=None)
 
             call screen phone
 
