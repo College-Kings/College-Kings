@@ -19,7 +19,7 @@ screen stats():
 
     use base_phone:
 
-        add "images/phone/whiteBackground.webp" at truecenter
+        add "images/phone/white_background.webp" at truecenter
 
         text "This is your current Key Character Trait.\nIt's based on your choices & behavior.\nYou can only have one KCT at a time.":
             xpos 250
