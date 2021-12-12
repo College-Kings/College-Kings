@@ -803,7 +803,7 @@ label v15s10:
         scene v15s10_femalebuyer_2
         with dissolve
 
-        u "(She seems like a really nice person; this should be easy.)"
+        u "(She seems like a really nice person, this should be easy.)"
 
         if "v14s47_passenger_2f.webp" in v14s47_car_pics:
             $ v14s48_car_price += 50

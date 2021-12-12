@@ -646,7 +646,7 @@ label v15s24:
 
                 cashier "Ha! Yeah right!"
 
-                cashier "All of your high school friends will be soon trying to empty the shelves; If you stick around you can probably get a ride home from them. *Laughs*"
+                cashier "All of your high school friends will be soon trying to empty the shelves. If you stick around you can probably get a ride home from them. *Laughs*"
 
                 scene v15s24_13a
                 with dissolve

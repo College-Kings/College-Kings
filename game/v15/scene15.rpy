@@ -501,7 +501,7 @@ label v15s15:
             scene v15s15_29b
             with dissolve
 
-            u "Yeah, we'll see. I need to go now; I've got things to do."
+            u "Yeah, we'll see. I need to go now, I've got things to do."
 
             scene v15s15_29a
             with dissolve
