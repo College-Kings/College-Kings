@@ -216,7 +216,7 @@ label v15s3: # 3) Dean comes to Apes about posted image
     ry "You mean me? This is what I get for joining the Apes. You don't get shit."
 
     # -If MC tried to stop them from posting
-    if v14s41a_standup: # JUST A GUESS - MAKE SURE THE CORRECT VARIABLE IS HERE
+    if v14s41a_standup:
         scene v15s3_6e # FPP Same as 6d, Ryan's mouth closed
         with dissolve
         
