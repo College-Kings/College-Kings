@@ -93,6 +93,16 @@ init python:
         SceneGallery("v14s46a_sga", scope={"laurenrs": True}) #46a, Lauren good
         SceneGallery("v14s46a_sgb", scope={"laurenrs": False}) #46a, Lauren bad
         SceneGallery("v14s53_sg") #53a, Samantha, xx, v14_samantha_sex
+    if renpy.loadable("v15/scene1.rpy"):
+        SceneGallery("15") #15, Ms. Rose
+        SceneGallery("18a") #18a, Riley
+        SceneGallery("18a") #18a, Amber
+        SceneGallery("18c") #18c, Aubrey
+        SceneGallery("18c") #18c, Autumn
+        SceneGallery("18c") #18c, Penelope
+        SceneGallery("18e"), #18e, Lauren
+        SceneGallery("33"), #33, Naomi
+        SceneGallery("48"), #48, Nora
 
 screen spoiler():
     modal True
