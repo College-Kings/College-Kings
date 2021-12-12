@@ -1671,6 +1671,7 @@ label v15s18a_Riley:
             ri "Okay, sure thing."
 
         "Yeah, I do":
+            $ v15s18_partytask += 1
             scene v15s18ariley_2i
             with dissolve
 
@@ -2180,6 +2181,7 @@ label v15s18a_ChrisAmber:
                     am "Good luck!"
 
                 else:
+                    $ v15s18_partytask += 1
                     scene v15s18aamber_3c
                     with dissolve
 
