@@ -26,7 +26,7 @@ label v15s4:
 
     menu:
         "Offer to help":
-            $ AutumnLunchBreak = True
+            $ v15_autumn_lunchbreak = True
             scene v15s4_3 # FPP. MC looking at Autumn. The boxes she is carrying obscuring her face from being seen.
             with dissolve
 
@@ -111,7 +111,7 @@ label v15s4:
                     u "*Laughs*"
 
                 "I want one":
-                    $ AutumnFreeMug = True
+                    $ v15_autumn_freemug = True
                     scene v15s4_9a
                     with dissolve
                     
@@ -186,7 +186,7 @@ label v15s4:
 
             menu:
                 "I'm sorry":
-                    $ AutumnLunchBreak = True
+                    $ v15_autumn_lunchbreak = True
                     scene v15s4_9d # FPP. Same as v15s4_9c, Autumn frustrated face, mouth closed.
                     with dissolve
 
@@ -514,7 +514,8 @@ label v15s4:
             with dissolve
 
             aut "Okay, Blue. I'll be back later to play with you and take you for a walk."
-            
+
+            ###
             menu:
                 "Peek":
                     $ add_point(KCT.TROUBLEMAKER)
@@ -686,7 +687,7 @@ label v15s4:
             u "As I'll ever be."
 
         "Look at her ass":
-            $ AutumnLunchBreak = False
+            $ v15_autumn_lunchbreak = False
             scene v15s4_24
             with dissolve
     
@@ -875,7 +876,7 @@ label v15s4:
 
             aut "*Laughs* You're so annoying."
             
-        "Don't pop a balloon":
+        "Keep working":
                 u "(Not worth the chance of getting accidentally punched in the face...)"
 
                 scene v15s4_41 # TPP. Show MC with his back turned to Autumn looking at the balloons on the floor, both slight smile, mouth open.
@@ -1215,7 +1216,7 @@ label v15s4:
 
     u "I'm sure we will."
 
-    if not AutumnLunchBreak:
+    if not v15_autumn_lunchbreak:
         scene v15s4_43
         with dissolve
 
@@ -1351,7 +1352,6 @@ label v15s4:
 
         menu:
             "Smoke weed":
-                $ smoked_with_autumn = True
                 scene v15s4_59f
                 with dissolve
 
@@ -1392,7 +1392,77 @@ label v15s4:
 
                 u "*Inhaling* This is a nice bonding experience... Haha."
 
-            "Don't smoke weed":
+                scene v15s4_59e
+                with dissolve
+
+                pause 0.75
+
+                scene v15s4_59f
+                with dissolve
+
+                u "You do this a lot on break?"
+
+                scene v15s4_59d
+                with dissolve
+
+                aut "You said it yourself, [name]. Being President is stressful. *Chuckles*"
+
+                scene v15s4_59f
+                with dissolve
+
+                u "Ahhh... So, the key to being the perfect president is marijuana?"
+
+                scene v15s4_59d
+                with dissolve
+
+                aut "*Laughs* Sure, yeah. Let's go with that..."
+
+                scene v15s4_59g # FPP. Same as v15s4_59f, Autumn holding out the joint for MC, Autumn slight smile, mouth closed.
+                with dissolve
+
+                pause 0.75
+
+                scene v15s4_59h # FPP. Same as v15s4_59g, MC taking the joint from Autumn, Autumn slight smile, mouth closed.
+                with dissolve
+
+                pause 0.75
+
+                scene v15s4_60 # TPP. Show MC in the car taking a big puff of the joint.
+                with dissolve
+
+                pause 0.75
+
+                scene v15s4_60a # TPP. Same as v15s4_60, MC blowing out the smoke.
+                with dissolve
+
+                pause 0.75
+
+                scene v15s4_59h
+                with dissolve
+
+                pause 0.75
+
+                scene v15s4_59g
+                with dissolve
+                
+                pause 0.75
+
+                scene v15s4_59f
+                with dissolve
+
+                pause 0.75
+
+                scene v15s4_59i # FPP. Same as v15s4_59h, Show Autumn pinching off the end of the joint for later, Autumn slight smile, mouth closed
+                with dissolve
+
+                pause 0.75
+
+                scene v15s4_59j # FPP. Same as v15s4_59i, Show Autumn putting away the joint and lighter into her pocket, Autumn slight smile, mouth closed.
+                with dissolve
+
+                pause 0.75
+
+            "Don't smoke":
                 scene v15s4_59f
                 with dissolve
 
@@ -1403,87 +1473,40 @@ label v15s4:
 
                 aut "Hey, no judgment here. More for me, hehe."
 
-        scene v15s4_59e
-        with dissolve
+                scene v15s4_59e
+                with dissolve
 
-        pause 0.75
+                pause 0.75
 
-        scene v15s4_59f
-        with dissolve
+                scene v15s4_59f
+                with dissolve
 
-        u "You do this a lot on break?"
+                u "You do this a lot on break?"
 
-        scene v15s4_59d
-        with dissolve
+                scene v15s4_59d
+                with dissolve
 
-        aut "You said it yourself, [name]. Being President is stressful. *Chuckles*"
+                aut "You said it yourself, [name]. Being President is stressful. *Chuckles*"
 
-        scene v15s4_59f
-        with dissolve
+                scene v15s4_59f
+                with dissolve
 
-        u "Ahhh... So, the key to being the perfect president is marijuana?"
+                u "Ahhh... So, the key to being the perfect president is marijuana?"
 
-        scene v15s4_59d
-        with dissolve
+                scene v15s4_59d
+                with dissolve
 
-        aut "*Laughs* Sure, yeah. Let's go with that..."
+                aut "*Laughs* Sure, yeah. Let's go with that..."
 
-        if smoked_with_autumn:
-            scene v15s4_59g # FPP. Same as v15s4_59f, Autumn holding out the joint for MC, Autumn slight smile, mouth closed.
-            with dissolve
+                scene v15s4_59i # FPP. Same as v15s4_59h, Show Autumn pinching off the end of the joint for later, Autumn slight smile, mouth closed
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
-            scene v15s4_59h # FPP. Same as v15s4_59g, MC taking the joint from Autumn, Autumn slight smile, mouth closed.
-            with dissolve
+                scene v15s4_59j # FPP. Same as v15s4_59i, Show Autumn putting away the joint and lighter into her pocket, Autumn slight smile, mouth closed.
+                with dissolve
 
-            pause 0.75
-
-            scene v15s4_60 # TPP. Show MC in the car taking a big puff of the joint.
-            with dissolve
-
-            pause 0.75
-
-            scene v15s4_60a # TPP. Same as v15s4_60, MC blowing out the smoke.
-            with dissolve
-
-            pause 0.75
-
-            scene v15s4_59h
-            with dissolve
-
-            pause 0.75
-
-            scene v15s4_59g
-            with dissolve
-            
-            pause 0.75
-
-            scene v15s4_59f
-            with dissolve
-
-            pause 0.75
-
-            scene v15s4_59i # FPP. Same as v15s4_59h, Show Autumn pinching off the end of the joint for later, Autumn slight smile, mouth closed
-            with dissolve
-
-            pause 0.75
-
-            scene v15s4_59j # FPP. Same as v15s4_59i, Show Autumn putting away the joint and lighter into her pocket, Autumn slight smile, mouth closed.
-            with dissolve
-
-            pause 0.75
-
-        else: 
-            scene v15s4_59i # FPP. Same as v15s4_59h, Show Autumn pinching off the end of the joint for later, Autumn slight smile, mouth closed
-            with dissolve
-
-            pause 0.75
-
-            scene v15s4_59j # FPP. Same as v15s4_59i, Show Autumn putting away the joint and lighter into her pocket, Autumn slight smile, mouth closed.
-            with dissolve
-
-            pause 0.75
+                pause 0.75
         
         scene v15s4_59a
         with dissolve
