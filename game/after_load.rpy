@@ -87,302 +87,163 @@ init 100 python:
 
 label after_load:
     python:
+        # SAVE FIXES:
+
         # Disable skip transitions
         preferences.transitions = 2
 
         renpy.music.stop(channel=u'music') ### temporary emergency break
 
-        # Playable Character
-        mc.profile_picture = profile_pictures[0]
+        ## PLAYABLE CHARACTERS
+        try: mc.profile_picture
+        except AttributeError: mc.profile_picture = profile_pictures[0]
+
+        try: mc.username
+        except AttributeError: mc.username = name
 
 
         # NonPlayable Character
         try: chloe
-        except NameError: chloe = NonPlayableCharacter("Chloe", "chloe.webp")
+        except NameError: chloe = NonPlayableCharacter("Chloe", "Chloe101")
         try: amber
-        except NameError: amber = NonPlayableCharacter("Amber", "amber.webp")
+        except NameError: amber = NonPlayableCharacter("Amber", "Amber_xx")
         try: penelope
-        except NameError: penelope = NonPlayableCharacter("Penelope", "penelope.webp")
+        except NameError: penelope = NonPlayableCharacter("Penelope", "Penelopeeps")
         try: riley
-        except NameError: riley = NonPlayableCharacter("Riley", "riley.webp")
+        except NameError: riley = NonPlayableCharacter("Riley", "RileyReads")
         try: lindsey
-        except NameError: lindsey = NonPlayableCharacter("Lindsey", "lindsey.webp")
+        except NameError: lindsey = NonPlayableCharacter("Lindsey", "LindsLou")
         try: lauren
-        except NameError: lauren = NonPlayableCharacter("Lauren", "lauren.webp")
+        except NameError: lauren = NonPlayableCharacter("Lauren", "LoLoLauren")
         try: emily
-        except NameError: emily = NonPlayableCharacter("Emily", "emily.webp")
+        except NameError: emily = NonPlayableCharacter("Emily", "emilyyyy")
         try: ms_rose
-        except NameError: ms_rose = NonPlayableCharacter("Ms Rose", "ms_rose.webp")
+        except NameError: ms_rose = NonPlayableCharacter("Ms Rose")
         try: nora
-        except NameError: nora = NonPlayableCharacter("Nora", "nora.webp")
+        except NameError: nora = NonPlayableCharacter("Nora", "Nora_12")
         try: aubrey
-        except NameError: aubrey = NonPlayableCharacter("Aubrey", "aubrey.webp")
+        except NameError: aubrey = NonPlayableCharacter("Aubrey", "Aubs123")
         try: ryan
-        except NameError: ryan = NonPlayableCharacter("Ryan", "ryan.webp")
+        except NameError: ryan = NonPlayableCharacter("Ryan", "Ryanator")
         try: imre
-        except NameError: imre = NonPlayableCharacter("Imre", "imre.webp")
+        except NameError: imre = NonPlayableCharacter("Imre", "BadBoyImre")
         try: chris
-        except NameError: chris = NonPlayableCharacter("Chris", "chris.webp")
+        except NameError: chris = NonPlayableCharacter("Chris", "Chriscuit")
         try: charli
-        except NameError: charli = NonPlayableCharacter("Charli", "charli.webp")
+        except NameError: charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
         try: cameron
-        except NameError: cameron = NonPlayableCharacter("Cameron", "cameron.webp")
+        except NameError: cameron = NonPlayableCharacter("Cameron", "Cameroon")
         try: josh
-        except NameError: josh = NonPlayableCharacter("Josh", "josh.webp")
+        except NameError: josh = NonPlayableCharacter("Josh", "Josh80085")
         try: julia
-        except NameError: julia = NonPlayableCharacter("Julia", "julia.webp")
+        except NameError: julia = NonPlayableCharacter("Julia")
         try: evelyn
-        except NameError: evelyn = NonPlayableCharacter("Evelyn", "evelyn.webp")
+        except NameError: evelyn = NonPlayableCharacter("Evelyn")
         try: autumn
-        except NameError: autumn = NonPlayableCharacter("Autumn", "autumn.webp")
+        except NameError: autumn = NonPlayableCharacter("Autumn", "Its_Fall")
         try: sebastian
-        except NameError: sebastian = NonPlayableCharacter("Sebastian", "sebastian.webp")
+        except NameError: sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
         try: grayson
-        except NameError: grayson = NonPlayableCharacter("Grayson", "grayson.webp")
+        except NameError: grayson = NonPlayableCharacter("Grayson", "G-rayson")
         try: jenny
-        except NameError: jenny = NonPlayableCharacter("Jenny", "jenny.webp")
+        except NameError: jenny = NonPlayableCharacter("Jenny")
         try: samantha
-        except NameError: samantha = NonPlayableCharacter("Samantha", "samantha.webp")
+        except NameError: samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam")
 
-        if isinstance(chloe, CustomCharacter):
-            char_points = chloe.points
-            char_stats = chloe.stats
-            chloe = NonPlayableCharacter("Chloe", "chloe.webp")
-            chloe.points = char_points
-            chloe.stats = char_stats
-        if isinstance(amber, CustomCharacter):
-            char_points = amber.points
-            char_stats = amber.stats
-            amber = NonPlayableCharacter("Amber", "amber.webp")
-            amber.points = char_points
-            amber.stats = char_stats
-        if isinstance(penelope, CustomCharacter):
-            char_points = penelope.points
-            char_stats = penelope.stats
-            penelope = NonPlayableCharacter("Penelope", "penelope.webp")
-            penelope.points = char_points
-            penelope.stats = char_stats
-        if isinstance(riley, CustomCharacter):
-            char_points = riley.points
-            char_stats = riley.stats
-            riley = NonPlayableCharacter("Riley", "riley.webp")
-            riley.points = char_points
-            riley.stats = char_stats
-        if isinstance(lindsey, CustomCharacter):
-            char_points = lindsey.points
-            char_stats = lindsey.stats
-            lindsey = NonPlayableCharacter("Lindsey", "lindsey.webp")
-            lindsey.points = char_points
-            lindsey.stats = char_stats
-        if isinstance(lauren, CustomCharacter):
-            char_points = lauren.points
-            char_stats = lauren.stats
-            lauren = NonPlayableCharacter("Lauren", "lauren.webp")
-            lauren.points = char_points
-            lauren.stats = char_stats
-        if isinstance(emily, CustomCharacter):
-            char_points = emily.points
-            char_stats = emily.stats
-            emily = NonPlayableCharacter("Emily", "emily.webp")
-            emily.points = char_points
-            emily.stats = char_stats
-        if isinstance(ms_rose, CustomCharacter):
-            char_points = ms_rose.points
-            char_stats = ms_rose.stats
-            ms_rose = NonPlayableCharacter("Ms Rose", "ms_rose.webp")
-            ms_rose.points = char_points
-            ms_rose.stats = char_stats
-        if isinstance(nora, CustomCharacter):
-            char_points = nora.points
-            char_stats = nora.stats
-            nora = NonPlayableCharacter("Ms Rose", "ms_rose.webp")
-            nora.points = char_points
-            nora.stats = char_stats
-        if isinstance(aubrey, CustomCharacter):
-            char_points = aubrey.points
-            char_stats = aubrey.stats
-            aubrey = NonPlayableCharacter("Aubrey", "aubrey.webp")
-            aubrey.points = char_points
-            aubrey.stats = char_stats
-        if isinstance(ryan, CustomCharacter):
-            char_points = ryan.points
-            char_stats = ryan.stats
-            ryan = NonPlayableCharacter("Ryan", "ryan.webp")
-            ryan.points = char_points
-            ryan.stats = char_stats
-        if isinstance(imre, CustomCharacter):
-            char_points = imre.points
-            char_stats = imre.stats
-            imre = NonPlayableCharacter("Imre", "imre.webp")
-            imre.points = char_points
-            imre.stats = char_stats
-        if isinstance(chris, CustomCharacter):
-            char_points = chris.points
-            char_stats = chris.stats
-            chris = NonPlayableCharacter("Chris", "chris.webp")
-            chris.points = char_points
-            chris.stats = char_stats
-        if isinstance(charli, CustomCharacter):
-            char_points = charli.points
-            char_stats = charli.stats
-            charli = NonPlayableCharacter("Charli", "charlie.webp")
-            charli.points = char_points
-            charli.stats = char_stats
-        if isinstance(cameron, CustomCharacter):
-            char_points = cameron.points
-            char_stats = cameron.stats
-            cameron = NonPlayableCharacter("Cameron", "cameron.webp")
-            cameron.points = char_points
-            cameron.stats = char_stats
-        if isinstance(josh, CustomCharacter):
-            char_points = josh.points
-            char_stats = josh.stats
-            josh = NonPlayableCharacter("Josh", "josh.webp")
-            josh.points = char_points
-            josh.stats = char_stats
-        if isinstance(julia, CustomCharacter):
-            char_points = julia.points
-            char_stats = julia.stats
-            julia = NonPlayableCharacter("Julia", "julia.webp")
-            julia.points = char_points
-            julia.stats = char_stats
-        if isinstance(evelyn, CustomCharacter):
-            char_points = evelyn.points
-            char_stats = evelyn.stats
-            evelyn = NonPlayableCharacter("Evelyn", "evelyn.webp")
-            evelyn.points = char_points
-            evelyn.stats = char_stats
-        if isinstance(autumn, CustomCharacter):
-            char_points = autumn.points
-            char_stats = autumn.stats
-            autumn = NonPlayableCharacter("Autumn", "autumn.webp")
-            autumn.points = char_points
-            autumn.stats = char_stats
-        if isinstance(sebastian, CustomCharacter):
-            char_points = sebastian.points
-            char_stats = sebastian.stats
-            sebastian = NonPlayableCharacter("Sebastian", "sebastian.webp")
-            sebastian.points = char_points
-            sebastian.stats = char_stats
-        if isinstance(grayson, CustomCharacter):
-            char_points = grayson.points
-            char_stats = grayson.stats
-            grayson = NonPlayableCharacter("Grayson", "grayson.webp")
-            grayson.points = char_points
-            grayson.stats = char_stats
-        if isinstance(jenny, CustomCharacter):
-            char_points = jenny.points
-            char_stats = jenny.stats
-            jenny = NonPlayableCharacter("Jenny", "jenny.webp")
-            jenny.points = char_points
-            jenny.stats = char_stats
+        for character in (
+            chloe,
+            amber,
+            penelope,
+            riley,
+            lindsey,
+            lauren,
+            emily,
+            ms_rose,
+            nora,
+            aubrey,
+            ryan,
+            imre,
+            chris,
+            charli,
+            cameron,
+            josh,
+            julia,
+            evelyn,
+            autumn,
+            sebastian,
+            grayson,
+            jenny,
+        ):
+            character.__after_load__()
 
-        # Kiwii Posts
-        try: v11s1_kiwiiPost.img = "images/phone/kiwii/posts/v11/v11_autumn_kiwii.webp"
-        except NameError: pass
-        try: v11s19_kiwiiPost1.img = "images/phone/kiwii/posts/v11/v11_chloemcselfie.webp"
-        except NameError: pass
-        try: v11s19_kiwiiPost2.img = "images/phone/kiwii/posts/v11/v11_chloemcselfie.webp"
-        except NameError: pass
-        try: v11s19_kiwiiPost3.img = "images/phone/kiwii/posts/v11/v11_rileymcselfie.webp"
-        except NameError: pass
-        try: v11s24_kiwiiPost1.img = "images/phone/kiwii/posts/v11/v11_caleb.webp"
-        except NameError: pass
-        try: v11s24_kiwiiPost2.img = "images/phone/kiwii/posts/v11/v11_imrebunny.webp"
-        except NameError: pass
-        try: v11s38_kiwiiPost1.img = "images/phone/kiwii/posts/v11/v11s38_amber_kiwii.webp"
-        except NameError: pass
-        try: v11s9a_kiwiiPost1.img = "images/phone/kiwii/posts/v11/sebnaked.webp"
-        except NameError: pass
-        try: v11s9a_kiwiiPost2.img = "images/phone/kiwii/posts/v11/sebnaked.webp"
-        except NameError: pass
-        try: v13s49_kiwiiPost1.img = "images/phone/kiwii/posts/v13/aubrey_beach.webp"
+        chloe.username = "Chloe101"
+        amber.username = "Amber_xx"
+        penelope.username = "Penelopeeps"
+        riley.username = "RileyReads"
+        lindsey.username = "LindsLou"
+        lauren.username = "LoLoLauren"
+        emily.username = "emilyyyy"
+        nora.username = "Nora_12"
+        aubrey.username = "Aubs123"
+        ryan.username = "Ryanator"
+        imre.username = "BadBoyImre"
+        chris.username = "Chriscuit"
+        charli.username = "CharliAndTheCockFactory"
+        cameron.username = "Cameroon"
+        josh.username = "Josh80085"
+        autumn.username = "Its_Fall"
+        sebastian.username = "Big Seb"
+        grayson.username = "G-rayson"
+        adam.username = "A.D.A.M."
+        mason.username = "Mason_Mas"
+        elijah.username = "Elijah_Woods"
+        kim.username = "KimPlausible"
+        caleb.username = "Aleb"
+        kai.username = "KaiCriesWith2Ply"
+        aaron.username = "DoubleARon"
+        naomi.username = "NaomiXMarie"
+        samantha.username = "SamFromSpaceJam"
+
+
+        ## PHONE
+        ### APPLICATIONS
+        try:
+            messenger.contacts = contacts
+            del contacts
         except NameError: pass
 
-        for kiwiiPost in kiwiiPosts:
-            try: kiwiiPost.img = kiwiiPost.image
-            except AttributeError: pass
+        # Transfer statsApp to stats_app
+        try:
+            stats_app.locked = statsApp.locked
+            del statsApp
+        except NameError: pass
 
-            kiwiiPost.img = os.path.splitext(kiwiiPost.img)[0] + ".webp"
+        # Transfer kiwiiApp to kiwii
+        try:
+            kiwii = kiwiiApp
+            kiwii.image = "images/phone/kiwii/appAssets/kiwiiIcon.webp"
+            kiwii.home_screen = "kiwiiApp"
+            kiwii.locked = kiwiiApp.locked
+            kiwii.contacts = []
+            del kiwiiApp
+        except NameError:
+            if kiwii is False:
+                kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=True)
 
-            for i in range(7, 10):
-                if renpy.loadable("images/phone/kiwii/posts/v{}/{}".format(i, kiwiiPost.img.split("/")[-1])):
-                    kiwiiPost.img = "images/phone/kiwii/posts/v{}/{}".format(i, kiwiiPost.img.split("/")[-1])
-                    break
-                    
-            try: kiwiiPost.message = kiwiiPost.caption
-            except AttributeError: pass
+        # Transfer simplrApp to simplr_app
+        try:
+            simplr_app.locked = simplrApp.locked
+        except NameError:
+            pass
 
-            try:
-                if kiwiiPost.message[0] == "[" and kiwiiPost.message[1] != "[":
-                    kiwiiPost.message = "[" + kiwiiPost.message
-            except IndexError:
-                pass
-
-            try: kiwiiPost.sentComments = kiwiiPost.comments
-            except AttributeError: pass
-
-            # Kiwii Comments
-            for comment in kiwiiPost.sentComments:
-                try: comment.message = comment.text
-                except AttributeError: pass
-                
-            # Old Kiwii Replies
-            try:
-                for reply in kiwiiPost.replies:
-                    kiwiiPost.replies.remove(reply)
-                    kiwiiPost.addReply(reply.reply, numberLikes=reply.numberLikes, mentions=reply.mentions)
-            except AttributeError: pass
-
-            # New Kiwii Replies
-            try:
-                for reply in kiwiiPost.sentComments[-1].replies:
-                    reply.disabled = False
-            except Exception: pass
-
-            try:
-                for pendingComment in kiwiiPost.pendingComments:
-                    for reply in pendingComment.replies:
-                        reply.disabled = False
-            except AttributeError: pass
-
-
-        # Contacts
+        ### MESSENGER
+        #### MESSENGER CONTRACTS
         for contact in messenger.contacts:
-            try: contact.pending_messages
+            try: contact.sent_messages = contact.sentMessages
+            except AttributeError: contact.sent_messages = []
+
+            try: contact.pending_messages = contact.pendingMessages
             except AttributeError: contact.pending_messages = []
-
-            try: contact.sentMessages
-            except AttributeError: contact.sentMessages = []
-
-            # Messages
-            try:
-                for message in contact.messages:
-                    try: message.image = os.path.splitext(message.image)[0] + ".webp"
-                    except AttributeError: pass
-
-                    try: message.image = message.image.replace("v08", "v8")
-                    except AttributeError: pass
-                    try: message.image = message.image.replace("v09", "v9")
-                    except AttributeError: pass
-
-                    try: message.message = message.msg
-                    except AttributeError: pass
-
-                    try: message.replies
-                    except AttributeError: message.replies = []
-
-                    contact.sentMessages.append(message)
-
-                    # Replies
-                    for reply in message.replies:
-                        try: reply.func
-                        except AttributeError: reply.func = None
-
-                        try: reply.disabled
-                        except AttributeError: reply.disabled = False
-            except AttributeError: pass
-
 
 
         # Transfer Contact object to NonPlayableCharacter class
@@ -454,6 +315,113 @@ label after_load:
             nora.messenger = contact_Nora
             del contact_Nora
         except NameError: pass
+
+        # Correct image paths
+        message = josh.messenger.find_message("images/text1.webp")
+        message.image = "images/v4/text1.webp"
+
+        message = amber.messenger.find_message("images/text2.webp")
+        message.image = "images/v6/text2.webp"
+
+        message = aubrey.messenger.find_message("images/text3.webp")
+        message.image = "images/v6/text3.webp"
+        del message
+
+
+        ### KIWII
+        #### KIWII POSTS
+        try: v11s1_kiwiiPost.img = "images/phone/kiwii/posts/v11/v11_autumn_kiwii.webp"
+        except NameError: pass
+        try: v11s19_kiwiiPost1.img = "images/phone/kiwii/posts/v11/v11_chloemcselfie.webp"
+        except NameError: pass
+        try: v11s19_kiwiiPost2.img = "images/phone/kiwii/posts/v11/v11_chloemcselfie.webp"
+        except NameError: pass
+        try: v11s19_kiwiiPost3.img = "images/phone/kiwii/posts/v11/v11_rileymcselfie.webp"
+        except NameError: pass
+        try: v11s24_kiwiiPost1.img = "images/phone/kiwii/posts/v11/v11_caleb.webp"
+        except NameError: pass
+        try: v11s24_kiwiiPost2.img = "images/phone/kiwii/posts/v11/v11_imrebunny.webp"
+        except NameError: pass
+        try: v11s38_kiwiiPost1.img = "images/phone/kiwii/posts/v11/v11s38_amber_kiwii.webp"
+        except NameError: pass
+        try: v11s9a_kiwiiPost1.img = "images/phone/kiwii/posts/v11/sebnaked.webp"
+        except NameError: pass
+        try: v11s9a_kiwiiPost2.img = "images/phone/kiwii/posts/v11/sebnaked.webp"
+        except NameError: pass
+        try: v13s49_kiwiiPost1.img = "images/phone/kiwii/posts/v13/aubrey_beach.webp"
+        except NameError: pass
+
+        for kiwii_post in kiwiiPosts:
+            if kiwii_post.user == "Chloe": kiwii_post.user = chloe
+            if kiwii_post.user == "Lauren": kiwii_post.user = lauren
+            if kiwii_post.user == "Aubrey": kiwii_post.user = aubrey
+            if kiwii_post.user == "Grayson": kiwii_post.user = grayson
+            if kiwii_post.user == "Riley": kiwii_post.user = riley
+            if kiwii_post.user == "MC": kiwii_post.user = mc
+            if kiwii_post.user == "Chris": kiwii_post.user = chris
+            if kiwii_post.user == "Aaron": kiwii_post.user = aaron
+            if kiwii_post.user == "Cameron": kiwii_post.user = cameron
+            if kiwii_post.user == "Samantha": kiwii_post.user = samantha
+            if kiwii_post.user == "Autumn": kiwii_post.user = autumn
+            if kiwii_post.user == "Sebastian": kiwii_post.user = sebastian
+            if kiwii_post.user == "Imre": kiwii_post.user = imre
+            if kiwii_post.user == "Lindsey": kiwii_post.user = lindsey
+            if kiwii_post.user == "Amber": kiwii_post.user = amber
+            if kiwii_post.user == "LewsOfficial": kiwii_post.user = lews_official
+            if kiwii_post.user == "Naomi": kiwii_post.user = naomi
+
+            try:
+                kiwii_post.image = kiwii_post.img
+                del kiwii_post.img
+            except AttributeError: pass
+
+            ##### KIWII SENT COMMENTS
+            for comment in kiwii_post.sentComments:
+                if comment.user == "Chloe": comment.user = chloe
+                if comment.user == "Lauren": comment.user = lauren
+                if comment.user == "Aubrey": comment.user = aubrey
+                if comment.user == "Grayson": comment.user = grayson
+                if comment.user == "Riley": comment.user = riley
+                if comment.user == "MC": comment.user = mc
+                if comment.user == "Chris": comment.user = chris
+                if comment.user == "Aaron": comment.user = aaron
+                if comment.user == "Cameron": comment.user = cameron
+                if comment.user == "Samantha": comment.user = samantha
+                if comment.user == "Autumn": comment.user = autumn
+                if comment.user == "Sebastian": comment.user = sebastian
+                if comment.user == "Imre": comment.user = imre
+                if comment.user == "Lindsey": comment.user = lindsey
+                if comment.user == "Amber": comment.user = amber
+                if comment.user == "LewsOfficial": comment.user = lews_official
+                if comment.user == "Naomi": comment.user = naomi
+
+                ###### KIWII COMMENT REPLIES
+                for reply in comment.replies:
+                    reply.disabled = False
+
+            ##### KIWII PENDING COMMENTS
+            for comment in kiwii_post.pendingComments:
+                if comment.user == "Chloe": comment.user = chloe
+                if comment.user == "Lauren": comment.user = lauren
+                if comment.user == "Aubrey": comment.user = aubrey
+                if comment.user == "Grayson": comment.user = grayson
+                if comment.user == "Riley": comment.user = riley
+                if comment.user == "MC": comment.user = mc
+                if comment.user == "Chris": comment.user = chris
+                if comment.user == "Aaron": comment.user = aaron
+                if comment.user == "Cameron": comment.user = cameron
+                if comment.user == "Samantha": comment.user = samantha
+                if comment.user == "Autumn": comment.user = autumn
+                if comment.user == "Sebastian": comment.user = sebastian
+                if comment.user == "Imre": comment.user = imre
+                if comment.user == "Lindsey": comment.user = lindsey
+                if comment.user == "Amber": comment.user = amber
+                if comment.user == "LewsOfficial": comment.user = lews_official
+                if comment.user == "Naomi": comment.user = naomi
+
+                ###### KIWII COMMENT REPLIES
+                for reply in pendingComment.replies:
+                    reply.disabled = False
 
 
         # Simplr Contacts
@@ -709,12 +677,54 @@ label after_load:
         except NameError: v14_ryan_satin = False
 
 
+        # Before main menu redundancy
+            ## Phone setup
+        phone.applications = []
+        phone.applications.append(messenger)
+        phone.applications.append(stats_app)
+        phone.applications.append(achievement_app)
+        phone.applications.append(kiwii)
+        phone.applications.append(simplr_app)
+
+            ## Set up murder mystery stats
+        chloe.stats["Competitive"] = True
+        chloe.stats["Vindictive"] = [nora]
+
+        amber.stats["Competitive"] = amber.stats["Talkative"] = True
+        amber.stats["Vindictive"] = [riley]
+
+        riley.stats["Competitive"] = riley.stats["Talkative"] = True
+
+        lindsey.stats["Competitive"] = lindsey.stats["Talkative"] = True
+        lindsey.stats["Vindictive"] = [chloe]
+
+        emily.stats["Talkative"] = False
+
+        nora.stats["Talkative"] = True
+        nora.stats["Vindictive"] = [chris, chloe]
+
+        aubrey.stats["Competitive"] = True
+
+        ryan.stats["Vindictive"] = [imre]
+
+        imre.stats["Competitive"] = False
+        imre.stats["Vindictive"] = [ryan]
+
+        chris.stats["Competitive"] = chris.stats["Talkative"] = False
+
+        charli.stats["Competitive"] = True
+        charli.stats["Talkative"] = False
+
+        josh.stats["Competitive"] = True
+
+
     show no_hard_feelings at achievementShow
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
     hide no_hard_feelings
 
     show screen phone_icon
     hide screen getaccess
+    hide screen phone
 
     if config.developer:
         show screen bugTesting_Overlay
