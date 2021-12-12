@@ -5,7 +5,6 @@
 # Render Count: 4 Unique, 31 Total
 
 label v15s9:
-
     scene v15s9_1 # TPP. MC is now walking along the hallway near the library, slight smile, mouth closed
     with dissolve
 
@@ -98,7 +97,6 @@ label v15s9:
             u "It's just as friends, right? Or do I have to pretend to be your boyfriend? *Laughs*"
 
             if v13s48_canoeing_as_date:
-                $ aubrey_fwb = False
                 $ aubrey_friend = True
 
                 scene v15s9_3e # FPP. same as v15s9_3d Aubrey has a disapointed expression, looking away from MC
