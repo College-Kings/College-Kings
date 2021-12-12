@@ -427,6 +427,7 @@ default v15_took_notes = False # not used (28/08/2021)
 default v15s14_lets_go = False
 default v15s5_mc_angry_with_rose = False # Placeholder?
 default v15s7_chloe_empathize = False
+default v15_mad_at_ms_rose = False
 default v15s18a_fraubrey = False
 default v15s18a_frryan = False
 default v15s18a_frautumnpenelope = False
