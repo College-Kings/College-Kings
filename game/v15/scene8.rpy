@@ -144,7 +144,7 @@ label v15s8:
     scene v15s8_3
     with dissolve
 
-    cl "Then that's it for today I suppose thanks for helping me again."
+    cl "Then that's it for today I suppose. Thanks for helping me again."
 
     scene v15s8_3a
     with dissolve
