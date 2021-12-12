@@ -33,7 +33,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
         u "(Hmm?) Lauren?"
 
-        scene v15s19_1e   # TPP. MC sitting on the bed facing the door, naked, yawning, netural expression [Deer House Guest Room].
+        scene v15s19_1e # TPP. MC sitting on the bed facing the door, naked, yawning, netural expression [Deer House Guest Room].
         with dissolve
 
         u "(She must be up already.)"
@@ -49,7 +49,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
         pause 0.75
 
         scene v15s19_2    # TPP. MC dressed in his costume, netural expression, mouth closed descending the stairs, there are cups, bottles of wine and beer (party trash) on the steps [Deer House Staircase].
-        with dissolve        
+        with dissolve 
 
     else : # -if sleeping on the couch
         $ v15s19_local_mc_ends_in_livingroom = True
@@ -101,7 +101,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
     menu: # -MC chooses event1 or event2
         "Help clean up": # -if Help clean
-            scene v15s19_5   # TPP. MC, smiling mouth open collects trash from the counter opposite the fridge (by the stove) while Lauren smiling mouth closed continues throwing away trash from counter by the sink, which is slightly cleaner than the preivous scene [Deer House Kitchen].
+            scene v15s19_5 # TPP. MC, smiling mouth open collects trash from the counter opposite the fridge (by the stove) while Lauren smiling mouth closed continues throwing away trash from counter by the sink, which is slightly cleaner than the preivous scene [Deer House Kitchen].
             with dissolve
 
             u "Haha, that it was."
@@ -184,7 +184,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
             u "Yeah, I am."
 
-            scene v15s19_7e   # TPP. MC, smiling mouth closed, placing the trash bag on the floor. Lauren smiling mouth closed, looking at MC. The living room is clean [Deer House Living Room].
+            scene v15s19_7e # TPP. MC, smiling mouth closed, placing the trash bag on the floor. Lauren smiling mouth closed, looking at MC. The living room is clean [Deer House Living Room].
             with dissolve
 
             # -they laugh- // TN: no dialog skipped the laugh
@@ -199,9 +199,9 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
             u "I'm sorry, Lauren... I would offer to help, but I really have to get on with my day."
 
             scene v15s19_4d
-            with dissolve        
+            with dissolve 
 
-            la "It's okay, really. I'll get it."        
+            la "It's okay, really. I'll get it." 
 
     # -Regardless-
 
@@ -257,7 +257,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
         u "Well, duty calls with the presidential campaign."
         
         scene v15s19_7h   # TPP. Lauren, smiling mouth closed following MC, smiling mouth closed, to the front door. The house is clean. [Deer House Living Room].
-        with dissolve        
+        with dissolve 
         
     else: 
         scene v15s19_8a   # FPP. Lauren by the sink, smiling, mouth closed, looking at MC while throwing trash into the trash bag she is holding. The kitcen is in the same condition is a v15s19_4d [Deer House Kitchen].
@@ -266,9 +266,9 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
         u "Well, duty calls with the presidential campaign."
 
         scene v15s19_8b   # TPP. Lauren, smiling mouth closed following MC, smiling mouth closed, to the front door. The house is still dirty from the party. [Deer House Living Room].
-        with dissolve                
+        with dissolve 
     
-    pause 0.75     
+    pause 0.75 
 
     # All scenes converge to the living room front door.
 
@@ -349,7 +349,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
     scene v15s19_9
     with dissolve
 
-    u "Yeah, thanks. Bye!"   
+    u "Yeah, thanks. Bye!" 
 
     # -MC leaves out the front door with Lauren watching him go, smiling-
     
