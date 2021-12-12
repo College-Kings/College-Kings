@@ -322,15 +322,9 @@ label after_load:
             try: kiwiiPost.sentComments = kiwiiPost.comments
             except AttributeError: pass
 
-            try: kiwiiPost.profile_picture = kiwiiPost.profilePicture
-            except AttributeError: pass
-
             # Kiwii Comments
             for comment in kiwiiPost.sentComments:
                 try: comment.message = comment.text
-                except AttributeError: pass
-
-                try: comment.profile_picture = comment.profilePicture
                 except AttributeError: pass
                 
             # Old Kiwii Replies
@@ -480,9 +474,7 @@ label after_load:
             del simplr_Emmy
         except NameError: pass
 
-        for contact in simplr_contacts + simplr_pendingContacts:
-            contact.profile_picture = "images/nonplayable_characters/{0}/{0}_profile_picture.webp".format(contact.name.lower())
-            
+        for contact in simplr_contacts + simplr_pendingContacts:            
             contact.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/1.webp".format(contact.name.lower())]
             for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, contact.name.lower(), "large_profile_pictures")):
                 contact.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(contact.name.lower(), filename) for filename in filenames]
