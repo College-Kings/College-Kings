@@ -155,7 +155,7 @@ label v15s7:
                 
                     cl "Yes, [name]. I DID have a diary."
 
-                    if chloegf or chloers: # -if ChloeGF or ChloeRS
+                    if chloers: # -if ChloeGF or ChloeRS
                         scene v15s7_1a
                         with dissolve
 
