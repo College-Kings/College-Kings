@@ -422,7 +422,7 @@ label v15s9:
 
         play sound "sounds/vibrate.mp3"
 
-        if v14s48_car_price >= 300 and v14s48_car_price <= 750 and v14_pics_with_linds or v14s48_car_price >= 300 and v14s48_car_price <= 550:
+        if (v14s48_car_price >= 300 and v14s48_car_price <= 750 and v14_pics_with_linds) or (v14s48_car_price >= 300 and v14s48_car_price <= 550):
 
         # -if MC chose to sell the car for between $300 and $750 and Lindsey is in the photos OR MC chose to sell the car for between $300 and $550 and Lindsey is not in the photos
             $ lindsey.messenger.newMessage("Hey! Somebody wants to check out the car and they sound really interested!", queue=False)
