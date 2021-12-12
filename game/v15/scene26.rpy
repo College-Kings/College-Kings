@@ -302,7 +302,7 @@ label v15s26:
             u "Can we just... not watch it?"
 
             scene v15s26_15a
-            with dissolve            
+            with dissolve 
 
             ri "But-"
 
@@ -371,7 +371,7 @@ label v15s26:
     scene v15s26_18 # FPP View of the theater screen, which is showing credits (get with Steve and Cheex for the names. I suggest listing me, Jeffly777 or Jeff Lee, as director, as both patron and transcriber)
     with dissolve
 
-    pause
+    pause 3
 
     scene v15s26_18a # FPP Same angle as 18, view of the screen showing a pastoral view, with the title "The Poly Dilemma" in pretty script
     with dissolve
@@ -391,25 +391,25 @@ label v15s26:
         scene v15s26_20 # TPP Show MC, Riley, and Aubrey all cuddling and holding hands, lit up by the movie screen
         with dissolve
 
-        pause
+        pause 0.75
     
-    elif aubrey_tamed and (rileyrs = False):
+    elif aubrey_tamed and not rileyrs:
         scene v15s26_20a # TPP Show MC cuddling and holding hands with Aubrey, while Riley sits forward and watches the movie, all lit up by the movie screen
         with dissolve
 
-        pause
+        pause 0.75
 
-    elif rileyrs and (aubrey_tamed = False):
+    elif rileyrs and not aubrey_tamed:
         scene v15s26_20b # TPP Show MC cuddling and holding hands with Riley, while Aubrey leans back on the couch watching the movie, looking a little bored, all lit up by the movie screen
         with dissolve
 
-        pause
+        pause 0.75
 
     else:
         scene v15s26_20c # TPP Show MC, Riley, and Aubrey all leaning back on the couch watching the movie, all lit up by the movie screen
         with dissolve
 
-        pause
+        pause 0.75
 
     scene v15s26_21 # FPP MC picking up the popcorn bucket to set it in his lap
     with dissolve

@@ -17,12 +17,12 @@ label v15s37:
         scene v15s37_2a # TPP. Show MC on his phone his other hand pressing on part of the phone, slight smile, mouth closed.
         with dissolve
         
-        pause  
+        pause 0.75
 
         scene v15s37_2b # TPP. Show MC pressing a different space on part of his phone, slight smile, mouth closed.
         with dissolve 
 
-        pause  
+        pause 0.75
 
         scene v15s37_2c # TPP. Show MC putting his phone away, slight smile, mouth closed.
         with dissolve
