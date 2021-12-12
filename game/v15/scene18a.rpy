@@ -262,6 +262,7 @@ label v15s18a_Aubrey:
 
     menu:
         "Mention the list":
+            $ v15s18_mention_list_aubrey = True
             $ add_point(KCT.TROUBLEMAKER)
             scene v15s18aaub_2
             with dissolve
