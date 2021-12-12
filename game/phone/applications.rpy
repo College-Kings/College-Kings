@@ -15,6 +15,10 @@ init python:
                 return os.path.splitext(self._image)[0] + "Notification" + os.path.splitext(self._image)[1]
             return self._image
 
+        @image.setter
+        def image(self, value):
+            self._image = value
+
         def unlock(self):
             self.locked = False
 
