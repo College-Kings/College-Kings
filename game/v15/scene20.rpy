@@ -40,7 +40,7 @@ label v15s20:
                 scene v15s20_5a # FPP. Same as v15s20_5, Chloe slight smile, mouth open.
                 with dissolve
 
-                cl "Of course, haha. Sorry! My mind is just like, completely focused on this meeting with the dean."
+                cl "Of course, haha. Sorry! My mind is just like, completely focused on this meeting with the Dean."
 
                 scene v15s20_6 # TPP. Show MC and Chloe having a quick kiss.
                 with dissolve

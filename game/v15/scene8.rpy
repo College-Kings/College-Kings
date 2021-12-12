@@ -157,12 +157,12 @@ label v15s8:
     cl "No, I uh- I need to make a few phone calls."
 
     if "diary" in freeroam12stolen or ("cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen):
-        cl "And I still have to report the robbery to the dean, so..."
+        cl "And I still have to report the robbery to the Dean, so..."
 
         scene v15s8_3a
         with dissolve
 
-        u "(Fuck! The dean? This is going a bit far...)"
+        u "(Fuck! The Dean? This is going a bit far...)"
 
         u "Okay, I'll leave you to it. I'm here for you if you need anything."
 
