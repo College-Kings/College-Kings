@@ -431,12 +431,10 @@ label v15s9:
             if v14s48_car_description == CarDescription.LIE: # PLACEHOLDER - CHECK WITH OSCAR THE VARIABLE IN THE APP!
                 $ lindsey.messenger.addReply("See? Lying works in mysterious ways, haha OMW", func=None)
 
-                call screen phone
-
             else:
                 $ lindsey.messenger.addReply("Honesty is the best policy! Heading there now.", func=None)
 
-                call screen phone
+            call screen phone
 
             scene v15s9_1f
             with dissolve
