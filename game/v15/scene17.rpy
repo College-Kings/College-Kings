@@ -210,7 +210,7 @@ label v15s17:
 
                 u "Ha... Good one."
 
-            elif v15s9_mad_at_ms_rose:
+            elif v15_mad_at_ms_rose:
 
                 scene v15s17_4
                 with dissolve

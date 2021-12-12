@@ -172,6 +172,7 @@ label v15s5:
         
         "Get angry":
             $ add_point(KCT.BOYFRIEND)
+            $ v15_mad_at_ms_rose = True
             scene v15s5_4b
             with dissolve
             

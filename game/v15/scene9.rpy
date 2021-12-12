@@ -491,7 +491,7 @@ label v15s9:
 
             jump v15s12
 
-    elif msrosers and v12_msrose_sex and v15s9_mad_at_ms_rose:
+    elif v15_mad_at_ms_rose:
         scene v15s9_1h
         with dissolve
 
