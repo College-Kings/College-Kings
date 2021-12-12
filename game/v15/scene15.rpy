@@ -3,6 +3,10 @@
 # Characters: Ms. Rose (Outfit: 1), MC (Outfit: 5)
 # Time: Afternoon
 
+# SCENE 16: MC leaves mad or not mad
+# Locations: Outside Ms. Rose's house on the way to Lauren's party
+# Characters: MC (Outfit: 5)
+# Time: Evening
 
 label v15s15:
     scene v15s15_1 # TPP. Show MC and Ms. Rose entering the dining room, Ms. Rose slight smile, MC slightly annoyed, mouths closed
@@ -20,11 +24,9 @@ label v15s15:
 
     menu:
         "Be polite":
-            
             u "Sounds like I'm getting a three-course meal. *Chuckles* I'm looking forward to it."
 
         "Be impatient":
-            
             u "Okay, but hurry. I'm actually starting to starve..."
 
     scene v15s15_2
@@ -134,9 +136,35 @@ label v15s15:
             with dissolve
 
             ro "[name]! Wait!"
+            
+            ###Scene 16
+            scene v15s16_1 # TPP. Show MC walking out of Ms. Rose's house, MC mad, mouth closed.
+            with dissolve
+
+            u "(I know she was trying, but- Seriously???"
+
+            scene v15s16_2 # TPP. Show MC starting to walk down sidewalk towards Lauren's party, MC mad, mouth closed.
+            with dissolve
+
+            u "(She might have fucked up my life by giving me a drink that night.)"
+
+            scene v15s16_3 # TPP. Show MC further down the sidewalk, MC mad, mouth closed.
+            with dissolve
+
+            u "(If they find any trace of that drug in my system, I'm done for...)"
+
+            scene v15s16_4 # TPP. MC stopped in place with his eyes closed, MC neutral face, mouth closed.
+            with dissolve
+
+            u "*Sighs* (Now it's time for Lauren's party... Game face on, [name].)"
+
+            scene v15s16_5 # TPP. MC starting to walk again, MC neutral face, mouth closed.
+            with dissolve
+
+            u "(Time for shopping.)"
+            jump v15s17
 
         "Lick the honey":
-
             u "(Don't mind if I do...)"
 
             scene v15s15_11 # TPP. Show MC licking the honey off Ms. Rose's boobs, Ms. Rose making a sexy face, mouth open as she grabs MC's hair
@@ -460,11 +488,9 @@ label v15s15:
 
             menu:
                 "Compliment":
-                    
                     u "I enjoyed it a lot more than I thought I would, actually. It might just be my new favorite meal. *Chuckles*"
 
                 "Still angry":
-                    
                     u "It was a good start, but I'm still not entirely happy with you."
 
             scene v15s15_29a
@@ -492,4 +518,30 @@ label v15s15:
 
             pause 0.75
 
-            jump v15s16
+            ###Scene 16
+            scene v15s16_1a # TPP. Same as v15s16_1, MC slight smile, mouth closed.
+            with dissolve
+
+            u "(Phew! She drives me absolutely wild... Haha.)"
+
+            scene v15s16_2a # TPP. Same as v15s16_2, MC slight smile, mouth closed.
+            with dissolve
+
+            u "(Something about mature women and their cougar-ish ways...)"
+
+            scene v15s16_3a # TPP. Same as v15s16_3, MC slight smile, mouth closed.
+            with dissolve
+
+            u "(Okay, snap out of it, [name]. We've got a party to get to!)"
+
+            scene v15s16_4a # TPP. Same as v15s16_4, MC stopped in place with his eyes open, MC slight smile, mouth closed.
+            with dissolve
+
+            u "(And a costume to find...)"
+
+            scene v15s16_5a # TPP. Same as v15s16_5, MC worried smile, mouth closed.
+            with dissolve
+
+            u "(And a gift to buy... Fuck.)"
+
+            jump v15s17
