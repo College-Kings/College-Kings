@@ -470,3 +470,4 @@ default v15s24_alcohol = False
 default v15_ph_riley_upset = False  # placeholder ?? (set in s26?? ; read in v15s27)
 default autumnloyal = False 
 default autumnrs = False
+default v15s36_not_good_idea = False 

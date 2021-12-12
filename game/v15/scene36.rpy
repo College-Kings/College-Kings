@@ -369,6 +369,8 @@ label v15s36:
                     with dissolve
 
             "It's not a good idea.":
+                $ v15s36_not_good_idea = True
+
                 scene v15s36_5a
                 with dissolve
 
