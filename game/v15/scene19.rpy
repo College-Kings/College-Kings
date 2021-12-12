@@ -237,7 +237,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
             $ lindsey.messenger.addReply("Okay, sounds good.")
 
         else: # -if helping Lindsey with VIP club night
-            $ lindsey.messenger.newMessage("Hey, can you call the club and book the VIP package, please? See what you can do in terMs. of them serving us alcohol and negotiating the price <3 Thank you!", queue=False)
+            $ lindsey.messenger.newMessage("Hey, can you call the club and book the VIP package, please? See what you can do in terms of them serving us alcohol and negotiating the price <3 Thank you!", queue=False)
             $ lindsey.messenger.addReply("Okay, I'll put on the charm ;) I'll let you know how it goes")
 
         label v15s19_PhoneContinueLindsey:
