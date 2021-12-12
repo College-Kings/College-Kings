@@ -452,3 +452,4 @@ default autumnrs = False
 default v15s18_mention_list = False
 default v15_autumn_freemug = False
 default v15_autumn_lunchbreak = False
+default v15_autumn_smoke = False

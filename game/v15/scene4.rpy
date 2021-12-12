@@ -1352,6 +1352,7 @@ label v15s4:
 
         menu:
             "Smoke weed":
+                $ v15_autumn_smoke = True
                 scene v15s4_59f
                 with dissolve
 
