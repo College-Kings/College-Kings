@@ -202,7 +202,7 @@ label v15s1:
 
         menu:
             "They were on a break":
-                $ mc.quirks["pop_culture"] = True
+                # $ mc.quirks["pop_culture"] = True # Being re-evaluated
                 $ add_point(KCT.BRO)
 
                 u "They were on a break, bro..."
@@ -218,7 +218,7 @@ label v15s1:
                 u "Haha."
 
             "Who?":
-                $ mc.quirks["boomer"] = True
+                # $ mc.quirks["boomer"] = True # Being re-evaluated
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Who?"
@@ -254,7 +254,7 @@ label v15s1:
 
         menu:
             "Of course I know":
-                $ mc.quirks["pop_culture"] = True
+                # $ mc.quirks["pop_culture"] = True # Being re-evaluated
                 $ add_point(KCT.BRO)
 
                 u "*Laughs* Yeah, of course I know"
@@ -275,7 +275,7 @@ label v15s1:
                 imre "*Sighs*"
 
             "A monkey?":
-                $ mc.quirks["boomer"] = True
+                # $ mc.quirks["boomer"] = True # Being re-evaluated
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "A monkey? What? *Laughs*"
@@ -407,17 +407,17 @@ label v15s1:
 
             imre "But there's always a chance, dude. Just like Ross and Rachel."
 
-            if mc.quirks["pop_culture"]:
-                scene v15s1_3o
-                with dissolve
+            # if mc.quirks["pop_culture"]: # Being re-evaluated
+                # scene v15s1_3o
+                # with dissolve
 
-                u "*Chuckles*"
+                # u "*Chuckles*"
 
-            elif mc.quirks["boomer"]:
-                scene v15s1_3o # FPP. same as v15s1_3m Imre has a smug looking expression mouth is still closed
-                with dissolve
+            # elif mc.quirks["boomer"]: # Being re-evaluated
+            scene v15s1_3o # FPP. same as v15s1_3m Imre has a smug looking expression mouth is still closed
+            with dissolve
 
-                u "*Sighs*"
+            u "*Sighs*"
 
             scene v15s1_3l
             with dissolve
