@@ -313,7 +313,7 @@ label v15s7:
                     scene v15s7_1c
                     with dissolve
 
-                    cl "What am I supposed to do? I literally got robbed, ha! Do I go into a full investigation, or is that gonna cause me even more stress?"
+                    cl "What am I supposed to do? I literally got robbed! Do I go into a full investigation, or is that gonna cause me even more stress?"
 
                     scene v15s7_1
                     with dissolve
