@@ -195,7 +195,6 @@ label v14s45a:
                 u "Oh wow. I'm scared."
 
             "Be supportive":
-                $ AmberLoyal = True
                 $ add_point(KCT.BOYFRIEND)
 
                 scene v14s45a_1d

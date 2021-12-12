@@ -507,6 +507,7 @@ label v14s25:
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.BRO)
             $ v14_amber_clean = True
+            $ AmberLoyal = True
             scene v14s25_8k
             with dissolve
 
