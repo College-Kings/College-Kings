@@ -99,7 +99,7 @@ label v15s12:
 
         li "*Scoffs* She's trying to trick me [name], so that she can publicly embarrass me... Can you believe that?"
 
-        if v14_help_chloe and v15s8_chloe_pb_DamageLindseyRep: # -if MC is helping Chloe and chose the Embarrass Lindsey option on Chloe's planning board
+        if v15s8_chloe_pb_DamageLindseyRep: # -if MC is helping Chloe and chose the Embarrass Lindsey option on Chloe's planning board
             scene v15s12_4c # TPP. MC worried, mouth closed [Checkpoint C].
             with dissolve
 
