@@ -98,7 +98,6 @@ label v15s9:
             u "It's just as friends, right? Or do I have to pretend to be your boyfriend? *Laughs*"
 
             if v13s48_canoeing_as_date:
-                $ aubrey_tamed = False
                 $ aubrey_fwb = False
                 $ aubrey_friend = True
 
@@ -123,8 +122,6 @@ label v15s9:
                 au "Ha..."
 
             else:
-                $ aubrey_fwb = True
-
                 scene v15s9_3f # FPP. same as v15s9_3d Aubrey puts a hand to her chest in relief, head tilted slightly upward and looking away, facial expression is that of relief, slight smile, mouth open
                 with dissolve
 
@@ -223,8 +220,6 @@ label v15s9:
                 with dissolve
 
             else:
-                $ aubrey_fwb = True
-
                 scene v15s9_3m # FPP. same as v15s9_3f Aubreys head is tilted slightly to the side, looking at Mc like a lost puppy, slight smile mouth closed with a slightly curled bottom lip
                 with dissolve
 

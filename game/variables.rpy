@@ -411,8 +411,7 @@ default v15s12_lindsey_pb_fakeId = False # True, FakeIDl False, Limo/VIP rental
 default v15s12_lindsey_pb_wouldYouRather = False # True, Play Would You Rather; False, Play Who's Most Likely To
 default v15_s12_lindsey_pb_inviteSebastian = False # True, Invite Sebastian; False, Invite Grayson
 
-default aubrey_friend = False 
-default aubrey_fwb = False 
+default aubrey_friend = False
 default aubrey_tamed = False 
 default dog_name = "Blue"
 default v15_lauren_gift = None
