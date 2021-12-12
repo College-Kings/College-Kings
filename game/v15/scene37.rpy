@@ -27,13 +27,13 @@ label v15s37:
         scene v15s37_2c # TPP. Show MC putting his phone away, slight smile, mouth closed.
         with dissolve
 
-    if not autumntrust:
+    if not AutumnTrust:
 
         scene v15s37_3 # TPP. Show MC walking further down the street, slight smile, mouth closed
         with dissolve
 
         u "(That was a fun night, especially with Autumn there. I'm glad I'm getting to know her better.)"
-    elif autumntrust and v15s36_not_good_idea:
+    elif AutumnTrust and v15s36_not_good_idea:
         scene v15s37_3
         with dissolve
 
@@ -41,7 +41,7 @@ label v15s37:
 
         u "(Not right now anyway.)"
 
-    elif autumntrust and v15s36_not_good_idea and laurenrs: 
+    elif AutumnTrust and v15s36_not_good_idea and laurenrs: 
         scene v15s37_3
         with dissolve
 
@@ -51,7 +51,7 @@ label v15s37:
 
         u "(That would be wrong on so many levels... Right?)"
 
-    elif autumntrust and not v15s36_not_good_idea and laurenrs:
+    elif AutumnTrust and not v15s36_not_good_idea and laurenrs:
         scene v15s37_3
         with dissolve
 
@@ -59,7 +59,7 @@ label v15s37:
 
         u "(I can't mess things up with Lauren, no matter how much I like her sister.)"
 
-    elif autumntrust and not v15s36_not_good_idea and not laurenrs:
+    elif AutumnTrust and not v15s36_not_good_idea and not laurenrs:
         scene v15s37_3
         with dissolve
 

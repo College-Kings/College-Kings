@@ -453,3 +453,5 @@ default v15_autumn_smoke = False
 default autumnloyal = False 
 default autumnrs = False
 default v15s36_not_good_idea = False 
+default aubrey_riley_awkward = False
+default riley_loyal = False
