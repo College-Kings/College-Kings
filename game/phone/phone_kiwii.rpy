@@ -28,8 +28,8 @@ init python:
 
             kiwiiPosts.append(self)
 
-            kiwiiApp.unlock()
-            kiwiiApp.notification = True
+            kiwii.unlock()
+            kiwii.notification = True
 
         @property
         def username(self):
@@ -60,7 +60,7 @@ init python:
                 self.pendingComments = []
                 self.sentComments.append(comment)
             
-            kiwiiApp.notification = True
+            kiwii.notification = True
             return comment
 
         def addReply(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
@@ -76,7 +76,7 @@ init python:
                 message = self.newComment(mc, "", queue=False)
                 message.replies.append(reply)
 
-            kiwiiApp.notification = True
+            kiwii.notification = True
             return reply
 
         def selectedReply(self, reply):
@@ -252,7 +252,7 @@ screen kiwiiApp():
     tag phone_tag
     zorder 200
 
-    $ kiwiiApp.notification = False
+    $ kiwii.notification = False
 
     use kiwiiTemplate:
 
