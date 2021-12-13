@@ -630,7 +630,7 @@ label v15s12_PhoneContinue:
 
     u "(I'm a man on a mission. Find Lauren a gift and find a costume. Easy.)"
     
-    if msrosers and v15s5_mc_angry_with_rose: # -if RoseRs and MC acted angry in v15.5
+    if ms_rose.relationship.value >= Relationship.FWB.value and v15s5_mc_angry_with_rose: # -if RoseRs and MC acted angry in v15.5
         # -Transition to Scene 14-
         jump v15s14
 

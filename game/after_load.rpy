@@ -179,6 +179,9 @@ label after_load:
             if lindseyrs: lindsey.relationship = Relationship.FWB
         except NameError: pass
         try:
+            if msrosers: ms_rose.relationship = Relationship.FWB
+        except NameError: pass
+        try:
             if penelopers: penelope.relationship = Relationship.LIKES
         except NameError: pass
         try:
@@ -652,8 +655,6 @@ label after_load:
         except NameError: v11_riley_roomate = False
         try: v11s25_beer
         except NameError: v11s25_beer = True
-        try: msrosers
-        except NameError: msrosers = False
         try: v11_solo_question
         except NameError: v11_solo_question = False
         try: v11_kiss_nora

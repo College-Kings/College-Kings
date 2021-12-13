@@ -56,7 +56,7 @@ label v14s17:
 
     u "That's pretty messed up to call Lauren the class clown behind her back..."
 
-    if msrosers and joinwolves: #sanitizing pathbuilder input
+    if ms_rose.relationship.value >= Relationship.FWB.value and joinwolves: #sanitizing pathbuilder input
         scene v14s17_4c
         with dissolve
 

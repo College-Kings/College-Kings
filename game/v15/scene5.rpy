@@ -1,4 +1,4 @@
-# SCENE 5: If MsRoseRs, Drug Testing Announcement
+# SCENE 5: If Ms. Rose Rs, Drug Testing Announcement
 # Locations: Campus/Classroom
 # Characters: MC (Outfit: 5), Ms. Rose (Outfit: 1)
 # Time: Morning
