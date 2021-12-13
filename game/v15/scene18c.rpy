@@ -2251,7 +2251,7 @@ label v15s18c_chris_penelope:
 
                 pe "Sorry, I just don't feel comfortable."
 
-            elif kct == "confident" or penelopeloyal: # or penelope.relationship == Relationship.LOYAL:
+            elif kct == "confident" or penelope.relationship == Relationship.LOYAL:
                 scene v15s18c_chpe_5f # FPP. Same as v15s18c_chpe_5, Penelope flirty expression, mouth open
                 with dissolve
 

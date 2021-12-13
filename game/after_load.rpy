@@ -163,6 +163,9 @@ label after_load:
         try:
             if kourtneyrs: kourtney.relationship = Relationship.LIKES
         except NameError: pass
+        try:
+            if penelopeloyal: penelope.relationship == Relationship.LOYAL
+        except NameError: pass
 
 
         for character in (

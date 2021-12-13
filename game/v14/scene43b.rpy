@@ -276,7 +276,7 @@ label v14s43b:
 
     menu:
         "Work with Penelope":
-            if penelopeloyal:
+            if penelope.relationship == Relationship.LOYAL:
                 $ add_point(KCT.BOYFRIEND)
             else:
                 $ add_point(KCT.TROUBLEMAKER)
@@ -314,7 +314,7 @@ label v14s43b:
 
             u "No, no, no. Me and you."
 
-            if penelopeloyal:
+            if penelope.relationship == Relationship.LOYAL:
                 scene v14s43b_8b
                 with dissolve
 

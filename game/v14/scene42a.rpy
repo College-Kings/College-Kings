@@ -79,7 +79,7 @@ label v14s42a:
     menu:
         "I wouldn't have changed a thing":
             $ add_point(KCT.BOYFRIEND)
-            $ penelopeloyal = True
+            $ penelope.relationship = Relationship.LOYAL
 
             scene v14s42a_2
             with dissolve
