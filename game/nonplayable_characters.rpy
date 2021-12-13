@@ -198,7 +198,7 @@ default iris = NonPlayableCharacter("Iris")
 default samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam")
 default emmy = NonPlayableCharacter("Emmy")
 default aryssa = NonPlayableCharacter("Aryssa") #Relationship progression: LIKES
-defauly kourtney = NonPlayableCharacter("Kourtney") #Relationship progression: LIKES
+default kourtney = NonPlayableCharacter("Kourtney") #Relationship progression: LIKES
 
 default wolf = NonPlayableCharacter("Wolf")
 default trainer = NonPlayableCharacter("Trainer")
