@@ -834,7 +834,7 @@ label v9s16_emilyDoggy:
 
     stop music fadeout 3
     
-    $ v9_sex_w_em = True
+    $ sceneList.add("v9_emily")
     
     if joinwolves:
         jump v9_thur_night_aft_em_w
@@ -843,7 +843,7 @@ label v9s16_emilyDoggy:
         jump v9_thur_night_aft_em_a
 
 label v9_thur_night_aft_em_w:
-    if v9_sex_w_em:
+    if "v9_emily" in sceneList:
         scene v9emi3 # TPP. Show MC on his bed on his phone looking exhausted.
         with fade
 
@@ -890,7 +890,7 @@ label v9_thur_night_aft_em_w:
     jump v9_room_fri_morn
 
 label v9_thur_night_aft_em_a:
-    if v9_sex_w_em:
+    if "v9_emily" in sceneList:
         scene v9emi6 # TPP. Show MC on his bed on his phone looking exhausted.
         with fade
 

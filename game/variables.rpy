@@ -192,7 +192,6 @@ default lindseyfirstkiss = False
 default playCoolWLins = False
 default the_king = False
 default v9_brawl_hesitant = False
-default v9_sex_w_em = False
 default v9_sex_with_riley = False
 
 # 10.0
