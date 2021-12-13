@@ -133,7 +133,6 @@ label v15s18b:
         u "(I hope she likes it...)"
 
     if v15_lauren_gift == "$50 gift card":
-
         scene v15s18b_3c
         with dissolve
 
@@ -150,11 +149,13 @@ label v15s18b:
         u "No, haha. I just thought, what do you get the girl who already has everything?"
 
         u "A gift card is useful, you know, for a college student. You can get books or whatever..."
+
         if not laurenrs:
             scene v15s18b_3c
             with dissolve
 
             la "Yeah. That's true, I guess."
+
         else:
             scene v15s18b_3h # TPP. Lauren holding the $50 gift card, Lauren unamused face, mouth open.
             with dissolve 
@@ -191,7 +192,6 @@ label v15s18b:
 
             menu:
                 "Apologize.":
-
                     scene v15s18b_5c # FPP. MC looking at Lauren, Lauren looking at MC, Lauren slight frown, mouth closed.
                     with dissolve
                     

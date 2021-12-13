@@ -3,9 +3,7 @@
 # Characters: CHRIS (Outfit: Boxer costume), LAUREN (Outfit: Spider Costume), IMRE (Outfit: Cowboy costume), MC (Outfit: Stripper costume)
 # Time: 
 
-
 label v15s18d:
-
     scene v15s18d_1 # TPP. Show Lauren holding the door open for all the guest to leave, Lauren slight smile, mouth closed.
     with fade (1,0,1)
 
