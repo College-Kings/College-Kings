@@ -694,7 +694,7 @@ label v12_nora_sex:
         scene v12nos37a # FPP. Same as v12nos38, Nora smiling, mouth closed
         with dissolve
 
-        if v12_lindsey_sex and v12_nora_sex and v12_lauren_sex and v12_msrose_sex:
+        if v12_lindsey_sex and v12_nora_sex and "v12_lauren" in sceneList and "v12_rose" in sceneList:
             $ grant_achievement("city_of_love")
 
         u "You too..."

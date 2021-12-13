@@ -764,7 +764,8 @@ label v11s4_PhoneContinueJosh1:
             jump v11_thurs_night_room
 
         "Act like family":
-            $ v11_fucked_candy = True
+            $ sceneList.add("v11_candy")
+            $ candy.relationship = Relationship.FWB
             scene v11swc16e # TPP Same angle and characters as v11swc16, MC puts one hand on his waist, stands in a faminine way, and holds his other hand up, wrist limp
             with dissolve
             u "She's my cousin, dude."

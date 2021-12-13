@@ -21,7 +21,7 @@ label v14s27:
 
     em "Hey, [name]."
 
-    if v13_emilysex:
+    if "v13_emily" in sceneList:
         scene v14s27_2a # FPP. Same as v14s27_2, Emily nervous smile, mouth closed.
         with dissolve
 

@@ -306,7 +306,7 @@ label v14s09:
 
     u "(Oh and Riley's...)"
 
-    if v13_FirstThreesome:
+    if "v14_threesome" in sceneList:
         menu:
             "Revenge against Charli":
                 u "(Charli was the worst, so getting revenge must have felt amazing.)"
@@ -470,7 +470,7 @@ label v14s09:
 
     u "(Lauren's favorite part was definitely...)"
 
-    if v12_lauren_sex:
+    if "v12_lauren" in sceneList:
         menu:
             "Bike Tour":
                 u "(The bike tour. Lauren loves nature and we had a couple wild encounters, haha.)"

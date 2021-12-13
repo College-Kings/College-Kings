@@ -5,18 +5,16 @@ init python:
         DATE = 2
         LIKES = 3
         KISS = 4
-        FWB = 5
-        GIRLFRIEND = 6
+        LOYAL = 5
+        FWB = 6
+        TAMED = 7
+        GIRLFRIEND = 8
         AWKWARD = 10
         BRO = 11
         FORGIVE = 12
         FUN = 13
-        LOYAL = 14
-        MAD = 15
-        PUBLIC = 16
-        SAD = 17
-        TAMED = 18
-        TRUST = 19
+        MAD = 14
+        TRUST = 15
 
     class NonPlayableCharacter:
         """
@@ -162,7 +160,7 @@ init python:
 
 default chloe = NonPlayableCharacter("Chloe", "Chloe101")
 default amber = NonPlayableCharacter("Amber", "Amber_xx")
-default penelope = NonPlayableCharacter("Penelope", "Penelopeeps")
+default penelope = NonPlayableCharacter("Penelope", "Penelopeeps") #Relationship progression: LIKES, LOYAL
 default riley = NonPlayableCharacter("Riley", "RileyReads")
 default lindsey = NonPlayableCharacter("Lindsey", "LindsLou")
 default lauren = NonPlayableCharacter("Lauren", "LoLoLauren")
@@ -177,7 +175,7 @@ default charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
 default cameron = NonPlayableCharacter("Cameron", "Cameroon")
 default josh = NonPlayableCharacter("Josh", "Josh80085")
 default julia = NonPlayableCharacter("Julia")
-default evelyn = NonPlayableCharacter("Evelyn") #Relationship progression: DATE ("evelyndate"), LIKES ("evelynrs"), KISS
+default evelyn = NonPlayableCharacter("Evelyn") #Relationship progression: DATE, LIKES, KISS
 default autumn = NonPlayableCharacter("Autumn", "Its_Fall")
 default sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
 default grayson = NonPlayableCharacter("Grayson", "G-rayson")
@@ -199,6 +197,8 @@ default beth = NonPlayableCharacter("Beth")
 default iris = NonPlayableCharacter("Iris")
 default samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam")
 default emmy = NonPlayableCharacter("Emmy")
+default aryssa = NonPlayableCharacter("Aryssa") #Relationship progression: LIKES
+default kourtney = NonPlayableCharacter("Kourtney") #Relationship progression: LIKES
 
 default wolf = NonPlayableCharacter("Wolf")
 default trainer = NonPlayableCharacter("Trainer")

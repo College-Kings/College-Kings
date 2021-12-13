@@ -157,6 +157,15 @@ label after_load:
         try:
             if evelynrs: evelyn.relationship = Relationship.LIKES
         except NameError: pass
+        try:
+            if aryssars: aryssa.relationship = Relationship.LIKES
+        except NameError: pass
+        try:
+            if kourtneyrs: kourtney.relationship = Relationship.LIKES
+        except NameError: pass
+        try:
+            if penelopeloyal: penelope.relationship == Relationship.LOYAL
+        except NameError: pass
 
 
         for character in (
@@ -327,13 +336,19 @@ label after_load:
 
         # Correct image paths
         message = josh.messenger.find_message("images/text1.webp")
-        message.image = "images/v4/text1.webp"
+        try:
+            message.image = "images/v4/text1.webp"
+        except AttributeError: pass
 
         message = amber.messenger.find_message("images/text2.webp")
-        message.image = "images/v6/text2.webp"
+        try:
+            message.image = "images/v6/text2.webp"
+        except AttributeError: pass
 
         message = aubrey.messenger.find_message("images/text3.webp")
-        message.image = "images/v6/text3.webp"
+        try:
+            message.image = "images/v6/text3.webp"
+        except AttributeError: pass
         del message
 
 
@@ -486,6 +501,38 @@ label after_load:
         try:
             if v14s51_take_diary: freeroam12stolen.add("diary")
         except NameError: pass
+        
+        try:
+            if v11_fucked_candy: sceneList.add("v11_candy")
+        except NameError: pass
+        try:
+            if v11_msrose_scene: sceneList.add("v11_rose")
+        except NameError: pass
+        try:
+            if v12_lauren_sex: sceneList.add("v12_lauren")
+        except NameError: pass
+        try:
+            if v12_msrose_sex: sceneList.add("v12_rose")
+        except NameError: pass
+        try:
+            if v13_emilysex: sceneList.add("v13_emily")
+        except NameError: pass
+        try:
+            if v13_emmysex: sceneList.add("v13_emmy")
+        except NameError: pass
+        try:
+            if v13_FirstThreesome: sceneList.add("v14_threesome")
+        except NameError: pass
+        try:
+            if v14_amber_sex: sceneList.add("v14_amber")
+        except NameError: pass
+        try:
+            if v14_jenny_sex: sceneList.add("v14_jenny")
+        except NameError: pass
+        try:
+            if v14_samantha_sex: sceneList.add("v14_samantha")
+        except NameError: pass
+
 
         # v12 Renpy Fixes:
         chloe.name = "Chloe"
@@ -526,8 +573,6 @@ label after_load:
         except NameError: v12s7_endtalkList = []
         try: v12s7_killList
         except NameError: v12s7_killList = set()
-        try: v12_msrose_sex
-        except NameError: v12_msrose_sex = False
         try: v11_lindsey_run
         except NameError: v11_lindsey_run = False
         try: v12_help_chris
@@ -540,8 +585,6 @@ label after_load:
         except NameError: v12s7_aubrey_moved = False
         try: v12_lindsey_sex
         except NameError: v12_lindsey_sex = False
-        try: v12_lauren_sex
-        except NameError: v12_lauren_sex = False
         try: v12_lauren_points
         except NameError: v12_lauren_points = 0
         try: v12s32_Aubrey_Boost
@@ -576,8 +619,6 @@ label after_load:
         except NameError: v11_josh_nightclub = False
         try: candyLike
         except NameError: candyLike = 0
-        try: v11_fucked_candy
-        except NameError: v11_fucked_candy = False
         try: v11_aubrey_blue_outfit
         except NameError: v11_aubrey_blue_outfit = False
         try: v11_tease_amber
@@ -606,8 +647,6 @@ label after_load:
         except NameError: v11_linds_inv_imre = False 
         try: v11_sit_with_lauren
         except NameError: v11_sit_with_lauren = True
-        try: v11_msrose_scene
-        except NameError: v11_msrose_scene = False
         try: v11_overtake_points
         except NameError: v11_overtake_points = 0
         try: v11_hp_points
@@ -654,10 +693,6 @@ label after_load:
         except NameError: v13_help_chloe = False
         try: emmyrs
         except NameError: emmyrs = False
-        try: kourtneyrs
-        except NameError: kourtneyrs = False
-        try: aryssars
-        except NameError: aryssars = False
         try: v13_emmy_points
         except NameError: v13_emmy_points = 0
         try: v13_imre_disloyal
@@ -670,10 +705,6 @@ label after_load:
         except NameError: v13s9_go_to_concert = False
         try: v13s41_lindsey_points
         except NameError: v13s41_lindsey_points = 0
-        try: v13_emmysex
-        except NameError: v13_emmysex = False
-        try: v13_emilysex
-        except NameError: v13_emilysex = False
         try: v13s20_bleach_suitcase
         except NameError: v13s20_bleach_suitcase = False
         try: laurenrs_v11aubrey

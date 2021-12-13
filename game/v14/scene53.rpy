@@ -600,7 +600,7 @@ label v14s53:
             menu:
                 "Take your pants off":
                     $ add_point(KCT.TROUBLEMAKER)
-                    $ v14_samantha_sex = True
+                    $ sceneList.add("v14_samantha")
                     
                     label v14s53_sg:
 

@@ -5,7 +5,7 @@
 
 label v13_emmy_sex:
 
-    $ v13_emmysex = True
+    $ sceneList.add("v13_emmy")
 
     play music "music/v13/Track Scene 26.mp3" fadein 2
 

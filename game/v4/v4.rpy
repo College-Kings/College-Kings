@@ -2418,6 +2418,7 @@ label continueab:
 
             menu:
                 "Alright, just for a bit":
+                    $ chloemad = True
                     scene s357a
                     with dissolve
 
@@ -2654,7 +2655,6 @@ label continueab:
 
     menu:
         "Amber":
-
             scene jomon14 # amber in bra ready for shot of her body
             with fade
 

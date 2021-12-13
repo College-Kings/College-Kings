@@ -201,7 +201,7 @@ label v14s12:
     u "(Still keeping this job a secret is really suspicious... And having to go to New York of all places is pretty... odd. Oh, well.)"
 
     if emmy.simplr in simplr_contacts:
-        if v13_emmysex:
+        if "v13_emmy" in sceneList:
             $ emmy.simplr.newMessage("Oh, hey...", queue=False)
             $ emmy.simplr.addReply("Hey, we had a great time together, hope to see you again <3")
             $ emmy.simplr.newMessage("I had a good time as well, but...")

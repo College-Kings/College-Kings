@@ -400,7 +400,7 @@ label v15s18e_end:
 
     la "*Moans*"
 
-    if v12_lauren_sex:
+    if "v12_lauren" in sceneList:
         la "This is... This feels..."
 
         la "It's even more amazing than our first time..."

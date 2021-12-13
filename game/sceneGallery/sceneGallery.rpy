@@ -65,34 +65,34 @@ init python:
         SceneGallery("v10s40_galleryScene", scope={"rileyrs": True}) #40, Riley, day 23
         # v11
     if renpy.loadable("v11/scene1.rpy"):
-        SceneGallery("v11s5_galleryScene") #5, Candy, day 24, v11_fucked_candy
+        SceneGallery("v11s5_galleryScene") #5, Candy, day 24
         SceneGallery("v11_aubrey_plane_sex_sg") #13, Aubrey, day 26, v11_aubrey_sex
-        SceneGallery("v11_ms_rose_sex_sg") #28, Rose, day 27, v11_msrose_scene
+        SceneGallery("v11_ms_rose_sex_sg") #28, Rose, day 27
         SceneGallery("v11s28a_galleryScene") #28a, Samantha, day 27, v11_samantha_spa
         SceneGallery("v11_riley_sex_sg") #35, Riley, day 28
         SceneGallery("v11_chloe_sex_scene") #41b, Chloe, day 29
         #v12
     if renpy.loadable("v12/scene1.rpy"):
         SceneGallery("v12_lindsey_sex") #17, Lindsey, day 32, v12_lindsey_sex
-        SceneGallery("v12_ms_rose_sex_sg") #23, Rose, day 33, v12_msrose_sex
-        SceneGallery("v12_lauren_sex_sg") #29, Lauren, day 34, v12_lauren_sex
+        SceneGallery("v12_ms_rose_sex_sg") #23, Rose, day 33
+        SceneGallery("v12_lauren_sex_sg") #29, Lauren, day 34
         SceneGallery("v12_nora_sex") #35a, Nora, day 35, v12_nora_sex
         #v13
     if renpy.loadable("v13/scene1.rpy"):
         SceneGallery("v13s16a") #16a, Riley, day 37
-        SceneGallery("v13s25_emmysg") #26, Emmy, day 38, v13_emmysex
+        SceneGallery("v13s25_emmysg") #26, Emmy, day 38
         SceneGallery("v13s40_sg") #40, Chloe, day 39
-        SceneGallery("v13s50a") #50a, Emily, day 40, v13_emilysex
+        SceneGallery("v13s50a") #50a, Emily, day 40
         #v14
     if renpy.loadable("v14/scene1.rpy"):
-        SceneGallery("v14s01") #1, Riley Aubrey, xx, v13_FirstThreesome
+        SceneGallery("v14s01") #1, Riley Aubrey, xx
         SceneGallery("v14s03c_sg") #3d, Satin, xx
         SceneGallery("v14s21a") #21a, Chloe, xx
-        SceneGallery("v14s25a") #25a, Amber, xx, v14_amber_sex
-        SceneGallery("v14s36_sg") #36, Jenny, xx, v14_jenny_sex
+        SceneGallery("v14s25a") #25a, Amber, xx
+        SceneGallery("v14s36_sg") #36, Jenny, xx
         SceneGallery("v14s46a_sga", scope={"laurenrs": True}) #46a, Lauren good
         SceneGallery("v14s46a_sgb", scope={"laurenrs": False}) #46a, Lauren bad
-        SceneGallery("v14s53_sg") #53a, Samantha, xx, v14_samantha_sex
+        SceneGallery("v14s53_sg") #53a, Samantha, xx
     if renpy.loadable("v15/scene1.rpy"):
         SceneGallery("15") #15, Ms. Rose
         SceneGallery("18a") #18a, Riley

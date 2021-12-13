@@ -47,7 +47,7 @@ label v14s05a:
 
     pause 0.75
 
-    if v13_FirstThreesome:
+    if "v14_threesome" in sceneList:
         scene v14s05a_7 # FPP. Riley just beside MC on her bedside sitting up straight, slight smile, mouth open
         with dissolve
 

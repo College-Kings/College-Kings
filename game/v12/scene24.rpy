@@ -12,7 +12,7 @@ label v12_simplr_convo:
 
     play music "music/v12/Track Scene 24.mp3" fadein 2
 
-    if v12_msrose_sex:
+    if "v12_rose" in sceneList:
         scene v12sic1a # TPP. Same as v12sic1, MC awake, looking at the ceiling, slight smile, mouth closed
         with dissolve
 

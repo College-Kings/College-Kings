@@ -976,9 +976,8 @@ label v15s18a_AutumPenelope:
 
                 u "Yeah, we're together."
 
-                if penelopeloyal:
-                    $ penelopeloyal = False 
-                    $ penelopers = True
+                if penelope.relationship == Relationship.LOYAL:
+                    $ penelope.relationship == Relationship.LIKES
 
                     scene v15s18apen_6k # FPP. MC looking at Penelope, Penelope looking at MC, Penelope slight sad face, mouth open.
                     with dissolve
@@ -1436,7 +1435,7 @@ label v15s18a_Riley:
 
     u "That's a good start to a sentence... *Chuckles*"
 
-    if v13_FirstThreesome:
+    if "v14_threesome" in sceneList:
         scene v15s18ariley_2c
         with dissolve
 
@@ -1683,8 +1682,7 @@ label v15s18a_Riley:
 
             ri "Well, yeah."
 
-            if v13_FirstThreesome:
-        
+            if "v14_threesome" in sceneList:
                 ri "I've been craving you since Amsterdam..."
 
                 scene v15s18ariley_2i

@@ -4,7 +4,9 @@
 # Time: Saturday Night
 
 label v13s50a:
-    $ v13_emilysex = True
+    $ sceneList.add("v13_emily")
+    
+    $ emily.relationship = Relationship.FWB
 
     if v13s48_ryan_double_date:
         scene v13s50a_1 # TPP Show MC with his hands on Emily's shoulders, pushing her down to her knees

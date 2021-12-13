@@ -19,7 +19,7 @@ label v15s27: # -MC walks out of the Chicks house-
 
     pause 0.75
 
-    if v13_FirstThreesome: # -if had threesome
+    if "v14_threesome" in sceneList: # -if had threesome
         scene v15s27_2 # TPP. MC standings in front of the door neutral expression mouth closed.
         with dissolve
         

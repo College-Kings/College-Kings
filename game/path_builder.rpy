@@ -50,13 +50,13 @@ init python:
 define PB_WOLVES = PathBuilderItem(
     PathBuilderCatagories.FRATERNITY,
     "Wolves",
-    ["path_builder", "joinwolves", "chloemad", "forgiveemily"],
-    [True, True, False, True])
+    ["path_builder", "joinwolves", "forgiveemily"],
+    [True, True, True])
 define PB_APES = PathBuilderItem(
     PathBuilderCatagories.FRATERNITY,
     "Apes",
-    ["path_builder", "joinwolves", "chloemad", "forgiveemily"],
-    [True, False, False, True])
+    ["path_builder", "joinwolves", "forgiveemily"],
+    [True, False, True])
 
 define PB_LOYAL = PathBuilderItem(
     PathBuilderCatagories.KCT,

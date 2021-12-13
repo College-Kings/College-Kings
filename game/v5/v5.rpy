@@ -289,7 +289,6 @@ label jorepb:
     menu:
         "I believe you":
             $ add_point(KCT.BOYFRIEND)
-            $ chloemad = False
 
             scene s370
             with dissolve
@@ -358,6 +357,7 @@ label jorepb:
             jump newchloec
 
         "You're lying":
+            $ chloemad = True
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s370a
@@ -778,7 +778,6 @@ label continuez:
 
                 menu:
                     "Sorry, not in public":
-                        $ laurenpublic = False
                         $ add_point(KCT.TROUBLEMAKER)
                         
                         $ grant_achievement("on_the_low")
@@ -2137,7 +2136,6 @@ label continueaf:
 
             menu:
                 "Sorry, not in public":
-                    $ laurenpublic = False
                     $ add_point(KCT.TROUBLEMAKER)
                     
                     $ grant_achievement("on_the_low")

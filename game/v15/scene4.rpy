@@ -1632,7 +1632,7 @@ label v15s4:
 
         pause 0.75
 
-    if v12_msrose_sex:
+    if "v12_rose" in sceneList:
         jump v15s5
 
     else:
