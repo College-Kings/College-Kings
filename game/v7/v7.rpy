@@ -13206,7 +13206,6 @@ label fr4laurendate:
         "*Crowd cheers and applauds*"
 
         if not chloesad:
-
             label fr4laurendatechloe:
                 scene sfr4stage4 #Chloe runs up on stage
                 with dissolve
@@ -13452,7 +13451,6 @@ label fr4penelopedate:
         "*Crowd cheers and applauds*"
 
         if not chloesad:
-
             scene sfr4pe14d # penelope looking at the stage
             with dissolve
 
@@ -13922,7 +13920,6 @@ label fr4rileydate:
     "*Crowd cheers and applauds*"
 
     if not chloesad:
-
         label fr4rileydatechloe:
             scene sfr4stage4 #Chloe runs up on stage
             with dissolve

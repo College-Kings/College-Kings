@@ -6,16 +6,15 @@ init python:
         LIKES = 3
         KISS = 4
         FWB = 5
-        GIRLFRIEND = 6
+        TAMED = 6
+        GIRLFRIEND = 7
         AWKWARD = 10
         BRO = 11
         FORGIVE = 12
         FUN = 13
         LOYAL = 14
         MAD = 15
-        SAD = 17
-        TAMED = 18
-        TRUST = 19
+        TRUST = 16
 
     class NonPlayableCharacter:
         """
