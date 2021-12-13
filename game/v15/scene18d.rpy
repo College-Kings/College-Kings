@@ -309,7 +309,7 @@ label v15s18d:
 
                     jump v15s18e
             else: 
-                if kct == "loyal" and not v12_lauren_sex:
+                if kct == "loyal" and not "v12_lauren" in sceneList:
                     scene v15s18d_8f
                     with dissolve
 

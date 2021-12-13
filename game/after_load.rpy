@@ -514,6 +514,9 @@ label after_load:
         try:
             if v12_msrose_sex: sceneList.add("v12_rose")
         except NameError: pass
+        try:
+            if v12_lauren_sex: sceneList.add("v12_lauren")
+        except NameError: pass
 
 
         # v12 Renpy Fixes:
@@ -567,8 +570,6 @@ label after_load:
         except NameError: v12s7_aubrey_moved = False
         try: v12_lindsey_sex
         except NameError: v12_lindsey_sex = False
-        try: v12_lauren_sex
-        except NameError: v12_lauren_sex = False
         try: v12_lauren_points
         except NameError: v12_lauren_points = 0
         try: v12s32_Aubrey_Boost

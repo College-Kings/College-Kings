@@ -795,7 +795,7 @@ label v12_lauren_sex:
                 jump v12_room_sneak
 
             else:
-                $ v12_lauren_sex = True
+                $ sceneList.add("v12_lauren")
 
                 if (kct == "loyal") and not (v12_lauren_points >= 3):
                     call screen kct_popup
