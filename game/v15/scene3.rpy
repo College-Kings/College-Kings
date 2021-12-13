@@ -185,7 +185,7 @@ label v15s3: # 3) Dean comes to Apes about posted image
 
     ry "That sucked."
 
-    scene v15s3_8c
+    scene v15s3_99
     with dissolve
 
     gr "It doesn't matter. The posts have already done the damage. We fucking did it, boys!"
@@ -195,7 +195,7 @@ label v15s3: # 3) Dean comes to Apes about posted image
 
     ry "What about the note on our permanent record?"
 
-    scene v15s3_8c
+    scene v15s3_99
     with dissolve
 
     gr "That doesn't mean anything, man. Come on!"
