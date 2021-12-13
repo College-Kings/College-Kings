@@ -645,8 +645,9 @@ label v14s36:
 
         menu:
             "Kiss her":
-                $ jennyrs = True
+                $ jenny.relationship = Relationship.FWB
                 $ sceneList.add("v14_jenny")
+                
                 if chloegf or laurenrs or penelope.relationship.value >= Relationship.LIKES.value:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
@@ -1165,7 +1166,8 @@ label v14s36:
                 $ renpy.end_replay()
 
             "Don't kiss her":
-                $ jennyawkward = True
+                $ jenny.relationship = Relationship.AWKWARD
+                
                 if chloegf or laurenrs or penelope.relationship.value >= Relationship.LIKES.value:
                     $ add_point(KCT.BOYFRIEND)
                 else:
@@ -1240,7 +1242,6 @@ label v14s36:
 
     else:
         call screen kct_popup(required_kct="loyal")
-        $ jennyfriend = True
         scene v14s36_4
         with dissolve
 

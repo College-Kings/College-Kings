@@ -164,6 +164,12 @@ label after_load:
             if evelynrs: evelyn.relationship = Relationship.LIKES
         except NameError: pass
         try:
+            if jennyawkward: jenny.relationship = Relationship.AWKWARD
+        except NameError: pass
+        try:
+            if jennyrs: jenny.relationship = Relationship.FWB
+        except NameError: pass
+        try:
             if kourtneyrs: kourtney.relationship = Relationship.LIKES
         except NameError: pass
         try:
