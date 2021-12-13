@@ -517,6 +517,9 @@ label after_load:
         try:
             if v12_lauren_sex: sceneList.add("v12_lauren")
         except NameError: pass
+        try:
+            if v14_amber_sex: sceneList.add("v14_amber")
+        except NameError: pass
 
 
         # v12 Renpy Fixes:

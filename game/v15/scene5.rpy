@@ -74,7 +74,7 @@ label v15s5:
 
     ro "I don't. I just know that it's sometime soon."
 
-    if v14_amber_sex or v14s31b_smoke_weed_with_aubrey or v13_smoke_weed or v15_autumn_smoke:
+    if "v14_amber" in sceneList or v14s31b_smoke_weed_with_aubrey or v13_smoke_weed or v15_autumn_smoke:
         scene v15s5_4a
         with dissolve
 

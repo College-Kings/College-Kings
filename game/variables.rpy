@@ -345,7 +345,6 @@ default penelopeloyal = False
 default v13_FirstThreesome = False # Variable used to call for Riley and Aubrey threesome happening.
 default v13_threesomeending = False
 default v14_amber_clean = False
-default v14_amber_sex = False
 default v14_ApesPostChloePics = True #They always post unless MC is an Ape and stops them.
 default v14_badsinging_Sam = False
 default v14_chrissupport = 0 #3 = Full, 2 = Medium, 1 = Low
