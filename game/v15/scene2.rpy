@@ -247,7 +247,7 @@ label v15s2:
 
         u "(So, this is what living with a psychopath is like? For fuck's sake...)"
 
-        if v14_samantha_sex:
+        if "v14_samantha" in sceneList:
             u "(I wouldn't have made it out of that conversation alive if he knew what we actually did in there... Damn, we're so lucky he didn't hear us.)"
 
         scene v15s2_5b # Same as v15s2_5a, Show MC walking away no Cameron in sight. MC slightly worried, mouth closed.

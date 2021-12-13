@@ -362,7 +362,6 @@ default v14_PenelopePartner = False
 default v14_PenRomScene = False
 default v14_ryan_satin = False
 default v14_samantha_cum = False
-default v14_samantha_sex = False
 default v14_SamanthaDrugs = False
 default v14_talk_to_chris = False
 default v14s03a_take_wallet = False

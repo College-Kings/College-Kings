@@ -92,7 +92,7 @@ init python:
         SceneGallery("v14s36_sg") #36, Jenny, xx
         SceneGallery("v14s46a_sga", scope={"laurenrs": True}) #46a, Lauren good
         SceneGallery("v14s46a_sgb", scope={"laurenrs": False}) #46a, Lauren bad
-        SceneGallery("v14s53_sg") #53a, Samantha, xx, v14_samantha_sex
+        SceneGallery("v14s53_sg") #53a, Samantha, xx
     if renpy.loadable("v15/scene1.rpy"):
         SceneGallery("15") #15, Ms. Rose
         SceneGallery("18a") #18a, Riley
