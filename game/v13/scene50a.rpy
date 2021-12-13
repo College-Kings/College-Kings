@@ -5,6 +5,9 @@
 
 label v13s50a:
     $ sceneList.add("v13_emily")
+    
+    if emily.relationship.value < Relationship.FWB.value:
+        $ emily.relationship = Relationship.FWB
 
     if v13s48_ryan_double_date:
         scene v13s50a_1 # TPP Show MC with his hands on Emily's shoulders, pushing her down to her knees

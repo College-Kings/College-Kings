@@ -425,7 +425,6 @@ label v9_emily_dorm:
         menu:
             "Make a move on Emily":
                 u "(This feels like the right time)"
-                $ sceneList.add("v9_emily")
 
             "Head home":
                 scene v9emi37 # TPP. Show MC walking towards the exit of Emily's room, Emily in view still sat on the bed, cheeky grin, mouth open, MC smile, mouth closed.
@@ -441,7 +440,7 @@ label v9_emily_dorm:
                     jump v9_thur_night_aft_em_a         
 
         menu:
-            "Be Macho":
+            "Be macho":
                 $ add_point(KCT.BRO)
 
                 u "I've been training. Gotta learn to take a punch as much as land one."
@@ -835,6 +834,9 @@ label v9s16_emilyDoggy:
     stop music fadeout 3
     
     $ sceneList.add("v9_emily")
+
+    if emily.relationship.value < Relationship.FWB.value:
+        $ emily.relationship = Relationship.FWB
     
     if joinwolves:
         jump v9_thur_night_aft_em_w
