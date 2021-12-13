@@ -35,23 +35,7 @@ label v15s18c_riley:
     scene v15s18c_ri_2b # FPP. Same as v15s18c_ri_2, Riley now turned to MC, not looking through the mirror anymore, Riley smiling, mouth open
     with dissolve
 
-    if v15_lauren_gift == "$50 gift card" and lauren.relationship == Relationship.FRIEND:
-
-        ri "I can't believe you bought the same gift card as Imre..."
-
-        scene v15s18c_ri_2c # FPP. Same as v15s18c_ri_2b, Riley smiling, mouth closed
-        with dissolve
-
-        u "Yeah... Neither can I, ha."
-
-        u "*Sighs* It would have been a lot less embarrassing if she had opened mine first."
-
-        scene v15s18c_ri_2b
-        with dissolve
-
-        ri "Haha, I wouldn't worry about it. Some people are really difficult to shop for."
-    
-    elif v15_lauren_gift == "$50 gift card" and lauren.relationship == Relationship.GIRLFRIEND:
+    if v15_lauren_gift == "$50 gift card" and laurenrs: #lauren.relationship == Relationship.GIRLFRIEND:
         scene v15s18c_ri_2b
         with dissolve
 
@@ -75,7 +59,7 @@ label v15s18c_riley:
 
                 u "Seriously? That would be great, haha."
 
-                if riley.relationship == Relationship.FWB:
+                if rileyrs: #riley.relationship == Relationship.FWB:
                     scene v15s18c_ri_2d # FPP. Same as v15s18c_ri_2c, Riley slightly sad, mouth open
                     with dissolve
 
@@ -88,10 +72,9 @@ label v15s18c_riley:
                     ri "Yeah, really. I'd be down whenever."
 
             "You can't shop for yourself":
-
                 u "What? You can't shop for yourself, haha. That ruins the surprise."
 
-                if riley.relationship == Relationship.FWB:
+                if rileyrs: #riley.relationship == Relationship.FWB:
                     scene v15s18c_ri_2e # FPP. Same as v15s18c_ri_2b, Riley smirking, mouth open
                     with dissolve
 
@@ -143,6 +126,21 @@ label v15s18c_riley:
 
         ri "Anytime."
 
+    elif v15_lauren_gift == "$50 gift card": # and lauren.relationship == Relationship.FRIEND:
+        ri "I can't believe you bought the same gift card as Imre..."
+
+        scene v15s18c_ri_2c # FPP. Same as v15s18c_ri_2b, Riley smiling, mouth closed
+        with dissolve
+
+        u "Yeah... Neither can I, ha."
+
+        u "*Sighs* It would have been a lot less embarrassing if she had opened mine first."
+
+        scene v15s18c_ri_2b
+        with dissolve
+
+        ri "Haha, I wouldn't worry about it. Some people are really difficult to shop for."
+    
     elif v15_lauren_gift == "white horse, black mane":
         scene v15s18c_ri_2b
         with dissolve
@@ -225,7 +223,7 @@ label v15s18c_riley:
 
         ri "Why thank you, although I don't think we'll need it. Hehe..."
     
-    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace" and lauren.relationship == Relationship.GIRLFRIEND:
+    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace" and laurenrs: #lauren.relationship == Relationship.GIRLFRIEND:
         scene v15s18c_ri_2b
         with dissolve
 
@@ -253,7 +251,7 @@ label v15s18c_riley:
 
         u "I love seeing her smile, but being the reason for it is even better, you know."
 
-        if riley.relationship == Relationship.FWB:
+        if rileyrs: #riley.relationship == Relationship.FWB:
             scene v15s18c_ri_2i # FPP. Same as v15s18c_ri_2f, Riley slightly sad, looking down, mouth closed
             with dissolve
 
@@ -269,7 +267,7 @@ label v15s18c_riley:
 
         u "Ha, yeah hopefully."
     
-    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace" and lauren.relationship == Relationship.FRIEND:
+    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace": # and lauren.relationship == Relationship.FRIEND:
         scene v15s18c_ri_2b
         with dissolve
 
@@ -512,7 +510,7 @@ label v15s18c_imre_aubrey:
 
         pause 0.75
 
-    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace" and lauren.relationship == Relationship.GIRLFRIEND:
+    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace" and laurenrs: #lauren.relationship == Relationship.GIRLFRIEND:
         scene v15s18c_imau_6
         with dissolve
 
@@ -558,7 +556,7 @@ label v15s18c_imre_aubrey:
 
         pause 0.75
 
-    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace" and lauren.relationship == Relationship.FRIEND:
+    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace": # and lauren.relationship == Relationship.FRIEND:
         scene v15s18c_imau_5c # FPP. Same as v15s18c_imau_5b, Imre slight smile, mouth open
         with dissolve
 
@@ -1046,7 +1044,7 @@ label v15s18c_imre_aubrey:
 
     u "Yeah, good idea, haha."
 
-    if aubrey.relationship == Relationship.FWB:
+    if aubreyrs: #aubrey.relationship == Relationship.FWB:
         scene v15s18c_imau_32a
         with dissolve
 
@@ -1074,7 +1072,6 @@ label v15s18c_imre_aubrey:
 
     menu:
         "Steal the panties":
-
             u "(Sorry, Autumn. I'm a man in need.)"
 
             scene v15s18c_imau_37 # TPP. Show MC taking the panties, smiliing, mouth closed
@@ -1083,12 +1080,10 @@ label v15s18c_imre_aubrey:
             u "(Double check.)"
 
         "Don't steal the panties":
-            if lauren.relationship == Relationship.GIRLFRIEND:
-
+            if laurenrs: #lauren.relationship == Relationship.GIRLFRIEND:
                 u "(There's no way in hell I'm taking my girlfriend's sister's underwear. Not happening.)"
 
             else:
-
                 u "(There's no way I'm taking those. Bad idea. Very, very bad idea.)"
         
     scene v15s18c_imau_37 # TPP. Show MC leaving the room, smiling, mouth closed
@@ -1403,7 +1398,7 @@ label v15s18c_lauren:
 
     u "*Laughs* Yeah, I hope so too."
 
-    if lauren.relationship == Relationship.GIRLFRIEND:
+    if laurenrs: #lauren.relationship == Relationship.GIRLFRIEND:
         scene v15s18c_la_3
         with dissolve
 
@@ -1773,7 +1768,7 @@ label v15s18c_autumn_amber:
 
             u "Well, do you wanna make out?"
 
-            if lauren.relationship == Relationship.GIRLFRIEND:
+            if laurenrs: #lauren.relationship == Relationship.GIRLFRIEND:
                 scene v15s18c_auam_5d # FPP. Same as v15s18c_auam_5a, Autumn angry, mouth open
                 with dissolve
 
@@ -2222,7 +2217,7 @@ label v15s18c_chris_penelope:
 
                 pe "Oh, yeah... That thing."
 
-            if penelope.relationship == Relationship.FRIEND:
+            if not penelopers: #penelope.relationship == Relationship.FRIEND:
                 scene v15s18c_chpe_5d # FPP. Same as v15s18c_chpe_5, Penelope different pose, slightly uncomfortable, mouth open
                 with dissolve
 
@@ -2240,7 +2235,7 @@ label v15s18c_chris_penelope:
 
                 pe "Sorry, haha."
             
-            elif lauren.relationship == Relationship.GIRLFRIEND and not kct == "confident":
+            elif not kct == "confident" and laurenrs: #lauren.relationship == Relationship.GIRLFRIEND:
                 scene v15s18c_chpe_5d
                 with dissolve
 
@@ -2256,7 +2251,7 @@ label v15s18c_chris_penelope:
 
                 pe "Sorry, I just don't feel comfortable."
 
-            elif penelope.relationship == Relationship.LOYAL or kct == "confident":
+            elif kct == "confident" or penelopeloyal: # or penelope.relationship == Relationship.LOYAL:
                 scene v15s18c_chpe_5f # FPP. Same as v15s18c_chpe_5, Penelope flirty expression, mouth open
                 with dissolve
 
