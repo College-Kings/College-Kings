@@ -150,6 +150,15 @@ label after_load:
         try: samantha
         except NameError: samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam")
 
+        ##Relationship types
+        try:
+            if evelyndate: evelyn.relationship = Relationship.DATE
+        except NameError: pass
+        try:
+            if evelynrs: evelyn.relationship = Relationship.LIKES
+        except NameError: pass
+
+
         for character in (
             chloe,
             amber,

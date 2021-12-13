@@ -1,25 +1,22 @@
 init python:
     class Relationship(Enum):
         FRIEND = 0
-        FWB = 1
-        GIRLFRIEND = 2
-        AWKWARD = 3
-        BRO = 4
-        DATE = 5
-        FORGIVE = 6
-        FUN = 7
-        HANGOUT = 8
-        KISS = 9
-        LIKES = 10
-        LOYAL = 11
-        MAD = 12
-        PUBLIC = 13
-        SAD = 14
-        STRIKES = 15
-        SUSPICIOUS = 16
-        TAMED = 17
-        TRUST = 18
-
+        HANGOUT = 1
+        DATE = 2
+        LIKES = 3
+        KISS = 4
+        FWB = 5
+        GIRLFRIEND = 6
+        AWKWARD = 10
+        BRO = 11
+        FORGIVE = 12
+        FUN = 13
+        LOYAL = 14
+        MAD = 15
+        PUBLIC = 16
+        SAD = 17
+        TAMED = 18
+        TRUST = 19
 
     class NonPlayableCharacter:
         """
@@ -180,7 +177,7 @@ default charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
 default cameron = NonPlayableCharacter("Cameron", "Cameroon")
 default josh = NonPlayableCharacter("Josh", "Josh80085")
 default julia = NonPlayableCharacter("Julia")
-default evelyn = NonPlayableCharacter("Evelyn")
+default evelyn = NonPlayableCharacter("Evelyn") #Relationship progression: DATE ("evelyndate"), LIKES ("evelynrs"), KISS
 default autumn = NonPlayableCharacter("Autumn", "Its_Fall")
 default sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
 default grayson = NonPlayableCharacter("Grayson", "G-rayson")

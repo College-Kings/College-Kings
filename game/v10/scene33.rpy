@@ -3690,7 +3690,7 @@ label v10s33_emily1:
     label v10s33_evelyn1:
     $ freeroam6.add("evelyn")
 
-    if evelyndate and not evelynrs:
+    if evelyn.relationship == Relationship.DATE: #if Date but unsuccessful
         if not "ryan" in freeroam6:
             scene fr6toilet # toilet screen
         else:
@@ -3700,7 +3700,7 @@ label v10s33_emily1:
 
         call screen v10s33_toilet
 
-    elif not evelyndate:
+    elif evelyn.relationship == Relationship.FRIEND: #if no date with Evelyn
         scene v10cfrev1a #fpp, shows evelyn looking at mc, neutral expression mouth closed
 
         u "Out of everyone here, I'm most surprised to see you."

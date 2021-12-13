@@ -2034,7 +2034,7 @@ label continuebd:
 
             "It'll be a nice dinner":
                 $ add_point(KCT.BOYFRIEND)
-                $ evelyndate = True
+                $ evelyn.relationship = Relationship.DATE
 
                 scene s524e
                 with dissolve
@@ -3117,7 +3117,7 @@ label fy_bd: # not gone to Emily's
 
     pause 0.5
 
-    if evelyndate:
+    if evelyn.relationship == Relationship.DATE:
         play music "music/mlove1.mp3"
 
         queue music ["music/mlove2.mp3"]
@@ -3432,7 +3432,6 @@ label fy_bd: # not gone to Emily's
         menu:
             "Ask about her job":
                 $ add_point(KCT.BRO)
-                $ evelynrs = False
 
                 scene s558d
                 with dissolve
@@ -3468,7 +3467,7 @@ label fy_bd: # not gone to Emily's
 
             "Ask about her dreams":
                 $ add_point(KCT.BOYFRIEND)
-                $ evelynrs = True
+                $ evelyn.relationship = Relationship.LIKES
 
                 scene s558d
                 with dissolve
@@ -3572,7 +3571,7 @@ label fy_bd: # not gone to Emily's
 
         ev "I've already called an Uber."
 
-        if evelynrs:
+        if evelyn.relationship == Relationship.LIKES:
             ev "Are you just gonna walk back? We can share the Uber if you want."
 
             scene s560a
@@ -3591,7 +3590,7 @@ label fy_bd: # not gone to Emily's
 
         ev "There it is."
 
-        if evelynrs:
+        if evelyn.relationship == Relationship.LIKES:
             scene s562 # Close up evelyn smiling at you, standing in front of you, about to enter the uber
             with dissolve
 
@@ -3612,6 +3611,7 @@ label fy_bd: # not gone to Emily's
 
             menu:
                 "Kiss her":
+                    $ evelyn.relationship = Relationship.KISS
                     if laurenrs:
                         $ add_point(KCT.TROUBLEMAKER)
                     else:
@@ -3620,18 +3620,18 @@ label fy_bd: # not gone to Emily's
                     scene s563 # showing you and evelyn standing close to each other, smiling at each other
                     with dissolve
 
-                    pause 0.5
+                    pause 0.75
 
                     scene s563a # Showing you and Evelyn kissing
                     with dissolve
                     play sound "sounds/kiss.mp3"
 
-                    pause 1.0
+                    pause 1.5
 
                     scene s563
                     with dissolve
 
-                    pause 0.5
+                    pause 0.75
 
                 "Don't kiss her":
                     if laurenrs:
@@ -3653,7 +3653,7 @@ label fy_bd: # not gone to Emily's
         scene s564 # you walking back to your dorm at night
         with fade
 
-        if evelynrs:
+        if evelyn.relationship == Relationship.LIKES:
             u "(That went way better than expected. Once she started talking about her dreams, it's like she turned into this completely different person.)"
 
         else:
@@ -3663,8 +3663,6 @@ label fy_bd: # not gone to Emily's
         $ aubrey.messenger.newMessage(_("Hey, I know it's late... but wanna come over?"), queue=False)
         $ aubrey.messenger.addReply(_("Yeah, sure."), v6_reply7)
         $ aubrey.messenger.addReply(_("Sorry, I can't tonight."), v6_reply8)
-
-        " "
 
         label phoneag:
             stop music fadeout 3
