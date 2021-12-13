@@ -681,7 +681,7 @@ label v13s24:
     menu:
         "Work":
             $ add_point(KCT.BOYFRIEND)
-            $ aryssars = True
+            $ aryssa.relationship = Relationship.LIKES
             
             scene v13s24_16l
             with dissolve
@@ -752,7 +752,7 @@ label v13s24:
 
     barh "Right then... Ladies, go ahead and decide on your man. If you would be willing to go on a date with [name], please raise your hand."
 
-    if not emmyrs and not kourtneyrs and not aryssars:
+    if not emmyrs and not kourtneyrs and not aryssa.relationship == Relationship.LIKES:
         scene v13s24_20a # FPP. same as v13s24_20 emmy kourtney and aryssa looking in different directions, no expressions, hands MUST be at sides or in laps NOT raised, mouths closed
         with dissolve
 
@@ -763,7 +763,7 @@ label v13s24:
 
         pause 1
 
-    elif emmyrs and kourtneyrs and aryssars:
+    elif emmyrs and kourtneyrs and aryssa.relationship == Relationship.LIKES:
         scene v13s24_20b # FPP. same as v13s24_20 emmy kourtney and aryssa looking at MC, all with one hand raised, all fully smiling, all mouths closed
         with dissolve
 
@@ -785,13 +785,13 @@ label v13s24:
 
         pause 2
 
-    elif emmyrs and aryssars:
+    elif emmyrs and aryssa.relationship == Relationship.LIKES:
         scene v13s24_20d # FPP. same as v13s24_20b kourtney no expression and doesn't raise her hand
         with dissolve
 
         pause 2
 
-    elif kourtneyrs and aryssars:
+    elif kourtneyrs and aryssa.relationship == Relationship.LIKES:
         scene v13s24_20e # FPP. same as v13s24_20b emmy no expression and doesn't raise her hand
         with dissolve
 
@@ -809,7 +809,7 @@ label v13s24:
 
         pause 2
 
-    elif aryssars:
+    elif aryssa.relationship == Relationship.LIKES:
         scene v13s24_20h # FPP. same as v13s24_20b show just aryssa raising her hand, full smile, mouth closed, 
         with dissolve
 
@@ -853,7 +853,7 @@ label v13s24:
     scene v13s24_12a
     with dissolve
 
-    if not emmyrs and not kourtneyrs and not aryssars:
+    if not emmyrs and not kourtneyrs and not aryssa.relationship == Relationship.LIKES:
 
         scene v13s24_12a
         with dissolve

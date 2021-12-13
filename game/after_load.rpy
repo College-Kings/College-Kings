@@ -157,6 +157,9 @@ label after_load:
         try:
             if evelynrs: evelyn.relationship = Relationship.LIKES
         except NameError: pass
+        try:
+            if aryssars: aryssa.relationship = Relationship.LIKES
+        except NameError: pass
 
 
         for character in (
@@ -662,8 +665,6 @@ label after_load:
         except NameError: emmyrs = False
         try: kourtneyrs
         except NameError: kourtneyrs = False
-        try: aryssars
-        except NameError: aryssars = False
         try: v13_emmy_points
         except NameError: v13_emmy_points = 0
         try: v13_imre_disloyal
