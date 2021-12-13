@@ -500,22 +500,22 @@ label after_load:
         except NameError: pass
         
         try:
-            if v13_emilysex: sceneList.add("v13_emily")
-        except NameError: pass
-        try:
             if v11_fucked_candy: sceneList.add("v11_candy")
         except NameError: pass
         try:
             if v11_msrose_scene: sceneList.add("v11_rose")
         except NameError: pass
         try:
-            if v13_emmysex: sceneList.add("v13_emmy")
+            if v12_lauren_sex: sceneList.add("v12_lauren")
         except NameError: pass
         try:
             if v12_msrose_sex: sceneList.add("v12_rose")
         except NameError: pass
         try:
-            if v12_lauren_sex: sceneList.add("v12_lauren")
+            if v13_emilysex: sceneList.add("v13_emily")
+        except NameError: pass
+        try:
+            if v13_emmysex: sceneList.add("v13_emmy")
         except NameError: pass
         try:
             if v14_amber_sex: sceneList.add("v14_amber")
