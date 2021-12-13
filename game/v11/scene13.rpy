@@ -9,7 +9,7 @@ label v11_aubrey_plane_sex:
     play music "music/v11/Track Scene 13_1.mp3" fadein 2
     pause 0.75
 
-    if not aubreyrs:
+    if aubrey.relationship.value < Relationship.FWB.value:
         jump v11_nora_chris_plane
 
     else:
@@ -31,7 +31,7 @@ label v11_aubrey_plane_sex:
         menu:
             "Go after her":
                 label v11_aubrey_plane_sex_sg:
-                $ v11_aubrey_sex = True
+                $ sceneList.add("v11_aubrey")
 
                 scene v11aub4
                 with dissolve

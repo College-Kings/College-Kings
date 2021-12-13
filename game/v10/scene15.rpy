@@ -585,7 +585,7 @@ label v10_call_with_lauren1:
 
         au "That must have been the wind. I'm just on my way home from the gym."
 
-        if aubreyrs: # RCS - MC is in a relationship with Aubrey
+        if aubrey.relationship.value >= Relationship.FWB.value: # RCS - MC is in a relationship with Aubrey
             scene v10saow5a
             with dissolve
 
@@ -1345,7 +1345,7 @@ label v10_call_with_lauren1:
 
         au "That must have been the wind. I'm just on my way home from the gym."
 
-        if aubreyrs: # RCS - MC is in a relationship with Aubrey
+        if aubrey.relationship.value >= Relationship.FWB.value: # RCS - MC is in a relationship with Aubrey
             scene v10saow5a
             with dissolve
 

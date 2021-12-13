@@ -83,7 +83,7 @@ label v13s15a:
 
     u "I hear you."
 
-    if laurenrs and not v11_aubrey_sex:
+    if laurenrs and not "v11_aubrey" in sceneList:
         play sound "sounds/vibrate.mp3"
 
         scene v13s15a_7 # TPP. MC looking down at his phone, he is standing in same place as v13s15a_6, slightly surprised, mouth closed

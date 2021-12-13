@@ -94,7 +94,7 @@ label v15s18a_Aubrey:
 
     au "Hey, I'm not complaining. I'm sure all the girls are enjoying the view."
 
-    if aubreyrs:
+    if aubrey.relationship.value >= Relationship.FWB.value:
         scene v15s18aaub_2d # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at MC's face, flirty, mouth open
         with dissolve
 
@@ -210,7 +210,7 @@ label v15s18a_Aubrey:
 
     u "Haha, that's a good thing, right?"
 
-    if aubreyrs:
+    if aubrey.relationship.value >= Relationship.FWB.value:
         scene v15s18aaub_2a
         with dissolve
 

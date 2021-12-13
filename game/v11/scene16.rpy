@@ -5,7 +5,7 @@
 
 label v11_lauren_airport_convo:
     play music "music/v11/Track Scene 16.mp3" fadein 2
-    if v11_aubrey_sex and laurenrs:
+    if "v11_aubrey" in sceneList and laurenrs:
         scene v11laac1 # TPP. Show Lauren standing in the airport, looking at her phone, she is very angry, mouth closed, MC is in the background looking at her, walking towards her direction (he is relatively far away), MC mouth closed, worried expression (make sure diff location in airport to v11noac1)
         with fade
 
@@ -51,7 +51,7 @@ label v11_lauren_airport_convo:
 
         ro "C'mon everyone, the shuttles are ready. Grab your bags."
 
-    elif v11_aubrey_sex: #and not laurenrs
+    elif "v11_aubrey" in sceneList: #and not laurenrs
         scene v11laac1c # TPP. Show Lauren standing in the airport, she is smiling, mouth closed, MC is in the background looking at her, walkingtowards her direction (he is relatively far away), MC mouth closed, slight smile (make sure diff location in airport to v11noac1)
         with dissolve
 
@@ -260,7 +260,7 @@ label v11_lauren_airport_convo:
 
         la "Time to go."
 
-    elif (laurenrs or v1_kissLauren or laurenkissb or beachfirstkiss): #and not v11_aubrey_sex
+    elif (laurenrs or v1_kissLauren or laurenkissb or beachfirstkiss): #and not plane sex scene
         scene v11laac1c 
         with dissolve
 
@@ -358,7 +358,7 @@ label v11_lauren_airport_convo:
 
         la "Time to go."
 
-    else: #not v11_aubrey_sex but also no relationship of any kind with Lauren
+    else: #not plane sex scene but also no relationship of any kind with Lauren
         scene v11laac1c 
         with dissolve
 

@@ -1391,12 +1391,13 @@ label v15s24:
     with dissolve 
 
     $ aubrey.messenger.newMessage("Come to the Chicks house, asap! I have an extra special surprise for you. I think you've earned it ;)", queue=False)
-    if not aubreyrs:
-        $ aubrey.messenger.addReply("Ooh, okay. See you soon.", func=None)
 
-    if aubreyrs or aubrey_tamed: 
+    if aubrey.relationship.value >= Relationship.FWB.value: #if RS or Tamed 
         $ aubrey.messenger.addReply("Ooh, Is it a naked surprise? ;)", func=None)
         $ aubrey.messenger.newMessage("Haha, you'll have to come find out. Hurry up!")
+
+    else:
+        $ aubrey.messenger.addReply("Ooh, okay. See you soon.", func=None)
 
     label v15s24_PhoneContinue:
     if aubrey.messenger.replies:

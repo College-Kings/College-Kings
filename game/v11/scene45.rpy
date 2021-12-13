@@ -132,7 +132,7 @@ label v11_lobby_mrlee:
 
     u "(Hmm, who to sit with?)"
 
-    if v11_aubrey_sex and laurenrs:
+    if "v11_aubrey" in sceneList and laurenrs:
         $ v11_sit_with_lauren = False
         # -MC sees Aubrey sitting by herself-
 

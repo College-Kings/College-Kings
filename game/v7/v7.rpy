@@ -850,7 +850,7 @@ label hd_bd:
 
             no "Cheated on someone."
 
-            if (laurenrs and aubreyrs) or (laurenrs and emilyrs):
+            if (laurenrs and aubrey.relationship.value >= Relationship.FWB.value) or (laurenrs and emilyrs):
                 scene s703 # showing mc drinking
                 with dissolve
 
@@ -4149,7 +4149,7 @@ label aftercall:
 
     ch "And last but not least, [name]."
 
-    if (laurenrs and aubreyrs) or (laurenrs and emilyrs):
+    if (laurenrs and aubrey.relationship.value >= Relationship.FWB.value) or (laurenrs and emilyrs):
         ch "Is it true that you recently cheated on the girl you're currently dating?"
 
         scene s786c # chris looking directly at you mouth closed
@@ -6667,7 +6667,7 @@ label hc_asking_aubrey:
     with dissolve
     au "I'm pretty sure, I told you I'm not the romance type, haha."
 
-    if aubreyrs:
+    if aubrey.relationship.value >= Relationship.FWB.value:
         au "And I also like the secrecy of our relationship."
 
     scene s976a
@@ -6686,7 +6686,7 @@ label hc_asking_aubrey:
     with dissolve
     au "It's really nice that you asked though."
 
-    if aubreyrs and not simp:
+    if aubrey.relationship.value >= Relationship.FWB.value and not simp:
         scene s976b # aubrey flirty
         with dissolve
 
@@ -15138,7 +15138,7 @@ label fr4aubrey1:
 
     u "Well, enjoy taking some more pictures. You better tag me on Kiwii, haha."
 
-    if not aubreyrs:
+    if aubrey.relationship.value < Relationship.FWB.value:
         scene sfr4ri39
         with dissolve
 

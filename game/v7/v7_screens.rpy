@@ -36,7 +36,7 @@ screen hc_select():
                 idle "images/v7/HCAubrey3.webp"
                 hover "images/v7/HCAubrey23.webp"
 
-            if aubreyrs:
+            if aubrey.relationship.value >= Relationship.FWB.value:
                 tooltip "I'm pretty sure that Aubrey would go with me and that would probably lead to a pretty hot night afterwards..."
             else:
                 tooltip "Aubrey and I get along well, she might be down to go with me."

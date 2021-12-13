@@ -78,7 +78,6 @@ default youHealth = 5
 
 default apologize = False
 default askfinn = False
-default aubreyrs = False
 default autumnmad = False
 default bowling = False
 default v2_caughtpeeking = False
@@ -233,7 +232,6 @@ default msrosers = False
 default political_strategist = False
 default v11_amber_sauna_convo = False
 default v11_aubrey_blue_outfit = False
-default v11_aubrey_sex = False
 default v11_check_on_nora = False
 default v11_hp_points = 0
 default v11_invite_sam_europe = False
@@ -392,8 +390,6 @@ default v15s12_lindsey_pb_fakeId = False # True, FakeIDl False, Limo/VIP rental
 default v15s12_lindsey_pb_wouldYouRather = False # True, Play Would You Rather; False, Play Who's Most Likely To
 default v15_s12_lindsey_pb_inviteSebastian = False # True, Invite Sebastian; False, Invite Grayson
 
-default aubrey_friend = False
-default aubrey_tamed = False 
 default dog_name = "Blue"
 default v15_lauren_gift = None
 default mr_lee_meeting = False # Placeholder?

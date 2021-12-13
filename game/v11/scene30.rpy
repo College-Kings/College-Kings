@@ -1336,7 +1336,7 @@ label v11_quiz_bonus:
 
     u "Wouldn't have missed it for the world."
 
-    if (laurenrs or (kct == "loyal" and (v1_kissLauren or beachfirstkiss))) and not v11_aubrey_sex:
+    if (laurenrs or (kct == "loyal" and (v1_kissLauren or beachfirstkiss))) and not "v11_aubrey" in sceneList:
         if not laurenrs:
             call screen kct_popup
 

@@ -105,7 +105,7 @@ label v13s61:
 
     stop music fadeout 3
 
-    if aubreyrs and rileyrs:
+    if aubrey.relationship.value >= Relationship.FWB.value and rileyrs:
         jump v13s62 
     else:
         jump v13s62a

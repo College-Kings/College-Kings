@@ -84,7 +84,7 @@ label v13s39a:
 
             u "I definitely wouldn't want to bring my girl."   
 
-        elif laurenrs and not v11_aubrey_sex:
+        elif laurenrs and not "v11_aubrey" in sceneList:
 
             scene v13s39a_5 # FPP. a dreamlike image of lauren is shown on the screen
             with dissolve

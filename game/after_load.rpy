@@ -155,6 +155,9 @@ label after_load:
             if aryssars: aryssa.relationship = Relationship.LIKES
         except NameError: pass
         try:
+            if aubreyrs: aubrey.relationship = Relationship.FWB
+        except NameError: pass
+        try:
             if evelyndate: evelyn.relationship = Relationship.DATE
         except NameError: pass
         try:
@@ -509,6 +512,9 @@ label after_load:
         except NameError: pass
         
         try:
+            if v11_aubrey_sex: sceneList.add("v11_aubrey")
+        except NameError: pass
+        try:
             if v11_fucked_candy: sceneList.add("v11_candy")
         except NameError: pass
         try:
@@ -632,8 +638,6 @@ label after_load:
         except NameError: v11_tease_amber = 0
         try: v11_manhunt_winner
         except NameError: v11_manhunt_winner = "Ryan"
-        try: v11_aubrey_sex
-        except NameError: v11_aubrey_sex = False
         try: v11_riley_roomate
         except NameError: v11_riley_roomate = False
         try: v11s25_beer

@@ -374,7 +374,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
     au "There's a lot you haven't heard."
 
-    if aubreyrs: # -If AubreyRS she winks at MC-
+    if aubrey.relationship.value >= Relationship.FWB.value:
         scene v14s31b_15d # FPP. Same as v14s31b_15b, but Aubrey winking at MC, mouth closed. 
         with dissolve
 

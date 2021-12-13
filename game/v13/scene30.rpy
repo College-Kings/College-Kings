@@ -249,7 +249,7 @@ label v13s30:
 
     am "*Chuckles* Come roll up with us."
 
-    if (laurenrs and v11_aubrey_sex): 
+    if (laurenrs and "v11_aubrey" in sceneList): 
         scene v13s30_2a
         with dissolve
 
@@ -443,7 +443,7 @@ label v13s30:
 
     am "As long as you don't do too much you'll be fine."
 
-    if v13_lauren_smoke or (kct == "loyal" and not v11_aubrey_sex):
+    if v13_lauren_smoke or (kct == "loyal" and not "v11_aubrey" in sceneList):
         if not v13_lauren_smoke:
             $ v13_lauren_smoke = True
             call screen kct_popup

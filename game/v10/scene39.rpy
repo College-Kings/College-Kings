@@ -93,7 +93,7 @@ label v10_riley_walk:
     
     ri "Now Aubrey on the other hand, she knows how to dance so I can only imagine. You know?"
 
-    if aubreyrs: # -If MC slept with aubrey
+    if aubrey.relationship.value >= Relationship.FWB.value: # -If MC slept with aubrey
         scene v10srwh3a
         with dissolve
 

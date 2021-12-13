@@ -554,7 +554,7 @@ label v12s7_aubrey1:
 
             au "Oh, sweetie. If I didn't take a look at this I wouldn't be able to call myself a nurse. Please come by my office so I can get you fixed up."
 
-            if aubreyrs:
+            if aubrey.relationship.value >= Relationship.FWB.value:
                 scene v12ferau1a
                 with dissolve
 
@@ -1735,7 +1735,7 @@ label v12s7_lauren1:
     stop music fadeout 3
     play music "music/v12/Track Scene 7_8.mp3" fadein 2
 
-    if laurenrs and v11_aubrey_sex:
+    if laurenrs and "v11_aubrey" in sceneList:
         scene v12ferla1a # FPP. same 1, mouth open
         with dissolve
 

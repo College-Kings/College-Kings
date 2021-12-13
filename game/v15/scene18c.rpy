@@ -1044,7 +1044,7 @@ label v15s18c_imre_aubrey:
 
     u "Yeah, good idea, haha."
 
-    if aubreyrs: #aubrey.relationship == Relationship.FWB:
+    if aubrey.relationship.value >= Relationship.FWB.value:
         scene v15s18c_imau_32a
         with dissolve
 

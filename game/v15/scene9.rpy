@@ -97,7 +97,7 @@ label v15s9:
             u "It's just as friends, right? Or do I have to pretend to be your boyfriend? *Laughs*"
 
             if v13s48_canoeing_as_date:
-                $ aubrey_friend = True
+                $ AubreyFriend = True
 
                 scene v15s9_3e # FPP. same as v15s9_3d Aubrey has a disapointed expression, looking away from MC
                 with dissolve
@@ -152,7 +152,7 @@ label v15s9:
             u "I'd like to come as your date if that's okay."
 
             if v13s48_canoeing_as_date:
-                $ aubrey_tamed = True
+                $ aubrey.relationship = Relationship.TAMED
 
                 scene v15s9_3g # FPP. same as v15s9_3b Aubrey slightly blushes, head slightly tilted down, looking at mc, full smile, mouth closed
                 with dissolve

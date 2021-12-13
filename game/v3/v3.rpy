@@ -2082,7 +2082,7 @@ label continuem: #for compatibility only
 
     menu:
         "Kiss her":
-            $ aubreyrs = True
+            $ aubrey.relationship = Relationship.FWB
             $ sceneList.add("v3_aubrey")
 
             stop music fadeout 3
@@ -3180,7 +3180,7 @@ label continueq:
 
         la "So, what did you do all day?"
 
-        if aubreyrs:
+        if aubrey.:
             scene s287a # lauren closeup while walking her mouth closed  FIRST PERSON
             with dissolve
             u "(Okay, time to make a decision. Should I tell her about what happened with Aubrey?)"

@@ -14,7 +14,7 @@ label v13s44:
     scene v13s44_1a # TPP. Same as v13s44_1a, Lauren caught up to MC, MC slight smile, mouth closed, Lauren slight smile, mouth open.
     with dissolve
     
-    if laurenrs and not v11_aubrey_sex:
+    if laurenrs and not "v11_aubrey" in sceneList:
         la "Hey babe!"
 
         scene v13s44_2 # TPP. Show Lauren kissing MC.
