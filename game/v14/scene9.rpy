@@ -337,7 +337,7 @@ label v14s09:
 
     u "(I wonder about Nora's favorite part...)"
 
-    if v12_nora_sex:
+    if "v12_nora" in sceneList:
         menu:
             "London Museum":
                 u "(The museum was really cool and she certainly loved London.)"

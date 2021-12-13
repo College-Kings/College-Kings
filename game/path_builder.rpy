@@ -75,7 +75,7 @@ define PB_CONFIDENT = PathBuilderItem(
     ["confident", 1, 2, 2])
 
 define PB_CHLOE = PathBuilderItem(PathBuilderCatagories.GIRL, "Chloe", ["chloe.relationship", "ending", "hcGirl"], [Relationship.GIRLFRIEND, "chloe", "chloe"])
-define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", ["nora.relationship", "noralikes", "v12_nora_sex"], [Relationship.GIRLFRIEND, True, True])
+define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", ["nora.relationship", "noralikes"], [Relationship.GIRLFRIEND, True])
 define PB_AUBREY = PathBuilderItem(PathBuilderCatagories.GIRL, "Aubrey", "aubrey.relationship", [Relationship.GIRLFRIEND], func="toggle_variables")
 define PB_RILEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Riley", "riley.relationship", [Relationship.GIRLFRIEND], func="toggle_variables")
 define PB_LAUREN = PathBuilderItem(PathBuilderCatagories.GIRL, "Lauren", "lauren.relationship", [Relationship.GIRLFRIEND], func="toggle_variables")

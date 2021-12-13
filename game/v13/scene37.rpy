@@ -278,7 +278,7 @@ label v13s37_nora:
 
     no "You and I both..."
 
-    if not v12_nora_sex:
+    if nora.relationship.value < Relationship.FWB.value:
         scene v13s37no_4a
         with dissolve
 
@@ -607,7 +607,7 @@ label v13s37_chris:
         pause 0.75
     
     else:
-        if not v12_nora_sex:
+        if nora.relationship.value < Relationship.FWB.value:
             scene v13s37ch_1a # TPP. Same as v13s37ch_1, Chris slightly sad, MC slight smile
             #with dissolve
 

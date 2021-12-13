@@ -144,8 +144,8 @@ label v13s18:
     scene v13s18_5c # FPP. Same as v13s18_5b MC looking at the Hotel entrance Chris and Nora gone.
     with dissolve
 
-    if not v12_nora_sex:
-        u "(Well... She looked... Happy? *Chuckles*)"
+    if not "v12_nora" in sceneList:
+        u "(Well... She looked... happy? *Chuckles*)"
 
     else:
         u "(We were just fucking the other night... and now she's back to holding hands with him?)"
