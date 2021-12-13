@@ -152,40 +152,43 @@ label after_load:
 
         ##Relationship types
         try:
-            if aryssars: aryssa.relationship = Relationship.LIKES
+            if amberrs and amber.relationship.value < Relationship.FWB.value: amber.relationship = Relationship.FWB
         except NameError: pass
         try:
-            if aubreyrs: aubrey.relationship = Relationship.FWB
+            if aryssars and aryssa.relationship.value < Relationship.LIKES.value: aryssa.relationship = Relationship.LIKES
         except NameError: pass
         try:
-            if cameronBro: cameron.relationship = Relationship.BRO
+            if aubreyrs and aubrey.relationship.value < Relationship.FWB.value: aubrey.relationship = Relationship.FWB
         except NameError: pass
         try:
-            if evelyndate: evelyn.relationship = Relationship.DATE
+            if cameronBro and cameron.relationship.value < Relationship.BRO.value: cameron.relationship = Relationship.BRO
         except NameError: pass
         try:
-            if evelynrs: evelyn.relationship = Relationship.LIKES
+            if evelyndate and evelyn.relationship.value < Relationship.DATE.value: evelyn.relationship = Relationship.DATE
         except NameError: pass
         try:
-            if jennyawkward: jenny.relationship = Relationship.AWKWARD
+            if evelynrs and evelyn.relationship.value < Relationship.LIKES.value: evelyn.relationship = Relationship.LIKES
         except NameError: pass
         try:
-            if jennyrs: jenny.relationship = Relationship.FWB
+            if jennyawkward and jenny.relationship.value > Relationship.AWKWARD.value: jenny.relationship = Relationship.AWKWARD
         except NameError: pass
         try:
-            if kourtneyrs: kourtney.relationship = Relationship.LIKES
+            if jennyrs and jenny.relationship.value < Relationship.FWB.value: jenny.relationship = Relationship.FWB
         except NameError: pass
         try:
-            if lindseyrs: lindsey.relationship = Relationship.FWB
+            if kourtneyrs and kourtney.relationship.value < Relationship.LIKES.value: kourtney.relationship = Relationship.LIKES
         except NameError: pass
         try:
-            if msrosers: ms_rose.relationship = Relationship.FWB
+            if lindseyrs and lindsey.relationship.value < Relationship.FWB.value: lindsey.relationship = Relationship.FWB
         except NameError: pass
         try:
-            if penelopers: penelope.relationship = Relationship.LIKES
+            if msrosers and ms_rose.relationship.value < Relationship.FWB.value: ms_rose.relationship = Relationship.FWB
         except NameError: pass
         try:
-            if penelopeloyal: penelope.relationship = Relationship.LOYAL
+            if penelopers and penelope.relationship.value < Relationship.LIKES.value: penelope.relationship = Relationship.LIKES
+        except NameError: pass
+        try:
+            if penelopeloyal and penelope.relationship.value < Relationship.LOYAL.value: penelope.relationship = Relationship.LOYAL
         except NameError: pass
 
 
@@ -523,6 +526,9 @@ label after_load:
             if v14s51_take_diary and "diary" not in freeroam12stolen: freeroam12stolen.add("diary")
         except NameError: pass
         
+        try:
+            if rileysex and "v7_riley" not in sceneList: sceneList.add("v7_riley")
+        except NameError: pass
         try:
             if v11_aubrey_sex and "v11_aubrey" not in sceneList: sceneList.add("v11_aubrey")
         except NameError: pass
