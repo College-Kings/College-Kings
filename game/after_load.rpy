@@ -498,6 +498,10 @@ label after_load:
         try:
             if v14s51_take_diary: freeroam12stolen.add("diary")
         except NameError: pass
+        
+        try:
+            if v13_emilysex: sceneList.add("v13_emily")
+        except NameError: pass
 
         # v12 Renpy Fixes:
         chloe.name = "Chloe"
@@ -680,8 +684,6 @@ label after_load:
         except NameError: v13s41_lindsey_points = 0
         try: v13_emmysex
         except NameError: v13_emmysex = False
-        try: v13_emilysex
-        except NameError: v13_emilysex = False
         try: v13s20_bleach_suitcase
         except NameError: v13s20_bleach_suitcase = False
         try: laurenrs_v11aubrey
