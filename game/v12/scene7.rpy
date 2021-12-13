@@ -3658,7 +3658,7 @@ label v12s7_penelope1:
 
             pe "I am."
 
-            if penelopers:
+            if penelope.relationship.value >= Relationship.LIKES.value:
                 scene v12ferpen1
                 with dissolve
 

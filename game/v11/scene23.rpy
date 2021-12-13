@@ -729,7 +729,7 @@ label v11s23_penelope1:
 
     pe "No no, it's not that. I'm just not used to it. You literally go out of your way to help me."
 
-    if penelopers:
+    if penelope.relationship.value >= Relationship.LIKES.value:
         menu:
             "Flirt":
                 $ v11s23_penelope_date = True
@@ -858,7 +858,7 @@ label v11s23_penelope1:
 
                 u "Nevermind... scratch that idea."
 
-    else: # not penelopers
+    else:
         menu:
             "Just being me":
                 scene v11frmpe10c

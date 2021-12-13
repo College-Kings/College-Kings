@@ -276,11 +276,13 @@ label v14s43b:
 
     menu:
         "Work with Penelope":
-            if penelope.relationship == Relationship.LOYAL:
+            $ v14_PenelopePartner = True
+
+            if penelope.relationship.value >= Relationship.LOYAL.value:
                 $ add_point(KCT.BOYFRIEND)
+
             else:
                 $ add_point(KCT.TROUBLEMAKER)
-            $ v14_PenelopePartner = True
 
             u "But sorry, man. This will be too good to miss."
 
@@ -314,7 +316,7 @@ label v14s43b:
 
             u "No, no, no. Me and you."
 
-            if penelope.relationship == Relationship.LOYAL:
+            if penelope.relationship.value >= Relationship.LOYAL.value:
                 scene v14s43b_8b
                 with dissolve
 

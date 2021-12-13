@@ -30,7 +30,7 @@ label v14s33:
 
             stop music fadeout 3
 
-            if penelopers and v11s23_penelope_date:
+            if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
                 jump v14s34
 
             else:
@@ -175,8 +175,9 @@ label v14s33:
 
                     stop music fadeout 3
 
-                    if penelopers and v11s23_penelope_date:
+                    if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
                         jump v14s34
+
                     else:
                         jump v14s35
 
@@ -236,7 +237,7 @@ label v14s33:
 
                     stop music fadeout 3
                     
-                    if penelopers and v11s23_penelope_date:
+                    if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
                         jump v14s34
 
                     else:
@@ -263,7 +264,7 @@ label v14s33:
 
             stop music fadeout 3
 
-            if penelopers and v11s23_penelope_date:
+            if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
                 jump v14s34
 
             else:
@@ -405,8 +406,9 @@ label v14s33:
 
                     stop music fadeout 3
 
-                    if penelopers and v11s23_penelope_date:
+                    if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
                         jump v14s34
+
                     else:
                         jump v14s35
 
@@ -465,7 +467,8 @@ label v14s33:
 
                     stop music fadeout 3
                     
-                    if penelopers and v11s23_penelope_date:
+                    if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
                         jump v14s34
+
                     else:
                         jump v14s35

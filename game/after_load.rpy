@@ -164,7 +164,10 @@ label after_load:
             if kourtneyrs: kourtney.relationship = Relationship.LIKES
         except NameError: pass
         try:
-            if penelopeloyal: penelope.relationship == Relationship.LOYAL
+            if penelopers: penelope.relationship = Relationship.LIKES
+        except NameError: pass
+        try:
+            if penelopeloyal: penelope.relationship = Relationship.LOYAL
         except NameError: pass
 
 

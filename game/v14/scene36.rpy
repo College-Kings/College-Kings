@@ -102,7 +102,7 @@ label v14s36:
 
     u "Oh, alright..."
     
-    if penelopers and v11s23_penelope_date:
+    if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
         u "(Maybe it's a good thing I didn't try calling her...)"
 
     scene v14s36_4b # FPP. same as v14s36_4 Jenny has a curious expression, mouth open
@@ -647,7 +647,7 @@ label v14s36:
             "Kiss her":
                 $ jennyrs = True
                 $ sceneList.add("v14_jenny")
-                if chloegf or laurenrs or penelopers:
+                if chloegf or laurenrs or penelope.relationship.value >= Relationship.LIKES.value:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
                     $ add_point(KCT.BOYFRIEND)
@@ -1166,7 +1166,7 @@ label v14s36:
 
             "Don't kiss her":
                 $ jennyawkward = True
-                if chloegf or laurenrs or penelopers:
+                if chloegf or laurenrs or penelope.relationship.value >= Relationship.LIKES.value:
                     $ add_point(KCT.BOYFRIEND)
                 else:
                     $ add_point(KCT.TROUBLEMAKER)

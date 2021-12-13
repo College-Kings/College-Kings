@@ -154,7 +154,6 @@ default hcAsked = [] # hcAsked.append("girl_name") to add
 default hcGirl = "alone"
 default joinwolves = False
 default nobeach = False
-default penelopers = False
 default politics = False
 default preventgrayson = False
 default protest = False

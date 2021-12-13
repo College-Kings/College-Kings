@@ -227,8 +227,7 @@ label v13s12b:
 
     pe "You're sweet."
 
-    if penelopers:
-
+    if penelope.relationship.value >= Relationship.LIKES.value:
         scene v13s12b_6j # TPP. Same as v13s12b_6b, Penelope kissing MC on the lips
         with dissolve
         play sound "sounds/kiss.mp3"

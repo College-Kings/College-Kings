@@ -79,7 +79,7 @@ define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", ["nora.rela
 define PB_AUBREY = PathBuilderItem(PathBuilderCatagories.GIRL, "Aubrey", "aubrey.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
 define PB_RILEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Riley", "riley.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
 define PB_LAUREN = PathBuilderItem(PathBuilderCatagories.GIRL, "Lauren", "lauren.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
-define PB_PENELOPE = PathBuilderItem(PathBuilderCatagories.GIRL, "Penelope", ["penelopers", "v11_pen_goes_europe"], [True, True])
+define PB_PENELOPE = PathBuilderItem(PathBuilderCatagories.GIRL, "Penelope", ["penelope.relationship", "v11_pen_goes_europe"], [Relationship.GIRLFRIEND, True])
 define PB_AMBER = PathBuilderItem(PathBuilderCatagories.GIRL, "Amber", "amber.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
 define PB_LINDSEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Lindsey", ["lindseyrs", "v12_lindsey_sex"], [True, True])
 define PB_MS_ROSE = PathBuilderItem(PathBuilderCatagories.GIRL, "Ms Rose", "ms_rose.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
