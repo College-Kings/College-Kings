@@ -13,7 +13,6 @@ init python:
         FUN = 13
         LOYAL = 14
         MAD = 15
-        PUBLIC = 16
         SAD = 17
         TAMED = 18
         TRUST = 19

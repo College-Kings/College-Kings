@@ -778,7 +778,6 @@ label continuez:
 
                 menu:
                     "Sorry, not in public":
-                        $ laurenpublic = False
                         $ add_point(KCT.TROUBLEMAKER)
                         
                         $ grant_achievement("on_the_low")
@@ -2137,7 +2136,6 @@ label continueaf:
 
             menu:
                 "Sorry, not in public":
-                    $ laurenpublic = False
                     $ add_point(KCT.TROUBLEMAKER)
                     
                     $ grant_achievement("on_the_low")
