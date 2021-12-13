@@ -5,7 +5,6 @@
 
 label v15s7:
     # -1 random male and 1 random female student will be needed for the second half of this scene-
-
     if "diary" in freeroam12stolen or "cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen: # -if MC stole any of Chloe's money and/or her diary from her room
         scene v15s7_1 # FPP At entrance to library, Chloe is obviously crying and doing a bad job of hiding it with her hand
         with dissolve

@@ -10,7 +10,6 @@ label v15s6:
     pause 1
 
     if "diary" in freeroam12stolen or "cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen: # -if MC stole any of Chloe's money and/or her diary from her room
-
         scene v15s6_2 # FPP Show Chloe exiting library, she is crying, using her hand to try and mask the tears
         with dissolve
 
@@ -18,7 +17,6 @@ label v15s6:
         u "(What happened this time... *Sighs*)"
 
     else: # -if MC stole nothing from Chloe's room or never went to Chloe's room
-
         scene v15s6_2a # FPP Show Chloe near library door, smiling and chatting with two random students
         with dissolve
 
