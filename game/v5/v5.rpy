@@ -289,7 +289,6 @@ label jorepb:
     menu:
         "I believe you":
             $ add_point(KCT.BOYFRIEND)
-            $ chloemad = False
 
             scene s370
             with dissolve
@@ -358,6 +357,7 @@ label jorepb:
             jump newchloec
 
         "You're lying":
+            $ chloemad = True
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s370a
