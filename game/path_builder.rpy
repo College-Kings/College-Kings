@@ -30,11 +30,14 @@ init python:
                 setattr(store, variable, value)
 
         def toggle_variables(self):
-            for variable in self.variables:
+            if self.values is None:
+                self.values = [(True, False)] * len(self.variables)
+
+            for variable, value in zip(self.variables, self.values):
                 if getattr(store, variable):
-                    setattr(store, variable, False)
+                    setattr(store, variable, value)
                 else:
-                    setattr(store, variable, True)
+                    setattr(store, variable, value)
 
 
     def get_catagory(step):
@@ -71,18 +74,18 @@ define PB_CONFIDENT = PathBuilderItem(
     ["kct", "bro", "boyfriend", "troublemaker"],
     ["confident", 1, 2, 2])
 
-define PB_CHLOE = PathBuilderItem(PathBuilderCatagories.GIRL, "Chloe", ["chloers", "chloegf", "ending", "hcGirl"], [True, True, "chloe", "chloe"])
-define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", ["norars", "noralikes", "v12_nora_sex"], [True, True, True])
-define PB_AUBREY = PathBuilderItem(PathBuilderCatagories.GIRL, "Aubrey", "aubreyrs", "toggle_variables")
-define PB_RILEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Riley", "rileyrs", "toggle_variables")
-define PB_LAUREN = PathBuilderItem(PathBuilderCatagories.GIRL, "Lauren", "laurenrs", "toggle_variables")
+define PB_CHLOE = PathBuilderItem(PathBuilderCatagories.GIRL, "Chloe", ["chloe.relationship", "ending", "hcGirl"], [Relationship.GIRLFRIEND, "chloe", "chloe"])
+define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", ["nora.relationship", "noralikes", "v12_nora_sex"], [Relationship.GIRLFRIEND, True, True])
+define PB_AUBREY = PathBuilderItem(PathBuilderCatagories.GIRL, "Aubrey", "aubrey.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
+define PB_RILEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Riley", "riley.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
+define PB_LAUREN = PathBuilderItem(PathBuilderCatagories.GIRL, "Lauren", "lauren.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
 define PB_PENELOPE = PathBuilderItem(PathBuilderCatagories.GIRL, "Penelope", ["penelopers", "v11_pen_goes_europe"], [True, True])
-define PB_AMBER = PathBuilderItem(PathBuilderCatagories.GIRL, "Amber", "amberrs", "toggle_variables")
+define PB_AMBER = PathBuilderItem(PathBuilderCatagories.GIRL, "Amber", "amber.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
 define PB_LINDSEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Lindsey", ["lindseyrs", "v12_lindsey_sex"], [True, True])
-define PB_MS_ROSE = PathBuilderItem(PathBuilderCatagories.GIRL, "Ms Rose", "msrosers", "toggle_variables")
-define PB_SAMANTHA = PathBuilderItem(PathBuilderCatagories.GIRL, "Samantha", "v11_samantha_spa", "toggle_variables")
-define PB_JENNY = PathBuilderItem(PathBuilderCatagories.GIRL, "Jenny", "jennyrs", "toggle_variables")
-define PB_EMILY = PathBuilderItem(PathBuilderCatagories.GIRL, "Emily", "emilyrs", "toggle_variables")
+define PB_MS_ROSE = PathBuilderItem(PathBuilderCatagories.GIRL, "Ms Rose", "ms_rose.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
+define PB_SAMANTHA = PathBuilderItem(PathBuilderCatagories.GIRL, "Samantha", "v11_samantha_spa", func="toggle_variables")
+define PB_JENNY = PathBuilderItem(PathBuilderCatagories.GIRL, "Jenny", "jenny.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
+define PB_EMILY = PathBuilderItem(PathBuilderCatagories.GIRL, "Emily", "emily.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
 
 define PB_HOMECOMING = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 2 Start", "start_location", "v7_homecoming", "set_start_location")
 define PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 3 Start", "start_location", "v11_start", "set_start_location")
