@@ -191,7 +191,7 @@ label v15s20:
 
         u "(Well, she loves it in the bedroom... Or should I say kitchen...)"
 
-        if chloegf and V15_ms_rose_sex:
+        if chloegf and v15_ms_rose_sex:
             scene v15s20_5d # FPP. Same as v15s20_5c, Chloe confused, mouth open.
             with dissolve
 

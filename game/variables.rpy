@@ -393,7 +393,7 @@ default mr_lee_meeting = False # Placeholder?
 default ms_rose_meeting = False # (redundancy check) # not used (28/08/2021)
 default v15_blame_nora = False ### blame_chris = (v13_imre_disloyal and not v15_blame_nora)
 default v15_less_chick_tuition = False # not used (28/08/2021)
-default V15_ms_rose_sex = False # Placeholder?
+default v15_ms_rose_sex = False # Placeholder?
 default v15_stuck_up_for_nora = False # not used (28/08/2021)
 default v15_took_notes = False # not used (28/08/2021)
 default v15s5_mc_angry_with_rose = False # Placeholder?

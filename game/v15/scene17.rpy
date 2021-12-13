@@ -227,7 +227,7 @@ label v15s17:
 
                 u "Ms. Rose looked so proud of her new necklace and really seemed to enjoy showing it off to me... among other things..."
 
-            if V15_ms_rose_sex:
+            if v15_ms_rose_sex:
                 scene v15s17_15 # FPP. A Dreamlike Vision of MsRose fully nude in one of the sexual positions from Version 15 scene 15
                 with dissolve
 
