@@ -1064,7 +1064,7 @@ label v12s18_bottlespin:
 
     u "*Chuckles* I think you might be right, we got a bit lucky."
 
-    if v12_lindsey_sex:
+    if "v12_lindsey" in sceneList:
         scene v12slpbs5e # FPP. Same as v12slpbs5c, Lindsey flirty smile, mouth open, closer to MC
         with dissolve
 

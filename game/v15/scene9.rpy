@@ -457,9 +457,9 @@ label v15s9:
             $ lindsey.messenger.addReply("Fuck, okay. What's next?", func=None)
             $ lindsey.messenger.newMessage("Meet me at the janitor's closet and you'll find out ;)")
 
-            if lindseyrs:
+            if lindsey.relationship.value >= Relationship.FWB.value:
                 $ lindsey.messenger.addReply("Be there soon ;)", func=None)
-            else: #placeholder
+            else:
                 $ lindsey.messenger.addReply("OMW", func=None)
 
             call screen phone

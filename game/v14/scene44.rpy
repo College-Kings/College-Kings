@@ -100,7 +100,7 @@ label v14s44:
         "Chloe":
             if chloegf:
                 $ add_point(KCT.BOYFRIEND)
-            elif lindseyrs:
+            elif lindsey.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.TROUBLEMAKER)
             
             scene v14s44_4
@@ -120,7 +120,7 @@ label v14s44:
             u "Ha. Yeah."
 
         "Lindsey":
-            if lindseyrs:
+            if lindsey.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.BOYFRIEND)
             elif chloegf:
                 $ add_point(KCT.TROUBLEMAKER)

@@ -319,7 +319,7 @@ label v14s22_steal:
 
         u "I wouldn't have chosen to help you if I was too afraid to make hard decisions. My personal relationship with Chloe has nothing to do with this."
 
-    elif lindseyrs:
+    elif lindsey.relationship.value >= Relationship.FWB.value:
         scene v14s22_5g
         with dissolve
 
@@ -349,7 +349,7 @@ label v14s22_steal:
     jump v14s22_end
 
 label v14s22_end:
-    if lindseyrs:
+    if lindsey.relationship.value >= Relationship.FWB.value:
         scene v14s22_8 # TPP. Lindsey embraces and kisses MC passionately
         with dissolve
 

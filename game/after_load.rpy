@@ -152,16 +152,19 @@ label after_load:
 
         ##Relationship types
         try:
+            if aryssars: aryssa.relationship = Relationship.LIKES
+        except NameError: pass
+        try:
             if evelyndate: evelyn.relationship = Relationship.DATE
         except NameError: pass
         try:
             if evelynrs: evelyn.relationship = Relationship.LIKES
         except NameError: pass
         try:
-            if aryssars: aryssa.relationship = Relationship.LIKES
+            if kourtneyrs: kourtney.relationship = Relationship.LIKES
         except NameError: pass
         try:
-            if kourtneyrs: kourtney.relationship = Relationship.LIKES
+            if lindseyrs: lindsey.relationship = Relationship.FWB
         except NameError: pass
         try:
             if penelopers: penelope.relationship = Relationship.LIKES
@@ -515,6 +518,9 @@ label after_load:
             if v12_lauren_sex: sceneList.add("v12_lauren")
         except NameError: pass
         try:
+            if v12_lindsey_sex: sceneList.add("v12_lindsey")
+        except NameError: pass
+        try:
             if v12_msrose_sex: sceneList.add("v12_rose")
         except NameError: pass
         try:
@@ -586,8 +592,6 @@ label after_load:
         except NameError: v12s7_lindsey_moved = False
         try: v12s7_aubrey_moved
         except NameError: v12s7_aubrey_moved = False
-        try: v12_lindsey_sex
-        except NameError: v12_lindsey_sex = False
         try: v12_lauren_points
         except NameError: v12_lauren_points = 0
         try: v12s32_Aubrey_Boost

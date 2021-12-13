@@ -35,7 +35,7 @@ label v14s50:
 
     u "Got it."
 
-    if lindseyrs: # -If LindseyRS
+    if lindsey.relationship.value >= Relationship.FWB.value:
         scene v14s50_2
         with dissolve
         

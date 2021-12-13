@@ -526,7 +526,7 @@ label v14s45a:
 
         li "Oh damn, sorry."
 
-        if lindseyrs:
+        if lindsey.relationship.value >= Relationship.FWB.value:
             scene v14s45a_10a
             with dissolve
 

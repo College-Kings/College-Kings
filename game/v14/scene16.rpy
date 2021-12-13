@@ -169,7 +169,7 @@ label v14s16:
             $ set_presidency_percent(v14_lindsey_popularity - 5)
             if chloegf:
                 $ add_point(KCT.BOYFRIEND)
-            elif v12_lindsey_sex:
+            elif lindsey.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.TROUBLEMAKER)
             else:
                 $ add_point(KCT.BRO)
@@ -236,7 +236,7 @@ label v14s16:
         "I don't have the time":
             if chloegf:
                 $ add_point(KCT.TROUBLEMAKER)
-            elif v12_lindsey_sex:
+            elif lindsey.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.BOYFRIEND)
                 
             scene v14s16_2a

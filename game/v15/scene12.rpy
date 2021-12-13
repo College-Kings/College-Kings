@@ -285,7 +285,7 @@ label v15s12:
                 li "Yeah, fair enough, I respect that. That's why I wanted to ask."            
 
         # -regardless of previous choice, still if ChloeGF
-        if chloegf and lindseyrs: # -if ChloeGF and LindseyRS
+        if chloegf and lindsey.relationship.value >= Relationship.FWB.value:
             scene v15s12_6 # FPP. Lindsey concerned mouth open [Checkpoint E].
             with dissolve
 
@@ -313,11 +313,9 @@ label v15s12:
             
             li "All I need to know is if you're serious about her or not, because if you are, then you and I should just..."
             
-            # -MC chooses event1 or event2
-            # -event1 It's pretty serious (LindseyRS becomes LindseyFriend)
-            # -event2 It's not that serious
             menu: 
-                "It's pretty serious": # -if It's pretty serious (LindseyRS becomes LindseyFriend)
+                "It's pretty serious": # -if It's pretty serious (Lindsey RS becomes Lindsey Friend)
+                    $ lindsey.relationship = Relationship.FRIEND
                     $ add_point(KCT.BOYFRIEND) # TODO KCT and character points 
                     $ chloe.points += 1
                     $ lindsey.points -= 1
@@ -562,14 +560,14 @@ label v15s12:
 
         li "Hehe, thank you!"        
 
-        if lindseyrs: # -if LindseyRS
+        if lindsey.relationship.value >= Relationship.FWB.value:
             # -Lindsey gives MC a passionate kiss-           
             scene v15s12_9 # FPP. Lindsey passionately kisses MC [Janitor's closet].
             with dissolve
 
             play sound "sounds/kiss.mp3"
 
-            pause 0.75 
+            pause 1.75 
 
             scene v15s12_9a # FPP. Lindsy happy, smiling, mouth closed looking at MC [Janitor's closet].
             with dissolve
