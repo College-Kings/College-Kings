@@ -1125,7 +1125,7 @@ label v12_lauren_sex:
                 scene v12las66 # FPP. MC and Lauren lieing down next to each other, looking at each other, Lauren smiling, mouth open, make her body a bit sweaty if possible
                 with dissolve
 
-                if laurenrs and not chloers and not aubreyrs and not (evelyn.relationship == Relationship.LIKES) and not emilyrs and not rileyrs and not amberrs and not penelopers and not msrosers and not lindseyrs and not lindseyfirstkiss and not v11_fucked_candy and not v11_samantha_spa:
+                if laurenrs and not chloers and not aubreyrs and not (evelyn.relationship == Relationship.LIKES) and not emilyrs and not rileyrs and not amberrs and not penelopers and not msrosers and not lindseyrs and not lindseyfirstkiss and not ("v11_candy" in sceneList) and not v11_samantha_spa:
                     $ grant_achievement("worth_the_wait")
 
                 $ laurenrs = True

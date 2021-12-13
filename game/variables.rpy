@@ -236,7 +236,6 @@ default v11_amber_sauna_convo = False
 default v11_aubrey_blue_outfit = False
 default v11_aubrey_sex = False
 default v11_check_on_nora = False
-default v11_fucked_candy = False
 default v11_hp_points = 0
 default v11_invite_sam_europe = False
 default v11_josh_nightclub = False

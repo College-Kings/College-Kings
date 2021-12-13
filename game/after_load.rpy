@@ -163,6 +163,9 @@ label after_load:
         try:
             if kourtneyrs: kourtney.relationship = Relationship.LIKES
         except NameError: pass
+        try:
+            if v11_fucked_candy: sceneList.add("v11_candy")
+        except NameError: pass
 
 
         for character in (
@@ -592,8 +595,6 @@ label after_load:
         except NameError: v11_josh_nightclub = False
         try: candyLike
         except NameError: candyLike = 0
-        try: v11_fucked_candy
-        except NameError: v11_fucked_candy = False
         try: v11_aubrey_blue_outfit
         except NameError: v11_aubrey_blue_outfit = False
         try: v11_tease_amber

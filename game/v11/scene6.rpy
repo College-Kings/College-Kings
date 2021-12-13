@@ -14,7 +14,7 @@ label v11_thurs_night_room:
         scene v11tnr2 # TPP. Show MC near his wolves bed
         with dissolve
 
-        if v11_josh_nightclub and v11_fucked_candy:
+        if v11_josh_nightclub and "v11_candy" in sceneList:
 
             u "(That was crazy, but worth it! I'm tired as hell though... I'll pack tomorrow.)"
 
@@ -22,7 +22,7 @@ label v11_thurs_night_room:
 
             u "(I'm tired as hell... I'll pack tomorrow.)"
 
-        elif v11_josh_nightclub and not v11_fucked_candy:
+        elif v11_josh_nightclub and not "v11_candy" in sceneList:
 
             u "(I'm tired as hell... I'll pack tomorrow.)"
 
@@ -60,7 +60,7 @@ label v11_thurs_night_room:
         scene v11tnr5 # TPP. Show MC near his apes bed
         with dissolve
 
-        if v11_josh_nightclub and v11_fucked_candy:
+        if v11_josh_nightclub and "v11_candy" in sceneList:
 
             u "(That was crazy, but worth it! I'm tired as hell though... I'll pack tomorrow.)"
 
@@ -68,7 +68,7 @@ label v11_thurs_night_room:
 
             u "(I'm tired as hell... I'll pack tomorrow.)"
 
-        elif v11_josh_nightclub and not v11_fucked_candy:
+        elif v11_josh_nightclub and not "v11_candy" in sceneList:
 
             u "(I'm tired as hell... I'll pack tomorrow.)"
 
