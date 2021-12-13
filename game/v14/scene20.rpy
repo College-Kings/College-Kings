@@ -220,7 +220,6 @@ label v14s20:
                 aut "Of course."
 
             "It's going great":
-                # -It's going great (Creates AutumnTrust)
                 $ autumn.points += 1
                 $ AutumnTrust = True
 

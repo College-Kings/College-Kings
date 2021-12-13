@@ -250,10 +250,9 @@ label v15s36:
 
         menu:
             "I'd like that.":
-
                 u "Honestly, I'd really like that... I feel the same way."
 
-                if laurenrs: 
+                if laurenrs:
                     $ autumnloyal = True
                     scene v15s36_5
                     with dissolve
@@ -284,7 +283,7 @@ label v15s36:
                     scene v15s36_5
                     with dissolve
 
-                    aut "Haha! Okay, mister...Don't push it."
+                    aut "Haha! Okay, mister... Don't push it."
 
                     scene v15s36_6
                     with dissolve 
@@ -430,7 +429,7 @@ label v15s36:
     scene v15s36_11 # FPP. MC and Autumn at the front of the Deer's house, Autumn looking at MC, MC looking at Autumn, Autumn slight smile, mouth open.
     with dissolve 
 
-    aut "Here we are.... Thanks for walking me home."
+    aut "Here we are... Thanks for walking me home."
 
     scene v15s36_11a # FPP. MC and Autumn at the front of the Deer's house, Autumn looking at MC, MC looking at Autumn, Autumn slight smile, mouth open.
     with dissolve

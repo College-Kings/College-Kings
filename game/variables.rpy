@@ -283,7 +283,6 @@ default v12s7_seenList = []
 default v12s7_victims = 12 #Amber, Aubrey, Charli, Chloe, Chris, Imre, Lauren, Lindsey, Nora, Riley, Rose, Ryan + Emily, Josh, Penelope, Samantha. Cameron and Lee don't count.
 
 # 13.0
-default cameronBro = False
 default chloeSus = 0
 default chloeturnedon = set() #Chloe Amsterdam
 default emmyrs = False

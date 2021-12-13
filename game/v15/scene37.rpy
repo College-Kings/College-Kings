@@ -63,7 +63,7 @@ label v15s37:
         scene v15s37_3
         with dissolve
 
-        u "(What a fucking night... II never thought it would end with kissing Autumn!)"
+        u "(What a fucking night... I never thought it would end with kissing Autumn!)"
 
         u "(You just never know what girls are really thinking, haha.)"
 

@@ -187,7 +187,7 @@ label v14s53:
 
         sa "You know, I overdosed when we were in Amsterdam."
 
-        if cameronBro:
+        if cameron.relationship.value >= Relationship.BRO.value:
             scene v14s53_6e # FPP. same as v14s53_6d Sam's mouth is closed
             with dissolve
 
