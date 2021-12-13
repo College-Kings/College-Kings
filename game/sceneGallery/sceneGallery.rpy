@@ -67,7 +67,7 @@ init python:
     if renpy.loadable("v11/scene1.rpy"):
         SceneGallery("v11s5_galleryScene") #5, Candy, day 24
         SceneGallery("v11_aubrey_plane_sex_sg") #13, Aubrey, day 26, v11_aubrey_sex
-        SceneGallery("v11_ms_rose_sex_sg") #28, Rose, day 27, v11_msrose_scene
+        SceneGallery("v11_ms_rose_sex_sg") #28, Rose, day 27
         SceneGallery("v11s28a_galleryScene") #28a, Samantha, day 27, v11_samantha_spa
         SceneGallery("v11_riley_sex_sg") #35, Riley, day 28
         SceneGallery("v11_chloe_sex_scene") #41b, Chloe, day 29

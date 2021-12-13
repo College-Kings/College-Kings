@@ -243,7 +243,6 @@ default v11_kiss_nora = False
 default v11_linds_inv_imre = False # If true Lindsey will invite Imre, if false, Lindsey will invite Ryan
 default v11_lindsey_slogan = 0 # 1 is Lindsey, Returning The Promise // 2 is Lindsey, Say Bye To The Bullshit
 default v11_manhunt_winner = "Ryan"
-default v11_msrose_scene = False
 default v11_overtake_points = 0
 default v11_pen_goes_europe = False
 default v11_riley_roomate = False

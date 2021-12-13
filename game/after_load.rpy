@@ -166,6 +166,9 @@ label after_load:
         try:
             if v11_fucked_candy: sceneList.add("v11_candy")
         except NameError: pass
+        try:
+            if v11_msrose_scene: sceneList.add("v11_rose")
+        except NameError: pass
 
 
         for character in (
@@ -623,8 +626,6 @@ label after_load:
         except NameError: v11_linds_inv_imre = False 
         try: v11_sit_with_lauren
         except NameError: v11_sit_with_lauren = True
-        try: v11_msrose_scene
-        except NameError: v11_msrose_scene = False
         try: v11_overtake_points
         except NameError: v11_overtake_points = 0
         try: v11_hp_points
