@@ -156,6 +156,7 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                 $ add_point(KCT.TROUBLEMAKER)
                 
                 $ sceneList.add("v12_rose")
+                $ ms_rose.relationship = Relationship.FWB
 
                 label v12_ms_rose_sex_sg:
 
