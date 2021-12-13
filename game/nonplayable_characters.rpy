@@ -159,7 +159,7 @@ init python:
             self.points = 0
 
 default chloe = NonPlayableCharacter("Chloe", "Chloe101")
-default amber = NonPlayableCharacter("Amber", "Amber_xx")
+default amber = NonPlayableCharacter("Amber", "Amber_xx") #Relationship progression: FRIEND, FWB
 default penelope = NonPlayableCharacter("Penelope", "Penelopeeps") #Relationship progression: FRIEND, LIKES, LOYAL
 default riley = NonPlayableCharacter("Riley", "RileyReads")
 default lindsey = NonPlayableCharacter("Lindsey", "LindsLou") #Relationship progression: FRIEND, FWB

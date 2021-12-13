@@ -1036,7 +1036,7 @@ label v14s25:
                 "Yeah I fucking do.":
                     $ add_point(KCT.TROUBLEMAKER)
                     $ sceneList.add("v14_amber")
-                    $ amberrs = True
+                    $ amber.relationship = Relationship.FWB
 
                     scene v14s25_21a # FPP. Same as v14s25_21, Amber flirtatious smile, mouth closed.
                     with dissolve

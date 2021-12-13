@@ -139,7 +139,6 @@ default v2_outfits = 0
 default volleyball = False
 
 # 7.0
-default amberrs = False
 default apesVids = 0
 default beachfirstkiss = False
 default chloers = False

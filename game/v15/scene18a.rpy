@@ -2166,7 +2166,7 @@ label v15s18a_ChrisAmber:
 
                 am "Ha, yes!"
 
-                if not kct == "popular" or not amberrs:
+                if not kct == "popular" and amber.relationship.value < Relationship.FWB.value:
                     am "Well, I'm sure you'll find some girls who will gladly help you mark a few things off of here tonight."
 
                     scene v15s18aamber_3

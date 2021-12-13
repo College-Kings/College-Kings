@@ -75,7 +75,7 @@ label v10_amber_skatepark:
 
         am "I'm just kidding. *Chuckles*"
             
-        if amberrs:
+        if amber.relationship.value >= Relationship.FWB.value:
             scene v10sasp1c
             with dissolve
 
@@ -361,7 +361,7 @@ label v10_amber_skatepark:
 
     u "*Laughs*"
 
-    if amberrs:
+    if amber.relationship.value >= Relationship.FWB.value:
         label v10_amber_skatepark_sg:
         scene v10sasp5b # FPP. Same camera as v10sasp5. Show Amber leaning in to whisper into MC's ear, smiling, mouth open.
         with fade
@@ -709,7 +709,7 @@ label v10_amber_skatepark:
                     with dissolve
                     menu:
                         "Let her":
-                            $ amberrs = True
+                            $ amber.relationship = Relationship.FWB
                             $ sceneList.add("v10_amber")
 
                             if config_censored:

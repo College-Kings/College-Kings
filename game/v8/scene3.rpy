@@ -35,7 +35,7 @@ label v8_ri_start:
     with dissolve
     ri "*Chuckles* Why don't you start unwrapping your present fully then?"
 
-    if not rileysex:
+    if "v7_riley" in sceneList:
         u "(Damn, did not expect Riley had this in her.)"
 
     scene v8s26a
@@ -267,7 +267,7 @@ label v8s3_rileyDoggy:
     with dissolve
     ri "She isn't gonna be back until noon tomorrow."
 
-    if rileysex:
+    if "v7_riley" in sceneList:
         scene v8s33b # Riley slightly flirty and mouth open
         with dissolve
         ri "Which is why you're gonna sleep here this time *Chuckles*"

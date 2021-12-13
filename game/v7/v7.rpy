@@ -43,7 +43,6 @@ init python:
         riley.messenger.newMessage(_("Yayyy"))
 
     def v7_msgReply6():
-        setattr(store, "rileysex", False)
         riley.messenger.newMessage(_("Oh oki"))
 
     def kiwii_firstTimeMessages():
@@ -6588,7 +6587,7 @@ label hc_asking_amber:
             "Alright, I'm in":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ hcGirl = "amber"
-                $ amberrs = True
+                $ amber.relationship = Relationship.FWB
 
                 scene s919e
                 with dissolve
@@ -8907,28 +8906,25 @@ label rileytext:
 #### RIley Sex Scene, if rileyrs = True,  you get a message in your dorm from Riley telling you that her roommate isnt home and if you wanna come over. Since you already did stuff, you say yes.
 # It's thurday night
 label rileysexscene:
+    $ rileyrs = True
+    $ sceneList.add("v7_riley")
+
     if joinwolves:
         stop music fadeout 3
         scene preri1 # You walking through the night to riley
         with fade
-
-        pause 0.5
 
     else:
         stop music fadeout 3
         scene preri2 # You walking through the dorms
         with fade
 
-        pause 0.5
+    pause 0.75
 
-# Pre-cursor to sex with Riley
-    $ rileyrs = True
-    $ sceneList.add("v7_riley")
-    
     scene ridrm1 # You knocking on Riley's dorm door (third person)
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene ridrm2 # Riley opens the door, grin expression (first person)
     with dissolve

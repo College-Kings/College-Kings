@@ -1892,8 +1892,8 @@ label v12s18_bet: # END OF FREE ROAM
 
             u "Something like that."
 
-            if amberrs or kct == "popular":
-                if not amberrs:
+            if amber.relationship.value >= Relationship.FWB.value or kct == "popular":
+                if amber.relationship.value < Relationship.FWB.value:
                     call screen kct_popup
                 
                 scene v12slpbet17
