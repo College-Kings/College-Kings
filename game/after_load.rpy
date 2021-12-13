@@ -327,13 +327,19 @@ label after_load:
 
         # Correct image paths
         message = josh.messenger.find_message("images/text1.webp")
-        message.image = "images/v4/text1.webp"
+        try:
+            message.image = "images/v4/text1.webp"
+        except AttributeError: pass
 
         message = amber.messenger.find_message("images/text2.webp")
-        message.image = "images/v6/text2.webp"
+        try:
+            message.image = "images/v6/text2.webp"
+        except AttributeError: pass
 
         message = aubrey.messenger.find_message("images/text3.webp")
-        message.image = "images/v6/text3.webp"
+        try:
+            message.image = "images/v6/text3.webp"
+        except AttributeError: pass
         del message
 
 
