@@ -247,7 +247,7 @@ label v14s44:
 
         "I'm Eli's friend":
             $ add_point(KCT.BRO)
-            $ ElijahFriend = True
+            $ elijah.relationship = Relationship.FRIEND
 
             scene v14s44_10
             with dissolve

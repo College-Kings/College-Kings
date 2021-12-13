@@ -98,7 +98,6 @@ default freeroam1 = set()
 default freeroam2 = set()
 default freeroam3 = set()
 default freeroam3asked = set()
-default funofelijah = False
 default girl = ""
 default imreforgives = False
 default imremad = False
@@ -327,7 +326,6 @@ default v14_date_distraction = False ###APPROACH B1B (v14_concert_distraction = 
 default AmberLoyal = False
 default AutumnTrust = False
 default chrissus = 0
-default ElijahFriend = False
 default irisStrikes = 0
 default v13_threesomeending = False
 default v14_amber_clean = False

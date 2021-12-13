@@ -184,7 +184,7 @@ default mr_lee = NonPlayableCharacter("Mr Lee")
 
 default adam = NonPlayableCharacter("Adam", "A.D.A.M.")
 default mason = NonPlayableCharacter("Mason", "Mason_Mas")
-default elijah = NonPlayableCharacter("Elijah", "Elijah_Woods")
+default elijah = NonPlayableCharacter("Elijah", "Elijah_Woods") #Relationship progression: FUN, FRIEND
 default kim = NonPlayableCharacter("Kim", "KimPlausible")
 default caleb = NonPlayableCharacter("Caleb", "Aleb")
 default parker = NonPlayableCharacter("Parker")
