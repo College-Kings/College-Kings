@@ -74,7 +74,7 @@ init python:
         #v12
     if renpy.loadable("v12/scene1.rpy"):
         SceneGallery("v12_lindsey_sex") #17, Lindsey, day 32, v12_lindsey_sex
-        SceneGallery("v12_ms_rose_sex_sg") #23, Rose, day 33, v12_msrose_sex
+        SceneGallery("v12_ms_rose_sex_sg") #23, Rose, day 33
         SceneGallery("v12_lauren_sex_sg") #29, Lauren, day 34, v12_lauren_sex
         SceneGallery("v12_nora_sex") #35a, Nora, day 35, v12_nora_sex
         #v13

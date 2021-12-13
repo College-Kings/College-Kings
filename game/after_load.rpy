@@ -511,6 +511,9 @@ label after_load:
         try:
             if v13_emmysex: sceneList.add("v13_emmy")
         except NameError: pass
+        try:
+            if v12_msrose_sex: sceneList.add("v12_rose")
+        except NameError: pass
 
 
         # v12 Renpy Fixes:
@@ -552,8 +555,6 @@ label after_load:
         except NameError: v12s7_endtalkList = []
         try: v12s7_killList
         except NameError: v12s7_killList = set()
-        try: v12_msrose_sex
-        except NameError: v12_msrose_sex = False
         try: v11_lindsey_run
         except NameError: v11_lindsey_run = False
         try: v12_help_chris

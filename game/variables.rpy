@@ -272,7 +272,6 @@ default v12_help_chris = 0
 default v12_lauren_points = 0
 default v12_lauren_sex = False
 default v12_lindsey_sex = False
-default v12_msrose_sex = False
 default v12_murder_count = 0
 default v12_nora_points = 0
 default v12_nora_sex = False
