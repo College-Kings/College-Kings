@@ -646,7 +646,7 @@ label v14s36:
         menu:
             "Kiss her":
                 $ jennyrs = True
-                $ v14_jenny_sex = True
+                $ sceneList.add("v14_jenny")
                 if chloegf or laurenrs or penelopers:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:

@@ -351,7 +351,6 @@ default v14_chrissupport = 0 #3 = Full, 2 = Medium, 1 = Low
 default v14_emily_ily = False
 default v14_help_chloe = False
 default v14_help_lindsey = False
-default v14_jenny_sex = False
 default v14_jennypoints = 0
 default v14_lauren_helps_lindsey = False
 default v14_lauren_sabotage = False

@@ -89,7 +89,7 @@ init python:
         SceneGallery("v14s03c_sg") #3d, Satin, xx
         SceneGallery("v14s21a") #21a, Chloe, xx
         SceneGallery("v14s25a") #25a, Amber, xx
-        SceneGallery("v14s36_sg") #36, Jenny, xx, v14_jenny_sex
+        SceneGallery("v14s36_sg") #36, Jenny, xx
         SceneGallery("v14s46a_sga", scope={"laurenrs": True}) #46a, Lauren good
         SceneGallery("v14s46a_sgb", scope={"laurenrs": False}) #46a, Lauren bad
         SceneGallery("v14s53_sg") #53a, Samantha, xx, v14_samantha_sex
