@@ -1436,7 +1436,7 @@ label v15s18a_Riley:
 
     u "That's a good start to a sentence... *Chuckles*"
 
-    if v13_FirstThreesome:
+    if "v14_threesome" in sceneList:
         scene v15s18ariley_2c
         with dissolve
 
@@ -1683,8 +1683,7 @@ label v15s18a_Riley:
 
             ri "Well, yeah."
 
-            if v13_FirstThreesome:
-        
+            if "v14_threesome" in sceneList:
                 ri "I've been craving you since Amsterdam..."
 
                 scene v15s18ariley_2i

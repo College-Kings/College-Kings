@@ -85,7 +85,7 @@ init python:
         SceneGallery("v13s50a") #50a, Emily, day 40
         #v14
     if renpy.loadable("v14/scene1.rpy"):
-        SceneGallery("v14s01") #1, Riley Aubrey, xx, v13_FirstThreesome
+        SceneGallery("v14s01") #1, Riley Aubrey, xx
         SceneGallery("v14s03c_sg") #3d, Satin, xx
         SceneGallery("v14s21a") #21a, Chloe, xx
         SceneGallery("v14s25a") #25a, Amber, xx

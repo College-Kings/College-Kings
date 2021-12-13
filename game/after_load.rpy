@@ -518,6 +518,9 @@ label after_load:
             if v13_emmysex: sceneList.add("v13_emmy")
         except NameError: pass
         try:
+            if v13_FirstThreesome: sceneList.add("v14_threesome")
+        except NameError: pass
+        try:
             if v14_amber_sex: sceneList.add("v14_amber")
         except NameError: pass
         try:

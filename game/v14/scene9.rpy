@@ -306,7 +306,7 @@ label v14s09:
 
     u "(Oh and Riley's...)"
 
-    if v13_FirstThreesome:
+    if "v14_threesome" in sceneList:
         menu:
             "Revenge against Charli":
                 u "(Charli was the worst, so getting revenge must have felt amazing.)"

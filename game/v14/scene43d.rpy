@@ -237,7 +237,7 @@ label v14s43d:
 
             u "Haha. Umm..."
 
-    if v13_FirstThreesome:
+    if "v14_threesome" in sceneList:
         u "You already know the answer to that question, I think."
 
         scene v14s43d_3 # TPP. Show MC winking at Riley, Both slight smile, mouth closed.
@@ -287,7 +287,7 @@ label v14s43d:
 
     ri "Great, I gotta go chat with Aubrey. Catch you later?"
 
-    if v13_FirstThreesome:
+    if "v14_threesome" in sceneList:
         scene v14s43d_2g
         with dissolve
 

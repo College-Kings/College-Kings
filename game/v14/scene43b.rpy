@@ -551,7 +551,7 @@ label v14s43b:
 
             pause 0.75
 
-            if v13_FirstThreesome:
+            if "v14_threesome" in sceneList:
                 scene v14s43b_19 # FPP. Riley and MC have sat down and Riley grabs and holds MC's hand under the table they sat at from v14s43b_18, Riley half smile, mouth closed looking at MC
                 with dissolve
 

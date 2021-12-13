@@ -46,7 +46,7 @@ label v14s01:
         "We're doing this":
             $ add_point(KCT.TROUBLEMAKER)
             
-            $ v13_FirstThreesome = True
+            $ sceneList.add("v14_threesome")
             u "I'm gonna feel much better after this."
 
             scene v14s01_1c # FPP. Samer as v14s01_1b, but Aubrey mouth open, Riley mouth closed, Aubrey looking at Riley, Riley looking at Aubrey

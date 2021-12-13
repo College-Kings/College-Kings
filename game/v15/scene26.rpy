@@ -387,7 +387,7 @@ label v15s26:
     # -I would love it if Aubrey/Riley/MC had some different positions in these images while they're watching. 
     # MC is sitting in the middle so if threesome, they can all be holding hands/cuddling. If aubreyTamed and not rileyRS, just Aubrey holding hands. 
     # Or if just RileyRS, no Aubrey, just Riley/MC holding hands. If this is too much work for one small image, I get it. But it would be a cute bonus here. Ask cheex for questions-
-    if v13_FirstThreesome:
+    if "v14_threesome" in sceneList:
         scene v15s26_20 # TPP Show MC, Riley, and Aubrey all cuddling and holding hands, lit up by the movie screen
         with dissolve
 
@@ -516,7 +516,7 @@ label v15s26:
 
     ri "It kind of intrigues me in some... strange way."
 
-    if v13_FirstThreesome: # -if they had threesome (AwkwardRiley&Aubrey is now consistent in this playthrough, remember variable)
+    if "v14_threesome" in sceneList: # -if they had threesome (AwkwardRiley&Aubrey is now consistent in this playthrough, remember variable)
         $ aubrey_riley_awkward = True
 
         scene v15s26_15a
@@ -948,7 +948,7 @@ label v15s26:
                 u "*Laughs*"
 
     # -Regardless-
-    if v13_FirstThreesome: # -if they had threesome
+    if "v14_threesome" in sceneList: # -if they had threesome
         scene v15s26_14a
         with dissolve
 
