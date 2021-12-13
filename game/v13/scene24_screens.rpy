@@ -1,18 +1,18 @@
 screen v13s24_girl():
 
-    if not emmyrs and not kourtneyrs and not aryssa.relationship == Relationship.LIKES:
+    if not emmyrs and not kourtney.relationship == Relationship.LIKES and not aryssa.relationship == Relationship.LIKES:
         add Transform("images/v13/scene24/v13s24_20a.webp", blur=15)
-    elif emmyrs and kourtneyrs and aryssa.relationship == Relationship.LIKES:
+    elif emmyrs and kourtney.relationship == Relationship.LIKES and aryssa.relationship == Relationship.LIKES:
         add Transform("images/v13/scene24/v13s24_20b.webp", blur=15)
-    elif emmyrs and kourtneyrs:
+    elif emmyrs and kourtney.relationship == Relationship.LIKES:
         add Transform("images/v13/scene24/v13s24_20c.webp", blur=15)
     elif emmyrs and aryssa.relationship == Relationship.LIKES:
         add Transform("images/v13/scene24/v13s24_20d.webp", blur=15)
-    elif kourtneyrs and aryssa.relationship == Relationship.LIKES:
+    elif kourtney.relationship == Relationship.LIKES and aryssa.relationship == Relationship.LIKES:
         add Transform("images/v13/scene24/v13s24_20e.webp", blur=15)
     elif emmyrs:
         add Transform("images/v13/scene24/v13s24_20f.webp", blur=15)
-    elif kourtneyrs:
+    elif kourtney.relationship == Relationship.LIKES:
         add Transform("images/v13/scene24/v13s24_20g.webp", blur=15)
     elif aryssa.relationship == Relationship.LIKES:
         add Transform("images/v13/scene24/v13s24_20h.webp", blur=15)
@@ -34,12 +34,12 @@ screen v13s24_girl():
                 text "Emmy" align (0.5, 0.5)
 
         button:
-            if kourtneyrs:
+            if kourtney.relationship == Relationship.LIKES:
                 action Jump("v13s24_kourtney_date")
 
             fixed:
                 xysize (269, 74)
-                if kourtneyrs:
+                if kourtney.relationship == Relationship.LIKES:
                     add "images/button_gray.webp"
                 else:
                     add "images/button_light_gray.webp"

@@ -177,7 +177,7 @@ default charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
 default cameron = NonPlayableCharacter("Cameron", "Cameroon")
 default josh = NonPlayableCharacter("Josh", "Josh80085")
 default julia = NonPlayableCharacter("Julia")
-default evelyn = NonPlayableCharacter("Evelyn") #Relationship progression: DATE ("evelyndate"), LIKES ("evelynrs"), KISS
+default evelyn = NonPlayableCharacter("Evelyn") #Relationship progression: DATE, LIKES, KISS
 default autumn = NonPlayableCharacter("Autumn", "Its_Fall")
 default sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
 default grayson = NonPlayableCharacter("Grayson", "G-rayson")
@@ -200,6 +200,7 @@ default iris = NonPlayableCharacter("Iris")
 default samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam")
 default emmy = NonPlayableCharacter("Emmy")
 default aryssa = NonPlayableCharacter("Aryssa") #Relationship progression: LIKES
+defauly kourtney = NonPlayableCharacter("Kourtney") #Relationship progression: LIKES
 
 default wolf = NonPlayableCharacter("Wolf")
 default trainer = NonPlayableCharacter("Trainer")

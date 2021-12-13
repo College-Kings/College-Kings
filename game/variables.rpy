@@ -301,7 +301,6 @@ default chloeturnedon = set() #Chloe Amsterdam
 default emmyrs = False
 default freeroam10 = set() #Charli room
 default freeroam11 = set() #Amsterdam garden
-default kourtneyrs = False
 default laurenrs_v11aubrey = False
 default v13_after_party = False
 default v13_aubrey_concert = False

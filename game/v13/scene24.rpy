@@ -558,7 +558,7 @@ label v13s24:
     menu:
         "Yes, I'm a romantic":
             $ add_point(KCT.BOYFRIEND)
-            $ kourtneyrs = True
+            $ kourtney.relationship = Relationship.LIKES
             
             scene v13s24_16h
             with dissolve
@@ -752,7 +752,7 @@ label v13s24:
 
     barh "Right then... Ladies, go ahead and decide on your man. If you would be willing to go on a date with [name], please raise your hand."
 
-    if not emmyrs and not kourtneyrs and not aryssa.relationship == Relationship.LIKES:
+    if not emmyrs and not kourtney.relationship == Relationship.LIKES and not aryssa.relationship == Relationship.LIKES:
         scene v13s24_20a # FPP. same as v13s24_20 emmy kourtney and aryssa looking in different directions, no expressions, hands MUST be at sides or in laps NOT raised, mouths closed
         with dissolve
 
@@ -763,7 +763,7 @@ label v13s24:
 
         pause 1
 
-    elif emmyrs and kourtneyrs and aryssa.relationship == Relationship.LIKES:
+    elif emmyrs and kourtney.relationship == Relationship.LIKES and aryssa.relationship == Relationship.LIKES:
         scene v13s24_20b # FPP. same as v13s24_20 emmy kourtney and aryssa looking at MC, all with one hand raised, all fully smiling, all mouths closed
         with dissolve
 
@@ -779,7 +779,7 @@ label v13s24:
 
         pause 1
 
-    elif emmyrs and kourtneyrs:
+    elif emmyrs and kourtney.relationship == Relationship.LIKES:
         scene v13s24_20c # FPP. same as v13s24_20b aryssa no expression and doesn't raise her hand
         with dissolve
 
@@ -791,7 +791,7 @@ label v13s24:
 
         pause 2
 
-    elif kourtneyrs and aryssa.relationship == Relationship.LIKES:
+    elif kourtney.relationship == Relationship.LIKES and aryssa.relationship == Relationship.LIKES:
         scene v13s24_20e # FPP. same as v13s24_20b emmy no expression and doesn't raise her hand
         with dissolve
 
@@ -803,7 +803,7 @@ label v13s24:
 
         pause 2
 
-    elif kourtneyrs:
+    elif kourtney.relationship == Relationship.LIKES:
         scene v13s24_20g # FPP. same as v13s24_20b show just kourtney raising her hand, full smile, mouth closed, 
         with dissolve
 
@@ -853,7 +853,7 @@ label v13s24:
     scene v13s24_12a
     with dissolve
 
-    if not emmyrs and not kourtneyrs and not aryssa.relationship == Relationship.LIKES:
+    if not emmyrs and not kourtney.relationship == Relationship.LIKES and not aryssa.relationship == Relationship.LIKES:
 
         scene v13s24_12a
         with dissolve
