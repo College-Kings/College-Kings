@@ -457,7 +457,7 @@ label v11_cardealership:
 
                             play sound "sounds/kiss.mp3"
 
-                            if laurenrs and not "v11_aubrey" in sceneList:
+                            if lauren.relationship.value >= Relationship.GIRLFRIEND.value and not v11_lauren_caught_aubrey:
                                 $ grant_achievement("two_timer")
 
                             pause 2.5
@@ -465,7 +465,7 @@ label v11_cardealership:
                             scene v11cd36 # FPP. MC sets chloe down, mouth closed
                             with dissolve
 
-                            if laurenrs and not "v11_aubrey" in sceneList:
+                            if lauren.relationship.value >= Relationship.GIRLFRIEND.value and not v11_lauren_caught_aubrey:
                                 u "(Damn, two girlfriends. This could get complicated fast.)"
 
                             u "Wow... c'mon, let's get this car back."

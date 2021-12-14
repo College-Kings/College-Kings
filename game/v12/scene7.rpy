@@ -1735,7 +1735,7 @@ label v12s7_lauren1:
     stop music fadeout 3
     play music "music/v12/Track Scene 7_8.mp3" fadein 2
 
-    if laurenrs and "v11_aubrey" in sceneList:
+    if v11_lauren_caught_aubrey:
         scene v12ferla1a # FPP. same 1, mouth open
         with dissolve
 
@@ -1787,7 +1787,7 @@ label v12s7_lauren1:
 
     la "And there you are."
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v12ferla5 # TPP. Show lauren kissing mc.
         with dissolve
         play sound "sounds/kiss.mp3"
@@ -1935,7 +1935,7 @@ label v12s7_lauren1:
 
     la "You know what, go bother someone else. *Chuckles* Maybe someone will kill you for me. *Laughs*"
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v12ferla1d
         with dissolve
 

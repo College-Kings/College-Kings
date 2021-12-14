@@ -747,7 +747,7 @@ label v10s33_deergirl11:
     menu:
         "Hot":
             $ add_point(KCT.BOYFRIEND)
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 u "Hot, obviously."
 
                 scene v10cfrau4
@@ -1410,7 +1410,7 @@ label v10s33_deergirl21:
     label v10s33_laurenbake1:
     $ freeroam6.add("lauren")
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v10cfrla1 #FPP Show Lauren, Looking at mc, happy smile, mouth open
         la "Hey babe!"
 
@@ -1443,7 +1443,7 @@ label v10s33_deergirl21:
 
     la "Haha, to answer your question, bad. Sales are going bad. I only sold one and that was to my mother when she stopped by earlier."
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v10cfrla1
         with dissolve
 
@@ -1565,7 +1565,7 @@ label v10s33_deergirl21:
 
     u "I'm sure you people are gonna get hungry at some point."
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         u "I know, I'd love some of... Lauren's Moist Muffins."
 
         scene v10cfrla1d
@@ -1643,7 +1643,7 @@ label v10s33_deergirl21:
 
     u "What a beautiful statue."
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v10cfrla4 #TPP shows mc leaning in for the kiss, but lauren holds him back, lauren mouth open, neutral face
         with dissolve
 
@@ -1776,7 +1776,7 @@ label v10s33_deergirl21:
 
     u "So committed, we love to see it."
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
         scene v10cfrla3d

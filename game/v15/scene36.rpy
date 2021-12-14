@@ -252,7 +252,7 @@ label v15s36:
             "I'd like that.":
                 u "Honestly, I'd really like that... I feel the same way."
 
-                if laurenrs:
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     $ autumnloyal = True
                     scene v15s36_5
                     with dissolve
@@ -396,7 +396,7 @@ label v15s36:
 
                 aut "No, no. There's nothing to apologize for. You're right, and thanks for being honest."
 
-                if laurenrs:
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     scene v15s36_5
                     with dissolve
 

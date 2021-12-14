@@ -90,7 +90,7 @@ label v11_at_the_bank:
 
     bank "Ah yes, the others must be in Jerry's group."
 
-    if not ("v11_aubrey" in sceneList and laurenrs):
+    if not v11_lauren_caught_aubrey: #if MC went to HP event
         scene v11bank3b # FPP Same angle as v11bank3, bank teller smiling with mouth closed
         with dissolve
 

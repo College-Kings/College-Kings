@@ -19,7 +19,7 @@ label v9_lau_dorm:
 
     pause 0.8
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v9lau3 # FPP. Show Lauren who has just opened the door, Lauren smile, mouth closed.
         with dissolve
 
@@ -30,7 +30,7 @@ label v9_lau_dorm:
 
         la "Aww, I missed you, too. Come in."
 
-    elif beachfirstkiss:
+    elif lauren.relationship.value >= Relationship.KISS.value:
         scene v9lau3
         with dissolve
 
@@ -95,7 +95,7 @@ label v9_lau_dorm:
     scene v9lau6a
     with dissolve
 
-    if laurenrs or beachfirstkiss:
+    if lauren.relationship.value >= Relationship.KISS.value:
         menu:
             "Offer Lauren a back rub":
                 $ add_point(KCT.BOYFRIEND)
@@ -254,7 +254,7 @@ label v9_lau_dorm:
             scene v9lau6c
             with dissolve
 
-    if laurenrs or beachfirstkiss:
+    if lauren.relationship.value >= Relationship.KISS.value:
         u "How about a hand job booth?"
 
         scene v9lau6e # FPP. Same camera as v9lau6, Lauren looks shocked, mouth closed.
@@ -422,7 +422,7 @@ label v9_lau_dorm:
     scene v9lau11 # FPP. Show Lauren (Who is now stood up in her room), Lauren looks stressed, mouth closed.
     with dissolve
 
-    if laurenrs or beachfirstkiss:
+    if lauren.relationship.value >= Relationship.KISS.value:
         u "Whatever you choose, I'll be there with you."
 
         scene v9lau11a # FPP. Same camera as v9lau11, Lauren smile, mouth open.
@@ -506,13 +506,13 @@ label v9_lau_dorm:
     scene v9lau16 # FPP. Show Lauren, now stood near the door of her dorm, smile, mouth open.
     with dissolve
 
-    if laurenrs or beachfirstkiss:
+    if lauren.relationship.value >= Relationship.KISS.value:
         la "You were a lifesaver."
 
         scene v9lau16a # FPP. Same camera as v9lau16, Lauren smile, mouth closed.
         with dissolve
 
-        if laurenrs:
+        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
             menu:
                 "Flirt":
                     $ add_point(KCT.BOYFRIEND)
@@ -565,7 +565,7 @@ label v9_lau_dorm:
         scene v9lau16a
         with dissolve
 
-        if beachfirstkiss and not laurenrs and kct == "loyal":
+        if lauren.relationship.value < Relationship.GIRLFRIEND.value and kct == "loyal":
             if kct == "loyal":
                 call screen kct_popup
 
@@ -578,7 +578,7 @@ label v9_lau_dorm:
                 "Leave":
                     jump v9_lau_dorm_no_kiss
                 
-        elif laurenrs:
+        elif lauren.relationship.value >= Relationship.GIRLFRIEND.value:
             jump v9_lau_dorm_kiss
 
         else:

@@ -249,7 +249,7 @@ label v13s30:
 
     am "*Chuckles* Come roll up with us."
 
-    if (laurenrs and "v11_aubrey" in sceneList): 
+    if v11_lauren_caught_aubrey: 
         scene v13s30_2a
         with dissolve
 
@@ -300,7 +300,7 @@ label v13s30:
 
         pause 0.75
    
-    elif laurenrs:
+    elif lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v13s30_6c # FPP. Same as v13s30_6a, Lauren slight smile, mouth open.
         with dissolve
 

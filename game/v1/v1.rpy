@@ -2769,12 +2769,12 @@ label aw_bd:
 
     menu:
         "Kiss her":
-            $ v1_laurenKiss = True
+            $ lauren.relationship = Relationship.MOVE
 
             if v1_laurenPoints == 2:
                 scene s90
                 with dissolve # kiss
-                $ v1_kissLauren = True
+                $ lauren.relationship = Relationship.KISS
                 
                 $ grant_achievement("romeo")
 
@@ -2794,7 +2794,6 @@ label aw_bd:
                 " "
 
         "Don't kiss her":
-
             scene s90b # you scratching your head
             with dissolve
             " "
@@ -2820,7 +2819,7 @@ label aw_bd:
     scene s92 # you head in hands
     with dissolve
 
-    if v1_laurenKiss:
+    if lauren.relationship.value >= Relationship.MOVE.value:
         u "(Fuck... why did I try to kiss her?! That just made everything weird.)"
     else:
         u "(Fuck... should I have kissed her? Now it's just weird between us.)"
@@ -2863,7 +2862,7 @@ label aw_bd:
 
     imre "I take it your date didn't go as planned?"
 
-    if v1_laurenKiss and v1_laurenPoints == 2:
+    if lauren.relationship.value >= Relationship.KISS.value:
         scene s96a
         with dissolve
         u "I just don't get it..."
@@ -2874,7 +2873,7 @@ label aw_bd:
 
         u "And now it's all just super weird."
 
-    elif v1_laurenKiss:
+    elif lauren.relationship.value >= Relationship.MOVE.value:
         scene s96a
         with dissolve
 

@@ -220,8 +220,9 @@ label v15s18d:
 
             u "But I'd only want to if you wanted-"
 
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.BOYFRIEND)
+
                 if v15_lauren_gift == "$50 gift card":
                     scene v15s18d_8i # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren fake smile, mouth open.
                     with dissolve
@@ -271,6 +272,7 @@ label v15s18d:
                     pause 0.75 
 
                     jump v15s18f
+
                 else:
                     scene v15s18d_8f
                     with dissolve
@@ -308,6 +310,7 @@ label v15s18d:
                     with dissolve
 
                     jump v15s18e
+
             else: 
                 if kct == "loyal" and not "v12_lauren" in sceneList:
                     scene v15s18d_8f
@@ -412,18 +415,18 @@ label v15s18d:
         "Don't try to have sex":
             u "But I don't want to do that to you, just ignore him. He's trying to get me to play this stupid game."
 
-            if not laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                scene v15s18d_8g # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren confused, mouth open.
+                with dissolve 
+
+                la "You don't want to have sex with your girlfriend on her birthday?"
+
+            else:
                 $ add_point(KCT.BOYFRIEND)
                 scene v15s18d_8f # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren slight smile, mouth open.
                 with dissolve
 
                 la "Haha, yeah... I figured that's what you were going to say."
-
-            else:
-                scene v15s18d_8g # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren confused, mouth open.
-                with dissolve 
-
-                la "You don't want to have sex with your girlfriend on her birthday?"
 
             scene v15s18d_8e
             with dissolve
@@ -444,8 +447,29 @@ label v15s18d:
             with dissolve
 
             la "Yeah, it was great! I'm so happy everyone had a good time."
-            
-            if not laurenrs:
+
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                scene v15s18d_8f
+                with dissolve
+
+                la "Let's head to bed now, yeah? I'm ready for a cozy birthday sleep... You can be the big spoon."
+
+                scene v15s18d_8h
+                with dissolve
+
+                u "Haha... Okay, little spoon. Let's go."
+
+                scene v15s18d_14 # TPP. Show MC kissing Lauren's forehead, Lauren slight smile, eyes closed, mouth closed.
+                with dissolve
+
+                pause 0.75 
+
+                scene v15s18d_12b # TPP. Show Lauren and MC walking up the stairs, both slight smile, mouth closed.
+                with dissolve 
+
+                pause 0.75
+
+            else:
                 la "You don't have to go home tonight, by the way. You can just sleep on the couch if you want."
 
                 scene v15s18d_8h
@@ -492,26 +516,5 @@ label v15s18d:
                 with dissolve
 
                 pause 0.75 
-
-            else:
-                scene v15s18d_8f
-                with dissolve
-
-                la "Let's head to bed now, yeah? I'm ready for a cozy birthday sleep... You can be the big spoon."
-
-                scene v15s18d_8h
-                with dissolve
-
-                u "Haha... Okay, little spoon. Let's go."
-
-                scene v15s18d_14 # TPP. Show MC kissing Lauren's forehead, Lauren slight smile, eyes closed, mouth closed.
-                with dissolve
-
-                pause 0.75 
-
-                scene v15s18d_12b # TPP. Show Lauren and MC walking up the stairs, both slight smile, mouth closed.
-                with dissolve 
-
-                pause 0.75
 
             jump v15s18f

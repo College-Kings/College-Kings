@@ -1085,7 +1085,7 @@ label v4start:
 
     u "(Oh that's Lauren's sister Autumn...)"
 
-    if not laurenrs and toldlauren:
+    if toldlauren:
         $ add_point(KCT.TROUBLEMAKER)
 
         u "(Hopefully Lauren didn't tell her about what happened...)"
@@ -1172,7 +1172,7 @@ label v4start:
                 jump ea_b
 
 
-    elif not laurenrs and laurentoofar:
+    elif laurentoofar:
         $ add_point(KCT.TROUBLEMAKER)
 
         u "(Hopefully Lauren didn't tell her about what happened...)"
@@ -1259,8 +1259,7 @@ label v4start:
 
                 jump ea_b
 
-
-    elif not laurenrs:
+    elif lauren.relationship.value < Relationship.GIRLFRIEND.value: #if not a girlfriend, but not because messed up date
         $ add_point(KCT.BOYFRIEND)
         scene s334
         with dissolve

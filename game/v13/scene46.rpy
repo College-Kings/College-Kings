@@ -303,7 +303,7 @@ label v13s46:
 
     pause 0.75
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v13s46_4a
         with dissolve
 

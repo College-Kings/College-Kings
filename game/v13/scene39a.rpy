@@ -83,7 +83,7 @@ label v13s39a:
 
             u "I definitely wouldn't want to bring my girl."   
 
-        elif laurenrs and not "v11_aubrey" in sceneList:
+        elif lauren.relationship.value >= Relationship.GIRLFRIEND.value and not v11_lauren_caught_aubrey: #second part of check only for compatibility purposes
             scene v13s39a_5 # FPP. a dreamlike image of lauren is shown on the screen
             with dissolve
 

@@ -1,5 +1,9 @@
 ### v8 beginning. Variable definitions here
 label v8start:
+
+    if lauren.relationship.value < Relationship.FRIEND.value: #reset lauren mad to friend
+        $ lauren.relationship = Relationship.FRIEND
+    
     if ending == "lauren":
         jump v8_la_start
     elif ending == "chloe":

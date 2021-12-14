@@ -624,7 +624,6 @@ label jorepb:
     u "(At least my eye is starting to heal...)"
 
 label newchloec:
-
     scene s376e
     with dissolve
 
@@ -705,7 +704,7 @@ label continuez:
 
     # Kiss in public
 
-    if laurenkissb:
+    if lauren.relationship.value >= Relationship.KISS.value:
         scene s379a # lauren kisses you
         with dissolve
         play sound "sounds/kiss.mp3"
@@ -937,7 +936,7 @@ label gokissb:
 
             u "I definitely do."
 
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene s382d # Lauren cheeky flirty smile
                 with dissolve
 
@@ -1007,7 +1006,7 @@ label gokissb:
 
             u "Not really, sooo... disagree."
 
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene s382f # Lauren passive agressive
@@ -1812,9 +1811,11 @@ label continueaf:
             jump gotest
 
         else:
+            $ lauren.relationship = Relationship.MAD
+
             la "When you continued pushing your hand up my thigh after I told you I didn't want it, you... you made me feel disgusting."
 
-            la "I trusted you and you? You didn't seem to care one bit."
+            la "I trusted you... And you didn't seem to care one bit."
 
             scene s380c
             with dissolve
@@ -1832,8 +1833,6 @@ label continueaf:
             u "Yeah, of course, sorry."
 
             u "(Fuck... but it's probably time to go pick up Imre with Riley anyways.)"
-
-            $ laurenmad = True
 
             jump hospitala
 
@@ -1906,7 +1905,7 @@ label continueaf:
         if kct == "loyal":
             call screen kct_popup
 
-            $ laurenrs = True
+            $ lauren.relationship = Relationship.GIRLFRIEND
 
             scene s380b
             with dissolve
@@ -2010,7 +2009,7 @@ label continueaf:
             jump gotest
 
     else:
-        $ laurenrs = True
+        $ lauren.relationship = Relationship.GIRLFRIEND
 
         scene s380b
         with dissolve

@@ -34,8 +34,7 @@ label v11_chloe_hotel_room_amber_call:
 
         am "I just wanna know what's up with Lauren."
 
-        if "v11_aubrey" in sceneList and laurenrs: 
-
+        if v11_lauren_caught_aubrey:
             scene v11hrc3 
             with dissolve
 

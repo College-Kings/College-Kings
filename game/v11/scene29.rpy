@@ -453,7 +453,7 @@ label v11wakeupa:
 
     #pause 0.75
     stop music fadeout 3
-    if "v11_aubrey" in sceneList and laurenrs:
+    if v11_lauren_caught_aubrey:
         jump v11_lauren_apology
     else:
         jump v11_lauren_store

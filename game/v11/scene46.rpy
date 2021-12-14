@@ -154,87 +154,7 @@ label v11_dinner_with_lauren:
 
     la "I may or may not have already talked to her about this. *Chuckles*"
 
-    if not laurenrs:
-        scene v11dwl1c
-        with dissolve
-
-        u "You know, I'm really glad we became friends, Lauren."
-
-        scene v11dwl1b
-        with dissolve
-
-        la "I am too. Sometimes I sit back and think about what it'd be like if we never met and how different college would be... But it's honestly too hard to imagine that."
-
-        scene v11dwl1c
-        with dissolve
-
-        u "I could say the same about you. You were one of the first people I met, haha."
-
-        scene v11dwl1b
-        with dissolve
-
-        la "*Chuckles* Speaking of college, and I know this is super random, but I just have to ask... Don't be embarrassed or anything, okay?"
-
-        scene v11dwl1
-        with dissolve
-
-        u "Well, now I'm definitely nervous, but sure, go ahead. *Chuckles*"
-
-        scene v11dwl1a
-        with dissolve
-
-        la "On your first day of college, and I know this was long ago, but... Did you flirt with my sister?"
-
-        menu:
-            "Yes":
-                scene v11dwl1d # FPP. same 1, change pose again so not stale, mouth closed
-                with dissolve
-
-                u "Haha, yeah I actually did. I think I just thought I was cool or something, I don't know."
-
-                scene v11dwl1e # FPP. same 1, change pose again so not stale, mouth open
-                with dissolve
-
-                la "Haha, I remember her telling me about it, but she never said who it was. With her very vague description I always felt it was you, but I never said anything. *Laughs*"
-
-                scene v11dwl1d
-                with dissolve
-
-                u "*Chuckles* Well, your gut was right..."
-
-            "No":
-                scene v11dwl1d
-                with dissolve
-                
-                u "Haha, I don't think so, no. Why?"
-
-                if not kct == "loyal":
-                    scene v11dwl1e
-                    with dissolve
-                    
-                    la "Sure you didn't..."
-                else:
-                    scene v11dwl1e
-                    with dissolve
-
-                    la "I remember her telling she told me about it some guy did, but she never said who it was."
-
-                scene v11dwl1d
-                with dissolve
-
-                u "Why'd you think it was me? *Chuckles*"
-
-                scene v11dwl1e
-                with dissolve
-
-                la "The way she described the guy. *Chuckles* It sounded like it could've been you, but she never remembered the guy's name."
-
-                scene v11dwl1d
-                with dissolve
-
-                u "Well, it wasn't me, but it sounds like your sister may have a secret admirer. *Chuckles*"
-    elif laurenrs:
-
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v11dwl1e
         with dissolve
 
@@ -363,6 +283,86 @@ label v11_dinner_with_lauren:
         with dissolve
 
         la "That's me."
+
+    else:
+        scene v11dwl1c
+        with dissolve
+
+        u "You know, I'm really glad we became friends, Lauren."
+
+        scene v11dwl1b
+        with dissolve
+
+        la "I am too. Sometimes I sit back and think about what it'd be like if we never met and how different college would be... But it's honestly too hard to imagine that."
+
+        scene v11dwl1c
+        with dissolve
+
+        u "I could say the same about you. You were one of the first people I met, haha."
+
+        scene v11dwl1b
+        with dissolve
+
+        la "*Chuckles* Speaking of college, and I know this is super random, but I just have to ask... Don't be embarrassed or anything, okay?"
+
+        scene v11dwl1
+        with dissolve
+
+        u "Well, now I'm definitely nervous, but sure, go ahead. *Chuckles*"
+
+        scene v11dwl1a
+        with dissolve
+
+        la "On your first day of college, and I know this was long ago, but... Did you flirt with my sister?"
+
+        menu:
+            "Yes":
+                scene v11dwl1d # FPP. same 1, change pose again so not stale, mouth closed
+                with dissolve
+
+                u "Haha, yeah I actually did. I think I just thought I was cool or something, I don't know."
+
+                scene v11dwl1e # FPP. same 1, change pose again so not stale, mouth open
+                with dissolve
+
+                la "Haha, I remember her telling me about it, but she never said who it was. With her very vague description I always felt it was you, but I never said anything. *Laughs*"
+
+                scene v11dwl1d
+                with dissolve
+
+                u "*Chuckles* Well, your gut was right..."
+
+            "No":
+                scene v11dwl1d
+                with dissolve
+                
+                u "Haha, I don't think so, no. Why?"
+
+                if not kct == "loyal":
+                    scene v11dwl1e
+                    with dissolve
+                    
+                    la "Sure you didn't..."
+                else:
+                    scene v11dwl1e
+                    with dissolve
+
+                    la "I remember her telling she told me about it some guy did, but she never said who it was."
+
+                scene v11dwl1d
+                with dissolve
+
+                u "Why'd you think it was me? *Chuckles*"
+
+                scene v11dwl1e
+                with dissolve
+
+                la "The way she described the guy. *Chuckles* It sounded like it could've been you, but she never remembered the guy's name."
+
+                scene v11dwl1d
+                with dissolve
+
+                u "Well, it wasn't me, but it sounds like your sister may have a secret admirer. *Chuckles*"
 
     scene v11dwl4 # FPP. Show waiter approaching table with food
     with dissolve

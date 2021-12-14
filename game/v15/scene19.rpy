@@ -287,7 +287,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
     la "Are you kidding? Thank you for coming. It was such a special night for me!"
 
-    if laurenrs: #lauren.relationship == Relationship.GIRLFRIEND: # -if LaurenGF
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         play sound "sounds/kiss.mp3"
 
         scene v15s19_9c    # FPP. Lauren, eyes closed, kissing MC on the lips [Deer House Living Room Front Door]. 

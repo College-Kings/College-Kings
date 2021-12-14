@@ -216,6 +216,18 @@ label after_load:
             del kourtneyrs
         except NameError: pass
         try:
+            if laurenmad: lauren.relationship = Relationship.MAD
+            del laurenmad
+        except NameError: pass
+        try:
+            if laurenrs: lauren.relationship = Relationship.GIRLFRIEND
+            del laurenrs
+        except NameError: pass
+        try:
+            if laurenrs_v11aubrey and "v11_aubrey" in sceneList: v11_lauren_caught_aubrey = True
+            del laurenrs_v11aubrey
+        except NameError: pass
+        try:
             if lindseyfirstkiss: lindsey.relationship = Relationship.KISS
             del lindseyfirstkiss
         except NameError: pass
@@ -785,8 +797,6 @@ label after_load:
         except NameError: v13s41_lindsey_points = 0
         try: v13s20_bleach_suitcase
         except NameError: v13s20_bleach_suitcase = False
-        try: laurenrs_v11aubrey
-        except NameError: laurenrs_v11aubrey = False
         try: v13s40fromgame
         except NameError: v13s40fromgame = False
         try: v13_aubrey_vote

@@ -32,7 +32,7 @@ label v15s37:
 
         u "(That was a fun night, especially with Autumn there. I'm glad I'm getting to know her better.)"
 
-    elif v15s36_not_good_idea and laurenrs: 
+    elif v15s36_not_good_idea and lauren.relationship.value >= Relationship.GIRLFRIEND.value: 
         scene v15s37_3
         with dissolve
 
@@ -50,7 +50,7 @@ label v15s37:
 
         u "(Not right now anyway.)"
 
-    elif laurenrs:
+    elif lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s37_3
         with dissolve
 

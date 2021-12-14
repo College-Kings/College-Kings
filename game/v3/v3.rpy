@@ -1155,7 +1155,7 @@ label conl:
 
     u "(Why do people come here so early in the morning just to work out?)"
 
-    if evelyn.relationship.value < Relationship.MOVE.value:
+    if evelyn.relationship.value < Relationship.MOVE.value: #if haven't made a move yet
         scene s243 # evelyn working out
         with dissolve
 
@@ -2446,7 +2446,7 @@ label acream:
 
     u "(I can't believe I just had sex with Aubrey... that was amazing.)"
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND:
         u "(I wonder if Lauren would be upset if she knew. I guess I'll have to decide how honest I wanna be on our date tonight.)"
 
 label aubsexad:
@@ -2458,8 +2458,10 @@ label aubsexad:
 
 
 ### Meet Lauren
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        jump continueq
 
-    if not laurenrs: # you're not dating Lauren
+    else: # you're not dating Lauren
         scene s265 # lauren sitting in front of your door
         with dissolve
 
@@ -2501,9 +2503,6 @@ label aubsexad:
             with dissolve
 
             u "Uhm, okay. What is it?"
-
-    else:
-        jump continueq
 
 label continuen:
 
@@ -3126,7 +3125,7 @@ label continueq:
 
     stop music fadeout 3
 
-    if laurenrs: #LAUREN MOVIES
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: #LAUREN MOVIES
         play music "music/mindie2.mp3"
 
         scene s282  ## later that day transition pic
@@ -3188,7 +3187,7 @@ label continueq:
                 "Tell her what happened":
                     $ toldlauren = True
                     $ add_point(KCT.BOYFRIEND)
-                    $ laurenrs = False
+                    $ lauren.relationship = Relationship.MAD
 
                     u "(Lauren values honesty and we're not in a relationship yet, so she'll probably be understanding as long as I tell her the truth.)"
 
@@ -3331,8 +3330,6 @@ label continueq:
         label dl_b: #for compatibility only
         menu:
             "Kiss her":
-                $ laurenkissb = True
-
                 scene laurenkiss2 #self explanatory, same camera as s289
                 with dissolve
 
@@ -3353,7 +3350,7 @@ label continueq:
                             "Keep going":
                                 $ add_point(KCT.TROUBLEMAKER)
                                 $ laurentoofar = True
-                                $ laurenrs = False
+                                $ lauren.relationship = Relationship.MAD
 
                                 scene s291b # your hand moves further up
                                 with dissolve

@@ -648,7 +648,7 @@ label v14s36:
                 $ jenny.relationship = Relationship.FWB
                 $ sceneList.add("v14_jenny")
                 
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value or laurenrs or penelope.relationship.value >= Relationship.LIKES.value:
+                if chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or penelope.relationship.value >= Relationship.LIKES.value:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
                     $ add_point(KCT.BOYFRIEND)
@@ -1168,7 +1168,7 @@ label v14s36:
             "Don't kiss her":
                 $ jenny.relationship = Relationship.AWKWARD
                 
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value or laurenrs or penelope.relationship.value >= Relationship.LIKES.value:
+                if chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or penelope.relationship.value >= Relationship.LIKES.value:
                     $ add_point(KCT.BOYFRIEND)
                 else:
                     $ add_point(KCT.TROUBLEMAKER)
@@ -1307,7 +1307,7 @@ label v14s36:
 
     pause 0.75
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         play sound "sounds/vibrate.mp3"
 
         scene v14s36_13 # FPP. MC looks at his phone and see's that Lauren is calling him

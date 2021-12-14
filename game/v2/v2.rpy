@@ -1181,7 +1181,7 @@ label meet_lauren2:
         "There was something there":
             $ add_point(KCT.BOYFRIEND)
             
-            if v1_laurenKiss and v1_laurenPoints == 2:
+            if lauren.relationship.value >= Relationship.KISS.value:
                     scene s130c
                     with dissolve
                     u "I know you stopped kissing me after about a second..."
@@ -1190,7 +1190,7 @@ label meet_lauren2:
 
                     u "There was something real there and you know it."
 
-            elif v1_laurenKiss:
+            elif lauren.relationship.value >= Relationship.MOVE.value:
                 scene s130c
                 with dissolve
 
@@ -1208,12 +1208,13 @@ label meet_lauren2:
 
                 u "And I should have. There was something real there. Between us."
 
-            if kct == "loyal" or v1_kissLauren:
-                $ laurenrs = True
+            if lauren.relationship.value >= Relationship.KISS.value or kct == "loyal":
                 $ laawk = False
 
-                if not v1_kissLauren:
+                if lauren.relationship.value < Relationship.KISS.value:
                     call screen kct_popup
+
+                $ lauren.relationship = Relationship.GIRLFRIEND
 
                 scene s131 ### Lauren grabbing your hand on the table
                 with dissolve
@@ -1321,7 +1322,7 @@ label meet_lauren2:
             scene s130a
             with dissolve
 
-            if v1_laurenKiss:
+            if lauren.relationship.value >= Relationship.MOVE.value:
                 u "That was uhm... nothing."
 
                 u "Let's just forget that ever happened."

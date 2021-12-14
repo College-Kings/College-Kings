@@ -132,7 +132,7 @@ label v11_lobby_mrlee:
 
     u "(Hmm, who to sit with?)"
 
-    if "v11_aubrey" in sceneList and laurenrs:
+    if v11_lauren_caught_aubrey:
         # -MC sees Aubrey sitting by herself-
 
         scene v11lob15 # FPP. Show aubrey sat alone, slight sad look
@@ -157,7 +157,7 @@ label v11_lobby_mrlee:
         stop music fadeout 3
         jump v11_dinner_with_aubrey
 
-    elif laurenrs:
+    elif lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v11lob18 # FPP. Show Lauren sat alone, slight sad look
         with dissolve
 

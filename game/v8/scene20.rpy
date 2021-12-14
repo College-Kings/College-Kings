@@ -801,7 +801,7 @@ label em_arcade_1:
 
     menu:
         "Kiss her":
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.TROUBLEMAKER)
 
             else:
@@ -851,7 +851,7 @@ label em_arcade_1:
             jump mon_morning_room
 
         "Good night":
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.BOYFRIEND)
 
             scene v8arcade23a
@@ -1256,7 +1256,7 @@ label v8s20_nsfwSkipLabel1:
 
     menu:
         "Kiss her":
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.TROUBLEMAKER)
             else:
                 $ add_point(KCT.BOYFRIEND)
@@ -1305,7 +1305,7 @@ label v8s20_nsfwSkipLabel1:
             jump mon_morning_room
 
         "Good night":
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.BOYFRIEND)
 
             scene v8arcade23a

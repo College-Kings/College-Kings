@@ -121,7 +121,7 @@ label v15s18b:
 
     pause 0.75 
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s18b_9 # TPP. Shot of just Autumn looking in Lauren's direction, slight smile, mouth open.
         with dissolve
 
@@ -150,13 +150,7 @@ label v15s18b:
 
         u "A gift card is useful, you know, for a college student. You can get books or whatever..."
 
-        if not laurenrs:
-            scene v15s18b_3c
-            with dissolve
-
-            la "Yeah. That's true, I guess."
-
-        else:
+        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
             scene v15s18b_3h # TPP. Lauren holding the $50 gift card, Lauren unamused face, mouth open.
             with dissolve 
             
@@ -240,6 +234,12 @@ label v15s18b:
             with dissolve
 
             u "(*Sighs*)"
+
+        else:
+            scene v15s18b_3c
+            with dissolve
+
+            la "Yeah. That's true, I guess."
 
     if v15_lauren_gift == "white horse, black mane":
         scene v15s18b_3i 
@@ -352,12 +352,7 @@ label v15s18b:
         scene v15s18b_12 # FPP. MC standing up Lauren standing infront of him, MC looking at Lauren, Lauren looking at MC, Lauren excited, mouth closed.
         with dissolve
         
-        if not laurenrs:
-
-            scene v15s18b_13 # TPP. Show just MC and Lauren hugging, both slight smile, mouth closed.
-            with dissolve
-
-        else:
+        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
             play sound "sounds/kiss.mp3"
 
             scene v15s18b_12a # FPP. Lauren giving MC a passionate kiss.
@@ -366,6 +361,10 @@ label v15s18b:
             pause 0.75 
 
             scene v15s18b_13a # TPP. Show just MC and Lauren passionately kissing.
+            with dissolve
+
+        else:
+            scene v15s18b_13 # TPP. Show just MC and Lauren hugging, both slight smile, mouth closed.
             with dissolve
 
         scene v15s18b_12b # MC standing up Lauren standing infront of him, MC looking at Lauren, Lauren looking at MC, Lauren excited, mouth open.
@@ -380,7 +379,7 @@ label v15s18b:
 
 
     if v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace":
-        if laurenrs:
+        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
             scene v15s18b_3i
             with dissolve
 

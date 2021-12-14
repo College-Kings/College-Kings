@@ -98,43 +98,7 @@ label v13s15:
 
     pause 0.75
 
-    if not laurenrs:
-        scene v13s15_7 # TPP. Show MC removing his shirt, pants already off, in his boxers, slight smile, mouth closed
-        with dissolve
-
-        pause 0.75
-
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-            scene v13s15_98
-            with dissolve
-
-            pause 0.75
-
-            scene v13s15_99
-            with fade
-
-            pause 0.75
-
-            stop music fadeout 3
-
-            jump v13s17
-
-        else:
-            scene v13s15_8 # TPP. Show MC getting into his bed, slight smile, mouth closed
-            with dissolve
-
-            pause 0.75
-
-            scene v13s15_9 # TPP. Show MC sleeping, room is dark
-            with fade
-
-            pause 0.75
-
-            stop music fadeout 3
-
-            jump v13s17c
-
-    elif not "v11_aubrey" in sceneList:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value and not v11_lauren_caught_aubrey: #if healthy lauren relationship
         play sound "sounds/vibrate.mp3"
 
         scene v13s15_10 # TPP. MC looking down at his phone, he is standing in same place as v13s15_6, slightly surprised, mouth closed
@@ -316,4 +280,3 @@ label v13s15:
             stop music fadeout 3
 
             jump v13s17c
-        

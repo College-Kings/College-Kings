@@ -959,7 +959,7 @@ label v12_valentine:
 
     pause 0.75
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value and not laurenrs:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value and lauren.relationship.value < Relationship.GIRLFRIEND.value:
         scene v12val43 # FPP. Charli next to MC on the sidewalk, not walking, Charli and MC looking at each other, Charli slightly annoyed, mouth open
         with dissolve
 
@@ -980,7 +980,7 @@ label v12_valentine:
 
         u "(Fucking weirdo.)"
 
-    elif chloe.relationship.value >= Relationship.GIRLFRIEND.value and laurenrs:
+    elif chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v12val43
         with dissolve
 

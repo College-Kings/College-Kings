@@ -1046,11 +1046,11 @@ label continuebd:
     with Fade (1,0,1)
 
     if (laurentoofar or toldlauren) and not apologize:
-        $ laurenmad = True
+        $ lauren.relationship = Relationship.MAD
 
     pause 0.5
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene s486 #You stnad in between  riley and Lauren sitting in the back, seat in between them is emmpty, seat next to Lauren's right is also empty ALWAYS SHOW CLASSROOM STUFF FROM THE FRONT if it's last row so you don't have to show 50 students sitting but instead jsut the back wall
         with dissolve
 
@@ -1229,7 +1229,7 @@ label continuebd:
 
             u "*Grins* Whatever."
 
-    elif laurenmad:
+    elif lauren.relationship.value <= Relationship.MAD.value:
             scene s486e # you standing next to riley who's alone in the backrow, lauren's sitting somewhere else
             with dissolve
 
@@ -1761,7 +1761,7 @@ label continuebd:
 
     show flyer
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         u "(Homecoming. Hm. Lauren would probably be pissed if I didn't ask her...)"
 
     else:
@@ -3610,7 +3610,7 @@ label fy_bd: # not gone to Emily's
             menu:
                 "Kiss her":
                     $ evelyn.relationship = Relationship.KISS
-                    if laurenrs:
+                    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                         $ add_point(KCT.TROUBLEMAKER)
                     else:
                         $ add_point(KCT.BOYFRIEND)
@@ -3632,7 +3632,7 @@ label fy_bd: # not gone to Emily's
                     pause 0.75
 
                 "Don't kiss her":
-                    if laurenrs:
+                    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                         $ add_point(KCT.BOYFRIEND)
                     else:
                         $ add_point(KCT.BRO)
@@ -6540,8 +6540,7 @@ label wakeupa:
 
         menu:
             "Kiss her":
-
-                if laurenrs:
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     $ add_point(KCT.TROUBLEMAKER)
                     $ add_point(KCT.BRO)
                 else:
@@ -6582,7 +6581,7 @@ label wakeupa:
                 with dissolve
 
             "Say Goodbye":
-                if laurenrs:
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     $ add_point(KCT.BOYFRIEND)
 
         u "I gotta go now and get ready for the Wolves' party, but I'll see you soon, okay?"

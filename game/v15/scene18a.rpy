@@ -955,7 +955,7 @@ label v15s18a_AutumPenelope:
 
             pe "Umm, yeah! Especially while you're wearing that stripper costume... *Giggles*"
 
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v15s18apen_7a
                 with dissolve
 
@@ -1141,7 +1141,7 @@ label v15s18a_ImreLauren:
 
     la "Hey there, half-naked man!"
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s18aimre_4
         with dissolve
 
@@ -1264,8 +1264,7 @@ label v15s18a_ImreLauren:
 
     pause 0.75
 
-    if laurenrs:
-
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s18aimre_6a
         with dissolve
 
@@ -1289,7 +1288,7 @@ label v15s18a_ImreLauren:
 
             la "Challenges? Like what?"
 
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v15s18aimre_6d # FPP. Imre looking at MC, MC looking at Imre, Lauren looking at MC, Lauren confused, mouth closed, Imre guilty, mouth open.
                 with dissolve
 

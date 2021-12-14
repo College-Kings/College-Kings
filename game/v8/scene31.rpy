@@ -185,7 +185,7 @@ label tec_cont:
 
     pause 0.5
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v8stec8 # FPP. Show Lauren, Lauren looking at camera, Lauren smile, mouth open.
         with dissolve
 
@@ -200,6 +200,7 @@ label tec_cont:
             "Flirt with Lauren":
                 $ add_point(KCT.BOYFRIEND)
                 jump fl_w_lau
+
             "Don't flirt with Lauren":
                 jump no_fl_w_lau
 

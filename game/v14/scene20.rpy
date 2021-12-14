@@ -143,7 +143,7 @@ label v14s20:
 
     u "Yeah, they seem to get along surprisingly well, haha."
 
-    if laurenmad or laurenrs_v11aubrey:
+    if v11_lauren_caught_aubrey:
         scene v14s20_3g # FPP Same angle as 3, Autumn with neutral expression, mouth open
         with dissolve
 
@@ -169,7 +169,7 @@ label v14s20:
 
         u "Not completely..."
 
-    elif laurenrs:
+    elif lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v14s20_3f
         with dissolve
 

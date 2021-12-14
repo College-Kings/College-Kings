@@ -26,7 +26,7 @@ label v10_call_with_lauren1:
 
         u "Hello?"
 
-        if laurenrs: # RCS - MC is a relationship with Lauren
+        if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # RCS - MC is a relationship with Lauren
             scene v10scwl1a # IGNORE, RENDER FROM SCENE 18
             with dissolve
             
@@ -260,7 +260,7 @@ label v10_call_with_lauren1:
 
                         u "I guess it wouldn't hurt to give a little performance sometime."
 
-                        if laurenrs: # MC is in a relationship with Lauren
+                        if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # MC is in a relationship with Lauren
                             scene v10scwl1a
                             with dissolve
                             
@@ -297,8 +297,7 @@ label v10_call_with_lauren1:
 
                         u "You know, playing the harmonica requires quite a lot of tongue coordination, usually girls like that."
 
-                        if laurenrs: # maybe another variable for having madeout with lauren?
-                            
+                        if lauren.relationship.value >= Relationship.KISS.value: # maybe another variable for having madeout with lauren?
                             scene v10scwl2
                             with dissolve
 
@@ -364,7 +363,7 @@ label v10_call_with_lauren1:
                 
                 u "I just name a topic, say my favorite thing in that topic and then you answer your favorite. Then the game continues, but switched."
 
-                if laurenrs: # RCS - MC is in a relationship with Lauren
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # RCS - MC is in a relationship with Lauren
                 
                     scene v10scwl2
                     with dissolve
@@ -787,7 +786,7 @@ label v10_call_with_lauren1:
 
         u "Hello?"
 
-        if laurenrs: # RCS - MC is a relationship with Lauren
+        if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # RCS - MC is a relationship with Lauren
             scene v10scwl1a # IGNORE, RENDER FROM SCENE 18
             with dissolve
             
@@ -1021,7 +1020,7 @@ label v10_call_with_lauren1:
 
                         u "I guess it wouldn't hurt to give a little performance sometime."
 
-                        if laurenrs: # MC is in a relationship with Lauren
+                        if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # MC is in a relationship with Lauren
                             scene v10scwl1a
                             with dissolve
                             
@@ -1058,8 +1057,7 @@ label v10_call_with_lauren1:
 
                         u "You know, playing the harmonica requires quite a lot of tongue coordination, usually girls like that."
 
-                        if laurenrs: # maybe another variable for having madeout with lauren?
-                            
+                        if lauren.relationship.value >= Relationship.KISS.value: # maybe another variable for having madeout with lauren?
                             scene v10scwl1a
                             with dissolve
 
@@ -1081,7 +1079,6 @@ label v10_call_with_lauren1:
                             u "*Chuckles* Fine, we can do that too."
 
                         else: # RCS - MC is not in a relationship with Lauren, and didn't makeout with her
-                        
                             scene v10scwl1a
                             with dissolve
                             
@@ -1125,8 +1122,7 @@ label v10_call_with_lauren1:
                 
                 u "I just name a topic, say my favorite thing in that topic and then you answer your favorite. Then the game continues, but switched."
 
-                if laurenrs: # RCS - MC is in a relationship with Lauren
-                
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # RCS - MC is in a relationship with Lauren
                     scene v10saow3
                     with dissolve
 
