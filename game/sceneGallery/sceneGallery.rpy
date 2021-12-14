@@ -53,7 +53,7 @@ init python:
         SceneGallery("v9_aubrey_scene_lake") #7, Aubrey, day 16
         SceneGallery("v9_emily_dorm") #16, Emily, day 17
         SceneGallery("v9_ri_sex") #34, Riley, day 19, v9_sex_with_riley
-        SceneGallery("v9_make_out_w_lin") #39, Lindsey, day 19, lindseyfirstkiss
+        SceneGallery("v9_make_out_w_lin") #39, Lindsey, day 19
         # v10
     if renpy.loadable("v10/scene1.rpy"):
         SceneGallery("v10_mc_vs_ryan_fight") #6, Ryan

@@ -1179,7 +1179,7 @@ label hd_ad:
                 scene s709 # you walking through the dorm hallways to his dorm
                 with fade
 
-                pause 0.5
+                pause 0.75
 
                 jump conyourdorm
 

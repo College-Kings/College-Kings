@@ -187,7 +187,7 @@ label v10_econ_class:
     with dissolve
 
     if joinwolves:
-        if v10_ms_r_kiss:
+        if ms_rose.relationship.value >= Relationship.KISS.value:
             ro "I just wanted to see how you were doing after... everything."
             
             scene v10eco8a # FPP. same 8, mouth closed.

@@ -2681,7 +2681,7 @@ label continueab:
             menu:
                 "Kiss her":
                     $ add_point(KCT.TROUBLEMAKER)
-                    $ kissamber = True
+                    $ amber.relationship = Relationship.KISS
 
                     play sound "sounds/spit.mp3"
 

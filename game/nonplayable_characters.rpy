@@ -159,7 +159,7 @@ init python:
 
 default aaron = NonPlayableCharacter("Aaron", "DoubleARon")
 default adam = NonPlayableCharacter("Adam", "A.D.A.M.")
-default amber = NonPlayableCharacter("Amber", "Amber_xx") #Relationship progression: FRIEND, FWB
+default amber = NonPlayableCharacter("Amber", "Amber_xx") #Relationship progression: FRIEND, KISS, FWB
 default aryssa = NonPlayableCharacter("Aryssa") #Relationship progression: FRIEND, LIKES
 default aubrey = NonPlayableCharacter("Aubrey", "Aubs123") #Relationship progression: FRIEND, FWB, TAMED
 default autumn = NonPlayableCharacter("Autumn", "Its_Fall")

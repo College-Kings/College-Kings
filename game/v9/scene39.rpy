@@ -206,7 +206,7 @@ label v9_hang_w_linds:
                     else:
                         $ add_point(KCT.BOYFRIEND)
 
-                    $ lindseyfirstkiss = True
+                    $ lindsey.relationship = Relationship.KISS
                     
                     scene v9links # Animations pls ignore
                     with dissolve

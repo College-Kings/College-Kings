@@ -633,7 +633,7 @@ label newchloec:
 
     #################
 
-    if kissamber:
+    if amber.relationship.value >= Relationship.KISS.value:
         $ amber.messenger.newMessage(_("Hey, it's Amber"), queue=False)
         $ amber.messenger.newMessage(_("Josh gave me your number"), queue=False)
         $ amber.messenger.newMessage(_("You know, you never came back, I thought we were having a good time xx"), queue=False)

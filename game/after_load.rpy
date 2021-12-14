@@ -152,6 +152,10 @@ label after_load:
 
         ##Relationship types
         try:
+            if kissamber: amber.relationship = Relationship.KISS
+            del kissamber
+        except NameError: pass
+        try:
             if amberrs: amber.relationship = Relationship.FWB
             del amberrs
         except NameError: pass
@@ -212,8 +216,16 @@ label after_load:
             del kourtneyrs
         except NameError: pass
         try:
+            if lindseyfirstkiss: lindsey.relationship = Relationship.KISS
+            del lindseyfirstkiss
+        except NameError: pass
+        try:
             if lindseyrs: lindsey.relationship = Relationship.FWB
             del lindseyrs
+        except NameError: pass
+        try:
+            if v10_ms_r_kiss: ms_rose.relationship = Relationship.KISS
+            del v10_ms_r_kiss
         except NameError: pass
         try:
             if msrosers: ms_rose.relationship = Relationship.FWB

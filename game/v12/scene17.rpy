@@ -894,8 +894,8 @@ label v12_lindsey_kiss_or_not:
 
             pause 1.5
 
-            if lindseyfirstkiss or kct == "popular" or len(v12s7_killList) >= 5:
-                if not lindseyfirstkiss and not len(v12s7_killList) >= 5:
+            if lindsey.relationship.value >= Relationship.KISS.value or kct == "popular" or len(v12s7_killList) >= 5:
+                if lindsey.relationship.value < Relationship.KISS.value and not len(v12s7_killList) >= 5:
                     call screen kct_popup
                 jump v12_lindsey_sex
             
