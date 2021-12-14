@@ -34,7 +34,7 @@ label v15s18a:
 # Ground floor
 # Location 1- At the bar in the deer's house
 # *Clicking on Aubrey*
-label v15s18a_Aubrey:
+label v15s18a_aubrey:
     $ freeroam13.add("aubrey")
 
     scene v15s18aaub_1 # TPP. Show MC starting to sit on the stool next to Aubrey, slight smile, mouth closed. Just show Aubrey's backside.
@@ -390,6 +390,7 @@ label v15s18a_ryan:
     $ freeroam13.add("ryan")
 
     scene v15s18a_ryan_1 # TPP. Show MC standing outside the bathroom, slight smile, mouth closed
+    #with dissolve
 
     u "(I think this is the bathroom...?)"
 
@@ -540,6 +541,7 @@ label v15s18a_ryan:
 # Location 3- Autumn's room
 # *Clicking on Autumn's door
 label v15s18a_autumn_penelope:
+    $ freeroam13.add("autumn_penelope")
 
     scene v15s18apen_1 # TPP. Show MC putting his ear to Autumn's room door, slight smile, mouth closed.
     #with dissolve
@@ -1085,7 +1087,6 @@ label v15s18a_autumn_penelope:
 # Ground floor
 # Location 4- Couch in the living room
 # *Clicking on Imre and Lauren*
-    $ v15s18a_frimrelauren = True
 label v15s18a_imre_lauren:
     $ freeroam13.add("imre_lauren")
     
