@@ -352,10 +352,9 @@ default v15_chloe_lindseydestroy = False ##Approach A2A. Embarrassing picture = 
 default v15_chloe_mrleesupport = False ##Approach B1A. Ms. Rose support = (v14_help_chloe and not v15_chloe_lindseysabotage and not v15_chloe_mrleesupport)
 
 # Lindsey Planning Board (v15s12)
-default v15s12_lindsey_pb_gameNight = False # True, GameNight; False, VIPNight
-default v15s12_lindsey_pb_fakeId = False # True, FakeIDl False, Limo/VIP rental
-default v15s12_lindsey_pb_wouldYouRather = False # True, Play Would You Rather; False, Play Who's Most Likely To
-default v15_s12_lindsey_pb_inviteSebastian = False # True, Invite Sebastian; False, Invite Grayson
+default v15_lindsey_gamenight = False ##Approach A. VIP Night = (v14_help_lindsey and not v15_lindsey_gamenight)
+default v15_lindsey_mostlikelyto = False ##Approach A2A. Would You Rather = (v15_lindsey_gamenight and not v15_lindsey_mostlikelyto)
+default v15_lindsey_inviteseb = False ##Approach B2A. Invite Grayson = (v14_help_lindsey and not v15_lindsey_gamenight and not v15_lindsey_inviteseb)
 
 default aubrey_riley_awkward = False
 default autumnloyal = False
