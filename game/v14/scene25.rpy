@@ -1033,7 +1033,7 @@ label v14s25:
             am "*Whispers* You wanna do something about that?"
 
             menu:
-                "Yeah I fucking do.":
+                "Yeah I fucking do":
                     $ add_point(KCT.TROUBLEMAKER)
                     $ sceneList.add("v14_amber")
                     $ amber.relationship = Relationship.FWB

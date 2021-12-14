@@ -212,7 +212,7 @@ label v15s18d:
     u "(Fuck.) Um, yeah. That's basically what he was suggesting, haha."
 
     menu:
-        "Try to have sex.":
+        "Try to have sex":
             $ add_point(KCT.BRO)
             
             scene v15s18d_8e

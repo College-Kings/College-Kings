@@ -3,7 +3,6 @@
 # Characters: AMBER (Outfit: Detective costume), MC (Outfit: 1)
 # Time: Morning
 
-
 label v15s42:
 # -MC enters the SVC meeting room. It's quite dated with beige/grey walls, like an old room at the FBI, a large wooden desk with a coffee machine and croissants on it., filing cabinets, blinds drawn and sparse lighting. Amber is standing next to a pinboard on the wall. We don't see the details of it just yet. Amber is wearing a stylish, Sam Spade detective-style fedora hat-
     play sound "sounds/dooropen.mp3"
@@ -11,19 +10,19 @@ label v15s42:
     scene v15s42_1 # TPP. Show MC walking into the SVC meeting room, Description of room: Dated grey/beige walls, a large wooden desk, filing cabinets, blinds drawn with sparse lighting in the room, MC slightly confused, mouth closed.
     with fade (1,0,1)
 
-    pause  
+    pause 0.75  
 
     play sound "sounds/dooropen.mp3"
 
     scene v15s42_2 # TPP. Show MC entering the room and closing the door behind him, slightly confused, mouth closed.
     with dissolve  
 
-    pause  
+    pause 0.75  
 
     scene v15s42_3 # FPP. View of the room, Amber is leaning against the wall on the side of her pinboard, Amber is looking at the floor, smug face, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75  
 
     scene v15s42_3a # FPP. Amber leans against the wall and looks at MC, Amber with a smirk, mouth open.
     with dissolve 
@@ -43,7 +42,7 @@ label v15s42:
     scene v15s42_3d # FPP. Amber standing infront of MC, Amber smirking, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75  
 
     scene v15s42_4 # FPP. show Amber pouring a cup of coffee from the coffee machine, slight smile, mouth closed.
     with dissolve 
@@ -69,7 +68,7 @@ label v15s42:
     with dissolve
 
     menu:
-        "Ask about the room.":
+        "Ask about the room":
             scene v15s42_7a # FPP. Amber standing infront of MC, holding her cup of coffee, slight smile, mouth closed.
             with dissolve
 
@@ -124,7 +123,8 @@ label v15s42:
             with dissolve
 
             u "*Laughs* Thank you. So, why are we here?"
-        "Let it go.":
+
+        "Let it go":
             scene v15s42_7a
             with dissolve
 
@@ -205,7 +205,7 @@ label v15s42:
         scene v15s42_9 # TPP. Show both MC and Amber laughing.
         with dissolve
 
-        pause  
+        pause 0.75  
 
         scene v15s42_7a
         with dissolve
@@ -213,7 +213,7 @@ label v15s42:
         u "(Amber seems to be in a really good place right now, if I wanted to make things more serious between us... Maybe now's the time to start?)"
 
         menu:
-            "Flirt.":
+            "Flirt":
                 $ add_point(KCT.BOYFRIEND)
                 $ v15s42_flirt = True
                 u "Sobriety looks great on you."
@@ -234,7 +234,8 @@ label v15s42:
                 with dissolve
 
                 am "*Giggles* Okay, I can manage that I think."
-            "Friendly compliment.":
+
+            "Friendly compliment":
                 $ add_point(KCT.BRO)
                 u "Sobriety looks great on you, not gonna lie."
 
@@ -242,6 +243,7 @@ label v15s42:
                 with dissolve
 
                 am "Thanks, [name]."
+
     else:
         scene v15s42_7a
         with dissolve
@@ -323,7 +325,7 @@ label v15s42:
     scene v15s42_7a
     with dissolve
 
-    pause
+    pause 0.75
 
     # -A UI pops up to show the three detective archetypes that MC can choose from (Professional, Psychologist, Loose Cannon). MC makes his choice and the UI disappears again-
 
@@ -454,10 +456,10 @@ label v15s42:
     scene v15s42_12
     with dissolve  
 
-    pause 
+    pause 0.75 
 
     menu:
-        "Grab breakfast.":
+        "Grab breakfast":
             $ v15s42_grab_breakfast = True
             scene v15s42_13 # TPP. Show MC grabbing a croissant, slight smile, mouth open.
             with dissolve
@@ -467,8 +469,9 @@ label v15s42:
             scene v15s42_13a # TPP. MC takes a bite from the croissant.
             with dissolve 
 
-            pause 
-        "Not hungry.":
+            pause 0.75
+
+        "Not hungry":
             scene v15s42_12
             with dissolve
 
@@ -530,7 +533,7 @@ label v15s42:
         scene v15s42_14a # TPP. Show Amber and MC leaving the meeting room, Amber slight smile, mouth closed, MC slight smile, mouth closed.
         with dissolve 
 
-    pause  
+    pause 0.75  
 
     play sound "sounds/doorclose.mp3"
 

@@ -54,14 +54,12 @@ label v15s36:
     with dissolve
 
     menu:
-        "Maybe.":
+        "Maybe":
             $ add_point(KCT.BRO)
-
             u "Erm, maybe?"
 
-        "I'm really curious.":
+        "I'm really curious":
             $ add_point(KCT.BOYFRIEND)
-
             u "Well, I'm curious about getting to know the real Autumn, but I know it's a sensitive issue."
 
     u "Only if you're comfortable talking about it, of course."
@@ -249,7 +247,7 @@ label v15s36:
         with dissolve
 
         menu:
-            "I'd like that.":
+            "I'd like that":
                 u "Honestly, I'd really like that... I feel the same way."
 
                 if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -368,7 +366,7 @@ label v15s36:
                     scene v15s36_8f # FPP. Autumn stepped back, MC looking at Autumn, Autumn looking at MC, Autumn now blushing, Autumn slight smile, mouth closed. 
                     with dissolve
 
-            "It's not a good idea.":
+            "It's not a good idea":
                 $ v15s36_not_good_idea = True
 
                 scene v15s36_5a
