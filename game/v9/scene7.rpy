@@ -1127,7 +1127,7 @@ label fr5dogwalker1:
 
     scene v9slake11a #FPP close up of dogwalker petting his dog excited, looking at the dog, mouth closed
 
-    if not autumnmad:
+    if v7_visited_shelter:
         u "Wait a second. Is that Oscar?!"
 
         scene v9slake11b # same as 11, dogwalker looks at you smiling, mouth open

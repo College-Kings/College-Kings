@@ -83,7 +83,6 @@ default youHealth = 5
 
 default apologize = False
 default askfinn = False
-default autumnmad = False
 default bowling = False
 default v2_caughtpeeking = False
 default v2_caughtpeekingcounter = False
@@ -153,6 +152,7 @@ default rileysex = False
 default seenlauren = False
 default signs = False
 default v7_emily_bowling = False
+default v7_visited_shelter = False
 default walkedRileyHome = False
 default wolvesTasks = set()
 
@@ -363,7 +363,6 @@ default v15_lindsey_inviteseb = False ##Approach B2A. Invite Grayson = (v14_help
 
 default aubrey_riley_awkward = False
 default autumnloyal = False
-default autumnrs = False
 default dog_name = "Blue"
 default mr_lee_meeting = False # Placeholder?
 default ms_rose_meeting = False # (redundancy check) # not used (28/08/2021)

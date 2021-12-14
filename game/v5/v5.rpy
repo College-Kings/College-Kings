@@ -1643,7 +1643,7 @@ label continueaf:
 
             u "(I should go apologize.)"
 
-            if not autumnmad:
+            if autumn.relationship.value > Relationship.MAD.value:
                 u "(Hopefully Autumn has already put in a good word for me.)"
 
             scene s393 #you infront of Laurens dorm
@@ -1715,8 +1715,7 @@ label continueaf:
 
             u "(Maybe I should give her a bit more time.)"
 
-            if not autumnmad:
-
+            if autumn.relationship.value > Relationship.MAD.value:
                 u "(Afterall, Autumn said she'd talk to her.)"
 
             u "(It's probably time to go pick up Imre with Riley anyways.)"
@@ -1751,7 +1750,7 @@ label continueaf:
     scene s380b
     with dissolve
 
-    if laurentoofar and autumnmad:
+    if laurentoofar and autumn.relationship.value <= Relationship.MAD.value:
         la "[name], what are you doing here?"
 
         scene s380c
@@ -1892,7 +1891,7 @@ label continueaf:
 
         jump gotest
 
-    elif autumnmad:
+    elif autumn.relationship.value <= Relationship.MAD.value:
         la "[name], what are you doing here?"
 
         scene s380c

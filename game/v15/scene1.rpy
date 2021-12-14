@@ -5,6 +5,8 @@
 # Render Count: 6 Unique Renders 33 Total
 
 label v15_start:
+    $ autumn.relationship = Relationship.FRIEND #Reset Autumn to FRIEND
+
     if joinwolves:
         jump v15s1
     else:
