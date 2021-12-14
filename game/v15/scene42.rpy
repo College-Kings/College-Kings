@@ -527,7 +527,8 @@ label v15s42:
 
         scene v15s42_14 # TPP. Show Amber and MC leaving the meeting room, Amber slight smile, mouth closed, MC eating the last of his croissant as they leave the room.
         with dissolve
-    else 
+
+    else:
         play sound "sounds/dooropen.mp3"
 
         scene v15s42_14a # TPP. Show Amber and MC leaving the meeting room, Amber slight smile, mouth closed, MC slight smile, mouth closed.
