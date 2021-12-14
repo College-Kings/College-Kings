@@ -317,7 +317,6 @@ default v14_pics_with_linds = False ##TASK A1B (v14_pics_no_linds = v14_lindsey_
 default v14_date_distraction = False ###APPROACH B1B (v14_concert_distraction = (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction)
 
 default AmberLoyal = False
-default AutumnTrust = False
 default chrissus = 0
 default irisStrikes = 0
 default v13_threesomeending = False

@@ -161,6 +161,9 @@ label after_load:
             if aubreyrs and aubrey.relationship.value < Relationship.FWB.value: aubrey.relationship = Relationship.FWB
         except NameError: pass
         try:
+            if AutumnTrust and autumn.relationship.value < Relationship.TRUST.value: autumn.relationship = Relationship.TRUST
+        except NameError: pass
+        try:
             if cameronBro and cameron.relationship.value < Relationship.BRO.value: cameron.relationship = Relationship.BRO
         except NameError: pass
         try:

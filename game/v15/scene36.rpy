@@ -66,7 +66,7 @@ label v15s36:
 
     u "Only if you're comfortable talking about it, of course."
 
-    if not AutumnTrust:
+    if autumn.relationship.value < Relationship.TRUST.value:
         scene v15s36_4a
         with dissolve
 
