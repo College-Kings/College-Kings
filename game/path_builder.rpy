@@ -83,7 +83,7 @@ define PB_PENELOPE = PathBuilderItem(PathBuilderCatagories.GIRL, "Penelope", ["p
 define PB_AMBER = PathBuilderItem(PathBuilderCatagories.GIRL, "Amber", "amber.relationship", [Relationship.GIRLFRIEND], func="toggle_variables")
 define PB_LINDSEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Lindsey", "lindsey.relationship", Relationship.GIRLFRIEND)
 define PB_MS_ROSE = PathBuilderItem(PathBuilderCatagories.GIRL, "Ms Rose", "ms_rose.relationship", [Relationship.GIRLFRIEND], func="toggle_variables")
-define PB_SAMANTHA = PathBuilderItem(PathBuilderCatagories.GIRL, "Samantha", "v11_samantha_spa", func="toggle_variables")
+define PB_SAMANTHA = PathBuilderItem(PathBuilderCatagories.GIRL, "Samantha", "samantha.relationship", RELATIONSHIP.GIRLFRIEND)
 define PB_JENNY = PathBuilderItem(PathBuilderCatagories.GIRL, "Jenny", "jenny.relationship", [Relationship.GIRLFRIEND], func="toggle_variables")
 define PB_EMILY = PathBuilderItem(PathBuilderCatagories.GIRL, "Emily", "emily.relationship", [Relationship.GIRLFRIEND], func="toggle_variables")
 

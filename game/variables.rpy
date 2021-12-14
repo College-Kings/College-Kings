@@ -220,7 +220,6 @@ default v11_manhunt_winner = "Ryan"
 default v11_overtake_points = 0
 default v11_pen_goes_europe = False
 default v11_riley_roomate = False
-default v11_samantha_spa = False
 default v11_smoke_amber_amsterdam = False
 default v11_solo_question = False
 default v11_tease_amber = 0

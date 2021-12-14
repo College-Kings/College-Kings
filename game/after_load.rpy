@@ -263,6 +263,13 @@ label after_load:
             if rileyrs: riley.relationship = Relationship.FWB
             del rileyrs
         except NameError: pass
+        try:
+            if v11_samantha_spa: samantha.relationship = Relationship.MOVE
+            del v11_samantha_spa
+        except NameError: pass
+        try:
+            if "v14_samantha" in sceneList: samantha.relationship = Relationship.FWB
+        except NameError: pass
 
 
         for character in (
@@ -669,8 +676,6 @@ label after_load:
         except NameError: v7_emily_bowling = False
         try: v8_dodged_pipe
         except NameError: v8_dodged_pipe = False
-        try: v11_samantha_spa
-        except NameError: v11_samantha_spa = False
         try: v11_underground_rose
         except NameError: v11_underground_rose = False
         try: v12_told_chloe
