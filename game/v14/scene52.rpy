@@ -233,7 +233,7 @@ label v14s52:
                 $ chrissus += 1
                 $ add_point(KCT.TROUBLEMAKER)
 
-                scene v14s52_12a # FPP. Mc see's chris waling away from him back turned to mc
+                scene v14s52_12a # FPP. Mc sees chris waling away from him back turned to mc
                 with dissolve
 
                 u "(Let's see what he says when I ask him...)"

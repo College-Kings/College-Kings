@@ -197,6 +197,7 @@ default penelope = NonPlayableCharacter("Penelope", "Penelopeeps") #Relationship
 default riley = NonPlayableCharacter("Riley", "RileyReads") #Relationship progression: FRIEND, MOVE, DATE, FWB
 default ryan = NonPlayableCharacter("Ryan", "Ryanator")
 default samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam")
+default satin = NonPlayableCharacter("Satin") #Relationship progression: FRIEND, FWB
 default sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
 default trainer = NonPlayableCharacter("Trainer")
 default wolf = NonPlayableCharacter("Wolf")

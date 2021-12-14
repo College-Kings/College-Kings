@@ -5,7 +5,6 @@
 
 label v13s50a:
     $ sceneList.add("v13_emily")
-    
     $ emily.relationship = Relationship.FWB
 
     if v13s48_ryan_double_date:

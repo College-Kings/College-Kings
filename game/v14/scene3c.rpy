@@ -303,6 +303,7 @@ label v14s03c:
     menu:
         "Go with her":
             $ sceneList.add("v14_satin")
+            $ satin.relationship = Relationship.FWB
             label v14s03c_sg:
                    
             $ add_point(KCT.TROUBLEMAKER)
