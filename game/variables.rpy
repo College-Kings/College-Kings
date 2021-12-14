@@ -303,7 +303,7 @@ default v14_lindsey_sell = False ##APPROACH A (v14_lindsey_steal = v14_help_lind
 default v14_pics_with_linds = False ##TASK A1B (v14_pics_no_linds = v14_lindsey_sell and not v14_pics_with_linds)
 default v14_date_distraction = False ###APPROACH B1B (v14_concert_distraction = (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction)
 
-default AmberLoyal = False
+default AmberLoyal = False #????
 default chrissus = 0
 default irisStrikes = 0
 default v13_threesomeending = False
@@ -363,18 +363,15 @@ default v15_lindsey_inviteseb = False ##Approach B2A. Invite Grayson = (v14_help
 
 default aubrey_riley_awkward = False
 default autumnloyal = False
+default AubreyFriend = False #????
 default dog_name = "Blue"
-default mr_lee_meeting = False # Placeholder?
-default ms_rose_meeting = False # (redundancy check) # not used (28/08/2021)
 default riley_loyal = False
 default v15_autumn_freemug = False
 default v15_autumn_lunchbreak = False
 default v15_autumn_smoke = False
 default v15_blame_nora = False ### blame_chris = (v13_imre_disloyal and not v15_blame_nora)
 default v15_lauren_gift = None
-default v15_less_chick_tuition = False # not used (28/08/2021)
 default v15_mad_at_ms_rose = False
-default v15_ms_rose_sex = False # Placeholder?
 default v15_ph_riley_upset = False # placeholder ?? (set in s26?? ; read in v15s27)
 default v15_stuck_up_for_nora = False # not used (28/08/2021)
 default v15_told_Emily_I_Love_You = False # Placeholder?
@@ -397,8 +394,7 @@ default v15s18e_cum_in_lauren = False # Noted to be remembered
 default v15s19_local_mc_ends_in_livingroom = False 
 default v15s24_alcohol = False
 default v15s24_nancy_dick = False
-default v15s36_not_good_idea = False 
-default v15s5_mc_angry_with_rose = False # Placeholder?
+default v15s36_not_good_idea = False
 default v15s7_chloe_empathize = False
 default v15s42_flirt = False
-default v15s42_grab_breakfast = False 
+default v15s42_grab_breakfast = False

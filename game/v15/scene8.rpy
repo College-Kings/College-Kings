@@ -171,7 +171,7 @@ label v15s8:
         scene v15s8_3
         with dissolve
 
-    if v15_LessChickTuition:
+    elif v14_help_chloe:
         scene v15s8_3a
         with dissolve
 
