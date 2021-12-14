@@ -629,7 +629,7 @@ label starta: #for compatibility only
 
             u "Wow Elijah, way to start the fun."
 
-            $ elijah.relationship = Relationship.FUN
+            $ elijah.relationship = Relationship.MAKEFUN
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s46b
@@ -1008,7 +1008,7 @@ label starta: #for compatibility only
         scene s50el
         u "Hey, you're Elijah right?"
 
-        if elijah.relationship.value <= Relationship.FUN.value:
+        if elijah.relationship.value <= Relationship.MAKEFUN.value:
             scene s50el1
             with dissolve
 

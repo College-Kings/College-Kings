@@ -14220,7 +14220,7 @@ label fr4elijah1:
 
             u "Sure thing, Krusty."
 
-            if elijah.relationship.value <= Relationship.FUN.value:
+            if elijah.relationship.value <= Relationship.MAKEFUN.value:
                 scene sfr4el2d # elijah raging
                 with dissolve
 
