@@ -34,7 +34,7 @@ label v15s18a:
 # Ground floor
 # Location 1- At the bar in the deer's house
 # *Clicking on Aubrey*
-label v15s18a_aubrey:
+label v15s18a_Aubrey:
     $ freeroam13.add("aubrey")
 
     scene v15s18aaub_1 # TPP. Show MC starting to sit on the stool next to Aubrey, slight smile, mouth closed. Just show Aubrey's backside.
@@ -386,7 +386,7 @@ label v15s18a_aubrey:
 # Upstairs
 # Location 2- Bathroom on Upstairs of deer's house:
 # *Clicking on Bathroom*
-label v15s18a_ryan:
+label v15s18a_Ryan:
     $ freeroam13.add("ryan")
 
     scene v15s18a_ryan_1 # TPP. Show MC standing outside the bathroom, slight smile, mouth closed
@@ -540,7 +540,7 @@ label v15s18a_ryan:
 # Upstairs
 # Location 3- Autumn's room
 # *Clicking on Autumn's door
-label v15s18a_autumn_penelope:
+label v15s18a_AutumPenelope:
     $ freeroam13.add("autumn_penelope")
 
     scene v15s18apen_1 # TPP. Show MC putting his ear to Autumn's room door, slight smile, mouth closed.
@@ -1087,7 +1087,7 @@ label v15s18a_autumn_penelope:
 # Ground floor
 # Location 4- Couch in the living room
 # *Clicking on Imre and Lauren*
-label v15s18a_imre_lauren:
+label v15s18a_ImreLauren:
     $ freeroam13.add("imre_lauren")
     
     scene v15s18aimre_1 # TPP. MC walking over to Lauren and Imre, Imre looking at Lauren, Lauren looking at Imre, both slight smile, mouth closed.
@@ -1348,7 +1348,7 @@ label v15s18a_imre_lauren:
 # Ground floor
 # Location 5- Kitchen in Deer's house
 # *Clicking on Riley*
-label v15s18a_riley:
+label v15s18a_Riley:
     $ freeroam13.add("riley")
 
 # -Riley is shifting around food and plates on the counter, she's wearing a schoolgirl outfit-
@@ -1937,7 +1937,7 @@ label v15s18a_riley:
 # Ground Floor
 # location 6- Kitchen counter stools
 # *Clicking on Chris and Amber*
-label v15s18a_chris_amber:
+label v15s18a_ChrisAmber:
     $ freeroam13.add("chris_amber")
 
     scene v15s18aamber_1 # TPP. MC walking towards the Kitchen stools Amber is sitting on, Chris talking to Amber, Chris slight smile, mouth open, Amber slight smile, mouth closed.
