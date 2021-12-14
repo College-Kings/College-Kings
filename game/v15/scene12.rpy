@@ -451,7 +451,7 @@ label v15s12:
 
         #### Planning Board work goes here 
         python:
-            lindsey_board = PlanningBoard("images/v15/chicks_presidency_race/planning_boards/lindsey_background.webp", money=200, style="lindsey_board")
+            lindsey_board = PlanningBoard("images/v15/chicks_presidency_race/planning_boards/lindsey_background.webp", style="lindsey_board")
 
             lindsey_board.add_approach("Game Night",
                 "Game Night",
