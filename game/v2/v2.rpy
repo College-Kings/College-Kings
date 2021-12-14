@@ -1725,7 +1725,7 @@ label history2:
 
     no "Looks like he got beaten up."
 
-    if v1_hitOnNora:
+    if nora.relationship.value >= Relationship.MOVE.value:
         scene s142a # both mouths shut
         with dissolve
 

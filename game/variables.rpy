@@ -128,7 +128,6 @@ default toldlauren = False
 default trolleyb = False
 default upstairs = "nobody"
 default v1_aubreywannafight = False
-default v1_hitOnNora = False
 default v1_kissLauren = False
 default v1_laurenKiss = False
 default v1_laurenPoints = 0

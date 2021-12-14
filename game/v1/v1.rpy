@@ -1161,7 +1161,7 @@ label starta: #for compatibility only
         menu:
             "Flirt":
                 $ add_point(KCT.TROUBLEMAKER)
-                $ v1_hitOnNora = True
+                $ nora.relationship = Relationship.MOVE
 
                 scene s56no1a
                 with dissolve
@@ -1186,7 +1186,7 @@ label starta: #for compatibility only
         scene s56no1a
         
         u "Uhm..."
-        if v1_hitOnNora:
+        if nora.relationship.value >= Relationship.MOVE.value:
             scene s56no1
             with dissolve
             no "Dude, keep it moving."
