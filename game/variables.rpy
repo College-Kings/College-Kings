@@ -347,7 +347,9 @@ default v14_Samantha_clean = False # Placeholder?
 
 # 15.0 
 # Chloe Planning Board (v15s8)
-default v15s8_chloe_pb_DamageLindseyRep = False # checked in v15s12
+default v15_chloe_lindseysabotage = False ##Approach A. Free tuition = (v14_help_chloe and not v15_chloe_lindseysabotage)
+default v15_chloe_lindseydestroy = False ##Approach A2A. Embarrassing picture = (v15_chloe_lindseysabotage and not v15_chloe_lindseydestroy)
+default v15_chloe_mrleesupport = False ##Approach B1A. Ms. Rose support = (v14_help_chloe and not v15_chloe_lindseysabotage and not v15_chloe_mrleesupport)
 
 # Lindsey Planning Board (v15s12)
 default v15s12_lindsey_pb_gameNight = False # True, GameNight; False, VIPNight

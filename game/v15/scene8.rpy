@@ -72,12 +72,23 @@ label v15s8:
     python:
         chloe_board = PlanningBoard("images/v15/chicks_presidency_race/planning_boards/chloe_background.webp", money=1500)
 
+    ##A     Sabotage
+    ##A.1   Get Lindsey wasted
+    ##A.2a  Destroy items
+    ##A.2b  Embarrassing pic
+    ##A.3   Post to Kiwii
+    
+    ##B     Free Tuition
+    ##B.1a  Mr. Lee support
+    ##B.1b  Ms. Rose support
+    ##B.2   Meet Dean
+
     scene v15s8_4a # TPP. Same as v15s8_4, MC slight smile, mouth open, Chloe slight smile, mouth closed.
     with dissolve 
 
     u "I think that's the best way to go."
 
-    if v15s8_chloe_pb_DamageLindseyRep:
+    if v15_chloe_lindseysabotage:
         scene v15s8_3a
         with dissolve
 

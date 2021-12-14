@@ -7,7 +7,7 @@ label v15s37:
     scene v15s37_1 # TPP. Show MC walking down the street towards the frat houses, slight smile, mouth closed.
     with dissolve
 
-    if v14_help_chloe and v15s8_chloe_pb_DamageLindseyRep:
+    if v15_chloe_lindseysabotage:
         scene v15s37_2 # TPP. Close up of MC pulling out his phone, slight smile, mouth closed.
         with dissolve 
 
