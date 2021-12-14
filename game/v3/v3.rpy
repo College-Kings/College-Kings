@@ -1298,7 +1298,7 @@ label conl:
     scene s248c
     with dissolve
 
-    imre "No, body shots. "
+    imre "No, body shots."
 
     imre "Hitting your opponent's body will leave them out of breath and in pain."
 

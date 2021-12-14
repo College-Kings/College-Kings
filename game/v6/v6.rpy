@@ -6839,7 +6839,7 @@ label wakeupa:
         with dissolve
 
         if joinapes:
-            u "Right... "
+            u "Right..."
 
         else:
             u "Thanks man."
@@ -7975,7 +7975,7 @@ label v6_fr3chris1:
         scene sfr3ch2d # chris points at another guy
         with dissolve
 
-        ch "And you see that guy there? That's Peter. "
+        ch "And you see that guy there? That's Peter."
 
         scene sfr3ch4 # showing Peter
         with dissolve
@@ -8123,7 +8123,7 @@ label v6_fr3chris1:
         scene sfr3ch2d # chris points at another guy
         with dissolve
 
-        ch "And you see that guy there? That's Peter. "
+        ch "And you see that guy there? That's Peter."
 
         scene sfr3ch4 # showing Peter
         with dissolve
@@ -9803,7 +9803,7 @@ label upstairsaubrey:
         scene sufr3au2d
         with dissolve
 
-        au "We're not hooking up if that's what you're asking. "
+        au "We're not hooking up if that's what you're asking."
 
         scene sufr3au2e
         with dissolve
@@ -9902,7 +9902,7 @@ label upstairsaubrey:
         scene sufr3au2c
         with dissolve
 
-        u "I told you, just wanted to go somewhere quiet. "
+        u "I told you, just wanted to go somewhere quiet."
 
         scene sufr3au2b
         with dissolve
@@ -9989,7 +9989,7 @@ label upstairsaubrey:
 
         au "He was boring. I don't think he could handle how wild I was all the time."
 
-        au "I mean he tried to keep up, but I think I was just too much for him. "
+        au "I mean he tried to keep up, but I think I was just too much for him."
 
         scene sufr3au2a
         with dissolve

@@ -1883,7 +1883,7 @@ label thisbelauren:
             scene s717a
             with dissolve
 
-            u "Yes, I did hook up with Emily. And before you say anything, I entirely regret it. I don't know what I was thinking. "
+            u "Yes, I did hook up with Emily. And before you say anything, I entirely regret it. I don't know what I was thinking."
 
             scene s717e # lauren sad mouth closed
             with dissolve
@@ -1968,7 +1968,7 @@ label thisbelauren:
                         scene s717d
                         with dissolve
 
-                        la "This, I can't do this. I can't do us. "
+                        la "This, I can't do this. I can't do us."
 
                         scene s717e
                         with dissolve
@@ -2032,7 +2032,7 @@ label thisbelauren:
                     $ laurenmad = True
                     $ autumnmad = True
 
-                    u "Maybe we just rushed into this. "
+                    u "Maybe we just rushed into this."
 
                     u "I mean, I really like you and I wanna be with you... but this is college."
 
@@ -5799,7 +5799,7 @@ label after_pledges:
         with dissolve
         imre "Oh god, look at this clown."
 
-        scene s879 # Camera - TPP. Shot of Lee walking funny. "walking like he has a stick up his ass" is what it should look like xD
+        scene s879 # Camera - TPP. Shot of Lee walking funny."walking like he has a stick up his ass" is what it should look like xD
         with dissolve
         pause 0.5
 
@@ -9293,7 +9293,7 @@ label signs_with_autumn:
     scene sas7c # FPP. As above but mouth closed.
     with dissolve
 
-    aut "I appreciate the witty stuff, but I like to be direct. Feels like it gets right to the point. The more we fight, the more progress we will make. "
+    aut "I appreciate the witty stuff, but I like to be direct. Feels like it gets right to the point. The more we fight, the more progress we will make."
 
     scene sas7a2 # FPP. Same sas7a, Autumn no longer holding sign.
     with dissolve
@@ -9366,7 +9366,7 @@ label signs_with_autumn:
     scene sas9f # FPP. As above, empathetic expression, mouth open.
     with dissolve
 
-    aut "Your empathy is admirable. "
+    aut "Your empathy is admirable."
 
     scene sas9e # FPP. Same as sas9e.
     with dissolve
@@ -9406,7 +9406,7 @@ label signs_with_autumn:
     scene sas9b # FPP. Same as sas9b.
     with dissolve
 
-    aut "This movement definitely needs more men. Actually, I take that back. Haha. More men just need to realize their given privileges and stop being in denial. "
+    aut "This movement definitely needs more men. Actually, I take that back. Haha. More men just need to realize their given privileges and stop being in denial."
 
     scene sas9c # FPP. Same as sas9c.
     with dissolve
@@ -9451,7 +9451,7 @@ label signs_with_autumn:
     scene sas7a # FPP. Same as sas7a.
     with dissolve
 
-    u "I mean sex. That is the core to a man's mind. "
+    u "I mean sex. That is the core to a man's mind."
 
     scene sas9j # FPP. As above, but slightly agitated, mouth closed.
     with dissolve
@@ -14113,7 +14113,7 @@ label fr4nora1:
                 scene sfr4no2a
                 with dissolve
 
-                u "Women, am I right? Haha. "
+                u "Women, am I right? Haha."
 
                 scene sfr4no2
                 with dissolve
@@ -16867,7 +16867,7 @@ label fr4samantha1:
             scene sfr4sa4j
             with dissolve
 
-            u "Uhm, I'm good right now, but thanks. "
+            u "Uhm, I'm good right now, but thanks."
 
             scene sfr4sa4h
             with dissolve

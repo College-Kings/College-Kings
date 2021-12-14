@@ -186,7 +186,7 @@ label em_arcade_2:
     with dissolve
     pause 1
 
-    scene v8arcade5a # Different shot of Emily playing the six shooter game. "You win" screen on the arcade machine (show a high score if it can be done)
+    scene v8arcade5a # Different shot of Emily playing the six shooter game, "You win" screen on the arcade machine (show a high score if it can be done)
     with dissolve
     pause 1
 
@@ -210,7 +210,7 @@ label em_arcade_2:
 
     play sound "sounds/arcade_lose.mp3"
 
-    scene v8arcade7a # Different shot of MC playing the six shooter game. "You lose" screen on the arcade machine (show a low score if it can be done). Emily looking at the arcade machine, neutral expression, mouth closed
+    scene v8arcade7a # Different shot of MC playing the six shooter game, "You lose" screen on the arcade machine (show a low score if it can be done). Emily looking at the arcade machine, neutral expression, mouth closed
     with dissolve
     pause 1
     u "No way I coulda won that one."
@@ -242,7 +242,7 @@ label em_arcade_2:
 
     play sound "sounds/arcade_lose.mp3"
 
-    scene v8arcade11a # Different shot of MC playing "chase the wheel" game. "You lose" screen on the arcade machine. Emily laughing a little, mouth closed
+    scene v8arcade11a # Different shot of MC playing "chase the wheel" game, "You lose" screen on the arcade machine. Emily laughing a little, mouth closed
     with dissolve
     pause 1
 
@@ -264,7 +264,7 @@ label em_arcade_2:
 
     play sound "sounds/arcade_win.mp3"
 
-    scene v8arcade13a # Different shot of Emily playing "chase the wheel" game. "You win" screen on the arcade machine
+    scene v8arcade13a # Different shot of Emily playing "chase the wheel" game, "You win" screen on the arcade machine
     with dissolve
     pause 1
 

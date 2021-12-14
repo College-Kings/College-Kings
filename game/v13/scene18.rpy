@@ -159,7 +159,7 @@ label v13s18:
         "Text Nora":
             $ nora.messenger.addReply(_("What was that about, you guys all good now or something? "))
             $ nora.messenger.newMessage(_("I know it's odd, but I'm trying to figure things out. Pls just... Let me handle it?"))
-            $ nora.messenger.addReply(_("Okay... "))
+            $ nora.messenger.addReply(_("Okay..."))
             
             label v13s18_PhoneContinueNora:
                 if nora.messenger.replies:

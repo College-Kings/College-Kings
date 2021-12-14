@@ -39,7 +39,7 @@ screen loyalty_tutorial2():
             #color "#FFD166"
             size 40
 
-        text "When planning a campaign, you get to make the big decisions. Both campaigns are divided into different phases and for each phase you will have multiple approaches with a variety of options on how to execute those approaches.\n\nWill you play dirty or stay clean? Will you try to make deals with the Wolves, or the Apes? Will you persuade people with expensive limos and alcohol, or by ruining the other candidate's reputation? The choice is yours. ":
+        text "When planning a campaign, you get to make the big decisions. Both campaigns are divided into different phases and for each phase you will have multiple approaches with a variety of options on how to execute those approaches.\n\nWill you play dirty or stay clean? Will you try to make deals with the Wolves, or the Apes? Will you persuade people with expensive limos and alcohol, or by ruining the other candidate's reputation? The choice is yours.":
             font "fonts/OpenSans.ttf"
             size 20
 

@@ -1529,7 +1529,7 @@ label readmontagea:
             ry "Look, man. I messed up, I'm sorry."
 
     label ec_bd: #for compatibility only
-    ry "I didn't mean to attack you like that. I just wanted to let you know about the things that I've heard. "
+    ry "I didn't mean to attack you like that. I just wanted to let you know about the things that I've heard."
 
     ry "You know, so she doesn't play you."
 
