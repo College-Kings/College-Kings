@@ -1,21 +1,20 @@
 init python:
     class Relationship(Enum):
         MAD = -3
-        FUN = -2
+        MAKEFUN = -2
         AWKWARD = -1
         FRIEND = 0
         HANGOUT = 1
         MOVE = 2
         DATE = 3
         LIKES = 4
-        BRO = 5
-        KISS = 6
-        LOYAL = 7
-        FWB = 8
-        TAMED = 9
-        GIRLFRIEND = 10
-        FORGIVE = 98
-        TRUST = 99
+        TRUST = 5
+        BRO = 6
+        KISS = 7
+        LOYAL = 8
+        FWB = 9
+        TAMED = 10
+        GIRLFRIEND = 11
 
     class NonPlayableCharacter:
         """
