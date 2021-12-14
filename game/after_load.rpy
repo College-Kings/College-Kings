@@ -264,6 +264,9 @@ label after_load:
             del rileyrs
         except NameError: pass
         try:
+            if v11_samantha_spa: sceneList.add("v11_samantha")
+        except NameError: pass
+        try:
             if v11_samantha_spa: samantha.relationship = Relationship.MOVE
             del v11_samantha_spa
         except NameError: pass
