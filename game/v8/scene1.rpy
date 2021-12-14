@@ -4,7 +4,7 @@ label v8start:
         jump v8_la_start
     elif ending == "chloe":
         jump v8_cl_start
-    elif ending == "riley" and rileyrs:
+    elif ending == "riley" and riley.relationship.value >= Relationship.MOVE.value:
         jump v8_ri_start
     elif ending == "riley":
         jump v8_ri_start_fr

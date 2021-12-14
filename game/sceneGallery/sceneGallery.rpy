@@ -44,7 +44,7 @@ init python:
         # v8
     if renpy.loadable("v8/scene1.rpy"):
         SceneGallery("v8_cl_start") #2, Chloe, day 11
-        SceneGallery("v8_ri_start") #3, Riley, day 11, v8_riley_lewd_ending
+        SceneGallery("v8_ri_start") #3, Riley, day 11
         SceneGallery("hoco_amb_night") #5, Amber, day 11
         SceneGallery("int_deal_w_josh") #28, Lars Joe
         SceneGallery("amber_sex_at_joshs") #30, Amber, day 14
@@ -62,7 +62,7 @@ init python:
         SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #24, Lauren, day 21
         SceneGallery("v10_amber_skatepark_sg") #26, Amber, day 21
         SceneGallery("v10s30_galleryScene") #30, Chloe, day 22
-        SceneGallery("v10s40_galleryScene", scope={"rileyrs": True}) #40, Riley, day 23
+        SceneGallery("v10s40_galleryScene", scope={"riley.relationship": Relationship.FWB}) #40, Riley, day 23
         # v11
     if renpy.loadable("v11/scene1.rpy"):
         SceneGallery("v11s5_galleryScene") #5, Candy, day 24

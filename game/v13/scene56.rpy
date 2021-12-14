@@ -355,7 +355,7 @@ label v13s56:
 
         pause 0.75
 
-    scene v13s56_3a # TPP. same as v13s56_3 MC no expression,  mouth closed, is waiting outside the gift shop alone
+    scene v13s56_3a # TPP. same as v13s56_3 MC no expression, mouth closed, is waiting outside the gift shop alone
     with dissolve
 
     pause 0.75

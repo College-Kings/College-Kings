@@ -190,6 +190,9 @@ label after_load:
         try:
             if penelopeloyal and penelope.relationship.value < Relationship.LOYAL.value: penelope.relationship = Relationship.LOYAL
         except NameError: pass
+        try:
+            if rileyrs and riley.relationship.value < Relationship.FWB.value: riley.relationship = Relationship.FWB
+        except NameError: pass
 
 
         for character in (
@@ -528,6 +531,9 @@ label after_load:
         
         try:
             if rileysex and "v7_riley" not in sceneList: sceneList.add("v7_riley")
+        except NameError: pass
+        try:
+            if v8_riley_lewd_ending and "v8_riley" not in sceneList: sceneList.add("v8_riley")
         except NameError: pass
         try:
             if v11_aubrey_sex and "v11_aubrey" not in sceneList: sceneList.add("v11_aubrey")

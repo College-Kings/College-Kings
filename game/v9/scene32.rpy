@@ -148,7 +148,7 @@ label v9_sat_hit_gym_train:
 label v9_sat_skip_gym:
     u "(Best that I don't push it.)"
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.FWB.value:
         scene v9atg1a # TPP. Same camera as v9atg1, Show MC checking his phone.
         with dissolve
 

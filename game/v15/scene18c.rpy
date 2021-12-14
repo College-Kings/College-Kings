@@ -59,7 +59,7 @@ label v15s18c_riley:
 
                 u "Seriously? That would be great, haha."
 
-                if rileyrs: #riley.relationship == Relationship.FWB:
+                if riley.relationship.value >= Relationship.FWB.value:
                     scene v15s18c_ri_2d # FPP. Same as v15s18c_ri_2c, Riley slightly sad, mouth open
                     with dissolve
 
@@ -74,7 +74,7 @@ label v15s18c_riley:
             "You can't shop for yourself":
                 u "What? You can't shop for yourself, haha. That ruins the surprise."
 
-                if rileyrs: #riley.relationship == Relationship.FWB:
+                if riley.relationship.value >= Relationship.FWB.value:
                     scene v15s18c_ri_2e # FPP. Same as v15s18c_ri_2b, Riley smirking, mouth open
                     with dissolve
 
@@ -251,7 +251,7 @@ label v15s18c_riley:
 
         u "I love seeing her smile, but being the reason for it is even better, you know."
 
-        if rileyrs: #riley.relationship == Relationship.FWB:
+        if riley.relationship.value >= Relationship.FWB.value:
             scene v15s18c_ri_2i # FPP. Same as v15s18c_ri_2f, Riley slightly sad, looking down, mouth closed
             with dissolve
 

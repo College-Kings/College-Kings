@@ -412,7 +412,7 @@ label v11_roommate:
 
         pause 0.75
 
-        if not rileyrs:
+        if riley.relationship.value < Relationship.FWB.value:
             scene v11rm14 # FPP. MC is now in talking distance to Riley, Riley is now looking at MC, Riley is smiling, mouth closed (make sure counter is in backrgound)
             with dissolve
 
@@ -558,7 +558,7 @@ label v11_roommate:
 
             ri "Hmm, interesting... Well, you know how I'm, like, interested in girls? *Chuckles*"
 
-            if ending == "riley" and not v8_riley_lewd_ending:
+            if ending == "riley" and not "v8_riley" in sceneList:
                 scene v11rm21
                 with dissolve
 

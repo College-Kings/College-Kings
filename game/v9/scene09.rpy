@@ -23,7 +23,7 @@ label room_wed_night:
         if aubrey.relationship.value >= Relationship.FWB.value:
             u "(Well I can't really decide on my favorite moment of the day, but dude, Aubrey...)"
 
-        elif rileyrs:
+        elif riley.relationship.value >= Relationship.FWB.value:
             u "(Well I can't really decide on my favorite moment of the day, but dude, Riley...)"
 
         else: 
@@ -85,7 +85,7 @@ label room_wed_night:
         if aubrey.relationship.value >= Relationship.FWB.value:
             u "(Well I can't really decide on my favorite moment of the day, but dude, Aubrey...)"
 
-        elif rileyrs:
+        elif riley.relationship.value >= Relationship.FWB.value:
             u "(Well I can't really decide on my favorite moment of the day, but dude, Riley...)"
 
         else: 

@@ -256,7 +256,7 @@ label v13s50a:
     if chloegf and not v11_riley_roomate:
         jump v13s52
     
-    elif rileyrs and v11_riley_roomate:
+    elif riley.relationship.value >= Relationship.FWB.value and v11_riley_roomate:
         jump v13s53
     
     else: 

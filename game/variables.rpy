@@ -154,7 +154,6 @@ default nobeach = False
 default politics = False
 default preventgrayson = False
 default protest = False
-default rileyrs = False
 default rileysex = False
 default seenlauren = False
 default signs = False
@@ -177,7 +176,6 @@ default s28_fightWinner = "MC"
 default sideWithCameron = False
 default simLarsFight = False
 default v8_dodged_pipe = False
-default v8_riley_lewd_ending = False
 
 # 9.0
 default dreamFightChoice = "na"

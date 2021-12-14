@@ -15,9 +15,10 @@ label v14_start:
         $ emmy.simplr.pending_messages = []
         $ emmy.simplr.sentMessages[-1].replies = []
 
-    if aubrey.relationship.value >= Relationship.FWB.value and rileyrs:
+    if aubrey.relationship.value >= Relationship.FWB.value and riley.relationship.value >= Relationship.FWB.value:
         $ v13_threesomeending = True
         jump v14s01
+
     else:
         jump v14s01a
     

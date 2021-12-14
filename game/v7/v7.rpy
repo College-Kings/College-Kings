@@ -1195,7 +1195,7 @@ label hd_ad:
                 $ add_point(KCT.TROUBLEMAKER)
 
             $ add_point(KCT.BRO)
-            $ rileyrs = True
+            $ riley.relationship = Relationship.MOVE
 
             u "Yeah, I'd like that."
 
@@ -7127,13 +7127,12 @@ label hc_asking_riley:
 
     u "Will you be my Cinderella for homecoming?"
 
-    if rileyrs or kct == "confident":
-        $ hcGirl = "riley"
-
-        if not rileyrs:
+    if riley.relationship.value >= Relationship.MOVE.value or kct == "confident":
+        if riley.relationship.value < Relationship.MOVE.value:
             call screen kct_popup
+            $ riley.relationship = Relationship.DATE
 
-        $ rileyrs = True
+        $ hcGirl = "riley"
 
         scene s959b # riley excited
         with dissolve
@@ -8870,7 +8869,7 @@ label wolves_ceremony:
 ############# RILEY TEXT
 
 label rileytext:
-    if rileyrs:
+    if riley.relationship.value > Relationship.MOVE.value:
         play sound "sounds/vibrate.mp3"
 
         $ riley.messenger.newMessage(_("Wanna come over? ;)"), queue=False)
@@ -8903,10 +8902,10 @@ label rileytext:
         jump scene35a
 
 ########## BEFORE SCENE 35: RILEY SEX SCENE
-#### RIley Sex Scene, if rileyrs = True,  you get a message in your dorm from Riley telling you that her roommate isnt home and if you wanna come over. Since you already did stuff, you say yes.
+#### RIley Sex Scene, if riley rs = True, you get a message in your dorm from Riley telling you that her roommate isnt home and if you wanna come over. Since you already did stuff, you say yes.
 # It's thurday night
 label rileysexscene:
-    $ rileyrs = True
+    $ riley.relationship = Relationship.FWB
     $ sceneList.add("v7_riley")
 
     if joinwolves:
@@ -11971,7 +11970,7 @@ label rileyhocodate:
 
     play sound "sounds/dooropen.mp3"
 
-    scene sfr4ri1 # first person close up riley oepning hte door,  behind her are lauren and ryan sitting on the floor around a small wooden table filled with bottles of alcohol
+    scene sfr4ri1 # first person close up riley oepning hte door, behind her are lauren and ryan sitting on the floor around a small wooden table filled with bottles of alcohol
     with dissolve
 
     ry "Heyyy [name]! You ready for a wild night?"
@@ -14719,7 +14718,7 @@ label fr4riley2:
     ri "Well we've been here for a few hours now and it's getting kinda boring."
     $ freeroam4.add("crowning")
 
-    if rileyrs and hcGirl == "alone":
+    if riley.relationship.value >= Relationship.MOVE.value and hcGirl == "alone":
         scene sfr4ri51b
         with dissolve
 
@@ -14732,7 +14731,7 @@ label fr4riley2:
 
         jump fr4rileyending
 
-    elif rileyrs:
+    elif riley.relationship.value >= Relationship.MOVE.value:
         scene sfr4ri51b
         with dissolve
 
@@ -15225,7 +15224,7 @@ label fr4aubrey1:
 
                     u "Ahhh fuck. Mmmmm."
 
-                    scene sfr4ri44 # cum on aubreys face,  flirty smiling
+                    scene sfr4ri44 # cum on aubreys face, flirty smiling
                     with flash
 
                     au "*Grins* Seemed like you enjoyed it."
@@ -17043,7 +17042,7 @@ label fr4rileyending:
 
     queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.MOVE.value:
         ri "Sooo homecoming was pretty fun... but I bet the night could get even better."
 
         scene sfr4ri52a # mc turns his face towards her
@@ -17096,7 +17095,7 @@ label fr4rileyending2:
 
     u "So, what's up?"
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.MOVE.value:
         scene sfr4ri55  #tpp close up riley whispers into your ear
         with dissolve
 
@@ -17234,7 +17233,7 @@ label fr4chloeending:
     u "(Hmm... Colony Crisis. Interesting.)"
 
     play sound "sounds/dooropen.mp3"
-    scene sfr4cl61c #showing mc,  mc looks up at the door
+    scene sfr4cl61c #showing mc, mc looks up at the door
     with dissolve
 
     "*Door opening*"

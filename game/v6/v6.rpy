@@ -2616,7 +2616,7 @@ label fz_b:
 
     em "And I'm really sorry. But you have to admit it wasn't going well."
 
-    scene s538d # Emily coming closer,  sad curious
+    scene s538d # Emily coming closer, sad curious
     with dissolve
 
     em "I mean, did you even love me anymore?"

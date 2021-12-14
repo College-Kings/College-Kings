@@ -3,7 +3,7 @@ label v8_ri_start:
     # Note to renderers: Make sure the MC is in his suit and Riley is in her HoCo dress. Any other props are the same as Riley's lewd ending in v7. Context: MC and Riley are both sitting on her bed in her room and she's whispering in his ear
     stop music fadeout 3
 
-    $ v8_riley_lewd_ending = True
+    $ sceneList.add("v8_riley")
 
     scene v8s25 # Same as sfr4ri55 (from v7) but MC talking now
     with dissolve

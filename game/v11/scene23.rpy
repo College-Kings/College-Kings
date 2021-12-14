@@ -392,13 +392,13 @@ label v11s23_riley1:
 
             u "Yeah, just a little bit of excitement..."
 
-            if not rileyrs:
+            if riley.relationship.value < Relationship.FWB.value:
                 scene v11frmri3b # FPP Same angle as v11frmri3, Riley raising her eyebrow and smiling, mouth open
                 with dissolve
 
                 ri "You don't want to start a war, [name]. I never lose."
 
-            else: # If rileyrs
+            else:
                 scene v11frmri3c # FPP Same angle as v11frmri3, Riley leaning in close to MC, Riley has a sexy expression, mouth open
                 with dissolve
 
@@ -445,7 +445,7 @@ label v11s23_riley1:
 
             u "What's the reason then?"
 
-            if not rileyrs:
+            if riley.relationship.value < Relationship.FWB.value:
                 scene v11frmri3b
                 with dissolve
 
@@ -471,7 +471,7 @@ label v11s23_riley1:
 
                 ri "Also, you don't want to start a war, [name]. I never lose."
             
-            else: # if rileyrs
+            else:
                 scene v11frmri3c
                 with dissolve
 

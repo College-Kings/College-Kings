@@ -199,7 +199,7 @@ label v14s11:
     ri "Knowing Aubrey she probably doesn't wanna talk about that stuff right now either."
     ri "Being around her is probably the safest way to stay out of any Chicks drama. *Chuckles*"
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.FWB.value:
         scene v14s11_4a
         with dissolve
 

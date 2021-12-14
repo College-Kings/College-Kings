@@ -1125,7 +1125,7 @@ label v12_lauren_sex:
                 scene v12las66 # FPP. MC and Lauren lieing down next to each other, looking at each other, Lauren smiling, mouth open, make her body a bit sweaty if possible
                 with dissolve
 
-                if laurenrs and not chloers and (aubrey.relationship.value < Relationship.FWB.value) and (evelyn.relationship.value < Relationship.LIKES.value) and not emilyrs and not rileyrs and (amber.relationship.value < Relationship.FWB.value) and (penelope.relationship.value < Relationship.LIKES.value) and (ms_rose.relationship.value < Relationship.FWB.value) and (lindsey.relationship.value < Relationship.FWB.value) and not lindseyfirstkiss and (candy.relationship.value < Relationship.FWB.value) and not v11_samantha_spa:
+                if laurenrs and not chloers and (aubrey.relationship.value < Relationship.FWB.value) and (evelyn.relationship.value < Relationship.LIKES.value) and not emilyrs and (riley.relationship.value < Relationship.FWB.value) and (amber.relationship.value < Relationship.FWB.value) and (penelope.relationship.value < Relationship.LIKES.value) and (ms_rose.relationship.value < Relationship.FWB.value) and (lindsey.relationship.value < Relationship.FWB.value) and not lindseyfirstkiss and (candy.relationship.value < Relationship.FWB.value) and not v11_samantha_spa:
                     $ grant_achievement("worth_the_wait")
 
                 $ laurenrs = True

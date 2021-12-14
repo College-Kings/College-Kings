@@ -385,21 +385,21 @@ label v15s26:
     pause 1
 
     # -I would love it if Aubrey/Riley/MC had some different positions in these images while they're watching. 
-    # MC is sitting in the middle so if threesome, they can all be holding hands/cuddling. If aubreyTamed and not rileyRS, just Aubrey holding hands. 
-    # Or if just RileyRS, no Aubrey, just Riley/MC holding hands. If this is too much work for one small image, I get it. But it would be a cute bonus here. Ask cheex for questions-
+    # MC is sitting in the middle so if threesome, they can all be holding hands/cuddling. If aubreyTamed and not riley RS, just Aubrey holding hands. 
+    # Or if just Riley RS, no Aubrey, just Riley/MC holding hands. If this is too much work for one small image, I get it. But it would be a cute bonus here. Ask cheex for questions-
     if "v14_threesome" in sceneList:
         scene v15s26_20 # TPP Show MC, Riley, and Aubrey all cuddling and holding hands, lit up by the movie screen
         with dissolve
 
         pause 0.75
     
-    elif aubrey.relationship.value >= Relationship.TAMED.value and not rileyrs:
+    elif aubrey.relationship.value >= Relationship.TAMED.value and riley.relationship.value < Relationship.FWB.value:
         scene v15s26_20a # TPP Show MC cuddling and holding hands with Aubrey, while Riley sits forward and watches the movie, all lit up by the movie screen
         with dissolve
 
         pause 0.75
 
-    elif rileyrs and aubrey.relationship.value < Relationship.TAMED.value:
+    elif riley.relationship.value >= Relationship.FWB.value and aubrey.relationship.value < Relationship.TAMED.value:
         scene v15s26_20b # TPP Show MC cuddling and holding hands with Riley, while Aubrey leans back on the couch watching the movie, looking a little bored, all lit up by the movie screen
         with dissolve
 
