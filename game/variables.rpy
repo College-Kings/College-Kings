@@ -17,7 +17,6 @@ default showkct = True
 define contacts_file_path = os.path.join(config.basedir, "game", "images", "nonplayable_characters")
 
     ## Kiwii Vars
-default kiwiiUsers = kiwii_users()
 default kiwii_firstTime = False
 
     ## Fight Vars
