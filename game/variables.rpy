@@ -471,3 +471,5 @@ default v15_ph_riley_upset = False  # placeholder ?? (set in s26?? ; read in v15
 default autumnloyal = False 
 default autumnrs = False
 default v15s36_not_good_idea = False 
+default v15s42_flirt = False
+default v15s42_grab_breakfast = False
