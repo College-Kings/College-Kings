@@ -224,7 +224,7 @@ label after_load:
             del laurenrs
         except NameError: pass
         try:
-            if laurenrs_v11aubrey and "v11_aubrey" in sceneList: v11_lauren_caught_aubrey = True
+            if laurenrs_v11aubrey and (v11_aubrey_sex or "v11_aubrey" in sceneList): v11_lauren_caught_aubrey = True
             del laurenrs_v11aubrey
         except NameError: pass
         try:
