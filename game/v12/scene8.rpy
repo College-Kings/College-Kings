@@ -208,7 +208,7 @@ label v12_murder_mystery_reveal:
 
         "Hurry to help her":
             $ add_point(KCT.BOYFRIEND)
-            $ noralikes = True
+            $ nora.relationship = Relationship.LIKES
             
             scene v12mmr9 # TPP. Show MC rushing to Nora, MC worried, mouth closed, Nora feeling sick, mouth closed
             with dissolve

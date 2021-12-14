@@ -16,12 +16,13 @@ label v11_nora_chloe_hallway:
 
     u "Hey Nora, are there a lot of people going on the trip?"
 
-    if noralikes:
+    if nora.relationship.value >= Relationship.LIKES.value:
 
         scene v11nohall2a # FPP. Same as 2, but now Nora is looking at MC, Nora mouth open, happy expression
         with dissolve
 
         no "Yeah, there's plenty. I'm surprised we actually got enough people."
+
     else:
         scene v11nohall2a # FPP. Same as 2, but now Nora is looking at MC, Nora mouth open, happy expression
         with dissolve
@@ -73,11 +74,12 @@ label v11_nora_chloe_hallway:
 
             u "Well I'll be there, I hope that's something good. *Chuckles*"
 
-            if noralikes:
+            if nora.relationship.value >= Relationship.LIKES.value:
                 scene v11nohall2a
                 with dissolve
 
                 no "*Chuckles* It's definitely something."
+
             else:
                 scene v11nohall2a
                 with dissolve
@@ -92,11 +94,12 @@ label v11_nora_chloe_hallway:
 
             u "Just try to enjoy yourself anyway."
 
-            if noralikes:
+            if nora.relationship.value >= Relationship.LIKES.value:
                 scene v11nohall2c
                 with dissolve
 
                 no "Thanks for trying, but I think it's clear where his priorities are."
+
             else:
                 scene v11nohall2c
                 with dissolve

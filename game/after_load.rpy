@@ -220,6 +220,14 @@ label after_load:
             del msrosers
         except NameError: pass
         try:
+            if noralikes: nora.relationship = Relationship.LIKES
+            del noralikes
+        except NameError: pass
+        try:
+            if norars: nora.relationship = Relationship.FWB
+            del norars
+        except NameError: pass
+        try:
             if penelopers: penelope.relationship = Relationship.LIKES
             del penelopers
         except NameError: pass

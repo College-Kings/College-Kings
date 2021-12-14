@@ -169,7 +169,6 @@ default helpedNora = False
 default helpJosh = False
 default hesitantwgrayson = False
 default larsdmg = 0
-default noralikes = False
 default s28_fightWinner = "MC"
 default sideWithCameron = False
 default simLarsFight = False

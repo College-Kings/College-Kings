@@ -849,7 +849,7 @@ label v12s18_bottlespin:
 
     u "Oh, uhh-"
 
-    if noralikes:
+    if nora.relationship.value >= Relationship.LIKES.value:
         scene v12slpbs16 # TPP. Show Nora grabbing MC's face and kissing him (try and make this a bit passionate)
         with dissolve
         play sound "sounds/kiss.mp3"
@@ -1344,7 +1344,7 @@ label v12s18_fmk:
 
     u "*Laughs* Alright Nora, your turn."
 
-    if noralikes:
+    if nora.relationship.value >= Relationship.LIKES.value:
         scene v12slpfmk5g
         with dissolve
 
