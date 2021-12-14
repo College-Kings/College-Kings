@@ -4078,7 +4078,7 @@ label eve1:
 
     menu:
         "Make a move":
-            $ evelynmove = True
+            $ evelyn.relationship = Relationship.MOVE
             $ add_point(KCT.BRO)
 
             scene s188d
