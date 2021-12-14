@@ -90,7 +90,6 @@ default costume = 1
 default costumetried = set()
 default costumeaubrey = False
 default emilyandben = False
-default emilyrs = False
 default evelynnumber = False
 default forgiveemily = False
 default freeroam1 = set()

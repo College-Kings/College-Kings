@@ -2533,13 +2533,12 @@ label fz_a:
 
     menu:
         "Kiss her back":
-            $ emilyrs = True
+            $ emily.relationship = Relationship.FWB
             $ forgiveemily = True
 
             jump emsex_a
 
         "Push her away":
-            $ emilyrs = False
             $ forgiveemily = False
 
             scene em4b
@@ -2640,7 +2639,7 @@ label fz_b:
 
     menu:
         "Kiss her back":
-            $ emilyrs = True
+            $ emily.relationship = Relationship.FWB
             $ forgiveemily = True
 
             jump emsex_c

@@ -119,21 +119,21 @@ screen hc_select():
                 action NullAction()
 
         imagebutton:
-            if "penelope" not in hcAsked and not (bowling and emilyrs) and not laurenrs:
+            if "penelope" not in hcAsked and not v7_emily_bowling and not laurenrs:
                 idle "images/v7/HCPenelope.webp"
                 hover "images/v7/HCPenelope2.webp"
             else:
                 idle "images/v7/HCPenelope3.webp"
                 hover "images/v7/HCPenelope23.webp"
 
-            if bowling and emilyrs:
+            if v7_emily_bowling:
                 tooltip "Penelope didn't seem too eager to talk to me today, I better ask someone else."
             elif bowling:
                 tooltip "Penelope and I got along really well when we went bowling together, I think she could say yes."
             else:
                 tooltip "I haven't done that much with Penelope so far, but maybe she'll yes."
 
-            if "penelope" not in hcAsked and not laurenrs and not (bowling and emilyrs):
+            if "penelope" not in hcAsked and not laurenrs and not v7_emily_bowling:
                 action Jump("hc_asking_penelope")
             else:
                 action NullAction()

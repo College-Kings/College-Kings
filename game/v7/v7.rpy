@@ -46,16 +46,16 @@ init python:
         riley.messenger.newMessage(_("Oh oki"))
 
     def kiwii_firstTimeMessages():
-        if emilyrs:
+        if emily.relationship.value >= Relationship.FWB.value:
             riley.messenger.addReply(_("We're not back together"))
             riley.messenger.newMessage(_("Okay... just looked like it"))
             riley.messenger.addReply(_("Well we're not."))
             riley.messenger.newMessage(_("k"))
-        if bowling and emilyrs:
+        if bowling and emily.relationship.value >= Relationship.FWB.value:
             penelope.messenger.newMessage(_("I didn't know you and Emily were a thing..."), queue=False)
             penelope.messenger.addReply(_("We're not a thing"), v7_msgReply1)
             penelope.messenger.addReply(_("It was a one time thing"), v7_msgReply2)
-        if emilyrs and laurenrs:
+        if emily.relationship.value >= Relationship.FWB.value and laurenrs:
             lauren.messenger.newMessage(_("I saw what Emily posted. I really thought you liked me..."), queue=False)
             lauren.messenger.newMessage(_("I guess we're done now, so please just delete my number."), queue=False)
             lauren.messenger.addReply(_("Lauren can we please just talk about it? I can explain"))
@@ -849,7 +849,7 @@ label hd_bd:
 
             no "Cheated on someone."
 
-            if (laurenrs and aubrey.relationship.value >= Relationship.FWB.value) or (laurenrs and emilyrs):
+            if (laurenrs and aubrey.relationship.value >= Relationship.FWB.value) or (laurenrs and emily.relationship.value >= Relationship.FWB.value):
                 scene s703 # showing mc drinking
                 with dissolve
 
@@ -1191,7 +1191,7 @@ label hd_ad:
 
     menu:
         "Yeah, I'd like that":
-            if laurenrs or emilyrs:
+            if laurenrs or emily.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.TROUBLEMAKER)
 
             $ add_point(KCT.BRO)
@@ -1302,7 +1302,7 @@ label hd_ad:
             pause 0.5
 
         "Uhm... I shouldn't":
-            if laurenrs or emilyrs:
+            if laurenrs or emily.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.BOYFRIEND)
 
             u "Uhm... I probably shouldn't. It's quite late."
@@ -1364,7 +1364,7 @@ label conyourdorm:
     $ v7_kiwiiPost3.newComment("Chloe", _("Most beautiful girl in the world <3"), 6, queue=False)
     $ v7_kiwiiPost3.addReply(_("I'd destroy you in Air hockey!"), v7_kiwiiReply5, mentions="Aubrey", numberLikes=renpy.random.randint(15, 25))
 
-    if emilyrs: # first riley texts, then once you've opened the app you get 2 more messages.
+    if emily.relationship.value >= Relationship.FWB.value: # first riley texts, then once you've opened the app you get 2 more messages.
         $ v7_kiwiiPost4 = KiwiiPost("Emily", "v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), numberLikes=82)
         $ v7_kiwiiPost4.newComment("Riley", _("You guys are so cute"), 5, queue=False)
         $ v7_kiwiiPost4.newComment("Aubrey", _("GORGEOUS"), 8, queue=False)
@@ -1384,7 +1384,7 @@ label conyourdorm:
         u "(What the hell?)"
 
         label phoneam:
-            if bowling and emilyrs:
+            if bowling and emily.relationship.value >= Relationship.FWB.value:
                 $ v7_emily_bowling = True
         
             if riley.messenger.replies:
@@ -1397,11 +1397,11 @@ label conyourdorm:
                 u "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam
 
-            if bowling and penelope.messenger.replies:
+            if penelope.messenger.replies:
                 u "(I should answer Penelope.)"
                 jump phoneam
 
-            if laurenrs and lauren.messenger.replies:
+            if lauren.messenger.replies:
                 u "(I should respond to Lauren.)"
                 jump phoneam
 
@@ -2591,7 +2591,7 @@ label thisbewalk:
 
             pause 0.5
 
-            if emilyrs:
+            if emily.relationship.value >= Relationship.FWB.value:
                 scene s733a #mc turns his head to look at the door
                 with dissolve
 
@@ -3089,7 +3089,7 @@ label beachlauren:
 
         la "Anything new with you lately?"
 
-        if emilyrs:
+        if emily.relationship.value >= Relationship.FWB.value:
             scene s742a
             with dissolve
 
@@ -3418,7 +3418,7 @@ label beachlauren:
 
 ########## SCENE 12: MC BACK AT DORM WEDNESDAY EVENING
     label rightafterbeach: #for compatibility only
-    if emilyrs:
+    if emily.relationship.value >= Relationship.FWB.value:
         play sound "sounds/dooropen.mp3"
         scene s753 # mc opens his dorm door and looks on the ground, there's a letter
         with dissolve
@@ -4148,7 +4148,7 @@ label aftercall:
 
     ch "And last but not least, [name]."
 
-    if (laurenrs and aubrey.relationship.value >= Relationship.FWB.value) or (laurenrs and emilyrs):
+    if (laurenrs and aubrey.relationship.value >= Relationship.FWB.value) or (laurenrs and emily.relationship.value >= Relationship.FWB.value):
         ch "Is it true that you recently cheated on the girl you're currently dating?"
 
         scene s786c # chris looking directly at you mouth closed
@@ -5405,7 +5405,7 @@ label after_pledges:
     scene s861a # MC walking home at night through the town, different shot
     with dissolve
 
-    if emilyrs: # Please confirm this is the right condition for her to send an apology letter to the MC
+    if emily.relationship.value >= Relationship.FWB.value: # Please confirm this is the right condition for her to send an apology letter to the MC
         u "(Oh my god, I completely forgot about Emily. Wonder if she's still up.)"
 
         menu:
@@ -6058,7 +6058,7 @@ label after_history:
 ########## SCENE 18 PENELOPE AFTER HISTORY
     # MC and Pen talking in classroom after class ### the next scene only works inside the classroom so this shouldn't be in the hallway
     label pen_after_history: #for compatibility only
-    if emilyrs and bowling:
+    if v7_emily_bowling:
         scene s891 # Camera - FPP (far shot). Penelope in classroom about to walk out (away from the camera) in her costume
         with fade
         u "Hey Penelope!"
@@ -7065,7 +7065,7 @@ label hc_asking_penelope:
 
     u "Will you go to homecoming with me?"
 
-    if emilyrs or not bowling:
+    if emily.relationship.value >= Relationship.FWB.value or not bowling:
         scene s957 # fpp close up penelope unsure smili ng
         with dissolve
 
@@ -13023,7 +13023,7 @@ label fr4emilydate:
 
         "Get upset":
             $ forgiveemily = False
-            $ emilyrs = False
+            $ emily.relationship = Relationship.FRIEND
 
             u "I told you to stop drinking Emily. You never fucking listen!"
 

@@ -18,7 +18,7 @@ label emily_arcade:
     play ambience "sounds/arcade_amb.mp3" fadein 2
     pause 1
 
-    if emilyrs:
+    if emily.relationship.value >= Relationship.FWB.value:
         scene v8arcade2 # FPP. (after MC walks up to Emily). Emily cheerful, mouth open
         with dissolve
         em "Hey, sexy!"
