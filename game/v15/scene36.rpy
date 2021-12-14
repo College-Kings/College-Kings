@@ -286,7 +286,8 @@ label v15s36:
                     aut "Haha! Okay, mister... Don't push it."
 
                     scene v15s36_6
-                    with dissolve 
+                    with dissolve
+
                 else:
                     $ autumnrs = True
 
