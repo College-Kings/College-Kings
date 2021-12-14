@@ -3179,7 +3179,7 @@ label continueq:
 
         la "So, what did you do all day?"
 
-        if aubrey.:
+        if "v3_aubrey" in sceneList:
             scene s287a # lauren closeup while walking her mouth closed  FIRST PERSON
             with dissolve
             u "(Okay, time to make a decision. Should I tell her about what happened with Aubrey?)"
