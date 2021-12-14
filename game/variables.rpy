@@ -279,7 +279,6 @@ default v12s7_victims = 12 #Amber, Aubrey, Charli, Chloe, Chris, Imre, Lauren, L
 # 13.0
 default chloeSus = 0
 default chloeturnedon = set() #Chloe Amsterdam
-default emmyrs = False
 default freeroam10 = set() #Charli room
 default freeroam11 = set() #Amsterdam garden
 default laurenrs_v11aubrey = False

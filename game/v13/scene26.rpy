@@ -4,8 +4,8 @@
 # Time: late after noon/ early evening 
 
 label v13_emmy_sex:
-
     $ sceneList.add("v13_emmy")
+    $ emmy.relationship = Relationship.FWB
 
     play music "music/v13/Track Scene 26.mp3" fadein 2
 

@@ -164,6 +164,12 @@ label after_load:
             if cameronBro and cameron.relationship.value < Relationship.BRO.value: cameron.relationship = Relationship.BRO
         except NameError: pass
         try:
+            if emmyrs and emmy.relationship.value < Relationship.LIKES.value: emmy.relationship = Relationship.LIKES
+        except NameError: pass
+        try:
+            if "v13_emmy" in sceneList and emmy.relationship.value < Relationship.FWB.value: emmy.relationship = Relationship.FWB
+        except NameError: pass
+        try:
             if evelyndate and evelyn.relationship.value < Relationship.DATE.value: evelyn.relationship = Relationship.DATE
         except NameError: pass
         try:
@@ -723,8 +729,6 @@ label after_load:
         except NameError: v13s48_canoeing_as_date = False
         try: v13_help_chloe
         except NameError: v13_help_chloe = False
-        try: emmyrs
-        except NameError: emmyrs = False
         try: v13_emmy_points
         except NameError: v13_emmy_points = 0
         try: v13_imre_disloyal
