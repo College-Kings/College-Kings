@@ -33,7 +33,6 @@ init python:
         aubrey.messenger.newMessage(_(":)"))
 
     def v6_reply8():
-        setattr(store, "meetaubrey", False)
         aubrey.messenger.newMessage(_("Oh, okay"))
 
     def v6_reply9():
