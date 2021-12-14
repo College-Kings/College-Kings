@@ -1309,7 +1309,7 @@ label v15s18a_ImreLauren:
             scene v15s18aimre_6a
             with dissolve
 
-            u "Oh, it's just my grocery list. Why are you asking me about groceries, Imre? *Nervously laughs*"
+            u "Oh, it's just my grocery list. Why are you asking me about groceries, Imre? *Nervous laugh*"
 
             scene v15s18aimre_6c
             with dissolve
