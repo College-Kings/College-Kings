@@ -396,3 +396,5 @@ default v15s24_nancy_dick = False
 default v15s36_not_good_idea = False 
 default v15s5_mc_angry_with_rose = False # Placeholder?
 default v15s7_chloe_empathize = False
+default v15s42_flirt = False
+default v15s42_grab_breakfast = False 
