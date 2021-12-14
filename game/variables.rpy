@@ -364,10 +364,10 @@ default v15_lindsey_inviteseb = False ##Approach B2A. Invite Grayson = (v14_help
 default aubrey_riley_awkward = False
 default autumnloyal = False
 default AubreyFriend = False #????
+default aubrey_fwb = False #????
 default dog_name = "Blue"
 default freeroam13 = set() #halloween, part 1 (18a)
 default freeroam14 = set() #halloween, part 2 (18c)
-default riley_loyal = False
 default v15_autumn_freemug = False
 default v15_autumn_lunchbreak = False
 default v15_autumn_smoke = False

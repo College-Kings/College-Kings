@@ -10,8 +10,8 @@ init python:
         TRUST = 4
         BRO = 5
         KISS = 6
-        LOYAL = 7
-        FWB = 8
+        FWB = 7
+        LOYAL = 8
         TAMED = 9
         GIRLFRIEND = 10
 
@@ -194,7 +194,7 @@ default naomi = NonPlayableCharacter("Naomi", "NaomiXMarie")
 default nora = NonPlayableCharacter("Nora", "Nora_12") #Relationship progression: FRIEND, MOVE, LIKES, FWB
 default parker = NonPlayableCharacter("Parker")
 default penelope = NonPlayableCharacter("Penelope", "Penelopeeps") #Relationship progression: FRIEND, LIKES, LOYAL
-default riley = NonPlayableCharacter("Riley", "RileyReads") #Relationship progression: FRIEND, MOVE, DATE, FWB
+default riley = NonPlayableCharacter("Riley", "RileyReads") #Relationship progression: FRIEND, MOVE, DATE, FWB, LOYAL
 default ryan = NonPlayableCharacter("Ryan", "Ryanator")
 default samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam") #Relationship progression: FRIEND, MOVE, FWB
 default satin = NonPlayableCharacter("Satin") #Relationship progression: FRIEND, FWB
