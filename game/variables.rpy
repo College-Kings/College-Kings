@@ -36,6 +36,7 @@ default checklist = Checklist()
     ## Path Builder
 default path_builder = False
 default pb_name_set = False
+default pb_start_location = "start"
 
 # voiceacting
 default voice_acted = True
