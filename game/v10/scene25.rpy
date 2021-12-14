@@ -178,6 +178,7 @@ label v10_ms_rose_fight:
         with dissolve
 
         u "It looked like you were handling him just fine, haha."
+
     else:
         scene v10msf4
         with dissolve

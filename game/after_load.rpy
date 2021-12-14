@@ -713,8 +713,6 @@ label after_load:
         except NameError: v11_josh_nightclub = False
         try: candyLike
         except NameError: candyLike = 0
-        try: v11_aubrey_blue_outfit
-        except NameError: v11_aubrey_blue_outfit = False
         try: v11_tease_amber
         except NameError: v11_tease_amber = 0
         try: v11_manhunt_winner
@@ -733,14 +731,10 @@ label after_load:
         except NameError: v11_lindsey_slogan = 0 
         try: v11_linds_inv_imre
         except NameError: v11_linds_inv_imre = False 
-        try: v11_sit_with_lauren
-        except NameError: v11_sit_with_lauren = True
         try: v11_overtake_points
         except NameError: v11_overtake_points = 0
         try: v11_hp_points
         except NameError: v11_hp_points = 0
-        try: political_strategist
-        except NameError: political_strategist = False
         try: emily_europe
         except NameError: emily_europe = False
         try: v11_check_on_nora

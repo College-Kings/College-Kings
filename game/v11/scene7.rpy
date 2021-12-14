@@ -249,7 +249,6 @@ label v11_room_aubrey_shopping:
             u "The white one."
 
         "The blue one":
-            $ v11_aubrey_blue_outfit = True
             u "The blue one."
         
     scene v11auw8e # FPP. Same cam as v11auw8, Aubrey is now holding the outfits by her side, she is smiling, mouth open

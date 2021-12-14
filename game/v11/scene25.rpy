@@ -116,7 +116,7 @@ label v11_hotel_bar:
 
         jo "I needed the sleep after the night I had at the bar last Thursday, haha."
 
-        if v11_josh_nightclub: # ADD VARIABLE TO SCENE 5
+        if v11_josh_nightclub:
             scene v11hob6
             with dissolve
 

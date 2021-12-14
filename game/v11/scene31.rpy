@@ -167,7 +167,6 @@ label v11_lindsey_park:
 
         "Support Lindsey":
             $ v11_lindsey_run = True
-            $ political_strategist = True #keep
             $ lindsey.points += 1
 
             scene v11lip3h # FPP. Same as v11lip3d, different pose

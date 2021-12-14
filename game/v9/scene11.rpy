@@ -102,6 +102,7 @@ label v9_hc_demo:
         "Recognize the King":
             $ the_king = True
             jump v9_hc_demo_rec
+
         "Don't recognize the King":
             $ add_point(KCT.TROUBLEMAKER)
             jump v9_hc_demo_norec
@@ -166,6 +167,7 @@ label v9_hc_demo_cont1:
         "Discuss War":
             $ add_point(KCT.BRO)
             jump v9_hc_demo_war
+
         "Discuss Riches":
             jump v9_hc_demo_riches
         

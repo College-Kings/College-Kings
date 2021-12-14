@@ -408,9 +408,6 @@ label v12_chloe_cafe:
             scene v12chc5o # FPP. Same as v12chc5, Chloe angry, mouth closed
             with dissolve
             
-            if political_strategist: #for v11-12 compatibility purposes
-                $ v11_lindsey_run = True
-            
             if v11_lindsey_run and v11_told_aubrey:
                 $ grant_achievement("thrown_to_the_lions")
             
