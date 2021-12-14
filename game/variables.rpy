@@ -1,3 +1,7 @@
+init python:
+    import os
+
+
 ## Init
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
@@ -13,6 +17,7 @@ default showkct = True
 define contacts_file_path = os.path.join(config.basedir, "game", "images", "nonplayable_characters")
 
     ## Kiwii Vars
+default kiwiiUsers = kiwii_users()
 default kiwii_firstTime = False
 
     ## Fight Vars
