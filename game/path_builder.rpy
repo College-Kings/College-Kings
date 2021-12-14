@@ -180,7 +180,7 @@ screen path_builder(catagory_step=1):
                         idle "images/path builder/pb_button.webp"
                         hover "images/path builder/pb_selected.webp"
                         selected_idle "images/path builder/pb_selected.webp"
-                        selected all(variable == value for func variable, value in item.funcs) or all(value in variable for func variable, value in item.funcs)
+                        selected all(getattr(store, variable) == value for func variable, value in item.funcs) or all(value in variable for func variable, value in item.funcs)
                         action [Function(func, variable, value) for func, variable, value in item.funcs]
 
                     text item.name:
