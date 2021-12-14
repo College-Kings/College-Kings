@@ -121,10 +121,10 @@ label v15s8:
     ##B.1b  Ms. Rose support
     ##B.2   Meet Dean
 
-    if lindsey_board.approach is not None:
+    if chloe_board.approach is not None:
         $ v15_chloe_lindseysabotage = chloe_board.approach.id == "Sabotage"
 
-    if lindsey_board.selected_task is not None:
+    if chloe_board.selected_task is not None:
         $ v15_chloe_postkiwii = chloe_board.selected_task == v15s8_chloe_kiwii
         $ v15_chloe_mrleesupport = chloe_board.selected_task == v15s8_chloe_lee
 
