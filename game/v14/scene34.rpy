@@ -69,7 +69,6 @@ label v14s34:
 
         "Decline Jenny's invite":
             $ add_point(KCT.BOYFRIEND)
-            $ jennyfriend = True
             $ jenny.messenger.addReply(_("Sorry, I was already planning to go out with Penelope tonight."))
             $ jenny.messenger.newMessage(_("Oh!"))
             $ jenny.messenger.newMessage(_("No worries, that's fine. I'm happy for both of you actually!"))

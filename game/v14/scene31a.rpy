@@ -575,9 +575,9 @@ label v14s31a:
 
                 ca "Ha... Alright."
 
-            "She says what she needs to": # -If She says what she needs to (creates cameronBro for Wolves)
+            "She says what she needs to": # -If She says what she needs to (creates cameron Bro for Wolves)
                 $ add_point(KCT.BRO)
-                $ cameronBro = True
+                $ cameron.relationship = Relationship.BRO
                 u "She knows what she needs to say. She's damn good at it too."
 
                 scene v14s31a_3c
@@ -642,7 +642,7 @@ label v14s31a:
 
         u "Haha, you do that."
 
-        if cameronBro:
+        if cameron.relationship.value >= Relationship.BRO.value:
             scene v14s31a_3a
             with dissolve
 

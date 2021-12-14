@@ -66,7 +66,7 @@ label v14s09:
 
     lee "*Sighs* I suppose that what happens in Europe, truly does stay in Europe..."
 
-    if msrosers and joinwolves and v13s20_bleach_suitcase: #sanitizing pathbuilder input
+    if ms_rose.relationship.value >= Relationship.FWB.value and joinwolves and v13s20_bleach_suitcase: #sanitizing pathbuilder input
         scene v14s09_2e # FPP. same as v14s09_2a show Ms. Rose looking at mc slightly biting a pen slight smile, mouth closed, show Mr. Lee looking at Charli's suitcase with a confused expression, mouth closed
         with dissolve
 
@@ -275,7 +275,7 @@ label v14s09:
 
     u "(Chloe's favorite part was most likely...)"
 
-    if chloegf:
+    if "v13_chloe" in sceneList:
         menu:
             "The Pier":
                 u "(The pier. She was super excited about it when she asked me to come.)"
@@ -337,7 +337,7 @@ label v14s09:
 
     u "(I wonder about Nora's favorite part...)"
 
-    if v12_nora_sex:
+    if "v12_nora" in sceneList:
         menu:
             "London Museum":
                 u "(The museum was really cool and she certainly loved London.)"
@@ -640,25 +640,16 @@ label v14s09:
 
         u "(So Josh's favorite Europe moment...)"
 
-        if not joshmad:
-            menu:
-                "Playing Leopard Lord":
-                    u "(He was definitely a fan of his role during the murder mystery.)"
+        menu:
+            "Playing Leopard Lord":
+                u "(He was definitely a fan of his role during the murder mystery.)"
+    
+            "Drinks in London":
+                u "(We had a good round of drinks together in London, maybe that was his favorite part.)"
+    
+            "Fancy dinner":
+                u "(That fancy dinner Mr. Lee set up was free and delicious, I'm sure Josh loved that, haha.)"
         
-                "Drinks in London":
-                    u "(We had a good round of drinks together in London, maybe that was his favorite part.)"
-        
-                "Fancy dinner":
-                    u "(That fancy dinner Mr. Lee set up was free and delicious, I'm sure Josh loved that, haha.)"
-        
-        else:
-            menu:
-                "Playing Leopard Lord":
-                    u "(He was definitely a fan of his role during the murder mystery.)"
-        
-                "Drinks in London":
-                    u "(We had a good round of drinks together in London, maybe that was his favorite part.)"
-
     if v11_pen_goes_europe:
         scene v14s09_8b
         with dissolve

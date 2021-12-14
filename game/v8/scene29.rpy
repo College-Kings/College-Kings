@@ -620,8 +620,8 @@ label after_drugs:
         menu:
             "Go with her":
                 $ sceneList.add("v8_amber2")
-                $ amberrs = True
-                if laurenrs:
+                $ amber.relationship = Relationship.FWB
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
                     $ add_point(KCT.BOYFRIEND)
@@ -631,8 +631,8 @@ label after_drugs:
                 jump amber_sex_at_joshs
 
             "Reject her advances":
-                $ amberrs = False
-                if laurenrs:
+                $ amber.relationship = Relationship.FRIEND
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     $ add_point(KCT.BOYFRIEND)
 
                 u "*Whispers* Sorry Amber, I'm not feeling it tonight."

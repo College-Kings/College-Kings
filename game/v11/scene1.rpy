@@ -751,7 +751,7 @@ label v11_start:
 label v11s1_riley:
     $ freeroam7.add("riley")
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.FWB.value:
         scene v11cocri1 # FPP. MC and Riley looking at each other, Riley has mouth closed, neutral expression
         #with dissolve
 
@@ -762,11 +762,12 @@ label v11s1_riley:
 
         u "You came?"
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.FWB.value:
         scene v11cocri1a # FPP. Same as ri1, Riley has mouth open, same expression
         with dissolve
 
         ri "Yeah, of course. I mentioned before that I wanted to support both of you. I've been here a while but I didn't want to walk in half way through."
+
     else:
         scene v11cocri1a # FPP. Same as ri1, Riley has mouth open, same expression
         with dissolve
@@ -799,7 +800,7 @@ label v11s1_riley:
 
             ri "I'm sorry... Do your best to stay positive, Penelope needs all the support she can get at the moment."
 
-            if rileyrs:
+            if riley.relationship.value >= Relationship.FWB.value:
                 ri "It's really sweet of you to be so supportive of your friends."
 
     scene v11cocri1a
@@ -838,18 +839,17 @@ label v11s1_riley:
     ri "Well, you know I'm here for you both regardless. I'm gonna go check on Penelope and see if there's anything I can do to help settle her nerves."
 
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.FWB.value:
         scene v11cocri1
         with dissolve
 
         u "Sounds good, it's really sweet of you to care so much."
-    else:
 
+    else:
         scene v11cocri1
         with dissolve
 
         u "Sounds good."
-
 
     scene v11cocri1b # FPP. Same cam as 28, show Riley walking away
     with dissolve
@@ -1161,13 +1161,13 @@ label v11_case_verdict:
 
         u "*Whisper* You're welcome."
 
-        if penelopers:
+        if penelope.relationship.value >= Relationship.LIKES.value:
             scene v11coc24e # FPP. Same as 24c, but Penelope's mouth is open
             with dissolve
 
             pe "No I mean it, thank you. You have no idea how much this means to me. When I got that letter from the school I thought my life was ruined. I don't know what I would have done without you."
-        else:
 
+        else:
             scene v11coc24e # FPP. Same as 24c, but Penelope's mouth is open
             with dissolve
 
@@ -1215,7 +1215,7 @@ label v11_case_verdict:
         pe "I have to get going as well, thankfully I still have a class to get to."
 
         pause 0.75
-        if penelopers:
+        if penelope.relationship.value >= Relationship.LIKES.value:
             scene v11coc25b # TPP. Same cam as 25, but Penelope is kissing MC on the cheek
             with dissolve
 
@@ -1225,6 +1225,7 @@ label v11_case_verdict:
             with dissolve
 
             pe "Really [name], I can't thank you enough for all you've done."
+
         else:
             scene v11coc24e
             with dissolve

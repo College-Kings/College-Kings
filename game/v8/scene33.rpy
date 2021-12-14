@@ -49,7 +49,7 @@ label hallway_w_nora:
         with dissolve
         u "Sure! What's up?"
 
-        $ noralikes = True
+        $ nora.relationship = Relationship.LIKES
 
         jump cont_nora_hall
 

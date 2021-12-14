@@ -232,7 +232,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
             jump v15s19_PhoneContinueChloe
 
     if v14_help_lindsey: # -if helping Lindsey TN: Helping Chloe and Lindsey are NOT mutually exclusive-- no else if
-        if v15s12_lindsey_pb_gameNight: # -if helping Lindsey with Game night
+        if v15_lindsey_gamenight: # -if helping Lindsey with Game night
             $ lindsey.messenger.newMessage("Hey, can you come meet me now to buy the alcohol for our game night? I have a plan. I'll send the details of which store to come to.", queue=False)
             $ lindsey.messenger.addReply("Okay, sounds good.")
 
@@ -287,7 +287,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
     la "Are you kidding? Thank you for coming. It was such a special night for me!"
 
-    if laurenrs: #lauren.relationship == Relationship.GIRLFRIEND: # -if LaurenGF
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         play sound "sounds/kiss.mp3"
 
         scene v15s19_9c    # FPP. Lauren, eyes closed, kissing MC on the lips [Deer House Living Room Front Door]. 
@@ -352,11 +352,14 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
     # -MC leaves out the front door with Lauren watching him go, smiling-
     
-    if v14_help_chloe or (v14_help_chloe and v14_help_lindsey):
+    if v14_help_chloe:
         jump v15s20 # -if helping Chloe only OR both Chloe and Lindsey, transition to Scene 20-
-    elif v14_help_lindsey and v15s12_lindsey_pb_gameNight: 
+
+    elif v15_lindsey_gamenight: 
         jump v15s24 # -if helping Lindsey with Games night, transition to Scene 24-
-    elif v14_help_lindsey and not v15s12_lindsey_pb_gameNight:
+
+    elif v14_help_lindsey:
         jump v15s25 # -if helping Lindsey with VIP club night, transition to Scene 25-
+
     else:
         jump v15s23 # -if not helping Chloe or Lindsey, transition to Scene 23-

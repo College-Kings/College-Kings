@@ -58,11 +58,11 @@ label v14s48:
 
     pause 0.75
 
-    if v14s03a_take_wallet and lindseyrs:
+    if v14s03a_take_wallet and lindsey.relationship.value >= Relationship.FWB.value:
         scene v14s48_5a # TPP. Same as v14s48_5, show Lindsey reaching over and kissing MC on the cheek
         with dissolve
 
-        pause
+        pause 1.75
 
         scene v14s48_6 # FPP. MC and Lindsey sitting at the table, looking at each other, Lindsey smiling, holding her coffee, mouth open
         with dissolve
@@ -411,11 +411,11 @@ label v14s48_end:
 
     u "It's certainly a long process."
 
-    if lindseyrs:
+    if lindsey.relationship.value >= Relationship.FWB.value:
         scene v14s48_8 # TPP. Show Lindsey kissing MC (with tongue if possible)
         with dissolve
 
-        pause
+        pause 1.75
 
         scene v14s48_6c
         with dissolve
@@ -462,11 +462,11 @@ label v14s48_end:
 
     li "Thank you again."
 
-    if lindseyrs:
+    if lindsey.relationship.value >= Relationship.FWB.value:
         scene v14s48_9 # TPP. Show Lindsey giving MC a peck on the lips
         with dissolve
 
-        pause
+        pause 1.75
 
     scene v14s48_10 # TPP. Show Lindsey getting up, MC still sitting down, both smiling, mouths closed
     with dissolve

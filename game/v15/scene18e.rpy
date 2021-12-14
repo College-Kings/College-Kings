@@ -210,16 +210,16 @@ label v15s18e_boobs:
 
             la "I love that..."
             
-            if laurenrs:
-                    scene v15s18ebo_5 # FPP. MC looking up at Lauren his boobs in his face, Lauren biting her lip.
-                    with dissolve 
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                scene v15s18ebo_5 # FPP. MC looking up at Lauren his boobs in his face, Lauren biting her lip.
+                with dissolve 
 
-                    u "I love you..."
+                u "I love you..."
 
-                    scene v15s18ebo_5a # FPP. MC looking up at Lauren his boobs in his face, Lauren flirty, mouth open.
-                    with dissolve
+                scene v15s18ebo_5a # FPP. MC looking up at Lauren his boobs in his face, Lauren flirty, mouth open.
+                with dissolve
 
-                    la "Mmm, I love you too."
+                la "Mmm, I love you too."
 
             scene v15s18ebo_5
             with dissolve

@@ -172,7 +172,7 @@ label v14s30:
 
     u "Haha, no. You look great as always."
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v14s30_7 # TPP. Show Chloe kissing MC passionately.
         with dissolve
 

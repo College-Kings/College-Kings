@@ -68,7 +68,7 @@ label work_with_seb:
 
 label wolves_gym_conf:
 
-    u "It's nice to have that, especially being new around here. "
+    u "It's nice to have that, especially being new around here."
 
     scene v8sgym10b # FPP. Same camera as v8sgym10, Sebastian neutral expression, mouth open.
     with dissolve

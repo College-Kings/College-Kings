@@ -33,7 +33,6 @@ init python:
         aubrey.messenger.newMessage(_(":)"))
 
     def v6_reply8():
-        setattr(store, "meetaubrey", False)
         aubrey.messenger.newMessage(_("Oh, okay"))
 
     def v6_reply9():
@@ -1047,11 +1046,11 @@ label continuebd:
     with Fade (1,0,1)
 
     if (laurentoofar or toldlauren) and not apologize:
-        $ laurenmad = True
+        $ lauren.relationship = Relationship.MAD
 
     pause 0.5
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene s486 #You stnad in between  riley and Lauren sitting in the back, seat in between them is emmpty, seat next to Lauren's right is also empty ALWAYS SHOW CLASSROOM STUFF FROM THE FRONT if it's last row so you don't have to show 50 students sitting but instead jsut the back wall
         with dissolve
 
@@ -1230,7 +1229,7 @@ label continuebd:
 
             u "*Grins* Whatever."
 
-    elif laurenmad:
+    elif lauren.relationship.value <= Relationship.MAD.value:
             scene s486e # you standing next to riley who's alone in the backrow, lauren's sitting somewhere else
             with dissolve
 
@@ -1762,7 +1761,7 @@ label continuebd:
 
     show flyer
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         u "(Homecoming. Hm. Lauren would probably be pissed if I didn't ask her...)"
 
     else:
@@ -2534,13 +2533,12 @@ label fz_a:
 
     menu:
         "Kiss her back":
-            $ emilyrs = True
+            $ emily.relationship = Relationship.FWB
             $ forgiveemily = True
 
             jump emsex_a
 
         "Push her away":
-            $ emilyrs = False
             $ forgiveemily = False
 
             scene em4b
@@ -2616,7 +2614,7 @@ label fz_b:
 
     em "And I'm really sorry. But you have to admit it wasn't going well."
 
-    scene s538d # Emily coming closer,  sad curious
+    scene s538d # Emily coming closer, sad curious
     with dissolve
 
     em "I mean, did you even love me anymore?"
@@ -2641,7 +2639,7 @@ label fz_b:
 
     menu:
         "Kiss her back":
-            $ emilyrs = True
+            $ emily.relationship = Relationship.FWB
             $ forgiveemily = True
 
             jump emsex_c
@@ -3117,7 +3115,7 @@ label fy_bd: # not gone to Emily's
 
     pause 0.5
 
-    if evelyn.relationship == Relationship.DATE:
+    if evelyn.relationship.value >= Relationship.DATE.value:
         play music "music/mlove1.mp3"
 
         queue music ["music/mlove2.mp3"]
@@ -3571,7 +3569,7 @@ label fy_bd: # not gone to Emily's
 
         ev "I've already called an Uber."
 
-        if evelyn.relationship == Relationship.LIKES:
+        if evelyn.relationship.value >= Relationship.LIKES.value:
             ev "Are you just gonna walk back? We can share the Uber if you want."
 
             scene s560a
@@ -3590,7 +3588,7 @@ label fy_bd: # not gone to Emily's
 
         ev "There it is."
 
-        if evelyn.relationship == Relationship.LIKES:
+        if evelyn.relationship.value >= Relationship.LIKES.value:
             scene s562 # Close up evelyn smiling at you, standing in front of you, about to enter the uber
             with dissolve
 
@@ -3612,7 +3610,7 @@ label fy_bd: # not gone to Emily's
             menu:
                 "Kiss her":
                     $ evelyn.relationship = Relationship.KISS
-                    if laurenrs:
+                    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                         $ add_point(KCT.TROUBLEMAKER)
                     else:
                         $ add_point(KCT.BOYFRIEND)
@@ -3634,7 +3632,7 @@ label fy_bd: # not gone to Emily's
                     pause 0.75
 
                 "Don't kiss her":
-                    if laurenrs:
+                    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                         $ add_point(KCT.BOYFRIEND)
                     else:
                         $ add_point(KCT.BRO)
@@ -3653,7 +3651,7 @@ label fy_bd: # not gone to Emily's
         scene s564 # you walking back to your dorm at night
         with fade
 
-        if evelyn.relationship == Relationship.LIKES:
+        if evelyn.relationship.value >= Relationship.LIKES.value:
             u "(That went way better than expected. Once she started talking about her dreams, it's like she turned into this completely different person.)"
 
         else:
@@ -3827,7 +3825,7 @@ label fy_bd: # not gone to Emily's
 
             u "You know, a few different girls."
 
-            if aubreyrs:
+            if aubrey.relationship.value >= Relationship.FWB.value:
                 u "It's kinda crazy how you're so cool with it."
 
                 scene s571a
@@ -3891,7 +3889,7 @@ label fy_bd: # not gone to Emily's
 
             u "No one, really."
 
-            if aubreyrs:
+            if aubrey.relationship.value >= Relationship.FWB.value:
                 scene s571a
                 with dissolve
 
@@ -3973,7 +3971,7 @@ label fy_bd: # not gone to Emily's
 
 
 label aubreysexb: # aubreysex scene
-    $ aubreyrs = True
+    $ aubrey.relationship = Relationship.FWB
     $ sceneList.add("v6_aubrey")
 
     stop music fadeout 3
@@ -4372,7 +4370,7 @@ label naubclimax:
     jump wayhome
 
 label aubreytalk:
-    $ aubreyrs = False
+    $ aubrey.relationship = Relationship.FRIEND
 
     u "So uhm... how's third year treating you?"
 
@@ -4410,7 +4408,7 @@ label afteraubrey:
     scene s573 # mc in his dorm in bed exhausted with his hand on his pocket
     with fade
 
-    if aubreyrs:
+    if aubrey.relationship.value >= Relationship.FWB.value:
         play sound "sounds/vibrate.mp3"
 
         if config_censored:
@@ -6542,8 +6540,7 @@ label wakeupa:
 
         menu:
             "Kiss her":
-
-                if laurenrs:
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     $ add_point(KCT.TROUBLEMAKER)
                     $ add_point(KCT.BRO)
                 else:
@@ -6584,7 +6581,7 @@ label wakeupa:
                 with dissolve
 
             "Say Goodbye":
-                if laurenrs:
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     $ add_point(KCT.BOYFRIEND)
 
         u "I gotta go now and get ready for the Wolves' party, but I'll see you soon, okay?"
@@ -6841,7 +6838,7 @@ label wakeupa:
         with dissolve
 
         if joinapes:
-            u "Right... "
+            u "Right..."
 
         else:
             u "Thanks man."
@@ -7327,7 +7324,7 @@ label v6_fr3aubrey1:
 
     scene sfr3au1 # Opening : EMily and aubrey standing with beer bottle, Aubrey mouth open curious smile
 
-    if not forgiveemily and not aubreyrs: #If you didn't forgive Emily and didn't have sex with Aubrey:
+    if not forgiveemily and aubrey.relationship.value < Relationship.FWB.value: #If you didn't forgive Emily and didn't have sex with Aubrey:
         au "Really?"
 
         scene sfr3au2 # Emily close up smiling
@@ -7430,7 +7427,7 @@ label v6_fr3aubrey1:
 
         u "Nah, it's cool. Just saying hi, I'll go talk to some of the other people here."
 
-    elif not aubreyrs: #If you slept with Emily and didn't sleep with Aubrey:
+    elif aubrey.relationship.value < Relationship.FWB.value: #If you slept with Emily and didn't sleep with Aubrey:
         au "Really?"
 
         scene sfr3au2
@@ -7977,7 +7974,7 @@ label v6_fr3chris1:
         scene sfr3ch2d # chris points at another guy
         with dissolve
 
-        ch "And you see that guy there? That's Peter. "
+        ch "And you see that guy there? That's Peter."
 
         scene sfr3ch4 # showing Peter
         with dissolve
@@ -8125,7 +8122,7 @@ label v6_fr3chris1:
         scene sfr3ch2d # chris points at another guy
         with dissolve
 
-        ch "And you see that guy there? That's Peter. "
+        ch "And you see that guy there? That's Peter."
 
         scene sfr3ch4 # showing Peter
         with dissolve
@@ -9457,7 +9454,7 @@ label v6_fr3aubrey3:
 
                 u "You wanna go upstairs and check out the Wolves' office?"
 
-                if aubreyrs:
+                if aubrey.relationship.value >= Relationship.FWB.value:
                     $ upstairs = "aubrey"
 
                     scene sfr3au3d
@@ -9739,7 +9736,7 @@ label v6_fr3riley3:
     ## OFFICE SCENES
 
 label upstairsaubrey:
-    if not aubreyrs:
+    if aubrey.relationship.value < Relationship.FWB.value:
         scene sufr3au1 # opening aubrey and you sitting on a couch in the office
         with fade
 
@@ -9805,7 +9802,7 @@ label upstairsaubrey:
         scene sufr3au2d
         with dissolve
 
-        au "We're not hooking up if that's what you're asking. "
+        au "We're not hooking up if that's what you're asking."
 
         scene sufr3au2e
         with dissolve
@@ -9904,7 +9901,7 @@ label upstairsaubrey:
         scene sufr3au2c
         with dissolve
 
-        u "I told you, just wanted to go somewhere quiet. "
+        u "I told you, just wanted to go somewhere quiet."
 
         scene sufr3au2b
         with dissolve
@@ -9991,7 +9988,7 @@ label upstairsaubrey:
 
         au "He was boring. I don't think he could handle how wild I was all the time."
 
-        au "I mean he tried to keep up, but I think I was just too much for him. "
+        au "I mean he tried to keep up, but I think I was just too much for him."
 
         scene sufr3au2a
         with dissolve
@@ -10110,7 +10107,7 @@ label upstairsaubrey:
             "I kinda get what he means":
                 $ add_point(KCT.BOYFRIEND)
                 $ simp = True
-                $ aubreyrs = False
+                $ aubrey.relationship = Relationship.FRIEND
 
                 scene sufr3au2c
                 with dissolve

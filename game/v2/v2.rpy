@@ -1086,7 +1086,10 @@ label v1_tomWalkAway:
 
     $ renpy.end_replay()
 
-    if not meetlauren:
+    if meetlauren:
+        jump meet_lauren2
+
+    else:
         scene s133
         with Fade (1,0,1) # in front of san vallejo
         if fighttom and not wintom:
@@ -1101,10 +1104,6 @@ label v1_tomWalkAway:
         u "(Also, what am I gonna do about Lauren? I can't avoid her forever.)"
 
         jump history2
-
-    else:
-        jump meet_lauren2
-
 
 label meet_lauren2:
     play music "music/mlove2.mp3"
@@ -1182,7 +1181,7 @@ label meet_lauren2:
         "There was something there":
             $ add_point(KCT.BOYFRIEND)
             
-            if v1_laurenKiss and v1_laurenPoints == 2:
+            if lauren.relationship.value >= Relationship.KISS.value:
                     scene s130c
                     with dissolve
                     u "I know you stopped kissing me after about a second..."
@@ -1191,7 +1190,7 @@ label meet_lauren2:
 
                     u "There was something real there and you know it."
 
-            elif v1_laurenKiss:
+            elif lauren.relationship.value >= Relationship.MOVE.value:
                 scene s130c
                 with dissolve
 
@@ -1209,12 +1208,13 @@ label meet_lauren2:
 
                 u "And I should have. There was something real there. Between us."
 
-            if kct == "loyal" or v1_kissLauren:
-                $ laurenrs = True
+            if lauren.relationship.value >= Relationship.KISS.value or kct == "loyal":
                 $ laawk = False
 
-                if not v1_kissLauren:
+                if lauren.relationship.value < Relationship.KISS.value:
                     call screen kct_popup
+
+                $ lauren.relationship = Relationship.GIRLFRIEND
 
                 scene s131 ### Lauren grabbing your hand on the table
                 with dissolve
@@ -1322,7 +1322,7 @@ label meet_lauren2:
             scene s130a
             with dissolve
 
-            if v1_laurenKiss:
+            if lauren.relationship.value >= Relationship.MOVE.value:
                 u "That was uhm... nothing."
 
                 u "Let's just forget that ever happened."
@@ -1726,7 +1726,7 @@ label history2:
 
     no "Looks like he got beaten up."
 
-    if v1_hitOnNora:
+    if nora.relationship.value >= Relationship.MOVE.value:
         scene s142a # both mouths shut
         with dissolve
 
@@ -4078,7 +4078,7 @@ label eve1:
 
     menu:
         "Make a move":
-            $ evelynmove = True
+            $ evelyn.relationship = Relationship.MOVE
             $ add_point(KCT.BRO)
 
             scene s188d

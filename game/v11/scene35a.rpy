@@ -34,8 +34,7 @@ label v11_chloe_hotel_room_amber_call:
 
         am "I just wanna know what's up with Lauren."
 
-        if v11_aubrey_sex and laurenrs: 
-
+        if v11_lauren_caught_aubrey:
             scene v11hrc3 
             with dissolve
 
@@ -181,7 +180,7 @@ label v11_chloe_hotel_room_amber_call:
 
     cl "Yep."
 
-    if not chloers and not chloegf and not chloemad:
+    if chloe.relationship.value < Relationship.FWB.value and not chloemad:
         scene v11hrc11a
         with dissolve
 
@@ -231,7 +230,7 @@ label v11_chloe_hotel_room_amber_call:
 
         cl "*Sighs* One sec."
 
-    elif (chloegf or chloers) and not v11_riley_roomate: 
+    elif chloe.relationship.value >= Relationship.FWB.value and not v11_riley_roomate: 
         scene v11hrc11
         with dissolve
 
@@ -333,8 +332,7 @@ label v11_chloe_hotel_room_amber_call:
 
     pause 0.75
 
-    if chloegf or chloers:
-
+    if chloe.relationship.value >= Relationship.FWB.value:
         scene v11hrc18 # TPP. MC wakes up with chloe sitting on top of him
         with fade
 

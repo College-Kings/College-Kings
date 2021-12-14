@@ -44,7 +44,7 @@ init python:
         # v8
     if renpy.loadable("v8/scene1.rpy"):
         SceneGallery("v8_cl_start") #2, Chloe, day 11
-        SceneGallery("v8_ri_start") #3, Riley, day 11, v8_riley_lewd_ending
+        SceneGallery("v8_ri_start") #3, Riley, day 11
         SceneGallery("hoco_amb_night") #5, Amber, day 11
         SceneGallery("int_deal_w_josh") #28, Lars Joe
         SceneGallery("amber_sex_at_joshs") #30, Amber, day 14
@@ -53,30 +53,30 @@ init python:
         SceneGallery("v9_aubrey_scene_lake") #7, Aubrey, day 16
         SceneGallery("v9_emily_dorm") #16, Emily, day 17
         SceneGallery("v9_ri_sex") #34, Riley, day 19, v9_sex_with_riley
-        SceneGallery("v9_make_out_w_lin") #39, Lindsey, day 19, lindseyfirstkiss
+        SceneGallery("v9_make_out_w_lin") #39, Lindsey, day 19
         # v10
     if renpy.loadable("v10/scene1.rpy"):
         SceneGallery("v10_mc_vs_ryan_fight") #6, Ryan
         SceneGallery("v10_mc_vs_imre_fight") #7, Imre
         SceneGallery("v10s17_galleryScene") #17, Aubrey, day 20
-        SceneGallery("v10_lauren_room_sg", scope={"laurenrs": True}) #24, Lauren, day 21
+        SceneGallery("v10_lauren_room_sg", scope={"lauren.relationship": Relationship.GIRLFRIEND}) #24, Lauren, day 21
         SceneGallery("v10_amber_skatepark_sg") #26, Amber, day 21
         SceneGallery("v10s30_galleryScene") #30, Chloe, day 22
-        SceneGallery("v10s40_galleryScene", scope={"rileyrs": True}) #40, Riley, day 23
+        SceneGallery("v10s40_galleryScene", scope={"riley.relationship": Relationship.FWB}) #40, Riley, day 23
         # v11
     if renpy.loadable("v11/scene1.rpy"):
         SceneGallery("v11s5_galleryScene") #5, Candy, day 24
-        SceneGallery("v11_aubrey_plane_sex_sg") #13, Aubrey, day 26, v11_aubrey_sex
+        SceneGallery("v11_aubrey_plane_sex_sg") #13, Aubrey, day 26
         SceneGallery("v11_ms_rose_sex_sg") #28, Rose, day 27
-        SceneGallery("v11s28a_galleryScene") #28a, Samantha, day 27, v11_samantha_spa
+        SceneGallery("v11s28a_galleryScene") #28a, Samantha, day 27
         SceneGallery("v11_riley_sex_sg") #35, Riley, day 28
         SceneGallery("v11_chloe_sex_scene") #41b, Chloe, day 29
         #v12
     if renpy.loadable("v12/scene1.rpy"):
-        SceneGallery("v12_lindsey_sex") #17, Lindsey, day 32, v12_lindsey_sex
+        SceneGallery("v12_lindsey_sex") #17, Lindsey, day 32
         SceneGallery("v12_ms_rose_sex_sg") #23, Rose, day 33
         SceneGallery("v12_lauren_sex_sg") #29, Lauren, day 34
-        SceneGallery("v12_nora_sex") #35a, Nora, day 35, v12_nora_sex
+        SceneGallery("v12_nora_sex") #35a, Nora, day 35
         #v13
     if renpy.loadable("v13/scene1.rpy"):
         SceneGallery("v13s16a") #16a, Riley, day 37
@@ -90,8 +90,8 @@ init python:
         SceneGallery("v14s21a") #21a, Chloe, xx
         SceneGallery("v14s25a") #25a, Amber, xx
         SceneGallery("v14s36_sg") #36, Jenny, xx
-        SceneGallery("v14s46a_sga", scope={"laurenrs": True}) #46a, Lauren good
-        SceneGallery("v14s46a_sgb", scope={"laurenrs": False}) #46a, Lauren bad
+        SceneGallery("v14s46a_sga", scope={"lauren.relationship": Relationship.GIRLFRIEND}) #46a, Lauren good
+        SceneGallery("v14s46a_sgb") #46a, Lauren bad
         SceneGallery("v14s53_sg") #53a, Samantha, xx
     if renpy.loadable("v15/scene1.rpy"):
         SceneGallery("15") #15, Ms. Rose

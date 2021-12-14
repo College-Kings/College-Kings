@@ -152,19 +152,126 @@ label after_load:
 
         ##Relationship types
         try:
-            if evelyndate: evelyn.relationship = Relationship.DATE
+            if kissamber: amber.relationship = Relationship.KISS
+            del kissamber
         except NameError: pass
         try:
-            if evelynrs: evelyn.relationship = Relationship.LIKES
+            if amberrs: amber.relationship = Relationship.FWB
+            del amberrs
         except NameError: pass
         try:
             if aryssars: aryssa.relationship = Relationship.LIKES
+            del aryssars
+        except NameError: pass
+        try:
+            if aubreyrs: aubrey.relationship = Relationship.FWB
+            del aubreyrs
+        except NameError: pass
+        try:
+            if AutumnTrust: autumn.relationship = Relationship.TRUST
+            del AutumnTrust
+        except NameError: pass
+        try:
+            if cameronBro: cameron.relationship = Relationship.BRO
+            del cameronBro
+        except NameError: pass
+        try:
+            if chloers: chloe.relationship = Relationship.FWB
+            del chloers
+        except NameError: pass
+        try:
+            if chloegf: chloe.relationship = Relationship.GIRLFRIEND
+            del chloegf
+        except NameError: pass
+        try:
+            if emmyrs: emmy.relationship = Relationship.LIKES
+            del emmyrs
+        except NameError: pass
+        try:
+            if "v13_emmy" in sceneList and emmy.relationship.value < Relationship.FWB.value: emmy.relationship = Relationship.FWB
+        except NameError: pass
+        try:
+            if evelyndate: evelyn.relationship = Relationship.DATE
+            del evelyndate
+        except NameError: pass
+        try:
+            if evelynrs: evelyn.relationship = Relationship.LIKES
+            del evelynrs
+        except NameError: pass
+        try:
+            if jennyawkward: jenny.relationship = Relationship.AWKWARD
+            del jennyawkward
+        except NameError: pass
+        try:
+            if jennyrs: jenny.relationship = Relationship.FWB
+            del jennyrs
+        except NameError: pass
+        try:
+            if joshmad or joshmadfr: josh.relationship = Relationship.MAD
+            del joshmad
+            del joshmadfr
         except NameError: pass
         try:
             if kourtneyrs: kourtney.relationship = Relationship.LIKES
+            del kourtneyrs
         except NameError: pass
         try:
-            if penelopeloyal: penelope.relationship == Relationship.LOYAL
+            if laurenmad: lauren.relationship = Relationship.MAD
+            del laurenmad
+        except NameError: pass
+        try:
+            if laurenrs: lauren.relationship = Relationship.GIRLFRIEND
+            del laurenrs
+        except NameError: pass
+        try:
+            if laurenrs_v11aubrey and (v11_aubrey_sex or "v11_aubrey" in sceneList): v11_lauren_caught_aubrey = True
+            del laurenrs_v11aubrey
+        except NameError: pass
+        try:
+            if lindseyfirstkiss: lindsey.relationship = Relationship.KISS
+            del lindseyfirstkiss
+        except NameError: pass
+        try:
+            if lindseyrs: lindsey.relationship = Relationship.FWB
+            del lindseyrs
+        except NameError: pass
+        try:
+            if v10_ms_r_kiss: ms_rose.relationship = Relationship.KISS
+            del v10_ms_r_kiss
+        except NameError: pass
+        try:
+            if msrosers: ms_rose.relationship = Relationship.FWB
+            del msrosers
+        except NameError: pass
+        try:
+            if noralikes: nora.relationship = Relationship.LIKES
+            del noralikes
+        except NameError: pass
+        try:
+            if norars: nora.relationship = Relationship.FWB
+            del norars
+        except NameError: pass
+        try:
+            if penelopers: penelope.relationship = Relationship.LIKES
+            del penelopers
+        except NameError: pass
+        try:
+            if penelopeloyal: penelope.relationship = Relationship.LOYAL
+            del penelopeloyal
+        except NameError: pass
+        try:
+            if rileyrs: riley.relationship = Relationship.FWB
+            del rileyrs
+        except NameError: pass
+        try:
+            if v11_samantha_spa: sceneList.add("v11_samantha")
+        except NameError: pass
+        try:
+            if v11_samantha_spa: samantha.relationship = Relationship.MOVE
+            del v11_samantha_spa
+        except NameError: pass
+        try:
+            if "v14_samantha" in sceneList: samantha.relationship = Relationship.FWB
         except NameError: pass
 
 
@@ -487,50 +594,65 @@ label after_load:
         except NameError: kiwii_firstTime = False
 
         try:
-            if v14s51_closet: freeroam12.add("closet")
+            if v14s51_closet and "closet" not in freeroam12: freeroam12.add("closet")
         except NameError: pass
         try:
-            if v14s51_purse: freeroam12.add("purse")
+            if v14s51_purse and "purse" not in freeroam12: freeroam12.add("purse")
         except NameError: pass
         try:
-            if v14s51_take_cash_large: freeroam12stolen.add("cash_large")
+            if v14s51_take_cash_large and "cash_large" not in freeroam12stolen: freeroam12stolen.add("cash_large")
         except NameError: pass
         try:
-            if v14s51_take_cash_small: freeroam12stolen.add("cash_small")
+            if v14s51_take_cash_small and "cash_small" not in freeroam12stolen: freeroam12stolen.add("cash_small")
         except NameError: pass
         try:
-            if v14s51_take_diary: freeroam12stolen.add("diary")
+            if v14s51_take_diary and "diary" not in freeroam12stolen: freeroam12stolen.add("diary")
         except NameError: pass
         
         try:
-            if v11_fucked_candy: sceneList.add("v11_candy")
+            if rileysex and "v7_riley" not in sceneList: sceneList.add("v7_riley")
         except NameError: pass
         try:
-            if v11_msrose_scene: sceneList.add("v11_rose")
+            if v8_riley_lewd_ending and "v8_riley" not in sceneList: sceneList.add("v8_riley")
         except NameError: pass
         try:
-            if v12_lauren_sex: sceneList.add("v12_lauren")
+            if v11_aubrey_sex and "v11_aubrey" not in sceneList: sceneList.add("v11_aubrey")
         except NameError: pass
         try:
-            if v12_msrose_sex: sceneList.add("v12_rose")
+            if v11_fucked_candy and "v11_candy" not in sceneList: sceneList.add("v11_candy")
         except NameError: pass
         try:
-            if v13_emilysex: sceneList.add("v13_emily")
+            if v11_msrose_scene and "v11_rose" not in sceneList: sceneList.add("v11_rose")
         except NameError: pass
         try:
-            if v13_emmysex: sceneList.add("v13_emmy")
+            if v12_lauren_sex and "v12_lauren" not in sceneList: sceneList.add("v12_lauren")
         except NameError: pass
         try:
-            if v13_FirstThreesome: sceneList.add("v14_threesome")
+            if v12_lindsey_sex and "v12_lindsey" not in sceneList: sceneList.add("v12_lindsey")
         except NameError: pass
         try:
-            if v14_amber_sex: sceneList.add("v14_amber")
+            if v12_nora_sex and "v12_nora" not in sceneList: sceneList.add("v12_nora")
         except NameError: pass
         try:
-            if v14_jenny_sex: sceneList.add("v14_jenny")
+            if v12_msrose_sex and "v12_rose" not in sceneList: sceneList.add("v12_rose")
         except NameError: pass
         try:
-            if v14_samantha_sex: sceneList.add("v14_samantha")
+            if v13_emilysex and "v13_emily" not in sceneList: sceneList.add("v13_emily")
+        except NameError: pass
+        try:
+            if v13_emmysex and "v13_emmy" not in sceneList: sceneList.add("v13_emmy")
+        except NameError: pass
+        try:
+            if v13_FirstThreesome and "v14_threesome" not in sceneList: sceneList.add("v14_threesome")
+        except NameError: pass
+        try:
+            if v14_amber_sex and "v14_amber" not in sceneList: sceneList.add("v14_amber")
+        except NameError: pass
+        try:
+            if v14_jenny_sex and "v14_jenny" not in sceneList: sceneList.add("v14_jenny")
+        except NameError: pass
+        try:
+            if v14_samantha_sex and "v14_samantha" not in sceneList: sceneList.add("v14_samantha")
         except NameError: pass
 
 
@@ -557,8 +679,6 @@ label after_load:
         except NameError: v7_emily_bowling = False
         try: v8_dodged_pipe
         except NameError: v8_dodged_pipe = False
-        try: v11_samantha_spa
-        except NameError: v11_samantha_spa = False
         try: v11_underground_rose
         except NameError: v11_underground_rose = False
         try: v12_told_chloe
@@ -583,22 +703,16 @@ label after_load:
         except NameError: v12s7_lindsey_moved = False
         try: v12s7_aubrey_moved
         except NameError: v12s7_aubrey_moved = False
-        try: v12_lindsey_sex
-        except NameError: v12_lindsey_sex = False
         try: v12_lauren_points
         except NameError: v12_lauren_points = 0
         try: v12s32_Aubrey_Boost
         except NameError: v12s32_Aubrey_Boost = False
         try: v12_murder_count
         except NameError: v12_murder_count = 0
-        try: joshmadfr
-        except NameError: joshmadfr = False
         try: v12s7_victims
         except NameError: v12s7_victims = 12
         try: v12s23a_sam
         except NameError: v12s23a_sam = False
-        try: v12_nora_sex
-        except NameError: v12_nora_sex = False
         try: v12_nora_points
         except NameError: v12_nora_points = 0
         try: v12s24_emmymatch
@@ -619,40 +733,28 @@ label after_load:
         except NameError: v11_josh_nightclub = False
         try: candyLike
         except NameError: candyLike = 0
-        try: v11_aubrey_blue_outfit
-        except NameError: v11_aubrey_blue_outfit = False
         try: v11_tease_amber
         except NameError: v11_tease_amber = 0
         try: v11_manhunt_winner
         except NameError: v11_manhunt_winner = "Ryan"
-        try: v11_aubrey_sex
-        except NameError: v11_aubrey_sex = False
         try: v11_riley_roomate
         except NameError: v11_riley_roomate = False
         try: v11s25_beer
         except NameError: v11s25_beer = True
-        try: msrosers
-        except NameError: msrosers = False
         try: v11_solo_question
         except NameError: v11_solo_question = False
         try: v11_kiss_nora
         except NameError: v11_kiss_nora = False
         try: v11_told_aubrey
         except NameError: v11_told_aubrey = False
-        try: chloegf
-        except NameError: chloegf = False
         try: v11_lindsey_slogan
         except NameError: v11_lindsey_slogan = 0 
         try: v11_linds_inv_imre
         except NameError: v11_linds_inv_imre = False 
-        try: v11_sit_with_lauren
-        except NameError: v11_sit_with_lauren = True
         try: v11_overtake_points
         except NameError: v11_overtake_points = 0
         try: v11_hp_points
         except NameError: v11_hp_points = 0
-        try: political_strategist
-        except NameError: political_strategist = False
         try: emily_europe
         except NameError: emily_europe = False
         try: v11_check_on_nora
@@ -675,8 +777,6 @@ label after_load:
         except NameError: v13_smoke_weed = False
         try: v13_lauren_smoke
         except NameError: v13_lauren_smoke = False
-        try: cameronBro
-        except NameError: cameronBro = False
         try: v13_charli_exposed
         except NameError: v13_charli_exposed = False
         try: v13_invite_samantha
@@ -691,8 +791,6 @@ label after_load:
         except NameError: v13s48_canoeing_as_date = False
         try: v13_help_chloe
         except NameError: v13_help_chloe = False
-        try: emmyrs
-        except NameError: emmyrs = False
         try: v13_emmy_points
         except NameError: v13_emmy_points = 0
         try: v13_imre_disloyal
@@ -707,8 +805,6 @@ label after_load:
         except NameError: v13s41_lindsey_points = 0
         try: v13s20_bleach_suitcase
         except NameError: v13s20_bleach_suitcase = False
-        try: laurenrs_v11aubrey
-        except NameError: laurenrs_v11aubrey = False
         try: v13s40fromgame
         except NameError: v13s40fromgame = False
         try: v13_aubrey_vote

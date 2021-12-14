@@ -7,8 +7,7 @@ label v15s37:
     scene v15s37_1 # TPP. Show MC walking down the street towards the frat houses, slight smile, mouth closed.
     with dissolve
 
-    if v14_help_chloe and v15s8_chloe_pb_DamageLindseyRep:
-
+    if v15_chloe_lindseysabotage:
         scene v15s37_2 # TPP. Close up of MC pulling out his phone, slight smile, mouth closed.
         with dissolve 
 
@@ -27,21 +26,13 @@ label v15s37:
         scene v15s37_2c # TPP. Show MC putting his phone away, slight smile, mouth closed.
         with dissolve
 
-    if not AutumnTrust:
-
+    if autumn.relationship.value < Relationship.TRUST.value:
         scene v15s37_3 # TPP. Show MC walking further down the street, slight smile, mouth closed
         with dissolve
 
         u "(That was a fun night, especially with Autumn there. I'm glad I'm getting to know her better.)"
-    elif AutumnTrust and v15s36_not_good_idea:
-        scene v15s37_3
-        with dissolve
 
-        u "(That was a nice surprise from Autumn. She's great and all but... it wouldn't feel right.)"
-
-        u "(Not right now anyway.)"
-
-    elif AutumnTrust and v15s36_not_good_idea and laurenrs: 
+    elif v15s36_not_good_idea and lauren.relationship.value >= Relationship.GIRLFRIEND.value: 
         scene v15s37_3
         with dissolve
 
@@ -51,7 +42,15 @@ label v15s37:
 
         u "(That would be wrong on so many levels... Right?)"
 
-    elif AutumnTrust and not v15s36_not_good_idea and laurenrs:
+    elif v15s36_not_good_idea:
+        scene v15s37_3
+        with dissolve
+
+        u "(That was a nice surprise from Autumn. She's great and all but... it wouldn't feel right.)"
+
+        u "(Not right now anyway.)"
+
+    elif lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s37_3
         with dissolve
 
@@ -59,13 +58,14 @@ label v15s37:
 
         u "(I can't mess things up with Lauren, no matter how much I like her sister.)"
 
-    elif AutumnTrust and not v15s36_not_good_idea and not laurenrs:
+    else:
         scene v15s37_3
         with dissolve
 
-        u "(What a fucking night... II never thought it would end with kissing Autumn!)"
+        u "(What a fucking night... I never thought it would end with kissing Autumn!)"
 
         u "(You just never know what girls are really thinking, haha.)"
 
         u "(I'm so excited to spend more time with her.)"
+
 jump v15s41

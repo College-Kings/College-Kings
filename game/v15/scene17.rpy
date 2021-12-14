@@ -25,7 +25,7 @@ label v15s17:
 
     u "Um, hi there."
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s17_4
         with dissolve
 
@@ -184,7 +184,7 @@ label v15s17:
 
             clerk "May I suggest jewelry?"
 
-            if laurenrs and v15_autumn_lunchbreak:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value and v15_autumn_lunchbreak:
                 scene v15s17_4f # FPP. same as v15s17_4d SC's mouth is closed
                 with dissolve
 
@@ -227,7 +227,7 @@ label v15s17:
 
                 u "Ms. Rose looked so proud of her new necklace and really seemed to enjoy showing it off to me... among other things..."
 
-            if V15_ms_rose_sex:
+            if v15_ms_rose_sex:
                 scene v15s17_15 # FPP. A Dreamlike Vision of MsRose fully nude in one of the sexual positions from Version 15 scene 15
                 with dissolve
 
@@ -284,7 +284,7 @@ label v15s17:
 
                 clerk "Jewelry is never too much, young man. If you buy this for her, she will be your friend forever!"
 
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v15s17_8b
                 with dissolve
 

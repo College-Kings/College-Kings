@@ -167,7 +167,6 @@ label v11_lindsey_park:
 
         "Support Lindsey":
             $ v11_lindsey_run = True
-            $ political_strategist = True #keep
             $ lindsey.points += 1
 
             scene v11lip3h # FPP. Same as v11lip3d, different pose
@@ -446,8 +445,7 @@ label v11_lindsey_park:
 
     pause 0.75
 
-    if v11_aubrey_sex and laurenrs: # Requirements for apology scene
-
+    if v11_lauren_caught_aubrey: # Requirements for apology scene
         scene v11lip6 # TPP. Show MC sitting down he has a slightly relieved expression, mouth closed
         with dissolve
 
@@ -458,7 +456,9 @@ label v11_lindsey_park:
         with dissolve
 
         u "(This day just gets better and better.)"
+
     stop music fadeout 3
+
     if emily_europe:
         scene v11lip7 # TPP. Show MC getting up from the bench, slight smile, mouth closed
         with dissolve

@@ -385,21 +385,21 @@ label v15s26:
     pause 1
 
     # -I would love it if Aubrey/Riley/MC had some different positions in these images while they're watching. 
-    # MC is sitting in the middle so if threesome, they can all be holding hands/cuddling. If aubreyTamed and not rileyRS, just Aubrey holding hands. 
-    # Or if just RileyRS, no Aubrey, just Riley/MC holding hands. If this is too much work for one small image, I get it. But it would be a cute bonus here. Ask cheex for questions-
+    # MC is sitting in the middle so if threesome, they can all be holding hands/cuddling. If aubreyTamed and not riley RS, just Aubrey holding hands. 
+    # Or if just Riley RS, no Aubrey, just Riley/MC holding hands. If this is too much work for one small image, I get it. But it would be a cute bonus here. Ask cheex for questions-
     if "v14_threesome" in sceneList:
         scene v15s26_20 # TPP Show MC, Riley, and Aubrey all cuddling and holding hands, lit up by the movie screen
         with dissolve
 
         pause 0.75
     
-    elif aubrey_tamed and not rileyrs:
+    elif aubrey.relationship.value >= Relationship.TAMED.value and riley.relationship.value < Relationship.FWB.value:
         scene v15s26_20a # TPP Show MC cuddling and holding hands with Aubrey, while Riley sits forward and watches the movie, all lit up by the movie screen
         with dissolve
 
         pause 0.75
 
-    elif rileyrs and not aubrey_tamed:
+    elif riley.relationship.value >= Relationship.FWB.value and aubrey.relationship.value < Relationship.TAMED.value:
         scene v15s26_20b # TPP Show MC cuddling and holding hands with Riley, while Aubrey leans back on the couch watching the movie, looking a little bored, all lit up by the movie screen
         with dissolve
 
@@ -699,8 +699,8 @@ label v15s26:
 
                 au "There's no way I could share the person I love with someone else."
 
-                if aubrey_tamed: # -if AubreyTamed she gives a stern look to MC, but continue regardless-
-                    $ aubrey_tamed = False
+                if aubrey.relationship.value >= Relationship.TAMED.value: # -if Aubrey Tamed she gives a stern look to MC, but continue regardless-
+                    $ aubrey.relationship = Relationship.FWB
 
                     scene v15s26_14d # FPP Same angle as 14, Aubrey looking at MC with a stern expression, mouth open
                     with dissolve
@@ -798,7 +798,7 @@ label v15s26:
                         $ add_point(KCT.BOYFRIEND)
                         u "Basically, exactly what Aubrey said. I just couldn't commit like that to more than one person."
 
-                        if aubrey_tamed: # -Aubrey soft smile, if AubreyTamed can she do something a little extra like a wink or idk be cute-
+                        if aubrey.relationship.value >= Relationship.TAMED.value: # -Aubrey soft smile, if AubreyTamed can she do something a little extra like a wink or idk be cute-
                             scene v15s26_14h # FPP Same angle as 14, Aubrey with a small smile, winking at MC
                             with dissolve
 
@@ -851,8 +851,8 @@ label v15s26:
 
         menu: 
             "Side with Riley, pro-polygamy": # -event1 Side with Riley, Pro-Polygamy (if AubreyTamed it becomes AubreyFwB, gain RileyLoyal; she's committed to MC as friends, romantic, TilDeathDoUsPart, all of the above)
-                $ aubrey_fwb = True
-                $ aubrey_tamed = False
+                if aubrey.relationship.value >= Relationship.TAMED.value:
+                    $ aubrey.relationship = Relationship.FWB
                 $ riley_loyal = True
 
                 u "I think you're onto something here, Riley..."

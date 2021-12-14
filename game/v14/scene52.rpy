@@ -217,10 +217,10 @@ label v14s52:
 
     u "(Why did he suddenly end the conversation when Imre asked where Nora is? He could have just said...)"
 
-    if v12_nora_sex:
-        $ norars = True
+    if "v12_nora" in sceneList: ###addition just in case rs variable was not triggered
+        $ nora.relationship = Relationship.FWB
 
-    if norars:
+    if nora.relationship.value >= Relationship.FWB.value:
         scene v14s52_12
         with dissolve
 
@@ -233,7 +233,7 @@ label v14s52:
                 $ chrissus += 1
                 $ add_point(KCT.TROUBLEMAKER)
 
-                scene v14s52_12a # FPP. Mc see's chris waling away from him back turned to mc
+                scene v14s52_12a # FPP. Mc sees chris waling away from him back turned to mc
                 with dissolve
 
                 u "(Let's see what he says when I ask him...)"

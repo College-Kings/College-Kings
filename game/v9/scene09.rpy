@@ -20,10 +20,10 @@ label room_wed_night:
         scene v9wnr2a # TPP. Same camera as v9wnr2, MC turns to his side and grabs his phone.
         with dissolve
 
-        if aubreyrs:
+        if aubrey.relationship.value >= Relationship.FWB.value:
             u "(Well I can't really decide on my favorite moment of the day, but dude, Aubrey...)"
 
-        elif rileyrs:
+        elif riley.relationship.value >= Relationship.FWB.value:
             u "(Well I can't really decide on my favorite moment of the day, but dude, Riley...)"
 
         else: 
@@ -82,10 +82,10 @@ label room_wed_night:
         scene v9wnr9a # TPP. Same camera as v9wnr2, MC turns to his side and grabs his phone.
         with dissolve
 
-        if aubreyrs:
+        if aubrey.relationship.value >= Relationship.FWB.value:
             u "(Well I can't really decide on my favorite moment of the day, but dude, Aubrey...)"
 
-        elif rileyrs:
+        elif riley.relationship.value >= Relationship.FWB.value:
             u "(Well I can't really decide on my favorite moment of the day, but dude, Riley...)"
 
         else: 

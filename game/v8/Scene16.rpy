@@ -39,7 +39,7 @@ label mc_wolves_sun_aft:
     $ v8s16_kiwiiPost1.addReply(_("Looking hot, ladies!"), numberLikes=321)
     $ v8s16_kiwiiPost1.addReply(_("This is such a great picture!"), numberLikes=334)
 
-    if not laurenrs:
+    if not hcGirl == "lauren":
         $ v8s16_kiwiiPost2 = KiwiiPost("Lauren", "v8/laurosepost1.webp", _("Having fun with Ms. Rose at Hoco!"), numberLikes=328) # Lauren & Ms. Rose at Hoco.
         $ v8s16_kiwiiPost2.newComment("Cameron", _("Teacher's pet!"), queue=False)
         $ v8s16_kiwiiPost2.newComment("Ryan", _("Booba"), queue=False)        
@@ -77,7 +77,7 @@ label mc_apes_sun_aft:
     $ v8s16_kiwiiPost1.addReply(_("Looking hot, ladies!"), numberLikes=321)
     $ v8s16_kiwiiPost1.addReply(_("This is such a great picture!"), numberLikes=334)
 
-    if not laurenrs:
+    if not hcGirl == "lauren":
         $ v8s16_kiwiiPost2 = KiwiiPost("Lauren", "v8/laurosepost1.webp", _("Having fun with Ms. Rose at Hoco!"), numberLikes=328) # Lauren & Ms. Rose at Hoco.
         $ v8s16_kiwiiPost2.newComment("Cameron", _("Teacher's pet!"), queue=False)
         $ v8s16_kiwiiPost2.newComment("Ryan", _("Booba"), queue=False)        

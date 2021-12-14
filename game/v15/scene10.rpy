@@ -112,7 +112,7 @@ label v15s10:
 
         male_buyer "This guy?"
 
-        if lindseyrs:
+        if lindsey.relationship.value >= Relationship.FWB.value:
             scene v15s10_10 # FPP. MC turned around looking at Lindsey (v15s10_8 just FFP), Lindsey looking straight ahead at MC while she leans against the car, winking at MC, slight smile, mouth open.
             with dissolve
 
@@ -527,9 +527,11 @@ label v15s10:
 
             li "*Laughs* We'll see about that nap."
 
-            if lindseyrs:
+            if lindsey.relationship.value >= Relationship.FWB.value:
                 scene v15s10_26b # FPP. Same as 26a, Lindsey winking at MC, slight smile, mouth closed.
                 with dissolve
+                
+                pause 1
 
             scene v15s10_27 # TPP. Show MC and Lindsey walking further down the side walk smiling as they walk, both mouths closed.
             with dissolve

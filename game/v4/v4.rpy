@@ -1085,7 +1085,7 @@ label v4start:
 
     u "(Oh that's Lauren's sister Autumn...)"
 
-    if not laurenrs and toldlauren:
+    if toldlauren:
         $ add_point(KCT.TROUBLEMAKER)
 
         u "(Hopefully Lauren didn't tell her about what happened...)"
@@ -1172,7 +1172,7 @@ label v4start:
                 jump ea_b
 
 
-    elif not laurenrs and laurentoofar:
+    elif laurentoofar:
         $ add_point(KCT.TROUBLEMAKER)
 
         u "(Hopefully Lauren didn't tell her about what happened...)"
@@ -1259,8 +1259,7 @@ label v4start:
 
                 jump ea_b
 
-
-    elif not laurenrs:
+    elif lauren.relationship.value < Relationship.GIRLFRIEND.value: #if not a girlfriend, but not because messed up date
         $ add_point(KCT.BOYFRIEND)
         scene s334
         with dissolve
@@ -1529,7 +1528,7 @@ label readmontagea:
             ry "Look, man. I messed up, I'm sorry."
 
     label ec_bd: #for compatibility only
-    ry "I didn't mean to attack you like that. I just wanted to let you know about the things that I've heard. "
+    ry "I didn't mean to attack you like that. I just wanted to let you know about the things that I've heard."
 
     ry "You know, so she doesn't play you."
 
@@ -2681,7 +2680,7 @@ label continueab:
             menu:
                 "Kiss her":
                     $ add_point(KCT.TROUBLEMAKER)
-                    $ kissamber = True
+                    $ amber.relationship = Relationship.KISS
 
                     play sound "sounds/spit.mp3"
 

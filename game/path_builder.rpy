@@ -104,28 +104,25 @@ define PB_CHLOE = PathBuilderItem(PathBuilderCatagories.GIRL, "Chloe",
         (set_variable, "ending", "chloe"),
         (set_variable, "hcGirl", "chloe")
     ])
-define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", [
-        (set_variable, "nora.relationship", Relationship.GIRLFRIEND),
-        (set_variable, "noralikes", True),
-        (set_variable, "v12_nora_sex", True)
-    ])
+define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", [(toggle_variable, "nora.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
 define PB_AUBREY = PathBuilderItem(PathBuilderCatagories.GIRL, "Aubrey", [(toggle_variable, "aubrey.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
 define PB_RILEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Riley", [(toggle_variable, "riley.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
 define PB_LAUREN = PathBuilderItem(PathBuilderCatagories.GIRL, "Lauren", [(toggle_variable, "lauren.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
 define PB_PENELOPE = PathBuilderItem(PathBuilderCatagories.GIRL, "Penelope", [
-        (toggle_variable, "penelopers")
+        (toggle_variable, "penelope.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)
         (toggle_variable, "v11_pen_goes_europe")
     ])
 define PB_AMBER = PathBuilderItem(PathBuilderCatagories.GIRL, "Amber", [(toggle_variable, "amber.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
-define PB_LINDSEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Lindsey", ["lindseyrs", "v12_lindsey_sex"], [True, True])
-define PB_MS_ROSE = PathBuilderItem(PathBuilderCatagories.GIRL, "Ms Rose", "ms_rose.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variable")
-define PB_SAMANTHA = PathBuilderItem(PathBuilderCatagories.GIRL, "Samantha", "v11_samantha_spa", func="toggle_variable")
-define PB_JENNY = PathBuilderItem(PathBuilderCatagories.GIRL, "Jenny", "jenny.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variable")
-define PB_EMILY = PathBuilderItem(PathBuilderCatagories.GIRL, "Emily", "emily.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variable")
+define PB_LINDSEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Lindsey", [(toggle_variable, "lindsey.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
+define PB_MS_ROSE = PathBuilderItem(PathBuilderCatagories.GIRL, "Ms Rose", [(toggle_variable, "ms_rose.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
+define PB_SAMANTHA = PathBuilderItem(PathBuilderCatagories.GIRL, "Samantha", [(toggle_variable, "samantha.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
+define PB_JENNY = PathBuilderItem(PathBuilderCatagories.GIRL, "Jenny", [(toggle_variable, "jenny.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
+define PB_EMILY = PathBuilderItem(PathBuilderCatagories.GIRL, "Emily", [(toggle_variable, "emily.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
 
-define PB_HOMECOMING = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 2 Start", "start_location", "v7_homecoming", "set_start_location")
-define PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 3 Start", "start_location", "v11_start", "set_start_location")
-define PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", "start_location", "v14_start", "set_start_location")
+define PB_ACT_1 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 1 Start", [(set_variable, "start_location", "start")])
+define PB_HOMECOMING = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 2 Start", [(set_variable, "start_location", "v7_homecoming")])
+define PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 3 Start", [(set_variable, "start_location", "v11_start")])
+define PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", [(set_variable, "start_location", "v14_start")])
 
 screen spoiler_path_builder():
     modal True
@@ -170,8 +167,6 @@ screen path_builder(catagory_step=1):
 
     default catagory = get_catagory(catagory_step)
     default items = [item for item in pb_item if item.catagory == catagory]
-
-    default start_location = "start"
     
     use path_builder_base(header=catagory.value):
         vpgrid:

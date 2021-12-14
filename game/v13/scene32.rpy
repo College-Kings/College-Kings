@@ -4,7 +4,6 @@
 # Time: Night
 
 label v13s32:
-
     play music "music/v13/Track Scene 32.mp3" fadein 2
 
     if not v13_lauren_smoke:
@@ -23,7 +22,7 @@ label v13s32:
 
         la "I'm not here for your games Amber, but I am going to bed. *Chuckles*"
 
-        if laurenrs:
+        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
             play sound "sounds/kiss.mp3"
             scene v13s32_4 # TPP. Show Lauren kissing MC
             with dissolve

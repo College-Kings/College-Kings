@@ -254,7 +254,7 @@ label v14s22_sell_car:
 
     u "What's so funny?"
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v14s22_5e
         with dissolve
 
@@ -301,7 +301,7 @@ label v14s22_steal:
 
     u "It's a really smart plan, I just hope we can pull it off."
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v14s22_5k # FPP. same as v14s22_5f head tilted down, but looking directly up at mc
         with dissolve
 
@@ -319,7 +319,7 @@ label v14s22_steal:
 
         u "I wouldn't have chosen to help you if I was too afraid to make hard decisions. My personal relationship with Chloe has nothing to do with this."
 
-    elif lindseyrs:
+    elif lindsey.relationship.value >= Relationship.FWB.value:
         scene v14s22_5g
         with dissolve
 
@@ -349,7 +349,7 @@ label v14s22_steal:
     jump v14s22_end
 
 label v14s22_end:
-    if lindseyrs:
+    if lindsey.relationship.value >= Relationship.FWB.value:
         scene v14s22_8 # TPP. Lindsey embraces and kisses MC passionately
         with dissolve
 

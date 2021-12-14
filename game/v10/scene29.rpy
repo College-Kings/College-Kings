@@ -127,7 +127,6 @@ label v10_chloe_hallway:
                             menu:
                                 "Have a Rematch":
                                     $ add_point(KCT.BOYFRIEND)
-                                    $ v10_chloe_rematch = True
                                     
                                     $ grant_achievement("on_the_court")
 
@@ -275,7 +274,6 @@ label v10_chloe_hallway:
         menu:
             "Have a Rematch":
                 $ add_point(KCT.BOYFRIEND)
-                $ v10_chloe_rematch = True
                 $ chloe.points += 1
                 
                 $ grant_achievement("on_the_court")

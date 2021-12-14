@@ -72,7 +72,7 @@ label v15s34:
         with dissolve 
 
         if v14_help_lindsey:
-            if v15s12_lindsey_pb_gameNight:
+            if v15_lindsey_gamenight:
                 $ lindsey.messenger.newMessage("Hey, our game night is starting in 15 minutes. Hope you're on your way now! :)", queue=False)
                 $ lindsey.messenger.addReply("Oh, yeah! I haven't forgotten ;) OMW.", func=None)
             else:
@@ -105,9 +105,10 @@ label v15s34:
 
         pause 0.75 
 
-        if v15s12_lindsey_pb_gamenight or not v14_help_lindsey:
+        if v15_lindsey_gamenight or not v14_help_lindsey:
             jump v15s35
-        if not v15s12_lindsey_pb_gamenight and v14_help_lindsey:
+
+        if not v15_lindsey_gamenight and v14_help_lindsey:
             jump v15s38
 
     else:
@@ -178,7 +179,7 @@ label v15s34:
         with dissolve 
 
         if v14_help_lindsey:
-            if v15s12_lindsey_pb_gameNight:
+            if v15_lindsey_gamenight:
                 $ lindsey.messenger.newMessage("Hey, our game night is starting in 15 minutes. Hope you're on your way now! :)", queue=False)
                 $ lindsey.messenger.addReply("Oh, yeah! I haven't forgotten ;) OMW.", func=None)
             else:
@@ -212,8 +213,8 @@ label v15s34:
 
         pause 0.75 
 
-        if v15s12_lindsey_pb_gamenight or not v14_help_lindsey:
+        if v15_lindsey_gamenight or not v14_help_lindsey:
             jump v15s35
 
-        else: ###if not v15s12_lindsey_pb_gamenight and v14_help_lindsey:
+        else: ###if not v15_lindsey_gamenight and v14_help_lindsey:
             jump v15s38

@@ -325,7 +325,7 @@ label v15s4:
 
             u "You? Or the dog?"
 
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.TROUBLEMAKER)
                 scene v15s4_13
                 with dissolve
@@ -525,7 +525,7 @@ label v15s4:
 
                         u "(Damn!!)"
 
-                        if laurenrs:
+                        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                             u "(Is it weird to check out Lauren's sister?)"
 
                     "Don't peek":
@@ -534,7 +534,8 @@ label v15s4:
                         with dissolve
 
                         u "(Glad I can control myself, good job [name]!)"
-                        if laurenrs:
+
+                        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                             u "(It would be weird if I checked out Autumn while I'm with Lauren...)"
             
             scene v15s4_63 # FPP. MC turned around looking at the dog as him and Autumn are leaving, Autumn off-camera.
@@ -709,7 +710,7 @@ label v15s4:
 
             u "(Can you blame me?) Sorry, I got distracted."
 
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v15s4_24b
                 with dissolve
 
@@ -1589,7 +1590,7 @@ label v15s4:
 
         aut "So, If you found something similar to that, she'd probably die. *Laughs*"
 
-        if laurenrs:
+        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
             aut "But she's never gotten jewelry from a boyfriend before, and she's always mentioning that. So, either way I think you're good."
 
         scene v15s4_59

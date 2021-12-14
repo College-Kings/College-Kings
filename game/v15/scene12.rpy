@@ -43,7 +43,7 @@ label v15s12:
 
         li "And then there were a few interesting entries."
         
-        if chloegf or chloers: # -if ChloeGF or ChloeRS
+        if chloe.relationship.value >= Relationship.FWB.value:
             scene v15s12_3a # TPP. MC worried, mouth closed [Checkpoint B].
             with dissolve
 
@@ -99,7 +99,7 @@ label v15s12:
 
         li "*Scoffs* She's trying to trick me [name], so that she can publicly embarrass me... Can you believe that?"
 
-        if v15s8_chloe_pb_DamageLindseyRep: # -if MC is helping Chloe and chose the Embarrass Lindsey option on Chloe's planning board
+        if v15_chloe_lindseysabotage: # -if MC is helping Chloe and chose the Embarrass Lindsey option on Chloe's planning board
             scene v15s12_4c # TPP. MC worried, mouth closed [Checkpoint C].
             with dissolve
 
@@ -178,7 +178,7 @@ label v15s12:
 
             li "Ha, yeah. I know... Me too."        
 
-        if chloegf: # -if ChloeGf 
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value: 
             li "And... There was something else too."
 
             scene v15s12_5
@@ -284,8 +284,8 @@ label v15s12:
 
                 li "Yeah, fair enough, I respect that. That's why I wanted to ask."            
 
-        # -regardless of previous choice, still if ChloeGF
-        if chloegf and lindseyrs: # -if ChloeGF and LindseyRS
+        # -regardless of previous choice, still if Chloe GF
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value and lindsey.relationship.value >= Relationship.FWB.value:
             scene v15s12_6 # FPP. Lindsey concerned mouth open [Checkpoint E].
             with dissolve
 
@@ -313,11 +313,9 @@ label v15s12:
             
             li "All I need to know is if you're serious about her or not, because if you are, then you and I should just..."
             
-            # -MC chooses event1 or event2
-            # -event1 It's pretty serious (LindseyRS becomes LindseyFriend)
-            # -event2 It's not that serious
             menu: 
-                "It's pretty serious": # -if It's pretty serious (LindseyRS becomes LindseyFriend)
+                "It's pretty serious": # -if It's pretty serious (Lindsey RS becomes Lindsey Friend)
+                    $ lindsey.relationship = Relationship.FRIEND
                     $ add_point(KCT.BOYFRIEND) # TODO KCT and character points 
                     $ chloe.points += 1
                     $ lindsey.points -= 1
@@ -463,17 +461,17 @@ label v15s12:
                 "VIP Night",
                 opinion="\"There's a few people on Chloe's side that I think I could sway... Their opinion of me isn't horrible, they just seem to prefer her... If we give them a spectacular night out, there's absolutely no way they'll be able to choose her over me.\"")
 
-            v15s12_lindsey_pb_fakeId = lindsey_board.add_task("Game Night",
+            lindsey_board.add_task("Game Night",
                 "Buy booze with fake ID",
                 opinion="\"Since neither of us are of the legal drinking age, we're gonna need a fake ID if we want booze. A friend of mine makes them, so I'll take care of that.\"",
                 people=[mc, lindsey],
                 cost=100)
 
-            lindsey_board.add_subtask("Game Night",
+            v15s12_lindsey_pb_mostlikely = lindsey_board.add_subtask("Game Night",
                 "Who's Most Likely...",
                 opinion="\"\"Who's Most Likely To\" is always a fun game to play with a group of people. We'll laugh, learn, a bit about each other and maybe some secrets will come out as well.\"")
 
-            v15s12_lindsey_pb_wouldYouRather = lindsey_board.add_subtask("Game Night",
+            lindsey_board.add_subtask("Game Night",
                 "Would You Rather",
                 opinion="\"\"Would you rather\" is the easiest game to play when you want to get the conversation rolling. Hopefully we get a few laughs and maybe some secrets out of them as well.\"")
 
@@ -503,18 +501,28 @@ label v15s12:
                 people=[mc, lindsey, aubrey, autumn]) # Can't add Sebastian or Grayson here because we're loading the menu before the player can select. 
 
         call screen planning_board(lindsey_board)
+        
+        ##A     Game Night
+        ##A.1   Buy Booze
+        ##A.2a  Most Likely To
+        ##A.2b  Would You Rather
+        ##A.3   Host it
+        ##B     VIP Night
+        ##B.1   Book Limousine
+        ##B.2a  Invite Sebastian
+        ##B.2b  Invite Grayson
+        ##B3    Host it
 
         if lindsey_board.approach is not None:
-            $ v15s12_lindsey_pb_gameNight = lindsey_board.approach.id == "gameNight"
+            $ v15_lindsey_gamenight = lindsey_board.approach.id == "gameNight"
 
         if lindsey_board.selected_task is not None:
-            $ v15s12_lindsey_pb_fakeId = lindsey_board.selected_task == v15s12_lindsey_pb_fakeId
-            $ v15s12_lindsey_pb_wouldYouRather = lindsey_board.selected_task == v15s12_lindsey_pb_wouldYouRather
-            $ v15_s12_lindsey_pb_inviteSebastian = lindsey_board.selected_task == v15_s12_lindsey_pb_inviteSebastian
+            $ v15_lindsey_mostlikelyto = lindsey_board.selected_task == v15s12_lindsey_pb_mostlikely
+            $ v15_lindsey_inviteseb = lindsey_board.selected_task == v15_s12_lindsey_pb_inviteSebastian
 
         # End planning board (screen disappears)
 
-        if v15s12_lindsey_pb_gameNight: # -if chose Game night
+        if v15_lindsey_gamenight: # -if chose Game night
             scene v15s12_8b
             with dissolve
             
@@ -562,14 +570,14 @@ label v15s12:
 
         li "Hehe, thank you!"        
 
-        if lindseyrs: # -if LindseyRS
+        if lindsey.relationship.value >= Relationship.FWB.value:
             # -Lindsey gives MC a passionate kiss-           
             scene v15s12_9 # FPP. Lindsey passionately kisses MC [Janitor's closet].
             with dissolve
 
             play sound "sounds/kiss.mp3"
 
-            pause 0.75 
+            pause 1.75 
 
             scene v15s12_9a # FPP. Lindsy happy, smiling, mouth closed looking at MC [Janitor's closet].
             with dissolve
@@ -632,7 +640,7 @@ label v15s12_PhoneContinue:
 
     u "(I'm a man on a mission. Find Lauren a gift and find a costume. Easy.)"
     
-    if msrosers and v15s5_mc_angry_with_rose: # -if RoseRs and MC acted angry in v15.5
+    if ms_rose.relationship.value >= Relationship.FWB.value and v15s5_mc_angry_with_rose: # -if RoseRs and MC acted angry in v15.5
         # -Transition to Scene 14-
         jump v15s14
 

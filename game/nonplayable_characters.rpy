@@ -1,20 +1,19 @@
 init python:
     class Relationship(Enum):
+        MAD = -3
+        MAKEFUN = -2
+        AWKWARD = -1
         FRIEND = 0
-        HANGOUT = 1
+        MOVE = 1
         DATE = 2
         LIKES = 3
-        KISS = 4
-        LOYAL = 5
-        FWB = 6
-        TAMED = 7
-        GIRLFRIEND = 8
-        AWKWARD = 10
-        BRO = 11
-        FORGIVE = 12
-        FUN = 13
-        MAD = 14
-        TRUST = 15
+        TRUST = 4
+        BRO = 5
+        KISS = 6
+        LOYAL = 7
+        FWB = 8
+        TAMED = 9
+        GIRLFRIEND = 10
 
     class NonPlayableCharacter:
         """
@@ -158,48 +157,47 @@ init python:
         def reset_points(self):
             self.points = 0
 
-default chloe = NonPlayableCharacter("Chloe", "Chloe101")
-default amber = NonPlayableCharacter("Amber", "Amber_xx")
-default penelope = NonPlayableCharacter("Penelope", "Penelopeeps") #Relationship progression: LIKES, LOYAL
-default riley = NonPlayableCharacter("Riley", "RileyReads")
-default lindsey = NonPlayableCharacter("Lindsey", "LindsLou")
-default lauren = NonPlayableCharacter("Lauren", "LoLoLauren")
-default emily = NonPlayableCharacter("Emily", "emilyyyy")
-default ms_rose = NonPlayableCharacter("Ms Rose")
-default nora = NonPlayableCharacter("Nora", "Nora_12")
-default aubrey = NonPlayableCharacter("Aubrey", "Aubs123")
-default ryan = NonPlayableCharacter("Ryan", "Ryanator")
-default imre = NonPlayableCharacter("Imre", "BadBoyImre")
-default chris = NonPlayableCharacter("Chris", "Chriscuit")
-default charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
-default cameron = NonPlayableCharacter("Cameron", "Cameroon")
-default josh = NonPlayableCharacter("Josh", "Josh80085")
-default julia = NonPlayableCharacter("Julia")
-default evelyn = NonPlayableCharacter("Evelyn") #Relationship progression: DATE, LIKES, KISS
-default autumn = NonPlayableCharacter("Autumn", "Its_Fall")
-default sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
-default grayson = NonPlayableCharacter("Grayson", "G-rayson")
-default jenny = NonPlayableCharacter("Jenny")
-default mr_lee = NonPlayableCharacter("Mr Lee")
-
-default adam = NonPlayableCharacter("Adam", "A.D.A.M.")
-default mason = NonPlayableCharacter("Mason", "Mason_Mas")
-default elijah = NonPlayableCharacter("Elijah", "Elijah_Woods")
-default kim = NonPlayableCharacter("Kim", "KimPlausible")
-default caleb = NonPlayableCharacter("Caleb", "Aleb")
-default parker = NonPlayableCharacter("Parker")
-default kai = NonPlayableCharacter("Kai", "KaiCriesWith2Ply")
 default aaron = NonPlayableCharacter("Aaron", "DoubleARon")
-default naomi = NonPlayableCharacter("Naomi", "NaomiXMarie")
-default lews_official = NonPlayableCharacter("LewsOfficial")
-
+default adam = NonPlayableCharacter("Adam", "A.D.A.M.")
+default amber = NonPlayableCharacter("Amber", "Amber_xx") #Relationship progression: FRIEND, KISS, FWB
+default aryssa = NonPlayableCharacter("Aryssa") #Relationship progression: FRIEND, LIKES
+default aubrey = NonPlayableCharacter("Aubrey", "Aubs123") #Relationship progression: FRIEND, FWB, TAMED
+default autumn = NonPlayableCharacter("Autumn", "Its_Fall")
 default beth = NonPlayableCharacter("Beth")
-default iris = NonPlayableCharacter("Iris")
-default samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam")
-default emmy = NonPlayableCharacter("Emmy")
-default aryssa = NonPlayableCharacter("Aryssa") #Relationship progression: LIKES
-default kourtney = NonPlayableCharacter("Kourtney") #Relationship progression: LIKES
-
-default wolf = NonPlayableCharacter("Wolf")
-default trainer = NonPlayableCharacter("Trainer")
 default buyer = NonPlayableCharacter("Buyer")
+default caleb = NonPlayableCharacter("Caleb", "Aleb")
+default cameron = NonPlayableCharacter("Cameron", "Cameroon") #Relationship progression: FRIEND, BRO
+default candy = NonPlayableCharacter("Candy") #Relationship progression: FRIEND, LIKES, FWB
+default charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
+default chloe = NonPlayableCharacter("Chloe", "Chloe101") #Relationship progression: FRIEND, FWB, GIRLFRIEND
+default chris = NonPlayableCharacter("Chris", "Chriscuit")
+default elijah = NonPlayableCharacter("Elijah", "Elijah_Woods") #Relationship progression: FUN, FRIEND
+default emily = NonPlayableCharacter("Emily", "emilyyyy") #Relationship progression: FRIEND, FWB
+default emmy = NonPlayableCharacter("Emmy") #Relationship progression: FRIEND, LIKES, FWB
+default evelyn = NonPlayableCharacter("Evelyn") #Relationship progression: FRIEND, MOVE, DATE, LIKES, KISS
+default grayson = NonPlayableCharacter("Grayson", "G-rayson")
+default imre = NonPlayableCharacter("Imre", "BadBoyImre")
+default iris = NonPlayableCharacter("Iris")
+default jenny = NonPlayableCharacter("Jenny") #Relationship progression: AWKWARD, FRIEND, FWB
+default josh = NonPlayableCharacter("Josh", "Josh80085") #Relationship progression: MAD, FRIEND
+default julia = NonPlayableCharacter("Julia")
+default kai = NonPlayableCharacter("Kai", "KaiCriesWith2Ply")
+default kim = NonPlayableCharacter("Kim", "KimPlausible")
+default kourtney = NonPlayableCharacter("Kourtney") #Relationship progression: FRIEND, LIKES
+default lauren = NonPlayableCharacter("Lauren", "LoLoLauren") #Relationship progression: MAD, FRIEND, KISS, GIRLFRIEND
+default lews_official = NonPlayableCharacter("LewsOfficial")
+default lindsey = NonPlayableCharacter("Lindsey", "LindsLou") #Relationship progression: FRIEND, FWB
+default mason = NonPlayableCharacter("Mason", "Mason_Mas")
+default mr_lee = NonPlayableCharacter("Mr Lee")
+default ms_rose = NonPlayableCharacter("Ms Rose") #Relationship progression: FRIEND, FWB
+default naomi = NonPlayableCharacter("Naomi", "NaomiXMarie")
+default nora = NonPlayableCharacter("Nora", "Nora_12") #Relationship progression: FRIEND, MOVE, LIKES, FWB
+default parker = NonPlayableCharacter("Parker")
+default penelope = NonPlayableCharacter("Penelope", "Penelopeeps") #Relationship progression: FRIEND, LIKES, LOYAL
+default riley = NonPlayableCharacter("Riley", "RileyReads") #Relationship progression: FRIEND, MOVE, DATE, FWB
+default ryan = NonPlayableCharacter("Ryan", "Ryanator")
+default samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam") #Relationship progression: FRIEND, MOVE, FWB
+default satin = NonPlayableCharacter("Satin") #Relationship progression: FRIEND, FWB
+default sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
+default trainer = NonPlayableCharacter("Trainer")
+default wolf = NonPlayableCharacter("Wolf")

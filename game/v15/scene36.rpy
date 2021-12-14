@@ -54,19 +54,17 @@ label v15s36:
     with dissolve
 
     menu:
-        "Maybe.":
+        "Maybe":
             $ add_point(KCT.BRO)
-
             u "Erm, maybe?"
 
-        "I'm really curious.":
+        "I'm really curious":
             $ add_point(KCT.BOYFRIEND)
-
             u "Well, I'm curious about getting to know the real Autumn, but I know it's a sensitive issue."
 
     u "Only if you're comfortable talking about it, of course."
 
-    if not AutumnTrust:
+    if autumn.relationship.value < Relationship.TRUST.value:
         scene v15s36_4a
         with dissolve
 
@@ -249,11 +247,10 @@ label v15s36:
         with dissolve
 
         menu:
-            "I'd like that.":
-
+            "I'd like that":
                 u "Honestly, I'd really like that... I feel the same way."
 
-                if laurenrs: 
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     $ autumnloyal = True
                     scene v15s36_5
                     with dissolve
@@ -284,10 +281,11 @@ label v15s36:
                     scene v15s36_5
                     with dissolve
 
-                    aut "Haha! Okay, mister...Don't push it."
+                    aut "Haha! Okay, mister... Don't push it."
 
                     scene v15s36_6
-                    with dissolve 
+                    with dissolve
+
                 else:
                     $ autumnrs = True
 
@@ -368,7 +366,7 @@ label v15s36:
                     scene v15s36_8f # FPP. Autumn stepped back, MC looking at Autumn, Autumn looking at MC, Autumn now blushing, Autumn slight smile, mouth closed. 
                     with dissolve
 
-            "It's not a good idea.":
+            "It's not a good idea":
                 $ v15s36_not_good_idea = True
 
                 scene v15s36_5a
@@ -396,7 +394,7 @@ label v15s36:
 
                 aut "No, no. There's nothing to apologize for. You're right, and thanks for being honest."
 
-                if laurenrs:
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     scene v15s36_5
                     with dissolve
 
@@ -430,7 +428,7 @@ label v15s36:
     scene v15s36_11 # FPP. MC and Autumn at the front of the Deer's house, Autumn looking at MC, MC looking at Autumn, Autumn slight smile, mouth open.
     with dissolve 
 
-    aut "Here we are.... Thanks for walking me home."
+    aut "Here we are... Thanks for walking me home."
 
     scene v15s36_11a # FPP. MC and Autumn at the front of the Deer's house, Autumn looking at MC, MC looking at Autumn, Autumn slight smile, mouth open.
     with dissolve

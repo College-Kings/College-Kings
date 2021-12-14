@@ -16,7 +16,7 @@ label v15s7:
 
         cl "[name]... *Sniffles* I don't know what I'm going to do."
 
-        if chloegf:
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
             scene v15s7_2 # FPP MC reaches out and takes Chloe's hand
             with dissolve
 
@@ -146,7 +146,7 @@ label v15s7:
 
                     u "Holy shit... You have a diary?"
 
-                    if chloegf: # -Chloe obviously angry, if ChloeGF give a sus point-
+                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                         $ chloeSus += 1
 
                     scene v15s7_1c # FPP Same angle as 1, Chloe looking at MC, tears on her face, she looks angry
@@ -154,7 +154,7 @@ label v15s7:
                 
                     cl "Yes, [name]. I DID have a diary."
 
-                    if chloers: # -if ChloeGF or ChloeRS
+                    if chloe.relationship.value >= Relationship.FWB.value:
                         scene v15s7_1a
                         with dissolve
 
@@ -175,7 +175,7 @@ label v15s7:
 
                         u "(Me??? I do??? Fuck...)"
 
-                    else: # -if not ChloeGF or ChloeRS
+                    else: # -if not Chloe GF or Chloe RS
                         scene v15s7_1a
                         with dissolve
 
@@ -234,7 +234,7 @@ label v15s7:
 
             u "Oh fuck, Chloe. I'm so sorry..."
 
-            if chloegf or chloers: # -If ChloeGF or ChloeRS
+            if chloe.relationship.value >= Relationship.FWB.value:
                 scene v15s7_1a
                 with dissolve
 
@@ -358,7 +358,7 @@ label v15s7:
                 
             u "We won't. Don't even think about it."
 
-        if chloegf: # -if ChloeGF, A quick kiss before they hug
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
             scene v15s7_4 # TPP Chloe giving MC a kiss, a little bit of mascara still streaking her face
             with dissolve
 
@@ -369,13 +369,13 @@ label v15s7:
 
             pause 1
         
-        elif chloers: # -if ChloeRs, they hug tightly
+        elif chloe.relationship.value >= Relationship.FWB.value: # -if Chloe Rs, they hug tightly
             scene v15s7_3 # TPP Chloe giving MC a tight hug
             with dissolve
 
             pause 1.25
 
-        else: # -if not ChloeRS or ChloeGF, Chloe gives MC a quick hug
+        else: # -if not Chloe RS or Chloe GF, Chloe gives MC a quick hug
             scene v15s7_3a # TPP Chloe giving MC a quick, friendly hug
             with dissolve
 
@@ -431,7 +431,7 @@ label v15s7:
 
             u "Don't mention it."
 
-            if chloegf: # -if ChloeGF
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v15s7_1l # FPP Same angle as 1, Chloe looking down at MC's dick, sexy expression, mouth open
                 with dissolve
 
@@ -594,7 +594,7 @@ label v15s7:
 
             u "Aw, okay. I'll try. *Chuckles*"
 
-            if chloegf: # -if ChloeGF
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v15s7_8f
                 with dissolve
 
