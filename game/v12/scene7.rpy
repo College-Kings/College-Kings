@@ -5832,7 +5832,7 @@ label v12s7_josh1:
     menu:
         "Really care about cats, huh?":
             $ add_point(KCT.TROUBLEMAKER)
-            $ joshmadfr = True
+            $ josh.relationship = Relationship.MAD
             scene v12ferjo1
             with dissolve
 

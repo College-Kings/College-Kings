@@ -640,25 +640,16 @@ label v14s09:
 
         u "(So Josh's favorite Europe moment...)"
 
-        if not joshmad:
-            menu:
-                "Playing Leopard Lord":
-                    u "(He was definitely a fan of his role during the murder mystery.)"
+        menu:
+            "Playing Leopard Lord":
+                u "(He was definitely a fan of his role during the murder mystery.)"
+    
+            "Drinks in London":
+                u "(We had a good round of drinks together in London, maybe that was his favorite part.)"
+    
+            "Fancy dinner":
+                u "(That fancy dinner Mr. Lee set up was free and delicious, I'm sure Josh loved that, haha.)"
         
-                "Drinks in London":
-                    u "(We had a good round of drinks together in London, maybe that was his favorite part.)"
-        
-                "Fancy dinner":
-                    u "(That fancy dinner Mr. Lee set up was free and delicious, I'm sure Josh loved that, haha.)"
-        
-        else:
-            menu:
-                "Playing Leopard Lord":
-                    u "(He was definitely a fan of his role during the murder mystery.)"
-        
-                "Drinks in London":
-                    u "(We had a good round of drinks together in London, maybe that was his favorite part.)"
-
     if v11_pen_goes_europe:
         scene v14s09_8b
         with dissolve

@@ -203,6 +203,11 @@ label after_load:
             del jennyrs
         except NameError: pass
         try:
+            if joshmad or joshmadfr: josh.relationship = Relationship.MAD
+            del joshmad
+            del joshmadfr
+        except NameError: pass
+        try:
             if kourtneyrs: kourtney.relationship = Relationship.LIKES
             del kourtneyrs
         except NameError: pass
@@ -664,8 +669,6 @@ label after_load:
         except NameError: v12s32_Aubrey_Boost = False
         try: v12_murder_count
         except NameError: v12_murder_count = 0
-        try: joshmadfr
-        except NameError: joshmadfr = False
         try: v12s7_victims
         except NameError: v12s7_victims = 12
         try: v12s23a_sam

@@ -191,7 +191,6 @@ default drinkWsam = False
 default emily_europe = False
 default freeroam6 = set()
 default josh_europe = False
-default joshmad = False
 default makeSamCock = False
 default sadlind_reaction = False
 default skater = False
@@ -249,7 +248,6 @@ default v11s25_beer = True
 # 12.0
 default chrismad = False
 default freeroam9 = set() #Ferry
-default joshmadfr = False
 default s12v32_get_aubrey_flowers = False
 default v11_lindsey_run = False
 default v12_chase_robber = False

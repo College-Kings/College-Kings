@@ -66,7 +66,7 @@ label v11_lobby_mrlee:
 
         lee "I know many of you were really looking forward to this trip, and I hope that so far it has reached your expectations, but if not... There are many more opportunities ahead."
 
-    if not joshmad:
+    if josh_europe:
         scene v11lob9 # FPP. Show josh, grinning, rubbing hands together. 
         with dissolve
 

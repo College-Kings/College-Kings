@@ -2035,7 +2035,6 @@ label at_bd:
     play music "music/msexy.mp3"
 
     if not config_censored:
-
         call screen nsfw_Toggle
 
     if config_censored:

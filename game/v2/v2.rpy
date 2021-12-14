@@ -1086,7 +1086,10 @@ label v1_tomWalkAway:
 
     $ renpy.end_replay()
 
-    if not meetlauren:
+    if meetlauren:
+        jump meet_lauren2
+
+    else:
         scene s133
         with Fade (1,0,1) # in front of san vallejo
         if fighttom and not wintom:
@@ -1101,10 +1104,6 @@ label v1_tomWalkAway:
         u "(Also, what am I gonna do about Lauren? I can't avoid her forever.)"
 
         jump history2
-
-    else:
-        jump meet_lauren2
-
 
 label meet_lauren2:
     play music "music/mlove2.mp3"
