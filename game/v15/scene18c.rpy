@@ -1094,7 +1094,7 @@ label v15s18c_imre_aubrey:
     call screen v15s18a_upstairsroom
 
 label v15s18c_ryan:
-    $ V15s18a_frryan = True
+    $ freeroam14.add("ryan")
     scene v15s18c_ry_1 # TPP. Show MC walking up to Ryan (Ryan is sleeping on the couch), MC mouth closed, slightly confused (make sure there is a visible condom in his shirt pocket)
     with dissolve
 
@@ -1339,7 +1339,7 @@ label v15s18c_lauren:
 
     u "Me too, really. Everyone seems to be having a great time, too."
 
-    if V15s18a_frryan:
+    if "ryan" in freeroam13 or "ryan" in freeroam14:
         scene v15s18c_la_3
         with dissolve
 
