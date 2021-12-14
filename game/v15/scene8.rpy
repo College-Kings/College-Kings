@@ -88,7 +88,7 @@ label v15s8:
             "Provoke Lindsey to say something that might damage her reputation",
             opinion="\"OPINION\"")
 
-        chloe_board.add_subtask("Sabotage",
+        v15s8_chloe_kiwii = chloe_board.add_subtask("Sabotage",
             "Chloe posts the recording on Kiwii",
             opinion="\"OPINION\"")
 
@@ -100,13 +100,15 @@ label v15s8:
             "Try and convince Mr. Lee to support you in front of the Dean on this",
             opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from fellow members of the school board. The two faculty members that we're most close with are Mr. Lee and Ms. Rose. Mr. Lee is a highly respected member of the school board. If he agrees with our plan, there's a very slim chance that the Dean will deny our request. It might be smart to focus on him during our meeting.\"")
 
-        chloe_board.add_subtask("Tuition",
+        v15s8_chloe_lee = chloe_board.add_subtask("Tuition",
             "Try and convince Ms. Rose to support you in front of the Dean on this",
             opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from fellow members of the school board. The two faculty members that we're most close with are Mr. Lee and Ms. Rose. Ms. Rose is not only an independent and fantastic leader, she's also been known to have hung out with the Dean outside of campus. It might be smart to focus on her during our meeting.\"")
             
         chloe_board.add_task("Tuition",
             "Talk to the Dean with Mr. Lee or Ms. Rose's support",
             opinion="\"Finally, we have a meeting with the Dean. Depending on how we do with Lee and Rose, hopefully one of them, or both of them, decides to join the meeting in support of our idea. The more support we have, the more likely the Dean is to approve. \"")
+
+    call screen planning_board(chloe_board)
 
     ##A     Sabotage
     ##A.1   Get Lindsey wasted
@@ -118,6 +120,15 @@ label v15s8:
     ##B.1a  Mr. Lee support
     ##B.1b  Ms. Rose support
     ##B.2   Meet Dean
+
+    if lindsey_board.approach is not None:
+        $ v15_chloe_lindseysabotage = chloe_board.approach.id == "Sabotage"
+
+    if lindsey_board.selected_task is not None:
+        $ v15_chloe_postkiwii = chloe_board.selected_task == v15s8_chloe_kiwii
+        $ v15_chloe_mrleesupport = chloe_board.selected_task == v15s8_chloe_lee
+
+    # End planning board (screen disappears)
 
     scene v15s8_4a # TPP. Same as v15s8_4, MC slight smile, mouth open, Chloe slight smile, mouth closed.
     with dissolve 
