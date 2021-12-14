@@ -222,7 +222,7 @@ label v11wakeupa:
 
             cl "Stop, you're embarrassing me."
 
-            if chloers:
+            if chloe.relationship.value >= Relationship.FWB.value:
                 scene v11hr3h # FPP. Same cam as v11hr3, Show MC grabbing Chloe's chin, she's slightly embarrassed, mouth closed, looking at MC
                 with dissolve
 

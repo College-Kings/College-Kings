@@ -5,7 +5,7 @@
 
 label v13s5:
     play music "music/v13/Track Scene 5.mp3" fadein 2
-    if not chloegf:
+    if chloe.relationship.value < Relationship.GIRLFRIEND.value:
         scene v13s5_1 # TPP. Show MC and Chloe walking in the hotel corridor, carrying their luggage, Chloe frowning, tired, mouth closed, MC slight smile, mouth closed
         with dissolve
 
@@ -33,7 +33,7 @@ label v13s5:
 
     u "(That didn't last long. *Chuckles*)"
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v13s5_6 # TPP. Show MC tucking Chloe in to sleep
         with dissolve
 

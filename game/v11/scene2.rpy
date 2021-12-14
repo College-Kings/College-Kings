@@ -578,22 +578,24 @@ label v11_nora_chloe_hallway:
                         pause 0.75
 
             else:
-                if chloers:
+                if chloe.relationship.value >= Relationship.FWB.value:
                     scene v11clhall1f
                     with dissolve
 
                     u "Hey, cutie."
+
                 else:
                     scene v11clhall1f
                     with dissolve
 
                     u "Hey Chloe."
 
-                if chloers:
+                if chloe.relationship.value >= Relationship.FWB.value:
                     scene v11clhall1e
                     with dissolve
 
                     cl "Oh, hey handsome. What's up?"
+
                 else:
                     scene v11clhall1e
                     with dissolve
@@ -757,23 +759,24 @@ label v11_nora_chloe_hallway:
 
                         u "Haha, well I won't be good company if I'm not there so I'm gonna go get packing."
 
-                        if chloers:
+                        if chloe.relationship.value >= Relationship.FWB.value:
                             scene v11clb1
                             with dissolve
 
                             cl "I need to run but I can't wait to spend some more time with you in Europe."
+
                         else:
                             scene v11clb1
                             with dissolve
 
                             cl "Alright, it was good talking to you."
 
-                        if chloers:
-
+                        if chloe.relationship.value >= Relationship.FWB.value:
                             scene v11clb1a
                             with dissolve
 
                             u "See you later, beautiful."
+
                         else:
                             scene v11clb1a
                             with dissolve

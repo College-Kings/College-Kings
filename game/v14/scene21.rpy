@@ -1,4 +1,4 @@
-# SCENE 21: If chloers Having sex and help Chloe
+# SCENE 21: If chloe rs Having sex and help Chloe
 # Locations: Outside Front of School building. And Parking lot.
 # Characters: CHLOE (Outfit: 2), MC (Outfit: 9)
 # Time: Afternoon

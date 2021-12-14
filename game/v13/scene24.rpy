@@ -97,7 +97,7 @@ label v13s24:
 
         "Fuck yeah, let's mingle":
             $ add_point(KCT.BRO)
-            if chloegf or (laurenrs and not "v11_aubrey" in sceneList):
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value or (laurenrs and not "v11_aubrey" in sceneList):
                 $ add_point(KCT.TROUBLEMAKER)
 
             scene v13s24_3a

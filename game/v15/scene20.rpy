@@ -32,7 +32,7 @@ label v15s20:
     scene v15s20_5 # FPP. MC sitting next to Chloe. Chloe looking at MC, MC looking at Chloe, Chloe slight smile, mouth closed.
     with dissolve
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         menu:
             "Ask for a kiss":
                 u "I know you're super busy, but can your boyfriend get a kiss first? *Chuckles*"
@@ -191,7 +191,7 @@ label v15s20:
 
         u "(Well, she loves it in the bedroom... Or should I say kitchen...)"
 
-        if chloegf and v15_ms_rose_sex:
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value and v15_ms_rose_sex:
             scene v15s20_5d # FPP. Same as v15s20_5c, Chloe confused, mouth open.
             with dissolve
 

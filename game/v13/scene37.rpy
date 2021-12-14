@@ -918,7 +918,7 @@ label v13s37_end:
 
     u "*Chuckles*"
 
-    if not chloers:
+    if chloe.relationship.value <= Relationship.FWB.value:
         scene v13s37end_2a
         with dissolve
 

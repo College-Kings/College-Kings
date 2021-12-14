@@ -43,7 +43,7 @@ label v15s12:
 
         li "And then there were a few interesting entries."
         
-        if chloegf or chloers: # -if ChloeGF or ChloeRS
+        if chloe.relationship.value >= Relationship.FWB.value:
             scene v15s12_3a # TPP. MC worried, mouth closed [Checkpoint B].
             with dissolve
 
@@ -178,7 +178,7 @@ label v15s12:
 
             li "Ha, yeah. I know... Me too."        
 
-        if chloegf: # -if ChloeGf 
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value: 
             li "And... There was something else too."
 
             scene v15s12_5
@@ -284,8 +284,8 @@ label v15s12:
 
                 li "Yeah, fair enough, I respect that. That's why I wanted to ask."            
 
-        # -regardless of previous choice, still if ChloeGF
-        if chloegf and lindsey.relationship.value >= Relationship.FWB.value:
+        # -regardless of previous choice, still if Chloe GF
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value and lindsey.relationship.value >= Relationship.FWB.value:
             scene v15s12_6 # FPP. Lindsey concerned mouth open [Checkpoint E].
             with dissolve
 

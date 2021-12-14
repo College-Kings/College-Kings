@@ -799,7 +799,7 @@ label v12_escape_room:
     stop music fadeout 3
     play music "music/v12/Track Scene 17_4.mp3" fadein 2
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v12esr29
         with dissolve
 

@@ -104,22 +104,7 @@ label v13s15:
 
         pause 0.75
 
-        if not chloegf:
-            scene v13s15_8 # TPP. Show MC getting into his bed, slight smile, mouth closed
-            with dissolve
-
-            pause 0.75
-
-            scene v13s15_9 # TPP. Show MC sleeping, room is dark
-            with fade
-
-            pause 0.75
-
-            stop music fadeout 3
-
-            jump v13s17c
-        
-        else:
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
             scene v13s15_98
             with dissolve
 
@@ -133,6 +118,21 @@ label v13s15:
             stop music fadeout 3
 
             jump v13s17
+
+        else:
+            scene v13s15_8 # TPP. Show MC getting into his bed, slight smile, mouth closed
+            with dissolve
+
+            pause 0.75
+
+            scene v13s15_9 # TPP. Show MC sleeping, room is dark
+            with fade
+
+            pause 0.75
+
+            stop music fadeout 3
+
+            jump v13s17c
 
     elif not "v11_aubrey" in sceneList:
         play sound "sounds/vibrate.mp3"
@@ -166,17 +166,7 @@ label v13s15:
 
             u "(A night with the baby.)"
 
-            if not chloegf:
-                scene v13s15_13 # TPP. Show MC walking out of the room, slight smirk, mouth closed
-                with dissolve
-
-                pause 0.75
-
-                stop music fadeout 3
-
-                jump v13s16
-
-            else:
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v13s15_14 # TPP. Show MC walking towards the door, startled, mouth closed
                 with vpunch
 
@@ -245,28 +235,23 @@ label v13s15:
 
                 jump v13s16
 
+            else:
+                scene v13s15_13 # TPP. Show MC walking out of the room, slight smirk, mouth closed
+                with dissolve
+
+                pause 0.75
+
+                stop music fadeout 3
+
+                jump v13s16
+
         else:
             scene v13s15_7 
             with dissolve
 
             pause 0.75
 
-            if not chloegf:
-                scene v13s15_8
-                with dissolve
-
-                pause 0.75
-
-                scene v13s15_9
-                with fade
-
-                pause 0.75
-
-                stop music fadeout 3
-
-                jump v13s17c
-            
-            else:
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v13s15_98
                 with dissolve
 
@@ -281,13 +266,43 @@ label v13s15:
 
                 jump v13s17
     
+            else:
+                scene v13s15_8
+                with dissolve
+
+                pause 0.75
+
+                scene v13s15_9
+                with fade
+
+                pause 0.75
+
+                stop music fadeout 3
+
+                jump v13s17c
+            
     else:
         scene v13s15_7 
         with dissolve
 
         pause 0.75
 
-        if not chloegf:
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            scene v13s15_98
+            with dissolve
+
+            pause 0.75
+
+            scene v13s15_99
+            with fade
+
+            pause 0.75
+
+            stop music fadeout 3
+
+            jump v13s17
+
+        else:
             scene v13s15_8
             with dissolve
 
@@ -302,17 +317,3 @@ label v13s15:
 
             jump v13s17c
         
-        else:
-            scene v13s15_98
-            with dissolve
-
-            pause 0.75
-
-            scene v13s15_99
-            with fade
-
-            pause 0.75
-
-            stop music fadeout 3
-
-            jump v13s17

@@ -86,7 +86,7 @@ label v9_room_sat_aft:
             $ chloe.messenger.newMessage(_("Hey [name], what you up to?"), queue=False)
             $ chloe.messenger.addReply(_("Nothing much. Just relaxing. I'm kind of tired."))
             $ chloe.messenger.newMessage(_("Awwww. Long day?"))
-            if chloers:
+            if chloe.relationship.value >= Relationship.FWB.value:
                 $ chloe.messenger.addReply(_("Yeah haha, I feel wiped."), v9s35_reply1)
             else:
                 $ chloe.messenger.addReply(_("Yeah haha, I feel wiped."), v9s35_reply8)
@@ -138,7 +138,7 @@ label v9_room_sat_aft:
             $ chloe.messenger.newMessage(_("Hey [name], what you up to?"), queue=False)
             $ chloe.messenger.addReply(_("Nothing much. Just relaxing. I'm kind of tired."))
             $ chloe.messenger.newMessage(_("Awwww. Long day?"))
-            if chloers:
+            if chloe.relationship.value >= Relationship.FWB.value:
                 $ chloe.messenger.addReply(_("Yeah haha, I feel wiped."), v9s35_reply1)
             else:
                 $ chloe.messenger.addReply(_("Yeah haha, I feel wiped."), v9s35_reply8)

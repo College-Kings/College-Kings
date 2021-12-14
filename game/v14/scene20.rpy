@@ -521,10 +521,8 @@ label v14s20:
     pause 0.75
 
     stop music fadeout 3
-    # -Transition to Scene 21 if chloers/gf and Talk to Chris for Chloe-
-    if (chloers or chloegf) and v14_talk_to_chris: # ADD TALK TO CHRIS VARIABLE TO SCENE 19a
+    if chloe.relationship.value >= Relationship.FWB.value and v14_talk_to_chris:
         jump v14s21
 
-    # -Transition to Scene 21b if not chloers/gf and Talk to Chris for Chloe-
     else:
         jump v14s21b

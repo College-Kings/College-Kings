@@ -861,7 +861,7 @@ label v12s7_riley1:
     ri "*Southern accent* And now my confusion is all too much. It makes sense why the wealthy and a man such as yourself would be here..."
     ri "But I can't understand why Miss Blue Collar here would be allowed to join us."
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         # -Chloe kisses MC-
         scene v12ferri5 # FPP. Show chloe, looking at camera, neutral look mouth open
         with dissolve
@@ -1056,7 +1056,7 @@ label v12s7_riley1:
 
             u "Haha, alright. I'll catch up with you later."
 
-            if chloers or chloegf:
+            if chloe.relationship.value >= Relationship.FWB.value:
                 scene v12ferri6 # TPP. Show MC kissing chloe
                 with dissolve
                 play sound "sounds/kiss.mp3"
@@ -1288,7 +1288,7 @@ label v12s7_chloe1:
 
     cl "That's actually a good point... Okay, now I'm not so sure about you being the killer. *Chuckles*"
 
-    if chloers or chloegf:
+    if chloe.relationship.value >= Relationship.FWB.value:
         scene v12ferch3 # TPP. Show chloe, hand on mc's chest, chloe mouth open
         with dissolve
 

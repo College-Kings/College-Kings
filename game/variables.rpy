@@ -140,7 +140,6 @@ default volleyball = False
 # 7.0
 default apesVids = 0
 default beachfirstkiss = False
-default chloers = False
 default chloesad = False
 default cop = False
 default emilyText = False
@@ -220,7 +219,6 @@ default v10s33_toldChloe = False
 
 # 11.0
 default candyLike = 0
-default chloegf = False
 default freeroam7 = set() #Penelope Court
 default freeroam8 = set() #London Museum
 default political_strategist = False

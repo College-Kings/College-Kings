@@ -648,7 +648,7 @@ label v14s36:
                 $ jenny.relationship = Relationship.FWB
                 $ sceneList.add("v14_jenny")
                 
-                if chloegf or laurenrs or penelope.relationship.value >= Relationship.LIKES.value:
+                if chloe.relationship.value >= Relationship.GIRLFRIEND.value or laurenrs or penelope.relationship.value >= Relationship.LIKES.value:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
                     $ add_point(KCT.BOYFRIEND)
@@ -1168,7 +1168,7 @@ label v14s36:
             "Don't kiss her":
                 $ jenny.relationship = Relationship.AWKWARD
                 
-                if chloegf or laurenrs or penelope.relationship.value >= Relationship.LIKES.value:
+                if chloe.relationship.value >= Relationship.GIRLFRIEND.value or laurenrs or penelope.relationship.value >= Relationship.LIKES.value:
                     $ add_point(KCT.BOYFRIEND)
                 else:
                     $ add_point(KCT.TROUBLEMAKER)

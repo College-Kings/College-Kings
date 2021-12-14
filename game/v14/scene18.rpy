@@ -140,7 +140,7 @@ label v14s18:
         
         li "Nevermind, that doesn't matter."
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v14s18_4a
         with dissolve
 
@@ -191,7 +191,7 @@ label v14s18:
     menu:
         "Help Lindsey":
             $ set_presidency_percent(v14_lindsey_popularity + 5)
-            if chloegf:
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.TROUBLEMAKER)
             elif lindsey.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.BOYFRIEND)
@@ -242,7 +242,7 @@ label v14s18:
                 pause 0.75
 
         "Don't help Lindsey":
-            if chloegf:
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.BOYFRIEND)
             elif lindsey.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.TROUBLEMAKER)

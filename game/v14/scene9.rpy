@@ -275,7 +275,7 @@ label v14s09:
 
     u "(Chloe's favorite part was most likely...)"
 
-    if chloegf:
+    if "v13_chloe" in sceneList:
         menu:
             "The Pier":
                 u "(The pier. She was super excited about it when she asked me to come.)"

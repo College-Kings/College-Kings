@@ -1025,7 +1025,7 @@ label v10s33_chloe1:
     menu:
         "Date with Chloe":
             $ chloe.points += 1
-            if chloers:
+            if chloe.relationship.value >= Relationship.FWB.value:
                 scene v10cfrcl1
                 with dissolve
 
@@ -1185,7 +1185,7 @@ label v10s33_chloe1:
                                     scene v10cfrcl1a
                                     with dissolve
 
-                                    if kct == "popular" or chloers:
+                                    if kct == "popular" or chloe.relationship.value >= Relationship.FWB.value:
                                         scene v10cfrcl1a
                                         with dissolve
 

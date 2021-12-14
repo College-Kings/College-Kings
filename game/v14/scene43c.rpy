@@ -307,7 +307,7 @@ label v14s43c:
 
     u "*British accent* I haven't lied!"
 
-    if penelope.relationship.value >= Relationship.LOYAL.value and (chloegf or laurenrs):
+    if penelope.relationship.value >= Relationship.LOYAL.value and (chloe.relationship.value >= Relationship.GIRLFRIEND.value or laurenrs):
         scene v14s43c_1j #FPP. same as v14s43c_1b Penelope has a slightly confused expression, mouth closed
         with dissolve
 

@@ -164,6 +164,12 @@ label after_load:
             if cameronBro and cameron.relationship.value < Relationship.BRO.value: cameron.relationship = Relationship.BRO
         except NameError: pass
         try:
+            if chloers and chloe.relationship.value < Relationship.FWB.value: chloe.relationship = Relationship.FWB
+        except NameError: pass
+        try:
+            if chloegf and chloe.relationship.value < Relationship.GIRLFRIEND.value: chloe.relationship = Relationship.GIRLFRIEND
+        except NameError: pass
+        try:
             if emmyrs and emmy.relationship.value < Relationship.LIKES.value: emmy.relationship = Relationship.LIKES
         except NameError: pass
         try:
@@ -679,8 +685,6 @@ label after_load:
         except NameError: v11_kiss_nora = False
         try: v11_told_aubrey
         except NameError: v11_told_aubrey = False
-        try: chloegf
-        except NameError: chloegf = False
         try: v11_lindsey_slogan
         except NameError: v11_lindsey_slogan = 0 
         try: v11_linds_inv_imre

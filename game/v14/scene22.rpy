@@ -254,7 +254,7 @@ label v14s22_sell_car:
 
     u "What's so funny?"
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v14s22_5e
         with dissolve
 
@@ -301,7 +301,7 @@ label v14s22_steal:
 
     u "It's a really smart plan, I just hope we can pull it off."
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v14s22_5k # FPP. same as v14s22_5f head tilted down, but looking directly up at mc
         with dissolve
 

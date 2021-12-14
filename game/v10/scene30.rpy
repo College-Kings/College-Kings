@@ -163,7 +163,7 @@ label v10_chloe_gym:
 
     u "(Damn...)"
 
-    if chloers: # If in a relationship with Chloe
+    if chloe.relationship.value >= Relationship.FWB.value: # If in a relationship with Chloe
         # -Event1 Look closer-
         menu:
             "Look closer":
@@ -387,7 +387,7 @@ label v10_chloe_gym:
 
                 pause 0.5
 
-    elif not chloemad and not chloers: # If Chloe likes MC but no relationship
+    elif not chloemad and chloe.relationship.value < Relationship.FWB.value: # If Chloe likes MC but no relationship
         menu:
             "Look closer":
                 scene v10chg6a

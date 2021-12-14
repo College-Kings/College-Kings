@@ -413,7 +413,7 @@ label v13s50:
 
     stop music fadeout 3
 
-    if chloegf and not v11_riley_roomate:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value and not v11_riley_roomate:
         jump v13s52
     
     elif riley.relationship.value >= Relationship.FWB.value and v11_riley_roomate:
