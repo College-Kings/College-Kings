@@ -104,25 +104,25 @@ define PB_CHLOE = PathBuilderItem(PathBuilderCatagories.GIRL, "Chloe",
         (set_variable, "ending", "chloe"),
         (set_variable, "hcGirl", "chloe")
     ])
-define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", [(toggle_variable, "nora.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
-define PB_AUBREY = PathBuilderItem(PathBuilderCatagories.GIRL, "Aubrey", [(toggle_variable, "aubrey.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
-define PB_RILEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Riley", [(toggle_variable, "riley.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
-define PB_LAUREN = PathBuilderItem(PathBuilderCatagories.GIRL, "Lauren", [(toggle_variable, "lauren.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
+define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", (toggle_variable, "nora.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND))
+define PB_AUBREY = PathBuilderItem(PathBuilderCatagories.GIRL, "Aubrey", (toggle_variable, "aubrey.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND))
+define PB_RILEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Riley", (toggle_variable, "riley.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND))
+define PB_LAUREN = PathBuilderItem(PathBuilderCatagories.GIRL, "Lauren", (toggle_variable, "lauren.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND))
 define PB_PENELOPE = PathBuilderItem(PathBuilderCatagories.GIRL, "Penelope", [
-        (toggle_variable, "penelope.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)
+        (toggle_variable, "penelope.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND),
         (toggle_variable, "v11_pen_goes_europe")
     ])
-define PB_AMBER = PathBuilderItem(PathBuilderCatagories.GIRL, "Amber", [(toggle_variable, "amber.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
-define PB_LINDSEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Lindsey", [(toggle_variable, "lindsey.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
-define PB_MS_ROSE = PathBuilderItem(PathBuilderCatagories.GIRL, "Ms Rose", [(toggle_variable, "ms_rose.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
-define PB_SAMANTHA = PathBuilderItem(PathBuilderCatagories.GIRL, "Samantha", [(toggle_variable, "samantha.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
-define PB_JENNY = PathBuilderItem(PathBuilderCatagories.GIRL, "Jenny", [(toggle_variable, "jenny.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
-define PB_EMILY = PathBuilderItem(PathBuilderCatagories.GIRL, "Emily", [(toggle_variable, "emily.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
+define PB_AMBER = PathBuilderItem(PathBuilderCatagories.GIRL, "Amber", (toggle_variable, "amber.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND))
+define PB_LINDSEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Lindsey", (toggle_variable, "lindsey.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND))
+define PB_MS_ROSE = PathBuilderItem(PathBuilderCatagories.GIRL, "Ms Rose", (toggle_variable, "ms_rose.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND))
+define PB_SAMANTHA = PathBuilderItem(PathBuilderCatagories.GIRL, "Samantha", (toggle_variable, "samantha.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND))
+define PB_JENNY = PathBuilderItem(PathBuilderCatagories.GIRL, "Jenny", (toggle_variable, "jenny.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND))
+define PB_EMILY = PathBuilderItem(PathBuilderCatagories.GIRL, "Emily", (toggle_variable, "emily.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND))
 
-define PB_ACT_1 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 1 Start", [(set_variable, "start_location", "start")])
-define PB_HOMECOMING = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 2 Start", [(set_variable, "start_location", "v7_homecoming")])
-define PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 3 Start", [(set_variable, "start_location", "v11_start")])
-define PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", [(set_variable, "start_location", "v14_start")])
+define PB_ACT_1 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 1 Start", (set_variable, "start_location", "start"))
+define PB_HOMECOMING = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 2 Start", (set_variable, "start_location", "v7_homecoming"))
+define PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 3 Start", (set_variable, "start_location", "v11_start"))
+define PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", (set_variable, "start_location", "v14_start"))
 
 screen spoiler_path_builder():
     modal True
@@ -180,7 +180,7 @@ screen path_builder(catagory_step=1):
                         idle "images/path builder/pb_button.webp"
                         hover "images/path builder/pb_selected.webp"
                         selected_idle "images/path builder/pb_selected.webp"
-                        selected all(getattr(store, variable) == value for func variable, value in item.funcs) or all(value in variable for func variable, value in item.funcs)
+                        selected all(getattr(store, variable) == value for func variable, value in item.funcs)
                         action [Function(func, variable, value) for func, variable, value in item.funcs]
 
                     text item.name:
