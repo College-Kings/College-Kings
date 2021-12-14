@@ -714,6 +714,7 @@ label v11s28a_galleryScene:
     menu:
         "Massage her boob":
             $ samantha.relationship = Relationship.MOVE
+            $ sceneList.add("v11_samantha")
             $ add_point(KCT.TROUBLEMAKER)
 
             scene v11sas18a # TPP. Same as v11sas18, MC has his hands over her boob, she is smiling, mouth closed
