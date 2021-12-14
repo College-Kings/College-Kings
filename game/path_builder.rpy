@@ -10,34 +10,40 @@ init python:
     
 
     class PathBuilderItem:
-        def __init__(self, catagory, name, variables=None, values=None, func="set_variables"):
+        def __init__(self, catagory, name, funcs=None):
             self.catagory = catagory
             self.name = name
-            self.func = func
 
-            if variables is None: self.variables = []
-            elif isinstance(variables, list): self.variables = variables
-            else: self.variables = [variables]
-
-            if values is None: self.values = []
-            elif isinstance(values, list): self.values = values
-            else: self.values = [values]
+            if funcs is None: self.funcs = []
+            elif isinstance(funcs, list): self.funcs = funcs
+            else: self.funcs = [funcs]
 
             pb_item.append(self)
 
-        def set_variables(self):
-            for variable, value in zip(self.variables, self.values):
-                setattr(store, variable, value)
 
-        def toggle_variables(self):
-            if self.values is None:
-                self.values = [(True, False)] * len(self.variables)
+    # Action functions
+    def set_variable(variable, value):
+        setattr(store, variable, value)
 
-            for variable, value in zip(self.variables, self.values):
-                if getattr(store, variable):
-                    setattr(store, variable, value)
-                else:
-                    setattr(store, variable, value)
+    def toggle_variable(variable, true_value=True, false_value=False):
+        current_value = getattr(store, variable)
+
+        if current_value == true_value:
+            setattr(store, variable, false_value)
+        else:
+            setattr(store, variable, true_value)
+
+    def add_to_list(variable, value):
+        var = getattr(store, variable)
+
+        var.append(value)
+        setattr(store, variable, var)
+
+    def add_to_set(variable, value):
+        var = getattr(store, variable)
+        
+        var.add(value)
+        setattr(store, variable, var)
 
 
     def get_catagory(step):
@@ -50,47 +56,76 @@ init python:
 define PB_WOLVES = PathBuilderItem(
     PathBuilderCatagories.FRATERNITY,
     "Wolves",
-    ["path_builder", "joinwolves", "forgiveemily"],
-    [True, True, True])
+    [
+        (set_variable, "path_builder", True),
+        (set_variable, "joinwolves", True),
+        (set_variable, "forgiveemily", True)
+    ])
 define PB_APES = PathBuilderItem(
     PathBuilderCatagories.FRATERNITY,
     "Apes",
-    ["path_builder", "joinwolves", "forgiveemily"],
-    [True, False, True])
+    [
+        (set_variable, "path_builder", True),
+        (set_variable, "joinwolves", False),
+        (set_variable, "forgiveemily", True)
+    ])
 
 define PB_LOYAL = PathBuilderItem(
     PathBuilderCatagories.KCT,
     "Loyal",
-    ["kct", "bro", "boyfriend", "troublemaker"],
-    ["loyal", 2, 2, 1])
+    [
+        (set_variable, "kct", "loyal"),
+        (set_variable, "bro", 2),
+        (set_variable, "boyfriend", 2),
+        (set_variable, "troublemaker", 1)
+    ])
 define PB_POPULAR = PathBuilderItem(
     PathBuilderCatagories.KCT,
     "Popular",
-    ["kct", "bro", "boyfriend", "troublemaker"],
-    ["popular", 2, 1, 2])
+    [
+        (set_variable, "kct", "popular"),
+        (set_variable, "bro", 2),
+        (set_variable, "boyfriend", 1),
+        (set_variable, "troublemaker", 2)
+    ])
 define PB_CONFIDENT = PathBuilderItem(
     PathBuilderCatagories.KCT,
     "Confident",
-    ["kct", "bro", "boyfriend", "troublemaker"],
-    ["confident", 1, 2, 2])
+    [
+        (set_variable, "kct", "confident"),
+        (set_variable, "bro", 1),
+        (set_variable, "boyfriend", 2),
+        (set_variable, "troublemaker", 2)
+    ])
 
-define PB_CHLOE = PathBuilderItem(PathBuilderCatagories.GIRL, "Chloe", ["chloe.relationship", "ending", "hcGirl"], [Relationship.GIRLFRIEND, "chloe", "chloe"])
-define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", ["nora.relationship", "noralikes", "v12_nora_sex"], [Relationship.GIRLFRIEND, True, True])
-define PB_AUBREY = PathBuilderItem(PathBuilderCatagories.GIRL, "Aubrey", "aubrey.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
-define PB_RILEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Riley", "riley.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
-define PB_LAUREN = PathBuilderItem(PathBuilderCatagories.GIRL, "Lauren", "lauren.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
-define PB_PENELOPE = PathBuilderItem(PathBuilderCatagories.GIRL, "Penelope", ["penelopers", "v11_pen_goes_europe"], [True, True])
-define PB_AMBER = PathBuilderItem(PathBuilderCatagories.GIRL, "Amber", "amber.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
+define PB_CHLOE = PathBuilderItem(PathBuilderCatagories.GIRL, "Chloe",
+    [
+        (set_variable, "chloe.relationship", Relationship.GIRLFRIEND),
+        (set_variable, "ending", "chloe"),
+        (set_variable, "hcGirl", "chloe")
+    ])
+define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", [
+        (set_variable, "nora.relationship", Relationship.GIRLFRIEND),
+        (set_variable, "noralikes", True),
+        (set_variable, "v12_nora_sex", True)
+    ])
+define PB_AUBREY = PathBuilderItem(PathBuilderCatagories.GIRL, "Aubrey", [(toggle_variable, "aubrey.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
+define PB_RILEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Riley", [(toggle_variable, "riley.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
+define PB_LAUREN = PathBuilderItem(PathBuilderCatagories.GIRL, "Lauren", [(toggle_variable, "lauren.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
+define PB_PENELOPE = PathBuilderItem(PathBuilderCatagories.GIRL, "Penelope", [
+        (toggle_variable, "penelopers")
+        (toggle_variable, "v11_pen_goes_europe")
+    ])
+define PB_AMBER = PathBuilderItem(PathBuilderCatagories.GIRL, "Amber", [(toggle_variable, "amber.relationship", Relationship.FRIEND, Relationship.GIRLFRIEND)])
 define PB_LINDSEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Lindsey", ["lindseyrs", "v12_lindsey_sex"], [True, True])
-define PB_MS_ROSE = PathBuilderItem(PathBuilderCatagories.GIRL, "Ms Rose", "ms_rose.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
-define PB_SAMANTHA = PathBuilderItem(PathBuilderCatagories.GIRL, "Samantha", "v11_samantha_spa", func="toggle_variables")
-define PB_JENNY = PathBuilderItem(PathBuilderCatagories.GIRL, "Jenny", "jenny.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
-define PB_EMILY = PathBuilderItem(PathBuilderCatagories.GIRL, "Emily", "emily.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variables")
+define PB_MS_ROSE = PathBuilderItem(PathBuilderCatagories.GIRL, "Ms Rose", "ms_rose.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variable")
+define PB_SAMANTHA = PathBuilderItem(PathBuilderCatagories.GIRL, "Samantha", "v11_samantha_spa", func="toggle_variable")
+define PB_JENNY = PathBuilderItem(PathBuilderCatagories.GIRL, "Jenny", "jenny.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variable")
+define PB_EMILY = PathBuilderItem(PathBuilderCatagories.GIRL, "Emily", "emily.relationship", [(Relationship.FRIEND, Relationship.GIRLFRIEND)], func="toggle_variable")
 
 define PB_HOMECOMING = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 2 Start", "start_location", "v7_homecoming", "set_start_location")
 define PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 3 Start", "start_location", "v11_start", "set_start_location")
 define PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", "start_location", "v14_start", "set_start_location")
-
 
 screen spoiler_path_builder():
     modal True
@@ -150,14 +185,8 @@ screen path_builder(catagory_step=1):
                         idle "images/path builder/pb_button.webp"
                         hover "images/path builder/pb_selected.webp"
                         selected_idle "images/path builder/pb_selected.webp"
-                        if item.func == "set_variables":
-                            selected all(getattr(store, variable) == value for variable, value in zip(item.variables, item.values))
-                            action Function(item.set_variables)
-                        elif item.func == "toggle_variables":
-                            selected all(getattr(store, variable) == True for variable in item.variables)
-                            action Function(item.toggle_variables)
-                        elif item.func == "set_start_location":
-                            action SetScreenVariable("start_location", item.values[0])
+                        selected all(variable == value for func variable, value in item.funcs) or all(value in variable for func variable, value in item.funcs)
+                        action [Function(func, variable, value) for func, variable, value in item.funcs]
 
                     text item.name:
                         align (0.5, 0.5)
