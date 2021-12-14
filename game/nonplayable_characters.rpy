@@ -168,6 +168,7 @@ default beth = NonPlayableCharacter("Beth")
 default buyer = NonPlayableCharacter("Buyer")
 default caleb = NonPlayableCharacter("Caleb", "Aleb")
 default cameron = NonPlayableCharacter("Cameron", "Cameroon") #Relationship progression: FRIEND, BRO
+default candy = NonPlayableCharacter("Candy") #Relationship progression: FRIEND, LIKES, FWB
 default charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
 default chloe = NonPlayableCharacter("Chloe", "Chloe101") #Relationship progression: FRIEND, FWB, GIRLFRIEND
 default chris = NonPlayableCharacter("Chris", "Chriscuit")
