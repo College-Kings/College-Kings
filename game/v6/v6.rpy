@@ -3116,7 +3116,7 @@ label fy_bd: # not gone to Emily's
 
     pause 0.5
 
-    if evelyn.relationship == Relationship.DATE:
+    if evelyn.relationship.value >= Relationship.DATE.value:
         play music "music/mlove1.mp3"
 
         queue music ["music/mlove2.mp3"]
@@ -3570,7 +3570,7 @@ label fy_bd: # not gone to Emily's
 
         ev "I've already called an Uber."
 
-        if evelyn.relationship == Relationship.LIKES:
+        if evelyn.relationship.value >= Relationship.LIKES.value:
             ev "Are you just gonna walk back? We can share the Uber if you want."
 
             scene s560a
@@ -3589,7 +3589,7 @@ label fy_bd: # not gone to Emily's
 
         ev "There it is."
 
-        if evelyn.relationship == Relationship.LIKES:
+        if evelyn.relationship.value >= Relationship.LIKES.value:
             scene s562 # Close up evelyn smiling at you, standing in front of you, about to enter the uber
             with dissolve
 
@@ -3652,7 +3652,7 @@ label fy_bd: # not gone to Emily's
         scene s564 # you walking back to your dorm at night
         with fade
 
-        if evelyn.relationship == Relationship.LIKES:
+        if evelyn.relationship.value >= Relationship.LIKES.value:
             u "(That went way better than expected. Once she started talking about her dreams, it's like she turned into this completely different person.)"
 
         else:

@@ -3690,56 +3690,7 @@ label v10s33_emily1:
     label v10s33_evelyn1:
     $ freeroam6.add("evelyn")
 
-    if evelyn.relationship == Relationship.DATE: #if Date but unsuccessful
-        if not "ryan" in freeroam6:
-            scene fr6toilet # toilet screen
-        else:
-            scene fr6toiletwithryan
-
-        u "(What's she doing here? I'd rather avoid her after how our date went.)"
-
-        call screen v10s33_toilet
-
-    elif evelyn.relationship == Relationship.FRIEND: #if no date with Evelyn
-        scene v10cfrev1a #fpp, shows evelyn looking at mc, neutral expression mouth closed
-
-        u "Out of everyone here, I'm most surprised to see you."
-
-        scene v10cfrev1 #same 1a, mouth open
-        with dissolve
-
-        ev "Do I know you?"
-
-        scene v10cfrev1a
-        with dissolve
-
-        u "Uhm, it's me [name], I bought that costume a while back."
-
-        scene v10cfrev1
-        with dissolve
-
-        ev "Oh yeah."
-
-        scene v10cfrev1a
-        with dissolve
-
-        u "Lots of new customers asking for costumes?"
-
-        scene v10cfrev1
-        with dissolve
-
-        ev "Nope, just you."
-
-        scene v10cfrev1a
-        with dissolve
-
-        u "(Okay, someone isn't interested in talking.)"
-
-        u "Well, see you around."
-
-        call screen v10s33_toilet
-
-    else:
+    if evelyn.relationship.value >= Relationship.LIKES.value: #If Date successful
         scene v10cfrev1a
 
         u "Out of everyone here, I'm most surprised to see you."
@@ -3805,6 +3756,55 @@ label v10s33_emily1:
         with dissolve
 
         u "Well, I'll see you around then."
+
+        call screen v10s33_toilet
+
+    elif evelyn.relationship.value >= Relationship.DATE.value: #if Date but unsuccessful
+        if not "ryan" in freeroam6:
+            scene fr6toilet # toilet screen
+        else:
+            scene fr6toiletwithryan
+
+        u "(What's she doing here? I'd rather avoid her after how our date went.)"
+
+        call screen v10s33_toilet
+
+    else: #if no date with Evelyn
+        scene v10cfrev1a #fpp, shows evelyn looking at mc, neutral expression mouth closed
+
+        u "Out of everyone here, I'm most surprised to see you."
+
+        scene v10cfrev1 #same 1a, mouth open
+        with dissolve
+
+        ev "Do I know you?"
+
+        scene v10cfrev1a
+        with dissolve
+
+        u "Uhm, it's me [name], I bought that costume a while back."
+
+        scene v10cfrev1
+        with dissolve
+
+        ev "Oh yeah."
+
+        scene v10cfrev1a
+        with dissolve
+
+        u "Lots of new customers asking for costumes?"
+
+        scene v10cfrev1
+        with dissolve
+
+        ev "Nope, just you."
+
+        scene v10cfrev1a
+        with dissolve
+
+        u "(Okay, someone isn't interested in talking.)"
+
+        u "Well, see you around."
 
         call screen v10s33_toilet
 
