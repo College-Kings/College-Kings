@@ -152,61 +152,79 @@ label after_load:
 
         ##Relationship types
         try:
-            if amberrs and amber.relationship.value < Relationship.FWB.value: amber.relationship = Relationship.FWB
+            if amberrs: amber.relationship = Relationship.FWB
+            del amberrs
         except NameError: pass
         try:
-            if aryssars and aryssa.relationship.value < Relationship.LIKES.value: aryssa.relationship = Relationship.LIKES
+            if aryssars: aryssa.relationship = Relationship.LIKES
+            del aryssars
         except NameError: pass
         try:
-            if aubreyrs and aubrey.relationship.value < Relationship.FWB.value: aubrey.relationship = Relationship.FWB
+            if aubreyrs: aubrey.relationship = Relationship.FWB
+            del aubreyrs
         except NameError: pass
         try:
-            if AutumnTrust and autumn.relationship.value < Relationship.TRUST.value: autumn.relationship = Relationship.TRUST
+            if AutumnTrust: autumn.relationship = Relationship.TRUST
+            del AutumnTrust
         except NameError: pass
         try:
-            if cameronBro and cameron.relationship.value < Relationship.BRO.value: cameron.relationship = Relationship.BRO
+            if cameronBro: cameron.relationship = Relationship.BRO
+            del cameronBro
         except NameError: pass
         try:
-            if chloers and chloe.relationship.value < Relationship.FWB.value: chloe.relationship = Relationship.FWB
+            if chloers: chloe.relationship = Relationship.FWB
+            del chloers
         except NameError: pass
         try:
-            if chloegf and chloe.relationship.value < Relationship.GIRLFRIEND.value: chloe.relationship = Relationship.GIRLFRIEND
+            if chloegf: chloe.relationship = Relationship.GIRLFRIEND
+            del chloegf
         except NameError: pass
         try:
-            if emmyrs and emmy.relationship.value < Relationship.LIKES.value: emmy.relationship = Relationship.LIKES
+            if emmyrs: emmy.relationship = Relationship.LIKES
+            del emmyrs
         except NameError: pass
         try:
             if "v13_emmy" in sceneList and emmy.relationship.value < Relationship.FWB.value: emmy.relationship = Relationship.FWB
         except NameError: pass
         try:
-            if evelyndate and evelyn.relationship.value < Relationship.DATE.value: evelyn.relationship = Relationship.DATE
+            if evelyndate: evelyn.relationship = Relationship.DATE
+            del evelyndate
         except NameError: pass
         try:
-            if evelynrs and evelyn.relationship.value < Relationship.LIKES.value: evelyn.relationship = Relationship.LIKES
+            if evelynrs: evelyn.relationship = Relationship.LIKES
+            del evelynrs
         except NameError: pass
         try:
-            if jennyawkward and jenny.relationship.value > Relationship.AWKWARD.value: jenny.relationship = Relationship.AWKWARD
+            if jennyawkward: jenny.relationship = Relationship.AWKWARD
+            del jennyawkward
         except NameError: pass
         try:
-            if jennyrs and jenny.relationship.value < Relationship.FWB.value: jenny.relationship = Relationship.FWB
+            if jennyrs: jenny.relationship = Relationship.FWB
+            del jennyrs
         except NameError: pass
         try:
-            if kourtneyrs and kourtney.relationship.value < Relationship.LIKES.value: kourtney.relationship = Relationship.LIKES
+            if kourtneyrs: kourtney.relationship = Relationship.LIKES
+            del kourtneyrs
         except NameError: pass
         try:
-            if lindseyrs and lindsey.relationship.value < Relationship.FWB.value: lindsey.relationship = Relationship.FWB
+            if lindseyrs: lindsey.relationship = Relationship.FWB
+            del lindseyrs
         except NameError: pass
         try:
-            if msrosers and ms_rose.relationship.value < Relationship.FWB.value: ms_rose.relationship = Relationship.FWB
+            if msrosers: ms_rose.relationship = Relationship.FWB
+            del msrosers
         except NameError: pass
         try:
-            if penelopers and penelope.relationship.value < Relationship.LIKES.value: penelope.relationship = Relationship.LIKES
+            if penelopers: penelope.relationship = Relationship.LIKES
+            del penelopers
         except NameError: pass
         try:
-            if penelopeloyal and penelope.relationship.value < Relationship.LOYAL.value: penelope.relationship = Relationship.LOYAL
+            if penelopeloyal: penelope.relationship = Relationship.LOYAL
+            del penelopeloyal
         except NameError: pass
         try:
-            if rileyrs and riley.relationship.value < Relationship.FWB.value: riley.relationship = Relationship.FWB
+            if rileyrs: riley.relationship = Relationship.FWB
+            del rileyrs
         except NameError: pass
 
 
