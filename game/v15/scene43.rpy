@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 1), AMBER (Outfit: Detective), CHRIS (Outfit: 2)
 # Time: Morning
 
-
 label v15s43:
     scene v15s43_1 # TPP. Show MC and Amber walking up to the wolves front door, both slight smile, mouths closed.
     with fade (1,0,1)
@@ -405,7 +404,7 @@ label v15s43:
 
     ch "Huh?"
 
-    if wolves:
+    if joinwolves:
         ch "What do you mean, [name]?"
     else:
         ch "What are you talking about?"
