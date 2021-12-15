@@ -8,7 +8,7 @@ label v15s18c:
 
 label v15s18c_riley:
     scene v15s18c_ri_1 # TPP. Show MC walking into the bathroom, Riley adjusting her make up in front of the mirror, MC slightly startled, Riley slightly startled, both mouths closed
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -349,7 +349,7 @@ label v15s18c_riley:
 
 label v15s18c_imre_aubrey:
     scene v15s18c_imau_1 # TPP. Show MC walking up to Imre and Aubrey, MC slight smile, mouth closed, Imre slight smile, mouth open, looking at Aubrey, Aubrey looking at Imre, mouth closed, slightly annoyed
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -1094,9 +1094,9 @@ label v15s18c_imre_aubrey:
     call screen v15s18a_upstairsroom
 
 label v15s18c_ryan:
-    $ V15s18a_frryan = True
+    $ freeroam14.add("ryan")
     scene v15s18c_ry_1 # TPP. Show MC walking up to Ryan (Ryan is sleeping on the couch), MC mouth closed, slightly confused (make sure there is a visible condom in his shirt pocket)
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -1239,7 +1239,7 @@ label v15s18c_ryan:
 
 label v15s18c_lauren:
     scene v15s18c_la_1 # TPP. Show MC walking on to the balcony, Lauren already there, looking at the view, both slight smiles, mouths closed
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -1339,7 +1339,7 @@ label v15s18c_lauren:
 
     u "Me too, really. Everyone seems to be having a great time, too."
 
-    if V15s18a_frryan:
+    if "ryan" in freeroam13 or "ryan" in freeroam14:
         scene v15s18c_la_3
         with dissolve
 
@@ -1470,7 +1470,7 @@ label v15s18c_lauren:
 
 label v15s18c_autumn_amber:
     scene v15s18c_auam_1 # FPP. MC watchign Amber and Autumn at the bar from a slight distance, Autumn and Amber smiling, Autumn mouth open, Amber mouth closed
-    with dissolve
+    #with dissolve
 
     aut "Haha, I swear! I have no idea what strain it is, I've never asked."
 
@@ -1957,9 +1957,8 @@ label v15s18c_autumn_amber:
                 call screen v15s18a_upstairsroom
 
 label v15s18c_autumn_kiss:
-
     scene v15s18c_auam_8 # TPP. Show Autumn and MC leaving the bar, both slight smiles, mouths closed
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -2047,7 +2046,7 @@ label v15s18c_autumn_kiss:
 
 label v15s18c_chris_penelope:
     scene v15s18c_chpe_1 # FPP. MC watching Chris and Penelope from a slight distance, Chris cornering Penelope, Penelope uncomfortable, mouth closed, Chris slightly sad, mouth open Chris and Penelope looking at each other
-    with dissolve
+    #with dissolve
 
     ch "Yeah, but... You know what it's like."
 

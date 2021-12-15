@@ -1151,7 +1151,7 @@ label v4start:
                     jump autumnsita
 
                 else:
-                    $ autumnmad = True
+                    $ autumn.relationship = Relationship.MAD
                     scene s334b
                     with dissolve
 
@@ -1167,7 +1167,7 @@ label v4start:
                     jump readmontagea
 
             "Sit somewhere else":
-                $ autumnmad = True
+                $ autumn.relationship = Relationship.MAD
 
                 jump ea_b
 
@@ -1205,7 +1205,7 @@ label v4start:
                 if kct == "loyal":
                     call screen kct_popup
 
-                    $ autumnmad = False
+                    $ autumn.relationship = Relationship.FRIEND
                     scene s334d # autumn emphatic
                     with dissolve
 
@@ -1238,7 +1238,7 @@ label v4start:
                     jump autumnsita
 
                 else:
-                    $ autumnmad = True
+                    $ autumn.relationship = Relationship.MAD
                     
                     scene s334b
                     with dissolve
@@ -1255,7 +1255,7 @@ label v4start:
                     jump readmontagea
 
             "Sit somewhere else":
-                $ autumnmad = True
+                $ autumn.relationship = Relationship.MAD
 
                 jump ea_b
 
@@ -1332,7 +1332,7 @@ label v4start:
         jump autumnsita
 
 label ea_b:
-    $ autumnmad = True
+    $ autumn.relationship = Relationship.MAD
     scene s334c
     with dissolve
 

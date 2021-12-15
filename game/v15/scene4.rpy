@@ -1038,8 +1038,9 @@ label v15s4:
     scene v15s4_47 # FPP. Show Oscar the dog running away from Autumn towards MC excitedly, Autumn slight smile, mouth closed.
     with dissolve
 
-    if not autumnmad:
+    if v7_visited_shelter:
         aut "I think he remembers you! Haha, that's so cute..."
+
     else:
         pause 0.75
 

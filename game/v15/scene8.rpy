@@ -70,18 +70,65 @@ label v15s8:
 # -Insert Planning Board with the options for phase 2-
 # -The planning board pops up and MC makes his choices from what's presented, close when finished-
     python:
-        chloe_board = PlanningBoard("images/v15/chicks_presidency_race/planning_boards/chloe_background.webp", money=1500)
+        chloe_board = PlanningBoard("images/v15/chicks_presidency_race/planning_boards/chloe_background.webp")
+
+        chloe_board.add_approach("Sabotage",
+            "Damage Lindsey's reputation",
+            opinion="\"This idea isn't for the faint of heart, but I've got to play the game if I want to win it... We sabotage her campaign with a not-so-tiny bit of embarrassment.\"")
+        
+        chloe_board.add_approach("Tuition",
+            "Less tuition for all Chicks",
+            opinion="\"The one thing I have always dreamed of being able to do as the president of the Chicks is to get all members free tuition. People don't like the idea of the President receiving free tuition, and some girls still don't know that's the case... I want all of the Chicks to come to San Vallejo for free so they can focus on their education and the sorority. If we make a good enough case, I might be able to convince the Dean into making this happen.\"")
+
+        chloe_board.add_task("Sabotage",
+            "Secretly record Lindsey",
+            opinion="\"After we get a few bottles of booze, you and Imre will do your best to get Lindsey wasted. I'm not sure what type of mood she'll be in, but maybe you should tell her she needs to relax for a bit. After all, she's probably stressed that she has nothing and I have everything...\"")
+
+        chloe_board.add_task("Sabotage",
+            "Provoke Lindsey to say something that might damage her reputation",
+            opinion="\"OPINION\"")
+
+        v15s8_chloe_kiwii = chloe_board.add_subtask("Sabotage",
+            "Chloe posts the recording on Kiwii",
+            opinion="\"OPINION\"")
+
+        chloe_board.add_subtask("Sabotage",
+            "Share the recording through the Dean's announcement system",
+            opinion="\"OPINION\"")
+
+        chloe_board.add_subtask("Tuition",
+            "Try and convince Mr. Lee to support you in front of the Dean on this",
+            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from fellow members of the school board. The two faculty members that we're most close with are Mr. Lee and Ms. Rose. Mr. Lee is a highly respected member of the school board. If he agrees with our plan, there's a very slim chance that the Dean will deny our request. It might be smart to focus on him during our meeting.\"")
+
+        v15s8_chloe_lee = chloe_board.add_subtask("Tuition",
+            "Try and convince Ms. Rose to support you in front of the Dean on this",
+            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from fellow members of the school board. The two faculty members that we're most close with are Mr. Lee and Ms. Rose. Ms. Rose is not only an independent and fantastic leader, she's also been known to have hung out with the Dean outside of campus. It might be smart to focus on her during our meeting.\"")
+            
+        chloe_board.add_task("Tuition",
+            "Talk to the Dean with Mr. Lee or Ms. Rose's support",
+            opinion="\"Finally, we have a meeting with the Dean. Depending on how we do with Lee and Rose, hopefully one of them, or both of them, decides to join the meeting in support of our idea. The more support we have, the more likely the Dean is to approve. \"")
+
+    call screen planning_board(chloe_board)
 
     ##A     Sabotage
     ##A.1   Get Lindsey wasted
-    ##A.2a  Destroy items
-    ##A.2b  Embarrassing pic
-    ##A.3   Post to Kiwii
+    ##A.2   Provoke Lindsey
+    ##A.3a  Post to Kiwii
+    ##A.3b  Share on Dean PA
     
     ##B     Free Tuition
     ##B.1a  Mr. Lee support
     ##B.1b  Ms. Rose support
     ##B.2   Meet Dean
+
+    if chloe_board.approach is not None:
+        $ v15_chloe_lindseysabotage = chloe_board.approach.id == "Sabotage"
+
+    if chloe_board.selected_task is not None:
+        $ v15_chloe_postkiwii = chloe_board.selected_task == v15s8_chloe_kiwii
+        $ v15_chloe_mrleesupport = chloe_board.selected_task == v15s8_chloe_lee
+
+    # End planning board (screen disappears)
 
     scene v15s8_4a # TPP. Same as v15s8_4, MC slight smile, mouth open, Chloe slight smile, mouth closed.
     with dissolve 
@@ -124,7 +171,7 @@ label v15s8:
         scene v15s8_3
         with dissolve
 
-    if v15_LessChickTuition:
+    elif v14_help_chloe:
         scene v15s8_3a
         with dissolve
 

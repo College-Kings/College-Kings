@@ -35,10 +35,10 @@ label v15s18a:
 # Location 1- At the bar in the deer's house
 # *Clicking on Aubrey*
 label v15s18a_Aubrey:
-    $ v15s18a_fraubrey = True
+    $ freeroam13.add("aubrey")
 
     scene v15s18aaub_1 # TPP. Show MC starting to sit on the stool next to Aubrey, slight smile, mouth closed. Just show Aubrey's backside.
-    with dissolve
+    #with dissolve
 
     pause 0.75 
 
@@ -381,17 +381,16 @@ label v15s18a_Aubrey:
 
     pause 0.75
     
-
     call screen v15s18a_bar
 
 # Upstairs
 # Location 2- Bathroom on Upstairs of deer's house:
 # *Clicking on Bathroom*
 label v15s18a_Ryan:
-    $ V15s18a_frryan = True
+    $ freeroam13.add("ryan")
 
     scene v15s18a_ryan_1 # TPP. Show MC standing outside the bathroom, slight smile, mouth closed
-    with dissolve
+    #with dissolve
 
     u "(I think this is the bathroom...?)"
 
@@ -542,10 +541,10 @@ label v15s18a_Ryan:
 # Location 3- Autumn's room
 # *Clicking on Autumn's door
 label v15s18a_AutumPenelope:
-    $ v15s18a_frautumpenelope = True
+    $ freeroam13.add("autumn_penelope")
 
     scene v15s18apen_1 # TPP. Show MC putting his ear to Autumn's room door, slight smile, mouth closed.
-    with dissolve
+    #with dissolve
 
     u "(I think there's people in here...?)"
 
@@ -1089,10 +1088,10 @@ label v15s18a_AutumPenelope:
 # Location 4- Couch in the living room
 # *Clicking on Imre and Lauren*
 label v15s18a_ImreLauren:
-    $ v15s18a_frimrelauren = True
+    $ freeroam13.add("imre_lauren")
     
     scene v15s18aimre_1 # TPP. MC walking over to Lauren and Imre, Imre looking at Lauren, Lauren looking at Imre, both slight smile, mouth closed.
-    with dissolve
+    #with dissolve
 
     pause 0.75 
 
@@ -1310,7 +1309,7 @@ label v15s18a_ImreLauren:
             scene v15s18aimre_6a
             with dissolve
 
-            u "Oh, it's just my grocery list. Why are you asking me about groceries, Imre? *Nervously laughs*"
+            u "Oh, it's just my grocery list. Why are you asking me about groceries, Imre? *Nervous laugh*"
 
             scene v15s18aimre_6c
             with dissolve
@@ -1350,10 +1349,11 @@ label v15s18a_ImreLauren:
 # Location 5- Kitchen in Deer's house
 # *Clicking on Riley*
 label v15s18a_Riley:
-    $ v15s18a_frriley = True
+    $ freeroam13.add("riley")
+
 # -Riley is shifting around food and plates on the counter, she's wearing a schoolgirl outfit-
     scene v15s18ariley_1 # FPP. MC looking at the Kitchen area, Food and plates out, Riley carrying plates to the part of the counter by the fridge, Riley looks stressed, mouth closed.
-    with dissolve
+    #with dissolve
 
     pause 0.75 
 
@@ -1938,10 +1938,10 @@ label v15s18a_Riley:
 # location 6- Kitchen counter stools
 # *Clicking on Chris and Amber*
 label v15s18a_ChrisAmber:
-    $ v15s18a_frchrisamber = True
+    $ freeroam13.add("chris_amber")
 
     scene v15s18aamber_1 # TPP. MC walking towards the Kitchen stools Amber is sitting on, Chris talking to Amber, Chris slight smile, mouth open, Amber slight smile, mouth closed.
-    with dissolve
+    #with dissolve
 
     pause 0.75 
 
@@ -2385,10 +2385,10 @@ label v15s18a_ChrisAmber:
 # Location 7- Upstairs hallway
 # *Clicking on the bronze deer statue*
 label v15s18a_BronzeDeer:
-    $ v15s18a_frdeer = True
+    $ freeroam13.add("deer")
 
     scene v15s18adeer_1 # FPP. MC looking at the bronze deer statue in the hallway upstairs
-    with dissolve
+    #with dissolve
 
     u "(That's an impressive deer... Looks expensive too. I wonder if it's been here since the beginning of the sorority?)"
 
@@ -2400,10 +2400,11 @@ label v15s18a_BronzeDeer:
 # Location 8- Magnet on Fridge downstairs
 # *Clicking on the magnet photo on the Fridge*
 label v15s18a_AutumnLaurenPhoto:
-    $ v15s18a_frphoto = True
+    $ freeroam13.add("photo")
+
 # -if MC clicks on a photo of Autumn and Lauren (Magnet on the fridge), it says "best friends forever". Also note that the player should have a good view of the other magnets on the fridge-
     scene v15s18aphoto_1 # FPP. MC looking at all the magnets on the fridge
-    with dissolve
+    #with dissolve
 
     pause 0.75 
 
@@ -2420,10 +2421,10 @@ label v15s18a_AutumnLaurenPhoto:
 # Location 9- Pumpkin on table next to the living room couch
 # *Clicking on pumpkin*
 label v15s18a_Pumpkin:
-    $ v15s18a_frpumpkin = True
+    $ freeroam13.add("pumpkin")
 
     scene v15s18apumpkin_1 # FPP. MC looking on a pumpkin on the table near the living room couch, The pumpkin has a cat-face carved into it.
-    with dissolve
+    #with dissolve
 
     u "(Haha, it looks too cute for a Halloween pumpkin. I'm guessing Lauren made this one.)"
 

@@ -663,9 +663,8 @@ label v15s26:
         with dissolve
 
         menu:
-            "Side with Riley, pro-polygamy":   
-                $ aubrey_fwb = True
-                $ riley_loyal = True
+            "Side with Riley, pro-polygamy":
+                $ riley.relationship = Relationship.LOYAL
 
                 u "I mean, I've never tried it, so...I wouldn't know for sure, haha. But I don't see any problems with it personally."
 
@@ -699,7 +698,7 @@ label v15s26:
 
                 au "There's no way I could share the person I love with someone else."
 
-                if aubrey.relationship.value >= Relationship.TAMED.value: # -if Aubrey Tamed she gives a stern look to MC, but continue regardless-
+                if aubrey.relationship.value > Relationship.FWB.value: # -if Aubrey Tamed she gives a stern look to MC, but continue regardless-
                     $ aubrey.relationship = Relationship.FWB
 
                     scene v15s26_14d # FPP Same angle as 14, Aubrey looking at MC with a stern expression, mouth open
@@ -757,7 +756,7 @@ label v15s26:
                         scene v15s26_15g
                         with dissolve
 
-                        u "But, Riley...The more people involved, the more emotions there are to balance."
+                        u "But, Riley... The more people involved, the more emotions there are to balance."
 
                         scene v15s26_15a
                         with dissolve
@@ -853,7 +852,7 @@ label v15s26:
             "Side with Riley, pro-polygamy": # -event1 Side with Riley, Pro-Polygamy (if AubreyTamed it becomes AubreyFwB, gain RileyLoyal; she's committed to MC as friends, romantic, TilDeathDoUsPart, all of the above)
                 if aubrey.relationship.value >= Relationship.TAMED.value:
                     $ aubrey.relationship = Relationship.FWB
-                $ riley_loyal = True
+                $ riley.relationship = Relationship.LOYAL
 
                 u "I think you're onto something here, Riley..."
 

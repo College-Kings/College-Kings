@@ -83,7 +83,6 @@ default youHealth = 5
 
 default apologize = False
 default askfinn = False
-default autumnmad = False
 default bowling = False
 default v2_caughtpeeking = False
 default v2_caughtpeekingcounter = False
@@ -96,7 +95,7 @@ default costumetried = set()
 default costumeaubrey = False
 default emilyandben = False
 default evelynnumber = False
-default forgiveemily = False
+default forgiveemily = True
 default freeroam1 = set()
 default freeroam2 = set()
 default freeroam3 = set()
@@ -153,6 +152,7 @@ default rileysex = False
 default seenlauren = False
 default signs = False
 default v7_emily_bowling = False
+default v7_visited_shelter = False
 default walkedRileyHome = False
 default wolvesTasks = set()
 
@@ -303,7 +303,7 @@ default v14_lindsey_sell = False ##APPROACH A (v14_lindsey_steal = v14_help_lind
 default v14_pics_with_linds = False ##TASK A1B (v14_pics_no_linds = v14_lindsey_sell and not v14_pics_with_linds)
 default v14_date_distraction = False ###APPROACH B1B (v14_concert_distraction = (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction)
 
-default AmberLoyal = False
+default AmberLoyal = False #????
 default chrissus = 0
 default irisStrikes = 0
 default v13_threesomeending = False
@@ -318,8 +318,8 @@ default v14_jennypoints = 0
 default v14_lauren_helps_lindsey = False
 default v14_lauren_sabotage = False
 default v14_lindsey_popularity = 45 # Use set_presidency_percent(amount).
-default v14_noraWhere = False
-default v14_noraWorry = False
+default v14_noraWhere = False #????
+default v14_noraWorry = False #????
 default v14_penelope_date = False
 default v14_PenelopePartner = False
 default v14_PenRomScene = False
@@ -353,7 +353,7 @@ default v14_Samantha_clean = False # Placeholder?
 # 15.0 
 # Chloe Planning Board (v15s8)
 default v15_chloe_lindseysabotage = False ##Approach A. Free tuition = (v14_help_chloe and not v15_chloe_lindseysabotage)
-default v15_chloe_lindseydestroy = False ##Approach A2A. Embarrassing picture = (v15_chloe_lindseysabotage and not v15_chloe_lindseydestroy)
+default v15_chloe_postkiwii = False ##Approach A3A. Dean PA System = (v15_chloe_lindseysabotage and not v15_chloe_postkiwii)
 default v15_chloe_mrleesupport = False ##Approach B1A. Ms. Rose support = (v14_help_chloe and not v15_chloe_lindseysabotage and not v15_chloe_mrleesupport)
 
 # Lindsey Planning Board (v15s12)
@@ -363,43 +363,32 @@ default v15_lindsey_inviteseb = False ##Approach B2A. Invite Grayson = (v14_help
 
 default aubrey_riley_awkward = False
 default autumnloyal = False
-default autumnrs = False
+default AubreyFriend = False #????
+default aubrey_fwb = False #????
 default dog_name = "Blue"
-default mr_lee_meeting = False # Placeholder?
-default ms_rose_meeting = False # (redundancy check) # not used (28/08/2021)
-default riley_loyal = False
+default freeroam13 = set() #halloween, part 1 (18a)
+default freeroam14 = set() #halloween, part 2 (18c)
 default v15_autumn_freemug = False
 default v15_autumn_lunchbreak = False
 default v15_autumn_smoke = False
 default v15_blame_nora = False ### blame_chris = (v13_imre_disloyal and not v15_blame_nora)
 default v15_lauren_gift = None
-default v15_less_chick_tuition = False # not used (28/08/2021)
 default v15_mad_at_ms_rose = False
-default v15_ms_rose_sex = False # Placeholder?
 default v15_ph_riley_upset = False # placeholder ?? (set in s26?? ; read in v15s27)
-default v15_stuck_up_for_nora = False # not used (28/08/2021)
+default v15_stuck_up_for_nora = False
 default v15_told_Emily_I_Love_You = False # Placeholder?
-default v15_took_notes = False # not used (28/08/2021)
+default v15_took_notes = False
 default v15s18_mention_list = False
 default v15s18_partytask = 0
 default v15s18a_aub_kiwii_smile = False
-default v15s18a_fraubrey = False
-default v15s18a_frautumnpenelope = False
-default v15s18a_frchrisamber = False
-default v15s18a_frdeer = False
-default v15s18a_frimrelauren = False
-default v15s18a_frphoto = False 
-default v15s18a_frpumpkin = False
-default v15s18a_frryan = False
 default v15s18a_gag = False
-default v15s18a_lie = False
+default v15s18a_lie = False #????
 default v15s18a_showlist_penelope_autumn = False # Show the party list to Penelope and Autumn.
 default v15s18e_cum_in_lauren = False # Noted to be remembered 
 default v15s19_local_mc_ends_in_livingroom = False 
 default v15s24_alcohol = False
 default v15s24_nancy_dick = False
-default v15s36_not_good_idea = False 
-default v15s5_mc_angry_with_rose = False # Placeholder?
-default v15s7_chloe_empathize = False
+default v15s36_not_good_idea = False
+default v15s7_chloe_empathize = False #????
 default v15s42_flirt = False
-default v15s42_grab_breakfast = False 
+default v15s42_grab_breakfast = False

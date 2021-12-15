@@ -451,7 +451,7 @@ label v15s12:
 
         #### Planning Board work goes here 
         python:
-            lindsey_board = PlanningBoard("images/v15/chicks_presidency_race/planning_boards/lindsey_background.webp", money=200, style="lindsey_board")
+            lindsey_board = PlanningBoard("images/v15/chicks_presidency_race/planning_boards/lindsey_background.webp", style="lindsey_board")
 
             lindsey_board.add_approach("Game Night",
                 "Game Night",
@@ -640,7 +640,7 @@ label v15s12_PhoneContinue:
 
     u "(I'm a man on a mission. Find Lauren a gift and find a costume. Easy.)"
     
-    if ms_rose.relationship.value >= Relationship.FWB.value and v15s5_mc_angry_with_rose: # -if RoseRs and MC acted angry in v15.5
+    if v15_mad_at_ms_rose: # -if RoseRs and MC acted angry in v15.5
         # -Transition to Scene 14-
         jump v15s14
 

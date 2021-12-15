@@ -47,19 +47,19 @@ screen hc_select():
                 action NullAction()
 
         imagebutton:
-            if "autumn" not in hcAsked and not autumnmad and lauren.relationship.value < Relationship.GIRLFRIEND.value:
+            if "autumn" not in hcAsked and not autumn.relationship.value <= Relationship.MAD.value and lauren.relationship.value < Relationship.GIRLFRIEND.value:
                 idle "images/v7/HCAutumn.webp"
                 hover "images/v7/HCAutumn2.webp"
             else:
                 idle "images/v7/HCAutumn3.webp"
                 hover "images/v7/HCAutumn23.webp"
 
-            if autumnmad:
+            if autumn.relationship.value <= Relationship.MAD.value:
                 tooltip "I think Autumn might be mad at me, so I probably shouldn't ask her."
             else:
                 tooltip "Autumn and I aren't really close, but I'll never know if she'd say yes if I don't try."
             
-            if "autumn" not in hcAsked and not (lauren.relationship.value >= Relationship.GIRLFRIEND.value or autumnmad):
+            if "autumn" not in hcAsked and not lauren.relationship.value >= Relationship.GIRLFRIEND.value and not autumn.relationship.value <= Relationship.MAD.value:
                 action Jump("hc_asking_autumn")
             else:
                 action NullAction()

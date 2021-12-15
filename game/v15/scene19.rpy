@@ -215,12 +215,12 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
         scene v15s19_8    # TPP. MC, smiling mouth closed gets his phone from his pocket while Lauren, smiling mouth closed, watches him. The kitchen is in the same condition is a v15s19_4d [Deer House Kitchen].
         with dissolve
 
-    if v14_help_chloe: # -if helping Chloe with meeting the Dean # -MC checks his texts to see a message from Chloe-
-        if not mr_lee_meeting: # -if meeting with Ms. Rose (Transcriber Note: Assuming that Meeting with Lee and Rose are mutally exclusive. otherwise use ms_rose_meeting variable)
-            $ chloe.messenger.newMessage("Hey, the meeting with Ms. Rose is this morning, so I'll see you in the library soon. Don't be late!", queue=False)
-
-        else: # -if meeting with Mr. Lee (Transcriber Note: Again, mutually exclusive)
+    if v14_help_chloe and not v15_chloe_lindseysabotage: # -if helping Chloe with meeting the Dean # -MC checks his texts to see a message from Chloe-
+        if v15_chloe_mrleesupport: # -if meeting with Mr. Lee (Transcriber Note: Again, mutually exclusive)
             $ chloe.messenger.newMessage("Hey, the meeting with Mr. Lee is this morning, so I'll see you in the library soon. Don't be late!", queue=False)
+
+        else: # -if meeting with Ms. Rose
+            $ chloe.messenger.newMessage("Hey, the meeting with Ms. Rose is this morning, so I'll see you in the library soon. Don't be late!", queue=False)
 
         $ chloe.messenger.addReply("Okay, OMW :)")
 

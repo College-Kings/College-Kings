@@ -82,16 +82,14 @@ define PB_WOLVES = PathBuilderItem(
     "Wolves",
     [
         (set_variable, "path_builder", True),
-        (set_variable, "joinwolves", True),
-        (set_variable, "forgiveemily", True)
+        (set_variable, "joinwolves", True)
     ])
 define PB_APES = PathBuilderItem(
     PathBuilderCatagories.FRATERNITY,
     "Apes",
     [
         (set_variable, "path_builder", True),
-        (set_variable, "joinwolves", False),
-        (set_variable, "forgiveemily", True)
+        (set_variable, "joinwolves", False)
     ])
 
 define PB_LOYAL = PathBuilderItem(

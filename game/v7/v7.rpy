@@ -1678,7 +1678,7 @@ label apologylauren:
     else:
         u "Listen, I know you said you needed more time, but it's been a few days and I just really want to be friends again... I know I messed up."
 
-    if not autumnmad:
+    if autumn.relationship.value > Relationship.MAD.value:
         $ lauren.relationship = Relationship.FRIEND
         scene s717
         with dissolve
@@ -1929,7 +1929,7 @@ label thisbelauren:
                         call screen kct_popup
 
                         $ lauren.relationship = Relationship.FRIEND
-                        $ autumnmad = True
+                        $ autumn.relationship = Relationship.MAD
 
                         scene s717
                         with dissolve
@@ -1950,7 +1950,7 @@ label thisbelauren:
 
                     else:
                         $ lauren.relationship = Relationship.MAD
-                        $ autumnmad = True
+                        $ autumn.relationship = Relationship.MAD
 
                         scene s717d
                         with dissolve
@@ -2026,7 +2026,7 @@ label thisbelauren:
                     $ add_point(KCT.BRO)
                     $ add_point(KCT.TROUBLEMAKER)
                     $ lauren.relationship = Relationship.MAD
-                    $ autumnmad = True
+                    $ autumn.relationship = Relationship.MAD
 
                     u "Maybe we just rushed into this."
 
@@ -2176,7 +2176,8 @@ label thisbewalk:
 
     u "(Shit... just remembered that tomorrow's also my next history lecture. Gotta make sure to remember wearing that stupid costume I bought...)"
 
-    if not autumnmad:
+    if autumn.relationship.value > Relationship.MAD.value:
+        $ v7_visited_shelter = True
         scene s721 # close up of dogshelter shop window
         with dissolve
 
