@@ -429,7 +429,7 @@ label v15s43:
     scene v15s43_14d # FPP. MC looking at Chris, Chris looking at Amber, Chris nervous, mouth closed.
     with dissolve
 
-    $ parents_house_clue = True
+    $ v15_clues.add("parents_house")
 
     scene v15s43_15
     with dissolve
@@ -468,7 +468,7 @@ label v15s43:
 
     ch "And I suggest you should respect that too."
 
-    $ clue_alone = True
+    $ v15_clues.add("alone")
 
     scene v15s43_14g # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth closed.
     with dissolve
@@ -490,7 +490,7 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            $ clue_camping = True
+            $ v15_clues.add("camping")
 
             ch "Why are you acting so weird? Listen, I don't know where she is. She could have gone camping for all I know."
 
@@ -515,7 +515,7 @@ label v15s43:
             scene v15s43_14h
             with dissolve
 
-            $ clue_camping = True
+            $ v15_clues.add("camping")
 
             ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
 
@@ -540,7 +540,7 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            $ clue_camping = True
+            $ v15_clues.add("camping")
 
             ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
 
@@ -597,7 +597,7 @@ label v15s43:
     scene v15s43_14h
     with dissolve
 
-    $ clue_mr_rose_cabin = True
+    $ v15_clues.add("cabin")
 
     ch "Her aunt... Oh yeah! Sometimes her aunt will rent out her dad's cabin."
 
@@ -651,7 +651,7 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            $ clue_nora_hates_her_dad = True
+            $ v15_clues.add("hates_dad")
 
             ch "She pretty much hates him. That's the last place she'd go."
 
@@ -709,9 +709,9 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            $ clue_nora_hates_her_dad = True
+            $ v15_clues.add("hates_dad")
 
-            ch "I doubt it. She hates her dad. (CLUE UNLOCKED: NORA HATES HER DAD.)"
+            ch "I doubt it. She hates her dad."
 
             scene v15s43_14g
             with dissolve
@@ -757,7 +757,7 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            $ clue_nora_hates_her_dad = True
+            $ v15_clues.add("hates_dad")
 
             ch "She hates her dad. She wouldn't go to him."
 
