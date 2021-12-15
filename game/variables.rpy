@@ -368,6 +368,7 @@ default aubrey_fwb = False #????
 default dog_name = "Blue"
 default freeroam13 = set() #halloween, part 1 (18a)
 default freeroam14 = set() #halloween, part 2 (18c)
+default v15_clues = set() #detective clues
 default v15_autumn_freemug = False
 default v15_autumn_lunchbreak = False
 default v15_autumn_smoke = False

@@ -41,7 +41,7 @@ label v15s43:
         with dissolve 
 
         menu:
-            "Try the door handle.":
+            "Try the door handle":
                 play sound "sounds/dooropen.mp3"
 
                 scene v15s42_3 # TPP. Close up shot of MC's hand turning the door knob and opening the door.
@@ -61,7 +61,7 @@ label v15s43:
 
                 u "We really don't. *Chuckles*"
 
-            "Keep waiting.":
+            "Keep waiting":
                 scene v15s43_2c
                 with dissolve
 
@@ -102,7 +102,7 @@ label v15s43:
                 scene v15s43_2d # FPP. Amber looking at MC, MC looking at Amber, Amber giving him the middle finger while laughing.
                 with dissolve
 
-            "(Professional:) Strategize."  if detective == "professional":
+            "(Professional:) Strategize"  if detective == "professional":
                 scene v15s43_2b
                 with dissolve
 
@@ -294,7 +294,7 @@ label v15s43:
 
             am "Chris, get your ass downstairs!"
         
-        "(Professional:) Use your instinct." if detective == "professional":
+        "(Professional:) Use your instinct" if detective == "professional":
             scene v15s43_9
             with dissolve
 
@@ -312,7 +312,7 @@ label v15s43:
 
             u "I know when something isn't right, okay? I can feel it!"
 
-        "(Psychologist:) Analyze how you feel." if detective == "psychologist":
+        "(Psychologist:) Analyze how you feel" if detective == "psychologist":
             scene v15s43_9
             with dissolve
 
@@ -328,7 +328,7 @@ label v15s43:
 
             u "*Gasps* A psychological horror!"
 
-        "(Loose Cannon:) Be angry." if detective == "loose cannon":
+        "(Loose Cannon:) Be angry" if detective == "loose cannon":
             scene v15s43_11 # TPP. View showing MC on one side of a couch in the living room, Amber on the other side with her hands in the shape of a gun, both suspicious, mouth closed.
             with dissolve
 
@@ -509,7 +509,7 @@ label v15s43:
 
             am "That's no good, Chris. You need to start telling us something we can use."
 
-        "(Professional:) You're lying." if detective == "professional":
+        "(Professional:) You're lying" if detective == "professional":
             u "You're lying straight to our faces! You know exactly where she is and it's only a matter of time before we find out."
 
             scene v15s43_14h
@@ -519,7 +519,7 @@ label v15s43:
 
             ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
 
-        "(Psychologist:) Analyze Chris." if detective == "psychologist":
+        "(Psychologist:) Analyze Chris" if detective == "psychologist":
             u "You're enjoying this aren't you? Do you get joy out of withholding information from us?"
 
             scene v15s43_14h
@@ -544,7 +544,7 @@ label v15s43:
 
             ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
 
-        "(Loose Cannon:) Accuse Chris." if detective == "loose cannon":
+        "(Loose Cannon:) Accuse Chris" if detective == "loose cannon":
             play sound "sounds/thud.mp3"
 
             scene v15s43_16 # TPP. Show MC slamming his hands on the table, MC angry, mouth open.
@@ -660,7 +660,7 @@ label v15s43:
 
             am "Hmm... I don't know if we can trust you."
 
-        "(Professional:) Use logic." if detective == "professional":
+        "(Professional:) Use logic" if detective == "professional":
             u "This aunt is around often?"
 
             scene v15s43_14h
@@ -683,7 +683,7 @@ label v15s43:
 
             u "Help us make sense out of what you're saying, Chris!"
 
-        "(Psychologist:) Examine Further." if detective == "psychologist"
+        "(Psychologist:) Examine further" if detective == "psychologist":
             u "This aunt. Does Nora like her?"
 
             scene v15s43_14h
@@ -718,7 +718,7 @@ label v15s43:
 
             u "Hate is a very strong word. Are those your words or Nora's words?"
 
-        "(Loose Cannon:) Shout at Chris"
+        "(Loose Cannon:) Shout at Chris":
             scene v15s43_14g
             with vpunch
 
@@ -839,7 +839,7 @@ label v15s43:
 
     if detective == "loose cannon":
         menu:
-            "Kick table.":
+            "Kick table":
                 scene v15s43_19 # TPP. Show MC kicking the coffee table, slightly angry, mouth open.
                 with dissolve
 
@@ -850,7 +850,7 @@ label v15s43:
 
                 am "For fuck's sake..."
 
-            "Don't kick table.":
+            "Don't kick table":
                 scene v15s43_20 # FPP. MC looking at the coffee table.
                 with dissolve
 
