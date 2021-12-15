@@ -859,4 +859,6 @@ label v15s43:
     scene v15s43_21 # TPP. Show MC and Amber leaving the wolve's house, both slight smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
     jump v15s44

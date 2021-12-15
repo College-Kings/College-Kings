@@ -479,4 +479,6 @@ label v15s36:
         scene v15s36_11g # FPP. The door closing behind Autumn as she enters.
         with dissolve 
 
+        pause 0.75
+
         jump v15s37

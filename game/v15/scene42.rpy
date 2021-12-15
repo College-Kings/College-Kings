@@ -541,4 +541,6 @@ label v15s42:
     scene v15s42_14b # TPP. Amber and MC gone the door to the meeting room closed.
     with dissolve
 
+    pause 0.75
+
     jump v15s43
