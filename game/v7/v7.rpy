@@ -1125,7 +1125,6 @@ label hd_ad:
             ri "*Laughs* It sounded a lot cooler in my head."
 
             if kct == "confident":
-
                 ri "I just thought. I'd give it a [name]-style response."
 
                 scene s706a

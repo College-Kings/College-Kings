@@ -718,7 +718,7 @@ label v15s43:
 
             u "Hate is a very strong word. Are those your words or Nora's words?"
 
-        "(Loose Cannon:) Shout at Chris":
+        "(Loose Cannon:) Shout at Chris" if detective == "loose cannon":
             scene v15s43_14g
             with vpunch
 

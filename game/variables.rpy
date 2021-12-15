@@ -1,7 +1,6 @@
 init python:
     import os
 
-
 ## Init
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
