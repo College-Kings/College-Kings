@@ -232,6 +232,7 @@ default v11_underground_rose = False
 default v11s1_courtpoints = 0
 default v11s23_penelope_date = True # late addition, defaulting to True to enhance act 4 playability
 default v11s25_beer = True
+default v11_ride_with_mrlee = False
 
 # 12.0
 default freeroam9 = set() #Ferry
@@ -392,5 +393,8 @@ default v15s7_chloe_empathize = False #????
 default v15s42_flirt = False
 default v15s42_grab_breakfast = False
 default detective = "None" # Archetypes: professional, psychologist, loose cannon
-default v15threaten_ms_rose = False # Requested Variables for v15s21
-default v15seduce_ms_rose = False # Requested Variables for v15s21
+default v15_threaten_ms_rose = False # Requested Variables for v15s21
+default v15_seduce_ms_rose = False # Requested Variables for v15s21
+default v15_meeting_points = 0
+default v15_notes_clicks = 0 #placeholder for clicks in the journal
+default v15intervened_for_chloe = False

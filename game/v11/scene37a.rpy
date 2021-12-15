@@ -9,7 +9,7 @@ label v11_walk_or_ride:
         "Ride with Mr. Lee":
             $ v11_ride_with_mrlee = True
 
-            scene v11wap11 # TPP. Show MC running towards Mr Lee, MC screaming, mouth open, slightly worried
+            scene v11wap11 # TPP. Show MC running towards Mr. Lee, MC screaming, mouth open, slightly worried
             with dissolve
 
             u "Mr. Lee, wait up!"
@@ -117,7 +117,7 @@ label v11_ride_with_mrlee:
     scene v11wir3 # TPP Show Mr. Lee and MC getting into the car
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11wir4 # FPP Show Mr. Lee driving car, looking forward, neutral expression, mouth open
     with dissolve
@@ -521,7 +521,7 @@ label v11_imre_and_ryan:
     scene v11wir9 # FPP Show Ryan turning around and looking down at his phone
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v11wir10 # FPP Show Imre with angry expression, mouth closed
     with dissolve
