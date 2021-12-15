@@ -265,6 +265,7 @@ default v11_underground_rose = False
 default v11s1_courtpoints = 0
 default v11s23_penelope_date = True # late addition, defaulting to True to enhance act 4 playability
 default v11s25_beer = True
+default v11_ride_with_mrlee = False # late addition, needed for scene V15 S21
 
 # 12.0
 default chrismad = False
@@ -324,6 +325,7 @@ default v13_invite_samantha = False
 default v13_lauren_smoke = False
 default v13_penelope_concert = False
 default v13_perfume = False
+default v13_bonsai = False # late addition, needed for scene V15 S21
 default v13_smoke_weed = False
 default v13_emmy_points = 0
 default v13s16_lauren_points = 0
@@ -461,6 +463,7 @@ default v15s18_partytask = 0
 default v15s18a_aub_kiwii_smile = False
 default v15s18a_gag = False
 default v15s18a_showlist_penelope_autumn = False # Show the party list to Penelope and Autumn.
+<<<<<<< Updated upstream
 default v15s18a_lie = False
 default v15s19_local_mc_ends_in_livingroom = False;  
 default v15_told_Emily_I_Love_You = False # Placeholder?
@@ -479,3 +482,5 @@ default clue_alone = False # Unlock the clue for Nora wanting to be alone.
 default clue_camping = False # Unlock the clue for Nora camping.
 default clue_mr_rose_cabin = False # Unlock the clue for Mr. Rose's cabin.
 default clue_nora_hates_her_dad = False # Unlock the clue that Nora hates Mr. Rose.
+default v15threaten_ms_rose = False # Requested Variables for v15s21
+default v15seduce_ms_rose = False # Requested Variables for v15s21
