@@ -118,7 +118,6 @@ default notcool = False
 default penelopekiss = False
 default perform = 0
 default relics = 0
-default rileykiss = False
 default save = 0
 default simp = False
 default statsPage = 0

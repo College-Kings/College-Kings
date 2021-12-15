@@ -1159,10 +1159,11 @@ label hd_ad:
 
             u "No worries, it was a nice walk."
 
-            if kct == "confident":
-                call screen kct_popup
+            if kct == "confident" or riley.relationship.value >= Relationship.MOVE.value:
+                if riley.relationahip.value < Relationship.MOVE.value:
+                    call screen kct_popup
 
-            elif not rileykiss:
+            else:
                 scene s708 # riley smiling
                 with dissolve
 
@@ -1194,7 +1195,7 @@ label hd_ad:
                 $ add_point(KCT.TROUBLEMAKER)
 
             $ add_point(KCT.BRO)
-            $ riley.relationship = Relationship.MOVE
+            $ riley.relationship = Relationship.LIKES
 
             u "Yeah, I'd like that."
 
@@ -7120,10 +7121,9 @@ label hc_asking_riley:
 
     u "Will you be my Cinderella for homecoming?"
 
-    if riley.relationship.value >= Relationship.MOVE.value or kct == "confident":
-        if riley.relationship.value < Relationship.MOVE.value:
+    if riley.relationship.value >= Relationship.LIKES.value or kct == "confident":
+        if riley.relationship.value < Relationship.LIKES.value:
             call screen kct_popup
-            $ riley.relationship = Relationship.DATE
 
         $ hcGirl = "riley"
 
@@ -8862,7 +8862,7 @@ label wolves_ceremony:
 ############# RILEY TEXT
 
 label rileytext:
-    if riley.relationship.value > Relationship.MOVE.value:
+    if riley.relationship.value > Relationship.LIKES.value:
         play sound "sounds/vibrate.mp3"
 
         $ riley.messenger.newMessage(_("Wanna come over? ;)"), queue=False)
@@ -14711,7 +14711,7 @@ label fr4riley2:
     ri "Well we've been here for a few hours now and it's getting kinda boring."
     $ freeroam4.add("crowning")
 
-    if riley.relationship.value >= Relationship.MOVE.value and hcGirl == "alone":
+    if riley.relationship.value >= Relationship.LIKES.value and hcGirl == "alone":
         scene sfr4ri51b
         with dissolve
 
@@ -14724,7 +14724,7 @@ label fr4riley2:
 
         jump fr4rileyending
 
-    elif riley.relationship.value >= Relationship.MOVE.value:
+    elif riley.relationship.value >= Relationship.LIKES.value:
         scene sfr4ri51b
         with dissolve
 
@@ -17038,7 +17038,7 @@ label fr4rileyending:
 
     queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
 
-    if riley.relationship.value >= Relationship.MOVE.value:
+    if riley.relationship.value >= Relationship.LIKES.value:
         ri "Sooo homecoming was pretty fun... but I bet the night could get even better."
 
         scene sfr4ri52a # mc turns his face towards her
@@ -17091,7 +17091,7 @@ label fr4rileyending2:
 
     u "So, what's up?"
 
-    if riley.relationship.value >= Relationship.MOVE.value:
+    if riley.relationship.value >= Relationship.LIKES.value:
         scene sfr4ri55  #tpp close up riley whispers into your ear
         with dissolve
 

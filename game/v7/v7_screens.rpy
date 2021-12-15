@@ -146,7 +146,7 @@ screen hc_select():
                 idle "images/v7/HCRiley3.webp"
                 hover "images/v7/HCRiley23.webp"
 
-            if riley.relationship.value >= Relationship.MOVE.value:
+            if riley.relationship.value >= Relationship.LIKES.value:
                 tooltip "Riley seems to really like me so I think she'll say yes."
             else:
                 tooltip "Riley and I are good friends. She might say yes if I ask her."

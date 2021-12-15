@@ -260,6 +260,10 @@ label after_load:
             del penelopeloyal
         except NameError: pass
         try:
+            if rileykiss: riley.relationship = Relationship.MOVE
+            del rileykiss
+        except NameError: pass
+        try:
             if rileyrs: riley.relationship = Relationship.FWB
             del rileyrs
         except NameError: pass
