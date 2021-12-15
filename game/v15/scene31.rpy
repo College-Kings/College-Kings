@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: Wedding Suit)
 # Time: Morning
 
-
 label v15s31:
 # -Transition from night to morning-
 
@@ -27,6 +26,8 @@ label v15s31:
     scene v15s31_3 # TPP. Flashback image of MC and Emily taking a picture for prom. Emily has her back to MC and MC's hands are on Emily's hips, both have big smiles.
     with dissolve
 
+    pause 1
+
     hide screen fantasyOverlay 
 
     scene v15s31_2
@@ -35,16 +36,16 @@ label v15s31:
     u "(Back when I was happy with Emily, and I thought relationships were easy. Haha! How wrong I was...)"
 
     menu:
-        "Send Emily a Selfie.":
+        "Send Emily a selfie":
             scene v15s31_4 # TPP. Show MC's hand pulling his phone out of his pocket.
             with dissolve
 
-            pause  
+            pause 0.75
 
             scene v15s31_1a # TPP. Show MC taking a selfie of himself in the suit, slight smile, mouth closed.
             with flash
 
-            pause 
+            pause 0.75
 
             scene v15s31_5 # TPP. Show MC pressing buttons on his phones, slight smile, mouth closed.
             with dissolve
@@ -74,4 +75,4 @@ label v15s31:
     scene v15s31_6 # TPP. Show MC leaving the bathroom, slight smile, mouth closed.
     with dissolve
 
-    jump v15s32 
+    jump v15s32
