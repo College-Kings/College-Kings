@@ -140,7 +140,7 @@ label v15s27: # -MC walks out of the Chicks house-
     scene v15s27_4g # TPP. Jenny switches her phone to her right hand (closest to Penelope) as Penelope continues to pull Jenny's hand with the phone closer to her. Samantha is blocked from view for the remainder of the scene. Both girls are smiling mouths closed [Underground Bar].
     with dissolve
 
-    pause 0.75 
+    pause 0.75
     
     scene v15s27_4h # TPP. Penelope leaning in towards Jenny's phone (Jenny's right hand), smiling mouth open, talking into the phone. Jenny's holding her drink in her left hand smiling, mouth closed [Underground Bar].
     with dissolve

@@ -156,7 +156,7 @@ label v15s5:
             scene v15s5_4e # FPP. Ms. Rose giving MC a flirtatious look and winking at him, mouth closed.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             play sound "sounds/dooropen.mp3"
 

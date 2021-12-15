@@ -110,6 +110,8 @@ label v15s13:
         menu:
             "Eat the donut":
                 $ add_point(KCT.TROUBLEMAKER)
+                
+                $ grant_achievement("mmmm_donut")
                 u "(I'll just do an extra gym session this week to even things out.) *Chuckles*"
 
                 scene v15s13_2f # TPP. same as v15s13_2e MC grabs the donut and shoves it in his mouth
@@ -311,6 +313,8 @@ label v15s13:
         menu:
             "Eat the donut":
                 $ add_point(KCT.TROUBLEMAKER)
+                
+                $ grant_achievement("mmmm_donut")
                 u "(I'll just do an extra gym session this week to even things out.) *Chuckles*"
 
                 scene v15s13_8f # TPP. same as v15s13_8e MC grabs the donut and shoves it in his mouth

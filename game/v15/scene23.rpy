@@ -92,7 +92,7 @@ label v15s23:
         scene v15s23_12 # TPP. Close of up MC's phone on the table or nightstand. [MC's APE ROOM]
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s23_13 # TPP. MC, neutral expression, mouth closed, wearing pants, holding his phone and looking down at it. [MC's APE ROOM]
         with dissolve

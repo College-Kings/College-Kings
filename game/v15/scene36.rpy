@@ -8,7 +8,7 @@ label v15s36:
     scene v15s36_1 # TPP. Shot of MC and Autumn walking down the street, both slight smile, mouth closed.
     with fade
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s36_2 # FPP. MC and Autumn walking down the street, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth open.
     with dissolve 
@@ -38,7 +38,7 @@ label v15s36:
     scene v15s36_3 # TPP. Closer up shot of MC and Autumn further down the street smiling at each other as they walk, both mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s36_4 # FPP. MC and Autumn further down the street, new set of houses in the background, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth closed.
     with dissolve
@@ -317,12 +317,12 @@ label v15s36:
                     scene v15s36_7 # TPP. Show Autumn and MC stopped on the side walk looking at each other both slight smile, mouth closed.
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s36_8 # FPP. MC and Autumn further down the street, new set of houses in the background, MC and Autumn standing still on the side walk, MC looking at Autumn, Autumn looking down at the ground, Autumn biting her lip. 
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s36_8a # FPP. MC looking at Autumn, Autumn looking at MC, Autumn nervous smile, mouth open.
                     with dissolve 
@@ -332,31 +332,31 @@ label v15s36:
                     scene v15s36_8b # FPP. MC looking at Autumn, Autumn looking at MC, Autumn stepped closer to MC, Autumn flirty, mouth closed.
                     with dissolve 
 
-                    pause 0.75 
+                    pause 0.75
 
                     play sound "sounds/kiss.mp3"
 
                     scene v15s36_8c # FPP. Autumn kissing MC 
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s36_8d # FPP. Autumn stepped back again, MC looking at Autumn, Autumn looking at Mc, Autumn biting her lip.
                     with dissolve 
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s36_8b 
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     play sound "sounds/kiss.mp3"
 
                     scene v15s36_9 # TPP. MC and Autumn kissing on the sidewalk, MC with his hands on Autumn's waist, Autumn's arms wrappped around MC's neck.
                     with dissolve 
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s36_8e # FPP. Autumn stepped back, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth closed. 
                     with dissolve 
@@ -423,7 +423,7 @@ label v15s36:
     scene v15s36_10 # TPP. Show MC and Autumn arriving at the Deer's house front.
     with fade 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s36_11 # FPP. MC and Autumn at the front of the Deer's house, Autumn looking at MC, MC looking at Autumn, Autumn slight smile, mouth open.
     with dissolve 
@@ -452,17 +452,17 @@ label v15s36:
         scene v15s36_11c # FPP. Show Autumn stopping in place.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s36_11d # FPP. Show Autumn walking back towards MC, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s36_11a 
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s36_11e # FPP. Autumn kissing MC on the cheek.
         with dissolve

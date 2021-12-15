@@ -34,39 +34,39 @@ label v15s34:
         scene v15s34_3 # TPP. Show MC taking off the top part of his suit in the middle of his wolves room.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_3a # TPP. MC's top gone, MC taking off the bottom part of his suit in the middle of his wolves room, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_3b # TPP. MC standing in the middle of his wolves room in just his underwear, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_3c # TPP. MC standing in the middle of his wolves room putting on his shirt.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_3d # TPP. MC standing in the middle of his wolves room putting on his pants, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         play sound "sounds/vibrate.mp3"
 
         scene v15s34_3e # TPP. Show MC standing in the middle of his wolves room in the entire Outfit: 2, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_4 # TPP. Close up of MC in his wolves room pulling out his phone, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_4a # TPP. Close up of MC in his wolves room looking at his phone, slight smile, mouth close.
         with dissolve 
@@ -103,7 +103,7 @@ label v15s34:
 
         play sound "sounds/doorclose.mp3"
 
-        pause 0.75 
+        pause 0.75
 
         if v15_lindsey_gamenight or not v14_help_lindsey:
             jump v15s35
@@ -141,39 +141,39 @@ label v15s34:
         scene v15s34_8 # TPP. Show MC taking off the top part of his suit in the middle of his apes room.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_8a # TPP. MC's top gone, MC taking off the bottom part of his suit in the middle of his apes room, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_8b # TPP. MC standing in the middle of his apes room in just his underwear, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_8c # TPP. MC standing in the middle of his apes room putting on his shirt.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_8d # TPP. MC standing in the middle of his apes room putting on his pants, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         play sound "sounds/vibrate.mp3"
 
         scene v15s34_8e # TPP. Show MC standing in the middle of his apes room in the entire Outfit: 2, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_9 # TPP. Close up of MC in his apes room pulling out his phone, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_9a # TPP. Close up of MC in his apes room looking at his phone, slight smile, mouth close.
         with dissolve 
@@ -211,7 +211,7 @@ label v15s34:
 
         play sound "sounds/doorclose.mp3"
 
-        pause 0.75 
+        pause 0.75
 
         if v15_lindsey_gamenight or not v14_help_lindsey:
             jump v15s35

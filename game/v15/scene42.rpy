@@ -10,19 +10,19 @@ label v15s42:
     scene v15s42_1 # TPP. Show MC walking into the SVC meeting room, Description of room: Dated grey/beige walls, a large wooden desk, filing cabinets, blinds drawn with sparse lighting in the room, MC slightly confused, mouth closed.
     with fade (1,0,1)
 
-    pause 0.75  
+    pause 0.75
 
     play sound "sounds/dooropen.mp3"
 
     scene v15s42_2 # TPP. Show MC entering the room and closing the door behind him, slightly confused, mouth closed.
     with dissolve  
 
-    pause 0.75  
+    pause 0.75
 
     scene v15s42_3 # FPP. View of the room, Amber is leaning against the wall on the side of her pinboard, Amber is looking at the floor, smug face, mouth closed.
     with dissolve
 
-    pause 0.75  
+    pause 0.75
 
     scene v15s42_3a # FPP. Amber leans against the wall and looks at MC, Amber with a smirk, mouth open.
     with dissolve 
@@ -42,7 +42,7 @@ label v15s42:
     scene v15s42_3d # FPP. Amber standing infront of MC, Amber smirking, mouth closed.
     with dissolve
 
-    pause 0.75  
+    pause 0.75
 
     scene v15s42_4 # FPP. show Amber pouring a cup of coffee from the coffee machine, slight smile, mouth closed.
     with dissolve 
@@ -205,7 +205,7 @@ label v15s42:
         scene v15s42_9 # TPP. Show both MC and Amber laughing.
         with dissolve
 
-        pause 0.75  
+        pause 0.75
 
         scene v15s42_7a
         with dissolve
@@ -456,7 +456,7 @@ label v15s42:
     scene v15s42_12
     with dissolve  
 
-    pause 0.75 
+    pause 0.75
 
     menu:
         "Grab breakfast":
@@ -534,7 +534,7 @@ label v15s42:
         scene v15s42_14a # TPP. Show Amber and MC leaving the meeting room, Amber slight smile, mouth closed, MC slight smile, mouth closed.
         with dissolve 
 
-    pause 0.75  
+    pause 0.75
 
     play sound "sounds/doorclose.mp3"
 

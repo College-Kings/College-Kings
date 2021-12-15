@@ -7,12 +7,12 @@ label v15s18d:
     scene v15s18d_1 # TPP. Show Lauren holding the door open for all the guest to leave, Lauren slight smile, mouth closed.
     with fade (1,0,1)
 
-    pause 0.75 
+    pause 0.75
     
     scene v15s18d_2 # TPP. Show MC standing by the stairs with a drink in his hand watching people leave, slight smile, mouth closed
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18d_3 # TPP. Show Chris stopped at Lauren holding the door open, Both slight smile, Chris mouth open, Lauren mouth closed.
     with dissolve 
@@ -32,12 +32,12 @@ label v15s18d:
     scene v15s18d_4 # TPP. Show Chris exitting the house and leaving the party, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18d_2a # TPP. Show MC standing by the stairs with a drink Imre stepping infront of him.
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18d_5 # FPP. MC looking at Imre, Imre looking at MC, Imre slight smile, mouth open.
     with dissolve 
@@ -98,7 +98,7 @@ label v15s18d:
         scene v15s18d_7
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s18d_5
         with dissolve
@@ -124,7 +124,7 @@ label v15s18d:
         scene v15s18d_7
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s18d_5
         with dissolve
@@ -152,7 +152,7 @@ label v15s18d:
     scene v15s18d_8 # FPP. Show Lauren walking over to MC and Imre, Lauren slightly confused, mouth open.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18d_5d # FPP. MC looking at Imre, Imre looking at Lauren, Imre slight smile, mouth open.
     with dissolve 
@@ -169,17 +169,17 @@ label v15s18d:
     scene v15s18d_9 # TPP. Show Imre walking towards the front door of the Deer's house, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18d_10 # FPP. MC looking past Lauren at Imre, Imre at the front door looking at MC, Imre holding up his pointer finger and his other hand into a clenched fist as he is imitating intercourse, Imre slight smile, mouth closed.
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18d_10a # FPP. MC looking past Lauren at Imre, Imre at the front door looking at MC, Imre putting his pointer finger into his other hand that is a clenched fist as he is imitating intercours, Imre slight smile, mouth closed.
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18d_8b # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre in the background, Lauren confused smile, mouth open.
     with dissolve 
@@ -194,12 +194,12 @@ label v15s18d:
     scene v15s18d_10b # FPP. MC looking past Lauren at Imre, Imre at the front door looking at MC, Imre flipping off MC, laughing.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18d_11 # TPP. Show Imre walking away from the house, slight smile, mouth closed.
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18d_8d # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren confused smile, mouth open.
     with dissolve
@@ -269,7 +269,7 @@ label v15s18d:
                     scene v15s18d_12b
                     with dissolve 
                     
-                    pause 0.75 
+                    pause 0.75
 
                     jump v15s18f
 
@@ -294,7 +294,7 @@ label v15s18d:
                     scene v15s18d_14a # TPP. Show MC and Lauren having a passionate kiss
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s18d_8f
                     with dissolve
@@ -383,12 +383,12 @@ label v15s18d:
                     scene v15s18d_12
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s18d_12a 
                     with dissolve 
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s18d_8f
                     with dissolve
@@ -403,12 +403,12 @@ label v15s18d:
                     scene v15s18d_13 # TPP. Show just MC sitting on the couch with the blanket and pillow the lights in the room on, slight smile, mouth closed
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s18d_13a # TPP. Show just MC sitting on the couch with the blanket and pillow the lights in the room off, slight smile, mouth closed
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
                     
                     jump v15s18f
 
@@ -462,7 +462,7 @@ label v15s18d:
                 scene v15s18d_14 # TPP. Show MC kissing Lauren's forehead, Lauren slight smile, eyes closed, mouth closed.
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s18d_12b # TPP. Show Lauren and MC walking up the stairs, both slight smile, mouth closed.
                 with dissolve 
@@ -490,12 +490,12 @@ label v15s18d:
                 scene v15s18d_12 # TPP. Show Lauren walking up the stairs empty handed.
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s18d_12a # TPP. Show Lauren walking down the stairs with a blanket and pillow.
                 with fade (1,0,1)
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s18d_8f
                 with dissolve
@@ -510,11 +510,11 @@ label v15s18d:
                 scene v15s18d_13 # TPP. Show just MC sitting on the couch with the blanket and pillow the lights in the room on, slight smile, mouth closed
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s18d_13a # TPP. Show just MC sitting on the couch with the blanket and pillow the lights in the room off, slight smile, mouth closed
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
             jump v15s18f

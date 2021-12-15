@@ -7,14 +7,14 @@ label v15s43:
     scene v15s43_1 # TPP. Show MC and Amber walking up to the wolves front door, both slight smile, mouths closed.
     with fade (1,0,1)
 
-    pause 0.75  
+    pause 0.75
 
     play sound "sounds/knock.mp3"
 
     scene v15s43_2 # FPP. Amber and MC at the front of the wolves house, MC looking at Amber, Amber looking at the door, Amber knocking on the door, Amber slight smile, mouth closed.
     with dissolve 
 
-    pause 0.75  
+    pause 0.75
 
     scene v15s42_2a # FPP. Amber and MC both looking at the door waiting for an answer, Amber slight smile, mouth closed.
     with dissolve 
@@ -35,7 +35,7 @@ label v15s43:
 
         u "Haha, of course."
 
-        pause 0.75  
+        pause 0.75
 
         scene v15s42_2a 
         with dissolve 
@@ -266,7 +266,7 @@ label v15s43:
     scene v15s43_7 # TPP. Show MC and Amber walking into the living room, Amber keeping her hands in the gun shape, Amber suspicious, mouth closed.
     with dissolve
 
-    pause 0.75  
+    pause 0.75
 
     scene v15s43_8 # TPP. MC and Amber standing in the living room, MC looking at Amber, Amber looking at MC, Amber suspicious, mouth closed, MC suspicious, mouth closed.
     with dissolve 
@@ -332,7 +332,7 @@ label v15s43:
             scene v15s43_11 # TPP. View showing MC on one side of a couch in the living room, Amber on the other side with her hands in the shape of a gun, both suspicious, mouth closed.
             with dissolve
 
-            pause 0.75  
+            pause 0.75
 
             scene v15s43_11a # TPP. Show MC kicking the couch, Amber slightly shocked, mouth closed, MC angry, mouth open.
             with dissolve
@@ -347,7 +347,7 @@ label v15s43:
             scene v15s43_11c # TPP. Show MC and Amber looking at each other from across the couch both laughing.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
     scene v15s43_12 # TPP. Close up of Chris walking into the living room, Chris confused, mouth open.
     with dissolve
@@ -372,7 +372,7 @@ label v15s43:
     scene v15s43_13 # TPP. Chris sitting on the couch, a coffee table infront of the couch, MC standing on the right of the couch facing Chris, Amber standing on the left of the table facing Chris, Amber and MC faces not shown in the shot, Chris confused, mouth closed, 
     with fade(1,0,1)
 
-    pause 0.75  
+    pause 0.75
 
     scene v15s43_14 # FPP. MC standing on the right of the coffee table, MC looking at Chris, Chris looking at MC, Chris confused, mouth closed.
     with dissolve
@@ -795,7 +795,7 @@ label v15s43:
     scene v15s43_17 # TPP. MC and Amber closer to Chris both of them looking at Chris suspiciously, mouth closed, Chris confused, mouth closed.
     with dissolve
 
-    pause 0.75  
+    pause 0.75
 
     scene v15s43_15
     with dissolve
@@ -812,7 +812,7 @@ label v15s43:
     scene v15s43_18 # TPP. Show Chris leaving the living room, Chris confused, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s43_15
     with dissolve

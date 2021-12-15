@@ -15,7 +15,7 @@ label v15s18a:
     $ v15s18a_kiwiiPost1.newComment("Amber", _("YES!! That costume is everything! Happy b-day hottie, see you in a bit <3"), queue=False)
     $ v15s18a_kiwiiPost1.newComment("Lauren", _("Thank you ladies!!"), queue=False)
 
-    $ v15s18a_kiwiiPost2 = KiwiiPost("Autumn", "Photo of halloween decorations for the party whether its inside or outside the house", _("Spooky sister season :)"), numberLikes=743)
+    $ v15s18a_kiwiiPost2 = KiwiiPost("Autumn", "Photo of halloween decorations for the party whether it's inside or outside the house", _("Spooky sister season :)"), numberLikes=743)
     $ v15s18a_kiwiiPost2.newComment("Penelope", _("I'll never understand your decorating skills... I'm so excited for tonight!"), queue=False)
     $ v15s18a_kiwiiPost2.newComment("Lauren", _("The house looks absolutely perfect, I couldn't have asked for more! Love u <3"), queue=False)
     $ v15s18a_kiwiiPost2.newComment("Riley", _("So fucking cool! You're planning my wedding one day, Autumn..."), queue=False)
@@ -40,7 +40,7 @@ label v15s18a_Aubrey:
     scene v15s18aaub_1 # TPP. Show MC starting to sit on the stool next to Aubrey, slight smile, mouth closed. Just show Aubrey's backside.
     #with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18aaub_2 # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at MC, MC looking at Aubrey, Aubrey slight smile, mouth closed
     with dissolve
@@ -231,7 +231,7 @@ label v15s18a_Aubrey:
             scene v15s18aaub_4a # TPP. Show MC behind Aubrey as she leans back towards him, her hand holding her phone in the air for a selfie photo, Aubrey slight smile, mouth closed, MC slight smile, mouth closed.
             with flash
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18aaub_2a
             with dissolve 
@@ -241,7 +241,7 @@ label v15s18a_Aubrey:
             scene v15s18aaub_4b # TPP. # TPP. Show MC behind Aubrey as she leans back towards him, her hand holding her phone in the air for a selfie photo, Aubrey slight smile, mouth closed, MC frown, mouth closed.
             with flash
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18aaub_2
             with dissolve
@@ -277,12 +277,12 @@ label v15s18a_Aubrey:
             scene v15s18aaub_5 # FPP. Same camera as v15s18a_aub2, MC looking down slightly at his hand giving Aubrey the challenge paper, Aubrey grabbing the Challenge paper.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18aaub_2k # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at the list, MC looking at Aubrey, Aubrey shocked, mouth closed.
             with dissolve 
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18aaub_2l # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at the list, MC looking at Aubrey, Aubrey smirking, mouth closed.
             with dissolve
@@ -302,12 +302,12 @@ label v15s18a_Aubrey:
             scene v15s18aaub_2l
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18aaub_5a # FPP. Same camera as v15s18a_aub2, MC looking down slightly at his hand, Aubrey handing back the challenge paper, MC grabbing the challenge paper.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18aaub_2a
             with dissolve
@@ -399,7 +399,7 @@ label v15s18a_Ryan:
     scene v15s18a_ryan_2 # TPP. Show MC entering into the bathroom, as he enters we see Ryan sitting on the floor with his head above the toilet since he is puking, his face obscured by the toilet and we don't ever see inside it.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18a_ryan_3 # FPP. MC looking at Ryan, Ryan's face still obscured by toilet, Ryan disgusted face, mouth closed.
     with dissolve
@@ -504,14 +504,14 @@ label v15s18a_Ryan:
         scene v15s18a_ryan_5 # TPP. Show MC running out of the bathroom
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         play sound "sounds/doorclose.mp3"
 
         scene v15s18a_ryan_2a # TPP. Show MC exiting the bathroom, as he leaves we see Ryan sitting on the floor with his head above the toilet since he is puking, his face obscured by the toilet and we don't ever see inside it.
         with dissolve
         
-        pause 0.75 
+        pause 0.75
 
     else:
         scene v15s18a_ryan_3a
@@ -551,7 +551,7 @@ label v15s18a_AutumPenelope:
     scene v15s18apen_2 # FPP. Show MC opening the door slightly in and peeking through the crack to see Penelope and Autumn, Penelope is sitting on Autumn's computer chair with her legs crossed, Autumn standing by her, both slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18apen_2a # FPP. Show MC opening the door slightly in and peeking through the crack to see Penelope and Autumn, Penelope is sitting on Autumn's computer chair with her legs crossed, Autumn standing by her, Both slight smile, Autumn mouth open, Penelope mouth closed.
     with dissolve
@@ -581,7 +581,7 @@ label v15s18a_AutumPenelope:
     scene v15s18apen_4 # FPP. MC standing closer to Autumn and Penelope, Both shocked face as they look at MC, mouth open.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18apen_4a # FPP. Penelope covering her mouth with her hand as she laughs, Autumn smiling, mouth open.
     with dissolve 
@@ -622,7 +622,7 @@ label v15s18a_AutumPenelope:
     with dissolve
 
     if signs:
-        pause 0.75 
+        pause 0.75
 
         scene v15s18apen_7a # FPP. Autumn sitting on her bed comfortably, MC looking at Autumn, Autumn looking at MC, slight smile, mouth open.
         with dissolve
@@ -659,7 +659,7 @@ label v15s18a_AutumPenelope:
     scene v15s18apen_6c # FPP. MC looking at Penelope, Penelope looking at MC, Penelope putting a finger to her lips to shush them.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18apen_6d # FPP. MC looking at Penelope, Penelope looking at MC, Penelope's finger not at her lips anymore, Penelope winking at MC, slight smile, mouth open.
     with dissolve
@@ -783,7 +783,7 @@ label v15s18a_AutumPenelope:
     scene v15s18apen_8 # TPP. Shot of Autumn laughing as she sits on the bed
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18apen_6e # FPP. MC looking at Penelope, Penelope looking at MC but more near his waistband, confused, mouth closed.
     with dissolve
@@ -870,7 +870,7 @@ label v15s18a_AutumPenelope:
             scene v15s18apen_6g # FPP. MC looking at Penelope, Penelope looking at the list, Penelope biting her lip.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18apen_7c
             with dissolve
@@ -947,7 +947,7 @@ label v15s18a_AutumPenelope:
             scene v15s18apen_6h # FPP. Penelope handing MC back the challenge paper, MC grabbing tha paper, Penelope slight smile, mouth closed.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18apen_6
             with dissolve
@@ -1042,7 +1042,7 @@ label v15s18a_AutumPenelope:
 
     u "Anyway, time for me to catch up with the others."
 
-    pause 0.75 
+    pause 0.75
     
     scene v15s18apen_6a
     with dissolve
@@ -1093,7 +1093,7 @@ label v15s18a_ImreLauren:
     scene v15s18aimre_1 # TPP. MC walking over to Lauren and Imre, Imre looking at Lauren, Lauren looking at Imre, both slight smile, mouth closed.
     #with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18aimre_2 # FPP. MC looking at Lauren, Lauren looking at Imre, Lauren slight smile, mouth open.
     with dissolve
@@ -1355,12 +1355,12 @@ label v15s18a_Riley:
     scene v15s18ariley_1 # FPP. MC looking at the Kitchen area, Food and plates out, Riley carrying plates to the part of the counter by the fridge, Riley looks stressed, mouth closed.
     #with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18ariley_1a # FPP. MC looking at the Kitchen area, Riley putting down the plates on the counter.
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18ariley_2 # FPP. MC looking at Riley, Riley looking at MC, Riley nervous, mouth closed.
     with dissolve
@@ -1380,7 +1380,7 @@ label v15s18a_Riley:
     scene v15s18ariley_3 # FPP. MC looking at the arrangement of the food.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18ariley_2
     with dissolve
@@ -1515,12 +1515,12 @@ label v15s18a_Riley:
     scene v15s18ariley_2g # FPP. MC looking at Riley, Riley looking down at her chest and pulling out a dollar bill from her boob area, nip slip, Riley slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18ariley_2h # FPP. MC looking at Riley, Riley tucking the dollar in MC's waist band, Riley slight smile ,mouth closed.
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18ariley_2e
     with dissolve
@@ -1558,12 +1558,12 @@ label v15s18a_Riley:
             scene v15s18ariley_4 # TPP. MC with his hand in the air, swaying his hips to the left, Riley looking at MC, Riley slight smile, mouth closed, MC slight smile, mouth closed.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18ariley_4a # TPP. MC with his hand in the air, swaying his hips to the right, Riley looking at MC, Riley slight smile, mouth closed, MC slight smile, mouth closed.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18ariley_2e
             with dissolve
@@ -1597,12 +1597,12 @@ label v15s18a_Riley:
     scene v15s18ariley_5 # TPP. Show the Challenge list mid fall out of MC's costume and Riley looking at it, Riley slightly confused, mouth closed, MC slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18ariley_5a # TPP. The Challenge list landing on the floor and Riley bending over to pick it up, Riley slightly confused, mouth closed, MC slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18ariley_2j # FPP. MC looking at Riley, Riley looking at the Challenge list in her hand, Riley slightly confused, mouth open.
     with dissolve
@@ -1636,7 +1636,7 @@ label v15s18a_Riley:
     ri "Do you need any help with it?"
 
     menu:
-        "No, its fine":
+        "No, it's fine":
             scene v15s18ariley_2i
             with dissolve
 
@@ -1697,12 +1697,12 @@ label v15s18a_Riley:
             scene v15s18ariley_2m # FPP. Show Riley smiling and covering her eyes with one hand.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18ariley_7 # TPP. Close up of Riley's finger pointing at the handjob challenge on the paper.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18ariley_2i
             with dissolve
@@ -1732,19 +1732,19 @@ label v15s18a_Riley:
             scene v15s18ariley_8 # FPP. MC following Riley up the stairs.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18ariley_9 # TPP. Upskirt of Riley's outfit from behind.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             play sound "sounds/dooropen.mp3"
 
             scene v15s18ariley_10 # TPP. Show Riley entering the Guest room and MC right behind her, both slight smile, mouth closed.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             play sound "sounds/doorclose.mp3"
 
@@ -1756,14 +1756,14 @@ label v15s18a_Riley:
             scene v15s18ariley_12 # TPP. Show MC pulling the bottom part of his costume down
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             play sound "sounds/kiss.mp3"
 
             scene v15s18ariley_13 # FPP. MC laying in the bed, Riley laying next to him and kissing him.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18ariley_14 # TPP. MC laying on the bed and Riley laying next to him them kissing.
             with dissolve 
@@ -1823,7 +1823,7 @@ label v15s18a_Riley:
             scene v15s18ariley_15 # TPP. Shot of Riley's costume as she lays on the bed next to MC her hand on his dick.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18ariley_13b
             with dissolve
@@ -1869,12 +1869,12 @@ label v15s18a_Riley:
 
             scene v15rileyhj2f # Ignore as animation
             with dissolve
-            pause 0.75 
+            pause 0.75
 
             scene v15s18ariley_17 # TPP. MC cumming onto Riley's hand
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18ariley_13a
             with dissolve
@@ -1896,7 +1896,7 @@ label v15s18a_Riley:
             scene v15s18ariley_13d # FPP. Riley kissing MC on the cheek
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18ariley_13a
             with dissolve
@@ -1911,14 +1911,14 @@ label v15s18a_Riley:
             scene v15s18ariley_13e # FPP. Show Riley getting off the bed, slight smile, mouth closed.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             play sound "sounds/dooropen.mp3"
 
             scene v15s18ariley_18 # FPP. Riley opening the door and exiting, slight smile, mouth closed.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             play sound "sounds/doorclose.mp3"
 
@@ -1943,7 +1943,7 @@ label v15s18a_ChrisAmber:
     scene v15s18aamber_1 # TPP. MC walking towards the Kitchen stools Amber is sitting on, Chris talking to Amber, Chris slight smile, mouth open, Amber slight smile, mouth closed.
     #with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18aamber_2 # FPP. MC keeping a little bit of distance and watching the Convo, Chris looking at Amber, Amber looking at Chris, Chris slight smile, mouth open, Amber slight smile, mouth closed.
     with dissolve
@@ -1983,7 +1983,7 @@ label v15s18a_ChrisAmber:
     scene v15s18aamber_2g # FPP. MC keeping a little bit of distance and watching the Convo, Chris walking away, Amber starting to sit back down on the stool.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18aamber_3 # FPP. MC sitting on the stool next to Amber, MC looking at Amber, Amber looking at MC, Amber slight smile, mouth closed.
     with dissolve 
@@ -2018,12 +2018,12 @@ label v15s18a_ChrisAmber:
     scene v15s18aamber_4 # TPP. MC and Amber looking at each other, both serious face, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18aamber_4a # TPP. MC and Amber looking at each other, both laughing.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18aamber_3
     with dissolve
@@ -2045,7 +2045,7 @@ label v15s18a_ChrisAmber:
     scene v15s18aamber_3b # FPP. MC sitting on the stool next to Amber, MC looking at Amber, Amber looking down at MC's lower half checking out his costume, Amber smirking, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18aamber_3c # FPP. MC sitting on the stool next to Amber, MC looking at Amber, Amber back to looking at MC's face, Amber smirking, mouth open.
     with dissolve
@@ -2200,17 +2200,17 @@ label v15s18a_ChrisAmber:
                     scene v15s18aamber_6 # TPP. MC following Amber up the stairs of the Deer's house
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s18aamber_7 # FPP. MC focusing in on Amber's ass as they go up the stairs
                     with dissolve 
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s18aamber_8 # FPP. MC and Amber on the Balcony, MC looking at Amber, Amber looking at MC, Amber smirking, mouth closed.
                     with fade(1,0,1)
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s18aamber_8a # FPP. MC and Amber on the Balcony, MC looking at Amber, Amber looking at MC, Amber smirking, mouth open.
                     with dissolve
@@ -2230,12 +2230,12 @@ label v15s18a_ChrisAmber:
                     scene v15s18aamber_9 # FPP. MC looking down as Amber is on her knees infront of him.
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s18aamber_9a # FPP. MC looking down as Amber is on her knees infront of him, Amber pulling down the bottom part of his costume.
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
                     
                     scene v15s18aamber_9b # FPP. MC looking down as Amber is on her knees infront of him, MC's bottom part of his costume around his ankles and his dick is out infront of Amber's face.
                     with dissolve
@@ -2325,12 +2325,12 @@ label v15s18a_ChrisAmber:
                     scene v15s18aamber_9j # FPP. MC looking down at Amber, Amber looking up at MC with a mouth full of cum winking at MC.
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s18aamber_10 # TPP. Just Amber spitting the cum over the side of the balcony.
                     with dissolve 
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s18amber_11 # TPP. Just Amber wiping her mouth, slight smile, mouth closed.
                     with dissolve
@@ -2406,7 +2406,7 @@ label v15s18a_AutumnLaurenPhoto:
     scene v15s18aphoto_1 # FPP. MC looking at all the magnets on the fridge
     #with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18aphoto_2 # FPP. Close in view of the magnet on the fridge that is a picture of Autumn and Lauren, The magnet says "Best Friends Forever <3".
     with dissolve

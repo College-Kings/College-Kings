@@ -268,7 +268,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
         scene v15s19_8b   # TPP. Lauren, smiling mouth closed following MC, smiling mouth closed, to the front door. The house is still dirty from the party. [Deer House Living Room].
         with dissolve 
     
-    pause 0.75 
+    pause 0.75
 
     # All scenes converge to the living room front door.
 

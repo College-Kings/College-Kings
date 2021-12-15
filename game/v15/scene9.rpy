@@ -172,7 +172,7 @@ label v15s9:
                 scene v15s9_3h # FPP. same as v15s9_3a Aubrey slightly pushes Mc with one hand, and covers her mouth from laughter with the other, Aubrey rolls her eyes
                 with dissolve
 
-                au "Okay, don't let it get to your head! Slow down big guy... *Laughs*"
+                au "Okay, don't let it get to your head! Slow down, big guy... *Laughs*"
 
                 scene v15s9_3b
                 with dissolve

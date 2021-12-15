@@ -530,9 +530,6 @@ label v15s4:
 
                     "Don't peek":
                         $ add_point(KCT.BOYFRIEND)
-                        scene v15s4_18
-                        with dissolve
-
                         u "(Glad I can control myself, good job [name]!)"
 
                         if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -703,6 +700,7 @@ label v15s4:
             scene v15s4_24b # FPP. Same as v15s4_24a, Autumn looking down at MC while she is standing on the ladder, Autumn upset, mouth open
             with vpunch
 
+            $ grant_achievement("horn_dog")
             aut "Hey! Eyes up, horn dog! Are you just here to enjoy the view?"
 
             scene v15s4_24c # FPP. Same as v15s4_24b, Autumn upset, mouth closed.
@@ -744,7 +742,7 @@ label v15s4:
     scene v15s4_31 # TPP. Show just Autumn putting up a dog poster on the wall somewhere else in the Shelter, slight smile, mouth closed.
     with fade
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s4_32 # TPP. Show MC and Autumn putting down a table in an empty part of the Room against the wall, neutral expression, mouth closed.
     with fade

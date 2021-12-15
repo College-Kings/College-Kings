@@ -68,7 +68,7 @@ label v15s26:
     scene v15s26_6 # FPP Show Aubrey and Riley in hallway by door to theater room, both smiling at MC with mouths closed
     with dissolve
 
-    u "Our Secret Place? Sounds very... Mysterious..."
+    u "Our Secret Place? Sounds very... mysterious..."
 
     scene v15s26_6a # FPP Same angle as 6, Aubrey and Riley in hallway by door to theater room, both smiling at MC, Aubrey's mouth open
     with dissolve

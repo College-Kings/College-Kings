@@ -759,7 +759,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_13 # TPP. Close up of Aubrey removing the bottom half of her costume
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18c_imau_14 # TPP. Close up of Aubrey getting on the bed, mouth open, sexy expression
     with dissolve
@@ -779,7 +779,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_16 # TPP. Show MC joining Aubrey in bed, both looking sexily at each other, mouths closed
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18c_imau_17 # TPP. Show MC and Aubrey making out
     with dissolve
@@ -794,7 +794,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_18 # TPP. Show MC kissing Aubrey's neck, Aubrey biting her lip, mouth closed
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18c_imau_19 # TPP. Show MC kissing Aubrey's abdomen, Aubrey mouth open, moaning
     with dissolve
@@ -824,7 +824,7 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfin # IGNORE AS ANIMATION
     with dissolve
-    pause 0.75 
+    pause 0.75
 
     au "Oh... Shhit... *Moans*"
 
@@ -849,7 +849,7 @@ label v15s18c_imre_aubrey:
         "Keep her quiet":
             scene v15aubfin2 # IGNORE AS ANIMATION
             with dissolve
-            pause 0.75 
+            pause 0.75
 
             u "Shh, shh, shh..."
 
@@ -881,7 +881,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_23 # TPP. Show MC positioning himself so he can cover Aubrey's mouth with one hand while he fingers her with the other hand
     with dissolve
 
-    pause 0.75 
+    pause 0.75
     
     image v15aubfing = Movie(play="images/v15/Scene 18c/v15aubfing.webm", loop=True, image="images/v15/Scene 18c/v15aubfingStart.webp", start_image="images/v15/Scene 18c/v15aubfingStart.webp") 
     image v15aubfingf = Movie(play="images/v15/Scene 18c/v15aubfingf.webm", loop=True, image="images/v15/Scene 18c/v15aubfingStart.webp", start_image="images/v15/Scene 18c/v15aubfingStart.webp") 
@@ -890,25 +890,25 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfing # IGNORE AS ANIMATION
     with dissolve
-    pause 0.75 
+    pause 0.75
 
     au "Mmm!"
 
     scene v15aubfingf # IGNORE AS ANIMATION
     with dissolve
-    pause 0.75 
+    pause 0.75
 
     u "Faster?"
 
     scene v15aubfing2 # IGNORE AS ANIMATION
     with dissolve
-    pause 0.75 
+    pause 0.75
 
     au "*Moans*"
 
     scene v15aubfing2f # IGNORE AS ANIMATION
     with dissolve
-    pause 0.75 
+    pause 0.75
 
     u "You're so wet..."
 
@@ -987,7 +987,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_27 # TPP. Show Aubrey taking MC's hands towards her mouth, mouth closed, sexy expression
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18c_imau_28 # TPP. Show Aubrey licking MC's hands
     with dissolve
@@ -1022,7 +1022,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_30 # TPP. Show Aubrey moving to stand up in front of MC, both sexy expressions, mouths closed
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18c_imau_31 # TPP. Show Aubrey giving MC a passionate kiss
     with dissolve
@@ -1053,7 +1053,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_33 # TPP. Close up of Aubrey getting dressed (pulling her panties up)
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18c_imau_34 # FPP. MC watches as Aubrey walks out of the room, she looks back at him over her shoulders, sexy expression, winking, mouth closed
     with dissolve
@@ -1089,7 +1089,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_37 # TPP. Show MC leaving the room, smiling, mouth closed
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     call screen v15s18a_upstairsroom
 
@@ -1233,7 +1233,7 @@ label v15s18c_ryan:
     scene v15s18c_ry_7 # TPP. Show MC walking away from Ryan, smiling, mouth closed
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     call screen v15s18a_upstairsroom
 
@@ -1412,7 +1412,7 @@ label v15s18c_lauren:
         scene v15s18c_la_5 # TPP. Show Lauren giving MC a kiss
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s18c_la_6 # FPP. Lauren now standing right in front of MC, slight smile, mouth open
         with dissolve
@@ -1497,7 +1497,7 @@ label v15s18c_autumn_amber:
     scene v15s18c_auam_2 # TPP. Show MC walking up to them at the bar, Amber rolling her eyes sarcastically, both mouths closed, smiling
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18c_auam_3 # FPP. MC standing in front of them, Amber and Autumn looking at each other, Amber mouth open, smiling, Autumn mouth closed, smiling
     with dissolve
@@ -1990,22 +1990,22 @@ label v15s18c_autumn_kiss:
     scene v15s18c_auam_11 # TPP. Show MC and Autumn kissing (no tongue)
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18c_auam_12 # TPP. MC and Autumn kissing (still no tongue), MC now putting his hand on her waist
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18c_auam_13 # TPP. MC and Autumn kissing (no tongue), MC now reaching for her ass
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18c_auam_14 # TPP. Show Autumn pulling back and removing MC's hand from her ass, both slight smiles, mouths closed
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18c_auam_10
     with dissolve
@@ -2286,12 +2286,12 @@ label v15s18c_chris_penelope:
                 scene v15s18c_chpe_10 # TPP. Show Penelope taking her dress off, sexy expression and pose, mouth closed
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s18c_chpe_11 # TPP. Show Penelope getting into bed, MC getting on his knees in front of her, sexy expressions, mouths closed (Penelope naked)
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s18c_chpe_12 # FPP. MC kneeling in front of Penelope, her lags hanging off the bed, Penelope sexy expression, mouth open
                 with dissolve
@@ -2376,12 +2376,12 @@ label v15s18c_chris_penelope:
                 scene v15s18c_chpe_16 # TPP. MC on top of Penelope, they're kissing
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s18c_chpe_17 # TPP. MC getting off the bed, Penelope still laying down, both sexy expressions, mouths closed
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s18c_chpe_18 # FPP. MC standing in front of Penelope, Penelope laying down, Penelope mouth open, smiling
                 with dissolve

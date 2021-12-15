@@ -268,7 +268,7 @@ label v15s2:
     scene v15s2_7a # TPP. Same as v15s2_7, MC taking off his pants now only in his underwear, serious face, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s2_8 # TPP. Show MC getting into his bed, serious face, mouth cloesd.
     with dissolve

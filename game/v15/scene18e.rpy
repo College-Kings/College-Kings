@@ -9,7 +9,7 @@ label v15s18e:
     scene v15s18e_1 # TPP. Show MC and Lauren entering Lauren's room, her door open, Both slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     if config_censored:
         call screen censoredPopup("v15s18e_nsfwSkipLabel1")
@@ -19,27 +19,27 @@ label v15s18e:
     scene v15s18e_2 # TPP. MC and Lauren in the room with the door closed, MC pulling off Lauren's costume, MC slight smile, mouth closed, Lauren biting her lip.
     with dissolve
     
-    pause 0.75 
+    pause 0.75
 
     scene v15s18e_3 # TPP. Of just Lauren's costume landing somewhere on the floor after being tossed off.
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18e_4 # TPP. MC and Lauren now in the middle of the room, Lauren pulling off MC's costume, MC slight smile, mouth closed, Lauren with a flirty expression, mouth closed.
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18e_3a # TPP. Just MC's costume landing next to Lauren's after being tossed off.
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18e_4a # TPP. MC and Lauren in the middle of the room, naked, and kissing.
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18e_5 # TPP. Lauren laying on the bed naked. Her boobs, neck, feet, and vagina need to be visibl(Need to be clicked on for freeroam)
     with dissolve
@@ -92,7 +92,7 @@ label v15s18e_neck:
             scene v15s18ene_5 # TPP. Close up side view of MC kissing lauren as he has his hand on her neck holding it.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18ene_3a # FPP. MC ontop of Lauren them face to face, Lauren flirty, mouth open.
             with dissolve
@@ -112,17 +112,17 @@ label v15s18e_neck:
             scene v15s18ene_5a # TPP. MC not kissing Lauren, MC's hand on Lauren's neck, MC looking in Lauren's eyes, MC slight smile, mouth closed. Lauren biting her lip.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18ene_5
             with dissolve 
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18ene_5a 
             with dissolve 
             
-            pause 0.75 
+            pause 0.75
 
             scene v15s18ene_3a
             with dissolve
@@ -234,7 +234,7 @@ label v15s18e_boobs:
             scene v15s18ebo_5 
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18ebo_5a
             with dissolve 
@@ -396,7 +396,7 @@ label v15s18e_end:
 
     scene v15lauror2 # Ignore as anim
     with dissolve
-    pause 0.75 
+    pause 0.75
 
     la "*Moans*"
 
@@ -409,13 +409,13 @@ label v15s18e_end:
 
     scene v5lauor2 # Ignore as anim
     with dissolve
-    pause 0.75 
+    pause 0.75
 
     la "Do you like the taste of my pussy?"
 
     scene v15lauor2f # Ignore as anim
     with dissolve
-    pause 0.75 
+    pause 0.75
 
     u "*Muffled* Mhmm, it tastes amazing."
 
@@ -434,7 +434,7 @@ label v15s18e_end:
     scene v15s18eend_4 # TPP. Show MC standing by the bed, slight smile, mouth closed, Lauren 
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18eend_5 # FPP. MC looking down at Lauren, Lauren looking at MC, Lauren sitting on the edge of the bed, Lauren flirty, mouth open.
     with dissolve 
@@ -505,7 +505,7 @@ label v15s18e_end:
 
     scene v15lausf # Ignore as anim
     with dissolve 
-    pause 0.75 
+    pause 0.75
 
     la "I... *Moans* I love this position."
 
@@ -583,7 +583,7 @@ label v15s18e_end:
 
     scene v15laum # Ignore as anim
     with dissolve
-    pause 0.75 
+    pause 0.75
 
     la "Oh, fuck..."
 
@@ -698,12 +698,12 @@ label v15s18e_end:
     scene v15s18eend_10 # FPP. Show Lauren getting out of bed, Lauren slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18eend_11 # TPP. Close up of naked lauren entering the bathroom
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18end_12 # FPP. MC looking at the empty room.
     with dissolve

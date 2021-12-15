@@ -12,12 +12,12 @@ label v15s18b:
     scene v15s18b_2 # TPP. Shot of the while room everyone sitting in chairs and on the couch.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18b_3 # TPP. Close up of Lauren so we don't have to render everyone, Lauren picking up a gift, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18b_3a # TPP. Lauren reading the label on the gift she is holding, Lauren slight smile, mouth open.
     with dissolve 
@@ -29,7 +29,7 @@ label v15s18b:
     scene v15s18b_3b # TPP. Lauren unwrapping the gift she is holding, Lauren slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s18b_4 # TPP. Close up of just Imre sitting somewhere in the room, Imre slight smile, mouth open.
     with dissolve 
@@ -119,7 +119,7 @@ label v15s18b:
     scene v15s18b_3i # TPP. Lauren unwrapping MC's gift, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s18b_9 # TPP. Shot of just Autumn looking in Lauren's direction, slight smile, mouth open.
@@ -244,7 +244,7 @@ label v15s18b:
         scene v15s18b_3i 
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s18b_3j # TPP. Lauren holding up a white horse toy with a black mane, Lauren looking at the toy, Lauren excited, mouth open
         with dissolve 
@@ -346,7 +346,7 @@ label v15s18b:
         scene v15s18b_5h # FPP. Show Lauren walking over to MC, Lauren slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s18b_12 # FPP. MC standing up Lauren standing infront of him, MC looking at Lauren, Lauren looking at MC, Lauren excited, mouth closed.
         with dissolve
@@ -357,7 +357,7 @@ label v15s18b:
             scene v15s18b_12a # FPP. Lauren giving MC a passionate kiss.
             with dissolve 
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18b_13a # TPP. Show just MC and Lauren passionately kissing.
             with dissolve
@@ -382,7 +382,7 @@ label v15s18b:
             scene v15s18b_3i
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18b_3n # TPP. Lauren looking in the gift box none of the contents inside shown,Lauren excited, mouth open.
             with dissolve
@@ -405,28 +405,28 @@ label v15s18b:
                 scene v15s18b_3o # TPP. Show Lauren putting on the the Ruby Choker Necklace around her neck, Lauren excited, mouth closed.
                 with dissolve 
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s18b_3p # TPP. Show Lauren looking down at her chest and admiring the necklace, Lauren excited, mouth closed.
                 with dissolve 
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s18b_3q # TPP. Show Lauren without any Jewelry on with her hand in the gift box to signify she is putting the Jewelry away as to not lose it right now, Lauren excited, mouth closed.
                 with dissolve 
 
-                pause 0.75 
+                pause 0.75
 
             elif v15_lauren_gift == "emerald bracelet":
                 scene v15s18b_3r # TPP. Show Lauren putting the Emerald bracelet around her wrist, Lauren excited, mouth closed
                 with dissolve 
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s18b_3s # TPP. Show Lauren looking at her wrist with the emerald bracelet on, Lauren excited, mouth closed.
                 with dissolve 
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s18b_3q 
                 with dissolve
@@ -456,7 +456,7 @@ label v15s18b:
             scene v15s18b_8b # TPP. Show just Amber looking in Chris's direction, Amber weirded out face, mouth closed.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18b_15a # TPP. Show just Aubrey looking in Chris's direction, Aubrey weirded out, mouth closed.
             with dissolve 
@@ -471,7 +471,7 @@ label v15s18b:
             scene v15s18b_5h 
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18b_12 
             with dissolve
@@ -481,17 +481,17 @@ label v15s18b:
             scene v15s18b_12a 
             with dissolve 
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18b_13a
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18b_13b # TPP. Show just MC and Lauren kissing in a different position.
             with dissolve 
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s18b_12
             with dissolve

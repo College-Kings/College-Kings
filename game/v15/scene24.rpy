@@ -51,7 +51,7 @@ label v15s24:
     scene v15s24_6 # TPP. Show Lindsey's hand pulling out two ID's out of her pocket.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s24_5b # FPP. MC and Lindsey on the side of the store, MC looking at Lindsey, Lindsey looking at MC, Lindsey holding up the ID's for MC to see, Lindsey slight smile, mouth closed.
     with dissolve
@@ -188,7 +188,7 @@ label v15s24:
             scene v15s24_7a # TPP. MC and Lindsey on the side of the store both laughing.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s24_5d 
             with dissolve 
@@ -221,24 +221,25 @@ label v15s24:
         scene v15s24_5g # FPP. MC and Lindsey on the side of the store, MC looking at Lindsey, Lindsey looking at MC, Lindsey not holding up the ID's anymore but still in her hand, Lindsey smirking, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s24_5h # FPP. Show Lindsey leaning in towards MC.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         play sound "sounds/kiss.mp3"
 
         scene v15s24_5i # FPP. Lindsey giving MC a kiss.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s24_5d
         with dissolve
 
         li "Do well in there, and you just might have to. *Giggles*"
+
     else:
         scene v15s24_5c
         with dissolve
@@ -253,7 +254,7 @@ label v15s24:
         scene v15s24_7b # TPP. MC looking at Lindsey with a weirded out face, mouth closed, Lindsey slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s24_5d
         with dissolve
@@ -273,7 +274,7 @@ label v15s24:
     scene v15s24_7c # TPP. Lindsey handing MC the ID and some money, don't show the name on the ID in this photo so it can be used for either ID choice, both slight smile, mouth closed.
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s24_5a
     with dissolve
@@ -300,14 +301,14 @@ label v15s24:
     scene v15s24_8 # TPP. Show MC entering the store, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     play sound "sounds/doorclose.mp3"
 
     scene v15s24_9 # TPP. Show MC in the Alcohol area of the convenient store looking at the selection of items, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s24_10 # FPP. MC looking at all the Alcohol in the store, somewhere in view a bag of candies with the Alcohol called "Condy's vodka candies".
     with dissolve 
@@ -317,7 +318,7 @@ label v15s24:
     scene v15s24_9a # TPP. Show MC reaching and grabbing bottles of Alcohol, slight smile, mouth closed
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s24_11 # FPP. MC looking at the bag of "Condy's vodka candies".
     with dissolve
@@ -329,12 +330,12 @@ label v15s24:
     scene v15s24_9b # TPP. Show MC reaching and grabbing the bag of candy, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s24_12 # TPP. Show MC walking up to the counter with the Alcohol and the Candy, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s24_13 # FPP. MC looking at the Cashier, The Cashier looking at MC, The cashier is a "potato-headed" 30 year old with glasses, wearing a shirt with a chest pocket a vape sitting inside the entire time, Cashier slight smile, mouth open.
     with dissolve
@@ -366,10 +367,9 @@ label v15s24:
     scene v15s24_14 # TPP. Show just MC's and the Cashier's hand, MC handing over the ID, Don't show the name or age of the ID so it can be used for either ID choice, the cashier grabbing the ID.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     if v15s24_nancy_dick:
-
         scene v15s24_13b # FPP. MC looking at the Cashier, The cashier looking at the ID, Cashier slight smile, mouth open.
         with dissolve
 
@@ -383,7 +383,7 @@ label v15s24:
         scene v15s24_15 # TPP. Just the Cashier with his hand on his stomach laughing.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s24_13
         with dissolve
@@ -428,7 +428,7 @@ label v15s24:
         scene v15s24_16 # TPP. MC looking at the Cashier with a straight face, mouth closed, the cashier laughing.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s24_13a
         with dissolve
@@ -496,7 +496,6 @@ label v15s24:
         menu:
             "Act offended":
                 $ v15s24_alcohol = True
-                # -Karen achievement maybe?
                 scene v15s24_16a # TPP. MC looking at the Cashier angrily, mouth closed, the cashier looks shocked, mouth closed
                 with dissolve
 
@@ -505,6 +504,7 @@ label v15s24:
                 scene v15s24_13d # FPP. MC looking at the Cashier, The cashier looking at MC, Cashier worried, mouth closed.
                 with dissolve
 
+                $ grant_achievement("karen")
                 u "Where is your manager?!"
 
                 scene v15s24_13e # FPP. MC looking at the Cashier, The cashier looking at MC, Cashier worried, mouth open.
@@ -566,7 +566,7 @@ label v15s24:
                 scene v15s24_16b # TPP. MC throwing cash on the counter, MC angry, mouth closed, Cashier worried, mouth closed.
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s24_13g # FPP. The cashier gathering the cash in a hurry, Cashier worried, mouth closed.
                 with dissolve
@@ -581,7 +581,7 @@ label v15s24:
                 scene v15s24_13i # FPP. The cashier handing out the bag and a handful of change over the counter, Cashier worried, mouth closed.
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s24_13j # FPP. MC taking the bag of the items, Cashier worried, mouth closed.
                 with dissolve 
@@ -606,7 +606,7 @@ label v15s24:
                 scene v15s24_13d
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s24_16c # TPP. MC taking his ID from off the counter (Don't show the details of the ID), MC angry, mouth closed, Cashier worried, mouth closed
                 with dissolve
@@ -714,12 +714,12 @@ label v15s24:
                     scene v15s24_13m # FPP. MC looking at Cashier, The cashier squinting at and studying MC, Cashier slight smile, mouth closed.
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s24_13n # FPP. MC looking at Cashier, The cashier rolling his eyes, Cashier slight smile, mouth closed.
                     with dissolve 
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s24_13
                     with dissolve
@@ -736,22 +736,22 @@ label v15s24:
                     scene v15s24_18 # TPP. Close up of just the cashier scanning the items, slight smile, mouth closed.
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s24_18a # TPP. Close up of just the cashier bagging the items, slight smile, mouth closed
                     with dissolve 
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s24_16d # TPP. Show MC putting cash on the counter, MC slight smile, mouth closed, Cashier slight smile, mouth closed
                     with dissolve 
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s24_13o # FPP. MC looking at the Cashier, The cashier looking at MC, Cashier handing the bag of items over the counter, slight smile, mouth closed.
                     with dissolve 
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s24_13a
                     with dissolve
@@ -770,6 +770,7 @@ label v15s24:
 
                     scene v15s24_
                     with dissolve
+
     else:
         scene v15s24_13b
         with dissolve
@@ -809,7 +810,7 @@ label v15s24:
         scene v15s24_13a
         with dissolve
 
-        u "Yep... Almost the big 3 0! Ha... *Clears throat*"
+        u "Yep... Almost the big 30! Ha... *Clears throat*"
 
         scene v15s24_13
         with dissolve
@@ -1014,7 +1015,7 @@ label v15s24:
                 scene v15s24_16j # TPP. Show MC putting his phone away, MC angry, mouth closed, cashier worried, mouth closed.
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s24_13d
                 with dissolve
@@ -1029,22 +1030,22 @@ label v15s24:
                 scene v15s24_18b # TPP. Close up of just the cashier scanning the items, worried, mouth closed.
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s24_18c # TPP. Close up of just the cashier bagging the items, worried, mouth closed
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s24_16b 
                 with dissolve 
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s24_13i 
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s24_13j 
                 with dissolve 
@@ -1135,7 +1136,7 @@ label v15s24:
                 scene v15s24_17
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 if kct == "popular":
                     $ v15s24_alcohol = True
@@ -1183,22 +1184,22 @@ label v15s24:
                     scene v15s24_18
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s24_18a
                     with dissolve 
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s24_16d
                     with dissolve 
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s24_13o
                     with dissolve 
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s24_13a
                     with dissolve
@@ -1229,7 +1230,7 @@ label v15s24:
         scene v15s24_7d # TPP. MC handing Lindsey the bag of Alcohol, Lindsey grabbing the back, both slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s24_5a
         with dissolve
@@ -1269,7 +1270,7 @@ label v15s24:
         scene v15s24_7f # TPP. Lindsey slight nudging MC on the arm, both slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s24_5a
         with dissolve
@@ -1314,7 +1315,7 @@ label v15s24:
         scene v15s24_8b # TPP. Show MC exiting the store empty handed, MC slight frown, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s24_5
         with dissolve
@@ -1385,7 +1386,7 @@ label v15s24:
     scene v15s24_19 # TPP. Just MC on the side of the store pulling his phone out of his pocket, slight smile, mouth closed.
     with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s24_19a # TPP. Just Mc on the side of the store looking at his phone, slight smile, mouth closed.
     with dissolve 
@@ -1461,6 +1462,6 @@ label v15s24:
         scene v15s24_20a # FPP. MC watching Lindsey walk off empty handed, Lindsey neutral face, mouth closed.
         with dissolve 
 
-pause 0.75 
+pause 0.75
 
 jump v15s26

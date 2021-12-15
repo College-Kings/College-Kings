@@ -203,7 +203,7 @@ label v15s10:
             scene v15s10_11 # TPP. Show MC and the man walking towards the car, Lindsey walking off to the side still looking at her phone.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s10_12 # FPP. The man looking at the car, neutral expression, mouth closed.
             with dissolve
@@ -572,7 +572,7 @@ label v15s10:
             scene v15s10_12m # FPP. Same as v15s10_12j, The man slight smile, mouth closed.
             with dissolve
 
-            u "I'm glad you can see it's potential."
+            u "I'm glad you can see its potential."
 
             scene v15s10_12j
             with dissolve
@@ -887,7 +887,7 @@ label v15s10:
             scene v15s10_femalebuyer_4a
             with dissolve
 
-            female_buyer "Be honest starting now or I'm walking away empty handed. I don't mind taking the bus for the rest of my life."
+            female_buyer "Be honest starting now or I'm walking away. I don't mind taking the bus for the rest of my life."
 
             scene v15s10_femalebuyer_5 # TPP. The lady starting to walk away, unamused face, mouth closed.
             with dissolve
@@ -907,7 +907,7 @@ label v15s10:
             scene v15s10_femalebuyer_4b
             with dissolve
 
-            u "I'll admit, this thing is definitely a fixer upper, but it can get you from point A to point B with no problem."
+            u "I'll admit, this thing is definitely a fixer-upper, but it can get you from point A to point B with no problem."
 
             scene v15s10_femalebuyer_4c
             with dissolve
@@ -949,12 +949,12 @@ label v15s10:
             scene v15s10_femalebuyer_3c # FPP. Same as v15s10_femalebuyer_3c, Lindsey looking at the lady, slight smile, mouth closed.
             with dissolve
 
-            li "Oh, so many smells! There's lemon, cherry, blueberry, bubble-gum-"
+            li "Oh, so many smells! There's lemon, cherry, blueberry, bubblegum-"
 
             scene v15s10_femalebuyer_4g # FPP. Same as v15s10_femalebuyer_4f, The lady looking at lindsey, slight smile, mouth open.
             with dissolve
 
-            female_buyer "Bubble gum smell?!"
+            female_buyer "Bubblegum smell?!"
 
             scene v15s10_femalebuyer_4f
             with dissolve
@@ -964,7 +964,7 @@ label v15s10:
             scene v15s10_femalebuyer_4e
             with dissolve
 
-            female_buyer "I love bubble-gum..."
+            female_buyer "I love bubblegum..."
 
             scene v15s10_femalebuyer_3c
             with dissolve
@@ -979,7 +979,7 @@ label v15s10:
             scene v15s10_femalebuyer_4e
             with dissolve
 
-            female_buyer "I can't overlook the things you've lied about, but I do love the idea of the bubble-gum smell when I'm driving. So, this is what I can offer..."
+            female_buyer "I can't overlook the things you've lied about, but I do love the idea of the bubblegum smell when I'm driving. So, this is what I can offer..."
 
             scene v15s10_femalebuyer_4h # FPP. Same as v15s10_femalebuyer_4g, The lady holding up cash, looking at MC, slight smile, mouth closed.
             with dissolve
