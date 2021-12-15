@@ -482,3 +482,5 @@ default clue_alone = False # Unlock the clue for Nora wanting to be alone.
 default clue_camping = False # Unlock the clue for Nora camping.
 default clue_mr_rose_cabin = False # Unlock the clue for Mr. Rose's cabin.
 default clue_nora_hates_her_dad = False # Unlock the clue that Nora hates Mr. Rose.
+default v15threaten_ms_rose = False # Requested Variables for v15s21
+default v15seduce_ms_rose = False # Requested Variables for v15s21
