@@ -123,7 +123,7 @@ label v15s27: # -MC walks out of the Chicks house-
         u "(Good, I wouldn't want a repeat of that Nancy Dick fiasco...)"
     elif v15_lindsey_gamenight:
         u "(Good, I wouldn't want a repeat of that Andrew King fiasco...)"
-    else:
+    elif v11_josh_nightclub:
         u "(Good, my last one from Josh expired like a day after I got it, haha.)"
         u "(Speaking of Josh... Where the hell is he?)"
     
