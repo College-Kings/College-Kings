@@ -283,6 +283,7 @@ label v13s56:
             with dissolve
 
         "Bonsai":
+            $ v13_bonsai = True
             scene v13s56_6h
             with dissolve
 

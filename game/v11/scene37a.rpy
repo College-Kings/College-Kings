@@ -7,6 +7,8 @@ label v11_walk_or_ride:
     play music "music/v10/Track Scene 17_1.mp3" fadein 2
     menu:
         "Ride with Mr. Lee":
+            $ v11_ride_with_mrlee = True
+
             scene v11wap11 # TPP. Show MC running towards Mr Lee, MC screaming, mouth open, slightly worried
             with dissolve
 
