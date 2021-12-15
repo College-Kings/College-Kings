@@ -374,7 +374,7 @@ default v15_autumn_smoke = False
 default v15_blame_nora = False ### blame_chris = (v13_imre_disloyal and not v15_blame_nora)
 default v15_lauren_gift = None
 default v15_mad_at_ms_rose = False
-default v15_ph_riley_upset = False # placeholder ?? (set in s26?? ; read in v15s27)
+default v15_ph_riley_upset = False
 default v15_stuck_up_for_nora = False
 default v15_told_Emily_I_Love_You = False # Placeholder?
 default v15_took_notes = False

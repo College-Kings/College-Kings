@@ -352,8 +352,8 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
     # -MC leaves out the front door with Lauren watching him go, smiling-
     
-    if v14_help_chloe:
-        jump v15s20 # -if helping Chloe only OR both Chloe and Lindsey, transition to Scene 20-
+    if v14_help_chloe and not v15_chloe_lindseysabotage:
+        jump v15s20 # -if helping Chloe (with tuition) only OR both Chloe and Lindsey, transition to Scene 20-
 
     elif v15_lindsey_gamenight: 
         jump v15s24 # -if helping Lindsey with Games night, transition to Scene 24-
@@ -362,4 +362,4 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
         jump v15s25 # -if helping Lindsey with VIP club night, transition to Scene 25-
 
     else:
-        jump v15s23 # -if not helping Chloe or Lindsey, transition to Scene 23-
+        jump v15s23 # -if not helping Chloe (with tuition) or Lindsey, transition to Scene 23-
