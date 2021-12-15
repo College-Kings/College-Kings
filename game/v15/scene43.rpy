@@ -519,7 +519,6 @@ label v15s43:
 
             ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
 
-
         "(Psychologist:) Analyze Chris." if detective == "psychologist":
             u "You're enjoying this aren't you? Do you get joy out of withholding information from us?"
 
@@ -614,7 +613,6 @@ label v15s43:
 
     menu:
         "She's close with her Aunt?":
-
             u "This aunt-"
 
             scene v15s43_15
@@ -661,6 +659,7 @@ label v15s43:
             with dissolve
 
             am "Hmm... I don't know if we can trust you."
+
         "(Professional:) Use logic." if detective == "professional":
             u "This aunt is around often?"
 
@@ -683,6 +682,7 @@ label v15s43:
             with dissolve
 
             u "Help us make sense out of what you're saying, Chris!"
+
         "(Psychologist:) Examine Further." if detective == "psychologist"
             u "This aunt. Does Nora like her?"
 
@@ -717,7 +717,8 @@ label v15s43:
             with dissolve
 
             u "Hate is a very strong word. Are those your words or Nora's words?"
-        "(Loose Cannon:) Shout at Chris?"
+
+        "(Loose Cannon:) Shout at Chris"
             scene v15s43_14g
             with vpunch
 
