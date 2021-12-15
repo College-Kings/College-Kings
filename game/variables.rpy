@@ -233,7 +233,6 @@ default v11s23_penelope_date = True # late addition, defaulting to True to enhan
 default v11s25_beer = True
 
 # 12.0
-default chrismad = False
 default freeroam9 = set() #Ferry
 default s12v32_get_aubrey_flowers = False
 default v11_lindsey_run = False

@@ -184,6 +184,10 @@ label after_load:
             del chloegf
         except NameError: pass
         try:
+            if chrismad: chris.relationship = Relationship.MAD
+            del chrismad
+        except NameError: pass
+        try:
             if emmyrs: emmy.relationship = Relationship.LIKES
             del emmyrs
         except NameError: pass
