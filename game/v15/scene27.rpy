@@ -126,7 +126,6 @@ label v15s27: # -MC walks out of the Chicks house-
     elif v11_josh_nightclub:
         u "(Good, my last one from Josh expired like a day after I got it, haha.)"
         u "(Speaking of Josh... Where the hell is he?)"
-    
 
     scene v15s27_4a
     with dissolve

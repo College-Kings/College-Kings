@@ -392,3 +392,5 @@ default v15s7_chloe_empathize = False #????
 default v15s42_flirt = False
 default v15s42_grab_breakfast = False
 default detective = "None" # Archetypes: professional, psychologist, loose cannon
+default v15threaten_ms_rose = False # Requested Variables for v15s21
+default v15seduce_ms_rose = False # Requested Variables for v15s21
