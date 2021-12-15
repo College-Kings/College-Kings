@@ -66,8 +66,12 @@ init python:
             obj = getattr(store, i[1]) if func == toggle_field else store
             args = i[2:] if func == toggle_field else i[1:]
 
-            if getattr(obj, args[0]) != args[1]:
-                return False
+            try:
+                if getattr(obj, args[0]) != args[1]:
+                    return False
+            except IndexError:
+                if getattr(obj, args[0]) is False:
+                    return False
 
         return True
         
