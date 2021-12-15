@@ -97,6 +97,13 @@ label v15s27: # -MC walks out of the Chicks house-
 
     u "*Laughs* Well, you are my two favorite girls, that's true..."
 
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value ^ chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+        u "(Well, maybe in the top three...)"
+
+    elif lauren.relationship.value >= Relationship.GIRLFRIEND.value and chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+        u "(Well, maybe in the top three...)"
+        u "(Or four... Wait, how many girlfriends do I have?)"
+
     scene v15s27_4a
     with dissolve
 
@@ -111,6 +118,15 @@ label v15s27: # -MC walks out of the Chicks house-
     with dissolve
 
     jen "Oh, come on Grandpa! There's a new underground bar that just opened up, and they're not checking IDs!"
+
+    if v15s24_nancy_dick:
+        u "(Good, I wouldn't want a repeat of that Nancy Dick fiasco...)"
+    elif v15_lindsey_gamenight:
+        u "(Good, I wouldn't want a repeat of that Andrew King fiasco...)"
+    else:
+        u "(Good, my last one from Josh expired like a day after I got it, haha.)"
+        u "(Speaking of Josh... Where the hell is he?)"
+    
 
     scene v15s27_4a
     with dissolve
