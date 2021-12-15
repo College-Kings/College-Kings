@@ -68,7 +68,36 @@ label v15s23:
         $ aubrey.messenger.addReply("Uhh... I'll make it up to you...? Lol")
         $ aubrey.messenger.newMessage("Hehe, I know you will ;)")
 
-    if not joinwolves:
+    if joinwolves:
+        scene v15s23_8a # TPP. Same as v15s23_8 but MC's WOLF ROOM.
+        with dissolve
+
+        pause 0.75
+
+        scene v15s23_9a # TPP. Same as v15s23_9 but MC's WOLF ROOM.
+        with dissolve
+
+        pause 0.75
+
+        scene v15s23_10a # TPP. Same as v15s23_10 but MC's WOLF ROOM.
+        with dissolve
+
+        pause 0.75
+
+        scene v15s23_11a # TPP. Same as v15s23_11 but MC's WOLF ROOM.
+        with dissolve
+
+        pause 0.75
+
+        scene v15s23_12a # TPP. Same as v15s23_12 but MC's WOLF ROOM.
+        with dissolve
+        
+        pause 0.75
+
+        scene v15s23_13a # TPP. Same as v15s23_13 but MC's WOLF ROOM.
+        with dissolve
+
+    else:
         scene v15s23_8 # TPP. MC, smiling, mouth closed, wearing a towel, entering his room. [MC's APE ROOM]
         with dissolve
 
@@ -113,35 +142,6 @@ label v15s23:
         with dissolve
 
         u "(Time to find out!)"
-
-    else:
-        scene v15s23_8a # TPP. Same as v15s23_8 but MC's WOLF ROOM.
-        with dissolve
-
-        pause 0.75
-
-        scene v15s23_9a # TPP. Same as v15s23_9 but MC's WOLF ROOM.
-        with dissolve
-
-        pause 0.75
-
-        scene v15s23_10a # TPP. Same as v15s23_10 but MC's WOLF ROOM.
-        with dissolve
-
-        pause 0.75
-
-        scene v15s23_11a # TPP. Same as v15s23_11 but MC's WOLF ROOM.
-        with dissolve
-
-        pause 0.75
-
-        scene v15s23_12a # TPP. Same as v15s23_12 but MC's WOLF ROOM.
-        with dissolve
-        
-        pause 0.75
-
-        scene v15s23_13a # TPP. Same as v15s23_13 but MC's WOLF ROOM.
-        with dissolve
 
 label v15s23_aubrey_text_continue:
     if aubrey.messenger.replies:

@@ -322,23 +322,7 @@ label v15s9:
 
     au "Have you seen Nora? Nobody's heard from her since we landed at the airport. You know she broke up with Chris?"
 
-    if not joinwolves:
-        scene v15s9_3o # FPP. same as v15s9_3n Aubrey's mouth is closed
-        with dissolve
-
-        u "Well, shit... No, the last time I saw her was at the airport too. I hope she's okay."
-
-        scene v15s9_3n
-        with dissolve
-
-        au "Me too. So, you don't know if anyone has heard from her?"
-
-        scene v15s9_3o
-        with dissolve
-
-        u "I don't, but I'll keep an eye out and if I hear anything I'll call."
-
-    else:
+    if joinwolves:
         scene v15s9_3o
         with dissolve
 
@@ -353,6 +337,22 @@ label v15s9:
         with dissolve
 
         u "Agreed, I haven't seen her since the airport either. I actually sent her a text last night but nothing... I'll let you know if I hear anything."
+
+    else:
+        scene v15s9_3o # FPP. same as v15s9_3n Aubrey's mouth is closed
+        with dissolve
+
+        u "Well, shit... No, the last time I saw her was at the airport too. I hope she's okay."
+
+        scene v15s9_3n
+        with dissolve
+
+        au "Me too. So, you don't know if anyone has heard from her?"
+
+        scene v15s9_3o
+        with dissolve
+
+        u "I don't, but I'll keep an eye out and if I hear anything I'll call."
 
     scene v15s9_3n
     with dissolve

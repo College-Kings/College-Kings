@@ -896,20 +896,7 @@ label v15s24:
 
         u "No, I'm..."
 
-        if not joinwolves:
-            scene v15s24_13l
-            with dissolve
-
-            u "An accountant."
-
-            scene v15s24_13k
-            with dissolve
-
-            cashier "*Scoffs* An accountant?"
-
-            cashier "I'm doing the math for you, pal. It's not adding up."
-
-        else:
+        if joinwolves:
             scene v15s24_13l
             with dissolve
 
@@ -921,6 +908,19 @@ label v15s24:
             cashier "Ha! A lawyer?"
 
             cashier "You're gonna walk around dressed like that, and expect people to believe that you're a lawyer?"
+
+        else:
+            scene v15s24_13l
+            with dissolve
+
+            u "An accountant."
+
+            scene v15s24_13k
+            with dissolve
+
+            cashier "*Scoffs* An accountant?"
+
+            cashier "I'm doing the math for you, pal. It's not adding up."
 
         scene v15s24_13
         with dissolve

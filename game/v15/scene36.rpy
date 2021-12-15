@@ -4,7 +4,6 @@
 # Time: Night
 
 label v15s36:
-
     scene v15s36_1 # TPP. Shot of MC and Autumn walking down the street, both slight smile, mouth closed.
     with fade
 
@@ -99,7 +98,46 @@ label v15s36:
 
         u "*Laughs*"
 
-        if gamenight == "would you rather": # Placeholder for the game being would you rather.
+        if v15_lindsey_mostlikelyto:
+            scene v15s36_5
+            with dissolve
+
+            aut "The one about getting shit-face drunk and waking up on the other side of the country, haha."
+
+            scene v15s36_5a
+            with dissolve
+
+            u "*Laughs* Because everyone said it would be me?"
+
+            scene v15s36_5
+            with dissolve
+
+            aut "It's only a matter of time. *Giggles*"
+
+            scene v15s36_5a
+            with dissolve
+
+            u "I can see you all taking bets on what state I'll wake up in."
+
+            scene v15s36_5
+            with dissolve
+
+            aut "A drunken state... Haha!"
+
+            scene v15s36_5a
+            with dissolve
+
+            u "Wow... Good one. Haha, I was going to say Missouri."
+
+            scene v15s36_5
+            with dissolve
+
+            aut "Okay... That was way worse than my cheesy joke..."
+
+            scene v15s36_6 # TPP. Show MC and Autumn laughing while looking at each other now further down the street.
+            with dissolve 
+
+        elif v15_lindsey_gamenight: # Placeholder for the game being would you rather.
             scene v15s36_5
             with dissolve
 
@@ -141,44 +179,7 @@ label v15s36:
             with dissolve
 
             u "*Laughs* Good advice, thanks."
-        elif gamenight == "most likely to":
-            scene v15s36_5
-            with dissolve
 
-            aut "The one about getting shit-face drunk and waking up on the other side of the country, haha."
-
-            scene v15s36_5a
-            with dissolve
-
-            u "*Laughs* Because everyone said it would be me?"
-
-            scene v15s36_5
-            with dissolve
-
-            aut "It's only a matter of time. *Giggles*"
-
-            scene v15s36_5a
-            with dissolve
-
-            u "I can see you all taking bets on what state I'll wake up in."
-
-            scene v15s36_5
-            with dissolve
-
-            aut "A drunken state... Haha!"
-
-            scene v15s36_5a
-            with dissolve
-
-            u "Wow... Good one. Haha, I was going to say Missouri."
-
-            scene v15s36_5
-            with dissolve
-
-            aut "Okay... That was way worse than my cheesy joke..."
-
-            scene v15s36_6 # TPP. Show MC and Autumn laughing while looking at each other now further down the street.
-            with dissolve 
     else:
         scene v15s36_4a
         with dissolve

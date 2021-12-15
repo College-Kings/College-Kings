@@ -1217,48 +1217,7 @@ label v15s4:
 
     u "I'm sure we will."
 
-    if not v15_autumn_lunchbreak:
-        scene v15s4_43
-        with dissolve
-
-        aut "Alright, I better get him fed and bathed before I go on break. I'm due for some \"me time\" *Laughs*"
-
-        scene v15s4_43a
-        with dissolve
-
-        u "Yeah, you deserve a break at the very least, haha."
-
-        scene v15s4_43
-        with dissolve
-
-        aut "Thanks again for all your help today."
-
-        scene v15s4_43a
-        with dissolve
-
-        u "Oh, sure thing. It wasn't a bad start to my day, so thank you as well."
-
-        scene v15s4_52 # TPP. Autumn and MC hugging, both slight smile, mouth closed.
-        with dissolve
-
-        pause 0.75
-
-        scene v15s4_43
-        with dissolve
-
-        aut "I'll see you later at Lauren's party, right?"
-
-        scene v15s4_43a
-        with dissolve
-
-        u "Yeah! See you there."
-
-        scene v15s4_53 # TPP. Show MC walking out of the Dog Shelter waving as he goes, Autumn and Oscar watching him leave.
-        with dissolve
-        
-        pause 1
-
-    else:
+    if v15_autumn_lunchbreak:
         scene v15s4_43
         with dissolve
 
@@ -1631,6 +1590,47 @@ label v15s4:
         with dissolve
 
         pause 0.75
+
+    else:
+        scene v15s4_43
+        with dissolve
+
+        aut "Alright, I better get him fed and bathed before I go on break. I'm due for some \"me time\" *Laughs*"
+
+        scene v15s4_43a
+        with dissolve
+
+        u "Yeah, you deserve a break at the very least, haha."
+
+        scene v15s4_43
+        with dissolve
+
+        aut "Thanks again for all your help today."
+
+        scene v15s4_43a
+        with dissolve
+
+        u "Oh, sure thing. It wasn't a bad start to my day, so thank you as well."
+
+        scene v15s4_52 # TPP. Autumn and MC hugging, both slight smile, mouth closed.
+        with dissolve
+
+        pause 0.75
+
+        scene v15s4_43
+        with dissolve
+
+        aut "I'll see you later at Lauren's party, right?"
+
+        scene v15s4_43a
+        with dissolve
+
+        u "Yeah! See you there."
+
+        scene v15s4_53 # TPP. Show MC walking out of the Dog Shelter waving as he goes, Autumn and Oscar watching him leave.
+        with dissolve
+        
+        pause 1
 
     if "v12_rose" in sceneList:
         jump v15s5

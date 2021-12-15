@@ -1779,33 +1779,7 @@ label v15s18c_autumn_amber:
 
                 u "Yeah, I know, I'm sorry... I just-"
 
-                if not kct == "loyal":
-                    scene v15s18c_auam_5d
-                    with dissolve
-
-                    aut "You just nothing. You're lucky I won't tell Lauren that you even asked me."
-
-                    scene v15s18c_auam_5e
-                    with dissolve
-
-                    u "I'm sorry, Autumn. I thought-"
-
-                    scene v15s18c_auam_5d
-                    with dissolve
-
-                    aut "This never happened, [name]. Go away."
-
-                    scene v15s18c_auam_5e
-                    with dissolve
-
-                    u "Yeah. Okay..."
-
-                    scene v15s18c_auam_6
-                    with dissolve
-
-                    u "(Well, fuck...)"
-                
-                else:
+                if kct == "loyal":
                     scene v15s18c_auam_5f # FPP. Same as v15s18c_5e, Autumn slightly sad, mouth open
                     with dissolve
 
@@ -1840,6 +1814,32 @@ label v15s18c_autumn_amber:
 
                     jump v15s18c_autumn_kiss
 
+                else:
+                    scene v15s18c_auam_5d
+                    with dissolve
+
+                    aut "You just nothing. You're lucky I won't tell Lauren that you even asked me."
+
+                    scene v15s18c_auam_5e
+                    with dissolve
+
+                    u "I'm sorry, Autumn. I thought-"
+
+                    scene v15s18c_auam_5d
+                    with dissolve
+
+                    aut "This never happened, [name]. Go away."
+
+                    scene v15s18c_auam_5e
+                    with dissolve
+
+                    u "Yeah. Okay..."
+
+                    scene v15s18c_auam_6
+                    with dissolve
+
+                    u "(Well, fuck...)"
+                
             else:
                 if not kct == "loyal":
                     scene v15s18c_auam_5f

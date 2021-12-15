@@ -154,7 +154,7 @@ label v15s7:
                 
                     cl "Yes, [name]. I DID have a diary."
 
-                    if chloe.relationship.value >= Relationship.FWB.value:
+                    if chloe.relationship.value >= Relationship.FWB.value: #If Chloe GF or Chloe RS
                         scene v15s7_1a
                         with dissolve
 
@@ -175,7 +175,7 @@ label v15s7:
 
                         u "(Me??? I do??? Fuck...)"
 
-                    else: # -if not Chloe GF or Chloe RS
+                    else:
                         scene v15s7_1a
                         with dissolve
 
@@ -346,17 +346,17 @@ label v15s7:
 
         cl "I can't let it happen."
 
-        if not v14_help_chloe: # -if MC is not helping Chloe
-            scene v15s7_1h # FPP Same angle as 1, Chloe looking at MC with a slight smile, mouth closed
-            with dissolve
-
-            u "You won't. I know you won't."
-
-        else: # -if MC is helping Chloe
+        if v14_help_chloe: # -if MC is helping Chloe
             scene v15s7_1h
             with dissolve
                 
             u "We won't. Don't even think about it."
+
+        else: # -if MC is not helping Chloe
+            scene v15s7_1h # FPP Same angle as 1, Chloe looking at MC with a slight smile, mouth closed
+            with dissolve
+
+            u "You won't. I know you won't."
 
         if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
             scene v15s7_4 # TPP Chloe giving MC a kiss, a little bit of mascara still streaking her face

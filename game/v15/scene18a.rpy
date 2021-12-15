@@ -357,10 +357,10 @@ label v15s18a_Aubrey:
         $ v15s18a_kiwiiPost3 = KiwiiPost("Aubrey", "Selfie with MC smiling at halloween party", _("Spooky season? More like stripper season ;)"), numberLikes=2492)
         $ v15s18a_kiwiiPost3.newComment("Chloe", _("O. M. G."), queue=False)
         $ v15s18a_kiwiiPost3.newComment("Naomi", _("Hahahaha! I have to come to one of these parties soon..."), queue=False)
-        if not joinwolves:
-            $ v15s18a_kiwiiPost3.newComment("Grayson", _("What the fuck...?"), queue=False)
-        else:
+        if joinwolves:
             $ v15s18a_kiwiiPost3.newComment("Sebastian", _("Hell yeah! Can I borrow that outfit when you're done, [name]? :D"), queue=False)
+        else:
+            $ v15s18a_kiwiiPost3.newComment("Grayson", _("What the fuck...?"), queue=False)
         $ v15s18a_kiwiiPost3.addReply(_("Lol, I love this. Happy birthday Lauren!"), mentions="Lauren")
         $ v15s18a_kiwiiPost3.newComment("Lauren", _("Hehe, thank you!! You guys are the best <3"), queue=False)
         $ v15s18a_kiwiiPost3.addReply(_("Now taking appointments... ;)"))
@@ -370,10 +370,10 @@ label v15s18a_Aubrey:
         $ v15s18a_kiwiiPost4 = KiwiiPost("Aubrey", "Selfie with non-smiling MC at halloween party", _("I think something's wrong with our stripper... Is he supposed to be this sad? </3"), numberLikes=2415)
         $ v15s18a_kiwiiPost4.newComment("Chloe", _("O. M. G."), queue=False)
         $ v15s18a_kiwiiPost4.newComment("Naomi", _("Aww! You need to cheer him up, little sis! Or I will... ;)"), queue=False)
-        if not joinwolves:
-            $ v15s18a_kiwiiPost4.newComment("Grayson", _("What the fuck is this"), queue=False)
-        if else:
+        if joinwolves:
             $ v15s18a_kiwiiPost4.newComment("Sebastian", _("Lmao, show them how it's done, [name]! #SadboyStriptease"), queue=False)
+        else:
+            $ v15s18a_kiwiiPost4.newComment("Grayson", _("What the fuck is this"), queue=False)
         $ v15s18a_kiwiiPost4.addReply(_("Sigh... Happy birthday Lauren! Lol"), mentions="Lauren")
         $ v15s18a_kiwiiPost4.newComment("Lauren", _("Hahaha! Thank you guys <3"), queue=False)
         $ v15s18a_kiwiiPost4.addReply(_("Now taking appointments... ;)"))
