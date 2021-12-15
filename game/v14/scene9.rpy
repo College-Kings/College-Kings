@@ -390,7 +390,7 @@ label v14s09:
 
     u "(Lindsey's...)"
 
-    if not v13s40fromgame:
+    if not "v13_chloe" in sceneList:
         menu:
             "Escape Room":
                 u "(Her birthday at the escape room was really cool, that was probably her favorite part of the trip.)"

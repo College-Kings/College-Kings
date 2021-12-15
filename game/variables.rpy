@@ -36,6 +36,7 @@ default checklist = Checklist()
 default path_builder = False
 default pb_name_set = False
 default pb_start_location = "start"
+default scene_fromgame = False
 
 # voiceacting
 default voice_acted = True
@@ -280,7 +281,6 @@ default v13_smoke_weed = False
 default v13_emmy_points = 0
 default v13s16_lauren_points = 0
 default v13s20_bleach_suitcase = False
-default v13s40fromgame = False
 default v13s41_lindsey_points = 0
 default v13s48_canoeing_as_date = False
 default v13s48_get_aubrey_chocolate = False

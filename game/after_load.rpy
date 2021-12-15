@@ -602,6 +602,9 @@ label after_load:
         except NameError: kiwii_firstTime = False
 
         try:
+            if v13s40fromgame and "v13_chloe" not in sceneList: sceneList.add("v13_chloe")
+        except NameError: pass
+        try:
             if v14s51_closet and "closet" not in freeroam12: freeroam12.add("closet")
         except NameError: pass
         try:
@@ -813,8 +816,6 @@ label after_load:
         except NameError: v13s41_lindsey_points = 0
         try: v13s20_bleach_suitcase
         except NameError: v13s20_bleach_suitcase = False
-        try: v13s40fromgame
-        except NameError: v13s40fromgame = False
         try: v13_aubrey_vote
         except NameError: v13_aubrey_vote = "na"
         try: v14_ryan_satin
