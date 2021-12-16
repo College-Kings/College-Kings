@@ -443,7 +443,8 @@ label v15s26:
     scene v15s26_19b # TPP Same angle as 19, side view of everyone on the couch watching the movie. Riley is leaning forward in interest, Aubrey is getting popcorn from bucket on MC's lap and winking at him
     with dissolve
 
-    mactor "Lou-Ann, please talk to me. Why are you saying you want to leave me now? You're the best second wife a man could ever wish for! Things have been good for us, haven't they?"
+    mactor "Lou-Ann, please talk to me. Why are you saying you want to leave me now?"
+    mactor "You're the best second wife a man could ever wish for! Things have been good for us, haven't they?"
 
     scene v15s26_19c # TPP Same angle as 19, Riley grabbing popcorn while still watching the screen, Aubrey leaning back against the couch
     with dissolve

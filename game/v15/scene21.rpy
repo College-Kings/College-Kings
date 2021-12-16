@@ -508,7 +508,8 @@ label v15s21:
 
         lee "It's quite a grey area still... Though, I understand I may be in the minority with my opinion on that."
 
-        lee "I'm sure that being President requires a good amount of hard work, but I still feel that it's unfair to give a free ride to someone just because they won a system of votes."
+        lee "I'm sure that being President requires a good amount of hard work."
+        lee "But I still feel that it's unfair to give a free ride to someone just because they won a popularity contest."
 
         scene v15s21_7i # FPP. same as v15s21_7h Chloe places a hand on her chest and extends the other hand palm up to the teacher, still looking at the teacher, still a nervous epxression, mouth is still closed
         with dissolve
