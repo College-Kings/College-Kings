@@ -1512,7 +1512,8 @@ label v15s4:
         scene v15s4_59a
         with dissolve
 
-        aut "Ha... I remember when we were young, she had this little toy horse that she would take everywhere. I don't think we have any family photos where she isn't holding it... *Chuckles*"
+        aut "Ha... I remember when we were young, she had this little toy horse that she would take everywhere."
+        aut "I don't think we have any family photos where she isn't holding it... *Chuckles*"
 
         scene v15s4_59
         with dissolve

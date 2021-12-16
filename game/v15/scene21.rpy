@@ -1903,7 +1903,8 @@ label v15s21:
         u "Chloe..."
 
         if ms_rose.relationship.value >= Relationship.FWB.value:
-            u "(I won't feel great about it, but if I can get Chloe to give me a few moments alone with Ms. Rose, I might be able to get exactly what we want from her... No special conditions...)"
+            u "(I won't feel great about it, but if I can get Chloe to give me a few moments alone with Ms. Rose...)"
+            u "(...I might be able to get exactly what we want from her. No special conditions.)"
 
             menu:
                 "Ask Chloe for privacy":
