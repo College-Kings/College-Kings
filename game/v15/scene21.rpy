@@ -735,10 +735,11 @@ label v15s21:
         scene v15s21_5a
         with dissolve
 
-        # -total number points that can be accumulated is six, four correct answers and two variable-dependent bonuses-
-
         if kct == "loyal":
             $ v15_meeting_points += 1
+
+        # Can gain up to 7 points: 4 from answers, 1 from the car ride, 1 from bonsai and 1 from kct. Need 2+ points to convince him
+        # Mr. Lee is medium difficulty to convince. Need 2 answers if you fail everything else
 
         if v15_meeting_points >= 5:
             scene v15s21_6
@@ -805,7 +806,7 @@ label v15s21:
             scene v15s21_5c
             with dissolve
 
-        elif v15_meeting_points >= 3:
+        elif v15_meeting_points >= 2:
             if kct == "loyal":
                 call screen kct_popup
             
@@ -1094,6 +1095,8 @@ label v15s21:
         ro "Oh! Very organized... Impressive."
 
         if ms_rose.relationship.level >= Relationship.FWB.value:
+            $ v15_meeting_points += 2
+        
             scene v15s21_10d # FPP. Chloe is walking away with her back turned and can't see Mc or Ms. Rose, Ms. Rose is giving Mc a wink, slight smile, mouth closed
             with dissolve
             
@@ -1662,16 +1665,18 @@ label v15s21:
         scene v15s21_13o # FPP. same as v15s21_13n Ms. Rose has a serious expression, still looking at Mc, mouth is still closed
         with dissolve
 
-        # -total number points that can be accumulated is five, four correct answers and one variable-dependent bonus-
-
         if kct == "confident":
             v15_meeting_points += 1
 
-        if v15_meeting_points >= 4:
+        # Can gain up to 8 points: 4 from answers, 2 from relationship with Ms. Rose, 1 from perfume and 1 from kct. Need 3+ points to convince her
+        # If Relationship, Ms. Rose is easy to convince (just need 1 correct answer even if you fail everything else)
+        # If not Relationship, Ms. Rose is hard to convince (need 3 correct answers if you fail everything else)
+
+        if v15_meeting_points >= 5:
             scene v15s21_13i
             with dissolve
 
-            ro "Honestly, you both answered my questions honestly, and there's not much more I can ask for."
+            ro "I have to say, you both answered my questions honestly, and there's not much more I can ask for."
 
             scene v15s21_13n
             with dissolve
@@ -1691,7 +1696,7 @@ label v15s21:
             scene v15s21_12b # TPP. same as v15s21_12 MC is now sitting next to Chloe, Chloe and Mc look at each other and high five, both full smiles, both mouths open, Ms. Rose is still sitting down looking at Chloe, Still a slight smile, mouth is still closed
             with dissolve
 
-        elif v15_meeting_points >= 3:
+        elif v15_meeting_points >= 4:
             scene v15s21_13a
             with dissolve
 
@@ -1725,7 +1730,7 @@ label v15s21:
             scene v15s21_12b
             with dissolve
 
-        elif v15_meeting_points >= 2:
+        elif v15_meeting_points >= 3:
             call screen kct_popup
 
             scene v15s21_13a
