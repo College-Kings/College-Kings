@@ -397,4 +397,3 @@ default v15_threaten_ms_rose = False # Requested Variables for v15s21
 default v15_seduce_ms_rose = False # Requested Variables for v15s21
 default v15_meeting_points = 0
 default v15_notes_clicks = 0 #placeholder for clicks in the journal
-default v15intervened_for_chloe = False
