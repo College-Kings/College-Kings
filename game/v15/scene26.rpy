@@ -62,7 +62,7 @@ label v15s26:
 
     pause 0.75
 
-    if (v14_help_lindsey and not v14_lindsey_sell): # -if MC went to Chloe's room to try and steal money
+    if v14_help_lindsey and not v14_lindsey_sell: # -if MC went to Chloe's room to try and steal money
         u "(I remember this door... I guess I'm about to find out what's behind it.)"
 
     scene v15s26_6 # FPP Show Aubrey and Riley in hallway by door to theater room, both smiling at MC with mouths closed
