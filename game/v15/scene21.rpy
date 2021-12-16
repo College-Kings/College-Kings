@@ -485,7 +485,7 @@ label v15s21:
             scene v15s21_6c
             with dissolve
 
-            lee "Please, just take this as an important life lesson; Keep your eyes in the meeting as well as your head."
+            lee "Please, just take this as an important life lesson. Keep your eyes in the meeting as well as your head."
 
             scene v15s21_6b
             with dissolve

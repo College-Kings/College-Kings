@@ -1101,7 +1101,7 @@ label v15s28:
     scene v15s28_3ag # FPP Same angle as 3, Jenny and Penelope looking out over the bar room, Penelope's mouth open
     with dissolve
 
-    pe "Oh, shit! They'll be closing in a few minutes; We should probably try to beat the rush."
+    pe "Oh, shit! They'll be closing in a few minutes. We should probably try to beat the rush."
 
     scene v15s28_3
     with dissolve
@@ -1196,7 +1196,7 @@ label v15s28:
         scene v15s28_21b # FPP Same angle as 21, Jenny looking over at Penelope walking away, Jenny with slight smile and mouth open
         with dissolve
 
-        jen "She likes to take things slow; You already know that, but..."
+        jen "She likes to take things slow. You already know that, but..."
 
         scene v15s28_21
         with dissolve
