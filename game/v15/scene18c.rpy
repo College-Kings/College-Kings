@@ -617,12 +617,48 @@ label v15s18c_imre_aubrey:
     u "Very true."
 
     if not v15s18_mention_list_aubrey:
-
         u "(Now is a good time to check something off the list, should I ask Aubrey for help?)"
 
         menu:
-            "Don't mention it":
+            "Ask for help":
+                u "So, I'm just curious..."
 
+                scene v15s18c_imau_6c
+                with dissolve
+
+                au "Yeah?"
+
+                scene v15s18c_imau_6d
+                with dissolve
+
+                u "If I told you I had this dumb list of tasks to complete by the end of the night, would you want to help me?"
+
+                scene v15s18c_imau_6c
+                with dissolve
+
+                au "Hmm... What kind of tasks? *Laughs*"
+
+                scene v15s18c_imau_6d
+                with dissolve
+
+                u "Uh, well..."
+
+                scene v15s18c_imau_6e # FPP. Same as v15s18c_6d, MC handing the list to Aubrey, Aubrey grabbing the list, slight smile, mouth closed
+                with dissolve
+
+                pause 0.75
+
+                scene v15s18c_imau_6f # FPP. Same as v15s18c_imau_6c, Aubrey looking at the list, slightly surprised, mouth open
+                with dissolve
+
+                au "Oh! Haha..."
+
+                scene v15s18c_imau_6g # FPP. Same as v15s18c_imau_6f, Aubrey smirking, mouth closed, looking at MC
+                with dissolve
+
+                u "Yeah... I just thought I'd ask because-"
+    
+            "Don't mention it":
                 u "(Not feeling it...)"
 
                 scene v15s18c_imau_6c # FPP. Same as v15s18c_imau_6a, Aubrey different pose, slight smile, mouth open
@@ -676,45 +712,6 @@ label v15s18c_imre_aubrey:
 
                 call screen v15s18a_upstairsroom
 
-            "Ask for help":
-
-                u "So, I'm just curious..."
-
-                scene v15s18c_imau_6c
-                with dissolve
-
-                au "Yeah?"
-
-                scene v15s18c_imau_6d
-                with dissolve
-
-                u "If I told you I had this dumb list of tasks to complete by the end of the night, would you want to help me?"
-
-                scene v15s18c_imau_6c
-                with dissolve
-
-                au "Hmm... What kind of tasks? *Laughs*"
-
-                scene v15s18c_imau_6d
-                with dissolve
-
-                u "Uh, well..."
-
-                scene v15s18c_imau_6e # FPP. Same as v15s18c_6d, MC handing the list to Aubrey, Aubrey grabbing the list, slight smile, mouth closed
-                with dissolve
-
-                pause 0.75
-
-                scene v15s18c_imau_6f # FPP. Same as v15s18c_imau_6c, Aubrey looking at the list, slightly surprised, mouth open
-                with dissolve
-
-                au "Oh! Haha..."
-
-                scene v15s18c_imau_6g # FPP. Same as v15s18c_imau_6f, Aubrey smirking, mouth closed, looking at MC
-                with dissolve
-
-                u "Yeah... I just thought I'd ask because-"
-    
     else:
         scene v15s18c_imau_6c
         with dissolve
@@ -820,7 +817,6 @@ label v15s18c_imre_aubrey:
     image v15aubfinf = Movie(play="images/v15/Scene 18c/v15aubfinf.webm", loop=True, image="images/v15/Scene 18c/v15aubfinStart.webp", start_image="images/v15/Scene 18c/v15aubfinStart.webp") 
     image v15aubfin2 = Movie(play="images/v15/Scene 18c/v15aubfin2.webm", loop=True, image="images/v15/Scene 18c/v15aubfin2Start.webp", start_image="images/v15/Scene 18c/v15aubfin2Start.webp")
     image v15aubfin2f = Movie(play="images/v15/Scene 18c/v15aubfin2f.webm", loop=True, image="images/v15/Scene 18c/v15aubfin2Start.webp", start_image="images/v15/Scene 18c/v15aubfin2Start.webp")
-
 
     scene v15aubfin # IGNORE AS ANIMATION
     with dissolve

@@ -940,7 +940,7 @@ label v15s21:
         scene v15s21_7h
         with dissolve
 
-        cl "You're suggesting that I... Give up my scholarship?"
+        cl "You're suggesting that I... give up my scholarship?"
 
         scene v15s21_6v # FPP. same as v15s21_6h Mr. Lee extends a hand out, palm up in an explainatory manner, still no expression, still looking at Chloe, mouth is still open
         with dissolve
@@ -1070,7 +1070,7 @@ label v15s21:
 
             u "(I have to put my emotions to the side during this meeting, I can't let my anger get in the way.)"
 
-        elif v15_mad_at_ms_rose: # -if MC had kitchen sex with Ms. Rose
+        elif "v15_rose" in sceneList: # -if MC had kitchen sex with Ms. Rose
             scene v15s21_10a
             with dissolve
 
@@ -1558,7 +1558,7 @@ label v15s21:
 
                 cl "How could I..."
 
-                cl "Even continue studying. Without the scholarship?"
+                cl "Even continue studying... without the scholarship?"
 
                 scene v15s21_13a
                 with dissolve
@@ -2180,6 +2180,8 @@ label v15s21:
                                 scene v15s21_13ze
                                 with dissolve
 
+                                $ grant_achievement("emotional_blackmail")
+
                                 u "It would. You're right."
 
                                 scene v15s21_12f # FPP. same as v15s21_12d MC is standing next to Ms. Rose looking down at her with a bold expression, holding a pen out towards her and pushing paperwork towards her, his mouth is closed, Ms. Rose is still sitting down, looking up at Mc with a scared expression, mouth is closed
@@ -2230,7 +2232,7 @@ label v15s21:
                                 scene v15s21_16d # FPP. same as v15s21_16c Ms. Rose's mouth is closed, still crying, still looking at MC, still sitting down
                                 with dissolve
 
-                                u "(Fuck... Me either...)"
+                                u "(Fuck... Me neither...)"
 
                                 scene v15s21_16c
                                 with dissolve

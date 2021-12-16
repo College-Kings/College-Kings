@@ -977,7 +977,6 @@ label v15s28:
 
     pe "What's next?!"
 
-    ### VERIFY THIS VARIABLE - NEED TO GET THE PENELOPE VARIABLE STRAIGHTENED OUT
     if penelope.relationship.value >= Relationship.LOYAL.value: # -if PenelopeLoyal
         scene v15s28_15 # FPP Closer view of Penelope, who is giving MC a slight smile across the table
         with dissolve
@@ -1031,7 +1030,7 @@ label v15s28:
 
                 pause 0.75
 
-            "Don't kiss Penelope": # -if Don't kiss Penelope
+            "Don't kiss her":
                 scene v15s28_14
                 with dissolve
 
@@ -1075,7 +1074,7 @@ label v15s28:
 
                 pause 0.75
 
-            "Don't kiss Jenny":
+            "Don't kiss her":
                 scene v15s28_14 # FPP MC looks down at all the empty shot glasses on the table, maybe the image is a bit fuzzy from the drinking
                 with dissolve
 

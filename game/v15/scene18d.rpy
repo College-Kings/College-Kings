@@ -412,7 +412,7 @@ label v15s18d:
                     
                     jump v15s18f
 
-        "Don't try to have sex":
+        "Don't try":
             u "But I don't want to do that to you, just ignore him. He's trying to get me to play this stupid game."
 
             if lauren.relationship.value >= Relationship.GIRLFRIEND.value:

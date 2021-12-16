@@ -165,6 +165,8 @@ label v15s15:
             jump v15s17
 
         "Lick the honey":
+            $ grant_achievement("honey_bear")
+            $ sceneList.add("v15_rose")
             u "(Don't mind if I do...)"
 
             scene v15s15_11 # TPP. Show MC licking the honey off Ms. Rose's boobs, Ms. Rose making a sexy face, mouth open as she grabs MC's hair

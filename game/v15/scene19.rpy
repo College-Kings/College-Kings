@@ -99,8 +99,8 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
     la "No worries though, it was worth it. I had a really good time."
 
-    menu: # -MC chooses event1 or event2
-        "Help clean up": # -if Help clean
+    menu:
+        "Help clean up":
             scene v15s19_5 # TPP. MC, smiling mouth open collects trash from the counter opposite the fridge (by the stove) while Lauren smiling mouth closed continues throwing away trash from counter by the sink, which is slightly cleaner than the preivous scene [Deer House Kitchen].
             with dissolve
 
@@ -191,7 +191,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
             # -MC puts down the trash bag-
 
-        "Don't help clean up": # -if Don't help clean
+        "Don't help clean up":
             scene v15s19_4c
             with dissolve
             u "Yeah, everyone did. It was a great party."
