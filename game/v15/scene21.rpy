@@ -269,7 +269,8 @@ label v15s21:
 
                 lee "Yes, that is true. I'm all for students taking the initiative and owning responsibility."
 
-                lee "They are indeed free to ask for the same treatment if they want it, and I'm certain they will if your plan goes through."
+                lee "They are indeed free to ask for the same treatment if they want it."
+                lee "And I'm certain they will if your plan goes through. So we should consider the implications of that carefully."
 
             "This is Chloe's idea":
                 $ add_point(KCT.BOYFRIEND)
@@ -742,6 +743,9 @@ label v15s21:
         # Mr. Lee is medium difficulty to convince. Need 2 answers if you fail everything else
 
         if v15_meeting_points >= 5:
+            if v15_meeting_points == 5 and kct == "loyal":
+                call screen kct_popup
+                
             scene v15s21_6
             with dissolve
 
@@ -807,7 +811,7 @@ label v15s21:
             with dissolve
 
         elif v15_meeting_points >= 2:
-            if kct == "loyal":
+            if v15_meeting_points == 2 and kct == "loyal":
                 call screen kct_popup
             
             scene v15s21_6h
@@ -1673,6 +1677,9 @@ label v15s21:
         # If not Relationship, Ms. Rose is hard to convince (need 3 correct answers if you fail everything else)
 
         if v15_meeting_points >= 5:
+            if v15_meeting_points == 5 and kct == "confident":
+                call screen kct_popup
+        
             scene v15s21_13i
             with dissolve
 
@@ -1731,7 +1738,8 @@ label v15s21:
             with dissolve
 
         elif v15_meeting_points >= 3:
-            call screen kct_popup
+            if v15_meeting_points == 3 and kct == "confident":
+                call screen kct_popup
 
             scene v15s21_13a
             with dissolve
