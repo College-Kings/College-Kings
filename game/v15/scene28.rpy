@@ -219,7 +219,7 @@ label v15s28:
         pe "Ugh! Jenny!"
 
         scene v15s28_3r # FPP Same angle as 3, Jenny smiling at Penelope, mouth open, Penelope blushing and looking embarrassed, mouth closed
-        with dissolve    
+        with dissolve
 
         jen "You cute little cuddle bugs!"
 

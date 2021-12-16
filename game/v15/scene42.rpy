@@ -15,7 +15,7 @@ label v15s42:
     play sound "sounds/dooropen.mp3"
 
     scene v15s42_2 # TPP. Show MC entering the room and closing the door behind him, slightly confused, mouth closed.
-    with dissolve  
+    with dissolve
 
     pause 0.75
 
@@ -458,7 +458,7 @@ label v15s42:
     am "Oh wait, did you want to bring a snack with you? You should eat."
 
     scene v15s42_12
-    with dissolve  
+    with dissolve
 
     pause 0.75
 

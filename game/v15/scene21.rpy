@@ -1,6 +1,6 @@
 # SCENE 21: Meeting with Ms. Rose
 # Locations: A Private room located in the Library
-# Characters: CHLOE (Outfit: 3), MC (Outfit: 9), Ms. Rose (Outfit: 1), MR    LEE (Outfit: 1)
+# Characters: CHLOE (Outfit: 3), MC (Outfit: 9), Ms. Rose (Outfit: 1), Mr. LEE (Outfit: 1)
 # Time: AfterNoon
 # Render Count: 17 unique 148 total
 
@@ -365,7 +365,7 @@ label v15s21:
 
                 lee "And I do thank you for your concern, but I'm very happy with my current salary... If you must know."
 
-                scene v15s21_6n # FPP. same as v15s21_6m Mr. Lee's  mouth is closed, still has an offended expression, still looking at mc
+                scene v15s21_6n # FPP. same as v15s21_6m Mr. Lee's mouth is closed, still has an offended expression, still looking at mc
                 with dissolve
 
                 u "Of course, s-sorry."
@@ -2127,6 +2127,7 @@ label v15s21:
                                 scene v15s21_13f
                                 with dissolve
 
+                                $ grant_achievement("emotional_blackmail")
                                 u "Lorraine, look..."
 
                                 scene v15s21_13b
@@ -2179,8 +2180,6 @@ label v15s21:
 
                                 scene v15s21_13ze
                                 with dissolve
-
-                                $ grant_achievement("emotional_blackmail")
 
                                 u "It would. You're right."
 

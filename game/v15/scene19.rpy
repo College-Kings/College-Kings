@@ -13,22 +13,22 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
         pause 0.75
 
-        scene v15s19_1a   # TPP. Close up on MC (upper body) laying in bed facing the wall (not the door), no shirt, waking up, smiling, mouth closed [Deer House Guest Room].
+        scene v15s19_1a # TPP. Close up on MC (upper body) laying in bed facing the wall (not the door), no shirt, waking up, smiling, mouth closed [Deer House Guest Room].
         with dissolve
 
         pause 0.75
 
-        scene v15s19_1b   # TPP. Widen out, MC laying on the bed facing the wall (not the door), no shirt, waking up, smiling, mouth closed with an emtpy bed next to him [Deer House Guest Room].
+        scene v15s19_1b # TPP. Widen out, MC laying on the bed facing the wall (not the door), no shirt, waking up, smiling, mouth closed with an emtpy bed next to him [Deer House Guest Room].
         with dissolve
 
         pause 0.75
 
-        scene v15s19_1c   # TPP. Widen out, MC laying on the bed facing the wall (not the door), no shirt, waking up, smiling, mouth closed with an emtpy bed next to him [Deer House Guest Room].
+        scene v15s19_1c # TPP. Widen out, MC laying on the bed facing the wall (not the door), no shirt, waking up, smiling, mouth closed with an emtpy bed next to him [Deer House Guest Room].
         with dissolve
 
         pause 0.75
 
-        scene v15s19_1d   # TPP. MC laying down, no shirt, smiling, mouth open, rolling over towards the door, reaching for Lauren in the empty space next to him [Deer House Guest Room].
+        scene v15s19_1d # TPP. MC laying down, no shirt, smiling, mouth open, rolling over towards the door, reaching for Lauren in the empty space next to him [Deer House Guest Room].
         with dissolve
 
         u "(Hmm?) Lauren?"
@@ -38,12 +38,12 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
         u "(She must be up already.)"
 
-        scene v15s19_1f   # TPP. MC dressing in his costume, netural expression, mouth open. [Deer House Guest Room] 
+        scene v15s19_1f # TPP. MC dressing in his costume, netural expression, mouth open. [Deer House Guest Room] 
         with dissolve
 
         u "I really should've brought an extra pair of clothes... *Sighs*"
 
-        scene v15s19_1g   # TPP. MC dressed in his costume, exiting the bedroom (camera behind him as he leaves) [Deer House Guest Room]
+        scene v15s19_1g # TPP. MC dressed in his costume, exiting the bedroom (camera behind him as he leaves) [Deer House Guest Room]
         with dissolve
 
         pause 0.75
@@ -59,12 +59,12 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
         pause 0.75
 
-        scene v15s19_3a   # TPP. MC dressed in his costume, laying on the couch, waking up, mouth closed, netural expression There's cups, beer bottls, and party trash on the coffee table, on teh entertainment center (TV), and the dining table [Deer House Living Room].
+        scene v15s19_3a # TPP. MC dressed in his costume, laying on the couch, waking up, mouth closed, netural expression There's cups, beer bottls, and party trash on the coffee table, on teh entertainment center (TV), and the dining table [Deer House Living Room].
         with dissolve
 
         pause 0.75
 
-        scene v15s19_3b   # TPP. MC dressed in his costume, sitting on the couch, stretching, yawning, netural expression There's cups, beer bottls, and party trash on the coffee table, on teh entertainment center (TV), and the dining table [Deer House Living Room].
+        scene v15s19_3b # TPP. MC dressed in his costume, sitting on the couch, stretching, yawning, netural expression There's cups, beer bottls, and party trash on the coffee table, on teh entertainment center (TV), and the dining table [Deer House Living Room].
         with dissolve
 
         pause 0.75
@@ -77,24 +77,24 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
     pause 0.75
 
-    scene v15s19_4a   # FPP. Lauren next to the frige, smiling, mouth closed, looking at MC while holding a trash bag. The counter near Lauren is slightly cleaner (free of trash) than the previous scene [Deer House Kitchen].
+    scene v15s19_4a # FPP. Lauren next to the frige, smiling, mouth closed, looking at MC while holding a trash bag. The counter near Lauren is slightly cleaner (free of trash) than the previous scene [Deer House Kitchen].
     with dissolve
 
     u "Morning, Lauren."
 
-    scene v15s19_4b   # FPP. Lauren next to the frige, smiling, mouth open, looking at MC while holding a trash bag. The counter near Lauren is slightly cleaner (free of trash) than the previous scene [Deer House Kitchen].
+    scene v15s19_4b # FPP. Lauren next to the frige, smiling, mouth open, looking at MC while holding a trash bag. The counter near Lauren is slightly cleaner (free of trash) than the previous scene [Deer House Kitchen].
     with dissolve
 
     la "Hey! Good morning."
 
     la "I officially regret not cleaning all of this up last night, haha."
 
-    scene v15s19_4c   # FPP. Lauren by the sink, smiling, mouth closed, looking at MC while throwing trash into the trash bag she is holding. The counter near the fridge is clean [Deer House Kitchen].
+    scene v15s19_4c # FPP. Lauren by the sink, smiling, mouth closed, looking at MC while throwing trash into the trash bag she is holding. The counter near the fridge is clean [Deer House Kitchen].
     with dissolve
 
     u "*Sighs* Yeah, we probably should've."
 
-    scene v15s19_4d   # FPP. Lauren by the sink, smiling, mouth open, looking at MC while throwing trash into the trash bag she is holding. The counter by the sink is slightly cleaner (free of trash) than the previous scene [Deer House Kitchen].
+    scene v15s19_4d # FPP. Lauren by the sink, smiling, mouth open, looking at MC while throwing trash into the trash bag she is holding. The counter by the sink is slightly cleaner (free of trash) than the previous scene [Deer House Kitchen].
     with dissolve
 
     la "No worries though, it was worth it. I had a really good time."
@@ -106,17 +106,17 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
             u "Haha, that it was."
 
-            scene v15s19_5a   # FPP. Lauren by the sink, apologetic, mouth open, holding a trash bag. The counter by the sink is clean (free from trash) [Deer House Kitchen].
+            scene v15s19_5a # FPP. Lauren by the sink, apologetic, mouth open, holding a trash bag. The counter by the sink is clean (free from trash) [Deer House Kitchen].
             with dissolve
             
             la "Oh, no, I wasn't suggesting-"
 
-            scene v15s19_5b   # FPP. Lauren by the sink, happy, smiling, mouth closed, holding a trash bag. The counter by the sink is clean (free from trash) [Deer House Kitchen].
+            scene v15s19_5b # FPP. Lauren by the sink, happy, smiling, mouth closed, holding a trash bag. The counter by the sink is clean (free from trash) [Deer House Kitchen].
             with dissolve
 
             u "It's okay, Lauren. You don't have to clean up your own birthday party all by yourself. *Laughs*"
 
-            scene v15s19_5c   # FPP. Lauren by the sink, happy, big smile, mouth open, holding a trash bag. The counter by the sink is clean (free from trash) [Deer House Kitchen].
+            scene v15s19_5c # FPP. Lauren by the sink, happy, big smile, mouth open, holding a trash bag. The counter by the sink is clean (free from trash) [Deer House Kitchen].
             with dissolve
 
             la "Thank you, [name]."
@@ -138,7 +138,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
             # -Quick shots of MC taking the bag off of Lauren, holding it open while she throws in some old cups, used napkins, and half-eaten food-
 
-            scene v15s19_5d   # TPP. MC, smiling mouth closed in the kitchen smiling holding the trash bag with Lauren, smiling mouth closed, putting trash in the bag. The counter by the stove is clean. The entire kitchen at this point is clean (free of trash) [Deer House Kitchen].
+            scene v15s19_5d # TPP. MC, smiling mouth closed in the kitchen smiling holding the trash bag with Lauren, smiling mouth closed, putting trash in the bag. The counter by the stove is clean. The entire kitchen at this point is clean (free of trash) [Deer House Kitchen].
             with dissolve
 
             pause 0.75
@@ -148,7 +148,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
             pause 0.75
 
-            scene v15s19_6a   # TPP. MC, smiling mouth closed in the dining area holding the trash bag with Lauren, smiling mouth closed, putting trash in the bag. The dining table is clean (free of trash) [Deer House Dining Area/Living Room].
+            scene v15s19_6a # TPP. MC, smiling mouth closed in the dining area holding the trash bag with Lauren, smiling mouth closed, putting trash in the bag. The dining table is clean (free of trash) [Deer House Dining Area/Living Room].
             with dissolve
 
             pause 0.75
@@ -158,23 +158,23 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
             pause 0.75
 
-            scene v15s19_7a   # TPP. MC, smiling mouth closed in the living room holding the trash bag with Lauren, smiling mouth closed, putting trash in the bag The coffee table and  entertainment center (TV) are clean [Deer House Living Room].
+            scene v15s19_7a # TPP. MC, smiling mouth closed in the living room holding the trash bag with Lauren, smiling mouth closed, putting trash in the bag The coffee table and entertainment center (TV) are clean [Deer House Living Room].
             with dissolve
 
             pause 0.75
 
             # -she makes a disgusted face-
-            scene v15s19_7b   # FPP. Lauren, disgusted mouth open, scraping food scraps into the trash bag. The living room is clean [Deer House Living Room].
+            scene v15s19_7b # FPP. Lauren, disgusted mouth open, scraping food scraps into the trash bag. The living room is clean [Deer House Living Room].
             with dissolve
 
             la "Ugh... Gross!"
             
-            scene v15s19_7c   # FPP. Lauren, smiling, mouth closed, looking at MC still holding that trash bag. The living room is clean [Deer House Living Room].
+            scene v15s19_7c # FPP. Lauren, smiling, mouth closed, looking at MC still holding that trash bag. The living room is clean [Deer House Living Room].
             with dissolve
 
             u "*Laughs*"
 
-            scene v15s19_7d   # FPP. Lauren, smiling, mouth open, looking at MC still holding that trash bag. The living room is clean [Deer House Living Room].
+            scene v15s19_7d # FPP. Lauren, smiling, mouth open, looking at MC still holding that trash bag. The living room is clean [Deer House Living Room].
             with dissolve
 
             la "Okay. I'm so glad that's done, haha. You're the best."
@@ -208,7 +208,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
     play sound "sounds/vibrate.mp3" 
 
     if v15s19_local_mc_ends_in_livingroom:
-        scene v15s19_7f   # TPP. MC, smiling mouth closed gets his phone from his pocket while Lauren, smiling mouth closed, watches him. The living room is clean and there is a trash bag on the floor in front of MC [Deer House Living Room].
+        scene v15s19_7f # TPP. MC, smiling mouth closed gets his phone from his pocket while Lauren, smiling mouth closed, watches him. The living room is clean and there is a trash bag on the floor in front of MC [Deer House Living Room].
         with dissolve
 
     else:
@@ -251,21 +251,21 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
     # -MC exits his texts, puts his phone away-
 
     if v15s19_local_mc_ends_in_livingroom: 
-        scene v15s19_7g   # FPP. Lauren, smiling mouth closed looking at MC. The living room is clean and there is a trash bag on the floor in front of MC [Deer House Living Room].
+        scene v15s19_7g # FPP. Lauren, smiling mouth closed looking at MC. The living room is clean and there is a trash bag on the floor in front of MC [Deer House Living Room].
         with dissolve
 
         u "Well, duty calls with the presidential campaign."
         
-        scene v15s19_7h   # TPP. Lauren, smiling mouth closed following MC, smiling mouth closed, to the front door. The house is clean. [Deer House Living Room].
+        scene v15s19_7h # TPP. Lauren, smiling mouth closed following MC, smiling mouth closed, to the front door. The house is clean. [Deer House Living Room].
         with dissolve 
         
     else: 
-        scene v15s19_8a   # FPP. Lauren by the sink, smiling, mouth closed, looking at MC while throwing trash into the trash bag she is holding. The kitcen is in the same condition is a v15s19_4d [Deer House Kitchen].
+        scene v15s19_8a # FPP. Lauren by the sink, smiling, mouth closed, looking at MC while throwing trash into the trash bag she is holding. The kitcen is in the same condition is a v15s19_4d [Deer House Kitchen].
         with dissolve
 
         u "Well, duty calls with the presidential campaign."
 
-        scene v15s19_8b   # TPP. Lauren, smiling mouth closed following MC, smiling mouth closed, to the front door. The house is still dirty from the party. [Deer House Living Room].
+        scene v15s19_8b # TPP. Lauren, smiling mouth closed following MC, smiling mouth closed, to the front door. The house is still dirty from the party. [Deer House Living Room].
         with dissolve 
     
     pause 0.75
@@ -277,7 +277,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
     la "Haha, good luck out there."
 
-    scene v15s19_9a   # FPP. Lauren, smiling mouth closed, looking at MC (Lauren has her back to the front of the house, the front door is to her right.) [Deer House Living Room Front Door].
+    scene v15s19_9a # FPP. Lauren, smiling mouth closed, looking at MC (Lauren has her back to the front of the house, the front door is to her right.) [Deer House Living Room Front Door].
     with dissolve
 
     u "Thanks, and again for an amazing party last night."
@@ -290,11 +290,11 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
     if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         play sound "sounds/kiss.mp3"
 
-        scene v15s19_9c    # FPP. Lauren, eyes closed, kissing MC on the lips [Deer House Living Room Front Door]. 
+        scene v15s19_9c # FPP. Lauren, eyes closed, kissing MC on the lips [Deer House Living Room Front Door]. 
         with dissolve
 
     else: # LaurenFriend
-        scene v15s19_9b   # TPP. Camera facing the front door. MC smiling mouth closed and Lauren smiling mouth closed friendly hug each other in front of the door [Deer House Living Room Front Door].
+        scene v15s19_9b # TPP. Camera facing the front door. MC smiling mouth closed and Lauren smiling mouth closed friendly hug each other in front of the door [Deer House Living Room Front Door].
         with dissolve
 
     pause 0.75
