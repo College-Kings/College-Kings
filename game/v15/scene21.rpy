@@ -1098,7 +1098,6 @@ label v15s21:
 
         ro "Oh! Very organized... Impressive."
 
-        if ms_rose.relationship.level >= Relationship.FWB.value:
             $ v15_meeting_points += 2
         
             scene v15s21_10d # FPP. Chloe is walking away with her back turned and can't see Mc or Ms. Rose, Ms. Rose is giving Mc a wink, slight smile, mouth closed
