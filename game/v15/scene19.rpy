@@ -8,7 +8,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
     if v15s18_LaurensBed: # -if sleeping in Lauren's bed
         # -MC wakes up alone in Lauren's bed-
-        scene v15s19_1    # TPP. Close up on MC (upper body) laying in bed facing the wall (not the door), no shirt, eyes closed, mouth closed smiling [Deer House Guest Room].
+        scene v15s19_1 # TPP. Close up on MC (upper body) laying in bed facing the wall (not the door), no shirt, eyes closed, mouth closed smiling [Deer House Guest Room].
         with dissolve
 
         pause 0.75
@@ -48,13 +48,13 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
         pause 0.75
 
-        scene v15s19_2    # TPP. MC dressed in his costume, netural expression, mouth closed descending the stairs, there are cups, bottles of wine and beer (party trash) on the steps [Deer House Staircase].
+        scene v15s19_2 # TPP. MC dressed in his costume, netural expression, mouth closed descending the stairs, there are cups, bottles of wine and beer (party trash) on the steps [Deer House Staircase].
         with dissolve 
 
     else : # -if sleeping on the couch
         $ v15s19_local_mc_ends_in_livingroom = True
 
-        scene v15s19_3    # TPP. MC dressed in his costume, laying on the couch, eyes closed, mouth closed, netural expression. There's cups, beer bottls, and party trash on the coffee table, on teh entertainment center (TV), and the dining table [Deer House Living Room].
+        scene v15s19_3 # TPP. MC dressed in his costume, laying on the couch, eyes closed, mouth closed, netural expression. There's cups, beer bottls, and party trash on the coffee table, on teh entertainment center (TV), and the dining table [Deer House Living Room].
         with dissolve
 
         pause 0.75
@@ -72,7 +72,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
     # -Regardless-
 
     # -Lauren is tidying up in the kitchen, putting trash in a bag. MC approaches her-
-    scene v15s19_4    # TPP. MC dresssed in his costime enters the kitchen area, netural expression, mouth closed. There's cups, beer bottles, plates with scraps of food all of the counters in the ktichen. Lauren is next to the fridge, netural expression, mouth closed, cleaning by putting the trash in a trash bag she is holding [Deer House Kitchen].
+    scene v15s19_4 # TPP. MC dresssed in his costime enters the kitchen area, netural expression, mouth closed. There's cups, beer bottles, plates with scraps of food all of the counters in the ktichen. Lauren is next to the fridge, netural expression, mouth closed, cleaning by putting the trash in a trash bag she is holding [Deer House Kitchen].
     with dissolve
 
     pause 0.75
@@ -143,7 +143,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
             pause 0.75
 
-            scene v15s19_6    # TPP. MC, smiling mouth closed in the dining area holding the trash bag with Lauren, smiling mouth closed, putting trash in the bag. The dining table has cups, beer bottles napkins, plates of food scraps all (party trash) all over it [Deer House Dining Area/Living Room].
+            scene v15s19_6 # TPP. MC, smiling mouth closed in the dining area holding the trash bag with Lauren, smiling mouth closed, putting trash in the bag. The dining table has cups, beer bottles napkins, plates of food scraps all (party trash) all over it [Deer House Dining Area/Living Room].
             with dissolve
 
             pause 0.75
@@ -153,7 +153,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
             pause 0.75
 
-            scene v15s19_7    # TPP. MC, smiling mouth closed in the living room holding the trash bag with Lauren, smiling mouth closed, putting trash in the bag There's cups, beer bottls, and party trash on the coffee table and on the entertainment center (TV) [Deer House Living Room]. 
+            scene v15s19_7 # TPP. MC, smiling mouth closed in the living room holding the trash bag with Lauren, smiling mouth closed, putting trash in the bag There's cups, beer bottls, and party trash on the coffee table and on the entertainment center (TV) [Deer House Living Room]. 
             with dissolve
 
             pause 0.75
@@ -212,7 +212,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
         with dissolve
 
     else:
-        scene v15s19_8    # TPP. MC, smiling mouth closed gets his phone from his pocket while Lauren, smiling mouth closed, watches him. The kitchen is in the same condition is a v15s19_4d [Deer House Kitchen].
+        scene v15s19_8 # TPP. MC, smiling mouth closed gets his phone from his pocket while Lauren, smiling mouth closed, watches him. The kitchen is in the same condition is a v15s19_4d [Deer House Kitchen].
         with dissolve
 
     if v14_help_chloe and not v15_chloe_lindseysabotage: # -if helping Chloe with meeting the Dean # -MC checks his texts to see a message from Chloe-
@@ -272,7 +272,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
     # All scenes converge to the living room front door.
 
-    scene v15s19_9    # FPP. Lauren, smiling mouth open, looking at MC (Lauren has her back to the front of the house, the front door is to her right.) [Deer House Living Room Front Door].
+    scene v15s19_9 # FPP. Lauren, smiling mouth open, looking at MC (Lauren has her back to the front of the house, the front door is to her right.) [Deer House Living Room Front Door].
     with dissolve
 
     la "Haha, good luck out there."

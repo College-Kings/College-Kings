@@ -890,7 +890,7 @@ label v15s21:
             scene v15s21_5b # same as v15s21_5 Mr. Lee is walking away from the table, no expression, mouth is closed, Mc and Chloe are sitting at the table, looking at each other with confused expressions, both mouths are closed
             with fade
 
-            jump v15s22  # -Transition to Scene 22-
+            jump v15s22 # -Transition to Scene 22-
 
         scene v15s21_6
         with dissolve
@@ -1046,7 +1046,7 @@ label v15s21:
         scene v15s21_5d # TPP. same as v15s21_5b Mr. Lee is looking at and waving goodbye to Chloe and Mc as he leaves, Mc and Chloe are looking at Mr. Lee, Everyone has a slight smile, and all mouths are closed
         with fade
 
-        jump v15s22        # -Transition to Scene 22-
+        jump v15s22 # -Transition to Scene 22-
 
     else: # -if meeting Ms. Rose
         scene v15s21_8 # FPP. Ms. Rose enters the library, slight smile, mouth closed
@@ -1829,7 +1829,7 @@ label v15s21:
             scene v15s21_7f
             with fade
 
-            jump v15s22        # -Transition to Scene 22-
+            jump v15s22 # -Transition to Scene 22-
 
         scene v15s21_13
         with dissolve
@@ -2117,7 +2117,7 @@ label v15s21:
 
                                 ro "I'll see you soon, handsome."
 
-                                jump v15s22        # -Transition to Scene 22-
+                                jump v15s22 # -Transition to Scene 22-
 
                             "Threaten Ms. Rose":
                                 $ v15_threaten_ms_rose = True
@@ -2263,7 +2263,7 @@ label v15s21:
                                 scene v15s21_17a # TPP. same as v15s21_17 Mc holds his hand to cover the shame in his face
                                 with fade
 
-                                jump v15s22        # -Transition to Scene 22-
+                                jump v15s22 # -Transition to Scene 22-
 
                     else:
                         scene v15s21_7a
@@ -2344,4 +2344,4 @@ label v15s21:
         scene v15s21_12k # FPP. same as v15s21_12a Ms. Rose is walking away and waving goodbye to Mc and Chloe, Mc and Chloe are looking at Ms. Rose slight smiles mouths are closed, Mc and Chloe are still sitting down still sitting down
         with fade
 
-        jump v15s22        # -Transition to Scene 22-
+        jump v15s22 # -Transition to Scene 22-

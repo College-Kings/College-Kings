@@ -511,7 +511,7 @@ label v15s12:
         ##B.1   Book Limousine
         ##B.2a  Invite Sebastian
         ##B.2b  Invite Grayson
-        ##B3    Host it
+        ##B.3   Host it
 
         if lindsey_board.approach is not None:
             $ v15_lindsey_gamenight = lindsey_board.approach.id == "gameNight"
