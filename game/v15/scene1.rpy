@@ -6,6 +6,7 @@
 
 label v15_start:
     $ autumn.relationship = Relationship.FRIEND #Reset Autumn to FRIEND
+    $ imre.relationship = Relationship:FRIEND #Reset Imre to FRIEND
 
     if joinwolves:
         jump v15s1

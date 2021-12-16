@@ -337,7 +337,7 @@ label v7start:
 
     queue music [ "music/mparty3.mp3", "music/mparty4.mp3"]
 
-    if imremad:
+    if imre.relationship.value <= Relationship.MAD.value:
         scene s680 # showing mc in Wolves house living room where Aaron is talking to Aubrey
         with fade
 
@@ -2749,7 +2749,7 @@ label beachlauren:
         scene s742a
         with dissolve
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             menu:
                 "Tell her it's fine":
                     $ add_point(KCT.BRO)
@@ -3149,7 +3149,7 @@ label beachlauren:
         scene s742a
         with dissolve
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             menu:
                 "Tell her it's fine":
                     $ add_point(KCT.BRO)
@@ -3447,7 +3447,7 @@ label afterbeach:
 
         u "(But in the Apes, I can finally be someone. I can be a winner. Grayson may have done some questionable shit in the past, but he also said a lot of stuff that resonated with me...)"
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             u "(On the other hand, Imre would hate me even more if I pledged the Apes...)"
         else:
             u "(On the other hand, Imre would hate me if I pledged the Apes...)"
@@ -3472,7 +3472,7 @@ label afterbeach:
 
         u "(I'm pretty sure their pledging is at the same time as the Wolves, so I might be able to just go to the Apes' house and tell Grayson I changed my mind.)"
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             u "(But even so, the Wolves party was sick and Imre would hate me even more if I pledged the Apes...)"
         else:
             u "(But even so, the Wolves party was sick and Imre would hate me if I pledged the Apes...)"
@@ -3506,7 +3506,7 @@ label pledgewolves:
     with fade
     pause 0.7
 
-    if imremad:
+    if imre.relationship.value <= Relationship.MAD.value:
         scene s757a # Imre notices MC, so he is now looking at the camera and waves
         with dissolve
 
@@ -5454,7 +5454,7 @@ label after_pledges:
     play music "music/mindie2.mp3"
     queue music [ "music/m16punk.mp3", "music/mindie1.mp3" ]
     
-    if imremad:
+    if imre.relationship.value <= Relationship.MAD.value:
         scene s866 # Camera - TPP (shot should not include Imre's bed). MC sitting up on his bed, mouth closed.
         with dissolve
         u "(Oh shit, it's history class today, isn't it? Gotta wear that costume.)"
@@ -5724,7 +5724,7 @@ label after_pledges:
         with dissolve
         pause 0.5
 
-    if imremad and joinwolves:
+    if imre.relationship.value <= Relationship.MAD.value and joinwolves:
         scene s878 # Camera - FPP. MC sitting beside Imre. Imre looking at MC with a bored/uninterested expression. Imre mouth closed
         with dissolve
         u "Hey."
@@ -5778,7 +5778,7 @@ label after_pledges:
         imre "Of course! And I think we should start training together again."
         imre "But this time in the Wolves gym, it's gonna be awesome!"
 
-    elif imremad:
+    elif imre.relationship.value <= Relationship.MAD.value:
         scene s878b
         with dissolve
         pause
@@ -7222,7 +7222,7 @@ label suit_rental:
 
 ### SCENE 32: AFTER TUDEXO SHOPPING
 label thurs_night_dorm:
-    if joinwolves and imremad:
+    if joinwolves and imre.relationship.value <= Relationship.MAD.value:
         scene s1002 # Camera - TPP. MC packing his bag, same as the one he has in scene 34
         with fade
 
@@ -8025,31 +8025,7 @@ label wolves_ceremony:
 
     pause 0.75
 
-    if not imremad:
-        scene swc1 # FPP. Close up on Finn, mouth open with smile, welcoming gesture with hand.
-        with dissolve
-
-        finn "What up guys? Head on in."
-
-        scene swc2 # FPP. Close up on Imre, mouth open slight smile.
-        with dissolve
-
-        imre "For sure."
-
-        scene swc3 # TPP. Show Imre and MC walking into Wolves house from behind, house entrance in view.
-        with dissolve
-        pause 0.5
-
-        scene swc3a # TPP. Same camera as above but MC and Imre now walking through Wolves door.
-        with dissolve
-
-        pause 0.5
-        #- CONTINUE at ceremonies -
-
-    #If Imre moved out:
-    #MC arrives alone to the Wolves house holding a sports bag of his stuff. A few Wolves , including marcus are outside and welcome him.
-
-    else:
+    if imre.relationship.value <= Relationship.MAD.value:
         scene swc4 # FPP. Close up on Marcus, mouth open with smile.
         with dissolve
 
@@ -8076,6 +8052,30 @@ label wolves_ceremony:
         with dissolve
 
         pause 0.5
+
+    else:
+        scene swc1 # FPP. Close up on Finn, mouth open with smile, welcoming gesture with hand.
+        with dissolve
+
+        finn "What up guys? Head on in."
+
+        scene swc2 # FPP. Close up on Imre, mouth open slight smile.
+        with dissolve
+
+        imre "For sure."
+
+        scene swc3 # TPP. Show Imre and MC walking into Wolves house from behind, house entrance in view.
+        with dissolve
+        pause 0.5
+
+        scene swc3a # TPP. Same camera as above but MC and Imre now walking through Wolves door.
+        with dissolve
+
+        pause 0.5
+        #- CONTINUE at ceremonies -
+
+    #If Imre moved out:
+    #MC arrives alone to the Wolves house holding a sports bag of his stuff. A few Wolves , including marcus are outside and welcome him.
 
     play music "music/mparty3.mp3"
     queue music [ "music/mparty4.mp3", "music/mparty2.mp3" ]

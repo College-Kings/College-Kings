@@ -203,6 +203,10 @@ label after_load:
             del evelynrs
         except NameError: pass
         try:
+            if imremad: imre.relationship = Relationship.MAD
+            del imremad
+        except NameError: pass
+        try:
             if jennyawkward: jenny.relationship = Relationship.AWKWARD
             del jennyawkward
         except NameError: pass

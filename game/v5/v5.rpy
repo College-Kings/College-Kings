@@ -3987,7 +3987,7 @@ label findimre:
     with dissolve
 
     if fightadam and winadam :
-        $ imremad = True
+        $ imre.relationship = Relationship.MAD
         u "Actually, I uhm... I found Adam."
 
         scene s439b # Imre surprised but still a bit mad
@@ -4117,7 +4117,7 @@ label findimre:
         u "Alright. Good luck, man."
 
     elif tellschool:
-        $ imremad = True
+        $ imre.relationship = Relationship.MAD
         u "Actually, I uhm... I found Adam."
 
         scene s439b # Imre surprised but still a bit mad
@@ -4245,7 +4245,7 @@ label findimre:
 
     queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
 
-    if imremad:
+    if imre.relationship.value <= Relationship.MAD.value:
         u "(How the fuck did everything go so wrong??)"
         u "(A couple hours ago Imre was so happy to see me and now he probably hates me...)"
 
@@ -4277,7 +4277,7 @@ label findimre:
 
         u "(Fuck, I don't have time for Amber right now, but I really wanna find out what surprise she has.)"
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             u "(I gotta make a decision. Should I find Imre, or keep talking to Amber?)"
         else:
             u "(I gotta make a decision. Should I help Imre, or keep talking to Amber?)"
@@ -4294,7 +4294,7 @@ label findimre:
 
         u "(Fuck, I don't have time for this right now, but going swimming with Chloe sounds like the best possible way to get closer to her.)"
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             u "(I gotta make a decision. Should I find Imre, or meet Chloe?)"
         else:
             u "(I gotta make a decision. Should I help Imre, or meet Chloe?)"
