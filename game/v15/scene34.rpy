@@ -105,7 +105,8 @@ label v15s34:
 
         pause 0.75
 
-        if v15_lindsey_gamenight or not v14_help_lindsey:
+        ####to check jumps
+        if v15_lindsey_gamenight or not v14_help_lindsey: 
             jump v15s35
 
         if not v15_lindsey_gamenight and v14_help_lindsey:
