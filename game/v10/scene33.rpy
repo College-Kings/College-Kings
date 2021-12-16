@@ -1161,7 +1161,6 @@ label v10s33_chloe1:
                 cl "Yeah, true."
 
                 if v10_help_nora_freeroam:
-
                     menu:
                         "Invite to Europe":
                             scene v10cfrcl1
