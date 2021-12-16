@@ -57,6 +57,13 @@ label v15s31:
             $ emily.messenger.newMessage("Oh, nice! Tell her I said hi! Miss you guys! Have fun! :)")
             $ emily.messenger.addReply("Will do. We miss you too :)")
 
+            label v15s31_PhoneContinue:
+                if emily.messenger.replies:
+                    call screen phone
+                if emily.messenger.replies:
+                    u "(I should reply to Emily.)"
+                    jump v15s31_PhoneContinue
+
             scene v15s31_4a # TPP. Show MC's hand putting his phone away.
             with dissolve
 

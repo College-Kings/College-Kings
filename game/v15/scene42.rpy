@@ -349,6 +349,7 @@ label v15s42:
         with dissolve
 
         am "Haha, okay fair. Yeah! I can see this."
+
     elif detective == "psychologist": # Placeholder?
         scene v15s42_7a
         with dissolve
@@ -369,6 +370,7 @@ label v15s42:
         with dissolve
 
         am "Okay, cool! So, you'll be good at analyzing every word and figuring out if they're lying or telling us the truth."
+
     else:
         scene v15s42_7a
         with dissolve
@@ -393,6 +395,8 @@ label v15s42:
         if v15s42_flirt:
             scene v15s42_7g # FPP. MC looking at Amber, Amber looking at MC, Amber smirking, mouth closed.
             with dissolve
+            
+            pause 0.75
             
         scene v15s42_7
         with dissolve
