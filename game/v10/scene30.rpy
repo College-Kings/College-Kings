@@ -387,7 +387,7 @@ label v10_chloe_gym:
 
                 pause 0.5
 
-    elif not chloemad and chloe.relationship.value < Relationship.FWB.value: # If Chloe likes MC but no relationship
+    else: # If Chloe likes MC but no relationship
         menu:
             "Look closer":
                 scene v10chg6a
@@ -451,11 +451,6 @@ label v10_chloe_gym:
 
                 u "Same here, I'll see you around."
 
-    else: # Not in relationship with Chloe and Chloe does not like MC
-        scene v10chg2c
-        with dissolve
-
-        cl "See you around [name]."
     stop music fadeout 3
 # -Transition to Scene 31-
 jump v10_late_alley

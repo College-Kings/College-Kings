@@ -2417,7 +2417,7 @@ label continueab:
 
             menu:
                 "Alright, just for a bit":
-                    $ chloemad = True
+                    $ chloe.relationship = Relationship.MAD
                     scene s357a
                     with dissolve
 

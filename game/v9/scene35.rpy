@@ -79,7 +79,7 @@ label v9_room_sat_aft:
 
         u "(How much longer do I have?)"
 
-        if not chloemad:
+        if chloe.relationship.value > Relationship.MAD.value:
             scene v9rsa3 # TPP. Show MC now on his back on his bed, looking at his phone (don't show phone screen)
             with dissolve
             
@@ -127,7 +127,7 @@ label v9_room_sat_aft:
 
         u "(How much longer do I have?)"
 
-        if not chloemad:
+        if chloe.relationship.value > Relationship.MAD.value:
             scene v9rsa7 # TPP. Show MC now on his back on his bed, looking at his phone (don't show phone screen)
             with dissolve
             

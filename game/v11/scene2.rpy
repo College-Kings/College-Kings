@@ -344,7 +344,7 @@ label v11_nora_chloe_hallway:
                 "(I need to get home and pack.)"
 
         "Say something":
-            if chloemad:
+            if chloe.relationship.value <= Relationship.MAD.value:
                 scene v11clhall1c # FPP. Same as clhall1a, Chloe and MC are now looking at each other, Chloe's mouth is closed, she is annoyed
                 with dissolve
 
@@ -360,7 +360,7 @@ label v11_nora_chloe_hallway:
 
                 menu:
                     "Apologize":
-                        $ chloemad = False
+                        $ chloe.relationship = Relationship.FRIEND
                         $ add_point(KCT.BOYFRIEND)
 
                         scene v11clhall1c

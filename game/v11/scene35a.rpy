@@ -5,7 +5,7 @@
 
 label v11_chloe_hotel_room_amber_call:
     play music "music/v10/Track Scene 40_2.mp3" fadein 2
-    if chloemad and not v11_riley_roomate:
+    if chloe.relationship.value <= Relationship.MAD.value and not v11_riley_roomate:
         scene v11hrc1 # TPP. MC is inside his hotel room, next to the door, mouth closed
         with fade
         
@@ -180,7 +180,7 @@ label v11_chloe_hotel_room_amber_call:
 
     cl "Yep."
 
-    if chloe.relationship.value < Relationship.FWB.value and not chloemad:
+    if chloe.relationship.value < Relationship.FWB.value and chloe.relationship.value > Relationship.MAD.value: #if car dealership (===chloe not mad) but chloe not rs either
         scene v11hrc11a
         with dissolve
 
@@ -360,8 +360,7 @@ label v11_chloe_hotel_room_amber_call:
 
         cl "C'mon, get up. Mr. Lee has something planned tonight. I'm not sure what it is, but if there's anything else you wanna do today, you should get to it now."
 
-    elif not chloemad:
-        
+    elif chloe.relationship.value > Relationship.MAD.value:
         scene v11hrc9b # FPP. same as 9, chloe is smiling
         with fade
 
@@ -388,7 +387,6 @@ label v11_chloe_hotel_room_amber_call:
         u "*Yawn* Alright... I'm getting up."
 
     if not v11_riley_roomate:
-       
         scene v11ris7 # TPP. Show MC sitting up on his bed now, in his boxers, he is yawning and stretching (day)
         with dissolve
 

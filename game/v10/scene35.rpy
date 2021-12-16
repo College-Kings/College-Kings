@@ -57,21 +57,19 @@ label v10s35_nsfwSkipLabel1:
 
     menu:
         "Talk to Chloe":
-
             scene v10cvn9a # fpp same 9, mouth open
             with dissolve
 
             u "Hey! Good job."
 
-            if chloemad:
-
+            if chloe.relationship.value <= Relationship.MAD.value:
                 scene v10cvn9a
                 with dissolve
                 cl "Uhm thanks, [name]."
 
                 menu:
                     "Make a joke":
-                        $ chloemad = False
+                        $ chloe.relationship = Relationship.FRIEND
                         scene v10cvn9
                         with dissolve
                         u "I know you're a bit mad at me, but I just hope you never unleash your fury on me like that, haha."
@@ -126,7 +124,6 @@ label v10s35_nsfwSkipLabel1:
                     cl "Right..."
 
         "Talk to Nora":
-
             scene v10cvn10 # FPP. Show nora, mouth closed
             with dissolve
 

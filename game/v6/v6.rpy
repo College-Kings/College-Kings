@@ -48,7 +48,7 @@ init python:
 
 label script06: #for compatibility only
 label v6start:
-    if imre.relationship.value <= Relationship.MAD.value and chloemad:
+    if imre.relationship.value <= Relationship.MAD.value and chloe.relationship.value <= Relationship.MAD.value:
         menu:
             "Find Imre":
                 $ add_point(KCT.BRO)
@@ -78,7 +78,7 @@ label v6start:
                 jump imrecond
 
 
-    elif chloemad:
+    elif chloe.relationship.value <= Relationship.MAD.value:
         menu:
             "Help Imre":
                 $ add_point(KCT.BRO)
@@ -730,7 +730,7 @@ label imrecond: # Meet Chloe
 
             menu:
                 "Stay and listen":
-                    $ chloemad = True
+                    $ chloe.relationship = Relationship.MAD
                     $ chloecaught = True
                     $ add_point(KCT.TROUBLEMAKER)
 
@@ -973,10 +973,10 @@ label continuebb:
 
     pause 1.0
 
-    # amber texts if chloemad false
-    # if you chose imre chloe and amber both text you dpeending on chloemad that you msised out etc.
+    # amber texts if chloe not mad
+    # if you chose imre chloe and amber both text you depending on chloe mad that you msised out etc.
 
-    if chooseimre and chloemad: # Amber texts why you never got back to her
+    if chooseimre and chloe.relationship.value <= Relationship.MAD.value: # Amber texts why you never got back to her
         play sound "sounds/vibrate.mp3"
         
         $ amber.messenger.newMessage(_("I guess you didn't want my surprise :/"), queue=False)
@@ -999,7 +999,7 @@ label continuebb:
         $ chloe.messenger.addReply(_("Sorry, something really important came up. Definitely another time"))
         $ chloe.messenger.newMessage(_("Okay"))
 
-    elif chloemad and not chloecaught:
+    elif chloe.relationship.value <= Relationship.MAD.value and not chloecaught:
         jump continuebd
             
     play sound "sounds/vibrate.mp3"
@@ -1431,7 +1431,7 @@ label continuebd:
 
         ri "So, how are things with Chloe?"
 
-        if chloemad:
+        if chloe.relationship.value <= Relationship.MAD.value:
             scene s492e
             with dissolve
 
@@ -2155,7 +2155,7 @@ label continuebd:
         scene s529 # showing blue volleyball on your desk
         with dissolve
 
-        if chloemad:
+        if chloe.relationship.value <= Relationship.MAD.value:
             u "(I really need to patch things up with Chloe. It was going so great until-)"
 
             u "(Until I messed things up.)"
@@ -3794,7 +3794,7 @@ label fy_bd: # not gone to Emily's
     scene s570f # Aubrye curious smile
     with dissolve
 
-    if chloemad:
+    if chloe.relationship.value <= Relationship.MAD.value:
         au "So, who have you been seducing lately? Certainly not Chloe. *laughs*"
 
         scene s570g
@@ -9078,7 +9078,7 @@ label v6_fr3chloe1:
 
     u "Chloe? It's me, [name]."
 
-    if chloemad:
+    if chloe.relationship.value <= Relationship.MAD.value:
         cl "*Sniff* Leave me alone."
 
         u "No, you're crying. I'm not just going to walk away. What happened?"
@@ -9100,7 +9100,7 @@ label v6_fr3chloe1:
 
             cl "*Sniff* Okay..."
 
-            $ chloemad = False
+            $ chloe.relationship.value = Relationship.FRIEND
 
         else:
             cl "Please, just leave me alone, [name]."
@@ -9124,7 +9124,7 @@ label v6_fr3chloe1:
 
         cl "*Sniff* Okay..."
 
-        $ chloemad = False
+        $ chloe.relationship.value = Relationship.FRIEND
 
     # unlock sound
 
@@ -9171,7 +9171,7 @@ label v6_fr3chloe1:
     menu:
         "Maybe you should step down":
             $ add_point(KCT.BOYFRIEND)
-            $ chloemad = True
+            $ chloe.relationship.value = Relationship.MAD.value
 
             u "You ever think, maybe you should step down?"
 

@@ -3913,8 +3913,7 @@ label chloe_call:
     scene sphone1a # mc on the phone mouth closed tense
     with dissolve
 
-    if chloemad:
-
+    if chloe.relationship.value <= Relationship.MAD.value:
         cl "Hey [name]... can we talk right now?"
 
         scene sphone1 # mc on the phone mouth open
@@ -5311,7 +5310,7 @@ label ep7_cam_picture:
     pause 2
     stop sound
 
-    if chloemad:
+    if chloe.relationship.value <= Relationship.MAD.value:
         play sound "sounds/answercall.mp3"
         cl "What do you want, [name]?"
 
@@ -15336,7 +15335,7 @@ label fr4chloe1:
 
     menu:
         "Defend Chloe":
-            $ chloemad = False
+            $ chloe.relationship.value = Relationship.FRIEND
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -15986,7 +15985,34 @@ label fr4penelope2:
 label fr4chloe2:
     $ freeroam4.add("chloe2")
 
-    if not chloemad:
+    if chloe.relationship.value <= Relationship.MAD.value:
+        scene sfr4cl53a # fpp close up chloe mad
+
+        u "You okay?"
+
+        scene sfr4cl53
+        with dissolve
+
+        cl "I really don't wanna talk right now."
+
+        scene sfr4cl53a
+        with dissolve
+
+        u "You sure?"
+
+        scene sfr4cl53
+        with dissolve
+
+        cl "Yes."
+
+        scene sfr4cl53a
+        with dissolve
+
+        u "Alright..."
+
+        jump labelfr4hallway
+
+    else:
         scene sfr4cl53a # fpp close up chloe mad
 
         u "You okay?"
@@ -16118,33 +16144,6 @@ label fr4chloe2:
                 cl "Yeah."
 
                 jump fr4chloeending
-
-    else:
-        scene sfr4cl53a # fpp close up chloe mad
-
-        u "You okay?"
-
-        scene sfr4cl53
-        with dissolve
-
-        cl "I really don't wanna talk right now."
-
-        scene sfr4cl53a
-        with dissolve
-
-        u "You sure?"
-
-        scene sfr4cl53
-        with dissolve
-
-        cl "Yes."
-
-        scene sfr4cl53a
-        with dissolve
-
-        u "Alright..."
-
-        jump labelfr4hallway
 
 label fr4chloe3:
     if not hcGirl == "penelope":
@@ -16350,7 +16349,31 @@ label fr4lockerroomchloe:
 
         u "Chloe? You in there?"
 
-        if not chloemad:
+        if chloe.relationship.value <= Relationship.MAD.value:
+            scene sfr4cl51 # fpp close up of the door
+            with dissolve
+
+            cl "What do you want, [name]?!"
+
+            u "Can I come in?"
+
+            pause 1.0
+
+            u "Chloe?"
+
+            pause 0.5
+
+            cl "No. Leave me alone!"
+
+            u "Chloe, come on!"
+
+            cl "I said leave me alone!"
+
+            u "Fine..."
+
+            jump labelfr4hallwaycorner
+
+        else:
             scene sfr4cl51 # fpp close up of the door
             with dissolve
 
@@ -16570,34 +16593,10 @@ label fr4lockerroomchloe:
                             pause 0.75 
                             jump labelfr4hallwaycorner
 
-        else:
-            scene sfr4cl51 # fpp close up of the door
-            with dissolve
-
-            cl "What do you want, [name]?!"
-
-            u "Can I come in?"
-
-            pause 1.0
-
-            u "Chloe?"
-
-            pause 0.5
-
-            cl "No. Leave me alone!"
-
-            u "Chloe, come on!"
-
-            cl "I said leave me alone!"
-
-            u "Fine..."
-
-            jump labelfr4hallwaycorner
-
     else:
         scene sfr4cl51
 
-        if chloemad:
+        if chloe.relationship.value <= Relationship.MAD.value:
             u "(I better leave her alone.)"
 
         else:

@@ -20,7 +20,7 @@ label v10_chloe_hallway:
 
     au "[name], settle an argument for us."
 
-    if chloemad:
+    if chloe.relationship.value <= Relationship.MAD.value:
         scene v10such3a # FPP. Same as 3, Aubrey smile, Chloe slightly annoyed, Chloe mouth open.
         with dissolve
 
@@ -48,7 +48,7 @@ label v10_chloe_hallway:
                 cl "Ugh, who cares what you think?"
 
             "Sexy":
-                if kct == "loyal" or kct == "confident":
+                if not kct == "popular":
                     u "No, sexy definitely describes her better."
 
                     scene v10such3a
@@ -127,6 +127,7 @@ label v10_chloe_hallway:
                             menu:
                                 "Have a Rematch":
                                     $ add_point(KCT.BOYFRIEND)
+                                    $ chloe.relationship = Relationship.FRIEND
                                     
                                     $ grant_achievement("on_the_court")
 
@@ -153,8 +154,7 @@ label v10_chloe_hallway:
 
                             cl "Yeah. Alright."   
 
-        if kct == "loyal" or kct == "confident":
-            
+        if not kct == "popular":
             scene v10such4 # TPP. Show Chloe walking away, Aubrey and MC watching her.
             with dissolve
 

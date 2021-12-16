@@ -68,7 +68,6 @@ init python:
 
     cheatItems = []
 
-    ButtonCheat("General", "Chloe Mad", "chloemad")
     ButtonCheat("General", "Nora Mad", "noramad")
     ButtonCheat("General", "Lauren Mad", "laurenmad")
     ButtonCheat("General", "Forgive Emily", "forgiveemily")

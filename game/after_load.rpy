@@ -176,6 +176,10 @@ label after_load:
             del cameronBro
         except NameError: pass
         try:
+            if chloemad: chloe.relationship = Relationship.MAD
+            del chloemad
+        except NameError: pass
+        try:
             if chloers: chloe.relationship = Relationship.FWB
             del chloers
         except NameError: pass

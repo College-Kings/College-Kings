@@ -357,7 +357,7 @@ label jorepb:
             jump newchloec
 
         "You're lying":
-            $ chloemad = True
+            $ chloe.relationship = Relationship.MAD
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s370a
@@ -4265,7 +4265,7 @@ label findimre:
 
     u "(Maybe that's Imre...)"
 
-    if chloemad:
+    if chloe.relationship.value <= Relationship.MAD.value:
         $ amber.messenger.newMessage(_("Hey, you alone? xx"), queue=False)
         $ amber.messenger.addReply(_("I'm at the park, but I'm by myself."))
         $ amber.messenger.newMessage(_("Go somewhere where you're completely alone xx"))
