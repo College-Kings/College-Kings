@@ -35,7 +35,7 @@ label v15s18c_riley:
     scene v15s18c_ri_2b # FPP. Same as v15s18c_ri_2, Riley now turned to MC, not looking through the mirror anymore, Riley smiling, mouth open
     with dissolve
 
-    if v15_lauren_gift == "$50 gift card" and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if v15_lauren_gift == 1 and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s18c_ri_2b
         with dissolve
 
@@ -126,7 +126,7 @@ label v15s18c_riley:
 
         ri "Anytime."
 
-    elif v15_lauren_gift == "$50 gift card": # and lauren.relationship == Relationship.FRIEND:
+    elif v15_lauren_gift == 1: # and lauren.relationship == Relationship.FRIEND:
         ri "I can't believe you bought the same gift card as Imre..."
 
         scene v15s18c_ri_2c # FPP. Same as v15s18c_ri_2b, Riley smiling, mouth closed
@@ -141,7 +141,7 @@ label v15s18c_riley:
 
         ri "Haha, I wouldn't worry about it. Some people are really difficult to shop for."
     
-    elif v15_lauren_gift == "white horse, black mane":
+    elif v15_lauren_gift == 4:
         scene v15s18c_ri_2b
         with dissolve
 
@@ -172,7 +172,7 @@ label v15s18c_riley:
 
         ri "Of course it's true, why would I speak in lies?"
     
-    elif v15_lauren_gift == "brown horse, golden mane":
+    elif v15_lauren_gift == 5:
         scene v15s18c_ri_2b
         with dissolve
 
@@ -223,7 +223,7 @@ label v15s18c_riley:
 
         ri "Why thank you, although I don't think we'll need it. Hehe..."
     
-    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace" and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    elif (v15_lauren_gift == 2 or v15_lauren_gift == 3) and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s18c_ri_2b
         with dissolve
 
@@ -267,7 +267,7 @@ label v15s18c_riley:
 
         u "Ha, yeah hopefully."
     
-    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace": # and lauren.relationship == Relationship.FRIEND:
+    elif v15_lauren_gift == 2 or v15_lauren_gift == 3: # and lauren.relationship == Relationship.FRIEND:
         scene v15s18c_ri_2b
         with dissolve
 
@@ -403,7 +403,7 @@ label v15s18c_imre_aubrey:
 
     imre "I know sarcasm when I hear it, Aubrey."
 
-    if v15_lauren_gift == "$50 gift card":
+    if v15_lauren_gift == 1:
         scene v15s18c_imau_5
         with dissolve
 
@@ -474,7 +474,7 @@ label v15s18c_imre_aubrey:
 
         pause 0.75
 
-    elif v15_lauren_gift == "brown horse, golden mane" or v15_lauren_gift == "white horse, black mane":
+    elif v15_lauren_gift >= 4:
         scene v15s18c_imau_6
         with dissolve
 
@@ -510,7 +510,7 @@ label v15s18c_imre_aubrey:
 
         pause 0.75
 
-    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace" and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    elif (v15_lauren_gift == 2 or v15_lauren_gift == 3) and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s18c_imau_6
         with dissolve
 
@@ -556,7 +556,7 @@ label v15s18c_imre_aubrey:
 
         pause 0.75
 
-    elif v15_lauren_gift == "emerald bracelet" or v15_lauren_gift == "ruby choker necklace": # and lauren.relationship == Relationship.FRIEND:
+    elif v15_lauren_gift == 2 or v15_lauren_gift == 3: # and lauren.relationship == Relationship.FRIEND:
         scene v15s18c_imau_5c # FPP. Same as v15s18c_imau_5b, Imre slight smile, mouth open
         with dissolve
 

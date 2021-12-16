@@ -124,7 +124,7 @@ label v15s17:
 
     menu:
         "Get Lauren $50 gift card":
-            $ v15_lauren_gift = "$50 gift card"
+            $ v15_lauren_gift = 1
 
             scene v15s17_4
             with dissolve
@@ -211,7 +211,6 @@ label v15s17:
                 u "Ha... Good one."
 
             elif v15_mad_at_ms_rose:
-
                 scene v15s17_4
                 with dissolve
 
@@ -273,17 +272,6 @@ label v15s17:
 
             clerk "Both beautiful items, and currently on sale for only $50."
 
-            if LaurenFriend:
-                scene v15s17_8b # FPP. same as v15s17_8a SC's mouth is closed
-                with dissolve
-
-                u "Is jewelry too much if we're just friends?"
-
-                scene v15s17_8a
-                with dissolve
-
-                clerk "Jewelry is never too much, young man. If you buy this for her, she will be your friend forever!"
-
             if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v15s17_8b
                 with dissolve
@@ -302,6 +290,17 @@ label v15s17:
 
                 scene v15s17_8b
                 with dissolve
+
+            else:
+                scene v15s17_8b # FPP. same as v15s17_8a SC's mouth is closed
+                with dissolve
+
+                u "Is jewelry too much if we're just friends?"
+
+                scene v15s17_8a
+                with dissolve
+
+                clerk "Jewelry is never too much, young man. If you buy this for her, she will be your friend forever!"
 
             menu:
                 "Emerald bracelet":
@@ -449,7 +448,7 @@ label v15s17:
 
                 menu:
                     "Get Lauren $50 gift card":
-                        $ v15_lauren_gift = "$50 gift card"
+                        $ v15_lauren_gift = 1
 
                         scene v15s17_5
                         with dissolve
@@ -484,7 +483,7 @@ label v15s17:
 
                         menu:
                             "Emerald bracelet":
-                                $ v15_lauren_gift = "emerald bracelet"
+                                $ v15_lauren_gift = 2
 
                                 scene v15s17_11d # FPP. same as v15s17_11b MC holds up the Emerald Bracelet
                                 with dissolve
@@ -492,7 +491,7 @@ label v15s17:
                                 u "The emerald is too beautiful to turn away from."
 
                             "Ruby choker necklace":
-                                $ v15_lauren_gift = "ruby choker necklace"
+                                $ v15_lauren_gift = 3
 
                                 scene v15s17_11e # FPP. same v15s17_11b MC holds up Ruby choker necklace
                                 with dissolve
@@ -510,7 +509,7 @@ label v15s17:
 
                         menu:
                             "Brown horse, golden mane":
-                                $ v15_lauren_gift = "brown horse, golden mane"
+                                $ v15_lauren_gift = 5
 
                                 scene v15s17_11f # FPP. same as v15s17_11c MC holds up the Brown horse, golden mane
                                 with dissolve
@@ -518,7 +517,7 @@ label v15s17:
                                 u "Definitely this one!"
 
                             "White horse, black mane":
-                                $ v15_lauren_gift = "white horse, black mane"
+                                $ v15_lauren_gift = 4
 
                                 scene v15s17_11g # FPP. same as v15s17_11c MC holds up the White horse, black mane
                                 with dissolve
@@ -551,7 +550,7 @@ label v15s17:
 
                 menu:
                     "Get Lauren $50 gift card":
-                        $ v15_lauren_gift = "$50 gift card"
+                        $ v15_lauren_gift = 1
 
                         scene v15s17_5
                         with dissolve
@@ -586,7 +585,7 @@ label v15s17:
 
                         menu:
                             "Emerald bracelet":
-                                $ v15_lauren_gift = "emerald bracelet"
+                                $ v15_lauren_gift = 2
 
                                 scene v15s17_11d
                                 with dissolve
@@ -594,7 +593,7 @@ label v15s17:
                                 u "The emerald is too beautiful to turn away from."
 
                             "Ruby choker necklace":
-                                $ v15_lauren_gift = "ruby choker necklace"
+                                $ v15_lauren_gift = 3
 
                                 scene v15s17_11e
                                 with dissolve

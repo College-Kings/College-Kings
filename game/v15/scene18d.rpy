@@ -223,7 +223,7 @@ label v15s18d:
             if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.BOYFRIEND)
 
-                if v15_lauren_gift == "$50 gift card":
+                if v15_lauren_gift == 1:
                     scene v15s18d_8i # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren fake smile, mouth open.
                     with dissolve
 

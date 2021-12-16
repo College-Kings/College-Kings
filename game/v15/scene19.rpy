@@ -293,7 +293,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
         scene v15s19_9c    # FPP. Lauren, eyes closed, kissing MC on the lips [Deer House Living Room Front Door]. 
         with dissolve
 
-    else: #if lauren.relationship == Relationship.FRIEND:  # -if LaurenFriend
+    else: # LaurenFriend
         scene v15s19_9b   # TPP. Camera facing the front door. MC smiling mouth closed and Lauren smiling mouth closed friendly hug each other in front of the door [Deer House Living Room Front Door].
         with dissolve
 
