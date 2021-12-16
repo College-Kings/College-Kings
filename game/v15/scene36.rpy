@@ -84,7 +84,7 @@ label v15s36:
         scene v15s36_4
         with dissolve
 
-        u "Yeah, I get tht. No worries..."
+        u "Yeah, I get that. No worries..."
 
         u "So, what was your favorite question from the game tonight?"
 
