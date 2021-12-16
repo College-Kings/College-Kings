@@ -1,6 +1,7 @@
 init python:
     class Relationship(Enum):
-        MAD = -3
+        MAD = -4
+        THREATEN = -3
         MAKEFUN = -2
         AWKWARD = -1
         FRIEND = 0
@@ -189,7 +190,7 @@ default lews_official = NonPlayableCharacter("LewsOfficial")
 default lindsey = NonPlayableCharacter("Lindsey", "LindsLou") #Relationship progression: FRIEND, KISS, FWB
 default mason = NonPlayableCharacter("Mason", "Mason_Mas")
 default mr_lee = NonPlayableCharacter("Mr Lee")
-default ms_rose = NonPlayableCharacter("Ms Rose") #Relationship progression: FRIEND, KISS, FWB
+default ms_rose = NonPlayableCharacter("Ms Rose") #Relationship progression: THREATEN, FRIEND, KISS, FWB
 default naomi = NonPlayableCharacter("Naomi", "NaomiXMarie")
 default nora = NonPlayableCharacter("Nora", "Nora_12") #Relationship progression: FRIEND, MOVE, LIKES, FWB
 default parker = NonPlayableCharacter("Parker")

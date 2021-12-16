@@ -2108,6 +2108,7 @@ label v15s21:
 
                             "Threaten Ms. Rose":
                                 $ v15_threaten_ms_rose = True
+                                $ ms_rose.relationship = Relationship.THREATEN
                                 $ add_point(KCT.TROUBLEMAKER)
 
                                 scene v15s21_13f
