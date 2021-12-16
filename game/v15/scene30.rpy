@@ -161,7 +161,7 @@ label v15s30:
 
                 u "(Okay, now I'm super relaxed... Haha. Time for sleep.)"
 
-            "Don't sext Emily":
+            "Don't sext her":
                 $ emily.messenger.addReply("Not really in the mood... I'm sorry", func=None)
                 $ emily.messenger.newMessage("Oh, okay. No worries. I'll talk to you soon, I miss you <3", queue=False)
                 $ emily.messenger.addReply("You too, night :)", func=None)
