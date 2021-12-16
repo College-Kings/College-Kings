@@ -1670,7 +1670,7 @@ label v15s21:
         with dissolve
 
         if kct == "confident":
-            v15_meeting_points += 1
+            $ v15_meeting_points += 1
 
         # Can gain up to 8 points: 4 from answers, 2 from relationship with Ms. Rose, 1 from perfume and 1 from kct. Need 3+ points to convince her
         # If Relationship, Ms. Rose is easy to convince (just need 1 correct answer even if you fail everything else)

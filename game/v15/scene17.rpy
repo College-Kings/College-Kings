@@ -123,7 +123,7 @@ label v15s17:
     with dissolve
 
     menu:
-        "Get Lauren $50 gift card":
+        "Get the gift card":
             $ v15_lauren_gift = 1
 
             scene v15s17_4
@@ -173,7 +173,7 @@ label v15s17:
 
             clerk "I'm sure she'll be very happy with it."
 
-        "Other gift options":
+        "Maybe something else":
             scene v15s17_4
             with dissolve
 

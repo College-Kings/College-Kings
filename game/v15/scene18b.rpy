@@ -311,6 +311,7 @@ label v15s18b:
         scene v15s18b_3
         with dissolve
 
+        $ grant_achievement("childhood_memories")
         u "(Nice, picked the right color and everything. Phew!)"
 
         scene v15s18b_3k

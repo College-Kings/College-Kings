@@ -186,7 +186,8 @@ init python:
     #v15.0
     Achievement("horn_dog", "Peek on Autumn") #s4
     Achievement("mmmm_donut", "Eat the donut") #s13
-    Achievement("honey_bear"), "Lick Ms. Rose's pancakes") #s15
+    Achievement("honey_bear", "Lick Ms. Rose's pancakes") #s15
+    Achievement("childhood_memories", "Surprise the birthday girl") #s18
     Achievement("emotional_blackmail", "Threaten Ms. Rose") #s21
-    Achievement("karen", "Where is your manager?") #s24
+    Achievement("karen", "Where is your manager?!") #s24
     Achievement("just_one_more_thing", "") #??
