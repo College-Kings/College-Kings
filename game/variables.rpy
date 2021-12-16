@@ -88,7 +88,6 @@ default v2_caughtpeeking = False
 default v2_caughtpeekingcounter = False
 default checkonrose = False
 default chloecaught = False
-default chloemad = False
 default chooseimre = True
 default costume = 1
 default costumetried = set()
