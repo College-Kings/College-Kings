@@ -361,7 +361,6 @@ default v15_lindsey_inviteseb = False ##Approach B2A. Invite Grayson = (v14_help
 
 default aubrey_fwb = False #????
 default aubrey_riley_awkward = False
-default AubreyFriend = False #????
 default autumnloyal = False
 default detective = "None" # Archetypes: professional, psychologist, loose cannon
 default dog_name = "Blue"
