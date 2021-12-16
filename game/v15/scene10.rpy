@@ -198,7 +198,7 @@ label v15s10:
 
         male_buyer "Let me take a look at this piece of junk then."
 
-        if v14s48_lie:
+        if v14s48_car_description == CarDescription.LIE:
             $ v14s48_car_price -= 200
             scene v15s10_11 # TPP. Show MC and the man walking towards the car, Lindsey walking off to the side still looking at her phone.
             with dissolve
@@ -851,7 +851,7 @@ label v15s10:
         scene v15s10_femalebuyer_4 # FPP. MC looking at the lady as she is checking out the car, the lady gentle awkward smile, mouth closed.
         with dissolve
 
-        if v14s48_lie:
+        if v14s48_car_description == CarDescription.LIE:
             $ v14s48_car_price -= 200
             u "As you can see, it's a modern, imported, classic sports car. All original and in excellent condition."
 

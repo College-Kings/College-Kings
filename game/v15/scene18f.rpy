@@ -10,7 +10,7 @@ label v15s18f:
         
         pause 2
 
-    if v15s18_DeersCouch: # Placeholder
+    else: # Placeholder
         scene v15s18f_2 # TPP. Show Mc laying on the couch in the Deer's house, Party mess all around him, MC staring at the ceiling with a blanket on and his head on a pillow, neutral face mouth closed.
         with dissolve 
 

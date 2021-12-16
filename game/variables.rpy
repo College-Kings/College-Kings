@@ -359,41 +359,42 @@ default v15_lindsey_gamenight = False ##Approach A. VIP Night = (v14_help_lindse
 default v15_lindsey_mostlikelyto = False ##Approach A2A. Would You Rather = (v15_lindsey_gamenight and not v15_lindsey_mostlikelyto)
 default v15_lindsey_inviteseb = False ##Approach B2A. Invite Grayson = (v14_help_lindsey and not v15_lindsey_gamenight and not v15_lindsey_inviteseb)
 
-default aubrey_riley_awkward = False
-default autumnloyal = False
-default AubreyFriend = False #????
 default aubrey_fwb = False #????
+default aubrey_riley_awkward = False
+default AubreyFriend = False #????
+default autumnloyal = False
+default detective = "None" # Archetypes: professional, psychologist, loose cannon
 default dog_name = "Blue"
 default freeroam13 = set() #halloween, part 1 (18a)
 default freeroam14 = set() #halloween, part 2 (18c)
-default v15_nora_clues = set() #detective clues: be_alone, loves_nature, hates_camping, likes_ex, runs_dad, hates_dad, close_rose, visited_aunt, aunt_cabin
-default v15_nora_locations = set() #detective locations: dad, ms_rose, aunt, cabin, camping, ex
 default v15_autumn_freemug = False
 default v15_autumn_lunchbreak = False
 default v15_autumn_smoke = False
 default v15_blame_nora = False ### blame_chris = (v13_imre_disloyal and not v15_blame_nora)
 default v15_lauren_gift = 0 #1 = gift card, 2 = emerald bracelet, 3 = ruby necklace, 4 = white horse, 5 = brown horse
 default v15_mad_at_ms_rose = False
+default v15_meeting_points = 0
+default v15_nora_clues = set() #detective clues: be_alone, loves_nature, hates_camping, likes_ex, runs_dad, hates_dad, close_rose, visited_aunt, aunt_cabin
+default v15_nora_locations = set() #detective locations: dad, ms_rose, aunt, cabin, camping, ex
+default v15_notes_clicks = 0 #placeholder for clicks in the journal
 default v15_ph_riley_upset = False
+default v15_seduce_ms_rose = False # Requested Variables for v15s21
 default v15_stuck_up_for_nora = False
+default v15_threaten_ms_rose = False # Requested Variables for v15s21
 default v15_told_Emily_I_Love_You = False # Placeholder?
 default v15_took_notes = False
+default v15s18_LaurensBed = False ###Still need to check all combinations
 default v15s18_mention_list = False
+default v15s18_mention_list_aubrey = False
 default v15s18_partytask = 0
 default v15s18a_aub_kiwii_smile = False
 default v15s18a_gag = False
 default v15s18a_lie = False #????
 default v15s18a_showlist_penelope_autumn = False # Show the party list to Penelope and Autumn.
 default v15s18e_cum_in_lauren = False # Noted to be remembered 
-default v15s19_local_mc_ends_in_livingroom = False 
 default v15s24_alcohol = False
 default v15s24_nancy_dick = False
 default v15s36_not_good_idea = False
-default v15s7_chloe_empathize = False #????
 default v15s42_flirt = False
 default v15s42_grab_breakfast = False
-default detective = "None" # Archetypes: professional, psychologist, loose cannon
-default v15_threaten_ms_rose = False # Requested Variables for v15s21
-default v15_seduce_ms_rose = False # Requested Variables for v15s21
-default v15_meeting_points = 0
-default v15_notes_clicks = 0 #placeholder for clicks in the journal
+default v15s7_chloe_empathize = False #????

@@ -10,7 +10,7 @@ label v15s34:
         scene v15s34_1 # TPP. Show MC entering his room in the Wolves room in his suit from the wedding, slight smile ,mouth closed.
         with dissolve
 
-        if v15_naomi_blowjob: # Placeholder for naomi blowjob being true
+        if "v15_naomi" in sceneList: # Placeholder for naomi blowjob being true
             play sound "sounds/doorclose.mp3"
 
             scene v15s34_2 # TPP. Show MC in the middle of his wolves room, slight frown, mouth closed.
@@ -118,7 +118,7 @@ label v15s34:
         scene v15s34_6 # TPP. Show MC entering his room in the apes room in his suit from the wedding, slight smile ,mouth closed.
         with dissolve
 
-        if v15_naomi_blowjob: # Placeholder for naomi blowjob being true
+        if "v15_naomi" in sceneList: # Placeholder for naomi blowjob being true
             play sound "sounds/doorclose.mp3"
 
             scene v15s34_7 # TPP. Show MC in the middle of his apes room, slight frown, mouth closed.

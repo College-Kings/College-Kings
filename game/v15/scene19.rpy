@@ -52,7 +52,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
         with dissolve 
 
     else : # -if sleeping on the couch
-        $ v15s19_local_mc_ends_in_livingroom = True
+        $ v15s18_LaurensBed = False
 
         scene v15s19_3 # TPP. MC dressed in his costume, laying on the couch, eyes closed, mouth closed, netural expression. There's cups, beer bottls, and party trash on the coffee table, on teh entertainment center (TV), and the dining table [Deer House Living Room].
         with dissolve
@@ -207,13 +207,15 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
     play sound "sounds/vibrate.mp3" 
 
-    if v15s19_local_mc_ends_in_livingroom:
-        scene v15s19_7f # TPP. MC, smiling mouth closed gets his phone from his pocket while Lauren, smiling mouth closed, watches him. The living room is clean and there is a trash bag on the floor in front of MC [Deer House Living Room].
+    if v15s18_LaurensBed:
+        scene v15s19_8 # TPP. MC, smiling mouth closed gets his phone from his pocket while Lauren, smiling mouth closed, watches him. The kitchen is in the same condition is a v15s19_4d [Deer House Kitchen].
         with dissolve
 
     else:
-        scene v15s19_8 # TPP. MC, smiling mouth closed gets his phone from his pocket while Lauren, smiling mouth closed, watches him. The kitchen is in the same condition is a v15s19_4d [Deer House Kitchen].
+        scene v15s19_7f # TPP. MC, smiling mouth closed gets his phone from his pocket while Lauren, smiling mouth closed, watches him. The living room is clean and there is a trash bag on the floor in front of MC [Deer House Living Room].
         with dissolve
+
+    pause 1
 
     if v14_help_chloe and not v15_chloe_lindseysabotage: # -if helping Chloe with meeting the Dean # -MC checks his texts to see a message from Chloe-
         if v15_chloe_mrleesupport: # -if meeting with Mr. Lee (Transcriber Note: Again, mutually exclusive)
@@ -250,16 +252,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
     # -Regardless of helping Chloe or Lindsey-
     # -MC exits his texts, puts his phone away-
 
-    if v15s19_local_mc_ends_in_livingroom: 
-        scene v15s19_7g # FPP. Lauren, smiling mouth closed looking at MC. The living room is clean and there is a trash bag on the floor in front of MC [Deer House Living Room].
-        with dissolve
-
-        u "Well, duty calls with the presidential campaign."
-        
-        scene v15s19_7h # TPP. Lauren, smiling mouth closed following MC, smiling mouth closed, to the front door. The house is clean. [Deer House Living Room].
-        with dissolve 
-        
-    else: 
+    if v15s18_LaurensBed: 
         scene v15s19_8a # FPP. Lauren by the sink, smiling, mouth closed, looking at MC while throwing trash into the trash bag she is holding. The kitcen is in the same condition is a v15s19_4d [Deer House Kitchen].
         with dissolve
 
@@ -268,6 +261,15 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
         scene v15s19_8b # TPP. Lauren, smiling mouth closed following MC, smiling mouth closed, to the front door. The house is still dirty from the party. [Deer House Living Room].
         with dissolve 
     
+    else: 
+        scene v15s19_7g # FPP. Lauren, smiling mouth closed looking at MC. The living room is clean and there is a trash bag on the floor in front of MC [Deer House Living Room].
+        with dissolve
+
+        u "Well, duty calls with the presidential campaign."
+        
+        scene v15s19_7h # TPP. Lauren, smiling mouth closed following MC, smiling mouth closed, to the front door. The house is clean. [Deer House Living Room].
+        with dissolve 
+        
     pause 0.75
 
     # All scenes converge to the living room front door.
