@@ -28,7 +28,7 @@ label v15s34:
 
             u "(I really enjoyed my day with Aubrey. She seems comfortable sharing so much of her life with me now and sees me as someone she can trust.)"
 
-            if aubreytamed:
+            if aubrey.relationship.value >= Relationship.TAMED.value:
                 u "(And I'm so excited to see what's next for us...)"
         
         scene v15s34_3 # TPP. Show MC taking off the top part of his suit in the middle of his wolves room.
@@ -135,7 +135,7 @@ label v15s34:
 
             u "(I really enjoyed my day with Aubrey. She seems comfortable sharing so much of her life with me now and sees me as someone she can trust.)"
 
-            if aubreytamed:
+            if aubrey.relationship.value >= Relationship.TAMED.value:
                 u "(And I'm so excited to see what's next for us...)"
         
         scene v15s34_8 # TPP. Show MC taking off the top part of his suit in the middle of his apes room.

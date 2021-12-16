@@ -1525,8 +1525,7 @@ label v15s18c_autumn_amber:
 
     am "Maybe, ha."
 
-    if AmberSober:
-
+    if v14_amber_clean:
         am "Although obviously... I don't do that anymore. But I can at least pass on my wisdom to others."
 
         scene v15s18c_auam_3b
