@@ -112,7 +112,6 @@ default meetgrayson = False
 default meetjulia = False
 default meetlauren = False
 default muffin = False
-default noramad = False
 default notcool = False
 default penelopekiss = False
 default perform = 0

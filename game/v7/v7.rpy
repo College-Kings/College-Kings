@@ -606,7 +606,7 @@ label hd_bd:
 
         u "(It's really late so I might as well go home now.)"
 
-    elif noramad:
+    elif nora.relationship.value <= Relationship.MAD.value:
         scene s699
         with dissolve
 
@@ -4229,7 +4229,7 @@ label aftercall:
     with dissolve
     pause 0.5
 
-    if noramad:
+    if nora.relationship.value <= Relationship.MAD.value:
         # mad
         scene s791 # Camera - first person. MC and Nora close up but not very close, maintain abit more than two arms length distance between them. Nora slightly annoyed and talking
         with dissolve
@@ -4339,9 +4339,10 @@ label aftercall:
     with dissolve
     u "But the real question is, would you do it?"
 
-    if noramad:
+    if nora.relationship.value <= Relationship.MAD.value:
         scene s791
         with dissolve
+
     else:
         scene s791b
         with dissolve
@@ -4458,41 +4459,47 @@ label aftercall:
             with dissolve
             u "Nora, I'm sorr-"
 
-            if noramad:
+            if nora.relationship.value <= Relationship.MAD.value:
                 scene s791d
                 with dissolve
+
+                no "You passed!"
+
+                scene s791e
+                with dissolve
+                
+                u "What?"
+
+                scene s791d
+                with dissolve
+                
+                no "That was the real test, and you passed it!"
+
+                scene s791e
+                with dissolve
+                
+                u "Wait, really? That's great!"
+
             else:
                 scene s791b
                 with dissolve
 
-            no "You passed!"
+                no "You passed!"
 
-            if noramad:
-                scene s791e
-                with dissolve
-            else:
                 scene s791c
                 with dissolve
 
-            u "What?"
-
-            if noramad:
-                scene s791d
-                with dissolve
-            else:
+                u "What?"
+                
                 scene s791b
                 with dissolve
+                
+                no "That was the real test, and you passed it!"
 
-            no "That was the real test, and you passed it!"
-
-            if noramad:
-                scene s791e
-                with dissolve
-            else:
                 scene s791c
                 with dissolve
 
-            u "Wait, really? That's great!"
+                u "Wait, really? That's great!"
 
     scene s794 # Camera - first person. Nora moves to the door and knocks while talking
     with dissolve
@@ -4507,7 +4514,7 @@ label aftercall:
     with dissolve
     aa "Thanks Nora, you can go now."
 
-    if not noramad:
+    if nora.relationship.value > Relationship.MAD.value:
         scene s794b # Nora looks at the MC while slightly smiling. Aaron mouth closed and looking at MC
         with dissolve
         no "Good luck."
@@ -12601,7 +12608,7 @@ label fr4chloedate:
 
                 no "Uhm..."
 
-                if not noramad and "nora" in freeroam3:
+                if nora.relationship.value > Relationship.MAD.value and "nora" in freeroam3:
                     #If Nora likes you:
                     no "Yeah, why not."
 
@@ -12692,7 +12699,7 @@ label fr4chloedate:
 
                     jump chloe_dance
 
-                elif not noramad:
+                elif nora.relationship.value > Relationship.MAD.value:
                     no "I don't really feel like dancing, sorry."
 
                     scene sfr4cl35c
@@ -14842,7 +14849,7 @@ label fr4nora2:
 
     pause 0.5
 
-    if not noramad and "nora" in freeroam3:
+    if nora.relationship.value > Relationship.MAD.value and "nora" in freeroam3:
         scene sfr4no5 # close up nora smile with a bit of holding back or "this dance is stupid" attitude
         with dissolve
 
@@ -14927,7 +14934,7 @@ label fr4nora2:
 
                 no "Bye."
 
-    elif not noramad:
+    elif nora.relationship.value > Relationship.MAD.value:
         scene sfr4no5b
         with dissolve
 

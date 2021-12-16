@@ -8918,7 +8918,7 @@ label v6_fr3nora1:
 
     menu:
         "Defend Chloe":
-            $ noramad = True
+            $ nora.relationship = Relationship.MAD
             $ add_point(KCT.BOYFRIEND)
 
             u "Chloe's not manipulative. She's just being bad mouthed because people like you see her as a threat."
@@ -8946,7 +8946,6 @@ label v6_fr3nora1:
 
         "Don't defend Chloe":
             $ add_point(KCT.BRO)
-            $ noramad = False
 
             u "Yeah, it sounds kinda messed up."
 
