@@ -16,7 +16,7 @@ init python:
             for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, name.lower(), "large_profile_pictures")):
                 self.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(name.lower(), filename) for filename in filenames]
 
-            self.sentMessages = []
+            self.sent_messages = []
             self.pending_messages = []
 
         @property
@@ -44,7 +44,7 @@ init python:
                 self.pending_messages.append(message)
             else:
                 self.pending_messages = []
-                self.sentMessages.append(message)
+                self.sent_messages.append(message)
 
             if self in simplr_contacts: simplrApp.notification = True
             
@@ -62,7 +62,7 @@ init python:
                 self.pending_messages.append(message)
             else:
                 self.pending_messages = []
-                self.sentMessages.append(message)
+                self.sent_messages.append(message)
 
             if self in simplr_contacts: simplrApp.notification = True
 
@@ -76,7 +76,7 @@ init python:
                 if self.pending_messages:
                     self.pending_messages[-1].replies.append(reply)
                 else:
-                    self.sentMessages[-1].replies.append(reply)
+                    self.sent_messages[-1].replies.append(reply)
             except IndexError:
                 message = self.newMessage("", queue=False)
                 message.replies.append(reply)
@@ -89,7 +89,7 @@ init python:
                 if self.pending_messages:
                     self.pending_messages[-1].replies.append(reply)
                 else:
-                    self.sentMessages[-1].replies.append(reply)
+                    self.sent_messages[-1].replies.append(reply)
             except Exception:
                 self.newMessage("", queue=False)
                 self.pending_messages[-1].replies.append(reply)
@@ -99,7 +99,7 @@ init python:
                 simplrApp.notification = False
 
         def getMessage(self, message):
-            for msg in self.sentMessages:
+            for msg in self.sent_messages:
                 try:
                     if message == msg.message:
                         return msg
@@ -249,7 +249,7 @@ screen simplr_messenger(contact=None):
 
                 null height 5
                 
-                for message in contact.sentMessages:
+                for message in contact.sent_messages:
                     if isinstance(message, Message) and message.message.strip():
                         textbutton message.message style "msgleft"
                     elif isinstance(message, ImageMessage):

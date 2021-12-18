@@ -12,9 +12,12 @@ init python:
 
         @property
         def replies(self):
+            try: self.sent_messages
+            except AttributeError: self.sent_messages = []
+
             try:
                 return self.sent_messages[-1].replies
-            except IndexError: return False
+            except IndexError: return []
 
         def new_message(self, message, force_send=False):
             message = Message(self, message)
