@@ -362,12 +362,12 @@ label v15s18:
     with dissolve
 
     python:
-        checklist.add_item("Have Sex (Lauren)")
-        checklist.add_item("Give Oral (Penelope)")
-        checklist.add_item("Get Oral (Amber)")
-        checklist.add_item("Get a Handjob (Riley)")
-        checklist.add_item("Finger a girl (Aubrey)")
-        checklist.add_item("Make out (Autumn)")
+        checklist.add_item("Have Sex")
+        checklist.add_item("Give Oral")
+        checklist.add_item("Get Oral")
+        checklist.add_item("Get a Handjob")
+        checklist.add_item("Finger a girl")
+        checklist.add_item("Make out")
         checklist.add_item("Steal someone's panties")
         checklist.add_item("Find a condom")
 
