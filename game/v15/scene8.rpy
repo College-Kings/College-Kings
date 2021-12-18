@@ -70,7 +70,7 @@ label v15s8:
 # -Insert Planning Board with the options for phase 2-
 # -The planning board pops up and MC makes his choices from what's presented, close when finished-
     python:
-        chloe_board = PlanningBoard("images/v15/chicks_presidency_race/planning_boards/chloe_background.webp")
+        chloe_board = PlanningBoard("images/v15/planning_boards/chloe_background.webp")
 
         chloe_board.add_approach("Sabotage",
             "Damage Lindsey's reputation",
