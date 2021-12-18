@@ -81,7 +81,7 @@ screen planning_board(planning_board):
         action [SetField(planning_board, "approach", approach), Show("planning_board_help", message="Please select optional tasks")]
 
     vbox:
-        pos (130, 661)
+        pos (130, 600)
         spacing 30
         style_prefix "task"
         xmaximum 770
@@ -138,7 +138,7 @@ screen planning_board(planning_board):
         action [SetField(planning_board, "approach", approach, None), Show("planning_board_help", message="Please select optional tasks")]
 
     vbox:
-        pos (1052, 660)
+        pos (1052, 600)
         spacing 30
         style_prefix "task"
         xmaximum 770
