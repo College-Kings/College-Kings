@@ -768,8 +768,6 @@ label v15s24:
 
                     u "*Chuckles*"
 
-                    scene v15s24_
-                    with dissolve
     else:
         scene v15s24_13b
         with dissolve

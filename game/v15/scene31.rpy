@@ -22,12 +22,12 @@ label v15s31:
 
     u "(And now I'm getting high school prom flashbacks...)"
 
-    show screen fantasyOverlay
+    show screen v15_fantasyOverlay # Reuse overlay from past flashbacks/dreams
 
     scene v15s31_3 # TPP. Flashback image of MC and Emily taking a picture for prom. Emily has her back to MC and MC's hands are on Emily's hips, both have big smiles.
     with dissolve
 
-    hide screen fantasyOverlay 
+    hide screen v15_fantasyOverlay # Reuse overlay from past flashbacks/dreams
 
     scene v15s31_2
     with dissolve
