@@ -501,7 +501,7 @@ label v15s21:
         scene v15s21_7h
         with dissolve
 
-        cl "Well, surely the dean approved it for a good reason."
+        cl "Well, surely the Dean approved it for a good reason."
 
         scene v15s21_6h
         with dissolve
@@ -2336,7 +2336,7 @@ label v15s21:
 
         ro "Any time, I'm always happy to help."
 
-        ro "I hope your meeting with the dean goes well."
+        ro "I hope your meeting with the Dean goes well."
 
         scene v15s21_7
         with dissolve
