@@ -791,7 +791,7 @@ label v15s43:
 
     ch "I have nothing else to say!"
 
-    scene v15s43_17 # TPP. MC and Amber closer to Chris both of them looking at Chris suspiciously, mouth closed, Chris confused, mouth closed.
+    scene v15s43_17a # TPP. MC and Amber closer to Chris both of them looking at Chris suspiciously, mouth closed, Chris confused, mouth closed.
     with dissolve
 
     pause  
