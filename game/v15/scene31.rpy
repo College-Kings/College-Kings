@@ -22,6 +22,7 @@ label v15s31:
     u "(And now I'm getting high school prom flashbacks...)"
 
     show screen fantasyOverlay
+    ### Note for Oscar. Tried to put in the show screen fantasyOverlay for the flashback photo but it was messingup the render table.
 
     scene v15s31_3 # TPP. Flashback image of MC and Emily taking a picture for prom. Emily has her back to MC and MC's hands are on Emily's hips, both have big smiles.
     with dissolve
@@ -29,6 +30,7 @@ label v15s31:
     pause 1
 
     hide screen fantasyOverlay 
+    ### Note for Oscar. Hide overlay would be here.
 
     scene v15s31_2
     with dissolve

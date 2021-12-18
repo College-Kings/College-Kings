@@ -180,7 +180,7 @@ label v15s41:
 
         pause 0.75
 
-        scene v15s41_1 # TPP. In apes room, Show MC putting on his shirt while he sort of sprints towards the door to leave, neutral face, mouth closed.
+        scene v15s41_11 # TPP. In apes room, Show MC putting on his shirt while he sort of sprints towards the door to leave, neutral face, mouth closed.
         with dissolve 
 
         pause 0.75

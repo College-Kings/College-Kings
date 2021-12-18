@@ -145,12 +145,12 @@ label v15s42:
 
     am "Yes."
 
-    scene v15s42_7b # FPP. Amber infront of MC, Amber holding up and looking at her pad with notes on it, Amber slight smile, mouth open.
+    scene v15s42_7i # FPP. Amber infront of MC, Amber holding up and looking at her pad with notes on it, Amber slight smile, mouth open.
     with dissolve
 
     am "She's been gone since Tuesday. Last seen at the airport."
 
-    scene v15s42_7c # FPP. Amber infront of MC, Amber holding up and looking at her pad with notes on it, Amber slight smile, mouth closed.
+    scene v15s42_7h # FPP. Amber infront of MC, Amber holding up and looking at her pad with notes on it, Amber slight smile, mouth closed.
     with dissolve
 
     u "(Since Tuesday?)"
