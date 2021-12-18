@@ -362,11 +362,16 @@ label v15s18:
     with dissolve
 
     python:
-        checklist.add_item("Test1")
-        checklist.add_item("Test2")
-        checklist.add_item("Test3")
+        checklist.add_item("Have Sex (Lauren)")
+        checklist.add_item("Give Oral (Penelope)")
+        checklist.add_item("Get Oral (Amber)")
+        checklist.add_item("Get a Handjob (Riley)")
+        checklist.add_item("Finger a girl (Aubrey)")
+        checklist.add_item("Make out (Autumn)")
+        checklist.add_item("Steal someone's panties")
+        checklist.add_item("Find a condom")
 
-    show screen checklist
+    show screen v15_imre_checklist_icon
     # -The Party Checklist UI pops up, showing the list of challenges-
     # -The UI list disappears when player chooses to close it-
  
