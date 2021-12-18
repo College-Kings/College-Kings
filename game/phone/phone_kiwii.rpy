@@ -124,11 +124,14 @@ init python:
 
         @property
         def replies(self):
+            try: self._replies
+            except AttributeError: self._replies = []
+
             return self._replies
 
         @replies.setter
-        def replies(self, x):
-            self._replies = x
+        def replies(self, value):
+            self._replies = value
 
     class KiwiiReply(KiwiiComment):
         def __init__(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
