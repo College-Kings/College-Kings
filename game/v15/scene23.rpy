@@ -68,53 +68,7 @@ label v15s23:
         $ aubrey.messenger.addReply("Uhh... I'll make it up to you...? Lol")
         $ aubrey.messenger.newMessage("Hehe, I know you will ;)")
 
-    if not joinwolves:
-        scene v15s23_8 # TPP. MC, smiling, mouth closed, wearing a towel, entering his room. [MC's APE ROOM]
-        with dissolve
-
-        pause 0.75
-
-        scene v15s23_9 # TPP. MC, smiling, mouth closed, standing naked in front of his bed. His towel is on the bed and he has his pants in his hands. [MC's APE ROOM]
-        with dissolve
-
-        pause 0.75
-
-        scene v15s23_10 # TPP. MC, smiling, mouth closed, putting on his pants. [MC's APE ROOM]
-        with dissolve
-
-        pause 0.75
-
-        scene v15s23_11 # TPP. MC, smiling, mouht clkosed, with his pants on. [MC's APE ROOM]
-        with dissolve
-
-        pause 0.75
-
-        scene v15s23_12 # TPP. Close of up MC's phone on the table or nightstand. [MC's APE ROOM]
-        with dissolve
-
-        pause 0.75 
-
-        scene v15s23_13 # TPP. MC, neutral expression, mouth closed, wearing pants, holding his phone and looking down at it. [MC's APE ROOM]
-        with dissolve
-
-        call v15s23_aubrey_text_continue
-
-        scene v15s23_14 # TPP. MC, smiling, thinking, mouth closed, putting his phone in his back pocket. [MC's APE ROOM]
-        with dissolve
-
-        u "(I wonder what the surprise is...)"
-
-        scene v15s23_15 # TPP. MC, smiling, mouth closed, putting his shirt on. [MC's APE ROOM]
-        with dissolve
-
-        pause 0.75
-
-        scene v15s23_16 # TPP. MC, opening the door to his room and exiting through it. [MC's APE ROOM]
-        with dissolve
-
-        u "(Time to find out!)"
-
-    else:
+    if joinwolves:
         scene v15s23_8a # TPP. Same as v15s23_8 but MC's WOLF ROOM.
         with dissolve
 
@@ -142,6 +96,52 @@ label v15s23:
 
         scene v15s23_13a # TPP. Same as v15s23_13 but MC's WOLF ROOM.
         with dissolve
+
+    else:
+        scene v15s23_8 # TPP. MC, smiling, mouth closed, wearing a towel, entering his room. [MC's APE ROOM]
+        with dissolve
+
+        pause 0.75
+
+        scene v15s23_9 # TPP. MC, smiling, mouth closed, standing naked in front of his bed. His towel is on the bed and he has his pants in his hands. [MC's APE ROOM]
+        with dissolve
+
+        pause 0.75
+
+        scene v15s23_10 # TPP. MC, smiling, mouth closed, putting on his pants. [MC's APE ROOM]
+        with dissolve
+
+        pause 0.75
+
+        scene v15s23_11 # TPP. MC, smiling, mouht clkosed, with his pants on. [MC's APE ROOM]
+        with dissolve
+
+        pause 0.75
+
+        scene v15s23_12 # TPP. Close of up MC's phone on the table or nightstand. [MC's APE ROOM]
+        with dissolve
+
+        pause 0.75
+
+        scene v15s23_13 # TPP. MC, neutral expression, mouth closed, wearing pants, holding his phone and looking down at it. [MC's APE ROOM]
+        with dissolve
+
+        call v15s23_aubrey_text_continue
+
+        scene v15s23_14 # TPP. MC, smiling, thinking, mouth closed, putting his phone in his back pocket. [MC's APE ROOM]
+        with dissolve
+
+        u "(I wonder what the surprise is...)"
+
+        scene v15s23_15 # TPP. MC, smiling, mouth closed, putting his shirt on. [MC's APE ROOM]
+        with dissolve
+
+        pause 0.75
+
+        scene v15s23_16 # TPP. MC, opening the door to his room and exiting through it. [MC's APE ROOM]
+        with dissolve
+
+        u "(Time to find out!)"
 
 label v15s23_aubrey_text_continue:
     if aubrey.messenger.replies:

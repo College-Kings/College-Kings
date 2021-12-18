@@ -93,6 +93,13 @@ label v15s29:
                 $ emily.messenger.addReply("Good.", func=None)
                 $ emily.messenger.newMessage("Send me a pic when you're finished? ;)", queue=False)
 
+                label v15s29_PhoneContinue:
+                    if emily.messenger.replies:
+                        call screen phone
+                    if emily.messenger.replies:
+                        u "(I should reply to Emily.)"
+                        jump v15s29_PhoneContinue
+
                 scene v15s29_4a
                 with dissolve
 
@@ -139,13 +146,22 @@ label v15s29:
 
                 u "(Okay, now I'm super relaxed... Haha. Time for sleep.)"
 
-            "Don't sext Emily":
+            "Don't sext her":
                 $ emily.messenger.addReply("Not really in the mood... I'm sorry", func=None)
                 $ emily.messenger.newMessage("Oh, okay. No worries. I'll talk to you soon, I miss you <3", queue=False)
                 $ emily.messenger.addReply("You too, night :)", func=None)
 
+                label v15s29_PhoneContinue2:
+                    if emily.messenger.replies:
+                        call screen phone
+                    if emily.messenger.replies:
+                        u "(I should reply to Emily.)"
+                        jump v15s29_PhoneContinue2
+
                 scene v15s29_4
                 with dissolve
+
+                pause 0.75
 
     scene v15s29_5 # TPP. lights are out, and MC has laid down to go to sleep, no expression, eyes closed
     with fade

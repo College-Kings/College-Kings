@@ -68,16 +68,6 @@ init python:
 
     cheatItems = []
 
-    ButtonCheat("General", "Chloe Mad", "chloemad")
-    ButtonCheat("General", "Nora Mad", "noramad")
-    ButtonCheat("General", "Lauren Mad", "laurenmad")
-    ButtonCheat("General", "Imre Mad", "imremad")
-    ButtonCheat("General", "Lauren Rs", "laurenrs")
-    ButtonCheat("General", "Aubrey Rs", "aubreyrs")
-    ButtonCheat("General", "Riley Rs", "rileyrs")
-    ButtonCheat("General", "Emily Rs", "emilyrs")
-    ButtonCheat("General", "Evelyn Rs", "evelynrs")
-    ButtonCheat("General", "Forgive Emily", "forgiveemily")
     ButtonCheat("General", "Bowling w/ Penelope", "bowling")
     ButtonCheat("General", "Telling Grayson you'll join the Apes", "joinapes")
     ButtonCheat("General", "Joining Wolves", "joinwolves")

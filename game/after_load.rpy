@@ -182,12 +182,20 @@ label after_load:
             del cameronBro
         except NameError: pass
         try:
+            if chloemad: chloe.relationship = Relationship.MAD
+            del chloemad
+        except NameError: pass
+        try:
             if chloers: chloe.relationship = Relationship.FWB
             del chloers
         except NameError: pass
         try:
             if chloegf: chloe.relationship = Relationship.GIRLFRIEND
             del chloegf
+        except NameError: pass
+        try:
+            if chrismad: chris.relationship = Relationship.MAD
+            del chrismad
         except NameError: pass
         try:
             if emmyrs: emmy.relationship = Relationship.LIKES
@@ -203,6 +211,10 @@ label after_load:
         try:
             if evelynrs: evelyn.relationship = Relationship.LIKES
             del evelynrs
+        except NameError: pass
+        try:
+            if imremad: imre.relationship = Relationship.MAD
+            del imremad
         except NameError: pass
         try:
             if jennyawkward: jenny.relationship = Relationship.AWKWARD
@@ -264,6 +276,10 @@ label after_load:
         try:
             if penelopeloyal: penelope.relationship = Relationship.LOYAL
             del penelopeloyal
+        except NameError: pass
+        try:
+            if rileykiss: riley.relationship = Relationship.MOVE
+            del rileykiss
         except NameError: pass
         try:
             if rileyrs: riley.relationship = Relationship.FWB
@@ -605,6 +621,9 @@ label after_load:
         except NameError: kiwii_firstTime = False
 
         try:
+            if v13s40fromgame and "v13_chloe" not in sceneList: sceneList.add("v13_chloe")
+        except NameError: pass
+        try:
             if v14s51_closet and "closet" not in freeroam12: freeroam12.add("closet")
         except NameError: pass
         try:
@@ -816,8 +835,6 @@ label after_load:
         except NameError: v13s41_lindsey_points = 0
         try: v13s20_bleach_suitcase
         except NameError: v13s20_bleach_suitcase = False
-        try: v13s40fromgame
-        except NameError: v13s40fromgame = False
         try: v13_aubrey_vote
         except NameError: v13_aubrey_vote = "na"
         try: v14_ryan_satin

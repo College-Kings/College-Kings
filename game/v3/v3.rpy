@@ -3068,7 +3068,7 @@ label continueq:
 
             menu:
                 "Kiss her":
-                    $ rileykiss = True
+                    $ riley.relationship = Relationship.MOVE
                     $ add_point(KCT.TROUBLEMAKER)
 
                     show rikiss2

@@ -62,13 +62,13 @@ label v15s26:
 
     pause 0.75
 
-    if (v14_help_lindsey and not v14_lindsey_sell): # -if MC went to Chloe's room to try and steal money
+    if v14_help_lindsey and not v14_lindsey_sell: # -if MC went to Chloe's room to try and steal money
         u "(I remember this door... I guess I'm about to find out what's behind it.)"
 
     scene v15s26_6 # FPP Show Aubrey and Riley in hallway by door to theater room, both smiling at MC with mouths closed
     with dissolve
 
-    u "Our Secret Place? Sounds very... Mysterious..."
+    u "Our Secret Place? Sounds very... mysterious..."
 
     scene v15s26_6a # FPP Same angle as 6, Aubrey and Riley in hallway by door to theater room, both smiling at MC, Aubrey's mouth open
     with dissolve
@@ -443,7 +443,8 @@ label v15s26:
     scene v15s26_19b # TPP Same angle as 19, side view of everyone on the couch watching the movie. Riley is leaning forward in interest, Aubrey is getting popcorn from bucket on MC's lap and winking at him
     with dissolve
 
-    mactor "Lou-Ann, please talk to me. Why are you saying you want to leave me now? You're the best second wife a man could ever wish for! Things have been good for us, haven't they?"
+    mactor "Lou-Ann, please talk to me. Why are you saying you want to leave me now?"
+    mactor "You're the best second wife a man could ever wish for! Things have been good for us, haven't they?"
 
     scene v15s26_19c # TPP Same angle as 19, Riley grabbing popcorn while still watching the screen, Aubrey leaning back against the couch
     with dissolve

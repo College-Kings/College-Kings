@@ -74,7 +74,7 @@ label v13_walk_garden:
 
     imre "You know I don't."
 
-    if chrismad:
+    if chris.relationship.value <= Relationship.MAD.value:
         scene v13s36_5c # FPP. Chris has a mad face on, looking at lindsey, mouth opened (location 3)
         with dissolve
         

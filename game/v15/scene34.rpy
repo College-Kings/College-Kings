@@ -10,7 +10,7 @@ label v15s34:
         scene v15s34_1 # TPP. Show MC entering his room in the Wolves room in his suit from the wedding, slight smile ,mouth closed.
         with dissolve
 
-        if v15_naomi_blowjob: # Placeholder for naomi blowjob being true
+        if "v15_naomi" in sceneList: # Placeholder for naomi blowjob being true
             play sound "sounds/doorclose.mp3"
 
             scene v15s34_2 # TPP. Show MC in the middle of his wolves room, slight frown, mouth closed.
@@ -28,45 +28,45 @@ label v15s34:
 
             u "(I really enjoyed my day with Aubrey. She seems comfortable sharing so much of her life with me now and sees me as someone she can trust.)"
 
-            if aubreytamed:
+            if aubrey.relationship.value >= Relationship.TAMED.value:
                 u "(And I'm so excited to see what's next for us...)"
         
         scene v15s34_3 # TPP. Show MC taking off the top part of his suit in the middle of his wolves room.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_3a # TPP. MC's top gone, MC taking off the bottom part of his suit in the middle of his wolves room, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_3b # TPP. MC standing in the middle of his wolves room in just his underwear, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_3c # TPP. MC standing in the middle of his wolves room putting on his shirt.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_3d # TPP. MC standing in the middle of his wolves room putting on his pants, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         play sound "sounds/vibrate.mp3"
 
         scene v15s34_3e # TPP. Show MC standing in the middle of his wolves room in the entire Outfit: 2, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_4 # TPP. Close up of MC in his wolves room pulling out his phone, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_4a # TPP. Close up of MC in his wolves room looking at his phone, slight smile, mouth close.
         with dissolve 
@@ -103,9 +103,10 @@ label v15s34:
 
         play sound "sounds/doorclose.mp3"
 
-        pause 0.75 
+        pause 0.75
 
-        if v15_lindsey_gamenight or not v14_help_lindsey:
+        ####to check jumps
+        if v15_lindsey_gamenight or not v14_help_lindsey: 
             jump v15s35
 
         if not v15_lindsey_gamenight and v14_help_lindsey:
@@ -117,7 +118,7 @@ label v15s34:
         scene v15s34_6 # TPP. Show MC entering his room in the apes room in his suit from the wedding, slight smile ,mouth closed.
         with dissolve
 
-        if v15_naomi_blowjob: # Placeholder for naomi blowjob being true
+        if "v15_naomi" in sceneList: # Placeholder for naomi blowjob being true
             play sound "sounds/doorclose.mp3"
 
             scene v15s34_7 # TPP. Show MC in the middle of his apes room, slight frown, mouth closed.
@@ -135,45 +136,45 @@ label v15s34:
 
             u "(I really enjoyed my day with Aubrey. She seems comfortable sharing so much of her life with me now and sees me as someone she can trust.)"
 
-            if aubreytamed:
+            if aubrey.relationship.value >= Relationship.TAMED.value:
                 u "(And I'm so excited to see what's next for us...)"
         
         scene v15s34_8 # TPP. Show MC taking off the top part of his suit in the middle of his apes room.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_8a # TPP. MC's top gone, MC taking off the bottom part of his suit in the middle of his apes room, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_8b # TPP. MC standing in the middle of his apes room in just his underwear, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_8c # TPP. MC standing in the middle of his apes room putting on his shirt.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_8d # TPP. MC standing in the middle of his apes room putting on his pants, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         play sound "sounds/vibrate.mp3"
 
         scene v15s34_8e # TPP. Show MC standing in the middle of his apes room in the entire Outfit: 2, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_9 # TPP. Close up of MC in his apes room pulling out his phone, slight smile, mouth closed.
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s34_9a # TPP. Close up of MC in his apes room looking at his phone, slight smile, mouth close.
         with dissolve 
@@ -211,7 +212,7 @@ label v15s34:
 
         play sound "sounds/doorclose.mp3"
 
-        pause 0.75 
+        pause 0.75
 
         if v15_lindsey_gamenight or not v14_help_lindsey:
             jump v15s35

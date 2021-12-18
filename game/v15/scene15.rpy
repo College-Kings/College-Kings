@@ -42,7 +42,7 @@ label v15s15:
     scene v15s15_3 # FPP. MC watches Ms. Rose as she exits the room, focusing a bit on her ass as she looks seductively at MC over her shoulder
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s15_4 # TPP. Show MC walking over to the head of the dining table, the end that faces the door Ms. Rose just went through, slight smile, mouth closed
     with dissolve
@@ -165,6 +165,8 @@ label v15s15:
             jump v15s17
 
         "Lick the honey":
+            $ grant_achievement("honey_bear")
+            $ sceneList.add("v15_rose")
             u "(Don't mind if I do...)"
 
             scene v15s15_11 # TPP. Show MC licking the honey off Ms. Rose's boobs, Ms. Rose making a sexy face, mouth open as she grabs MC's hair
@@ -180,7 +182,7 @@ label v15s15:
             scene v15s15_12 # TPP. Show Ms. Rose removing her panties, sexy look, mouth closed (bra will always), MC removing his clothes, mouth closed
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s15_13 # TPP. Show Ms. Rose getting on the table, panties off, sexy look, mouth closed
             with dissolve
@@ -226,7 +228,7 @@ label v15s15:
             scene v15s15_15 # TPP. Show MC standing, flipping Ms. Rose over, he's getting ready to fuck her from behind
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             image v15rosffb = Movie(play="images/v15/Scene 15/v15rosffb.webm", loop=True, image="images/v15/Scene 15/v15rosffbStart.webp", start_image="images/v15/Scene 15/v15rosffbStart.webp") 
             image v15rosffbf = Movie(play="images/v15/Scene 15/v15rosffbf.webm", loop=True, image="images/v15/Scene 15/v15rosffbStart.webp", start_image="images/v15/Scene 15/v15rosffbStart.webp") 
@@ -352,12 +354,12 @@ label v15s15:
             scene v15s15_20 # TPP. Show MC leading Ms. Rose to the kitchen
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s15_21 # TPP. Show MC putting her up against the refrigerator, getting ready to fuck her from behind
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             image v15rossd = Movie(play="images/v15/Scene 15/v15rossd.webm", loop=True, image="images/v15/Scene 15/v15rossdStart.webp", start_image="images/v15/Scene 15/v15rossdStart.webp") 
             image v15rossdf = Movie(play="images/v15/Scene 15/v15rossdf.webm", loop=True, image="images/v15/Scene 15/v15rossdStart.webp", start_image="images/v15/Scene 15/v15rossdStart.webp") 
@@ -366,31 +368,31 @@ label v15s15:
 
             scene v15rossd # IGNORE AS ANIMATION
             with dissolve
-            pause 0.75 
+            pause 0.75
 
             ro "I've never..."
 
             scene v15rossdf # IGNORE AS ANIMATION
             with dissolve
-            pause 0.75 
+            pause 0.75
 
             ro "Been fucked..."
 
             scene v15rossd2 # IGNORE AS ANIMATION
             with dissolve
-            pause 0.75 
+            pause 0.75
 
             ro "Against the refrigerator before, haha... *Moans*"
 
             scene v15rossd2f # IGNORE AS ANIMATION
             with dissolve
-            pause 0.75 
+            pause 0.75
 
             u "(Mmm, fuck...) There's a first time for everything, huh?"
 
             scene v15rossd # IGNORE AS ANIMATION
             with dissolve
-            pause 0.75 
+            pause 0.75
 
             ro "God, yes! Yes!"
 
@@ -417,7 +419,7 @@ label v15s15:
             scene v15s15_25 # TPP. Show MC bending Ms. Rose over the stove
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             image v15rosffbstove = Movie(play="images/v15/Scene 15/v15rosffbstove.webm", loop=True, image="images/v15/Scene 15/v15rosffbstoveStart.webp", start_image="images/v15/Scene 15/v15rosffbstoveStart.webp") 
             image v15rosffbstovef = Movie(play="images/v15/Scene 15/v15rosffbstovef.webm", loop=True, image="images/v15/Scene 15/v15rosffbstoveStart.webp", start_image="images/v15/Scene 15/v15rosffbstoveStart.webp") 

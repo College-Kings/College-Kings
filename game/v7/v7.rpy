@@ -337,7 +337,7 @@ label v7start:
 
     queue music [ "music/mparty3.mp3", "music/mparty4.mp3"]
 
-    if imremad:
+    if imre.relationship.value <= Relationship.MAD.value:
         scene s680 # showing mc in Wolves house living room where Aaron is talking to Aubrey
         with fade
 
@@ -606,7 +606,7 @@ label hd_bd:
 
         u "(It's really late so I might as well go home now.)"
 
-    elif noramad:
+    elif nora.relationship.value <= Relationship.MAD.value:
         scene s699
         with dissolve
 
@@ -1125,7 +1125,6 @@ label hd_ad:
             ri "*Laughs* It sounded a lot cooler in my head."
 
             if kct == "confident":
-
                 ri "I just thought. I'd give it a [name]-style response."
 
                 scene s706a
@@ -1160,10 +1159,11 @@ label hd_ad:
 
             u "No worries, it was a nice walk."
 
-            if kct == "confident":
-                call screen kct_popup
+            if kct == "confident" or riley.relationship.value >= Relationship.MOVE.value:
+                if riley.relationahip.value < Relationship.MOVE.value:
+                    call screen kct_popup
 
-            elif not rileykiss:
+            else:
                 scene s708 # riley smiling
                 with dissolve
 
@@ -1195,7 +1195,7 @@ label hd_ad:
                 $ add_point(KCT.TROUBLEMAKER)
 
             $ add_point(KCT.BRO)
-            $ riley.relationship = Relationship.MOVE
+            $ riley.relationship = Relationship.LIKES
 
             u "Yeah, I'd like that."
 
@@ -2749,7 +2749,7 @@ label beachlauren:
         scene s742a
         with dissolve
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             menu:
                 "Tell her it's fine":
                     $ add_point(KCT.BRO)
@@ -3149,7 +3149,7 @@ label beachlauren:
         scene s742a
         with dissolve
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             menu:
                 "Tell her it's fine":
                     $ add_point(KCT.BRO)
@@ -3447,7 +3447,7 @@ label afterbeach:
 
         u "(But in the Apes, I can finally be someone. I can be a winner. Grayson may have done some questionable shit in the past, but he also said a lot of stuff that resonated with me...)"
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             u "(On the other hand, Imre would hate me even more if I pledged the Apes...)"
         else:
             u "(On the other hand, Imre would hate me if I pledged the Apes...)"
@@ -3472,7 +3472,7 @@ label afterbeach:
 
         u "(I'm pretty sure their pledging is at the same time as the Wolves, so I might be able to just go to the Apes' house and tell Grayson I changed my mind.)"
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             u "(But even so, the Wolves party was sick and Imre would hate me even more if I pledged the Apes...)"
         else:
             u "(But even so, the Wolves party was sick and Imre would hate me if I pledged the Apes...)"
@@ -3506,7 +3506,7 @@ label pledgewolves:
     with fade
     pause 0.7
 
-    if imremad:
+    if imre.relationship.value <= Relationship.MAD.value:
         scene s757a # Imre notices MC, so he is now looking at the camera and waves
         with dissolve
 
@@ -3913,8 +3913,7 @@ label chloe_call:
     scene sphone1a # mc on the phone mouth closed tense
     with dissolve
 
-    if chloemad:
-
+    if chloe.relationship.value <= Relationship.MAD.value:
         cl "Hey [name]... can we talk right now?"
 
         scene sphone1 # mc on the phone mouth open
@@ -4230,7 +4229,7 @@ label aftercall:
     with dissolve
     pause 0.5
 
-    if noramad:
+    if nora.relationship.value <= Relationship.MAD.value:
         # mad
         scene s791 # Camera - first person. MC and Nora close up but not very close, maintain abit more than two arms length distance between them. Nora slightly annoyed and talking
         with dissolve
@@ -4340,9 +4339,10 @@ label aftercall:
     with dissolve
     u "But the real question is, would you do it?"
 
-    if noramad:
+    if nora.relationship.value <= Relationship.MAD.value:
         scene s791
         with dissolve
+
     else:
         scene s791b
         with dissolve
@@ -4459,41 +4459,47 @@ label aftercall:
             with dissolve
             u "Nora, I'm sorr-"
 
-            if noramad:
+            if nora.relationship.value <= Relationship.MAD.value:
                 scene s791d
                 with dissolve
+
+                no "You passed!"
+
+                scene s791e
+                with dissolve
+                
+                u "What?"
+
+                scene s791d
+                with dissolve
+                
+                no "That was the real test, and you passed it!"
+
+                scene s791e
+                with dissolve
+                
+                u "Wait, really? That's great!"
+
             else:
                 scene s791b
                 with dissolve
 
-            no "You passed!"
+                no "You passed!"
 
-            if noramad:
-                scene s791e
-                with dissolve
-            else:
                 scene s791c
                 with dissolve
 
-            u "What?"
-
-            if noramad:
-                scene s791d
-                with dissolve
-            else:
+                u "What?"
+                
                 scene s791b
                 with dissolve
+                
+                no "That was the real test, and you passed it!"
 
-            no "That was the real test, and you passed it!"
-
-            if noramad:
-                scene s791e
-                with dissolve
-            else:
                 scene s791c
                 with dissolve
 
-            u "Wait, really? That's great!"
+                u "Wait, really? That's great!"
 
     scene s794 # Camera - first person. Nora moves to the door and knocks while talking
     with dissolve
@@ -4508,7 +4514,7 @@ label aftercall:
     with dissolve
     aa "Thanks Nora, you can go now."
 
-    if not noramad:
+    if nora.relationship.value > Relationship.MAD.value:
         scene s794b # Nora looks at the MC while slightly smiling. Aaron mouth closed and looking at MC
         with dissolve
         no "Good luck."
@@ -5311,7 +5317,7 @@ label ep7_cam_picture:
     pause 2
     stop sound
 
-    if chloemad:
+    if chloe.relationship.value <= Relationship.MAD.value:
         play sound "sounds/answercall.mp3"
         cl "What do you want, [name]?"
 
@@ -5454,7 +5460,7 @@ label after_pledges:
     play music "music/mindie2.mp3"
     queue music [ "music/m16punk.mp3", "music/mindie1.mp3" ]
     
-    if imremad:
+    if imre.relationship.value <= Relationship.MAD.value:
         scene s866 # Camera - TPP (shot should not include Imre's bed). MC sitting up on his bed, mouth closed.
         with dissolve
         u "(Oh shit, it's history class today, isn't it? Gotta wear that costume.)"
@@ -5724,7 +5730,7 @@ label after_pledges:
         with dissolve
         pause 0.5
 
-    if imremad and joinwolves:
+    if imre.relationship.value <= Relationship.MAD.value and joinwolves:
         scene s878 # Camera - FPP. MC sitting beside Imre. Imre looking at MC with a bored/uninterested expression. Imre mouth closed
         with dissolve
         u "Hey."
@@ -5778,7 +5784,7 @@ label after_pledges:
         imre "Of course! And I think we should start training together again."
         imre "But this time in the Wolves gym, it's gonna be awesome!"
 
-    elif imremad:
+    elif imre.relationship.value <= Relationship.MAD.value:
         scene s878b
         with dissolve
         pause
@@ -7121,10 +7127,9 @@ label hc_asking_riley:
 
     u "Will you be my Cinderella for homecoming?"
 
-    if riley.relationship.value >= Relationship.MOVE.value or kct == "confident":
-        if riley.relationship.value < Relationship.MOVE.value:
+    if riley.relationship.value >= Relationship.LIKES.value or kct == "confident":
+        if riley.relationship.value < Relationship.LIKES.value:
             call screen kct_popup
-            $ riley.relationship = Relationship.DATE
 
         $ hcGirl = "riley"
 
@@ -7223,7 +7228,7 @@ label suit_rental:
 
 ### SCENE 32: AFTER TUDEXO SHOPPING
 label thurs_night_dorm:
-    if joinwolves and imremad:
+    if joinwolves and imre.relationship.value <= Relationship.MAD.value:
         scene s1002 # Camera - TPP. MC packing his bag, same as the one he has in scene 34
         with fade
 
@@ -8026,31 +8031,7 @@ label wolves_ceremony:
 
     pause 0.75
 
-    if not imremad:
-        scene swc1 # FPP. Close up on Finn, mouth open with smile, welcoming gesture with hand.
-        with dissolve
-
-        finn "What up guys? Head on in."
-
-        scene swc2 # FPP. Close up on Imre, mouth open slight smile.
-        with dissolve
-
-        imre "For sure."
-
-        scene swc3 # TPP. Show Imre and MC walking into Wolves house from behind, house entrance in view.
-        with dissolve
-        pause 0.5
-
-        scene swc3a # TPP. Same camera as above but MC and Imre now walking through Wolves door.
-        with dissolve
-
-        pause 0.5
-        #- CONTINUE at ceremonies -
-
-    #If Imre moved out:
-    #MC arrives alone to the Wolves house holding a sports bag of his stuff. A few Wolves , including marcus are outside and welcome him.
-
-    else:
+    if imre.relationship.value <= Relationship.MAD.value:
         scene swc4 # FPP. Close up on Marcus, mouth open with smile.
         with dissolve
 
@@ -8077,6 +8058,30 @@ label wolves_ceremony:
         with dissolve
 
         pause 0.5
+
+    else:
+        scene swc1 # FPP. Close up on Finn, mouth open with smile, welcoming gesture with hand.
+        with dissolve
+
+        finn "What up guys? Head on in."
+
+        scene swc2 # FPP. Close up on Imre, mouth open slight smile.
+        with dissolve
+
+        imre "For sure."
+
+        scene swc3 # TPP. Show Imre and MC walking into Wolves house from behind, house entrance in view.
+        with dissolve
+        pause 0.5
+
+        scene swc3a # TPP. Same camera as above but MC and Imre now walking through Wolves door.
+        with dissolve
+
+        pause 0.5
+        #- CONTINUE at ceremonies -
+
+    #If Imre moved out:
+    #MC arrives alone to the Wolves house holding a sports bag of his stuff. A few Wolves , including marcus are outside and welcome him.
 
     play music "music/mparty3.mp3"
     queue music [ "music/mparty4.mp3", "music/mparty2.mp3" ]
@@ -8863,7 +8868,7 @@ label wolves_ceremony:
 ############# RILEY TEXT
 
 label rileytext:
-    if riley.relationship.value > Relationship.MOVE.value:
+    if riley.relationship.value > Relationship.LIKES.value:
         play sound "sounds/vibrate.mp3"
 
         $ riley.messenger.newMessage(_("Wanna come over? ;)"), queue=False)
@@ -12603,7 +12608,7 @@ label fr4chloedate:
 
                 no "Uhm..."
 
-                if not noramad and "nora" in freeroam3:
+                if nora.relationship.value > Relationship.MAD.value and "nora" in freeroam3:
                     #If Nora likes you:
                     no "Yeah, why not."
 
@@ -12694,7 +12699,7 @@ label fr4chloedate:
 
                     jump chloe_dance
 
-                elif not noramad:
+                elif nora.relationship.value > Relationship.MAD.value:
                     no "I don't really feel like dancing, sorry."
 
                     scene sfr4cl35c
@@ -14712,7 +14717,7 @@ label fr4riley2:
     ri "Well we've been here for a few hours now and it's getting kinda boring."
     $ freeroam4.add("crowning")
 
-    if riley.relationship.value >= Relationship.MOVE.value and hcGirl == "alone":
+    if riley.relationship.value >= Relationship.LIKES.value and hcGirl == "alone":
         scene sfr4ri51b
         with dissolve
 
@@ -14725,7 +14730,7 @@ label fr4riley2:
 
         jump fr4rileyending
 
-    elif riley.relationship.value >= Relationship.MOVE.value:
+    elif riley.relationship.value >= Relationship.LIKES.value:
         scene sfr4ri51b
         with dissolve
 
@@ -14844,7 +14849,7 @@ label fr4nora2:
 
     pause 0.5
 
-    if not noramad and "nora" in freeroam3:
+    if nora.relationship.value > Relationship.MAD.value and "nora" in freeroam3:
         scene sfr4no5 # close up nora smile with a bit of holding back or "this dance is stupid" attitude
         with dissolve
 
@@ -14929,7 +14934,7 @@ label fr4nora2:
 
                 no "Bye."
 
-    elif not noramad:
+    elif nora.relationship.value > Relationship.MAD.value:
         scene sfr4no5b
         with dissolve
 
@@ -15337,7 +15342,7 @@ label fr4chloe1:
 
     menu:
         "Defend Chloe":
-            $ chloemad = False
+            $ chloe.relationship.value = Relationship.FRIEND
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -15987,7 +15992,34 @@ label fr4penelope2:
 label fr4chloe2:
     $ freeroam4.add("chloe2")
 
-    if not chloemad:
+    if chloe.relationship.value <= Relationship.MAD.value:
+        scene sfr4cl53a # fpp close up chloe mad
+
+        u "You okay?"
+
+        scene sfr4cl53
+        with dissolve
+
+        cl "I really don't wanna talk right now."
+
+        scene sfr4cl53a
+        with dissolve
+
+        u "You sure?"
+
+        scene sfr4cl53
+        with dissolve
+
+        cl "Yes."
+
+        scene sfr4cl53a
+        with dissolve
+
+        u "Alright..."
+
+        jump labelfr4hallway
+
+    else:
         scene sfr4cl53a # fpp close up chloe mad
 
         u "You okay?"
@@ -16119,33 +16151,6 @@ label fr4chloe2:
                 cl "Yeah."
 
                 jump fr4chloeending
-
-    else:
-        scene sfr4cl53a # fpp close up chloe mad
-
-        u "You okay?"
-
-        scene sfr4cl53
-        with dissolve
-
-        cl "I really don't wanna talk right now."
-
-        scene sfr4cl53a
-        with dissolve
-
-        u "You sure?"
-
-        scene sfr4cl53
-        with dissolve
-
-        cl "Yes."
-
-        scene sfr4cl53a
-        with dissolve
-
-        u "Alright..."
-
-        jump labelfr4hallway
 
 label fr4chloe3:
     if not hcGirl == "penelope":
@@ -16351,7 +16356,31 @@ label fr4lockerroomchloe:
 
         u "Chloe? You in there?"
 
-        if not chloemad:
+        if chloe.relationship.value <= Relationship.MAD.value:
+            scene sfr4cl51 # fpp close up of the door
+            with dissolve
+
+            cl "What do you want, [name]?!"
+
+            u "Can I come in?"
+
+            pause 1.0
+
+            u "Chloe?"
+
+            pause 0.5
+
+            cl "No. Leave me alone!"
+
+            u "Chloe, come on!"
+
+            cl "I said leave me alone!"
+
+            u "Fine..."
+
+            jump labelfr4hallwaycorner
+
+        else:
             scene sfr4cl51 # fpp close up of the door
             with dissolve
 
@@ -16571,34 +16600,10 @@ label fr4lockerroomchloe:
                             pause 0.75 
                             jump labelfr4hallwaycorner
 
-        else:
-            scene sfr4cl51 # fpp close up of the door
-            with dissolve
-
-            cl "What do you want, [name]?!"
-
-            u "Can I come in?"
-
-            pause 1.0
-
-            u "Chloe?"
-
-            pause 0.5
-
-            cl "No. Leave me alone!"
-
-            u "Chloe, come on!"
-
-            cl "I said leave me alone!"
-
-            u "Fine..."
-
-            jump labelfr4hallwaycorner
-
     else:
         scene sfr4cl51
 
-        if chloemad:
+        if chloe.relationship.value <= Relationship.MAD.value:
             u "(I better leave her alone.)"
 
         else:
@@ -17039,7 +17044,7 @@ label fr4rileyending:
 
     queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
 
-    if riley.relationship.value >= Relationship.MOVE.value:
+    if riley.relationship.value >= Relationship.LIKES.value:
         ri "Sooo homecoming was pretty fun... but I bet the night could get even better."
 
         scene sfr4ri52a # mc turns his face towards her
@@ -17092,7 +17097,7 @@ label fr4rileyending2:
 
     u "So, what's up?"
 
-    if riley.relationship.value >= Relationship.MOVE.value:
+    if riley.relationship.value >= Relationship.LIKES.value:
         scene sfr4ri55  #tpp close up riley whispers into your ear
         with dissolve
 

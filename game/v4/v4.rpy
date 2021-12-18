@@ -386,7 +386,7 @@ label v4start:
 
     ri "Uhm... no, I don't think so. I like Imre, but he can be a bit gross, haha."
 
-    if rileykiss:
+    if riley.relationship.value >= Relationship.MOVE.value:
         scene s303e
         with dissolve
 
@@ -2417,7 +2417,7 @@ label continueab:
 
             menu:
                 "Alright, just for a bit":
-                    $ chloemad = True
+                    $ chloe.relationship = Relationship.MAD
                     scene s357a
                     with dissolve
 

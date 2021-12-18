@@ -1,7 +1,6 @@
 init python:
     import os
 
-
 ## Init
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
@@ -37,6 +36,7 @@ default checklist = Checklist()
 default path_builder = False
 default pb_name_set = False
 default pb_start_location = "start"
+default scene_fromgame = False
 
 # voiceacting
 default voice_acted = True
@@ -88,7 +88,6 @@ default v2_caughtpeeking = False
 default v2_caughtpeekingcounter = False
 default checkonrose = False
 default chloecaught = False
-default chloemad = False
 default chooseimre = True
 default costume = 1
 default costumetried = set()
@@ -102,7 +101,6 @@ default freeroam3 = set()
 default freeroam3asked = set()
 default girl = ""
 default imreforgives = False
-default imremad = False
 default joinapes = False
 default laawk = True
 default laurenpublic = False
@@ -114,12 +112,10 @@ default meetgrayson = False
 default meetjulia = False
 default meetlauren = False
 default muffin = False
-default noramad = False
 default notcool = False
 default penelopekiss = False
 default perform = 0
 default relics = 0
-default rileykiss = False
 default save = 0
 default simp = False
 default statsPage = 0
@@ -233,9 +229,9 @@ default v11_underground_rose = False
 default v11s1_courtpoints = 0
 default v11s23_penelope_date = True # late addition, defaulting to True to enhance act 4 playability
 default v11s25_beer = True
+default v11_ride_with_mrlee = False
 
 # 12.0
-default chrismad = False
 default freeroam9 = set() #Ferry
 default s12v32_get_aubrey_flowers = False
 default v11_lindsey_run = False
@@ -283,7 +279,6 @@ default v13_smoke_weed = False
 default v13_emmy_points = 0
 default v13s16_lauren_points = 0
 default v13s20_bleach_suitcase = False
-default v13s40fromgame = False
 default v13s41_lindsey_points = 0
 default v13s48_canoeing_as_date = False
 default v13s48_get_aubrey_chocolate = False
@@ -361,10 +356,10 @@ default v15_lindsey_gamenight = False ##Approach A. VIP Night = (v14_help_lindse
 default v15_lindsey_mostlikelyto = False ##Approach A2A. Would You Rather = (v15_lindsey_gamenight and not v15_lindsey_mostlikelyto)
 default v15_lindsey_inviteseb = False ##Approach B2A. Invite Grayson = (v14_help_lindsey and not v15_lindsey_gamenight and not v15_lindsey_inviteseb)
 
+default aubrey_fwb = False #????
 default aubrey_riley_awkward = False
 default autumnloyal = False
-default AubreyFriend = False #????
-default aubrey_fwb = False #????
+default detective = "None" # Archetypes: professional, psychologist, loose cannon
 default dog_name = "Blue"
 default freeroam13 = set() #halloween, part 1 (18a)
 default freeroam14 = set() #halloween, part 2 (18c)
@@ -372,23 +367,30 @@ default v15_autumn_freemug = False
 default v15_autumn_lunchbreak = False
 default v15_autumn_smoke = False
 default v15_blame_nora = False ### blame_chris = (v13_imre_disloyal and not v15_blame_nora)
-default v15_lauren_gift = None
+default v15_lauren_gift = 0 #1 = gift card, 2 = emerald bracelet, 3 = ruby necklace, 4 = white horse, 5 = brown horse
 default v15_mad_at_ms_rose = False
-default v15_ph_riley_upset = False # placeholder ?? (set in s26?? ; read in v15s27)
+default v15_meeting_points = 0
+default v15_nora_clues = set() #detective clues: be_alone, loves_nature, hates_camping, likes_ex, runs_dad, hates_dad, close_rose, visited_aunt, aunt_cabin
+default v15_nora_locations = set() #detective locations: dad, ms_rose, aunt, cabin, camping, ex
+default v15_notes_clicks = 0 #placeholder for clicks in the journal
+default v15_ph_riley_upset = False
+default v15_seduce_ms_rose = False # Requested Variables for v15s21
 default v15_stuck_up_for_nora = False
+default v15_threaten_ms_rose = False # Requested Variables for v15s21
 default v15_told_Emily_I_Love_You = False # Placeholder?
 default v15_took_notes = False
+default v15s18_LaurensBed = False ###Still need to check all combinations
 default v15s18_mention_list = False
+default v15s18_mention_list_aubrey = False
 default v15s18_partytask = 0
 default v15s18a_aub_kiwii_smile = False
 default v15s18a_gag = False
 default v15s18a_lie = False #????
 default v15s18a_showlist_penelope_autumn = False # Show the party list to Penelope and Autumn.
 default v15s18e_cum_in_lauren = False # Noted to be remembered 
-default v15s19_local_mc_ends_in_livingroom = False 
 default v15s24_alcohol = False
 default v15s24_nancy_dick = False
 default v15s36_not_good_idea = False
-default v15s7_chloe_empathize = False #????
 default v15s42_flirt = False
 default v15s42_grab_breakfast = False
+default v15s7_chloe_empathize = False #????

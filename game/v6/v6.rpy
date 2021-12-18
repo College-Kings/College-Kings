@@ -48,7 +48,7 @@ init python:
 
 label script06: #for compatibility only
 label v6start:
-    if imremad and chloemad:
+    if imre.relationship.value <= Relationship.MAD.value and chloe.relationship.value <= Relationship.MAD.value:
         menu:
             "Find Imre":
                 $ add_point(KCT.BRO)
@@ -62,7 +62,7 @@ label v6start:
 
                 jump imreconc
 
-    elif imremad:
+    elif imre.relationship.value <= Relationship.MAD.value:
         menu:
             "Find Imre":
                 $ add_point(KCT.BRO)
@@ -78,7 +78,7 @@ label v6start:
                 jump imrecond
 
 
-    elif chloemad:
+    elif chloe.relationship.value <= Relationship.MAD.value:
         menu:
             "Help Imre":
                 $ add_point(KCT.BRO)
@@ -730,7 +730,7 @@ label imrecond: # Meet Chloe
 
             menu:
                 "Stay and listen":
-                    $ chloemad = True
+                    $ chloe.relationship = Relationship.MAD
                     $ chloecaught = True
                     $ add_point(KCT.TROUBLEMAKER)
 
@@ -857,7 +857,7 @@ label imrecond: # Meet Chloe
 
             u "(I shouldn't spy on her. It's not right.)"
 
-# opening the room of your dorm after not choosing Imre, if imremad = True, find a note of him moved out, if = False, he's gone and you call imre and he tells you that ADAM wasnt in his dorm, you have the same talk as if you had visited him over the phone
+# opening the room of your dorm after not choosing Imre, if imre mad, find a note of him moved out, if = False, he's gone and you call imre and he tells you that ADAM wasnt in his dorm, you have the same talk as if you had visited him over the phone
 label fs_bd:
     play sound "sounds/dooropen.mp3"
     scene s476 # you Entering your dorm room # cant look inside yet
@@ -865,7 +865,7 @@ label fs_bd:
 
     pause 1.0
 
-    if imremad:
+    if imre.relationship.value <= Relationship.MAD.value:
         scene s477 # FIRST PERSON you look at Imre's bed, all his stuff is gone, you find a note on his bed
         with dissolve
 
@@ -973,10 +973,10 @@ label continuebb:
 
     pause 1.0
 
-    # amber texts if chloemad false
-    # if you chose imre chloe and amber both text you dpeending on chloemad that you msised out etc.
+    # amber texts if chloe not mad
+    # if you chose imre chloe and amber both text you depending on chloe mad that you msised out etc.
 
-    if chooseimre and chloemad: # Amber texts why you never got back to her
+    if chooseimre and chloe.relationship.value <= Relationship.MAD.value: # Amber texts why you never got back to her
         play sound "sounds/vibrate.mp3"
         
         $ amber.messenger.newMessage(_("I guess you didn't want my surprise :/"), queue=False)
@@ -999,7 +999,7 @@ label continuebb:
         $ chloe.messenger.addReply(_("Sorry, something really important came up. Definitely another time"))
         $ chloe.messenger.newMessage(_("Okay"))
 
-    elif chloemad and not chloecaught:
+    elif chloe.relationship.value <= Relationship.MAD.value and not chloecaught:
         jump continuebd
             
     play sound "sounds/vibrate.mp3"
@@ -1431,7 +1431,7 @@ label continuebd:
 
         ri "So, how are things with Chloe?"
 
-        if chloemad:
+        if chloe.relationship.value <= Relationship.MAD.value:
             scene s492e
             with dissolve
 
@@ -1772,7 +1772,7 @@ label continuebd:
 
     pause 0.5
 
-    if imremad and not imreforgives:
+    if imre.relationship.value <= Relationship.MAD.value and not imreforgives:
         scene s512 # mc lays back on bed
         with dissolve
 
@@ -2155,7 +2155,7 @@ label continuebd:
         scene s529 # showing blue volleyball on your desk
         with dissolve
 
-        if chloemad:
+        if chloe.relationship.value <= Relationship.MAD.value:
             u "(I really need to patch things up with Chloe. It was going so great until-)"
 
             u "(Until I messed things up.)"
@@ -2992,11 +2992,11 @@ label fy_bd: # not gone to Emily's
     play music "music/mfunk.mp3"
 
     if imreforgives:
-        $ imremad = False
+        $ imre.relationship = Relationship.FRIEND
 
     pause 1.0
 
-    if imremad:
+    if imre.relationship.value <= Relationship.MAD.value:
         scene s540a # your head moves to look at your door
         with dissolve
 
@@ -3794,7 +3794,7 @@ label fy_bd: # not gone to Emily's
     scene s570f # Aubrye curious smile
     with dissolve
 
-    if chloemad:
+    if chloe.relationship.value <= Relationship.MAD.value:
         au "So, who have you been seducing lately? Certainly not Chloe. *laughs*"
 
         scene s570g
@@ -5099,7 +5099,88 @@ label wakeupa:
 
     queue music ["music/mfunk.mp3"]
 
-    if not imremad:
+    if imre.relationship.value <= Relationship.MAD.value:
+        scene s604 # Mc wakes up in bed,
+        with Fade (2,0,2)
+
+        u "(I should go to the gym today, even if Imre's no longer gonna train me."
+
+        scene s605 # mc walks to the gym, same clothes as in the scenes with Imre
+        with fade
+
+        pause 0.5
+
+        scene s606 # Mc benching, bar in hands, arms extended
+        with fade
+
+        pause 0.5
+
+        scene s606a # amrs not extended
+        with dissolve
+
+        pause 0.5
+
+        scene s606
+        with dissolve
+
+        pause 0.5
+
+        scene s606a
+        with dissolve
+
+        pause 0.5
+
+        scene s607 #MC is running on the treadmills.
+        with dissolve
+
+        pause 0.5
+
+        scene s607a # other leg forward
+        with dissolve
+
+        scene s607
+        with dissolve
+
+        pause 0.5
+
+        scene s607a
+        with dissolve
+
+        pause 0.5
+
+        scene s608 #*MC is curling dumbbells, arms extended
+        with dissolve
+
+        pause 0.5
+
+        scene s608a # arms in curl position
+        with dissolve
+
+        pause 0.5
+
+        scene s608
+        with dissolve
+
+        pause 0.5
+
+        scene s608a
+        with dissolve
+
+        pause 0.5
+
+        scene s601 # you sweaty and you have a pump! (Make MC's base model a bit bulkier) not showing Imre
+        with fade
+
+        u "*Breathing heavily* (Fuck, that was so exhausting)."
+
+        scene s602 #MC stands in front of the mirror sweaty and flexes his muscles., not showing Imre, make sure you can't tlel that hte gym is empty
+        with dissolve
+
+        u "(At least I'm starting to gain some muscles.)"
+
+        u "(Well. Time to go home.)"
+
+    else:
         scene s597 # First person, Imre standing over Mc in Gym clothes! it's essential that they wear the same clothes as last time! CHeck s234 picture, mc no longer has a black eye as well
         with Fade (2,0,2)
 
@@ -5313,87 +5394,6 @@ label wakeupa:
         imre "Great job today man, you're really learning fast. The Wolves are gonna love you."
         imre "I gotta go meet up with some friends now. I'm just gonna shower here then head out."
         imre "I'll see you later."
-
-    else:
-        scene s604 # Mc wakes up in bed,
-        with Fade (2,0,2)
-
-        u "(I should go to the gym today, even if Imre's no longer gonna train me."
-
-        scene s605 # mc walks to the gym, same clothes as in the scenes with Imre
-        with fade
-
-        pause 0.5
-
-        scene s606 # Mc benching, bar in hands, arms extended
-        with fade
-
-        pause 0.5
-
-        scene s606a # amrs not extended
-        with dissolve
-
-        pause 0.5
-
-        scene s606
-        with dissolve
-
-        pause 0.5
-
-        scene s606a
-        with dissolve
-
-        pause 0.5
-
-        scene s607 #MC is running on the treadmills.
-        with dissolve
-
-        pause 0.5
-
-        scene s607a # other leg forward
-        with dissolve
-
-        scene s607
-        with dissolve
-
-        pause 0.5
-
-        scene s607a
-        with dissolve
-
-        pause 0.5
-
-        scene s608 #*MC is curling dumbbells, arms extended
-        with dissolve
-
-        pause 0.5
-
-        scene s608a # arms in curl position
-        with dissolve
-
-        pause 0.5
-
-        scene s608
-        with dissolve
-
-        pause 0.5
-
-        scene s608a
-        with dissolve
-
-        pause 0.5
-
-        scene s601 # you sweaty and you have a pump! (Make MC's base model a bit bulkier) not showing Imre
-        with fade
-
-        u "*Breathing heavily* (Fuck, that was so exhausting)."
-
-        scene s602 #MC stands in front of the mirror sweaty and flexes his muscles., not showing Imre, make sure you can't tlel that hte gym is empty
-        with dissolve
-
-        u "(At least I'm starting to gain some muscles.)"
-
-        u "(Well. Time to go home.)"
 
     scene s609 # mc walking home by himself after the gym
     with fade
@@ -6601,7 +6601,7 @@ label wakeupa:
     stop music fadeout 3
     play music "music/m6punk.mp3"
 
-    if imremad:
+    if imre.relationship.value <= Relationship.MAD.value:
         scene s660 # Mc getting ready for the party by himself
         with Fade (1,0,1)
 
@@ -6613,7 +6613,7 @@ label wakeupa:
 
         pause 0.5
 
-        if meetgrayson and joinapes:
+        if joinapes:
             play sound "sounds/swoosh.mp3"
             scene s581g
             with flash
@@ -8918,7 +8918,7 @@ label v6_fr3nora1:
 
     menu:
         "Defend Chloe":
-            $ noramad = True
+            $ nora.relationship = Relationship.MAD
             $ add_point(KCT.BOYFRIEND)
 
             u "Chloe's not manipulative. She's just being bad mouthed because people like you see her as a threat."
@@ -8946,7 +8946,6 @@ label v6_fr3nora1:
 
         "Don't defend Chloe":
             $ add_point(KCT.BRO)
-            $ noramad = False
 
             u "Yeah, it sounds kinda messed up."
 
@@ -9078,7 +9077,7 @@ label v6_fr3chloe1:
 
     u "Chloe? It's me, [name]."
 
-    if chloemad:
+    if chloe.relationship.value <= Relationship.MAD.value:
         cl "*Sniff* Leave me alone."
 
         u "No, you're crying. I'm not just going to walk away. What happened?"
@@ -9100,7 +9099,7 @@ label v6_fr3chloe1:
 
             cl "*Sniff* Okay..."
 
-            $ chloemad = False
+            $ chloe.relationship.value = Relationship.FRIEND
 
         else:
             cl "Please, just leave me alone, [name]."
@@ -9124,7 +9123,7 @@ label v6_fr3chloe1:
 
         cl "*Sniff* Okay..."
 
-        $ chloemad = False
+        $ chloe.relationship.value = Relationship.FRIEND
 
     # unlock sound
 
@@ -9171,7 +9170,7 @@ label v6_fr3chloe1:
     menu:
         "Maybe you should step down":
             $ add_point(KCT.BOYFRIEND)
-            $ chloemad = True
+            $ chloe.relationship.value = Relationship.MAD.value
 
             u "You ever think, maybe you should step down?"
 

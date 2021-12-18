@@ -530,9 +530,6 @@ label v15s4:
 
                     "Don't peek":
                         $ add_point(KCT.BOYFRIEND)
-                        scene v15s4_18
-                        with dissolve
-
                         u "(Glad I can control myself, good job [name]!)"
 
                         if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -703,6 +700,7 @@ label v15s4:
             scene v15s4_24b # FPP. Same as v15s4_24a, Autumn looking down at MC while she is standing on the ladder, Autumn upset, mouth open
             with vpunch
 
+            $ grant_achievement("horn_dog")
             aut "Hey! Eyes up, horn dog! Are you just here to enjoy the view?"
 
             scene v15s4_24c # FPP. Same as v15s4_24b, Autumn upset, mouth closed.
@@ -744,7 +742,7 @@ label v15s4:
     scene v15s4_31 # TPP. Show just Autumn putting up a dog poster on the wall somewhere else in the Shelter, slight smile, mouth closed.
     with fade
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s4_32 # TPP. Show MC and Autumn putting down a table in an empty part of the Room against the wall, neutral expression, mouth closed.
     with fade
@@ -1219,48 +1217,7 @@ label v15s4:
 
     u "I'm sure we will."
 
-    if not v15_autumn_lunchbreak:
-        scene v15s4_43
-        with dissolve
-
-        aut "Alright, I better get him fed and bathed before I go on break. I'm due for some \"me time\" *Laughs*"
-
-        scene v15s4_43a
-        with dissolve
-
-        u "Yeah, you deserve a break at the very least, haha."
-
-        scene v15s4_43
-        with dissolve
-
-        aut "Thanks again for all your help today."
-
-        scene v15s4_43a
-        with dissolve
-
-        u "Oh, sure thing. It wasn't a bad start to my day, so thank you as well."
-
-        scene v15s4_52 # TPP. Autumn and MC hugging, both slight smile, mouth closed.
-        with dissolve
-
-        pause 0.75
-
-        scene v15s4_43
-        with dissolve
-
-        aut "I'll see you later at Lauren's party, right?"
-
-        scene v15s4_43a
-        with dissolve
-
-        u "Yeah! See you there."
-
-        scene v15s4_53 # TPP. Show MC walking out of the Dog Shelter waving as he goes, Autumn and Oscar watching him leave.
-        with dissolve
-        
-        pause 1
-
-    else:
+    if v15_autumn_lunchbreak:
         scene v15s4_43
         with dissolve
 
@@ -1555,7 +1512,8 @@ label v15s4:
         scene v15s4_59a
         with dissolve
 
-        aut "Ha... I remember when we were young, she had this little toy horse that she would take everywhere. I don't think we have any family photos where she isn't holding it... *Chuckles*"
+        aut "Ha... I remember when we were young, she had this little toy horse that she would take everywhere."
+        aut "I don't think we have any family photos where she isn't holding it... *Chuckles*"
 
         scene v15s4_59
         with dissolve
@@ -1633,6 +1591,47 @@ label v15s4:
         with dissolve
 
         pause 0.75
+
+    else:
+        scene v15s4_43
+        with dissolve
+
+        aut "Alright, I better get him fed and bathed before I go on break. I'm due for some \"me time\" *Laughs*"
+
+        scene v15s4_43a
+        with dissolve
+
+        u "Yeah, you deserve a break at the very least, haha."
+
+        scene v15s4_43
+        with dissolve
+
+        aut "Thanks again for all your help today."
+
+        scene v15s4_43a
+        with dissolve
+
+        u "Oh, sure thing. It wasn't a bad start to my day, so thank you as well."
+
+        scene v15s4_52 # TPP. Autumn and MC hugging, both slight smile, mouth closed.
+        with dissolve
+
+        pause 0.75
+
+        scene v15s4_43
+        with dissolve
+
+        aut "I'll see you later at Lauren's party, right?"
+
+        scene v15s4_43a
+        with dissolve
+
+        u "Yeah! See you there."
+
+        scene v15s4_53 # TPP. Show MC walking out of the Dog Shelter waving as he goes, Autumn and Oscar watching him leave.
+        with dissolve
+        
+        pause 1
 
     if "v12_rose" in sceneList:
         jump v15s5

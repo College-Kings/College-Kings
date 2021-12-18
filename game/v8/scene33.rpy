@@ -15,7 +15,8 @@ label hallway_w_nora:
     scene v8shal2 # TPP. Show MC continuing to walk down the hallway, MC notices Nora and Nora notices MC.
     with dissolve
 
-    if noramad:
+    if nora.relationship.value <= Relationship.MAD.value:
+        $ nora.relationship = Relationship.FRIEND
         scene v8shal3 # FPP. Close up Nora, Nora neutral expression, mouth open.
         with dissolve
         no "Hey, [name]... uh... got a sec?"
@@ -35,8 +36,6 @@ label hallway_w_nora:
         scene v8shal3
         with dissolve
         no "Good because..."
-
-        $ noramad = False
 
         jump cont_nora_hall
 

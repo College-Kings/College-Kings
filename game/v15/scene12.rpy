@@ -430,7 +430,8 @@ label v15s12:
         scene v15s12_8 # FPP. Lindsey smiling, mouth open, pointing at the planning board [Janitor's closet].
         with dissolve
 
-        li "So, here's what I'm thinking... Basically, our focus this time is to gain more allies. Allies that we can trust to support us now, during the election, and also in the future, when I'm president of the Chicks."
+        li "So, here's what I'm thinking... Basically, our focus this time is to gain more allies."
+        li "Allies that we can trust to support us now, during the election, and also in the future, when I'm president of the Chicks."
 
         scene v15s12_8b # FPP. Same as v15s12_8a, but mouth closed [Janitor's closet].
         with dissolve
@@ -511,7 +512,7 @@ label v15s12:
         ##B.1   Book Limousine
         ##B.2a  Invite Sebastian
         ##B.2b  Invite Grayson
-        ##B3    Host it
+        ##B.3   Host it
 
         if lindsey_board.approach is not None:
             $ v15_lindsey_gamenight = lindsey_board.approach.id == "gameNight"
