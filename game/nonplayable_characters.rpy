@@ -27,7 +27,6 @@ init python:
 
         def __init__(self, name, username=None):
             self.name = name
-            self.name = name.replace(" ", "_")
             
             if username is None:
                 self._username = name
@@ -107,27 +106,15 @@ init python:
 
         @property
         def profile_picture(self):
-            return "images/nonplayable_characters/profile_pictures/{}.webp".format(self.name.lower())
+            return "images/nonplayable_characters/profile_pictures/{}.webp".format(self.name.replace(' ', '_').lower())
 
         def __after_load__(self):
-            try: messenger = self._messenger
-            except AttributeError: messenger = None
-            try: simplr = self._simplr
-            except AttributeError: simplr = None
-            try: stats = self.stats
-            except AttributeError: stats = { "Competitive": None, "Vindictive": [], "Talkative": None }
-            try: points = self.points
-            except AttributeError: points = 0
-            try: relationship = self._relationship
-            except AttributeError: relationship = Relationship.FRIEND
+            attrs = vars(self)
 
-            self.__init__(self.name, self.username)
+            self.__init__(self.name)
 
-            self._messenger = messenger
-            self._simplr = simplr
-            self.stats = stats
-            self.points = points
-            self._relationship = relationship
+            for var, value in attrs.items():
+                setattr(self, var, value)
 
         def kill(self):
             # Check Competitive stat
