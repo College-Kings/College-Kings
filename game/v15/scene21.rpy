@@ -476,6 +476,7 @@ label v15s21:
             scene v15s21_6c
             with dissolve
 
+            $ grant_achievement("too_much_information")
             lee "[name], I appreciate that you came prepared and did your research..."
 
             scene v15s21_6b
@@ -1487,6 +1488,7 @@ label v15s21:
             scene v15s21_13k
             with dissolve
 
+            $ grant_achievement("too_much_information")
             ro "[name], If you stare at your notes for too long, you're going to end up missing the meeting. *Chuckles*"
 
             scene v15s21_13f
