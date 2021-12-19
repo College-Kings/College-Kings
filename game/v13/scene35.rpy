@@ -9,7 +9,7 @@ label v13s35_buy_item_dialog(item):
     if (cuffs not in mc.inventory) and (mc.money - item.cost < cuffs.cost):
         u "Only have a bit of money left, better get the cuffs."
     else:
-        $ mc.add_item(item)
+        $ mc.inventory.add_item(item)
         $ mc.money -= item.cost
 
     call screen v13s35_adult_shop
