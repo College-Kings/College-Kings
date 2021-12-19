@@ -18,14 +18,14 @@ label v15s47:
 
     menu:
         "Call Nora.":
-            play sound "sounds/ringing.mp3"
+            play sound "sounds/ring.mp3"
 
             scene v15s47_2a # TPP. MC holding the phone to his ear, neutral face, mouth closed
             with dissolve
 
             no "Hey! This is Nora, and I'm obviously doing something far more important than what you're calling about, so leave a-"
 
-            play sound "sounds/hangup.mp3"
+            play sound "sounds/answercall.mp3"
 
             scene v15s47_2b # TPP. MC holding the phone away from his face and pressing a button to hang up the phone, neutral face, mouth closd.
             with dissolve
