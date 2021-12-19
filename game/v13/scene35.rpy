@@ -90,6 +90,13 @@ label v13s35:
 
     if chloe.relationship.value >= Relationship.FWB.value:
         u "(Guess I could look around a bit...)"
+        
+        menu:
+            "Look around":
+                pass
+            
+            "Not for me":
+                jump v13s35_no_shop
 
         scene v13s35_5 # FPP. MC looking at the general view of the shop.
         with dissolve
@@ -111,6 +118,7 @@ label v13s35:
         u "(She'll be happy with these, I think. We're gonna have some fun... *Chuckles*)"
 
     else:
+        label v13s35_no_shop:
         u "(Guess I'll just post up here...)"
 
     scene v13s35_8 # TPP. Show MC waiting by the door, slight smile, mouth closed.

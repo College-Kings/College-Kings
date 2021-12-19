@@ -918,7 +918,7 @@ label v13s37_end:
 
     u "*Chuckles*"
 
-    if chloe.relationship.value <= Relationship.FWB.value:
+    if cuffs not in mc.inventory:
         scene v13s37end_2a
         with dissolve
 
