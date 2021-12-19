@@ -20,7 +20,7 @@ screen v15_imre_checklist():
         pos (600, 325)
         xysize (491, 390)
 
-        for item in checklist:
+        for item in v15_imre_checklist:
             hbox:
                 spacing 20
 
