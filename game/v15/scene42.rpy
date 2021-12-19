@@ -25,7 +25,7 @@ label v15s42:
     pause 0.75
 
     scene v15s42_3a # FPP. Amber leans against the wall and looks at MC, Amber with a smirk, mouth open.
-    with dissolve 
+    with dissolve
 
     am "[name], finally! Where have you been?"
 
@@ -45,7 +45,7 @@ label v15s42:
     pause 0.75
 
     scene v15s42_4 # FPP. show Amber pouring a cup of coffee from the coffee machine, slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     u "What is this place? *Chuckles*"
 
@@ -471,7 +471,7 @@ label v15s42:
             u "I guess you're right. Most important meal of the day, huh?"
 
             scene v15s42_13a # TPP. MC takes a bite from the croissant.
-            with dissolve 
+            with dissolve
 
             pause 0.75
 
@@ -536,7 +536,7 @@ label v15s42:
         play sound "sounds/dooropen.mp3"
 
         scene v15s42_14a # TPP. Show Amber and MC leaving the meeting room, Amber slight smile, mouth closed, MC slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
     pause 0.75
 

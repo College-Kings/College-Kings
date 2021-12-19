@@ -302,7 +302,7 @@ label v15s26:
             u "Can we just... not watch it?"
 
             scene v15s26_15a
-            with dissolve 
+            with dissolve
 
             ri "But-"
 

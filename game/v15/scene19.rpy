@@ -49,7 +49,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
         pause 0.75
 
         scene v15s19_2 # TPP. MC dressed in his costume, netural expression, mouth closed descending the stairs, there are cups, bottles of wine and beer (party trash) on the steps [Deer House Staircase].
-        with dissolve 
+        with dissolve
 
     else : # -if sleeping on the couch
         $ v15s18_LaurensBed = False
@@ -199,7 +199,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
             u "I'm sorry, Lauren... I would offer to help, but I really have to get on with my day."
 
             scene v15s19_4d
-            with dissolve 
+            with dissolve
 
             la "It's okay, really. I'll get it." 
 
@@ -259,7 +259,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
         u "Well, duty calls with the presidential campaign."
 
         scene v15s19_8b # TPP. Lauren, smiling mouth closed following MC, smiling mouth closed, to the front door. The house is still dirty from the party. [Deer House Living Room].
-        with dissolve 
+        with dissolve
     
     else: 
         scene v15s19_7g # FPP. Lauren, smiling mouth closed looking at MC. The living room is clean and there is a trash bag on the floor in front of MC [Deer House Living Room].
@@ -268,7 +268,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
         u "Well, duty calls with the presidential campaign."
         
         scene v15s19_7h # TPP. Lauren, smiling mouth closed following MC, smiling mouth closed, to the front door. The house is clean. [Deer House Living Room].
-        with dissolve 
+        with dissolve
         
     pause 0.75
 

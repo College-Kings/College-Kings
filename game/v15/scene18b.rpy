@@ -20,7 +20,7 @@ label v15s18b:
     pause 0.75
 
     scene v15s18b_3a # TPP. Lauren reading the label on the gift she is holding, Lauren slight smile, mouth open.
-    with dissolve 
+    with dissolve
 
     la "This one is from..."
 
@@ -32,7 +32,7 @@ label v15s18b:
     pause 0.75
 
     scene v15s18b_4 # TPP. Close up of just Imre sitting somewhere in the room, Imre slight smile, mouth open.
-    with dissolve 
+    with dissolve
 
     imre "This will be the best gift she's ever gotten."
 
@@ -152,7 +152,7 @@ label v15s18b:
 
         if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
             scene v15s18b_3h # TPP. Lauren holding the $50 gift card, Lauren unamused face, mouth open.
-            with dissolve 
+            with dissolve
             
             la "Yeah. That's true, I guess."
 
@@ -247,7 +247,7 @@ label v15s18b:
         pause 0.75
 
         scene v15s18b_3j # TPP. Lauren holding up a white horse toy with a black mane, Lauren looking at the toy, Lauren excited, mouth open
-        with dissolve 
+        with dissolve
 
         la "Oh my! [name]..."
 
@@ -269,7 +269,7 @@ label v15s18b:
         la "Thank you so much."
 
         scene v15s18b_5g 
-        with dissolve 
+        with dissolve
 
         u "(Dammit! I made the wrong choice with the color, but she still seems happy with it.)"
 
@@ -282,7 +282,7 @@ label v15s18b:
         pause 0.75
 
         scene v15s18b_3k # TPP. Lauren holding up a brown horse toy with a golden mane, lauren looking at the toy, Lauren excited, mouth open.
-        with dissolve 
+        with dissolve
 
         la "*Gasps* [name]!"
 
@@ -356,7 +356,7 @@ label v15s18b:
             play sound "sounds/kiss.mp3"
 
             scene v15s18b_12a # FPP. Lauren giving MC a passionate kiss.
-            with dissolve 
+            with dissolve
 
             pause 0.75
 
@@ -404,28 +404,28 @@ label v15s18b:
             
             if v15_lauren_gift == 3:
                 scene v15s18b_3o # TPP. Show Lauren putting on the the Ruby Choker Necklace around her neck, Lauren excited, mouth closed.
-                with dissolve 
+                with dissolve
 
                 pause 0.75
 
                 scene v15s18b_3p # TPP. Show Lauren looking down at her chest and admiring the necklace, Lauren excited, mouth closed.
-                with dissolve 
+                with dissolve
 
                 pause 0.75
 
                 scene v15s18b_3q # TPP. Show Lauren without any Jewelry on with her hand in the gift box to signify she is putting the Jewelry away as to not lose it right now, Lauren excited, mouth closed.
-                with dissolve 
+                with dissolve
 
                 pause 0.75
 
             elif v15_lauren_gift == 2:
                 scene v15s18b_3r # TPP. Show Lauren putting the Emerald bracelet around her wrist, Lauren excited, mouth closed
-                with dissolve 
+                with dissolve
 
                 pause 0.75
 
                 scene v15s18b_3s # TPP. Show Lauren looking at her wrist with the emerald bracelet on, Lauren excited, mouth closed.
-                with dissolve 
+                with dissolve
 
                 pause 0.75
 
@@ -460,12 +460,12 @@ label v15s18b:
             pause 0.75
 
             scene v15s18b_15a # TPP. Show just Aubrey looking in Chris's direction, Aubrey weirded out, mouth closed.
-            with dissolve 
+            with dissolve
 
             pause 0.75
 
             scene v15s18b_3u # TPP. Lauren starting to get up off the couch, slight smile, mouth open.
-            with dissolve 
+            with dissolve
 
             la "Best birthday ever."
 
@@ -480,7 +480,7 @@ label v15s18b:
             play sound "sounds/kiss.mp3"
 
             scene v15s18b_12a 
-            with dissolve 
+            with dissolve
 
             pause 0.75
 
@@ -490,7 +490,7 @@ label v15s18b:
             pause 0.75
 
             scene v15s18b_13b # TPP. Show just MC and Lauren kissing in a different position.
-            with dissolve 
+            with dissolve
 
             pause 0.75
 
@@ -582,7 +582,7 @@ label v15s18b:
             u "(*Sighs* I hope so.)"
 
     scene v15s18b_3v # TPP. Lauren not holding anything her hands in the air, Lauren excited, mouth open.
-    with dissolve 
+    with dissolve
 
     la "Okay, I think that's enough gifts for now. I'll open the rest later after everyone leaves, haha. Let's get back to the party!"
 

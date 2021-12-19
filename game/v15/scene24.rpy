@@ -10,7 +10,7 @@ label v15s24:
     pause 0.75
 
     scene v15s24_2 # FPP. MC looking at the front door to the store.
-    with dissolve 
+    with dissolve
 
     u "(Where's Lindsey? She said she would be here.)"
 
@@ -191,7 +191,7 @@ label v15s24:
             pause 0.75
 
             scene v15s24_5d 
-            with dissolve 
+            with dissolve
 
             li "It's all in the mindset, right?"
 
@@ -224,14 +224,14 @@ label v15s24:
         pause 0.75
 
         scene v15s24_5h # FPP. Show Lindsey leaning in towards MC.
-        with dissolve 
+        with dissolve
 
         pause 0.75
 
         play sound "sounds/kiss.mp3"
 
         scene v15s24_5i # FPP. Lindsey giving MC a kiss.
-        with dissolve 
+        with dissolve
 
         pause 0.75
 
@@ -272,7 +272,7 @@ label v15s24:
         li "Hehe."
 
     scene v15s24_7c # TPP. Lindsey handing MC the ID and some money, don't show the name on the ID in this photo so it can be used for either ID choice, both slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -311,12 +311,12 @@ label v15s24:
     pause 0.75
 
     scene v15s24_10 # FPP. MC looking at all the Alcohol in the store, somewhere in view a bag of candies with the Alcohol called "Condy's vodka candies".
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v15s24_9a # TPP. Show MC reaching and grabbing bottles of Alcohol, slight smile, mouth closed
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -584,7 +584,7 @@ label v15s24:
                 pause 0.75
 
                 scene v15s24_13j # FPP. MC taking the bag of the items, Cashier worried, mouth closed.
-                with dissolve 
+                with dissolve
 
                 u "Keep it."
 
@@ -717,7 +717,7 @@ label v15s24:
                     pause 0.75
 
                     scene v15s24_13n # FPP. MC looking at Cashier, The cashier rolling his eyes, Cashier slight smile, mouth closed.
-                    with dissolve 
+                    with dissolve
 
                     pause 0.75
 
@@ -739,17 +739,17 @@ label v15s24:
                     pause 0.75
 
                     scene v15s24_18a # TPP. Close up of just the cashier bagging the items, slight smile, mouth closed
-                    with dissolve 
+                    with dissolve
 
                     pause 0.75
 
                     scene v15s24_16d # TPP. Show MC putting cash on the counter, MC slight smile, mouth closed, Cashier slight smile, mouth closed
-                    with dissolve 
+                    with dissolve
 
                     pause 0.75
 
                     scene v15s24_13o # FPP. MC looking at the Cashier, The cashier looking at MC, Cashier handing the bag of items over the counter, slight smile, mouth closed.
-                    with dissolve 
+                    with dissolve
 
                     pause 0.75
 
@@ -1035,7 +1035,7 @@ label v15s24:
                 pause 0.75
 
                 scene v15s24_16b 
-                with dissolve 
+                with dissolve
 
                 pause 0.75
 
@@ -1045,7 +1045,7 @@ label v15s24:
                 pause 0.75
 
                 scene v15s24_13j 
-                with dissolve 
+                with dissolve
 
                 u "Keep it."
 
@@ -1184,17 +1184,17 @@ label v15s24:
                     pause 0.75
 
                     scene v15s24_18a
-                    with dissolve 
+                    with dissolve
 
                     pause 0.75
 
                     scene v15s24_16d
-                    with dissolve 
+                    with dissolve
 
                     pause 0.75
 
                     scene v15s24_13o
-                    with dissolve 
+                    with dissolve
 
                     pause 0.75
 
@@ -1225,7 +1225,7 @@ label v15s24:
         u "One bag of alcohol for the pretty lady."
 
         scene v15s24_7d # TPP. MC handing Lindsey the bag of Alcohol, Lindsey grabbing the back, both slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         pause 0.75
 
@@ -1238,7 +1238,7 @@ label v15s24:
             play sound "sounds/kiss.mp3"
 
             scene v15s24_5i
-            with dissolve 
+            with dissolve
 
             pause 1.75 
 
@@ -1247,7 +1247,7 @@ label v15s24:
 
         else: 
             scene v15s24_7e # TPP. Lindsey hugging MC, The alcohol bag in her hand as she hugs MC, both slight smile, mouth closed.
-            with dissolve 
+            with dissolve
 
         scene v15s24_5
         with dissolve
@@ -1310,7 +1310,7 @@ label v15s24:
 
     else:
         scene v15s24_8b # TPP. Show MC exiting the store empty handed, MC slight frown, mouth closed.
-        with dissolve 
+        with dissolve
 
         pause 0.75
 
@@ -1381,12 +1381,12 @@ label v15s24:
     play sound "sounds/vibrate.mp3"
 
     scene v15s24_19 # TPP. Just MC on the side of the store pulling his phone out of his pocket, slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v15s24_19a # TPP. Just Mc on the side of the store looking at his phone, slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     $ aubrey.messenger.newMessage("Come to the Chicks house, asap! I have an extra special surprise for you. I think you've earned it ;)", queue=False)
 
@@ -1457,7 +1457,7 @@ label v15s24:
         u "Of course. I'll see you later, Linds."
 
         scene v15s24_20a # FPP. MC watching Lindsey walk off empty handed, Lindsey neutral face, mouth closed.
-        with dissolve 
+        with dissolve
 
 pause 0.75
 

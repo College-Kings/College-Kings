@@ -234,7 +234,7 @@ label v15s18a_Aubrey:
             pause 0.75
 
             scene v15s18aaub_2a
-            with dissolve 
+            with dissolve
 
         "Don't smile":
             $ add_point(KCT.BOYFRIEND)
@@ -280,7 +280,7 @@ label v15s18a_Aubrey:
             pause 0.75
 
             scene v15s18aaub_2k # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at the list, MC looking at Aubrey, Aubrey shocked, mouth closed.
-            with dissolve 
+            with dissolve
 
             pause 0.75
 
@@ -584,7 +584,7 @@ label v15s18a_AutumPenelope:
     pause 0.75
 
     scene v15s18apen_4a # FPP. Penelope covering her mouth with her hand as she laughs, Autumn smiling, mouth open.
-    with dissolve 
+    with dissolve
 
     aut "Hey- [name]... *Chuckles*"
 
@@ -1358,7 +1358,7 @@ label v15s18a_Riley:
     pause 0.75
 
     scene v15s18ariley_1a # FPP. MC looking at the Kitchen area, Riley putting down the plates on the counter.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -1518,7 +1518,7 @@ label v15s18a_Riley:
     pause 0.75
 
     scene v15s18ariley_2h # FPP. MC looking at Riley, Riley tucking the dollar in MC's waist band, Riley slight smile ,mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -1766,7 +1766,7 @@ label v15s18a_Riley:
             pause 0.75
 
             scene v15s18ariley_14 # TPP. MC laying on the bed and Riley laying next to him them kissing.
-            with dissolve 
+            with dissolve
 
             image v15rileyhj = Movie(play="images/v15/Scene 18a/v15rileyhj.webm", loop=True, image="images/v15/Scene 18a/v15rileyhjStart.webp", start_image="images/v15/Scene 18a/v15rileyhjStart.webp")
             image v15rileyhjf = Movie(play="images/v15/Scene 18a/v15rileyhjf.webm", loop=True, image="images/v15/Scene 18a/v15rileyhjStart.webp", start_image="images/v15/Scene 18a/v15rileyhjStart.webp")
@@ -1986,7 +1986,7 @@ label v15s18a_ChrisAmber:
     pause 0.75
 
     scene v15s18aamber_3 # FPP. MC sitting on the stool next to Amber, MC looking at Amber, Amber looking at MC, Amber slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     u "What the hell did I just witness? *Laughs*"
 
@@ -2161,7 +2161,7 @@ label v15s18a_ChrisAmber:
                 u "It would be an orgy party. *Laughs*"
 
                 scene v15s18aamber_3a
-                with dissolve 
+                with dissolve
 
                 am "Ha, yes!"
 
@@ -2203,7 +2203,7 @@ label v15s18a_ChrisAmber:
                     pause 0.75
 
                     scene v15s18aamber_7 # FPP. MC focusing in on Amber's ass as they go up the stairs
-                    with dissolve 
+                    with dissolve
 
                     pause 0.75
 
@@ -2328,7 +2328,7 @@ label v15s18a_ChrisAmber:
                     pause 0.75
 
                     scene v15s18aamber_10 # TPP. Just Amber spitting the cum over the side of the balcony.
-                    with dissolve 
+                    with dissolve
 
                     pause 0.75
 
@@ -2370,7 +2370,7 @@ label v15s18a_ChrisAmber:
                     u "(Blow job, check!)"
 
                     scene v15s18aamber_13 # TPP. MC pulling the bottom part of his costume back up, slight smile, mouth closed.
-                    with dissolve 
+                    with dissolve
 
                     pause 0.75
 

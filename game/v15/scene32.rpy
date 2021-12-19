@@ -292,7 +292,7 @@ label v15s32:  #32) MC picks up Aubrey at Chick's house
         ri "I'm so excited for you guys. You're gonna have a blast."
 
         scene v15s32_8c # FPP. Riley smiling, yelling mouth open, hands cupped around her mouth, eyes looking up stairs (behind MC) her back is toward the open front door, where the street is visible behind her [Chick's front door-interior].
-        with dissolve 
+        with dissolve
 
         ri "Hey, come on, Aubrey!"            
 
@@ -348,7 +348,7 @@ label v15s32:  #32) MC picks up Aubrey at Chick's house
         au "Aww, thanks babe."
 
         scene v15s32_8j # FPP. Aubrey smiling mouth closed looking at MC stairs are behind her [Chick's front door-interior].
-        with dissolve 
+        with dissolve
 
         if aubrey.relationship.value >= Relationship.FWB.value: # -if AubreyRs 
             u "She's right. You look absolutely stunning."
@@ -538,7 +538,7 @@ label v15s32:  #32) MC picks up Aubrey at Chick's house
         u "(Oh, wow!)"
 
         scene v15s32_8u # TPP. MC (big smile, mouth open) and Aubrey (smiling mouth closed) standing together in front of the open front door, with Riley, standing next to Aubrey, smiling mouth closed (camera is at the stairs facing the front door) [Chick's front door-interior].
-        with dissolve 
+        with dissolve
 
         u "Aubrey, you-"
 

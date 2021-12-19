@@ -435,7 +435,7 @@ label v15s39:
         pause 0.75
 
         scene v15s39_14a # TPP. same as v15s39_14 MC then puts his phone in his pocket again
-        with dissolve 
+        with dissolve
 
         u "(Okay, it's recording... If I'm careful, maybe I can try to trick her into saying something.)"
 

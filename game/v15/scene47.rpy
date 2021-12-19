@@ -42,6 +42,6 @@ label v15s47:
             u "(No reason to call. I'm almost there anyway... Plus, I doubt she's gonna answer.)"
 
 scene v15s47_4 # TPP. Outside shot of the Cab driving down the road.
-with dissolve 
+with dissolve
 
 jump v15s48

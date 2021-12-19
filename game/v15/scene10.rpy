@@ -1116,7 +1116,7 @@ label v15s10:
 
         else:
             scene v15s10_femalebuyer_4e
-            with dissolve 
+            with dissolve
 
             female_buyer "The advert was right. This is a nice, old car, in need of some tough love and major attention."
 

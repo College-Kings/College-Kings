@@ -131,7 +131,7 @@ label v15s8:
     # End planning board (screen disappears)
 
     scene v15s8_4a # TPP. Same as v15s8_4, MC slight smile, mouth open, Chloe slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     u "I think that's the best way to go."
 
