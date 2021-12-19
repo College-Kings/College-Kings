@@ -1,7 +1,7 @@
 screen murder_button_overlay(character):
     tag free_roam
 
-    $ char_name = character.name.lower().replace(" ", "_")
+    $ char_name = character.name.replace(' ', '_').lower()
 
     hbox:
         pos (10, 10)
