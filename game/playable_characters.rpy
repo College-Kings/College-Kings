@@ -16,9 +16,6 @@ init python:
         def name(self):
             return store.name
 
-        def add_item(self, item):
-            self.inventory.items.append(item)
-
         def has_item(self, item):
             return (item in self.inventory)
 
