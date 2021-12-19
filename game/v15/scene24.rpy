@@ -495,7 +495,7 @@ label v15s24:
 
         menu:
             "Act offended":
-                $ v15s24_alcohol = True
+                $ v15_lindsey_alcohol = True
                 scene v15s24_16a # TPP. MC looking at the Cashier angrily, mouth closed, the cashier looks shocked, mouth closed
                 with dissolve
 
@@ -699,7 +699,7 @@ label v15s24:
                 pause 0.75
 
                 if kct == "popular":
-                    $ v15s24_alcohol = True
+                    $ v15_lindsey_alcohol = True
 
                     scene v15s24_17
                     with vpunch
@@ -931,7 +931,7 @@ label v15s24:
 
         menu :
             "Act offended":
-                $ v15s24_alcohol = True
+                $ v15_lindsey_alcohol = True
                 scene v15s24_13l
                 with dissolve
 
@@ -1136,7 +1136,7 @@ label v15s24:
                 pause 0.75
 
                 if kct == "popular":
-                    $ v15s24_alcohol = True
+                    $ v15_lindsey_alcohol = True
 
                     scene v15s24_17
                     with vpunch
@@ -1213,7 +1213,7 @@ label v15s24:
 
                     u "*Chuckles* Thanks."
     
-    if v15s24_alcohol:
+    if v15_lindsey_alcohol:
         scene v15s24_8a # TPP. Show MC exiting the store with a bag of alcohol, slight smile, mouth closed.
         with dissolve
 
@@ -1429,7 +1429,7 @@ label v15s24:
 
     u "Mmm, yeah. That's me."
 
-    if v15s24_alcohol:
+    if v15_lindsey_alcohol:
         scene v15s24_5a
         with dissolve
 
