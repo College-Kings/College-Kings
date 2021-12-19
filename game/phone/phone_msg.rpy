@@ -8,7 +8,7 @@ init python:
 
         @property
         def profile_picture(self):
-            return "images/nonplayable_characters/profile_pictures/{}.webp".format(self.name.lower())
+            return "images/nonplayable_characters/profile_pictures/{}.webp".format(self.name.replace(' ', '_').lower())
 
         @property
         def replies(self):
