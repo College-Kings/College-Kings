@@ -44,7 +44,7 @@ screen v15s17_gift_selection():
 
                         add "images/v15/Scene 17/gift_picking_screen/item_box.png"
                         text item.name xalign 0.5 ypos 15 style "item_name_text"
-                        add Transform(item.idle_image, size=(183, 209)) align (0.5, 0.5)
+                        add item.idle_image align (0.5, 0.5)
                     
                     imagebutton:
                         idle "images/v15/Scene 17/gift_picking_screen/pick_item_idle.png"
