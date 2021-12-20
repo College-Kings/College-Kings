@@ -1,12 +1,12 @@
-screen v15_teacher_brief_icon(brief_key):
+screen v15_teacher_brief_icon(key):
     tag teacher_brief
 
     imagebutton:
         idle "images/v15/Scene 20/teacher_brief/icon.png"
-        action Show("v15_teacher_brief", None, brief_key)
+        action Show("v15_teacher_brief", None, key)
 
 
-screen v15_teacher_brief(brief_key):
+screen v15_teacher_brief(key):
     tag teacher_brief
     zorder 100
     modal True
@@ -43,7 +43,7 @@ screen v15_teacher_brief(brief_key):
     default teacher = teachers[key]
 
     button:
-        action Show("v15_teacher_brief_icon", brief_key=brief_key)
+        action Show("v15_teacher_brief_icon", key=key)
 
     imagebutton:
         idle "images/v15/Scene 20/teacher_brief/background.png"
