@@ -1,17 +1,46 @@
-screen v15_teacher_brief_icon(teacher, description, loves, hates):
+screen v15_teacher_brief_icon(brief_key="mr_lee"):
     tag teacher_brief
 
     imagebutton:
         idle "images/v15/Scene 20/teacher_brief/icon.png"
-        action Show("v15_teacher_brief", None, teacher, description, loves, hates)
+        action Show("v15_teacher_brief", None, brief_key)
 
 
-screen v15_teacher_brief(teacher=mr_lee,
-    description="Mr Lee can be a great ally, but also a great adversary.",
-    loves=["Strong moral code.", "Mutual respect.", "Professionalism.", "Manners.", "Culture.", "Passionate about all these things and of course, history!"],
-    hates=["Lies.", "Cheating.", "Dishonor."], insight="", insight_condition=False):
+screen v15_teacher_brief(key="mr_lee"):
     tag teacher_brief
+    zorder 100
     modal True
+
+    default teachers = {
+        "dean": {
+            "name": "Dean Harrison",
+            "profile_picture": "",
+            "description": "The Dean is super serious. Respect her authority.",
+            "loves": ["Respect her position.", "It's not an easy path to becoming a College Dean.", "Very proud and protective of SVC and its reputation."],
+            "hates": ["Unprofessionalism.", "Disorganisation."],
+            "insight_info": "Just don't joke around!",
+            "insight_condition": v11s1_courtpoints >= 4
+        },
+        "mr_lee": {
+            "name": mr_lee.name.replace('_', ' '),
+            "profile_picture": mr_lee.profile_picture,
+            "description":"Mr Lee can be a great ally, but also a great adversary.",
+            "loves": ["Strong moral code.", "Mutual respect.", "Professionalism.", "Manners.", "Culture.", "Passionate about all these things and of course, history!"],
+            "hates": ["Lies.", "Cheating.", "Dishonor."],
+            "insight_info": "Always yield to his knowledge and experience.", 
+            "insight_condition": v11_ride_with_mrlee
+        },
+        "ms_rose": {
+            "name": ms_rose.name.replace('_', ' '),
+            "profile_picture": ms_rose.profile_picture,
+            "description": "Ms Rose is a great teacher, kind and attentive, but she's no pushover.",
+            "loves": ["Supporting good causes, especially helping the sororities.", "Making sure things are fair and nobody is upset."],
+            "hates": ["Selfishness.", "Misogyny."],
+            "insight_info": "If needed, seduction might work best.",
+            "insight_condition": ms_rose.relationship.value >= Relationship.FWB.value
+        }
+    }
+    default teacher = teachers[key]
 
     button:
         action Show("v15_teacher_brief_icon")
@@ -21,15 +50,15 @@ screen v15_teacher_brief(teacher=mr_lee,
         action NullAction()
         align (0.5, 0.5)
 
-    add teacher.profile_picture pos(357, 248)
+    add teacher["profile_picture"] pos(357, 248)
 
     vbox:
         pos (682, 231)
 
-        text teacher.name.replace('_', ' ').upper() style "teacher_brief_title"
+        text teacher["name"].upper() style "teacher_brief_title"
         text "TEACHER" style "teacher_brief_subtitle"
         null height 20
-        text description style "teacher_brief_body"
+        text teacher["description"] style "teacher_brief_body"
 
     vbox:
         pos (362, 609)
@@ -42,7 +71,7 @@ screen v15_teacher_brief(teacher=mr_lee,
             add "images/v15/Scene 20/teacher_brief/heart.png" yalign 0.5
             text "LOVES" style "teacher_brief_header1" yalign 0.5
 
-        for i in loves:
+        for i in teacher["loves"]:
             hbox:
                 spacing 15
 
@@ -60,7 +89,7 @@ screen v15_teacher_brief(teacher=mr_lee,
             add "images/v15/Scene 20/teacher_brief/cross.png" yalign 0.5
             text "HATE" style "teacher_brief_header1" yalign 0.5
 
-        for i in hates:
+        for i in teacher["hates"]:
             hbox:
                 spacing 15
 
@@ -72,8 +101,8 @@ screen v15_teacher_brief(teacher=mr_lee,
         ypos 933
         xysize (1330, 90)
 
-        if insight_condition:
-            text insight align (0.5, 0.5)
+        if teacher["insight_condition"]:
+            text teacher["insight_info"] align (0.5, 0.5) style "teacher_brief_header1"
 
         else:
             hbox:
@@ -83,24 +112,6 @@ screen v15_teacher_brief(teacher=mr_lee,
                 add "images/v15/Scene 20/teacher_brief/lock.png"
                 text "LOCKED SECRET INSIGHT" style "teacher_brief_header1"
 
-# default dean = Teacher(
-#     "Dean Harrison",
-#     description="The Dean is super serious. Respect her authority.",
-#     loves="Respect her position. It's not an easy path to becoming a College Dean. Very proud and protective of SVC and its reputation.",
-#     hates="Unprofessionalism. Disorganisation."
-# )
-# default mr_lee = Teacher(
-#     "Mr Lee",
-#     description="Mr Lee can be a great ally, but also a great adversary.",
-#     loves="Strong moral code. Mutual respect. Professionalism. Manners. Culture. Passionate about all these things and of course, history!",
-#     hates="Lies. Cheating. Dishonor."
-# )
-# default ms_rose = Teacher(
-#     "Ms Rose",
-#     description="Ms Rose is a great teacher, kind and attentive, but she's no pushover.",
-#     loves="Supporting good causes, especially helping the sororities. Making sure things are fair and nobody is upset.",
-#     hates="Selfishness. Misogyny."
-# ) # Relationship progression: THREATEN, FRIEND, KISS, FWB
 
 style teacher_brief_title is text:
     font "fonts/Montserrat-ExtraBold.ttf"
