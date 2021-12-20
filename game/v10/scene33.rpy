@@ -1137,7 +1137,7 @@ label v10s33_chloe1:
 
                 cl "Oh stop! I don't know if you're jealous or what."
                 
-                cl "You've had something against me from the second I became president and I'm honestly getting sick of it!"
+                cl "You've had something against me from the second I became President and I'm honestly getting sick of it!"
                 
                 cl "Let's settle this right here right now, in the ring!"
 
@@ -3081,7 +3081,7 @@ label v10s33_riley2:
     scene v10cfrch3b
     with dissolve
 
-    ch "Now that you're back man, you and [name] should play a game. First one to get one in is the Wolves new president. *Laughs*"
+    ch "Now that you're back man, you and [name] should play a game. First one to get one in is the Wolves' new President. *Laughs*"
 
     scene v10cfrch3b # Show Aaron
     with dissolve
