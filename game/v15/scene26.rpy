@@ -666,6 +666,7 @@ label v15s26:
         menu:
             "Side with Riley, pro-polygamy":
                 $ riley.relationship = Relationship.LOYAL
+                $ grant_achievement("polycurious")
 
                 u "I mean, I've never tried it, so...I wouldn't know for sure, haha. But I don't see any problems with it personally."
 
@@ -854,6 +855,8 @@ label v15s26:
                 if aubrey.relationship.value >= Relationship.TAMED.value:
                     $ aubrey.relationship = Relationship.FWB
                 $ riley.relationship = Relationship.LOYAL
+                
+                $ grant_achievement("polycurious")
 
                 u "I think you're onto something here, Riley..."
 
