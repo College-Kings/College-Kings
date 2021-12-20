@@ -157,7 +157,7 @@ label v13s12c:
     scene v13s12c_11
     with dissolve
 
-    au "And don't even get me started on the whole \"Lindsey for president\" stuff."
+    au "And don't even get me started on the whole \"Lindsey for President\" stuff."
 
     scene v13s12c_11b # FPP. Same as v13s12c_11, Aubrey slight smile, mouth closed
     with dissolve
@@ -345,7 +345,7 @@ label v13s12c:
             scene v13s12c_11e
             with dissolve
 
-            u "Chloe is a senior and the current president, which means at some point people obviously had faith in her leadership."
+            u "Chloe is a senior and the current President, which means at some point people obviously had faith in her leadership."
 
             scene v13s12c_11b
             with dissolve

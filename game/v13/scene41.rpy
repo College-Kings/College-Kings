@@ -481,7 +481,7 @@ label v13s41:
             scene v13s41_14g
             with dissolve
 
-            u "You did the right thing by running for president and I'm gonna stick beside you."
+            u "You did the right thing by running for President and I'm gonna stick beside you."
 
             scene v13s41_14f
             with dissolve

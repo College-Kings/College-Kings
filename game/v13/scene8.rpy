@@ -394,7 +394,7 @@ label v13s8:
     scene v13s8_9g
     with dissolve
 
-    no "It did at first, but then she became president and our disagreements started to show."
+    no "It did at first, but then she became President and our disagreements started to show."
 
     scene v13s8_9f
     with dissolve

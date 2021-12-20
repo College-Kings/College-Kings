@@ -183,7 +183,7 @@ label v13s9:
         scene v13s9_11f # FPP. Same as v13s9_11b but Chloe leans in closer to MC, as if she was whispering to him. 
         with dissolve
     
-        cl "I don't know if you know or not, but it's pretty much public info now that she's running to become the new president of the Chicks."
+        cl "I don't know if you know or not, but it's pretty much public info now that she's running to become the new President of the Chicks."
 
     scene v13s9_11a
     with dissolve
@@ -223,7 +223,7 @@ label v13s9:
     scene v13s9_12b # FPP. Same as v13s9_v12 but Chloe's head turned facing MC, but slightly downward avoiding eye contact, sad, mouth open.
     with dissolve
 
-    cl "Not in the history of our sorority, so one of two things must be true. Either I'm the worst president ever, or Lindsey is the most egotistical member we've had."
+    cl "Not in the history of our sorority, so one of two things must be true. Either I'm the worst President ever, or Lindsey is the most egotistical member we've had."
 
     scene v13s9_12c # FPP. Same as v13s9_v12b but Chloe's mouth closed.
     with dissolve
