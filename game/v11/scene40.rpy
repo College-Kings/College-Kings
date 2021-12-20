@@ -469,17 +469,17 @@ label v11_carriage_ride:
 
     li "They have, actually, I guess I should've led with the fact that this wasn't exactly an original idea, but instead a discovered tradition."
     
-    li "They've been doing this since the beginning of the Chicks, but one year a president didn't give the pledges any nicknames and after a few years of that, the whole thing disappeared."
+    li "They've been doing this since the beginning of the Chicks, but one year a President didn't give the pledges any nicknames and after a few years of that, the whole thing disappeared."
 
     scene v11car11e
     with dissolve
 
-    cl "Well I'm sure there's a good reason the president didn't continue it."
+    cl "Well I'm sure there's a good reason the President didn't continue it."
 
     scene v11car14e
     with dissolve
 
-    no "Yeah, it's called being a lazy president."
+    no "Yeah, it's called being a lazy President."
 
     scene v11car11g # FPP. Same as v11car11f, Chloe annoyed, mouth open, different pose
     with dissolve
@@ -489,7 +489,7 @@ label v11_carriage_ride:
     scene v11car14f # FPP. Same as v11car14e, Nora mouth open, angry, arms folded, different pose
     with dissolve
 
-    no "I'm not trying, I am. It's a great idea, and the only reason it went away and never got brought back was because of the poor choices of one president."
+    no "I'm not trying, I am. It's a great idea, and the only reason it went away and never got brought back was because of the poor choices of one President."
 
     scene v11car11g
     with dissolve
@@ -557,7 +557,7 @@ label v11_carriage_ride:
     scene v11car14f
     with dissolve
     
-    no "As president, you could've at least told her it was great that she tried to improve the sorority, before you completely rejected the idea..."
+    no "As President, you could've at least told her it was great that she tried to improve the sorority, before you completely rejected the idea..."
 
     scene v11car15g
     with dissolve
@@ -597,7 +597,7 @@ label v11_carriage_ride:
     scene v11car14f
     with dissolve
     
-    no "You know the last president only cared about what the Chicks looked like. Will guys think we're hot, will we be good enough for parties, etc."
+    no "You know the last President only cared about what the Chicks looked like. Will guys think we're hot, will we be good enough for parties, etc."
 
     scene v11car14e
     with dissolve
@@ -639,7 +639,7 @@ label v11_carriage_ride:
     scene v11car14f
     with dissolve
     
-    no "You only cared about the way you as president looked from day one. It was never about the Chicks!"
+    no "You only cared about the way you as President looked from day one. It was never about the Chicks!"
 
     scene v11car12c
     with dissolve
@@ -664,7 +664,7 @@ label v11_carriage_ride:
     scene v11car11j
     with dissolve
     
-    cl "I have been taking the fall for everything bad the Chicks are being accused of since the day I became president, you really think I'm the one that posted that picture of Sarah to embarrass her?"
+    cl "I have been taking the fall for everything bad the Chicks are being accused of since the day I became President, you really think I'm the one that posted that picture of Sarah to embarrass her?"
     
     cl "That I'm the one that sabotaged the Deers car washing event cause they were earning more than us???"
 
@@ -696,7 +696,7 @@ label v11_carriage_ride:
     scene v11car14e
     with dissolve
 
-    no "It doesn't matter what people think about me, I'm not the president! How you treat your sisters is part of your job. I just want a president that's not just there for the fucking attention!"
+    no "It doesn't matter what people think about me, I'm not the President! How you treat your sisters is part of your job. I just want a President that's not just there for the fucking attention!"
 
     scene v11car11g
     with dissolve
@@ -872,7 +872,7 @@ label v11_carriage_ride:
             scene v11car22c
             with dissolve
 
-            u "She hasn't announced it yet but Lindsey is going to run for president."
+            u "She hasn't announced it yet but Lindsey is going to run for President."
 
             scene v11car22d
             with dissolve
