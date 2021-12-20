@@ -19,6 +19,8 @@ label v15s21:
         scene v15s21_3 # FPP. Mr. Lee approaches them slight smile mouth open, Chloe and MC stand up, Chloe slight smile, mouth closed
         with dissolve
 
+        $ v15_notes_clicks = 0 # reset counter
+
         lee "Good morning, Chloe and [name]."
 
         scene v15s21_3a # FPP. Mr. Lee is now in front of Chloe and MC, Mr. Lee slight smile mouth closed, Chloe slight smile mouth open looking at Mr. Lee
@@ -478,33 +480,6 @@ label v15s21:
 
         lee "It was approved by the Dean."
 
-        if v15_took_notes and v15_notes_clicks >= 5: ###### -if TookNotes and clicks on the journal five times- ######
-            scene v15s21_6c
-            with dissolve
-
-            $ grant_achievement("too_much_information")
-            lee "[name], I appreciate that you came prepared and did your research..."
-
-            scene v15s21_6b
-            with dissolve
-
-            u "(Shit...) I-"
-
-            scene v15s21_6c
-            with dissolve
-
-            lee "Please, just take this as an important life lesson. Keep your eyes in the meeting as well as your head."
-
-            scene v15s21_6b
-            with dissolve
-
-            u "Yeah, of course. Sorry."
-
-            scene v15s21_6b
-            with dissolve
-
-            lee "Mmhmm..."
-
         scene v15s21_7h
         with dissolve
 
@@ -600,6 +575,33 @@ label v15s21:
         with dissolve
 
         u "*Sighs* Okay, is there anything else?"
+
+        if v15_took_notes and v15_notes_clicks >= 5: ###### -if TookNotes and clicks on the journal five times- ######
+            scene v15s21_6c
+            with dissolve
+
+            $ grant_achievement("too_much_information")
+            lee "[name], I appreciate that you came prepared and did your research..."
+
+            scene v15s21_6b
+            with dissolve
+
+            u "(Shit...) I-"
+
+            scene v15s21_6c
+            with dissolve
+
+            lee "Please, just take this as an important life lesson. Keep your eyes in the meeting as well as your head."
+
+            scene v15s21_6b
+            with dissolve
+
+            u "Yeah, of course. Sorry."
+
+            scene v15s21_6b
+            with dissolve
+
+            lee "Mmhmm..."
 
         scene v15s21_6
         with dissolve
@@ -1094,6 +1096,8 @@ label v15s21:
         scene v15s21_10b # FPP. same as v15s21_10a Ms. Rose looking at Chloe slight smile mouth open, Chloe looking at Ms. Rose slight smile mouth closed
         with dissolve
 
+        $ v15_notes_clicks = 0 # reset counter
+
         ro "Hi, Chloe. Hello [name]. It's nice to see you both."
 
         scene v15s21_10a
@@ -1505,28 +1509,6 @@ label v15s21:
 
         cl "I guess..."
 
-        if v15_took_notes and v15_notes_clicks >= 5: ###### -if TookNotes and clicks on the journal five times- ######:
-            scene v15s21_13k
-            with dissolve
-
-            $ grant_achievement("too_much_information")
-            ro "[name], If you stare at your notes for too long, you're going to end up missing the meeting. *Chuckles*"
-
-            scene v15s21_13f
-            with dissolve
-
-            u "(Oh, shit...) Sorry, Ms. Rose."
-
-            scene v15s21_13k
-            with dissolve
-
-            ro "Just focus on the job at hand, young man."
-
-            scene v15s21_13f
-            with dissolve
-
-            u "(Oh, I'm trying to.)"
-
         scene v15s21_13
         with dissolve
 
@@ -1616,6 +1598,28 @@ label v15s21:
         with dissolve
 
         u "Okay. Well..."
+
+        if v15_took_notes and v15_notes_clicks >= 5: ###### -if TookNotes and clicks on the journal five times- ######:
+            scene v15s21_13k
+            with dissolve
+
+            $ grant_achievement("too_much_information")
+            ro "[name], If you stare at your notes for too long, you're going to end up missing the meeting. *Chuckles*"
+
+            scene v15s21_13f
+            with dissolve
+
+            u "(Oh, shit...) Sorry, Ms. Rose."
+
+            scene v15s21_13k
+            with dissolve
+
+            ro "Just focus on the job at hand, young man."
+
+            scene v15s21_13f
+            with dissolve
+
+            u "(Oh, I'm trying to.)"
 
         scene v15s21_13
         with dissolve
