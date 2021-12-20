@@ -43,7 +43,7 @@ screen v15_teacher_brief(key):
     default teacher = teachers[key]
 
     button:
-        action Show("v15_teacher_brief_icon", key=key)
+        action Show("v15_teacher_brief_icon", None, key)
 
     imagebutton:
         idle "images/v15/Scene 20/teacher_brief/background.png"
