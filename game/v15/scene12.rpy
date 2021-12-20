@@ -443,11 +443,6 @@ label v15s12:
 
         li "So basically, it's just who you think should come, and what the best way to gain their support would be."
 
-        scene v15s12_8b
-        with dissolve
-
-        u "They're both fine ideas, I think we can go with the club, or a game night regardless, and still end up having a good time... But I think that's our best option."
-
         # -The planning board pops up and MC makes his choices from what's presented-
 
         #### Planning Board work goes here 
@@ -522,6 +517,11 @@ label v15s12:
             $ v15_lindsey_inviteseb = lindsey_board.selected_task == v15_s12_lindsey_pb_inviteSebastian
 
         # End planning board (screen disappears)
+
+        scene v15s12_8b
+        with dissolve
+
+        u "They're both fine ideas, I think we can go with the club, or a game night regardless, and still end up having a good time... But I think this is our best option."
 
         if v15_lindsey_gamenight: # -if chose Game night
             scene v15s12_8b
