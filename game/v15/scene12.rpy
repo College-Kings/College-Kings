@@ -617,15 +617,17 @@ label v15s12:
     scene v15s12_12 # TPP. MC in the hallway looking down at his phone in his hand [Checkpoint E].
     with dissolve
 
+    pause 1
+
     $ riley.messenger.newMessage("Hey! I'm assuming you'll be at Lauren's birthday party later?", queue=False)
     $ riley.messenger.addReply("Yeah, I'll be there.")
-    $ riley.messenger.newMessage("Cool. FYI, the stores are running low on costumes, you need to hurry up and buy one! Lol")
+    $ riley.messenger.newMessage("Cool. FYI, the stores are running low on costumes, you need to hurry up and buy one! Lol", queue=False)
     $ riley.messenger.addReply("Ah, shit... You're right.")
-    $ riley.messenger.newMessage("Of course I am ;)")
+    $ riley.messenger.newMessage("Of course I am ;)", queue=False)
     $ riley.messenger.addReply("I'd be lost without you")
-    $ riley.messenger.newMessage("Oh trust me, I know... hehe. See you soon!")
+    $ riley.messenger.newMessage("Oh trust me, I know... hehe. See you soon!", queue=False)
     $ riley.messenger.addReply("Thanks red!")
-    $ riley.messenger.newMessage("Haha, welcome nerd!")
+    $ riley.messenger.newMessage("Haha, welcome nerd!", queue=False)
 
 label v15s12_PhoneContinue:
     if riley.messenger.replies:

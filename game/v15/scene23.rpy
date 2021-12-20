@@ -53,20 +53,22 @@ label v15s23:
 
     scene v15s23_7 # TPP. MC (back to camera) wearing a towel, opening the bathroom door and exiting through it.
     with fade
+    
+    pause 0.75
 
     # Pre load Aubrey Text conversation before branching Ape or Wolf 
     $ aubrey.messenger.newMessage("Hey smelly, come to the Chicks house. I have an extra special surprise for you.", queue=False)
     
     if aubrey.relationship.value < Relationship.FWB.value:
         $ aubrey.messenger.addReply("Haha ok, see you soon :) ")
-        $ aubrey.messenger.newMessage("Perfect ;)")
+        $ aubrey.messenger.newMessage("Perfect ;)", queue=False)
 
     else:
         $ aubrey.messenger.addReply("I just showered actually, so I smell amazing")
         $ aubrey.messenger.addReply("But I accept your invitation...")
-        $ aubrey.messenger.newMessage("Where was my invitation???")
+        $ aubrey.messenger.newMessage("Where was my invitation???", queue=False)
         $ aubrey.messenger.addReply("Uhh... I'll make it up to you...? Lol")
-        $ aubrey.messenger.newMessage("Hehe, I know you will ;)")
+        $ aubrey.messenger.newMessage("Hehe, I know you will ;)", queue=False)
 
     if joinwolves:
         scene v15s23_8a # TPP. Same as v15s23_8 but MC's WOLF ROOM.
@@ -97,6 +99,28 @@ label v15s23:
         scene v15s23_13a # TPP. Same as v15s23_13 but MC's WOLF ROOM.
         with dissolve
 
+        label v15s23_aubrey_text_continue:
+            if aubrey.messenger.replies:
+                call screen phone
+            if aubrey.messenger.replies:
+                u "(I should reply to Aubrey.)"
+                jump v15s23_aubrey_text_continue
+
+        scene v15s23_14a # TPP. Same as v15s23_14 but MC's WOLF ROOM.
+        with dissolve
+
+        u "(I wonder what the surprise is...)"
+
+        scene v15s23_15a # TPP. Same as v15s23_15 but MC's WOLF ROOM.
+        with dissolve
+
+        pause 0.75
+
+        scene v15s23_16a # TPP. Same as v15s23_16 but MC's WOLF ROOM.
+        with dissolve
+
+        u "(Time to find out!)"
+
     else:
         scene v15s23_8 # TPP. MC, smiling, mouth closed, wearing a towel, entering his room. [MC's APE ROOM]
         with dissolve
@@ -126,7 +150,12 @@ label v15s23:
         scene v15s23_13 # TPP. MC, neutral expression, mouth closed, wearing pants, holding his phone and looking down at it. [MC's APE ROOM]
         with dissolve
 
-        call v15s23_aubrey_text_continue
+        label v15s23_aubrey_text_continue2:
+            if aubrey.messenger.replies:
+                call screen phone
+            if aubrey.messenger.replies:
+                u "(I should reply to Aubrey.)"
+                jump v15s23_aubrey_text_continue2
 
         scene v15s23_14 # TPP. MC, smiling, thinking, mouth closed, putting his phone in his back pocket. [MC's APE ROOM]
         with dissolve
@@ -142,28 +171,6 @@ label v15s23:
         with dissolve
 
         u "(Time to find out!)"
-
-label v15s23_aubrey_text_continue:
-    if aubrey.messenger.replies:
-        call screen phone
-    if aubrey.messenger.replies:
-        u "(I should reply to Aubrey.)"
-        jump v15s23_aubrey_text_continue
-
-    scene v15s23_14a # TPP. Same as v15s23_14 but MC's WOLF ROOM.
-    with dissolve
-
-    u "(I wonder what the surprise is...)"
-
-    scene v15s23_15a # TPP. Same as v15s23_15 but MC's WOLF ROOM.
-    with dissolve
-
-    pause 0.75
-
-    scene v15s23_16a # TPP. Same as v15s23_16 but MC's WOLF ROOM.
-    with dissolve
-
-    u "(Time to find out!)"
     
     # -Transition to Scene 26-
     jump v15s26

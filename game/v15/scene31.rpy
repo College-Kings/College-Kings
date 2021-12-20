@@ -54,9 +54,9 @@ label v15s31:
 
             $ emily.messenger.addImgReply("Selfie in a suit")
             $ emily.messenger.addReply("Getting prom flashbacks.")
-            $ emily.messenger.newMessage("OMG! Haha, you actually look the same. Where are you headed?")
+            $ emily.messenger.newMessage("OMG! Haha, you actually look the same. Where are you headed?", queue=False)
             $ emily.messenger.addReply("Wedding ceremony for Aubrey's parents.")
-            $ emily.messenger.newMessage("Oh, nice! Tell her I said hi! Miss you guys! Have fun! :)")
+            $ emily.messenger.newMessage("Oh, nice! Tell her I said hi! Miss you guys! Have fun! :)", queue=False)
             $ emily.messenger.addReply("Will do. We miss you too :)")
 
             label v15s31_PhoneContinue:

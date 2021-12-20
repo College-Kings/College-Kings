@@ -1392,7 +1392,7 @@ label v15s24:
 
     if aubrey.relationship.value >= Relationship.FWB.value: #if RS or Tamed 
         $ aubrey.messenger.addReply("Ooh, Is it a naked surprise? ;)", func=None)
-        $ aubrey.messenger.newMessage("Haha, you'll have to come find out. Hurry up!")
+        $ aubrey.messenger.newMessage("Haha, you'll have to come find out. Hurry up!", queue=False)
 
     else:
         $ aubrey.messenger.addReply("Ooh, okay. See you soon.", func=None)
