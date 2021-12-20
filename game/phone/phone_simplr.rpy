@@ -175,7 +175,7 @@ screen simplr_contacts():
 
     use base_phone:
 
-        add "images/contactsscreen.webp" at truecenter # Contact Screen Background
+        add "images/phone/contacts_screen.webp" at truecenter # Contact Screen Background
 
         fixed:
             xysize(375, 78)
