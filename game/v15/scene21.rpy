@@ -138,6 +138,8 @@ label v15s21:
                 $ v15_meeting_points += 1
                 $ add_point(KCT.BRO)
 
+                show screen teacher_conviction_bar(meeting_points / 7 * 100, "v15_notes_clicks", "HAGGLING THE PRICE", "MR LEE",  "images/v15/conviction_bars/mr_lee_background.png")
+
                 scene v15s21_6d #FPP. same as v15s21_6b Mr. Lee is still looking at MC, mouth closed, slight smile
                 with dissolve
 
@@ -248,6 +250,8 @@ label v15s21:
             "They just have to ask":
                 $ v15_meeting_points += 1
                 $ add_point(KCT.BRO)
+
+                show screen teacher_conviction_bar(meeting_points / 7 * 100, "v15_notes_clicks", "HAGGLING THE PRICE", "MR LEE",  "images/v15/conviction_bars/mr_lee_background.png")
 
                 scene v15s21_6b
                 with dissolve
@@ -373,6 +377,8 @@ label v15s21:
             "Improve students' livelihood":
                 $ v15_meeting_points += 1
                 $ add_point(KCT.BRO)
+
+                show screen teacher_conviction_bar(meeting_points / 7 * 100, "v15_notes_clicks", "HAGGLING THE PRICE", "MR LEE",  "images/v15/conviction_bars/mr_lee_background.png")
 
                 scene v15s21_6b
                 with dissolve
@@ -558,6 +564,8 @@ label v15s21:
                 $ v15_meeting_points += 1
                 $ add_point(KCT.BRO)
 
+                show screen teacher_conviction_bar(meeting_points / 7, "v15_notes_clicks", "HAGGLING THE PRICE", "MR LEE",  "images/v15/conviction_bars/mr_lee_background.png")
+
                 scene v15s21_6b
                 with dissolve
 
@@ -600,6 +608,8 @@ label v15s21:
 
         if not v13_perfume: # -if MC gave Mr. Lee the bonsai tree gift in Amsterdam (had scene 13.57a instead of 13.57) = (bonus correct_points +1)
             $ v15_meeting_points += 1
+
+            show screen teacher_conviction_bar(meeting_points / 7, "v15_notes_clicks", "HAGGLING THE PRICE", "MR LEE",  "images/v15/conviction_bars/mr_lee_background.png")
 
             scene v15s21_7c
             with dissolve
@@ -652,6 +662,8 @@ label v15s21:
 
         if v11_ride_with_mrlee:  # -if MC took car journey with Mr. Lee in Europe (had scene 11.37a instead of 11.37b, didn't walk with Imre and Ryan) = (bonus correct_points +1)
             $ v15_meeting_points += 1
+
+            show screen teacher_conviction_bar(meeting_points / 7, "v15_notes_clicks", "HAGGLING THE PRICE", "MR LEE",  "images/v15/conviction_bars/mr_lee_background.png")
 
             scene v15s21_6d
             with dissolve
@@ -740,6 +752,7 @@ label v15s21:
 
         if kct == "loyal":
             $ v15_meeting_points += 1
+            show screen teacher_conviction_bar(meeting_points / 7, "v15_notes_clicks", "HAGGLING THE PRICE", "MR LEE",  "images/v15/conviction_bars/mr_lee_background.png")
 
         # Can gain up to 7 points: 4 from answers, 1 from the car ride, 1 from bonsai and 1 from kct. Need 2+ points to convince him
         # Mr. Lee is medium difficulty to convince. Need 2 answers if you fail everything else
@@ -1102,6 +1115,8 @@ label v15s21:
 
         if ms_rose.relationship.value >= Relationship.FWB.value:
             $ v15_meeting_points += 2
+
+            show screen teacher_conviction_bar(meeting_points / 8 * 100, "v15_notes_clicks", "HAGGLING THE PRICE", "MR LEE",  "images/v15/conviction_bars/ms_rose_background.png")
         
             scene v15s21_10d # FPP. Chloe is walking away with her back turned and can't see Mc or Ms. Rose, Ms. Rose is giving Mc a wink, slight smile, mouth closed
             with dissolve
@@ -1192,6 +1207,8 @@ label v15s21:
 
             "Stay quiet":
                 $ v15_meeting_points += 1
+
+                show screen teacher_conviction_bar(meeting_points / 8 * 100, "v15_notes_clicks", "HAGGLING THE PRICE", "MR LEE",  "images/v15/conviction_bars/mr_lee_background.png")
 
                 scene v15s21_13b
                 with dissolve
@@ -1293,6 +1310,8 @@ label v15s21:
                 $ v15_meeting_points += 1
                 $ add_point(KCT.BOYFRIEND)
 
+                show screen teacher_conviction_bar(meeting_points / 8 * 100, "v15_notes_clicks", "HAGGLING THE PRICE", "MR LEE",  "images/v15/conviction_bars/mr_lee_background.png")
+
                 scene v15s21_13b
                 with dissolve
 
@@ -1391,6 +1410,8 @@ label v15s21:
                 $ v15_meeting_points += 1
                 $ add_point(KCT.BRO)
                 $ add_point(KCT.BOYFRIEND)
+
+                show screen teacher_conviction_bar(meeting_points / 8 * 100, "v15_notes_clicks", "HAGGLING THE PRICE", "MR LEE",  "images/v15/conviction_bars/mr_lee_background.png")
 
                 scene v15s21_13b
                 with dissolve
@@ -1574,6 +1595,8 @@ label v15s21:
             "Consider it":
                 $ v15_meeting_points += 1
 
+                show screen teacher_conviction_bar(meeting_points / 8 * 100, "v15_notes_clicks", "HAGGLING THE PRICE", "MR LEE",  "images/v15/conviction_bars/mr_lee_background.png")
+
                 scene v15s21_13b
                 with dissolve
 
@@ -1601,6 +1624,8 @@ label v15s21:
 
         if v13_perfume: # -if MC gave Ms. Rose the perfume bottle gift in Amsterdam (had scene 13.57 instead of 13.57a) = (bonus correct_points +1)
             $ v15_meeting_points += 1
+
+            show screen teacher_conviction_bar(meeting_points / 8 * 100, "v15_notes_clicks", "HAGGLING THE PRICE", "MR LEE",  "images/v15/conviction_bars/mr_lee_background.png")
 
             scene v15s21_7l
             with dissolve
@@ -1674,6 +1699,7 @@ label v15s21:
 
         if kct == "confident":
             $ v15_meeting_points += 1
+            show screen teacher_conviction_bar(meeting_points / 8 * 100, "v15_notes_clicks", "HAGGLING THE PRICE", "MR LEE",  "images/v15/conviction_bars/mr_lee_background.png")
 
         # Can gain up to 8 points: 4 from answers, 2 from relationship with Ms. Rose, 1 from perfume and 1 from kct. Need 3+ points to convince her
         # If Relationship, Ms. Rose is easy to convince (just need 1 correct answer even if you fail everything else)
