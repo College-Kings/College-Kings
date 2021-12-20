@@ -4,9 +4,6 @@ init python:
         setattr(store, "v14_lindsey_popularity", amount)
         new_var = getattr(store, "v14_lindsey_popularity")
 
-        print(old_var)
-        print(new_var)
-
         renpy.show_screen("chicks_presidency_bar", old_var, new_var)
 
 
