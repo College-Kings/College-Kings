@@ -29,7 +29,7 @@ label v14s14a:
     scene v14s14a_1a # TPP. MC sitting up on his bed, confused face, mouth closed.
     with dissolve
 
-    $ chloe.messenger.newMessage(_("I'm gonna need your help with the president thing, big time"), queue=False)
+    $ chloe.messenger.newMessage(_("I'm gonna need your help with the President thing, big time"), queue=False)
     play sound "sounds/vibrate.mp3"
 
     u "*Phone vibrates*"

@@ -113,7 +113,7 @@ label v14s36:
     scene v14s36_4c # FPP. same as v14s36_4b Jenny's mouth is closed
     with dissolve
 
-    u "Yeah. Chloe, who is the current president, and Lindsey are running against each other for presidency."
+    u "Yeah. Chloe, who is the current President, and Lindsey are running against each other for presidency."
 
     scene v14s36_4
     with dissolve

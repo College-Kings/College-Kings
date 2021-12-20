@@ -74,7 +74,7 @@ label v14s15:
     scene v14s15_7f # FPP Same as v14s15_7d, but mouth open.
     with dissolve
 
-    imre "Isn't it obvious? Lindsey is running for president, dude."
+    imre "Isn't it obvious? Lindsey is running for President, dude."
 
     scene v14s15_7e
     with dissolve

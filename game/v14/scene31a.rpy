@@ -394,7 +394,7 @@ label v14s31a:
     scene v14s31a_3e
     with dissolve
 
-    ca "You already got a shit ton of beef with Grayson. How would an alliance work if the president doesn't even fuck with you like that?"
+    ca "You already got a shit ton of beef with Grayson. How would an alliance work if the President doesn't even fuck with you like that?"
 
     scene v14s31a_3d
     with dissolve
@@ -417,7 +417,7 @@ label v14s31a:
     menu:
         "Say Chloe is the hotter chick":
             $ add_point(KCT.BRO)
-            u "Tell everyone Chloe is the hotter chick and that the hottest chick should be the Chicks president."
+            u "Tell everyone Chloe is the hotter chick and that the hottest chick should be the Chicks President."
 
             scene v14s31a_3a
             with dissolve
@@ -471,7 +471,7 @@ label v14s31a:
     scene v14s31a_6c # FPP Same angle as 6, Cameron has taken a step back and looks shocked, mouth open. Chloe's mouth closed
     with dissolve
 
-    ca "How did you know I wanted to run for president?"
+    ca "How did you know I wanted to run for President?"
 
     scene v14s31a_5e
     with dissolve

@@ -144,7 +144,7 @@ label v14s44:
 
             el "It's not that I have anything against her, dude."
 
-            el "I'm used to Chloe being president, you know?"
+            el "I'm used to Chloe being President, you know?"
 
             scene v14s44_4
             with dissolve

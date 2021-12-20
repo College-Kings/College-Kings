@@ -219,7 +219,7 @@ label v14s23:
     scene v14s23_2c
     with dissolve
 
-    ch "I wouldn't wish that on anyone, and as a fellow president you have my best wishes."
+    ch "I wouldn't wish that on anyone, and as a fellow President you have my best wishes."
 
     scene v14s23_4a
     with dissolve

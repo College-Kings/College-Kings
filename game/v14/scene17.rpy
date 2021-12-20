@@ -567,7 +567,7 @@ label v14s17:
             scene v14s17_10b
             with dissolve
 
-            u "Lindsey is the one running for president. Not you."
+            u "Lindsey is the one running for President. Not you."
 
             scene v14s17_10a
             with dissolve
@@ -634,7 +634,7 @@ label v14s17:
 
                     u "*Whispers* Truth is, I don't want her to win."
 
-                    u "*Whispers* It's Chloe's last year and if I can keep Lindsey from taking over, that's what I'll do. She doesn't need to be president."
+                    u "*Whispers* It's Chloe's last year and if I can keep Lindsey from taking over, that's what I'll do. She doesn't need to be President."
 
                     scene v14s17_13a
                     with dissolve
