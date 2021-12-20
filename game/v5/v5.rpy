@@ -3696,7 +3696,7 @@ label youfinishadam: #### You beat adam
     scene s428a #chrisclose up mouth closed impressed smile
     with dissolve
 
-    u "Oh shit, you're Chris, president of the Wolves, right?"
+    u "Oh shit, you're Chris, President of the Wolves, right?"
 
     scene s428
     with dissolve
@@ -3868,7 +3868,7 @@ label adamfinish: ###Adam beats you
     scene s428c
     with dissolve
 
-    u "You're Chris, president of the Wolves, right?"
+    u "You're Chris, President of the Wolves, right?"
 
     scene s428b
     with dissolve

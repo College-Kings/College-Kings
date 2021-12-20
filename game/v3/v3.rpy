@@ -73,7 +73,7 @@ label v3start:
 
     cl "Girls join the Chicks 'cause they wanna party and have fun."
 
-    cl "If I don't show up to Ape parties as the Chicks' president, I risk losing the relationships I've built and being voted out."
+    cl "If I don't show up to Ape parties as the Chicks' President, I risk losing the relationships I've built and being voted out."
 
     scene s203e
     with dissolve
@@ -3023,7 +3023,7 @@ label continueq:
     scene s281 # close up riley sitting empathy FIRST PERSON
     with dissolve
 
-    ri "So what's going on between you and Chloe? She's the president of the Chicks, right?"
+    ri "So what's going on between you and Chloe? She's the President of the Chicks, right?"
 
     menu:
         "I like her":

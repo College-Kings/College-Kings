@@ -546,7 +546,7 @@ label starta: #for compatibility only
 
     ry "They're the best fraternity in the entire University. They get so many girls."
 
-    ry "And...their president is the current Fight King."
+    ry "And...their President is the current Fight King."
 
     scene s44c
     with dissolve
@@ -756,7 +756,7 @@ label starta: #for compatibility only
 
     scene s52
     with dissolve
-    la "They're one of the two sororities at San Vallejo. My sister Autumn is their president, so I know most of them quite well."
+    la "They're one of the two sororities at San Vallejo. My sister Autumn is their President, so I know most of them quite well."
 
     scene s53a
     with dissolve
@@ -3265,7 +3265,7 @@ label v1_freeRoam2_josh:
     scene fr2jo2a
     with dissolve
 
-    au "Oh no, I'm a junior, vice president of the Chicks actually."
+    au "Oh no, I'm a junior, vice President of the Chicks actually."
 
     menu:
         "Flirt":
@@ -3393,7 +3393,7 @@ label v1_freeRoam2_josh:
     scene fr2jo2a
     with dissolve
 
-    au "He's the president of the Apes and the current Fight King."
+    au "He's the President of the Apes and the current Fight King."
 
     if v1_aubreywannafight:
         au "I think he's upstairs, but I'm not sure."
@@ -3729,9 +3729,9 @@ label v1_freeRoam2_grayson:
     scene fr2gr2b
     with dissolve
 
-    gr "We're building the Apes' legacy here. 10 years from now, I'll be the most successful Ape president in history."
+    gr "We're building the Apes' legacy here. 10 years from now, I'll be the most successful Ape President in history."
 
-    gr "And you could be the most successful vice president."
+    gr "And you could be the most successful vice President."
 
     scene fr2gr2c
     with dissolve
@@ -3782,7 +3782,7 @@ label fr2end: #for compatibility only
     scene s109
     with dissolve
 
-    ry "I think that's Chloe, right? I talked to some of the Chicks and she's like their president."
+    ry "I think that's Chloe, right? I talked to some of the Chicks and she's like their President."
 
     ry "Also, possibly the hottest girl I've seen in my life."
 
@@ -4029,7 +4029,7 @@ label fr2end: #for compatibility only
     with dissolve
 
     label bf_bd: #for compatibility only
-    u "So, you're the president of the Chicks, right?"
+    u "So, you're the President of the Chicks, right?"
 
     scene s116b
     with dissolve
@@ -4039,7 +4039,7 @@ label fr2end: #for compatibility only
     scene s116c
     with dissolve
 
-    u "Are you close with Aubrey then? She told me she was the vice president."
+    u "Are you close with Aubrey then? She told me she was the vice President."
 
     scene s116d
     with dissolve

@@ -248,7 +248,7 @@ label v7start:
 
     u "Now that's actually insane."
 
-    u "So all these guys were Wolves presidents too?"
+    u "So all these guys were Wolves Presidents too?"
 
     scene s674d
     with dissolve
@@ -263,18 +263,18 @@ label v7start:
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
 
-            u "So, I don't know if it's weird asking, but if you're not one of the Fight Kings, how come you're the current president?"
+            u "So, I don't know if it's weird asking, but if you're not one of the Fight Kings, how come you're the current President?"
 
             scene s674
             with dissolve
 
-            ch "Well the year before me, Chuck was president. It was his last year, so I got voted in."
+            ch "Well the year before me, Chuck was President. It was his last year, so I got voted in."
 
-            ch "We need a new president every one or two years so some presidents aren't Fight Kings."
+            ch "We need a new President every one or two years so some Presidents aren't Fight Kings."
 
             ch "Of course my goal is to become one and get on that wall."
 
-            ch "But I also believe that being president whilst someone else wins for the Wolves is just as big of an honor as winning yourself."
+            ch "But I also believe that being President whilst someone else wins for the Wolves is just as big of an honor as winning yourself."
 
             ch "A good leader doesn't need to be the best fighter."
 
@@ -686,7 +686,7 @@ label hd_bd:
         scene s699b
         with dissolve
 
-        no "Maybe... Like it's fine that he's president and all and that's important, but he's been with everyone all night."
+        no "Maybe... Like it's fine that he's President and all and that's important, but he's been with everyone all night."
 
         no "I just wanted to know if he would wanna go to bed soon so we can at least have some private couple time this week."
 
@@ -2980,7 +2980,7 @@ label beachlauren:
         scene s749b #Lauren no particular emotion
         with dissolve
 
-        la "Yeah, I mean I know most of them really well and obviously my sister's the president so it's a pretty easy decision."
+        la "Yeah, I mean I know most of them really well and obviously my sister's the President so it's a pretty easy decision."
 
         scene s749c
         with dissolve
@@ -3132,7 +3132,7 @@ label beachlauren:
         scene s742
         with dissolve
 
-        la "Yeah, I mean I know most of them really well and obviously my sister's the president so it's a pretty easy decision."
+        la "Yeah, I mean I know most of them really well and obviously my sister's the President so it's a pretty easy decision."
 
         scene s742a
         with dissolve
@@ -12811,7 +12811,7 @@ label chloe_dance:
     scene sfr4cl45f # chloe serious, pose 2
     with dissolve
 
-    cl "Being a fraternity president is exhausting, but it doesn't mean you can treat the people around you like they're unimportant."
+    cl "Being a fraternity President is exhausting, but it doesn't mean you can treat the people around you like they're unimportant."
 
     cl "He always acts like this super nice guy, but some of the shit he's done..."
 
@@ -14907,7 +14907,7 @@ label fr4nora2:
             "Defend Chris":
                 $ add_point(KCT.BRO)
 
-                u "I mean I get where he's coming from. He's got his own priorities to deal with too. And he's president of a frat-"
+                u "I mean I get where he's coming from. He's got his own priorities to deal with too. And he's President of a frat-"
 
                 scene sfr4no5b
                 with dissolve

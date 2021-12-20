@@ -6795,7 +6795,7 @@ label wakeupa:
         scene s664a
         with dissolve
 
-        u "Imre, do you know the president of the Apes?"
+        u "Imre, do you know the President of the Apes?"
 
         scene s665 # Closeup imre looking at you curious
         with dissolve
@@ -8890,12 +8890,12 @@ label v6_fr3nora1:
     scene sfr3no2d
     with dissolve
 
-    no "I told Chloe that I don't think she's been a good president for the Chicks and she started some drama."
+    no "I told Chloe that I don't think she's been a good President for the Chicks and she started some drama."
 
     scene sfr3no2e
     with dissolve
 
-    u "What'd she do for you to think she's not a good president?"
+    u "What'd she do for you to think she's not a good President?"
 
     scene sfr3no2d
     with dissolve
@@ -8923,7 +8923,7 @@ label v6_fr3nora1:
 
             u "Chloe's not manipulative. She's just being bad mouthed because people like you see her as a threat."
 
-            u "I mean, what kinda friend are you to feed into all the shit people say about her just because you're jealous that she's the president and you're not."
+            u "I mean, what kinda friend are you to feed into all the shit people say about her just because you're jealous that she's the President and you're not."
 
             scene sfr3no2k # nora pissed at you
             with dissolve
@@ -9156,7 +9156,7 @@ label v6_fr3chloe1:
 
     cl "It's just... It's just... All the Chicks met today to discuss some stuff, like new recruits and budget, et cetera."
 
-    cl "*Sniff* Then all of the sudden, Nora stands up and says that I'm not doing my job well and she wants me to step down as president."
+    cl "*Sniff* Then all of the sudden, Nora stands up and says that I'm not doing my job well and she wants me to step down as President."
 
     cl "I mean, I knew Nora didn't like me, but... she could have just told me in private, you know?"
 
@@ -9234,7 +9234,7 @@ label v6_fr3chloe1:
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
 
-            u "Nora's being stupid. You're a great president. You're smart, you're driven and you care so much..."
+            u "Nora's being stupid. You're a great President. You're smart, you're driven and you care so much..."
 
             u "She's probably just jealous."
 
