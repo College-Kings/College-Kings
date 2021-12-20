@@ -850,7 +850,7 @@ label v15s18a_AutumPenelope:
 
             aut "It's supposed to turn a virgin into a natural."
 
-            aut "The frat presidents would each choose one Freshman on Halloween, a virgin obviously, and they were given the list to complete by midnight."
+            aut "The frat Presidents would each choose one Freshman on Halloween, a virgin obviously, and they were given the list to complete by midnight."
 
             scene v15s18apen_6b
             with dissolve

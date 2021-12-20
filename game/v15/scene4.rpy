@@ -1371,7 +1371,7 @@ label v15s4:
                 scene v15s4_59f
                 with dissolve
 
-                u "Ahhh... So, the key to being the perfect president is marijuana?"
+                u "Ahhh... So, the key to being the perfect President is marijuana?"
 
                 scene v15s4_59d
                 with dissolve
@@ -1452,7 +1452,7 @@ label v15s4:
                 scene v15s4_59f
                 with dissolve
 
-                u "Ahhh... So, the key to being the perfect president is marijuana?"
+                u "Ahhh... So, the key to being the perfect President is marijuana?"
 
                 scene v15s4_59d
                 with dissolve

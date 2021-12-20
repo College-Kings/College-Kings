@@ -150,7 +150,7 @@ label v15s21:
                 scene v15s21_7
                 with dissolve
 
-                cl "I have to agree, she is. Which is why I'm doing whatever it takes to prove to my peers that I'm a better fit for president."
+                cl "I have to agree, she is. Which is why I'm doing whatever it takes to prove to my peers that I'm a better fit for President."
 
                 scene v15s21_6
                 with dissolve

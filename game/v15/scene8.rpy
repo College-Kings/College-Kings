@@ -78,7 +78,7 @@ label v15s8:
         
         chloe_board.add_approach("Tuition",
             "Less tuition for all Chicks",
-            opinion="\"The one thing I have always dreamed of being able to do as the president of the Chicks is to get all members free tuition. People don't like the idea of the President receiving free tuition, and some girls still don't know that's the case... I want all of the Chicks to come to San Vallejo for free so they can focus on their education and the sorority. If we make a good enough case, I might be able to convince the Dean into making this happen.\"")
+            opinion="\"The one thing I have always dreamed of being able to do as the President of the Chicks is to get all members free tuition. People don't like the idea of the President receiving free tuition, and some girls still don't know that's the case... I want all of the Chicks to come to San Vallejo for free so they can focus on their education and the sorority. If we make a good enough case, I might be able to convince the Dean into making this happen.\"")
 
         chloe_board.add_task("Sabotage",
             "Secretly record Lindsey",

@@ -431,7 +431,7 @@ label v15s12:
         with dissolve
 
         li "So, here's what I'm thinking... Basically, our focus this time is to gain more allies."
-        li "Allies that we can trust to support us now, during the election, and also in the future, when I'm president of the Chicks."
+        li "Allies that we can trust to support us now, during the election, and also in the future, when I'm President of the Chicks."
 
         scene v15s12_8b # FPP. Same as v15s12_8a, but mouth closed [Janitor's closet].
         with dissolve

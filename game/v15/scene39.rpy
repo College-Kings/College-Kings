@@ -498,7 +498,7 @@ label v15s39:
     scene v15s39_8f # FPP. same as v15s39_8f Lindsey is now looking at Autumn, still no expression, mouth is still open
     with dissolve
 
-    li "The Chick's president should be supporting you at all your events, Autumn. Wouldn't you prefer that?"
+    li "The Chicks' President should be supporting you at all your events, Autumn. Wouldn't you prefer that?"
 
     scene v15s39_11c
     with dissolve
@@ -850,7 +850,7 @@ label v15s39:
                             scene v15s39_8r # FPP. same as v15s39_8n Lindsey's mouth is open, still a full smile, still looking at MC, still drunk appearance
                             with dissolve
 
-                            li "*Drunk* Without the president's scholarship, she'd have to sell all of that plastic back to the surgeons... *Laughs*"
+                            li "*Drunk* Without the President's scholarship, she'd have to sell all of that plastic back to the surgeons... *Laughs*"
 
                             if v15_lindsey_inviteseb:
                                 scene v15s39_7d
@@ -1032,7 +1032,7 @@ label v15s39:
 
                         li "What do you want me to say? That she gets everything handed to her?"
 
-                        li "Or that the only reason she wants to president is because she can't afford tuition?"
+                        li "Or that the only reason she wants to be President is because she can't afford tuition?"
 
                         scene v15s39_8u # FPP. same as v15s39_8c Lindsey shrugs her shoulders, increases to a full smile, still looking at MC, mouth is still open
                         with dissolve
