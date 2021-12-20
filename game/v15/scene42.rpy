@@ -77,7 +77,7 @@ label v15s42:
             scene v15s42_7
             with dissolve
 
-            am "You're in an old meeting room that the faculty doesn't... Use anymore."
+            am "You're in an old meeting room that the faculty doesn't... use anymore."
 
             scene v15s42_7a
             with dissolve
@@ -156,7 +156,6 @@ label v15s42:
     u "(Since Tuesday?)"
 
     if joinwolves:
-
         u "(Chris said he saw her recently, so that can't be true.)"
 
     scene v15s42_7b

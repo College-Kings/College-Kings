@@ -378,7 +378,6 @@ default v15_ph_riley_upset = False
 default v15_seduce_ms_rose = False # Requested Variables for v15s21
 default v15_stuck_up_for_nora = False
 default v15_threaten_ms_rose = False # Requested Variables for v15s21
-default v15_told_Emily_I_Love_You = False # Placeholder?
 default v15_took_notes = False
 default v15s18_LaurensBed = False ###Still need to check all combinations
 default v15s18_mention_list = False

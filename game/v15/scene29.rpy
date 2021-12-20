@@ -30,7 +30,7 @@ label v15s29:
     scene v15s29_3
     with dissolve
 
-    if v15_told_Emily_I_Love_You:
+    if v14_emily_ily:
         scene v15s29_3b # TPP. Mc looks at his phone on the nightstand, slight smile, mouth closed
         with dissolve
 
