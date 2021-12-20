@@ -64,8 +64,8 @@ label v15s20:
 
         cl "Thanks, so here's my game plan so far... I've written down some notes."
 
+        call screen v15_teacher_brief_icon("mr_lee")
         # -The UI pops up showing Mr. Lee's character brief-
-        # For you Oscar <3
 
         cl "We already have a good idea what Mr. Lee is all about. He likes professionalism and manners."
 
@@ -131,8 +131,8 @@ label v15s20:
 
         cl "I've also written down some notes for the meeting."
 
+        show screen v15_teacher_brief_icon("ms_rose")
         # -The UI pops up showing Ms. Rose's character brief-
-        # Oscar :D <3
 
         cl "Basically, Ms. Rose is all about the girls. She loves to support other women, to help them reach their goals, etc..."
 
