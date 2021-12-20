@@ -1,4 +1,4 @@
-screen teacher_conviction_bar(percentage, variable, title, teacher_name, background):
+screen teacher_conviction_bar(percentage, title, teacher_name, background):
     tag conviction_bar
 
     default old_value = animated_value_percent
@@ -11,11 +11,9 @@ screen teacher_conviction_bar(percentage, variable, title, teacher_name, backgro
             # at presidency_bar
             value AnimatedValue(percentage, 100, 2, old_value)
             left_bar Frame("gui/bar/blue.webp", 10, 0)
-            right_bar Frame("gui/bar/yellow.webp", 10, 0)
+            right_bar Frame("gui/bar/ruby.png", 10, 0)
 
         text teacher_name xpos 20 yalign 0.5 yoffset 5 style "conviction_bar_header"
-
-        text str(getattr(store, variable)) align (0.5, 0.5) style "conviction_bar_body"
 
     add background:
         # at presidency_bar
