@@ -47,7 +47,7 @@ default bro = 1
 default boyfriend = 2
 default troublemaker = 1
 
-#Scenes
+# Scenes
 default sceneList = set()
 
 # 1.0 - 6.0
@@ -294,6 +294,9 @@ default lindsey_board = PlanningBoard("images/v14/chicks_presidency_race/plannin
 default v14_lindsey_sell = False ##APPROACH A (v14_lindsey_steal = v14_help_lindsey and not v14_lindsey_sell)
 default v14_pics_with_linds = False ##TASK A1B (v14_pics_no_linds = v14_lindsey_sell and not v14_pics_with_linds)
 default v14_date_distraction = False ###APPROACH B1B (v14_concert_distraction = (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction)
+
+# Animated Bar
+default animated_value_percent = 0
 
 default AmberLoyal = False #????
 default chrissus = 0
