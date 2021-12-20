@@ -2094,7 +2094,6 @@ label v15s18c_chris_penelope:
 
     menu:
         "Don't interrupt":
-
             u "(Sorry, Penelope. I don't want anything to do with sad boy Chris, I'm outta here!)"
 
             call screen v15s18a_upstairsroom

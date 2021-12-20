@@ -627,7 +627,7 @@ label v15s28:
         scene v15s28_9c
         with dissolve
 
-        sa "It's 0% alcohol. Look."
+        sa "It's 0\% alcohol. Look."
 
         # -Samantha holds the bottle so MC can read it, we don't need to read it, just let him do it, unless you can afford to fake an entire bottle label-
         scene v15s28_9f # FPP Same angle as 9, Samantha holding bottle out for MC to read the label

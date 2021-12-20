@@ -9,7 +9,7 @@ label v15s37:
 
     if v15_chloe_lindseysabotage:
         scene v15s37_2 # TPP. Close up of MC pulling out his phone, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         u "(I still need to send the recording to Chloe. I hope it's useful to her.)"
 
@@ -19,7 +19,7 @@ label v15s37:
         pause 0.75
 
         scene v15s37_2b # TPP. Show MC pressing a different space on part of his phone, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         pause 0.75
 

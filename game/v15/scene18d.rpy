@@ -10,12 +10,12 @@ label v15s18d:
     pause 0.75
     
     scene v15s18d_2 # TPP. Show MC standing by the stairs with a drink in his hand watching people leave, slight smile, mouth closed
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v15s18d_3 # TPP. Show Chris stopped at Lauren holding the door open, Both slight smile, Chris mouth open, Lauren mouth closed.
-    with dissolve 
+    with dissolve
 
     ch "Happy birthday, Lauren. It was a great party."
 
@@ -35,12 +35,12 @@ label v15s18d:
     pause 0.75
 
     scene v15s18d_2a # TPP. Show MC standing by the stairs with a drink Imre stepping infront of him.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v15s18d_5 # FPP. MC looking at Imre, Imre looking at MC, Imre slight smile, mouth open.
-    with dissolve 
+    with dissolve
 
     imre "Let's see how you did with the list, huh?"
 
@@ -50,14 +50,14 @@ label v15s18d:
     if v15s18_partytask > 4:
 
         scene v15s18d_5a # FPP. MC looking at Imre, Imre looking at the List, Imre slight smile, mouth open.
-        with dissolve 
+        with dissolve
 
         imre "Oh! You actually did pretty well..."
 
         imre "I'm impressed."
 
         scene v15s18d_7 # TPP. Shot of Imre putting the challenge list in his pocket while infront of MC, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         pause 0.75
 
@@ -111,7 +111,7 @@ label v15s18d:
         u "*Laughs* Thanks, Imre..."
 
         scene v15s18d_5
-        with dissolve 
+        with dissolve
 
         imre "The night isn't over yet. You can still get at least one more, like the sex."
 
@@ -145,7 +145,7 @@ label v15s18d:
 
 
     scene v15s18d_1a # TPP. Show Lauren holding the door open for all the guest to leave, now looking over in Imre and MC's direction, Lauren with a raised brow, confused, mouth open.
-    with dissolve 
+    with dissolve
     
     la "One what? Sex?"
 
@@ -155,7 +155,7 @@ label v15s18d:
     pause 0.75
 
     scene v15s18d_5d # FPP. MC looking at Imre, Imre looking at Lauren, Imre slight smile, mouth open.
-    with dissolve 
+    with dissolve
 
     imre "Oh, shit! Hi, Lauren. *Laughs* You really snuck up on us there."
 
@@ -172,17 +172,17 @@ label v15s18d:
     pause 0.75
 
     scene v15s18d_10 # FPP. MC looking past Lauren at Imre, Imre at the front door looking at MC, Imre holding up his pointer finger and his other hand into a clenched fist as he is imitating intercourse, Imre slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v15s18d_10a # FPP. MC looking past Lauren at Imre, Imre at the front door looking at MC, Imre putting his pointer finger into his other hand that is a clenched fist as he is imitating intercours, Imre slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v15s18d_8b # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre in the background, Lauren confused smile, mouth open.
-    with dissolve 
+    with dissolve
 
     la "What was he talking about?"
 
@@ -197,7 +197,7 @@ label v15s18d:
     pause 0.75
 
     scene v15s18d_11 # TPP. Show Imre walking away from the house, slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -267,7 +267,7 @@ label v15s18d:
                     u "That's perfectly fine. Thank you."
 
                     scene v15s18d_12b
-                    with dissolve 
+                    with dissolve
                     
                     pause 0.75
 
@@ -386,7 +386,7 @@ label v15s18d:
                     pause 0.75
 
                     scene v15s18d_12a 
-                    with dissolve 
+                    with dissolve
 
                     pause 0.75
 
@@ -417,7 +417,7 @@ label v15s18d:
 
             if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v15s18d_8g # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren confused, mouth open.
-                with dissolve 
+                with dissolve
 
                 la "You don't want to have sex with your girlfriend on her birthday?"
 
@@ -465,7 +465,7 @@ label v15s18d:
                 pause 0.75
 
                 scene v15s18d_12b # TPP. Show Lauren and MC walking up the stairs, both slight smile, mouth closed.
-                with dissolve 
+                with dissolve
 
                 pause 0.75
 

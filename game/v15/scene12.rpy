@@ -12,7 +12,7 @@ label v15s12:
         pause 0.75
 
         scene v15s12_2 # FPP. Lindsey, happy, smiling, leaning in to whisper to MC, mouth open [Checkpoint A]. 
-        with dissolve 
+        with dissolve
 
         li "Oh! *Whispers* I forgot to tell you, I got Chloe's diary open."
 

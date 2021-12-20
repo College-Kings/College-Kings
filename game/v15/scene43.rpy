@@ -12,12 +12,12 @@ label v15s43:
     play sound "sounds/knock.mp3"
 
     scene v15s43_2 # FPP. Amber and MC at the front of the wolves house, MC looking at Amber, Amber looking at the door, Amber knocking on the door, Amber slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v15s42_2a # FPP. Amber and MC both looking at the door waiting for an answer, Amber slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     if joinwolves:
         scene v15s43_2b # FPP. Amber looking at MC, MC looking at Amber, Amber slight smile, mouth closed.
@@ -38,7 +38,7 @@ label v15s43:
         pause 0.75
 
         scene v15s42_2a 
-        with dissolve 
+        with dissolve
 
         menu:
             "Try the door handle":
@@ -269,7 +269,7 @@ label v15s43:
     pause 0.75
 
     scene v15s43_8 # TPP. MC and Amber standing in the living room, MC looking at Amber, Amber looking at MC, Amber suspicious, mouth closed, MC suspicious, mouth closed.
-    with dissolve 
+    with dissolve
 
     menu:
         "Call for Chris":
@@ -549,7 +549,7 @@ label v15s43:
             play sound "sounds/thud.mp3"
 
             scene v15s43_16 # TPP. Show MC slamming his hands on the table, MC angry, mouth open.
-            with dissolve 
+            with dissolve
 
             u "You're respecting nobody with that attitude!"
 

@@ -22,22 +22,22 @@ label v15s18e:
     pause 0.75
 
     scene v15s18e_3 # TPP. Of just Lauren's costume landing somewhere on the floor after being tossed off.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v15s18e_4 # TPP. MC and Lauren now in the middle of the room, Lauren pulling off MC's costume, MC slight smile, mouth closed, Lauren with a flirty expression, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v15s18e_3a # TPP. Just MC's costume landing next to Lauren's after being tossed off.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v15s18e_4a # TPP. MC and Lauren in the middle of the room, naked, and kissing.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -53,12 +53,12 @@ label v15s18e_neck:
     $ v15s18e_frneck = True
 
     scene v15s18ene_1 # TPP. Close up of Lauren's bare neck 
-    with dissolve 
+    with dissolve
 
     menu:
         "Kiss":
             scene v15s18ene_2 # TPP. Show MC kissing Lauren's neck, Lauren flirty, mouth open.
-            with dissolve 
+            with dissolve
 
             la "Ooh... That feels nice, hehe."
 
@@ -115,12 +115,12 @@ label v15s18e_neck:
             pause 0.75
 
             scene v15s18ene_5
-            with dissolve 
+            with dissolve
 
             pause 0.75
 
             scene v15s18ene_5a 
-            with dissolve 
+            with dissolve
             
             pause 0.75
 
@@ -212,7 +212,7 @@ label v15s18e_boobs:
             
             if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v15s18ebo_5 # FPP. MC looking up at Lauren his boobs in his face, Lauren biting her lip.
-                with dissolve 
+                with dissolve
 
                 u "I love you..."
 
@@ -237,7 +237,7 @@ label v15s18e_boobs:
             pause 0.75
 
             scene v15s18ebo_5a
-            with dissolve 
+            with dissolve
 
             la "Please..."
 
@@ -356,7 +356,7 @@ label v15s18e_feet:
 
 label v15s18e_vagina:
     scene v15s18eva_1 # FPP. MC looking at Lauren's vagina
-    with dissolve 
+    with dissolve
 
     u "(Now for the finale... Haha.)"
 
@@ -364,7 +364,7 @@ label v15s18e_vagina:
 
 label v15s18e_end:
     scene v15s18eend_1 # Reuse scene v15s18ene_3
-    with dissolve 
+    with dissolve
 
     u "You just back and relax, birthday girl."
 
@@ -437,7 +437,7 @@ label v15s18e_end:
     pause 0.75
 
     scene v15s18eend_5 # FPP. MC looking down at Lauren, Lauren looking at MC, Lauren sitting on the edge of the bed, Lauren flirty, mouth open.
-    with dissolve 
+    with dissolve
 
     la "Let me taste you now. Please?"
 
@@ -504,7 +504,7 @@ label v15s18e_end:
     image v15lausf2f = Movie(play="images/v15/Scene18e/v15lausf2f.webm", loop=True, image="images/v15/Scene18e/v15lausf2Start.webp", start_image="images/v15/Scene18e/v15lausf2Start.webp")
 
     scene v15lausf # Ignore as anim
-    with dissolve 
+    with dissolve
     pause 0.75
 
     la "I... *Moans* I love this position."
@@ -701,7 +701,7 @@ label v15s18e_end:
     pause 0.75
 
     scene v15s18eend_11 # TPP. Close up of naked lauren entering the bathroom
-    with dissolve 
+    with dissolve
 
     pause 0.75
 

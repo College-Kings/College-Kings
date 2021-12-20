@@ -146,7 +146,7 @@ label v15s4:
 
         "Say hello":
             scene v15s4_2
-            with dissolve 
+            with dissolve
 
             u "Hey, Autumn."
 
@@ -536,7 +536,7 @@ label v15s4:
                             u "(It would be weird if I checked out Autumn while I'm with Lauren...)"
             
             scene v15s4_63 # FPP. MC turned around looking at the dog as him and Autumn are leaving, Autumn off-camera.
-            with dissolve 
+            with dissolve
 
             u "Bye, Blue!"
 

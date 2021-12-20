@@ -207,6 +207,7 @@ label v9_hang_w_linds:
                         $ add_point(KCT.BOYFRIEND)
 
                     $ lindsey.relationship = Relationship.KISS
+                    $ sceneList.add("v9_lindsey")
                     
                     scene v9links # Animations pls ignore
                     with dissolve
