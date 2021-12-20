@@ -64,7 +64,7 @@ label v15s20:
 
         cl "Thanks, so here's my game plan so far... I've written down some notes."
 
-        call screen v15_teacher_brief_icon("mr_lee")
+        show screen v15_teacher_brief_icon("mr_lee")
         # -The UI pops up showing Mr. Lee's character brief-
 
         cl "We already have a good idea what Mr. Lee is all about. He likes professionalism and manners."
