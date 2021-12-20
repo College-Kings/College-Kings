@@ -227,40 +227,41 @@ label v15s20:
 
         cl "Shh... She'll be here any minute. We have to focus, haha."
 
-        scene v15s20_5
-        with dissolve
+    scene v15s20_5
+    with dissolve
 
-        u "*Sighs*"
+    u "*Sighs*"
 
-        scene v15s20_5a
-        with dissolve
+    scene v15s20_5a
+    with dissolve
 
-        cl "Do you think we should take this cheat sheet with us? Or would that ruin everything?"
+    cl "Do you think we should take this cheat sheet with us? Or would that ruin everything?"
 
-        scene v15s20_5
-        with dissolve
+    scene v15s20_5
+    with dissolve
 
-        menu:
-            "Take the notes":
-                $ v15_took_notes = True
-                u "Yeah, we better take them. As long as we aren't staring at it the whole time, I think it's helpful to refer to."
+    menu:
+        "Take the notes":
+            $ v15_took_notes = True
+            u "Yeah, we better take them. As long as we aren't staring at it the whole time, I think it's helpful to refer to."
 
-                scene v15s20_5a
-                with dissolve
+            scene v15s20_5a
+            with dissolve
 
-                cl "Just don't look at it too much, it might seem like you're not paying attention."
+            cl "Just don't look at it too much, it might seem like you're not paying attention."
 
-                scene v15s20_5
-                with dissolve
+            scene v15s20_5
+            with dissolve
 
-                u "Got it."
+            u "Got it."
 
-            "Don't take the notes":
-                u "Nah, I don't want to risk pissing anyone off. Besides, I remember it all anyway. You can put them away."
+        "Don't take the notes":
+            hide screen v15_teacher_brief_icon
+            u "Nah, I don't want to risk pissing anyone off. Besides, I remember it all anyway. You can put them away."
 
-                scene v15s20_5a
-                with dissolve
+            scene v15s20_5a
+            with dissolve
 
-                cl "Haha, okay Mr. Confident. I trust you."
+            cl "Haha, okay Mr. Confident. I trust you."
 
     jump v15s21
