@@ -103,6 +103,7 @@ label v15s12:
             scene v15s12_4c # TPP. MC worried, mouth closed [Checkpoint C].
             with dissolve
 
+            $ grant_achievement("counter_intelligence")
             u "(Oh, I can believe it... What the fuck was Chloe thinking just writing down the plan?!)"
 
             scene v15s12_4d # FPP. Lindsey slightly angry mouth closed [Checkpoint C].
@@ -450,17 +451,18 @@ label v15s12:
             lindsey_board = PlanningBoard("images/v15/planning_boards/lindsey_background.webp", money=lindsey_board.money, style="lindsey_board")
 
             lindsey_board.add_approach("Game Night",
-                "Game Night",
+                "Game Night ($100)",
                 opinion="\"Hosting a game night would be the perfect excuse to get a few of Chloe's allies alone. We'll get booze, snacks, and make sure they have a fun night while also making it known that I'm so much better than Chloe\"")
 
             lindsey_board.add_approach("VIP Night",
-                "VIP Night",
+                "VIP Night ($800)",
                 opinion="\"There's a few people on Chloe's side that I think I could sway... Their opinion of me isn't horrible, they just seem to prefer her... If we give them a spectacular night out, there's absolutely no way they'll be able to choose her over me.\"")
 
             lindsey_board.add_task("Game Night",
-                "Buy booze with fake ID",
+                "Buy booze with fake ID ($100)",
                 opinion="\"Since neither of us are of the legal drinking age, we're gonna need a fake ID if we want booze. A friend of mine makes them, so I'll take care of that.\"",
-                people=[mc, lindsey])
+                people=[mc, lindsey],
+                cost=100)
 
             v15s12_lindsey_pb_mostlikely = lindsey_board.add_subtask("Game Night",
                 "Who's Most Likely...",
@@ -475,11 +477,13 @@ label v15s12:
             lindsey_board.add_task("Game Night",
                 "Host the game night",
                 opinion="\"Once we got the games and (hopefully) the booze, all that's left is to make sure everyone has a good time and leaves wanting to vote for me.\"",
-                people=[mc, lindsey, autumn, aubrey])
+                people=[mc, lindsey, autumn, aubrey],
+                cost=100)
 
             lindsey_board.add_task("VIP Night",
-                "Book a limousine & private club",
-                "\"It takes a pretty big chunk out of my campaign fund, but this limo rental and VIP room at the nearest nightclub are going to blow our friends out of the fucking waters. I can't wait to spoil them all night.\"")
+                "Book a limousine & private club ($800)",
+                "\"It takes a pretty big chunk out of my campaign fund, but this limo rental and VIP room at the nearest nightclub are going to blow our friends out of the fucking waters. I can't wait to spoil them all night.\"",
+                cost=800)
 
             v15_s12_lindsey_pb_inviteSebastian = lindsey_board.add_subtask("VIP Night",
                 "Invite Aubrey, Autumn, and Sebastian",
@@ -496,7 +500,8 @@ label v15s12:
             lindsey_board.add_task("VIP Night",
                 "Host exclusive VIP Night",
                 opinion="\"Finally, a night to remember! Our main focus during the night out is the three people we want to impress. Keeping them satisfied and entertained all night is the only goal besides having a damn good time.\"",
-                people=[mc, lindsey, aubrey, autumn]) # Can't add Sebastian or Grayson here because we're loading the menu before the player can select. 
+                people=[mc, lindsey, aubrey, autumn],
+                cost=800) # Can't add Sebastian or Grayson here because we're loading the menu before the player can select. 
 
         call screen planning_board(lindsey_board)
         

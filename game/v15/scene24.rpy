@@ -1430,6 +1430,7 @@ label v15s24:
     u "Mmm, yeah. That's me."
 
     if v15_lindsey_alcohol:
+        $ lindsey_board.money -= 100
         scene v15s24_5a
         with dissolve
 

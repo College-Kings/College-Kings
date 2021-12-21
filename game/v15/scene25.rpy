@@ -369,6 +369,7 @@ label v15s25:
 
         menu:
             "Accept the price":
+                $ lindsey_board.money -= 800
                 scene v15s25_7a
                 with dissolve
 
@@ -410,6 +411,7 @@ label v15s25:
 
                 menu:
                     "Be honest":
+                        $ lindsey_board.money -= 400
                         scene v15s25_7a
                         with dissolve
 
@@ -466,6 +468,7 @@ label v15s25:
                         u "Bye!"
 
                     "Lie":
+                        $ lindsey_board.money -= 800
                         scene v15s25_7a
                         with dissolve
 
@@ -546,6 +549,7 @@ label v15s25:
 
         menu:
             "Accept the price":
+                $ lindsey_board.money -= 800
                 scene v15s25_7a
                 with dissolve
 
@@ -611,6 +615,7 @@ label v15s25:
 
                 menu:
                     "Be honest":
+                        $ lindsey_board.money -= 600
                         scene v15s25_7h
                         with dissolve
 
@@ -689,6 +694,7 @@ label v15s25:
                         u "Bye."
 
                     "Lie":
+                        $ lindsey_board.money -= 800
                         scene v15s25_7a
                         with dissolve
 

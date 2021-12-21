@@ -185,6 +185,7 @@ init python:
     
     #v15.0
     Achievement("horn_dog", "Peek on Autumn") #s4
+    Achievement("counter_intelligence", "Lindsey was expecting that strategy") #s12
     Achievement("mmmm_donut", "Eat the donut") #s13
     Achievement("honey_bear", "Lick Ms. Rose's pancakes") #s15
     Achievement("childhood_memories", "Surprise the birthday girl") #s18
