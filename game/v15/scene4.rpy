@@ -515,26 +515,6 @@ label v15s4:
 
             aut "Okay, Blue. I'll be back later to play with you and take you for a walk."
 
-            ### commented out for now:
-            if False:
-                menu:
-                    "Peek":
-                        $ add_point(KCT.TROUBLEMAKER)
-                        scene v15s4_19 # FPP. Similar to v15s4_18, Close up of Autumn's ass.
-                        with dissolve
-
-                        u "(Damn!!)"
-
-                        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
-                            u "(Is it weird to check out Lauren's sister?)"
-
-                    "Don't peek":
-                        $ add_point(KCT.BOYFRIEND)
-                        u "(Glad I can control myself, good job [name]!)"
-
-                        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
-                            u "(It would be weird if I checked out Autumn while I'm with Lauren...)"
-            
             scene v15s4_63 # FPP. MC turned around looking at the dog as him and Autumn are leaving, Autumn off-camera.
             with dissolve
 
