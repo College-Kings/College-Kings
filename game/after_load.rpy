@@ -44,10 +44,10 @@ python early:
     if renpy.loadable("screen.rpyc"):
         os.remove(os.path.join(config.basedir, "game", "screen.rpyc"))
 
-    if renpy.loadable("planning_board.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "planning_board.rpy"))
-    if renpy.loadable("planning_board.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "planning_board.rpyc"))
+    if renpy.loadable("v14/planning_board.rpy"):
+        os.remove(os.path.join(config.basedir, "game", "v14", "planning_board.rpy"))
+    if renpy.loadable("v14/planning_board.rpyc"):
+        os.remove(os.path.join(config.basedir, "game", "v14", "planning_board.rpyc"))
 
     if os.path.exists(os.path.join(config.basedir, "game", "v8")):
         try:
