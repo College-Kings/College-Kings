@@ -4,17 +4,17 @@
 # Time: Evening
 
 label v15s27: # -MC walks out of the Chicks house-
-    scene v15s27_1 # TPP. Camera facing Chick's front door with MC opening the door; MC neutral expression mouth closed.
+    scene v15s27_1 # TPP. Camera facing Chicks' front door with MC opening the door; MC neutral expression mouth closed.
     with dissolve
 
     pause 0.75
 
-    scene v15s27_1a # TPP. Camera facing Chick's front door with MC exiting through the door; MC neutral expression mouth closed.
+    scene v15s27_1a # TPP. Camera facing Chicks' front door with MC exiting through the door; MC neutral expression mouth closed.
     with dissolve
 
     pause 0.75
 
-    scene v15s27_1b # TPP. Camera facing Chick's front door with MC closing the door behind him; MC neutral expressoin mouth closed.
+    scene v15s27_1b # TPP. Camera facing Chicks' front door with MC closing the door behind him; MC neutral expressoin mouth closed.
     with dissolve
 
     pause 0.75
@@ -48,7 +48,7 @@ label v15s27: # -MC walks out of the Chicks house-
         u "(Riley didn't seem too pleased about the whole situation. Hopefully she's over it before I see her next.)"
     # -Regardless-
 
-    scene v15s27_3 # TPP. MC a few steps further from v15s27_2a with the Chick's house behind him; neutral expreession mouth closed.
+    scene v15s27_3 # TPP. MC a few steps further from v15s27_2a with the Chicks' house behind him; neutral expreession mouth closed.
     with dissolve
 
     pause 0.75
@@ -197,7 +197,7 @@ label v15s27: # -MC walks out of the Chicks house-
 
     u "(This should be fun.)"
 
-    scene v15s27_3f # TPP. Camera wide showing MC leaving the front yard of the Chick's house.
+    scene v15s27_3f # TPP. Camera wide showing MC leaving the front yard of the Chicks' house.
     with dissolve
     
     pause 0.75

@@ -1,5 +1,5 @@
-# SCENE 26: Watch a movie in Chick's theatre room with Aubrey & Riley
-# Locations: Chick's house; theater room
+# SCENE 26: Watch a movie in Chicks' theatre room with Aubrey & Riley
+# Locations: Chicks' house; theater room
 # Characters: RILEY (Outfit: 4), MC (Outfit: 9), AUBREY (Outfit: 3), MALE ACTOR (Outfit: x), FEMALE ACTOR (Outfit: x)
 # Time: Saturday evening
 

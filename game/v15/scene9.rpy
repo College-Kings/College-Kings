@@ -260,7 +260,7 @@ label v15s9:
     scene v15s9_3a
     with dissolve
 
-    au "So, my parents are sending a car to pick me up from the Chick's house on Sunday morning."
+    au "So, my parents are sending a car to pick me up from the Chicks' house on Sunday morning."
 
     scene v15s9_3b
     with dissolve
