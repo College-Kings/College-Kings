@@ -469,7 +469,7 @@ default v15s19_local_mc_ends_in_livingroom = False;
 default v15_told_Emily_I_Love_You = False # Placeholder?
 default v15s18e_cum_in_lauren # Noted to be remembered 
 default v15s24_nancy_dick = False
-default v15s24_alcohol = False
+default v15_alcohol = False
 default v15_ph_riley_upset = False  # placeholder ?? (set in s26?? ; read in v15s27)
 default autumnloyal = False 
 default autumnrs = False
