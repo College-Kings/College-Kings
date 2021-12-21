@@ -1268,7 +1268,6 @@ label meet_lauren2:
 
                 menu:
                     "Give me a chance":
-
                         scene s130g
                         with dissolve
 
@@ -1294,7 +1293,6 @@ label meet_lauren2:
                             u "(I should probably wash the blood off my face before I go.)"
 
                     "You're right":
-
                         scene s130g
                         with dissolve
 
