@@ -1523,7 +1523,7 @@ label v15s4:
         scene v15s4_59a
         with dissolve
 
-        aut "It was brown, with light golden hair on it's mane. She had this dream of owning a real horse just like it when she got older."
+        aut "It was brown, with light golden hair on its mane. She had this dream of owning a real horse just like it when she got older."
 
         scene v15s4_59
         with dissolve
