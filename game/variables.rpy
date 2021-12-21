@@ -355,13 +355,12 @@ default v15_lindsey_gamenight = False ##Approach A. VIP Night = (v14_help_lindse
 default v15_lindsey_mostlikelyto = False ##Approach A2A. Would You Rather = (v15_lindsey_gamenight and not v15_lindsey_mostlikelyto)
 default v15_lindsey_inviteseb = False ##Approach B2A. Invite Grayson = (v14_help_lindsey and not v15_lindsey_gamenight and not v15_lindsey_inviteseb)
 
-default aubrey_fwb = False #????
 default aubrey_riley_awkward = False
-default autumnloyal = False
 default detective = "None" # Archetypes: professional, psychologist, loose cannon
 default dog_name = "Blue"
 default freeroam13 = set() #halloween, part 1 (18a)
 default freeroam14 = set() #halloween, part 2 (18c)
+default nora_cabin = False
 default v15_autumn_freemug = False
 default v15_autumn_lunchbreak = False
 default v15_autumn_smoke = False
@@ -395,4 +394,3 @@ default v15s42_grab_breakfast = False
 default v15s7_chloe_empathize = False #????
 default v15_stay_on_topic = False
 default v15_say_nothing = False
-default nora_cabin = False
