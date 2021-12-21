@@ -352,7 +352,7 @@ label v15s18c_riley:
 label v15s18c_imre_aubrey:
     $ freeroam14.add("imre_aubrey")
     $ v15s18_partytask += 1
-    $ $ v15_imre_checklist[4].complete = True
+    $ v15_imre_checklist[4].complete = True
 
     scene v15s18c_imau_1 # TPP. Show MC walking up to Imre and Aubrey, MC slight smile, mouth closed, Imre slight smile, mouth open, looking at Aubrey, Aubrey looking at Imre, mouth closed, slightly annoyed
     #with dissolve
