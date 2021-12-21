@@ -129,7 +129,7 @@ default volleyball = False
 # 7.0
 default apesVids = 0
 default beachfirstkiss = False
-default chloesad = False
+default v7_chloesad = False
 default cop = False
 default emilyText = False
 default ending = "riley"

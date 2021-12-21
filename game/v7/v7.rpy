@@ -13199,7 +13199,7 @@ label fr4laurendate:
 
         "*Crowd cheers and applauds*"
 
-        if not chloesad:
+        if not v7_chloesad:
             label fr4laurendatechloe:
                 scene sfr4stage4 #Chloe runs up on stage
                 with dissolve
@@ -13444,7 +13444,7 @@ label fr4penelopedate:
 
         "*Crowd cheers and applauds*"
 
-        if not chloesad:
+        if not v7_chloesad:
             scene sfr4pe14d # penelope looking at the stage
             with dissolve
 
@@ -13913,7 +13913,7 @@ label fr4rileydate:
 
     "*Crowd cheers and applauds*"
 
-    if not chloesad:
+    if not v7_chloesad:
         label fr4rileydatechloe:
             scene sfr4stage4 #Chloe runs up on stage
             with dissolve
@@ -14642,7 +14642,7 @@ label fr4riley2:
 
     "*Crowd cheers and applauds*"
 
-    if not chloesad:
+    if not v7_chloesad:
         label fr4alonechloe:
 
             if not "crowning" in freeroam4:
@@ -15301,7 +15301,7 @@ label fr4chloe1:
     $ freeroam4.add("grayson")
 
     if preventgrayson:
-        $ chloesad = True
+        $ v7_chloesad = True
 
     scene sfr4cl47 #Ryan and Chloe are having a heated argument.
 
