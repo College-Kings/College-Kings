@@ -7,6 +7,8 @@ label v15s18c:
     call screen v15s18c_couch
 
 label v15s18c_riley:
+    $ freeroam14.add("riley")
+
     scene v15s18c_ri_1 # TPP. Show MC walking into the bathroom, Riley adjusting her make up in front of the mirror, MC slightly startled, Riley slightly startled, both mouths closed
     #with dissolve
 
@@ -348,6 +350,10 @@ label v15s18c_riley:
     call screen v15s18a_upstairsroom
 
 label v15s18c_imre_aubrey:
+    $ freeroam14.add("imre_aubrey")
+    $ v15s18_partytask += 1
+    $ $ v15_imre_checklist[4].complete = True
+
     scene v15s18c_imau_1 # TPP. Show MC walking up to Imre and Aubrey, MC slight smile, mouth closed, Imre slight smile, mouth open, looking at Aubrey, Aubrey looking at Imre, mouth closed, slightly annoyed
     #with dissolve
 
@@ -1068,6 +1074,9 @@ label v15s18c_imre_aubrey:
 
     menu:
         "Steal the panties":
+            $ v15s18_partytask += 1
+            $ v15_imre_checklist[6].complete = True
+            
             u "(Sorry, Autumn. I'm a man in need.)"
 
             scene v15s18c_imau_37 # TPP. Show MC taking the panties, smiliing, mouth closed
@@ -1182,6 +1191,9 @@ label v15s18c_ryan:
 
     menu:
         "Take the condom":
+            $ v15s18_partytask += 1
+            $ v15_imre_checklist[7].complete = True
+        
             scene v15s18c_ry_4 # TPP. Show MC slowly grabbing the condom out of Ryan's pocket (it's fully in the poocket still)
             with dissolve
 
@@ -1234,6 +1246,8 @@ label v15s18c_ryan:
     call screen v15s18a_upstairsroom
 
 label v15s18c_lauren:
+    $ freeroam14.add("lauren")
+
     scene v15s18c_la_1 # TPP. Show MC walking on to the balcony, Lauren already there, looking at the view, both slight smiles, mouths closed
     #with dissolve
 
@@ -1465,6 +1479,8 @@ label v15s18c_lauren:
     call screen v15s18a_upstairsroom
 
 label v15s18c_autumn_amber:
+    $ freeroam14.add("autumn_amber")
+
     scene v15s18c_auam_1 # FPP. MC watchign Amber and Autumn at the bar from a slight distance, Autumn and Amber smiling, Autumn mouth open, Amber mouth closed
     #with dissolve
 
@@ -1604,7 +1620,6 @@ label v15s18c_autumn_amber:
     if not v15s18a_showlist_penelope_autumn:
         menu:
             "Mention the list":
-
                 u "Well, you might have already heard, but I have this list of challenges that I've been working on."
 
                 scene v15s18c_auam_5a
@@ -1620,7 +1635,6 @@ label v15s18c_autumn_amber:
                 u "Well, I do have an easy one left, if you'd like to help me out?"
         
             "Don't mention the list":
-
                 u "(Eh, I don't want to get Autumn involved in this...)"
 
                 u "Honestly? I've just been making my rounds and trying to stay caught up with everyone, haha."
@@ -1718,7 +1732,6 @@ label v15s18c_autumn_amber:
 
     menu:
         "Never mind":
-
             u "(I can't ask Autumn to make out with me! What am I thinking?)"
 
             u "Actually, it's okay, haha. Never mind."
@@ -1952,6 +1965,9 @@ label v15s18c_autumn_amber:
                 call screen v15s18a_upstairsroom
 
 label v15s18c_autumn_kiss:
+    $ v15s18_partytask += 1
+    $ v15_imre_checklist[5].complete = True
+
     scene v15s18c_auam_8 # TPP. Show Autumn and MC leaving the bar, both slight smiles, mouths closed
     #with dissolve
 
@@ -2040,6 +2056,8 @@ label v15s18c_autumn_kiss:
     call screen v15s18a_upstairsroom
 
 label v15s18c_chris_penelope:
+    $ freeroam14.add("chris_penelope")
+
     scene v15s18c_chpe_1 # FPP. MC watching Chris and Penelope from a slight distance, Chris cornering Penelope, Penelope uncomfortable, mouth closed, Chris slightly sad, mouth open Chris and Penelope looking at each other
     #with dissolve
 
@@ -2245,6 +2263,9 @@ label v15s18c_chris_penelope:
                 pe "Sorry, I just don't feel comfortable."
 
             elif kct == "confident" or penelope.relationship.value >= Relationship.LOYAL.value:
+                $ v15s18_partytask += 1
+                $ v15_imre_checklist[1].complete = True
+                
                 scene v15s18c_chpe_5f # FPP. Same as v15s18c_chpe_5, Penelope flirty expression, mouth open
                 with dissolve
 

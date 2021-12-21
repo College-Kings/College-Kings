@@ -48,7 +48,6 @@ label v15s18d:
     with dissolve
 
     if v15s18_partytask > 4:
-
         scene v15s18d_5a # FPP. MC looking at Imre, Imre looking at the List, Imre slight smile, mouth open.
         with dissolve
 
@@ -83,8 +82,7 @@ label v15s18d:
 
         imre "The night isn't over yet. You can still get at least one more, like the sex."
 
-    elif v15s18_partytask <= 4 and not v15s18_partytask == 0:
-
+    elif v15s18_partytask >0:
         scene v15s18d_5a
         with dissolve
 
@@ -312,7 +310,9 @@ label v15s18d:
                     jump v15s18e
 
             else: 
-                if kct == "loyal" and not "v12_lauren" in sceneList:
+                if kct == "loyal" and lauren.relationship.value >= Relationship.KISS.value and not v11_lauren_caught_aubrey and not "v12_lauren" in sceneList:
+                    call screen kct_popup
+                    
                     scene v15s18d_8f
                     with dissolve
 

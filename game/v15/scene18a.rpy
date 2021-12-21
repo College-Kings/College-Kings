@@ -1671,6 +1671,8 @@ label v15s18a_Riley:
 
         "Yeah, I do":
             $ v15s18_partytask += 1
+            $ v15_imre_checklist[3].complete = True
+            
             scene v15s18ariley_2i
             with dissolve
 
@@ -2180,6 +2182,8 @@ label v15s18a_ChrisAmber:
 
                 else:
                     $ v15s18_partytask += 1
+                    $ v15_imre_checklist[2].complete = True
+                    
                     scene v15s18aamber_3c
                     with dissolve
 

@@ -4,6 +4,9 @@
 # Time: Night 
 
 label v15s18e:
+    $ v15s18_partytask += 1
+    $ v15_imre_checklist[0].complete = True
+
     play sound "sounds/dooropen.mp3"
 
     scene v15s18e_1 # TPP. Show MC and Lauren entering Lauren's room, her door open, Both slight smile, mouth closed.
@@ -45,7 +48,6 @@ label v15s18e:
     with dissolve
 
     u "(Hmm... Where should I start?)"
-
 
     call screen v15s18e_Lauren
 
