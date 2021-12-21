@@ -396,3 +396,4 @@ default v15s42_grab_breakfast = False
 default v15s7_chloe_empathize = False #????
 default v15_stay_on_topic = False
 default v15_say_nothing = False
+default nora_cabin = False

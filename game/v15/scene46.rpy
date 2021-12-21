@@ -3,21 +3,20 @@
 # Characters: AMBER (Outfit: Detective), MC (Outfit: 1)
 # Time: Morning
 
-
 label v15s46:
     play sound "sounds/dooropen.mp3"
 
     scene v15s46_1 # TPP. Amber and MC entering the detective pinboard room, both slight smile, mouth closed.
     with dissolve 
 
-    pause 
+    pause 0.75 
 
     play sound "sounds/doorclose.mp3"
 
     scene v15s46_2 # TPP. Amber and MC inside the room, Amber turned around to face MC, MC looking at Amber, both slight smile, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75  
 
     scene v15s46_3 # FPP. MC looking at Amber, Amber looking at MC, Amber slight smile, mouth open.
     with dissolve 
@@ -36,7 +35,7 @@ label v15s46:
     scene v15s46_4 # TPP. Show MC walking up to the pinboard, slight smile, mouth closed
     with dissolve
 
-    pause  
+    pause 0.75  
 
     scene v15s46_5 # FPP. Looking at the pinboard.
     with dissolve 
@@ -93,7 +92,7 @@ label v15s46:
         scene v15s46_3
         with dissolve
 
-        am "We know that Nora loves nature... Chris told us that Nora's aunt borrowed Mr Rose's cabin... Nora went to see her aunt only briefly."
+        am "We know that Nora loves nature... Chris told us that Nora's aunt borrowed Mr. Rose's cabin... Nora went to see her aunt only briefly."
 
         am "Understand?"
 
@@ -101,7 +100,7 @@ label v15s46:
         with dissolve
 
         menu:
-            "Nope, no idea.":
+            "Nope, no idea":
                 u "Nope. It's like you're talking in random words."
 
                 scene v15s46_3
@@ -138,8 +137,8 @@ label v15s46:
                 with dissolve
 
                 am "Yeah! It makes sense because that's the answer, haha!"
-            "Yeah, of course.":
 
+            "Yeah, of course":
                 u "Yeah, of course!"
 
                 scene v15s46_3
@@ -173,8 +172,7 @@ label v15s46:
                 with dissolve
 
                 menu:
-                    "To ask for her advice.":
-
+                    "To ask for her advice":
                         u "To ask her for advice, obviously."
 
                         scene v15s46_3
@@ -196,8 +194,7 @@ label v15s46:
 
                         am "Haha, okay, Sherlock."
 
-                    "To pick up something.":
-
+                    "To pick up something":
                         u "Because she needed to pick up something?"
 
                         scene v15s46_3
@@ -211,8 +208,7 @@ label v15s46:
                         with dissolve
 
                         menu:
-                            "Food supplies.":
-
+                            "Food supplies":
                                 u "Well, to pick up some food for the cabin."
 
                                 scene v15s46_3
@@ -235,8 +231,7 @@ label v15s46:
 
                                 u "Oh- Yeah, of course. Haha."
 
-                            "The key.":
-
+                            "The key":
                                 u "The key for the cabin."
 
                                 scene v15s46_3
@@ -255,8 +250,11 @@ label v15s46:
                                 with dissolve
 
                                 am "Ding, ding, ding! We have a winner. *Chuckles*"
+
     else:
-        # -if MC chose the correct location (ACHIEVEMENT: SUPER DETECTIVE)
+        if False: #need to confirm length of clues set
+            $ grant_achievement("just_one_more_thing")
+
         scene v15s46_3a
         with dissolve
 
@@ -305,22 +303,22 @@ label v15s46:
     scene v15s46_3d # FPP. Amber taking out her phone, slight smile, mouth closed.
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s46_3e # FPP. Amber looking at her phone, slight smile, mouth closed.
     with dissolve  
 
-    pause  
+    pause 0.75  
 
     scene v15s46_3f # FPP. Amber pressing a button on her phone, slight smile, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75  
 
     scene v15s46_3g # FPP. Amber putting her phone away, slight smile, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75  
 
     scene v15s46_3a
     with dissolve
@@ -332,7 +330,7 @@ label v15s46:
 
     am "Yeah, I know. She's amazing at what she does, and she's the best."
 
-    if penelope_loyal
+    if penelope.relationship.value >= Relationship.LOYAL.value:
         scene v15s46_3a
         with dissolve
 
@@ -342,6 +340,7 @@ label v15s46:
         with dissolve
 
         am "Good! More for us. Hehe..."
+
     else:
         scene v15s46_3a
         with dissolve
@@ -358,7 +357,7 @@ label v15s46:
     scene v15s46_3i # FPP. Amber chugging her coffee
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s46_3
     with dissolve
@@ -368,22 +367,22 @@ label v15s46:
     scene v15s46_3d
     with dissolve
 
-    pause  
+    pause 0.75  
 
     scene v15s46_3e
     with dissolve 
 
-    pause  
+    pause 0.75  
 
     scene v15s46_3f
     with dissolve 
 
-    pause
+    pause 0.75
 
     scene v15s46_3g
     with dissolve
 
-    pause  
+    pause 0.75  
 
     scene v15s46_3a
     with dissolve
@@ -408,12 +407,12 @@ label v15s46:
     scene v15s46_6
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s46_3i
     with dissolve
 
-    pause  
+    pause 0.75  
 
     scene v15s46_3j # FPP. MC looking at Amber, Amber looking at MC, Amber frown, looks sick, mouth open.
     with dissolve 
@@ -471,7 +470,7 @@ label v15s46:
     scene v15s46_3l # FPP. MC looking at Amber, Amber looking at MC, Amber frown, fake crying, mouth open.
     with dissolve
 
-    pause  
+    pause 0.75  
 
     scene v15s46_3a
     with dissolve
