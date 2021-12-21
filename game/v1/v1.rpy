@@ -1876,6 +1876,7 @@ label efra:
     scene s80
     with Fade(1, 0, 1)
     play music "music/msad.mp3"
+
     imre "Man, I can't wait to bang this Riley chick."
 
     menu:
@@ -1884,10 +1885,12 @@ label efra:
 
             scene s79b
             with dissolve
+
             u "What? I want Riley. You can have Lauren."
 
             scene s80e
             with dissolve
+
             imre "What the hell man?! I invited Riley. Back off."
 
             menu:
@@ -1896,6 +1899,7 @@ label efra:
 
                     scene s79a
                     with dissolve
+
                     u "You're right, Riley is yours. I'm sorry."
 
                     scene s80a
@@ -1908,6 +1912,7 @@ label efra:
 
                     scene s79b
                     with dissolve
+
                     u "She wanted to see ME shirtless, not you. Face it, she wants me."
 
                     scene s80e
@@ -1924,10 +1929,14 @@ label efra:
 
                     scene s80a
                     with dissolve
+
                     imre "It's alright man, I get it."
+
                     scene s80
                     with dissolve
+
                     imre "Trust me, we're gonna bang so many chicks this year. All we need is confidence..."
+
                     jump at_bd
 
         "They're both hot":
@@ -3284,7 +3293,6 @@ label v1_freeRoam2_josh:
             menu:
                 "Say you're a fighter":
                     $ add_point(KCT.TROUBLEMAKER)
-                    $ v1_aubreywannafight = True
 
                     scene fr2jo2d
                     with dissolve
@@ -3313,6 +3321,18 @@ label v1_freeRoam2_josh:
 
                     u "Who's Grayson?"
 
+                    scene fr2jo2a
+                    with dissolve
+
+                    au "He's the President of the Apes and the current Fight King."
+
+                    au "I think he's upstairs, but I'm not sure."
+
+                    scene fr2jo2b
+                    with dissolve
+
+                    u "Alright, I'll leave you guys alone and look around a bit more. Maybe I'll even talk to Grayson."
+
                 "Say you're not a fighter":
                     scene fr2jo2b
                     with dissolve
@@ -3330,6 +3350,20 @@ label v1_freeRoam2_josh:
                     with dissolve
 
                     u "Who's Grayson?"
+
+                    scene fr2jo2a
+                    with dissolve
+
+                    au "He's the President of the Apes and the current Fight King."
+
+                    au "You'll never know, maybe if you meet some of the Apes, you'll change your mind about fighting."
+
+                    scene fr2jo2b
+                    with dissolve
+
+                    u "(I doubt it, but I guess it won't hurt to talk to some of them.)"
+
+                    u "Alright, I'll leave you guys alone and look around a bit more."
 
         "Ask if she likes fighters":
             $ add_point(KCT.BOYFRIEND)
@@ -3349,11 +3383,8 @@ label v1_freeRoam2_josh:
             au "Why are you asking? Are you planning on becoming a fighter?"
 
             menu:
-
-
                 "I'll be the next Fight King":
                     $ add_point(KCT.TROUBLEMAKER)
-                    $ v1_aubreywannafight = True
 
                     scene fr2jo2d
                     with dissolve
@@ -3371,6 +3402,18 @@ label v1_freeRoam2_josh:
                     with dissolve
 
                     u "Who's Grayson?"
+
+                    scene fr2jo2a
+                    with dissolve
+
+                    au "He's the President of the Apes and the current Fight King."
+
+                    au "I think he's upstairs, but I'm not sure."
+
+                    scene fr2jo2b
+                    with dissolve
+
+                    u "Alright, I'll leave you guys alone and look around a bit more. Maybe I'll even talk to Grayson."
 
                 "No, that's not for me":
                     scene fr2jo2b
@@ -3390,28 +3433,19 @@ label v1_freeRoam2_josh:
 
                     u "Who's Grayson?"
 
-    scene fr2jo2a
-    with dissolve
+                    scene fr2jo2a
+                    with dissolve
 
-    au "He's the President of the Apes and the current Fight King."
+                    au "He's the President of the Apes and the current Fight King."
 
-    if v1_aubreywannafight:
-        au "I think he's upstairs, but I'm not sure."
+                    au "You'll never know, maybe if you meet some of the Apes, you'll change your mind about fighting."
 
-        scene fr2jo2b
-        with dissolve
+                    scene fr2jo2b
+                    with dissolve
 
-        u "Alright, I'll leave you guys alone and look around a bit more. Maybe I'll even talk to Grayson."
+                    u "(I doubt it, but I guess it won't hurt to talk to some of them.)"
 
-    else:
-        au "You'll never know, maybe if you meet some of the Apes, you'll change your mind about fighting."
-
-        scene fr2jo2b
-        with dissolve
-
-        u "(I doubt it, but I guess it won't hurt to talk to some of them.)"
-
-        u "Alright, I'll leave you guys alone and look around a bit more."
+                    u "Alright, I'll leave you guys alone and look around a bit more."
 
     scene fr2jo2a
     with dissolve

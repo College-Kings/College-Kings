@@ -121,7 +121,6 @@ default tellschool = False
 default toldlauren = False
 default trolleyb = False
 default upstairs = "nobody"
-default v1_aubreywannafight = False
 default v1_laurenPoints = 0
 default v2_outfits = 0
 default volleyball = False
