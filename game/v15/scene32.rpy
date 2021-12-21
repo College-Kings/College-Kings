@@ -19,14 +19,14 @@ label v15s32:  #32) MC picks up Aubrey at Chick's house
 
     u "(Hmm, it's a special day for Aubrey... I could just knock on the door, or I could do something more romantic and funnier.)"
         
-    menu: # simple approach v. Be her Romeo
-        "Simple approach": # -if The simple approach
+    menu:
+        "Simple approach":
             scene v15s32_1a
             with dissolve
             
             u "(I won't overthink it. I'll just knock on the door like a regular person.)"
 
-        "Be her Romeo": # -if Be her Romeo
+        "Be her Romeo":
             # -MC walks around the back of the house, picking up some random pebbles en route. Then he looks up at two windows. One window has vines creeping up to it, which is Aubrey's window-
             scene v15s32_2 # TPP. MC smiling, mouth closed, walking left-to-right; front door in background) [Chick's house front yard-exterior].
             with dissolve
@@ -53,8 +53,8 @@ label v15s32:  #32) MC picks up Aubrey at Chick's house
 
             u "(This'll be funny. It happens in all the corny romance movies, right? Now, which window do I aim at?)"
 
-            menu:  # Left window v Right window
-                "Left window": # -if Left window
+            menu:
+                "Left window":
                     # -MC throws a pebble at the left window. It opens and Chloe looks out -
                     scene v15s32_4c # FPP. MC grabbing a pebble on the ground [Chick's house back yard-exterior].
                     with dissolve
@@ -129,7 +129,7 @@ label v15s32:  #32) MC picks up Aubrey at Chick's house
 
                         cl "Okay. Well, you go have fun while I'm working hard on my campaign."                        
 
-                    else: # -if not ChloeGF
+                    else:
                         scene v15s32_5c # FPP. Chloe, smiling, mouth open, with her upper body leaning out the window looking downward [Chloe's window (left)-exterior].
                         with dissolve
                         
@@ -145,9 +145,9 @@ label v15s32:  #32) MC picks up Aubrey at Chick's house
 
                     u "(Nice going... *Sighs* Let's try again.)"                
 
-                    jump v15s32_right_window # -transition to if right window
+                    jump v15s32_right_window
 
-                "Right window": # -if Right window (CORRECT WINDOW)
+                "Right window":
                     label v15s32_right_window:
                     scene v15s32_4c
                     with dissolve
