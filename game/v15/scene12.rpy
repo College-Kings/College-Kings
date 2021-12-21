@@ -447,7 +447,7 @@ label v15s12:
 
         #### Planning Board work goes here 
         python:
-            lindsey_board = PlanningBoard("images/v15/planning_boards/lindsey_background.webp", style="lindsey_board")
+            lindsey_board = PlanningBoard("images/v15/planning_boards/lindsey_background.webp", money=lindsey_board.money, style="lindsey_board")
 
             lindsey_board.add_approach("Game Night",
                 "Game Night",
@@ -460,16 +460,17 @@ label v15s12:
             lindsey_board.add_task("Game Night",
                 "Buy booze with fake ID",
                 opinion="\"Since neither of us are of the legal drinking age, we're gonna need a fake ID if we want booze. A friend of mine makes them, so I'll take care of that.\"",
-                people=[mc, lindsey],
-                cost=100)
+                people=[mc, lindsey])
 
             v15s12_lindsey_pb_mostlikely = lindsey_board.add_subtask("Game Night",
                 "Who's Most Likely...",
-                opinion="\"\"Who's Most Likely To\" is always a fun game to play with a group of people. We'll laugh, learn, a bit about each other and maybe some secrets will come out as well.\"")
+                opinion="\"\"Who's Most Likely To\" is always a fun game to play with a group of people. We'll laugh, learn, a bit about each other and maybe some secrets will come out as well.\"",
+                cost=100)
 
             lindsey_board.add_subtask("Game Night",
                 "Would You Rather",
-                opinion="\"\"Would you rather\" is the easiest game to play when you want to get the conversation rolling. Hopefully we get a few laughs and maybe some secrets out of them as well.\"")
+                opinion="\"\"Would you rather\" is the easiest game to play when you want to get the conversation rolling. Hopefully we get a few laughs and maybe some secrets out of them as well.\"",
+                cost=100)
 
             lindsey_board.add_task("Game Night",
                 "Host the game night",
@@ -478,18 +479,19 @@ label v15s12:
 
             lindsey_board.add_task("VIP Night",
                 "Book a limousine & private club",
-                "\"It takes a pretty big chunk out of my campaign fund, but this limo rental and VIP room at the nearest nightclub are going to blow our friends out of the fucking waters. I can't wait to spoil them all night.\"",
-                cost=800)
+                "\"It takes a pretty big chunk out of my campaign fund, but this limo rental and VIP room at the nearest nightclub are going to blow our friends out of the fucking waters. I can't wait to spoil them all night.\"")
 
             v15_s12_lindsey_pb_inviteSebastian = lindsey_board.add_subtask("VIP Night",
                 "Invite Aubrey, Autumn, and Sebastian",
                 opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The third person I want to invite is Sebastian. We're pretty close, but in the end he has to vote the way the Wolves do. If we can convince him to support me, and ask others to; Seb being on my side would mean more support from the Wolves.\"",
-                people=[aubrey, autumn, sebastian])
+                people=[aubrey, autumn, sebastian],
+                cost=800)
 
             lindsey_board.add_subtask("VIP Night",
                 "Invite Aubrey, Autumn, and Grayson",
                 opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The last person I'm thinking about inviting is Grayson. He already has this burning hatred for Chloe, mixed with a little bit of horniness but still... I think he's closer to boarding the Lindsey train than we think, and Grayson being on my side would mean support from the Apes.\"",
-                people=[aubrey, autumn, grayson])
+                people=[aubrey, autumn, grayson],
+                cost=800)
 
             lindsey_board.add_task("VIP Night",
                 "Host exclusive VIP Night",
