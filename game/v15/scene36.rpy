@@ -288,7 +288,7 @@ label v15s36:
                     with dissolve
 
                 else:
-                    $ autumn.relationship = Relationship.KISS
+                    $ autumn.relationship = Relationship.FWB
 
                     scene v15s36_5
                     with dissolve
@@ -449,7 +449,7 @@ label v15s36:
     scene v15s36_11b # FPP. Show Autumn walking away to the deer's house.
     with dissolve
 
-    if autumn.relationship.value >= Relationship.KISS.value:
+    if autumn.relationship.value >= Relationship.FWB.value:
         scene v15s36_11c # FPP. Show Autumn stopping in place.
         with dissolve
 
