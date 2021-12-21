@@ -133,6 +133,18 @@ image say_chirp = "images/achievements/v14/say_chirp.webp"
 image grand_theft_chloe = "images/achievements/v14/grand_theft_chloe.webp"
 image clean_it_up = "images/achievements/v14/clean_it_up.webp"
 
+image horn_dog = "images/achievements/v15/horn_dog.webp"
+image counter_intelligence = "images/achievements/v15/counter_intelligence.webp"
+image mmmm_donut = "images/achievements/v15/mmmm_donut.webp"
+image honey_bear = "images/achievements/v15/honey_bear.webp"
+image childhood_memories = "images/achievements/v15/childhood_memories.webp"
+image too_much_information = "images/achievements/v15/too_much_information.webp"
+image emotional_blackmail = "images/achievements/v15/emotional_blackmail.webp"
+image karen = "images/achievements/v15/karen.webp"
+image teetotal = "images/achievements/v15/teetotal.webp"
+image polycurious = "images/achievements/v15/polycurious.webp"
+image just_one_more_thing = "images/achievements/v15/just_one_more_thing.webp"
+
 
 # v1.0 - v2.0
 image s14 = "images/v1/s14.webp"
