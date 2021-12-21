@@ -252,7 +252,7 @@ label v15s36:
                 u "Honestly, I'd really like that... I feel the same way."
 
                 if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ autumnloyal = True
+                    $ autumn.relationship = Relationship.LOYAL
                     scene v15s36_5
                     with dissolve
 
