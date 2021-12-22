@@ -4,6 +4,12 @@
 # Time: Night
 
 label v15s18a:
+    if False: #making sure it shows in Lint
+        scene v15s18_kiwii_lauren1
+        scene v15s18_kiwii_autumn2
+        scene v15s18_kiwii_aubrey3
+        scene v15s18_kiwii_aubrey4
+
     # -Refer to images on Miro for exact placement, but Downstairs: Aubrey at the bar, Imre & Lauren on the couch, Riley in the kitchen, Chris & Amber on bar stools at kitchen counter; Upstairs: Ryan in the bathroom, Autumn & Penelope in Autumn's bedroom
     # -Clickable Objects (placement is irrelevant to plot, available to click on during both free roams): A bronze deer statue, A photo of Autumn and Lauren, A carved Halloween pumpkin, A Deer scarf wall hanging-
     # -Characters are greyed out after they are spoken too besides Lauren. She needs to stay highlighted as she is the way to end the free roam-
@@ -23,10 +29,6 @@ label v15s18a:
 
     pause 0.75
     
-    if False:
-        scene v15s18_kiwii_lauren
-        scene v15s18_kiwii_autumn
-
     call screen v15s18a_room
 
 # -Free roam: Everyone can now be holding a drink. There's a punch bowl and food set up in the kitchen. MC can navigate around the house.
