@@ -1037,13 +1037,13 @@ label v15s18a_AutumPenelope:
 
             u "*Sighs* No, I wasn't lying."
 
+    ### check transitions
+    ### especially if 7b dissolves into 7b again
     scene v15s18apen_7b
     with dissolve
 
-    u "Anyway, time for me to catch up with the others."
-
     pause 0.75
-    
+   
     scene v15s18apen_6a
     with dissolve
 
@@ -1103,7 +1103,7 @@ label v15s18a_ImreLauren:
     scene v15s18aimre_3 # FPP. MC looking at Imre, Imre looking at Lauren, Imre slight smile, mouth open.
     with dissolve
 
-    imre "Cute? I'm supposed to be a badass gunslinger, Lauren. I can shoot the head off a chicken .01 second."
+    imre "Cute? I'm supposed to be a badass gunslinger, Lauren. I can shoot the head off a chicken in a hundredth of a second."
 
     scene v15s18aimre_2
     with dissolve
