@@ -72,7 +72,7 @@ label v15s31:
             scene v15s31_4a # TPP. Show MC's hand putting his phone away.
             with dissolve
 
-        "Don't contact Emily.":
+        "Don't contact Emily":
             scene v15s31_2
             with dissolve
                 

@@ -17,7 +17,7 @@ label v15s47:
     with dissolve
 
     menu:
-        "Call Nora.":
+        "Call Nora":
             play sound "sounds/ring.mp3"
 
             scene v15s47_2a # TPP. MC holding the phone to his ear, neutral face, mouth closed
@@ -35,7 +35,7 @@ label v15s47:
             scene v15s47_2c # TPP. MC putting his phone away, neutral face, mouth closed.
             with dissolve
 
-        "Don't call Nora.":
+        "Don't call Nora":
             scene v15s47_3 # TPP. MC in the back of the Cab looking out the window new set of scenery, Neutral face, mouth closed.
             with dissolve
 
