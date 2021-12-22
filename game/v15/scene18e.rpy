@@ -1,4 +1,4 @@
-# Scene18e: Possible Lauren Sex Scene
+# Scene 18e: Possible Lauren Sex Scene
 # Locations: Lauren's Room
 # Characters: MC (Outfit: Stripper Costume/Naked), LAUREN (Outfit: Spider Costume/Naked)
 # Time: Night 
@@ -375,10 +375,8 @@ label v15s18e_end:
 
     la "*Giggles* Okay."
 
-    image v15lauor = Movie(play="images/v15/Scene18e/v15lauor.webm", loop=True, image="images/v15/Scene18e/v15lauorStart.webp", start_image="images/v15/Scene18e/v15lauorStart.webp")
-    image v15lauorf = Movie(play="images/v15/Scene18e/v15lauorf.webm", loop=True, image="images/v15/Scene18e/v15lauorStart.webp", start_image="images/v15/Scene18e/v15lauorStart.webp")
-    image v15lauor2 = Movie(play="images/v15/Scene18e/v15lauor2.webm", loop=True, image="images/v15/Scene18e/v15lauor2Start.webp", start_image="images/v15/Scene18e/v15lauor2Start.webp")
-    image v15lauor2f = Movie(play="images/v15/Scene18e/v15lauor2f.webm", loop=True, image="images/v15/Scene18e/v15lauor2Start.webp", start_image="images/v15/Scene18e/v15lauor2Start.webp")
+    image v15lauor = Movie(play="images/v15/Scene 18e/v15lauor.webm", loop=True, image="images/v15/Scene 18e/v15lauorStart.webp", start_image="images/v15/Scene 18e/v15lauorStart.webp")
+    image v15lauor2 = Movie(play="images/v15/Scene 18e/v15lauor2.webm", loop=True, image="images/v15/Scene 18e/v15lauor2Start.webp", start_image="images/v15/Scene 18e/v15lauor2Start.webp")
 
     scene v15lauor # Ignore as anim
     with dissolve
@@ -388,15 +386,11 @@ label v15s18e_end:
 
     la "*Whispers* Fuck..."
 
-    scene v15lauorf # Ignore as anim
-    with dissolve
-    pause 0.75
-
     u "Mmmm..."
 
     la "*Gasps* My God, [name]..."
 
-    scene v15lauror2 # Ignore as anim
+    scene v15lauor2 # Ignore as anim
     with dissolve
     pause 0.75
 
@@ -409,15 +403,7 @@ label v15s18e_end:
 
     la "*Panting* Mmm, fuuuuck..."
 
-    scene v5lauor2 # Ignore as anim
-    with dissolve
-    pause 0.75
-
     la "Do you like the taste of my pussy?"
-
-    scene v15lauor2f # Ignore as anim
-    with dissolve
-    pause 0.75
 
     u "*Muffled* Mhmm, it tastes amazing."
 
@@ -443,10 +429,10 @@ label v15s18e_end:
 
     la "Let me taste you now. Please?"
 
-    image v15laubj = Movie(play="images/v15/Scene18e/v15laubj.webm", loop=True, image="images/v15/Scene18e/v15laubjStart.webp", start_image="images/v15/Scene18e/v15laubjStart.webp")
-    image v15laubjf = Movie(play="images/v15/Scene18e/v15laubjf.webm", loop=True, image="images/v15/Scene18e/v15laubjStart.webp", start_image="images/v15/Scene18e/v15laubjStart.webp")
-    image v15laubj2 = Movie(play="images/v15/Scene18e/v15laubj2.webm", loop=True, image="images/v15/Scene18e/v15laubj2Start.webp", start_image="images/v15/Scene18e/v15laubj2Start.webp")
-    image v15laubj2f = Movie(play="images/v15/Scene18e/v15laubj2f.webm", loop=True, image="images/v15/Scene18e/v15laubj2Start.webp", start_image="images/v15/Scene18e/v15laubj2Start.webp")
+    image v15laubj = Movie(play="images/v15/Scene 18e/v15laubj.webm", loop=True, image="images/v15/Scene 18e/v15laubjStart.webp", start_image="images/v15/Scene 18e/v15laubjStart.webp")
+    image v15laubjf = Movie(play="images/v15/Scene 18e/v15laubjf.webm", loop=True, image="images/v15/Scene 18e/v15laubjStart.webp", start_image="images/v15/Scene 18e/v15laubjStart.webp")
+    image v15laubj2 = Movie(play="images/v15/Scene 18e/v15laubj2.webm", loop=True, image="images/v15/Scene 18e/v15laubj2Start.webp", start_image="images/v15/Scene 18e/v15laubj2Start.webp")
+    image v15laubj2f = Movie(play="images/v15/Scene 18e/v15laubj2f.webm", loop=True, image="images/v15/Scene 18e/v15laubj2Start.webp", start_image="images/v15/Scene 18e/v15laubj2Start.webp")
 
     scene v15laubj # Ignore as anim
     with dissolve
@@ -500,10 +486,10 @@ label v15s18e_end:
 
     la "Oh... Well then, get in me already, would you?"
 
-    image v15lausf = Movie(play="images/v15/Scene18e/v15lausf.webm", loop=True, image="images/v15/Scene18e/v15lausfStart.webp", start_image="images/v15/Scene18e/v15lausfStart.webp")
-    image v15lausff = Movie(play="images/v15/Scene18e/v15lausff.webm", loop=True, image="images/v15/Scene18e/v15lausffStart.webp", start_image="images/v15/Scene18e/v15lausffStart.webp")
-    image v15lausf2 = Movie(play="images/v15/Scene18e/v15lausf2.webm", loop=True, image="images/v15/Scene18e/v15lausf2Start.webp", start_image="images/v15/Scene18e/v15lausf2Start.webp")
-    image v15lausf2f = Movie(play="images/v15/Scene18e/v15lausf2f.webm", loop=True, image="images/v15/Scene18e/v15lausf2Start.webp", start_image="images/v15/Scene18e/v15lausf2Start.webp")
+    image v15lausf = Movie(play="images/v15/Scene 18e/v15lausf.webm", loop=True, image="images/v15/Scene 18e/v15lausfStart.webp", start_image="images/v15/Scene 18e/v15lausfStart.webp")
+    image v15lausff = Movie(play="images/v15/Scene 18e/v15lausff.webm", loop=True, image="images/v15/Scene 18e/v15lausfStart.webp", start_image="images/v15/Scene 18e/v15lausfStart.webp")
+    image v15lausf2 = Movie(play="images/v15/Scene 18e/v15lausf2.webm", loop=True, image="images/v15/Scene 18e/v15lausf2Start.webp", start_image="images/v15/Scene 18e/v15lausf2Start.webp")
+    image v15lausf2f = Movie(play="images/v15/Scene 18e/v15lausf2f.webm", loop=True, image="images/v15/Scene 18e/v15lausf2Start.webp", start_image="images/v15/Scene 18e/v15lausf2Start.webp")
 
     scene v15lausf # Ignore as anim
     with dissolve
@@ -578,10 +564,10 @@ label v15s18e_end:
 
     la "Hmm?"
 
-    image v15laum = Movie(play="images/v15/Scene18e/v15laum.webm", loop=True, image="images/v15/Scene18e/v15laumStart.webp", start_image="images/v15/Scene18e/v15lausfStart.webp")
-    image v15laumf = Movie(play="images/v15/Scene18e/v15laumf.webm", loop=True, image="images/v15/Scene18e/v15laumfStart.webp", start_image="images/v15/Scene18e/v15lausfStart.webp")
-    image v15laum2 = Movie(play="images/v15/Scene18e/v15laum2.webm", loop=True, image="images/v15/Scene18e/v15lausf2Start.webp", start_image="images/v15/Scene18e/v15lausf2Start.webp")
-    image v15laum2f = Movie(play="images/v15/Scene18e/v15laum2f.webm", loop=True, image="images/v15/Scene18e/v15lausf2Start.webp", start_image="images/v15/Scene18e/v15lausf2Start.webp")
+    image v15laum = Movie(play="images/v15/Scene 18e/v15laum.webm", loop=True, image="images/v15/Scene 18e/v15laumStart.webp", start_image="images/v15/Scene 18e/v15lausfStart.webp")
+    image v15laumf = Movie(play="images/v15/Scene 18e/v15laumf.webm", loop=True, image="images/v15/Scene 18e/v15laumStart.webp", start_image="images/v15/Scene 18e/v15lausfStart.webp")
+    image v15laum2 = Movie(play="images/v15/Scene 18e/v15laum2.webm", loop=True, image="images/v15/Scene 18e/v15laum2Start.webp", start_image="images/v15/Scene 18e/v15lausf2Start.webp")
+    image v15laum2f = Movie(play="images/v15/Scene 18e/v15laum2f.webm", loop=True, image="images/v15/Scene 18e/v15laum2Start.webp", start_image="images/v15/Scene 18e/v15lausf2Start.webp")
 
     scene v15laum # Ignore as anim
     with dissolve

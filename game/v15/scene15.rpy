@@ -195,19 +195,13 @@ label v15s15:
             pause 0.75
 
             image v15rosoral = Movie(play="images/v15/Scene 15/v15rosoral.webm", loop=True, image="images/v15/Scene 15/v15rosoralStart.webp", start_image="images/v15/Scene 15/v15rosoralStart.webp") 
-            image v15rosoralf = Movie(play="images/v15/Scene 15/v15rosoralf.webm", loop=True, image="images/v15/Scene 15/v15rosoralStart.webp", start_image="images/v15/Scene 15/v15rosoralStart.webp") 
             image v15rosoral2 = Movie(play="images/v15/Scene 15/v15rosoral2.webm", loop=True, image="images/v15/Scene 15/v15rosoral2Start.webp", start_image="images/v15/Scene 15/v15rosoral2Start.webp")
-            image v15rosoral2f = Movie(play="images/v15/Scene 15/v15rosoral2f.webm", loop=True, image="images/v15/Scene 15/v15rosoral2Start.webp", start_image="images/v15/Scene 15/v15rosoral2Start.webp")
 
             scene v15rosoral # IGNORE AS ANIMATION
             with dissolve
             pause 0.75
 
             ro "*Moans* Oh... Yes... You are a hungry boy! *Laughs*"
-
-            scene v15rosoralf # IGNORE AS ANIMATION
-            with dissolve
-            pause 0.75
 
             ro "Fuck... Yeah... Does it taste good, baby? Do you love it?"
 
@@ -216,10 +210,6 @@ label v15s15:
             pause 0.75
 
             u "*Muffled* Yes, I love it..."
-
-            scene v15rosoral2f # IGNORE AS ANIMATION
-            with dissolve
-            pause 0.75
 
             ro "I'm so... *Gasps* Happy to hear you say that... *Panting*"
 
@@ -285,12 +275,12 @@ label v15s15:
 
                     play sound "sounds/slap.mp3"
 
-                    scene v15s15_15 # FPP. MC looking down at Ms. Rose's ass, he is in max penetration, he is slapping her ass, it's red where he hit it
+                    scene v15s15_17 # FPP. MC looking down at Ms. Rose's ass, he is in max penetration, he is slapping her ass, it's red where he hit it
                     with dissolve
 
                     u "Damn right you are!"
 
-                    scene v15s15_15a # FPP. MC looking down at Ms. Rose's ass, he is not in max penetration, he is grabbing her ass now, it's red where he hit it
+                    scene v15s15_17a # FPP. MC looking down at Ms. Rose's ass, he is not in max penetration, he is grabbing her ass now, it's red where he hit it
                     with dissolve
 
                     ro "*Moans* Fuck... Yes, [name]..."
