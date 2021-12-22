@@ -365,12 +365,14 @@ label v15s18e_vagina:
     jump v15s18e_end
 
 label v15s18e_end:
-    scene v15s18eend_1 # Reuse scene v15s18ene_3
+    #scene v15s18eend_1 # Reuse scene v15s18ene_3
+    scene v15s18ene_3
     with dissolve
 
     u "You just back and relax, birthday girl."
 
-    scene v15s18eend_1a # Reuse scene v15s18ene_3a
+    #scene v15s18eend_1a # Reuse scene v15s18ene_3a
+    scene v15s18ene_3a
     with dissolve
 
     la "*Giggles* Okay."

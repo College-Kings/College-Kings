@@ -85,7 +85,7 @@ label v15s30:
                     $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
 
                 else:
-                    $ emily.messenger.addImgReply("images/v15/Scene 29/emilynude_MC_DicPic1.webp", func=None) # Ignore as Reused from scene 29
+                    $ emily.messenger.newImgMessage("images/v15/Scene 29/emilynude_MC_DicPic1.webp", queue=False) # Ignore as Reused from scene 29
 
                 $ emily.messenger.newMessage("Omg, you're so hard for me... Are you touching yourself?", queue=False)
                 $ emily.messenger.addReply("I am now. Thinking about you in that bath ;)", func=None)

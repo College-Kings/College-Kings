@@ -77,7 +77,7 @@ label v15s29:
                     $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
 
                 else:
-                    $ emily.messenger.addImgReply("images/v15/Scene 29/emilynude_MC_DicPic1.webp", func=None) # MC dick pic, Just show a white sheet under Mc for the background
+                    $ emily.messenger.newImgMessage("images/v15/Scene 29/emilynude_MC_DicPic1.webp", queue=False) # MC dick pic, Just show a white sheet under Mc for the background
 
                 $ emily.messenger.newMessage("Omg, you're so hard for me... Are you touching yourself?", queue=False)
                 $ emily.messenger.addReply("I am now. Thinking about you in that bath ;)", func=None)
