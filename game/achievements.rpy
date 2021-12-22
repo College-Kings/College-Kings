@@ -198,4 +198,5 @@ init python:
 
     Achievement("teetotal", "Party without alcohol") #s24-25
     Achievement("polycurious", "Monogamy is overrated") #s26
-    Achievement("just_one_more_thing", "Find all the clues and crack the case") #??
+    Achievement("just_one_more_thing", "Find all the clues and crack the case") #s46??
+    Achievement("","") #s18? Hidden achievement
