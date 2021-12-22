@@ -67,6 +67,8 @@ label v15s8:
     scene v15s8_4 # TPP. Show MC upclose analyzing the planning board, MC in a generic standing thinking pose while he looks at the board, Chloe in the background, both slight smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
 # -Insert Planning Board with the options for phase 2-
 # -The planning board pops up and MC makes his choices from what's presented, close when finished-
     python:
