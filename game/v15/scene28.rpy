@@ -597,7 +597,6 @@ label v15s28:
 
         sa "Yeah, you too. Enjoy your six tequilas."
 
-    ### VERIFY v14_Samantha_clean - LISTED AS A PLACEHOLDER IN variables.rpy
     elif not v14_SamanthaDrugs: # -if Apes and SamanthaSober from 14.53a (MC
         scene v15s28_9
         with dissolve
