@@ -1,7 +1,7 @@
 # SCENE 20: Chloe Brief
-# Locations: 
-# Characters: CHLOE (Outfit: x), MC (Outfit: x)
-# Time: 
+# Locations: Library
+# Characters: CHLOE (Outfit: 3), MC (Outfit: 9)
+# Time: Morning
 
 label v15s20:
     scene v15s20_1 # TPP. Show MC walking into the Libray, slight smile, mouth closed.
