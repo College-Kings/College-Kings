@@ -96,6 +96,7 @@ label v15s9:
 
             u "It's just as friends, right? Or do I have to pretend to be your boyfriend? *Laughs*"
 
+            # This removes AubreyTamed from the player and pushes them back into AubreyFriend, NOT FwB.-
             if v13s48_canoeing_as_date:
                 $ aubrey.relationship = Relationship.FRIEND
 
