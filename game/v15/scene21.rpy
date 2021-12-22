@@ -1212,7 +1212,7 @@ label v15s21:
             "Stay quiet":
                 $ v15_meeting_points += 1
 
-                show screen teacher_conviction_bar(v15_meeting_points / 8 * 100, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/mr_lee_background.webp")
+                show screen teacher_conviction_bar(v15_meeting_points / 8 * 100, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
 
                 scene v15s21_13b
                 with dissolve
@@ -1314,7 +1314,7 @@ label v15s21:
                 $ v15_meeting_points += 1
                 $ add_point(KCT.BOYFRIEND)
 
-                show screen teacher_conviction_bar(v15_meeting_points / 8 * 100, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/mr_lee_background.webp")
+                show screen teacher_conviction_bar(v15_meeting_points / 8 * 100, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
 
                 scene v15s21_13b
                 with dissolve
@@ -1415,7 +1415,7 @@ label v15s21:
                 $ add_point(KCT.BRO)
                 $ add_point(KCT.BOYFRIEND)
 
-                show screen teacher_conviction_bar(v15_meeting_points / 8 * 100, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/mr_lee_background.webp")
+                show screen teacher_conviction_bar(v15_meeting_points / 8 * 100, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
 
                 scene v15s21_13b
                 with dissolve
@@ -1577,7 +1577,7 @@ label v15s21:
             "Consider it":
                 $ v15_meeting_points += 1
 
-                show screen teacher_conviction_bar(v15_meeting_points / 8 * 100, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/mr_lee_background.webp")
+                show screen teacher_conviction_bar(v15_meeting_points / 8 * 100, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
 
                 scene v15s21_13b
                 with dissolve
@@ -1629,7 +1629,7 @@ label v15s21:
         if v13_perfume: # -if MC gave Ms. Rose the perfume bottle gift in Amsterdam (had scene 13.57 instead of 13.57a) = (bonus correct_points +1)
             $ v15_meeting_points += 1
 
-            show screen teacher_conviction_bar(v15_meeting_points / 8 * 100, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/mr_lee_background.webp")
+            show screen teacher_conviction_bar(v15_meeting_points / 8 * 100, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
 
             scene v15s21_7l
             with dissolve
@@ -1703,7 +1703,7 @@ label v15s21:
 
         if kct == "confident":
             $ v15_meeting_points += 1
-            show screen teacher_conviction_bar(v15_meeting_points / 8 * 100, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/mr_lee_background.webp")
+            show screen teacher_conviction_bar(v15_meeting_points / 8 * 100, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
 
         # Can gain up to 8 points: 4 from answers, 2 from relationship with Ms. Rose, 1 from perfume and 1 from kct. Need 3+ points to convince her
         # If Relationship, Ms. Rose is easy to convince (just need 1 correct answer even if you fail everything else)
