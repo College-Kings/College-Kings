@@ -498,6 +498,7 @@ label v15s4:
             scene v15s4_12a
             with dissolve
 
+            $ grant_achievement("da_ba_dee_da_ba_dai")
             u "No, let's not. I kinda like Blue, actually."
 
             scene v15s4_12

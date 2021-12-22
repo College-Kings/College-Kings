@@ -133,6 +133,7 @@ image say_chirp = "images/achievements/v14/say_chirp.webp"
 image grand_theft_chloe = "images/achievements/v14/grand_theft_chloe.webp"
 image clean_it_up = "images/achievements/v14/clean_it_up.webp"
 
+image da_ba_dee_da_ba_dai = "images/achievements/v15/da_ba_dee_da_ba_dai.webp"
 image horn_dog = "images/achievements/v15/horn_dog.webp"
 image counter_intelligence = "images/achievements/v15/counter_intelligence.webp"
 image mmmm_donut = "images/achievements/v15/mmmm_donut.webp"
