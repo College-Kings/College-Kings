@@ -157,7 +157,7 @@ label v15s8:
         scene v15s8_3
         with dissolve
 
-        cl "For some it slips out quicker than other, but yeah. Eventually."
+        cl "For some it slips out quicker than others, but yeah. Eventually."
 
         scene v15s8_3a
         with dissolve
