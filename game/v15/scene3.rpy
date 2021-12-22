@@ -138,16 +138,22 @@ label v15s3: # 3) Dean comes to Apes about posted image
     scene v15s3_7a # FPP Same angle as 7, Cameron looking up at dean, phone still in his hand, neutral expression, mouth open
     with dissolve
 
+    #$ v14s43b_kiwiiPost3.removePost()
+    #$ v14s43b_kiwiiPost6.removePost()
     ca "Done."
 
     scene v15s3_8
     with dissolve
 
+    #$ v14s43b_kiwiiPost1.removePost()
+    #$ v14s43b_kiwiiPost4.removePost()
     gr "Deleted."
 
     scene v15s3_6a
     with dissolve
 
+    #$ v14s43b_kiwiiPost2.removePost()
+    #$ v14s43b_kiwiiPost5.removePost()
     ry "Yeah, it's gone now."
 
     scene v15s3_5b
