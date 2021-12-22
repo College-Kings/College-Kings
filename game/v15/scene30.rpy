@@ -54,7 +54,7 @@ label v15s30:
         scene v15s30_4 # FPP. MC picks up his phone and checks his texts and sees a message from Emily, From MC's chest and entire lower body is visible from the angle of him laying on the bed
         with dissolve
 
-        $ emily.messenger.newImgMessage("Standing next to a full bathtub, in sexy *new* lingerie", queue=False)
+        $ emily.messenger.newImgMessage("images/v15/Scene 29/emily_message_29.webp", queue=False) #Standing next to a full bathtub, in sexy *new* lingerie
         $ emily.messenger.newMessage("About to have a late night bath, thinking of you.", queue=False)
         $ emily.messenger.addReply("Oh, yeah?", func=None)
         $ emily.messenger.addReply("Let me see? ;)", func=None)

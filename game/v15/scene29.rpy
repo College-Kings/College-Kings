@@ -5,6 +5,13 @@
 # Render Count: 5 Unique, 14 total
 
 label v15s29:
+    if False: #making sure it shows on Lint
+        scene emilynude_MC_DicPic1
+        scene emilynude_MC_DicPic2
+        scene emily_message_29
+        scene emilynude1
+        scene emilynude2
+
     scene v15s29_1 # TPP. MC walks into his wolve's bedroom, slight smile, mouth closed
     with dissolve
 
@@ -39,7 +46,7 @@ label v15s29:
         scene v15s29_4 # FPP. MC picks up his phone and checks his texts and sees a message from Emily, From MC's chest and entire lower body is visible from the angle of him laying on the bed
         with dissolve
 
-        $ emily.messenger.newImgMessage("Standing next to a full bathtub, in sexy *new* lingerie", queue=False)
+        $ emily.messenger.newImgMessage("images/v15/Scene 29/emily_message_29.webp", queue=False) #Standing next to a full bathtub, in sexy *new* lingerie
         $ emily.messenger.newMessage("About to have a late night bath, thinking of you.", queue=False)
         $ emily.messenger.addReply("Oh, yeah?", func=None)
         $ emily.messenger.addReply("Let me see? ;)", func=None)
