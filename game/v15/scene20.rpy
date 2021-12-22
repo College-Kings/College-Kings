@@ -115,7 +115,7 @@ label v15s20:
 
         cl "Haha, shh! Come on, we need to focus."
 
-    else: ###if MsRoseMeeting: #Placeholder for if MC chose to meet with Ms. Rose.
+    else: ###if MsRoseMeeting:
         scene v15s20_5a
         with dissolve
 

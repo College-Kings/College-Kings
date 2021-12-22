@@ -3,7 +3,7 @@
 # Characters: MC (Outfit: Halloween Costume), LAUREN (Outfit: 1)
 # Time: Morning
 
-label v15s19: ### ERROR: 19) Helping Lauren Clean Up
+label v15s19:
     # -TODO: Transition from Night to Morning-
 
     if v15s18_LaurensBed: # -if sleeping in Lauren's bed

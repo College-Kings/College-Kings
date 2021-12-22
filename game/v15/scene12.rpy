@@ -446,7 +446,6 @@ label v15s12:
 
         # -The planning board pops up and MC makes his choices from what's presented-
 
-        #### Planning Board work goes here 
         python:
             lindsey_board = PlanningBoard("images/v15/planning_boards/lindsey_background.webp", money=lindsey_board.money, style="lindsey_board")
 
