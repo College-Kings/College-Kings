@@ -5,7 +5,7 @@ screen v15s17_gift_selection():
         xalign 0.5
         xysize (1190, 127)
 
-        add "images/v15/Scene 17/gift_picking_screen/header_box.png" xalign 0.5
+        add "images/v15/Scene 17/gift_picking_screen/header_box.webp" xalign 0.5
         text "Lauren Halloween Birthday Party" align (0.5, 0.5) yoffset -10
 
     vbox:
@@ -23,12 +23,12 @@ screen v15s17_gift_selection():
                     fixed:
                         xysize (225, 350)
 
-                        add "images/v15/Scene 17/gift_picking_screen/item_box.png"
+                        add "images/v15/Scene 17/gift_picking_screen/item_box.webp"
                         text item.name xalign 0.5 ypos 25 style "item_name_text"
                         add item.idle_image align (0.5, 0.5)
                     
                     imagebutton:
-                        idle "images/v15/Scene 17/gift_picking_screen/pick_item_idle.png"
+                        idle "images/v15/Scene 17/gift_picking_screen/pick_item_idle.webp"
                         action [Function(mc.inventory.add_item, item), Return()]
 
         hbox:
@@ -42,12 +42,12 @@ screen v15s17_gift_selection():
                     fixed:
                         xysize (225, 350)
 
-                        add "images/v15/Scene 17/gift_picking_screen/item_box.png"
+                        add "images/v15/Scene 17/gift_picking_screen/item_box.webp"
                         text item.name xalign 0.5 ypos 15 style "item_name_text"
                         add item.idle_image align (0.5, 0.5)
                     
                     imagebutton:
-                        idle "images/v15/Scene 17/gift_picking_screen/pick_item_idle.png"
+                        idle "images/v15/Scene 17/gift_picking_screen/pick_item_idle.webp"
                         action [Function(mc.inventory.add_item, item), Return()]
 
 
