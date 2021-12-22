@@ -2,7 +2,7 @@ screen v15_teacher_brief_icon(key):
     tag teacher_brief
 
     imagebutton:
-        idle "images/v15/Scene 20/teacher_brief/icon.png"
+        idle "images/v15/Scene 20/teacher_brief/icon.webp"
         action Show("v15_teacher_brief", None, key)
 
 
@@ -46,7 +46,7 @@ screen v15_teacher_brief(key):
         action Show("v15_teacher_brief_icon", None, key)
 
     imagebutton:
-        idle "images/v15/Scene 20/teacher_brief/background.png"
+        idle "images/v15/Scene 20/teacher_brief/background.webp"
         action NullAction()
         align (0.5, 0.5)
 
@@ -68,14 +68,14 @@ screen v15_teacher_brief(key):
             xalign 0.5
             spacing 15
             
-            add "images/v15/Scene 20/teacher_brief/heart.png" yalign 0.5
+            add "images/v15/Scene 20/teacher_brief/heart.webp" yalign 0.5
             text "LOVES" style "teacher_brief_header1" yalign 0.5
 
         for i in teacher["loves"]:
             hbox:
                 spacing 15
 
-                add "images/v15/Scene 20/teacher_brief/check.png" yalign 0.5
+                add "images/v15/Scene 20/teacher_brief/check.webp" yalign 0.5
                 text i style "teacher_brief_body" yalign 0.5
 
     vbox:
@@ -86,14 +86,14 @@ screen v15_teacher_brief(key):
             xalign 0.5
             spacing 15
             
-            add "images/v15/Scene 20/teacher_brief/cross.png" yalign 0.5
+            add "images/v15/Scene 20/teacher_brief/cross.webp" yalign 0.5
             text "HATE" style "teacher_brief_header1" yalign 0.5
 
         for i in teacher["hates"]:
             hbox:
                 spacing 15
 
-                add "images/v15/Scene 20/teacher_brief/check.png" yalign 0.5
+                add "images/v15/Scene 20/teacher_brief/check.webp" yalign 0.5
                 text i style "teacher_brief_body" yalign 0.5
 
     fixed:
@@ -109,7 +109,7 @@ screen v15_teacher_brief(key):
                 align (0.5, 0.5)
                 spacing 25
 
-                add "images/v15/Scene 20/teacher_brief/lock.png"
+                add "images/v15/Scene 20/teacher_brief/lock.webp"
                 text "LOCKED SECRET INSIGHT" style "teacher_brief_header1"
 
 

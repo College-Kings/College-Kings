@@ -11,7 +11,7 @@ screen teacher_conviction_bar(percentage, title, teacher_name, background):
             # at presidency_bar
             value AnimatedValue(percentage, 100, 2, old_value)
             left_bar Frame("gui/bar/blue.webp", 10, 0)
-            right_bar Frame("gui/bar/ruby.png", 10, 0)
+            right_bar Frame("gui/bar/ruby.webp", 10, 0)
 
         text teacher_name xpos 20 yalign 0.5 yoffset 5 style "conviction_bar_header"
 
