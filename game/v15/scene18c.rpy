@@ -619,7 +619,7 @@ label v15s18c_imre_aubrey:
 
     u "Very true."
 
-    if not v15s18_mention_list_aubrey:
+    if not v15s18_mention_list:
 
         u "(Now is a good time to check something off the list, should I ask Aubrey for help?)"
 
@@ -857,14 +857,14 @@ label v15s18c_imre_aubrey:
 
             u "We don't want anyone interrupting us, do we?"
 
-            scene v15saubfin2f # IGNORE AS ANIMATION
+            scene v15aubfin2f # IGNORE AS ANIMATION
             with dissolve
             pause
 
             au "*Moans* N-no."
     
         "Let her be loud":
-            scene v15aubfin2
+            scene v15aubfin2 
             with dissolve
             pause
 
@@ -872,7 +872,7 @@ label v15s18c_imre_aubrey:
 
             au "*Moans* You- OH!"
 
-            scene v15aubfin2f
+            scene v15aubfin2f 
             with dissolve
             pause
 
@@ -1091,7 +1091,7 @@ label v15s18c_imre_aubrey:
 
                 u "(There's no way I'm taking those. Bad idea. Very, very bad idea.)"
         
-    scene v15s18c_imau_37 # TPP. Show MC leaving the room, smiling, mouth closed
+    scene v15s18c_imau_38 # TPP. Show MC leaving the room, smiling, mouth closed
     with dissolve
 
     pause  
@@ -1684,7 +1684,7 @@ label v15s18c_autumn_amber:
 
                 pause 0.75
 
-                scene v15s18c_auam _7# TPP. Show MC walking off, slight smile, mouth closed
+                scene v15s18c_auam_7 # TPP. Show MC walking off, slight smile, mouth closed
                 with dissolve
 
                 pause 0.75
@@ -2044,7 +2044,7 @@ label v15s18c_autumn_kiss:
 
     u "*Laughs* Okay."
 
-    scene v15s18c_auam_11 # TPP. Show MC walking back to where he stands on the screen, sligth smile, mouth closed
+    scene v15s18c_auam_15 # TPP. Show MC walking back to where he stands on the screen, sligth smile, mouth closed
     with dissolve
 
     pause 0.75
