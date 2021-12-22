@@ -34,7 +34,7 @@ label v15s12:
         scene v15s12_2c # FPP. Lindsey, happy, smiling mouth open [Checkpoint A].
         with dissolve
 
-        li "Well, it's kind of just filled with a lot of boring everyday thoughts about college and guys."    
+        li "Well, it's kind of just filled with a lot of boring everyday thoughts about college and guys." 
 
         li "Like whether or not she should change her style, her hair color..."
 
@@ -177,7 +177,7 @@ label v15s12:
             scene v15s12_5a # FPP. Lindsey neutral expression mouth open [Checkpoint D].
             with dissolve
 
-            li "Ha, yeah. I know... Me too."        
+            li "Ha, yeah. I know... Me too." 
 
         if chloe.relationship.value >= Relationship.GIRLFRIEND.value: 
             li "And... There was something else too."
@@ -197,7 +197,7 @@ label v15s12:
             scene v15s12_5b # TPP. MC worried, mouth closed [Checkpoint D].
             with dissolve
 
-            u "(*Sighs* Do I want to know?)"       
+            u "(*Sighs* Do I want to know?)" 
 
         # -MC chooses event1 or event2
         # -event1 Tell me
@@ -283,7 +283,7 @@ label v15s12:
                 scene v15s12_5
                 with dissolve
 
-                li "Yeah, fair enough, I respect that. That's why I wanted to ask."            
+                li "Yeah, fair enough, I respect that. That's why I wanted to ask." 
 
         # -regardless of previous choice, still if Chloe GF
         if chloe.relationship.value >= Relationship.GIRLFRIEND.value and lindsey.relationship.value >= Relationship.FWB.value:
@@ -357,7 +357,7 @@ label v15s12:
                     scene v15s12_6f # TPP. MC neutral expression, mouth closed [Checkpoint E]. 
                     with dissolve
 
-                    u "(Sighs... Well, it needed to happen eventually, I guess.)"                
+                    u "(Sighs... Well, it needed to happen eventually, I guess.)" 
 
                 "It's not that serious": # -if It's not that serious
                     $ add_point(KCT.TROUBLEMAKER) # TODO: KCT and Character points
@@ -386,7 +386,7 @@ label v15s12:
 
                     $ add_point(KCT.TROUBLEMAKER) # -MC needs to be losing Loyal KCT here because he's lying through his teeth :)-
                     
-                    li "So... Do you have other people on your mind?"                
+                    li "So... Do you have other people on your mind?" 
 
                     scene v15s12_6c
                     with dissolve
@@ -504,17 +504,6 @@ label v15s12:
 
         call screen planning_board(lindsey_board)
         
-        ##A     Game Night
-        ##A.1   Buy Booze
-        ##A.2a  Most Likely To
-        ##A.2b  Would You Rather
-        ##A.3   Host it
-        ##B     VIP Night
-        ##B.1   Book Limousine
-        ##B.2a  Invite Sebastian
-        ##B.2b  Invite Grayson
-        ##B.3   Host it
-
         if lindsey_board.approach is not None:
             $ v15_lindsey_gamenight = lindsey_board.approach.id == "gameNight"
 
@@ -559,7 +548,7 @@ label v15s12:
             scene v15s12_8b
             with dissolve
 
-            li "Haha, that's so true. It's going to be epic!"        
+            li "Haha, that's so true. It's going to be epic!" 
 
         # -Regardless-
         scene v15s12_8a
@@ -575,10 +564,10 @@ label v15s12:
         scene v15s12_8a
         with dissolve
 
-        li "Hehe, thank you!"        
+        li "Hehe, thank you!" 
 
         if lindsey.relationship.value >= Relationship.FWB.value:
-            # -Lindsey gives MC a passionate kiss-           
+            # -Lindsey gives MC a passionate kiss- 
             scene v15s12_9 # FPP. Lindsey passionately kisses MC [Janitor's closet].
             with dissolve
 

@@ -16,7 +16,7 @@ label v15s46:
     scene v15s46_2 # TPP. Amber and MC inside the room, Amber turned around to face MC, MC looking at Amber, both slight smile, mouth closed.
     with dissolve
 
-    pause 0.75  
+    pause 0.75 
 
     scene v15s46_3 # FPP. MC looking at Amber, Amber looking at MC, Amber slight smile, mouth open.
     with dissolve 
@@ -35,7 +35,7 @@ label v15s46:
     scene v15s46_4 # TPP. Show MC walking up to the pinboard, slight smile, mouth closed
     with dissolve
 
-    pause 0.75  
+    pause 0.75 
 
     scene v15s46_5 # FPP. Looking at the pinboard.
     with dissolve 
@@ -306,19 +306,19 @@ label v15s46:
     pause 0.75
 
     scene v15s46_3e # FPP. Amber looking at her phone, slight smile, mouth closed.
-    with dissolve  
+    with dissolve
 
-    pause 0.75  
+    pause 0.75 
 
     scene v15s46_3f # FPP. Amber pressing a button on her phone, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75  
+    pause 0.75 
 
     scene v15s46_3g # FPP. Amber putting her phone away, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75  
+    pause 0.75 
 
     scene v15s46_3a
     with dissolve
@@ -367,12 +367,12 @@ label v15s46:
     scene v15s46_3d
     with dissolve
 
-    pause 0.75  
+    pause 0.75 
 
     scene v15s46_3e
     with dissolve 
 
-    pause 0.75  
+    pause 0.75 
 
     scene v15s46_3f
     with dissolve 
@@ -382,7 +382,7 @@ label v15s46:
     scene v15s46_3g
     with dissolve
 
-    pause 0.75  
+    pause 0.75 
 
     scene v15s46_3a
     with dissolve
@@ -412,7 +412,7 @@ label v15s46:
     scene v15s46_3i
     with dissolve
 
-    pause 0.75  
+    pause 0.75 
 
     scene v15s46_3j # FPP. MC looking at Amber, Amber looking at MC, Amber frown, looks sick, mouth open.
     with dissolve 
@@ -470,7 +470,7 @@ label v15s46:
     scene v15s46_3l # FPP. MC looking at Amber, Amber looking at MC, Amber frown, fake crying, mouth open.
     with dissolve
 
-    pause 0.75  
+    pause 0.75 
 
     scene v15s46_3a
     with dissolve

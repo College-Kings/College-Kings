@@ -1874,7 +1874,7 @@ label v15s21:
 
             cl "*Sighs*"
 
-            scene v15s21_12a  # TPP. Same as Ms. Rose v15s21_12 is walking away from the table, no expression, mouth is closed, Mc and Chloe are sitting at the table, looking at each other with a concerned expression, both mouths are closed
+            scene v15s21_12a # TPP. Same as Ms. Rose v15s21_12 is walking away from the table, no expression, mouth is closed, Mc and Chloe are sitting at the table, looking at each other with a concerned expression, both mouths are closed
             with dissolve
 
             pause 0.75
@@ -2366,7 +2366,7 @@ label v15s21:
         scene v15s21_13zh # FPP. same as v15s21_13zg Ms. Rose is signing the paperwork, looking at the paperwork, still a slight smile, mouth is still open
         with dissolve
 
-        ro "And... there...  Signed!"
+        ro "And... there... Signed!"
 
         scene v15s21_13zi # FPP. same as v15s21_13zg Ms. Rose hands the paperwork and pen towards Chloe's direction, slight smile mouth is closed
         with dissolve

@@ -136,7 +136,7 @@ label v15s28:
         scene v15s28_3b
         with dissolve
 
-        pe "Nothing!  She's a real catch, [name]! *Giggles*"
+        pe "Nothing! She's a real catch, [name]! *Giggles*"
 
         scene v15s28_3j # FPP Same angle as 3, Jenny looking at Penelope, pretending to be angry, playfully slapping Pen on the arm
         with dissolve

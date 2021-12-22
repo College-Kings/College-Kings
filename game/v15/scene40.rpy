@@ -324,7 +324,7 @@ label v15s40:
                     scene v15s40_1c
                     with dissolve
 
-                    aut "You're going out with my sister anyway, ha!  So yeah, nothing can happen."
+                    aut "You're going out with my sister anyway, ha! So yeah, nothing can happen."
             
         scene v15s40_1b
         with dissolve

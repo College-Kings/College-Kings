@@ -111,17 +111,6 @@ label v15s8:
 
     call screen planning_board(chloe_board)
 
-    ##A     Sabotage
-    ##A.1   Get Lindsey wasted
-    ##A.2   Provoke Lindsey
-    ##A.3a  Post to Kiwii
-    ##A.3b  Share on Dean PA
-    
-    ##B     Free Tuition
-    ##B.1a  Mr. Lee support
-    ##B.1b  Ms. Rose support
-    ##B.2   Meet Dean
-
     if chloe_board.approach is not None:
         $ v15_chloe_lindseysabotage = chloe_board.approach.id == "Sabotage"
 

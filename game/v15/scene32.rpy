@@ -100,7 +100,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
                     scene v15s32_4g
                     with dissolve
 
-                    u "Not exactly... Just trying out those smooth rom com moves, haha."                        
+                    u "Not exactly... Just trying out those smooth rom com moves, haha." 
 
                     if chloe.relationship.value >= Relationship.GIRLFRIEND.value: # -if ChloeGF
                         # -Chloe looks a little pissed-
@@ -127,7 +127,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
                         scene v15s32_5a
                         with dissolve
 
-                        cl "Okay. Well, you go have fun while I'm working hard on my campaign."                        
+                        cl "Okay. Well, you go have fun while I'm working hard on my campaign." 
 
                     else:
                         scene v15s32_5c # FPP. Chloe, smiling, mouth open, with her upper body leaning out the window looking downward [Chloe's window (left)-exterior].
@@ -143,7 +143,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
                     scene v15s32_5d # FPP. Chloe, neutral, mouth closed, lowering her window [Chloe's window (left)-exterior].
                     with dissolve
 
-                    u "(Nice going... *Sighs* Let's try again.)"                
+                    u "(Nice going... *Sighs* Let's try again.)" 
 
                     jump v15s32_right_window
 
@@ -245,7 +245,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
         scene v15s32_7c # FPP. Riley, smiling, mouth closed, standing in the front doorway [Chicks' front door-exterior].
         with dissolve
 
-        u "Haha, that's a scary thought... I'm way too young to get married."                
+        u "Haha, that's a scary thought... I'm way too young to get married." 
 
         u "How come you're still here?"
 
@@ -257,7 +257,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
         scene v15s32_7c
         with dissolve
 
-        u "Aww, that's sweet of you."                
+        u "Aww, that's sweet of you." 
 
         if riley.relationship.value >= Relationship.FWB.value: # -if RileyRS
             scene v15s32_7e # FPP. Riley, smiling, mouth open, stepping aside gesturing for MC to enter the house [Chicks' front door-exterior].
@@ -281,7 +281,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
             scene v15s32_8a # FPP. Riley smiling, mouth closed, her back is toward the open front door, where the street is visible behind her [Chicks' front door-interior].
             with dissolve
 
-            u "Ha, thanks."                    
+            u "Ha, thanks." 
         # -regardless-
 
         scene v15s32_8b # FPP. Riley smiling, mouth open, her back is toward the open front door, where the street is visible behind her [Chicks' front door-interior].
@@ -294,7 +294,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
         scene v15s32_8c # FPP. Riley smiling, yelling mouth open, hands cupped around her mouth, eyes looking up stairs (behind MC) her back is toward the open front door, where the street is visible behind her [Chicks' front door-interior].
         with dissolve
 
-        ri "Hey, come on, Aubrey!"            
+        ri "Hey, come on, Aubrey!" 
 
         # -Aubrey then starts coming down the stairs. We see her slow-motion from her feet to her head, revealing her full outfit-
         # Special scene wth 1920x5000 pic the pans from feet to head
@@ -332,7 +332,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
             scene v15s32_8e
             with dissolve
 
-            u "Haha, I know."                
+            u "Haha, I know." 
 
         # -Regardless-
 
@@ -354,7 +354,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
             u "She's right. You look absolutely stunning."
             
         else: # -if AubreyFriend
-            u "Yeah, seriously... It was like seeing an actual princess coming down the stairs."                
+            u "Yeah, seriously... It was like seeing an actual princess coming down the stairs." 
 
         # -Regardless-
 
@@ -378,7 +378,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
             scene v15s32_8l
             with dissolve
 
-            au "I'm grateful that you did. *Chuckles*"                
+            au "I'm grateful that you did. *Chuckles*" 
 
         # -Regardless-
 
@@ -557,7 +557,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
         scene v15s32_8i
         with dissolve
 
-        au "Thanks."        
+        au "Thanks." 
 
         if aubrey.relationship.value >= Relationship.FWB.value: # -if AubreyRs
             scene v15s32_8j
