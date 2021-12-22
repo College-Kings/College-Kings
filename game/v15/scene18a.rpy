@@ -1316,10 +1316,10 @@ label v15s18a_ImreLauren:
 
             imre "Oh, I- I don't know, ha. Sorry, bro."
 
+    #check transitions
+    
     scene v15s18aimre_6a
     with dissolve
-
-    u "Haha, alright, I should go check in with the others. See you two in a bit!"
 
     pause 0.75
 
