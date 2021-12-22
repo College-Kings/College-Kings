@@ -337,11 +337,6 @@ label v15s4:
 
                 u "Yeah, for sure. Ha! She'd like that..."
                 
-                scene v15s4_13
-                with dissolve
-                
-                aut "Hopefully we can find you a good home."
-
             else:
                 scene v15s4_13
                 with dissolve
@@ -353,10 +348,10 @@ label v15s4:
 
                 u "Fair."
 
-                scene v15s4_13
-                with dissolve
+    scene v15s4_13
+    with dissolve
 
-                aut "*Chuckles* Hopefully we can find you a good home."
+    aut "*Chuckles* Hopefully we can find you a good home."
 
     menu:
         "Good luck":
