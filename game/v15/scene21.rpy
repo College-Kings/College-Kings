@@ -6,6 +6,11 @@
 
 label v15s21:
     if v15_chloe_mrleesupport:
+        if kct == "loyal":
+            $ v15_meeting_points += 1
+
+        $ animated_value_percent = (v15_meeting_points+4) * 100 / 10
+
         scene v15s21_1 # FPP. Mr . Lee enters the library, slight smile, mouth closed
         with dissolve
 
@@ -95,6 +100,9 @@ label v15s21:
         menu:
             "Lindsey's wasting paper":
                 $ add_point(KCT.TROUBLEMAKER)
+                $ v15_meeting_points -= 1
+
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 10, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
 
                 scene v15s21_6b # FPP same as v15s21_6 Mr. Lee is now looking at mc, no expression, mouth closed.
                 with dissolve
@@ -137,10 +145,10 @@ label v15s21:
                 u "Yeah. You're right, I'm sorry."
 
             "Stay quiet":
-                $ v15_meeting_points += 1
+                $ v15_meeting_points += 0
                 $ add_point(KCT.BRO)
 
-                show screen teacher_conviction_bar(v15_meeting_points * 100 / 7, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 10, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
 
                 scene v15s21_6d #FPP. same as v15s21_6b Mr. Lee is still looking at MC, mouth closed, slight smile
                 with dissolve
@@ -253,7 +261,7 @@ label v15s21:
                 $ v15_meeting_points += 1
                 $ add_point(KCT.BRO)
 
-                show screen teacher_conviction_bar(v15_meeting_points * 100 / 7, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 10, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
 
                 scene v15s21_6b
                 with dissolve
@@ -281,6 +289,10 @@ label v15s21:
             "This is Chloe's idea":
                 $ add_point(KCT.BOYFRIEND)
                 $ add_point(KCT.TROUBLEMAKER)
+
+                $ v15_meeting_points -= 1
+
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 10, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
 
                 scene v15s21_6b
                 with dissolve
@@ -346,6 +358,10 @@ label v15s21:
             "Make SVC more money":
                 $ add_point(KCT.TROUBLEMAKER)
 
+                $ v15_meeting_points -= 1
+
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 10, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
+
                 scene v15s21_6b
                 with dissolve
 
@@ -380,7 +396,7 @@ label v15s21:
                 $ v15_meeting_points += 1
                 $ add_point(KCT.BRO)
 
-                show screen teacher_conviction_bar(v15_meeting_points * 100 / 7, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 10, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
 
                 scene v15s21_6b
                 with dissolve
@@ -510,6 +526,10 @@ label v15s21:
             "Defend the Dean's decision":
                 $ add_point(KCT.BOYFRIEND)
 
+                $ v15_meeting_points -= 1
+                
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 10, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
+
                 scene v15s21_6b
                 with dissolve
 
@@ -539,7 +559,7 @@ label v15s21:
                 $ v15_meeting_points += 1
                 $ add_point(KCT.BRO)
 
-                show screen teacher_conviction_bar(v15_meeting_points * 100 / 7, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 10, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
 
                 scene v15s21_6b
                 with dissolve
@@ -611,8 +631,6 @@ label v15s21:
         if not v13_perfume: # -if MC gave Mr. Lee the bonsai tree gift in Amsterdam (had scene 13.57a instead of 13.57) = (bonus correct_points +1)
             $ v15_meeting_points += 1
 
-            show screen teacher_conviction_bar(v15_meeting_points * 100 / 7, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
-
             scene v15s21_7c
             with dissolve
 
@@ -633,6 +651,7 @@ label v15s21:
 
             lee "Oh! I almost forgot to mention!"
 
+            show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 10, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
             lee "The bonsai tree you gifted to me is absolutely thriving alongside the others in my office."
 
             lee "If you're ever interested, swing by sometime and I'll teach you how to look after them."
@@ -665,13 +684,12 @@ label v15s21:
         if v11_ride_with_mrlee:  # -if MC took car journey with Mr. Lee in Europe (had scene 11.37a instead of 11.37b, didn't walk with Imre and Ryan) = (bonus correct_points +1)
             $ v15_meeting_points += 1
 
-            show screen teacher_conviction_bar(v15_meeting_points * 100 / 7, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
-
             scene v15s21_6d
             with dissolve
 
             u "Yeah, I think so. But, also..."
 
+            show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 10, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
             u "I just wanted to say that, a wise man once taught me about the importance of personal responsibility."
 
             scene v15s21_6s
@@ -752,15 +770,9 @@ label v15s21:
         scene v15s21_5a
         with dissolve
 
-        if kct == "loyal":
-            $ v15_meeting_points += 1
-            show screen teacher_conviction_bar(v15_meeting_points * 100 / 7, "CONVINCE TEACHER", "MR LEE", "images/v15/conviction_bars/mr_lee_background.webp")
-
-        # Can gain up to 7 points: 4 from answers, 1 from the car ride, 1 from bonsai and 1 from kct. Need 2+ points to convince him
-        # Mr. Lee is medium difficulty to convince. Need 2 answers if you fail everything else
-
-        if v15_meeting_points >= 5:
-            if v15_meeting_points == 5 and kct == "loyal":
+        #TBD optimal difficulty level
+        if v15_meeting_points >= 4:
+            if v15_meeting_points == 4 and kct == "loyal":
                 call screen kct_popup
                 
             scene v15s21_6
@@ -791,7 +803,7 @@ label v15s21:
             scene v15s21_5c # TPP. same as v15s21_5 MC is now sitting next to Chloe, Chloe and Mc look at each other and high five, both full smiles, both mouths open, Mr. Lee is still sitting down looking at Chloe, Still a slight smile, mouth is still closed
             with dissolve
 
-        elif v15_meeting_points >= 4:
+        elif v15_meeting_points >= 2:
             scene v15s21_6
             with dissolve
 
@@ -827,8 +839,8 @@ label v15s21:
             scene v15s21_5c
             with dissolve
 
-        elif v15_meeting_points >= 2:
-            if v15_meeting_points == 2 and kct == "loyal":
+        elif v15_meeting_points >= 0:
+            if v15_meeting_points == 0 and kct == "loyal":
                 call screen kct_popup
             
             scene v15s21_6h
@@ -1066,6 +1078,11 @@ label v15s21:
         jump v15s22 # -Transition to Scene 22-
 
     else: # -if meeting Ms. Rose
+        if kct == "confident":
+            $ v15_meeting_points += 1
+
+        $ animated_value_percent = (v15_meeting_points+4) * 100 / 11
+
         scene v15s21_8 # FPP. Ms. Rose enters the library, slight smile, mouth closed
         with dissolve
 
@@ -1120,7 +1137,7 @@ label v15s21:
         if ms_rose.relationship.value >= Relationship.FWB.value:
             $ v15_meeting_points += 2
 
-            show screen teacher_conviction_bar(v15_meeting_points * 100 / 8, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
+            show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 11, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
         
             scene v15s21_10d # FPP. Chloe is walking away with her back turned and can't see Mc or Ms. Rose, Ms. Rose is giving Mc a wink, slight smile, mouth closed
             with dissolve
@@ -1178,6 +1195,7 @@ label v15s21:
         menu:
             "Mention Nora":
                 $ add_point(KCT.TROUBLEMAKER)
+                $ v15_meeting_points -= 1
 
                 scene v15s21_13a
                 with dissolve
@@ -1197,6 +1215,8 @@ label v15s21:
                 scene v15s21_13c # FPP. same as v15s21_13a Ms. Rose is looking at Mc, still no expression, mouth is still open
                 with dissolve
 
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 11, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
+
                 ro "Personally, I think Nora has already made up her mind about Chloe's ability to lead and I'm not here to discuss that or take any part in the ongoing feud."
 
                 scene v15s21_7l
@@ -1210,9 +1230,7 @@ label v15s21:
                 u "(Not off to a great start... Should've kept my mouth shut, fuck.)"
 
             "Stay quiet":
-                $ v15_meeting_points += 1
-
-                show screen teacher_conviction_bar(v15_meeting_points * 100 / 8, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 11, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
 
                 scene v15s21_13b
                 with dissolve
@@ -1314,7 +1332,7 @@ label v15s21:
                 $ v15_meeting_points += 1
                 $ add_point(KCT.BOYFRIEND)
 
-                show screen teacher_conviction_bar(v15_meeting_points * 100 / 8, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 11, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
 
                 scene v15s21_13b
                 with dissolve
@@ -1340,6 +1358,9 @@ label v15s21:
 
             "Mr. Lee doesn't listen":
                 $ add_point(KCT.TROUBLEMAKER)
+                $ v15_meeting_points -= 1
+
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 11, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
 
                 scene v15s21_13b
                 with dissolve
@@ -1415,7 +1436,7 @@ label v15s21:
                 $ add_point(KCT.BRO)
                 $ add_point(KCT.BOYFRIEND)
 
-                show screen teacher_conviction_bar(v15_meeting_points * 100 / 8, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 11, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
 
                 scene v15s21_13b
                 with dissolve
@@ -1468,6 +1489,9 @@ label v15s21:
 
             "They'll get over it":
                 $ add_point(KCT.TROUBLEMAKER)
+                $ v15_meeting_points -= 1
+
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 11, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
 
                 scene v15s21_13b
                 with dissolve
@@ -1534,6 +1558,10 @@ label v15s21:
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BOYFRIEND)
 
+                $ v15_meeting_points -= 1
+
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 11, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
+
                 scene v15s21_13b
                 with dissolve
 
@@ -1577,7 +1605,7 @@ label v15s21:
             "Consider it":
                 $ v15_meeting_points += 1
 
-                show screen teacher_conviction_bar(v15_meeting_points * 100 / 8, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
+                show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 11, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
 
                 scene v15s21_13b
                 with dissolve
@@ -1629,8 +1657,6 @@ label v15s21:
         if v13_perfume: # -if MC gave Ms. Rose the perfume bottle gift in Amsterdam (had scene 13.57 instead of 13.57a) = (bonus correct_points +1)
             $ v15_meeting_points += 1
 
-            show screen teacher_conviction_bar(v15_meeting_points * 100 / 8, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
-
             scene v15s21_7l
             with dissolve
 
@@ -1659,6 +1685,7 @@ label v15s21:
             scene v15s21_13
             with dissolve
 
+            show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 11, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
             ro "Oh, it's okay! Thank you. It was actually a gift that [name] and Nora gave to me before we left Europe."
 
             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -1701,16 +1728,9 @@ label v15s21:
         scene v15s21_13o # FPP. same as v15s21_13n Ms. Rose has a serious expression, still looking at Mc, mouth is still closed
         with dissolve
 
-        if kct == "confident":
-            $ v15_meeting_points += 1
-            show screen teacher_conviction_bar(v15_meeting_points * 100 / 8, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
-
-        # Can gain up to 8 points: 4 from answers, 2 from relationship with Ms. Rose, 1 from perfume and 1 from kct. Need 3+ points to convince her
-        # If Relationship, Ms. Rose is easy to convince (just need 1 correct answer even if you fail everything else)
-        # If not Relationship, Ms. Rose is hard to convince (need 3 correct answers if you fail everything else)
-
-        if v15_meeting_points >= 5:
-            if v15_meeting_points == 5 and kct == "confident":
+        #TBD optimal difficulty level
+        if v15_meeting_points >= 4:
+            if v15_meeting_points == 4 and kct == "confident":
                 call screen kct_popup
         
             scene v15s21_13i
@@ -1736,7 +1756,7 @@ label v15s21:
             scene v15s21_12b # TPP. same as v15s21_12 MC is now sitting next to Chloe, Chloe and Mc look at each other and high five, both full smiles, both mouths open, Ms. Rose is still sitting down looking at Chloe, Still a slight smile, mouth is still closed
             with dissolve
 
-        elif v15_meeting_points >= 4:
+        elif v15_meeting_points >= 2:
             scene v15s21_13a
             with dissolve
 
@@ -1770,8 +1790,8 @@ label v15s21:
             scene v15s21_12b
             with dissolve
 
-        elif v15_meeting_points >= 3:
-            if v15_meeting_points == 3 and kct == "confident":
+        elif v15_meeting_points >= 0:
+            if v15_meeting_points == 0 and kct == "confident":
                 call screen kct_popup
 
             scene v15s21_13a
