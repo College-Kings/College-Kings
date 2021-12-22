@@ -681,7 +681,7 @@ label v15s21:
 
             u "Ha, yeah. Well..."
 
-        if v11_ride_with_mrlee:  # -if MC took car journey with Mr. Lee in Europe (had scene 11.37a instead of 11.37b, didn't walk with Imre and Ryan) = (bonus correct_points +1)
+        if v11_ride_with_mrlee: # -if MC took car journey with Mr. Lee in Europe (had scene 11.37a instead of 11.37b, didn't walk with Imre and Ryan) = (bonus correct_points +1)
             $ v15_meeting_points += 1
 
             scene v15s21_6d
@@ -1293,7 +1293,7 @@ label v15s21:
 
             u "(Don't forget, I brought notes! We can refer to them whenever.)"
 
-        else:   # -they have no journal icon, no access to notes-
+        else: # -they have no journal icon, no access to notes-
             scene v15s21_13f
             with dissolve
 

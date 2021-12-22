@@ -328,7 +328,7 @@ label v15s42:
 
     # -A UI pops up to show the three detective archetypes that MC can choose from (Professional, Psychologist, Loose Cannon). MC makes his choice and the UI disappears again-
 
-    if detective == "professional": # Placeholder?
+    if detective == "professional":
         scene v15s42_7a
         with dissolve
 
@@ -349,7 +349,7 @@ label v15s42:
 
         am "Haha, okay fair. Yeah! I can see this."
 
-    elif detective == "psychologist": # Placeholder?
+    elif detective == "psychologist":
         scene v15s42_7a
         with dissolve
 

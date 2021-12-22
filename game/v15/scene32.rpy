@@ -3,7 +3,7 @@
 # Characters: MC (Outfit: Homecoming Suit), CHLOE (Outfit: 1), AUBREY (Outfit: 7), RILEY (Outfit: 3) Sunday 
 # Time: Morning
 
-label v15s32:  #32) MC picks up Aubrey at Chicks' house 
+label v15s32: #32) MC picks up Aubrey at Chicks' house 
     scene v15s32_1 # TPP. MC, smiling mouth closed walking [Sidewalk-exterior].
     with dissolve
 
