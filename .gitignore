@@ -20,6 +20,7 @@ steam_appid.txt
 screenshot*
 
 *.bat
+*.docx
 *.rpa
 *.rpyc
 *.zip
