@@ -776,7 +776,7 @@ label v15s25:
         u "(I should respond to Aubrey.)"
         jump v15s25_PhoneContinueAubrey
 
-    scene v15s25_8a # TPP. Just MC sitting in the chair plain wall in the background, MC putting his phone away, MC slight smile, mouth closed.
+    scene v15s25_8b # TPP. Just MC sitting in the chair plain wall in the background, MC putting his phone away, MC slight smile, mouth open.
     with dissolve 
 
     u "*Sighs* (Still no Nora, but it sounds like Aubrey's got something fun planned for me.)"
