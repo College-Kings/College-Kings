@@ -363,7 +363,7 @@ label v15s39:
 
     li "Like, what has she ever actually done for you, herself?"
 
-    if chloe.relationship >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s39_11b
         with dissolve
 
@@ -579,7 +579,7 @@ label v15s39:
                 "Shots!":
                     $ add_point(KCT.TROUBLEMAKER)
 
-                    if chloe.relationship >= Relationship.GIRLFRIEND.value:
+                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                         $ add_point(KCT.BOYFRIEND)
 
                     scene v15s39_8c
@@ -685,7 +685,7 @@ label v15s39:
                             if hangOutWithLindsey:
                                 $ add_point(KCT.BOYFRIEND)
 
-                            if chloe.relationship >= Relationship.GIRLFRIEND.value:
+                            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                 $ add_point(KCT.TROUBLEMAKER)
 
                             pause 0.75
@@ -696,7 +696,7 @@ label v15s39:
                             $ add_point(KCT.TROUBLEMAKER)
                             $ v15_stay_on_topic = True
 
-                            if chloe.relationship >= Relationship.GIRLFRIEND.value:
+                            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                 $ add_point(KCT.BOYFRIEND)
 
                             pause 0.75
@@ -805,7 +805,7 @@ label v15s39:
                                 if hangOutWithLindsey:
                                     $ add_point(KCT.BOYFRIEND)
 
-                                if chloe.relationship >= Relationship.GIRLFRIEND.value:
+                                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                     $ add_point(KCT.TROUBLEMAKER)
 
                                 pause 0.75
@@ -816,7 +816,7 @@ label v15s39:
                                 $ add_point(KCT.TROUBLEMAKER)
                                 $ v15_say_nothing = True
 
-                                if chloe.relationship >= Relationship.GIRLFRIEND.value:
+                                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                     $ add_point(KCT.BOYFRIEND)
 
                                 pause 0.75
@@ -937,7 +937,7 @@ label v15s39:
                 "Don't risk it":
                     $ add_point(KCT.BRO)
 
-                    if chloe.relationship >= Relationship.GIRLFRIEND.value:
+                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                         $ add_point(KCT.TROUBLEMAKER)
 
                     if hangOutWithLindsey:
@@ -972,7 +972,7 @@ label v15s39:
                 "Try to trick her":
                     $ add_point(KCT.TROUBLEMAKER)
 
-                    if chloe.relationship >= Relationship.GIRLFRIEND.value:
+                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                         $ add_point(KCT.BOYFRIEND)
 
                     scene v15s39_8c
