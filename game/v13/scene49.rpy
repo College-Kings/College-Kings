@@ -23,9 +23,9 @@ label v13s49:
     
     $ v13s49_kiwiiPost1 = KiwiiPost("Aubrey", "v13/aubrey_beach.webp", _("Swimming up the ladder! #ScheveningenBeach"), numberLikes=4218)
     $ v13s49_kiwiiPost1.newComment("Imre", _("Hot as fuck Aubrey!!"))
-    $ v13s49_kiwiiPost1.newComment("Chloe", _("This is the hottest pic I've ever seen of you!"), mentions="Aubrey")
+    $ v13s49_kiwiiPost1.newComment("Chloe", _("This is the hottest pic I've ever seen of you!"), mentions=[aubrey])
     $ v13s49_kiwiiPost1.addReply(_("Wow, they turned out great!"))
-    $ v13s49_kiwiiPost1.addReply(_("Ah, beautiful. But even better in person ;)"), mentions="Aubrey")
+    $ v13s49_kiwiiPost1.addReply(_("Ah, beautiful. But even better in person ;)"), mentions=[aubrey])
     $ v13s49_kiwiiPost1.newComment("Aubrey", _("Thank you! <3"))
     $ v13s49_kiwiiPost1.newComment("Naomi", _("OMG! You look just like me! <3"))
 

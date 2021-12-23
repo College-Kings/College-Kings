@@ -331,11 +331,11 @@ label v12_slumber_party:
     au "*Laughs* Let's have fun, guys."
 
     $ v12s18_kiwiiPost1 = KiwiiPost("Lindsey", "v12/lindsey_aubrey_pjs.webp", _("Couldn't have asked for a better night... <3"), numberLikes=571) # Lindsey Selfie with Aubrey in pajamas
-    $ v12s18_kiwiiPost1.newComment("Aubrey", _("You're so welcome boo... Girls night again ASAP!"), mentions="Lindsey", numberLikes=renpy.random.randint(250,350), queue=False)
-    $ v12s18_kiwiiPost1.newComment("Imre", _("Even more beautiful in person, ladies..."), mentions="Lindsey", numberLikes=renpy.random.randint(150,300), queue=False)
-    $ v12s18_kiwiiPost1.newComment("Chloe", _("Yesss! We have to do this again."), mentions="Aubrey", numberLikes=renpy.random.randint(250,400), queue=False)
-    $ v12s18_kiwiiPost1.addReply(_("Just say when and where! Had a lot of fun :)"), mentions="Aubrey", numberLikes=renpy.random.randint(250, 330))
-    $ v12s18_kiwiiPost1.addReply(_("You deserve the best! Glad you enjoyed it ;)"), mentions="Lindsey", numberLikes=renpy.random.randint(250, 330))
+    $ v12s18_kiwiiPost1.newComment("Aubrey", _("You're so welcome boo... Girls night again ASAP!"), mentions=[lindsey], numberLikes=renpy.random.randint(250,350), queue=False)
+    $ v12s18_kiwiiPost1.newComment("Imre", _("Even more beautiful in person, ladies..."), mentions=[lindsey], numberLikes=renpy.random.randint(150,300), queue=False)
+    $ v12s18_kiwiiPost1.newComment("Chloe", _("Yesss! We have to do this again."), mentions=[aubrey], numberLikes=renpy.random.randint(250,400), queue=False)
+    $ v12s18_kiwiiPost1.addReply(_("Just say when and where! Had a lot of fun :)"), mentions=[aubrey], numberLikes=renpy.random.randint(250, 330))
+    $ v12s18_kiwiiPost1.addReply(_("You deserve the best! Glad you enjoyed it ;)"), mentions=[lindsey], numberLikes=renpy.random.randint(250, 330))
     $ v12s18_kiwiiPost1.newComment("Lindsey", _("Haha, thank you guys <3"), numberLikes=renpy.random.randint(150,300))
     call screen v12s18_room1
 

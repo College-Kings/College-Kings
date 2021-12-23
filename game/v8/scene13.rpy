@@ -33,16 +33,16 @@ label after_apes_ceremony:
     $ v8s13_kiwiiPost.newComment("Caleb", _("GO APES!!!"), numberLikes=renpy.random.randint(60, 70), queue=False)
     $ v8s13_kiwiiPost.newComment("Parker", _("Congrats guys!"), numberLikes=renpy.random.randint(40, 50), queue=False)
     if apesVids == 4:
-        $ v8s13_kiwiiPost.newComment("Aubrey", _("Damn, perfect score? Would love to see you in action in the ring ;)"), mentions="MC", numberLikes=renpy.random.randint(80, 90), queue=False)
+        $ v8s13_kiwiiPost.newComment("Aubrey", _("Damn, perfect score? Would love to see you in action in the ring ;)"), mentions=[mc], numberLikes=renpy.random.randint(80, 90), queue=False)
     else:
         $ v8s13_kiwiiPost.newComment("Aubrey", _("Congrats guys! Couldn't be at the ceremony cause of some stupid shit :/"), numberLikes=renpy.random.randint(50, 60), queue=False)
-    $ v8s13_kiwiiPost.newComment("Mason", _("So proud of you guys especially my man"), mentions="Caleb", numberLikes=renpy.random.randint(40, 50), queue=False)
-    $ v8s13_kiwiiPost.newComment("Emily", _("Yaayyy! Congrats"), mentions = "MC", numberLikes=renpy.random.randint(25, 35), queue=False)
+    $ v8s13_kiwiiPost.newComment("Mason", _("So proud of you guys especially my man"), mentions=[caleb], numberLikes=renpy.random.randint(40, 50), queue=False)
+    $ v8s13_kiwiiPost.newComment("Emily", _("Yaayyy! Congrats"), mentions=[mc], numberLikes=renpy.random.randint(25, 35), queue=False)
     if apesVids == 4:
         $ v8s13_kiwiiPost.newComment("Elijah", _("Hmph ridiculous! Like those are the perfect scores that matter..."), numberLikes=renpy.random.randint(3, 6), queue=False)
-        $ v8s13_kiwiiPost.newComment("Cameron", _("Just shut the fuck up and never come back"), mentions="Elijah", numberLikes=renpy.random.randint(75, 85), queue=False)
-        $ v8s13_kiwiiPost.newComment("Cameron", _("That is unless you want me to kick your ass, then of course knock yourself out"), mentions="Elijah", numberLikes=renpy.random.randint(110, 120), queue=False)
-    $ v8s13_kiwiiPost.newComment("Amber", _("Congrats people!!!"), mentions=["MC", "Ryan", "Caleb"], numberLikes=renpy.random.randint(50, 60), queue=False)
+        $ v8s13_kiwiiPost.newComment("Cameron", _("Just shut the fuck up and never come back"), mentions=[elijah], numberLikes=renpy.random.randint(75, 85), queue=False)
+        $ v8s13_kiwiiPost.newComment("Cameron", _("That is unless you want me to kick your ass, then of course knock yourself out"), mentions=[elijah], numberLikes=renpy.random.randint(110, 120), queue=False)
+    $ v8s13_kiwiiPost.newComment("Amber", _("Congrats people!!!"), mentions=[mc, ryan, caleb], numberLikes=renpy.random.randint(50, 60), queue=False)
     $ v8s13_kiwiiPost.newComment("Caleb", _("Thanks everyone!"), numberLikes=renpy.random.randint(20, 30), queue=False)
 
     $ chloe.messenger.newMessage(_("Congrats on getting in. Looks like we'll be seeing a lot of each other."), queue=False)

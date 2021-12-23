@@ -375,13 +375,13 @@ label v14s43b:
 
                 # Kiwi Post: v14kw43b - Sexy pic of Chloe is on Kiwii from Ryan, Grayson and Cameron's accounts- Private sexy pic of chloe same photo as in scene 41a
 
-                $ v14s43b_kiwiiPost1 = KiwiiPost("Grayson", "v14/v14kw43b.webp", "#Vote4Chloe is a #Vote4Whore", mentions="Chloe", numberLikes=255)
+                $ v14s43b_kiwiiPost1 = KiwiiPost("Grayson", "v14/v14kw43b.webp", "#Vote4Chloe is a #Vote4Whore", mentions=[chloe], numberLikes=255)
                 $ v14s43b_kiwiiPost1.newComment("Chloe", "You weren't calling me a whore when I was in your bed all of last year. Wonder what changed? #Salty", queue=False)
                 $ v14s43b_kiwiiPost1.newComment("Aubrey", "Grayson, what the fuck?! Did Lindsey put you up to this?!", queue=False)
                 $ v14s43b_kiwiiPost1.newComment("Lindsey", "I would never, ever, EVER. Tell them to do this.", queue=False)
                 $ v14s43b_kiwiiPost1.newComment("Imre", "Ok sure, whatever Linds. Doesn't matter to anyone, Chloe's never going to lose against someone who reaches this low to win.", queue=False)
 
-                $ v14s43b_kiwiiPost2 = KiwiiPost("Ryan", "v14/v14kw43b.webp", "#Vote4Chloe and she'll send you pics, just like this!", mentions="Chloe", numberLikes=157)
+                $ v14s43b_kiwiiPost2 = KiwiiPost("Ryan", "v14/v14kw43b.webp", "#Vote4Chloe and she'll send you pics, just like this!", mentions=[chloe], numberLikes=157)
                 $ v14s43b_kiwiiPost2.newComment("Chloe", "You too? Wow, why don't you just suck Grayson's dick while you're at it, huh?", queue=False)
                 $ v14s43b_kiwiiPost2.newComment("Imre", "Ha, you fucking idiot. Choke on it, too.", queue=False)
                 $ v14s43b_kiwiiPost2.newComment("Ryan", "Sure Imre, right after you stop sucking on Chloe's tits all the fucking time.", queue=False)
@@ -586,13 +586,13 @@ label v14s43b:
 
                 # Kiwi Post: v14kw43b - Sexy pic of Chloe is on Kiwii from Ryan, Grayson and Cameron's accounts- Private sexy pic of chloe same photo as in scene 41a
 
-                $ v14s43b_kiwiiPost4 = KiwiiPost("Grayson", "v14/v14kw43b.webp", "#Vote4Chloe is a #Vote4Whore", mentions="Chloe", numberLikes=255)
+                $ v14s43b_kiwiiPost4 = KiwiiPost("Grayson", "v14/v14kw43b.webp", "#Vote4Chloe is a #Vote4Whore", mentions=[chloe], numberLikes=255)
                 $ v14s43b_kiwiiPost4.newComment("Chloe", "You weren't calling me a whore when I was in your bed all of last year. Wonder what changed? #Salty", queue=False)
                 $ v14s43b_kiwiiPost4.newComment("Aubrey", "Grayson, what the fuck?! Did Lindsey put you up to this?!", queue=False)
                 $ v14s43b_kiwiiPost4.newComment("Lindsey", "I would never, ever, EVER. Tell them to do this.", queue=False)
                 $ v14s43b_kiwiiPost4.newComment("Imre", "Ok sure, whatever Linds. Doesn't matter to anyone, Chloe's never going to lose against someone who reaches this low to win.", queue=False)
 
-                $ v14s43b_kiwiiPost5 = KiwiiPost("Ryan", "v14/v14kw43b.webp", "#Vote4Chloe and she'll send you pics, just like this!", mentions="Chloe", numberLikes=157)
+                $ v14s43b_kiwiiPost5 = KiwiiPost("Ryan", "v14/v14kw43b.webp", "#Vote4Chloe and she'll send you pics, just like this!", mentions=[chloe], numberLikes=157)
                 $ v14s43b_kiwiiPost5.newComment("Chloe", "You too? Wow, why don't you just suck Grayson's dick while you're at it, huh?", queue=False)
                 $ v14s43b_kiwiiPost5.newComment("Imre", "Ha, you fucking idiot. Choke on it, too.", queue=False)
                 $ v14s43b_kiwiiPost5.newComment("Ryan", "Sure Imre, right after you stop sucking on Chloe's tits all the fucking time.", queue=False)

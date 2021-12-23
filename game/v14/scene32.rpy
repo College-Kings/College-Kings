@@ -491,7 +491,7 @@ label v14s32:
         $ v14s32_kiwiiPost1.newComment("Aubrey", _("Aww! Hell yeah! This is so cute, Chloe <3"), queue=False)
         $ v14s32_kiwiiPost1.newComment("Imre", _("Yessss!!!!!"), queue=False)
         $ v14s32_kiwiiPost1.newComment("Grayson", _("LMAO you're down bad, huh?"), queue=False)
-        $ v14s32_kiwiiPost1.newComment("Chloe", _("Be civil at least, Grayson"), mentions="Grayson", queue=False)
+        $ v14s32_kiwiiPost1.newComment("Chloe", _("Be civil at least, Grayson"), mentions=[grayson], queue=False)
         $ v14s32_kiwiiPost1.newComment("Riley", _("Omg! Can I have that thing?"), queue=False)
 
         $ set_presidency_percent(v14_lindsey_popularity - 2)

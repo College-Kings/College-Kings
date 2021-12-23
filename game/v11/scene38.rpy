@@ -6,8 +6,8 @@
 init python:
     def v11s38_kiwiiReply1():
         add_point(KCT.BOYFRIEND)
-        v11s38_kiwiiPost1.newComment("Amber", _("Haha, thank you [name]"), numberLikes=138, mentions="MC", queue=False)
-        v11s38_kiwiiPost1.newComment("Cameron", _("Fucking simp"), numberLikes=126, mentions="MC", queue=False)
+        v11s38_kiwiiPost1.newComment("Amber", _("Haha, thank you [name]"), numberLikes=138, mentions=[mc], queue=False)
+        v11s38_kiwiiPost1.newComment("Cameron", _("Fucking simp"), numberLikes=126, mentions=[mc], queue=False)
     
     def v11s38_kiwiiReply2():
         add_point(KCT.BRO)

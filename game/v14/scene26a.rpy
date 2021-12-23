@@ -190,12 +190,12 @@ label v14s26a:
         $ v14s26a_kiwiiPost1.newComment("Nora", "Cutie <3", queue=False)
         $ v14s26a_kiwiiPost1.newComment("Imre", "Actually, that cookie this morning made me shit myself!", queue=False)
         $ v14s26a_kiwiiPost1.newComment("Chloe", "Eww...", queue=False)
-        $ v14s26a_kiwiiPost1.newComment("Lindsey", "Really, Imre... Please stop.", mentions="Imre", queue=False)
+        $ v14s26a_kiwiiPost1.newComment("Lindsey", "Really, Imre... Please stop.", mentions=[imre], queue=False)
         $ v14s26a_kiwiiPost1.newComment("Sebastian", "Yeah dude, and you gave me one of them...", queue=False)
         $ v14s26a_kiwiiPost1.newComment("Imre", "Sorry dude! I thought I was doing something nice...", queue=False)
         $ v14s26a_kiwiiPost1.newComment("Chloe", "Omg, you guys will have to try my family's chocolate chip cookies! Maybe I'll make some soon :)", queue=False)
         $ v14s26a_kiwiiPost1.newComment("Imre", "Hell yeah Chloe", queue=False)
-        $ v14s26a_kiwiiPost1.addReply("Thank you for the cake! Mine tastes perfectly fine :)", mentions="Lindsey")
+        $ v14s26a_kiwiiPost1.addReply("Thank you for the cake! Mine tastes perfectly fine :)", mentions=[lindsey])
         $ v14s26a_kiwiiPost1.newComment("Lindsey", "<3")
 
 # Kiwi Post: v14kw26a_1 - Lindsey Selfie in front of her banner (Lindsey, Say Bye To The Bullshit) on the banner
@@ -207,12 +207,12 @@ label v14s26a:
         $ v14s26a_kiwiiPost2.newComment("Nora", "Cutie <3", queue=False)
         $ v14s26a_kiwiiPost2.newComment("Imre", "Actually, that cookie this morning made me shit myself!", queue=False)
         $ v14s26a_kiwiiPost2.newComment("Chloe", "Eww...", queue=False)
-        $ v14s26a_kiwiiPost2.newComment("Lindsey", "Really, Imre... Please stop.", mentions="Imre", queue=False)
+        $ v14s26a_kiwiiPost2.newComment("Lindsey", "Really, Imre... Please stop.", mentions=[imre], queue=False)
         $ v14s26a_kiwiiPost2.newComment("Sebastian", "Yeah dude, and you gave me one of them...", queue=False)
         $ v14s26a_kiwiiPost2.newComment("Imre", "Sorry dude! I thought I was doing something nice...", queue=False)
         $ v14s26a_kiwiiPost2.newComment("Chloe", "Omg, you guys will have to try my family's chocolate chip cookies! Maybe I'll make some soon :)", queue=False)
         $ v14s26a_kiwiiPost2.newComment("Imre", "Hell yeah Chloe", queue=False)
-        $ v14s26a_kiwiiPost2.addReply("Thank you for the cake! Mine tastes perfectly fine :)", mentions="Lindsey")
+        $ v14s26a_kiwiiPost2.addReply("Thank you for the cake! Mine tastes perfectly fine :)", mentions=[lindsey])
         $ v14s26a_kiwiiPost2.newComment("Lindsey", "<3")
 
     if not v14_amber_clean:

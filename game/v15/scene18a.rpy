@@ -363,7 +363,7 @@ label v15s18a_Aubrey:
             $ v15s18a_kiwiiPost3.newComment("Sebastian", _("Hell yeah! Can I borrow that outfit when you're done, [name]? :D"), queue=False)
         else:
             $ v15s18a_kiwiiPost3.newComment("Grayson", _("What the fuck...?"), queue=False)
-        $ v15s18a_kiwiiPost3.addReply(_("Lol, I love this. Happy birthday Lauren!"), mentions="Lauren")
+        $ v15s18a_kiwiiPost3.addReply(_("Lol, I love this. Happy birthday Lauren!"), mentions=[lauren])
         $ v15s18a_kiwiiPost3.newComment("Lauren", _("Hehe, thank you!! You guys are the best <3"), queue=False)
         $ v15s18a_kiwiiPost3.addReply(_("Now taking appointments... ;)"))
         $ v15s18a_kiwiiPost3.newComment("Naomi", _("Can I book you for my birthday party, too? ;D"), queue=False)
@@ -376,7 +376,7 @@ label v15s18a_Aubrey:
             $ v15s18a_kiwiiPost4.newComment("Sebastian", _("Lmao, show them how it's done, [name]! #SadboyStriptease"), queue=False)
         else:
             $ v15s18a_kiwiiPost4.newComment("Grayson", _("What the fuck is this"), queue=False)
-        $ v15s18a_kiwiiPost4.addReply(_("Sigh... Happy birthday Lauren! Lol"), mentions="Lauren")
+        $ v15s18a_kiwiiPost4.addReply(_("Sigh... Happy birthday Lauren! Lol"), mentions=[lauren])
         $ v15s18a_kiwiiPost4.newComment("Lauren", _("Hahaha! Thank you guys <3"), queue=False)
         $ v15s18a_kiwiiPost4.addReply(_("Now taking appointments... ;)"))
         $ v15s18a_kiwiiPost4.newComment("Naomi", _("Can I book you for my birthday party, too? ;D"), queue=False)
