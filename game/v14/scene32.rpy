@@ -486,7 +486,7 @@ label v14s32:
         imre "Chris got on board to have the Wolves support her because of me."
 
     if not v14_help_chloe:
-        $ v14s32_kiwiiPost1 = KiwiiPost("Chloe", "v14/v14s30b_pw_image_two.webp", _("I'd like to officially announce The Chicks' partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
+        $ v14s32_kiwiiPost1 = KiwiiPost(chloe, "v14/v14s30b_pw_image_two.webp", _("I'd like to officially announce The Chicks' partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
         $ v14s32_kiwiiPost1.newComment(chris, _("Haha, perfect! #Vote4Chloe"), queue=False)
         $ v14s32_kiwiiPost1.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), queue=False)
         $ v14s32_kiwiiPost1.newComment(imre, _("Yessss!!!!!"), queue=False)

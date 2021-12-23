@@ -14,14 +14,14 @@ label v15s18a:
     # -Clickable Objects (placement is irrelevant to plot, available to click on during both free roams): A bronze deer statue, A photo of Autumn and Lauren, A carved Halloween pumpkin, A Deer scarf wall hanging-
     # -Characters are greyed out after they are spoken too besides Lauren. She needs to stay highlighted as she is the way to end the free roam-
 
-    $ v15s18a_kiwiiPost1 = KiwiiPost("Lauren", "Steamy and spooky photo of her costume before the party begins", _("Feeling one year older ;)"), numberLikes=854)
+    $ v15s18a_kiwiiPost1 = KiwiiPost(lauren, "Steamy and spooky photo of her costume before the party begins", _("Feeling one year older ;)"), numberLikes=854)
     $ v15s18a_kiwiiPost1.newComment(lindsey, _("Holy fuck, babe! You look spectacular, I hope you have the most amazing birthday <3"), queue=False)
     $ v15s18a_kiwiiPost1.newComment(autumn, _("Can't wait to celebrate! Happy Birthday, Renny <33"), queue=False)
     $ v15s18a_kiwiiPost1.newComment(chloe, _("Sorry I couldn't be there! I'm just so busy... Enjoy yourself and have the night of your life! Happy birthday :)"), queue=False)
     $ v15s18a_kiwiiPost1.newComment(amber, _("YES!! That costume is everything! Happy b-day hottie, see you in a bit <3"), queue=False)
     $ v15s18a_kiwiiPost1.newComment(lauren, _("Thank you ladies!!"), queue=False)
 
-    $ v15s18a_kiwiiPost2 = KiwiiPost("Autumn", "Photo of halloween decorations for the party whether it's inside or outside the house", _("Spooky sister season :)"), numberLikes=743)
+    $ v15s18a_kiwiiPost2 = KiwiiPost(autumn, "Photo of halloween decorations for the party whether it's inside or outside the house", _("Spooky sister season :)"), numberLikes=743)
     $ v15s18a_kiwiiPost2.newComment(penelope, _("I'll never understand your decorating skills... I'm so excited for tonight!"), queue=False)
     $ v15s18a_kiwiiPost2.newComment(lauren, _("The house looks absolutely perfect, I couldn't have asked for more! Love u <3"), queue=False)
     $ v15s18a_kiwiiPost2.newComment(riley, _("So fucking cool! You're planning my wedding one day, Autumn..."), queue=False)
@@ -356,7 +356,7 @@ label v15s18a_Aubrey:
             au "Mhmm! Enjoy the party."
 
     if v15s18a_aub_kiwii_smile:
-        $ v15s18a_kiwiiPost3 = KiwiiPost("Aubrey", "Selfie with MC smiling at halloween party", _("Spooky season? More like stripper season ;)"), numberLikes=2492)
+        $ v15s18a_kiwiiPost3 = KiwiiPost(aubrey, "Selfie with MC smiling at halloween party", _("Spooky season? More like stripper season ;)"), numberLikes=2492)
         $ v15s18a_kiwiiPost3.newComment(chloe, _("O. M. G."), queue=False)
         $ v15s18a_kiwiiPost3.newComment(naomi, _("Hahahaha! I have to come to one of these parties soon..."), queue=False)
         if joinwolves:
@@ -369,7 +369,7 @@ label v15s18a_Aubrey:
         $ v15s18a_kiwiiPost3.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), queue=False)
 
     else:
-        $ v15s18a_kiwiiPost4 = KiwiiPost("Aubrey", "Selfie with non-smiling MC at halloween party", _("I think something's wrong with our stripper... Is he supposed to be this sad? </3"), numberLikes=2415)
+        $ v15s18a_kiwiiPost4 = KiwiiPost(aubrey, "Selfie with non-smiling MC at halloween party", _("I think something's wrong with our stripper... Is he supposed to be this sad? </3"), numberLikes=2415)
         $ v15s18a_kiwiiPost4.newComment(chloe, _("O. M. G."), queue=False)
         $ v15s18a_kiwiiPost4.newComment(naomi, _("Aww! You need to cheer him up, little sis! Or I will... ;)"), queue=False)
         if joinwolves:

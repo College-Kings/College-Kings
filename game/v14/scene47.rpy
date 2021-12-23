@@ -990,7 +990,7 @@ label v14s47_end:
     stop music fadeout 3
 
 
-    $ v14s47_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14s47_lindsey_kiwii.webp", "Making big moves ;)", numberLikes=720)
+    $ v14s47_kiwiiPost1 = KiwiiPost(lindsey, "v14/v14s47_lindsey_kiwii.webp", "Making big moves ;)", numberLikes=720)
     $ v14s47_kiwiiPost1.newComment(nora, "Kick ass babe <3", queue=False, numberLikes=259)
     $ v14s47_kiwiiPost1.newComment(aubrey, "Aww, look at your cute little button!", queue=False, numberLikes=623)
     $ v14s47_kiwiiPost1.newComment(riley, "I have one too :) Hehe.", queue=False, numberLikes=367)

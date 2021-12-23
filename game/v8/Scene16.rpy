@@ -32,7 +32,7 @@ label mc_wolves_sun_aft:
     #scene v8smcrm2a # TPP. Show MC sitting on the edge of his bed, phone in hand.
     #with dissolve
 
-    $ v8s16_kiwiiPost1 = KiwiiPost("Chloe", "v8/chlaubpost1.webp", _("Hanging with my best friend. Good times!"), numberLikes=346) # Chloe & Aubrey having fun at the beach.
+    $ v8s16_kiwiiPost1 = KiwiiPost(chloe, "v8/chlaubpost1.webp", _("Hanging with my best friend. Good times!"), numberLikes=346) # Chloe & Aubrey having fun at the beach.
     $ v8s16_kiwiiPost1.newComment(aubrey, _("Awww, I love hanging out with you <3"), queue=False)
     $ v8s16_kiwiiPost1.newComment(nora, _("Looking great Aubrey!"), queue=False)
     $ v8s16_kiwiiPost1.newComment(lindsey, _("Next time invite me along"), queue=False)
@@ -40,13 +40,13 @@ label mc_wolves_sun_aft:
     $ v8s16_kiwiiPost1.addReply(_("This is such a great picture!"), numberLikes=334)
 
     if not hcGirl == "lauren":
-        $ v8s16_kiwiiPost2 = KiwiiPost("Lauren", "v8/laurosepost1.webp", _("Having fun with Ms. Rose at Hoco!"), numberLikes=328) # Lauren & Ms. Rose at Hoco.
+        $ v8s16_kiwiiPost2 = KiwiiPost(lauren, "v8/laurosepost1.webp", _("Having fun with Ms. Rose at Hoco!"), numberLikes=328) # Lauren & Ms. Rose at Hoco.
         $ v8s16_kiwiiPost2.newComment(cameron, _("Teacher's pet!"), queue=False)
         $ v8s16_kiwiiPost2.newComment(ryan, _("Booba"), queue=False)        
         $ v8s16_kiwiiPost2.addReply(_("I'm glad you guys had fun"), v8s16_kiwiiReply1, numberLikes=320)
         $ v8s16_kiwiiPost2.addReply(_("Wow, you two look great!"), v8s16_kiwiiReply2, numberLikes=343)
 
-    $ v8s16_kiwiiPost3 = KiwiiPost("Riley", "v8/riclothpost1.webp", _("Nothing like a good day of shopping"), numberLikes=330) # Picture of Riley outside a clothing store.
+    $ v8s16_kiwiiPost3 = KiwiiPost(riley, "v8/riclothpost1.webp", _("Nothing like a good day of shopping"), numberLikes=330) # Picture of Riley outside a clothing store.
     $ v8s16_kiwiiPost3.newComment(aubrey, _("Wish I could of been there to try things with you"), queue=False)
     $ v8s16_kiwiiPost3.newComment(imre, _("Looking good"), queue=False)
     $ v8s16_kiwiiPost3.addReply(_("How many bikinis did you buy? Haha."), v8s16_kiwiiReply3, numberLikes=350)
@@ -70,7 +70,7 @@ label mc_apes_sun_aft:
     scene v8smcrm4a # TPP. Show MC sitting on the edge of his bed, phone in hand.
     with dissolve
 
-    $ v8s16_kiwiiPost1 = KiwiiPost("Chloe", "v8/chlaubpost1.webp", _("Hanging with my best friend. Good times!"), numberLikes=346) # Chloe & Aubrey having fun at the beach.
+    $ v8s16_kiwiiPost1 = KiwiiPost(chloe, "v8/chlaubpost1.webp", _("Hanging with my best friend. Good times!"), numberLikes=346) # Chloe & Aubrey having fun at the beach.
     $ v8s16_kiwiiPost1.newComment(aubrey, _("Awww, I love hanging out with you <3"), queue=False)
     $ v8s16_kiwiiPost1.newComment(nora, _("Looking great Aubrey!"), queue=False)
     $ v8s16_kiwiiPost1.newComment(lindsey, _("Next time invite me along"), queue=False)
@@ -78,13 +78,13 @@ label mc_apes_sun_aft:
     $ v8s16_kiwiiPost1.addReply(_("This is such a great picture!"), numberLikes=334)
 
     if not hcGirl == "lauren":
-        $ v8s16_kiwiiPost2 = KiwiiPost("Lauren", "v8/laurosepost1.webp", _("Having fun with Ms. Rose at Hoco!"), numberLikes=328) # Lauren & Ms. Rose at Hoco.
+        $ v8s16_kiwiiPost2 = KiwiiPost(lauren, "v8/laurosepost1.webp", _("Having fun with Ms. Rose at Hoco!"), numberLikes=328) # Lauren & Ms. Rose at Hoco.
         $ v8s16_kiwiiPost2.newComment(cameron, _("Teacher's pet!"), queue=False)
         $ v8s16_kiwiiPost2.newComment(ryan, _("Booba"), queue=False)        
         $ v8s16_kiwiiPost2.addReply(_("I'm glad you guys had fun"), v8s16_kiwiiReply1, numberLikes=320)
         $ v8s16_kiwiiPost2.addReply(_("Wow, you two look great!"), v8s16_kiwiiReply2, numberLikes=343)
 
-    $ v8s16_kiwiiPost3 = KiwiiPost("Riley", "v8/riclothpost1.webp", _("Nothing like a good day of shopping"), numberLikes=330) # Picture of Riley outside a clothing store.
+    $ v8s16_kiwiiPost3 = KiwiiPost(riley, "v8/riclothpost1.webp", _("Nothing like a good day of shopping"), numberLikes=330) # Picture of Riley outside a clothing store.
     $ v8s16_kiwiiPost3.newComment(aubrey, _("Wish I could of been there to try things with you"), queue=False)
     $ v8s16_kiwiiPost3.newComment(imre, _("Looking good"), queue=False)
     $ v8s16_kiwiiPost3.addReply(_("How many bikinis did you buy? Haha."), v8s16_kiwiiReply3, numberLikes=350)

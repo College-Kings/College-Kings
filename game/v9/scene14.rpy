@@ -100,7 +100,7 @@ label v9_thur_w_punch:
 
     guyc "Made us proud, bro."
 
-    $ v9s14KiwiiPost = KiwiiPost("Chris", "v9/v9hlw8c.webp", "That's my boy! Go [name]! Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
+    $ v9s14KiwiiPost = KiwiiPost(chris, "v9/v9hlw8c.webp", "That's my boy! Go [name]! Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
     $ v9s14KiwiiPost.newComment(sebastian, "Fuckin' A!", queue=False)
     $ v9s14KiwiiPost.newComment(aubrey, "Knew he had it in him!", queue=False)
 
