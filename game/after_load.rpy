@@ -100,6 +100,9 @@ label after_load:
         renpy.music.stop(channel=u'music') ### temporary emergency break
 
         ## PLAYABLE CHARACTERS
+        if isinstance(mc, FightCharacter):
+            mc = PlayableCharacter()
+
         try: mc.profile_picture
         except AttributeError: mc.profile_picture = profile_pictures[0]
 
@@ -161,7 +164,7 @@ label after_load:
         try: samantha
         except NameError: samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam")
 
-        ##Relationship types
+        ## Relationship types
         try:
             if kissamber: amber.relationship = Relationship.KISS
             del kissamber
