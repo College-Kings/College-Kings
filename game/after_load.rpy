@@ -559,6 +559,7 @@ label after_load:
             if kiwii_post.user == "Amber": kiwii_post.user = amber
             if kiwii_post.user == "LewsOfficial": kiwii_post.user = lews_official
             if kiwii_post.user == "Naomi": kiwii_post.user = naomi
+            if kiwii_post.user == "Caleb": kiwii_post.user = caleb
 
             for mention in kiwii_post.mentions:
                 temp_mentions = []
@@ -579,6 +580,7 @@ label after_load:
                 if mention == "Amber": temp_mentions.append(amber)
                 if mention == "LewsOfficial": temp_mentions.append(lews_official)
                 if mention == "Naomi": temp_mentions.append(naomi)
+                if mention == "Caleb": temp_mentions.append(caleb)
                 kiwii_post.mentions = temp_mentions
 
             try:
@@ -608,6 +610,7 @@ label after_load:
                 if comment.user == "Amber": comment.user = amber
                 if comment.user == "LewsOfficial": comment.user = lews_official
                 if comment.user == "Naomi": comment.user = naomi
+                if comment.user == "Caleb": comment.user = caleb
 
                 for mention in comment.mentions:
                     temp_mentions = []
@@ -628,6 +631,7 @@ label after_load:
                     if mention == "Amber": temp_mentions.append(amber)
                     if mention == "LewsOfficial": temp_mentions.append(lews_official)
                     if mention == "Naomi": temp_mentions.append(naomi)
+                    if mention == "Caleb": temp_mentions.append(caleb)
                     comment.mentions = temp_mentions
 
                 ###### KIWII COMMENT REPLIES
@@ -653,6 +657,7 @@ label after_load:
                         if mention == "Amber": temp_mentions.append(amber)
                         if mention == "LewsOfficial": temp_mentions.append(lews_official)
                         if mention == "Naomi": temp_mentions.append(naomi)
+                        if mention == "Caleb": temp_mentions.append(caleb)
                         reply.mentions = temp_mentions
 
             ##### KIWII PENDING COMMENTS
@@ -674,6 +679,7 @@ label after_load:
                 if comment.user == "Amber": comment.user = amber
                 if comment.user == "LewsOfficial": comment.user = lews_official
                 if comment.user == "Naomi": comment.user = naomi
+                if comment.user == "Caleb": comment.user = caleb
 
                 for mention in comment.mentions:
                     temp_mentions = []
@@ -694,6 +700,7 @@ label after_load:
                     if mention == "Amber": temp_mentions.append(amber)
                     if mention == "LewsOfficial": temp_mentions.append(lews_official)
                     if mention == "Naomi": temp_mentions.append(naomi)
+                    if mention == "Caleb": temp_mentions.append(caleb)
                     comment.mentions = temp_mentions
 
                 ###### KIWII COMMENT REPLIES
@@ -719,6 +726,7 @@ label after_load:
                         if mention == "Amber": temp_mentions.append(amber)
                         if mention == "LewsOfficial": temp_mentions.append(lews_official)
                         if mention == "Naomi": temp_mentions.append(naomi)
+                        if mention == "Caleb": temp_mentions.append(caleb)
                         reply.mentions = temp_mentions
 
 
