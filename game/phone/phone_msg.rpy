@@ -131,7 +131,7 @@ init python:
         def newMessage(self, message, queue=True):
             return self.new_message(message, queue)
 
-        def NewImgMessage(self, img, queue=True):
+        def newImgMessage(self, img, queue=True):
             return self.new_image_message(img, queue)
 
         def addReply(self, message, func=None, newMessage=False, disabled=False):
