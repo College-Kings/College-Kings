@@ -394,3 +394,5 @@ default v15s42_grab_breakfast = False
 default v15s7_chloe_empathize = False #????
 default v15_stay_on_topic = False
 default v15_say_nothing = False
+default CAUGHT_NAOMI = False #placeholder (triggered in scene 33?)
+default V15_UNCLE_RICKY = False ### PLACEHOLDER VARIABLE # -if ate Uncle Ricky's cheese at the wedding, and had a deep convo with him about Aubrey
