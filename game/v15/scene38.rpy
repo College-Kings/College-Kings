@@ -332,7 +332,7 @@ label v15s38:
 
                 pause 0.75
 
-                if aubrey.relationship.vaue >= Relationship.TAMED.value: # -if AubreyTamed, she raises hers after she sees MC raise his, and she winks at him-
+                if aubrey.relationship.value >= Relationship.TAMED.value: # -if AubreyTamed, she raises hers after she sees MC raise his, and she winks at him-
                     scene v15s38_5i # FPP Same angle as 5, Aubrey raising both of her hands, smiling and winking at MC
                     with dissolve
 
