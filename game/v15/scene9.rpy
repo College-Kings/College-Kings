@@ -445,6 +445,8 @@ label v15s9:
             scene v15s9_1h
             with dissolve
 
+            pause 0.75
+
             jump v15s10
 
         else:

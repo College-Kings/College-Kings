@@ -536,6 +536,8 @@ label v15s10:
             scene v15s10_27 # TPP. Show MC and Lindsey walking further down the side walk smiling as they walk, both mouths closed.
             with dissolve
 
+            pause 0.75
+
             jump v15s12
             
         else:
@@ -764,6 +766,8 @@ label v15s10:
 
             scene v15s10_27
             with fade
+            
+            pause 0.75
             
             jump v15s12
     else:
@@ -1111,6 +1115,8 @@ label v15s10:
 
             scene v15s10_femalebuyer_12 # TPP. Show MC and Lindsey walking back to campus,both slight smile, mouth closed.
             with dissolve
+
+            pause 0.75
 
             jump v15s12
 

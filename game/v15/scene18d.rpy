@@ -310,6 +310,8 @@ label v15s18d:
                     scene v15s18d_12c # TPP. Show Lauren leading MC upstairs by his hand, MC slight smile, mouth closed, Lauren biting her lip.
                     with dissolve
 
+                    pause 0.75
+
                     jump v15s18e
 
             else: 
@@ -355,6 +357,8 @@ label v15s18d:
 
                     scene v15s18d_12b
                     with dissolve
+
+                    pause 0.75
 
                     jump v15s18e
                 

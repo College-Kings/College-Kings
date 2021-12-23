@@ -87,4 +87,6 @@ label v15s31:
     scene v15s31_6 # TPP. Show MC leaving the bathroom, slight smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
     jump v15s32

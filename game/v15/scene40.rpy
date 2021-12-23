@@ -372,4 +372,6 @@ label v15s40:
     scene v15s40_3a # TPP. Autumn is walking away from the Limo slight smile mouth is closed, Mc is looking at Autumn slight smile mouth is closed
     with fade
 
+    pause 0.75
+
     jump v14s41

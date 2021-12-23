@@ -135,6 +135,8 @@ label v15s13:
         scene v15s13_6 # show MC walking out of his WOLVES bedroom, no expression, mouth closed
         with dissolve
 
+        pause 0.75
+
         jump v15s17
 
     else:

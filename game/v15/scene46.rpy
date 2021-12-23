@@ -487,4 +487,6 @@ label v15s46:
     scene v15s46_7 # TPP. Show Amber leaving the room holding her stomach, amber frown, mouth closed.
     with dissolve 
 
+    pause 0.75
+
     jump v15s47

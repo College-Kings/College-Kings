@@ -35,6 +35,8 @@ label v15s47:
             scene v15s47_2c # TPP. MC putting his phone away, neutral face, mouth closed.
             with dissolve
 
+            pause 0.75
+
         "Don't call Nora":
             scene v15s47_3 # TPP. MC in the back of the Cab looking out the window new set of scenery, Neutral face, mouth closed.
             with dissolve
@@ -43,5 +45,7 @@ label v15s47:
 
 scene v15s47_4 # TPP. Outside shot of the Cab driving down the road.
 with dissolve
+
+pause 0.75
 
 jump v15s48

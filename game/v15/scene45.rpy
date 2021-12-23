@@ -1519,4 +1519,6 @@ label v15s45:
     scene v15s45_3a # FPP. same as v15s45_3 The front door is closed, Chloe is not in the render, Mc and Amber are walking away from the house, slight smiles, mouths are closed
     with fade
 
+    pause 0.75
+
     jump v15s46

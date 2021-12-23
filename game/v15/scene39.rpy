@@ -688,6 +688,8 @@ label v15s39:
                             if chloe.relationship >= Relationship.GIRLFRIEND.value:
                                 $ add_point(KCT.TROUBLEMAKER)
 
+                            pause 0.75
+
                             jump v15_change_subject
 
                         "Stay on topic":
@@ -696,6 +698,8 @@ label v15s39:
 
                             if chloe.relationship >= Relationship.GIRLFRIEND.value:
                                 $ add_point(KCT.BOYFRIEND)
+
+                            pause 0.75
 
                             jump v15_stay_on_topic
 
@@ -804,6 +808,8 @@ label v15s39:
                                 if chloe.relationship >= Relationship.GIRLFRIEND.value:
                                     $ add_point(KCT.TROUBLEMAKER)
 
+                                pause 0.75
+
                                 jump v15_stop_lindsey
 
                             "Say nothing":
@@ -812,6 +818,8 @@ label v15s39:
 
                                 if chloe.relationship >= Relationship.GIRLFRIEND.value:
                                     $ add_point(KCT.BOYFRIEND)
+
+                                pause 0.75
 
                                 jump v15_say_nothing
 
@@ -1211,5 +1219,7 @@ label v15s39:
 
     scene v15s39_26 # TPP. Show Mc getting into the Limo slight smile mouth is closed, no need to show anyone else.
     with fade
+
+    pause 0.75
 
     jump v15s40
