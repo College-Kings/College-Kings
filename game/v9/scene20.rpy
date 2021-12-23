@@ -19,9 +19,9 @@ label v9_room_fri_aft:
         scene v9rfa2 # TPP. Show MC sat at his desk on his phone.
         with dissolve
 
-        $ v9s20KiwiiPost1 = KiwiiPost("Chris", "v9/s20KiwiiWolf.webp", "Who's ready?!", numberLikes=renpy.random.randint(200, 300))
-        $ v9s20KiwiiPost1.newComment("Imre", "Ding! Ding! Ding!", numberLikes=renpy.random.randint(200, 250), queue=False)
-        $ v9s20KiwiiPost1.newComment("Cameron", "Whatever man! You're going down!", numberLikes=renpy.random.randint(200, 250), queue=False)
+        $ v9s20KiwiiPost1 = KiwiiPost(chris, "v9/s20KiwiiWolf.webp", "Who's ready?!", numberLikes=renpy.random.randint(200, 300))
+        $ v9s20KiwiiPost1.newComment(imre, "Ding! Ding! Ding!", numberLikes=renpy.random.randint(200, 250), queue=False)
+        $ v9s20KiwiiPost1.newComment(cameron, "Whatever man! You're going down!", numberLikes=renpy.random.randint(200, 250), queue=False)
         $ v9s20KiwiiPost1.addReply("Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
 
         pause 0.5
@@ -50,9 +50,9 @@ label v9_room_fri_aft:
         with dissolve
        
 
-        $ v9s20KiwiiPost2 = KiwiiPost("Grayson", "v9/s20KiwiiApe.webp", "Where my APES at?", numberLikes=renpy.random.randint(200, 300))
-        $ v9s20KiwiiPost2.newComment("Cameron", "The BEST Ape is right here!", numberLikes=renpy.random.randint(200, 250), queue=False)
-        $ v9s20KiwiiPost2.newComment("Ryan", "I'm SO ready!", numberLikes=renpy.random.randint(200, 250), queue=False)
+        $ v9s20KiwiiPost2 = KiwiiPost(grayson, "v9/s20KiwiiApe.webp", "Where my APES at?", numberLikes=renpy.random.randint(200, 300))
+        $ v9s20KiwiiPost2.newComment(cameron, "The BEST Ape is right here!", numberLikes=renpy.random.randint(200, 250), queue=False)
+        $ v9s20KiwiiPost2.newComment(ryan, "I'm SO ready!", numberLikes=renpy.random.randint(200, 250), queue=False)
         $ v9s20KiwiiPost2.addReply("Let's go!!", numberLikes=renpy.random.randint(100, 200))
 
         pause 0.5

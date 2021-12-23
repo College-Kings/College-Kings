@@ -1,10 +1,10 @@
 init python:
     def v7_kiwiiReply1():
-        v7_kiwiiPost1.newComment("Cameron", _("Lol, pussy"), mentions="MC", numberLikes=renpy.random.randint(1, 10))
+        v7_kiwiiPost1.newComment(cameron, _("Lol, pussy"), mentions=[mc], numberLikes=renpy.random.randint(1, 10))
         add_point(KCT.BOYFRIEND)
 
     def v7_kiwiiReply2():
-        v7_kiwiiPost1.newComment("Imre", _("Slide into her DMs bro!"), mentions="MC", numberLikes=renpy.random.randint(5, 15))
+        v7_kiwiiPost1.newComment(imre, _("Slide into her DMs bro!"), mentions=[mc], numberLikes=renpy.random.randint(5, 15))
         add_point(KCT.BRO)
         add_point(KCT.TROUBLEMAKER)
 
@@ -12,15 +12,15 @@ init python:
         add_point(KCT.BOYFRIEND)
 
     def v7_kiwiiReply4():
-        v7_kiwiiPost2.newComment("Autumn", _("Yeah, they really are"), mentions="MC", numberLikes=renpy.random.randint(8, 18))
+        v7_kiwiiPost2.newComment(autumn, _("Yeah, they really are"), mentions=[mc], numberLikes=renpy.random.randint(8, 18))
     
     def v7_kiwiiReply5():
         add_point(KCT.BRO)
-        v7_kiwiiPost3.newComment("Aubrey", _("Bring it on!"), mentions="MC", numberLikes=renpy.random.randint(15, 35))
+        v7_kiwiiPost3.newComment(aubrey, _("Bring it on!"), mentions=[mc], numberLikes=renpy.random.randint(15, 35))
 
     def v7_kiwiiReply6():
         add_point(KCT.TROUBLEMAKER)
-        v7_kiwiiPost4.newComment("Josh", _("lol"), mentions="MC", numberLikes=renpy.random.randint(3, 7))
+        v7_kiwiiPost4.newComment(josh, _("lol"), mentions=[mc], numberLikes=renpy.random.randint(3, 7))
 
     def v7_msgReply1():
         add_point(KCT.BRO)
@@ -1340,36 +1340,36 @@ label conyourdorm:
 
     pause 0.5
 
-    $ v7_kiwiiPost1 = KiwiiPost("Chloe", "v7/clpost1.webp", _("I'll always follow the sun :)"), numberLikes=186)
-    $ v7_kiwiiPost1.newComment("Grayson", _("Check your DMs"), 14, queue=False)
-    $ v7_kiwiiPost1.newComment("Ryan", _("Whore."), 1, queue=False)
-    $ v7_kiwiiPost1.newComment("Aubrey", _("What I wouldn't give for your body..."), 32, queue=False)
-    $ v7_kiwiiPost1.newComment("Elijah", _("If you ever need a tutor, I'm free on Wednesdays and Fridays."), 2, queue=False)
-    $ v7_kiwiiPost1.newComment("Imre", _("SO FUCKING HOT WTFFF"), 10, queue=False)
-    $ v7_kiwiiPost1.newComment("Emily", _("Where did you get that bikini?"), 18, mentions="Chloe", queue=False)
-    $ v7_kiwiiPost1.newComment("Chloe", _("I can't remember :("), 11, mentions="Emily", queue=False)
+    $ v7_kiwiiPost1 = KiwiiPost(chloe, "v7/clpost1.webp", _("I'll always follow the sun :)"), numberLikes=186)
+    $ v7_kiwiiPost1.newComment(grayson, _("Check your DMs"), 14, queue=False)
+    $ v7_kiwiiPost1.newComment(ryan, _("Whore."), 1, queue=False)
+    $ v7_kiwiiPost1.newComment(aubrey, _("What I wouldn't give for your body..."), 32, queue=False)
+    $ v7_kiwiiPost1.newComment(elijah, _("If you ever need a tutor, I'm free on Wednesdays and Fridays."), 2, queue=False)
+    $ v7_kiwiiPost1.newComment(imre, _("SO FUCKING HOT WTFFF"), 10, queue=False)
+    $ v7_kiwiiPost1.newComment(emily, _("Where did you get that bikini?"), 18, mentions=[chloe], queue=False)
+    $ v7_kiwiiPost1.newComment(chloe, _("I can't remember :("), 11, mentions=[emily], queue=False)
     $ v7_kiwiiPost1.addReply(_("You're so beautiful!"), v7_kiwiiReply1, numberLikes=renpy.random.randint(2, 8))
     $ v7_kiwiiPost1.addReply(_("I got some sun in my room..."), v7_kiwiiReply2, numberLikes=renpy.random.randint(20, 30))
 
-    $ v7_kiwiiPost2 = KiwiiPost("Lauren", "v7/lapost1.webp", _("Wishing I could go back..."), numberLikes=39)
-    $ v7_kiwiiPost2.newComment("Autumn", _("That was such a great vacation!"), 2, queue=False)
-    $ v7_kiwiiPost2.newComment("Penelope", _("Omg beautiful!"), 3, queue=False)
+    $ v7_kiwiiPost2 = KiwiiPost(lauren, "v7/lapost1.webp", _("Wishing I could go back..."), numberLikes=39)
+    $ v7_kiwiiPost2.newComment(autumn, _("That was such a great vacation!"), 2, queue=False)
+    $ v7_kiwiiPost2.newComment(penelope, _("Omg beautiful!"), 3, queue=False)
     $ v7_kiwiiPost2.addReply(_("You're a cutie!"), v7_kiwiiReply3, numberLikes=renpy.random.randint(3, 10))
     $ v7_kiwiiPost2.addReply(_("Winter vacations are the best"), v7_kiwiiReply4, numberLikes=renpy.random.randint(10, 17))
 
-    $ v7_kiwiiPost3 = KiwiiPost("Aubrey", "v7/aupost1.webp", _("Finally changed my profile pic!"), numberLikes=133)
-    $ v7_kiwiiPost3.newComment("Cameron", _("You put the hot into thot"), 2, queue=False)
-    $ v7_kiwiiPost3.newComment("Josh", _("You still single?"), 3, queue=False)
-    $ v7_kiwiiPost3.newComment("Riley", _("Holy hell... gorgeous Aubs!"), 6, queue=False)
-    $ v7_kiwiiPost3.newComment("Chloe", _("Most beautiful girl in the world <3"), 6, queue=False)
-    $ v7_kiwiiPost3.addReply(_("I'd destroy you in Air hockey!"), v7_kiwiiReply5, mentions="Aubrey", numberLikes=renpy.random.randint(15, 25))
+    $ v7_kiwiiPost3 = KiwiiPost(aubrey, "v7/aupost1.webp", _("Finally changed my profile pic!"), numberLikes=133)
+    $ v7_kiwiiPost3.newComment(cameron, _("You put the hot into thot"), 2, queue=False)
+    $ v7_kiwiiPost3.newComment(josh, _("You still single?"), 3, queue=False)
+    $ v7_kiwiiPost3.newComment(riley, _("Holy hell... gorgeous Aubs!"), 6, queue=False)
+    $ v7_kiwiiPost3.newComment(chloe, _("Most beautiful girl in the world <3"), 6, queue=False)
+    $ v7_kiwiiPost3.addReply(_("I'd destroy you in Air hockey!"), v7_kiwiiReply5, mentions=[aubrey], numberLikes=renpy.random.randint(15, 25))
 
     if emily.relationship.value >= Relationship.FWB.value: # first riley texts, then once you've opened the app you get 2 more messages.
-        $ v7_kiwiiPost4 = KiwiiPost("Emily", "v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), numberLikes=82)
-        $ v7_kiwiiPost4.newComment("Riley", _("You guys are so cute"), 5, queue=False)
-        $ v7_kiwiiPost4.newComment("Aubrey", _("GORGEOUS"), 8, queue=False)
-        $ v7_kiwiiPost4.newComment("Josh", _("Woah, you guys back together??"), 3, queue=False)
-        $ v7_kiwiiPost4.addReply(_("No, we're not."), v7_kiwiiReply6, mentions="Josh", numberLikes=renpy.random.randint(5, 15))
+        $ v7_kiwiiPost4 = KiwiiPost(emily, "v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), numberLikes=82)
+        $ v7_kiwiiPost4.newComment(riley, _("You guys are so cute"), 5, queue=False)
+        $ v7_kiwiiPost4.newComment(aubrey, _("GORGEOUS"), 8, queue=False)
+        $ v7_kiwiiPost4.newComment(josh, _("Woah, you guys back together??"), 3, queue=False)
+        $ v7_kiwiiPost4.addReply(_("No, we're not."), v7_kiwiiReply6, mentions=[josh], numberLikes=renpy.random.randint(5, 15))
 
         play sound "sounds/vibrate.mp3"
         $ riley.messenger.newMessage(_("Are you and Emily back together?"), queue=False)
@@ -5444,10 +5444,10 @@ label after_pledges:
     with Fade(1,0,1)
 
     if joinwolves:
-        $ v7_kiwiiPost5 = KiwiiPost("Chris", "v7/chpost1.webp", _("One of us!"), numberLikes=133, mentions="MC")
-        $ v7_kiwiiPost5.newComment("Cameron", _("Losers"), 3, queue=False)
-        $ v7_kiwiiPost5.newComment("Imre", _("Hell yeah bro!"), 14, queue=False)
-        $ v7_kiwiiPost5.newComment("Aubrey", _("Woohoo!"), 35, queue=False)
+        $ v7_kiwiiPost5 = KiwiiPost(chris, "v7/chpost1.webp", _("One of us!"), numberLikes=133, mentions=[mc])
+        $ v7_kiwiiPost5.newComment(cameron, _("Losers"), 3, queue=False)
+        $ v7_kiwiiPost5.newComment(imre, _("Hell yeah bro!"), 14, queue=False)
+        $ v7_kiwiiPost5.newComment(aubrey, _("Woohoo!"), 35, queue=False)
 
     if emilyText:
         play sound "sounds/vibrate.mp3"

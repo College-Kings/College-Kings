@@ -8,16 +8,16 @@
 
 init python:
     def v14s47_kiwiiReply1():
-        v14s47_kiwiiPost1.newComment("Lindsey", "A new future for the Chicks, haha. :)", numberLikes=418)
+        v14s47_kiwiiPost1.newComment(lindsey, "A new future for the Chicks, haha. :)", numberLikes=418)
 
     def v14s47_kiwiiReply2():
-        v14s47_kiwiiPost1.newComment("Lindsey", "Damn straight!", numberLikes=314)
+        v14s47_kiwiiPost1.newComment(lindsey, "Damn straight!", numberLikes=314)
 
     def v14s47_kiwiiReply3():
-        v14s47_kiwiiPost1.newComment("Lindsey", "You're a dork.", numberLikes=286)
+        v14s47_kiwiiPost1.newComment(lindsey, "You're a dork.", numberLikes=286)
     
     def v14s47_kiwiiReply4():
-        v14s47_kiwiiPost1.newComment("Lindsey", "Haha, I h8 you <3", numberLikes=266)
+        v14s47_kiwiiPost1.newComment(lindsey, "Haha, I h8 you <3", numberLikes=266)
 
 label v14s47:
 
@@ -990,11 +990,11 @@ label v14s47_end:
     stop music fadeout 3
 
 
-    $ v14s47_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14s47_lindsey_kiwii.webp", "Making big moves ;)", numberLikes=720)
-    $ v14s47_kiwiiPost1.newComment("Nora", "Kick ass babe <3", queue=False, numberLikes=259)
-    $ v14s47_kiwiiPost1.newComment("Aubrey", "Aww, look at your cute little button!", queue=False, numberLikes=623)
-    $ v14s47_kiwiiPost1.newComment("Riley", "I have one too :) Hehe.", queue=False, numberLikes=367)
-    $ v14s47_kiwiiPost1.newComment("Sebastian", "Looking all official now, Linds!", queue=False, numberLikes=108)
+    $ v14s47_kiwiiPost1 = KiwiiPost(lindsey, "v14/v14s47_lindsey_kiwii.webp", "Making big moves ;)", numberLikes=720)
+    $ v14s47_kiwiiPost1.newComment(nora, "Kick ass babe <3", queue=False, numberLikes=259)
+    $ v14s47_kiwiiPost1.newComment(aubrey, "Aww, look at your cute little button!", queue=False, numberLikes=623)
+    $ v14s47_kiwiiPost1.newComment(riley, "I have one too :) Hehe.", queue=False, numberLikes=367)
+    $ v14s47_kiwiiPost1.newComment(sebastian, "Looking all official now, Linds!", queue=False, numberLikes=108)
     if v14_pics_with_linds:
         $ v14s47_kiwiiPost1.addReply("Damn, she's cute... What is she selling? ;)", v14s47_kiwiiReply1, numberLikes=351)
         $ v14s47_kiwiiPost1.addReply("#ThatsMyPresident", v14s47_kiwiiReply2, numberLikes=402)
