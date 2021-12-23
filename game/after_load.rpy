@@ -560,6 +560,27 @@ label after_load:
             if kiwii_post.user == "LewsOfficial": kiwii_post.user = lews_official
             if kiwii_post.user == "Naomi": kiwii_post.user = naomi
 
+            for mention in kiwii_post.mentions:
+                temp_mentions = []
+                if mention == "Chloe": temp_mentions.append(chloe)
+                if mention == "Lauren": temp_mentions.append(lauren)
+                if mention == "Aubrey": temp_mentions.append(aubrey)
+                if mention == "Grayson": temp_mentions.append(grayson)
+                if mention == "Riley": temp_mentions.append(riley)
+                if mention == "MC": temp_mentions.append(mc)
+                if mention == "Chris": temp_mentions.append(chris)
+                if mention == "Aaron": temp_mentions.append(aaron)
+                if mention == "Cameron": temp_mentions.append(cameron)
+                if mention == "Samantha": temp_mentions.append(samantha)
+                if mention == "Autumn": temp_mentions.append(autumn)
+                if mention == "Sebastian": temp_mentions.append(sebastian)
+                if mention == "Imre": temp_mentions.append(imre)
+                if mention == "Lindsey": temp_mentions.append(lindsey)
+                if mention == "Amber": temp_mentions.append(amber)
+                if mention == "LewsOfficial": temp_mentions.append(lews_official)
+                if mention == "Naomi": temp_mentions.append(naomi)
+                kiwii_post.mentions = temp_mentions
+
             try:
                 kiwii_post.image = kiwii_post.img
                 del kiwii_post.img
@@ -588,9 +609,51 @@ label after_load:
                 if comment.user == "LewsOfficial": comment.user = lews_official
                 if comment.user == "Naomi": comment.user = naomi
 
+                for mention in comment.mentions:
+                    temp_mentions = []
+                    if mention == "Chloe": temp_mentions.append(chloe)
+                    if mention == "Lauren": temp_mentions.append(lauren)
+                    if mention == "Aubrey": temp_mentions.append(aubrey)
+                    if mention == "Grayson": temp_mentions.append(grayson)
+                    if mention == "Riley": temp_mentions.append(riley)
+                    if mention == "MC": temp_mentions.append(mc)
+                    if mention == "Chris": temp_mentions.append(chris)
+                    if mention == "Aaron": temp_mentions.append(aaron)
+                    if mention == "Cameron": temp_mentions.append(cameron)
+                    if mention == "Samantha": temp_mentions.append(samantha)
+                    if mention == "Autumn": temp_mentions.append(autumn)
+                    if mention == "Sebastian": temp_mentions.append(sebastian)
+                    if mention == "Imre": temp_mentions.append(imre)
+                    if mention == "Lindsey": temp_mentions.append(lindsey)
+                    if mention == "Amber": temp_mentions.append(amber)
+                    if mention == "LewsOfficial": temp_mentions.append(lews_official)
+                    if mention == "Naomi": temp_mentions.append(naomi)
+                    comment.mentions = temp_mentions
+
                 ###### KIWII COMMENT REPLIES
                 for reply in comment.replies:
                     reply.disabled = False
+
+                    for mention in reply.mentions:
+                        temp_mentions = []
+                        if mention == "Chloe": temp_mentions.append(chloe)
+                        if mention == "Lauren": temp_mentions.append(lauren)
+                        if mention == "Aubrey": temp_mentions.append(aubrey)
+                        if mention == "Grayson": temp_mentions.append(grayson)
+                        if mention == "Riley": temp_mentions.append(riley)
+                        if mention == "MC": temp_mentions.append(mc)
+                        if mention == "Chris": temp_mentions.append(chris)
+                        if mention == "Aaron": temp_mentions.append(aaron)
+                        if mention == "Cameron": temp_mentions.append(cameron)
+                        if mention == "Samantha": temp_mentions.append(samantha)
+                        if mention == "Autumn": temp_mentions.append(autumn)
+                        if mention == "Sebastian": temp_mentions.append(sebastian)
+                        if mention == "Imre": temp_mentions.append(imre)
+                        if mention == "Lindsey": temp_mentions.append(lindsey)
+                        if mention == "Amber": temp_mentions.append(amber)
+                        if mention == "LewsOfficial": temp_mentions.append(lews_official)
+                        if mention == "Naomi": temp_mentions.append(naomi)
+                        reply.mentions = temp_mentions
 
             ##### KIWII PENDING COMMENTS
             for comment in kiwii_post.pendingComments:
@@ -612,9 +675,51 @@ label after_load:
                 if comment.user == "LewsOfficial": comment.user = lews_official
                 if comment.user == "Naomi": comment.user = naomi
 
+                for mention in comment.mentions:
+                    temp_mentions = []
+                    if mention == "Chloe": temp_mentions.append(chloe)
+                    if mention == "Lauren": temp_mentions.append(lauren)
+                    if mention == "Aubrey": temp_mentions.append(aubrey)
+                    if mention == "Grayson": temp_mentions.append(grayson)
+                    if mention == "Riley": temp_mentions.append(riley)
+                    if mention == "MC": temp_mentions.append(mc)
+                    if mention == "Chris": temp_mentions.append(chris)
+                    if mention == "Aaron": temp_mentions.append(aaron)
+                    if mention == "Cameron": temp_mentions.append(cameron)
+                    if mention == "Samantha": temp_mentions.append(samantha)
+                    if mention == "Autumn": temp_mentions.append(autumn)
+                    if mention == "Sebastian": temp_mentions.append(sebastian)
+                    if mention == "Imre": temp_mentions.append(imre)
+                    if mention == "Lindsey": temp_mentions.append(lindsey)
+                    if mention == "Amber": temp_mentions.append(amber)
+                    if mention == "LewsOfficial": temp_mentions.append(lews_official)
+                    if mention == "Naomi": temp_mentions.append(naomi)
+                    comment.mentions = temp_mentions
+
                 ###### KIWII COMMENT REPLIES
                 for reply in pendingComment.replies:
                     reply.disabled = False
+
+                    for mention in reply.mentions:
+                        temp_mentions = []
+                        if mention == "Chloe": temp_mentions.append(chloe)
+                        if mention == "Lauren": temp_mentions.append(lauren)
+                        if mention == "Aubrey": temp_mentions.append(aubrey)
+                        if mention == "Grayson": temp_mentions.append(grayson)
+                        if mention == "Riley": temp_mentions.append(riley)
+                        if mention == "MC": temp_mentions.append(mc)
+                        if mention == "Chris": temp_mentions.append(chris)
+                        if mention == "Aaron": temp_mentions.append(aaron)
+                        if mention == "Cameron": temp_mentions.append(cameron)
+                        if mention == "Samantha": temp_mentions.append(samantha)
+                        if mention == "Autumn": temp_mentions.append(autumn)
+                        if mention == "Sebastian": temp_mentions.append(sebastian)
+                        if mention == "Imre": temp_mentions.append(imre)
+                        if mention == "Lindsey": temp_mentions.append(lindsey)
+                        if mention == "Amber": temp_mentions.append(amber)
+                        if mention == "LewsOfficial": temp_mentions.append(lews_official)
+                        if mention == "Naomi": temp_mentions.append(naomi)
+                        reply.mentions = temp_mentions
 
 
         # Simplr Contacts
