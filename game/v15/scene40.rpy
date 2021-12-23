@@ -94,7 +94,7 @@ label v15s40:
             scene v15s40_1a
             with dissolve
 
-            u "He's a bit, bittersweet. Yeah?"
+            u "He's a bit... bittersweet, huh?"
 
             scene v15s40_1b
             with dissolve

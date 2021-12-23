@@ -12,7 +12,7 @@ label v15s36:
     scene v15s36_2 # FPP. MC and Autumn walking down the street, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth open.
     with dissolve
 
-    aut "Tonight, was so much fun!"
+    aut "Tonight was so much fun!"
 
     scene v15s36_2a # FPP. MC and Autumn walking down the street, Houses in the background, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth closed.
     with dissolve
