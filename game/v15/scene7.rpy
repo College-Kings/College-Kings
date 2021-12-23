@@ -1,28 +1,11 @@
-# SCENE 6: School hallway towards library
-# Locations: School hallway
-# Characters: MC (Outfit: 5), Chloe (Outfit: 2)
-# Time: Friday
-
 # SCENE 7: Chloe in front of library
 # Locations: Hallway in front of library
 # Characters: MC (Outfit: 5), CHLOE (Outfit: 2), FEMALE STUDENT (Outfit: x), MALE STUDENT (Outfit: x)
 # Time: Friday
 
-label v15s6:
 label v15s7:
-    scene v15s6_1 # TPP Show MC walking in school hallway toward library
-    with fade
-
-    pause 1
-
     # -1 random male and 1 random female student will be needed for the second half of this scene-
     if "diary" in freeroam12stolen or "cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen: # -if MC stole any of Chloe's money and/or her diary from her room
-        scene v15s6_2 # FPP Show Chloe exiting library, she is crying, using her hand to try and mask the tears
-        with dissolve
-
-        u "(There's Chloe. Oh shit- Is she crying?)"
-        u "(What happened this time... *Sighs*)"
-
         scene v15s7_1 # FPP At entrance to library, Chloe is obviously crying and doing a bad job of hiding it with her hand
         with dissolve
 
@@ -492,11 +475,6 @@ label v15s7:
             jump v15s9 # -Transition to Scene 9-
 
     else: # -if MC stole nothing from Chloe's room or never went to Chloe's room
-        scene v15s6_2a # FPP Show Chloe near library door, smiling and chatting with two random students
-        with dissolve
-
-        u "(Oh, there's Chloe. Putting on the charm for votes no doubt, haha.)"
-
         scene v15s7_8 # FPP At entrance to library, Chloe is talking to two random students, a man and a woman. Chloe smiling with mouth open
         with dissolve
 
