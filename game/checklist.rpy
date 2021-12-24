@@ -16,8 +16,14 @@ init python:
         def __iter__(self):
             return iter(self.items)
 
+        def __len__(self):
+            return len(self.items)
+
         def add_item(self, name):
             self.items.append(ChecklistItem(name))
+
+        def get_completed(self):
+            return filter(lambda item: item.complete, self.items)
 
         def reset(self):
             self.items = []
