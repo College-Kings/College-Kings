@@ -396,3 +396,6 @@ default v15_stay_on_topic = False
 default v15_say_nothing = False
 default CAUGHT_NAOMI = False #placeholder (triggered in scene 33?)
 default V15_UNCLE_RICKY = False ### PLACEHOLDER VARIABLE # -if ate Uncle Ricky's cheese at the wedding, and had a deep convo with him about Aubrey
+default v15s48_interrupt = False
+default v15s48_follow_your_heart = False
+default v15s48_variable_check = 0 
