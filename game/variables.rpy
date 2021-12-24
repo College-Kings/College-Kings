@@ -465,6 +465,7 @@ default v15s18a_gag = False
 default v15s18a_showlist_penelope_autumn = False # Show the party list to Penelope and Autumn.
 <<<<<<< Updated upstream
 default v15s18a_lie = False
+default v15s18c_frpenelope = False
 default v15s19_local_mc_ends_in_livingroom = False;  
 default v15_told_Emily_I_Love_You = False # Placeholder?
 default v15s18e_cum_in_lauren # Noted to be remembered 
@@ -484,3 +485,6 @@ default clue_mr_rose_cabin = False # Unlock the clue for Mr. Rose's cabin.
 default clue_nora_hates_her_dad = False # Unlock the clue that Nora hates Mr. Rose.
 default v15threaten_ms_rose = False # Requested Variables for v15s21
 default v15seduce_ms_rose = False # Requested Variables for v15s21
+default v15s48_interrupt = False
+default v15s48_follow_your_heart = False
+default v15s48_variable_check = 0

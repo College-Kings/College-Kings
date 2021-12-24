@@ -2052,6 +2052,7 @@ label v15s18c_autumn_kiss:
     call screen v15s18a_upstairsroom
 
 label v15s18c_chris_penelope:
+    $ v15s18c_frpenelope = True
     scene v15s18c_chpe_1 # FPP. MC watching Chris and Penelope from a slight distance, Chris cornering Penelope, Penelope uncomfortable, mouth closed, Chris slightly sad, mouth open Chris and Penelope looking at each other
     with dissolve
 
