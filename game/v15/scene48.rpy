@@ -7,21 +7,21 @@ label v15s48:
     scene v15s48_1 # TPP. Show the cab showing up on a dirt road near the cabin, the cabin shown in the distance.  
     with fade(1,0,1)
 
-    pause
+    pause 0.75
 
     play sound "sounds/cardooropen.mp3"
 
     scene v15s48_2 # TPP. Show MC getting out of the cab on the road near the cabin, slight smile, mouth closed.
     with dissolve
 
-    pause
+    pause 0.75
 
     play sound "sounds/revving.mp3"
 
     scene v15s48_3 # TPP. Show the Cab driving off.
     with dissolve
 
-    pause 
+    pause 0.75 
 
     scene v15s48_4 # TPP. Shot from behind MC of him looking at all the forest near the cabin, slight smile, mouth closed.
     with dissolve
@@ -31,12 +31,12 @@ label v15s48:
     scene v15s48_5 # TPP. Show MC further down the road walking towards the cabin, slight smile, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75  
 
     scene v15s48_6 # TPP. Show MC walking up to the front door of the cabin, slight smile, mouth closed.
     with fade (1,0,1)
 
-    pause 
+    pause 0.75 
 
     scene v15s48_7 # FPP. MC looking through a window near the door of the cabin showing Nora on her knees with her back to MC with the fireplace warming her hands.
     with dissolve
@@ -48,12 +48,12 @@ label v15s48:
     scene v15s48_8 # TPP. Show MC entering the Cabin as he opens the door, slight smile, mouth closed.
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s48_9 # TPP. Show MC closing the door of the Cabin once he is inside, slight smile, mouth closed.
     with dissolve  
 
-    pause
+    pause 0.75
 
     scene v15s48_10 # FPP. Nora turned around looking at MC while on her knees. MC looking at Nora. Nora confused, mouth open.
     with dissolve
@@ -63,17 +63,17 @@ label v15s48:
     scene v15s48_10a # FPP. Nora starting to stand up, MC looking at Nora, Nora confused, mouth closed.
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s48_10b # FPP. Nora standing up looking at MC, MC looking at Nora, Nora confused, mouth closed.
     with dissolve 
 
     menu:
-        "I came to find you.":
+        "I came to find you":
             scene v15s48_11 # TPP. MC walking closer to Nora, MC slight smile, mouth closed, Nora confused, mouth closed.
             with dissolve
 
-            pause 
+            pause 0.75 
 
             scene v15s48_12 # FPP. Nora standing infront of MC,Nora looking at MC, MC looking at Nora, Nora confused, mouth closed.
             with dissolve 
@@ -87,19 +87,18 @@ label v15s48:
 
             no "You can call off the search party. I'm fine."
 
-        "Hug her.":
+        "Hug her":
             scene v15s48_11
             with dissolve
 
-            pause 
+            pause 0.75 
 
             scene v15s48_13 # TPP. MC hugging Nora, Nora not hugging back but accepting the hug, slight smile, mouth closed, MC slight smile, mouth closed.
             with dissolve 
 
-            pause
+            pause 0.75
 
-            if norars:
-
+            if nora.relationship.value >= Relationship.FWB.value:
                 scene v15s48_13a # TPP. MC hugging Nora, Nora hugging MC back, Nora's eyes closed, Nora flirty, mouth open, MC slight smile, eyes's closed, mouth closed.
                 with dissolve
                
@@ -109,6 +108,7 @@ label v15s48:
                 with dissolve
 
                 u "Are you kidding? Of course I did. Everyone does!"
+
             else:
                 scene v15s48_13b # TPP. MC hugging Nora, Nora not hugging back but accepting the hug, slight smile, mouth open, MC slight smile, mouth closed.
                 with dissolve
@@ -210,12 +210,7 @@ label v15s48:
 
     no "Come sit, I'll make you a tea. Do you have time?"
 
-    if not norars:
-        scene v15s48_12b
-        with dissolve
-
-        u "Plenty. *Laughs*"
-    else:
+    if nora.relationship.value >= Relationship.FWB.value:
         scene v15s48_12b
         with dissolve
 
@@ -224,15 +219,21 @@ label v15s48:
         scene v15s48_12f # FPP. Nora's face closer to MC's as she caresses his cheek, Nora flirty, mouth closed.
         with dissolve
 
+    else:
+        scene v15s48_12b
+        with dissolve
+
+        u "Plenty. *Laughs*"
+
     scene v15s48_14 # TPP. MC sitting on the couch in the Cabin, Nora approaching the Couch coming from the kitchen area holding two cup's of tea, Nora slight smile, mouth closed, MC slight smile, mouth closed.
     with fade (1,0,1) 
 
-    pause
+    pause 0.75
 
     scene v15s48_15 # TPP. MC sitting on the couch, Nora starting to sit on the couch while handing MC one of the cups, MC grabbing the cup, Nora slight smile, mouth closed, MC slight smile, mouth closed.
     with dissolve
     
-    pause
+    pause 0.75
 
     scene v15s48_16 # FPP. Sitting on the couch, Nora on the seat next to him, MC drinking the tea.
     with vpunch
@@ -274,7 +275,7 @@ label v15s48:
     scene v15s48_19 # TPP. Close up of just Nora drinking her tea, eyes closed.
     with dissolve
 
-    pause 
+    pause 0.75 
 
     scene v15s48_18 
     with dissolve
@@ -328,7 +329,7 @@ label v15s48:
     scene v15s48_18b
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s48_18
     with dissolve
@@ -341,7 +342,7 @@ label v15s48:
     with dissolve
 
     menu:
-        "You're not stupid.":
+        "You're not stupid":
             $ v15s48_interrupt = True
 
             u "You're not stupid. Every one of-"
@@ -355,7 +356,8 @@ label v15s48:
             with dissolve
 
             u "Yeah, sorry."
-        "Don't interrupt.":
+
+        "Don't interrupt":
             u "(I think she just needs someone to listen.)"
 
             scene v15s48_18
@@ -373,7 +375,7 @@ label v15s48:
 
     no "I'm not stupid, because I'm loyal."
 
-    if v12_nora_sex:
+    if "v12_nora" in sceneList:
         scene v15s48_18e # FPP. Nora looking down, MC looking at Nora, Nora neutral face, mouth closed.
         with dissolve
 
@@ -419,7 +421,7 @@ label v15s48:
     scene v15s48_18
     with dissolve
 
-    pause 
+    pause 0.75 
 
     scene v15s48_18f # FPP. Nora looking at MC, MC looking at Nora, Nora studying MC, mouth open.
     with dissolve.
@@ -455,8 +457,7 @@ label v15s48:
 
     no "Probably stay single for a while..."
 
-    if norars:
-
+    if nora.relationship.value >= Relationship.FWB.value:
         scene v15s48_16
         with vpunch
 
@@ -510,7 +511,7 @@ label v15s48:
     u "No matter what, you should do what makes you happy. But if you want my advice..."
 
     menu:
-        "Follow your heart.":
+        "Follow your heart":
             $ v15s48_follow_your_heart = True
             u "You should follow your heart. Whatever direction you're being pulled in, you should head there."
 
@@ -519,7 +520,7 @@ label v15s48:
 
             no "My heart is telling me to find real love."
 
-            if norars:
+            if nora.relationship.value >= Relationship.FWB.value:
                 no "And to give it a chance."
 
             scene v15s48_18
@@ -532,12 +533,14 @@ label v15s48:
 
             no "*Sighs*"
 
-        "Listen to your head.":
+        "Listen to your head":
             u "Listen to that little voice inside your head. What is she telling you to do?"
 
-            if norars:
+            if nora.relationship.value >= Relationship.FWB.value:
                 scene v15s48_18f
                 with dissolve
+                
+                pause 0.75
 
             scene v15s48_18a
             with dissolve
@@ -572,7 +575,7 @@ label v15s48:
     with dissolve
 
     menu:
-        "Be supportive.":
+        "Be supportive":
             scene v15s48_18
             with dissolve
 
@@ -595,21 +598,19 @@ label v15s48:
 
             no "Okay. You're right."
 
-            if KCT == Confident:
+            if kct == "confident":
                 scene v15s48_18
                 with dissolve
 
                 u "I know. *Laughs*"
 
-        "Be brutally honest.":
-        
+        "Be brutally honest":
             scene v15s48_18
             with dissolve
 
             u "Okay, forgive me if I upset you, but..."
 
-            if v15s18a_frchrisamber and/or v15s18c_frpenelope:
-
+            if "chris_amber" in freeroam13 and "chris_penelope" in freeroam14:
                 u "Chris tried his luck with a few people at Lauren's birthday party, and-"
 
                 scene v15s48_18a
@@ -620,7 +621,7 @@ label v15s48:
                 scene v15s48_18
                 with dissolve
 
-                u "Nope. In fact, I had to save both of them from him."
+                u "Nope. In fact, I had to save both them from him."
 
                 scene v15s48_18a
                 with dissolve
@@ -633,8 +634,33 @@ label v15s48:
                 with dissolve
 
                 u "Haha, good!"
-            else:
 
+            elif "chris_amber" in freeroam13 or "chris_penelope" in freeroam14:
+                u "Chris tried his luck with a few people at Lauren's birthday party, and-"
+
+                scene v15s48_18a
+                with dissolve
+
+                no "Haha! You're kidding."
+
+                scene v15s48_18
+                with dissolve
+
+                u "Nope. In fact, I had to save them from him."
+
+                scene v15s48_18a
+                with dissolve
+
+                no "*Laughs* Oh my god..."
+
+                no "Okay, fine. *Giggles* I don't feel guilty anymore."
+
+                scene v15s48_18
+                with dissolve
+
+                u "Haha, good!"
+
+            else:
                 u "Chris let go of an amazing human being, and that fucking sucks."
 
                 u "For him."
@@ -656,7 +682,7 @@ label v15s48:
 
                 no "You're not wrong... *Sighs*"
 
-            if not norars and v15s48_follow_your_heart and not v15s48_interrupt and not KCT == Confident:
+            if nora.relationship.value < Relationship.FWB.value and v15s48_follow_your_heart and not v15s48_interrupt and not kct == "confident":
                 $ v15s48_variable_check += 1
                 scene v15s48_18a
                 with dissolve  
@@ -664,7 +690,8 @@ label v15s48:
                 no "Well, cheers to following your heart! Actually-"
 
                 no "I think we have wine... Be right back!"
-            elif not norars and not v15s48_follow_your_heart and not v15s48_interrupt and not KCT == Confident:
+                
+            elif nora.relationship.value < Relationship.FWB.value and not v15s48_follow_your_heart and not v15s48_interrupt and not kct == "confident":
                 $ v15s48_variable_check += 1
                                 
                 scene v15s48_18a
@@ -673,8 +700,9 @@ label v15s48:
                 no "Well, listening to the voices inside of our heads... Cheers to that! Actually-"
 
                 no "I think we have wine... Be right back!"
+                
             if v15s48_variable_check >= 1:
-                if norars and v15s48_follow_your_heart:
+                if nora.relationship.value >= Relationship.FWB.value and v15s48_follow_your_heart:
                     scene v15s48_18a
                     with dissolve
 
@@ -684,7 +712,8 @@ label v15s48:
                     with dissolve
 
                     u "You should."
-                elif norars and not v15s48_follow_your_heart:
+
+                elif nora.relationship.value >= Relationship.FWB.value:
                     scene v15s48_18a
                     with dissolve
 
@@ -702,7 +731,7 @@ label v15s48:
 
                     no "Ha, no. I don't."
                         
-                if not norars and v15s48_follow_your_heart and not v15s48_interrupt or KCT == Confident:
+                if nora.relationship.value < Relationship.FWB.value and v15s48_follow_your_heart and not v15s48_interrupt or kct == "confident":
                     scene v15s48_18a
                     with dissolve
 
@@ -713,8 +742,7 @@ label v15s48:
 
                     u "Yeah?"
             
-            if chloegf or laurenrs or aubreytamed:
-
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or aubrey.relationship.value >= Relationship.TAMED.value:
                 scene v15s48_18a
                 with dissolve    
 
@@ -745,7 +773,7 @@ label v15s48:
                 scene v15s48_20 # TPP. Show MC and Nora hugging on the couch both slight smile, mouth closed.
                 with dissolve
 
-                pause
+                pause 0.75
 
                 scene v15s48_18a
                 with dissolve
@@ -765,17 +793,17 @@ label v15s48:
                 scene v15s48_14a # TPP. MC sitting on the couch in the Cabin, Nora approaching the Couch coming from the kitchen area holding two glasses of wine, Nora slight smile, mouth closed, MC slight smile, mouth closed.
                 with fade (1,0,1)
 
-                pause 
+                pause 0.75 
 
                 scene v15s48_21 # TPP. MC and Nora taking a sip of their wine.
                 with dissolve
 
-                pause  
+                pause 0.75  
 
                 scene v15s48_21a # TPP. MC and Nora putting their glasses of wine on the table near them, slight smile, mouth closed.
                 with dissolve 
 
-                pause 
+                pause 0.75 
 
                 scene v15s48_18
                 with dissolve
@@ -803,7 +831,8 @@ label v15s48:
                 u "Me too."
 
                 jump v15s48b
-            elif not chloegf and not laurenrs and not aubreytamed:
+
+            else:
                 scene v15s48_18a
                 with dissolve
 
@@ -824,8 +853,9 @@ label v15s48:
 
                 no "I know there's a lot more involved than just me and you but..."
 
-                if v12_nora_sex:
+                if "v12_nora" in sceneList:
                     no "I can't stop thinking about you."
+                
                 else:
                     no "Do you think we could ever be more than friends? You and I?"
                 
@@ -863,11 +893,11 @@ label v15s48:
 
                         no "*Sighs*"
 
-                        if v12_nora_sex:
+                        if "v12_nora" in sceneList:
                             scene v15s48_18j # FPP. MC looking at Nora, Nora looking at MC, Nora with teary eyes but holding it back, neutral face, mouth closed.
                             with dissolve 
 
-                            pause 
+                            pause 0.75 
 
                         scene v15s48_18b
                         with dissolve
@@ -892,7 +922,7 @@ label v15s48:
                         scene v15s48_20
                         with dissolve
 
-                        pause 
+                        pause 0.75 
 
                         scene v15s48_18a
                         with dissolve
@@ -912,17 +942,17 @@ label v15s48:
                         scene v15s48_14a
                         with fade (1,0,1)
 
-                        pause 
+                        pause 0.75 
 
                         scene v15s48_21 # TPP. MC and Nora taking a sip of their wine.
                         with dissolve
 
-                        pause  
+                        pause 0.75  
 
                         scene v15s48_21a # TPP. MC and Nora putting their glasses of wine on the table near them, slight smile, mouth closed.
                         with dissolve 
 
-                        pause 
+                        pause 0.75 
 
                         scene v15s48_18a
                         with dissolve
@@ -935,7 +965,8 @@ label v15s48:
                         u "Me too."
 
                         jump v15s48b
-                    "I want you too.":
+
+                    "I want you too":
                         scene v15s48_18k # FPP. MC looking at Nora, Nora looking at MC, Nora flirty, mouth closed.
                         with dissolve
 
@@ -943,21 +974,22 @@ label v15s48:
 
                     # -if they had sex in the past, Nora is thrilled, and hops up to give MC a passionate kiss
 
-                        if v12_nora_sex:
+                        if "v12_nora" in sceneList:
                             scene v15s48_22 # FPP. Nora standing up, Nora looking at MC, MC looking at Nora, Nora flirty, mouth closed.
                             with dissolve  
 
-                            pause  
+                            pause 0.75  
 
                             scene v15s48_23 # FPP. Nora standing infront of MC, Nora looking down at MC sitting on the couch, MC looking at Nora standing infront of him.
                             with dissolve 
 
-                            pause  
+                            pause 0.75  
 
                             scene v15s48_23a # FPP. Nora bending over and kissing MC.
                             with dissolve 
 
                             u "(My god have I missed this....) *Moans*"
+
                         else:
                             scene v15s48_18a
                             with dissolve
