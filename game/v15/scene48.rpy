@@ -426,7 +426,7 @@ label v15s48:
     pause 0.75 
 
     scene v15s48_18f # FPP. Nora looking at MC, MC looking at Nora, Nora studying MC, mouth open.
-    with dissolve.
+    with dissolve
 
     no "Yeah. I am. I'm fine, because... I still have me."
 
