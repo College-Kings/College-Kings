@@ -83,15 +83,7 @@ label v15s13:
 
                 u "I will. *Chuckles*"
 
-        scene v15s13_3d # FPP. same as v15s13_3 Imre disappears again, closing the door
-        with dissolve
-
         play sound "sounds/vibrate.mp3"
-        pause 0.75
-
-        scene v15s13_2d # TPP. same as v15s13_2c MC puts down the donut on his WOLVES desk, pulls out his phone and checks his texts to see a message from Riley, slight smile, mouth closed, looking at his phone
-        with dissolve
-
         $ riley.messenger.newMessage("Hey! I'm assuming you'll be at Lauren's Halloween birthday party later?", queue=False)
         $ riley.messenger.addReply("Yeah, I'll be there!", func=None)
         $ riley.messenger.newMessage("Just FYI, the stores are running low on costumes so if you haven't got one already, hurry up and get one... lol", queue=False)
@@ -100,6 +92,16 @@ label v15s13:
         $ riley.messenger.addReply("I'm on my way out now, wish me luck!", func=None)
         $ riley.messenger.newMessage("Good luck! You're gonna need it...", queue=False)
 
+        scene v15s13_3d # FPP. same as v15s13_3 Imre disappears again, closing the door
+        with dissolve
+
+        pause 0.75
+
+        scene v15s13_2d # TPP. same as v15s13_2c MC puts down the donut on his WOLVES desk, pulls out his phone and checks his texts to see a message from Riley, slight smile, mouth closed, looking at his phone
+        with dissolve
+
+        pause 0.75
+        
         label v15s13_PhoneContinue:
             if riley.messenger.replies:
                 play sound "sounds/vibrate.mp3"
@@ -122,6 +124,8 @@ label v15s13:
 
                 scene v15s13_2f # TPP. same as v15s13_2e MC grabs the donut and shoves it in his mouth
                 with dissolve
+
+                pause 0.75
 
             "Don't eat the donut":
                 $ add_point(KCT.BRO)
@@ -270,6 +274,8 @@ label v15s13:
                 scene v15s13_9e # FPP. same as v15s13_9d Grayson turns his back to MC and starts to walk out
                 with dissolve
 
+                pause 0.75
+
             "You don't eat donuts?":
                 $ add_point(KCT.TROUBLEMAKER)
                 u "Are you serious right now? You're telling me that you never have donuts, or cake, or cola?"
@@ -294,15 +300,7 @@ label v15s13:
 
                 u "(Such a dick.)"
 
-        scene v15s13_9f # FPP. same as v15s13_9 Grayson disappears again, closing the door
-        with dissolve
-
         play sound "sounds/vibrate.mp3"
-        pause 0.75
-
-        scene v15s13_8d # TPP. same as v15s13_8c MC puts down the donut on his APES desk, pulls out his phone and checks his texts to see a message from Riley, slight smile, mouth closed, looking at his phone
-        with dissolve
-
         $ riley.messenger.newMessage("Hey! I'm assuming you'll be at Lauren's Halloween birthday party later?", queue=False)
         $ riley.messenger.addReply("Yeah, I'll be there!", func=None)
         $ riley.messenger.newMessage("Just FYI, the stores are running low on costumes so if you haven't got one already, hurry up and get one... lol", queue=False)
@@ -310,6 +308,16 @@ label v15s13:
         $ riley.messenger.newMessage("Why am I not surprised? :D", queue=False)
         $ riley.messenger.addReply("I'm on my way out now, wish me luck!", func=None)
         $ riley.messenger.newMessage("Good luck! You're gonna need it...", queue=False)
+
+        scene v15s13_9f # FPP. same as v15s13_9 Grayson disappears again, closing the door
+        with dissolve
+
+        pause 0.75
+
+        scene v15s13_8d # TPP. same as v15s13_8c MC puts down the donut on his APES desk, pulls out his phone and checks his texts to see a message from Riley, slight smile, mouth closed, looking at his phone
+        with dissolve
+
+        pause 0.75
 
         label v15s13_PhoneContinue2:
             if riley.messenger.replies:
@@ -333,6 +341,8 @@ label v15s13:
 
                 scene v15s13_8f # TPP. same as v15s13_8e MC grabs the donut and shoves it in his mouth
                 with dissolve
+
+                pause 0.75
 
             "Don't eat the donut":
                 $ add_point(KCT.BRO)

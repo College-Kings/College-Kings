@@ -160,7 +160,7 @@ label v15s18e_boobs:
     scene v15s18ebo_1 # TPP. Close up shot of Lauren's boobs
     with dissolve
     
-    menu :
+    menu:
         "Massage":
             scene v15s18ebo_2 # TPP. MC ontop of Lauren, his hand massaging her breast as he looks at Lauren, Lauren flirty, mouth open, MC slight smile, mouth closed.
             with dissolve
@@ -382,6 +382,7 @@ label v15s18e_end:
 
     scene v15lauor # Ignore as anim
     with dissolve
+    
     pause 0.75
 
     la "Ohhh..."
@@ -394,6 +395,7 @@ label v15s18e_end:
 
     scene v15lauor2 # Ignore as anim
     with dissolve
+    
     pause 0.75
 
     la "*Moans*"
@@ -438,6 +440,7 @@ label v15s18e_end:
 
     scene v15laubj # Ignore as anim
     with dissolve
+
     pause 0.75
 
     la "*Gagging*"
@@ -446,6 +449,7 @@ label v15s18e_end:
 
     scene v15laubjf # Ignore as anim
     with dissolve
+
     pause 0.75
 
     la "Mhmm..."
@@ -454,6 +458,7 @@ label v15s18e_end:
 
     scene v15laubj2 # Ignore as anim
     with dissolve
+
     pause 0.75
 
     la "*Gagging* Mhmm!"
@@ -462,6 +467,7 @@ label v15s18e_end:
 
     scene v15laubj2f # Ignore as anim
     with dissolve
+
     pause 0.75
 
     u "Fuck Lauren... *Moans*"
@@ -495,6 +501,7 @@ label v15s18e_end:
 
     scene v15lausf # Ignore as anim
     with dissolve
+
     pause 0.75
 
     la "I... *Moans* I love this position."
@@ -503,6 +510,7 @@ label v15s18e_end:
 
     scene v15lausff # Ignore as anim
     with dissolve
+
     pause 0.75
 
     la "*Moans*"
@@ -511,6 +519,7 @@ label v15s18e_end:
 
     scene v15lausf2 # Ignore as anim
     with dissolve
+
     pause 0.75
 
     la "*Whispers* Oh, fuck..."
@@ -553,6 +562,7 @@ label v15s18e_end:
 
     scene v15lausf2f # Ignore as anim
     with dissolve
+
     pause 0.75
 
     la "Yes... I'm gonna-"
@@ -573,6 +583,7 @@ label v15s18e_end:
 
     scene v15laum # Ignore as anim
     with dissolve
+
     pause 0.75
 
     la "Oh, fuck..."
@@ -581,6 +592,7 @@ label v15s18e_end:
 
     scene v15laumf # Ignore as anim
     with dissolve
+
     pause 0.75
 
     la "It's- *Moans*"
@@ -589,6 +601,7 @@ label v15s18e_end:
 
     scene v15laum2 # Ignore as anim
     with dissolve
+
     pause 0.75
 
     la "You feel so good, [name]."
@@ -597,6 +610,7 @@ label v15s18e_end:
 
     scene v15laum2f # Ignore as anim
     with dissolve
+
     pause 0.75
 
     u "I'm gonna cum..."
@@ -649,6 +663,8 @@ label v15s18e_end:
 
             scene v15s18eend_9a # FPP. Show MC cumming on Lauren's stomach
             with vpunch
+
+            pause 0.75
 
     scene v15s18eend_8
     with dissolve

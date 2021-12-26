@@ -50,6 +50,8 @@ label v15s41:
         scene v15s41_1c # TPP. In wolves room, Camera close to MC's nightstand, his phone sitting on his nightsand his phone illuminating the dark room, MC sitting up and grabbing his phone, tired face, mouth closed.
         with dissolve
 
+        pause 0.75
+
         call screen phone
 
         pause 0.75

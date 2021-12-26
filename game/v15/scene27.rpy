@@ -190,10 +190,8 @@ label v15s27: # -MC walks out of the Chicks house-
 
     u "Okay, crazies. I'll see you there. *Laughs*"
 
-    scene v15s27_3e # TPP. MC putting his phone in his pocket, smiling, mouth closed.
+    scene v15s27_3e # TPP. MC putting his phone in his pocket, smiling, mouth closed. # -MC smiles as he hangs up, puts his phone away, and continues walking-
     with dissolve
-
-    # -MC smiles as he hangs up, puts his phone away, and continues walking-
 
     u "(This should be fun.)"
 

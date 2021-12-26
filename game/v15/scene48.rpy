@@ -51,7 +51,7 @@ label v15s48:
     pause 0.75
 
     scene v15s48_9 # TPP. Show MC closing the door of the Cabin once he is inside, slight smile, mouth closed.
-    with dissolve  
+    with dissolve
 
     pause 0.75
 
@@ -66,7 +66,7 @@ label v15s48:
     pause 0.75
 
     scene v15s48_10b # FPP. Nora standing up looking at MC, MC looking at Nora, Nora confused, mouth closed.
-    with dissolve 
+    with dissolve
 
     menu:
         "I came to find you":
@@ -76,7 +76,7 @@ label v15s48:
             pause 0.75 
 
             scene v15s48_12 # FPP. Nora standing infront of MC,Nora looking at MC, MC looking at Nora, Nora confused, mouth closed.
-            with dissolve 
+            with dissolve
 
             u "What do you think? I've been looking everywhere for you!"
 
@@ -94,7 +94,7 @@ label v15s48:
             pause 0.75 
 
             scene v15s48_13 # TPP. MC hugging Nora, Nora not hugging back but accepting the hug, slight smile, mouth closed, MC slight smile, mouth closed.
-            with dissolve 
+            with dissolve
 
             pause 0.75
 
@@ -218,6 +218,8 @@ label v15s48:
 
         scene v15s48_12f # FPP. Nora's face closer to MC's as she caresses his cheek, Nora flirty, mouth closed.
         with dissolve
+
+        pause 0.75
 
     else:
         scene v15s48_12b
@@ -685,7 +687,7 @@ label v15s48:
             if nora.relationship.value < Relationship.FWB.value and v15s48_follow_your_heart and not v15s48_interrupt and not kct == "confident":
                 $ v15s48_variable_check += 1
                 scene v15s48_18a
-                with dissolve  
+                with dissolve
 
                 no "Well, cheers to following your heart! Actually-"
 
@@ -744,7 +746,7 @@ label v15s48:
             
             if chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or aubrey.relationship.value >= Relationship.TAMED.value:
                 scene v15s48_18a
-                with dissolve    
+                with dissolve
 
                 no "If only you were completely available, ha."
 
@@ -801,7 +803,7 @@ label v15s48:
                 pause 0.75  
 
                 scene v15s48_21a # TPP. MC and Nora putting their glasses of wine on the table near them, slight smile, mouth closed.
-                with dissolve 
+                with dissolve
 
                 pause 0.75 
 
@@ -895,7 +897,7 @@ label v15s48:
 
                         if "v12_nora" in sceneList:
                             scene v15s48_18j # FPP. MC looking at Nora, Nora looking at MC, Nora with teary eyes but holding it back, neutral face, mouth closed.
-                            with dissolve 
+                            with dissolve
 
                             pause 0.75 
 
@@ -950,7 +952,7 @@ label v15s48:
                         pause 0.75  
 
                         scene v15s48_21a # TPP. MC and Nora putting their glasses of wine on the table near them, slight smile, mouth closed.
-                        with dissolve 
+                        with dissolve
 
                         pause 0.75 
 
@@ -976,17 +978,17 @@ label v15s48:
 
                         if "v12_nora" in sceneList:
                             scene v15s48_22 # FPP. Nora standing up, Nora looking at MC, MC looking at Nora, Nora flirty, mouth closed.
-                            with dissolve  
+                            with dissolve
 
                             pause 0.75  
 
                             scene v15s48_23 # FPP. Nora standing infront of MC, Nora looking down at MC sitting on the couch, MC looking at Nora standing infront of him.
-                            with dissolve 
+                            with dissolve
 
                             pause 0.75  
 
                             scene v15s48_23a # FPP. Nora bending over and kissing MC.
-                            with dissolve 
+                            with dissolve
 
                             u "(My god have I missed this....) *Moans*"
 

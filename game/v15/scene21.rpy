@@ -21,10 +21,9 @@ label v15s21:
 
         cl "Here he is."
 
+        $ v15_notes_clicks = 0 # reset counter
         scene v15s21_3 # FPP. Mr. Lee approaches them slight smile mouth open, Chloe and MC stand up, Chloe slight smile, mouth closed
         with dissolve
-
-        $ v15_notes_clicks = 0 # reset counter
 
         lee "Good morning, Chloe and [name]."
 
@@ -370,7 +369,6 @@ label v15s21:
                 scene v15s21_6l # FPP. same as v15s21_6b Mr. Lee has a judgemnetal expression, still looking at Mc, mouth is still closed
                 with dissolve
 
-                #u "The lower our tuition costs, the more money the school brings in each year."
                 u "With lower fees you can have a lot more students applying each year, so in the end it pays off for the school."
 
                 scene v15s21_6b
@@ -770,8 +768,9 @@ label v15s21:
         scene v15s21_5a
         with dissolve
 
-        #TBD optimal difficulty level
-        if v15_meeting_points >= 4:
+        pause 0.75
+
+        if v15_meeting_points >= 4: #TBD optimal difficulty level
             if v15_meeting_points == 4 and kct == "loyal":
                 call screen kct_popup
                 
@@ -802,6 +801,8 @@ label v15s21:
 
             scene v15s21_5c # TPP. same as v15s21_5 MC is now sitting next to Chloe, Chloe and Mc look at each other and high five, both full smiles, both mouths open, Mr. Lee is still sitting down looking at Chloe, Still a slight smile, mouth is still closed
             with dissolve
+
+            pause 0.75
 
         elif v15_meeting_points >= 2:
             scene v15s21_6
@@ -838,6 +839,8 @@ label v15s21:
 
             scene v15s21_5c
             with dissolve
+
+            pause 0.75
 
         elif v15_meeting_points >= 0:
             if v15_meeting_points == 0 and kct == "loyal":
@@ -1114,10 +1117,9 @@ label v15s21:
 
             u "(Don't think about sex, don't think about sex, don't think abou-)"
 
+        $ v15_notes_clicks = 0 # reset counter
         scene v15s21_10b # FPP. same as v15s21_10a Ms. Rose looking at Chloe slight smile mouth open, Chloe looking at Ms. Rose slight smile mouth closed
         with dissolve
-
-        $ v15_notes_clicks = 0 # reset counter
 
         ro "Hi, Chloe. Hello [name]. It's nice to see you both."
 
@@ -1219,6 +1221,8 @@ label v15s21:
                 scene v15s21_13c # FPP. same as v15s21_13a Ms. Rose is looking at Mc, still no expression, mouth is still open
                 with dissolve
 
+                pause 0.75
+
                 show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 11, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
 
                 ro "Personally, I think Nora has already made up her mind about Chloe's ability to lead and I'm not here to discuss that or take any part in the ongoing feud."
@@ -1288,6 +1292,8 @@ label v15s21:
 
         scene v15s21_7
         with dissolve
+
+        pause 0.75
 
         if v15_took_notes: # -a little journal icon appears, they can click on it AT ANY TIME during this scene and see the notes that they created in scene 20 with Chloe-
             call ui_screen_v15_notes
@@ -1606,6 +1612,8 @@ label v15s21:
                 scene v15s21_7d
                 with dissolve
 
+                pause 0.75
+
             "Consider it":
                 $ v15_meeting_points += 1
 
@@ -1689,6 +1697,8 @@ label v15s21:
             scene v15s21_13
             with dissolve
 
+            pause 0.75
+
             show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 11, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
             ro "Oh, it's okay! Thank you. It was actually a gift that [name] and Nora gave to me before we left Europe."
 
@@ -1732,8 +1742,9 @@ label v15s21:
         scene v15s21_13o # FPP. same as v15s21_13n Ms. Rose has a serious expression, still looking at Mc, mouth is still closed
         with dissolve
 
-        #TBD optimal difficulty level
-        if v15_meeting_points >= 4:
+        pause 0.75
+
+        if v15_meeting_points >= 4: #TBD optimal difficulty level
             if v15_meeting_points == 4 and kct == "confident":
                 call screen kct_popup
         
@@ -1759,6 +1770,8 @@ label v15s21:
 
             scene v15s21_12b # TPP. same as v15s21_12 MC is now sitting next to Chloe, Chloe and Mc look at each other and high five, both full smiles, both mouths open, Ms. Rose is still sitting down looking at Chloe, Still a slight smile, mouth is still closed
             with dissolve
+
+            pause 0.75
 
         elif v15_meeting_points >= 2:
             scene v15s21_13a
@@ -1793,6 +1806,8 @@ label v15s21:
 
             scene v15s21_12b
             with dissolve
+
+            pause 0.75
 
         elif v15_meeting_points >= 0:
             if v15_meeting_points == 0 and kct == "confident":
@@ -1829,6 +1844,8 @@ label v15s21:
 
             scene v15s21_12b
             with dissolve
+
+            pause 0.75
 
         else:
             scene v15s21_13p # FPP. same as v15s21_13o Ms. Rose has a disapointed expression, mouth is open, still looking at Chloe
@@ -2126,6 +2143,8 @@ label v15s21:
 
                                 scene v15s21_15 # TPP. Show Ms. Rose sitting in her chair from previous renders, Mc is standing above her, and pulls her in for a passionate kiss
                                 with dissolve
+
+                                pause 0.75
 
                                 scene v15s21_15a # TPP. same as v15s21_15 Ms. Rose and Mc are no longer kissing, Ms. Rose grasps Mc's shirt and pulls him close to whisper in his ear her mouth is open, Mc looks proud of himself mouth is closed
                                 with dissolve

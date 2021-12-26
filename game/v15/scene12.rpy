@@ -360,7 +360,7 @@ label v15s12:
                     u "(Sighs... Well, it needed to happen eventually, I guess.)" 
 
                 "It's not that serious": # -if It's not that serious
-                    $ add_point(KCT.TROUBLEMAKER) # TODO: KCT and Character points
+                    $ add_point(KCT.TROUBLEMAKER) # -MC needs to be losing Loyal KCT here because he's lying through his teeth :)-
                     $ lindsey.points += 1
                     $ chloe.points -= 1
 
@@ -383,9 +383,7 @@ label v15s12:
 
                     scene v15s12_6g
                     with dissolve
-
-                    $ add_point(KCT.TROUBLEMAKER) # -MC needs to be losing Loyal KCT here because he's lying through his teeth :)-
-                    
+                   
                     li "So... Do you have other people on your mind?" 
 
                     scene v15s12_6c
@@ -393,10 +391,9 @@ label v15s12:
 
                     u "Ha, you can say that... At least one."
 
-                    scene v15s12_6h # FPP. Lindsey, happy, smiling, mouth open [Checkpoint E]. 
+                    scene v15s12_6h # FPP. Lindsey, happy, smiling, mouth open [Checkpoint E]. # -Lindsey very happy-
                     with dissolve
 
-                    # -Lindsey very happy-
                     li "Okay. Cool. *Chuckles* Thanks for letting me know."
 
                     scene v15s12_6i # FPP. Lindsey, happy, smiling, mouth closed [Checkpoint E].
@@ -570,9 +567,7 @@ label v15s12:
             # -Lindsey gives MC a passionate kiss- 
             scene v15s12_9 # FPP. Lindsey passionately kisses MC [Janitor's closet].
             with dissolve
-
             play sound "sounds/kiss.mp3"
-
             pause 1.75 
 
             scene v15s12_9a # FPP. Lindsy happy, smiling, mouth closed looking at MC [Janitor's closet].

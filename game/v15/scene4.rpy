@@ -404,9 +404,7 @@ label v15s4:
 
             scene v15s4_16 # TPP. Close up of the dog licking MC's nose, MC slight smile, mouth closed.
             with dissolve
-            
             play sound "sounds/lick.mp3"
-
             pause 1.25
 
             scene v15s4_17 # TPP. Close up of Autumn looking at MC like she adores him, Autumn smile, mouth closed.
@@ -1009,13 +1007,16 @@ label v15s4:
 
     u "I haven't seen you in a while, bud. Lookin' good!"
 
-    scene v15s4_47 # FPP. Show Oscar the dog running away from Autumn towards MC excitedly, Autumn slight smile, mouth closed.
-    with dissolve
-
     if v7_visited_shelter:
+        scene v15s4_47 # FPP. Show Oscar the dog running away from Autumn towards MC excitedly, Autumn slight smile, mouth closed.
+        with dissolve
+
         aut "I think he remembers you! Haha, that's so cute..."
 
     else:
+        scene v15s4_47 # FPP. Show Oscar the dog running away from Autumn towards MC excitedly, Autumn slight smile, mouth closed.
+        with dissolve
+
         pause 0.75
 
     scene v15s4_48 # FPP. MC on one knee and petting Oscar who is at his feet, don't show any other characters legs just MC's hand and Oscar.

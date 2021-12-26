@@ -223,6 +223,8 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
 
             scene v15s32_3a # TPP. MC smiling, mouth closed, walking right-to-left; side of house in background [Chicks' house side yard-exterior].
             with dissolve
+
+            pause 0.75
     
     play sound "sounds/knock.mp3"
 
@@ -349,6 +351,8 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
 
         scene v15s32_8j # FPP. Aubrey smiling mouth closed looking at MC stairs are behind her [Chicks' front door-interior].
         with dissolve
+
+        pause 0.75
 
         if aubrey.relationship.value >= Relationship.FWB.value: # -if AubreyRs 
             u "She's right. You look absolutely stunning."
@@ -565,10 +569,8 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
 
             u "Like, holy hell.... I'm one lucky guy."
 
-            scene v15s32_8k
+            scene v15s32_8k # -Aubrey blushes a little-
             with dissolve
-
-            # -Aubrey blushes a little-
 
             au "Okay, easy tiger."
 

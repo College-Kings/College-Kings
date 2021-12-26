@@ -291,6 +291,8 @@ label v15s17:
                 scene v15s17_8b
                 with dissolve
 
+                pause 0.75
+
             else:
                 scene v15s17_8b # FPP. same as v15s17_8a SC's mouth is closed
                 with dissolve

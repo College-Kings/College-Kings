@@ -600,11 +600,9 @@ label v15s10:
 
             pause 0.75
 
-            scene v15s10_14
+            scene v15s10_14 # -[CarTotal] pops up on screen based on the payout sums- # Hi Again Oscar! :D
             with dissolve
-            # -[CarTotal] pops up on screen based on the payout sums-
-            # Hi Again Oscar! :D
-
+            
             menu:
                 "Refuse offer":
                     scene v15s10_12f
@@ -674,6 +672,8 @@ label v15s10:
 
             scene v15s10_16a
             with dissolve
+
+            pause 0.75
 
             scene v15s10_21a # TPP. Same angle as v15s10_21, MC and Lindesy back facing away from the camera looking at the car as the man sits in it.
             with dissolve
@@ -852,11 +852,11 @@ label v15s10:
 
             female_buyer "Oh, that's a shame. He was magnificent..."
 
-        scene v15s10_femalebuyer_4 # FPP. MC looking at the lady as she is checking out the car, the lady gentle awkward smile, mouth closed.
-        with dissolve
-
         if v14s48_car_description == CarDescription.LIE:
             $ v14s48_car_price -= 200
+            scene v15s10_femalebuyer_4 # FPP. MC looking at the lady as she is checking out the car, the lady gentle awkward smile, mouth closed.
+            with dissolve
+            
             u "As you can see, it's a modern, imported, classic sports car. All original and in excellent condition."
 
             u "Just run your hand across that bodywork... They don't make them like this anymore."
@@ -986,10 +986,7 @@ label v15s10:
             female_buyer "I can't overlook the things you've lied about, but I do love the idea of the bubblegum smell when I'm driving. So, this is what I can offer..."
 
             scene v15s10_femalebuyer_4h # FPP. Same as v15s10_femalebuyer_4g, The lady holding up cash, looking at MC, slight smile, mouth closed.
-            with dissolve
-
-            # -[CarTotal] pops up on screen based on the pay out sums(if lied, total they can receive is minus200$ off the car's worth price)-
-            # Third times a charm. Hi Oscar :D
+            with dissolve # -[CarTotal] pops up on screen based on the pay out sums(if lied, total they can receive is minus200$ off the car's worth price)- # Third times a charm. Hi Oscar :D
 
             menu:
                 "Refuse offer":
@@ -1148,6 +1145,8 @@ label v15s10:
 
             scene v15s10_femalebuyer_4h
             with dissolve
+
+            pause 0.75
 
     # -[CarTotal] pops up on screen based on the payout sums-
     # Oscar ;)

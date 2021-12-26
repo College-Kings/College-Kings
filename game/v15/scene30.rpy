@@ -25,6 +25,8 @@ label v15s30:
     scene v15s30_3
     with dissolve
 
+    pause 0.75
+
     if v14_Samantha_clean:
         scene v15s30_3
         with dissolve
@@ -45,14 +47,20 @@ label v15s30:
     scene v15s30_3
     with dissolve
 
+    pause 0.75
+
     if v14_emily_ily:
         scene v15s30_3b # TPP. Mc looks at his phone on the nightstand, slight smile, mouth closed
         with dissolve
+
+        pause 0.75
 
         play sound "sounds/vibrate.mp3"
 
         scene v15s30_4 # FPP. MC picks up his phone and checks his texts and sees a message from Emily, From MC's chest and entire lower body is visible from the angle of him laying on the bed
         with dissolve
+
+        pause 0.75
 
         $ emily.messenger.newImgMessage("images/v15/Scene 29/emily_message_29.webp", queue=False) #Standing next to a full bathtub, in sexy *new* lingerie
         $ emily.messenger.newMessage("About to have a late night bath, thinking of you.", queue=False)
@@ -80,6 +88,8 @@ label v15s30:
 
                 scene v15s30_4a # FPP. same as v15s30_4 MC has pulled out his dick and started stroking it
                 with dissolve
+                
+                pause 0.75
 
                 if config_censored:
                     $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
@@ -137,6 +147,8 @@ label v15s30:
 
                 scene v15s30_4e # FPP. same as v15s30_4d MC takes a picture of the cum on his hand and send's it to Emily
                 with dissolve
+
+                pause 0.75
 
                 if config_censored:
                     $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)

@@ -351,6 +351,8 @@ label v15s18b:
 
         scene v15s18b_12 # FPP. MC standing up Lauren standing infront of him, MC looking at Lauren, Lauren looking at MC, Lauren excited, mouth closed.
         with dissolve
+
+        pause 0.75
         
         if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
             play sound "sounds/kiss.mp3"
@@ -362,10 +364,14 @@ label v15s18b:
 
             scene v15s18b_13a # TPP. Show just MC and Lauren passionately kissing.
             with dissolve
+            
+            pause 0.75
 
         else:
             scene v15s18b_13 # TPP. Show just MC and Lauren hugging, both slight smile, mouth closed.
             with dissolve
+            
+            pause 0.75
 
         scene v15s18b_12b # MC standing up Lauren standing infront of him, MC looking at Lauren, Lauren looking at MC, Lauren excited, mouth open.
         with dissolve
@@ -376,7 +382,6 @@ label v15s18b:
         with dissolve
 
         u "You're very welcome, Happy Birthday."
-
 
     if v15_lauren_gift == 2 or v15_lauren_gift == 3:
         if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -474,10 +479,11 @@ label v15s18b:
 
             pause 0.75
 
+            play sound "sounds/kiss.mp3"
             scene v15s18b_12 
             with dissolve
 
-            play sound "sounds/kiss.mp3"
+            pause 1.75
 
             scene v15s18b_12a 
             with dissolve

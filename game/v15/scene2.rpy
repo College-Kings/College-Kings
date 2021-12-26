@@ -157,11 +157,13 @@ label v15s2:
                 scene v15s2_5 # TPP. Show MC walking away from Cameron, both serious face, Cameron mouth closed, MC mouth open.
                 with dissolve
 
+                u "Night, Cameron. Get some rest, man."
+
             "Say nothing":
                 scene v15s2_5
                 with dissolve
                        
-        u "Night, Cameron. Get some rest, man."
+                u "Night, Cameron. Get some rest, man."
 
         scene v15s2_5a # TPP. Same as v15s2_5, Cameron mouth open, MC mouth closed.
         with dissolve
@@ -253,6 +255,8 @@ label v15s2:
         scene v15s2_5b # Same as v15s2_5a, Show MC walking away no Cameron in sight. MC slightly worried, mouth closed.
         with dissolve
 
+        pause 0.75
+
     play sound "sounds/doorclose.mp3"
 
     scene v15s2_6 # TPP. Show MC in his room pulling the door closed, MC serious face, mouth closed.
@@ -290,6 +294,8 @@ label v15s2:
 
     scene v15s2_9a # TPP. Show MC holding his phone up infront of his face, serious face, mouth closed.
     with dissolve
+    
+    pause 0.75
 
     $ autumn.messenger.newMessage(_("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)"), queue=False)
     $ autumn.messenger.addReply(_("Yeah, looking forward to it. See you there!"))
@@ -311,6 +317,8 @@ label v15s2:
     scene v15s2_9b # TPP. Same as v15s2_9, MC closing his eyes getting ready for bed, neutral face, mouth closed.
     with dissolve
 
+    pause 0.75
+
     $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren", queue=False)
 
     play sound "sounds/vibrate.mp3"
@@ -322,6 +330,8 @@ label v15s2:
 
     scene v15s2_9a
     with dissolve
+
+    pause 0.75
 
     call screen phone
 
@@ -349,7 +359,6 @@ label v15s2:
 
     scene v15s2_10 # FPP. Just a black screen
     with dissolve
-
     play sound "sounds/phonealarm.mp3"
     u "*Groans* (No time for a snooze today. Need to get up.)"
 

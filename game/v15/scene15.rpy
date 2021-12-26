@@ -199,6 +199,7 @@ label v15s15:
 
             scene v15rosoral # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
             ro "*Moans* Oh... Yes... You are a hungry boy! *Laughs*"
@@ -207,6 +208,7 @@ label v15s15:
 
             scene v15rosoral2 # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
             u "*Muffled* Yes, I love it..."
@@ -227,18 +229,21 @@ label v15s15:
 
             scene v15rosffb # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
-            ro "*Moans* Are you... Still angry with me, [name]?"
+            ro "*Moans* Are you... still angry with me, [name]?"
 
             scene v15rosffbf # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
             u "Of course I'm still angry."
 
             scene v15rosffb2 # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
             ro "Ha, mmm..."
@@ -247,6 +252,7 @@ label v15s15:
 
             scene v15rosffb2f # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
             ro "Show me how angry you are..."
@@ -358,30 +364,35 @@ label v15s15:
 
             scene v15rossd # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
             ro "I've never..."
 
             scene v15rossdf # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
             ro "Been fucked..."
 
             scene v15rossd2 # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
             ro "Against the refrigerator before, haha... *Moans*"
 
             scene v15rossd2f # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
             u "(Mmm, fuck...) There's a first time for everything, huh?"
 
             scene v15rossd # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
             ro "God, yes! Yes!"
@@ -418,12 +429,14 @@ label v15s15:
 
             scene v15rosffbstove # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
             ro "Yes! Keep going! *Moans* Just like that..."
 
             scene v15rosffbstovef # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
             ro "You're hitting the... spot... perfec-"
@@ -432,6 +445,7 @@ label v15s15:
 
             scene v15rosffbstove2f # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
             ro "*Moans* Oh, [name]... Oh, honey..."

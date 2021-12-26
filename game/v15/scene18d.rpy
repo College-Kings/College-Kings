@@ -46,6 +46,8 @@ label v15s18d:
 
     scene v15s18d_6 # FPP. MC looking down at his and Imre's hands as MC hands Imre the list of challenges.
     with dissolve
+    
+    pause 0.75
 
     if v15s18_partytask > 4:
         scene v15s18d_5a # FPP. MC looking at Imre, Imre looking at the List, Imre slight smile, mouth open.

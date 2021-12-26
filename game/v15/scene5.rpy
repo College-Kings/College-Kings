@@ -164,6 +164,7 @@ label v15s5:
             with dissolve
 
             play sound "sounds/doorclose.mp3"
+            pause 0.75
 
             scene v15s5_6 # TPP. Shot of the classroom door closed.
             with dissolve

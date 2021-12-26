@@ -422,6 +422,8 @@ label v15s42:
     scene v15s42_11 # FPP. MC standing closer looking at the board as Amber is looking at the board and pointing at it, Amber slight smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
 # -The UI pops up to show MC the headings Clues and Possible Locations, they currently have question marks over the unlockable items. MC exits the UI whenever-
 
     scene v15s42_12 # FPP. MC standing by the board, MC looking at Amber, Amber looking at Mc, Amber slight smile, mouth closed.
@@ -530,6 +532,8 @@ label v15s42:
 
         scene v15s42_14 # TPP. Show Amber and MC leaving the meeting room, Amber slight smile, mouth closed, MC eating the last of his croissant as they leave the room.
         with dissolve
+
+        pause 0.75
 
     else:
         play sound "sounds/dooropen.mp3"

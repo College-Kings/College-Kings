@@ -163,6 +163,8 @@ label v15s8:
         scene v15s8_3
         with dissolve
 
+        pause 0.75
+
     elif v14_help_chloe:
         scene v15s8_3a
         with dissolve
@@ -285,9 +287,13 @@ label v15s8:
         scene v15s8_8 # FPP. MC some distance away from Chloe looking at her. Chloe stressed on the phone, mouth closed.
         with dissolve
 
+        pause 0.75
+
     else:
         scene v15s8_8a # FPP. Same as v15s8_8, Chloe on the phone winking at MC, slight smile, mouth closed.
         with dissolve
+
+        pause 0.75
 
     scene v15s8_7b # TPP. Same as v15s8_7, MC opening the door to the planning room to walk out.
     with dissolve

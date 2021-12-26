@@ -289,6 +289,8 @@ label v15s40:
                     scene v15s40_2d # TPP. same as v15s40_2 Mc and Autumn laugh, still looking at each other
                     with dissolve
 
+                    pause 0.75
+
             "It's not a good idea":
                 scene v15s40_1a
                 with dissolve

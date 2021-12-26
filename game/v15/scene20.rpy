@@ -29,12 +29,12 @@ label v15s20:
 
     pause 0.75
 
-    scene v15s20_5 # FPP. MC sitting next to Chloe. Chloe looking at MC, MC looking at Chloe, Chloe slight smile, mouth closed.
-    with dissolve
-
     if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         menu:
             "Ask for a kiss":
+                scene v15s20_5 # FPP. MC sitting next to Chloe. Chloe looking at MC, MC looking at Chloe, Chloe slight smile, mouth closed.
+                with dissolve
+
                 u "I know you're super busy, but can your boyfriend get a kiss first? *Chuckles*"
 
                 scene v15s20_5a # FPP. Same as v15s20_5, Chloe slight smile, mouth open.
@@ -45,7 +45,12 @@ label v15s20:
                 scene v15s20_6 # TPP. Show MC and Chloe having a quick kiss.
                 with dissolve
 
+                pause 0.75
+
             "Say nothing":
+                scene v15s20_5 # FPP. MC sitting next to Chloe. Chloe looking at MC, MC looking at Chloe, Chloe slight smile, mouth closed.
+                with dissolve
+                
                 u "(I was expecting a hello kiss, but I'll keep quiet about it... I don't want to throw her off her game.)"
 
     if v15_chloe_mrleesupport: # Placeholder if MC chose to meet with Mr. Lee.

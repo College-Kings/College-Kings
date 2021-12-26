@@ -218,6 +218,8 @@ label v15s9:
                 scene v15s9_3l # FPP. same as v15s9_3 Aubrey winks and a nice smile
                 with dissolve
 
+                pause 0.75
+
             else:
                 scene v15s9_3m # FPP. same as v15s9_3f Aubreys head is tilted slightly to the side, looking at Mc like a lost puppy, slight smile mouth closed with a slightly curled bottom lip
                 with dissolve
@@ -421,10 +423,11 @@ label v15s9:
         scene v15s9_1h # TPP. same as v15s9_1g Different Camera angle
         with dissolve
 
+        pause 0.75
+
         play sound "sounds/vibrate.mp3"
 
         if (v14s48_car_price >= 300 and v14s48_car_price <= 750 and v14_pics_with_linds) or (v14s48_car_price >= 300 and v14s48_car_price <= 550):
-
         # -if MC chose to sell the car for between $300 and $750 and Lindsey is in the photos OR MC chose to sell the car for between $300 and $550 and Lindsey is not in the photos
             $ lindsey.messenger.newMessage("Hey! Somebody wants to check out the car and they sound really interested!", queue=False)
             $ lindsey.messenger.newMessage("I'm meeting them now. Can you come to where we took the photos?", queue=False)

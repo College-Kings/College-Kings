@@ -137,6 +137,8 @@ label v15s36:
             scene v15s36_6 # TPP. Show MC and Autumn laughing while looking at each other now further down the street.
             with dissolve
 
+            pause 0.75
+
         elif v15_lindsey_gamenight: # Placeholder for the game being would you rather.
             scene v15s36_5
             with dissolve
@@ -287,6 +289,8 @@ label v15s36:
                     scene v15s36_6
                     with dissolve
 
+                    pause 0.75
+
                 else:
                     $ autumn.relationship = Relationship.FWB
 
@@ -366,6 +370,8 @@ label v15s36:
 
                     scene v15s36_8f # FPP. Autumn stepped back, MC looking at Autumn, Autumn looking at MC, Autumn now blushing, Autumn slight smile, mouth closed. 
                     with dissolve
+
+                    pause 0.75
 
             "It's not a good idea":
                 $ v15s36_not_good_idea = True
@@ -449,6 +455,8 @@ label v15s36:
     scene v15s36_11b # FPP. Show Autumn walking away to the deer's house.
     with dissolve
 
+    pause 0.75
+
     if autumn.relationship.value >= Relationship.FWB.value:
         scene v15s36_11c # FPP. Show Autumn stopping in place.
         with dissolve
@@ -467,6 +475,8 @@ label v15s36:
 
         scene v15s36_11e # FPP. Autumn kissing MC on the cheek.
         with dissolve
+
+        pause 0.75
 
         play sound "sounds/dooropen.mp3"
 

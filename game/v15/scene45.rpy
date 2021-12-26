@@ -75,10 +75,10 @@ label v15s45:
 
     am "We've got some questions for you."
 
-    scene v15s45_5b # FPP. same as v15s45_5 Amber and Chloe are looking at Mc, still no expressions, mouths are still closed.
-    with dissolve
-
     if detective == "professional":
+        scene v15s45_5b # FPP. same as v15s45_5 Amber and Chloe are looking at Mc, still no expressions, mouths are still closed.
+        with dissolve
+
         menu:
             "Be polite":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -126,6 +126,9 @@ label v15s45:
                 u "We're just looking for the facts, ma'am. If you're honest with us, this shouldn't take up much of your time."
 
     elif detective == "psychologist":
+        scene v15s45_5b # FPP. same as v15s45_5 Amber and Chloe are looking at Mc, still no expressions, mouths are still closed.
+        with dissolve
+
         menu:
             "Be polite":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -173,6 +176,9 @@ label v15s45:
                 u "There's a weight on your shoulders, I can feel it. You need to talk to us; we can help you."
 
     else:
+        scene v15s45_5b # FPP. same as v15s45_5 Amber and Chloe are looking at Mc, still no expressions, mouths are still closed.
+        with dissolve
+
         menu:
             "Be polite":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -274,10 +280,10 @@ label v15s45:
 
     cl "Are you not going to sit down?"
 
-    scene v15s45_7a # FPP. Chloe's mouth is closed, still no expression, still looking at Mc
-    with dissolve
-
     if detective == "professional":
+        scene v15s45_7a # FPP. Chloe's mouth is closed, still no expression, still looking at Mc
+        with dissolve
+
         menu:
             "Be polite":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -323,6 +329,9 @@ label v15s45:
                 u "If a detective sits down on his ass, he also sits down in his mind."
 
     elif detective == "psychologist":
+        scene v15s45_7a # FPP. Chloe's mouth is closed, still no expression, still looking at Mc
+        with dissolve
+
         menu:
             "Be polite":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -368,6 +377,9 @@ label v15s45:
                 u "Hmm, deflecting the attention to us this early in the conversation? You must be nervous, Chloe."
 
     else:
+        scene v15s45_7a # FPP. Chloe's mouth is closed, still no expression, still looking at Mc
+        with dissolve
+
         menu:
             "Be polite":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -499,10 +511,10 @@ label v15s45:
 
     cl "And if you haven't noticed, we're not exactly best friends. So why would I know anything?"
 
-    scene v15s45_7h
-    with dissolve
-
     if detective == "professional":
+        scene v15s45_7h
+        with dissolve
+
         menu:
             "Where do you think?":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -610,6 +622,9 @@ label v15s45:
                 cl "Mr. Rose, probably? Her daddy? *Giggles* Whatever she needs, he'll get it for her."
 
     elif detective == "psychologist":
+        scene v15s45_7h
+        with dissolve
+
         menu:
             "Where do you think?":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -722,6 +737,9 @@ label v15s45:
                 cl "Oh, well yeah. That would be her father."
 
     else:
+        scene v15s45_7h
+        with dissolve
+
         menu:
             "Where do you think?":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -883,8 +901,8 @@ label v15s45:
     scene v15s45_7
     with dissolve
 
-    $ v15_nora_clues.add("runs_dad")
     cl "He's the one with all the money, so maybe she'd go to him. Or use one of his places to hideout."
+    $ v15_nora_clues.add("runs_dad")
 
     scene v15s45_8
     with dissolve
@@ -919,8 +937,8 @@ label v15s45:
     scene v15s45_8
     with dissolve
 
-    $ v15_nora_clues.add("close_rose")
     am "Do you think Nora could be with Ms. Rose right now?"
+    $ v15_nora_clues.add("close_rose")
 
     scene v15s45_7e
     with dissolve
@@ -932,10 +950,10 @@ label v15s45:
 
     cl "Maybe she saw them both briefly to tell them about the breakup, who knows?"
 
-    scene v15s45_7a
-    with dissolve
-
     if detective == "professional":
+        scene v15s45_7a
+        with dissolve
+
         menu:
             "Who else?":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -1009,8 +1027,8 @@ label v15s45:
                 scene v15s45_7
                 with dissolve
         
-                $ v15_nora_clues.add("likes_ex")
                 cl "But that's Nora for you, always looking to the past..."
+                $ v15_nora_clues.add("likes_ex")
 
             "Refer to a past clue":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -1055,8 +1073,8 @@ label v15s45:
                 scene v15s45_7g
                 with dissolve
 
-                $ v15_nora_clues.add("hates_camping")
                 cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it... I think you might need to take another look at your evidence."
+                $ v15_nora_clues.add("hates_camping")
 
                 scene v15s45_8
                 with dissolve
@@ -1099,6 +1117,9 @@ label v15s45:
                 am "That's new information."
 
     elif detective == "psychologist":
+        scene v15s45_7a
+        with dissolve
+
         menu:
             "Who else?":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -1172,8 +1193,8 @@ label v15s45:
                 scene v15s45_7
                 with dissolve
         
-                $ v15_nora_clues.add("likes_ex")
                 cl "But that's Nora for you, always looking to the past..."
+                $ v15_nora_clues.add("likes_ex")
 
             "Refer to a past clue":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -1218,8 +1239,8 @@ label v15s45:
                 scene v15s45_7g
                 with dissolve
 
-                $ v15_nora_clues.add("hates_camping")
                 cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it... I think you might need to take another look at your evidence."
+                $ v15_nora_clues.add("hates_camping")
 
                 scene v15s45_8
                 with dissolve
@@ -1267,8 +1288,8 @@ label v15s45:
                 scene v15s45_7
                 with dissolve
 
-                $ v15_nora_clues.add("likes_ex")
                 cl "No, no, no. She would never go back to him, it's just that they had good memories together, and always stayed friends."
+                $ v15_nora_clues.add("likes_ex")
 
                 scene v15s45_7a
                 with dissolve
@@ -1283,6 +1304,9 @@ label v15s45:
                 cl "Like I said, it was a long time ago. I don't even remember his name. (LOCATION UNLOCKED: EX-BOYFRIEND'S HOUSE.)"
 
     else:
+        scene v15s45_7a
+        with dissolve
+
         menu:
             "Who else?":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -1356,8 +1380,8 @@ label v15s45:
                 scene v15s45_7
                 with dissolve
         
-                $ v15_nora_clues.add("likes_ex")
                 cl "But that's Nora for you, always looking to the past..."
+                $ v15_nora_clues.add("likes_ex")
 
             "Refer to a past clue":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -1402,8 +1426,8 @@ label v15s45:
                 scene v15s45_7g
                 with dissolve
 
-                $ v15_nora_clues.add("hates_camping")
                 cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it... I think you might need to take another look at your evidence."
+                $ v15_nora_clues.add("hates_camping")
 
                 scene v15s45_8
                 with dissolve

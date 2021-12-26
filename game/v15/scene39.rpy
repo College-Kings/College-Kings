@@ -18,6 +18,8 @@ label v15s39:
     scene v15s39_3 # TPP. Order of seating location is as follows, MC on the outside seat of the booth, Lindsey next MC, Autumn next to Lindsey, Aubrey next to Autumn, and an open spot for either Grayson or Sebastian on the other outside seat, Don't show Grayson or Sebastian in this render, Mc and Lindsey are looking at each other Lindey slight smile mouth open, Mc slight smile, mouth closed lookiing at Lindsey, Aubrey Slight smile mouth open looking at Autumn, Autumn slight smile mouth closed
     with dissolve
 
+    pause 0.75
+
     if v15_lindsey_inviteseb:
         scene v15s39_4a # FPP. Show Sebastian instead of Grayson, Aubrey looking at Sebastian slight smile mouth closed, Sebastian looking at Mc slight smile mouth closed.
         with dissolve
@@ -165,6 +167,8 @@ label v15s39:
 
     scene v15s39_9 # TPP. Show lindsey getting up from her seat and stepping over MC her ass is right in MC's face, Lindsey has a slight smile, mouth closed, Mc is smirking and looking slightly away from her ass, Autumn has a slight smile, hand covering her mouth looking at Lindsey, Aubrey is laughing looking at MC, Don't show Grayson or Sebastian
     with dissolve
+
+    pause 0.75
 
     scene v15s39_10 # FPP. Mc looks back and see's Lindsey waving down the BW, Lindsey's back is turned, The BW has a slight smile, mouth closed looking at Lindsey
     with dissolve
@@ -373,6 +377,8 @@ label v15s39:
             scene v15s39_3j # FPP. same as v15s39_3e for seating locations only, Show Mc Lindsey, Autumn, Aubrey and Sebastian from left to right all looking at each other awkwardly, all mouths are closed
             with dissolve
 
+            pause 0.75
+
         else:
             scene v15s39_6g # FPP. same as v15s39_6f Grayson is looking at MC, still aggravated expression, mouth is still open
             with dissolve
@@ -396,6 +402,8 @@ label v15s39:
 
             scene v15s39_3i # FPP. same as v15s39_3a for seating locations only, Show MC, Lindesey, Autumn, Aubrey, and Grayson from left to right all looking at each other awkwardly, all mouths are closed
             with dissolve
+
+            pause 0.75
 
     scene v15s39_8d
     with dissolve
@@ -556,6 +564,8 @@ label v15s39:
         scene v15s39_8c
         with dissolve
 
+        pause 0.75
+
         if v15_lindsey_alcohol:
             scene v15s39_8c
             with dissolve
@@ -674,9 +684,6 @@ label v15s39:
 
                     u "(Now is the time to strike if we're gonna do this...)"
 
-                    scene v15s39_8c
-                    with dissolve
-
                     menu (fail_label="v15_change_subject"): 
                         "Change subject":
                             $ add_point(KCT.BRO)
@@ -688,6 +695,9 @@ label v15s39:
                             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                 $ add_point(KCT.TROUBLEMAKER)
 
+                            scene v15s39_8c
+                            with dissolve
+
                             pause 0.75
 
                             jump v15_change_subject
@@ -698,6 +708,9 @@ label v15s39:
 
                             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                 $ add_point(KCT.BOYFRIEND)
+
+                            scene v15s39_8c
+                            with dissolve
 
                             pause 0.75
 
@@ -737,6 +750,8 @@ label v15s39:
 
                         scene v15s39_8c
                         with dissolve
+                        
+                        pause 0.75
 
                     label v15_stay_on_topic:
                         scene v15s39_8c
@@ -794,9 +809,6 @@ label v15s39:
 
                         li "*Drunk* I mean no wonder she's such a bitch all the time..."
 
-                        scene v15s39_8n # FPP. same as v15s39_8b Lindsey appears drunk, her face is flushed, she now has a full smile, mouth is still closed, still looking at MC
-                        with dissolve
-
                         menu (fail_label="v15_stop_lindsey"): 
                             "Stop Lindsey":
                                 $ add_point(KCT.BRO)
@@ -808,6 +820,9 @@ label v15s39:
                                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                     $ add_point(KCT.TROUBLEMAKER)
 
+                                scene v15s39_8n # FPP. same as v15s39_8b Lindsey appears drunk, her face is flushed, she now has a full smile, mouth is still closed, still looking at MC
+                                with dissolve
+
                                 pause 0.75
 
                                 jump v15_stop_lindsey
@@ -818,6 +833,9 @@ label v15s39:
 
                                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                     $ add_point(KCT.BOYFRIEND)
+
+                                scene v15s39_8n # FPP. same as v15s39_8b Lindsey appears drunk, her face is flushed, she now has a full smile, mouth is still closed, still looking at MC
+                                with dissolve
 
                                 pause 0.75
 
@@ -1055,16 +1073,24 @@ label v15s39:
                         scene v15s39_11h # FPP. same as v15s39_11f Autumn is looking at Lindsey with a disapointed expression, mouth is closed
                         with dissolve
 
+                        pause 0.75
+
                         scene v15s39_12l # FPP. same as v15s39_12g Aubrey is looking at Lindsey with a disappointed expression, mouth is closed
                         with dissolve
+
+                        pause 0.75
 
                         if v15_lindsey_inviteseb:
                             scene v15s39_7g # FPP. same as v15s39_7e Sebastian has a disappointed expression, still looking at Lindsey, mouth is closed
                             with dissolve
+                            
+                            pause 0.75
 
                         else:
                             scene v15s39_6j # FPP. same as v15s39_6i Grayson has a pleased smirk on his face, not holding any drinks, still looking at Lindsey, mouth is still closed
                             with dissolve
+                            
+                            pause 0.75
 
                         scene v15s39_8c
                         with dissolve
@@ -1148,6 +1174,8 @@ label v15s39:
         scene v15s39_20 # TPP. Show Sebastian, MC, Lindsey, Aubrey, and Autumn, meeting up at the table for one last drink, show the fancy glasses in their hands, they cheers the glasses, all slight smiles, all mouths open
         with dissolve
 
+        pause 0.75
+
     else:
         scene v15s39_16a # TPP. same as v15s39_16 Sebastian is not in the render
         with dissolve
@@ -1176,6 +1204,8 @@ label v15s39:
 
         scene v15s39_20a # TPP. Show Grayson instead of Sebastian
         with dissolve
+
+        pause 0.75
 
     scene v15s39_23 # TPP. MC exits the club. Lindsey and Aubrey are ahead of him, getting into the limo
     with dissolve

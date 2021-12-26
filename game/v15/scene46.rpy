@@ -7,7 +7,7 @@ label v15s46:
     play sound "sounds/dooropen.mp3"
 
     scene v15s46_1 # TPP. Amber and MC entering the detective pinboard room, both slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75 
 
@@ -19,7 +19,7 @@ label v15s46:
     pause 0.75 
 
     scene v15s46_3 # FPP. MC looking at Amber, Amber looking at MC, Amber slight smile, mouth open.
-    with dissolve 
+    with dissolve
 
     am "I really hope we have enough clues to solve this now."
 
@@ -38,7 +38,9 @@ label v15s46:
     pause 0.75 
 
     scene v15s46_5 # FPP. Looking at the pinboard.
-    with dissolve 
+    with dissolve
+
+    pause 0.75
 
     # -The UI pops up to show all the clues achieved and any new ones from the Chloe interrogation (CHLOE CLUES UNLOCKED: Nora always runs to her Dad for materialistic help. Nora & Ms Rose are really close. Nora still likes her ex-boyfriend from before Chris. Nora hates camping. CHLOE LOCATIONS UNLOCKED: Ex-boyfriend's house.)-
 
@@ -370,12 +372,12 @@ label v15s46:
     pause 0.75 
 
     scene v15s46_3e
-    with dissolve 
+    with dissolve
 
     pause 0.75 
 
     scene v15s46_3f
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -415,7 +417,7 @@ label v15s46:
     pause 0.75 
 
     scene v15s46_3j # FPP. MC looking at Amber, Amber looking at MC, Amber frown, looks sick, mouth open.
-    with dissolve 
+    with dissolve
 
     am "*Stomach gurgles* Uh, oh."
 
@@ -485,7 +487,7 @@ label v15s46:
     play sound "sounds/dooropen.mp3"
 
     scene v15s46_7 # TPP. Show Amber leaving the room holding her stomach, amber frown, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 

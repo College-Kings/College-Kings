@@ -56,6 +56,8 @@ label v15s24:
     scene v15s24_5b # FPP. MC and Lindsey on the side of the store, MC looking at Lindsey, Lindsey looking at MC, Lindsey holding up the ID's for MC to see, Lindsey slight smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
     if v11_josh_nightclub:
         scene v15s24_5c # FPP. MC and Lindsey on the side of the store, MC looking at Lindsey, Lindsey looking at MC, Lindsey not holding up the ID's anymore but still in her hand, Lindsey slight smile, mouth closed.
         with dissolve
@@ -79,7 +81,9 @@ label v15s24:
     scene v15s24_5e # FPP. MC looking at the ID's, Lindsey looking at MC, Lindsey holding the ID's up for MC to see. We should have a clear image of both ID's, both have a picture of MC on it, one with Name: Nancy Dick, Age: 21. The other ID Name: Andrew King, Age: 29.
     with dissolve
 
-    menu :
+    pause 0.75
+
+    menu:
         "Nancy Dick":
             $ v15s24_nancy_dick = True
 
@@ -1245,9 +1249,13 @@ label v15s24:
             scene v15s24_5d
             with dissolve
 
+            pause 0.75
+
         else: 
             scene v15s24_7e # TPP. Lindsey hugging MC, The alcohol bag in her hand as she hugs MC, both slight smile, mouth closed.
             with dissolve
+
+            pause 0.75
 
         scene v15s24_5
         with dissolve
@@ -1388,6 +1396,8 @@ label v15s24:
     scene v15s24_19a # TPP. Just Mc on the side of the store looking at his phone, slight smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
     $ aubrey.messenger.newMessage("Come to the Chicks house, asap! I have an extra special surprise for you. I think you've earned it ;)", queue=False)
 
     if aubrey.relationship.value >= Relationship.FWB.value: #if RS or Tamed 
@@ -1443,6 +1453,8 @@ label v15s24:
 
         scene v15s24_20 # FPP. MC watching Lindsey walk off with the bag of alcohol, Lindsey slight smile, mouth closed.
         with dissolve
+
+        pause 0.75
 
     else:
         scene v15s24_5a

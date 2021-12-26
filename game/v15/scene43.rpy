@@ -19,6 +19,8 @@ label v15s43:
     scene v15s42_2a # FPP. Amber and MC both looking at the door waiting for an answer, Amber slight smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
     if joinwolves:
         scene v15s43_2b # FPP. Amber looking at MC, MC looking at Amber, Amber slight smile, mouth closed.
         with dissolve
@@ -37,10 +39,10 @@ label v15s43:
 
         pause 0.75
 
-        scene v15s42_2a 
-        with dissolve
-
         if detective == "professional":
+            scene v15s42_2a 
+            with dissolve
+
             menu:
                 "Try the door handle":
                     play sound "sounds/dooropen.mp3"
@@ -102,6 +104,8 @@ label v15s43:
 
                     scene v15s43_2d # FPP. Amber looking at MC, MC looking at Amber, Amber giving him the middle finger while laughing.
                     with dissolve
+
+                    pause 0.75
 
                 "Strategize":
                     scene v15s43_2b
@@ -167,6 +171,9 @@ label v15s43:
                     am "I didn't think it would be that easy, haha."
 
         elif detective == "psychologist":
+            scene v15s42_2a 
+            with dissolve
+
             menu:
                 "Try the door handle":
                     play sound "sounds/dooropen.mp3"
@@ -228,6 +235,8 @@ label v15s43:
 
                     scene v15s43_2d # FPP. Amber looking at MC, MC looking at Amber, Amber giving him the middle finger while laughing.
                     with dissolve
+
+                    pause 0.75
 
                 "What is Chris thinking?":
                     scene v15s43_2b
@@ -275,6 +284,9 @@ label v15s43:
                     u "He's already playing mind games with us, this isn't good."
 
         else:
+            scene v15s42_2a 
+            with dissolve
+
             menu:
                 "Try the door handle":
                     play sound "sounds/dooropen.mp3"
@@ -336,6 +348,8 @@ label v15s43:
 
                     scene v15s43_2d # FPP. Amber looking at MC, MC looking at Amber, Amber giving him the middle finger while laughing.
                     with dissolve
+
+                    pause 0.75
 
                 "Kick the door open":
                     scene v15s43_2b
@@ -395,10 +409,10 @@ label v15s43:
 
     pause 0.75
 
-    scene v15s43_8 # TPP. MC and Amber standing in the living room, MC looking at Amber, Amber looking at MC, Amber suspicious, mouth closed, MC suspicious, mouth closed.
-    with dissolve
-
     if detective == "professional":
+        scene v15s43_8 # TPP. MC and Amber standing in the living room, MC looking at Amber, Amber looking at MC, Amber suspicious, mouth closed, MC suspicious, mouth closed.
+        with dissolve
+
         menu:
             "Call for Chris":
                 scene v15s43_9 # TPP. Close up of MC, looking at the room, suspicious, mouth open.
@@ -441,6 +455,9 @@ label v15s43:
                 u "I know when something isn't right, okay? I can feel it!"
 
     elif detective == "psychologist":
+        scene v15s43_8 # TPP. MC and Amber standing in the living room, MC looking at Amber, Amber looking at MC, Amber suspicious, mouth closed, MC suspicious, mouth closed.
+        with dissolve
+
         menu:
             "Call for Chris":
                 scene v15s43_9 # TPP. Close up of MC, looking at the room, suspicious, mouth open.
@@ -481,6 +498,9 @@ label v15s43:
                 u "*Gasps* A psychological horror!"
 
     else:
+        scene v15s43_8 # TPP. MC and Amber standing in the living room, MC looking at Amber, Amber looking at MC, Amber suspicious, mouth closed, MC suspicious, mouth closed.
+        with dissolve
+
         menu:
             "Call for Chris":
                 scene v15s43_9 # TPP. Close up of MC, looking at the room, suspicious, mouth open.
@@ -605,6 +625,7 @@ label v15s43:
     scene v15s43_14d # FPP. MC looking at Chris, Chris looking at Amber, Chris nervous, mouth closed.
     with dissolve
 
+    pause 0.75
     $ v15_nora_locations.add("dad")
     $ v15_nora_locations.add("ms_rose")
 
@@ -647,10 +668,10 @@ label v15s43:
 
     $ v15_nora_clues.add("be_alone")
 
-    scene v15s43_14g # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth closed.
-    with dissolve
-
     if detective == "professional":
+        scene v15s43_14g # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth closed.
+        with dissolve
+
         menu:
             "Where did she go?":
                 u "Where did she go? She must have told you."
@@ -668,9 +689,8 @@ label v15s43:
                 scene v15s43_14b
                 with dissolve
 
-                $ v15_nora_locations.add("camping")
-
                 ch "Why are you acting so weird? Listen, I don't know where she is. She could have gone camping for all I know."
+                $ v15_nora_locations.add("camping")
 
                 ch "Just wait until she comes back. She's fine. I swear she's fine."
 
@@ -693,11 +713,13 @@ label v15s43:
                 scene v15s43_14h
                 with dissolve
 
+                ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
                 $ v15_nora_locations.add("camping")
 
-                ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
-
     elif detective == "psychologist":
+        scene v15s43_14g # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth closed.
+        with dissolve
+
         menu:
             "Where did she go?":
                 u "Where did she go? She must have told you."
@@ -715,9 +737,8 @@ label v15s43:
                 scene v15s43_14b
                 with dissolve
 
-                $ v15_nora_locations.add("camping")
-
                 ch "Why are you acting so weird? Listen, I don't know where she is. She could have gone camping for all I know."
+                $ v15_nora_locations.add("camping")
 
                 ch "Just wait until she comes back. She's fine. I swear she's fine."
 
@@ -755,11 +776,13 @@ label v15s43:
                 scene v15s43_14b
                 with dissolve
 
+                ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
                 $ v15_nora_locations.add("camping")
 
-                ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
-
     else:
+        scene v15s43_14g # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth closed.
+        with dissolve
+
         menu:
             "Where did she go?":
                 u "Where did she go? She must have told you."
@@ -777,9 +800,8 @@ label v15s43:
                 scene v15s43_14b
                 with dissolve
 
-                $ v15_nora_locations.add("camping")
-
                 ch "Why are you acting so weird? Listen, I don't know where she is. She could have gone camping for all I know."
+                $ v15_nora_locations.add("camping")
 
                 ch "Just wait until she comes back. She's fine. I swear she's fine."
 
@@ -849,9 +871,8 @@ label v15s43:
     scene v15s43_14h
     with dissolve
 
-    $ v15_nora_clues.add("aunt_cabin")
-
     ch "Her aunt... Oh yeah! Sometimes her aunt will rent out her dad's cabin."
+    $ v15_nora_clues.add("aunt_cabin")
 
     ch "And there, that answers your question about other properties, too. Can you leave me alone now?"
 
@@ -860,10 +881,9 @@ label v15s43:
 
     am "Not so fast, wise guy."
 
-    scene v15s43_14g
-    with dissolve
-
     if detective == "professional":
+        scene v15s43_14g
+        with dissolve
 
         menu:
             "She's close with her Aunt?":
@@ -905,9 +925,8 @@ label v15s43:
                 scene v15s43_14b
                 with dissolve
 
-                $ v15_nora_clues.add("hates_dad")
-
                 ch "She pretty much hates him. That's the last place she'd go."
+                $ v15_nora_clues.add("hates_dad")
 
                 scene v15s43_15
                 with dissolve
@@ -938,6 +957,8 @@ label v15s43:
                 u "Help us make sense out of what you're saying, Chris!"
 
     elif detective == "psychologist":
+        scene v15s43_14g
+        with dissolve
 
         menu:
             "She's close with her Aunt?":
@@ -979,9 +1000,8 @@ label v15s43:
                 scene v15s43_14b
                 with dissolve
 
-                $ v15_nora_clues.add("hates_dad")
-
                 ch "She pretty much hates him. That's the last place she'd go."
+                $ v15_nora_clues.add("hates_dad")
 
                 scene v15s43_15
                 with dissolve
@@ -1014,9 +1034,8 @@ label v15s43:
                 scene v15s43_14b
                 with dissolve
 
-                $ v15_nora_clues.add("hates_dad")
-
                 ch "I doubt it. She hates her dad."
+                $ v15_nora_clues.add("hates_dad")
 
                 scene v15s43_14g
                 with dissolve
@@ -1024,6 +1043,9 @@ label v15s43:
                 u "Hate is a very strong word. Are those your words or Nora's words?"
 
     else:
+        scene v15s43_14g
+        with dissolve
+
         menu:
             "She's close with her Aunt?":
                 u "This aunt-"
@@ -1064,9 +1086,8 @@ label v15s43:
                 scene v15s43_14b
                 with dissolve
 
-                $ v15_nora_clues.add("hates_dad")
-
                 ch "She pretty much hates him. That's the last place she'd go."
+                $ v15_nora_clues.add("hates_dad")
 
                 scene v15s43_15
                 with dissolve
@@ -1112,9 +1133,8 @@ label v15s43:
                 scene v15s43_14b
                 with dissolve
 
-                $ v15_nora_clues.add("hates_dad")
-
                 ch "She hates her dad. She wouldn't go to him."
+                $ v15_nora_clues.add("hates_dad")
 
                 scene v15s43_16a # TPP. Show MC kicking the coffee table, MC angry, mouth open.
                 with dissolve

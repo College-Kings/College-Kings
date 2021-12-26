@@ -10,6 +10,8 @@ label v15s34:
         scene v15s34_1 # TPP. Show MC entering his room in the Wolves room in his suit from the wedding, slight smile ,mouth closed.
         with dissolve
 
+        pause 0.75
+
         if "v15_naomi" in sceneList: # Placeholder for naomi blowjob being true
             play sound "sounds/doorclose.mp3"
 
@@ -71,6 +73,8 @@ label v15s34:
         scene v15s34_4a # TPP. Close up of MC in his wolves room looking at his phone, slight smile, mouth close.
         with dissolve
 
+        pause 0.75
+
         if v14_help_lindsey:
             if v15_lindsey_gamenight:
                 $ lindsey.messenger.newMessage("Hey, our game night is starting in 15 minutes. Hope you're on your way now! :)", queue=False)
@@ -101,6 +105,8 @@ label v15s34:
         scene v15s34_5 # TPP. Show MC leaving his wolves room, slight smile, mouth closed.
         with dissolve
 
+        pause 0.75
+
         play sound "sounds/doorclose.mp3"
 
         pause 0.75
@@ -117,6 +123,8 @@ label v15s34:
 
         scene v15s34_6 # TPP. Show MC entering his room in the apes room in his suit from the wedding, slight smile ,mouth closed.
         with dissolve
+
+        pause 0.75
 
         if "v15_naomi" in sceneList: # Placeholder for naomi blowjob being true
             play sound "sounds/doorclose.mp3"
@@ -179,6 +187,8 @@ label v15s34:
         scene v15s34_9a # TPP. Close up of MC in his apes room looking at his phone, slight smile, mouth close.
         with dissolve
 
+        pause 0.75
+
         if v14_help_lindsey:
             if v15_lindsey_gamenight:
                 $ lindsey.messenger.newMessage("Hey, our game night is starting in 15 minutes. Hope you're on your way now! :)", queue=False)
@@ -209,6 +219,8 @@ label v15s34:
 
         scene v15s34_10 # TPP. Show MC leaving his apes room, slight smile, mouth closed.
         with dissolve
+
+        pause 0.75
 
         play sound "sounds/doorclose.mp3"
 

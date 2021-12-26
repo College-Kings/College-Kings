@@ -34,9 +34,6 @@ label v15s18c_riley:
 
     ri "Haha, no worries. I was just checking my makeup."
 
-    scene v15s18c_ri_2b # FPP. Same as v15s18c_ri_2, Riley now turned to MC, not looking through the mirror anymore, Riley smiling, mouth open
-    with dissolve
-
     if v15_lauren_gift == 1 and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s18c_ri_2b
         with dissolve
@@ -58,7 +55,6 @@ label v15s18c_riley:
 
         menu:
             "Sounds great":
-
                 u "Seriously? That would be great, haha."
 
                 if riley.relationship.value >= Relationship.FWB.value:
@@ -129,6 +125,9 @@ label v15s18c_riley:
         ri "Anytime."
 
     elif v15_lauren_gift == 1: # and lauren.relationship == Relationship.FRIEND:
+        scene v15s18c_ri_2b # FPP. Same as v15s18c_ri_2, Riley now turned to MC, not looking through the mirror anymore, Riley smiling, mouth open
+        with dissolve
+
         ri "I can't believe you bought the same gift card as Imre..."
 
         scene v15s18c_ri_2c # FPP. Same as v15s18c_ri_2b, Riley smiling, mouth closed
@@ -826,6 +825,7 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfin # IGNORE AS ANIMATION
     with dissolve
+
     pause 0.75
 
     au "Oh... Shhit... *Moans*"
@@ -836,6 +836,7 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfinf # IGNORE AS ANIMATION
     with dissolve
+
     pause 0.75
    
     au "*Moans* Yes... [name], please..."
@@ -851,6 +852,7 @@ label v15s18c_imre_aubrey:
         "Keep her quiet":
             scene v15aubfin2 # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
             u "Shh, shh, shh..."
@@ -859,6 +861,7 @@ label v15s18c_imre_aubrey:
 
             scene v15aubfin2f # IGNORE AS ANIMATION
             with dissolve
+
             pause 0.75
 
             au "*Moans* N-no."
@@ -866,6 +869,7 @@ label v15s18c_imre_aubrey:
         "Let her be loud":
             scene v15aubfin2
             with dissolve
+
             pause 0.75
 
             u "Ha, scream for me."
@@ -874,6 +878,7 @@ label v15s18c_imre_aubrey:
 
             scene v15aubfin2f
             with dissolve
+
             pause 0.75
 
             au "Fuck... You don't want that... Haha... *Moans*"
@@ -892,24 +897,28 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfing # IGNORE AS ANIMATION
     with dissolve
+
     pause 0.75
 
     au "Mmm!"
 
     scene v15aubfingf # IGNORE AS ANIMATION
     with dissolve
+
     pause 0.75
 
     u "Faster?"
 
     scene v15aubfing2 # IGNORE AS ANIMATION
     with dissolve
+
     pause 0.75
 
     au "*Moans*"
 
     scene v15aubfing2f # IGNORE AS ANIMATION
     with dissolve
+
     pause 0.75
 
     u "You're so wet..."
@@ -923,6 +932,7 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfin
     with dissolve
+
     pause 0.75
 
     au "Ffffuck... [name]."
@@ -931,6 +941,7 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfinf
     with dissolve
+
     pause 0.75
 
     au "*Whispers* Yes..."
@@ -939,12 +950,14 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfin2
     with dissolve
+
     pause 0.75
 
     au "Mmm, yes... *Moans* I-"
 
     scene v15aubfin2f
     with dissolve
+
     pause 0.75
 
     au "Fuck... Oh, [name]..."
@@ -2322,6 +2335,7 @@ label v15s18c_chris_penelope:
 
                 scene v15penor # IGNORE AS ANIMATION
                 with dissolve
+
                 pause 0.75
 
                 pe "*Chuckles* Mmm..."
@@ -2332,6 +2346,7 @@ label v15s18c_chris_penelope:
 
                 scene v15penorf # IGNORE AS ANIMATION
                 with dissolve
+
                 pause 0.75
 
                 u "Do you like it when I taste you?"
@@ -2343,6 +2358,7 @@ label v15s18c_chris_penelope:
 
                 scene v15penor2 # IGNORE AS ANIMATION
                 with dissolve
+
                 pause 0.75
 
                 pe "You really know what you're doing... Ha! Down there..."
@@ -2353,6 +2369,7 @@ label v15s18c_chris_penelope:
 
                 scene v15penor2f # IGNORE AS ANIMATION
                 with dissolve
+
                 pause 0.75
 
                 pe "Oh, I can't believe we're doing this."

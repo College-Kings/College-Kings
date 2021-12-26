@@ -1123,8 +1123,7 @@ label v15s26:
 
         au "You too!"
 
-        scene v15s26_32 # TPP Aubrey leaving the theater room just ahead of MC 
-        # -Aubrey leaves first, MC follows waving goodbye to Riley who is staying behind to continue the movie once they both leave-
+        scene v15s26_32 # TPP Aubrey leaving the theater room just ahead of MC # -Aubrey leaves first, MC follows waving goodbye to Riley who is staying behind to continue the movie once they both leave-
         with dissolve
 
         pause 0.75

@@ -7,6 +7,8 @@ label v15s37:
     scene v15s37_1 # TPP. Show MC walking down the street towards the frat houses, slight smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
     if v15_chloe_lindseysabotage:
         scene v15s37_2 # TPP. Close up of MC pulling out his phone, slight smile, mouth closed.
         with dissolve
@@ -25,6 +27,8 @@ label v15s37:
 
         scene v15s37_2c # TPP. Show MC putting his phone away, slight smile, mouth closed.
         with dissolve
+
+        pause 0.75
 
     if autumn.relationship.value < Relationship.TRUST.value:
         scene v15s37_3 # TPP. Show MC walking further down the street, slight smile, mouth closed

@@ -237,6 +237,8 @@ label v15s18a_Aubrey:
 
             scene v15s18aaub_2a
             with dissolve
+            
+            u "*Sighs* Thanks for the heads up..."
 
         "Don't smile":
             $ add_point(KCT.BOYFRIEND)
@@ -248,8 +250,9 @@ label v15s18a_Aubrey:
             scene v15s18aaub_2
             with dissolve
             
-    u "*Sighs* Thanks for the heads up..."
+            u "*Sighs* Thanks for the heads up..."
 
+            
     scene v15s18aaub_2a
     with dissolve
 
@@ -441,6 +444,8 @@ label v15s18a_Ryan:
 
             scene v15s18a_ryan_4 # TPP. Shot of just MC with a disgusted face covering his mouth with his hand.
             with dissolve
+            
+            pause 0.75
 
         "Hold it back":
             $ add_point(KCT.BRO)
@@ -623,9 +628,9 @@ label v15s18a_AutumPenelope:
     scene v15s18apen_7 # FPP. MC looking at Autumn as she is starting to sit comfortably on her bed, slight smile, mouth closed.
     with dissolve
 
-    if signs:
-        pause 0.75
+    pause 0.75
 
+    if signs:
         scene v15s18apen_7a # FPP. Autumn sitting on her bed comfortably, MC looking at Autumn, Autumn looking at MC, slight smile, mouth open.
         with dissolve
 
@@ -1155,6 +1160,8 @@ label v15s18a_ImreLauren:
 
         scene v15s18aimre_4b # FPP. MC sitting down next to Lauren, Lauren kissing MC, Imre in the background, Imre slight smile, mouth closed.
         with dissolve
+        
+        pause 0.75
 
         if v13_imre_disloyal:
             scene v15s18aimre_5 # TPP. Show MC and Lauren kissing on the couch, Imre unamused face, mouth open.
@@ -1614,7 +1621,6 @@ label v15s18a_Riley:
     scene v15s18ariley_2k # FPP. MC looking at Riley, Riley looking at the Challenge list in her hand, Riley smirking, mouth closed.
     with dissolve
 
-
     u "A list of challenges that Imre gave to me. The usual college shenanigans... *Chuckles*"
 
     scene v15s18ariley_2l # FPP. MC looking at Riley, Riley looking at the Challenge list in her hand, Riley smirking, mouth open.
@@ -1771,6 +1777,8 @@ label v15s18a_Riley:
 
             scene v15s18ariley_14 # TPP. MC laying on the bed and Riley laying next to him them kissing.
             with dissolve
+            
+            pause 0.75
 
             image v15rileyhj = Movie(play="images/v15/Scene 18a/v15rileyhj.webm", loop=True, image="images/v15/Scene 18a/v15rileyhjStart.webp", start_image="images/v15/Scene 18a/v15rileyhjStart.webp")
             image v15rileyhjf = Movie(play="images/v15/Scene 18a/v15rileyhjf.webm", loop=True, image="images/v15/Scene 18a/v15rileyhjStart.webp", start_image="images/v15/Scene 18a/v15rileyhjStart.webp")
@@ -1779,6 +1787,7 @@ label v15s18a_Riley:
 
             scene v15rileyhj # Ignore as animation
             with dissolve
+
             pause 0.75
 
             u "*Moans*"
@@ -1787,6 +1796,7 @@ label v15s18a_Riley:
 
             scene v15rileyhjf # Ignore as animation
             with dissolve
+
             pause 0.75
 
             u "Yeah... Of course, I do."
@@ -1795,6 +1805,7 @@ label v15s18a_Riley:
 
             scene v15rileyhj # Ignore as animation
             with dissolve
+
             pause 0.75
 
             ri "Or slower and gentler?"
@@ -1803,6 +1814,7 @@ label v15s18a_Riley:
 
             scene v15rileyhjf # Ignore as animation
             with dissolve
+
             pause 0.75
 
             ri "*Giggles* What was that?"
@@ -1841,6 +1853,7 @@ label v15s18a_Riley:
 
             scene v15rileyhj2 # Ignore as animation
             with dissolve
+
             pause 0.75
 
             u "Keep going... Just like that..."
@@ -1858,6 +1871,7 @@ label v15s18a_Riley:
 
             scene v15rileyhj2f # Ignore as animation
             with dissolve
+
             pause 0.75
 
             ri "Yeah?"
@@ -1873,6 +1887,7 @@ label v15s18a_Riley:
 
             scene v15rileyhj2f # Ignore as animation
             with dissolve
+
             pause 0.75
 
             scene v15s18ariley_17 # TPP. MC cumming onto Riley's hand
@@ -2246,6 +2261,8 @@ label v15s18a_ChrisAmber:
                     scene v15s18aamber_9b # FPP. MC looking down as Amber is on her knees infront of him, MC's bottom part of his costume around his ankles and his dick is out infront of Amber's face.
                     with dissolve
 
+                    pause 0.75
+
                     image v15amberbj = Movie(play="images/v15/Scene 18a/v15amberbj.webm", loop=True, image="images/v15/Scene 18a/v15amberbjStart.webp", start_image="images/v15/Scene 18a/v15amberbjStart.webp")
                     image v15amberbjf = Movie(play="images/v15/Scene 18a/v15amberbjf.webm", loop=True, image="images/v15/Scene 18a/v15amberbjStart.webp", start_image="images/v15/Scene 18a/v15amberbjStart.webp")
                     image v15amberbj2 = Movie(play="images/v15/Scene 18a/v15amberbj2.webm", loop=True, image="images/v15/Scene 18a/v15amberbj2Start.webp", start_image="images/v15/Scene 18a/v15amberbj2Start.webp")
@@ -2253,6 +2270,7 @@ label v15s18a_ChrisAmber:
 
                     scene v15amberbj # Ignore as animation
                     with dissolve
+
                     pause 0.75
 
                     am "Mmmm..."
@@ -2273,6 +2291,7 @@ label v15s18a_ChrisAmber:
 
                     scene v15amberbjf # Ignore as animation.
                     with dissolve
+
                     pause 0.75
 
                     u "*Moans* Take all of me."
@@ -2291,6 +2310,7 @@ label v15s18a_ChrisAmber:
 
                     scene v15amberbj2 # Ignore as animation
                     with dissolve
+
                     pause 0.75
 
                     u "*Moans* Fuck!"
@@ -2313,6 +2333,7 @@ label v15s18a_ChrisAmber:
 
                     scene v15amberbj2f # Ignore as animation
                     with dissolve
+
                     pause 0.75
 
                     u "I'm going to cum... Amber..."

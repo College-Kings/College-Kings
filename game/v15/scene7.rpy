@@ -23,13 +23,16 @@ label v15s7:
             pause 0.75
 
         if "cash_large" in freeroam12stolen and not "cash_small" in freeroam12stolen: # -if the large cash was stolen
-            scene v15s7_1a
-            with dissolve
-
             if v14_realwolf:
+                scene v15s7_1a
+                with dissolve
+                
                 cl "Somebody stole my campaign money. *Sobbing* Five hundred fucking dollars, [name]."
 
             else:
+                scene v15s7_1a
+                with dissolve
+                
                 cl "Somebody stole my campaign money. *Sobbing* Nine hundred fucking dollars, [name]."
             
             cl "I don't know how I'm supposed to pay for- *Crying* I needed that money..."
@@ -399,6 +402,7 @@ label v15s7:
 
             scene v15s7_1h
             with dissolve
+
             u "Yup, after you."
 
             scene v15s7_5 # TPP MC and Chloe walking into the library together

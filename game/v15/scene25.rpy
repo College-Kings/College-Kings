@@ -15,7 +15,7 @@ label v15s25:
         play sound "sounds/doorclose.mp3"
 
         scene v15s25_2 # TPP. Show MC sitting at his study desk in his Wolves frat room, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         u "(Okay, now I'm in my office, time to make some business calls, haha.)"
 
@@ -25,12 +25,14 @@ label v15s25:
         pause 0.75 
 
         scene v15s25_2a # TPP. MC sitting at his study desk in his Wolves frat room pressing a button on his phone, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         pause 0.75 
 
         scene v15s25_2b # TPP. MC sitting at his study desk with his phone to his ear in his wolves frat room, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
+        
+        pause 0.75
 
     else:
         play sound "sounds/dooropen.mp3"
@@ -43,7 +45,7 @@ label v15s25:
         play sound "sounds/doorclose.mp3"
 
         scene v15s25_5 # TPP. Show MC sitting at his study desk in his apes frat room, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         u "(Okay, now I'm in my office, time to make some business calls, haha.)"
 
@@ -53,14 +55,16 @@ label v15s25:
         pause 0.75 
 
         scene v15s25_5a # TPP. MC sitting at his study desk in his apes frat room pressing a button on his phone, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         pause 0.75 
 
         play sound "sounds/ringing.mp3"
 
         scene v15s25_5b # TPP. MC sitting at his study desk with his phone to his ear in his apes frat room, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
+        
+        pause 0.75
 
     scene v15s25_7 # TPP. Split Screen. First side, MC phone to ear sitting in an office chair only other thing in the shot a plain wall behind him, MC slight smile, mouth closed. Second side, Booking admin(Lady in her 20s, wearing glasses, hair tied back, white button up, headset on for calls.) at her reception desk, slight smile, mouth open.
     with dissolve
@@ -760,7 +764,7 @@ label v15s25:
     play sound "sounds/hangup.mp3"
 
     scene v15s25_8 # TPP. Just MC sitting in the chair plain wall in the background, MC pressing a button on his phone, MC slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -776,7 +780,7 @@ label v15s25:
     play sound "sounds/vibrate.mp3"
 
     scene v15s25_8a # TPP. Just MC sitting in the chair plain wall in the background, MC looking at his phone, MC slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     u "(Fingers crossed that it's Nora...)"
 
@@ -788,7 +792,7 @@ label v15s25:
         jump v15s25_PhoneContinueAubrey
 
     scene v15s25_8b # TPP. Just MC sitting in the chair plain wall in the background, MC putting his phone away, MC slight smile, mouth open.
-    with dissolve 
+    with dissolve
 
     u "*Sighs* (Still no Nora, but it sounds like Aubrey's got something fun planned for me.)"
 

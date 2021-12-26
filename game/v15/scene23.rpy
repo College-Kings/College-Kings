@@ -39,6 +39,8 @@ label v15s23:
 
             scene v15s23_5a # FPP. MC, smiling, mouth closed, looks at his reflection in the steamed up mirror that has a happy face hand-drawn in the fog on the mirror.
             with dissolve
+            
+            u "(Maybe I should take art next semester...) *Laughs*"
 
         "Draw a dick":
             scene v15s23_6
@@ -49,7 +51,7 @@ label v15s23:
             scene v15s23_5b # FPP. MC, smiling, mouth closed, looks at his reflection in the steamed-up mirror that has a penis hand-drawn in the fog on the mirror.
             with dissolve
     
-    u "(Maybe I should take art next semester...) *Laughs*"
+            u "(Maybe I should take art next semester...) *Laughs*"
 
     scene v15s23_7 # TPP. MC (back to camera) wearing a towel, opening the bathroom door and exiting through it.
     with fade
@@ -98,6 +100,8 @@ label v15s23:
 
         scene v15s23_13a # TPP. Same as v15s23_13 but MC's WOLF ROOM.
         with dissolve
+
+        pause 0.75
 
         label v15s23_aubrey_text_continue:
             if aubrey.messenger.replies:
@@ -149,6 +153,8 @@ label v15s23:
 
         scene v15s23_13 # TPP. MC, neutral expression, mouth closed, wearing pants, holding his phone and looking down at it. [MC's APE ROOM]
         with dissolve
+
+        pause 0.75
 
         label v15s23_aubrey_text_continue2:
             if aubrey.messenger.replies:

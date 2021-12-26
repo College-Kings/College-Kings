@@ -361,6 +361,8 @@ label v15s18:
     scene v15s18_13 # FPP. MC looking down at the paper in his hands, (writing can be added later in photoshop if need.) Challenge list: 1. Get Slapped, (Have this one crossed out because Imre already did it) 2. Have Sex, 3. Give Oral, 4. Get Orla, 5. Get a Handjob, 6. Finger a girl, 7. Make out, 8. Steal Someone's panties, 9. Find a condom.
     with dissolve
 
+    pause 0.75
+
     python:
         v15_imre_checklist.add_item("Have Sex")
         v15_imre_checklist.add_item("Give Oral")
