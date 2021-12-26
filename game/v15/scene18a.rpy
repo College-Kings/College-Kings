@@ -2229,7 +2229,7 @@ label v15s18a_ChrisAmber:
                     pause 0.75
 
                     scene v15s18aamber_8 # FPP. MC and Amber on the Balcony, MC looking at Amber, Amber looking at MC, Amber smirking, mouth closed.
-                    with fade(1,0,1)
+                    with fade
 
                     pause 0.75
 

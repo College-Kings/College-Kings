@@ -5,7 +5,7 @@
 
 label v15s43:
     scene v15s43_1 # TPP. Show MC and Amber walking up to the wolves front door, both slight smile, mouths closed.
-    with fade (1,0,1)
+    with fade
 
     pause 0.75
 
@@ -566,7 +566,7 @@ label v15s43:
     am "We'll ask the questions here. Please, take a seat."
 
     scene v15s43_13 # TPP. Chris sitting on the couch, a coffee table infront of the couch, MC standing on the right of the couch facing Chris, Amber standing on the left of the table facing Chris, Amber and MC faces not shown in the shot, Chris confused, mouth closed, 
-    with fade(1,0,1)
+    with fade
 
     pause 0.75
 

@@ -475,7 +475,7 @@ label v15s15:
             ro "Let me go clean up, be back in a bit."
 
             scene v15s15_28 # TPP. Show MC back by the dining table, getting dressed, smiling, mouth closed
-            with Fade (1,0.5,1)
+            with fade
 
             u "*Sighs* (Well, the make-up sex is always great, huh? Haha...)"
 

@@ -8,7 +8,7 @@ label v15s42:
     play sound "sounds/dooropen.mp3"
 
     scene v15s42_1 # TPP. Show MC walking into the SVC meeting room, Description of room: Dated grey/beige walls, a large wooden desk, filing cabinets, blinds drawn with sparse lighting in the room, MC slightly confused, mouth closed.
-    with fade (1,0,1)
+    with fade
 
     pause 0.75
 

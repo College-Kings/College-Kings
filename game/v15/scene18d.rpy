@@ -5,7 +5,7 @@
 
 label v15s18d:
     scene v15s18d_1 # TPP. Show Lauren holding the door open for all the guest to leave, Lauren slight smile, mouth closed.
-    with fade (1,0,1)
+    with fade
 
     pause 0.75
     
@@ -502,7 +502,7 @@ label v15s18d:
                 pause 0.75
 
                 scene v15s18d_12a # TPP. Show Lauren walking down the stairs with a blanket and pillow.
-                with fade (1,0,1)
+                with fade
 
                 pause 0.75
 
