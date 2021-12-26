@@ -5,7 +5,7 @@
 
 label v15s48:
     scene v15s48_1 # TPP. Show the cab showing up on a dirt road near the cabin, the cabin shown in the distance.  
-    with fade(1,0,1)
+    with fade
 
     pause 0.75
 
@@ -34,7 +34,7 @@ label v15s48:
     pause 0.75  
 
     scene v15s48_6 # TPP. Show MC walking up to the front door of the cabin, slight smile, mouth closed.
-    with fade (1,0,1)
+    with fade
 
     pause 0.75 
 
@@ -228,7 +228,7 @@ label v15s48:
         u "Plenty. *Laughs*"
 
     scene v15s48_14 # TPP. MC sitting on the couch in the Cabin, Nora approaching the Couch coming from the kitchen area holding two cup's of tea, Nora slight smile, mouth closed, MC slight smile, mouth closed.
-    with fade (1,0,1) 
+    with fade 
 
     pause 0.75
 
@@ -793,7 +793,7 @@ label v15s48:
                 no "Not for long! I'm pretty sure I saw some wine earlier; I'll go dig it out."
 
                 scene v15s48_14a # TPP. MC sitting on the couch in the Cabin, Nora approaching the Couch coming from the kitchen area holding two glasses of wine, Nora slight smile, mouth closed, MC slight smile, mouth closed.
-                with fade (1,0,1)
+                with fade
 
                 pause 0.75 
 
@@ -942,7 +942,7 @@ label v15s48:
                         no "Haha, no, it's not. I'll be right back."
 
                         scene v15s48_14a
-                        with fade (1,0,1)
+                        with fade
 
                         pause 0.75 
 
