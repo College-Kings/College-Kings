@@ -496,7 +496,7 @@ label v15s25:
                         scene v15s25_7j
                         with dissolve
 
-                        u "Yeah. So, can you just... You know, waiver the fee?"
+                        u "Yeah. So, can you just... You know, waive the fee?"
 
                         scene v15s25_7
                         with dissolve
@@ -627,7 +627,7 @@ label v15s25:
 
                         u "Her mom passed away recently, and she's been putting so much effort into her presidential campaign at college. That's what all this is for, you see."
 
-                        u "And it might sound silly but it's like she's doing it all for her mom, you know?"
+                        u "And it might sound silly, but it's like she's doing it all for her mom, you know?"
 
                         scene v15s25_7g
                         with dissolve
