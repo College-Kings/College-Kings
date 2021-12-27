@@ -183,7 +183,7 @@ label v15s9:
                 scene v15s9_3i # FPP. same as v15s9_3g Aubrey head is not tilted, looking straight at MC, slight smile, mouth open
                 with dissolve
 
-                au "But yeah, I'm starting to enjoy time with you as... You know..."
+                au "But yeah, I'm starting to enjoy time with you as... you know..."
 
                 scene v15s9_3b
                 with dissolve
