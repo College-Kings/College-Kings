@@ -348,7 +348,7 @@ label v15s25:
             scene v15s25_7a
             with dissolve
 
-            u "How not?"
+            u "How so?"
 
             scene v15s25_7
             with dissolve
