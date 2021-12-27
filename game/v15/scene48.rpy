@@ -161,7 +161,7 @@ label v15s48:
 
     u "Why?"
 
-    u "What are running from?"
+    u "What are you running from?"
 
     scene v15s48_12d # TPP. Nora looking at MC, MC looking at Nora, Nora neutral, mouth open.
     with dissolve
@@ -206,7 +206,7 @@ label v15s48:
 
     no "I appreciate that."
 
-    no "To give you the truth, it is nice to see a friendly face."
+    no "To tell you the truth, it is nice to see a friendly face."
 
     no "Come sit, I'll make you a tea. Do you have time?"
 
