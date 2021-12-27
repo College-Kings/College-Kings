@@ -534,7 +534,7 @@ label v15s28:
                 scene v15s28_9a
                 with dissolve
 
-                u "Maybe I shouldn't have asked...)"
+                u "(Maybe I shouldn't have asked...)"
 
                 scene v15s28_9
                 with dissolve
