@@ -41,12 +41,28 @@ label v15s2:
     scene v15s2_3a
     with dissolve
 
-    u "T-talking! W-we were just talking!"
+    menu:
 
-    scene v15s2_3
-    with dissolve
+        "We were just talking":
+            u "T-talking! W-we were just talking!"
 
-    ca "And drinking! I know she drinks when I'm not here."
+            scene v15s2_3
+            with dissolve
+
+            ca "And drinking! I know she drinks when I'm not around."
+
+
+        "None of your business":
+            u "None of your business, Cameron."
+
+            u "So lay off."
+
+            scene v15s2_3
+            with dissolve
+
+            ca "Were you drinking?! I know she drinks when I'm not around."
+
+    
 
     if not v14_SamanthaDrugs:
         scene v15s2_3a

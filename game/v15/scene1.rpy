@@ -494,13 +494,7 @@ label v15s1:
 
     u "*Sighs* (Where the hell is Nora?)"
 
-    scene v15s1_5b # TPP. same as v15s1_5a Mc has placed the phone on his bed, both hands behind his head
-    with dissolve
-
     u "(Maybe she lost her phone? Or it ran out of battery?)"
-
-    scene v15s1_5a
-    with dissolve
 
     u "(Hopefully I can find out some more tomorrow...)"
 
@@ -524,13 +518,11 @@ label v15s1:
             u "(I should reply to Autumn.)"
             jump v15s1_PhoneContinue
             
-    scene v15s1_5b
+    scene v15s1_5
     with dissolve
 
     u "(Almost forgot about that... It'll be interesting to spend one on one time with Autumn.)"
 
-    scene v15s1_5
-    with dissolve
 
     u "(I'd better set an alarm so I'm not late.)"
 
@@ -556,10 +548,9 @@ label v15s1:
 
     u "(\"Dress to impress your ghoulish empress...\") *Chuckles*"
 
-    scene v15s1_5b
-    with dissolve
-
-    u "(Guess I need to go gift shopping... Maybe Autumn can give me ideas on what Lauren would like, or I can just get her some kind of gift card... She likes books, I think?)"
+    u "(Guess I need to go gift shopping... Maybe Autumn can give me ideas on what Lauren would like?)"
+    
+    u "(Or I can just get her some kind of gift card... She likes books, I think?)"
 
     scene v15s1_5a
     with dissolve

@@ -80,7 +80,7 @@ label v15s8:
         
         chloe_board.add_approach("Tuition",
             "Less tuition for all Chicks",
-            opinion="\"The one thing I have always dreamed of being able to do as the President of the Chicks is to get all members free tuition. People don't like the idea of the President receiving free tuition, and some girls still don't know that's the case... I want all of the Chicks to come to San Vallejo for free so they can focus on their education and the sorority. If we make a good enough case, I might be able to convince the Dean into making this happen.\"")
+            opinion="\"The one thing I have always dreamed of being able to do as the President of the Chicks is to get all members free tuition. If we make a good enough case, I might be able to convince the Dean into making this happen.\"")
 
         chloe_board.add_task("Sabotage",
             "Secretly record Lindsey",
@@ -101,15 +101,15 @@ label v15s8:
 
         chloe_board.add_subtask("Tuition",
             "Try and convince Mr. Lee to support you in front of the Dean on this",
-            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from fellow members of the school board. The two faculty members that we're most close with are Mr. Lee and Ms. Rose. Mr. Lee is a highly respected member of the school board. If he agrees with our plan, there's a very slim chance that the Dean will deny our request. It might be smart to focus on him during our meeting.\"")
+            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from some of the lecturers. I think Mr. Lee is our best bet, he's smart and very well respected. Although he can be hard to read.\"")
 
         v15s8_chloe_lee = chloe_board.add_subtask("Tuition",
             "Try and convince Ms. Rose to support you in front of the Dean on this",
-            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from fellow members of the school board. The two faculty members that we're most close with are Mr. Lee and Ms. Rose. Ms. Rose is not only an independent and fantastic leader, she's also been known to have hung out with the Dean outside of campus. It might be smart to focus on her during our meeting.\"")
+            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from some of the lecturers. Ms. Rose could be worth a try. She's very empathetic, I just don't know how much she likes me...\"")
             
         chloe_board.add_task("Tuition",
             "Talk to the Dean with Mr. Lee or Ms. Rose's support",
-            opinion="\"Finally, we have a meeting with the Dean. Depending on how we do with Lee and Rose, hopefully one of them, or both of them, decides to join the meeting in support of our idea. The more support we have, the more likely the Dean is to approve. \"")
+            opinion="\"Finally, we have a meeting with the Dean. If we can show that a lecturer supports our idea, we should be able to get her approval. \"")
 
     call screen planning_board(chloe_board)
 

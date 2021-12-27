@@ -497,7 +497,7 @@ label v15s6:
         scene v15s6_2a # FPP Show Chloe near library door, smiling and chatting with two random students
         with dissolve
 
-        u "(Oh, there's Chloe. Putting on the charm for votes no doubt, haha.)"
+        u "(Oh, there's Chloe. Putting on the charm for support no doubt, haha.)"
         
         scene v15s7_8 # FPP At entrance to library, Chloe is talking to two random students, a man and a woman. Chloe smiling with mouth open
         with dissolve
@@ -543,12 +543,16 @@ label v15s6:
         with dissolve
 
         $ set_presidency_percent(v14_lindsey_popularity - 2)
-        u "Two more votes for Chloe!"
+        u "Chloe? Why do you care so much about two random people supporting you? Don't only Chicks have the right to vote?"
 
         scene v15s7_8b
         with dissolve
 
-        cl "Haha, hell yeah! The work never stops around here."
+        cl "Yeah, but every Chick has friends outside the sorority. And every single one of them will be influenced by the opinion of the public."
+
+        cl "That's why it's important that every person on campus supports me over Lindsey, not just Chicks."
+
+        cl "The campaigning never stops."
 
         scene v15s7_8c
         with dissolve
@@ -586,7 +590,7 @@ label v15s6:
             scene v15s7_8c
             with dissolve
 
-            u "Yes, I'm ready for take off!"
+            u "Yes, I'm ready!"
 
             scene v15s7_8b
             with dissolve

@@ -211,11 +211,6 @@ label v15s5:
 
             u "You literally drugged me, without my permission. And now-"
 
-            scene v15s5_4g # FPP. Same as v15s5_4f, Ms. Rose checking out MC with a fliratious look as she bites her lip, mouth closed.
-            with dissolve
-
-            pause 0.75
-
             scene v15s5_4f
             with dissolve
 
@@ -238,7 +233,7 @@ label v15s5:
 
             u "It's not worth losing everything I've worked for."
 
-            scene v15s5_4g
+            scene v15s5_4f
             with dissolve
 
             ro "[name], please. Let me make it up to you."
@@ -252,11 +247,6 @@ label v15s5:
             with dissolve
 
             ro "I'll think of something to take your mind off it..."
-
-            scene v15s5_4h # FPP. Same as v15s5_4b, Ms. Rose biting her lips and reaching to caress MC's cheek with her hand, flirtatious smile, mouth closed.
-            with dissolve
-
-            pause 0.75
 
             play sound "sounds/dooropen.mp3"
             

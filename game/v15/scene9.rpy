@@ -315,13 +315,11 @@ label v15s9:
 
     u "Mhmm, got it."
 
-    scene v15s9_3a
+    scene v15s9_3n
     with dissolve
 
-    au "Haha, last thing..."
+    au "Oh, one last thing..."
 
-    scene v15s9_3n # FPP. same as v15s9_3 Aubrey has no expression, mouth open
-    with dissolve
 
     au "Have you seen Nora? Nobody's heard from her since we landed at the airport. You know she broke up with Chris?"
 
@@ -384,15 +382,10 @@ label v15s9:
 
     pause 0.75
 
-    scene v15s9_1a # TPP. same as v15s9_1 show mc standing in the hallway, looking up and away holding his chin in thought, mouth closed
+    scene v15s9_1b # TPP. same as v15s9_1 show mc standing in the hallway, looking up and away holding his chin in thought, mouth closed
     with dissolve
 
     u "(Maybe I'll try Nora one more time... Let's see if she picks up the phone.)"
-
-    scene v15s9_1b # TPP. same as v15s9_1a MC takes out his phone, taps it
-    with dissolve
-
-    pause 0.75
 
     scene v15s9_1c # TPP. same as v15s9_1b show a close up shot of Mc putting his phone to his ear, no expression, mouth closed
     with dissolve

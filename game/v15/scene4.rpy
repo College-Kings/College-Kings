@@ -145,17 +145,17 @@ label v15s4:
                     aut "Haha, I'll give you a mug at the re-opening. Promise."
 
         "Say hello":
-            scene v15s4_2
+            scene v15s4_3
             with dissolve
 
             u "Hey, Autumn."
 
-            scene v15s4_2a
+            scene v15s4_3a
             with dissolve
 
             aut "Oh! Hey, [name]. *Grunts* Thanks for coming..."
 
-            scene v15s4_2
+            scene v15s4_3b
             with dissolve
 
             u "No problem, how's everything going so far?"
@@ -429,10 +429,22 @@ label v15s4:
 
     aut "*Laughs* I got you."
 
+    scene v15s4_12a # FPP. Same as v15s4_12, Autumn slight smile, mouth closed.
+    with dissolve
+
+    u "He looks a bit muddy. Does he not need a bath?"
+
+    scene v15s4_12
+    with dissolve
+
+    aut "Yeah, he does, but he seems to have some sort of trauma associated the bathtub... he refuses to get in."
+
+    aut "We might have to warn his future owner about that, haha."
+
     scene v15s4_12a
     with dissolve
 
-    u "I'm glad he's in good hands now."
+    u "Wow, seems like he's a bit of a rebel."
 
     scene v15s4_12
     with dissolve
@@ -537,22 +549,40 @@ label v15s4:
 
             u "He looks like a [dog_name] to me."
 
-            scene v15s4_12
-            with dissolve
+            if dog_name == "[name]" or dog_name == "autumn":
 
-            aut "[dog_name]? Huh..."
+                scene v15s4_12
+                with dissolve
 
-            aut "It's weirdly perfect..."
+                aut "[dog_name]?!"
 
-            scene v15s4_12a
-            with dissolve
+                aut "You're an idiot."
 
-            u "Right? *Chuckles*"
+                scene v15s4_12a
+                with dissolve
+
+                u "Hahahah."
+
+            else:
+
+                scene v15s4_12
+                with dissolve
+
+                aut "[dog_name]? Huh..."
+
+                aut "It's weirdly perfect..."
+
+                scene v15s4_12a
+                with dissolve
+
+                u "Right? *Chuckles*"
 
             scene v15s4_12
             with dissolve
 
             aut "Okay, [dog_name], I'll be back later to play with you and take you for a walk."
+
+            aut "And possibly bathe you, if you ever let me."
 
             scene v15s4_18
             with dissolve
@@ -696,7 +726,7 @@ label v15s4:
             scene v15s4_24b
             with dissolve
 
-            aut "Save your words, your actions speak louder."
+            aut "*Sighs* Let's just forget about it and get back to decorating."
 
             scene v15s4_26 # TPP. Show Autumn climbing down the ladder slight smile, mouth closed.
             with dissolve

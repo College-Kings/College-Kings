@@ -222,32 +222,48 @@ label v15s3: # 3) Dean comes to Apes about posted image
     ry "You mean me? This is what I get for joining the Apes. You don't get shit."
 
     # -If MC tried to stop them from posting
-    if v14s41a_standup:
-        scene v15s3_6e # FPP Same as 6d, Ryan's mouth closed
-        with dissolve
+
+    menu:
+
+        "It's not my fault":
+
+            scene v15s3_6e
+            with dissolve
+
+            u "Come on man, this isn't my fault."
+
+            if v14s41a_standup:
+
+                u "I tried to stop-"
+
+
+            scene v15s3_6d
+            with dissolve
+
+            ry "Maybe not, but it sure doesn't matter now, does it?"
+
         
-        u "Ryan, it's not my fault. I tried-"
+        "I'm sorry":
 
-        scene v15s3_6d
-        with dissolve
+            scene v15s3_6e
+            with dissolve
 
-        ry "Yeah, I know, whatever."
+            u "Ryan, look, I'm sorry."
 
-    else:
-        scene v15s3_6e
-        with dissolve
+            if v14s41a_standup:
 
-        u "I'm sorry, I-"
+                u "I tried to stop-"
 
-        scene v15s3_6d
-        with dissolve
 
-        ry "Okay, great."
+            scene v15s3_6d
+            with dissolve
 
-        scene v15s3_6e
-        with dissolve
+            ry "You know what, [name]? It doesn't fucking matter."
 
-        u "*Sighs*"
+    scene v15s3_6e
+    with dissolve
+
+    u "*Sighs*"
 
     # -regardless-
     scene v15s3_4b # TPP Same angle as 4, Grayson and Cameron are gone, Ryan looks worried and is looking down, MC is getting up off the couch
