@@ -222,7 +222,7 @@ label v15s25:
 
     menu:
         "It's important for us":
-            $ v15_alcohol = True
+            $ v15_lindsey_alcohol = True
             u "It's an important night for us."
 
             scene v15s25_7
@@ -362,7 +362,7 @@ label v15s25:
 
             u "(Dammit, she's too smart for me.)"
 
-    if v15_alcohol:
+    if v15_lindsey_alcohol:
         scene v15s25_7
         with dissolve
 
@@ -758,7 +758,7 @@ label v15s25:
 
                         u "Yeah... Bye."
 
-    if not v15_alcohol:
+    if not v15_lindsey_alcohol:
         $ grant_achievement("teetotal")
 
     play sound "sounds/hangup.mp3"
