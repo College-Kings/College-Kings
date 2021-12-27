@@ -487,7 +487,7 @@ label v15s45:
     scene v15s45_7
     with dissolve
 
-    cl "Is this some kind of weird role-play you're doing?"
+    cl "Is this some kind of weird role-play?"
 
     scene v15s45_7a
     with dissolve

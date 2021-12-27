@@ -742,7 +742,7 @@ label v15s28:
         scene v15s28_9c
         with dissolve
 
-        sa "Haha, for now. Some guy will try to swoop in soon enough, they always do."
+        sa "Haha, for now. Someone will try to swoop in soon enough, they always do."
 
         scene v15s28_9
         with dissolve
