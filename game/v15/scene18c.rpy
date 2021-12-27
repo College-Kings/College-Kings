@@ -350,7 +350,6 @@ label v15s18c_riley:
 
 label v15s18c_imre_aubrey:
     $ freeroam14.add("imre_aubrey")
-    $ v15s18_partytask += 1
     $ v15_imre_checklist[4].complete = True
 
     scene v15s18c_imau_1 # TPP. Show MC walking up to Imre and Aubrey, MC slight smile, mouth closed, Imre slight smile, mouth open, looking at Aubrey, Aubrey looking at Imre, mouth closed, slightly annoyed
@@ -1087,7 +1086,6 @@ label v15s18c_imre_aubrey:
 
     menu:
         "Steal the panties":
-            $ v15s18_partytask += 1
             $ v15_imre_checklist[6].complete = True
             
             u "(Sorry, Autumn. I'm a man in need.)"
@@ -1204,7 +1202,6 @@ label v15s18c_ryan:
 
     menu:
         "Take the condom":
-            $ v15s18_partytask += 1
             $ v15_imre_checklist[7].complete = True
         
             scene v15s18c_ry_4 # TPP. Show MC slowly grabbing the condom out of Ryan's pocket (it's fully in the poocket still)
@@ -1978,7 +1975,6 @@ label v15s18c_autumn_amber:
                 call screen v15s18a_upstairsroom
 
 label v15s18c_autumn_kiss:
-    $ v15s18_partytask += 1
     $ v15_imre_checklist[5].complete = True
 
     scene v15s18c_auam_8 # TPP. Show Autumn and MC leaving the bar, both slight smiles, mouths closed
@@ -2276,7 +2272,6 @@ label v15s18c_chris_penelope:
                 pe "Sorry, I just don't feel comfortable."
 
             elif kct == "confident" or penelope.relationship.value >= Relationship.LOYAL.value:
-                $ v15s18_partytask += 1
                 $ v15_imre_checklist[1].complete = True
                 
                 scene v15s18c_chpe_5f # FPP. Same as v15s18c_chpe_5, Penelope flirty expression, mouth open

@@ -380,7 +380,6 @@ default v15_took_notes = False
 default v15s18_LaurensBed = False ###Still need to check all combinations
 default v15s18_mention_list = False
 default v15s18_mention_list_aubrey = False
-default v15s18_partytask = 0
 default v15s18a_aub_kiwii_smile = False
 default v15s18a_gag = False
 default v15s18a_lie = False #????

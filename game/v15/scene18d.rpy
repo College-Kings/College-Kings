@@ -49,11 +49,11 @@ label v15s18d:
     
     pause 0.75
 
-    if v15s18_partytask > 4:
+    if len(v15_imre_checklist.get_completed()) > 4:
         scene v15s18d_5a # FPP. MC looking at Imre, Imre looking at the List, Imre slight smile, mouth open.
         with dissolve
 
-        if v15s18_partytask == 8:
+        if len(v15_imre_checklist.get_completed()) == 8:
             $ grant_achievement("taskmaster")
 
         imre "Oh! You actually did pretty well..."
@@ -87,7 +87,7 @@ label v15s18d:
 
         imre "The night isn't over yet. You can still get at least one more, like the sex."
 
-    elif v15s18_partytask >0:
+    elif len(v15_imre_checklist.get_completed()) > 0:
         scene v15s18d_5a
         with dissolve
 

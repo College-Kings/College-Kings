@@ -4,7 +4,6 @@
 # Time: Night 
 
 label v15s18e:
-    $ v15s18_partytask += 1
     $ v15_imre_checklist[0].complete = True
 
     play sound "sounds/dooropen.mp3"
