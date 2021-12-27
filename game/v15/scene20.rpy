@@ -191,21 +191,22 @@ label v15s20:
 
         cl "She hates the idea of men being large and in charge when it comes to her occupation..."
 
-        scene v15s20_5
-        with dissolve
-
-        u "(Well, she loves it in the bedroom... Or should I say kitchen...)"
-
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value and "v15_rose" in sceneList:
-            scene v15s20_5d # FPP. Same as v15s20_5c, Chloe confused, mouth open.
+        if "v15_rose" in sceneList:
+            scene v15s20_5
             with dissolve
 
-            cl "Are you blushing? *Chuckles* What's happening?"
+            u "(Well, she loves it in the bedroom... Or should I say kitchen...)"
 
-            scene v15s20_5e # FPP. Same as v15s20_5d, Chloe confused, mouth closed
-            with dissolve
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                scene v15s20_5d # FPP. Same as v15s20_5c, Chloe confused, mouth open.
+                with dissolve
 
-            u "What? Haha, no, sorry. Go on..."
+                cl "Are you blushing? *Chuckles* What's happening?"
+
+                scene v15s20_5e # FPP. Same as v15s20_5d, Chloe confused, mouth closed
+                with dissolve
+
+                u "What? Haha, no, sorry. Go on..."
 
         scene v15s20_5a
         with dissolve
