@@ -549,8 +549,7 @@ label v15s4:
 
             u "He looks like a [dog_name] to me."
 
-            if dog_name == "[name]" or dog_name == "autumn":
-
+            if dog_name == name or dog_name.lower() == "autumn":
                 scene v15s4_12
                 with dissolve
 
@@ -564,7 +563,6 @@ label v15s4:
                 u "Hahahah."
 
             else:
-
                 scene v15s4_12
                 with dissolve
 

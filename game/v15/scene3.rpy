@@ -224,36 +224,28 @@ label v15s3: # 3) Dean comes to Apes about posted image
     # -If MC tried to stop them from posting
 
     menu:
-
         "It's not my fault":
-
             scene v15s3_6e
             with dissolve
 
             u "Come on man, this isn't my fault."
 
             if v14s41a_standup:
-
                 u "I tried to stop-"
-
 
             scene v15s3_6d
             with dissolve
 
             ry "Maybe not, but it sure doesn't matter now, does it?"
 
-        
         "I'm sorry":
-
             scene v15s3_6e
             with dissolve
 
             u "Ryan, look, I'm sorry."
 
             if v14s41a_standup:
-
                 u "I tried to stop-"
-
 
             scene v15s3_6d
             with dissolve
