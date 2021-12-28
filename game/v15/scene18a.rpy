@@ -2357,7 +2357,7 @@ label v15s18a_ChrisAmber:
 
                     pause 0.75
 
-                    scene v15s18amber_11 # TPP. Just Amber wiping her mouth, slight smile, mouth closed.
+                    scene v15s18aamber_11 # TPP. Just Amber wiping her mouth, slight smile, mouth closed.
                     with dissolve
 
                     am "I hope nobody was standing under there, haha."
