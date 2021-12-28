@@ -111,7 +111,7 @@ label v15s18:
         la "Thank you, [name]."
 
     else:
-        scene v15s18_8
+        scene v15s18_8a
         with dissolve
 
         la "Hehe, thank you!"
