@@ -110,7 +110,7 @@ label v15s48:
                 u "Are you kidding? Of course I did. Everyone does!"
 
             else:
-                scene v15s48_13b # TPP. MC hugging Nora, Nora not hugging back but accepting the hug, slight smile, mouth open, MC slight smile, mouth closed.
+                scene v15s48_13d # TPP. MC hugging Nora, Nora not hugging back but accepting the hug, slight smile, mouth open, MC slight smile, mouth closed.
                 with dissolve
 
                 no "Oh, um... Hey there."
@@ -484,7 +484,7 @@ label v15s48:
 
         no "Was it something I said?"
 
-        scene v15s48_18f # FPP. Nora looking at MC, MC looking at Nora, Nora smirking, mouth closed.
+        scene v15s48_18g # FPP. Nora looking at MC, MC looking at Nora, Nora smirking, mouth closed.
         with dissolve
 
         u "Ha... Maybe?"
