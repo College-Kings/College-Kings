@@ -270,7 +270,7 @@ label v15s45:
 
     cl "I guess I've got a few minutes to spare."
 
-    scene v15s45_6 # FPP. Chloe Amber and Mc enter the Chick's living room, Chloe sit's down and looks at Mc and Amber, Amber and Mc do not sit down and instead stand in front of Chloe, have a chair close by to Mc will be used in a future render, Amber and Mc are looking at Chloe, all of them have no expressions, all of their mouths are closed
+    scene v15s45_6 # FPP. Chloe Amber and Mc enter the Chicks living room, Chloe sit's down and looks at Mc and Amber, Amber and Mc do not sit down and instead stand in front of Chloe, have a chair close by to Mc will be used in a future render, Amber and Mc are looking at Chloe, all of them have no expressions, all of their mouths are closed
     with dissolve
 
     pause 0.75
@@ -1493,7 +1493,7 @@ label v15s45:
 
     am "Hey!"
 
-    scene v15s45_9 # FPP. Show only Chloe walking out of the Chick's Frat House front door, her back is turned to Mc
+    scene v15s45_9 # FPP. Show only Chloe walking out of the Chicks Frat House front door, her back is turned to Mc
     with dissolve
 
     pause 0.75
