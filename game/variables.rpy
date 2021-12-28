@@ -398,3 +398,4 @@ default V15_UNCLE_RICKY = False ### PLACEHOLDER VARIABLE # -if ate Uncle Ricky's
 default v15s48_interrupt = False
 default v15s48_follow_your_heart = False
 default v15s48_variable_check = 0 
+default v15_lindsey_sold = False
