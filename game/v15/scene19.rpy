@@ -333,27 +333,24 @@ label v15s19:
 
     u "Haha, you're right. *Sighs*"
 
-    scene v15s19_9
-    with dissolve
-
     u "It'll be okay. I just have to make a run for it."
 
-    scene v15s19_9a
+    scene v15s19_9
     with dissolve
 
     la "And avoid as many people as you possibly can, hehe."
 
-    scene v15s19_9
+    scene v15s19_9a
     with dissolve
 
     u "*Chuckles* Exactly."
 
-    scene v15s19_9a
+    scene v15s19_9
     with dissolve
 
     la "I'll see you later, good luck!"
 
-    scene v15s19_9
+    scene v15s19_9a
     with dissolve
 
     u "Yeah, thanks. Bye!" 
