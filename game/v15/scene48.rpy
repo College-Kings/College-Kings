@@ -705,7 +705,7 @@ label v15s48:
                     no "I think we have wine... Be right back!"
                 
             if v15s48_variable_check >= 1:
-                if nora.relationship.value >= Relationship.FWB.value
+                if nora.relationship.value >= Relationship.FWB.value:
                     if v15s48_follow_your_heart:
                         scene v15s48_18a
                         with dissolve
