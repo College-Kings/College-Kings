@@ -199,11 +199,8 @@ label v15s12:
 
             u "(*Sighs* Do I want to know?)" 
 
-        # -MC chooses event1 or event2
-        # -event1 Tell me
-        # -event2 Not interested
         menu:
-            "Tell me": # -if Tell me
+            "Tell me":
                 $ add_point(KCT.TROUBLEMAKER)# TODO - KCT and character points
                 $ chloe.points -= 1 
                 
@@ -269,7 +266,7 @@ label v15s12:
 
                 li "No problem."
 
-            "Not interested": # -if Not interested
+            "Not interested":
                 $ add_point(KCT.BOYFRIEND) # TODO: KCT and character points 
                 $ chloe.points += 1
                 
