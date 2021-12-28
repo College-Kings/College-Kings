@@ -108,6 +108,7 @@ init python:
         def removePost(self):
             kiwiiPosts.remove(self)
 
+
     class KiwiiComment(KiwiiPost):
         def __init__(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None):
             self.user = user
@@ -132,6 +133,7 @@ init python:
         @replies.setter
         def replies(self, value):
             self._replies = value
+
 
     class KiwiiReply(KiwiiComment):
         def __init__(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
@@ -159,6 +161,11 @@ init python:
                 total += comment.numberLikes
 
         return total
+
+    def find_kiwii_post(image=None, message=None):
+        for post in kiwiiPosts:
+            if post.image == image: return post
+            if post.message == message: return post
 
 init -100:
     define profile_pictures = [
