@@ -434,7 +434,7 @@ label v15s12:
         u "Haha, damn straight!"
 
         if lindsey_board.money < 800:
-            scene scene v15s12_8a
+            scene v15s12_8a
             with dissolve
             
             li "I had this great idea to organize a VIP night but I've checked around and I can't actually afford it."
