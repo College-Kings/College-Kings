@@ -1,88 +1,42 @@
 python early:
-    if renpy.loadable("customCharacters.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "customCharacters.rpy"))
-    if renpy.loadable("customCharacters.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "customCharacters.rpyc"))
+    old_files = {
+        "customCharacters.rpy",
+        "bugTesting/bugTesting_Overwrite.rpy",
+        "bugTesting/bugTesting_typoNotes.rpy",
+        "phone/phonescript.rpy",
+        "phone/phoneStyle.rpy",
+        "functions.rpy",
+        "scriptv06.rpy",
+        "scriptv07.rpy",
+        "screen.rpy",
+        "v14/chicks_presidency_race/planning_board.rpy"
+    }
 
-    if renpy.loadable("bugTesting/bugTesting_Overwrite.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpy"))
-    if renpy.loadable("bugTesting/bugTesting_Overwrite.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_Overwrite.rpyc"))
+    restart_game = False
 
-    if renpy.loadable("bugTesting/bugTesting_typoNotes.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_typoNotes.rpy"))
-    if renpy.loadable("bugTesting/bugTesting_typoNotes.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "bugTesting", "bugTesting_typoNotes.rpyc"))
+    for rpy_file in old_files:
+        rpyc_file = rpy_file + "c"
 
-    if renpy.loadable("phone/phonescript.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpy"))
-    if renpy.loadable("phone/phonescript.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "phone", "phonescript.rpyc"))
-    
-    if renpy.loadable("phone/phoneStyle.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "phone", "phoneStyle.rpy"))
-    if renpy.loadable("phone/phoneStyle.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "phone", "phoneStyle.rpyc"))
-    
-    if renpy.loadable("functions.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "functions.rpy"))
-    if renpy.loadable("functions.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "functions.rpyc"))
+        rpy_file_path = os.path.join(config.basedir, "game", *rpy_file.split("/"))
+        rpyc_file_path = os.path.join(config.basedir, "game", *rpyc_file.split("/"))
 
-    if renpy.loadable("scriptv06.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "scriptv06.rpy"))
-    if renpy.loadable("scriptv06.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "scriptv06.rpyc"))
+        if renpy.loadable(rpy_file):
+            restart_game = True
+            os.remove(rpy_file_path)
+        if renpy.loadable(rpyc_file):
+            restart_game = True
+            os.remove(rpyc_file_path)
 
-    if renpy.loadable("scriptv07.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "scriptv07.rpy"))
-    if renpy.loadable("scriptv07.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "scriptv07.rpyc"))
-
-    if renpy.loadable("screen.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "screen.rpy"))
-    if renpy.loadable("screen.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "screen.rpyc"))
-
-    if renpy.loadable("v14/chicks_presidency_race/planning_board.rpy"):
-        os.remove(os.path.join(config.basedir, "game", "v14", "chicks_presidency_race", "planning_board.rpy"))
-    if renpy.loadable("v14/chicks_presidency_race/planning_board.rpyc"):
-        os.remove(os.path.join(config.basedir, "game", "v14", "chicks_presidency_race", "planning_board.rpyc"))
-
-    if os.path.exists(os.path.join(config.basedir, "game", "v8")):
-        try:
-            for file in os.listdir(os.path.join(config.basedir, "game", "v0.8")):
-                os.remove(file)
-            os.rmdir(MYPATH)
-        except Exception: pass
-
-    if os.path.exists(os.path.join(config.basedir, "game", "v9")):
-        try:
-            for file in os.listdir(os.path.join(config.basedir, "game", "v0.9")):
-                os.remove(file)
-            os.rmdir(MYPATH)
-        except Exception: pass
-
-    try: v7_msgReply8
-    except NameError:
-        def v7_msgReply8():
-            pass
-
-    try: v7_msgReply9
-    except NameError:
-        def v7_msgReply9():
-            pass
-
-    try: v7_msgReply10
-    except NameError:
-        def v7_msgReply10():
-            pass
-
-    class CheatItem:
-        pass
+    if restart_game:
+        # try:
+        # subprocess.call([os.path.join(config.basedir, )])
+        raise Exception("Deleting old files please restart game.")
 
 
 init 100 python:
+    class CheatItem:
+        pass
+
     class CustomCharacter(NonPlayableCharacter):
         pass
 
