@@ -333,7 +333,6 @@ label v15s44_continue2:
 
     menu:
         "No idea":
-
             u "No idea, really. She could be at any of these places."
 
             scene v15s44_3n # FPP. Same as v15s44_3, Amber slight smile, mouth open
@@ -357,7 +356,6 @@ label v15s44_continue2:
             am "Interrogation number two!"
 
         "I think I know":
-
             u "I think I know where she is."
 
             scene v15s44_3l
