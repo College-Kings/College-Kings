@@ -408,7 +408,7 @@ label v14s43b:
                     if chloe.messenger.replies:
                         call screen phone
                     if chloe.messenger.replies:
-                        "(I should reply to Chloe.)"
+                        u "(I should reply to Chloe.)"
                         jump v14s43Chloe_PhoneContinue1
 
                 $ set_presidency_percent(v14_lindsey_popularity + 3) #tick
@@ -619,7 +619,7 @@ label v14s43b:
                     if chloe.messenger.replies:
                         call screen phone
                     if chloe.messenger.replies:
-                        "(I should reply to Chloe.)"
+                        u "(I should reply to Chloe.)"
                         jump v14s43Chloe_PhoneContinue2
 
                 scene v14s43b_13
