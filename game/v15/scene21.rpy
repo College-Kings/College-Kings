@@ -655,7 +655,7 @@ label v15s21:
             scene v15s21_6s # FPP. same as v15s21_6r Mr. Lee's mouth is closed, still a full smile, still looking at Mc
             with dissolve
 
-            u "Oh, that's... A very kind offer. Thanks, haha."
+            u "Oh, that's... a very kind offer. Thanks, haha."
 
             scene v15s21_7
             with dissolve
@@ -1171,7 +1171,7 @@ label v15s21:
         scene v15s21_13a # FPP. same as v15s21_13 Ms. Rose has no expression, still looking at Chloe, mouth is still open
         with dissolve
 
-        ro "Yes, I've heard it's been... Quite a stormy time in the Chicks house lately."
+        ro "Yes, I've heard it's been... quite a stormy time in the Chicks house lately."
 
         scene v15s21_13b # FPP. same as v15s21_13a Ms. Rose is looking at Mc, mouth is closed, still no expression
         with dissolve
@@ -1261,7 +1261,7 @@ label v15s21:
         scene v15s21_13d # FPP. same as v15s21_13 Ms. Rose has a very serious face, she's focused on Chloe, mouth is closed
         with dissolve
 
-        u "(She is just... Impossible to read.)"
+        u "(She is just... impossible to read.)"
 
         scene v15s21_7
         with dissolve
@@ -1396,7 +1396,7 @@ label v15s21:
                 scene v15s21_13a
                 with dissolve
 
-                ro "He's a brilliant man and... Believe it or not, he's incredibly understanding of women in today's modern society."
+                ro "He's a brilliant man and... believe it or not, he's incredibly understanding of women in today's modern society."
 
                 scene v15s21_13b
                 with dissolve
@@ -1603,7 +1603,7 @@ label v15s21:
                 scene v15s21_13a
                 with dissolve
 
-                ro "Unfortunately, Chloe... That's the only way I see the Dean going forward with this proposal."
+                ro "Unfortunately, Chloe... that's the only way I see the Dean going forward with this proposal."
 
                 scene v15s21_7d
                 with dissolve
@@ -1628,7 +1628,7 @@ label v15s21:
                 scene v15s21_13l
                 with dissolve
 
-                ro "I have an idea, I'm just working it through in my head, but... It might work if you're willing to make sacrifices."
+                ro "I have an idea, I'm just working it through in my head, but... it might work if you're willing to make sacrifices."
 
         scene v15s21_13b
         with dissolve
@@ -1986,7 +1986,7 @@ label v15s21:
                     scene v15s21_7x # FPP. same as v15s21_7a MC moves closer to Chloe to speak quietly, mouth is still closed, Chloe still looking at Mc, still no expression
                     with dissolve
 
-                    u "*Whispers* Okay, this might sound weird, but... Trust me, okay?"
+                    u "*Whispers* Okay, this might sound weird, but... trust me, okay?"
 
                     scene v15s21_7y # FPP. same as v15s21_7x Chloe's mouth is open, Mc and Chloe are still close, Chloe still looking at Mc, still no expression
                     with dissolve
@@ -2001,7 +2001,7 @@ label v15s21:
                     scene v15s21_7y
                     with dissolve
 
-                    cl "That's... A weird request, [name]. *Nervous chuckles*"
+                    cl "That's... a weird request, [name]. *Nervous chuckles*"
 
                     scene v15s21_7x
                     with dissolve
@@ -2045,7 +2045,7 @@ label v15s21:
                         scene v15s21_13t # FPP. same as v15s21_13n Show Ms. Rose looking at Mc seductively, slightly biting a finger
                         with dissolve
 
-                        u "(Seduce her the easy way... or)" 
+                        u "(Seduce her the easy way, or...?)" 
                         
                         scene v15s21_13u # FPP. same as v15s21_13t Render looks exactly like v15s21_13t except instead of a seductive expression, Ms. Rose has a concerned expression
                         with dissolve
@@ -2078,7 +2078,7 @@ label v15s21:
                                 scene v15s21_13f
                                 with dissolve
 
-                                u "Y'know... I'd be truly grateful if, just this once... You went along with it."
+                                u "Y'know... I'd be truly grateful if, just this once... you went along with it."
 
                                 scene v15s21_13v # FPP. same as v15s21_13f Ms. Rose smirks, still looking at Mc, mouth is still closed
                                 with dissolve
@@ -2242,7 +2242,7 @@ label v15s21:
                                 scene v15s21_13zd
                                 with dissolve
 
-                                ro "You... Wouldn't."
+                                ro "You... wouldn't."
 
                                 ro "It would ruin everything, I'd-"
 
