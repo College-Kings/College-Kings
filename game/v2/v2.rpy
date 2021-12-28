@@ -2851,7 +2851,6 @@ label try2done:
 
 
 label try2new:
-
     $ v2_outfits += 1
 
     scene s167 # in changing room
