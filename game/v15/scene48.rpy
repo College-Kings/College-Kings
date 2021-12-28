@@ -684,54 +684,56 @@ label v15s48:
 
                 no "You're not wrong... *Sighs*"
 
-            if nora.relationship.value < Relationship.FWB.value and v15s48_follow_your_heart and not v15s48_interrupt and not kct == "confident":
-                $ v15s48_variable_check += 1
-                scene v15s48_18a
-                with dissolve
+            if nora.relationship.value < Relationship.FWB.value and v15s48_follow_your_heart and not v15s48_interrupt and kct != "confident":
+                if v15s48_follow_your_heart:
+                    $ v15s48_variable_check += 1
+                    scene v15s48_18a
+                    with dissolve
 
-                no "Well, cheers to following your heart! Actually-"
+                    no "Well, cheers to following your heart! Actually-"
 
-                no "I think we have wine... Be right back!"
-                
-            elif nora.relationship.value < Relationship.FWB.value and not v15s48_follow_your_heart and not v15s48_interrupt and not kct == "confident":
-                $ v15s48_variable_check += 1
-                                
-                scene v15s48_18a
-                with dissolve
+                    no "I think we have wine... Be right back!"
+                    
+                else:
+                    $ v15s48_variable_check += 1
+                                    
+                    scene v15s48_18a
+                    with dissolve
 
-                no "Well, listening to the voices inside of our heads... Cheers to that! Actually-"
+                    no "Well, listening to the voices inside of our heads... Cheers to that! Actually-"
 
-                no "I think we have wine... Be right back!"
+                    no "I think we have wine... Be right back!"
                 
             if v15s48_variable_check >= 1:
-                if nora.relationship.value >= Relationship.FWB.value and v15s48_follow_your_heart:
-                    scene v15s48_18a
-                    with dissolve
+                if nora.relationship.value >= Relationship.FWB.value
+                    if v15s48_follow_your_heart:
+                        scene v15s48_18a
+                        with dissolve
 
-                    no "Well, I guess I'm gonna follow my heart then..."
+                        no "Well, I guess I'm gonna follow my heart then..."
 
-                    scene v15s48_18
-                    with dissolve
+                        scene v15s48_18
+                        with dissolve
 
-                    u "You should."
+                        u "You should."
 
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    scene v15s48_18a
-                    with dissolve
+                    else:
+                        scene v15s48_18a
+                        with dissolve
 
-                    no "The thing is though..."
+                        no "The thing is though..."
 
-                    no "I don't want to focus on just me."
+                        no "I don't want to focus on just me."
 
-                    scene v15s48_18
-                    with dissolve
+                        scene v15s48_18
+                        with dissolve
 
-                    u "You don't?"
+                        u "You don't?"
 
-                    scene v15s48_18a
-                    with dissolve
+                        scene v15s48_18a
+                        with dissolve
 
-                    no "Ha, no. I don't."
+                        no "Ha, no. I don't."
                         
                 if nora.relationship.value < Relationship.FWB.value and v15s48_follow_your_heart and not v15s48_interrupt or kct == "confident":
                     scene v15s48_18a
