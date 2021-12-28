@@ -98,11 +98,11 @@ label v15s8:
             "Share the recording through the Dean's announcement system",
             opinion="\"OPINION\"")
 
-        chloe_board.add_subtask("Tuition",
+        v15s8_chloe_lee = chloe_board.add_subtask("Tuition",
             "Try and convince Mr. Lee to support you in front of the Dean on this",
             opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from some of the lecturers. I think Mr. Lee is our best bet, he's smart and very well respected. Although he can be hard to read.\"")
 
-        v15s8_chloe_lee = chloe_board.add_subtask("Tuition",
+        chloe_board.add_subtask("Tuition",
             "Try and convince Ms. Rose to support you in front of the Dean on this",
             opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from some of the lecturers. Ms. Rose could be worth a try. She's very empathetic, I just don't know how much she likes me...\"")
             
