@@ -304,7 +304,7 @@ label v15s28:
         scene v15s28_3a
         with dissolve
 
-        jen "We were just trying to guess who your current love interest is. *Giggles*"
+        jen "We were just trying to guess who your current bae is. *Giggles*"
 
         scene v15s28_3b
         with dissolve

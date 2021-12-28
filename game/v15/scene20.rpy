@@ -246,6 +246,11 @@ label v15s20:
     scene v15s20_5
     with dissolve
 
+    if v15_chloe_mrleesupport:
+        show screen v15_teacher_brief("mr_lee")
+    else:
+        show screen v15_teacher_brief("ms_rose")
+
     menu:
         "Take the notes":
             $ v15_took_notes = True

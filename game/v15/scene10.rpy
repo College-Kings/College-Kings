@@ -174,7 +174,7 @@ label v15s10:
         scene v15s10_10d # FPP. Same as v15s10_10c, Lindsey disgusted, mouth closed.
         with dissolve
 
-        pause 0.75
+        li "Ugh."
 
         scene v15s10_7a
         with dissolve
@@ -189,7 +189,7 @@ label v15s10:
         scene v15s10_7a
         with dissolve
 
-        u "You do seem like an expert in that..."
+        u "You do seem like an expert in that-"
 
         scene v15s10_7
         with dissolve
@@ -443,8 +443,6 @@ label v15s10:
 
             pause 0.75
 
-            play sound "sounds/revving.mp3"
-
             scene v15s10_22a # TPP. Same as v15s10_22, The man turning the key in the lock cylinder.
             with dissolve
 
@@ -684,8 +682,6 @@ label v15s10:
             with dissolve
 
             pause 0.75
-
-            play sound "sounds/revving.mp3"
 
             scene v15s10_22a
             with dissolve
@@ -1036,8 +1032,6 @@ label v15s10:
 
             pause 0.75
 
-            play sound "sounds/revving.mp3"
-
             scene v15s10_femalebuyer_7a # TPP. Same as v15s10_femalebuyer_7, Show MC and Lindsey with their backs faced to the camera angle, looking back at the car.
             with dissolve
 
@@ -1047,8 +1041,6 @@ label v15s10:
             with dissolve
 
             pause 0.75
-            
-            play sound "sounds/revving.mp3"
 
             scene v15s10_femalebuyer_8a # TPP. Same as v15s10_femalebuyer_8, the lady turning the key in the lock cylinder
             with dissolve
@@ -1203,10 +1195,6 @@ label v15s10:
 
         female_buyer "Let's go home, Fred."
 
-        pause 0.75
-
-        play sound "sounds/revving.mp3"
-
         scene v15s10_femalebuyer_7a
         with dissolve
 
@@ -1216,8 +1204,6 @@ label v15s10:
         with dissolve
 
         pause 0.75
-        
-        play sound "sounds/revving.mp3"
 
         scene v15s10_femalebuyer_8a
         with dissolve

@@ -259,7 +259,7 @@ label v15s19:
         scene v15s19_8a # FPP. Lauren by the sink, smiling, mouth closed, looking at MC while throwing trash into the trash bag she is holding. The kitcen is in the same condition is a v15s19_4d [Deer House Kitchen].
         with dissolve
 
-        u "Well, duty calls with the presidential campaign."
+        u "Well, I gotta go."
 
         scene v15s19_8b # TPP. Lauren, smiling mouth closed following MC, smiling mouth closed, to the front door. The house is still dirty from the party. [Deer House Living Room].
         with dissolve
@@ -270,7 +270,7 @@ label v15s19:
         scene v15s19_7g # FPP. Lauren, smiling mouth closed looking at MC. The living room is clean and there is a trash bag on the floor in front of MC [Deer House Living Room].
         with dissolve
 
-        u "Well, duty calls with the presidential campaign."
+        u "Well, I gotta go."
         
         scene v15s19_7h # TPP. Lauren, smiling mouth closed following MC, smiling mouth closed, to the front door. The house is clean. [Deer House Living Room].
         with dissolve
@@ -282,12 +282,12 @@ label v15s19:
     scene v15s19_9 # FPP. Lauren, smiling mouth open, looking at MC (Lauren has her back to the front of the house, the front door is to her right.) [Deer House Living Room Front Door].
     with dissolve
 
-    la "Haha, good luck out there."
+    la "Alright, I'll see you later."
 
     scene v15s19_9a # FPP. Lauren, smiling mouth closed, looking at MC (Lauren has her back to the front of the house, the front door is to her right.) [Deer House Living Room Front Door].
     with dissolve
 
-    u "Thanks, and again for an amazing party last night."
+    u "Thanks again for an amazing party last night."
 
     scene v15s19_9
     with dissolve

@@ -897,31 +897,38 @@ label v15s24:
 
         u "No, I'm..."
 
-        if joinwolves:
-            scene v15s24_13l
-            with dissolve
+        menu:
 
-            u "A lawyer."
+            "Lawyer":
+                scene v15s24_13l
+                with dissolve
 
-            scene v15s24_13k
-            with dissolve
+                u "A lawyer."
 
-            cashier "Ha! A lawyer?"
+                scene v15s24_13k
+                with dissolve
 
-            cashier "You're gonna walk around dressed like that, and expect people to believe that you're a lawyer?"
+                cashier "Ha! A lawyer?"
 
-        else:
-            scene v15s24_13l
-            with dissolve
+                cashier "You're gonna walk around dressed like that, and expect people to believe that you're a lawyer?"
 
-            u "An accountant."
+            "Astronaut":
+                scene v15s24_13l
+                with dissolve
 
-            scene v15s24_13k
-            with dissolve
+                u "An astronaut."
 
-            cashier "*Scoffs* An accountant?"
+                scene v15s24_13k
+                with dissolve
 
-            cashier "I'm doing the math for you, pal. It's not adding up."
+                cashier "*Scoffs* An astronaut? Are you kidding me???"
+
+                cashier "You're so full of shit."
+
+                scene v15s24_13l
+                with dissolve
+
+                u "You better sell me some alcohol or I'm calling NASA."
 
         scene v15s24_13
         with dissolve
@@ -1307,14 +1314,29 @@ label v15s24:
         scene v15s24_5
         with dissolve
 
-        u "That sounds amazing...?"
+        menu:
 
-        scene v15s24_5a
-        with dissolve
+            "That sounds amazing":
 
-        li "And also kind of terrifying... Haha."
+                u "That sounds amazing...?"
 
-        li "Can't wait. *Laughs*"
+                scene v15s24_5a
+                with dissolve
+
+                li "And also kind of terrifying... Haha."
+
+                li "Can't wait. *Laughs*"
+
+            "Is that a good thing?":
+
+                u "Is that a good thing?"
+
+                scene v15s24_5a
+                with dissolve
+
+                li "Are you kidding me? Of course it is!"
+
+                li "Can't wait. *Laughs*"
 
     else:
         scene v15s24_8b # TPP. Show MC exiting the store empty handed, MC slight frown, mouth closed.

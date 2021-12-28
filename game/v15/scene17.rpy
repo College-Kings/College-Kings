@@ -119,493 +119,394 @@ label v15s17:
 
     clerk "Are you sure?"
 
-    scene v15s17_4
+    scene v15s17_4e
+    with dissolve
+    
+    u "I don't know, are there any other options?"
+
+    scene v15s17_4d
     with dissolve
 
-    menu:
-        "Get the gift card":
-            $ v15_lauren_gift = 1
+    clerk "May I suggest jewelry?"
 
-            scene v15s17_4
-            with dissolve
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value and v15_autumn_lunchbreak:
+        scene v15s17_4f # FPP. same as v15s17_4d SC's mouth is closed
+        with dissolve
 
-            u "Yeah, I'm sure. Let's go with that."
+        u "Yes! Autumn said she'd love that."
 
-            scene v15s17_4c
-            with dissolve
+        scene v15s17_4b
+        with dissolve
 
-            clerk "A gift card... Alright, then."
+        clerk "Autumn?"
 
-            scene v15s17_4d
-            with dissolve
+        scene v15s17_4
+        with dissolve
 
-            clerk "Excellent! This way to checkout."
+        u "Yeah, Autumn. Her sister."
 
-            scene v15s17_3a # same as v15s17_3 MC follows the Store Clerk (SC) to the cash register, SC is wallking in front of MC rolling his eyes, expression of disbelief, holding a gift card, MC has a slight smile, mouth closed
-            with dissolve
+        scene v15s17_4d
+        with dissolve
 
-            pause 0.75
+        clerk "Ah... I'm surprised Lauren's name isn't Summer! Haha!"
 
-            scene v15s17_5 # SC is standing behind a cash register, DON'T show the counter and ONLY show the top of the cash register, looking at MC, slight smile, mouth open
-            with dissolve
+        scene v15s17_4
+        with dissolve
 
-            clerk "Here you are... One $50 gift card! I hope you don't regret going for the safe option."
+        u "Ha... Good one."
 
-            scene v15s17_5a # same as v15s17_5 SC's mouth is closed, no expression
-            with dissolve
+    elif v15_mad_at_ms_rose:
+        scene v15s17_4
+        with dissolve
 
-            u "It's fine, haha. The party is really soon, so I didn't have a lot of time to think about it."
+        u "Hmm. It's true about women and jewelry..."
 
-            scene v15s17_5b # same as v15s17_5a SC's mouth is slightly open, and looking down at the cash register, typing on the cash register
-            with dissolve
+        scene v15s17_4d
+        with dissolve
 
-            clerk "*Mumbles* It shows..."
+        clerk "Yes, sir it is!"
 
-            scene v15s17_5a
-            with dissolve
+        scene v15s17_4
+        with dissolve
 
-            u "I'm sorry?"
+        u "Ms. Rose looked so proud of her new necklace and really seemed to enjoy showing it off to me... among other things..."
 
-            scene v15s17_5
-            with dissolve
+    if "v15_rose" in sceneList:
+        scene v15s17_15 # FPP. A Dreamlike Vision of MsRose fully nude in one of the sexual positions from Version 15 scene 15
+        with dissolve
 
-            clerk "Nothing, sir."
+        pause 0.75
 
-            clerk "I'm sure she'll be very happy with it."
+        scene v15s17_4b
+        with dissolve
 
-        "Maybe something else":
-            scene v15s17_4
-            with dissolve
+        clerk "You seem to be smiling a little strangely, sir. Are you okay?"
 
-            u "I don't know, are there any other options?"
+        scene v15s17_4
+        with dissolve
 
-            scene v15s17_4d
-            with dissolve
+        u "Yeah, sorry. I was just lost in my thoughts for a moment there."
 
-            clerk "May I suggest jewelry?"
+    scene v15s17_4f
+    with dissolve
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value and v15_autumn_lunchbreak:
-                scene v15s17_4f # FPP. same as v15s17_4d SC's mouth is closed
+    u "Okay, that sounds like a good idea. Let's look at your jewelry."
+
+    scene v15s17_4d
+    with dissolve
+
+    clerk "Jewelry is this way."
+
+    scene v15s17_6 # TPP. MC follows the Store Clerk to another aisle, both slight smiles, mouths closed, happy expressions
+    with dissolve
+
+    pause 0.75
+
+    scene v15s17_7 # TPP. SC extends an arm palm up towards a jewlry case, looking at MC half smile, mouth open, MC is looking at the Jewlry case, slight smile mouth closed, show the Emerald bracelet on the left and the ruby choker necklace on the right in the jewlry case
+    with dissolve
+
+    pause 0.75
+
+    scene v15s17_8 # FPP. Show SC standing behind the jewlry case, half smile, mouth open, looking at the jewlry, show the Emerald bracelet on the left and the ruby choker necklace on the right in the jewlry case
+    with dissolve
+
+    clerk "I would suggest the emerald bracelet or the ruby choker necklace."
+
+    scene v15s17_8a # FPP. same as v15s17_8 SC is now looking at MC 
+    with dissolve
+
+    clerk "Both beautiful items, and currently on sale for only $50."
+
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        scene v15s17_8b
+        with dissolve
+
+        u "Would you say jewelry is the perfect choice for a girlfriend?"
+
+        scene v15s17_8a
+        with dissolve
+
+        clerk "Absolutely. You can never go wrong with jewelry, especially at these prices."
+
+    else:
+        scene v15s17_8b # FPP. same as v15s17_8a SC's mouth is closed
+        with dissolve
+
+        u "Is jewelry too much if we're just friends?"
+
+        scene v15s17_8a
+        with dissolve
+
+        clerk "Jewelry is never too much, young man. If you buy this for her, she will be your friend forever!"
+
+    scene v15s17_8a
+    with dissolve
+
+    clerk "She will look like a birthday princess!"
+
+    clerk "Now, do you think you're ready to make a decision?"
+
+    scene v15s17_8b
+    with dissolve
+
+    u "Let me think for a second..."
+
+    scene v15s17_9 # TPP. Show SC still standing behind the jewlry case, annoyed expression, rolling up a sleeve to look at his watch, MC has with hand on chin, thinking pose, looking away from the SC
+    with dissolve
+
+    pause 0.75
+
+    scene v15s17_8b
+    with dissolve
+
+    if v15_autumn_lunchbreak:
+
+        u "Autumn told me about a little toy horse... She said it would be a good gift if I could find it."
+
+        scene v15s17_8c
+        with dissolve
+
+        clerk "Well, thank goodness you spoke to Autumn..."
+
+        scene v15s17_8f # FPP. same as v15s17_8c SC raises an eyebrow
+        with dissolve
+
+        clerk "But a toy horse? Are you buying this for a child? We have many children's toys."
+
+        scene v15s17_8b
+        with dissolve
+
+        u "No, it's a gift for sentimental reasons. She won't be expecting it."
+
+        scene v15s17_8a
+        with dissolve
+
+        clerk "Ah, very good! Let's see what horses we have in stock, shall we?"
+
+    else:
+
+        u "Do you have anything else that may make a good gift?"
+
+        scene v15s17_8c
+        with dissolve
+
+        clerk "Well, we do have little toy horses on sale right now."
+
+        scene v15s17_8f # FPP. same as v15s17_8c SC raises an eyebrow
+        with dissolve
+
+        clerk "But of course, it might not be the best gift for an adult..."
+
+        scene v15s17_8b
+        with dissolve
+
+        u "Haha, could I see them anyway?"
+
+        scene v15s17_8a
+        with dissolve
+
+        clerk "Of course."
+
+
+
+    scene v15s17_6a # TPP. same as v15s17_6 MC follows the Store Clerk to different aisle
+    with dissolve
+
+    pause 0.75
+
+    scene v15s17_7a # TPP. same as v15s17_7 But instead of the jewlery the horses are inside the case, the Brown horse golden mane is on the left of the case, and the White horse black mane is on the right of the horse case
+    with dissolve
+
+    pause 0.75
+
+    scene v15s17_10 # FPP. Show SC standing behind the horse case, half smile, mouth open, looking at the horses, show the Brown horse golden mane on the left and the White horse black mane on the right in the horse case
+    with dissolve
+
+    clerk "Here we are..."
+
+    scene v15s17_10a # FPP. same as v15s17_10 SC is now looking at MC
+    with dissolve
+
+    clerk "There are only two different colors it seems... Hopefully one of these will suit your needs."
+
+    scene v15s17_10b # FPP. same as v15s17_10a SC's mouth is closed
+    with dissolve
+
+    u "Okay, I think I know what I want now."
+
+    scene v15s17_10a # FPP. same as v15s17_10 SC is now looking at MC
+    with dissolve
+
+    clerk "Wonderful."
+
+    scene v15s17_11 # FPP. MC looks down at the counter and see's the gift card, both jewlry options, and both horse options
+    with fade
+
+    pause 0.75
+
+    call screen v15s17_gift_selection
+
+    if v15_autumn_lunchbreak:
+        
+
+        menu:
+            "Get Lauren $50 gift card":
+                $ v15_lauren_gift = 1
+
+                scene v15s17_5
                 with dissolve
 
-                u "Yes! Autumn said she'd love that."
+                clerk "Here you are... One $50 gift card! I hope you don't regret going for the safe option."
 
-                scene v15s17_4b
+                scene v15s17_5a
                 with dissolve
 
-                clerk "Autumn?"
+                u "It's fine, haha. The party is really soon, so I didn't have a lot of time to think about it."
 
-                scene v15s17_4
+                scene v15s17_5b
                 with dissolve
 
-                u "Yeah, Autumn. Her sister."
+                clerk "*Mumbles* It shows..."
 
-                scene v15s17_4d
+                scene v15s17_5a
                 with dissolve
 
-                clerk "Ah... I'm surprised Lauren's name isn't Summer! Haha!"
+                u "I'm sorry?"
 
-                scene v15s17_4
+                scene v15s17_5
                 with dissolve
 
-                u "Ha... Good one."
+                clerk "Nothing, sir."
 
-            elif v15_mad_at_ms_rose:
-                scene v15s17_4
+                clerk "I'm sure she'll be very happy with it."
+
+            "Jewelry gift":
+                scene v15s17_11b # FPP. same as v15s17_11 Close up shot of the Jewlry options
                 with dissolve
 
-                u "Hmm. It's true about women and jewelry..."
+                menu:
+                    "Emerald bracelet":
+                        $ v15_lauren_gift = 2
 
-                scene v15s17_4d
+                        scene v15s17_11d # FPP. same as v15s17_11b MC holds up the Emerald Bracelet
+                        with dissolve
+
+                        u "The emerald is too beautiful to turn away from."
+
+                    "Ruby choker necklace":
+                        $ v15_lauren_gift = 3
+
+                        scene v15s17_11e # FPP. same v15s17_11b MC holds up Ruby choker necklace
+                        with dissolve
+
+                        u "The ruby is perfect. She's going to love it."
+
+                scene v15s17_5c # FPP. same as v15s17_5 increase to a half smile
                 with dissolve
 
-                clerk "Yes, sir it is!"
+                clerk "jewelry! She is going to love it, young man."
 
-                scene v15s17_4
+            "Horse gift":
+                scene v15s17_11c # FPP. same as v15s17_11 Close up shot of the horse options
                 with dissolve
-
-                u "Ms. Rose looked so proud of her new necklace and really seemed to enjoy showing it off to me... among other things..."
-
-            if "v15_rose" in sceneList:
-                scene v15s17_15 # FPP. A Dreamlike Vision of MsRose fully nude in one of the sexual positions from Version 15 scene 15
-                with dissolve
-
-                pause 0.75
-
-                scene v15s17_4b
-                with dissolve
-
-                clerk "You seem to be smiling a little strangely, sir. Are you okay?"
-
-                scene v15s17_4
-                with dissolve
-
-                u "Yeah, sorry. I was just lost in my thoughts for a moment there."
-
-            scene v15s17_4f
-            with dissolve
-
-            u "Okay, that sounds like a good idea. Let's look at your jewelry."
-
-            scene v15s17_4d
-            with dissolve
-
-            clerk "Jewelry is this way."
-
-            scene v15s17_6 # TPP. MC follows the Store Clerk to another aisle, both slight smiles, mouths closed, happy expressions
-            with dissolve
-
-            pause 0.75
-
-            scene v15s17_7 # TPP. SC extends an arm palm up towards a jewlry case, looking at MC half smile, mouth open, MC is looking at the Jewlry case, slight smile mouth closed, show the Emerald bracelet on the left and the ruby choker necklace on the right in the jewlry case
-            with dissolve
-
-            pause 0.75
-
-            scene v15s17_8 # FPP. Show SC standing behind the jewlry case, half smile, mouth open, looking at the jewlry, show the Emerald bracelet on the left and the ruby choker necklace on the right in the jewlry case
-            with dissolve
-
-            clerk "I would suggest the emerald bracelet or the ruby choker necklace."
-
-            scene v15s17_8a # FPP. same as v15s17_8 SC is now looking at MC 
-            with dissolve
-
-            clerk "Both beautiful items, and currently on sale for only $50."
-
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
-                scene v15s17_8b
-                with dissolve
-
-                u "Would you say jewelry is the perfect choice for a girlfriend?"
-
-                scene v15s17_8a
-                with dissolve
-
-                clerk "Absolutely. You can never go wrong with jewelry, especially at these prices."
-
-                scene v15s17_8c # FPP. same as v15s17_8a looking at the MC judgementally
-                with dissolve
-
-                clerk "You can still choose the gift card of course, but which of these two should we consider at the counter?"
-
-                scene v15s17_8b
-                with dissolve
-
-                pause 0.75
-
-            else:
-                scene v15s17_8b # FPP. same as v15s17_8a SC's mouth is closed
-                with dissolve
-
-                u "Is jewelry too much if we're just friends?"
-
-                scene v15s17_8a
-                with dissolve
-
-                clerk "Jewelry is never too much, young man. If you buy this for her, she will be your friend forever!"
-
-            menu:
-                "Emerald bracelet":
-                    scene v15s17_8d # FPP. same as v15s17_8b MC is looking down at the jewlry case and points to the left towards the Emerald bracelet
-                    with dissolve
-
-                    u "I think this is the best one."
-
-                "Ruby choker necklace":
-                    scene v15s17_8e # FPP. same as v15s17_8b MC is looking down at the jewlry case and points to the right towards the Ruby choker necklace
-                    with dissolve
-
-                    u "I think this is the best one."
-
-            scene v15s17_8a
-            with dissolve
-
-            clerk "She will look like a birthday princess!"
-
-            clerk "Now, are you sure about your gift? Ready to checkout?"
-
-            if v15_autumn_lunchbreak:
-                scene v15s17_8b
-                with dissolve
-
-                u "Let me think for a second..."
-
-                scene v15s17_9 # TPP. Show SC still standing behind the jewlry case, annoyed expression, rolling up a sleeve to look at his watch, MC has with hand on chin, thinking pose, looking away from the SC
-                with dissolve
-
-                pause 0.75
-
-                scene v15s17_8b
-                with dissolve
-
-                u "Autumn told me about a little toy horse... She said it would be a good gift if I could find it."
-
-                scene v15s17_8c
-                with dissolve
-
-                clerk "Well, thank goodness you spoke to Autumn..."
-
-                scene v15s17_8f # FPP. same as v15s17_8c SC raises an eyebrow
-                with dissolve
-
-                clerk "But a toy horse? Are you buying this for a child? We have many children's toys."
-
-                scene v15s17_8b
-                with dissolve
-
-                u "No, it's a gift for sentimental reasons. She won't be expecting it."
-
-                scene v15s17_8a
-                with dissolve
-
-                clerk "Ah, very good! Let's see what horses we have in stock, shall we?"
-
-                scene v15s17_6a # TPP. same as v15s17_6 MC follows the Store Clerk to different aisle
-                with dissolve
-
-                pause 0.75
-
-                scene v15s17_7a # TPP. same as v15s17_7 But instead of the jewlery the horses are inside the case, the Brown horse golden mane is on the left of the case, and the White horse black mane is on the right of the horse case
-                with dissolve
-
-                pause 0.75
-
-                scene v15s17_10 # FPP. Show SC standing behind the horse case, half smile, mouth open, looking at the horses, show the Brown horse golden mane on the left and the White horse black mane on the right in the horse case
-                with dissolve
-
-                clerk "Here we are..."
-
-                scene v15s17_10a # FPP. same as v15s17_10 SC is now looking at MC
-                with dissolve
-
-                clerk "There are only two different colors it seems... Hopefully one of these will suit your needs."
-
-                scene v15s17_10b # FPP. same as v15s17_10a SC's mouth is closed
-                with dissolve
-
-                u "Okay, let's see here."
-
-                scene v15s17_10a
-                with dissolve
-
-                clerk "Remember you can make your final decision checkout, so there's no pressure. Just pick the one you like most."
-
-                scene v15s17_10b
-                with dissolve
-
-                u "(Autumn was pretty specific if I remember correctly.)"
 
                 menu:
                     "Brown horse, golden mane":
-                        scene v15s17_10c # FPP. same as v15s17_10b MC is looking down at the horse case and points to the left towards the Brown horse, golden mane
+                        $ v15_lauren_gift = 5
+
+                        scene v15s17_11f # FPP. same as v15s17_11c MC holds up the Brown horse, golden mane
                         with dissolve
 
-                        u "Alright, I'll go with this one."
-
-                        scene v15s17_10a
-                        with dissolve
-
-                        clerk "Excellent! The checkout is this way."
+                        u "Definitely this one!"
 
                     "White horse, black mane":
-                        scene v15s17_10d # FPP. same as v15s17_10b MC is looking down at the horse case and points to the right towards the White horse, black mane
+                        $ v15_lauren_gift = 4
+
+                        scene v15s17_11g # FPP. same as v15s17_11c MC holds up the White horse, black mane
                         with dissolve
 
-                        u "Alright, I'll go with this one."
+                        u "This one!"
 
-                        scene v15s17_10a
-                        with dissolve
-
-                        clerk "Excellent! The checkout is this way."
-                    
-                scene v15s17_3b # same as v15s17_3 MC follows the Store Clerk (SC) to the cash register, SC is wallking in front of MC full smile, mouth closed, happy expression, holding a basket containg the gift card, both jewlry options, and both horse options, MC has a slight smile, mouth closed
+                scene v15s17_5d # FPP. same as v15s17_5 increase to a full smile
                 with dissolve
 
-                pause 0.75
+                clerk "The sentimental horse, aww! It's perfect."
 
-            else:
-                scene v15s17_8b
+                scene v15s17_5e # FPP. same as v15s17_5 SC's mouth is closed
                 with dissolve
 
-                u "Yeah, I'm sure."
+                u "Thank you for your help."
 
-                scene v15s17_8a
+                scene v15s17_5
                 with dissolve
 
-                clerk "As you wish, please follow me."
+                clerk "Of course! In fact..."
 
-                scene v15s17_3c # same as v15s17_3b the basket SC is carrying DOES NOT have the horse options in it
+                scene v15s17_5d
                 with dissolve
 
-                pause 0.75
+                clerk "I'll go ahead and wrap it for you, no extra charge."
 
-            scene v15s17_5
-            with dissolve
+    else: 
+        scene v15s17_11a # FPP. same as v15s17_11 The horse options are NOT shown
+        with dissolve
 
-            clerk "So, it's final decision time. What will it be?"
+        menu:
+            "Get Lauren $50 gift card":
+                $ v15_lauren_gift = 1
 
-            if v15_autumn_lunchbreak:
-                scene v15s17_11 # FPP. MC looks down at the counter and see's the gift card, both jewlry options, and both horse options
+                scene v15s17_5
                 with dissolve
 
-                menu:
-                    "Get Lauren $50 gift card":
-                        $ v15_lauren_gift = 1
+                clerk "Here you are... One $50 gift card! I hope you don't regret going for the safe option."
 
-                        scene v15s17_5
-                        with dissolve
+                scene v15s17_5a
+                with dissolve
 
-                        clerk "Here you are... One $50 gift card! I hope you don't regret going for the safe option."
+                u "It's fine, haha. The party is really soon, so I didn't have a lot of time to think about it."
 
-                        scene v15s17_5a
-                        with dissolve
+                scene v15s17_5b
+                with dissolve
 
-                        u "It's fine, haha. The party is really soon, so I didn't have a lot of time to think about it."
+                clerk "*Mumbles* It shows..."
 
-                        scene v15s17_5b
-                        with dissolve
+                scene v15s17_5a
+                with dissolve
 
-                        clerk "*Mumbles* It shows..."
+                u "I'm sorry?"
 
-                        scene v15s17_5a
-                        with dissolve
+                scene v15s17_5
+                with dissolve
 
-                        u "I'm sorry?"
+                clerk "Nothing, sir."
 
-                        scene v15s17_5
-                        with dissolve
+                clerk "I'm sure she'll be very happy with it."
 
-                        clerk "Nothing, sir."
-
-                        clerk "I'm sure she'll be very happy with it."
-
-                    "Jewelry gift":
-                        scene v15s17_11b # FPP. same as v15s17_11 Close up shot of the Jewlry options
-                        with dissolve
-
-                        menu:
-                            "Emerald bracelet":
-                                $ v15_lauren_gift = 2
-
-                                scene v15s17_11d # FPP. same as v15s17_11b MC holds up the Emerald Bracelet
-                                with dissolve
-
-                                u "The emerald is too beautiful to turn away from."
-
-                            "Ruby choker necklace":
-                                $ v15_lauren_gift = 3
-
-                                scene v15s17_11e # FPP. same v15s17_11b MC holds up Ruby choker necklace
-                                with dissolve
-
-                                u "The ruby is perfect. She's going to love it."
-
-                        scene v15s17_5c # FPP. same as v15s17_5 increase to a half smile
-                        with dissolve
-
-                        clerk "jewelry! She is going to love it, young man."
-
-                    "Horse gift":
-                        scene v15s17_11c # FPP. same as v15s17_11 Close up shot of the horse options
-                        with dissolve
-
-                        menu:
-                            "Brown horse, golden mane":
-                                $ v15_lauren_gift = 5
-
-                                scene v15s17_11f # FPP. same as v15s17_11c MC holds up the Brown horse, golden mane
-                                with dissolve
-
-                                u "Definitely this one!"
-
-                            "White horse, black mane":
-                                $ v15_lauren_gift = 4
-
-                                scene v15s17_11g # FPP. same as v15s17_11c MC holds up the White horse, black mane
-                                with dissolve
-
-                                u "This one!"
-
-                        scene v15s17_5d # FPP. same as v15s17_5 increase to a full smile
-                        with dissolve
-
-                        clerk "The sentimental horse, aww! It's perfect."
-
-                        scene v15s17_5e # FPP. same as v15s17_5 SC's mouth is closed
-                        with dissolve
-
-                        u "Thank you for your help."
-
-                        scene v15s17_5
-                        with dissolve
-
-                        clerk "Of course! In fact..."
-
-                        scene v15s17_5d
-                        with dissolve
-
-                        clerk "I'll go ahead and wrap it for you, no extra charge."
-
-            else: 
-                scene v15s17_11a # FPP. same as v15s17_11 The horse options are NOT shown
+            "Jewelry gift":
+                scene v15s17_11b
                 with dissolve
 
                 menu:
-                    "Get Lauren $50 gift card":
-                        $ v15_lauren_gift = 1
+                    "Emerald bracelet":
+                        $ v15_lauren_gift = 2
 
-                        scene v15s17_5
+                        scene v15s17_11d
                         with dissolve
 
-                        clerk "Here you are... One $50 gift card! I hope you don't regret going for the safe option."
+                        u "The emerald is too beautiful to turn away from."
 
-                        scene v15s17_5a
+                    "Ruby choker necklace":
+                        $ v15_lauren_gift = 3
+
+                        scene v15s17_11e
                         with dissolve
 
-                        u "It's fine, haha. The party is really soon, so I didn't have a lot of time to think about it."
+                        u "The ruby is perfect. She's going to love it."
 
-                        scene v15s17_5b
-                        with dissolve
+                scene v15s17_5c
+                with dissolve
 
-                        clerk "*Mumbles* It shows..."
-
-                        scene v15s17_5a
-                        with dissolve
-
-                        u "I'm sorry?"
-
-                        scene v15s17_5
-                        with dissolve
-
-                        clerk "Nothing, sir."
-
-                        clerk "I'm sure she'll be very happy with it."
-
-                    "Jewelry gift":
-                        scene v15s17_11b
-                        with dissolve
-
-                        menu:
-                            "Emerald bracelet":
-                                $ v15_lauren_gift = 2
-
-                                scene v15s17_11d
-                                with dissolve
-
-                                u "The emerald is too beautiful to turn away from."
-
-                            "Ruby choker necklace":
-                                $ v15_lauren_gift = 3
-
-                                scene v15s17_11e
-                                with dissolve
-
-                                u "The ruby is perfect. She's going to love it."
-
-                        scene v15s17_5c
-                        with dissolve
-
-                        clerk "Jewelry! She is going to love it, young man."
+                clerk "Jewelry! She is going to love it, young man."
 
     scene v15s17_5f # FPP same as v15s17_5 SC has his back turned to the MC, He is wrapping the present
     with dissolve

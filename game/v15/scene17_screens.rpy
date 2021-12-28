@@ -1,9 +1,13 @@
 screen v15s17_gift_selection():
     modal True
 
+    add "images/darker.webp"
+
     fixed:
         xalign 0.5
         xysize (1190, 127)
+
+        
 
         add "images/v15/Scene 17/gift_picking_screen/header_box.webp" xalign 0.5
         text "Lauren Halloween Birthday Party" align (0.5, 0.5) yoffset -10

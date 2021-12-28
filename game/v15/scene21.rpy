@@ -1334,7 +1334,7 @@ label v15s21:
         with dissolve
 
         menu:
-            "We want your opinion":
+            "You understand sorority life":
                 $ v15_meeting_points += 1
                 $ add_point(KCT.BOYFRIEND)
 
@@ -1397,14 +1397,6 @@ label v15s21:
                 with dissolve
 
                 ro "He's a brilliant man and... believe it or not, he's incredibly understanding of women in today's modern society."
-
-                scene v15s21_13b
-                with dissolve
-
-                u "(Oh... Eww...)"
-
-                scene v15s21_13c
-                with dissolve
 
                 ro "I'm sure he would've been difficult to persuade on something like this, but he always stays considerate and fair."
 
@@ -1701,6 +1693,8 @@ label v15s21:
             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v15s21_7v # FPP. same as v15s21_7s Chloe raises an eyebrow, still slightly angry, still lookng at mc, mouth is still closed
                 with dissolve
+
+                $ chloeSus += 1
 
                 cl "Oh, really?"
 

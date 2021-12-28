@@ -460,18 +460,18 @@ label v15s12:
             v15s12_lindsey_pb_mostlikely = lindsey_board.add_subtask("Game Night",
                 "Who's Most Likely...",
                 opinion="\"\"Who's Most Likely To\" is always a fun game to play with a group of people. We'll laugh, learn, a bit about each other and maybe some secrets will come out as well.\"",
-                cost=100)
+                cost=0)
 
             lindsey_board.add_subtask("Game Night",
                 "Would You Rather",
                 opinion="\"\"Would you rather\" is the easiest game to play when you want to get the conversation rolling. Hopefully we get a few laughs and maybe some secrets out of them as well.\"",
-                cost=100)
+                cost=0)
 
             lindsey_board.add_task("Game Night",
                 "Host the game night",
                 opinion="\"Once we got the games and (hopefully) the booze, all that's left is to make sure everyone has a good time and leaves wanting to vote for me.\"",
                 people=[mc, lindsey, autumn, aubrey],
-                cost=100)
+                cost=0)
 
             lindsey_board.add_task("VIP Night",
                 "Book a limousine & private club ($800)",
@@ -480,21 +480,21 @@ label v15s12:
 
             v15_s12_lindsey_pb_inviteSebastian = lindsey_board.add_subtask("VIP Night",
                 "Invite Aubrey, Autumn, and Sebastian",
-                opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The third person I want to invite is Sebastian. We're pretty close, but in the end he has to vote the way the Wolves do. If we can convince him to support me, and ask others to; Seb being on my side would mean more support from the Wolves.\"",
+                opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The third person I want to invite is Sebastian. We're pretty close and Seb being on my side would mean more support from the Wolves.\"",
                 people=[aubrey, autumn, sebastian],
-                cost=800)
+                cost=0)
 
             lindsey_board.add_subtask("VIP Night",
                 "Invite Aubrey, Autumn, and Grayson",
-                opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The last person I'm thinking about inviting is Grayson. He already has this burning hatred for Chloe, mixed with a little bit of horniness but still... I think he's closer to boarding the Lindsey train than we think, and Grayson being on my side would mean support from the Apes.\"",
+                opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The last person I'm thinking about inviting is Grayson. He already has this burning hatred for Chloe and would help meO gain support from the Apes.\"",
                 people=[aubrey, autumn, grayson],
-                cost=800)
+                cost=0)
 
             lindsey_board.add_task("VIP Night",
                 "Host exclusive VIP Night",
                 opinion="\"Finally, a night to remember! Our main focus during the night out is the three people we want to impress. Keeping them satisfied and entertained all night is the only goal besides having a damn good time.\"",
                 people=[mc, lindsey, aubrey, autumn],
-                cost=800) # Can't add Sebastian or Grayson here because we're loading the menu before the player can select. 
+                cost=0) # Can't add Sebastian or Grayson here because we're loading the menu before the player can select. 
 
         call screen planning_board(lindsey_board)
         
@@ -510,7 +510,7 @@ label v15s12:
         scene v15s12_8b
         with dissolve
 
-        u "They're both fine ideas, I think we can go with the club, or a game night regardless, and still end up having a good time... But I think this is our best option."
+        u "They're both fine ideas. I think we can go with either the club or a game night and still end up having a good time... But I think this is our best option."
 
         if v15_lindsey_gamenight: # -if chose Game night
             scene v15s12_8b

@@ -501,7 +501,7 @@ label v15s39:
     scene v15s39_12c
     with dissolve
 
-    au "That's not false. She should be doing more."
+    au "You're right. She should be doing more."
 
     scene v15s39_8f # FPP. same as v15s39_8f Lindsey is now looking at Autumn, still no expression, mouth is still open
     with dissolve
