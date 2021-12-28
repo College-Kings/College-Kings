@@ -378,7 +378,7 @@ label v14s43b:
                 $ v14s43b_kiwiiPost1 = KiwiiPost(grayson, "v14/v14kw43b.webp", "#Vote4Chloe is a #Vote4Whore", mentions=[chloe], numberLikes=255)
                 $ v14s43b_kiwiiPost1.newComment(chloe, "You weren't calling me a whore when I was in your bed all of last year. Wonder what changed? #Salty", numberLikes=renpy.random.randint(15, 35), queue=False)
                 $ v14s43b_kiwiiPost1.newComment(aubrey, "Grayson, what the fuck?! Did Lindsey put you up to this?!", numberLikes=renpy.random.randint(15, 35), queue=False)
-                $ v14s43b_kiwiiPost1.newComment(lindsey, "I would never, ever, EVER. Tell them to do this.", numberLikes=renpy.random.randint(15, 35), queue=False)
+                $ v14s43b_kiwiiPost1.newComment(lindsey, "I would never, ever, EVER tell them to do this.", numberLikes=renpy.random.randint(15, 35), queue=False)
                 $ v14s43b_kiwiiPost1.newComment(imre, "Ok sure, whatever Linds. Doesn't matter to anyone, Chloe's never going to lose against someone who reaches this low to win.", numberLikes=renpy.random.randint(15, 35), queue=False)
 
                 $ v14s43b_kiwiiPost2 = KiwiiPost(ryan, "v14/v14kw43b.webp", "#Vote4Chloe and she'll send you pics, just like this!", mentions=[chloe], numberLikes=157)
@@ -589,7 +589,7 @@ label v14s43b:
                 $ v14s43b_kiwiiPost4 = KiwiiPost(grayson, "v14/v14kw43b.webp", "#Vote4Chloe is a #Vote4Whore", mentions=[chloe], numberLikes=255)
                 $ v14s43b_kiwiiPost4.newComment(chloe, "You weren't calling me a whore when I was in your bed all of last year. Wonder what changed? #Salty", numberLikes=renpy.random.randint(15, 35), queue=False)
                 $ v14s43b_kiwiiPost4.newComment(aubrey, "Grayson, what the fuck?! Did Lindsey put you up to this?!", numberLikes=renpy.random.randint(15, 35), queue=False)
-                $ v14s43b_kiwiiPost4.newComment(lindsey, "I would never, ever, EVER. Tell them to do this.", numberLikes=renpy.random.randint(15, 35), queue=False)
+                $ v14s43b_kiwiiPost4.newComment(lindsey, "I would never, ever, EVER tell them to do this.", numberLikes=renpy.random.randint(15, 35), queue=False)
                 $ v14s43b_kiwiiPost4.newComment(imre, "Ok sure, whatever Linds. Doesn't matter to anyone, Chloe's never going to lose against someone who reaches this low to win.", numberLikes=renpy.random.randint(15, 35), queue=False)
 
                 $ v14s43b_kiwiiPost5 = KiwiiPost(ryan, "v14/v14kw43b.webp", "#Vote4Chloe and she'll send you pics, just like this!", mentions=[chloe], numberLikes=157)
