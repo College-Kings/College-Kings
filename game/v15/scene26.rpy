@@ -741,7 +741,7 @@ label v15s26:
                 with dissolve
 
                 menu:
-                    "Polygamy isn't healthy": # -event1 Polygamy isn't healthy (RileyUpset)
+                    "Polygamy isn't healthy": # RileyUpset
                         $ v15_ph_riley_upset = True
                         u "Honestly, it doesn't seem healthy."
 
@@ -851,7 +851,7 @@ label v15s26:
         with dissolve
 
         menu: 
-            "Side with Riley, pro-polygamy": # -event1 Side with Riley, Pro-Polygamy (if AubreyTamed it becomes AubreyFwB, gain RileyLoyal; she's committed to MC as friends, romantic, TilDeathDoUsPart, all of the above)
+            "Side with Riley, pro-polygamy": #if AubreyTamed it becomes AubreyFwB, gain RileyLoyal; she's committed to MC as friends, romantic, TilDeathDoUsPart, all of the above
                 if aubrey.relationship.value >= Relationship.TAMED.value:
                     $ aubrey.relationship = Relationship.FWB
                 $ riley.relationship = Relationship.LOYAL
