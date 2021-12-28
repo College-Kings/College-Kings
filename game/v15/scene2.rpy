@@ -383,5 +383,17 @@ label v15s2:
     if v14_ApesPostChloePics and not joinwolves:
         jump v15s3
 
+    elif v14_ApesPostChloePics:
+        if v14_PenelopePartner:
+            $ v14s43b_kiwiiPost1.remove_post()
+            $ v14s43b_kiwiiPost2.remove_post()
+            $ v14s43b_kiwiiPost3.remove_post()
+        else:
+            $ v14s43b_kiwiiPost4.remove_post()
+            $ v14s43b_kiwiiPost5.remove_post()
+            $ v14s43b_kiwiiPost6.remove_post()
+        
+        jump v15s4
+
     else: 
         jump v15s4
