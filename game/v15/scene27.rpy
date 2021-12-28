@@ -41,7 +41,7 @@ label v15s27: # -MC walks out of the Chicks house-
         
         u "(Well, that was an interesting conversation...) *Chuckles*"
 
-    if v15_ph_riley_upset: # -if RileyUpset potentially set in scene26
+    if v15_RileyUpset: # -if RileyUpset potentially set in scene26
         scene v15s27_2b
         with dissolve
 

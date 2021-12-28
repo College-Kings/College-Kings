@@ -742,7 +742,7 @@ label v15s26:
 
                 menu:
                     "Polygamy isn't healthy": # RileyUpset
-                        $ v15_ph_riley_upset = True
+                        $ v15_RileyUpset = True
                         u "Honestly, it doesn't seem healthy."
 
                         scene v15s26_14
@@ -998,7 +998,7 @@ label v15s26:
 
         ri "Okay, no worries. I'll probably finish it by myself."
 
-        if v15_ph_riley_upset: # -if RileyUpset
+        if v15_RileyUpset: # -if RileyUpset
             scene v15s26_26 # FPP View of MC, now standing, looking at Riley, who is looking at the theater screen
             with dissolve
 
