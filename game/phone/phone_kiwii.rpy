@@ -106,9 +106,9 @@ init python:
             return message
 
         def removePost(self):
-            return remove_post()
+            return remove_post(self)
 
-        def remove_post():
+        def remove_post(self):
             kiwiiPosts.remove(self)
             del self
 
