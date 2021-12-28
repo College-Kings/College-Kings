@@ -1042,13 +1042,6 @@ label v15s18a_AutumPenelope:
 
             u "*Sighs* No, I wasn't lying."
 
-    ### check transitions
-    ### especially if 7b dissolves into 7b again
-    scene v15s18apen_7b
-    with dissolve
-
-    pause 0.75
-   
     scene v15s18apen_6a
     with dissolve
 
@@ -1322,13 +1315,6 @@ label v15s18a_ImreLauren:
             with dissolve
 
             imre "Oh, I- I don't know, ha. Sorry, bro."
-
-    #check transitions
-    
-    scene v15s18aimre_6a
-    with dissolve
-
-    pause 0.75
 
     scene v15s18aimre_4
     with dissolve
