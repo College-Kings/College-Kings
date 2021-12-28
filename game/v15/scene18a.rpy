@@ -404,7 +404,7 @@ label v15s18a_Ryan:
     scene v15s18a_ryan_2 # TPP. Show MC entering into the bathroom, as he enters we see Ryan sitting on the floor with his head above the toilet since he is puking, his face obscured by the toilet and we don't ever see inside it.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18a_ryan_3 # FPP. MC looking at Ryan, Ryan's face still obscured by toilet, Ryan disgusted face, mouth closed.
     with dissolve
@@ -513,8 +513,6 @@ label v15s18a_Ryan:
 
         pause 0.75
 
-        play sound "sounds/doorclose.mp3"
-
         scene v15s18a_ryan_2a # TPP. Show MC exiting the bathroom, as he leaves we see Ryan sitting on the floor with his head above the toilet since he is puking, his face obscured by the toilet and we don't ever see inside it.
         with dissolve
         
@@ -526,12 +524,12 @@ label v15s18a_Ryan:
 
         u "Ha, feel better soon, Ryan. Drink lots of water when you're able to."
 
-        play sound "sounds/doorclose.mp3"
-
         scene v15s18a_ryan_2a
         with dissolve
 
         pause 0.75
+
+    play sound "sounds/doorclose.mp3"
 
     scene v15s18a_ryan_6 # TPP. MC standing outside of the bathroom door, neutral face, mouth closed
     with dissolve
