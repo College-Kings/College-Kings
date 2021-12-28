@@ -106,8 +106,11 @@ init python:
             return message
 
         def removePost(self):
-            kiwiiPosts.remove(self)
+            return remove_post()
 
+        def remove_post():
+            kiwiiPosts.remove(self)
+            del self
 
     class KiwiiComment(KiwiiPost):
         def __init__(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None):
