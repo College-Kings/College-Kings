@@ -84,8 +84,7 @@ label v15s8:
 
         chloe_board.add_task("Sabotage",
             "Secretly record Lindsey",
-            opinion="\"After we get a few bottles of booze, you and Imre will do your best to get Lindsey wasted. I'm not sure what type of mood she'll be in, but maybe you should tell her she needs to relax for a bit. After all, she's probably stressed that she has nothing and I have everything...\"",
-            cost=50)
+            opinion="\"After we get a few bottles of booze, you and Imre will do your best to get Lindsey wasted. I'm not sure what type of mood she'll be in, but maybe you should tell her she needs to relax for a bit. After all, she's probably stressed that she has nothing and I have everything...\"")
 
         chloe_board.add_task("Sabotage",
             "Provoke Lindsey to say something that might damage her reputation",
