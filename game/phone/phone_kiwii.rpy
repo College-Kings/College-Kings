@@ -172,10 +172,10 @@ init python:
 
 init -100:
     define profile_pictures = [
-        "images/nonplayable_characters/profile_pictures/mcpp1.webp",
-        "images/nonplayable_characters/profile_pictures/mcpp2.webp",
-        "images/nonplayable_characters/profile_pictures/mcpp3.webp",
-        "images/nonplayable_characters/profile_pictures/mcpp4.webp"
+        "images/nonplayable_characters/profile_pictures/mc2.webp",
+        "images/nonplayable_characters/profile_pictures/mc3.webp",
+        "images/nonplayable_characters/profile_pictures/mc4.webp",
+        "images/nonplayable_characters/profile_pictures/mc5.webp"
         ]
     default profile_pictures_index = 0
 
