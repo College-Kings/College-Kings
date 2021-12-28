@@ -267,9 +267,9 @@ label v15s44_continue:
     scene v15s44_8e
     with dissolve
 
-    pe "'Was so nice to see my baby niece today... She never stays for long, but it's always perfect <3 See you soon, Nora Bora!'. (CLUE UNLOCKED: NORA VISITED HER AUNT THE DAY SHE LANDED FROM EUROPE. LOCATION UNLOCKED: STAYING AT HER AUNT'S APARTMENT.)"
-
-    $ unlock_clue = Nora_Aunt # OSCAR HAS TO CHECK THIS IDK HOW WE'RE HANDLING IT
+    pe "'Was so nice to see my baby niece today... She never stays for long, but it's always perfect <3 See you soon, Nora Bora!'"
+    $ v15_nora_clues.add("visited_aunt")
+    $ v15_nora_locations.add("aunt")
 
     scene v15s44_8
     with dissolve
@@ -284,7 +284,8 @@ label v15s44_continue:
     scene v15s44_8a
     with dissolve
 
-    pe "I didn't see anything else other than the whole family being huge nature freaks. They love camping, fishing... All of it. (CLUE UNLOCKED: NORA LOVES NATURE.)"
+    pe "I didn't see anything else other than the whole family being huge nature freaks. They love camping, fishing... All of it."
+    $ v15_nora_clues.add("loves_nature")
 
     scene v15s44_8
     with dissolve
@@ -469,7 +470,7 @@ label v15s44_continue2:
     scene v15s44_9b # TPP. Same as v15s44_9a, both pretending to blow the steam off their guns
     with dissolve
 
-    pause  
+    pause 0.75  
 
     scene v15s44_10 # TPP. MC and Amber exiting the room, both smiling, Amber exiting in front of MC, nouths closed
     with dissolve
