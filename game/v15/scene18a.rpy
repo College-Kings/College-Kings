@@ -621,14 +621,14 @@ label v15s18a_AutumPenelope:
     scene v15s18apen_6a # FPP. MC looking at Penelope, Penelope looking at MC, Penelope slight smile, mouth closed.
     with dissolve
 
-    u "Oh, trust me, I know. Luckily, it's nice and warm in here. Thanks Autumn."
-
-    scene v15s18apen_7 # FPP. MC looking at Autumn as she is starting to sit comfortably on her bed, slight smile, mouth closed.
-    with dissolve
-
-    pause 0.75
+    u "Oh, trust me, I know. Luckily, it's nice and warm in here. Thanks, Autumn."
 
     if signs:
+        scene v15s18apen_7 # FPP. MC looking at Autumn as she is starting to sit comfortably on her bed, slight smile, mouth closed.
+        with dissolve
+
+        pause 0.75
+
         scene v15s18apen_7a # FPP. Autumn sitting on her bed comfortably, MC looking at Autumn, Autumn looking at MC, slight smile, mouth open.
         with dissolve
 
