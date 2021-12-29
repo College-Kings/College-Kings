@@ -36,19 +36,19 @@ label v15s18:
 
     la "Oh... Wow, [name]! That is quite the outfit. *Laughs*"
 
-    scene v15s18_4c # FPP. Same as v15s18_4b, Lauren looking back up at MC, Lauren slight smile, mouth open.
+    scene v15s18_4a # FPP. Same as v15s18_4b, Lauren looking back up at MC, Lauren slight smile, mouth open.
     with dissolve
 
     u "Haha, yeah... Um, it was the only costume they had left..."
 
-    scene v15s18_4a
+    scene v15s18_4c
     with dissolve
 
     la "It's not a surprise that nobody wanted to buy that thing, haha!"
 
     la "You should probably come inside before you get arrested for indecent exposure."
 
-    scene v15s18_4c
+    scene v15s18_4a
     with dissolve
 
     u "*Laughs* Okay, okay... You've completely roasted me and I'm not even inside yet."
@@ -56,24 +56,24 @@ label v15s18:
     scene v15s18_4d # FPP. Same as v15s18_4c, Lauren stepped to the side laughing and holding the door open for MC, Lauren slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v15s18_5 # TPP. Show MC walking into the Deer's house, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1
 
     play sound "sounds/doorclose.mp3"
 
     scene v15s18_6 # TPP. Show of some of the decorations in the house
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18_7 # TPP. More decorations in the house.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18_8 # FPP. MC and Lauren inside the Deer's house. Lauren looking at MC, MC looking at Lauren, Lauren slight smile, mouth closed.
     with dissolve
@@ -319,7 +319,7 @@ label v15s18:
 
         imre "Man, I suspected you lost your damn mind after you joined the Apes. Then you ask me a question like that?"
 
-        imre "*Laughs* Is it that bad?"
+        imre "*Laughs* \"Is it that bad?\""
 
         scene v15s18_11e
         with dissolve
