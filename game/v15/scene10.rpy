@@ -350,7 +350,6 @@ label v15s10:
                     with dissolve
 
                     u "Okay, yeah. I guess that's fair."
-
                 
             scene v15s10_12h # FPP. Same as v15s10_12g, looking at mc, slight smile, mouth open.
             with dissolve
