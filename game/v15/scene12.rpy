@@ -67,7 +67,8 @@ label v15s12:
         scene v15s12_3d # FPP. Lindsey slightly surprised mouth open [Checkpoint B].
         with dissolve
 
-        li "Yes! I know, I literally got handed the inside scoop on her next big idea. Unless for some reason she decides not to follow through with this plan."
+        li "Yes! I know, I literally got handed the inside scoop on her next big idea."
+        li "Unless for some reason she decides not to follow through with this plan."
 
         scene v15s12_3e # FPP. Lindsey happy, smiling, mouth closed [Checkpoint B].
         with dissolve
@@ -87,7 +88,8 @@ label v15s12:
         scene v15s12_4 # FPP. Lindsey neutral expression mouth open [Checkpoint C].
         with dissolve
 
-        li "So, believe it or not, she has this master plan to get me absolutely hammered and then somehow get a recording of me saying something shitty about her and the Chicks."
+        li "So, believe it or not, she has this master plan to get me absolutely hammered..."
+        li "And then somehow get a recording of me saying something shitty about her and the Chicks."
 
         scene v15s12_4a # FPP. Lindsey neutral expression mouth closed [Checkpoint C]. 
         with dissolve
@@ -214,7 +216,8 @@ label v15s12:
 
                 li "Haha, okay... I mean it was nothing too specific, I guess."
                 
-                li "Grayson apparently had major trust issues, and I guess it got to the point where he wouldn't let her go anywhere without telling him exactly where or who she was going with."
+                li "Grayson apparently had major trust issues."
+                li "And I guess it got to the point where he wouldn't let her go anywhere without telling him exactly where or who she was going with."
 
                 scene v15s12_5
                 with dissolve
@@ -534,13 +537,15 @@ label v15s12:
             scene v15s12_8b
             with dissolve
 
-            u "They're both fine ideas, I think we can go with the club, or a game night regardless, and still end up having a good time... But I think this is our best option."
+            u "They're both fine ideas, I think we can go with the club, or a game night regardless, and still end up having a good time..."
+            u "But I think this is our best option."
 
         if v15_lindsey_gamenight: # -if chose Game night
             scene v15s12_8b
             with dissolve
             
-            u "A small group with snacks, drinks, and intimate surroundings. You can really focus on each person and convince them why they should support you."
+            u "A small group with snacks, drinks, and intimate surroundings."
+            u "You can really focus on each person and convince them why they should support you."
 
             scene v15s12_8a
             with dissolve
@@ -561,7 +566,8 @@ label v15s12:
             scene v15s12_8a
             with dissolve
             
-            u "It might be more money that we're taking from the budget, but there's no chance they'll vote for Chloe after you roll up in a limo to take them out for the night."
+            u "It might be more money that we're taking from the budget..."
+            u "But there's no chance they'll vote for Chloe after you roll up in a limo to take them out for the night."
 
             scene v15s12_8b
             with dissolve

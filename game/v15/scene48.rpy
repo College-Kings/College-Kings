@@ -888,7 +888,8 @@ label v15s48:
                         scene v15s48_18
                         with dissolve
 
-                        u "No. Nora, seriously. You're one of the coolest people I've ever met, and I'm an idiot for letting you go. I just don't think I'm your forever either..."
+                        u "No. Nora, seriously. You're one of the coolest people I've ever met, and I'm an idiot for letting you go."
+                        u "I just don't think I'm your forever either..."
 
                         scene v15s48_18b
                         with dissolve

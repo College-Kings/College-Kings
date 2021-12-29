@@ -890,7 +890,7 @@ label v15s18a_AutumPenelope:
             scene v15s18apen_7c
             with dissolve
 
-            aut "Not only does everyone at SVC know you're a virgin, but they also know you asked at least six different women to help you with the list and got denied."
+            aut "Then everyone at SVC knows you're a virgin, and also that you asked at least six different women to help you with the list and got denied."
 
             scene v15s18apen_7b
             with dissolve

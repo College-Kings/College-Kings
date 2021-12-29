@@ -121,7 +121,7 @@ label v15s21:
                 scene v15s21_6c # FPP. same as v15s21_6b Mr. Lee's mouth is open, is still looking at Mc, still no epxpression
                 with dissolve
 
-                lee "While I agree with your concerns for global deforestation, punishing Lindsey for simply putting up posters would be a bit too far, don't you think?"
+                lee "I agree with your global deforestation concerns, but punishing Lindsey for simply putting up posters would be a bit too far, don't you think?"
 
                 scene v15s21_6a
                 with dissolve
@@ -402,7 +402,8 @@ label v15s21:
                 scene v15s21_6o # FPP. same as v15s21_6d Mr. Lee. places a hand under his chin and listens intently, furrows his eyebrows, still a slight smile, mouth is still closed
                 with dissolve
 
-                u "College is a huge financial burden, Mr. Lee. With lower fees, students may be freer to enjoy extracurricular activities around campus, rather than working in between classes."
+                u "College is a huge financial burden, Mr. Lee."
+                u "With lower fees, students may be freer to enjoy extracurricular activities around campus, rather than working in between classes."
 
                 scene v15s21_7
                 with dissolve
@@ -585,7 +586,8 @@ label v15s21:
                 scene v15s21_6r # FPP. same as v15s21_6d Mr. Lee has a full smile, mouth is open, still looking at Mc
                 with dissolve
 
-                lee "I'm glad you asked, [name]. I do have a suggestion, and I believe it'd work, but I'll keep it to myself until I've decided if I'm going to support this idea."
+                lee "I'm glad you asked, [name]. I do have a suggestion, and I believe it'd work."
+                lee "But I'll keep it to myself until I've decided if I'm going to support this idea."
 
         scene v15s21_6d
         with dissolve
@@ -1223,7 +1225,8 @@ label v15s21:
 
                 show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 11, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
 
-                ro "Personally, I think Nora has already made up her mind about Chloe's ability to lead and I'm not here to discuss that or take any part in the ongoing feud."
+                ro "Personally, I think Nora has already made up her mind about Chloe's ability to lead."
+                ro "And I'm not here to discuss that or take any part in the ongoing feud."
 
                 scene v15s21_7l
                 with dissolve
@@ -1251,7 +1254,7 @@ label v15s21:
         scene v15s21_7
         with dissolve
 
-        cl "You know how much I care about the Chicks, and I think with your support we could be on track to become bigger and better than ever before."
+        cl "You know how much I care about the Chicks, and I think with your support we could become bigger and better than ever before."
 
         scene v15s21_13
         with dissolve
@@ -1418,7 +1421,7 @@ label v15s21:
         scene v15s21_13a
         with dissolve
 
-        ro "How do you think the other sororities and frats are going to react, if they hear that the Chicks are getting special treatment with these reduced tuition fees?"
+        ro "How do you think the other sororities and frats will react, if they hear the Chicks are getting special treatment with reduced tuition fees?"
 
         scene v15s21_7l
         with dissolve
@@ -1454,7 +1457,7 @@ label v15s21:
                 scene v15s21_13f
                 with dissolve
 
-                u "I think it would motivate the Presidents to want to achieve similar goals as the Chicks, when they see what kind of things Chloe can achieve."
+                u "I think it would motivate them to want to achieve similar goals as the Chicks when they see what kind of things Chloe can achieve."
 
                 u "Hopefully people will begin to look at the Chicks and realize that these young women are ambitious, determined, and aren't afraid to try."
 
@@ -1936,7 +1939,8 @@ label v15s21:
 
         ro "I think it's the only way forward, truly."
 
-        ro "The Dean will have to consider the financial implications and there's no point in me signing off my support if we can't afford to go through with it."
+        ro "The Dean will have to consider the financial implications."
+        ro "There's no point in me signing off my support if we can't afford to go through with it."
 
         scene v15s21_7w # FPP. same as v15s21_7a Chloe has a conflicted expression, still looking at MC, mouth is still closed
         with dissolve

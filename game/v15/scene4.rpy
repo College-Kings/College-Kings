@@ -1173,7 +1173,8 @@ label v15s4:
             scene v15s4_43h
             with dissolve
 
-            aut "Yeah, I'm sure. I mean, thanks for offering, but this kind of thing happens every day. Some people just can't handle the responsibility when it comes down to it."
+            aut "Yeah, I'm sure. I mean, thanks for offering, but this kind of thing happens every day."
+            aut "Some people just can't handle the responsibility when it comes down to it."
 
             scene v15s4_43g
             with dissolve

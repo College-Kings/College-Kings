@@ -637,9 +637,11 @@ label v15s25:
                         scene v15s25_7h
                         with dissolve
 
-                        u "I understand. I'm just hoping you can offer a discount, even just a small one. You see, my friend, Lindsey. It's her night really. I'm just helping her out."
+                        u "I understand. I'm just hoping you can offer a discount, even just a small one."
+                        u "You see, my friend, Lindsey. It's her night really. I'm just helping her out."
 
-                        u "Her mom passed away recently, and she's been putting so much effort into her presidential campaign at college. That's what all this is for, you see."
+                        u "Her mom passed away recently, and she's been putting so much effort into her presidential campaign at college."
+                        u "That's what all this is for, you see."
 
                         u "And it might sound silly, but it's like she's doing it all for her mom, you know?"
 

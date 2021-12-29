@@ -944,7 +944,8 @@ label v15s43:
                 scene v15s43_14g
                 with dissolve
 
-                u "Nora has an aunt that lives near campus, sounds like they're close.... And as her ex-boyfriend of multiple years, you have no idea where she lives?"
+                u "Nora has an aunt that lives near campus, sounds like they're close...."
+                u "And as her ex-boyfriend of multiple years, you have no idea where she lives?"
 
                 scene v15s43_15
                 with dissolve

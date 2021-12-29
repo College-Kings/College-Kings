@@ -1071,7 +1071,8 @@ label v15s45:
                 scene v15s45_7g
                 with dissolve
 
-                cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it... I think you might need to take another look at your evidence."
+                cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it..."
+                cl "I think you might need to take another look at your evidence."
                 $ v15_nora_clues.add("hates_camping")
 
                 scene v15s45_8
@@ -1237,7 +1238,8 @@ label v15s45:
                 scene v15s45_7g
                 with dissolve
 
-                cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it... I think you might need to take another look at your evidence."
+                cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it..."
+                cl "I think you might need to take another look at your evidence."
                 $ v15_nora_clues.add("hates_camping")
 
                 scene v15s45_8
@@ -1424,7 +1426,8 @@ label v15s45:
                 scene v15s45_7g
                 with dissolve
 
-                cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it... I think you might need to take another look at your evidence."
+                cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it..."
+                cl "I think you might need to take another look at your evidence."
                 $ v15_nora_clues.add("hates_camping")
 
                 scene v15s45_8
