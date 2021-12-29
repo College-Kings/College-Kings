@@ -768,8 +768,8 @@ label v15s21:
 
         pause 0.75
 
-        if v15_meeting_points >= 4: #TBD optimal difficulty level
-            if v15_meeting_points == 4 and kct == "loyal":
+        if v15_meeting_points >= 5: #TBD optimal difficulty level
+            if v15_meeting_points == 5 and kct == "loyal":
                 call screen kct_popup
                 
             scene v15s21_6
@@ -802,7 +802,7 @@ label v15s21:
 
             pause 0.75
 
-        elif v15_meeting_points >= 2:
+        elif v15_meeting_points >= 3:
             scene v15s21_6
             with dissolve
 
@@ -840,8 +840,8 @@ label v15s21:
 
             pause 0.75
 
-        elif v15_meeting_points >= 0:
-            if v15_meeting_points == 0 and kct == "loyal":
+        elif v15_meeting_points >= 1:
+            if v15_meeting_points == 1 and kct == "loyal":
                 call screen kct_popup
             
             scene v15s21_6h
@@ -1734,8 +1734,8 @@ label v15s21:
 
         pause 0.75
 
-        if v15_meeting_points >= 4: #TBD optimal difficulty level
-            if v15_meeting_points == 4 and kct == "confident":
+        if v15_meeting_points >= 5: #TBD optimal difficulty level
+            if v15_meeting_points == 5 and kct == "confident":
                 call screen kct_popup
         
             scene v15s21_13i
@@ -1763,7 +1763,7 @@ label v15s21:
 
             pause 0.75
 
-        elif v15_meeting_points >= 2:
+        elif v15_meeting_points >= 3:
             scene v15s21_13a
             with dissolve
 
@@ -1799,8 +1799,8 @@ label v15s21:
 
             pause 0.75
 
-        elif v15_meeting_points >= 0:
-            if v15_meeting_points == 0 and kct == "confident":
+        elif v15_meeting_points >= 1:
+            if v15_meeting_points == 1 and kct == "confident":
                 call screen kct_popup
 
             scene v15s21_13a

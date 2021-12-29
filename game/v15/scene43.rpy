@@ -16,7 +16,7 @@ label v15s43:
 
     pause 0.75
 
-    scene v15s42_2a # FPP. Amber and MC both looking at the door waiting for an answer, Amber slight smile, mouth closed.
+    scene v15s43_2a # FPP. Amber and MC both looking at the door waiting for an answer, Amber slight smile, mouth closed.
     with dissolve
 
     pause 0.75
@@ -40,7 +40,7 @@ label v15s43:
         pause 0.75
 
         if detective == "professional":
-            scene v15s42_2a 
+            scene v15s43_2a 
             with dissolve
 
             menu:
@@ -171,7 +171,7 @@ label v15s43:
                     am "I didn't think it would be that easy, haha."
 
         elif detective == "psychologist":
-            scene v15s42_2a 
+            scene v15s43_2a 
             with dissolve
 
             menu:
@@ -284,7 +284,7 @@ label v15s43:
                     u "He's already playing mind games with us, this isn't good."
 
         else:
-            scene v15s42_2a 
+            scene v15s43_2a 
             with dissolve
 
             menu:

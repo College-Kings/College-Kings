@@ -39,11 +39,6 @@ label v15s42:
 
     am "Grab a coffee, we've got a lot of work to do."
 
-    scene v15s42_3d # FPP. Amber standing infront of MC, Amber smirking, mouth closed.
-    with dissolve
-
-    pause 0.75
-
     scene v15s42_4 # FPP. show Amber pouring a cup of coffee from the coffee machine, slight smile, mouth closed.
     with dissolve
 

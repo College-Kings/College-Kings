@@ -404,7 +404,7 @@ label v15s18a_Ryan:
     scene v15s18a_ryan_2 # TPP. Show MC entering into the bathroom, as he enters we see Ryan sitting on the floor with his head above the toilet since he is puking, his face obscured by the toilet and we don't ever see inside it.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18a_ryan_3 # FPP. MC looking at Ryan, Ryan's face still obscured by toilet, Ryan disgusted face, mouth closed.
     with dissolve
@@ -513,8 +513,6 @@ label v15s18a_Ryan:
 
         pause 0.75
 
-        play sound "sounds/doorclose.mp3"
-
         scene v15s18a_ryan_2a # TPP. Show MC exiting the bathroom, as he leaves we see Ryan sitting on the floor with his head above the toilet since he is puking, his face obscured by the toilet and we don't ever see inside it.
         with dissolve
         
@@ -526,12 +524,12 @@ label v15s18a_Ryan:
 
         u "Ha, feel better soon, Ryan. Drink lots of water when you're able to."
 
-        play sound "sounds/doorclose.mp3"
-
         scene v15s18a_ryan_2a
         with dissolve
 
         pause 0.75
+
+    play sound "sounds/doorclose.mp3"
 
     scene v15s18a_ryan_6 # TPP. MC standing outside of the bathroom door, neutral face, mouth closed
     with dissolve
@@ -623,14 +621,14 @@ label v15s18a_AutumPenelope:
     scene v15s18apen_6a # FPP. MC looking at Penelope, Penelope looking at MC, Penelope slight smile, mouth closed.
     with dissolve
 
-    u "Oh, trust me, I know. Luckily, it's nice and warm in here. Thanks Autumn."
-
-    scene v15s18apen_7 # FPP. MC looking at Autumn as she is starting to sit comfortably on her bed, slight smile, mouth closed.
-    with dissolve
-
-    pause 0.75
+    u "Oh, trust me, I know. Luckily, it's nice and warm in here. Thanks, Autumn."
 
     if signs:
+        scene v15s18apen_7 # FPP. MC looking at Autumn as she is starting to sit comfortably on her bed, slight smile, mouth closed.
+        with dissolve
+
+        pause 0.75
+
         scene v15s18apen_7a # FPP. Autumn sitting on her bed comfortably, MC looking at Autumn, Autumn looking at MC, slight smile, mouth open.
         with dissolve
 
@@ -1044,13 +1042,6 @@ label v15s18a_AutumPenelope:
 
             u "*Sighs* No, I wasn't lying."
 
-    ### check transitions
-    ### especially if 7b dissolves into 7b again
-    scene v15s18apen_7b
-    with dissolve
-
-    pause 0.75
-   
     scene v15s18apen_6a
     with dissolve
 
@@ -1324,13 +1315,6 @@ label v15s18a_ImreLauren:
             with dissolve
 
             imre "Oh, I- I don't know, ha. Sorry, bro."
-
-    #check transitions
-    
-    scene v15s18aimre_6a
-    with dissolve
-
-    pause 0.75
 
     scene v15s18aimre_4
     with dissolve
@@ -2357,7 +2341,7 @@ label v15s18a_ChrisAmber:
 
                     pause 0.75
 
-                    scene v15s18amber_11 # TPP. Just Amber wiping her mouth, slight smile, mouth closed.
+                    scene v15s18aamber_11 # TPP. Just Amber wiping her mouth, slight smile, mouth closed.
                     with dissolve
 
                     am "I hope nobody was standing under there, haha."
