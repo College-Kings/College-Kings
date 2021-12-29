@@ -13,7 +13,7 @@ label v14_start:
     
     if emmy.simplr.pending_messages: #for compatibility with v12 players where emmy replies were not forced to be seen
         $ emmy.simplr.pending_messages = []
-        $ emmy.simplr.sentMessages[-1].replies = []
+        $ emmy.simplr.sent_messages[-1].replies = []
 
     if aubrey.relationship.value >= Relationship.FWB.value and riley.relationship.value >= Relationship.FWB.value:
         $ v13_threesomeending = True
