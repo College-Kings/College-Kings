@@ -1866,10 +1866,10 @@ label v12s18_bet: # END OF FREE ROAM
     pause 0.75
 
     if v11_overtake_points >= 2: # MC wins the race
-        $ v12s18_kiwiiPost2.removePost()
+        $ v12s18_kiwiiPost2.remove_post()
 
     else: # MC loses the race
-        $ v12s18_kiwiiPost3.removePost()
+        $ v12s18_kiwiiPost3.remove_post()
 
     scene v12slpbet16a # TPP. Same camera as v12slpbet16, MC and Amber now lying on the bed, away from each other, both smiling, mouths closed
     with dissolve
