@@ -16,6 +16,31 @@ init python:
         TAMED = 9
         GIRLFRIEND = 10
 
+        def __lt__(self, other):
+            if not isinstance(other, Relationship):
+                raise TypeError("Relation {} must be of type Relationship.".format(other))
+
+            return self.value < other.value
+
+        def __le__(self, other):
+            if not isinstance(other, Relationship):
+                raise TypeError("Relation {} must be of type Relationship.".format(other))
+
+            return self.value <= other.value
+
+        def __gt__(self, other):
+            if not isinstance(other, Relationship):
+                raise TypeError("Relation {} must be of type Relationship".format(other))
+
+            return self.value > other.value
+
+        def __ge__(self, other):
+            if not isinstance(other, Relationship):
+                raise TypeError("Relation {} must be of type Relationship".format(other))
+
+            return self.value >= other.value
+
+
     class NonPlayableCharacter:
         """
         Custom character class primarily used for managing all the character specific function of the game.
