@@ -433,10 +433,29 @@ label v15s12:
 
         u "Haha, damn straight!"
 
-        scene v15s12_8a # FPP. Same as v15s12_8, but not pointing at the board, smiling mouth open [Janitor's closet].
-        with dissolve
+        if lindsey_board.money < 800:
+            scene v15s12_8a
+            with dissolve
+            
+            li "I had this great idea to organize a VIP night but I've checked around and I can't actually afford it."
+            
+            if "cash_small" in freeroam12stolen or "cash_large" in freeroam12stolen:
+                li "I know you risked a lot going through Chloe's room but these things are just that expensive."
+                
+            elif not v14_lindsey_sell:
+                li "It's a shame that you couldn't find anything in Chloe's room..."
+                
+            elif v15_lindsey_sold:
+                li "We just didn't get a good enough offer on the car, but hopefully we can put that money to good use in the future."
+                
+            elif v14_lindsey_sell:
+                li "It's a shame that we couldn't get any offers on the car..."
+            
+        else:
+            scene v15s12_8a # FPP. Same as v15s12_8, but not pointing at the board, smiling mouth open [Janitor's closet].
+            with dissolve
 
-        li "So basically, it's just who you think should come, and what the best way to gain their support would be."
+            li "So basically, it's just who you think should come, and what the best way to gain their support would be."
 
         # -The planning board pops up and MC makes his choices from what's presented-
 
@@ -507,10 +526,17 @@ label v15s12:
 
         # End planning board (screen disappears)
 
-        scene v15s12_8b
-        with dissolve
+        if lindsey_board.money < 800:
+            scene v15s12_8b
+            with dissolve
+            
+            u "Yeah, we really don't have much of a choice here."
+        
+        else:
+            scene v15s12_8b
+            with dissolve
 
-        u "They're both fine ideas. I think we can go with either the club or a game night and still end up having a good time... But I think this is our best option."
+            u "They're both fine ideas, I think we can go with the club, or a game night regardless, and still end up having a good time... But I think this is our best option."
 
         if v15_lindsey_gamenight: # -if chose Game night
             scene v15s12_8b

@@ -376,4 +376,4 @@ label v15s40:
 
     pause 0.75
 
-    jump v14s41
+    jump v15s41
