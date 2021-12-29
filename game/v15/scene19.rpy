@@ -23,11 +23,6 @@ label v15s19:
 
         pause 0.75
 
-        scene v15s19_1c # TPP. Widen out, MC laying on the bed facing the wall (not the door), no shirt, waking up, smiling, mouth closed with an emtpy bed next to him [Deer House Guest Room].
-        with dissolve
-
-        pause 0.75
-
         scene v15s19_1d # TPP. MC laying down, no shirt, smiling, mouth open, rolling over towards the door, reaching for Lauren in the empty space next to him [Deer House Guest Room].
         with dissolve
 
