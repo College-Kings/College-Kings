@@ -421,7 +421,8 @@ label v15s9:
         play sound "sounds/vibrate.mp3"
 
         if (v14s48_car_price >= 300 and v14s48_car_price <= 750 and v14_pics_with_linds) or (v14s48_car_price >= 300 and v14s48_car_price <= 550):
-        # -if MC chose to sell the car for between $300 and $750 and Lindsey is in the photos OR MC chose to sell the car for between $300 and $550 and Lindsey is not in the photos
+            $ v15_lindsey_sold = True
+            # -if MC chose to sell the car for between $300 and $750 and Lindsey is in the photos OR MC chose to sell the car for between $300 and $550 and Lindsey is not in the photos
             $ lindsey.messenger.newMessage("Hey! Somebody wants to check out the car and they sound really interested!", queue=False)
             $ lindsey.messenger.newMessage("I'm meeting them now. Can you come to where we took the photos?", queue=False)
 
@@ -446,7 +447,6 @@ label v15s9:
             jump v15s10
 
         else:
-            $ v15_lindsey_sold = True
         # -if MC chose to sell the car for anything over $750 and Lindsey is in the photos OR MC chose to sell the car for anything over $550 and Lindsey is not in the photos OR MC chose to sell the car for anything under $300 with photos either with or without Lindsey
 
             $ lindsey.messenger.newMessage("24 hours is up! No interested buyers on the car... :(", queue=False)
