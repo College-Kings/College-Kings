@@ -568,7 +568,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
             scene v15s32_8j
             with dissolve
 
-            u "Like, holy hell.... I'm one lucky guy."
+            u "Like, holy hell... I'm one lucky guy."
 
             scene v15s32_8k # -Aubrey blushes a little-
             with dissolve

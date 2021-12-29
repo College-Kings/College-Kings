@@ -991,7 +991,7 @@ label v15s48:
                             scene v15s48_23a # FPP. Nora bending over and kissing MC.
                             with dissolve
 
-                            u "(My god have I missed this....) *Moans*"
+                            u "(My god have I missed this...) *Moans*"
 
                         else:
                             scene v15s48_18a

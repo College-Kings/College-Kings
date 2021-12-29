@@ -126,7 +126,7 @@ label v15s43:
                     scene v15s43_2c
                     with dissolve
 
-                    am "Yeah, but we're undercover detectives. Deep undercover.... We don't even carry badges. *Giggles*"
+                    am "Yeah, but we're undercover detectives. Deep undercover... We don't even carry badges. *Giggles*"
 
                     scene v15s43_2b
                     with dissolve
@@ -944,7 +944,7 @@ label v15s43:
                 scene v15s43_14g
                 with dissolve
 
-                u "Nora has an aunt that lives near campus, sounds like they're close...."
+                u "Nora has an aunt that lives near campus, sounds like they're close..."
                 u "And as her ex-boyfriend of multiple years, you have no idea where she lives?"
 
                 scene v15s43_15
