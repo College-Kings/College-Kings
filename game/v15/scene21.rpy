@@ -403,7 +403,7 @@ label v15s21:
                 with dissolve
 
                 u "College is a huge financial burden, Mr. Lee."
-                u "With lower fees, students may be freer to enjoy extracurricular activities around campus, rather than working in between classes."
+                u "With lower fees, students may be more free to enjoy extracurricular activities around campus, rather than working in between classes."
 
                 scene v15s21_7
                 with dissolve
