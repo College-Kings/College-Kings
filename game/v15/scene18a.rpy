@@ -1534,7 +1534,7 @@ label v15s18a_Riley:
     scene v15s18ariley_2f
     with dissolve
 
-    u "Yeah, ha. Thanks, that dollar will definitely help me get through college."
+    u "Yeah, ha. Thanks, that change will definitely help me get through college."
 
     scene v15s18ariley_2e
     with dissolve
