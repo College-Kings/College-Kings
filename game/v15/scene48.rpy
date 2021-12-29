@@ -683,8 +683,8 @@ label v15s48:
                 no "You're not wrong... *Sighs*"
 
             if nora.relationship.value < Relationship.FWB.value and v15s48_follow_your_heart and not v15s48_interrupt and kct != "confident":
+                $ v15s48_variable_check += 1
                 if v15s48_follow_your_heart:
-                    $ v15s48_variable_check += 1
                     scene v15s48_18a
                     with dissolve
 
@@ -693,8 +693,6 @@ label v15s48:
                     no "I think we have wine... Be right back!"
                     
                 else:
-                    $ v15s48_variable_check += 1
-                                    
                     scene v15s48_18a
                     with dissolve
 
