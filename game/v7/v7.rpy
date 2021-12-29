@@ -1519,7 +1519,7 @@ label conyourdorm:
                 with dissolve
                 u "*Sighs*"
 
-                $ v7_kiwiiPost4.removePost()
+                $ v7_kiwiiPost4.remove_post()
 
                 if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     u "(Time to make things right with Lauren.)"
@@ -1598,7 +1598,7 @@ label conyourdorm:
 
                 u "(I forgot how fucking crazy she is...)"
 
-                $ v7_kiwiiPost4.removePost()
+                $ v7_kiwiiPost4.remove_post()
 
                 if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     u "(Time to make things right with Lauren.)"
