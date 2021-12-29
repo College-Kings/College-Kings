@@ -1530,7 +1530,8 @@ label v15s18a_Riley:
 
     ri "Only if you want to... That was a big tip."
 
-    scene v15s18ariley_2i # FPP. MC looking at Riley, Riley looking at MC, Riley smirking, mouth closed.
+    #scene v15s18ariley_2i # FPP. MC looking at Riley, Riley looking at MC, Riley smirking, mouth closed.
+    scene v15s18ariley_2f
     with dissolve
 
     u "Yeah, ha. Thanks, that dollar will definitely help me get through college."
