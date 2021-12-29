@@ -28,7 +28,8 @@ label v15s34:
             scene v15s34_2a # TPP. Show MC in the middle of his wolves room, slight smile, mouth closed.
             with dissolve
 
-            u "(I really enjoyed my day with Aubrey. She seems comfortable sharing so much of her life with me now and sees me as someone she can trust.)"
+            u "(I really enjoyed my day with Aubrey.)"
+            u "(She seems comfortable sharing so much of her life with me now and sees me as someone she can trust.)"
 
             if aubrey.relationship.value >= Relationship.TAMED.value:
                 u "(And I'm so excited to see what's next for us...)"
@@ -142,7 +143,8 @@ label v15s34:
             scene v15s34_7a # TPP. Show MC in the middle of his apes room, slight smile, mouth closed.
             with dissolve
 
-            u "(I really enjoyed my day with Aubrey. She seems comfortable sharing so much of her life with me now and sees me as someone she can trust.)"
+            u "(I really enjoyed my day with Aubrey.)"
+            u "(She seems comfortable sharing so much of her life with me now and sees me as someone she can trust.)"
 
             if aubrey.relationship.value >= Relationship.TAMED.value:
                 u "(And I'm so excited to see what's next for us...)"

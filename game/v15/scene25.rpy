@@ -222,7 +222,7 @@ label v15s25:
 
     menu:
         "It's important for us":
-            $ v15_lindsey_alcohol = True
+
             u "It's an important night for us."
 
             scene v15s25_7
@@ -244,78 +244,92 @@ label v15s25:
             with dissolve
 
             u "It's for my friend Lindsey, you see? I'm just trying to do everything I can to help her out."
+
+            menu: 
+                "She deserves to be president":
+
+                    u "She really deserves to be president, she could really elevate the lives of everyone in her sorority."
+
+                    scene v15s25_7
+                    with dissolve
+
+                    admin "And I'm sure she will, but there's a legal drinking age. I'm sorry, there's nothing I can do."
+
+                "Her mom passed away recently":
+                    $ v15_lindsey_alcohol = True
            
-            u "Her mom passed away recently, and she's putting so much effort into her presidential campaign."
+                    u "Her mom passed away recently, and she's putting so much effort into her presidential campaign."
 
-            scene v15s25_7f # TPP. Split Screen. First side, MC on the phone in the chair, slight smile, mouth open. Second side, Booking admin at her desk, slight frown, mouth closed.
-            with dissolve
+                    scene v15s25_7f # TPP. Split Screen. First side, MC on the phone in the chair, slight smile, mouth open. Second side, Booking admin at her desk, slight frown, mouth closed.
+                    with dissolve
 
-            u "It's like she's doing it all for her mom, you know. And I don't want to let her down..."
+                    u "It's like she's doing it all for her mom, you know. And I don't want to let her down..."
 
-            scene v15s25_7g # TPP. Split Screen. First side, MC on the phone in the chair, neutral face, mouth closed. Second side, Booking admin at her desk, teary eyes, slight frown, mouth open.
-            with dissolve
+                    scene v15s25_7g # TPP. Split Screen. First side, MC on the phone in the chair, neutral face, mouth closed. Second side, Booking admin at her desk, teary eyes, slight frown, mouth open.
+                    with dissolve
 
-            admin "Oh... That's so sweet. *Sniffles* Bless her heart."
+                    admin "Oh... That's so sweet. *Sniffles* Bless her heart."
 
-            admin "I lost my mom last year, so I know exactly how she feels."
+                    admin "I lost my mom last year, so I know exactly how she feels."
 
-            scene v15s25_7h # TPP. Split Screen. First side, MC on the phone in the chair, neutral, mouth open. Second side, Booking admin at her desk, wiping her eyes, slight smile, mouth closed.
-            with dissolve
+                    scene v15s25_7h # TPP. Split Screen. First side, MC on the phone in the chair, neutral, mouth open. Second side, Booking admin at her desk, wiping her eyes, slight smile, mouth closed.
+                    with dissolve
 
-            u "Oh, I'm sorry for your loss."
+                    u "Oh, I'm sorry for your loss."
 
-            scene v15s25_7
-            with dissolve
+                    scene v15s25_7
+                    with dissolve
 
-            admin "*Clears throat* Mhmm, yes. Thank you."
+                    admin "*Clears throat* Mhmm, yes. Thank you."
 
-            admin "When my mom passed, I kept productive with some new hobbies, and it really helped. Sounds like your friend is doing the same."
+                    admin "When my mom passed, I kept productive with some new hobbies, and it really helped. Sounds like your friend is doing the same."
 
-            scene v15s25_7a
-            with dissolve
+                    scene v15s25_7a
+                    with dissolve
 
-            u "Yeah, she's stronger than she appears. That's for sure."
+                    u "Yeah, she's stronger than she appears. That's for sure."
 
-            scene v15s25_7
-            with dissolve
+                    scene v15s25_7
+                    with dissolve
 
-            admin "Okay..."
+                    admin "Okay..."
 
-            admin "Listen, I'm not supposed to do this, but..."
+                    admin "Listen, I'm not supposed to do this, but..."
 
-            admin "I'll just leave this little tick box unchecked... So that you guys get some alcohol, and nobody checks your IDs, okay?"
+                    admin "I'll just leave this little tick box unchecked... So that you guys get some alcohol, and nobody checks your IDs, okay?"
 
-            scene v15s25_7a
-            with dissolve
+                    scene v15s25_7a
+                    with dissolve
 
-            u "That would be amazing! I-"
+                    u "That would be amazing! I-"
 
-            scene v15s25_7
-            with dissolve
+                    scene v15s25_7
+                    with dissolve
 
-            admin "But please, be on your best behavior tomorrow night."
+                    admin "But please, be on your best behavior tomorrow night."
 
-            scene v15s25_7a
-            with dissolve
+                    scene v15s25_7a
+                    with dissolve
 
-            u "Don't worry, we're all very mature for our age."
+                    u "Don't worry, we're all very mature for our age."
 
-            scene v15s25_7
-            with dissolve
+                    scene v15s25_7
+                    with dissolve
 
-            admin "You do sound mature for your age, so I think I can trust you."
+                    admin "You do sound mature for your age, so I think I can trust you."
 
-            scene v15s25_7a
-            with dissolve
+                    scene v15s25_7a
+                    with dissolve
 
-            u "You can, I promise. Thank you so much, you're incredible"
+                    u "You can, I promise. Thank you so much, you're incredible"
 
-            scene v15s25_7
-            with dissolve
+                    scene v15s25_7
+                    with dissolve
 
-            admin "Let's just call it my good deed for the day, haha."
+                    admin "Let's just call it my good deed for the day, haha."
 
         "Disagree with the policy":
+
             u "I think you should check state legislation about the legal drinking age."
 
             scene v15s25_7
@@ -343,7 +357,7 @@ label v15s25:
             scene v15s25_7
             with dissolve
 
-            admin "It sounds illegal, sir. And the internet isn't a trusted source of information, I'm sorry."
+            admin "It sounds illegal, sir. And the internet isn't a trustworthy source of information, I'm sorry."
 
             scene v15s25_7a
             with dissolve
@@ -546,14 +560,14 @@ label v15s25:
         scene v15s25_7
         with dissolve
 
-        admin "So, for the full VIP party package, without alcohol, that comes to $800. You'll need to pay as soon as you arrive."
+        admin "So, for the full VIP party package, without alcohol, that comes to $700. You'll need to pay as soon as you arrive."
 
         scene v15s25_7b
         with dissolve
 
         menu:
             "Accept the price":
-                $ lindsey_board.money -= 800
+                $ lindsey_board.money -= 700
                 scene v15s25_7a
                 with dissolve
 
@@ -605,7 +619,7 @@ label v15s25:
                 scene v15s25_7a
                 with dissolve
             
-                u "Eight hundred seems overpriced."
+                u "Seven hundred seems overpriced."
 
                 scene v15s25_7
                 with dissolve
@@ -618,14 +632,16 @@ label v15s25:
                 with dissolve
 
                 menu:
-                    "Be honest":
-                        $ lindsey_board.money -= 600
+                    "Lindsey's mom passed away recently":
+                        $ lindsey_board.money -= 500
                         scene v15s25_7h
                         with dissolve
 
-                        u "I understand. I'm just hoping you can offer a discount, even just a small one. You see, my friend, Lindsey. It's her night really. I'm just helping her out."
+                        u "I understand. I'm just hoping you can offer a discount, even just a small one."
+                        u "You see, my friend, Lindsey. It's her night really. I'm just helping her out."
 
-                        u "Her mom passed away recently, and she's been putting so much effort into her presidential campaign at college. That's what all this is for, you see."
+                        u "Her mom passed away recently, and she's been putting so much effort into her presidential campaign at college."
+                        u "That's what all this is for, you see."
 
                         u "And it might sound silly, but it's like she's doing it all for her mom, you know?"
 
@@ -697,56 +713,34 @@ label v15s25:
 
                         u "Bye."
 
-                    "Lie":
-                        $ lindsey_board.money -= 800
+                    "Ask about student discounts":
+                        $ lindsey_board.money -= 700
                         scene v15s25_7a
                         with dissolve
 
-                        u "What about a senior discount? Does no one respect the elderly anymore?"
+                        u "What about a student discount?"
 
                         scene v15s25_7i
                         with dissolve
 
-                        admin "Sir... Is this a prank?"
+                        admin "We're a lounge, we don't get that many students."
 
                         scene v15s25_7j
                         with dissolve
 
-                        u "No, of course not."
+                        u "Well that's probably cause of your lack of discounts."
 
                         scene v15s25_7i
                         with dissolve
 
-                        admin "You're not old enough to drink, what make you think you deserve a senior discount?"
-
-                        admin "You should be ashamed. Those discounts are used because the elderly don't get enough assistance from the government."
-
-                        scene v15s25_7k # TPP. Split Screen. First side, MC on the phone in the chair, neutral face, mouth open. Second side, Booking admin at her desk, upset, mouth closed.
-                        with dissolve
-
-                        u "..."
-
-                        scene v15s25_7l # TPP. Split Screen. First side, MC on the phone in the chair, neutral face, mouth closed. Second side, Booking admin at her desk, upset, mouth open.
-                        with dissolve
-
-                        admin "You should apologize."
-
-                        scene v15s25_7k
-                        with dissolve
-
-                        u "Sorry."
-
-                        scene v15s25_7l
-                        with dissolve
-
-                        admin "Not to me."
+                        admin "Sadly I can't just create new discounts out of thin air. You're going to have to pay full price."
 
                         scene v15s25_7k
                         with dissolve
 
                         u "*Sighs* Okay, whatever."
 
-                        u "We'll pay the eight hundred."
+                        u "We'll pay the seven hundred."
 
                         scene v15s25_7l
                         with dissolve

@@ -446,6 +446,7 @@ label v15s9:
             jump v15s10
 
         else:
+            $ v15_lindsey_sold = True
         # -if MC chose to sell the car for anything over $750 and Lindsey is in the photos OR MC chose to sell the car for anything over $550 and Lindsey is not in the photos OR MC chose to sell the car for anything under $300 with photos either with or without Lindsey
 
             $ lindsey.messenger.newMessage("24 hours is up! No interested buyers on the car... :(", queue=False)

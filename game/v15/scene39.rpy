@@ -298,7 +298,7 @@ label v15s39:
 
     u "(Tonight seems to be going well, but Lindsey hasn't mentioned anything about getting their support...)"
 
-    scene v15s39_8c # FPP. same as v15s39_8b Lindsey's mouth is closed, still a smile, still looking at MC
+    scene v15s39_8c # FPP. same as v15s39_8b Lindsey's mouth is closed, still a smile, still looking at MC, Lindsey leans into listen to Mc
     with dissolve
 
     u "*Whispers* Hey. Lindsey. This might be a good time to talk about your campaign."
@@ -501,7 +501,7 @@ label v15s39:
     scene v15s39_12c
     with dissolve
 
-    au "That's not false. She should be doing more."
+    au "You're right. She should be doing more."
 
     scene v15s39_8f # FPP. same as v15s39_8f Lindsey is now looking at Autumn, still no expression, mouth is still open
     with dissolve

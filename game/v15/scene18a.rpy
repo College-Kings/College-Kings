@@ -15,17 +15,17 @@ label v15s18a:
     # -Characters are greyed out after they are spoken too besides Lauren. She needs to stay highlighted as she is the way to end the free roam-
 
     $ v15s18a_kiwiiPost1 = KiwiiPost(lauren, "Steamy and spooky photo of her costume before the party begins", _("Feeling one year older ;)"), numberLikes=854)
-    $ v15s18a_kiwiiPost1.newComment(lindsey, _("Holy fuck, babe! You look spectacular, I hope you have the most amazing birthday <3"), queue=False)
-    $ v15s18a_kiwiiPost1.newComment(autumn, _("Can't wait to celebrate! Happy Birthday, Renny <33"), queue=False)
-    $ v15s18a_kiwiiPost1.newComment(chloe, _("Sorry I couldn't be there! I'm just so busy... Enjoy yourself and have the night of your life! Happy birthday :)"), queue=False)
-    $ v15s18a_kiwiiPost1.newComment(amber, _("YES!! That costume is everything! Happy b-day hottie, see you in a bit <3"), queue=False)
-    $ v15s18a_kiwiiPost1.newComment(lauren, _("Thank you ladies!!"), queue=False)
+    $ v15s18a_kiwiiPost1.newComment(lindsey, _("Holy fuck, babe! You look spectacular, I hope you have the most amazing birthday <3"), numberLikes=renpy.random.randint(15, 35), queue=False)
+    $ v15s18a_kiwiiPost1.newComment(autumn, _("Can't wait to celebrate! Happy Birthday, Renny <33"), numberLikes=renpy.random.randint(15, 35), queue=False)
+    $ v15s18a_kiwiiPost1.newComment(chloe, _("Sorry I couldn't be there! I'm just so busy... Enjoy yourself and have the night of your life! Happy birthday :)"), numberLikes=renpy.random.randint(15, 35), queue=False)
+    $ v15s18a_kiwiiPost1.newComment(amber, _("YES!! That costume is everything! Happy b-day hottie, see you in a bit <3"), numberLikes=renpy.random.randint(15, 35), queue=False)
+    $ v15s18a_kiwiiPost1.newComment(lauren, _("Thank you ladies!!"), numberLikes=renpy.random.randint(15, 35), queue=False)
 
     $ v15s18a_kiwiiPost2 = KiwiiPost(autumn, "Photo of halloween decorations for the party whether it's inside or outside the house", _("Spooky sister season :)"), numberLikes=743)
-    $ v15s18a_kiwiiPost2.newComment(penelope, _("I'll never understand your decorating skills... I'm so excited for tonight!"), queue=False)
-    $ v15s18a_kiwiiPost2.newComment(lauren, _("The house looks absolutely perfect, I couldn't have asked for more! Love u <3"), queue=False)
-    $ v15s18a_kiwiiPost2.newComment(riley, _("So fucking cool! You're planning my wedding one day, Autumn..."), queue=False)
-    $ v15s18a_kiwiiPost2.newComment(autumn, _("Haha, sounds great!"), queue=False)
+    $ v15s18a_kiwiiPost2.newComment(penelope, _("I'll never understand your decorating skills... I'm so excited for tonight!"), numberLikes=renpy.random.randint(15, 35), queue=False)
+    $ v15s18a_kiwiiPost2.newComment(lauren, _("The house looks absolutely perfect, I couldn't have asked for more! Love u <3"), numberLikes=renpy.random.randint(15, 35), queue=False)
+    $ v15s18a_kiwiiPost2.newComment(riley, _("So fucking cool! You're planning my wedding one day, Autumn..."), numberLikes=renpy.random.randint(15, 35), queue=False)
+    $ v15s18a_kiwiiPost2.newComment(autumn, _("Haha, sounds great!"), numberLikes=renpy.random.randint(15, 35), queue=False)
 
     pause 0.75
     
@@ -360,29 +360,29 @@ label v15s18a_Aubrey:
 
     if v15s18a_aub_kiwii_smile:
         $ v15s18a_kiwiiPost3 = KiwiiPost(aubrey, "Selfie with MC smiling at halloween party", _("Spooky season? More like stripper season ;)"), numberLikes=2492)
-        $ v15s18a_kiwiiPost3.newComment(chloe, _("O. M. G."), queue=False)
-        $ v15s18a_kiwiiPost3.newComment(naomi, _("Hahahaha! I have to come to one of these parties soon..."), queue=False)
+        $ v15s18a_kiwiiPost3.newComment(chloe, _("O. M. G."), numberLikes=renpy.random.randint(15, 35), queue=False)
+        $ v15s18a_kiwiiPost3.newComment(naomi, _("Hahahaha! I have to come to one of these parties soon..."), numberLikes=renpy.random.randint(15, 35), queue=False)
         if joinwolves:
-            $ v15s18a_kiwiiPost3.newComment(sebastian, _("Hell yeah! Can I borrow that outfit when you're done, [name]? :D"), queue=False)
+            $ v15s18a_kiwiiPost3.newComment(sebastian, _("Hell yeah! Can I borrow that outfit when you're done, [name]? :D"), numberLikes=renpy.random.randint(15, 35), queue=False)
         else:
-            $ v15s18a_kiwiiPost3.newComment(grayson, _("What the fuck...?"), queue=False)
-        $ v15s18a_kiwiiPost3.addReply(_("Lol, I love this. Happy birthday Lauren!"), mentions=[lauren])
-        $ v15s18a_kiwiiPost3.newComment(lauren, _("Hehe, thank you!! You guys are the best <3"), queue=False)
-        $ v15s18a_kiwiiPost3.addReply(_("Now taking appointments... ;)"))
-        $ v15s18a_kiwiiPost3.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), queue=False)
+            $ v15s18a_kiwiiPost3.newComment(grayson, _("What the fuck...?"), numberLikes=renpy.random.randint(15, 35), queue=False)
+        $ v15s18a_kiwiiPost3.addReply(_("Lol, I love this. Happy birthday Lauren!"), numberLikes=renpy.random.randint(15, 35), mentions=[lauren])
+        $ v15s18a_kiwiiPost3.newComment(lauren, _("Hehe, thank you!! You guys are the best <3"), numberLikes=renpy.random.randint(15, 35), queue=False)
+        $ v15s18a_kiwiiPost3.addReply(_("Now taking appointments... ;)"), numberLikes=renpy.random.randint(15, 35))
+        $ v15s18a_kiwiiPost3.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(15, 35), queue=False)
 
     else:
         $ v15s18a_kiwiiPost4 = KiwiiPost(aubrey, "Selfie with non-smiling MC at halloween party", _("I think something's wrong with our stripper... Is he supposed to be this sad? </3"), numberLikes=2415)
-        $ v15s18a_kiwiiPost4.newComment(chloe, _("O. M. G."), queue=False)
-        $ v15s18a_kiwiiPost4.newComment(naomi, _("Aww! You need to cheer him up, little sis! Or I will... ;)"), queue=False)
+        $ v15s18a_kiwiiPost4.newComment(chloe, _("O. M. G."), numberLikes=renpy.random.randint(15, 35), queue=False)
+        $ v15s18a_kiwiiPost4.newComment(naomi, _("Aww! You need to cheer him up, little sis! Or I will... ;)"), numberLikes=renpy.random.randint(15, 35), queue=False)
         if joinwolves:
-            $ v15s18a_kiwiiPost4.newComment(sebastian, _("Lmao, show them how it's done, [name]! #SadboyStriptease"), queue=False)
+            $ v15s18a_kiwiiPost4.newComment(sebastian, _("Lmao, show them how it's done, [name]! #SadboyStriptease"), numberLikes=renpy.random.randint(15, 35), queue=False)
         else:
-            $ v15s18a_kiwiiPost4.newComment(grayson, _("What the fuck is this"), queue=False)
-        $ v15s18a_kiwiiPost4.addReply(_("Sigh... Happy birthday Lauren! Lol"), mentions=[lauren])
-        $ v15s18a_kiwiiPost4.newComment(lauren, _("Hahaha! Thank you guys <3"), queue=False)
-        $ v15s18a_kiwiiPost4.addReply(_("Now taking appointments... ;)"))
-        $ v15s18a_kiwiiPost4.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), queue=False)
+            $ v15s18a_kiwiiPost4.newComment(grayson, _("What the fuck is this"), numberLikes=renpy.random.randint(15, 35), queue=False)
+        $ v15s18a_kiwiiPost4.addReply(_("Sigh... Happy birthday Lauren! Lol"), numberLikes=renpy.random.randint(15, 35), mentions=[lauren])
+        $ v15s18a_kiwiiPost4.newComment(lauren, _("Hahaha! Thank you guys <3"), numberLikes=renpy.random.randint(15, 35), queue=False)
+        $ v15s18a_kiwiiPost4.addReply(_("Now taking appointments... ;)"), numberLikes=renpy.random.randint(15, 35))
+        $ v15s18a_kiwiiPost4.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(15, 35), queue=False)
 
     pause 0.75
     
@@ -404,7 +404,7 @@ label v15s18a_Ryan:
     scene v15s18a_ryan_2 # TPP. Show MC entering into the bathroom, as he enters we see Ryan sitting on the floor with his head above the toilet since he is puking, his face obscured by the toilet and we don't ever see inside it.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18a_ryan_3 # FPP. MC looking at Ryan, Ryan's face still obscured by toilet, Ryan disgusted face, mouth closed.
     with dissolve
@@ -513,8 +513,6 @@ label v15s18a_Ryan:
 
         pause 0.75
 
-        play sound "sounds/doorclose.mp3"
-
         scene v15s18a_ryan_2a # TPP. Show MC exiting the bathroom, as he leaves we see Ryan sitting on the floor with his head above the toilet since he is puking, his face obscured by the toilet and we don't ever see inside it.
         with dissolve
         
@@ -526,12 +524,12 @@ label v15s18a_Ryan:
 
         u "Ha, feel better soon, Ryan. Drink lots of water when you're able to."
 
-        play sound "sounds/doorclose.mp3"
-
         scene v15s18a_ryan_2a
         with dissolve
 
         pause 0.75
+
+    play sound "sounds/doorclose.mp3"
 
     scene v15s18a_ryan_6 # TPP. MC standing outside of the bathroom door, neutral face, mouth closed
     with dissolve
@@ -623,14 +621,14 @@ label v15s18a_AutumPenelope:
     scene v15s18apen_6a # FPP. MC looking at Penelope, Penelope looking at MC, Penelope slight smile, mouth closed.
     with dissolve
 
-    u "Oh, trust me, I know. Luckily, it's nice and warm in here. Thanks Autumn."
-
-    scene v15s18apen_7 # FPP. MC looking at Autumn as she is starting to sit comfortably on her bed, slight smile, mouth closed.
-    with dissolve
-
-    pause 0.75
+    u "Oh, trust me, I know. Luckily, it's nice and warm in here. Thanks, Autumn."
 
     if signs:
+        scene v15s18apen_7 # FPP. MC looking at Autumn as she is starting to sit comfortably on her bed, slight smile, mouth closed.
+        with dissolve
+
+        pause 0.75
+
         scene v15s18apen_7a # FPP. Autumn sitting on her bed comfortably, MC looking at Autumn, Autumn looking at MC, slight smile, mouth open.
         with dissolve
 
@@ -892,7 +890,7 @@ label v15s18a_AutumPenelope:
             scene v15s18apen_7c
             with dissolve
 
-            aut "Not only does everyone at SVC know you're a virgin, but they also know you asked at least six different women to help you with the list and got denied."
+            aut "Then everyone at SVC knows you're a virgin, and also that you asked at least six different women to help you with the list and got denied."
 
             scene v15s18apen_7b
             with dissolve
@@ -1044,13 +1042,6 @@ label v15s18a_AutumPenelope:
 
             u "*Sighs* No, I wasn't lying."
 
-    ### check transitions
-    ### especially if 7b dissolves into 7b again
-    scene v15s18apen_7b
-    with dissolve
-
-    pause 0.75
-   
     scene v15s18apen_6a
     with dissolve
 
@@ -1324,13 +1315,6 @@ label v15s18a_ImreLauren:
             with dissolve
 
             imre "Oh, I- I don't know, ha. Sorry, bro."
-
-    #check transitions
-    
-    scene v15s18aimre_6a
-    with dissolve
-
-    pause 0.75
 
     scene v15s18aimre_4
     with dissolve
@@ -2357,7 +2341,7 @@ label v15s18a_ChrisAmber:
 
                     pause 0.75
 
-                    scene v15s18amber_11 # TPP. Just Amber wiping her mouth, slight smile, mouth closed.
+                    scene v15s18aamber_11 # TPP. Just Amber wiping her mouth, slight smile, mouth closed.
                     with dissolve
 
                     am "I hope nobody was standing under there, haha."

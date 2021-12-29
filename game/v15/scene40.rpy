@@ -138,7 +138,7 @@ label v15s40:
         scene v15s40_1e # FPP. same as v15s40_1d Autumn is looking back at Mc, blushing even more, her face is still slightly turned away from Mc, mouth is still open
         with dissolve
 
-        aut "I do like you, [name]. I like you a lot, actually...."
+        aut "I do like you, [name]. I like you a lot, actually..."
 
         scene v15s40_1f # FPP. same as v15s40_1e Autumn is now looking directly at Mc, mouth is closed, still slightly embarrased, still blushing
         with dissolve
@@ -376,4 +376,4 @@ label v15s40:
 
     pause 0.75
 
-    jump v14s41
+    jump v15s41

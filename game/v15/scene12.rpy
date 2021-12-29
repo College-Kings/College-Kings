@@ -67,7 +67,8 @@ label v15s12:
         scene v15s12_3d # FPP. Lindsey slightly surprised mouth open [Checkpoint B].
         with dissolve
 
-        li "Yes! I know, I literally got handed the inside scoop on her next big idea. Unless for some reason she decides not to follow through with this plan."
+        li "Yes! I know, I literally got handed the inside scoop on her next big idea."
+        li "Unless for some reason she decides not to follow through with this plan."
 
         scene v15s12_3e # FPP. Lindsey happy, smiling, mouth closed [Checkpoint B].
         with dissolve
@@ -87,7 +88,8 @@ label v15s12:
         scene v15s12_4 # FPP. Lindsey neutral expression mouth open [Checkpoint C].
         with dissolve
 
-        li "So, believe it or not, she has this master plan to get me absolutely hammered and then somehow get a recording of me saying something shitty about her and the Chicks."
+        li "So, believe it or not, she has this master plan to get me absolutely hammered..."
+        li "And then somehow get a recording of me saying something shitty about her and the Chicks."
 
         scene v15s12_4a # FPP. Lindsey neutral expression mouth closed [Checkpoint C]. 
         with dissolve
@@ -199,11 +201,8 @@ label v15s12:
 
             u "(*Sighs* Do I want to know?)" 
 
-        # -MC chooses event1 or event2
-        # -event1 Tell me
-        # -event2 Not interested
         menu:
-            "Tell me": # -if Tell me
+            "Tell me":
                 $ add_point(KCT.TROUBLEMAKER)# TODO - KCT and character points
                 $ chloe.points -= 1 
                 
@@ -217,7 +216,8 @@ label v15s12:
 
                 li "Haha, okay... I mean it was nothing too specific, I guess."
                 
-                li "Grayson apparently had major trust issues, and I guess it got to the point where he wouldn't let her go anywhere without telling him exactly where or who she was going with."
+                li "Grayson apparently had major trust issues."
+                li "And I guess it got to the point where he wouldn't let her go anywhere without telling him exactly where or who she was going with."
 
                 scene v15s12_5
                 with dissolve
@@ -269,7 +269,7 @@ label v15s12:
 
                 li "No problem."
 
-            "Not interested": # -if Not interested
+            "Not interested":
                 $ add_point(KCT.BOYFRIEND) # TODO: KCT and character points 
                 $ chloe.points += 1
                 
@@ -436,10 +436,29 @@ label v15s12:
 
         u "Haha, damn straight!"
 
-        scene v15s12_8a # FPP. Same as v15s12_8, but not pointing at the board, smiling mouth open [Janitor's closet].
-        with dissolve
+        if lindsey_board.money < 800:
+            scene v15s12_8a
+            with dissolve
+            
+            li "I had this great idea to organize a VIP night but I've checked around and I can't actually afford it."
+            
+            if "cash_small" in freeroam12stolen or "cash_large" in freeroam12stolen:
+                li "I know you risked a lot going through Chloe's room but these things are just that expensive."
+                
+            elif not v14_lindsey_sell:
+                li "It's a shame that you couldn't find anything in Chloe's room..."
+                
+            elif v15_lindsey_sold:
+                li "We just didn't get a good enough offer on the car, but hopefully we can put that money to good use in the future."
+                
+            elif v14_lindsey_sell:
+                li "It's a shame that we couldn't get any offers on the car..."
+            
+        else:
+            scene v15s12_8a # FPP. Same as v15s12_8, but not pointing at the board, smiling mouth open [Janitor's closet].
+            with dissolve
 
-        li "So basically, it's just who you think should come, and what the best way to gain their support would be."
+            li "So basically, it's just who you think should come, and what the best way to gain their support would be."
 
         # -The planning board pops up and MC makes his choices from what's presented-
 
@@ -462,19 +481,17 @@ label v15s12:
 
             v15s12_lindsey_pb_mostlikely = lindsey_board.add_subtask("Game Night",
                 "Who's Most Likely...",
-                opinion="\"\"Who's Most Likely To\" is always a fun game to play with a group of people. We'll laugh, learn, a bit about each other and maybe some secrets will come out as well.\"",
-                cost=100)
+                opinion="\"\"Who's Most Likely To\" is always a fun game to play with a group of people. We'll laugh, learn, a bit about each other and maybe some secrets will come out as well.\"")
 
             lindsey_board.add_subtask("Game Night",
                 "Would You Rather",
-                opinion="\"\"Would you rather\" is the easiest game to play when you want to get the conversation rolling. Hopefully we get a few laughs and maybe some secrets out of them as well.\"",
-                cost=100)
+                opinion="\"\"Would you rather\" is the easiest game to play when you want to get the conversation rolling. Hopefully we get a few laughs and maybe some secrets out of them as well.\"")
 
             lindsey_board.add_task("Game Night",
                 "Host the game night",
                 opinion="\"Once we got the games and (hopefully) the booze, all that's left is to make sure everyone has a good time and leaves wanting to vote for me.\"",
                 people=[mc, lindsey, autumn, aubrey],
-                cost=100)
+                cost=0)
 
             lindsey_board.add_task("VIP Night",
                 "Book a limousine & private club ($800)",
@@ -483,21 +500,21 @@ label v15s12:
 
             v15_s12_lindsey_pb_inviteSebastian = lindsey_board.add_subtask("VIP Night",
                 "Invite Aubrey, Autumn, and Sebastian",
-                opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The third person I want to invite is Sebastian. We're pretty close, but in the end he has to vote the way the Wolves do. If we can convince him to support me, and ask others to; Seb being on my side would mean more support from the Wolves.\"",
+                opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The third person I want to invite is Sebastian. We're pretty close and Seb being on my side would mean more support from the Wolves.\"",
                 people=[aubrey, autumn, sebastian],
-                cost=800)
+                cost=0)
 
             lindsey_board.add_subtask("VIP Night",
                 "Invite Aubrey, Autumn, and Grayson",
-                opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The last person I'm thinking about inviting is Grayson. He already has this burning hatred for Chloe, mixed with a little bit of horniness but still... I think he's closer to boarding the Lindsey train than we think, and Grayson being on my side would mean support from the Apes.\"",
+                opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The last person I'm thinking about inviting is Grayson. He already has this burning hatred for Chloe and would help meO gain support from the Apes.\"",
                 people=[aubrey, autumn, grayson],
-                cost=800)
+                cost=0)
 
             lindsey_board.add_task("VIP Night",
                 "Host exclusive VIP Night",
                 opinion="\"Finally, a night to remember! Our main focus during the night out is the three people we want to impress. Keeping them satisfied and entertained all night is the only goal besides having a damn good time.\"",
                 people=[mc, lindsey, aubrey, autumn],
-                cost=800) # Can't add Sebastian or Grayson here because we're loading the menu before the player can select. 
+                cost=0) # Can't add Sebastian or Grayson here because we're loading the menu before the player can select. 
 
         call screen planning_board(lindsey_board)
         
@@ -510,16 +527,25 @@ label v15s12:
 
         # End planning board (screen disappears)
 
-        scene v15s12_8b
-        with dissolve
+        if lindsey_board.money < 800:
+            scene v15s12_8b
+            with dissolve
+            
+            u "Yeah, we really don't have much of a choice here."
+        
+        else:
+            scene v15s12_8b
+            with dissolve
 
-        u "They're both fine ideas, I think we can go with the club, or a game night regardless, and still end up having a good time... But I think this is our best option."
+            u "They're both fine ideas, I think we can go with the club, or a game night regardless, and still end up having a good time..."
+            u "But I think this is our best option."
 
         if v15_lindsey_gamenight: # -if chose Game night
             scene v15s12_8b
             with dissolve
             
-            u "A small group with snacks, drinks, and intimate surroundings. You can really focus on each person and convince them why they should support you."
+            u "A small group with snacks, drinks, and intimate surroundings."
+            u "You can really focus on each person and convince them why they should support you."
 
             scene v15s12_8a
             with dissolve
@@ -540,7 +566,8 @@ label v15s12:
             scene v15s12_8a
             with dissolve
             
-            u "It might be more money that we're taking from the budget, but there's no chance they'll vote for Chloe after you roll up in a limo to take them out for the night."
+            u "It might be more money that we're taking from the budget..."
+            u "But there's no chance they'll vote for Chloe after you roll up in a limo to take them out for the night."
 
             scene v15s12_8b
             with dissolve

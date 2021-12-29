@@ -41,7 +41,7 @@ label v15s27: # -MC walks out of the Chicks house-
         
         u "(Well, that was an interesting conversation...) *Chuckles*"
 
-    if v15_ph_riley_upset: # -if RileyUpset potentially set in scene26
+    if v15_RileyUpset: # -if RileyUpset potentially set in scene26
         scene v15s27_2b
         with dissolve
 
@@ -92,20 +92,44 @@ label v15s27: # -MC walks out of the Chicks house-
 
     jen "Me and Penelope! Your two favorite girls?!"
 
-    scene v15s27_3d # TPP. MC holding his phone to his ear, laughing, smiling, mouth open.
-    with dissolve
+    menu:
 
-    u "*Laughs* Well, you are my two favorite girls, that's true..."
+        "You are my favorite girls...":
+            $ add_point(KCT.BOYFRIEND)
+            scene v15s27_3d # TPP. MC holding his phone to his ear, laughing, smiling, mouth open.
+            with dissolve
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value or chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-        u "(Well, maybe in the top three...)"
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value and chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-        u "(Or four... Wait, how many girlfriends do I have?)"
+            u "*Laughs* Well, you are my two favorite girls, that's true..."
 
-    scene v15s27_4a
-    with dissolve
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value or chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                u "(Well, maybe in the top three...)"
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value and chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                u "(Or four... Wait, how many girlfriends do I have?)"
 
-    jen "Mhmm..."
+            scene v15s27_4a
+            with dissolve
+
+            jen "Mhmm..."
+
+        "Favorite? I'm not so sure.":
+            $ add_point(KCT.TROUBLEMAKER)
+
+            scene v15s27_3d # TPP. MC holding his phone to his ear, laughing, smiling, mouth open.
+            with dissolve
+
+            u "*Laughs* Favorite? I'm not so sure."
+
+            u "There's a lot of pretty girls out there, you know?"
+
+            scene v15s27_4a
+            with dissolve
+
+            jen "Yeah, but none of them are as fun as we are."
+
+            scene v15s27_3d # TPP. MC holding his phone to his ear, laughing, smiling, mouth open.
+            with dissolve
+
+            u "Maybe."
 
     scene v15s27_3b
     with dissolve
@@ -174,6 +198,8 @@ label v15s27: # -MC walks out of the Chicks house-
     with dissolve
 
     u "Haha, okay, okay. I guess I am!"
+
+    u "(I guess I can always rest later.)"
 
     scene v15s27_4h
     with dissolve

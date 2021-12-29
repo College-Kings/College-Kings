@@ -103,6 +103,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
                     u "Not exactly... Just trying out those smooth rom com moves, haha." 
 
                     if chloe.relationship.value >= Relationship.GIRLFRIEND.value: # -if ChloeGF
+                        $ chloeSus += 1
                         # -Chloe looks a little pissed-
                         scene v15s32_5b # FPP. Chloe, slightly angry, mouth open, with her upper body leaning out the window looking downward [Chloe's window (left)-exterior].
                         with dissolve
@@ -567,7 +568,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
             scene v15s32_8j
             with dissolve
 
-            u "Like, holy hell.... I'm one lucky guy."
+            u "Like, holy hell... I'm one lucky guy."
 
             scene v15s32_8k # -Aubrey blushes a little-
             with dissolve

@@ -21,7 +21,7 @@ label v15s21:
 
         cl "Here he is."
 
-        $ v15_notes_clicks = 0 # reset counter
+        $ opened_count = 0 # reset counter
         scene v15s21_3 # FPP. Mr. Lee approaches them slight smile mouth open, Chloe and MC stand up, Chloe slight smile, mouth closed
         with dissolve
 
@@ -121,7 +121,7 @@ label v15s21:
                 scene v15s21_6c # FPP. same as v15s21_6b Mr. Lee's mouth is open, is still looking at Mc, still no epxpression
                 with dissolve
 
-                lee "While I agree with your concerns for global deforestation, punishing Lindsey for simply putting up posters would be a bit too far, don't you think?"
+                lee "I agree with your global deforestation concerns, but punishing Lindsey for simply putting up posters would be a bit too far, don't you think?"
 
                 scene v15s21_6a
                 with dissolve
@@ -230,8 +230,6 @@ label v15s21:
         u "Here we go..."
 
         if v15_took_notes:
-            call ui_screen_v15_notes # a little journal icon appears, they can click on it AT ANY TIME during this scene and see the notes that they created in scene 20 with Chloe-
-
             scene v15s21_6a
             with dissolve
 
@@ -404,7 +402,8 @@ label v15s21:
                 scene v15s21_6o # FPP. same as v15s21_6d Mr. Lee. places a hand under his chin and listens intently, furrows his eyebrows, still a slight smile, mouth is still closed
                 with dissolve
 
-                u "College is a huge financial burden, Mr. Lee. With lower fees, students may be freer to enjoy extracurricular activities around campus, rather than working in between classes."
+                u "College is a huge financial burden, Mr. Lee."
+                u "With lower fees, students may be more free to enjoy extracurricular activities around campus, rather than working in between classes."
 
                 scene v15s21_7
                 with dissolve
@@ -587,14 +586,15 @@ label v15s21:
                 scene v15s21_6r # FPP. same as v15s21_6d Mr. Lee has a full smile, mouth is open, still looking at Mc
                 with dissolve
 
-                lee "I'm glad you asked, [name]. I do have a suggestion, and I believe it'd work, but I'll keep it to myself until I've decided if I'm going to support this idea."
+                lee "I'm glad you asked, [name]. I do have a suggestion, and I believe it'd work."
+                lee "But I'll keep it to myself until I've decided if I'm going to support this idea."
 
         scene v15s21_6d
         with dissolve
 
         u "*Sighs* Okay, is there anything else?"
 
-        if v15_took_notes and v15_notes_clicks >= 5: ###### -if TookNotes and clicks on the journal five times- ######
+        if v15_took_notes and opened_count >= 5: ###### -if TookNotes and clicks on the journal five times- ######
             scene v15s21_6c
             with dissolve
 
@@ -657,7 +657,7 @@ label v15s21:
             scene v15s21_6s # FPP. same as v15s21_6r Mr. Lee's mouth is closed, still a full smile, still looking at Mc
             with dissolve
 
-            u "Oh, that's... A very kind offer. Thanks, haha."
+            u "Oh, that's... a very kind offer. Thanks, haha."
 
             scene v15s21_7
             with dissolve
@@ -770,8 +770,8 @@ label v15s21:
 
         pause 0.75
 
-        if v15_meeting_points >= 4: #TBD optimal difficulty level
-            if v15_meeting_points == 4 and kct == "loyal":
+        if v15_meeting_points >= 5: #TBD optimal difficulty level
+            if v15_meeting_points == 5 and kct == "loyal":
                 call screen kct_popup
                 
             scene v15s21_6
@@ -804,7 +804,7 @@ label v15s21:
 
             pause 0.75
 
-        elif v15_meeting_points >= 2:
+        elif v15_meeting_points >= 3:
             scene v15s21_6
             with dissolve
 
@@ -842,8 +842,8 @@ label v15s21:
 
             pause 0.75
 
-        elif v15_meeting_points >= 0:
-            if v15_meeting_points == 0 and kct == "loyal":
+        elif v15_meeting_points >= 1:
+            if v15_meeting_points == 1 and kct == "loyal":
                 call screen kct_popup
             
             scene v15s21_6h
@@ -1117,7 +1117,7 @@ label v15s21:
 
             u "(Don't think about sex, don't think about sex, don't think abou-)"
 
-        $ v15_notes_clicks = 0 # reset counter
+        $ opened_count = 0 # reset counter
         scene v15s21_10b # FPP. same as v15s21_10a Ms. Rose looking at Chloe slight smile mouth open, Chloe looking at Ms. Rose slight smile mouth closed
         with dissolve
 
@@ -1173,7 +1173,7 @@ label v15s21:
         scene v15s21_13a # FPP. same as v15s21_13 Ms. Rose has no expression, still looking at Chloe, mouth is still open
         with dissolve
 
-        ro "Yes, I've heard it's been... Quite a stormy time in the Chicks house lately."
+        ro "Yes, I've heard it's been... quite a stormy time in the Chicks house lately."
 
         scene v15s21_13b # FPP. same as v15s21_13a Ms. Rose is looking at Mc, mouth is closed, still no expression
         with dissolve
@@ -1225,7 +1225,8 @@ label v15s21:
 
                 show screen teacher_conviction_bar((v15_meeting_points+4) * 100 / 11, "CONVINCE TEACHER", "MS ROSE", "images/v15/conviction_bars/ms_rose_background.webp")
 
-                ro "Personally, I think Nora has already made up her mind about Chloe's ability to lead and I'm not here to discuss that or take any part in the ongoing feud."
+                ro "Personally, I think Nora has already made up her mind about Chloe's ability to lead."
+                ro "And I'm not here to discuss that or take any part in the ongoing feud."
 
                 scene v15s21_7l
                 with dissolve
@@ -1253,7 +1254,7 @@ label v15s21:
         scene v15s21_7
         with dissolve
 
-        cl "You know how much I care about the Chicks, and I think with your support we could be on track to become bigger and better than ever before."
+        cl "You know how much I care about the Chicks, and I think with your support we could become bigger and better than ever before."
 
         scene v15s21_13
         with dissolve
@@ -1263,7 +1264,7 @@ label v15s21:
         scene v15s21_13d # FPP. same as v15s21_13 Ms. Rose has a very serious face, she's focused on Chloe, mouth is closed
         with dissolve
 
-        u "(She is just... Impossible to read.)"
+        u "(She is just... impossible to read.)"
 
         scene v15s21_7
         with dissolve
@@ -1296,8 +1297,6 @@ label v15s21:
         pause 0.75
 
         if v15_took_notes: # -a little journal icon appears, they can click on it AT ANY TIME during this scene and see the notes that they created in scene 20 with Chloe-
-            call ui_screen_v15_notes
-
             scene v15s21_13f # FPP. v15s21_13 Ms, Rose looks at Mc, mouth is closed, still a slight smile
             with dissolve
 
@@ -1338,7 +1337,7 @@ label v15s21:
         with dissolve
 
         menu:
-            "We want your opinion":
+            "You understand sorority life":
                 $ v15_meeting_points += 1
                 $ add_point(KCT.BOYFRIEND)
 
@@ -1400,15 +1399,7 @@ label v15s21:
                 scene v15s21_13a
                 with dissolve
 
-                ro "He's a brilliant man and... Believe it or not, he's incredibly understanding of women in today's modern society."
-
-                scene v15s21_13b
-                with dissolve
-
-                u "(Oh... Eww...)"
-
-                scene v15s21_13c
-                with dissolve
+                ro "He's a brilliant man and... believe it or not, he's incredibly understanding of women in today's modern society."
 
                 ro "I'm sure he would've been difficult to persuade on something like this, but he always stays considerate and fair."
 
@@ -1430,7 +1421,7 @@ label v15s21:
         scene v15s21_13a
         with dissolve
 
-        ro "How do you think the other sororities and frats are going to react, if they hear that the Chicks are getting special treatment with these reduced tuition fees?"
+        ro "How do you think the other sororities and frats will react, if they hear the Chicks are getting special treatment with reduced tuition fees?"
 
         scene v15s21_7l
         with dissolve
@@ -1466,7 +1457,7 @@ label v15s21:
                 scene v15s21_13f
                 with dissolve
 
-                u "I think it would motivate the Presidents to want to achieve similar goals as the Chicks, when they see what kind of things Chloe can achieve."
+                u "I think it would motivate them to want to achieve similar goals as the Chicks when they see what kind of things Chloe can achieve."
 
                 u "Hopefully people will begin to look at the Chicks and realize that these young women are ambitious, determined, and aren't afraid to try."
 
@@ -1607,7 +1598,7 @@ label v15s21:
                 scene v15s21_13a
                 with dissolve
 
-                ro "Unfortunately, Chloe... That's the only way I see the Dean going forward with this proposal."
+                ro "Unfortunately, Chloe... that's the only way I see the Dean going forward with this proposal."
 
                 scene v15s21_7d
                 with dissolve
@@ -1632,14 +1623,14 @@ label v15s21:
                 scene v15s21_13l
                 with dissolve
 
-                ro "I have an idea, I'm just working it through in my head, but... It might work if you're willing to make sacrifices."
+                ro "I have an idea, I'm just working it through in my head, but... it might work if you're willing to make sacrifices."
 
         scene v15s21_13b
         with dissolve
 
         u "Okay. Well..."
 
-        if v15_took_notes and v15_notes_clicks >= 5: ###### -if TookNotes and clicks on the journal five times- ######:
+        if v15_took_notes and opened_count >= 5: ###### -if TookNotes and clicks on the journal five times- ######:
             scene v15s21_13k
             with dissolve
 
@@ -1706,6 +1697,8 @@ label v15s21:
                 scene v15s21_7v # FPP. same as v15s21_7s Chloe raises an eyebrow, still slightly angry, still lookng at mc, mouth is still closed
                 with dissolve
 
+                $ chloeSus += 1
+
                 cl "Oh, really?"
 
             else:
@@ -1744,8 +1737,8 @@ label v15s21:
 
         pause 0.75
 
-        if v15_meeting_points >= 4: #TBD optimal difficulty level
-            if v15_meeting_points == 4 and kct == "confident":
+        if v15_meeting_points >= 5: #TBD optimal difficulty level
+            if v15_meeting_points == 5 and kct == "confident":
                 call screen kct_popup
         
             scene v15s21_13i
@@ -1773,7 +1766,7 @@ label v15s21:
 
             pause 0.75
 
-        elif v15_meeting_points >= 2:
+        elif v15_meeting_points >= 3:
             scene v15s21_13a
             with dissolve
 
@@ -1809,8 +1802,8 @@ label v15s21:
 
             pause 0.75
 
-        elif v15_meeting_points >= 0:
-            if v15_meeting_points == 0 and kct == "confident":
+        elif v15_meeting_points >= 1:
+            if v15_meeting_points == 1 and kct == "confident":
                 call screen kct_popup
 
             scene v15s21_13a
@@ -1946,7 +1939,8 @@ label v15s21:
 
         ro "I think it's the only way forward, truly."
 
-        ro "The Dean will have to consider the financial implications and there's no point in me signing off my support if we can't afford to go through with it."
+        ro "The Dean will have to consider the financial implications."
+        ro "There's no point in me signing off my support if we can't afford to go through with it."
 
         scene v15s21_7w # FPP. same as v15s21_7a Chloe has a conflicted expression, still looking at MC, mouth is still closed
         with dissolve
@@ -1990,7 +1984,7 @@ label v15s21:
                     scene v15s21_7x # FPP. same as v15s21_7a MC moves closer to Chloe to speak quietly, mouth is still closed, Chloe still looking at Mc, still no expression
                     with dissolve
 
-                    u "*Whispers* Okay, this might sound weird, but... Trust me, okay?"
+                    u "*Whispers* Okay, this might sound weird, but... trust me, okay?"
 
                     scene v15s21_7y # FPP. same as v15s21_7x Chloe's mouth is open, Mc and Chloe are still close, Chloe still looking at Mc, still no expression
                     with dissolve
@@ -2005,7 +1999,7 @@ label v15s21:
                     scene v15s21_7y
                     with dissolve
 
-                    cl "That's... A weird request, [name]. *Nervous chuckles*"
+                    cl "That's... a weird request, [name]. *Nervous chuckles*"
 
                     scene v15s21_7x
                     with dissolve
@@ -2049,7 +2043,7 @@ label v15s21:
                         scene v15s21_13t # FPP. same as v15s21_13n Show Ms. Rose looking at Mc seductively, slightly biting a finger
                         with dissolve
 
-                        u "(Seduce her the easy way... or)" 
+                        u "(Seduce her the easy way, or...?)" 
                         
                         scene v15s21_13u # FPP. same as v15s21_13t Render looks exactly like v15s21_13t except instead of a seductive expression, Ms. Rose has a concerned expression
                         with dissolve
@@ -2082,7 +2076,7 @@ label v15s21:
                                 scene v15s21_13f
                                 with dissolve
 
-                                u "Y'know... I'd be truly grateful if, just this once... You went along with it."
+                                u "Y'know... I'd be truly grateful if, just this once... you went along with it."
 
                                 scene v15s21_13v # FPP. same as v15s21_13f Ms. Rose smirks, still looking at Mc, mouth is still closed
                                 with dissolve
@@ -2246,7 +2240,7 @@ label v15s21:
                                 scene v15s21_13zd
                                 with dissolve
 
-                                ro "You... Wouldn't."
+                                ro "You... wouldn't."
 
                                 ro "It would ruin everything, I'd-"
 
@@ -2393,7 +2387,7 @@ label v15s21:
         scene v15s21_13zh # FPP. same as v15s21_13zg Ms. Rose is signing the paperwork, looking at the paperwork, still a slight smile, mouth is still open
         with dissolve
 
-        ro "And... there... Signed!"
+        ro "And... there. Signed!"
 
         scene v15s21_13zi # FPP. same as v15s21_13zg Ms. Rose hands the paperwork and pen towards Chloe's direction, slight smile mouth is closed
         with dissolve

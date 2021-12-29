@@ -141,7 +141,8 @@ label v15s2:
         scene v15s2_4a
         with dissolve
 
-        u "So that's something you can encourage her to do more of. It'll get her to focus on something that makes her happy instead of all the other emotional shit."
+        u "So that's something you can encourage her to do more of."
+        u "It'll get her to focus on something that makes her happy instead of all the other emotional shit."
 
         scene v15s2_4
         with dissolve
@@ -266,7 +267,8 @@ label v15s2:
         u "(So, this is what living with a psychopath is like? For fuck's sake...)"
 
         if "v14_samantha" in sceneList:
-            u "(I wouldn't have made it out of that conversation alive if he knew what we actually did in there... Damn, we're so lucky he didn't hear us.)"
+            u "(I wouldn't have made it out of that conversation alive if he knew what we actually did in there...)"
+            u "(Damn, we're so lucky he didn't hear us.)"
 
         scene v15s2_5b # Same as v15s2_5a, Show MC walking away no Cameron in sight. MC slightly worried, mouth closed.
         with dissolve
@@ -353,7 +355,8 @@ label v15s2:
 
     u "(\"Dress to impress your ghoulish empress...\") *Chuckles*"
 
-    u "(Guess I need to go gift shopping... Maybe Autumn can give me ideas on what Lauren would like, or I can just get her some kind of gift card... She likes books, I think?)"
+    u "(Guess I need to go gift shopping...)"
+    u "(Maybe Autumn can give me ideas on what Lauren would like, or I can just get her some kind of gift card... She likes books, I think?)"
 
     scene v15s2_9c # TPP. Same as v15s2_9b, Show MC yawning and stretching while laying down, slight smile, mouth closed.
     with dissolve
@@ -382,6 +385,18 @@ label v15s2:
 
     if v14_ApesPostChloePics and not joinwolves:
         jump v15s3
+
+    elif v14_ApesPostChloePics:
+        if v14_PenelopePartner:
+            $ v14s43b_kiwiiPost1.remove_post()
+            $ v14s43b_kiwiiPost2.remove_post()
+            $ v14s43b_kiwiiPost3.remove_post()
+        else:
+            $ v14s43b_kiwiiPost4.remove_post()
+            $ v14s43b_kiwiiPost5.remove_post()
+            $ v14s43b_kiwiiPost6.remove_post()
+        
+        jump v15s4
 
     else: 
         jump v15s4

@@ -16,7 +16,7 @@ label v15s43:
 
     pause 0.75
 
-    scene v15s42_2a # FPP. Amber and MC both looking at the door waiting for an answer, Amber slight smile, mouth closed.
+    scene v15s43_2a # FPP. Amber and MC both looking at the door waiting for an answer, Amber slight smile, mouth closed.
     with dissolve
 
     pause 0.75
@@ -40,7 +40,7 @@ label v15s43:
         pause 0.75
 
         if detective == "professional":
-            scene v15s42_2a 
+            scene v15s43_2a 
             with dissolve
 
             menu:
@@ -126,7 +126,7 @@ label v15s43:
                     scene v15s43_2c
                     with dissolve
 
-                    am "Yeah, but we're undercover detectives. Deep undercover.... We don't even carry badges. *Giggles*"
+                    am "Yeah, but we're undercover detectives. Deep undercover... We don't even carry badges. *Giggles*"
 
                     scene v15s43_2b
                     with dissolve
@@ -171,7 +171,7 @@ label v15s43:
                     am "I didn't think it would be that easy, haha."
 
         elif detective == "psychologist":
-            scene v15s42_2a 
+            scene v15s43_2a 
             with dissolve
 
             menu:
@@ -284,7 +284,7 @@ label v15s43:
                     u "He's already playing mind games with us, this isn't good."
 
         else:
-            scene v15s42_2a 
+            scene v15s43_2a 
             with dissolve
 
             menu:
@@ -944,7 +944,8 @@ label v15s43:
                 scene v15s43_14g
                 with dissolve
 
-                u "Nora has an aunt that lives near campus, sounds like they're close.... And as her ex-boyfriend of multiple years, you have no idea where she lives?"
+                u "Nora has an aunt that lives near campus, sounds like they're close..."
+                u "And as her ex-boyfriend of multiple years, you have no idea where she lives?"
 
                 scene v15s43_15
                 with dissolve

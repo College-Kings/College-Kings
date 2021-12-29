@@ -952,7 +952,7 @@ label v15s38:
         scene v15s38_6d
         with dissolve
 
-        gr "What the hell are you guys drinking? [name]? This guy?"
+        gr "What the hell are you guys drinking?! [name]? Seriously?"
 
         scene v15s38_10c # TPP Same wide shot of everyone as 10, girls looking at MC, Aubrey biting her lip, Lindsey winking, Autumn smiling. Grayson looking around confused
         with dissolve

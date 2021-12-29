@@ -106,7 +106,7 @@ label v15s15:
     with dissolve
 
     menu:
-        "What the fuck?":
+        "Reject her":
             scene v15s15_9a # FPP. MC standing in front of Ms. Rose, Ms. Rose has her boobs covered in honey, shocked, mouth closed
             with dissolve
 

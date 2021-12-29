@@ -143,7 +143,8 @@ label v15s20:
 
         cl "So personally, I think she'll like the idea of reduced tuition for all Chicks."
 
-        cl "She's big into women being independent and the Chicks being a positive influence, so I think she'll like that I'm being ambitious for the good of everyone here."
+        cl "She's big into women being independent and the Chicks being a positive influence."
+        cl "So I think she'll like that I'm being ambitious for the good of everyone here."
 
         scene v15s20_5
         with dissolve
@@ -245,6 +246,11 @@ label v15s20:
 
     scene v15s20_5
     with dissolve
+
+    if v15_chloe_mrleesupport:
+        show screen v15_teacher_brief("mr_lee")
+    else:
+        show screen v15_teacher_brief("ms_rose")
 
     menu:
         "Take the notes":

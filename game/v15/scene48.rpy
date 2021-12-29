@@ -16,8 +16,6 @@ label v15s48:
 
     pause 0.75
 
-    play sound "sounds/revving.mp3"
-
     scene v15s48_3 # TPP. Show the Cab driving off.
     with dissolve
 
@@ -110,7 +108,7 @@ label v15s48:
                 u "Are you kidding? Of course I did. Everyone does!"
 
             else:
-                scene v15s48_13b # TPP. MC hugging Nora, Nora not hugging back but accepting the hug, slight smile, mouth open, MC slight smile, mouth closed.
+                scene v15s48_13d # TPP. MC hugging Nora, Nora not hugging back but accepting the hug, slight smile, mouth open, MC slight smile, mouth closed.
                 with dissolve
 
                 no "Oh, um... Hey there."
@@ -484,7 +482,7 @@ label v15s48:
 
         no "Was it something I said?"
 
-        scene v15s48_18f # FPP. Nora looking at MC, MC looking at Nora, Nora smirking, mouth closed.
+        scene v15s48_18g # FPP. Nora looking at MC, MC looking at Nora, Nora smirking, mouth closed.
         with dissolve
 
         u "Ha... Maybe?"
@@ -869,7 +867,7 @@ label v15s48:
                 u "Nora..."
 
                 menu:
-                    "Friendzone":
+                    "We should just be friends":
                         u "The relationship that we have is so strong, and fun... I think we should keep it that way."
 
                         scene v15s48_18a
@@ -890,7 +888,8 @@ label v15s48:
                         scene v15s48_18
                         with dissolve
 
-                        u "No. Nora, seriously. You're one of the coolest people I've ever met, and I'm an idiot for letting you go. I just don't think I'm your forever either..."
+                        u "No. Nora, seriously. You're one of the coolest people I've ever met, and I'm an idiot for letting you go."
+                        u "I just don't think I'm your forever either..."
 
                         scene v15s48_18b
                         with dissolve
@@ -974,7 +973,7 @@ label v15s48:
                         scene v15s48_18k # FPP. MC looking at Nora, Nora looking at MC, Nora flirty, mouth closed.
                         with dissolve
 
-                        u "I want nothing more than that."
+                        u "I want you too."
 
                     # -if they had sex in the past, Nora is thrilled, and hops up to give MC a passionate kiss
 
@@ -992,7 +991,7 @@ label v15s48:
                             scene v15s48_23a # FPP. Nora bending over and kissing MC.
                             with dissolve
 
-                            u "(My god have I missed this....) *Moans*"
+                            u "(My god have I missed this...) *Moans*"
 
                         else:
                             scene v15s48_18a

@@ -6,11 +6,7 @@
 
 label v15s29:
     if False: #making sure it shows on Lint
-        scene emilynude_MC_DicPic1
-        scene emilynude_MC_DicPic2
         scene emily_message_29
-        scene emilynude1
-        scene emilynude2
 
     scene v15s29_1 # TPP. MC walks into his wolve's bedroom, slight smile, mouth closed
     with dissolve

@@ -298,8 +298,8 @@ label v15s26:
 
             au "Same, haha. I just hope it's worth my time."
         
-        "Can we skip it?":
-            u "Can we just... not watch it?"
+        "Do we have to?":
+            u "Do we really have to watch it?"
 
             scene v15s26_15a
             with dissolve
@@ -309,7 +309,7 @@ label v15s26:
             scene v15s26_15b
             with dissolve
 
-            u "And then we can just pretend like we did? *Laughs*"
+            u "We could just pretend like we did. *Laughs*"
 
             scene v15s26_14a
             with dissolve
@@ -664,7 +664,7 @@ label v15s26:
         with dissolve
 
         menu:
-            "Side with Riley, pro-polygamy":
+            "Side with Riley":
                 $ riley.relationship = Relationship.LOYAL
                 $ grant_achievement("polycurious")
 
@@ -708,7 +708,7 @@ label v15s26:
 
                     au "One hundred percent, that's never happening."
 
-            "Side with Aubrey, pro-monogamy": # -event2 Side with Aubrey, Pro-Monogamy (No variable change)
+            "Side with Aubrey": # -event2 Side with Aubrey, Pro-Monogamy (No variable change)
                 $ add_point(KCT.BOYFRIEND)
                 u "I'm with Aubrey on this one..."
 
@@ -741,8 +741,8 @@ label v15s26:
                 with dissolve
 
                 menu:
-                    "Polygamy isn't healthy": # -event1 Polygamy isn't healthy (RileyUpset)
-                        $ v15_ph_riley_upset = True
+                    "Polygamy isn't healthy": # RileyUpset
+                        $ v15_RileyUpset = True
                         u "Honestly, it doesn't seem healthy."
 
                         scene v15s26_14
@@ -851,7 +851,7 @@ label v15s26:
         with dissolve
 
         menu: 
-            "Side with Riley, pro-polygamy": # -event1 Side with Riley, Pro-Polygamy (if AubreyTamed it becomes AubreyFwB, gain RileyLoyal; she's committed to MC as friends, romantic, TilDeathDoUsPart, all of the above)
+            "Side with Riley, pro-polygamy": #if AubreyTamed it becomes AubreyFwB, gain RileyLoyal; she's committed to MC as friends, romantic, TilDeathDoUsPart, all of the above
                 if aubrey.relationship.value >= Relationship.TAMED.value:
                     $ aubrey.relationship = Relationship.FWB
                 $ riley.relationship = Relationship.LOYAL
@@ -998,7 +998,7 @@ label v15s26:
 
         ri "Okay, no worries. I'll probably finish it by myself."
 
-        if v15_ph_riley_upset: # -if RileyUpset
+        if v15_RileyUpset: # -if RileyUpset
             scene v15s26_26 # FPP View of MC, now standing, looking at Riley, who is looking at the theater screen
             with dissolve
 

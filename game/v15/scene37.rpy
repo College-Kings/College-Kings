@@ -40,7 +40,8 @@ label v15s37:
         scene v15s37_3
         with dissolve
 
-        u "(I'm glad Autumn was okay with what I said back there. I think she was forgetting for a moment that I'm dating her sister, ha... Or maybe she was testing me?)"
+        u "(I'm glad Autumn was okay with what I said back there.)"
+        u "(I think she was forgetting for a moment that I'm dating her sister, ha... Or maybe she was testing me?)"
 
         u "(Anyway, even if I wanted to date two sisters...)"
 

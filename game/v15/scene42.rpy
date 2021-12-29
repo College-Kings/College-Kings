@@ -39,11 +39,6 @@ label v15s42:
 
     am "Grab a coffee, we've got a lot of work to do."
 
-    scene v15s42_3d # FPP. Amber standing infront of MC, Amber smirking, mouth closed.
-    with dissolve
-
-    pause 0.75
-
     scene v15s42_4 # FPP. show Amber pouring a cup of coffee from the coffee machine, slight smile, mouth closed.
     with dissolve
 
@@ -209,7 +204,8 @@ label v15s42:
         scene v15s42_7a
         with dissolve
 
-        u "(Amber seems to be in a really good place right now, if I wanted to make things more serious between us... Maybe now's the time to start?)"
+        u "(Amber seems to be in a really good place right now, if I wanted to make things more serious between us..."
+        u "(Maybe now's the time to start?)"
 
         menu:
             "Flirt":
@@ -284,7 +280,8 @@ label v15s42:
     scene v15s42_7
     with dissolve
 
-    am "Yes, it's true! A dependable outfit is one thing, your hat has to fit your attitude, but the main thing we need to decide on before we can start investigating is..."
+    am "Yes, it's true! A dependable outfit is one thing, your hat has to fit your attitude."
+    am "But the main thing we need to decide on before we can start investigating is..."
 
     scene v15s42_7e # FPP. MC looking at Amber, Amber looking at MC, Amber holding her coffee cup with both hands studying MC, Amber suspicious, mouth open.
     with dissolve

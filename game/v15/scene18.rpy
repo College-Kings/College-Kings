@@ -111,7 +111,7 @@ label v15s18:
         la "Thank you, [name]."
 
     else:
-        scene v15s18_8
+        scene v15s18_8a
         with dissolve
 
         la "Hehe, thank you!"
@@ -376,6 +376,11 @@ label v15s18:
     show screen v15_imre_checklist_icon
     # -The Party Checklist UI pops up, showing the list of challenges-
     # -The UI list disappears when player chooses to close it-
+
+    show screen v15_imre_checklist
+
+    pause
+    
  
     scene v15s18_11e
     with dissolve
@@ -403,20 +408,20 @@ label v15s18:
     with dissolve
 
     menu:
-        "Seems difficult":
-            $ add_point(KCT.BRO)
+        "I'm not interested":
+            $ add_point(KCT.BOYFRIEND)
 
-            u "That does seem kinda difficult, ha."
+            u "Listen Imre, I appreciate the thought, but I'm not really looking to hook up with every girl at this party."
 
             scene v15s18_11d
             with dissolve
 
-            imre "I think it's impossible, dude! But if you manage to do it, you'll be a legend, haha. The King of Parties!"
+            imre "Hey man, I won't tell you what to do, but keep the list anyway. Maybe you'll change your mind."
 
             scene v15s18_11e
             with dissolve
 
-            u "What an honor it would be to receive that title. *Laughs*"
+            u "Maybe... *Laughs*"
 
         "Looks easy":
             $ add_point(KCT.TROUBLEMAKER)

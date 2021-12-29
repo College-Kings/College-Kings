@@ -72,7 +72,8 @@ label v15s1:
 
                 u "Everyone knows that. Ask around, dude."
 
-                u "Even when she took the time to tell Chris exactly what she needed from him, he still didn't give her the love or affection that she was asking for."
+                u "Even when she took the time to tell Chris exactly what she needed from him..."
+                u "He still didn't give her the love or affection that she was asking for."
 
             "Blame Nora":
                 $ add_point(KCT.BRO)

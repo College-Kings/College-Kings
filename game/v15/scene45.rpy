@@ -210,7 +210,7 @@ label v15s45:
 
                 u "Go back inside, Chloe. We have important business to take care of."
 
-            "Accuse Chloe":
+            "Threaten Chloe":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                     $ add_point(KCT.TROUBLEMAKER)
                 elif nora.relationship.value >= Relationship.FWB.value: 
@@ -221,9 +221,7 @@ label v15s45:
                 scene v15s45_5b
                 with dissolve
 
-                u "I see you trying to sidestep us. Well, we're too clever for that!"
-
-                u "You need to turn yourself around and get back inside or I'll do it for you."
+                u "You need to turn yourself around right now and get back inside or I'll do it for you."
 
     scene v15s45_5c # FPP. same as v15s45_5b Chloe's mouth is open, Chloe and Amber are still looking at Mc, Amber's mouth is still closed.
     with dissolve
@@ -270,7 +268,7 @@ label v15s45:
 
     cl "I guess I've got a few minutes to spare."
 
-    scene v15s45_6 # FPP. Chloe Amber and Mc enter the Chick's living room, Chloe sit's down and looks at Mc and Amber, Amber and Mc do not sit down and instead stand in front of Chloe, have a chair close by to Mc will be used in a future render, Amber and Mc are looking at Chloe, all of them have no expressions, all of their mouths are closed
+    scene v15s45_6 # FPP. Chloe Amber and Mc enter the Chicks living room, Chloe sit's down and looks at Mc and Amber, Amber and Mc do not sit down and instead stand in front of Chloe, have a chair close by to Mc will be used in a future render, Amber and Mc are looking at Chloe, all of them have no expressions, all of their mouths are closed
     with dissolve
 
     pause 0.75
@@ -1073,7 +1071,8 @@ label v15s45:
                 scene v15s45_7g
                 with dissolve
 
-                cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it... I think you might need to take another look at your evidence."
+                cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it..."
+                cl "I think you might need to take another look at your evidence."
                 $ v15_nora_clues.add("hates_camping")
 
                 scene v15s45_8
@@ -1239,7 +1238,8 @@ label v15s45:
                 scene v15s45_7g
                 with dissolve
 
-                cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it... I think you might need to take another look at your evidence."
+                cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it..."
+                cl "I think you might need to take another look at your evidence."
                 $ v15_nora_clues.add("hates_camping")
 
                 scene v15s45_8
@@ -1426,7 +1426,8 @@ label v15s45:
                 scene v15s45_7g
                 with dissolve
 
-                cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it... I think you might need to take another look at your evidence."
+                cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it..."
+                cl "I think you might need to take another look at your evidence."
                 $ v15_nora_clues.add("hates_camping")
 
                 scene v15s45_8
@@ -1493,7 +1494,7 @@ label v15s45:
 
     am "Hey!"
 
-    scene v15s45_9 # FPP. Show only Chloe walking out of the Chick's Frat House front door, her back is turned to Mc
+    scene v15s45_9 # FPP. Show only Chloe walking out of the Chicks Frat House front door, her back is turned to Mc
     with dissolve
 
     pause 0.75
