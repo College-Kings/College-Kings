@@ -16,8 +16,6 @@ label v15s48:
 
     pause 0.75
 
-    play sound "sounds/revving.mp3"
-
     scene v15s48_3 # TPP. Show the Cab driving off.
     with dissolve
 
@@ -869,7 +867,7 @@ label v15s48:
                 u "Nora..."
 
                 menu:
-                    "Friendzone":
+                    "We should just be friends":
                         u "The relationship that we have is so strong, and fun... I think we should keep it that way."
 
                         scene v15s48_18a
@@ -974,7 +972,7 @@ label v15s48:
                         scene v15s48_18k # FPP. MC looking at Nora, Nora looking at MC, Nora flirty, mouth closed.
                         with dissolve
 
-                        u "I want nothing more than that."
+                        u "I want you too."
 
                     # -if they had sex in the past, Nora is thrilled, and hops up to give MC a passionate kiss
 

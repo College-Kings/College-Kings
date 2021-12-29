@@ -210,7 +210,7 @@ label v15s45:
 
                 u "Go back inside, Chloe. We have important business to take care of."
 
-            "Accuse Chloe":
+            "Threaten Chloe":
                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                     $ add_point(KCT.TROUBLEMAKER)
                 elif nora.relationship.value >= Relationship.FWB.value: 
@@ -221,9 +221,7 @@ label v15s45:
                 scene v15s45_5b
                 with dissolve
 
-                u "I see you trying to sidestep us. Well, we're too clever for that!"
-
-                u "You need to turn yourself around and get back inside or I'll do it for you."
+                u "You need to turn yourself around right now and get back inside or I'll do it for you."
 
     scene v15s45_5c # FPP. same as v15s45_5b Chloe's mouth is open, Chloe and Amber are still looking at Mc, Amber's mouth is still closed.
     with dissolve
