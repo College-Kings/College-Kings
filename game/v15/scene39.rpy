@@ -91,72 +91,72 @@ label v15s39:
 
         barworker "We do have a wide range of juices and sodas, and we can also create mocktails."
 
-    if v15_lindsey_inviteseb:
-        scene v15s39_7b # FPP. same as v15s39_7 Sebastian is now looking at the BW's location, raised eyebrow, mouth is still open, still a slight smile
-        with dissolve
+        if v15_lindsey_inviteseb:
+            scene v15s39_7b # FPP. same as v15s39_7 Sebastian is now looking at the BW's location, raised eyebrow, mouth is still open, still a slight smile
+            with dissolve
 
-        se "Mocktails, like cocktails, but no buzz?"
+            se "Mocktails, like cocktails, but no buzz?"
 
-        scene v15s39_5d # FPP. same as v15s39_5b BW has a slight smile, Still looking at Sebastian/Grayson's position, Still don't show sebastian or Grayson, mouth is still open
-        with dissolve
+            scene v15s39_5d # FPP. same as v15s39_5b BW has a slight smile, Still looking at Sebastian/Grayson's position, Still don't show sebastian or Grayson, mouth is still open
+            with dissolve
 
-        barworker "Yes, exactly. We do have a wide range to choose from."
+            barworker "Yes, exactly. We do have a wide range to choose from."
 
-        scene v15s39_5c
-        with dissolve
+            scene v15s39_5c
+            with dissolve
 
-        u "That sounds great, I'll take one."
+            u "That sounds great, I'll take one."
 
-        scene v15s39_8a
-        with dissolve
+            scene v15s39_8a
+            with dissolve
 
-        li "Yeah, we all will! Just surprise us, haha."
+            li "Yeah, we all will! Just surprise us, haha."
 
-        scene v15s39_5c
-        with dissolve
+            scene v15s39_5c
+            with dissolve
 
-        barworker "Very well! I'll be right back with your drinks."
+            barworker "Very well! I'll be right back with your drinks."
 
-    else:
-        scene v15s39_6b # FPP. same as v15s39_6 Show Grayson looking up towards where the BW is standing, aggravated expression, mouth is still open
-        with dissolve
+        else:
+            scene v15s39_6b # FPP. same as v15s39_6 Show Grayson looking up towards where the BW is standing, aggravated expression, mouth is still open
+            with dissolve
 
-        gr "Got any milk and cookies? *Scoffs* We're in college, lady, not kindergarten."
+            gr "Got any milk and cookies? *Scoffs* We're in college, lady, not kindergarten."
 
-        scene v15s39_5b # FPP. same as v15s39_5 BW is looking towards Grayson/Sebastian's seating location, don't show sebastian or grayson, annoyed expression, mouth is open
-        with dissolve
+            scene v15s39_5b # FPP. same as v15s39_5 BW is looking towards Grayson/Sebastian's seating location, don't show sebastian or grayson, annoyed expression, mouth is open
+            with dissolve
 
-        barworker "Would you prefer a mocktail, sir?"
+            barworker "Would you prefer a mocktail, sir?"
 
-        scene v15s39_6b
-        with dissolve
+            scene v15s39_6b
+            with dissolve
 
-        gr "Mocktails?"
+            gr "Mocktails?"
 
-        scene v15s39_5b
-        with dissolve
+            scene v15s39_5b
+            with dissolve
 
-        barworker "They're cocktails without alcohol."
+            barworker "They're cocktails without alcohol."
 
-        scene v15s39_5c # FPP. same as v15s39_5 BW's mouth is closed, still a slight smile, still looking at MC
-        with dissolve
+            scene v15s39_5c # FPP. same as v15s39_5 BW's mouth is closed, still a slight smile, still looking at MC
+            with dissolve
 
-        u "I like the sound of a mocktail. I'll have one, thanks."
+            u "I like the sound of a mocktail. I'll have one, thanks."
 
-        scene v15s39_8a # FPP. same as v15s39_8 Lindsey is now looking at the BW's location, still a slight smile, mouth is still open
-        with dissolve
+            scene v15s39_8a # FPP. same as v15s39_8 Lindsey is now looking at the BW's location, still a slight smile, mouth is still open
+            with dissolve
 
-        li "Same for us girls."
+            li "Same for us girls."
 
-        scene v15s39_6b
-        with dissolve
+            scene v15s39_6b
+            with dissolve
 
-        gr "So, basically juice and soda in a fancy glass?"
+            gr "So, basically juice and soda in a fancy glass?"
 
-        scene v15s39_5b
-        with dissolve
+            scene v15s39_5b
+            with dissolve
 
-        barworker "...Yes. I'll be back in a bit."
+            barworker "...Yes. I'll be back in a bit."
 
     scene v15s39_8b # FPP. same as v15s39_8a Lindsey is now looking at MC, still a slight smile, mouth is still closed
     with dissolve
