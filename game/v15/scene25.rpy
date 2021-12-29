@@ -59,7 +59,7 @@ label v15s25:
 
         pause 0.75 
 
-        play sound "sounds/ringing.mp3"
+        play sound "sounds/ring.mp3"
 
         scene v15s25_5b # TPP. MC sitting at his study desk with his phone to his ear in his apes frat room, slight smile, mouth closed.
         with dissolve
@@ -755,7 +755,7 @@ label v15s25:
     if not v15_lindsey_alcohol:
         $ grant_achievement("teetotal")
 
-    play sound "sounds/hangup.mp3"
+    play sound "sounds/rejectcall.mp3"
 
     scene v15s25_8 # TPP. Just MC sitting in the chair plain wall in the background, MC pressing a button on his phone, MC slight smile, mouth closed.
     with dissolve
