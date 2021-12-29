@@ -495,7 +495,7 @@ label v15s24:
         scene v15s24_13a
         with dissolve
 
-        u "(Fuck this guy... Should I stick with the fake story or just come clean at this point?"
+        u "(Fuck this guy... Should I stick with the fake story or just come clean at this point?)"
 
         menu:
             "Act offended":
