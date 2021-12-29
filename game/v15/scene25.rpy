@@ -446,7 +446,7 @@ label v15s25:
 
                         admin "I think it would be nice if that sort of generosity was spread about a little more."
 
-                        admin "What about a 50% discount?"
+                        admin "What about a 50\% discount?"
 
                         scene v15s25_7a
                         with dissolve
