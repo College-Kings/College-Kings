@@ -940,7 +940,7 @@ label v15s24:
 
         u "(Fuck's sake... How do I get out of this?)"
 
-        menu :
+        menu:
             "Act offended":
                 $ v15_lindsey_alcohol = True
                 scene v15s24_13l
@@ -1315,9 +1315,7 @@ label v15s24:
         with dissolve
 
         menu:
-
             "That sounds amazing":
-
                 u "That sounds amazing...?"
 
                 scene v15s24_5a
@@ -1328,7 +1326,6 @@ label v15s24:
                 li "Can't wait. *Laughs*"
 
             "Is that a good thing?":
-
                 u "Is that a good thing?"
 
                 scene v15s24_5a
