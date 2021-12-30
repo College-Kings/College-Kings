@@ -225,6 +225,7 @@ label v15s18d:
 
             if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.BOYFRIEND)
+                $ v15s18_LaurensBed = True
 
                 if v15_lauren_gift == 1:
                     scene v15s18d_8i # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren fake smile, mouth open.
@@ -318,6 +319,7 @@ label v15s18d:
 
             else: 
                 if kct == "loyal" and lauren.relationship.value >= Relationship.KISS.value and not v11_lauren_caught_aubrey and not "v12_lauren" in sceneList:
+                    $ v15s18_LaurensBed = True
                     call screen kct_popup
                     
                     scene v15s18d_8f
@@ -458,6 +460,7 @@ label v15s18d:
             la "Yeah, it was great! I'm so happy everyone had a good time."
 
             if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ v15s18_LaurensBed = True
                 scene v15s18d_8f
                 with dissolve
 

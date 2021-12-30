@@ -4,7 +4,7 @@
 # Time: 
 
 label v15s18f:
-    if v15s18_LaurensBed: # Placeholder
+    if v15s18_LaurensBed:
         scene v15s18f_1 # TPP. Show MC and Lauren in an affectionate cuddle, MC big spoon, Lauren little spoon, both have their eyes closed, both slight smile, mouth closed.
         with dissolve
         
