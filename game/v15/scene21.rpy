@@ -733,7 +733,7 @@ label v15s21:
             scene v15s21_7k
             with dissolve
 
-            cl "*Whispers* I don't know what you guys are talking about... Hehe."
+            cl "*Whispers* I don't know what you guys are talking about..."
 
             scene v15s21_7c
             with dissolve
