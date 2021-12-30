@@ -704,6 +704,7 @@ label v15s24:
                 pause 0.75
 
                 if kct == "popular":
+                    call screen kct_popup
                     $ v15_lindsey_alcohol = True
 
                     scene v15s24_17
@@ -1148,6 +1149,7 @@ label v15s24:
                 pause 0.75
 
                 if kct == "popular":
+                    call screen kct_popup
                     $ v15_lindsey_alcohol = True
 
                     scene v15s24_17
