@@ -137,7 +137,7 @@ label v15s45:
 
             u "Heading out right as we're heading in, huh?"
 
-            u "There's a weight on your shoulders, I can feel it. You need to talk to us; we can help you."
+            u "There's a weight on your shoulders, I can feel it. You need to talk to us. We can help you."
 
         "Threaten Chloe" if detective == "loose_cannon":
             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:

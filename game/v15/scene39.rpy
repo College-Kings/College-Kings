@@ -414,7 +414,7 @@ label v15s39:
         scene v15s39_7e # FPP. same as v15s39_7a Sebastian has no expression, still looking at Lindsey, mouth is still open
         with dissolve
 
-        se "I can't really comment. I don't know her well; We don't talk much. So technically, nothing."
+        se "I can't really comment. I don't know her well, we don't talk much. So technically, nothing."
 
         scene v15s39_8
         with dissolve

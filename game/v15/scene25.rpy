@@ -380,7 +380,7 @@ label v15s25:
         scene v15s25_7
         with dissolve
 
-        admin "So, the full party package is eight-hundred dollars; You'll need to pay as soon as you arrive."
+        admin "So, the full party package is eight-hundred dollars. You'll need to pay as soon as you arrive."
 
         scene v15s25_7b
         with dissolve

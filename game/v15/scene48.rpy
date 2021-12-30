@@ -769,7 +769,7 @@ label v15s48:
                 scene v15s48_18a
                 with dissolve
 
-                no "Not for long! I'm pretty sure I saw some wine earlier; I'll go dig it out."
+                no "Not for long! I'm pretty sure I saw some wine earlier. I'll go dig it out."
 
                 scene v15s48_14a # TPP. MC sitting on the couch in the Cabin, Nora approaching the Couch coming from the kitchen area holding two glasses of wine, Nora slight smile, mouth closed, MC slight smile, mouth closed.
                 with fade
