@@ -4,6 +4,11 @@
 # Time: Morning
 
 label v15s41:
+    scene black
+    with dissolve
+    
+    pause 1
+
     scene sleep_transition_fast
     with fade
 
