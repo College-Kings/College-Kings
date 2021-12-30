@@ -36,17 +36,17 @@ label v15s29:
     pause 0.75
 
     if v14_emily_ily:
+        play sound "sounds/vibrate.mp3"
+
         scene v15s29_3b # TPP. Mc looks at his phone on the nightstand, slight smile, mouth closed
         with dissolve
         
         pause 0.75
 
-        play sound "sounds/vibrate.mp3"
-
         scene v15s29_4 # FPP. MC picks up his phone and checks his texts and sees a message from Emily, From MC's chest and entire lower body is visible from the angle of him laying on the bed
         with dissolve
         
-        pause 0.75
+        pause 1.5
 
         $ emily.messenger.newImgMessage("images/v15/Scene 29/emily_message_29.webp", queue=False) #Standing next to a full bathtub, in sexy *new* lingerie
         $ emily.messenger.newMessage("About to have a late night bath, thinking of you.", queue=False)
@@ -55,12 +55,19 @@ label v15s29:
 
         if config_censored:
             $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
-
         else:
             $ emily.messenger.newImgMessage("images/v15/Scene 29/emilynude1.webp", queue=False) # Emily sat on the edge of the bath, now naked, legs crossed
+
         $ emily.messenger.newMessage("What would we be doing right now if you were here with me? ;)", queue=False)
         $ emily.messenger.addReply("We'd be getting very wet and extremely warm...", func=None)
         $ emily.messenger.newMessage("Mmm... Send me a pic? ;)", queue=False)
+
+        label v15s29_PhoneContinue:
+            if emily.messenger.replies:
+                call screen phone
+            if emily.messenger.replies:
+                u "(I should check out what Emily wants.)"
+                jump v15s29_PhoneContinue        
 
         scene v15s29_4
         with dissolve
@@ -79,7 +86,6 @@ label v15s29:
 
                 if config_censored:
                     $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
-
                 else:
                     $ emily.messenger.newImgMessage("images/v15/Scene 29/emilynude_MC_DicPic1.webp", queue=False) # MC dick pic, Just show a white sheet under Mc for the background
 
@@ -93,7 +99,6 @@ label v15s29:
 
                 if config_censored:
                     $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
-
                 else:
                     $ emily.messenger.newImgMessage("images/v15/Scene 29/emilynude2.webp", queue=False) # Image of her fingering herself, Inside or outside the tub, whatever is possible
 
@@ -104,12 +109,12 @@ label v15s29:
                 $ emily.messenger.addReply("Good.", func=None)
                 $ emily.messenger.newMessage("Send me a pic when you're finished? ;)", queue=False)
 
-                label v15s29_PhoneContinue:
+                label v15s29_PhoneContinue2:
                     if emily.messenger.replies:
                         call screen phone
                     if emily.messenger.replies:
                         u "(I should reply to Emily.)"
-                        jump v15s29_PhoneContinue
+                        jump v15s29_PhoneContinue2
 
                 scene v15s29_4a
                 with dissolve
@@ -138,7 +143,6 @@ label v15s29:
 
                 if config_censored:
                     $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
-
                 else: 
                     $ emily.messenger.addImgReply("images/v15/Scene 29/emilynude_MC_DicPic2.webp", func=None) # MC's Post Cum Hand Pic
 
@@ -164,12 +168,12 @@ label v15s29:
                 $ emily.messenger.newMessage("Oh, okay. No worries. I'll talk to you soon, I miss you <3", queue=False)
                 $ emily.messenger.addReply("You too, night :)", func=None)
 
-                label v15s29_PhoneContinue2:
+                label v15s29_PhoneContinue3:
                     if emily.messenger.replies:
                         call screen phone
                     if emily.messenger.replies:
                         u "(I should reply to Emily.)"
-                        jump v15s29_PhoneContinue2
+                        jump v15s29_PhoneContinue3
 
                 scene v15s29_4
                 with dissolve
