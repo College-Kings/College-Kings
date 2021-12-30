@@ -290,7 +290,7 @@ label v15s12:
             scene v15s12_6 # FPP. Lindsey concerned mouth open [Checkpoint E].
             with dissolve
 
-            li "So, real quick, just to rip off the band-aid, haha..."
+            li "So, real quick, just to rip off the band-aid, uhm..."
 
             scene v15s12_6a # TPP. MC worried, mouth closed [Checkpoint E].
             with dissolve
