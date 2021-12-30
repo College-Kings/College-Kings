@@ -39,360 +39,223 @@ label v15s43:
 
         pause 0.75
 
-        if detective == "professional":
-            scene v15s43_2a 
-            with dissolve
+        scene v15s43_2a 
+        with dissolve
 
-            menu:
-                "Try the door handle":
-                    play sound "sounds/dooropen.mp3"
+        menu:
+            "Try the door handle":
+                play sound "sounds/dooropen.mp3"
 
-                    scene v15s42_3 # TPP. Close up shot of MC's hand turning the door knob and opening the door.
-                    with dissolve
+                scene v15s42_3 # TPP. Close up shot of MC's hand turning the door knob and opening the door.
+                with dissolve
 
-                    u "It's unlocked."
+                u "It's unlocked."
 
-                    scene v15s43_2c
-                    with dissolve
+                scene v15s43_2c
+                with dissolve
 
-                    am "This is just like in the movies!"
+                am "This is just like in the movies!"
 
-                    am "We really need guns for this, though."
+                am "We really need guns for this, though."
 
-                    scene v15s43_2b
-                    with dissolve
+                scene v15s43_2b
+                with dissolve
 
-                    u "We really don't. *Chuckles*"
+                u "We really don't. *Chuckles*"
 
-                "Keep waiting":
-                    scene v15s43_2c
-                    with dissolve
+            "Keep waiting":
+                scene v15s43_2c
+                with dissolve
 
-                    am "How long should we wait for?"
+                am "How long should we wait for?"
 
-                    scene v15s43_2b
-                    with dissolve
+                scene v15s43_2b
+                with dissolve
 
-                    u "I don't know, you're the lead detective on this case."
+                u "I don't know, you're the lead detective on this case."
 
-                    scene v15s43_2c
-                    with dissolve
+                scene v15s43_2c
+                with dissolve
 
-                    am "Maybe we can find an open window to climb through?"
+                am "Maybe we can find an open window to climb through?"
 
-                    scene v15s43_2b
-                    with dissolve
+                scene v15s43_2b
+                with dissolve
 
-                    u "Haha, climb up the house? Go right ahead, I'll watch."
+                u "Haha, climb up the house? Go right ahead, I'll watch."
 
-                    scene v15s43_2c
-                    with dissolve
+                scene v15s43_2c
+                with dissolve
 
-                    am "Let me just try this first."
+                am "Let me just try this first."
 
-                    play sound "sounds/dooropen.mp3"
+                play sound "sounds/dooropen.mp3"
 
-                    scene v15s43_3a # TPP. Close up shot of Amber's hand turning the door knob and opening the door.
-                    with dissolve
+                scene v15s43_3a # TPP. Close up shot of Amber's hand turning the door knob and opening the door.
+                with dissolve
 
-                    am "It's fucking open!"
+                am "It's fucking open!"
 
-                    scene v15s43_2b
-                    with dissolve
+                scene v15s43_2b
+                with dissolve
 
-                    u "Dammit, I wanted to see you squeeze through that tiny window..."
+                u "Dammit, I wanted to see you squeeze through that tiny window..."
 
-                    scene v15s43_2d # FPP. Amber looking at MC, MC looking at Amber, Amber giving him the middle finger while laughing.
-                    with dissolve
+                scene v15s43_2d # FPP. Amber looking at MC, MC looking at Amber, Amber giving him the middle finger while laughing.
+                with dissolve
 
-                    pause 0.75
+                pause 0.75
 
-                "Strategize":
-                    scene v15s43_2b
-                    with dissolve
+            "Strategize" if detective == "professional":
+                scene v15s43_2b
+                with dissolve
 
-                    u "Maybe one of us should go around the back. We don't want our suspect escaping."
+                u "Maybe one of us should go around the back. We don't want our suspect escaping."
 
-                    scene v15s43_2c
-                    with dissolve
+                scene v15s43_2c
+                with dissolve
 
-                    am "That's true. But he's not going to think we're a danger to him anyway."
+                am "That's true. But he's not going to think we're a danger to him anyway."
 
-                    scene v15s43_2b
-                    with dissolve
+                scene v15s43_2b
+                with dissolve
 
-                    u "Why? We're detectives."
+                u "Why? We're detectives."
 
-                    scene v15s43_2c
-                    with dissolve
+                scene v15s43_2c
+                with dissolve
 
-                    am "Yeah, but we're undercover detectives. Deep undercover... We don't even carry badges. *Giggles*"
+                am "Yeah, but we're undercover detectives. Deep undercover... We don't even carry badges. *Giggles*"
 
-                    scene v15s43_2b
-                    with dissolve
+                scene v15s43_2b
+                with dissolve
 
-                    u "Right... We could anybody."
+                u "Right... We could anybody."
 
-                    scene v15s43_2c
-                    with dissolve
+                scene v15s43_2c
+                with dissolve
 
-                    am "Exactly. Hello, sir! We're selling insurance for your windows. And BAM! We're inside interrogating that punk."
+                am "Exactly. Hello, sir! We're selling insurance for your windows. And BAM! We're inside interrogating that punk."
 
-                    scene v15s43_2b
-                    with dissolve
+                scene v15s43_2b
+                with dissolve
 
-                    u "You are an absolute genius."
+                u "You are an absolute genius."
 
-                    scene v15s43_2e # FPP. Amber looking at MC, MC looking at Amber, Amber winking, slight smile, mouth open.
-                    with dissolve
+                scene v15s43_2e # FPP. Amber looking at MC, MC looking at Amber, Amber winking, slight smile, mouth open.
+                with dissolve
 
-                    am "Thank you."
+                am "Thank you."
 
-                    scene v15s43_2b
-                    with dissolve
+                scene v15s43_2b
+                with dissolve
 
-                    u "*Chuckles*"
+                u "*Chuckles*"
 
-                    scene v15s43_2c
-                    with dissolve
+                scene v15s43_2c
+                with dissolve
 
-                    am "I'm done waiting. We're breaking in."
+                am "I'm done waiting. We're breaking in."
 
-                    play sound "sounds/dooropen.mp3"
+                play sound "sounds/dooropen.mp3"
 
-                    scene v15s43_3a
-                    with dissolve
+                scene v15s43_3a
+                with dissolve
 
-                    u "Already unlocked?"
+                u "Already unlocked?"
 
-                    scene v15s43_2c
-                    with dissolve
+                scene v15s43_2c
+                with dissolve
 
-                    am "I didn't think it would be that easy, haha."
+                am "I didn't think it would be that easy, haha."
 
-        elif detective == "psychologist":
-            scene v15s43_2a 
-            with dissolve
+            "What is Chris thinking?" if detective == "psychologist":
+                scene v15s43_2b
+                with dissolve
 
-            menu:
-                "Try the door handle":
-                    play sound "sounds/dooropen.mp3"
+                u "I bet he's wondering who's at the door."
 
-                    scene v15s42_3 # TPP. Close up shot of MC's hand turning the door knob and opening the door.
-                    with dissolve
+                scene v15s43_2c
+                with dissolve
 
-                    u "It's unlocked."
+                am "I'm sure he is."
 
-                    scene v15s43_2c
-                    with dissolve
+                scene v15s43_2b
+                with dissolve
 
-                    am "This is just like in the movies!"
+                u "Hmm... What could we want?"
 
-                    am "We really need guns for this, though."
+                u "Should he even risk opening the door? Hmm..."
 
-                    scene v15s43_2b
-                    with dissolve
+                scene v15s43_2c
+                with dissolve
 
-                    u "We really don't. *Chuckles*"
+                am "*Chuckles* Okay, wow... You'd make a mean psychologist."
 
-                "Keep waiting":
-                    scene v15s43_2c
-                    with dissolve
+                scene v15s43_2b
+                with dissolve
 
-                    am "How long should we wait for?"
+                u "He's making us wait a long time. Showing signs of narcissism."
 
-                    scene v15s43_2b
-                    with dissolve
+                scene v15s43_2c
+                with dissolve
 
-                    u "I don't know, you're the lead detective on this case."
+                am "Let's just try the door."
 
-                    scene v15s43_2c
-                    with dissolve
+                play sound "sounds/dooropen.mp3"
 
-                    am "Maybe we can find an open window to climb through?"
+                scene v15s43_3a
+                with dissolve
 
-                    scene v15s43_2b
-                    with dissolve
+                am "Oh, that was too easy."
 
-                    u "Haha, climb up the house? Go right ahead, I'll watch."
+                scene v15s43_2b
+                with dissolve
 
-                    scene v15s43_2c
-                    with dissolve
+                u "He's already playing mind games with us, this isn't good."
 
-                    am "Let me just try this first."
+            "Kick the door open" if detective == "loose cannon":
+                scene v15s43_2b
+                with dissolve
 
-                    play sound "sounds/dooropen.mp3"
+                u "Watch out, back up."
 
-                    scene v15s43_3a # TPP. Close up shot of Amber's hand turning the door knob and opening the door.
-                    with dissolve
+                scene v15s43_2c
+                with dissolve
 
-                    am "It's fucking open!"
+                am "Huh?"
 
-                    scene v15s43_2b
-                    with dissolve
+                play sound "sounds/thud.mp3"
 
-                    u "Dammit, I wanted to see you squeeze through that tiny window..."
+                scene v15s43_4 # TPP. Show MC kicking open the door and the door flying open.
+                with dissolve
 
-                    scene v15s43_2d # FPP. Amber looking at MC, MC looking at Amber, Amber giving him the middle finger while laughing.
-                    with dissolve
+                pause 0.75
 
-                    pause 0.75
+                scene v15s43_2c
+                with dissolve
 
-                "What is Chris thinking?":
-                    scene v15s43_2b
-                    with dissolve
+                am "Oh, fuck [name]! You weren't kidding about being a loose cannon."
 
-                    u "I bet he's wondering who's at the door."
+                scene v15s43_2b
+                with dissolve
 
-                    scene v15s43_2c
-                    with dissolve
+                u "I ain't got time to fuck around with these punk ass kids!"
 
-                    am "I'm sure he is."
+                scene v15s43_2c
+                with dissolve
 
-                    scene v15s43_2b
-                    with dissolve
+                am "*Laughs* Woah there, okay! Calm down big guy, you're starting to turn green..."
 
-                    u "Hmm... What could we want?"
+                scene v15s43_2b
+                with dissolve
 
-                    u "Should he even risk opening the door? Hmm..."
+                u "Ha. Okay, sorry. Got a little carried away..."
 
-                    scene v15s43_2c
-                    with dissolve
+                scene v15s43_2c
+                with dissolve
 
-                    am "*Chuckles* Okay, wow... You'd make a mean psychologist."
-
-                    scene v15s43_2b
-                    with dissolve
-
-                    u "He's making us wait a long time. Showing signs of narcissism."
-
-                    scene v15s43_2c
-                    with dissolve
-
-                    am "Let's just try the door."
-
-                    play sound "sounds/dooropen.mp3"
-
-                    scene v15s43_3a
-                    with dissolve
-
-                    am "Oh, that was too easy."
-
-                    scene v15s43_2b
-                    with dissolve
-
-                    u "He's already playing mind games with us, this isn't good."
-
-        else:
-            scene v15s43_2a 
-            with dissolve
-
-            menu:
-                "Try the door handle":
-                    play sound "sounds/dooropen.mp3"
-
-                    scene v15s42_3 # TPP. Close up shot of MC's hand turning the door knob and opening the door.
-                    with dissolve
-
-                    u "It's unlocked."
-
-                    scene v15s43_2c
-                    with dissolve
-
-                    am "This is just like in the movies!"
-
-                    am "We really need guns for this, though."
-
-                    scene v15s43_2b
-                    with dissolve
-
-                    u "We really don't. *Chuckles*"
-
-                "Keep waiting":
-                    scene v15s43_2c
-                    with dissolve
-
-                    am "How long should we wait for?"
-
-                    scene v15s43_2b
-                    with dissolve
-
-                    u "I don't know, you're the lead detective on this case."
-
-                    scene v15s43_2c
-                    with dissolve
-
-                    am "Maybe we can find an open window to climb through?"
-
-                    scene v15s43_2b
-                    with dissolve
-
-                    u "Haha, climb up the house? Go right ahead, I'll watch."
-
-                    scene v15s43_2c
-                    with dissolve
-
-                    am "Let me just try this first."
-
-                    play sound "sounds/dooropen.mp3"
-
-                    scene v15s43_3a # TPP. Close up shot of Amber's hand turning the door knob and opening the door.
-                    with dissolve
-
-                    am "It's fucking open!"
-
-                    scene v15s43_2b
-                    with dissolve
-
-                    u "Dammit, I wanted to see you squeeze through that tiny window..."
-
-                    scene v15s43_2d # FPP. Amber looking at MC, MC looking at Amber, Amber giving him the middle finger while laughing.
-                    with dissolve
-
-                    pause 0.75
-
-                "Kick the door open":
-                    scene v15s43_2b
-                    with dissolve
-
-                    u "Watch out, back up."
-
-                    scene v15s43_2c
-                    with dissolve
-
-                    am "Huh?"
-
-                    play sound "sounds/thud.mp3"
-
-                    scene v15s43_4 # TPP. Show MC kicking open the door and the door flying open.
-                    with dissolve
-
-                    pause 0.75
-
-                    scene v15s43_2c
-                    with dissolve
-
-                    am "Oh, fuck [name]! You weren't kidding about being a loose cannon."
-
-                    scene v15s43_2b
-                    with dissolve
-
-                    u "I ain't got time to fuck around with these punk ass kids!"
-
-                    scene v15s43_2c
-                    with dissolve
-
-                    am "*Laughs* Woah there, okay! Calm down big guy, you're starting to turn green..."
-
-                    scene v15s43_2b
-                    with dissolve
-
-                    u "Ha. Okay, sorry. Got a little carried away..."
-
-                    scene v15s43_2c
-                    with dissolve
-
-                    am "*Whispers* A little?"
+                am "*Whispers* A little?"
 
     scene v15s43_5 # TPP. Show MC and Amber entering the wolves house, both slight smile, mouth closed.
     with dissolve
@@ -409,141 +272,86 @@ label v15s43:
 
     pause 0.75
 
-    if detective == "professional":
-        scene v15s43_8 # TPP. MC and Amber standing in the living room, MC looking at Amber, Amber looking at MC, Amber suspicious, mouth closed, MC suspicious, mouth closed.
-        with dissolve
+    scene v15s43_8 # TPP. MC and Amber standing in the living room, MC looking at Amber, Amber looking at MC, Amber suspicious, mouth closed, MC suspicious, mouth closed.
+    with dissolve
 
-        menu:
-            "Call for Chris":
-                scene v15s43_9 # TPP. Close up of MC, looking at the room, suspicious, mouth open.
-                with dissolve
+    menu:
+        "Call for Chris":
+            scene v15s43_9 # TPP. Close up of MC, looking at the room, suspicious, mouth open.
+            with dissolve
 
-                u "Chris? Come on out!"
+            u "Chris? Come on out!"
 
-                scene v15s43_10 # TPP. Close up of Amber, hands in the shape of a gun, looking at the room, suspicious, mouth open.
-                with dissolve
+            scene v15s43_10 # TPP. Close up of Amber, hands in the shape of a gun, looking at the room, suspicious, mouth open.
+            with dissolve
 
-                am "Don't worry, we'll go easy on you. Just come out and put your hands where I can see them!"
+            am "Don't worry, we'll go easy on you. Just come out and put your hands where I can see them!"
 
-            "Stay quiet":
-                scene v15s43_9
-                with dissolve
+        "Stay quiet":
+            scene v15s43_9
+            with dissolve
 
-                u "*Whispers* No sign of him."
+            u "*Whispers* No sign of him."
 
-                scene v15s43_10
-                with dissolve
+            scene v15s43_10
+            with dissolve
 
-                am "Chris, get your ass downstairs!"
-            
-            "Use your instinct":
-                scene v15s43_9
-                with dissolve
+            am "Chris, get your ass downstairs!"
+        
+        "Use your instinct" if detective == "professional":
+            scene v15s43_9
+            with dissolve
 
-                u "Something doesn't feel right about this..."
+            u "Something doesn't feel right about this..."
 
-                u "We should call for backup and get forensics in here."
+            u "We should call for backup and get forensics in here."
 
-                scene v15s43_10
-                with dissolve
+            scene v15s43_10
+            with dissolve
 
-                am "Ha, wait... What makes you say that?"
+            am "Ha, wait... What makes you say that?"
 
-                scene v15s43_9
-                with dissolve
+            scene v15s43_9
+            with dissolve
 
-                u "I know when something isn't right, okay? I can feel it!"
+            u "I know when something isn't right, okay? I can feel it!"
 
-    elif detective == "psychologist":
-        scene v15s43_8 # TPP. MC and Amber standing in the living room, MC looking at Amber, Amber looking at MC, Amber suspicious, mouth closed, MC suspicious, mouth closed.
-        with dissolve
+        "Analyze how you feel" if detective == "psychologist":
+            scene v15s43_9
+            with dissolve
 
-        menu:
-            "Call for Chris":
-                scene v15s43_9 # TPP. Close up of MC, looking at the room, suspicious, mouth open.
-                with dissolve
+            u "I feel like he's watching us. Studying us. The observers have become the observed."
 
-                u "Chris? Come on out!"
+            scene v15s43_10
+            with dissolve
 
-                scene v15s43_10 # TPP. Close up of Amber, hands in the shape of a gun, looking at the room, suspicious, mouth open.
-                with dissolve
+            am "Eww, stop... You're creeping me out! Like he's in the walls or something."
 
-                am "Don't worry, we'll go easy on you. Just come out and put your hands where I can see them!"
+            scene v15s43_9
+            with dissolve
 
-            "Stay quiet":
-                scene v15s43_9
-                with dissolve
+            u "*Gasps* A psychological horror!"
 
-                u "*Whispers* No sign of him."
+        "Be angry" if detective == "loose cannon":
+            scene v15s43_11 # TPP. View showing MC on one side of a couch in the living room, Amber on the other side with her hands in the shape of a gun, both suspicious, mouth closed.
+            with dissolve
 
-                scene v15s43_10
-                with dissolve
+            pause 0.75
 
-                am "Chris, get your ass downstairs!"
+            scene v15s43_11a # TPP. Show MC kicking the couch, Amber slightly shocked, mouth closed, MC angry, mouth open.
+            with dissolve
 
-            "Analyze how you feel":
-                scene v15s43_9
-                with dissolve
+            u "Come on out, Chris! We don't play these hide and seek games!"
 
-                u "I feel like he's watching us. Studying us. The observers have become the observed."
+            scene v15s43_11b # TPP. Show Amber kicking the couch, Amber angry, mouth open, MC angry, mouth closed.
+            with dissolve
 
-                scene v15s43_10
-                with dissolve
+            am "Yeah!"
 
-                am "Eww, stop... You're creeping me out! Like he's in the walls or something."
+            scene v15s43_11c # TPP. Show MC and Amber looking at each other from across the couch both laughing.
+            with dissolve
 
-                scene v15s43_9
-                with dissolve
-
-                u "*Gasps* A psychological horror!"
-
-    else:
-        scene v15s43_8 # TPP. MC and Amber standing in the living room, MC looking at Amber, Amber looking at MC, Amber suspicious, mouth closed, MC suspicious, mouth closed.
-        with dissolve
-
-        menu:
-            "Call for Chris":
-                scene v15s43_9 # TPP. Close up of MC, looking at the room, suspicious, mouth open.
-                with dissolve
-
-                u "Chris? Come on out!"
-
-                scene v15s43_10 # TPP. Close up of Amber, hands in the shape of a gun, looking at the room, suspicious, mouth open.
-                with dissolve
-
-                am "Don't worry, we'll go easy on you. Just come out and put your hands where I can see them!"
-
-            "Stay quiet":
-                scene v15s43_9
-                with dissolve
-
-                u "*Whispers* No sign of him."
-
-                scene v15s43_10
-                with dissolve
-
-                am "Chris, get your ass downstairs!"
-
-            "Be angry":
-                scene v15s43_11 # TPP. View showing MC on one side of a couch in the living room, Amber on the other side with her hands in the shape of a gun, both suspicious, mouth closed.
-                with dissolve
-
-                pause 0.75
-
-                scene v15s43_11a # TPP. Show MC kicking the couch, Amber slightly shocked, mouth closed, MC angry, mouth open.
-                with dissolve
-
-                u "Come on out, Chris! We don't play these hide and seek games!"
-
-                scene v15s43_11b # TPP. Show Amber kicking the couch, Amber angry, mouth open, MC angry, mouth closed.
-                with dissolve
-
-                am "Yeah!"
-
-                scene v15s43_11c # TPP. Show MC and Amber looking at each other from across the couch both laughing.
-                with dissolve
-
-                pause 0.75
+            pause 1.25
 
     scene v15s43_12 # TPP. Close up of Chris walking into the living room, Chris confused, mouth open.
     with dissolve
@@ -668,190 +476,111 @@ label v15s43:
 
     $ v15_nora_clues.add("be_alone")
 
-    if detective == "professional":
-        scene v15s43_14g # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth closed.
-        with dissolve
+    scene v15s43_14g # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth closed.
+    with dissolve
 
-        menu:
-            "Where did she go?":
-                u "Where did she go? She must have told you."
+    menu:
+        "Where did she go?":
+            u "Where did she go? She must have told you."
 
-                scene v15s43_14h # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth open.
-                with dissolve
+            scene v15s43_14h # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth open.
+            with dissolve
 
-                ch "I've already said that I'm respecting her by not telling anyone anything."
+            ch "I've already said that I'm respecting her by not telling anyone anything."
 
-                scene v15s43_15
-                with dissolve
+            scene v15s43_15
+            with dissolve
 
-                am "The quicker you tell us, the quicker we leave you alone. Capeesh?"
+            am "The quicker you tell us, the quicker we leave you alone. Capeesh?"
 
-                scene v15s43_14b
-                with dissolve
+            scene v15s43_14b
+            with dissolve
 
-                ch "Why are you acting so weird? Listen, I don't know where she is. She could have gone camping for all I know."
-                $ v15_nora_locations.add("camping")
+            ch "Why are you acting so weird? Listen, I don't know where she is. She could have gone camping for all I know."
+            $ v15_nora_locations.add("camping")
 
-                ch "Just wait until she comes back. She's fine. I swear she's fine."
+            ch "Just wait until she comes back. She's fine. I swear she's fine."
 
-            "Did she see someone?":
-                u "Did she go see someone else?"
+        "Did she see someone?":
+            u "Did she go see someone else?"
 
-                scene v15s43_14h
-                with dissolve
+            scene v15s43_14h
+            with dissolve
 
-                ch "No, she wanted to be alone, like I just said."
+            ch "No, she wanted to be alone, like I just said."
 
-                scene v15s43_15
-                with dissolve
+            scene v15s43_15
+            with dissolve
 
-                am "That's no good, Chris. You need to start telling us something we can use."
+            am "That's no good, Chris. You need to start telling us something we can use."
 
-            "You're lying":
-                u "You're lying straight to our faces! You know exactly where she is and it's only a matter of time before we find out."
+        "You're lying" if detective == "professional":
+            u "You're lying straight to our faces! You know exactly where she is and it's only a matter of time before we find out."
 
-                scene v15s43_14h
-                with dissolve
+            scene v15s43_14h
+            with dissolve
 
-                ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
-                $ v15_nora_locations.add("camping")
+            ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
+            $ v15_nora_locations.add("camping")
 
-    elif detective == "psychologist":
-        scene v15s43_14g # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth closed.
-        with dissolve
+        "Analyze Chris" if detective == "psychologist":
+            u "You're enjoying this aren't you? Do you get joy out of withholding information from us?"
 
-        menu:
-            "Where did she go?":
-                u "Where did she go? She must have told you."
+            scene v15s43_14h
+            with dissolve
 
-                scene v15s43_14h # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth open.
-                with dissolve
+            ch "Wha- No!"
 
-                ch "I've already said that I'm respecting her by not telling anyone anything."
+            scene v15s43_14g
+            with dissolve
 
-                scene v15s43_15
-                with dissolve
+            u "I wonder what else was said in your last conversation that made Nora want to completely disappear..."
 
-                am "The quicker you tell us, the quicker we leave you alone. Capeesh?"
+            scene v15s43_15
+            with dissolve
 
-                scene v15s43_14b
-                with dissolve
+            am "Oooooooooh. That one hurt."
 
-                ch "Why are you acting so weird? Listen, I don't know where she is. She could have gone camping for all I know."
-                $ v15_nora_locations.add("camping")
+            scene v15s43_14b
+            with dissolve
 
-                ch "Just wait until she comes back. She's fine. I swear she's fine."
+            ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
+            $ v15_nora_locations.add("camping")
 
-            "Did she see someone?":
-                u "Did she go see someone else?"
+        "Accuse Chris" if detective == "loose cannon":
+            play sound "sounds/thud.mp3"
 
-                scene v15s43_14h
-                with dissolve
+            scene v15s43_16 # TPP. Show MC slamming his hands on the table, MC angry, mouth open.
+            with dissolve
 
-                ch "No, she wanted to be alone, like I just said."
+            u "You're respecting nobody with that attitude!"
 
-                scene v15s43_15
-                with dissolve
+            scene v15s43_14g
+            with dissolve
 
-                am "That's no good, Chris. You need to start telling us something we can use."
+            u "We're Nora's friends and we're concerned about her."
 
-            "Analyze Chris":
-                u "You're enjoying this aren't you? Do you get joy out of withholding information from us?"
+            scene v15s43_17 # TPP. Show MC up in Chris's face, pointing his finger at Chris, Chris confused, mouth closed, MC angry, mouth open.
+            with dissolve
 
-                scene v15s43_14h
-                with dissolve
+            u "The least you can do, as her ex-boyfriend for the last who the fuck cares how many years... Is tell us where in the hell she is!"
 
-                ch "Wha- No!"
+            scene v15s43_15
+            with dissolve
 
-                scene v15s43_14g
-                with dissolve
+            am "He's right."
 
-                u "I wonder what else was said in your last conversation that made Nora want to completely disappear..."
+            scene v15s43_14g
+            with dissolve
 
-                scene v15s43_15
-                with dissolve
+            u "Did she really want to be alone? Or are you keeping her somewhere? You need to tell us, Chris, before it's too late."
 
-                am "Oooooooooh. That one hurt."
+            scene v15s43_14h
+            with dissolve
 
-                scene v15s43_14b
-                with dissolve
+            ch "What the hell is wrong with you?"
 
-                ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
-                $ v15_nora_locations.add("camping")
-
-    else:
-        scene v15s43_14g # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth closed.
-        with dissolve
-
-        menu:
-            "Where did she go?":
-                u "Where did she go? She must have told you."
-
-                scene v15s43_14h # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth open.
-                with dissolve
-
-                ch "I've already said that I'm respecting her by not telling anyone anything."
-
-                scene v15s43_15
-                with dissolve
-
-                am "The quicker you tell us, the quicker we leave you alone. Capeesh?"
-
-                scene v15s43_14b
-                with dissolve
-
-                ch "Why are you acting so weird? Listen, I don't know where she is. She could have gone camping for all I know."
-                $ v15_nora_locations.add("camping")
-
-                ch "Just wait until she comes back. She's fine. I swear she's fine."
-
-            "Did she see someone?":
-                u "Did she go see someone else?"
-
-                scene v15s43_14h
-                with dissolve
-
-                ch "No, she wanted to be alone, like I just said."
-
-                scene v15s43_15
-                with dissolve
-
-                am "That's no good, Chris. You need to start telling us something we can use."
-
-            "Accuse Chris":
-                play sound "sounds/thud.mp3"
-
-                scene v15s43_16 # TPP. Show MC slamming his hands on the table, MC angry, mouth open.
-                with dissolve
-
-                u "You're respecting nobody with that attitude!"
-
-                scene v15s43_14g
-                with dissolve
-
-                u "We're Nora's friends and we're concerned about her."
-
-                scene v15s43_17 # TPP. Show MC up in Chris's face, pointing his finger at Chris, Chris confused, mouth closed, MC angry, mouth open.
-                with dissolve
-
-                u "The least you can do, as her ex-boyfriend for the last who the fuck cares how many years... Is tell us where in the hell she is!"
-
-                scene v15s43_15
-                with dissolve
-
-                am "He's right."
-
-                scene v15s43_14g
-                with dissolve
-
-                u "Did she really want to be alone? Or are you keeping her somewhere? You need to tell us, Chris, before it's too late."
-
-                scene v15s43_14h
-                with dissolve
-
-                ch "What the hell is wrong with you?"
-
-                ch "Did you start taking improv classes or some shit? I don't fucking know where she is, [name]."
+            ch "Did you start taking improv classes or some shit? I don't fucking know where she is, [name]."
 
     scene v15s43_15
     with dissolve
@@ -881,266 +610,161 @@ label v15s43:
 
     am "Not so fast, wise guy."
 
-    if detective == "professional":
-        scene v15s43_14g
-        with dissolve
+    scene v15s43_14g
+    with dissolve
 
-        menu:
-            "She's close with her Aunt?":
-                u "This aunt-"
+    menu:
+        "She's close with her Aunt?":
+            u "This aunt-"
 
-                scene v15s43_15
-                with dissolve
+            scene v15s43_15
+            with dissolve
 
-                am "If she even exists..."
+            am "If she even exists..."
 
-                scene v15s43_14g
-                with dissolve
+            scene v15s43_14g
+            with dissolve
 
-                u "Yeah. If she exists... Is Nora close to her?"
+            u "Yeah. If she exists... Is Nora close to her?"
 
-                scene v15s43_14h
-                with dissolve
+            scene v15s43_14h
+            with dissolve
 
-                ch "I don't know if they're close, but I think she lives nearby. And no, I'm not sure where."
+            ch "I don't know if they're close, but I think she lives nearby. And no, I'm not sure where."
 
-                scene v15s43_15
-                with dissolve
+            scene v15s43_15
+            with dissolve
 
-                am "Oh yeah? How sure?"
+            am "Oh yeah? How sure?"
 
-            "She's not with Mr. Rose?":
-                u "So you're sure that Nora's not with Mr. Rose, or... Her dad, I mean?"
+        "She's not with Mr. Rose?":
+            u "So you're sure that Nora's not with Mr. Rose, or... Her dad, I mean?"
 
-                scene v15s43_14h
-                with dissolve
+            scene v15s43_14h
+            with dissolve
 
-                ch "I don't think she would go to her dad's house."
+            ch "I don't think she would go to her dad's house."
 
-                scene v15s43_15
-                with dissolve
+            scene v15s43_15
+            with dissolve
 
-                am "Why?"
+            am "Why?"
 
-                scene v15s43_14b
-                with dissolve
+            scene v15s43_14b
+            with dissolve
 
-                ch "She pretty much hates him. That's the last place she'd go."
-                $ v15_nora_clues.add("hates_dad")
+            ch "She pretty much hates him. That's the last place she'd go."
+            $ v15_nora_clues.add("hates_dad")
 
-                scene v15s43_15
-                with dissolve
+            scene v15s43_15
+            with dissolve
 
-                am "Hmm... I don't know if we can trust you."
+            am "Hmm... I don't know if we can trust you."
 
-            "Use logic":
-                u "This aunt is around often?"
+        "Use logic" if detective == "professional":
+            u "This aunt is around often?"
 
-                scene v15s43_14h
-                with dissolve
+            scene v15s43_14h
+            with dissolve
 
-                ch "Yeah, I think she lives close to campus, but no idea where."
+            ch "Yeah, I think she lives close to campus, but no idea where."
 
-                scene v15s43_14g
-                with dissolve
+            scene v15s43_14g
+            with dissolve
 
-                u "Nora has an aunt that lives near campus, sounds like they're close..."
-                u "And as her ex-boyfriend of multiple years, you have no idea where she lives?"
+            u "Nora has an aunt that lives near campus, sounds like they're close..."
+            u "And as her ex-boyfriend of multiple years, you have no idea where she lives?"
 
-                scene v15s43_15
-                with dissolve
+            scene v15s43_15
+            with dissolve
 
-                am "Ha. That doesn't add up."
+            am "Ha. That doesn't add up."
 
-                scene v15s43_14g
-                with dissolve
+            scene v15s43_14g
+            with dissolve
 
-                u "Help us make sense out of what you're saying, Chris!"
+            u "Help us make sense out of what you're saying, Chris!"
 
-    elif detective == "psychologist":
-        scene v15s43_14g
-        with dissolve
+        "Examine further" if detective == "psychologist":
+            u "This aunt. Does Nora like her?"
 
-        menu:
-            "She's close with her Aunt?":
-                u "This aunt-"
+            scene v15s43_14h
+            with dissolve
 
-                scene v15s43_15
-                with dissolve
+            ch "Yeah, I think so. I don't know where you can find her though."
 
-                am "If she even exists..."
+            scene v15s43_14g
+            with dissolve
 
-                scene v15s43_14g
-                with dissolve
+            u "Insecurity within oneself leads to a lack of connection to others. A lack of attentiveness... Why do you think that is, Chris?"
 
-                u "Yeah. If she exists... Is Nora close to her?"
+            scene v15s43_14h
+            with dissolve
 
-                scene v15s43_14h
-                with dissolve
+            ch "What?"
 
-                ch "I don't know if they're close, but I think she lives nearby. And no, I'm not sure where."
+            scene v15s43_15
+            with dissolve
 
-                scene v15s43_15
-                with dissolve
+            am "*Sighs* Are you sure she's not with her dad?"
 
-                am "Oh yeah? How sure?"
+            scene v15s43_14b
+            with dissolve
 
-            "She's not with Mr. Rose?":
-                u "So you're sure that Nora's not with Mr. Rose, or... Her dad, I mean?"
+            ch "I doubt it. She hates her dad."
+            $ v15_nora_clues.add("hates_dad")
 
-                scene v15s43_14h
-                with dissolve
+            scene v15s43_14g
+            with dissolve
 
-                ch "I don't think she would go to her dad's house."
+            u "Hate is a very strong word. Are those your words or Nora's words?"
 
-                scene v15s43_15
-                with dissolve
+        "Shout at Chris" if detective == "loose cannon":
+            scene v15s43_14g
+            with vpunch
 
-                am "Why?"
+            u "Tell us where the aunt lives, now!"
 
-                scene v15s43_14b
-                with dissolve
+            scene v15s43_15
+            with dissolve
 
-                ch "She pretty much hates him. That's the last place she'd go."
-                $ v15_nora_clues.add("hates_dad")
+            am "Well, wait. Is Nora even close with her?"
 
-                scene v15s43_15
-                with dissolve
+            scene v15s43_14b
+            with dissolve
 
-                am "Hmm... I don't know if we can trust you."
+            ch "I think she is. She lives nearby, I know that much, but I swear I don't know any more than that."
 
-            "Examine further":
-                u "This aunt. Does Nora like her?"
+            scene v15s43_14g
+            with dissolve
 
-                scene v15s43_14h
-                with dissolve
+            u "I can't believe what I'm hearing, ha."
 
-                ch "Yeah, I think so. I don't know where you can find her though."
+            scene v15s43_14h
+            with dissolve
 
-                scene v15s43_14g
-                with dissolve
+            ch "What?"
 
-                u "Insecurity within oneself leads to a lack of connection to others. A lack of attentiveness... Why do you think that is, Chris?"
+            scene v15s43_14g
+            with dissolve
 
-                scene v15s43_14h
-                with dissolve
+            u "You expect us to believe that you were Nora's boyfriend for years and know nothing about her aunt?"
 
-                ch "What?"
+            scene v15s43_15
+            with dissolve
 
-                scene v15s43_15
-                with dissolve
+            am "You're sure she's not with her dad?"
 
-                am "*Sighs* Are you sure she's not with her dad?"
+            scene v15s43_14b
+            with dissolve
 
-                scene v15s43_14b
-                with dissolve
+            ch "She hates her dad. She wouldn't go to him."
+            $ v15_nora_clues.add("hates_dad")
 
-                ch "I doubt it. She hates her dad."
-                $ v15_nora_clues.add("hates_dad")
+            scene v15s43_16a # TPP. Show MC kicking the coffee table, MC angry, mouth open.
+            with dissolve
 
-                scene v15s43_14g
-                with dissolve
-
-                u "Hate is a very strong word. Are those your words or Nora's words?"
-
-    else:
-        scene v15s43_14g
-        with dissolve
-
-        menu:
-            "She's close with her Aunt?":
-                u "This aunt-"
-
-                scene v15s43_15
-                with dissolve
-
-                am "If she even exists..."
-
-                scene v15s43_14g
-                with dissolve
-
-                u "Yeah. If she exists... Is Nora close to her?"
-
-                scene v15s43_14h
-                with dissolve
-
-                ch "I don't know if they're close, but I think she lives nearby. And no, I'm not sure where."
-
-                scene v15s43_15
-                with dissolve
-
-                am "Oh yeah? How sure?"
-
-            "She's not with Mr. Rose?":
-                u "So you're sure that Nora's not with Mr. Rose, or... Her dad, I mean?"
-
-                scene v15s43_14h
-                with dissolve
-
-                ch "I don't think she would go to her dad's house."
-
-                scene v15s43_15
-                with dissolve
-
-                am "Why?"
-
-                scene v15s43_14b
-                with dissolve
-
-                ch "She pretty much hates him. That's the last place she'd go."
-                $ v15_nora_clues.add("hates_dad")
-
-                scene v15s43_15
-                with dissolve
-
-                am "Hmm... I don't know if we can trust you."
-
-            "Shout at Chris":
-                scene v15s43_14g
-                with vpunch
-
-                u "Tell us where the aunt lives, now!"
-
-                scene v15s43_15
-                with dissolve
-
-                am "Well, wait. Is Nora even close with her?"
-
-                scene v15s43_14b
-                with dissolve
-
-                ch "I think she is. She lives nearby, I know that much, but I swear I don't know any more than that."
-
-                scene v15s43_14g
-                with dissolve
-
-                u "I can't believe what I'm hearing, ha."
-
-                scene v15s43_14h
-                with dissolve
-
-                ch "What?"
-
-                scene v15s43_14g
-                with dissolve
-
-                u "You expect us to believe that you were Nora's boyfriend for years and know nothing about her aunt?"
-
-                scene v15s43_15
-                with dissolve
-
-                am "You're sure she's not with her dad?"
-
-                scene v15s43_14b
-                with dissolve
-
-                ch "She hates her dad. She wouldn't go to him."
-                $ v15_nora_clues.add("hates_dad")
-
-                scene v15s43_16a # TPP. Show MC kicking the coffee table, MC angry, mouth open.
-                with dissolve
-
-                u "Hate? I'll tell you about hate, Chris! I hate not getting a straight answer out of you."
+            u "Hate? I'll tell you about hate, Chris! I hate not getting a straight answer out of you."
 
     scene v15s43_14h
     with dissolve
@@ -1217,7 +841,7 @@ label v15s43:
         menu:
             "Kick table":
                 scene v15s43_19 # TPP. Show MC kicking the coffee table, slightly angry, mouth open.
-                with dissolve
+                with hpunch
 
                 u "Gah! That's what you get!"
 
