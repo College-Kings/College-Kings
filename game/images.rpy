@@ -4,7 +4,7 @@ image splashtwo = "images/splash2.webp"
 image splashthree = "images/splash 3.webp"
 
 # Transitions
-image sleep_transition_fast = Movie(play="images/v15/Scene 41/sleep_transition_fast.webm", loop=False)
+image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm", loop=False)
 
 # Phone
 image phone_white_background = "images/phone/white_background.webp"
