@@ -58,6 +58,26 @@ screen v15s18a_bar():
 screen v15s18a_kitchen():
     tag free_roam
 
+    default image_path = "images/v15/Scene 18a/Free Roam Screens/kitchen/"
+
+    # Backgrounds
+    add image_path + "v15s18a_kitchen_1.webp"
+    add image_path + "v15s18a_kitchen_2.webp"
+
+    # Fridge
+    imagebutton:
+        idle Transform("#0000", size=(735, 1080))
+        hover image_path + "v15s18a_kitchen_hover_fridge.webp"
+        action NullAction()
+        pos (1167, 0)
+
+    # Riley
+    imagebutton:
+        idle Transform("#0000", size=(305, 1056))
+        hover image_path + "v15s18a_kitchen_hover_riley.webp"
+        action NullAction()
+        pos (554, 12)
+
 
 screen v15s18a_living_room():
     tag free_roam
