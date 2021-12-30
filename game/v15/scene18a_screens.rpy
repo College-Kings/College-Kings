@@ -3,6 +3,7 @@ screen v15s18a_bathroom():
 
     default image_path = "images/v15/Scene 18a/Free Roam Screens/bathroom/"
 
+    # Backgrounds
     add image_path + "v15s18a_bathroom_1.webp"
     add image_path + "v15s18a_bathroom_2.webp"
     add image_path + "v15s18a_bathroom_3.webp"
@@ -34,6 +35,7 @@ screen v15s18a_dining_table():
 
     default image_path = "images/v15/Scene 18a/Free Roam Screens/dining_table/"
 
+    # Backgrounds
     add image_path + "v15s18a_bar_1.webp"
     add image_path + "v15s18a_bar_2.webp"
     add image_path + "v15s18a_bar_3.webp"
