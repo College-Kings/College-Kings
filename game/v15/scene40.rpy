@@ -369,10 +369,10 @@ label v15s40:
         scene v15s40_4 # TPP. Autumn leans back into the limo to give Mc a kiss on the cheek, Mc slight smile mouth is closed
         with dissolve
 
-        pause 0.75
+        pause 1.75
 
     scene v15s40_3a # TPP. Autumn is walking away from the Limo slight smile mouth is closed, Mc is looking at Autumn slight smile mouth is closed
-    with fade
+    with dissolve
 
     pause 0.75
 

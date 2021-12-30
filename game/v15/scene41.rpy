@@ -4,7 +4,13 @@
 # Time: Morning
 
 label v15s41:
-# -Transition from Night to Day video- 
+    image sleep_transition_fast = Movie(play="images/v15/Scene 41/sleep_transition_fast.webm", loop=False)
+    
+    scene sleep_transition_fast
+    with fade
+
+    pause 2.4
+
     if joinwolves:
         scene v15s41_1 # TPP. In wolves room, Camera close to MC's nightstand, his phone sitting on his nightstand turned off, MC sleeping on his side facing away from the camera.
         with dissolve
