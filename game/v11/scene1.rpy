@@ -1019,36 +1019,36 @@ label v11s1_delib:
     if not "delib" in freeroam7:
         $ freeroam7.add("delib")
 
-        scene v11coc17c
+        scene v11coc77c
         #with dissolve
 
         lee "You should never have been a member of this board."
 
-        scene v11coc17a
+        scene v11coc77a
         with dissolve
 
         art "She's an adult, I don't see the issue here."
 
-        scene v11coc17c
+        scene v11coc77c
         with dissolve
         lee "You... you are the issue here Clayton. I do my best to keep a cool tone, but you're aggravating me."
 
-        scene v11coc17e # TPP. Same cam as 17, Dean is looking at Art Director, mouth open, neutral expression, Art Director mouth closed, annoyed
+        scene v11coc77e # TPP. Same cam as 17, Dean is looking at Art Director, mouth open, neutral expression, Art Director mouth closed, annoyed
         with dissolve
 
         de "Calm down Bruce, it's nearly time to wrap this up. Clayton, let the kids know we've made a decision."
 
-        scene v11coc17f # TPP. Same cam as 17, Art Director is looking at Dean mouth open, angry, Dean is neutral, mouth closed
+        scene v11coc77f # TPP. Same cam as 17, Art Director is looking at Dean mouth open, angry, Dean is neutral, mouth closed
         with dissolve
 
         art "I'M NOT A SLAVE, I'M-"
 
-        scene v11coc17g # TPP. Same cam as 17, everyone mouth closed, Dean is neutral, Art Director is annoyed
+        scene v11coc77g # TPP. Same cam as 17, everyone mouth closed, Dean is neutral, Art Director is annoyed
         with dissolve
 
         de "..."
 
-        scene v11coc17b
+        scene v11coc77b
         with dissolve
 
         art "...OK"
