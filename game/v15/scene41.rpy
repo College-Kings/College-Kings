@@ -7,7 +7,7 @@ label v15s41:
     scene sleep_transition_fast
     with fade
 
-    pause 2.3
+    pause 2.2
 
     if joinwolves:
         scene v15s41_1 # TPP. In wolves room, Camera close to MC's nightstand, his phone sitting on his nightstand turned off, MC sleeping on his side facing away from the camera.

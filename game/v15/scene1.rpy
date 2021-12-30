@@ -573,7 +573,11 @@ label v15s1:
     
     pause 2
 
-# -Night to morning transition-
+    scene sleep_transition_fast
+    with fade
+    
+    pause 2.2
+
     scene v15s1_6 # FPP. Show just a black screen (MC's POV, eyes closed). Phone alarm sounds
     with dissolve
 

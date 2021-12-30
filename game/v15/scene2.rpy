@@ -372,6 +372,11 @@ label v15s2:
     
     pause 2
 
+    scene sleep_transition_fast
+    with fade
+    
+    pause 2.2
+
     scene v15s2_10 # FPP. Just a black screen
     with dissolve
     play sound "sounds/phonealarm.mp3"
