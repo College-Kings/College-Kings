@@ -75,153 +75,82 @@ label v15s45:
 
     am "We've got some questions for you."
 
-    if detective == "professional":
-        scene v15s45_5b # FPP. same as v15s45_5 Amber and Chloe are looking at Mc, still no expressions, mouths are still closed.
-        with dissolve
+    scene v15s45_5b # FPP. same as v15s45_5 Amber and Chloe are looking at Mc, still no expressions, mouths are still closed.
+    with dissolve
 
-        menu:
-            "Be polite":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
-                    
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-                    
-                else:
-                    $ add_point(KCT.BRO)
+    menu:
+        "Be polite":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BOYFRIEND)
+                
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.TROUBLEMAKER)
+                
+            else:
+                $ add_point(KCT.BRO)
 
-                scene v15s45_5b
-                with dissolve
+            scene v15s45_5b
+            with dissolve
 
-                u "Please, Chloe. If you don't mind, we'd like to sit and talk to you."
+            u "Please, Chloe. If you don't mind, we'd like to sit and talk to you."
 
-            "Be impatient":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
-                    
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BOYFRIEND)
-                    
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
+        "Be impatient":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BRO)
+                
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.BOYFRIEND)
+                
+            else:
+                $ add_point(KCT.TROUBLEMAKER)
 
-                scene v15s45_5b
-                with dissolve
+            scene v15s45_5b
+            with dissolve
 
-                u "Go back inside, Chloe. We have important business to take care of."
-            
-            "State the facts":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
-                    
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BRO)
-                    
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
+            u "Go back inside, Chloe. We have important business to take care of."
+        
+        "State the facts" if detective == "professional":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BOYFRIEND)
+                
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.BRO)
+                
+            else:
+                $ add_point(KCT.TROUBLEMAKER)
 
-                scene v15s45_5b
-                with dissolve
+            scene v15s45_5b
+            with dissolve
 
-                u "We're just looking for the facts, ma'am. If you're honest with us, this shouldn't take up much of your time."
+            u "We're just looking for the facts, ma'am. If you're honest with us, this shouldn't take up much of your time."
 
-    elif detective == "psychologist":
-        scene v15s45_5b # FPP. same as v15s45_5 Amber and Chloe are looking at Mc, still no expressions, mouths are still closed.
-        with dissolve
+        "Analyze Chloe" if detective == "psychologist":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BRO)
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.TROUBLEMAKER)
+            else:
+                $ add_point(KCT.BOYFRIEND)
+                
+            scene v15s45_5b
+            with dissolve
 
-        menu:
-            "Be polite":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
-                    
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-                    
-                else:
-                    $ add_point(KCT.BRO)
+            u "Heading out right as we're heading in, huh?"
 
-                scene v15s45_5b
-                with dissolve
+            u "There's a weight on your shoulders, I can feel it. You need to talk to us; we can help you."
 
-                u "Please, Chloe. If you don't mind, we'd like to sit and talk to you."
+        "Threaten Chloe" if detective == "loose_cannon":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.TROUBLEMAKER)
+            elif nora.relationship.value >= Relationship.FWB.value: 
+                $ add_point(KCT.BOYFRIEND)
+            else:
+                $ add_point(KCT.BRO)
 
-            "Be impatient":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
-                    
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BOYFRIEND)
-                    
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
+            scene v15s45_5b
+            with dissolve
 
-                scene v15s45_5b
-                with dissolve
-
-                u "Go back inside, Chloe. We have important business to take care of."
-
-            "Analyze Chloe":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-                else:
-                    $ add_point(KCT.BOYFRIEND)
-                    
-                scene v15s45_5b
-                with dissolve
-
-                u "Heading out right as we're heading in, huh?"
-
-                u "There's a weight on your shoulders, I can feel it. You need to talk to us; we can help you."
-
-    else:
-        scene v15s45_5b # FPP. same as v15s45_5 Amber and Chloe are looking at Mc, still no expressions, mouths are still closed.
-        with dissolve
-
-        menu:
-            "Be polite":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
-                    
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-                    
-                else:
-                    $ add_point(KCT.BRO)
-
-                scene v15s45_5b
-                with dissolve
-
-                u "Please, Chloe. If you don't mind, we'd like to sit and talk to you."
-
-            "Be impatient":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
-                    
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BOYFRIEND)
-                    
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
-
-                scene v15s45_5b
-                with dissolve
-
-                u "Go back inside, Chloe. We have important business to take care of."
-
-            "Threaten Chloe":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-                elif nora.relationship.value >= Relationship.FWB.value: 
-                    $ add_point(KCT.BOYFRIEND)
-                else:
-                    $ add_point(KCT.BRO)
-
-                scene v15s45_5b
-                with dissolve
-
-                u "You need to turn yourself around right now and get back inside or I'll do it for you."
+            u "You need to turn yourself around right now and get back inside or I'll do it for you."
 
     scene v15s45_5c # FPP. same as v15s45_5b Chloe's mouth is open, Chloe and Amber are still looking at Mc, Amber's mouth is still closed.
     with dissolve
@@ -278,163 +207,92 @@ label v15s45:
 
     cl "Are you not going to sit down?"
 
-    if detective == "professional":
-        scene v15s45_7a # FPP. Chloe's mouth is closed, still no expression, still looking at Mc
-        with dissolve
+    scene v15s45_7a # FPP. Chloe's mouth is closed, still no expression, still looking at Mc
+    with dissolve
 
-        menu:
-            "Be polite":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
+    menu:
+        "Be polite":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BOYFRIEND)
 
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.TROUBLEMAKER)
 
-                else:
-                    $ add_point(KCT.BRO)
-                            
-                scene v15s45_7a
+            else:
+                $ add_point(KCT.BRO)
+                        
+            scene v15s45_7a
+            with dissolve
+
+            u "We like to think on our feet, thank you."
+
+        "Be impatient":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BRO)
+
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.BOYFRIEND)
+
+            else:
+                $ add_point(KCT.TROUBLEMAKER)
+                        
+            scene v15s45_7a
+            with dissolve
+
+            u "Let's skip the pleasantries and get straight to the questions, okay?"
+        
+        "Speak your wisdom" if detective == "professional":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BOYFRIEND)
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.BRO)
+            else:
+                $ add_point(KCT.TROUBLEMAKER)
+                
+            scene v15s45_7a
+            with dissolve
+
+            u "If a detective sits down on his ass, he also sits down in his mind."
+
+        "Analyze Chloe" if detective == "psychologist":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BRO)
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.TROUBLEMAKER)
+            else:
+                $ add_point(KCT.BOYFRIEND)
+                
+            scene v15s45_7a
+            with dissolve
+
+            u "Hmm, deflecting the attention to us this early in the conversation? You must be nervous, Chloe."
+
+        "Kick a chair" if detective == "loose_cannon":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.TROUBLEMAKER)
+
+            elif nora.relationship.value >= Relationship.FWB.value: 
+                $ add_point(KCT.BOYFRIEND)
+
+            else:
+                $ add_point(KCT.BRO)
+                
+            scene v15s45_6a # FPP. MC kicks the nearest chair, with a forceful expression, Amber has a slight smile looking at Mc mouth is closed, Chloe has a shocked expression, looking at Mc
+            with dissolve
+
+            u "That's what I think about sitting down!"
+
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                scene v15s45_7b # same as v15s45_7a Chloe gets a little turned on, looking at Mc seductively, with a smirk
                 with dissolve
 
-                u "We like to think on our feet, thank you."
+                pause 0.75
 
-            "Be impatient":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
-
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BOYFRIEND)
-
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
-                            
-                scene v15s45_7a
+            else: 
+                scene v15s45_7c # FPP. same as v15s45_7a Chloe has a weirded out expression, still looking at Mc, mouth is still closed
                 with dissolve
 
-                u "Let's skip the pleasantries and get straight to the questions, okay?"
-            
-            "Speak your wisdom":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BRO)
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
-                    
-                scene v15s45_7a
-                with dissolve
-
-                u "If a detective sits down on his ass, he also sits down in his mind."
-
-    elif detective == "psychologist":
-        scene v15s45_7a # FPP. Chloe's mouth is closed, still no expression, still looking at Mc
-        with dissolve
-
-        menu:
-            "Be polite":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
-
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-
-                else:
-                    $ add_point(KCT.BRO)
-                            
-                scene v15s45_7a
-                with dissolve
-
-                u "We like to think on our feet, thank you."
-
-            "Be impatient":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
-
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BOYFRIEND)
-
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
-                            
-                scene v15s45_7a
-                with dissolve
-
-                u "Let's skip the pleasantries and get straight to the questions, okay?"
-
-            "Analyze Chloe":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-                else:
-                    $ add_point(KCT.BOYFRIEND)
-                    
-                scene v15s45_7a
-                with dissolve
-
-                u "Hmm, deflecting the attention to us this early in the conversation? You must be nervous, Chloe."
-
-    else:
-        scene v15s45_7a # FPP. Chloe's mouth is closed, still no expression, still looking at Mc
-        with dissolve
-
-        menu:
-            "Be polite":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
-
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-
-                else:
-                    $ add_point(KCT.BRO)
-                            
-                scene v15s45_7a
-                with dissolve
-
-                u "We like to think on our feet, thank you."
-
-            "Be impatient":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
-
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BOYFRIEND)
-
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
-                            
-                scene v15s45_7a
-                with dissolve
-
-                u "Let's skip the pleasantries and get straight to the questions, okay?"
-
-            "Kick a chair":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-
-                elif nora.relationship.value >= Relationship.FWB.value: 
-                    $ add_point(KCT.BOYFRIEND)
-
-                else:
-                    $ add_point(KCT.BRO)
-                    
-                scene v15s45_6a # FPP. MC kicks the nearest chair, with a forceful expression, Amber has a slight smile looking at Mc mouth is closed, Chloe has a shocked expression, looking at Mc
-                with dissolve
-
-                u "That's what I think about sitting down!"
-
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    scene v15s45_7b # same as v15s45_7a Chloe gets a little turned on, looking at Mc seductively, with a smirk
-                    with dissolve
-
-                    pause 0.75
-
-                else: 
-                    scene v15s45_7c # FPP. same as v15s45_7a Chloe has a weirded out expression, still looking at Mc, mouth is still closed
-                    with dissolve
-
-                    pause 0.75
+                pause 0.75
 
     scene v15s45_7
     with dissolve
@@ -509,377 +367,216 @@ label v15s45:
 
     cl "And if you haven't noticed, we're not exactly best friends. So why would I know anything?"
 
-    if detective == "professional":
-        scene v15s45_7h
-        with dissolve
+    scene v15s45_7h
+    with dissolve
 
-        menu:
-            "Where do you think?":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
+    menu:
+        "Where do you think?":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BOYFRIEND)
 
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.TROUBLEMAKER)
 
-                else:
-                    $ add_point(KCT.BRO)
-                            
-                scene v15s45_7h
-                with dissolve
+            else:
+                $ add_point(KCT.BRO)
+                        
+            scene v15s45_7h
+            with dissolve
 
-                u "Even so, you must have an idea where she might have gone?"
+            u "Even so, you must have an idea where she might have gone?"
 
-                scene v15s45_7
-                with dissolve
+            scene v15s45_7
+            with dissolve
 
-                cl "I. Don't. Know."
+            cl "I. Don't. Know."
 
-                scene v15s45_8
-                with dissolve
+            scene v15s45_8
+            with dissolve
 
-                am "Think harder, damnit!"
+            am "Think harder, damnit!"
 
-                scene v15s45_7a
-                with dissolve
+            scene v15s45_7a
+            with dissolve
 
-                u "Who would she run to in a time of need?"
+            u "Who would she run to in a time of need?"
 
-                scene v15s45_7
-                with dissolve
+            scene v15s45_7
+            with dissolve
 
-                cl "...Mr. Rose? I guess?"
+            cl "...Mr. Rose? I guess?"
 
-            "Who was she with?":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
+        "Who was she with?":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BRO)
 
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BOYFRIEND)
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.BOYFRIEND)
 
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
-                            
-                scene v15s45_7a
-                with dissolve
+            else:
+                $ add_point(KCT.TROUBLEMAKER)
+                        
+            scene v15s45_7a
+            with dissolve
 
-                u "Who was she last seen with?"
+            u "Who was she last seen with?"
 
-                scene v15s45_7
-                with dissolve
+            scene v15s45_7
+            with dissolve
 
-                cl "Um, I saw her get into a cab after we landed... but she was alone. That's the last I saw of her, I swear."
+            cl "Um, I saw her get into a cab after we landed... but she was alone. That's the last I saw of her, I swear."
 
-                scene v15s45_7a
-                with dissolve
+            scene v15s45_7a
+            with dissolve
 
-                u "Okay, and any idea where she was headed?"
+            u "Okay, and any idea where she was headed?"
 
-                scene v15s45_7g
-                with dissolve
+            scene v15s45_7g
+            with dissolve
 
-                cl "How would I know?"
+            cl "How would I know?"
 
-                scene v15s45_8
-                with dissolve
+            scene v15s45_8
+            with dissolve
 
-                am "Picture yourself in her shoes. She's in need, and wants to get away for a while... Who does she call?"
+            am "Picture yourself in her shoes. She's in need, and wants to get away for a while... Who does she call?"
 
-                scene v15s45_7e
-                with dissolve
+            scene v15s45_7e
+            with dissolve
 
-                cl "Probably Mr. Rose, her dad."
+            cl "Probably Mr. Rose, her dad."
 
-            "You're lying":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
-                    
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BRO)
-                    
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
-                    
-                scene v15s45_7h
-                with dissolve
+        "You're lying" if detective == "professional":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BOYFRIEND)
+                
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.BRO)
+                
+            else:
+                $ add_point(KCT.TROUBLEMAKER)
+                
+            scene v15s45_7h
+            with dissolve
 
-                u "You're already lying, but I don't think you realize it. You've known Nora for a long time..."
+            u "You're already lying, but I don't think you realize it. You've known Nora for a long time..."
 
-                scene v15s45_7g
-                with dissolve
+            scene v15s45_7g
+            with dissolve
 
-                cl "Yeah, so?"
+            cl "Yeah, so?"
 
-                scene v15s45_7h
-                with dissolve
+            scene v15s45_7h
+            with dissolve
 
-                u "Let's just say she was desperate to get away, to feel protected. Who's she going to call?"
+            u "Let's just say she was desperate to get away, to feel protected. Who's she going to call?"
 
-                scene v15s45_7f
-                with dissolve
+            scene v15s45_7f
+            with dissolve
 
-                cl "Mr. Rose, probably? Her daddy? *Giggles* Whatever she needs, he'll get it for her."
+            cl "Mr. Rose, probably? Her daddy? *Giggles* Whatever she needs, he'll get it for her."
 
-    elif detective == "psychologist":
-        scene v15s45_7h
-        with dissolve
+        "Appeal to her ego" if detective == "psychologist":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BRO)
+                
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.TROUBLEMAKER)
+                
+            else:
+                $ add_point(KCT.BOYFRIEND)
 
-        menu:
-            "Where do you think?":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
+            scene v15s45_7h
+            with dissolve
 
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
+            u "It's obvious you're very intelligent, Chloe. You're kind and considerate."
 
-                else:
-                    $ add_point(KCT.BRO)
-                            
-                scene v15s45_7h
-                with dissolve
+            scene v15s45_7i # FPP. same as v15s45_7f Chloe's mouth is closed, still a slight smile, still looking at Mc
+            with dissolve
 
-                u "Even so, you must have an idea where she might have gone?"
+            u "And I'll bet your observation skills are more powerful than you realize."
 
-                scene v15s45_7
-                with dissolve
+            scene v15s45_7f
+            with dissolve
 
-                cl "I. Don't. Know."
+            cl "Well, thank you."
 
-                scene v15s45_8
-                with dissolve
+            scene v15s45_7i
+            with dissolve
 
-                am "Think harder, damnit!"
+            u "It's probably easy for you to think of the one place Nora is most likely to go to in a time of need..."
 
-                scene v15s45_7a
-                with dissolve
+            scene v15s45_7f
+            with dissolve
 
-                u "Who would she run to in a time of need?"
+            cl "Oh, well yeah. That would be her father."
 
-                scene v15s45_7
-                with dissolve
+        "Accuse Chloe" if detective == "loose_cannon":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.TROUBLEMAKER)
+                
+            elif nora.relationship.value >= Relationship.FWB.value: 
+                $ add_point(KCT.BOYFRIEND)
+                
+            else:
+                $ add_point(KCT.BRO)
+                
+            scene v15s45_7h
+            with dissolve
 
-                cl "...Mr. Rose? I guess?"
+            u "You know because you know!"
 
-            "Who was she with?":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
+            scene v15s45_7j # FPP. same as v15s45_7 Chloe is slightly angry, still looking at Mc, mouth is still open
+            with dissolve
 
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BOYFRIEND)
+            cl "What does that even mean?! Why Are you yelling?"
 
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
-                            
-                scene v15s45_7a
-                with dissolve
+            scene v15s45_7k # FPP. same as v15s45_7j Chloe's mouth is closed, still slight angry expression, still looking at Mc
+            with dissolve
 
-                u "Who was she last seen with?"
+            u "Who's to say you didn't team up with Chris and have Nora taken care of?! You both have a motive!"
 
-                scene v15s45_7
-                with dissolve
+            scene v15s45_8
+            with dissolve
 
-                cl "Um, I saw her get into a cab after we landed... but she was alone. That's the last I saw of her, I swear."
+            am "*Gasps* He's right..."
 
-                scene v15s45_7a
-                with dissolve
+            scene v15s45_7j
+            with dissolve
 
-                u "Okay, and any idea where she was headed?"
+            cl "What?! Are you guys fucking crazy?"
 
-                scene v15s45_7g
-                with dissolve
+            scene v15s45_7k
+            with dissolve
 
-                cl "How would I know?"
+            u "Where's Nora, Chloe? Who could she be with right now?"
 
-                scene v15s45_8
-                with dissolve
+            scene v15s45_7j
+            with dissolve
 
-                am "Picture yourself in her shoes. She's in need, and wants to get away for a while... Who does she call?"
+            cl "Stop yelling at me."
 
-                scene v15s45_7e
-                with dissolve
+            scene v15s45_7k
+            with dissolve
 
-                cl "Probably Mr. Rose, her dad."
+            u "If we don't get answers soon, this is going to get real serious, real fast!"
 
-            "Appeal to her ego":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
-                    
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-                    
-                else:
-                    $ add_point(KCT.BOYFRIEND)
+            scene v15s45_6a
+            with dissolve
 
-                scene v15s45_7h
-                with dissolve
+            pause 0.75
 
-                u "It's obvious you're very intelligent, Chloe. You're kind and considerate."
+            scene v15s45_7j
+            with dissolve
 
-                scene v15s45_7i # FPP. same as v15s45_7f Chloe's mouth is closed, still a slight smile, still looking at Mc
-                with dissolve
+            cl "Okay, okay! Can stop destroying things?! What the hell..."
 
-                u "And I'll bet your observation skills are more powerful than you realize."
+            cl "She's probably with her fucking father. Mr. Rose."
 
-                scene v15s45_7f
-                with dissolve
+            scene v15s45_7l # FPP. Chloe rolls her eyes, still a slight angry expression, mouth is still open, still looking at Mc
+            with dissolve
 
-                cl "Well, thank you."
-
-                scene v15s45_7i
-                with dissolve
-
-                u "It's probably easy for you to think of the one place Nora is most likely to go to in a time of need..."
-
-                scene v15s45_7f
-                with dissolve
-
-                cl "Oh, well yeah. That would be her father."
-
-    else:
-        scene v15s45_7h
-        with dissolve
-
-        menu:
-            "Where do you think?":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
-
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-
-                else:
-                    $ add_point(KCT.BRO)
-                            
-                scene v15s45_7h
-                with dissolve
-
-                u "Even so, you must have an idea where she might have gone?"
-
-                scene v15s45_7
-                with dissolve
-
-                cl "I. Don't. Know."
-
-                scene v15s45_8
-                with dissolve
-
-                am "Think harder, damnit!"
-
-                scene v15s45_7a
-                with dissolve
-
-                u "Who would she run to in a time of need?"
-
-                scene v15s45_7
-                with dissolve
-
-                cl "...Mr. Rose? I guess?"
-
-            "Who was she with?":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
-
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BOYFRIEND)
-
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
-                            
-                scene v15s45_7a
-                with dissolve
-
-                u "Who was she last seen with?"
-
-                scene v15s45_7
-                with dissolve
-
-                cl "Um, I saw her get into a cab after we landed... but she was alone. That's the last I saw of her, I swear."
-
-                scene v15s45_7a
-                with dissolve
-
-                u "Okay, and any idea where she was headed?"
-
-                scene v15s45_7g
-                with dissolve
-
-                cl "How would I know?"
-
-                scene v15s45_8
-                with dissolve
-
-                am "Picture yourself in her shoes. She's in need, and wants to get away for a while... Who does she call?"
-
-                scene v15s45_7e
-                with dissolve
-
-                cl "Probably Mr. Rose, her dad."
-
-            "Accuse Chloe":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-                    
-                elif nora.relationship.value >= Relationship.FWB.value: 
-                    $ add_point(KCT.BOYFRIEND)
-                    
-                else:
-                    $ add_point(KCT.BRO)
-                    
-                scene v15s45_7h
-                with dissolve
-
-                u "You know because you know!"
-
-                scene v15s45_7j # FPP. same as v15s45_7 Chloe is slightly angry, still looking at Mc, mouth is still open
-                with dissolve
-
-                cl "What does that even mean?! Why Are you yelling?"
-
-                scene v15s45_7k # FPP. same as v15s45_7j Chloe's mouth is closed, still slight angry expression, still looking at Mc
-                with dissolve
-
-                u "Who's to say you didn't team up with Chris and have Nora taken care of?! You both have a motive!"
-
-                scene v15s45_8
-                with dissolve
-
-                am "*Gasps* He's right..."
-
-                scene v15s45_7j
-                with dissolve
-
-                cl "What?! Are you guys fucking crazy?"
-
-                scene v15s45_7k
-                with dissolve
-
-                u "Where's Nora, Chloe? Who could she be with right now?"
-
-                scene v15s45_7j
-                with dissolve
-
-                cl "Stop yelling at me."
-
-                scene v15s45_7k
-                with dissolve
-
-                u "If we don't get answers soon, this is going to get real serious, real fast!"
-
-                scene v15s45_6a
-                with dissolve
-
-                pause 0.75
-
-                scene v15s45_7j
-                with dissolve
-
-                cl "Okay, okay! Can stop destroying things?! What the hell..."
-
-                cl "She's probably with her fucking father. Mr. Rose."
-
-                scene v15s45_7l # FPP. Chloe rolls her eyes, still a slight angry expression, mouth is still open, still looking at Mc
-                with dissolve
-
-                cl "Now calm the hell down, yeah? Jesus..."
+            cl "Now calm the hell down, yeah? Jesus..."
 
     scene v15s45_8
     with dissolve
@@ -948,532 +645,267 @@ label v15s45:
 
     cl "Maybe she saw them both briefly to tell them about the breakup, who knows?"
 
-    if detective == "professional":
-        scene v15s45_7a
-        with dissolve
+    scene v15s45_7a
+    with dissolve
 
-        menu:
-            "Who else?":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
+    menu:
+        "Who else?":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BOYFRIEND)
 
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.TROUBLEMAKER)
 
-                else:
-                    $ add_point(KCT.BRO)
-                            
-                scene v15s45_7a
-                with dissolve
+            else:
+                $ add_point(KCT.BRO)
+                        
+            scene v15s45_7a
+            with dissolve
 
-                u "Is there anyone else that could be helping her, who she might have gone to?"
+            u "Is there anyone else that could be helping her, who she might have gone to?"
 
-                scene v15s45_7m # FPP. same as v15s45_7a Chloe looks down, hand on chin, thinking for a moment
-                with dissolve
+            scene v15s45_7m # FPP. same as v15s45_7a Chloe looks down, hand on chin, thinking for a moment
+            with dissolve
 
-                pause 0.75
+            pause 0.75
 
-                scene v15s45_7
-                with dissolve
+            scene v15s45_7
+            with dissolve
 
-                cl "The only other person I can think of would be her ex-boyfriend."
+            cl "The only other person I can think of would be her ex-boyfriend."
 
-                scene v15s45_8
-                with dissolve
+            scene v15s45_8
+            with dissolve
 
-                am "Someone else this whole time? Now that would be a plot twist!"
+            am "Someone else this whole time? Now that would be a plot twist!"
 
-                scene v15s45_8a # FPP. same as v15s45_8 Amber is looking at Mc, slight smile, mouth is closed
-                with dissolve
+            scene v15s45_8a # FPP. same as v15s45_8 Amber is looking at Mc, slight smile, mouth is closed
+            with dissolve
 
-                u "(No shit it would...)"
+            u "(No shit it would...)"
 
-                scene v15s45_7
-                with dissolve
+            scene v15s45_7
+            with dissolve
 
-                cl "Yeah, her ex from before."
+            cl "Yeah, her ex from before."
 
-                scene v15s45_7a
-                with dissolve
+            scene v15s45_7a
+            with dissolve
 
-                u "The ex-ex-boyfriend?"
+            u "The ex-ex-boyfriend?"
 
-                scene v15s45_7
-                with dissolve
+            scene v15s45_7
+            with dissolve
 
-                cl "Yes, but I never met him. I just remember her talking about him."
+            cl "Yes, but I never met him. I just remember her talking about him."
 
-                cl "But guys, this was like ages ago. So don't ask me for his name, I can't remember."
+            cl "But guys, this was like ages ago. So don't ask me for his name, I can't remember."
 
-                cl "I think he lives round here though, or at least he used to. (LOCATION UNLOCKED: EX-BOYFRIEND'S HOUSE.)"
+            cl "I think he lives round here though, or at least he used to. (LOCATION UNLOCKED: EX-BOYFRIEND'S HOUSE.)"
 
-                scene v15s45_7a
-                with dissolve
+            scene v15s45_7a
+            with dissolve
 
-                u "How conveniently vague..."
+            u "How conveniently vague..."
 
+            scene v15s45_8a
+            with dissolve
+
+            am "Mhmm..."
+
+            scene v15s45_7j
+            with dissolve
+
+            cl "It's not like that! All I remember is that she still kept in touch with the guy."
+
+            scene v15s45_7
+            with dissolve
+    
+            cl "But that's Nora for you, always looking to the past..."
+            $ v15_nora_clues.add("likes_ex")
+
+        "Refer to a past clue":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BRO)
+
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.BOYFRIEND)
+
+            else:
+                $ add_point(KCT.TROUBLEMAKER)
+                        
+            scene v15s45_7
+            with dissolve
+
+            u "So, we have it on good authority that Nora likes rubbing sticks in the wilderness."
+
+            scene v15s45_7f
+            with dissolve
+
+            cl "Ha! Who told you that?"
+
+            scene v15s45_7a
+            with dissolve
+
+            u "Um, someone was investigating her Kiwii profile..."
+
+            scene v15s45_7
+            with dissolve
+
+            cl "Well, I mean... Sure, she likes nature. Who doesn't?"
+
+            scene v15s45_7g
+            with dissolve
+
+            cl "But Nora? She's not slumming it in the woods, rubbing sticks together. She's too spoiled for that."
+
+            scene v15s45_7h
+            with dissolve
+
+            u "Spoiled?"
+
+            scene v15s45_7g
+            with dissolve
+
+            cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it..."
+            cl "I think you might need to take another look at your evidence."
+            $ v15_nora_clues.add("hates_camping")
+
+            scene v15s45_8
+            with dissolve
+
+            am "Don't tell us how to do our job, blonde-y! This is our operation!"
+
+        "Use your logic" if detective == "professional":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BOYFRIEND)
+
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.BRO)
+
+            else:
+                $ add_point(KCT.TROUBLEMAKER)
+                
+            scene v15s45_7a
+            with dissolve
+
+            u "Can you confirm that Nora loves nature?"
+
+            scene v15s45_7f
+            with dissolve
+
+            cl "Oh, haha... She likes to say she does."
+
+            cl "You know, a walk down a designated nature trail? But she's not the type to get her hands dirty, that's for sure."
+
+            $ v15_nora_clues.add("hates_camping")
+            cl "The first and last time she went camping was with her dad. She hated it! Couldn't stand the bugs and the cold."
+
+            scene v15s45_8a
+            with dissolve
+
+            u "Hmm, interesting..."
+
+            scene v15s45_8b # FPP. same as v15s45_8a Amber's mouth is open, still looking at Mc, still a slight smile
+            with dissolve
+
+            am "That's new information."
+
+        "Extract relationship info" if detective == "psychologist":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.BRO)
+
+            elif nora.relationship.value >= Relationship.FWB.value:
+                $ add_point(KCT.TROUBLEMAKER)
+
+            else:
+                $ add_point(KCT.BOYFRIEND)
+                
+            scene v15s45_7a
+            with dissolve
+
+            u "When a relationship breaks down, the mind tends to wander to the past. Reflecting on the good..."
+
+            u "Is there anyone that Nora might be thinking about right now?"
+
+            scene v15s45_7m
+            with dissolve
+
+            cl "Well..."
+
+            scene v15s45_7a
+            with dissolve
+
+            cl "This was a long time ago, but I remember her telling me about her boyfriend before Chris. They seemed to stay in touch."
+
+            scene v15s45_8
+            with dissolve
+
+            am "So maybe she still likes him, even now?"
+
+            if nora.relationship.value >= Relationship.FWB.value:
                 scene v15s45_8a
                 with dissolve
 
-                am "Mhmm..."
+                u "(*Sighs*)"
 
-                scene v15s45_7j
-                with dissolve
+            scene v15s45_7
+            with dissolve
 
-                cl "It's not like that! All I remember is that she still kept in touch with the guy."
+            cl "No, no, no. She would never go back to him, it's just that they had good memories together, and always stayed friends."
+            $ v15_nora_clues.add("likes_ex")
 
-                scene v15s45_7
-                with dissolve
-        
-                cl "But that's Nora for you, always looking to the past..."
-                $ v15_nora_clues.add("likes_ex")
+            scene v15s45_7a
+            with dissolve
 
-            "Refer to a past clue":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
+            u "Could she have gone to see him?"
 
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BOYFRIEND)
+            scene v15s45_7
+            with dissolve
 
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
-                            
-                scene v15s45_7
-                with dissolve
+            cl "I can't say that she would have. He lives nearby, I think. Or he used to at least."
 
-                u "So, we have it on good authority that Nora likes rubbing sticks in the wilderness."
+            cl "Like I said, it was a long time ago. I don't even remember his name. (LOCATION UNLOCKED: EX-BOYFRIEND'S HOUSE.)"
 
-                scene v15s45_7f
-                with dissolve
+        "Angry mode" if detective == "loose_cannon":
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.TROUBLEMAKER)
 
-                cl "Ha! Who told you that?"
+            elif nora.relationship.value >= Relationship.FWB.value: 
+                $ add_point(KCT.BOYFRIEND)
 
-                scene v15s45_7a
-                with dissolve
+            else:
+                $ add_point(KCT.BRO)
+                
+            scene v15s45_7a
+            with dissolve
 
-                u "Um, someone was investigating her Kiwii profile..."
+            u "I can't stand these vague answers anymore!"
 
-                scene v15s45_7
-                with dissolve
+            scene v15s45_7k
+            with dissolve
 
-                cl "Well, I mean... Sure, she likes nature. Who doesn't?"
+            u "It's just making me so... so... ANGRY!"
 
-                scene v15s45_7g
-                with dissolve
+            scene v15s45_6b # TPP. same as v15s45_6 MC grabs his shirt, looking like he's trying to rip it off with a strained expression, Amber and Chloe looking at him with no expessions, mouths are still closed
+            with dissolve
 
-                cl "But Nora? She's not slumming it in the woods, rubbing sticks together. She's too spoiled for that."
+            pause 0.75
 
-                scene v15s45_7h
-                with dissolve
+            scene v15s45_6c # TPP. same as v15s45_6b Mc loosens the grip on his shirt is looking at Chloe with a disappointed expression, Amber and Chloe are looking at Mc with awkward expressions, mouths are still closed
+            with dissolve
 
-                u "Spoiled?"
+            u "..."
 
-                scene v15s45_7g
-                with dissolve
+            scene v15s45_8a
+            with dissolve
 
-                cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it..."
-                cl "I think you might need to take another look at your evidence."
-                $ v15_nora_clues.add("hates_camping")
+            u "It always looks so easy in the movies..."
 
-                scene v15s45_8
-                with dissolve
+            scene v15s45_6d # TPP. same as v15s45_6c Mc has completely let go of his shirt hands to his sides still a disappointed expression, Amber and Chloe are looking at each other and laughing, mouths are open
+            with dissolve
 
-                am "Don't tell us how to do our job, blonde-y! This is our operation!"
-
-            "Use your logic":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
-
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BRO)
-
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
-                    
-                scene v15s45_7a
-                with dissolve
-
-                u "Can you confirm that Nora loves nature?"
-
-                scene v15s45_7f
-                with dissolve
-
-                cl "Oh, haha... She likes to say she does."
-
-                cl "You know, a walk down a designated nature trail? But she's not the type to get her hands dirty, that's for sure."
-
-                $ v15_nora_clues.add("hates_camping")
-                cl "The first and last time she went camping was with her dad. She hated it! Couldn't stand the bugs and the cold."
-
-                scene v15s45_8a
-                with dissolve
-
-                u "Hmm, interesting..."
-
-                scene v15s45_8b # FPP. same as v15s45_8a Amber's mouth is open, still looking at Mc, still a slight smile
-                with dissolve
-
-                am "That's new information."
-
-    elif detective == "psychologist":
-        scene v15s45_7a
-        with dissolve
-
-        menu:
-            "Who else?":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
-
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-
-                else:
-                    $ add_point(KCT.BRO)
-                            
-                scene v15s45_7a
-                with dissolve
-
-                u "Is there anyone else that could be helping her, who she might have gone to?"
-
-                scene v15s45_7m # FPP. same as v15s45_7a Chloe looks down, hand on chin, thinking for a moment
-                with dissolve
-
-                pause 0.75
-
-                scene v15s45_7
-                with dissolve
-
-                cl "The only other person I can think of would be her ex-boyfriend."
-
-                scene v15s45_8
-                with dissolve
-
-                am "Someone else this whole time? Now that would be a plot twist!"
-
-                scene v15s45_8a # FPP. same as v15s45_8 Amber is looking at Mc, slight smile, mouth is closed
-                with dissolve
-
-                u "(No shit it would...)"
-
-                scene v15s45_7
-                with dissolve
-
-                cl "Yeah, her ex from before."
-
-                scene v15s45_7a
-                with dissolve
-
-                u "The ex-ex-boyfriend?"
-
-                scene v15s45_7
-                with dissolve
-
-                cl "Yes, but I never met him. I just remember her talking about him."
-
-                cl "But guys, this was like ages ago. So don't ask me for his name, I can't remember."
-
-                cl "I think he lives round here though, or at least he used to. (LOCATION UNLOCKED: EX-BOYFRIEND'S HOUSE.)"
-
-                scene v15s45_7a
-                with dissolve
-
-                u "How conveniently vague..."
-
-                scene v15s45_8a
-                with dissolve
-
-                am "Mhmm..."
-
-                scene v15s45_7j
-                with dissolve
-
-                cl "It's not like that! All I remember is that she still kept in touch with the guy."
-
-                scene v15s45_7
-                with dissolve
-        
-                cl "But that's Nora for you, always looking to the past..."
-                $ v15_nora_clues.add("likes_ex")
-
-            "Refer to a past clue":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
-
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BOYFRIEND)
-
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
-                            
-                scene v15s45_7
-                with dissolve
-
-                u "So, we have it on good authority that Nora likes rubbing sticks in the wilderness."
-
-                scene v15s45_7f
-                with dissolve
-
-                cl "Ha! Who told you that?"
-
-                scene v15s45_7a
-                with dissolve
-
-                u "Um, someone was investigating her Kiwii profile..."
-
-                scene v15s45_7
-                with dissolve
-
-                cl "Well, I mean... Sure, she likes nature. Who doesn't?"
-
-                scene v15s45_7g
-                with dissolve
-
-                cl "But Nora? She's not slumming it in the woods, rubbing sticks together. She's too spoiled for that."
-
-                scene v15s45_7h
-                with dissolve
-
-                u "Spoiled?"
-
-                scene v15s45_7g
-                with dissolve
-
-                cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it..."
-                cl "I think you might need to take another look at your evidence."
-                $ v15_nora_clues.add("hates_camping")
-
-                scene v15s45_8
-                with dissolve
-
-                am "Don't tell us how to do our job, blonde-y! This is our operation!"
-
-            "Extract relationship info":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
-
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-
-                else:
-                    $ add_point(KCT.BOYFRIEND)
-                    
-                scene v15s45_7a
-                with dissolve
-
-                u "When a relationship breaks down, the mind tends to wander to the past. Reflecting on the good..."
-
-                u "Is there anyone that Nora might be thinking about right now?"
-
-                scene v15s45_7m
-                with dissolve
-
-                cl "Well..."
-
-                scene v15s45_7a
-                with dissolve
-
-                cl "This was a long time ago, but I remember her telling me about her boyfriend before Chris. They seemed to stay in touch."
-
-                scene v15s45_8
-                with dissolve
-
-                am "So maybe she still likes him, even now?"
-
-                if nora.relationship.value >= Relationship.FWB.value:
-                    scene v15s45_8a
-                    with dissolve
-
-                    u "(*Sighs*)"
-
-                scene v15s45_7
-                with dissolve
-
-                cl "No, no, no. She would never go back to him, it's just that they had good memories together, and always stayed friends."
-                $ v15_nora_clues.add("likes_ex")
-
-                scene v15s45_7a
-                with dissolve
-
-                u "Could she have gone to see him?"
-
-                scene v15s45_7
-                with dissolve
-
-                cl "I can't say that she would have. He lives nearby, I think. Or he used to at least."
-
-                cl "Like I said, it was a long time ago. I don't even remember his name. (LOCATION UNLOCKED: EX-BOYFRIEND'S HOUSE.)"
-
-    else:
-        scene v15s45_7a
-        with dissolve
-
-        menu:
-            "Who else?":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BOYFRIEND)
-
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-
-                else:
-                    $ add_point(KCT.BRO)
-                            
-                scene v15s45_7a
-                with dissolve
-
-                u "Is there anyone else that could be helping her, who she might have gone to?"
-
-                scene v15s45_7m # FPP. same as v15s45_7a Chloe looks down, hand on chin, thinking for a moment
-                with dissolve
-
-                pause 0.75
-
-                scene v15s45_7
-                with dissolve
-
-                cl "The only other person I can think of would be her ex-boyfriend."
-
-                scene v15s45_8
-                with dissolve
-
-                am "Someone else this whole time? Now that would be a plot twist!"
-
-                scene v15s45_8a # FPP. same as v15s45_8 Amber is looking at Mc, slight smile, mouth is closed
-                with dissolve
-
-                u "(No shit it would...)"
-
-                scene v15s45_7
-                with dissolve
-
-                cl "Yeah, her ex from before."
-
-                scene v15s45_7a
-                with dissolve
-
-                u "The ex-ex-boyfriend?"
-
-                scene v15s45_7
-                with dissolve
-
-                cl "Yes, but I never met him. I just remember her talking about him."
-
-                cl "But guys, this was like ages ago. So don't ask me for his name, I can't remember."
-
-                cl "I think he lives round here though, or at least he used to. (LOCATION UNLOCKED: EX-BOYFRIEND'S HOUSE.)"
-
-                scene v15s45_7a
-                with dissolve
-
-                u "How conveniently vague..."
-
-                scene v15s45_8a
-                with dissolve
-
-                am "Mhmm..."
-
-                scene v15s45_7j
-                with dissolve
-
-                cl "It's not like that! All I remember is that she still kept in touch with the guy."
-
-                scene v15s45_7
-                with dissolve
-        
-                cl "But that's Nora for you, always looking to the past..."
-                $ v15_nora_clues.add("likes_ex")
-
-            "Refer to a past clue":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.BRO)
-
-                elif nora.relationship.value >= Relationship.FWB.value:
-                    $ add_point(KCT.BOYFRIEND)
-
-                else:
-                    $ add_point(KCT.TROUBLEMAKER)
-                            
-                scene v15s45_7
-                with dissolve
-
-                u "So, we have it on good authority that Nora likes rubbing sticks in the wilderness."
-
-                scene v15s45_7f
-                with dissolve
-
-                cl "Ha! Who told you that?"
-
-                scene v15s45_7a
-                with dissolve
-
-                u "Um, someone was investigating her Kiwii profile..."
-
-                scene v15s45_7
-                with dissolve
-
-                cl "Well, I mean... Sure, she likes nature. Who doesn't?"
-
-                scene v15s45_7g
-                with dissolve
-
-                cl "But Nora? She's not slumming it in the woods, rubbing sticks together. She's too spoiled for that."
-
-                scene v15s45_7h
-                with dissolve
-
-                u "Spoiled?"
-
-                scene v15s45_7g
-                with dissolve
-
-                cl "Mr. Rose took her on a camping trip when she was a kid. Said she hated it..."
-                cl "I think you might need to take another look at your evidence."
-                $ v15_nora_clues.add("hates_camping")
-
-                scene v15s45_8
-                with dissolve
-
-                am "Don't tell us how to do our job, blonde-y! This is our operation!"
-
-            "Angry mode":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                    $ add_point(KCT.TROUBLEMAKER)
-
-                elif nora.relationship.value >= Relationship.FWB.value: 
-                    $ add_point(KCT.BOYFRIEND)
-
-                else:
-                    $ add_point(KCT.BRO)
-                    
-                scene v15s45_7a
-                with dissolve
-
-                u "I can't stand these vague answers anymore!"
-
-                scene v15s45_7k
-                with dissolve
-
-                u "It's just making me so... so... ANGRY!"
-
-                scene v15s45_6b # TPP. same as v15s45_6 MC grabs his shirt, looking like he's trying to rip it off with a strained expression, Amber and Chloe looking at him with no expessions, mouths are still closed
-                with dissolve
-
-                pause 0.75
-
-                scene v15s45_6c # TPP. same as v15s45_6b Mc loosens the grip on his shirt is looking at Chloe with a disappointed expression, Amber and Chloe are looking at Mc with awkward expressions, mouths are still closed
-                with dissolve
-
-                u "..."
-
-                scene v15s45_8a
-                with dissolve
-
-                u "It always looks so easy in the movies..."
-
-                scene v15s45_6d # TPP. same as v15s45_6c Mc has completely let go of his shirt hands to his sides still a disappointed expression, Amber and Chloe are looking at each other and laughing, mouths are open
-                with dissolve
-
-                pause 0.75
+            pause 0.75
 
     scene v15s45_7d
     with dissolve
