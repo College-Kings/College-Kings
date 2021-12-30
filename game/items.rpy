@@ -58,4 +58,4 @@ define gift_card_50 = Item("$50 Gift Card", 50, idle_image="images/items/v15/gif
 define emerald_bracelet = Item("Emerald Bracelet", -1, idle_image="images/items/v15/emerald_bracelet.png")
 define ruby_choker_necklace = Item("Ruby Choker Necklace", -1, idle_image="images/items/v15/ruby_choker_necklace.png")
 define brown_horse_golden_mane = Item("Brown Horse, Golden Mane", -1, idle_image="images/items/v15/brown_horse_golden_mane.png")
-define white_horse_black_mane = Item("White horse, black mane", -1, idle_image="images/items/v15/white_horse_black_mane.png")
+define white_horse_black_mane = Item("White Horse, Black Mane", -1, idle_image="images/items/v15/white_horse_black_mane.png")
