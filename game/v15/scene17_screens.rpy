@@ -33,8 +33,9 @@ screen v15s17_gift_selection():
                     
                     imagebutton:
                         idle "images/v15/Scene 17/gift_picking_screen/pick_item_idle.webp"
-                        action [Function(mc.inventory.add_item, item), Return()]
+                        action [Function(mc.inventory.add_item, item), Jump("v15s17_gift_choice")]
 
+        
         hbox:
             xalign 0.5
             spacing 50
@@ -52,7 +53,7 @@ screen v15s17_gift_selection():
                     
                     imagebutton:
                         idle "images/v15/Scene 17/gift_picking_screen/pick_item_idle.webp"
-                        action [Function(mc.inventory.add_item, item), Return()]
+                        action [Function(mc.inventory.add_item, item), Jump("v15s17_gift_choice")]
 
 
 style item_name_text is text:
