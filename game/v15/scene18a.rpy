@@ -377,8 +377,6 @@ label v15s18a_Aubrey:
         $ v15s18a_kiwiiPost4.newComment(lauren, _("Hahaha! Thank you guys <3"), numberLikes=renpy.random.randint(1060, 2260), queue=False)
         $ v15s18a_kiwiiPost4.addReply(_("Now taking appointments... ;)"), numberLikes=renpy.random.randint(1060, 2260))
         $ v15s18a_kiwiiPost4.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(1860, 3060), queue=False)
-
-    pause 0.75
     
     call screen v15s18a_bar
 
