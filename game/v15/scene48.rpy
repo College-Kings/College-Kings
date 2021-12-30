@@ -610,7 +610,7 @@ label v15s48:
 
             u "Okay, forgive me if I upset you, but..."
 
-            if "chris_amber" in freeroam13 and "chris_penelope" in freeroam14:
+            if "chris_amber" in freeroam13 or "chris_penelope" in freeroam14:
                 u "Chris tried his luck with a few people at Lauren's birthday party, and-"
 
                 scene v15s48_18a
@@ -621,37 +621,18 @@ label v15s48:
                 scene v15s48_18
                 with dissolve
 
-                u "Nope. In fact, I had to save both them from him."
+                if "chris_amber" in freeroam13 and "chris_penelope" in freeroam14:
+                    u "Nope. In fact, I had to save both of them from him."
+                else:
+                    u "Nope. In fact, I had to save them from him."
 
                 scene v15s48_18a
                 with dissolve
 
-                no "*Laughs* Both?! Oh my god..."
-
-                no "Okay, fine. *Giggles* I don't feel guilty anymore."
-
-                scene v15s48_18
-                with dissolve
-
-                u "Haha, good!"
-
-            elif "chris_amber" in freeroam13 or "chris_penelope" in freeroam14:
-                u "Chris tried his luck with a few people at Lauren's birthday party, and-"
-
-                scene v15s48_18a
-                with dissolve
-
-                no "Haha! You're kidding."
-
-                scene v15s48_18
-                with dissolve
-
-                u "Nope. In fact, I had to save them from him."
-
-                scene v15s48_18a
-                with dissolve
-
-                no "*Laughs* Oh my god..."
+                if "chris_amber" in freeroam13 and "chris_penelope" in freeroam14:
+                    no "*Laughs* Both?! Oh my god..."
+                else:
+                    no "*Laughs* Oh my god..."
 
                 no "Okay, fine. *Giggles* I don't feel guilty anymore."
 
