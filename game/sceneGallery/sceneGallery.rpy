@@ -94,15 +94,15 @@ init python:
         SceneGallery("v14s46a_sgb") #46a, Lauren bad
         SceneGallery("v14s53_sg") #53a, Samantha, xx
     if renpy.loadable("v15/scene1.rpy"):
-        SceneGallery("15") #15, Ms. Rose
-        SceneGallery("18a") #18a, Riley
-        SceneGallery("18a") #18a, Amber
-        SceneGallery("18c") #18c, Aubrey
-        SceneGallery("18c") #18c, Autumn
-        SceneGallery("18c") #18c, Penelope
-        SceneGallery("18e"), #18e, Lauren
-        SceneGallery("33"), #33, Naomi
-        SceneGallery("48"), #48, Nora
+        SceneGallery("15") #15, Ms. Rose - 47
+        SceneGallery("18a") #18a, Riley - 48
+        SceneGallery("18a") #18a, Amber - 49
+        SceneGallery("18c") #18c, Aubrey - 50
+        SceneGallery("18c") #18c, Autumn - 51
+        SceneGallery("18c") #18c, Penelope - 52
+        SceneGallery("18e"), #18e, Lauren - 53
+        SceneGallery("33"), #33, Naomi - 54
+        SceneGallery("48"), #48, Nora - 55
 
 screen spoiler():
     modal True
