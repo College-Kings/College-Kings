@@ -260,12 +260,12 @@ label v15s43:
     scene v15s43_5 # TPP. Show MC and Amber entering the wolves house, both slight smile, mouth closed.
     with dissolve
 
-    u "Chris?"
+    pause 0.75
 
     scene v15s43_6 # TPP. Close up of just Amber in the wolves house, her hand in the shape like a gun, Amber suspicious, mouth open.
     with dissolve
 
-    am "Chris, we know you're in here!"
+    am "Chris? We know you're in here!"
 
     scene v15s43_7 # TPP. Show MC and Amber walking into the living room, Amber keeping her hands in the gun shape, Amber suspicious, mouth closed.
     with dissolve
