@@ -1859,7 +1859,71 @@ label v15s18c_autumn_amber:
                     u "(Well, fuck...)"
                 
             else:
-                if not kct == "loyal":
+                if kct == "loyal" and not v11_lauren_caught_aubrey:
+                    call screen kct_popup
+                    
+                    scene v15s18c_auam_5b
+                    with dissolve
+
+                    aut "Haha! What?"
+
+                    scene v15s18c_auam_5c
+                    with dissolve
+
+                    u "I have to make out with someone, ha."
+
+                    scene v15s18c_auam_5b
+                    with dissolve
+
+                    aut "Oh... Sure. That's easy. *Chuckles*"
+
+                    scene v15s18c_auam_5c
+                    with dissolve
+
+                    u "Yeah!"
+
+                    u "Wait, really?"
+
+                    jump v15s18c_autumn_kiss
+
+                elif kct == "loyal":
+                    scene v15s18c_auam_5a
+                    with dissolve
+
+                    aut "Ha, I uh..."
+
+                    aut "There's too much drama I think... Between you and Lauren."
+
+                    aut "It's just hard to-"
+
+                    scene v15s18c_auam_5
+                    with dissolve
+
+                    u "I understand. No worries."
+
+                    scene v15s18c_auam_5a
+                    with dissolve
+
+                    aut "Okay, thanks."
+
+                    aut "I'm gonna go force Amber out of the bathroom, haha! I have to pee really bad..."
+
+                    scene v15s18c_auam_5
+                    with dissolve
+
+                    u "Haha, okay. See you around."
+
+                    scene v15s18c_auam_5a
+                    with dissolve
+
+                    aut "Later!"
+
+                    scene v15s18c_auam_6
+                    with dissolve
+
+                    u "(Well, that could've gone worse...)"
+                
+                else:
                     scene v15s18c_auam_5f
                     with dissolve
 
@@ -1905,68 +1969,6 @@ label v15s18c_autumn_amber:
 
                     u "(Well, that could've gone worse...)"
                 
-                elif kct == "loyal" and v11_lauren_caught_aubrey:
-                    scene v15s18c_auam_5a
-                    with dissolve
-
-                    aut "Ha, I uh..."
-
-                    aut "There's too much drama I think... Between you and Lauren."
-
-                    aut "It's just hard to-"
-
-                    scene v15s18c_auam_5
-                    with dissolve
-
-                    u "I understand. No worries."
-
-                    scene v15s18c_auam_5a
-                    with dissolve
-
-                    aut "Okay, thanks."
-
-                    aut "I'm gonna go force Amber out of the bathroom, haha! I have to pee really bad..."
-
-                    scene v15s18c_auam_5
-                    with dissolve
-
-                    u "Haha, okay. See you around."
-
-                    scene v15s18c_auam_5a
-                    with dissolve
-
-                    aut "Later!"
-
-                    scene v15s18c_auam_6
-                    with dissolve
-
-                    u "(Well, that could've gone worse...)"
-                
-                elif kct == "loyal":
-                    scene v15s18c_auam_5b
-                    with dissolve
-
-                    aut "Haha! What?"
-
-                    scene v15s18c_auam_5c
-                    with dissolve
-
-                    u "I have to make out with someone, ha."
-
-                    scene v15s18c_auam_5b
-                    with dissolve
-
-                    aut "Oh... Sure. That's easy. *Chuckles*"
-
-                    scene v15s18c_auam_5c
-                    with dissolve
-
-                    u "Yeah!"
-
-                    u "Wait, really?"
-
-                    jump v15s18c_autumn_kiss
-
                 scene v15s18c_auam_7
                 with dissolve
 
