@@ -4,8 +4,6 @@
 # Time: Morning
 
 label v15s41:
-    image sleep_transition_fast = Movie(play="images/v15/Scene 41/sleep_transition_fast.webm", loop=False)
-    
     scene sleep_transition_fast
     with fade
 
