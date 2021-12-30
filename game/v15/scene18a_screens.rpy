@@ -3,22 +3,30 @@ screen v15s18a_bathroom():
 
     default image_path = "images/v15/Scene 18a/Free Roam Screens/bathroom/"
 
-    imagemap:
-        if True:
-            idle "images/v15/Scene 18a/Free Roam Screens/v15s18a_bathroom_1.webp"
-        elif False:
-            idle "images/v15/Scene 18a/Free Roam Screens/v15s18a_bathroom_2.webp"
-        else:
-            idle "images/v15/Scene 18a/Free Roam Screens/v15s18a_bathroom_3.webp"
-        hover "images/v15/Scene 18a/Free Roam Screens/v15s18a_bathroom_hover.webp"
+    add image_path + "v15s18a_bathroom_1.webp"
+    add image_path + "v15s18a_bathroom_2.webp"
+    add image_path + "v15s18a_bathroom_3.webp"
 
-        hotspot (1274, 0, 333, 1080) action NullAction() # Back Button
+    # Door
+    imagebutton:
+        idle Transform("#0000", size=(560, 1080))
+        hover image_path + "v15s18a_bathroom_hover_door.webp"
+        action NullAction()
+        pos (1047, 0)
 
-        if True:
-            hotspot (1042, 0, 232, 740) action NullAction() # Riley
-        if True:
-            hotspot (612, 540, 564, 540) action NullAction() # Character Name
+    # Riley
+    imagebutton:
+        idle Transform("#0000", size=(239, 610))
+        hover image_path + "v15s18a_bathroom_hover_riley.webp"
+        action NullAction()
+        pos (1042, 128)
 
+    # Ryan
+    imagebutton:
+        idle Transform("#0000", size=(418, 467))
+        hover image_path + "v15s18a_bathroom_hover_ryan.webp"
+        action NullAction()
+        pos (749, 525)
 
 
 screen v15s18a_dining_table():
@@ -30,12 +38,14 @@ screen v15s18a_dining_table():
     add image_path + "v15s18a_bar_2.webp"
     add image_path + "v15s18a_bar_3.webp"
 
+    # Aubrey
     imagebutton:
         idle Transform("#0000", size=(779, 961))
         hover image_path + "v15s18a_bar_hover_aubrey.webp"
         action NullAction()
         pos (290, 119)
 
+    # Autumn
     imagebutton:
         idle Transform("#0000", size=(245, 369))
         hover image_path + "v15s18a_bar_hover_autumn.webp"
