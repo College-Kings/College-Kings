@@ -1798,6 +1798,8 @@ label v15s18c_autumn_amber:
                 u "Yeah, I know, I'm sorry... I just-"
 
                 if kct == "loyal":
+                    call screen kct_popup
+                
                     scene v15s18c_auam_5f # FPP. Same as v15s18c_5e, Autumn slightly sad, mouth open
                     with dissolve
 
@@ -1833,6 +1835,8 @@ label v15s18c_autumn_amber:
                     jump v15s18c_autumn_kiss
 
                 else:
+                    call screen kct_popup(required_kct="loyal")
+                
                     scene v15s18c_auam_5d
                     with dissolve
 
@@ -1924,6 +1928,7 @@ label v15s18c_autumn_amber:
                     u "(Well, that could've gone worse...)"
                 
                 else:
+                    call screen kct_popup(required_kct="loyal")
                     scene v15s18c_auam_5f
                     with dissolve
 
@@ -2239,6 +2244,7 @@ label v15s18c_chris_penelope:
 
                 pe "Oh, yeah... That thing."
 
+            #### Still TBD
             if penelope.relationship.value < Relationship.LIKES.value:
                 scene v15s18c_chpe_5d # FPP. Same as v15s18c_chpe_5, Penelope different pose, slightly uncomfortable, mouth open
                 with dissolve

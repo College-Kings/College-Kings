@@ -2380,6 +2380,8 @@ label v15s18a_ChrisAmber:
                     with dissolve
 
                 else:
+                    call screen kct_popup(required_kct="popular")
+                    
                     am "Well, I'm sure you'll find some girls who will gladly help you mark a few things off of here tonight."
 
                     scene v15s18aamber_3
