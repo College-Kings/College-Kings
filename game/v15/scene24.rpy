@@ -683,7 +683,7 @@ label v15s24:
                 scene v15s24_13
                 with dissolve
 
-                cashier "I'm not selling you this alcohol, kid."
+                cashier "I'm not selling you alcohol, kid."
 
                 cashier "You can argue and bribe all you want, but it won't work. It never has, and it never will."
 

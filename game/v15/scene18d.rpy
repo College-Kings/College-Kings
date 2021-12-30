@@ -44,6 +44,8 @@ label v15s18d:
 
     imre "Let's see how you did with the list, huh?"
 
+    hide screen v15_imre_checklist_icon with dissolve
+
     scene v15s18d_6 # FPP. MC looking down at his and Imre's hands as MC hands Imre the list of challenges.
     with dissolve
     

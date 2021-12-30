@@ -247,18 +247,16 @@ label v15s5:
             with dissolve
 
             ro "I'll think of something to take your mind off it..."
-
-            play sound "sounds/dooropen.mp3"
             
             scene v15s5_5a # TPP. Same as v15s5_5a, MC walking out of the classroom, MC looking angry, mouth open, Ms. Rose in the back watching MC leave with a flirtatious look as she bites her lip, mouth closed.
-            with hpunch
+            with dissolve
 
             u "I need to go. This is... so fucked up."
 
             play sound "sounds/doorclose.mp3"
 
             scene v15s5_6
-            with dissolve
+            with hpunch
             
             pause 0.75
 

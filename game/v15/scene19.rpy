@@ -326,7 +326,7 @@ label v15s19:
     scene v15s19_9a
     with dissolve
 
-    u "Haha, you're right. *Sighs*"
+    u "Haha, you're right."
 
     u "It'll be okay. I just have to make a run for it."
 
