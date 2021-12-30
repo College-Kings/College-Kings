@@ -2176,21 +2176,11 @@ label v15s18a_ChrisAmber:
 
                 am "Ha, yes!"
 
-                if not kct == "popular" and amber.relationship.value < Relationship.FWB.value:
-                    am "Well, I'm sure you'll find some girls who will gladly help you mark a few things off of here tonight."
-
-                    scene v15s18aamber_3
-                    with dissolve
-
-                    u "Thanks, haha. I'm gonna go continue my search and catch up with everyone."
-
-                    scene v15s18aamber_3a
-                    with dissolve
-
-                    am "Good luck!"
-
-                else:
+                if kct == "popular" or amber.relationship.value >= Relationship.FWB.value:
                     $ v15_imre_checklist[2].complete = True
+
+                    if amber.relationship.value < Relationship.FWB.value:
+                        call screen kct_popup
                     
                     scene v15s18aamber_3c
                     with dissolve
@@ -2394,6 +2384,19 @@ label v15s18a_ChrisAmber:
 
                     scene v15s18aamber_14 # TPP. Show Mc walking back inside the house, slight smile, mouth closed.
                     with dissolve
+
+                else:
+                    am "Well, I'm sure you'll find some girls who will gladly help you mark a few things off of here tonight."
+
+                    scene v15s18aamber_3
+                    with dissolve
+
+                    u "Thanks, haha. I'm gonna go continue my search and catch up with everyone."
+
+                    scene v15s18aamber_3a
+                    with dissolve
+
+                    am "Good luck!"
 
         pause 0.75
 
