@@ -108,6 +108,9 @@ label v15s18:
 
         pause 0.75
 
+        scene v15s18_8a # FPP. Same as v15s18_8, Lauren slight smile, mouth closed.
+        with dissolve
+
         la "Thank you, [name]."
 
     else:

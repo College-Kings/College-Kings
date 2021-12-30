@@ -506,7 +506,7 @@ label v15s12:
 
             lindsey_board.add_subtask("VIP Night",
                 "Invite Aubrey, Autumn, and Grayson",
-                opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The last person I'm thinking about inviting is Grayson. He already has this burning hatred for Chloe and would help meO gain support from the Apes.\"",
+                opinion="\"Aubrey and Autumn are for sure going to come, I want some time with them away from Chloe. The last person I'm thinking about inviting is Grayson. He already has this burning hatred for Chloe and would help me gain support from the Apes.\"",
                 people=[aubrey, autumn, grayson],
                 cost=0)
 
