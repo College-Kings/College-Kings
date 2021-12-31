@@ -162,10 +162,10 @@ screen path_builder_spoiler():
             spacing 200
 
             textbutton "Yes":
-                action [Hide("spoiler_path_builder"), Show("path_builder")]
+                action [Hide("path_builder_spoiler"), Show("path_builder")]
 
             textbutton "No":
-                action Hide("spoiler_path_builder")
+                action Hide("path_builder_spoiler")
 
 
 screen path_builder_base(header=""):
