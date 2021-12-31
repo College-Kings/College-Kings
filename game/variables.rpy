@@ -75,6 +75,7 @@ default tomdmg = 0
 default tomstance = 1
 default w = "w"
 default winadam = False
+default wintom = False
 default youDamage = 0
 default youHealth = 5
 
