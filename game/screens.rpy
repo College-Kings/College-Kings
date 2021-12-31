@@ -428,117 +428,73 @@ screen main_menu():
     tag menu
     style_prefix "main_menu"
 
-    add "gui/mainMenu/mainMenuBackground.webp"
+    default image_path = "gui/main_menu/"
 
-    vbox:
-        pos (520, 187)
-        spacing 23
+    add image_path + "background.webp"
 
-        hbox:
-            spacing 22
+    # Patreon
+    imagebutton:
+        idle image_path + "patreon_idle.webp"
+        hover Transform(image_path + "patreon_hover.webp", xpos=-28)
+        action OpenURL("https://www.patreon.com/collegekings")
+        pos (118, 36)
 
-            imagebutton:
-                idle "gui/mainMenu/playIdle.webp"
-                hover "gui/mainMenu/playHover.webp"
-                action Start()
+    # Discord
+    imagebutton:
+        idle image_path + "discord_idle.webp"
+        hover Transform(image_path + "discord_hover.webp", xpos=-22)
+        action OpenURL("https://discord.gg/collegekings")
+        pos (1311, 30)
 
-            imagebutton:
-                idle "gui/mainMenu/loadIdle.webp"
-                hover "gui/mainMenu/loadHover.webp"
-                action ShowMenu("load")
+    # Scene Gallery
+    imagebutton:
+        idle image_path + "scene_gallery_idle.webp"
+        hover Transform(image_path + "scene_gallery_hover.webp", pos=(-22, -22))
+        action ShowMenu("scene_gallery_spoiler")
+        pos (141, 811)
 
-        imagebutton:
-            idle "gui/mainMenu/sceneIdle.webp"
-            hover "gui/mainMenu/sceneHover.webp"
-            action ShowMenu("spoiler")
+    # Path Builder
+    imagebutton:
+        idle image_path + "path_builder_idle.webp"
+        hover Transform(image_path + "path_builder_hover.webp", pos=(-20, -20))
+        action ShowMenu("path_builder_spoiler")
+        pos (1454, 811)
 
-        imagebutton:
-            idle "gui/mainMenu/pathIdle.webp"
-            hover "gui/mainMenu/pathHover.webp"
-            action ShowMenu("spoiler_path_builder")
+    # Play Now
+    imagebutton:
+        idle image_path + "play_now_idle.webp"
+        hover Transform(image_path + "play_now_hover.webp", pos=(-31, -31))
+        action Start()
+        pos (564, 880)
 
-        hbox:
-            spacing 23
+    # Load
+    imagebutton:
+        idle image_path + "load_idle.webp"
+        hover Transform(image_path + "load_hover.webp", pos=(-29, -31))
+        action ShowMenu("load")
+        pos (1096, 880)
 
-            imagebutton:
-                idle "gui/mainMenu/settingsIdle.webp"
-                hover "gui/mainMenu/settingsHover.webp"
-                action ShowMenu("preferences")
-
-            imagebutton:
-                idle "gui/mainMenu/quitIdle.webp"
-                hover "gui/mainMenu/quitHover.webp"
-                action Quit(confirm= main_menu)
-
-
-    
-    if config.enable_steam: # Steam Version
-        vbox:
-            pos (1619, 216)
-            spacing 25
-
-            imagebutton:
-                idle "gui/mainMenu/discordIdle.webp"
-                hover "gui/mainMenu/discordHover.webp"
-                action OpenURL("http://discord.collegekingsgame.com")
-
-            imagebutton:
-                idle "gui/mainMenu/websiteIdle.webp"
-                hover "gui/mainMenu/websiteHover.webp"
-                action OpenURL("http://collegekingsgame.com")
-
-    else: # Patreon version
-        vbox:
-            pos (1619, 226)
-            spacing 25
-
-            imagebutton:
-                idle "gui/mainMenu/patreonIdle.webp"
-                hover "gui/mainMenu/patreonHover.webp"
-                action OpenURL("https://www.patreon.com/collegekings")
-
-            imagebutton:
-                idle "gui/mainMenu/discordIdle.webp"
-                hover "gui/mainMenu/discordHover.webp"
-                action OpenURL("http://discord.collegekingsgame.com")
-
-            imagebutton:
-                idle "gui/mainMenu/websiteIdle.webp"
-                hover "gui/mainMenu/websiteHover.webp"
-                action OpenURL("http://collegekingsgame.com")
-
-    text "v[config.version!t]":
-        color "#4e628f"
-        size 30
-        xalign 0.99
-        yalign 0.99
+    # LEARN MORE
+    imagebutton:
+        idle image_path + "learn_more_idle.webp"
+        hover Transform(image_path + "learn_more_hover.webp", pos=(-40, -33))
+        action OpenURL("http://collegekingsgame.com")
+        pos (303, 976)
 
 
-style main_menu_frame is empty
-style main_menu_vbox is vbox
-style main_menu_text is gui_text
-style main_menu_title is main_menu_text
-style main_menu_version is main_menu_text
+    # SETTINGS
+    imagebutton:
+        idle image_path + "settings_idle.webp"
+        hover Transform(image_path + "settings_hover.webp", pos=(-35, -25))
+        action ShowMenu("preferences")
+        pos (1439, 967)
 
-style main_menu_frame:
-    xsize 420
-    yfill True
-
-style main_menu_vbox:
-    xalign 0.5
-    xoffset 0
-    xmaximum 1200
-    yalign 0.1
-    yoffset 0
-
-style main_menu_text:
-    properties gui.text_properties("main_menu", accent=True)
-
-style main_menu_title:
-    properties gui.text_properties("title")
-
-style main_menu_version:
-    properties gui.text_properties("version")
+    # QUIT
+    imagebutton:
+        idle image_path + "quit_idle.webp"
+        hover Transform(image_path + "quit_hover.webp", pos=(-32, -27))
+        action Quit()
+        pos (1662, 971)
 
 
 ## Game Menu screen ############################################################
@@ -1047,7 +1003,7 @@ style radio_vbox:
 
 style radio_button:
     properties gui.button_properties("radio_button")
-    foreground "gui/button/radio_[prefix_]foreground.png"
+    foreground "gui/button/radio_[prefix_]foreground.webp"
 
 style radio_button_text:
     properties gui.button_text_properties("radio_button")
@@ -1057,7 +1013,7 @@ style check_vbox:
 
 style check_button:
     properties gui.button_properties("check_button")
-    foreground "gui/button/check_[prefix_]foreground.png"
+    foreground "gui/button/check_[prefix_]foreground.webp"
 
 style check_button_text:
     properties gui.button_text_properties("check_button")

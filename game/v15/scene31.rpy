@@ -4,12 +4,6 @@
 # Time: Morning
 
 label v15s31:
-    if False: #making sure it shows on Lint
-        scene emily_selfie_31
-
-
-        pause 0.75
-
 # -Transition from night to morning-
 
 # -MC is wearing his homecoming suit as he walks into the bathroom-
@@ -60,7 +54,7 @@ label v15s31:
 
                 pause 0.75
 
-                $ emily.messenger.addImgReply("images/v15/Scene 31/emily_selfie_31.webp", func=None) #Selfie in a suit
+                $ emily.messenger.addImgReply("images/v15/Scene 31/v15s31_mc_suit.webp", func=None) #Selfie in a suit
                 $ emily.messenger.addReply("Getting prom flashbacks.")
                 $ emily.messenger.newMessage("OMG! Haha, you actually look the same. Where are you headed?", queue=False)
                 $ emily.messenger.addReply("Wedding ceremony for Aubrey's parents.")

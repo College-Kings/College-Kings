@@ -75,6 +75,7 @@ default tomdmg = 0
 default tomstance = 1
 default w = "w"
 default winadam = False
+default wintom = False
 default youDamage = 0
 default youHealth = 5
 
@@ -399,3 +400,6 @@ default v15s48_interrupt = False
 default v15s48_follow_your_heart = False
 default v15s48_variable_check = 0 
 default v15_lindsey_sold = False
+default v15s33_flirt = False
+default v15s33_cheese = False
+default v15s33_naomi_broke_aubreyrs = False

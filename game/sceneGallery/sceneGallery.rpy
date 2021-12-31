@@ -20,7 +20,7 @@ init python:
         rv.update(newScope)
         return rv
 
-    ## SCENE GALLERY ITEMS HERE
+    # SCENE GALLERY ITEMS HERE
         # v1
     if renpy.loadable("v1/v1.rpy"):
         SceneGallery("sexdream1") #Riley, day 1
@@ -93,6 +93,8 @@ init python:
         SceneGallery("v14s46a_sga") #46a, Lauren good (scope is Lauren GIRLFRIEND)
         SceneGallery("v14s46a_sgb") #46a, Lauren bad
         SceneGallery("v14s53_sg") #53a, Samantha, xx
+
+    ## v15
     if renpy.loadable("v15/scene1.rpy"):
         SceneGallery("15") #15, Ms. Rose - 47
         SceneGallery("18a") #18a, Riley - 48
@@ -104,7 +106,8 @@ init python:
         SceneGallery("33"), #33, Naomi - 54
         SceneGallery("48"), #48, Nora - 55
 
-screen spoiler():
+
+screen scene_gallery_spoiler():
     modal True
 
     add "images/darker.webp"
@@ -119,13 +122,13 @@ screen spoiler():
             spacing 200
 
             textbutton "Yes":
-                action [Hide("spoiler"), ui.callsinnewcontext("sceneGalleryNameChange"), Show("sceneGallery")]
+                action [Hide("scene_gallery_spoiler"), ui.callsinnewcontext("sceneGalleryNameChange"), ShowMenu("scene_gallery")]
 
             textbutton "No":
-                action Hide("spoiler")
+                action Hide("scene_gallery_spoiler")
 
 
-screen sceneGallery():
+screen scene_gallery():
     tag menu
     modal True
 
@@ -151,7 +154,8 @@ screen sceneGallery():
         idle "images/backtransp.webp"
         hover "images/back.webp"
         pos (79, 933)
-        action Show("main_menu")
+        action ShowMenu("main_menu")
+
 
 label sceneGalleryNameChange:
     

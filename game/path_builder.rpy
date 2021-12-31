@@ -147,7 +147,7 @@ define PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 3 S
 define PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", (set_variable, "pb_start_location", "v14_start"))
 
 
-screen spoiler_path_builder():
+screen path_builder_spoiler():
     modal True
 
     add "images/darker.webp"
