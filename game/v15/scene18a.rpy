@@ -1083,7 +1083,7 @@ label v15s18a_ImreLauren:
     scene v15s18aimre_1 # TPP. MC walking over to Lauren and Imre, Imre looking at Lauren, Lauren looking at Imre, both slight smile, mouth closed.
     #with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18aimre_2 # FPP. MC looking at Lauren, Lauren looking at Imre, Lauren slight smile, mouth open.
     with dissolve
@@ -1946,7 +1946,7 @@ label v15s18a_ChrisAmber:
     scene v15s18aamber_1 # TPP. MC walking towards the Kitchen stools Amber is sitting on, Chris talking to Amber, Chris slight smile, mouth open, Amber slight smile, mouth closed.
     #with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18aamber_2 # FPP. MC keeping a little bit of distance and watching the Convo, Chris looking at Amber, Amber looking at Chris, Chris slight smile, mouth open, Amber slight smile, mouth closed.
     with dissolve
@@ -2090,6 +2090,8 @@ label v15s18a_ChrisAmber:
         with dissolve
 
         u "Haha, whatever! We both know I'd make more than you any day of the week."
+        
+        call screen v15s18a_room
 
     else:
         scene v15s18aamber_3
@@ -2442,8 +2444,6 @@ label v15s18a_Pumpkin:
     #with dissolve
 
     u "(Haha, it looks too cute for a Halloween pumpkin. I'm guessing Lauren made this one.)"
-
-    pause 0.75
 
     call screen v15s18a_livingroom
 
