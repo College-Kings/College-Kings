@@ -7,10 +7,10 @@ label v15s48a:
     scene v15s48a_1 # TPP. Show Nora sitting down next to MC, both slight smile, mouth closed.
     with dissolved
 
-    pause
+    pause 0.75
 
     scene v15s48a_2 # FPP. Nora sitting on the couch next to MC, MC looking at Nora, Nora looking at MC, Nora smile, mouth open.
-    with dissolve 
+    with dissolve
 
     no "Thank you, [name]. For everything."
 
@@ -25,7 +25,6 @@ label v15s48a:
     no "Seriously. You've always been there for me."
 
     if achievement.has("you_may_kiss_the_bride"):
-        
         no "Chris literally left me at the altar... and you were the only one who stepped up for me."
 
         no "It took you just a few seconds to stand up and take his place."
@@ -34,11 +33,13 @@ label v15s48a:
         with dissolve
 
         u "(Damn straight.)"
+
     if achievement.has("helping_hand"):
         scene v15s48a_2
         with dissolve
 
         no "I mean, you helped me get people signed up for the Europe trip. And I didn't even have to ask."
+
     if v10_cheerfornora:
         scene v15s48a_2
         with dissolve
@@ -64,11 +65,13 @@ label v15s48a:
         with dissolve
 
         no "*Giggles*"
+
     if not v12_chase_robber:
         scene v15s48a_2
         with dissolve
 
         no "When I got robbed in Europe, your first instinct was to make sure that I was okay."
+
     if v12_fight_win:
         scene v15s48a_2
         with dissolve
@@ -89,6 +92,7 @@ label v15s48a:
         with dissolve
 
         u "Of course, I did."
+
     if v12_followed_nora:
         scene v15s48a_2
         with dissolve
@@ -98,7 +102,7 @@ label v15s48a:
         no "I just can't believe how much time I've wasted without you, ha."
 
     scene v15s48a_2b # FPP. Nora leaning in closer to MC's face, Nora looking at MC, MC looking at Nora, Nora flirty, mouth open.
-    with dissolve 
+    with dissolve
 
     no "It's been you all along."
 
@@ -116,7 +120,7 @@ label v15s48a:
     with dissolve
 
     menu:
-        "You are wanted.":
+        "You are wanted":
             $ add_point(KCT.BOYFRIEND)
             u "You are."
 
@@ -135,33 +139,36 @@ label v15s48a:
             scene v15s48a_2d # FPP. MC kissing Nora
             with dissolve
 
-            pause
+            pause 0.75
 
             scene v15s48a_5 # TPP. Show MC and Nora kissing.
-            with dissolve  
+            with dissolve
 
-            pause
+            pause 0.75
 
             scene v15s48a_2c
+            with dissolve
 
             u "Wanted."
 
             scene v15s48a_2e # FPP. Nora still leaned in close to MC, MC looking at Nora, Nora looking at MC, Nora blushing, Nora smile, mouth open.
             with dissolve
+
             no "You are too..."
-        "Just kiss her.":
+
+        "Just kiss her":
             $ add_point(KCT.BRO)
             play sound "sounds/kiss.mp3"
 
             scene v15s48a_2d
             with dissolve
 
-            pause
+            pause 0.75
 
             scene v15s48a_5
-            with dissolve  
+            with dissolve
 
-            pause
+            pause 0.75
 
             scene v15s48a_2b
             with dissolve
@@ -183,30 +190,32 @@ label v15s48a:
     scene v15s48a_6 # TPP. Show MC and Nora kissing romantically on the couch with the fireplace with a fire in the shot.
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s48a_7 # TPP. Closer up of MC and Nora, MC taking off Nora's shirt her boobs out, Nora's face obscured by her shirt, MC slight smile, mouth closed.
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s48a_7a # TPP. MC and Nora kissing, Nora is topless.
-    with dissolve  
+    with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s48a_7b # TPP. Nora taking of MC's shirt, MC's face obscured by his shirt, Nora flirty, mouth closed.
-    with dissolve 
+    with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s48a_7c # TPP. MC and Nora kissing, both topless.
-    with dissolve 
+    with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s48a_8 # TPP. Nora laying on the couch fully nude, Nora's full body in the shot, Nora biting her lip.
-    with fade(1,0,1)
+    with fade
+
+    pause 0
 
     call screen v15s18a_Nora
 
@@ -217,9 +226,9 @@ label v15s48a_boobs:
     with dissolve
 
     menu:
-        "Massage.":
+        "Massage":
             scene v15s48abo_2 # TPP. Show MC massaging Nora's boobs, MC slight smile, mouth closed, Nora flirty, mouth open.
-            with dissolve 
+            with dissolve
 
             no "Mmm, that feels so nice."
 
@@ -245,7 +254,7 @@ label v15s48a_boobs:
 
             no "You're doing a really good job so far... *Giggles*"
 
-        "Suck.":
+        "Suck":
             scene v15s48abo_5 # TPP. MC sucking on Nora's right boob, Nora's face in shot, Nora flirty, mouth open.
             with dissolve
 
@@ -301,7 +310,7 @@ label v15s48a_feet:
     with dissolve
 
     menu:
-        "Massage.":
+        "Massage":
             scene v15s48afe_2 # TPP. Show MC massaing Nora's feet, Nora flirty, mouth open.
             with dissolve
 
@@ -325,9 +334,10 @@ label v15s48a_feet:
             u "Good, because I love exploring your body."
 
             u "I can't wait to worship every inch of it."
-        "Suck.":
+
+        "Suck":
             scene v15s48afe_5 # TPP. Show MC sucking on Nora's big toe, Nora flirty, mouth open.
-            with dissolve 
+            with dissolve
 
             no "Oh! Fuck, [name]!"
 
@@ -431,17 +441,17 @@ label v15s48a_vagina:
             scene v15s48a_4b # FPP. MC's two fingers barely in Nora's vagina, Nora biting her lip.
             with dissolve
 
-            pause .05
+            pause 0.75
 
             scene v15s48a_4a
             with dissolve
 
-            pause .05
+            pause 0.75
 
             scene v15s48a_4b
             with dissolve
 
-            pause .05
+            pause 0.75
 
             scene v15s48a_4a
             with dissolve
@@ -491,7 +501,8 @@ label v15s48a_end:
 
     scene v15norbj # Ignore as anim
     with dissolve
-    pause
+
+    pause 0.75
 
     u "Ah, fuck... yeah."
 
@@ -499,7 +510,8 @@ label v15s48a_end:
 
     scene v15norbjf # Ignore as anim
     with dissolve
-    pause
+
+    pause 0.75
 
     no "Mhmm!"
 
@@ -507,30 +519,32 @@ label v15s48a_end:
 
     scene v15norbj2 # Ignore as anim
     with dissolve
-    pause
+
+    pause 0.75
 
     u "*Moans* Ssssshit Nora, you really know what you're doing."
 
     scene v15norbj2f # Ignore as anim
     with dissolve
-    pause
+
+    pause 0.75
 
     u "I'm not going to last much longer if you keep that up..."
 
     scene v15s48aend_2 # TPP. MC leading Nora over to the window, both naked, both slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s48aend_3 # TPP. MC pushing Nora's back towards the window, the window has a nice view with moonlight and stars and the forest, Nora biting her lip.
-    with dissolve  
+    with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s48aend_3a # TPP. MC getting on his knees. While Nora stands with her back to the window, Nora biting her lip.
-    with dissolve 
+    with dissolve
 
-    pause
+    pause 0.75
 
     image v15noror = Movie(play="images/v15/Scene48a/v15noror.webm", loop=True, image="images/v15/Scene48a/v15nororStart.webp", start_image="images/v15/Scene48a/v15nororStart.webp")
     image v15nororf = Movie(play="images/v15/Scene48a/v15nororf.webm", loop=True, image="images/v15/Scene48a/v15nororStart.webp", start_image="images/v15/Scene48a/v15nororStart.webp")
@@ -539,7 +553,8 @@ label v15s48a_end:
 
     scene v15noror # Ignore as anim 
     with dissolve
-    pause 
+
+    pause 0.75
 
     no "Oh... Fuck!"
 
@@ -549,7 +564,7 @@ label v15s48a_end:
     with dissolve
 
     menu:
-        "You deserve it.":
+        "You deserve it":
             u "You do deserve the best, you know."
 
             scene v15s48a_4a # FPP. MC looking up at Nora, Nora looking down at MC, Nora flirty, mouth open.
@@ -557,7 +572,7 @@ label v15s48a_end:
 
             no "Ha, I guess..."
 
-        "Get use to it.":
+        "Get use to it":
             u "Good, get used to it."
 
             scene v15s48a_4a
@@ -566,8 +581,9 @@ label v15s48a_end:
             no "Ha! Should I?"
 
     scene v15nororf # Ignore as anim 
-    with dissolve 
-    pause 
+    with dissolve
+
+    pause 0.75
 
     no "Mmm..."
 
@@ -575,7 +591,8 @@ label v15s48a_end:
 
     scene v15noror2 # Ignore as anim
     with dissolve
-    pause
+
+    pause 0.75
 
     no "*Moans* Yeah?"
 
@@ -585,7 +602,8 @@ label v15s48a_end:
 
     scene v15noror2f # Ignore as anim
     with dissolve
-    pause 
+
+    pause 0.75
 
     no "You..."
 
@@ -597,22 +615,22 @@ label v15s48a_end:
     u "Do I?"
 
     scene v15s48aend_5 # TPP. MC standing back up now and turning Nora around so her chest faces the window, Nora shocked, mouth closed, MC cheeky smile, mouth closed.
-    with dissolve 
+    with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s48aend_5a # TPP. MC pushing Nora against the window Nora's boobs pressed against the window.
-    with dissolve 
+    with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s48aend_6 # TPP. (Only if this is possible) Shot of the window from outside with Nora's boobs pressed up against the glass, MC standing behind her.
-    with dissolve 
+    with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s48aend_5b # TPP. Nora's face not shown, MC behind Nora with his hands on her hips as she is pressed against the window.
-    with dissolve 
+    with dissolve
 
     no "*Giggles* Got me where you want me?"
 
@@ -624,8 +642,9 @@ label v15s48a_end:
     image v15norsdg2f = Movie(play="images/v15/Scene48a/v15norsdg2f.webm", loop=True, image="images/v15/Scene48a/v15norsdg2Start.webp", start_image="images/v15/Scene48a/v15norsdg2Start.webp")
 
     scene v15norsdg # Ignore as anim 
-    with disoslve 
-    pause
+    with dissolve
+
+    pause 0.75
 
     no "*Gasps*"
 
@@ -633,44 +652,47 @@ label v15s48a_end:
 
     scene v15norsdgf # Ignore as anim 
     with dissolve
-    pause
+    
+    pause 0.75
 
     no "Oh, shit!"
 
     scene v15norsdg2 # Ignore as anim 
-    with dissolve 
-    pause 
+    with dissolve
+
+    pause 0.75
 
     u "You feel amazing, Nora..."
 
     scene v15norsdg2f # Ignore as anim
     with dissolve
-    pause 
+
+    pause 0.75
 
     no "You... *Moans* Too..."
 
     scene v15s48aend_5c # TPP. Nora turned back around, Nora looking at MC, Nora biting her lip.
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s48aend_7 # TPP. Close up of Nora's hand grabbing MCs.
-    with dissolve 
+    with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s48aend_8 # TPP. Show Nora leading MC up the stairs to the bedroom by his hand, MC slight smile, mouth closed, Nora biting her lip.
-    with dissolve 
+    with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s48aend_9 # TPP. MC and Nora standing by the bed upstairs, MC slight smile, Nora biting her lip.
-    with fade (1,0,1)
+    with fade
 
-    pause
+    pause 0.75
 
     scene v15s48aend_9a # TPP. MC picking up Nora, Nora surprised, mouth open.
-    with dissolve 
+    with dissolve
 
     no "Oooh... You're so strong, hehe."
 
@@ -690,9 +712,9 @@ label v15s48a_end:
     no "Ha! Too rough? Is that a thing?"
 
     scene v15s48aend_10 # TPP. Show MC and Nora falling onto the bed while her legs are still wrapped around him.
-    with dissolve 
+    with dissolve
 
-    pause 
+    pause 0.75
 
     image v15normis = Movie(play="images/v15/Scene48a/v15normis.webm", loop=True, image="images/v15/Scene48a/v15normisStart.webp", start_image="images/v15/Scene48a/v15normisStart.webp")
     image v15normisf = Movie(play="images/v15/Scene48a/v15normisf.webm", loop=True, image="images/v15/Scene48a/v15normisStart.webp", start_image="images/v15/Scene48a/v15normisStart.webp")
@@ -701,7 +723,8 @@ label v15s48a_end:
 
     scene v15normis # Ignore as anim
     with dissolve
-    pause 
+
+    pause 0.75
 
     no "Oh my- *Moans*"
 
@@ -709,7 +732,8 @@ label v15s48a_end:
 
     scene v15normisf # Ignore as anim
     with dissolve
-    pause
+
+    pause 0.75
 
     u "You like that?"
 
@@ -717,7 +741,8 @@ label v15s48a_end:
 
     scene v15normis2 # Ignore as anim
     with dissolve
-    pause
+
+    pause 0.75
 
     no "*Whispers* You're so sexy, [name]..."
 
@@ -727,7 +752,8 @@ label v15s48a_end:
 
     scene v15normis2f # Ignore as anim
     with dissolve
-    pause
+
+    pause 0.75
 
     u "I'm... *Moans* Nora-"
 
@@ -755,7 +781,7 @@ label v15s48a_end:
 
 # -Timed Event
     menu:
-        "Cum inside Nora.":
+        "Cum inside Nora":
             scene v15s48aend_11a
             with vpunch
 
@@ -766,19 +792,18 @@ label v15s48a_end:
 
             no "I'm- I... *Moans* Yes, [name]..."
 
-        "Pull out.":
- 
+        "Pull out":
             u "(No. Fucking. Thank you,)"
 
             scene v15s48aend_12 # FPP. MC looking down at his dick inside of Nora as he is pulling it out.
-            with dissolve 
+            with dissolve
 
-            pause
+            pause 0.75
 
             scene v15s48aend_12a # FPP. MC's dick no longer in Nora
-            with dissolve 
+            with dissolve
 
-            pause 
+            pause 0.75
 
             scene v15s48aend_13 # FPP. MC cumming on Nora's stomach, Nora biting her lip.
             with vpunch
@@ -798,22 +823,22 @@ label v15s48a_end:
             scene v15s48aend_15 # FPP. On the bed, MC's two fingers barely in Nora's vagina, Nora biting her lip.
             with dissolve
 
-            pause .05
+            pause 0.75
 
             scene v15s48aend_15a # FPP. On the bed, MC's two fingers all the way in Nora's vagina, Nora biting her lip.
             with dissolve
 
-            pause .05
+            pause 0.75
             
             scene v15s48aend_15
             with dissolve
 
-            pause .05
+            pause 0.75
 
             scene v15s48aend_15a
             with dissolve
 
-            pause
+            pause 0.75
 
             scene v15s48aend_15c # FPP. On the bed, MC's two fingers all the way in Nora's vagina, Nora flirty, mouth open.
             with vpunch
