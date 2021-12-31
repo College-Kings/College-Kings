@@ -54,7 +54,7 @@ label v15s49:
     scene v15s49_7 # TPP. Close up of Tom, Tom looking at Riley, Tom angry, mouth open.
     with dissolve 
 
-    to "Listen here, you little bitch... I know you had something to do with why Charli got expelled!"
+    tom "Listen here, you little bitch... I know you had something to do with why Charli got expelled!"
 
     scene v15s49_8 # TPP. Close up of Riley, Riley looking at Tom, Riley confused, mouth open.
     with dissolve
@@ -64,9 +64,9 @@ label v15s49:
     scene v15s49_7
     with dissolve
 
-    to "Charli was the reason I'm still in school, you fucking rat!"
+    tom "Charli was the reason I'm still in school, you fucking rat!"
 
-    to "Now that he's gone, I have to find someone else to do all of my assignments..."
+    tom "Now that he's gone, I have to find someone else to do all of my assignments..."
 
     scene v15s49_8
     with dissolve
@@ -76,9 +76,9 @@ label v15s49:
     scene v15s49_7
     with dissolve
 
-    to "Ha, shut the hell up and listen to me."
+    tom "Ha, shut the hell up and listen to me."
 
-    to "Someone has to take his place. And that person is going to be you from now on, do you understand?"
+    tom "Someone has to take his place. And that person is going to be you from now on, do you understand?"
 
     scene v15s49_8
     with dissolve
@@ -88,7 +88,7 @@ label v15s49:
     scene v15s49_7
     with dissolve
 
-    to "You don't get to decide!"
+    tom "You don't get to decide!"
 
     scene v15s49_9 # TPP. Show Tom grabbing Riley's arm, Riley angry, mouth open, Tom angry, mouth closed.
     with dissolve
@@ -98,7 +98,7 @@ label v15s49:
     scene v15s49_9a # TPP. Riley angry, mouth closed, Tom angry, mouth open.
     with dissolve
 
-    to "You'll do as you're told, or I'll make your life a living hell."
+    tom "You'll do as you're told, or I'll make your life a living hell."
 
     scene v15s49_9
     with dissolve
@@ -108,7 +108,7 @@ label v15s49:
     scene v15s49_9a
     with dissolve
 
-    to "Do you understand me?!"
+    tom "Do you understand me?!"
 
     scene v15s49_10 # TPP. Tom shoving pushing Riley to the ground, Tom angry, mouth closed.
     with dissolve
@@ -172,7 +172,7 @@ label v15s49:
     scene v15s49_13a # FPP. MC standing between Tom and Riley, MC looking at Tom, Tom looking at MC, Tom angry, mouth open
     with dissolve
 
-    to "Oh, look! [name] shows up just when I'm looking to make someone bleed."
+    tom "Oh, look! [name] shows up just when I'm looking to make someone bleed."
 
     scene v15s49_13
     with dissolve
@@ -185,7 +185,7 @@ label v15s49:
             scene v15s49_13a
             with dissolve
 
-            to "Does it look like I give it fuck?! How about I drop your weak ass too?"
+            tom "Does it look like I give it fuck?! How about I drop your weak ass too?"
 
         "Be angry":
             $ add_point(KCT.TROUBLEMAKER)
@@ -195,7 +195,7 @@ label v15s49:
             scene v15s49_13a
             with dissolve
 
-            to "You! You're my problem, motherfucker!"
+            tom "You! You're my problem, motherfucker!"
 
     if wintom:
         scene v15s49_13
@@ -206,15 +206,15 @@ label v15s49:
         scene v15s49_13a
         with dissolve
 
-        to "*Scoffs* That was a long time ago, pal!"
+        tom "*Scoffs* That was a long time ago, pal!"
 
-        to "I've been training almost every day since then."
+        tom "I've been training almost every day since then."
 
     elif fighttom:
         scene v15s49_13a
         with dissolve
 
-        to "You really enjoy getting your ass handed to you, huh?"
+        tom "You really enjoy getting your ass handed to you, huh?"
 
         scene v15s49_13
         with dissolve
@@ -224,7 +224,7 @@ label v15s49:
         scene v15s49_13a
         with dissolve
 
-        to "The only difference this time is that I train twice a week, so hopefully you don't wake up!"
+        tom "The only difference this time is that I train twice a week, so hopefully you don't wake up!"
 
     scene v15s49_13b # FPP. Tom walking closer to MC, Tom looking at Mc, MC looking at Tom, Tom angry, mouth closed.
     with dissolve
@@ -234,7 +234,7 @@ label v15s49:
     scene v15s49_13c # TPP. Tom standing closer to MC now, Tom looking at MC, MC looking at Tom, Tom angry, mouth open.
     with dissolve
 
-    to "Charli told me you two were behind his expulsion."
+    tom "Charli told me you two were behind his expulsion."
 
     scene v15s49_13d # TPP. Tom standning closer to MC, MC looking at Tom, Tom looking at MC, Tom angry, mouth closed.
     with dissolve
@@ -246,7 +246,7 @@ label v15s49:
     scene v15s49_13c
     with dissolve
 
-    to "I'm not going anywhere, you little shithead. I'm not finished yet."
+    tom "I'm not going anywhere, you little shithead. I'm not finished yet."
 
     scene v15s49_16 # TPP. Show Riley holding her arm as she is sitting against the hood of a car a little bit away from Tom and MC, Riley upset, mouth closed.
     with dissolve
@@ -263,7 +263,7 @@ label v15s49:
             scene v15s49_13c
             with dissolve
 
-            to "Ha. Keep talking, fresh meat."
+            tom "Ha. Keep talking, fresh meat."
 
         "Try to calm Tom":
             u "We don't have to do this, you know. We can just forget about it and go home."
@@ -271,7 +271,7 @@ label v15s49:
             scene v15s49_13c
             with dissolve
 
-            to "You won't be going home tonight, [name]. You'll be going to the nearest emergency room."
+            tom "You won't be going home tonight, [name]. You'll be going to the nearest emergency room."
 
     scene v15s49_16a # TPP. Show Riley holding her arm as she is sitting against the hood of a car a little bit away from Tom and MC, Riley upset, mouth open.
     with dissolve
@@ -305,7 +305,7 @@ label v15s49:
     scene v15s49_13e # FPP. Show Tom in a fighting stance looking at MC, MC looking at Tom, Tom angry, mouth closed.
     with dissolve
 
-    to "Come at me, bro!"
+    tom "Come at me, bro!"
 
     scene v15s49_18 # TPP. A nice cinematic kind of shot of MC's fist clenched and the rain dripping off of it.
     with dissolve
