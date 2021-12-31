@@ -433,11 +433,12 @@ screen main_menu():
     add image_path + "background.webp"
 
     # Patreon
-    imagebutton:
-        idle image_path + "patreon_idle.webp"
-        hover Transform(image_path + "patreon_hover.webp", xpos=-28)
-        action OpenURL("https://www.patreon.com/collegekings")
-        pos (118, 36)
+    if not config.enable_steam:
+        imagebutton:
+            idle image_path + "patreon_idle.webp"
+            hover Transform(image_path + "patreon_hover.webp", xpos=-28)
+            action OpenURL("https://www.patreon.com/collegekings")
+            pos (118, 36)
 
     # Discord
     imagebutton:
