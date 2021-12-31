@@ -292,7 +292,7 @@ label v15s45:
                 scene v15s45_7b # same as v15s45_7a Chloe gets a little turned on, looking at Mc seductively, with a smirk
                 with dissolve
 
-                pause 0.75
+                pause 1.5
 
             else: 
                 scene v15s45_7c # FPP. same as v15s45_7a Chloe has a weirded out expression, still looking at Mc, mouth is still closed
@@ -328,7 +328,7 @@ label v15s45:
     scene v15s45_7a
     with dissolve
 
-    u "Zip it baby doll!"
+    u "Zip it, baby doll!"
 
     if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s45_7f # FPP. same as v15s45_7 Chloe has a slight smile, still looking at Mc, mouth is still open
@@ -346,8 +346,9 @@ label v15s45:
 
         cl "Civilian?"
 
-    scene v15s45_7
-    with dissolve
+    else:
+        scene v15s45_7
+        with dissolve
 
     cl "Is this some kind of weird role-play?"
 
@@ -535,7 +536,7 @@ label v15s45:
             scene v15s45_7j # FPP. same as v15s45_7 Chloe is slightly angry, still looking at Mc, mouth is still open
             with dissolve
 
-            cl "What does that even mean?! Why Are you yelling?"
+            cl "What does that even mean?! Why are you yelling?"
 
             scene v15s45_7k # FPP. same as v15s45_7j Chloe's mouth is closed, still slight angry expression, still looking at Mc
             with dissolve
@@ -560,7 +561,7 @@ label v15s45:
             scene v15s45_7j
             with dissolve
 
-            cl "Stop yelling at me."
+            cl "Stop yelling at me!"
 
             scene v15s45_7k
             with dissolve
@@ -592,7 +593,7 @@ label v15s45:
     scene v15s45_7e
     with dissolve
 
-    cl "She wouldn't be there for emotional support that's for sure."
+    cl "She wouldn't be there for emotional support, that's for sure."
 
     scene v15s45_7a
     with dissolve
@@ -782,7 +783,7 @@ label v15s45:
             scene v15s45_8
             with dissolve
 
-            am "Don't tell us how to do our job, blonde-y! This is our operation!"
+            am "Don't tell us how to do our job, blondie! This is our operation!"
 
         "Use your logic" if detective == "professional":
             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -969,7 +970,7 @@ label v15s45:
     scene v15s45_9d
     with dissolve
 
-    am "Right? I might do this more often, for missing dogs and things like that?"
+    am "Right? I might do this more often, for missing dogs and things like that..."
 
     scene v15s45_9c
     with dissolve
