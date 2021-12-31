@@ -192,7 +192,7 @@ init python:
     Achievement("honey_bear", "Lick Ms. Rose's pancakes") #s15
     Achievement("horn_dog", "Peek on Autumn") #s4
 
-    Achievement("just_one_more_thing", "Find all the clues and crack the case") #s46??
+    Achievement("just_one_more_thing", "Find all the clues and crack the case") #s46
     Achievement("karen", "Where is your manager?!") #s24
     Achievement("mmmm_donut", "Eat the donut") #s13
 
