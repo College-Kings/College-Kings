@@ -19,13 +19,6 @@ screen v15s18a_room():
     #     action NullAction()
     #     pos (774, 67)
 
-    # Chris
-    # imagebutton:
-    #     idle Transform("#0000", size=(156, 143))
-    #     hover image_path + "v15s18a_room_hover_chris.webp"
-    #     action NullAction()
-    #     pos (1013, 317)
-
     # Imre
     # imagebutton:
     #     idle Transform("#00ff0080", size=(253, 429))
@@ -44,9 +37,16 @@ screen v15s18a_room():
             hover image_path + "v15s18a_room_hover_amber2.webp"
             action Jump("v15s18a_ChrisAmber")
             pos (754, 44)
+
+        # Chris
+        imagebutton:
+            idle Transform("#0000", size=(296, 468))
+            hover image_path + "v15s18a_room_hover_chris.webp"
+            action Jump("v15s18a_ChrisAmber")
+            pos (1013, 50)
     
     else:
-        #Amber without Chris
+        # Amber without Chris
         add image_path + "v15s18a_room_2.webp"
         
         imagebutton:
@@ -56,16 +56,16 @@ screen v15s18a_room():
             pos (700, 44)
 
     imagebutton:
-        idle Transform("#0000", size=(1330, 180))
-        hover image_path + "bottom.webp"
-        action NullAction()
-        pos (325, 900)
-        
-    imagebutton:
         idle Transform("#0000", size=(140,1080))
         hover image_path + "left.webp"
         action Show("v15s18a_livingroom")
         pos (0, 0)
+
+    imagebutton:
+        idle Transform("#0000", size=(140,1080))
+        hover image_path + "right.webp"
+        action Show("v15s18a_kitchen")
+        pos (1780, 0)
 
 screen v15s18a_livingroom():
     tag free_roam
@@ -101,8 +101,16 @@ screen v15s18a_livingroom():
             action Jump("v15s18a_ImreLauren")
             pos (312, 340)
 
+    else:
+        # Lauren
+        imagebutton:
+            idle Transform("#0000", size=(608, 507))
+            hover image_path + "v15s18a_livingroom_hover_lauren.webp"
+            action Show("endFreeRoamConfirm", continueLabel="v15s18b")
+            pos (312, 340)
+
     # Pumpkin
-    if not "pumpkin" in freeroam13:
+    if v15s18_pumpkin < 5:
         imagebutton:
             idle Transform("#0000", size=(156, 143))
             hover image_path + "v15s18a_livingroom_hover_pumpkin.webp"
@@ -115,48 +123,29 @@ screen v15s18a_livingroom():
         action Show("v15s18a_room")
         pos (1780, 0)
 
-
-screen v15s18a_bathroom():
-    tag free_roam
-
-    default image_path = "images/v15/Scene 18a/Free Roam Screens/bathroom/"
-
-    # Backgrounds
-    add image_path + "v15s18a_bathroom_1.webp"
-    add image_path + "v15s18a_bathroom_2.webp"
-    add image_path + "v15s18a_bathroom_3.webp"
-
-    # Door
     imagebutton:
-        idle Transform("#0000", size=(560, 1080))
-        hover image_path + "v15s18a_bathroom_hover_door.webp"
-        action NullAction()
-        pos (1047, 0)
-
-    # Riley
-    imagebutton:
-        idle Transform("#0000", size=(239, 610))
-        hover image_path + "v15s18a_bathroom_hover_riley.webp"
-        action NullAction()
-        pos (1042, 128)
-
-    # Ryan
-    imagebutton:
-        idle Transform("#0000", size=(418, 467))
-        hover image_path + "v15s18a_bathroom_hover_ryan.webp"
-        action NullAction()
-        pos (749, 525)
-
+        idle Transform("#0000", size=(1330, 180))
+        hover image_path + "bottom.webp"
+        action Show("v15s18a_bar")
+        pos (325, 900)
 
 screen v15s18a_bar():
     tag free_roam
 
+    # Backgrounds
+    # add image_path + "v15s18a_bar_2.webp"
+    # add image_path + "v15s18a_bar_3.webp"
+
+    # Autumn
+    # imagebutton:
+    #     idle Transform("#0000", size=(245, 369))
+    #     hover image_path + "v15s18a_bar_hover_autumn.webp"
+    #     action NullAction()
+    #     pos (873, 28)
+
     default image_path = "images/v15/Scene 18a/Free Roam Screens/bar/"
 
-    # Backgrounds
     add image_path + "v15s18a_bar_1.webp"
-    add image_path + "v15s18a_bar_2.webp"
-    add image_path + "v15s18a_bar_3.webp"
 
     # Aubrey
     imagebutton:
@@ -165,66 +154,57 @@ screen v15s18a_bar():
         action NullAction()
         pos (290, 119)
 
-    # Autumn
     imagebutton:
-        idle Transform("#0000", size=(245, 369))
-        hover image_path + "v15s18a_bar_hover_autumn.webp"
-        action NullAction()
-        pos (873, 28)
-
+        idle Transform("#0000", size=(1330, 180))
+        hover image_path + "bottom.webp"
+        action Show("v15s18a_livingroom")
+        pos (325, 900)
 
 screen v15s18a_kitchen():
     tag free_roam
 
+    # Backgrounds
+    # add image_path + "v15s18a_kitchen_2.webp"
+
     default image_path = "images/v15/Scene 18a/Free Roam Screens/kitchen/"
 
-    # Backgrounds
     add image_path + "v15s18a_kitchen_1.webp"
-    add image_path + "v15s18a_kitchen_2.webp"
 
     # Fridge
-    imagebutton:
-        idle Transform("#0000", size=(735, 1080))
-        hover image_path + "v15s18a_kitchen_hover_fridge.webp"
-        action NullAction()
-        pos (1167, 0)
+    if not "photo" in freeroam13:
+        imagebutton:
+            idle Transform("#0000", size=(735, 1080))
+            hover image_path + "v15s18a_kitchen_hover_fridge.webp"
+            action Jump("v15s18a_AutumnLaurenPhoto")
+            pos (1167, 0)
 
     # Riley
     imagebutton:
         idle Transform("#0000", size=(305, 1056))
         hover image_path + "v15s18a_kitchen_hover_riley.webp"
-        action NullAction()
+        if not "riley" in freeroam13:
+            action Jump("v15s18a_Riley")
+        else:
+            action Call("freeRoamSpokenToo", backgroundImg="v15s18a_kitchen_1", returnScreen="v15s18a_kitchen")
         pos (554, 12)
+    
+    imagebutton:
+        idle Transform("#0000", size=(140,1080))
+        hover image_path + "left.webp"
+        action Show("v15s18a_room")
+        pos (0, 0)
 
-screen v15s18a_upstairs():
+    imagebutton:
+        idle Transform("#0000", size=(1330, 180))
+        hover image_path + "bottom.webp"
+        action Show("v15s18a_upstairsroom")
+        pos (325, 900)
+
+screen v15s18a_upstairsroom():
     tag free_roam
 
-    default image_path = "images/v15/Scene 18a/Free Roam Screens/upstairs/"
-
     # Backgrounds
-    add image_path + "v15s18a_upstairsroom_1.webp"
-    add image_path + "v15s18a_upstairsroom_2.webp"
-
-    # Door 1
-    imagebutton:
-        idle Transform("#0000", size=(391, 1067))
-        hover image_path + "v15s18a_upstairsroom_hover_door1.webp"
-        action NullAction()
-        pos (247, 13)
-
-    # Deer Statue
-    imagebutton:
-        idle Transform("#0000", size=(149, 615))
-        hover image_path + "v15s18a_upstairsroom_hover_deer_statue.webp"
-        action NullAction()
-        pos (818, 332)
-
-    # Door 2
-    imagebutton:
-        idle Transform("#0000", size=(283, 600))
-        hover image_path + "v15s18a_upstairsroom_hover_door2.webp"
-        action NullAction()
-        pos (1008, 203)
+    # add image_path + "v15s18a_upstairsroom_2.webp"
 
     # Aubrey (with Imre)
     # imagebutton:
@@ -239,3 +219,72 @@ screen v15s18a_upstairs():
     #     hover image_path + "v15s18a_upstairsroom_hover_chris.webp"
     #     action NullAction()
     #     pos (1013, 317)
+
+    default image_path = "images/v15/Scene 18a/Free Roam Screens/upstairsroom/"
+
+    add image_path + "v15s18a_upstairsroom_1.webp"
+
+    # Door 1, Bathroom, Ryan
+    imagebutton:
+        idle Transform("#0000", size=(391, 1067))
+        hover image_path + "v15s18a_upstairsroom_hover_door1.webp"
+        if not "ryan" in freeroam13:
+            action Jump("v15s18a_Ryan")
+        else:
+            action Call("freeRoamSpokenToo", backgroundImg="v15s18a_upstairsroom_1", returnScreen="v15s18a_upstairsroom")        
+        pos (247, 13)
+
+    # Door 2
+    imagebutton:
+        idle Transform("#0000", size=(283, 600))
+        hover image_path + "v15s18a_upstairsroom_hover_door2.webp"
+        if not "autumn_penelope" in freeroam13:
+            action Jump("v15s18a_AutumPenelope")
+        else:
+            action Call("freeRoamSpokenToo", backgroundImg="v15s18a_upstairsroom_1", returnScreen="v15s18a_upstairsroom")
+        pos (1008, 203)
+
+    # Deer Statue
+    if not "deer" in freeroam13:
+        imagebutton:
+            idle Transform("#0000", size=(149, 615))
+            hover image_path + "v15s18a_upstairsroom_hover_deer_statue.webp"
+            action Jump ("v15s18a_BronzeDeer")
+            pos (818, 332)
+
+    imagebutton:
+        idle Transform("#0000", size=(1330, 180))
+        hover image_path + "bottom.webp"
+        action Show("v15s18a_kitchen")
+        pos (325, 900)
+
+# screen v15s18a_bathroom():
+    # tag free_roam
+
+    # default image_path = "images/v15/Scene 18a/Free Roam Screens/bathroom/"
+
+    # # Backgrounds
+    # add image_path + "v15s18a_bathroom_1.webp"
+    # add image_path + "v15s18a_bathroom_2.webp"
+    # add image_path + "v15s18a_bathroom_3.webp"
+
+    # # Door
+    # imagebutton:
+        # idle Transform("#0000", size=(560, 1080))
+        # hover image_path + "v15s18a_bathroom_hover_door.webp"
+        # action NullAction()
+        # pos (1047, 0)
+
+    # # Riley
+    # imagebutton:
+        # idle Transform("#0000", size=(239, 610))
+        # hover image_path + "v15s18a_bathroom_hover_riley.webp"
+        # action NullAction()
+        # pos (1042, 128)
+
+    # # Ryan
+    # imagebutton:
+        # idle Transform("#0000", size=(418, 467))
+        # hover image_path + "v15s18a_bathroom_hover_ryan.webp"
+        # action NullAction()
+        # pos (749, 525)
