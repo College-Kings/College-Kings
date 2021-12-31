@@ -142,8 +142,10 @@ label v15s45:
         "Threaten Chloe" if detective == "loose_cannon":
             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.TROUBLEMAKER)
+
             elif nora.relationship.value >= Relationship.FWB.value: 
                 $ add_point(KCT.BOYFRIEND)
+
             else:
                 $ add_point(KCT.BRO)
 
@@ -244,8 +246,10 @@ label v15s45:
         "Speak your wisdom" if detective == "professional":
             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.BOYFRIEND)
+
             elif nora.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.BRO)
+
             else:
                 $ add_point(KCT.TROUBLEMAKER)
                 
@@ -257,8 +261,10 @@ label v15s45:
         "Analyze Chloe" if detective == "psychologist":
             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.BRO)
+
             elif nora.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.TROUBLEMAKER)
+
             else:
                 $ add_point(KCT.BOYFRIEND)
                 
