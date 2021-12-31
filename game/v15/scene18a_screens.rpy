@@ -175,3 +175,44 @@ screen v15s18a_room():
 
 screen v15s18a_upstairs():
     tag free_roam
+
+    default image_path = "images/v15/Scene 18a/Free Roam Screens/upstairs/"
+
+    # Backgrounds
+    add image_path + "v15s18a_upstairsroom_1.webp"
+    add image_path + "v15s18a_upstairsroom_2.webp"
+
+    # Door 1
+    imagebutton:
+        idle Transform("#0000", size=(391, 1067))
+        hover image_path + "v15s18a_upstairsroom_hover_door1.webp"
+        action NullAction()
+        pos (247, 13)
+
+    # Deer Statue
+    imagebutton:
+        idle Transform("#0000", size=(149, 615))
+        hover image_path + "v15s18a_upstairsroom_hover_deer_statue.webp"
+        action NullAction()
+        pos (818, 332)
+
+    # Door 2
+    imagebutton:
+        idle Transform("#0000", size=(283, 600))
+        hover image_path + "v15s18a_upstairsroom_hover_door2.webp"
+        action NullAction()
+        pos (1008, 203)
+
+    # Aubrey (with Imre)
+    # imagebutton:
+    #     idle Transform("#00ff0080", size=(315, 664))
+    #     hover image_path + "v15s18a_upstairsroom_hover_aubrey2.webp"
+    #     action NullAction()
+    #     pos (774, 67)
+
+    # Chris
+    # imagebutton:
+    #     idle Transform("#0000", size=(156, 143))
+    #     hover image_path + "v15s18a_upstairsroom_hover_chris.webp"
+    #     action NullAction()
+    #     pos (1013, 317)
