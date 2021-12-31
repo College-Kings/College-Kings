@@ -119,6 +119,8 @@ label v15s48b:
         scene v15s48b_8 # TPP. MC dressed and walking out the front door, Nora behind him watching him leave as her naked body is wrapped in a blanket, both slight smile, mouth closed.
         with dissolve
 
+        pause 0.75
+
     else:
         scene v15s48b_9 # TPP. Show Nora trying to open a bottle of wine in the kitchen.
         with fade
@@ -220,5 +222,7 @@ label v15s48b:
 
     scene v15s48b_16 # TPP. MC getting in the cab
     with dissolve
+
+    pause 0.75
 
     jump v15s49

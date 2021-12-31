@@ -1937,6 +1937,8 @@ label v15s18a_Riley:
             scene v15s18ariley_12a # TPP. MC putting his costume back on, slight smile, mouth closed.
             with dissolve
 
+            pause 0
+
     call screen v15s18a_kitchen
 
 # Ground Floor
@@ -2381,6 +2383,8 @@ label v15s18a_ChrisAmber:
                     scene v15s18aamber_14 # TPP. Show Mc walking back inside the house, slight smile, mouth closed.
                     with dissolve
 
+                    pause 0
+
                 else:
                     call screen kct_popup(required_kct="popular")
                     
@@ -2439,6 +2443,8 @@ label v15s18a_Pumpkin:
 
     scene v15s18apumpkin_1 # FPP. MC looking on a pumpkin on the table near the living room couch, The pumpkin has a cat-face carved into it.
     #with dissolve
+
+    pause 0
 
     if v15s18_pumpkin == 5:
         hide screen v15_imre_checklist_icon

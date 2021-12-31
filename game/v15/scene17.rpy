@@ -256,10 +256,10 @@ label v15s17:
 
     pause 0.75
 
-    scene v15s17_8b
-    with dissolve
+if v15_autumn_lunchbreak:
+        scene v15s17_8b
+        with dissolve
 
-    if v15_autumn_lunchbreak:
         u "Autumn told me about a little toy horse... She said it would be a good gift if I could find it."
 
         scene v15s17_8c
@@ -283,6 +283,9 @@ label v15s17:
         clerk "Ah, very good! Let's see what horses we have in stock, shall we?"
 
     else:
+        scene v15s17_8b
+        with dissolve
+
         u "Do you have anything else that may make a good gift?"
 
         scene v15s17_8c

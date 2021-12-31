@@ -98,6 +98,7 @@ label v15s31:
         scene v15s31_2
         with dissolve
         hide screen fantasyOverlay 
+        pause 0
     
     elif hcGirl == "lauren":
         u "(And now I'm getting homecoming flashbacks...)"
@@ -121,6 +122,7 @@ label v15s31:
         scene v15s31_2
         with dissolve
         hide screen fantasyOverlay 
+        pause 0
 
     elif hcGirl == "emily":
         u "(And now I'm getting homecoming flashbacks...)"
@@ -140,6 +142,7 @@ label v15s31:
         scene v15s31_2
         with dissolve
         hide screen fantasyOverlay 
+        pause 0
 
     elif hcGirl == "riley":
         u "(And now I'm getting homecoming flashbacks...)"
@@ -157,6 +160,7 @@ label v15s31:
         scene v15s31_2
         with dissolve
         hide screen fantasyOverlay 
+        pause 0
 
     elif hcGirl == "penelope":
         u "(And now I'm getting homecoming flashbacks...)"
@@ -174,6 +178,7 @@ label v15s31:
         scene v15s31_2
         with dissolve
         hide screen fantasyOverlay 
+        pause 0
 
     u "(Alright, time to meet Aubrey.)"
 

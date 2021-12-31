@@ -359,6 +359,8 @@ label v15s33:
             scene v15s33_17g # FPP. MC looking at Naomi, Naomi looking at MC, Naomi laughing.
             with dissolve
 
+            pause 0.75
+
         "Pretend to take it":
             $ add_point(KCT.BOYFRIEND)
             scene v15s33_18
@@ -846,6 +848,8 @@ label v15s33:
         scene v15s33_41 # TPP. MC kissing Aubrey on the Cheek. Aubrey smiling and blushing, mouth closed.
         with dissolve
 
+        pause 0.75
+
     else:
         scene v15s33_39b
         with dissolve
@@ -1044,6 +1048,8 @@ label v15s33:
             scene v15s33_46a # FPP. Show Aubrey's uncle putting a piece of cheese and cracker in his mouth.
             with dissolve
 
+            pause 0.75
+
         "Don't eat it":
             $ add_point(KCT.TROUBLEMAKER)
             u "(Not a fucking chance.)"
@@ -1086,6 +1092,8 @@ label v15s33:
 
             scene v15s33_46a
             with dissolve
+
+            pause 0.75
 
     if v15s33_cheese:
         scene v15s33_39b
@@ -1714,6 +1722,7 @@ label v15s33:
 
             scene v15naobj # Ignore as anim
             with dissolve
+
             pause 0.75
 
             na "Mmmm..."
@@ -1728,6 +1737,7 @@ label v15s33:
 
             scene v15naobjf # Ignore as anim
             with dissolve
+
             pause 0.75 
 
             u "(But it feels so... Right... Ha.)"
@@ -1740,6 +1750,7 @@ label v15s33:
 
             scene v15naohj # Ignore as anim
             with dissolve
+
             pause 0.75 
 
             na "You like it when supermodels suck on your dick, huh? *Giggles*"
@@ -1753,6 +1764,7 @@ label v15s33:
 
             scene v15naobjf
             with dissolve
+
             pause 0.75
 
             u "You're so fucking hot, Naomi-"
@@ -1989,6 +2001,8 @@ label v15s33:
             scene v15s33_50a
             with fade
 
+            pause 0.75
+
             scene v15s33_57b # FPP. Aubrey gone, MC looking at the Empty seat Aubrey was at.
             with dissolve
 
@@ -2057,6 +2071,8 @@ label v15s33:
                 scene v15s33_82 # TPP. Close up of Aubrey looking at MC and Naomi sitting next to each other at the wedding, Aubrey looks miserable and sad, mouth closed.
                 with dissolve
 
+                pause 0.75
+
     else:
         scene v15s33_73 # TPP. MC and Aubrey sitting next to each other at the wedding ceremony, Naomi seated far away from them, Aubrey and MC slight smile, mouth closed.
         with fade
@@ -2101,6 +2117,8 @@ label v15s33:
 
                 scene v15s33_75a # TPP. MC and Aubrey laughing.
                 with dissolve
+
+                pause 0.75
 
             "It'll be us":
                 u "One day it'll be us."
@@ -2161,6 +2179,8 @@ label v15s33:
                     scene v15s33_79a # TPP. Naomi smiling in their direction, mouth closed.
                     with dissolve
 
+                    pause 0.75
+
                     if v15s33_cheese:
                         scene v15s33_80 # TPP. Close up of Aubrey's uncle, with one hand in the air and one hand on his beer as he looks at MC and Aubrey, slight smile, mouth open.
                         with dissolve
@@ -2170,6 +2190,8 @@ label v15s33:
                     else:
                         scene v15s33_80a # TPP. Close up of Aubrey's uncle no hands in the air looking in MC and Aubrey's direction slight smile, mouth closed.
                         with dissolve
+
+                        pause 0.75
 
                 else:
                     scene v15s33_74a
@@ -2377,6 +2399,8 @@ label v15s33:
             scene v15s33_97 # TPP. Show Aubrey walking away from eveyone, Aubrey sad, mouth closed.
             with dissolve
 
+            pause 0.75
+
         "Take the photo":
             $ v15s33_take_photo = True
 
@@ -2404,13 +2428,13 @@ label v15s33:
             scene v15s33_98 # TPP. Aubrey and MC standing with her parents after the ceremony, Aubrey handing MC her dad's phone.
             with dissolve
 
-            if aubrey.relationship.value >= Relationship.TAMED.value:
-                pause 0.75
+            pause 0.75
 
+            if aubrey.relationship.value >= Relationship.TAMED.value:
                 scene v15s33_98a # TPP. Aubrey kissing MC's cheek.
                 with dissolve
 
-            pause 0.75 
+                pause 0.75 
 
             scene v15s33_96a # TPP. Aubrey, her parents, and Naomi all standing and posing together smiling for a photo.
             with dissolve
@@ -2436,6 +2460,8 @@ label v15s33:
 
             scene v15s33_97
             with dissolve
+
+            pause 0.75
 
     scene v15s33_101 # TPP. MC sitting down next to Aubrey who is sitting on a bench overlooking the distant lake.
     with fade
@@ -2484,6 +2510,8 @@ label v15s33:
 
                 scene v15s33_103 # TPP. MC walking away from Aubrey, MC neutral face, mouth closed, Aubrey sad looking at the ground, mouth closed.
                 with dissolve
+
+                pause 0.75
 
                 jump v15s34
 
@@ -2606,6 +2634,8 @@ label v15s33:
                 scene v15s33_102f # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, rolling her eyes.
                 with dissolve
 
+                pause 0.75
+
             "Monkey joke":
                 scene v15s33_102e
                 with dissolve
@@ -2651,9 +2681,12 @@ label v15s33:
             scene v15s33_106 # TPP. Shot from behind the bench. Looking at Aubrey resting her head on MC's shoulder, MC with his arm wrapped around Aubrey, They are looking out at the lake view.
             with dissolve
 
+            pause 0.75
+
         elif aubrey.relationship.value < Relationship.FWB.value:
             scene v15s33_102h
             with dissolve
+
             u "It's what friends are for."
 
         jump v15s34

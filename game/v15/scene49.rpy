@@ -310,4 +310,6 @@ label v15s49:
     scene v15s49_18 # TPP. A nice cinematic kind of shot of MC's fist clenched and the rain dripping off of it.
     with dissolve
 
+    pause 0.75
+
     jump v16s1

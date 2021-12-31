@@ -1624,12 +1624,12 @@ label v15s18c_autumn_amber:
 
     aut "So, what have you been up to all night?"
 
-    scene v15s18c_auam_5
-    with dissolve
-
     if not v15s18a_showlist_penelope_autumn:
         menu:
             "Mention the list":
+                scene v15s18c_auam_5
+                with dissolve
+
                 u "Well, you might have already heard, but I have this list of challenges that I've been working on."
 
                 scene v15s18c_auam_5a
@@ -1645,6 +1645,9 @@ label v15s18c_autumn_amber:
                 u "Well, I do have an easy one left, if you'd like to help me out?"
         
             "Don't mention the list":
+                scene v15s18c_auam_5
+                with dissolve
+
                 u "(Eh, I don't want to get Autumn involved in this...)"
 
                 u "Honestly? I've just been making my rounds and trying to stay caught up with everyone, haha."

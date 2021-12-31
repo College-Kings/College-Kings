@@ -244,9 +244,6 @@ label v15s20:
 
     cl "Do you think we should take this cheat sheet with us? Or would that ruin everything?"
 
-    scene v15s20_5
-    with dissolve
-
     if v15_chloe_mrleesupport:
         show screen v15_teacher_brief("mr_lee")
     else:
@@ -255,6 +252,10 @@ label v15s20:
     menu:
         "Take the notes":
             $ v15_took_notes = True
+
+            scene v15s20_5
+            with dissolve
+
             u "Yeah, we better take them. As long as we aren't staring at it the whole time, I think it's helpful to refer to."
 
             scene v15s20_5a
@@ -269,6 +270,10 @@ label v15s20:
 
         "Don't take the notes":
             hide screen v15_teacher_brief_icon
+
+            scene v15s20_5
+            with dissolve
+
             u "Nah, I don't want to risk pissing anyone off. Besides, I remember it all anyway. You can put them away."
 
             scene v15s20_5a
