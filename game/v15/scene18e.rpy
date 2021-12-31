@@ -384,11 +384,7 @@ label v15s18e_end:
     
     pause 0.75
 
-    la "Ohhh..."
-
     la "*Whispers* Fuck..."
-
-    u "Mmmm..."
 
     la "*Gasps* My God, [name]..."
 
@@ -405,10 +401,6 @@ label v15s18e_end:
         la "It's even more amazing than our first time..."
 
     la "*Panting* Mmm, fuuuuck..."
-
-    la "Do you like the taste of my pussy?"
-
-    u "*Muffled* Mhmm, it tastes amazing."
 
     la "*Moans* Stop."
 

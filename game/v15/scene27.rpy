@@ -199,7 +199,7 @@ label v15s27: # -MC walks out of the Chicks house-
 
     u "Haha, okay, okay. I guess I am!"
 
-    u "(I guess I can always rest later.)"
+    u "(I can always rest later.)"
 
     scene v15s27_4h
     with dissolve

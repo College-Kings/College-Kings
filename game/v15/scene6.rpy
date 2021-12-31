@@ -19,7 +19,7 @@ label v15s6:
         with dissolve
 
         u "(There's Chloe. Oh shit- Is she crying?)"
-        u "(What happened this time... *Sighs*)"
+        u "(Oh no, I think I know what this is about... *Sighs*)"
 
         scene v15s7_1 # FPP At entrance to library, Chloe is obviously crying and doing a bad job of hiding it with her hand
         with dissolve
