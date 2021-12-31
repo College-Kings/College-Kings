@@ -149,26 +149,53 @@ init 1:
 
 screen path_builder_alert():
     modal True
+    style_prefix "path_builder_alert"
 
     default image_path = "main_menu/path_builder/images/"
 
     add "darker_80"
 
-    add image_path + "alert_background.png"
+    add image_path + "alert_background.webp" align (0.5, 0.5)
 
-    text "Warning: The path builder contains spoilers for the story of the game. Are you sure you want to continue?":
-        style "endfree"
-        xalign 0.5
+    fixed:
+        xysize (742, 356)
+        pos (587, 364)
 
-    hbox:
-        align (0.5, 1.0)
-        spacing 200
+        text "THE PATH BUILDER CONTAINS SPOILER FOR THE STORY OF THE GAME. ARE YOU SURE YOU WANT TO CONTINUE?":
+            xsize 512
+            xalign 0.5
+            ypos 86
 
-        textbutton "Yes":
-            action [Hide("path_builder_alert"), Show("path_builder")]
 
-        textbutton "No":
-            action Hide("path_builder_alert")
+        hbox:
+            pos (217, 228)
+            spacing 5
+
+            fixed:
+                xysize (132, 61)
+
+                imagebutton:
+                    idle "path_builder_button_idle"
+                    hover "path_builder_button_hover"
+                    action [Hide("path_builder_alert"), Show("path_builder")]
+                text "YES" align (0.5, 0.5)
+
+            fixed:
+                xysize (132, 61)
+
+                imagebutton:
+                    idle "path_builder_button_idle"
+                    hover "path_builder_button_hover"
+                    action Hide("path_builder_alert")
+                text "NO" align (0.5, 0.5)
+
+
+style path_builder_alert_text is text:
+    font "fonts/Olympus Mount.ttf"
+    size 30
+    text_align 0.5
+    line_spacing 5
+    yoffset 9
 
 
 screen path_builder_base(header=""):
