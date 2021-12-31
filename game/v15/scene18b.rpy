@@ -5,7 +5,7 @@
 
 label v15s18b:
     scene v15s18b_1 # TPP. Show Lauren sitting on the couch surrounded by gifts, slight smile, mouth open.
-    with dissolve
+    #with dissolve
     
     la "Gather around, everyone! I'm going to open some of these gifts."
 

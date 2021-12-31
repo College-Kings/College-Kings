@@ -267,7 +267,7 @@ label v15s44_continue:
     scene v15s44_8e
     with dissolve
 
-    pe "'Was so nice to see my baby niece today... She never stays for long, but it's always perfect <3 See you soon, Nora Bora!'"
+    pe "\"Was so nice to see my baby niece today... She never stays for long, but it's always perfect <3 See you soon, Nora Bora!\""
     $ v15_nora_clues.add("visited_aunt")
     $ v15_nora_locations.add("aunt")
 

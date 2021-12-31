@@ -530,8 +530,6 @@ label v15s18a_Ryan:
 
     u "(Happy Halloween, Ryan...)"
 
-    pause 0.75
-
     call screen v15s18a_upstairsroom
 
 # Upstairs
@@ -544,6 +542,8 @@ label v15s18a_AutumPenelope:
     #with dissolve
 
     u "(I think there's people in here...?)"
+
+    play sound "sounds/dooropen.mp3" volume 0.5
 
     scene v15s18apen_2 # FPP. Show MC opening the door slightly in and peeking through the crack to see Penelope and Autumn, Penelope is sitting on Autumn's computer chair with her legs crossed, Autumn standing by her, both slight smile, mouth closed.
     with dissolve
@@ -1070,8 +1070,6 @@ label v15s18a_AutumPenelope:
 
         u "(Maybe we can bring up the list later with Autumn or Penelope.)"
 
-    pause 0.75
-
     call screen v15s18a_upstairsroom
 
 # Ground floor
@@ -1365,7 +1363,7 @@ label v15s18a_Riley:
     scene v15s18ariley_3 # FPP. MC looking at the arrangement of the food.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18ariley_2
     with dissolve
@@ -1385,7 +1383,7 @@ label v15s18a_Riley:
     scene v15s18ariley_2a
     with dissolve
 
-    ri "Haha, what do you mean? I'm not worried I just-"
+    ri "Haha, what do you mean? I'm not worried, I just-"
 
     scene v15s18ariley_2
     with dissolve
@@ -1439,11 +1437,12 @@ label v15s18a_Riley:
         with dissolve
 
         u "Because we hooked up?"
+
     else:
         scene v15s18ariley_2c
         with dissolve
 
-        ri "Aubrey and I don't hangout that much anymore."
+        ri "Aubrey and I don't hang out that much anymore."
 
         scene v15s18ariley_2d
         with dissolve
@@ -1544,12 +1543,12 @@ label v15s18a_Riley:
             scene v15s18ariley_4 # TPP. MC with his hand in the air, swaying his hips to the left, Riley looking at MC, Riley slight smile, mouth closed, MC slight smile, mouth closed.
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v15s18ariley_4a # TPP. MC with his hand in the air, swaying his hips to the right, Riley looking at MC, Riley slight smile, mouth closed, MC slight smile, mouth closed.
             with dissolve
 
-            pause 0.75
+            pause 1
 
             scene v15s18ariley_2e
             with dissolve
@@ -1581,6 +1580,11 @@ label v15s18a_Riley:
 
             ri "*Laughs*"
 
+            scene v15s18ariley_2f
+            with dissolve
+
+            u "Happened like this..."
+
     scene v15s18ariley_5 # TPP. Show the Challenge list mid fall out of MC's costume and Riley looking at it, Riley slightly confused, mouth closed, MC slight smile, mouth closed.
     with dissolve
 
@@ -1594,7 +1598,7 @@ label v15s18a_Riley:
     scene v15s18ariley_2j # FPP. MC looking at Riley, Riley looking at the Challenge list in her hand, Riley slightly confused, mouth open.
     with dissolve
 
-    ri "What's this?"
+    ri "Oh my, what's this?"
 
     scene v15s18ariley_2k # FPP. MC looking at Riley, Riley looking at the Challenge list in her hand, Riley smirking, mouth closed.
     with dissolve
@@ -1933,9 +1937,7 @@ label v15s18a_Riley:
             scene v15s18ariley_12a # TPP. MC putting his costume back on, slight smile, mouth closed.
             with dissolve
 
-    pause 0.75
-
-    call screen v15s18a_upstairsroom
+    call screen v15s18a_kitchen
 
 # Ground Floor
 # location 6- Kitchen counter stools
@@ -2394,8 +2396,6 @@ label v15s18a_ChrisAmber:
 
                     am "Good luck!"
 
-        pause 0.75
-
         call screen v15s18a_upstairsroom
 
 # Upstairs
@@ -2409,8 +2409,6 @@ label v15s18a_BronzeDeer:
 
     u "(That's an impressive deer... Looks expensive too. I wonder if it's been here since the beginning of the sorority?)"
 
-    pause 0.75
-
     call screen v15s18a_upstairsroom
 
 # Ground Floor
@@ -2423,14 +2421,12 @@ label v15s18a_AutumnLaurenPhoto:
     scene v15s18aphoto_1 # FPP. MC looking at all the magnets on the fridge
     #with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18aphoto_2 # FPP. Close in view of the magnet on the fridge that is a picture of Autumn and Lauren, The magnet says "Best Friends Forever <3".
     with dissolve
 
     u "(Aww, haha. \"Best friends forever\". They're super close, aren't they...)"
-
-    pause 0.75
 
     call screen v15s18a_kitchen
 
@@ -2439,11 +2435,25 @@ label v15s18a_AutumnLaurenPhoto:
 # *Clicking on pumpkin*
 label v15s18a_Pumpkin:
     $ freeroam13.add("pumpkin")
+    $ v15s18_pumpkin += 1
 
     scene v15s18apumpkin_1 # FPP. MC looking on a pumpkin on the table near the living room couch, The pumpkin has a cat-face carved into it.
     #with dissolve
 
-    u "(Haha, it looks too cute for a Halloween pumpkin. I'm guessing Lauren made this one.)"
+    if v15s18_pumpkin == 5:
+        hide screen v15_imre_checklist_icon
+        $ grant_achievement("pumpkin_season")
+        u "(Okay [name], focus. Let's leave this pumpkin and check the rest of the party.)"
+        show screen v15_imre_checklist_icon
+
+    elif v15s18_pumpkin == 4:
+        u "(I don't know why I keep checking that pumpkin, it seems to have a strange influence on me.)"
+
+    elif v15s18_pumpkin == 3:
+        u "(Yep, it's still the same pumpkin there.)"
+
+    else:
+        u "(Haha, it looks too cute for a Halloween pumpkin. I'm guessing Lauren made this one.)"
 
     call screen v15s18a_livingroom
 
