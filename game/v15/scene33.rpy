@@ -377,6 +377,7 @@ label v15s33:
             pause 0.75
 
             scene v15s33_17f
+            with dissolve
 
             u "Mmm... Delicious."
 
@@ -2250,7 +2251,8 @@ label v15s33:
     pause 0.75 
 
     scene v15s33_86a # TPP. Aubrey's Mom's hand now with a ring on her finger sliding a ring onto Aubrey's dad's finger.
-
+    with dissolve
+    
     wedoff "You may now kiss the bride... Again."
 
     scene v15s33_87 # TPP. Show Aubrey's Mom and Dad kissing.
