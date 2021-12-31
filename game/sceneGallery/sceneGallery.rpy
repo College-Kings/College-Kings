@@ -122,10 +122,10 @@ screen scene_gallery_spoiler():
             spacing 200
 
             textbutton "Yes":
-                action [Hide("spoiler"), ui.callsinnewcontext("sceneGalleryNameChange"), ShowMenu("scene_gallery")]
+                action [Hide("scene_gallery_spoiler"), ui.callsinnewcontext("sceneGalleryNameChange"), ShowMenu("scene_gallery")]
 
             textbutton "No":
-                action Hide("spoiler")
+                action Hide("scene_gallery_spoiler")
 
 
 screen scene_gallery():
@@ -154,7 +154,7 @@ screen scene_gallery():
         idle "images/backtransp.webp"
         hover "images/back.webp"
         pos (79, 933)
-        action Show("main_menu")
+        action ShowMenu("main_menu")
 
 
 label sceneGalleryNameChange:
