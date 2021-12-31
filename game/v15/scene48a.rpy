@@ -294,7 +294,7 @@ label v15s48a_boobs:
 
     call screen v15s48a_Nora
 
-label v15s48a_feet
+label v15s48a_feet:
     $ v15s48a_frfeet = True
 
     scene v15s48afe_1 # TPP. Close up of Nora's feet.
@@ -363,7 +363,7 @@ label v15s48a_feet
 
     call screen v15s48a_Nora
 
-label v15s48a_vagina
+label v15s48a_vagina:
     $ v15s48a_frvagina = True
 
     scene v15s48ava_1 # FPP. MC looking at Nora's vagina.
