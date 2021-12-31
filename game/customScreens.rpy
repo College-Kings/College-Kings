@@ -62,7 +62,7 @@ screen changeLanguage():
 
     textbutton _("Return"):
         align (0.99, 0.99)
-        action ShowMenu("preferences")
+        action ShowMenu("settings")
 
 
 screen realmode():
@@ -120,7 +120,7 @@ screen censoredPopup(continueLabel):
             imagebutton:
                 idle "gui/censoredPopup/censoredSettings.webp"
                 hover "gui/censoredPopup/censoredSettingsHover.webp"
-                action ShowMenu("preferences")
+                action ShowMenu("settings")
         else:
             imagebutton:
                 idle "gui/censoredPopup/censoredContinue.webp"

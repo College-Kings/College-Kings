@@ -3,6 +3,14 @@ image splashone = "images/splash1.webp"
 image splashtwo = "images/splash2.webp"
 image splashthree = "images/splash 3.webp"
 
+# GUI
+## Settings
+image settings_button_idle = Frame("gui/settings/button_idle.webp", 24, 6)
+image settings_button_selected = Frame("gui/settings/button_selected.webp", 24, 6)
+image settings_bar_left = Frame("gui/settings/bar_right.webp", 14, 5)
+image settings_bar_right = Frame("gui/settings/bar_right.webp", 14, 5)
+image settings_bar_thumb = Image("gui/settings/bar_thumb.webp")
+
 # Transitions
 image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm", loop=False)
 

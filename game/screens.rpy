@@ -315,13 +315,13 @@ screen quick_menu():
 
             if not realmode:
                 textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
+            textbutton _("History") action ShowMenu("history")
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle") text_selected_color "#FFD166"
-            textbutton _("Save") action ShowMenu('save')
+            textbutton _("Save") action ShowMenu("save")
             textbutton _("Q.Save") action QuickSave()
             textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("Prefs") action ShowMenu("settings")
 
     if config.developer:
         hbox:
@@ -359,63 +359,6 @@ style quick_button_text:
 ##
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
-
-screen navigation():
-
-    vbox:
-        style_prefix "navigation"
-
-        xpos gui.navigation_xpos
-        yalign 0.5
-
-        spacing gui.navigation_spacing
-
-        if main_menu:
-
-            textbutton _("Start") action Start()
-
-        else:
-
-            textbutton _("History") action ShowMenu("history")
-
-            textbutton _("Save") action ShowMenu("save")
-
-        textbutton _("Load") action ShowMenu("load")
-
-        textbutton _("Preferences") action ShowMenu("preferences")
-
-        if _in_replay:
-
-            textbutton _("End Replay") action EndReplay(confirm=True)
-
-        elif not main_menu:
-
-            textbutton _("Main Menu") action MainMenu()
-
-        textbutton _("About") action ShowMenu("about")
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
-
-        if renpy.variant("pc"):
-
-            ## The quit button is banned on iOS and unnecessary on Android and Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
-
-
-
-style navigation_button is gui_button
-style navigation_button_text is gui_button_text
-
-style navigation_button:
-    size_group "navigation"
-    properties gui.button_properties("navigation_button")
-
-style navigation_button_text:
-    properties gui.button_text_properties("navigation_button")
-    outlines [ (3, "#000000") ]
 
 
 ## Main Menu screen ############################################################
@@ -471,7 +414,7 @@ screen main_menu():
     # Load
     imagebutton:
         idle image_path + "load_idle.webp"
-        hover Transform(image_path + "load_hover.webp", pos=(-29, -31))
+        hover Transform(image_path + "load_hover.webp", pos=(-27, -31))
         action ShowMenu("load")
         pos (1096, 880)
 
@@ -487,7 +430,7 @@ screen main_menu():
     imagebutton:
         idle image_path + "settings_idle.webp"
         hover Transform(image_path + "settings_hover.webp", pos=(-35, -25))
-        action ShowMenu("preferences")
+        action ShowMenu("settings")
         pos (1439, 967)
 
     # QUIT
@@ -575,7 +518,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
         else:
             textbutton _("Save") action ShowMenu("save")
 
-        textbutton _("Settings") action ShowMenu("preferences")
+        textbutton _("Settings") action ShowMenu("settings")
 
         textbutton _("Menu") action MainMenu()
 
@@ -842,14 +785,160 @@ style slot_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
-screen preferences():
+screen settings():
     tag menu
+    style_prefix "settings"
 
     default image_path = "gui/settings/"
 
     add image_path + "background.png"
 
+    # Display
+    hbox:
+        pos (171, 278)
+        spacing 22
 
+        fixed:
+            xysize (339, 61)
+
+            imagebutton:
+                idle "settings_button_idle"
+                hover "settings_button_selected"
+                selected_idle "settings_button_selected"
+                action Preference("display", "window")
+            text "Window" align (0.5, 0.5)
+
+        fixed:
+            xysize (339, 61)
+
+            imagebutton:
+                idle "settings_button_idle"
+                hover "settings_button_selected"
+                selected_idle "settings_button_selected"
+                action Preference("display", "fullscreen")
+            text "Full Screen" align (0.5, 0.5)
+
+    # Skip
+    hbox:
+        pos (171, 452)
+        spacing 22
+
+        fixed:
+            xysize (339, 61)
+
+            imagebutton:
+                idle "settings_button_idle"
+                hover "settings_button_selected"
+                selected_idle "settings_button_selected"
+                action Preference("skip", "toggle")
+            text "Unseen Text" align (0.5, 0.5)
+
+        fixed:
+            xysize (339, 61)
+
+            imagebutton:
+                idle "settings_button_idle"
+                hover "settings_button_selected"
+                selected_idle "settings_button_selected"
+                action Preference("after choices", "toggle")
+            text "After Choices" align (0.5, 0.5)
+
+    # Other Settings
+    vbox:
+        pos (618, 663)
+        spacing 22
+
+        for variable in ("config_censored", "voice_acted", "showkct"):
+            hbox:
+                spacing 6
+
+                fixed:
+                    xysize (137, 61)
+
+                    imagebutton:
+                        idle "settings_button_idle"
+                        hover "settings_button_selected"
+                        selected_idle "settings_button_selected"
+                        action SetVariable(variable, True)
+                    text "On" align (0.5, 0.5)
+
+                fixed:
+                    xysize (137, 61)
+
+                    imagebutton:
+                        idle "settings_button_idle"
+                        hover "settings_button_selected"
+                        selected_idle "settings_button_selected"
+                        action SetVariable(variable, False)
+                    text "Off" align (0.5, 0.5)
+
+        # REAL LIFE MODE
+        hbox:
+            spacing 6
+
+            fixed:
+                xysize (137, 61)
+
+                imagebutton:
+                    idle "settings_button_idle"
+                    hover "settings_button_selected"
+                    selected_idle "settings_button_selected"
+                    selected realmode
+                    action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
+                text "On" align (0.5, 0.5)
+
+            fixed:
+                xysize (137, 61)
+
+                imagebutton:
+                    idle "settings_button_idle"
+                    hover "settings_button_selected"
+                    selected_idle "settings_button_selected"
+                    selected not realmode
+                    action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
+                text "Off" align (0.5, 0.5)
+
+    bar value Preference("text speed"):
+        pos (1022, 353)
+        xysize (725, 37)
+        left_bar "settings_bar_left"
+        right_bar "settings_bar_right"
+        thumb "settings_bar_thumb"
+        thumb_offset 20
+
+    bar value Preference("auto-forward time"):
+        pos (1022, 490)
+        xysize (725, 37)
+        left_bar "settings_bar_left"
+        right_bar "settings_bar_right"
+        thumb "settings_bar_thumb"
+        thumb_offset 20
+
+    bar value Preference("music volume"):
+        pos (1022, 791)
+        xysize (725, 37)
+        left_bar "settings_bar_left"
+        right_bar "settings_bar_right"
+        thumb "settings_bar_thumb"
+        thumb_offset 20
+
+    bar value Preference("sound volume"):
+        pos (1022, 928)
+        xysize (725, 37)
+        left_bar "settings_bar_left"
+        right_bar "settings_bar_right"
+        thumb "settings_bar_thumb"
+        thumb_offset 20
+
+    imagebutton:
+        idle "gui/settings/return_idle.webp"
+        action Return()
+        pos (129, 82)
+
+# style settings_imagebutton:
+#     idle "settings_button_idle"
+#     hover "settings_button_selected"
+#     selected_idle "settings_button_selected"
 
 
 style radio_label is pref_label
