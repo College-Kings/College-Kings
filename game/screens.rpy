@@ -791,7 +791,7 @@ screen settings():
 
     default image_path = "gui/settings/"
 
-    add image_path + "background.png"
+    add image_path + "background.webp"
 
     # Display
     hbox:
