@@ -163,3 +163,7 @@ define character.mactor = Character("Male Actor", who_color="#fecb2e", who_outli
 define character.factor = Character("Female Actor", who_color="#a815f2", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.barworker = Character("Barworker", who_color="#db6f1c", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.admin = Character("Booking Admin", who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.aumom = Character("aumom")
+define character.audad = Character("audad")
+define character.rick = Character("rick")
+define character.wedoff = Character("wedoff")
