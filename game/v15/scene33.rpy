@@ -2441,7 +2441,7 @@ label v15s33:
 
     u "Hey... Are you okay?"
 
-    if aubrey.relationship.value <= Relationship.MAD.value
+    if aubrey.relationship.value <= Relationship.MAD.value:
         scene v15s33_102a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey upset, mouth open.
         with dissolve
 
