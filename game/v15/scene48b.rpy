@@ -11,12 +11,12 @@ label v15s48b:
         pause 0.75
 
         scene v15s48b_2 # TPP. Nora flips over and faces MC, both slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         pause 0.75
 
         scene v15s48b_3 # FPP. MC and Nora laying in bed, Nora looking at MC, MC looking at Nora, Nora smirking, mouth open.
-        with dissolve 
+        with dissolve
 
         no "That was... incredible, [name]."
 
@@ -31,7 +31,7 @@ label v15s48b:
         no "*Laughs* Fine by me."
 
         scene v15s48b_4 # TPP. Show Nora grabbing her phone off the side of the bed, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         no "I guess it's time to switch this on."
 
@@ -58,7 +58,7 @@ label v15s48b:
         pause 0.75
 
         scene v15s48b_3a
-        with dissolve 
+        with dissolve
 
         u "Are you sure?"
 
@@ -100,7 +100,7 @@ label v15s48b:
         pause 0.75
 
         scene v15s48b_3a
-        with dissolve 
+        with dissolve
 
         u "I'd better go find my clothes first."
 
@@ -117,7 +117,7 @@ label v15s48b:
         play sound "sounds/dooropen.mp3"
        
         scene v15s48b_8 # TPP. MC dressed and walking out the front door, Nora behind him watching him leave as her naked body is wrapped in a blanket, both slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
     else:
         scene v15s48b_9 # TPP. Show Nora trying to open a bottle of wine in the kitchen.
@@ -146,7 +146,7 @@ label v15s48b:
         pause 0.75  
 
         scene v15s48b_11a # TPP. MC looking at his phone and tapping on it, mouth closed.
-        with dissolve 
+        with dissolve
 
         pause 0.75  
 
@@ -195,12 +195,12 @@ label v15s48b:
         pause 0.75  
 
         scene v15s48b_13 # TPP. Nora and MC hugging, both slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         pause 0.75  
 
         scene v15s48b_14 # FPP. Nora infront of MC, MC looking at Nora, Nora looking at MC, Nora slight smile, mouth open.
-        with dissolve 
+        with dissolve
 
         no "See you soon."
 
@@ -219,6 +219,6 @@ label v15s48b:
     play sound "sounds/cardooropen.mp3"
 
     scene v15s48b_16 # TPP. MC getting in the cab
-    with dissolve 
+    with dissolve
 
     jump v15s49

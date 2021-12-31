@@ -413,7 +413,7 @@ label v15s17:
             $ v15_lauren_gift = 4
             
             scene v15s17_11c # FPP. same as v15s17_11 Close up shot of the horse options
-            with dissolve            
+            with dissolve
 
             pause 0.75
 
