@@ -128,14 +128,14 @@ screen v15s18a_room():
     add image_path + "v15s18a_room_1.webp"
     add image_path + "v15s18a_room_2.webp"
     add image_path + "v15s18a_room_3.webp"
-    # add image_path + "v15s18a_room_4.webp"
+    add image_path + "v15s18a_room_4.webp"
 
     # Amber
-    # imagebutton:
-    #     idle Transform("#0000", size=(634, 740))
-    #     hover image_path + "v15s18a_room_hover_amber.webp"
-    #     action NullAction()
-    #     pos (1002, 272)
+    imagebutton:
+        idle Transform("#0000", size=(436, 679))
+        hover image_path + "v15s18a_room_hover_amber.webp"
+        action NullAction()
+        pos (704, 48)
 
     # Amber (with Chris)
     # imagebutton:
@@ -145,18 +145,18 @@ screen v15s18a_room():
     #     pos (312, 340)
 
     # Aubrey
-    # imagebutton:
-    #     idle Transform("#0000", size=(473, 647))
-    #     hover image_path + "v15s18a_room_hover_aubrey.webp"
-    #     action NullAction()
-    #     pos (1279, 433)
+    imagebutton:
+        idle Transform("#0000", size=(403, 673))
+        hover image_path + "v15s18a_room_hover_aubrey.webp"
+        action NullAction()
+        pos (742, 57)
 
     # Aubrey (with Imre)
-    imagebutton:
-        idle Transform("#00ff0080", size=(315, 664))
-        hover image_path + "v15s18a_room_hover_aubrey2.webp"
-        action NullAction()
-        pos (774, 67)
+    # imagebutton:
+    #     idle Transform("#00ff0080", size=(315, 664))
+    #     hover image_path + "v15s18a_room_hover_aubrey2.webp"
+    #     action NullAction()
+    #     pos (774, 67)
 
     # Chris
     # imagebutton:
@@ -166,11 +166,11 @@ screen v15s18a_room():
     #     pos (1013, 317)
 
     # Imre
-    imagebutton:
-        idle Transform("#00ff0080", size=(253, 429))
-        hover image_path + "v15s18a_room_hover_imre.webp"
-        action NullAction()
-        pos (1043, 42)
+    # imagebutton:
+    #     idle Transform("#00ff0080", size=(253, 429))
+    #     hover image_path + "v15s18a_room_hover_imre.webp"
+    #     action NullAction()
+    #     pos (1043, 42)
 
 
 screen v15s18a_upstairs():
