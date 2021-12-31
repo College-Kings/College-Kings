@@ -256,7 +256,7 @@ label v15s17:
 
     pause 0.75
 
-if v15_autumn_lunchbreak:
+    if v15_autumn_lunchbreak:
         scene v15s17_8b
         with dissolve
 
