@@ -725,7 +725,7 @@ label after_load:
                     comment.mentions = temp_mentions
 
                 ###### KIWII COMMENT REPLIES
-                for reply in pendingComment.replies:
+                for reply in pendingComments.replies:
                     reply.disabled = False
 
                     for mention in reply.mentions:
