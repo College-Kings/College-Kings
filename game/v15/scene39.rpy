@@ -1246,7 +1246,7 @@ label v15s39:
 
             u "(Just need to send the recording to Chloe... Hopefully, she can find something to do with it.)"
 
-            scene v15s39_25a # FPP. Close up shot of Mc's phone it shows Chloe as the person he has messaged, and a "message sent" text appears on his phone
+            scene v15s39_25
             with dissolve
 
             pause 0.75
