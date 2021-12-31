@@ -274,8 +274,6 @@ label v2start:
                     jump v1_tomShoutBack
 
                 "Walk away":
-                    $ fighttom = False
-
                     jump v1_tomWalkAway
 
 label bk_a: #for compatibility only
@@ -972,7 +970,6 @@ label tomFightStart:
     label tomkickhit:
     label tomkickhit2:
     label timer6:
-
         play sound "sounds/ks.mp3"
         scene tomkickhit
         with hpunch
@@ -1008,7 +1005,6 @@ label tomFightStart:
             call screen youattack
 
     label tomkickblocked:
-
         play sound "sounds/ks.mp3"
         scene tomkickblock
         with hpunch
@@ -1050,15 +1046,11 @@ label tomFightStart:
     label tomfinish5:
     label tomfinish6:
 
-    $ wintom = False
-
     scene tf
 
     " "
 
     jump v1_tomWalkAway
-
-
 
 label youfinish:
     if reaction == 0.5:
@@ -1067,7 +1059,6 @@ label youfinish:
     $ wintom = True
 
     menu:
-
         "Kick him":
             $ add_point(KCT.TROUBLEMAKER)
 
