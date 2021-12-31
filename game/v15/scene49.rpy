@@ -7,7 +7,7 @@ label v15s49:
     scene v15s49_1 # TPP. MC looking out the window of the cab, its night time and raining outside, MC slight smile, mouth closed.
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s49_2 # TPP. MC's head turned to face the cab driver, MC slight smile, mouth open.
     with dissolve
@@ -17,12 +17,12 @@ label v15s49:
     scene v15s49_3 # TPP. Show MC getting out of the cab, the rain hitting his clothes, MC slight smile, mouth closed.
     with dissolve
 
-    pause 
+    pause 0.75 
 
     scene v15s49_4 # TPP. MC starting to walk towards his Frat house, slight smile, mouth closed.
     with dissolve  
 
-    pause
+    pause 0.75
 
     scene v15s49_4a # TPP. MC concerned, mouth closed
     with dissolve 
@@ -36,20 +36,20 @@ label v15s49:
 
     u "(What's going on? Is that- Tom?)"
 
-    if fighttom and wintom:
-
+    if wintom:
         u "(Haven't seen him since I kicked his ass.) *Scoffs*"
-    elif fighttom and not wintom:
+        
+    elif fighttom:
         u "(Haven't seen him since he knocked me on my ass.)"
 
         u "(That's a memory I was hoping to forget...)"
 
-    pause 
+    pause 0.75 
 
     scene v15s49_6 # TPP. Show MC walking over to Tom and Riley, MC angry, mouth closed.
     with dissolve 
 
-    pause
+    pause 0.75
 
     scene v15s49_7 # TPP. Close up of Tom, Tom looking at Riley, Tom angry, mouth open.
     with dissolve 
@@ -113,29 +113,31 @@ label v15s49:
     scene v15s49_10 # TPP. Tom shoving pushing Riley to the ground, Tom angry, mouth closed.
     with dissolve
 
-    pause
+    pause 0.75
 
     play sound "sounds/thud.mp3"
     scene v15s49_11 # TPP. Show Riley hitting the ground, angry, mouth closed.
     with dissolve 
 
     menu:
-        "Attack Tom.":
+        "Attack Tom":
             $ add_point(KCT.BRO)
             play sound "sounds/hs.mp3"
 
             scene v15s49_12 # TPP. Show MC charging into Tom and pushing him further from Riley.
             with dissolve
 
-            pause
+            pause 0.75
 
             scene v15s49_13 # FPP. MC standing between Tom and Riley, MC looking at Tom, Tom looking at MC, Tom angry, mouth closed.
             with dissolve
 
             u "What the fuck is your problem?!"
-        "Check on Riley.":
+
+        "Check on Riley":
             $ add_point(KCT.BOYFRIEND)
-            if rileyrs:
+
+            if riley.relationship.value >= Relationship.FWB.value:
                 scene v15s49_14 # FPP. Show MC on his knee checking on Riley, MC looking at Riley, Riley looking at MC, Riley angry, mouth closed.
                 with dissolve  
 
@@ -145,6 +147,7 @@ label v15s49:
                 with dissolve
 
                 ri "[name]... *Sighs* Thank God you're here. *Sniffles*"
+
             else:
                 scene v15s49_14
                 with dissolve
@@ -159,7 +162,7 @@ label v15s49:
                 scene v15s49_15 # TPP. Show MC helping up Riley, both angry, mouth closed.
                 with dissolve 
 
-                pause 
+                pause 0.75 
 
                 scene v15s49_16 # FPP. Both standing up now, MC looking at Riley, Riley looking at MC, Riley angry, mouth open.
                 with dissolve
@@ -175,7 +178,7 @@ label v15s49:
     with dissolve
 
     menu:
-        "Stay calm.":
+        "Stay calm":
             $ add_point(KCT.BRO)
             u "You know better than this, Tom. This is wrong."
 
@@ -183,7 +186,8 @@ label v15s49:
             with dissolve
 
             to "Does it look like I give it fuck?! How about I drop your weak ass too?"
-        "Be angry.":
+
+        "Be angry":
             $ add_point(KCT.TROUBLEMAKER)
 
             u "What the fuck is your problem?"
@@ -192,7 +196,8 @@ label v15s49:
             with dissolve
 
             to "You! You're my problem, motherfucker!"
-    if fighttom and wintom:
+
+    if wintom:
         scene v15s49_13
         with dissolve
 
@@ -204,7 +209,8 @@ label v15s49:
         to "*Scoffs* That was a long time ago, pal!"
 
         to "I've been training almost every day since then."
-    elif fighttom and not wintom:
+
+    elif fighttom:
         scene v15s49_13a
         with dissolve
 
@@ -245,14 +251,13 @@ label v15s49:
     scene v15s49_16 # TPP. Show Riley holding her arm as she is sitting against the hood of a car a little bit away from Tom and MC, Riley upset, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75  
 
     scene v15s49_13d
     with dissolve
 
     menu:
-        "Antagonize Tom.":
-
+        "Antagonize Tom":
             u "The more you talk, the bigger your forehead gets. Or should we just go ahead and start saying fivehead?"
 
             scene v15s49_13c
@@ -260,14 +265,14 @@ label v15s49:
 
             to "Ha. Keep talking, fresh meat."
 
-        "Try to calm Tom.":
-
+        "Try to calm Tom":
             u "We don't have to do this, you know. We can just forget about it and go home."
 
             scene v15s49_13c
             with dissolve
 
             to "You won't be going home tonight, [name]. You'll be going to the nearest emergency room."
+
     scene v15s49_16a # TPP. Show Riley holding her arm as she is sitting against the hood of a car a little bit away from Tom and MC, Riley upset, mouth open.
     with dissolve
 
@@ -279,7 +284,7 @@ label v15s49:
     with dissolve
 
     menu:
-        "Nobody's walking away.":
+        "Nobody's walking away":
             $ add_point(KCT.TROUBLEMAKER)
             u "Nobody's walking away, Riley."
 
@@ -288,7 +293,7 @@ label v15s49:
 
             u "He's going to learn today."
 
-        "I wish we could.":
+        "I wish we could":
             $ add_point(KCT.BRO)
             u "I wish we could walk away, Riley."
 
