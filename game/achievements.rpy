@@ -200,6 +200,5 @@ init python:
     Achievement("pumpkin_season", "You really like that pumpkin, huh?") #s18
     Achievement("taskmaster", "Clear the tasklist") #s18
 
-    Achievement("teetotal", "Party without alcohol") #s24-25
     Achievement("too_much_information", "Check your meeting notes often") #s21
     Achievement("what_goes_around", "Aubrey tastes her own medicine at the wedding") #s33

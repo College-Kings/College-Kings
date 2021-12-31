@@ -752,9 +752,6 @@ label v15s25:
 
                         u "Yeah... Bye."
 
-    if not v15_lindsey_alcohol:
-        $ grant_achievement("teetotal")
-
     play sound "sounds/rejectcall.mp3"
 
     scene v15s25_8 # TPP. Just MC sitting in the chair plain wall in the background, MC pressing a button on his phone, MC slight smile, mouth closed.
