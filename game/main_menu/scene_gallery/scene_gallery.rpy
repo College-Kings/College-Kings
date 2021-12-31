@@ -2,20 +2,22 @@ default persistent.name = ""
 default scopeDict = {}
 
 init python:
-    sceneGalleryItems = []
+    scene_gallery_items = []
 
     class SceneGallery:
+        image_path = "main_menu/scene/images/"
+
         def __init__(self, label, scope=None):
             self.label = label
-            self.idleImg = "sceneGallery/images/gallery{}.webp".format(len(sceneGalleryItems) + 1)
-            self.hoverImg = "sceneGallery/images/gallery{}_hover.webp".format(len(sceneGalleryItems) + 1)
+            self.idleImg = SceneGallery.image_path + "gallery{}.webp".format(len(scene_gallery_items) + 1)
+            self.hoverImg = SceneGallery.image_path + "gallery{}_hover.webp".format(len(scene_gallery_items) + 1)
 
             if scope is None: self.scope = {}
             else: self.scope = scope
 
-            sceneGalleryItems.append(self)
+            scene_gallery_items.append(self)
 
-    def updateScope(newScope):
+    def update_scope(newScope):
         rv = scopeDict.copy()
         rv.update(newScope)
         return rv
@@ -122,7 +124,7 @@ screen scene_gallery_spoiler():
             spacing 200
 
             textbutton "Yes":
-                action [Hide("scene_gallery_spoiler"), ui.callsinnewcontext("sceneGalleryNameChange"), ShowMenu("scene_gallery")]
+                action [Hide("scene_gallery_spoiler"), ui.callsinnewcontext("scene_gallery_name_change"), ShowMenu("scene_gallery")]
 
             textbutton "No":
                 action Hide("scene_gallery_spoiler")
@@ -132,7 +134,7 @@ screen scene_gallery():
     tag menu
     modal True
 
-    add "sceneGallery/images/sceneGalleryBackground.webp"
+    add SceneGallery.image_path + "background.webp"
 
     vpgrid:
         cols 4
@@ -143,12 +145,12 @@ screen scene_gallery():
         draggable True
         mousewheel True
 
-        for sceneGalleryItem in sceneGalleryItems:
+        for gallery_item in scene_gallery_items:
             imagebutton:
-                action Replay(sceneGalleryItem.label, scope=updateScope(sceneGalleryItem.scope))
-                idle Transform(sceneGalleryItem.idleImg, size=(400, 226))
-                hover Transform(sceneGalleryItem.hoverImg, size=(400, 226))
-                insensitive Transform(sceneGalleryItem.idleImg, blur=20, size=(400, 226))
+                action Replay(gallery_item.label, scope=update_scope(gallery_item.scope))
+                idle Transform(gallery_item.idleImg, size=(400, 226))
+                hover Transform(gallery_item.hoverImg, size=(400, 226))
+                insensitive Transform(gallery_item.idleImg, blur=20, size=(400, 226))
 
     imagebutton:
         idle "images/backtransp.webp"
@@ -157,8 +159,7 @@ screen scene_gallery():
         action ShowMenu("main_menu")
 
 
-label sceneGalleryNameChange:
-    
+label scene_gallery_name_change:
     scene black
     if not persistent.name.strip():
         $ persistent.name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
