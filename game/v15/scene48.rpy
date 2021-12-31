@@ -671,115 +671,265 @@ label v15s48:
 
                 no "You're not wrong... *Sighs*"
 
-            if nora.relationship.value < Relationship.FWB.value and v15s48_follow_your_heart and not v15s48_interrupt and kct != "confident":
-                $ v15s48_variable_check += 1
-                if v15s48_follow_your_heart:
-                    scene v15s48_18a
-                    with dissolve
+    if nora.relationship.value < Relationship.FWB.value and v15s48_follow_your_heart and not v15s48_interrupt and kct != "confident":
+        $ v15s48_variable_check += 1
+        if v15s48_follow_your_heart:
+            scene v15s48_18a
+            with dissolve
 
-                    no "Well, cheers to following your heart! Actually-"
+            no "Well, cheers to following your heart! Actually-"
 
-                    no "I think we have wine... Be right back!"
-                    
-                else:
-                    scene v15s48_18a
-                    with dissolve
-
-                    no "Well, listening to the voices inside of our heads... Cheers to that! Actually-"
-
-                    no "I think we have wine... Be right back!"
-                
-            if v15s48_variable_check >= 1:
-                if nora.relationship.value >= Relationship.FWB.value:
-                    if v15s48_follow_your_heart:
-                        scene v15s48_18a
-                        with dissolve
-
-                        no "Well, I guess I'm gonna follow my heart then..."
-
-                        scene v15s48_18
-                        with dissolve
-
-                        u "You should."
-
-                    else:
-                        scene v15s48_18a
-                        with dissolve
-
-                        no "The thing is though..."
-
-                        no "I don't want to focus on just me."
-
-                        scene v15s48_18
-                        with dissolve
-
-                        u "You don't?"
-
-                        scene v15s48_18a
-                        with dissolve
-
-                        no "Ha, no. I don't."
-                        
-                if nora.relationship.value < Relationship.FWB.value and v15s48_follow_your_heart and not v15s48_interrupt or kct == "confident":
-                    scene v15s48_18a
-                    with dissolve
-
-                    no "So, when you say that I should follow my heart..."
-
-                    scene v15s48_18
-                    with dissolve
-
-                    u "Yeah?"
+            no "I think we have wine... Be right back!"
             
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or aubrey.relationship.value >= Relationship.TAMED.value:
+        else:
+            scene v15s48_18a
+            with dissolve
+
+            no "Well, listening to the voices inside of our heads... Cheers to that! Actually-"
+
+            no "I think we have wine... Be right back!"
+        
+    if v15s48_variable_check >= 1:
+        if nora.relationship.value >= Relationship.FWB.value:
+            if v15s48_follow_your_heart:
                 scene v15s48_18a
                 with dissolve
 
-                no "If only you were completely available, ha."
+                no "Well, I guess I'm gonna follow my heart then..."
 
                 scene v15s48_18
                 with dissolve
 
-                u "Oh, your... It's me?"
+                u "You should."
 
+            else:
                 scene v15s48_18a
                 with dissolve
 
-                no "Kinda? *Nervous chuckle*"
+                no "The thing is though..."
 
-                no "You're a great guy, everyone can see that. And you obviously care about me, haha."
+                no "I don't want to focus on just me."
 
                 scene v15s48_18
                 with dissolve
 
-                u "I care more than you know. We all do, I think."
+                u "You don't?"
 
                 scene v15s48_18a
                 with dissolve
 
-                no "Thank you. It means a lot to know that I have you, even if just as a friend."
+                no "Ha, no. I don't."
+                
+        if nora.relationship.value < Relationship.FWB.value and v15s48_follow_your_heart and not v15s48_interrupt or kct == "confident":
+            scene v15s48_18a
+            with dissolve
 
-                scene v15s48_20 # TPP. Show MC and Nora hugging on the couch both slight smile, mouth closed.
-                with dissolve
+            no "So, when you say that I should follow my heart..."
 
-                pause 0.75
+            scene v15s48_18
+            with dissolve
+
+            u "Yeah?"
+    
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or aubrey.relationship.value >= Relationship.TAMED.value:
+        scene v15s48_18a
+        with dissolve
+
+        no "If only you were completely available, ha."
+
+        scene v15s48_18
+        with dissolve
+
+        u "Oh, your... It's me?"
+
+        scene v15s48_18a
+        with dissolve
+
+        no "Kinda? *Nervous chuckle*"
+
+        no "You're a great guy, everyone can see that. And you obviously care about me, haha."
+
+        scene v15s48_18
+        with dissolve
+
+        u "I care more than you know. We all do, I think."
+
+        scene v15s48_18a
+        with dissolve
+
+        no "Thank you. It means a lot to know that I have you, even if just as a friend."
+
+        scene v15s48_20 # TPP. Show MC and Nora hugging on the couch both slight smile, mouth closed.
+        with dissolve
+
+        pause 0.75
+
+        scene v15s48_18a
+        with dissolve
+
+        no "I think I need something stronger than this tea... *Laughs*"
+
+        scene v15s48_18
+        with dissolve
+
+        u "Haha, getting all soft on me now?"
+
+        scene v15s48_18a
+        with dissolve
+
+        no "Not for long! I'm pretty sure I saw some wine earlier. I'll go dig it out."
+
+        scene v15s48_14a # TPP. MC sitting on the couch in the Cabin, Nora approaching the Couch coming from the kitchen area holding two glasses of wine, Nora slight smile, mouth closed, MC slight smile, mouth closed.
+        with fade
+
+        pause 0.75 
+
+        scene v15s48_21 # TPP. MC and Nora taking a sip of their wine.
+        with dissolve
+
+        pause 0.75  
+
+        scene v15s48_21a # TPP. MC and Nora putting their glasses of wine on the table near them, slight smile, mouth closed.
+        with dissolve
+
+        pause 0.75 
+
+        scene v15s48_18
+        with dissolve
+
+        u "Well, I wasn't expecting to be drinking wine by a fire tonight."
+
+        scene v15s48_18a
+        with dissolve
+
+        no "Right? This is nice."
+
+        scene v15s48_18
+        with dissolve
+
+        u "Yeah, it really is."
+
+        scene v15s48_18a
+        with dissolve
+
+        no "I'm glad you came, [name]."
+
+        scene v15s48_18
+        with dissolve
+
+        u "Me too."
+
+        jump v15s48b
+
+    else:
+        scene v15s48_18a
+        with dissolve
+
+        no "I want you."
+
+        scene v15s48_18
+        with dissolve
+
+        u "You do?"
+
+        scene v15s48_18a
+        with dissolve
+
+        no "I..."
+
+        scene v15s48_18h # FPP. MC looking at Nora, Nora looking at MC, Nora nervous, blushing, mouth open.
+        with dissolve
+
+        no "I know there's a lot more involved than just me and you but..."
+
+        if "v12_nora" in sceneList:
+            no "I can't stop thinking about you."
+        
+        else:
+            no "Do you think we could ever be more than friends? You and I?"
+        
+        scene v15s48_18i # FPP. MC looking at Nora, Nora looking at MC, Nora nervous, blushing, mouth closed.
+        with dissolve
+
+        u "Nora..."
+
+        menu:
+            "We should just be friends":
+                u "The relationship that we have is so strong, and fun... I think we should keep it that way."
 
                 scene v15s48_18a
                 with dissolve
 
-                no "I think I need something stronger than this tea... *Laughs*"
+                no "Oh... Yeah, okay."
 
                 scene v15s48_18
                 with dissolve
 
-                u "Haha, getting all soft on me now?"
+                u "You're amazing, Nora. You know I think you're-"
 
                 scene v15s48_18a
                 with dissolve
 
-                no "Not for long! I'm pretty sure I saw some wine earlier. I'll go dig it out."
+                no "I get it, it's fine."
 
-                scene v15s48_14a # TPP. MC sitting on the couch in the Cabin, Nora approaching the Couch coming from the kitchen area holding two glasses of wine, Nora slight smile, mouth closed, MC slight smile, mouth closed.
+                scene v15s48_18
+                with dissolve
+
+                u "No. Nora, seriously. You're one of the coolest people I've ever met, and I'm an idiot for letting you go."
+                u "I just don't think I'm your forever either..."
+
+                scene v15s48_18b
+                with dissolve
+
+                no "*Sighs*"
+
+                if "v12_nora" in sceneList:
+                    scene v15s48_18j # FPP. MC looking at Nora, Nora looking at MC, Nora with teary eyes but holding it back, neutral face, mouth closed.
+                    with dissolve
+
+                    pause 0.75 
+
+                scene v15s48_18b
+                with dissolve
+
+                no "Friends?"
+
+                scene v15s48_18c
+                with dissolve
+
+                u "Yes, friends. Forever friends is something I can promise."
+
+                scene v15s48_18b
+                with dissolve
+
+                no "Well, I'm happy with that, ha. Forever friends."
+
+                scene v15s48_18c
+                with dissolve
+
+                u "Perfect."
+
+                scene v15s48_20
+                with dissolve
+
+                pause 0.75 
+
+                scene v15s48_18a
+                with dissolve
+
+                no "I feel like drinking some wine now."
+
+                scene v15s48_18
+                with dissolve
+
+                u "The tea isn't strong enough?"
+
+                scene v15s48_18a
+                with dissolve
+
+                no "Haha, no, it's not. I'll be right back."
+
+                scene v15s48_14a
                 with fade
 
                 pause 0.75 
@@ -794,25 +944,10 @@ label v15s48:
 
                 pause 0.75 
 
-                scene v15s48_18
-                with dissolve
-
-                u "Well, I wasn't expecting to be drinking wine by a fire tonight."
-
                 scene v15s48_18a
                 with dissolve
 
-                no "Right? This is nice."
-
-                scene v15s48_18
-                with dissolve
-
-                u "Yeah, it really is."
-
-                scene v15s48_18a
-                with dissolve
-
-                no "I'm glad you came, [name]."
+                no "I'm happy you're here, [name]."
 
                 scene v15s48_18
                 with dissolve
@@ -821,174 +956,39 @@ label v15s48:
 
                 jump v15s48b
 
-            else:
-                scene v15s48_18a
+            "I want you too":
+                scene v15s48_18k # FPP. MC looking at Nora, Nora looking at MC, Nora flirty, mouth closed.
                 with dissolve
 
-                no "I want you."
+                u "I want you too."
 
-                scene v15s48_18
-                with dissolve
-
-                u "You do?"
-
-                scene v15s48_18a
-                with dissolve
-
-                no "I..."
-
-                scene v15s48_18h # FPP. MC looking at Nora, Nora looking at MC, Nora nervous, blushing, mouth open.
-                with dissolve
-
-                no "I know there's a lot more involved than just me and you but..."
+            # -if they had sex in the past, Nora is thrilled, and hops up to give MC a passionate kiss
 
                 if "v12_nora" in sceneList:
-                    no "I can't stop thinking about you."
-                
+                    scene v15s48_22 # FPP. Nora standing up, Nora looking at MC, MC looking at Nora, Nora flirty, mouth closed.
+                    with dissolve
+
+                    pause 0.75  
+
+                    scene v15s48_23 # FPP. Nora standing infront of MC, Nora looking down at MC sitting on the couch, MC looking at Nora standing infront of him.
+                    with dissolve
+
+                    pause 0.75  
+
+                    scene v15s48_23a # FPP. Nora bending over and kissing MC.
+                    with dissolve
+
+                    u "(My god have I missed this...) *Moans*"
+
                 else:
-                    no "Do you think we could ever be more than friends? You and I?"
-                
-                scene v15s48_18i # FPP. MC looking at Nora, Nora looking at MC, Nora nervous, blushing, mouth closed.
-                with dissolve
+                    scene v15s48_18a
+                    with dissolve
 
-                u "Nora..."
+                    no "You have no idea how happy I am."
 
-                menu:
-                    "We should just be friends":
-                        u "The relationship that we have is so strong, and fun... I think we should keep it that way."
+                    scene v15s48_18
+                    with dissolve
 
-                        scene v15s48_18a
-                        with dissolve
+                    u "I think I can guess... *Chuckles*"
 
-                        no "Oh... Yeah, okay."
-
-                        scene v15s48_18
-                        with dissolve
-
-                        u "You're amazing, Nora. You know I think you're-"
-
-                        scene v15s48_18a
-                        with dissolve
-
-                        no "I get it, it's fine."
-
-                        scene v15s48_18
-                        with dissolve
-
-                        u "No. Nora, seriously. You're one of the coolest people I've ever met, and I'm an idiot for letting you go."
-                        u "I just don't think I'm your forever either..."
-
-                        scene v15s48_18b
-                        with dissolve
-
-                        no "*Sighs*"
-
-                        if "v12_nora" in sceneList:
-                            scene v15s48_18j # FPP. MC looking at Nora, Nora looking at MC, Nora with teary eyes but holding it back, neutral face, mouth closed.
-                            with dissolve
-
-                            pause 0.75 
-
-                        scene v15s48_18b
-                        with dissolve
-
-                        no "Friends?"
-
-                        scene v15s48_18c
-                        with dissolve
-
-                        u "Yes, friends. Forever friends is something I can promise."
-
-                        scene v15s48_18b
-                        with dissolve
-
-                        no "Well, I'm happy with that, ha. Forever friends."
-
-                        scene v15s48_18c
-                        with dissolve
-
-                        u "Perfect."
-
-                        scene v15s48_20
-                        with dissolve
-
-                        pause 0.75 
-
-                        scene v15s48_18a
-                        with dissolve
-
-                        no "I feel like drinking some wine now."
-
-                        scene v15s48_18
-                        with dissolve
-
-                        u "The tea isn't strong enough?"
-
-                        scene v15s48_18a
-                        with dissolve
-
-                        no "Haha, no, it's not. I'll be right back."
-
-                        scene v15s48_14a
-                        with fade
-
-                        pause 0.75 
-
-                        scene v15s48_21 # TPP. MC and Nora taking a sip of their wine.
-                        with dissolve
-
-                        pause 0.75  
-
-                        scene v15s48_21a # TPP. MC and Nora putting their glasses of wine on the table near them, slight smile, mouth closed.
-                        with dissolve
-
-                        pause 0.75 
-
-                        scene v15s48_18a
-                        with dissolve
-
-                        no "I'm happy you're here, [name]."
-
-                        scene v15s48_18
-                        with dissolve
-
-                        u "Me too."
-
-                        jump v15s48b
-
-                    "I want you too":
-                        scene v15s48_18k # FPP. MC looking at Nora, Nora looking at MC, Nora flirty, mouth closed.
-                        with dissolve
-
-                        u "I want you too."
-
-                    # -if they had sex in the past, Nora is thrilled, and hops up to give MC a passionate kiss
-
-                        if "v12_nora" in sceneList:
-                            scene v15s48_22 # FPP. Nora standing up, Nora looking at MC, MC looking at Nora, Nora flirty, mouth closed.
-                            with dissolve
-
-                            pause 0.75  
-
-                            scene v15s48_23 # FPP. Nora standing infront of MC, Nora looking down at MC sitting on the couch, MC looking at Nora standing infront of him.
-                            with dissolve
-
-                            pause 0.75  
-
-                            scene v15s48_23a # FPP. Nora bending over and kissing MC.
-                            with dissolve
-
-                            u "(My god have I missed this...) *Moans*"
-
-                        else:
-                            scene v15s48_18a
-                            with dissolve
-
-                            no "You have no idea how happy I am."
-
-                            scene v15s48_18
-                            with dissolve
-
-                            u "I think I can guess... *Chuckles*"
-
-                        jump v15s48a
+                jump v15s48a
