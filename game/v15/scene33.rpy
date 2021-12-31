@@ -521,12 +521,12 @@ label v15s33:
     scene v15s33_25c # TPP. Aubrey looking at the ground, annoyed, mouth open.
     with dissolve
 
-    au "*Sighs* I know mom."
+    au "*Sighs* I know, mom."
 
     scene v15s33_27 # TPP. Behind shot of MC walking up to Aubrey with her mom and dad, all neutral face, mouth open.
     with dissolve
 
-    u "Hey, you. Is this Mom and Dad?"
+    u "Hey, you. Are these your parents?"
 
     scene v15s33_28 # FPP. MC looking at Aubrey only show Aubrey, Aubrey looking at MC, Slight frown, mouth open.
     with dissolve
@@ -587,7 +587,7 @@ label v15s33:
     scene v15s33_31b # FPP. MC looking at Aubrey's mom, Aubrey's mom looking at Aubrey, Aubrey's mom neutral face, mouth open.
     with dissolve
 
-    aumom "And it's not that they aren't pretty, they are... Pretty..."
+    aumom "And it's not that they aren't pretty, they are..."
 
     aumom "But they're just not what I was envisioning."
 
@@ -869,7 +869,7 @@ label v15s33:
         scene v15s33_42 # TPP. Aubrey and her uncle fist bumping and laughing.
         with dissolve
 
-        u "(So, he's the second black sheep of the family I assume? Ha...)"
+        u "(So, he's the second black sheep of the family I assume? Hah!)"
 
     scene v15s33_39b
     with dissolve
@@ -1028,7 +1028,7 @@ label v15s33:
 
             u "(It smells like ass, dude... What the fuck?)"
 
-            u "I can really taste the... (Ugh, fuck...) The quality."
+            u "I can really taste the... (Ugh, fuck...) the quality."
 
             scene v15s33_39b
             with dissolve
@@ -1122,14 +1122,14 @@ label v15s33:
         scene v15s33_39c
         with dissolve
 
-        u "(No shit... We should play this safe though, ha.)"
+        u "(No shit... We should play this safe though.)"
 
         u "What do you mean by that?"
 
         scene v15s33_39b
         with dissolve
 
-        rick "Naomi is clearly the favorite, everyone can see it. You don't have to act all, \"good\" around me, kid. Neither of you do."
+        rick "Naomi is clearly the favorite, everyone can see it. You don't have to act all \"good\" around me, kid. Neither of you do."
 
         scene v15s33_39c
         with dissolve
@@ -1291,6 +1291,9 @@ label v15s33:
     with dissolve
 
     u "(Holy sh- *Gasps*)"
+
+    scene v15s33_55
+    with vpunch
 
     u "(There it was again! Is she...?)"
 
@@ -1657,7 +1660,7 @@ label v15s33:
             scene v15s33_54c # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth closed.
             with dissolve 
 
-            u "(Phew... Let's hope no one noticed any of that.))"
+            u "(Phew... Let's hope no one noticed any of that.)"
 
         "Let her continue":
             $ add_point(KCT.TROUBLEMAKER)
@@ -1838,7 +1841,7 @@ label v15s33:
             scene v15s33_70b # FPP. MC looking at Naomi, Naomi looking at Aubrey, Naomi smirking, mouth closed.
             with dissolve
 
-            u "(What... The fuck... Is wrong with this girl?)"
+            u "(What... The Fuck...! Is wrong with this girl?)"
 
             scene v15s33_71e # FPP. MC looking at Aubrey, Aubrey looking at Naomi, Aubrey crying and angry, mouth open.
             with dissolve
@@ -2541,7 +2544,7 @@ label v15s33:
 
         u "That was the most awful thing I've ever seen them do to you."
 
-        u "And you're right, ha. It's like they aren't even aware of their actions."
+        u "And you're right. It's like they aren't even aware of their actions."
 
         if v15s33_take_photo:
             scene v15s33_102a
