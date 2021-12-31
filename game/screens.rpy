@@ -844,127 +844,12 @@ style slot_button_text:
 screen preferences():
     tag menu
 
-    add "gui/settingsBackground.webp"
+    default image_path = "gui/settings/"
 
-    # Display settings
-    hbox:
-        align (0.1645, 0.265)
-        spacing 136
-        style_prefix "check"
-
-        textbutton _("window"):
-            action Preference("display", "window")
-            text_size 45
-        textbutton _("fullscreen"):
-            action Preference("display", "fullscreen")
-            text_size 45
-
-    # Skip settings
-    hbox:
-        align (0.1, 0.468)
-        spacing 35
-        style_prefix "check"
-
-        textbutton _("Unseen Text"):
-            action Preference("skip", "toggle")
-            text_size 28
-        textbutton _("After Choices"):
-            action Preference("after choices", "toggle")
-            text_size 28
-        # textbutton _("Transitions"):
-        #     action InvertSelected(Preference("transitions", "toggle"))
-        #     text_size 28
-
-    # Skip NSFW Scenes
-    hbox:
-        pos (180, 690)
-        spacing 85
-
-        textbutton _("on"):
-            action SetVariable("config_censored", True)
-            text_size 45
-            text_selected_color "FFD166"
-
-        textbutton _("off"):
-            action SetVariable("config_censored", False)
-            text_size 45
-            text_selected_color "FFD166"
-
-    hbox:
-        pos (600, 690)
-        spacing 85
-
-        textbutton _("on"):
-            action SetVariable("voice_acted", True)
-            text_size 45
-            text_selected_color "FFD166"
-
-        textbutton _("off"):
-            action SetVariable("voice_acted", False)
-            text_size 45
-            text_selected_color "FFD166"
+    add image_path + "background.png"
 
 
-    # KCT settings
-    hbox:
-        pos (180, 885)
-        spacing 85
 
-        textbutton _("on"):
-            action SetVariable("showkct", True)
-            text_size 45
-            text_selected_color "FFD166"
-
-        textbutton _("off"):
-            action SetVariable("showkct", False)
-            text_size 45
-            text_selected_color "FFD166"
-
-    # Real Life settings
-    hbox:
-        pos (600, 885)
-        spacing 85
-
-        textbutton _("on"):
-            action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
-            selected realmode
-            text_size 45
-            text_selected_color "FFD166"
-
-        textbutton _("off"):
-            action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
-            selected not realmode
-            text_size 45
-            text_selected_color "FFD166"
-
-    # Sliders
-    style_prefix "slider"
-    bar value Preference("text speed"):
-        pos (1020, 310)
-
-    bar value Preference("auto-forward time"):
-        pos (1020, 460)
-
-    bar value Preference("music volume"):
-        pos (1020, 722)
-
-    bar value Preference("sound volume"):
-        pos (1020, 872)
-
-    hbox:
-        pos (975, 990)
-        spacing 120
-
-        if os.path.exists("game/tl"):
-            textbutton _("Change Language"):
-                action ShowMenu("changeLanguage")
-
-        textbutton _("Return"):
-            action Return()
-
-style pref_label is gui_label
-style pref_label_text is gui_label_text
-style pref_vbox is vbox
 
 style radio_label is pref_label
 style radio_label_text is pref_label_text
@@ -988,22 +873,12 @@ style slider_pref_vbox is pref_vbox
 style mute_all_button is check_button
 style mute_all_button_text is check_button_text
 
-style pref_label:
-    top_margin gui.pref_spacing
-    bottom_margin 3
-
-style pref_label_text:
-    yalign 1.0
-
-style pref_vbox:
-    xsize 338
-
 style radio_vbox:
     spacing gui.pref_button_spacing
 
 style radio_button:
     properties gui.button_properties("radio_button")
-    foreground "gui/button/radio_[prefix_]foreground.webp"
+    foreground "gui/button/radio_[prefix_]foreground.png"
 
 style radio_button_text:
     properties gui.button_text_properties("radio_button")
@@ -1013,7 +888,7 @@ style check_vbox:
 
 style check_button:
     properties gui.button_properties("check_button")
-    foreground "gui/button/check_[prefix_]foreground.webp"
+    foreground "gui/button/check_[prefix_]foreground.png"
 
 style check_button_text:
     properties gui.button_text_properties("check_button")
@@ -1322,11 +1197,11 @@ style window:
 
 style radio_button:
     variant "small"
-    foreground "gui/phone/button/radio_[prefix_]foreground.webp"
+    foreground "gui/phone/button/radio_[prefix_]foreground.png"
 
 style check_button:
     variant "small"
-    foreground "gui/phone/button/check_[prefix_]foreground.webp"
+    foreground "gui/phone/button/check_[prefix_]foreground.png"
 
 style nvl_window:
     variant "small"
