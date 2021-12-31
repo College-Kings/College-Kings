@@ -602,6 +602,7 @@ label v15s43:
 
     ch "Her aunt... Oh yeah! Sometimes her aunt will rent out her dad's cabin."
     $ v15_nora_clues.add("aunt_cabin")
+    $ v15_nora_locations.add("cabin")
 
     ch "And there, that answers your question about other properties, too. Can you leave me alone now?"
 

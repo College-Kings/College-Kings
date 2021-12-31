@@ -628,12 +628,12 @@ label v15s45:
     with dissolve
 
     cl "Yeah, I mean. She prefers to spend time with her."
+    $ v15_nora_clues.add("close_rose")
 
     scene v15s45_8
     with dissolve
 
     am "Do you think Nora could be with Ms. Rose right now?"
-    $ v15_nora_clues.add("close_rose")
 
     scene v15s45_7e
     with dissolve
@@ -701,7 +701,9 @@ label v15s45:
 
             cl "But guys, this was like ages ago. So don't ask me for his name, I can't remember."
 
-            cl "I think he lives round here though, or at least he used to. (LOCATION UNLOCKED: EX-BOYFRIEND'S HOUSE.)"
+            cl "I think he lives round here though, or at least he used to."
+            
+            $ v15_nora_locations.add("ex")
 
             scene v15s45_7a
             with dissolve
@@ -865,7 +867,9 @@ label v15s45:
 
             cl "I can't say that she would have. He lives nearby, I think. Or he used to at least."
 
-            cl "Like I said, it was a long time ago. I don't even remember his name. (LOCATION UNLOCKED: EX-BOYFRIEND'S HOUSE.)"
+            $ v15_nora_locations.add("ex")
+
+            cl "Like I said, it was a long time ago. I don't even remember his name."
 
         "Angry mode" if detective == "loose_cannon":
             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
