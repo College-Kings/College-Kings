@@ -284,18 +284,87 @@ label v15s44_continue:
     scene v15s44_8a
     with dissolve
 
-    pe "I didn't see anything else other than the whole family being huge nature freaks. They love camping, fishing... All of it."
+    pe "I think her whole family are huge nature freaks. There's pictures of them camping, fishing... You name it."
     $ v15_nora_clues.add("loves_nature")
 
-    scene v15s44_8
-    with dissolve
+    if "camping" in v15_nora_clues:
+        scene v15s44_8
+        with dissolve
 
-    am "Hmm, that's the second time today someone's mentioned the outdoors when it came to Nora."
+        am "Hmm, that's the second time today someone's mentioned the outdoors when it came to Nora."
+    
+    else:
+        scene v15s44_8
+        with dissolve
+        
+        am "Camping... now that's an activity for someone who wants some peace and quiet."
+        
+        $ v15_nora_locations.add("camping")
+
+    menu:
+        "Ask about Nora's family":
+            scene v15s44_8b
+            with dissolve
+
+            u "Any other clues from her other family members?"
+
+            if v11_pen_goes_europe:
+                scene v15s44_8e
+                with dissolve
+
+                pe "Sadly not much."
+                
+            else:
+                scene v15s44_8e
+                with dissolve
+
+                pe "Oh... Uhm... Uh, no."
+
+            pe "I didn't find a lot of pictures with Nora, strangely enough."
+
+            pe "But most of her relatives are from this area, so if she's with them, she's probably not too far away."
+
+            scene v15s44_8b
+            with dissolve
+
+            u "Well, at least that's something."
+        
+        "Ask about Nora's posts":
+            scene v15s44_8b
+            with dissolve
+
+            u "Was there anything interesting in Nora's post history?"
+
+            scene v15s44_8a
+            with dissolve
+
+            pe "Well, it looks like she was in a relationship before Chris."
+            
+            pe "Nora's still friends with that guy on Kiwii, so I thought I'd send him a request as well-"
+
+            scene v15s44_8b
+            with dissolve
+
+            u "Wait, they're still friends?"
+            
+            u "That's an interesting development."
+            $ v15_nora_clues.add("likes_ex")
+            
+            scene v15s44_8a
+            with dissolve
+
+            pe "But he hasn't added me yet so I couldn't look much further. I only know he's a local here to San Vallejo."
+            
+            scene v15s44_8
+            with dissolve
+
+            am "Hmm, that's something that we might want to consider. Maybe Nora ran off to this ex."
+            $ v15_nora_locations.add("ex")
 
     scene v15s44_8a
     with dissolve
 
-    pe "Oh! Well, there you go. *Giggles*"
+    pe "Well, there you go. *Giggles*"
 
     scene v15s44_8
     with dissolve
