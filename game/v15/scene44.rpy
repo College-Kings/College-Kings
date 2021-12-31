@@ -70,12 +70,12 @@ label v15s44_continue:
     scene v15s44_4a # TPP. Same as v15s44_4, Amber mouth open, slight smile / Penelope mouth closed, slightly confused
     with dissolve
 
-    am "Hey, Techy."
+    am "Hey, Techie."
 
     scene v15s44_4b # TPP. Same as v15s44, Amber mouth closed, slight smile / Penelope mouth open, slightly confused
     with dissolve
 
-    pe "Techy?"
+    pe "Techie?"
 
     scene v15s44_4c # TPP. Same as v15s44_4, Amber mouth open, slight smile / Penelope mouth closed, slight smile
     with dissolve
@@ -100,7 +100,7 @@ label v15s44_continue:
     scene v15s44_4a
     with dissolve
 
-    am "Thanks, Techy!"
+    am "Thanks, Techie!"
 
     scene v15s44_4b
     with dissolve
@@ -115,12 +115,12 @@ label v15s44_continue:
     scene v15s44_3f # FPP. Same as v15s44_3a, Amber slight smile, mouth closed
     with dissolve
 
-    u "Techy?"
+    u "Techie?"
 
     scene v15s44_3g # FPP. Same as v15s44_3f, Amber slight smile, mouth open
     with dissolve
 
-    am "Techy!"
+    am "Techie!"
 
     am "Okay, coffee refill..."
 
@@ -175,7 +175,7 @@ label v15s44_continue:
     scene v15s44_8 # TPP. Amber and MC standing next to each other, Amber holding out the phone since they are on speaker, both slight smiles, Amber mouth open, MC mouth closed // Penelope sitting in the cafe, talking on the phone, show her laptop (not the screen), Penelope slight smile, mouth closed
     with dissolve
 
-    am "What have you got for us, Techy?"
+    am "What have you got for us, Techie?"
 
     scene v15s44_8a # TPP. Same as v15s44_8, Amber and MC slight smiles, mouths closed // Penelope slight smile, mouth open
     with dissolve
@@ -300,7 +300,7 @@ label v15s44_continue:
     scene v15s44_8
     with dissolve
 
-    am "Okay, well thanks for all your help, Techy. We gotta run!"
+    am "Okay, well thanks for all your help, Techie. We gotta run!"
 
     scene v15s44_8b
     with dissolve

@@ -300,7 +300,7 @@ label v15s46:
     scene v15s46_3
     with dissolve
 
-    am "I'll send a message to Techy. She can find Mr. Rose's property records and find us an address."
+    am "I'll send a message to Techie. She can find Mr. Rose's property records and find us an address."
 
     scene v15s46_3d # FPP. Amber taking out her phone, slight smile, mouth closed.
     with dissolve
