@@ -198,7 +198,7 @@ init python:
 
     Achievement("polycurious", "Monogamy is overrated") #s26
     Achievement("pumpkin_season", "You really like that pumpkin, huh?") #s18
-    Achievement("taskmaster", "Clear the tasklist") #s18
+    Achievement("taskmaster", "Clear the checklist") #s18
 
     Achievement("too_much_information", "Check your meeting notes often") #s21
     Achievement("what_goes_around", "Aubrey tastes her own medicine at the wedding") #s33
