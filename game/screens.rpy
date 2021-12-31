@@ -454,9 +454,6 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     style_prefix "game_menu"
 
-    if main_menu:
-        add gui.main_menu_background
-
     if title == _("History"):
         frame:
             style "game_menu_outer_frame"
@@ -791,7 +788,7 @@ screen settings():
 
     default image_path = "gui/settings/"
 
-    add image_path + "background.png"
+    add image_path + "background.webp"
 
     # Display
     hbox:

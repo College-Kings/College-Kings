@@ -88,8 +88,6 @@ define gui.title_text_size = 120
 
 ## The images used for the main and game menus.
 
-define gui.main_menu_background = "gui/mainMenu/mainMenuBackground{}.webp".format("Steam" if config.enable_steam else "")
-
 
 ## Dialogue ####################################################################
 ##
