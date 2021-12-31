@@ -1661,8 +1661,12 @@ label v15s33:
 
         "Let her continue":
             $ add_point(KCT.TROUBLEMAKER)
+            $ sceneList.add("v15_naomi")
+
+            if aubrey.relationship.value >= Relationship.FWB.value:
+                $ v15s33_naomi_broke_aubreyrs = True
+
             $ aubrey.relationship = Relationship.MAD
-            $ v15s33_naomi_broke_aubreyrs = True
 
             u "(Why the hell not...?) Ha..."
 

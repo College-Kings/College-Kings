@@ -28,13 +28,14 @@ label v15s38:
 
     # Different reaction based on AubreyTamed, AubreyFriend, and/or if mc got caught with Naomi. If she's happy she'll smile, if not she won't react, and if they're dating she will be flirty-
     ### AS USUAL, VERIFY ALL VARIABLES - I DID MY BEST BASED ON variables.rpy AS IT WAS ON GITHUB WHEN I TRANSCRIBED - "CAUGHT_NAOMI" IS A PLACEHOLDER. IF GETTING CAUGHT DOESN'T SET aubrey_tamed TO FALSE, NEED ADDITIONAL TERM IN NEXT CHECK.
+
     if aubrey.relationship.value >= Relationship.TAMED.value:
         scene v15s38_5 # FPP Aubrey gives MC a sexy smile and winks at him
         with dissolve
 
         pause 0.75
     
-    elif CAUGHT_NAOMI:
+    elif "v15_naomi" in sceneList:
         scene v15s38_5a # FPP Same angle as 5. Aubrey looking away, neutral expression
         with dissolve
 
@@ -159,7 +160,7 @@ label v15s38:
 
         pause 0.75
 
-    elif CAUGHT_NAOMI: # -if MC accepted Naomi blowjob
+    elif "v15_naomi" in sceneList: # -if MC accepted Naomi blowjob
         scene v15s38_5a
         with dissolve
 
