@@ -55,10 +55,10 @@ label v15s18d:
         scene v15s18d_5a # FPP. MC looking at Imre, Imre looking at the List, Imre slight smile, mouth open.
         with dissolve
 
+        imre "Oh! You actually did pretty well..."
+
         if len(v15_imre_checklist.get_completed()) == 8:
             $ grant_achievement("taskmaster")
-
-        imre "Oh! You actually did pretty well..."
 
         imre "I'm impressed."
 

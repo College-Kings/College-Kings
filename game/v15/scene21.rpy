@@ -1694,10 +1694,10 @@ label v15s21:
             ro "Oh, it's okay! Thank you. It was actually a gift that [name] and Nora gave to me before we left Europe."
 
             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ chloeSus += 1
+
                 scene v15s21_7v # FPP. same as v15s21_7s Chloe raises an eyebrow, still slightly angry, still lookng at mc, mouth is still closed
                 with dissolve
-
-                $ chloeSus += 1
 
                 cl "Oh, really?"
 

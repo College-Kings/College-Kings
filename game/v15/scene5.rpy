@@ -162,7 +162,6 @@ label v15s5:
 
             scene v15s5_5 # TPP. Show MC walking out of the classroom, Ms. Rose in the background leaning against the desk looking at him leave, both slight smile, mouth closed.
             with dissolve
-
             play sound "sounds/doorclose.mp3"
             pause 0.75
 

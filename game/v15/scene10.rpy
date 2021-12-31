@@ -980,8 +980,8 @@ label v15s10:
 
             female_buyer "I can't overlook the things you've lied about, but I do love the idea of the bubblegum smell when I'm driving. So, this is what I can offer..."
 
-            scene v15s10_femalebuyer_4h # FPP. Same as v15s10_femalebuyer_4g, The lady holding up cash, looking at MC, slight smile, mouth closed.
-            with dissolve # -[CarTotal] pops up on screen based on the pay out sums(if lied, total they can receive is minus200$ off the car's worth price)- # Third times a charm. Hi Oscar :D
+            scene v15s10_femalebuyer_4h # FPP. Same as v15s10_femalebuyer_4g, The lady holding up cash, looking at MC, slight smile, mouth closed. # -[CarTotal] pops up on screen based on the pay out sums(if lied, total they can receive is minus200$ off the car's worth price)- # Third times a charm. Hi Oscar :D
+            with dissolve
 
             menu:
                 "Refuse offer":

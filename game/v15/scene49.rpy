@@ -20,12 +20,12 @@ label v15s49:
     pause 0.75 
 
     scene v15s49_4 # TPP. MC starting to walk towards his Frat house, slight smile, mouth closed.
-    with dissolve  
+    with dissolve
 
     pause 0.75
 
     scene v15s49_4a # TPP. MC concerned, mouth closed
-    with dissolve 
+    with dissolve
 
     ri "What the fuck? Leave me alone!"
 
@@ -47,12 +47,12 @@ label v15s49:
     pause 0.75 
 
     scene v15s49_6 # TPP. Show MC walking over to Tom and Riley, MC angry, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v15s49_7 # TPP. Close up of Tom, Tom looking at Riley, Tom angry, mouth open.
-    with dissolve 
+    with dissolve
 
     tom "Listen here, you little bitch... I know you had something to do with why Charli got expelled!"
 
@@ -117,7 +117,7 @@ label v15s49:
 
     play sound "sounds/thud.mp3"
     scene v15s49_11 # TPP. Show Riley hitting the ground, angry, mouth closed.
-    with dissolve 
+    with dissolve
 
     menu:
         "Attack Tom":
@@ -139,7 +139,7 @@ label v15s49:
 
             if riley.relationship.value >= Relationship.FWB.value:
                 scene v15s49_14 # FPP. Show MC on his knee checking on Riley, MC looking at Riley, Riley looking at MC, Riley angry, mouth closed.
-                with dissolve  
+                with dissolve
 
                 u "What the hell is going on?! Are you okay?"
 
@@ -160,7 +160,7 @@ label v15s49:
                 ri "[name]? I'm... *Grunts* I'm fine."
 
                 scene v15s49_15 # TPP. Show MC helping up Riley, both angry, mouth closed.
-                with dissolve 
+                with dissolve
 
                 pause 0.75 
 
@@ -309,5 +309,7 @@ label v15s49:
 
     scene v15s49_18 # TPP. A nice cinematic kind of shot of MC's fist clenched and the rain dripping off of it.
     with dissolve
+
+    pause 0.75
 
     jump v16s1

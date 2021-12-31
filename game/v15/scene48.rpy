@@ -618,20 +618,28 @@ label v15s48:
 
                 no "Haha! You're kidding."
 
-                scene v15s48_18
-                with dissolve
-
                 if "chris_amber" in freeroam13 and "chris_penelope" in freeroam14:
+                    scene v15s48_18
+                    with dissolve
+
                     u "Nope. In fact, I had to save both of them from him."
+
                 else:
+                    scene v15s48_18
+                    with dissolve
+
                     u "Nope. In fact, I had to save them from him."
 
-                scene v15s48_18a
-                with dissolve
-
                 if "chris_amber" in freeroam13 and "chris_penelope" in freeroam14:
+                    scene v15s48_18a
+                    with dissolve
+
                     no "*Laughs* Both?! Oh my god..."
+
                 else:
+                    scene v15s48_18a
+                    with dissolve
+
                     no "*Laughs* Oh my god..."
 
                 no "Okay, fine. *Giggles* I don't feel guilty anymore."

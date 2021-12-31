@@ -534,9 +534,7 @@ label v15s1:
 
     scene v15s1_5c
     with dissolve
-
     play sound "sounds/vibrate.mp3"
-
     u "(The hell?)"
 
 # -MC checks his texts and there's a message from Lauren-
@@ -580,7 +578,6 @@ label v15s1:
 
     scene v15s1_6 # FPP. Show just a black screen (MC's POV, eyes closed). Phone alarm sounds
     with dissolve
-
     play sound "sounds/phonealarm.mp3"
     u "*Groans* (No time for snoozing today... Need to get up.)"
 
