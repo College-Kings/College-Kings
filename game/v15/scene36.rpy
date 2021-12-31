@@ -53,9 +53,11 @@ label v15s36:
     with dissolve
 
     menu:
-        "Maybe":
+        "Oh no, I wasn't":
             $ add_point(KCT.BRO)
-            u "Erm, maybe?"
+            u "Oh no, I wasn't. Actually I wanted to know what your favorite question from tonight was."
+
+            jump v15s36_dontask
 
         "I'm really curious":
             $ add_point(KCT.BOYFRIEND)
@@ -87,6 +89,8 @@ label v15s36:
         u "Yeah, I get that. No worries..."
 
         u "So, what was your favorite question from the game tonight?"
+
+        label v15s36_dontask:
 
         scene v15s36_5 # FPP. MC and Autumn further down the street, new set of houses in the background, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth open.
         with dissolve
@@ -139,7 +143,7 @@ label v15s36:
 
             pause 0.75
 
-        elif v15_lindsey_gamenight: # Placeholder for the game being would you rather.
+        else:
             scene v15s36_5
             with dissolve
 
@@ -492,4 +496,4 @@ label v15s36:
 
         pause 0.75
 
-        jump v15s37
+    jump v15s37

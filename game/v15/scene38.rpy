@@ -189,7 +189,7 @@ label v15s38:
         scene v15s38_5b
         with dissolve
 
-        u "Hey, you. It feels like it's been forever since we last saw each other... *Chuckles*"
+        u "Hey, you. It feels like it's been forever since we last saw each other..."
 
         scene v15s38_5c
         with dissolve
@@ -199,7 +199,7 @@ label v15s38:
         scene v15s38_5b
         with dissolve
 
-        u "Ain't that the truth. *Giggles*"
+        u "Ain't that the truth. *Chuckles*"
 
     # -Regardless-
     if not v15_lindsey_inviteseb: # -if Grayson
