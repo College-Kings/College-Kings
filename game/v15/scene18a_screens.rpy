@@ -30,10 +30,10 @@ screen v15s18a_bathroom():
         pos (749, 525)
 
 
-screen v15s18a_dining_table():
+screen v15s18a_bar():
     tag free_roam
 
-    default image_path = "images/v15/Scene 18a/Free Roam Screens/dining_table/"
+    default image_path = "images/v15/Scene 18a/Free Roam Screens/bar/"
 
     # Backgrounds
     add image_path + "v15s18a_bar_1.webp"
