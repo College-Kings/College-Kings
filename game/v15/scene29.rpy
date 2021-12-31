@@ -5,9 +5,6 @@
 # Render Count: 5 Unique, 14 total
 
 label v15s29:
-    if False: #making sure it shows on Lint
-        scene emily_message_29
-
     scene v15s29_1 # TPP. MC walks into his wolve's bedroom, slight smile, mouth closed
     with dissolve
 
@@ -48,7 +45,7 @@ label v15s29:
         
         pause 1.5
 
-        $ emily.messenger.newImgMessage("images/v15/Scene 29/emily_message_29.webp", queue=False) #Standing next to a full bathtub, in sexy *new* lingerie
+        $ emily.messenger.newImgMessage("images/v15/Scene 29/v15s29_emily_lingerie.webp", queue=False) #Standing next to a full bathtub, in sexy *new* lingerie
         $ emily.messenger.newMessage("About to have a late night bath, thinking of you.", queue=False)
         $ emily.messenger.addReply("Oh, yeah?", func=None)
         $ emily.messenger.addReply("Let me see? ;)", func=None)
