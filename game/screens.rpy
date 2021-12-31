@@ -401,7 +401,7 @@ screen main_menu():
     imagebutton:
         idle image_path + "path_builder_idle.webp"
         hover Transform(image_path + "path_builder_hover.webp", pos=(-20, -20))
-        action ShowMenu("path_builder_spoiler")
+        action ShowMenu("path_builder_alert")
         pos (1454, 811)
 
     # Play Now

@@ -4,6 +4,9 @@ image splashtwo = "images/splash2.webp"
 image splashthree = "images/splash 3.webp"
 
 # GUI
+## Solids
+image darker_80 = Solid("#000c")
+
 ## Settings
 image settings_button_idle = Frame("gui/settings/button_idle.webp", 24, 6)
 image settings_button_selected = Frame("gui/settings/button_selected.webp", 24, 6)
