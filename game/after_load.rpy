@@ -806,68 +806,68 @@ label after_load:
         except NameError: kiwii_firstTime = False
 
         try:
-            if v13s40fromgame and "v13_chloe" not in sceneList: sceneList.add("v13_chloe")
+            if v13s40fromgame: sceneList.add("v13_chloe")
         except NameError: pass
         try:
-            if v14s51_closet and "closet" not in freeroam12: freeroam12.add("closet")
+            if v14s51_closet: freeroam12.add("closet")
         except NameError: pass
         try:
-            if v14s51_purse and "purse" not in freeroam12: freeroam12.add("purse")
+            if v14s51_purse: freeroam12.add("purse")
         except NameError: pass
         try:
-            if v14s51_take_cash_large and "cash_large" not in freeroam12stolen: freeroam12stolen.add("cash_large")
+            if v14s51_take_cash_large: freeroam12stolen.add("cash_large")
         except NameError: pass
         try:
-            if v14s51_take_cash_small and "cash_small" not in freeroam12stolen: freeroam12stolen.add("cash_small")
+            if v14s51_take_cash_small: freeroam12stolen.add("cash_small")
         except NameError: pass
         try:
-            if v14s51_take_diary and "diary" not in freeroam12stolen: freeroam12stolen.add("diary")
+            if v14s51_take_diary: freeroam12stolen.add("diary")
         except NameError: pass
         
         try:
-            if rileysex and "v7_riley" not in sceneList: sceneList.add("v7_riley")
+            if rileysex: sceneList.add("v7_riley")
         except NameError: pass
         try:
-            if v8_riley_lewd_ending and "v8_riley" not in sceneList: sceneList.add("v8_riley")
+            if v8_riley_lewd_ending: sceneList.add("v8_riley")
         except NameError: pass
         try:
-            if v11_aubrey_sex and "v11_aubrey" not in sceneList: sceneList.add("v11_aubrey")
+            if v11_aubrey_sex: sceneList.add("v11_aubrey")
         except NameError: pass
         try:
-            if v11_fucked_candy and "v11_candy" not in sceneList: sceneList.add("v11_candy")
+            if v11_fucked_candy: sceneList.add("v11_candy")
         except NameError: pass
         try:
-            if v11_msrose_scene and "v11_rose" not in sceneList: sceneList.add("v11_rose")
+            if v11_msrose_scene: sceneList.add("v11_rose")
         except NameError: pass
         try:
-            if v12_lauren_sex and "v12_lauren" not in sceneList: sceneList.add("v12_lauren")
+            if v12_lauren_sex: sceneList.add("v12_lauren")
         except NameError: pass
         try:
-            if v12_lindsey_sex and "v12_lindsey" not in sceneList: sceneList.add("v12_lindsey")
+            if v12_lindsey_sex: sceneList.add("v12_lindsey")
         except NameError: pass
         try:
-            if v12_nora_sex and "v12_nora" not in sceneList: sceneList.add("v12_nora")
+            if v12_nora_sex: sceneList.add("v12_nora")
         except NameError: pass
         try:
-            if v12_msrose_sex and "v12_rose" not in sceneList: sceneList.add("v12_rose")
+            if v12_msrose_sex: sceneList.add("v12_rose")
         except NameError: pass
         try:
-            if v13_emilysex and "v13_emily" not in sceneList: sceneList.add("v13_emily")
+            if v13_emilysex: sceneList.add("v13_emily")
         except NameError: pass
         try:
-            if v13_emmysex and "v13_emmy" not in sceneList: sceneList.add("v13_emmy")
+            if v13_emmysex: sceneList.add("v13_emmy")
         except NameError: pass
         try:
-            if v13_FirstThreesome and "v14_threesome" not in sceneList: sceneList.add("v14_threesome")
+            if v13_FirstThreesome: sceneList.add("v14_threesome")
         except NameError: pass
         try:
-            if v14_amber_sex and "v14_amber" not in sceneList: sceneList.add("v14_amber")
+            if v14_amber_sex: sceneList.add("v14_amber")
         except NameError: pass
         try:
-            if v14_jenny_sex and "v14_jenny" not in sceneList: sceneList.add("v14_jenny")
+            if v14_jenny_sex: sceneList.add("v14_jenny")
         except NameError: pass
         try:
-            if v14_samantha_sex and "v14_samantha" not in sceneList: sceneList.add("v14_samantha")
+            if v14_samantha_sex: sceneList.add("v14_samantha")
         except NameError: pass
 
 
