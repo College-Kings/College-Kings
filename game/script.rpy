@@ -4,7 +4,7 @@ define config.console = True
 define config_debug = False
 define config_censored = False
 
-define config.version = "14.9.0{}".format('s' if config.enable_steam else "")
+define config.version = "14.9.0{} - ({})".format('s' if config.enable_steam else "", date.today())
 
 define config.steam_appid = 1463120
 
