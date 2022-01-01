@@ -161,7 +161,7 @@ screen path_builder_alert():
         xysize (742, 356)
         pos (587, 364)
 
-        text "THE PATH BUILDER CONTAINS SPOILER FOR THE STORY OF THE GAME. ARE YOU SURE YOU WANT TO CONTINUE?":
+        text "THE PATH BUILDER CONTAINS SPOILERS FOR THE STORY OF THE GAME. ARE YOU SURE YOU WANT TO CONTINUE?":
             xsize 512
             xalign 0.5
             ypos 86

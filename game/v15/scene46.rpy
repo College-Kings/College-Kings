@@ -254,7 +254,7 @@ label v15s46:
                                 am "Ding, ding, ding! We have a winner. *Chuckles*"
 
     else:
-        if False: #need to confirm length of clues set
+        if len(v15_nora_clues) == 9 and len(v15_nora_locations) == 6:
             $ grant_achievement("just_one_more_thing")
 
         scene v15s46_3a

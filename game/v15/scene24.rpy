@@ -1484,7 +1484,6 @@ label v15s24:
 
         li "Well, good luck with whatever it is."
 
-        $ grant_achievement("teetotal")
         li "I need to go practice making mocktails, ha. Thanks again for trying, [name]."
         li "At least we saved some money."
 

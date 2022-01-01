@@ -192,14 +192,13 @@ init python:
     Achievement("honey_bear", "Lick Ms. Rose's pancakes") #s15
     Achievement("horn_dog", "Peek on Autumn") #s4
 
-    Achievement("just_one_more_thing", "Find all the clues and crack the case") #s46??
+    Achievement("just_one_more_thing", "Find all the clues and crack the case") #s46
     Achievement("karen", "Where is your manager?!") #s24
     Achievement("mmmm_donut", "Eat the donut") #s13
 
     Achievement("polycurious", "Monogamy is overrated") #s26
     Achievement("pumpkin_season", "You really like that pumpkin, huh?") #s18
-    Achievement("taskmaster", "Clear the tasklist") #s18
+    Achievement("taskmaster", "Clear the checklist") #s18
 
-    Achievement("teetotal", "Party without alcohol") #s24-25
     Achievement("too_much_information", "Check your meeting notes often") #s21
     Achievement("what_goes_around", "Aubrey tastes her own medicine at the wedding") #s33
