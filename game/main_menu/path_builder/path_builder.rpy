@@ -19,7 +19,7 @@ init python:
             else: self.actions = [actions]
 
             pb_item.append(self)
-            
+
 
     def get_catagory(step):
         for catagory in PathBuilderCatagories:
@@ -171,12 +171,6 @@ screen path_builder(catagory_step=1):
                     action Show("pb_select_homecoming_date")
                 else:
                     action Start(pb_start_location)
-
-    vbox:
-        for item in items:
-            text item.name
-            for a in item.actions:
-                text a.field + ": " + str(getattr(a.object, a.field))
 
 
 screen pb_select_homecoming_date():
