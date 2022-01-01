@@ -160,7 +160,7 @@ label v15s44_continue:
 
             pause 0.75
         
-    play sound "sounds/call.mp3"
+    play sound "sounds/calling.mp3"
 
     scene v15s44_3j # FPP. Same as v15s44_3c, Amber slight smile, mouth open, looking down at her phone
     with dissolve
@@ -172,6 +172,8 @@ label v15s44_continue:
 
     u "How kind."
 
+    stop sound
+    play sound "sounds/rejectcall.mp3"
     scene v15s44_8 # TPP. Amber and MC standing next to each other, Amber holding out the phone since they are on speaker, both slight smiles, Amber mouth open, MC mouth closed // Penelope sitting in the cafe, talking on the phone, show her laptop (not the screen), Penelope slight smile, mouth closed
     with dissolve
 
