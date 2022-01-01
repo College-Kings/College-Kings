@@ -2,7 +2,7 @@ python early:
     old_files = {
         "customCharacters.rpy",
         "path_builder.rpy",
-        "sceneGallery.rpy",
+        "sceneGallery/sceneGallery.rpy",
         "bugTesting/bugTesting_Overwrite.rpy",
         "bugTesting/bugTesting_typoNotes.rpy",
         "bugTesting/bugTesting_cheats.rpy",
