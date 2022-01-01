@@ -869,6 +869,9 @@ label after_load:
         try:
             if v14_samantha_sex and "v14_samantha" not in sceneList: sceneList.add("v14_samantha")
         except NameError: pass
+        try:
+            if v7_seencrowning and "crowning" not in freeroam4: freeroam4.add("crowning")
+        except NameError: pass
 
 
         # v12 Renpy Fixes:

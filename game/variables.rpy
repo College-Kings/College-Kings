@@ -148,7 +148,6 @@ default v7_emily_bowling = False
 default v7_visited_shelter = False
 default walkedRileyHome = False
 default wolvesTasks = set()
-default v7_seencrowning = False
 
 # 8.0
 default amberSexOfferAtJoshs = False
