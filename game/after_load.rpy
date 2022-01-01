@@ -15,7 +15,7 @@ python early:
         "v14/chicks_presidency_race/planning_board.rpy"
     }
 
-    restart_game = False
+    restart_game = False # NEVER CHANGE
 
     for rpy_file in old_files:
         rpyc_file = rpy_file + "c"
@@ -31,9 +31,12 @@ python early:
             os.remove(rpyc_file_path)
 
     if restart_game:
-        # try:
-        # subprocess.call([os.path.join(config.basedir, )])
-        raise Exception("Deleting old files please restart game.")
+        try:
+            import subprocess
+            subprocess.call([os.path.join(config.basedir, "CollegeKings.exe")])
+            renpy.quit()
+        except WindowsError:
+            raise Exception("Deleting old files please RESTART GAME.")
 
 
 init 100 python:
