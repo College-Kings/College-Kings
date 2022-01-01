@@ -76,75 +76,75 @@ init python:
         return True
         
 
-init 1:
-    define PB_WOLVES = PathBuilderItem(
-        PathBuilderCatagories.FRATERNITY,
-        "Wolves",
-        [
-            (set_variable, "path_builder", True),
-            (set_variable, "joinwolves", True)
-        ])
-    define PB_APES = PathBuilderItem(
-        PathBuilderCatagories.FRATERNITY,
-        "Apes",
-        [
-            (set_variable, "path_builder", True),
-            (set_variable, "joinwolves", False)
-        ])
+init offset = 100
+define PB_WOLVES = PathBuilderItem(
+    PathBuilderCatagories.FRATERNITY,
+    "Wolves",
+    [
+        (set_variable, "path_builder", True),
+        (set_variable, "joinwolves", True)
+    ])
+define PB_APES = PathBuilderItem(
+    PathBuilderCatagories.FRATERNITY,
+    "Apes",
+    [
+        (set_variable, "path_builder", True),
+        (set_variable, "joinwolves", False)
+    ])
 
-    define PB_LOYAL = PathBuilderItem(
-        PathBuilderCatagories.KCT,
-        "Loyal",
-        [
-            (set_variable, "kct", "loyal"),
-            (set_variable, "bro", 2),
-            (set_variable, "boyfriend", 2),
-            (set_variable, "troublemaker", 1)
-        ])
-    define PB_POPULAR = PathBuilderItem(
-        PathBuilderCatagories.KCT,
-        "Popular",
-        [
-            (set_variable, "kct", "popular"),
-            (set_variable, "bro", 2),
-            (set_variable, "boyfriend", 1),
-            (set_variable, "troublemaker", 2)
-        ])
-    define PB_CONFIDENT = PathBuilderItem(
-        PathBuilderCatagories.KCT,
-        "Confident",
-        [
-            (set_variable, "kct", "confident"),
-            (set_variable, "bro", 1),
-            (set_variable, "boyfriend", 2),
-            (set_variable, "troublemaker", 2)
-        ])
+define PB_LOYAL = PathBuilderItem(
+    PathBuilderCatagories.KCT,
+    "Loyal",
+    [
+        (set_variable, "kct", "loyal"),
+        (set_variable, "bro", 2),
+        (set_variable, "boyfriend", 2),
+        (set_variable, "troublemaker", 1)
+    ])
+define PB_POPULAR = PathBuilderItem(
+    PathBuilderCatagories.KCT,
+    "Popular",
+    [
+        (set_variable, "kct", "popular"),
+        (set_variable, "bro", 2),
+        (set_variable, "boyfriend", 1),
+        (set_variable, "troublemaker", 2)
+    ])
+define PB_CONFIDENT = PathBuilderItem(
+    PathBuilderCatagories.KCT,
+    "Confident",
+    [
+        (set_variable, "kct", "confident"),
+        (set_variable, "bro", 1),
+        (set_variable, "boyfriend", 2),
+        (set_variable, "troublemaker", 2)
+    ])
 
-    define PB_CHLOE = PathBuilderItem(PathBuilderCatagories.GIRL, "Chloe",
-        [
-            (toggle_field, "chloe", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND),
-            (toggle_variable, "ending", "chloe", "riley"),
-            (toggle_variable, "hcGirl", "chloe", "alone")
-        ])
-    define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", (toggle_field, "nora", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
-    define PB_AUBREY = PathBuilderItem(PathBuilderCatagories.GIRL, "Aubrey", (toggle_field, "aubrey", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
-    define PB_RILEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Riley", (toggle_field, "riley", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
-    define PB_LAUREN = PathBuilderItem(PathBuilderCatagories.GIRL, "Lauren", (toggle_field, "lauren", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
-    define PB_PENELOPE = PathBuilderItem(PathBuilderCatagories.GIRL, "Penelope", [
-            (toggle_field, "penelope", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND),
-            (toggle_variable, "v11_pen_goes_europe")
-        ])
-    define PB_AMBER = PathBuilderItem(PathBuilderCatagories.GIRL, "Amber", (toggle_field, "amber", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
-    define PB_LINDSEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Lindsey", (toggle_field, "lindsey", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
-    define PB_MS_ROSE = PathBuilderItem(PathBuilderCatagories.GIRL, "Ms Rose", (toggle_field, "ms_rose", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
-    define PB_SAMANTHA = PathBuilderItem(PathBuilderCatagories.GIRL, "Samantha", (toggle_field, "samantha", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
-    define PB_JENNY = PathBuilderItem(PathBuilderCatagories.GIRL, "Jenny", (toggle_field, "jenny", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
-    define PB_EMILY = PathBuilderItem(PathBuilderCatagories.GIRL, "Emily", (toggle_field, "emily", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+define PB_CHLOE = PathBuilderItem(PathBuilderCatagories.GIRL, "Chloe",
+    [
+        (toggle_field, "chloe", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND),
+        (toggle_variable, "ending", "chloe", "riley"),
+        (toggle_variable, "hcGirl", "chloe", "alone")
+    ])
+define PB_NORA = PathBuilderItem(PathBuilderCatagories.GIRL, "Nora", (toggle_field, "nora", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+define PB_AUBREY = PathBuilderItem(PathBuilderCatagories.GIRL, "Aubrey", (toggle_field, "aubrey", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+define PB_RILEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Riley", (toggle_field, "riley", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+define PB_LAUREN = PathBuilderItem(PathBuilderCatagories.GIRL, "Lauren", (toggle_field, "lauren", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+define PB_PENELOPE = PathBuilderItem(PathBuilderCatagories.GIRL, "Penelope", [
+        (toggle_field, "penelope", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND),
+        (toggle_variable, "v11_pen_goes_europe")
+    ])
+define PB_AMBER = PathBuilderItem(PathBuilderCatagories.GIRL, "Amber", (toggle_field, "amber", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+define PB_LINDSEY = PathBuilderItem(PathBuilderCatagories.GIRL, "Lindsey", (toggle_field, "lindsey", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+define PB_MS_ROSE = PathBuilderItem(PathBuilderCatagories.GIRL, "Ms Rose", (toggle_field, "ms_rose", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+define PB_SAMANTHA = PathBuilderItem(PathBuilderCatagories.GIRL, "Samantha", (toggle_field, "samantha", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+define PB_JENNY = PathBuilderItem(PathBuilderCatagories.GIRL, "Jenny", (toggle_field, "jenny", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+define PB_EMILY = PathBuilderItem(PathBuilderCatagories.GIRL, "Emily", (toggle_field, "emily", "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
 
-    define PB_ACT_1 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 1 Start", (set_variable, "pb_start_location", "start"))
-    define PB_HOMECOMING = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 2 Start", (set_variable, "pb_start_location", "v7_homecoming"))
-    define PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 3 Start", (set_variable, "pb_start_location", "v11_start"))
-    define PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", (set_variable, "pb_start_location", "v14_start"))
+define PB_ACT_1 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 1 Start", (set_variable, "pb_start_location", "start"))
+define PB_HOMECOMING = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 2 Start", (set_variable, "pb_start_location", "v7_homecoming"))
+define PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 3 Start", (set_variable, "pb_start_location", "v11_start"))
+define PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", (set_variable, "pb_start_location", "v14_start"))
 
 
 screen path_builder_alert():
