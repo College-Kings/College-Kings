@@ -1091,7 +1091,6 @@ label v15s22:
             jump v15dean_unsuccessful
 
     elif v15s22_meeting_points >= 5: # -if no signature, but high dean support
-
         scene v15s22_6q # FPP. same as v15s22_6h The Dean has a full smile, still looking at Chloe, mouth is still open
         with dissolve
 
