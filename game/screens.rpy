@@ -200,6 +200,8 @@ style input:
     color "#ffffff"
     outlines [ (2, "#000000") ]
 
+style input_window is say_window
+
 
 ## Choice screen ###############################################################
 ##
