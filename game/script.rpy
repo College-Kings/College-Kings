@@ -1,4 +1,4 @@
-define config.enable_steam = False
+define config.enable_steam = True
 define config.developer = True
 define config.console = True
 define config_debug = False
@@ -36,7 +36,6 @@ label splashscreen:
 
 # The game starts here.
 label start:
-    $ raise Exception("")
     # Get Animation/Transform List
     show no_hard_feelings at achievementShow
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")

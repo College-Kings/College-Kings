@@ -1,20 +1,25 @@
 python early:
-    def get_git_sha(act):
-        import requests
+    def get_short_git_sha():
+        import os
+        import subprocess
 
-        auth_string = "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"
+        cwd = os.getcwd()
+        os.chdir(config.basedir)
 
-        headers = {"Authorization": "token {}".format(auth_string)}
-        url = "https://api.github.com/repos/College-Kings/College-Kings/branches/{}".format("main" if act == "DEVELOPMENT" else "act-" + act)
+        try:
+            short_hash = subprocess.check_output([ "git", "rev-parse", "--short", "HEAD"]).strip()
+            with open(os.path.join(config.basedir, "game", "version.txt"), "w") as file:
+                file.write(str(short_hash))
+        except subprocess.CalledProcessError:
+            with open(os.path.join(config.basedir, "game", "version.txt"), "r") as file:
+                short_hash = file.read().strip()
 
-        response = requests.get(
-            "https://api.github.com/repos/College-Kings/College-Kings/branches/main",
-            headers=headers,
-        )
-        return response.json()["commit"]["sha"]
+        os.chdir(cwd)
+        return short_hash
 
 
     def get_version(version):
+        if version.endswith('s'): version = version[:-1]
         major, minor, patch = map(lambda x: int(x), version.split("."))
         act_1 = 7
         if minor == 9:
@@ -22,4 +27,4 @@ python early:
         else:
             act = max(-((major - act_1) // -3) + 1, 1)
 
-        return "{} (Act: {}) (SHA: {})".format(version, act, get_git_sha(act))
+        return "{} (Act: {}) (SHA: {})".format(version, act, get_short_git_sha())
