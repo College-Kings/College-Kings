@@ -370,7 +370,7 @@ default v15_blame_nora = False ### blame_chris = (v13_imre_disloyal and not v15_
 default v15_imre_checklist = Checklist()
 default v15_lauren_gift = 0 #1 = gift card, 2 = emerald bracelet, 3 = ruby necklace, 4 = white horse, 5 = brown horse
 default v15_mad_at_ms_rose = False
-default v15_meeting_points = 0
+default v15s21_meeting_points = 0
 default v15_nora_clues = set() #detective clues: be_alone, loves_nature, hates_camping, likes_ex, runs_dad, hates_dad, close_rose, visited_aunt, aunt_cabin
 default v15_nora_locations = set() #detective locations: dad, ms_rose, aunt, cabin, camping, ex
 default v15_notes_clicks = 0 #placeholder for clicks in the journal
@@ -408,3 +408,4 @@ default v15s18_pumpkin = 0
 default v12_followed_nora = False
 default v15bring_up_chloe = False
 default v15say_nothing = False
+default v15s22_meeting_points = 0

@@ -16,7 +16,7 @@ screen v15_teacher_brief(key):
     default teachers = {
         "dean": {
             "name": "Dean Harrison",
-            "profile_picture": "",
+            "profile_picture": dean.profile_picture,
             "description": "The Dean is super serious. Respect her authority.",
             "loves": ["Respect her position.", "It's not an easy path to becoming a College Dean.", "Very proud and protective of SVC and its reputation."],
             "hates": ["Unprofessionalism.", "Disorganisation."],
