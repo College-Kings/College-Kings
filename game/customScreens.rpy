@@ -143,14 +143,9 @@ screen kiwiiPopup():
 screen fightPopup(fightMove):
     modal True
     
-    use endfrTemplate:
-
-        text "Congratulations! You have learned a new fighting move: {b}[fightMove]{/b}.":
-            style "endfree"
-            xalign 0.5
+    use alert_template("Congratulations! You have learned a new fighting move: {b}[fightMove]{/b}."):
 
         textbutton "OK":
-            align (0.5, 1.0)
             action Return()
 
 

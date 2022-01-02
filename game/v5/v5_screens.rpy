@@ -343,28 +343,6 @@ screen adamattack():
     use fight_overlay
 
 
-screen trolleyskip():
-    
-    use endfrTemplate:
-
-        text "The trolley problem involves hypothetical people and/or animals being run over by a train and can be a lot to handle. The following scene might make you feel uncomfortable or uneasy. If you prefer to skip the trolley problem scene, you can click skip right now.":
-            style "endfree"
-            size 30
-            xalign 0.5
-            yoffset -10
-
-        hbox:
-            align (0.5, 1.0)
-            yoffset 10
-            spacing 150
-
-            textbutton "Continue":
-                action Jump("continuetrolley")
-
-            textbutton "Skip":
-                action Jump("skiptrolley")
-
-
 screen trolleyProblem(option1, option2):
     add "images/v5/trolleylever.webp"
 

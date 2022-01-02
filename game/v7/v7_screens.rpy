@@ -256,35 +256,35 @@ screen fr4dancefloor():
             pos (645, 30)
             idle "images/v7/fr4dancefloorchloe.webp"
             hover "images/v7/fr4dancefloorchloehover.webp"
-            action Show("confirm", "Are you sure you want to end the free roam with Chloe?", [Hide("confirm"), Jump("fr4chloedate")])
+            action Show("confirm", message="Are you sure you want to end the free roam with Chloe?", yes_action=[Hide("confirm"), Jump("fr4chloedate")])
 
     elif hcGirl == "emily":
         imagebutton:
             xpos 615
             idle "images/v7/fr4danceflooremily.webp"
             hover "images/v7/fr4danceflooremilyhover.webp"
-            action Show("confirm", "Are you sure you want to end the free roam with Emily?", [Hide("confirm"), Jump("fr4emilydate")])
+            action Show("confirm", message="Are you sure you want to end the free roam with Emily?", yes_action=[Hide("confirm"), Jump("fr4emilydate")])
 
     elif hcGirl == "lauren":
         imagebutton:
             xpos 617
             idle "images/v7/fr4dancefloorlauren.webp"
             hover "images/v7/fr4dancefloorlaurenhover.webp"
-            action Show("confirm", "Are you sure you want to end the free roam with Lauren?", [Hide("confirm"), Jump("fr4laurendate")])
+            action Show("confirm", message="Are you sure you want to end the free roam with Lauren?", yes_action=[Hide("confirm"), Jump("fr4laurendate")])
 
     elif hcGirl == "penelope":
         imagebutton:
             xpos 655
             idle "images/v7/fr4dancefloorpenelope.webp"
             hover "images/v7/fr4dancefloorpenelopehover.webp"
-            action Show("confirm", "Are you sure you want to end the free roam with Penelope?", [Hide("confirm"), Jump("fr4penelopedate")])
+            action Show("confirm", message="Are you sure you want to end the free roam with Penelope?", yes_action=[Hide("confirm"), Jump("fr4penelopedate")])
 
     elif hcGirl == "riley":
         imagebutton:
             pos (675, 25)
             idle "images/v7/fr4dancefloorriley.webp"
             hover "images/v7/fr4dancefloorrileyhover.webp"
-            action Show("confirm", "Are you sure you want to end the free roam with Riley?", [Hide("confirm"), Jump("fr4rileydate")])
+            action Show("confirm", message="Are you sure you want to end the free roam with Riley?", yes_action=[Hide("confirm"), Jump("fr4rileydate")])
 
     imagebutton:
         align (0.5, 1.0)
@@ -432,7 +432,7 @@ screen fr4gymentrance():
             pos (365, 318)
             idle "images/v7/fr4gymentrancerileyidle.webp"
             hover "images/v7/fr4gymentrancerileyhover.webp"
-            action Show("confirm", "Are you sure you want to end the free roam with Riley?", [Hide("confirm"), Jump("fr4riley2")])
+            action Show("confirm", message="Are you sure you want to end the free roam with Riley?", yes_action=[Hide("confirm"), Jump("fr4riley2")])
 
     if "nora" in freeroam4 and not "nora2" in freeroam4:
         imagebutton:
@@ -526,7 +526,7 @@ screen fr4hallway():
             idle "images/v7/fr4hallwaychloeidle.webp"
             hover "images/v7/fr4hallwaychloehover.webp"
             if not "chloe2" in freeroam4:
-                action Show("confirm", "Are you sure you want to end the free roam with Chloe?", [Hide("confirm"), Jump("fr4chloe2")])
+                action Show("confirm", message="Are you sure you want to end the free roam with Chloe?", yes_action=[Hide("confirm"), Jump("fr4chloe2")])
             else:
                 action Jump("fr4chloe3")
 
@@ -573,7 +573,7 @@ screen fr4hallwaycorner():
         idle "images/v7/fr4hallwaycornerdoor.webp"
         hover "images/v7/fr4hallwaycornerdoorhover.webp"
         if "chloe" in freeroam4 and not preventgrayson:
-            action Show("confirm", "Are you sure you want to end the free roam with Chloe?", [Hide("confirm"), Jump("fr4lockerroomchloe")])
+            action Show("confirm", message="Are you sure you want to end the free roam with Chloe?", yes_action=[Hide("confirm"), Jump("fr4lockerroomchloe")])
         else:
             action Jump("fr4lockerroom")
 

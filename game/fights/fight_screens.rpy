@@ -1,24 +1,3 @@
-screen fight_tutorialPopup():
-    tag tag_fight
-
-    use endfrTemplate():
-        text "Would you like to play the fighting tutorial?":
-            style "endfree"
-            xalign 0.5
-
-        hbox:
-            align (0.5, 1.0)
-            spacing 200
-
-            textbutton "Yes":
-                text_hover_color "#FFD166"
-                action [SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")]
-
-            textbutton "No":
-                text_hover_color "#FFD166"
-                action [SetVariable("fight_tutorial", False), Return()]
-
-
 screen fight_tutorial(highlight=None, stance="attack"):
     tag tag_fightTutorial
 
