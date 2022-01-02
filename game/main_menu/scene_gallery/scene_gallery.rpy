@@ -112,12 +112,12 @@ init python:
         SceneGallery("Angry with Ms. Rose", "images/v15/scene 15/v15s15_7f.webp", "15") # 15, Ms. Rose
         SceneGallery("The List (Riley)", "images/v15/scene 18a/v15s18ariley_14.webp", "18a") # 18a, Riley
         SceneGallery("The List (Amber)", "images/v15/scene 18a/v15s18aamber_9e.webp", "18a") # 18a, Amber
-        SceneGallery("The List (Aubrey)", "images/3hits.webp", "18c") # 18c, Aubrey
-        SceneGallery("The List (Autumn)", "images/3hits.webp", "18c") # 18c, Autumn
-        SceneGallery("The List (Penelope)", "images/3hits.webp", "18c") # 18c, Penelope
+        SceneGallery("The List (Aubrey)", "images/3 hits.webp", "18c") # 18c, Aubrey
+        SceneGallery("The List (Autumn)", "images/3 hits.webp", "18c") # 18c, Autumn
+        SceneGallery("The List (Penelope)", "images/3 hits.webp", "18c") # 18c, Penelope
         SceneGallery("Birthday treat", "images/v15/scene 18e/v15s18eend_6.webp", "18e"), # 18e, Lauren
-        SceneGallery("Fun at the wedding", "images/3hits.webp", "33"), # 33, Naomi
-        SceneGallery("Choosing Nora", "images/3hits.webp", "48"), # 48, Nora
+        SceneGallery("Fun at the wedding", "images/3 hits.webp", "33"), # 33, Naomi
+        SceneGallery("Choosing Nora", "images/3 hits.webp", "48"), # 48, Nora
 
 
 screen scene_gallery_spoiler():
@@ -189,7 +189,8 @@ screen scene_gallery():
     add image_path + "shadow.png" xalign 0.5 ypos 893
 
 
-style scene_gallery_text is olympus_mount_30
+style scene_gallery_text is olympus_mount_30:
+    size 25
 
 
 label scene_gallery_name_change:
