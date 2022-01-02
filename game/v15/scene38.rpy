@@ -748,7 +748,7 @@ label v15s38:
 
     menu:
         "Stop the questioning": # -if Stop the questioning (and helped Autumn with boxes at dog shelter and/or went to the protest with her in Act1, creates AutumnTrust)
-            if protest or AutumnLunchBreak: # Went to protest
+            if protest or v15_autumn_lunchbreak: # Went to protest
                 $ autumn.relationship = Relationship.TRUST
             
             u "Okay, I think that's enough questions for right now, haha."
