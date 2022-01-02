@@ -1027,7 +1027,7 @@ label v15s22:
 
             jump v15dean_successful
 
-        elif v15s22_meeting_points == 2 and kct == "popular": # if won signature and low dean support with kct popular
+        elif v15s22_meeting_points == 1 and kct == "popular": # if won signature and low dean support with kct popular
             call screen kct_popup
 
             scene v15s22_6
@@ -1042,7 +1042,7 @@ label v15s22:
 
             jump v15dean_successful
 
-        elif v15s22_meeting_points >= 2: # -if won signature and medium dean support
+        elif v15s22_meeting_points >= 1: # -if won signature and medium dean support
             scene v15s22_6h
             with dissolve
 
@@ -1155,10 +1155,10 @@ label v15s22:
 
         jump v15dean_successful
 
-    elif v15s22_meeting_points >= 2: # -if no signature, and medium/low dean support
+    elif v15s22_meeting_points >= 1: # -if no signature, and medium/low dean support
         if kct == "popular":
         
-            if v15s22_meeting_points == 2:
+            if v15s22_meeting_points == 1:
                 call screen kct_popup
         
             scene v15s22_6g
@@ -1500,7 +1500,7 @@ label v15s22:
 
     pause 0.75
 
-    if v15s22_meeting_points >= 2:
+    if v15s22_meeting_points >= 1:
         scene v15s22_2d
         with dissolve
 
