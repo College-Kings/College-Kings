@@ -18,6 +18,9 @@ image kct_choice_hint_background = Frame("gui/kct/background.png", 44, 6, 44, 0)
 image path_builder_button_idle = Frame("main_menu/path_builder/images/button_idle.webp", 24, 6)
 image path_builder_button_hover = Frame("main_menu/path_builder/images/button_hover.webp", 24, 6)
 
+## Scene Gallery
+image scene_gallery_bar_base = Frame("main_menu/scene_gallery/images/bar_base.png", 5, 10)
+
 ## Settings
 image settings_button_idle = Frame("gui/settings/button_idle.webp", 24, 6)
 image settings_button_selected = Frame("gui/settings/button_selected.webp", 24, 6)
