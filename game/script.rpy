@@ -1,4 +1,4 @@
-define config.enable_steam = True
+define config.enable_steam = False
 define config.developer = True
 define config.console = True
 define config_debug = False
