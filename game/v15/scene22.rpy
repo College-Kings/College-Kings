@@ -1404,6 +1404,13 @@ label v15s22:
 
         cl "I can't believe it... I worked so hard for this..."
 
+        if v15s21_meeting_points >= 1:
+            if v15_chloe_mrleesupport:
+                cl "We even got Mr. Lee's support. All that hard work... for nothing."
+                
+            else:
+                cl "We even got Ms. Rose's support. All that hard work... for nothing."
+
         scene v15s22_2j # FPP. same as v15s22_2i Chloe's mouth is closed, still looking at Mc, still a very sad expression
         with dissolve
 
