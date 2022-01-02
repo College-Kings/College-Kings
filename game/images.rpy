@@ -171,7 +171,7 @@ image polycurious = "images/achievements/v15/polycurious.webp"
 image pumpkin_season = "images/achievements/v15/pumpkin_season.webp"
 image taskmaster = "images/achievements/v15/taskmaster.webp"
 image too_much_information = "images/achievements/v15/too_much_information.webp"
-image what_goes_around = "images/v15/achievements/v15/what_goes_around.webp"
+image what_goes_around = "images/achievements/v15/what_goes_around.webp"
 
 # v1.0 - v2.0
 image s14 = "images/v1/s14.webp"
