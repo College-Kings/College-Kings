@@ -5,6 +5,13 @@ screen v15s18a_room():
     # add image_path + "v15s18a_room_3.webp"
     # add image_path + "v15s18a_room_4.webp"
 
+    # Aubrey (with Imre)
+    # imagebutton:
+    #     idle Transform("#0000", size=(323, 664))
+    #     hover image_path + "v15s18a_room_hover_aubrey.webp"
+    #     action NullAction()
+    #     pos (774, 66)
+
     # Aubrey
     # imagebutton:
     #     idle Transform("#0000", size=(403, 673))
@@ -12,48 +19,40 @@ screen v15s18a_room():
     #     action NullAction()
     #     pos (742, 57)
 
-    # Aubrey (with Imre)
-    # imagebutton:
-    #     idle Transform("#00ff0080", size=(315, 664))
-    #     hover image_path + "v15s18a_room_hover_aubrey2.webp"
-    #     action NullAction()
-    #     pos (774, 67)
-
     # Imre
     # imagebutton:
-    #     idle Transform("#00ff0080", size=(253, 429))
+    #     idle Transform("#0000", size=(253, 429))
     #     hover image_path + "v15s18a_room_hover_imre.webp"
     #     action NullAction()
-    #     pos (1043, 42)
+    #     pos (1039, 52)
 
     default image_path = "images/v15/Scene 18a/Free Roam Screens/room/"
 
-    if not "chris_amber" in freeroam13:
-        # Amber and Chris
+    if not "chris_amber" in freeroam13:  # Amber and Chris
         add image_path + "v15s18a_room_1.webp"
 
+        # Amber
         imagebutton:
-            idle Transform("#0000", size=(436, 679))
-            hover image_path + "v15s18a_room_hover_amber2.webp"
+            idle Transform("#0000", size=(389, 689))
+            hover image_path + "v15s18a_room_hover_amber.webp"
             action Jump("v15s18a_ChrisAmber")
-            pos (754, 44)
+            pos (755, 42)
 
         # Chris
         imagebutton:
-            idle Transform("#0000", size=(296, 468))
+            idle Transform("#0000", size=(307, 468))
             hover image_path + "v15s18a_room_hover_chris.webp"
             action Jump("v15s18a_ChrisAmber")
-            pos (1013, 50)
+            pos (1005, 59)
     
-    else:
-        # Amber without Chris
+    else: # Amber
         add image_path + "v15s18a_room_2.webp"
         
         imagebutton:
-            idle Transform("#0000", size=(608, 507))
-            hover image_path + "v15s18a_room_hover_amber.webp"
+            idle Transform("#0000", size=(436, 679))
+            hover image_path + "v15s18a_room_hover_amber2.webp"
             action Call("freeRoamSpokenToo", backgroundImg="v15s18a_room_2", returnScreen="v15s18a_room")
-            pos (700, 44)
+            pos (704, 48)
 
     imagebutton:
         idle Transform("#0000", size=(140,1080))
