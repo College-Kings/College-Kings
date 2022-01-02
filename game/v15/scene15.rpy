@@ -54,6 +54,8 @@ label v15s15:
 
     pause 0.75
 
+    label v15s15sg:
+
     scene v15s15_6: # TPP. Ms. Rose at the door, mouth closed, seductive look, posing seductively, wearing lingerie, a pearl necklace and a jar of honey in hand (RENDER THIS IMAGE IN 1920x5000 pixels, since it will be a panning image, similar to the Chloe one after homecoming. DM Peace/Mozzart if you have any questions about this)
         subpixel True
         yalign 1.0
@@ -136,6 +138,8 @@ label v15s15:
             with dissolve
 
             ro "[name]! Wait!"
+            
+            $ renpy.end_replay()
             
             ###Scene 16
             scene v15s16_1 # TPP. Show MC walking out of Ms. Rose's house, MC mad, mouth closed.
@@ -270,7 +274,7 @@ label v15s15:
                     play sound "sounds/slap.mp3"
 
                     scene v15s15_16b # TPP. MC fucking Ms. Rose from behind, she is moaning, mouth open, MC smacking her ass, mouth closed, MC in max penetration
-                    with dissolve
+                    with hpunch
 
                     ro "*Gasps* I..."
 
@@ -278,8 +282,6 @@ label v15s15:
                     with dissolve
 
                     ro "I'm so sorry... *Moans* I'm so bad..."
-
-                    play sound "sounds/slap.mp3"
 
                     scene v15s15_17 # FPP. MC looking down at Ms. Rose's ass, he is in max penetration, he is slapping her ass, it's red where he hit it
                     with dissolve
@@ -478,6 +480,8 @@ label v15s15:
             with fade
 
             u "*Sighs* (Well, the make-up sex is always great, huh? Haha...)"
+
+            $ renpy.end_replay()
 
             scene v15s15_29 # FPP. MC looking at the door, Ms. Rose entering, she is dressed and cleaned up now, smiling, mouth closed
             with dissolve

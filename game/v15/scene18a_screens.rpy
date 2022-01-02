@@ -151,7 +151,10 @@ screen v15s18a_bar():
     imagebutton:
         idle Transform("#0000", size=(779, 961))
         hover image_path + "v15s18a_bar_hover_aubrey.webp"
-        action NullAction()
+        if not "aubrey" in freeroam13:
+            action Jump("v15s18a_Aubrey")
+        else:
+            action Call("freeRoamSpokenToo", backgroundImg="v15s18a_bar_1", returnScreen="v15s18a_bar")
         pos (290, 119)
 
     imagebutton:
