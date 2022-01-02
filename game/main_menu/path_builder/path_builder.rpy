@@ -85,12 +85,7 @@ screen path_builder_alert():
                 text "NO" align (0.5, 0.5)
 
 
-style path_builder_alert_text is text:
-    font "fonts/Olympus Mount.ttf"
-    size 30
-    text_align 0.5
-    line_spacing 5
-    yoffset 9
+style path_builder_alert_text is olympus_mount_30
 
 
 screen path_builder_base(header=""):
