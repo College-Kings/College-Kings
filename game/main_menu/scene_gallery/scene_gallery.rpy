@@ -120,27 +120,6 @@ init python:
         SceneGallery("Choosing Nora", "images/3 hits.webp", "48"), # 48, Nora
 
 
-screen scene_gallery_spoiler():
-    modal True
-
-    add "images/darker.webp"
-
-    use endfrTemplate:
-        text "Warning: The scene gallery contains spoilers for the story of the game. Are you sure you want to continue?":
-            style "endfree"
-            xalign 0.5
-
-        hbox:
-            align (0.5, 1.0)
-            spacing 200
-
-            textbutton "Yes":
-                action [Hide("scene_gallery_spoiler"), ui.callsinnewcontext("scene_gallery_name_change"), ShowMenu("scene_gallery")]
-
-            textbutton "No":
-                action Hide("scene_gallery_spoiler")
-
-
 screen scene_gallery():
     tag menu
     modal True
