@@ -159,6 +159,7 @@ image grand_theft_chloe = "images/achievements/v14/grand_theft_chloe.webp"
 image clean_it_up = "images/achievements/v14/clean_it_up.webp"
 
 image childhood_memories = "images/achievements/v15/childhood_memories.webp"
+image christmas_is_dead = "images/achievements/v15/christmas_is_dead.webp"
 image counter_intelligence = "images/achievements/v15/counter_intelligence.webp"
 image da_ba_dee_da_ba_dai = "images/achievements/v15/da_ba_dee_da_ba_dai.webp"
 image emotional_blackmail = "images/achievements/v15/emotional_blackmail.webp"

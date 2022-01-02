@@ -1774,6 +1774,7 @@ label v15s33:
             scene v15s33_68 # TPP. Close up of Aubrey at the entrance of the bathroom, Aubrey angry, mouth open.
             with vpunch
 
+            $ grant_achievement("what_goes_around")
             au "I fucking KNEW IT!"
 
             scene v15s33_68a # FPP. CLose up of Aubrey at the entrance of the bathroom, Aubrey angry, mouth closed.

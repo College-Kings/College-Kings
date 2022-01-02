@@ -493,6 +493,7 @@ label v15s35:
             scene v15s35_7g # FPP. same as v15s35_7d Lindsey is slightly shocked, still looking at Mc, mouth is still open
             with dissolve
 
+            $ grant_achievement("christmas_is_dead")
             li "*Gasps* Autumn and [name]! How dare you kill Santa?!"
 
             scene v15s35_9b
