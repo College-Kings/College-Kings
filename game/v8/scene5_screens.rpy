@@ -19,13 +19,13 @@ screen v8s5_amberSexOverlay():
             draggable True
 
             imagebutton:
-                idle "images/v8/Scene 5/blowjob.webp"
+                idle "images/v8/Scene 5/Overlay Buttons/blowjob.webp"
                 action Jump("v8s5_amberBlowjob")
 
             imagebutton:
-                idle "images/v8/Scene 5/missionary.webp"
+                idle "images/v8/Scene 5/Overlay Buttons/missionary.webp"
                 action Jump("v8s5_amberMissonary")
 
             imagebutton:
-                idle "images/v8/Scene 5/facefuck.webp"
+                idle "images/v8/Scene 5/Overlay Buttons/facefuck.webp"
                 action Jump("v8s5_amberFacefuck")
