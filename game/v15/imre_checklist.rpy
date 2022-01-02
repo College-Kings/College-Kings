@@ -1,20 +1,19 @@
 screen v15_imre_checklist_icon():
-    tag checklist
+    zorder 100
 
     imagebutton:
         idle "images/v15/Scene 18/imre_checklist/icon.webp"
-        action Show("v15_imre_checklist")
+        action ToggleScreen("v15_imre_checklist")
 
 
 screen v15_imre_checklist():
     tag checklist
-    zorder 100
     modal True
 
-    add "images/v15/Scene 18/imre_checklist/background.webp"
+    add "images/v15/Scene 18/imre_checklist/background.webp" align (0.5, 0.5)
 
     button:
-        action Show("v15_imre_checklist_icon")
+        action Hide("v15_imre_checklist")
 
     vbox:
         pos (600, 325)
