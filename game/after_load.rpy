@@ -380,8 +380,7 @@ label after_load:
         # Transfer simplrApp to simplr_app
         try:
             simplr_app.locked = simplrApp.locked
-        except NameError:
-            pass
+        except NameError: pass
 
         ### MESSENGER
         #### MESSENGER CONTRACTS

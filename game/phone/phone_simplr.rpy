@@ -46,7 +46,7 @@ init python:
                 self.pending_messages = []
                 self.sent_messages.append(message)
 
-            if self in simplr_contacts: simplrApp.notification = True
+            if self in simplr_contacts: simplr_app.notification = True
             
             return message
 
@@ -64,7 +64,7 @@ init python:
                 self.pending_messages = []
                 self.sent_messages.append(message)
 
-            if self in simplr_contacts: simplrApp.notification = True
+            if self in simplr_contacts: simplr_app.notification = True
 
             return message
 
@@ -96,7 +96,7 @@ init python:
 
         def seenMessage(self):
             if not any(contact.replies for contact in simplr_contacts):
-                simplrApp.notification = False
+                simplr_app.notification = False
 
         def getMessage(self, message):
             for msg in self.sent_messages:
