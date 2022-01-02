@@ -66,7 +66,7 @@ label v15s49:
 
     tom "Charli was the reason I'm still in school, you fucking rat!"
 
-    tom "Now that he's gone, I have to find someone else to do all of my assignments..."
+    tom "Now that he's gone, I have to find someone else to do all of my assignments."
 
     scene v15s49_8
     with dissolve
@@ -76,7 +76,7 @@ label v15s49:
     scene v15s49_7
     with dissolve
 
-    tom "Ha, shut the hell up and listen to me."
+    tom "Hah! Shut the hell up and listen to me."
 
     tom "Someone has to take his place. And that person is going to be you from now on, do you understand?"
 
@@ -312,4 +312,16 @@ label v15s49:
 
     pause 0.75
 
-    jump v16s1
+    jump end15
+
+label end15:
+    if not renpy.loadable("v16/scene1.rpy"):
+        scene savenow #nothing needed
+        with Fade (1,0,1)
+        " "
+
+    if renpy.loadable("v16/scene1.rpy"):
+        jump v16_start
+
+    else:
+        jump end_credits
