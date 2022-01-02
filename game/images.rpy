@@ -187,7 +187,7 @@ image sdafj = Movie(play="images/v1/sdafj.webm", image="images/v1/sda4e.webp")
 image sdafjf = Movie(play="images/v1/sdafjf.webm", image="images/v1/sda4e.webp")
 image sdasex = Movie(play="images/v1/sdasex.webm", image="images/v1/sda7a.webp")
 image sdacum2 = Movie(play="images/v1/sdacum2.webm", image="images/v1/aftercum.webp", loop=False)
-image tompush = Movie(play="images/tompush.webm", start_image="images/v2/126a.webp", image="images/v2/push12.webp", loop=False)
+image tompush = Movie(play="images/v2/tompush.webm", start_image="images/v2/126a.webp", image="images/v2/push12.webp", loop=False)
 
 image abo = "images/abo.webp"
 image aboq = "images/q button.webp"
