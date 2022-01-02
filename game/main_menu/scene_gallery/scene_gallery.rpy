@@ -28,25 +28,25 @@ init python:
 
     ## v2
     if renpy.loadable("v2/v2.rpy"):
-        SceneGallery("Fight with Tom", "images/v1/sda1.webp", "v1_tomShoutBack") # Tom
+        SceneGallery("Fight with Tom", "images/v2/tomhook.webp", "v1_tomShoutBack") # Tom
     
     ## v3
     if renpy.loadable("v3/v3.rpy"):
-        SceneGallery("Fight time with Aubrey", "images/v1/sda1.webp", "continuem") # Aubrey, day 4
+        SceneGallery("First time with Aubrey", "images/v3/aub1start.webp", "continuem") # Aubrey, day 4
 
     ## v5
     if renpy.loadable("v5/v5.rpy"):
-        SceneGallery("Fight with Adam", "images/v1/sda1.webp", "fkcon") # Adam
+        SceneGallery("Fight with Adam", "images/v5/af5start.webp", "fkcon") # Adam
 
     ## v6
     if renpy.loadable("v6/v6.rpy"):
-        SceneGallery("Taking back Emily", "images/v1/sda1.webp", "emsex_a") # Emily, day 7
-        SceneGallery("Fun with Aubrey", "images/v1/sda1.webp", "aubreysexb") # Aubrey, day 7
+        SceneGallery("Taking back Emily", "images/v6/em5.webp", "emsex_a") # Emily, day 7
+        SceneGallery("Fun with Aubrey", "images/v6/naub4.webp", "aubreysexb") # Aubrey, day 7
 
     ## v7
     if renpy.loadable("v7/v7.rpy"):
-        SceneGallery("First time with Riley", "images/v1/sda1.webp", "rileysexscene") # Riley, day 10
-        SceneGallery("Sneaking to the stall", "images/v1/sda1.webp", "brbj") # Aubrey, day 11
+        SceneGallery("First time with Riley", "images/v7/risex1vid20.webp", "rileysexscene") # Riley, day 10
+        SceneGallery("Sneaking to the stall", "images/v7/sfr4ri42.webp", "brbj") # Aubrey, day 11
 
     ## v8
     if renpy.loadable("v8/scene1.rpy"):
