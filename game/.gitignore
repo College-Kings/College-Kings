@@ -1,2 +1,30 @@
+.vscode/
+lib/
+renpy/
 
-game/v15/scene 45.rpy
+game/bugTesting/_bugTesting.txt
+game/cache/
+game/saves/
+game/script_version.txt
+game/version.txt
+
+CollegeKings.py
+CollegeKings.sh
+errors.txt
+gradle.properties.txt
+log.txt
+Stored Script.txt
+traceback.txt
+project.json
+steam_appid.txt
+
+screenshot*
+
+*.bat
+*.docx
+*.rpa
+*.rpyc
+*.zip
+*.exe
+*.bak
+.DS_Store
