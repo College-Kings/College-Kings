@@ -460,7 +460,7 @@ label v15s48a_vagina:
 
             u "Tell me what you want."
 
-            scene v15s48ava_5
+            scene v15s48ava_4
             with dissolve
 
             no "I want to feel you..."
