@@ -149,6 +149,11 @@ screen scene_gallery():
 
     add image_path + "background.png"
 
+    imagebutton:
+        idle image_path + "return_idle.png"
+        action ShowMenu("main_menu")
+        pos (129, 82)
+
     fixed:
         pos (114, 178)
         ypos 178
@@ -171,14 +176,13 @@ screen scene_gallery():
                         idle_foreground image_path + "button_idle.png"
                         hover_foreground image_path + "button_hover.png"
                         insensitive_foreground image_path + "button_idle.png"
-                        action Replay(gallery_item.label, scope=update_scope(gallery_item.scope), locked=True)
+                        action Replay(gallery_item.label, scope=update_scope(gallery_item.scope))
 
                     fixed:
                         xysize (250, 49)
                         xalign 0.5
                         ypos 210
 
-                        add "#0f0"
                         text gallery_item.title.upper() align (0.5, 0.5)
 
     add image_path + "shadow.png" xalign 0.5 ypos 893
