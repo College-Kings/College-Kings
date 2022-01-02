@@ -229,7 +229,7 @@ label v15s18d:
                 $ add_point(KCT.BOYFRIEND)
                 $ v15s18_LaurensBed = True
 
-                if v15_lauren_gift == 1:
+                if gift_card_50 in mc.inventory:
                     scene v15s18d_8i # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren fake smile, mouth open.
                     with dissolve
 

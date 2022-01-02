@@ -368,7 +368,6 @@ default v15_autumn_lunchbreak = False
 default v15_autumn_smoke = False
 default v15_blame_nora = False ### blame_chris = (v13_imre_disloyal and not v15_blame_nora)
 default v15_imre_checklist = Checklist()
-default v15_lauren_gift = 0 #1 = gift card, 2 = emerald bracelet, 3 = ruby necklace, 4 = white horse, 5 = brown horse
 default v15_mad_at_ms_rose = False
 default v15s21_meeting_points = 0
 default v15_nora_clues = set() #detective clues: be_alone, loves_nature, hates_camping, likes_ex, runs_dad, hates_dad, close_rose, visited_aunt, aunt_cabin

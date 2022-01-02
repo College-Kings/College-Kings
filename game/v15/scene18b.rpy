@@ -41,7 +41,7 @@ label v15s18b:
 
     la "It's a $50 gift card! Thank you, Imre. That's so thoughtful."
 
-    if v15_lauren_gift == 1:
+    if gift_card_50 in mc.inventory:
         scene v15s18b_5 # FPP. MC sitting on a chair in the area looking at Lauren, Lauren looking at the gift card, Lauren slight smile, mouth closed.
         with dissolve
 
@@ -132,7 +132,7 @@ label v15s18b:
 
         u "(I hope she likes it...)"
 
-    if v15_lauren_gift == 1:
+    if gift_card_50 in mc.inventory:
         scene v15s18b_3c
         with dissolve
 
@@ -240,7 +240,7 @@ label v15s18b:
 
             la "Yeah. That's true, I guess."
 
-    if v15_lauren_gift == 4:
+    if white_horse_black_mane in mc.inventory:
         scene v15s18b_3i 
         with dissolve
 
@@ -275,7 +275,7 @@ label v15s18b:
 
         u "You're welcome, I'm happy you like it."
 
-    if v15_lauren_gift == 5:
+    if brown_horse_golden_mane in mc.inventory:
         scene v15s18b_3i 
         with dissolve
 
@@ -383,7 +383,7 @@ label v15s18b:
 
         u "You're very welcome, Happy Birthday."
 
-    if v15_lauren_gift == 2 or v15_lauren_gift == 3:
+    if emerald_bracelet in mc.inventory or ruby_choker_necklace in mc.inventory:
         if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
             scene v15s18b_3i
             with dissolve
@@ -407,7 +407,7 @@ label v15s18b:
 
             pe "Let's see it!"
             
-            if v15_lauren_gift == 3:
+            if ruby_choker_necklace in mc.inventory:
                 scene v15s18b_3o # TPP. Show Lauren putting on the the Ruby Choker Necklace around her neck, Lauren excited, mouth closed.
                 with dissolve
 
@@ -423,7 +423,7 @@ label v15s18b:
 
                 pause 0.75
 
-            elif v15_lauren_gift == 2:
+            elif emerald_bracelet in mc.inventory:
                 scene v15s18b_3r # TPP. Show Lauren putting the Emerald bracelet around her wrist, Lauren excited, mouth closed
                 with dissolve
 
