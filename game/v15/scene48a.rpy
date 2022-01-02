@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v15s48a:
+    $ sceneList.add("v15_nora")
+    
     scene v15s48a_1 # TPP. Show Nora sitting down next to MC, both slight smile, mouth closed.
     with dissolve
 
