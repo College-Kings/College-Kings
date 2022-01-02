@@ -68,7 +68,7 @@ init python:
         SceneGallery("Ryan Fight", "images/v10/scene 6/v10mvr6.webp", "v10_mc_vs_ryan_fight") # 6, Ryan
         SceneGallery("Imre Fight", "images/v10/scene 7/v10mvi3.webp", "v10_mc_vs_imre_fight") # 7, Imre
         SceneGallery("More with Aubrey", "images/v10/scene 17/v10aubfaStart.webp", "v10s17_galleryScene") # 17, Aubrey, day 20
-        SceneGallery("Making out with Lauren", "images/v10/scene 24/v10lar7d.webp", "v10_lauren_room_sg") # 24, Lauren, day 21 (scope is Lauren GIRLFRIEND)
+        SceneGallery("Make out with Lauren", "images/v10/scene 24/v10lar7d.webp", "v10_lauren_room_sg") # 24, Lauren, day 21 (scope is Lauren GIRLFRIEND)
         SceneGallery("Amber Skatepark Sex", "images/v10/scene 26/v10sasp11a.webp", "v10_amber_skatepark_sg") # 26, Amber, day 21
         SceneGallery("Changing with Chloe", "images/v10/scene 30/v10chg10f.webp", "v10s30_galleryScene") # 30, Chloe, day 22
         SceneGallery("More with Riley", "images/v10/scene 40/v10srds6a.webp", "v10s40_galleryScene") # 40, Riley, day 23 (scope is Riley FWB)
@@ -78,7 +78,7 @@ init python:
         SceneGallery("Fight time with Candy", "images/v11/scene 5/v11swc25.webp", "v11s5_galleryScene") # 5, Candy, day 24
         SceneGallery("Airplane with Aubrey", "images/v11/scene 13/v11aub18a.webp", "v11_aubrey_plane_sex_sg") # 13, Aubrey, day 26
         SceneGallery("First time w/ Ms. Rose", "images/v11/scene 28/v11ros3.webp", "v11_ms_rose_sex_sg") # 28, Rose, day 27
-        SceneGallery("Relaxing w/ Samantha", "images/v11/scene 28a/v11sas16a.webp", "v11s28a_galleryScene") # 28a, Samantha, day 27
+        SceneGallery("Spa with Samantha", "images/v11/scene 28a/v11sas16a.webp", "v11s28a_galleryScene") # 28a, Samantha, day 27
         SceneGallery("In London with Riley", "images/v11/scene 35/v11ris18a.webp", "v11_riley_sex_sg") # 35, Riley, day 28
         SceneGallery("In London with Chloe", "images/v11/scene 41b/v11chtf2Start.webp", "v11_chloe_sex_scene") # 41b, Chloe, day 29
 
@@ -110,11 +110,11 @@ init python:
     ## v15
     if renpy.loadable("v15/scene1.rpy"):
         SceneGallery("Angry with Ms. Rose", "images/v15/scene 15/v15s15_7f.webp", "15") # 15, Ms. Rose
-        SceneGallery("The List (Riley)", "images/v15/scene 18a/v15s18ariley_14.webp", "18a") # 18a, Riley
         SceneGallery("The List (Amber)", "images/v15/scene 18a/v15s18aamber_9e.webp", "18a") # 18a, Amber
         SceneGallery("The List (Aubrey)", "images/3 hits.webp", "18c") # 18c, Aubrey
         SceneGallery("The List (Autumn)", "images/3 hits.webp", "18c") # 18c, Autumn
         SceneGallery("The List (Penelope)", "images/3 hits.webp", "18c") # 18c, Penelope
+        SceneGallery("The List (Riley)", "images/v15/scene 18a/v15s18ariley_14.webp", "18a") # 18a, Riley
         SceneGallery("Birthday treat", "images/v15/scene 18e/v15s18eend_6.webp", "18e"), # 18e, Lauren
         SceneGallery("Fun at the wedding", "images/3 hits.webp", "33"), # 33, Naomi
         SceneGallery("Choosing Nora", "images/3 hits.webp", "48"), # 48, Nora
