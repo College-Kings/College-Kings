@@ -36,7 +36,7 @@ label v15s18a_Aubrey:
     scene v15s18aaub_1 # TPP. Show MC starting to sit on the stool next to Aubrey, slight smile, mouth closed. Just show Aubrey's backside.
     #with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18aaub_2 # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at MC, MC looking at Aubrey, Aubrey slight smile, mouth closed
     with dissolve
