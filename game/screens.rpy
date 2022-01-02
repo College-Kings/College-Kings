@@ -1058,7 +1058,7 @@ style history_label_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#confirm
 
-screen confirm(message, yes_action, no_action):
+screen confirm(message, yes_action, no_action=Hide("confirm")):
     zorder 200
     modal True
     style_prefix "confirm"

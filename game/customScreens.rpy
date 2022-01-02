@@ -1,15 +1,3 @@
-screen endfrTemplate():
-
-    window:
-        align (0.5, 0.5)
-        padding (25, 50)
-        xysize (746, 384)
-
-        background "images/endfr.webp"
-
-        transclude
-
-
 screen changeLanguage():
     tag menu
 
@@ -85,26 +73,6 @@ screen realmode():
 
 screen fantasyOverlay():
     add "images/fantasyoverlay.webp"
-
-
-screen endFreeRoamConfirm(continueLabel):
-    modal True
-    
-    use endfrTemplate:
-
-        text "Are you sure you want to end free roam?":
-            style "endfree"
-            xalign 0.5
-
-        hbox:
-            align (0.5, 1.0)
-            spacing 200
-
-            textbutton "Yes":
-                action [Hide("endFreeRoamConfirm"), Jump(continueLabel)]
-                
-            textbutton "No":
-                action Hide("endFreeRoamConfirm")
 
 
 screen censoredPopup(continueLabel):

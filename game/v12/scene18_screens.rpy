@@ -27,6 +27,6 @@ screen v12s18_room2():
         if not "fmk" in v12_slumberparty:
             hotspot (849, 70, 477, 759) action Jump("v12s18_fmk") # Play Fuck, Marry, Kill
         else:
-            hotspot (849, 70, 477, 759) action Show("endFreeRoamConfirm", continueLabel="v12s18_bet") # End freeroam
+            hotspot (849, 70, 477, 759) action Show("confirm", "Are you sure you want to end free roam?", [Hide("confirm"), Jump("v12s18_bet")]) # End freeroam
 
         hotspot (1793, 30, 126, 1020) action Show("v12s18_room1") # Room 1

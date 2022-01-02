@@ -100,7 +100,7 @@ screen v1_freeRoam1_3():
         xalign 0.82
         idle "images/v1/fr1yours.webp"
         hover "images/v1/fr1yourshover.webp"
-        action Show("endFreeRoamConfirm", continueLabel="efra")
+        action Show("confirm", "Are you sure you want to end free roam?", [Hide("confirm"), Jump("efra")])
 
     # Back
     imagebutton:
@@ -238,7 +238,7 @@ screen v1_freeRoam2_4():
         xalign 0.21
         idle "images/v1/fr2chloe.webp"
         hover "images/v1/fr2chloeh.webp"
-        action Show("endFreeRoamConfirm", continueLabel="v1_freeRoam2_end")
+        action Show("confirm", "Are you sure you want to end free roam?", [Hide("confirm"), Jump("v1_freeRoam2_end")])
 
     imagebutton:
         yalign 1.0

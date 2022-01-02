@@ -479,7 +479,7 @@ screen v12s7_rear_gallery():
 
         hotspot (172, 320, 239, 653):
             if len(v12s7_killList) >= v12s7_victims:
-                action Show("endFreeRoamConfirm", continueLabel="v12_murder_mystery_reveal")
+                action Show("confirm", "Are you sure you want to end free roam?", [Hide("confirm"), Jump("v12_murder_mystery_reveal")])
             else:
                 action Jump("v12s7_mrlee")
         

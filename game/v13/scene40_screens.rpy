@@ -73,7 +73,7 @@ screen v13s40_chloe():
                     text "Shoulders" align (0.5, 0.5)
 
         button:
-            action Show("endFreeRoamConfirm", continueLabel="v13s40_end_free_roam")
+            action Show("confirm", "Are you sure you want to end free roam?", [Hide("confirm"), Jump("v13s40_end_free_roam")])
             align (0.5, 0.5)
 
             fixed:

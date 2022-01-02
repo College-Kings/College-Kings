@@ -256,35 +256,35 @@ screen fr4dancefloor():
             pos (645, 30)
             idle "images/v7/fr4dancefloorchloe.webp"
             hover "images/v7/fr4dancefloorchloehover.webp"
-            action Show("v7_endFreeRoamConfirm", continueLabel="fr4chloedate", girl="Chloe")
+            action Show("confirm", "Are you sure you want to end the free roam with Chloe?", [Hide("confirm"), Jump("fr4chloedate")])
 
     elif hcGirl == "emily":
         imagebutton:
             xpos 615
             idle "images/v7/fr4danceflooremily.webp"
             hover "images/v7/fr4danceflooremilyhover.webp"
-            action Show("v7_endFreeRoamConfirm", continueLabel="fr4emilydate", girl="Emily")
+            action Show("confirm", "Are you sure you want to end the free roam with Emily?", [Hide("confirm"), Jump("fr4emilydate")])
 
     elif hcGirl == "lauren":
         imagebutton:
             xpos 617
             idle "images/v7/fr4dancefloorlauren.webp"
             hover "images/v7/fr4dancefloorlaurenhover.webp"
-            action Show("v7_endFreeRoamConfirm", continueLabel="fr4laurendate", girl="Lauren")
+            action Show("confirm", "Are you sure you want to end the free roam with Lauren?", [Hide("confirm"), Jump("fr4laurendate")])
 
     elif hcGirl == "penelope":
         imagebutton:
             xpos 655
             idle "images/v7/fr4dancefloorpenelope.webp"
             hover "images/v7/fr4dancefloorpenelopehover.webp"
-            action Show("v7_endFreeRoamConfirm", continueLabel="fr4penelopedate", girl="Penelope")
+            action Show("confirm", "Are you sure you want to end the free roam with Penelope?", [Hide("confirm"), Jump("fr4penelopedate")])
 
     elif hcGirl == "riley":
         imagebutton:
             pos (675, 25)
             idle "images/v7/fr4dancefloorriley.webp"
             hover "images/v7/fr4dancefloorrileyhover.webp"
-            action Show("v7_endFreeRoamConfirm", continueLabel="fr4rileydate", girl="Riley")
+            action Show("confirm", "Are you sure you want to end the free roam with Riley?", [Hide("confirm"), Jump("fr4rileydate")])
 
     imagebutton:
         align (0.5, 1.0)
@@ -432,7 +432,7 @@ screen fr4gymentrance():
             pos (365, 318)
             idle "images/v7/fr4gymentrancerileyidle.webp"
             hover "images/v7/fr4gymentrancerileyhover.webp"
-            action Show("v7_endFreeRoamConfirm", continueLabel="fr4riley2", girl="Riley")
+            action Show("confirm", "Are you sure you want to end the free roam with Riley?", [Hide("confirm"), Jump("fr4riley2")])
 
     if "nora" in freeroam4 and not "nora2" in freeroam4:
         imagebutton:
@@ -526,7 +526,7 @@ screen fr4hallway():
             idle "images/v7/fr4hallwaychloeidle.webp"
             hover "images/v7/fr4hallwaychloehover.webp"
             if not "chloe2" in freeroam4:
-                action Show("v7_endFreeRoamConfirm", continueLabel="fr4chloe2", girl="Chloe")
+                action Show("confirm", "Are you sure you want to end the free roam with Chloe?", [Hide("confirm"), Jump("fr4chloe2")])
             else:
                 action Jump("fr4chloe3")
 
@@ -573,7 +573,7 @@ screen fr4hallwaycorner():
         idle "images/v7/fr4hallwaycornerdoor.webp"
         hover "images/v7/fr4hallwaycornerdoorhover.webp"
         if "chloe" in freeroam4 and not preventgrayson:
-            action Show("v7_endFreeRoamConfirm", continueLabel="fr4lockerroomchloe", girl="Chloe")
+            action Show("confirm", "Are you sure you want to end the free roam with Chloe?", [Hide("confirm"), Jump("fr4lockerroomchloe")])
         else:
             action Jump("fr4lockerroom")
 
@@ -640,26 +640,6 @@ screen fr4outsidestreet():
         idle "images/v7/fr4bottom.webp"
         hover "images/v7/fr4bottomhover.webp"
         action Jump("labelfr4outsidestairs")
-
-
-screen v7_endFreeRoamConfirm(continueLabel, girl):
-    modal True
-    
-    use endfrTemplate:
-
-        text "Are you sure you want to end the free roam with [girl]?":
-            style "endfree"
-            xalign 0.5
-
-        hbox:
-            align (0.5, 1.0)
-            spacing 200
-
-            textbutton "Yes":
-                action [Hide("v7_endFreeRoamConfirm"), Jump(continueLabel)]
-                
-            textbutton "No":
-                action Hide("v7_endFreeRoamConfirm")
 
 
 screen rileysexoverlay():
