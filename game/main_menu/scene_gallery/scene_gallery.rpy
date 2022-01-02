@@ -50,9 +50,9 @@ init python:
 
     ## v8
     if renpy.loadable("v8/scene1.rpy"):
+        SceneGallery("Homecoming Amber", "images/v8/scene 5/v8samb1.webp", "hoco_amb_night") # 5, Amber, day 11
         SceneGallery("Homecoming Chloe", "images/v8/scene 2/v8s16.webp", "v8_cl_start") # 2, Chloe, day 11
         SceneGallery("Homecoming Riley", "images/v8/scene 3/v8s33_2.webp", "v8_ri_start") # 3, Riley, day 11
-        SceneGallery("Homecoming Amber", "images/v8/scene 5/v8samb1.webp", "hoco_amb_night") # 5, Amber, day 11
         SceneGallery("Fight with Lars", "images/v8/scene 28/mcbodyhookstart.webp", "int_deal_w_josh") # 28, Lars Joe
         SceneGallery("With Amber at Josh's", "images/v8/scene 30/v8amber14a.webp", "amber_sex_at_joshs") # 30, Amber, day 14
 
