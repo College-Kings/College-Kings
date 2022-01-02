@@ -8,8 +8,8 @@ image splashthree = "images/splash 3.webp"
 
 # GUI
 ## Choice
-image choice_button_idle = "gui/choice/button_idle.png"
-image choice_button_hover = "gui/choice/button_idle.png"
+image choice_button_idle = Frame("gui/choice/button_idle.png", 40, 8)
+image choice_button_hover = Frame("gui/choice/button_idle.png", 40, 8)
 
 ## KCT Choice Hint
 image kct_choice_hint_background = Frame("gui/kct/background.png", 44, 6, 44, 0) 

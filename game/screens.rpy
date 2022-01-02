@@ -222,13 +222,11 @@ screen choice(items, seconds=3, fail_label=None):
         spacing 25
 
         for item in items:
-            fixed:
-                xysize (389, 96)
-
-                imagebutton:
-                    idle "choice_button_idle"
-                    hover "choice_button_hover"
-                    action item.action
+            button:
+                minimum (389, 96)
+                idle_background "choice_button_idle"
+                hover_background "choice_button_hover"
+                action item.action
 
                 text item.caption.upper():
                     align (0.5, 0.5)
