@@ -14,29 +14,42 @@ screen alert_template(message):
 
             text _(message.upper()) xalign 0.5 xsize 350
 
-            transclude
+            hbox:
+                xalign 0.5
+                spacing 20
+
+                transclude
 
 
 style alert_text is olympus_mount_30
 
 
-screen warning_template(message):
+screen warning_template(message, style="blue"):
     zorder 200
     modal True
     style_prefix "warning"
 
     frame:
         align (0.5, 0.5)
+        yoffset -42
         minimum (758, 363)
-        background "warning_background"
+        background "warning_background_{}".format(style)
 
         vbox:
             align (0.5, 0.5)
             spacing 45
 
-            text _(message.upper()) xalign 0.5 xsize 350
+            null height 50
 
-            transclude
+            text _(message.upper()) xalign 0.5 xsize 590
+
+            hbox:
+                xalign 0.5
+                spacing 20
+                
+                transclude
+
+            null height 50
 
 
 style warning_text is olympus_mount_30
@@ -97,22 +110,28 @@ screen changeLanguage():
         action ShowMenu("preferences")
 
 
-screen realmode():
+screen real_life_mode():
     modal True
-    
-    add "images/REALLIFEMODE.webp"
 
-    imagebutton:
-        pos (417, 683)
-        idle "images/rlmt.webp"
-        hover "images/enable.webp"
-        action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False), Show("phone_icon"), Jump("v1start")]
+    add "images/v1/real_life_mode_background.png"
 
-    imagebutton:
-        pos (1016, 683)
-        idle "images/rlmt.webp"
-        hover "images/disable.webp"
-        action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True), SetVariable("showkct", True), Show("phone_icon"), Jump("v1start")]
+    use warning_template("THIS MODE PROHIBITS you from saving during important choices, meaning all choices are final. this can't be disabled without starting a new game."):
+
+        button:
+            idle_background "blue_button_idle"
+            hover_background "blue_button_hover"
+            action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False), Show("phone_icon"), Jump("v1start")]
+            xysize (215, 55)
+
+            text "ENABLE" align (0.5, 0.5)
+
+        button:
+            idle_background "blue_button_idle"
+            hover_background "blue_button_hover"
+            action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True), SetVariable("showkct", True), Show("phone_icon"), Jump("v1start")]
+            xysize (215, 55)
+
+            text "DISABLE" align (0.5, 0.5)
 
 
 screen fantasyOverlay():
