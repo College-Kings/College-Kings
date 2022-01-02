@@ -276,7 +276,7 @@ screen quick_menu():
             imagebutton idle image_path + "save_idle.png" action ShowMenu("save")
             imagebutton idle image_path + "quick_save_idle.png" action QuickSave()
             imagebutton idle image_path + "quick_load_idle.png" action QuickLoad()
-            # textbutton _("Prefs") action ShowMenu("settings")
+            # textbutton _("Prefs") action ShowMenu("preferences")
 
     if config.developer:
         hbox:
@@ -386,7 +386,7 @@ screen main_menu():
     imagebutton:
         idle image_path + "settings_idle.webp"
         hover Transform(image_path + "settings_hover.webp", pos=(-35, -25))
-        action ShowMenu("settings")
+        action ShowMenu("preferences")
         pos (1439, 967)
 
     # QUIT
@@ -471,7 +471,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
         else:
             textbutton _("Save") action ShowMenu("save")
 
-        textbutton _("Settings") action ShowMenu("settings")
+        textbutton _("Settings") action ShowMenu("preferences")
 
         textbutton _("Menu") action MainMenu()
 
@@ -738,7 +738,7 @@ style slot_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
-screen settings():
+screen preferences():
     tag menu
     style_prefix "settings"
 
