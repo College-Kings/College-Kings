@@ -98,26 +98,26 @@ init python:
 
     ## v14
     if renpy.loadable("v14/scene1.rpy"):
-        SceneGallery("Why not both?", "images/v1/sda1.webp", "v14s01") # 1, Riley Aubrey, xx
-        SceneGallery("Satin-ly pleased", "images/v1/sda1.webp", "v14s03c_sg") # 3d, Satin, xx
-        SceneGallery("Right here, right now", "images/v1/sda1.webp", "v14s21a") # 21a, Chloe, xx
-        SceneGallery("Fuck while fucked up", "images/v1/sda1.webp", "v14s25a") # 25a, Amber, xx
-        SceneGallery("Lagoon of love", "images/v1/sda1.webp", "v14s36_sg") # 36, Jenny, xx
-        SceneGallery("Good Dr. Lauren", "images/v1/sda1.webp", "v14s46a_sga") # 46a, Lauren good (scope is Lauren GIRLFRIEND)
-        SceneGallery("Evil Dr. Lauren", "images/v1/sda1.webp", "v14s46a_sgb") # 46a, Lauren bad
-        SceneGallery("Messy with Samantha", "images/v1/sda1.webp", "v14s53_sg") # 53a, Samantha, xx
+        SceneGallery("Why not both?", "images/v14/scene 1/v14s01_4.webp", "v14s01") # 1, Riley Aubrey, xx
+        SceneGallery("Satin-ly pleased", "images/v14/scene 3d/v14s03d_5.webp", "v14s03c_sg") # 3d, Satin, xx
+        SceneGallery("Right here, right now", "images/v14/scene 21a/v14chlcgTPP.webp", "v14s21a") # 21a, Chloe, xx
+        SceneGallery("Fuck while fucked up", "images/v14/scene 25a/v14s25a_17.webp", "v14s25a") # 25a, Amber, xx
+        SceneGallery("Lagoon of love", "images/v14/scene 36/v14jenmo2Start.webp", "v14s36_sg") # 36, Jenny, xx
+        SceneGallery("Good Dr. Lauren", "images/v14/scene 46a/v14s46a_12.webp", "v14s46a_sga") # 46a, Lauren good (scope is Lauren GIRLFRIEND)
+        SceneGallery("Evil Dr. Lauren", "images/v14/scene 46a/v14s46a_27c.webp", "v14s46a_sgb") # 46a, Lauren bad
+        SceneGallery("Messy with Samantha", "images/v14/scene 53a/v14s53a_16.webp", "v14s53_sg") # 53a, Samantha, xx
 
     ## v15
     if renpy.loadable("v15/scene1.rpy"):
-        SceneGallery("Angry with Ms. Rose", "images/v1/sda1.webp", "15") # 15, Ms. Rose - 47
-        SceneGallery("The List (Riley)", "images/v1/sda1.webp", "18a") # 18a, Riley - 48
-        SceneGallery("The List (Amber)", "images/v1/sda1.webp", "18a") # 18a, Amber - 49
-        SceneGallery("The List (Aubrey)", "images/v1/sda1.webp", "18c") # 18c, Aubrey - 50
-        SceneGallery("The List (Autumn)", "images/v1/sda1.webp", "18c") # 18c, Autumn - 51
-        SceneGallery("The List (Penelope)", "images/v1/sda1.webp", "18c") # 18c, Penelope - 52
-        SceneGallery("Birthday treat", "images/v1/sda1.webp", "18e"), # 18e, Lauren - 53
-        SceneGallery("Fun at the wedding", "images/v1/sda1.webp", "33"), # 33, Naomi - 54
-        SceneGallery("Choosing Nora", "images/v1/sda1.webp", "48"), # 48, Nora - 55
+        SceneGallery("Angry with Ms. Rose", "images/v15/scene 15/v15s15_7f.webp", "15") # 15, Ms. Rose
+        SceneGallery("The List (Riley)", "images/v15/scene 18a/v15s18ariley_14.webp", "18a") # 18a, Riley
+        SceneGallery("The List (Amber)", "images/v15/scene 18a/v15s18aamber_9e.webp", "18a") # 18a, Amber
+        SceneGallery("The List (Aubrey)", "images/3hits.webp", "18c") # 18c, Aubrey
+        SceneGallery("The List (Autumn)", "images/3hits.webp", "18c") # 18c, Autumn
+        SceneGallery("The List (Penelope)", "images/3hits.webp", "18c") # 18c, Penelope
+        SceneGallery("Birthday treat", "images/v15/scene 18e/v15s18eend_6.webp", "18e"), # 18e, Lauren
+        SceneGallery("Fun at the wedding", "images/3hits.webp", "33"), # 33, Naomi
+        SceneGallery("Choosing Nora", "images/3hits.webp", "48"), # 48, Nora
 
 
 screen scene_gallery_spoiler():
