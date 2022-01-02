@@ -155,7 +155,6 @@ init python:
     Achievement("city_of_love", "Have sex with Lauren, Nora, Ms. Rose and Lindsey")
     
     #v13.0
-    Achievement("indecisive", "Help neither Chloe nor Lindsey")
     Achievement("funny_night", "Yes Penelope, you're flying")
     Achievement("gentlemen_prefer_gingers", "Bail on Lauren's cuddles")
     Achievement("flush_flush", "Flush Charli's toothbrush")
@@ -174,6 +173,7 @@ init python:
     Achievement("saving_ryans_privates", "Don't let Ryan catch an STD")
     Achievement("beastie_boy", "Sabotage the bake sale")
     Achievement("double_agent", "Help both Chloe and Lindsey's campaigns")
+    Achievement("indecisive", "Help neither Chloe nor Lindsey")
     Achievement("agree_to_disagree", "Chris does not help Chloe")
     Achievement("how_did_you_know", "Buy Amber her favourite candy")
     Achievement("built_on_trust", "Trust your girlfriend Chloe with her ex")
