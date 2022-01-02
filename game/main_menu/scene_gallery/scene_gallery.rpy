@@ -75,26 +75,26 @@ init python:
 
     ## v11
     if renpy.loadable("v11/scene1.rpy"):
-        SceneGallery("Fight time with Candy", "images/v1/sda1.webp", "v11s5_galleryScene") # 5, Candy, day 24
-        SceneGallery("Airplane with Aubrey", "images/v1/sda1.webp", "v11_aubrey_plane_sex_sg") # 13, Aubrey, day 26
-        SceneGallery("First time w/ Ms. Rose", "images/v1/sda1.webp", "v11_ms_rose_sex_sg") # 28, Rose, day 27
-        SceneGallery("First time w/ Samantha", "images/v1/sda1.webp", "v11s28a_galleryScene") # 28a, Samantha, day 27
-        SceneGallery("In London with Riley", "images/v1/sda1.webp", "v11_riley_sex_sg") # 35, Riley, day 28
-        SceneGallery("In London with Chloe", "images/v1/sda1.webp", "v11_chloe_sex_scene") # 41b, Chloe, day 29
+        SceneGallery("Fight time with Candy", "images/v11/scene 5/v11swc25.webp", "v11s5_galleryScene") # 5, Candy, day 24
+        SceneGallery("Airplane with Aubrey", "images/v11/scene 13/v11aub18a.webp", "v11_aubrey_plane_sex_sg") # 13, Aubrey, day 26
+        SceneGallery("First time w/ Ms. Rose", "images/v11/scene 28/v11ros3.webp", "v11_ms_rose_sex_sg") # 28, Rose, day 27
+        SceneGallery("Relaxing w/ Samantha", "images/v11/scene 28a/v11sas16a.webp", "v11s28a_galleryScene") # 28a, Samantha, day 27
+        SceneGallery("In London with Riley", "images/v11/scene 35/v11ris18a.webp", "v11_riley_sex_sg") # 35, Riley, day 28
+        SceneGallery("In London with Chloe", "images/v11/scene 41b/v11chtf2Start.webp", "v11_chloe_sex_scene") # 41b, Chloe, day 29
 
     ## v12
     if renpy.loadable("v12/scene1.rpy"):
-        SceneGallery("Locked up with Lindsey", "images/v1/sda1.webp", "v12_lindsey_sex") # 17, Lindsey, day 32
-        SceneGallery("In Paris with Ms. Rose", "images/v1/sda1.webp", "v12_ms_rose_sex_sg") # 23, Rose, day 33
-        SceneGallery("First time with Lauren", "images/v1/sda1.webp", "v12_lauren_sex_sg") # 29, Lauren, day 34
-        SceneGallery("First time with Nora", "images/v1/sda1.webp", "v12_nora_sex") # 35a, Nora, day 35
+        SceneGallery("Locked up with Lindsey", "images/v12/scene 17/v12esr33.webp", "v12_lindsey_sex") # 17, Lindsey, day 32
+        SceneGallery("In Paris with Ms. Rose", "images/v12/scene 23/v12msr19.webp", "v12_ms_rose_sex_sg") # 23, Rose, day 33
+        SceneGallery("First time with Lauren", "images/v12/scene 29/v12las58.webp", "v12_lauren_sex_sg") # 29, Lauren, day 34
+        SceneGallery("First time with Nora", "images/v12/scene 35a/v12nos27.webp", "v12_nora_sex") # 35a, Nora, day 35
 
     ## v13
     if renpy.loadable("v13/scene1.rpy"):
-        SceneGallery("Late night with Riley", "images/v1/sda1.webp", "v13s16a") # 16a, Riley, day 37
-        SceneGallery("Fun with Emmy", "images/v1/sda1.webp", "v13s25_emmysg") # 26, Emmy, day 38
-        SceneGallery("Wild with Chloe", "images/v1/sda1.webp", "v13s40_sg") # 40, Chloe, day 39
-        SceneGallery("Angry at Emily", "images/v1/sda1.webp", "v13s50a") # 50a, Emily, day 40
+        SceneGallery("Late night with Riley", "images/v13/scene 16a/v13s16a_7.webp", "v13s16a") # 16a, Riley, day 37
+        SceneGallery("Fun with Emmy", "images/v13/scene 26/v13s26_5.webp", "v13s25_emmysg") # 26, Emmy, day 38
+        SceneGallery("Wild with Chloe", "images/v13/scene 40/v13s40end_1.webp", "v13s40_sg") # 40, Chloe, day 39
+        SceneGallery("Angry at Emily", "images/v13/scene 50a/v13s50a_5.webp", "v13s50a") # 50a, Emily, day 40
 
     ## v14
     if renpy.loadable("v14/scene1.rpy"):
