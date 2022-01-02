@@ -1,18 +1,18 @@
 python early:
     old_files = {
-        "customCharacters.rpy",
-        "path_builder.rpy",
-        "sceneGallery/sceneGallery.rpy",
         "bugTesting/bugTesting_Overwrite.rpy",
         "bugTesting/bugTesting_typoNotes.rpy",
         "bugTesting/bugTesting_cheats.rpy",
         "phone/phonescript.rpy",
         "phone/phoneStyle.rpy",
+        "sceneGallery/sceneGallery.rpy",
+        "v14/chicks_presidency_race/planning_board.rpy"
+        "customCharacters.rpy",
         "functions.rpy",
+        "path_builder.rpy",
         "scriptv06.rpy",
         "scriptv07.rpy",
         "screen.rpy",
-        "v14/chicks_presidency_race/planning_board.rpy"
     }
 
     restart_game = False # NEVER CHANGE
