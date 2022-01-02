@@ -116,9 +116,13 @@ screen planning_board(planning_board):
                                 textbutton subtask.name:
                                     sensitive planning_board.approach == approach
                                     selected planning_board.selected_task == subtask
-                                    hovered Show("planning_board_task_desc", None, subtask)
-                                    unhovered Hide("planning_board_task_desc")
-                                    action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
+                                    unhovered [Hide("planning_board_task_desc"), Show("planning_board_help", message="Please select an approach")]
+                                    if approach.cost <= planning_board.money:
+                                        hovered Show("planning_board_task_desc", None, subtask)
+                                        action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
+                                    else:
+                                        hovered Show("planning_board_help", message="{color=#f00}Not enough money to select task.")
+                                        action NullAction()
                                     if planning_board.style is not None:
                                         text_style planning_board.style
 
