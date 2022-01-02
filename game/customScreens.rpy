@@ -113,7 +113,7 @@ screen changeLanguage():
 screen real_life_mode():
     modal True
 
-    add "images/v1/real_life_mode_background.png"
+    add "images/start/real_life_mode_background.png"
 
     use warning_template("THIS MODE PROHIBITS you from saving during important choices, meaning all choices are final. this can't be disabled without starting a new game."):
 
