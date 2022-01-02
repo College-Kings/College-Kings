@@ -1,5 +1,5 @@
 screen v13s40_chloe():
-    add Transform("images/v13/Scene40/v13s40_12.webp", blur=10)
+    add Transform("images/v13/Scene 40/v13s40_12.webp", blur=10)
 
     vbox:
         align (0.5, 1.0)

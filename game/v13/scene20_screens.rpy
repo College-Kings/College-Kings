@@ -2,8 +2,8 @@ screen v13s20_room():
     tag free_roam
 
     imagemap:
-        idle "images/v13/Scene20/Screens/v13s20_room.webp"
-        hover "images/v13/Scene20/Screens/v13s20_room_hover.webp"
+        idle "images/v13/Scene 20/Screens/v13s20_room.webp"
+        hover "images/v13/Scene 20/Screens/v13s20_room_hover.webp"
 
         hotspot (39, 81, 515, 773) action Show("v13s20_bathroom")
 
@@ -17,8 +17,8 @@ screen v13s20_bathroom():
     tag free_roam
 
     imagemap:
-        idle "images/v13/Scene20/Screens/v13s20_bathroom.webp"
-        hover "images/v13/Scene20/Screens/v13s20_bathroom_hover.webp"
+        idle "images/v13/Scene 20/Screens/v13s20_bathroom.webp"
+        hover "images/v13/Scene 20/Screens/v13s20_bathroom_hover.webp"
     
         if not "brush" in freeroam10:
             hotspot (1417, 303, 301, 224) action Jump("v13s20_toothbrush")

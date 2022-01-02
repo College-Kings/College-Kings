@@ -1,7 +1,7 @@
 screen v13s35_adult_shop():
     modal True
 
-    add "images/v13/Scene35/sex_shop/background.webp"
+    add "images/v13/Scene 35/sex_shop/background.webp"
 
     text "Money: €{}".format(mc.money) xpos 20 size 50
 

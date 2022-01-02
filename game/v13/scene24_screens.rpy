@@ -1,21 +1,21 @@
 screen v13s24_girl():
 
     if not emmy.relationship.value >= Relationship.LIKES.value and not kourtney.relationship.value >= Relationship.LIKES.value and not aryssa.relationship.value >= Relationship.LIKES.value:
-        add Transform("images/v13/scene24/v13s24_20a.webp", blur=15)
+        add Transform("images/v13/Scene 24/v13s24_20a.webp", blur=15)
     elif emmy.relationship.value >= Relationship.LIKES.value and kourtney.relationship.value >= Relationship.LIKES.value and aryssa.relationship.value >= Relationship.LIKES.value:
-        add Transform("images/v13/scene24/v13s24_20b.webp", blur=15)
+        add Transform("images/v13/Scene 24/v13s24_20b.webp", blur=15)
     elif emmy.relationship.value >= Relationship.LIKES.value and kourtney.relationship.value >= Relationship.LIKES.value:
-        add Transform("images/v13/scene24/v13s24_20c.webp", blur=15)
+        add Transform("images/v13/Scene 24/v13s24_20c.webp", blur=15)
     elif emmy.relationship.value >= Relationship.LIKES.value and aryssa.relationship.value >= Relationship.LIKES.value:
-        add Transform("images/v13/scene24/v13s24_20d.webp", blur=15)
+        add Transform("images/v13/Scene 24/v13s24_20d.webp", blur=15)
     elif kourtney.relationship.value >= Relationship.LIKES.value and aryssa.relationship.value >= Relationship.LIKES.value:
-        add Transform("images/v13/scene24/v13s24_20e.webp", blur=15)
+        add Transform("images/v13/Scene 24/v13s24_20e.webp", blur=15)
     elif emmy.relationship.value >= Relationship.LIKES.value:
-        add Transform("images/v13/scene24/v13s24_20f.webp", blur=15)
+        add Transform("images/v13/Scene 24/v13s24_20f.webp", blur=15)
     elif kourtney.relationship.value >= Relationship.LIKES.value:
-        add Transform("images/v13/scene24/v13s24_20g.webp", blur=15)
+        add Transform("images/v13/Scene 24/v13s24_20g.webp", blur=15)
     elif aryssa.relationship.value >= Relationship.LIKES.value:
-        add Transform("images/v13/scene24/v13s24_20h.webp", blur=15)
+        add Transform("images/v13/Scene 24/v13s24_20h.webp", blur=15)
 
     hbox:
         align (0.5, 0.5)
