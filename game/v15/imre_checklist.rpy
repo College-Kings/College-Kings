@@ -30,7 +30,6 @@ screen v15_imre_checklist():
 
                 text item.name yalign 0.5 style "v15_imre_checklist_text"
 
-
 style v15_imre_checklist_text is text:
     font "fonts/RockSalt-Regular.ttf"
     size 20

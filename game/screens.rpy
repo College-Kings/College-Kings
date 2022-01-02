@@ -226,6 +226,7 @@ screen choice(items, seconds=3, fail_label=None):
         for item in items:
             button:
                 minimum (389, 96)
+                xmargin 50
                 idle_background "choice_button_idle"
                 hover_background "choice_button_hover"
                 action item.action
