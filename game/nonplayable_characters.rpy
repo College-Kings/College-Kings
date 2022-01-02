@@ -186,6 +186,7 @@ default candy = NonPlayableCharacter("Candy") # Relationship progression: FRIEND
 default charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
 default chloe = NonPlayableCharacter("Chloe", "Chloe101") # Relationship progression: MAD, FRIEND, FWB, GIRLFRIEND
 default chris = NonPlayableCharacter("Chris", "Chriscuit") # Relationshp progression: MAD, FRIEND
+default dean = NonPlayableCharacter("Dean")
 default elijah = NonPlayableCharacter("Elijah", "Elijah_Woods") # Relationship progression: MAKEFUN, FRIEND
 default emily = NonPlayableCharacter("Emily", "emilyyyy") # Relationship progression: FRIEND, FWB
 default emmy = NonPlayableCharacter("Emmy") # Relationship progression: FRIEND, LIKES, FWB
