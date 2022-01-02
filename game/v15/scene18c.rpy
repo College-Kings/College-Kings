@@ -350,7 +350,6 @@ label v15s18c_riley:
 
 label v15s18c_imre_aubrey:
     $ freeroam14.add("imre_aubrey")
-    $ v15_imre_checklist[4].complete = True
 
     scene v15s18c_imau_1 # TPP. Show MC walking up to Imre and Aubrey, MC slight smile, mouth closed, Imre slight smile, mouth open, looking at Aubrey, Aubrey looking at Imre, mouth closed, slightly annoyed
     #with dissolve
@@ -1072,6 +1071,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_34 # FPP. MC watches as Aubrey walks out of the room, she looks back at him over her shoulders, sexy expression, winking, mouth closed
     with dissolve
 
+    $ v15_imre_checklist[4].complete = True
     u "*Exhales* (Damn, what a night so far.)"
 
     scene v15s18c_imau_35 # TPP. Show MC walking towards the door, mouth closed, smiling
@@ -1086,13 +1086,12 @@ label v15s18c_imre_aubrey:
 
     menu:
         "Steal the panties":
-            $ v15_imre_checklist[6].complete = True
-            
             u "(Sorry, Autumn. I'm a man in need.)"
 
             scene v15s18c_imau_37 # TPP. Show MC taking the panties, smiliing, mouth closed
             with dissolve
 
+            $ v15_imre_checklist[6].complete = True
             u "(Double check.)"
 
         "Don't steal the panties":
@@ -1202,8 +1201,6 @@ label v15s18c_ryan:
 
     menu:
         "Take the condom":
-            $ v15_imre_checklist[7].complete = True
-        
             scene v15s18c_ry_4 # TPP. Show MC slowly grabbing the condom out of Ryan's pocket (it's fully in the poocket still)
             with dissolve
 
@@ -1231,6 +1228,7 @@ label v15s18c_ryan:
             scene v15s18c_ry_6 # FPP. MC standing up, backed off, looking at Ryan sleeping, Ryan snoring
             with dissolve
 
+            $ v15_imre_checklist[7].complete = True
             u "*Whispers* Hey, thanks man!"
 
             ry "*Snoring*"
@@ -1985,8 +1983,6 @@ label v15s18c_autumn_amber:
                 call screen v15s18a_upstairsroom
 
 label v15s18c_autumn_kiss:
-    $ v15_imre_checklist[5].complete = True
-
     scene v15s18c_auam_8 # TPP. Show Autumn and MC leaving the bar, both slight smiles, mouths closed
     #with dissolve
 
@@ -2065,6 +2061,7 @@ label v15s18c_autumn_kiss:
     scene v15s18c_auam_10a
     with dissolve
 
+    $ v15_imre_checklist[5].complete = True
     u "*Laughs* Okay."
 
     scene v15s18c_auam_15 # TPP. Show MC walking back to where he stands on the screen, sligth smile, mouth closed
@@ -2283,8 +2280,6 @@ label v15s18c_chris_penelope:
                 pe "Sorry, I just don't feel comfortable."
 
             elif kct == "confident" or penelope.relationship.value >= Relationship.LOYAL.value:
-                $ v15_imre_checklist[1].complete = True
-                
                 scene v15s18c_chpe_5f # FPP. Same as v15s18c_chpe_5, Penelope flirty expression, mouth open
                 with dissolve
 
@@ -2466,6 +2461,7 @@ label v15s18c_chris_penelope:
                 scene v15s18c_chpe_21a # FPP. Same as v15s18c_chpe_21, Penelope smiling, mouth closed
                 with dissolve
 
+                $ v15_imre_checklist[1].complete = True
                 u "After you."
 
                 scene v15s18c_chpe_22 # TPP. Show Penelope leaving the room, MC leaving behind her, both smiling, mouths closed
