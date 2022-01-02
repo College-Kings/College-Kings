@@ -132,7 +132,7 @@ style namebox is default
 style namebox_label is say_label
 
 
-style window:
+style say_window:
     xalign 0.5
     xfill True
     yalign gui.textbox_yalign
@@ -214,7 +214,7 @@ screen choice(items, seconds=3, fail_label=None):
     style_prefix "choice"
     # Show KCT
     if showkct:
-        use kct_choice
+        use kct_choice_hint
     
     hbox:
         xalign 0.5

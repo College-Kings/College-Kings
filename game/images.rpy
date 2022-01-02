@@ -1,4 +1,4 @@
-## Solids
+## Globals
 image darker_80 = Solid("#000c")
 
 # Splash Screen
@@ -10,6 +10,9 @@ image splashthree = "images/splash 3.webp"
 ## Choice
 image choice_button_idle = "gui/choice/button_idle.png"
 image choice_button_hover = "gui/choice/button_idle.png"
+
+## KCT Choice Hint
+image kct_choice_hint_background = Frame("gui/kct/background.png", 44, 6, 44, 0) 
 
 ## Path Builder
 image path_builder_button_idle = Frame("main_menu/path_builder/images/button_idle.webp", 24, 6)

@@ -28,22 +28,27 @@ init python:
 
 
 # KCT Screens
-screen kct_choice():
-    fixed:
-        xysize (298, 76)
-        xalign 1.0
+screen kct_choice_hint():
+    style_prefix "kct_choice"
 
-        add "gui/kct.webp"
-        text kct:
-            align (0.5, 0.5)
-            font "fonts/Freshman.ttf"
-            size 40
-            if kct == "popular":
-                color "#53d769"
-            if kct == "loyal":
-                color "#fecb2e"
-            if kct == "confident":
-                color "#fc3d39"
+    window:
+        xalign 1.0
+        xoffset -50
+        background "kct_choice_hint_background"
+
+        hbox:
+            null width 10
+
+            add "gui/kct/logo.png" align (0.5, 0.5)
+
+            text kct.upper() align (0.5, 0.5)
+
+            null width 30
+
+
+style kct_choice_text is text:
+    font "fonts/Druk-Wide-Bold.ttf"
+    size 22
 
 
 screen kct_popup(required_kct=None):
