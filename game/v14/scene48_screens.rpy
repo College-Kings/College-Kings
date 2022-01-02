@@ -64,7 +64,7 @@ screen iBuy():
 
     # Determine Price
     bar:
-        value VariableValue("v14s48_car_price",offset=100, range=700)
+        value VariableValue("v14s48_car_price", offset=100, range=700)
         pos (765, 870)
         maximum (800, 50)
 
