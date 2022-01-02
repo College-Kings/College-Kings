@@ -257,36 +257,47 @@ define config.narrator_menu = True
 ## menus.
 
 screen quick_menu():
-
-    ## Ensure this appears on top of other screens.
     zorder 100
+    style_prefix "quick_menu"
+
+    default image_path = "gui/quick_menu/"
 
     if quick_menu:
         hbox:
-            style_prefix "quick"
-
             align (0.5, 1.0)
+            yoffset -40
+            spacing 30
 
             if not realmode:
-                textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu("history")
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle") text_selected_color "#FFD166"
-            textbutton _("Save") action ShowMenu("save")
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu("settings")
+                imagebutton idle image_path + "rollback_idle.png" action Rollback()
+            imagebutton idle image_path + "history_idle.png" action ShowMenu("history")
+            imagebutton idle image_path + "skip_idle.png" action Skip() alternate Skip(fast=True, confirm=True)
+            imagebutton idle image_path + "auto_forward_idle.png" action Preference("auto-forward", "toggle")
+            imagebutton idle image_path + "save_idle.png" action ShowMenu("save")
+            imagebutton idle image_path + "quick_save_idle.png" action QuickSave()
+            imagebutton idle image_path + "quick_load_idle.png" action QuickLoad()
+            # textbutton _("Prefs") action ShowMenu("settings")
 
     if config.developer:
         hbox:
-            style_prefix "quick"
             align (1.0, 1.0)
+            xoffset -20
+            spacing 15
 
-            textbutton "Scene Select":
-                action Show("bugTesting_SceneSelect")
+            textbutton "SCENE SELECT" action Show("bugTesting_SceneSelect")
+            add "gui/arrow.png" yalign 0.5
 
-            textbutton "Cheats":
-                action Show("bugTesting_cheatMenu")
+            null width 10
+
+            textbutton "CHEATS" action Show("bugTesting_cheatMenu")
+            add "gui/arrow.png" yalign 0.5
+
+
+style quick_menu_button:
+    align (0.5, 0.5)
+
+style quick_menu_button_text is olympus_mount_30
+
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
@@ -294,15 +305,6 @@ init python:
     config.overlay_screens.append("quick_menu")
 
 default quick_menu = True
-
-style quick_button is default
-style quick_button_text is button_text
-
-style quick_button:
-    properties gui.button_properties("quick_button")
-
-style quick_button_text:
-    properties gui.button_text_properties("quick_button")
 
 
 ################################################################################
