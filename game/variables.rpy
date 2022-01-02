@@ -379,6 +379,7 @@ default v15_seduce_ms_rose = False # Requested Variables for v15s21
 default v15_stuck_up_for_nora = False
 default v15_threaten_ms_rose = False # Requested Variables for v15s21
 default v15_took_notes = False
+default v15s10_buyer_max_amount = 0
 default v15s18_LaurensBed = False
 default v15s18_mention_list = False
 default v15s18_mention_list_aubrey = False
