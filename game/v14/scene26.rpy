@@ -71,7 +71,7 @@ label v14s26:
     scene v14s26_2d # FPP. same as v14s26_2b lindsey is holding up a cake
     with dissolve
 
-    li "You can buy a cake! *Chuckles*"
+    li "You can buy some cake! *Chuckles*"
 
     scene v14s26_2 
     with dissolve
@@ -116,7 +116,7 @@ label v14s26:
     scene v14s26_5a # FPP. same as v14s26_5 lauren mouth open, lindeys mouth closed, the counter looks the same as v14s26_2
     with dissolve
 
-    la "*Laughs* My bad. Let me make it up to you by giving you a cake."
+    la "*Laughs* My bad. Let me make it up to you by giving you some cake."
 
     scene v14s26_5
     with dissolve

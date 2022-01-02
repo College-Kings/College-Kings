@@ -149,7 +149,7 @@ label v14s26a:
     scene v14s26a_2j # FPP. same as v14s26a_2a Lindsey grabs a cake and hands it to MC, no expression, mouth open
     with dissolve
 
-    li "Here. Take one for the ride."
+    li "Here. Take one for the road."
 
     if v14_lauren_sabotage:
         scene v14s26a_2d
