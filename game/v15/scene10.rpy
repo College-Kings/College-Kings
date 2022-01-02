@@ -7,6 +7,12 @@ label v15s10:
 # -Car totals for this scene can be calculated via Oscar or the document that Cheex can give you access to-
 # -MC arrives at the Lindsey car location. The car is in the same position as before. Lindsey is leaning against it, waiting. She turns to see MC approaching and gives him a nice smile-
 
+    python:
+        v14s48_car_price = min(v14s48_car_price, v15s10_buyer_max_amount)
+
+        if v14s48_car_description == CarDescription.LIE:
+            v14s48_car_price -= 200
+
     scene v15s10_1 # TPP. Show MC walking down the sidewalk near where they took the picture for lindsey car, Slight smile, mouth closed.
     with dissolve
 
@@ -37,9 +43,7 @@ label v15s10:
 
     li "You'll be fine! I believe in you, [name]."
 
-    if v14_pics_with_linds:
-        if "v14s47_passenger_2b.webp" in v14s47_car_pics:
-            $ v14s48_car_price += 50
+    if v14_pics_with_linds: # Male Buyer
         scene v15s10_5 # FPP. Show a creepyish guy approaching, the man dressed in a smart casual sense, the man slight smile, mouth closed
         with dissolve
 
@@ -199,7 +203,6 @@ label v15s10:
         male_buyer "Let me take a look at this piece of junk then."
 
         if v14s48_car_description == CarDescription.LIE:
-            $ v14s48_car_price -= 200
             scene v15s10_11 # TPP. Show MC and the man walking towards the car, Lindsey walking off to the side still looking at her phone.
             with dissolve
 
@@ -298,7 +301,7 @@ label v15s10:
 
             male_buyer "It needs a lot of work, but it does have potential."
 
-            male_buyer "This is the best I can do."
+            male_buyer "$[v14s48_car_price] is the best I can do."
 
         # -[CarTotal] pops up on screen based on the pay out sums (if lied, total they can receive is minus200$ off the car's worth price)-
         # Hi Oscar :D
@@ -588,12 +591,12 @@ label v15s10:
             scene v15s10_12e
             with dissolve
 
-            male_buyer "Here's my offer based on everything I'm seeing here. Plus a tip for the girl. *Chuckles*"
+            male_buyer "$[v14s48_car_price] is my offer based on everything I'm seeing here."
 
             scene v15s10_13g # FPP. Same as v15s10_13f, Lindsey rolling her eyes, unamused face, mouth closed.
             with dissolve
 
-            li "Gee, thanks."
+            li "Thanks."
 
             pause 0.75
 
@@ -765,7 +768,7 @@ label v15s10:
             pause 0.75
             
             jump v15s12
-    else:
+    else: # Female Buyer
         scene v15s10_femalebuyer_1 # FPP. Show a shy hot woman looking to be in her mid 30s walking up to the area with the car, her clothes librarian like, gentle awkward smile, mouth closed.
         with dissolve
 
@@ -807,7 +810,6 @@ label v15s10:
         u "(She seems like a really nice person, this should be easy.)"
 
         if "v14s47_passenger_2f.webp" in v14s47_car_pics:
-            $ v14s48_car_price += 50
             scene v15s10_femalebuyer_2a
             with dissolve
 
@@ -848,7 +850,6 @@ label v15s10:
             female_buyer "Oh, that's a shame. He was magnificent..."
 
         if v14s48_car_description == CarDescription.LIE:
-            $ v14s48_car_price -= 200
             scene v15s10_femalebuyer_4 # FPP. MC looking at the lady as she is checking out the car, the lady gentle awkward smile, mouth closed.
             with dissolve
             
@@ -978,7 +979,7 @@ label v15s10:
             scene v15s10_femalebuyer_4e
             with dissolve
 
-            female_buyer "I can't overlook the things you've lied about, but I do love the idea of the bubblegum smell when I'm driving. So, this is what I can offer..."
+            female_buyer "I can't overlook the things you've lied about, but I do love the idea of the bubblegum smell when I'm driving. So, I can offer $[v14s48_car_price]."
 
             scene v15s10_femalebuyer_4h # FPP. Same as v15s10_femalebuyer_4g, The lady holding up cash, looking at MC, slight smile, mouth closed. # -[CarTotal] pops up on screen based on the pay out sums(if lied, total they can receive is minus200$ off the car's worth price)- # Third times a charm. Hi Oscar :D
             with dissolve
@@ -1132,7 +1133,7 @@ label v15s10:
             scene v15s10_femalebuyer_4e
             with dissolve
 
-            female_buyer "I am. It's an honest price for an honest seller. Here's my total offer:"
+            female_buyer "I am. It's an honest price for an honest seller. I'm happy to pay $[v14s48_car_price]."
 
             scene v15s10_femalebuyer_4h
             with dissolve
@@ -1279,4 +1280,6 @@ label v15s10:
 
         pause 0.75
 
-        jump v15s12
+    $ lindsey_board.money += v14s48_car_price
+
+    jump v15s12
