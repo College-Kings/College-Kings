@@ -5,7 +5,6 @@
 # Render Count: Unique Renders 18 Total: 144
 
 label v15s35:
-
     scene v15s35_1 # TPP. MC arrives at the Chicks house, knocks on the front door, slight smile, mouth is closed
     with dissolve
 
@@ -20,7 +19,6 @@ label v15s35:
     with dissolve
 
     menu:
-
         "Be polite":
             $ add_point(KCT.BRO)
             $ add_point(KCT.BOYFRIEND)
@@ -72,20 +70,19 @@ label v15s35:
     scene v15s35_3 # TPP. MC enters the house, his back is turned to the camera Lindsey closes the door slight smile mouth is closed looking at Mc
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s35_4 # TPP. MC enters the kitchen with Lindsey both slight smiles mouths are closed, Aubrey and Autumn are standing with their drinks in hand, both of them looking at Mc slight smiles, Aubrey's mouth is closed, Autumn is waving at MC, mouth is open
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s35_5 # TPP. Show just Lindsey, Aubrey, and Autumn, Aubrey and Autumn have drinks in their hands from render v15s35_4, all of them looking at Mc, slight smiles, mouths are closed, show the sink area in the background as Autumn and Lindsey will be going to that area in future renders
     with dissolve
 
     u "Hey. What're you drinking?"
 
-    if v15s24_alcohol:
-
+    if v15_lindsey_alcohol:
         scene v15s35_5a # TPP. same as v15s35_5 Autumn's mouth is open
         with dissolve
 
@@ -97,7 +94,6 @@ label v15s35:
         au "They're amazing, Lindsey. I'm already feeling it."
 
     else:
-
         scene v15s35_5a
         with dissolve
 
@@ -131,10 +127,9 @@ label v15s35:
     scene v15s35_5f # TPP. same as v15s35_5 Lindsey and Autumn go over towards the sink area where cocktail-making items are laid out, both their backs are turned to MC and Aubrey, Aubrey is looking at Mc slight smile, mouth is closed
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
-    if aubrey_mad:
-
+    if aubrey.relationship.value <= Relationship.MAD.value:
         scene v15s35_5g # TPP. same as v15s35_5f Aubrey has no expression, mouth is open, still looking at Mc, Autumn and Lindsey still have their backs turned to MC and Aubrey
         with dissolve
 
@@ -153,7 +148,6 @@ label v15s35:
         au "Yeah, let's hope that's possible."
 
     else:
-
         scene v15s35_5f
         with dissolve
 
@@ -192,7 +186,7 @@ label v15s35:
     scene v15s35_5j # TPP. same as v15s35_5 Lindsey and Autumn return,Lindsey handing MC his drink, just show Mc's arm and hand reaching for the drink, all slight smiles, all mouths are closed, all looking at MC
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s35_5k # TPP. same as v15s35_5j Mc's arm and hand are now out of view, Lindsey's mouth is open
     with dissolve
@@ -202,19 +196,18 @@ label v15s35:
     scene v15s35_5l # TPP. same as v15s35_5j Widen the shot to now show Mc, all of them slight smiles, mouths are open, all of them are clinking their glasses together above of the table.
     with fade
 
-    pause 0.50
+    pause 0.75
 
     scene v15s35_6 # TPP. show everyone sitting at the kitchen table On Mc's Left is Lindsey, in front of Mc is Autumn, on Mc's right is Aubrey, Mc and Lindsey are looking at each other Lindsey's mouth is open, Mc's mouth is closed, Autumn and Aubrey are looking at each other Aubrey's mouth is open, Autumns mouth is closed
     with dissolve
 
-    if v14_help_lindsey and v15s12_lindsey_pb_wouldYouRather:
-        jump v15would_you_rather
-
-    elif v14_help_lindsey and not v15s12_lindsey_pb_wouldYouRather:
+    if v15_lindsey_mostlikelyto: #If helping Lindsey and chose Most Likely To
         jump v15most_likely_to
 
-    else: # -if MC is not helping lindsey and did not choose a game on the planning board, but just got invited to game night
+    elif v15_lindsey_gamenight: #If helping Lindsey and chose Would You Rather
+        jump v15would_you_rather
 
+    else: # -if MC is not helping lindsey and did not choose a game on the planning board, but just got invited to game night
         scene v15s35_7 # FPP. Mc looks to his left and just see's Lindsey, Lindsey has a slight smile, mouth is open, looking at Mc
         with dissolve
 
@@ -228,7 +221,7 @@ label v15s35:
         scene v15s35_7
         with dissolve
 
-        li "'Would you rather' or 'Most likely to'."
+        li "\"Would you rather\" or \"Most likely to\"."
 
         scene v15s35_7a
         with dissolve
@@ -239,13 +232,11 @@ label v15s35:
         with dissolve
 
         menu:
-
             "Would you rather":
-
                 scene v15s35_7a
                 with dissolve
 
-                u "Let's play 'Would you rather'. It sounds like the most fun option."
+                u "Let's play \"Would you rather\". It sounds like the most fun option."
 
                 scene v15s35_7
                 with dissolve
@@ -255,11 +246,10 @@ label v15s35:
                 jump v15would_you_rather
 
             "Most likely to":
-
                 scene v15s35_7a
                 with dissolve
 
-                u "I vote for 'Most likely to'."
+                u "I vote for \"Most likely to\"."
 
                 scene v15s35_7
                 with dissolve
@@ -268,9 +258,7 @@ label v15s35:
 
                 jump v15most_likely_to
             
-
-    label v15would_you_rather # -if Chose would you rather on the planning board and regardless of how they chose the game, continue to the game
-
+    label v15would_you_rather: # -if Chose would you rather on the planning board and regardless of how they chose the game, continue to the game
         scene v15s35_7b # FPP. same as v15s35_7 Lindsey takes out her phone looks at it and taps on it,  all v15s35_7(letter) renders going forward Lindsey will be holding her phone unless otherwise said, slight smile, mouth is open
         with dissolve
 
@@ -279,7 +267,7 @@ label v15s35:
         scene v15s35_6a # TPP. same as v15s35_6 Everyone gets out their phones, looks at them and taps on them, all slight smiles, all mouths closed
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s35_8 # FPP. Show Autumn holding her phone, all v15s35_8(letter) renders Autumn will be holding her phone unless otherwise said, looking at Lindsey, Slight smile, mouth is open
         with dissolve
@@ -327,19 +315,15 @@ label v15s35:
         # -We enter the UI for Would you rather-
 
         menu:
-
             "$50mil to charity":
-
                 jump v15_50mil_charity
 
             "$500k for me":
-
                 jump v15_500k_for_me
 
         # -After choosing, we see on the UI what everyone has chosen. All three girls chose $50m to charity-
 
         label v15_50mil_charity:
-
             scene v15s35_7d
             with dissolve
 
@@ -382,8 +366,7 @@ label v15s35:
 
             au "It's almost disgusting... *Giggles*"
 
-        label v15_500k_for_me
-
+        label v15_500k_for_me:
             scene v15s35_7d
             with dissolve
 
@@ -437,12 +420,12 @@ label v15s35:
             scene v15s35_7f # FPP. same as v15s35_7d Lindsey is fake crying, still looking at Mc, mouth is still open
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s35_8f # FPP. same as v15s35_8c Autumn is fake crying, still looking at Mc, mouth is still open
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s35_8a
             with dissolve
@@ -498,19 +481,15 @@ label v15s35:
         # -We enter the UI for Would you rather-
 
         menu:
-
             "Kill Santa Claus":
-
                 jump v15_kill_santa
 
             "Kill the Easter bunny":
-
                 jump v15_kill_easter_bunny
 
         # -After choosing, we see on the UI what everyone has chosen. Autumn chose Kill Santa. Lindsey and Aubrey chose Kill the Easter bunny-
 
         label v15_kill_santa:
-
             scene v15s35_7g # FPP. same as v15s35_7d Lindsey is slightly shocked, still looking at Mc, mouth is still open
             with dissolve
 
@@ -594,7 +573,6 @@ label v15s35:
         # -if MC accepted blowjob from Naomi and Aubrey is mad with him then she should be more unplayful, not smiling at his jokes. But if he didn't do the blowjob and they're on good terms, especially if they're RS, she will be laughing and playing along with him.
 
         label v15_kill_easter_bunny:
-
             scene v15s35_7i # FPP. same as v15s35_7h Lindsey is looking at Autumn, still a slight smile, mouth is still open
             with dissolve
 
@@ -610,12 +588,11 @@ label v15s35:
 
             u "Tell that to Santa's wife!"
 
-            if aubrey_mad:
-
+            if aubrey.relationship.value <= Relationship.MAD.value:
                 scene v15s35_9f # FPP. same as v15s35_9d Aubrey has a disgusted look on her face, still looking at Mc, mouth is still closed
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s35_9g # FPP. same as v15s35_9a Aubrey has no expression, still looking at Autumn, mouth is still open
                 with dissolve
@@ -623,11 +600,10 @@ label v15s35:
                 au "Yeah, and all the elves."
 
             else:
-
                 scene v15s35_9h # FPP. same as v15s35_9b Aubrey has a full smile and is laughing, still looking at Mc
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s35_9a
                 with dissolve
@@ -684,20 +660,17 @@ label v15s35:
 
             u "Anyone can dress up as a bunny to take its place. Get me a basket and some eggs, and our problem is solved."
 
-            if aubrey_mad:
-
+            if aubrey.relationship.value <= Relationship.MAD.value:
                 scene v15s35_9f
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
-            elif aubrey_tamed:
-
+            elif aubrey.relationship.value >= Relationship.TAMED.value:
                 scene v15s35_9i # FPP. same as v15s35_9d Aubrey is biting her finger, looking at Mc seductively
                 with dissolve
 
             else:
-
                 scene v15s35_9h
                 with dissolve
 
@@ -706,8 +679,7 @@ label v15s35:
 
             u "But finding a new Santa? Sheesh... That's a recruiting nightmare."
 
-            if aubrey_mad:
-
+            if aubrey.relationship.value <= Relationship.MAD.value:
                 scene v15s35_9g
                 with dissolve
 
@@ -716,14 +688,13 @@ label v15s35:
                 scene v15s35_9f
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
-            elif aubrey_tamed:
-
+            elif aubrey.relationship.value >= Relationship.TAMED.value:
                 scene v15s35_9j # FPP. same as v15s35_9i Aubrey is winking at Mc, not biting her finger, full smile, mouth is closed
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
             scene v15s35_8b
             with dissolve
@@ -776,23 +747,19 @@ label v15s35:
         # -We enter the UI for Would you rather-
 
         menu:
-
             "Human body, frog mind":
-
                 jump v15_human_body_frog_mind
 
             "Frog body, human mind":
-
                 jump v15_frog_body_human_mind
 
         # -After choosing, we see on the UI what everyone has chosen. Lindsey and Autumn chose frog body, human mind. Aubrey chose human body, frog mind-
 
         label v15_human_body_frog_mind:
-
             scene v15s35_7h
             with dissolve
 
-            li "Really Aubrey?"
+            li "Really, Aubrey?"
 
             scene v15s35_9
             with dissolve
@@ -834,7 +801,7 @@ label v15s35:
             scene v15s35_8j # FPP. same as v15s35_8a Autumn has a cute pouting expression, still looking at Mc, mouth is still closed
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s35_8a
             with dissolve
@@ -880,7 +847,6 @@ label v15s35:
             with dissolve
 
         label v15_frog_body_human_mind:
-
             scene v15s35_7i
             with dissolve
 
@@ -946,15 +912,13 @@ label v15s35:
 
             u "Aubrey, let's just go live in a river and eat flies. These two will need our help protecting them from predators anyway."
 
-            if aubrey_mad:
-
+            if aubrey.relationship.value <= Relationship.MAD.value:
                 scene v15s35_9m # FPP. same as v15s35_9g Aubrey is looking at Mc, still no expression, mouth is still open
                 with dissolve
 
                 au "Ha."
 
             else:
-
                 scene v15s35_9h
                 with dissolve
 
@@ -987,12 +951,11 @@ label v15s35:
 
         au "Orgy. For sure. One thousand percent."
 
-        if aubrey_mad:
-
+        if aubrey.relationship.value <= Relationship.MAD.value:
             scene v15s35_9n # FPP. same as v15s35_9f Aubrey rolls her eyes, still a disgusted expression, mouth is still closed, still facing Mc
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
         scene v15s35_7h
         with dissolve
@@ -1022,7 +985,7 @@ label v15s35:
         scene v15s35_8k # FPP. same as v15s35_8i Autumn is looking at her phone, still a concerned expression, mouth is still closed
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s35_8i
         with dissolve
@@ -1045,19 +1008,15 @@ label v15s35:
         # -We enter the UI for Would you rather-
 
         menu:
-
             "No sex forever":
-
                 jump v15_no_sex_forever
 
             "20-person orgy every time":
-
                 jump v15_20_person_orgy
 
         # -After choosing, we see on the UI what everyone has chosen. Autumn chose no sex forever. Lindsey and Aubrey chose Orgy with twenty people forever-
 
         label v15_no_sex_forever:
-
             scene v15s35_7g
             with dissolve
 
@@ -1081,7 +1040,7 @@ label v15s35:
             scene v15s35_8a
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s35_9m
             with dissolve
@@ -1091,7 +1050,7 @@ label v15s35:
             scene v15s35_9p # FPP. same as v15s35_9d Aubrey is smirking, still looking at Mc, still a slight smile, mouth is still closed
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s35_9o
             with dissolve
@@ -1100,15 +1059,13 @@ label v15s35:
 
             u "You would have to watch them get fucked by all those other people, forever?"
 
-            if aubrey_mad or v13_FirstThreesome:
-
+            if aubrey.relationship.value <= Relationship.MAD.value or "v14_threesome" in sceneList:
                 scene v15s35_9q # FPP. same as v15s35_9m Aubrey is slightly sad, still looking at Mc, mouth is still open
                 with dissolve
 
                 au "Oh... Yeah, you're right..."
 
             else:
-
                 scene v15s35_9m
                 with dissolve
 
@@ -1135,21 +1092,18 @@ label v15s35:
             li "Is that why you chose it, Autumn?"
 
         label v15_20_person_orgy:
-
             scene v15s35_7d
             with dissolve
 
             li "*Laughs* Looks like I'll be seeing [name] and Aubrey at the orgy."
 
-            if aubrey_mad:
-
+            if aubrey.relationship.value <= Relationship.MAD.value:
                 scene v15s35_9
                 with dissolve
 
                 au "About time!"
 
             else:
-
                 scene v15s35_9h
                 with dissolve
 
@@ -1175,8 +1129,7 @@ label v15s35:
 
             u "Well, that's a little weird. Strangers?"
 
-            if aubrey_mad:
-
+            if aubrey.relationship.value <= Relationship.MAD.value:
                 scene v15s35_9r # FPP. same as v15s35_9f Aubrey's mouth is open, still a disgusted expression, still looking at Mc
                 with dissolve
 
@@ -1198,7 +1151,6 @@ label v15s35:
                 u "I guess you could just sit and watch then..."
 
             else:
-
                 scene v15s35_9b
                 with dissolve
 
@@ -1222,7 +1174,7 @@ label v15s35:
             scene v15s35_6e # TPP. same as v15s35_6d Aubrey, Autumn, and Lindsey are all looking at MC awkwardly, Mc has no expression, all mouths are closed
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s35_6f # TPP. same as v15s35_6e Mc's mouth is open
             with dissolve
@@ -1232,12 +1184,12 @@ label v15s35:
             scene v15s35_6e
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s35_6d
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s35_7i
             with dissolve
@@ -1257,7 +1209,7 @@ label v15s35:
         scene v15s35_8n # FPP. same as v15s35_8e Autumn has an embarrased expression, still looking at Mc, mouth is still closed
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s35_8m
         with dissolve
@@ -1294,12 +1246,11 @@ label v15s35:
 
         au "Not to be insensitive, but how exactly does that work?"
 
-    label v15most_likely_to # -if Chose Most likely to on the planning board and regardless of how they chose the game, continue to the game
-
+    label v15most_likely_to: # -if Chose Most likely to on the planning board and regardless of how they chose the game, continue to the game
         scene v15s35_7b
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s35_7d
         with dissolve
@@ -1309,7 +1260,7 @@ label v15s35:
         scene v15s35_6a
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s35_8
         with dissolve
@@ -1362,17 +1313,13 @@ label v15s35:
     # -We enter the UI for Most likely to-
 
         menu:
-
             "Lindsey":
-
                 jump v15_lindsey_zombie
 
             "Autumn":
-
                 jump v15_autumn_or_aubrey_zombie
 
-            "Aubrey"   
-            
+            "Aubrey":
                 jump v15_autumn_or_aubrey_zombie
 
     # -After MC chooses an Icon, and then votes for a person, we see on the UI who everyone has chosen. Lindsey and Aubrey voted for Autumn. Autumn voted for Lindsey-
@@ -1380,7 +1327,6 @@ label v15s35:
         # -if MC voted for Lindsey, creating a tie
 
         label v15_lindsey_zombie:
-
             scene v15s35_7i
             with dissolve
 
@@ -1433,8 +1379,7 @@ label v15s35:
 
         # -if MC voted for Autumn or Aubrey, Autumn wins the vote
 
-        label jump v15_autumn_or_aubrey_zombie:
-
+        label v15_autumn_or_aubrey_zombie:
             scene v15s35_7i
             with dissolve
 
@@ -1495,7 +1440,7 @@ label v15s35:
             scene v15s35_8h
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s35_8a
             with dissolve
@@ -1537,28 +1482,23 @@ label v15s35:
         scene v15s35_8h
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
     # -We enter the UI for Most likely to-
 
         menu:
-
             "Lindsey":
-
                 jump v15_mc_most_shitfaced
 
             "Autumn":
-
                 jump v15_mc_most_shitfaced
 
-            "Aubrey"
-            
+            "Aubrey":
                 jump v15_mc_most_shitfaced
 
     # -After MC votes for a person, we see on the UI who everyone has chosen. All three girls voted for MC-
 
         label v15_mc_most_shitfaced:
-
             scene v15s35_7d
             with dissolve
 
@@ -1604,8 +1544,7 @@ label v15s35:
 
             u "I will. Now I'm really looking forward to the next time I get drunk..."
 
-            if aubrey_tamed:
-
+            if aubrey.relationship.value >= Relationship.TAMED.value:
                 scene v15s35_9b
                 with dissolve
 
@@ -1633,8 +1572,7 @@ label v15s35:
 
         u "Who says I'm not already a sexy super spy like James Bond?"
 
-        if aubrey_mad:
-
+        if aubrey.relationship.value <= Relationship.MAD.value:
             scene v15s35_9r
             with dissolve
 
@@ -1648,10 +1586,9 @@ label v15s35:
             scene v15s35_9n
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
-        elif aubrey_tamed:
-
+        elif aubrey.relationship.value >= Relationship.TAMED.value:
             scene v15s35_9b
             with dissolve
 
@@ -1665,10 +1602,9 @@ label v15s35:
             scene v15s35_9i
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
         else:
-
             scene v15s35_9b
             with dissolve
 
@@ -1682,7 +1618,7 @@ label v15s35:
             scene v15s35_9h
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
         scene v15s35_8d
         with dissolve
@@ -1709,8 +1645,7 @@ label v15s35:
 
         au "Lame!"
 
-        if aubrey_mad:
-
+        if aubrey.relationship.value <= Relationship.MAD.value:
             scene v15s35_9o
             with dissolve
 
@@ -1719,13 +1654,12 @@ label v15s35:
             scene v15s35_10 # TPP. Show an angle where you can only see Mc and Aubrey sitting at the table Mc winking towards Aubrey, Aubrey has a disgusted expression, looking at Mc
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s35_10a # TPP. Same as v15s35_10 Aubrey is rolling her eyes, still a disgusted expression, Mc looks slightly sad still looking at Aubrey
             with dissolve
 
-        elif aubrey_tamed:
-
+        elif aubrey.relationship.value >= Relationship.TAMED.value:
             scene v15s35_9d
             with dissolve
 
@@ -1734,10 +1668,9 @@ label v15s35:
             scene v15s35_10b # TPP. Same as v15s35_10 Aubrey is looking at Mc seductively, Mc is still winking at Aubrey
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
         else:
-
             scene v15s35_9d
             with dissolve
 
@@ -1746,7 +1679,7 @@ label v15s35:
             scene v15s35_10c # TPP. same as v15s35_10 Aubrey flips her hair back with one hand and extends a "finger pistol" towards Mc she has a slight smile, Mc is still winking at Aubrey
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
         scene v15s35_7h
         with dissolve
@@ -1756,29 +1689,23 @@ label v15s35:
     # -We enter the UI for Most likely to-
 
         menu:
-
             "Lindsey":
-
                 jump v15_aubrey_spy
 
             "Autumn":
-
                 jump v15_aubrey_spy
 
-            "Aubrey"
-
+            "Aubrey":
                 jump v15_aubrey_spy
 
     # -After MC votes for a person, we see on the UI who everyone has chosen. Lindsey and Autumn voted for Aubrey. Aubrey voted for MC-
 
         label v15_aubrey_spy:
-
-            if aubrey_mad:
-
+            if aubrey.relationship.value <= Relationship.MAD.value:
                 scene v15s35_9t # FPP. same as v15s35_9o Aubrey is avoiding eye contact with Mc, still no expression, mouth is still closed
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
             scene v15s35_7h
             with dissolve
@@ -1823,7 +1750,7 @@ label v15s35:
             scene v15s35_9v # FPP. same as v15s35_9h Aubrey is leaning back in her chair laughing, full smile, facing Autumn
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s35_9a
             with dissolve
@@ -1850,8 +1777,7 @@ label v15s35:
 
         li "Who is most likely to get caught having sex on an airplane?"
 
-        if v11_aubrey_sex:
-
+        if "v11_aubrey" in sceneList:
             scene v15s35_9w # FPP. same as v15s35_9h Aubrey is looking at Lindsey, trying to cover her laughter with her mouth, mouth is still open
             with dissolve
 
@@ -1879,15 +1805,13 @@ label v15s35:
 
             u "She totally is, don't fall for it."
 
-            if not aubrey_mad:
-
+            if aubrey.relationship.value > Relationship.MAD.value:
                 scene v15s35_9j
                 with dissolve
 
                 u "(Think we dodged that one.)"
 
         else:
-
             scene v15s35_9
             with dissolve
 
@@ -1898,24 +1822,23 @@ label v15s35:
 
             li "What an idiot!"
 
-            scene v15s35_9w
-            with dissolve
+            if v11s13_rejected_aubrey:
+                scene v15s35_9w
+                with dissolve
 
-            u "(Is she talking about me?)"
+                u "(Is she talking about me?)"
 
-            if not v11_aubrey_sex and not aubrey_mad:
-
+            if aubrey.relationship.value > Relationship.MAD.value:
                 scene v15s35_9y # FPP. same as v15s35_9d Aubrey is pouting cutely at Mc, still looking at Mc, mouth is still closed
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
-            elif aubrey_mad and not v11_aubrey_sex:
-
+            else:
                 scene v15s35_9t
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
             scene v15s35_9
             with dissolve
@@ -1955,23 +1878,18 @@ label v15s35:
     # -We enter the UI for Most likely to-
 
         menu:
-
             "Lindsey":
-
                 jump v15_lindsey_plane
 
             "Autumn":
-
                 jump v15_autumn_plane
 
-            "Aubrey"
-            
+            "Aubrey":
                 jump v15_aubrey_plane
 
     # -After MC votes for a person, we see on the UI who everyone has chosen. Lindsey voted for Aubrey. Autumn voted for Lindsey. Aubrey voted for MC-
 
         label v15_autumn_plane:
-
             scene v15s35_7b
             with dissolve
 
@@ -1982,8 +1900,7 @@ label v15s35:
 
             u "Do you think we could all fit in an airplane bathroom?"
 
-            if not aubrey_mad:
-
+            if aubrey.relationship.value > Relationship.MAD.value:
                 scene v15s35_9h
                 with dissolve
 
@@ -1995,7 +1912,6 @@ label v15s35:
             aut "Not happening, haha!"
 
         label v15_aubrey_plane:
-
             scene v15s35_7h
             with dissolve
 
@@ -2022,7 +1938,6 @@ label v15s35:
             aut "Nope. And I don't think I ever would."
 
         label v15_lindsey_plane:
-
             scene v15s35_7d
             with dissolve
 
@@ -2036,7 +1951,7 @@ label v15s35:
             scene v15s35_7m # FPP. same as v15s35_7h Lindsey is blushing, still looking at Aubrey, mouth is still open, still a slight smile
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s35_9
             with dissolve
@@ -2053,26 +1968,24 @@ label v15s35:
 
             u "Yeah, I think in all the excitement you'd forget to lock the door, haha."
 
-            if v11_aubrey_sex and not aubrey_mad:
-
+            if v11_aubrey_sex and aubrey.relationship.value > Relationship.MAD.value:
                 scene v15s35_9
                 with dissolve
 
                 au "It happens more often than you think..."
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s35_9j
                 with dissolve
 
-            elif v11_aubrey_sex: and aubrey_mad:
-
+            elif v11_aubrey_sex and aubrey.relationship.value <= Relationship.MAD.value:
                 scene v15s35_9
                 with dissolve
 
                 au "It happens more often than you think..."
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s35_9t
                 with dissolve
@@ -2115,7 +2028,7 @@ label v15s35:
         scene v15s35_9s
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s35_8o
         with dissolve
@@ -2162,7 +2075,7 @@ label v15s35:
     scene v15s35_8n
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s35_8o
     with dissolve
@@ -2188,7 +2101,6 @@ label v15s35:
     with dissolve
 
     menu:
-
         "Stop the questions":
             $ add_point(KCT.BRO)
             $ add_point(KCT.BOYFRIEND)
@@ -2203,7 +2115,7 @@ label v15s35:
             scene v15s35_9e
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s35_9g
             with dissolve
@@ -2241,7 +2153,7 @@ label v15s35:
             scene v15s35_8q # FPP. same as v15s35_8n Autumn is even more embarrased, covering her body with her arms, avoiding eye contact with everyone, mouth is still closed
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s35_8r # FPP. same as v15s35_8q Autumn's mouth is open everything else is the same
             with dissolve
@@ -2278,17 +2190,17 @@ label v15s35:
     scene v15s35_11 # TPP. Show Lindsey pouring a couple of liquids into a cocktail shaker can be different juice colours or the same color, slight smile, mouth closed
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s35_11a # TPP. same as v15s35_11 Show Lindsey shaking the cocktail shaker, still slight smile, still mouth closed
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s35_11b # TPP. same as v15s35_11 Show Lindsey pouring drinks into glasses, 4 glasses total, still slight smile, still mouth closed
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s35_6g # TPP. same as v15s35_6 Lindsey approaches the table with the drinks from render v15s35_11b, Lindsey has a slight smile mouth is open, Autumn, Aubrey and Mc are still sitting in their original seats looking at Lindsey all of them have slight smiles, mouths are closed
     with dissolve
@@ -2303,12 +2215,12 @@ label v15s35:
     scene v15s35_6i # TPP. Lindsey sits down in her seat, Everyone now has their new drinks in their hands, all slight smiles all mouths closed Autumn Aubrey and Mc looking at Lindsey, Lindsey looking at Aubrey
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s35_12 # FPP. Use the same positioning and background from renders v15s35_7, Lindsey takes a drink from her glass (if different colors for drinks were used make sure she has the color of the one she gave herself,) all v15s35_12 renders Lindsey will be holding her drink unless otherwise stated
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s35_12a # FPP. same as v15s35_12 Lindsey's is holding her glass it is 3/4 full (Lindsey will be holding her drink in all all v15s35_12 renders unless otherwise stated), slight smile, mouth is open, looking at Autumn
     with dissolve
@@ -2341,7 +2253,6 @@ label v15s35:
     li "I just wanted to ask; What has Chloe ever done for you? Like, actually done for you?"
 
     if v15_chloe_lindseysabotage:
-
         scene v15s35_15 # TPP. Show only Mc sitting in his seat, reaching into his pant's pocket, looking at his pocket, slight smile, mouth is closed
         with dissolve
 
@@ -2350,7 +2261,7 @@ label v15s35:
         scene v15s35_15a # TPP. same as v15s35_15 MC takes out his phone to one side, keeping his phone lower than the table height so no-one can see his phone, and taps on it
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s35_15
         with dissolve
@@ -2360,7 +2271,7 @@ label v15s35:
     scene v15s35_13a # FPP. same as v15s35_13 Autumn takes a drink from her glass
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s35_13b # FPP. same as v15s35_13 Autumn has no expression, still looking at Lindsey, mouth is still open, her glass is 3/4 full now
     with dissolve
@@ -2372,7 +2283,7 @@ label v15s35:
     scene v15s35_14a # FPP. same as v15s35_14 Aubrey takes a drink from her glass
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s35_14b # FPP. same as v15s35_14 Aubrey has no expression, looking at Autumn, mouth is still open, her glass is 3/4 full now
     with dissolve
@@ -2453,9 +2364,7 @@ label v15s35:
     with dissolve
 
     if v15_chloe_lindseysabotage:
-
-        if v15s24_alcohol:
-
+        if v15_lindsey_alcohol:
             scene v15s35_12a
             with dissolve
 
@@ -2465,11 +2374,12 @@ label v15s35:
             with dissolve
 
             menu:
-
                 "Stay quiet":
                     $ add_point(KCT.BRO)
-                    if chloegf:
+
+                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                         $ add_point(KCT.TROUBLEMAKER)
+
                     if hangOutWithLindsey:
                         $ add_point(KCT.BOYFRIEND)
 
@@ -2511,12 +2421,14 @@ label v15s35:
                     scene v15s35_14d # FPP. same as scene v15s35_14c Aubrey stands up from her chair, her mouth is closed, still a slight smile, looking at Mc, her glass is still 3/4 full and sitting on the table not in her hand
                     with dissolve
 
-                    pause 0.50
+                    pause 0.75
 
                 "Offer shots":
                     $ add_point(KCT.TROUBLEMAKER)
-                    if chloegf:
+
+                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                         $ add_point(KCT.BOYFRIEND)
+
                     if hangOutWithLindsey:
                         $ add_point(KCT.TROUBLEMAKER)
 
@@ -2538,7 +2450,7 @@ label v15s35:
                     scene v15s35_16 # TPP. show MC in the kitchen, show Mc holding an alcohol bottle pouring it into 3 shot glasses in front of him, and a second different style alcohol bottle same color liquid as the one he is pouring on the counter, he has a slight smile, mouth is closed
                     with dissolve
 
-                    pause 0.50
+                    pause 0.75
 
                     scene v15s35_16a # TPP. same as v15s35_16 MC has put down the first bottle and grabs the second bottle, same colour liquid as the first, and fills a 4th shot glass with it, still a slight smile, mouth is still closed
                     with dissolve
@@ -2548,7 +2460,7 @@ label v15s35:
                     scene v15s35_6j # TPP. same as v15s35_6j Show Mc coming back to the table with the 4 filled shot glasses, Autumn Aubrey and Lindsey are sitting in their seats all looking at Mc all slight smiles all mouths are closed, if possible show all of their drinks in their hands 3/4 full (not necessary if not possible)
                     with dissolve
 
-                    pause 0.50
+                    pause 0.75
 
                     scene v15s35_12i # FPP. same as v15s35_12b Lindsey's glass is 3/4 full, still looking at Mc, still a slight smile, mouth is still open
                     with dissolve
@@ -2568,7 +2480,7 @@ label v15s35:
                     scene v15s35_6k # TPP. same as v15s35_6j All of them are standing where they were seated, MC is handing a shot glass to Lindsey slight smile mouth is closed, Lindsey is taking the glass from Mc, no expression mouth is closed, Aubrey and Autumn are looking at Mc holding their shot glasses, both of them slight smiles, mouths are closed
                     with dissolve
 
-                    pause 0.50
+                    pause 0.75
 
                     scene v15s35_6l # TPP. same as v15s35_6k All of them raise their shot glasses together if possible otherwise just show them raising them in the air, Mc's mouth is open, All of them slight smiles, Aubrey Lindsey and Autumn's mouths are closed
                     with dissolve
@@ -2578,7 +2490,7 @@ label v15s35:
                     scene v15s35_6m # TPP. same as v15s35_6l They all drink their shots
                     with dissolve
 
-                    pause 0.50
+                    pause 0.75
 
                     scene v15s35_12j # FPP. same as v15s35_12i Lindsey's face is rosey from being drunk, still a slight smile, still looking at Mc, mouth is still open, her glass is still 3/4 full
                     with dissolve
@@ -2595,23 +2507,26 @@ label v15s35:
 
                     menu (fail_label="v15let_it_happen"):
                         "Let it happen naturally":
-                            $ v15bring_up_chloe = False
                             $ add_point(KCT.BRO)
-                            if chloegf:
+
+                            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                 $ add_point(KCT.TROUBLEMAKER)
+
                             jump v15let_it_happen
 
                         "Bring up Chloe":
                             $ v15bring_up_chloe = True
                             $ add_point(KCT.TROUBLEMAKER)
-                            if chloegf:
+                            
+                            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                 $ add_point(KCT.BOYFRIEND)
+                                
                             if hangOutWithLindsey:
                                 $ add_point(KCT.TROUBLEMAKER)
+                                
                             jump v15bring_up_chloe
                         
                     label v15let_it_happen:
-
                         scene v15s35_12k
                         with dissolve
 
@@ -2673,7 +2588,6 @@ label v15s35:
                         li "*Drunk* Yes! That sounds perfect."
 
                     label v15bring_up_chloe:
-
                         scene v15s35_12k
                         with dissolve
 
@@ -2692,12 +2606,12 @@ label v15s35:
                         scene v15s35_14f # FPP. same as v15s35_14e Aubrey has a concerned/worried expression, mouth is closed, still looking at Mc, her glass is still 3/4 full
                         with dissolve
 
-                        pause 0.50
+                        pause 0.75
 
                         scene v15s35_12d
                         with dissolve
 
-                        pause 0.50
+                        pause 0.75
 
                         scene v15s35_12n # FPP. same as v15s35_12j Lindsey's glass is now half full, still a slight smile, still looking at Mc, mouth is still open, still a rosey face from being drunk
                         with dissolve
@@ -2732,32 +2646,36 @@ label v15s35:
                         scene v15s35_12d
                         with dissolve
 
-                        pause 0.50
+                        pause 0.75
 
                         scene v15s35_14f
                         with dissolve
 
                         menu (fail_label="v15stop_lindsey"):
-                            "Stop Lindsey":
-                                $ v15say_nothing = False
+                            "Stop Lindsey":                          
                                 $ add_point(KCT.BRO)
-                                if chloegf:
+                                
+                                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                     $ add_point(KCT.TROUBLEMAKER)
+                                    
                                 if hangOutWithLindsey:
                                     $ add_point(KCT.BOYFRIEND)
+                                    
                                 jump v15stop_lindsey
 
                             "Say nothing":
                                 $ v15say_nothing = True
                                 $ add_point(KCT.TROUBLEMAKER)
-                                if chloegf:
+                                
+                                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                     $ add_point(KCT.BOYFRIEND)
+                                    
                                 if hangOutWithLindsey:
                                     $ add_point(KCT.TROUBLEMAKER)
+                                    
                                 jump v15say_nothing
 
-                        label v15stop_lindsey
-
+                        label v15stop_lindsey:
                             scene v15s35_12o # FPP. same as v15s35_12n Lindsey's glass is now empty, mouth is closed, still a slight smile, still a rosey face from being drunk
                             with dissolve
 
@@ -2786,10 +2704,9 @@ label v15s35:
                             scene v15s35_14h # FPP. same as scene v15s35_14d Aubrey has no expression, is still standing up from her chair, her mouth is closed, still looking at Mc, her glass is still 3/4 full and sitting on the table not in her hand
                             with dissolve
 
-                            pause 0.50
+                            pause 0.75
 
-                        label v15say_nothing
-
+                        label v15say_nothing:
                             scene v15s35_12r # FPP. same as v15s35_12o Lindsey's mouth is open, still looking at Mc, still a slight smile, her glass is still empty, still a rosey face from being drunk
                             with dissolve
 
@@ -2820,7 +2737,7 @@ label v15s35:
                             scene v15s35_15
                             with dissolve
 
-                            pause 0.50
+                            pause 0.75
 
                             scene v15s35_15a
                             with dissolve
@@ -2830,7 +2747,7 @@ label v15s35:
                             scene v15s35_15
                             with dissolve
 
-                            pause 0.50
+                            pause 0.75
 
                             scene v15s35_13d # FPP. same as v15s35_13c Autumn has a slightly angry expression, still looking at Lindsey, mouth is still open, her glass is still 3/4 full
                             with dissolve
@@ -2845,10 +2762,9 @@ label v15s35:
                             scene v15s35_14j # FPP. same as scene v15s35_14h Aubrey has a slightly angry expression, still standing up from her chair, her mouth is closed, still looking at Mc, her glass is still 3/4 full and sitting on the table not in her hand
                             with dissolve
 
-                            pause 0.50
+                            pause 0.75
         
         else:
-
             scene v15s35_12a
             with dissolve
 
@@ -2858,11 +2774,12 @@ label v15s35:
             with dissolve
 
             menu:
-
                 "Say nothing":
                     $ add_point(KCT.BRO)
-                    if chloegf:
+                    
+                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                         $ add_point(KCT.TROUBLEMAKER)
+                        
                     if hangOutWithLindsey:
                         $ add_point(KCT.BOYFRIEND)
 
@@ -2904,12 +2821,14 @@ label v15s35:
                     scene v15s35_14d
                     with dissolve
 
-                    pause 0.50
+                    pause 0.75
                     
                 "Try to trick her":
                     $ add_point(KCT.TROUBLEMAKER)
-                    if chloegf:
+                    
+                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                         $ add_point(KCT.BOYFRIEND)
+                        
                     if hangOutWithLindsey:
                         $ add_point(KCT.TROUBLEMAKER)
 
@@ -2921,7 +2840,7 @@ label v15s35:
                     scene v15s35_14k # FPP. same as v15s35_14i Aubrey has a slightly angry expression, looking at Mc, mouth is closed, her glass is still 3/4 full
                     with dissolve
 
-                    pause 0.50
+                    pause 0.75
 
                     scene v15s35_12b
                     with dissolve
@@ -2938,11 +2857,10 @@ label v15s35:
                     scene v15s35_14k
                     with dissolve
 
-                    pause 0.50
+                    pause 0.75
 
                     if kct == "confident":
                         call screen kct_popup
-
                         scene v15s35_12b
                         with dissolve
 
@@ -2959,7 +2877,6 @@ label v15s35:
                         li "Well, I did, but I didn't mean it in a bad way... I was just joking."
 
                     else:
-
                         scene v15s35_12b
                         with dissolve
 
@@ -2993,14 +2910,13 @@ label v15s35:
                     scene v15s35_14j
                     with dissolve
 
-                    pause 0.50
+                    pause 0.75
 
     else: # -if helping/not helping Chloe and did not choose Embarrass Lindsey-
-
         scene v15s35_15b # TPP same as v15s35_15 Mc is stretching and yawning, eyes and mouth are closed
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s35_12c
         with dissolve
@@ -3040,12 +2956,12 @@ label v15s35:
         scene v15s35_14d
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
     scene v15s35_17 # FPP. Aubrey is walking up the stairs looking back and waving to everyone, slight smile, mouth is open
     with fade
 
-    au "Goodnight losers!"
+    au "Goodnight, losers!"
 
     scene v15s35_18 # TPP. MC and Autumn walking out the Chicks front door together, waving to Lindsey, slight smiles, mouths are closed, Lindsey waving back at Mc and Autumn slight smile, mouth is open
     with dissolve

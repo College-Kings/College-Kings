@@ -456,6 +456,7 @@ label v11_aubrey_plane_sex:
                 jump v11_nora_chris_plane
 
             "Don't go after her":
+                $ v11s13_rejected_aubrey = True
                 scene v11aub4
                 with dissolve
 

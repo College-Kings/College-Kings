@@ -227,6 +227,7 @@ default v11s1_courtpoints = 0
 default v11s23_penelope_date = True # late addition, defaulting to True to enhance act 4 playability
 default v11s25_beer = True
 default v11_ride_with_mrlee = False
+default v11s13_rejected_aubrey = False
 
 # 12.0
 default freeroam9 = set() #Ferry
@@ -405,3 +406,5 @@ default v15s33_cheese = False
 default v15s33_naomi_broke_aubreyrs = False
 default v15s18_pumpkin = 0
 default v12_followed_nora = False
+default v15bring_up_chloe = False
+default v15say_nothing = False
