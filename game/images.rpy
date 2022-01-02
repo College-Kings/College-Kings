@@ -1,11 +1,19 @@
+## Solids
+image darker_80 = Solid("#000c")
+
 # Splash Screen
 image splashone = "images/splash1.webp"
 image splashtwo = "images/splash2.webp"
 image splashthree = "images/splash 3.webp"
 
 # GUI
-## Solids
-image darker_80 = Solid("#000c")
+## Choice
+image choice_button_idle = "gui/choice/button_idle.png"
+image choice_button_hover = "gui/choice/button_idle.png"
+
+## Path Builder
+image path_builder_button_idle = Frame("main_menu/path_builder/images/button_idle.webp", 24, 6)
+image path_builder_button_hover = Frame("main_menu/path_builder/images/button_hover.webp", 24, 6)
 
 ## Settings
 image settings_button_idle = Frame("gui/settings/button_idle.webp", 24, 6)
@@ -13,10 +21,6 @@ image settings_button_selected = Frame("gui/settings/button_selected.webp", 24, 
 image settings_bar_left = Frame("gui/settings/bar_right.webp", 14, 5)
 image settings_bar_right = Frame("gui/settings/bar_right.webp", 14, 5)
 image settings_bar_thumb = Image("gui/settings/bar_thumb.webp")
-
-## Path Builder
-image path_builder_button_idle = Frame("main_menu/path_builder/images/button_idle.webp", 24, 6)
-image path_builder_button_hover = Frame("main_menu/path_builder/images/button_hover.webp", 24, 6)
 
 # Transitions
 image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm", loop=False)
