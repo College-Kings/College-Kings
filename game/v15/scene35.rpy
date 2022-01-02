@@ -659,7 +659,7 @@ label v15s35:
             scene v15s35_8a
             with dissolve
 
-            u "Anyone can dress up as a bunny to take its place. Get me a basket and some eggs, and our problem is solved."
+            u "Anyone can dress up as a bunny to take its place. Get me a basket and some eggs and our problem is solved."
 
             if aubrey.relationship.value <= Relationship.MAD.value:
                 scene v15s35_9f
@@ -1721,7 +1721,7 @@ label v15s35:
             scene v15s35_9d
             with dissolve
 
-            u "How are your gun-shooting skills?"
+            u "How are you with a gun?"
 
             scene v15s35_9b
             with dissolve
@@ -2106,7 +2106,7 @@ label v15s35:
             $ add_point(KCT.BRO)
             $ add_point(KCT.BOYFRIEND)
             if protest or AutumnLunchBreak: # -if Stop the questions (and helped Autumn with boxes at dog shelter and/or went to the protest with her in Act1, creates AutumnTrust)
-                $ autumntrust = True
+                $ autumn.relationship = Relationship.TRUST
 
             scene v15s35_9o
             with dissolve

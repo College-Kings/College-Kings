@@ -250,7 +250,7 @@ label v15s18c_riley:
         scene v15s18c_ri_2g
         with dissolve
 
-        u "I love seeing her smile, but being the reason for it is even better, you know."
+        u "I love seeing her smile, but being the reason for it is even better, you know?"
 
         if riley.relationship.value >= Relationship.FWB.value:
             scene v15s18c_ri_2i # FPP. Same as v15s18c_ri_2f, Riley slightly sad, looking down, mouth closed

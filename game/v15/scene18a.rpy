@@ -163,9 +163,9 @@ label v15s18a_Aubrey:
     scene v15s18aaub_2g # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at MC, MC looking at Aubrey, Aubrey slightly serious, mouth open
     with dissolve
 
-    au "You'll get to witness the favoritism, ha."
+    au "You'll get to witness the favoritism. *Sigh*"
 
-    au "They don't even try to hide it, so... I'm just preparing myself for that, you know."
+    au "They don't even try to hide it... I'm just preparing myself for that, you know."
 
     scene v15s18aaub_2i # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at MC, MC looking at Aubrey, Aubrey slight smile, mouth closed
     with dissolve
@@ -2020,7 +2020,6 @@ label v15s18a_ChrisAmber:
     with dissolve
 
     am "Well, maybe I'll apologize later."
-
     
     am "Probably not though. *Laughs*"
 
