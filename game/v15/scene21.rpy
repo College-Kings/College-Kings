@@ -804,6 +804,7 @@ if mr_lee_meeting:
         jump v15s22  # -Transition to Scene 22-
 
     elif v15_meeting >= 4: # -if scored 4-6 points
+        $ v15_mr_lees_support = True
 
         scene v15s21_6
         with dissolve
@@ -834,6 +835,7 @@ if mr_lee_meeting:
         with dissolve
 
     elif v15_meeting == 2 or v15_meeting == 3:    # -if scored 3-2 points
+        $ v15_mr_lees_support = True
 
         scene v15s21_6
         with dissolve
@@ -871,6 +873,7 @@ if mr_lee_meeting:
         with dissolve
 
     elif v15_meeting == 1 and kct == "loyal": # -if scored 1 point but has KCT Loyal
+        $ v15_mr_lees_support = True
         if not v15_meeting >= 2:
             call screen kct_popup
 
@@ -1741,6 +1744,7 @@ else: # -if meeting Ms Rose
             jump v15s22        # -Transition to Scene 22-
 
     elif v15_meeting >= 4 # -if scored 4-5 points
+        $ v15_ms_roses_support = True
 
         scene v15s21_13i
         with dissolve
@@ -1766,6 +1770,7 @@ else: # -if meeting Ms Rose
         with dissolve
 
     elif v15_meeting == 2 or v15_meeting == 3   # -if MC scored 2-3 points
+        $ v15_ms_roses_support = True
 
         scene v15s21_13a
         with dissolve
@@ -1801,6 +1806,7 @@ else: # -if meeting Ms Rose
         with dissolve
 
     elif v15_meeting == 1 and kct == "confident":   # -if MC scored 1 points, but Confident KCT = True
+        $ v15_ms_roses_support = True
         if not v15_meeting >= 2
             call screen kct_popup
 
@@ -2360,5 +2366,3 @@ else: # -if meeting Ms Rose
     with fade
 
     jump v15s22        # -Transition to Scene 22-
-
-    v15s21_

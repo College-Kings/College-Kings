@@ -491,3 +491,5 @@ default v15seduce_ms_rose = False # Requested Variables for v15s21
 default v15s48_interrupt = False
 default v15s48_follow_your_heart = False
 default v15s48_variable_check = 0
+default v15_mr_lees_support = False
+default v15_ms_roses_support = False
