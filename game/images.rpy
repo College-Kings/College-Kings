@@ -14,7 +14,7 @@ image choice_button_idle = Frame("gui/choice/button_idle.png", 40, 8)
 image choice_button_hover = Frame("gui/choice/button_idle.png", 40, 8)
 
 ## Confirm
-image confirm_background = Frame("gui/confirm/background.png", 8, 8)
+image alert_background = Frame("gui/confirm/background.png", 8, 8)
 
 ## KCT Choice Hint
 image kct_choice_hint_background = Frame("gui/kct/background.png", 44, 6, 44, 0) 
