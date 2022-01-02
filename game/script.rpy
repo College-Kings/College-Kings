@@ -4,7 +4,7 @@ define config.console = True
 define config_debug = False
 define config_censored = False
 
-define config.version = get_version("14.9.0{}".format("s" if config.enable_steam else "")
+define config.version = get_version("14.9.0{}".format("s" if config.enable_steam else ""))
 
 define config.steam_appid = 1463120
 
@@ -36,6 +36,7 @@ label splashscreen:
 
 # The game starts here.
 label start:
+    $ raise Exception("")
     # Get Animation/Transform List
     show no_hard_feelings at achievementShow
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
