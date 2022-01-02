@@ -160,7 +160,7 @@ screen scene_gallery():
         ypos 178
         xysize (1688, 830)
 
-        vpgrid:
+        vpgrid id "vpg":
             cols 4
             spacing 20
             xalign 0.5
@@ -187,6 +187,15 @@ screen scene_gallery():
                         text gallery_item.title.upper() align (0.5, 0.5)
 
     add image_path + "shadow.png" xalign 0.5 ypos 893
+
+    add "scene_gallery_bar_base" pos (1743, 226) xysize (27, 734)
+    vbar:
+        pos (1748, 231)
+        xysize (17, 724)
+        base_bar "#0000"
+        thumb image_path + "bar_thumb.png"
+        value YScrollValue("vpg")
+
 
 
 style scene_gallery_text is olympus_mount_30:
