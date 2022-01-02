@@ -210,61 +210,30 @@ style input:
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
 
-screen choice(items, seconds=3, fail_label=""):
+screen choice(items, seconds=3, fail_label=None):
+    style_prefix "choice"
     # Show KCT
     if showkct:
         use kct_choice
-
-    image "gui/curves.webp"
-    style_prefix "choice"
-
-    default menuButtonsConfig = {
-        0: {
-            "background": "Left",
-            "pos": (210, 907),
-            "xoffset": 0
-        },
-        1: {
-            "background": "Right",
-            "pos": (1005, 907),
-            "xoffset": 50
-        },
-        2: {
-            "background": "Top",
-            "pos": (600, 780),
-            "xoffset": 0 # Centered
-        }
-    }
     
-    for count, item in enumerate(items):
-        
-        # Requires menu disable function from jwt.rpy
-        $ disabled = False
-        if "(disabled)" in item.caption:
-            $ disabled = True
+    hbox:
+        xalign 0.5
+        ypos 833
+        spacing 25
 
-        if count < len(menuButtonsConfig):
+        for item in items:
             fixed:
-                xysize (660, 104)
-                pos menuButtonsConfig[count]["pos"]
+                xysize (389, 96)
 
                 imagebutton:
-                    if disabled:
-                        idle "gui/{}white.webp".format(menuButtonsConfig[count]["background"])
-                    else:
-                        idle "gui/{}blue.webp".format(menuButtonsConfig[count]["background"])
-                        action item.action
-                    hover "gui/{}white.webp".format(menuButtonsConfig[count]["background"])
+                    idle "choice_button_idle"
+                    hover "choice_button_hover"
+                    action item.action
 
-                text item.caption.replace(" (disabled)", ""):
-                    align(0.5, 0.5)
-                    xoffset menuButtonsConfig[count]["xoffset"]
-                    yalign 0.5
-                    size 40
-                    if count > 1:
-                        xalign 0.5
+                text item.caption.upper():
+                    align (0.5, 0.5)
 
-    if fail_label:
+    if fail_label is not None:
         timer seconds:
             action Jump(fail_label)
 
@@ -274,27 +243,12 @@ screen choice(items, seconds=3, fail_label=""):
         $ item = renpy.random.choice(items)
         on "show" action item.action
 
+
+style choice_text is olympus_mount_30
+
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
 define config.narrator_menu = True
-
-
-style choice_vbox is vbox
-style choice_button is button
-style choice_button_text is button_text
-
-style choice_vbox:
-    xalign 0.5
-    ypos 405
-    yanchor 0.5
-
-    spacing gui.choice_spacing
-
-style choice_button is default:
-    properties gui.button_properties("choice_button")
-
-style choice_button_text is default:
-    properties gui.button_text_properties("choice_button")
 
 
 ## Quick Menu screen ###########################################################
