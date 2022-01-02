@@ -50,28 +50,28 @@ init python:
 
     ## v8
     if renpy.loadable("v8/scene1.rpy"):
-        SceneGallery("Homecoming Chloe", "images/v1/sda1.webp", "v8_cl_start") # 2, Chloe, day 11
-        SceneGallery("Homecoming Riley", "images/v1/sda1.webp", "v8_ri_start") # 3, Riley, day 11
-        SceneGallery("Homecoming Amber", "images/v1/sda1.webp", "hoco_amb_night") # 5, Amber, day 11
-        SceneGallery("Fight with Lars", "images/v1/sda1.webp", "int_deal_w_josh") # 28, Lars Joe
-        SceneGallery("With Amber at Josh's", "images/v1/sda1.webp", "amber_sex_at_joshs") # 30, Amber, day 14
+        SceneGallery("Homecoming Chloe", "images/v8/scene 2/v8s16.webp", "v8_cl_start") # 2, Chloe, day 11
+        SceneGallery("Homecoming Riley", "images/v8/scene 3/v8s33_2.webp", "v8_ri_start") # 3, Riley, day 11
+        SceneGallery("Homecoming Amber", "images/v8/scene 5/v8samb1.webp", "hoco_amb_night") # 5, Amber, day 11
+        SceneGallery("Fight with Lars", "images/v8/scene 28/mcbodyhookstart.webp", "int_deal_w_josh") # 28, Lars Joe
+        SceneGallery("With Amber at Josh's", "images/v8/scene 30/v8amber14a.webp", "amber_sex_at_joshs") # 30, Amber, day 14
 
     ## v9
     if renpy.loadable("v9/scene01.rpy"):
-        SceneGallery("Lake w/ Aubrey", "images/v1/sda1.webp", "v9_aubrey_scene_lake") # 7, Aubrey, day 16
-        SceneGallery("Emily sex scene", "images/v1/sda1.webp", "v9_emily_dorm") # 16, Emily, day 17
-        SceneGallery("Riley sex scene", "images/v1/sda1.webp", "v9_ri_sex") # 34, Riley, day 19, v9_sex_with_riley
-        SceneGallery("Make out with Lindsey", "images/v1/sda1.webp", "v9_make_out_w_lin") # 39, Lindsey, day 19
+        SceneGallery("Lake w/ Aubrey", "images/v9/scene 7/v9slake18vidend.webp", "v9_aubrey_scene_lake") # 7, Aubrey, day 16
+        SceneGallery("Emily sex scene", "images/v9/scene 16/v9emi33.webp", "v9_emily_dorm") # 16, Emily, day 17
+        SceneGallery("Riley sex scene", "images/v9/scene 34/v9ris7a.webp", "v9_ri_sex") # 34, Riley, day 19, v9_sex_with_riley
+        SceneGallery("Make out with Lindsey", "images/v9/scene 39/v9linksStart.webp", "v9_make_out_w_lin") # 39, Lindsey, day 19
 
     ## v10
     if renpy.loadable("v10/scene1.rpy"):
-        SceneGallery("Ryan Fight", "images/v1/sda1.webp", "v10_mc_vs_ryan_fight") # 6, Ryan
-        SceneGallery("Imre Fight", "images/v1/sda1.webp", "v10_mc_vs_imre_fight") # 7, Imre
-        SceneGallery("More with Aubrey", "images/v1/sda1.webp", "v10s17_galleryScene") # 17, Aubrey, day 20
-        SceneGallery("Making out with Lauren", "images/v1/sda1.webp", "v10_lauren_room_sg") # 24, Lauren, day 21 (scope is Lauren GIRLFRIEND)
-        SceneGallery("Amber Skatepark Sex", "images/v1/sda1.webp", "v10_amber_skatepark_sg") # 26, Amber, day 21
-        SceneGallery("Changing with Chloe", "images/v1/sda1.webp", "v10s30_galleryScene") # 30, Chloe, day 22
-        SceneGallery("More with Riley", "images/v1/sda1.webp", "v10s40_galleryScene") # 40, Riley, day 23 (scope is Riley FWB)
+        SceneGallery("Ryan Fight", "images/v10/scene 6/v10mvr6.webp", "v10_mc_vs_ryan_fight") # 6, Ryan
+        SceneGallery("Imre Fight", "images/v10/scene 7/v10mvi3.webp", "v10_mc_vs_imre_fight") # 7, Imre
+        SceneGallery("More with Aubrey", "images/v10/scene 17/v10aubfaStart.webp", "v10s17_galleryScene") # 17, Aubrey, day 20
+        SceneGallery("Making out with Lauren", "images/v10/scene 24/v10lar7d.webp", "v10_lauren_room_sg") # 24, Lauren, day 21 (scope is Lauren GIRLFRIEND)
+        SceneGallery("Amber Skatepark Sex", "images/v10/scene 26/v10sasp11a.webp", "v10_amber_skatepark_sg") # 26, Amber, day 21
+        SceneGallery("Changing with Chloe", "images/v10/scene 30/v10chg10f.webp", "v10s30_galleryScene") # 30, Chloe, day 22
+        SceneGallery("More with Riley", "images/v10/scene 40/v10srds6a.webp", "v10s40_galleryScene") # 40, Riley, day 23 (scope is Riley FWB)
 
     ## v11
     if renpy.loadable("v11/scene1.rpy"):
