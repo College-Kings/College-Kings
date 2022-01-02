@@ -9,12 +9,12 @@ image splashtwo = "images/splash2.webp"
 image splashthree = "images/splash 3.webp"
 
 # GUI
+## Alert
+image alert_background = Frame("gui/alert/background.png", 8, 8)
+
 ## Choice
 image choice_button_idle = Frame("gui/choice/button_idle.png", 40, 8)
 image choice_button_hover = Frame("gui/choice/button_idle.png", 40, 8)
-
-## Confirm
-image alert_background = Frame("gui/confirm/background.png", 8, 8)
 
 ## KCT Choice Hint
 image kct_choice_hint_background = Frame("gui/kct/background.png", 44, 6, 44, 0) 
@@ -30,6 +30,9 @@ image scene_gallery_bar_base = Frame("main_menu/scene_gallery/images/bar_base.pn
 image settings_bar_left = Frame("gui/settings/bar_right.webp", 14, 5)
 image settings_bar_right = Frame("gui/settings/bar_right.webp", 14, 5)
 image settings_bar_thumb = Image("gui/settings/bar_thumb.webp")
+
+## Warning
+image warning_background_blue = Frame("gui/warning/background_blue.png", 42, 8, 8, 8)
 
 # Transitions
 image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm", loop=False)
