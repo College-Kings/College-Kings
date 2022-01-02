@@ -215,7 +215,7 @@ style input_window is say_window
 screen choice(items, seconds=3, fail_label=None):
     style_prefix "choice"
     # Show KCT
-    if showkct:
+    if showkct and len(items) > 1:
         use kct_choice_hint
     
     hbox:
