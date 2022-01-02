@@ -242,7 +242,7 @@ label v15s49:
 
     to "I'm not going anywhere, you little shithead. I'm not finished yet."
 
-    scene v15s49_16 # TPP. Show Riley holding her arm as she is sitting against the hood of a car a little bit away from Tom and MC, Riley upset, mouth closed.
+    scene v15s49_19 # TPP. Show Riley holding her arm as she is sitting against the hood of a car a little bit away from Tom and MC, Riley upset, mouth closed.
     with dissolve
 
     pause  

@@ -30,7 +30,7 @@ label v15s48a:
 
         no "It took you just a few seconds to stand up and take his place."
 
-        scene v15s48a_
+        scene v15s48a_2a
         with dissolve
 
         u "(Damn straight.)"
@@ -125,7 +125,7 @@ label v15s48a:
 
             u "Completely"
 
-            scene v15s48a_4 # TPP. MC kissing Nora's left cheek,
+            scene v15s48a_4 # TPP. MC kissing Nora's left cheek.
             with dissolve
 
             u "And utterly."
@@ -282,7 +282,7 @@ label v15s48a_boobs:
 
             u "Yeah?"
 
-            scene v15s48abo_51
+            scene v15s48abo_5
             with dissolve
 
             no "Then we'll see how horny you are."
@@ -399,56 +399,56 @@ label v15s48a_vagina
             no "Just fuck me already."
 
         "Finger":
-            scene v15s48a_4 # FPP. MC looking at Nora his two fingers barely in her vagina, Nora flirty, mouth open.
+            scene v15s48ava_4 # FPP. MC looking at Nora his two fingers barely in her vagina, Nora flirty, mouth open.
             with dissolve
 
             no "Oh, [name]..."
 
             no "*Moans*"
 
-            scene v15s48a_4a # FPP. MC's two fingers all the way in Nora's vagina, Nora biting her lip.
+            scene v15s48ava_4a # FPP. MC's two fingers all the way in Nora's vagina, Nora biting her lip.
             with dissolve
 
             u "You like that?"
 
-            scene v15s48a_4
+            scene v15s48ava_4
             with dissolve
 
             no "Mmm, yeah... I do. But it's not what I want..."
 
             no "And you know it."
 
-            scene v15s48a_4a
+            scene v15s48ava_4a
             with dissolve
 
             u "Yeah? What do you want, Nora?"
 
-            scene v15s48a_4
+            scene v15s48ava_4
             with dissolve
 
             no "Quit teasing!"
 
-            scene v15s48a_4b # FPP. MC's two fingers barely in Nora's vagina, Nora biting her lip.
+            scene v15s48ava_4b # FPP. MC's two fingers barely in Nora's vagina, Nora biting her lip.
             with dissolve
 
             pause .05
 
-            scene v15s48a_4a
+            scene v15s48ava_4a
             with dissolve
 
             pause .05
 
-            scene v15s48a_4b
+            scene v15s48ava_4b
             with dissolve
 
             pause .05
 
-            scene v15s48a_4a
+            scene v15s48ava_4a
             with dissolve
 
             u "Tell me what you want."
 
-            scene v15s48a_5
+            scene v15s48ava_5
             with dissolve
 
             no "I want to feel you..."
@@ -552,7 +552,7 @@ label v15s48a_end:
         "You deserve it.":
             u "You do deserve the best, you know."
 
-            scene v15s48a_4a # FPP. MC looking up at Nora, Nora looking down at MC, Nora flirty, mouth open.
+            scene v15s48aend_4a # FPP. MC looking up at Nora, Nora looking down at MC, Nora flirty, mouth open.
             with dissolve
 
             no "Ha, I guess..."
@@ -560,7 +560,7 @@ label v15s48a_end:
         "Get use to it.":
             u "Good, get used to it."
 
-            scene v15s48a_4a
+            scene v15s48aend_4a
             with dissolve
 
             no "Ha! Should I?"
