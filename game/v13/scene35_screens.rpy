@@ -42,7 +42,8 @@ screen v13s35_adult_shop():
                 hover cuffs.hover_image
                 insensitive cuffs.insensitive_image
                 sensitive (cuffs not in mc.inventory) and (mc.money >= cuffs.cost)
-                action Show("v13s35_end_shopping_confirm")
+                action Show("confirm", message="Are you sure you want to finish shopping?",
+                    yes_action=[Hide("confirm"), Jump("v13s35_adult_shop_continue")])
 
             imagebutton:
                 idle feather.idle_image
@@ -50,22 +51,3 @@ screen v13s35_adult_shop():
                 insensitive feather.insensitive_image
                 sensitive (feather not in mc.inventory) and (mc.money >= feather.cost)
                 action Call("v13s35_buy_item_dialog", feather)
-
-
-screen v13s35_end_shopping_confirm():
-    modal True
-
-    use endfrTemplate:
-        text "Are you sure you want to finish shopping?":
-            style "endfree"
-            xalign 0.5
-
-        hbox:
-            align (0.5, 1.0)
-            spacing 200
-
-            textbutton "Yes":
-                action [Hide("v13s35_end_shopping_confirm"), Jump("v13s35_adult_shop_continue")]
-                
-            textbutton "No":
-                action Hide("v13s35_end_shopping_confirm")

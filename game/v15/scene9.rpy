@@ -412,6 +412,17 @@ label v15s9:
 
     pause 0.75
 
+    python:
+        v15s10_buyer_max_amount = 425
+
+        if v14_lindsey_sell:
+            v15s10_buyer_max_amount += 200
+
+        v15s10_buyer_max_amount += (len(v14s47_car_pics) - 1) * 25
+
+        if "v14s47_passenger_2b.webp" in v14s47_car_pics or "v14s47_passenger_2f.webp" in v14s47_car_pics:
+            v15s10_buyer_max_amount += 50
+
     if v14_lindsey_sell:
         scene v15s9_1h # TPP. same as v15s9_1g Different Camera angle
         with dissolve
@@ -420,7 +431,7 @@ label v15s9:
 
         play sound "sounds/vibrate.mp3"
 
-        if (v14s48_car_price >= 300 and v14s48_car_price <= 750 and v14_pics_with_linds) or (v14s48_car_price >= 300 and v14s48_car_price <= 550):
+        if v14s48_car_price <= v15s10_buyer_max_amount:
             $ v15_lindsey_sold = True
             # -if MC chose to sell the car for between $300 and $750 and Lindsey is in the photos OR MC chose to sell the car for between $300 and $550 and Lindsey is not in the photos
             $ lindsey.messenger.newMessage("Hey! Somebody wants to check out the car and they sound really interested!", queue=False)

@@ -1,13 +1,23 @@
-screen endfrTemplate():
+screen alert_template(message):
+    zorder 200
+    modal True
+    style_prefix "alert"
 
-    window:
+    frame:
         align (0.5, 0.5)
-        padding (25, 50)
-        xysize (746, 384)
+        minimum (758, 363)
+        background "confirm_background"
 
-        background "images/endfr.webp"
+        vbox:
+            align (0.5, 0.5)
+            spacing 45
 
-        transclude
+            text _(message.upper()) xalign 0.5 xsize 350
+
+            transclude
+
+
+style alert_text is olympus_mount_30
 
 
 screen changeLanguage():
@@ -87,26 +97,6 @@ screen fantasyOverlay():
     add "images/fantasyoverlay.webp"
 
 
-screen endFreeRoamConfirm(continueLabel):
-    modal True
-    
-    use endfrTemplate:
-
-        text "Are you sure you want to end free roam?":
-            style "endfree"
-            xalign 0.5
-
-        hbox:
-            align (0.5, 1.0)
-            spacing 200
-
-            textbutton "Yes":
-                action [Hide("endFreeRoamConfirm"), Jump(continueLabel)]
-                
-            textbutton "No":
-                action Hide("endFreeRoamConfirm")
-
-
 screen censoredPopup(continueLabel):
     modal True
 
@@ -142,14 +132,10 @@ screen kiwiiPopup():
     modal True
     zorder 200
 
-    use endfrTemplate:
-
-        text "You've just unlocked the social media app Kiwii! Open it now from the homescreen.":
-            style "endfree"
-            xalign 0.5
+    use alert_template("You've just unlocked the social media app Kiwii! Open it now from the homescreen."):
 
         textbutton "OK":
-            align (0.5, 1.0)
+            xalign 0.5
             action [Function(kiwii_firstTimeMessages), SetVariable("kiwii_firstTime", False), Hide("kiwiiPopup")]
 
 
@@ -157,14 +143,9 @@ screen kiwiiPopup():
 screen fightPopup(fightMove):
     modal True
     
-    use endfrTemplate:
-
-        text "Congratulations! You have learned a new fighting move: {b}[fightMove]{/b}.":
-            style "endfree"
-            xalign 0.5
+    use alert_template("Congratulations! You have learned a new fighting move: {b}[fightMove]{/b}."):
 
         textbutton "OK":
-            align (0.5, 1.0)
             action Return()
 
 

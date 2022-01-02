@@ -2022,29 +2022,17 @@ label v15s18a_ChrisAmber:
 
     am "Well, maybe I'll apologize later."
 
-    scene v15s18aamber_4 # TPP. MC and Amber looking at each other, both serious face, mouth closed.
-    with dissolve
-
-    pause 0.75
-
-    scene v15s18aamber_4a # TPP. MC and Amber looking at each other, both laughing.
-    with dissolve
-
-    pause 0.75
-
-    scene v15s18aamber_3
-    with dissolve
     
     am "Probably not though. *Laughs*"
 
     am "His game needs to improve and that's the only way some people learn."
 
-    scene v15s18aamber_3a
+    scene v15s18aamber_3
     with dissolve
 
     u "That's so charitable of you, Amber."
 
-    scene v15s18aamber_3
+    scene v15s18aamber_3a
     with dissolve
 
     am "I do my best."
@@ -2057,7 +2045,7 @@ label v15s18a_ChrisAmber:
     scene v15s18aamber_3c # FPP. MC sitting on the stool next to Amber, MC looking at Amber, Amber back to looking at MC's face, Amber smirking, mouth open.
     with dissolve
 
-    am "Now, holy fuck... What on earth is this outfit you're wearing?!"
+    am "Now, what on earth is this outfit you're wearing?!"
 
     scene v15s18aamber_3
     with dissolve

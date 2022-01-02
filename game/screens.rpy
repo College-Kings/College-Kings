@@ -348,10 +348,14 @@ screen main_menu():
 
     # Scene Gallery
     imagebutton:
+        pos (141, 811)
         idle image_path + "scene_gallery_idle.webp"
         hover Transform(image_path + "scene_gallery_hover.webp", pos=(-22, -22))
-        action ShowMenu("scene_gallery_spoiler")
-        pos (141, 811)
+        action Show("confirm",
+            message="Warning: The scene gallery contains spoilers for the story of the game. Are you sure you want to continue?",
+            yes_action=[Hide("confirm"), ui.callsinnewcontext("scene_gallery_name_change"), ShowMenu("scene_gallery")],
+            no_action=Hide("confirm"))
+
 
     # Path Builder
     imagebutton:
@@ -755,9 +759,9 @@ screen preferences():
             xysize (339, 61)
 
             imagebutton:
-                idle "settings_button_idle"
-                hover "settings_button_selected"
-                selected_idle "settings_button_selected"
+                idle "blue_button_idle"
+                hover "blue_button_hover"
+                selected_idle "blue_button_hover"
                 action Preference("display", "window")
             text "Window" align (0.5, 0.5)
 
@@ -765,9 +769,9 @@ screen preferences():
             xysize (339, 61)
 
             imagebutton:
-                idle "settings_button_idle"
-                hover "settings_button_selected"
-                selected_idle "settings_button_selected"
+                idle "blue_button_idle"
+                hover "blue_button_hover"
+                selected_idle "blue_button_hover"
                 action Preference("display", "fullscreen")
             text "Full Screen" align (0.5, 0.5)
 
@@ -780,9 +784,9 @@ screen preferences():
             xysize (339, 61)
 
             imagebutton:
-                idle "settings_button_idle"
-                hover "settings_button_selected"
-                selected_idle "settings_button_selected"
+                idle "blue_button_idle"
+                hover "blue_button_hover"
+                selected_idle "blue_button_hover"
                 action Preference("skip", "toggle")
             text "Unseen Text" align (0.5, 0.5)
 
@@ -790,9 +794,9 @@ screen preferences():
             xysize (339, 61)
 
             imagebutton:
-                idle "settings_button_idle"
-                hover "settings_button_selected"
-                selected_idle "settings_button_selected"
+                idle "blue_button_idle"
+                hover "blue_button_hover"
+                selected_idle "blue_button_hover"
                 action Preference("after choices", "toggle")
             text "After Choices" align (0.5, 0.5)
 
@@ -809,9 +813,9 @@ screen preferences():
                     xysize (137, 61)
 
                     imagebutton:
-                        idle "settings_button_idle"
-                        hover "settings_button_selected"
-                        selected_idle "settings_button_selected"
+                        idle "blue_button_idle"
+                        hover "blue_button_hover"
+                        selected_idle "blue_button_hover"
                         action SetVariable(variable, True)
                     text "On" align (0.5, 0.5)
 
@@ -819,9 +823,9 @@ screen preferences():
                     xysize (137, 61)
 
                     imagebutton:
-                        idle "settings_button_idle"
-                        hover "settings_button_selected"
-                        selected_idle "settings_button_selected"
+                        idle "blue_button_idle"
+                        hover "blue_button_hover"
+                        selected_idle "blue_button_hover"
                         action SetVariable(variable, False)
                     text "Off" align (0.5, 0.5)
 
@@ -833,9 +837,9 @@ screen preferences():
                 xysize (137, 61)
 
                 imagebutton:
-                    idle "settings_button_idle"
-                    hover "settings_button_selected"
-                    selected_idle "settings_button_selected"
+                    idle "blue_button_idle"
+                    hover "blue_button_hover"
+                    selected_idle "blue_button_hover"
                     selected realmode
                     action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
                 text "On" align (0.5, 0.5)
@@ -844,9 +848,9 @@ screen preferences():
                 xysize (137, 61)
 
                 imagebutton:
-                    idle "settings_button_idle"
-                    hover "settings_button_selected"
-                    selected_idle "settings_button_selected"
+                    idle "blue_button_idle"
+                    hover "blue_button_hover"
+                    selected_idle "blue_button_hover"
                     selected not realmode
                     action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
                 text "Off" align (0.5, 0.5)
@@ -889,9 +893,9 @@ screen preferences():
         pos (129, 82)
 
 # style settings_imagebutton:
-#     idle "settings_button_idle"
-#     hover "settings_button_selected"
-#     selected_idle "settings_button_selected"
+#     idle "blue_button_idle"
+#     hover "blue_button_hover"
+#     selected_idle "blue_button_hover"
 
 
 style radio_label is pref_label
@@ -1054,60 +1058,38 @@ style history_label_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#confirm
 
-screen confirm(message, yes_action, no_action):
-
-    ## Ensure other screens do not get input while this screen is displayed.
-    modal True
-
+screen confirm(message, yes_action, no_action=Hide("confirm")):
     zorder 200
-
+    modal True
     style_prefix "confirm"
 
-    add "gui/overlay/confirm.webp"
+    use alert_template(message):
 
-    frame:
+        hbox:
+            xalign 0.5
+            spacing 20
 
-        vbox:
-            xalign .5
-            yalign .5
-            spacing 45
+            button:
+                idle_background "blue_button_idle"
+                hover_background "blue_button_hover"
+                action yes_action
+                xysize (215, 55)
 
-            label _(message):
-                style "confirm_prompt"
-                xalign 0.5
+                text "YES" align (0.5, 0.5)
 
-            hbox:
-                xalign 0.5
-                spacing 150
+            button:
+                idle_background "blue_button_idle"
+                hover_background "blue_button_hover"
+                action no_action
+                xysize (215, 55)
 
-                textbutton _("Yes") action yes_action
-                textbutton _("No") action no_action
+                text "NO" align (0.5, 0.5)
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action
 
 
-style confirm_frame is gui_frame
-style confirm_prompt is gui_prompt
-style confirm_prompt_text is gui_prompt_text
-style confirm_button is gui_medium_button
-style confirm_button_text is gui_medium_button_text
-
-style confirm_frame:
-    background Frame([ "gui/confirm_frame.webp", "gui/frame.webp"], gui.confirm_frame_borders, tile=gui.frame_tile)
-    padding gui.confirm_frame_borders.padding
-    xalign .5
-    yalign .5
-
-style confirm_prompt_text:
-    text_align 0.5
-    layout "subtitle"
-
-style confirm_button:
-    properties gui.button_properties("confirm_button")
-
-style confirm_button_text:
-    properties gui.button_text_properties("confirm_button")
+style confirm_text is olympus_mount_30
 
 
 ## Skip indicator screen #######################################################

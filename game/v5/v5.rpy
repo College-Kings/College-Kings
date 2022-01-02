@@ -1115,7 +1115,10 @@ label gokissb:
 
     la "Now, imagine we're on a fast moving train."
 
-    call screen trolleyskip
+    call screen confirm(
+        message="The trolley problem involves hypothetical people and/or animals being run over by a train and can be a lot to handle. The following scene might make you feel uncomfortable or uneasy. If you prefer to skip the trolley problem scene, you can click skip right now.",
+        yes_action=Jump("continuetrolley")
+        no_action=Jump("skiptrolley"))
 
 label continuetrolley:
     stop music fadeout 3
@@ -2842,7 +2845,10 @@ label hospitala:
     scene af4
 
     # Adam Fight
-    call screen fight_tutorialPopup
+    call screen confirm(
+        message="Would you like to play the fighting tutorial?",
+        yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
+        no_action=[SetVariable("fight_tutorial", False), Return()])
 
     scene af4
 

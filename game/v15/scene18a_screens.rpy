@@ -106,7 +106,7 @@ screen v15s18a_livingroom():
         imagebutton:
             idle Transform("#0000", size=(608, 507))
             hover image_path + "v15s18a_livingroom_hover_lauren.webp"
-            action Show("endFreeRoamConfirm", continueLabel="v15s18b")
+            action Show("confirm", message="Are you sure you want to end free roam?", yes_action=[Hide("confirm"), Jump("v15s18b")])
             pos (312, 340)
 
     # Pumpkin

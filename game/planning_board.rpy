@@ -8,6 +8,19 @@ init python:
             self.tasks = []
             self.completed = False
 
+        @property
+        def cost(self):
+            return sum(task.cost for task in self.get_tasks())
+
+        def get_tasks(self):
+            tasks = []
+            for task in self.tasks:
+                if isinstance(task, PlanningBoardTask):
+                    tasks.append(task)
+                else:
+                    tasks.extend(task)
+            return tasks
+
 
     class PlanningBoardTask:
         def __init__(self, name, opinion, people, cost):
@@ -52,10 +65,10 @@ init python:
             return subtask
 
         def get_total_cost(self):
+            total_cost = 0
             for task in self.approach.tasks:
-                total_cost = 0
                 try: total_cost += task.cost
-                except AttributeError: total_cost = self.selected_task.cost
+                except AttributeError: total_cost += self.selected_task.cost
 
             return total_cost
 
@@ -103,9 +116,14 @@ screen planning_board(planning_board):
                                 textbutton subtask.name:
                                     sensitive planning_board.approach == approach
                                     selected planning_board.selected_task == subtask
-                                    hovered Show("planning_board_task_desc", None, subtask)
-                                    unhovered Hide("planning_board_task_desc")
-                                    action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
+                                    if approach.cost <= planning_board.money:
+                                        unhovered Hide("planning_board_task_desc")
+                                        hovered Show("planning_board_task_desc", None, subtask)
+                                        action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
+                                    else:
+                                        unhovered [Hide("planning_board_task_desc"), Show("planning_board_help", message="Please select an approach")]
+                                        hovered Show("planning_board_help", message="{color=#f00}Not enough money to select task.")
+                                        action NullAction()
                                     if planning_board.style is not None:
                                         text_style planning_board.style
 
@@ -160,11 +178,13 @@ screen planning_board(planning_board):
                                 textbutton subtask.name:
                                     sensitive planning_board.approach == approach
                                     selected planning_board.selected_task == subtask
-                                    hovered Show("planning_board_task_desc", None, subtask)
-                                    unhovered Hide("planning_board_task_desc")
-                                    if subtask.cost <= planning_board.money:
+                                    if approach.cost <= planning_board.money:
+                                        unhovered Hide("planning_board_task_desc")
+                                        hovered Show("planning_board_task_desc", None, subtask)
                                         action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
                                     else:
+                                        unhovered [Hide("planning_board_task_desc"), Show("planning_board_help", message="Please select an approach")]
+                                        hovered Show("planning_board_help", message="{color=#f00}Not enough money to select task.")
                                         action NullAction()
                                     if planning_board.style is not None:
                                         text_style planning_board.style

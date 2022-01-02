@@ -14,7 +14,7 @@ screen v11s23_entrance():
             else:
                 hotspot (363, 403, 143, 367) action Call("freeRoamSpokenToo", backgroundImg="v11s23entrance", returnScreen="v11s23_entrance")
                 
-            hotspot (1593, 531, 231, 466) action Show("endFreeRoamConfirm", continueLabel="v11s23_freeroamend") # speak to Nora
+            hotspot (1593, 531, 231, 466) action Show("confirm", message="Are you sure you want to end free roam?", yes_action=[Hide("confirm"), Jump("v11s23_freeroamend")]) # speak to Nora
 
             hotspot (287, 0, 1373, 186) action Show("v11s23_mid")
         
@@ -31,7 +31,7 @@ screen v11s23_entrance():
             else:
                 hotspot (363, 403, 143, 367) action Call("freeRoamSpokenToo", backgroundImg="v11s23entrance", returnScreen="v11s23_entrance")
                 
-            hotspot (1593, 531, 231, 466) action Show("endFreeRoamConfirm", continueLabel="v11s23_freeroamend") # speak to Nora
+            hotspot (1593, 531, 231, 466) action Show("confirm", message="Are you sure you want to end free roam?", yes_action=[Hide("confirm"), Jump("v11s23_freeroamend")]) # speak to Nora
 
             hotspot (287, 0, 1373, 186) action Show("v11s23_mid")
 

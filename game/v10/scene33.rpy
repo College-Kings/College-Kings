@@ -6,7 +6,8 @@
 
 # Free Roam 4, Screens
 
-# endFreeRoamConfirm("fr6end")
+# Show("confirm", message="Are you sure you want to end free roam?", yes_action=[Hide("confirm"), Jump("fr6end")])
+
 
 # TOP: xalign 0.5
 # RIGHT: align (1.0, 0.5)

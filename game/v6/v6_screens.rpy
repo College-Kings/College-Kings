@@ -118,7 +118,7 @@ screen v6_fr3kitchen():
         if not "chris" in freeroam3:
             action Jump("v6_fr3chris1")
         else:
-            action Show("endFreeRoamConfirm", continueLabel="v6_fr3chris3")
+            action Show("confirm", message="Are you sure you want to end free roam?", yes_action=[Hide("confirm"), Jump("v6_fr3chris3")])
 
     imagebutton: #Matt button
         pos (1048, 139)
