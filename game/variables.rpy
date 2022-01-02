@@ -404,3 +404,4 @@ default v15s33_flirt = False
 default v15s33_cheese = False
 default v15s33_naomi_broke_aubreyrs = False
 default v15s18_pumpkin = 0
+default v12_followed_nora = False

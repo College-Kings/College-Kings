@@ -179,7 +179,7 @@ label v15s48b:
 
         menu:
             "It's not shit":
-                $ add_point(KCt.BOYFRIEND)
+                $ add_point(KCT.BOYFRIEND)
                 u "Haha, it's not shit. It's important to talk through your feelings with someone. Helps you figure things out."
 
             "You're welcome":
