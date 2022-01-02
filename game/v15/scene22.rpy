@@ -285,6 +285,8 @@ label v15s22:
 
     cl "*Deep breath* Okay, let's go."
 
+    play sound "sounds/knock.mp3"
+
     scene v15s22_2g # FPP. same as v15s22_2f Chloe turns away from Mc and knocks on the Dean's door, still no expression, mouth is still closed
     with dissolve
 
@@ -1344,6 +1346,8 @@ label v15s22:
         u "Of course."
 
         if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            play sound "sounds/kiss.mp3"
+        
             scene v15s22_1d # TPP. same as v15s22_1b Chloe gives Mc a romantic hug and kiss, both of them have their eyes closed
             with dissolve
 
