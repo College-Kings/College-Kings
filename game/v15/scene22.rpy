@@ -285,6 +285,8 @@ label v15s22:
 
     cl "*Deep breath* Okay, let's go."
 
+    play sound "sounds/knock.mp3"
+
     scene v15s22_2g # FPP. same as v15s22_2f Chloe turns away from Mc and knocks on the Dean's door, still no expression, mouth is still closed
     with dissolve
 
@@ -1025,7 +1027,7 @@ label v15s22:
 
             jump v15dean_successful
 
-        elif v15s22_meeting_points == 2 and kct == "popular": # if won signature and low dean support with kct popular
+        elif v15s22_meeting_points == 1 and kct == "popular": # if won signature and low dean support with kct popular
             call screen kct_popup
 
             scene v15s22_6
@@ -1040,7 +1042,7 @@ label v15s22:
 
             jump v15dean_successful
 
-        elif v15s22_meeting_points >= 2: # -if won signature and medium dean support
+        elif v15s22_meeting_points >= 1: # -if won signature and medium dean support
             scene v15s22_6h
             with dissolve
 
@@ -1089,7 +1091,6 @@ label v15s22:
             jump v15dean_unsuccessful
 
     elif v15s22_meeting_points >= 5: # -if no signature, but high dean support
-
         scene v15s22_6q # FPP. same as v15s22_6h The Dean has a full smile, still looking at Chloe, mouth is still open
         with dissolve
 
@@ -1154,10 +1155,10 @@ label v15s22:
 
         jump v15dean_successful
 
-    elif v15s22_meeting_points >= 2: # -if no signature, and medium/low dean support
+    elif v15s22_meeting_points >= 1: # -if no signature, and medium/low dean support
         if kct == "popular":
         
-            if v15s22_meeting_points == 2:
+            if v15s22_meeting_points == 1:
                 call screen kct_popup
         
             scene v15s22_6g
@@ -1344,6 +1345,8 @@ label v15s22:
         u "Of course."
 
         if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            play sound "sounds/kiss.mp3"
+        
             scene v15s22_1d # TPP. same as v15s22_1b Chloe gives Mc a romantic hug and kiss, both of them have their eyes closed
             with dissolve
 
@@ -1399,6 +1402,13 @@ label v15s22:
         with dissolve
 
         cl "I can't believe it... I worked so hard for this..."
+
+        if v15s21_meeting_points >= 1:
+            if v15_chloe_mrleesupport:
+                cl "We even got Mr. Lee's support. All that hard work... for nothing."
+                
+            else:
+                cl "We even got Ms. Rose's support. All that hard work... for nothing."
 
         scene v15s22_2j # FPP. same as v15s22_2i Chloe's mouth is closed, still looking at Mc, still a very sad expression
         with dissolve
@@ -1490,7 +1500,7 @@ label v15s22:
 
     pause 0.75
 
-    if v15s22_meeting_points >= 2:
+    if v15s22_meeting_points >= 1:
         scene v15s22_2d
         with dissolve
 
