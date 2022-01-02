@@ -10,7 +10,7 @@ init python:
 
         @property
         def cost(self):
-            return sum(task.cost for task in get_tasks())
+            return sum(task.cost for task in self.get_tasks())
 
         def get_tasks(self):
             tasks = []
@@ -19,6 +19,7 @@ init python:
                     tasks.append(task)
                 else:
                     tasks.extend(task)
+            return tasks
 
 
     class PlanningBoardTask:
@@ -139,6 +140,8 @@ screen planning_board(planning_board):
     # Right Side
     $ approach = planning_board.approaches.values()[1]
 
+    text str(approach.cost)
+
     imagebutton:
         pos (1324, 485)
         idle "images/planning_boards/select_approach_right.webp"
@@ -172,7 +175,7 @@ screen planning_board(planning_board):
                                 textbutton subtask.name:
                                     sensitive planning_board.approach == approach
                                     selected planning_board.selected_task == subtask
-                                    unhovered Hide("planning_board_task_desc")
+                                    unhovered [Hide("planning_board_task_desc"), Show("planning_board_help", message="Please select an approach")]
                                     if approach.cost <= planning_board.money:
                                         hovered Show("planning_board_task_desc", None, subtask)
                                         action [SetField(planning_board, "selected_task", subtask), Show("planning_board_confirm_tasks", None, planning_board)]
