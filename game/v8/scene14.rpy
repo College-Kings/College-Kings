@@ -15,7 +15,7 @@ label mc_wolves_sun_morn:
     with dissolve
     pause 0.5
 
-    $ penelope.messenger.newMessage(_("[name] I'm really scared! I am in so much trouble! I need you! Please come over??"), queue=False)
+    $ penelope.messenger.newMessage(_("[name] I'm really scared! I am in so much trouble! I need you! Please come over??"), force_send=True)
     $ penelope.messenger.addReply(_("Ok try to stay calm. I'll be right over."))
     
 
@@ -38,7 +38,7 @@ label mc_apes_sun_morn:
 
     pause 0.5
 
-    $ penelope.messenger.newMessage(_("[name] I'm really scared! I am in so much trouble! I need you! Please come over??"), queue=False)
+    $ penelope.messenger.newMessage(_("[name] I'm really scared! I am in so much trouble! I need you! Please come over??"), force_send=True)
     $ penelope.messenger.addReply(_("Ok try to stay calm. I'll be right over."))
     
 

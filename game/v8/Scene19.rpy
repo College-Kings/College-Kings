@@ -73,7 +73,7 @@ label sun_eve_room:
 
         if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
             # -MC's phone buzzes-
-            $ lauren.messenger.newMessage(_("Hey, Sweetie, what are you up to?"), queue=False)
+            $ lauren.messenger.newMessage(_("Hey, Sweetie, what are you up to?"), force_send=True)
             $ lauren.messenger.addReply(_("Nothing, just catching up on some homework. You having a good night?"))
             $ lauren.messenger.newMessage(_("It would be better if you were here..."))
             $ lauren.messenger.addReply(_("Really?"))
@@ -86,7 +86,7 @@ label sun_eve_room:
 
         else:
             play sound "sounds/vibrate.mp3"
-            $ amber.messenger.newMessage(_("Hey u up?"), queue=False)
+            $ amber.messenger.newMessage(_("Hey u up?"), force_send=True)
             $ amber.messenger.addReply(_("Always for you ;)"))
             $ amber.messenger.newMessage(_("That's what I was hoping to hear"))
             $ amber.messenger.addReply(_("I can be even more up if you want..."))
@@ -103,7 +103,7 @@ label sun_eve_room:
         if forgiveemily:
             # -MC's phone buzzes-
             ### ERROR: (Aww, she couldn't get enough of me) [I figure this line works for either scenario but let me know if I should change it] ###
-            $ emily.messenger.newMessage(_("Hey, I was thinking"), queue=False)
+            $ emily.messenger.newMessage(_("Hey, I was thinking"), force_send=True)
             $ emily.messenger.addReply(_("Uh oh that can't be good ;)"))
             $ emily.messenger.newMessage(_("Wanna meet up at the arcade?"))
 
@@ -141,7 +141,7 @@ label sun_eve_room:
 
         if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
             # -MC's phone buzzes-
-            $ lauren.messenger.newMessage(_("Hey, Sweetie, what are you up to?"), queue=False)
+            $ lauren.messenger.newMessage(_("Hey, Sweetie, what are you up to?"), force_send=True)
             $ lauren.messenger.addReply(_("Nothing, just catching up on some homework. You having a good night?"))
             $ lauren.messenger.newMessage(_("It would be better if you were here..."))
             $ lauren.messenger.addReply(_("Really?"))
@@ -154,7 +154,7 @@ label sun_eve_room:
 
         else:
             play sound "sounds/vibrate.mp3"
-            $ amber.messenger.newMessage(_("Hey u up?"), queue=False)
+            $ amber.messenger.newMessage(_("Hey u up?"), force_send=True)
             $ amber.messenger.addReply(_("Always for you ;)"))
             $ amber.messenger.newMessage(_("That's what I was hoping to hear"))
             $ amber.messenger.addReply(_("I can be even more up if you want..."))
@@ -171,7 +171,7 @@ label sun_eve_room:
         if forgiveemily:
             # -MC's phone buzzes-
             ### ERROR: (Aww, she couldn't get enough of me) [I figure this line works for either scenario but let me know if I should change it] ###
-            $ emily.messenger.newMessage(_("Hey, I was thinking"), queue=False)
+            $ emily.messenger.newMessage(_("Hey, I was thinking"), force_send=True)
             $ emily.messenger.addReply(_("Uh oh that can't be good ;)"))
             $ emily.messenger.newMessage(_("Wanna meet up at the arcade?"))
 

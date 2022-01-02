@@ -37,14 +37,14 @@ init python:
             
             return message
 
-        def new_image_message(self, img, queue=True):
+        def new_image_message(self, img, force_send=False):
             message = ImageMessage(self, img)
 
             try: contacts.insert(0, contacts.pop(contacts.index(self))) # Moves contact to the top when recieving a new message
             except Exception: pass
 
             # Add message to queue
-            if queue:
+            if not force_send:
                 self.pending_messages.append(message)
             else:
                 self.pending_messages = []
@@ -55,12 +55,12 @@ init python:
 
             return message
 
-        def add_reply(self, message, func=None, newMessage=False, disabled=False):
+        def add_reply(self, message, func=None, new_message=False, disabled=False):
             reply = Reply(message, func, disabled)
 
             # Append reply to last sent message
             try:
-                if newMessage:
+                if new_message:
                     self.newMessage("")
                     message.replies.append(reply)
                 elif self.pending_messages:
@@ -68,7 +68,7 @@ init python:
                 else:
                     self.sent_messages[-1].replies.append(reply)
             except IndexError:
-                message = self.newMessage("", queue=False)
+                message = self.newMessage("", force_send=True)
                 message.replies.append(reply)
 
             self.unlock()
@@ -86,7 +86,7 @@ init python:
                 else:
                     self.sent_messages[-1].replies.append(reply)
             except IndexError:
-                message = self.newMessage("", queue=False)
+                message = self.newMessage("", force_send=True)
                 message.replies.append(reply)
 
             self.unlock()
@@ -128,11 +128,11 @@ init python:
             return False
 
         ## Backwards compatibility
-        def newMessage(self, message, queue=True):
-            return self.new_message(message, queue)
+        def newMessage(self, message, force_send=False):
+            return self.new_message(message, force_send)
 
-        def newImgMessage(self, img, queue=True):
-            return self.new_image_message(img, queue)
+        def newImgMessage(self, img, force_send=False):
+            return self.new_image_message(img, force_send)
 
         def addReply(self, message, func=None, newMessage=False, disabled=False):
             return self.add_reply(message, func, newMessage, disabled)

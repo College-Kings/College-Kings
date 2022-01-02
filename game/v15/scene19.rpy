@@ -217,10 +217,10 @@ label v15s19:
 
     if v14_help_chloe and not v15_chloe_lindseysabotage: # -if helping Chloe with meeting the Dean # -MC checks his texts to see a message from Chloe-
         if v15_chloe_mrleesupport: # -if meeting with Mr. Lee (Transcriber Note: Again, mutually exclusive)
-            $ chloe.messenger.newMessage("Hey, the meeting with Mr. Lee is this morning, so I'll see you in the library soon. Don't be late!", queue=False)
+            $ chloe.messenger.newMessage("Hey, the meeting with Mr. Lee is this morning, so I'll see you in the library soon. Don't be late!", force_send=True)
 
         else: # -if meeting with Ms. Rose
-            $ chloe.messenger.newMessage("Hey, the meeting with Ms. Rose is this morning, so I'll see you in the library soon. Don't be late!", queue=False)
+            $ chloe.messenger.newMessage("Hey, the meeting with Ms. Rose is this morning, so I'll see you in the library soon. Don't be late!", force_send=True)
 
         $ chloe.messenger.addReply("Okay, OMW :)")
 
@@ -233,11 +233,11 @@ label v15s19:
 
     if v14_help_lindsey: # -if helping Lindsey TN: Helping Chloe and Lindsey are NOT mutually exclusive-- no else if
         if v15_lindsey_gamenight: # -if helping Lindsey with Game night
-            $ lindsey.messenger.newMessage("Hey, can you come meet me now to buy the alcohol for our game night? I have a plan. I'll send the details of which store to come to.", queue=False)
+            $ lindsey.messenger.newMessage("Hey, can you come meet me now to buy the alcohol for our game night? I have a plan. I'll send the details of which store to come to.", force_send=True)
             $ lindsey.messenger.addReply("Okay, sounds good.")
 
         else: # -if helping Lindsey with VIP club night
-            $ lindsey.messenger.newMessage("Hey, can you call the club and book the VIP package, please? See what you can do in terms of them serving us alcohol and negotiating the price <3 Thank you!", queue=False)
+            $ lindsey.messenger.newMessage("Hey, can you call the club and book the VIP package, please? See what you can do in terms of them serving us alcohol and negotiating the price <3 Thank you!", force_send=True)
             $ lindsey.messenger.addReply("Okay, I'll put on the charm ;) I'll let you know how it goes")
 
         label v15s19_PhoneContinueLindsey:

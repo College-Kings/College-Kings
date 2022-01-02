@@ -78,15 +78,15 @@ label v15s34:
 
         if v14_help_lindsey:
             if v15_lindsey_gamenight:
-                $ lindsey.messenger.newMessage("Hey, our game night is starting in 15 minutes. Hope you're on your way now! :)", queue=False)
+                $ lindsey.messenger.newMessage("Hey, our game night is starting in 15 minutes. Hope you're on your way now! :)", force_send=True)
                 $ lindsey.messenger.addReply("Oh, yeah! I haven't forgotten ;) OMW.", func=None)
             else:
-                $ lindsey.messenger.newMessage("Hey, I hope you're ready for our VIP night. We'll be picking you up in the limo in about 15 minutes!", queue=False)
+                $ lindsey.messenger.newMessage("Hey, I hope you're ready for our VIP night. We'll be picking you up in the limo in about 15 minutes!", force_send=True)
                 $ lindsey.messenger.addReply("Yeah, let's get our VIP party on! See you soon :)", func=None)
         else:
-            $ lindsey.messenger.newMessage("Hey, I'm having a game night to help secure some extra influence and votes for my campaign. Someone bailed on me at the last minute, so... Wanna come take their place? :)", queue=False)
+            $ lindsey.messenger.newMessage("Hey, I'm having a game night to help secure some extra influence and votes for my campaign. Someone bailed on me at the last minute, so... Wanna come take their place? :)", force_send=True)
             $ lindsey.messenger.addReply("Hey! Yeah, sounds fun.")
-            $ lindsey.messenger.newMessage("Amazing! Be at the chicks house in 15 minutes :)", queue=False)
+            $ lindsey.messenger.newMessage("Amazing! Be at the chicks house in 15 minutes :)", force_send=True)
             $ lindsey.messenger.addReply("Haha, that soon? Damn, okay. I'm OMW!", func=None)
 
         label v15s34_PhoneContinue:
@@ -192,16 +192,16 @@ label v15s34:
 
         if v14_help_lindsey:
             if v15_lindsey_gamenight:
-                $ lindsey.messenger.newMessage("Hey, our game night is starting in 15 minutes. Hope you're on your way now! :)", queue=False)
+                $ lindsey.messenger.newMessage("Hey, our game night is starting in 15 minutes. Hope you're on your way now! :)", force_send=True)
                 $ lindsey.messenger.addReply("Oh, yeah! I haven't forgotten ;) OMW.", func=None)
             else:
-                $ lindsey.messenger.newMessage("Hey, I hope you're ready for our VIP night. We'll be picking you up in the limo in about 15 minutes!", queue=False)
+                $ lindsey.messenger.newMessage("Hey, I hope you're ready for our VIP night. We'll be picking you up in the limo in about 15 minutes!", force_send=True)
                 $ lindsey.messenger.addReply("Yeah, let's get our VIP party on! See you soon :)", func=None)
 
         else:
-            $ lindsey.messenger.newMessage("Hey, I'm having a game night to help secure some extra influence and votes for my campaign. Someone bailed on me at the last minute, so... Wanna come take their place? :)", queue=False)
+            $ lindsey.messenger.newMessage("Hey, I'm having a game night to help secure some extra influence and votes for my campaign. Someone bailed on me at the last minute, so... Wanna come take their place? :)", force_send=True)
             $ lindsey.messenger.addReply("Hey! Yeah, sounds fun.")
-            $ lindsey.messenger.newMessage("Amazing! Be at the chicks house in 15 minutes :)", queue=False)
+            $ lindsey.messenger.newMessage("Amazing! Be at the chicks house in 15 minutes :)", force_send=True)
             $ lindsey.messenger.addReply("Haha, that soon? Damn, okay. I'm OMW!", func=None)
 
         label v15s34_PhoneContinueL:

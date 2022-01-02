@@ -28,7 +28,7 @@ label v10_sun_morn:
         pause 0.75
     
         if v10_ryan_fight and not v10_ryan_win:
-            $ riley.messenger.newMessage("Hey [name], what you up to?", queue=False)
+            $ riley.messenger.newMessage("Hey [name], what you up to?", force_send=True)
             $ riley.messenger.addReply("Nothing much.")
             $ riley.messenger.newMessage("How are you feeling after the fight?")
             $ riley.messenger.addReply("Fine.")
@@ -44,7 +44,7 @@ label v10_sun_morn:
             $ riley.messenger.addReply("Bye")
 
         elif v10_ryan_fight:
-            $ riley.messenger.newMessage("Hey champion, you gave us an amazing show last night! :)", queue=False)
+            $ riley.messenger.newMessage("Hey champion, you gave us an amazing show last night! :)", force_send=True)
             $ riley.messenger.addReply("Thanks, Riley.")
             $ riley.messenger.newMessage("I especially loved that last punch. I mean, I'm not into violence but, you know.")
             $ riley.messenger.addReply("Haha I will pretend I do and say yes.")
@@ -58,8 +58,8 @@ label v10_sun_morn:
             $ riley.messenger.addReply("Bye, Riley. :)")
 
         else:
-            $ josh.messenger.newMessage("Friends or not friends, dude wtf?! That was one good show wasted!", queue=False)
-            $ josh.messenger.newMessage("Just saying you missed out on impressing a lot of ladies today", queue=False)
+            $ josh.messenger.newMessage("Friends or not friends, dude wtf?! That was one good show wasted!", force_send=True)
+            $ josh.messenger.newMessage("Just saying you missed out on impressing a lot of ladies today", force_send=True)
             $ josh.messenger.addReply("I know... But hey, maybe some appreciate the compassion?")
             $ josh.messenger.newMessage("Haha, sure dude")
             $ josh.messenger.addReply("Whatever man.")
@@ -74,18 +74,18 @@ label v10_sun_morn:
         play sound "sounds/vibrate.mp3"
 
         if v10_ryan_win:
-            $ lindsey.messenger.newMessage("Hey, [name]... congrats on the win.", queue=False)
-            $ lindsey.messenger.newMessage("I know it's quite early, but", queue=False)
+            $ lindsey.messenger.newMessage("Hey, [name]... congrats on the win.", force_send=True)
+            $ lindsey.messenger.newMessage("I know it's quite early, but", force_send=True)
 
         else:
-            $ lindsey.messenger.newMessage("Hey, [name]... I know you have a lot on your mind right now with everything that happened yesterday...", queue=False)
+            $ lindsey.messenger.newMessage("Hey, [name]... I know you have a lot on your mind right now with everything that happened yesterday...", force_send=True)
             
-        $ lindsey.messenger.newMessage("I've just been dealing with some stuff...", queue=False)
-        $ lindsey.messenger.newMessage("And I need someone to talk to", queue=False)
-        $ lindsey.messenger.newMessage("Sorry, we don't even know each other that well", queue=False)
-        $ lindsey.messenger.newMessage("It's just, I feel like I can talk to you...", queue=False)
-        $ lindsey.messenger.newMessage("I don't know, I'm sorry I don't wanna bother you", queue=False)
-        $ lindsey.messenger.newMessage("Just forget what I said", queue=False)
+        $ lindsey.messenger.newMessage("I've just been dealing with some stuff...", force_send=True)
+        $ lindsey.messenger.newMessage("And I need someone to talk to", force_send=True)
+        $ lindsey.messenger.newMessage("Sorry, we don't even know each other that well", force_send=True)
+        $ lindsey.messenger.newMessage("It's just, I feel like I can talk to you...", force_send=True)
+        $ lindsey.messenger.newMessage("I don't know, I'm sorry I don't wanna bother you", force_send=True)
+        $ lindsey.messenger.newMessage("Just forget what I said", force_send=True)
         $ lindsey.messenger.addReply("If you need someone to talk I'll come over right now!", v10s10_reply1)
         $ lindsey.messenger.addReply("Uhm okay. No worries, let me know if you need anything")
 
@@ -123,7 +123,7 @@ label v10_sun_morn:
         pause 0.75
         
         if v10_imre_fight and not v10_imre_win:
-            $ riley.messenger.newMessage("Hey [name], what you up to?", queue=False)
+            $ riley.messenger.newMessage("Hey [name], what you up to?", force_send=True)
             $ riley.messenger.addReply("Nothing much.")
             $ riley.messenger.newMessage("How are you feeling after the fight?")
             $ riley.messenger.addReply("Fine.")
@@ -139,7 +139,7 @@ label v10_sun_morn:
             $ riley.messenger.addReply("Bye")
 
         elif v10_imre_fight:
-            $ riley.messenger.newMessage("Hey champion, you gave us an amazing show last night! :)", queue=False)
+            $ riley.messenger.newMessage("Hey champion, you gave us an amazing show last night! :)", force_send=True)
             $ riley.messenger.addReply("Thanks, Riley.")
             $ riley.messenger.newMessage("I especially loved that last punch. I mean, I'm not into violence but, you know.")
             $ riley.messenger.addReply("Haha I will pretend I do and say yes.")
@@ -153,8 +153,8 @@ label v10_sun_morn:
             $ riley.messenger.addReply("Bye, Riley. :)")
 
         else:
-            $ josh.messenger.newMessage("Friends or not friends, dude wtf?! That was one good show wasted!", queue=False)
-            $ josh.messenger.newMessage("Just saying you missed out on impressing a lot of ladies today", queue=False)
+            $ josh.messenger.newMessage("Friends or not friends, dude wtf?! That was one good show wasted!", force_send=True)
+            $ josh.messenger.newMessage("Just saying you missed out on impressing a lot of ladies today", force_send=True)
             $ josh.messenger.addReply("I know... But hey, maybe some appreciate the compassion?")
             $ josh.messenger.newMessage("Haha, sure dude")
             $ josh.messenger.addReply("Whatever man.")
@@ -169,18 +169,18 @@ label v10_sun_morn:
         play sound "sounds/vibrate.mp3"
 
         if v10_imre_win:
-            $ lindsey.messenger.newMessage("Hey, [name]... congrats on the win.", queue=False)
-            $ lindsey.messenger.newMessage("I know it's quite early, but", queue=False)
+            $ lindsey.messenger.newMessage("Hey, [name]... congrats on the win.", force_send=True)
+            $ lindsey.messenger.newMessage("I know it's quite early, but", force_send=True)
 
         else:
-            $ lindsey.messenger.newMessage("Hey, [name]... I know you have a lot on your mind right now with everything that happened yesterday...", queue=False)
+            $ lindsey.messenger.newMessage("Hey, [name]... I know you have a lot on your mind right now with everything that happened yesterday...", force_send=True)
             
-        $ lindsey.messenger.newMessage("I've just been dealing with some stuff...", queue=False)
-        $ lindsey.messenger.newMessage("And I need someone to talk to", queue=False)
-        $ lindsey.messenger.newMessage("Sorry, we don't even know each other that well", queue=False)
-        $ lindsey.messenger.newMessage("It's just, I feel like I can talk to you...", queue=False)
-        $ lindsey.messenger.newMessage("I don't know, I'm sorry I don't wanna bother you", queue=False)
-        $ lindsey.messenger.newMessage("Just forget what I said", queue=False)
+        $ lindsey.messenger.newMessage("I've just been dealing with some stuff...", force_send=True)
+        $ lindsey.messenger.newMessage("And I need someone to talk to", force_send=True)
+        $ lindsey.messenger.newMessage("Sorry, we don't even know each other that well", force_send=True)
+        $ lindsey.messenger.newMessage("It's just, I feel like I can talk to you...", force_send=True)
+        $ lindsey.messenger.newMessage("I don't know, I'm sorry I don't wanna bother you", force_send=True)
+        $ lindsey.messenger.newMessage("Just forget what I said", force_send=True)
         $ lindsey.messenger.addReply("If you need someone to talk I'll come over right now!", v10s10_reply1)
         $ lindsey.messenger.addReply("Uhm okay. No worries, let me know if you need anything")
 

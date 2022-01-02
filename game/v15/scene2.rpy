@@ -311,7 +311,7 @@ label v15s2:
     
     pause 0.75
 
-    $ autumn.messenger.newMessage(_("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)"), queue=False)
+    $ autumn.messenger.newMessage(_("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)"), force_send=True)
     $ autumn.messenger.addReply(_("Yeah, looking forward to it. See you there!"))
     $ autumn.messenger.addReply(_("Of course! I'll always be there if there's puppies, haha."))
 
@@ -333,7 +333,7 @@ label v15s2:
 
     pause 0.75
 
-    $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren", queue=False)
+    $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren", force_send=True)
 
     play sound "sounds/vibrate.mp3"
 

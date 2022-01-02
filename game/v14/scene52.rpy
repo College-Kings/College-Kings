@@ -430,7 +430,7 @@ label v14s52:
 
     u "Nora...?"
 
-    $ nora.messenger.newMessage("UNABLE TO DELIVER MESSAGE AT THIS TIME, PLEASE TRY AGAIN LATER.", queue=False)
+    $ nora.messenger.newMessage("UNABLE TO DELIVER MESSAGE AT THIS TIME, PLEASE TRY AGAIN LATER.", force_send=True)
 
     call screen phone
 

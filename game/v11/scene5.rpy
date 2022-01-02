@@ -29,7 +29,7 @@ label v11_nightclub_with_josh:
 
     u "(Let's see who this is.)"
 
-    $ josh.messenger.newMessage("WE GETTIN FUCKED UP TONIGHT!", queue = False)
+    $ josh.messenger.newMessage("WE GETTIN FUCKED UP TONIGHT!", force_send=True)
     $ josh.messenger.addReply("Who?")
     $ josh.messenger.newMessage("You and me, meet me at the bar on Stevenson.")
     $ josh.messenger.addReply("There's a lot of bars on Stevenson.")

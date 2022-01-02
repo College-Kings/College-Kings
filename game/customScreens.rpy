@@ -6,7 +6,7 @@ screen alert_template(message):
     frame:
         align (0.5, 0.5)
         minimum (758, 363)
-        background "confirm_background"
+        background "alert_background"
 
         vbox:
             align (0.5, 0.5)
@@ -18,6 +18,28 @@ screen alert_template(message):
 
 
 style alert_text is olympus_mount_30
+
+
+screen warning_template(message):
+    zorder 200
+    modal True
+    style_prefix "warning"
+
+    frame:
+        align (0.5, 0.5)
+        minimum (758, 363)
+        background "warning_background"
+
+        vbox:
+            align (0.5, 0.5)
+            spacing 45
+
+            text _(message.upper()) xalign 0.5 xsize 350
+
+            transclude
+
+
+style warning_text is olympus_mount_30
 
 
 screen changeLanguage():

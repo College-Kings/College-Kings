@@ -50,11 +50,11 @@ init python:
             if self.liked: self.numberLikes += 1
             else: self.numberLikes -= 1
             
-        def newComment(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None, queue=True):
+        def newComment(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None, force_send=False):
             comment = KiwiiComment(user, message, numberLikes, mentions)
             
             # Add message to queue
-            if queue:
+            if not force_send:
                 self.pendingComments.append(comment)
             else:
                 self.pendingComments = []
@@ -73,14 +73,14 @@ init python:
                 else:
                     self.sentComments[-1].replies.append(reply)
             except Exception as e:
-                message = self.newComment(mc, "", queue=False)
+                message = self.newComment(mc, "", force_send=True)
                 message.replies.append(reply)
 
             kiwii.notification = True
             return reply
 
         def selectedReply(self, reply):
-            self.newComment(mc, reply.message, reply.numberLikes, reply.mentions, queue=False)
+            self.newComment(mc, reply.message, reply.numberLikes, reply.mentions, force_send=True)
             self.sentComments[-1].reply = reply
             self.sentComments[-1].replies = []
 

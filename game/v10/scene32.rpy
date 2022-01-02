@@ -24,10 +24,10 @@ label v10_tues_room_night:
 
             python:
                 if config_censored:
-                    lauren.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
+                    lauren.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
                 else:
-                    lauren.messenger.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
-                lauren.messenger.newMessage("Sweet Dreams ;)", queue=False)
+                    lauren.messenger.newImgMessage("images/v10/scene 32/v9lauText.webp", force_send=True)
+                lauren.messenger.newMessage("Sweet Dreams ;)", force_send=True)
                 lauren.messenger.addReply("They will be now.")
 
             label v10s32_phoneCheckW:
@@ -86,10 +86,10 @@ label v10_tues_room_night:
 
             python:
                 if config_censored:
-                    lauren.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
+                    lauren.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
                 else:
-                    lauren.messenger.newImgMessage("images/v10/scene 32/v9lauText.webp", queue=False)
-                lauren.messenger.newMessage("Sweet Dreams ;)", queue=False)
+                    lauren.messenger.newImgMessage("images/v10/scene 32/v9lauText.webp", force_send=True)
+                lauren.messenger.newMessage("Sweet Dreams ;)", force_send=True)
                 lauren.messenger.addReply("They will be now.")
 
             label v10s32_phoneCheckA:

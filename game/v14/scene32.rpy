@@ -487,12 +487,12 @@ label v14s32:
 
     if not v14_help_chloe:
         $ v14s32_kiwiiPost1 = KiwiiPost(chloe, "v14/v14s30b_pw_image_two.webp", _("I'd like to officially announce The Chicks' partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
-        $ v14s32_kiwiiPost1.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s32_kiwiiPost1.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s32_kiwiiPost1.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s32_kiwiiPost1.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s32_kiwiiPost1.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(15, 35), mentions=[grayson], queue=False)
-        $ v14s32_kiwiiPost1.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(15, 35), queue=False)
+        $ v14s32_kiwiiPost1.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s32_kiwiiPost1.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s32_kiwiiPost1.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s32_kiwiiPost1.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s32_kiwiiPost1.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(15, 35), mentions=[grayson], force_send=True)
+        $ v14s32_kiwiiPost1.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
 
         $ set_presidency_percent(v14_lindsey_popularity - 2)
         imre "She just made an announcement on Kiwii, did you see it yet?"

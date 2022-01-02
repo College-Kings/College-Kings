@@ -991,10 +991,10 @@ label v14s47_end:
 
 
     $ v14s47_kiwiiPost1 = KiwiiPost(lindsey, "v14/v14s47_lindsey_kiwii.webp", "Making big moves ;)", numberLikes=720)
-    $ v14s47_kiwiiPost1.newComment(nora, "Kick ass babe <3", queue=False, numberLikes=259)
-    $ v14s47_kiwiiPost1.newComment(aubrey, "Aww, look at your cute little button!", queue=False, numberLikes=623)
-    $ v14s47_kiwiiPost1.newComment(riley, "I have one too :) Hehe.", queue=False, numberLikes=367)
-    $ v14s47_kiwiiPost1.newComment(sebastian, "Looking all official now, Linds!", queue=False, numberLikes=108)
+    $ v14s47_kiwiiPost1.newComment(nora, "Kick ass babe <3", force_send=True, numberLikes=259)
+    $ v14s47_kiwiiPost1.newComment(aubrey, "Aww, look at your cute little button!", force_send=True, numberLikes=623)
+    $ v14s47_kiwiiPost1.newComment(riley, "I have one too :) Hehe.", force_send=True, numberLikes=367)
+    $ v14s47_kiwiiPost1.newComment(sebastian, "Looking all official now, Linds!", force_send=True, numberLikes=108)
     if v14_pics_with_linds:
         $ v14s47_kiwiiPost1.addReply("Damn, she's cute... What is she selling? ;)", v14s47_kiwiiReply1, numberLikes=351)
         $ v14s47_kiwiiPost1.addReply("#ThatsMyPresident", v14s47_kiwiiReply2, numberLikes=402)

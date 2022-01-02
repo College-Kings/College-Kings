@@ -508,7 +508,7 @@ label v15s1:
 
 # -MC checks his texts and there's a message from Autumn-
 
-    $ autumn.messenger.newMessage("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)", queue=False)
+    $ autumn.messenger.newMessage("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)", force_send=True)
     $ autumn.messenger.addReply("Yeah, looking forward to it. See you there!")
     $ autumn.messenger.addReply("Of course! I'll always be there if there's puppies, haha.")
 

@@ -202,7 +202,7 @@ label v14s12:
 
     if emmy.simplr in simplr_contacts:
         if "v13_emmy" in sceneList:
-            $ emmy.simplr.newMessage("Oh, hey...", queue=False)
+            $ emmy.simplr.newMessage("Oh, hey...", force_send=True)
             $ emmy.simplr.addReply("Hey, we had a great time together, hope to see you again <3")
             $ emmy.simplr.newMessage("I had a good time as well, but...")
             $ emmy.simplr.newMessage("I have to be honest with you")
@@ -216,8 +216,8 @@ label v14s12:
             $ emmy.simplr.addReply(_("We did. We had a good time."), v14_emmy_simplr1)
             $ emmy.simplr.addReply(_("Apology not accepted..."), v14_emmy_simplr2)
         else:
-            $ emmy.simplr.newMessage("Oh, hey...", queue=False)
-            $ emmy.simplr.newMessage("I have to be honest with you", queue=False)
+            $ emmy.simplr.newMessage("Oh, hey...", force_send=True)
+            $ emmy.simplr.newMessage("I have to be honest with you", force_send=True)
             $ emmy.simplr.addReply("Oof, I sense that a bomb is about to drop, haha")
             $ emmy.simplr.newMessage("Well, yeah. Um, I have a boyfriend actually")
             $ emmy.simplr.addReply("What the fuck?! Wait, you... what?")

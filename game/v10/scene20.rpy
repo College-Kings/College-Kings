@@ -25,7 +25,7 @@ label v10_room_mon_night:
 
         play sound "sounds/vibrate.mp3"
 
-        $ josh.messenger.newMessage("So what do think!? Any good ones for you?", queue=False)
+        $ josh.messenger.newMessage("So what do think!? Any good ones for you?", force_send=True)
         $ josh.messenger.addReply("What are you talking about?")
         $ josh.messenger.newMessage("Wait, you don't know what I'm talking about? Everybody on campus knows about it. Except for you I guess.")
         $ josh.messenger.addReply("What does everyone know about?")
@@ -82,7 +82,7 @@ label v10_room_mon_night:
 
         play sound "sounds/vibrate.mp3"
 
-        $ josh.messenger.newMessage("So what do think!? Any good ones for you?", queue=False)
+        $ josh.messenger.newMessage("So what do think!? Any good ones for you?", force_send=True)
         $ josh.messenger.addReply("What are you talking about?")
         $ josh.messenger.newMessage("Wait, you don't know what I'm talking about? Everybody on campus knows about it. Except for you I guess.")
         $ josh.messenger.addReply("What does everyone know about?")

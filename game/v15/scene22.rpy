@@ -1478,19 +1478,19 @@ label v15s22:
                 pause 0.75
 
     if v15_lindsey_gamenight: # -if helping Lindsey with Games night
-        $ lindsey.messenger.newMessage("Hey, can you come meet me now to buy the alcohol for our game night? I have a plan! I'll send the details of which store to come to.", queue=False)
+        $ lindsey.messenger.newMessage("Hey, can you come meet me now to buy the alcohol for our game night? I have a plan! I'll send the details of which store to come to.", force_send=True)
         $ lindsey.messenger.addReply("Okay, I'll be there soon!", func=None)
 
     elif v14_help_lindsey:
-        $ lindsey.messenger.newMessage("Hey, can you call the club and book the VIP party package now please? See what you can do in terms of them serving us alcohol and negotiating the price!", queue=False)
+        $ lindsey.messenger.newMessage("Hey, can you call the club and book the VIP party package now please? See what you can do in terms of them serving us alcohol and negotiating the price!", force_send=True)
         $ lindsey.messenger.addReply("Okay, I'll try to charm them. I'll let you know how it goes!", func=None)
 
     else:
-        $ aubrey.messenger.newMessage("Come to the Chicks house. I have an extra special surprise for you ;) I think you've earned it.", queue=False)
+        $ aubrey.messenger.newMessage("Come to the Chicks house. I have an extra special surprise for you ;) I think you've earned it.", force_send=True)
 
         if aubrey.relationship.value >= Relationship.FWB.value: # -if AubreyRs
             $ aubrey.messenger.addReply("A naked surprise? ;)", func=None)
-            $ aubrey.messenger.newMessage("Guess you'll find out soon enough!", queue=False)
+            $ aubrey.messenger.newMessage("Guess you'll find out soon enough!", force_send=True)
 
         else: # -if AubreyFriend
             $ aubrey.messenger.addReply("Haha, okay see you there.", func=None)

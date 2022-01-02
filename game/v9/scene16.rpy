@@ -68,7 +68,7 @@ label v9_room_thur_night:
 
             u "(Ugh, now what.)"
 
-            $ emily.messenger.newMessage(_("I'm bored. Come hang out."), queue=False)
+            $ emily.messenger.newMessage(_("I'm bored. Come hang out."), force_send=True)
             $ emily.messenger.addReply(_("Sure! Gimme a sec."))
             $ emily.messenger.addReply(_("It's kinda late"), v9s16_reply5)
 
@@ -103,7 +103,7 @@ label v9_room_thur_night:
 
             u "(Ugh, now what.)"
 
-            $ emily.messenger.newMessage(_("I'm bored. Come hang out."), queue=False)
+            $ emily.messenger.newMessage(_("I'm bored. Come hang out."), force_send=True)
             $ emily.messenger.addReply(_("Sure! Gimme a sec."))
             $ emily.messenger.addReply(_("It's kinda late"), v9s16_reply6)
             
@@ -857,12 +857,12 @@ label v9_thur_night_aft_em_w:
         u "(I need to get some sleep.)"
 
     if hl_punch:
-        $ lindsey.messenger.newMessage(_("How are you doing tonight?"), queue=False)
+        $ lindsey.messenger.newMessage(_("How are you doing tonight?"), force_send=True)
         $ lindsey.messenger.addReply(_("Better now that I'm talking to you"), v9s16_reply1)
         $ lindsey.messenger.addReply(_("Super. You getting ready for bed?"), v9s16_reply2)
 
     else:
-        $ lindsey.messenger.newMessage(_("Hey, how you feeling?"), queue=False)
+        $ lindsey.messenger.newMessage(_("Hey, how you feeling?"), force_send=True)
         $ lindsey.messenger.addReply(_("Better now that I'm talking to you"), v9s16_reply3)
         $ lindsey.messenger.addReply(_("I'm ok, it's really not that bad"), v9s16_reply4)
 
@@ -904,12 +904,12 @@ label v9_thur_night_aft_em_a:
         u "(I need to get some sleep.)"
 
     if hl_punch:
-        $ lindsey.messenger.newMessage(_("How are you doing tonight?"), queue=False)
+        $ lindsey.messenger.newMessage(_("How are you doing tonight?"), force_send=True)
         $ lindsey.messenger.addReply(_("Better now that I'm talking to you"), v9s16_reply1)
         $ lindsey.messenger.addReply(_("Super. You getting ready for bed?"), v9s16_reply2)
 
     else:
-        $ lindsey.messenger.newMessage(_("Hey, how you feeling?"), queue=False)
+        $ lindsey.messenger.newMessage(_("Hey, how you feeling?"), force_send=True)
         $ lindsey.messenger.addReply(_("Better now that I'm talking to you"), v9s16_reply3)
         $ lindsey.messenger.addReply(_("I'm ok, it's really not that bad"), v9s16_reply4)
 

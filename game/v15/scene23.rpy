@@ -59,18 +59,18 @@ label v15s23:
     pause 0.75
 
     # Pre load Aubrey Text conversation before branching Ape or Wolf 
-    $ aubrey.messenger.newMessage("Hey smelly, come to the Chicks house. I have an extra special surprise for you.", queue=False)
+    $ aubrey.messenger.newMessage("Hey smelly, come to the Chicks house. I have an extra special surprise for you.", force_send=True)
     
     if aubrey.relationship.value < Relationship.FWB.value:
         $ aubrey.messenger.addReply("Haha ok, see you soon :) ")
-        $ aubrey.messenger.newMessage("Perfect ;)", queue=False)
+        $ aubrey.messenger.newMessage("Perfect ;)", force_send=True)
 
     else:
         $ aubrey.messenger.addReply("I just showered actually, so I smell amazing")
         $ aubrey.messenger.addReply("But I accept your invitation...")
-        $ aubrey.messenger.newMessage("Where was my invitation???", queue=False)
+        $ aubrey.messenger.newMessage("Where was my invitation???", force_send=True)
         $ aubrey.messenger.addReply("Uhh... I'll make it up to you...? Lol")
-        $ aubrey.messenger.newMessage("Hehe, I know you will ;)", queue=False)
+        $ aubrey.messenger.newMessage("Hehe, I know you will ;)", force_send=True)
 
     if joinwolves:
         scene v15s23_8a # TPP. Same as v15s23_8 but MC's WOLF ROOM.

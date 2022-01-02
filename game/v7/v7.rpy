@@ -52,12 +52,12 @@ init python:
             riley.messenger.addReply(_("Well we're not."))
             riley.messenger.newMessage(_("k"))
         if bowling and emily.relationship.value >= Relationship.FWB.value:
-            penelope.messenger.newMessage(_("I didn't know you and Emily were a thing..."), queue=False)
+            penelope.messenger.newMessage(_("I didn't know you and Emily were a thing..."), force_send=True)
             penelope.messenger.addReply(_("We're not a thing"), v7_msgReply1)
             penelope.messenger.addReply(_("It was a one time thing"), v7_msgReply2)
         if emily.relationship.value >= Relationship.FWB.value and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
-            lauren.messenger.newMessage(_("I saw what Emily posted. I really thought you liked me..."), queue=False)
-            lauren.messenger.newMessage(_("I guess we're done now, so please just delete my number."), queue=False)
+            lauren.messenger.newMessage(_("I saw what Emily posted. I really thought you liked me..."), force_send=True)
+            lauren.messenger.newMessage(_("I guess we're done now, so please just delete my number."), force_send=True)
             lauren.messenger.addReply(_("Lauren can we please just talk about it? I can explain"))
             lauren.messenger.newMessage(_("What is there to talk about? How could you betray me like that?!"))
             lauren.messenger.addReply(_("Please, it's just a big misunderstanding"))
@@ -1341,38 +1341,38 @@ label conyourdorm:
     pause 0.5
 
     $ v7_kiwiiPost1 = KiwiiPost(chloe, "v7/clpost1.webp", _("I'll always follow the sun :)"), numberLikes=186)
-    $ v7_kiwiiPost1.newComment(grayson, _("Check your DMs"), 14, queue=False)
-    $ v7_kiwiiPost1.newComment(ryan, _("Whore."), 1, queue=False)
-    $ v7_kiwiiPost1.newComment(aubrey, _("What I wouldn't give for your body..."), 32, queue=False)
-    $ v7_kiwiiPost1.newComment(elijah, _("If you ever need a tutor, I'm free on Wednesdays and Fridays."), 2, queue=False)
-    $ v7_kiwiiPost1.newComment(imre, _("SO FUCKING HOT WTFFF"), 10, queue=False)
-    $ v7_kiwiiPost1.newComment(emily, _("Where did you get that bikini?"), 18, mentions=[chloe], queue=False)
-    $ v7_kiwiiPost1.newComment(chloe, _("I can't remember :("), 11, mentions=[emily], queue=False)
+    $ v7_kiwiiPost1.newComment(grayson, _("Check your DMs"), 14, force_send=True)
+    $ v7_kiwiiPost1.newComment(ryan, _("Whore."), 1, force_send=True)
+    $ v7_kiwiiPost1.newComment(aubrey, _("What I wouldn't give for your body..."), 32, force_send=True)
+    $ v7_kiwiiPost1.newComment(elijah, _("If you ever need a tutor, I'm free on Wednesdays and Fridays."), 2, force_send=True)
+    $ v7_kiwiiPost1.newComment(imre, _("SO FUCKING HOT WTFFF"), 10, force_send=True)
+    $ v7_kiwiiPost1.newComment(emily, _("Where did you get that bikini?"), 18, mentions=[chloe], force_send=True)
+    $ v7_kiwiiPost1.newComment(chloe, _("I can't remember :("), 11, mentions=[emily], force_send=True)
     $ v7_kiwiiPost1.addReply(_("You're so beautiful!"), v7_kiwiiReply1, numberLikes=renpy.random.randint(2, 8))
     $ v7_kiwiiPost1.addReply(_("I got some sun in my room..."), v7_kiwiiReply2, numberLikes=renpy.random.randint(20, 30))
 
     $ v7_kiwiiPost2 = KiwiiPost(lauren, "v7/lapost1.webp", _("Wishing I could go back..."), numberLikes=39)
-    $ v7_kiwiiPost2.newComment(autumn, _("That was such a great vacation!"), 2, queue=False)
-    $ v7_kiwiiPost2.newComment(penelope, _("Omg beautiful!"), 3, queue=False)
+    $ v7_kiwiiPost2.newComment(autumn, _("That was such a great vacation!"), 2, force_send=True)
+    $ v7_kiwiiPost2.newComment(penelope, _("Omg beautiful!"), 3, force_send=True)
     $ v7_kiwiiPost2.addReply(_("You're a cutie!"), v7_kiwiiReply3, numberLikes=renpy.random.randint(3, 10))
     $ v7_kiwiiPost2.addReply(_("Winter vacations are the best"), v7_kiwiiReply4, numberLikes=renpy.random.randint(10, 17))
 
     $ v7_kiwiiPost3 = KiwiiPost(aubrey, "v7/aupost1.webp", _("Finally changed my profile pic!"), numberLikes=133)
-    $ v7_kiwiiPost3.newComment(cameron, _("You put the hot into thot"), 2, queue=False)
-    $ v7_kiwiiPost3.newComment(josh, _("You still single?"), 3, queue=False)
-    $ v7_kiwiiPost3.newComment(riley, _("Holy hell... gorgeous Aubs!"), 6, queue=False)
-    $ v7_kiwiiPost3.newComment(chloe, _("Most beautiful girl in the world <3"), 6, queue=False)
+    $ v7_kiwiiPost3.newComment(cameron, _("You put the hot into thot"), 2, force_send=True)
+    $ v7_kiwiiPost3.newComment(josh, _("You still single?"), 3, force_send=True)
+    $ v7_kiwiiPost3.newComment(riley, _("Holy hell... gorgeous Aubs!"), 6, force_send=True)
+    $ v7_kiwiiPost3.newComment(chloe, _("Most beautiful girl in the world <3"), 6, force_send=True)
     $ v7_kiwiiPost3.addReply(_("I'd destroy you in Air hockey!"), v7_kiwiiReply5, mentions=[aubrey], numberLikes=renpy.random.randint(15, 25))
 
     if emily.relationship.value >= Relationship.FWB.value: # first riley texts, then once you've opened the app you get 2 more messages.
         $ v7_kiwiiPost4 = KiwiiPost(emily, "v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), numberLikes=82)
-        $ v7_kiwiiPost4.newComment(riley, _("You guys are so cute"), 5, queue=False)
-        $ v7_kiwiiPost4.newComment(aubrey, _("GORGEOUS"), 8, queue=False)
-        $ v7_kiwiiPost4.newComment(josh, _("Woah, you guys back together??"), 3, queue=False)
+        $ v7_kiwiiPost4.newComment(riley, _("You guys are so cute"), 5, force_send=True)
+        $ v7_kiwiiPost4.newComment(aubrey, _("GORGEOUS"), 8, force_send=True)
+        $ v7_kiwiiPost4.newComment(josh, _("Woah, you guys back together??"), 3, force_send=True)
         $ v7_kiwiiPost4.addReply(_("No, we're not."), v7_kiwiiReply6, mentions=[josh], numberLikes=renpy.random.randint(5, 15))
 
         play sound "sounds/vibrate.mp3"
-        $ riley.messenger.newMessage(_("Are you and Emily back together?"), queue=False)
+        $ riley.messenger.newMessage(_("Are you and Emily back together?"), force_send=True)
         $ riley.messenger.addReply(_("What are you talking about???"), v7_msgReply7)
         $ riley.messenger.newMessage(_("Check Kiwii..."))
 
@@ -1610,7 +1610,7 @@ label conyourdorm:
 
     else:
         play sound "sounds/vibrate.mp3"
-        $ riley.messenger.newMessage(_("Hey, how come you're not on Kiwii?"), queue=False)
+        $ riley.messenger.newMessage(_("Hey, how come you're not on Kiwii?"), force_send=True)
         $ riley.messenger.addReply(_("What's that?"))
         $ riley.messenger.newMessage(_("It's a new social media app, you should give it a try"))
         $ riley.messenger.addReply(_("Okay, I'll have a look"), v7_msgReply7)
@@ -2536,27 +2536,27 @@ label thisbewalk:
         play sound "sounds/vibrate.mp3"
 
         if seenlauren and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
-            $ lauren.messenger.newMessage(_("Wanna go now babe?"), queue=False)
+            $ lauren.messenger.newMessage(_("Wanna go now babe?"), force_send=True)
             $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
             $ lauren.messenger.newMessage(_("Great :)"))
 
         elif seenlauren:
-            $ lauren.messenger.newMessage(_("Wanna go now?"), queue=False)
+            $ lauren.messenger.newMessage(_("Wanna go now?"), force_send=True)
             $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
             $ lauren.messenger.newMessage(_("Great :)"))
 
         else:
-            $ lauren.messenger.newMessage(_("Hey :)"), queue=False)
+            $ lauren.messenger.newMessage(_("Hey :)"), force_send=True)
 
             if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
-                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), queue=False)
+                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), force_send=True)
                 $ lauren.messenger.addReply(_("Sounds good, when were you thinking?"))
                 $ lauren.messenger.newMessage(_("How about now?"))
                 $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
                 $ lauren.messenger.newMessage(_("Great :)"))
 
             else:
-                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), queue=False)
+                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), force_send=True)
                 $ lauren.messenger.addReply(_("Sounds good, when were you thinking?"), v7_msgReply3)
                 $ lauren.messenger.addReply(_("Sorry, I can't I'm really busy today"), v7_msgReply4)
 
@@ -5445,14 +5445,14 @@ label after_pledges:
 
     if joinwolves:
         $ v7_kiwiiPost5 = KiwiiPost(chris, "v7/chpost1.webp", _("One of us!"), numberLikes=133, mentions=[mc])
-        $ v7_kiwiiPost5.newComment(cameron, _("Losers"), 3, queue=False)
-        $ v7_kiwiiPost5.newComment(imre, _("Hell yeah bro!"), 14, queue=False)
-        $ v7_kiwiiPost5.newComment(aubrey, _("Woohoo!"), 35, queue=False)
+        $ v7_kiwiiPost5.newComment(cameron, _("Losers"), 3, force_send=True)
+        $ v7_kiwiiPost5.newComment(imre, _("Hell yeah bro!"), 14, force_send=True)
+        $ v7_kiwiiPost5.newComment(aubrey, _("Woohoo!"), 35, force_send=True)
 
     if emilyText:
         play sound "sounds/vibrate.mp3"
         
-        $ emily.messenger.newMessage(_("It's okay. You'll get the surprise another time..."), queue=False)
+        $ emily.messenger.newMessage(_("It's okay. You'll get the surprise another time..."), force_send=True)
         $ emily.messenger.addReply(_("Exciting :)"))
 
     " "
@@ -8871,7 +8871,7 @@ label rileytext:
     if riley.relationship.value > Relationship.LIKES.value:
         play sound "sounds/vibrate.mp3"
 
-        $ riley.messenger.newMessage(_("Wanna come over? ;)"), queue=False)
+        $ riley.messenger.newMessage(_("Wanna come over? ;)"), force_send=True)
         $ riley.messenger.addReply(_("Sure, on my way :)"), v7_msgReply5)
         $ riley.messenger.addReply(_("Sorry I'm really exhausted. Another time"), v7_msgReply6)
         
@@ -9219,8 +9219,8 @@ label v7_nsfwSkipLabel1:
 
 ########## SCENE 36 MAKING SIGNS W/ AUTUMN
 label signs_with_autumn:
-    $ autumn.messenger.newMessage(_("Hey, it's Autumn."), queue=False)
-    $ autumn.messenger.newMessage(_("I'm just about to start making signs. Do you still want to join?"), queue=False)
+    $ autumn.messenger.newMessage(_("Hey, it's Autumn."), force_send=True)
+    $ autumn.messenger.newMessage(_("I'm just about to start making signs. Do you still want to join?"), force_send=True)
     $ autumn.messenger.addReply(_("Yes, of course. I'd love to."))
     $ autumn.messenger.newMessage(_("Great. I'm at the Deer's House. Do you know how to get there?"))
     $ autumn.messenger.addReply(_("Yeah, I think I do. On my way."))

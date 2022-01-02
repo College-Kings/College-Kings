@@ -39,7 +39,7 @@ label v8_ending:
         scene v8send3a # TPP. Same camera as v8send3, MC checking his phone, looking confused.
         with dissolve
 
-        $ imre.messenger.newMessage(_("Dude, you see this shit on Kiwii?"), queue=False)
+        $ imre.messenger.newMessage(_("Dude, you see this shit on Kiwii?"), force_send=True)
         $ imre.messenger.addReply(_("No, what?"))
         $ imre.messenger.newMessage(_("IDK, it's crazy"))
 
@@ -93,7 +93,7 @@ label v8_ending:
         with dissolve
         
 
-        $ ryan.messenger.newMessage(_("What the hell's happening on Kiwii?"), queue=False)
+        $ ryan.messenger.newMessage(_("What the hell's happening on Kiwii?"), force_send=True)
         $ ryan.messenger.addReply(_("I don't know. What is it?"))
         $ ryan.messenger.newMessage(_("Fuckin check it out man. Crazy shit"))
 

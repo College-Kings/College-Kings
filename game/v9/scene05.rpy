@@ -13,7 +13,7 @@ label v9_dream_wakeup:
         with dissolve
         u "(God I hate dreams. Most of the time, they're good. But sometimes... they really suck.)"
 
-        $ riley.messenger.newMessage(_("Hey, [name]. You awake?"), queue=False)
+        $ riley.messenger.newMessage(_("Hey, [name]. You awake?"), force_send=True)
         $ riley.messenger.addReply(_("Hey Riley, yeah I'm up, is everything okay?"))
         $ riley.messenger.newMessage(_("A couple of us wanted to go to the lake. Wanna join us?"))
         $ riley.messenger.addReply(_("I dunno, feeling kind of crappy."))
@@ -40,7 +40,7 @@ label v9_dream_wakeup:
         with dissolve
         u "(God I hate dreams. Most of the time, they're good. But sometimes... they really suck.)"
 
-        $ riley.messenger.newMessage(_("Hey, [name]. You awake?"), queue=False)
+        $ riley.messenger.newMessage(_("Hey, [name]. You awake?"), force_send=True)
         $ riley.messenger.addReply(_("Hey Riley, yeah I'm up, is everything okay?"))
         $ riley.messenger.newMessage(_("A couple of us wanted to go to the lake. Wanna join us?"))
         $ riley.messenger.addReply(_("I dunno, feeling kind of crappy."))

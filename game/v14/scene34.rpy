@@ -20,7 +20,7 @@ label v14s34:
 
         play music "music/v13/Track Scene 40_2.mp3" fadein 2
 
-    $ jenny.messenger.newMessage(_("Hey [name], you busy right now?"), queue =False)
+    $ jenny.messenger.newMessage(_("Hey [name], you busy right now?"), force_send=True)
     $ jenny.messenger.addReply(_("Why, what's up?"))
     $ jenny.messenger.newMessage(_("Well, I've been wanting to swimming in this little lagoon I found."))
     $ jenny.messenger.addReply(_("You're wanting to go now?"))

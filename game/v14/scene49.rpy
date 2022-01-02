@@ -18,7 +18,7 @@ label v14s49:
         scene v14s49_2 # TPP. MC stopped walking looking at his phone, slight smile, mouth closed.
         with dissolve
 
-        $ lindsey.messenger.newMessage(_("Chloe just left the house with some other blonde girl. On their way to the concert!"), queue =False)
+        $ lindsey.messenger.newMessage(_("Chloe just left the house with some other blonde girl. On their way to the concert!"), force_send=True)
         $ lindsey.messenger.addReply(_("It worked! How did you send the tickets without making her suspicious? Also, blonde girl?"))
         $ lindsey.messenger.newMessage(_("I just sent the e-tickets anonymously. She has plenty of admirers these days. Probably just assumed it was a gift from one of them. Easy, huh?"))
         $ lindsey.messenger.newMessage(_("Oh, she said they used to know each other when they were kids. That's all I know."))

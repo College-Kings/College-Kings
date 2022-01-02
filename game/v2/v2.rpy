@@ -194,7 +194,7 @@ label v2start:
     play sound "sounds/vibrate.mp3"
     queue sound "sounds/vibrate.mp3"
 
-    $ ryan.messenger.newMessage(_("You okay?"), queue=False)
+    $ ryan.messenger.newMessage(_("You okay?"), force_send=True)
     $ ryan.messenger.addReply(_("I'm fine"), v2_reply1)
     $ ryan.messenger.addReply(_("No, wtf was that?! Fuck Grayson and fuck the Apes"), v2_reply4)
 
@@ -204,11 +204,11 @@ label v2start:
     $ lauren.messenger.newMessage(_("Okay..."))
 
     if lauren.messenger.replies:
-        $ lauren.messenger.newMessage(_("Hello?? Can we please talk today?"), queue=False)
+        $ lauren.messenger.newMessage(_("Hello?? Can we please talk today?"), force_send=True)
         $ lauren.messenger.addReply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
         $ lauren.messenger.addReply(_("Sorry, I can't"), v2_reply6)
     else:
-        $ lauren.messenger.newMessage(_("Are we still on for today? :)"), queue=False)
+        $ lauren.messenger.newMessage(_("Are we still on for today? :)"), force_send=True)
         $ lauren.messenger.addReply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
         $ lauren.messenger.addReply(_("Sorry, I can't"), v2_reply6)
 
@@ -1363,9 +1363,9 @@ label historye: #for compatibility only
 label history2:
     play sound "sounds/vibrate.mp3"
 
-    $ josh.messenger.newMessage(_("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."), queue=False)
-    $ josh.messenger.newMessage(_("YOURS"), queue=False)
-    $ josh.messenger.newMessage(_("What a bitch..."), queue=False)
+    $ josh.messenger.newMessage(_("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."), force_send=True)
+    $ josh.messenger.newMessage(_("YOURS"), force_send=True)
+    $ josh.messenger.newMessage(_("What a bitch..."), force_send=True)
     $ josh.messenger.addReply(_("Sorry, man. She doesn't know what she's missing."), v2_reply7)
     $ josh.messenger.addReply(_("Sooo, did you give it to her?"), v2_reply8)
 
@@ -2330,8 +2330,8 @@ label bo_bd:
     # text from aubrey
     play sound "sounds/vibrate.mp3"
 
-    $ aubrey.messenger.newMessage(_("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled..."), queue=False)
-    $ aubrey.messenger.newMessage(_("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?"), queue=False)
+    $ aubrey.messenger.newMessage(_("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled..."), force_send=True)
+    $ aubrey.messenger.newMessage(_("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?"), force_send=True)
     $ aubrey.messenger.addReply(_("Wait they're not dating?"), v2_reply11)
     $ aubrey.messenger.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
 
@@ -2500,7 +2500,7 @@ label bo_bd:
 
     play sound "sounds/vibrate.mp3"
 
-    $ aubrey.messenger.newMessage(_("Hey, are you nearby?"), queue=False)
+    $ aubrey.messenger.newMessage(_("Hey, are you nearby?"), force_send=True)
     $ aubrey.messenger.addReply(_("Yeah, I'm just on my way, I'll be right there."), v2_reply13)
     $ aubrey.messenger.addReply(_("Sorry, something came up and I can't make it."), v2_reply14)
 

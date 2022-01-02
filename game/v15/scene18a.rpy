@@ -9,17 +9,17 @@ label v15s18a:
     # -Characters are greyed out after they are spoken too besides Lauren. She needs to stay highlighted as she is the way to end the free roam-
 
     $ v15s18a_kiwiiPost1 = KiwiiPost(lauren, "v15/lapost1.webp", _("Feeling one year older ;)"), numberLikes=854)
-    $ v15s18a_kiwiiPost1.newComment(lindsey, _("Holy fuck, babe! You look spectacular, I hope you have the most amazing birthday <3"), numberLikes=renpy.random.randint(360, 660), queue=False)
-    $ v15s18a_kiwiiPost1.newComment(autumn, _("Can't wait to celebrate! Happy Birthday, Renny <33"), numberLikes=renpy.random.randint(360, 660), queue=False)
-    $ v15s18a_kiwiiPost1.newComment(chloe, _("Sorry I couldn't be there! I'm just so busy... Enjoy yourself and have the night of your life! Happy birthday :)"), numberLikes=renpy.random.randint(360, 660), queue=False)
-    $ v15s18a_kiwiiPost1.newComment(amber, _("YES!! That costume is everything! Happy b-day hottie, see you in a bit <3"), numberLikes=renpy.random.randint(360, 660), queue=False)
-    $ v15s18a_kiwiiPost1.newComment(lauren, _("Thank you ladies!!"), numberLikes=renpy.random.randint(360, 660), queue=False)
+    $ v15s18a_kiwiiPost1.newComment(lindsey, _("Holy fuck, babe! You look spectacular, I hope you have the most amazing birthday <3"), numberLikes=renpy.random.randint(360, 660), force_send=True)
+    $ v15s18a_kiwiiPost1.newComment(autumn, _("Can't wait to celebrate! Happy Birthday, Renny <33"), numberLikes=renpy.random.randint(360, 660), force_send=True)
+    $ v15s18a_kiwiiPost1.newComment(chloe, _("Sorry I couldn't be there! I'm just so busy... Enjoy yourself and have the night of your life! Happy birthday :)"), numberLikes=renpy.random.randint(360, 660), force_send=True)
+    $ v15s18a_kiwiiPost1.newComment(amber, _("YES!! That costume is everything! Happy b-day hottie, see you in a bit <3"), numberLikes=renpy.random.randint(360, 660), force_send=True)
+    $ v15s18a_kiwiiPost1.newComment(lauren, _("Thank you ladies!!"), numberLikes=renpy.random.randint(360, 660), force_send=True)
 
     $ v15s18a_kiwiiPost2 = KiwiiPost(autumn, "v15/autpost1.webp", _("Spooky sister season :)"), numberLikes=743)
-    $ v15s18a_kiwiiPost2.newComment(penelope, _("I'll never understand your decorating skills... I'm so excited for tonight!"), numberLikes=renpy.random.randint(360, 660), queue=False)
-    $ v15s18a_kiwiiPost2.newComment(lauren, _("The house looks absolutely perfect, I couldn't have asked for more! Love u <3"), numberLikes=renpy.random.randint(360, 660), queue=False)
-    $ v15s18a_kiwiiPost2.newComment(riley, _("So fucking cool! You're planning my wedding one day, Autumn..."), numberLikes=renpy.random.randint(360, 660), queue=False)
-    $ v15s18a_kiwiiPost2.newComment(autumn, _("Haha, sounds great!"), numberLikes=renpy.random.randint(360, 660), queue=False)
+    $ v15s18a_kiwiiPost2.newComment(penelope, _("I'll never understand your decorating skills... I'm so excited for tonight!"), numberLikes=renpy.random.randint(360, 660), force_send=True)
+    $ v15s18a_kiwiiPost2.newComment(lauren, _("The house looks absolutely perfect, I couldn't have asked for more! Love u <3"), numberLikes=renpy.random.randint(360, 660), force_send=True)
+    $ v15s18a_kiwiiPost2.newComment(riley, _("So fucking cool! You're planning my wedding one day, Autumn..."), numberLikes=renpy.random.randint(360, 660), force_send=True)
+    $ v15s18a_kiwiiPost2.newComment(autumn, _("Haha, sounds great!"), numberLikes=renpy.random.randint(360, 660), force_send=True)
 
     pause 0.75
     
@@ -354,29 +354,29 @@ label v15s18a_Aubrey:
 
     if v15s18a_aub_kiwii_smile:
         $ v15s18a_kiwiiPost3 = KiwiiPost(aubrey, "v15/aupost1.webp", _("Spooky season? More like stripper season ;)"), numberLikes=2492)
-        $ v15s18a_kiwiiPost3.newComment(chloe, _("O. M. G."), numberLikes=renpy.random.randint(1060, 2260), queue=False)
-        $ v15s18a_kiwiiPost3.newComment(naomi, _("Hahahaha! I have to come to one of these parties soon..."), numberLikes=renpy.random.randint(1860, 3060), queue=False)
+        $ v15s18a_kiwiiPost3.newComment(chloe, _("O. M. G."), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
+        $ v15s18a_kiwiiPost3.newComment(naomi, _("Hahahaha! I have to come to one of these parties soon..."), numberLikes=renpy.random.randint(1860, 3060), force_send=True)
         if joinwolves:
-            $ v15s18a_kiwiiPost3.newComment(sebastian, _("Hell yeah! Can I borrow that outfit when you're done, [name]? :D"), numberLikes=renpy.random.randint(1060, 2260), queue=False)
+            $ v15s18a_kiwiiPost3.newComment(sebastian, _("Hell yeah! Can I borrow that outfit when you're done, [name]? :D"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
         else:
-            $ v15s18a_kiwiiPost3.newComment(grayson, _("What the fuck...?"), numberLikes=renpy.random.randint(1060, 2260), queue=False)
+            $ v15s18a_kiwiiPost3.newComment(grayson, _("What the fuck...?"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
         $ v15s18a_kiwiiPost3.addReply(_("Lol, I love this. Happy birthday Lauren!"), numberLikes=renpy.random.randint(1060, 2260), mentions=[lauren])
-        $ v15s18a_kiwiiPost3.newComment(lauren, _("Hehe, thank you!! You guys are the best <3"), numberLikes=renpy.random.randint(1060, 2260), queue=False)
+        $ v15s18a_kiwiiPost3.newComment(lauren, _("Hehe, thank you!! You guys are the best <3"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
         $ v15s18a_kiwiiPost3.addReply(_("Now taking appointments... ;)"), numberLikes=renpy.random.randint(1060, 2260))
-        $ v15s18a_kiwiiPost3.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(1860, 3060), queue=False)
+        $ v15s18a_kiwiiPost3.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(1860, 3060), force_send=True)
 
     else:
         $ v15s18a_kiwiiPost4 = KiwiiPost(aubrey, "v15/aupost2.webp", _("I think something's wrong with our stripper... Is he supposed to be this sad? </3"), numberLikes=2415)
-        $ v15s18a_kiwiiPost4.newComment(chloe, _("O. M. G."), numberLikes=renpy.random.randint(1060, 2260), queue=False)
-        $ v15s18a_kiwiiPost4.newComment(naomi, _("Aww! You need to cheer him up, little sis! Or I will... ;)"), numberLikes=renpy.random.randint(1860, 3060), queue=False)
+        $ v15s18a_kiwiiPost4.newComment(chloe, _("O. M. G."), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
+        $ v15s18a_kiwiiPost4.newComment(naomi, _("Aww! You need to cheer him up, little sis! Or I will... ;)"), numberLikes=renpy.random.randint(1860, 3060), force_send=True)
         if joinwolves:
-            $ v15s18a_kiwiiPost4.newComment(sebastian, _("Lmao, show them how it's done, [name]! #SadboyStriptease"), numberLikes=renpy.random.randint(1060, 2260), queue=False)
+            $ v15s18a_kiwiiPost4.newComment(sebastian, _("Lmao, show them how it's done, [name]! #SadboyStriptease"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
         else:
-            $ v15s18a_kiwiiPost4.newComment(grayson, _("What the fuck is this"), numberLikes=renpy.random.randint(1060, 2260), queue=False)
+            $ v15s18a_kiwiiPost4.newComment(grayson, _("What the fuck is this"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
         $ v15s18a_kiwiiPost4.addReply(_("Sigh... Happy birthday Lauren! Lol"), numberLikes=renpy.random.randint(1060, 2260), mentions=[lauren])
-        $ v15s18a_kiwiiPost4.newComment(lauren, _("Hahaha! Thank you guys <3"), numberLikes=renpy.random.randint(1060, 2260), queue=False)
+        $ v15s18a_kiwiiPost4.newComment(lauren, _("Hahaha! Thank you guys <3"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
         $ v15s18a_kiwiiPost4.addReply(_("Now taking appointments... ;)"), numberLikes=renpy.random.randint(1060, 2260))
-        $ v15s18a_kiwiiPost4.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(1860, 3060), queue=False)
+        $ v15s18a_kiwiiPost4.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(1860, 3060), force_send=True)
     
     call screen v15s18a_bar
 

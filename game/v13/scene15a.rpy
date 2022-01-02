@@ -91,7 +91,7 @@ label v13s15a:
 
         u "(Kinda late for a text.)"
 
-        $ lauren.messenger.newMessage("You up?", queue=False)
+        $ lauren.messenger.newMessage("You up?", force_send=True)
         $ lauren.messenger.addReply("Yeah, wassup?")
         $ lauren.messenger.newMessage("Come cuddle with me? ;)")
         $ lauren.messenger.addReply("You don't have to ask me twice, omw", v13s15a_Reply1)
