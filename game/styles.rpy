@@ -3,4 +3,5 @@ style olympus_mount_30 is text:
     size 30
     text_align 0.5
     line_spacing 5
-    yoffset 9
+    line_leading 9
+    yoffset 3

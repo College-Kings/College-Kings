@@ -163,6 +163,7 @@ screen scene_gallery():
                         xalign 0.5
                         ypos 210
 
+                        # add "#0f0"
                         text gallery_item.title.upper() align (0.5, 0.5)
 
     add image_path + "shadow.png" xalign 0.5 ypos 893
