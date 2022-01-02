@@ -35,6 +35,11 @@ init python:
 
 label v1start:
 label starta: #for compatibility only
+    if config.developer:
+        show screen bugTesting_Overlay
+
+    show screen fightDamage
+
     play music "music/msexy.mp3"
     show screen fantasyOverlay
 
