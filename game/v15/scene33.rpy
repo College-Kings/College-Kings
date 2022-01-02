@@ -594,7 +594,7 @@ label v15s33:
 
     aumom "But they're just not what I was envisioning."
 
-    scene v15s33_31b # FPP. MC looking at Aubrey's mom, Aubrey's mom looking at Aubrey, Aubrey's mom neutral face, mouth closed.
+    scene v15s33_31d # FPP. MC looking at Aubrey's mom, Aubrey's mom looking at Aubrey, Aubrey's mom neutral face, mouth closed.
     with dissolve
 
     u "(Damn, we've got a bridezilla over here! Ha... Yikes.)"
@@ -1070,7 +1070,7 @@ label v15s33:
 
             u "(Why the fuck does it smell so... Wrong?)"
 
-            scene v14s33_39e
+            scene v15s33_39e
             with dissolve
 
             rick "*Sighs*"
@@ -1641,7 +1641,7 @@ label v15s33:
 
             play sound "sounds/dooropen.mp3"
 
-            scene v15s33_60b # FPP. Show MC leaving the bathroom after opening the door, neutral face, mouth closed.
+            scene v15s33_60f # FPP. Show MC leaving the bathroom after opening the door, neutral face, mouth closed.
             with dissolve
 
             u "(I can't believe that just happened...)"
@@ -2008,7 +2008,7 @@ label v15s33:
 
             u "(Where is she?)"
 
-            scene v15s33_54c # FPP. Aubrey gone, MC looking across the table at the empty seat infront of him.
+            scene v15s33_54f # FPP. Aubrey gone, MC looking across the table at the empty seat infront of him.
             with dissolve
 
             pause 0.75 
@@ -2141,7 +2141,7 @@ label v15s33:
 
                     u "I know so."
 
-                    scene v15s33_75 # TPP. Close up of Aubrey and MC's hands starting to hold each other.
+                    scene v15s33_107 # TPP. Close up of Aubrey and MC's hands starting to hold each other.
                     with dissolve
 
                     pause 0.75 
@@ -2302,7 +2302,7 @@ label v15s33:
 
     u "Yeah, it really was."
 
-    scene v15s33_92 # TPP. Aubrey group hugging with her parents MC not in the hug.
+    scene v15s33_108 # TPP. After the ceremony, Aubrey group hugging with her parents MC not in the hug.
     with dissolve
 
     pause 0.75
