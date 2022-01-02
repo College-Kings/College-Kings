@@ -1063,38 +1063,27 @@ screen confirm(message, yes_action, no_action=Hide("confirm")):
     modal True
     style_prefix "confirm"
 
-    default image_path = "gui/confirm/"
+    use alert_template(message):
 
-    frame:
-        align (0.5, 0.5)
-        minimum (758, 363)
-        background "confirm_background"
+        hbox:
+            xalign 0.5
+            spacing 20
 
-        vbox:
-            align (0.5, 0.5)
-            spacing 45
+            button:
+                idle_background "blue_button_idle"
+                hover_background "blue_button_hover"
+                action yes_action
+                xysize (215, 55)
 
-            text _(message.upper()) xalign 0.5 xsize 350
+                text "YES" align (0.5, 0.5)
 
-            hbox:
-                xalign 0.5
-                spacing 20
+            button:
+                idle_background "blue_button_idle"
+                hover_background "blue_button_hover"
+                action no_action
+                xysize (215, 55)
 
-                button:
-                    idle_background "blue_button_idle"
-                    hover_background "blue_button_hover"
-                    action yes_action
-                    xysize (215, 55)
-
-                    text "YES" align (0.5, 0.5)
-
-                button:
-                    idle_background "blue_button_idle"
-                    hover_background "blue_button_hover"
-                    action no_action
-                    xysize (215, 55)
-
-                    text "NO" align (0.5, 0.5)
+                text "NO" align (0.5, 0.5)
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action

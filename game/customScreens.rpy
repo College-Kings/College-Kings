@@ -1,3 +1,25 @@
+screen alert_template(message):
+    zorder 200
+    modal True
+    style_prefix "alert"
+
+    frame:
+        align (0.5, 0.5)
+        minimum (758, 363)
+        background "confirm_background"
+
+        vbox:
+            align (0.5, 0.5)
+            spacing 45
+
+            text _(message.upper()) xalign 0.5 xsize 350
+
+            transclude
+
+
+style alert_text is olympus_mount_30
+
+
 screen changeLanguage():
     tag menu
 
@@ -110,14 +132,10 @@ screen kiwiiPopup():
     modal True
     zorder 200
 
-    use endfrTemplate:
-
-        text "You've just unlocked the social media app Kiwii! Open it now from the homescreen.":
-            style "endfree"
-            xalign 0.5
+    use alert_template("You've just unlocked the social media app Kiwii! Open it now from the homescreen."):
 
         textbutton "OK":
-            align (0.5, 1.0)
+            xalign 0.5
             action [Function(kiwii_firstTimeMessages), SetVariable("kiwii_firstTime", False), Hide("kiwiiPopup")]
 
 
