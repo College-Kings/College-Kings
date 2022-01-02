@@ -21,6 +21,21 @@ screen v14s47_car():
                 action Jump("v14s47_trunk")
 
     if len(v14s47_car_pics) >= 1:
+        hbox:
+            xalign 0.5
+            ypos 833
+            spacing 25
+
+            for item in items:
+                button:
+                    minimum (500, 100)
+                    idle_background "choice_button_idle"
+                    hover_background "choice_button_hover"
+                    action item.action
+
+                    text item.caption.upper():
+                        align (0.5, 0.5)
+
         button:
             align (0.5, 0.95)
             action Jump("v14s47_end")

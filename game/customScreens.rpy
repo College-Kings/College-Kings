@@ -55,61 +55,6 @@ screen warning_template(message, style="blue"):
 style warning_text is olympus_mount_30
 
 
-screen changeLanguage():
-    tag menu
-
-    text _("Select Language") align (0.5, 0.01) size 72
-    vpgrid:
-        cols 1
-        draggable True
-        mousewheel True
-        align (0.5, 0.9)
-        ysize 950
-        xfill True
-        style_prefix "radio"
-        spacing 10
-
-        textbutton "English" text_font "DejaVuSans.ttf" action Language(None) xalign 0.5 text_size 32
-        if renpy.loadable("tl/chineses/script.rpy"):
-            textbutton "Chineses" text_font "DejaVuSans.ttf" action Language("chineses") xalign 0.5 text_size 32
-        if renpy.loadable("tl/chineset/script.rpy"):
-            textbutton "Chineset" text_font "DejaVuSans.ttf" action Language("chineset") xalign 0.5 text_size 32
-        if renpy.loadable("tl/czech/script.rpy"):
-            textbutton "Czech" text_font "DejaVuSans.ttf" action Language("czech") xalign 0.5 text_size 32
-        if renpy.loadable("tl/francais/script.rpy"):
-            textbutton "Francais" text_font "DejaVuSans.ttf" action Language("francais") xalign 0.5 text_size 32
-        if renpy.loadable("tl/german/script.rpy"):
-            textbutton "German" text_font "DejaVuSans.ttf" action Language("german") xalign 0.5 text_size 32
-        if renpy.loadable("tl/greek/script.rpy"):
-            textbutton "Greek" text_font "DejaVuSans.ttf" action Language("greek") xalign 0.5 text_size 32
-        if renpy.loadable("tl/hindi/script.rpy"):
-            textbutton "Hindi" text_font "DejaVuSans.ttf" action Language("hindi") xalign 0.5 text_size 32
-        if renpy.loadable("tl/hungarian/script.rpy"):
-            textbutton "Hungarian" text_font "DejaVuSans.ttf" action Language("hungarian") xalign 0.5 text_size 32
-        if renpy.loadable("tl/italian/script.rpy"):
-            textbutton "Italian" text_font "DejaVuSans.ttf" action Language("italian") xalign 0.5 text_size 32
-        if renpy.loadable("tl/japanese/script.rpy"):
-            textbutton "Japanese" text_font "DejaVuSans.ttf" action Language("japanese") xalign 0.5 text_size 32
-        if renpy.loadable("tl/polish/script.rpy"):
-            textbutton "Polish" text_font "DejaVuSans.ttf" action Language("polish") xalign 0.5 text_size 32
-        if renpy.loadable("tl/portuguese/script.rpy"):
-            textbutton "Portuguese" text_font "DejaVuSans.ttf" action Language("portuguese") xalign 0.5 text_size 32
-        if renpy.loadable("tl/russian/script.rpy"):
-            textbutton "Russian" text_font "DejaVuSans.ttf" action Language("russian") xalign 0.5 text_size 32
-        if renpy.loadable("tl/spanish/script.rpy"):
-            textbutton "Spanish" text_font "DejaVuSans.ttf" action Language("spanish") xalign 0.5 text_size 32
-        if renpy.loadable("tl/thai/script.rpy"):
-            textbutton "Thai" text_font "DejaVuSans.ttf" action Language("thai") xalign 0.5 text_size 32
-        if renpy.loadable("tl/turkish/script.rpy"):
-            textbutton "Turkish" text_font "DejaVuSans.ttf" action Language("turkish") xalign 0.5 text_size 32
-        if renpy.loadable("tl/vietnamese/script.rpy"):
-            textbutton "Vietnamese" text_font "DejaVuSans.ttf" action Language("vietnamese") xalign 0.5 text_size 32
-
-    textbutton _("Return"):
-        align (0.99, 0.99)
-        action ShowMenu("preferences")
-
-
 screen real_life_mode():
     modal True
 
