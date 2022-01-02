@@ -1071,11 +1071,11 @@ label youfinish:
         "Walk away":
             $ add_point(KCT.BRO)
 
+    $ renpy.end_replay()
+
 label tf2: #for compatibility only
 label v1_tomWalkAway:
     $ firstfight = False
-
-    $ renpy.end_replay()
 
     if meetlauren:
         jump meet_lauren2
