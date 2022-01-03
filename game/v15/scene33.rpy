@@ -89,312 +89,282 @@ label v15s33:
     pause 0.75
 
     if aubrey.relationship.value >= Relationship.FWB.value:
-        scene v15s33_9
+        scene v15s33_7
         with dissolve
 
         au "Haha, shut up."
 
-        scene v15s33_10
+        scene v15s33_8
         with dissolve
 
         na "Why?! Don't you want everyone here to know you got your hands all over this hunk?"
 
-        scene v15s33_10a
+        scene v15s33_8a
         with dissolve
 
         u "Uh, thanks."
 
-        scene v15s33_9a # FPP. MC looking at Aubrey, Aubrey looking at Naomi, slightly annoyed, mouth open.
+        scene v15s33_7a # FPP. MC looking at Aubrey, Aubrey looking at Naomi, slightly annoyed, mouth open.
         with dissolve
 
         au "*Sighs*"
 
     else: 
-        scene v15s33_9 # FPP. In the Venue MC looking at Aubrey, Aubrey looking at Naomi, slight smile, mouth open.
+        scene v15s33_7 # FPP. In the Venue MC looking at Aubrey, Aubrey looking at Naomi, slight smile, mouth open.
         with dissolve
 
         au "Naomi, for the one-hundredth time..."
 
-        scene v15s33_10 # FPP. In the Venue MC looking at Naomi, Naomi looking at Aubrey, Naomi a little drunk, smirking, mouth open.
+        scene v15s33_8 # FPP. In the Venue MC looking at Naomi, Naomi looking at Aubrey, Naomi a little drunk, smirking, mouth open.
         with dissolve
 
         na "Yeah, yeah... \"We're not dating!\". Ha, you're so cute."
 
         na "More for me then, yeah?"
 
-        scene v15s33_10a # FPP. Mc looking at Naomi, Naomi looking at Mc, Naomi a little drunk, winking at MC, biting her lip.
         with dissolve
+        scene v15s33_8a # FPP. Mc looking at Naomi, Naomi looking at Mc, Naomi a little drunk, winking at MC, biting her lip.
 
         u "(*Gulp*)"
 
-    scene v15s33_10
+    scene v15s33_8
     with dissolve
 
     na "I'm only kidding, sis."
 
-    scene v15s33_11 # TPP. Show Naomi hugging and kissing Aubrey's cheek, Aubrey slight smile, mouth closed.
-    with dissolve
-
-    pause 0.75  
-
-    scene v15s33_12 # TPP. Show Naomi hugging and Kissing MC's cheek, MC slightly shocked, mouth closed.
-    with dissolve
-
-    pause 0.75 
-
-    scene v15s33_10b # FPP. MC looking at Naomi, Naomi looking at MC, Naomi a little drunk, Naomi smirking, mouth closed.
+    scene v15s33_8b # FPP. MC looking at Naomi, Naomi looking at MC, Naomi a little drunk, Naomi smirking, mouth closed.
     with dissolve
 
     u "How are you, Naomi?"
 
-    scene v15s33_10c # FPP. MC looking at Naomi, Naomi looking at Mc, Naomi a little drunk, Naomi smirking, mouth open.
+    scene v15s33_8c # FPP. MC looking at Naomi, Naomi looking at Mc, Naomi a little drunk, Naomi smirking, mouth open.
     with dissolve
 
     na "I'm a little drunk, hehe... You guys have some catching up to do!"
 
-    scene v15s33_9
+    scene v15s33_7
     with dissolve
 
     au "Oh, trust me, we'll get right on that. *Laughs*"
 
     au "Where's Mom? How does she look? Does she need-"
 
-    scene v15s33_10
+    scene v15s33_8
     with dissolve
 
     na "Aubrey! *Chuckles* Mom is fine, she looks fine, everything is fine..."
 
     na "And I must admit, you look gorgeous."
 
-    scene v15s33_9
+    scene v15s33_7
     with dissolve
 
     au "Oh, ha. Thanks. You do too."
 
-    scene v15s33_10
+    scene v15s33_8
     with dissolve
 
     na "Pfft, I know that already. Best dressed as always."
 
-    scene v15s33_9
+    scene v15s33_7
     with dissolve
 
     au "Ha."
 
-    scene v15s33_10d # FPP. MC looking at Naomi, Naomi looking at Aubrey, Naomi a little drunk, smirking, mouth closed.
+    scene v15s33_7d # FPP. MC looking at Naomi, Naomi looking at Aubrey, Naomi a little drunk, smirking, mouth closed.
     with dissolve
 
     u "(Wow, arrogant much? I mean, she's obviously hot but still...)"
 
-    scene v15s33_10c
+    scene v15s33_8c
     with dissolve
 
     na "You're looking pretty hot too, [name]."
 
-    scene v15s33_10b
+    scene v15s33_8b
     with dissolve
 
     u "Thanks... I didn't do much but, at least I'm not wearing a stripper costume."
 
-    scene v15s33_9b # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open.
+    scene v15s33_7b # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open.
     with dissolve
 
     au "*Laughs* True."
 
-    scene v15s33_10
+    scene v15s33_8
     with dissolve
 
     na "A stripper costume? Haha, what?"
 
-    scene v15s33_9
+    scene v15s33_7
     with dissolve
 
     au "Long story..."
 
-    scene v15s33_10c
+    scene v15s33_8c
     with dissolve
 
     na "Well, even a stripper costume is better than what I last saw you in."
 
-    scene v15s33_10b
+    scene v15s33_8b
     with dissolve
 
     u "Haha, wow. Thanks for the compliment?"
 
-    scene v15s33_9
+    scene v15s33_7
     with dissolve
 
     au "So, seriously... Where's Mom and Dad?"
 
-    scene v15s33_10
+    scene v15s33_8
     with dissolve
 
     na "Right over there. Worrying about the flowers or something."
 
-    scene v15s33_9
+    scene v15s33_7
     with dissolve
 
     au "Wait, worrying about the flowers? You said everything is fine!"
 
-    scene v15s33_10
+    scene v15s33_8
     with dissolve
 
     na "Everything is fine. *Scoffs* It's just flowers, Aubbie"
 
-    scene v15s33_9a
+    scene v15s33_7a
     with dissolve
 
     au "*Sighs*"
 
-    scene v15s33_13 # TPP. MC following behind, Show Aubrey walking over to her parent's, slightly annoyed, mouth closed, MC, slight smile, mouth closed.
+    scene v15s33_9 # TPP. MC following behind, Show Aubrey walking over to her parent's, slightly annoyed, mouth closed, MC, slight smile, mouth closed.
     with dissolve
 
     pause 0.75 
 
-    scene v15s33_14 # TPP. Close up of Naomi's hand grabbing MC's arm.
+    scene v15s33_10 # TPP. Close up of Naomi's hand grabbing MC's arm.
     with dissolve
 
     na "Oh, no, no..."
 
-    scene v15s33_15 # FPP. MC turned around to face Naomi, Naomi's back to the entrance, MC looking at Naomi, Naomi looking at MC, Naomi, a little drunk, smirking, mouth open.
+    scene v15s33_11 # FPP. MC turned around to face Naomi, Naomi's back to the entrance, MC looking at Naomi, Naomi looking at MC, Naomi, a little drunk, smirking, mouth open.
     with dissolve
 
     na "You're coming with me."
 
-    scene v15s33_15a # FPP. MC looking at Naomi, Naomi looking at MC, Naomi a little drunk, Naomi smirking, mouth closed.
+    scene v15s33_11a # FPP. MC looking at Naomi, Naomi looking at MC, Naomi a little drunk, Naomi smirking, mouth closed.
     with dissolve
 
     u "Um, okay... Do I have a choice?"
 
-    scene v15s33_15
+    scene v15s33_11
     with dissolve
 
     na "Nope!"
 
-    scene v15s33_16 # TPP. Show MC pulling MC over to a table with Alochol and glasses laid out.
+    scene v15s33_12 # FPP. MC sitting at the table, Naomi sitting on the other side, Naomi pouring shots into the first glass,MC looking at Naomi, Naomi looking at the first glass she is pouring into, Naomi smirking, mouth closed.
     with dissolve
 
     pause 0.75 
 
-    scene v15s33_17 # FPP. MC sitting at the table, Naomi sitting on the other side, Naomi pouring shots into the first glass,MC looking at Naomi, Naomi looking at the first glass she is pouring into, Naomi smirking, mouth closed.
-    with dissolve
-
-    pause 0.75 
-
-    scene v15s33_17a # FPP. MC looking at Naomi, Naomi looking at the third glass she is pouring into, the first two glasses are now filled with alcohol, Naomi smirking, mouth closed
-    with dissolve
-
-    pause 0.75 
-
-    scene v15s33_17b # FPP. MC looking at Naomi, Naomi looking at MC, the bottle she was pouring from now on the table, all the glasses filled, Naomi a little drunk, Naomi smirking, mouth closed.
-    with dissolve
-
-    pause 0.75 
-
-    scene v15s33_17c # FPP. MC looking at Naomi, Naomi leaning forward and looking at MC, Naomi handing MC one of the shots, Naomi a little drunk, smirking, mouth open.
+    scene v15s33_12a # FPP. MC looking at Naomi, Naomi leaning forward and looking at MC, Naomi handing MC one of the shots, Naomi a little drunk, smirking, mouth open.
     with dissolve
 
     na "You need a shot! Or two... *Giggles* Here."
 
     na "Cheers, baby!"
 
-    scene v15s33_17d # FPP. MC looking at Naomi, Naomi leaning forward and looking at MC, Naomi handing MC one of the shots, Naomi a little drunk, smirking, mouth closed.
+    scene v15s33_12b # FPP. MC looking at Naomi, Naomi leaning forward and looking at MC, Naomi handing MC one of the shots, Naomi a little drunk, smirking, mouth closed.
     with dissolve
 
     menu:
         "Take the shot":
             $ add_point(KCT.TROUBLEMAKER)
 
-            scene v15s33_18 # TPP. Show Naomi and MC clinking shot glasses, Naomi a little drunk, smirking looking at MC, MC looking at Naomi, slight smile, mouth closed.
+            scene v15s33_13 # TPP. Show Naomi and MC clinking shot glasses, Naomi a little drunk, smirking looking at MC, MC looking at Naomi, slight smile, mouth closed.
             with dissolve
 
             pause 0.75 
 
-            scene v15s33_19 # TPP. Close up of just MC's face, MC looking at Naomi, MC has a disgusted face, mouth open.
+            scene v15s33_12d # FPP. MC looking at Naomi, Naomi looking at MC, Naomi a little drunk, Naomi smirking, mouth open.
             with vpunch 
 
             u "Eurgh! What the..."
 
             u "What the fuck is that?"
 
-            scene v15s33_17e # FPP. MC looking at Naomi, Naomi looking at MC, the third and fourth glass empty now, Naomi a little drunk, smirking, mouth open.
+            scene v15s33_12c # FPP. MC looking at Naomi, Naomi looking at MC, the third and fourth glass empty now, Naomi a little drunk, smirking, mouth open.
             with dissolve
 
             na "Sambuca!"
 
-            scene v15s33_17f # FPP. MC looking at Naomi, Naomi looking at MC, Naomi a little drunk, Naomi smirking, mouth open.
+            scene v15s33_12d
             with dissolve
 
             u "Sambu- *Gags*"
 
-            scene v15s33_17e
+            scene v15s33_12c
             with dissolve
 
             na "*Laughs* Not a fan?"
 
-            scene v15s33_17f
+            scene v15s33_12d
             with dissolve
 
             u "Not at all. That's atrocious."
 
-            scene v15s33_17e
+            scene v15s33_12c
             with dissolve
 
             na "No way! I love this stuff!"
 
-            scene v15s33_17f
+            scene v15s33_12d
             with dissolve
 
             u "You're a psycho..."
 
-            scene v15s33_17g # FPP. MC looking at Naomi, Naomi looking at MC, Naomi laughing.
+            scene v15s33_12e # FPP. MC looking at Naomi, Naomi looking at MC, Naomi laughing.
             with dissolve
 
             pause 0.75
 
         "Pretend to take it":
             $ add_point(KCT.BOYFRIEND)
-            scene v15s33_18
+            scene v15s33_13
             with dissolve
 
             pause 0.75 
             
-            scene v15s33_20 # TPP. Close up of naomi's head back taking a shot from the third glass.
-            with dissolve
-
-            pause 0.75 
-
-            scene v15s33_21 # TPP. Close up of MC pouring his drink on the floor, only show MC's hand pouring drink on the floor to be reused.
-            with dissolve
+            scene v15s33_82 # TPP. Close up of just MC's hand pouring his drink on the floor at the alcohol table, only show MC's hand pouring drink on the floor to be reused.
+            with dissolve  
 
             pause 0.75
 
-            scene v15s33_17f
+            scene v15s33_12d
             with dissolve
 
             u "Mmm... Delicious."
 
-            scene v15s33_17e
+            scene v15s33_12c
             with dissolve
 
             na "Mmm, yes! Sambuca is just the best. You'll be as drunk as me in no time."
 
-            scene v15s33_17f
+            scene v15s33_12d
             with dissolve
 
             u "Ha, can't wait."
 
-    scene v15s33_17e
+    scene v15s33_12c
     with dissolve
 
     na "You know what's weird?"
 
-    scene v15s33_17f
+    scene v15s33_12d
     with dissolve
 
     u "Having this many weddings? *Laughs*"
 
-    scene v15s33_17e
+    scene v15s33_12c
     with dissolve
 
     na "Haha! Okay, besides that..."
@@ -406,128 +376,123 @@ label v15s33:
             $ add_point(KCT.TROUBLEMAKER)
             $ v15s33_flirt = True
 
-            scene v15s33_17f
+            scene v15s33_12d
             with dissolve
 
             u "Oh, really? Lucky me."
 
-            scene v15s33_17h # FPP. MC looking at Naomi, Naomi winking at MC, Naomi a little drunk, smirking, mouth open.
+            scene v15s33_12c
             with dissolve
 
             na "*Chuckles* We'll see how lucky you are later."
 
-            scene v15s33_17f
+            scene v15s33_12d
             with dissolve
 
             u "Ha, oh really?"
 
-            scene v15s33_17e
+            scene v15s33_12c
             with dissolve
 
             na "Hmm, we'll see."
 
         "Don't flirt":  
             $ add_point(KCT.BOYFRIEND)  
-            scene v15s33_17f
+            scene v15s33_12d
             with dissolve
 
             u "Oh... *Laughs* Okay, good to know."
 
-            scene v15s33_17e
+            scene v15s33_12c
             with dissolve
 
             na "Hehe, I'm glad."
 
     na "Ready for another one?"
 
-    scene v15s33_17f
+    scene v15s33_12d
     with dissolve
 
     u "I should probably find Aubrey and introduce myself to your parents."
 
-    scene v15s33_17e
+    scene v15s33_12c
     with dissolve
 
     na "Ugh, okay... Good luck with that!"
 
-    scene v15s33_17f
+    scene v15s33_12d
     with dissolve
 
     u "Ha, thanks."
 
-    scene v15s33_22 # TPP. Show MC walking over to where Aubrey is with her parents, MC slight smile, mouth closed.
-    with dissolve
+    scene v15s33_14 # TPP. MC peaking over the corner seeing Aubrey with her parents at the table with the flower arrangements, Aubrey looking at her dad, Her dad looking back at her, Her mom looking at her dad, all neutral face, mouth closed.
+    with fade (1,0,1)
 
     pause 0.75 
 
-    scene v15s33_23 # TPP. MC peaking over the corner seeing Aubrey with her parents at the table with the flower arrangements, Aubrey looking at her dad, Her dad looking back at her, Her mom looking at her dad, all neutral face, mouth closed.
-    with dissolve
-
-    pause 0.75 
-
-    scene v15s33_24 # TPP. Close up of Aubrey's dad, Aubrey's dad looking at Aubrey(Aubrey off camera), Aubrey's dad, neutral face, mouth open.
-    with dissolve
+    scene v15s33_15 # TPP. Close up of Aubrey's dad, Aubrey's dad looking at Aubrey(Aubrey off camera), Aubrey's dad, neutral face, mouth open.
+    with dissolve 
 
     audad "All I'm saying, Brey, is you can't put all of your eggs into just one basket."
 
-    scene v15s33_25 # TPP. Close up of just Aubrey, Aubrey looking at her dad(her dad off camera), Aubrey annoyed, mouth closed.
+    scene v15s33_16 # TPP. Close up of just Aubrey, Aubrey looking at her dad(her dad off camera), Aubrey sad, mouth closed.
     with dissolve
 
     pause 0.75 
 
-    scene v15s33_24 
-    with dissolve
+    scene v15s33_15 
+    with dissolve 
 
     audad "Naomi has done exceptionally well, thankfully, but a modeling career requires a lot of hard work."
 
     aumom "And a lot of talent."
 
-    scene v15s33_25a # TPP. Aubrey looking down at the ground, Aubrey slightly frowning, mouth closed.
+    scene v15s33_16
     with dissolve
 
     u "(The fuck?)"
 
-    scene v15s33_24
+    scene v15s33_15
     with dissolve
 
     audad "Don't you think you should just focus on your studies for right now, and plan on going for something more secure?"
 
-    scene v15s33_26 # TPP. Close up of just Aubrey's mom, Aubrey's mom looking at Aubrey(Aubrey off-camera), Aubrey's mom neutral face, mouth open.
+    scene v15s33_17 # TPP. Close up of just Aubrey's mom, Aubrey's mom looking at Aubrey(Aubrey off-camera), Aubrey's mom neutral face, mouth open.
     with dissolve
 
     aumom "Exactly. Something more in line with your skillset."
 
-    scene v15s33_25b # TPP. Aubrey looking at her Mom (her mom off camera), Aubrey annoyed face, mouth open.
+    scene v15s33_16
     with dissolve
 
     au "I can do modeling though. I'm good at modeling. Ha, they hired me on the spot when-"
 
-    scene v15s33_24
+    scene v15s33_15
     with dissolve
 
     audad "You're Naomi's sister, honey. Of course they'd offer you a position."
 
-    scene v15s33_26
+    scene v15s33_17
     with dissolve
 
     aumom "I don't think you realize how ruthless it can get. Your sister can tell you, she works around the clock to keep her career going."
 
-    scene v15s33_25c # TPP. Aubrey looking at the ground, annoyed, mouth open.
+    scene v15s33_16a # TPP. Aubrey looking at the ground, sad, mouth open.
     with dissolve
 
     au "*Sighs* I know, mom."
 
-    scene v15s33_27 # TPP. Behind shot of MC walking up to Aubrey with her mom and dad, all neutral face, mouth open.
+    scene v15s33_18 # TPP. Behind shot of MC walking up to Aubrey with her mom and dad, all neutral face, mouth open.
     with dissolve
 
     u "Hey, you. Are these your parents?"
 
-    scene v15s33_28 # FPP. MC looking at Aubrey only show Aubrey, Aubrey looking at MC, Slight frown, mouth open.
+    scene v15s33_19 # FPP. MC looking at Aubrey only show Aubrey, Aubrey looking at MC, Slight frown, mouth open.
     with dissolve
 
     au "Hey, yeah. So, you managed to get away from the superstar herself?"
 
-    scene v15s33_28a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight frown, mouth closed.
+    scene v15s33_19a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight frown, mouth closed.
     with dissolve
 
     u "Haha, yeah. Barely..."
