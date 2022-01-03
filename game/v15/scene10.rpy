@@ -619,8 +619,6 @@ label v15s10:
 
             li "Thanks."
 
-            pause 0.75
-
             scene v15s10_14 # -[CarTotal] pops up on screen based on the payout sums- # Hi Again Oscar! :D
             with dissolve
             
