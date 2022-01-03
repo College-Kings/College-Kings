@@ -222,6 +222,11 @@ label v15s39:
 
             se "But since it's mocktails instead, it might have been cheaper."
 
+            scene v15s39_7c
+            with dissolve
+
+        
+
     elif v15_lindsey_alcohol:
         scene v15s39_6c # FPP. same as v15s39_6 Grayson is looking at Autumn's location, still a slight snmile, mouth is still open
         with dissolve
@@ -239,8 +244,8 @@ label v15s39:
 
         gr "It's a really nice place though, so yeah. You're probably right."
 
-    scene v15s39_7c
-    with dissolve
+        scene v15s39_6f # FPP. same as v15s39_6d Grayson has no expression, still looking at Autumn's location, mouth is still open
+        with dissolve
 
     u "Exactly, it wasn't pocket change, that's for damn sure. But as long as we all have a great time, it'll be worth it."
 
@@ -352,19 +357,6 @@ label v15s39:
 
     li "I just want to ask, what has Chloe ever done for you?"
 
-    scene v15s39_12a # FPP. same as v15s39_12 Aubrey looks slightly defeated/sad, mouth is closed, looking at Mc
-    with dissolve
-
-    pause 0.75
-
-    scene v15s39_12a
-    with dissolve
-
-    u "(Oh... Shots fired! *Chuckles*)"
-
-    scene v15s39_8d
-    with dissolve
-
     li "Like, what has she ever actually done for you, herself?"
 
     if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -405,10 +397,10 @@ label v15s39:
 
             pause 0.75
 
-    scene v15s39_8d
-    with dissolve
+        scene v15s39_8d
+        with dissolve
 
-    li "It's just a question to prove a point, that's all."
+        li "It's just a question to prove a point, that's all."
 
     if v15_lindsey_inviteseb:
         scene v15s39_7e # FPP. same as v15s39_7a Sebastian has no expression, still looking at Lindsey, mouth is still open
@@ -518,11 +510,6 @@ label v15s39:
 
     li "I want to create an environment where we can rely on each other."
 
-    scene v15s39_12a
-    with dissolve
-
-    u "(Damn she's good)"
-
     scene v15s39_8f
     with dissolve
 
@@ -563,8 +550,6 @@ label v15s39:
     if v15_chloe_lindseysabotage:
         scene v15s39_8c
         with dissolve
-
-        pause 0.75
 
         if v15_lindsey_alcohol:
             scene v15s39_8c
@@ -1217,6 +1202,8 @@ label v15s39:
 
     scene v15s39_23 # TPP. MC exits the club. Lindsey and Aubrey are ahead of him, getting into the limo
     with dissolve
+
+    $ set_presidency_percent(v14_lindsey_popularity + 5)
 
     u "(So, that's what it's like to be a VIP, huh? I could get used to that...)"
 

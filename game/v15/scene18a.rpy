@@ -666,7 +666,25 @@ label v15s18a_AutumPenelope:
     scene v15s18apen_6a
     with dissolve
 
-    u "Oh shit, okay... Your secret is safe with me. *Chuckles*"
+    menu:
+
+        "Good thing I'm a werewolf":
+
+            $ add_point(KCT.TROUBLEMAKER)
+
+            u "Haha, good thing I'm a werewolf."
+
+            scene v15s18apen_6d # FPP. MC looking at Penelope, Penelope looking at MC, Penelope's finger not at her lips anymore, Penelope winking at MC, slight smile, mouth open.
+            with dissolve
+
+            pe "I don't think you've seen enough vampire movies. That's not a good thing."
+            
+
+        "Your secret is safe":
+
+            $ add_point(KCT.BOYFRIEND)
+
+            u "Oh shit, okay... Your secret is safe with me. *Chuckles*"
 
     scene v15s18apen_7a
     with dissolve
@@ -1525,7 +1543,7 @@ label v15s18a_Riley:
     scene v15s18ariley_2f
     with dissolve
 
-    u "Yeah, ha. Thanks, that change will definitely help me get through college."
+    u "Yeah, ha. Thanks, that will definitely help me get through college."
 
     scene v15s18ariley_2e
     with dissolve
@@ -2179,7 +2197,7 @@ label v15s18a_ChrisAmber:
                     scene v15s18aamber_3c
                     with dissolve
 
-                    am "You'll find out. Come on."
+                    am "You'll find out. Come on, let's go to the balcony."
 
                     scene v15s18aamber_6 # TPP. MC following Amber up the stairs of the Deer's house
                     with dissolve

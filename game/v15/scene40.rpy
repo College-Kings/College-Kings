@@ -8,7 +8,7 @@ label v15s40:
     scene v15s40_1 # FPP. Show just Autumn sitting beside Mc in the back of the Limo, Autumn has a slight smile, mouth open looking towards the front og the Limo at the other people, Don't show any other characters
     with dissolve
 
-    aut "Haha, look at them all."
+    aut "Haha, look at them. How did all three of them pass out?"
 
     scene v15s40_1a # FPP. same as v15s40_1 Show Autumn looking directly at Mc, still a slight smile, mouth is still closed.
     with dissolve
@@ -118,6 +118,7 @@ label v15s40:
             aut "Yeah, that's exactly it! It's a good skill to have too."
 
     else:
+
         scene v15s40_1b
         with dissolve
 
@@ -264,7 +265,12 @@ label v15s40:
                     scene v15s40_2c # TPP. same as v15s40_2b Mc pulls Autumn closer for a passionate kiss his hand gently carressing the back of her head pulling her closer, Autumns hand is carressing Mc's throat
                     with dissolve
 
-                    pause 0.75
+                    pause
+
+                    scene v15s40_2a # TPP. same as v15s40_2a Autumn pulls back and is now blushing head facing slightly down looking up at Mc slight smile mouth is closed, Mc has a hand on Autumns cheek looking at Autumn, slight smile, mouth is closed.
+                    with dissolve
+
+                    pause 1.25
 
                     scene v15s40_1b
                     with dissolve

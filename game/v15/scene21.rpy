@@ -1278,11 +1278,6 @@ label v15s21:
 
         ro "Ha..."
 
-        scene v15s21_13e # FPP. same as v15s21_13 Ms. Rose smiles at Chloe, she's intrigued, mouth is closed
-        with dissolve
-
-        pause 0.75
-
         scene v15s21_13
         with dissolve
 
@@ -1355,7 +1350,7 @@ label v15s21:
 
                 u "Mr. Lee doesn't know what college is like for girls, or how it can be improved... Neither do I."
 
-                u "Who better to ask than one of our leading female roles?"
+                u "Who better to ask than one of our female rolemodels?"
 
                 scene v15s21_7
                 with dissolve
