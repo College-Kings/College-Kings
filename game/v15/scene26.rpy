@@ -1043,7 +1043,7 @@ label v15s26:
             scene v15s26_26c # FPP Same angle as 26, Riley looking at MC, slight smile, mouth open
             with dissolve
 
-            ri "Yeah, yeah. Bye, stinky."
+            ri "Yeah, yeah. Bye."
 
             scene v15s26_26a
             with dissolve

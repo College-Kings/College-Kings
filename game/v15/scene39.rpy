@@ -782,6 +782,8 @@ label v15s39:
                         scene v15s39_8b
                         with dissolve
 
+                        $ set_presidency_percent(v14_lindsey_popularity - 3)
+
                         li "*Drunk* She gets everything handed to her, even her fucking boobs!"
 
                         scene v15s39_12g # FPP. same as v15s39_12f Aubrey is now looking at Lindsey, mouth is open, still with a concerned expression
@@ -806,6 +808,8 @@ label v15s39:
 
                         scene v15s39_8b
                         with dissolve
+
+                        $ set_presidency_percent(v14_lindsey_popularity - 3)
 
                         li "*Drunk* I mean no wonder she's such a bitch all the time..."
 
@@ -849,6 +853,8 @@ label v15s39:
 
                             scene v15s39_8o # FPP. same as v15s39_8n Lindsey is now looking at Aubrey, mouth is open, is slightly sad/concenred, still drunk appearance
                             with dissolve
+
+                            $ set_presidency_percent(v14_lindsey_popularity + 3)
 
                             li "*Drunk* Oh. Oh, yeah, I'm so sorry. That must have sounded so bitchy. Sorry, everyone."
 
@@ -1050,13 +1056,15 @@ label v15s39:
 
                     u "(Sorry Aubrey... I'm trying to start a storm here.)"
 
-                    if kct == "confident":
+                    if kct == "popular":
                         call screen kct_popup
 
                         scene v15s39_8c
                         with dissolve
 
                         li "What do you want me to say? That she gets everything handed to her?"
+
+                        $ set_presidency_percent(v14_lindsey_popularity - 3)
 
                         li "Or that the only reason she wants to be President is because she can't afford tuition?"
 

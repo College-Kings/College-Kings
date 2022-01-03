@@ -2589,6 +2589,8 @@ label v15s35:
                         li "*Drunk* Yes! That sounds perfect."
 
                     label v15bring_up_chloe:
+
+                        
                         scene v15s35_12k
                         with dissolve
 
@@ -2627,6 +2629,8 @@ label v15s35:
                         scene v15s35_12n
                         with dissolve
 
+                        $ set_presidency_percent(v14_lindsey_popularity - 3)
+
                         li "*Drunk* Her plastic boobs?"
 
                         scene v15s35_14f
@@ -2636,6 +2640,8 @@ label v15s35:
 
                         scene v15s35_12n
                         with dissolve
+
+                        $ set_presidency_percent(v14_lindsey_popularity - 3)
 
                         li "*Drunk* Or her plastic nose?"
 
@@ -2684,6 +2690,8 @@ label v15s35:
 
                             scene v15s35_12p # FPP. same as v15s35_12o Lindsey has a worried/concerned expression, mouth is open, still looking at Mc, her glass is still Empty
                             with dissolve
+
+                            $ set_presidency_percent(v14_lindsey_popularity + 3)
 
                             li "*Drunk* Whoops! I probably just sounded like such a bitch. I'm sorry..."
 
@@ -2860,10 +2868,12 @@ label v15s35:
 
                     pause 0.75
 
-                    if kct == "confident":
+                    if kct == "popular":
                         call screen kct_popup
                         scene v15s35_12b
                         with dissolve
+
+                        $ set_presidency_percent(v14_lindsey_popularity - 3)
 
                         li "What do you want me to say? That her boobs are obviously fake? Everyone knows that I think."
 

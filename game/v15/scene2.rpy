@@ -68,7 +68,7 @@ label v15s2:
 
         u "But we talked about how she can get help to quit."
 
-        u "I-I'm trying to help her, Cameron. I actually care about her, okay?!"
+        u "I'm trying to help her, Cameron. I actually care about her, okay?!"
 
         scene v15s2_3c # TPP. Same as v15s2_3, Cameron serious face, mouth open.
         with dissolve

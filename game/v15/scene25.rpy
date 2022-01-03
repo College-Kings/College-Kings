@@ -253,6 +253,8 @@ label v15s25:
                     scene v15s25_7
                     with dissolve
 
+                    $ set_presidency_percent(v14_lindsey_popularity - 3)
+
                     admin "And I'm sure she will, but there's a legal drinking age. I'm sorry, there's nothing I can do."
 
                 "Her mom passed away recently":
@@ -295,6 +297,8 @@ label v15s25:
                     admin "Okay..."
 
                     admin "Listen, I'm not supposed to do this, but..."
+
+                    $ set_presidency_percent(v14_lindsey_popularity + 3)
 
                     admin "I'll just leave this little tick box unchecked... So that you guys get some alcohol, and nobody checks your IDs, okay?"
 
@@ -366,6 +370,8 @@ label v15s25:
 
             scene v15s25_7
             with dissolve
+
+            $ set_presidency_percent(v14_lindsey_popularity - 3)
 
             admin "False claims and not fact-checking can lead to dangerous mistakes."
 

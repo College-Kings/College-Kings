@@ -149,7 +149,7 @@ define character.rub = Character("Rubee", who_color="#8b0000", who_outlines=[ (2
 define character.trainer = Character("Trainer", who_color="#147efb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.lady = Character("Lady", who_color="#ff8afb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.gentleman = Character("Gentleman", who_color="#147efb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.elm = Character("Elijah's mother", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.elm = Character("Elijah's Mother", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.bird = Character("Bird", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 
 # 15.0
@@ -163,7 +163,7 @@ define character.mactor = Character("Male Actor", who_color="#fecb2e", who_outli
 define character.factor = Character("Female Actor", who_color="#a815f2", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.barworker = Character("Barworker", who_color="#db6f1c", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.admin = Character("Booking Admin", who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.aumom = Character("aumom")
-define character.audad = Character("audad")
-define character.rick = Character("rick")
-define character.wedoff = Character("wedoff")
+define character.aumom = Character("Aubrey's Mom", who_color="#a815f2", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.audad = Character("Aubrey's Dad", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.rick = Character("Uncle Rick", who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.wedoff = Character("Wedding Officiant", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])

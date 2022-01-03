@@ -1267,6 +1267,8 @@ label v15s22:
         scene v15s22_6h
         with dissolve
 
+        $ set_presidency_percent(v14_lindsey_popularity - 3)
+
         de "I'm happy to proceed with reducing tuition fees for the Chicks. We can use your sorority as a case study and see how it goes."
 
         scene v15s22_7j
