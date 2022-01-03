@@ -466,7 +466,7 @@ label v15s22:
                     with dissolve
 
                     $ v15s22_meeting_points -= 1
-                    show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")                
+                    show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
 
                     de "I can assure you, nobody finds you funny."
 

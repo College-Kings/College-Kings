@@ -4,7 +4,7 @@
 # Time: Evening
 
 label v15s48:
-    scene v15s48_1 # TPP. Show the cab showing up on a dirt road near the cabin, the cabin shown in the distance.  
+    scene v15s48_1 # TPP. Show the cab showing up on a dirt road near the cabin, the cabin shown in the distance.
     with fade
 
     pause 0.75

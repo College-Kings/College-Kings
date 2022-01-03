@@ -64,7 +64,7 @@ label v15s29:
                 call screen phone
             if emily.messenger.replies:
                 u "(I should check out what Emily wants.)"
-                jump v15s29_PhoneContinue        
+                jump v15s29_PhoneContinue
 
         scene v15s29_4
         with dissolve

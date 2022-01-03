@@ -211,7 +211,7 @@ label v15s35:
         scene v15s35_7 # FPP. Mc looks to his left and just see's Lindsey, Lindsey has a slight smile, mouth is open, looking at Mc
         with dissolve
 
-        li "[name], help me out here. I have two games, but I can't decide which one we should play.  What do you think?"
+        li "[name], help me out here. I have two games, but I can't decide which one we should play. What do you think?"
 
         scene v15s35_7a # FPP. same as v15s35_7 Lindsey's mouth is closed, still looking at Mc, still a slight smile
         with dissolve
@@ -839,7 +839,7 @@ label v15s35:
 
             u "Frog power!"
 
-            scene v15s35_9l # FPP. same asv15s35_9j	Aubrey is sticking her tongue out, still winking, still full smile, mouth is still open
+            scene v15s35_9l # FPP. same asv15s35_9j Aubrey is sticking her tongue out, still winking, still full smile, mouth is still open
             with dissolve
 
             au "Human with frog brain power!"
@@ -2653,7 +2653,7 @@ label v15s35:
                         with dissolve
 
                         menu (fail_label="v15stop_lindsey"):
-                            "Stop Lindsey":                          
+                            "Stop Lindsey":
                                 $ add_point(KCT.BRO)
                                 
                                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:

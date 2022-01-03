@@ -233,7 +233,7 @@ screen v15s18a_upstairsroom():
         if not "ryan" in freeroam13:
             action Jump("v15s18a_Ryan")
         else:
-            action Call("freeRoamSpokenToo", backgroundImg="v15s18a_upstairsroom_1", returnScreen="v15s18a_upstairsroom")        
+            action Call("freeRoamSpokenToo", backgroundImg="v15s18a_upstairsroom_1", returnScreen="v15s18a_upstairsroom")
         pos (247, 13)
 
     # Door 2

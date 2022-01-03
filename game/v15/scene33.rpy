@@ -41,7 +41,7 @@ label v15s33:
 
     menu:
         "Be brutally honest":
-            $ add_point(KCT.TROUBLEMAKER)  
+            $ add_point(KCT.TROUBLEMAKER)
             u "To be honest, not really. I'm an only child."
 
             scene v15s33_3a
@@ -56,8 +56,8 @@ label v15s33:
 
             u "Who knows? I'm very mysterious, haha."
             
-        "Reassure her":    
-            $ add_point(KCT.BOYFRIEND)  
+        "Reassure her":
+            $ add_point(KCT.BOYFRIEND)
             u "Try not to worry. You can talk to me about it whenever you want."
 
             u "If not, I have a bunch of awful jokes that are guaranteed to cheer you up. *Laughs*"
@@ -395,8 +395,8 @@ label v15s33:
 
             na "Hmm, we'll see."
 
-        "Don't flirt":  
-            $ add_point(KCT.BOYFRIEND)  
+        "Don't flirt":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s33_12d
             with dissolve
 
@@ -875,7 +875,7 @@ label v15s33:
 
             u "Haha..."
 
-    scene v15s33_32 # TPP. Show Aubrey's Uncle picking up a cracker with cheese on it.          
+    scene v15s33_32 # TPP. Show Aubrey's Uncle picking up a cracker with cheese on it.
     with dissolve
 
     rick "Here, try this and tell me what you think."
