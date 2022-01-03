@@ -14,34 +14,30 @@ label v15s33:
 
     pause 0.75
 
-    scene v15s33_3 # TPP. Front shot of MC and Aubrey walking towards the venue, MC slight smile, mouth closed, Aubrey concerned look, mouth closed.
-    with dissolve
 
-    pause 0.75  
-
-    scene v15s33_4 # FPP. MC and Aubrey stopped on their trail to the Venue, facing each other, MC looking at Aubrey, Aubrey looking at MC, Aubrey concerned, mouth closed.
-    with dissolve
+    scene v15s33_3 # FPP. MC and Aubrey stopped on their trail to the Venue, facing each other, MC looking at Aubrey, Aubrey looking at MC, Aubrey concerned, mouth closed.
+    with dissolve 
 
     u "Are you okay?"
 
-    scene v15s33_4a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey concerned, mouth open.
+    scene v15s33_3a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey concerned, mouth open.
     with dissolve
 
     au "Yeah..."
 
-    scene v15s33_4
+    scene v15s33_3
     with dissolve
 
     u "You don't look too sure."
 
-    scene v15s33_4a
+    scene v15s33_3a
     with dissolve
 
     au "I'm just mentally preparing myself for all the usual favoritism stuff, ha."
 
     au "Big occasions with the family can be hard for me sometimes. Know what I mean?"
 
-    scene v15s33_4
+    scene v15s33_3
     with dissolve
 
     menu:
@@ -49,14 +45,14 @@ label v15s33:
             $ add_point(KCT.TROUBLEMAKER)  
             u "To be honest, not really. I'm an only child."
 
-            scene v15s33_4a
+            scene v15s33_3a
             with dissolve
 
             au "Oh, really? How did I not know that?"
 
             au "I wonder what else you're hiding from me, haha."
 
-            scene v15s33_4
+            scene v15s33_3
             with dissolve
 
             u "Who knows? I'm very mysterious, haha."
@@ -67,32 +63,27 @@ label v15s33:
 
             u "If not, I have a bunch of awful jokes that are guaranteed to cheer you up. *Laughs*"
 
-            scene v15s33_4b # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open.
+            scene v15s33_3b # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open.
             with dissolve
 
             au "Thanks, [name]. That's good to know."
 
-    scene v15s33_4
+    scene v15s33_3
     with dissolve
 
     u "Come on, let's go in."
 
-    scene v15s33_5 # TPP. Show Mc and Aubrey entering the Venue, both slight smile, mouth closed.
     with fade 
+    scene v15s33_4 # TPP. Show Mc and Aubrey entering the Venue, both slight smile, mouth closed.
 
     pause 0.75 
 
-    scene v15s33_6 # FPP. View from MC of the entering the Venue, Tables for the people there to sit at, A large rectangular table somewhere with the food on it, and show some of the wedding guest.
-    with dissolve
-
-    pause 0.75  
-
-    scene v15s33_7 # FPP. MC looking to his left and seeing Naomi, Naomi looks a little drunk, smirking, mouth open.
+    scene v15s33_5 # FPP. MC looking to his left after entering the venue seeing Naomi, Naomi looks a little drunk, smirking, mouth open.
     with vpunch
 
     na "Hey, I recognize you two! You're that cute couple from Paris, right? *Giggles*"
 
-    scene v15s33_8 # TPP. Show Naomi standing infront of MC and Aubrey, Naomi a little drunk, smirking, mouth closed.
+    scene v15s33_6 # TPP. Show Naomi standing infront of MC and Aubrey, Naomi a little drunk, smirking, mouth closed.
     with dissolve
 
     pause 0.75
