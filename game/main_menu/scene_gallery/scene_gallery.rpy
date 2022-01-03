@@ -5,7 +5,6 @@ init python:
     scene_gallery_items = []
 
     class SceneGallery:
-
         def __init__(self, title, image, label, scope=None):
             self.title = title
             self.image = image
