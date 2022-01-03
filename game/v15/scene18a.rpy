@@ -1537,8 +1537,7 @@ label v15s18a_Riley:
 
     ri "Only if you want to... That was a big tip."
 
-    #scene v15s18ariley_2i # FPP. MC looking at Riley, Riley looking at MC, Riley smirking, mouth closed.
-    scene v15s18ariley_2f
+    scene v15s18ariley_2i # FPP. MC looking at Riley, Riley looking at MC, Riley smirking, mouth closed.
     with dissolve
 
     u "Yeah, ha. Thanks, that will definitely help me get through college."
@@ -1574,8 +1573,7 @@ label v15s18a_Riley:
             ri "You've got some sexy moves there, [name]."
 
         "Don't dance":
-            #scene v15s18ariley_2i
-            scene v15s18ariley_2f
+            scene v15s18ariley_2i
             with dissolve
 
             u "I would dance for you, but I actually pulled a muscle in my groin, so."
@@ -1585,8 +1583,7 @@ label v15s18a_Riley:
 
             ri "Oh. Doing what?"
 
-            #scene v15s18ariley_2i
-            scene v15s18ariley_2f
+            scene v15s18ariley_2i
             with dissolve
 
             u "Well, putting on this costume was like playing a game of twister."
@@ -1643,8 +1640,7 @@ label v15s18a_Riley:
 
     menu:
         "No, it's fine":
-            #scene v15s18ariley_2i
-            scene v15s18ariley_2f
+            scene v15s18ariley_2i
             with dissolve
 
             u "No, it's okay. I mean thanks, but I'm not really interested in playing Imre's games, haha."
@@ -1654,8 +1650,7 @@ label v15s18a_Riley:
 
             ri "Oh, yeah. That's probably a wise decision."
 
-            #scene v15s18ariley_2i
-            scene v15s18ariley_2f
+            scene v15s18ariley_2i
             with dissolve
 
             u "I guess if you want to play though, Imre would definitely be up for it."
@@ -1665,8 +1660,7 @@ label v15s18a_Riley:
 
             ri "Eww! I'm not riding that cowboy tonight! *Laughs*"
 
-            #scene v15s18ariley_2i
-            scene v15s18ariley_2f
+            scene v15s18ariley_2i
             with dissolve
 
             u "Haha, another wise decision."
@@ -1679,8 +1673,7 @@ label v15s18a_Riley:
             ri "Okay, sure thing."
 
         "Yeah, I do":
-            #scene v15s18ariley_2i
-            scene v15s18ariley_2f
+            scene v15s18ariley_2i
             with dissolve
 
             u "I- Yeah. I do need help, haha. Are you interested?"
@@ -1693,8 +1686,7 @@ label v15s18a_Riley:
             if "v14_threesome" in sceneList:
                 ri "I've been craving you since Amsterdam..."
 
-                #scene v15s18ariley_2i
-                scene v15s18ariley_2f
+                scene v15s18ariley_2i
                 with dissolve
 
                 u "Hmm... Alright, then."
@@ -1714,8 +1706,7 @@ label v15s18a_Riley:
 
             pause 0.75
 
-            #scene v15s18ariley_2i
-            scene v15s18ariley_2f
+            scene v15s18ariley_2i
             with dissolve
         
             u "Haha, what is it?"
@@ -1725,8 +1716,7 @@ label v15s18a_Riley:
 
             ri "Looks like I'm giving you a hand job."
 
-            #scene v15s18ariley_2i
-            scene v15s18ariley_2f
+            scene v15s18ariley_2i
             with dissolve
 
             u "Are you sure you're okay with doing this?"
