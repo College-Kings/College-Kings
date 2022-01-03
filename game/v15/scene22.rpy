@@ -1392,6 +1392,8 @@ label v15s22:
             with dissolve
 
             pause 0.75
+        
+        jump v15s22_afterchloe
 
     label v15dean_unsuccessful:
         scene v15s22_5d # TPP. same as v15s22_5c The Dean is walking away from Mc and Chloe not shaking Chloe's hand no expression mouth is closed, Mc and Chloe are both still standing, Chloe has a sad expressions looking at Mc mouth is closed, Mc has no expression looking at Chloe mouth is closed
@@ -1487,6 +1489,8 @@ label v15s22:
                 with dissolve
 
                 pause 0.75
+
+    label v15s22_afterchloe:
 
     if v15_lindsey_gamenight: # -if helping Lindsey with Games night
         $ lindsey.messenger.newMessage("Hey, can you come meet me now to buy the alcohol for our game night? I have a plan! I'll send the details of which store to come to.", force_send=True)
