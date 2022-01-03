@@ -479,7 +479,11 @@ label v15s9:
             $ lindsey.messenger.addReply("Can we change the price and list it again?", func=None)
             $ lindsey.messenger.newMessage("I thought about it, but it costs way too much. Let's just move on.")
             $ lindsey.messenger.addReply("Fuck, okay. What's next?", func=None)
-            $ lindsey.messenger.newMessage("Meet me at the janitor's closet and you'll find out ;)")
+            $ lindsey.messenger.newMessage("Are you on campus right now? We need to plan the next phase of the campaign.", force_send=True)
+            $ lindsey.messenger.addReply("Yeah, I am. What's the plan?", func=None)
+            $ lindsey.messenger.newMessage("Let's go to back to the janitor's closet and you'll find out ;)")
+            $ lindsey.messenger.newMessage("Meet me at the end of the main hallway?")
+            $ lindsey.messenger.addReply("Sure thing, be with you in a bit.", func=None)
 
             if lindsey.relationship.value >= Relationship.FWB.value:
                 $ lindsey.messenger.addReply("Be there soon ;)", func=None)
@@ -510,6 +514,21 @@ label v15s9:
         with dissolve
 
         pause 0.75
+
+        play sound "sounds/vibrate.mp3"
+
+        $ lindsey.messenger.newMessage("Hey! Are you on campus right now? We need to plan the next phase of the campaign.", force_send=True)
+        $ lindsey.messenger.addReply("Yeah, I am. What's next?", func=None)
+        $ lindsey.messenger.newMessage("Let's go to back to the janitor's closet and you'll find out ;)")
+        $ lindsey.messenger.newMessage("Meet me at the end of the main hallway?")
+        $ lindsey.messenger.addReply("Sure thing, be with you in a bit.", func=None)
+
+        label v15s9_PhoneContinueLin:
+            if lindsey.messenger.replies:
+                call screen phone
+            if lindsey.messenger.replies:
+                u "(I should reply to Lindsey.)"
+                jump v15s9_PhoneContinueLin
 
         jump v15s12        
 

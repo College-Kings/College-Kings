@@ -413,6 +413,11 @@ label v15s12:
             u "Why thank you, madam..."
 
     else: 
+        scene v15s12_1 # TPP. MC and Lindsey walking down the school hallway.
+        with dissolve
+        
+        pause 0.75
+    
         # -MC and Lindsey arrive at and enter the janitor's closet, closing the door behind them
         scene v15s12_7
         with fade
