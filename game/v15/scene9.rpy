@@ -415,7 +415,7 @@ label v15s9:
     python:
         v15s10_buyer_max_amount = 425
 
-        if v14_lindsey_sell:
+        if v14_pics_with_linds:
             v15s10_buyer_max_amount += 200
 
         v15s10_buyer_max_amount += (len(v14s47_car_pics) - 1) * 25
