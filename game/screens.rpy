@@ -388,15 +388,15 @@ screen main_menu():
 
     # SETTINGS
     imagebutton:
-        idle image_path + "settings_idle.webp"
-        hover Transform(image_path + "settings_hover.webp", pos=(-35, -25))
+        idle "settings_idle"
+        hover "settings_hover"
         action ShowMenu("preferences")
         pos (1439, 967)
 
     # QUIT
     imagebutton:
-        idle image_path + "quit_idle.webp"
-        hover Transform(image_path + "quit_hover.webp", pos=(-32, -27))
+        idle "quit_idle"
+        hover "quit_hover"
         action Quit()
         pos (1662, 971)
 
@@ -696,12 +696,14 @@ screen file_slots(title):
         spacing 50
 
         imagebutton:
-            idle image_path + "settings_idle.png"
+            idle "settings_idle"
+            hover "settings_hover"
             action ShowMenu("preferences")
             yalign 0.5
 
         imagebutton:
-            idle image_path + "quit_idle.png"
+            idle "quit_idle"
+            hover "quit_hover"
             action Quit(confirm=not main_menu)
             yalign 0.5
 
