@@ -32,7 +32,7 @@ label v14s49:
             if lindsey.messenger.replies:
                 call screen phone
             if lindsey.messenger.replies:
-                "(I should reply to Lindsey.)"
+                u "(I should reply to Lindsey.)"
                 jump v14s49Lindsey_PhoneContinue
 
     elif v14_date_distraction: #Placeholder for date ditch distraction
@@ -82,7 +82,7 @@ label v14s49:
             if chloe.messenger.replies:
                 call screen phone
             if chloe.messenger.replies:
-                "(I should reply to Chloe.)"
+                u "(I should reply to Chloe.)"
                 jump v14s49Chloe_PhoneContinue
 
         scene v14s49_3a

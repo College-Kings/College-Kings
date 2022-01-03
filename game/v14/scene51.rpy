@@ -79,7 +79,7 @@ label v14s51_text:
             if chloe.messenger.replies:
                 call screen phone
             if chloe.messenger.replies:
-                "(I should reply to Chloe.)"
+                u "(I should reply to Chloe.)"
                 jump v14s51_PhoneContinue
 
         scene v14s51_3
@@ -618,7 +618,7 @@ label v14s51_continue:
         if lindsey.messenger.replies:
             call screen phone
         if lindsey.messenger.replies:
-            "(I should reply to Lindsey.)"
+            u "(I should reply to Lindsey.)"
             jump v14s51Lindsey_PhoneContinue
 
     if v14_date_distraction:
@@ -633,7 +633,7 @@ label v14s51_continue:
             if chloe.messenger.replies:
                 call screen phone
             if chloe.messenger.replies:
-                "(I should reply to Chloe.)"
+                u "(I should reply to Chloe.)"
                 jump v14s51Chloe_PhoneContinue
 
     scene v14s51_39 # FPP. Show Lindsey walking up to MC, slight smile, mouth closed.
