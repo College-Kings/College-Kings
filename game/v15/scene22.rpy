@@ -1510,6 +1510,21 @@ label v15s22:
         else: # -if AubreyFriend
             $ aubrey.messenger.addReply("Haha, okay see you there.", func=None)
 
+    label v15s22_PhoneContinueLin:
+        if lindsey.messenger.replies:
+            call screen phone
+        if lindsey.messenger.replies:
+            u "(I should reply to Lindsey.)"
+            jump v15s22_PhoneContinueLin
+
+    label v15s22_PhoneContinueAub:
+        if aubrey.messenger.replies:
+            call screen phone
+        if aubrey.messenger.replies:
+            u "(I should reply to Aubrey.)"
+            jump v15s22_PhoneContinueAub
+
+
     scene v15s22_8a # FPP. same as v15s22_8 The phone is now just has a blank black screen
     with dissolve
 
