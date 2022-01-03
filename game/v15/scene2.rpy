@@ -347,7 +347,7 @@ label v15s2:
             call screen phone
         if autumn.messenger.replies:
             u "(I should reply to Autumn.)"
-            jump v15s2_PhoneContinueAt
+            jump v15s2_PhoneContinueAut
 
     u "(Almost forgot about that... It'll be interesting to spend some one-on-one time with Autumn.)"
 
