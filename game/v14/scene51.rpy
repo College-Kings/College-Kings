@@ -17,7 +17,6 @@ init python:
         chloe.messenger.newMessage(_("I'll give you 10 more minutes. If you're still not here by then, I'm going home."))
 
 label v14s51:
-
     play music "music/v12/Track Scene 23_1.mp3" fadein 2
     scene v14s51_1 # TPP. Show MC walking into Chloe's room and closing the door behind him, slight smile, mouth closed
     with dissolve

@@ -1252,4 +1252,20 @@ label v15s39:
 
     pause 0.75
 
+    $ v15s39_kiwiiPost1= KiwiiPost(lindsey, "v15s39Kiwii1", "Having the most luxurious night! #VIPs", numberLikes=931)
+    $ v15s39_kiwiiPost1.newComment(imre, "The fuck? Where's my invite?", numberLikes=renpy.random.randint(360, 860))
+    $ v15s39_kiwiiPost1.newComment(lauren, "That looks so fun... Where are you guys?!", numberLikes=renpy.random.randint(360, 860))
+
+    if v15_lindsey_inviteseb:
+        $ v15s39_kiwiiPost1.newComment(sebastian, "No idea, but a really sick nightclub, haha! Lindsey planned this amazing night, thank you Lindsey!", numberLikes=renpy.random.randint(360, 860))
+    else:
+        $ v15s39_kiwiiPost1.newComment(grayson, "Wouldn't you like to know? Haha! Thanks for the night out, Lindsey.", numberLikes=renpy.random.randint(360, 860))
+
+    $ v15s39_kiwiiPost1.newComment(lindsey, "You're welcome guys! I wish we could've brought more people... Next time everyone goes.", numberLikes=renpy.random.randint(360, 860))
+    $ v15s39_kiwiiPost1.addReply("Next time? I need a nap... Lol.", numberLikes=renpy.random.randint(360, 860))
+    $ v15s39_kiwiiPost1.addReply("Let me know when, I'm down!", numberLikes=renpy.random.randint(360, 860))
+
+    if False: # for Lint
+        scene v15s39Kiwii1 # Selfie with Autumn and MC at the club at VIP night
+
     jump v15s40
