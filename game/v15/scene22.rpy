@@ -74,7 +74,7 @@ label v15s22:
 
                     cl "*Sighs* Yeah, I guess so."
 
-        elif v15seduce_ms_rose or v15threaten_ms_rose:
+        elif v15_seduce_ms_rose or v15_threaten_ms_rose:
             scene v15s22_2b # FPP. same as v15s22_2 Chloe has a full smile, mouth is still open, still looking at mc
             with dissolve
 
@@ -967,7 +967,7 @@ label v15s22:
 
             cl "Exactly."
         
-    if not v15seduce_ms_rose and not v15threaten_ms_rose:
+    if not v15_seduce_ms_rose and not v15_threaten_ms_rose:
         scene v15s22_6b
         with dissolve
 
