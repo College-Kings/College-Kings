@@ -2482,23 +2482,18 @@ label v15s33:
         au "I'm happy you're here with me."
 
         if aubrey.relationship.value >= Relationship.TAMED.value:
-            scene v15s33_102h
+            scene v15s33_75h
             with dissolve
 
             u "I'm happy I'm with you."
 
-            scene v15s33_102i # FPP. Aubrey kissing MC.
-            with dissolve
-
-            pause 0.75
-
-            scene v15s33_106 # TPP. Shot from behind the bench. Looking at Aubrey resting her head on MC's shoulder, MC with his arm wrapped around Aubrey, They are looking out at the lake view.
+            scene v15s33_89 # TPP. Shot from behind the bench. Looking at Aubrey resting her head on MC's shoulder, MC with his arm wrapped around Aubrey, They are looking out at the lake view.
             with dissolve
 
             pause 0.75
 
         elif aubrey.relationship.value < Relationship.FWB.value:
-            scene v15s33_102h
+            scene v15s33_75h
             with dissolve
 
             u "It's what friends are for."
