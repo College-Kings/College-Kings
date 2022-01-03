@@ -372,6 +372,8 @@ label v15s35:
             with dissolve
 
             au "It's almost disgusting... *Giggles*"
+            
+            jump v15s35_aftermoney
 
         label v15_500k_for_me:
             scene v15s35_7d
@@ -441,6 +443,8 @@ label v15s35:
 
             scene v15s35_6b # TPP. same as v15s35_6a Aubrey, Autumn and Lindsey are laughing at Mc, Mc is rolling his eyes, Everyone is still holding their phones
             with dissolve
+
+        label v15s35_aftermoney:
 
         scene v15s35_7d
         with dissolve
@@ -578,7 +582,10 @@ label v15s35:
 
             u "I feel good about my decision, Aubrey. I helped an elf. You murdered a bunny."
 
+            jump v15s35_afterkill
+
         # -if MC accepted blowjob from Naomi and Aubrey is mad with him then she should be more unplayful, not smiling at his jokes. But if he didn't do the blowjob and they're on good terms, especially if they're RS, she will be laughing and playing along with him.
+
 
         label v15_kill_easter_bunny:
             scene v15s35_7i # FPP. same as v15s35_7h Lindsey is looking at Autumn, still a slight smile, mouth is still open
@@ -708,6 +715,8 @@ label v15s35:
             with dissolve
 
             aut "Alright, alright. Say what you want, but I'm never going to kill that poor bunny."
+
+        label v15s35_afterkill:
 
         scene v15s35_7i
         with dissolve
@@ -853,6 +862,10 @@ label v15s35:
 
             scene v15s35_6d # same as v15s35_6c Everyone is looking at each other and laughing
             with dissolve
+            
+            pause 0.75
+            
+            jump v15s35_afterfrog
 
         label v15_frog_body_human_mind:
             scene v15s35_7i
@@ -946,6 +959,8 @@ label v15s35:
             with dissolve
 
             au "What's the next creep question, huh?"
+
+        label v15s35_afterfrog:
 
         scene v15s35_7b
         with dissolve
@@ -1098,6 +1113,8 @@ label v15s35:
             with dissolve
 
             li "Is that why you chose it, Autumn?"
+            
+            jump v15s35_aftersex
 
         label v15_20_person_orgy:
             scene v15s35_7d
@@ -1209,6 +1226,8 @@ label v15s35:
 
             au "Insanity!"
 
+        label v15s35_aftersex:
+
         scene v15s35_8i
         with dissolve
 
@@ -1253,6 +1272,8 @@ label v15s35:
         with dissolve
 
         au "Not to be insensitive, but how exactly does that work?"
+        
+        jump v15s35_autumn_reveal
 
     label v15most_likely_to: # -if Chose Most likely to on the planning board and regardless of how they chose the game, continue to the game
         scene v15s35_7b
@@ -1384,6 +1405,8 @@ label v15s35:
             with dissolve
 
             li "No thank you. I'll pass."
+            
+            jump v15s35_afterzombie
 
         # -if MC voted for Autumn or Aubrey, Autumn wins the vote
 
@@ -1459,6 +1482,8 @@ label v15s35:
             with dissolve
 
             aut "*Laughs*"
+
+        label v15s35_afterzombie:
 
         scene v15s35_7b
         with dissolve
@@ -1918,6 +1943,8 @@ label v15s35:
             with dissolve
 
             aut "Not happening, haha!"
+            
+            jump v15s35_afterplane
 
         label v15_aubrey_plane:
             scene v15s35_7h
@@ -1944,6 +1971,8 @@ label v15s35:
             with dissolve
 
             aut "Nope. And I don't think I ever would."
+            
+            jump v15s35_afterplane
 
         label v15_lindsey_plane:
             scene v15s35_7d
@@ -2003,6 +2032,8 @@ label v15s35:
 
             aut "I'd never put myself in that situation."
 
+        label v15s35_afterplane:
+
         scene v15s35_9a
         with dissolve
 
@@ -2059,6 +2090,8 @@ label v15s35:
         au "What exactly does that mean?"
 
 # -Regardless of game choice
+
+    label v15s35_autumn_reveal:
 
     scene v15s35_8o
     with dissolve
@@ -2596,7 +2629,6 @@ label v15s35:
                         li "*Drunk* Yes! That sounds perfect."
 
                     label v15bring_up_chloe:
-
                         
                         scene v15s35_12k
                         with dissolve
