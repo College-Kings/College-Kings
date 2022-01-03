@@ -619,8 +619,6 @@ label v15s10:
 
             li "Thanks."
 
-            pause 0.75
-
             scene v15s10_14 # -[CarTotal] pops up on screen based on the payout sums- # Hi Again Oscar! :D
             with dissolve
             
@@ -753,34 +751,31 @@ label v15s10:
 
             u "Yeah, but just think about all the good you can do with that money."
 
-            scene v15s10_29
-            with dissolve
-
             u "It's a small sacrifice if it helps you win."
 
-            scene v15s10_29a
+            scene v15s10_29
             with dissolve
 
             li "*Sighs* Very true... Somebody's full of wisdom today. *Chuckles*"
 
-            scene v15s10_29
+            scene v15s10_29a
             with dissolve
 
             u "Just go ahead and start calling me Buddha."
 
-            scene v15s10_29a
+            scene v15s10_29
             with dissolve
 
             li "Haha, you're a loser."
 
             li "Now that the car's sold, it's time to plan our next steps."
 
-            scene v15s10_29
+            scene v15s10_29a
             with dissolve
 
             u "Okay, back to the janitor's closet?"
 
-            scene v15s10_29a
+            scene v15s10_29
             with dissolve
 
             li "Yes, back to Lindsey's super-secret presidential office. *Chuckles*"
