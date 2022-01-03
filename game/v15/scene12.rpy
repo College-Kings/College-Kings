@@ -415,7 +415,7 @@ label v15s12:
     else: 
         # -MC and Lindsey arrive at and enter the janitor's closet, closing the door behind them
         scene v15s12_7
-        with dissolve
+        with fade
 
         pause 0.75
 
@@ -481,11 +481,11 @@ label v15s12:
 
             v15s12_lindsey_pb_mostlikely = lindsey_board.add_subtask("Game Night",
                 "Who's Most Likely...",
-                opinion="\"\"Who's Most Likely To\" is always a fun game to play with a group of people. We'll laugh, learn, a bit about each other and maybe some secrets will come out as well.\"")
+                opinion="\"Who's Most Likely To is always a fun game to play with a group of people. We'll laugh, learn, a bit about each other and maybe some secrets will come out as well.\"")
 
             lindsey_board.add_subtask("Game Night",
                 "Would You Rather",
-                opinion="\"\"Would you rather\" is the easiest game to play when you want to get the conversation rolling. Hopefully we get a few laughs and maybe some secrets out of them as well.\"")
+                opinion="\"Would You Rather is the easiest game to play when you want to get the conversation rolling. Hopefully we get a few laughs and maybe some secrets out of them as well.\"")
 
             lindsey_board.add_task("Game Night",
                 "Host the game night",
