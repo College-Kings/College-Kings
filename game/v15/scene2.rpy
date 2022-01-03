@@ -332,7 +332,7 @@ label v15s2:
         $ chloe.messenger.addReply("Okay. Done.") 
 
     $ autumn.messenger.newMessage(_("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)"), force_send=True)
-    $ autumn.messenger.addReply(_("Yeah, looking forward to it. See you there!"))
+    $ autumn.messenger.addReply(_("Uhm, sure."))
     $ autumn.messenger.addReply(_("Of course! I'll always be there if there's puppies, haha."))
 
     label v15s2_PhoneContinueChl:
