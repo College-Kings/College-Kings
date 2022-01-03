@@ -112,7 +112,7 @@ label v15s48b:
         scene v15s48b_7 # TPP. Show MC walking out of the bedroom naked, Nora watching him, both slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
         
         play sound "sounds/dooropen.mp3"
        
@@ -125,7 +125,7 @@ label v15s48b:
         scene v15s48b_9 # TPP. Show Nora trying to open a bottle of wine in the kitchen.
         with fade
 
-        pause 0.75  
+        pause 0.75
 
         scene v15s48b_10 # FPP. Show the bottle of wine on the counter in the Kitchen, MC looking at Nora, Nora looking at MC, Nora slight smile, mouth closed.
         with dissolve
@@ -145,12 +145,12 @@ label v15s48b:
         scene v15s48b_11 # TPP. Show MC pulling out his phone, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75  
+        pause 0.75
 
         scene v15s48b_11a # TPP. MC looking at his phone and tapping on it, mouth closed.
         with dissolve
 
-        pause 0.75  
+        pause 0.75
 
         scene v15s48b_10
         with dissolve
@@ -194,12 +194,12 @@ label v15s48b:
         scene v15s48b_12 # TPP. Show Nora walking up to MC, both slight smile, mouth closed.
         with dissolve
 
-        pause 0.75  
+        pause 0.75
 
         scene v15s48b_13 # TPP. Nora and MC hugging, both slight smile, mouth closed.
         with dissolve
 
-        pause 0.75  
+        pause 0.75
 
         scene v15s48b_14 # FPP. Nora infront of MC, MC looking at Nora, Nora looking at MC, Nora slight smile, mouth open.
         with dissolve
@@ -216,7 +216,7 @@ label v15s48b:
     scene v15s48b_15 # TPP. MC standing outside as the cab arrives.
     with fade
 
-    pause 0.75  
+    pause 0.75
 
     play sound "sounds/cardooropen.mp3"
 

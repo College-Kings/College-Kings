@@ -28,7 +28,7 @@ screen v15s18a_room():
 
     default image_path = "images/v15/Scene 18a/Free Roam Screens/room/"
 
-    if not "chris_amber" in freeroam13:  # Amber and Chris
+    if not "chris_amber" in freeroam13: # Amber and Chris
         add image_path + "v15s18a_room_1.webp"
 
         # Amber

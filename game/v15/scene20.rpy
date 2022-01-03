@@ -120,7 +120,7 @@ label v15s20:
 
         cl "Haha, shh! Come on, we need to focus."
 
-    else: ###if MsRoseMeeting:
+    else: # if MsRoseMeeting:
         scene v15s20_5a
         with dissolve
 

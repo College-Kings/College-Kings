@@ -8,7 +8,7 @@ label v15s45:
     scene v15s45_1 # TPP. MC and Amber are walking along the street, both no expressions, mouths are closed, looking directly ahead.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
     
     scene v15s45_1a # TPP. Mc and Amber stop walking along the street, Amber pulls out her phone, and looks at her phone, no expression, mouths is closed, Mc is looking at Amber, no expression, mouth is closed
     with dissolve

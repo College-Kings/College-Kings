@@ -31,7 +31,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
             scene v15s32_2 # TPP. MC smiling, mouth closed, walking left-to-right; front door in background) [Chicks' house front yard-exterior].
             with dissolve
 
-            pause 0.75 
+            pause 0.75
             
             scene v15s32_3 # TPP. MC smiling, mouth closed, walking left-to-right; side of house in background). [Chicks' house side yard-exterior].
             with dissolve
@@ -64,7 +64,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
                     scene v15s32_4d # TPP. MC smiling, mouth closed, winding up to throw the pebble at the window [Chicks' house back yard-exterior].
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     # TODO: Rock hitting window sound effect [No mp3 found in current assets]
                     scene v15s32_4e # FPP. Close up on the pebble hitting the window [Chicks' house back yard-exterior]
@@ -158,7 +158,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
                     scene v15s32_4d
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     # TODO: Rock hitting window sound effect. No mp3 found in current assets
                     scene v15s32_4e
@@ -169,7 +169,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
                     scene v15s32_6 # FPP. Aubrey, smiling, mouth closed, rasing her window [Aubrey's window (right)-exterior].
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                     scene v15s32_6a # FPP. Aubrey, smiling, mouth open, with her upper body leaning out the window looking downward [Aubrey's window (right)-exterior].
                     with dissolve
@@ -404,7 +404,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
         scene v15s32_8n # FPP. Aubrey glancing at the front door (off camera), mouth closed, Riley, smiling mouth closed, looking at Aubrey [Chicks' front door-interior].
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s32_8l
         with dissolve
@@ -425,7 +425,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
         scene v15s32_8o # TPP. Aubrey, Riley, MC smiling together (camera at the stairs facing the open front door where there is a limo parked at the street [Chicks' front door-interior]. 
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
     else: # -if AubreyRileyAwkward from theatre conversation
         # -Riley opens the door for MC, looking tired-

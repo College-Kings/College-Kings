@@ -106,7 +106,6 @@ label v15s28:
 
             u "(That felt bittersweet...)"
 
-        ### CHECK THAT NEXT VARIABLE IS CORRECT - NO PENELOPE FRIEND VARIABLE
         else: # -if PenelopeFriend
             scene v15s28_3h # FPP Same angle as 3, Penelope looking at Jenny with big, excited smile, mouth open, hands over her heart
             with dissolve
@@ -206,7 +205,6 @@ label v15s28:
 
         pause 1
 
-    ### VERIFY THIS VARIABLE, TOO - MAKES MORE SENSE IN CONTEXT THAT penelopeloyal
     elif jenny.relationship.value >= Relationship.FRIEND.value and penelope.relationship.value >= Relationship.LOYAL.value: # -if JennyFriend and PenelopeLoyal
         scene v15s28_3a
         with dissolve
@@ -299,7 +297,6 @@ label v15s28:
 
         pause 1
 
-    ### CHANGED THIS TO A DEFAULT "ELSE" BECAUSE IT FITS THE SCENE AND OTHERWISE MC COULD GO FROM SEEING PEN AND JENNY AT A TABLE TO ORDERING SIX SHOTS LIKE A LUSH
     else: # -if JennyFriend and PenelopeFriend
         scene v15s28_3a
         with dissolve
@@ -1174,7 +1171,6 @@ label v15s28:
 
         pe "We're good."
 
-    ### MARKING ANOTHER PENELOPE VARIABLE CALL FOR VERIFICATION AND CLEANUP
     elif penelope.relationship.value >= Relationship.LOYAL.value: # -if PenelopeLoyal
         scene v15s28_19b # TPP Same angle as 19, show Jenny stopping MC by grabbing his arm, Jenny smiling with mouth open, Penelope walking away toward the door in the background
         with dissolve

@@ -539,7 +539,7 @@ label v15s44_continue2:
     scene v15s44_9b # TPP. Same as v15s44_9a, both pretending to blow the steam off their guns
     with dissolve
 
-    pause 0.75  
+    pause 0.75
 
     scene v15s44_10 # TPP. MC and Amber exiting the room, both smiling, Amber exiting in front of MC, nouths closed
     with dissolve

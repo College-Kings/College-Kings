@@ -594,7 +594,7 @@ label v15s21:
 
         u "*Sighs* Okay, is there anything else?"
 
-        if v15_took_notes and opened_count >= 5: ###### -if TookNotes and clicks on the journal five times- ######
+        if v15_took_notes and opened_count >= 5: # -if TookNotes and clicks on the journal five times- #
             scene v15s21_6c
             with dissolve
 
@@ -1632,7 +1632,7 @@ label v15s21:
 
         u "Okay. Well..."
 
-        if v15_took_notes and opened_count >= 5: ###### -if TookNotes and clicks on the journal five times- ######:
+        if v15_took_notes and opened_count >= 5: # -if TookNotes and clicks on the journal five times-:
             scene v15s21_13k
             with dissolve
 

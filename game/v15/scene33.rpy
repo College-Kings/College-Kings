@@ -14,9 +14,8 @@ label v15s33:
 
     pause 0.75
 
-
     scene v15s33_3 # FPP. MC and Aubrey stopped on their trail to the Venue, facing each other, MC looking at Aubrey, Aubrey looking at MC, Aubrey concerned, mouth closed.
-    with dissolve 
+    with dissolve
 
     u "Are you okay?"
 
@@ -76,7 +75,7 @@ label v15s33:
     scene v15s33_4 # TPP. Show Mc and Aubrey entering the Venue, both slight smile, mouth closed.
     with fade
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s33_5 # FPP. MC looking to his left after entering the venue seeing Naomi, Naomi looks a little drunk, smirking, mouth open.
     with vpunch
@@ -332,7 +331,7 @@ label v15s33:
             scene v15s33_13
             with dissolve
 
-            pause 0.75 
+            pause 0.75
             
             scene v15s33_82 # TPP. Close up of just MC's hand pouring his drink on the floor at the alcohol table, only show MC's hand pouring drink on the floor to be reused.
             with dissolve
@@ -2263,7 +2262,7 @@ label v15s33:
                 scene v15s33_81b # TPP. Aubrey kissing MC's cheek.
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
             scene v15s33_79a # TPP. Aubrey, her parents, and Naomi all standing and posing together smiling for a photo.
             with dissolve
