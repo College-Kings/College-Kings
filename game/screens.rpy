@@ -285,12 +285,12 @@ screen quick_menu():
             spacing 15
 
             textbutton "SCENE SELECT" action Show("bugTesting_SceneSelect")
-            add "gui/arrow.png" yalign 0.5
+            add "gui/common/arrow.png" yalign 0.5
 
             null width 10
 
             textbutton "CHEATS" action Show("bugTesting_cheatMenu")
-            add "gui/arrow.png" yalign 0.5
+            add "gui/common/arrow.png" yalign 0.5
 
 
 style quick_menu_button:
@@ -571,9 +571,6 @@ screen load():
 
 
 screen file_slots(title):
-    add image_path + "background.png"
-
-screen file_slots(title):
     style_prefix "file_slots"
 
     default page_name_value = FilePageNameInputValue(pattern=_("PAGE {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
@@ -594,6 +591,11 @@ screen file_slots(title):
         xalign 0.5
         ypos 56
         style "file_slots_title"
+
+    imagebutton:
+        idle image_path + "return_idle.png"
+        action Return()
+        pos (129, 82)
 
     fixed:
         pos (243, 206)
@@ -639,15 +641,13 @@ screen file_slots(title):
 
                     key "save_delete" action FileDelete(slot)
 
-    ## Buttons to access other pages.
+    # Buttons to access other pages.
     hbox:
         xalign 0.5
         ypos 803
         xysize (1100, 48)
         spacing 35
         xoffset 20
-
-        # add "#0f0"
 
         imagebutton:
             idle image_path + "left_arrow.png"
@@ -668,6 +668,41 @@ screen file_slots(title):
         imagebutton:
             idle image_path + "right_arrow.png"
             action FilePageNext()
+            yalign 0.5
+
+    # Menu buttons
+    hbox:
+        pos (129, 967)
+        spacing 50
+
+        if title == _("Save"):
+            imagebutton:
+                idle image_path + "load_idle.png"
+                action ShowMenu("load")
+                yalign 0.5
+        else:
+            imagebutton:
+                idle image_path + "save_idle.png"
+                action ShowMenu("save")
+                yalign 0.5
+
+        imagebutton:
+            idle image_path + "menu_idle.png"
+            action MainMenu()
+            yalign 1.0
+
+    hbox:
+        pos (1439, 967)
+        spacing 50
+
+        imagebutton:
+            idle image_path + "settings_idle.png"
+            action ShowMenu("preferences")
+            yalign 0.5
+
+        imagebutton:
+            idle image_path + "quit_idle.png"
+            action Quit(confirm=not main_menu)
             yalign 0.5
 
 
