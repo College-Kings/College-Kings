@@ -1350,7 +1350,7 @@ label v15s21:
 
                 u "Mr. Lee doesn't know what college is like for girls, or how it can be improved... Neither do I."
 
-                u "Who better to ask than one of our female rolemodels?"
+                u "Who better to ask than one of our female role models?"
 
                 scene v15s21_7
                 with dissolve

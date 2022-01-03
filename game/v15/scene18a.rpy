@@ -669,7 +669,6 @@ label v15s18a_AutumPenelope:
     menu:
 
         "Good thing I'm a werewolf":
-
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Haha, good thing I'm a werewolf."
@@ -681,7 +680,6 @@ label v15s18a_AutumPenelope:
             
 
         "Your secret is safe":
-
             $ add_point(KCT.BOYFRIEND)
 
             u "Oh shit, okay... Your secret is safe with me. *Chuckles*"
