@@ -74,7 +74,7 @@ label v15s22:
 
                     cl "*Sighs* Yeah, I guess so."
 
-        elif v15seduce_ms_rose or v15threaten_ms_rose:
+        elif v15_seduce_ms_rose or v15_threaten_ms_rose:
             scene v15s22_2b # FPP. same as v15s22_2 Chloe has a full smile, mouth is still open, still looking at mc
             with dissolve
 
@@ -967,7 +967,7 @@ label v15s22:
 
             cl "Exactly."
         
-    if not v15seduce_ms_rose and not v15threaten_ms_rose:
+    if not v15_seduce_ms_rose and not v15_threaten_ms_rose:
         scene v15s22_6b
         with dissolve
 
@@ -1392,6 +1392,8 @@ label v15s22:
             with dissolve
 
             pause 0.75
+        
+        jump v15s22_afterchloe
 
     label v15dean_unsuccessful:
         scene v15s22_5d # TPP. same as v15s22_5c The Dean is walking away from Mc and Chloe not shaking Chloe's hand no expression mouth is closed, Mc and Chloe are both still standing, Chloe has a sad expressions looking at Mc mouth is closed, Mc has no expression looking at Chloe mouth is closed
@@ -1488,6 +1490,8 @@ label v15s22:
 
                 pause 0.75
 
+    label v15s22_afterchloe:
+
     if v15_lindsey_gamenight: # -if helping Lindsey with Games night
         $ lindsey.messenger.newMessage("Hey, can you come meet me now to buy the alcohol for our game night? I have a plan! I'll send the details of which store to come to.", force_send=True)
         $ lindsey.messenger.addReply("Okay, I'll be there soon!", func=None)
@@ -1505,6 +1509,21 @@ label v15s22:
 
         else: # -if AubreyFriend
             $ aubrey.messenger.addReply("Haha, okay see you there.", func=None)
+
+    label v15s22_PhoneContinueLin:
+        if lindsey.messenger.replies:
+            call screen phone
+        if lindsey.messenger.replies:
+            u "(I should reply to Lindsey.)"
+            jump v15s22_PhoneContinueLin
+
+    label v15s22_PhoneContinueAub:
+        if aubrey.messenger.replies:
+            call screen phone
+        if aubrey.messenger.replies:
+            u "(I should reply to Aubrey.)"
+            jump v15s22_PhoneContinueAub
+
 
     scene v15s22_8a # FPP. same as v15s22_8 The phone is now just has a blank black screen
     with dissolve

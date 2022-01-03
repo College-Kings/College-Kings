@@ -473,7 +473,7 @@ label v15s28:
         scene v15s28_9a # FPP Same angle as 9, Samantha taking a drink of her beer
         with dissolve
 
-        u "(Wait, I think I recognize her… From the poetry thing?)" 
+        u "(Wait, I think I recognize her... From the poetry thing?)" 
 
         u "Oh, hey. I think I've seen you around campus before, no?"
 
