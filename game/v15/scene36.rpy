@@ -477,6 +477,8 @@ label v15s36:
 
         pause 0.75
 
+        play sound "sounds/kiss.mp3"
+
         scene v15s36_11e # FPP. Autumn kissing MC on the cheek.
         with dissolve
 
