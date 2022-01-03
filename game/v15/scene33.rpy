@@ -1955,115 +1955,115 @@ label v15s33:
                 if aubrey.relationship.value >= Relationship.FWB.value:
                     $ aubrey.relationship = Relationship.TAMED
                     
-                    scene v15s33_74b # FPP. Aubrey looking at MC, MC looking at Aubrey, Aubrey looking at MC like she is in love, mouth closed.
+                    scene v15s33_57b # FPP. Aubrey looking at MC, MC looking at Aubrey, Aubrey looking at MC like she is in love, mouth closed.
                     with dissolve
 
                     u "(That face... Irresistible.)"
 
-                    scene v15s33_74a
+                    scene v15s33_57a
                     with dissolve
 
                     au "You think so?"
 
-                    scene v15s33_74
+                    scene v15s33_57
                     with dissolve
 
                     u "I know so."
 
-                    scene v15s33_107 # TPP. Close up of Aubrey and MC's hands starting to hold each other.
+                    scene v15s33_80 # TPP. Close up of Aubrey and MC's hands starting to hold each other.
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
-                    scene v15s33_76 # TPP. Close up of just Aubrey looking at their hands, slight smile, mouth closed.
+                    scene v15s33_59 # TPP. Close up of just Aubrey looking at their hands, slight smile, mouth closed.
                     with dissolve
 
                     pause 0.75
                     
-                    scene v15s33_74c # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey smirking, mouth open.
+                    scene v15s33_57c # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey smirking, mouth open.
                     with dissolve
 
                     au "Kiss me, you idiot."
 
-                    scene v15s33_74d # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey smirking, mouth closed.
+                    scene v15s33_57d # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey smirking, mouth closed.
                     with dissolve
 
                     u "*Laughs* Gladly."
 
-                    scene v15s33_77 # TPP. At the ceremony in their seats, MC and Aubrey kissing each other romantically and holding each others hands.
+                    scene v15s33_60 # TPP. At the ceremony in their seats, MC and Aubrey kissing each other romantically and holding each others hands.
                     with dissolve
 
                     pause 0.75
 
-                    scene v15s33_78 # TPP. Close up of Aubrey's Mom and Dad looking in MC's and Aubrey's direction, both slight smile, mouth closed.
+                    scene v15s33_61 # TPP. Close up of Aubrey's Mom and Dad looking in MC's and Aubrey's direction, both slight smile, mouth closed.
                     with dissolve
 
                     pause 0.75
 
-                    scene v15s33_79 # TPP. Close up of Naomi sat far away in her seat looking over in MC and Aubrey's direction, Naomi rolling her eyes, neutral face, mouth closed.
+                    scene v15s33_62 # TPP. Close up of Naomi sat far away in her seat looking over in MC and Aubrey's direction, Naomi rolling her eyes, neutral face, mouth closed.
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
-                    scene v15s33_79a # TPP. Naomi smiling in their direction, mouth closed.
+                    scene v15s33_62a # TPP. Naomi smiling in their direction, mouth closed.
                     with dissolve
 
                     pause 0.75
 
                     if v15s33_cheese:
-                        scene v15s33_80 # TPP. Close up of Aubrey's uncle, with one hand in the air and one hand on his beer as he looks at MC and Aubrey, slight smile, mouth open.
+                        scene v15s33_63 # TPP. Close up of Aubrey's uncle, with one hand in the air and one hand on his beer as he looks at MC and Aubrey, slight smile, mouth open.
                         with dissolve
 
                         rick "WOOOOH!"
 
                     else:
-                        scene v15s33_80a # TPP. Close up of Aubrey's uncle no hands in the air looking in MC and Aubrey's direction slight smile, mouth closed.
+                        scene v15s33_63a # TPP. Close up of Aubrey's uncle no hands in the air looking in MC and Aubrey's direction slight smile, mouth closed.
                         with dissolve
 
                         pause 0.75
 
                 else:
-                    scene v15s33_74a
+                    scene v15s33_57a
                     with dissolve
 
                     au "We. Are. Just. Friends, [name]. *Giggles*"
 
-                    scene v15s33_74
+                    scene v15s33_57
                     with dissolve
 
                     u "Yeah, yeah... Where did I go wrong?"
 
-                    scene v15s33_74a
+                    scene v15s33_57a
                     with dissolve
 
                     au "Oh jeez... Okay, here. How about if we're both still single when we're forty, then maybe you can propose."
 
-                    scene v15s33_74
+                    scene v15s33_57
                     with dissolve
 
                     u "Haha, a pact?"
 
-                    scene v15s33_74a
+                    scene v15s33_57a
                     with dissolve
 
                     au "Sure, yeah."
 
-                    scene v15s33_74
+                    scene v15s33_57
                     with dissolve
 
                     u "Okay, I can do that. I guess we all need someone to grow old with."
 
-                    scene v15s33_74a
+                    scene v15s33_57a
                     with dissolve
 
                     au "Ha, true."
 
-    scene v15s33_83 # TPP. Close up of the Wedding official standing between Aubrey's parents, Wedding official slight smile, mouth closed.
+    scene v15s33_66 # TPP. Close up of the Wedding official standing between Aubrey's parents, Wedding official slight smile, mouth closed.
     with dissolve
 
     wedoff "Today is the most special and sacred day, as we celebrate the love held between two people whose bond grows stronger with each passing day..."
 
-    scene v15s33_84 # TPP. Later in the day, Close up of Aubrey's Mom, looking at Aubrey's dad(off camera), Aubrey's mom tearing up, slight smile, mouth closed.
+    scene v15s33_67 # TPP. Later in the day, Close up of Aubrey's Mom, looking at Aubrey's dad(off camera), Aubrey's mom tearing up, slight smile, mouth closed.
     with fade
 
     aumom "You are my best friend, you are my biggest hero, and my longest love."
@@ -2071,18 +2071,18 @@ label v15s33:
     aumom "*Sniffles* Together, we built a beautiful home and created a terrific family..."
 
     if aubrey.relationship.value <= Relationship.MAD.value: 
-        scene v15s33_82a # TPP. Close up of Aubrey looking at her parents, Aubrey smirking but still sad, mouth closed.
+        scene v15s33_65a # TPP. Close up of Aubrey looking at her parents, Aubrey smirking but still sad, mouth closed.
         with dissolve
         
         pause 0.75
 
     else:
-        scene v15s33_75b # TPP. MC and Aubrey watching the ceremony and holding hands, Aubrey smiling, mouth closed.
+        scene v15s33_58a # TPP. MC and Aubrey watching the ceremony and holding hands, Aubrey smiling, mouth closed.
         with dissolve
         
         pause 0.75
 
-    scene v15s33_85 # TPP. Close up of Aubrey's Dad, Aubrey's dad looking at Aubrey's mom, Aubrey's dad slight smile, mouth closed.
+    scene v15s33_68 # TPP. Close up of Aubrey's Dad, Aubrey's dad looking at Aubrey's mom, Aubrey's dad slight smile, mouth closed.
     with dissolve
 
     audad "I affirm my commitment to you, my wonderful wife."
@@ -2091,122 +2091,122 @@ label v15s33:
 
     u "(Ew, what?)"
 
-    scene v15s33_80b # TPP. Close up of Aubrey's Uncle watching the ceremony and laughing.
+    scene v15s33_63b # TPP. Close up of Aubrey's Uncle watching the ceremony and laughing.
     with dissolve
 
-    pause 0.75  
+    pause 0.75
 
-    scene v15s33_86 # TPP. Close up of Aubrey's Mom and Aubrey's Dads hands. Aubrey's dad sliding a ring on to Aubrey's mom's finger.
+    scene v15s33_69 # TPP. Close up of Aubrey's Mom and Aubrey's Dads hands. Aubrey's dad sliding a ring on to Aubrey's mom's finger.
     with fade
 
-    pause 0.75 
+    pause 0.75
+    scene v15s33_69a # TPP. Aubrey's Mom's hand now with a ring on her finger sliding a ring onto Aubrey's dad's finger.
 
-    scene v15s33_86a # TPP. Aubrey's Mom's hand now with a ring on her finger sliding a ring onto Aubrey's dad's finger.
     with dissolve
     
     wedoff "You may now kiss the bride... Again."
 
-    scene v15s33_87 # TPP. Show Aubrey's Mom and Dad kissing.
-    with dissolve
-
-    pause 0.75 
-
-    scene v15s33_88 # TPP. A group of people smiling and clapping
-    with dissolve
-
-    pause 0.75 
-
-    scene v15s33_89 # TPP. Shot of MC and Aubrey from behind approaching Aubrey's parents, both her parents slight smile, mouth closed.
+    scene v15s33_70 # TPP. Show Aubrey's Mom and Dad kissing.
     with dissolve
 
     pause 0.75
 
-    scene v15s33_90 # FPP. MC and Aubrey standing with her parents after the Ceremony, MC looking at Aubrey, Aubrey looking at her parents, Aubrey tiny smile, mouth open.
+    scene v15s33_71 # TPP. A group of people smiling and clapping
+    with dissolve
+
+    pause 0.75
+
+    scene v15s33_72 # TPP. Shot of MC and Aubrey from behind approaching Aubrey's parents, both her parents slight smile, mouth closed.
+    with dissolve
+
+    pause 0.75
+
+    scene v15s33_73 # FPP. MC and Aubrey standing with her parents after the Ceremony, MC looking at Aubrey, Aubrey looking at her parents, Aubrey tiny smile, mouth open.
     with dissolve
 
     au "Congratulations, you guys. That was so beautiful..."
 
-    scene v15s33_91 # FPP. MC looking at both of Aubrey's parents, both slight smile, mouth closed.
+    scene v15s33_74 # FPP. MC looking at both of Aubrey's parents, both slight smile, mouth closed.
     with dissolve
 
     u "Yeah, it really was."
 
-    scene v15s33_108 # TPP. After the ceremony, Aubrey group hugging with her parents MC not in the hug.
+    scene v15s33_81 # TPP. After the ceremony, Aubrey group hugging with her parents MC not in the hug.
     with dissolve
 
     pause 0.75
 
-    scene v15s33_91a # FPP. MC looking at both of Aubrey's parents, both slight smile, Aubrey's dad's mouth open. Aubrey's mom mouth closed.
+    scene v15s33_74a # FPP. MC looking at both of Aubrey's parents, both slight smile, Aubrey's dad's mouth open. Aubrey's mom mouth closed.
     with dissolve
 
     audad "Thank you, guys."
 
-    scene v15s33_92 # FPP. After the ceremony MC and Aubrey with her parents, MC looking at Aubrey's mom, Aubrey's mom looking at Aubrey, slight smile, mouth open.
+    scene v15s33_88 # FPP. After the ceremony MC and Aubrey with her parents, MC looking at Aubrey's mom, Aubrey's mom looking at Aubrey, slight smile, mouth open.
     with dissolve
 
     aumom "I'm amazed that your dad remembered all of his lines! *Giggles*"
 
-    scene v15s33_93 # FPP. After the Ceremony MC and Aubrey standing with her parents, MC looking at Aubrey's dad, Aubrey's dad looking at Aubrey, slight smile, mouth open.
+    scene v15s33_76 # FPP. After the Ceremony MC and Aubrey standing with her parents, MC looking at Aubrey's dad, Aubrey's dad looking at Aubrey, slight smile, mouth open.
     with dissolve
 
     audad "I'm amazed too!"
 
-    scene v15s33_90
+    scene v15s33_73
     with dissolve
 
     au "Haha, you did great."
 
-    scene v15s33_94 # TPP. Naomi standing off somewhere taking selfies on her phone, smirking, mouth closed.
+    scene v15s33_77 # TPP. Naomi standing off somewhere taking selfies on her phone after the ceremony, smirking, mouth closed.
     with dissolve
 
     aumom "Naomi. Come over here! Let's take a photo of all of us, please?"
 
-    scene v15s33_90
+    scene v15s33_73
     with dissolve
 
     au "Oh, that's a great idea."
 
-    scene v15s33_93
+    scene v15s33_76
     with dissolve
 
     audad "Here, use my phone."
 
-    scene v15s33_95 # TPP. Aubrey's dad handing her his phone, Aubrey taking the phone, slight smile, mouth closed.
-    with dissolve
-
-    pause 0.75 
-
-    scene v15s33_90a # FPP. MC looking at Aubrey, Aubrey looking at her dad, Aubrey slightly sad, mouth open.
-    with dissolve
-
-    au "Oh... I-"
-
-    scene v15s33_96 # TPP. Show Naomi and Aubrey's parents posing and smiling for a photo.
+    scene v15s33_78 # TPP. Aubrey's dad handing her his phone, Aubrey taking the phone, slight smile, mouth closed.
     with dissolve
 
     pause 0.75
 
-    scene v15s33_90a
+    scene v15s33_73a # FPP. MC looking at Aubrey, Aubrey looking at her dad, Aubrey slightly sad, mouth open.
+    with dissolve
+
+    au "Oh... I-"
+
+    scene v15s33_79 # TPP. Show Naomi and Aubrey's parents posing and smiling for a photo.
+    with dissolve
+
+    pause 0.75
+
+    scene v15s33_73a
     with dissolve
 
     au "You want... Me to take the photo?"
 
-    scene v15s33_93
+    scene v15s33_76
     with dissolve
 
     audad "Yeah. Is the flash switched on?"
 
-    scene v15s33_90a
+    scene v15s33_73a
     with dissolve
 
     au "Uh, yeah. Ready to go."
 
-    scene v15s33_96
+    scene v15s33_79
     with dissolve
 
     u "(Are you serious right now? They're taking a family photo without her...)"
 
-    scene v15s33_96
+    scene v15s33_79
     with dissolve
 
     menu:
@@ -2215,17 +2215,17 @@ label v15s33:
 
             play sound "sounds/capture.mp3"
 
-            scene v15s33_96
+            scene v15s33_79
             with flash
 
-            pause 0.75 
+            pause 0.75
 
-            scene v15s33_95a # TPP. Aubrey handing her dad back his phone, Aubrey sad, mouth closed.
+            scene v15s33_78a # TPP. Aubrey handing her dad back his phone, Aubrey sad, mouth closed.
             with dissolve
 
-            pause 0.75  
+            pause 0.75
 
-            scene v15s33_97 # TPP. Show Aubrey walking away from eveyone, Aubrey sad, mouth closed.
+            scene v15s33_83 # TPP. Show Aubrey walking away from everyone after the photo, Aubrey sad, mouth closed.
             with dissolve
 
             pause 0.75
@@ -2235,17 +2235,17 @@ label v15s33:
 
             u "*Scoffs*"
 
-            scene v15s33_90b # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey small smile, mouth closed.
+            scene v15s33_73b # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey small smile, mouth closed.
             with dissolve
 
             u "Aubrey, get in there."
 
-            scene v15s33_90c # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey small smile, mouth open.
+            scene v15s33_73c # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey small smile, mouth open.
             with dissolve
 
             au "Oh- Really?"
 
-            scene v15s33_90b
+            scene v15s33_73b
             with dissolve
 
             u "Yeah, of course. It is a..."
@@ -2254,82 +2254,77 @@ label v15s33:
 
             na "Right! Come on, sissy!"
 
-            scene v15s33_98 # TPP. Aubrey and MC standing with her parents after the ceremony, Aubrey handing MC her dad's phone.
+            scene v15s33_81a # TPP. Aubrey and MC standing with her parents and Naomi after the ceremony, Aubrey handing MC her dad's phone.
             with dissolve
 
             pause 0.75
 
             if aubrey.relationship.value >= Relationship.TAMED.value:
-                scene v15s33_98a # TPP. Aubrey kissing MC's cheek.
+                scene v15s33_81b # TPP. Aubrey kissing MC's cheek.
                 with dissolve
 
                 pause 0.75 
 
-            scene v15s33_96a # TPP. Aubrey, her parents, and Naomi all standing and posing together smiling for a photo.
+            scene v15s33_79a # TPP. Aubrey, her parents, and Naomi all standing and posing together smiling for a photo.
             with dissolve
 
             u "Give me a nice big, cheesy smile!"
 
-            scene v15s33_99 # TPP. Aubrey's Uncle nearby looking at the group, slight smile, mouth closed.
-            with dissolve
-
-            rick "Did someone say cheese?!"
-
             play sound "sounds/capture.mp3"
 
-            scene v15s33_96a
+            scene v15s33_79a
             with flash
 
             pause 0.75
 
-            scene v15s33_100 # TPP. Show MC handing Aubrey's dad his phone, both slight smile, mouth closed.
-            with dissolve
-
-            pause 0.75 
-
-            scene v15s33_97
+            scene v15s33_78a
             with dissolve
 
             pause 0.75
 
-    scene v15s33_101 # TPP. MC sitting down next to Aubrey who is sitting on a bench overlooking the distant lake.
+            scene v15s33_83
+            with dissolve
+
+            pause 0.75
+
+    scene v15s33_84 # TPP. MC sitting down next to Aubrey who is sitting on a bench overlooking the distant lake.
     with fade
 
-    pause 0.75 
+    pause 0.75
 
-    scene v15s33_102 # FPP. MC sitting down next to Aubrey on the bench, Aubrey looking at MC, MC looking at Aubrey, Aubrey upset, mouth closed.
+    scene v15s33_75 # FPP. MC sitting down next to Aubrey on the bench, Aubrey looking at MC, MC looking at Aubrey, Aubrey upset, mouth closed.
     with dissolve
 
     u "Hey... Are you okay?"
 
     if aubrey.relationship.value <= Relationship.MAD.value:
-        scene v15s33_102a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey upset, mouth open.
+        scene v15s33_75a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey upset, mouth open.
         with dissolve
 
         au "I'm still processing everything what happened today, [name]."
 
-        scene v15s33_102
+        scene v15s33_75
         with dissolve
 
         u "Yeah..."
 
         if v15s33_naomi_broke_aubreyrs:
-            scene v15s33_102b # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey angry, mouth open.
+            scene v15s33_75b # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey angry, mouth open.
             with dissolve
 
             au "You're fucking disgusting. I'm questioning if I ever want to speak to you again."
 
-            scene v15s33_102c # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey angry, mouth closed.
+            scene v15s33_75c # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey angry, mouth closed.
             with dissolve
 
             u "That's completely fair, I just-"
 
-        scene v15s33_102a
+        scene v15s33_75a
         with dissolve
 
         au "Can you just- Give me a few minutes? Please...?"
 
-        scene v15s33_102
+        scene v15s33_75
         with dissolve
 
         menu:
@@ -2337,33 +2332,23 @@ label v15s33:
                 $ add_point(KCT.BRO)
                 u "I'm sorry. I'll go back inside. Just let me know if you want to talk, okay?"
 
-                scene v15s33_103 # TPP. MC walking away from Aubrey, MC neutral face, mouth closed, Aubrey sad looking at the ground, mouth closed.
-                with dissolve
-
-                pause 0.75
-
                 jump v15s34
 
             "Try to talk":
                 $ add_point(KCT.TROUBLEMAKER)
-                scene v15s33_102
+                scene v15s33_75
                 with dissolve
 
                 u "I'm so sorry for what I did, Aubrey. It's just that..."
 
                 u "Your parents wanting a photo without you is, ugh..."
 
-                scene v15s33_102b
+                scene v15s33_75b
                 with dissolve
 
                 au "I'm upset about a lot of things right now, [name]! I said leave me alone!"
 
-                scene v15s33_103a # TPP. Aubrey walking awya from the bench, Aubrey angry upset, Aubrey mouth closed, MC sitting on the bench neutral face, mouth closed.
-                with dissolve
-
-                pause 0.75 
-
-                scene v15s33_104 # FPP. MC looking out at the distant lake.
+                scene v15s33_86 # TPP. Aubrey walking away from the bench, Aubrey angry upset, Aubrey mouth closed, MC sitting on the bench neutral face, mouth closed.
                 with dissolve
 
                 u "Fuck... I need to stop opening my mouth."
@@ -2371,34 +2356,34 @@ label v15s33:
                 jump v15s34
 
     else:
-        scene v15s33_102a
+        scene v15s33_75a
         with dissolve
 
         au "They don't even see how much they hurt me when they do shit like that."
 
-        scene v15s33_102
+        scene v15s33_75
         with dissolve
 
         u "With the photo?"
 
-        scene v15s33_102a
+        scene v15s33_75a
         with dissolve
 
         au "Yes."
 
         if aubrey.relationship.value >= Relationship.TAMED.value:
-            scene v15s33_105 # TPP. MC hugging Aubrey, Aubrey crying into his shoulder, MC slight frown, mouth closed.
+            scene v15s33_87 # TPP. MC hugging Aubrey while they sit on the bench, Aubrey crying into his shoulder, MC slight frown, mouth closed.
             with dissolve
             
             pause 0.75
 
         else:
-            scene v15s33_105a # TPP. MC rubbing Aubrey's back as she cries, MC slight frown, mouth closed.
+            scene v15s33_87a # TPP. MC rubbing Aubrey's back as she cries, MC slight frown, mouth closed.
             with dissolve
 
             pause 0.75
 
-        scene v15s33_102
+        scene v15s33_75
         with dissolve
 
         u "That was the most awful thing I've ever seen them do to you."
@@ -2406,92 +2391,92 @@ label v15s33:
         u "And you're right. It's like they aren't even aware of their actions."
 
         if v15s33_take_photo:
-            scene v15s33_102a
+            scene v15s33_75a
             with dissolve
 
             au "Thanks for stepping in like that."
 
-            scene v15s33_102
+            scene v15s33_75
             with dissolve
 
             u "I wasn't just going to stand by and let it happen."
 
-            scene v15s33_102a
+            scene v15s33_75a
             with dissolve
 
             au "Well, thank you. It means a lot to me."
 
-        scene v15s33_102
+        scene v15s33_75
         with dissolve
 
         u "Remember what I said."
 
         u "I'll be here for you, complete with awful jokes. *Laughs*"
 
-        scene v15s33_102a
+        scene v15s33_75a
         with dissolve
 
         au "Now would be a good time for one of those awful jokes..."
 
-        scene v15s33_102
+        scene v15s33_75
         with dissolve
 
         u "Okay, okay... Are you ready?"
 
-        scene v15s33_102a
+        scene v15s33_75a
         with dissolve
 
         au "Hehe, yeah. Ready."
 
-        scene v15s33_102d # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey teary eyed, Aubrey slight smile, mouth closed
+        scene v15s33_75d # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey teary eyed, Aubrey slight smile, mouth closed
         with dissolve
 
         menu:
             "Science joke":
                 u "Did I tell you about the book I read on anti-gravity?"
 
-                scene v15s33_102e # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey teary eyed, Aubrey slight smile, mouth open.
+                scene v15s33_75e # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey teary eyed, Aubrey slight smile, mouth open.
                 with dissolve
 
                 au "No, you didn't."
 
-                scene v15s33_102d
+                scene v15s33_75d
                 with dissolve
 
                 u "It was impossible to put down."
 
-                scene v15s33_102f # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, rolling her eyes.
+                scene v15s33_75f # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, rolling her eyes.
                 with dissolve
 
                 pause 0.75
 
             "Monkey joke":
-                scene v15s33_102e
+                scene v15s33_75e
                 with dissolve
 
                 u "Why did the monkey eat the banana?"
 
-                scene v15s33_102d
+                scene v15s33_75d
                 with dissolve
 
                 au "I don't know... Why?"
 
-                scene v15s33_102e
+                scene v15s33_75e
                 with dissolve
 
                 u "Well, because monkeys like bananas... Didn't you know that?"
 
-        scene v15s33_102g # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open.
+        scene v15s33_75g # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open.
         with dissolve
 
         au "Haha! That was awful, [name]."
 
-        scene v15s33_102h # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smiel, mouth closed.
+        scene v15s33_75h # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth closed.
         with dissolve
 
         u "*Laughs* I'm a man of my word."
 
-        scene v15s33_102g
+        scene v15s33_75g
         with dissolve
 
         au "I'm happy you're here with me."
