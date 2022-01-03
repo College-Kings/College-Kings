@@ -285,12 +285,12 @@ screen quick_menu():
             spacing 15
 
             textbutton "SCENE SELECT" action Show("bugTesting_SceneSelect")
-            add "gui/arrow.png" yalign 0.5
+            add "gui/common/arrow.png" yalign 0.5
 
             null width 10
 
             textbutton "CHEATS" action Show("bugTesting_cheatMenu")
-            add "gui/arrow.png" yalign 0.5
+            add "gui/common/arrow.png" yalign 0.5
 
 
 style quick_menu_button:

@@ -219,7 +219,7 @@ label v15s48a:
 
     pause 0
 
-    call screen v15s18a_Nora
+    call screen v15s48a_nora
 
 label v15s48a_boobs:
     $ v15s48a_frboobs = True

@@ -1,6 +1,4 @@
-screen v13s40_chloe():
-    add Transform("images/v13/Scene 40/v13s40_12.webp", blur=10)
-
+screen v15s48a_nora9():
     vbox:
         align (0.5, 1.0)
         yoffset -50

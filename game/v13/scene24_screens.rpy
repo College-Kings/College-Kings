@@ -28,9 +28,9 @@ screen v13s24_girl():
             fixed:
                 xysize (269, 74)
                 if emmy.relationship.value >= Relationship.LIKES.value:
-                    add "images/button_gray.webp"
+                    add "gui/common/button_gray.webp"
                 else:
-                    add "images/button_light_gray.webp"
+                    add "gui/common/button_light_gray.webp"
                 text "Emmy" align (0.5, 0.5)
 
         button:
@@ -40,9 +40,9 @@ screen v13s24_girl():
             fixed:
                 xysize (269, 74)
                 if kourtney.relationship.value >= Relationship.LIKES.value:
-                    add "images/button_gray.webp"
+                    add "gui/common/button_gray.webp"
                 else:
-                    add "images/button_light_gray.webp"
+                    add "gui/common/button_light_gray.webp"
                 text "Kourtney" align (0.5, 0.5)
 
         button:
@@ -52,9 +52,9 @@ screen v13s24_girl():
             fixed:
                 xysize (269, 74)
                 if aryssa.relationship.value >= Relationship.LIKES.value:
-                    add "images/button_gray.webp"
+                    add "gui/common/button_gray.webp"
                 else:
-                    add "images/button_light_gray.webp"
+                    add "gui/common/button_light_gray.webp"
                 text "Aryssa" align (0.5, 0.5)
 
         button:
@@ -62,5 +62,5 @@ screen v13s24_girl():
 
             fixed:
                 xysize (269, 74)
-                add "images/button_gray.webp"
+                add "gui/common/button_gray.webp"
                 text "No Date" align (0.5, 0.5)
