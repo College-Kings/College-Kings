@@ -201,89 +201,89 @@ label v15s12:
 
             u "(*Sighs* Do I want to know?)" 
 
-        menu:
-            "Tell me":
-                $ add_point(KCT.TROUBLEMAKER)# TODO - KCT and character points
-                $ chloe.points -= 1 
-                
-                scene v15s12_5
-                with dissolve
-                
-                u "It's alright. I mean, thank you, haha... But go ahead. You can tell me."
+            menu:
+                "Tell me":
+                    $ add_point(KCT.TROUBLEMAKER)# TODO - KCT and character points
+                    $ chloe.points -= 1 
+                    
+                    scene v15s12_5
+                    with dissolve
+                    
+                    u "It's alright. I mean, thank you, haha... But go ahead. You can tell me."
 
-                scene v15s12_5a
-                with dissolve
+                    scene v15s12_5a
+                    with dissolve
 
-                li "Haha, okay... I mean it was nothing too specific, I guess."
-                
-                li "Grayson apparently had major trust issues."
-                li "And I guess it got to the point where he wouldn't let her go anywhere without telling him exactly where or who she was going with."
+                    li "Haha, okay... I mean it was nothing too specific, I guess."
+                    
+                    li "Grayson apparently had major trust issues."
+                    li "And I guess it got to the point where he wouldn't let her go anywhere without telling him exactly where or who she was going with."
 
-                scene v15s12_5
-                with dissolve
+                    scene v15s12_5
+                    with dissolve
 
-                u "Jeez..."
+                    u "Jeez..."
 
-                scene v15s12_5a
-                with dissolve
+                    scene v15s12_5a
+                    with dissolve
 
-                li "If she was ever seen talking to another guy, he would instantly accuse her of cheating and that would lead to an argument..."
+                    li "If she was ever seen talking to another guy, he would instantly accuse her of cheating and that would lead to an argument..."
 
-                scene v15s12_5c # FPP. Lindsey concerned mouth open [Checkpoint D].
-                with dissolve
+                    scene v15s12_5c # FPP. Lindsey concerned mouth open [Checkpoint D].
+                    with dissolve
 
-                li "After a while, she realized she had to stop dating him if she didn't want to be yelled at and untrusted all day."
+                    li "After a while, she realized she had to stop dating him if she didn't want to be yelled at and untrusted all day."
 
-                scene v15s12_5d # FPP. Lindsey concerned mouth closed [Checkpoint D].
-                with dissolve
+                    scene v15s12_5d # FPP. Lindsey concerned mouth closed [Checkpoint D].
+                    with dissolve
 
-                u "*Sighs* That's so toxic."
+                    u "*Sighs* That's so toxic."
 
-                scene v15s12_5c
-                with dissolve
+                    scene v15s12_5c
+                    with dissolve
 
-                li "Yeah, it was a very toxic relationship."
+                    li "Yeah, it was a very toxic relationship."
 
-                scene v15s12_5a
-                with dissolve
+                    scene v15s12_5a
+                    with dissolve
 
-                li "But to be fair, this is only one side of the story. I guess you would have to steal Grayson's diary to get the full picture, haha."
+                    li "But to be fair, this is only one side of the story. I guess you would have to steal Grayson's diary to get the full picture, haha."
 
-                scene v15s12_5e # FPP. Lindsey, happy, smiling, mouth closed [Checkpoint D].
-                with dissolve
+                    scene v15s12_5e # FPP. Lindsey, happy, smiling, mouth closed [Checkpoint D].
+                    with dissolve
 
-                u "*Laughs* Yeah, I don't think he's the type to keep it under his pillow though..."
+                    u "*Laughs* Yeah, I don't think he's the type to keep it under his pillow though..."
 
-                scene v15s12_5f # FPP. Lindsey, happy, smiling, mouth open [Checkpoint D]. 
-                with dissolve
+                    scene v15s12_5f # FPP. Lindsey, happy, smiling, mouth open [Checkpoint D]. 
+                    with dissolve
 
-                li "*Chuckles* What a horrible hiding spot."
+                    li "*Chuckles* What a horrible hiding spot."
 
-                scene v15s12_5
-                with dissolve
+                    scene v15s12_5
+                    with dissolve
 
-                u "Anyway, thanks for telling me."
+                    u "Anyway, thanks for telling me."
 
-                scene v15s12_5a
-                with dissolve
+                    scene v15s12_5a
+                    with dissolve
 
-                li "No problem."
+                    li "No problem."
 
-            "Not interested":
-                $ add_point(KCT.BOYFRIEND) # TODO: KCT and character points 
-                $ chloe.points += 1
-                
-                scene v15s12_5a
-                with dissolve
-                
-                u "Eh, to be honest... It's in the past and... it should just be left there, haha."
-                
-                u "I don't want to know about what problems she had with her ex-boyfriends unless she tells me of course."
+                "Not interested":
+                    $ add_point(KCT.BOYFRIEND) # TODO: KCT and character points 
+                    $ chloe.points += 1
+                    
+                    scene v15s12_5a
+                    with dissolve
+                    
+                    u "Eh, to be honest... It's in the past and... it should just be left there, haha."
+                    
+                    u "I don't want to know about what problems she had with her ex-boyfriends unless she tells me of course."
 
-                scene v15s12_5
-                with dissolve
+                    scene v15s12_5
+                    with dissolve
 
-                li "Yeah, fair enough, I respect that. That's why I wanted to ask." 
+                    li "Yeah, fair enough, I respect that. That's why I wanted to ask." 
 
         # -regardless of previous choice, still if Chloe GF
         if chloe.relationship.value >= Relationship.GIRLFRIEND.value and lindsey.relationship.value >= Relationship.FWB.value:
