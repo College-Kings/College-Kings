@@ -73,8 +73,8 @@ label v15s33:
 
     u "Come on, let's go in."
 
-    with fade 
     scene v15s33_4 # TPP. Show Mc and Aubrey entering the Venue, both slight smile, mouth closed.
+    with fade
 
     pause 0.75 
 
@@ -426,7 +426,7 @@ label v15s33:
     u "Ha, thanks."
 
     scene v15s33_14 # TPP. MC peaking over the corner seeing Aubrey with her parents at the table with the flower arrangements, Aubrey looking at her dad, Her dad looking back at her, Her mom looking at her dad, all neutral face, mouth closed.
-    with fade (1,0,1)
+    with fade
 
     pause 0.75 
 
@@ -498,386 +498,339 @@ label v15s33:
     u "Haha, yeah. Barely..."
     
     if aubrey.relationship.value >= Relationship.FWB.value:
-        scene v15s33_28c # FPP. MC looking at Aubrey, Aubrey looking at her parents, slight smile, mouth open.
+        scene v15s33_19b
         with dissolve
 
         au "This is my date, [name]."
 
     else:
-        scene v15s33_28b # FPP. MC looking at Aubrey, Aubrey facing her parents, Aubrey looking at her parents, Aubrey neutral face, mouth open.
+        scene v15s33_19b # FPP. MC looking at Aubrey, Aubrey looking at her parents, slight smile, mouth open.
         with dissolve
 
         au "This is my friend, [name]."
 
-    scene v15s33_29 # FPP. MC looking at both of Aubrey's parents, Both her parents looking at MC, neutral face, mouth closed.wwwwwwwwwwwww
+    scene v15s33_20 # FPP. MC looking at both of Aubrey's parents, Both her parents looking at MC, neutral face, mouth closed.
     with dissolve
 
     u "Pleased to meet you both. And congratulations on your second wedding day."
 
-    scene v15s33_30 # TPP. Show MC and Aubrey's dad shaking hands, MC slight smile, mouth closed, Aubrey's dad neutral face, mouth open.
+    scene v15s33_21 # TPP. Show MC and Aubrey's dad shaking hands, MC slight smile, mouth closed, Aubrey's dad neutral face, mouth open.
     with dissolve
 
     audad "It's very nice to meet you, [name]."
 
-    scene v15s33_31 # FPP. MC looking at Aubrey's mom, Aubrey's mom looking at MC, Aubrey's mom neutral face, mouth open.
+    scene v15s33_22 # FPP. MC looking at Aubrey's mom, Aubrey's mom looking at MC, Aubrey's mom neutral face, mouth open.
     with dissolve
 
     aumom "Yes, it is, and thank you..."
 
     aumom "I'm happy with the arrangements and all but I must say, we had much better flowers at our first wedding."
 
-    scene v15s33_32 # FPP. MC looking at Aubrey's dad, Aubrey's dad looking at Aubrey's mom, Aubrey's dad neutral face, mouth open.
+    scene v15s33_23 # FPP. MC looking at Aubrey's dad, Aubrey's dad looking at Aubrey's mom, Aubrey's dad neutral face, mouth open.
     with dissolve
 
     audad "Oh, my..."
 
     audad "I told you already, I'll get a refund."
 
-    scene v15s33_31a # FPP. MC looking at Aubrey's mom, Aubrey's mom looking at Aubrey's dad, Aubrey's mom neutral face, mouth open.
+    scene v15s33_22a # FPP. MC looking at Aubrey's mom, Aubrey's mom looking at Aubrey's dad, Aubrey's mom neutral face, mouth open.
     with dissolve
 
     aumom "How?! We're already using them!"
 
-    scene v15s33_28d # FPP. MC looking at Aubrey, Aubrey looking at Aubrey's mom, Aubrey neutral face, mouth open.
+    scene v15s33_19c # FPP. MC looking at Aubrey, Aubrey looking at Aubrey's mom, Aubrey neutral face, mouth open.
     with dissolve
 
     au "Mom..."
 
-    scene v15s33_31b # FPP. MC looking at Aubrey's mom, Aubrey's mom looking at Aubrey, Aubrey's mom neutral face, mouth open.
+    scene v15s33_22b # FPP. MC looking at Aubrey's mom, Aubrey's mom looking at Aubrey, Aubrey's mom neutral face, mouth open.
     with dissolve
 
     aumom "And it's not that they aren't pretty, they are..."
 
     aumom "But they're just not what I was envisioning."
 
-    scene v15s33_31d # FPP. MC looking at Aubrey's mom, Aubrey's mom looking at Aubrey, Aubrey's mom neutral face, mouth closed.
+    scene v15s33_22d # FPP. MC looking at Aubrey's mom, Aubrey's mom looking at Aubrey, Aubrey's mom neutral face, mouth closed.
     with dissolve
 
     u "(Damn, we've got a bridezilla over here! Ha... Yikes.)"
 
-    scene v15s33_28d
+    scene v15s33_19c
     with dissolve
 
     au "Can you please just try to forget about the flowers and enjoy your special day?"
 
-    scene v15s33_31b
+    scene v15s33_22b
     with dissolve
 
     aumom "Flowers make a wedding, honey. You might not care much about it, but your grandma was a professional florist and I know a thing or two ab-"
 
-    scene v15s33_28d
+    scene v15s33_19c
     with dissolve
 
     au "About arrangements. Yeah, so I've heard."
 
-    scene v15s33_32a # FPP. MC looking at Aubrey's dad, Aubrey's dad looking at Aubrey, Aubrey's dad neutral face, mouth open.
+    scene v15s33_23a # FPP. MC looking at Aubrey's dad, Aubrey's dad looking at Aubrey, Aubrey's dad neutral face, mouth open.
     with dissolve
 
     audad "Your grandma had very high standards when it came to her flowers."
 
-    scene v15s33_31b
+    scene v15s33_22b
     with dissolve
 
     aumom "She did indeed."
 
-    scene v15s33_32a
+    scene v15s33_23a
     with dissolve
 
     audad "And even higher standards for potential husbands for her daughters."
 
-    scene v15s33_31c # FPP. MC looking at Aubrey's mom, Aubrey's mom looking at Aubrey's dad, Aubrey's mom slight smile, mouth open.
+    scene v15s33_22c # FPP. MC looking at Aubrey's mom, Aubrey's mom looking at Aubrey's dad, Aubrey's mom slight smile, mouth open.
     with dissolve
 
     aumom "True. So, how I ended up with you, no idea. *Chuckles*"
 
-    scene v15s33_32b # FPP. MC looking at Aubrey's dad, Aubrey's dad looking at Aubrey's mom, Aubrey's dad slight smile, mouth closed.
+    scene v15s33_23b # FPP. MC looking at Aubrey's dad, Aubrey's dad looking at Aubrey's mom, Aubrey's dad slight smile, mouth closed.
     with dissolve
 
     audad "*Laughs* I should know better after all these years than to go fishing for a compliment"
 
-    scene v15s33_31c
+    scene v15s33_22c
     with dissolve
 
     aumom "Haha, my silly man."
 
-    scene v15s33_29a # FPP. Show Aubrey's parents kissing.
-    with dissolve
-
-    pause 0.75
-    
-    scene v15s33_28e # FPP. MC looking at Aubrey, Aubrey looking at Aubrey's mom, Aubrey grossed out, mouth open.
+    scene v15s33_20a # FPP. Show Aubrey's parents kissing.
     with dissolve
 
     au "Gross..."
 
-    scene v15s33_29a
-    with dissolve
 
     u "(Very gross...)"
 
-    scene v15s33_29b # FPP. Aubrey's parents kissing in a different position.
-    with dissolve
-
-    pause 0.75 
-
-    scene v15s33_28f # FPP. MC looking at Aubrey, Aubrey facing MC again, Aubrey looking at MC, Aubrey grossed out, mouth open.
+    scene v15s33_19d # FPP. MC looking at Aubrey, Aubrey facing MC again, Aubrey looking at MC, Aubrey grossed out, mouth open.
     with dissolve
 
     au "Let's get a drink?"
 
-    scene v15s33_28g # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey grossed out, mouth closed.
+    scene v15s33_19e # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey grossed out, mouth closed.
     with dissolve
 
     u "Absolutely."
 
-    scene v15s33_33 # TPP. MC and Aubrey walking over to the drinks table, both slight smile, mouth closed.
-    with dissolve
+    scene v15s33_24 # TPP. MC and Aubrey walking over to the drinks table, both slight smile, mouth closed.
+    with dissolve 
 
     pause 0.75
 
-    scene v15s33_34 # FPP. MC and Aubrey at the drinks table, Aubrey next to MC, MC looking at Aubrey, Aubrey looking at MC, slight smile, mouth open.
+    scene v15s33_25 # FPP. MC and Aubrey at the drinks table, Aubrey next to MC, MC looking at Aubrey, Aubrey looking at MC, slight smile, mouth open.
     with dissolve
 
     au "Let's have a shot. I need one after that, haha!"
 
-    scene v15s33_34a # FPP. MC looking at Aubrey, Aubrey looking at MC, slight smile, mouth closed.
+    scene v15s33_25a # FPP. MC looking at Aubrey, Aubrey looking at MC, slight smile, mouth closed.
     with dissolve
 
     u "*Laughs* Okay, fair."
 
-    scene v15s33_35 # FPP. MC looking down at the table pouring alcohol into a shot glass, there is two shot glasses in shot, First one being filled by MC.
+    scene v15s33_26 # FPP. MC looking down at the table pouring alcohol into a shot glass, there is two shot glasses in shot, First one being filled by MC.
     with dissolve
 
     pause 0.75 
 
-    scene v15s33_35a # FPP. MC looking down at the table pouring alcohol into the second glass, the first one filled. 
-    with dissolve
-
-    pause 0.75 
-
-    scene v15s33_36 # TPP. MC handing Aubrey one of the filled shot glasses, Naomi and Aubrey's uncle in the background distracted talking to each other, MC looking at Aubrey, Aubrey looking at MC, Everyone slight smile, mouth closed.
-    with dissolve
-
-    pause 0.75 
-
-    scene v15s33_36a # TPP. MC and Aubrey clinking shot glasses, MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open.
-    with dissolve
+    scene v15s33_27 # TPP. MC and Aubrey clinking shot glasses, MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open.
+    with dissolve 
 
     au "Cheers!"
-
-    scene v15s33_37 # TPP. Close up of the Shot glasses clinking together.
-    with dissolve
 
     menu:
         "Take it":
             $ add_point(KCT.BOYFRIEND)
 
-            scene v15s33_38 # TPP. Close up of Aubrey taking the shot.
+            scene v15s33_13a # TPP. MC and Aubrey clinking shot glasses, Both slight smile, mouth closed.
             with dissolve
 
             pause 0.75 
 
-            scene v15s33_34a 
+            scene v15s33_25a 
             with vpunch
 
             u "Eurgh! Fuck Sambuca..."
 
-            scene v15s33_34
+            scene v15s33_25
             with dissolve
 
             au "Ha! What? You don't like it?"
 
-            scene v15s33_34a
+            scene v15s33_25a
             with dissolve
 
             u "No, I don't like it! How the hell are you guys drinking this shit?"
 
-            scene v15s33_34
+            scene v15s33_25
             with dissolve
 
             au "*Laughs* Years of practice."
 
         "Pretend to take it":
             $ add_point(KCT.TROUBLEMAKER)
+            scene v15s33_13a
+            with dissolve 
 
-            scene v15s33_38
-            with dissolve
+
+            pause 0.75
+            scene v15s33_82
+            with dissolve 
+
 
             pause 0.75
 
-            scene v15s33_21
-            with dissolve
-
-            pause 0.75
-
-            scene v15s33_34a 
-            with dissolve
+            scene v15s33_25a 
+            with dissolve 
 
             u "Mmm...That hit the spot, ha."
 
-            scene v15s33_34
+            scene v15s33_25
             with dissolve
 
             au "Honestly, it's just what I needed."
 
-    scene v15s33_34b # FPP. MC looking at Aubrey, Aubrey looking at her Uncle across the table, slight smile, mouth open.
+    scene v15s33_25b # FPP. MC looking at Aubrey, Aubrey looking at her Uncle across the table, slight smile, mouth open.
     with dissolve
 
     au "Oh! There's my uncle Ricky."
 
-    scene v15s33_39 # FPP. MC looking across the Drinks table and looking at Aubrey's Uncle(The uncle looks sort of like a redneck, flannel, brown pants, boots) who is next to Naomi, Aubrey's uncle holding a beer looking at Naomi, Aubrey's uncle slight smile, mouth open.
+    scene v15s33_28 # FPP. MC looking across the Drinks table and looking at Aubrey's Uncle(The uncle looks sort of like a redneck, flannel, brown pants, boots) who is next to Naomi, Aubrey's uncle holding a beer looking at Naomi, Aubrey's uncle slight smile, mouth open.
     with dissolve
 
     rick "I suspect that you encountered many fine cheeses while you were in Europe."
 
-    scene v15s33_17i # FPP. MC looking at Naomi, Naomi facing and looking at Aubrey's Uncle, Naomi bored, mouth open.
+    scene v15s33_12h # FPP. MC looking at Naomi, Naomi facing and looking at Aubrey's Uncle, Naomi bored, mouth open.
     with dissolve
 
     na "Oh yeah, sure... France is full of cheese..."
 
-    scene v15s33_39
+    scene v15s33_28
     with dissolve
 
     rick "Oh, the French! Incredible cheese makers. Masters of the craft!"
 
-    scene v15s33_39a # FPP. Aubrey's Uncle looking at Aubrey, MC looking at Aubrey's Uncle, Aubrey's uncle slight smile, mouth open.
+    scene v15s33_28a # FPP. Aubrey's Uncle looking at Aubrey, MC looking at Aubrey's Uncle, Aubrey's uncle slight smile, mouth open.
     with dissolve
 
     rick "Oh! Hello, Aubrey."
 
-    scene v15s33_34b
+    scene v15s33_25b
     with dissolve
 
     au "Hi, uncle Ricky."
 
-    scene v15s33_39b # FPP. Aubrey's Uncle looking at Mc, MC looking at Aubrey's uncle, Aubrey's uncle slight smile, mouth closed.
+    scene v15s33_28b # FPP. Aubrey's Uncle looking at Mc, MC looking at Aubrey's uncle, Aubrey's uncle slight smile, mouth open.
     with dissolve
 
     rick "And who's this young man you're dragging along with you?"
 
-    scene v15s33_34b
+    scene v15s33_25b
     with dissolve
 
     au "*Giggles* This is [name]."
 
-    scene v15s33_39c # FPP. Aubrey's Uncle looking at MC, MC looking at Aubrey's Uncle, Aubrey's uncle slight smile, mouth closed.
+    scene v15s33_28c # FPP. Aubrey's Uncle looking at MC, MC looking at Aubrey's Uncle, Aubrey's uncle slight smile, mouth closed.
     with dissolve
 
     u "Hi."
 
     if aubrey.relationship.value >= Relationship.FWB.value:
-        scene v15s33_34b
+        scene v15s33_25b
         with dissolve
 
         au "He's my date."
 
-        scene v15s33_34c # FPP. Aubrey looking at MC, MC looking at Aubrey, Aubrey smirking at MC, mouth closed.
-        with dissolve
-        
-        pause 0.75 
-
-        scene v15s33_39b
+        scene v15s33_28b
         with dissolve
 
         rick "Well, it's a pleasure to meet you."
 
-        scene v15s33_40 # TPP. Show MC and Aubrey's uncle shaking hands, both slight smile, mouth closed.
+        scene v15s33_29 # TPP. Don't show Naomi or Aubrey so this can be reused :) Show MC and Aubrey's uncle shaking hands, both slight smile, mouth closed.
         with dissolve
 
         pause 0.75 
 
-        scene v15s33_39a
-        with dissolve
+        scene v15s33_28a
+        with dissolve 
 
         rick "Damn, Aubs. A pretty face and strong handshake! He might be a keeper, this one."
 
-        scene v15s33_34d # FPP. Aubrey looking at MC, MC looking at Aubrey, Aubrey slight smile, Aubrey blushing, mouth closed.
+        scene v15s33_25c # FPP. Aubrey looking at MC, MC looking at Aubrey, Aubrey slight smile, Aubrey blushing, mouth closed.
         with dissolve
 
         pause 0.75
 
-        scene v15s33_39c
-        with dissolve
+        scene v15s33_28c
+        with dissolve 
 
         u "*Laughs* Thank you. I appreciate it. I hope she keeps me..."
 
-        scene v15s33_41 # TPP. MC kissing Aubrey on the Cheek. Aubrey smiling and blushing, mouth closed.
+        scene v15s33_30 # TPP. MC kissing Aubrey on the Cheek. Aubrey smiling and blushing, mouth closed.
         with dissolve
 
         pause 0.75
 
     else:
-        scene v15s33_39b
+        scene v15s33_28b
         with dissolve
 
         rick "Hello, [name]. Are you a good friend to my favorite niece?"
 
-        scene v15s33_39c
+        scene v15s33_28c
         with dissolve
 
         u "*Chuckles*"
 
-        scene v15s33_17i
+        scene v15s33_12h
         with dissolve
 
         na "Hey! I'm right here you jackass."
 
-        scene v15s33_34e # FPP. MC looking at Aubrey, Aubrey looking at Naomi, Aubrey smirking, mouth open.
+        scene v15s33_25d # FPP. MC looking at Aubrey, Aubrey looking at Naomi, Aubrey smirking, mouth open.
         with dissolve
 
         au "Haha, we see you princess. Don't cry."
 
-        scene v15s33_42 # TPP. Aubrey and her uncle fist bumping and laughing.
-        with dissolve
-
         u "(So, he's the second black sheep of the family I assume? Hah!)"
 
-    scene v15s33_39b
+    scene v15s33_28b
     with dissolve
 
     rick "We were just discussing the different cheeses we have to choose from tonight."
 
-    scene v15s33_39c
+    scene v15s33_28c
     with dissolve
 
     u "Ah, interesting."
 
-    scene v15s33_39b
+    scene v15s33_28b
     with dissolve
 
     rick "I think so too! It's nice to have found another cheese connoisseur."
 
-    scene v15s33_43 # TPP. Show Naomi walking around to the other side of the table, slight smile, mouth closed.
-    with dissolve
-
-    pause 0.75
-
-    scene v15s33_44 # TPP. Show Naomi and Aubrey stepped away from the group, Naomi looking at Aubrey, Aubrey looking at Naomi, Naomi smirking, mouth open, Aubrey slight smile, mouth closed.
+    scene v15s33_31 # TPP. Show Naomi and Aubrey stepped away from the group, Naomi looking at Aubrey, Aubrey looking at Naomi, Naomi smirking, mouth open, Aubrey smirking, mouth open.
     with dissolve
 
     na "*Whispers* Run away with me?"
 
-    scene v15s33_44a # TPP. Show Naomi and Aubrey stepped away from the group, Naomi looking at Aubrey, Aubrey looking at Naomi, Naomi smirking, mouth closed, Aubrey smirking, mouth open.
-    with dissolve
-
     au "*Whispers* Right behind you."
-
-    scene v15s33_45 # FPP. MC looking at Naomi and Aubrey walk away.
-    with dissolve
 
     u "Where are you-"
 
-    scene v15s33_45a # FPP. Naomi and Aubrey slightly turning around both blowing MC a kiss.
-    with dissolve
-
     u "(*Sighs* They're most dangerous when they're together... Haha.)"
 
-    scene v15s33_39b
+    scene v15s33_28b
     with dissolve
 
     rick "Tell me, [name], do you like blue cheese?"
 
-    scene v15s33_39c
+    scene v15s33_28c
     with dissolve
 
     u "Um..."
@@ -887,24 +840,24 @@ label v15s33:
             $ add_point(KCT.TROUBLEMAKER)
             u "Blue cheese? I'm pretty sure that if your cheese is blue, you shouldn't-"
 
-            scene v15s33_39b
+            scene v15s33_28b
             with dissolve
 
             rick "Haha! You're pulling my leg, right?"
 
             rick "How can you not know what blue cheese is? What are they even teaching you kids these days?"
 
-            scene v15s33_39c
+            scene v15s33_28c
             with dissolve
 
             u "Ha, well... Uh, economics and history? Things like that."
 
-            scene v15s33_39b
+            scene v15s33_28b
             with dissolve
 
             rick "Ah, come on. That shit is old news... *Scoffs*"
 
-            scene v15s33_39c
+            scene v15s33_28c
             with dissolve
 
             u "(You know what? I like this guy.) *Laughs*"
@@ -913,34 +866,24 @@ label v15s33:
             $ add_point(KCT.BRO)
             u "Are you kidding? Blue cheese is great. It's like, top tier of all cheeses."
 
-            scene v15s33_39b
+            scene v15s33_28b
             with dissolve
 
             rick "Yes!"
 
-            play sound "sounds/slap.mp3"
-
-            scene v15s33_40a # TPP. Show MC and Aubrey's uncle high fiving.
-            with dissolve
-
-            pause 0.75 
-
-            scene v15s33_39b
-            with dissolve
-
             rick "You're a good man!"
 
-            scene v15s33_39c
+            scene v15s33_28c
             with dissolve
 
             u "Haha..."
 
-    scene v15s33_46 # TPP. Show Aubrey's Uncle picking up a cracker with cheese on it.          
+    scene v15s33_32 # TPP. Show Aubrey's Uncle picking up a cracker with cheese on it.          
     with dissolve
 
     rick "Here, try this and tell me what you think."
 
-    scene v15s33_39d # FPP. Aubrey's Uncle holding the cheese and crackers infront of MC's face, Aubrey's uncle, slight smile, mouth closed.
+    scene v15s33_28d # FPP. Aubrey's Uncle holding the cheese and crackers infront of MC's face, Aubrey's uncle, slight smile, mouth closed.
     with dissolve
 
     u "Oh- Uh... (Am I about to eat cheese out of a grown man's hands?)"
@@ -952,59 +895,49 @@ label v15s33:
 
             u "(Yes. Yes, I am.)"
 
-            scene v15s33_47 # TPP. Show Aubrey's Uncle hand feeding MC the cheese and cracker, Aubrey's uncle slight smile, mouth closed.
+            scene v15s33_33 # TPP. Show Aubrey's Uncle hand feeding MC the cheese and cracker, Aubrey's uncle slight smile, mouth closed.
             with dissolve
 
             pause 0.75
 
-            scene v15s33_48 # TPP. Show MC with a weird face as he chews the cheese and cracker.
-            with dissolve
-
-            pause 0.75
-
-            scene v15s33_39c 
+            scene v15s33_28c 
             with dissolve
 
             u "Mmm! *Coughs* Thanks..."
 
             u "(Man, what the hell is this stuff?)"
 
-            scene v15s33_39b
+            scene v15s33_28b
             with dissolve
 
             rick "That's Stilton cheese, buddy! Do you feel it?"
 
-            scene v15s33_39c
+            scene v15s33_28c
             with dissolve
 
             u "Ugh, I feel... Something... *Coughs*"
 
-            scene v15s33_39b
+            scene v15s33_28b
             with dissolve
 
             rick "England's finest cheese! Imported specially for the wedding."
 
-            scene v15s33_39c
+            scene v15s33_28c
             with dissolve
 
             u "(It smells like ass, dude... What the fuck?)"
 
             u "I can really taste the... (Ugh, fuck...) the quality."
 
-            scene v15s33_39b
+            scene v15s33_28b
             with dissolve
 
             rick "I'm glad you approve! It's a family favorite."
 
-            scene v15s33_39c
+            scene v15s33_28c
             with dissolve
 
             u "(This family and their weird taste buds...)"
-
-            scene v15s33_46a # FPP. Show Aubrey's uncle putting a piece of cheese and cracker in his mouth.
-            with dissolve
-
-            pause 0.75
 
         "Don't eat it":
             $ add_point(KCT.TROUBLEMAKER)
@@ -1012,262 +945,223 @@ label v15s33:
 
             u "You know what, uh... Thanks, but I'm not feeling hungry right now."
 
-            scene v15s33_39e # FPP. Aubrey's Uncle holding the cheese and crackers infront of MC's face, Aubrey's uncle, slight smile, mouth open.
+            scene v15s33_28b
             with dissolve
 
             rick "This is Stilton, young man. A very popular cheese from England."
 
             rick "I imported it just for the wedding. My brother and his wife are huge fans of it."
 
-            scene v15s33_39c
+            scene v15s33_28d
             with dissolve
 
             u "Wow, that's... Interesting."
 
             u "(Why the fuck does it smell so... Wrong?)"
 
-            scene v15s33_39e
+            scene v15s33_28b
             with dissolve
 
             rick "*Sighs*"
 
-            scene v15s33_39b
-            with dissolve
-
             rick "Well, your loss. Make sure you try some before you go, I want to know what you think."
 
-            scene v15s33_39c
+            scene v15s33_28c
             with dissolve
 
             u "Okay, yeah. Sure thing."
 
-            scene v15s33_39b
+            scene v15s33_28b
             with dissolve
 
             rick "But hurry up before I eat it all! *Laughs*"
 
-            scene v15s33_46a
-            with dissolve
-
-            pause 0.75
-
     if v15s33_cheese:
-        scene v15s33_39b
+        scene v15s33_28b
         with dissolve
 
         rick "So, you and my little Brey are close?"
 
-        scene v15s33_39c
+        scene v15s33_28c
         with dissolve
 
         u "Brey as in Aubrey, right? Haha."
 
-        scene v15s33_39b
+        scene v15s33_28b
         with dissolve
 
         rick "Oh, yeah. Sorry, force of habit around here. She's always been my sidekick, little Brey."
 
-        scene v15s33_39c
+        scene v15s33_28c
         with dissolve
 
         u "Ha, no worries. She seems to have smiled the most so far when speaking to you, so... *Chuckles*"
     
         u "But, uh, yeah... We go to college together, just met this year."
 
-        scene v15s33_39b
+        scene v15s33_28b
         with dissolve
 
         rick "Lives in her older sister's shadow, you know."
 
-        scene v15s33_39f # FPP. Aubrey's Uncle sipping from his beer.
-        with dissolve
-
-        pause 0.75 
-
-        scene v15s33_39c
+        scene v15s33_28c
         with dissolve
 
         u "(No shit... We should play this safe though.)"
 
         u "What do you mean by that?"
 
-        scene v15s33_39b
+        scene v15s33_28b
         with dissolve
 
         rick "Naomi is clearly the favorite, everyone can see it. You don't have to act all \"good\" around me, kid. Neither of you do."
 
-        scene v15s33_39c
+        scene v15s33_28c
         with dissolve
 
         u "Oh, well, thanks. It's nice to see that Aubrey has always had someone on her side, I guess."
 
-        scene v15s33_39b
+        scene v15s33_28b
         with dissolve
 
         rick "Ha. Yeah."
 
-        scene v15s33_39c
+        scene v15s33_28c
         with dissolve
 
         u "Why is that, though? It's really unfair how hard everyone is on Aubrey."
 
-        scene v15s33_39b
+        scene v15s33_28b
         with dissolve
 
         rick "Long story short? Naomi was planned, Aubrey wasn't."
 
-        scene v15s33_39f
-        with dissolve
-
-        pause 0.75 
-
-        scene v15s33_39c
+        scene v15s33_28c
         with dissolve
 
         u "Damn."
 
-        scene v15s33_39b
+        scene v15s33_28b
         with dissolve
 
         rick "Yep, so when Aubrey came along... *Sighs*"
 
         rick "They had to pull the plug on a big business venture they had planned. And this business plan had been the goal for... Years."
 
-        scene v15s33_39f 
-        with dissolve
 
-        pause 0.75 
-
-        scene v15s33_39b
+        scene v15s33_28b
         with dissolve
 
         rick "Between raising two girls and saving up for Aubrey's college education..."
 
         rick "Doing everything to ensure that your child has a solid start in life is always the plan, ha."
 
-        scene v15s33_39f 
-        with dissolve
-
-        pause 0.75
-
-        scene v15s33_39b
+        scene v15s33_28b
         with dissolve
 
         rick "But they couldn't live the pretty life they pictured after Brey was born."
 
-        scene v15s33_39c
+        scene v15s33_28c
         with dissolve
 
         u "(Fuck's sake...) That's just... I mean, it's horrible."
 
-        scene v15s33_39b
+        scene v15s33_28b
         with dissolve
 
         rick "I don't think they're aware of it, but I do think there's a subconscious resentment there. Feel me?"
 
-        scene v15s33_39c
+        scene v15s33_28c
         with dissolve
 
         u "I do, yeah. It's not her fault, though."
 
-        scene v15s33_39b
+        scene v15s33_28b
         with dissolve
 
         rick "Not at all, no. And they're pushing her to do anything but be like Naomi, for what reason?"
 
-        scene v15s33_39f
-        with dissolve
 
-        pause 0.75
-
-        scene v15s33_39c
+        scene v15s33_28c
         with dissolve
 
         u "Ha... Yeah, I don't know. It's strange."
 
-        scene v15s33_39b
+        scene v15s33_28b
         with dissolve
 
         rick "Whether you end up being just a friend or... Something more."
 
         rick "Make sure you look after her for me."
 
-        scene v15s33_39c
+        scene v15s33_28c
         with dissolve
 
         u "I will, I do."
 
         u "Thanks... A lot. For sharing that with me."
 
-        scene v15s33_39b
+        scene v15s33_28b
         with dissolve
 
         rick "That's okay. It's the cheese talking! *Laughs* Our little secret, alright?"
 
-        scene v15s33_39c
+        scene v15s33_28c
         with dissolve
 
         u "Right."
 
-        scene v15s33_49 # TPP. Show MC and Aubrey's uncle shaking hands across the cheese table with no one else around, both slight smile, mouth closed.
-        with dissolve
+        scene v15s33_29
+        with dissolve 
 
         pause 0.75 
 
     play sound "sounds/bells.mp3"
     # Asked for hand bell sounds but we only have the clocktower bells.
 
-    scene v15s33_39g # FPP. MC looking at Aubrey's Uncle, Aubrey Uncle looking off in the distance, slight smile, mouth open.
-    with dissolve
+    scene v15s33_28b
+    with dissolve 
 
     rick "Oh shit- I believe that's lunch being served over there. Let's head over."
 
-    scene v15s33_39c
+    scene v15s33_28c
     with dissolve
 
     u "Sounds good."
 
-    scene v15s33_50 # TPP. Show MC and Aubrey's uncle walking up to the table where lunch is being served, Rectangular table with a white linen cloth, serving plates and utensils, and flowers in the center, Aubrey's uncle and MC both slight smile, mouth closed.
-    with dissolve
-
-    pause 0.75
-
-    scene v15s33_51 # TPP. Show Mc and Aubrey's Uncle sitting next to each other across from Naomi and Aubrey, Aubrey opposite of MC, Naomi opposite of Aubrey's Uncle, all slight smile, mouth closed.
-    with dissolve
-
-    pause 0.75 
-
-    scene v15s33_52 # FPP. MC looking at Aubrey's Uncle, Aubrey's uncle looking at the table, Naomi and Aubrey off camera not shown, Aubrey's uncle slight smile, mouth closed.
-    with dissolve
-
-    rick "This looks wonderful!"
-
-    scene v15s33_53 # TPP. Show MC, Aubrey's Uncle, Naomi, and Aubrey eating with food on their plates.
+    scene v15s33_35 # TPP. Show Mc and Aubrey's Uncle sitting next to each other across from Naomi and Aubrey, Aubrey opposite of MC, Naomi opposite of Aubrey's Uncle, all slight smile, mouth closed.
     with fade
 
     pause 0.75 
 
-    scene v15s33_54 # FPP. MC looking across the table at Aubrey, Aubrey looking at her plate as she eats oblivious to MC, Aubrey slight smile, mouth closed.
+    scene v15s33_36 # FPP. MC looking at Aubrey's Uncle, Aubrey's uncle looking at the table, Naomi and Aubrey off camera not shown, Aubrey's uncle slight smile, mouth closed.
+    with dissolve 
+
+    rick "This looks wonderful!"
+
+    scene v15s33_37 # TPP. Show MC, Aubrey's Uncle, Naomi, and Aubrey eating with food on their plates.
+    with fade
+
+    pause 0.75 
+
+    scene v15s33_38 # FPP. MC looking across the table at Aubrey, Aubrey looking at her plate as she eats oblivious to MC, Aubrey slight smile, mouth closed.
     with vpunch
 
     u "(Wait- What was that? I just felt something touch my leg...)"
 
-    scene v15s33_55 # FPP. MC looking to the left of Aubrey at Naomi, Naomi looking at Mc subtly, Naomi smirking slightly, mouth closed.
+    scene v15s33_39 # FPP. MC looking to the left of Aubrey at Naomi, Naomi looking at Mc subtly, Naomi smirking slightly, mouth closed.
     with dissolve
 
     u "(Holy sh- *Gasps*)"
 
-    scene v15s33_55
-    with vpunch
-
     u "(There it was again! Is she...?)"
 
-    scene v15s33_56 # FPP. MC looking under the table, Naomi's shoeless foot rubbing on MC's crotch.
+    scene v15s33_40 # FPP. MC looking under the table, Naomi's shoeless foot rubbing on MC's crotch.
     with dissolve
 
     u "(Oh... Shit...)"
 
-    scene v15s33_54
+    scene v15s33_38
     with dissolve
 
     pause 0.75 
