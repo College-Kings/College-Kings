@@ -624,6 +624,8 @@ label v15s10:
             scene v15s10_14 # -[CarTotal] pops up on screen based on the payout sums- # Hi Again Oscar! :D
             with dissolve
             
+            u "(It's the price we've asked for.)"
+            
             menu:
                 "Refuse offer":
                     scene v15s10_12f
@@ -1182,7 +1184,7 @@ label v15s10:
             scene v15s10_femalebuyer_4h
             with dissolve
 
-            pause 0.75
+            u "(It's the price we've asked for.)"
 
             # -[CarTotal] pops up on screen based on the payout sums-
             menu:
