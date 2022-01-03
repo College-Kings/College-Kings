@@ -1860,29 +1860,29 @@ label v15s33:
             u "(I'll just leave her alone for now... Hopefully she'll calm down and I can talk to her later.)"
 
     if aubrey.relationship.value <= Relationship.MAD.value:
-        scene v15s33_73a # TPP. MC and Naomi sitting next to each other at the wedding ceremony, Aubrey seated far away from them, MC neutral face, mouth closed, Naomi smirking, mouth closed.
+        scene v15s33_56a # TPP. MC and Naomi sitting next to each other at the wedding ceremony, Aubrey seated far away from them, MC neutral face, mouth closed, Naomi smirking, mouth closed.
         with dissolve
         
-        pause 0.75 
+        pause 0.75
 
-        scene v15s33_81 # FPP. MC looking at Aubrey as she is sat far away from him and Naomi, Aubrey sad looking at the ground, mouth closed.
+        scene v15s33_64 # FPP. MC looking at Aubrey as she is sat far away from him and Naomi, Aubrey sad looking at the ground, mouth closed.
         with dissolve
 
         u "(She's really avoiding me, huh?)"
 
-        scene v15s33_74e # FPP. MC sat next to Naomi, MC looking at Naomi, Naomi looking at MC, Naomi smirking, mouth open.
+        scene v15s33_57e # FPP. MC sat next to Naomi, MC looking at Naomi, Naomi looking at MC, Naomi smirking, mouth open.
         with dissolve
 
         na "Getting married looks like it could be fun."
 
-        scene v15s33_74f # FPP. MC sat next to Naomi, MC looking at Naomi, Naomi looking at MC, Naomi smirking, mouth closed.
+        scene v15s33_57f # FPP. MC sat next to Naomi, MC looking at Naomi, Naomi looking at MC, Naomi smirking, mouth closed.
         with dissolve
 
         menu:
             "Stay silent":
                 u "(I don't feel good about talking to her right now...) *Sighs*"
 
-                scene v15s33_74e
+                scene v15s33_57e
                 with dissolve
 
                 na "I'll take that as a no. *Laughs*"
@@ -1890,66 +1890,61 @@ label v15s33:
             "Agree":
                 u "Yeah, it's supposed to be the best day of your life. Right?"
 
-                scene v15s33_74e
+                scene v15s33_57e
                 with dissolve
 
                 na "I think so, yeah..."
 
                 na "I've had a few offers already, ha! Turned them all down so far, of course. I'm way too young for marriage wrinkles..."
 
-                scene v15s33_74f
+                scene v15s33_57f
                 with dissolve
 
                 u "(Marriage wrinkles...? Is that another supermodel term?)"
 
-                scene v15s33_82 # TPP. Close up of Aubrey looking at MC and Naomi sitting next to each other at the wedding, Aubrey looks miserable and sad, mouth closed.
+                scene v15s33_65 # TPP. Close up of Aubrey looking at MC and Naomi sitting next to each other at the wedding, Aubrey looks miserable and sad, mouth closed.
                 with dissolve
 
                 pause 0.75
 
     else:
-        scene v15s33_73 # TPP. MC and Aubrey sitting next to each other at the wedding ceremony, Naomi seated far away from them, Aubrey and MC slight smile, mouth closed.
+        scene v15s33_56 # TPP. MC and Aubrey sitting next to each other at the wedding ceremony, Naomi seated far away from them, Aubrey and MC slight smile, mouth closed.
         with fade
 
-        pause 0.75 
+        pause 0.75
 
-        scene v15s33_74 # FPP. Seated at the Ceremony, MC looking at Aubrey seated next to him, Aubrey looking at MC, Aubrey slight smile, mouth closed.
+        scene v15s33_57 # FPP. Seated at the Ceremony, MC looking at Aubrey seated next to him, Aubrey looking at MC, Aubrey slight smile, mouth closed.
         with dissolve
 
         u "It turned out really great."
 
-        scene v15s33_74a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth closed.
+        scene v15s33_57a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth closed.
         with dissolve
 
         au "Yeah, they look so happy... *Chuckles*"
 
         au "One day that will be me."
 
-        scene v15s33_74
+        scene v15s33_57
         with dissolve
 
         menu:
             "Hopefully":
                 u "I mean, hopefully."
 
-                scene v15s33_74a
+                scene v15s33_57a
                 with dissolve
 
                 au "Ha! You little shit..."
 
-                scene v15s33_74
+                scene v15s33_57
                 with dissolve
 
                 u "*Chuckles* I'm just saying! I mean, good luck."
 
                 play sound "sounds/thud.mp3"
 
-                scene v15s33_75 # TPP. Show Aubrey playfully punching MC's arm, slight smile, mouth closed.
-                with dissolve
-
-                pause 0.75 
-
-                scene v15s33_75a # TPP. MC and Aubrey laughing.
+                scene v15s33_58 # TPP. Show Aubrey playfully punching MC's arm, slight smile, mouth closed.
                 with dissolve
 
                 pause 0.75
