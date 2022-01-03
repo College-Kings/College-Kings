@@ -7,7 +7,7 @@ label v15s33:
     scene v15s33_1 # TPP. Show the car that MC and Aubrey are in arrived at the Venue (The Venue is a huge white tent)
     with fade
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s33_2 # TPP. Show MC and Aubrey getting out of the car in their wedding outfits, both slight smile, mouth closed.
     with dissolve
@@ -239,7 +239,7 @@ label v15s33:
     scene v15s33_9 # TPP. MC following behind, Show Aubrey walking over to her parent's, slightly annoyed, mouth closed, MC, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s33_10 # TPP. Close up of Naomi's hand grabbing MC's arm.
     with dissolve
@@ -264,7 +264,7 @@ label v15s33:
     scene v15s33_12 # FPP. MC sitting at the table, Naomi sitting on the other side, Naomi pouring shots into the first glass,MC looking at Naomi, Naomi looking at the first glass she is pouring into, Naomi smirking, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s33_12a # FPP. MC looking at Naomi, Naomi leaning forward and looking at MC, Naomi handing MC one of the shots, Naomi a little drunk, smirking, mouth open.
     with dissolve
@@ -283,7 +283,7 @@ label v15s33:
             scene v15s33_13 # TPP. Show Naomi and MC clinking shot glasses, Naomi a little drunk, smirking looking at MC, MC looking at Naomi, slight smile, mouth closed.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s33_12d # FPP. MC looking at Naomi, Naomi looking at MC, Naomi a little drunk, Naomi smirking, mouth open.
             with vpunch 
@@ -335,7 +335,7 @@ label v15s33:
             pause 0.75 
             
             scene v15s33_82 # TPP. Close up of just MC's hand pouring his drink on the floor at the alcohol table, only show MC's hand pouring drink on the floor to be reused.
-            with dissolve  
+            with dissolve
 
             pause 0.75
 
@@ -428,20 +428,20 @@ label v15s33:
     scene v15s33_14 # TPP. MC peaking over the corner seeing Aubrey with her parents at the table with the flower arrangements, Aubrey looking at her dad, Her dad looking back at her, Her mom looking at her dad, all neutral face, mouth closed.
     with fade
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s33_15 # TPP. Close up of Aubrey's dad, Aubrey's dad looking at Aubrey(Aubrey off camera), Aubrey's dad, neutral face, mouth open.
-    with dissolve 
+    with dissolve
 
     audad "All I'm saying, Brey, is you can't put all of your eggs into just one basket."
 
     scene v15s33_16 # TPP. Close up of just Aubrey, Aubrey looking at her dad(her dad off camera), Aubrey sad, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s33_15 
-    with dissolve 
+    with dissolve
 
     audad "Naomi has done exceptionally well, thankfully, but a modeling career requires a lot of hard work."
 
@@ -605,7 +605,6 @@ label v15s33:
 
     au "Gross..."
 
-
     u "(Very gross...)"
 
     scene v15s33_19d # FPP. MC looking at Aubrey, Aubrey facing MC again, Aubrey looking at MC, Aubrey grossed out, mouth open.
@@ -619,7 +618,7 @@ label v15s33:
     u "Absolutely."
 
     scene v15s33_24 # TPP. MC and Aubrey walking over to the drinks table, both slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -636,10 +635,10 @@ label v15s33:
     scene v15s33_26 # FPP. MC looking down at the table pouring alcohol into a shot glass, there is two shot glasses in shot, First one being filled by MC.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s33_27 # TPP. MC and Aubrey clinking shot glasses, MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open.
-    with dissolve 
+    with dissolve
 
     au "Cheers!"
 
@@ -650,7 +649,7 @@ label v15s33:
             scene v15s33_13a # TPP. MC and Aubrey clinking shot glasses, Both slight smile, mouth closed.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s33_25a 
             with vpunch
@@ -675,18 +674,17 @@ label v15s33:
         "Pretend to take it":
             $ add_point(KCT.TROUBLEMAKER)
             scene v15s33_13a
-            with dissolve 
-
+            with dissolve
 
             pause 0.75
-            scene v15s33_82
-            with dissolve 
 
+            scene v15s33_82
+            with dissolve
 
             pause 0.75
 
             scene v15s33_25a 
-            with dissolve 
+            with dissolve
 
             u "Mmm...That hit the spot, ha."
 
@@ -754,10 +752,10 @@ label v15s33:
         scene v15s33_29 # TPP. Don't show Naomi or Aubrey so this can be reused :) Show MC and Aubrey's uncle shaking hands, both slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s33_28a
-        with dissolve 
+        with dissolve
 
         rick "Damn, Aubs. A pretty face and strong handshake! He might be a keeper, this one."
 
@@ -767,7 +765,7 @@ label v15s33:
         pause 0.75
 
         scene v15s33_28c
-        with dissolve 
+        with dissolve
 
         u "*Laughs* Thank you. I appreciate it. I hope she keeps me..."
 
@@ -1112,15 +1110,15 @@ label v15s33:
         u "Right."
 
         scene v15s33_29
-        with dissolve 
+        with dissolve
 
-        pause 0.75 
+        pause 0.75
 
     play sound "sounds/bells.mp3"
     # Asked for hand bell sounds but we only have the clocktower bells.
 
     scene v15s33_28b
-    with dissolve 
+    with dissolve
 
     rick "Oh shit- I believe that's lunch being served over there. Let's head over."
 
@@ -1132,17 +1130,17 @@ label v15s33:
     scene v15s33_35 # TPP. Show Mc and Aubrey's Uncle sitting next to each other across from Naomi and Aubrey, Aubrey opposite of MC, Naomi opposite of Aubrey's Uncle, all slight smile, mouth closed.
     with fade
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s33_36 # FPP. MC looking at Aubrey's Uncle, Aubrey's uncle looking at the table, Naomi and Aubrey off camera not shown, Aubrey's uncle slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     rick "This looks wonderful!"
 
     scene v15s33_37 # TPP. Show MC, Aubrey's Uncle, Naomi, and Aubrey eating with food on their plates.
     with fade
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s33_38 # FPP. MC looking across the table at Aubrey, Aubrey looking at her plate as she eats oblivious to MC, Aubrey slight smile, mouth closed.
     with vpunch
@@ -1164,14 +1162,14 @@ label v15s33:
     scene v15s33_38
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
-    scene v15s33_55
+    scene v15s33_39
     with dissolve
 
     u "(*Moans* Okay, what the fuck... *Chuckles* Is she really doing this right now?)"
 
-    scene v15s33_56
+    scene v15s33_40
     with dissolve
 
     menu:
@@ -1179,12 +1177,12 @@ label v15s33:
             $ add_point(KCT.BOYFRIEND)
             u "(This is definitely not a good idea, haha. I'm eating lunch with her family for fucks sake...)"
 
-            scene v15s33_56a # FPP. Show MC's hand gently pushing Naomi's foot away.
+            scene v15s33_40a # FPP. Show MC's hand gently pushing Naomi's foot away.
             with dissolve
 
             u "*Sighs*"
 
-            scene v15s33_56
+            scene v15s33_40
             with vpunch
 
             u "(What- Back again? She's being relentless...)"
@@ -1193,65 +1191,65 @@ label v15s33:
             $ add_point(KCT.TROUBLEMAKER)
             u "(No harm in enjoying it, right? Ha... *Moans*)"
 
-    scene v15s33_55a # FPP. MC looking at Naomi, Naomi looking at MC, Naomi winking at MC and biting her lip.
+    scene v15s33_39a # FPP. MC looking at Naomi, Naomi looking at MC, Naomi winking at MC and biting her lip.
     with dissolve
 
     u "(*Moans* Huh...? Wait-)"
 
-    scene v15s33_54a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey confused, mouth open.
+    scene v15s33_38a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey confused, mouth open.
     with vpunch
 
     au "Hey, you okay...?"
 
-    scene v15s33_54b # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey confused, mouth closed.
+    scene v15s33_38b # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey confused, mouth closed.
     with dissolve
 
     u "(It's Naomi rubbing my dick?!)"
 
-    scene v15s33_57 # FPP. MC now standing and looking at Aubrey, Aubrey looking up at MC, Aubrey confused, mouth closed.
+    scene v15s33_41 # FPP. MC now standing and looking at Aubrey, Aubrey looking up at MC, Aubrey confused, mouth closed.
     with dissolve
 
     u "Um, yeah. I, uh- Please excuse me... I just need to use the bathroom."
 
-    scene v15s33_58 # FPP. MC standing looking to the left of Aubrey at Naomi, Naomi looking at MC, Naomi smirking, mouth open.
+    scene v15s33_42 # FPP. MC standing looking to the left of Aubrey at Naomi, Naomi looking at MC, Naomi smirking, mouth open.
     with dissolve
 
     na "*Giggles* Okay!"
 
-    scene v15s33_57a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey confused, mouth open.
+    scene v15s33_41a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey confused, mouth open.
     with dissolve
 
     au "Do you want me to come with you?"
 
-    scene v15s33_57
+    scene v15s33_41
     with dissolve
 
     u "No, no. It's fine, I promise. Enjoy your meal."
 
-    scene v15s33_57a
+    scene v15s33_41a
     with dissolve
 
     au "Okay..."
 
-    scene v15s33_59 # TPP. Show MC walking away from the table, Aubrey's uncle, Naomi, and Aubrey looking at MC leave, MC neutral face, mouth closed. Aubrey's Uncle confused, mouth closed. Naomi smirking, mouth closed. Aubrey concerned, mouth closed.
+    scene v15s33_43 # TPP. Show MC walking away from the table, Aubrey's uncle, Naomi, and Aubrey looking at MC leave, MC neutral face, mouth closed. Aubrey's Uncle confused, mouth closed. Naomi smirking, mouth closed. Aubrey concerned, mouth closed.
     with dissolve
 
     pause 0.75
 
     play sound "sounds/doorclose.mp3"
     
-    scene v15s33_60 # TPP. Show MC closing the bathroom door, neutral face, mouth closed.
+    scene v15s33_44 # TPP. Show MC closing the bathroom door, neutral face, mouth closed.
     with dissolve
 
     pause 0.75
 
-    scene v15s33_61 # TPP. Show MC leaning against the wall in the bathroom as he thinkss, neutral face, mouth open.
+    scene v15s33_45 # TPP. Show MC leaning against the wall in the bathroom as he thinkss, neutral face, mouth open.
     with dissolve
 
     u "*Whispers* What the hell..."
 
     if v15s33_flirt:
-        scene v15s33_61a # TPP. Show Mc leaning against the wall in the bathroom as he thinks, neutral face, mouth closed.
+        scene v15s33_45a # TPP. Show Mc leaning against the wall in the bathroom as he thinks, neutral face, mouth closed.
         with dissolve
 
         u "(I didn't think she'd do something like that during the fancy lunch... Ha!)"
