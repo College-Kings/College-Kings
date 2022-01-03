@@ -505,6 +505,14 @@ label v15s9:
 
             jump v15s12
 
+    elif v14_help_lindsey:
+        scene v15s9_1h
+        with dissolve
+
+        pause 0.75
+
+        jump v15s12        
+
     elif v15_mad_at_ms_rose:
         scene v15s9_1h
         with dissolve
