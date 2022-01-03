@@ -770,6 +770,8 @@ label v15s21:
 
         pause 0.75
 
+        hide screen v15_teacher_brief_icon
+
         if v15s21_meeting_points >= 5: #TBD optimal difficulty level
             if v15s21_meeting_points == 5 and kct == "loyal":
                 call screen kct_popup
@@ -1081,8 +1083,6 @@ label v15s21:
         with fade
 
         pause 0.75
-
-        hide screen v15_teacher_brief_icon
 
         jump v15s22 # -Transition to Scene 22-
 
@@ -1733,6 +1733,8 @@ label v15s21:
         with dissolve
 
         pause 0.75
+
+        hide screen v15_teacher_brief_icon
 
         if v15s21_meeting_points >= 5: #TBD optimal difficulty level
             if v15s21_meeting_points == 5 and kct == "confident":
@@ -2417,7 +2419,5 @@ label v15s21:
         with fade
 
         pause 0.75
-
-        hide screen v15_teacher_brief_icon
 
         jump v15s22 # -Transition to Scene 22-

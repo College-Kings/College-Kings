@@ -1,6 +1,5 @@
 init python:
-    pb_item = []
-    pb_catagories = []
+    pb_items = []
 
     class PathBuilderCatagories(Enum):
         FRATERNITY = "Step 1: Pick a fraternity"
@@ -18,7 +17,7 @@ init python:
             elif isinstance(actions, list): self.actions = actions
             else: self.actions = [actions]
 
-            pb_item.append(self)
+            pb_items.append(self)
 
 
     def get_catagory(step):
@@ -109,7 +108,7 @@ screen path_builder(catagory_step=1):
     modal True
 
     default catagory = get_catagory(catagory_step)
-    default items = [item for item in pb_item if item.catagory == catagory]
+    default items = [item for item in pb_items if item.catagory == catagory]
 
     use path_builder_base(header=catagory.value):
         vpgrid:

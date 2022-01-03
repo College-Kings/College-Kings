@@ -35,7 +35,7 @@ default pb_name_set = False
 default pb_start_location = "start"
 default scene_fromgame = False
 
-# voiceacting
+# Voice Acting
 default voice_acted = True
 
 # KCT
@@ -49,6 +49,9 @@ default troublemaker = 1
 
 # Scenes
 default sceneList = set()
+
+# Sex Overlay
+default sex_overlay_options = []
 
 # 1.0 - 6.0
 default adamattack = 1

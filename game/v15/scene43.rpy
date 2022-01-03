@@ -214,7 +214,7 @@ label v15s43:
 
                 u "He's already playing mind games with us, this isn't good."
 
-            "Kick the door open" if detective == "loose cannon":
+            "Kick the door open" if detective == "loose_cannon":
                 scene v15s43_2b
                 with dissolve
 
@@ -232,27 +232,27 @@ label v15s43:
 
                 pause 0.75
 
-                scene v15s43_2c
+                scene v15s43_100
                 with dissolve
 
                 am "Oh, fuck [name]! You weren't kidding about being a loose cannon."
 
-                scene v15s43_2b
+                scene v15s43_99
                 with dissolve
 
                 u "I ain't got time to fuck around with these punk ass kids!"
 
-                scene v15s43_2c
+                scene v15s43_100
                 with dissolve
 
                 am "*Laughs* Woah there, okay! Calm down big guy, you're starting to turn green..."
 
-                scene v15s43_2b
+                scene v15s43_99
                 with dissolve
 
                 u "Ha. Okay, sorry. Got a little carried away..."
 
-                scene v15s43_2c
+                scene v15s43_100
                 with dissolve
 
                 am "*Whispers* A little?"
@@ -332,7 +332,7 @@ label v15s43:
 
             u "*Gasps* A psychological horror!"
 
-        "Be angry" if detective == "loose cannon":
+        "Be angry" if detective == "loose_cannon":
             scene v15s43_11 # TPP. View showing MC on one side of a couch in the living room, Amber on the other side with her hands in the shape of a gun, both suspicious, mouth closed.
             with dissolve
 
@@ -547,7 +547,7 @@ label v15s43:
             ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
             $ v15_nora_locations.add("camping")
 
-        "Accuse Chris" if detective == "loose cannon":
+        "Accuse Chris" if detective == "loose_cannon":
             play sound "sounds/thud.mp3"
 
             scene v15s43_16 # TPP. Show MC slamming his hands on the table, MC angry, mouth open.
@@ -720,7 +720,7 @@ label v15s43:
 
             u "Hate is a very strong word. Are those your words or Nora's words?"
 
-        "Shout at Chris" if detective == "loose cannon":
+        "Shout at Chris" if detective == "loose_cannon":
             scene v15s43_14g
             with vpunch
 
@@ -838,7 +838,7 @@ label v15s43:
 
     u "Great idea, chief."
 
-    if detective == "loose cannon":
+    if detective == "loose_cannon":
         menu:
             "Kick table":
                 scene v15s43_19 # TPP. Show MC kicking the coffee table, slightly angry, mouth open.

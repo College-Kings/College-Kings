@@ -408,7 +408,7 @@ label v14s45a:
         if lindsey.messenger.replies:
             call screen phone
         if lindsey.messenger.replies:
-            "(I should reply to Lindsey.)"
+            u "(I should reply to Lindsey.)"
             jump v14s45a_PhoneContinue
 
         scene v14s45a_7a # TPP. Same as v14s45a_7, MC putting his phone away, slight smile, mouth closed.

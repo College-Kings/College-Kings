@@ -9,6 +9,12 @@ image splashtwo = "images/splash2.webp"
 image splashthree = "images/splash 3.webp"
 
 # GUI
+## Common
+image quit_idle = "gui/common/quit_idle.webp"
+image quit_hover = Transform("gui/common/quit_hover.webp", offset=(-32, -27))
+image settings_idle = "gui/common/settings_idle.webp"
+image settings_hover = Transform("gui/common/settings_hover.webp", offset=(-35, -25))
+
 ## Alert
 image alert_background = Frame("gui/alert/background.png", 8, 8)
 
@@ -29,7 +35,12 @@ image scene_gallery_bar_base = Frame("main_menu/scene_gallery/images/bar_base.pn
 ## Settings
 image settings_bar_left = Frame("gui/settings/bar_right.webp", 14, 5)
 image settings_bar_right = Frame("gui/settings/bar_right.webp", 14, 5)
-image settings_bar_thumb = Image("gui/settings/bar_thumb.webp")
+image settings_bar_thumb = "gui/settings/bar_thumb.webp"
+
+## Tutorial
+image tutorial_background = Frame("gui/tutorial/background.png", 42, 8, 8, 8)
+image tutorial_left_button_idle = "gui/tutorial/left_button_idle.png"
+image tutorial_right_button_idle = "gui/tutorial/right_button_idle.png"
 
 ## Warning
 image warning_background_blue = Frame("gui/warning/background_blue.png", 42, 8, 8, 8)

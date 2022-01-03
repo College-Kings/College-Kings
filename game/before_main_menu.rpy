@@ -3,6 +3,7 @@ label before_main_menu:
     
     python:
         # Phone Setup
+        phone.applications = []
         phone.applications.append(messenger)
         phone.applications.append(stats_app)
         phone.applications.append(achievement_app)

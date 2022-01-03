@@ -285,12 +285,12 @@ screen quick_menu():
             spacing 15
 
             textbutton "SCENE SELECT" action Show("bugTesting_SceneSelect")
-            add "gui/arrow.png" yalign 0.5
+            add "gui/common/arrow.png" yalign 0.5
 
             null width 10
 
             textbutton "CHEATS" action Show("bugTesting_cheatMenu")
-            add "gui/arrow.png" yalign 0.5
+            add "gui/common/arrow.png" yalign 0.5
 
 
 style quick_menu_button:
@@ -388,15 +388,15 @@ screen main_menu():
 
     # SETTINGS
     imagebutton:
-        idle image_path + "settings_idle.webp"
-        hover Transform(image_path + "settings_hover.webp", pos=(-35, -25))
+        idle "settings_idle"
+        hover "settings_hover"
         action ShowMenu("preferences")
         pos (1439, 967)
 
     # QUIT
     imagebutton:
-        idle image_path + "quit_idle.webp"
-        hover Transform(image_path + "quit_hover.webp", pos=(-32, -27))
+        idle "quit_idle"
+        hover "quit_hover"
         action Quit()
         pos (1662, 971)
 
@@ -538,31 +538,30 @@ style game_menu_label_text:
 
 screen save():
     tag menu
+    style_prefix "save"
 
-    if realmode and renpy.get_screen("choice"):
-        text "You've enabled Real Life Mode and are therefore unable to use this menu whilst making a choice.":
-            align (0.5, 0.5)
+    use file_slots(_("Save"))
 
-        use game_menu(_("save"))
+    text "SAVE NAME:" pos (270, 240)
     
-    else:
-        hbox:
-            align (0.5, 0.06)
-            spacing 10
+    frame:
+        xysize (1083, 87)
+        pos (477, 210)
+        background "gui/file_slots/save_name.png"
 
-            text "Save name:"
-            frame:
-                maximum (750, 50)
-                add "#444"
-                input:
-                    offset (5, 5)
-                    default save_name
-                    value VariableInputValue("save_name")
-                    length 35
-                    size 25
-                    allow " .,_-0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+        input:
+            align (0.5, 0.5)
+            yoffset 7
+            default save_name
+            copypaste True
+            value VariableInputValue("save_name")
+            allow " .,_-0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
 
-        use file_slots(_("Save"))
+
+style save_text is file_slot_text
+style save_input is text:
+    font "fonts/Montserrat-Bold.ttf"
+    size 36
 
 
 screen load():
@@ -571,9 +570,10 @@ screen load():
     use file_slots(_("Load"))
 
 
-
 screen file_slots(title):
-    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    style_prefix "file_slots"
+
+    default page_name_value = FilePageNameInputValue(pattern=_("PAGE {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
     default image_path = "gui/file_slots/"
 
     python:
@@ -587,143 +587,138 @@ screen file_slots(title):
 
     add image_path + "background.png"
 
+    text "{} Game".format(title):
+        xalign 0.5
+        ypos 56
+        style "file_slots_title"
+
+    imagebutton:
+        idle image_path + "return_idle.png"
+        action Return()
+        pos (129, 82)
+
     fixed:
-        ## This ensures the input will get the enter event before any of the
-        ## buttons do.
-        order_reverse True
+        pos (243, 206)
+        xysize (1430, 588)
 
-        if realmode:
+        if title == _("Load"):
             button:
-                style_prefix "slot"
-                align (0.5, 0.5)
-
-                action FileAction(1)
-
-                has vbox
-
-                if file_compatable:
-                    add FileScreenshot(1) xalign 0.5
-                    text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
-                else:
-                    add "#000"
-                    text "INCOMPATIBLE" color "#f00" xalign 0.5
-
-                text FileTime(1, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
-                    style "slot_time_text"
-
-                text FileSaveName(1):
-                    style "slot_name_text"
-
-                key "save_delete" action FileDelete(1)
-        
-        else:
-            ## The page name, which can be edited by clicking on a button.
-            button:
-                style "page_label"
-
-                key_events True
                 xalign 0.5
+                ypos 35
                 action page_name_value.Toggle()
+                key_events True
 
                 input:
-                    style "page_label_text"
+                    style "file_slots_page_name"
                     value page_name_value
 
-            ## The grid of file slots.
-            grid gui.file_slot_cols gui.file_slot_rows:
-                style_prefix "slot"
+        ## The grid of file slots.
+        grid gui.file_slot_cols gui.file_slot_rows:
+            xalign 0.5
+            ypos 110
+            spacing 35
 
-                xalign 0.5
+            for slot in range(1, gui.file_slot_cols * gui.file_slot_rows + 1):
+                python:
+                    game_version = FileJson(slot, key="_version") or ""
+                    renpy_version = FileJson(slot, key="_renpy_version") or ""
+                    renpy_version = '.'.join(str(i) for i in renpy_version)
+                    file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
+
+                button:
+                    background FileScreenshot(slot)
+                    action FileAction(slot)
+                    xysize (384, 216)
+
+                    if file_compatable:
+                        vbox:
+                            align (0.5, 1.0)
+
+                            text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")).upper() xalign 0.5
+                            text FileSaveName(slot).upper() xalign 0.5
+                    else:
+                        add image_path + "incompatible.png" xalign 0.5 yoffset -7
+
+                    key "save_delete" action FileDelete(slot)
+
+    # Buttons to access other pages.
+    hbox:
+        xalign 0.5
+        ypos 803
+        xysize (1100, 48)
+        spacing 35
+        xoffset 20
+
+        imagebutton:
+            idle image_path + "left_arrow.png"
+            action FilePagePrevious()
+            yalign 0.5
+
+        if config.has_autosave:
+            textbutton _("{#auto_page}A") action FilePage("auto") yalign 0.5
+
+        if config.has_quicksave:
+            textbutton _("{#quick_page}Q") action FilePage("quick") yalign 0.5
+
+        for page in range(1, 10):
+            textbutton str(page) action FilePage(page) yalign 0.5
+
+        textbutton "99" action FilePage(99) yalign 0.5
+
+        imagebutton:
+            idle image_path + "right_arrow.png"
+            action FilePageNext()
+            yalign 0.5
+
+    # Menu buttons
+    hbox:
+        pos (129, 967)
+        spacing 50
+
+        if title == _("Save"):
+            imagebutton:
+                idle image_path + "load_idle.png"
+                action ShowMenu("load")
+                yalign 0.5
+        else:
+            imagebutton:
+                idle image_path + "save_idle.png"
+                action ShowMenu("save")
                 yalign 0.5
 
-                spacing gui.slot_spacing
+        imagebutton:
+            idle image_path + "menu_idle.png"
+            action MainMenu()
+            yalign 1.0
 
-                for slot in range(1, gui.file_slot_cols * gui.file_slot_rows + 1):
-                    python:
-                        game_version = FileJson(slot, key="_version") or ""
-                        renpy_version = FileJson(slot, key="_renpy_version") or ""
-                        renpy_version = '.'.join(str(i) for i in renpy_version)
-                        file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
+    hbox:
+        pos (1439, 967)
+        spacing 50
 
-                    button:
-                        action FileAction(slot)
+        imagebutton:
+            idle "settings_idle"
+            hover "settings_hover"
+            action ShowMenu("preferences")
+            yalign 0.5
 
-                        has vbox
-
-                        fixed:
-                            xysize (384, 220)
-
-                            if file_compatable:
-                                add FileScreenshot(slot) xalign 0.5
-                                text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
-                            else:
-                                add "#000"
-                                text "INCOMPATIBLE" color "#f00" xalign 0.5
-                            
-
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
-                            style "slot_time_text"
-
-                        text FileSaveName(slot):
-                            style "slot_name_text"
-
-                        key "save_delete" action FileDelete(slot)
-
-            ## Buttons to access other pages.
-            hbox:
-                style_prefix "page"
-
-                xalign 0.5
-                yalign 0.85
-
-                spacing gui.page_spacing
-
-                textbutton _("←") action FilePagePrevious()
-
-                if config.has_autosave:
-                    textbutton _("{#auto_page}A") action FilePage("auto")
-
-                if config.has_quicksave:
-                    textbutton _("{#quick_page}Q") action FilePage("quick")
-
-                for page in range(1, 10):
-                    textbutton "[page]" action FilePage(page)
-
-                textbutton "99" action FilePage(99)
-
-                textbutton _("→") action FilePageNext()
+        imagebutton:
+            idle "quit_idle"
+            hover "quit_hover"
+            action Quit(confirm=not main_menu)
+            yalign 0.5
 
 
-style page_label is gui_label
-style page_label_text is gui_label_text
-style page_button is gui_button
-style page_button_text is gui_button_text
+style file_slots_title is text:
+    font "fonts/Montserrat-ExtraBold.ttf"
+    size 64
 
-style slot_button is gui_button
-style slot_button_text is gui_button_text
-style slot_time_text is slot_button_text
-style slot_name_text is slot_button_text
+style file_slots_page_name is olympus_mount_30
 
-style page_label:
-    xpadding 75
-    ypadding 5
+style file_slots_text is olympus_mount_30:
+    size 22
+    yoffset 2
 
-style page_label_text:
-    text_align 0.5
-    layout "subtitle"
-    hover_color gui.hover_color
-
-style page_button:
-    properties gui.button_properties("page_button")
-
-style page_button_text:
-    properties gui.button_text_properties("page_button")
-
-style slot_button:
-    properties gui.button_properties("slot_button")
-
-style slot_button_text:
-    properties gui.button_text_properties("slot_button")
+style file_slots_button_text is druk_wide_bold_22
 
 
 ## Preferences screen ##########################################################

@@ -2245,25 +2245,7 @@ label v15s18c_chris_penelope:
                 pe "Oh, yeah... That thing."
 
             #### Still TBD
-            if penelope.relationship.value < Relationship.LIKES.value:
-                scene v15s18c_chpe_5d # FPP. Same as v15s18c_chpe_5, Penelope different pose, slightly uncomfortable, mouth open
-                with dissolve
-
-                pe "I think it would be kind of weird if we did anything on this list together."
-
-                pe "Since we're just friends. You know?"
-
-                scene v15s18c_chpe_5e # FPP. Same as v15s18c_chpe_5d, Penelope slightly uncomfortable, mouth closed
-                with dissolve
-
-                u "Yeah, I get that."
-
-                scene v15s18c_chpe_5d
-                with dissolve
-
-                pe "Sorry, haha."
-            
-            elif not kct == "confident" and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v15s18c_chpe_5d
                 with dissolve
 
@@ -2279,7 +2261,10 @@ label v15s18c_chris_penelope:
 
                 pe "Sorry, I just don't feel comfortable."
 
-            elif kct == "confident" or penelope.relationship.value >= Relationship.LOYAL.value:
+            elif v14_penelope_date and (kct == "confident" or penelope.relationship.value >= Relationship.LOYAL.value):
+                if penelope.relationship.value < Relationship.LOYAL.value:
+                    call screen kct_popup
+            
                 scene v15s18c_chpe_5f # FPP. Same as v15s18c_chpe_5, Penelope flirty expression, mouth open
                 with dissolve
 
@@ -2470,6 +2455,40 @@ label v15s18c_chris_penelope:
                 pause 0.75
 
                 call screen v15s18a_upstairsroom
+
+            elif penelope.relationship.value < Relationship.LIKES.value:
+                scene v15s18c_chpe_5d # FPP. Same as v15s18c_chpe_5, Penelope different pose, slightly uncomfortable, mouth open
+                with dissolve
+
+                pe "I think it would be kind of weird if we did anything on this list together."
+
+                pe "Since we're just friends. You know?"
+
+                scene v15s18c_chpe_5e # FPP. Same as v15s18c_chpe_5d, Penelope slightly uncomfortable, mouth closed
+                with dissolve
+
+                u "Yeah, I get that."
+
+                scene v15s18c_chpe_5d
+                with dissolve
+
+                pe "Sorry, haha."
+ 
+            else:
+                scene v15s18c_chpe_5d
+                with dissolve
+
+                pe "Um, I don't think we should do anything while we're here."
+
+                scene v15s18c_chpe_5e
+                with dissolve
+
+                u "Oh, okay, sure."
+
+                scene v15s18c_chpe_5d
+                with dissolve
+
+                pe "Sorry, I just don't feel comfortable."
 
             scene v15s18c_chpe_5a
             with dissolve

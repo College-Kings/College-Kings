@@ -466,7 +466,7 @@ label v14s31a:
     scene v14s31a_6b # FPP Same angle as 6, Chloe with neutral expression and mouth open, Cameron's mouth closed
     with dissolve
 
-    cl "If you back me in my campaign, I'll back you in any race you plan to take on. And all of them."
+    cl "If you back me in my campaign, I'll back you in any race you plan to take on. And I mean any."
 
     scene v14s31a_6c # FPP Same angle as 6, Cameron has taken a step back and looks shocked, mouth open. Chloe's mouth closed
     with dissolve

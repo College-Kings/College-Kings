@@ -415,13 +415,28 @@ label v15s9:
     python:
         v15s10_buyer_max_amount = 425
 
-        if v14_lindsey_sell:
+        if v14_pics_with_linds:
             v15s10_buyer_max_amount += 200
 
         v15s10_buyer_max_amount += (len(v14s47_car_pics) - 1) * 25
 
         if "v14s47_passenger_2b.webp" in v14s47_car_pics or "v14s47_passenger_2f.webp" in v14s47_car_pics:
             v15s10_buyer_max_amount += 50
+
+    # Buyer's willingness to pay =
+    #    425 by default
+    #   +200 if Lindsey is in the pictures
+    #   + 25 for every picture taken after the first one (can earn up to 3*25 = 75)
+    #   + 50 if special picture taken (either Lindsey Hand on Hips, or Bird)
+    
+    # If the sum less than the listing price selected for the car in v14s48, the sale fails.
+    
+    # Other things that affect willingness to pay:
+    #   -200 if you lie in the description (does not influence whether scene 10 appears, buyer only realizes it's a lie in scene 10)
+    
+    # Sale is for either the listed price, or buyer's willingness to pay, whichever is lowest
+    
+    #   + 50 if you lie in the description and Lindsey is in the pictures (does not influence sale, it's a bonus that the male buyer pays afterwards)
 
     if v14_lindsey_sell:
         scene v15s9_1h # TPP. same as v15s9_1g Different Camera angle
@@ -433,7 +448,7 @@ label v15s9:
 
         if v14s48_car_price <= v15s10_buyer_max_amount:
             $ v15_lindsey_sold = True
-            # -if MC chose to sell the car for between $300 and $750 and Lindsey is in the photos OR MC chose to sell the car for between $300 and $550 and Lindsey is not in the photos
+            
             $ lindsey.messenger.newMessage("Hey! Somebody wants to check out the car and they sound really interested!", force_send=True)
             $ lindsey.messenger.newMessage("I'm meeting them now. Can you come to where we took the photos?", force_send=True)
 
@@ -458,15 +473,17 @@ label v15s9:
             jump v15s10
 
         else:
-        # -if MC chose to sell the car for anything over $750 and Lindsey is in the photos OR MC chose to sell the car for anything over $550 and Lindsey is not in the photos OR MC chose to sell the car for anything under $300 with photos either with or without Lindsey
-
             $ lindsey.messenger.newMessage("24 hours is up! No interested buyers on the car... :(", force_send=True)
             $ lindsey.messenger.addReply("Ugh, that sucks! I'm sorry", func=None)
             $ lindsey.messenger.newMessage("It sucks big time! I think we messed up on the price...")
             $ lindsey.messenger.addReply("Can we change the price and list it again?", func=None)
             $ lindsey.messenger.newMessage("I thought about it, but it costs way too much. Let's just move on.")
             $ lindsey.messenger.addReply("Fuck, okay. What's next?", func=None)
-            $ lindsey.messenger.newMessage("Meet me at the janitor's closet and you'll find out ;)")
+            $ lindsey.messenger.newMessage("Are you on campus right now? We need to plan the next phase of the campaign.", force_send=True)
+            $ lindsey.messenger.addReply("Yeah, I am. What's the plan?", func=None)
+            $ lindsey.messenger.newMessage("Let's go to back to the janitor's closet and you'll find out ;)")
+            $ lindsey.messenger.newMessage("Meet me at the end of the main hallway?")
+            $ lindsey.messenger.addReply("Sure thing, be with you in a bit.", func=None)
 
             if lindsey.relationship.value >= Relationship.FWB.value:
                 $ lindsey.messenger.addReply("Be there soon ;)", func=None)
@@ -491,6 +508,29 @@ label v15s9:
             pause 0.75
 
             jump v15s12
+
+    elif v14_help_lindsey:
+        scene v15s9_1h
+        with dissolve
+
+        pause 0.75
+
+        play sound "sounds/vibrate.mp3"
+
+        $ lindsey.messenger.newMessage("Hey! Are you on campus right now? We need to plan the next phase of the campaign.", force_send=True)
+        $ lindsey.messenger.addReply("Yeah, I am. What's next?", func=None)
+        $ lindsey.messenger.newMessage("Let's go to back to the janitor's closet and you'll find out ;)")
+        $ lindsey.messenger.newMessage("Meet me at the end of the main hallway?")
+        $ lindsey.messenger.addReply("Sure thing, be with you in a bit.", func=None)
+
+        label v15s9_PhoneContinueLin:
+            if lindsey.messenger.replies:
+                call screen phone
+            if lindsey.messenger.replies:
+                u "(I should reply to Lindsey.)"
+                jump v15s9_PhoneContinueLin
+
+        jump v15s12        
 
     elif v15_mad_at_ms_rose:
         scene v15s9_1h

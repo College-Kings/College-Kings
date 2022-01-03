@@ -141,7 +141,7 @@ label v15s15:
             
             $ renpy.end_replay()
             
-            ###Scene 16
+            # Scene 16
             scene v15s16_1 # TPP. Show MC walking out of Ms. Rose's house, MC mad, mouth closed.
             with dissolve
 
@@ -528,7 +528,7 @@ label v15s15:
 
             pause 0.75
 
-            ###Scene 16
+            # Scene 16
             scene v15s16_1a # TPP. Same as v15s16_1, MC slight smile, mouth closed.
             with dissolve
 

@@ -7,11 +7,8 @@ label v15s10:
 # -Car totals for this scene can be calculated via Oscar or the document that Cheex can give you access to-
 # -MC arrives at the Lindsey car location. The car is in the same position as before. Lindsey is leaning against it, waiting. She turns to see MC approaching and gives him a nice smile-
 
-    python:
-        v14s48_car_price = min(v14s48_car_price, v15s10_buyer_max_amount)
-
-        if v14s48_car_description == CarDescription.LIE:
-            v14s48_car_price -= 200
+    if v14s48_car_description == CarDescription.LIE:
+        $ v15s10_buyer_max_amount -= 200
 
     scene v15s10_1 # TPP. Show MC walking down the sidewalk near where they took the picture for lindsey car, Slight smile, mouth closed.
     with dissolve
@@ -301,59 +298,79 @@ label v15s10:
 
             male_buyer "It needs a lot of work, but it does have potential."
 
-            male_buyer "$[v14s48_car_price] is the best I can do."
+            # -[CarTotal] pops up on screen based on the pay out sums
 
-        # -[CarTotal] pops up on screen based on the pay out sums (if lied, total they can receive is minus200$ off the car's worth price)-
-        # Hi Oscar :D
-            
-            scene v15s10_12e # FPP. Same as v15s10_12d, Man holding cash up, slight smile, mouth closed.
-            with dissolve
+            if v15s10_buyer_max_amount < v14s48_car_price:
+                $ lindsey_board.money += v15s10_buyer_max_amount
 
-            pause 0.75
+                male_buyer "$[v15s10_buyer_max_amount] is the best I can do."
 
-            scene v15s10_14 # FPP. MC looking down at his hands counting the money.
-            with dissolve
+                scene v15s10_12e # FPP. Same as v15s10_12d, Man holding cash up, slight smile, mouth closed.
+                with dissolve
 
-            u "(That's two hundred dollars less than what this thing is worth! What should I do here?)"
+                pause 0.75
 
-            menu:
-                "Refuse offer":
-                    scene v15s10_12f # FPP. same as v15s10_12e, Man not holding cash anymore, neutral face, mouth closed.
-                    with dissolve
+                scene v15s10_14 # FPP. MC looking down at his hands counting the money.
+                with dissolve
 
-                    u "I'm sorry but... We need more than that."
+                if v15s10_buyer_max_amount < v14s48_car_price - 100:
+                    u "(That's a lot less than what we asked for! What should I do here?)"
+                else:
+                    u "(That's a bit less than what we asked for... What should I do here?)"
 
-                    scene v15s10_12g # FPP. Same as v15s10_12f, the man neutral face, mouth open.
-                    with dissolve
+                menu:
+                    "Refuse offer":
+                        scene v15s10_12f # FPP. same as v15s10_12e, Man not holding cash anymore, neutral face, mouth closed.
+                        with dissolve
 
-                    male_buyer "I'm not going a cent higher, mister pants on fire..."
+                        u "I'm sorry but... We need more than that."
 
-                    scene v15s10_12f
-                    with dissolve
+                        scene v15s10_12g # FPP. Same as v15s10_12f, the man neutral face, mouth open.
+                        with dissolve
 
-                    u "*Scoffs* Come on, it-"
+                        male_buyer "I'm not going a cent higher, mister pants on fire..."
 
-                    scene v15s10_13d # FPP. Lindsey looking at Mc, Lindsey neutral face, mouth open
-                    with dissolve
+                        scene v15s10_12f
+                        with dissolve
 
-                    li "It's fine."
+                        u "*Scoffs* Come on, it-"
 
-                    scene v15s10_13e # FPP. Same as v15s10_13d, Lindsey neutral face, mouth closed.
-                    with dissolve
+                        scene v15s10_13d # FPP. Lindsey looking at Mc, Lindsey neutral face, mouth open
+                        with dissolve
 
-                    u "What? Are you sure?"
+                        li "It's fine."
 
-                    scene v15s10_13d
-                    with dissolve
+                        scene v15s10_13e # FPP. Same as v15s10_13d, Lindsey neutral face, mouth closed.
+                        with dissolve
 
-                    li "Yeah. We'll take it. We'll take anything we can get at this point."
+                        u "What? Are you sure?"
 
-                "Accept offer":
-                    scene v15s10_14
-                    with dissolve
+                        scene v15s10_13d
+                        with dissolve
 
-                    u "Okay, yeah. I guess that's fair."
-                
+                        li "Yeah. We'll take it. We'll take anything we can get at this point."
+
+                    "Accept offer":
+                        scene v15s10_14
+                        with dissolve
+
+                        u "Okay, yeah. I guess that's fair."
+
+            else:
+                $ lindsey_board.money += v14s48_car_price
+
+                male_buyer "I'll pay you the $[v14s48_car_price]."
+
+                scene v15s10_12e # FPP. Same as v15s10_12d, Man holding cash up, slight smile, mouth closed.
+                with dissolve
+
+                pause 0.75
+
+                scene v15s10_14 # FPP. MC looking down at his hands counting the money.
+                with dissolve
+
+                pause 0.75
+       
             scene v15s10_12h # FPP. Same as v15s10_12g, looking at mc, slight smile, mouth open.
             with dissolve
 
@@ -402,6 +419,8 @@ label v15s10:
             with dissolve
 
             li "The extra $50 first."
+            
+            $ lindsey_board.money += 50
 
             scene v15s10_19c # FPP. Same as v15s10_19b, The man holding out the money for Lindsey, neutral face, mouth open.
             with dissolve
@@ -541,6 +560,8 @@ label v15s10:
             jump v15s12
             
         else:
+            $ lindsey_board.money += v14s48_car_price
+        
             scene v15s10_12a
             with dissolve
 
@@ -598,10 +619,10 @@ label v15s10:
 
             li "Thanks."
 
-            pause 0.75
-
             scene v15s10_14 # -[CarTotal] pops up on screen based on the payout sums- # Hi Again Oscar! :D
             with dissolve
+            
+            u "(It's the price we've asked for.)"
             
             menu:
                 "Refuse offer":
@@ -730,34 +751,31 @@ label v15s10:
 
             u "Yeah, but just think about all the good you can do with that money."
 
-            scene v15s10_29
-            with dissolve
-
             u "It's a small sacrifice if it helps you win."
 
-            scene v15s10_29a
+            scene v15s10_29
             with dissolve
 
             li "*Sighs* Very true... Somebody's full of wisdom today. *Chuckles*"
 
-            scene v15s10_29
+            scene v15s10_29a
             with dissolve
 
             u "Just go ahead and start calling me Buddha."
 
-            scene v15s10_29a
+            scene v15s10_29
             with dissolve
 
             li "Haha, you're a loser."
 
             li "Now that the car's sold, it's time to plan our next steps."
 
-            scene v15s10_29
+            scene v15s10_29a
             with dissolve
 
             u "Okay, back to the janitor's closet?"
 
-            scene v15s10_29a
+            scene v15s10_29
             with dissolve
 
             li "Yes, back to Lindsey's super-secret presidential office. *Chuckles*"
@@ -768,6 +786,7 @@ label v15s10:
             pause 0.75
             
             jump v15s12
+
     else: # Female Buyer
         scene v15s10_femalebuyer_1 # FPP. Show a shy hot woman looking to be in her mid 30s walking up to the area with the car, her clothes librarian like, gentle awkward smile, mouth closed.
         with dissolve
@@ -979,38 +998,58 @@ label v15s10:
             scene v15s10_femalebuyer_4e
             with dissolve
 
-            female_buyer "I can't overlook the things you've lied about, but I do love the idea of the bubblegum smell when I'm driving. So, I can offer $[v14s48_car_price]."
+            female_buyer "I can't overlook the things you've lied about, but I do love the idea of the bubblegum smell when I'm driving."
+            
+            if v15s10_buyer_max_amount < v14s48_car_price:
+                $ lindsey_board.money += v15s10_buyer_max_amount
 
-            scene v15s10_femalebuyer_4h # FPP. Same as v15s10_femalebuyer_4g, The lady holding up cash, looking at MC, slight smile, mouth closed. # -[CarTotal] pops up on screen based on the pay out sums(if lied, total they can receive is minus200$ off the car's worth price)- # Third times a charm. Hi Oscar :D
-            with dissolve
+                female_buyer "So, I can offer $[v15s10_buyer_max_amount]."
+                
+                scene v15s10_femalebuyer_4h # FPP. Same as v15s10_femalebuyer_4g, The lady holding up cash, looking at MC, slight smile, mouth closed. # -[CarTotal] pops up on screen based on the pay out sums(if lied, total they can receive is minus200$ off the car's worth price)- # Third times a charm. Hi Oscar :D
+                with dissolve
+                
+                if v15s10_buyer_max_amount < v14s48_car_price - 100:
+                    u "(That's a lot less than what we asked for! What should I do here?)"
+                else:
+                    u "(That's a bit less than what we asked for... What should I do here?)"
 
-            menu:
-                "Refuse offer":
-                    scene v15s10_femalebuyer_4i # FPP. Same as v15s10_femalebuyer_4h, the lady with cash in her hand still, looking at MC, neutral face, mouth closed.
-                    with dissolve
+                menu:
+                    "Refuse offer":
+                        scene v15s10_femalebuyer_4i # FPP. Same as v15s10_femalebuyer_4h, the lady with cash in her hand still, looking at MC, neutral face, mouth closed.
+                        with dissolve
 
-                    u "We can't accept that, I'm sorry. Can you go any higher?"
+                        u "We can't accept that, I'm sorry. Can you go any higher?"
 
-                    scene v15s10_femalebuyer_4j # FPP. Same as v15s10_femalebuyer_4i, the lady with cash in her hand, neutral face, mouth open.
-                    with dissolve
+                        scene v15s10_femalebuyer_4j # FPP. Same as v15s10_femalebuyer_4i, the lady with cash in her hand, neutral face, mouth open.
+                        with dissolve
 
-                    female_buyer "I've told you. I'm happy to take the bus forever, even if it is stinky. So, you can take my offer or I'm leaving."
+                        female_buyer "I've told you. I'm happy to take the bus forever, even if it is stinky. So, you can take my offer or I'm leaving."
 
-                    scene v15s10_femalebuyer_4i
-                    with dissolve
+                        scene v15s10_femalebuyer_4i
+                        with dissolve
 
-                    u "(Wow, so much for negotiating...)"
+                        u "(Wow, so much for negotiating...)"
 
-                    scene v15s10_femalebuyer_3b
-                    with dissolve
+                        scene v15s10_femalebuyer_3b
+                        with dissolve
 
-                    li "Let's just take it. It's a fair price, I guess."
+                        li "Let's just take it. It's a fair price, I guess."
 
-                "Accept offer":
-                    scene v15s10_femalebuyer_4k # FPP. Same as v15s10_femalebuyer_4j, the lady with cash in her hand, slight smile, mouth closed.
-                    with dissolve
+                    "Accept offer":
+                        scene v15s10_femalebuyer_4k # FPP. Same as v15s10_femalebuyer_4j, the lady with cash in her hand, slight smile, mouth closed.
+                        with dissolve
 
-                    u "Okay, sure. You've got yourself a deal."
+                        u "Okay, sure. You've got yourself a deal."
+               
+            else:
+                $ lindsey_board.money += v14s48_car_price
+                
+                female_buyer "I'll pay you the $[v14s48_car_price] you asked."
+
+                scene v15s10_femalebuyer_4h # FPP. Same as v15s10_femalebuyer_4g, The lady holding up cash, looking at MC, slight smile, mouth closed. # -[CarTotal] pops up on screen based on the pay out sums(if lied, total they can receive is minus200$ off the car's worth price)- # Third times a charm. Hi Oscar :D
+                with dissolve
+
+                pause 0.75
 
             scene v15s10_femalebuyer_6 # TPP. Close up of the lady handing Lindsey the cash, faces not seen.
             with dissolve
@@ -1110,6 +1149,8 @@ label v15s10:
             jump v15s12
 
         else:
+            $ lindsey_board.money += v14s48_car_price
+        
             scene v15s10_femalebuyer_4e
             with dissolve
 
@@ -1138,47 +1179,46 @@ label v15s10:
             scene v15s10_femalebuyer_4h
             with dissolve
 
-            pause 0.75
+            u "(It's the price we've asked for.)"
 
-    # -[CarTotal] pops up on screen based on the payout sums-
-    # Oscar ;)
-        menu:
-            "Refuse offer":
-                scene v15s10_femalebuyer_4i
-                with dissolve
+            # -[CarTotal] pops up on screen based on the payout sums-
+            menu:
+                "Refuse offer":
+                    scene v15s10_femalebuyer_4i
+                    with dissolve
 
-                u "I'm sorry, but... We need a little more than that."
+                    u "I'm sorry, but... We need a little more than that."
 
-                scene v15s10_femalebuyer_4j
-                with dissolve
+                    scene v15s10_femalebuyer_4j
+                    with dissolve
 
-                female_buyer "This is a take it or leave it type of offer, young man."
+                    female_buyer "This is a take it or leave it type of offer, young man."
 
-                scene v15s10_femalebuyer_4i
-                with dissolve
+                    scene v15s10_femalebuyer_4i
+                    with dissolve
 
-                u "(Damn, she's not as slow as I thought she'd be.)"
+                    u "(Damn, she's not as slow as I thought she'd be.)"
 
-                scene v15s10_femalebuyer_3
-                with dissolve
+                    scene v15s10_femalebuyer_3
+                    with dissolve
 
-                li "Okay, we have a deal."
+                    li "Okay, we have a deal."
 
-                scene v15s10_femalebuyer_3d # FPP. Same as v15s10_female_buyer_3, Lindsey looking at MC, slight smile, mouth closed.
-                with dissolve
+                    scene v15s10_femalebuyer_3d # FPP. Same as v15s10_female_buyer_3, Lindsey looking at MC, slight smile, mouth closed.
+                    with dissolve
 
-                u "Really?"
+                    u "Really?"
 
-                scene v15s10_femalebuyer_3a
-                with dissolve
+                    scene v15s10_femalebuyer_3a
+                    with dissolve
 
-                li "Yeah, it's going to a good owner, and we need whatever we can get."
+                    li "Yeah, it's going to a good owner, and we need whatever we can get."
 
-            "Accept offer":
-                scene v15s10_femalebuyer_4k
-                with dissolve
-    
-                u "Okay, we accept."
+                "Accept offer":
+                    scene v15s10_femalebuyer_4k
+                    with dissolve
+        
+                    u "Okay, we accept."
 
         scene v15s10_femalebuyer_6 # TPP. Close up of the lady handing Lindsey the cash, faces not seen.
         with dissolve
@@ -1279,7 +1319,5 @@ label v15s10:
         with dissolve
 
         pause 0.75
-
-    $ lindsey_board.money += v14s48_car_price
 
     jump v15s12
