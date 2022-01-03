@@ -232,27 +232,27 @@ label v15s43:
 
                 pause 0.75
 
-                scene v15s43_2c
+                scene v15s43_100
                 with dissolve
 
                 am "Oh, fuck [name]! You weren't kidding about being a loose cannon."
 
-                scene v15s43_2b
+                scene v15s43_99
                 with dissolve
 
                 u "I ain't got time to fuck around with these punk ass kids!"
 
-                scene v15s43_2c
+                scene v15s43_100
                 with dissolve
 
                 am "*Laughs* Woah there, okay! Calm down big guy, you're starting to turn green..."
 
-                scene v15s43_2b
+                scene v15s43_99
                 with dissolve
 
                 u "Ha. Okay, sorry. Got a little carried away..."
 
-                scene v15s43_2c
+                scene v15s43_100
                 with dissolve
 
                 am "*Whispers* A little?"
