@@ -519,7 +519,7 @@ label v15s12:
         call screen planning_board(lindsey_board)
         
         if lindsey_board.approach is not None:
-            $ v15_lindsey_gamenight = lindsey_board.approach.id == "gameNight"
+            $ v15_lindsey_gamenight = lindsey_board.approach.id == "Game Night"
 
         if lindsey_board.selected_task is not None:
             $ v15_lindsey_mostlikelyto = lindsey_board.selected_task == v15s12_lindsey_pb_mostlikely
