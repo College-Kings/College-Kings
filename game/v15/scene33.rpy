@@ -1361,157 +1361,157 @@ label v15s33:
 
             else:
                 if aubrey.relationship.value >= Relationship.FWB.value:
-                    scene v15s33_62e
+                    scene v15s33_46e
                     with dissolve
 
                     u "What the hell are you thinking? You know I'm dating your sister."
 
-                    scene v15s33_62d
+                    scene v15s33_46d
                     with dissolve
 
                     na "Oh, come on... Like that means anything."
 
-                    scene v15s33_62e
+                    scene v15s33_46e
                     with dissolve
 
                     u "What?"
 
-                    scene v15s33_62g # FPP. Naomi looking at MC, MC looking at Naomi, Naomi smirking, mouth open.
+                    scene v15s33_46g # FPP. Naomi looking at MC, MC looking at Naomi, Naomi smirking, mouth open.
                     with dissolve
 
                     na "She dates all the time, it means nothing to her! All of her exes know that, that's why they hook up with me... *Giggles*"
 
-                    scene v15s33_62h # FPP. Naomi looking at MC, MC looking at Naomi, Naomi smirking, mouth closed.
+                    scene v15s33_46h # FPP. Naomi looking at MC, MC looking at Naomi, Naomi smirking, mouth closed.
                     with dissolve
 
                     u "(I don't hit women... I don't hit women... I don't hit women...)"
 
                 else:
-                    scene v15s33_62e
+                    scene v15s33_46e
                     with dissolve
 
                     u "As much as I appreciate your interest in me, I'm here with Aubrey and for Aubrey."
 
-                    scene v15s33_62d
+                    scene v15s33_46d
                     with dissolve
 
                     na "Yeah, but you're not-"
 
-                    scene v15s33_62e
+                    scene v15s33_46e
                     with dissolve
 
                     u "I can't hook up with her sister in the bathroom."
 
-                    scene v15s33_62d
+                    scene v15s33_46d
                     with dissolve
 
                     na "Ha..."
 
-            scene v15s33_62e
+            scene v15s33_46e
             with dissolve
 
             u "*Sighs* And in case you forgot, this is your parent's wedding day."
 
-            scene v15s33_62d
+            scene v15s33_46d
             with dissolve
 
             na "Their second wedding day!"
 
-            scene v15s33_62e
+            scene v15s33_46e
             with dissolve
 
             u "I don't give a shit!"
 
-            scene v15s33_62f
+            scene v15s33_46f
             with dissolve
 
             na "Are you being serious right now?"
 
-            scene v15s33_62i # FPP. Naomi looking at MC, MC looking at Naomi, Naomi slightly angry, mouth closed.
+            scene v15s33_46i # FPP. Naomi looking at MC, MC looking at Naomi, Naomi slightly angry, mouth closed.
             with dissolve
 
             u "As serious as I can possibly be."
 
-            scene v15s33_62f
+            scene v15s33_46f
             with dissolve
 
             na "Who the fuck do you think you are? Nobody has turned me down. Ever."
 
-            scene v15s33_62i
+            scene v15s33_46i
             with dissolve
 
             u "Sorry."
 
             u "I'm going back to the table."
 
-            scene v15s33_62f
+            scene v15s33_46f
             with dissolve
 
             na "Ugh! Wait-"
 
-            scene v15s33_64 # TPP. Close up of Naomi's hand pulling MC's phone out his pocket.
+            scene v15s33_47 # TPP. Close up of Naomi's hand pulling MC's phone out his pocket.
             with dissolve
 
             u "Naomi, stop! What are you doing?"
 
-            scene v15s33_62j # FPP. Naomi looking at and tapping on MC's phone, MC looking at Naomi, Naomi neutral face, mouth open.
+            scene v15s33_46j # FPP. Naomi looking at and tapping on MC's phone, MC looking at Naomi, Naomi neutral face, mouth open.
             with dissolve
 
             na "You're definitely not getting away this easily. *Scoffs*"
 
-            scene v15s33_64a # TPP. Close up of Naomi's hand putting MC's phone back in his pocket.
+            scene v15s33_47a # TPP. Close up of Naomi's hand putting MC's phone back in his pocket.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
-            scene v15s33_62g
+            scene v15s33_46g
             with dissolve
 
             na "There. Now you have my number."
 
-            scene v15s33_62h
+            scene v15s33_46h
             with dissolve
 
             u "Naomi..."
 
-            scene v15s33_62g
+            scene v15s33_46g
             with dissolve
 
             na "This isn't over yet."
 
-            scene v15s33_62h
+            scene v15s33_46h
             with dissolve
 
             u "*Sighs*"
 
             play sound "sounds/dooropen.mp3"
 
-            scene v15s33_60f # FPP. Show MC leaving the bathroom after opening the door, neutral face, mouth closed.
+            scene v15s33_44f # FPP. Show MC leaving the bathroom after opening the door, neutral face, mouth closed.
             with dissolve
 
             u "(I can't believe that just happened...)"
 
-            scene v15s33_50a # FPP. Show MC walking to the lunch area table, neutral face, mouth closed.
-            with fade
-            
-            pause 0.75 
+            scene v15s33_34a # FPP. Show MC walking to the lunch area table, neutral face, mouth closed.
+            with fade 
 
-            scene v15s33_57a
+            pause 0.75
+
+            scene v15s33_41a
             with dissolve
 
             au "*Whispers* All good?"
 
-            scene v15s33_54b
+            scene v15s33_38b
             with dissolve
 
             u "*Whispers* Yeah, yeah. Perfect."
 
-            scene v15s33_65 # TPP. Close up of Aubrey at the table looking towards the bathroom, neutral face, mouth closed.
+            scene v15s33_48 # TPP. Close up of Aubrey at the table looking towards the bathroom, neutral face, mouth closed.
             with dissolve
 
             pause 0.75
 
-            scene v15s33_54c # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth closed.
+            scene v15s33_38c # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth closed.
             with dissolve
 
             u "(Phew... Let's hope no one noticed any of that.)"
@@ -1528,20 +1528,10 @@ label v15s33:
 
             u "(Why the hell not...?) Ha..."
 
-            scene v15s33_63a # FPP. Naomi's hand undoing MC's pants.
-            with dissolve
-
-            pause 0.75
-
-            play sound "sounds/swoosh.mp3"
-
-            scene v15s33_66 # TPP. In the bathroom close up of MC's pants hitting the ground and his dick out.
+            scene v15s33_50 # FPP. In the bathroom, Naomi on her knees infront of MC, MC looking down at Naomi, Naomi looking up at MC, smirking, mouth closed.
             with dissolve
 
             na "Ooh..."
-
-            scene v15s33_67 # FPP. In the bathroom, Naomi on her knees infront of MC, MC looking down at Naomi, Naomi looking up at MC, smirking, mouth closed.
-            with dissolve
 
             pause 0.75
 
