@@ -3,6 +3,13 @@
 # Characters: MC (Outfit: 1), CAMERON (Outfit: 3)
 # Time: Night
 
+init python:
+    def v15s2_reply1():
+        chloe.messenger.newMessage("You're unbelievable.")
+
+    def v15s2_reply2():
+        chloe.messenger.newMessage("Well, at least you admit it...")
+
 label v15s2:
     scene v15s2_1 # FPP. Show the material of the bag over MC's head. (Maybe reuse the same images from the dungeon in v13)
     with dissolve
@@ -68,7 +75,7 @@ label v15s2:
 
         u "But we talked about how she can get help to quit."
 
-        u "I-I'm trying to help her, Cameron. I actually care about her, okay?!"
+        u "I'm trying to help her, Cameron. I actually care about her, okay?!"
 
         scene v15s2_3c # TPP. Same as v15s2_3, Cameron serious face, mouth open.
         with dissolve
@@ -311,16 +318,36 @@ label v15s2:
     
     pause 0.75
 
+    if v14_date_distraction:
+        $ chloe.messenger.newMessage("So, you wanna tell me why you didn't come?") 
+        $ chloe.messenger.addReply("Hey, I understand if you're upset. I'm sorry. Something came up, an emergency, and I couldn't make it.") 
+        $ chloe.messenger.newMessage("What do you mean you couldn't make it? You told me to meet you there! What happened that was so important, you had to stand me up at a fancy restaurant?!")
+        $ chloe.messenger.addReply("Chloe, I'm sorry. I can't talk about it, but everything's fine. It's over now, I just don't wanna talk about it.") 
+        $ chloe.messenger.newMessage("Ha. You're sorry... And you don't want to talk about it? Well, bye then.")
+        $ chloe.messenger.addReply("Chloe please, don't be mad about this.") 
+        $ chloe.messenger.newMessage("Okay, I'll just forget it happened. Is that fair?")
+        $ chloe.messenger.addReply(_("Thank you."),v15s2_reply1)
+        $ chloe.messenger.addReply(_("It's not fair, no."), v15s2_reply2)
+        $ chloe.messenger.newMessage("Just... stop talking about it.")
+        $ chloe.messenger.addReply("Okay. Done.") 
+
     $ autumn.messenger.newMessage(_("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)"), force_send=True)
     $ autumn.messenger.addReply(_("Yeah, looking forward to it. See you there!"))
     $ autumn.messenger.addReply(_("Of course! I'll always be there if there's puppies, haha."))
 
-    label v15s2_PhoneContinue:
+    label v15s2_PhoneContinueChl:
+        if chloe.messenger.replies:
+            call screen phone
+        if chloe.messenger.replies:
+            u "(I should reply to Chloe.)"
+            jump v15s2_PhoneContinueChl
+
+    label v15s2_PhoneContinueAut:
         if autumn.messenger.replies:
             call screen phone
         if autumn.messenger.replies:
             u "(I should reply to Autumn.)"
-            jump v15s2_PhoneContinue
+            jump v15s2_PhoneContinueAt
 
     u "(Almost forgot about that... It'll be interesting to spend some one-on-one time with Autumn.)"
 

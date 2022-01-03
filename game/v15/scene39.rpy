@@ -782,6 +782,8 @@ label v15s39:
                         scene v15s39_8b
                         with dissolve
 
+                        $ set_presidency_percent(v14_lindsey_popularity - 3)
+
                         li "*Drunk* She gets everything handed to her, even her fucking boobs!"
 
                         scene v15s39_12g # FPP. same as v15s39_12f Aubrey is now looking at Lindsey, mouth is open, still with a concerned expression
@@ -806,6 +808,8 @@ label v15s39:
 
                         scene v15s39_8b
                         with dissolve
+
+                        $ set_presidency_percent(v14_lindsey_popularity - 3)
 
                         li "*Drunk* I mean no wonder she's such a bitch all the time..."
 
@@ -849,6 +853,8 @@ label v15s39:
 
                             scene v15s39_8o # FPP. same as v15s39_8n Lindsey is now looking at Aubrey, mouth is open, is slightly sad/concenred, still drunk appearance
                             with dissolve
+
+                            $ set_presidency_percent(v14_lindsey_popularity + 3)
 
                             li "*Drunk* Oh. Oh, yeah, I'm so sorry. That must have sounded so bitchy. Sorry, everyone."
 
@@ -1050,13 +1056,15 @@ label v15s39:
 
                     u "(Sorry Aubrey... I'm trying to start a storm here.)"
 
-                    if kct == "confident":
+                    if kct == "popular":
                         call screen kct_popup
 
                         scene v15s39_8c
                         with dissolve
 
                         li "What do you want me to say? That she gets everything handed to her?"
+
+                        $ set_presidency_percent(v14_lindsey_popularity - 3)
 
                         li "Or that the only reason she wants to be President is because she can't afford tuition?"
 
@@ -1251,5 +1259,21 @@ label v15s39:
     with fade
 
     pause 0.75
+
+    $ v15s39_kiwiiPost1= KiwiiPost(lindsey, "v15s39Kiwii1", "Having the most luxurious night! #VIPs", numberLikes=931)
+    $ v15s39_kiwiiPost1.newComment(imre, "The fuck? Where's my invite?", numberLikes=renpy.random.randint(360, 860))
+    $ v15s39_kiwiiPost1.newComment(lauren, "That looks so fun... Where are you guys?!", numberLikes=renpy.random.randint(360, 860))
+
+    if v15_lindsey_inviteseb:
+        $ v15s39_kiwiiPost1.newComment(sebastian, "No idea, but a really sick nightclub, haha! Lindsey planned this amazing night, thank you Lindsey!", numberLikes=renpy.random.randint(360, 860))
+    else:
+        $ v15s39_kiwiiPost1.newComment(grayson, "Wouldn't you like to know? Haha! Thanks for the night out, Lindsey.", numberLikes=renpy.random.randint(360, 860))
+
+    $ v15s39_kiwiiPost1.newComment(lindsey, "You're welcome guys! I wish we could've brought more people... Next time everyone goes.", numberLikes=renpy.random.randint(360, 860))
+    $ v15s39_kiwiiPost1.addReply("Next time? I need a nap... Lol.", numberLikes=renpy.random.randint(360, 860))
+    $ v15s39_kiwiiPost1.addReply("Let me know when, I'm down!", numberLikes=renpy.random.randint(360, 860))
+
+    if False: # for Lint
+        scene v15s39Kiwii1 # Selfie with Autumn and MC at the club at VIP night
 
     jump v15s40

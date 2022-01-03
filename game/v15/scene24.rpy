@@ -1236,6 +1236,8 @@ label v15s24:
         scene v15s24_5
         with dissolve
 
+        $ set_presidency_percent(v14_lindsey_popularity + 3)
+
         u "One bag of alcohol for the pretty lady."
 
         scene v15s24_7d # TPP. MC handing Lindsey the bag of Alcohol, Lindsey grabbing the back, both slight smile, mouth closed.
@@ -1346,6 +1348,8 @@ label v15s24:
 
         scene v15s24_5
         with dissolve
+
+        $ set_presidency_percent(v14_lindsey_popularity - 3)
 
         u "I'm sorry, Linds... *Sighs*"
 

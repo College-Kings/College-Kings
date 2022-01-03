@@ -4,6 +4,13 @@
 # Time: Evening
 # Render Count: Unique Renders 18 Total: 144
 
+init python:
+    def v15s35_kiwiireply1():
+        v15s35_kiwiiPost1.newComment(imre, "Bro, you have no idea what you're getting yourself into. You're so fucking on!", numberLikes=renpy.random.randint(260, 560))
+        
+    def v15s35_kiwiireply2():
+        v15s35_kiwiiPost1.newComment(lindsey, "Agreed! :) Thanks again for coming, [name].", numberLikes=renpy.random.randint(260, 560))
+
 label v15s35:
     scene v15s35_1 # TPP. MC arrives at the Chicks house, knocks on the front door, slight smile, mouth is closed
     with dissolve
@@ -2589,6 +2596,8 @@ label v15s35:
                         li "*Drunk* Yes! That sounds perfect."
 
                     label v15bring_up_chloe:
+
+                        
                         scene v15s35_12k
                         with dissolve
 
@@ -2627,6 +2636,8 @@ label v15s35:
                         scene v15s35_12n
                         with dissolve
 
+                        $ set_presidency_percent(v14_lindsey_popularity - 3)
+
                         li "*Drunk* Her plastic boobs?"
 
                         scene v15s35_14f
@@ -2636,6 +2647,8 @@ label v15s35:
 
                         scene v15s35_12n
                         with dissolve
+
+                        $ set_presidency_percent(v14_lindsey_popularity - 3)
 
                         li "*Drunk* Or her plastic nose?"
 
@@ -2684,6 +2697,8 @@ label v15s35:
 
                             scene v15s35_12p # FPP. same as v15s35_12o Lindsey has a worried/concerned expression, mouth is open, still looking at Mc, her glass is still Empty
                             with dissolve
+
+                            $ set_presidency_percent(v14_lindsey_popularity + 3)
 
                             li "*Drunk* Whoops! I probably just sounded like such a bitch. I'm sorry..."
 
@@ -2860,10 +2875,12 @@ label v15s35:
 
                     pause 0.75
 
-                    if kct == "confident":
+                    if kct == "popular":
                         call screen kct_popup
                         scene v15s35_12b
                         with dissolve
+
+                        $ set_presidency_percent(v14_lindsey_popularity - 3)
 
                         li "What do you want me to say? That her boobs are obviously fake? Everyone knows that I think."
 
@@ -2971,5 +2988,16 @@ label v15s35:
 
     scene v15s35_18a # TPP. same as v15s35_18 Lindsey has closed the door and is no longer visible, Autumn and Mc are looking at each other, Autumn's mouth is open slight smile hand extended out like she's explaining something, Mc's mouth is closed slight smile
     with fade
+
+    $ v15s35_kiwiiPost1= KiwiiPost(lindsey, "v15s35Kiwii1", "Always a good time with these good people <3 #GameNight", numberLikes=648)
+    $ v15s35_kiwiiPost1.newComment(imre, "The fuck? Where's my invite?", numberLikes=renpy.random.randint(260, 560))
+    $ v15s35_kiwiiPost1.newComment(riley, "Omg, I love game nights! Can I come to the next one?", numberLikes=renpy.random.randint(260, 560))
+    $ v15s35_kiwiiPost1.newComment(lindsey, "Don't worry, everyone's invited next time. Promise!", numberLikes=renpy.random.randint(260, 560))
+    $ v15s35_kiwiiPost1.newComment(chloe, "I'd never leave you guys out, hope you had fun without the rest of us!", numberLikes=renpy.random.randint(260, 560))
+    $ v15s35_kiwiiPost1.addReply("The more the merrier! Except you don't stand a chance when it comes to the games, Imre", v15s35_kiwiireply1, mentions=imre, numberLikes=renpy.random.randint(260, 560))
+    $ v15s35_kiwiiPost1.addReply("It was a really good night, gonna have to do it again with the whole gang.", v15s35_kiwiireply2, numberLikes=renpy.random.randint(260, 560))
+
+    if False: # for Lint
+        scene v15s35Kiwii1 # picture of game night set up or a picture of the group playing/talking at the game night
 
     jump v15s36

@@ -89,7 +89,7 @@ screen v15_teacher_brief(key):
             spacing 15
             
             add "images/v15/Scene 20/teacher_brief/cross.webp" yalign 0.5
-            text "HATE" style "teacher_brief_header1" yalign 0.5
+            text "HATES" style "teacher_brief_header1" yalign 0.5
 
         for i in teacher["hates"]:
             hbox:
