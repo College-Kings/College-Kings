@@ -1,65 +1,44 @@
-screen tutorial(tutorial_text):
+screen tutorial(tutorial_text, position=(1046, 73)):
     zorder 200
     tag tutorial
+    style_prefix "tutorial"
 
+    default image_path = "gui/tutorial/"
     default page_number = 1
 
-    add "images/tutback.webp" pos (1240, 100)
+    frame:
+        pos position
+        xysize (754, 271) 
+        background "tutorial_background"
 
-    text "Tutorial" style "choicetextnum" pos (1490, 530)
-
-    text tutorial_text[page_number -1] style "choicetuttext"
-
-    fixed:
-        xysize(650, 85)
-        pos(1240, 720)
-
-        hbox:
-            align(0.5, 0.5)
-            spacing 150
+        fixed:
+            ypos 42
+            xysize (754, 223)
+        
+            text tutorial_text[page_number - 1] xsize 607 xalign 0.5 ypos 40
 
             imagebutton:
-                idle "images/whitearrowleft.webp"
+                yalign 0.5
+                idle "tutorial_left_button_idle"
                 if page_number > 1:
                     action SetScreenVariable("page_number", page_number - 1)
                 else:
                     action SetScreenVariable("page_number", len(tutorial_text))
 
-            text "{} of {}".format(page_number, len(tutorial_text)) style "choicetextnum" yalign 0.5
-
             imagebutton:
-                idle "images/whitearrowright.webp"
+                align (1.0, 0.5)
+                idle "tutorial_right_button_idle"
                 if page_number < len(tutorial_text):
                     action SetScreenVariable("page_number", page_number + 1)
                 else:
                     action SetScreenVariable("page_number", 1)
 
+            text "{} of {}".format(page_number, len(tutorial_text)) style "tutorial_page_number" xalign 0.5 ypos 170
 
-style choicetuttext is text:
-    font "fonts/OpenSans.ttf"
-    size 25
-    color "#ffffff"
-    text_align 0
-    xpos 1310
-    ypos 570
-    xmaximum 500
 
-style choicetextnum is text:
-    font "fonts/Freshman.ttf"
-    size 25
-    color "#FFD166"
+style tutorial_text is text:
+    font "fonts/Effra-Regular.ttf"
+    size 23
     text_align 0.5
 
-style tutorialtext is text:
-    font "fonts/OpenSans.ttf"
-    size 25
-    color "#ffffff"
-    text_align 0
-    xpos 1270
-    ypos 400
-    xmaximum 500
-
-style tutorialtextnum is text:
-    font "fonts/Freshman.ttf"
-    size 25
-    color "#FFD166"
+style tutorial_page_number is druk_wide_bold_22
