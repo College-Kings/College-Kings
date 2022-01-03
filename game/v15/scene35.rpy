@@ -504,7 +504,7 @@ label v15s35:
             scene v15s35_8b
             with dissolve
 
-            aut "How could you two kill a poor defenceless bunny rabbit?!"
+            aut "How could you two kill a poor defenseless bunny rabbit?!"
 
             scene v15s35_9a
             with dissolve
@@ -1346,7 +1346,7 @@ label v15s35:
             scene v15s35_8b
             with dissolve
 
-            aut "Really? You think I'd want to be friends with someone whp wants to eat me?"
+            aut "Really? You think I'd want to be friends with someone who wants to eat me?"
 
             scene v15s35_7i
             with dissolve

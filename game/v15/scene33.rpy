@@ -1576,7 +1576,7 @@ label v15s33:
 
             u "Mmm, Naomi... *Moans*"
 
-            na "*Mumbing* Mmm hmm?"
+            na "*Mumbling* Mmm hmm?"
 
             u "Yesss..."
 
@@ -1682,7 +1682,7 @@ label v15s33:
             scene v15s33_53
             with dissolve
 
-            na "Aubby, he didn't even cum yet, I mean-"
+            na "Aubbie, he didn't even cum yet, I mean-"
 
             scene v15s33_53a # FPP. MC looking at Naomi, Naomi looking at Aubrey, Naomi smirking, mouth closed.
             with dissolve
