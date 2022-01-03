@@ -1533,19 +1533,17 @@ label v15s33:
 
             na "Ooh..."
 
-            pause 0.75
-
-            scene v15s33_67a # FPP. MC looking at Naomi, Naomi kissing the tip of MC's dick.
+            scene v15s33_50a # FPP. MC looking at Naomi, Naomi kissing the tip of MC's dick.
             with dissolve
 
             pause 0.75
 
-            scene v15s33_67b # FPP. MC looking at Naomi, Naomi looking at MC's dick, smirking, mouth open.
+            scene v15s33_50b # FPP. MC looking at Naomi, Naomi looking at MC's dick, smirking, mouth open.
             with dissolve
 
             na "Hello, big boy."
 
-            scene v15s33_67a
+            scene v15s33_50a
             with dissolve
 
             u "(This is actually happening...)"
@@ -1573,7 +1571,7 @@ label v15s33:
             scene v15naobjf # Ignore as anim
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             u "(But it feels so... Right... Ha.)"
 
@@ -1586,7 +1584,7 @@ label v15s33:
             scene v15naohj # Ignore as anim
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             na "You like it when supermodels suck on your dick, huh? *Giggles*"
 
@@ -1606,226 +1604,226 @@ label v15s33:
 
             play sound "sounds/dooropen.mp3"
 
-            scene v15s33_68 # TPP. Close up of Aubrey at the entrance of the bathroom, Aubrey angry, mouth open.
+            scene v15s33_51 # TPP. Close up of Aubrey at the entrance of the bathroom, Aubrey angry, mouth open.
             with vpunch
 
             $ grant_achievement("what_goes_around")
             au "I fucking KNEW IT!"
 
-            scene v15s33_68a # FPP. CLose up of Aubrey at the entrance of the bathroom, Aubrey angry, mouth closed.
+            scene v15s33_51a # FPP. CLose up of Aubrey at the entrance of the bathroom, Aubrey angry, mouth closed.
             with dissolve
 
             u "Aubrey-"
 
-            scene v15s33_68
+            scene v15s33_51
             with dissolve
 
             au "Could you have been any more obvious?!"
 
-            scene v15s33_66a # TPP. MC pulling up his pants.
+            scene v15s33_49 # TPP. MC pulling up his pants.
             with dissolve
 
             pause 0.75
             
-            scene v15s33_69 # TPP. Aubrey walking over to MC and Naomi, Aubrey angry, mouth closed.
+            scene v15s33_52 # TPP. Aubrey walking over to MC and Naomi, Aubrey angry, mouth closed.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
-            scene v15s33_70 # FPP. Aubrey in the bathroom with MC and Naomi, MC looking at Naomi, Naomi looking at MC, Naomi smirking, mouth open.
+            scene v15s33_53 # FPP. MC looking at Naomi, Naomi looking at Aubrey, Naomi smirking, mouth open.
             with dissolve
 
             na "*Whispers* I mean... Probably."
 
-            scene v15s33_71 # FPP. Aubrey in the bathroom with MC and Naomi, MC looking at Aubrey, Aubrey looking at MC, Aubrey angry, mouth open.
+            scene v15s33_54 # FPP. Aubrey in the bathroom with MC and Naomi, MC looking at Aubrey, Aubrey looking at MC, Aubrey angry, mouth open.
             with dissolve
 
             au "How could you do this, [name]? That's my..."
 
-            scene v15s33_71a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey tearing up, Aubrey angry, mouth open.
+            scene v15s33_54a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey tearing up, Aubrey angry, mouth open.
             with dissolve
 
             au "*Whispers* That's my fucking sister, [name]..."
 
-            scene v15s33_71b # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey tearing up, Aubrey angry, mouth closed.
+            scene v15s33_54b # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey tearing up, Aubrey angry, mouth closed.
             with dissolve
 
             u "I know, Aubrey. I-"
 
-            scene v15s33_71a
+            scene v15s33_54a
             with dissolve
 
             au "Any girl but my sister."
 
-            scene v15s33_71c # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey crying and sad, mouth open.
+            scene v15s33_54c # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey crying and sad, mouth open.
             with dissolve
 
             au "*Sobbing* How could you?"
 
-            scene v15s33_71d # FPP. MC looking at Aubrey, Aubrey looking at Mc, Aubrey crying and sad, mouth open.
+            scene v15s33_54d # FPP. MC looking at Aubrey, Aubrey looking at Mc, Aubrey crying and sad, mouth open.
             with dissolve
 
             u "I'm sorry, Aubrey. We just-"
 
-            scene v15s33_71c
+            scene v15s33_54c
             with dissolve
 
             au "Don't... Don't even try to talk yourself out of this."
 
-            scene v15s33_71d
+            scene v15s33_54d
             with dissolve
 
             u "*Sighs*"
 
-            scene v15s33_71c
+            scene v15s33_54c
             with dissolve
 
             au "Ha... Unbelievable."
 
-            scene v15s33_70a # FPP. MC looking at Naomi, Naomi looking at Aubrey, Naomi smirking, mouth open.
+            scene v15s33_53
             with dissolve
 
             na "Aubby, he didn't even cum yet, I mean-"
 
-            scene v15s33_70b # FPP. MC looking at Naomi, Naomi looking at Aubrey, Naomi smirking, mouth closed.
+            scene v15s33_53a # FPP. MC looking at Naomi, Naomi looking at Aubrey, Naomi smirking, mouth closed.
             with dissolve
 
             u "(What... The Fuck...! Is wrong with this girl?)"
 
-            scene v15s33_71e # FPP. MC looking at Aubrey, Aubrey looking at Naomi, Aubrey crying and angry, mouth open.
+            scene v15s33_54e # FPP. MC looking at Aubrey, Aubrey looking at Naomi, Aubrey crying and angry, mouth open.
             with dissolve
 
             au "Naomi, shut your fake fucking mouth!"
 
-            scene v15s33_70c # FPP. MC looking at Naomi, Naomi looking at Aubrey, Naomi shocked, mouth open.
+            scene v15s33_53b # FPP. MC looking at Naomi, Naomi looking at Aubrey, Naomi shocked, mouth open.
             with dissolve
 
             na "But-"
 
-            scene v15s33_71e
+            scene v15s33_54e
             with dissolve
 
             au "I have absolutely nothing to say to you. You're not the best person, and you're a pretty shit sister-"
 
-            scene v15s33_70c
+            scene v15s33_53b
             with dissolve
 
             na "Uh, excuse me?!"
 
-            scene v15s33_71e
+            scene v15s33_54e
             with dissolve
 
             au "But this? I can't believe you did this..."
 
-            scene v15s33_71f # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey crying and disappointed, mouth closed.
+            scene v15s33_54f # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey crying and disappointed, mouth closed.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
-            scene v15s33_71g # FPP. Show Aubrey walking towards the bathroom door.
+            scene v15s33_54g # FPP. Show Aubrey walking towards the bathroom door.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             play sound "sounds/doorclose.mp3"
 
-            scene v15s33_60c # TPP. Show Aubrey leaving the bathroom and slamming the door shut.
+            scene v15s33_44c # TPP. Show Aubrey leaving the bathroom and slamming the door shut.
             with vpunch
 
-            pause 0.75 
+            pause 0.75
 
-            scene v15s33_62e
+            scene v15s33_46e
             with dissolve
 
             u "Fuck!"
 
-            scene v15s33_62d
+            scene v15s33_46d
             with dissolve
 
             na "Shit..."
 
             na "Well, I guess we got busted. Haha..."
 
-            scene v15s33_62e
+            scene v15s33_46e
             with dissolve
 
             u "What the hell is wrong with you?"
 
-            scene v15s33_62d
+            scene v15s33_46d
             with dissolve
 
             na "What's wrong with me?"
 
-            scene v15s33_62e
+            scene v15s33_46e
             with dissolve
 
             u "Do you not care that she's upset?"
 
-            scene v15s33_62g
+            scene v15s33_46g
             with dissolve
 
             na "Ah, don't worry. She'll be fine. Let her throw her usual little tantrum..."
 
-            scene v15s33_62h
+            scene v15s33_46h
             with dissolve
 
             u "Seriously...?"
 
-            scene v15s33_62g
+            scene v15s33_46g
             with dissolve
 
             na "We're sisters, [name]. She'll get over it."
 
-            scene v15s33_62h
+            scene v15s33_46h
             with dissolve
 
             u "I highly doubt it."
 
-            scene v15s33_62g
+            scene v15s33_46g
             with dissolve
 
             na "Give me your phone."
 
-            scene v15s33_62h
+            scene v15s33_46h
             with dissolve
 
             u "Why?"
 
-            scene v15s33_62h
+            scene v15s33_46h
             with dissolve
 
             na "Just give it to me. Why do you ask so many questions?"
 
-            scene v15s33_62j
+            scene v15s33_46j
             with dissolve
 
             pause 0.75
 
-            scene v15s33_64a
+            scene v15s33_47a
             with dissolve
 
             pause 0.75
 
-            scene v15s33_62g
+            scene v15s33_46g
             with dissolve
 
             na "Now you have my number, text me sometime soon. We have unfinished business to take care of."
             
             play sound "sounds/dooropen.mp3"
 
-            scene v15s33_60d # TPP. Show Naomi opening the bathroom door.
+            scene v15s33_44d # TPP. Show Naomi opening the bathroom door.
             with dissolve
 
             pause 0.75
 
             play sound "sounds/doorclose.mp3"
 
-            scene v15s33_60e # FPP. Show Naomi leaving the bathroom.
+            scene v15s33_44e # FPP. Show Naomi leaving the bathroom.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
-            scene v15s33_72 # FPP. MC looking at the empty bathroom.
+            scene v15s33_55 # FPP. MC looking at the empty bathroom.
             with dissolve
             
             u "*Sighs* (This is such a fucking mess...)"
@@ -1834,27 +1832,27 @@ label v15s33:
 
             u "(I'd better get back out there.) *Sighs*"
 
-            scene v15s33_50a
+            scene v15s33_34a
             with fade
 
             pause 0.75
 
-            scene v15s33_57b # FPP. Aubrey gone, MC looking at the Empty seat Aubrey was at.
+            scene v15s33_41b # FPP. Aubrey gone, MC looking at the Empty seat Aubrey was at.
             with dissolve
 
             u "(Where is she?)"
 
-            scene v15s33_54f # FPP. Aubrey gone, MC looking across the table at the empty seat infront of him.
-            with dissolve
-
-            pause 0.75 
-
-            scene v15s33_54d # FPP. Aubrey sitting down in her seat, Aubrey sad, mouth closed.
+            scene v15s33_38f # FPP. Aubrey gone, MC looking across the table at the empty seat infront of him.
             with dissolve
 
             pause 0.75
 
-            scene v15s33_54e # FPP. Aubrey sat down in her seat, Aubrey looking down avoiding eye contact with anyone, Aubrey sad, mouth closed.
+            scene v15s33_38d # FPP. Aubrey sitting down in her seat, Aubrey sad, mouth closed.
+            with dissolve
+
+            pause 0.75
+
+            scene v15s33_38e # FPP. Aubrey sat down in her seat, Aubrey looking down avoiding eye contact with anyone, Aubrey sad, mouth closed.
             with dissolve
 
             u "(This is going to be fun...)"
