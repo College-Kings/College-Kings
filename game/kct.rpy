@@ -54,9 +54,9 @@ screen kct_popup(required_kct=None):
     zorder 300
 
     if required_kct is None or required_kct == kct:
-        $ message = "Congratulations! Your Key Character Trait {b}[kct!c]{/b} has just changed the outcome of a decision someone was making."
+        $ message = "Congratulations! Your Key Character Trait {{b}}{}{{/b}} has just changed the outcome of a decision someone was making.".format(kct)
     else:
-        $ message = "Unfortunately, your Key Character Trait {b}[kct!c]{/b} did not change the outcome of this decision."
+        $ message = "Unfortunately, your Key Character Trait {{b}}{}{{/b}} did not change the outcome of this decision.".format(kct)
 
     use alert_template(message):
         textbutton "OK":

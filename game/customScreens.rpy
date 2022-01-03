@@ -3,6 +3,11 @@ screen alert_template(message):
     modal True
     style_prefix "alert"
 
+    python:
+        message = message.upper()
+        message = message.replace("{B}", "{b}")
+        message = message.replace("{/B}", "{/b}")
+
     frame:
         align (0.5, 0.5)
         minimum (758, 363)
@@ -12,7 +17,7 @@ screen alert_template(message):
             align (0.5, 0.5)
             spacing 45
 
-            text message.upper() xalign 0.5 xsize 350
+            text _(message) xalign 0.5 xsize 500
 
             hbox:
                 xalign 0.5
@@ -41,7 +46,7 @@ screen warning_template(message, style="blue"):
 
             null height 50
 
-            text message.upper() xalign 0.5 xsize 590
+            text _(message.upper()) xalign 0.5 xsize 590
 
             hbox:
                 xalign 0.5
