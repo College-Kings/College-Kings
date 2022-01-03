@@ -10,7 +10,7 @@ label v15s25:
         scene v15s25_1 # TPP. Show MC entering his Wolves frat room, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         play sound "sounds/doorclose.mp3"
 
@@ -22,12 +22,12 @@ label v15s25:
         scene v15s25_3 # TPP. Show MC pulling out his phone from his pocket in his wolves frat room.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s25_2a # TPP. MC sitting at his study desk in his Wolves frat room pressing a button on his phone, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s25_2b # TPP. MC sitting at his study desk with his phone to his ear in his wolves frat room, slight smile, mouth closed.
         with dissolve
@@ -40,7 +40,7 @@ label v15s25:
         scene v15s25_4 # TPP. Show MC entering his apes frat room, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         play sound "sounds/doorclose.mp3"
 
@@ -52,12 +52,12 @@ label v15s25:
         scene v15s25_6 # TPP. Show MC pulling out his phone from his pocket in his apes frat room.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s25_5a # TPP. MC sitting at his study desk in his apes frat room pressing a button on his phone, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         play sound "sounds/ring.mp3"
 
@@ -765,11 +765,11 @@ label v15s25:
 
     pause 0.75
 
-    $ aubrey.messenger.newMessage("Hey! Come to the Chicks house? I have an extra special surprise for you... I think you've earned it.", queue=False)
+    $ aubrey.messenger.newMessage("Hey! Come to the Chicks house? I have an extra special surprise for you... I think you've earned it.", force_send=True)
 
     if aubrey.relationship.value >= Relationship.FWB.value:
         $ aubrey.messenger.addReply("A naked surprise? ;)")
-        $ aubrey.messenger.newMessage("Haha you'll find out. Hurry up. I'm waiting :)", queue=False)
+        $ aubrey.messenger.newMessage("Haha you'll find out. Hurry up. I'm waiting :)", force_send=True)
 
     else:
         $ aubrey.messenger.addReply("Haha okay, see you there.")

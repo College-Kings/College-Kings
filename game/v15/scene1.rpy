@@ -4,6 +4,13 @@
 # Time: Night
 # Render Count: 6 Unique Renders 33 Total
 
+init python:
+    def v15s1_reply1():
+        chloe.messenger.newMessage("You're unbelievable.")
+
+    def v15s1_reply2():
+        chloe.messenger.newMessage("Well, at least you admit it...")
+
 label v15_start:
     $ autumn.relationship = Relationship.FRIEND #Reset Autumn to FRIEND
     $ imre.relationship = Relationship.FRIEND #Reset Imre to FRIEND
@@ -508,22 +515,41 @@ label v15s1:
 
 # -MC checks his texts and there's a message from Autumn-
 
-    $ autumn.messenger.newMessage("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)", queue=False)
+    if v14_date_distraction:
+        $ chloe.messenger.newMessage("So, you wanna tell me why you didn't come?") 
+        $ chloe.messenger.addReply("Hey, I understand if you're upset. I'm sorry. Something came up, an emergency, and I couldn't make it.") 
+        $ chloe.messenger.newMessage("What do you mean you couldn't make it? You told me to meet you there! What happened that was so important, you had to stand me up at a fancy restaurant?!")
+        $ chloe.messenger.addReply("Chloe, I'm sorry. I can't talk about it, but everything's fine. It's over now, I just don't wanna talk about it.") 
+        $ chloe.messenger.newMessage("Ha. You're sorry... And you don't want to talk about it? Well, bye then.")
+        $ chloe.messenger.addReply("Chloe please, don't be mad about this.") 
+        $ chloe.messenger.newMessage("Okay, I'll just forget it happened. Is that fair?")
+        $ chloe.messenger.addReply(_("Thank you."),v15s1_reply1)
+        $ chloe.messenger.addReply(_("It's not fair, no."), v15s1_reply2)
+        $ chloe.messenger.newMessage("Just... stop talking about it.")
+        $ chloe.messenger.addReply("Okay. Done.") 
+
+    $ autumn.messenger.newMessage("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)", force_send=True)
     $ autumn.messenger.addReply("Uhm, sure.")
     $ autumn.messenger.addReply("Of course! I'll always be there if there's puppies, haha.")
 
-    label v15s1_PhoneContinue:
+    label v15s1_PhoneContinueChl:
+        if chloe.messenger.replies:
+            call screen phone
+        if chloe.messenger.replies:
+            u "(I should reply to Chloe.)"
+            jump v15s1_PhoneContinueChl
+
+    label v15s1_PhoneContinueAut:
         if autumn.messenger.replies:
             call screen phone
         if autumn.messenger.replies:
             u "(I should reply to Autumn.)"
-            jump v15s1_PhoneContinue
+            jump v15s1_PhoneContinueAut
             
     scene v15s1_5
     with dissolve
 
     u "(Almost forgot about that... It'll be interesting to spend one on one time with Autumn.)"
-
 
     u "(I'd better set an alarm so I'm not late.)"
 

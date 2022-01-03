@@ -32,7 +32,7 @@ init python:
             if self.condition:
                 simplr_contacts.append(self)
             
-        def newMessage(self, message, queue=True):
+        def newMessage(self, message, force_send=False):
             message = Message(self, message)
 
             # Moves contact to the top when recieving a new message
@@ -40,17 +40,17 @@ init python:
                 simplr_contacts.insert(0, simplr_contacts.pop(simplr_contacts.index(self)))
 
             # Add message to queue
-            if queue:
+            if not force_send:
                 self.pending_messages.append(message)
             else:
                 self.pending_messages = []
                 self.sent_messages.append(message)
 
-            if self in simplr_contacts: simplrApp.notification = True
+            if self in simplr_contacts: simplr_app.notification = True
             
             return message
 
-        def newImgMessage(self, img, queue=True):
+        def newImgMessage(self, img, force_send=False):
             message = ImageMessage(self, img)
 
             # Moves contact to the top when recieving a new message
@@ -58,13 +58,13 @@ init python:
                 simplr_contacts.insert(0, simplr_contacts.pop(simplr_contacts.index(self)))
 
             # Add message to queue
-            if queue:
+            if not force_send:
                 self.pending_messages.append(message)
             else:
                 self.pending_messages = []
                 self.sent_messages.append(message)
 
-            if self in simplr_contacts: simplrApp.notification = True
+            if self in simplr_contacts: simplr_app.notification = True
 
             return message
 
@@ -78,7 +78,7 @@ init python:
                 else:
                     self.sent_messages[-1].replies.append(reply)
             except IndexError:
-                message = self.newMessage("", queue=False)
+                message = self.newMessage("", force_send=True)
                 message.replies.append(reply)
 
         def addImgReply(self, image, func):
@@ -91,12 +91,12 @@ init python:
                 else:
                     self.sent_messages[-1].replies.append(reply)
             except Exception:
-                self.newMessage("", queue=False)
+                self.newMessage("", force_send=True)
                 self.pending_messages[-1].replies.append(reply)
 
         def seenMessage(self):
             if not any(contact.replies for contact in simplr_contacts):
-                simplrApp.notification = False
+                simplr_app.notification = False
 
         def getMessage(self, message):
             for msg in self.sent_messages:

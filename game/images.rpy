@@ -9,12 +9,12 @@ image splashtwo = "images/splash2.webp"
 image splashthree = "images/splash 3.webp"
 
 # GUI
+## Alert
+image alert_background = Frame("gui/alert/background.png", 8, 8)
+
 ## Choice
 image choice_button_idle = Frame("gui/choice/button_idle.png", 40, 8)
 image choice_button_hover = Frame("gui/choice/button_idle.png", 40, 8)
-
-## Confirm
-image confirm_background = Frame("gui/confirm/background.png", 8, 8)
 
 ## KCT Choice Hint
 image kct_choice_hint_background = Frame("gui/kct/background.png", 44, 6, 44, 0) 
@@ -30,6 +30,9 @@ image scene_gallery_bar_base = Frame("main_menu/scene_gallery/images/bar_base.pn
 image settings_bar_left = Frame("gui/settings/bar_right.webp", 14, 5)
 image settings_bar_right = Frame("gui/settings/bar_right.webp", 14, 5)
 image settings_bar_thumb = Image("gui/settings/bar_thumb.webp")
+
+## Warning
+image warning_background_blue = Frame("gui/warning/background_blue.png", 42, 8, 8, 8)
 
 # Transitions
 image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm", loop=False)
@@ -137,7 +140,6 @@ image worth_the_wait = "images/achievements/v12/worth_the_wait.webp"
 image inside_job = "images/achievements/v12/inside_job.webp"
 image all_is_fair_in_love_and_war = "images/achievements/v12/all_is_fair_in_love_and_war.webp"
 image city_of_love = "images/achievements/v12/city_of_love.webp"
-image indecisive = "images/achievements/v13/indecisive.webp"
 image funny_night = "images/achievements/v13/funny_night.webp"
 image gentlemen_prefer_gingers = "images/achievements/v13/gentlemen_prefer_gingers.webp"
 image flush_flush = "images/achievements/v13/flush_flush.webp"
@@ -151,6 +153,7 @@ image voyeur = "images/achievements/v13/voyeur.webp"
 image dammit_emily = "images/achievements/v13/dammit_emily.webp"
 image calm_down_big_fella = "images/achievements/v13/calm_down_big_fella.webp"
 
+image indecisive = "images/achievements/v14/indecisive.webp"
 image ready_player_three = "images/achievements/v14/ready_player_three.webp"
 image saving_ryans_privates = "images/achievements/v14/saving_ryans_privates.webp"
 image beastie_boy = "images/achievements/v14/beastie_boy.webp"

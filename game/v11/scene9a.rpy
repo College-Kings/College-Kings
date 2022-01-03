@@ -197,9 +197,9 @@ label v11_wolves_seb_prank:
             with dissolve
 
             $ v11s9a_kiwiiPost1 = KiwiiPost(caleb, "v11/sebnaked.webp", _("Someone had a fun time last night!"), numberLikes=256) # Sebastian naked in the middle of campus stood over his sleeping bag looking confused
-            $ v11s9a_kiwiiPost1.newComment(aubrey, _("Suns out, Buns out!"), numberLikes=renpy.random.randint(15, 35), queue=False)
-            $ v11s9a_kiwiiPost1.newComment(samantha, _("A little early in the morning to go streaking isn't it? lol"), numberLikes=renpy.random.randint(15, 35), queue=False)
-            $ v11s9a_kiwiiPost1.newComment(lindsey, _("Spicy!"), numberLikes=renpy.random.randint(15, 35), queue=False)
+            $ v11s9a_kiwiiPost1.newComment(aubrey, _("Suns out, Buns out!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+            $ v11s9a_kiwiiPost1.newComment(samantha, _("A little early in the morning to go streaking isn't it? lol"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+            $ v11s9a_kiwiiPost1.newComment(lindsey, _("Spicy!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
             $ v11s9a_kiwiiPost1.addReply(_("Getting ready to go skinny dipping?"), numberLikes=321)
             $ v11s9a_kiwiiPost1.addReply(_("Someone's got \"balls\""), numberLikes=334)
 
@@ -493,9 +493,9 @@ label v11_wolves_seb_prank:
             imre "Check Kiwii."
 
             $ v11s9a_kiwiiPost2 = KiwiiPost(caleb, "v11/sebnaked.webp", _("Someone had a fun time last night!"), numberLikes=256) # Sebastian naked in the middle of campus stood over his sleeping bag looking confused
-            $ v11s9a_kiwiiPost2.newComment(aubrey, _("Suns out, Buns out!"), numberLikes=renpy.random.randint(15, 35), queue=False)
-            $ v11s9a_kiwiiPost2.newComment(samantha, _("A little early in the morning to go streaking isn't it? lol"), numberLikes=renpy.random.randint(15, 35), queue=False)
-            $ v11s9a_kiwiiPost2.newComment(lindsey, _("Spicy!"), numberLikes=renpy.random.randint(15, 35), queue=False)
+            $ v11s9a_kiwiiPost2.newComment(aubrey, _("Suns out, Buns out!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+            $ v11s9a_kiwiiPost2.newComment(samantha, _("A little early in the morning to go streaking isn't it? lol"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+            $ v11s9a_kiwiiPost2.newComment(lindsey, _("Spicy!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
             $ v11s9a_kiwiiPost2.addReply(_("I wonder how this happened..."), numberLikes=421)
             $ v11s9a_kiwiiPost2.addReply(_("Someone's got \"balls\""), numberLikes=218)
 

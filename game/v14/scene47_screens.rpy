@@ -22,13 +22,11 @@ screen v14s47_car():
 
     if len(v14s47_car_pics) >= 1:
         button:
-            align (0.5, 0.95)
+            xalign 0.5
+            ypos 833
+            minimum (500, 100)
+            idle_background "choice_button_idle"
+            hover_background "choice_button_hover"
             action Jump("v14s47_end")
-            maximum (707, 104)
-            hovered SetVariable("finished_button_hover", True)
-            unhovered SetVariable("finished_button_hover", False)
-            if finished_button_hover:
-                add "gui/center.webp" # hover image
-            else:
-                add "gui/center.webp"
-            text "Finish" align (0.5, 0.5)
+
+            text "FINISH" align (0.5, 0.5)

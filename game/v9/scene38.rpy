@@ -31,7 +31,7 @@ label v9_walk_li_txt:
 
     u "(Please no more drama)"
 
-    $ lindsey.messenger.newMessage(_("Hey Freshmeat! How's it hangin?"), queue=False)
+    $ lindsey.messenger.newMessage(_("Hey Freshmeat! How's it hangin?"), force_send=True)
     $ lindsey.messenger.addReply(_("Hey Linds ;)"))
     $ lindsey.messenger.newMessage(_("I've decided to allow the nickname under one condition"))
     $ lindsey.messenger.addReply(_("Really? And what's that?"))

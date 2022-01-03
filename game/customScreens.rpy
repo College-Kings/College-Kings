@@ -6,7 +6,7 @@ screen alert_template(message):
     frame:
         align (0.5, 0.5)
         minimum (758, 363)
-        background "confirm_background"
+        background "alert_background"
 
         vbox:
             align (0.5, 0.5)
@@ -14,83 +14,69 @@ screen alert_template(message):
 
             text _(message.upper()) xalign 0.5 xsize 350
 
-            transclude
+            hbox:
+                xalign 0.5
+                spacing 20
+
+                transclude
 
 
 style alert_text is olympus_mount_30
 
 
-screen changeLanguage():
-    tag menu
-
-    text _("Select Language") align (0.5, 0.01) size 72
-    vpgrid:
-        cols 1
-        draggable True
-        mousewheel True
-        align (0.5, 0.9)
-        ysize 950
-        xfill True
-        style_prefix "radio"
-        spacing 10
-
-        textbutton "English" text_font "DejaVuSans.ttf" action Language(None) xalign 0.5 text_size 32
-        if renpy.loadable("tl/chineses/script.rpy"):
-            textbutton "Chineses" text_font "DejaVuSans.ttf" action Language("chineses") xalign 0.5 text_size 32
-        if renpy.loadable("tl/chineset/script.rpy"):
-            textbutton "Chineset" text_font "DejaVuSans.ttf" action Language("chineset") xalign 0.5 text_size 32
-        if renpy.loadable("tl/czech/script.rpy"):
-            textbutton "Czech" text_font "DejaVuSans.ttf" action Language("czech") xalign 0.5 text_size 32
-        if renpy.loadable("tl/francais/script.rpy"):
-            textbutton "Francais" text_font "DejaVuSans.ttf" action Language("francais") xalign 0.5 text_size 32
-        if renpy.loadable("tl/german/script.rpy"):
-            textbutton "German" text_font "DejaVuSans.ttf" action Language("german") xalign 0.5 text_size 32
-        if renpy.loadable("tl/greek/script.rpy"):
-            textbutton "Greek" text_font "DejaVuSans.ttf" action Language("greek") xalign 0.5 text_size 32
-        if renpy.loadable("tl/hindi/script.rpy"):
-            textbutton "Hindi" text_font "DejaVuSans.ttf" action Language("hindi") xalign 0.5 text_size 32
-        if renpy.loadable("tl/hungarian/script.rpy"):
-            textbutton "Hungarian" text_font "DejaVuSans.ttf" action Language("hungarian") xalign 0.5 text_size 32
-        if renpy.loadable("tl/italian/script.rpy"):
-            textbutton "Italian" text_font "DejaVuSans.ttf" action Language("italian") xalign 0.5 text_size 32
-        if renpy.loadable("tl/japanese/script.rpy"):
-            textbutton "Japanese" text_font "DejaVuSans.ttf" action Language("japanese") xalign 0.5 text_size 32
-        if renpy.loadable("tl/polish/script.rpy"):
-            textbutton "Polish" text_font "DejaVuSans.ttf" action Language("polish") xalign 0.5 text_size 32
-        if renpy.loadable("tl/portuguese/script.rpy"):
-            textbutton "Portuguese" text_font "DejaVuSans.ttf" action Language("portuguese") xalign 0.5 text_size 32
-        if renpy.loadable("tl/russian/script.rpy"):
-            textbutton "Russian" text_font "DejaVuSans.ttf" action Language("russian") xalign 0.5 text_size 32
-        if renpy.loadable("tl/spanish/script.rpy"):
-            textbutton "Spanish" text_font "DejaVuSans.ttf" action Language("spanish") xalign 0.5 text_size 32
-        if renpy.loadable("tl/thai/script.rpy"):
-            textbutton "Thai" text_font "DejaVuSans.ttf" action Language("thai") xalign 0.5 text_size 32
-        if renpy.loadable("tl/turkish/script.rpy"):
-            textbutton "Turkish" text_font "DejaVuSans.ttf" action Language("turkish") xalign 0.5 text_size 32
-        if renpy.loadable("tl/vietnamese/script.rpy"):
-            textbutton "Vietnamese" text_font "DejaVuSans.ttf" action Language("vietnamese") xalign 0.5 text_size 32
-
-    textbutton _("Return"):
-        align (0.99, 0.99)
-        action ShowMenu("preferences")
-
-
-screen realmode():
+screen warning_template(message, style="blue"):
+    zorder 200
     modal True
-    
-    add "images/REALLIFEMODE.webp"
+    style_prefix "warning"
 
-    imagebutton:
-        pos (417, 683)
-        idle "images/rlmt.webp"
-        hover "images/enable.webp"
-        action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False), Show("phone_icon"), Jump("v1start")]
+    frame:
+        align (0.5, 0.5)
+        yoffset -42
+        minimum (758, 363)
+        background "warning_background_{}".format(style)
 
-    imagebutton:
-        pos (1016, 683)
-        idle "images/rlmt.webp"
-        hover "images/disable.webp"
-        action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True), SetVariable("showkct", True), Show("phone_icon"), Jump("v1start")]
+        vbox:
+            align (0.5, 0.5)
+            spacing 45
+
+            null height 50
+
+            text _(message.upper()) xalign 0.5 xsize 590
+
+            hbox:
+                xalign 0.5
+                spacing 20
+                
+                transclude
+
+            null height 50
+
+
+style warning_text is olympus_mount_30
+
+
+screen real_life_mode():
+    modal True
+
+    add "images/start/real_life_mode_background.png"
+
+    use warning_template("THIS MODE PROHIBITS you from saving during important choices, meaning all choices are final. this can't be disabled without starting a new game."):
+
+        button:
+            idle_background "blue_button_idle"
+            hover_background "blue_button_hover"
+            action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False), Show("phone_icon"), Jump("v1start")]
+            xysize (215, 55)
+
+            text "ENABLE" align (0.5, 0.5)
+
+        button:
+            idle_background "blue_button_idle"
+            hover_background "blue_button_hover"
+            action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True), SetVariable("showkct", True), Show("phone_icon"), Jump("v1start")]
+            xysize (215, 55)
+
+            text "DISABLE" align (0.5, 0.5)
 
 
 screen fantasyOverlay():

@@ -1429,7 +1429,7 @@ label v11_quiz_bonus:
 
         u "(Probably our pictures.)"
 
-        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", queue=False)
+        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", force_send=True)
         $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg2.webp") # Lauren and MC picture together kissing (check v11las45 for the pose)
         $ lauren.messenger.addReply("Some good looking people.")
         $ lauren.messenger.newMessage("Sure are.")
@@ -1451,7 +1451,7 @@ label v11_quiz_bonus:
 
         u "(Probably our picture.)"
 
-        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", queue=False) # Lauren and MC picture together holding wands (check v11las45a for the pose)
+        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", force_send=True) # Lauren and MC picture together holding wands (check v11las45a for the pose)
         $ lauren.messenger.addReply("Some good looking people.")
         $ lauren.messenger.newMessage("Sure are.")
 

@@ -17,7 +17,6 @@ init python:
         chloe.messenger.newMessage(_("I'll give you 10 more minutes. If you're still not here by then, I'm going home."))
 
 label v14s51:
-
     play music "music/v12/Track Scene 23_1.mp3" fadein 2
     scene v14s51_1 # TPP. Show MC walking into Chloe's room and closing the door behind him, slight smile, mouth closed
     with dissolve
@@ -70,7 +69,7 @@ label v14s51_text:
         scene v14s51_3 # TPP. Show MC looking at his phone, slight smile, mouth closed.
         with dissolve
 
-        $ chloe.messenger.newMessage(_("Hey, where are you??"), queue =False)
+        $ chloe.messenger.newMessage(_("Hey, where are you??"), force_send=True)
         $ chloe.messenger.addReply(_("Sorry, I'm running late. The cab broke down, waiting on another."))
         $ chloe.messenger.newMessage(_("I thought you'd already be here? Are you lying to me?"))
         $ chloe.messenger.addReply(_("I'm coming, I promise. Just order your starter."), v14s51_reply1)
@@ -626,7 +625,7 @@ label v14s51_continue:
         play sound "sounds/vibrate.mp3"
 
         u "(Uh oh... it's a message from Chloe...)"
-        $ chloe.messenger.newMessage(_("What the hell is going on?!"), queue =False)
+        $ chloe.messenger.newMessage(_("What the hell is going on?!"), force_send=True)
         $ chloe.messenger.newMessage(_("[name]??? I'm about to order food to go"))
         $ chloe.messenger.newMessage(_("Well, you were right. The food was to die for. You fucking prick."))
 

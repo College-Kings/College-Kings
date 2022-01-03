@@ -18,8 +18,8 @@ label v10_walk_jenny_text:
 
     u "(Phone buzzing, I should get that.)"
 
-    $ jenny.messenger.newMessage("Hey [name], this is Jenny, a friend of Penelope. I've noticed she's been acting a little off.", queue=False)
-    $ jenny.messenger.newMessage("Btw, I got your number from her phone when she was in the bathroom.", queue=False)
+    $ jenny.messenger.newMessage("Hey [name], this is Jenny, a friend of Penelope. I've noticed she's been acting a little off.", force_send=True)
+    $ jenny.messenger.newMessage("Btw, I got your number from her phone when she was in the bathroom.", force_send=True)
     $ jenny.messenger.addReply("Hey... yeah, Penelope has actually been dealing with some pretty heavy stuff. Also, the number stealing is a tad creepy, haha.")
     $ jenny.messenger.newMessage("I knew it!")
     $ jenny.messenger.newMessage("I didn't know any other way to get in contact with her new friends...")

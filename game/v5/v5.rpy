@@ -633,31 +633,31 @@ label newchloec:
     #################
 
     if amber.relationship.value >= Relationship.KISS.value:
-        $ amber.messenger.newMessage(_("Hey, it's Amber"), queue=False)
-        $ amber.messenger.newMessage(_("Josh gave me your number"), queue=False)
-        $ amber.messenger.newMessage(_("You know, you never came back, I thought we were having a good time xx"), queue=False)
+        $ amber.messenger.newMessage(_("Hey, it's Amber"), force_send=True)
+        $ amber.messenger.newMessage(_("Josh gave me your number"), force_send=True)
+        $ amber.messenger.newMessage(_("You know, you never came back, I thought we were having a good time xx"), force_send=True)
         $ amber.messenger.addReply(_("We did, I'll make it up to you."), v5_reply1)
         $ amber.messenger.addReply(_("Sorry, something came up."), v5_reply4)
 
     elif josh.messenger.sent_messages[-2].reply and josh.messenger.sent_messages[-2].reply.message == "I can't, sorry.":
-        $ amber.messenger.newMessage(_("Hey, it's Amber"), queue=False)
-        $ amber.messenger.newMessage(_("Josh gave me your number"), queue=False)
-        $ amber.messenger.newMessage(_("How come you didn't show up yesterday? Everything okay? xx"), queue=False)
+        $ amber.messenger.newMessage(_("Hey, it's Amber"), force_send=True)
+        $ amber.messenger.newMessage(_("Josh gave me your number"), force_send=True)
+        $ amber.messenger.newMessage(_("How come you didn't show up yesterday? Everything okay? xx"), force_send=True)
         $ amber.messenger.addReply(_("Wow, you really wanted to see me, huh?"), v5_reply5)
         $ amber.messenger.addReply(_("Sorry, something came up."), v5_reply8)
 
     else:
-        $ amber.messenger.newMessage(_("Hey, it's Amber"), queue=False)
-        $ amber.messenger.newMessage(_("Josh gave me your number"), queue=False)
-        $ amber.messenger.newMessage(_("You know, you never came back, everything okay?"), queue=False)
+        $ amber.messenger.newMessage(_("Hey, it's Amber"), force_send=True)
+        $ amber.messenger.newMessage(_("Josh gave me your number"), force_send=True)
+        $ amber.messenger.newMessage(_("You know, you never came back, everything okay?"), force_send=True)
         $ amber.messenger.addReply(_("Wow, you really missed me that much, huh?"), v5_reply9)
         $ amber.messenger.addReply(_("Sorry, something came up."), v5_reply12)
 
     if not toldlauren and not laurentoofar:
         play sound "sounds/vibrate.mp3"
 
-        $ lauren.messenger.newMessage(_("Hey"), queue=False)
-        $ lauren.messenger.newMessage(_("Wanna do the personality tests today at noon?"), queue=False)
+        $ lauren.messenger.newMessage(_("Hey"), force_send=True)
+        $ lauren.messenger.newMessage(_("Wanna do the personality tests today at noon?"), force_send=True)
         $ lauren.messenger.addReply(_("Yeah, sure."))
         $ lauren.messenger.newMessage(_("Great :) Meet me at our economics' classroom."))
 
@@ -4272,7 +4272,7 @@ label findimre:
     u "(Maybe that's Imre...)"
 
     if chloe.relationship.value <= Relationship.MAD.value:
-        $ amber.messenger.newMessage(_("Hey, you alone? xx"), queue=False)
+        $ amber.messenger.newMessage(_("Hey, you alone? xx"), force_send=True)
         $ amber.messenger.addReply(_("I'm at the park, but I'm by myself."))
         $ amber.messenger.newMessage(_("Go somewhere where you're completely alone xx"))
         $ amber.messenger.newMessage(_("I got a surprise for you ;)"))
@@ -4289,8 +4289,8 @@ label findimre:
             u "(I gotta make a decision. Should I help Imre, or keep talking to Amber?)"
 
     else:
-        $ chloe.messenger.newMessage(_("I got some free time right now :)"), queue=False)
-        $ chloe.messenger.newMessage(_("Wanna go swimming?"), queue=False)
+        $ chloe.messenger.newMessage(_("I got some free time right now :)"), force_send=True)
+        $ chloe.messenger.newMessage(_("Wanna go swimming?"), force_send=True)
         $ chloe.messenger.addReply(_("Any chance we could do it later? Or tomorrow?"))
         $ chloe.messenger.newMessage(_("I'm busy later tonight and I'm pretty much booked for the entire week :/"))
 

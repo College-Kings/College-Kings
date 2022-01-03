@@ -169,7 +169,7 @@ label v13s55:
 
         u "One sec, let me check this."
 
-        $ ryan.messenger.newMessage(_("Hey man, had a chat with Emily. The date went great!"), queue=False)
+        $ ryan.messenger.newMessage(_("Hey man, had a chat with Emily. The date went great!"), force_send=True)
         $ ryan.messenger.addReply(_("Yeah man, it was nice. Thanks again for setting it up."), func=None)
         $ ryan.messenger.addReply(_("For sure dude, I had a really fun night."), func=None) 
         $ ryan.messenger.newMessage(_("We'll have to do it again soon."))

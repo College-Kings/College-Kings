@@ -44,7 +44,7 @@ label v9_room_fri_morn:
 
         play sound "sounds/vibrate.mp3"
 
-        $ lauren.messenger.newMessage(_("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."), queue=False)
+        $ lauren.messenger.newMessage(_("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."), force_send=True)
         $ lauren.messenger.addReply(_("Sure, OMW!"))
         $ lauren.messenger.newMessage(_("Ok :) See you soon!"))
         
@@ -85,7 +85,7 @@ label v9_room_fri_morn:
 
         play sound "sounds/vibrate.mp3"
 
-        $ lauren.messenger.newMessage(_("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."), queue=False)
+        $ lauren.messenger.newMessage(_("Hey, would yould you like to come over to my dorm and help me? I need help with my Deer initiation. They want me to help with the annual charity day event they have."), force_send=True)
         $ lauren.messenger.addReply(_("Sure, OMW!"))
         $ lauren.messenger.newMessage(_("Ok :) See you soon!"))
         

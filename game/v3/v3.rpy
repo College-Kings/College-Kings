@@ -1382,7 +1382,7 @@ label conl:
                 jump talkedout
 
             else: # caught and she's mad
-                $ aubrey.messenger.newMessage(_("I wanna talk about what happened yesterday."), queue=False)
+                $ aubrey.messenger.newMessage(_("I wanna talk about what happened yesterday."), force_send=True)
                 $ aubrey.messenger.newMessage(_("Any chance that you could come over now?"))
                 $ aubrey.messenger.addReply(_("Yeah, I can."))
                 $ aubrey.messenger.newMessage(_("My room has a window facing the backyard. Can you climb in through there? I'll leave it open."))
@@ -1576,8 +1576,8 @@ label conl:
 
         else: # not caught peeking but met
             label talkedout:
-                $ aubrey.messenger.newMessage(_("Hey, I really need your help."), queue=False)
-                $ aubrey.messenger.newMessage(_("Any chance that you could come over now?"), queue=False)
+                $ aubrey.messenger.newMessage(_("Hey, I really need your help."), force_send=True)
+                $ aubrey.messenger.newMessage(_("Any chance that you could come over now?"), force_send=True)
                 $ aubrey.messenger.addReply(_("Yeah, I'll be right there.."))
                 $ aubrey.messenger.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
                 $ aubrey.messenger.newMessage(_("I'll leave it open."))
@@ -1836,8 +1836,8 @@ label conl:
                 au "Yeah..."
 
     else: # you didn't meet aubrey
-        $ aubrey.messenger.newMessage(_("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"), queue=False)
-        $ aubrey.messenger.newMessage(_("Wanna come over now?"), queue=False)
+        $ aubrey.messenger.newMessage(_("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"), force_send=True)
+        $ aubrey.messenger.newMessage(_("Wanna come over now?"), force_send=True)
         $ aubrey.messenger.addReply(_("Uhh... okay."))
         $ aubrey.messenger.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
         $ aubrey.messenger.newMessage(_("I'll leave it open."))

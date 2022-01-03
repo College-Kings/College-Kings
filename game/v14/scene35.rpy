@@ -18,7 +18,7 @@ label v14s35:
 
     play sound "sounds/vibrate.mp3"
 
-    $ jenny.messenger.newMessage(_("Hey [name], you busy right now?"), queue =False)
+    $ jenny.messenger.newMessage(_("Hey [name], you busy right now?"), force_send=True)
     $ jenny.messenger.addReply(_("No, what's up?"))
     $ jenny.messenger.newMessage(_("Well, I've been wanting to swimming in this little lagoon I found."))
     $ jenny.messenger.addReply(_("You wanna go now?"))

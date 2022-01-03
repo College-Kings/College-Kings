@@ -71,7 +71,7 @@ label v14s26:
     scene v14s26_2d # FPP. same as v14s26_2b lindsey is holding up a cake
     with dissolve
 
-    li "You can buy a cake! *Chuckles*"
+    li "You can buy some cake! *Chuckles*"
 
     scene v14s26_2 
     with dissolve
@@ -116,7 +116,7 @@ label v14s26:
     scene v14s26_5a # FPP. same as v14s26_5 lauren mouth open, lindeys mouth closed, the counter looks the same as v14s26_2
     with dissolve
 
-    la "*Laughs* My bad. Let me make it up to you by giving you a cake."
+    la "*Laughs* My bad. Let me make it up to you by giving you some cake."
 
     scene v14s26_5
     with dissolve
@@ -277,14 +277,14 @@ label v14s26:
     if v11_lindsey_slogan == 1:
         #Selfie with Lauren in front of slogan banner that says Lindsey, Returning The Promise
         $ v14s26_kiwiiPost1 = KiwiiPost(lindsey, "v14/v14kw26.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! For the future of the Chicks! <3", mentions=[lauren], numberLikes=748)
-        $ v14s26_kiwiiPost1.newComment(lauren, "#Vote4Lindsey! <3", queue=False, numberLikes=382)
-        $ v14s26_kiwiiPost1.newComment(nora, "Cuties <3", numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s26_kiwiiPost1.newComment(imre, "Actually that cookie this morning made me shit myself!", numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s26_kiwiiPost1.newComment(chloe, "Eww...", numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s26_kiwiiPost1.newComment(lauren, "Oh, is that why you came back for three more?", mentions=[imre], numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s26_kiwiiPost1.newComment(sebastian, "Yeah dude, you gave me one of them, lol. Tasted great ladies!", numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s26_kiwiiPost1.newComment(imre, "Whatever, so what?", numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s26_kiwiiPost1.newComment(chloe, "...", numberLikes=renpy.random.randint(15, 35), queue=False)
+        $ v14s26_kiwiiPost1.newComment(lauren, "#Vote4Lindsey! <3", force_send=True, numberLikes=382)
+        $ v14s26_kiwiiPost1.newComment(nora, "Cuties <3", numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s26_kiwiiPost1.newComment(imre, "Actually that cookie this morning made me shit myself!", numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s26_kiwiiPost1.newComment(chloe, "Eww...", numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s26_kiwiiPost1.newComment(lauren, "Oh, is that why you came back for three more?", mentions=[imre], numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s26_kiwiiPost1.newComment(sebastian, "Yeah dude, you gave me one of them, lol. Tasted great ladies!", numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s26_kiwiiPost1.newComment(imre, "Whatever, so what?", numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s26_kiwiiPost1.newComment(chloe, "...", numberLikes=renpy.random.randint(15, 35), force_send=True)
         $ v14s26_kiwiiPost1.addReply("Thank you for the cake! It's amazing you guys...", numberLikes=renpy.random.randint(15, 35), mentions=[lindsey])
         $ v14s26_kiwiiPost1.newComment(lindsey, "<3", numberLikes=renpy.random.randint(15, 35))
         $ v14s26_kiwiiPost1.newComment(lauren, ":)", numberLikes=renpy.random.randint(15, 35))
@@ -293,14 +293,14 @@ label v14s26:
     else:
         #Selfie with Lauren in front of slogan banner that says Lindsey, Say Bye To The Bullshit
         $ v14s26_kiwiiPost2 = KiwiiPost(lindsey, "v14/v14kw26_1.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! For the future of the Chicks! <3", mentions=[lauren], numberLikes=748)
-        $ v14s26_kiwiiPost2.newComment(lauren, "#Vote4Lindsey! <3", numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s26_kiwiiPost2.newComment(nora, "Cuties <3", numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s26_kiwiiPost2.newComment(imre, "Actually that cookie this morning made me shit myself!", numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s26_kiwiiPost2.newComment(chloe, "Eww...", numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s26_kiwiiPost2.newComment(lauren, "Oh, is that why you came back for three more?", mentions=[imre], numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s26_kiwiiPost2.newComment(sebastian, "Yeah dude, you gave me one of them, lol. Tasted great ladies!", numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s26_kiwiiPost2.newComment(imre, "Whatever, so what?", numberLikes=renpy.random.randint(15, 35), queue=False)
-        $ v14s26_kiwiiPost2.newComment(chloe, "...", numberLikes=renpy.random.randint(15, 35), queue=False)
+        $ v14s26_kiwiiPost2.newComment(lauren, "#Vote4Lindsey! <3", numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s26_kiwiiPost2.newComment(nora, "Cuties <3", numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s26_kiwiiPost2.newComment(imre, "Actually that cookie this morning made me shit myself!", numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s26_kiwiiPost2.newComment(chloe, "Eww...", numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s26_kiwiiPost2.newComment(lauren, "Oh, is that why you came back for three more?", mentions=[imre], numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s26_kiwiiPost2.newComment(sebastian, "Yeah dude, you gave me one of them, lol. Tasted great ladies!", numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s26_kiwiiPost2.newComment(imre, "Whatever, so what?", numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s26_kiwiiPost2.newComment(chloe, "...", numberLikes=renpy.random.randint(15, 35), force_send=True)
         $ v14s26_kiwiiPost2.addReply("Thank you for the cake! It's amazing you guys...", numberLikes=renpy.random.randint(15, 35), mentions=[lindsey])
         $ v14s26_kiwiiPost2.newComment(lindsey, "<3", numberLikes=renpy.random.randint(15, 35))
         $ v14s26_kiwiiPost2.newComment(lauren, ":)", numberLikes=renpy.random.randint(15, 35))

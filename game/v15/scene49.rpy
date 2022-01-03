@@ -17,7 +17,7 @@ label v15s49:
     scene v15s49_3 # TPP. Show MC getting out of the cab, the rain hitting his clothes, MC slight smile, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s49_4 # TPP. MC starting to walk towards his Frat house, slight smile, mouth closed.
     with dissolve
@@ -44,7 +44,7 @@ label v15s49:
 
         u "(That's a memory I was hoping to forget...)"
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s49_6 # TPP. Show MC walking over to Tom and Riley, MC angry, mouth closed.
     with dissolve
@@ -162,7 +162,7 @@ label v15s49:
                 scene v15s49_15 # TPP. Show MC helping up Riley, both angry, mouth closed.
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s49_16 # FPP. Both standing up now, MC looking at Riley, Riley looking at MC, Riley angry, mouth open.
                 with dissolve
@@ -251,7 +251,7 @@ label v15s49:
     scene v15s49_19 # TPP. Show Riley holding her arm as she is sitting against the hood of a car a little bit away from Tom and MC, Riley upset, mouth closed.
     with dissolve
 
-    pause 0.75  
+    pause 0.75
 
     scene v15s49_13d
     with dissolve

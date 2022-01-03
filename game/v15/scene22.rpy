@@ -5,6 +5,15 @@
 # Render Count: 8 Unique 71 Total
 
 label v15s22:
+    $ v15s22_kiwiiPost1= KiwiiPost(chloe, "v15s22Kiwii1", "Making changes for my girls!", numberLikes=515)
+    $ v15s22_kiwiiPost1.newComment(aubrey, "Ooooh, what are you up to?", numberLikes=renpy.random.randint(160, 460))
+    $ v15s22_kiwiiPost1.newComment(grayson, "Hanging out with the Dean now? That's one way to get votes I guess...", numberLikes=renpy.random.randint(160, 460))
+    $ v15s22_kiwiiPost1.newComment(chris, "Looks like the President of the Chicks is making some big moves, huh?", numberLikes=renpy.random.randint(160, 460))
+    $ v15s22_kiwiiPost1.newComment(chloe, "Trying to! Also, fuck off Gray :)", numberLikes=renpy.random.randint(160, 460))
+
+    if False: # for Lint
+        scene v15s22Kiwii1 # smile next the dean's office door
+
     scene v15s22_1 # TPP. Chloe and MC are walking in the school hallway, slight smiles, mouths are closed, looking forward
     with dissolve
 
@@ -466,7 +475,7 @@ label v15s22:
                     with dissolve
 
                     $ v15s22_meeting_points -= 1
-                    show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")                
+                    show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
 
                     de "I can assure you, nobody finds you funny."
 
@@ -1480,19 +1489,19 @@ label v15s22:
                 pause 0.75
 
     if v15_lindsey_gamenight: # -if helping Lindsey with Games night
-        $ lindsey.messenger.newMessage("Hey, can you come meet me now to buy the alcohol for our game night? I have a plan! I'll send the details of which store to come to.", queue=False)
+        $ lindsey.messenger.newMessage("Hey, can you come meet me now to buy the alcohol for our game night? I have a plan! I'll send the details of which store to come to.", force_send=True)
         $ lindsey.messenger.addReply("Okay, I'll be there soon!", func=None)
 
     elif v14_help_lindsey:
-        $ lindsey.messenger.newMessage("Hey, can you call the club and book the VIP party package now please? See what you can do in terms of them serving us alcohol and negotiating the price!", queue=False)
+        $ lindsey.messenger.newMessage("Hey, can you call the club and book the VIP party package now please? See what you can do in terms of them serving us alcohol and negotiating the price!", force_send=True)
         $ lindsey.messenger.addReply("Okay, I'll try to charm them. I'll let you know how it goes!", func=None)
 
     else:
-        $ aubrey.messenger.newMessage("Come to the Chicks house. I have an extra special surprise for you ;) I think you've earned it.", queue=False)
+        $ aubrey.messenger.newMessage("Come to the Chicks house. I have an extra special surprise for you ;) I think you've earned it.", force_send=True)
 
         if aubrey.relationship.value >= Relationship.FWB.value: # -if AubreyRs
             $ aubrey.messenger.addReply("A naked surprise? ;)", func=None)
-            $ aubrey.messenger.newMessage("Guess you'll find out soon enough!", queue=False)
+            $ aubrey.messenger.newMessage("Guess you'll find out soon enough!", force_send=True)
 
         else: # -if AubreyFriend
             $ aubrey.messenger.addReply("Haha, okay see you there.", func=None)

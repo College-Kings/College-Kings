@@ -19,14 +19,14 @@ screen v15_teacher_brief(key):
             "profile_picture": dean.profile_picture,
             "description": "The Dean is super serious. Respect her authority.",
             "loves": ["Respect her position.", "It's not an easy path to becoming a College Dean.", "Very proud and protective of SVC and its reputation."],
-            "hates": ["Unprofessionalism.", "Disorganisation."],
+            "hates": ["Unprofessionalism.", "Disorganization."],
             "insight_info": "Just don't joke around!",
             "insight_condition": v11s1_courtpoints >= 4
         },
         "mr_lee": {
             "name": mr_lee.name.replace('_', ' '),
             "profile_picture": mr_lee.profile_picture,
-            "description":"Mr Lee can be a great ally, but also a great adversary.",
+            "description":"Mr. Lee can be a great ally, but also a great adversary.",
             "loves": ["Strong moral code.", "Mutual respect.", "Professionalism.", "Manners.", "Culture.", "Passionate about all these things and of course, history!"],
             "hates": ["Lies.", "Cheating.", "Dishonor."],
             "insight_info": "Always yield to his knowledge and experience.", 
@@ -35,7 +35,7 @@ screen v15_teacher_brief(key):
         "ms_rose": {
             "name": ms_rose.name.replace('_', ' '),
             "profile_picture": ms_rose.profile_picture,
-            "description": "Ms Rose is a great teacher, kind and attentive, but she's no pushover.",
+            "description": "Ms. rose is a great teacher, kind and attentive, but she's no pushover.",
             "loves": ["Supporting good causes, especially helping the sororities.", "Making sure things are fair and nobody is upset."],
             "hates": ["Selfishness.", "Misogyny."],
             "insight_info": "If needed, seduction might work best.",

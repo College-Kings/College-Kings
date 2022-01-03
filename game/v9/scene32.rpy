@@ -156,7 +156,7 @@ label v9_sat_skip_gym:
 
         u "(Oh, who's that?)"
 
-        $ riley.messenger.newMessage(_("Hey, what's up? Wanna come over?"), queue=False)
+        $ riley.messenger.newMessage(_("Hey, what's up? Wanna come over?"), force_send=True)
         $ riley.messenger.addReply(_("I really shouldn't. Big day tomorrow. Stressed out"))
         $ riley.messenger.newMessage(_("Duh, that's why I'm asking)"))
         $ riley.messenger.addReply(_("Well you shoulda led with that!"), v9s32_reply1)

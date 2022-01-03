@@ -617,4 +617,14 @@ label v15s18b:
 
     pause 0.75
 
+    $ v15s18b_kiwiiPost1= KiwiiPost(riley, "v15s18bKiwii1", "Celebrating this pure soul tonight!", numberLikes=648)
+    $ v15s18b_kiwiiPost1.newComment(lindsey, "So cute! Your costumes are perfect <3", numberLikes=renpy.random.randint(260, 560))
+    $ v15s18b_kiwiiPost1.newComment(amber, "Ugh, where am I?!", numberLikes=renpy.random.randint(260, 560))
+    $ v15s18b_kiwiiPost1.newComment(lauren, "Aw! Dammit Imre!", numberLikes=renpy.random.randint(260, 560))
+    $ v15s18b_kiwiiPost1.addReply("Haha! Great pic you guys... Imre looks great!", numberLikes=renpy.random.randint(260, 560))
+    $ v15s18b_kiwiiPost1.newComment(imre, "Oh hey! Hell yeah! I do look good...", numberLikes=renpy.random.randint(260, 560))
+
+    if False: # for Lint
+        scene v15s18bKiwii1 # Selfie with Lauren at her birthday party and Imre photobombing them in the background
+
     jump v15s18c

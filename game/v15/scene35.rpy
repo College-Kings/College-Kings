@@ -4,6 +4,13 @@
 # Time: Evening
 # Render Count: Unique Renders 18 Total: 144
 
+init python:
+    def v15s35_kiwiireply1():
+        v15s35_kiwiiPost1.newComment(imre, "Bro, you have no idea what you're getting yourself into. You're so fucking on!", numberLikes=renpy.random.randint(260, 560))
+        
+    def v15s35_kiwiireply2():
+        v15s35_kiwiiPost1.newComment(lindsey, "Agreed! :) Thanks again for coming, [name].", numberLikes=renpy.random.randint(260, 560))
+
 label v15s35:
     scene v15s35_1 # TPP. MC arrives at the Chicks house, knocks on the front door, slight smile, mouth is closed
     with dissolve
@@ -211,7 +218,7 @@ label v15s35:
         scene v15s35_7 # FPP. Mc looks to his left and just see's Lindsey, Lindsey has a slight smile, mouth is open, looking at Mc
         with dissolve
 
-        li "[name], help me out here. I have two games, but I can't decide which one we should play.  What do you think?"
+        li "[name], help me out here. I have two games, but I can't decide which one we should play. What do you think?"
 
         scene v15s35_7a # FPP. same as v15s35_7 Lindsey's mouth is closed, still looking at Mc, still a slight smile
         with dissolve
@@ -504,7 +511,7 @@ label v15s35:
             scene v15s35_8b
             with dissolve
 
-            aut "How could you two kill a poor defenceless bunny rabbit?!"
+            aut "How could you two kill a poor defenseless bunny rabbit?!"
 
             scene v15s35_9a
             with dissolve
@@ -659,7 +666,7 @@ label v15s35:
             scene v15s35_8a
             with dissolve
 
-            u "Anyone can dress up as a bunny to take its place. Get me a basket and some eggs, and our problem is solved."
+            u "Anyone can dress up as a bunny to take its place. Get me a basket and some eggs and our problem is solved."
 
             if aubrey.relationship.value <= Relationship.MAD.value:
                 scene v15s35_9f
@@ -839,7 +846,7 @@ label v15s35:
 
             u "Frog power!"
 
-            scene v15s35_9l # FPP. same asv15s35_9j	Aubrey is sticking her tongue out, still winking, still full smile, mouth is still open
+            scene v15s35_9l # FPP. same asv15s35_9j Aubrey is sticking her tongue out, still winking, still full smile, mouth is still open
             with dissolve
 
             au "Human with frog brain power!"
@@ -1346,7 +1353,7 @@ label v15s35:
             scene v15s35_8b
             with dissolve
 
-            aut "Really? You think I'd want to be friends with someone whp wants to eat me?"
+            aut "Really? You think I'd want to be friends with someone who wants to eat me?"
 
             scene v15s35_7i
             with dissolve
@@ -1721,7 +1728,7 @@ label v15s35:
             scene v15s35_9d
             with dissolve
 
-            u "How are your gun-shooting skills?"
+            u "How are you with a gun?"
 
             scene v15s35_9b
             with dissolve
@@ -2106,7 +2113,7 @@ label v15s35:
             $ add_point(KCT.BRO)
             $ add_point(KCT.BOYFRIEND)
             if protest or AutumnLunchBreak: # -if Stop the questions (and helped Autumn with boxes at dog shelter and/or went to the protest with her in Act1, creates AutumnTrust)
-                $ autumntrust = True
+                $ autumn.relationship = Relationship.TRUST
 
             scene v15s35_9o
             with dissolve
@@ -2659,7 +2666,7 @@ label v15s35:
                         with dissolve
 
                         menu (fail_label="v15stop_lindsey"):
-                            "Stop Lindsey":                          
+                            "Stop Lindsey":
                                 $ add_point(KCT.BRO)
                                 
                                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -2981,5 +2988,16 @@ label v15s35:
 
     scene v15s35_18a # TPP. same as v15s35_18 Lindsey has closed the door and is no longer visible, Autumn and Mc are looking at each other, Autumn's mouth is open slight smile hand extended out like she's explaining something, Mc's mouth is closed slight smile
     with fade
+
+    $ v15s35_kiwiiPost1= KiwiiPost(lindsey, "v15s35Kiwii1", "Always a good time with these good people <3 #GameNight", numberLikes=648)
+    $ v15s35_kiwiiPost1.newComment(imre, "The fuck? Where's my invite?", numberLikes=renpy.random.randint(260, 560))
+    $ v15s35_kiwiiPost1.newComment(riley, "Omg, I love game nights! Can I come to the next one?", numberLikes=renpy.random.randint(260, 560))
+    $ v15s35_kiwiiPost1.newComment(lindsey, "Don't worry, everyone's invited next time. Promise!", numberLikes=renpy.random.randint(260, 560))
+    $ v15s35_kiwiiPost1.newComment(chloe, "I'd never leave you guys out, hope you had fun without the rest of us!", numberLikes=renpy.random.randint(260, 560))
+    $ v15s35_kiwiiPost1.addReply("The more the merrier! Except you don't stand a chance when it comes to the games, Imre", v15s35_kiwiireply1, mentions=imre, numberLikes=renpy.random.randint(260, 560))
+    $ v15s35_kiwiiPost1.addReply("It was a really good night, gonna have to do it again with the whole gang.", v15s35_kiwiireply2, numberLikes=renpy.random.randint(260, 560))
+
+    if False: # for Lint
+        scene v15s35Kiwii1 # picture of game night set up or a picture of the group playing/talking at the game night
 
     jump v15s36

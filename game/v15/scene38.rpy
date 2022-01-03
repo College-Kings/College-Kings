@@ -27,8 +27,6 @@ label v15s38:
     pause 0.75
 
     # Different reaction based on AubreyTamed, AubreyFriend, and/or if mc got caught with Naomi. If she's happy she'll smile, if not she won't react, and if they're dating she will be flirty-
-    ### AS USUAL, VERIFY ALL VARIABLES - I DID MY BEST BASED ON variables.rpy AS IT WAS ON GITHUB WHEN I TRANSCRIBED - "CAUGHT_NAOMI" IS A PLACEHOLDER. IF GETTING CAUGHT DOESN'T SET aubrey_tamed TO FALSE, NEED ADDITIONAL TERM IN NEXT CHECK.
-
     if aubrey.relationship.value >= Relationship.TAMED.value:
         scene v15s38_5 # FPP Aubrey gives MC a sexy smile and winks at him
         with dissolve
@@ -456,7 +454,7 @@ label v15s38:
 
                 u "(Sheesh...)"
 
-                if V15_UNCLE_RICKY: ### PLACEHOLDER VARIABLE # -if ate Uncle Ricky's cheese at the wedding, and had a deep convo with him about Aubrey
+                if v15s33_cheese: # -if ate Uncle Ricky's cheese at the wedding, and had a deep convo with him about Aubrey
                     scene v15s38_5b
                     with dissolve
 
@@ -748,7 +746,7 @@ label v15s38:
 
     menu:
         "Stop the questioning": # -if Stop the questioning (and helped Autumn with boxes at dog shelter and/or went to the protest with her in Act1, creates AutumnTrust)
-            if protest or AutumnLunchBreak: # Went to protest
+            if protest or v15_autumn_lunchbreak: # Went to protest
                 $ autumn.relationship = Relationship.TRUST
             
             u "Okay, I think that's enough questions for right now, haha."
@@ -931,7 +929,7 @@ label v15s38:
 
     au "Well, personally, I'd vote for [name]. I think he'd be a good choice for your first time."
 
-    if "v12_lindsey" in sceneList: ### VERIFY CORRECT VARIABLE # -if MC had 69 with Lindsey
+    if "v12_lindsey" in sceneList:
         scene v15s38_7e
         with dissolve
 

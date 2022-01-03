@@ -582,7 +582,7 @@ label v12_chloe_cafe:
     scene v12chc10 # TPP. Show MC sitting down, looking down at his phone, neutral expression, mouth closed
     with dissolve
 
-    $ riley.messenger.newMessage("TREASURE HUNT TIME!", queue=False)
+    $ riley.messenger.newMessage("TREASURE HUNT TIME!", force_send=True)
     $ riley.messenger.addReply("Really... now?")
     $ riley.messenger.newMessage("Yep, and I'm already at the spot of the next clue... I think.")
     $ riley.messenger.newImgMessage("images/v12/Scene 14/rileycatacomb.webp") # Riley selfie at the catacomb entrance with a street sign behind her with the address of where she is at, Riley smiling, mouth closed

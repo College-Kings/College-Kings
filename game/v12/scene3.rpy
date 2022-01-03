@@ -12,8 +12,8 @@ label v12_penelope_roof:
 
     play music "music/v12/Track Scene 3_1.mp3" fadein 2
 
-    $ penelope.messenger.newMessage("Hey, are you up still?", queue=False)
-    $ penelope.messenger.newMessage("If you are, can you meet me in the hallway?", queue=False)
+    $ penelope.messenger.newMessage("Hey, are you up still?", force_send=True)
+    $ penelope.messenger.newMessage("If you are, can you meet me in the hallway?", force_send=True)
 
     u "(It's Penelope.)"
 

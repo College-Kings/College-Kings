@@ -1424,11 +1424,11 @@ label v15s24:
 
     pause 0.75
 
-    $ aubrey.messenger.newMessage("Come to the Chicks house, asap! I have an extra special surprise for you. I think you've earned it ;)", queue=False)
+    $ aubrey.messenger.newMessage("Come to the Chicks house, asap! I have an extra special surprise for you. I think you've earned it ;)", force_send=True)
 
     if aubrey.relationship.value >= Relationship.FWB.value: #if RS or Tamed 
         $ aubrey.messenger.addReply("Ooh, Is it a naked surprise? ;)", func=None)
-        $ aubrey.messenger.newMessage("Haha, you'll have to come find out. Hurry up!", queue=False)
+        $ aubrey.messenger.newMessage("Haha, you'll have to come find out. Hurry up!", force_send=True)
 
     else:
         $ aubrey.messenger.addReply("Ooh, okay. See you soon.", func=None)

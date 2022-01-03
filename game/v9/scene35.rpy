@@ -83,7 +83,7 @@ label v9_room_sat_aft:
             scene v9rsa3 # TPP. Show MC now on his back on his bed, looking at his phone (don't show phone screen)
             with dissolve
             
-            $ chloe.messenger.newMessage(_("Hey [name], what you up to?"), queue=False)
+            $ chloe.messenger.newMessage(_("Hey [name], what you up to?"), force_send=True)
             $ chloe.messenger.addReply(_("Nothing much. Just relaxing. I'm kind of tired."))
             $ chloe.messenger.newMessage(_("Awwww. Long day?"))
             if chloe.relationship.value >= Relationship.FWB.value:
@@ -135,7 +135,7 @@ label v9_room_sat_aft:
 
             u "(I wonder who this is.)"
 
-            $ chloe.messenger.newMessage(_("Hey [name], what you up to?"), queue=False)
+            $ chloe.messenger.newMessage(_("Hey [name], what you up to?"), force_send=True)
             $ chloe.messenger.addReply(_("Nothing much. Just relaxing. I'm kind of tired."))
             $ chloe.messenger.newMessage(_("Awwww. Long day?"))
             if chloe.relationship.value >= Relationship.FWB.value:

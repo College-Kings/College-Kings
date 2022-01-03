@@ -17,7 +17,7 @@ label v14s21b:
     pause 1
 
     if beth.simplr in simplr_contacts:
-        $ beth.simplr.newMessage("Oh, my bad... I thought you were a really cute chick XD", queue=False)
+        $ beth.simplr.newMessage("Oh, my bad... I thought you were a really cute chick XD", force_send=True)
         $ beth.simplr.addReply(_("You thought I was a girl? Lmao, what kind of girls have you been talking to?"),v14_beth_simplr)
     elif beth.simplr in simplr_pendingContacts:
         $ beth.simplr.removeContact()

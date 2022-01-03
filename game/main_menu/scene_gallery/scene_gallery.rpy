@@ -50,9 +50,9 @@ init python:
 
     ## v8
     if renpy.loadable("v8/scene1.rpy"):
+        SceneGallery("Homecoming Amber", "images/v8/scene 5/v8samb1.webp", "hoco_amb_night") # 5, Amber, day 11
         SceneGallery("Homecoming Chloe", "images/v8/scene 2/v8s16.webp", "v8_cl_start") # 2, Chloe, day 11
         SceneGallery("Homecoming Riley", "images/v8/scene 3/v8s33_2.webp", "v8_ri_start") # 3, Riley, day 11
-        SceneGallery("Homecoming Amber", "images/v8/scene 5/v8samb1.webp", "hoco_amb_night") # 5, Amber, day 11
         SceneGallery("Fight with Lars", "images/v8/scene 28/mcbodyhookstart.webp", "int_deal_w_josh") # 28, Lars Joe
         SceneGallery("With Amber at Josh's", "images/v8/scene 30/v8amber14a.webp", "amber_sex_at_joshs") # 30, Amber, day 14
 
@@ -109,7 +109,7 @@ init python:
 
     ## v15
     if renpy.loadable("v15/scene1.rpy"):
-        SceneGallery("Angry with Ms. Rose", "images/v15/scene 15/v15s15_7f.webp", "15") # 15, Ms. Rose
+        SceneGallery("Angry with Ms. Rose", "images/v15/scene 15/v15s15_7f.webp", "v15s15sg") # 15, Ms. Rose
         SceneGallery("The List (Amber)", "images/v15/scene 18a/v15s18aamber_9e.webp", "18a") # 18a, Amber
         SceneGallery("The List (Aubrey)", "images/3 hits.webp", "18c") # 18c, Aubrey
         SceneGallery("The List (Autumn)", "images/3 hits.webp", "18c") # 18c, Autumn
@@ -163,6 +163,7 @@ screen scene_gallery():
                         xalign 0.5
                         ypos 210
 
+                        # add "#0f0"
                         text gallery_item.title.upper() align (0.5, 0.5)
 
     add image_path + "shadow.png" xalign 0.5 ypos 893

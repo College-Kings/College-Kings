@@ -25,11 +25,11 @@ label v11_walking_back:
     play sound "sounds/vibrate.mp3"
 
     if config_censored:
-        $ jenny.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
+        $ jenny.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
     else:
-        $ jenny.messenger.newImgMessage("images/v11/Scene 47/jennynude.webp", queue=False) # Jenny nude pic (selfie or pic in a mirror)
-    $ jenny.messenger.newMessage("OMG, I'M SO SORRY!", queue=False)
-    $ jenny.messenger.newMessage("I DID NOT MEAN TO SEND THAT!", queue=False)
+        $ jenny.messenger.newImgMessage("images/v11/Scene 47/jennynude.webp", force_send=True) # Jenny nude pic (selfie or pic in a mirror)
+    $ jenny.messenger.newMessage("OMG, I'M SO SORRY!", force_send=True)
+    $ jenny.messenger.newMessage("I DID NOT MEAN TO SEND THAT!", force_send=True)
     $ jenny.messenger.addReply("Haha, don't worry about it.")
 
     u "(Wow... It's been so long since I've gotten a text, I forgot I even had this thing. *Chuckles*)"

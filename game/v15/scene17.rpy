@@ -374,7 +374,7 @@ label v15s17:
 
             clerk "I'm sure she'll be very happy with it."
             
-        if emerald_bracelet in mc.inventory:            
+        if emerald_bracelet in mc.inventory:
             scene v15s17_11b # FPP. same as v15s17_11 Close up shot of the Jewlry options
             with dissolve
             
@@ -406,7 +406,7 @@ label v15s17:
 
             clerk "Jewelry! She is going to love it, young man."
             
-        elif white_horse_black_mane in mc.inventory:            
+        elif white_horse_black_mane in mc.inventory:
             scene v15s17_11c # FPP. same as v15s17_11 Close up shot of the horse options
             with dissolve
 
@@ -437,7 +437,7 @@ label v15s17:
 
             clerk "I'll go ahead and wrap it for you, no extra charge."
             
-        elif brown_horse_golden_mane in mc.inventory:            
+        elif brown_horse_golden_mane in mc.inventory:
             scene v15s17_11c # FPP. same as v15s17_11 Close up shot of the horse options
             with dissolve
 

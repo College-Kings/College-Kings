@@ -5,9 +5,9 @@
 
 label v14s33:
     if iris.simplr in simplr_contacts:
-        $ iris.simplr.newMessage("Hi... You're so cute. Haha", queue=False)
-        $ iris.simplr.newMessage("Sorry if that was too forward, lol", queue=False)
-        $ iris.simplr.newMessage("I guess what I mean is that I'm happy that we matched", queue=False)
+        $ iris.simplr.newMessage("Hi... You're so cute. Haha", force_send=True)
+        $ iris.simplr.newMessage("Sorry if that was too forward, lol", force_send=True)
+        $ iris.simplr.newMessage("I guess what I mean is that I'm happy that we matched", force_send=True)
     elif iris.simplr in simplr_pendingContacts:
         $ iris.simplr.removeContact()
 

@@ -4,7 +4,7 @@
 # Time: Evening
 
 label v15s48:
-    scene v15s48_1 # TPP. Show the cab showing up on a dirt road near the cabin, the cabin shown in the distance.  
+    scene v15s48_1 # TPP. Show the cab showing up on a dirt road near the cabin, the cabin shown in the distance.
     with fade
 
     pause 0.75
@@ -19,7 +19,7 @@ label v15s48:
     scene v15s48_3 # TPP. Show the Cab driving off.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s48_4 # TPP. Shot from behind MC of him looking at all the forest near the cabin, slight smile, mouth closed.
     with dissolve
@@ -29,12 +29,12 @@ label v15s48:
     scene v15s48_5 # TPP. Show MC further down the road walking towards the cabin, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75  
+    pause 0.75
 
     scene v15s48_6 # TPP. Show MC walking up to the front door of the cabin, slight smile, mouth closed.
     with fade
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s48_7 # FPP. MC looking through a window near the door of the cabin showing Nora on her knees with her back to MC with the fireplace warming her hands.
     with dissolve
@@ -71,7 +71,7 @@ label v15s48:
             scene v15s48_11 # TPP. MC walking closer to Nora, MC slight smile, mouth closed, Nora confused, mouth closed.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s48_12 # FPP. Nora standing infront of MC,Nora looking at MC, MC looking at Nora, Nora confused, mouth closed.
             with dissolve
@@ -89,7 +89,7 @@ label v15s48:
             scene v15s48_11
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v15s48_13 # TPP. MC hugging Nora, Nora not hugging back but accepting the hug, slight smile, mouth closed, MC slight smile, mouth closed.
             with dissolve
@@ -275,7 +275,7 @@ label v15s48:
     scene v15s48_19 # TPP. Close up of just Nora drinking her tea, eyes closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s48_18 
     with dissolve
@@ -421,7 +421,7 @@ label v15s48:
     scene v15s48_18
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s48_18f # FPP. Nora looking at MC, MC looking at Nora, Nora studying MC, mouth open.
     with dissolve
@@ -782,17 +782,17 @@ label v15s48:
         scene v15s48_14a # TPP. MC sitting on the couch in the Cabin, Nora approaching the Couch coming from the kitchen area holding two glasses of wine, Nora slight smile, mouth closed, MC slight smile, mouth closed.
         with fade
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s48_21 # TPP. MC and Nora taking a sip of their wine.
         with dissolve
 
-        pause 0.75  
+        pause 0.75
 
         scene v15s48_21a # TPP. MC and Nora putting their glasses of wine on the table near them, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v15s48_18
         with dissolve
@@ -887,7 +887,7 @@ label v15s48:
                     scene v15s48_18j # FPP. MC looking at Nora, Nora looking at MC, Nora with teary eyes but holding it back, neutral face, mouth closed.
                     with dissolve
 
-                    pause 0.75 
+                    pause 0.75
 
                 scene v15s48_18b
                 with dissolve
@@ -912,7 +912,7 @@ label v15s48:
                 scene v15s48_20
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s48_18a
                 with dissolve
@@ -932,17 +932,17 @@ label v15s48:
                 scene v15s48_14a
                 with fade
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s48_21 # TPP. MC and Nora taking a sip of their wine.
                 with dissolve
 
-                pause 0.75  
+                pause 0.75
 
                 scene v15s48_21a # TPP. MC and Nora putting their glasses of wine on the table near them, slight smile, mouth closed.
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v15s48_18a
                 with dissolve
@@ -968,12 +968,12 @@ label v15s48:
                     scene v15s48_22 # FPP. Nora standing up, Nora looking at MC, MC looking at Nora, Nora flirty, mouth closed.
                     with dissolve
 
-                    pause 0.75  
+                    pause 0.75
 
                     scene v15s48_23 # FPP. Nora standing infront of MC, Nora looking down at MC sitting on the couch, MC looking at Nora standing infront of him.
                     with dissolve
 
-                    pause 0.75  
+                    pause 0.75
 
                     scene v15s48_23a # FPP. Nora bending over and kissing MC.
                     with dissolve

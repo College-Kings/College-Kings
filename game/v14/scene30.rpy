@@ -126,34 +126,25 @@ label v14s30:
 
     u "Okay, ready when you are."
 
-    call screen take_picture("v14s30_pic1")
+    menu:
+        "Take Picture":
+            scene v14s30_5a # TPP. Same as v14s30_5, Chloe posing with her hand on her hip, Chloe proud smile, mouth closed
+            with flash
 
+    menu:
+        "Take Picture":
+            scene v14s30_5b # TPP. Same as v14s30_5a, Chloe holding the plush wolf with one arm and her other hand in the air like she is cheering, slight smile, mouth closed.
+            with flash
 
-    label v14s30_pic1:
+    menu:
+        "Take Picture":
+            scene v14s30_5c # TPP. Same as v14s30_5b, Chloe in a new pose, slight smile, mouth closed.
+            with flash
 
-    scene v14s30_5a # TPP. Same as v14s30_5, Chloe posing with her hand on her hip, Chloe proud smile, mouth closed
-    with flash
-
-    call screen take_picture("v14s30_pic2")
-
-    label v14s30_pic2:
-
-    scene v14s30_5b # TPP. Same as v14s30_5a, Chloe holding the plush wolf with one arm and her other hand in the air like she is cheering, slight smile, mouth closed.
-    with flash
-
-    call screen take_picture("v14s30_pic3")
-
-    label v14s30_pic3:
-
-    scene v14s30_5c # TPP. Same as v14s30_5b, Chloe in a new pose, slight smile, mouth closed.
-    with flash
-
-    call screen take_picture("v14s30_pic4")
-
-    label v14s30_pic4:
-
-    scene v14s30_5d # TPP. Chloe standing normally infront of the camera, slight smile, mouth closed.
-    with flash
+    menu:
+        "Take Picture":
+            scene v14s30_5d # TPP. Chloe standing normally infront of the camera, slight smile, mouth closed.
+            with flash
 
     u "Okay, I think I've got a pretty good selection to choose from."
 

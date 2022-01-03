@@ -979,7 +979,7 @@ label continuebb:
     if chooseimre and chloe.relationship.value <= Relationship.MAD.value: # Amber texts why you never got back to her
         play sound "sounds/vibrate.mp3"
         
-        $ amber.messenger.newMessage(_("I guess you didn't want my surprise :/"), queue=False)
+        $ amber.messenger.newMessage(_("I guess you didn't want my surprise :/"), force_send=True)
         $ amber.messenger.addReply(_("Sorry something important came up and I didn't have time."), v6_reply11)
 
         " "
@@ -995,7 +995,7 @@ label continuebb:
 
     elif chooseimre: # Amber texts you about the pic, chloe texts you about you not responding
         play sound "sounds/vibrate.mp3"
-        $ chloe.messenger.newMessage(_("I guess we'll do it another time..."), queue=False)
+        $ chloe.messenger.newMessage(_("I guess we'll do it another time..."), force_send=True)
         $ chloe.messenger.addReply(_("Sorry, something really important came up. Definitely another time"))
         $ chloe.messenger.newMessage(_("Okay"))
 
@@ -1004,7 +1004,7 @@ label continuebb:
             
     play sound "sounds/vibrate.mp3"
     
-    $ amber.messenger.newMessage(_("Hey, you alone? xx"), queue=False)
+    $ amber.messenger.newMessage(_("Hey, you alone? xx"), force_send=True)
     $ amber.messenger.addReply(_("Yeah, I'm in my dorm, why?"))
     $ amber.messenger.newImgMessage("images/v6/text2.webp")
     $ amber.messenger.addReply(_("Woah, what was that for?"), v6_reply1)
@@ -3658,7 +3658,7 @@ label fy_bd: # not gone to Emily's
             u "(We never really clicked. That probably means I missed my shot with her...)"
 
         play sound "sounds/vibrate.mp3"
-        $ aubrey.messenger.newMessage(_("Hey, I know it's late... but wanna come over?"), queue=False)
+        $ aubrey.messenger.newMessage(_("Hey, I know it's late... but wanna come over?"), force_send=True)
         $ aubrey.messenger.addReply(_("Yeah, sure."), v6_reply7)
         $ aubrey.messenger.addReply(_("Sorry, I can't tonight."), v6_reply8)
 
@@ -3683,7 +3683,7 @@ label fy_bd: # not gone to Emily's
         scene s546 # phone close up, it's 10:30 pm, message from Aubrey
         with dissolve
 
-        $ aubrey.messenger.newMessage(_("Hey, I know it's late... but wanna come over?"), queue=False)
+        $ aubrey.messenger.newMessage(_("Hey, I know it's late... but wanna come over?"), force_send=True)
         $ aubrey.messenger.addReply(_("Yeah, sure."), v6_reply7)
         $ aubrey.messenger.addReply(_("Sorry, I can't tonight."), v6_reply8)
 
@@ -4412,16 +4412,16 @@ label afteraubrey:
         play sound "sounds/vibrate.mp3"
 
         if config_censored:
-            $ aubrey.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", queue=False)
+            $ aubrey.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
         else:
-            $ aubrey.messenger.newImgMessage("images/v6/text3.webp", queue=False)
+            $ aubrey.messenger.newImgMessage("images/v6/text3.webp", force_send=True)
 
         if meetaubrey:
-            $ aubrey.messenger.newMessage(_("Still shaking from earlier"), queue=False)
+            $ aubrey.messenger.newMessage(_("Still shaking from earlier"), force_send=True)
             $ aubrey.messenger.addReply(_("Hahaha, we should definitely do this more ;)"))
 
         else:
-            $ aubrey.messenger.newMessage(_("You missed out today"), queue=False)
+            $ aubrey.messenger.newMessage(_("You missed out today"), force_send=True)
             $ aubrey.messenger.addReply(_("Daaaamn, I'll be there next time"))
 
         " "
@@ -5398,7 +5398,7 @@ label wakeupa:
     scene s609 # mc walking home by himself after the gym
     with fade
     
-    $ amber.messenger.newMessage(_("Heyy, what are you up to? xx"), queue=False)
+    $ amber.messenger.newMessage(_("Heyy, what are you up to? xx"), force_send=True)
     $ amber.messenger.addReply(_("Just walking back from the gym wbu?"))
     $ amber.messenger.newMessage(_("Going to my next lecture x_x"))
     $ amber.messenger.newMessage(_("Which gym do you go to? Maybe we can go together at some point"))

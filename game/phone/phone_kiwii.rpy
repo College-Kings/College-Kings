@@ -50,11 +50,11 @@ init python:
             if self.liked: self.numberLikes += 1
             else: self.numberLikes -= 1
             
-        def newComment(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None, queue=True):
+        def new_comment(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None, force_send=False):
             comment = KiwiiComment(user, message, numberLikes, mentions)
             
             # Add message to queue
-            if queue:
+            if not force_send:
                 self.pendingComments.append(comment)
             else:
                 self.pendingComments = []
@@ -63,7 +63,7 @@ init python:
             kiwii.notification = True
             return comment
 
-        def addReply(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
+        def add_reply(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
             reply = KiwiiReply(message, func, numberLikes, mentions, disabled)
             
             # Append reply to last sent message
@@ -73,14 +73,14 @@ init python:
                 else:
                     self.sentComments[-1].replies.append(reply)
             except Exception as e:
-                message = self.newComment(mc, "", queue=False)
+                message = self.newComment(mc, "", force_send=True)
                 message.replies.append(reply)
 
             kiwii.notification = True
             return reply
 
-        def selectedReply(self, reply):
-            self.newComment(mc, reply.message, reply.numberLikes, reply.mentions, queue=False)
+        def selected_reply(self, reply):
+            self.newComment(mc, reply.message, reply.numberLikes, reply.mentions, force_send=True)
             self.sentComments[-1].reply = reply
             self.sentComments[-1].replies = []
 
@@ -105,12 +105,20 @@ init python:
 
             return message
 
-        def removePost(self):
-            return remove_post(self)
-
         def remove_post(self):
             kiwiiPosts.remove(self)
             del self
+
+        # Backwards compatibility.
+        def newComment(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None, force_send=False):
+            return self.new_comment(user, message, numberLikes, mentions, force_send)
+
+        def addReply(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
+            return self.add_reply(message, func, numberLikes, mentions, disabled)
+
+        def selectedReply(self, reply):
+            return self.selected_reply(reply)
+
 
     class KiwiiComment(KiwiiPost):
         def __init__(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None):

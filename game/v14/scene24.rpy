@@ -11,8 +11,8 @@ label v14s24:
 
     pause 0.75
 
-    $ amber.messenger.newMessage("Hey.", queue=False)
-    $ amber.messenger.newMessage("Are you busy?", queue=False)
+    $ amber.messenger.newMessage("Hey.", force_send=True)
+    $ amber.messenger.newMessage("Are you busy?", force_send=True)
     $ amber.messenger.addReply("Nope, what's up?")
     $ amber.messenger.newMessage("I could really use a friend right now.")
     $ amber.messenger.addReply("I'm on my way, ok?")

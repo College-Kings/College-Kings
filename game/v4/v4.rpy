@@ -2158,7 +2158,7 @@ label continueab:
 
     play music "music/m9punk.mp3"
 
-    $ josh.messenger.newMessage(_("Hey man, you wanna hang out with me and some friends tonight?"), queue=False)
+    $ josh.messenger.newMessage(_("Hey man, you wanna hang out with me and some friends tonight?"), force_send=True)
     $ josh.messenger.addReply(_("Uhh, sure."), v4_reply1)
     $ josh.messenger.addReply(_("I'm meeting a friend at 11, so I can't really."), v4_reply2)
 

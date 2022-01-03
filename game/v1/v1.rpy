@@ -35,6 +35,11 @@ init python:
 
 label v1start:
 label starta: #for compatibility only
+    if config.developer:
+        show screen bugTesting_Overlay
+
+    show screen fightDamage
+
     play music "music/msexy.mp3"
     show screen fantasyOverlay
 
@@ -880,7 +885,7 @@ label starta: #for compatibility only
     scene s50 # freeroam
     with dissolve
 
-    $ julia.messenger.newMessage(_("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you"), queue=False)
+    $ julia.messenger.newMessage(_("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you"), force_send=True)
     $ julia.messenger.addReply(_("Love you too."), v1_reply3)
     $ julia.messenger.addReply(_("Thanks, Julia :)"), v1_reply4)
 
@@ -2935,7 +2940,7 @@ label aw_bd:
     stop music fadeout 3
     play sound "sounds/vibrate.mp3"
 
-    $ ryan.messenger.newMessage(_("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"), queue=False)
+    $ ryan.messenger.newMessage(_("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"), force_send=True)
     $ ryan.messenger.addReply(_("Alright, but I'll only stay for a few hours."))
     $ ryan.messenger.newMessage(_("Haha, trust me, you're not gonna want to leave once you see all the hot chicks there."))
     $ ryan.messenger.newMessage(_("Just meet me in front of the Apes' frat house at 9."))
@@ -3488,7 +3493,7 @@ label v1_freeRoam2_camp:
         play sound "sounds/vibrate.mp3"
 
         if not lauren.messenger.find_message("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
-            $ lauren.messenger.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), queue=False)
+            $ lauren.messenger.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), force_send=True)
             $ lauren.messenger.addReply(_("Yeah, sure."), v1_reply6)
             $ lauren.messenger.addReply(_("What is there to talk about?"), v1_reply7)
 

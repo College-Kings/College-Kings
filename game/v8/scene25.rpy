@@ -36,7 +36,7 @@ label v8_scene24_apes:
     jump phn_riley11_setup
 
 label phn_riley11_setup:
-    $ riley.messenger.newMessage(_("Bad day?"), queue=False)
+    $ riley.messenger.newMessage(_("Bad day?"), force_send=True)
     $ riley.messenger.addReply(_("I've read the same page four times :/"))
     $ riley.messenger.newMessage(_("At least you can read! I just found out I need glasses!"))
     $ riley.messenger.addReply(_("I think you'd look cute in glasses."))

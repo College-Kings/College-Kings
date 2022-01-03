@@ -18,7 +18,7 @@ label v10_amber_skatepark:
 
     u "(I should get that.)"
 
-    $ amber.messenger.newMessage("Skatepark behind SVC, 10pm, bring a six pack.", queue=False)
+    $ amber.messenger.newMessage("Skatepark behind SVC, 10pm, bring a six pack.", force_send=True)
     $ amber.messenger.addReply("Condoms or beer?", v10s26_reply1)
     $ amber.messenger.addReply("Alright sure")
 

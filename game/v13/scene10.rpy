@@ -127,7 +127,7 @@ label v13s10:
 
             play sound "sounds/vibrate.mp3"
 
-            $ aubrey.messenger.newMessage("Still getting ready, meet you in about an hour? We still have plenty of time.", queue=False)
+            $ aubrey.messenger.newMessage("Still getting ready, meet you in about an hour? We still have plenty of time.", force_send=True)
             $ aubrey.messenger.addReply("Haha, OK ", func=None)
     
             label v13s9_PhoneContinueAubrey:
@@ -145,7 +145,7 @@ label v13s10:
 
             play sound "sounds/vibrate.mp3"
 
-            $ penelope.messenger.newMessage("Trying to finish some things for Ms. Rose, give me about an hour?", queue=False)
+            $ penelope.messenger.newMessage("Trying to finish some things for Ms. Rose, give me about an hour?", force_send=True)
             $ penelope.messenger.addReply("No worries, we have time.", func=None)
 
             label v13s9_PhoneContinuePenelope:

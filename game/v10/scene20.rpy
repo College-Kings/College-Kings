@@ -25,7 +25,7 @@ label v10_room_mon_night:
 
         play sound "sounds/vibrate.mp3"
 
-        $ josh.messenger.newMessage("So what do think!? Any good ones for you?", queue=False)
+        $ josh.messenger.newMessage("So what do think!? Any good ones for you?", force_send=True)
         $ josh.messenger.addReply("What are you talking about?")
         $ josh.messenger.newMessage("Wait, you don't know what I'm talking about? Everybody on campus knows about it. Except for you I guess.")
         $ josh.messenger.addReply("What does everyone know about?")
@@ -53,7 +53,7 @@ label v10_room_mon_night:
             scene v10smnr1
             with dissolve
 
-        $ simplrApp.unlock()
+        $ simplr_app.unlock()
 
         u "(Hmm, I can see why so many people are talking about it.)"
         u "(It would be kinda weird though if I saw someone I knew.)"
@@ -82,7 +82,7 @@ label v10_room_mon_night:
 
         play sound "sounds/vibrate.mp3"
 
-        $ josh.messenger.newMessage("So what do think!? Any good ones for you?", queue=False)
+        $ josh.messenger.newMessage("So what do think!? Any good ones for you?", force_send=True)
         $ josh.messenger.addReply("What are you talking about?")
         $ josh.messenger.newMessage("Wait, you don't know what I'm talking about? Everybody on campus knows about it. Except for you I guess.")
         $ josh.messenger.addReply("What does everyone know about?")
@@ -110,7 +110,7 @@ label v10_room_mon_night:
             scene v10smnr3
             with dissolve
 
-        $ simplrApp.unlock()
+        $ simplr_app.unlock()
 
         u "(Hmm, I can see why so many people are talking about it.)"
         u "(It would be kinda weird though if I saw someone I knew.)"

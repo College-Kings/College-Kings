@@ -18,7 +18,7 @@ label v15s44:
 
 # -MC and Amber enter room 103 where the pinboard is. They approach the pinboard-
 
-# -The UI pops up to show all the clues achieved from the Chris interrogation (CLUES UNLOCKED: Nora wanted to be alone after the breakup. Nora hates her dad. LOCATIONS UNLOCKED: Her Dad's house. Ms Rose's House. Nora's Dad's cabin. Camping by herself)-
+# -The UI pops up to show all the clues achieved from the Chris interrogation (CLUES UNLOCKED: Nora wanted to be alone after the breakup. Nora hates her dad. LOCATIONS UNLOCKED: Her Dad's house. Ms. rose's House. Nora's Dad's cabin. Camping by herself)-
 
 label v15s44_continue:
     scene v15s44_3 # FPP. MC standing next to Amber, both facing the pinboard, MC looking at Amber, Amber looking at the pinboard, mouth closed, serious expression (don't actually show the pinboard)
@@ -539,7 +539,7 @@ label v15s44_continue2:
     scene v15s44_9b # TPP. Same as v15s44_9a, both pretending to blow the steam off their guns
     with dissolve
 
-    pause 0.75  
+    pause 0.75
 
     scene v15s44_10 # TPP. MC and Amber exiting the room, both smiling, Amber exiting in front of MC, nouths closed
     with dissolve

@@ -42,7 +42,7 @@ label v12_simplr_convo:
     if emmy.simplr in simplr_contacts:
         $ v12s24_emmymatch = True
 
-        $ emmy.simplr.newMessage("Hey handsome, I was hoping I'd match with you. Where are you from?", queue=False)
+        $ emmy.simplr.newMessage("Hey handsome, I was hoping I'd match with you. Where are you from?", force_send=True)
         $ emmy.simplr.addReply("I'm actually in Paris right now, but I'm from California. Wbu?")
         $ emmy.simplr.newMessage("Wow, my distance settings are way off. I'm from Amsterdam.")
         $ emmy.simplr.addReply("Haha, call it a coincidence, but I'm actually headed to Amsterdam here soon.")

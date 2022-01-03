@@ -14,7 +14,7 @@ label mon_eve_room_josh:
         u "(Let's see who this is.)"
 
         if helpJosh:
-            $ josh.messenger.newMessage(_("Hey bro! It's time! Meet me at mine, okay?"), queue=False)
+            $ josh.messenger.newMessage(_("Hey bro! It's time! Meet me at mine, okay?"), force_send=True)
             $ josh.messenger.addReply(_("Okay, I'm on my way."))
 
             label v8s27_phoneContinue1:
@@ -88,7 +88,7 @@ label mon_eve_room_josh:
 
         else:
 
-            $ josh.messenger.newMessage(_("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man."), queue=False)
+            $ josh.messenger.newMessage(_("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man."), force_send=True)
             $ josh.messenger.addReply(_("Fuck! Are you ok??"))
             $ josh.messenger.newMessage(_("No, man! I hurt everywhere! Plus my shit is gone!"))
             $ josh.messenger.addReply(_("Hold on, I'll be right over"))
@@ -123,7 +123,7 @@ label mon_eve_room_josh:
 
         if helpJosh:
 
-            $ josh.messenger.newMessage(_("Hey bro! It's time! Meet me at mine, okay?"), queue=False)
+            $ josh.messenger.newMessage(_("Hey bro! It's time! Meet me at mine, okay?"), force_send=True)
             $ josh.messenger.addReply(_("Okay, I'm on my way."))
 
             label v8s27_phoneContinue3:
@@ -197,7 +197,7 @@ label mon_eve_room_josh:
             jump drug_deal_w_josh
 
         else:
-            $ josh.messenger.newMessage(_("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man."), queue=False)
+            $ josh.messenger.newMessage(_("Hey bro, I got robbed and my ass kicked bad! Really wish you came with me, man."), force_send=True)
             $ josh.messenger.addReply(_("Fuck! Are you ok??"))
             $ josh.messenger.newMessage(_("No, man! I hurt everywhere! Plus my shit is gone!"))
             $ josh.messenger.addReply(_("Hold on, I'll be right over"))

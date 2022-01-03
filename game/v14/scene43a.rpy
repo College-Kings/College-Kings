@@ -101,7 +101,7 @@ label v14s43a:
         scene v14s43_3a # TPP. Same as v14s43_3, MC looking down at his phone, slight smile, mouth closed
         with dissolve
 
-        $ emily.messenger.newMessage("Hey you. How's your day going?", queue=False)
+        $ emily.messenger.newMessage("Hey you. How's your day going?", force_send=True)
         $ emily.messenger.addReply("It's barely started, haha. What about yours?")
         $ emily.messenger.newMessage("Not bad. Still in bed... Lol")
         $ emily.messenger.addReply("Oh yeah?")

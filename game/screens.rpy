@@ -215,7 +215,7 @@ style input_window is say_window
 screen choice(items, seconds=3, fail_label=None):
     style_prefix "choice"
     # Show KCT
-    if showkct:
+    if showkct and len(items) > 1:
         use kct_choice_hint
     
     hbox:
@@ -539,8 +539,6 @@ style game_menu_label_text:
 screen save():
     tag menu
 
-    add "gui/savepage.webp"
-
     if realmode and renpy.get_screen("choice"):
         text "You've enabled Real Life Mode and are therefore unable to use this menu whilst making a choice.":
             align (0.5, 0.5)
@@ -576,131 +574,124 @@ screen load():
 
 screen file_slots(title):
     default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
-    $ incompatible_game_versions = ["12.0.0", "0.6.4"]
-    $ incompatible_renpy_versions = ["7.4.8.1895", "7.4.7.1862"]
+    default image_path = "gui/file_slots/"
 
-    use game_menu(title):
+    python:
+        incompatible_game_versions = {"12.0.0", "0.6.4"}
+        incompatible_renpy_versions = {"7.4.8.1895", "7.4.7.1862"}
+
+        game_version = FileJson(1, key="_version") or ""
+        renpy_version = FileJson(1, key="_renpy_version") or ""
+        renpy_version = '.'.join(str(i) for i in renpy_version)
+        file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
+
+    add image_path + "background.png"
+
+    fixed:
+        ## This ensures the input will get the enter event before any of the
+        ## buttons do.
+        order_reverse True
+
+        if realmode:
+            button:
+                style_prefix "slot"
+                align (0.5, 0.5)
+
+                action FileAction(1)
+
+                has vbox
+
+                if file_compatable:
+                    add FileScreenshot(1) xalign 0.5
+                    text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
+                else:
+                    add "#000"
+                    text "INCOMPATIBLE" color "#f00" xalign 0.5
+
+                text FileTime(1, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                    style "slot_time_text"
+
+                text FileSaveName(1):
+                    style "slot_name_text"
+
+                key "save_delete" action FileDelete(1)
         
-        if title == _("Load"):
-            add "gui/loadpage.webp"
+        else:
+            ## The page name, which can be edited by clicking on a button.
+            button:
+                style "page_label"
 
-        fixed:
+                key_events True
+                xalign 0.5
+                action page_name_value.Toggle()
 
-            ## This ensures the input will get the enter event before any of the
-            ## buttons do.
-            order_reverse True
+                input:
+                    style "page_label_text"
+                    value page_name_value
 
-            if realmode:
-                text "In Real-life mode, you only get one save.":
-                    size 50
-                    yalign 0.13
-                    xalign 0.5
+            ## The grid of file slots.
+            grid gui.file_slot_cols gui.file_slot_rows:
+                style_prefix "slot"
 
-                python:
-                    game_version = FileJson(1, key="_version") or ""
-                    renpy_version = FileJson(1, key="_renpy_version") or ""
-                    renpy_version = '.'.join(str(i) for i in renpy_version)
-                    file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
+                xalign 0.5
+                yalign 0.5
 
-                button:
-                    style_prefix "slot"
-                    align (0.5, 0.5)
+                spacing gui.slot_spacing
 
-                    action FileAction(1)
+                for slot in range(1, gui.file_slot_cols * gui.file_slot_rows + 1):
+                    python:
+                        game_version = FileJson(slot, key="_version") or ""
+                        renpy_version = FileJson(slot, key="_renpy_version") or ""
+                        renpy_version = '.'.join(str(i) for i in renpy_version)
+                        file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
-                    has vbox
+                    button:
+                        action FileAction(slot)
 
-                    if file_compatable:
-                        add FileScreenshot(1) xalign 0.5
-                        text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
-                    else:
-                        add "#000"
-                        text "INCOMPATIBLE" color "#f00" xalign 0.5
+                        has vbox
 
-                    text FileTime(1, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
-                        style "slot_time_text"
+                        fixed:
+                            xysize (384, 220)
 
-                    text FileSaveName(1):
-                        style "slot_name_text"
+                            if file_compatable:
+                                add FileScreenshot(slot) xalign 0.5
+                                text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
+                            else:
+                                add "#000"
+                                text "INCOMPATIBLE" color "#f00" xalign 0.5
+                            
 
-                    key "save_delete" action FileDelete(1)
-            
-            else:
-                ## The page name, which can be edited by clicking on a button.
-                button:
-                    style "page_label"
+                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                            style "slot_time_text"
 
-                    key_events True
-                    xalign 0.5
-                    action page_name_value.Toggle()
+                        text FileSaveName(slot):
+                            style "slot_name_text"
 
-                    input:
-                        style "page_label_text"
-                        value page_name_value
+                        key "save_delete" action FileDelete(slot)
 
-                ## The grid of file slots.
-                grid gui.file_slot_cols gui.file_slot_rows:
-                    style_prefix "slot"
+            ## Buttons to access other pages.
+            hbox:
+                style_prefix "page"
 
-                    xalign 0.5
-                    yalign 0.5
+                xalign 0.5
+                yalign 0.85
 
-                    spacing gui.slot_spacing
+                spacing gui.page_spacing
 
-                    for slot in range(1, gui.file_slot_cols * gui.file_slot_rows + 1):
-                        python:
-                            game_version = FileJson(slot, key="_version") or ""
-                            renpy_version = FileJson(slot, key="_renpy_version") or ""
-                            renpy_version = '.'.join(str(i) for i in renpy_version)
-                            file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
+                textbutton _("←") action FilePagePrevious()
 
-                        button:
-                            action FileAction(slot)
+                if config.has_autosave:
+                    textbutton _("{#auto_page}A") action FilePage("auto")
 
-                            has vbox
+                if config.has_quicksave:
+                    textbutton _("{#quick_page}Q") action FilePage("quick")
 
-                            fixed:
-                                xysize (384, 220)
+                for page in range(1, 10):
+                    textbutton "[page]" action FilePage(page)
 
-                                if file_compatable:
-                                    add FileScreenshot(slot) xalign 0.5
-                                    text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
-                                else:
-                                    add "#000"
-                                    text "INCOMPATIBLE" color "#f00" xalign 0.5
-                                
+                textbutton "99" action FilePage(99)
 
-                            text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
-                                style "slot_time_text"
-
-                            text FileSaveName(slot):
-                                style "slot_name_text"
-
-                            key "save_delete" action FileDelete(slot)
-
-                ## Buttons to access other pages.
-                hbox:
-                    style_prefix "page"
-
-                    xalign 0.5
-                    yalign 0.85
-
-                    spacing gui.page_spacing
-
-                    textbutton _("←") action FilePagePrevious()
-
-                    if config.has_autosave:
-                        textbutton _("{#auto_page}A") action FilePage("auto")
-
-                    if config.has_quicksave:
-                        textbutton _("{#quick_page}Q") action FilePage("quick")
-
-                    for page in range(1, 10):
-                        textbutton "[page]" action FilePage(page)
-
-                    textbutton "99" action FilePage(99)
-
-                    textbutton _("→") action FilePageNext()
+                textbutton _("→") action FilePageNext()
 
 
 style page_label is gui_label
@@ -1065,25 +1056,21 @@ screen confirm(message, yes_action, no_action=Hide("confirm")):
 
     use alert_template(message):
 
-        hbox:
-            xalign 0.5
-            spacing 20
+        button:
+            idle_background "blue_button_idle"
+            hover_background "blue_button_hover"
+            action yes_action
+            xysize (215, 55)
 
-            button:
-                idle_background "blue_button_idle"
-                hover_background "blue_button_hover"
-                action yes_action
-                xysize (215, 55)
+            text "YES" align (0.5, 0.5)
 
-                text "YES" align (0.5, 0.5)
+        button:
+            idle_background "blue_button_idle"
+            hover_background "blue_button_hover"
+            action no_action
+            xysize (215, 55)
 
-            button:
-                idle_background "blue_button_idle"
-                hover_background "blue_button_hover"
-                action no_action
-                xysize (215, 55)
-
-                text "NO" align (0.5, 0.5)
+            text "NO" align (0.5, 0.5)
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action

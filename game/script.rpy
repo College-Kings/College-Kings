@@ -41,12 +41,7 @@ label start:
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
     hide no_hard_feelings
 
-    if config.developer:
-        show screen bugTesting_Overlay
-        
-    show screen fightDamage
-
-    call screen realmode
+    call screen real_life_mode
 
 label end_credits: # for compatibility
 label gameEnd:
