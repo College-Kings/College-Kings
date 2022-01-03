@@ -4,6 +4,10 @@
 # Time: Afternoon
 # Render Count: 12 Unique Renders, 33 Total
 
+init python:
+    def v15s13_reply1():
+        riley.messenger.newMessage("Good luck! You're gonna need it...")
+
 label v15s13:
     if joinwolves:
         scene v15s13_1 # TPP. MC enters his WOLVES bedroom, carrying a small bag of donuts, He leaves the door half open, slight smile, mouth closed
@@ -86,11 +90,10 @@ label v15s13:
         play sound "sounds/vibrate.mp3"
         $ riley.messenger.newMessage("Hey! I'm assuming you'll be at Lauren's Halloween birthday party later?", force_send=True)
         $ riley.messenger.addReply("Yeah, I'll be there!", func=None)
-        $ riley.messenger.newMessage("Just FYI, the stores are running low on costumes so if you haven't got one already, hurry up and get one... lol", force_send=True)
+        $ riley.messenger.newMessage("Just FYI, the stores are running low on costumes so if you haven't got one already, hurry up and get one... lol")
         $ riley.messenger.addReply("Shit... I haven't got one yet, haha.", func=None)
-        $ riley.messenger.newMessage("Why am I not surprised? :D", force_send=True)
-        $ riley.messenger.addReply("I'm on my way out now, wish me luck!", func=None)
-        $ riley.messenger.newMessage("Good luck! You're gonna need it...", force_send=True)
+        $ riley.messenger.newMessage("Why am I not surprised? :D")
+        $ riley.messenger.addReply("I'm on my way out now, wish me luck!", v15s13_reply1)
 
         scene v15s13_3d # FPP. same as v15s13_3 Imre disappears again, closing the door
         with dissolve
@@ -303,11 +306,10 @@ label v15s13:
         play sound "sounds/vibrate.mp3"
         $ riley.messenger.newMessage("Hey! I'm assuming you'll be at Lauren's Halloween birthday party later?", force_send=True)
         $ riley.messenger.addReply("Yeah, I'll be there!", func=None)
-        $ riley.messenger.newMessage("Just FYI, the stores are running low on costumes so if you haven't got one already, hurry up and get one... lol", force_send=True)
+        $ riley.messenger.newMessage("Just FYI, the stores are running low on costumes so if you haven't got one already, hurry up and get one... lol")
         $ riley.messenger.addReply("Shit... I haven't got one yet, haha.", func=None)
-        $ riley.messenger.newMessage("Why am I not surprised? :D", force_send=True)
-        $ riley.messenger.addReply("I'm on my way out now, wish me luck!", func=None)
-        $ riley.messenger.newMessage("Good luck! You're gonna need it...", force_send=True)
+        $ riley.messenger.newMessage("Why am I not surprised? :D")
+        $ riley.messenger.addReply("I'm on my way out now, wish me luck!", v15s13_reply1)
 
         scene v15s13_9f # FPP. same as v15s13_9 Grayson disappears again, closing the door
         with dissolve
