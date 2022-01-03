@@ -213,13 +213,15 @@ label v15s48a:
     with dissolve
 
     pause 0.75
-
+    
     scene v15s48a_8 # TPP. Nora laying on the couch fully nude, Nora's full body in the shot, Nora biting her lip.
     with fade
 
     pause 0
 
-    call screen v15s48a_nora
+    call screen sex_overlay([
+        [("Boobs", "v15s48a_boobs"), ("Feet", "v15s48a_feet"), ("Vagina", "v15s48a_vagina")],
+    ], continue_label="v15s48a_end")
 
 label v15s48a_boobs:
     $ v15s48a_frboobs = True
@@ -303,7 +305,9 @@ label v15s48a_boobs:
 
             u "Hmm, I guess we will."
 
-    call screen v15s48a_Nora
+    call screen sex_overlay([
+        [("boobs", "v15s48a_boobs"), ("feet", "v15s48a_feet"), ("vagina", "v15s48a_vagina")],
+    ], continue_label="v15s48a_end")
 
 label v15s48a_feet:
     $ v15s48a_frfeet = True
@@ -373,7 +377,9 @@ label v15s48a_feet:
 
             u "And I can't wait to find out what they are."
 
-    call screen v15s48a_Nora
+    call screen sex_overlay([
+        [("boobs", "v15s48a_boobs"), ("feet", "v15s48a_feet"), ("vagina", "v15s48a_vagina")],
+    ], continue_label="v15s48a_end")
 
 label v15s48a_vagina:
     $ v15s48a_frvagina = True
@@ -469,7 +475,9 @@ label v15s48a_vagina:
 
             no "Oh, [name]. Please..."
 
-    call screen v15s48a_Nora
+    call screen sex_overlay([
+        [("boobs", "v15s48a_boobs"), ("feet", "v15s48a_feet"), ("vagina", "v15s48a_vagina")],
+    ], continue_label="v15s48a_end")
 
 label v15s48a_end:
 # -Clicking on Nora's mouth-

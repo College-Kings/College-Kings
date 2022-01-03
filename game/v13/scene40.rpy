@@ -149,7 +149,20 @@ label v13s40:
     with dissolve
 
     u "*Chuckles* Shhh."
-    call screen v13s40_chloe
+
+    $ sex_overlay_options = [
+        [],
+        [("Neck", "v13s40_neck"), ("Chest", "v13s40_chest"), ("Back", "v13s40_back"), ("Shoulders", "v13s40_shoulder")]
+    ]
+
+    if mc.has_item(honey):
+        $ sex_overlay_options[0].append((honey.name, "v13s40_honey"))
+    if mc.has_item(spankers):
+        $ sex_overlay_options[0].append((spankers.name, "v13s40_spanker"))
+    if mc.has_item(feather):
+        $ sex_overlay_options[0].append((feather.name, "v13s40_feather"))
+
+    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
 
 label v13s40_honey:
     $ chloeturnedon.add("honey")
@@ -200,7 +213,7 @@ label v13s40_honey:
 
     u "I've got plenty more where that came from."
 
-    call screen v13s40_chloe
+    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
 
 label v13s40_feather:
     $ chloeturnedon.add("feather")
@@ -249,7 +262,7 @@ label v13s40_feather:
 
     u "We can try something else..."
 
-    call screen v13s40_chloe
+    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
 
 label v13s40_spanker:
     $ chloeturnedon.add("spanker")
@@ -338,7 +351,7 @@ label v13s40_spanker:
 
     pause
 
-    call screen v13s40_chloe
+    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
 
 label v13s40_neck:
     scene v13s40neck_1 # TPP. Close up of Chloe's neck
@@ -359,7 +372,7 @@ label v13s40_neck:
 
             pause
         
-    call screen v13s40_chloe
+    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
 
 label v13s40_chest:
     scene v13s40chest_1 # TPP. Close up of Chloe's boobs
@@ -400,7 +413,7 @@ label v13s40_chest:
 
             pause
     
-    call screen v13s40_chloe
+    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
 
 label v13s40_back:
     scene v13s40back_1 # TPP. Close up of Chloe's back
@@ -441,7 +454,7 @@ label v13s40_back:
 
             pause
     
-    call screen v13s40_chloe
+    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
 
 label v13s40_shoulder:
     scene v13s40shoulder_1 # TPP. Close up of Chloe's shoulder
@@ -473,7 +486,7 @@ label v13s40_shoulder:
 
             pause
     
-    call screen v13s40_chloe
+    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
         
 label v13s40_end_free_roam:
     if len(chloeturnedon) >= 2:
