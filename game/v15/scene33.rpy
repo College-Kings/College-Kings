@@ -1256,79 +1256,76 @@ label v15s33:
 
     else:
         if aubrey.relationship.value >= Relationship.FWB.value:
-            scene v15s33_61a
+            scene v15s33_45a
             with dissolve
 
             u "What was she thinking?! This is fucking crazy..."
 
         else:
-            scene v15s33_61
+            scene v15s33_45
             with dissolve
 
             u "What is wrong with Naomi? Why did she..."
 
-    scene v15s33_61a 
+    scene v15s33_45a 
     with dissolve
 
     u "(And Aubrey was just sitting right there... Her entire family, too...) *Sighs*"
 
     play sound "sounds/dooropen.mp3"
 
-    scene v15s33_60a # TPP. Show Naomi entering the bathroom, smirking, mouth closed.
+    scene v15s33_44a # TPP. Show Naomi entering the bathroom, smirking, mouth closed.
     with dissolve
 
     pause 0.75
 
     play sound "sounds/doorclose.mp3"
 
-    scene v15s33_60b # TPP. Show Naomi closing the bathroom door, smirking, mouth closed.
+    scene v15s33_44b # TPP. Show Naomi closing the bathroom door, smirking, mouth closed.
     with dissolve
 
     pause 0.75
 
-    scene v15s33_62 # FPP. MC standing up straight, Naomi approaching MC, MC looking at Naomi, Naomi looking at MC, Naomi smirking, mouth open.
+    scene v15s33_46 # FPP. MC standing up straight, Naomi approaching MC, MC looking at Naomi, Naomi looking at MC, Naomi smirking, mouth open.
     with dissolve
 
     na "Creative thinking, cutie! Glad you picked up what I was putting down, haha."
 
-    scene v15s33_62a # FPP. Naomi standing infront of MC, MC looking at Naomi, Naomi looking at MC, Naomi smirking, mouth closed.
+    scene v15s33_46a # FPP. Naomi standing infront of MC, MC looking at Naomi, Naomi looking at MC, Naomi smirking, mouth closed.
     with dissolve
 
     u "Naomi, I think-"
 
-    scene v15s33_62b # FPP. Naomi standing infront of MC, MC looking at Naomi, Naomi looking at MC, Naomi's hand on MC's cheek, Naomi smirking, mouth open.
+    scene v15s33_46b # FPP. Naomi standing infront of MC, MC looking at Naomi, Naomi looking at MC, Naomi's hand on MC's cheek, Naomi smirking, mouth open.
     with dissolve
 
     na "You don't need to think, [name]... I told you..."
 
-    scene v15s33_63 # FPP. MC looking down at Naomi tugging on his pants.
-    with dissolve
-
     na "*Whispers* I get horny after shots."
 
-    scene v15s33_62c # FPP. Naomi looking at MC, MC looking at Naomi, Naomi's hand on MC's cheek, Naomi biting her lips as she looks at MC.
+    scene v15s33_46c # FPP. Naomi looking at MC, MC looking at Naomi, Naomi's hand on MC's cheek, Naomi biting her lips as she looks at MC.
     with dissolve
 
     u "(Fuck...)"
 
-    scene v15s33_62b
+    scene v15s33_46b
     with dissolve
 
     na "You're about to find out how talented I really am."
 
-    scene v15s33_62c
+    scene v15s33_46c
     with dissolve
 
     u "(Okay, [name]... Use your head here...)"
 
     u "(No, no, no! Not that one, not that head!"
 
-    scene v15s33_62b
+    scene v15s33_46b
     with dissolve
 
     na "Are you gonna help me get these things off you or what?"
 
-    scene v15s33_62c
+    scene v15s33_46c
     with dissolve
 
     menu:
@@ -1336,28 +1333,28 @@ label v15s33:
             $ add_point(KCT.BOYFRIEND)
             u "Naomi, no..."
 
-            scene v15s33_62d # FPP. Naomi steps back her hand no longer on MC's cheek, MC looking at Naomi, Naomi looking at MC, Naomi confused, mouth open.
+            scene v15s33_46d # FPP. Naomi steps back her hand no longer on MC's cheek, MC looking at Naomi, Naomi looking at MC, Naomi confused, mouth open.
             with dissolve
 
             na "Excuse me?"
 
-            scene v15s33_62e # FPP. Naomi looking at MC, MC looking at Naomi, Naomi confused, mouth closed.
+            scene v15s33_46e # FPP. Naomi looking at MC, MC looking at Naomi, Naomi confused, mouth closed.
             with dissolve
 
             u "No. I said no."
 
             if v15s33_flirt:
-                scene v15s33_62d
+                scene v15s33_46d
                 with dissolve
 
                 na "But you... Earlier we-"
 
-                scene v15s33_62e
+                scene v15s33_46e
                 with dissolve
 
                 u "I know. I'm sorry."
 
-                scene v15s33_62f # FPP. Naomi looking at MC, MC looking at Naomi, Naomi slightly angry, mouth open.
+                scene v15s33_46f # FPP. Naomi looking at MC, MC looking at Naomi, Naomi slightly angry, mouth open.
                 with dissolve
 
                 na "*Scoffs* You're sorry?"
