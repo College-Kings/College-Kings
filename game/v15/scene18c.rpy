@@ -2196,7 +2196,7 @@ label v15s18c_chris_penelope:
                 scene v15s18c_chpe_5
                 with dissolve
 
-                pe "So, I heard about this little list you've been working on?"
+                pe "So, I heard about this little list you've been working on..."
 
                 scene v15s18c_chpe_5a
                 with dissolve
@@ -2244,7 +2244,6 @@ label v15s18c_chris_penelope:
 
                 pe "Oh, yeah... That thing."
 
-            #### Still TBD
             if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v15s18c_chpe_5d
                 with dissolve
