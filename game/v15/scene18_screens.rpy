@@ -66,6 +66,12 @@ screen v15s18a_room():
         action Show("v15s18a_kitchen")
         pos (1780, 0)
 
+    imagebutton:
+        idle Transform("#0000", size=(1330, 180))
+        hover image_path + "bottom.webp"
+        action Show("v15s18a_stairs")
+        pos (325, 900)
+
 screen v15s18a_livingroom():
     tag free_roam
 
@@ -147,14 +153,14 @@ screen v15s18a_bar():
     add image_path + "v15s18a_bar_1.webp"
 
     # Aubrey
-    #imagebutton:
-    #    idle Transform("#0000", size=(569, 968))
-    #    hover image_path + "v15s18a_bar_hover_aubrey.webp"
-    #    if not "aubrey" in freeroam13:
-    #        action Jump("v15s18a_Aubrey")
-    #    else:
-    #        action Call("freeRoamSpokenToo", backgroundImg="v15s18a_bar_1", returnScreen="v15s18a_bar")
-    #    pos (490, 119)
+    imagebutton:
+        idle Transform("#0000", size=(569, 968))
+        hover image_path + "v15s18a_bar_hover_aubrey.webp"
+        if not "aubrey" in freeroam13:
+            action Jump("v15s18a_Aubrey")
+        else:
+            action Call("freeRoamSpokenToo", backgroundImg="v15s18a_bar_1", returnScreen="v15s18a_bar")
+        pos (510, 110)
 
     imagebutton:
         idle Transform("#0000", size=(1330, 180))
@@ -199,7 +205,7 @@ screen v15s18a_kitchen():
     imagebutton:
         idle Transform("#0000", size=(1330, 180))
         hover image_path + "bottom.webp"
-        action Show("v15s18a_upstairsroom")
+        action Show("v15s18a_stairs")
         pos (325, 900)
 
 screen v15s18a_upstairsroom():
@@ -257,7 +263,7 @@ screen v15s18a_upstairsroom():
     imagebutton:
         idle Transform("#0000", size=(1330, 180))
         hover image_path + "bottom.webp"
-        action Show("v15s18a_kitchen")
+        action Show("v15s18a_stairs")
         pos (325, 900)
 
 # screen v15s18a_bathroom():
@@ -296,10 +302,22 @@ screen v15s18a_stairs():
 
     default image_path = "images/v15/Scene 18a/Free Roam Screens/stairs/"
 
-    add image_path + "v15s18a_room_2.webp"
+    add image_path + "v15s18a_stairs.webp"
     
     imagebutton:
-        idle Transform("#0000", size=(436, 679))
-        hover image_path + "v15s18a_stairs.webp"
-        action Call("freeRoamSpokenToo", backgroundImg="v15s18a_room_2", returnScreen="v15s18a_room")
-        pos (704, 48)
+        idle Transform("#0000", size=(936, 1080))
+        hover image_path + "v15s18a_stairs_hover.webp"
+        action Show("v15s18a_upstairsroom")
+        pos (984, 0)
+
+    imagebutton:
+        idle Transform("#0000", size=(140,1080))
+        hover image_path + "left.webp"
+        action Show("v15s18a_kitchen")
+        pos (0, 0)
+
+    imagebutton:
+        idle Transform("#0000", size=(1330, 180))
+        hover image_path + "bottom.webp"
+        action Show("v15s18a_room")
+        pos (325, 900)
