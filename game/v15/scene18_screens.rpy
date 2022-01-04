@@ -147,14 +147,14 @@ screen v15s18a_bar():
     add image_path + "v15s18a_bar_1.webp"
 
     # Aubrey
-    imagebutton:
-        idle Transform("#0000", size=(569, 968))
-        hover image_path + "v15s18a_bar_hover_aubrey.webp"
-        if not "aubrey" in freeroam13:
-            action Jump("v15s18a_Aubrey")
-        else:
-            action Call("freeRoamSpokenToo", backgroundImg="v15s18a_bar_1", returnScreen="v15s18a_bar")
-        pos (490, 119)
+    #imagebutton:
+    #    idle Transform("#0000", size=(569, 968))
+    #    hover image_path + "v15s18a_bar_hover_aubrey.webp"
+    #    if not "aubrey" in freeroam13:
+    #        action Jump("v15s18a_Aubrey")
+    #    else:
+    #        action Call("freeRoamSpokenToo", backgroundImg="v15s18a_bar_1", returnScreen="v15s18a_bar")
+    #    pos (490, 119)
 
     imagebutton:
         idle Transform("#0000", size=(1330, 180))
