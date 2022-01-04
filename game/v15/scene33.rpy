@@ -1547,10 +1547,10 @@ label v15s33:
 
             u "(This is actually happening...)"
  
-            image v15naobj = Movie(play="images/v15/Scene33/v15naobj.webm", loop=True, image="images/v15/Scene33/v15naobjStart.webp", start_image="images/v15/Scene33/v15naobjStart.webp")
-            image v15naobjf = Movie(play="images/v15/Scene33/v15naobjf.webm", loop=True, image="images/v15/Scene33/v15naobjStart.webp", start_image="images/v15/Scene33/v15naobjStart.webp")
-            image v15naohj = Movie(play="images/v15/Scene33/v15naohj.webm", loop=True, image="images/v15/Scene33/v15naohjStart.webp", start_image="images/v15/Scene33/v15naohjStart.webp")
-            image v15naohjf = Movie(play="images/v15/Scene33/v15naohjf.webm", loop=True, image="images/v15/Scene33/v15naohjStart.webp", start_image="images/v15/Scene33/v15naohjStart.webp")
+            image v15naobj = Movie(play="images/v15/Scene 33/v15naobj.webm", loop=True, image="images/v15/Scene 33/v15naobjStart.webp", start_image="images/v15/Scene 33/v15naobjStart.webp")
+            image v15naobjf = Movie(play="images/v15/Scene 33/v15naobjf.webm", loop=True, image="images/v15/Scene 33/v15naobjStart.webp", start_image="images/v15/Scene 33/v15naobjStart.webp")
+            image v15naohj = Movie(play="images/v15/Scene 33/v15naohj.webm", loop=True, image="images/v15/Scene 33/v15naohjStart.webp", start_image="images/v15/Scene 33/v15naohjStart.webp")
+            image v15naohjf = Movie(play="images/v15/Scene 33/v15naohjf.webm", loop=True, image="images/v15/Scene 33/v15naohjStart.webp", start_image="images/v15/Scene 33/v15naohjStart.webp")
 
             scene v15naobj # Ignore as anim
             with dissolve
