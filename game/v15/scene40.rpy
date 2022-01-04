@@ -371,7 +371,7 @@ label v15s40:
 
     pause 0.75
 
-    if autumn.relationship.value == Relationship.FWB.value:
+    if autumn.relationship == Relationship.FWB:
         scene v15s40_4 # TPP. Autumn leans back into the limo to give Mc a kiss on the cheek, Mc slight smile mouth is closed
         with dissolve
 
