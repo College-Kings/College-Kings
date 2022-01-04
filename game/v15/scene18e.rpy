@@ -46,7 +46,9 @@ label v15s18e:
 
     u "(Hmm... Where should I start?)"
 
-    call screen v15s18e_Lauren
+    call screen sex_overlay([
+        [("Neck", "v15s18e_neck"), ("Boobs", "v15s18e_boobs"), ("Feet", "v15s18e_feet"), ("Vagina", "v15s18e_vagina")]
+    ], continue_label="v15s18e_end")
 
 label v15s18e_neck:
     $ v15s18e_frneck = True
@@ -149,7 +151,9 @@ label v15s18e_neck:
 
             u "Ha, me too."
 
-    call screen v15s18e_Lauren
+    call screen sex_overlay([
+        [("Neck", "v15s18e_neck"), ("Boobs", "v15s18e_boobs"), ("Feet", "v15s18e_feet"), ("Vagina", "v15s18e_vagina")]
+    ], continue_label="v15s18e_end")
 
 label v15s18e_boobs:
     $ v15s18e_frboobs = True
@@ -247,7 +251,9 @@ label v15s18e_boobs:
 
             u "Yes ma'am."
 
-    call screen v15s18e_Lauren
+    call screen sex_overlay([
+        [("Neck", "v15s18e_neck"), ("Boobs", "v15s18e_boobs"), ("Feet", "v15s18e_feet"), ("Vagina", "v15s18e_vagina")]
+    ], continue_label="v15s18e_end")
 
 label v15s18e_feet:
     $ v15s18e_frfeet = True
@@ -351,7 +357,9 @@ label v15s18e_feet:
 
             u "We can move on then."
 
-    call screen v15s18e_Lauren
+    call screen sex_overlay([
+        [("Neck", "v15s18e_neck"), ("Boobs", "v15s18e_boobs"), ("Feet", "v15s18e_feet"), ("Vagina", "v15s18e_vagina")]
+    ], continue_label="v15s18e_end")
 
 label v15s18e_vagina:
     scene v15s18eva_1 # FPP. MC looking at Lauren's vagina
