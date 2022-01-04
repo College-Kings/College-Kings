@@ -11,7 +11,9 @@ label v14s01a:
 
     pause
 
-    call screen VoiceActing_Toggle()
+    call screen confirm("This act has voice acted sex scenes. Each girl has a unique voice and moans accordingly. Would you like to enable voice acting in the sex scenes?",
+        yes_action=[SetVariable("voice_acted", True), Return()],
+        no_action=[SetVariable("voice_acted", False), Return()])
 
     scene v14s01a_1a # TPP. Same as v14s01a_1, Lindsey putting a finger on MC's lips (as if telling him to be quiet), MC confused, mouth closed, Lindsey smiling, mouth open
     with dissolve
