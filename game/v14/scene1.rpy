@@ -4,7 +4,6 @@
 # Time: Night
 
 label v14_start:
-
     if path_builder and not pb_name_set:
         $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
         $ pb_name_set = True
