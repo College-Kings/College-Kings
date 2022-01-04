@@ -72,7 +72,7 @@ label v15s35:
             scene v15s35_2a
             with dissolve
 
-            li "Haha, we shouldn't need to cheat tonight, but... Whatever happens."
+            li "Haha, we shouldn't need to cheat tonight, but... Whatever happens, happens."
         
     scene v15s35_3 # TPP. MC enters the house, his back is turned to the camera Lindsey closes the door slight smile mouth is closed looking at Mc
     with dissolve
