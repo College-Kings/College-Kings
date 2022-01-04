@@ -15,6 +15,9 @@ label v15_start:
     $ autumn.relationship = Relationship.FRIEND #Reset Autumn to FRIEND
     $ imre.relationship = Relationship.FRIEND #Reset Imre to FRIEND
 
+    if (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction):
+        lindsey_board.money -= 100 # we forgot about this one in v14
+
     if joinwolves:
         jump v15s1
     else:
