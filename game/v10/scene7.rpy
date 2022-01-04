@@ -61,8 +61,7 @@ label v10_mc_vs_imre_fight:
             jo "Same rules as before, just get it guys!"
 
             # Imre Fight
-            call screen confirm(
-                message="Would you like to play the fighting tutorial?",
+            call screen confirm(message="Would you like to play the fighting tutorial?",
                 yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
                 no_action=[SetVariable("fight_tutorial", False), Return()])
                 
