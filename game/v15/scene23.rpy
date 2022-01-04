@@ -3,6 +3,13 @@
 # Characters: MC (Towel, Outfit: 9)
 # Time: Morning
 
+init python:
+    def v15s23_reply1():
+        aubrey.messenger.newMessage("Perfect ;)")
+
+    def v15s23_reply2():
+        aubrey.messenger.newMessage("Hehe, I know you will ;)")
+
 label v15s23:
     # -MC takes a shower-
     scene v15s23_1 # TPP. We see MC neutral expression, mouth closed waist up in the shower (rinsing his hair render as best as possible).
@@ -61,15 +68,12 @@ label v15s23:
     # Pre load Aubrey Text conversation before branching Ape or Wolf 
     $ aubrey.messenger.newMessage("Hey smelly, come to the Chicks house. I have an extra special surprise for you.", force_send=True)
     if aubrey.relationship.value < Relationship.FWB.value:
-        $ aubrey.messenger.addReply("Smelly? I just showered! Anyway, I'll see you soon :)")
-        $ aubrey.messenger.newMessage("Perfect ;)", force_send=True)
+        $ aubrey.messenger.addReply("Smelly? I just showered! Anyway, I'll see you soon :)", v15s23_reply1)
 
     else:
-        $ aubrey.messenger.addReply("I just showered actually, so I smell amazing")
-        $ aubrey.messenger.addReply("But I accept your invitation...")
-        $ aubrey.messenger.newMessage("Where was my invitation???", force_send=True)
-        $ aubrey.messenger.addReply("Uhh... I'll make it up to you...? Lol")
-        $ aubrey.messenger.newMessage("Hehe, I know you will ;)", force_send=True)
+        $ aubrey.messenger.addReply("I just showered actually, so I smell amazing. But I accept your invitation...")
+        $ aubrey.messenger.newMessage("Where was my invitation???")
+        $ aubrey.messenger.addReply("Uhh... I'll make it up to you...? Lol", v15s23_reply2)
 
     if joinwolves:
         scene v15s23_8a # TPP. Same as v15s23_8 but MC's WOLF ROOM.
