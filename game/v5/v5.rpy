@@ -1115,7 +1115,7 @@ label gokissb:
 
     la "Now, imagine we're on a fast moving train."
 
-    call screen confirm(message="The trolley problem involves hypothetical people and/or animals being run over by a train and can be a lot to handle. The following scene might make you feel uncomfortable or uneasy. Do you wish to skip over the trolley problem scene?",
+    call screen confirm("The trolley problem involves hypothetical people and/or animals being run over by a train and can be a lot to handle. The following scene might make you feel uncomfortable or uneasy. Do you wish to skip over the trolley problem scene?",
         yes_action=[Hide("confirm"), Jump("skiptrolley")],
         no_action=[Hide("confirm"), Jump("continuetrolley")])
 
@@ -2844,7 +2844,7 @@ label hospitala:
     scene af4
 
     # Adam Fight
-    call screen confirm(message="Would you like to play the fighting tutorial?",
+    call screen confirm("Would you like to play the fighting tutorial?",
         yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
         no_action=[SetVariable("fight_tutorial", False), Return()])
 

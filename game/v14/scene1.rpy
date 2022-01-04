@@ -30,7 +30,9 @@ label v14s01:
 
     u "(Are they seriously trying to have a threesome...?)"
 
-    call screen VoiceActing_Toggle()
+    call screen confirm("This act has voice acted sex scenes. Each girl has a unique voice and moans accordingly. Would you like to enable voice acting in the sex scenes?",
+        yes_action=[SetVariable("voice_acted", True), Return()],
+        no_action=[SetVariable("voice_acted", False), Return()])
 
     scene v14s01_1a # FPP. Same as v14s01_1, Riley and Aubrey removing their bras, they're looking at MC seductively, mouths closed
     with dissolve

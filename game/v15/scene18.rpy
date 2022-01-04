@@ -367,14 +367,14 @@ label v15s18:
     pause 0.75
 
     python:
-        v15_imre_checklist.add_item("Have Sex")
-        v15_imre_checklist.add_item("Give Oral")
-        v15_imre_checklist.add_item("Get Oral")
-        v15_imre_checklist.add_item("Get a Handjob")
-        v15_imre_checklist.add_item("Finger a girl")
-        v15_imre_checklist.add_item("Make out")
-        v15_imre_checklist.add_item("Steal someone's panties")
-        v15_imre_checklist.add_item("Find a condom")
+        checklist.add_item("Have Sex")
+        checklist.add_item("Give Oral")
+        checklist.add_item("Get Oral")
+        checklist.add_item("Get a Handjob")
+        checklist.add_item("Finger a girl")
+        checklist.add_item("Make out")
+        checklist.add_item("Steal someone's panties")
+        checklist.add_item("Find a condom")
 
     show screen v15_imre_checklist_icon
     # -The Party Checklist UI pops up, showing the list of challenges-

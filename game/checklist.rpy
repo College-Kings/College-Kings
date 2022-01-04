@@ -11,7 +11,10 @@ init python:
             self.items = []
 
         def __getitem__(self, index):
-            return self.items[index]
+            if _in_replay:
+                return ChecklistItem("Replay Template")
+            else:
+                return self.items[index]
 
         def __iter__(self):
             return iter(self.items)
