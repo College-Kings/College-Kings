@@ -412,16 +412,15 @@ label v15s9:
 
     pause 0.75
 
-    python:
-        v15s10_buyer_max_amount = 425
+    $ v15s10_buyer_max_amount = 425
 
-        if v14_pics_with_linds:
-            v15s10_buyer_max_amount += 200
+    if v14_pics_with_linds:
+        $ v15s10_buyer_max_amount += 200
 
-        v15s10_buyer_max_amount += (len(v14s47_car_pics) - 1) * 25
+    $ v15s10_buyer_max_amount += (len(v14s47_car_pics) - 1) * 25
 
-        if "v14s47_passenger_2b.webp" in v14s47_car_pics or "v14s47_passenger_2f.webp" in v14s47_car_pics:
-            v15s10_buyer_max_amount += 50
+    if "v14s47_passenger_2b.webp" in v14s47_car_pics or "v14s47_passenger_2f.webp" in v14s47_car_pics:
+        $ v15s10_buyer_max_amount += 50
 
     # Buyer's willingness to pay =
     #    425 by default
