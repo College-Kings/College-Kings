@@ -134,7 +134,7 @@ screen kiwiiPopup():
 screen fightPopup(fightMove):
     modal True
     
-    use alert_template("Congratulations! You have learned a new fighting move: {b}[fightMove]{/b}."):
+    use alert_template("Congratulations! You have learned a new fighting move: {{b}}{}{{/b}}.".format(fightMove)):
 
         textbutton "OK":
             action Return()
