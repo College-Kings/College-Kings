@@ -19,7 +19,7 @@ screen sex_overlay(options=sex_overlay_options, continue_label):
 
         button:
             background "gui/common/button_gray.webp"
-            action Show("confirm", message="Are you sure you want to end free roam?", yes_action=[Hide("confirm"), Jump(continue_label)])
+            action Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump(continue_label)])
             xalign 0.5
             xysize (269, 74)
 

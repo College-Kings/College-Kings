@@ -7,7 +7,7 @@ screen v13s20_room():
 
         hotspot (39, 81, 515, 773) action Show("v13s20_bathroom")
 
-        hotspot (573, 434, 445, 420) action Show("confirm", message="Are you sure you want to end free roam?", yes_action=[Hide("confirm"), Jump("v13s20_end")])
+        hotspot (573, 434, 445, 420) action Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v13s20_end")])
 
         if not "closet" in freeroam10:
             hotspot (1018, 103, 546, 711) action Jump("v13s20_closet")

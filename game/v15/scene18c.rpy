@@ -4,7 +4,7 @@
 # Time: Night
 
 label v15s18c:
-    call screen v15s18c_couch
+    call screen v15s18a_livingroom
 
 label v15s18c_riley:
     $ freeroam14.add("riley")
@@ -713,7 +713,7 @@ label v15s18c_imre_aubrey:
 
                 pause 0.75
 
-                call screen v15s18a_upstairsroom
+                call screen v15s18a_room
 
     else:
         scene v15s18c_imau_6c
@@ -1106,7 +1106,7 @@ label v15s18c_imre_aubrey:
 
     pause 0.75
 
-    call screen v15s18a_upstairsroom
+    call screen v15s18a_room
 
 label v15s18c_ryan:
     $ freeroam14.add("ryan")
@@ -1251,7 +1251,7 @@ label v15s18c_ryan:
 
     pause 0.75
 
-    call screen v15s18a_upstairsroom
+    call screen v15s18a_livingroom
 
 label v15s18c_lauren:
     $ freeroam14.add("lauren")
@@ -1720,7 +1720,7 @@ label v15s18c_autumn_amber:
 
                 pause 0.75
 
-                call screen v15s18a_upstairsroom
+                call screen v15s18a_bar
 
     else:
         scene v15s18c_auam_5a
@@ -1779,7 +1779,7 @@ label v15s18c_autumn_amber:
 
             pause 0.75
 
-            call screen v15s18a_upstairsroom
+            call screen v15s18a_bar
 
         "Let's make out":
             scene v15s18c_auam_5
@@ -1980,7 +1980,7 @@ label v15s18c_autumn_amber:
 
                 pause 0.75
 
-                call screen v15s18a_upstairsroom
+                call screen v15s18a_bar
 
 label v15s18c_autumn_kiss:
     scene v15s18c_auam_8 # TPP. Show Autumn and MC leaving the bar, both slight smiles, mouths closed
@@ -2069,7 +2069,7 @@ label v15s18c_autumn_kiss:
 
     pause 0.75
 
-    call screen v15s18a_upstairsroom
+    call screen v15s18a_bar
 
 label v15s18c_chris_penelope:
     $ freeroam14.add("chris_penelope")

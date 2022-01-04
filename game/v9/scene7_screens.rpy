@@ -16,7 +16,7 @@ screen v9s7_lakeFull(): ###### LAKE ZOOM OUT SCREEN
         if not "ryan" in freeroam5:
             action Jump("fr5ryan1")
         else:
-            action Show("confirm", message="Are you sure you want to end free roam?", yes_action=[Hide("confirm"), Jump("fr5ryan3")])
+            action Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("fr5ryan3")])
 
     imagebutton: # DOGWALKER
         pos (1590, 576)

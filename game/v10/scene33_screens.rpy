@@ -490,7 +490,7 @@ screen v10s33_mudwrestling():
         if not "autumn" in freeroam6:
             action Jump("v10s33_autumn1")
         else:
-            action Show("confirm", message="Are you sure you want to end free roam?", yes_action=[Hide("confirm"), Jump("v10_autumn_announcement")])
+            action Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v10_autumn_announcement")])
 
     # Centre Aisle - Bottom
     imagebutton:
