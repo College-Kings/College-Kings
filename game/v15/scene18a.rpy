@@ -1711,6 +1711,10 @@ label v15s18a_Riley:
         
             u "Haha, what is it?"
 
+            $ scene_fromgame = True
+
+            label v15s18a_rileysg:
+
             scene v15s18ariley_2n # FPP. Riley looking down at the paper that we can't see, Riley slight smile, mouth open.
             with dissolve
 
@@ -1936,8 +1940,14 @@ label v15s18a_Riley:
             scene v15s18ariley_18a # FPP. The door closed and Riley gone
             with dissolve
 
-            $ v15_imre_checklist[3].complete = True
+            if scene_fromgame:
+                $ v15_imre_checklist[3].complete = True
+
             u "(Well... That wasn't so hard. *Laughs* Where to next?)"
+
+            $ renpy.end_replay()
+            
+            $ scene_fromgame = False
 
             scene v15s18ariley_12a # TPP. MC putting his costume back on, slight smile, mouth closed.
             with dissolve
@@ -2170,6 +2180,8 @@ label v15s18a_ChrisAmber:
                     if amber.relationship.value < Relationship.FWB.value:
                         call screen kct_popup
                     
+                    $ scene_fromgame = True
+                    
                     label v15s18a_ambersg:
                     
                     scene v15s18aamber_3c
@@ -2365,7 +2377,9 @@ label v15s18a_ChrisAmber:
                     scene v15s18aamber_12 # FPP. MC watching Amber walking back in the house.
                     with dissolve
 
-                    $ v15_imre_checklist[2].complete = True
+                    if scene_fromgame:
+                        $ v15_imre_checklist[2].complete = True
+
                     u "(Blow job, check!)"
 
                     scene v15s18aamber_13 # TPP. MC pulling the bottom part of his costume back up, slight smile, mouth closed.
@@ -2377,6 +2391,8 @@ label v15s18a_ChrisAmber:
                     with dissolve
 
                     $ renpy.end_replay()
+
+                    $ scene_fromgame = False
 
                     pause 0
 

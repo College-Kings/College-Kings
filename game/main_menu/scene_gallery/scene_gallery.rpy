@@ -113,7 +113,7 @@ init python:
         SceneGallery("The List (Aubrey)", "images/3 hits.webp", "18c") # 18c, Aubrey
         SceneGallery("The List (Autumn)", "images/3 hits.webp", "18c") # 18c, Autumn
         SceneGallery("The List (Penelope)", "images/3 hits.webp", "18c") # 18c, Penelope
-        SceneGallery("The List (Riley)", "images/v15/scene 18a/v15s18ariley_14.webp", "18a") # 18a, Riley
+        SceneGallery("The List (Riley)", "images/v15/scene 18a/v15s18ariley_14.webp", "v15s18a_rileysg") # 18a, Riley
         SceneGallery("Birthday treat", "images/v15/scene 18e/v15s18eend_6.webp", "18e"), # 18e, Lauren
         SceneGallery("Fun at the wedding", "images/3 hits.webp", "33"), # 33, Naomi
         SceneGallery("Choosing Nora", "images/3 hits.webp", "48"), # 48, Nora
