@@ -538,24 +538,31 @@ style game_menu_label_text:
 
 screen save():
     tag menu
-    style_prefix "save"
 
     use file_slots(_("Save"))
+
+
+screen enter_save_name(slot):
+    style_prefix "save"
 
     text "SAVE NAME:" pos (270, 240)
     
     frame:
-        xysize (1083, 87)
+        xysize (1083, 99)
         pos (477, 210)
         background "gui/file_slots/save_name.png"
 
         input:
             align (0.5, 0.5)
-            yoffset 7
             default save_name
             copypaste True
             value VariableInputValue("save_name")
             allow " .,_-0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+
+        imagebutton:
+            idle "gui/file_slots/save_game_idle.png"
+            action [Hide("enter_save_name"), FileAction(slot)]
+            align (1.0, 0.5)
 
 
 style save_text is file_slot_text
@@ -601,16 +608,15 @@ screen file_slots(title):
         pos (243, 206)
         xysize (1430, 588)
 
-        if title == _("Load"):
-            button:
-                xalign 0.5
-                ypos 35
-                action page_name_value.Toggle()
-                key_events True
+        button:
+            xalign 0.5
+            ypos 35
+            action page_name_value.Toggle()
+            key_events True
 
-                input:
-                    style "file_slots_page_name"
-                    value page_name_value
+            input:
+                style "file_slots_page_name"
+                value page_name_value
 
         ## The grid of file slots.
         grid gui.file_slot_cols gui.file_slot_rows:
@@ -627,7 +633,10 @@ screen file_slots(title):
 
                 button:
                     background FileScreenshot(slot)
-                    action FileAction(slot)
+                    if title == _("Save"):
+                        action Show("enter_save_name", slot=slot)
+                    else:
+                        action FileAction(slot)
                     xysize (384, 216)
 
                     if file_compatable:
