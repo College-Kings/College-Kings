@@ -104,7 +104,7 @@ label v14s19:
             people=[mc, chloe])
 
         chloe_board.add_task("Apes", "Host a small get together with Cameron, Grayson, Chloe, Aubrey and you",
-            opinion= "\"First thing's first: Get them all in a room, give them each a beer, and put on some good music. As soon as we've set the mood, we can get down to business.\" - Chloe",
+            opinion= "\"First things first: Get them all in a room, give them each a beer, and put on some good music. As soon as we've set the mood, we can get down to business.\" - Chloe",
             people=[mc, chloe, aubrey, grayson, cameron])
         v14s19_talk_cameron = chloe_board.add_subtask("Apes", "Talk to Cameron about a strategic alliance",
             opinion="\"Cameron secretly has amazing leadership skills, and I know he plans to use them one day. If we tell Cameron exactly what he wants to hear in terms of the future of the Apes, he'll have no reason to vote against me\" - Chloe",

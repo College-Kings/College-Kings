@@ -250,9 +250,6 @@ label v14s18:
             scene v14s18_4i # FPP. Same as v14s18_4, Lindsey sad
             with dissolve
 
-            if not v14_help_chloe:
-                $ grant_achievement("indecisive")
-
             u "I've been thinking about it, and now that we're actually back on campus I'm finally starting to get back into the swing of things. So, I don't think-"
 
             scene v14s18_4j # FPP. Same as v14s18_4i, Lindsey mouth open

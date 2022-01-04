@@ -9099,7 +9099,7 @@ label v6_fr3chloe1:
 
             cl "*Sniff* Okay..."
 
-            $ chloe.relationship.value = Relationship.FRIEND
+            $ chloe.relationship = Relationship.FRIEND
 
         else:
             cl "Please, just leave me alone, [name]."
@@ -9123,7 +9123,7 @@ label v6_fr3chloe1:
 
         cl "*Sniff* Okay..."
 
-        $ chloe.relationship.value = Relationship.FRIEND
+        $ chloe.relationship = Relationship.FRIEND
 
     # unlock sound
 
@@ -9170,7 +9170,7 @@ label v6_fr3chloe1:
     menu:
         "Maybe you should step down":
             $ add_point(KCT.BOYFRIEND)
-            $ chloe.relationship.value = Relationship.MAD.value
+            $ chloe.relationship = Relationship.MAD.value
 
             u "You ever think, maybe you should step down?"
 

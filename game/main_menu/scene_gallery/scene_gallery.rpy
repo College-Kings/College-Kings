@@ -109,7 +109,7 @@ init python:
     ## v15
     if renpy.loadable("v15/scene1.rpy"):
         SceneGallery("Angry with Ms. Rose", "images/v15/scene 15/v15s15_7f.webp", "v15s15sg") # 15, Ms. Rose
-        SceneGallery("The List (Amber)", "images/v15/scene 18a/v15s18aamber_9e.webp", "18a") # 18a, Amber
+        SceneGallery("The List (Amber)", "images/v15/scene 18a/v15s18aamber_9e.webp", "v15s18a_ambersg") # 18a, Amber
         SceneGallery("The List (Aubrey)", "images/3 hits.webp", "18c") # 18c, Aubrey
         SceneGallery("The List (Autumn)", "images/3 hits.webp", "18c") # 18c, Autumn
         SceneGallery("The List (Penelope)", "images/3 hits.webp", "18c") # 18c, Penelope
