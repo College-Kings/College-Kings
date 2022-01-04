@@ -543,7 +543,10 @@ screen save():
 
 
 screen enter_save_name(slot):
+    tag menu
     style_prefix "save"
+
+    use save
 
     text "SAVE NAME:" pos (270, 240)
     
@@ -561,7 +564,7 @@ screen enter_save_name(slot):
 
         imagebutton:
             idle "gui/file_slots/save_game_idle.png"
-            action [Hide("enter_save_name"), FileAction(slot)]
+            action [Show("save"), FileAction(slot)]
             align (1.0, 0.5)
 
 
@@ -608,15 +611,16 @@ screen file_slots(title):
         pos (243, 206)
         xysize (1430, 588)
 
-        button:
-            xalign 0.5
-            ypos 35
-            action page_name_value.Toggle()
-            key_events True
+        if not renpy.get_screen("enter_save_name"):
+            button:
+                xalign 0.5
+                ypos 35
+                action page_name_value.Toggle()
+                key_events True
 
-            input:
-                style "file_slots_page_name"
-                value page_name_value
+                input:
+                    style "file_slots_page_name"
+                    value page_name_value
 
         ## The grid of file slots.
         grid gui.file_slot_cols gui.file_slot_rows:
@@ -680,41 +684,33 @@ screen file_slots(title):
             yalign 0.5
 
     # Menu buttons
-    hbox:
-        pos (129, 967)
-        spacing 50
-
-        if title == _("Save"):
-            imagebutton:
-                idle image_path + "load_idle.png"
-                action ShowMenu("load")
-                yalign 0.5
-        else:
-            imagebutton:
-                idle image_path + "save_idle.png"
-                action ShowMenu("save")
-                yalign 0.5
-
+    if title == _("Save"):
         imagebutton:
-            idle image_path + "menu_idle.png"
-            action MainMenu()
-            yalign 1.0
+            idle image_path + "load_idle.png"
+            action ShowMenu("load")
+            pos (129, 967)
+    else:
+        imagebutton:
+            idle image_path + "save_idle.png"
+            action ShowMenu("save")
+            pos (129, 967)
 
-    hbox:
+    imagebutton:
+        idle image_path + "menu_idle.png"
+        action MainMenu()
+        pos (314, 975)
+
+    imagebutton:
+        idle "settings_idle"
+        hover "settings_hover"
+        action ShowMenu("preferences")
         pos (1439, 967)
-        spacing 50
 
-        imagebutton:
-            idle "settings_idle"
-            hover "settings_hover"
-            action ShowMenu("preferences")
-            yalign 0.5
-
-        imagebutton:
-            idle "quit_idle"
-            hover "quit_hover"
-            action Quit(confirm=not main_menu)
-            yalign 0.5
+    imagebutton:
+        idle "quit_idle"
+        hover "quit_hover"
+        action Quit(confirm=not main_menu)
+        pos (1662, 971)
 
 
 style file_slots_title is text:
