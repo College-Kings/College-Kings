@@ -504,10 +504,10 @@ label v15s48a_end:
 
     no "Gladly. *Giggles*"
 
-    image v15norbj = Movie(play="images/v15/Scene48a/v15norbj.webm", loop=True, image="images/v15/Scene48a/v15norbjStart.webp", start_image="images/v15/Scene48a/v15norbjStart.webp")
-    image v15norbjf = Movie(play="images/v15/Scene48a/v15norbjf.webm", loop=True, image="images/v15/Scene48a/v15norbjStart.webp", start_image="images/v15/Scene48a/v15norbjStart.webp")
-    image v15norbj2 = Movie(play="images/v15/Scene48a/v15norbj2.webm", loop=True, image="images/v15/Scene48a/v15norbj2Start.webp", start_image="images/v15/Scene48a/v15norbj2Start.webp")
-    image v15norbj2f = Movie(play="images/v15/Scene48a/v15norbj2f.webm", loop=True, image="images/v15/Scene48a/v15norbj2Start.webp", start_image="images/v15/Scene48a/v15norbj2Start.webp")
+    image v15norbj = Movie(play="images/v15/Scene 48a/v15norbj.webm", loop=True, image="images/v15/Scene 48a/v15norbjStart.webp", start_image="images/v15/Scene 48a/v15norbjStart.webp")
+    image v15norbjf = Movie(play="images/v15/Scene 48a/v15norbjf.webm", loop=True, image="images/v15/Scene 48a/v15norbjStart.webp", start_image="images/v15/Scene 48a/v15norbjStart.webp")
+    image v15norbj2 = Movie(play="images/v15/Scene 48a/v15norbj2.webm", loop=True, image="images/v15/Scene 48a/v15norbj2Start.webp", start_image="images/v15/Scene 48a/v15norbj2Start.webp")
+    image v15norbj2f = Movie(play="images/v15/Scene 48a/v15norbj2f.webm", loop=True, image="images/v15/Scene 48a/v15norbj2Start.webp", start_image="images/v15/Scene 48a/v15norbj2Start.webp")
 
     scene v15norbj # Ignore as anim
     with dissolve
@@ -556,10 +556,8 @@ label v15s48a_end:
 
     pause 0.75
 
-    image v15noror = Movie(play="images/v15/Scene48a/v15noror.webm", loop=True, image="images/v15/Scene48a/v15nororStart.webp", start_image="images/v15/Scene48a/v15nororStart.webp")
-    image v15nororf = Movie(play="images/v15/Scene48a/v15nororf.webm", loop=True, image="images/v15/Scene48a/v15nororStart.webp", start_image="images/v15/Scene48a/v15nororStart.webp")
-    image v15noror2 = Movie(play="images/v15/Scene48a/v15noror2.webm", loop=True, image="images/v15/Scene48a/v15noror2Start.webp", start_image="images/v15/Scene48a/v15noror2Start.webp")
-    image v15noror2f = Movie(play="images/v15/Scene48a/v15noror2f.webm", loop=True, image="images/v15/Scene48a/v15noror2Start.webp", start_image="images/v15/Scene48a/v15noror2Start.webp")
+    image v15noror = Movie(play="images/v15/Scene 48a/v15noror.webm", loop=True, image="images/v15/Scene 48a/v15nororStart.webp", start_image="images/v15/Scene 48a/v15nororStart.webp")
+    image v15noror2 = Movie(play="images/v15/Scene 48a/v15noror2.webm", loop=True, image="images/v15/Scene 48a/v15noror2Start.webp", start_image="images/v15/Scene 48a/v15noror2Start.webp")
 
     scene v15noror # Ignore as anim 
     with dissolve
@@ -590,11 +588,6 @@ label v15s48a_end:
 
             no "Ha! Should I?"
 
-    scene v15nororf # Ignore as anim 
-    with dissolve
-
-    pause 0.75
-
     no "Mmm..."
 
     u "You're so fucking wet, Nora."
@@ -609,11 +602,6 @@ label v15s48a_end:
     u "You taste incredible..."
 
     no "Mhmm... Right..."
-
-    scene v15noror2f # Ignore as anim
-    with dissolve
-
-    pause 0.75
 
     no "You..."
 
@@ -646,10 +634,10 @@ label v15s48a_end:
 
     u "For now."
 
-    image v15norsdg = Movie(play="images/v15/Scene48a/v15norsdg.webm", loop=True, image="images/v15/Scene48a/v15norsdgStart.webp", start_image="images/v15/Scene48a/v15norsdgStart.webp")
-    image v15norsdgf = Movie(play="images/v15/Scene48a/v15norsdgf.webm", loop=True, image="images/v15/Scene48a/v15norsdgStart.webp", start_image="images/v15/Scene48a/v15norsdgStart.webp")
-    image v15norsdg2 = Movie(play="images/v15/Scene48a/v15norsdg2.webm", loop=True, image="images/v15/Scene48a/v15norsdg2Start.webp", start_image="images/v15/Scene48a/v15norsdg2Start.webp")
-    image v15norsdg2f = Movie(play="images/v15/Scene48a/v15norsdg2f.webm", loop=True, image="images/v15/Scene48a/v15norsdg2Start.webp", start_image="images/v15/Scene48a/v15norsdg2Start.webp")
+    image v15norsdg = Movie(play="images/v15/Scene 48a/v15norsdg.webm", loop=True, image="images/v15/Scene 48a/v15norsdgStart.webp", start_image="images/v15/Scene 48a/v15norsdgStart.webp")
+    image v15norsdgf = Movie(play="images/v15/Scene 48a/v15norsdgf.webm", loop=True, image="images/v15/Scene 48a/v15norsdgStart.webp", start_image="images/v15/Scene 48a/v15norsdgStart.webp")
+    image v15norsdg2 = Movie(play="images/v15/Scene 48a/v15norsdg2.webm", loop=True, image="images/v15/Scene 48a/v15norsdg2Start.webp", start_image="images/v15/Scene 48a/v15norsdg2Start.webp")
+    image v15norsdg2f = Movie(play="images/v15/Scene 48a/v15norsdg2f.webm", loop=True, image="images/v15/Scene 48a/v15norsdg2Start.webp", start_image="images/v15/Scene 48a/v15norsdg2Start.webp")
 
     scene v15norsdg # Ignore as anim 
     with dissolve
@@ -726,10 +714,10 @@ label v15s48a_end:
 
     pause 0.75
 
-    image v15normis = Movie(play="images/v15/Scene48a/v15normis.webm", loop=True, image="images/v15/Scene48a/v15normisStart.webp", start_image="images/v15/Scene48a/v15normisStart.webp")
-    image v15normisf = Movie(play="images/v15/Scene48a/v15normisf.webm", loop=True, image="images/v15/Scene48a/v15normisStart.webp", start_image="images/v15/Scene48a/v15normisStart.webp")
-    image v15normis2 = Movie(play="images/v15/Scene48a/v15normis2.webm", loop=True, image="images/v15/Scene48a/v15normis2Start.webp", start_image="images/v15/Scene48a/v15normis2Start.webp")
-    image v15normis2f = Movie(play="images/v15/Scene48a/v15normis2f.webm", loop=True, image="images/v15/Scene48a/v15normis2Start.webp", start_image="images/v15/Scene48a/v15normis2Start.webp")
+    image v15normis = Movie(play="images/v15/Scene 48a/v15normis.webm", loop=True, image="images/v15/Scene 48a/v15normisStart.webp", start_image="images/v15/Scene 48a/v15normisStart.webp")
+    image v15normisf = Movie(play="images/v15/Scene 48a/v15normisf.webm", loop=True, image="images/v15/Scene 48a/v15normisStart.webp", start_image="images/v15/Scene 48a/v15normisStart.webp")
+    image v15normis2 = Movie(play="images/v15/Scene 48a/v15normis2.webm", loop=True, image="images/v15/Scene 48a/v15normis2Start.webp", start_image="images/v15/Scene 48a/v15normis2Start.webp")
+    image v15normis2f = Movie(play="images/v15/Scene 48a/v15normis2f.webm", loop=True, image="images/v15/Scene 48a/v15normis2Start.webp", start_image="images/v15/Scene 48a/v15normis2Start.webp")
 
     scene v15normis # Ignore as anim
     with dissolve
