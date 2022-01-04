@@ -17,7 +17,7 @@ screen alert_template(message):
             align (0.5, 0.5)
             spacing 45
 
-            text _(message) xalign 0.5 xsize 500
+            text _(message) xalign 0.5 xsize 650
 
             hbox:
                 xalign 0.5
@@ -46,7 +46,7 @@ screen warning_template(message, style="blue"):
 
             null height 50
 
-            text _(message.upper()) xalign 0.5 xsize 590
+            text _(message.upper()) xalign 0.5 xsize 650
 
             hbox:
                 xalign 0.5
