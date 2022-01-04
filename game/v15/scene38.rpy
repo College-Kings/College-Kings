@@ -46,7 +46,7 @@ label v15s38:
         pause 0.75
 
     if not v15_lindsey_inviteseb: # -if MC chose Grayson, Grayson is also in the limo
-        scene v15s38_ 
+        scene v15s38_8 
         with dissolve
 
         pause 0.75
