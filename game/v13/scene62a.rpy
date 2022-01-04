@@ -41,6 +41,12 @@ label v13s62a:
     scene v13s62a_6 # TPP. Show Lindsey taking off her top, sexy expression, mouth closed
     with dissolve
 
+    if config_censored:
+        if renpy.loadable("v14/scene1.rpy"):
+            call screen censoredPopup("v14s01a_nsfwSkipLabel1")
+        else:
+            call screen censoredPopup("end13")
+
     pause
 
     scene v13s62a_7 # TPP. Show LIndsey taking off her pants (she has panties on, no bra), sexy expression, mouth closed

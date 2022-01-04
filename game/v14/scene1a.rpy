@@ -4,6 +4,9 @@
 # Time: Night
 
 label v14s01a:
+    if config_censored:
+        jump v14s01a_nsfwSkipLabel1
+
     play music "music/v12/Track Scene 29_2.mp3" fadein 2
 
     scene v14s01a_1 # TPP. Same positioning as v13s62a_10a, MC moving in for a kiss on Lindsey (not kissing yet), Lindsey smiling, mouth closed
@@ -27,6 +30,8 @@ label v14s01a:
 
     stop music fadeout 3
     play music "music/v12/Track Scene 33_4.mp3" fadein 2
+
+    label v14s01a_nsfwSkipLabel1:
 
     scene v14s01a_2 # TPP. Show MC startled, waking up (still night time), he is laying on his bed, mouth open
     with flash
