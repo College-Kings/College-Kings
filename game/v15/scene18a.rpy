@@ -1941,7 +1941,7 @@ label v15s18a_Riley:
             with dissolve
 
             if scene_fromgame:
-                $ v15_imre_checklist[3].complete = True
+                $ checklist[3].complete = True
 
             u "(Well... That wasn't so hard. *Laughs* Where to next?)"
 
@@ -2378,7 +2378,7 @@ label v15s18a_ChrisAmber:
                     with dissolve
 
                     if scene_fromgame:
-                        $ v15_imre_checklist[2].complete = True
+                        $ checklist[2].complete = True
 
                     u "(Blow job, check!)"
 

@@ -1,7 +1,7 @@
 init python:
     import os
 
-## Init
+# Init
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
 define config.default_sfx_volume = 1
@@ -11,6 +11,7 @@ default achievementAtList = None
 default name = "Alex"
 default realmode = False
 default showkct = True
+default checklist = Checklist()
 
     ## Phone
 define contacts_file_path = os.path.join(config.basedir, "game", "images", "nonplayable_characters")
@@ -35,7 +36,7 @@ default pb_name_set = False
 default pb_start_location = "start"
 default scene_fromgame = False
 
-# Voice Acting
+    # Voice Acting
 default voice_acted = True
 
 # KCT
@@ -370,7 +371,6 @@ default v15_autumn_freemug = False
 default v15_autumn_lunchbreak = False
 default v15_autumn_smoke = False
 default v15_blame_nora = False ### blame_chris = (v13_imre_disloyal and not v15_blame_nora)
-default v15_imre_checklist = Checklist()
 default v15_mad_at_ms_rose = False
 default v15s21_meeting_points = 0
 default v15_nora_clues = set() #detective clues: be_alone, loves_nature, hates_camping, likes_ex, runs_dad, hates_dad, close_rose, visited_aunt, aunt_cabin

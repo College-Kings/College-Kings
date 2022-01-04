@@ -711,7 +711,7 @@ label v15s18e_end:
     scene v15s18end_12 # FPP. MC looking at the empty room.
     with dissolve
 
-    $ v15_imre_checklist[0].complete = True
+    $ checklist[0].complete = True
     u "(What a fucking party...) *Laughs*"
 
     jump v15s18f
