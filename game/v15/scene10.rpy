@@ -8,7 +8,14 @@ label v15s10:
 # -MC arrives at the Lindsey car location. The car is in the same position as before. Lindsey is leaning against it, waiting. She turns to see MC approaching and gives him a nice smile-
 
     if v14s48_car_description == CarDescription.LIE:
-        $ v15s10_buyer_max_amount -= 200
+        if v14s48_car_price >= 350:
+            $ v15s10_buyer_max_amount -= 200
+        elif v14s48_car_price >= 300:
+            $ v15s10_buyer_max_amount -= 150
+        elif v14s48_car_price >= 200:
+            $ v15s10_buyer_max_amount -= 100
+        elif v14s48_car_price >= 100:
+            $ v15s10_buyer_max_amount -= 50
 
     scene v15s10_1 # TPP. Show MC walking down the sidewalk near where they took the picture for lindsey car, Slight smile, mouth closed.
     with dissolve
