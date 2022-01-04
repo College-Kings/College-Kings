@@ -2170,6 +2170,8 @@ label v15s18a_ChrisAmber:
                     if amber.relationship.value < Relationship.FWB.value:
                         call screen kct_popup
                     
+                    label v15s18a_ambersg:
+                    
                     scene v15s18aamber_3c
                     with dissolve
 
@@ -2373,6 +2375,8 @@ label v15s18a_ChrisAmber:
 
                     scene v15s18aamber_14 # TPP. Show Mc walking back inside the house, slight smile, mouth closed.
                     with dissolve
+
+                    $ renpy.end_replay()
 
                     pause 0
 
