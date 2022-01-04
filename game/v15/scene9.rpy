@@ -431,7 +431,8 @@ label v15s9:
     # If the sum less than the listing price selected for the car in v14s48, the sale fails.
     
     # Other things that affect willingness to pay:
-    #   -200 if you lie in the description (does not influence whether scene 10 appears, buyer only realizes it's a lie in scene 10)
+    #     penalty if you lie in the description (does not influence whether scene 10 appears, buyer only realizes it's a lie in scene 10)
+    #     the exact amount of the penalty increases with the original sales price (up to $200)
     
     # Sale is for either the listed price, or buyer's willingness to pay, whichever is lowest
     
