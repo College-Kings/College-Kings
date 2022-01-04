@@ -583,7 +583,7 @@ screen load():
 screen file_slots(title):
     style_prefix "file_slots"
 
-    default page_name_value = FilePageNameInputValue(pattern=_("PAGE {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    default page_name_value = FilePageNameInputValue(pattern=_("PAGE {}"), auto=_("AUTOMATIC SAVES"), quick=_("QUICK SAVES"))
     default image_path = "gui/file_slots/"
 
     python:
