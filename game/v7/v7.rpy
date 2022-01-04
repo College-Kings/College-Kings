@@ -15342,7 +15342,7 @@ label fr4chloe1:
 
     menu:
         "Defend Chloe":
-            $ chloe.relationship.value = Relationship.FRIEND
+            $ chloe.relationship = Relationship.FRIEND
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
 
