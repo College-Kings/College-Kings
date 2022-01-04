@@ -428,13 +428,13 @@ label v15s9:
     #   + 25 for every picture taken after the first one (can earn up to 3*25 = 75)
     #   + 50 if special picture taken (either Lindsey Hand on Hips, or Bird)
     
-    # If the sum less than the listing price selected for the car in v14s48, the sale fails.
+    # If the sum of the above is less than the listing price selected for the car in v14s48, the sale fails.
     
     # Other things that affect willingness to pay:
     #     penalty if you lie in the description (does not influence whether scene 10 appears, buyer only realizes it's a lie in scene 10)
     #     the exact amount of the penalty increases with the original sales price (up to $200)
     
-    # Sale is for either the listed price, or buyer's willingness to pay, whichever is lowest
+    # Sale is for either the listed price, or buyer's willingness to pay by this point, whichever is lowest
     
     #   + 50 if you lie in the description and Lindsey is in the pictures (does not influence sale, it's a bonus that the male buyer pays afterwards)
 
