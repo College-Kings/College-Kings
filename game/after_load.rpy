@@ -38,6 +38,10 @@ python early:
         except WindowsError:
             raise Exception("Deleting old files please RESTART GAME.")
 
+    # Helper function
+    def write_console(data):
+        with open("console.txt", "w") as f:
+            f.write(str(data))
 
 init 100 python:
     class CheatItem:
@@ -568,8 +572,32 @@ label after_load:
                 del kiwii_post.img
             except AttributeError: pass
 
+            try:
+                kiwii_post.message = kiwii_post.caption
+                del kiwii_post.caption
+            except AttributeError: pass
+
+            try: del kiwii_post.profilePicture
+            except AttributeError: pass
+
+            try:
+                kiwii_post.sentComments = kiwii_post.comments
+                del kiwii_post.comments
+            except AttributeError: pass
+
             try: kiwii_post.pendingComments
             except AttributeError: kiwii_post.pendingComments = []
+
+            if kiwii_post.image == "images/aupost1.png":
+                kiwii_post.image = "images/phone/kiwii/Posts/v7/aupost1.webp"
+            if kiwii_post.image == "images/chpost1.png":
+                kiwii_post.image = "images/phone/kiwii/Posts/v7/chpost1.webp"
+            if kiwii_post.image == "images/clpost1.png":
+                kiwii_post.image = "images/phone/kiwii/Posts/v7/clpost1.webp"
+            if kiwii_post.image == "images/empost1.png":
+                kiwii_post.image = "images/phone/kiwii/Posts/v7/empost1.webp"
+            if kiwii_post.image == "images/lapost1.png":
+                kiwii_post.image = "images/phone/kiwii/Posts/v7/lapost1.webp"
 
             ##### KIWII SENT COMMENTS
             for comment in kiwii_post.sentComments:
@@ -1070,7 +1098,6 @@ label after_load:
         charli.stats["Talkative"] = False
 
         josh.stats["Competitive"] = True
-
 
     show no_hard_feelings at achievementShow
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
