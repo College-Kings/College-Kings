@@ -18,6 +18,11 @@ image settings_hover = Transform("gui/common/settings_hover.webp", offset=(-35, 
 ## Alert
 image alert_background = Frame("gui/alert/background.png", 8, 8)
 
+## Bar
+image blue_bar = Frame("gui/bar/blue.webp", 44, 22, 44, 40)
+image ruby_bar = Frame("gui/bar/ruby.png", 30, 22, 29, 40)
+image yellow_bar = Frame("gui/bar/yellow.webp", 44, 22, 44, 40)
+
 ## Choice
 image choice_button_idle = Frame("gui/choice/button_idle.png", 40, 8)
 image choice_button_hover = Frame("gui/choice/button_idle.png", 40, 8)
@@ -439,10 +444,6 @@ image Imre_Jab_hit = "images/v10/Scene 7/Animations/END/MCIMRE-JABHIT-END.webp"
 image Imre_Jab_block = "images/v10/Scene 7/Animations/END/MCIMRE-JABBLOCKED-END.webp"
 image Imre_Kick_hit = "images/v10/Scene 7/Animations/END/MCIMRE-KICKHIT-END.webp"
 image Imre_Kick_block = "images/v10/Scene 7/Animations/END/MCIMRE-KICKBLOCKED-END.webp"
-
-# v14.0
-image v14_presidency_bar_left = Frame("images/v14/chicks_presidency_race/presidency_bar/left_bar.png", 44, 22, 44, 40)
-image v14_presidency_bar_right = Frame("images/v14/chicks_presidency_race/presidency_bar/right_bar.png", 44, 22, 44, 40)
 
 # Misc
 image credits = Movie(play="images/credits.webm", Loop = True)
