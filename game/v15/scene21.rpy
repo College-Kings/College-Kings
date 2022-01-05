@@ -1151,12 +1151,7 @@ label v15s21:
 
         ro "Oh! Very organized... Impressive."
 
-        show screen teacher_conviction_bar(0, "MS. ROSE")
-
         if ms_rose.relationship.value >= Relationship.FWB.value:
-            $ v15s21_meeting_points += 2
-
-            show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
         
             scene v15s21_10d # FPP. Chloe is walking away with her back turned and can't see Mc or Ms. Rose, Ms. Rose is giving Mc a wink, slight smile, mouth closed
             with dissolve
@@ -1172,6 +1167,13 @@ label v15s21:
         with dissolve
 
         pause 0.75
+
+        show screen teacher_conviction_bar(0, "MS. ROSE")
+
+        if ms_rose.relationship.value >= Relationship.FWB.value:
+            $ v15s21_meeting_points += 2
+
+            show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
 
         scene v15s21_13 # FPP. Show Ms. Rose only looking at Chloe, slight smile, mouth open
         with dissolve
