@@ -25,7 +25,6 @@ screen alert_template(message):
 
                 transclude
 
-
 style alert_text is olympus_mount_30
 
 
@@ -55,7 +54,6 @@ screen warning_template(message, style="blue"):
                 transclude
 
             null height 50
-
 
 style warning_text is olympus_mount_30
 
@@ -116,6 +114,16 @@ screen censoredPopup(continueLabel):
 
 screen timerBar(seconds=3):
     bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
+
+
+screen animated_value_bar(old_value, new_value, max_value, left_frame=None, right_frame=None, offset=(0, 0), size=(820, 95), delay=2):
+    bar:
+        value AnimatedValue(new_value, max_value, delay, old_value)
+        left_bar left_frame
+        right_bar right_frame
+        align (0.5, 0.5)
+        offset offset
+        xysize size
 
 
 # Kiwii Screens
