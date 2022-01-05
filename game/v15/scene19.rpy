@@ -98,6 +98,8 @@ label v15s19:
 
     menu:
         "Help clean up":
+            $ add_point(KCT.BOYFRIEND)
+            
             scene v15s19_5 # TPP. MC, smiling mouth open collects trash from the counter opposite the fridge (by the stove) while Lauren smiling mouth closed continues throwing away trash from counter by the sink, which is slightly cleaner than the preivous scene [Deer House Kitchen].
             with dissolve
 
@@ -186,7 +188,9 @@ label v15s19:
 
             pause 0.75
 
-        "Don't help clean up":
+        "Don't help":
+            $ add_point(KCT.BRO)
+            
             scene v15s19_4c
             with dissolve
 

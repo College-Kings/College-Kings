@@ -39,6 +39,8 @@ label v15s31:
 
         menu:
             "Send Emily a selfie":
+                $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s31_4 # TPP. Show MC's hand pulling his phone out of his pocket.
                 with dissolve
 
@@ -74,6 +76,8 @@ label v15s31:
                 pause 0.75
 
             "Don't contact Emily":
+                $ add_point(KCT.BRO)
+                
                 scene v15s31_2
                 with dissolve
                     

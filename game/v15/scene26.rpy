@@ -291,6 +291,8 @@ label v15s26:
 
     menu:
         "Yeah, let's watch":
+            $ add_point(KCT.BOYFRIEND)
+            
             u "Yeah, I don't have anything else to do. We can watch."
 
             scene v15s26_14a
@@ -299,6 +301,8 @@ label v15s26:
             au "Same, haha. I just hope it's worth my time."
         
         "Do we have to?":
+            $ add_point(KCT.BRO)
+            
             u "Do we really have to watch it?"
 
             scene v15s26_15a
@@ -661,6 +665,8 @@ label v15s26:
 
         menu:
             "Side with Riley":
+                $ add_point(KCT.TROUBLEMAKER
+                
                 $ riley.relationship = Relationship.LOYAL
                 $ grant_achievement("polycurious")
 
@@ -738,6 +744,8 @@ label v15s26:
 
                 menu:
                     "Polygamy isn't healthy": # RileyUpset
+                        $ add_point(KCT.BRO)
+                        
                         $ v15_RileyUpset = True
                         u "Honestly, it doesn't seem healthy."
 
@@ -848,6 +856,8 @@ label v15s26:
 
         menu: 
             "Side with Riley, pro-polygamy": #if AubreyTamed it becomes AubreyFwB, gain RileyLoyal; she's committed to MC as friends, romantic, TilDeathDoUsPart, all of the above
+                $ add_point(KCT.TROUBLEMAKER)
+                
                 if aubrey.relationship.value >= Relationship.TAMED.value:
                     $ aubrey.relationship = Relationship.FWB
                 $ riley.relationship = Relationship.LOYAL

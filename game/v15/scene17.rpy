@@ -347,6 +347,8 @@ label v15s17:
 
     label v15s17_gift_choice:
         if gift_card_50 in mc.inventory:
+            $ add_point(KCT.BRO)
+            
             scene v15s17_5
             with dissolve
 
@@ -375,6 +377,8 @@ label v15s17:
             clerk "I'm sure she'll be very happy with it."
             
         if emerald_bracelet in mc.inventory:
+            $ add_point(KCT.BOYFRIEND)
+            
             scene v15s17_11b # FPP. same as v15s17_11 Close up shot of the Jewlry options
             with dissolve
             
@@ -391,6 +395,8 @@ label v15s17:
             clerk "Jewelry! She is going to love it, young man."
             
         elif ruby_choker_necklace in mc.inventory:
+            $ add_point(KCT.BOYFRIEND)
+            
             scene v15s17_11b # FPP. same as v15s17_11 Close up shot of the Jewlry options
             with dissolve
             
@@ -407,6 +413,8 @@ label v15s17:
             clerk "Jewelry! She is going to love it, young man."
             
         elif white_horse_black_mane in mc.inventory:
+            $ add_point(KCT.BOYFRIEND)
+            
             scene v15s17_11c # FPP. same as v15s17_11 Close up shot of the horse options
             with dissolve
 
@@ -438,6 +446,8 @@ label v15s17:
             clerk "I'll go ahead and wrap it for you, no extra charge."
             
         elif brown_horse_golden_mane in mc.inventory:
+            $ add_point(KCT.BOYFRIEND)
+            
             scene v15s17_11c # FPP. same as v15s17_11 Close up shot of the horse options
             with dissolve
 

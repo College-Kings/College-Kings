@@ -68,6 +68,8 @@ label v15s48:
 
     menu:
         "I came to find you":
+            $ add_point(KCT.BRO)
+            
             scene v15s48_11 # TPP. MC walking closer to Nora, MC slight smile, mouth closed, Nora confused, mouth closed.
             with dissolve
 
@@ -86,6 +88,8 @@ label v15s48:
             no "You can call off the search party. I'm fine."
 
         "Hug her":
+            $ add_point(KCT.BOYFRIEND)
+            
             scene v15s48_11
             with dissolve
 
@@ -335,6 +339,7 @@ label v15s48:
 
     menu:
         "You're not stupid":
+            $ add_point(KCT.BOYFRIEND)
             $ v15s48_interrupt = True
 
             u "You're not stupid. Every one of-"
@@ -350,6 +355,8 @@ label v15s48:
             u "Yeah, sorry."
 
         "Don't interrupt":
+            $ add_point(KCT.BRO)
+            
             u "(I think she just needs someone to listen.)"
 
             scene v15s48_18
@@ -498,6 +505,7 @@ label v15s48:
 
     menu:
         "Follow your heart":
+            $ add_point(KCT.BOYFRIEND)
             $ v15s48_follow_your_heart = True
 
             u "You should follow your heart. Whatever direction you're being pulled in, you should head there."
@@ -521,6 +529,8 @@ label v15s48:
             no "*Sighs*"
 
         "Listen to your head":
+            $ add_point(KCT.BRO)
+            
             u "Listen to that little voice inside your head. What is she telling you to do?"
 
             if nora.relationship.value >= Relationship.FWB.value:
@@ -563,6 +573,8 @@ label v15s48:
 
     menu:
         "Be supportive":
+            $ add_point(KCT.BOYFRIEND)
+            
             u "I understand you're afraid to upset people. You're done with the drama, yeah?"
 
             scene v15s48_18
@@ -589,6 +601,8 @@ label v15s48:
                 u "I know. *Laughs*"
 
         "Be brutally honest":
+            $ add_point(KCT.TROUBLEMAKER)
+            
             u "Okay, forgive me if I upset you, but..."
 
             if "chris_amber" in freeroam13 or "chris_penelope" in freeroam14:
@@ -842,6 +856,9 @@ label v15s48:
 
         menu:
             "We should just be friends":
+                $ add_point(KCT.BRO)
+                $ v15_NoraFriendzone = True
+                
                 u "The relationship that we have is so strong, and fun... I think we should keep it that way."
 
                 scene v15s48_18b

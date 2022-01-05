@@ -411,3 +411,4 @@ default v12_followed_nora = False
 default v15bring_up_chloe = False
 default v15say_nothing = False
 default v15s22_meeting_points = 0
+default v15_NoraFriendZone = True

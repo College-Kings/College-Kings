@@ -85,6 +85,8 @@ label v15s24:
 
     menu:
         "Nancy Dick":
+            $ add_point(KCT.BRO)
+            
             $ v15s24_nancy_dick = True
 
             scene v15s24_5c
@@ -141,7 +143,8 @@ label v15s24:
 
             u "*Sighs* Thanks..."
 
-        "Andrew King": 
+        "Andrew King":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v15s24_5c
             with dissolve
 
@@ -499,6 +502,8 @@ label v15s24:
 
         menu:
             "Act offended":
+                $ add_point(KCT.TROUBLEMAKER)
+                
                 $ v15_lindsey_alcohol = True
                 scene v15s24_16a # TPP. MC looking at the Cashier angrily, mouth closed, the cashier looks shocked, mouth closed
                 with dissolve
@@ -618,6 +623,8 @@ label v15s24:
                 u "(Ha, perfect.)"
 
             "Come clean":
+                $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s24_13a
                 with dissolve
 
@@ -944,6 +951,8 @@ label v15s24:
 
         menu:
             "Act offended":
+                $ add_point(KCT.TROUBLEMAKER)
+                
                 $ v15_lindsey_alcohol = True
                 scene v15s24_13l
                 with dissolve
@@ -1080,6 +1089,8 @@ label v15s24:
                 u "You should be."
 
             "Come clean":
+                $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s24_13l
                 with dissolve
 

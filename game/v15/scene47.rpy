@@ -18,6 +18,8 @@ label v15s47:
 
     menu:
         "Call Nora":
+            $ add_point(KCT.BOYFRIEND)
+            
             play sound "sounds/ring.mp3"
 
             scene v15s47_2a # TPP. MC holding the phone to his ear, neutral face, mouth closed
@@ -38,6 +40,8 @@ label v15s47:
             pause 0.75
 
         "Don't call Nora":
+            $ add_point(KCT.BRO)
+            
             scene v15s47_3 # TPP. MC in the back of the Cab looking out the window new set of scenery, Neutral face, mouth closed.
             with dissolve
 

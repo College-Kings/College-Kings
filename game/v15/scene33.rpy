@@ -1879,6 +1879,8 @@ label v15s33:
 
         menu:
             "Stay silent":
+                $ add_point(KCT.BRO)
+                
                 u "(I don't feel good about talking to her right now...) *Sighs*"
 
                 scene v15s33_57e
@@ -1887,6 +1889,8 @@ label v15s33:
                 na "I'll take that as a no. *Laughs*"
 
             "Agree":
+                $ add_point(KCT.BOYFRIEND)
+                
                 u "Yeah, it's supposed to be the best day of your life. Right?"
 
                 scene v15s33_57e
@@ -1929,6 +1933,8 @@ label v15s33:
 
         menu:
             "Hopefully":
+                $ add_point(KCT.TROUBLEMAKER)
+                
                 u "I mean, hopefully."
 
                 scene v15s33_57a
@@ -1949,6 +1955,8 @@ label v15s33:
                 pause 0.75
 
             "It'll be us":
+                $ add_point(KCT.BOYFRIEND)
+                
                 u "One day it'll be us."
 
                 if aubrey.relationship.value >= Relationship.FWB.value:
@@ -2209,7 +2217,9 @@ label v15s33:
     with dissolve
 
     menu:
-        "Stay out of it": 
+        "Stay out of it":
+            $ add_point(KCT.BRO)
+            
             u "(It's probably best if I don't get involved. *Sighs* That's so fucked.)"
 
             play sound "sounds/capture.mp3"
@@ -2230,6 +2240,8 @@ label v15s33:
             pause 0.75
 
         "Take the photo":
+            $ add_point(KCT.TROUBLEMAKER)
+            
             $ v15s33_take_photo = True
 
             u "*Scoffs*"

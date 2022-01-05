@@ -510,6 +510,8 @@ label v15s28:
                 u "(I really don't want to get involved in Cameron drama...)"
             
             "Ask why":
+                $ add_point(KCT.TROUBLEMAKER)
+                
                 scene v15s28_9a
                 with dissolve
 
@@ -1029,6 +1031,8 @@ label v15s28:
                 pause 0.75
 
             "Don't kiss her":
+                $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s28_14
                 with dissolve
 
@@ -1073,6 +1077,8 @@ label v15s28:
                 pause 0.75
 
             "Don't kiss her":
+                $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s28_14 # FPP MC looks down at all the empty shot glasses on the table, maybe the image is a bit fuzzy from the drinking
                 with dissolve
 
@@ -1283,6 +1289,8 @@ label v15s28:
             jen "You're so stupid... *Giggles*"
 
         "Whistle instead":
+            $ add_point(KCT.BRO)
+            
             scene v15s28_23e # TPP Same angle as 23, Penelope, MC, and Jenny walking down the street, all a bit drunk, MC in the middle, MC pursing his lips and whistling
             with dissolve
 

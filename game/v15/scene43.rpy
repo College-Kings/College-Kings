@@ -44,6 +44,8 @@ label v15s43:
 
         menu:
             "Try the door handle":
+                $ add_point(KCT.BRO)
+                
                 play sound "sounds/dooropen.mp3"
 
                 scene v15s42_3 # TPP. Close up shot of MC's hand turning the door knob and opening the door.
@@ -64,6 +66,8 @@ label v15s43:
                 u "We really don't. *Chuckles*"
 
             "Keep waiting":
+                $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s43_2c
                 with dissolve
 
@@ -277,6 +281,8 @@ label v15s43:
 
     menu:
         "Call for Chris":
+            $ add_point(KCT.TROUBLEMAKER)
+            
             scene v15s43_9 # TPP. Close up of MC, looking at the room, suspicious, mouth open.
             with dissolve
 
@@ -288,6 +294,8 @@ label v15s43:
             am "Don't worry, we'll go easy on you. Just come out and put your hands where I can see them!"
 
         "Stay quiet":
+            $ add_point(KCT.BRO)
+            
             scene v15s43_9
             with dissolve
 
@@ -481,6 +489,8 @@ label v15s43:
 
     menu:
         "Where did she go?":
+            $ add_point(KCT.BRO)
+            
             u "Where did she go? She must have told you."
 
             scene v15s43_14h # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth open.
@@ -502,6 +512,8 @@ label v15s43:
             ch "Just wait until she comes back. She's fine. I swear she's fine."
 
         "Did she see someone?":
+            $ add_point(KCT.TROUBLEMAKER)
+            
             u "Did she go see someone else?"
 
             scene v15s43_14h
@@ -616,6 +628,8 @@ label v15s43:
 
     menu:
         "She's close with her Aunt?":
+            $ add_point(KCT.BOYFRIEND)
+            
             u "This aunt-"
 
             scene v15s43_15
@@ -639,6 +653,8 @@ label v15s43:
             am "Oh yeah? How sure?"
 
         "She's not with Mr. Rose?":
+            $ add_point(KCT.TROUBLEMAKER)
+            
             u "So you're sure that Nora's not with Mr. Rose, or... Her dad, I mean?"
 
             scene v15s43_14h
@@ -841,6 +857,9 @@ label v15s43:
     if detective == "loose_cannon":
         menu:
             "Kick table":
+                $ add_point(KCT.TROUBLEMAKER)
+                $ add_point(KCT.BRO)
+                
                 scene v15s43_19 # TPP. Show MC kicking the coffee table, slightly angry, mouth open.
                 with hpunch
 
@@ -852,6 +871,8 @@ label v15s43:
                 am "For fuck's sake..."
 
             "Don't kick table":
+                $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s43_20 # FPP. MC looking at the coffee table.
                 with dissolve
 
