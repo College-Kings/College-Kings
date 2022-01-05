@@ -1,37 +1,70 @@
-screen teacher_conviction_bar(percentage, title, teacher_name, background):
-    tag conviction_bar
+screen generic_conviction_bar(new_value, max_value, title, foreground, additional_info=""):
+    tag animated_value_bar
+    style_prefix "conviction_bar"
 
-    default old_value = animated_value_percent
+    $ title = title.upper()
+    $ additional_info = additional_info.upper()
 
-    fixed:
-        pos (624, 125)
-        maximum (744, 32)
-
-        bar:
-            # at presidency_bar
-            value AnimatedValue(percentage, 100, 2, old_value)
-            left_bar Frame("gui/bar/blue.webp", 10, 0)
-            right_bar Frame("gui/bar/ruby.webp", 10, 0)
-
-        text teacher_name xpos 20 yalign 0.5 yoffset 5 style "conviction_bar_header"
-
-    add background:
-        # at presidency_bar
+    frame:
         xalign 0.5
+        xysize (1297, 266)
 
-    fixed:
-        pos (860, 62)
-        maximum (265, 32)
+        fixed:
+            xysize (820, 95)
+            xalign 0.5
+            ypos 83
 
-        text title align (0.5, 0.5) yoffset 5 style "conviction_bar_header"
+            use animated_value_bar(None, new_value, max_value, "blue_bar", "ruby_bar", offset=(13, 0), size=(820, 95))
+            text "$ {}".format(new_value) align (0.5, 0.5)
 
-    timer 4 action [SetVariable("animated_value_percent", percentage), Hide("conviction_bar")]
+        add foreground
+
+        fixed:
+            xalign 0.5
+            ypos 52
+            xysize (262, 30)
+
+            text title align (0.5, 0.5)
+
+        fixed:
+            xalign 0.5
+            ypos 181
+            xysize (222, 30)
+
+            text additional_info align (0.5, 0.5)
 
 
-style conviction_bar_header is text:
+screen teacher_conviction_bar(new_value, teacher_name):
+    tag animated_value_bar
+    style_prefix "conviction_bar"
+
+    $ teacher_name = teacher_name.upper()
+
+    default foregrounds = {
+        "MR LEE": "images/v15/conviction_bars/mr_lee_background.png",
+        "MS. ROSE": "images/v15/conviction_bars/ms_rose_background.webp",
+        "DEAN": "images/v15/conviction_bars/dean_background.webp"
+    }
+
+    frame:
+        xalign 0.5
+        xysize (1136, 238)
+
+        use animated_value_bar(None, new_value, 100, "blue_bar", "ruby_bar", offset=(0, 30), size=(803, 92))
+
+        add foregrounds[teacher_name]
+
+        fixed:
+            xalign 0.5
+            ypos 65
+            xysize (262, 35)
+
+            text "CONVINCE TEACHER" align (0.5, 0.5)
+
+        text teacher_name pos (220, 141)
+
+
+style conviction_bar_text is text:
     font "fonts/Olympus Mount.ttf"
     size 19
-
-style conviction_bar_body is text:
-    font "fonts/ABeeZee-Regular.ttf"
-    size 24
+    yoffset -5
