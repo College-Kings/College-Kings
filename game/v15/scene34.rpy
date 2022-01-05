@@ -86,7 +86,7 @@ label v15s34:
         else:
             $ lindsey.messenger.newMessage("Hey, I'm having a game night to help secure some extra influence and votes for my campaign. Someone bailed on me at the last minute, so... Wanna come take their place? :)", force_send=True)
             $ lindsey.messenger.addReply("Hey! Yeah, sounds fun.")
-            $ lindsey.messenger.newMessage("Amazing! Be at the chicks house in 15 minutes :)", force_send=True)
+            $ lindsey.messenger.newMessage("Amazing! Be at the chicks house in 15 minutes :)")
             $ lindsey.messenger.addReply("Haha, that soon? Damn, okay. I'm OMW!", func=None)
 
         label v15s34_PhoneContinue:
