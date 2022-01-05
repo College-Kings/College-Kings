@@ -336,7 +336,7 @@ label v15s22:
     scene v15s22_4
     with dissolve
 
-    show screen teacher_conviction_bar(0, "DEAN")
+    show screen teacher_conviction_bar(5 * 100 / 13, "DEAN")
 
     menu:
         "Say hello to the Dean":

@@ -48,6 +48,7 @@ screen teacher_conviction_bar(new_value, teacher_name):
 
     frame:
         xalign 0.5
+        ypos -20
         xysize (1136, 238)
 
         use animated_value_bar(None, new_value, 100, "blue_bar", "ruby_bar", offset=(0, 30), size=(803, 92))
