@@ -54,15 +54,15 @@ label v15s38:
         pause 0.75
 
 
-    if v15_s12_lindsey_pb_inviteSebastian = False: # -if MC chose Grayson, Grayson is also in the limo
-        scene v15s38_ 
+    if not v15_s12_lindsey_pb_inviteSebastian: # -if MC chose Grayson, Grayson is also in the limo
+        scene v15s38_6 # FPP Grayson looking at MC, neutral expression, mouth closed
         with dissolve
 
         pause 0.75
     
 
     else: # -if MC chose Sebastian, Sebastian is also in the limo
-        scene v15s38_6 # FPP Grayson looking at MC, neutral expression, mouth closed
+        scene v15s38_6z # FPP Same as v15s38_6, instead of Grayson, it's Sebastian, Sebastian looking at MC, neutral expression, mouth closed
         with dissolve
 
         pause 0.75
