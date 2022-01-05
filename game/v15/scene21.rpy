@@ -95,7 +95,7 @@ label v15s21:
 
         scene v15s21_6a # same as v15s21_6 FPP. Mr. Lee is still looking at Chloe, slight smile, mnouth closed
         with dissolve
-        show screen teacher_conviction_bar(40, "MR. LEE")
+        show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
 
         menu:
             "Lindsey's wasting paper":
@@ -1170,7 +1170,7 @@ label v15s21:
 
         pause 0.75
 
-        show screen teacher_conviction_bar(4 * 100 / 11, "MS. ROSE")
+        show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
 
         if ms_rose.relationship.value >= Relationship.FWB.value:
             $ v15s21_meeting_points += 2
