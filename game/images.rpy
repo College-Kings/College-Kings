@@ -440,7 +440,9 @@ image Imre_Jab_block = "images/v10/Scene 7/Animations/END/MCIMRE-JABBLOCKED-END.
 image Imre_Kick_hit = "images/v10/Scene 7/Animations/END/MCIMRE-KICKHIT-END.webp"
 image Imre_Kick_block = "images/v10/Scene 7/Animations/END/MCIMRE-KICKBLOCKED-END.webp"
 
-# v11.0
+# v14.0
+image v14_presidency_bar_left = Frame("images/v14/chicks_presidency_race/presidency_bar/left_bar.png", 44, 22, 44, 40)
+image v14_presidency_bar_right = Frame("images/v14/chicks_presidency_race/presidency_bar/right_bar.png", 44, 22, 44, 40)
 
 # Misc
 image credits = Movie(play="images/credits.webm", Loop = True)
