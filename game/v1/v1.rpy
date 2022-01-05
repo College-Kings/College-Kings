@@ -39,10 +39,10 @@ label starta: #for compatibility only
         show screen bugTesting_Overlay
 
     show screen fightDamage
-
-    play music "music/msexy.mp3"
     show screen fantasyOverlay
 
+    play music "music/msexy.mp3"
+    
     scene s0a
     with dissolve
 
