@@ -41,7 +41,7 @@ screen teacher_conviction_bar(new_value, teacher_name):
     $ teacher_name = teacher_name.upper()
 
     default foregrounds = {
-        "MR LEE": "images/v15/conviction_bars/mr_lee_background.png",
+        "MR. LEE": "images/v15/conviction_bars/mr_lee_background.png",
         "MS. ROSE": "images/v15/conviction_bars/ms_rose_background.png",
         "DEAN": "images/v15/conviction_bars/dean_background.png"
     }

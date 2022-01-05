@@ -30,7 +30,7 @@ label v15s26:
     scene v15s26_2a
     with dissolve
 
-    u "The Chicks mascot?"
+    u "The Chicks' mascot?"
 
     scene v15s26_2
     with dissolve
@@ -184,7 +184,7 @@ label v15s26:
     scene v15s26_12 # FPP Riley, in theater room, looking at MC with a slight smile, mouth open
     with dissolve
 
-    ri "Really though, you're a lucky guy, [name]. Barely anyone has been here, let alone do they even know it exists."
+    ri "Really though, you're a lucky guy, [name]. Barely anyone has been here, let alone knows of its existance."
 
     scene v15s26_12a # FPP Same angle as 12, Riley in theater room with a slight smile, mouth closed
     with dissolve
@@ -367,11 +367,7 @@ label v15s26:
     pause 0.75
 
     # -We see some opening credits, white text on black screen (be creative, use patron names, talk to Steve about what he would like to add here. 
-    # Cheex suggests high-tier patrons can be listed? If not, let's stick to people from the team for the credits)-
-    scene v15s26_18 # FPP View of the theater screen, which is showing credits (get with Steve and Cheex for the names. I suggest listing me, Jeffly777 or Jeff Lee, as director, as both patron and transcriber)
-    with dissolve
-
-    pause 3
+    # Cheex suggests high-tier patrons can be listed? If not, let's stick to people from the team for the credits)
 
     scene v15s26_18a # FPP Same angle as 18, view of the screen showing a pastoral view, with the title "The Poly Dilemma" in pretty script
     with dissolve

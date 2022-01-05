@@ -45,7 +45,7 @@ label v15s38:
 
         pause 0.75
 
-    if not v15_lindsey_inviteseb: # -if MC chose Grayson, Grayson is also in the limo
+    if v15_lindsey_inviteseb: # -if MC chose Grayson, Grayson is also in the limo
         scene v15s38_8 
         with dissolve
 
@@ -972,7 +972,7 @@ label v15s38:
     scene v15s38_13 # FPP Show Lindsey turning her head to look out the window, mouth open
     with dissolve
 
-    li "Saved by the bell, Autumn. It looks like we're here!"
+    li "Don't worry, Autumn. It looks like we're here!"
 
     scene v15s38_9c
     with dissolve

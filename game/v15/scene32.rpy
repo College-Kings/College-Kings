@@ -306,6 +306,8 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
             yalign 1.0
             linear 6.0 yalign 0.0
         with fade
+
+        pause
                 
         # -MC is mesmerized by her-
 
