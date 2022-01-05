@@ -3,6 +3,8 @@
 # Characters: MC (Outfit: 9), BOOKING ADMIN (Outfit: 1)
 # Time: Morning
 
+# show screen generic_conviction_bar(800, 1000, "HAGGLING THE PRICE", "images/v15/conviction_bars/s25_background.png", "TOTAL PRICE $ {}".format(800))
+
 label v15s25:
     if joinwolves:
         play sound "sounds/dooropen.mp3"
