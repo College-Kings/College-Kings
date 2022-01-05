@@ -418,34 +418,29 @@ label v15s48:
 
     u "You are?"
 
-    scene v15s48_18
-    with dissolve
-
-    pause 0.75
-
     scene v15s48_18f # FPP. Nora looking at MC, MC looking at Nora, Nora studying MC, mouth open.
     with dissolve
 
     no "Yeah. I am. I'm fine, because... I still have me."
 
-    scene v15s48_18
+    scene v15s48_18a
     with dissolve
 
     u "And me."
 
     u "And a ton of others, who are like... Reaaally pissed at you right now, so..."
 
-    scene v15s48_18a
+    scene v15s48_18
     with dissolve
 
     no "Right, right... *Chuckles* I have what I need."
 
-    scene v15s48_18
+    scene v15s48_18a
     with dissolve
 
     u "So, what's next for Nora?"
 
-    scene v15s48_18a
+    scene v15s48_18
     with dissolve
 
     no "Who knows? Haha."
@@ -453,6 +448,11 @@ label v15s48:
     no "I'll most definitely focus on school."
 
     scene v15s48_16
+    with dissolve
+
+    pause 0.5
+
+    scene v15s48_18
     with dissolve
 
     no "Probably stay single for a while..."
@@ -488,22 +488,22 @@ label v15s48:
         u "Ha... Maybe?"
 
     else:
-        scene v15s48_18
+        scene v15s48_18a
         with dissolve
 
         u "Oh yeah? Gonna play the field a little?"
 
-        scene v15s48_18a
+        scene v15s48_18
         with dissolve
 
         no "Pfft, no. Not in the slightest, haha."
 
-    scene v15s48_18a
+    scene v15s48_18
     with dissolve
 
     no "I'm just not sure what's best for me right now."
 
-    scene v15s48_18
+    scene v15s48_18a
     with dissolve
 
     u "(Gotta be careful here... Should we nudge her in the right direction?)"
@@ -515,7 +515,7 @@ label v15s48:
             $ v15s48_follow_your_heart = True
             u "You should follow your heart. Whatever direction you're being pulled in, you should head there."
 
-            scene v15s48_18a
+            scene v15s48_18
             with dissolve
 
             no "My heart is telling me to find real love."
@@ -523,12 +523,12 @@ label v15s48:
             if nora.relationship.value >= Relationship.FWB.value:
                 no "And to give it a chance."
 
-            scene v15s48_18
+            scene v15s48_18a
             with dissolve
 
             u "And?"
 
-            scene v15s48_18a
+            scene v15s48_18
             with dissolve
 
             no "*Sighs*"
@@ -549,63 +549,63 @@ label v15s48:
 
             no "Only me."
 
-            scene v15s48_18
+            scene v15s48_18a
             with dissolve
 
             u "And?"
 
-            scene v15s48_18a
+            scene v15s48_18
             with dissolve
 
             no "I've never given that a try, I guess... Haha."
 
     no "I think I just feel a little guilty."
 
-    scene v15s48_18
+    scene v15s48_18a
     with dissolve
 
     u "For what?"
 
-    scene v15s48_18a
+    scene v15s48_18
     with dissolve
 
     no "Moving on so quickly? Picking up, coming back, and acting like myself again?"
 
-    scene v15s48_18
+    scene v15s48_18a
     with dissolve
 
     menu:
         "Be supportive":
-            scene v15s48_18
+            scene v15s48_18a
             with dissolve
 
             u "I understand you're afraid to upset people. You're done with the drama, yeah?"
 
-            scene v15s48_18a
+            scene v15s48_18
             with dissolve
 
             no "So done. Beyond done. Haha..."
 
             no "I'm ready to move on."
 
-            scene v15s48_18
+            scene v15s48_18a
             with dissolve
 
             u "Then you do that, and you're not going to hurt anyone in the process of being happy."
 
-            scene v15s48_18a
+            scene v15s48_18
             with dissolve
 
             no "Okay. You're right."
 
             if kct == "confident":
-                scene v15s48_18
+                scene v15s48_18a
                 with dissolve
 
                 u "I know. *Laughs*"
 
         "Be brutally honest":
-            scene v15s48_18
+            scene v15s48_18a
             with dissolve
 
             u "Okay, forgive me if I upset you, but..."
@@ -613,38 +613,38 @@ label v15s48:
             if "chris_amber" in freeroam13 or "chris_penelope" in freeroam14:
                 u "Chris tried his luck with a few people at Lauren's birthday party, and-"
 
-                scene v15s48_18a
+                scene v15s48_18
                 with dissolve
 
                 no "Haha! You're kidding."
 
                 if "chris_amber" in freeroam13 and "chris_penelope" in freeroam14:
-                    scene v15s48_18
+                    scene v15s48_18a
                     with dissolve
 
                     u "Nope. In fact, I had to save both of them from him."
 
                 else:
-                    scene v15s48_18
+                    scene v15s48_18a
                     with dissolve
 
                     u "Nope. In fact, I had to save them from him."
 
                 if "chris_amber" in freeroam13 and "chris_penelope" in freeroam14:
-                    scene v15s48_18a
+                    scene v15s48_18
                     with dissolve
 
                     no "*Laughs* Both?! Oh my god..."
 
                 else:
-                    scene v15s48_18a
+                    scene v15s48_18
                     with dissolve
 
                     no "*Laughs* Oh my god..."
 
                 no "Okay, fine. *Giggles* I don't feel guilty anymore."
 
-                scene v15s48_18
+                scene v15s48_18a
                 with dissolve
 
                 u "Haha, good!"
@@ -656,17 +656,17 @@ label v15s48:
 
                 u "What's the point in wasting any more of your time worrying about him? Focus on you."
 
-                scene v15s48_18a
+                scene v15s48_18
                 with dissolve
 
                 no "Wow, okay... *Snorts* Don't hold back, [name]."
 
-                scene v15s48_18
+                scene v15s48_18a
                 with dissolve
 
                 u "I didn't. Haha."
 
-                scene v15s48_18a
+                scene v15s48_18
                 with dissolve
 
                 no "You're not wrong... *Sighs*"
@@ -674,7 +674,7 @@ label v15s48:
     if nora.relationship.value < Relationship.FWB.value and v15s48_follow_your_heart and not v15s48_interrupt and kct != "confident":
         $ v15s48_variable_check += 1
         if v15s48_follow_your_heart:
-            scene v15s48_18a
+            scene v15s48_18
             with dissolve
 
             no "Well, cheers to following your heart! Actually-"
@@ -682,7 +682,7 @@ label v15s48:
             no "I think we have wine... Be right back!"
             
         else:
-            scene v15s48_18a
+            scene v15s48_18
             with dissolve
 
             no "Well, listening to the voices inside of our heads... Cheers to that! Actually-"
@@ -692,69 +692,69 @@ label v15s48:
     if v15s48_variable_check >= 1:
         if nora.relationship.value >= Relationship.FWB.value:
             if v15s48_follow_your_heart:
-                scene v15s48_18a
+                scene v15s48_18
                 with dissolve
 
                 no "Well, I guess I'm gonna follow my heart then..."
 
-                scene v15s48_18
+                scene v15s48_18a
                 with dissolve
 
                 u "You should."
 
             else:
-                scene v15s48_18a
+                scene v15s48_18
                 with dissolve
 
                 no "The thing is though..."
 
                 no "I don't want to focus on just me."
 
-                scene v15s48_18
+                scene v15s48_18a
                 with dissolve
 
                 u "You don't?"
 
-                scene v15s48_18a
+                scene v15s48_18
                 with dissolve
 
                 no "Ha, no. I don't."
                 
         if nora.relationship.value < Relationship.FWB.value and v15s48_follow_your_heart and not v15s48_interrupt or kct == "confident":
-            scene v15s48_18a
+            scene v15s48_18
             with dissolve
 
             no "So, when you say that I should follow my heart..."
 
-            scene v15s48_18
+            scene v15s48_18a
             with dissolve
 
             u "Yeah?"
     
     if chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or aubrey.relationship.value >= Relationship.TAMED.value:
-        scene v15s48_18a
+        scene v15s48_18
         with dissolve
 
         no "If only you were completely available, ha."
 
-        scene v15s48_18
+        scene v15s48_18a
         with dissolve
 
         u "Oh, your... It's me?"
 
-        scene v15s48_18a
+        scene v15s48_18
         with dissolve
 
         no "Kinda? *Nervous chuckle*"
 
         no "You're a great guy, everyone can see that. And you obviously care about me, haha."
 
-        scene v15s48_18
+        scene v15s48_18a
         with dissolve
 
         u "I care more than you know. We all do, I think."
 
-        scene v15s48_18a
+        scene v15s48_18
         with dissolve
 
         no "Thank you. It means a lot to know that I have you, even if just as a friend."
@@ -764,17 +764,17 @@ label v15s48:
 
         pause 0.75
 
-        scene v15s48_18a
+        scene v15s48_18
         with dissolve
 
         no "I think I need something stronger than this tea... *Laughs*"
 
-        scene v15s48_18
+        scene v15s48_18a
         with dissolve
 
         u "Haha, getting all soft on me now?"
 
-        scene v15s48_18a
+        scene v15s48_18
         with dissolve
 
         no "Not for long! I'm pretty sure I saw some wine earlier. I'll go dig it out."
@@ -794,27 +794,27 @@ label v15s48:
 
         pause 0.75
 
-        scene v15s48_18
+        scene v15s48_18a
         with dissolve
 
         u "Well, I wasn't expecting to be drinking wine by a fire tonight."
 
-        scene v15s48_18a
+        scene v15s48_18
         with dissolve
 
         no "Right? This is nice."
 
-        scene v15s48_18
+        scene v15s48_18a
         with dissolve
 
         u "Yeah, it really is."
 
-        scene v15s48_18a
+        scene v15s48_18
         with dissolve
 
         no "I'm glad you came, [name]."
 
-        scene v15s48_18
+        scene v15s48_18a
         with dissolve
 
         u "Me too."
@@ -822,17 +822,17 @@ label v15s48:
         jump v15s48b
 
     else:
-        scene v15s48_18a
+        scene v15s48_18
         with dissolve
 
         no "I want you."
 
-        scene v15s48_18
+        scene v15s48_18a
         with dissolve
 
         u "You do?"
 
-        scene v15s48_18a
+        scene v15s48_18
         with dissolve
 
         no "I..."
@@ -857,22 +857,22 @@ label v15s48:
             "We should just be friends":
                 u "The relationship that we have is so strong, and fun... I think we should keep it that way."
 
-                scene v15s48_18a
+                scene v15s48_18
                 with dissolve
 
                 no "Oh... Yeah, okay."
 
-                scene v15s48_18
+                scene v15s48_18a
                 with dissolve
 
                 u "You're amazing, Nora. You know I think you're-"
 
-                scene v15s48_18a
+                scene v15s48_18
                 with dissolve
 
                 no "I get it, it's fine."
 
-                scene v15s48_18
+                scene v15s48_18a
                 with dissolve
 
                 u "No. Nora, seriously. You're one of the coolest people I've ever met, and I'm an idiot for letting you go."
@@ -919,12 +919,12 @@ label v15s48:
 
                 no "I feel like drinking some wine now."
 
-                scene v15s48_18
+                scene v15s48_18a
                 with dissolve
 
                 u "The tea isn't strong enough?"
 
-                scene v15s48_18a
+                scene v15s48_18
                 with dissolve
 
                 no "Haha, no, it's not. I'll be right back."
@@ -944,12 +944,12 @@ label v15s48:
 
                 pause 0.75
 
-                scene v15s48_18a
+                scene v15s48_18
                 with dissolve
 
                 no "I'm happy you're here, [name]."
 
-                scene v15s48_18
+                scene v15s48_18a
                 with dissolve
 
                 u "Me too."
@@ -981,12 +981,12 @@ label v15s48:
                     u "(My god have I missed this...) *Moans*"
 
                 else:
-                    scene v15s48_18a
+                    scene v15s48_18
                     with dissolve
 
                     no "You have no idea how happy I am."
 
-                    scene v15s48_18
+                    scene v15s48_18a
                     with dissolve
 
                     u "I think I can guess... *Chuckles*"
