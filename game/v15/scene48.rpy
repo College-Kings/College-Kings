@@ -465,19 +465,19 @@ label v15s48:
 
         u "Agh... *Coughs*"
 
-        scene v15s48_18a
+        scene v15s48_18
         with dissolve
 
         no "*Giggles* You okay over there?"
 
-        scene v15s48_18
+        scene v15s48_18a
         with dissolve
 
         u "*Coughs* Ahem! Yes, I-"
 
         u "Excuse me..."
 
-        scene v15s48_18a
+        scene v15s48_18
         with dissolve
 
         no "Was it something I said?"
