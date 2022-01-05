@@ -135,7 +135,7 @@ label v15s18b:
         u "(I hope she likes it...)"
 
     if gift_card_50 in mc.inventory:
-        scene v15s18b_3c
+        scene v15s18b_3c_alt
         with dissolve
 
         la "Oh, it's another $50 gift card. *Laughs* Did you go shopping with Imre?"
@@ -237,7 +237,7 @@ label v15s18b:
             u "(*Sighs*)"
 
         else:
-            scene v15s18b_3c
+            scene v15s18b_3c_alt
             with dissolve
 
             la "Yeah. That's true, I guess."
