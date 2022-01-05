@@ -779,6 +779,8 @@ label v15s21:
 
         pause 0.75
 
+        hide screen teacher_conviction_bar
+
         hide screen v15_teacher_brief_icon
 
         if v15s21_meeting_points >= 5: #TBD optimal difficulty level
@@ -1747,6 +1749,8 @@ label v15s21:
         with dissolve
 
         pause 0.75
+
+        hide screen teacher_conviction_bar with dissolve
 
         hide screen v15_teacher_brief_icon
 
