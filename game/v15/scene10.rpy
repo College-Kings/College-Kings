@@ -687,6 +687,8 @@ label v15s10:
             scene v15s10_15 
             with dissolve
 
+            label test:
+
             pause 0.75
 
             play sound "sounds/cardooropen.mp3"
