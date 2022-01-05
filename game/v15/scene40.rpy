@@ -171,6 +171,7 @@ label v15s40:
         menu:
 
             "I'd like that":
+                $ add_point(KCT.BRO)
 
                 scene v15s40_1a
                 with dissolve
@@ -297,6 +298,7 @@ label v15s40:
                     with dissolve
 
             "It's not a good idea":
+                $ add_point(KCT.BOYFRIEND)
 
                 scene v15s40_1a
                 with dissolve

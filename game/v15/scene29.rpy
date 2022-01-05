@@ -60,6 +60,7 @@ label v15s29:
 
         menu:
             "Don't Sext Emily":
+                $ add_point(KCT.BOYFRIEND)
 
                 $ emily.addReply("Not really in the mood... I'm sorry", func=None)
                 $ emily.newMessage("Oh, okay. No worries. I'll talk to you soon, I miss you <3", queue=False)
@@ -69,6 +70,8 @@ label v15s29:
                 with dissolve
 
             "Sext Emily":
+                $ add_point(KCT.TROUBLEMAKER)
+                $ add_point(KCT.BRO)
 
                 scene v15s29_4
                 with dissolve

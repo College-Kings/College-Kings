@@ -35,6 +35,7 @@ label v15s20:
     if chloegf:
         menu:
             "Ask for a kiss.":
+                $ add_point(KCT.BOYFRIEND)
                 u "I know you're super busy, but can your boyfriend get a kiss first? *Chuckles*"
 
                 scene v15s20_5a # FPP. Same as v15s20_5, Chloe slight smile, mouth open.
@@ -46,6 +47,7 @@ label v15s20:
                 with dissolve
 
             "Say nothing.":
+
                 u "(I was expecting a hello kiss, but I'll keep quiet about it... I don't want to throw her off her game.)"
 
     if mr_lee_meeting: # Placeholder if MC chose to meet with Mr. Lee.
@@ -242,6 +244,7 @@ label v15s20:
 
         menu:
             "Take the notes.":
+                $ add_point(KCT.TROUBLEMAKER)
                 $ v15_took_notes = True
                 u "Yeah, we better take them. As long as we aren't staring at it the whole time, I think it's helpful to refer to."
 
@@ -256,6 +259,7 @@ label v15s20:
                 u "Got it."
 
             "Don't take the notes.":
+                $ add_point(KCT.BOYFRIEND)
                 u "Nah, I don't want to risk pissing anyone off. Besides, I remember it all anyway. You can put them away."
 
                 scene v15s20_5a

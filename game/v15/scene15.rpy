@@ -20,10 +20,12 @@ label v15s15:
 
     menu:
         "Be polite":
+            $ add_point(KCT.TROUBLEMAKER)
             
             u "Sounds like I'm getting a three-course meal. *Chuckles* I'm looking forward to it."
 
         "Be impatient":
+            $ add_point(KCT.BRO)
             
             u "Okay, but hurry. I'm actually starting to starve..."
 
@@ -105,6 +107,7 @@ label v15s15:
 
     menu:
         "What the fuck?":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s15_9a # FPP. MC standing in front of Ms. Rose, Ms. Rose has her boobs covered in honey, shocked, mouth closed
             with dissolve
 
@@ -136,6 +139,7 @@ label v15s15:
             ro "[name]! Wait!"
 
         "Lick the honey":
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "(Don't mind if I do...)"
 
@@ -236,6 +240,7 @@ label v15s15:
 
             menu:
                 "Spank her":
+                    $ add_point(KCT.BRO)
                     scene v15s15_16a # TPP. MC fucking Ms. Rose from behind, she has her mouth closed, MC mouth open (MC not in max penetration, this is to make it look like there is movement, as if he were thrusting)
                     with dissolve
 
@@ -266,6 +271,7 @@ label v15s15:
                     ro "*Moans* Fuck... Yes, [name]..."
 
                 "Degrade her":
+                    $ add_point(KCT.TROUBLEMAKER)
                     scene v15s15_18 # TPP. MC fucking Ms. Rose from behind (different camera angle than v15s15_16), MC, mouth open, slightly angry, Ms. Rose mouth closed, in max penetration
                     with dissolve
 
@@ -460,10 +466,13 @@ label v15s15:
 
             menu:
                 "Compliment":
+                    $ add_point(KCT.TROUBLEMAKER)
+                    $ add_point(KCT.BRO)
                     
                     u "I enjoyed it a lot more than I thought I would, actually. It might just be my new favorite meal. *Chuckles*"
 
                 "Still angry":
+                    $ add_point(KCT.BOYFRIEND)
                     
                     u "It was a good start, but I'm still not entirely happy with you."
 

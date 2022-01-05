@@ -252,6 +252,7 @@ label v15s49:
 
     menu:
         "Antagonize Tom.":
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "The more you talk, the bigger your forehead gets. Or should we just go ahead and start saying fivehead?"
 
@@ -261,6 +262,7 @@ label v15s49:
             to "Ha. Keep talking, fresh meat."
 
         "Try to calm Tom.":
+            $ add_point(KCT.BOYFRIEND)
 
             u "We don't have to do this, you know. We can just forget about it and go home."
 

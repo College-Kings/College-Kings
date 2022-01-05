@@ -1854,6 +1854,7 @@ label v15s33:
 
         menu:
             "Hopefully.":
+                $ add_point(KCT.TROUBLEMAKER)
                 u "I mean, hopefully."
 
                 scene v15s33_57a
@@ -1874,6 +1875,7 @@ label v15s33:
                 pause 
 
             "It'll be us.":
+                $ add_point(KCT.BOYFRIEND)
                 u "One day it'll be us."
 
                 if aubrey_friend:
@@ -1996,6 +1998,7 @@ label v15s33:
 
         menu:
             "Stay silent.":
+                $ add_point(KCT.BRO)
                 u "(I don't feel good about talking to her right now...) *Sighs*"
 
                 scene v15s33_57e
@@ -2003,6 +2006,7 @@ label v15s33:
 
                 na "I'll take that as a no. *Laughs*"
             "Agree.":
+                $ add_point(KCT.BOYFRIEND)
                 u "Yeah, it's supposed to be the best day of your life. Right?"
 
                 scene v15s33_57e
@@ -2167,6 +2171,7 @@ label v15s33:
 
     menu:
         "Stay out of it.":
+            $ add_point(KCT.BRO)
             
             u "(It's probably best if I don't get involved. *Sighs* That's so fucked.)"
 
@@ -2186,6 +2191,7 @@ label v15s33:
             with dissolve 
 
         "Take the photo.":
+            $ add_point(KCT.TROUBLEMAKER)
             $ v15s33_take_photo = True
 
             u "*Scoffs*"
@@ -2380,6 +2386,7 @@ label v15s33:
 
         menu:
             "Science Joke.":
+                $ add_point(KCT.BOYFRIEND)
                 u "Did I tell you about the book I read on anti-gravity?"
 
                 scene v15s33_75e # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey teary eyed, Aubrey slight smile, mouth open.
@@ -2395,6 +2402,7 @@ label v15s33:
                 scene v15s33_75f # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, rolling her eyes.
                 with dissolve 
             "Monkey Joke.":
+                $ add_point(KCT.BRO)
                 scene v15s33_75e
                 with dissolve
 

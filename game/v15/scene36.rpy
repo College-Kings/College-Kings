@@ -250,6 +250,7 @@ label v15s36:
 
         menu:
             "I'd like that.":
+                $ add_point(KCT.BRO)
 
                 u "Honestly, I'd really like that... I feel the same way."
 
@@ -369,6 +370,7 @@ label v15s36:
                     with dissolve
 
             "It's not a good idea.":
+                $ add_point(KCT.BOYFRIEND)
                 $ v15s36_not_good_idea = True
 
                 scene v15s36_5a

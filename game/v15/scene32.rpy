@@ -23,12 +23,14 @@ label v15s32:  #32) MC picks up Aubrey at Chick's house
         
     menu: # simple approach v. Be her Romeo
         "Simple Approach": # -if The simple approach
+        $ add_point(KCT.BRO)
             scene v15s32_1a
             with dissolve
             
             u "(I won't overthink it. I'll just knock on the door like a regular person.)"
 
         "Be her Romeo": # -if Be her Romeo
+        $ add_point(KCT.BOYFRIEND)
             # -MC walks around the back of the house, picking up some random pebbles en route. Then he looks up at two windows. One window has vines creeping up to it, which is Aubrey's window-
             scene v15s32_2     # TPP. MC smiling, mouth closed, walking left-to-right; front door in background) [Chick's house front yard-exterior].
             with dissolve
@@ -57,6 +59,7 @@ label v15s32:  #32) MC picks up Aubrey at Chick's house
 
             menu:  # Left window v Right window
                 "Left window": # -if Left window
+                $ add_point(KCT.BRO)
                     # -MC throws a pebble at the left window. It opens and Chloe looks out -
                     scene v15s32_4c    # FPP. MC grabbing a pebble on the ground [Chick's house back yard-exterior].
                     with dissolve
@@ -152,6 +155,7 @@ label v15s32:  #32) MC picks up Aubrey at Chick's house
                 jump v15s32_right_window # -transition to if right window
 
                 "Right window": # -if Right window (CORRECT WINDOW)
+                $ add_point(KCT.BOYFRIEND)
                 label v15s32_right_window:
 
                     scene v15s32_4c

@@ -27,6 +27,7 @@ label v15s4:
     menu:
         "Offer to help":
             $ AutumnLunchBreak = True
+            $ add_point(KCT.BOYFRIEND)
             scene v15s4_3 # FPP. MC looking at Autumn. The boxes she is carrying obscuring her face from being seen.
             with dissolve
 
@@ -95,6 +96,7 @@ label v15s4:
 
             menu:
                 "You think you're funny?":
+                    $ add_point(KCT.BRO)
                     scene v15s4_9a # FPP. Same as v15s4_9, Autumn slight smile, mouth closed.
                     with dissolve
 
@@ -111,6 +113,7 @@ label v15s4:
                     u "*Laughs*"
 
                 "I want one":
+                    $ add_point(KCT.BOYFRIEND)
                     $ AutumnFreeMug = True
                     scene v15s4_9a
                     with dissolve
@@ -145,6 +148,7 @@ label v15s4:
                     au "Haha, I'll give you a mug at the re-opening. Promise."
 
         "Say hello":
+            $ add_point(KCT.BRO)
             scene v15s4_2
             with dissolve    
 
@@ -186,6 +190,7 @@ label v15s4:
 
             menu:
                 "I'm sorry":
+                    $ add_point(KCT.BOYFRIEND)
                     $ AutumnLunchBreak = True
                     scene v15s4_9d # FPP. Same as v15s4_9c, Autumn frustrated face, mouth closed.
                     with dissolve
@@ -213,6 +218,8 @@ label v15s4:
                     au "This has nothing to do with you. *Chuckles* Thanks for being here."
                     
                 "Just breathe":
+                    $ add_point(KCT.TROUBLEMAKER)
+                    $ add_point(KCT.BRO)
                     scene v15s4_9d
                     with dissolve
 
@@ -308,6 +315,7 @@ label v15s4:
 
     menu:
         "Agree":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s4_13a # FPP. Same as v15s4_13, Autumn slight smile, mouth closed.
             with dissolve
 
@@ -360,6 +368,7 @@ label v15s4:
 
     menu:
         "Good luck":
+            $ add_point(KCT.BRO)
             scene v15s4_13a
             with dissolve
 
@@ -384,6 +393,7 @@ label v15s4:
             with dissolve
 
         "We will":
+            $ add_point(KCT.BOYFRIEND)
             $ mc.quirks["animal_lover"] = True
             scene v15s4_13a
             with dissolve
@@ -494,6 +504,7 @@ label v15s4:
 
     menu:
         "No, don't change it":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s4_12a
             with dissolve
 
@@ -535,6 +546,7 @@ label v15s4:
             u "Bye, Blue!"
 
         "Yeah, lets change it":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v15s4_12a
             with dissolve
 
@@ -609,6 +621,7 @@ label v15s4:
 
     menu:
         "Make a joke":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s4_24 # FPP. MC looking up at Autumn, Autumn not looking at MC she conversates as she is putting up the banner, Autumn slight smile, mouth closed.
             with dissolve
 
@@ -640,6 +653,8 @@ label v15s4:
             au "*Laughs* You owe me for having to listen to that."
 
         "Look at her ass":
+            $ add_point(KCT.TROUBLEMAKER)
+            $ add_point(KCT.BRO)
             $ AutumnLunchBreak = False
             scene v15s4_24
             with dissolve
@@ -814,6 +829,7 @@ label v15s4:
 
     menu:
         "Pop a balloon":
+            $ add_point(KCT.TROUBLEMAKER)
             $ mc.quirks["prankster"] = True
             scene v15s4_40 # FPP. MC behind Autumn, holding a tack/pen/scissors(whatever we have available) and a balloon by Autumn's ear, Autumn unaware with her back turned.
             with dissolve
@@ -860,42 +876,43 @@ label v15s4:
             au "*Laughs* You're so annoying."
             
         "Don't pop a balloon":
-                u "(Not worth the chance of getting accidentally punched in the face...)"
+            $ add_point(KCT.BOYFRIEND)
+            u "(Not worth the chance of getting accidentally punched in the face...)"
 
-                scene v15s4_41 # TPP. Show MC with his back turned to Autumn looking at the balloons on the floor, both slight smile, mouth open.
-                with dissolve
+            scene v15s4_41 # TPP. Show MC with his back turned to Autumn looking at the balloons on the floor, both slight smile, mouth open.
+            with dissolve
 
-                pause 0.75
+            pause 0.75
 
-                scene v15s4_41a # TPP. Show Autumn popping a balloon next to MC's ear, Autumn slight smile, mouth closed, MC scared, mouth open.
-                with dissolve
+            scene v15s4_41a # TPP. Show Autumn popping a balloon next to MC's ear, Autumn slight smile, mouth closed, MC scared, mouth open.
+            with dissolve
 
-                pause 0.75
+            pause 0.75
 
-                scene v15s4_40d
-                with dissolve
+            scene v15s4_40d
+            with dissolve
 
-                u "Agh! What the-"
+            u "Agh! What the-"
 
-                scene v15s4_40c
-                with dissolve
+            scene v15s4_40c
+            with dissolve
 
-                au "Haha! That was the saddest scream I've ever heard! *Laughs*"
+            au "Haha! That was the saddest scream I've ever heard! *Laughs*"
 
-                scene v15s4_40d
-                with dissolve
+            scene v15s4_40d
+            with dissolve
 
-                u "You... Little shit. *Chuckles* You're dead to me."
+            u "You... Little shit. *Chuckles* You're dead to me."
 
-                scene v15s4_40c
-                with dissolve
+            scene v15s4_40c
+            with dissolve
 
-                au "That's fine, I can die happily after witnessing that. Haha! Phew..."
+            au "That's fine, I can die happily after witnessing that. Haha! Phew..."
 
-                scene v15s4_40d
-                with dissolve
+            scene v15s4_40d
+            with dissolve
 
-                u "Get back to work."
+            u "Get back to work."
 
     scene v15s4_40c
     with dissolve
@@ -1126,6 +1143,7 @@ label v15s4:
 
     menu:
         "Threaten Oscar's owner":
+            $ add_point(KCT.TROUBLEMAKER)
             $ mc.quirks["hardass"] = True
             scene v15s4_43g # FPP. Autumn looking at MC, Autumn upset, mouth closed.
             with dissolve
@@ -1158,6 +1176,7 @@ label v15s4:
             au "Hopefully we can find the perfect owner for him at the re-opening."
 
         "Comfort Oscar":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s4_48
             with dissolve
 
@@ -1328,6 +1347,7 @@ label v15s4:
 
         menu:
             "Smoke weed":
+                $ add_point(KCT.TROUBLEMAKER)
                 $ smoked_with_autumn = True
                 scene v15s4_59f
                 with dissolve
@@ -1370,6 +1390,7 @@ label v15s4:
                 u "*Inhaling* This is a nice bonding experience... Haha."
 
             "Don't smoke weed":
+                $ add_point(KCT.BOYFRIEND)
                 scene v15s4_59f
                 with dissolve
 

@@ -92,12 +92,14 @@ label v15s9:
 
     menu:
         "As friends":
+            $ add_point(KCT.BRO)
             scene v15s9_3
             with dissolve
 
             u "It's just as friends, right? Or do I have to pretend to be your boyfriend? *Laughs*"
 
             if v13s48_canoeing_as_date:
+                $ add_point(KCT.TROUBLEMAKER)
                 $ aubrey_tamed = False
                 $ aubrey_fwb = False
                 $ aubrey_friend = True
@@ -123,6 +125,7 @@ label v15s9:
                 au "Ha..."
 
             else:
+                $ add_point(KCT.BRO)
                 $ aubrey_fwb = True
 
                 scene v15s9_3f # FPP. same as v15s9_3d Aubrey puts a hand to her chest in relief, head tilted slightly upward and looking away, facial expression is that of relief, slight smile, mouth open
@@ -151,12 +154,14 @@ label v15s9:
                 au "Thank you so much, [name]."
 
         "As your date":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s9_3b
             with dissolve
 
             u "I'd like to come as your date if that's okay."
 
             if v13s48_canoeing_as_date:
+                $ add_point(KCT.BOYFRIEND)
                 $ aubrey_tamed = True
 
                 scene v15s9_3g # FPP. same as v15s9_3b Aubrey slightly blushes, head slightly tilted down, looking at mc, full smile, mouth closed
@@ -223,6 +228,7 @@ label v15s9:
                 with dissolve
 
             else:
+                $ add_point(KCT.BRO)
                 $ aubrey_fwb = True
 
                 scene v15s9_3m # FPP. same as v15s9_3f Aubreys head is tilted slightly to the side, looking at Mc like a lost puppy, slight smile mouth closed with a slightly curled bottom lip

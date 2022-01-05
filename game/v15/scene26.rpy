@@ -353,6 +353,7 @@ label v15s26:
 
     menu:
         "Yeah, let's watch":
+            $ add_point(KCT.BOYFRIEND)
             
             u "Yeah, I don't have anything else to do. We can watch."
 
@@ -364,6 +365,7 @@ label v15s26:
 
         
         "Can we skip it?":
+            $ add_point(KCT.BRO)
 
             u "Can we just... not watch it?"
 
@@ -796,7 +798,8 @@ label v15s26:
         with dissolve
 
         menu:
-            "Side with Riley, pro-polygamy":   
+            "Side with Riley, pro-polygamy":
+                $ add_point(KCT.TROUBLEMAKER)   
                 $ aubrey_fwb = True
                 $ riley_loyal = True
 
@@ -849,7 +852,7 @@ label v15s26:
 
 
             "Side with Aubrey, pro-monogamy": # -event2 Side with Aubrey, Pro-Monogamy (No variable change)
-                $ addPoint ("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "I'm with Aubrey on this one..."
 
@@ -889,6 +892,7 @@ label v15s26:
 
                 menu:
                     "Polygamy isn't healthy": # -event1 Polygamy isn't healthy (RileyUpset)
+                        $ add_point(KCT.BRO)
                         $ v15_ph_riley_upset = True
 
                         u "Honestly, it doesn't seem healthy."
@@ -955,7 +959,7 @@ label v15s26:
 
 
                     "I only want one partner": # -event2 I only want one partner
-                        $ addPoint ("bf")
+                        $ add_point(KCT.BOYFRIEND)
 
                         u "Basically, exactly what Aubrey said. I just couldn't commit like that to more than one person."
 
@@ -1025,6 +1029,7 @@ label v15s26:
                 $ aubrey_fwb = True
                 $ aubrey_tamed = False
                 $ riley_loyal = True
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "I think you're onto something here, Riley..."
 
@@ -1072,7 +1077,7 @@ label v15s26:
 
 
             "Side with Aubrey, pro-monogamy": # -if Side with Aubrey, Pro-Monogamy
-                $ addPoint ("bf")
+                $ add_point(KCT.BOYFRIEND)
 
                 u "I agree with Aubrey."
 

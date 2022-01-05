@@ -73,6 +73,7 @@ label v15s18c_riley:
 
         menu:
             "Sounds great":
+                $ add_point(KCT.BOYFRIEND)
 
                 u "Seriously? That would be great, haha."
 
@@ -89,6 +90,7 @@ label v15s18c_riley:
                     ri "Yeah, really. I'd be down whenever."
 
             "You can't shop for yourself":
+                $ add_point(KCT.BRO)
 
                 u "What? You can't shop for yourself, haha. That ruins the surprise."
 
@@ -625,6 +627,7 @@ label v15s18c_imre_aubrey:
 
         menu:
             "Don't mention it":
+                $ add_point(KCT.BOYFRIEND)
 
                 u "(Not feeling it...)"
 
@@ -680,6 +683,8 @@ label v15s18c_imre_aubrey:
                 call screen v15s18a_upstairsroom
 
             "Ask for help":
+                $ add_point(KCT.TROUBLEMAKER)
+                $ add_point(KCT.BRO)
 
                 u "So, I'm just curious..."
 
@@ -849,6 +854,7 @@ label v15s18c_imre_aubrey:
 
     menu:
         "Keep her quiet":
+            $ add_point(KCT.BOYFRIEND)
             scene v15aubfin2 # IGNORE AS ANIMATION
             with dissolve
             pause  
@@ -864,6 +870,7 @@ label v15s18c_imre_aubrey:
             au "*Moans* N-no."
     
         "Let her be loud":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v15aubfin2 
             with dissolve
             pause
@@ -1074,6 +1081,8 @@ label v15s18c_imre_aubrey:
 
     menu:
         "Steal the panties":
+            $ add_point(KCT.TROUBLEMAKER)
+            $ add_point(KCT.BRO)
 
             u "(Sorry, Autumn. I'm a man in need.)"
 
@@ -1083,6 +1092,7 @@ label v15s18c_imre_aubrey:
             u "(Double check.)"
 
         "Don't steal the panties":
+            $ add_point(KCT.BOYFRIEND)
             if lauren.relationship == Relationship.GIRLFRIEND:
 
                 u "(There's no way in hell I'm taking my girlfriend's sister's underwear. Not happening.)"
@@ -1191,6 +1201,7 @@ label v15s18c_ryan:
 
     menu:
         "Don't take it":
+            $ add_point(KCT.BRO)
             scene v15s18c_ry_2
             with dissolve
 
@@ -1199,6 +1210,7 @@ label v15s18c_ryan:
             u "(He's probably had that thing for a few years, it'd be like stealing his best friend. *Laughs*)"
 
         "Take the condom":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v15s18c_ry_4 # TPP. Show MC slowly grabbing the condom out of Ryan's pocket (it's fully in the poocket still)
             with dissolve
 
@@ -1293,6 +1305,8 @@ label v15s18c_lauren:
     menu:
         "Balcony is better":
 
+            $ add_point(KCT.BOYFRIEND)
+
             u "Eh, I like the balcony a lot better. I'd be out here all the time if I were you, haha."
 
             scene v15s18c_la_3a
@@ -1301,6 +1315,8 @@ label v15s18c_lauren:
             la "*Chuckles* I am out here a lot, it's just relaxing."
 
         "Bigger the better":
+
+            $ add_point(KCT.BRO)
 
             u "Yeah... Having a small room kind of sucks, the bigger the better in my opinion."
 
@@ -1614,6 +1630,7 @@ label v15s18c_autumn_amber:
     if not v15s18a_showlist_penelope_autumn:
         menu:
             "Don't mention the list":
+                $ add_point(KCT.BOYFRIEND)
 
                 u "(Eh, I don't want to get Autumn involved in this...)"
 
@@ -1692,6 +1709,7 @@ label v15s18c_autumn_amber:
                 call screen v15s18a_upstairsroom
 
             "Mention the list":
+                $ add_point(KCT.TROUBLEMAKER)
 
                 u "Well, you might have already heard, but I have this list of challenges that I've been working on."
 
@@ -1728,6 +1746,7 @@ label v15s18c_autumn_amber:
 
     menu:
         "Nevermind":
+            $ add_point(KCT.BOYFRIEND)
 
             u "(I can't ask Autumn to make out with me! What am I thinking?)"
 
@@ -1768,6 +1787,7 @@ label v15s18c_autumn_amber:
             call screen v15s18a_upstairsroom
 
         "Let's make out":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v15s18c_auam_5
             with dissolve
 
@@ -2107,12 +2127,14 @@ label v15s18c_chris_penelope:
 
     menu:
         "Don't interrupt":
+            $ add_point(KCT.BRO)
 
             u "(Sorry, Penelope. I don't want anything to do with sad boy Chris, I'm outta here!)"
 
             call screen v15s18a_upstairsroom
 
         "Save Penelope":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s18c_chpe_2 # TPP. Show MC walking up to Chris and Penelope, MC waving at Chris, MC mouth open, slight smile, Penelope slight smile, Chris slight smile, both looking at MC, mouths closed
             with dissolve
 

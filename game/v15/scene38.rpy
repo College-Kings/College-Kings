@@ -81,7 +81,7 @@ label v15s38:
     u "Hey! I see you're all already in the party mood."
 
 
-    if v15_s12_lindsey_pb_inviteSebastian = False: # If Grayson chosen
+    if v15_s12_lindsey_pb_inviteSebastian == False: # If Grayson chosen
         if v15s12_lindsey_pb_fakeId: # VERIFY # -if alcohol and Grayson
             scene v15s38_6a # FPP Same angle as 6, Grayson with a slight smile, holding a drink, looking at MC with mouth open
             with dissolve
@@ -238,7 +238,7 @@ label v15s38:
 
 
     # -Regardless-
-    if v15_s12_lindsey_pb_inviteSebastian = False: # -if Grayson
+    if v15_s12_lindsey_pb_inviteSebastian == False: # -if Grayson
         scene v15s38_6c # FPP Same angle as 6, Grayson looking at Autumn, slight smile, mouth open
         with dissolve
 
@@ -329,6 +329,7 @@ label v15s38:
 
         menu:
             "Stay quiet": # -if Stay quiet
+                $ add_point(KCT.BRO)
                 scene v15s38_6f # FPP Same angle as 6, Grayson looking at Autumn, neutral expression, mouth closed
                 with dissolve
 
@@ -336,6 +337,7 @@ label v15s38:
 
 
             "Change the subject": # -if Change the subject
+                $ add_point(KCT.BOYFRIEND)
                 scene v15s38_6f
                 with dissolve
 
@@ -378,6 +380,7 @@ label v15s38:
 
         menu:
             "Don't raise them": # -if Don't raise them
+                $ add_point(KCT.BOYFRIEND)
                 scene v15s38_10a # TPP Same wide shot of everyone as 10, everyone looking at Grayson. Grayson with annoyed expression, mouth open
                 with dissolve
 
@@ -385,6 +388,7 @@ label v15s38:
 
 
             "Raise your hands": # -if Raise your hands
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v15s38_11 # TPP Show MC holding both of his hands in the air, smiling with mouth closed
                 with dissolve
 
@@ -482,6 +486,7 @@ label v15s38:
 
         menu:
             "Be encouraging": # -if Be encouraging
+                $ add_point(KCT.BOYFRIEND)
                 scene v15s38_8a
                 with dissolve
 
@@ -507,6 +512,7 @@ label v15s38:
             
 
             "Make a joke": # -if Make a joke
+                $ add_point(KCT.BRO)
                 scene v15s38_8a
                 with dissolve
 
@@ -631,7 +637,7 @@ label v15s38:
     au "That's got to be frustrating, haha."
 
 
-    if v15_s12_lindsey_pb_inviteSebastian = False: # -if Grayson
+    if v15_s12_lindsey_pb_inviteSebastian == False: # -if Grayson
         scene v15s38_6h
         with dissolve
 
@@ -755,7 +761,7 @@ label v15s38:
 
 
     # -depending on Grayson or Sebastian, show an image of their confused reaction to Autumn's confession-
-    if v15_s12_lindsey_pb_inviteSebastian = False: # if Grayson
+    if v15_s12_lindsey_pb_inviteSebastian == False: # if Grayson
         scene v15s38_6k # FPP Same angle as 6, Grayson looking at Autumn, confused, mouth closed
         with dissolve
 
@@ -793,7 +799,7 @@ label v15s38:
     aut "Haha, I'll just have to take your word for it."
 
 
-    if v15_s12_lindsey_pb_inviteSebastian = False: # -if Grayson
+    if v15_s12_lindsey_pb_inviteSebastian == False: # -if Grayson
         scene v15s38_6c
         with dissolve
 
@@ -884,6 +890,7 @@ label v15s38:
 
     menu:
         "Stop the questioning": # -if Stop the questioning (and helped Autumn with boxes at dog shelter and/or went to the protest with her in Act1, creates AutumnTrust)
+            $ add_point(KCT.BOYFRIEND)
             if protest: # Went to protest
                 $ AutumnTrust = True
             
@@ -925,7 +932,7 @@ label v15s38:
 
 
         "Ask a question": # -if Ask a question
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
 
             u "So, who would you try it out with? A guy or a girl?"
@@ -943,7 +950,7 @@ label v15s38:
             au "Ooh, a girl might actually be better for your first time..."
 
 
-            if v15_s12_lindsey_pb_inviteSebastian = False: # -if Grayson
+            if v15_s12_lindsey_pb_inviteSebastian == False: # -if Grayson
                 scene v15s38_6d
                 with dissolve
 
@@ -989,7 +996,7 @@ label v15s38:
 
 
     # -Regardless-
-    if v15_s12_lindsey_pb_inviteSebastian = False: # -if Grayson
+    if v15_s12_lindsey_pb_inviteSebastian == False: # -if Grayson
         scene v15s38_6c
         with dissolve
 
@@ -1165,7 +1172,7 @@ label v15s38:
     aut "Oh, good!"
 
 
-    if v15_s12_lindsey_pb_inviteSebastian = False: # -if Grayson
+    if v15_s12_lindsey_pb_inviteSebastian == False: # -if Grayson
         scene v15s38_6e
         with dissolve
 
@@ -1181,7 +1188,7 @@ label v15s38:
 
     # -Regardless-
     # -would be cute to end with a final cheers from the entire group, they're smiling, and finish off their drinks
-    if v15_s12_lindsey_pb_inviteSebastian = False: # if Grayson
+    if v15_s12_lindsey_pb_inviteSebastian == False: # if Grayson
         scene v15s38_10d # TPP Same wide shot of everyone as 10, Everyone holding their drinks in the air in a "cheers" gesture
         with dissolve
 

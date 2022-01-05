@@ -218,6 +218,7 @@ label v15s48a_boobs:
 
     menu:
         "Massage.":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s48abo_2 # TPP. Show MC massaging Nora's boobs, MC slight smile, mouth closed, Nora flirty, mouth open.
             with dissolve 
 
@@ -246,6 +247,7 @@ label v15s48a_boobs:
             no "You're doing a really good job so far... *Giggles*"
 
         "Suck.":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v15s48abo_5 # TPP. MC sucking on Nora's right boob, Nora's face in shot, Nora flirty, mouth open.
             with dissolve
 
@@ -302,6 +304,7 @@ label v15s48a_feet
 
     menu:
         "Massage.":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s48afe_2 # TPP. Show MC massaing Nora's feet, Nora flirty, mouth open.
             with dissolve
 
@@ -326,6 +329,7 @@ label v15s48a_feet
 
             u "I can't wait to worship every inch of it."
         "Suck.":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v15s48afe_5 # TPP. Show MC sucking on Nora's big toe, Nora flirty, mouth open.
             with dissolve 
 
@@ -371,6 +375,7 @@ label v15s48a_vagina
 
     menu:
         "Tease with kissing":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s48ava_2 # TPP. Show MC kissing Nora's inner thigh, Nora flirty, mouth open.
             with dissolve
 
@@ -399,6 +404,7 @@ label v15s48a_vagina
             no "Just fuck me already."
 
         "Finger":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v15s48ava_4 # FPP. MC looking at Nora his two fingers barely in her vagina, Nora flirty, mouth open.
             with dissolve
 
@@ -550,6 +556,7 @@ label v15s48a_end:
 
     menu:
         "You deserve it.":
+            $ add_point(KCT.BOYFRIEND)
             u "You do deserve the best, you know."
 
             scene v15s48aend_4a # FPP. MC looking up at Nora, Nora looking down at MC, Nora flirty, mouth open.
@@ -558,6 +565,7 @@ label v15s48a_end:
             no "Ha, I guess..."
 
         "Get use to it.":
+            $ add_point(KCT.BRO)
             u "Good, get used to it."
 
             scene v15s48aend_4a
@@ -756,6 +764,8 @@ label v15s48a_end:
 # -Timed Event
     menu:
         "Cum inside Nora.":
+            $ add_point(KCT.TROUBLEMAKER)
+            $ add_point(KCT.BOYFRIEND)
             scene v15s48aend_11a
             with vpunch
 
@@ -767,6 +777,7 @@ label v15s48a_end:
             no "I'm- I... *Moans* Yes, [name]..."
 
         "Pull out.":
+            $ add_point(KCT.BRO)
  
             u "(No. Fucking. Thank you,)"
 

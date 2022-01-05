@@ -187,6 +187,7 @@ label v15s7:
                         u "(Good to know...)"
 
                 "Why your diary?":
+                    $ add_point(KCT.BOYFRIEND)
                     scene v15s7_1b
                     with dissolve
 
@@ -290,6 +291,7 @@ label v15s7:
                     cl "*Sighs* Okay..."
 
                 "Empathize":
+                    $ add_point(KCT.BRO)
                     $ chloeSus += 1
                     $ v15s7_chloe_empathize = True
 

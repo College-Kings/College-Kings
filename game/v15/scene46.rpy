@@ -102,6 +102,7 @@ label v15s46:
 
         menu:
             "Nope, no idea.":
+                $ add_point(KCT.BRO)
                 u "Nope. It's like you're talking in random words."
 
                 scene v15s46_3
@@ -139,6 +140,7 @@ label v15s46:
 
                 am "Yeah! It makes sense because that's the answer, haha!"
             "Yeah, of course.":
+                $ add_point(KCT.BOYFRIEND)
 
                 u "Yeah, of course!"
 
@@ -174,6 +176,7 @@ label v15s46:
 
                 menu:
                     "To ask for her advice.":
+                        $ add_point(KCT.BRO)
 
                         u "To ask her for advice, obviously."
 
@@ -197,6 +200,7 @@ label v15s46:
                         am "Haha, okay, Sherlock."
 
                     "To pick up something.":
+                        $ add_point(KCT.TROUBLEMAKER)
 
                         u "Because she needed to pick up something?"
 
@@ -212,6 +216,7 @@ label v15s46:
 
                         menu:
                             "Food supplies.":
+                                $ add_point(KCT.BRO)
 
                                 u "Well, to pick up some food for the cabin."
 
@@ -236,6 +241,7 @@ label v15s46:
                                 u "Oh- Yeah, of course. Haha."
 
                             "The key.":
+                                $ add_point(KCT.BOYFRIEND)
 
                                 u "The key for the cabin."
 

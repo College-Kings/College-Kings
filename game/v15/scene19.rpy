@@ -102,6 +102,7 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
     menu: # -MC chooses event1 or event2
         $ v15s19_local_mc_ends_in_livingroom = True
         "Help Clean up": # -if Help clean
+        $ add_point(KCT.BOYFRIEND)
 
         scene v15s19_5   # TPP. MC, smiling mouth open collects trash from the counter opposite the fridge (by the stove) while Lauren smiling mouth closed continues throwing away trash from counter by the sink, which is slightly cleaner than the preivous scene [Deer House Kitchen].
         with dissolve
@@ -195,8 +196,10 @@ label v15s19: ### ERROR: 19) Helping Lauren Clean Up
 
 
     "Don't Help Clean up": # -if Don't help clean
+    $ add_point(KCT.BRO)
 
         scene v15s19_4c
+        with dissolve
 
         u "Yeah, everyone did. It was a great party."
         

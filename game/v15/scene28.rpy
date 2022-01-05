@@ -525,7 +525,7 @@ label v15s28:
     scene v15s28_7 # TPP Show MC at the bar, just the edge of Samantha's bar stool visible next to him, bartender behind the bar looking at MC, mouth open
     with dissolve
 
-    barworker "What can I get you?:
+    barworker "What can I get you?"
 
 
     scene v15s28_8 # FPP MC's view of the barworker behind the bar, neutral expression, mouth closed
@@ -596,7 +596,7 @@ label v15s28:
 
         menu:
             "Say nothing":
-                $ addPoint("bro")
+                $ add_point(KCT.BRO)
 
                 scene v15s28_9a
                 with dissolve
@@ -605,6 +605,7 @@ label v15s28:
 
             
             "Ask why":
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v15s28_9a
                 with dissolve
 
@@ -1167,7 +1168,7 @@ label v15s28:
 
         menu:
             "Kiss Jenny":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene v15s28_13 # TPP MC leans across the table and kisses Jenny on the lips, Penelope (if visible) leaning away from them with mouth open
                 with dissolve
@@ -1206,6 +1207,7 @@ label v15s28:
 
 
             "Don't kiss Jenny":
+                $ add_point(KCT.BOYFRIEND)
                 scene v15s28_14 # FPP MC looks down at all the empty shot glasses on the table, maybe the image is a bit fuzzy from the drinking
                 with dissolve
 
@@ -1219,7 +1221,7 @@ label v15s28:
 
         menu:
             "Kiss Penelope":
-                $ addPoint("tm")
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene v15s28_16 # TPP MC leans across the table and kisses Penelope on the lips. Jenny (if visible) smiling at them, mouth open
                 with dissolve
@@ -1276,6 +1278,7 @@ label v15s28:
 
 
             "Don't kiss Penelope": # -if Don't kiss Penelope
+                $ add_point(KCT.BOYFRIEND)
                 scene v15s28_14
                 with dissolve
 
@@ -1499,7 +1502,7 @@ label v15s28:
 
     menu:
         "Sing a silly song":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
                 
             scene v15s28_23b # TPP Same angle as 23, Penelope, MC, and Jenny walking down the street, all a bit drunk, MC in the middle, MC's mouth open, singing loudly
             with dissolve
@@ -1526,6 +1529,7 @@ label v15s28:
 
 
         "Whistle instead":
+            $ add_point(KCT.BRO)
             scene v15s28_23e # TPP Same angle as 23, Penelope, MC, and Jenny walking down the street, all a bit drunk, MC in the middle, MC pursing his lips and whistling
             with dissolve
 

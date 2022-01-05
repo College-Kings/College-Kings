@@ -26,6 +26,7 @@ label v15s44_continue:
 
     menu:
         "Ready to guess":
+            $ add_point(KCT.BRO)
             scene v15s44_3a # FPP. Same as v15s44_3, Amber looking at MC, Amber serious expression, mouth closed
             with dissolve
 
@@ -37,6 +38,7 @@ label v15s44_continue:
             am "Easy there, detective. Anyone can guess, but we need more evidence to be sure."
 
         "Not enough clues":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s44_3a
             with dissolve
 
@@ -129,6 +131,7 @@ label v15s44_continue:
 
     menu:
         "Take the coffee":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s44_3h # FPP. Same as v15s44_3g, Amber holding both coffees in her hand, no phone, looking at MC, slight smile, mouth closed
             with dissolve
 
@@ -145,6 +148,7 @@ label v15s44_continue:
             pause 0.75
 
         "Leave it":
+            $ add_point(KCT.BRO)
             scene v15s44_3h
             with dissolve
 
@@ -333,6 +337,8 @@ label v15s44_continue2:
     menu:
         "No idea":
 
+            $ add_point(KCT.BOYFRIEND)
+
             u "No idea, really. She could be at any of these places."
 
             scene v15s44_3n # FPP. Same as v15s44_3, Amber slight smile, mouth open
@@ -356,6 +362,8 @@ label v15s44_continue2:
             am "Interrogation number two!"
 
         "I think I know":
+
+            $ add_point(KCT.BRO)
 
             u "I think I know where she is."
 

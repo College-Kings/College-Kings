@@ -70,6 +70,7 @@ label v15s42:
 
     menu:
         "Ask about the room.":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v15s42_7a # FPP. Amber standing infront of MC, holding her cup of coffee, slight smile, mouth closed.
             with dissolve
 
@@ -125,6 +126,7 @@ label v15s42:
 
             u "*Laughs* Thank you. So, why are we here?"
         "Let it go.":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s42_7a
             with dissolve
 
@@ -458,6 +460,7 @@ label v15s42:
 
     menu:
         "Grab breakfast.":
+            $ add_point(KCT.BOYFRIEND)
             $ v15s42_grab_breakfast = True
             scene v15s42_13 # TPP. Show MC grabbing a croissant, slight smile, mouth open.
             with dissolve
@@ -469,6 +472,7 @@ label v15s42:
 
             pause 
         "Not hungry.":
+            $ add_point(KCT.BRO)
             scene v15s42_12
             with dissolve
 

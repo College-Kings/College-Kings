@@ -425,6 +425,7 @@ label v15s18a_Ryan:
     
     menu:
         "Gag":
+            $ add_point(KCT.BOYFRIEND)
             $ v15s18a_gag = True
 
             scene v15s18a_ryan_3
@@ -1018,6 +1019,7 @@ label v15s18a_AutumPenelope:
                 u "Let's see how the night goes then I guess, ha."
 
         "Don't show the list":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s18apen_6a
             with dissolve
 
@@ -1569,6 +1571,7 @@ label v15s18a_Riley:
 
 
         "Don't dance.":
+            $ add_point(KCT.BRO)
             scene v15s18ariley_2i
             with dissolve
 
@@ -1632,6 +1635,7 @@ label v15s18a_Riley:
 
     menu:
         "No, its fine.":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s18ariley_2i
             with dissolve
 
@@ -1665,6 +1669,7 @@ label v15s18a_Riley:
             ri "Okay, sure thing."
 
         "Yeah, I do.":
+            $ add_point(KCT.TROUBLEMAKER)
             $ v15s18_partytask += 1
 
             scene v15s18ariley_2i

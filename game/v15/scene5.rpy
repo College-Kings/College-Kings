@@ -222,12 +222,14 @@ label v15s5:
 
                 menu:
                     "Agree":
+                        $ add_point(KCT.TROUBLEMAKER)
                         scene v15s5_4b
                         with dissolve
             
                         u "Yeah, it was amazing. You're not wrong."
 
                     "Disagree":
+                        $ add_point(KCT.BOYFRIEND)
                         scene v15s5_4b
                         with dissolve
 

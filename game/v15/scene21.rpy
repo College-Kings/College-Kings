@@ -1196,6 +1196,7 @@ else: # -if meeting Ms Rose
 
         "Stay quiet":
             $ addpoint v15_meeting += 1
+            $ add_point(KCT.BOYFRIEND)
 
             scene v15s21_13b
             with dissolve
@@ -1580,6 +1581,7 @@ else: # -if meeting Ms Rose
             with dissolve
 
         "Consider it":
+            $ add_point(KCT.BRO)
             $ addpoint v15_meeting += 1
 
             scene v15s21_13b

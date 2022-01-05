@@ -124,6 +124,7 @@ label v15s17:
 
     menu:
         "Get Lauren $50 gift card":
+            $ add_point(KCT.BRO)
             $ v15_lauren_gift = "$50 gift card"
 
             scene v15s17_4
@@ -174,6 +175,7 @@ label v15s17:
             clerk "I'm sure she'll be very happy with it."
 
         "Other gift options":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s17_4
             with dissolve
 
@@ -185,6 +187,7 @@ label v15s17:
             clerk "May I suggest jewelry?"
 
             if laurenrs and AutumnLunchBreak:
+                $ add_point(KCT.BOYFRIEND)
                 scene v15s17_4f # FPP. same as v15s17_4d SC's mouth is closed
                 with dissolve
 
@@ -211,6 +214,7 @@ label v15s17:
                 u "Ha... Good one."
 
             elif v15s9_mad_at_ms_rose:
+                $ add_point(KCT.BRO)
 
                 scene v15s17_4
                 with dissolve
@@ -228,6 +232,7 @@ label v15s17:
                 u "Ms. Rose looked so proud of her new necklace and really seemed to enjoy showing it off to me... among other things..."
 
             if V15_ms_rose_sex:
+                $ add_point(KCT.TROUBLEMAKER)
                 scene v15s17_15 # FPP. A Dreamlike Vision of MsRose fully nude in one of the sexual positions from Version 15 scene 15
                 with dissolve
 
@@ -285,6 +290,7 @@ label v15s17:
                 clerk "Jewelry is never too much, young man. If you buy this for her, she will be your friend forever!"
 
             if laurenrs:
+
                 scene v15s17_8b
                 with dissolve
 
@@ -305,12 +311,14 @@ label v15s17:
 
             menu:
                 "Emerald bracelet":
+                    $ add_point(KCT.BOYFRIEND)
                     scene v15s17_8d # FPP. same as v15s17_8b MC is looking down at the jewlry case and points to the left towards the Emerald bracelet
                     with dissolve
 
                     u "I think this is the best one."
 
                 "Ruby choker necklace":
+                    $ add_point(KCT.TROUBLEMAKER)
                     scene v15s17_8e # FPP. same as v15s17_8b MC is looking down at the jewlry case and points to the right towards the Ruby choker necklace
                     with dissolve
 
@@ -396,6 +404,7 @@ label v15s17:
 
                 menu:
                     "Brown horse, golden mane":
+                        $ add_point(KCT.TROUBLEMAKER)
                         scene v15s17_10c # FPP. same as v15s17_10b MC is looking down at the horse case and points to the left towards the Brown horse, golden mane
                         with dissolve
 
@@ -407,6 +416,7 @@ label v15s17:
                         clerk "Excellent! The checkout is this way."
 
                     "White horse, black mane":
+                        $ add_point(KCT.BOYFRIEND)
                         scene v15s17_10d # FPP. same as v15s17_10b MC is looking down at the horse case and points to the right towards the White horse, black mane
                         with dissolve
 
@@ -449,6 +459,7 @@ label v15s17:
 
                 menu:
                     "Get Lauren $50 gift card":
+                        $ add_point(KCT.TROUBLEMAKER)
                         $ v15_lauren_gift = "$50 gift card"
 
                         scene v15s17_5
@@ -479,6 +490,10 @@ label v15s17:
                         clerk "I'm sure she'll be very happy with it."
 
                     "Jewelry Gift":
+                        if laurenrs:
+                            $ add_point(KCT.BOYFRIEND)
+                        else:
+                            $ add_point(KCT.BRO)
                         scene v15s17_11b # FPP. same as v15s17_11 Close up shot of the Jewlry options
                         with dissolve
 
@@ -510,6 +525,7 @@ label v15s17:
 
                         menu:
                             "Brown horse, golden mane":
+                                $ add_point(KCT.TROUBLEMAKER)
                                 $ v15_lauren_gift = "brown horse, golden mane"
 
                                 scene v15s17_11f # FPP. same as v15s17_11c MC holds up the Brown horse, golden mane
@@ -518,6 +534,7 @@ label v15s17:
                                 u "Definitely this one!"
 
                             "White horse, black mane":
+                                $ add_point(KCT.BOYFRIEND)
                                 $ v15_lauren_gift = "white horse, black mane"
 
                                 scene v15s17_11g # FPP. same as v15s17_11c MC holds up the White horse, black mane
@@ -551,6 +568,7 @@ label v15s17:
 
                 menu:
                     "Get Lauren $50 gift card":
+                        $ add_point(KCT.TROUBLEMAKER)
                         $ v15_lauren_gift = "$50 gift card"
 
                         scene v15s17_5
@@ -581,6 +599,10 @@ label v15s17:
                         clerk "I'm sure she'll be very happy with it."
 
                     "Jewelry Gift":
+                        if laurenrs:
+                            $ add_point(KCT.BOYFRIEND)
+                        else:
+                            $ add_point(KCT.BRO)
                         scene v15s17_11b
                         with dissolve
 
