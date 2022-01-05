@@ -8,13 +8,15 @@ init python:
 
 
 screen chicks_presidency_bar(old_value, new_value):
+    tag animated_value_bar
+
     frame:
         background "#0000"
         foreground "/images/v14/chicks_presidency_race/presidency_bar/background.webp"
         xysize (1138, 238)
         xalign 0.5
 
-        use animated_value_bar(old_value, new_value, 100, "v14_presidency_bar_left", "v14_presidency_bar_right", offset=(0, 25))
+        use animated_value_bar(old_value, new_value, 100, "blue_bar", "yellow_bar", offset=(0, 25), size=(820, 95))
 
         button action Hide("chicks_presidency_bar")
 
