@@ -319,12 +319,6 @@ label v15s38:
         with dissolve
 
         menu:
-            "Don't raise them": # -if Don't raise them
-                scene v15s38_10a # TPP Same wide shot of everyone as 10, everyone looking at Grayson. Grayson with annoyed expression, mouth open
-                with dissolve
-
-                gr "You guys are so fucking boring!"
-
             "Raise your hands": # -if Raise your hands
                 scene v15s38_11 # TPP Show MC holding both of his hands in the air, smiling with mouth closed
                 with dissolve
@@ -370,6 +364,12 @@ label v15s38:
 
                 pause 0.75
             
+            "Don't raise them": # -if Don't raise them
+                scene v15s38_10a # TPP Same wide shot of everyone as 10, everyone looking at Grayson. Grayson with annoyed expression, mouth open
+                with dissolve
+
+                gr "You guys are so fucking boring!"
+
     else: # -if Sebastian
         scene v15s38_8b # FPP Same angle as 8, Sebastian looking at Lindsey, smiling with mouth open
         with dissolve
