@@ -30,6 +30,7 @@ label v15s14:
     menu:
         "Say nothing":
             $ add_point(KCT.BRO)
+            
             u "..."
 
             scene v15s14_5a # FPp. Same as v15s14_5, Ms. Rose, Apologetic expression, mouth open
@@ -39,6 +40,7 @@ label v15s14:
 
         "I'm not happy":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s14_5b # FPP. Same as v15s15_5a, Ms. Rose, Apologetic expression, mouth closed.
             with dissolve
 
@@ -71,6 +73,7 @@ label v15s14:
     menu:
         "Don't drug me":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s14_5b
             with dissolve
             

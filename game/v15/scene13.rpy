@@ -56,6 +56,7 @@ label v15s13:
         menu:
             "Agree with Imre":
                 $ add_point(KCT.BRO)
+                
                 u "Yeah, I know... I'll do better next time."
 
                 scene v15s13_3a
@@ -75,6 +76,7 @@ label v15s13:
 
             "Dismiss Imre":
                 $ add_point(KCT.TROUBLEMAKER)
+                
                 u "Why are you creeping outside my room, Imre? I'm trying to study here."
 
                 scene v15s13_3c
@@ -121,8 +123,8 @@ label v15s13:
         menu:
             "Eat the donut":
                 $ add_point(KCT.TROUBLEMAKER)
-                
                 $ grant_achievement("mmmm_donut")
+                
                 u "(I'll just do an extra gym session this week to even things out.) *Chuckles*"
 
                 scene v15s13_2f # TPP. same as v15s13_2e MC grabs the donut and shoves it in his mouth
@@ -132,6 +134,7 @@ label v15s13:
 
             "Don't eat the donut":
                 $ add_point(KCT.BRO)
+                
                 u "(Next time I'll get a healthier snack...)"
             
         scene v15s13_5 # show MC standing up and throwing away the donut bag in his WOLVES room, no expression, mouth closed
@@ -204,6 +207,7 @@ label v15s13:
             "A blueberry?":
                 # $ mc.quirks["pop_culture"] = True # Being re-evaluated
                 $ add_point(KCT.BRO)
+                
                 u "Donuts turn you into blueberries?"
 
                 scene v15s13_9c # FPP. same as v15s13_9a Grayson has a laughing expression, mouth open
@@ -224,6 +228,7 @@ label v15s13:
             "Chocolate factory movie?":
                 # $ mc.quirks["boomer"] = True # Being re-evaluated
                 $ add_point(KCT.TROUBLEMAKER)
+                
                 u "Chocolate factory movie? Are you feeling okay? *Chuckles*"
 
                 scene v15s13_9a
@@ -247,6 +252,7 @@ label v15s13:
         menu:
             "I will":
                 $ add_point(KCT.BRO)
+                
                 u "I know, I will. This is only my first just so you know."
 
                 scene v15s13_9c
@@ -281,6 +287,7 @@ label v15s13:
 
             "You don't eat donuts?":
                 $ add_point(KCT.TROUBLEMAKER)
+                
                 u "Are you serious right now? You're telling me that you never have donuts, or cake, or cola?"
 
                 scene v15s13_9d
@@ -348,6 +355,7 @@ label v15s13:
 
             "Don't eat the donut":
                 $ add_point(KCT.BRO)
+                
                 u "(Next time I'll get a healthier snack...)"
             
         scene v15s13_11 # show MC standing up and throwing away the donut bag in his APES room, no expression, mouth closed

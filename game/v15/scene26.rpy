@@ -665,7 +665,7 @@ label v15s26:
 
         menu:
             "Side with Riley":
-                $ add_point(KCT.TROUBLEMAKER
+                $ add_point(KCT.TROUBLEMAKER)
                 
                 $ riley.relationship = Relationship.LOYAL
                 $ grant_achievement("polycurious")
