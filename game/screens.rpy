@@ -77,12 +77,6 @@ style vslider:
     thumb "gui/slider/vertical_[prefix_]thumb.webp"
 
 
-style frame:
-    padding gui.frame_borders.padding
-    background Frame("gui/frame.webp", gui.frame_borders, tile=gui.frame_tile)
-
-
-
 ################################################################################
 ## In-game screens
 ################################################################################
@@ -635,13 +629,14 @@ screen file_slots(title):
                     renpy_version = '.'.join(str(i) for i in renpy_version)
                     file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
+
                 button:
-                    background FileScreenshot(slot)
+                    background Transform(FileScreenshot(slot), size=(config.thumbnail_width, config.thumbnail_height))
                     if title == _("Save"):
                         action Show("enter_save_name", slot=slot)
                     else:
                         action FileAction(slot)
-                    xysize (384, 216)
+                    xysize (config.thumbnail_width, config.thumbnail_height)
 
                     if file_compatable:
                         vbox:

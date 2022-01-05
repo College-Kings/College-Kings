@@ -213,8 +213,8 @@ define gui.navigation_button_width = 350
 
 
 ## The width and height of thumbnails used by the save slots.
-define config.thumbnail_width = 384
-define config.thumbnail_height = 216
+define config.thumbnail_width = 372
+define config.thumbnail_height = 209
 
 ## The number of columns and rows in the grid of save slots.
 define gui.file_slot_cols = 3
