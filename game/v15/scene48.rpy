@@ -499,6 +499,7 @@ label v15s48:
     menu:
         "Follow your heart":
             $ v15s48_follow_your_heart = True
+
             u "You should follow your heart. Whatever direction you're being pulled in, you should head there."
 
             scene v15s48_18
@@ -562,7 +563,6 @@ label v15s48:
 
     menu:
         "Be supportive":
-
             u "I understand you're afraid to upset people. You're done with the drama, yeah?"
 
             scene v15s48_18
@@ -589,7 +589,6 @@ label v15s48:
                 u "I know. *Laughs*"
 
         "Be brutally honest":
-
             u "Okay, forgive me if I upset you, but..."
 
             if "chris_amber" in freeroam13 or "chris_penelope" in freeroam14:
@@ -653,10 +652,7 @@ label v15s48:
 
                 no "You're not wrong... *Sighs*"
 
-
-
-    if nora.relationship.value < Relationship.FWB.value and v15s48_follow_your_heart and not v15s48_interrupt and kct != "confident":
-        $ v15s48_variable_check += 1
+    if nora.relationship.value < Relationship.FWB.value and not kct == "confident" and not (v15s48_follow_your_heart and not v15s48_interrupt):
         if v15s48_follow_your_heart:
             scene v15s48_18
             with dissolve
@@ -665,7 +661,7 @@ label v15s48:
 
             no "I think we have wine... Be right back!"
             
-        else:
+        elif not v15s48_interrupt:
             scene v15s48_18
             with dissolve
 
@@ -673,49 +669,50 @@ label v15s48:
 
             no "I think we have wine... Be right back!"
         
-    if v15s48_variable_check >= 1:
-        if nora.relationship.value >= Relationship.FWB.value:
-            if v15s48_follow_your_heart:
-                scene v15s48_18
-                with dissolve
+        jump v15s48_norawine
 
-                no "Well, I guess I'm gonna follow my heart then..."
-
-                scene v15s48_18a
-                with dissolve
-
-                u "You should."
-
-            else:
-                scene v15s48_18
-                with dissolve
-
-                no "The thing is though..."
-
-                no "I don't want to focus on just me."
-
-                scene v15s48_18a
-                with dissolve
-
-                u "You don't?"
-
-                scene v15s48_18
-                with dissolve
-
-                no "Ha, no. I don't."
-                
-        if nora.relationship.value < Relationship.FWB.value and v15s48_follow_your_heart and not v15s48_interrupt or kct == "confident":
+    if nora.relationship.value >= Relationship.FWB.value:
+        if v15s48_follow_your_heart:
             scene v15s48_18
             with dissolve
 
-            no "So, when you say that I should follow my heart..."
+            no "Well, I guess I'm gonna follow my heart then..."
 
             scene v15s48_18a
             with dissolve
 
-            u "Yeah?"
+            u "You should."
+
+        else:
+            scene v15s48_18
+            with dissolve
+
+            no "The thing is though..."
+
+            no "I don't want to focus on just me."
+
+            scene v15s48_18a
+            with dissolve
+
+            u "You don't?"
+
+            scene v15s48_18
+            with dissolve
+
+            no "Ha, no. I don't."
+            
+    elif (v15s48_follow_your_heart and not v15s48_interrupt) or kct == "confident":
+        scene v15s48_18
+        with dissolve
+
+        no "So, when you say that I should follow my heart..."
+
+        scene v15s48_18a
+        with dissolve
+
+        u "Yeah?"
     
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or aubrey.relationship.value >= Relationship.TAMED.value:
+    if (chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or aubrey.relationship.value >= Relationship.TAMED.value) and not (kct == "confident"):
         scene v15s48_18
         with dissolve
 
@@ -765,6 +762,8 @@ label v15s48:
 
         no "Not for long! I'm pretty sure I saw some wine earlier. I'll go dig it out."
 
+        label v15s48_norawine:
+
         scene v15s48_14a # TPP. MC sitting on the couch in the Cabin, Nora approaching the Couch coming from the kitchen area holding two glasses of wine, Nora slight smile, mouth closed, MC slight smile, mouth closed.
         with fade
 
@@ -808,7 +807,9 @@ label v15s48:
         jump v15s48b
 
     else:
-
+        if (chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or aubrey.relationship.value >= Relationship.TAMED.value):
+            call screen kct_popup
+        
         scene v15s48_18h
         with dissolve
 
