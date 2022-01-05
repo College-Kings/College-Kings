@@ -6,8 +6,6 @@
 
 label v15s21:
     if v15_chloe_mrleesupport:
-
-        label test:
         if kct == "loyal":
             $ v15s21_meeting_points += 1
 
