@@ -254,7 +254,6 @@ label v15s20:
     menu:
         "Take the notes":
             $ add_point(KCT.TROUBLEMAKER)
-            
             $ v15_took_notes = True
 
             scene v15s20_5

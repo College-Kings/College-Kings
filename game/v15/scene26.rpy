@@ -666,7 +666,6 @@ label v15s26:
         menu:
             "Side with Riley":
                 $ add_point(KCT.TROUBLEMAKER)
-                
                 $ riley.relationship = Relationship.LOYAL
                 $ grant_achievement("polycurious")
 
@@ -712,6 +711,7 @@ label v15s26:
 
             "Side with Aubrey": # -event2 Side with Aubrey, Pro-Monogamy (No variable change)
                 $ add_point(KCT.BOYFRIEND)
+                
                 u "I'm with Aubrey on this one..."
 
                 scene v15s26_15g # FPP Same angle as 15, Riley looking away with a sad expression, mouth closed
@@ -745,8 +745,8 @@ label v15s26:
                 menu:
                     "Polygamy isn't healthy": # RileyUpset
                         $ add_point(KCT.BRO)
-                        
                         $ v15_RileyUpset = True
+                        
                         u "Honestly, it doesn't seem healthy."
 
                         scene v15s26_14
@@ -801,6 +801,7 @@ label v15s26:
 
                     "I only want one partner": # -event2 I only want one partner
                         $ add_point(KCT.BOYFRIEND)
+                        
                         u "Basically, exactly what Aubrey said. I just couldn't commit like that to more than one person."
 
                         if aubrey.relationship.value >= Relationship.TAMED.value: # -Aubrey soft smile, if AubreyTamed can she do something a little extra like a wink or idk be cute-
@@ -857,13 +858,12 @@ label v15s26:
         menu: 
             "Side with Riley, pro-polygamy": #if AubreyTamed it becomes AubreyFwB, gain RileyLoyal; she's committed to MC as friends, romantic, TilDeathDoUsPart, all of the above
                 $ add_point(KCT.TROUBLEMAKER)
+                $ grant_achievement("polycurious")
                 
                 if aubrey.relationship.value >= Relationship.TAMED.value:
                     $ aubrey.relationship = Relationship.FWB
                 $ riley.relationship = Relationship.LOYAL
                 
-                $ grant_achievement("polycurious")
-
                 u "I think you're onto something here, Riley..."
 
                 scene v15s26_14c
