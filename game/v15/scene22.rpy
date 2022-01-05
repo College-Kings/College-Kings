@@ -336,6 +336,8 @@ label v15s22:
     scene v15s22_4
     with dissolve
 
+    show screen teacher_conviction_bar(0, "DEAN")
+
     menu:
         "Say hello to the Dean":
             #$ add_point(KCT.TROUBLEMAKER)
@@ -346,7 +348,7 @@ label v15s22:
             u "Hi, Dean Harrison."
 
             $ v15s22_meeting_points -= 1
-            show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
             scene v15s22_4b
             with dissolve
@@ -355,7 +357,7 @@ label v15s22:
 
         "Just sit down": # (CORRECT CHOICE - ONE POINT)
             $ v15s22_meeting_points += 0
-            show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
             #$ add_point(KCT.BRO)
 
@@ -405,7 +407,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points += 1
-            show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/mr_lee_background.webp")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
             de "Mr. Lee? You must have been very convincing."
 
@@ -427,7 +429,7 @@ label v15s22:
                     with dissolve
 
                     $ v15s22_meeting_points += 1
-                    show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
                     de "Well, I look forward to hearing from him how he came to that conclusion."
 
@@ -475,7 +477,7 @@ label v15s22:
                     with dissolve
 
                     $ v15s22_meeting_points -= 1
-                    show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
                     de "I can assure you, nobody finds you funny."
 
@@ -501,7 +503,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points += 1
-            show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
             de "Oh, good. You've already convinced Ms. Rose."
 
@@ -523,7 +525,7 @@ label v15s22:
                     with dissolve
 
                     $ v15s22_meeting_points += 1
-                    show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
                     de "Did she? I'll be interested to hear from her how she arrived at that conclusion."
 
@@ -573,7 +575,7 @@ label v15s22:
                     de "Timing is everything, [name]. And this certainly isn't the time."
 
                     $ v15s22_meeting_points -= 1
-                    show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
                     de "The next time you speak, make sure it's something sensible."
 
                     scene v15s22_6f
@@ -596,7 +598,7 @@ label v15s22:
         with dissolve
 
         $ v15s22_meeting_points -= 1
-        show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
         de "It doesn't look like you managed to secure any support from a teacher. There's no signature on here."
 
@@ -638,7 +640,7 @@ label v15s22:
                 with dissolve
 
                 $ v15s22_meeting_points -= 1
-                show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
                 de "I'm sure whoever you met with, you obviously didn't do a very good job of convincing them."
 
@@ -669,7 +671,7 @@ label v15s22:
                 with dissolve
 
                 $ v15s22_meeting_points += 1
-                show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
                 u "In all honesty, we could've done better. We've reflected on it and learned a lot from the experience."
 
@@ -693,7 +695,7 @@ label v15s22:
         with dissolve
         
         $ v15s22_meeting_points += 1
-        show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp") 
+        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN") 
 
         de "You did a fine job defending your friend when we met last time, [name]."
         
@@ -741,7 +743,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points -= 1
-            show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
             de "That's not necessary. I know what you're asking for, I need you to convince me."
 
@@ -757,7 +759,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points += 1
-            show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
             de "Thank you. I'm glad you understand."
 
@@ -775,7 +777,7 @@ label v15s22:
                 with dissolve
 
                 $ v15s22_meeting_points += 1
-                show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
                 de "That would be appreciated."
 
@@ -799,7 +801,7 @@ label v15s22:
                 with dissolve
 
                 $ v15s22_meeting_points -= 1
-                show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
                 de "That would be advisable, yes."
 
@@ -814,7 +816,7 @@ label v15s22:
                         with dissolve
 
                         $ v15s22_meeting_points += 1
-                        show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+                        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
                         u "Okay, sure. Let's do that then."
 
@@ -825,7 +827,7 @@ label v15s22:
                         with dissolve
 
                         $ v15s22_meeting_points -= 1
-                        show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+                        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
                         u "We've worked very hard all day to prepare that signature for you, but sure. You're the boss."
 
@@ -892,7 +894,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points -= 1
-            show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
             de "That was... very quick."
 
@@ -923,7 +925,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points += 1
-            show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
             de "Okay, that's a valid first point."
 
@@ -982,7 +984,7 @@ label v15s22:
         with dissolve
 
         $ v15s22_meeting_points += 1
-        show screen teacher_conviction_bar((v15s22_meeting_points+5) * 100 / 13, "CONVINCE DEAN", "DEAN", "images/v15/conviction_bars/dean_background.webp")
+        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
         
         de "That is a surprise. I was opposed to the scholarship from the beginning, so that's a major bonus point, Chloe."
 
