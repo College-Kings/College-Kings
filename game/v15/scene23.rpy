@@ -39,6 +39,8 @@ label v15s23:
 
     menu:
         "Draw a happy face":
+            $ add_point(KCT.BOYFRIEND)
+            
             scene v15s23_6 # FPP. MC smiling, mouth closed leans towards the mirror and raises his finger like he's about to draw on the mirror with his finger.
             with dissolve
 
@@ -50,6 +52,9 @@ label v15s23:
             u "(Maybe I should take art next semester...) *Laughs*"
 
         "Draw a dick":
+            $ add_point(KCT.TROUBLEMAKER)
+            $ add_point(KCT.BRO)
+            
             scene v15s23_6
             with dissolve
 

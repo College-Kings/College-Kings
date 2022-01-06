@@ -188,6 +188,8 @@ label v15s18b:
 
             menu:
                 "Apologize":
+                    $ add_point(KCT.BOYFRIEND)
+                    
                     scene v15s18b_5c # FPP. MC looking at Lauren, Lauren looking at MC, Lauren slight frown, mouth closed.
                     with dissolve
                     
@@ -206,6 +208,8 @@ label v15s18b:
                     la "Uh, Yeah. Of course. Thank you, [name]."
 
                 "Get offended":
+                    $ add_point(KCT.BRO)
+                    
                     scene v15s18b_17 # TPP. Frontal view of just MC, MC looking to his left, Arm expressions like he is mad, MC upset, mouth open.
                     with dissolve
 

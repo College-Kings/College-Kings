@@ -130,6 +130,8 @@ label v15s25:
 
     menu:
         "Be honest":
+            $ add_point(KCT.BOYFRIEND)
+            
             u "(Not everyone will have a fake ID. I need to be honest.)"
 
             scene v15s25_7a
@@ -143,6 +145,8 @@ label v15s25:
             admin "Ooh... Well, in that case, we can't serve you the alcohol."
 
         "Lie":
+            $ add_point(KCT.TROUBLEMAKER)
+            
             scene v15s25_7a
             with dissolve
 
@@ -224,6 +228,7 @@ label v15s25:
 
     menu:
         "It's important for us":
+            $ add_point(KCT.BOYFRIEND)
 
             u "It's an important night for us."
 
@@ -335,6 +340,7 @@ label v15s25:
                     admin "Let's just call it my good deed for the day, haha."
 
         "Disagree with the policy":
+            $ add_point(KCT.TROUBLEMAKER)
 
             u "I think you should check state legislation about the legal drinking age."
 
@@ -395,7 +401,9 @@ label v15s25:
 
         menu:
             "Accept the price":
+                $ add_point(KCT.BOYFRIEND)
                 $ lindsey_board.money -= 800
+                
                 scene v15s25_7a
                 with dissolve
 
@@ -422,6 +430,8 @@ label v15s25:
                 u "You too! Bye."
 
             "Negotiate":
+                $ add_point(KCT.BRO)
+                
                 scene v15s25_7a
                 with dissolve
 
@@ -437,7 +447,9 @@ label v15s25:
 
                 menu:
                     "Be honest":
+                        $ add_point(KCT.BOYFRIEND)
                         $ lindsey_board.money -= 400
+                        
                         scene v15s25_7a
                         with dissolve
 
@@ -494,7 +506,9 @@ label v15s25:
                         u "Bye!"
 
                     "Lie":
+                        $ add_point(KCT.TROUBLEMAKER)
                         $ lindsey_board.money -= 800
+                        
                         scene v15s25_7a
                         with dissolve
 
@@ -575,7 +589,9 @@ label v15s25:
 
         menu:
             "Accept the price":
+                $ add_point(KCT.BOYFRIEND)
                 $ lindsey_board.money -= 700
+                
                 scene v15s25_7a
                 with dissolve
 
@@ -624,6 +640,8 @@ label v15s25:
                 u "Bye."
 
             "Negotiate":
+                $ add_point(KCT.BRO)
+                
                 scene v15s25_7a
                 with dissolve
             
@@ -641,7 +659,9 @@ label v15s25:
 
                 menu:
                     "Lindsey's mom passed away recently":
+                        $ add_point(KCT.BOYFRIEND)
                         $ lindsey_board.money -= 500
+                        
                         scene v15s25_7h
                         with dissolve
 
@@ -722,7 +742,9 @@ label v15s25:
                         u "Bye."
 
                     "Ask about student discounts":
+                        $ add_point(KCT.TROUBLEMAKER)
                         $ lindsey_board.money -= 700
+                        
                         scene v15s25_7a
                         with dissolve
 

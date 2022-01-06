@@ -43,10 +43,10 @@ label v15s22:
 
             menu:
                 "Be supportive":
-                    $ add_point(KCT.BRO)
-                    
                     if chloe.relationship.value >= Relationship.FWB.value:
                         $ add_point(KCT.BOYFRIEND)
+                    else:
+                        $ add_point(KCT.BRO)
 
                     scene v15s22_2a
                     with dissolve
@@ -59,10 +59,10 @@ label v15s22:
                     cl "I really hope so."
 
                 "Be brutally honest":
-                    $ add_point(KCT.TROUBLEMAKER)
-                    
                     if chloe.relationship.value >= Relationship.FWB.value:
                         $ add_point(KCT.BRO)
+                    else:
+                        $ add_point(KCT.TROUBLEMAKER)
 
                     scene v15s22_2a
                     with dissolve
@@ -90,10 +90,10 @@ label v15s22:
 
             menu:
                 "Change the subject":
-                    $ add_point(KCT.BRO)
-                    
                     if chloe.relationship.value >= Relationship.FWB.value:
                         $ add_point(KCT.BOYFRIEND)
+                    else:
+                        $ add_point(KCT.BRO)
 
                     scene v15s22_2d
                     with dissolve
@@ -111,10 +111,10 @@ label v15s22:
                     cl "Let's hope she's in a good mood."
 
                 "Lie":
-                    $ add_point(KCT.BRO)
-                    
                     if chloe.relationship.value >= Relationship.FWB.value:
                         $ add_point(KCT.TROUBLEMAKER)
+                    else:
+                        $ add_point(KCT.BRO)
 
                     scene v15s22_2d
                     with dissolve
@@ -147,10 +147,10 @@ label v15s22:
 
             menu:
                 "Be supportive":
-                    $ add_point(KCT.BRO)
-                    
                     if chloe.relationship.value >= Relationship.FWB.value:
                         $ add_point(KCT.BOYFRIEND)
+                    else:
+                        $ add_point(KCT.BRO)
 
                     scene v15s22_2a
                     with dissolve
@@ -163,10 +163,10 @@ label v15s22:
                     cl "I really hope so."
 
                 "Be brutally honest":
-                    $ add_point(KCT.TROUBLEMAKER)
-                    
                     if chloe.relationship.value >= Relationship.FWB.value:
                         $ add_point(KCT.BRO)
+                    else:
+                        $ add_point(KCT.TROUBLEMAKER)
 
                     scene v15s22_2a
                     with dissolve
@@ -189,10 +189,11 @@ label v15s22:
 
         menu:
             "Be supportive":
-                $ add_point(KCT.BRO)
-                
                 if chloe.relationship.value >= Relationship.FWB.value:
                     $ add_point(KCT.BOYFRIEND)
+                else:
+                    $ add_point(KCT.BRO)
+
 
                 scene v15s22_2a
                 with dissolve
@@ -210,10 +211,11 @@ label v15s22:
                 u "I know, but you have to stay positive. We still have a chance."
 
             "Be brutally honest":
-                $ add_point(KCT.TROUBLEMAKER)
-                
                 if chloe.relationship.value >= Relationship.FWB.value:
                     $ add_point(KCT.BRO)
+                else:
+                    $ add_point(KCT.TROUBLEMAKER)
+
 
                 scene v15s22_2a
                 with dissolve
@@ -355,7 +357,7 @@ label v15s22:
 
             de "I said I'll be with you in a moment, [name]."
 
-        "Just sit down": # (CORRECT CHOICE - ONE POINT)
+        "Just sit down":
             $ v15s22_meeting_points += 0
             show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
@@ -417,7 +419,7 @@ label v15s22:
             with dissolve
 
             menu:
-                "Explain why Mr. Lee signed": # (CORRECT CHOICE - ONE POINT)
+                "Explain why Mr. Lee signed":
                     #$ add_point(KCT.BRO)
 
                     scene v15s22_6b # FPP. same as v15s22_6 The Dean is looking at Mc, mouth is closed, still no expression
@@ -513,7 +515,7 @@ label v15s22:
             with dissolve
 
             menu:
-                "Explain why Ms. Rose signed": # (CORRECT CHOICE - ONE POINT)
+                "Explain why Ms. Rose signed":
                     #$ add_point(KCT.BRO)
 
                     scene v15s22_6d
@@ -664,7 +666,7 @@ label v15s22:
 
                 de "So now you're here to convince me."
 
-            "We could've done better": # (CORRECT CHOICE - ONE POINT)
+            "We could've done better":
                 #$ add_point(KCT.BRO)
 
                 scene v15s22_6b
@@ -747,7 +749,7 @@ label v15s22:
 
             de "That's not necessary. I know what you're asking for, I need you to convince me."
 
-        "Your time is important": # (CORRECT CHOICE - ONE POINT)
+        "Your time is important":
             #$ add_point(KCT.BRO)
 
             scene v15s22_6d
@@ -765,7 +767,7 @@ label v15s22:
 
     if v15s21_meeting_points >= 1:
         menu:
-            "Summarize the plan": # (CORRECT CHOICE - ONE POINT)
+            "Summarize the plan":
                 #$ add_point(KCT.BRO)
 
                 scene v15s22_6d
@@ -908,7 +910,7 @@ label v15s22:
 
             pause 0.75
 
-        "Main points": # (CORRECT CHOICE - ONE POINT)
+        "Main points":
             #$ add_point(KCT.BRO)
 
             scene v15s22_6b
@@ -1440,10 +1442,10 @@ label v15s22:
 
         menu:
             "Call after her":
-                $ add_point(KCT.BRO)
-                
                 if chloe.relationship.value >= Relationship.FWB.value:
                     $ add_point(KCT.TROUBLEMAKER)
+                else:
+                    $ add_point(KCT.BRO)
 
                 scene v15s22_1f
                 with dissolve
@@ -1469,11 +1471,11 @@ label v15s22:
 
                 pause 0.75
 
-            "Say nothing":
-                $ add_point(KCT.BRO)
-                
+            "Say nothing":                
                 if chloe.relationship.value >= Relationship.FWB.value:
                     $ add_point(KCT.BOYFRIEND)
+                else:
+                    $ add_point(KCT.BRO)
 
                 scene v15s22_1g
                 with dissolve

@@ -24,9 +24,13 @@ label v15s15:
 
     menu:
         "Be polite":
+            $ add_point(KCT.BOYFRIEND)
+            
             u "Sounds like I'm getting a three-course meal. *Chuckles* I'm looking forward to it."
 
         "Be impatient":
+            $ add_point(KCT.BRO)
+            
             u "Okay, but hurry. I'm actually starting to starve..."
 
     scene v15s15_2
@@ -109,6 +113,8 @@ label v15s15:
 
     menu:
         "Reject her":
+            $ add_point(KCT.TROUBLEMAKER)
+
             scene v15s15_9a # FPP. MC standing in front of Ms. Rose, Ms. Rose has her boobs covered in honey, shocked, mouth closed
             with dissolve
 
@@ -498,9 +504,14 @@ label v15s15:
 
             menu:
                 "Compliment":
+                    $ add_point(KCT.BOYFRIEND)
+                    $ add_point(KCT.BRO)
+                    
                     u "I enjoyed it a lot more than I thought I would, actually. It might just be my new favorite meal. *Chuckles*"
 
                 "Still angry":
+                    $ add_point(KCT.TROUBLEMAKER)
+                    
                     u "It was a good start, but I'm still not entirely happy with you."
 
             scene v15s15_29a

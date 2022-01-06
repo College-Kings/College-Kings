@@ -91,6 +91,11 @@ label v15s9:
 
     menu:
         "As friends":
+            if v13s48_canoeing_as_date:
+                $ add_point(KCT.TROUBLEMAKER)
+            else:
+                $ add_point(KCT.BRO)
+            
             scene v15s9_3
             with dissolve
 
@@ -147,6 +152,11 @@ label v15s9:
                 au "Thank you so much, [name]."
 
         "As your date":
+            if v13s48_canoeing_as_date:
+                $ add_point(KCT.BOYFRIEND)
+            else:
+                $ add_point(KCT.BRO)
+
             scene v15s9_3b
             with dissolve
 

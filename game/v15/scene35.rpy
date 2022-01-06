@@ -323,9 +323,13 @@ label v15s35:
 
         menu:
             "$50mil to charity":
+                $ add_point(KCT.BOYFRIEND)
+                
                 jump v15_50mil_charity
 
             "$500k for me":
+                $ add_point(KCT.BRO)
+                
                 jump v15_500k_for_me
 
         # -After choosing, we see on the UI what everyone has chosen. All three girls chose $50m to charity-
@@ -493,9 +497,13 @@ label v15s35:
 
         menu:
             "Kill Santa Claus":
+                $ add_point(KCT.BRO)
+                
                 jump v15_kill_santa
 
             "Kill the Easter bunny":
+                $ add_point(KCT.TROUBLEMAKER)
+                
                 jump v15_kill_easter_bunny
 
         # -After choosing, we see on the UI what everyone has chosen. Autumn chose Kill Santa. Lindsey and Aubrey chose Kill the Easter bunny-
@@ -765,9 +773,13 @@ label v15s35:
 
         menu:
             "Human body, frog mind":
+                $ add_point(KCT.BRO)
+                
                 jump v15_human_body_frog_mind
 
             "Frog body, human mind":
+                $ add_point(KCT.BOYFRIEND)
+                
                 jump v15_frog_body_human_mind
 
         # -After choosing, we see on the UI what everyone has chosen. Lindsey and Autumn chose frog body, human mind. Aubrey chose human body, frog mind-
@@ -1032,9 +1044,14 @@ label v15s35:
 
         menu:
             "No sex forever":
+                $ add_point(KCT.BOYFRIEND)
+                
                 jump v15_no_sex_forever
 
             "20-person orgy every time":
+                $ add_point(KCT.BRO)
+                $ add_point(KCT.TROUBLEMAKER)
+                
                 jump v15_20_person_orgy
 
         # -After choosing, we see on the UI what everyone has chosen. Autumn chose no sex forever. Lindsey and Aubrey chose Orgy with twenty people forever-

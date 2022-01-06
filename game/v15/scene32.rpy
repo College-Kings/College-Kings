@@ -21,12 +21,16 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
         
     menu:
         "Simple approach":
+            $ add_point(KCT.BRO)
+            
             scene v15s32_1a
             with dissolve
             
             u "(I won't overthink it. I'll just knock on the door like a regular person.)"
 
         "Be her Romeo":
+            $ add_point(KCT.BOYFRIEND)
+            
             # -MC walks around the back of the house, picking up some random pebbles en route. Then he looks up at two windows. One window has vines creeping up to it, which is Aubrey's window-
             scene v15s32_2 # TPP. MC smiling, mouth closed, walking left-to-right; front door in background) [Chicks' house front yard-exterior].
             with dissolve
@@ -306,6 +310,8 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
             yalign 1.0
             linear 6.0 yalign 0.0
         with fade
+
+        pause
                 
         # -MC is mesmerized by her-
 

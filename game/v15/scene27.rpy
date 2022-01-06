@@ -93,16 +93,19 @@ label v15s27: # -MC walks out of the Chicks house-
     jen "Me and Penelope! Your two favorite girls?!"
 
     menu:
-
         "You are my favorite girls...":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s27_3d # TPP. MC holding his phone to his ear, laughing, smiling, mouth open.
             with dissolve
 
             u "*Laughs* Well, you are my two favorite girls, that's true..."
 
             if lauren.relationship.value >= Relationship.GIRLFRIEND.value or chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ add_point(KCT.TROUBLEMAKER)
+                
                 u "(Well, maybe in the top three...)"
+            
             if lauren.relationship.value >= Relationship.GIRLFRIEND.value and chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 u "(Or four... Wait, how many girlfriends do I have?)"
 

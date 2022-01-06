@@ -134,7 +134,7 @@ screen v15s18a_livingroom():
                     action Jump("v15s18c_ryan")
                 else:
                     action Call("freeRoamSpokenToo", backgroundImg="v15s18a_livingroom_4", returnScreen="v15s18a_livingroom")
-                pos (1279, 433)        
+                pos (1279, 433) 
 
     # Pumpkin
     if v15s18_pumpkin < 5:

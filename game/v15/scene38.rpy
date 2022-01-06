@@ -46,13 +46,13 @@ label v15s38:
         pause 0.75
 
     if not v15_lindsey_inviteseb: # -if MC chose Grayson, Grayson is also in the limo
-        scene v15s38_8 
+        scene v15s38_6
         with dissolve
 
         pause 0.75
 
     else: # -if MC chose Sebastian, Sebastian is also in the limo
-        scene v15s38_6 # FPP Grayson looking at MC, neutral expression, mouth closed
+        scene v15s38_6z # FPP Same as v15s38_6, instead of Grayson, it's Sebastian, Sebastian looking at MC, neutral expression, mouth closed
         with dissolve
 
         pause 0.75
@@ -277,13 +277,17 @@ label v15s38:
         gr "Autumn started it."
 
         menu:
-            "Stay quiet": # -if Stay quiet
+            "Stay quiet":
+                $ add_point(KCT.BRO)
+                
                 scene v15s38_6f # FPP Same angle as 6, Grayson looking at Autumn, neutral expression, mouth closed
                 with dissolve
 
                 u "(Maybe it wasn't such a good idea to invite Grayson. I doubt Sebastian would be causing drama like this.)"
 
-            "Change the subject": # -if Change the subject
+            "Change the subject":
+                $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s38_6f
                 with dissolve
 
@@ -319,13 +323,9 @@ label v15s38:
         with dissolve
 
         menu:
-            "Don't raise them": # -if Don't raise them
-                scene v15s38_10a # TPP Same wide shot of everyone as 10, everyone looking at Grayson. Grayson with annoyed expression, mouth open
-                with dissolve
-
-                gr "You guys are so fucking boring!"
-
-            "Raise your hands": # -if Raise your hands
+            "Raise your hands":
+                $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s38_11 # TPP Show MC holding both of his hands in the air, smiling with mouth closed
                 with dissolve
 
@@ -370,6 +370,14 @@ label v15s38:
 
                 pause 0.75
             
+            "Don't raise them":
+                $ add_point(KCT.BOYFRIEND)
+                
+                scene v15s38_10a # TPP Same wide shot of everyone as 10, everyone looking at Grayson. Grayson with annoyed expression, mouth open
+                with dissolve
+
+                gr "You guys are so fucking boring!"
+
     else: # -if Sebastian
         scene v15s38_8b # FPP Same angle as 8, Sebastian looking at Lindsey, smiling with mouth open
         with dissolve
@@ -407,7 +415,9 @@ label v15s38:
         se "I wonder what careers we'll all end up having."
 
         menu:
-            "Be encouraging": # -if Be encouraging
+            "Be encouraging":
+                $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s38_8a
                 with dissolve
 
@@ -428,7 +438,9 @@ label v15s38:
 
                 pause 1
             
-            "Make a joke": # -if Make a joke
+            "Make a joke":
+                $ add_point(KCT.BRO)
+                
                 scene v15s38_8a
                 with dissolve
 
@@ -746,6 +758,8 @@ label v15s38:
 
     menu:
         "Stop the questioning": # -if Stop the questioning (and helped Autumn with boxes at dog shelter and/or went to the protest with her in Act1, creates AutumnTrust)
+            $ add_point(KCT.BOYFRIEND)
+            
             if protest or v15_autumn_lunchbreak: # Went to protest
                 $ autumn.relationship = Relationship.TRUST
             
@@ -972,7 +986,7 @@ label v15s38:
     scene v15s38_13 # FPP Show Lindsey turning her head to look out the window, mouth open
     with dissolve
 
-    li "Saved by the bell, Autumn. It looks like we're here!"
+    li "Don't worry, Autumn. It looks like we're here!"
 
     scene v15s38_9c
     with dissolve

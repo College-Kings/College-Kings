@@ -30,7 +30,7 @@ label v15s26:
     scene v15s26_2a
     with dissolve
 
-    u "The Chicks mascot?"
+    u "The Chicks' mascot?"
 
     scene v15s26_2
     with dissolve
@@ -184,7 +184,7 @@ label v15s26:
     scene v15s26_12 # FPP Riley, in theater room, looking at MC with a slight smile, mouth open
     with dissolve
 
-    ri "Really though, you're a lucky guy, [name]. Barely anyone has been here, let alone do they even know it exists."
+    ri "Really though, you're a lucky guy, [name]. Barely anyone has been here, let alone knows of its existance."
 
     scene v15s26_12a # FPP Same angle as 12, Riley in theater room with a slight smile, mouth closed
     with dissolve
@@ -291,6 +291,8 @@ label v15s26:
 
     menu:
         "Yeah, let's watch":
+            $ add_point(KCT.BOYFRIEND)
+            
             u "Yeah, I don't have anything else to do. We can watch."
 
             scene v15s26_14a
@@ -299,6 +301,8 @@ label v15s26:
             au "Same, haha. I just hope it's worth my time."
         
         "Do we have to?":
+            $ add_point(KCT.BRO)
+            
             u "Do we really have to watch it?"
 
             scene v15s26_15a
@@ -367,11 +371,7 @@ label v15s26:
     pause 0.75
 
     # -We see some opening credits, white text on black screen (be creative, use patron names, talk to Steve about what he would like to add here. 
-    # Cheex suggests high-tier patrons can be listed? If not, let's stick to people from the team for the credits)-
-    scene v15s26_18 # FPP View of the theater screen, which is showing credits (get with Steve and Cheex for the names. I suggest listing me, Jeffly777 or Jeff Lee, as director, as both patron and transcriber)
-    with dissolve
-
-    pause 3
+    # Cheex suggests high-tier patrons can be listed? If not, let's stick to people from the team for the credits)
 
     scene v15s26_18a # FPP Same angle as 18, view of the screen showing a pastoral view, with the title "The Poly Dilemma" in pretty script
     with dissolve
@@ -665,6 +665,7 @@ label v15s26:
 
         menu:
             "Side with Riley":
+                $ add_point(KCT.TROUBLEMAKER)
                 $ riley.relationship = Relationship.LOYAL
                 $ grant_achievement("polycurious")
 
@@ -710,6 +711,7 @@ label v15s26:
 
             "Side with Aubrey": # -event2 Side with Aubrey, Pro-Monogamy (No variable change)
                 $ add_point(KCT.BOYFRIEND)
+                
                 u "I'm with Aubrey on this one..."
 
                 scene v15s26_15g # FPP Same angle as 15, Riley looking away with a sad expression, mouth closed
@@ -742,7 +744,9 @@ label v15s26:
 
                 menu:
                     "Polygamy isn't healthy": # RileyUpset
+                        $ add_point(KCT.BRO)
                         $ v15_RileyUpset = True
+                        
                         u "Honestly, it doesn't seem healthy."
 
                         scene v15s26_14
@@ -797,6 +801,7 @@ label v15s26:
 
                     "I only want one partner": # -event2 I only want one partner
                         $ add_point(KCT.BOYFRIEND)
+                        
                         u "Basically, exactly what Aubrey said. I just couldn't commit like that to more than one person."
 
                         if aubrey.relationship.value >= Relationship.TAMED.value: # -Aubrey soft smile, if AubreyTamed can she do something a little extra like a wink or idk be cute-
@@ -852,12 +857,13 @@ label v15s26:
 
         menu: 
             "Side with Riley, pro-polygamy": #if AubreyTamed it becomes AubreyFwB, gain RileyLoyal; she's committed to MC as friends, romantic, TilDeathDoUsPart, all of the above
+                $ add_point(KCT.TROUBLEMAKER)
+                $ grant_achievement("polycurious")
+                
                 if aubrey.relationship.value >= Relationship.TAMED.value:
                     $ aubrey.relationship = Relationship.FWB
                 $ riley.relationship = Relationship.LOYAL
                 
-                $ grant_achievement("polycurious")
-
                 u "I think you're onto something here, Riley..."
 
                 scene v15s26_14c

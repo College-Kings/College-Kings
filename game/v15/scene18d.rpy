@@ -436,6 +436,7 @@ label v15s18d:
 
             else:
                 $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s18d_8f # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren slight smile, mouth open.
                 with dissolve
 

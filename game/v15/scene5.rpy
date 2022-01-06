@@ -107,6 +107,7 @@ label v15s5:
     menu:
         "Be calm":
             $ add_point(KCT.BRO)
+            
             u "*Sighs*"
 
             u "I'm sure it'll be okay."
@@ -173,6 +174,7 @@ label v15s5:
         "Get angry":
             $ add_point(KCT.BOYFRIEND)
             $ v15_mad_at_ms_rose = True
+            
             scene v15s5_4b
             with dissolve
             
@@ -219,12 +221,16 @@ label v15s5:
 
             menu:
                 "Agree":
+                    $ add_point(KCT.TROUBLEMAKER)
+                    
                     scene v15s5_4b
                     with dissolve
         
                     u "Yeah, it was amazing. You're not wrong."
 
                 "Disagree":
+                    $ add_point(KCT.BOYFRIEND)
+                    
                     scene v15s5_4b
                     with dissolve
 

@@ -261,7 +261,6 @@ label v15s21:
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
 
-
                 scene v15s21_6b
                 with dissolve
 
@@ -288,11 +287,9 @@ label v15s21:
             "This is Chloe's idea":
                 $ add_point(KCT.BOYFRIEND)
                 $ add_point(KCT.TROUBLEMAKER)
-
                 $ v15s21_meeting_points -= 1
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
-
 
                 scene v15s21_6b
                 with dissolve
@@ -357,11 +354,9 @@ label v15s21:
         menu:
             "Make SVC more money":
                 $ add_point(KCT.TROUBLEMAKER)
-
                 $ v15s21_meeting_points -= 1
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
-
 
                 scene v15s21_6b
                 with dissolve
@@ -397,7 +392,6 @@ label v15s21:
                 $ add_point(KCT.BRO)
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
-
 
                 scene v15s21_6b
                 with dissolve
@@ -527,11 +521,9 @@ label v15s21:
         menu:
             "Defend the Dean's decision":
                 $ add_point(KCT.BOYFRIEND)
-
                 $ v15s21_meeting_points -= 1
                 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
-
 
                 scene v15s21_6b
                 with dissolve
@@ -563,7 +555,6 @@ label v15s21:
                 $ add_point(KCT.BRO)
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
-
 
                 scene v15s21_6b
                 with dissolve
@@ -779,7 +770,7 @@ label v15s21:
 
         pause 0.75
 
-        hide screen teacher_conviction_bar
+        hide screen teacher_conviction_bar with dissolve
 
         hide screen v15_teacher_brief_icon
 
@@ -1256,6 +1247,8 @@ label v15s21:
                 u "(Not off to a great start... Should've kept my mouth shut, fuck.)"
 
             "Stay quiet":
+                $ add_point(KCT.BOYFRIEND)
+
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
 
                 scene v15s21_13b
@@ -1570,7 +1563,6 @@ label v15s21:
             "She shouldn't do that":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BOYFRIEND)
-
                 $ v15s21_meeting_points -= 1
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
@@ -1618,6 +1610,7 @@ label v15s21:
                 pause 0.75
 
             "Consider it":
+                $ add_point(KCT.BRO)
                 $ v15s21_meeting_points += 1
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")

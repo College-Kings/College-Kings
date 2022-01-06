@@ -164,6 +164,8 @@ label v15s2:
 
         menu:
             "Laugh it off":
+                $ add_point(KCT.BRO)
+                
                 scene v15s2_4a
                 with dissolve
 
@@ -180,6 +182,8 @@ label v15s2:
                 u "Night, Cameron. Get some rest, man."
 
             "Say nothing":
+                $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s2_5
                 with dissolve
                        

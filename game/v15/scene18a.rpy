@@ -173,6 +173,7 @@ label v15s18a_Aubrey:
     menu:
         "We'll have fun":
             $ add_point(KCT.BRO)
+            
             scene v15s18aaub_2
             with dissolve
 
@@ -185,6 +186,7 @@ label v15s18a_Aubrey:
 
         "I'll be there":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s18aaub_2
             with dissolve
 
@@ -224,6 +226,7 @@ label v15s18a_Aubrey:
         "Smile":
             $ v15s18a_aub_kiwii_smile = True
             $ add_point(KCT.TROUBLEMAKER)
+            
             scene v15s18aaub_4a # TPP. Show MC behind Aubrey as she leans back towards him, her hand holding her phone in the air for a selfie photo, Aubrey slight smile, mouth closed, MC slight smile, mouth closed.
             with flash
 
@@ -236,6 +239,7 @@ label v15s18a_Aubrey:
 
         "Don't smile":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s18aaub_4b # TPP. # TPP. Show MC behind Aubrey as she leans back towards him, her hand holding her phone in the air for a selfie photo, Aubrey slight smile, mouth closed, MC frown, mouth closed.
             with flash
 
@@ -263,6 +267,7 @@ label v15s18a_Aubrey:
         "Mention the list":
             $ v15s18_mention_list_aubrey = True
             $ add_point(KCT.TROUBLEMAKER)
+            
             scene v15s18aaub_2
             with dissolve
 
@@ -340,6 +345,7 @@ label v15s18a_Aubrey:
 
         "Don't mention the list":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s18aaub_2
             with dissolve
 
@@ -428,6 +434,7 @@ label v15s18a_Ryan:
     menu:
         "Gag":
             $ v15s18a_gag = True
+            $ add_point(KCT.BOYFRIEND)
 
             scene v15s18a_ryan_3
             with dissolve
@@ -1035,6 +1042,8 @@ label v15s18a_AutumPenelope:
                 u "Let's see how the night goes then I guess, ha."
 
         "Don't show the list":
+            $ add_point(KCT.BOYFRIEND)
+            
             scene v15s18apen_6a
             with dissolve
 
@@ -1185,6 +1194,7 @@ label v15s18a_ImreLauren:
     menu:
         "With reason":
             $ add_point(KCT.BRO)
+            
             scene v15s18aimre_6a # FPP. MC looking at Imre, Imre looking at Mc, Lauren looking at MC, Imre slight smile, mouth closed, Lauren slight smile, mouth closed.
             with dissolve
 
@@ -1202,6 +1212,7 @@ label v15s18a_ImreLauren:
 
         "No, I wouldn't":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s18aimre_6a
             with dissolve
 
@@ -1283,6 +1294,7 @@ label v15s18a_ImreLauren:
     menu:
         "Be honest":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s18aimre_4f # FPP. MC looking at Lauren, Imre looking at Lauren, Lauren looking at MC, Lauren 
             with dissolve
 
@@ -1312,6 +1324,7 @@ label v15s18a_ImreLauren:
         "Lie": 
             $ add_point(KCT.TROUBLEMAKER)
             $ v15s18a_lie = True
+            
             scene v15s18aimre_6a
             with dissolve
 
@@ -1550,6 +1563,7 @@ label v15s18a_Riley:
     menu:
         "Dance":
             $ add_point(KCT.TROUBLEMAKER)
+            
             scene v15s18ariley_2f
             with dissolve
 
@@ -1573,6 +1587,8 @@ label v15s18a_Riley:
             ri "You've got some sexy moves there, [name]."
 
         "Don't dance":
+            $ add_point(KCT.BRO)
+            
             scene v15s18ariley_2i
             with dissolve
 
@@ -1640,6 +1656,8 @@ label v15s18a_Riley:
 
     menu:
         "No, it's fine":
+            $ add_point(KCT.BOYFRIEND)
+            
             scene v15s18ariley_2i
             with dissolve
 
@@ -1673,6 +1691,8 @@ label v15s18a_Riley:
             ri "Okay, sure thing."
 
         "Yeah, I do":
+            $ add_point(KCT.TROUBLEMAKER)
+            
             scene v15s18ariley_2i
             with dissolve
 
@@ -2144,6 +2164,7 @@ label v15s18a_ChrisAmber:
 
             "Mention the list":
                 $ add_point(KCT.TROUBLEMAKER)
+                
                 scene v15s18aamber_3d # FPP. MC sitting on the stool next to Amber, MC looking at Amber, Amber back to looking at MC's face, Amber smirking, mouth closed.
                 with dissolve
             

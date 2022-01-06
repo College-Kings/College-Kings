@@ -32,6 +32,8 @@ label v15s20:
     if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         menu:
             "Ask for a kiss":
+                $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s20_5 # FPP. MC sitting next to Chloe. Chloe looking at MC, MC looking at Chloe, Chloe slight smile, mouth closed.
                 with dissolve
 
@@ -251,6 +253,7 @@ label v15s20:
 
     menu:
         "Take the notes":
+            $ add_point(KCT.TROUBLEMAKER)
             $ v15_took_notes = True
 
             scene v15s20_5
@@ -269,6 +272,8 @@ label v15s20:
             u "Got it."
 
         "Don't take the notes":
+            $ add_point(KCT.BOYFRIEND)
+            
             hide screen v15_teacher_brief_icon
 
             scene v15s20_5

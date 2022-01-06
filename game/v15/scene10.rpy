@@ -327,6 +327,8 @@ label v15s10:
 
                 menu:
                     "Refuse offer":
+                        $ add_point(KCT.TROUBLEMAKER)
+                        
                         scene v15s10_12f # FPP. same as v15s10_12e, Man not holding cash anymore, neutral face, mouth closed.
                         with dissolve
 
@@ -358,6 +360,8 @@ label v15s10:
                         li "Yeah. We'll take it. We'll take anything we can get at this point."
 
                     "Accept offer":
+                        $ add_point(KCT.BRO)
+                        
                         scene v15s10_14
                         with dissolve
 
@@ -633,6 +637,8 @@ label v15s10:
             
             menu:
                 "Refuse offer":
+                    $ add_point(KCT.TROUBLEMAKER)
+                    
                     scene v15s10_12f
                     with dissolve
 
@@ -679,6 +685,8 @@ label v15s10:
                     u "(What a clown.)"
 
                 "Accept offer":
+                    $ add_point(KCT.BRO)
+                    
                     scene v15s10_12h
                     with dissolve
 
@@ -686,8 +694,6 @@ label v15s10:
 
             scene v15s10_15 
             with dissolve
-
-            label test:
 
             pause 0.75
 
@@ -1024,6 +1030,8 @@ label v15s10:
 
                 menu:
                     "Refuse offer":
+                        $ add_point(KCT.TROUBLEMAKER)
+                        
                         scene v15s10_femalebuyer_4i # FPP. Same as v15s10_femalebuyer_4h, the lady with cash in her hand still, looking at MC, neutral face, mouth closed.
                         with dissolve
 
@@ -1045,6 +1053,8 @@ label v15s10:
                         li "Let's just take it. It's a fair price, I guess."
 
                     "Accept offer":
+                        $ add_point(KCT.BRO)
+                        
                         scene v15s10_femalebuyer_4k # FPP. Same as v15s10_femalebuyer_4j, the lady with cash in her hand, slight smile, mouth closed.
                         with dissolve
 
@@ -1193,6 +1203,8 @@ label v15s10:
             # -[CarTotal] pops up on screen based on the payout sums-
             menu:
                 "Refuse offer":
+                    $ add_point(KCT.TROUBLEMAKER)
+                    
                     scene v15s10_femalebuyer_4i
                     with dissolve
 
@@ -1224,6 +1236,8 @@ label v15s10:
                     li "Yeah, it's going to a good owner, and we need whatever we can get."
 
                 "Accept offer":
+                    $ add_point(KCT.BRO)
+                    
                     scene v15s10_femalebuyer_4k
                     with dissolve
         

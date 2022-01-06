@@ -42,6 +42,7 @@ label v15s33:
     menu:
         "Be brutally honest":
             $ add_point(KCT.TROUBLEMAKER)
+            
             u "To be honest, not really. I'm an only child."
 
             scene v15s33_3a
@@ -58,6 +59,7 @@ label v15s33:
             
         "Reassure her":
             $ add_point(KCT.BOYFRIEND)
+            
             u "Try not to worry. You can talk to me about it whenever you want."
 
             u "If not, I have a bunch of awful jokes that are guaranteed to cheer you up. *Laughs*"
@@ -328,6 +330,7 @@ label v15s33:
 
         "Pretend to take it":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s33_13
             with dissolve
 
@@ -397,6 +400,7 @@ label v15s33:
 
         "Don't flirt":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s33_12d
             with dissolve
 
@@ -672,6 +676,7 @@ label v15s33:
 
         "Pretend to take it":
             $ add_point(KCT.TROUBLEMAKER)
+            
             scene v15s33_13a
             with dissolve
 
@@ -835,6 +840,7 @@ label v15s33:
     menu:
         "Blue cheese?":
             $ add_point(KCT.TROUBLEMAKER)
+            
             u "Blue cheese? I'm pretty sure that if your cheese is blue, you shouldn't-"
 
             scene v15s33_28b
@@ -861,6 +867,7 @@ label v15s33:
 
         "Blue cheese is great!":
             $ add_point(KCT.BRO)
+            
             u "Are you kidding? Blue cheese is great. It's like, top tier of all cheeses."
 
             scene v15s33_28b
@@ -938,6 +945,7 @@ label v15s33:
 
         "Don't eat it":
             $ add_point(KCT.TROUBLEMAKER)
+            
             u "(Not a fucking chance.)"
 
             u "You know what, uh... Thanks, but I'm not feeling hungry right now."
@@ -1174,6 +1182,7 @@ label v15s33:
     menu:
         "Push it away":
             $ add_point(KCT.BOYFRIEND)
+            
             u "(This is definitely not a good idea, haha. I'm eating lunch with her family for fucks sake...)"
 
             scene v15s33_40a # FPP. Show MC's hand gently pushing Naomi's foot away.
@@ -1188,6 +1197,7 @@ label v15s33:
 
         "Let her continue":
             $ add_point(KCT.TROUBLEMAKER)
+            
             u "(No harm in enjoying it, right? Ha... *Moans*)"
 
     scene v15s33_39a # FPP. MC looking at Naomi, Naomi looking at MC, Naomi winking at MC and biting her lip.
@@ -1330,6 +1340,7 @@ label v15s33:
     menu:
         "Refuse":
             $ add_point(KCT.BOYFRIEND)
+            
             u "Naomi, no..."
 
             scene v15s33_46d # FPP. Naomi steps back her hand no longer on MC's cheek, MC looking at Naomi, Naomi looking at MC, Naomi confused, mouth open.
@@ -1879,6 +1890,8 @@ label v15s33:
 
         menu:
             "Stay silent":
+                $ add_point(KCT.BRO)
+                
                 u "(I don't feel good about talking to her right now...) *Sighs*"
 
                 scene v15s33_57e
@@ -1887,6 +1900,8 @@ label v15s33:
                 na "I'll take that as a no. *Laughs*"
 
             "Agree":
+                $ add_point(KCT.BOYFRIEND)
+                
                 u "Yeah, it's supposed to be the best day of your life. Right?"
 
                 scene v15s33_57e
@@ -1929,6 +1944,8 @@ label v15s33:
 
         menu:
             "Hopefully":
+                $ add_point(KCT.TROUBLEMAKER)
+                
                 u "I mean, hopefully."
 
                 scene v15s33_57a
@@ -1949,6 +1966,8 @@ label v15s33:
                 pause 0.75
 
             "It'll be us":
+                $ add_point(KCT.BOYFRIEND)
+                
                 u "One day it'll be us."
 
                 if aubrey.relationship.value >= Relationship.FWB.value:
@@ -2209,7 +2228,9 @@ label v15s33:
     with dissolve
 
     menu:
-        "Stay out of it": 
+        "Stay out of it":
+            $ add_point(KCT.BRO)
+            
             u "(It's probably best if I don't get involved. *Sighs* That's so fucked.)"
 
             play sound "sounds/capture.mp3"
@@ -2230,6 +2251,7 @@ label v15s33:
             pause 0.75
 
         "Take the photo":
+            $ add_point(KCT.TROUBLEMAKER)
             $ v15s33_take_photo = True
 
             u "*Scoffs*"
@@ -2329,12 +2351,14 @@ label v15s33:
         menu:
             "Give her space":
                 $ add_point(KCT.BRO)
+                
                 u "I'm sorry. I'll go back inside. Just let me know if you want to talk, okay?"
 
                 jump v15s34
 
             "Try to talk":
                 $ add_point(KCT.TROUBLEMAKER)
+                
                 scene v15s33_75
                 with dissolve
 
