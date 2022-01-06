@@ -1870,11 +1870,10 @@ label v15s18c_autumn_amber:
                     jump v15s18c_autumn_kiss
 
                 else:
-                    call screen kct_popup(required_kct="loyal")
-                
                     scene v15s18c_auam_5d
                     with dissolve
 
+                    call screen kct_popup(required_kct="loyal")
                     aut "You just nothing. You're lucky I won't tell Lauren that you even asked me."
 
                     scene v15s18c_auam_5e
@@ -1963,10 +1962,10 @@ label v15s18c_autumn_amber:
                     u "(Well, that could've gone worse...)"
                 
                 else:
-                    call screen kct_popup(required_kct="loyal")
                     scene v15s18c_auam_5f
                     with dissolve
 
+                    call screen kct_popup(required_kct="loyal")
                     aut "Hmm... I don't-"
 
                     scene v15s18c_auam_5g

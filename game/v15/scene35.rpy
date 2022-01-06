@@ -594,7 +594,6 @@ label v15s35:
 
         # -if MC accepted blowjob from Naomi and Aubrey is mad with him then she should be more unplayful, not smiling at his jokes. But if he didn't do the blowjob and they're on good terms, especially if they're RS, she will be laughing and playing along with him.
 
-
         label v15_kill_easter_bunny:
             scene v15s35_7i # FPP. same as v15s35_7h Lindsey is looking at Autumn, still a slight smile, mouth is still open
             with dissolve
