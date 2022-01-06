@@ -3,7 +3,7 @@ screen disclaimer():
 
     imagebutton:
         idle "gui/splashscreen/confirm_idle.png"
-        action Return()
+        action [SetVariable("persistent.confirm_18", True), Return()]
         xalign 0.5
         ypos 551
 
@@ -21,8 +21,9 @@ label splashscreen:
     with dissolve
     pause 2
 
-    call screen disclaimer
-    with dissolve
+    if not persistent.confirm_18:
+        call screen disclaimer
+        with dissolve
 
     scene black
     with dissolve

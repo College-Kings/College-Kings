@@ -515,7 +515,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
 
         u "Well, thanks! But I'm handsome every day, so..."
 
-        scene v15s32_8p
+        scene v15s32_8q
         with dissolve
 
         ri "Hmm, depends on who you ask, doesn't it?"

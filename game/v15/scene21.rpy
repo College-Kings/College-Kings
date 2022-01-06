@@ -21,7 +21,7 @@ label v15s21:
 
         cl "Here he is."
 
-        $ opened_count = 0 # reset counter
+        $ renpy.get_screen("v15_teacher_brief_icon").scope["opened_count"] = 0 # reset counter
         scene v15s21_3 # FPP. Mr. Lee approaches them slight smile mouth open, Chloe and MC stand up, Chloe slight smile, mouth closed
         with dissolve
 
@@ -228,7 +228,7 @@ label v15s21:
         scene v15s21_6a
         with dissolve
 
-        u "Here we go..."
+        u "(Here we go...)"
 
         if v15_took_notes:
             scene v15s21_6a
@@ -592,7 +592,7 @@ label v15s21:
 
         u "*Sighs* Okay, is there anything else?"
 
-        if v15_took_notes and opened_count >= 5: # -if TookNotes and clicks on the journal five times- #
+        if v15_took_notes and renpy.get_screen("v15_teacher_brief_icon").scope["opened_count"] >= 5: # -if TookNotes and clicks on the journal five times- #
             scene v15s21_6c
             with dissolve
 
@@ -686,9 +686,9 @@ label v15s21:
 
             u "Yeah, I think so. But, also..."
 
-            show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
-
             u "I just wanted to say that, a wise man once taught me about the importance of personal responsibility."
+
+            show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
 
             scene v15s21_6s
             with dissolve
@@ -700,32 +700,32 @@ label v15s21:
 
             cl "*Chuckles* Thank you, [name]."
 
-            scene v15s21_6r
+            scene v15s21_6s
             with dissolve
 
             lee "Haha, very good, [name]."
 
-            scene v15s21_6s
+            scene v15s21_6r
             with dissolve
 
             lee "I might be inclined to question the motives of your flattery, but I can see in your eyes that you're being sincere."
 
-            scene v15s21_6r
+            scene v15s21_6s
             with dissolve
 
             u "*Laughs*"
-
-            scene v15s21_6s
+            
+            scene v15s21_6r
             with dissolve
 
             lee "You're a good student when you want to be."
 
-            scene v15s21_6r
+            scene v15s21_6s
             with dissolve
 
             u "Honestly, the conversation we had in London has stuck with me. I appreciate it."
 
-            scene v15s21_6s
+            scene v15s21_6r
             with dissolve
 
             lee "I'm happy to hear it."
@@ -749,9 +749,6 @@ label v15s21:
         with dissolve
 
         cl "Yeah. We've covered all the main points that we wanted to discuss."
-
-        scene v15s21_7c
-        with dissolve
 
         cl "I just have a paper here for you to sign, if you're willing to support our plans."
 
@@ -903,9 +900,6 @@ label v15s21:
 
             lee "On this occasion, no. I'm sorry to say I must decline."
 
-            scene v15s21_6h
-            with dissolve
-
             lee "But thank you for the meeting. It has been enlightening at the very least."
 
             scene v15s21_6t # FPP. same as v15s21_6h Mr. Lee stands up from his seat, still no expression, mouth is still open
@@ -940,7 +934,7 @@ label v15s21:
 
         cl "Umm, okay. What is it?"
 
-        scene v15s21_6a
+        scene v15s21_6
         with dissolve
 
         lee "I advise that you adjust your proposal, offering to dissolve the President's scholarship."
@@ -1121,7 +1115,7 @@ label v15s21:
 
             u "(Don't think about sex, don't think about sex, don't think abou-)"
 
-        $ opened_count = 0 # reset counter
+        $ renpy.get_screen("v15_teacher_brief_icon").scope["opened_count"] = 0 # reset counter
         scene v15s21_10b # FPP. same as v15s21_10a Ms. Rose looking at Chloe slight smile mouth open, Chloe looking at Ms. Rose slight smile mouth closed
         with dissolve
 
@@ -1211,8 +1205,8 @@ label v15s21:
                 $ add_point(KCT.TROUBLEMAKER)
                 $ v15s21_meeting_points -= 1
 
-                scene v15s21_13a
-                with dissolve
+                scene v15s21_13b
+                #with dissolve
 
                 u "I'm sure you're aware of the issues between Chloe and Nora at the moment, but-"
 
@@ -1252,7 +1246,7 @@ label v15s21:
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
 
                 scene v15s21_13b
-                with dissolve
+                #with dissolve
 
                 u "(I'll keep quiet for now. It's best to not start out on the wrong foot.)"
 
@@ -1428,13 +1422,10 @@ label v15s21:
 
         ro "How do you think the other sororities and frats will react, if they hear the Chicks are getting special treatment with reduced tuition fees?"
 
-        scene v15s21_7l
+        scene v15s21_13b
         with dissolve
 
         u "Well..."
-
-        scene v15s21_7f
-        with dissolve
 
         menu:
             "They'll be motivated":
@@ -1445,7 +1436,7 @@ label v15s21:
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
 
                 scene v15s21_13b
-                with dissolve
+                #with dissolve
 
                 u "It'd be like lighting a match underneath them."
 
@@ -1500,7 +1491,7 @@ label v15s21:
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
 
                 scene v15s21_13b
-                with dissolve
+                #with dissolve
 
                 u "They can get over it. With all due respect, just because they didn't think of the idea, doesn't mean the idea should get turned down."
 
@@ -1549,7 +1540,7 @@ label v15s21:
 
         cl "But that's not the plan that we-"
 
-        scene v15s21_7l
+        scene v15s21_7g
         with dissolve
 
         ro "Right, but what's the phrase? \"All for one and one for all\"?"
@@ -1635,8 +1626,8 @@ label v15s21:
 
         u "Okay. Well..."
 
-        if v15_took_notes and opened_count >= 5: # -if TookNotes and clicks on the journal five times-:
-            scene v15s21_13k
+        if v15_took_notes and renpy.get_screen("v15_teacher_brief_icon").scope["opened_count"] >= 5: # -if TookNotes and clicks on the journal five times-:
+            scene v15s21_13n
             with dissolve
 
             $ grant_achievement("too_much_information")
@@ -1647,7 +1638,7 @@ label v15s21:
 
             u "(Oh, shit...) Sorry, Ms. Rose."
 
-            scene v15s21_13k
+            scene v15s21_13n
             with dissolve
 
             ro "Just focus on the job at hand, young man."

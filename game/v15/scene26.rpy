@@ -303,6 +303,9 @@ label v15s26:
         "Do we have to?":
             $ add_point(KCT.BRO)
             
+            scene v15s26_15b
+            #with dissolve
+
             u "Do we really have to watch it?"
 
             scene v15s26_15a
@@ -712,6 +715,9 @@ label v15s26:
             "Side with Aubrey": # -event2 Side with Aubrey, Pro-Monogamy (No variable change)
                 $ add_point(KCT.BOYFRIEND)
                 
+                scene v15s26_15b
+                #with dissolve
+
                 u "I'm with Aubrey on this one..."
 
                 scene v15s26_15g # FPP Same angle as 15, Riley looking away with a sad expression, mouth closed
@@ -903,6 +909,9 @@ label v15s26:
 
             "Side with Aubrey, pro-monogamy": # -if Side with Aubrey, Pro-Monogamy
                 $ add_point(KCT.BOYFRIEND)
+
+                scene v15s26_15b
+                #with dissolve
 
                 u "I agree with Aubrey."
 
