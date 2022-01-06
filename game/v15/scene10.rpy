@@ -309,6 +309,7 @@ label v15s10:
 
             if v15s10_buyer_max_amount < v14s48_car_price:
                 $ lindsey_board.money += v15s10_buyer_max_amount
+                $ v15_car_sold_price = v15s10_buyer_max_amount
 
                 male_buyer "$[v15s10_buyer_max_amount] is the best I can do."
 
@@ -369,6 +370,7 @@ label v15s10:
 
             else:
                 $ lindsey_board.money += v14s48_car_price
+                $ v15_car_sold_price = v14s48_car_price
 
                 scene v15s10_12d
                 #with dissolve
@@ -575,6 +577,7 @@ label v15s10:
             
         else:
             $ lindsey_board.money += v14s48_car_price
+            $ v15_car_sold_price = v14s48_car_price
         
             scene v15s10_12b
             with dissolve
@@ -1025,6 +1028,7 @@ label v15s10:
             
             if v15s10_buyer_max_amount < v14s48_car_price:
                 $ lindsey_board.money += v15s10_buyer_max_amount
+                $ v15_car_sold_price = v15s10_buyer_max_amount
 
                 female_buyer "So, I can offer $[v15s10_buyer_max_amount]."
                 
@@ -1070,6 +1074,7 @@ label v15s10:
                
             else:
                 $ lindsey_board.money += v14s48_car_price
+                $ v15_car_sold_price = v14s48_car_price
                 
                 scene v15s10_femalebuyer_4e
                 #with dissolve
@@ -1180,6 +1185,7 @@ label v15s10:
 
         else:
             $ lindsey_board.money += v14s48_car_price
+            $ v15_car_sold_price = v14s48_car_price
         
             scene v15s10_femalebuyer_4e
             with dissolve
