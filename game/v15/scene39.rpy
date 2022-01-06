@@ -808,7 +808,7 @@ label v15s39:
                                     li "*Drunk* Without the President's scholarship, she'd have to sell all of that plastic back to the surgeons... *Laughs*"
 
                                     if v15_lindsey_inviteseb:
-                                        scene v15s39_7d
+                                        scene v15s39_7f
                                         with dissolve
 
                                         se "Li-lindsey..."
