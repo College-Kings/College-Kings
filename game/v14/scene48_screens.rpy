@@ -3,7 +3,6 @@ init python:
         LIE = 1
         TRUTH = 2
 
-
 screen iBuy():
     zorder 100
 

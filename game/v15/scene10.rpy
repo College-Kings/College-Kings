@@ -370,6 +370,9 @@ label v15s10:
             else:
                 $ lindsey_board.money += v14s48_car_price
 
+                scene v15s10_12d
+                #with dissolve
+
                 male_buyer "I'll pay you the $[v14s48_car_price]."
 
                 scene v15s10_12e # FPP. Same as v15s10_12d, Man holding cash up, slight smile, mouth closed.
@@ -573,7 +576,7 @@ label v15s10:
         else:
             $ lindsey_board.money += v14s48_car_price
         
-            scene v15s10_12a
+            scene v15s10_12b
             with dissolve
 
             male_buyer "Damn, son... You weren't lying in the advert about this thing needing some TLC. *Laughs*"
@@ -613,17 +616,22 @@ label v15s10:
 
             male_buyer "You have to be a visionary genius to see the potential in a car like this, good for you, I am one."
 
-            scene v15s10_12h
+            scene v15s10_12f
             with dissolve
 
             u "(Wow, ego much?)"
 
             u "Ha! Lucky for us! So, let's talk about the price."
 
-            scene v15s10_12e
+            scene v15s10_12g
             with dissolve
 
             male_buyer "$[v14s48_car_price] is my offer based on everything I'm seeing here."
+
+            scene v15s10_12e
+            with dissolve
+
+            pause 0.75
 
             scene v15s10_13g # FPP. Same as v15s10_13f, Lindsey rolling her eyes, unamused face, mouth closed.
             with dissolve
@@ -687,7 +695,7 @@ label v15s10:
                 "Accept offer":
                     $ add_point(KCT.BRO)
                     
-                    scene v15s10_12h
+                    scene v15s10_12a
                     with dissolve
 
                     u "Okay, yeah. That's a good deal, great."
@@ -1063,6 +1071,9 @@ label v15s10:
             else:
                 $ lindsey_board.money += v14s48_car_price
                 
+                scene v15s10_femalebuyer_4e
+                #with dissolve
+
                 female_buyer "I'll pay you the $[v14s48_car_price] you asked."
 
                 scene v15s10_femalebuyer_4h # FPP. Same as v15s10_femalebuyer_4g, The lady holding up cash, looking at MC, slight smile, mouth closed. # -[CarTotal] pops up on screen based on the pay out sums(if lied, total they can receive is minus200$ off the car's worth price)- # Third times a charm. Hi Oscar :D

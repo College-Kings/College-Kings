@@ -1084,6 +1084,8 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_34 # FPP. MC watches as Aubrey walks out of the room, she looks back at him over her shoulders, sexy expression, winking, mouth closed
     with dissolve
 
+    $ sceneList.add("v15_autumn")
+
     $ checklist[4].complete = True
     u "*Exhales* (Damn, what a night so far.)"
 
@@ -2093,6 +2095,8 @@ label v15s18c_autumn_kiss:
     scene v15s18c_auam_10a
     with dissolve
 
+    $ sceneList.add("v15_autumn")
+
     $ checklist[5].complete = True
     u "*Laughs* Okay."
 
@@ -2480,6 +2484,8 @@ label v15s18c_chris_penelope:
 
                 scene v15s18c_chpe_21a # FPP. Same as v15s18c_chpe_21, Penelope smiling, mouth closed
                 with dissolve
+
+                $ sceneList.add("v15_penelope")
 
                 $ checklist[1].complete = True
                 u "After you."

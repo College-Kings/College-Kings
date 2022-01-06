@@ -211,11 +211,14 @@ label v15s1:
 
         imre "Dammit man, this feels just like when Ross and Rachel broke up..."
 
-        scene v15s1_3f
+        scene v15s1_3m
         with dissolve
 
         menu:
             "They were on a break":
+                scene v15s1_3m
+                #with dissolve
+
                 # $ mc.quirks["pop_culture"] = True # Being re-evaluated
                 $ add_point(KCT.BRO)
 
@@ -232,6 +235,8 @@ label v15s1:
                 u "Haha."
 
             "Who?":
+                scene v15s1_3m
+                #with dissolve
                 # $ mc.quirks["boomer"] = True # Being re-evaluated
                 $ add_point(KCT.TROUBLEMAKER)
 
@@ -268,6 +273,8 @@ label v15s1:
 
         menu:
             "Of course I know":
+                scene v15s1_3i
+                #with dissolve
                 # $ mc.quirks["pop_culture"] = True # Being re-evaluated
                 $ add_point(KCT.BRO)
 
@@ -289,6 +296,8 @@ label v15s1:
                 imre "*Sighs*"
 
             "A monkey?":
+                scene v15s1_3i
+                #with dissolve
                 # $ mc.quirks["boomer"] = True # Being re-evaluated
                 $ add_point(KCT.TROUBLEMAKER)
 

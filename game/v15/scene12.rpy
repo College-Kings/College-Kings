@@ -273,14 +273,14 @@ label v15s12:
                     $ add_point(KCT.BOYFRIEND) # TODO: KCT and character points 
                     $ chloe.points += 1
                     
-                    scene v15s12_5a
+                    scene v15s12_5
                     with dissolve
                     
                     u "Eh, to be honest... It's in the past and... it should just be left there, haha."
                     
                     u "I don't want to know about what problems she had with her ex-boyfriends unless she tells me of course."
 
-                    scene v15s12_5
+                    scene v15s12_5a
                     with dissolve
 
                     li "Yeah, fair enough, I respect that. That's why I wanted to ask." 
@@ -349,7 +349,7 @@ label v15s12:
 
                 u "Linds..."
 
-                scene v15s12_6c
+                scene v15s12_6d
                 with dissolve
 
                 li "Let's move on. We're good. I promise."
@@ -568,13 +568,13 @@ label v15s12:
         li "*Laughs* Exactly."
 
     else: # -if chose Host an exclusive VIP night
-        scene v15s12_8a
+        scene v15s12_8b
         with dissolve
         
         u "It might be more money that we're taking from the budget..."
         u "But there's no chance they'll vote for Chloe after you roll up in a limo to take them out for the night."
 
-        scene v15s12_8b
+        scene v15s12_8a
         with dissolve
 
         li "Haha, that's so true. It's going to be epic!" 

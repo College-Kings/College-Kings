@@ -4,6 +4,8 @@
 # Time: Night 
 
 label v15s18e:
+    $ sceneList.add("v15_lauren")
+
     play sound "sounds/dooropen.mp3"
 
     scene v15s18e_1 # TPP. Show MC and Lauren entering Lauren's room, her door open, Both slight smile, mouth closed.

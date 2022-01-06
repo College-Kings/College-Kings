@@ -608,6 +608,9 @@ label v15s6:
             jump v15s8 # -Transition to Scene 8-
 
         else: # -if MC is not helping Chloe
+            scene v15s7_8b
+            #with dissolve
+        
             cl "I should go get started on my next plan."
 
             scene v15s7_8c
