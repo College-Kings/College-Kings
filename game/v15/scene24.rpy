@@ -1342,6 +1342,9 @@ label v15s24:
                 li "Can't wait. *Laughs*"
 
             "Is that a good thing?":
+                scene v15s24_5
+                #with dissolve
+
                 u "Is that a good thing?"
 
                 scene v15s24_5a

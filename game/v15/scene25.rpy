@@ -253,9 +253,8 @@ label v15s25:
             u "It's for my friend Lindsey, you see? I'm just trying to do everything I can to help her out."
 
             menu: 
-                "She deserves to be president":
-
-                    u "She really deserves to be president, she could really elevate the lives of everyone in her sorority."
+                "She deserves to be President":
+                    u "She really deserves to be President, she could really elevate the lives of everyone in her sorority."
 
                     scene v15s25_7
                     with dissolve
@@ -267,6 +266,9 @@ label v15s25:
                 "Her mom passed away recently":
                     $ v15_lindsey_alcohol = True
            
+                    scene v15s25_7a
+                    #with dissolve
+
                     u "Her mom passed away recently, and she's putting so much effort into her presidential campaign."
 
                     scene v15s25_7f # TPP. Split Screen. First side, MC on the phone in the chair, slight smile, mouth open. Second side, Booking admin at her desk, slight frown, mouth closed.
@@ -341,6 +343,9 @@ label v15s25:
 
         "Disagree with the policy":
             $ add_point(KCT.TROUBLEMAKER)
+
+            scene v15s25_7a
+            #with dissolve
 
             u "I think you should check state legislation about the legal drinking age."
 
