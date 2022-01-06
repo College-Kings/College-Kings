@@ -1960,6 +1960,8 @@ label v15s18a_Riley:
             scene v15s18ariley_18a # FPP. The door closed and Riley gone
             with dissolve
 
+            $ sceneList.add("v15_riley")
+
             if scene_fromgame:
                 $ checklist[3].complete = True
 
@@ -2397,6 +2399,8 @@ label v15s18a_ChrisAmber:
 
                     scene v15s18aamber_12 # FPP. MC watching Amber walking back in the house.
                     with dissolve
+
+                    $ sceneList.add("v18_amber")
 
                     if scene_fromgame:
                         $ checklist[2].complete = True
