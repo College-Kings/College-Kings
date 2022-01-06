@@ -672,7 +672,6 @@ label v15s39:
                     menu (fail_label="v15_change_subject"): 
                         "Change subject":
                             $ add_point(KCT.BRO)
-                            $ v15_stay_on_topic = False
 
                             if hangOutWithLindsey:
                                 $ add_point(KCT.BOYFRIEND)
@@ -801,7 +800,6 @@ label v15s39:
                         menu (fail_label="v15_stop_lindsey"): 
                             "Stop Lindsey":
                                 $ add_point(KCT.BRO)
-                                $ v15_say_nothing = False
 
                                 if hangOutWithLindsey:
                                     $ add_point(KCT.BOYFRIEND)
