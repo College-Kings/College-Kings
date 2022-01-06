@@ -1190,23 +1190,19 @@ label v15s39:
             scene v15s39_24 # TPP. Show Sebastian being a gentlemen holding Autumns hand and helping Autumn into the Limo looking at Autumn slight smile mouth open, Autumn looking back at Sebastian slight smile mouth closed, Mc is taking his phone out of his pocket looking at his phone slight smile mouth is closed
             with dissolve
 
-            u "(Just need to send the recording to Chloe... Hopefully she can find something to do with it.)"
-
-            scene v15s39_25 # FPP. Close up shot of Mc's phone it shows Chloe as the person he has messaged, and a "message sent" text appears on his phone
-            with dissolve
-
-            pause 0.75
-
         else:
             scene v15s39_24a # TPP. same as v15s39_21 Show Autumn getting into the Limo by herself her back is turned to Grayson, Grayson is checking out Autumns ass with a smirk on his face, MC is still taking his phone out of his pocket looking at his phone slight smile mouth is closed
             with dissolve
 
-            u "(Just need to send the recording to Chloe... Hopefully she can find something to do with it.)"
+        u "(Just need to send the recording to Chloe... Hopefully she can find something to do with it.)"
 
-            scene v15s39_25
-            with dissolve
+        if v15_lindsey_recording == 0:
+            u "(But I don't really think there's a lot she can use in here...)"
 
-            pause 0.75
+        scene v15s39_25
+        with dissolve
+
+        pause 0.75
 
     scene v15s39_26 # TPP. Show Mc getting into the Limo slight smile mouth is closed, no need to show anyone else.
     with fade
