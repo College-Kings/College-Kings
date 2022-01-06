@@ -50,6 +50,9 @@ label v15s2:
 
     menu:
         "We were just talking":
+            scene v15s2_3a
+            #with dissolve
+
             u "T-talking! W-we were just talking!"
 
             scene v15s2_3
@@ -58,6 +61,9 @@ label v15s2:
             ca "And drinking! I know she drinks when I'm not around."
 
         "None of your business":
+            scene v15s2_3a
+            #with dissolve
+
             u "None of your business, Cameron."
 
             u "So lay off."
@@ -195,48 +201,48 @@ label v15s2:
         ca "Yeah, catch you later, [name]."
 
     else:
-        scene v15s2_3
+        scene v15s2_3a
         with dissolve
         
         u "I'm just letting her be who she is!"
 
         u "Do you really think you can stop her from doing what she wants all the time?"
 
-        scene v15s2_3a
+        scene v15s2_3
         with dissolve
 
         ca "Who the fuck do you think you're talking to?! I've known her all my life!"
 
         ca "That's not who she is, she's-"
 
-        scene v15s2_3
+        scene v15s2_3a
         with dissolve
 
         u "So, what are you going to do about it? Huh?! You can't be her prison guard forever."
 
-        scene v15s2_3a
+        scene v15s2_3
         with dissolve
 
         ca "Keep talking to me like that, [name], and I'll knock your teeth out."
 
-        scene v15s2_3
+        scene v15s2_3a
         with dissolve
 
         u "I accept her for who she is, Cameron. She's not a fucking kid anymore."
 
         u "You need to let her live her life the way she wants to."
 
-        scene v15s2_3a
+        scene v15s2_3
         with dissolve
 
         ca "Stop... talking..."
 
-        scene v15s2_3
+        scene v15s2_3a
         with dissolve
 
         u "One day, she may decide to live her life a different way, but that will be her choice. Not yours. Not mine. Hers."
 
-        scene v15s2_3a
+        scene v15s2_3
         with dissolve
 
         ca "Stay the fuck out of it, [name]!"

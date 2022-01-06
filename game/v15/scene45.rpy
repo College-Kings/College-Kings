@@ -35,18 +35,18 @@ label v15s45:
 
     u "You've secured a mole on the inside?"
 
-    scene v15s45_2a
+    scene v15s45_2
     with dissolve
 
     am "You haven't seen nothing yet, buster!"
 
     scene v15s45_1
-    with fade
+    with dissolve
 
     pause 0.75
 
     scene v15s45_3 # TPP. MC and Amber walking up to the Chicks front door, no expressions, mouths are closed, looking directly ahead
-    with dissolve
+    with fade
 
     pause 0.75
 
@@ -200,7 +200,7 @@ label v15s45:
     cl "I guess I've got a few minutes to spare."
 
     scene v15s45_6 # FPP. Chloe Amber and Mc enter the Chicks living room, Chloe sit's down and looks at Mc and Amber, Amber and Mc do not sit down and instead stand in front of Chloe, have a chair close by to Mc will be used in a future render, Amber and Mc are looking at Chloe, all of them have no expressions, all of their mouths are closed
-    with dissolve
+    with fade
 
     pause 0.75
 
@@ -284,7 +284,7 @@ label v15s45:
                 $ add_point(KCT.BRO)
                 
             scene v15s45_6a # FPP. MC kicks the nearest chair, with a forceful expression, Amber has a slight smile looking at Mc mouth is closed, Chloe has a shocked expression, looking at Mc
-            with dissolve
+            with hpunch
 
             u "That's what I think about sitting down!"
 
@@ -310,7 +310,7 @@ label v15s45:
 
     pause 0.75
 
-    scene v15s45_7a
+    scene v15s45_7
     with dissolve
 
     cl "I don't have much time for this, though so-"
@@ -743,7 +743,7 @@ label v15s45:
             else:
                 $ add_point(KCT.TROUBLEMAKER)
                         
-            scene v15s45_7
+            scene v15s45_7a
             with dissolve
 
             u "So, we have it on good authority that Nora likes rubbing sticks in the wilderness."
@@ -842,7 +842,7 @@ label v15s45:
 
             cl "Well..."
 
-            scene v15s45_7a
+            scene v15s45_7
             with dissolve
 
             cl "This was a long time ago, but I remember her telling me about her boyfriend before Chris. They seemed to stay in touch."
