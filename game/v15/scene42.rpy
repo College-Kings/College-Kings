@@ -215,6 +215,7 @@ label v15s42:
             "Flirt":
                 $ add_point(KCT.BOYFRIEND)
                 $ v15s42_flirt = True
+                
                 u "Sobriety looks great on you."
 
                 u "But then again, everything looks great on you so..."
@@ -236,6 +237,10 @@ label v15s42:
 
             "Friendly compliment":
                 $ add_point(KCT.BRO)
+
+                scene v15s42_7a
+                #with dissolve
+
                 u "Sobriety looks great on you, not gonna lie."
 
                 scene v15s42_7
