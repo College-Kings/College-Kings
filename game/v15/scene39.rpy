@@ -38,13 +38,7 @@ label v15s39:
     barworker "So happy to see you all tonight. Welcome to the Mango Lounge VIP area!"
 
     if v15_lindsey_alcohol:
-        scene v15s39_5
-        with dissolve
-
         barworker "We have a full range of drinks for you tonight, from beer to prosecco to tequila, even cocktails, all included in your VIP party package."
-
-        scene v15s39_5
-        with dissolve
 
         barworker "Just give me a few minutes and I'll be back with your glasses."
 
@@ -281,14 +275,8 @@ label v15s39:
 
         pause 0.75
 
-        if v15_lindsey_alcohol:
-            scene v15s39_3d # same as v15s39_3a render is exactly the same except instead of fancy glasses they all have shot glasses
-            with dissolve
-
-            pause 0.75
-
     scene v15s39_8
-    with dissolve
+    with fade
 
     u "(Tonight seems to be going well, but Lindsey hasn't mentioned anything about getting their support...)"
 
@@ -499,9 +487,6 @@ label v15s39:
 
     li "I want to create an environment where we can rely on each other."
 
-    scene v15s39_8f
-    with dissolve
-
     li "To me, supporting other sororities benefits everyone, and that's why we're all here, right?"
 
     scene v15s39_8c
@@ -690,6 +675,7 @@ label v15s39:
                         "Stay on topic":
                             $ add_point(KCT.TROUBLEMAKER)
                             $ v15_stay_on_topic = True
+                            $ v15_lindsey_recording = 2
 
                             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                 $ add_point(KCT.BOYFRIEND)
@@ -897,10 +883,31 @@ label v15s39:
                     if hangOutWithLindsey:
                         $ add_point(KCT.BOYFRIEND)
 
-                    scene v15s39_8c
-                    with dissolve
+                    scene v15s39_8e
+                    #with dissolve
 
                     u "(On second thought, that's just not my style...)"
+
+                    scene v15s39_12d
+                    with dissolve
+
+                    au "I think we've talked enough for now... Can we go dance?"
+
+                    scene v15s39_11g # FPP. same as v15s39_11 Autumn is looking at Aubrey, still a slight smile, mouth is still open
+                    with dissolve
+
+                    aut "I'm so ready for a dance, yes!"
+
+                    scene v15s39_8g
+                    with dissolve
+
+                    li "Okay, let's groove!"
+
+                    if not v15_lindsey_inviteseb:
+                        scene v15s39_6i # FPP. same as v15s39_6g Grayson has a drink in each hand, still looking at Lindsey, still a full smile
+                        with dissolve
+
+                        gr "Don't be surprised if there's no drinks left when you get back, haha."
 
         else:
             scene v15s39_8e
@@ -967,6 +974,8 @@ label v15s39:
                     u "(Sorry Aubrey... I'm trying to start a storm here.)"
 
                     if kct == "popular":
+                        $ v15_lindsey_recording = 1
+                        
                         scene v15s39_8i
                         with dissolve
 
@@ -1171,15 +1180,9 @@ label v15s39:
     u "(So, that's what it's like to be a VIP, huh? I could get used to that...)"
 
     if v15_lindsey_alcohol:
-        scene v15s39_23
-        with dissolve
-
         u "(We got lucky with the alcohol, too.)"
 
     else:
-        scene v15s39_23
-        with dissolve
-
         u "(Still sucks that we couldn't get drunk, but you can't win 'em all, ha.)"
 
     if v15_chloe_lindseysabotage:

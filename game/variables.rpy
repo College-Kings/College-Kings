@@ -412,3 +412,4 @@ default v15say_nothing = False
 default v15s22_meeting_points = 0
 default v15_NoraFriendZone = True
 default v15s33_take_photo = False
+default v15_lindsey_recording = 0 # 1 if sober, 2 if drunk
