@@ -88,15 +88,15 @@ label v15s8:
 
         chloe_board.add_task("Sabotage",
             "Provoke Lindsey to say something that might damage her reputation",
-            opinion="\"OPINION\"")
+            opinion="\"We need her to say something bad. Something hateful, and even better if it's about me. If she's drunk you'll have no problem getting something out of her, but then again, I'm not sure what type of mood she'll be in. Just make sure she's relaxed and under surveillance.\"")
 
         v15s8_chloe_kiwii = chloe_board.add_subtask("Sabotage",
             "Chloe posts the recording on Kiwii",
-            opinion="\"OPINION\"")
+            opinion="\"The final step to this awfully beautiful plan, is to upload the evidence to Kiwii. This is key. Once everyone hears wha horrible things she had to say, they'll come running my way.\"")
 
         chloe_board.add_subtask("Sabotage",
             "Share the recording through the Dean's announcement system",
-            opinion="\"OPINION\"")
+            opinion="\"The final step is very important, so why not go big? I can get us access to the Dean's announcemnt system, and we can play your recording for the entire campus to hear.\"")
 
         v15s8_chloe_lee = chloe_board.add_subtask("Tuition",
             "Try and convince Mr. Lee to support you in front of the Dean on this",
