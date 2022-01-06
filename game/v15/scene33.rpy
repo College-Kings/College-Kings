@@ -443,7 +443,7 @@ label v15s33:
 
     pause 0.75
 
-    scene v15s33_15 
+    scene v15s33_15
     with dissolve
 
     audad "Naomi has done exceptionally well, thankfully, but a modeling career requires a lot of hard work."
