@@ -110,7 +110,7 @@ label v15s9:
 
                 pause 0.75
 
-                scene v15s9_3
+                scene v15s9_3f
                 with dissolve
 
                 au "Well, no... Ha, you don't have to pretend. If you want to go as friends that sounds fine."

@@ -104,16 +104,19 @@ label v15s5:
 
     ro "A little bit of weed is one thing, [name]. But that was a serious drug I slipped you."
 
+    scene v15s5_4b
+    with dissolve
+
     menu:
         "Be calm":
+            scene v15s5_4b # FPP. Same as v15s5_4a, Ms. Rose looking at MC with a super embarassed and sorry look, mouth closed.
+            #with dissolve
+
             $ add_point(KCT.BRO)
             
             u "*Sighs*"
 
             u "I'm sure it'll be okay."
-
-            scene v15s5_4b # FPP. Same as v15s5_4a, Ms. Rose looking at MC with a super embarassed and sorry look, mouth closed.
-            with dissolve
 
             u "I'll just drink loads of water or something to make sure it's all flushed out of my system. *Chuckles*"
 
@@ -176,7 +179,7 @@ label v15s5:
             $ v15_mad_at_ms_rose = True
             
             scene v15s5_4b
-            with dissolve
+            #with dissolve
             
             u "Fuck, Lorraine..."
 

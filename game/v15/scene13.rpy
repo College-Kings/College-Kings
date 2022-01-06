@@ -77,6 +77,9 @@ label v15s13:
             "Dismiss Imre":
                 $ add_point(KCT.TROUBLEMAKER)
                 
+                scene v15s13_3b # FPP. same as v15s13_3a Imre's mouth is closed
+                #with dissolve
+
                 u "Why are you creeping outside my room, Imre? I'm trying to study here."
 
                 scene v15s13_3c
@@ -229,6 +232,9 @@ label v15s13:
                 # $ mc.quirks["boomer"] = True # Being re-evaluated
                 $ add_point(KCT.TROUBLEMAKER)
                 
+                scene v15s13_9b
+                #with dissolve
+
                 u "Chocolate factory movie? Are you feeling okay? *Chuckles*"
 
                 scene v15s13_9a

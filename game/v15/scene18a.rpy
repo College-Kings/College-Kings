@@ -232,7 +232,7 @@ label v15s18a_Aubrey:
 
             pause 0.75
 
-            scene v15s18aaub_2a
+            scene v15s18aaub_2
             with dissolve
             
             u "*Sighs* Thanks for the heads up..."
@@ -479,12 +479,9 @@ label v15s18a_Ryan:
 
     ry "Oh... Yeah. I just borrowed it from Cameron."
 
-    scene v15s18a_ryan_3
-    with dissolve
-
     ry "I didn't have much time to plan a costume this year... *Groans*"
 
-    scene v15s18a_ryan_3a
+    scene v15s18a_ryan_3
     with dissolve
 
     u "Trust me, I know the feeling... Ha."
@@ -496,13 +493,13 @@ label v15s18a_Ryan:
 
     ry "What the fuck are you wear-"
 
-    scene v15s18a_ryan_3
+    scene v15s18a_ryan_3a
     with dissolve
 
     ry "*Pukes*"
 
     if v15s18a_gag:
-        scene v15s18a_ryan_3a
+        scene v15s18a_ryan_3
         with dissolve
 
         u "*Gags* I- I'm out... I'm out!"
@@ -518,7 +515,7 @@ label v15s18a_Ryan:
         pause 0.75
 
     else:
-        scene v15s18a_ryan_3a
+        scene v15s18a_ryan_3
         with dissolve
 
         u "Ha, feel better soon, Ryan. Drink lots of water when you're able to."
@@ -688,6 +685,9 @@ label v15s18a_AutumPenelope:
 
         "Your secret is safe":
             $ add_point(KCT.BOYFRIEND)
+
+            scene v15s18apen_6a
+            #with dissolve
 
             u "Oh shit, okay... Your secret is safe with me. *Chuckles*"
 

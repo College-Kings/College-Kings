@@ -524,7 +524,7 @@ label v15s17:
 
         clerk "You don't want to see it first?"
 
-        scene v15s17_5
+        scene v15s17_5i
         with dissolve
 
         u "There's really no point if it's the only one you have. *Laughs* I don't have time to stop anywhere else."
