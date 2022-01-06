@@ -636,6 +636,8 @@ label v15s39:
 
                     menu (fail_label="v15_change_subject"): 
                         "Change subject":
+                            label v15_change_subject:
+                            
                             $ add_point(KCT.BRO)
 
                             if hangOutWithLindsey:
@@ -644,7 +646,41 @@ label v15s39:
                             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                 $ add_point(KCT.TROUBLEMAKER)
 
-                            jump v15_change_subject
+                            scene v15s39_8c
+                            with dissolve
+
+                            u "Um, dancing?"
+
+                            scene v15s39_8p
+                            with dissolve
+
+                            li "Ooh! Shall we go and dance now?"
+
+                            scene v15s39_11
+                            with dissolve
+
+                            aut "Yeah, that's a great idea. I need to move! *Laughs*"
+
+                            scene v15s39_12
+                            with dissolve
+
+                            au "Let's hit the dance floor, then."
+
+                            if not v15_lindsey_inviteseb:
+                                scene v15s39_6c
+                                with dissolve
+
+                                gr "You ladies hit the dance floor. I'll hit another drink..."
+
+                                scene v15s39_12e # FPP. same as v15s39_12b Aubrey has a slight smile, still looking Grayson/Sebastian's location, mouth is still open
+                                with dissolve
+
+                                au "You're so lame!"
+
+                            scene v15s39_8c
+                            with dissolve
+                            
+                            pause 0.75
 
                         "Stay on topic":
                             $ add_point(KCT.TROUBLEMAKER)
@@ -653,238 +689,194 @@ label v15s39:
                             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                 $ add_point(KCT.BOYFRIEND)
 
-                            jump v15_stay_on_topic
-
-                    label v15_change_subject:
-                        scene v15s39_8c
-                        with dissolve
-
-                        u "Um, dancing?"
-
-                        scene v15s39_8p
-                        with dissolve
-
-                        li "Ooh! Shall we go and dance now?"
-
-                        scene v15s39_11
-                        with dissolve
-
-                        aut "Yeah, that's a great idea. I need to move! *Laughs*"
-
-                        scene v15s39_12
-                        with dissolve
-
-                        au "Let's hit the dance floor, then."
-
-                        if not v15_lindsey_inviteseb:
-                            scene v15s39_6c
+                            scene v15s39_8c
                             with dissolve
 
-                            gr "You ladies hit the dance floor. I'll hit another drink..."
+                            u "You were telling us what you don't like about Chloe. *Laughs*"
 
-                            scene v15s39_12e # FPP. same as v15s39_12b Aubrey has a slight smile, still looking Grayson/Sebastian's location, mouth is still open
+                            scene v15s39_8b
                             with dissolve
 
-                            au "You're so lame!"
+                            li "*Drunk* What I don't like about Chloe?"
 
-                        scene v15s39_8c
-                        with dissolve
-                        
-                        pause 0.75
+                            scene v15s39_8c
+                            with dissolve
 
-                    label v15_stay_on_topic:
-                        scene v15s39_8c
-                        with dissolve
+                            u "Yeah. What annoys you about her?"
 
-                        u "You were telling us what you don't like about Chloe. *Laughs*"
+                            scene v15s39_12f # FPP. same as v15s39_12a Aubrey looks at MC with a concerned expression, mouth is still closed
+                            with dissolve
 
-                        scene v15s39_8b
-                        with dissolve
+                            pause 0.75
 
-                        li "*Drunk* What I don't like about Chloe?"
+                            scene v15s39_8l # FPP. same as v15s39_8i Lindsey has an annoyed expression, still looking at MC, mouth is still open
+                            with dissolve
 
-                        scene v15s39_8c
-                        with dissolve
+                            li "*Drunk* What doesn't annoy me? Everything about her is annoying."
 
-                        u "Yeah. What annoys you about her?"
+                            scene v15s39_8b
+                            with dissolve
 
-                        scene v15s39_12f # FPP. same as v15s39_12a Aubrey looks at MC with a concerned expression, mouth is still closed
-                        with dissolve
+                            $ set_presidency_percent(v14_lindsey_popularity - 3)
 
-                        pause 0.75
+                            li "*Drunk* She gets everything handed to her, even her fucking boobs!"
 
-                        scene v15s39_8l # FPP. same as v15s39_8i Lindsey has an annoyed expression, still looking at MC, mouth is still open
-                        with dissolve
+                            scene v15s39_12g # FPP. same as v15s39_12f Aubrey is now looking at Lindsey, mouth is open, still with a concerned expression
+                            with dissolve
 
-                        li "*Drunk* What doesn't annoy me? Everything about her is annoying."
+                            au "Hey, I think that's enough-"
 
-                        scene v15s39_8b
-                        with dissolve
+                            scene v15s39_8m # FPP. same as v15s39_8b show Lindsey drinking from another glass, facing MC
+                            with dissolve
 
-                        $ set_presidency_percent(v14_lindsey_popularity - 3)
+                            pause 0.75
 
-                        li "*Drunk* She gets everything handed to her, even her fucking boobs!"
+                            scene v15s39_12h # FPP. same as v15s39_12f Aubrey mouth is closed, is still looking at Lindsey, still with a concerned expression
+                            with dissolve
 
-                        scene v15s39_12g # FPP. same as v15s39_12f Aubrey is now looking at Lindsey, mouth is open, still with a concerned expression
-                        with dissolve
+                            pause 0.75
 
-                        au "Hey, I think that's enough-"
+                            scene v15s39_12f
+                            with dissolve
 
-                        scene v15s39_8m # FPP. same as v15s39_8b show Lindsey drinking from another glass, facing MC
-                        with dissolve
+                            pause 0.75
 
-                        pause 0.75
+                            scene v15s39_8b
+                            with dissolve
 
-                        scene v15s39_12h # FPP. same as v15s39_12f Aubrey mouth is closed, is still looking at Lindsey, still with a concerned expression
-                        with dissolve
+                            $ set_presidency_percent(v14_lindsey_popularity - 3)
 
-                        pause 0.75
+                            li "*Drunk* I mean no wonder she's such a bitch all the time..."
 
-                        scene v15s39_12f
-                        with dissolve
+                            menu (fail_label="v15_stop_lindsey"):
+                                "Stop Lindsey":
+                                    label v15_stop_lindsey:
+                                    
+                                    $ add_point(KCT.BRO)
 
-                        pause 0.75
+                                    if hangOutWithLindsey:
+                                        $ add_point(KCT.BOYFRIEND)
 
-                        scene v15s39_8b
-                        with dissolve
+                                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                        $ add_point(KCT.TROUBLEMAKER)
 
-                        $ set_presidency_percent(v14_lindsey_popularity - 3)
+                                    scene v15s39_8n # FPP. same as v15s39_8b Lindsey appears drunk, her face is flushed, she now has a full smile, mouth is still closed, still looking at MC
+                                    with dissolve
 
-                        li "*Drunk* I mean no wonder she's such a bitch all the time..."
+                                    pause 0.75
 
-                        menu (fail_label="v15_stop_lindsey"): 
-                            "Stop Lindsey":
-                                $ add_point(KCT.BRO)
+                                    scene v15s39_8n
+                                    with dissolve
 
-                                if hangOutWithLindsey:
-                                    $ add_point(KCT.BOYFRIEND)
+                                    u "Lindsey, maybe take it easy. You've had a lot to drink, haha."
 
-                                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                    scene v15s39_8o # FPP. same as v15s39_8n Lindsey is now looking at Aubrey, mouth is open, is slightly sad/concenred, still drunk appearance
+                                    with dissolve
+
+                                    $ set_presidency_percent(v14_lindsey_popularity + 3)
+
+                                    li "*Drunk* Oh. Oh, yeah, I'm so sorry. That must have sounded so bitchy. Sorry, everyone."
+
+                                    scene v15s39_11d
+                                    with dissolve
+
+                                    aut "I have an idea. Let's go dance."
+
+                                    scene v15s39_12
+                                    with dissolve
+
+                                    au "That's an amazing idea."
+
+                                    scene v15s39_8p # FPP. same as v15s39_8o Lindsey raises her arms in the air with excitement, full smile, still looking at Aubrey, mouth is still open, still drunk appearance
+                                    with dissolve
+
+                                    li "*Drunk* Yeah, okay, let's go dance! Wooo!"
+
+                                "Say nothing":
                                     $ add_point(KCT.TROUBLEMAKER)
+                                    $ v15_say_nothing = True
 
-                                scene v15s39_8n # FPP. same as v15s39_8b Lindsey appears drunk, her face is flushed, she now has a full smile, mouth is still closed, still looking at MC
-                                with dissolve
+                                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                        $ add_point(KCT.BOYFRIEND)
 
-                                pause 0.75
+                                    scene v15s39_8n # FPP. same as v15s39_8b Lindsey appears drunk, her face is flushed, she now has a full smile, mouth is still closed, still looking at MC
+                                    with dissolve
 
-                                jump v15_stop_lindsey
+                                    pause 0.75
 
-                            "Say nothing":
-                                $ add_point(KCT.TROUBLEMAKER)
-                                $ v15_say_nothing = True
+                                    scene v15s39_8q # FPP. same as v15s39_8n Lindsey's mouth is open, annoyed expression, still looking at Mc, still drunk appearance
+                                    with dissolve
 
-                                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                                    $ add_point(KCT.BOYFRIEND)
+                                    li "*Drunk* She's constantly worried about losing her free ride to a degree."
 
-                                scene v15s39_8n # FPP. same as v15s39_8b Lindsey appears drunk, her face is flushed, she now has a full smile, mouth is still closed, still looking at MC
-                                with dissolve
+                                    scene v15s39_8r # FPP. same as v15s39_8n Lindsey's mouth is open, still a full smile, still looking at MC, still drunk appearance
+                                    with dissolve
 
-                                pause 0.75
+                                    li "*Drunk* Without the President's scholarship, she'd have to sell all of that plastic back to the surgeons... *Laughs*"
 
-                                jump v15_say_nothing
+                                    if v15_lindsey_inviteseb:
+                                        scene v15s39_7d
+                                        with dissolve
 
-                        label v15_stop_lindsey:
-                            scene v15s39_8n
-                            with dissolve
+                                        se "Li-lindsey..."
 
-                            u "Lindsey, maybe take it easy. You've had a lot to drink, haha."
+                                        scene v15s39_8s # FPP. same as v15s39_8q Lindsey is looking at Sebastian/Grayson's location, still annoyed, mouth is still open, still a drunk appearance
+                                        with dissolve
 
-                            scene v15s39_8o # FPP. same as v15s39_8n Lindsey is now looking at Aubrey, mouth is open, is slightly sad/concenred, still drunk appearance
-                            with dissolve
+                                        li "*Drunk* What?"
 
-                            $ set_presidency_percent(v14_lindsey_popularity + 3)
+                                        scene v15s39_7f # FPP. same as v15s39_7d Sebastian has a worried/concerned expression, still looking at Lindsey, mouth is still open
+                                        with dissolve
 
-                            li "*Drunk* Oh. Oh, yeah, I'm so sorry. That must have sounded so bitchy. Sorry, everyone."
+                                        se "It's not like you to say something like that, ha. Come on..."
 
-                            scene v15s39_11d
-                            with dissolve
+                                        scene v15s39_8o
+                                        with dissolve
 
-                            aut "I have an idea. Let's go dance."
+                                        li "*Drunk* Oh, shhhit... You're right! I'm so sorry, you guys. I-"
 
-                            scene v15s39_12
-                            with dissolve
+                                        li "That was so rude of me..."
 
-                            au "That's an amazing idea."
+                                        scene v15s39_11f # FPP. same as v15s39_11c Autumn has a worried/concenred expression, still looking at Lindsey, mouth is still open
+                                        with dissolve
 
-                            scene v15s39_8p # FPP. same as v15s39_8o Lindsey raises her arms in the air with excitement, full smile, still looking at Aubrey, mouth is still open, still drunk appearance
-                            with dissolve
+                                        aut "It's... It's okay. We all say things we don't mean sometimes."
 
-                            li "*Drunk* Yeah, okay, let's go dance! Wooo!"
+                                        scene v15s39_12g
+                                        with dissolve
 
-                        label v15_say_nothing:
-                            scene v15s39_8q # FPP. same as v15s39_8n Lindsey's mouth is open, annoyed expression, still looking at Mc, still drunk appearance
-                            with dissolve
+                                        au "Stress and alcohol really don't mix well together, girl. *Chuckles*"
 
-                            li "*Drunk* She's constantly worried about losing her free ride to a degree."
+                                        scene v15s39_8t # FPP. same as v15s39_8o Lindsey has an embarrssed expression, holding her hands over her mouth, still looking at Aubrey, mouth is still open
+                                        with dissolve
 
-                            scene v15s39_8r # FPP. same as v15s39_8n Lindsey's mouth is open, still a full smile, still looking at MC, still drunk appearance
-                            with dissolve
+                                        pause 0.75
 
-                            li "*Drunk* Without the President's scholarship, she'd have to sell all of that plastic back to the surgeons... *Laughs*"
+                                    else:
+                                        scene v15s39_6h # FPP. same as v15s39_6f Grayson has a full smile, raising a fist in the air as in acceptance of what Lindsey said, still looking at Lindsey, mouth is still open
+                                        with dissolve
 
-                            if v15_lindsey_inviteseb:
-                                scene v15s39_7d
-                                with dissolve
+                                        gr "Haha, holy fuck! Go Lindsey! That's hilarious, I love it... *Laughs*"
 
-                                se "Li-lindsey..."
+                                    scene v15s39_8t
+                                    with dissolve
 
-                                scene v15s39_8s # FPP. same as v15s39_8q Lindsey is looking at Sebastian/Grayson's location, still annoyed, mouth is still open, still a drunk appearance
-                                with dissolve
+                                    u "(Fuck, that was amazing! Thank you, Lindsey. Chloe's going to be ecstatic.)"
 
-                                li "*Drunk* What?"
+                                    scene v15s39_11f
+                                    with dissolve
 
-                                scene v15s39_7f # FPP. same as v15s39_7d Sebastian has a worried/concerned expression, still looking at Lindsey, mouth is still open
-                                with dissolve
+                                    aut "I think it's probably a good time to hit the dance floor... No?"
 
-                                se "It's not like you to say something like that, ha. Come on..."
+                                    scene v15s39_12
+                                    with dissolve
 
-                                scene v15s39_8o
-                                with dissolve
+                                    au "Yes, please!"
 
-                                li "*Drunk* Oh, shhhit... You're right! I'm so sorry, you guys. I-"
+                                    scene v15s39_8t
+                                    with dissolve
 
-                                li "That was so rude of me..."
-
-                                scene v15s39_11f # FPP. same as v15s39_11c Autumn has a worried/concenred expression, still looking at Lindsey, mouth is still open
-                                with dissolve
-
-                                aut "It's... It's okay. We all say things we don't mean sometimes."
-
-                                scene v15s39_12g
-                                with dissolve
-
-                                au "Stress and alcohol really don't mix well together, girl. *Chuckles*"
-
-                                scene v15s39_8t # FPP. same as v15s39_8o Lindsey has an embarrssed expression, holding her hands over her mouth, still looking at Aubrey, mouth is still open
-                                with dissolve
-
-                                pause 0.75
-
-                            else:
-                                scene v15s39_6h # FPP. same as v15s39_6f Grayson has a full smile, raising a fist in the air as in acceptance of what Lindsey said, still looking at Lindsey, mouth is still open
-                                with dissolve
-
-                                gr "Haha, holy fuck! Go Lindsey! That's hilarious, I love it... *Laughs*"
-
-                            scene v15s39_8t
-                            with dissolve
-
-                            u "(Fuck, that was amazing! Thank you, Lindsey. Chloe's going to be ecstatic.)"
-
-                            scene v15s39_11f
-                            with dissolve
-
-                            aut "I think it's probably a good time to hit the dance floor... No?"
-
-                            scene v15s39_12
-                            with dissolve
-
-                            au "Yes, please!"
-
-                            scene v15s39_8t
-                            with dissolve
-
-                            li "*Drunk* Yes, that's a great idea! Let's go... Woohoo!"
+                                    li "*Drunk* Yes, that's a great idea! Let's go... Woohoo!"
 
                 "Don't mention it":
                     $ add_point(KCT.BRO)
@@ -906,41 +898,6 @@ label v15s39:
             with dissolve
 
             menu:
-                "Don't risk it":
-                    $ add_point(KCT.BRO)
-
-                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                        $ add_point(KCT.TROUBLEMAKER)
-
-                    if hangOutWithLindsey:
-                        $ add_point(KCT.BOYFRIEND)
-
-                    scene v15s39_8c
-                    with dissolve
-
-                    u "(I don't think it's even worth trying. She really needs to be drunk.)"
-
-                    scene v15s39_12d
-                    with dissolve
-
-                    au "I think we've talked enough for now... Can we go dance?"
-
-                    scene v15s39_11g # FPP. same as v15s39_11 Autumn is looking at Aubrey, still a slight smile, mouth is still open
-                    with dissolve
-
-                    aut "I'm so ready for a dance, yes!"
-
-                    scene v15s39_8g
-                    with dissolve
-
-                    li "Okay, let's groove!"
-
-                    if not v15_lindsey_inviteseb:
-                        scene v15s39_6i # FPP. same as v15s39_6g Grayson has a drink in each hand, still looking at Lindsey, still a full smile
-                        with dissolve
-
-                        gr "Don't be surprised if there's no drinks left when you get back, haha."
-
                 "Try to trick her":
                     $ add_point(KCT.TROUBLEMAKER)
 
@@ -1089,6 +1046,41 @@ label v15s39:
                     with dissolve
 
                     li "Oh, okay... Sure. A dance sounds good."
+
+                "Don't risk it":
+                    $ add_point(KCT.BRO)
+
+                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                        $ add_point(KCT.TROUBLEMAKER)
+
+                    if hangOutWithLindsey:
+                        $ add_point(KCT.BOYFRIEND)
+
+                    scene v15s39_8c
+                    with dissolve
+
+                    u "(I don't think it's even worth trying. She really needs to be drunk.)"
+
+                    scene v15s39_12d
+                    with dissolve
+
+                    au "I think we've talked enough for now... Can we go dance?"
+
+                    scene v15s39_11g # FPP. same as v15s39_11 Autumn is looking at Aubrey, still a slight smile, mouth is still open
+                    with dissolve
+
+                    aut "I'm so ready for a dance, yes!"
+
+                    scene v15s39_8g
+                    with dissolve
+
+                    li "Okay, let's groove!"
+
+                    if not v15_lindsey_inviteseb:
+                        scene v15s39_6i # FPP. same as v15s39_6g Grayson has a drink in each hand, still looking at Lindsey, still a full smile
+                        with dissolve
+
+                        gr "Don't be surprised if there's no drinks left when you get back, haha."
 
     if not v15_chloe_lindseysabotage:
         scene v15s39_12
