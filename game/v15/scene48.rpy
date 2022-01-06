@@ -184,7 +184,7 @@ label v15s48:
         "Cool off":
             $ add_point(KCT.TROUBLEMAKER)
 
-            u "Cool Off."
+            u "Cool off."
 
             scene v15s48_12d # TPP. Nora looking at MC, MC looking at Nora, Nora neutral, mouth open.
             with dissolve
@@ -220,7 +220,6 @@ label v15s48:
 
             scene v15s48_12e
             with dissolve
-
 
     u "*Sighs* I'm sorry."
 
