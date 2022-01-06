@@ -48,6 +48,11 @@ label v15s39:
 
         barworker "Just give me a few minutes and I'll be back with your glasses."
 
+        if v15_lindsey_alcohol:
+            $ set_presidency_percent(v14_lindsey_popularity + 5)
+        else:
+            $ set_presidency_percent(v14_lindsey_popularity + 3)
+
         if v15_lindsey_inviteseb:
             scene v15s39_7 # FPP. Mc looks directrly ahead and see's Sebastian, sitting in the booth, Sebastian looking at MC, slight smile, mouth open
             with dissolve
@@ -1162,11 +1167,6 @@ label v15s39:
 
     scene v15s39_23 # TPP. MC exits the club. Lindsey and Aubrey are ahead of him, getting into the limo
     with fade
-
-    if v15_lindsey_alcohol:
-        $ set_presidency_percent(v14_lindsey_popularity + 5)
-    else:
-        $ set_presidency_percent(v14_lindsey_popularity + 3)
 
     u "(So, that's what it's like to be a VIP, huh? I could get used to that...)"
 
