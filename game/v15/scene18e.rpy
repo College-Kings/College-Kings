@@ -4,6 +4,10 @@
 # Time: Night 
 
 label v15s18e:
+    $ scene_fromgame = True
+    
+    label v15s18e_sg:
+
     $ sceneList.add("v15_lauren")
     
     play sound "sounds/dooropen.mp3"
@@ -11,7 +15,7 @@ label v15s18e:
     scene v15s18e_1 # TPP. Show MC and Lauren entering Lauren's room, her door open, Both slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     if config_censored:
         call screen censoredPopup("v15s18e_nsfwSkipLabel1")
@@ -21,27 +25,29 @@ label v15s18e:
     scene v15s18e_2 # TPP. MC and Lauren in the room with the door closed, MC pulling off Lauren's costume, MC slight smile, mouth closed, Lauren biting her lip.
     with dissolve
     
-    pause 0.75
+    pause 1.25
 
     scene v15s18e_3 # TPP. Of just Lauren's costume landing somewhere on the floor after being tossed off.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18e_4 # TPP. MC and Lauren now in the middle of the room, Lauren pulling off MC's costume, MC slight smile, mouth closed, Lauren with a flirty expression, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18e_3a # TPP. Just MC's costume landing next to Lauren's after being tossed off.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18e_4a # TPP. MC and Lauren in the middle of the room, naked, and kissing.
     with dissolve
 
-    pause 0.75
+    play sound "sounds/kiss.mp3"
+
+    pause 1.25
 
     scene v15s18e_5 # TPP. Lauren laying on the bed naked. Her boobs, neck, feet, and vagina need to be visibl(Need to be clicked on for freeroam)
     with dissolve
@@ -53,8 +59,6 @@ label v15s18e:
     ], continue_label="v15s18e_end")
 
 label v15s18e_neck:
-    $ v15s18e_frneck = True
-
     scene v15s18ene_1 # TPP. Close up of Lauren's bare neck 
     with dissolve
 
@@ -158,8 +162,6 @@ label v15s18e_neck:
     ], continue_label="v15s18e_end")
 
 label v15s18e_boobs:
-    $ v15s18e_frboobs = True
-
     scene v15s18ebo_1 # TPP. Close up shot of Lauren's boobs
     with dissolve
     
@@ -258,8 +260,6 @@ label v15s18e_boobs:
     ], continue_label="v15s18e_end")
 
 label v15s18e_feet:
-    $ v15s18e_frfeet = True
-    
     scene v15s18efe_1 # FPP. Lauren's feet in MC's face, MC looking up from her feet seeing her naked body, Lauren biting her lip.
     with dissolve
 
@@ -713,10 +713,13 @@ label v15s18e_end:
     scene v15s18end_12 # FPP. MC looking at the empty room.
     with dissolve
 
-    $ checklist[0].complete = True
+    if scene_fromgame:
+        $ checklist[0].complete = True
 
     $ lauren.relationship = Relationship.GIRLFRIEND
 
     u "(What a fucking party...) *Laughs*"
+
+    $ renpy.end_replay()
 
     jump v15s18f
