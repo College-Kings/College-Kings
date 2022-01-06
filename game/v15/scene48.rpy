@@ -181,9 +181,9 @@ label v15s48:
 
     menu:
 
-        "Cool Off":
-
+        "Cool off":
             $ add_point(KCT.TROUBLEMAKER)
+
             u "Cool Off."
 
             scene v15s48_12d # TPP. Nora looking at MC, MC looking at Nora, Nora neutral, mouth open.
@@ -195,8 +195,10 @@ label v15s48:
             with dissolve
 
         "Heal":
-
             $ add_point(KCT.BRO)
+
+            scene v15s48_12e
+            #with dissolve
 
             u "Heal."
 
@@ -208,9 +210,7 @@ label v15s48:
             scene v15s48_12b
             with dissolve
 
-
-        "Stay Quiet":
-
+        "Stay quiet":
             $ add_point(KCT.BOYFRIEND)
 
             scene v15s48_12d
@@ -455,9 +455,7 @@ label v15s48:
     with dissolve
 
     menu:
-
         "And me":
-
             $ add_point(KCT.BOYFRIEND)
 
             u "And me."
@@ -470,8 +468,10 @@ label v15s48:
             no "Right, right... *Chuckles* I have what I need."
 
         "You're pretty great to have":
-
             $ add_point(KCT.BRO)
+
+            scene v15s48_18a
+            #with dissolve
 
             u "You're pretty great to have."
 
@@ -479,9 +479,6 @@ label v15s48:
             with dissolve
 
             no "Haha, thank you."
-
-
-
 
     scene v15s48_18a
     with dissolve
