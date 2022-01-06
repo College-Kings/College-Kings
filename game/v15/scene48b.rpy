@@ -5,6 +5,8 @@
 
 label v15s48b:
     if "v15_nora" in sceneList: # Placeholder
+        $ nora.relationship = Relationship.FWB
+    
         scene v15s48b_1 # TPP. MC and Nora spooning, MC big spoon with his arm around her, Nora holding his hand, both slight smile, mouth closed.
         with dissolve
 
@@ -122,6 +124,8 @@ label v15s48b:
         pause 0.75
 
     else:
+        $ nora.relationship = Relationship.FRIEND
+    
         scene v15s48b_9 # TPP. Show Nora trying to open a bottle of wine in the kitchen.
         with fade
 
@@ -180,10 +184,12 @@ label v15s48b:
         menu:
             "It's not shit":
                 $ add_point(KCT.BOYFRIEND)
+                
                 u "Haha, it's not shit. It's important to talk through your feelings with someone. Helps you figure things out."
 
             "You're welcome":
                 $ add_point(KCT.TROUBLEMAKER)
+                
                 u "Haha, you're welcome. Any time, Nora."
 
         scene v15s48b_10a
