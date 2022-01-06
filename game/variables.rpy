@@ -54,6 +54,9 @@ default sceneList = set()
 # Sex Overlay
 default sex_overlay_options = []
 
+# Start
+default persistent.confirm_18 = False
+
 # 1.0 - 6.0
 default adamattack = 1
 default adamdmg = 0
