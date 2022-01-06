@@ -1,205 +1,129 @@
-## NEW SCREENS
-# Patreon
+#NEW SCREENS
+
+default image_path = "gui/end_screen/"
+
+transform credits_scroll(speed):
+ypos 720
+linear speed ypos -720
+
 screen end_screen():
     tag end_screen
     modal True
 
-    default image_path = "gui/end_screen/"
-
     add image_path + "end_screen_background.png"
 
-    # hbox:
-    #     align (0.5, 0.9)
-    #     spacing 100
+    hbox:
+        align (0.5, 0.9)
+        spacing 100
 
-    #     textbutton "MENU":
-    #         action MainMenu()
-    #         yalign 0.5
-    #         text_size 100
+        textbutton "MENU":
+            action MainMenu()
+            yalign 0.5
+            text_size 100
 
-    #     imagebutton:
-    #         idle "images/get.webp"
-    #         hover "images/get.webp"
-    #         action OpenURL("https://www.patreon.com/collegekings")
-    #         align (0.5, 0.65)
 
-    #     textbutton "Credits":
-    #         action Jump("credits")
-    #         yalign 0.5
-    #         text_size 100
+        textbutton "Credits":
+            action Jump("credits")
+            yalign 0.5
+            text_size 100
 
 screen patreon_credits():
     tag end_screen
     modal True
 
-    # if config.enable_steam:
-    #     add "images/steamCredits.webp"
-    # else:
-    #     add "images/patreonCredits.webp"
+    add image_path + "patreon_credits_background.webp"
 
-    # if config.enable_steam:
-    #     imagebutton:
-    #         xalign 0.5
-    #         ypos 675
-    #         idle "images/discordbutton1.webp"
-    #         hover "images/discordbutton2.webp"
-    #         action OpenURL ("http://discord.collegekingsgame.com")
-    # else:
-    #     imagebutton:
-    #         pos (394, 677)
-    #         idle "images/supportdevelopmentblank.webp"
-    #         hover "images/supportdevelopment.webp"
-    #         action OpenURL ("https://www.patreon.com/collegekings")
+    frame at credits_scroll(5.0):
+        background None
+        xalign 0.5
 
-    # hbox:
-    #     xalign 0.5
-    #     ypos 950
-    #     spacing 50
+        vbox:
+            label "Credits"
 
-    #     textbutton "Main Menu":
-    #         text_style "steam_endScreenTextButton"
-    #         action MainMenu()
+            null height 20
 
-    #     textbutton "The Team":
-    #         text_style "steam_endScreenTextButton"
-    #         action Show("team_credits")
+            hbox:
+                text "Role 1"
+                text "NAME 1"
+
+            hbox:
+                text "Role 2"
+                text "NAME 2"
+
+style credits_hbox:
+    spacing 40
+    ysize 30
+
+style credits_label:
+    xalign 0.5
+
+style credits_text:
+    xalign 0.5
 
 
 screen team_credits():
     tag end_screen
     modal True
 
-    # add "images/stockBackgrounds/eveningSunshine.webp"
+    add image_path + "team_credits_background.webp"
 
-    # text "Team Credits":
-    #     xalign 0.5
-    #     ypos 15
-    #     size 72
+    text "TEAM CREDITS":
+        xalign 0.5
+        ypos 45
+        size 68
 
-    # hbox:
-    #     align (0.5, 0.5)
-    #     spacing 300
+    hbox:
+        align (0.5, 0.5)
+        spacing 150
 
-    #     vbox:
-    #         spacing 10
+        vbox:
+            spacing 10
 
-    #         text "UndergradSteve - Game Creator"
-    #         text "KingLui - Project Manager"
-    #         text "OscarSix - Technical Officer"
-    #         null height 20
-    #         text "Oskin - Lead Enforcer"
-    #         text "Lucious Lordswill - Lead Writer"
-    #         text "Cheexmarie - Lead Editor"
-    #         text "Peace - Head Transcriber"
-    #         text "Condy - Quality Assurance Manager"
-    #         text "Jany - Translation Manager"
-    #         text "Mozzart - Lead Artist & Coordinator"
-    #         null height 20
-    #         text "Maro - Marketing Specialist"
-    #         text "HugeBoiV2 - Transcriber"
-    #         text "Jeffly - Transcriber"
+            text "{=credits_bold}UndergradSteve{/=credits_bold}{=credits_regular} - Game Creator{/=credits_regular}"
+            text "{=credits_bold}KingLui{/=credits_bold}{=credits_regular} - Project Manager{/=credits_regular}"
+            text "{=credits_bold}OscarSix{/=credits_bold}{=credits_regular} - Technical Officer{/=credits_regular}"
+            null height 20
+            text "{=credits_bold}Oskin{/=credits_bold}{=credits_regular} - Lead Enforcer{/=credits_regular}"
+            text "{=credits_bold}Lucious Lordswill{/=credits_bold}{=credits_regular} - Lead Writer{/=credits_regular}"
+            text "{=credits_bold}Cheexmarie{/=credits_bold}{=credits_regular} - Lead Editor{/=credits_regular}"
+            text "{=credits_bold}Peace{/=credits_bold}{=credits_regular} - Head Transcriber{/=credits_regular}"
+            text "{=credits_bold}Condy{/=credits_bold}{=credits_regular} - Quality Assurance Manager{/=credits_regular}"
+            text "{=credits_bold}Jany{/=credits_bold}{=credits_regular} - Translation Manager{/=credits_regular}"
+            text "{=credits_bold}Mozzart{/=credits_bold}{=credits_regular} - Lead Artist & Coordinator{/=credits_regular}"
+            null height 20
+            text "{=credits_bold}Maro{/=credits_bold}{=credits_regular} - Marketing Specialist{/=credits_regular}"
+            text "{=credits_bold}HugeBoiV2{/=credits_bold}{=credits_regular} - Transcriber{/=credits_regular}"
+            text "{=credits_bold}Jeffly{/=credits_bold}{=credits_regular} - Transcriber{/=credits_regular}"
 
-    #     vbox:
-    #         spacing 10
+        vbox:
+            spacing 10
 
-    #         text "MegaManX - Transcriber"
-    #         text "mstep17 - Transcriber"
-    #         text "SystemFailed - Transcriber"
-    #         text "Wolf - Transcriber"
-    #         text "Dorkby - Animator"
-    #         text "Wiebley - Renderer"
-    #         text "Ranger - 3d Modeler"
-    #         text "François Gibon - Renderer"
-    #         text "3D4FUN - Renderer"
-    #         text "Bwonerart - Renderer"
-    #         text "Sznuk - Renderer"
-    #         text "Raystorm41 - Render"
-    #         text "Stefan - Photoshopper"
-    #         text "Space-Storm - Tech Assistant"
+            text "{=credits_bold}MegaManX{/=credits_bold}{=credits_regular} - Transcriber{/=credits_regular}"
+            text "{=credits_bold}mstep17{/=credits_bold}{=credits_regular} - Transcriber{/=credits_regular}"
+            text "{=credits_bold}SystemFailed{/=credits_bold}{=credits_regular} - Transcriber{/=credits_regular}"
+            text "{=credits_bold}Wolf{/=credits_bold}{=credits_regular} - Transcriber{/=credits_regular}"
+            text "{=credits_bold}Dorkby{/=credits_bold}{=credits_regular} - Animator{/=credits_regular}"
+            text "{=credits_bold}Wiebley{/=credits_bold}{=credits_regular} - Renderer{/=credits_regular}"
+            text "{=credits_bold}Ranger{/=credits_bold}{=credits_regular} - 3d Modeler{/=credits_regular}"
+            text "{=credits_bold}François Gibon{/=credits_bold}{=credits_regular} - Renderer{/=credits_regular}"
+            text "{=credits_bold}3D4FUN{/=credits_bold}{=credits_regular} - Renderer{/=credits_regular}"
+            text "{=credits_bold}Bwonerart{/=credits_bold}{=credits_regular} - Renderer{/=credits_regular}"
+            text "{=credits_bold}Sznuk{/=credits_bold}{=credits_regular} - Renderer{/=credits_regular}"
+            text "{=credits_bold}Raystorm41{/=credits_bold}{=credits_regular} - Render{/=credits_regular}"
+            text "{=credits_bold}Stefan{/=credits_bold}{=credits_regular} - Photoshopper{/=credits_regular}"
+            text "{=credits_bold}Space-Storm{/=credits_bold}{=credits_regular} - Tech Assistant{/=credits_regular}"
 
-    # text "Special thanks to all the community members and players who have made this project possible :)":
-    #     align (0.5, 0.9)
-    #     size 24
-
-    # hbox:
-    #     spacing 50
-    #     xpos 20
-    #     yalign 1.0
-
-    #     textbutton "Main Menu":
-    #         text_style "steam_endScreenTextButton"
-    #         action MainMenu()
-
-    #     textbutton "Credits":
-    #         text_style "steam_endScreenTextButton"
-    #         action Jump("credits")
-
-
-
-
-# Steam
-screen steam_join_discord():
-    tag credits
-    modal True
-    zorder 100
-
-    add "images/steam/end_screen_discord.webp"
-
-    imagebutton:
-        idle "images/discordbutton1.webp"
-        hover "images/discordbutton2.webp"
-        action OpenURL("https://discord.gg/collegekings")
-        align (0.5, 0.65)
+    text "{=credits_thank_you}Special thanks to all the community members and players who have made this project possible :){/=credits_thank_you}":
+        align (0.5, 0.88)
 
     hbox:
         spacing 50
-        xpos 20
-        yalign 1.0
+        align (0.5, 0.96)
 
-        textbutton "Main Menu":
-            text_style "steam_endScreenTextButton"
+        imagebutton:
+            idle image_path + "main_menu_icon.png"
             action MainMenu()
 
-        textbutton "Credits":
-            text_style "steam_endScreenTextButton"
-            action Jump("gameEnd")
-
-        textbutton "The Team":
-            text_style "steam_endScreenTextButton"
-            action Show("team_credits")
-
-screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings__Act_I/"):
-    tag credits
-    modal True
-    zorder 100
-
-    add "images/steam/end_screen.webp"
-
-    imagebutton:
-        idle "images/steam/playNow.webp"
-        hover "images/steam/playNowHover.webp"
-
-        if achievement.steam.dlc_installed(1624520):
-            action Function(renpy.quit, relaunch=True, save=True)
-        elif achievement.steam.is_overlay_enabled():
-            action Function(achievement.steam.activate_overlay_to_web_page, link)
-        else:
-            action OpenURL(link)
-        align (0.5, 0.55)
-
-    hbox:
-        spacing 50
-        xpos 20
-        yalign 1.0
-
-        textbutton "Main Menu":
-            text_style "steam_endScreenTextButton"
-            action MainMenu()
-
-        textbutton "Credits":
-            text_style "steam_endScreenTextButton"
-            action Jump("gameEnd")
-
-        textbutton "The Team":
-            text_style "steam_endScreenTextButton"
-            action Show("team_credits")
+        imagebutton:
+            idle image_path + "credits_button.png"
+            action Show("patreon_credits")

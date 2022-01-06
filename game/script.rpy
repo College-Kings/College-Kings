@@ -19,6 +19,7 @@ label start:
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
     hide no_hard_feelings
 
+    call screen team_credits
     call screen real_life_mode
 
 label end_credits: # for compatibility
