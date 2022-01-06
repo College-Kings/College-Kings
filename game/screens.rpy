@@ -219,11 +219,11 @@ screen choice(items, seconds=3, fail_label=None):
 
         for item in items:
             button:
-                minimum (500, 100)
                 idle_background "choice_button_idle"
                 hover_background "choice_button_hover"
                 action item.action
-
+                minimum (550, 131)
+                
                 text item.caption.upper():
                     align (0.5, 0.5)
 
