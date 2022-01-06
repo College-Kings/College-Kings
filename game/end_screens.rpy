@@ -1,3 +1,69 @@
+screen steam_join_discord():
+    tag credits
+    modal True
+    zorder 100
+
+    add "images/steam/end_screen_discord.webp"
+
+    imagebutton:
+        idle "images/discordbutton1.webp"
+        hover "images/discordbutton2.webp"
+        action OpenURL("https://discord.gg/collegekings")
+        align (0.5, 0.65)
+
+    hbox:
+        spacing 50
+        xpos 20
+        yalign 1.0
+
+        textbutton "Main Menu":
+            text_style "steam_endScreenTextButton"
+            action MainMenu()
+
+        textbutton "Credits":
+            text_style "steam_endScreenTextButton"
+            action Jump("gameEnd")
+
+        textbutton "The Team":
+            text_style "steam_endScreenTextButton"
+            action Show("teamCredits")
+
+screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings__Act_I/"):
+    tag credits
+    modal True
+    zorder 100
+
+    add "images/steam/end_screen.webp"
+
+    imagebutton:
+        idle "images/steam/playNow.webp"
+        hover "images/steam/playNowHover.webp"
+
+        if achievement.steam.dlc_installed(1624520):
+            action Function(renpy.quit, relaunch=True, save=True)
+        elif achievement.steam.is_overlay_enabled():
+            action Function(achievement.steam.activate_overlay_to_web_page, link)
+        else:
+            action OpenURL(link)
+        align (0.5, 0.55)
+
+    hbox:
+        spacing 50
+        xpos 20
+        yalign 1.0
+
+        textbutton "Main Menu":
+            text_style "steam_endScreenTextButton"
+            action MainMenu()
+
+        textbutton "Credits":
+            text_style "steam_endScreenTextButton"
+            action Jump("gameEnd")
+
+        textbutton "The Team":
+            text_style "steam_endScreenTextButton"
+            action Show("teamCredits")
+
 screen getaccess():
     tag endScreen
 
