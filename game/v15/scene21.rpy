@@ -21,7 +21,7 @@ label v15s21:
 
         cl "Here he is."
 
-        $ opened_count = 0 # reset counter
+        $ renpy.get_screen("v15_teacher_brief_icon").scope["opened_count"] = 0 # reset counter
         scene v15s21_3 # FPP. Mr. Lee approaches them slight smile mouth open, Chloe and MC stand up, Chloe slight smile, mouth closed
         with dissolve
 
@@ -592,7 +592,7 @@ label v15s21:
 
         u "*Sighs* Okay, is there anything else?"
 
-        if v15_took_notes and opened_count >= 5: # -if TookNotes and clicks on the journal five times- #
+        if v15_took_notes and renpy.get_screen("v15_teacher_brief_icon").scope["opened_count"] >= 5: # -if TookNotes and clicks on the journal five times- #
             scene v15s21_6c
             with dissolve
 
@@ -1121,7 +1121,7 @@ label v15s21:
 
             u "(Don't think about sex, don't think about sex, don't think abou-)"
 
-        $ opened_count = 0 # reset counter
+        $ renpy.get_screen("v15_teacher_brief_icon").scope["opened_count"] = 0 # reset counter
         scene v15s21_10b # FPP. same as v15s21_10a Ms. Rose looking at Chloe slight smile mouth open, Chloe looking at Ms. Rose slight smile mouth closed
         with dissolve
 
@@ -1635,7 +1635,7 @@ label v15s21:
 
         u "Okay. Well..."
 
-        if v15_took_notes and opened_count >= 5: # -if TookNotes and clicks on the journal five times-:
+        if v15_took_notes and renpy.get_screen("v15_teacher_brief_icon").scope["opened_count"] >= 5: # -if TookNotes and clicks on the journal five times-:
             scene v15s21_13k
             with dissolve
 
