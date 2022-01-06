@@ -299,7 +299,7 @@ label v15s39:
         scene v15s39_7a
         with dissolve
 
-        se "If it's about supporting you, you know you've got my vote."
+        se "If it's about your campaign, you know you've got my support."
 
         scene v15s39_8
         with dissolve
