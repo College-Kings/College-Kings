@@ -11,28 +11,6 @@ define config.steam_appid = 1463120
 define config.gl2 = True
 define _quit_slot = "99-1"
 
-label splashscreen:
-    # Splashscreen
-    scene black
-    with Pause(1)
-
-    show splashone
-    with dissolve
-    with Pause(2)
-
-    show splashtwo
-    with dissolve
-    with Pause(2)
-
-    show splashthree
-    with dissolve
-    with Pause(2)
-
-    scene black
-    with dissolve
-    with Pause(1)
-
-    return
 
 # The game starts here.
 label start:

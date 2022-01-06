@@ -4,9 +4,9 @@ image blue_button_idle = Frame("gui/button/blue_idle.webp", 24, 6)
 image blue_button_hover = Frame("gui/button/blue_hover.webp", 24, 6)
 
 # Splash Screen
-image splashone = "images/splash1.webp"
-image splashtwo = "images/splash2.webp"
-image splashthree = "images/splash 3.webp"
+image splashscreen_1 = "gui/splashscreen/1.png"
+image splashscreen_2 = "gui/splashscreen/2.png"
+image splashscreen_3 = "gui/splashscreen/3.png"
 
 # GUI
 ## Common
@@ -20,12 +20,12 @@ image alert_background = Frame("gui/alert/background.png", 8, 8)
 
 ## Bar
 image blue_bar = Frame("gui/bar/blue.webp", 44, 22, 44, 40)
-image ruby_bar = Frame("gui/bar/ruby.png", 30, 22, 29, 40)
+image ruby_bar = Frame("gui/bar/ruby.webp", 30, 22, 29, 40)
 image yellow_bar = Frame("gui/bar/yellow.webp", 44, 22, 44, 40)
 
 ## Choice
 image choice_button_idle = Frame("gui/choice/button_idle.png", 40, 8)
-image choice_button_hover = Frame("gui/choice/button_idle.png", 40, 8)
+image choice_button_hover = Frame("gui/choice/button_hover.png", 40, 8)
 
 ## KCT Choice Hint
 image kct_choice_hint_background = Frame("gui/kct/background.png", 44, 6, 44, 0) 
