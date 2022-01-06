@@ -176,10 +176,51 @@ label v15s48:
 
     no "It all became way too real, after we landed. I needed time to..."
 
-    no "To heal."
-
     scene v15s48_12e # TPP. Nora looking at MC, MC looking at Nora, Nora neutral, mouth closed.
     with dissolve
+
+    menu:
+
+        "Cool Off":
+
+            $ add_point(KCT.TROUBLEMAKER)
+            u "Cool Off."
+
+            scene v15s48_12d # TPP. Nora looking at MC, MC looking at Nora, Nora neutral, mouth open.
+            with dissolve
+
+            no "Yeah... No, it's more about healing, you know?"
+
+            scene v15s48_12e
+            with dissolve
+
+        "Heal":
+
+            $ add_point(KCT.BRO)
+
+            u "Heal."
+
+            scene v15s48_12c # TPP. Nora looking at MC, MC looking at Nora, Nora neutral, mouth open.
+            with dissolve
+
+            no "Yeah... exactly."
+
+            scene v15s48_12b
+            with dissolve
+
+
+        "Stay Quiet":
+
+            $ add_point(KCT.BOYFRIEND)
+
+            scene v15s48_12d
+            with dissolve
+
+            no "To heal."
+
+            scene v15s48_12e
+            with dissolve
+
 
     u "*Sighs* I'm sorry."
 
@@ -193,13 +234,7 @@ label v15s48:
 
     u "You think?"
 
-    scene v15s48_12c
-    with dissolve
-
     no "..."
-
-    scene v15s48_12b
-    with dissolve
 
     u "We've all been thinking about you."
 
@@ -419,14 +454,34 @@ label v15s48:
     scene v15s48_18a
     with dissolve
 
-    u "And me."
+    menu:
 
-    u "And a ton of others, who are like... Reaaally pissed at you right now, so..."
+        "And me":
 
-    scene v15s48_18
-    with dissolve
+            $ add_point(KCT.BOYFRIEND)
 
-    no "Right, right... *Chuckles* I have what I need."
+            u "And me."
+
+            u "And a ton of others, who are like... Reaaally pissed at you right now, so..."
+
+            scene v15s48_18
+            with dissolve
+
+            no "Right, right... *Chuckles* I have what I need."
+
+        "You're pretty great to have":
+
+            $ add_point(KCT.BRO)
+
+            u "You're pretty great to have."
+
+            scene v15s48_18
+            with dissolve
+
+            no "Haha, thank you."
+
+
+
 
     scene v15s48_18a
     with dissolve
@@ -572,7 +627,7 @@ label v15s48:
     with dissolve
 
     menu:
-        "Be supportive":
+        "You're not hurting anyone":
             $ add_point(KCT.BOYFRIEND)
             
             u "I understand you're afraid to upset people. You're done with the drama, yeah?"
@@ -600,7 +655,7 @@ label v15s48:
 
                 u "I know. *Laughs*"
 
-        "Be brutally honest":
+        "Don't worry about hurting Chris":
             $ add_point(KCT.TROUBLEMAKER)
             
             u "Okay, forgive me if I upset you, but..."
@@ -654,17 +709,9 @@ label v15s48:
                 scene v15s48_18
                 with dissolve
 
-                no "Wow, okay... *Snorts* Don't hold back, [name]."
+                no "Wow, okay..."
 
-                scene v15s48_18a
-                with dissolve
-
-                u "I didn't. Haha."
-
-                scene v15s48_18
-                with dissolve
-
-                no "You're not wrong... *Sighs*"
+                no "You're not wrong. *Sighs*"
 
     if nora.relationship.value < Relationship.FWB.value and not kct == "confident" and not (v15s48_follow_your_heart and not v15s48_interrupt):
         if v15s48_follow_your_heart:
