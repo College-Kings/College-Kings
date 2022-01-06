@@ -112,7 +112,7 @@ label v15s39:
 
             li "Yeah, we all will! Just surprise us, haha."
 
-            scene v15s39_5c
+            scene v15s39_5d
             with dissolve
 
             barworker "Very well! I'll be right back with your drinks."
@@ -158,7 +158,7 @@ label v15s39:
 
             barworker "...Yes. I'll be back in a bit."
 
-    scene v15s39_8b # FPP. same as v15s39_8a Lindsey is now looking at MC, still a slight smile, mouth is still closed
+    scene v15s39_8h # FPP. same as v15s39_8a Lindsey is now looking at MC, still a slight smile, mouth is still closed
     with dissolve
 
     li "Oh, and I... Need to go pay for this whole thing before I forget."
@@ -225,8 +225,6 @@ label v15s39:
             scene v15s39_7c
             with dissolve
 
-        
-
     elif v15_lindsey_alcohol:
         scene v15s39_6c # FPP. same as v15s39_6 Grayson is looking at Autumn's location, still a slight snmile, mouth is still open
         with dissolve
@@ -244,8 +242,8 @@ label v15s39:
 
         gr "It's a really nice place though, so yeah. You're probably right."
 
-        scene v15s39_6f # FPP. same as v15s39_6d Grayson has no expression, still looking at Autumn's location, mouth is still open
-        with dissolve
+    scene v15s39_6a
+    with dissolve
 
     u "Exactly, it wasn't pocket change, that's for damn sure. But as long as we all have a great time, it'll be worth it."
 
@@ -308,7 +306,7 @@ label v15s39:
 
     u "*Whispers* Hey. Lindsey. This might be a good time to talk about your campaign."
 
-    scene v15s39_8b
+    scene v15s39_8u
     with dissolve
 
     li "Oh shit, yeah. Good idea!"
@@ -360,7 +358,7 @@ label v15s39:
     li "Like, what has she ever actually done for you, herself?"
 
     if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-        scene v15s39_11b
+        scene v15s39_8b
         with dissolve
 
         u "Come on, guys..."
@@ -585,7 +583,7 @@ label v15s39:
                     scene v15s39_11
                     with dissolve
 
-                    au "Ha."
+                    aut "Ha."
 
                     scene v15s39_8i # FPP. same as v15s39_8b Lindsey has no expression, still looking at MC, mouth is still open
                     with dissolve
@@ -659,13 +657,12 @@ label v15s39:
 
                         pause 0.75
 
+                    label test:
+
                     scene v15s39_8g
                     with dissolve
 
                     li "Ugh... Okay, now what was I saying?"
-
-                    scene v15s39_8c
-                    with dissolve
 
                     u "(Now is the time to strike if we're gonna do this...)"
 
@@ -679,11 +676,6 @@ label v15s39:
                             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                 $ add_point(KCT.TROUBLEMAKER)
 
-                            scene v15s39_8c
-                            with dissolve
-
-                            pause 0.75
-
                             jump v15_change_subject
 
                         "Stay on topic":
@@ -693,11 +685,6 @@ label v15s39:
                             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                 $ add_point(KCT.BOYFRIEND)
 
-                            scene v15s39_8c
-                            with dissolve
-
-                            pause 0.75
-
                             jump v15_stay_on_topic
 
                     label v15_change_subject:
@@ -706,7 +693,7 @@ label v15s39:
 
                         u "Um, dancing?"
 
-                        scene v15s39_8b
+                        scene v15s39_8p
                         with dissolve
 
                         li "Ooh! Shall we go and dance now?"

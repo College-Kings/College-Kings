@@ -439,6 +439,9 @@ label v15s44_continue2:
         "I think I know":
             $ add_point(KCT.BRO)
             
+            scene v15s44_3m
+            #with dissolve
+
             u "I think I know where she is."
 
             scene v15s44_3l

@@ -465,7 +465,7 @@ label v15s43:
 
     am "Not at all, my protege... Not at all."
 
-    scene v15s43_14f
+    scene v15s43_14h
     with dissolve
 
     ch "Okay then, I don't think she's with either of them. Happy now?"
@@ -491,6 +491,9 @@ label v15s43:
         "Where did she go?":
             $ add_point(KCT.BRO)
             
+            scene v15s43_14g
+            #with dissolve
+
             u "Where did she go? She must have told you."
 
             scene v15s43_14h # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth open.
@@ -514,6 +517,9 @@ label v15s43:
         "Did she see someone?":
             $ add_point(KCT.TROUBLEMAKER)
             
+            scene v15s43_14g
+            #with dissolve
+
             u "Did she go see someone else?"
 
             scene v15s43_14h
@@ -527,6 +533,9 @@ label v15s43:
             am "That's no good, Chris. You need to start telling us something we can use."
 
         "You're lying" if detective == "professional":
+            scene v15s43_14g
+            #with dissolve
+            
             u "You're lying straight to our faces! You know exactly where she is and it's only a matter of time before we find out."
 
             scene v15s43_14h
@@ -536,6 +545,9 @@ label v15s43:
             $ v15_nora_locations.add("camping")
 
         "Analyze Chris" if detective == "psychologist":
+            scene v15s43_14g
+            #with dissolve
+
             u "You're enjoying this aren't you? Do you get joy out of withholding information from us?"
 
             scene v15s43_14h
@@ -655,6 +667,9 @@ label v15s43:
         "She's not with Mr. Rose?":
             $ add_point(KCT.TROUBLEMAKER)
             
+            scene v15s43_14g
+            #with dissolve
+
             u "So you're sure that Nora's not with Mr. Rose, or... Her dad, I mean?"
 
             scene v15s43_14h
@@ -679,6 +694,9 @@ label v15s43:
             am "Hmm... I don't know if we can trust you."
 
         "Use logic" if detective == "professional":
+            scene v15s43_14g
+            #with dissolve
+
             u "This aunt is around often?"
 
             scene v15s43_14h

@@ -582,6 +582,9 @@ label v15s48:
         "Listen to your head":
             $ add_point(KCT.BRO)
             
+            scene v15s48_18a
+            #with dissolve
+
             u "Listen to that little voice inside your head. What is she telling you to do?"
 
             if nora.relationship.value >= Relationship.FWB.value:
