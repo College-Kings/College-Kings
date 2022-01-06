@@ -540,7 +540,7 @@ label v15s9:
                 u "(I should reply to Lindsey.)"
                 jump v15s9_PhoneContinueLin
 
-        jump v15s12        
+        jump v15s12
 
     elif v15_mad_at_ms_rose:
         scene v15s9_1h

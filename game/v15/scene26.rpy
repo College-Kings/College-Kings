@@ -184,7 +184,7 @@ label v15s26:
     scene v15s26_12 # FPP Riley, in theater room, looking at MC with a slight smile, mouth open
     with dissolve
 
-    ri "Really though, you're a lucky guy, [name]. Barely anyone has been here, let alone knows of its existance."
+    ri "Really though, you're a lucky guy, [name]. Barely anyone has been here, let alone knows of its existence."
 
     scene v15s26_12a # FPP Same angle as 12, Riley in theater room with a slight smile, mouth closed
     with dissolve

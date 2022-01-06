@@ -1471,7 +1471,7 @@ label v15s22:
 
                 pause 0.75
 
-            "Say nothing":                
+            "Say nothing":
                 if chloe.relationship.value >= Relationship.FWB.value:
                     $ add_point(KCT.BOYFRIEND)
                 else:
