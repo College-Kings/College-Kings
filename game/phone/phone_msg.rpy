@@ -318,12 +318,11 @@ screen phone_image(img=None):
         if os.path.splitext(img)[0][-3:] != "big":
             bigImage = os.path.splitext(img)[0] + "big" + os.path.splitext(img)[1]
 
-    add "images/darker.webp"
+    add "darker_80"
     if renpy.loadable(bigImage):
         add bigImage at truecenter
     else:
         add img at truecenter
 
-    imagebutton:
-        idle "images/bigbutton.webp"
+    button:
         action Hide("phone_image")

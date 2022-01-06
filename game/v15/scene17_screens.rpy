@@ -1,7 +1,7 @@
 screen v15s17_gift_selection():
     modal True
 
-    add "images/darker.webp"
+    add "darker_80"
 
     fixed:
         xalign 0.5

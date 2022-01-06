@@ -1,5 +1,5 @@
 screen letter1():
-    add "images/darker.webp"
+    add "darker_80"
     add Transform("images/v7/emilyletter.webp", size=(764, 1080))
 
     button:

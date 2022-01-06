@@ -28,15 +28,15 @@ screen stats():
             size 25
             color "#ffffff"
 
-        add "images/statscircle.webp":
+        add "images/phone/stats/appAssets/stats_circle.webp":
             xpos 520
             ypos 255
 
-        add "images/KCTdiagram.webp":
+        add "images/phone/stats/appAssets/kct_diagram.webp":
             yalign 0.5
             xalign 0.05
 
-        add "images/tutback.webp":
+        add "images/phone/stats/appAssets/tutback.webp":
             yalign 0.5
             xpos 1200
 
