@@ -240,7 +240,6 @@ image jab1movie = Movie(play="images/v2/jab1.webm", start_image="images/v2/jab1s
 image hookcountermovie = Movie(play="images/v2/hookcounter.webm", start_image="images/v2/hookcounterstart.webp", image="images/v2/hookcounter.webp", loop=False)
 image jabcountermovie = Movie(play="images/v2/jabcounter.webm", start_image="images/v2/jabcounterstart.webp", image="images/v2/jabcounter.webp", loop=False)
 
-image farrow1 = "images/farrow1.webp"
 image targets = "images/targets.webp"
 
 image s145far = "images/v2/s145far.webp"
