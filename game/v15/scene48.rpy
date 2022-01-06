@@ -306,7 +306,7 @@ label v15s48:
     scene v15s48_18
     with dissolve
 
-    no "Ha, my dad would love to hear that. He hates this old thing. Only keeps it out here for me, I think. *Chuckles*"
+    no "Hah! My dad would love to hear that. He hates this old thing. Only keeps it out here for me, I think. *Chuckles*"
 
     scene v15s48_18a
     with dissolve
