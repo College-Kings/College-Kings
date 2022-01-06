@@ -199,7 +199,7 @@ label v15s39:
         scene v15s39_7c # FPP. same as v15s39_7 Sebastian is looking at Autumn's location, still a slight smile, mouth is still open
         with dissolve
 
-        se "Are you kidding? The wolves looked into booking this place."
+        se "Are you kidding? The Wolves looked into booking this place."
 
         scene v15s39_7d # FPP. same as v15s39_7 Sebastian's mouth is closed, still looking at MC, still a slight smile
         with dissolve
@@ -222,9 +222,6 @@ label v15s39:
 
             se "But since it's mocktails instead, it might have been cheaper."
 
-            scene v15s39_7c
-            with dissolve
-
     elif v15_lindsey_alcohol:
         scene v15s39_6c # FPP. same as v15s39_6 Grayson is looking at Autumn's location, still a slight snmile, mouth is still open
         with dissolve
@@ -242,10 +239,10 @@ label v15s39:
 
         gr "It's a really nice place though, so yeah. You're probably right."
 
-    scene v15s39_6a
-    with dissolve
+        scene v15s39_6a
+        with dissolve
 
-    u "Exactly, it wasn't pocket change, that's for damn sure. But as long as we all have a great time, it'll be worth it."
+        u "Exactly, it wasn't pocket change, that's for damn sure. But as long as we all have a great time, it'll be worth it."
 
     if v15_lindsey_inviteseb:
         scene v15s39_3e # same as v15s39_3a Sebastian instead of Grayson
@@ -257,17 +254,6 @@ label v15s39:
         with dissolve
 
         pause 0.75
-
-        scene v15s39_3g # same as v15s39_3f Sebastian has a full smile mouth is open standing up in the booth, raising his shirt up exposing his abs and looking down at Aubrey, Aubrey is smiling mouth open looking up at Sebastian pinching Sebastians ass, Mc, Lindsey, and Autumn are looking at Sebastian and laughing, mouths open, full smiles
-        with dissolve
-
-        pause 0.75
-
-        if v15_lindsey_alcohol:
-            scene v15s39_3h # same as v15s39_3d Sebastian instead of Grayson
-            with dissolve
-
-            pause 0.75
 
     else:
         scene v15s39_10a # same as v15s39_10 Lindsey is walking back to the table slight smile, mouth is closed, The BW is seen walking behind her carrying the drinks, slight smile, mouth is closed
@@ -543,39 +529,23 @@ label v15s39:
     scene v15s39_8h # FPP. same as v15s39_8g Lindsey is looking at Aubrey, still a slight smile, mouth is still open
     with dissolve
 
-    li "Thank you. I really appreciate you saying that Aubrey."
+    li "Thank you. I really appreciate you saying that, Aubrey."
 
     if v15_chloe_lindseysabotage:
-        scene v15s39_8c
-        with dissolve
-
         if v15_lindsey_alcohol:
-            scene v15s39_8c
+            scene v15s39_8e
             with dissolve
 
             u "(If Lindsey was more drunk, she'd be more likely to let something slip. Shots?)"
 
-            scene v15s39_8c
-            with dissolve
-
             menu:
-                "Don't mention it":
-                    $ add_point(KCT.BRO)
-                    if hangOutWithLindsey:
-                        $ add_point(KCT.BOYFRIEND)
-
-                    scene v15s39_8c
-                    with dissolve
-
-                    u "(On second thought, that's just not my style...)"
-
                 "Shots!":
                     $ add_point(KCT.TROUBLEMAKER)
 
                     if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                         $ add_point(KCT.BOYFRIEND)
 
-                    scene v15s39_8c
+                    scene v15s39_8b
                     with dissolve
 
                     u "Let's do some shots!"
@@ -605,7 +575,7 @@ label v15s39:
 
                     u "(And something with a bit more punch for Lindsey...)"
 
-                    scene v15s39_8k # FPP. same as v15s39_8j Mc is handing Lindsey a drink, Lindsey is still looking at MC, still no expression, mouth is still open
+                    scene v15s39_8i # FPP. same as v15s39_8j Mc is handing Lindsey a drink, Lindsey is still looking at MC, still no expression, mouth is still open
                     with dissolve
 
                     li "I'm already buzzed, [name]. I don't think I can handle another shot, haha."
@@ -656,8 +626,6 @@ label v15s39:
                         with dissolve
 
                         pause 0.75
-
-                    label test:
 
                     scene v15s39_8g
                     with dissolve
@@ -918,8 +886,18 @@ label v15s39:
 
                             li "*Drunk* Yes, that's a great idea! Let's go... Woohoo!"
 
+                "Don't mention it":
+                    $ add_point(KCT.BRO)
+                    if hangOutWithLindsey:
+                        $ add_point(KCT.BOYFRIEND)
+
+                    scene v15s39_8c
+                    with dissolve
+
+                    u "(On second thought, that's just not my style...)"
+
         else:
-            scene v15s39_8c
+            scene v15s39_8e
             with dissolve
 
             u "(This is going to be difficult without alcohol. I can try to trick Lindsey but... I'll be seriously surprised if she slips up while sober.)"
@@ -1113,7 +1091,7 @@ label v15s39:
                     li "Oh, okay... Sure. A dance sounds good."
 
     if not v15_chloe_lindseysabotage:
-        scene v15s39_12j
+        scene v15s39_12
         with dissolve
 
         au "Of course... And now that you've won us all over, can we talk about something else? Or go for a dance?"
