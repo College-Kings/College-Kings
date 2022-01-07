@@ -103,7 +103,7 @@ label v15s49:
     scene v15s49_9
     with dissolve
 
-    ri "*Moans* Let... Go!"
+    ri "*Grunts* Let... Go!"
 
     scene v15s49_9a
     with dissolve
@@ -187,15 +187,15 @@ label v15s49:
 
             tom "Does it look like I give it fuck?! How about I drop your weak ass too?"
 
-        "Be angry":
+        "Get angry":
             $ add_point(KCT.TROUBLEMAKER)
 
-            u "What the fuck is your problem?"
+            u "BACK THE FUCK OFF!"
 
             scene v15s49_13a
             with dissolve
 
-            tom "You! You're my problem, motherfucker!"
+            tom "MAKE ME, MOTHERFUCKER!"
 
     if wintom:
         scene v15s49_13
@@ -284,9 +284,6 @@ label v15s49:
 
     ri "We can walk away from this without a fight."
 
-    scene v15s49_16
-    with dissolve
-
     menu:
         "Nobody's walking away":
             $ add_point(KCT.TROUBLEMAKER)
@@ -309,7 +306,7 @@ label v15s49:
     scene v15s49_13e # FPP. Show Tom in a fighting stance looking at MC, MC looking at Tom, Tom angry, mouth closed.
     with dissolve
 
-    tom "Come at me, bro!"
+    tom "You're about to die."
 
     scene v15s49_18 # TPP. A nice cinematic kind of shot of MC's fist clenched and the rain dripping off of it.
     with dissolve

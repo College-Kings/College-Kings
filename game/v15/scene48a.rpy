@@ -580,7 +580,7 @@ label v15s48a_end:
 
             no "Ha, I guess..."
 
-        "Get use to it":
+        "Get used to it":
             u "Good, get used to it."
 
             scene v15s48aend_4a
