@@ -516,7 +516,7 @@ label v12s32:
 
             na "Hey Aubby, hope you were paying close attention 'cause it's your turn."
 
-            scene v12s32_20a
+            scene v12s32_20
             with dissolve
 
             au "*Whisper to self* Let's get this over with."

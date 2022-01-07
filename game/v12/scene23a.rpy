@@ -444,23 +444,11 @@ label v12_mc_chilling:
 
         u "Sam?"
 
-        scene v12mor18
-        with dissolve
-
         sa "*Drunk* Leave me alone."
-
-        scene v12mor18
-        with dissolve
 
         u "Sam, c'mon."
 
-        scene v12mor18
-        with dissolve
-
         sa "..."
-
-        scene v12mor18
-        with dissolve
 
         u "Sam?"
 
