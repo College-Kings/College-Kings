@@ -220,8 +220,6 @@ label v15s48a:
     call screen sex_overlay("v15s48a_end")
 
 label v15s48a_boobs:
-    $ v15s48a_frboobs = True
-
     scene v15s48abo_1 # TPP. Close up of Nora's boobs as she lays on her back on the couch.
     with dissolve
 
@@ -307,8 +305,6 @@ label v15s48a_boobs:
     call screen sex_overlay("v15s48a_end")
 
 label v15s48a_feet:
-    $ v15s48a_frfeet = True
-
     scene v15s48afe_1 # TPP. Close up of Nora's feet.
     with dissolve
 
@@ -380,8 +376,6 @@ label v15s48a_feet:
     call screen sex_overlay("v15s48a_end")
 
 label v15s48a_vagina:
-    $ v15s48a_frvagina = True
-
     scene v15s48ava_1 # FPP. MC looking at Nora's vagina.
     with dissolve
 
@@ -777,8 +771,10 @@ label v15s48a_end:
     u "Ahhh... (Fuck!)"
 
 # -Timed Event
-    menu:
+    menu (fail_label="v15s48a_cum"):
         "Cum inside Nora":
+            label v15s48a_cum:
+        
             scene v15s48aend_11a
             with vpunch
 
