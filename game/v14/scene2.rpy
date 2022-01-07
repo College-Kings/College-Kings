@@ -36,7 +36,6 @@ label v14s02:
     menu:
 
         "A little bit":
-
             $ add_point(KCT.BOYFRIEND)
 
             u "Maybe a little bit."
@@ -47,9 +46,11 @@ label v14s02:
             imre "Haha, I knew it."
 
         "Not at all":
-
             $ add_point(KCT.TROUBLEMAKER)
 
+            scene v14s02_2a
+            #with dissolve
+            
             u "Not at all, bro."
 
             scene v14s02_2

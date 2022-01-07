@@ -223,6 +223,9 @@ label v14s20:
                 $ autumn.points += 1
                 $ autumn.relationship = Relationship.TRUST
 
+                scene v14s20_3a
+                #with dissolve
+                
                 u "It's going great so far."
 
                 scene v14s20_3
