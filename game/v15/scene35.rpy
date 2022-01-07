@@ -1434,7 +1434,7 @@ label v15s35:
                 "label": "v15s35_wml1_lin"
             }
         ]
-        call screen whos_most_likely_to("Most likely to into a zombie during a zombie apocalypse?")
+        call screen whos_most_likely_to("Most likely to turn into a zombie during an apocalypse?")
 
     label v15s35_wml1_lin: # -if MC voted for Lindsey, creating a tie
         scene v15s35_7i
