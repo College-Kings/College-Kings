@@ -21,11 +21,10 @@ label v13s53:
 
     u "What are you doing?"
 
-    scene v13s53_3a # FPP. Same as v13s53_3, Riley mouth open
-    with dissolve
-
     if v13s48_ryan_double_date:
-
+        scene v13s53_3a # FPP. Same as v13s53_3, Riley mouth open
+        with dissolve
+        
         ri "Trying to recover from that failure of a date."
 
         scene v13s53_3
@@ -34,6 +33,8 @@ label v13s53:
         u "You and I both. *Chuckles*"
 
     else:
+        scene v13s53_3a # FPP. Same as v13s53_3, Riley mouth open
+        with dissolve
 
         ri "Just getting some reading in... *Chuckles*"
 

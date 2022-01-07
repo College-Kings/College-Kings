@@ -471,9 +471,6 @@ label v13s14a:
 
             au "Okay... Ha, good."
 
-            scene v13s14a_24d
-            with dissolve
-
             au "Well, goodnight, for real this time. *Chuckles*"
 
             scene v13s14a_25 # TPP Show MC walking up to Aubrey

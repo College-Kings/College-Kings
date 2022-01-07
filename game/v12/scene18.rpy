@@ -1255,7 +1255,7 @@ label v12s18_fmk:
 
     u "I-"
 
-    scene v12slpfmk6d
+    scene v12slpfmk5
     with dissolve
 
     no "*Chuckles* Next?"

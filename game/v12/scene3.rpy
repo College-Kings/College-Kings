@@ -341,8 +341,11 @@ label v12_penelope_roof:
 
                     "Be bold":
                         $ add_point(KCT.BOYFRIEND)
-
                         $ grant_achievement("a_person_like_me")
+
+                        scene v12penr10e
+                        #with dissolve
+
                         u "I'm a guy like me."
 
                         scene v12penr12 # TPP Show Penelope rolling over on top of MC

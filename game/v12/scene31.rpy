@@ -99,7 +99,9 @@ label v12_aubrey_wake_up:
         u "We'll have time for all the stories later, gotta hurry, remember? C'mon."
 
     else:
-
+        scene v12auw4b
+        #with dissolve
+        
         cl "Chicks always ride together."
 
         scene v12auw5c # FPP. Same as v12auw5b, Aubrey slight smile, mouth open

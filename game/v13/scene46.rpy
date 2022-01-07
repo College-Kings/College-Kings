@@ -218,18 +218,12 @@ label v13s46:
 
     la "*Whispers* Oh my gosh, [name]! Walk over here already, would you?"
 
-    scene v13s46_6f
-    with dissolve
-
     u "*Sighs*"
 
     scene v13s46_6g # FPP. same as MC v13s46_6f walks over to Lauren and the deer and is also now within arms reach of the MC
     with dissolve
 
     u "He must be used to people. How is he so calm?"
-
-    scene v13s46_6g
-    with dissolve
 
     la "I'm sure some of the people who come on this trail feed him snacks every once in a while."
 
@@ -429,9 +423,6 @@ label v13s46:
 
     menu:
         "What?! No way":
-            scene v13s46_13c
-            with dissolve
-
             u "What?! No way... You're being extra freaky right now. *Chuckles*"
 
             scene v13s46_13b
@@ -446,10 +437,8 @@ label v13s46:
 
         "Haha, okay":
             $ add_point(KCT.TROUBLEMAKER)
-            scene v13s46_13b
-            with dissolve
-
             $ grant_achievement("voyeur")
+
             u "Okay, lead the way. *Chuckles*"
 
             scene v13s46_15 # FPP. MC and Lauren sneak closer to the couple, just laurens head is visible full smile mouth open looking at the couple and find them fully nude in the arch sex position, male body should resemble an arch, google search sex position 173 arch, first google image for reference

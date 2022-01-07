@@ -68,9 +68,6 @@ label v13_walk_imre:
 
         imre "Nora, duh. You don't see all the hand moving and fake smiling she's doing?"
 
-        scene v13s38_2c
-        with dissolve
-
         imre "Chris is out here actually trying and she's not doing a damn thing to help the situation."
 
     scene v13s38_3a # FPP. same as 3, Imre with a neutral expression, mouth closed
