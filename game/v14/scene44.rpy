@@ -378,7 +378,6 @@ label v14s44:
     with dissolve
 
     menu:
-
         "She was pretty hot":
             $ add_point(KCT.BRO)
 
@@ -389,6 +388,9 @@ label v14s44:
 
         "Meh, not my type":
             $ add_point(KCT.TROUBLEMAKER)
+
+            scene v14s44_15
+            #with dissolve
 
             u "Meh, she's not really my type."
 

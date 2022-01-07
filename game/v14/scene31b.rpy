@@ -540,12 +540,11 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
     gr "No, my grandmother... Yes, Chloe."
 
-    scene v14s31b_17c
+    scene v14s31b_17d
     with dissolve
 
     menu:
         "Don't think so":
-            
             u "Hmm, no... I don't think so."
 
         "Not yet":

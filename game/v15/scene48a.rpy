@@ -580,9 +580,6 @@ label v15s48a_end:
             no "Ha, I guess..."
 
         "Get used to it":
-            scene v15s48aend_4
-            #with dissolve
-        
             u "Good, get used to it."
 
             scene v15s48aend_4a

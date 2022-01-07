@@ -453,7 +453,7 @@ label v14s36:
 
     u "Penelope isn't in a sorority and also chooses to miss out on a lot of those things. So I guess I don't see how she could know everyone so well, haha."
 
-    scene v14s36_4a
+    scene v14s36_4g
     with dissolve
 
     jen "Penelope may be quiet but she has her ears to all the walls. She's very aware of the things around her."
@@ -638,7 +638,7 @@ label v14s36:
 
         jen "On top of that, you dropped everything to come be with me in the middle of the night."
 
-        scene v14s36_5f # FPP same as v14s36_5c Jenny looks up at MC while her head is in his lap and cuffs her hand that was in the water around his cheek
+        scene v14s36_5d
         with dissolve
 
         jen "How could I want to be around anyone else?"
@@ -1173,7 +1173,7 @@ label v14s36:
                 else:
                     $ add_point(KCT.TROUBLEMAKER)
 
-                scene v14s36_5f
+                scene v14s36_5f # FPP same as v14s36_5c Jenny looks up at MC while her head is in his lap and cuffs her hand that was in the water around his cheek
                 with dissolve
 
                 u "Ha. um, sorry... it's kinda cold out here, don't you think?"
@@ -1342,7 +1342,6 @@ label v14s36:
         with dissolve
 
         menu:
-
             "What kind of things?":
                 $ add_point(KCT.BOYFRIEND)
 
@@ -1353,10 +1352,12 @@ label v14s36:
 
                 la "Like, did you know that there's like hundreds of different sex positions and depending on the position, you can feel different things?"
 
-
             "You watching porn sounds hot":
                 $ add_point(KCT.BRO)
 
+                scene v14s36_14b
+                #with dissolve
+                
                 u "You watching porn just sounds really hot."
 
                 scene v14s36_14c # TPP same as v14s36_14b Laurens mouth is closed
