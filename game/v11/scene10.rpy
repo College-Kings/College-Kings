@@ -35,7 +35,7 @@ label v11_airport_arrival:
     lee "I expect you all to behave like adults since that's what you are and even though there are some specific activities we'll attend as a group."
 
     scene v11aira3a
-    with dissolve 
+    with dissolve
     
     lee "Your own exploration will be essential to make the most out of this experience."
 

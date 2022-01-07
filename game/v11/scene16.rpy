@@ -22,7 +22,7 @@ label v11_lauren_airport_convo:
         pause 0.75
 
         scene v11laac2 # FPP. Show MC tapping Lauren's shoulder, she has her back turned to him, MC is very close to her now
-        with dissolve 
+        with dissolve
 
         pause 0.75
 

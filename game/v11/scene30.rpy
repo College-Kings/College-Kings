@@ -126,7 +126,7 @@ label v11_lauren_store:
     pause 0.75
 
     scene v11las5 # FPP. MC and Lauren standing next to each other on the sidewalk, MC and Lauren looking at each other, Lauren slight smile, mouth closed
-    with dissolve 
+    with dissolve
 
     u "Where are we going?"
 
@@ -1463,7 +1463,7 @@ label v11_quiz_bonus:
                 jump v11s30_PhoneContinuelauren1
 
     scene v11las49
-    with dissolve 
+    with dissolve
 
     u "(That's how you start a day off right. Let's see what else today has to offer.)"
 
