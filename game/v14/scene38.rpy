@@ -52,7 +52,6 @@ label v14s38:
     jen "If you keep stalking me I won't even have to worry."
 
     menu:
-
         "Apologize":
             $ add_point(KCT.BOYFRIEND)
 
@@ -89,6 +88,9 @@ label v14s38:
         "Compliment her":
             $ add_point(KCT.BRO)
 
+            scene v14s38_4a
+            with dissolve
+           
             u "Well maybe if you weren't so cute I wouldn't have to pretend to run into you all the time, haha."
 
             scene v14s38_4

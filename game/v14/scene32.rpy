@@ -81,9 +81,7 @@ label v14s32:
     with dissolve
 
     menu:
-
         "Chris":
-
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Chris?"
@@ -92,12 +90,13 @@ label v14s32:
             with dissolve
 
             imre "What? No. Ryan."
-        
 
         "Ryan":
-
             $ add_point(KCT.BRO)
 
+            scene v14s32_2d
+            #with dissolve
+            
             u "Ryan?"
 
             scene v14s32_2e
@@ -133,7 +132,6 @@ label v14s32:
     with dissolve
     
     menu:
-
         "You're right":
             $ add_point(KCT.BRO)
 
@@ -145,8 +143,11 @@ label v14s32:
             imre "Exactly. That's what I'm saying!"
 
         "Please just get along":
-
             $ add_point(KCT.BOYFRIEND)
+
+            scene v14s32_2d
+            #with dissolve
+            
             u "*Sighs*"
 
             u "It'd be really nice if you two just got along."
