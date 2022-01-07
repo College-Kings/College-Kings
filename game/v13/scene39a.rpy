@@ -115,12 +115,12 @@ label v13s39a:
         pause 0.75
 
         scene v13s39a_7 # FPP. close up shot of the cue ball making contact and the balls are scattered
-        with dissolve          
+        with dissolve
 
         pause 0.75
     
         scene v13s39a_8 # FPP. close up shot of the 2 ball going into a pocket
-        with dissolve  
+        with dissolve
 
         pause 0.75
 
@@ -140,22 +140,22 @@ label v13s39a:
         pause 0.75
 
         scene v13s39a_6d # TPP. same as v13s39a_6c show only the 8, 15 ball, and the cue ball are shown on the table, mc lines up to shoot at the 15 ball
-        with dissolve         
+        with dissolve
 
         pause 0.75
 
         scene v13s39a_9 # FPP. show MC aiming at the cue ball to put the 15 ball to put it into a pocket, ryan standing on the other side of the table, slight smile, mouth closed
-        with dissolve  
+        with dissolve
 
         u "It's gonna be game over now."
 
         scene v13s39a_8a # FPP. same as v13s39a_8 close up shot of the 15 ball going into a pocket
-        with dissolve  
+        with dissolve
 
         pause 0.75
 
         scene v13s39a_9a # FPP. same as v13s39a_9 MC is looking at the cue ball in front of the 8 ball to put it into either a left pocket or right pocket, pool stick is not visible, ryan standing between the pockets
-        with dissolve  
+        with dissolve
 
         menu:
             "Shoot left pocket":
@@ -165,7 +165,7 @@ label v13s39a:
                 u "Left pocket!"
 
                 scene v13s39a_8b # FPP. same as v13s39a_8 close up shot of the 8 ball bouncing off the wall and not going in
-                with dissolve  
+                with dissolve
 
                 u "Damn!"
 
@@ -179,8 +179,8 @@ label v13s39a:
 
                 ry "And, that's game!"
 
-                scene v13s39a_4c # FPP. same as v13s39a_4a ryan has a full smile
-                with dissolve  
+                scene v13s39a_4a # FPP. same as v13s39a_4a ryan has a full smile
+                with dissolve
 
                 u "You got lucky. *Chuckles*"
 
@@ -201,7 +201,7 @@ label v13s39a:
                 u "Yessir!"
 
                 scene v13s39a_4e # FPP. same as v13s39a_4d ryan mouth open
-                with dissolve  
+                with dissolve
 
                 ry "You said you haven’t played in a long time, dickhead."
 
@@ -235,9 +235,6 @@ label v13s39a:
 
         menu:
             "Sure":
-                scene v13s39a_4a
-                with dissolve
-
                 u "Sure man, I guess I don't see what's so bad about it."
 
                 scene v13s39a_4c
@@ -412,7 +409,7 @@ label v13s39a:
 
             "I love sports cars":
                 scene v13s39a_4a
-                with dissolve                
+                with dissolve
 
                 u "Can't go wrong with a good sports car."
 
@@ -472,12 +469,12 @@ label v13s39a:
         pause 0.75
 
         scene v13s39a_7
-        with dissolve          
+        with dissolve
 
         pause 0.75
     
         scene v13s39a_8
-        with dissolve  
+        with dissolve
 
         pause 0.75
 
@@ -497,22 +494,22 @@ label v13s39a:
         pause 0.75
 
         scene v13s39a_6d
-        with dissolve         
+        with dissolve
 
         pause 0.75
 
         scene v13s39a_9
-        with dissolve  
+        with dissolve
 
         u "It's gonna be game over now."
 
         scene v13s39a_8a
-        with dissolve  
+        with dissolve
 
         pause 0.75
 
         scene v13s39a_9a
-        with dissolve  
+        with dissolve
 
         menu:
             "Shoot left pocket":
@@ -522,7 +519,7 @@ label v13s39a:
                 u "Left pocket!"
 
                 scene v13s39a_8b
-                with dissolve  
+                with dissolve
 
                 u "Damn!"
 
@@ -536,8 +533,8 @@ label v13s39a:
 
                 ry "And, that's game!"
 
-                scene v13s39a_4c
-                with dissolve  
+                scene v13s39a_4a
+                with dissolve
 
                 u "You got lucky. *Chuckles*"
 
@@ -553,7 +550,7 @@ label v13s39a:
                 u "Yessir!"
 
                 scene v13s39a_4e
-                with dissolve  
+                with dissolve
 
                 ry "You said you haven’t played in a long time, dickhead."
 
@@ -586,9 +583,6 @@ label v13s39a:
         with dissolve
 
         ry "Hello?"
-
-        scene v13s39a_4n
-        with dissolve
 
         u "Wow..."
 

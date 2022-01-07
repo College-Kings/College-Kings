@@ -274,8 +274,6 @@ label v13s56:
     menu:
         "Perfume":
             $ v13_perfume = True
-            scene v13s56_6h
-            with dissolve
 
             u "Let's go with the perfume."
 
@@ -283,8 +281,8 @@ label v13s56:
             with dissolve
 
         "Bonsai":
-            scene v13s56_6h
-            with dissolve
+            scene v13s56_6e
+            #with dissolve
 
             u "Let's go with the Bonsai."
 
@@ -416,7 +414,7 @@ label v13s56:
 
     else:
         scene v13s56_1b_a # TPP. same as v13s56_1a nora and MC's backs are turned
-        with dissolve   
+        with dissolve
 
     pause 0.75
 

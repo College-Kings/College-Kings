@@ -719,7 +719,7 @@ label v13s30:
 
         am "Yeah, let's go."
 
-        scene v13s30_2
+        scene v13s30_2h
         with dissolve
 
         la "I'm sorry, Amber."

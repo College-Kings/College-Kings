@@ -61,11 +61,10 @@ label v13s22:
 
     au "So, you ratted him out?"
 
-    scene v13s22_2d # FPP. Same as v13s22_2c, Aubrey surprised expression, mouth closed.
-    with dissolve
-
     if v13_charli_exposed:
-
+        scene v13s22_2d # FPP. Same as v13s22_2c, Aubrey surprised expression, mouth closed.
+        with dissolve
+        
         u "I sure the fuck did! It's about time he got a taste of his own medicine. He made it worse by trying Mr. Lee like that."
 
         scene v13s22_3b # FPP. Same as v13s22_3a, Riley slightly annoyed, mouth open.
@@ -84,7 +83,9 @@ label v13s22:
         ri "Not a bad idea... *Chuckles*"
 
     else:
-
+        scene v13s22_2d
+        with dissolve
+        
         u "I could've, but I confronted him instead."
 
         scene v13s22_2c

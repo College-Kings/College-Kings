@@ -88,10 +88,10 @@ label v13s31:
 
     am "Let's keep this quiet. I don't want her feeling embarrassed."
 
-    #scene v13s31_6 
+    #scene v13s31_6
     #with dissolve
 
-    u "I agree."
+    #u "I agree."
 
     scene v13s31_8 # FPP. MC watches Amber walk off with Lauren, As Amber is walking off, MC thinks to himself
     with dissolve

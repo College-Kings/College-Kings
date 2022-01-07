@@ -229,7 +229,7 @@ label v13s13b:
 
     pe "Oh umm..."
 
-    scene v13s13b_3f # FPP Same angle as 3, Penelope looking at MC, curious and embarrassed, mouth closed
+    scene v13s13b_3c # FPP Same angle as 3, Penelope looking at MC, curious and embarrassed, mouth closed
     with dissolve
 
     u "I don't see why not."

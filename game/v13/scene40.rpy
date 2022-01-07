@@ -66,22 +66,22 @@ label v13s40:
     scene v13s40_4 # TPP. Show Chloe grabbing MC's hand and walking through the hotel lobby, both slight smiles, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s40_5 # TPP. Show Chloe still holding MC's hand, walking through the hotel corridor, both slight smiles, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s40_6 # TPP. Show Chloe pulling MC by the arm into her room, both slight smiles, mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s40_7 # TPP. Show MC and Chloe in her room, Chloe wrapping her arms around MC
     with dissolve
 
-    pause 0.75
+    pause 1
 
     stop music fadeout 3
     play music "music/v13/Track Scene 40_2.mp3" fadein 2
@@ -108,7 +108,7 @@ label v13s40:
     scene v13s40_9 # TPP. Show Chloe getting into her bed, slight smile, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s40_10 # FPP. MC looking at Chloe laying on her bed, mouth open, slight smile
     with fade
@@ -315,7 +315,7 @@ label v13s40_spanker:
     cl "N-No, not at all. *Chuckles* Keep going."
 
     scene v13s40sp_5b
-    with dissolve
+    with vpunch
 
     cl "Ahh! Yes! Harder..."
 
@@ -337,12 +337,12 @@ label v13s40_spanker:
     scene v13s40sp_3a # TPP. Same as v13s40sp_3, MC untying Chloe
     with dissolve
     
-    pause 0.75
+    pause 1
 
     scene v13s40sp_2a # TPP. Same as v13s40sp_2, MC flipping Chloe the other way (stomach upwards)
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v13s40sp_1a # TPP. Same as v13s40sp_1, MC tying Chloe back to the bed
     with dissolve
@@ -497,12 +497,12 @@ label v13s40_end_free_roam:
         scene v13s40end_2 # TPP. Show MC untying Chloe, both smiling, mouths closed
         with dissolve
 
-        pause 0.75
+        pause 1
 
         scene v13s40end_3 # TPP. Show Chloe removing her blindfold, sitting on the bed, MC same position as v13s40end_2, both smiling, mouths closed
         with dissolve
 
-        pause 0.75
+        pause 1
 
         scene v13s40end_4 # TPP. Show Chloe pushing MC on the bed, Chloe mouth open, smiling, MC smiling, mouth closed
         with dissolve
@@ -755,7 +755,7 @@ label v13s40_end_free_roam:
         scene v13s40end_20 # TPP. Show MC putting on his clothes, slight smile, mouth closed
         with dissolve
 
-        pause 0.75
+        pause 1
 
         $ renpy.end_replay()
 
@@ -767,7 +767,7 @@ label v13s40_end_free_roam:
         scene v13s40end_2
         #with dissolve
 
-        pause 0.75
+        pause 1
 
         stop music fadeout 3
         play music "music/v13/Track Scene 40_3.mp3" fadein 2
@@ -775,7 +775,7 @@ label v13s40_end_free_roam:
         scene v13s40end_3
         with dissolve
 
-        pause 0.75
+        pause 1
 
         scene v13s40end_21 # TPP. Show Chloe hugging MC, Chloe mouth open, MC mouth closed, both smiling (this is right after v13s40end_3)
         with dissolve
@@ -797,7 +797,7 @@ label v13s40_end_free_roam:
 
         $ renpy.end_replay()
 
-        pause 0.75
+        pause 1
 
         stop music fadeout 3
 

@@ -437,17 +437,14 @@ label v13s41:
 
             li "They're both blind, so that'll be awhile."
 
-    scene v13s41_14a
+    scene v13s41_14b
     with dissolve
 
     li "It'd be nice to have a really close girlfriend to talk to while I'm stressed about all this."
 
-    scene v13s41_14a
-    with dissolve
-
     li "Not having Chloe around lately is really getting to me... I knew this would eventually happen though, when I decided to run."
 
-    scene v13s41_14b
+    scene v13s41_14a
     with dissolve
 
     menu:
@@ -464,12 +461,12 @@ label v13s41:
 
             li "I've dug too deep at this point and I'm fully committed to saving the sorority."
 
-            scene v13s41_14d
+            scene v13s41_14c
             with dissolve
 
             u "I hear you. Guess you can't have everything perfectly the way you want, huh?"
 
-            scene v13s41_14e
+            scene v13s41_14b
             with dissolve
 
             li "Not everything."
