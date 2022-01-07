@@ -370,7 +370,7 @@ label v15s35:
         ]
         call screen would_you_rather("Would you rather?")
 
-        label v15s35_wyr1_charity:
+    label v15s35_wyr1_charity:
         $ add_point(KCT.BOYFRIEND)
         
         scene v15s35_7d
@@ -417,7 +417,7 @@ label v15s35:
         
         jump v15s35_wyr1_end
 
-        label v15s35_wyr1_me:
+    label v15s35_wyr1_me:
         $ add_point(KCT.BRO)
 
         scene v15s35_7d
@@ -488,8 +488,7 @@ label v15s35:
         scene v15s35_6b # TPP. same as v15s35_6a Aubrey, Autumn and Lindsey are laughing at Mc, Mc is rolling his eyes, Everyone is still holding their phones
         with dissolve
 
-        label v15s35_wyr1_end:
-        
+    label v15s35_wyr1_end:
         scene v15s35_7d
         with dissolve
 
@@ -551,7 +550,7 @@ label v15s35:
         ]
         call screen would_you_rather("Would you rather?")
 
-        label v15s35_wyr2_santa:
+    label v15s35_wyr2_santa:
         $ add_point(KCT.BRO)
         
         scene v15s35_7g # FPP. same as v15s35_7d Lindsey is slightly shocked, still looking at Mc, mouth is still open
@@ -637,7 +636,7 @@ label v15s35:
         
         jump v15s35_wyr2_end
 
-        label v15s35_wyr2_easter:
+    label v15s35_wyr2_easter:
         $ add_point(KCT.TROUBLEMAKER)
 
         scene v15s35_7i # FPP. same as v15s35_7h Lindsey is looking at Autumn, still a slight smile, mouth is still open
@@ -768,7 +767,7 @@ label v15s35:
 
         aut "Alright, alright. Say what you want, but I'm never going to kill that poor bunny."
 
-        label v15s35_wyr2_end:
+    label v15s35_wyr2_end:
 
         scene v15s35_7i
         with dissolve
@@ -831,7 +830,7 @@ label v15s35:
         ]
         call screen would_you_rather("Would you rather?")
 
-        label v15s35_wyr3_humanbody:
+    label v15s35_wyr3_humanbody:
         $ add_point(KCT.BRO)
         
         scene v15s35_7h
@@ -928,7 +927,7 @@ label v15s35:
         
         jump v15s35_wyr3_end
         
-        label v15s35_wyr3_frogbody:
+    label v15s35_wyr3_frogbody:
         $ add_point(KCT.BOYFRIEND)
 
         scene v15s35_7i
@@ -1023,8 +1022,7 @@ label v15s35:
 
         au "What's the next creep question, huh?"
         
-        label v15s35_wyr3_end:
-
+    label v15s35_wyr3_end:
         scene v15s35_7b
         with dissolve
 
@@ -1109,7 +1107,7 @@ label v15s35:
         ]
         call screen would_you_rather("Would you rather?")
 
-        label v15s35_wyr4_nosex:
+    label v15s35_wyr4_nosex:
         $ add_point(KCT.BOYFRIEND)
         
         scene v15s35_7g
@@ -1188,7 +1186,7 @@ label v15s35:
 
         jump v15s35_wyr4_end
         
-        label v15s35_wyr4_orgy:
+    label v15s35_wyr4_orgy:
 
         $ add_point(KCT.BRO)
         $ add_point(KCT.TROUBLEMAKER)
