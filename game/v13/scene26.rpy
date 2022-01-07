@@ -4,15 +4,15 @@
 # Time: late after noon/ early evening 
 
 label v13_emmy_sex:
-
-    $ v13_emmysex = True
+    $ sceneList.add("v13_emmy")
+    $ emmy.relationship = Relationship.FWB
 
     play music "music/v13/Track Scene 26.mp3" fadein 2
 
-    image v13emmha = Movie(play="images/v13/Scene26/v13emmaha.webm", loop=True, image="images/v13/Scene26/v13emmahaStart.webp", start_image="images/v13/Scene26/v13emmahaStart.webp") # emmy giving mc head using her hands as well 
-    image v13emmhaf = Movie(play="images/v13/Scene26/v13emmahaf.webm", loop=True, image="images/v13/Scene26/v13emmahaStart.webp", start_image="images/v13/Scene26/v13emmahaStart.webp") # emmy giving mc head using her hands as well spedup
-    image v13emmha2 = Movie(play="images/v13/Scene26/v13emmaha2.webm", loop=True, image="images/v13/Scene26/v13emmaha2Start.webp", start_image="images/v13/Scene26/v13emmaha2Start.webp") # emmy giving mc head using her hands as well TPP 2
-    image v13emmha2f = Movie(play="images/v13/Scene26/v13emmaha2f.webm", loop=True, image="images/v13/Scene26/v13emmaha2Start.webp", start_image="images/v13/Scene26/v13emmaha2Start.webp") # emmy giving mc head using her hands as well TPP 2 spedup
+    image v13emmha = Movie(play="images/v13/Scene 26/v13emmaha.webm", loop=True, image="images/v13/Scene 26/v13emmahaStart.webp", start_image="images/v13/Scene 26/v13emmahaStart.webp") # emmy giving mc head using her hands as well 
+    image v13emmhaf = Movie(play="images/v13/Scene 26/v13emmahaf.webm", loop=True, image="images/v13/Scene 26/v13emmahaStart.webp", start_image="images/v13/Scene 26/v13emmahaStart.webp") # emmy giving mc head using her hands as well spedup
+    image v13emmha2 = Movie(play="images/v13/Scene 26/v13emmaha2.webm", loop=True, image="images/v13/Scene 26/v13emmaha2Start.webp", start_image="images/v13/Scene 26/v13emmaha2Start.webp") # emmy giving mc head using her hands as well TPP 2
+    image v13emmha2f = Movie(play="images/v13/Scene 26/v13emmaha2f.webm", loop=True, image="images/v13/Scene 26/v13emmaha2Start.webp", start_image="images/v13/Scene 26/v13emmaha2Start.webp") # emmy giving mc head using her hands as well TPP 2 spedup
     
     scene v13emmha # Ignore as animation
     with dissolve
@@ -78,10 +78,10 @@ label v13_emmy_sex:
 
     pause 
     
-    image v13emmsre = Movie(play="images/v13/Scene26/v13emmsre.webm", loop=True, image="images/v13/Scene26/v13emmsreStart.webp", start_image="images/v13/Scene26/v13emmsreStart.webp") # MC fucking emmy from behind while she touches her ankes to her ass
-    image v13emmsref = Movie(play="images/v13/Scene26/v13emmsref.webm", loop=True, image="images/v13/Scene26/v13emmsreStart.webp", start_image="images/v13/Scene26/v13emmsreStart.webp") # MC fucking emmy from behind while she touches her ankes to her ass spedup
-    image v13emmsre2 = Movie(play="images/v13/Scene26/v13emmsre2.webm", loop=True, image="images/v13/Scene26/v13emmsre2Start.webp", start_image="images/v13/Scene26/v13emmsre2Start.webp") # MC fucking emmy from behind while she touches her ankes to her ass TPP 2
-    image v13emmsre2f = Movie(play="images/v13/Scene26/v13emmsre2f.webm", loop=True, image="images/v13/Scene26/v13emmsre2Start.webp", start_image="images/v13/Scene26/v13emmsre2Start.webp") # MC fucking emmy from behind while she touches her ankes to her ass TPP 2 spedup
+    image v13emmsre = Movie(play="images/v13/Scene 26/v13emmsre.webm", loop=True, image="images/v13/Scene 26/v13emmsreStart.webp", start_image="images/v13/Scene 26/v13emmsreStart.webp") # MC fucking emmy from behind while she touches her ankes to her ass
+    image v13emmsref = Movie(play="images/v13/Scene 26/v13emmsref.webm", loop=True, image="images/v13/Scene 26/v13emmsreStart.webp", start_image="images/v13/Scene 26/v13emmsreStart.webp") # MC fucking emmy from behind while she touches her ankes to her ass spedup
+    image v13emmsre2 = Movie(play="images/v13/Scene 26/v13emmsre2.webm", loop=True, image="images/v13/Scene 26/v13emmsre2Start.webp", start_image="images/v13/Scene 26/v13emmsre2Start.webp") # MC fucking emmy from behind while she touches her ankes to her ass TPP 2
+    image v13emmsre2f = Movie(play="images/v13/Scene 26/v13emmsre2f.webm", loop=True, image="images/v13/Scene 26/v13emmsre2Start.webp", start_image="images/v13/Scene 26/v13emmsre2Start.webp") # MC fucking emmy from behind while she touches her ankes to her ass TPP 2 spedup
 
     scene v13emmsre # Ignore as animation
     with dissolve
@@ -114,10 +114,10 @@ label v13_emmy_sex:
 
     pause 
 
-    image v13emmta = Movie(play="images/v13/Scene26/v13emmta.webm", loop=True, image="images/v13/Scene26/v13emmtaStart.webp", start_image="images/v13/Scene26/v13emmtaStart.webp") # MC against the wall fucking emmy with her leg on his shoulder
-    image v13emmtaf = Movie(play="images/v13/Scene26/v13emmtaf.webm", loop=True, image="images/v13/Scene26/v13emmtaStart.webp", start_image="images/v13/Scene26/v13emmtaStart.webp") # MC against the wall fucking emmy with her leg on his shoulder spedup
-    image v13emmta2 = Movie(play="images/v13/Scene26/v13emmta2.webm", loop=True, image="images/v13/Scene26/v13emmta2Start.webp", start_image="images/v13/Scene26/v13emmta2Start.webp") # MC against the wall fucking emmy with her leg on his shoulder TPP 2
-    image v13emmta2f = Movie(play="images/v13/Scene26/v13emmta2f.webm", loop=True, image="images/v13/Scene26/v13emmta2Start.webp", start_image="images/v13/Scene26/v13emmta2Start.webp") # MC against the wall fucking emmy with her leg on his shoulder TPP 2 spedup
+    image v13emmta = Movie(play="images/v13/Scene 26/v13emmta.webm", loop=True, image="images/v13/Scene 26/v13emmtaStart.webp", start_image="images/v13/Scene 26/v13emmtaStart.webp") # MC against the wall fucking emmy with her leg on his shoulder
+    image v13emmtaf = Movie(play="images/v13/Scene 26/v13emmtaf.webm", loop=True, image="images/v13/Scene 26/v13emmtaStart.webp", start_image="images/v13/Scene 26/v13emmtaStart.webp") # MC against the wall fucking emmy with her leg on his shoulder spedup
+    image v13emmta2 = Movie(play="images/v13/Scene 26/v13emmta2.webm", loop=True, image="images/v13/Scene 26/v13emmta2Start.webp", start_image="images/v13/Scene 26/v13emmta2Start.webp") # MC against the wall fucking emmy with her leg on his shoulder TPP 2
+    image v13emmta2f = Movie(play="images/v13/Scene 26/v13emmta2f.webm", loop=True, image="images/v13/Scene 26/v13emmta2Start.webp", start_image="images/v13/Scene 26/v13emmta2Start.webp") # MC against the wall fucking emmy with her leg on his shoulder TPP 2 spedup
    
     scene v13emmta # Ignore as animation
     with dissolve
@@ -153,10 +153,10 @@ label v13_emmy_sex:
 
     pause 
 
-    image v13emmuc = Movie(play="images/v13/Scene26/v13emmuc.webm", loop=True, image="images/v13/Scene26/v13emmucStart.webp", start_image="images/v13/Scene26/v13emmucStart.webp") # MC Emmy's Legs arround mc fucking
-    image v13emmucf = Movie(play="images/v13/Scene26/v13emmucf.webm", loop=True, image="images/v13/Scene26/v13emmucStart.webp", start_image="images/v13/Scene26/v13emmucStart.webp") # Emmy's Legs arround mc fucking spedup
-    image v13emmuc2 = Movie(play="images/v13/Scene26/v13emmuc2.webm", loop=True, image="images/v13/Scene26/v13emmuc2Start.webp", start_image="images/v13/Scene26/v13emmuc2Start.webp") # Emmy's Legs arround mc fucking TPP 2
-    image v13emmuc2f = Movie(play="images/v13/Scene26/v13emmuc2f.webm", loop=True, image="images/v13/Scene26/v13emmuc2Start.webp", start_image="images/v13/Scene26/v13emmuc2Start.webp") # Emmy's Legs arround mc fucking TPP 2 spedup
+    image v13emmuc = Movie(play="images/v13/Scene 26/v13emmuc.webm", loop=True, image="images/v13/Scene 26/v13emmucStart.webp", start_image="images/v13/Scene 26/v13emmucStart.webp") # MC Emmy's Legs arround mc fucking
+    image v13emmucf = Movie(play="images/v13/Scene 26/v13emmucf.webm", loop=True, image="images/v13/Scene 26/v13emmucStart.webp", start_image="images/v13/Scene 26/v13emmucStart.webp") # Emmy's Legs arround mc fucking spedup
+    image v13emmuc2 = Movie(play="images/v13/Scene 26/v13emmuc2.webm", loop=True, image="images/v13/Scene 26/v13emmuc2Start.webp", start_image="images/v13/Scene 26/v13emmuc2Start.webp") # Emmy's Legs arround mc fucking TPP 2
+    image v13emmuc2f = Movie(play="images/v13/Scene 26/v13emmuc2f.webm", loop=True, image="images/v13/Scene 26/v13emmuc2Start.webp", start_image="images/v13/Scene 26/v13emmuc2Start.webp") # Emmy's Legs arround mc fucking TPP 2 spedup
     
     scene v13emmuc # Ignore as animation
     with dissolve

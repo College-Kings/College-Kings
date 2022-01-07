@@ -56,7 +56,7 @@ label v14s17:
 
     u "That's pretty messed up to call Lauren the class clown behind her back..."
 
-    if msrosers and joinwolves: #sanitizing pathbuilder input
+    if ms_rose.relationship.value >= Relationship.FWB.value and joinwolves: #sanitizing pathbuilder input
         scene v14s17_4c
         with dissolve
 
@@ -123,7 +123,7 @@ label v14s17:
 
         pause 0.75
     
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v14s17_7a # TPP. Same as v14s17_7, Show MC and Lauren kissing
         with dissolve
 
@@ -204,11 +204,10 @@ label v14s17:
 
             u "*Chuckles*"
 
-    if laurenrs or not v11_aubrey_sex: #correction for saves where this variable was defaulting to True - which can't be the case if v11_aubreysex is False, or if laurenrs is still True
-        $ laurenrs_v11aubrey = False
+    if lauren.relationship.value > Relationship.GIRLFRIEND.value or not "v11_aubrey" in sceneList: #correction for saves where this variable was defaulting to True - which can't be the case if v11_aubreysex is False, or if lauren rs is still True
+        $ v11_lauren_caught_aubrey = False
 
-    if laurenrs_v11aubrey or laurenmad:
-        $ laurenmad = True
+    if v11_lauren_caught_aubrey or toldlauren or laurentoofar:
         scene v14s17_8d # FPP. Same as v14s17_8, neutral expression
         with dissolve
         
@@ -336,9 +335,7 @@ label v14s17:
     with dissolve
 
     menu:
-
         "Make fun of her":
-
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Ooooohhh... *Coughs* Nerd! *Coughs*"
@@ -359,9 +356,11 @@ label v14s17:
             la "Mhmm, that's more like it."
 
         "Compliment her":
-
             $ add_point(KCT.BOYFRIEND)
 
+            scene v14s17_10b
+            #with dissolve
+            
             u "Damn, well done."
 
             scene v14s17_10d
@@ -496,8 +495,8 @@ label v14s17:
 
             u "Plus, she came to you, of all people, for a reason. She trusts you, and knows what you're capable of."
 
-            if laurenrs or kct == "loyal":
-                if not laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value or kct == "loyal":
+                if lauren.relationship.value < Relationship.GIRLFRIEND.value:
                     call screen kct_popup
             
                 $ v14_lauren_helps_lindsey = True
@@ -525,10 +524,10 @@ label v14s17:
                 la "I'll talk to her and see what she needs me to do."
 
             else:
-                call screen kct_popup(required_kct="loyal")
                 scene v14s17_10g
                 with dissolve
 
+                call screen kct_popup(required_kct="loyal")
                 la "You're right, but..."
 
                 scene v14s17_10h # FPP. Same as v14s17_10a, serious expression 
@@ -568,7 +567,7 @@ label v14s17:
             scene v14s17_10b
             with dissolve
 
-            u "Lindsey is the one running for president. Not you."
+            u "Lindsey is the one running for President. Not you."
 
             scene v14s17_10a
             with dissolve
@@ -635,7 +634,7 @@ label v14s17:
 
                     u "*Whispers* Truth is, I don't want her to win."
 
-                    u "*Whispers* It's Chloe's last year and if I can keep Lindsey from taking over, that's what I'll do. She doesn't need to be president."
+                    u "*Whispers* It's Chloe's last year and if I can keep Lindsey from taking over, that's what I'll do. She doesn't need to be President."
 
                     scene v14s17_13a
                     with dissolve
@@ -667,8 +666,8 @@ label v14s17:
 
                     u "You're the most loyal person I know, Lauren. That's why I'm asking you, the one person I trust with anything and everything."
 
-                    if laurenrs or kct == "loyal":
-                        if not laurenrs:
+                    if lauren.relationship.value >= Relationship.GIRLFRIEND.value or kct == "loyal":
+                        if lauren.relationship.value < Relationship.GIRLFRIEND.value:
                             call screen kct_popup
                         
                         $ v14_lauren_sabotage = True
@@ -721,7 +720,7 @@ label v14s17:
 
                         la "Okay, yeah I get it. Just don't bring it up again, okay?"
 
-                        scene v14s17_10g
+                        scene v14s17_10b
                         with dissolve
 
                         u "My lips are sealed."
@@ -731,7 +730,7 @@ label v14s17:
 
                         pause 0.75
                         
-                        if laurenrs:
+                        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                             scene v14s17_16 # TPP. Show MC, neutral expression, mouth closed, Lauren beside and looking at MC, Lauren puts both her hands together, begging expression, mouth open
                             with dissolve
 
@@ -745,13 +744,13 @@ label v14s17:
                             scene v14s17_16b # TPP. Same position as v14s17_16, Show MC and Lauren kissing
                             with dissolve
 
-                            pause 0.75
+                            pause 1.75
 
                     else:
-                        call screen kct_popup(required_kct="loyal")
                         scene v14s17_17 # FPP. Lauren Looking at MC, serious expression, mouth open
                         with dissolve
                         
+                        call screen kct_popup(required_kct="loyal")
                         $ set_presidency_percent(v14_lindsey_popularity + 1)
                         la "Exactly, the most loyal person you know, and that's why you of all people should know that I wouldn't do something like that."
 
@@ -810,7 +809,7 @@ label v14s17_end:
 
     pause 0.75
 
-    if laurenrs: 
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: 
         scene v14s17_19 # TPP. Show MC and Lauren kissing
         with dissolve
 

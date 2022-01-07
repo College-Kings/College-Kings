@@ -4,7 +4,20 @@
 # Time: Night
 # Render Count: 6 Unique Renders 33 Total
 
+init python:
+    def v15s1_reply1():
+        chloe.messenger.newMessage("You're unbelievable.")
+
+    def v15s1_reply2():
+        chloe.messenger.newMessage("Well, at least you admit it...")
+
 label v15_start:
+    $ autumn.relationship = Relationship.FRIEND #Reset Autumn to FRIEND
+    $ imre.relationship = Relationship.FRIEND #Reset Imre to FRIEND
+
+    if (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction:
+        $ lindsey_board.money -= 100 # we forgot about this one in v14
+
     if joinwolves:
         jump v15s1
     else:
@@ -30,7 +43,7 @@ label v15s1:
         scene v15s1_3a # FPP. same as v15s1_3 Imre's mouth is open, holding a fist up towards mc
         with dissolve
 
-        imre "Loyalty, fucker! Chris has no idea that the real reason why he and Nora broke up, is because you were interfering with their relationship."
+        imre "Loyalty, fucker! Chris has no idea that the real reason why he and Nora broke up is because you were interfering with their relationship."
 
         scene v15s1_3
         with dissolve
@@ -47,14 +60,10 @@ label v15s1:
 
         u "The only person to blame for their breakup is..."
 
-        scene v15s1_3b
-        with dissolve
-
         menu:
             "Blame Chris":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BOYFRIEND)
-                $ v15_blame_chris = True
 
                 scene v15s1_3c # FPP. same as v15s1_3b Imre increases to a fully angry expression, Imre places his hands to his sides
                 with dissolve
@@ -73,7 +82,8 @@ label v15s1:
 
                 u "Everyone knows that. Ask around, dude."
 
-                u "Even when she took the time to tell Chris exactly what she needed from him, he still didn't give her the love or affection that she was asking for."
+                u "Even when she took the time to tell Chris exactly what she needed from him..."
+                u "He still didn't give her the love or affection that she was asking for."
 
             "Blame Nora":
                 $ add_point(KCT.BRO)
@@ -87,7 +97,7 @@ label v15s1:
                 scene v15s1_3a
                 with dissolve
 
-                imre "So, the fact that you stood on the side lines looking like a knight in shining armor, has nothing to do with why they broke up?"
+                imre "So, the fact that you stood on the side lines looking like a knight in shining armor, that has nothing to do with why they broke up?"
 
                 imre "Ha! That's what you're trying to say to me?"
             
@@ -128,7 +138,7 @@ label v15s1:
             scene v15s1_3
             with dissolve
 
-        u "Just, take some time to really think about it, Imre."
+        u "Just take some time to really think about it, Imre."
 
         scene v15s1_3a
         with dissolve
@@ -177,7 +187,7 @@ label v15s1:
         scene v15s1_3f
         with dissolve
 
-        imre "You're lucky I came to talk to you first, man... Cause I was more than ready to tell him everything I know."
+        imre "You're lucky I came to talk to you first, man... 'Cause I was more than ready to tell him everything I know."
 
         scene v15s1_3g
         with dissolve
@@ -201,12 +211,15 @@ label v15s1:
 
         imre "Dammit man, this feels just like when Ross and Rachel broke up..."
 
-        scene v15s1_3f
+        scene v15s1_3m
         with dissolve
 
         menu:
             "They were on a break":
-                $ mc.quirks["pop_culture"] = True
+                scene v15s1_3m
+                #with dissolve
+
+                # $ mc.quirks["pop_culture"] = True # Being re-evaluated
                 $ add_point(KCT.BRO)
 
                 u "They were on a break, bro..."
@@ -222,7 +235,9 @@ label v15s1:
                 u "Haha."
 
             "Who?":
-                $ mc.quirks["boomer"] = True
+                scene v15s1_3m
+                #with dissolve
+                # $ mc.quirks["boomer"] = True # Being re-evaluated
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "Who?"
@@ -258,7 +273,9 @@ label v15s1:
 
         menu:
             "Of course I know":
-                $ mc.quirks["pop_culture"] = True
+                scene v15s1_3i
+                #with dissolve
+                # $ mc.quirks["pop_culture"] = True # Being re-evaluated
                 $ add_point(KCT.BRO)
 
                 u "*Laughs* Yeah, of course I know"
@@ -279,7 +296,9 @@ label v15s1:
                 imre "*Sighs*"
 
             "A monkey?":
-                $ mc.quirks["boomer"] = True
+                scene v15s1_3i
+                #with dissolve
+                # $ mc.quirks["boomer"] = True # Being re-evaluated
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "A monkey? What? *Laughs*"
@@ -411,17 +430,17 @@ label v15s1:
 
             imre "But there's always a chance, dude. Just like Ross and Rachel."
 
-            if mc.quirks["pop_culture"]:
-                scene v15s1_3o
-                with dissolve
+            # if mc.quirks["pop_culture"]: # Being re-evaluated
+                # scene v15s1_3o
+                # with dissolve
 
-                u "*Chuckles*"
+                # u "*Chuckles*"
 
-            elif mc.quirks["boomer"]:
-                scene v15s1_3o # FPP. same as v15s1_3m Imre has a smug looking expression mouth is still closed
-                with dissolve
+            # elif mc.quirks["boomer"]: # Being re-evaluated
+            scene v15s1_3o # FPP. same as v15s1_3m Imre has a smug looking expression mouth is still closed
+            with dissolve
 
-                u "*Sighs*"
+            u "*Sighs*"
 
             scene v15s1_3l
             with dissolve
@@ -448,12 +467,9 @@ label v15s1:
 
     imre "Okay, fine..."
 
-    scene v15s1_3m
-    with dissolve
-
     imre "I guess you're right. I just don't like it when things change around here, you know?"
 
-    scene v15s1_3l
+    scene v15s1_3m
     with dissolve
 
     u "I know. You'll grow up one day. *Laughs*"
@@ -498,13 +514,7 @@ label v15s1:
 
     u "*Sighs* (Where the hell is Nora?)"
 
-    scene v15s1_5b # TPP. same as v15s1_5a Mc has placed the phone on his bed, both hands behind his head
-    with dissolve
-
     u "(Maybe she lost her phone? Or it ran out of battery?)"
-
-    scene v15s1_5a
-    with dissolve
 
     u "(Hopefully I can find out some more tomorrow...)"
 
@@ -517,19 +527,41 @@ label v15s1:
 
 # -MC checks his texts and there's a message from Autumn-
 
-    $ autumn.messenger.newMessage("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)", queue=False)
-    $ autumn.messenger.addReply("Yeah, looking forward to it. See you there!")
+    if v14_date_distraction:
+        $ chloe.messenger.newMessage("So, you wanna tell me why you didn't come?") 
+        $ chloe.messenger.addReply("Hey, I understand if you're upset. I'm sorry. Something came up, an emergency, and I couldn't make it.") 
+        $ chloe.messenger.newMessage("What do you mean you couldn't make it? You told me to meet you there! What happened that was so important, you had to stand me up at a fancy restaurant?!")
+        $ chloe.messenger.addReply("Chloe, I'm sorry. I can't talk about it, but everything's fine. It's over now, I just don't wanna talk about it.") 
+        $ chloe.messenger.newMessage("Ha. You're sorry... And you don't want to talk about it? Well, bye then.")
+        $ chloe.messenger.addReply("Chloe please, don't be mad about this.") 
+        $ chloe.messenger.newMessage("Okay, I'll just forget it happened. Is that fair?")
+        $ chloe.messenger.addReply(_("Thank you."),v15s1_reply1)
+        $ chloe.messenger.addReply(_("It's not fair, no."), v15s1_reply2)
+        $ chloe.messenger.newMessage("Just... stop talking about it.")
+        $ chloe.messenger.addReply("Okay. Done.") 
+
+    $ autumn.messenger.newMessage("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)", force_send=True)
+    $ autumn.messenger.addReply("Uhm, sure.")
     $ autumn.messenger.addReply("Of course! I'll always be there if there's puppies, haha.")
 
-    call screen phone
+    label v15s1_PhoneContinueChl:
+        if chloe.messenger.replies:
+            call screen phone
+        if chloe.messenger.replies:
+            u "(I should reply to Chloe.)"
+            jump v15s1_PhoneContinueChl
 
-    scene v15s1_5b
+    label v15s1_PhoneContinueAut:
+        if autumn.messenger.replies:
+            call screen phone
+        if autumn.messenger.replies:
+            u "(I should reply to Autumn.)"
+            jump v15s1_PhoneContinueAut
+            
+    scene v15s1_5
     with dissolve
 
     u "(Almost forgot about that... It'll be interesting to spend one on one time with Autumn.)"
-
-    scene v15s1_5
-    with dissolve
 
     u "(I'd better set an alarm so I'm not late.)"
 
@@ -540,9 +572,7 @@ label v15s1:
 
     scene v15s1_5c
     with dissolve
-
     play sound "sounds/vibrate.mp3"
-
     u "(The hell?)"
 
 # -MC checks his texts and there's a message from Lauren-
@@ -555,10 +585,9 @@ label v15s1:
 
     u "(\"Dress to impress your ghoulish empress...\") *Chuckles*"
 
-    scene v15s1_5b
-    with dissolve
-
-    u "(Guess I need to go gift shopping... Maybe Autumn can give me ideas on what Lauren would like, or I can just get her some kind of gift card... She likes books, I think?)"
+    u "(Guess I need to go gift shopping... Maybe Autumn can give me ideas on what Lauren would like?)"
+    
+    u "(Or I can just get her some kind of gift card... She likes books, I think?)"
 
     scene v15s1_5a
     with dissolve
@@ -574,14 +603,21 @@ label v15s1:
     with dissolve
 
     pause 0.75
+    
+    scene black
+    with dissolve
+    
+    pause 2
 
-# -Night to morning transition-
+    scene sleep_transition_fast
+    with fade
+    
+    pause 2.2
 
     scene v15s1_6 # FPP. Show just a black screen (MC's POV, eyes closed). Phone alarm sounds
     with dissolve
-
+    play sound "sounds/phonealarm.mp3"
     u "*Groans* (No time for snoozing today... Need to get up.)"
 
-    play sound "sounds/vibrate.mp3"
-
+    stop sound
     jump v15s4

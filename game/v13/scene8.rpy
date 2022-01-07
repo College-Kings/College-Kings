@@ -73,7 +73,7 @@ label v13s8:
 
     pause 0.75
 
-    if v12_nora_sex:
+    if "v12_nora" in sceneList:
         scene v13s8_9 # FPP. MC and Nora sitting across each other, Nora slightly worried, mouth open, looking at MC
         with dissolve
 
@@ -394,7 +394,7 @@ label v13s8:
     scene v13s8_9g
     with dissolve
 
-    no "It did at first, but then she became president and our disagreements started to show."
+    no "It did at first, but then she became President and our disagreements started to show."
 
     scene v13s8_9f
     with dissolve

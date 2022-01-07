@@ -4,16 +4,15 @@
 # Time: Night
 
 label v15s36:
-
     scene v15s36_1 # TPP. Shot of MC and Autumn walking down the street, both slight smile, mouth closed.
     with fade
 
-    pause  
+    pause 0.75
 
     scene v15s36_2 # FPP. MC and Autumn walking down the street, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth open.
-    with dissolve 
+    with dissolve
 
-    aut "Tonight, was so much fun!"
+    aut "Tonight was so much fun!"
 
     scene v15s36_2a # FPP. MC and Autumn walking down the street, Houses in the background, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth closed.
     with dissolve
@@ -38,7 +37,7 @@ label v15s36:
     scene v15s36_3 # TPP. Closer up shot of MC and Autumn further down the street smiling at each other as they walk, both mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s36_4 # FPP. MC and Autumn further down the street, new set of houses in the background, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth closed.
     with dissolve
@@ -54,19 +53,19 @@ label v15s36:
     with dissolve
 
     menu:
-        "Maybe.":
+        "Oh no, I wasn't":
             $ add_point(KCT.BRO)
+            u "Oh no, I wasn't. Actually I wanted to know what your favorite question from tonight was."
 
-            u "Erm, maybe?"
+            jump v15s36_dontask
 
-        "I'm really curious.":
+        "I'm really curious":
             $ add_point(KCT.BOYFRIEND)
-
             u "Well, I'm curious about getting to know the real Autumn, but I know it's a sensitive issue."
 
     u "Only if you're comfortable talking about it, of course."
 
-    if not AutumnTrust:
+    if autumn.relationship.value < Relationship.TRUST.value:
         scene v15s36_4a
         with dissolve
 
@@ -87,9 +86,11 @@ label v15s36:
         scene v15s36_4
         with dissolve
 
-        u "Yeah, I get tht. No worries..."
+        u "Yeah, I get that. No worries..."
 
         u "So, what was your favorite question from the game tonight?"
+
+        label v15s36_dontask:
 
         scene v15s36_5 # FPP. MC and Autumn further down the street, new set of houses in the background, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth open.
         with dissolve
@@ -101,7 +102,48 @@ label v15s36:
 
         u "*Laughs*"
 
-        if gamenight = "would you rather": # Placeholder for the game being would you rather.
+        if v15_lindsey_mostlikelyto:
+            scene v15s36_5
+            with dissolve
+
+            aut "The one about getting shit-face drunk and waking up on the other side of the country, haha."
+
+            scene v15s36_5a
+            with dissolve
+
+            u "*Laughs* Because everyone said it would be me?"
+
+            scene v15s36_5
+            with dissolve
+
+            aut "It's only a matter of time. *Giggles*"
+
+            scene v15s36_5a
+            with dissolve
+
+            u "I can see you all taking bets on what state I'll wake up in."
+
+            scene v15s36_5
+            with dissolve
+
+            aut "A drunken state... Haha!"
+
+            scene v15s36_5a
+            with dissolve
+
+            u "Wow... Good one. Haha, I was going to say Missouri."
+
+            scene v15s36_5
+            with dissolve
+
+            aut "Okay... That was way worse than my cheesy joke..."
+
+            scene v15s36_6 # TPP. Show MC and Autumn laughing while looking at each other now further down the street.
+            with dissolve
+
+            pause 0.75
+
+        else:
             scene v15s36_5
             with dissolve
 
@@ -143,44 +185,7 @@ label v15s36:
             with dissolve
 
             u "*Laughs* Good advice, thanks."
-        elif gamenight = "most likely to":
-            scene v15s36_5
-            with dissolve
 
-            aut "The one about getting shit-face drunk and waking up on the other side of the country, haha."
-
-            scene v15s36_5a
-            with dissolve
-
-            u "*Laughs* Because everyone said it would be me?"
-
-            scene v15s36_5
-            with dissolve
-
-            aut "It's only a matter of time. *Giggles*"
-
-            scene v15s36_5a
-            with dissolve
-
-            u "I can see you all taking bets on what state I'll wake up in."
-
-            scene v15s36_5
-            with dissolve
-
-            aut "A drunken state... Haha!"
-
-            scene v15s36_5a
-            with dissolve
-
-            u "Wow... Good one. Haha, I was going to say Missouri."
-
-            scene v15s36_5
-            with dissolve
-
-            aut "Okay... That was way worse than my cheesy joke..."
-
-            scene v15s36_6 # TPP. Show MC and Autumn laughing while looking at each other now further down the street.
-            with dissolve 
     else:
         scene v15s36_4a
         with dissolve
@@ -249,13 +254,13 @@ label v15s36:
         with dissolve
 
         menu:
-            "I'd like that.":
+            "I'd like that":
                 $ add_point(KCT.BRO)
-
+                
                 u "Honestly, I'd really like that... I feel the same way."
 
-                if laurenrs: 
-                    $ autumnloyal = True
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                    $ autumn.relationship = Relationship.LOYAL
                     scene v15s36_5
                     with dissolve
 
@@ -285,12 +290,15 @@ label v15s36:
                     scene v15s36_5
                     with dissolve
 
-                    aut "Haha! Okay, mister...Don't push it."
+                    aut "Haha! Okay, mister... Don't push it."
 
                     scene v15s36_6
-                    with dissolve 
+                    with dissolve
+
+                    pause 0.75
+
                 else:
-                    $ autumnrs = True
+                    $ autumn.relationship = Relationship.FWB
 
                     scene v15s36_5
                     with dissolve
@@ -320,57 +328,60 @@ label v15s36:
                     scene v15s36_7 # TPP. Show Autumn and MC stopped on the side walk looking at each other both slight smile, mouth closed.
                     with dissolve
 
-                    pause  
+                    pause 0.75
 
                     scene v15s36_8 # FPP. MC and Autumn further down the street, new set of houses in the background, MC and Autumn standing still on the side walk, MC looking at Autumn, Autumn looking down at the ground, Autumn biting her lip. 
                     with dissolve
 
-                    pause  
+                    pause 0.75
 
                     scene v15s36_8a # FPP. MC looking at Autumn, Autumn looking at MC, Autumn nervous smile, mouth open.
-                    with dissolve 
+                    with dissolve
 
                     aut "It all starts with a kiss, right?"
 
                     scene v15s36_8b # FPP. MC looking at Autumn, Autumn looking at MC, Autumn stepped closer to MC, Autumn flirty, mouth closed.
-                    with dissolve 
+                    with dissolve
 
-                    pause  
+                    pause 0.75
 
                     play sound "sounds/kiss.mp3"
 
                     scene v15s36_8c # FPP. Autumn kissing MC 
                     with dissolve
 
-                    pause  
+                    pause 0.75
 
                     scene v15s36_8d # FPP. Autumn stepped back again, MC looking at Autumn, Autumn looking at Mc, Autumn biting her lip.
-                    with dissolve 
+                    with dissolve
 
-                    pause  
+                    pause 0.75
 
                     scene v15s36_8b 
                     with dissolve
 
-                    pause  
+                    pause 0.75
 
                     play sound "sounds/kiss.mp3"
 
                     scene v15s36_9 # TPP. MC and Autumn kissing on the sidewalk, MC with his hands on Autumn's waist, Autumn's arms wrappped around MC's neck.
-                    with dissolve 
+                    with dissolve
 
-                    pause  
+                    pause 0.75
 
                     scene v15s36_8e # FPP. Autumn stepped back, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth closed. 
-                    with dissolve 
+                    with dissolve
 
                     u "And so it begins..."
 
                     scene v15s36_8f # FPP. Autumn stepped back, MC looking at Autumn, Autumn looking at MC, Autumn now blushing, Autumn slight smile, mouth closed. 
                     with dissolve
 
-            "It's not a good idea.":
+                    pause 0.75
+
+            "It's not a good idea":
                 $ add_point(KCT.BOYFRIEND)
+                
                 $ v15s36_not_good_idea = True
 
                 scene v15s36_5a
@@ -398,7 +409,7 @@ label v15s36:
 
                 aut "No, no. There's nothing to apologize for. You're right, and thanks for being honest."
 
-                if laurenrs:
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     scene v15s36_5
                     with dissolve
 
@@ -427,12 +438,12 @@ label v15s36:
     scene v15s36_10 # TPP. Show MC and Autumn arriving at the Deer's house front.
     with fade 
 
-    pause  
+    pause 0.75
 
     scene v15s36_11 # FPP. MC and Autumn at the front of the Deer's house, Autumn looking at MC, MC looking at Autumn, Autumn slight smile, mouth open.
-    with dissolve 
+    with dissolve
 
-    aut "Here we are.... Thanks for walking me home."
+    aut "Here we are... Thanks for walking me home."
 
     scene v15s36_11a # FPP. MC and Autumn at the front of the Deer's house, Autumn looking at MC, MC looking at Autumn, Autumn slight smile, mouth open.
     with dissolve
@@ -452,35 +463,43 @@ label v15s36:
     scene v15s36_11b # FPP. Show Autumn walking away to the deer's house.
     with dissolve
 
-        if autumnrs:
-            scene v15s36_11c # FPP. Show Autumn stopping in place.
-            with dissolve  
+    pause 0.75
 
-            pause 
+    if autumn.relationship.value >= Relationship.FWB.value:
+        scene v15s36_11c # FPP. Show Autumn stopping in place.
+        with dissolve
 
-            scene v15s36_11d # FPP. Show Autumn walking back towards MC, slight smile, mouth closed.
-            with dissolve 
+        pause 0.75
 
-            pause 
+        scene v15s36_11d # FPP. Show Autumn walking back towards MC, slight smile, mouth closed.
+        with dissolve
 
-            scene v15s36_11a 
-            with dissolve 
+        pause 0.75
 
-            pause  
+        scene v15s36_11a 
+        with dissolve
 
-            scene v15s36_11e # FPP. Autumn kissing MC on the cheek.
-            with dissolve
+        pause 0.75
+
+        play sound "sounds/kiss.mp3"
+
+        scene v15s36_11e # FPP. Autumn kissing MC on the cheek.
+        with dissolve
+
+        pause 0.75
 
         play sound "sounds/dooropen.mp3"
 
         scene v15s36_11f # FPP. Autumn opening the door to the Deer's house and walking in.
         with dissolve
 
-        pause
+        pause 0.75
 
         play sound "sounds/doorclose.mp3"
 
         scene v15s36_11g # FPP. The door closing behind Autumn as she enters.
-        with dissolve 
+        with dissolve
 
-        jump v15s37
+        pause 0.75
+
+    jump v15s37

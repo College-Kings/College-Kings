@@ -281,7 +281,7 @@ label v10_aft_walk_home:
     play sound "sounds/vibrate.mp3"
 
     python:
-        lauren.messenger.newMessage("Hey, wanna hang out? I have some free time in between study sessions.", queue=False)
+        lauren.messenger.newMessage("Hey, wanna hang out? I have some free time in between study sessions.", force_send=True)
         lauren.messenger.addReply("Sure, on my way")
         lauren.messenger.newMessage(":)")
 

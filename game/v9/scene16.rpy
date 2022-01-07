@@ -60,7 +60,7 @@ label v9_room_thur_night:
 
         u "(Whew, glad to be alone... finally)"
 
-        if emilyrs:
+        if emily.relationship.value >= Relationship.FWB.value:
             scene v9emi1a # TPP. Same camera as v9emi1, MC now on his phone on his bed.
             with dissolve
 
@@ -68,7 +68,7 @@ label v9_room_thur_night:
 
             u "(Ugh, now what.)"
 
-            $ emily.messenger.newMessage(_("I'm bored. Come hang out."), queue=False)
+            $ emily.messenger.newMessage(_("I'm bored. Come hang out."), force_send=True)
             $ emily.messenger.addReply(_("Sure! Gimme a sec."))
             $ emily.messenger.addReply(_("It's kinda late"), v9s16_reply5)
 
@@ -95,7 +95,7 @@ label v9_room_thur_night:
 
         u "(Whew, glad to be alone... finally)"
 
-        if emilyrs:
+        if emily.relationship.value >= Relationship.FWB.value:
             scene v9emi4a # TPP. Same camera as v9emi4, MC now on his phone on his bed.
             with dissolve
 
@@ -103,7 +103,7 @@ label v9_room_thur_night:
 
             u "(Ugh, now what.)"
 
-            $ emily.messenger.newMessage(_("I'm bored. Come hang out."), queue=False)
+            $ emily.messenger.newMessage(_("I'm bored. Come hang out."), force_send=True)
             $ emily.messenger.addReply(_("Sure! Gimme a sec."))
             $ emily.messenger.addReply(_("It's kinda late"), v9s16_reply6)
             
@@ -425,7 +425,6 @@ label v9_emily_dorm:
         menu:
             "Make a move on Emily":
                 u "(This feels like the right time)"
-                $ sceneList.add("v9_emily")
 
             "Head home":
                 scene v9emi37 # TPP. Show MC walking towards the exit of Emily's room, Emily in view still sat on the bed, cheeky grin, mouth open, MC smile, mouth closed.
@@ -441,7 +440,7 @@ label v9_emily_dorm:
                     jump v9_thur_night_aft_em_a         
 
         menu:
-            "Be Macho":
+            "Be macho":
                 $ add_point(KCT.BRO)
 
                 u "I've been training. Gotta learn to take a punch as much as land one."
@@ -834,7 +833,9 @@ label v9s16_emilyDoggy:
 
     stop music fadeout 3
     
-    $ v9_sex_w_em = True
+    $ sceneList.add("v9_emily")
+
+    $ emily.relationship = Relationship.FWB
     
     if joinwolves:
         jump v9_thur_night_aft_em_w
@@ -843,7 +844,7 @@ label v9s16_emilyDoggy:
         jump v9_thur_night_aft_em_a
 
 label v9_thur_night_aft_em_w:
-    if v9_sex_w_em:
+    if "v9_emily" in sceneList:
         scene v9emi3 # TPP. Show MC on his bed on his phone looking exhausted.
         with fade
 
@@ -856,12 +857,12 @@ label v9_thur_night_aft_em_w:
         u "(I need to get some sleep.)"
 
     if hl_punch:
-        $ lindsey.messenger.newMessage(_("How are you doing tonight?"), queue=False)
+        $ lindsey.messenger.newMessage(_("How are you doing tonight?"), force_send=True)
         $ lindsey.messenger.addReply(_("Better now that I'm talking to you"), v9s16_reply1)
         $ lindsey.messenger.addReply(_("Super. You getting ready for bed?"), v9s16_reply2)
 
     else:
-        $ lindsey.messenger.newMessage(_("Hey, how you feeling?"), queue=False)
+        $ lindsey.messenger.newMessage(_("Hey, how you feeling?"), force_send=True)
         $ lindsey.messenger.addReply(_("Better now that I'm talking to you"), v9s16_reply3)
         $ lindsey.messenger.addReply(_("I'm ok, it's really not that bad"), v9s16_reply4)
 
@@ -890,7 +891,7 @@ label v9_thur_night_aft_em_w:
     jump v9_room_fri_morn
 
 label v9_thur_night_aft_em_a:
-    if v9_sex_w_em:
+    if "v9_emily" in sceneList:
         scene v9emi6 # TPP. Show MC on his bed on his phone looking exhausted.
         with fade
 
@@ -903,12 +904,12 @@ label v9_thur_night_aft_em_a:
         u "(I need to get some sleep.)"
 
     if hl_punch:
-        $ lindsey.messenger.newMessage(_("How are you doing tonight?"), queue=False)
+        $ lindsey.messenger.newMessage(_("How are you doing tonight?"), force_send=True)
         $ lindsey.messenger.addReply(_("Better now that I'm talking to you"), v9s16_reply1)
         $ lindsey.messenger.addReply(_("Super. You getting ready for bed?"), v9s16_reply2)
 
     else:
-        $ lindsey.messenger.newMessage(_("Hey, how you feeling?"), queue=False)
+        $ lindsey.messenger.newMessage(_("Hey, how you feeling?"), force_send=True)
         $ lindsey.messenger.addReply(_("Better now that I'm talking to you"), v9s16_reply3)
         $ lindsey.messenger.addReply(_("I'm ok, it's really not that bad"), v9s16_reply4)
 

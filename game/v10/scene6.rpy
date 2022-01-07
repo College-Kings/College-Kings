@@ -71,7 +71,9 @@ label v10_mc_vs_ryan_fight:
             jo "Same rules as before, just get it guys!"
 
             # Ryan Fight
-            call screen fight_tutorialPopup
+            call screen confirm("Would you like to play the fighting tutorial?",
+                yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
+                no_action=[SetVariable("fight_tutorial", False), Return()])
 
             scene v10mvr6a
 

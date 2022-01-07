@@ -40,7 +40,7 @@ label v11_emily_park:
 
         pause 0.75
 
-    $ emily.messenger.newMessage("Hey, we need to talk.", queue=False)
+    $ emily.messenger.newMessage("Hey, we need to talk.", force_send=True)
     $ emily.messenger.addReply("I'm pretty busy right now.", v11s4_reply1)
     $ emily.messenger.addReply("What's up?", v11s4_reply2)
 

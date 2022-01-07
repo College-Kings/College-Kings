@@ -14,19 +14,19 @@ init python:
         iris.simplr.addReply(_("You're single, right?"), v14_iris_simplr4)
         
     def v14_iris_simplr3():
-        iris.simplr.newMessage(":) I am doing perfectly well now that I'm talking to you, hehe.", queue=False)
-        iris.simplr.newMessage("I'm a 20 year old college student, studying Literature. And at this very moment I am practicing my French. As that's where I'm currently studying, haha", queue=False)
+        iris.simplr.newMessage(":) I am doing perfectly well now that I'm talking to you, hehe.", force_send=True)
+        iris.simplr.newMessage("I'm a 20 year old college student, studying Literature. And at this very moment I am practicing my French. As that's where I'm currently studying, haha", force_send=True)
         iris.simplr.addReply(_("You're in France?! We literally just got back to America from a class trip to Europe..."),v14_iris_simplr6)
         
     def v14_iris_simplr4():
         setattr(store, "irisStrikes", irisStrikes +1)
-        iris.simplr.newMessage("Umm, yes? I wouldn't be here if I weren't. Aren't you?", queue=False)
+        iris.simplr.newMessage("Umm, yes? I wouldn't be here if I weren't. Aren't you?", force_send=True)
         iris.simplr.addReply(_("Uh, yeah. Of course! I just felt like I needed to ask for some reason."), v14_iris_simplr5)
         
     def v14_iris_simplr5():
-        iris.simplr.newMessage("Right...", queue=False)
+        iris.simplr.newMessage("Right...", force_send=True)
         iris.simplr.addReply("So, single Iris... How are you, who are you and what are you up to?")
-        iris.simplr.newMessage("I'm a 20 year old college student, studying Literature. And at this very moment I am practicing my French. As that's where I'm currently studying, haha", queue=False)
+        iris.simplr.newMessage("I'm a 20 year old college student, studying Literature. And at this very moment I am practicing my French. As that's where I'm currently studying, haha", force_send=True)
         iris.simplr.addReply(("You're in France?! We literally just got back to America from a class trip to Europe..."), v14_iris_simplr6)
         
     def v14_iris_simplr6():
@@ -47,8 +47,8 @@ init python:
 
 label v14s43b:
     if iris.simplr in simplr_contacts:
-        $ iris.simplr.newMessage("Soooo....", queue=False)
-        $ iris.simplr.newMessage("I'm guessing you aren't that happy about it considering it's been a few days now with no response, haha. Sorry.", queue=False)
+        $ iris.simplr.newMessage("Soooo....", force_send=True)
+        $ iris.simplr.newMessage("I'm guessing you aren't that happy about it considering it's been a few days now with no response, haha. Sorry.", force_send=True)
         $ iris.simplr.addReply(_("Hey, Iris. So sorry if you felt like I wasn't interested, my Simplr has just been glitchy and I've been stuck out of it for a while. Back for good now."), v14_iris_simplr1)
 
     scene v14s43b_1 # FPP. Mr. Lee walks into the classroom happy and cheery, mouth open
@@ -276,11 +276,13 @@ label v14s43b:
 
     menu:
         "Work with Penelope":
-            if penelopeloyal:
+            $ v14_PenelopePartner = True
+
+            if penelope.relationship.value >= Relationship.LOYAL.value:
                 $ add_point(KCT.BOYFRIEND)
+
             else:
                 $ add_point(KCT.TROUBLEMAKER)
-            $ v14_PenelopePartner = True
 
             u "But sorry, man. This will be too good to miss."
 
@@ -314,7 +316,7 @@ label v14s43b:
 
             u "No, no, no. Me and you."
 
-            if penelopeloyal:
+            if penelope.relationship.value >= Relationship.LOYAL.value:
                 scene v14s43b_8b
                 with dissolve
 
@@ -373,28 +375,28 @@ label v14s43b:
 
                 # Kiwi Post: v14kw43b - Sexy pic of Chloe is on Kiwii from Ryan, Grayson and Cameron's accounts- Private sexy pic of chloe same photo as in scene 41a
 
-                $ v14s43b_kiwiiPost1 = KiwiiPost("Grayson", "v14/v14kw43b.webp", "#Vote4Chloe is a #Vote4Whore", mentions="Chloe", numberLikes=255)
-                $ v14s43b_kiwiiPost1.newComment("Chloe", "You weren't calling me a whore when I was in your bed all of last year. Wonder what changed? #Salty", queue=False)
-                $ v14s43b_kiwiiPost1.newComment("Aubrey", "Grayson, what the fuck?! Did Lindsey put you up to this?!", queue=False)
-                $ v14s43b_kiwiiPost1.newComment("Lindsey", "I would never, ever, EVER. Tell them to do this.", queue=False)
-                $ v14s43b_kiwiiPost1.newComment("Imre", "Ok sure, whatever Linds. Doesn't matter to anyone, Chloe's never going to lose against someone who reaches this low to win.", queue=False)
+                $ v14s43b_kiwiiPost1 = KiwiiPost(grayson, "v14/v14kw43b.webp", "#Vote4Chloe is a #Vote4Whore", mentions=[chloe], numberLikes=255)
+                $ v14s43b_kiwiiPost1.newComment(chloe, "You weren't calling me a whore when I was in your bed all of last year. Wonder what changed? #Salty", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost1.newComment(aubrey, "Grayson, what the fuck?! Did Lindsey put you up to this?!", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost1.newComment(lindsey, "I would never, ever, EVER tell them to do this.", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost1.newComment(imre, "Ok sure, whatever Linds. Doesn't matter to anyone, Chloe's never going to lose against someone who reaches this low to win.", numberLikes=renpy.random.randint(15, 35), force_send=True)
 
-                $ v14s43b_kiwiiPost2 = KiwiiPost("Ryan", "v14/v14kw43b.webp", "#Vote4Chloe and she'll send you pics, just like this!", mentions="Chloe", numberLikes=157)
-                $ v14s43b_kiwiiPost2.newComment("Chloe", "You too? Wow, why don't you just suck Grayson's dick while you're at it, huh?", queue=False)
-                $ v14s43b_kiwiiPost2.newComment("Imre", "Ha, you fucking idiot. Choke on it, too.", queue=False)
-                $ v14s43b_kiwiiPost2.newComment("Ryan", "Sure Imre, right after you stop sucking on Chloe's tits all the fucking time.", queue=False)
-                $ v14s43b_kiwiiPost2.newComment("Aubrey", "ENOUGH", queue=False)
+                $ v14s43b_kiwiiPost2 = KiwiiPost(ryan, "v14/v14kw43b.webp", "#Vote4Chloe and she'll send you pics, just like this!", mentions=[chloe], numberLikes=157)
+                $ v14s43b_kiwiiPost2.newComment(chloe, "You too? Wow, why don't you just suck Grayson's dick while you're at it, huh?", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost2.newComment(imre, "Ha, you fucking idiot. Choke on it, too.", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost2.newComment(ryan, "Sure Imre, right after you stop sucking on Chloe's tits all the fucking time.", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost2.newComment(aubrey, "ENOUGH", numberLikes=renpy.random.randint(15, 35), force_send=True)
 
-                $ v14s43b_kiwiiPost3 = KiwiiPost("Cameron", "v14/v14kw43b.webp", "Vote for Lindsey, not for this.", numberLikes=417)
-                $ v14s43b_kiwiiPost3.newComment("Chloe", "This? Wow, Cam. Thanks...", queue=False)
-                $ v14s43b_kiwiiPost3.newComment("Samantha", "Cam, what are you doing?!", queue=False)
-                $ v14s43b_kiwiiPost3.newComment("Cameron", "Frat shit. What else would I be doing?", queue=False)
-                $ v14s43b_kiwiiPost3.newComment("Sebastian", "This is too far for just \"frat shit\".", queue=False)
-                $ v14s43b_kiwiiPost3.newComment("Aubrey", "Pathetic.", queue=False)
+                $ v14s43b_kiwiiPost3 = KiwiiPost(cameron, "v14/v14kw43b.webp", "Vote for Lindsey, not for this.", numberLikes=417)
+                $ v14s43b_kiwiiPost3.newComment(chloe, "This? Wow, Cam. Thanks...", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost3.newComment(samantha, "Cam, what are you doing?!", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost3.newComment(cameron, "Frat shit. What else would I be doing?", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost3.newComment(sebastian, "This is too far for just \"frat shit\".", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost3.newComment(aubrey, "Pathetic.", numberLikes=renpy.random.randint(15, 35), force_send=True)
 
-                $ chloe.messenger.newMessage("GRAYSON IS SUCH AN ASSHOLE", queue=False)
-                $ chloe.messenger.newMessage("FUCK HIM AND FUCK THE APES AND FUCK THEIR KIWIIS!!!!", queue=False)
-                $ chloe.messenger.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.", queue=False)
+                $ chloe.messenger.newMessage("GRAYSON IS SUCH AN ASSHOLE", force_send=True)
+                $ chloe.messenger.newMessage("FUCK HIM AND FUCK THE APES AND FUCK THEIR KIWIIS!!!!", force_send=True)
+                $ chloe.messenger.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.", force_send=True)
 
                 $ chloe.messenger.addReply("I'm so sorry that this is happening. I don't even know what to say.")
                 $ chloe.messenger.newMessage("I know, I know... I'm just venting.")
@@ -406,7 +408,7 @@ label v14s43b:
                     if chloe.messenger.replies:
                         call screen phone
                     if chloe.messenger.replies:
-                        "(I should reply to Chloe.)"
+                        u "(I should reply to Chloe.)"
                         jump v14s43Chloe_PhoneContinue1
 
                 $ set_presidency_percent(v14_lindsey_popularity + 3) #tick
@@ -551,7 +553,7 @@ label v14s43b:
 
             pause 0.75
 
-            if v13_FirstThreesome:
+            if "v14_threesome" in sceneList:
                 scene v14s43b_19 # FPP. Riley and MC have sat down and Riley grabs and holds MC's hand under the table they sat at from v14s43b_18, Riley half smile, mouth closed looking at MC
                 with dissolve
 
@@ -584,28 +586,28 @@ label v14s43b:
 
                 # Kiwi Post: v14kw43b - Sexy pic of Chloe is on Kiwii from Ryan, Grayson and Cameron's accounts- Private sexy pic of chloe same photo as in scene 41a
 
-                $ v14s43b_kiwiiPost4 = KiwiiPost("Grayson", "v14/v14kw43b.webp", "#Vote4Chloe is a #Vote4Whore", mentions="Chloe", numberLikes=255)
-                $ v14s43b_kiwiiPost4.newComment("Chloe", "You weren't calling me a whore when I was in your bed all of last year. Wonder what changed? #Salty", queue=False)
-                $ v14s43b_kiwiiPost4.newComment("Aubrey", "Grayson, what the fuck?! Did Lindsey put you up to this?!", queue=False)
-                $ v14s43b_kiwiiPost4.newComment("Lindsey", "I would never, ever, EVER. Tell them to do this.", queue=False)
-                $ v14s43b_kiwiiPost4.newComment("Imre", "Ok sure, whatever Linds. Doesn't matter to anyone, Chloe's never going to lose against someone who reaches this low to win.", queue=False)
+                $ v14s43b_kiwiiPost4 = KiwiiPost(grayson, "v14/v14kw43b.webp", "#Vote4Chloe is a #Vote4Whore", mentions=[chloe], numberLikes=255)
+                $ v14s43b_kiwiiPost4.newComment(chloe, "You weren't calling me a whore when I was in your bed all of last year. Wonder what changed? #Salty", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost4.newComment(aubrey, "Grayson, what the fuck?! Did Lindsey put you up to this?!", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost4.newComment(lindsey, "I would never, ever, EVER tell them to do this.", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost4.newComment(imre, "Ok sure, whatever Linds. Doesn't matter to anyone, Chloe's never going to lose against someone who reaches this low to win.", numberLikes=renpy.random.randint(15, 35), force_send=True)
 
-                $ v14s43b_kiwiiPost5 = KiwiiPost("Ryan", "v14/v14kw43b.webp", "#Vote4Chloe and she'll send you pics, just like this!", mentions="Chloe", numberLikes=157)
-                $ v14s43b_kiwiiPost5.newComment("Chloe", "You too? Wow, why don't you just suck Grayson's dick while you're at it, huh?", queue=False)
-                $ v14s43b_kiwiiPost5.newComment("Imre", "Ha, you fucking idiot. Choke on it, too.", queue=False)
-                $ v14s43b_kiwiiPost5.newComment("Ryan", "Sure Imre, right after you stop sucking on Chloe's tits all the fucking time.", queue=False)
-                $ v14s43b_kiwiiPost5.newComment("Aubrey", "ENOUGH", queue=False)
+                $ v14s43b_kiwiiPost5 = KiwiiPost(ryan, "v14/v14kw43b.webp", "#Vote4Chloe and she'll send you pics, just like this!", mentions=[chloe], numberLikes=157)
+                $ v14s43b_kiwiiPost5.newComment(chloe, "You too? Wow, why don't you just suck Grayson's dick while you're at it, huh?", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost5.newComment(imre, "Ha, you fucking idiot. Choke on it, too.", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost5.newComment(ryan, "Sure Imre, right after you stop sucking on Chloe's tits all the fucking time.", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost5.newComment(aubrey, "ENOUGH", numberLikes=renpy.random.randint(15, 35), force_send=True)
 
-                $ v14s43b_kiwiiPost6 = KiwiiPost("Cameron", "v14/v14kw43b.webp", "Vote for Lindsey, not for this.", numberLikes=417)
-                $ v14s43b_kiwiiPost6.newComment("Chloe", "This? Wow, Cam. Thanks...", queue=False)
-                $ v14s43b_kiwiiPost6.newComment("Samantha", "Cam, what are you doing?!", queue=False)
-                $ v14s43b_kiwiiPost6.newComment("Cameron", "Frat shit. What else would I be doing?", queue=False)
-                $ v14s43b_kiwiiPost6.newComment("Sebastian", "This is too far for just \"frat shit\".", queue=False)
-                $ v14s43b_kiwiiPost6.newComment("Aubrey", "Pathetic.", queue=False)
+                $ v14s43b_kiwiiPost6 = KiwiiPost(cameron, "v14/v14kw43b.webp", "Vote for Lindsey, not for this.", numberLikes=417)
+                $ v14s43b_kiwiiPost6.newComment(chloe, "This? Wow, Cam. Thanks...", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost6.newComment(samantha, "Cam, what are you doing?!", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost6.newComment(cameron, "Frat shit. What else would I be doing?", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost6.newComment(sebastian, "This is too far for just \"frat shit\".", numberLikes=renpy.random.randint(15, 35), force_send=True)
+                $ v14s43b_kiwiiPost6.newComment(aubrey, "Pathetic.", numberLikes=renpy.random.randint(15, 35), force_send=True)
 
-                $ chloe.messenger.newMessage("GRAYSON IS SUCH AN ASSHOLE", queue=False)
-                $ chloe.messenger.newMessage("FUCK HIM, AND FUCK THE APES!!!!", queue=False)
-                $ chloe.messenger.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.", queue=False)
+                $ chloe.messenger.newMessage("GRAYSON IS SUCH AN ASSHOLE", force_send=True)
+                $ chloe.messenger.newMessage("FUCK HIM, AND FUCK THE APES!!!!", force_send=True)
+                $ chloe.messenger.newMessage("UGH! I'm going to turn this around. It won't hurt my campaign even a little bit, I'll make sure of it.", force_send=True)
 
                 $ chloe.messenger.addReply("I'm so sorry that this is happening. I don't even know what to say.")
                 $ chloe.messenger.newMessage("I know, I know... I'm just venting.")
@@ -617,7 +619,7 @@ label v14s43b:
                     if chloe.messenger.replies:
                         call screen phone
                     if chloe.messenger.replies:
-                        "(I should reply to Chloe.)"
+                        u "(I should reply to Chloe.)"
                         jump v14s43Chloe_PhoneContinue2
 
                 scene v14s43b_13

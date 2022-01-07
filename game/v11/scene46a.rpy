@@ -129,7 +129,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1
     with dissolve
 
-    if not aubreyrs:
+    if aubrey.relationship.value < Relationship.FWB.value:
         scene v11dwa1e # FPP. Same 1, different pose, neutral look, mouth open
         with dissolve
         au "I'm surprised you're not like all the other guys."
@@ -256,8 +256,7 @@ label v11_dinner_with_aubrey:
                 with dissolve
 
                 u "*Laughs* Okay, that was pretty funny."
-    elif aubreyrs:
-        ### ERROR: -If Aubreyrs ###
+    elif aubrey.relationship.value >= Relationship.FWB.value:
         scene v11dwa1
         with dissolve
 

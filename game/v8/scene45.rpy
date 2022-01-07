@@ -30,7 +30,7 @@ label tue_night_in_room:
         scene v8star6 # TPP. Show MC sat on the edge of his bed checking his phone.
         with dissolve
 
-        $ sebastian.messenger.newMessage(_("Yo dude, just wanted to let you know... tonight was fun."), queue=False)
+        $ sebastian.messenger.newMessage(_("Yo dude, just wanted to let you know... tonight was fun."), force_send=True)
         $ sebastian.messenger.addReply(_("Sure was... but it can be even better, right?"))
         $ sebastian.messenger.newMessage(_("Sure can! You'll see what being a Wolf is all about."))
         $ sebastian.messenger.addReply(_("Looking forward to it. :)"))
@@ -44,7 +44,7 @@ label tue_night_in_room:
 
         u "(Let's just see what Chloe's up to.)"
 
-        if chloers:
+        if chloe.relationship.value >= Relationship.FWB.value:
             $ chloe.messenger.addReply(_("I'm thinking about you..."))
             $ chloe.messenger.newMessage(_("Really?"))
             $ chloe.messenger.addReply(_("Well, about the thing you do best, really."))
@@ -100,7 +100,7 @@ label tue_night_in_room:
         scene v8star15 # TPP. Show MC sat on the edge of his bed checking his phone.
         with dissolve
 
-        $ grayson.messenger.newMessage(_("Yo Ape, still ready for the surprise?"), queue=False)
+        $ grayson.messenger.newMessage(_("Yo Ape, still ready for the surprise?"), force_send=True)
         $ grayson.messenger.addReply(_("Are we still doing this?"))
         $ grayson.messenger.newMessage(_("It's just so damn tempting. But you won't regret it."))
         $ grayson.messenger.addReply(_("Now I'm fucking couting on it!"))
@@ -116,7 +116,7 @@ label tue_night_in_room:
 
         u "(Let's just see what Chloe's up to.)"
 
-        if chloers:
+        if chloe.relationship.value >= Relationship.FWB.value:
             $ chloe.messenger.addReply(_("I'm thinking about you..."))
             $ chloe.messenger.newMessage(_("Really?"))
             $ chloe.messenger.addReply(_("Well, about the thing you do best, really."))

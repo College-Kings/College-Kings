@@ -66,7 +66,7 @@ label v13s37:
 
     li "*Chuckles* Not like that, fuckboy."
 
-    if v12_lindsey_sex or lindseyrs:
+    if lindsey.relationship.value >= Relationship.FWB.value:
         li "And don't call me Linds... Only the girls and [name] get to call me that. *Laughs*"
 
     scene v13s37_5
@@ -278,7 +278,7 @@ label v13s37_nora:
 
     no "You and I both..."
 
-    if not v12_nora_sex:
+    if nora.relationship.value < Relationship.FWB.value:
         scene v13s37no_4a
         with dissolve
 
@@ -565,7 +565,7 @@ label v13s37_nora:
 label v13s37_chris:
     $ freeroam11.add("chris")
 
-    if chrismad:
+    if chris.relationship.value <= Relationship.MAD.value:
         scene v13s37ch_1 # TPP. Show MC walking over to Chris, Chris slightly angry, mouth closed, MC slight smile, mouth closed
         #with dissolve
 
@@ -607,7 +607,7 @@ label v13s37_chris:
         pause 0.75
     
     else:
-        if not v12_nora_sex:
+        if nora.relationship.value < Relationship.FWB.value:
             scene v13s37ch_1a # TPP. Same as v13s37ch_1, Chris slightly sad, MC slight smile
             #with dissolve
 
@@ -918,7 +918,7 @@ label v13s37_end:
 
     u "*Chuckles*"
 
-    if not chloers:
+    if cuffs not in mc.inventory:
         scene v13s37end_2a
         with dissolve
 

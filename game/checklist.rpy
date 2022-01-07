@@ -1,38 +1,33 @@
 init python:
-    class Checklist:
-        def __init__(self):
-            self.checklist = []
-
-        def add_item(self, name):
-            self.checklist.append(ChecklistItem(name))
-
-        def reset_checklist(self):
-            self.checklist = []
-
-
     class ChecklistItem:
         def __init__(self, name):
             self.name = name
 
-            self.completed = False
+            self.complete = False
 
 
-screen checklist_icon():
-    tag checklist
+    class Checklist:
+        def __init__(self):
+            self.items = []
 
-    imagebutton:
-        idle "icon"
-        hover "icon_hover"
-        action Show("checklist")
+        def __getitem__(self, index):
+            if _in_replay:
+                return ChecklistItem("Replay Template")
+            else:
+                return self.items[index]
 
+        def __iter__(self):
+            return iter(self.items)
 
-screen checklist():
-    tag checklist
-    
-    vbox:
-        for item in checklist.checklist:
-            text item.name:
-                if item.completed:
-                    color "#0f0"
-                else:
-                    color "#fff"
+        def __len__(self):
+            return len(self.items)
+
+        def add_item(self, name):
+            self.items.append(ChecklistItem(name))
+
+        def get_completed(self):
+            return filter(lambda item: item.complete, self.items)
+
+        def reset(self):
+            self.items = []
+

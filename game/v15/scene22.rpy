@@ -5,172 +5,182 @@
 # Render Count: 8 Unique 71 Total
 
 label v15s22:
+    $ v15s22_kiwiiPost1= KiwiiPost(chloe, "v15s22Kiwii1", "Making changes for my girls!", numberLikes=515)
+    $ v15s22_kiwiiPost1.newComment(aubrey, "Ooooh, what are you up to?", numberLikes=renpy.random.randint(160, 460))
+    $ v15s22_kiwiiPost1.newComment(grayson, "Hanging out with the Dean now? That's one way to get votes I guess...", numberLikes=renpy.random.randint(160, 460))
+    $ v15s22_kiwiiPost1.newComment(chris, "Looks like the President of the Chicks is making some big moves, huh?", numberLikes=renpy.random.randint(160, 460))
+    $ v15s22_kiwiiPost1.newComment(chloe, "Trying to! Also, fuck off Gray :)", numberLikes=renpy.random.randint(160, 460))
+
+    if False: # for Lint
+        scene v15s22Kiwii1 # smile next the dean's office door
 
     scene v15s22_1 # TPP. Chloe and MC are walking in the school hallway, slight smiles, mouths are closed, looking forward
     with dissolve
 
     pause 0.75
 
-    if v15mr_lees_support:
+    if v15s21_meeting_points >= 1:
+        if v15_chloe_mrleesupport:
+            scene v15s22_2 # FPP. Show only Chloe looking at mc, no expression, mouth is open, just show a hallway wall in the background no decorations, windows, or doors if possible
+            with dissolve
 
-        scene v15s22_2 # FPP. Show only Chloe looking at mc, no expression, mouth is open, just show a hallway wall in the background no decorations, windows, or doors if possible
-        with dissolve
+            cl "*Sighs* It wasn't perfect but at least we have Mr. Lee's signature."
 
-        cl "*Sighs* It wasn't perfect but at least we have Mr Lee's signature."
+            scene v15s22_2a # FPP. same as v15s22_2 Chloe's mouth is closed, still looking at Mc, still no expression
+            with dissolve
 
-        scene v15s22_2a # FPP. same as v15s22_2 Chloe's mouth is closed, still looking at Mc, still no expression
-        with dissolve
+            u "We knew he would be a hard guy to impress."
 
-        u "We knew he would be a hard guy to impress."
+            scene v15s22_2
+            with dissolve
 
-        scene v15s22_2
-        with dissolve
+            cl "Yeah, I'm so glad he's on our side."
 
-        cl "Yeah, I'm so glad he's on our side."
+            cl "But giving up my scholarship is going to make things really stressful."
 
-        cl "But giving up my scholarship is going to make things really stressful."
+            scene v15s22_2a
+            with dissolve
 
-        scene v15s22_2a
-        with dissolve
+            menu:
+                "Be supportive":
+                    if chloe.relationship.value >= Relationship.FWB.value:
+                        $ add_point(KCT.BOYFRIEND)
+                    else:
+                        $ add_point(KCT.BRO)
 
-        menu:
+                    scene v15s22_2a
+                    with dissolve
 
-            "Be supportive":
-                $ add_point(KCT.BRO)
-                if chloegf or chloers:
-                    $ add_point(KCT.BOYFRIEND)
+                    u "It'll be okay. I'm sure everything will work out for the best."
 
-                scene v15s22_2a
-                with dissolve
+                    scene v15s22_2
+                    with dissolve
 
-                u "It'll be okay. I'm sure everything will work out for the best."
+                    cl "I really hope so."
 
-                scene v15s22_2
-                with dissolve
+                "Be brutally honest":
+                    if chloe.relationship.value >= Relationship.FWB.value:
+                        $ add_point(KCT.BRO)
+                    else:
+                        $ add_point(KCT.TROUBLEMAKER)
 
-                cl "I really hope so."
+                    scene v15s22_2a
+                    with dissolve
 
-            "Be brutally honest":
-                $ add_point(KCT.TROUBLEMAKER)
-                if chloegf or chloers:
-                    $ add_point(KCT.BRO)
+                    u "You'll just have to get a part-time job or something."
 
-                scene v15s22_2a
-                with dissolve
+                    scene v15s22_2
+                    with dissolve
 
-                u "You'll just have to get a part-time job or something."
+                    cl "*Sighs* Yeah, I guess so."
 
-                scene v15s22_2
-                with dissolve
+        elif v15_seduce_ms_rose or v15_threaten_ms_rose:
+            scene v15s22_2b # FPP. same as v15s22_2 Chloe has a full smile, mouth is still open, still looking at mc
+            with dissolve
 
-                cl "*Sighs* Yeah, I guess so."
+            cl "Wow! Ms. Rose is supporting the whole thing, so I get to keep my scholarship as well!"
 
-    elif v15seduce_ms_rose or v15threaten_ms_rose:
+            scene v15s22_2c # FPP. same as v15s22_2b Chloe has a slight smile, mouth is still open, still looking at mc
+            with dissolve
 
-        scene v15s22_2b # FPP. same as v15s22_2	Chloe has a full smile, mouth is still open, still looking at mc
-        with dissolve
+            cl "Whatever you said to her, it worked!"
 
-        cl "Wow! Ms Rose is supporting the whole thing, so I get to keep my scholarship as well!"
+            scene v15s22_2d # FPP. same as v15s22_2c Chloe's mouth is closed, still a slight smile, still looking at mc
+            with dissolve
 
-        scene v15s22_2c # FPP. same as v15s22_2b Chloe has a slight smile, mouth is still open, still looking at mc
-        with dissolve
+            menu:
+                "Change the subject":
+                    if chloe.relationship.value >= Relationship.FWB.value:
+                        $ add_point(KCT.BOYFRIEND)
+                    else:
+                        $ add_point(KCT.BRO)
 
-        cl "Whatever you said to her, it worked!"
+                    scene v15s22_2d
+                    with dissolve
 
-        scene v15s22_2d # FPP. same as v15s22_2c Chloe's mouth is closed, still a slight smile, still looking at mc
-        with dissolve
+                    u "It's not over yet. We still need to impress the Dean."
 
-        menu:
+                    scene v15s22_2b
+                    with dissolve
 
-            "Change the subject":
-                $ add_point(KCT.BRO)
-                if chloegf or chloers:
-                    $ add_point(KCT.BOYFRIEND)
+                    cl "Yeah, you're right, we have to stay focused."
 
-                scene v15s22_2d
-                with dissolve
+                    scene v15s22_2c
+                    with dissolve
 
-                u "It's not over yet. We still need to impress the Dean."
+                    cl "Let's hope she's in a good mood."
 
-                scene v15s22_2b
-                with dissolve
+                "Lie":
+                    if chloe.relationship.value >= Relationship.FWB.value:
+                        $ add_point(KCT.TROUBLEMAKER)
+                    else:
+                        $ add_point(KCT.BRO)
+                        
+                    $ chloeSus += 1
 
-                cl "Yeah, you're right, we have to stay focused."
+                    scene v15s22_2d
+                    with dissolve
 
-                scene v15s22_2c
-                with dissolve
+                    u "I just figured the Nora thing was playing on her mind. Thought it was best you left the room."
 
-                cl "Let's hope she's in a good mood."
+                    scene v15s22_2c
+                    with dissolve
 
-            "Lie":
-                $ add_point(KCT.BRO)
-                if chloegf or chloers:
-                    $ add_point(KCT.TROUBLEMAKER)
+                    cl "Ah, okay. That makes sense."
 
-                scene v15s22_2d
-                with dissolve
+        else:
+            scene v15s22_2
+            with dissolve
 
-                u "I just figured the Nora thing was playing on her mind. Thought it was best you left the room."
+            cl "*Sighs* I thought Ms. Rose would want to help me keep my scholarship. I don't know what I'm going to do if I lose that."
 
-                scene v15s22_2c
-                with dissolve
+            scene v15s22_2a
+            with dissolve
 
-                cl "Ah, okay. That makes sense."
+            u "We have her support for the reduced fees. That's something."
 
-    elif v15ms_roses_support:
+            scene v15s22_2
+            with dissolve
 
-        scene v15s22_2
-        with dissolve
+            cl "Yeah, it's just stressful, you know?"
 
-        cl "*Sighs* I thought Ms Rose would want to help me keep my scholarship. I don't know what I'm going to do if I lose that."
+            scene v15s22_2a
+            with dissolve
 
-        scene v15s22_2a
-        with dissolve
+            menu:
+                "Be supportive":
+                    if chloe.relationship.value >= Relationship.FWB.value:
+                        $ add_point(KCT.BOYFRIEND)
+                    else:
+                        $ add_point(KCT.BRO)
 
-        u "We have her support for the reduced fees. That's something."
+                    scene v15s22_2a
+                    with dissolve
 
-        scene v15s22_2
-        with dissolve
+                    u "It'll be okay. I'm sure everything will work out for the best."
 
-        cl "Yeah, it's just stressful, you know?"
+                    scene v15s22_2
+                    with dissolve
 
-        scene v15s22_2a
-        with dissolve
+                    cl "I really hope so."
 
-        menu:
+                "Be brutally honest":
+                    if chloe.relationship.value >= Relationship.FWB.value:
+                        $ add_point(KCT.BRO)
+                    else:
+                        $ add_point(KCT.TROUBLEMAKER)
 
-            "Be supportive":
-                $ add_point(KCT.BRO)
-                if chloegf or chloers:
-                    $ add_point(KCT.BOYFRIEND)
+                    scene v15s22_2a
+                    with dissolve
 
-                scene v15s22_2a
-                with dissolve
+                    u "You'll just have to get a part-time job or something."
 
-                u "It'll be okay. I'm sure everything will work out for the best."
+                    scene v15s22_2
+                    with dissolve
 
-                scene v15s22_2
-                with dissolve
-
-                cl "I really hope so."
-
-            "Be brutally honest":
-                $ add_point(KCT.TROUBLEMAKER)
-                if chloegf or chloers:
-                    $ add_point(KCT.BRO)
-
-                scene v15s22_2a
-                with dissolve
-
-                u "You'll just have to get a part-time job or something."
-
-                scene v15s22_2
-                with dissolve
-
-                cl "*Sighs* Yeah, I guess so."
-        
+                    cl "*Sighs* Yeah, I guess so."
+            
     else:
-
         scene v15s22_2
         with dissolve
 
@@ -180,11 +190,12 @@ label v15s22:
         with dissolve
 
         menu:
-
             "Be supportive":
-                $ add_point(KCT.BRO)
-                if chloegf or chloers:
+                if chloe.relationship.value >= Relationship.FWB.value:
                     $ add_point(KCT.BOYFRIEND)
+                else:
+                    $ add_point(KCT.BRO)
+
 
                 scene v15s22_2a
                 with dissolve
@@ -202,9 +213,11 @@ label v15s22:
                 u "I know, but you have to stay positive. We still have a chance."
 
             "Be brutally honest":
-                $ add_point(KCT.TROUBLEMAKER)
-                if chloegf or chloers:
+                if chloe.relationship.value >= Relationship.FWB.value:
                     $ add_point(KCT.BRO)
+                else:
+                    $ add_point(KCT.TROUBLEMAKER)
+
 
                 scene v15s22_2a
                 with dissolve
@@ -229,7 +242,7 @@ label v15s22:
     scene v15s22_3 # TPP. Show Chloe and MC standing beside the Dean's office door, slight smiles, mouths are closed, Chloe looking at the door, Mc looking at Chloe
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s22_2e # FPP. same as v15s22_2 Show Chloe in front of the Deans office door, still no expression, still looking at Mc, mouth is still open
     with dissolve
@@ -239,7 +252,7 @@ label v15s22:
     scene v15s22_2f # FPP. same as v15s22_2e Chloe's mouth is closed, still looking at mc, still no expression
     with dissolve
 
-    u "She's basically a combination of Mr Lee and Ms Rose, isn't she?"
+    u "She's basically a combination of Mr. Lee and Ms. Rose, isn't she?"
 
     scene v15s22_2e
     with dissolve
@@ -247,11 +260,12 @@ label v15s22:
     cl "Well, yes and no. Here, take a look at my notes."
 
     # -The UI pops up showing Dean Harrison's character brief. MC exits whenever-
+    show screen v15_teacher_brief("dean")
 
     scene v15s22_2f 
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s22_2e
     with dissolve
@@ -284,22 +298,29 @@ label v15s22:
 
     cl "*Deep breath* Okay, let's go."
 
+    play sound "sounds/knock.mp3"
+
     scene v15s22_2g # FPP. same as v15s22_2f Chloe turns away from Mc and knocks on the Dean's door, still no expression, mouth is still closed
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s22_2h # FPP. same as v15s22_2g Chloe is no longer knocking on the door, still no expression, mouth is still closed
     with dissolve
 
     de "Come in."
 
-    pause 0.25
+    pause 0.75
 
     scene v15s22_4 # TPP. MC and Chloe are standing in front of the Dean's desk, Chloe has a slight smile, mouth is closed, Mc has a slight smile mouth is closed, The Dean is sat behind her desk, writing on a piece of paper, she is looking at her paperwork and not Chloe or Mc, no expression, mouth is closed, try to get the image as close as possible to avoid showing an excess amount of the office
     with dissolve
 
-    pause 0.50
+    pause 0.75
+
+    if kct == "popular":
+        $ v15s22_meeting_points += 1
+
+    $ animated_value_percent = v15s21_meeting_points+5
 
     scene v15s22_4a # TPP. same as v15s22_4 The only difference is that Chloe's mouth is open, The dean does not look up at Chloe or Mc
     with dissolve
@@ -319,24 +340,30 @@ label v15s22:
     scene v15s22_4
     with dissolve
 
-    menu:
+    show screen teacher_conviction_bar(5 * 100 / 13, "DEAN")
 
+    menu:
         "Say hello to the Dean":
-            $ add_point(KCT.TROUBLEMAKER)
+            #$ add_point(KCT.TROUBLEMAKER)
 
             scene v15s22_4c # TPP. same as v15s22_4 The only difference is Mc's mouth is open, The dean does not look up at Chloe or Mc
             with dissolve
 
             u "Hi, Dean Harrison."
 
+            $ v15s22_meeting_points -= 1
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+
             scene v15s22_4b
             with dissolve
 
             de "I said I'll be with you in a moment, [name]."
 
-        "Just sit down": # (CORRECT CHOICE - ONE POINT)
-            $ addpoint v15_dean_meeting += 1
-            $ add_point(KCT.BRO)
+        "Just sit down":
+            $ v15s22_meeting_points += 0
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+
+            #$ add_point(KCT.BRO)
 
             scene v15s22_4
             with dissolve
@@ -346,17 +373,17 @@ label v15s22:
     scene v15s22_5 # TPP. MC and Chloe sit down on a couch, Mc sits on the left and Chloe sits on the right, slight smiles mouths are closed they are looking at each other, there is a comfortable looking chair sitting directly across from the couch where Mc and Chloe are sitting, a small end table is next to the comfortable chair, zoom in as much as possible to avoid having to show the dean or her desk in the render
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s22_4d # TPP. same as v15s22_4 Chloe and Mc are no longer in this render, The dean has put down her pen and is looking in the direction of where Chloe and Mc are sitting on the couch, no expression, mouth is closed
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s22_5a # TPP. same as v15s22_5 Mc and Chloe are now looking at the Dean still slight smiles mouths are still closed, The Dean is sitting down in the chair across from Chloe and Mc no expression mouth is closed looking at Mc and Chloe
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s22_6 # FPP. Show only the Dean sitting on the Chair from render v15s22_5 no expression, all v15s22_6 renders The Dean will be sitting in this chair unless otherwise stated, looking at Chloe on the Deans left, mouth is open, make the angle hide the end table sitting next to her
     with dissolve
@@ -370,196 +397,212 @@ label v15s22:
 
     scene v15s22_7a # FPP. same as v15s22_7 Chloe holds out a piece of paper towards the Dean, still a slight smile, mouth is closed
     with dissolve
+    
+    pause 0.75
 
-    if v15mr_lees_support:
+    if v15s21_meeting_points >= 1:
+        if v15_chloe_mrleesupport:
+            scene v15s22_7
+            with dissolve
 
-        scene v15s22_7
-        with dissolve
+            cl "We have signed support from Mr. Lee."
 
-        cl "We have signed support from Mr Lee."
+            scene v15s22_6a # FPP. same as v15s22_6 The Dean is holding the paper Chloe handed her from render v15s22_7a slightly in front of her, still no expression, still looking at Chloe, mouth is still open
+            with dissolve
 
-        scene v15s22_6a # FPP. same as v15s22_6 The Dean is holding the paper Chloe handed her from render v15s22_7a slightly in front of her, still no expression, still looking at Chloe, mouth is still open
-        with dissolve
+            $ v15s22_meeting_points += 1
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
-        de "Mr Lee? You must have been very convincing."
+            de "Mr. Lee? You must have been very convincing."
 
-        de "I can't imagine Mr Lee wanting to support something like this."
+            de "I can't imagine Mr. Lee wanting to support something like this."
 
-        scene v15s22_5b # TPP. same as v15s22_5a The Dean is sitting in the chair and looking at and placing a piece of paper on the end table next to her chair, still no expression, mouth is closed, Mc and Chloe are still sitting down on the couch looking at The Dean slight smiles mouths are closed
-        with dissolve
+            scene v15s22_5b # TPP. same as v15s22_5a The Dean is sitting in the chair and looking at and placing a piece of paper on the end table next to her chair, still no expression, mouth is closed, Mc and Chloe are still sitting down on the couch looking at The Dean slight smiles mouths are closed
+            with dissolve
 
-        menu:
+            menu:
+                "Explain why Mr. Lee signed":
+                    #$ add_point(KCT.BRO)
 
-            "Explain why Mr Lee signed": # (CORRECT CHOICE - ONE POINT)
-                $ addpoint v15_dean_meeting += 1
-                $ add_point(KCT.BRO)
+                    scene v15s22_6b # FPP. same as v15s22_6 The Dean is looking at Mc, mouth is closed, still no expression
+                    with dissolve
 
-                scene v15s22_6b # FPP. same as v15s22_6 The Dean is looking at Mc, mouth is closed, still no expression
-                with dissolve
+                    u "Mr. Lee felt that we have good intentions with this proposal and believed it would benefit SVC."
 
-                u "Mr Lee felt that we have good intentions with this proposal and believed it would benefit SVC."
+                    scene v15s22_6c # FPP. same as v15s22_6b The Dean has a slight smile, still looking at Mc, mouth is still open
+                    with dissolve
 
-                scene v15s22_6c # FPP. same as v15s22_6b The Dean has a slight smile, still looking at Mc, mouth is still open
-                with dissolve
+                    $ v15s22_meeting_points += 1
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
-                de "Well, I look forward to hearing from him how he came to that conclusion."
+                    de "Well, I look forward to hearing from him how he came to that conclusion."
 
-                de "So now you're here to convince me."
+                    de "So now you're here to convince me."
 
-            "Make a joke":
-                $ add_point(KCT.TROUBLEMAKER)
+                "Sarcastic joke":
+                    #$ add_point(KCT.TROUBLEMAKER)
 
-                scene v15s22_6b
-                with dissolve
+                    scene v15s22_6b
+                    with dissolve
 
-                u "He didn't. We faked his signature."
+                    u "He didn't. We faked his signature."
 
-                scene v15s22_7b # FPP. same as v15s22_7	Chloe has a shocked expression, looking at Mc, mouth is still open
-                with dissolve
+                    scene v15s22_7b # FPP. same as v15s22_7 Chloe has a shocked expression, looking at Mc, mouth is still open
+                    with dissolve
 
-                cl "[name]!"
+                    cl "[name]!"
 
-                scene v15s22_7c # FPP. same as v15s22_7 Chloe has a worried expression, still looking at the Dean, mouth is still open
-                with dissolve
+                    scene v15s22_7c # FPP. same as v15s22_7 Chloe has a worried expression, still looking at the Dean, mouth is still open
+                    with dissolve
 
-                cl "I'm sorry, Dean Harrison."
+                    cl "I'm sorry, Dean Harrison."
 
-                scene v15s22_7d # FPP. same as v15s22_7c Chloe is looking at Mc, mouth is closed, still a worried expression
-                with dissolve
+                    scene v15s22_7d # FPP. same as v15s22_7c Chloe is looking at Mc, mouth is closed, still a worried expression
+                    with dissolve
 
-                u "I'm only joking. Just thought I'd lighten the mood in here..."
+                    u "I'm only joking. Just thought I'd lighten the mood in here..."
 
-                scene v15s22_6b
-                with dissolve
+                    scene v15s22_6b
+                    with dissolve
 
-                u "He signed it, I promise."
+                    u "He signed it, I promise."
 
-                scene v15s22_6c
-                with dissolve
+                    scene v15s22_6c
+                    with dissolve
 
-                de "You're quite the comedian, aren't you, [name]?"
+                    de "You're quite the comedian, aren't you, [name]?"
 
-                scene v15s22_6d # FPP. same as v15s22_6c The Dean's mouth is closed, still looking at Mc, still a slight smile
-                with dissolve
+                    scene v15s22_6d # FPP. same as v15s22_6c The Dean's mouth is closed, still looking at Mc, still a slight smile
+                    with dissolve
 
-                u "Well-"
+                    u "Well-"
 
-                scene v15s22_6e # FPP. same as v15s22_6c The Dean has an annoyed expression, still looking at Mc, mouth is still open
-                with dissolve
+                    scene v15s22_6e # FPP. same as v15s22_6c The Dean has an annoyed expression, still looking at Mc, mouth is still open
+                    with dissolve
 
-                de "I can assure you; nobody finds you funny."
+                    $ v15s22_meeting_points -= 1
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
-                scene v15s22_6f # FPP. same as v15s22_6e The Dean's mouth is closed, still looking at Mc, still an annoyed expression
-                with dissolve
+                    de "I can assure you, nobody finds you funny."
 
-                u "...Sorry."
+                    scene v15s22_6f # FPP. same as v15s22_6e The Dean's mouth is closed, still looking at Mc, still an annoyed expression
+                    with dissolve
 
-                scene v15s22_6g # FPP. same as v15s22_6b The Dean's mouth is open, still no expression, still looking at Mc
-                with dissolve
+                    u "...Sorry."
 
-                de "All jokes aside, you must have impressed him."
+                    scene v15s22_6g # FPP. same as v15s22_6b The Dean's mouth is open, still no expression, still looking at Mc
+                    with dissolve
 
-                de "So now you're here to convince me."
+                    de "All jokes aside, you must have impressed him."
 
-    elif v15ms_roses_support:
+                    de "So now you're here to convince me."
 
-        scene v15s22_7
-        with dissolve
+        else:
+            scene v15s22_7
+            with dissolve
 
-        cl "We have signed support from Ms Rose."
+            cl "We have signed support from Ms. Rose."
 
-        scene v15s22_6h # FPP. same as v15s22_6	The Dean has a slight smile, still looking at Chloe, mouth is still open
-        with dissolve
+            scene v15s22_6h # FPP. same as v15s22_6 The Dean has a slight smile, still looking at Chloe, mouth is still open
+            with dissolve
 
-        de "Oh, good. You've already convinced Ms Rose."
+            $ v15s22_meeting_points += 1
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
-        de "She only supports worthy causes, so that bodes well."
+            de "Oh, good. You've already convinced Ms. Rose."
 
-        scene v15s22_6i # FPP. same as v15s22_6h The Dean's mouth is closed, still looking at Chloe, still a slight smile
-        with dissolve
+            de "She only supports worthy causes, so that bodes well."
 
-        menu:
+            scene v15s22_6i # FPP. same as v15s22_6h The Dean's mouth is closed, still looking at Chloe, still a slight smile
+            with dissolve
 
-            "Explain why Ms Rose signed": # (CORRECT CHOICE - ONE POINT)
-                $ addpoint v15_dean_meeting += 1
-                $ add_point(KCT.BRO)
+            menu:
+                "Explain why Ms. Rose signed":
+                    #$ add_point(KCT.BRO)
 
-                scene v15s22_6d
-                with dissolve
+                    scene v15s22_6d
+                    with dissolve
 
-                u "Ms Rose felt that not only was this a great proposal for the Chicks, but that it would benefit SVC overall."
+                    u "Ms. Rose felt that not only was this a great proposal for the Chicks, but that it would benefit SVC overall."
 
-                scene v15s22_6c
-                with dissolve
+                    scene v15s22_6c
+                    with dissolve
 
-                de "Did she? I'll be interested to hear from her how she arrived at that conclusion."
+                    $ v15s22_meeting_points += 1
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
-                de "So now you're here to convince me."
+                    de "Did she? I'll be interested to hear from her how she arrived at that conclusion."
 
-            "Be funny":
-                $ add_point(KCT.TROUBLEMAKER)
+                    de "So now you're here to convince me."
 
-                scene v15s22_6d
-                with dissolve
+                "Scarcastic joke":
+                    #$ add_point(KCT.TROUBLEMAKER)
 
-                u "Yeah, she was very supportive after we slipped her some cash."
+                    scene v15s22_6d
+                    with dissolve
 
-                scene v15s22_6j # FPP. same as v15s22_6d The Dean sighs and rolls her eyes, still an annoyed expression
-                with dissolve
+                    u "Yeah, she was very supportive after we slipped her some cash."
 
-                pause 0.50
+                    scene v15s22_6j # FPP. same as v15s22_6d The Dean sighs and rolls her eyes, still an annoyed expression
+                    with dissolve
 
-                scene v15s22_7b
-                with dissolve
+                    pause 0.75
 
-                cl "[name]!"
+                    scene v15s22_7b
+                    with dissolve
 
-                scene v15s22_7c
-                with dissolve
+                    cl "[name]!"
 
-                cl "I'm sorry, Dean Harrison..."
+                    scene v15s22_7c
+                    with dissolve
 
-                scene v15s22_7d
-                with dissolve
+                    cl "I'm sorry, Dean Harrison..."
 
-                u "It's only a joke!"
+                    scene v15s22_7d
+                    with dissolve
 
-                scene v15s22_6k # FPP. same as v15s22_6f The Dean gives mc a stern look, not impressed expression, mouth is still closed
-                with dissolve
+                    u "It's only a joke!"
 
-                pause 0.50
+                    scene v15s22_6k # FPP. same as v15s22_6f The Dean gives mc a stern look, not impressed expression, mouth is still closed
+                    with dissolve
 
-                scene v15s22_6f
-                with dissolve
+                    pause 0.75
 
-                u "There was no bribe, honest."
+                    scene v15s22_6f
+                    with dissolve
 
-                scene v15s22_6e
-                with dissolve
+                    u "There was no bribe, honest."
 
-                de "Timing is everything, [name]. And this certainly isn't the time."
+                    scene v15s22_6e
+                    with dissolve
 
-                de "The next time you speak, make sure it's something sensible."
+                    de "Timing is everything, [name]. And this certainly isn't the time."
 
-                scene v15s22_6f
-                with dissolve
+                    $ v15s22_meeting_points -= 1
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                    de "The next time you speak, make sure it's something sensible."
 
-                u "Sorry."
+                    scene v15s22_6f
+                    with dissolve
 
-                scene v15s22_7e # FPP. same as v15s22_7b Chloe is slightly angry, mouth is closed, still looking at Mc
-                with dissolve
+                    u "Sorry."
 
-                pause 0.50
+                    scene v15s22_7e # FPP. same as v15s22_7b Chloe is slightly angry, mouth is closed, still looking at Mc
+                    with dissolve
 
-                scene v15s22_6g
-                with dissolve
+                    pause 0.75
 
-                de "So now you're here to convince me."
+                    scene v15s22_6g
+                    with dissolve
+
+                    de "So now you're here to convince me."
 
     else:
-
         scene v15s22_6
         with dissolve
+
+        $ v15s22_meeting_points -= 1
+        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
         de "It doesn't look like you managed to secure any support from a teacher. There's no signature on here."
 
@@ -572,9 +615,8 @@ label v15s22:
         with dissolve
 
         menu:
-
             "The teacher was unfair":
-                $ add_point(KCT.TROUBLEMAKER)
+                #$ add_point(KCT.TROUBLEMAKER)
 
                 scene v15s22_6b
                 with dissolve
@@ -586,7 +628,7 @@ label v15s22:
                 scene v15s22_7f # FPP. same as v15s22_7d Chloe has a confused expression, still looking at Mc, mouth is still open
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s22_6b
                 with dissolve
@@ -600,6 +642,9 @@ label v15s22:
 
                 scene v15s22_6e
                 with dissolve
+
+                $ v15s22_meeting_points -= 1
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
                 de "I'm sure whoever you met with, you obviously didn't do a very good job of convincing them."
 
@@ -616,26 +661,28 @@ label v15s22:
                 scene v15s22_7g # FPP. same as v15s22_7f chloe gives mc a stern look as if she's telling him to shut tp with her eyes, still looking at Mc, mouth is still closed
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s22_6g
                 with dissolve
 
                 de "So now you're here to convince me."
 
-            "We could've done better": # (CORRECT CHOICE - ONE POINT)
-                $ addpoint v15_dean_meeting += 1
-                $ add_point(KCT.BRO)
+            "We could've done better":
+                #$ add_point(KCT.BRO)
 
                 scene v15s22_6b
                 with dissolve
 
-                u "In all honesty, we could've done better. We've reflected on it and learned a lot from the experience."
+                $ v15s22_meeting_points += 1
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+
+                u "In all honesty, we could've done better. However, we have learned a lot from the experience."
 
                 scene v15s22_6d
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s22_6c
                 with dissolve
@@ -646,6 +693,23 @@ label v15s22:
     with dissolve
 
     u "Yes."
+    
+    if v11_pen_goes_europe:
+        scene v15s22_6c
+        with dissolve
+        
+        $ v15s22_meeting_points += 1
+        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN") 
+
+        de "You did a fine job defending your friend when we met last time, [name]."
+        
+        de "I expect nothing but a solid presentation of your arguments today."
+        
+    else:
+        scene v15s22_6c
+        with dissolve
+        
+        de "For the sake of both of you I hope you do a better job than when we met last time, [name]."
 
     scene v15s22_6
     with dissolve
@@ -671,97 +735,112 @@ label v15s22:
     with dissolve
 
     menu:
-
-        "Summarize the plan": # (CORRECT CHOICE - ONE POINT)
-            $ addpoint v15_dean_meeting += 1
-            $ add_point(KCT.BRO)
-
-            scene v15s22_6d
-            with dissolve
-
-            u "I'll try to summarize as best I can."
-
-            scene v15s22_6c
-            with dissolve
-
-            de "That would be appreciated."
-
-            scene v15s22_6d
-            with dissolve
-
-            menu:
-
-                "I'll take my time":
-                    $ add_point(KCT.TROUBLEMAKER)
-
-                    scene v15s22_6b
-                    with dissolve
-
-                    u "I'll take my time if that's alright. I don't want to leave out any major details."
-
-                    scene v15s22_6c
-                    with dissolve
-
-                    de "That's not necessary. I know what you're asking for, I need you to convince me."
-
-                "Your time is important": # (CORRECT CHOICE - ONE POINT)
-                    $ addpoint v15_dean_meeting += 1
-                    $ add_point(KCT.BRO)
-
-                    scene v15s22_6d
-                    with dissolve
-
-                    u "Your time is important, so I'll be as brief as possible."
-
-                    scene v15s22_6c
-                    with dissolve
-
-                    de "Thank you. I'm glad you understand."
-            
-        "Stress the teacher's support":
-            $ add_point(KCT.TROUBLEMAKER)
+        "I'll take my time":
+            #$ add_point(KCT.TROUBLEMAKER)
 
             scene v15s22_6b
             with dissolve
 
-            u "I feel like it should be enough that we secured support from a teacher. Let's not pretend that's an easy thing to do."
+            u "I'll take my time if that's alright. I don't want to leave out any major details."
 
-            scene v15s22_7d
+            scene v15s22_6c
             with dissolve
 
-            cl "Well, we can still try to summarize our goal for the Dean, [name]."
+            $ v15s22_meeting_points -= 1
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
-            scene v15s22_6h
+            de "That's not necessary. I know what you're asking for, I need you to convince me."
+
+        "Your time is important":
+            #$ add_point(KCT.BRO)
+
+            scene v15s22_6d
             with dissolve
 
-            de "That would be advisable, yes."
+            u "Your time is important, so I'll be as brief as possible."
 
-            scene v15s22_6f
+            scene v15s22_6c
             with dissolve
 
-            menu:
+            $ v15s22_meeting_points += 1
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
-                "Agree": # (CORRECT CHOICE - ONE POINT)
-                    $ addpoint v15_dean_meeting += 1
-                    $ add_point(KCT.BRO)
+            de "Thank you. I'm glad you understand."
 
-                    scene v15s22_6b
-                    with dissolve
+    if v15s21_meeting_points >= 1:
+        menu:
+            "Summarize the plan":
+                #$ add_point(KCT.BRO)
 
-                    u "Okay, sure. Let's do that then."
+                scene v15s22_6d
+                with dissolve
 
-                "Be reluctant":
-                    $ add_point(KCT.TROUBLEMAKER)
+                u "I'll try to summarize as best I can."
 
-                    scene v15s22_6k
-                    with dissolve
+                scene v15s22_6c
+                with dissolve
 
-                    u "We've worked very hard all day to prepare that signature for you, but sure. You're the boss."
+                $ v15s22_meeting_points += 1
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
-                    pause 0.50
+                de "That would be appreciated."
 
-                    scene v15s22_7g
-                    with dissolve
+                scene v15s22_6d
+                with dissolve
+                
+            "Stress the teacher's support":
+                #$ add_point(KCT.TROUBLEMAKER)
+
+                scene v15s22_6b
+                with dissolve
+
+                u "I feel like it should be enough that we secured support from a teacher. Let's not pretend that's an easy thing to do."
+
+                scene v15s22_7d
+                with dissolve
+
+                cl "Well, we can still try to summarize our goal for the Dean, [name]."
+
+                scene v15s22_6h
+                with dissolve
+
+                $ v15s22_meeting_points -= 1
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+
+                de "That would be advisable, yes."
+
+                scene v15s22_6f
+                with dissolve
+
+                menu:
+                    "Agree": # (CORRECT CHOICE - ONE POINT)
+                        #$ add_point(KCT.BRO)
+
+                        scene v15s22_6b
+                        with dissolve
+
+                        $ v15s22_meeting_points += 1
+                        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+
+                        u "Okay, sure. Let's do that then."
+
+                    "Be reluctant":
+                        #$ add_point(KCT.TROUBLEMAKER)
+
+                        scene v15s22_6k
+                        with dissolve
+
+                        $ v15s22_meeting_points -= 1
+                        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+
+                        u "We've worked very hard all day to prepare that signature for you, but sure. You're the boss."
+
+                        pause 0.75
+
+                        scene v15s22_7g
+                        with dissolve
+                        
+                        pause 0.75
 
     scene v15s22_6g
     with dissolve
@@ -777,9 +856,8 @@ label v15s22:
     with dissolve
 
     menu:
-
         "Quick version":
-            $ add_point(KCT.TROUBLEMAKER)
+            #$ add_point(KCT.TROUBLEMAKER)
 
             scene v15s22_6b
             with dissolve
@@ -819,6 +897,9 @@ label v15s22:
             scene v15s22_6m
             with dissolve
 
+            $ v15s22_meeting_points -= 1
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+
             de "That was... very quick."
 
             scene v15s22_7c
@@ -829,11 +910,10 @@ label v15s22:
             scene v15s22_7f
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
-        "Main points": # (CORRECT CHOICE - ONE POINT)
-            $ addpoint v15_dean_meeting += 1
-            $ add_point(KCT.BRO)
+        "Main points":
+            #$ add_point(KCT.BRO)
 
             scene v15s22_6b
             with dissolve
@@ -847,6 +927,9 @@ label v15s22:
 
             scene v15s22_6g
             with dissolve
+
+            $ v15s22_meeting_points += 1
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
             de "Okay, that's a valid first point."
 
@@ -868,7 +951,7 @@ label v15s22:
             scene v15s22_7
             with dissolve
 
-            cl "And with lower fees across the board, it will help with our first point about encouraging more people to enrol."
+            cl "And with lower fees across the board, it will help with our first point about encouraging more people to enroll."
 
             scene v15s22_6g
             with dissolve
@@ -890,8 +973,7 @@ label v15s22:
 
             cl "Exactly."
         
-    if not v15seduce_ms_rose and not v15threaten_ms_rose:
-
+    if not v15_seduce_ms_rose and not v15_threaten_ms_rose:
         scene v15s22_6b
         with dissolve
 
@@ -905,6 +987,9 @@ label v15s22:
         scene v15s22_6h
         with dissolve
 
+        $ v15s22_meeting_points += 1
+        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+        
         de "That is a surprise. I was opposed to the scholarship from the beginning, so that's a major bonus point, Chloe."
 
         scene v15s22_7
@@ -925,17 +1010,17 @@ label v15s22:
     scene v15s22_5b
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s22_6p # FPP. same as v15s22_6a The Dean is looking at the piece of paper, reading it again for a moment, mouth is closed, still no expression
     with dissolve
     
-    pause 0.50
+    pause 0.75
 
     scene v15s22_7d
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s22_6a
     with dissolve
@@ -945,11 +1030,10 @@ label v15s22:
     scene v15s22_5b
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
-    if v15mr_lees_support or v15ms_roses_support:
-
-        if v15_dean_meeting >= 5: # -if won signature and MC chose all 5 Correct Answers
+    if v15s21_meeting_points >= 1:
+        if v15s22_meeting_points >= 5: # -if won signature and max dean support
 
             scene v15s22_6q # FPP. same as v15s22_6h The Dean has a full smile, still looking at Chloe, mouth is still open
             with dissolve
@@ -958,18 +1042,8 @@ label v15s22:
 
             jump v15dean_successful
 
-        elif v15_dean_meeting >= 3: # -if won signature and MC scored 3 or 4 points
-
-            scene v15s22_6h
-            with dissolve
-
-            de "The meeting didn't go perfectly, but you did a good job of convincing me."
-
-            jump v15dean_successful
-
-        elif v15_dean_meeting >= 1 and kct == "popular": # -if won signature and MC scored 1 or 2 points, and is KCT Popular
-            if v15_dean_meeting <= 2:
-                call screen kct_popup
+        elif v15s22_meeting_points == 1 and kct == "popular": # if won signature and low dean support with kct popular
+            call screen kct_popup
 
             scene v15s22_6
             with dissolve
@@ -983,12 +1057,19 @@ label v15s22:
 
             jump v15dean_successful
 
-        elif v15_dean_meeting <= 2: # -if won signature and MC scored 2 points or less
+        elif v15s22_meeting_points >= 1: # -if won signature and medium dean support
+            scene v15s22_6h
+            with dissolve
 
+            de "The meeting didn't go perfectly, but you did a good job of convincing me."
+
+            jump v15dean_successful
+
+        else: # -if won signature and no dean support
             scene v15s22_6g
             with dissolve
 
-            de "When I consider everything that you've said today, it wan't good enough. I think you could have done a lot better."
+            de "When I consider everything that you've said today, it wasn't good enough. I think you could have done a lot better."
 
             scene v15s22_7b
             with dissolve
@@ -1015,7 +1096,7 @@ label v15s22:
             scene v15s22_7h # FPP. same as v15s22_7d Chloe has a very sad expression, mouth is open, still looking at Mc
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s22_7i # FPP. same as v15s22_7h Chloe is looking at The Dean, still a very sad expression, mouth is still open
             with dissolve
@@ -1024,12 +1105,16 @@ label v15s22:
 
             jump v15dean_unsuccessful
 
-    elif v15_dean_meeting >= 5: # -if no signature, but chose all 5 correct answers
+    elif v15s22_meeting_points >= 5: # -if no signature, but high dean support
+        scene v15s22_6q # FPP. same as v15s22_6h The Dean has a full smile, still looking at Chloe, mouth is still open
+        with dissolve
+
+        de "You've done very well with this proposal. I'm impressed."
 
         scene v15s22_6
         with dissolve
 
-        de "You need to give up your scholarship. Then we can proceed with this."
+        de "But you need to give up your scholarship. Only then we can proceed with this."
 
         scene v15s22_7j # FPP. same as v15s22_7b Chloe is looking at The Dean, still a shocked expression, mouth is still open
         with dissolve
@@ -1044,7 +1129,7 @@ label v15s22:
         scene v15s22_7d
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s22_7c
         with dissolve
@@ -1061,14 +1146,14 @@ label v15s22:
         scene v15s22_7k # FPP. same as v15s22_7d Chloe's mouth is open, still a worried expression, still looking at Mc
         with dissolve
 
-        cl "Yeah. I have to do whatever takes."
+        cl "Yeah. I have to do whatever it takes."
 
         scene v15s22_6h
         with dissolve
 
         de "That's a very mature decision, Chloe. Well done."
 
-        scene v15s22_7l # FPP. same as v15s22_7	Chloe has no expression, still looking at The Dean, mouth is still open
+        scene v15s22_7l # FPP. same as v15s22_7 Chloe has no expression, still looking at The Dean, mouth is still open
         with dissolve
 
         cl "Thank you."
@@ -1085,19 +1170,21 @@ label v15s22:
 
         jump v15dean_successful
 
-    elif v15_dean_meeting >= 3 and kct == "popular": # -if no signature, and chose 3 or 4 correct answers, and is KCT Popular
-        if v15_dean_meeting <= 3:
-            call screen kct_popup
+    elif v15s22_meeting_points >= 1: # -if no signature, and medium/low dean support
+        if kct == "popular":
+        
+            if v15s22_meeting_points == 1:
+                call screen kct_popup
+        
+            scene v15s22_6g
+            with dissolve
 
-        scene v15s22_6g
-        with dissolve
-
-        de "You're both very popular students, which I think helps your position on this proposal."
+            de "You're both very popular students, which I think helps your position on this proposal. But..."
 
         scene v15s22_6
         with dissolve
 
-        de "But, Chloe, you're going to have to give up your scholarship for this to work."
+        de "Chloe, you're going to have to give up your scholarship for this to work."
 
         scene v15s22_7c
         with dissolve
@@ -1112,7 +1199,7 @@ label v15s22:
         scene v15s22_7d
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s22_7k
         with dissolve
@@ -1132,7 +1219,7 @@ label v15s22:
         scene v15s22_7k
         with dissolve
 
-        cl "Yeah. I have to do whatever takes."
+        cl "Yeah. I have to do whatever it takes."
 
         scene v15s22_6h
         with dissolve
@@ -1161,8 +1248,7 @@ label v15s22:
 
         jump v15dean_successful
 
-    elif v15_dean_meeting <= 2: # -if no signature and MC scored 2 points or less
-
+    else: # -if no signature and MC scored 2 points or less
         scene v15s22_6
         with dissolve
 
@@ -1183,7 +1269,7 @@ label v15s22:
         scene v15s22_7h
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s22_7i
         with dissolve
@@ -1193,10 +1279,10 @@ label v15s22:
         jump v15dean_unsuccessful
 
     label v15dean_successful:
-        $ v15sorority_discount = True
-
         scene v15s22_6h
         with dissolve
+
+        $ set_presidency_percent(v14_lindsey_popularity - 3)
 
         de "I'm happy to proceed with reducing tuition fees for the Chicks. We can use your sorority as a case study and see how it goes."
 
@@ -1208,7 +1294,7 @@ label v15s22:
         scene v15s22_7m # FPP. same as v15s22_7b Chloe has an excited expression, mouth is still open, still looking at Mc
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s22_7n # FPP. same as v15s22_7m Chloe is looking at The Dean, still an excited expression, mouth is still open
         with dissolve
@@ -1243,17 +1329,17 @@ label v15s22:
         scene v15s22_5c # TPP. same as v15s22_5b The Dean, Chloe, and Mc are all now standing, The Dean is shaking Chloe's hand both of them have slight smiles, mouths are closed, Mc is watching Chloe slight smile mouth is closed
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s22_3a # TPP. same as v15s22_3 MC and Chloe are walking out of The Dean's office, both of them are smiling and looking at each other
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s22_1a # TPP same as v15s22_1 Chloe and Mc are walking the other direction, still slight smiles, Chloe's mouth is open, Mc's mouth is closed, they are looking at each other
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s22_2b
         with dissolve
@@ -1275,61 +1361,73 @@ label v15s22:
 
         u "Of course."
 
-        if chloefriend: 
-
-            scene v15s22_1b # TPP. same as v15s22_1a Mc and Chloe stop walking and Chloe gives Mc and friendly hug, both slight smiles, both mouths are closed
-            with dissolve
-
-            pause 0.50
-
-            play sound "sounds/vibrate.mp3"
-
-            scene v15s22_1c # TPP. same as v15s22_1 Mc and Chloe stop hugging and Mc pulls his phone out of his pocket, Mc and Chloe are looking down at his phone, slight smiles, mouths are closed
-            with dissolve
-
-            pause 0.50
-
-            scene v15s22_8 # FPP. Closed up shot of Mc's phone, show only his phone in his hand, the phone screen says, new messages
-            with dissolve
-
-        if chloegf:
-
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            play sound "sounds/kiss.mp3"
+        
             scene v15s22_1d # TPP. same as v15s22_1b Chloe gives Mc a romantic hug and kiss, both of them have their eyes closed
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             play sound "sounds/vibrate.mp3"
 
             scene v15s22_1c
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v15s22_8
             with dissolve
 
-    label v15dean_unsuccessful:
+            pause 0.75
 
+        else:
+            scene v15s22_1b # TPP. same as v15s22_1a Mc and Chloe stop walking and Chloe gives Mc and friendly hug, both slight smiles, both mouths are closed
+            with dissolve
+
+            pause 0.75
+
+            play sound "sounds/vibrate.mp3"
+
+            scene v15s22_1c # TPP. same as v15s22_1 Mc and Chloe stop hugging and Mc pulls his phone out of his pocket, Mc and Chloe are looking down at his phone, slight smiles, mouths are closed
+            with dissolve
+
+            pause 0.75
+
+            scene v15s22_8 # FPP. Closed up shot of Mc's phone, show only his phone in his hand, the phone screen says, new messages
+            with dissolve
+
+            pause 0.75
+        
+        jump v15s22_afterchloe
+
+    label v15dean_unsuccessful:
         scene v15s22_5d # TPP. same as v15s22_5c The Dean is walking away from Mc and Chloe not shaking Chloe's hand no expression mouth is closed, Mc and Chloe are both still standing, Chloe has a sad expressions looking at Mc mouth is closed, Mc has no expression looking at Chloe mouth is closed
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s22_3b # TPP. same as v15s22_3b MC has no expression mouth is closed looking at Chloe, Chloe has a sad expression mouth is closed looking at Mc
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v15s22_1e # TPP. same as v15s22_1a Chloe has a sad expression mouth is closed looking forward, Mc has no expression, mouth is closed, looking at Chloe
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
-        scene v15s22_2i # FPP. same as v15s22_2	Chloe has a very sad expression, mouth is still open, still looking at Mc
+        scene v15s22_2i # FPP. same as v15s22_2 Chloe has a very sad expression, mouth is still open, still looking at Mc
         with dissolve
 
         cl "I can't believe it... I worked so hard for this..."
+
+        if v15s21_meeting_points >= 1:
+            if v15_chloe_mrleesupport:
+                cl "We even got Mr. Lee's support. All that hard work... for nothing."
+                
+            else:
+                cl "We even got Ms. Rose's support. All that hard work... for nothing."
 
         scene v15s22_2j # FPP. same as v15s22_2i Chloe's mouth is closed, still looking at Mc, still a very sad expression
         with dissolve
@@ -1345,11 +1443,11 @@ label v15s22:
         with dissolve
 
         menu:
-
             "Call after her":
-                $ add_point(KCT.BRO)
-                if chloegf or chloers:
+                if chloe.relationship.value >= Relationship.FWB.value:
                     $ add_point(KCT.TROUBLEMAKER)
+                else:
+                    $ add_point(KCT.BRO)
 
                 scene v15s22_1f
                 with dissolve
@@ -1361,22 +1459,25 @@ label v15s22:
                 scene v15s22_1g # TPP. same as v15s22_1f Chloe completely ignores MC and walks further away, Chloe's face can't be seen now, Mc is still watching Chloe leave, Mc has a sad expression, mouth is closed
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 play sound "sounds/vibrate.mp3"
 
                 scene v15s22_1h # TPP. same as v15s22_1g Chloe is no longer visible in the render, Mc is looking down at his pocket pulling out his phone, no expression, mouth is closed
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s22_8
                 with dissolve
 
+                pause 0.75
+
             "Say nothing":
-                $ add_point(KCT.BRO)
-                if chloegf or chloers:
+                if chloe.relationship.value >= Relationship.FWB.value:
                     $ add_point(KCT.BOYFRIEND)
+                else:
+                    $ add_point(KCT.BRO)
 
                 scene v15s22_1g
                 with dissolve
@@ -1388,39 +1489,54 @@ label v15s22:
                 scene v15s22_1h
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s22_8
                 with dissolve
 
-    if v15s12_lindsey_pb_gameNight: # -if helping Lindsey with Games night
+                pause 0.75
 
-        lindsey.newMessage("Hey, can you come meet me now to buy the alcohol for our game night? I have a plan! I'll send the details of which store to come to.", queue=False)
-        lindsey.addReply("Okay, I'll be there soon!", func=None)
+    label v15s22_afterchloe:
+
+    if v15_lindsey_gamenight: # -if helping Lindsey with Games night
+        $ lindsey.messenger.newMessage("Hey, can you come meet me now to buy the alcohol for our game night? I have a plan! I'll send the details of which store to come to.", force_send=True)
+        $ lindsey.messenger.addReply("Okay, I'll be there soon!", func=None)
 
     elif v14_help_lindsey:
-
-        lindsey.newMessage("Hey, can you call the club and book the VIP party package now please? See what you can do in terms of them serving us alcohol and negotiating the price!", queue=False)
-        lindsey.addReply("Okay, I'll try to charm them. I'll let you know how it goes!", func=None)
+        $ lindsey.messenger.newMessage("Hey, can you call the club and book the VIP party package now please? See what you can do in terms of them serving us alcohol and negotiating the price!", force_send=True)
+        $ lindsey.messenger.addReply("Okay, I'll try to charm them. I'll let you know how it goes!", func=None)
 
     else:
+        $ aubrey.messenger.newMessage("Come to the Chicks house. I have an extra special surprise for you ;) I think you've earned it.", force_send=True)
 
-        aubrey.newMessage("Come to the Chicks house. I have an extra special surprise for you ;) I think you've earned it.", queue=False)
+        if aubrey.relationship.value >= Relationship.FWB.value: # -if AubreyRs
+            $ aubrey.messenger.addReply("A naked surprise? ;)", func=None)
+            $ aubrey.messenger.newMessage("Guess you'll find out soon enough!", force_send=True)
 
-        if aubreyfriend: # -if AubreyFriend
+        else: # -if AubreyFriend
+            $ aubrey.messenger.addReply("Haha, okay see you there.", func=None)
 
-            aubrey.addReply("Haha, okay see you there.", func=None)
+    label v15s22_PhoneContinueLin:
+        if lindsey.messenger.replies:
+            call screen phone
+        if lindsey.messenger.replies:
+            u "(I should reply to Lindsey.)"
+            jump v15s22_PhoneContinueLin
 
-        if aubreyrs: # -if AubreyRs
+    label v15s22_PhoneContinueAub:
+        if aubrey.messenger.replies:
+            call screen phone
+        if aubrey.messenger.replies:
+            u "(I should reply to Aubrey.)"
+            jump v15s22_PhoneContinueAub
 
-            aubrey.addReply("A naked surprise? ;)", func=None)
-            aubrey.newMessage("Guess you'll find out soon enough!", queue=False)
 
     scene v15s22_8a # FPP. same as v15s22_8 The phone is now just has a blank black screen
     with dissolve
 
-    if v15sorority_discount:
+    pause 0.75
 
+    if v15s22_meeting_points >= 1:
         scene v15s22_2d
         with dissolve
 
@@ -1449,8 +1565,9 @@ label v15s22:
         scene v15s22_1i # TPP. same as v15s22_1a Mc is walking away from Chloe looking back at her and waving, Chloe is waving back at Mc, both of them slight smiles aand mouths closed
         with dissolve
 
-    else:
+        pause 0.75
 
+    else:
         scene v15s22_1j # TPP. same as v15s22_1h Mc has a full smile, looking at his phone in his hand, mouth is closed, Chloe is still not in the render
         with dissolve
 
@@ -1459,14 +1576,13 @@ label v15s22:
         scene v15s22_1k # TPP. same as v15s22_1j Mc has put his phone away in his pocket and is now walking down the hallway, slight smile, mouth is closed, Chloe is still not in the render
         with dissolve
 
-    if v15s12_lindsey_pb_gameNight:
+        pause 0.75
 
+    if v15_lindsey_gamenight:
         jump v15s24
 
     elif v14_help_lindsey:
-
         jump v15s25
 
     else:
-
         jump v15s26

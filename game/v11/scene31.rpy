@@ -167,7 +167,6 @@ label v11_lindsey_park:
 
         "Support Lindsey":
             $ v11_lindsey_run = True
-            $ political_strategist = True #keep
             $ lindsey.points += 1
 
             scene v11lip3h # FPP. Same as v11lip3d, different pose
@@ -206,21 +205,21 @@ label v11_lindsey_park:
     scene v11lip3k # FPP. Same as v11lip3j, Lindsey serious, mouth open
     with dissolve
 
-    li "Normally, we don't have these issues so the presidency is just passed on to whoever the former president wants."
+    li "Normally, we don't have these issues so the presidency is just passed on to whoever the former President wants."
     
     li "Who they choose or endorse rather is always approved by everyone else."
 
     scene v11lip3j
     with dissolve
 
-    u "How often do you all decide on a new president?"
+    u "How often do you all decide on a new President?"
 
     scene v11lip3k
     with dissolve
 
-    li "Every half semester we do a vote, but no one ever runs against the current president."
+    li "Every half semester we do a vote, but no one ever runs against the current President."
     
-    li "So from what I've learned, people just suck up to the president and hope they're chosen when the president leaves."
+    li "So from what I've learned, people just suck up to the President and hope they're chosen when the President leaves."
 
     scene v11lip3j
     with dissolve
@@ -250,7 +249,7 @@ label v11_lindsey_park:
     scene v11lip3k
     with dissolve
 
-    li "I want to run a full campaign and really show the girls why I should be president."
+    li "I want to run a full campaign and really show the girls why I should be President."
 
     scene v11lip3j
     with dissolve
@@ -260,7 +259,7 @@ label v11_lindsey_park:
     scene v11lip3k
     with dissolve
 
-    li "Well, it starts with me knowing why I want to be president and putting it into a concise message."
+    li "Well, it starts with me knowing why I want to be President and putting it into a concise message."
 
     scene v11lip3d
     with dissolve
@@ -275,7 +274,7 @@ label v11_lindsey_park:
     scene v11lip3d
     with dissolve
 
-    u "Well, I can help with that. If someone was to ask, like if you were in an interview or something, why do you want to be the Chicks president? What would you say?"
+    u "Well, I can help with that. If someone was to ask, like if you were in an interview or something, why do you want to be the Chicks President? What would you say?"
 
     scene v11lip3e
     with dissolve
@@ -286,7 +285,7 @@ label v11_lindsey_park:
     scene v11lip3i
     with dissolve
 
-    li "That's why I want to be president."
+    li "That's why I want to be President."
 
     scene v11lip3h
     with dissolve
@@ -446,8 +445,7 @@ label v11_lindsey_park:
 
     pause 0.75
 
-    if v11_aubrey_sex and laurenrs: # Requirements for apology scene
-
+    if v11_lauren_caught_aubrey: # Requirements for apology scene
         scene v11lip6 # TPP. Show MC sitting down he has a slightly relieved expression, mouth closed
         with dissolve
 
@@ -458,7 +456,9 @@ label v11_lindsey_park:
         with dissolve
 
         u "(This day just gets better and better.)"
+
     stop music fadeout 3
+
     if emily_europe:
         scene v11lip7 # TPP. Show MC getting up from the bench, slight smile, mouth closed
         with dissolve

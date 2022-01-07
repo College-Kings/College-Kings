@@ -5,7 +5,6 @@
 # Phone Images: None
 
 label v12_chris_nora_room:
-    $ v12_nora_sex = False #pb variable
     scene v12cnr1 # TPP. Show MC walking in the hotel corridor, neutral expression, mouth closed
     with dissolve
 
@@ -99,7 +98,7 @@ label v12_chris_nora_room:
 
             u "Nora..."
 
-            if (not noralikes) or (noralikes and v11_kiss_nora): # if Noralikes she lets him in after a bit. If not Noralikes he has to convince her and can fail. If mc made a move on Nora before, she is not letting him in.
+            if nora.relationship.value < Relationship.LIKES.value or v11_kiss_nora: # if Nora likes she lets him in after a bit. If not Nora likes he has to convince her and can fail. If mc made a move on Nora before, she is not letting him in.
                 scene v12cnr13
                 with dissolve
 

@@ -14,12 +14,12 @@ label v9_hc_demo:
     scene v9demo2 # TPP. Show Cameron and Penelope, walking towards a bald burly guard who is stood outside of a hut. Camera from behind cameron and Penelope.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v9demo3 # TPP. Show Penelope and Cameron now stood infront of the guard, camera from behind Penelope and Cameron.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v9demo4 # TPP. Show Penelope and Cameron, looking at camera (Camera from guard's perspective as if they're both looking at guard). Cameron slightly agitated, Penelope mouth open.
     with dissolve
@@ -101,59 +101,49 @@ label v9_hc_demo:
     menu:
         "Recognize the King":
             $ the_king = True
-            jump v9_hc_demo_rec
+            u "Well met, Your Majesty. And this must be your lovely new bride."
+
+            scene v9demo8a # FPP. Same camera as v9demo8, Penelope mouth open, Cameron mouth closed.
+            with dissolve
+
+            pe "Why yes, Sir [name], it is. Did well with my last pillage, did I not?"
+
+            scene v9demo8
+            with dissolve
+
+            u "Yes, much better than the last one."
+
         "Don't recognize the King":
             $ add_point(KCT.TROUBLEMAKER)
-            jump v9_hc_demo_norec
-        
-label v9_hc_demo_rec:
-    u "Well met, Your Majesty. And this must be your lovely new bride."
+            u "Hark, who goes there?"
 
-    scene v9demo8a # FPP. Same camera as v9demo8, Penelope mouth open, Cameron mouth closed.
-    with dissolve
+            scene v9demo8b # FPP. Same camera as v9demo8, Penelope whispering in Cameron's ear, Cameron looks uninterested. Penelope mouth open.
+            with dissolve
 
-    pe "Why yes, Sir [name], it is. Did well with my last pillage, did I not?"
+            pe "*Whispers to Cameron* See told ya."
 
-    scene v9demo8
-    with dissolve
+            scene v9demo8a
+            with dissolve
 
-    u "Yes, much better than the last one."
+            pe "Well met, Sir [name], it is I, your King and my new bride."
 
-    jump v9_hc_demo_cont1
+            scene v9demo8
+            with dissolve
 
-label v9_hc_demo_norec:
-    u "Hark, who goes there?"
+            u "My apologies sir. You were not expected until tomorrow."
 
-    scene v9demo8b # FPP. Same camera as v9demo8, Penelope whispering in Cameron's ear, Cameron looks uninterested. Penelope mouth open.
-    with dissolve
+            scene v9demo8a
+            with dissolve
 
-    pe "*Whispers to Cameron* See told ya."
+            pe "My dear bride is not one for the sea. Sick the whole time. What a mess."
 
-    scene v9demo8a
-    with dissolve
+            scene v9demo8
+            with dissolve
 
-    pe "Well met, Sir [name], it is I, your King and my new bride."
+            u "Ahhh."
 
-    scene v9demo8
-    with dissolve
+            u "Pity. Your last bride was made of stronger stock, I suppose."
 
-    u "My apologies sir. You were not expected until tomorrow."
-
-    scene v9demo8a
-    with dissolve
-
-    pe "My dear bride is not one for the sea. Sick the whole time. What a mess."
-
-    scene v9demo8
-    with dissolve
-
-    u "Ahhh."
-
-    u "Pity. Your last bride was made of stronger stock, I suppose."
-
-    jump v9_hc_demo_cont1
-
-label v9_hc_demo_cont1:
     scene v9demo8a
     with dissolve
 
@@ -165,48 +155,39 @@ label v9_hc_demo_cont1:
     menu:
         "Discuss War":
             $ add_point(KCT.BRO)
-            jump v9_hc_demo_war
+
+            u "We have conquered the enemies to the East and South. Much is left to pillage to the West. It's good you've returned to us now. We will need your expert guidance."
+
+            scene v9demo8a
+            with dissolve
+
+            pe "Great news. We spent months cooped up in our cabin, it will be good to get my sword wet again."
+
+            scene v9demo8
+            with dissolve
+
+            u "The new bride not to your liking, my King?"
+
+            scene v9demo8c # FPP. Same camera as v9demo8, Penelope smile, Cameron slightly angry, Penelope mouth open, Cameron mouth closed.
+            with dissolve
+
+            pe "Oh, you know me too well, Sir [name]."
+
         "Discuss Riches":
-            jump v9_hc_demo_riches
-        
-label v9_hc_demo_war:
-    u "We have conquered the enemies to the East and South. Much is left to pillage to the West. It's good you've returned to us now. We will need your expert guidance."
+            u "Gold and jewel cache is overflowing. We'll need to expand, and soon."
 
-    scene v9demo8a
-    with dissolve
+            scene v9demo8a
+            with dissolve
 
-    pe "Great news. We spent months cooped up in our cabin, it will be good to get my sword wet again."
+            pe "Just what I like to hear, Sir [name]."
 
-    scene v9demo8
-    with dissolve
+            pe "I promised my new bride riches beyond her wildest dreams and I must deliver, even if it means escalating the war to the West."
 
-    u "The new bride not to your liking, my King?"
+            scene v9demo8
+            with dissolve
 
-    scene v9demo8c # FPP. Same camera as v9demo8, Penelope smile, Cameron slightly angry, Penelope mouth open, Cameron mouth closed.
-    with dissolve
+            u "Already making demands of my King's good nature, I see."
 
-    pe "Oh, you know me too well, Sir [name]."
-
-    jump v9_hc_demo_cont2
-
-label v9_hc_demo_riches:
-    u "Gold and jewel cache is overflowing. We'll need to expand, and soon."
-
-    scene v9demo8a
-    with dissolve
-
-    pe "Just what I like to hear, Sir [name]."
-
-    pe "I promised my new bride riches beyond her wildest dreams and I must deliver, even if it means escalating the war to the West."
-
-    scene v9demo8
-    with dissolve
-
-    u "Already making demands of my King's good nature, I see."
-
-    jump v9_hc_demo_cont2
-
-label v9_hc_demo_cont2:
     scene v9demo9 # TPP. Show Penelope, Cameron and MC walking to one of the boats at the docks.
     with dissolve
 
@@ -227,56 +208,44 @@ label v9_hc_demo_cont2:
 
     menu:
         "North":
-            jump v9_hc_demo_north
+            if the_king:
+                $ grant_achievement("king_of_the_north")
+
+            u "North, Your Majesty."
+
+            scene v9demo10a
+            with dissolve
+
+            pe "Ah, good practice. We must be well prepared before heading West once more."
+
+            scene v9demo10
+            with dissolve
+
+            u "Yes, and with your new bride to join you, I'm sure you'd prefer an easy journey."
+
+            scene v9demo10b
+            with dissolve
+
+            pe "Yes, dear thing can't be away from me for long, can she?"
+
         "West":
-            jump v9_hc_demo_west
-        
-label v9_hc_demo_west:
-    u "West, Your Majesty."
+            u "West, Your Majesty."
 
-    scene v9demo10a
-    with dissolve
+            scene v9demo10a
+            with dissolve
 
-    pe "Are we ready for such a battle?"
+            pe "Are we ready for such a battle?"
 
-    scene v9demo10
-    with dissolve
+            scene v9demo10
+            with dissolve
 
-    u "We are now that you're here. Will your bride take up arms?"
+            u "We are now that you're here. Will your bride take up arms?"
 
-    scene v9demo10b # FPP. Same camera as v9demo10, Penelope laugh looking at Cameron, Cameron looks slightly angry, Penelope mouth open.1
-    with dissolve
+            scene v9demo10b # FPP. Same camera as v9demo10, Penelope laugh looking at Cameron, Cameron looks slightly angry, Penelope mouth open.1
+            with dissolve
 
-    pe "No, she's not got the stomach for battle, poor thing."
+            pe "No, she's not got the stomach for battle, poor thing."
 
-    jump v9_hc_demo_cont3
-
-label v9_hc_demo_north:
-
-    if the_king:
-        $ grant_achievement("king_of_the_north")
-
-    u "North, Your Majesty."
-
-    scene v9demo10a
-    with dissolve
-
-    pe "Ah, good practice. We must be well prepared before heading West once more."
-
-    scene v9demo10
-    with dissolve
-
-    u "Yes, and with your new bride to join you, I'm sure you'd prefer an easy journey."
-
-    scene v9demo10b
-    with dissolve
-
-    pe "Yes, dear thing can't be away from me for long, can she?"
-
-    jump v9_hc_demo_cont3
-
-
-label v9_hc_demo_cont3:
     scene v9demo11 # FPP. Show the line of huts as if MC is looking at them from the dock.
     with dissolve
 

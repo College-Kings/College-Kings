@@ -129,7 +129,7 @@ label v12_follow_chris:
         "She wasn't overreacting":
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
-            $ chrismad = True
+            $ chris.relationship = Relationship.MAD
 
             scene v12chf4a
             with dissolve

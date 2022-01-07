@@ -35,9 +35,27 @@ init python:
 
 label v1start:
 label starta: #for compatibility only
-    play music "music/msexy.mp3"
-    show screen fantasyOverlay
+    if config.developer:
+        show screen bugTesting_Overlay
 
+    show screen fightDamage
+    show screen fantasyOverlay
+    
+    $ options = [
+        {
+            "option": "Travel to the maldivas",
+            "votes": [chloe, mc]
+        },
+        {
+            "option": "Rock climb the everest",
+            "votes": [chloe, mc]
+        }
+    ]
+
+
+    # call screen would_you_rather("Would you rather eat your dad or your mum", options)
+    play music "music/msexy.mp3"
+    
     scene s0a
     with dissolve
 
@@ -63,8 +81,7 @@ label starta: #for compatibility only
 
     play music "music/m15punk.mp3"
 
-    $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
-    $ kiwiiUsers["MC"]["username"] = name
+    $ mc.username = name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
 
     u "Hmm...?"
     
@@ -162,7 +179,7 @@ label starta: #for compatibility only
     u "(Huh?)"
     
     # Emily's messages
-    $ emily.messenger.newMessage(_("Hey...\nI know we haven't talked much after we broke up, but I just wanted to let you know that I didn't get into Stanford, so I'll be going to San Vallejo as well.\nGuess I'll see you there. :)"), queue=False)
+    $ emily.messenger.newMessage(_("Hey...\nI know we haven't talked much after we broke up, but I just wanted to let you know that I didn't get into Stanford, so I'll be going to San Vallejo as well.\nGuess I'll see you there. :)"))
     $ emily.messenger.addReply(_("Yeah... I'll see you there."), v1_reply1)
     $ emily.messenger.addReply(_("You cheated on me.\nGo to hell!"), v1_reply2)
 
@@ -235,7 +252,7 @@ label starta: #for compatibility only
     show s15
     with dissolve
 
-    $ statsApp.unlock()
+    $ stats_app.unlock()
 
     ju "Fraternities can be dangerous, honey."
     
@@ -547,7 +564,7 @@ label starta: #for compatibility only
 
     ry "They're the best fraternity in the entire University. They get so many girls."
 
-    ry "And...their president is the current Fight King."
+    ry "And...their President is the current Fight King."
 
     scene s44c
     with dissolve
@@ -630,7 +647,7 @@ label starta: #for compatibility only
 
             u "Wow Elijah, way to start the fun."
 
-            $ funofelijah = True
+            $ elijah.relationship = Relationship.MAKEFUN
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s46b
@@ -757,7 +774,7 @@ label starta: #for compatibility only
 
     scene s52
     with dissolve
-    la "They're one of the two sororities at San Vallejo. My sister Autumn is their president, so I know most of them quite well."
+    la "They're one of the two sororities at San Vallejo. My sister Autumn is their President, so I know most of them quite well."
 
     scene s53a
     with dissolve
@@ -881,7 +898,7 @@ label starta: #for compatibility only
     scene s50 # freeroam
     with dissolve
 
-    $ julia.messenger.newMessage(_("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you"), queue=False)
+    $ julia.messenger.newMessage(_("Hey honey,\nenjoy your time in college.\nStay safe and don't forget to visit me.\nLove you"), force_send=True)
     $ julia.messenger.addReply(_("Love you too."), v1_reply3)
     $ julia.messenger.addReply(_("Thanks, Julia :)"), v1_reply4)
 
@@ -1009,7 +1026,7 @@ label starta: #for compatibility only
         scene s50el
         u "Hey, you're Elijah right?"
 
-        if funofelijah:
+        if elijah.relationship.value <= Relationship.MAKEFUN.value:
             scene s50el1
             with dissolve
 
@@ -1162,7 +1179,7 @@ label starta: #for compatibility only
         menu:
             "Flirt":
                 $ add_point(KCT.TROUBLEMAKER)
-                $ v1_hitOnNora = True
+                $ nora.relationship = Relationship.MOVE
 
                 scene s56no1a
                 with dissolve
@@ -1187,7 +1204,7 @@ label starta: #for compatibility only
         scene s56no1a
         
         u "Uhm..."
-        if v1_hitOnNora:
+        if nora.relationship.value >= Relationship.MOVE.value:
             scene s56no1
             with dissolve
             no "Dude, keep it moving."
@@ -1877,6 +1894,7 @@ label efra:
     scene s80
     with Fade(1, 0, 1)
     play music "music/msad.mp3"
+
     imre "Man, I can't wait to bang this Riley chick."
 
     menu:
@@ -1885,10 +1903,12 @@ label efra:
 
             scene s79b
             with dissolve
+
             u "What? I want Riley. You can have Lauren."
 
             scene s80e
             with dissolve
+
             imre "What the hell man?! I invited Riley. Back off."
 
             menu:
@@ -1897,6 +1917,7 @@ label efra:
 
                     scene s79a
                     with dissolve
+
                     u "You're right, Riley is yours. I'm sorry."
 
                     scene s80a
@@ -1909,6 +1930,7 @@ label efra:
 
                     scene s79b
                     with dissolve
+
                     u "She wanted to see ME shirtless, not you. Face it, she wants me."
 
                     scene s80e
@@ -1925,10 +1947,14 @@ label efra:
 
                     scene s80a
                     with dissolve
+
                     imre "It's alright man, I get it."
+
                     scene s80
                     with dissolve
+
                     imre "Trust me, we're gonna bang so many chicks this year. All we need is confidence..."
+
                     jump at_bd
 
         "They're both hot":
@@ -2035,13 +2061,13 @@ label at_bd:
 
     play music "music/msexy.mp3"
 
-    if not config_censored:
+    if not _in_replay:
+        if not config_censored:
+            call screen nsfw_Toggle
 
-        call screen nsfw_Toggle
+        if config_censored:
+            call screen censoredPopup("v1_nsfwSkipLabel1")
 
-    if config_censored:
-        call screen censoredPopup("v1_nsfwSkipLabel1")
-        
     scene sda2
     with dissolve
 
@@ -2771,12 +2797,12 @@ label aw_bd:
 
     menu:
         "Kiss her":
-            $ v1_laurenKiss = True
+            $ lauren.relationship = Relationship.MOVE
 
             if v1_laurenPoints == 2:
                 scene s90
                 with dissolve # kiss
-                $ v1_kissLauren = True
+                $ lauren.relationship = Relationship.KISS
                 
                 $ grant_achievement("romeo")
 
@@ -2796,7 +2822,6 @@ label aw_bd:
                 " "
 
         "Don't kiss her":
-
             scene s90b # you scratching your head
             with dissolve
             " "
@@ -2822,7 +2847,7 @@ label aw_bd:
     scene s92 # you head in hands
     with dissolve
 
-    if v1_laurenKiss:
+    if lauren.relationship.value >= Relationship.MOVE.value:
         u "(Fuck... why did I try to kiss her?! That just made everything weird.)"
     else:
         u "(Fuck... should I have kissed her? Now it's just weird between us.)"
@@ -2865,7 +2890,7 @@ label aw_bd:
 
     imre "I take it your date didn't go as planned?"
 
-    if v1_laurenKiss and v1_laurenPoints == 2:
+    if lauren.relationship.value >= Relationship.KISS.value:
         scene s96a
         with dissolve
         u "I just don't get it..."
@@ -2876,7 +2901,7 @@ label aw_bd:
 
         u "And now it's all just super weird."
 
-    elif v1_laurenKiss:
+    elif lauren.relationship.value >= Relationship.MOVE.value:
         scene s96a
         with dissolve
 
@@ -2929,7 +2954,7 @@ label aw_bd:
     stop music fadeout 3
     play sound "sounds/vibrate.mp3"
 
-    $ ryan.messenger.newMessage(_("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"), queue=False)
+    $ ryan.messenger.newMessage(_("Hey man, it's Ryan.\nThe Apes' rush party is tonight at 9. You're coming, right???"), force_send=True)
     $ ryan.messenger.addReply(_("Alright, but I'll only stay for a few hours."))
     $ ryan.messenger.newMessage(_("Haha, trust me, you're not gonna want to leave once you see all the hot chicks there."))
     $ ryan.messenger.newMessage(_("Just meet me in front of the Apes' frat house at 9."))
@@ -3268,7 +3293,7 @@ label v1_freeRoam2_josh:
     scene fr2jo2a
     with dissolve
 
-    au "Oh no, I'm a junior, vice president of the Chicks actually."
+    au "Oh no, I'm a junior, vice President of the Chicks actually."
 
     menu:
         "Flirt":
@@ -3287,7 +3312,6 @@ label v1_freeRoam2_josh:
             menu:
                 "Say you're a fighter":
                     $ add_point(KCT.TROUBLEMAKER)
-                    $ v1_aubreywannafight = True
 
                     scene fr2jo2d
                     with dissolve
@@ -3316,6 +3340,18 @@ label v1_freeRoam2_josh:
 
                     u "Who's Grayson?"
 
+                    scene fr2jo2a
+                    with dissolve
+
+                    au "He's the President of the Apes and the current Fight King."
+
+                    au "I think he's upstairs, but I'm not sure."
+
+                    scene fr2jo2b
+                    with dissolve
+
+                    u "Alright, I'll leave you guys alone and look around a bit more. Maybe I'll even talk to Grayson."
+
                 "Say you're not a fighter":
                     scene fr2jo2b
                     with dissolve
@@ -3333,6 +3369,20 @@ label v1_freeRoam2_josh:
                     with dissolve
 
                     u "Who's Grayson?"
+
+                    scene fr2jo2a
+                    with dissolve
+
+                    au "He's the President of the Apes and the current Fight King."
+
+                    au "You'll never know, maybe if you meet some of the Apes, you'll change your mind about fighting."
+
+                    scene fr2jo2b
+                    with dissolve
+
+                    u "(I doubt it, but I guess it won't hurt to talk to some of them.)"
+
+                    u "Alright, I'll leave you guys alone and look around a bit more."
 
         "Ask if she likes fighters":
             $ add_point(KCT.BOYFRIEND)
@@ -3352,11 +3402,8 @@ label v1_freeRoam2_josh:
             au "Why are you asking? Are you planning on becoming a fighter?"
 
             menu:
-
-
                 "I'll be the next Fight King":
                     $ add_point(KCT.TROUBLEMAKER)
-                    $ v1_aubreywannafight = True
 
                     scene fr2jo2d
                     with dissolve
@@ -3374,6 +3421,18 @@ label v1_freeRoam2_josh:
                     with dissolve
 
                     u "Who's Grayson?"
+
+                    scene fr2jo2a
+                    with dissolve
+
+                    au "He's the President of the Apes and the current Fight King."
+
+                    au "I think he's upstairs, but I'm not sure."
+
+                    scene fr2jo2b
+                    with dissolve
+
+                    u "Alright, I'll leave you guys alone and look around a bit more. Maybe I'll even talk to Grayson."
 
                 "No, that's not for me":
                     scene fr2jo2b
@@ -3393,28 +3452,19 @@ label v1_freeRoam2_josh:
 
                     u "Who's Grayson?"
 
-    scene fr2jo2a
-    with dissolve
+                    scene fr2jo2a
+                    with dissolve
 
-    au "He's the president of the Apes and the current Fight King."
+                    au "He's the President of the Apes and the current Fight King."
 
-    if v1_aubreywannafight:
-        au "I think he's upstairs, but I'm not sure."
+                    au "You'll never know, maybe if you meet some of the Apes, you'll change your mind about fighting."
 
-        scene fr2jo2b
-        with dissolve
+                    scene fr2jo2b
+                    with dissolve
 
-        u "Alright, I'll leave you guys alone and look around a bit more. Maybe I'll even talk to Grayson."
+                    u "(I doubt it, but I guess it won't hurt to talk to some of them.)"
 
-    else:
-        au "You'll never know, maybe if you meet some of the Apes, you'll change your mind about fighting."
-
-        scene fr2jo2b
-        with dissolve
-
-        u "(I doubt it, but I guess it won't hurt to talk to some of them.)"
-
-        u "Alright, I'll leave you guys alone and look around a bit more."
+                    u "Alright, I'll leave you guys alone and look around a bit more."
 
     scene fr2jo2a
     with dissolve
@@ -3456,8 +3506,8 @@ label v1_freeRoam2_camp:
     else:
         play sound "sounds/vibrate.mp3"
 
-        if not lauren.messenger.get_message("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
-            $ lauren.messenger.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), queue=False)
+        if not lauren.messenger.find_message("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"):
+            $ lauren.messenger.newMessage(_("Hey :)\nSorry about today.\n\nCan we talk tomorrow?"), force_send=True)
             $ lauren.messenger.addReply(_("Yeah, sure."), v1_reply6)
             $ lauren.messenger.addReply(_("What is there to talk about?"), v1_reply7)
 
@@ -3732,9 +3782,9 @@ label v1_freeRoam2_grayson:
     scene fr2gr2b
     with dissolve
 
-    gr "We're building the Apes' legacy here. 10 years from now, I'll be the most successful Ape president in history."
+    gr "We're building the Apes' legacy here. 10 years from now, I'll be the most successful Ape President in history."
 
-    gr "And you could be the most successful vice president."
+    gr "And you could be the most successful vice President."
 
     scene fr2gr2c
     with dissolve
@@ -3785,7 +3835,7 @@ label fr2end: #for compatibility only
     scene s109
     with dissolve
 
-    ry "I think that's Chloe, right? I talked to some of the Chicks and she's like their president."
+    ry "I think that's Chloe, right? I talked to some of the Chicks and she's like their President."
 
     ry "Also, possibly the hottest girl I've seen in my life."
 
@@ -4032,7 +4082,7 @@ label fr2end: #for compatibility only
     with dissolve
 
     label bf_bd: #for compatibility only
-    u "So, you're the president of the Chicks, right?"
+    u "So, you're the President of the Chicks, right?"
 
     scene s116b
     with dissolve
@@ -4042,7 +4092,7 @@ label fr2end: #for compatibility only
     scene s116c
     with dissolve
 
-    u "Are you close with Aubrey then? She told me she was the vice president."
+    u "Are you close with Aubrey then? She told me she was the vice President."
 
     scene s116d
     with dissolve

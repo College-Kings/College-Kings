@@ -3,22 +3,23 @@
 # Characters: MC (Outfit: 1), AMBER (Outfit: Detective), CHRIS (Outfit: 2)
 # Time: Morning
 
-
 label v15s43:
     scene v15s43_1 # TPP. Show MC and Amber walking up to the wolves front door, both slight smile, mouths closed.
-    with fade (1,0,1)
+    with fade
 
-    pause  
+    pause 0.75
 
     play sound "sounds/knock.mp3"
 
     scene v15s43_2 # FPP. Amber and MC at the front of the wolves house, MC looking at Amber, Amber looking at the door, Amber knocking on the door, Amber slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
-    pause  
+    pause 0.75
 
-    scene v15s42_2a # FPP. Amber and MC both looking at the door waiting for an answer, Amber slight smile, mouth closed.
-    with dissolve 
+    scene v15s43_2a # FPP. Amber and MC both looking at the door waiting for an answer, Amber slight smile, mouth closed.
+    with dissolve
+
+    pause 0.75
 
     if joinwolves:
         scene v15s43_2b # FPP. Amber looking at MC, MC looking at Amber, Amber slight smile, mouth closed.
@@ -29,21 +30,22 @@ label v15s43:
         scene v15s43_2c # FPP. Amber looking at MC, MC looking at Amber, Amber slight smile, mouth open.
         with dissolve
 
-        am "Haha, shhh... Detective's don't live in frats!"
+        am "Haha, shhh... Detectives don't live in frats!"
 
         scene v15s43_2b
         with dissolve
 
         u "Haha, of course."
 
-        pause  
+        pause 0.75
 
-        scene v15s42_2a 
-        with dissolve 
+        scene v15s43_2a 
+        with dissolve
 
         menu:
-            "Try the door handle.":
+            "Try the door handle":
                 $ add_point(KCT.BRO)
+                
                 play sound "sounds/dooropen.mp3"
 
                 scene v15s42_3 # TPP. Close up shot of MC's hand turning the door knob and opening the door.
@@ -63,8 +65,9 @@ label v15s43:
 
                 u "We really don't. *Chuckles*"
 
-            "Keep waiting.":
+            "Keep waiting":
                 $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s43_2c
                 with dissolve
 
@@ -104,7 +107,10 @@ label v15s43:
 
                 scene v15s43_2d # FPP. Amber looking at MC, MC looking at Amber, Amber giving him the middle finger while laughing.
                 with dissolve
-            "(Professional:) Strategize."  if detective == "professional":
+
+                pause 0.75
+
+            "Strategize" if detective == "professional":
                 scene v15s43_2b
                 with dissolve
 
@@ -123,7 +129,7 @@ label v15s43:
                 scene v15s43_2c
                 with dissolve
 
-                am "Yeah, but we're undercover detectives. Deep undercover.... We don't even carry badges. *Giggles*"
+                am "Yeah, but we're undercover detectives. Deep undercover... We don't even carry badges. *Giggles*"
 
                 scene v15s43_2b
                 with dissolve
@@ -167,8 +173,7 @@ label v15s43:
 
                 am "I didn't think it would be that easy, haha."
 
-            "(Psychologist:) What's Chris thinking?" if detective == "psychologist":
-            
+            "What is Chris thinking?" if detective == "psychologist":
                 scene v15s43_2b
                 with dissolve
 
@@ -212,7 +217,8 @@ label v15s43:
                 with dissolve
 
                 u "He's already playing mind games with us, this isn't good."
-            "(Loose Cannon:) Kick the door open" if detective == "loose cannon":
+
+            "Kick the door open" if detective == "loose_cannon":
                 scene v15s43_2b
                 with dissolve
 
@@ -228,29 +234,29 @@ label v15s43:
                 scene v15s43_4 # TPP. Show MC kicking open the door and the door flying open.
                 with dissolve
 
-                pause
+                pause 0.75
 
-                scene v15s43_2c
+                scene v15s43_100
                 with dissolve
 
                 am "Oh, fuck [name]! You weren't kidding about being a loose cannon."
 
-                scene v15s43_2b
+                scene v15s43_99
                 with dissolve
 
                 u "I ain't got time to fuck around with these punk ass kids!"
 
-                scene v15s43_2c
+                scene v15s43_100
                 with dissolve
 
                 am "*Laughs* Woah there, okay! Calm down big guy, you're starting to turn green..."
 
-                scene v15s43_2b
+                scene v15s43_99
                 with dissolve
 
                 u "Ha. Okay, sorry. Got a little carried away..."
 
-                scene v15s43_2c
+                scene v15s43_100
                 with dissolve
 
                 am "*Whispers* A little?"
@@ -258,24 +264,25 @@ label v15s43:
     scene v15s43_5 # TPP. Show MC and Amber entering the wolves house, both slight smile, mouth closed.
     with dissolve
 
-    u "Chris?"
+    pause 0.75
 
     scene v15s43_6 # TPP. Close up of just Amber in the wolves house, her hand in the shape like a gun, Amber suspicious, mouth open.
     with dissolve
 
-    am "Chris, we know you're in here!"
+    am "Chris? We know you're in here!"
 
     scene v15s43_7 # TPP. Show MC and Amber walking into the living room, Amber keeping her hands in the gun shape, Amber suspicious, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s43_8 # TPP. MC and Amber standing in the living room, MC looking at Amber, Amber looking at MC, Amber suspicious, mouth closed, MC suspicious, mouth closed.
-    with dissolve 
+    with dissolve
 
     menu:
         "Call for Chris":
             $ add_point(KCT.TROUBLEMAKER)
+            
             scene v15s43_9 # TPP. Close up of MC, looking at the room, suspicious, mouth open.
             with dissolve
 
@@ -286,8 +293,9 @@ label v15s43:
 
             am "Don't worry, we'll go easy on you. Just come out and put your hands where I can see them!"
 
-        "Stay Quiet":
+        "Stay quiet":
             $ add_point(KCT.BRO)
+            
             scene v15s43_9
             with dissolve
 
@@ -298,7 +306,7 @@ label v15s43:
 
             am "Chris, get your ass downstairs!"
         
-        "(Professional:) Use your instinct." if detective == "professional":
+        "Use your instinct" if detective == "professional":
             scene v15s43_9
             with dissolve
 
@@ -316,7 +324,7 @@ label v15s43:
 
             u "I know when something isn't right, okay? I can feel it!"
 
-        "(Psychologist:) Analyze how you feel." if detective == "psychologist":
+        "Analyze how you feel" if detective == "psychologist":
             scene v15s43_9
             with dissolve
 
@@ -332,12 +340,11 @@ label v15s43:
 
             u "*Gasps* A psychological horror!"
 
-        "(Loose Cannon:) Be angry." if detective == "loose cannon":
-
+        "Be angry" if detective == "loose_cannon":
             scene v15s43_11 # TPP. View showing MC on one side of a couch in the living room, Amber on the other side with her hands in the shape of a gun, both suspicious, mouth closed.
             with dissolve
 
-            pause  
+            pause 0.75
 
             scene v15s43_11a # TPP. Show MC kicking the couch, Amber slightly shocked, mouth closed, MC angry, mouth open.
             with dissolve
@@ -352,7 +359,7 @@ label v15s43:
             scene v15s43_11c # TPP. Show MC and Amber looking at each other from across the couch both laughing.
             with dissolve
 
-            pause 
+            pause 1.25
 
     scene v15s43_12 # TPP. Close up of Chris walking into the living room, Chris confused, mouth open.
     with dissolve
@@ -369,15 +376,15 @@ label v15s43:
 
     ch "W-what's going on? Why are you acting weird?"
 
-    scene v15s43_10b # TPP. Amber with her hands on her hips looking in Chris's direction, suspicous, mouth open.
+    scene v15s43_10b # TPP. Amber with her hands on her hips looking in Chris's direction, suspicious, mouth open.
     with dissolve
 
     am "We'll ask the questions here. Please, take a seat."
 
     scene v15s43_13 # TPP. Chris sitting on the couch, a coffee table infront of the couch, MC standing on the right of the couch facing Chris, Amber standing on the left of the table facing Chris, Amber and MC faces not shown in the shot, Chris confused, mouth closed, 
-    with fade(1,0,1)
+    with fade
 
-    pause  
+    pause 0.75
 
     scene v15s43_14 # FPP. MC standing on the right of the coffee table, MC looking at Chris, Chris looking at MC, Chris confused, mouth closed.
     with dissolve
@@ -409,7 +416,7 @@ label v15s43:
 
     ch "Huh?"
 
-    if wolves:
+    if joinwolves:
         ch "What do you mean, [name]?"
     else:
         ch "What are you talking about?"
@@ -434,7 +441,9 @@ label v15s43:
     scene v15s43_14d # FPP. MC looking at Chris, Chris looking at Amber, Chris nervous, mouth closed.
     with dissolve
 
-    $ parents_house_clue = True
+    pause 0.75
+    $ v15_nora_locations.add("dad")
+    $ v15_nora_locations.add("ms_rose")
 
     scene v15s43_15
     with dissolve
@@ -456,7 +465,7 @@ label v15s43:
 
     am "Not at all, my protege... Not at all."
 
-    scene v15s43_14f
+    scene v15s43_14h
     with dissolve
 
     ch "Okay then, I don't think she's with either of them. Happy now?"
@@ -473,7 +482,7 @@ label v15s43:
 
     ch "And I suggest you should respect that too."
 
-    $ clue_alone = True
+    $ v15_nora_clues.add("be_alone")
 
     scene v15s43_14g # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth closed.
     with dissolve
@@ -481,6 +490,10 @@ label v15s43:
     menu:
         "Where did she go?":
             $ add_point(KCT.BRO)
+            
+            scene v15s43_14g
+            #with dissolve
+
             u "Where did she go? She must have told you."
 
             scene v15s43_14h # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth open.
@@ -496,14 +509,17 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            $ clue_camping = True
-
             ch "Why are you acting so weird? Listen, I don't know where she is. She could have gone camping for all I know."
+            $ v15_nora_locations.add("camping")
 
-            ch "Just wait until she comes back. She's fine. I swear she's fine. (LOCATION UNLOCKED: CAMPING BY HERSELF.)"
+            ch "Just wait until she comes back. She's fine. I swear she's fine."
 
         "Did she see someone?":
             $ add_point(KCT.TROUBLEMAKER)
+            
+            scene v15s43_14g
+            #with dissolve
+
             u "Did she go see someone else?"
 
             scene v15s43_14h
@@ -516,18 +532,21 @@ label v15s43:
 
             am "That's no good, Chris. You need to start telling us something we can use."
 
-        "(Professional:) You're lying." if detective == "professional":
+        "You're lying" if detective == "professional":
+            scene v15s43_14g
+            #with dissolve
+            
             u "You're lying straight to our faces! You know exactly where she is and it's only a matter of time before we find out."
 
             scene v15s43_14h
             with dissolve
 
-            $ clue_camping = True
-
             ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
+            $ v15_nora_locations.add("camping")
 
-
-        "(Psychologist:) Analayze Chris." if detective == "psychologist":
+        "Analyze Chris" if detective == "psychologist":
+            scene v15s43_14g
+            #with dissolve
 
             u "You're enjoying this aren't you? Do you get joy out of withholding information from us?"
 
@@ -549,14 +568,14 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            $ clue_camping = True
-
             ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
-        "(Loose Cannon:) Accuse Chris." if detective == "loose cannon":
+            $ v15_nora_locations.add("camping")
+
+        "Accuse Chris" if detective == "loose_cannon":
             play sound "sounds/thud.mp3"
 
             scene v15s43_16 # TPP. Show MC slamming his hands on the table, MC angry, mouth open.
-            with dissolve 
+            with dissolve
 
             u "You're respecting nobody with that attitude!"
 
@@ -605,9 +624,9 @@ label v15s43:
     scene v15s43_14h
     with dissolve
 
-    $ clue_mr_rose_cabin = True
-
     ch "Her aunt... Oh yeah! Sometimes her aunt will rent out her dad's cabin."
+    $ v15_nora_clues.add("aunt_cabin")
+    $ v15_nora_locations.add("cabin")
 
     ch "And there, that answers your question about other properties, too. Can you leave me alone now?"
 
@@ -622,7 +641,7 @@ label v15s43:
     menu:
         "She's close with her Aunt?":
             $ add_point(KCT.BOYFRIEND)
-
+            
             u "This aunt-"
 
             scene v15s43_15
@@ -647,6 +666,10 @@ label v15s43:
 
         "She's not with Mr. Rose?":
             $ add_point(KCT.TROUBLEMAKER)
+            
+            scene v15s43_14g
+            #with dissolve
+
             u "So you're sure that Nora's not with Mr. Rose, or... Her dad, I mean?"
 
             scene v15s43_14h
@@ -662,15 +685,18 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            $ clue_nora_hates_her_dad = True
-
             ch "She pretty much hates him. That's the last place she'd go."
+            $ v15_nora_clues.add("hates_dad")
 
             scene v15s43_15
             with dissolve
 
             am "Hmm... I don't know if we can trust you."
-        "(Professional:) Use logic." if detective == "professional":
+
+        "Use logic" if detective == "professional":
+            scene v15s43_14g
+            #with dissolve
+
             u "This aunt is around often?"
 
             scene v15s43_14h
@@ -681,7 +707,8 @@ label v15s43:
             scene v15s43_14g
             with dissolve
 
-            u "Nora has an aunt that lives near campus, sounds like they're close.... And as her ex-boyfriend of multiple years, you have no idea where she lives?"
+            u "Nora has an aunt that lives near campus, sounds like they're close..."
+            u "And as her ex-boyfriend of multiple years, you have no idea where she lives?"
 
             scene v15s43_15
             with dissolve
@@ -692,7 +719,8 @@ label v15s43:
             with dissolve
 
             u "Help us make sense out of what you're saying, Chris!"
-        "(Psychologist:) Examine Further." if detective == "psychologist"
+
+        "Examine further" if detective == "psychologist":
             u "This aunt. Does Nora like her?"
 
             scene v15s43_14h
@@ -718,15 +746,15 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            $ clue_nora_hates_her_dad = True
-
-            ch "I doubt it. She hates her dad. (CLUE UNLOCKED: NORA HATES HER DAD.)"
+            ch "I doubt it. She hates her dad."
+            $ v15_nora_clues.add("hates_dad")
 
             scene v15s43_14g
             with dissolve
 
             u "Hate is a very strong word. Are those your words or Nora's words?"
-        "(Loose Cannon:) Shout at Chris?"
+
+        "Shout at Chris" if detective == "loose_cannon":
             scene v15s43_14g
             with vpunch
 
@@ -765,9 +793,8 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            $ clue_nora_hates_her_dad = True
-
             ch "She hates her dad. She wouldn't go to him."
+            $ v15_nora_clues.add("hates_dad")
 
             scene v15s43_16a # TPP. Show MC kicking the coffee table, MC angry, mouth open.
             with dissolve
@@ -802,7 +829,7 @@ label v15s43:
     scene v15s43_17a # TPP. MC and Amber closer to Chris both of them looking at Chris suspiciously, mouth closed, Chris confused, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s43_15
     with dissolve
@@ -819,9 +846,10 @@ label v15s43:
     scene v15s43_18 # TPP. Show Chris leaving the living room, Chris confused, mouth closed.
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s43_15
+    with dissolve
 
     am "Yeah, you're free to leave. Thanks for the cooperation, jackass."
 
@@ -844,13 +872,14 @@ label v15s43:
 
     u "Great idea, chief."
 
-    if detective == "loose cannon":
+    if detective == "loose_cannon":
         menu:
-            "Kick Table.":
+            "Kick table":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BRO)
+                
                 scene v15s43_19 # TPP. Show MC kicking the coffee table, slightly angry, mouth open.
-                with dissolve
+                with hpunch
 
                 u "Gah! That's what you get!"
 
@@ -859,8 +888,9 @@ label v15s43:
 
                 am "For fuck's sake..."
 
-            "Don't kick table.":
+            "Don't kick table":
                 $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s43_20 # FPP. MC looking at the coffee table.
                 with dissolve
 
@@ -868,5 +898,7 @@ label v15s43:
 
     scene v15s43_21 # TPP. Show MC and Amber leaving the wolve's house, both slight smile, mouth closed.
     with dissolve
+
+    pause 0.75
 
     jump v15s44

@@ -77,15 +77,13 @@ label v13s39a:
 
         u "That would be the most awkward date, Ryan."
 
-        if chloegf:  
-
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:  
             scene v13s39a_5a # FPP. same as v13s39a_5 a dreamlike image of chloe is shown on the screen
             with dissolve
 
             u "I definitely wouldn't want to bring my girl."   
 
-        elif laurenrs and not v11_aubrey_sex:
-
+        elif lauren.relationship.value >= Relationship.GIRLFRIEND.value and not v11_lauren_caught_aubrey: #second part of check only for compatibility purposes
             scene v13s39a_5 # FPP. a dreamlike image of lauren is shown on the screen
             with dissolve
 
@@ -346,7 +344,7 @@ label v13s39a:
 
         stop music fadeout 3
 
-        if chloers:
+        if cuffs in mc.inventory:
             jump v13s40
         else: 
             jump v13s41
@@ -596,7 +594,7 @@ label v13s39a:
 
         stop music fadeout 3
 
-        if chloers:
+        if cuffs in mc.inventory:
             jump v13s40
 
         else: 

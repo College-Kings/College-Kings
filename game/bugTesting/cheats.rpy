@@ -62,23 +62,12 @@ init python:
         return [item.catagory for item in cheatItems if not (item.catagory in seen or seen.add(item.catagory))]
 
     def unlockPhoneContacts():
-        for contact in contacts:
+        for contact in messenger.contacts:
             contact.unlock()
 
 
     cheatItems = []
 
-    ButtonCheat("General", "Chloe Mad", "chloemad")
-    ButtonCheat("General", "Nora Mad", "noramad")
-    ButtonCheat("General", "Lauren Mad", "laurenmad")
-    ButtonCheat("General", "Penelope Mad", "penelopemad")
-    ButtonCheat("General", "Imre Mad", "imremad")
-    ButtonCheat("General", "Lauren Rs", "laurenrs")
-    ButtonCheat("General", "Aubrey Rs", "aubreyrs")
-    ButtonCheat("General", "Riley Rs", "rileyrs")
-    ButtonCheat("General", "Emily Rs", "emilyrs")
-    ButtonCheat("General", "Evelyn Rs", "evelynrs")
-    ButtonCheat("General", "Forgive Emily", "forgiveemily")
     ButtonCheat("General", "Bowling w/ Penelope", "bowling")
     ButtonCheat("General", "Telling Grayson you'll join the Apes", "joinapes")
     ButtonCheat("General", "Joining Wolves", "joinwolves")
@@ -99,8 +88,8 @@ init python:
     ButtonCheat("FR4", "Go with Penelope", "hcGirl", true_value="penelope", false_value="Cheat Error")
     ButtonCheat("FR4", "Go with Riley", "hcGirl", true_value="riley", false_value="Cheat Error")
 
-    ButtonCheat("Phone", "Unlock Kiwii", "kiwiiApp.locked", true_value=False, false_value=True)
-    ButtonCheat("Phone", "Unlock Simplr", "simplrApp.locked", true_value=False, false_value=True)
+    ButtonCheat("Phone", "Unlock Kiwii", "kiwii.locked", true_value=False, false_value=True)
+    ButtonCheat("Phone", "Unlock Simplr", "simplr_app.locked", true_value=False, false_value=True)
 
     FunctionCheat("Phone", "Unlock Phone Contacts", unlockPhoneContacts)
 
@@ -133,7 +122,9 @@ screen bugTesting_cheatMenu():
     imagebutton:
         action Hide("bugTesting_cheatMenu"), Hide("bugTesting_cheatMenuValues"), SetVariable("quick_menu", True)
         idle "/bugTesting/images/cheatMenuBackButton.webp"
-        hover im.MatrixColor("/bugTesting/images/cheatMenuBackButton.webp", im.matrix.brightness(0.2))
+        hover Transform("/bugTesting/images/cheatMenuBackButton.webp", matrixcolor=BrightnessMatrix(0.2))
+        selected False
+        sensitive True
         pos (1666, 50)
 
 

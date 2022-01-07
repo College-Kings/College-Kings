@@ -59,7 +59,7 @@ init python:
         chloe.messenger.addReply(_("Sounds delicious. Meet you there!"))
 
 label v8_tues_noon:
-    if ending != "chloe" and chloemad:
+    if chloe.relationship.value <= Relationship.MAD.value:
         if joinwolves:
             scene v8room20 # TPP. MC laying on bed in his room in Wolves house, looking at his phone, smiling a little, mouth closed
             with Fade(0.75, 0.25, 0.75)

@@ -66,7 +66,7 @@ label v11_lobby_mrlee:
 
         lee "I know many of you were really looking forward to this trip, and I hope that so far it has reached your expectations, but if not... There are many more opportunities ahead."
 
-    if not joshmad:
+    if josh_europe:
         scene v11lob9 # FPP. Show josh, grinning, rubbing hands together. 
         with dissolve
 
@@ -132,8 +132,7 @@ label v11_lobby_mrlee:
 
     u "(Hmm, who to sit with?)"
 
-    if v11_aubrey_sex and laurenrs:
-        $ v11_sit_with_lauren = False
+    if v11_lauren_caught_aubrey:
         # -MC sees Aubrey sitting by herself-
 
         scene v11lob15 # FPP. Show aubrey sat alone, slight sad look
@@ -154,8 +153,11 @@ label v11_lobby_mrlee:
         with dissolve
 
         pause 1
+        
+        stop music fadeout 3
+        jump v11_dinner_with_aubrey
 
-    elif laurenrs:
+    elif lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v11lob18 # FPP. Show Lauren sat alone, slight sad look
         with dissolve
 
@@ -170,6 +172,9 @@ label v11_lobby_mrlee:
         with dissolve
 
         la "Actually, I was just starting to wonder what was taking you so long. *Chuckles*"
+        
+        stop music fadeout 3
+        jump v11_dinner_with_lauren
 
     else:
         menu:
@@ -188,10 +193,11 @@ label v11_lobby_mrlee:
                 with dissolve
                 
                 la "Haha, I was wondering when you'd get over here."
+                
+                stop music fadeout 3
+                jump v11_dinner_with_lauren
 
             "Aubrey":
-                $ v11_sit_with_lauren = False
-
                 scene v11lob15 
                 with dissolve
                 u "(I'll sit with Aubrey.)"
@@ -210,10 +216,5 @@ label v11_lobby_mrlee:
                 with dissolve
 
                 pause 1
-
-    stop music fadeout 3
-
-    if v11_sit_with_lauren:
-        jump v11_dinner_with_lauren
-    else:
-        jump v11_dinner_with_aubrey
+                stop music fadeout 3
+                jump v11_dinner_with_aubrey

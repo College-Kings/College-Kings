@@ -316,7 +316,7 @@ label v12_lindsey_lobby:
 
     pause 2
 
-    $ riley.messenger.newMessage("Hey, I saw you were having breakfast with Lindsey, can you come to the cafe down the road when you're done? I have something to talk to you about in private.", queue=False)
+    $ riley.messenger.newMessage("Hey, I saw you were having breakfast with Lindsey, can you come to the cafe down the road when you're done? I have something to talk to you about in private.", force_send=True)
     $ riley.messenger.addReply("Sure, on my way", func=None)
 
     label v12s36_riley_text:

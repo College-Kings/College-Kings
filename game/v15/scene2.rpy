@@ -3,6 +3,13 @@
 # Characters: MC (Outfit: 1), CAMERON (Outfit: 3)
 # Time: Night
 
+init python:
+    def v15s2_reply1():
+        chloe.messenger.newMessage("You're unbelievable.")
+
+    def v15s2_reply2():
+        chloe.messenger.newMessage("Well, at least you admit it...")
+
 label v15s2:
     scene v15s2_1 # FPP. Show the material of the bag over MC's head. (Maybe reuse the same images from the dungeon in v13)
     with dissolve
@@ -41,12 +48,30 @@ label v15s2:
     scene v15s2_3a
     with dissolve
 
-    u "T-talking! W-we were just talking!"
+    menu:
+        "We were just talking":
+            scene v15s2_3a
+            #with dissolve
 
-    scene v15s2_3
-    with dissolve
+            u "T-talking! W-we were just talking!"
 
-    ca "And drinking! I know she drinks when I'm not here."
+            scene v15s2_3
+            with dissolve
+
+            ca "And drinking! I know she drinks when I'm not around."
+
+        "None of your business":
+            scene v15s2_3a
+            #with dissolve
+
+            u "None of your business, Cameron."
+
+            u "So lay off."
+
+            scene v15s2_3
+            with dissolve
+
+            ca "Were you drinking?! I know she drinks when I'm not around."
 
     if not v14_SamanthaDrugs:
         scene v15s2_3a
@@ -56,7 +81,7 @@ label v15s2:
 
         u "But we talked about how she can get help to quit."
 
-        u "I-I'm trying to help her, Cameron. I actually care about her, okay?!"
+        u "I'm trying to help her, Cameron. I actually care about her, okay?!"
 
         scene v15s2_3c # TPP. Same as v15s2_3, Cameron serious face, mouth open.
         with dissolve
@@ -125,7 +150,8 @@ label v15s2:
         scene v15s2_4a
         with dissolve
 
-        u "So that's something you can encourage her to do more of. It'll get her to focus on something that makes her happy instead of all the other emotional shit."
+        u "So that's something you can encourage her to do more of."
+        u "It'll get her to focus on something that makes her happy instead of all the other emotional shit."
 
         scene v15s2_4
         with dissolve
@@ -145,6 +171,7 @@ label v15s2:
         menu:
             "Laugh it off":
                 $ add_point(KCT.BRO)
+                
                 scene v15s2_4a
                 with dissolve
 
@@ -158,12 +185,15 @@ label v15s2:
                 scene v15s2_5 # TPP. Show MC walking away from Cameron, both serious face, Cameron mouth closed, MC mouth open.
                 with dissolve
 
+                u "Night, Cameron. Get some rest, man."
+
             "Say nothing":
                 $ add_point(KCT.BOYFRIEND)
+                
                 scene v15s2_5
                 with dissolve
                        
-        u "Night, Cameron. Get some rest, man."
+                u "Night, Cameron. Get some rest, man."
 
         scene v15s2_5a # TPP. Same as v15s2_5, Cameron mouth open, MC mouth closed.
         with dissolve
@@ -171,48 +201,48 @@ label v15s2:
         ca "Yeah, catch you later, [name]."
 
     else:
-        scene v15s2_3
+        scene v15s2_3a
         with dissolve
         
         u "I'm just letting her be who she is!"
 
         u "Do you really think you can stop her from doing what she wants all the time?"
 
-        scene v15s2_3a
+        scene v15s2_3
         with dissolve
 
         ca "Who the fuck do you think you're talking to?! I've known her all my life!"
 
         ca "That's not who she is, she's-"
 
-        scene v15s2_3
+        scene v15s2_3a
         with dissolve
 
         u "So, what are you going to do about it? Huh?! You can't be her prison guard forever."
 
-        scene v15s2_3a
+        scene v15s2_3
         with dissolve
 
         ca "Keep talking to me like that, [name], and I'll knock your teeth out."
 
-        scene v15s2_3
+        scene v15s2_3a
         with dissolve
 
         u "I accept her for who she is, Cameron. She's not a fucking kid anymore."
 
         u "You need to let her live her life the way she wants to."
 
-        scene v15s2_3a
+        scene v15s2_3
         with dissolve
 
-        ca "Stop... Talking..."
+        ca "Stop... talking..."
 
-        scene v15s2_3
+        scene v15s2_3a
         with dissolve
 
         u "One day, she may decide to live her life a different way, but that will be her choice. Not yours. Not mine. Hers."
 
-        scene v15s2_3a
+        scene v15s2_3
         with dissolve
 
         ca "Stay the fuck out of it, [name]!"
@@ -245,15 +275,18 @@ label v15s2:
         scene v15s2_3j # TPP. Same as v15s2_3i, Show MC looking down at the bag that was on his head now in his hands, MC slightly worried, mouth closed.
         with dissolve
 
-        u "(Fuck! *Panting*)"
+        u "(Fuck!) *Panting*"
 
         u "(So, this is what living with a psychopath is like? For fuck's sake...)"
 
-        if v14_samantha_sex:
-            u "(I wouldn't have made it out of that conversation alive if he knew what we actually did in there... Damn, we're so lucky he didn't hear us.)"
+        if "v14_samantha" in sceneList:
+            u "(I wouldn't have made it out of that conversation alive if he knew what we actually did in there...)"
+            u "(Damn, we're so lucky he didn't hear us.)"
 
         scene v15s2_5b # Same as v15s2_5a, Show MC walking away no Cameron in sight. MC slightly worried, mouth closed.
         with dissolve
+
+        pause 0.75
 
     play sound "sounds/doorclose.mp3"
 
@@ -270,7 +303,7 @@ label v15s2:
     scene v15s2_7a # TPP. Same as v15s2_7, MC taking off his pants now only in his underwear, serious face, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v15s2_8 # TPP. Show MC getting into his bed, serious face, mouth cloesd.
     with dissolve
@@ -292,17 +325,39 @@ label v15s2:
 
     scene v15s2_9a # TPP. Show MC holding his phone up infront of his face, serious face, mouth closed.
     with dissolve
+    
+    pause 0.75
 
-    $ autumn.messenger.newMessage(_("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)"), queue=False)
-    $ autumn.messenger.addReply(_("Yeah, looking forward to it. See you there!"))
+    if v14_date_distraction:
+        $ chloe.messenger.newMessage("So, you wanna tell me why you didn't come?") 
+        $ chloe.messenger.addReply("Hey, I understand if you're upset. I'm sorry. Something came up, an emergency, and I couldn't make it.") 
+        $ chloe.messenger.newMessage("What do you mean you couldn't make it? You told me to meet you there! What happened that was so important, you had to stand me up at a fancy restaurant?!")
+        $ chloe.messenger.addReply("Chloe, I'm sorry. I can't talk about it, but everything's fine. It's over now, I just don't wanna talk about it.") 
+        $ chloe.messenger.newMessage("Ha. You're sorry... And you don't want to talk about it? Well, bye then.")
+        $ chloe.messenger.addReply("Chloe please, don't be mad about this.") 
+        $ chloe.messenger.newMessage("Okay, I'll just forget it happened. Is that fair?")
+        $ chloe.messenger.addReply(_("Thank you."),v15s2_reply1)
+        $ chloe.messenger.addReply(_("It's not fair, no."), v15s2_reply2)
+        $ chloe.messenger.newMessage("Just... stop talking about it.")
+        $ chloe.messenger.addReply("Okay. Done.") 
+
+    $ autumn.messenger.newMessage(_("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)"), force_send=True)
+    $ autumn.messenger.addReply(_("Uhm, sure."))
     $ autumn.messenger.addReply(_("Of course! I'll always be there if there's puppies, haha."))
 
-    label v15s2_PhoneContinue:
+    label v15s2_PhoneContinueChl:
+        if chloe.messenger.replies:
+            call screen phone
+        if chloe.messenger.replies:
+            u "(I should reply to Chloe.)"
+            jump v15s2_PhoneContinueChl
+
+    label v15s2_PhoneContinueAut:
         if autumn.messenger.replies:
             call screen phone
         if autumn.messenger.replies:
-            "(I should reply to Autumn.)"
-            jump v15s2_PhoneContinue
+            u "(I should reply to Autumn.)"
+            jump v15s2_PhoneContinueAut
 
     u "(Almost forgot about that... It'll be interesting to spend some one-on-one time with Autumn.)"
 
@@ -312,6 +367,10 @@ label v15s2:
 
     scene v15s2_9b # TPP. Same as v15s2_9, MC closing his eyes getting ready for bed, neutral face, mouth closed.
     with dissolve
+
+    pause 0.75
+
+    $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren", force_send=True)
 
     play sound "sounds/vibrate.mp3"
 
@@ -323,13 +382,14 @@ label v15s2:
     scene v15s2_9a
     with dissolve
 
-    $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren", queue=False)
+    pause 0.75
 
     call screen phone
 
     u "(\"Dress to impress your ghoulish empress...\") *Chuckles*"
 
-    u "(Guess I need to go gift shopping... Maybe Autumn can give me ideas on what Lauren would like, or I can just get her some kind of gift card... She likes books, I think?)"
+    u "(Guess I need to go gift shopping...)"
+    u "(Maybe Autumn can give me ideas on what Lauren would like, or I can just get her some kind of gift card... She likes books, I think?)"
 
     scene v15s2_9c # TPP. Same as v15s2_9b, Show MC yawning and stretching while laying down, slight smile, mouth closed.
     with dissolve
@@ -344,14 +404,37 @@ label v15s2:
 # -Add the night to morning transition-
 # -Night to morning transition-
 
-    play sound "sounds/phonealarm.mp3"
+    scene black
+    with dissolve
+    
+    pause 2
+
+    scene sleep_transition_fast
+    with fade
+    
+    pause 2.2
 
     scene v15s2_10 # FPP. Just a black screen
     with dissolve
-
+    play sound "sounds/phonealarm.mp3"
     u "*Groans* (No time for a snooze today. Need to get up.)"
+
+    stop sound
 
     if v14_ApesPostChloePics and not joinwolves:
         jump v15s3
+
+    elif v14_ApesPostChloePics:
+        if v14_PenelopePartner:
+            $ v14s43b_kiwiiPost1.remove_post()
+            $ v14s43b_kiwiiPost2.remove_post()
+            $ v14s43b_kiwiiPost3.remove_post()
+        else:
+            $ v14s43b_kiwiiPost4.remove_post()
+            $ v14s43b_kiwiiPost5.remove_post()
+            $ v14s43b_kiwiiPost6.remove_post()
+        
+        jump v15s4
+
     else: 
         jump v15s4

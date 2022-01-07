@@ -31,7 +31,7 @@ label v14s16:
 
     cl "\"Serious\" isn't even close."
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v14s16_3 # TPP. Close up of MC and Chloe, MC kissing Chloe's forehead, both slight smile, mouth closed.
         with dissolve
 
@@ -123,9 +123,14 @@ label v14s16:
 
     cl "I know I've asked you before, but this time I need a final answer. Are you going to help me with this campaign so I can beat Lindsey?"
 
-    call screen loyalty_tutorial # Placeholder
-
-    label after_loyalty_tutorial:
+    show screen tutorial([
+        "With Chloe and Lindsey competing against each other for one of the most influential positions at San Vallejo, it's up to you to pick sides. Campaign planning unlocks a large amount of opportunities that you don't want to miss out on!",
+        "Will you help Chloe, or Lindsey? Or will you even dare to secretly campaign for both at the same time? The potential gratitude of both girls may be huge, but you better not get caught.",
+        "When planning a campaign, you get to make the big decisions. Both campaigns are divided into different phases and for each phase you will have multiple approaches with a variety of options on how to execute those approaches.",
+        "Will you play dirty or stay clean? Will you try to make deals with the Wolves, or the Apes? Will you persuade people with expensive limos and alcohol, or by ruining the other candidate's reputation? The choice is yours.",
+        "Every presidency related action, from executing your big campaign plan, to making a bad joke about one of the candidates, impacts the candidates' popularity, which plays a big role in who's going to be elected.",
+        "But beware, just because you intended to help one candidate, doesn't mean that you'll succeed. Playing too dirty may cause backlash and even the best plans can fail. The stakes have never been higher."
+    ])
 
     if v13_help_chloe:
         cl "I remember how you said you'd support me before but..."
@@ -137,7 +142,7 @@ label v14s16:
 
     cl "I'd do anything to thank you."
 
-    if chloers or chloegf:
+    if chloe.relationship.value >= Relationship.FWB.value:
         scene v14s16_2c # FPP. Same as v14s16_2a, Chloe winking, slight smile, mouth open.
         with dissolve
 
@@ -166,14 +171,17 @@ label v14s16:
 
     menu:
         "I'll help":
+            hide screen tutorial
+
             $ set_presidency_percent(v14_lindsey_popularity - 5)
-            if chloegf:
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.BOYFRIEND)
-            elif v12_lindsey_sex:
+            elif lindsey.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.TROUBLEMAKER)
             else:
                 $ add_point(KCT.BRO)
             $ v14_help_chloe = True
+
             scene v14s16_2e # FPP. Same as v14s16_2, Chloe slight smile, mouth closed.
             with dissolve
 
@@ -203,7 +211,7 @@ label v14s16:
 
             cl "Meet me in the library after your class, we have lots to discuss!"
 
-            if chloers or chloegf:
+            if chloe.relationship.value >= Relationship.FWB.value:
                 scene v14s16_6a # TPP. Same as v14s16_6, Chloe kisses MC.
                 with dissolve
 
@@ -234,9 +242,11 @@ label v14s16:
                 pause 0.75
                 
         "I don't have the time":
-            if chloegf:
+            hide screen tutorial
+
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.TROUBLEMAKER)
-            elif v12_lindsey_sex:
+            elif lindsey.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.BOYFRIEND)
                 
             scene v14s16_2a
@@ -254,7 +264,7 @@ label v14s16:
 
             u "I'm sorry, Chloe. I'm just really busy now that we're back on campus and things with the-."
 
-            if chloegf:
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v14s16_2j # FPP. Same as v14s16_2a, Chloe angry expression, mouth open.
                 with dissolve
 

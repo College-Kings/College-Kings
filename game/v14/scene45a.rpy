@@ -262,7 +262,7 @@ label v14s45a:
 
     am "A security blanket of some sorts... *Chuckles* Fucking it all up or doing it all perfectly, at the end of the day you've still got me feeling safe and warm."
 
-    if amberrs:
+    if amber.relationship.value >= Relationship.FWB.value:
         scene v14s45a_4 # TPP. Upclose of MC looking into Amber's eyes and Amber looking into MC's eyes, MC's finger lifting up Amber's chin, both slight smile, mouth closed.
         with dissolve
 
@@ -408,7 +408,7 @@ label v14s45a:
         if lindsey.messenger.replies:
             call screen phone
         if lindsey.messenger.replies:
-            "(I should reply to Lindsey.)"
+            u "(I should reply to Lindsey.)"
             jump v14s45a_PhoneContinue
 
         scene v14s45a_7a # TPP. Same as v14s45a_7, MC putting his phone away, slight smile, mouth closed.
@@ -526,7 +526,7 @@ label v14s45a:
 
         li "Oh damn, sorry."
 
-        if lindseyrs:
+        if lindsey.relationship.value >= Relationship.FWB.value:
             scene v14s45a_10a
             with dissolve
 

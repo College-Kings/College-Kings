@@ -330,7 +330,8 @@ label v13s13a:
 
         u "Lead the way!"
 
-        scene v13s13a_9a # FPP Same as 9, Polly smiling with mouth open
+        #scene v13s13a_9a # FPP Same as 9, Polly smiling with mouth open
+        scene v13s13a_9
         with dissolve
 
         polly "Haha, let's hop in my little escape car."

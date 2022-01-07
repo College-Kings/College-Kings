@@ -18,9 +18,9 @@ label v13s27:
 
     u "Wow... Perfect timing, who is it this time?"
 
-    $ amber.messenger.newMessage("Meet me at the bus stop near the hotel. ", queue=False)
+    $ amber.messenger.newMessage("Meet me at the bus stop near the hotel.", force_send=True)
     $ amber.messenger.addReply("For?")
-    $ amber.messenger.newMessage("... ")
+    $ amber.messenger.newMessage("...")
 
     scene v13s27_1b # TPP. Same as v13s27_1, MC slight smile, looking at his phone, mouth closed
     with dissolve

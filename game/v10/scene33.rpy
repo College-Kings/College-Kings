@@ -6,7 +6,8 @@
 
 # Free Roam 4, Screens
 
-# endFreeRoamConfirm("fr6end")
+# Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("fr6end")])
+
 
 # TOP: xalign 0.5
 # RIGHT: align (1.0, 0.5)
@@ -747,7 +748,7 @@ label v10s33_deergirl11:
     menu:
         "Hot":
             $ add_point(KCT.BOYFRIEND)
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 u "Hot, obviously."
 
                 scene v10cfrau4
@@ -930,7 +931,7 @@ label v10s33_deergirl11:
 
 label v10s33_chloe1:
     $ freeroam6.add("chloe")
-    if chloemad:
+    if chloe.relationship.value <= Relationship.MAD.value:
         scene v10cfrcl1 # FPP. Show Chloe, mouth closed
         
         u "I think Chloe's still mad at me, I'd rather not talk to her."
@@ -1025,7 +1026,7 @@ label v10s33_chloe1:
     menu:
         "Date with Chloe":
             $ chloe.points += 1
-            if chloers:
+            if chloe.relationship.value >= Relationship.FWB.value:
                 scene v10cfrcl1
                 with dissolve
 
@@ -1137,7 +1138,7 @@ label v10s33_chloe1:
 
                 cl "Oh stop! I don't know if you're jealous or what."
                 
-                cl "You've had something against me from the second I became president and I'm honestly getting sick of it!"
+                cl "You've had something against me from the second I became President and I'm honestly getting sick of it!"
                 
                 cl "Let's settle this right here right now, in the ring!"
 
@@ -1161,7 +1162,6 @@ label v10s33_chloe1:
                 cl "Yeah, true."
 
                 if v10_help_nora_freeroam:
-
                     menu:
                         "Invite to Europe":
                             scene v10cfrcl1
@@ -1185,7 +1185,7 @@ label v10s33_chloe1:
                                     scene v10cfrcl1a
                                     with dissolve
 
-                                    if kct == "popular" or chloers:
+                                    if kct == "popular" or chloe.relationship.value >= Relationship.FWB.value:
                                         scene v10cfrcl1a
                                         with dissolve
 
@@ -1410,7 +1410,7 @@ label v10s33_deergirl21:
     label v10s33_laurenbake1:
     $ freeroam6.add("lauren")
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v10cfrla1 #FPP Show Lauren, Looking at mc, happy smile, mouth open
         la "Hey babe!"
 
@@ -1443,7 +1443,7 @@ label v10s33_deergirl21:
 
     la "Haha, to answer your question, bad. Sales are going bad. I only sold one and that was to my mother when she stopped by earlier."
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v10cfrla1
         with dissolve
 
@@ -1565,7 +1565,7 @@ label v10s33_deergirl21:
 
     u "I'm sure you people are gonna get hungry at some point."
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         u "I know, I'd love some of... Lauren's Moist Muffins."
 
         scene v10cfrla1d
@@ -1643,7 +1643,7 @@ label v10s33_deergirl21:
 
     u "What a beautiful statue."
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v10cfrla4 #TPP shows mc leaning in for the kiss, but lauren holds him back, lauren mouth open, neutral face
         with dissolve
 
@@ -1776,7 +1776,7 @@ label v10s33_deergirl21:
 
     u "So committed, we love to see it."
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
         scene v10cfrla3d
@@ -3082,7 +3082,7 @@ label v10s33_riley2:
     scene v10cfrch3b
     with dissolve
 
-    ch "Now that you're back man, you and [name] should play a game. First one to get one in is the Wolves new president. *Laughs*"
+    ch "Now that you're back man, you and [name] should play a game. First one to get one in is the Wolves' new President. *Laughs*"
 
     scene v10cfrch3b # Show Aaron
     with dissolve
@@ -3690,56 +3690,7 @@ label v10s33_emily1:
     label v10s33_evelyn1:
     $ freeroam6.add("evelyn")
 
-    if evelyndate and not evelynrs:
-        if not "ryan" in freeroam6:
-            scene fr6toilet # toilet screen
-        else:
-            scene fr6toiletwithryan
-
-        u "(What's she doing here? I'd rather avoid her after how our date went.)"
-
-        call screen v10s33_toilet
-
-    elif not evelyndate:
-        scene v10cfrev1a #fpp, shows evelyn looking at mc, neutral expression mouth closed
-
-        u "Out of everyone here, I'm most surprised to see you."
-
-        scene v10cfrev1 #same 1a, mouth open
-        with dissolve
-
-        ev "Do I know you?"
-
-        scene v10cfrev1a
-        with dissolve
-
-        u "Uhm, it's me [name], I bought that costume a while back."
-
-        scene v10cfrev1
-        with dissolve
-
-        ev "Oh yeah."
-
-        scene v10cfrev1a
-        with dissolve
-
-        u "Lots of new customers asking for costumes?"
-
-        scene v10cfrev1
-        with dissolve
-
-        ev "Nope, just you."
-
-        scene v10cfrev1a
-        with dissolve
-
-        u "(Okay, someone isn't interested in talking.)"
-
-        u "Well, see you around."
-
-        call screen v10s33_toilet
-
-    else:
+    if evelyn.relationship.value >= Relationship.LIKES.value: #If Date successful
         scene v10cfrev1a
 
         u "Out of everyone here, I'm most surprised to see you."
@@ -3805,6 +3756,55 @@ label v10s33_emily1:
         with dissolve
 
         u "Well, I'll see you around then."
+
+        call screen v10s33_toilet
+
+    elif evelyn.relationship.value >= Relationship.DATE.value: #if Date but unsuccessful
+        if not "ryan" in freeroam6:
+            scene fr6toilet # toilet screen
+        else:
+            scene fr6toiletwithryan
+
+        u "(What's she doing here? I'd rather avoid her after how our date went.)"
+
+        call screen v10s33_toilet
+
+    else: #if no date with Evelyn
+        scene v10cfrev1a #fpp, shows evelyn looking at mc, neutral expression mouth closed
+
+        u "Out of everyone here, I'm most surprised to see you."
+
+        scene v10cfrev1 #same 1a, mouth open
+        with dissolve
+
+        ev "Do I know you?"
+
+        scene v10cfrev1a
+        with dissolve
+
+        u "Uhm, it's me [name], I bought that costume a while back."
+
+        scene v10cfrev1
+        with dissolve
+
+        ev "Oh yeah."
+
+        scene v10cfrev1a
+        with dissolve
+
+        u "Lots of new customers asking for costumes?"
+
+        scene v10cfrev1
+        with dissolve
+
+        ev "Nope, just you."
+
+        scene v10cfrev1a
+        with dissolve
+
+        u "(Okay, someone isn't interested in talking.)"
+
+        u "Well, see you around."
 
         call screen v10s33_toilet
 

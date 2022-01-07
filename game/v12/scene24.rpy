@@ -12,7 +12,7 @@ label v12_simplr_convo:
 
     play music "music/v12/Track Scene 24.mp3" fadein 2
 
-    if v12_msrose_sex:
+    if "v12_rose" in sceneList:
         scene v12sic1a # TPP. Same as v12sic1, MC awake, looking at the ceiling, slight smile, mouth closed
         with dissolve
 
@@ -42,7 +42,7 @@ label v12_simplr_convo:
     if emmy.simplr in simplr_contacts:
         $ v12s24_emmymatch = True
 
-        $ emmy.simplr.newMessage("Hey handsome, I was hoping I'd match with you. Where are you from?", queue=False)
+        $ emmy.simplr.newMessage("Hey handsome, I was hoping I'd match with you. Where are you from?", force_send=True)
         $ emmy.simplr.addReply("I'm actually in Paris right now, but I'm from California. Wbu?")
         $ emmy.simplr.newMessage("Wow, my distance settings are way off. I'm from Amsterdam.")
         $ emmy.simplr.addReply("Haha, call it a coincidence, but I'm actually headed to Amsterdam here soon.")

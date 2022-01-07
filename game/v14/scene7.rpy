@@ -66,7 +66,7 @@ label v14s07:
 
     ro "There were memories made..."
 
-    if v12_msrose_sex or v11_msrose_scene:
+    if "v12_rose" in sceneList or "v11_rose" in sceneList:
         scene v14s07_2 # FPP. same as v14s07_2a Ms. Rose makes direct eye contact with mc
         with dissolve
 

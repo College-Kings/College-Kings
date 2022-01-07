@@ -90,7 +90,7 @@ label v11_at_the_bank:
 
     bank "Ah yes, the others must be in Jerry's group."
 
-    if not (v11_aubrey_sex and laurenrs):
+    if not v11_lauren_caught_aubrey: #if MC went to HP event
         scene v11bank3b # FPP Same angle as v11bank3, bank teller smiling with mouth closed
         with dissolve
 
@@ -626,7 +626,7 @@ label v11_at_the_bank:
 
     ro "Will someone please explain to me exactly what has happened?"
 
-    if msrosers and joinwolves: #sanitizing pathbuilder input
+    if ms_rose.relationship.value >= Relationship.FWB.value and joinwolves: #sanitizing pathbuilder input
         scene v11bank18
         with dissolve
 

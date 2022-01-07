@@ -106,7 +106,7 @@ label v11_nora_chris_plane:
 
     ro "We're getting ready to deboard, you all need to make sure you collect your things and pick up any trash."
 
-    ro "It's about 3 am local time, so let's make sure we get to the hotel as quickly as possible so we can all get to bed. "
+    ro "It's about 3 am local time, so let's make sure we get to the hotel as quickly as possible so we can all get to bed."
 
     scene v11noch6 # TPP. Nora is standing up from her seat, Chris is midway through standing up (Nora is angry, mouth closed, Chris is slightly annoyed, mouth closed)
     with dissolve

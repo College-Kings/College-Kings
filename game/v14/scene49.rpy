@@ -18,7 +18,7 @@ label v14s49:
         scene v14s49_2 # TPP. MC stopped walking looking at his phone, slight smile, mouth closed.
         with dissolve
 
-        $ lindsey.messenger.newMessage(_("Chloe just left the house with some other blonde girl. On their way to the concert!"), queue =False)
+        $ lindsey.messenger.newMessage(_("Chloe just left the house with some other blonde girl. On their way to the concert!"), force_send=True)
         $ lindsey.messenger.addReply(_("It worked! How did you send the tickets without making her suspicious? Also, blonde girl?"))
         $ lindsey.messenger.newMessage(_("I just sent the e-tickets anonymously. She has plenty of admirers these days. Probably just assumed it was a gift from one of them. Easy, huh?"))
         $ lindsey.messenger.newMessage(_("Oh, she said they used to know each other when they were kids. That's all I know."))
@@ -32,7 +32,7 @@ label v14s49:
             if lindsey.messenger.replies:
                 call screen phone
             if lindsey.messenger.replies:
-                "(I should reply to Lindsey.)"
+                u "(I should reply to Lindsey.)"
                 jump v14s49Lindsey_PhoneContinue
 
     elif v14_date_distraction: #Placeholder for date ditch distraction
@@ -46,7 +46,7 @@ label v14s49:
 
         li "Hey, now is the perfect time. Text Chloe and tell her to meet you at Classico Cuisine."
 
-        if chloegf:
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
             scene v14s49_3a # TPP. Same as v14s49_3, Lindsey slight smile, mouth closed.
             with dissolve
 
@@ -65,7 +65,7 @@ label v14s49:
         scene v14s49_2
         with dissolve
 
-        if chloegf:
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
             $ chloe.messenger.addReply(_("Hey... Think I'm in the mood for a little Italian cuisine and a beautiful woman across from me..."))
             $ chloe.messenger.newMessage(_("Haha, hi there Mr. Sweet Talk..."))
             $ chloe.messenger.newMessage(_("I could definitely eat, and... I suppose I'm down to see you ;)"))
@@ -82,7 +82,7 @@ label v14s49:
             if chloe.messenger.replies:
                 call screen phone
             if chloe.messenger.replies:
-                "(I should reply to Chloe.)"
+                u "(I should reply to Chloe.)"
                 jump v14s49Chloe_PhoneContinue
 
         scene v14s49_3a

@@ -20,7 +20,6 @@ label v9_warehouse_lindsey:
     with dissolve
 
     if not hangOutWithLindsey:
-
         u "Oh, Linds! Hey!"
 
         u "You alright? Sorry, I was distracted."
@@ -100,112 +99,7 @@ label v9_warehouse_lindsey:
 
                 u "(You really screwed that one up. But you gotta get your head in the game.)"
 
-    elif not lindseyfirstkiss:
-        u "Oh, hey! You alright? Sorry about that."
-
-        scene v9wwl3b
-        with dissolve
-
-        li "It's okay. You were totally spaced out."
-
-        scene v9wwl3c
-        with dissolve
-
-        u "Yeah, getting my head right before the fight."
-
-        scene v9wwl3b
-        with dissolve
-
-        li "Well, I'll let you do that."
-
-        scene v9wwl4
-        with dissolve
-        
-        menu:
-            "Let her go":
-                pause 0.75
-
-                scene v9wwl4b
-                with dissolve
-
-                u "(Am I nuts or was that a cold shoulder? Damn. I really want to fix it but I have to get ready.)"
-
-            "Stop her":
-                $ add_point(KCT.BOYFRIEND)
-
-                u "Um, I'm sorry about earlier. I..."
-
-                scene v9wwl4a
-                with dissolve
-
-                pause 0.75
-
-                scene v9wwl3
-                with dissolve
-
-                u "This night's kinda getting to me."
-
-                scene v9wwl3a
-                with dissolve
-
-                li "Looks intense."
-
-                scene v9wwl3
-                with dissolve
-
-                u "You have no idea."
-
-                u "Can we catch up after the fight?"
-
-                scene v9wwl3b
-                with dissolve
-
-                li "Guess that depends on what shape you're in after the fight."
-
-                scene v9wwl3c
-                with dissolve
-
-                u "Haha. Yeah, guess I won't be much fun if I get my ass kicked."
-
-                scene v9wwl3b
-                with dissolve
-
-                li "I'm sure you won't. But yeah, why don't you text me if you're feeling up to it after the fight?"
-
-                scene v9wwl3c
-                with dissolve
-
-                u "I'd like that."
-
-                scene v9wwl3b
-                with dissolve
-
-                li "Me too. I have to get back to my friends."
-
-                scene v9wwl3c
-                with dissolve
-
-                u "Sure. Sure. I, uh, have to get back to...worrying. Haha."
-
-                scene v9wwl3b
-                with dissolve
-
-                li "I'll be rooting for you."
-
-                scene v9wwl5 # TPP. Show Lindsey giving MC a quick kiss on the cheek.
-                with dissolve
-
-                pause 1
-
-                scene v9wwl4
-                with dissolve
-
-                pause 0.75
-
-                scene v9wwl4b
-                with dissolve
-
-    elif lindseyfirstkiss:
+    elif lindsey.relationship.value >= Relationship.KISS.value:
         u "Oh, shit! Hey! Are you alright?"
 
         scene v9wwl3b
@@ -358,6 +252,111 @@ label v9_warehouse_lindsey:
                 li "I know you will."
 
                 scene v9wwl8
+                with dissolve
+
+    else:
+        u "Oh, hey! You alright? Sorry about that."
+
+        scene v9wwl3b
+        with dissolve
+
+        li "It's okay. You were totally spaced out."
+
+        scene v9wwl3c
+        with dissolve
+
+        u "Yeah, getting my head right before the fight."
+
+        scene v9wwl3b
+        with dissolve
+
+        li "Well, I'll let you do that."
+
+        scene v9wwl4
+        with dissolve
+        
+        menu:
+            "Let her go":
+                pause 0.75
+
+                scene v9wwl4b
+                with dissolve
+
+                u "(Am I nuts or was that a cold shoulder? Damn. I really want to fix it but I have to get ready.)"
+
+            "Stop her":
+                $ add_point(KCT.BOYFRIEND)
+
+                u "Um, I'm sorry about earlier. I..."
+
+                scene v9wwl4a
+                with dissolve
+
+                pause 0.75
+
+                scene v9wwl3
+                with dissolve
+
+                u "This night's kinda getting to me."
+
+                scene v9wwl3a
+                with dissolve
+
+                li "Looks intense."
+
+                scene v9wwl3
+                with dissolve
+
+                u "You have no idea."
+
+                u "Can we catch up after the fight?"
+
+                scene v9wwl3b
+                with dissolve
+
+                li "Guess that depends on what shape you're in after the fight."
+
+                scene v9wwl3c
+                with dissolve
+
+                u "Haha. Yeah, guess I won't be much fun if I get my ass kicked."
+
+                scene v9wwl3b
+                with dissolve
+
+                li "I'm sure you won't. But yeah, why don't you text me if you're feeling up to it after the fight?"
+
+                scene v9wwl3c
+                with dissolve
+
+                u "I'd like that."
+
+                scene v9wwl3b
+                with dissolve
+
+                li "Me too. I have to get back to my friends."
+
+                scene v9wwl3c
+                with dissolve
+
+                u "Sure. Sure. I, uh, have to get back to...worrying. Haha."
+
+                scene v9wwl3b
+                with dissolve
+
+                li "I'll be rooting for you."
+
+                scene v9wwl5 # TPP. Show Lindsey giving MC a quick kiss on the cheek.
+                with dissolve
+
+                pause 1
+
+                scene v9wwl4
+                with dissolve
+
+                pause 0.75
+
+                scene v9wwl4b
                 with dissolve
 
     pause 1

@@ -102,7 +102,7 @@ label v14s36:
 
     u "Oh, alright..."
     
-    if penelopers and v11s23_penelope_date:
+    if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
         u "(Maybe it's a good thing I didn't try calling her...)"
 
     scene v14s36_4b # FPP. same as v14s36_4 Jenny has a curious expression, mouth open
@@ -113,7 +113,7 @@ label v14s36:
     scene v14s36_4c # FPP. same as v14s36_4b Jenny's mouth is closed
     with dissolve
 
-    u "Yeah. Chloe, who is the current president, and Lindsey are running against each other for presidency."
+    u "Yeah. Chloe, who is the current President, and Lindsey are running against each other for presidency."
 
     scene v14s36_4
     with dissolve
@@ -645,9 +645,10 @@ label v14s36:
 
         menu:
             "Kiss her":
-                $ jennyrs = True
-                $ v14_jenny_sex = True
-                if chloegf or laurenrs or penelopers:
+                $ jenny.relationship = Relationship.FWB
+                $ sceneList.add("v14_jenny")
+                
+                if chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or penelope.relationship.value >= Relationship.LIKES.value:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
                     $ add_point(KCT.BOYFRIEND)
@@ -1165,8 +1166,9 @@ label v14s36:
                 $ renpy.end_replay()
 
             "Don't kiss her":
-                $ jennyawkward = True
-                if chloegf or laurenrs or penelopers:
+                $ jenny.relationship = Relationship.AWKWARD
+                
+                if chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or penelope.relationship.value >= Relationship.LIKES.value:
                     $ add_point(KCT.BOYFRIEND)
                 else:
                     $ add_point(KCT.TROUBLEMAKER)
@@ -1240,7 +1242,6 @@ label v14s36:
 
     else:
         call screen kct_popup(required_kct="loyal")
-        $ jennyfriend = True
         scene v14s36_4
         with dissolve
 
@@ -1306,7 +1307,7 @@ label v14s36:
 
     pause 0.75
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         play sound "sounds/vibrate.mp3"
 
         scene v14s36_13 # FPP. MC looks at his phone and see's that Lauren is calling him

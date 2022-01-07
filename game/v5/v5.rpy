@@ -289,7 +289,6 @@ label jorepb:
     menu:
         "I believe you":
             $ add_point(KCT.BOYFRIEND)
-            $ chloemad = False
 
             scene s370
             with dissolve
@@ -358,6 +357,7 @@ label jorepb:
             jump newchloec
 
         "You're lying":
+            $ chloe.relationship = Relationship.MAD
             $ add_point(KCT.TROUBLEMAKER)
 
             scene s370a
@@ -624,7 +624,6 @@ label jorepb:
     u "(At least my eye is starting to heal...)"
 
 label newchloec:
-
     scene s376e
     with dissolve
 
@@ -633,32 +632,32 @@ label newchloec:
 
     #################
 
-    if kissamber:
-        $ amber.messenger.newMessage(_("Hey, it's Amber"), queue=False)
-        $ amber.messenger.newMessage(_("Josh gave me your number"), queue=False)
-        $ amber.messenger.newMessage(_("You know, you never came back, I thought we were having a good time xx"), queue=False)
+    if amber.relationship.value >= Relationship.KISS.value:
+        $ amber.messenger.newMessage(_("Hey, it's Amber"), force_send=True)
+        $ amber.messenger.newMessage(_("Josh gave me your number"), force_send=True)
+        $ amber.messenger.newMessage(_("You know, you never came back, I thought we were having a good time xx"), force_send=True)
         $ amber.messenger.addReply(_("We did, I'll make it up to you."), v5_reply1)
         $ amber.messenger.addReply(_("Sorry, something came up."), v5_reply4)
 
-    elif josh.messenger.sentMessages[-2].reply and josh.messenger.sentMessages[-2].reply.message == "I can't, sorry.":
-        $ amber.messenger.newMessage(_("Hey, it's Amber"), queue=False)
-        $ amber.messenger.newMessage(_("Josh gave me your number"), queue=False)
-        $ amber.messenger.newMessage(_("How come you didn't show up yesterday? Everything okay? xx"), queue=False)
+    elif josh.messenger.sent_messages[-2].reply and josh.messenger.sent_messages[-2].reply.message == "I can't, sorry.":
+        $ amber.messenger.newMessage(_("Hey, it's Amber"), force_send=True)
+        $ amber.messenger.newMessage(_("Josh gave me your number"), force_send=True)
+        $ amber.messenger.newMessage(_("How come you didn't show up yesterday? Everything okay? xx"), force_send=True)
         $ amber.messenger.addReply(_("Wow, you really wanted to see me, huh?"), v5_reply5)
         $ amber.messenger.addReply(_("Sorry, something came up."), v5_reply8)
 
     else:
-        $ amber.messenger.newMessage(_("Hey, it's Amber"), queue=False)
-        $ amber.messenger.newMessage(_("Josh gave me your number"), queue=False)
-        $ amber.messenger.newMessage(_("You know, you never came back, everything okay?"), queue=False)
+        $ amber.messenger.newMessage(_("Hey, it's Amber"), force_send=True)
+        $ amber.messenger.newMessage(_("Josh gave me your number"), force_send=True)
+        $ amber.messenger.newMessage(_("You know, you never came back, everything okay?"), force_send=True)
         $ amber.messenger.addReply(_("Wow, you really missed me that much, huh?"), v5_reply9)
         $ amber.messenger.addReply(_("Sorry, something came up."), v5_reply12)
 
     if not toldlauren and not laurentoofar:
         play sound "sounds/vibrate.mp3"
 
-        $ lauren.messenger.newMessage(_("Hey"), queue=False)
-        $ lauren.messenger.newMessage(_("Wanna do the personality tests today at noon?"), queue=False)
+        $ lauren.messenger.newMessage(_("Hey"), force_send=True)
+        $ lauren.messenger.newMessage(_("Wanna do the personality tests today at noon?"), force_send=True)
         $ lauren.messenger.addReply(_("Yeah, sure."))
         $ lauren.messenger.newMessage(_("Great :) Meet me at our economics' classroom."))
 
@@ -705,7 +704,7 @@ label continuez:
 
     # Kiss in public
 
-    if laurenkissb:
+    if lauren.relationship.value >= Relationship.KISS.value:
         scene s379a # lauren kisses you
         with dissolve
         play sound "sounds/kiss.mp3"
@@ -778,7 +777,6 @@ label continuez:
 
                 menu:
                     "Sorry, not in public":
-                        $ laurenpublic = False
                         $ add_point(KCT.TROUBLEMAKER)
                         
                         $ grant_achievement("on_the_low")
@@ -938,7 +936,7 @@ label gokissb:
 
             u "I definitely do."
 
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene s382d # Lauren cheeky flirty smile
                 with dissolve
 
@@ -1008,7 +1006,7 @@ label gokissb:
 
             u "Not really, sooo... disagree."
 
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene s382f # Lauren passive agressive
@@ -1117,7 +1115,9 @@ label gokissb:
 
     la "Now, imagine we're on a fast moving train."
 
-    call screen trolleyskip
+    call screen confirm("The trolley problem involves hypothetical people and/or animals being run over by a train and can be a lot to handle. The following scene might make you feel uncomfortable or uneasy. Do you wish to skip over the trolley problem scene?",
+        yes_action=[Hide("confirm"), Jump("skiptrolley")],
+        no_action=[Hide("confirm"), Jump("continuetrolley")])
 
 label continuetrolley:
     stop music fadeout 3
@@ -1645,7 +1645,7 @@ label continueaf:
 
             u "(I should go apologize.)"
 
-            if not autumnmad:
+            if autumn.relationship.value > Relationship.MAD.value:
                 u "(Hopefully Autumn has already put in a good word for me.)"
 
             scene s393 #you infront of Laurens dorm
@@ -1717,8 +1717,7 @@ label continueaf:
 
             u "(Maybe I should give her a bit more time.)"
 
-            if not autumnmad:
-
+            if autumn.relationship.value > Relationship.MAD.value:
                 u "(Afterall, Autumn said she'd talk to her.)"
 
             u "(It's probably time to go pick up Imre with Riley anyways.)"
@@ -1753,7 +1752,7 @@ label continueaf:
     scene s380b
     with dissolve
 
-    if laurentoofar and autumnmad:
+    if laurentoofar and autumn.relationship.value <= Relationship.MAD.value:
         la "[name], what are you doing here?"
 
         scene s380c
@@ -1813,9 +1812,11 @@ label continueaf:
             jump gotest
 
         else:
+            $ lauren.relationship = Relationship.MAD
+
             la "When you continued pushing your hand up my thigh after I told you I didn't want it, you... you made me feel disgusting."
 
-            la "I trusted you and you? You didn't seem to care one bit."
+            la "I trusted you... And you didn't seem to care one bit."
 
             scene s380c
             with dissolve
@@ -1833,8 +1834,6 @@ label continueaf:
             u "Yeah, of course, sorry."
 
             u "(Fuck... but it's probably time to go pick up Imre with Riley anyways.)"
-
-            $ laurenmad = True
 
             jump hospitala
 
@@ -1894,7 +1893,7 @@ label continueaf:
 
         jump gotest
 
-    elif autumnmad:
+    elif autumn.relationship.value <= Relationship.MAD.value:
         la "[name], what are you doing here?"
 
         scene s380c
@@ -1907,7 +1906,7 @@ label continueaf:
         if kct == "loyal":
             call screen kct_popup
 
-            $ laurenrs = True
+            $ lauren.relationship = Relationship.GIRLFRIEND
 
             scene s380b
             with dissolve
@@ -2011,7 +2010,7 @@ label continueaf:
             jump gotest
 
     else:
-        $ laurenrs = True
+        $ lauren.relationship = Relationship.GIRLFRIEND
 
         scene s380b
         with dissolve
@@ -2137,7 +2136,6 @@ label continueaf:
 
             menu:
                 "Sorry, not in public":
-                    $ laurenpublic = False
                     $ add_point(KCT.TROUBLEMAKER)
                     
                     $ grant_achievement("on_the_low")
@@ -2846,7 +2844,9 @@ label hospitala:
     scene af4
 
     # Adam Fight
-    call screen fight_tutorialPopup
+    call screen confirm("Would you like to play the fighting tutorial?",
+        yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
+        no_action=[SetVariable("fight_tutorial", False), Return()])
 
     scene af4
 
@@ -3700,7 +3700,7 @@ label youfinishadam: #### You beat adam
     scene s428a #chrisclose up mouth closed impressed smile
     with dissolve
 
-    u "Oh shit, you're Chris, president of the Wolves, right?"
+    u "Oh shit, you're Chris, President of the Wolves, right?"
 
     scene s428
     with dissolve
@@ -3872,7 +3872,7 @@ label adamfinish: ###Adam beats you
     scene s428c
     with dissolve
 
-    u "You're Chris, president of the Wolves, right?"
+    u "You're Chris, President of the Wolves, right?"
 
     scene s428b
     with dissolve
@@ -3991,7 +3991,7 @@ label findimre:
     with dissolve
 
     if fightadam and winadam :
-        $ imremad = True
+        $ imre.relationship = Relationship.MAD
         u "Actually, I uhm... I found Adam."
 
         scene s439b # Imre surprised but still a bit mad
@@ -4121,7 +4121,7 @@ label findimre:
         u "Alright. Good luck, man."
 
     elif tellschool:
-        $ imremad = True
+        $ imre.relationship = Relationship.MAD
         u "Actually, I uhm... I found Adam."
 
         scene s439b # Imre surprised but still a bit mad
@@ -4249,7 +4249,7 @@ label findimre:
 
     queue music [ "music/mindie2.mp3", "music/mindie3.mp3" ]
 
-    if imremad:
+    if imre.relationship.value <= Relationship.MAD.value:
         u "(How the fuck did everything go so wrong??)"
         u "(A couple hours ago Imre was so happy to see me and now he probably hates me...)"
 
@@ -4269,8 +4269,8 @@ label findimre:
 
     u "(Maybe that's Imre...)"
 
-    if chloemad:
-        $ amber.messenger.newMessage(_("Hey, you alone? xx"), queue=False)
+    if chloe.relationship.value <= Relationship.MAD.value:
+        $ amber.messenger.newMessage(_("Hey, you alone? xx"), force_send=True)
         $ amber.messenger.addReply(_("I'm at the park, but I'm by myself."))
         $ amber.messenger.newMessage(_("Go somewhere where you're completely alone xx"))
         $ amber.messenger.newMessage(_("I got a surprise for you ;)"))
@@ -4281,14 +4281,14 @@ label findimre:
 
         u "(Fuck, I don't have time for Amber right now, but I really wanna find out what surprise she has.)"
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             u "(I gotta make a decision. Should I find Imre, or keep talking to Amber?)"
         else:
             u "(I gotta make a decision. Should I help Imre, or keep talking to Amber?)"
 
     else:
-        $ chloe.messenger.newMessage(_("I got some free time right now :)"), queue=False)
-        $ chloe.messenger.newMessage(_("Wanna go swimming?"), queue=False)
+        $ chloe.messenger.newMessage(_("I got some free time right now :)"), force_send=True)
+        $ chloe.messenger.newMessage(_("Wanna go swimming?"), force_send=True)
         $ chloe.messenger.addReply(_("Any chance we could do it later? Or tomorrow?"))
         $ chloe.messenger.newMessage(_("I'm busy later tonight and I'm pretty much booked for the entire week :/"))
 
@@ -4298,7 +4298,7 @@ label findimre:
 
         u "(Fuck, I don't have time for this right now, but going swimming with Chloe sounds like the best possible way to get closer to her.)"
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             u "(I gotta make a decision. Should I find Imre, or meet Chloe?)"
         else:
             u "(I gotta make a decision. Should I help Imre, or meet Chloe?)"

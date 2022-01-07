@@ -219,7 +219,7 @@ label v9_dinner_w_rose:
 
     u "*Laughs* Now I think I have a tapeworm, too!"
 
-    scene v9damr12 # FPP. Show Ms. Rose Sat at the end of table, Imre seated to MC's right,neutral expressions,  Ms. Rose mouth open, Imre mouth closed
+    scene v9damr12 # FPP. Show Ms. Rose Sat at the end of table, Imre seated to MC's right,neutral expressions, Ms. Rose mouth open, Imre mouth closed
     with dissolve
 
     ro "Dig in boys!"
@@ -234,7 +234,7 @@ label v9_dinner_w_rose:
 
     imre "It tastes even better than it smells."
 
-    scene v9damr12a # FPP. same camera as v9damr12, neutral expressions,  Ms. Rose mouth closed, Imre mouth closed
+    scene v9damr12a # FPP. same camera as v9damr12, neutral expressions, Ms. Rose mouth closed, Imre mouth closed
     with dissolve
 
     u "You can always open a restaurant if you get tired of dealing with college kids, Ms. Rose."
@@ -308,11 +308,11 @@ label v9_dinner_w_rose:
         "Offer to help":
             $ add_point(KCT.BOYFRIEND)
 
-            scene v9damr12f # FPP. Same camera as v9damr12, Show Ms. Rose now stood at the end of table, Imre seated to MC's right,neutral expressions,  Ms. Rose mouth closed, Imre mouth closed
+            scene v9damr12f # FPP. Same camera as v9damr12, Show Ms. Rose now stood at the end of table, Imre seated to MC's right,neutral expressions, Ms. Rose mouth closed, Imre mouth closed
             with dissolve
             u "Please, let me help. I need to get up and move around."
 
-            scene v9damr12b # FPP. Same camera as v9damr12, Show Ms. Rose now stood at the end of table, Imre seated to MC's right,neutral expressions,  Ms. Rose mouth open, Imre mouth closed
+            scene v9damr12b # FPP. Same camera as v9damr12, Show Ms. Rose now stood at the end of table, Imre seated to MC's right,neutral expressions, Ms. Rose mouth open, Imre mouth closed
             with dissolve
             ro "Alright, you can help."
 
@@ -377,7 +377,7 @@ label v9_dinner_w_rose:
 
     ro "Nobody can resist Grandma Ruth's famous Caramel Apple Pie!"
 
-    scene v9damr12a5 # FPP. same camera as v9damr12, neutral expressions,  Ms. Rose mouth closed, Imre mouth closed, pie on table
+    scene v9damr12a5 # FPP. same camera as v9damr12, neutral expressions, Ms. Rose mouth closed, Imre mouth closed, pie on table
     with dissolve
 
     u "Best pie I've ever had!"
@@ -407,12 +407,12 @@ label v9_dinner_w_rose:
 
     ro "Grandma Ruth would be so proud."
 
-    scene v9damr12c # FPP. Same camera as v9damr12,slight smile,both raising glass of water in air,  Ms. Rose mouth closed, Imre mouth closed
+    scene v9damr12c # FPP. Same camera as v9damr12,slight smile,both raising glass of water in air, Ms. Rose mouth closed, Imre mouth closed
     with dissolve
 
     u "To Grandma Ruth!"
 
-    scene v9damr12d # FPP. Same camera as v9damr12,slight smile,both raising glass of water in air,  Ms. Rose mouth open, Imre mouth closed
+    scene v9damr12d # FPP. Same camera as v9damr12,slight smile,both raising glass of water in air, Ms. Rose mouth open, Imre mouth closed
     with dissolve
 
     ro "And to you boys. My Wolves in shining armor."
@@ -424,7 +424,7 @@ label v9_dinner_w_rose:
     
     pause 1
 
-    scene v9damr12e # FPP. same camera as v9damr12, Show Ms. Rose leaving room, Imre seated to MC's right,neutral expressions,  Ms. Rose mouth closed, Imre mouth closed
+    scene v9damr12e # FPP. same camera as v9damr12, Show Ms. Rose leaving room, Imre seated to MC's right,neutral expressions, Ms. Rose mouth closed, Imre mouth closed
     with dissolve
 
     pause 1 

@@ -21,8 +21,8 @@ label v14s45:
     scene v14s45_2a # TPP. Same as v14s45_2, MC looking down at his phone, slight smile, mouth closed
     with dissolve
 
-    $ amber.messenger.newMessage("Hey, let's meet up...", queue=False)
-    $ amber.messenger.newMessage("I have some news to share.", queue=False)
+    $ amber.messenger.newMessage("Hey, let's meet up...", force_send=True)
+    $ amber.messenger.newMessage("I have some news to share.", force_send=True)
     $ amber.messenger.addReply("Ooh, okay.")
     $ amber.messenger.newMessage("I'm close to the park, meet me there?")
     $ amber.messenger.addReply("Kk")

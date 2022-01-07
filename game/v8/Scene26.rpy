@@ -11,7 +11,7 @@ label s26:
     play music "music/mindie4.mp3" fadein 2
     queue music "music/mchill2.mp3"
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         u "(Ahhh, there's Aubrey and Riley')"
 
     else:
@@ -25,7 +25,7 @@ label s26:
     scene v8sopt2a # FPP. Same camera as v8sopt2, Riley and Aubrey both smiling, mouth closed.
     with dissolve
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.FWB.value:
         u "Gorgeous!"
 
     else:
@@ -44,7 +44,7 @@ label s26:
     scene v8sopt2c # FPP. Same camera as v8sopt2, Aubrey and Riley now looking back at camera, still wearing their glasses, mouths closed.
     with dissolve
 
-    if rileyrs and aubreyrs:
+    if riley.relationship.value >= Relationship.FWB.value and aubrey.relationship.value >= Relationship.FWB.value:
         u "Hot! You both look amazing."
 
     else:
@@ -261,11 +261,11 @@ label after_glasses_choice:
     scene v8sopt22 # FPP. Show Aubrey looking at Riley, Riley wearing RW ASG Rectangle Thin Frame glasses, Aubrey smile, Riley smile, both mouths closed.
     with dissolve
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.FWB.value:
         u "(She looks so kissable)"
 
     else:
-        u "You really suit them Riley!"
+        u "You really suit them, Riley!"
 
     scene v8sopt22a # FPP. Same camera as v8sopt22, Aubrey still looking at Riley, Aubrey mouth open.
     with dissolve
@@ -305,7 +305,7 @@ label after_glasses_choice:
     scene v8sopt24b # FPP. Same camera as v8sopt24, Riley and Aubrey smiling, both mouths closed.
     with dissolve
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.FWB.value:
         u "Those look really hot, but I still think the last pair matches your hair, like Aubrey said."
 
     else:
@@ -321,7 +321,7 @@ label after_glasses_choice:
 
     ri "Last pair it is!"
 
-    if rileyrs or aubreyrs:
+    if riley.relationship.value >= Relationship.FWB.value or aubrey.relationship.value >= Relationship.FWB.value:
         scene v8sopt24d # FPP. Same camera as v8sopt24, Riley curious expression, Aubrey neutral expression, Riley mouth open.
         with dissolve
 

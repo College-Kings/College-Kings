@@ -1,4 +1,4 @@
-# SCENE 21: If chloers Having sex and help Chloe
+# SCENE 21: If chloe rs Having sex and help Chloe
 # Locations: Outside Front of School building. And Parking lot.
 # Characters: CHLOE (Outfit: 2), MC (Outfit: 9)
 # Time: Afternoon
@@ -139,17 +139,12 @@ label v14s21:
     with dissolve
 
     menu:
-
         "That does kinda suck":
-
             $ add_point(KCT.TROUBLEMAKER)
-
             u "That does kinda suck. I guess we'll have to make the most out of the time we have."
 
         "Don't worry about it":
-
             $ add_point(KCT.BOYFRIEND)
-
             u "I'm a patient man when it comes to the things I care about, Chloe. I know your situation and I understand that this campaign is more important right now."
 
             scene v14s21_2f

@@ -88,7 +88,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
     cl "I think that's the only way it'll work."
 
-    if chloegf: 
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value: 
         scene v14s31b_3c
         with dissolve
 
@@ -124,7 +124,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
         cl "I know how this sounds, [name], but I think it's the only way this plan is going to work."
 
-    elif chloers: # -If ChloeRS, NOT ChloeGF (extra dialogue)
+    elif chloe.relationship.value >= Relationship.FWB.value: # -If Chloe RS, NOT Chloe GF (extra dialogue)
         scene v14s31b_3
         with dissolve
 
@@ -166,7 +166,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
             scene v14s31b_3
             with dissolve
 
-            if chloegf:
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ grant_achievement("built_on_trust")
             
             u "*Sighs* I trust that you'll do what's best."
@@ -176,7 +176,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
             cl "Thank you."
 
-            if chloegf: # -If ChloeGF she gives him a hug-
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v14s31b_4 # TPP. Chloe hugging MC. 
                 with dissolve
 
@@ -374,7 +374,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
     au "There's a lot you haven't heard."
 
-    if aubreyrs: # -If AubreyRS she winks at MC-
+    if aubrey.relationship.value >= Relationship.FWB.value:
         scene v14s31b_15d # FPP. Same as v14s31b_15b, but Aubrey winking at MC, mouth closed. 
         with dissolve
 
@@ -690,7 +690,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
     gr "A lot of things were a force of habit when you looked at me, haha. Are you trying to start those again too?"
 
-    if chloegf or chloers: # -If ChloeGF or ChloeRS
+    if chloe.relationship.value >= Relationship.FWB.value:
         scene v14s31b_20 # TPP. MC sitting up in bean bag chair, frowning, angry, mouth open.
         with dissolve
 
@@ -1085,7 +1085,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
         cl "Me too."
 
-        if chloegf: 
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value: 
             scene v14s31b_29 # TPP. Chloe kisses MC on the cheek.
             with dissolve
 
@@ -1306,7 +1306,7 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
         
         u "..."
 
-        if chloegf or chloers: # -If ChloeGF or ChloeRS
+        if chloe.relationship.value >= Relationship.FWB.value:
             scene v14s31b_31
             with dissolve
 
@@ -1317,15 +1317,13 @@ label v14s31b: # -MC arrives by the side of the Apes house and Chloe is already 
 
             menu:
                 "Whatever":
-                    
                     u "Whatever, man."
 
                 "Apologize":
-                    
                     u "Sorry man. I don't-"
                 
 
-        else: # -If not chloers or chloegf
+        else:
             scene v14s31b_31
             with dissolve
 

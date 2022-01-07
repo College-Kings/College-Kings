@@ -3,6 +3,8 @@
 # Characters: MC (Outfit: 9), BOOKING ADMIN (Outfit: 1)
 # Time: Morning
 
+# show screen generic_conviction_bar(800, 1000, "HAGGLING THE PRICE", "images/v15/conviction_bars/s25_background.png", "TOTAL PRICE $ {}".format(800))
+
 label v15s25:
     if joinwolves:
         play sound "sounds/dooropen.mp3"
@@ -10,61 +12,66 @@ label v15s25:
         scene v15s25_1 # TPP. Show MC entering his Wolves frat room, slight smile, mouth closed.
         with dissolve
 
-        pause  
+        pause 0.75
 
         play sound "sounds/doorclose.mp3"
 
         scene v15s25_2 # TPP. Show MC sitting at his study desk in his Wolves frat room, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         u "(Okay, now I'm in my office, time to make some business calls, haha.)"
 
         scene v15s25_3 # TPP. Show MC pulling out his phone from his pocket in his wolves frat room.
         with dissolve
 
-        pause  
+        pause 0.75
 
         scene v15s25_2a # TPP. MC sitting at his study desk in his Wolves frat room pressing a button on his phone, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
-        pause  
+        pause 0.75
 
         scene v15s25_2b # TPP. MC sitting at his study desk with his phone to his ear in his wolves frat room, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
+        
+        pause 0.75
+
     else:
         play sound "sounds/dooropen.mp3"
 
         scene v15s25_4 # TPP. Show MC entering his apes frat room, slight smile, mouth closed.
         with dissolve
 
-        pause  
+        pause 0.75
 
         play sound "sounds/doorclose.mp3"
 
         scene v15s25_5 # TPP. Show MC sitting at his study desk in his apes frat room, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         u "(Okay, now I'm in my office, time to make some business calls, haha.)"
 
         scene v15s25_6 # TPP. Show MC pulling out his phone from his pocket in his apes frat room.
         with dissolve
 
-        pause  
+        pause 0.75
 
         scene v15s25_5a # TPP. MC sitting at his study desk in his apes frat room pressing a button on his phone, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
-        pause  
+        pause 0.75
 
-        play sound "sounds/ringing.mp3"
+        play sound "sounds/ring.mp3"
 
         scene v15s25_5b # TPP. MC sitting at his study desk with his phone to his ear in his apes frat room, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
+        
+        pause 0.75
 
     scene v15s25_7 # TPP. Split Screen. First side, MC phone to ear sitting in an office chair only other thing in the shot a plain wall behind him, MC slight smile, mouth closed. Second side, Booking admin(Lady in her 20s, wearing glasses, hair tied back, white button up, headset on for calls.) at her reception desk, slight smile, mouth open.
     with dissolve
 
-    booking admin "Hi, this is VIP bookings for the Mango Lounge. How can I help you?"
+    admin "Hi, this is VIP bookings for the Mango Lounge. How can I help you?"
 
     scene v15s25_7a # TPP. Split Screen. First side, MC on the phone in the chair, slight smile, mouth open. Second side, Booking admin at her desk, slight smile, mouth closed.
     with dissolve
@@ -74,7 +81,7 @@ label v15s25:
     scene v15s25_7
     with dissolve
 
-    booking admin "That's a lot of P's, isn't it? *Giggles*"
+    admin "That's a lot of P's, isn't it? *Giggles*"
 
     scene v15s25_7a
     with dissolve
@@ -84,7 +91,7 @@ label v15s25:
     scene v15s25_7
     with dissolve
 
-    booking admin "What's your name?"
+    admin "What's your name?"
 
     scene v15s25_7a
     with dissolve
@@ -94,7 +101,7 @@ label v15s25:
     scene v15s25_7
     with dissolve
 
-    booking admin "When do you want to book it? And for how many people?"
+    admin "When do you want to book it? And for how many people?"
 
     scene v15s25_7a
     with dissolve
@@ -104,7 +111,7 @@ label v15s25:
     scene v15s25_7
     with dissolve
 
-    booking admin "Perfect. I've reserved a VIP area for you, and we'll send our finest limo so that you can all arrive in style."
+    admin "Perfect. I've reserved a VIP area for you, and we'll send our finest limo so that you can all arrive in style."
 
     scene v15s25_7a
     with dissolve
@@ -114,7 +121,7 @@ label v15s25:
     scene v15s25_7
     with dissolve
 
-    booking admin "I also need to ask, how old are the people in your group?"
+    admin "I also need to ask, how old are the people in your group?"
 
     scene v15s25_7b # TPP. Split Screen. First side, MC on the phone in the chair, slight smile, mouth closed. Second side, Booking admin at her desk, slight smile, mouth closed.
     with dissolve
@@ -122,9 +129,9 @@ label v15s25:
     u "(Damn, she's asking because we want to get drunk!)"
 
     menu:
-        "Be Honest.":
+        "Be honest":
             $ add_point(KCT.BOYFRIEND)
-
+            
             u "(Not everyone will have a fake ID. I need to be honest.)"
 
             scene v15s25_7a
@@ -135,10 +142,11 @@ label v15s25:
             scene v15s25_7
             with dissolve
 
-            booking admin "Ooh... Well, in that case, we can't serve you the alcohol."
+            admin "Ooh... Well, in that case, we can't serve you the alcohol."
 
-        "Lie.":
+        "Lie":
             $ add_point(KCT.TROUBLEMAKER)
+            
             scene v15s25_7a
             with dissolve
 
@@ -147,9 +155,9 @@ label v15s25:
             scene v15s25_7
             with dissolve
 
-            booking admin "Great! I must point out that even if one of you is underage, we won't be allowed to serve the alcohol."
+            admin "Great! I must point out that even if one of you is underage, we won't be allowed to serve the alcohol."
 
-            booking admin "But you're all twenty-one, so there's nothing to worry about!"
+            admin "But you're all twenty-one, so there's nothing to worry about!"
 
             scene v15s25_7b
             with dissolve
@@ -159,7 +167,7 @@ label v15s25:
             scene v15s25_7
             with dissolve
 
-            booking admin "Of course, we'll be checking your IDs when you arrive."
+            admin "Of course, we'll be checking your IDs when you arrive."
 
             scene v15s25_7c # TPP. Split Screen. First side, MC on the phone in the chair, neutral face, mouth open. Second side, Booking admin at her desk, slight smile, mouth closed.
             with dissolve
@@ -169,7 +177,7 @@ label v15s25:
             scene v15s25_7d # TPP. Split Screen. First side, MC on the phone in the chair, neutral face, mouth closed. Second side, Booking admin at her desk, slight smile, mouth open.
             with dissolve
 
-            booking admin "Yes, It's standard procedure."
+            admin "Yes, It's standard procedure."
 
             scene v15s25_7e # TPP. Split Screen. First side, MC on the phone in the chair, neutral face, mouth closed. Second side, Booking admin at her desk, slight smile, mouth closed.
             with dissolve
@@ -184,7 +192,7 @@ label v15s25:
             scene v15s25_7d
             with dissolve
 
-            booking admin "Oh, I'm pretty sure you said you were all-"
+            admin "Oh, I'm pretty sure you said you were all-"
 
             scene v15s25_7a
             with dissolve
@@ -194,7 +202,7 @@ label v15s25:
             scene v15s25_7
             with dissolve
 
-            booking admin "Okay... Well, if you're underage then we won't be able to serve you alcohol."
+            admin "Okay... Well, if you're underage then we won't be able to serve you alcohol."
 
     scene v15s25_7a
     with dissolve
@@ -206,12 +214,12 @@ label v15s25:
     scene v15s25_7
     with dissolve
 
-    booking admin "The policy is very strict, sir. I'm sorry."
+    admin "The policy is very strict, sir. I'm sorry."
 
     scene v15s25_7b
     with dissolve
 
-    u "(Going to have to convince her somehow)"
+    u "(Going to have to convince her somehow.)"
 
     scene v15s25_7a
     with dissolve
@@ -219,15 +227,15 @@ label v15s25:
     u "Here's the thing..."
 
     menu:
-        "Tell the truth.":
+        "It's important for us":
             $ add_point(KCT.BOYFRIEND)
-            v15_alcohol = True
+
             u "It's an important night for us."
 
             scene v15s25_7
             with dissolve
 
-            booking admin "Mhmm..."
+            admin "Mhmm..."
 
             scene v15s25_7a
             with dissolve
@@ -237,92 +245,114 @@ label v15s25:
             scene v15s25_7
             with dissolve
 
-            booking admin "That sounds great, honey... But if you're underage, we can't serve you alcohol. It's as simple as that."
+            admin "That sounds great, honey... But if you're underage, we can't serve you alcohol. It's as simple as that."
 
             scene v15s25_7a
             with dissolve
 
             u "It's for my friend Lindsey, you see? I'm just trying to do everything I can to help her out."
+
+            menu: 
+                "She deserves to be President":
+                    u "She really deserves to be President, she could really elevate the lives of everyone in her sorority."
+
+                    scene v15s25_7
+                    with dissolve
+
+                    $ set_presidency_percent(v14_lindsey_popularity - 3)
+
+                    admin "And I'm sure she will, but there's a legal drinking age. I'm sorry, there's nothing I can do."
+
+                "Her mom passed away recently":
+                    $ v15_lindsey_alcohol = True
            
-            u "Her mom passed away recently, and she's putting so much effort into her presidential campaign."
+                    scene v15s25_7a
+                    #with dissolve
 
-            scene v15s25_7f # TPP. Split Screen. First side, MC on the phone in the chair, slight smile, mouth open. Second side, Booking admin at her desk, slight frown, mouth closed.
-            with dissolve
+                    u "Her mom passed away recently, and she's putting so much effort into her presidential campaign."
 
-            u "It's like she's doing it all for her mom, you know. And I don't want to let her down..."
+                    scene v15s25_7f # TPP. Split Screen. First side, MC on the phone in the chair, slight smile, mouth open. Second side, Booking admin at her desk, slight frown, mouth closed.
+                    with dissolve
 
-            scene v15s25_7g # TPP. Split Screen. First side, MC on the phone in the chair, neutral face, mouth closed. Second side, Booking admin at her desk, teary eyes, slight frown, mouth open.
-            with dissolve
+                    u "It's like she's doing it all for her mom, you know. And I don't want to let her down..."
 
-            booking admin "Oh... That's so sweet. *Sniffles* Bless her heart."
+                    scene v15s25_7g # TPP. Split Screen. First side, MC on the phone in the chair, neutral face, mouth closed. Second side, Booking admin at her desk, teary eyes, slight frown, mouth open.
+                    with dissolve
 
-            booking admin "I lost my mom last year, so I know exactly how she feels."
+                    admin "Oh... That's so sweet. *Sniffles* Bless her heart."
 
-            scene v15s25_7h # TPP. Split Screen. First side, MC on the phone in the chair, neutral, mouth open. Second side, Booking admin at her desk, wiping her eyes, slight smile, mouth closed.
-            with dissolve
+                    admin "I lost my mom last year, so I know exactly how she feels."
 
-            u "Oh, I'm sorry for your loss."
+                    scene v15s25_7h # TPP. Split Screen. First side, MC on the phone in the chair, neutral, mouth open. Second side, Booking admin at her desk, wiping her eyes, slight smile, mouth closed.
+                    with dissolve
 
-            scene v15s25_7
-            with dissolve
+                    u "Oh, I'm sorry for your loss."
 
-            booking admin "*Clears throat* Mhmm, yes. Thank you."
+                    scene v15s25_7
+                    with dissolve
 
-            booking admin "When my mom passed, I kept productive with some new hobbies, and it really helped. Sounds like your friend is doing the same."
+                    admin "*Clears throat* Mhmm, yes. Thank you."
 
-            scene v15s25_7a
-            with dissolve
+                    admin "When my mom passed, I kept productive with some new hobbies, and it really helped. Sounds like your friend is doing the same."
 
-            u "Yeah, she's stronger than she appears. That's for sure."
+                    scene v15s25_7a
+                    with dissolve
 
-            scene v15s25_7
-            with dissolve
+                    u "Yeah, she's stronger than she appears. That's for sure."
 
-            booking admin "Okay..."
+                    scene v15s25_7
+                    with dissolve
 
-            booking admin "Listen, I'm not supposed to do this, but..."
+                    admin "Okay..."
 
-            booking admin "I'll just leave this little tick box unchecked... So that you guys get some alcohol, and nobody checks your IDs, okay?"
+                    admin "Listen, I'm not supposed to do this, but..."
 
-            scene v15s25_7a
-            with dissolve
+                    $ set_presidency_percent(v14_lindsey_popularity + 3)
 
-            u "That would be amazing! I-"
+                    admin "I'll just leave this little tick box unchecked... So that you guys get some alcohol, and nobody checks your IDs, okay?"
 
-            scene v15s25_7
-            with dissolve
+                    scene v15s25_7a
+                    with dissolve
 
-            booking admin "But please, be on your best behavior tomorrow night."
+                    u "That would be amazing! I-"
 
-            scene v15s25_7a
-            with dissolve
+                    scene v15s25_7
+                    with dissolve
 
-            u "Don't worry, we're all very mature for our age."
+                    admin "But please, be on your best behavior tomorrow night."
 
-            scene v15s25_7
-            with dissolve
+                    scene v15s25_7a
+                    with dissolve
 
-            booking admin "You do sound mature for your age, so I think I can trust you."
+                    u "Don't worry, we're all very mature for our age."
 
-            scene v15s25_7a
-            with dissolve
+                    scene v15s25_7
+                    with dissolve
 
-            u "You can, I promise. Thank you so much, you're incredible"
+                    admin "You do sound mature for your age, so I think I can trust you."
 
-            scene v15s25_7
-            with dissolve
+                    scene v15s25_7a
+                    with dissolve
 
-            booking admin "Let's just call it my good deed for the day, haha."
+                    u "You can, I promise. Thank you so much, you're incredible"
 
-        "Disagree with the policy.":
+                    scene v15s25_7
+                    with dissolve
+
+                    admin "Let's just call it my good deed for the day, haha."
+
+        "Disagree with the policy":
             $ add_point(KCT.TROUBLEMAKER)
+
+            scene v15s25_7a
+            #with dissolve
 
             u "I think you should check state legislation about the legal drinking age."
 
             scene v15s25_7
             with dissolve
 
-            booking admin "Ha! Yeah?"
+            admin "Ha! Yeah?"
 
             scene v15s25_7a
             with dissolve
@@ -332,7 +362,7 @@ label v15s25:
             scene v15s25_7
             with dissolve
 
-            booking admin "I don't think that's true."
+            admin "I don't think that's true."
 
             scene v15s25_7a
             with dissolve
@@ -344,37 +374,41 @@ label v15s25:
             scene v15s25_7
             with dissolve
 
-            booking admin "It sounds illegal, sir. And the internet isn't a trusted source of information, I'm sorry."
+            admin "It sounds illegal, sir. And the internet isn't a trustworthy source of information, I'm sorry."
 
             scene v15s25_7a
             with dissolve
 
-            u "How not?"
+            u "How so?"
 
             scene v15s25_7
             with dissolve
 
-            booking admin "False claims and not fact-checking can lead to dangerous mistakes."
+            $ set_presidency_percent(v14_lindsey_popularity - 3)
 
-            booking admin "Maybe you should do some more research, so you fully understand the law."
+            admin "False claims and not fact-checking can lead to dangerous mistakes."
+
+            admin "Maybe you should do some more research, so you fully understand the law."
 
             scene v15s25_7b
             with dissolve
 
             u "(Dammit, she's too smart for me.)"
 
-    if v15_alcohol:
+    if v15_lindsey_alcohol:
         scene v15s25_7
         with dissolve
 
-        booking admin "So, the full party package is eight-hundred dollars; You'll need to pay as soon as you arrive."
+        admin "So, the full party package is eight-hundred dollars. You'll need to pay as soon as you arrive."
 
         scene v15s25_7b
         with dissolve
 
         menu:
-            "Accept the price.":
+            "Accept the price":
                 $ add_point(KCT.BOYFRIEND)
+                $ lindsey_board.money -= 800
+                
                 scene v15s25_7a
                 with dissolve
 
@@ -383,7 +417,7 @@ label v15s25:
                 scene v15s25_7
                 with dissolve
 
-                booking admin "Yeah, that's right. It's the full VIP party package."
+                admin "Yeah, that's right. It's the full VIP party package."
 
                 scene v15s25_7a
                 with dissolve
@@ -393,15 +427,16 @@ label v15s25:
                 scene v15s25_7
                 with dissolve
 
-                booking admin "Perfect! All that's left for me to say is, thanks for choosing the Mango Lounge VIP party package! Have a great day!"
+                admin "Perfect! All that's left for me to say is, thanks for choosing the Mango Lounge VIP party package! Have a great day!"
 
                 scene v15s25_7a
                 with dissolve
 
                 u "You too! Bye."
 
-            "Negotiate.":
+            "Negotiate":
                 $ add_point(KCT.BRO)
+                
                 scene v15s25_7a
                 with dissolve
 
@@ -410,14 +445,16 @@ label v15s25:
                 scene v15s25_7
                 with dissolve
 
-                booking admin "It's the VIP party package. It's only designed for people who can afford the VIP lifestyle."
+                admin "It's the VIP party package. It's only designed for people who can afford the VIP lifestyle."
 
                 scene v15s25_7b
                 with dissolve
 
                 menu:
-                    "Be honest.":
+                    "Be honest":
                         $ add_point(KCT.BOYFRIEND)
+                        $ lindsey_board.money -= 400
+                        
                         scene v15s25_7a
                         with dissolve
 
@@ -428,13 +465,13 @@ label v15s25:
                         scene v15s25_7
                         with dissolve
 
-                        booking admin "Well..."
+                        admin "Well..."
 
-                        booking admin "The owner does sometimes offer an exclusive discount to his rich friends..."
+                        admin "The owner does sometimes offer an exclusive discount to his rich friends..."
 
-                        booking admin "I think it would be nice if that sort of generosity was spread about a little more."
+                        admin "I think it would be nice if that sort of generosity was spread about a little more."
 
-                        booking admin "What about a 50% discount?"
+                        admin "What about a 50\% discount?"
 
                         scene v15s25_7a
                         with dissolve
@@ -444,9 +481,9 @@ label v15s25:
                         scene v15s25_7
                         with dissolve
 
-                        booking admin "I like the thought of making your friend happy after everything that's happened."
+                        admin "I like the thought of making your friend happy after everything that's happened."
 
-                        booking admin "I really hope it's a special night for her."
+                        admin "I really hope it's a special night for her."
 
                         scene v15s25_7a
                         with dissolve
@@ -456,7 +493,7 @@ label v15s25:
                         scene v15s25_7
                         with dissolve
 
-                        booking admin "Aww, good. I'm glad. It'll help take her mind off things."
+                        admin "Aww, good. I'm glad. It'll help take her mind off things."
 
                         scene v15s25_7a
                         with dissolve
@@ -466,15 +503,17 @@ label v15s25:
                         scene v15s25_7
                         with dissolve
 
-                        booking admin "Goodbye then."
+                        admin "Goodbye then."
 
                         scene v15s25_7a
                         with dissolve
 
                         u "Bye!"
 
-                    "Lie.":
+                    "Lie":
                         $ add_point(KCT.TROUBLEMAKER)
+                        $ lindsey_board.money -= 800
+                        
                         scene v15s25_7a
                         with dissolve
 
@@ -483,7 +522,7 @@ label v15s25:
                         scene v15s25_7i # TPP. Split Screen. First side, MC on the phone in the chair, slight smile, mouth closed. Second side, Booking admin at her desk, confused, mouth open.
                         with dissolve
 
-                        booking admin "Your uncle?"
+                        admin "Your uncle?"
 
                         scene v15s25_7j # TPP. Split Screen. First side, MC on the phone in the chair, slight smile, mouth open. Second side, Booking admin at her desk, confused, mouth closed.
                         with dissolve
@@ -493,17 +532,17 @@ label v15s25:
                         scene v15s25_7i
                         with dissolve
 
-                        booking admin "Really?"
+                        admin "Really?"
 
                         scene v15s25_7j
                         with dissolve
 
-                        u "Yeah. So, can you just... You know, waiver the fee?"
+                        u "Yeah. So, can you just... You know, waive the fee?"
 
                         scene v15s25_7
                         with dissolve
 
-                        booking admin "Um, no. I would have to believe you first. And I don't."
+                        admin "Um, no. I would have to believe you first. And I don't."
 
                         scene v15s25_7a
                         with dissolve
@@ -513,9 +552,9 @@ label v15s25:
                         scene v15s25_7
                         with dissolve
 
-                        booking admin "I'll take my chances."
+                        admin "I'll take my chances."
 
-                        booking admin "So, eight-hundred dollars is the total."
+                        admin "So, eight-hundred dollars is the total."
 
                         scene v15s25_7a
                         with dissolve
@@ -525,9 +564,9 @@ label v15s25:
                         scene v15s25_7
                         with dissolve
 
-                        booking admin "You can certainly try."
+                        admin "You can certainly try."
 
-                        booking admin "I'm glad we got there in the end. Thanks for your custom."
+                        admin "I'm glad we got there in the end. Thanks for your custom."
 
                         scene v15s25_7a
                         with dissolve
@@ -537,7 +576,7 @@ label v15s25:
                         scene v15s25_7
                         with dissolve
 
-                        booking admin "Goodbye."
+                        admin "Goodbye."
 
                         scene v15s25_7a
                         with dissolve
@@ -547,14 +586,16 @@ label v15s25:
         scene v15s25_7
         with dissolve
 
-        booking admin "So, for the full VIP party package, without alcohol, that comes to $800. You'll need to pay as soon as you arrive."
+        admin "So, for the full VIP party package, without alcohol, that comes to $700. You'll need to pay as soon as you arrive."
 
         scene v15s25_7b
         with dissolve
 
         menu:
-            "Accept the price.":
+            "Accept the price":
                 $ add_point(KCT.BOYFRIEND)
+                $ lindsey_board.money -= 700
+                
                 scene v15s25_7a
                 with dissolve
 
@@ -563,7 +604,7 @@ label v15s25:
                 scene v15s25_7
                 with dissolve
 
-                booking admin "Yeah. We can't serve you any alcohol, but you still get a range of mocktails, sodas and juices all included."
+                admin "Yeah. We can't serve you any alcohol, but you still get a range of mocktails, sodas and juices all included."
 
                 scene v15s25_7a
                 with dissolve
@@ -573,9 +614,9 @@ label v15s25:
                 scene v15s25_7
                 with dissolve
 
-                booking admin "Until you turn 21, it is."
+                admin "Until you turn 21, it is."
 
-                booking admin "We'll keep you hydrated. But we won't get you drunk."
+                admin "We'll keep you hydrated. But we won't get you drunk."
 
                 scene v15s25_7a
                 with dissolve
@@ -585,7 +626,7 @@ label v15s25:
                 scene v15s25_7
                 with dissolve
 
-                booking admin "So that's everything confirmed?"
+                admin "So that's everything confirmed?"
 
                 scene v15s25_7a
                 with dissolve
@@ -595,47 +636,53 @@ label v15s25:
                 scene v15s25_7
                 with dissolve
 
-                booking admin "We look forward to seeing you. Goodbye."
+                admin "We look forward to seeing you. Goodbye."
 
                 scene v15s25_7a
                 with dissolve
 
                 u "Bye."
-            "Negotiate.":
+
+            "Negotiate":
                 $ add_point(KCT.BRO)
+                
                 scene v15s25_7a
                 with dissolve
             
-                u "Eight hundred seems overpriced."
+                u "Seven hundred seems overpriced."
 
                 scene v15s25_7
                 with dissolve
 
-                booking admin "It's the VIP party package. If it was cheap, it wouldn't be for VIPs."
+                admin "It's the VIP party package. If it was cheap, it wouldn't be for VIPs."
 
-                booking admin "You'll still get to choose from a range of mocktails, sodas and juices, all included in the price."
+                admin "You'll still get to choose from a range of mocktails, sodas and juices, all included in the price."
                 
                 scene v15s25_7b
                 with dissolve
 
                 menu:
-                    "Be honest.":
+                    "Lindsey's mom passed away recently":
                         $ add_point(KCT.BOYFRIEND)
+                        $ lindsey_board.money -= 500
+                        
                         scene v15s25_7h
                         with dissolve
 
-                        u "I understand. I'm just hoping you can offer a discount, even just a small one. You see, my friend, Lindsey. It's her night really. I'm just helping her out."
+                        u "I understand. I'm just hoping you can offer a discount, even just a small one."
+                        u "You see, my friend, Lindsey. It's her night really. I'm just helping her out."
 
-                        u "Her mom passed away recently, and she's been putting so much effort into her presidential campaign at college. That's what all this is for, you see."
+                        u "Her mom passed away recently, and she's been putting so much effort into her presidential campaign at college."
+                        u "That's what all this is for, you see."
 
-                        u "And it might sound silly but it's like she's doing it all for her mom, you know?"
+                        u "And it might sound silly, but it's like she's doing it all for her mom, you know?"
 
                         scene v15s25_7g
                         with dissolve
 
-                        booking admin "Oh. Oh, I see."
+                        admin "Oh. Oh, I see."
 
-                        booking admin "No, it doesn't sound silly. My mom passed away recently too. Bless your friend."
+                        admin "No, it doesn't sound silly. My mom passed away recently too. Bless your friend."
 
                         scene v15s25_7h
                         with dissolve
@@ -645,9 +692,9 @@ label v15s25:
                         scene v15s25_7
                         with dissolve
 
-                        booking admin "Aww, thank you."
+                        admin "Aww, thank you."
 
-                        booking admin "It sounds like your friend's coping well by doing something productive. That definitely helped me."
+                        admin "It sounds like your friend's coping well by doing something productive. That definitely helped me."
 
                         scene v15s25_7a
                         with dissolve
@@ -657,9 +704,9 @@ label v15s25:
                         scene v15s25_7
                         with dissolve
 
-                        booking admin "Let's see... Well, I think I can help you out a little bit."
+                        admin "Let's see... Well, I think I can help you out a little bit."
 
-                        booking admin "I can give you a 25% discount. That brings the price down to $600."
+                        admin "I can give you a 25% discount. That brings the price down to $600."
 
                         scene v15s25_7a
                         with dissolve
@@ -669,7 +716,7 @@ label v15s25:
                         scene v15s25_7
                         with dissolve
 
-                        booking admin "I hope your friend has a wonderful time."
+                        admin "I hope your friend has a wonderful time."
 
                         scene v15s25_7a
                         with dissolve
@@ -681,7 +728,7 @@ label v15s25:
                         scene v15s25_7
                         with dissolve
 
-                        booking admin "Haha, I'm sorry, that ship has sailed. I'm sure you'll have a great time regardless."
+                        admin "Haha, I'm sorry, that ship has sailed. I'm sure you'll have a great time regardless."
 
                         scene v15s25_7a
                         with dissolve
@@ -691,95 +738,76 @@ label v15s25:
                         scene v15s25_7
                         with dissolve
 
-                        booking admin "You're welcome. Goodbye."
+                        admin "You're welcome. Goodbye."
 
                         scene v15s25_7a
                         with dissolve
 
                         u "Bye."
 
-                    "Lie.":
+                    "Ask about student discounts":
                         $ add_point(KCT.TROUBLEMAKER)
+                        $ lindsey_board.money -= 700
+                        
                         scene v15s25_7a
                         with dissolve
 
-                        u "What about a senior discount? Does no one respect the elderly anymore?"
+                        u "What about a student discount?"
 
                         scene v15s25_7i
                         with dissolve
 
-                        booking admin "Sir... Is this a prank?"
+                        admin "We're a lounge, we don't get that many students."
 
                         scene v15s25_7j
                         with dissolve
 
-                        u "No, of course not."
+                        u "Well that's probably cause of your lack of discounts."
 
                         scene v15s25_7i
                         with dissolve
 
-                        booking admin "You're not old enough to drink, what make you think you deserve a senior discount?"
-
-                        booking admin "You should be ashamed. Those discounts are used because the elderly don't get enough assistance from the government."
-
-                        scene v15s25_7k # TPP. Split Screen. First side, MC on the phone in the chair, neutral face, mouth open. Second side, Booking admin at her desk, upset, mouth closed.
-                        with dissolve
-
-                        u "..."
-
-                        scene v15s25_7l # TPP. Split Screen. First side, MC on the phone in the chair, neutral face, mouth closed. Second side, Booking admin at her desk, upset, mouth open.
-                        with dissolve
-
-                        booking admin "You should apologize."
-
-                        scene v15s25_7k
-                        with dissolve
-
-                        u "Sorry."
-
-                        scene v15s25_7l
-                        with dissolve
-
-                        booking admin "Not to me."
+                        admin "Sadly I can't just create new discounts out of thin air. You're going to have to pay full price."
 
                         scene v15s25_7k
                         with dissolve
 
                         u "*Sighs* Okay, whatever."
 
-                        u "We'll pay the eight hundred."
+                        u "We'll pay the seven hundred."
 
                         scene v15s25_7l
                         with dissolve
 
-                        booking admin "Mhmm. Have a good one, sir."
+                        admin "Mhmm. Have a good one, sir."
 
                         scene v15s25_7k
                         with dissolve
 
                         u "Yeah... Bye."
-    play sound "sounds/hangup.mp3"
+
+    play sound "sounds/rejectcall.mp3"
 
     scene v15s25_8 # TPP. Just MC sitting in the chair plain wall in the background, MC pressing a button on his phone, MC slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
-    pause
+    pause 0.75
+
+    $ aubrey.messenger.newMessage("Hey! Come to the Chicks house? I have an extra special surprise for you... I think you've earned it.", force_send=True)
+
+    if aubrey.relationship.value >= Relationship.FWB.value:
+        $ aubrey.messenger.addReply("A naked surprise? ;)")
+        $ aubrey.messenger.newMessage("Haha you'll find out. Hurry up. I'm waiting :)", force_send=True)
+
+    else:
+        $ aubrey.messenger.addReply("Haha okay, see you there.")
 
     play sound "sounds/vibrate.mp3"
 
     scene v15s25_8a # TPP. Just MC sitting in the chair plain wall in the background, MC looking at his phone, MC slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     u "(Fingers crossed that it's Nora...)"
-
-    $ aubrey.messenger.newMessage("Hey! Come to the Chicks house? I have an extra special surprise for you... I think you've earned it.", queue=False)
-
-    if aubrey_friend:
-
-        $ aubrey.messenger.addReply("Haha okay, see you there.")
-    elif aubreyrs:
-        $ aubrey.messenger.addReply("A naked surprise? ;)")
-        $ aubrey.messenger.newMessage("Haha you'll find out. Hurry up. I'm waiting :)")
 
     label v15s25_PhoneContinueAubrey:
     if aubrey.messenger.replies:
@@ -789,7 +817,7 @@ label v15s25:
         jump v15s25_PhoneContinueAubrey
 
     scene v15s25_8b # TPP. Just MC sitting in the chair plain wall in the background, MC putting his phone away, MC slight smile, mouth open.
-    with dissolve 
+    with dissolve
 
     u "*Sighs* (Still no Nora, but it sounds like Aubrey's got something fun planned for me.)"
 

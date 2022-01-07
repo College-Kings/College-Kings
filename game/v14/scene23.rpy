@@ -119,7 +119,6 @@ label v14s23:
 
     menu: 
         "That's very selfless":
-
             $ add_point(KCT.BRO)
 
             u "That's a very selfless way to live."
@@ -130,9 +129,11 @@ label v14s23:
             ch "I try to be. Chloe should be here-"
 
         "It sounds inconsiderate":
-
             $ add_point(KCT.TROUBLEMAKER)
 
+            scene v14s23_2b
+            #with dissolve
+            
             u "I don't know man, it sounds a bit inconsiderate."
 
             scene v14s23_2a
@@ -219,7 +220,7 @@ label v14s23:
     scene v14s23_2c
     with dissolve
 
-    ch "I wouldn't wish that on anyone, and as a fellow president you have my best wishes."
+    ch "I wouldn't wish that on anyone, and as a fellow President you have my best wishes."
 
     scene v14s23_4a
     with dissolve
@@ -323,7 +324,7 @@ label v14s23:
 
         ch "Are you guys... serious?"
 
-        scene v14s23_2a
+        scene v14s23_2b
         with dissolve
 
         u "When Chloe and I talked about it I knew you'd like the idea."
@@ -600,7 +601,7 @@ label v14s23:
 
                 cl "I know you're not some fruity fraternity and everyone else knows that too."
 
-                scene v14s23_4b
+                scene v14s23_4c
                 with dissolve
 
                 u "*Laughs* I would hope so."
@@ -754,7 +755,7 @@ label v14s23:
 
     cl "*Laughs* Really, it's fine."
 
-    if chloegf: 
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value: 
         scene v14s23_4h # FPP. Same as v14s23_4b, Chloe kissing MC on the cheek.
         with dissolve
 

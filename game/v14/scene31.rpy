@@ -76,14 +76,14 @@ label v14s31:
     with dissolve
 
     play sound "sounds/rejectcall.mp3"
-    pause 0.5
+    pause 0.75
 
     scene v14s31_4 # TPP Show MC putting his phone away in his pocket
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
-    if chloegf: # -If ChloeGF
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v14s31_4a # TPP Same angle as 4, MC crossing his arms over his chest and looking worried
         with dissolve
 

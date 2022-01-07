@@ -77,12 +77,6 @@ style vslider:
     thumb "gui/slider/vertical_[prefix_]thumb.webp"
 
 
-style frame:
-    padding gui.frame_borders.padding
-    background Frame("gui/frame.webp", gui.frame_borders, tile=gui.frame_tile)
-
-
-
 ################################################################################
 ## In-game screens
 ################################################################################
@@ -132,7 +126,7 @@ style namebox is default
 style namebox_label is say_label
 
 
-style window:
+style say_window:
     xalign 0.5
     xfill True
     yalign gui.textbox_yalign
@@ -200,6 +194,8 @@ style input:
     color "#ffffff"
     outlines [ (2, "#000000") ]
 
+style input_window is say_window
+
 
 ## Choice screen ###############################################################
 ##
@@ -210,61 +206,28 @@ style input:
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
 
-screen choice(items, seconds=3, fail_label=""):
-    # Show KCT
-    if showkct:
-        use kct_choice
-
-    image "gui/curves.webp"
+screen choice(items, seconds=3, fail_label=None):
     style_prefix "choice"
-
-    default menuButtonsConfig = {
-        0: {
-            "background": "Left",
-            "pos": (210, 907),
-            "xoffset": 0
-        },
-        1: {
-            "background": "Right",
-            "pos": (1005, 907),
-            "xoffset": 50
-        },
-        2: {
-            "background": "Top",
-            "pos": (600, 780),
-            "xoffset": 0 # Centered
-        }
-    }
+    # Show KCT
+    if showkct and len(items) > 1:
+        use kct_choice_hint
     
-    for count, item in enumerate(items):
-        
-        # Requires menu disable function from jwt.rpy
-        $ disabled = False
-        if "(disabled)" in item.caption:
-            $ disabled = True
+    hbox:
+        xalign 0.5
+        ypos 833
+        spacing 25
 
-        if count < len(menuButtonsConfig):
-            fixed:
-                xysize (660, 104)
-                pos menuButtonsConfig[count]["pos"]
+        for item in items:
+            button:
+                idle_background "choice_button_idle"
+                hover_background "choice_button_hover"
+                action item.action
+                minimum (550, 131)
+                
+                text item.caption.upper():
+                    align (0.5, 0.5)
 
-                imagebutton:
-                    if disabled:
-                        idle "gui/{}white.webp".format(menuButtonsConfig[count]["background"])
-                    else:
-                        idle "gui/{}blue.webp".format(menuButtonsConfig[count]["background"])
-                        action item.action
-                    hover "gui/{}white.webp".format(menuButtonsConfig[count]["background"])
-
-                text item.caption.replace(" (disabled)", ""):
-                    align(0.5, 0.5)
-                    xoffset menuButtonsConfig[count]["xoffset"]
-                    yalign 0.5
-                    size 40
-                    if count > 1:
-                        xalign 0.5
-
-    if fail_label:
+    if fail_label is not None:
         timer seconds:
             action Jump(fail_label)
 
@@ -274,27 +237,12 @@ screen choice(items, seconds=3, fail_label=""):
         $ item = renpy.random.choice(items)
         on "show" action item.action
 
+
+style choice_text is olympus_mount_30
+
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
 define config.narrator_menu = True
-
-
-style choice_vbox is vbox
-style choice_button is button
-style choice_button_text is button_text
-
-style choice_vbox:
-    xalign 0.5
-    ypos 405
-    yanchor 0.5
-
-    spacing gui.choice_spacing
-
-style choice_button is default:
-    properties gui.button_properties("choice_button")
-
-style choice_button_text is default:
-    properties gui.button_text_properties("choice_button")
 
 
 ## Quick Menu screen ###########################################################
@@ -303,36 +251,47 @@ style choice_button_text is default:
 ## menus.
 
 screen quick_menu():
-
-    ## Ensure this appears on top of other screens.
     zorder 100
+    style_prefix "quick_menu"
+
+    default image_path = "gui/quick_menu/"
 
     if quick_menu:
         hbox:
-            style_prefix "quick"
-
             align (0.5, 1.0)
+            yoffset -40
+            spacing 30
 
             if not realmode:
-                textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle") text_selected_color "#FFD166"
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+                imagebutton idle image_path + "rollback_idle.png" action Rollback()
+            imagebutton idle image_path + "history_idle.png" action ShowMenu("history")
+            imagebutton idle image_path + "skip_idle.png" action Skip() alternate Skip(fast=True, confirm=True)
+            imagebutton idle image_path + "auto_forward_idle.png" action Preference("auto-forward", "toggle")
+            imagebutton idle image_path + "save_idle.png" action ShowMenu("save")
+            imagebutton idle image_path + "quick_save_idle.png" action QuickSave()
+            imagebutton idle image_path + "quick_load_idle.png" action QuickLoad()
+            # textbutton _("Prefs") action ShowMenu("preferences")
 
     if config.developer:
         hbox:
-            style_prefix "quick"
             align (1.0, 1.0)
+            xoffset -20
+            spacing 15
 
-            textbutton "Scene Select":
-                action Show("bugTesting_SceneSelect")
+            textbutton "SCENE SELECT" action Show("bugTesting_SceneSelect")
+            add "gui/common/arrow.png" yalign 0.5
 
-            textbutton "Cheats":
-                action Show("bugTesting_cheatMenu")
+            null width 10
+
+            textbutton "CHEATS" action Show("bugTesting_cheatMenu")
+            add "gui/common/arrow.png" yalign 0.5
+
+
+style quick_menu_button:
+    align (0.5, 0.5)
+
+style quick_menu_button_text is olympus_mount_30
+
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
@@ -340,15 +299,6 @@ init python:
     config.overlay_screens.append("quick_menu")
 
 default quick_menu = True
-
-style quick_button is default
-style quick_button_text is button_text
-
-style quick_button:
-    properties gui.button_properties("quick_button")
-
-style quick_button_text:
-    properties gui.button_text_properties("quick_button")
 
 
 ################################################################################
@@ -359,63 +309,6 @@ style quick_button_text:
 ##
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
-
-screen navigation():
-
-    vbox:
-        style_prefix "navigation"
-
-        xpos gui.navigation_xpos
-        yalign 0.5
-
-        spacing gui.navigation_spacing
-
-        if main_menu:
-
-            textbutton _("Start") action Start()
-
-        else:
-
-            textbutton _("History") action ShowMenu("history")
-
-            textbutton _("Save") action ShowMenu("save")
-
-        textbutton _("Load") action ShowMenu("load")
-
-        textbutton _("Preferences") action ShowMenu("preferences")
-
-        if _in_replay:
-
-            textbutton _("End Replay") action EndReplay(confirm=True)
-
-        elif not main_menu:
-
-            textbutton _("Main Menu") action MainMenu()
-
-        textbutton _("About") action ShowMenu("about")
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
-
-        if renpy.variant("pc"):
-
-            ## The quit button is banned on iOS and unnecessary on Android and Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
-
-
-
-style navigation_button is gui_button
-style navigation_button_text is gui_button_text
-
-style navigation_button:
-    size_group "navigation"
-    properties gui.button_properties("navigation_button")
-
-style navigation_button_text:
-    properties gui.button_text_properties("navigation_button")
-    outlines [ (3, "#000000") ]
 
 
 ## Main Menu screen ############################################################
@@ -428,117 +321,78 @@ screen main_menu():
     tag menu
     style_prefix "main_menu"
 
-    add "gui/mainMenu/mainMenuBackground.webp"
+    default image_path = "gui/main_menu/"
 
-    vbox:
-        pos (520, 187)
-        spacing 23
+    add image_path + "background.webp"
 
-        hbox:
-            spacing 22
-
-            imagebutton:
-                idle "gui/mainMenu/playIdle.webp"
-                hover "gui/mainMenu/playHover.webp"
-                action Start()
-
-            imagebutton:
-                idle "gui/mainMenu/loadIdle.webp"
-                hover "gui/mainMenu/loadHover.webp"
-                action ShowMenu("load")
-
+    # Patreon
+    if not config.enable_steam:
         imagebutton:
-            idle "gui/mainMenu/sceneIdle.webp"
-            hover "gui/mainMenu/sceneHover.webp"
-            action ShowMenu("spoiler")
+            idle image_path + "patreon_idle.webp"
+            hover Transform(image_path + "patreon_hover.webp", xpos=-28)
+            action OpenURL("https://www.patreon.com/collegekings")
+            pos (118, 36)
 
-        imagebutton:
-            idle "gui/mainMenu/pathIdle.webp"
-            hover "gui/mainMenu/pathHover.webp"
-            action ShowMenu("spoiler_path_builder")
+    # Discord
+    imagebutton:
+        idle image_path + "discord_idle.webp"
+        hover Transform(image_path + "discord_hover.webp", xpos=-22)
+        action OpenURL("https://discord.gg/collegekings")
+        pos (1311, 30)
 
-        hbox:
-            spacing 23
-
-            imagebutton:
-                idle "gui/mainMenu/settingsIdle.webp"
-                hover "gui/mainMenu/settingsHover.webp"
-                action ShowMenu("preferences")
-
-            imagebutton:
-                idle "gui/mainMenu/quitIdle.webp"
-                hover "gui/mainMenu/quitHover.webp"
-                action Quit(confirm= main_menu)
-
-
-    
-    if config.enable_steam: # Steam Version
-        vbox:
-            pos (1619, 216)
-            spacing 25
-
-            imagebutton:
-                idle "gui/mainMenu/discordIdle.webp"
-                hover "gui/mainMenu/discordHover.webp"
-                action OpenURL("http://discord.collegekingsgame.com")
-
-            imagebutton:
-                idle "gui/mainMenu/websiteIdle.webp"
-                hover "gui/mainMenu/websiteHover.webp"
-                action OpenURL("http://collegekingsgame.com")
-
-    else: # Patreon version
-        vbox:
-            pos (1619, 226)
-            spacing 25
-
-            imagebutton:
-                idle "gui/mainMenu/patreonIdle.webp"
-                hover "gui/mainMenu/patreonHover.webp"
-                action OpenURL("https://www.patreon.com/collegekings")
-
-            imagebutton:
-                idle "gui/mainMenu/discordIdle.webp"
-                hover "gui/mainMenu/discordHover.webp"
-                action OpenURL("http://discord.collegekingsgame.com")
-
-            imagebutton:
-                idle "gui/mainMenu/websiteIdle.webp"
-                hover "gui/mainMenu/websiteHover.webp"
-                action OpenURL("http://collegekingsgame.com")
-
-    text "v[config.version!t]":
-        color "#4e628f"
-        size 30
-        xalign 0.99
-        yalign 0.99
+    # Scene Gallery
+    imagebutton:
+        pos (141, 811)
+        idle image_path + "scene_gallery_idle.webp"
+        hover Transform(image_path + "scene_gallery_hover.webp", pos=(-22, -22))
+        action Show("confirm",
+            message="Warning: The scene gallery contains spoilers for the story of the game. Are you sure you want to continue?",
+            yes_action=[Hide("confirm"), ui.callsinnewcontext("scene_gallery_name_change"), ShowMenu("scene_gallery")],
+            no_action=Hide("confirm"))
 
 
-style main_menu_frame is empty
-style main_menu_vbox is vbox
-style main_menu_text is gui_text
-style main_menu_title is main_menu_text
-style main_menu_version is main_menu_text
+    # Path Builder
+    imagebutton:
+        idle image_path + "path_builder_idle.webp"
+        hover Transform(image_path + "path_builder_hover.webp", pos=(-20, -20))
+        action ShowMenu("path_builder_alert")
+        pos (1454, 811)
 
-style main_menu_frame:
-    xsize 420
-    yfill True
+    # Play Now
+    imagebutton:
+        idle image_path + "play_now_idle.webp"
+        hover Transform(image_path + "play_now_hover.webp", pos=(-31, -31))
+        action Start()
+        pos (564, 880)
 
-style main_menu_vbox:
-    xalign 0.5
-    xoffset 0
-    xmaximum 1200
-    yalign 0.1
-    yoffset 0
+    # Load
+    imagebutton:
+        idle image_path + "load_idle.webp"
+        hover Transform(image_path + "load_hover.webp", pos=(-27, -31))
+        action ShowMenu("load")
+        pos (1096, 880)
 
-style main_menu_text:
-    properties gui.text_properties("main_menu", accent=True)
+    # LEARN MORE
+    imagebutton:
+        idle image_path + "learn_more_idle.webp"
+        hover Transform(image_path + "learn_more_hover.webp", pos=(-40, -33))
+        action OpenURL("http://collegekingsgame.com")
+        pos (303, 976)
 
-style main_menu_title:
-    properties gui.text_properties("title")
 
-style main_menu_version:
-    properties gui.text_properties("version")
+    # SETTINGS
+    imagebutton:
+        idle "settings_idle"
+        hover "settings_hover"
+        action ShowMenu("preferences")
+        pos (1439, 967)
+
+    # QUIT
+    imagebutton:
+        idle "quit_idle"
+        hover "quit_hover"
+        action Quit()
+        pos (1662, 971)
 
 
 ## Game Menu screen ############################################################
@@ -553,9 +407,6 @@ style main_menu_version:
 screen game_menu(title, scroll=None, yinitial=0.0):
 
     style_prefix "game_menu"
-
-    if main_menu:
-        add gui.main_menu_background
 
     if title == _("History"):
         frame:
@@ -682,32 +533,39 @@ style game_menu_label_text:
 screen save():
     tag menu
 
-    add "gui/savepage.webp"
+    use file_slots(_("Save"))
 
-    if realmode and renpy.get_screen("choice"):
-        text "You've enabled Real Life Mode and are therefore unable to use this menu whilst making a choice.":
-            align (0.5, 0.5)
 
-        use game_menu(_("save"))
+screen enter_save_name(slot):
+    tag menu
+    style_prefix "save"
+
+    use save
+
+    text "SAVE NAME:" pos (270, 240)
     
-    else:
-        hbox:
-            align (0.5, 0.06)
-            spacing 10
+    frame:
+        xysize (1083, 99)
+        pos (477, 210)
+        background "gui/file_slots/save_name.png"
 
-            text "Save name:"
-            frame:
-                maximum (750, 50)
-                add "#444"
-                input:
-                    offset (5, 5)
-                    default save_name
-                    value VariableInputValue("save_name")
-                    length 35
-                    size 25
-                    allow " .,_-0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+        input:
+            align (0.5, 0.5)
+            default save_name
+            copypaste True
+            value VariableInputValue("save_name")
+            allow " .,_-0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
 
-        use file_slots(_("Save"))
+        imagebutton:
+            idle "gui/file_slots/save_game_idle.png"
+            action [Show("save"), FileAction(slot)]
+            align (1.0, 0.5)
+
+
+style save_text is file_slot_text
+style save_input is text:
+    font "fonts/Montserrat-Bold.ttf"
+    size 36
 
 
 screen load():
@@ -716,166 +574,151 @@ screen load():
     use file_slots(_("Load"))
 
 
-
 screen file_slots(title):
-    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
-    $ incompatible_game_versions = ["12.0.0", "0.6.4"]
-    $ incompatible_renpy_versions = ["7.4.8.1895", "7.4.7.1862"]
+    style_prefix "file_slots"
 
-    use game_menu(title):
-        
-        if title == _("Load"):
-            add "gui/loadpage.webp"
+    default page_name_value = FilePageNameInputValue(pattern=_("PAGE {}"), auto=_("AUTOMATIC SAVES"), quick=_("QUICK SAVES"))
+    default image_path = "gui/file_slots/"
 
-        fixed:
+    python:
+        incompatible_game_versions = {"12.0.0", "0.6.4"}
+        incompatible_renpy_versions = {"7.4.8.1895", "7.4.7.1862"}
 
-            ## This ensures the input will get the enter event before any of the
-            ## buttons do.
-            order_reverse True
+        game_version = FileJson(1, key="_version") or ""
+        renpy_version = FileJson(1, key="_renpy_version") or ""
+        renpy_version = '.'.join(str(i) for i in renpy_version)
+        file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
-            if realmode:
-                text "In Real-life mode, you only get one save.":
-                    size 50
-                    yalign 0.13
-                    xalign 0.5
+    add image_path + "background.png"
 
+    text "{} Game".format(title):
+        xalign 0.5
+        ypos 56
+        style "file_slots_title"
+
+    imagebutton:
+        idle image_path + "return_idle.png"
+        action Return()
+        pos (129, 82)
+
+    fixed:
+        pos (243, 206)
+        xysize (1430, 588)
+
+        if not renpy.get_screen("enter_save_name"):
+            button:
+                xalign 0.5
+                ypos 35
+                action page_name_value.Toggle()
+                key_events True
+
+                input:
+                    style "file_slots_page_name"
+                    value page_name_value
+
+        ## The grid of file slots.
+        grid gui.file_slot_cols gui.file_slot_rows:
+            xalign 0.5
+            ypos 110
+            spacing 35
+
+            for slot in range(1, gui.file_slot_cols * gui.file_slot_rows + 1):
                 python:
-                    game_version = FileJson(1, key="_version") or ""
-                    renpy_version = FileJson(1, key="_renpy_version") or ""
+                    game_version = FileJson(slot, key="_version") or ""
+                    renpy_version = FileJson(slot, key="_renpy_version") or ""
                     renpy_version = '.'.join(str(i) for i in renpy_version)
                     file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
+
                 button:
-                    style_prefix "slot"
-                    align (0.5, 0.5)
-
-                    action FileAction(1)
-
-                    has vbox
+                    background Transform(FileScreenshot(slot), size=(config.thumbnail_width, config.thumbnail_height))
+                    if title == _("Save"):
+                        action Show("enter_save_name", slot=slot)
+                    else:
+                        action FileAction(slot)
+                    xysize (config.thumbnail_width, config.thumbnail_height)
 
                     if file_compatable:
-                        add FileScreenshot(1) xalign 0.5
-                        text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
+                        vbox:
+                            align (0.5, 1.0)
+
+                            text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")).upper() xalign 0.5
+                            text FileSaveName(slot).upper() xalign 0.5
                     else:
-                        add "#000"
-                        text "INCOMPATIBLE" color "#f00" xalign 0.5
+                        add image_path + "incompatible.png" xalign 0.5 yoffset -7
 
-                    text FileTime(1, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
-                        style "slot_time_text"
+                    key "save_delete" action FileDelete(slot)
 
-                    text FileSaveName(1):
-                        style "slot_name_text"
+    # Buttons to access other pages.
+    hbox:
+        xalign 0.5
+        ypos 803
+        xysize (1100, 48)
+        spacing 35
+        xoffset 20
 
-                    key "save_delete" action FileDelete(1)
-            
-            else:
-                ## The page name, which can be edited by clicking on a button.
-                button:
-                    style "page_label"
+        imagebutton:
+            idle image_path + "left_arrow.png"
+            action FilePagePrevious()
+            yalign 0.5
 
-                    key_events True
-                    xalign 0.5
-                    action page_name_value.Toggle()
+        if config.has_autosave:
+            textbutton _("{#auto_page}A") action FilePage("auto") yalign 0.5
 
-                    input:
-                        style "page_label_text"
-                        value page_name_value
+        if config.has_quicksave:
+            textbutton _("{#quick_page}Q") action FilePage("quick") yalign 0.5
 
-                ## The grid of file slots.
-                grid gui.file_slot_cols gui.file_slot_rows:
-                    style_prefix "slot"
+        for page in range(1, 10):
+            textbutton str(page) action FilePage(page) yalign 0.5
 
-                    xalign 0.5
-                    yalign 0.5
+        textbutton "99" action FilePage(99) yalign 0.5
 
-                    spacing gui.slot_spacing
+        imagebutton:
+            idle image_path + "right_arrow.png"
+            action FilePageNext()
+            yalign 0.5
 
-                    for slot in range(1, gui.file_slot_cols * gui.file_slot_rows + 1):
-                        python:
-                            game_version = FileJson(slot, key="_version") or ""
-                            renpy_version = FileJson(slot, key="_renpy_version") or ""
-                            renpy_version = '.'.join(str(i) for i in renpy_version)
-                            file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
+    # Menu buttons
+    if title == _("Save"):
+        imagebutton:
+            idle image_path + "load_idle.png"
+            action ShowMenu("load")
+            pos (129, 967)
+    else:
+        imagebutton:
+            idle image_path + "save_idle.png"
+            action ShowMenu("save")
+            pos (129, 967)
 
-                        button:
-                            action FileAction(slot)
+    imagebutton:
+        idle image_path + "menu_idle.png"
+        action MainMenu()
+        pos (314, 975)
 
-                            has vbox
+    imagebutton:
+        idle "settings_idle"
+        hover "settings_hover"
+        action ShowMenu("preferences")
+        pos (1439, 967)
 
-                            fixed:
-                                xysize (384, 220)
-
-                                if file_compatable:
-                                    add FileScreenshot(slot) xalign 0.5
-                                    text game_version outlines [ (0, "#000", 3, 3) ] xpos 5
-                                else:
-                                    add "#000"
-                                    text "INCOMPATIBLE" color "#f00" xalign 0.5
-                                
-
-                            text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
-                                style "slot_time_text"
-
-                            text FileSaveName(slot):
-                                style "slot_name_text"
-
-                            key "save_delete" action FileDelete(slot)
-
-                ## Buttons to access other pages.
-                hbox:
-                    style_prefix "page"
-
-                    xalign 0.5
-                    yalign 0.85
-
-                    spacing gui.page_spacing
-
-                    textbutton _("←") action FilePagePrevious()
-
-                    if config.has_autosave:
-                        textbutton _("{#auto_page}A") action FilePage("auto")
-
-                    if config.has_quicksave:
-                        textbutton _("{#quick_page}Q") action FilePage("quick")
-
-                    for page in range(1, 10):
-                        textbutton "[page]" action FilePage(page)
-
-                    textbutton "99" action FilePage(99)
-
-                    textbutton _("→") action FilePageNext()
+    imagebutton:
+        idle "quit_idle"
+        hover "quit_hover"
+        action Quit(confirm=not main_menu)
+        pos (1662, 971)
 
 
-style page_label is gui_label
-style page_label_text is gui_label_text
-style page_button is gui_button
-style page_button_text is gui_button_text
+style file_slots_title is text:
+    font "fonts/Montserrat-ExtraBold.ttf"
+    size 64
 
-style slot_button is gui_button
-style slot_button_text is gui_button_text
-style slot_time_text is slot_button_text
-style slot_name_text is slot_button_text
+style file_slots_page_name is olympus_mount_30
 
-style page_label:
-    xpadding 75
-    ypadding 5
+style file_slots_text is olympus_mount_30:
+    size 22
+    yoffset 2
 
-style page_label_text:
-    text_align 0.5
-    layout "subtitle"
-    hover_color gui.hover_color
-
-style page_button:
-    properties gui.button_properties("page_button")
-
-style page_button_text:
-    properties gui.button_text_properties("page_button")
-
-style slot_button:
-    properties gui.button_properties("slot_button")
-
-style slot_button_text:
-    properties gui.button_text_properties("slot_button")
+style file_slots_button_text is druk_wide_bold_22
 
 
 ## Preferences screen ##########################################################
@@ -887,128 +730,159 @@ style slot_button_text:
 
 screen preferences():
     tag menu
+    style_prefix "settings"
 
-    add "gui/settingsBackground.webp"
+    default image_path = "gui/settings/"
 
-    # Display settings
+    add image_path + "background.webp"
+
+    # Display
     hbox:
-        align (0.1645, 0.265)
-        spacing 136
-        style_prefix "check"
+        pos (171, 278)
+        spacing 22
 
-        textbutton _("window"):
-            action Preference("display", "window")
-            text_size 45
-        textbutton _("fullscreen"):
-            action Preference("display", "fullscreen")
-            text_size 45
+        fixed:
+            xysize (339, 61)
 
-    # Skip settings
+            imagebutton:
+                idle "blue_button_idle"
+                hover "blue_button_hover"
+                selected_idle "blue_button_hover"
+                action Preference("display", "window")
+            text "Window" align (0.5, 0.5)
+
+        fixed:
+            xysize (339, 61)
+
+            imagebutton:
+                idle "blue_button_idle"
+                hover "blue_button_hover"
+                selected_idle "blue_button_hover"
+                action Preference("display", "fullscreen")
+            text "Full Screen" align (0.5, 0.5)
+
+    # Skip
     hbox:
-        align (0.1, 0.468)
-        spacing 35
-        style_prefix "check"
+        pos (171, 452)
+        spacing 22
 
-        textbutton _("Unseen Text"):
-            action Preference("skip", "toggle")
-            text_size 28
-        textbutton _("After Choices"):
-            action Preference("after choices", "toggle")
-            text_size 28
-        # textbutton _("Transitions"):
-        #     action InvertSelected(Preference("transitions", "toggle"))
-        #     text_size 28
+        fixed:
+            xysize (339, 61)
 
-    # Skip NSFW Scenes
-    hbox:
-        pos (180, 690)
-        spacing 85
+            imagebutton:
+                idle "blue_button_idle"
+                hover "blue_button_hover"
+                selected_idle "blue_button_hover"
+                action Preference("skip", "toggle")
+            text "Unseen Text" align (0.5, 0.5)
 
-        textbutton _("on"):
-            action SetVariable("config_censored", True)
-            text_size 45
-            text_selected_color "FFD166"
+        fixed:
+            xysize (339, 61)
 
-        textbutton _("off"):
-            action SetVariable("config_censored", False)
-            text_size 45
-            text_selected_color "FFD166"
+            imagebutton:
+                idle "blue_button_idle"
+                hover "blue_button_hover"
+                selected_idle "blue_button_hover"
+                action Preference("after choices", "toggle")
+            text "After Choices" align (0.5, 0.5)
 
-    hbox:
-        pos (600, 690)
-        spacing 85
+    # Other Settings
+    vbox:
+        pos (618, 663)
+        spacing 22
 
-        textbutton _("on"):
-            action SetVariable("voice_acted", True)
-            text_size 45
-            text_selected_color "FFD166"
+        for variable in ("config_censored", "voice_acted", "showkct"):
+            hbox:
+                spacing 6
 
-        textbutton _("off"):
-            action SetVariable("voice_acted", False)
-            text_size 45
-            text_selected_color "FFD166"
+                fixed:
+                    xysize (137, 61)
 
+                    imagebutton:
+                        idle "blue_button_idle"
+                        hover "blue_button_hover"
+                        selected_idle "blue_button_hover"
+                        action SetVariable(variable, True)
+                    text "On" align (0.5, 0.5)
 
-    # KCT settings
-    hbox:
-        pos (180, 885)
-        spacing 85
+                fixed:
+                    xysize (137, 61)
 
-        textbutton _("on"):
-            action SetVariable("showkct", True)
-            text_size 45
-            text_selected_color "FFD166"
+                    imagebutton:
+                        idle "blue_button_idle"
+                        hover "blue_button_hover"
+                        selected_idle "blue_button_hover"
+                        action SetVariable(variable, False)
+                    text "Off" align (0.5, 0.5)
 
-        textbutton _("off"):
-            action SetVariable("showkct", False)
-            text_size 45
-            text_selected_color "FFD166"
+        # REAL LIFE MODE
+        hbox:
+            spacing 6
 
-    # Real Life settings
-    hbox:
-        pos (600, 885)
-        spacing 85
+            fixed:
+                xysize (137, 61)
 
-        textbutton _("on"):
-            action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
-            selected realmode
-            text_size 45
-            text_selected_color "FFD166"
+                imagebutton:
+                    idle "blue_button_idle"
+                    hover "blue_button_hover"
+                    selected_idle "blue_button_hover"
+                    selected realmode
+                    action [SetVariable("realmode", True), SetVariable("config.rollback_enabled", False), SetVariable("showkct", False)]
+                text "On" align (0.5, 0.5)
 
-        textbutton _("off"):
-            action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
-            selected not realmode
-            text_size 45
-            text_selected_color "FFD166"
+            fixed:
+                xysize (137, 61)
 
-    # Sliders
-    style_prefix "slider"
+                imagebutton:
+                    idle "blue_button_idle"
+                    hover "blue_button_hover"
+                    selected_idle "blue_button_hover"
+                    selected not realmode
+                    action [SetVariable("realmode", False), SetVariable("config.rollback_enabled", True)]
+                text "Off" align (0.5, 0.5)
+
     bar value Preference("text speed"):
-        pos (1020, 310)
+        pos (1022, 353)
+        xysize (725, 37)
+        left_bar "settings_bar_left"
+        right_bar "settings_bar_right"
+        thumb "settings_bar_thumb"
+        thumb_offset 20
 
     bar value Preference("auto-forward time"):
-        pos (1020, 460)
+        pos (1022, 490)
+        xysize (725, 37)
+        left_bar "settings_bar_left"
+        right_bar "settings_bar_right"
+        thumb "settings_bar_thumb"
+        thumb_offset 20
 
     bar value Preference("music volume"):
-        pos (1020, 722)
+        pos (1022, 791)
+        xysize (725, 37)
+        left_bar "settings_bar_left"
+        right_bar "settings_bar_right"
+        thumb "settings_bar_thumb"
+        thumb_offset 20
 
     bar value Preference("sound volume"):
-        pos (1020, 872)
+        pos (1022, 928)
+        xysize (725, 37)
+        left_bar "settings_bar_left"
+        right_bar "settings_bar_right"
+        thumb "settings_bar_thumb"
+        thumb_offset 20
 
-    hbox:
-        pos (975, 990)
-        spacing 120
+    imagebutton:
+        idle "gui/settings/return_idle.webp"
+        action Return()
+        pos (129, 82)
 
-        if os.path.exists("game/tl"):
-            textbutton _("Change Language"):
-                action ShowMenu("changeLanguage")
+# style settings_imagebutton:
+#     idle "blue_button_idle"
+#     hover "blue_button_hover"
+#     selected_idle "blue_button_hover"
 
-        textbutton _("Return"):
-            action Return()
-
-style pref_label is gui_label
-style pref_label_text is gui_label_text
-style pref_vbox is vbox
 
 style radio_label is pref_label
 style radio_label_text is pref_label_text
@@ -1031,16 +905,6 @@ style slider_pref_vbox is pref_vbox
 
 style mute_all_button is check_button
 style mute_all_button_text is check_button_text
-
-style pref_label:
-    top_margin gui.pref_spacing
-    bottom_margin 3
-
-style pref_label_text:
-    yalign 1.0
-
-style pref_vbox:
-    xsize 338
 
 style radio_vbox:
     spacing gui.pref_button_spacing
@@ -1180,60 +1044,34 @@ style history_label_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#confirm
 
-screen confirm(message, yes_action, no_action):
-
-    ## Ensure other screens do not get input while this screen is displayed.
-    modal True
-
+screen confirm(message, yes_action, no_action=Hide("confirm")):
     zorder 200
-
+    modal True
     style_prefix "confirm"
 
-    add "gui/overlay/confirm.webp"
+    use alert_template(message):
 
-    frame:
+        button:
+            idle_background "blue_button_idle"
+            hover_background "blue_button_hover"
+            action yes_action
+            xysize (215, 55)
 
-        vbox:
-            xalign .5
-            yalign .5
-            spacing 45
+            text "YES" align (0.5, 0.5)
 
-            label _(message):
-                style "confirm_prompt"
-                xalign 0.5
+        button:
+            idle_background "blue_button_idle"
+            hover_background "blue_button_hover"
+            action no_action
+            xysize (215, 55)
 
-            hbox:
-                xalign 0.5
-                spacing 150
-
-                textbutton _("Yes") action yes_action
-                textbutton _("No") action no_action
+            text "NO" align (0.5, 0.5)
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action
 
 
-style confirm_frame is gui_frame
-style confirm_prompt is gui_prompt
-style confirm_prompt_text is gui_prompt_text
-style confirm_button is gui_medium_button
-style confirm_button_text is gui_medium_button_text
-
-style confirm_frame:
-    background Frame([ "gui/confirm_frame.webp", "gui/frame.webp"], gui.confirm_frame_borders, tile=gui.frame_tile)
-    padding gui.confirm_frame_borders.padding
-    xalign .5
-    yalign .5
-
-style confirm_prompt_text:
-    text_align 0.5
-    layout "subtitle"
-
-style confirm_button:
-    properties gui.button_properties("confirm_button")
-
-style confirm_button_text:
-    properties gui.button_text_properties("confirm_button")
+style confirm_text is olympus_mount_30
 
 
 ## Skip indicator screen #######################################################
@@ -1366,11 +1204,11 @@ style window:
 
 style radio_button:
     variant "small"
-    foreground "gui/phone/button/radio_[prefix_]foreground.webp"
+    foreground "gui/phone/button/radio_[prefix_]foreground.png"
 
 style check_button:
     variant "small"
-    foreground "gui/phone/button/check_[prefix_]foreground.webp"
+    foreground "gui/phone/button/check_[prefix_]foreground.png"
 
 style nvl_window:
     variant "small"

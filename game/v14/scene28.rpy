@@ -11,7 +11,7 @@ label v14s28:
 
     play music "music/v13/Track Scene 32.mp3" fadein 2
 
-    if v13_emilysex:
+    if "v13_emily" in sceneList:
         scene v14s28_2f # FPP. Emily looking at MC, MC Looking at Emily, Emily worried smile, mouth open.
         with dissolve
 

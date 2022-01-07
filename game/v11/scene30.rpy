@@ -609,8 +609,7 @@ label v11_quiz_q3:
 
     jud "Jerry, please."
 
-    if laurenrs:
-
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v11las21 # TPP. Show MC getting up from his chair, MC is very angry, mouth closed
         with dissolve
 
@@ -1065,13 +1064,12 @@ label v11_quiz_bonus:
 
     la "I'm glad we won, but it feels even better knowing we beat that jerk."
 
-    if laurenrs:
-
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         play sound "sounds/kiss.mp3"
         scene v11las33 # TPP. Show Lauren kissing MC, they're both still sitting down
         with dissolve
 
-        pause 0.75
+        pause 1.5
 
         scene v11las18f
         with dissolve
@@ -1269,12 +1267,12 @@ label v11_quiz_bonus:
 
     jud "I'd be happy to! Please, squish together a bit."
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         play sound "sounds/kiss.mp3"
         scene v11las45 # TPP. Show MC and Lauren posing for a picture, Lauren has her arms wrapped around MC's neck and they're kissing
         with dissolve
 
-        pause 1
+        pause 1.5
 
         scene v11las43a # FPP. Same as v11las43, Judge holding up the phone as if she were taking the pic, Judge mouth open, smiling
         with dissolve
@@ -1336,8 +1334,8 @@ label v11_quiz_bonus:
 
     u "Wouldn't have missed it for the world."
 
-    if (laurenrs or (kct == "loyal" and (v1_kissLauren or beachfirstkiss))) and not v11_aubrey_sex:
-        if not laurenrs:
+    if (lauren.relationship.value >= Relationship.GIRLFRIEND.value or (kct == "loyal" and lauren.relationship.value >= Relationship.KISS.value)) and not "v11_aubrey" in sceneList:
+        if lauren.relationship.value < Relationship.GIRLFRIEND.value:
             call screen kct_popup
 
         scene v11las44f # FPP. Lauren has her hands around MC's neck, she is looking into his eyes, she is nervous, mouth open
@@ -1360,7 +1358,7 @@ label v11_quiz_bonus:
 
         menu:
             "I love you too":
-                $ laurenrs = True
+                $ lauren.relationship = Relationship.GIRLFRIEND
                 $ add_point(KCT.BOYFRIEND)
                 $ lauren.points += 2
 
@@ -1421,28 +1419,7 @@ label v11_quiz_bonus:
 
     pause 0.75
 
-    if not laurenrs:
-        scene v11las49 # TPP. Show MC standing in the aisle, looking at where Lauren was walking away from, he is slightly smiling, mouth closed
-        with dissolve
-
-        u "(Wow, that was really nice.)"
-
-        play sound "sounds/vibrate.mp3"
-
-        u "(Probably our picture.)"
-
-        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", queue=False) # Lauren and MC picture together holding wands (check v11las45a for the pose)
-        $ lauren.messenger.addReply("Some good looking people.")
-        $ lauren.messenger.newMessage("Sure are.")
-
-        label v11s30_PhoneContinuelauren1:
-            if lauren.messenger.replies:
-                call screen phone
-            if lauren.messenger.replies:
-                u "(I should reply to Lauren.)"
-                jump v11s30_PhoneContinuelauren1
-
-    else:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v11las49
         with dissolve
 
@@ -1452,7 +1429,7 @@ label v11_quiz_bonus:
 
         u "(Probably our pictures.)"
 
-        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", queue=False)
+        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", force_send=True)
         $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg2.webp") # Lauren and MC picture together kissing (check v11las45 for the pose)
         $ lauren.messenger.addReply("Some good looking people.")
         $ lauren.messenger.newMessage("Sure are.")
@@ -1463,6 +1440,27 @@ label v11_quiz_bonus:
             if lauren.messenger.replies:
                 u "(I should check my phone.)"
                 jump v11s30_PhoneContinuelauren2
+
+    else:
+        scene v11las49 # TPP. Show MC standing in the aisle, looking at where Lauren was walking away from, he is slightly smiling, mouth closed
+        with dissolve
+
+        u "(Wow, that was really nice.)"
+
+        play sound "sounds/vibrate.mp3"
+
+        u "(Probably our picture.)"
+
+        $ lauren.messenger.newImgMessage("images/v11/Scene 30/Laurentxtimg1.webp", force_send=True) # Lauren and MC picture together holding wands (check v11las45a for the pose)
+        $ lauren.messenger.addReply("Some good looking people.")
+        $ lauren.messenger.newMessage("Sure are.")
+
+        label v11s30_PhoneContinuelauren1:
+            if lauren.messenger.replies:
+                call screen phone
+            if lauren.messenger.replies:
+                u "(I should reply to Lauren.)"
+                jump v11s30_PhoneContinuelauren1
 
     scene v11las49
     with dissolve 

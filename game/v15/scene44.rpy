@@ -18,7 +18,7 @@ label v15s44:
 
 # -MC and Amber enter room 103 where the pinboard is. They approach the pinboard-
 
-# -The UI pops up to show all the clues achieved from the Chris interrogation (CLUES UNLOCKED: Nora wanted to be alone after the breakup. Nora hates her dad. LOCATIONS UNLOCKED: Her Dad's house. Ms Rose's House. Nora's Dad's cabin. Camping by herself)-
+# -The UI pops up to show all the clues achieved from the Chris interrogation (CLUES UNLOCKED: Nora wanted to be alone after the breakup. Nora hates her dad. LOCATIONS UNLOCKED: Her Dad's house. Ms. rose's House. Nora's Dad's cabin. Camping by herself)-
 
 label v15s44_continue:
     scene v15s44_3 # FPP. MC standing next to Amber, both facing the pinboard, MC looking at Amber, Amber looking at the pinboard, mouth closed, serious expression (don't actually show the pinboard)
@@ -27,6 +27,7 @@ label v15s44_continue:
     menu:
         "Ready to guess":
             $ add_point(KCT.BRO)
+            
             scene v15s44_3a # FPP. Same as v15s44_3, Amber looking at MC, Amber serious expression, mouth closed
             with dissolve
 
@@ -39,6 +40,7 @@ label v15s44_continue:
 
         "Not enough clues":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s44_3a
             with dissolve
 
@@ -72,12 +74,12 @@ label v15s44_continue:
     scene v15s44_4a # TPP. Same as v15s44_4, Amber mouth open, slight smile / Penelope mouth closed, slightly confused
     with dissolve
 
-    am "Hey, Techy."
+    am "Hey, Techie."
 
     scene v15s44_4b # TPP. Same as v15s44, Amber mouth closed, slight smile / Penelope mouth open, slightly confused
     with dissolve
 
-    pe "Techy?"
+    pe "Techie?"
 
     scene v15s44_4c # TPP. Same as v15s44_4, Amber mouth open, slight smile / Penelope mouth closed, slight smile
     with dissolve
@@ -102,7 +104,7 @@ label v15s44_continue:
     scene v15s44_4a
     with dissolve
 
-    am "Thanks, Techy!"
+    am "Thanks, Techie!"
 
     scene v15s44_4b
     with dissolve
@@ -117,12 +119,12 @@ label v15s44_continue:
     scene v15s44_3f # FPP. Same as v15s44_3a, Amber slight smile, mouth closed
     with dissolve
 
-    u "Techy?"
+    u "Techie?"
 
     scene v15s44_3g # FPP. Same as v15s44_3f, Amber slight smile, mouth open
     with dissolve
 
-    am "Techy!"
+    am "Techie!"
 
     am "Okay, coffee refill..."
 
@@ -132,6 +134,7 @@ label v15s44_continue:
     menu:
         "Take the coffee":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s44_3h # FPP. Same as v15s44_3g, Amber holding both coffees in her hand, no phone, looking at MC, slight smile, mouth closed
             with dissolve
 
@@ -149,6 +152,7 @@ label v15s44_continue:
 
         "Leave it":
             $ add_point(KCT.BRO)
+            
             scene v15s44_3h
             with dissolve
 
@@ -164,7 +168,7 @@ label v15s44_continue:
 
             pause 0.75
         
-    play sound "sounds/call.mp3"
+    play sound "sounds/calling.mp3"
 
     scene v15s44_3j # FPP. Same as v15s44_3c, Amber slight smile, mouth open, looking down at her phone
     with dissolve
@@ -176,10 +180,12 @@ label v15s44_continue:
 
     u "How kind."
 
+    stop sound
+    play sound "sounds/rejectcall.mp3"
     scene v15s44_8 # TPP. Amber and MC standing next to each other, Amber holding out the phone since they are on speaker, both slight smiles, Amber mouth open, MC mouth closed // Penelope sitting in the cafe, talking on the phone, show her laptop (not the screen), Penelope slight smile, mouth closed
     with dissolve
 
-    am "What have you got for us, Techy?"
+    am "What have you got for us, Techie?"
 
     scene v15s44_8a # TPP. Same as v15s44_8, Amber and MC slight smiles, mouths closed // Penelope slight smile, mouth open
     with dissolve
@@ -271,9 +277,9 @@ label v15s44_continue:
     scene v15s44_8e
     with dissolve
 
-    pe "'Was so nice to see my baby niece today... She never stays for long, but it's always perfect <3 See you soon, Nora Bora!'. (CLUE UNLOCKED: NORA VISITED HER AUNT THE DAY SHE LANDED FROM EUROPE. LOCATION UNLOCKED: STAYING AT HER AUNT'S APARTMENT.)"
-
-    $ unlock_clue = Nora_Aunt # OSCAR HAS TO CHECK THIS IDK HOW WE'RE HANDLING IT
+    pe "\"Was so nice to see my baby niece today... She never stays for long, but it's always perfect <3 See you soon, Nora Bora!\""
+    $ v15_nora_clues.add("visited_aunt")
+    $ v15_nora_locations.add("aunt")
 
     scene v15s44_8
     with dissolve
@@ -288,22 +294,92 @@ label v15s44_continue:
     scene v15s44_8a
     with dissolve
 
-    pe "I didn't see anything else other than the whole family being huge nature freaks. They love camping, fishing... All of it. (CLUE UNLOCKED: NORA LOVES NATURE.)"
+    pe "I think her whole family are huge nature freaks. There's pictures of them camping, fishing... You name it."
+    $ v15_nora_clues.add("loves_nature")
 
-    scene v15s44_8
-    with dissolve
+    if "camping" in v15_nora_clues:
+        scene v15s44_8
+        with dissolve
 
-    am "Hmm, that's the second time today someone's mentioned the outdoors when it came to Nora."
+        am "Hmm, that's the second time today someone's mentioned the outdoors when it came to Nora."
+    
+    else:
+        scene v15s44_8
+        with dissolve
+        
+        am "Camping... now that's an activity for someone who wants some peace and quiet."
+        
+        $ v15_nora_locations.add("camping")
+
+    menu:
+        "Ask about Nora's family":
+            scene v15s44_8b
+            with dissolve
+
+            u "Any other clues from her other family members?"
+
+            if v11_pen_goes_europe:
+                scene v15s44_8e
+                with dissolve
+
+                pe "Sadly not much."
+                
+            else:
+                scene v15s44_8e
+                with dissolve
+
+                pe "Oh... Uhm... Uh, no."
+
+            pe "I didn't find a lot of pictures with Nora, strangely enough."
+
+            pe "But most of her relatives are from this area, so if she's with them, she's probably not too far away."
+
+            scene v15s44_8b
+            with dissolve
+
+            u "Well, at least that's something."
+        
+        "Ask about Nora's posts":
+            scene v15s44_8b
+            with dissolve
+
+            u "Was there anything interesting in Nora's post history?"
+
+            scene v15s44_8a
+            with dissolve
+
+            pe "Well, it looks like she was in a relationship before Chris."
+            
+            pe "Nora's still friends with that guy on Kiwii, so I thought I'd send him a request as well-"
+
+            scene v15s44_8b
+            with dissolve
+
+            u "Wait, they're still friends?"
+            
+            u "That's an interesting development."
+            $ v15_nora_clues.add("likes_ex")
+            
+            scene v15s44_8a
+            with dissolve
+
+            pe "But he hasn't added me yet so I couldn't look much further. I only know he's a local here to San Vallejo."
+            
+            scene v15s44_8
+            with dissolve
+
+            am "Hmm, that's something that we might want to consider. Maybe Nora ran off to this ex."
+            $ v15_nora_locations.add("ex")
 
     scene v15s44_8a
     with dissolve
 
-    pe "Oh! Well, there you go. *Giggles*"
+    pe "Well, there you go. *Giggles*"
 
     scene v15s44_8
     with dissolve
 
-    am "Okay, well thanks for all your help, Techy. We gotta run!"
+    am "Okay, well thanks for all your help, Techie. We gotta run!"
 
     scene v15s44_8b
     with dissolve
@@ -336,9 +412,8 @@ label v15s44_continue2:
 
     menu:
         "No idea":
-
             $ add_point(KCT.BOYFRIEND)
-
+            
             u "No idea, really. She could be at any of these places."
 
             scene v15s44_3n # FPP. Same as v15s44_3, Amber slight smile, mouth open
@@ -362,8 +437,10 @@ label v15s44_continue2:
             am "Interrogation number two!"
 
         "I think I know":
-
             $ add_point(KCT.BRO)
+            
+            scene v15s44_3m
+            #with dissolve
 
             u "I think I know where she is."
 
@@ -477,7 +554,7 @@ label v15s44_continue2:
     scene v15s44_9b # TPP. Same as v15s44_9a, both pretending to blow the steam off their guns
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s44_10 # TPP. MC and Amber exiting the room, both smiling, Amber exiting in front of MC, nouths closed
     with dissolve

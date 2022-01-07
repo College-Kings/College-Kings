@@ -1,6 +1,0 @@
-default msgApp = Application("Messages", "messages/appAssets/messagesIcon.webp", "contactsscreen")
-default statsApp = Application("Stats", "stats/appAssets/statsIcon.webp", "stats", locked=True)
-default achApp = Application("Achievements", "achievements/appAssets/achievementsIcon.webp", "achievements")
-default kiwiiApp = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=True)
-default fightApp = Application("Fights", "fights/appAssets/messagesIcon.webp", "fightApp", locked=True)
-default simplrApp = Application("Simplr", "simplr/appAssets/simplrIcon.webp", "simplr_app", locked=True)

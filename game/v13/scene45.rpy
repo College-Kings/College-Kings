@@ -4,7 +4,6 @@
 # Time: Morning
 
 label v13s45:
-
     scene v13s45_1 # TPP. Lauren and MC standing at the bike spot, both slight smile, mouth closed.
     with dissolve
 

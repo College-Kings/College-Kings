@@ -85,7 +85,7 @@ label v11_cardealership:
     cl "What? *Chuckles* I just thought we could have a little fun."
 
 
-    if chloers:
+    if chloe.relationship.value >= Relationship.FWB.value:
         scene v11cd7 # TPP. chloe whispers in MCs ear, MC looks surprised, MCs mouth closed chloe's mouth opened
         with dissolve
         
@@ -184,7 +184,7 @@ label v11_cardealership:
 
     pause 0.75
 
-    if chloers:
+    if chloe.relationship.value >= Relationship.FWB.value:
         scene v11cd16 #FPP. Inside of the car, mc looking at chloe in passenger sit, mouth closed
         with dissolve
         
@@ -286,7 +286,7 @@ label v11_cardealership:
 
     cl "Haha, [name], this is amazing."
 
-    if chloers:
+    if chloe.relationship.value >= Relationship.FWB.value:
         menu:
             "Talk about \"us\"": 
                 scene v11cd22a # FPP. looking at chloe, mouth closed
@@ -382,81 +382,7 @@ label v11_cardealership:
 
     cl "What?"
 
-    if not chloers: 
-        scene v11cd25a # FPP. same as 25, mouth closed
-        with dissolve
-        u "I just never realized how..."
-
-        scene v11cd25
-        with dissolve
-
-        cl "Just how what?"
-
-        scene v11cd25a
-        with dissolve
-
-        u "..."
-
-        scene v11cd25b # FPP. same as 25, chloe is looking impatient, mouth opened
-        with dissolve
-
-        cl "[name], what?"
-
-        scene v11cd25a
-        with dissolve
-
-        u "Just how big your forehead is... *Laughs*"
-
-        scene v11cd25c # FPP. same as 25, chloe laughs harder, mouth opened
-        with dissolve
-
-        cl "OH MY GOD, YOU'RE SUCH AN ASS! *Laughs* That's not funny."
-
-        scene v11cd25d # FPP. chloe punches MC, mouth closed
-        with dissolve
-
-        u "*Laughs* Ouch!"
-
-        scene v11cd25
-        with dissolve
-
-        cl "Get in before I start firing jokes back... You don't want me to hurt your feelings."
-
-        scene v11cd25a
-        with dissolve
-
-        u "As you wish, your majesty."
-
-        scene v11cd26 # FPP. Chloe gets in the car, mc is in the passanger door looking through glass, mouth opened
-        with dissolve
-
-        play sound "sounds/revving.mp3"
-
-        cl "If you don't hurry, I will leave you."
-
-        scene v11cd26a # FPP. Same as 26, mouth closed
-        with dissolve
-
-        u "I'm coming!"
-
-        scene v11cd27 # TPP. MC gets in the car
-        with dissolve
-
-        pause 1
-
-        play sound "sounds/driving1.mp3"
-
-        scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
-        with dissolve
-
-        pause 1
-        
-        scene v11cd29 # TPP. MC and chloe getting out of the car infront of the car dealership, mouth closed
-        with dissolve
-
-        pause 1
-
-    else:
+    if chloe.relationship.value >= Relationship.FWB.value:
         menu:
             "Kiss her":
                 scene v11cd30 # TPP. MC sits on the hood of the car, chloe is nearby
@@ -514,8 +440,8 @@ label v11_cardealership:
                         u "I don't know what I'd do if one day you were just... gone. The truth is... I love you, Chloe, and I don't want to go another day without you being mine."
                         u "So with all that said, can we make it official? Will you be my girl?"
 
-                        if chloegf or (meetchloe and hcGirl == "chloe" and ending == "chloe"): #chloegf in case of seeing this scene via pathbuilder
-                            $ chloegf = True
+                        if chloe.relationship.value >= Relationship.GIRLFRIEND.value or (meetchloe and hcGirl == "chloe" and ending == "chloe"): #chloe gf in case of seeing this scene via pathbuilder
+                            $ chloe.relationship = Relationship.GIRLFRIEND
                             scene v11cd33d # FPP, sanme as 33c, chloe looking excited, mouth opened
                             with dissolve
 
@@ -531,18 +457,15 @@ label v11_cardealership:
 
                             play sound "sounds/kiss.mp3"
 
-                            if laurenrs and not v11_aubrey_sex:
+                            if lauren.relationship.value >= Relationship.GIRLFRIEND.value and not v11_lauren_caught_aubrey:
                                 $ grant_achievement("two_timer")
-                                                                
-                            else:
-                                pass
 
                             pause 2.5
 
                             scene v11cd36 # FPP. MC sets chloe down, mouth closed
                             with dissolve
 
-                            if laurenrs and not v11_aubrey_sex:
+                            if lauren.relationship.value >= Relationship.GIRLFRIEND.value and not v11_lauren_caught_aubrey:
                                 u "(Damn, two girlfriends. This could get complicated fast.)"
 
                             u "Wow... c'mon, let's get this car back."
@@ -693,6 +616,80 @@ label v11_cardealership:
                 scene v11cd29 # TPP. MC and chloe getting out of the car infront of the car dealership, mouth closed
                 with dissolve
     
+    else: 
+        scene v11cd25a # FPP. same as 25, mouth closed
+        with dissolve
+        u "I just never realized how..."
+
+        scene v11cd25
+        with dissolve
+
+        cl "Just how what?"
+
+        scene v11cd25a
+        with dissolve
+
+        u "..."
+
+        scene v11cd25b # FPP. same as 25, chloe is looking impatient, mouth opened
+        with dissolve
+
+        cl "[name], what?"
+
+        scene v11cd25a
+        with dissolve
+
+        u "Just how big your forehead is... *Laughs*"
+
+        scene v11cd25c # FPP. same as 25, chloe laughs harder, mouth opened
+        with dissolve
+
+        cl "OH MY GOD, YOU'RE SUCH AN ASS! *Laughs* That's not funny."
+
+        scene v11cd25d # FPP. chloe punches MC, mouth closed
+        with dissolve
+
+        u "*Laughs* Ouch!"
+
+        scene v11cd25
+        with dissolve
+
+        cl "Get in before I start firing jokes back... You don't want me to hurt your feelings."
+
+        scene v11cd25a
+        with dissolve
+
+        u "As you wish, your majesty."
+
+        scene v11cd26 # FPP. Chloe gets in the car, mc is in the passanger door looking through glass, mouth opened
+        with dissolve
+
+        play sound "sounds/revving.mp3"
+
+        cl "If you don't hurry, I will leave you."
+
+        scene v11cd26a # FPP. Same as 26, mouth closed
+        with dissolve
+
+        u "I'm coming!"
+
+        scene v11cd27 # TPP. MC gets in the car
+        with dissolve
+
+        pause 1
+
+        play sound "sounds/driving1.mp3"
+
+        scene v11cd28 # TPP. MC and chloe inside the car, smiling, looking forwards in london steets location d
+        with dissolve
+
+        pause 1
+        
+        scene v11cd29 # TPP. MC and chloe getting out of the car infront of the car dealership, mouth closed
+        with dissolve
+
+        pause 1
+
     scene v11cd40 # FPP. now in front of the shop, looking at the car salesman, mouth opened
     with dissolve
 
@@ -700,7 +697,7 @@ label v11_cardealership:
 
     csa "Did you two enjoy the ride?"
 
-    if chloegf: 
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value: 
         scene v11cd40a # FPP. same as 40, mouth closed
         with dissolve
 

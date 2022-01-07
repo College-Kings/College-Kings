@@ -126,10 +126,10 @@ label v14s18:
 
     li "We're friends... Right?"
 
-    if v12_lindsey_sex: #to ensure compatibility flow with v12s17
-        $ lindseyrs = True
+    if "v12_lindsey" in sceneList and lindsey.relationship.value < Relationship.FWB.value: #to ensure compatibility flow with v12s17
+        $ lindsey.relationship = Relationship.FWB
 
-    if lindseyrs:
+    if lindsey.relationship.value >= Relationship.FWB.value:
         scene v14s18_4a
         with dissolve
 
@@ -140,7 +140,7 @@ label v14s18:
         
         li "Nevermind, that doesn't matter."
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v14s18_4a
         with dissolve
 
@@ -151,7 +151,7 @@ label v14s18:
 
     li "I genuinely think that my only chance at beating Chloe starts with you joining my team."
 
-    if lindseyrs:
+    if lindsey.relationship.value >= Relationship.FWB.value:
         scene v14s18_4f # FPP. Lindsey very close to MC, she is whispering, mouth open, seductive smile
         with dissolve
 
@@ -191,9 +191,9 @@ label v14s18:
     menu:
         "Help Lindsey":
             $ set_presidency_percent(v14_lindsey_popularity + 5)
-            if chloegf:
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.TROUBLEMAKER)
-            elif v12_lindsey_sex:
+            elif lindsey.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.BOYFRIEND)
             else:
                 $ add_point(KCT.BRO)
@@ -209,7 +209,7 @@ label v14s18:
 
             li "That's exactly what I expected..."
 
-            if lindseyrs:
+            if lindsey.relationship.value >= Relationship.FWB.value:
                 scene v14s18_4h # FPP. Same as v14s18_4, show Lindsey looking around
                 with dissolve
 
@@ -242,9 +242,9 @@ label v14s18:
                 pause 0.75
 
         "Don't help Lindsey":
-            if chloegf:
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.BOYFRIEND)
-            elif v12_lindsey_sex:
+            elif lindsey.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.TROUBLEMAKER)
                 
             scene v14s18_4i # FPP. Same as v14s18_4, Lindsey sad

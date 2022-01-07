@@ -671,7 +671,7 @@ label v12_valentine:
 
     no "You've been all of those things, and more. And still, to this day, I don't know why you do the things you do for me, but I'm so appreciative. You're like a dream..."
 
-    if noralikes:
+    if nora.relationship.value >= Relationship.LIKES.value:
         scene v12val30g # FPP. Same as v12val30c, Nora eyes tearing up (not crying, just tearing up), slight smile, mouth closed
         with dissolve
 
@@ -682,7 +682,7 @@ label v12_valentine:
 
     no "And standing here now, I feel like I'm exactly where I'm supposed to be... I uh, I love you. *Chuckles*"
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v12val32 # FPP. Same positioning as v12val27, MC looking at Chloe, Chloe looking at Lindsey, Chloe slight smile, mouth open (Only Chloe in shot)
         with dissolve
 
@@ -762,7 +762,7 @@ label v12_valentine:
             
             u "I never saw myself settling down or living the straight and narrow life, but at this point I can't imagine what my life would be like without you... You've become the brightest light in my world. And, I love you."
 
-            if chloegf:
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v12val32a # FPP. Same as v12val32, Chloe looking at MC, Chloe slight smile, mouth open
                 with dissolve
 
@@ -808,7 +808,18 @@ label v12_valentine:
 
     bishop "As I was saying, this is normally the moment of the kiss."
 
-    if not chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+        scene v12val30i
+        with dissolve
+
+        pause 1.5
+
+        scene v12val27 
+        with dissolve
+
+        bishop "Very sweet, you two."
+
+    else:
         scene v12val30c
         with dissolve
 
@@ -840,17 +851,6 @@ label v12_valentine:
                 $ grant_achievement("you_may_kiss_the_bride")
                 bishop "That was very sweet of you, young man."
         
-    else:
-        scene v12val30i
-        with dissolve
-
-        pause 1.5
-
-        scene v12val27 
-        with dissolve
-
-        bishop "Very sweet, you two."
-
     scene v12val27a
     with dissolve
 
@@ -959,7 +959,7 @@ label v12_valentine:
 
     pause 0.75
 
-    if chloegf and not laurenrs:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value and lauren.relationship.value < Relationship.GIRLFRIEND.value:
         scene v12val43 # FPP. Charli next to MC on the sidewalk, not walking, Charli and MC looking at each other, Charli slightly annoyed, mouth open
         with dissolve
 
@@ -980,7 +980,7 @@ label v12_valentine:
 
         u "(Fucking weirdo.)"
 
-    elif chloegf and laurenrs:
+    elif chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v12val43
         with dissolve
 

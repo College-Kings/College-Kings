@@ -29,7 +29,7 @@ label v13_walk_garden:
 
     li "He finished up with all of his frat planning with Sebastian and now for the last few days of our little vacay, he wants to be the perfect boyfriend. *Chuckles*"
 
-    if v12_nora_sex:
+    if nora.relationship.value >= Relationship.FWB.value:
         #scene v13s36_2 
         scene v13s36_3a
         with dissolve
@@ -74,18 +74,7 @@ label v13_walk_garden:
 
     imre "You know I don't."
 
-    if not chrismad:
-        scene v13s36_5b # FPP. Chris looking at lindsey, neutral expression, mouth opened (location 3)
-        with dissolve
-        
-        ch "No, it's cool."
-
-        scene v13s36_5
-        with dissolve
-
-        li "Good."
-
-    else:
+    if chris.relationship.value <= Relationship.MAD.value:
         scene v13s36_5c # FPP. Chris has a mad face on, looking at lindsey, mouth opened (location 3)
         with dissolve
         
@@ -95,6 +84,17 @@ label v13_walk_garden:
         with dissolve
 
         li "Okay..."
+
+    else:
+        scene v13s36_5b # FPP. Chris looking at lindsey, neutral expression, mouth opened (location 3)
+        with dissolve
+        
+        ch "No, it's cool."
+
+        scene v13s36_5
+        with dissolve
+
+        li "Good."
 
     scene v13s36_5e # FPP. Chris reaches for nora hand, nora's and chris's mouth closed (location 3)
     with dissolve

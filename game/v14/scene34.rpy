@@ -20,7 +20,7 @@ label v14s34:
 
         play music "music/v13/Track Scene 40_2.mp3" fadein 2
 
-    $ jenny.messenger.newMessage(_("Hey [name], you busy right now?"), queue =False)
+    $ jenny.messenger.newMessage(_("Hey [name], you busy right now?"), force_send=True)
     $ jenny.messenger.addReply(_("Why, what's up?"))
     $ jenny.messenger.newMessage(_("Well, I've been wanting to swimming in this little lagoon I found."))
     $ jenny.messenger.addReply(_("You're wanting to go now?"))
@@ -69,7 +69,6 @@ label v14s34:
 
         "Decline Jenny's invite":
             $ add_point(KCT.BOYFRIEND)
-            $ jennyfriend = True
             $ jenny.messenger.addReply(_("Sorry, I was already planning to go out with Penelope tonight."))
             $ jenny.messenger.newMessage(_("Oh!"))
             $ jenny.messenger.newMessage(_("No worries, that's fine. I'm happy for both of you actually!"))

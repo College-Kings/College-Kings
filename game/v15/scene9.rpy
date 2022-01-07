@@ -5,7 +5,6 @@
 # Render Count: 4 Unique, 31 Total
 
 label v15s9:
-
     scene v15s9_1 # TPP. MC is now walking along the hallway near the library, slight smile, mouth closed
     with dissolve
 
@@ -92,24 +91,26 @@ label v15s9:
 
     menu:
         "As friends":
-            $ add_point(KCT.BRO)
+            if v13s48_canoeing_as_date:
+                $ add_point(KCT.TROUBLEMAKER)
+            else:
+                $ add_point(KCT.BRO)
+            
             scene v15s9_3
             with dissolve
 
             u "It's just as friends, right? Or do I have to pretend to be your boyfriend? *Laughs*"
 
+            # This removes AubreyTamed from the player and pushes them back into AubreyFriend, NOT FwB.-
             if v13s48_canoeing_as_date:
-                $ add_point(KCT.TROUBLEMAKER)
-                $ aubrey_tamed = False
-                $ aubrey_fwb = False
-                $ aubrey_friend = True
+                $ aubrey.relationship = Relationship.FRIEND
 
                 scene v15s9_3e # FPP. same as v15s9_3d Aubrey has a disapointed expression, looking away from MC
                 with dissolve
 
                 pause 0.75
 
-                scene v15s9_3
+                scene v15s9_3f
                 with dissolve
 
                 au "Well, no... Ha, you don't have to pretend. If you want to go as friends that sounds fine."
@@ -125,9 +126,6 @@ label v15s9:
                 au "Ha..."
 
             else:
-                $ add_point(KCT.BRO)
-                $ aubrey_fwb = True
-
                 scene v15s9_3f # FPP. same as v15s9_3d Aubrey puts a hand to her chest in relief, head tilted slightly upward and looking away, facial expression is that of relief, slight smile, mouth open
                 with dissolve
 
@@ -154,15 +152,18 @@ label v15s9:
                 au "Thank you so much, [name]."
 
         "As your date":
-            $ add_point(KCT.BOYFRIEND)
+            if v13s48_canoeing_as_date:
+                $ add_point(KCT.BOYFRIEND)
+            else:
+                $ add_point(KCT.BRO)
+
             scene v15s9_3b
             with dissolve
 
             u "I'd like to come as your date if that's okay."
 
             if v13s48_canoeing_as_date:
-                $ add_point(KCT.BOYFRIEND)
-                $ aubrey_tamed = True
+                $ aubrey.relationship = Relationship.TAMED
 
                 scene v15s9_3g # FPP. same as v15s9_3b Aubrey slightly blushes, head slightly tilted down, looking at mc, full smile, mouth closed
                 with dissolve
@@ -182,7 +183,7 @@ label v15s9:
                 scene v15s9_3h # FPP. same as v15s9_3a Aubrey slightly pushes Mc with one hand, and covers her mouth from laughter with the other, Aubrey rolls her eyes
                 with dissolve
 
-                au "Okay, don't let it get to your head! Slow down big guy... *Laughs*"
+                au "Okay, don't let it get to your head! Slow down, big guy... *Laughs*"
 
                 scene v15s9_3b
                 with dissolve
@@ -192,7 +193,7 @@ label v15s9:
                 scene v15s9_3i # FPP. same as v15s9_3g Aubrey head is not tilted, looking straight at MC, slight smile, mouth open
                 with dissolve
 
-                au "But yeah, I'm starting to enjoy time with you as... You know..."
+                au "But yeah, I'm starting to enjoy time with you as... you know..."
 
                 scene v15s9_3b
                 with dissolve
@@ -227,10 +228,9 @@ label v15s9:
                 scene v15s9_3l # FPP. same as v15s9_3 Aubrey winks and a nice smile
                 with dissolve
 
-            else:
-                $ add_point(KCT.BRO)
-                $ aubrey_fwb = True
+                pause 0.75
 
+            else:
                 scene v15s9_3m # FPP. same as v15s9_3f Aubreys head is tilted slightly to the side, looking at Mc like a lost puppy, slight smile mouth closed with a slightly curled bottom lip
                 with dissolve
 
@@ -273,7 +273,7 @@ label v15s9:
     scene v15s9_3a
     with dissolve
 
-    au "So, my parents are sending a car to pick me up from the Chick's house on Sunday morning."
+    au "So, my parents are sending a car to pick me up from the Chicks' house on Sunday morning."
 
     scene v15s9_3b
     with dissolve
@@ -325,33 +325,15 @@ label v15s9:
 
     u "Mhmm, got it."
 
-    scene v15s9_3a
+    scene v15s9_3n
     with dissolve
 
-    au "Haha, last thing..."
+    au "Oh, one last thing..."
 
-    scene v15s9_3n # FPP. same as v15s9_3 Aubrey has no expression, mouth open
-    with dissolve
 
     au "Have you seen Nora? Nobody's heard from her since we landed at the airport. You know she broke up with Chris?"
 
-    if not joinwolves:
-        scene v15s9_3o # FPP. same as v15s9_3n Aubrey's mouth is closed
-        with dissolve
-
-        u "Well, shit... No, the last time I saw her was at the airport too. I hope she's okay."
-
-        scene v15s9_3n
-        with dissolve
-
-        au "Me too. So, you don't know if anyone has heard from her?"
-
-        scene v15s9_3o
-        with dissolve
-
-        u "I don't, but I'll keep an eye out and if I hear anything I'll call."
-
-    else:
+    if joinwolves:
         scene v15s9_3o
         with dissolve
 
@@ -366,6 +348,22 @@ label v15s9:
         with dissolve
 
         u "Agreed, I haven't seen her since the airport either. I actually sent her a text last night but nothing... I'll let you know if I hear anything."
+
+    else:
+        scene v15s9_3o # FPP. same as v15s9_3n Aubrey's mouth is closed
+        with dissolve
+
+        u "Well, shit... No, the last time I saw her was at the airport too. I hope she's okay."
+
+        scene v15s9_3n
+        with dissolve
+
+        au "Me too. So, you don't know if anyone has heard from her?"
+
+        scene v15s9_3o
+        with dissolve
+
+        u "I don't, but I'll keep an eye out and if I hear anything I'll call."
 
     scene v15s9_3n
     with dissolve
@@ -394,15 +392,10 @@ label v15s9:
 
     pause 0.75
 
-    scene v15s9_1a # TPP. same as v15s9_1 show mc standing in the hallway, looking up and away holding his chin in thought, mouth closed
+    scene v15s9_1b # TPP. same as v15s9_1 show mc standing in the hallway, looking up and away holding his chin in thought, mouth closed
     with dissolve
 
     u "(Maybe I'll try Nora one more time... Let's see if she picks up the phone.)"
-
-    scene v15s9_1b # TPP. same as v15s9_1a MC takes out his phone, taps it
-    with dissolve
-
-    pause 0.75
 
     scene v15s9_1c # TPP. same as v15s9_1b show a close up shot of Mc putting his phone to his ear, no expression, mouth closed
     with dissolve
@@ -429,27 +422,51 @@ label v15s9:
 
     pause 0.75
 
+    $ v15s10_buyer_max_amount = 425
+
+    if v14_pics_with_linds:
+        $ v15s10_buyer_max_amount += 200
+
+    $ v15s10_buyer_max_amount += (len(v14s47_car_pics) - 1) * 25
+
+    if "v14s47_passenger_2b.webp" in v14s47_car_pics or "v14s47_passenger_2f.webp" in v14s47_car_pics:
+        $ v15s10_buyer_max_amount += 50
+
+    # Buyer's willingness to pay =
+    #    425 by default
+    #   +200 if Lindsey is in the pictures
+    #   + 25 for every picture taken after the first one (can earn up to 3*25 = 75)
+    #   + 50 if special picture taken (either Lindsey Hand on Hips, or Bird)
+    
+    # If the sum of the above is less than the listing price selected for the car in v14s48, the sale fails.
+    
+    # Other things that affect willingness to pay:
+    #     penalty if you lie in the description (does not influence whether scene 10 appears, buyer only realizes it's a lie in scene 10)
+    #     the exact amount of the penalty increases with the original sales price (up to $200)
+    
+    # Sale is for either the listed price, or buyer's willingness to pay by this point, whichever is lowest
+    
+    #   + 50 if you lie in the description and Lindsey is in the pictures (does not influence sale, it's a bonus that the male buyer pays afterwards)
+
     if v14_lindsey_sell:
         scene v15s9_1h # TPP. same as v15s9_1g Different Camera angle
         with dissolve
 
+        pause 0.75
+
         play sound "sounds/vibrate.mp3"
 
-        if v14s48_car_price >= 300 and v14s48_car_price <= 750 and v14_pics_with_linds or v14s48_car_price >= 300 and v14s48_car_price <= 550:
-
-        # -if MC chose to sell the car for between $300 and $750 and Lindsey is in the photos OR MC chose to sell the car for between $300 and $550 and Lindsey is not in the photos
-            $ lindsey.messenger.newMessage("Hey! Somebody wants to check out the car and they sound really interested!", queue=False)
-            $ lindsey.messenger.newMessage("I'm meeting them now. Can you come to where we took the photos?", queue=False)
+        if v14s48_car_price <= v15s10_buyer_max_amount:            
+            $ lindsey.messenger.newMessage("Hey! Somebody wants to check out the car and they sound really interested!", force_send=True)
+            $ lindsey.messenger.newMessage("I'm meeting them now. Can you come to where we took the photos?", force_send=True)
 
             if v14s48_car_description == CarDescription.LIE: # PLACEHOLDER - CHECK WITH OSCAR THE VARIABLE IN THE APP!
                 $ lindsey.messenger.addReply("See? Lying works in mysterious ways, haha OMW", func=None)
 
-                call screen phone
-
             else:
                 $ lindsey.messenger.addReply("Honesty is the best policy! Heading there now.", func=None)
 
-                call screen phone
+            call screen phone
 
             scene v15s9_1f
             with dissolve
@@ -459,24 +476,27 @@ label v15s9:
             scene v15s9_1h
             with dissolve
 
+            pause 0.75
+
             jump v15s10
 
         else:
-        # -if MC chose to sell the car for anything over $750 and Lindsey is in the photos OR MC chose to sell the car for anything over $550 and Lindsey is not in the photos OR MC chose to sell the car for anything under $300 with photos either with or without Lindsey
-
-            $ lindsey.messenger.newMessage("24 hours is up! No interested buyers on the car... :(", queue=False)
+            $ lindsey.messenger.newMessage("24 hours is up! No interested buyers on the car... :(", force_send=True)
             $ lindsey.messenger.addReply("Ugh, that sucks! I'm sorry", func=None)
             $ lindsey.messenger.newMessage("It sucks big time! I think we messed up on the price...")
             $ lindsey.messenger.addReply("Can we change the price and list it again?", func=None)
             $ lindsey.messenger.newMessage("I thought about it, but it costs way too much. Let's just move on.")
             $ lindsey.messenger.addReply("Fuck, okay. What's next?", func=None)
-            $ lindsey.messenger.newMessage("Meet me at the janitor's closet and you'll find out ;)")
+            $ lindsey.messenger.newMessage("Are you on campus right now? We need to plan the next phase of the campaign.", force_send=True)
+            $ lindsey.messenger.addReply("Yeah, I am. What's the plan?", func=None)
+            $ lindsey.messenger.newMessage("Let's go to back to the janitor's closet and you'll find out ;)")
+            $ lindsey.messenger.newMessage("Meet me at the end of the main hallway?")
+            $ lindsey.messenger.addReply("Sure thing, be with you in a bit.", func=None)
 
-            if lindsey_friend: #placeholder
-                $ lindsey.messenger.addReply("OMW", func=None)
-
-            if lindseyrs:
+            if lindsey.relationship.value >= Relationship.FWB.value:
                 $ lindsey.messenger.addReply("Be there soon ;)", func=None)
+            else:
+                $ lindsey.messenger.addReply("OMW", func=None)
 
             call screen phone
 
@@ -497,7 +517,30 @@ label v15s9:
 
             jump v15s12
 
-    elif msrosers and v12_msrose_sex and v15s9_mad_at_ms_rose:
+    elif v14_help_lindsey:
+        scene v15s9_1h
+        with dissolve
+
+        pause 0.75
+
+        play sound "sounds/vibrate.mp3"
+
+        $ lindsey.messenger.newMessage("Hey! Are you on campus right now? We need to plan the next phase of the campaign.", force_send=True)
+        $ lindsey.messenger.addReply("Yeah, I am. What's next?", func=None)
+        $ lindsey.messenger.newMessage("Let's go to back to the janitor's closet and you'll find out ;)")
+        $ lindsey.messenger.newMessage("Meet me at the end of the main hallway?")
+        $ lindsey.messenger.addReply("Sure thing, be with you in a bit.", func=None)
+
+        label v15s9_PhoneContinueLin:
+            if lindsey.messenger.replies:
+                call screen phone
+            if lindsey.messenger.replies:
+                u "(I should reply to Lindsey.)"
+                jump v15s9_PhoneContinueLin
+
+        jump v15s12
+
+    elif v15_mad_at_ms_rose:
         scene v15s9_1h
         with dissolve
 

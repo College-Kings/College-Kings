@@ -1,6 +1,6 @@
 ### SCENE 2: Chloe v7 ending continued
 label v8_cl_start:
-    $ chloers = True
+    $ chloe.relationship = Relationship.FWB
     $ sceneList.add("v8_chloe")
 
     # Note to renderers: Make sure the MC is in his suit and any other props are the same as Chloe's ending in v7

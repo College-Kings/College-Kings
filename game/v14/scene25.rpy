@@ -694,9 +694,7 @@ label v14s25:
             with dissolve
 
             menu:
-
                 "That's a lot of pressure":
-
                     $ add_point(KCT.TROUBLEMAKER)
 
                     u "I don't know Amber. I'm happy you wanna stay clean, but I can't be responsible for you."
@@ -707,9 +705,11 @@ label v14s25:
                     am "I completely understand. It's my cross to carry. Anyways..."
 
                 "Of course":
-
                     $ add_point(KCT.BOYFRIEND)
 
+                    scene v14s25_8a
+                    #with dissolve
+                    
                     u "Of course, I want what's best for you."
 
                     scene v14s25_11b # TPP. Same as v14s25_11, Show Amber and MC hugging.
@@ -1033,10 +1033,10 @@ label v14s25:
             am "*Whispers* You wanna do something about that?"
 
             menu:
-                "Yeah I fucking do.":
+                "Yeah I fucking do":
                     $ add_point(KCT.TROUBLEMAKER)
-                    $ v14_amber_sex = True
-                    $ amberrs = True
+                    $ sceneList.add("v14_amber")
+                    $ amber.relationship = Relationship.FWB
 
                     scene v14s25_21a # FPP. Same as v14s25_21, Amber flirtatious smile, mouth closed.
                     with dissolve

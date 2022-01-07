@@ -263,8 +263,8 @@ label v12_nora_room:
                 jump v12_nora_no_sex
 
             "Kiss her":
-                $ v12_nora_sex = True
-                $ norars = True
+                $ sceneList.add("v12_nora")
+                $ nora.relationship = Relationship.FWB
 
                 stop music fadeout 3
                 play music "music/v12/Track Scene 35a_1.mp3" fadein 2
@@ -694,7 +694,7 @@ label v12_nora_sex:
         scene v12nos37a # FPP. Same as v12nos38, Nora smiling, mouth closed
         with dissolve
 
-        if v12_lindsey_sex and v12_nora_sex and v12_lauren_sex and v12_msrose_sex:
+        if "v12_lindsey" in sceneList and "v12_nora" in sceneList and "v12_lauren" in sceneList and "v12_rose" in sceneList:
             $ grant_achievement("city_of_love")
 
         u "You too..."

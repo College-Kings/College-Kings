@@ -1,7 +1,7 @@
-# SCENE 20: Chloe Brief 
-# Locations: Libray
+# SCENE 20: Chloe Brief
+# Locations: Library
 # Characters: CHLOE (Outfit: 3), MC (Outfit: 9)
-# Time: morning
+# Time: Morning
 
 label v15s20:
     scene v15s20_1 # TPP. Show MC walking into the Libray, slight smile, mouth closed.
@@ -29,28 +29,33 @@ label v15s20:
 
     pause 0.75
 
-    scene v15s20_5 # FPP. MC sitting next to Chloe. Chloe looking at MC, MC looking at Chloe, Chloe slight smile, mouth closed.
-    with dissolve
-
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         menu:
-            "Ask for a kiss.":
+            "Ask for a kiss":
                 $ add_point(KCT.BOYFRIEND)
+                
+                scene v15s20_5 # FPP. MC sitting next to Chloe. Chloe looking at MC, MC looking at Chloe, Chloe slight smile, mouth closed.
+                with dissolve
+
                 u "I know you're super busy, but can your boyfriend get a kiss first? *Chuckles*"
 
                 scene v15s20_5a # FPP. Same as v15s20_5, Chloe slight smile, mouth open.
                 with dissolve
 
-                cl "Of course, haha. Sorry! My mind is just like, completely focused on this meeting with the dean."
+                cl "Of course, haha. Sorry! My mind is just like, completely focused on this meeting with the Dean."
 
                 scene v15s20_6 # TPP. Show MC and Chloe having a quick kiss.
                 with dissolve
 
-            "Say nothing.":
+                pause 0.75
 
+            "Say nothing":
+                scene v15s20_5 # FPP. MC sitting next to Chloe. Chloe looking at MC, MC looking at Chloe, Chloe slight smile, mouth closed.
+                with dissolve
+                
                 u "(I was expecting a hello kiss, but I'll keep quiet about it... I don't want to throw her off her game.)"
 
-    if mr_lee_meeting: # Placeholder if MC chose to meet with Mr. Lee.
+    if v15_chloe_mrleesupport: # Placeholder if MC chose to meet with Mr. Lee.
         scene v15s20_5a
         with dissolve
 
@@ -66,10 +71,10 @@ label v15s20:
 
         cl "Thanks, so here's my game plan so far... I've written down some notes."
 
-        # -The UI pops up showing Mr Lee's character brief-
-        # For you Oscar <3
+        show screen v15_teacher_brief_icon("mr_lee")
+        # -The UI pops up showing Mr. Lee's character brief-
 
-        cl "We already have a good idea what Mr Lee is all about. He likes professionalism and manners."
+        cl "We already have a good idea what Mr. Lee is all about. He likes professionalism and manners."
 
         cl "He's very detail-orientated and likes to talk about his philosophy on life..."
 
@@ -117,11 +122,11 @@ label v15s20:
 
         cl "Haha, shh! Come on, we need to focus."
 
-    else: ###if MsRoseMeeting: #Placeholder for if MC chose to meet with Ms Rose.
+    else: # if MsRoseMeeting:
         scene v15s20_5a
         with dissolve
 
-        cl "When Ms Rose arrives, we can head over to the meeting room I booked."
+        cl "When Ms. Rose arrives, we can head over to the meeting room I booked."
 
         scene v15s20_5
         with dissolve
@@ -133,14 +138,15 @@ label v15s20:
 
         cl "I've also written down some notes for the meeting."
 
-        # -The UI pops up showing Ms Rose's character brief-
-        # Oscar :D <3
+        show screen v15_teacher_brief_icon("ms_rose")
+        # -The UI pops up showing Ms. Rose's character brief-
 
-        cl "Basically, Ms Rose is all about the girls. She loves to support other women, to help them reach their goals, etc..."
+        cl "Basically, Ms. Rose is all about the girls. She loves to support other women, to help them reach their goals, etc..."
 
         cl "So personally, I think she'll like the idea of reduced tuition for all Chicks."
 
-        cl "She's big into women being independent and the Chicks being a positive influence, so I think she'll like that I'm being ambitious for the good of everyone here."
+        cl "She's big into women being independent and the Chicks being a positive influence."
+        cl "So I think she'll like that I'm being ambitious for the good of everyone here."
 
         scene v15s20_5
         with dissolve
@@ -172,7 +178,7 @@ label v15s20:
         scene v15s20_5b
         with dissolve
 
-        cl "I can see Ms Rose bringing her up in the conversation, because she's a Chick, and her stepdaughter..."
+        cl "I can see Ms. Rose bringing her up in the conversation, because she's a Chick, and her stepdaughter..."
 
         cl "But I'd like to make sure we avoid that. This isn't about Nora. So, whatever you do, don't mention her."
 
@@ -188,21 +194,22 @@ label v15s20:
 
         cl "She hates the idea of men being large and in charge when it comes to her occupation..."
 
-        scene v15s20_5
-        with dissolve
-
-        u "(Well, she loves it in the bedroom... Or should I say kitchen...)"
-
-        if chloegf and V15_ms_rose_sex:
-            scene v15s20_5d # FPP. Same as v15s20_5c, Chloe confused, mouth open.
+        if "v15_rose" in sceneList:
+            scene v15s20_5
             with dissolve
 
-            cl "Are you blushing? *Chuckles* What's happening?"
+            u "(Well, she loves it in the bedroom... Or should I say kitchen...)"
 
-            scene v15s20_5e # FPP. Same as v15s20_5d, Chloe confused, mouth closed
-            with dissolve
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                scene v15s20_5d # FPP. Same as v15s20_5c, Chloe confused, mouth open.
+                with dissolve
 
-            u "What? Haha, no, sorry. Go on..."
+                cl "Are you blushing? *Chuckles* What's happening?"
+
+                scene v15s20_5e # FPP. Same as v15s20_5d, Chloe confused, mouth closed
+                with dissolve
+
+                u "What? Haha, no, sorry. Go on..."
 
         scene v15s20_5a
         with dissolve
@@ -229,42 +236,54 @@ label v15s20:
 
         cl "Shh... She'll be here any minute. We have to focus, haha."
 
-        scene v15s20_5
-        with dissolve
+    scene v15s20_5
+    with dissolve
 
-        u "*Sighs*"
+    u "*Sighs*"
 
-        scene v15s20_5a
-        with dissolve
+    scene v15s20_5a
+    with dissolve
 
-        cl "Do you think we should take this cheat sheet with us? Or would that ruin everything?"
+    cl "Do you think we should take this cheat sheet with us? Or would that ruin everything?"
 
-        scene v15s20_5
-        with dissolve
+    if v15_chloe_mrleesupport:
+        show screen v15_teacher_brief("mr_lee")
+    else:
+        show screen v15_teacher_brief("ms_rose")
 
-        menu:
-            "Take the notes.":
-                $ add_point(KCT.TROUBLEMAKER)
-                $ v15_took_notes = True
-                u "Yeah, we better take them. As long as we aren't staring at it the whole time, I think it's helpful to refer to."
+    menu:
+        "Take the notes":
+            $ add_point(KCT.TROUBLEMAKER)
+            $ v15_took_notes = True
 
-                scene v15s20_5a
-                with dissolve
+            scene v15s20_5
+            with dissolve
 
-                cl "Just don't look at it too much, it might seem like you're not paying attention."
+            u "Yeah, we better take them. As long as we aren't staring at it the whole time, I think it's helpful to refer to."
 
-                scene v15s20_5
-                with dissolve
+            scene v15s20_5a
+            with dissolve
 
-                u "Got it."
+            cl "Just don't look at it too much, it might seem like you're not paying attention."
 
-            "Don't take the notes.":
-                $ add_point(KCT.BOYFRIEND)
-                u "Nah, I don't want to risk pissing anyone off. Besides, I remember it all anyway. You can put them away."
+            scene v15s20_5
+            with dissolve
 
-                scene v15s20_5a
-                with dissolve
+            u "Got it."
 
-                cl "Haha, okay Mr. Confident. I trust you."
+        "Don't take the notes":
+            $ add_point(KCT.BOYFRIEND)
+            
+            hide screen v15_teacher_brief_icon
+
+            scene v15s20_5
+            with dissolve
+
+            u "Nah, I don't want to risk pissing anyone off. Besides, I remember it all anyway. You can put them away."
+
+            scene v15s20_5a
+            with dissolve
+
+            cl "Haha, okay Mr. Confident. I trust you."
 
     jump v15s21

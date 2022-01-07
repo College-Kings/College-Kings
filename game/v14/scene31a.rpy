@@ -394,7 +394,7 @@ label v14s31a:
     scene v14s31a_3e
     with dissolve
 
-    ca "You already got a shit ton of beef with Grayson. How would an alliance work if the president doesn't even fuck with you like that?"
+    ca "You already got a shit ton of beef with Grayson. How would an alliance work if the President doesn't even fuck with you like that?"
 
     scene v14s31a_3d
     with dissolve
@@ -417,7 +417,7 @@ label v14s31a:
     menu:
         "Say Chloe is the hotter chick":
             $ add_point(KCT.BRO)
-            u "Tell everyone Chloe is the hotter chick and that the hottest chick should be the Chicks president."
+            u "Tell everyone Chloe is the hotter chick and that the hottest chick should be the Chicks President."
 
             scene v14s31a_3a
             with dissolve
@@ -466,12 +466,12 @@ label v14s31a:
     scene v14s31a_6b # FPP Same angle as 6, Chloe with neutral expression and mouth open, Cameron's mouth closed
     with dissolve
 
-    cl "If you back me in my campaign, I'll back you in any race you plan to take on. And all of them."
+    cl "If you back me in my campaign, I'll back you in any race you plan to take on. And I mean any."
 
     scene v14s31a_6c # FPP Same angle as 6, Cameron has taken a step back and looks shocked, mouth open. Chloe's mouth closed
     with dissolve
 
-    ca "How did you know I wanted to run for president?"
+    ca "How did you know I wanted to run for President?"
 
     scene v14s31a_5e
     with dissolve
@@ -575,9 +575,9 @@ label v14s31a:
 
                 ca "Ha... Alright."
 
-            "She says what she needs to": # -If She says what she needs to (creates cameronBro for Wolves)
+            "She says what she needs to": # -If She says what she needs to (creates cameron Bro for Wolves)
                 $ add_point(KCT.BRO)
-                $ cameronBro = True
+                $ cameron.relationship = Relationship.BRO
                 u "She knows what she needs to say. She's damn good at it too."
 
                 scene v14s31a_3c
@@ -642,7 +642,7 @@ label v14s31a:
 
         u "Haha, you do that."
 
-        if cameronBro:
+        if cameron.relationship.value >= Relationship.BRO.value:
             scene v14s31a_3a
             with dissolve
 

@@ -299,7 +299,7 @@ label v10_cafe_w_jenny:
                 scene v10scwj11b # TPP. Same as 11, laugh, mouth open.
                 with dissolve
 
-                u "And if they don't then I'll just rob a bank for you. "
+                u "And if they don't then I'll just rob a bank for you."
 
             "Be supportive":
                 $ add_point(KCT.BOYFRIEND)

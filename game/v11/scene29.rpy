@@ -140,7 +140,7 @@ label v11wakeupa:
 
         u "Probably because you brought a house's worth of stuff. Here, let me help you."
 
-        if chloemad:
+        if chloe.relationship.value <= Relationship.MAD.value:
             scene v11hr3a # FPP. Same as v11hr3, Chloe slight smile, mouth open
             with dissolve
 
@@ -222,7 +222,7 @@ label v11wakeupa:
 
             cl "Stop, you're embarrassing me."
 
-            if chloers:
+            if chloe.relationship.value >= Relationship.FWB.value:
                 scene v11hr3h # FPP. Same cam as v11hr3, Show MC grabbing Chloe's chin, she's slightly embarrassed, mouth closed, looking at MC
                 with dissolve
 
@@ -391,7 +391,7 @@ label v11wakeupa:
 
         u "And I didn't get an invite? Wow..."
 
-        if rileyrs:
+        if riley.relationship.value >= Relationship.FWB.value:
             scene v11hr11d # FPP. Same as v11hr11, Riley seductive look, mouth open
             with dissolve
 
@@ -453,7 +453,7 @@ label v11wakeupa:
 
     #pause 0.75
     stop music fadeout 3
-    if v11_aubrey_sex and laurenrs:
+    if v11_lauren_caught_aubrey:
         jump v11_lauren_apology
     else:
         jump v11_lauren_store

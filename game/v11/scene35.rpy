@@ -5,7 +5,7 @@
 
 label v11_riley_sex:
     play music "music/v10/Track Scene 40_2.mp3" fadein 2
-    if not rileyrs:
+    if riley.relationship.value < Relationship.FWB.value:
 
         scene v11ris1 # TPP. Show MC walking through the door to his hotel room, MC slight smile, mouth closed (Riley not in shot here)
         with dissolve
@@ -275,7 +275,7 @@ label v11_riley_sex:
 
         jump v11_imre_ryan_grapple
 
-    else: # if rileyrs
+    else:
         label v11_riley_sex_sg:
         scene v11ris1
         with dissolve

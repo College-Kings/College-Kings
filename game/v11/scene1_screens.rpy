@@ -33,7 +33,7 @@ screen v11s1_hallway1():
             if not "jenny" in freeroam7:
                 hotspot (1443, 264, 216, 488) action Jump("v11s1_jenny") # Speak to Jenny
             else:
-                hotspot (1443, 264, 216, 488) action Show("endFreeRoamConfirm", continueLabel="v11_case_verdict")
+                hotspot (1443, 264, 216, 488) action Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v11_case_verdict")])
             if not "delib" in freeroam7:
                 hotspot (18, 25, 282, 1049) action Jump("v11s1_delib") # Check door
             else:

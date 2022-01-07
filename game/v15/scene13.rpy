@@ -4,6 +4,10 @@
 # Time: Afternoon
 # Render Count: 12 Unique Renders, 33 Total
 
+init python:
+    def v15s13_reply1():
+        riley.messenger.newMessage("Good luck! You're gonna need it...")
+
 label v15s13:
     if joinwolves:
         scene v15s13_1 # TPP. MC enters his WOLVES bedroom, carrying a small bag of donuts, He leaves the door half open, slight smile, mouth closed
@@ -52,6 +56,7 @@ label v15s13:
         menu:
             "Agree with Imre":
                 $ add_point(KCT.BRO)
+                
                 u "Yeah, I know... I'll do better next time."
 
                 scene v15s13_3a
@@ -71,6 +76,10 @@ label v15s13:
 
             "Dismiss Imre":
                 $ add_point(KCT.TROUBLEMAKER)
+                
+                scene v15s13_3b # FPP. same as v15s13_3a Imre's mouth is closed
+                #with dissolve
+
                 u "Why are you creeping outside my room, Imre? I'm trying to study here."
 
                 scene v15s13_3c
@@ -83,25 +92,32 @@ label v15s13:
 
                 u "I will. *Chuckles*"
 
+        play sound "sounds/vibrate.mp3"
+        $ riley.messenger.newMessage("Hey! I'm assuming you'll be at Lauren's Halloween birthday party later?", force_send=True)
+        $ riley.messenger.addReply("Yeah, I'll be there!", func=None)
+        $ riley.messenger.newMessage("Just FYI, the stores are running low on costumes so if you haven't got one already, hurry up and get one... lol")
+        $ riley.messenger.addReply("Shit... I haven't got one yet, haha.", func=None)
+        $ riley.messenger.newMessage("Why am I not surprised? :D")
+        $ riley.messenger.addReply("I'm on my way out now, wish me luck!", v15s13_reply1)
+
         scene v15s13_3d # FPP. same as v15s13_3 Imre disappears again, closing the door
         with dissolve
 
-        play sound "sounds/vibrate.mp3"
         pause 0.75
 
         scene v15s13_2d # TPP. same as v15s13_2c MC puts down the donut on his WOLVES desk, pulls out his phone and checks his texts to see a message from Riley, slight smile, mouth closed, looking at his phone
         with dissolve
 
-        $ riley.messenger.newMessage("Hey! I'm assuming you'll be at Lauren's Halloween birthday party later?", queue=False)
-        $ riley.messenger.addReply("Yeah, I'll be there!", func=None)
-        $ riley.messenger.newMessage("Just FYI, the stores are running low on costumes so if you haven't got one already, hurry up and get one... lol", queue=False)
-        $ riley.messenger.addReply("Shit... I haven't got one yet, haha.", func=None)
-        $ riley.messenger.newMessage("Why am I not surprised? :D")
-        $ riley.messenger.addReply("I'm on my way out now, wish me luck!", func=None)
-        $ riley.messenger.newMessage("Good luck! You're gonna need it...")
-
-        call screen phone
-
+        pause 0.75
+        
+        label v15s13_PhoneContinue:
+            if riley.messenger.replies:
+                play sound "sounds/vibrate.mp3"
+                call screen phone
+            if riley.messenger.replies:
+                u "(I should reply to Riley.)"
+                jump v15s13_PhoneContinue
+                
         scene v15s13_2e # TPP. same as v15s13_2d MC exits his texts, puts his phone away, and looks down at the donut he put on his WOLVES desk
         with dissolve
 
@@ -110,13 +126,18 @@ label v15s13:
         menu:
             "Eat the donut":
                 $ add_point(KCT.TROUBLEMAKER)
+                $ grant_achievement("mmmm_donut")
+                
                 u "(I'll just do an extra gym session this week to even things out.) *Chuckles*"
 
                 scene v15s13_2f # TPP. same as v15s13_2e MC grabs the donut and shoves it in his mouth
                 with dissolve
 
+                pause 0.75
+
             "Don't eat the donut":
                 $ add_point(KCT.BRO)
+                
                 u "(Next time I'll get a healthier snack...)"
             
         scene v15s13_5 # show MC standing up and throwing away the donut bag in his WOLVES room, no expression, mouth closed
@@ -126,6 +147,8 @@ label v15s13:
 
         scene v15s13_6 # show MC walking out of his WOLVES bedroom, no expression, mouth closed
         with dissolve
+
+        pause 0.75
 
         jump v15s17
 
@@ -185,8 +208,9 @@ label v15s13:
 
         menu:
             "A blueberry?":
-                $ mc.quirks["pop_culture"] = True
+                # $ mc.quirks["pop_culture"] = True # Being re-evaluated
                 $ add_point(KCT.BRO)
+                
                 u "Donuts turn you into blueberries?"
 
                 scene v15s13_9c # FPP. same as v15s13_9a Grayson has a laughing expression, mouth open
@@ -205,8 +229,12 @@ label v15s13:
                 gr "Ha, fuck you."
 
             "Chocolate factory movie?":
-                $ mc.quirks["boomer"] = True
+                # $ mc.quirks["boomer"] = True # Being re-evaluated
                 $ add_point(KCT.TROUBLEMAKER)
+                
+                scene v15s13_9b
+                #with dissolve
+
                 u "Chocolate factory movie? Are you feeling okay? *Chuckles*"
 
                 scene v15s13_9a
@@ -230,6 +258,7 @@ label v15s13:
         menu:
             "I will":
                 $ add_point(KCT.BRO)
+                
                 u "I know, I will. This is only my first just so you know."
 
                 scene v15s13_9c
@@ -260,8 +289,11 @@ label v15s13:
                 scene v15s13_9e # FPP. same as v15s13_9d Grayson turns his back to MC and starts to walk out
                 with dissolve
 
+                pause 0.75
+
             "You don't eat donuts?":
                 $ add_point(KCT.TROUBLEMAKER)
+                
                 u "Are you serious right now? You're telling me that you never have donuts, or cake, or cola?"
 
                 scene v15s13_9d
@@ -284,24 +316,31 @@ label v15s13:
 
                 u "(Such a dick.)"
 
+        play sound "sounds/vibrate.mp3"
+        $ riley.messenger.newMessage("Hey! I'm assuming you'll be at Lauren's Halloween birthday party later?", force_send=True)
+        $ riley.messenger.addReply("Yeah, I'll be there!", func=None)
+        $ riley.messenger.newMessage("Just FYI, the stores are running low on costumes so if you haven't got one already, hurry up and get one... lol")
+        $ riley.messenger.addReply("Shit... I haven't got one yet, haha.", func=None)
+        $ riley.messenger.newMessage("Why am I not surprised? :D")
+        $ riley.messenger.addReply("I'm on my way out now, wish me luck!", v15s13_reply1)
+
         scene v15s13_9f # FPP. same as v15s13_9 Grayson disappears again, closing the door
         with dissolve
 
-        play sound "sounds/vibrate.mp3"
         pause 0.75
 
         scene v15s13_8d # TPP. same as v15s13_8c MC puts down the donut on his APES desk, pulls out his phone and checks his texts to see a message from Riley, slight smile, mouth closed, looking at his phone
         with dissolve
 
-        $ riley.messenger.newMessage("Hey! I'm assuming you'll be at Lauren's Halloween birthday party later?", queue=False)
-        $ riley.messenger.addReply("Yeah, I'll be there!", func=None)
-        $ riley.messenger.newMessage("Just FYI, the stores are running low on costumes so if you haven't got one already, hurry up and get one... lol", queue=False)
-        $ riley.messenger.addReply("Shit... I haven't got one yet, haha.", func=None)
-        $ riley.messenger.newMessage("Why am I not surprised? :D")
-        $ riley.messenger.addReply("I'm on my way out now, wish me luck!", func=None)
-        $ riley.messenger.newMessage("Good luck! You're gonna need it...")
+        pause 0.75
 
-        call screen phone
+        label v15s13_PhoneContinue2:
+            if riley.messenger.replies:
+                play sound "sounds/vibrate.mp3"
+                call screen phone
+            if riley.messenger.replies:
+                u "(I should reply to Riley.)"
+                jump v15s13_PhoneContinue2
 
         scene v15s13_8e # TPP. same as v15s13_8d MC exits his texts, puts his phone away, and looks down at the donut he put on his APES desk
         with dissolve
@@ -311,13 +350,18 @@ label v15s13:
         menu:
             "Eat the donut":
                 $ add_point(KCT.TROUBLEMAKER)
+                
+                $ grant_achievement("mmmm_donut")
                 u "(I'll just do an extra gym session this week to even things out.) *Chuckles*"
 
                 scene v15s13_8f # TPP. same as v15s13_8e MC grabs the donut and shoves it in his mouth
                 with dissolve
 
+                pause 0.75
+
             "Don't eat the donut":
                 $ add_point(KCT.BRO)
+                
                 u "(Next time I'll get a healthier snack...)"
             
         scene v15s13_11 # show MC standing up and throwing away the donut bag in his APES room, no expression, mouth closed

@@ -98,14 +98,14 @@ label v13s4:
 
         u "*Chuckles* Right behind you."
 
-        if not chloegf:
-            scene v13s4_5a # TPP. Same as v13s4_5, but instead of Riley, it's Chloe, Chloe frowning, mouth closed, carrying her luggage
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            scene v13s4_5b # TPP. Same as v13s4_5a, but MC carrying Chloe's luggage as well
             with dissolve
 
             pause 1
 
         else:
-            scene v13s4_5b # TPP. Same as v13s4_5a, but MC carrying Chloe's luggage as well
+            scene v13s4_5a # TPP. Same as v13s4_5, but instead of Riley, it's Chloe, Chloe frowning, mouth closed, carrying her luggage
             with dissolve
 
             pause 1

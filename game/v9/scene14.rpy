@@ -100,9 +100,9 @@ label v9_thur_w_punch:
 
     guyc "Made us proud, bro."
 
-    $ s15KiwiiPost = KiwiiPost("Chris", "v9/v9hlw8c.webp", "That's my boy! Go [name]! Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
-    $ s15KiwiiPost.newComment("Sebastian", "Fuckin' A!", queue=False)
-    $ s15KiwiiPost.newComment("Aubrey", "Knew he had it in him!", queue=False)
+    $ v9s14KiwiiPost = KiwiiPost(chris, "v9/v9hlw8c.webp", "That's my boy! Go [name]! Fuck yeah!", numberLikes=renpy.random.randint(100, 200))
+    $ v9s14KiwiiPost.newComment(sebastian, "Fuckin' A!", numberLikes=renpy.random.randint(15, 35), force_send=True)
+    $ v9s14KiwiiPost.newComment(aubrey, "Knew he had it in him!", numberLikes=renpy.random.randint(15, 35), force_send=True)
 
     scene v9trs4a # TPP. Same camera as v9trs4, Show MC looking at his phone in hand.
     with dissolve

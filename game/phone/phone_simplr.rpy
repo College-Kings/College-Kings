@@ -1,6 +1,4 @@
 init python:
-    import os
-
     class SimplrContact(Contact):
         """
         The Contact class for Simplr. Used to manage and create messages for simplr characters.
@@ -11,19 +9,19 @@ init python:
             condition (str): A string repersenting a python condition which deems if the character unlocks 
         """
 
-        def __init__(self, name, condition="True"):
+        def __init__(self, name):
             self.name = name
-            self.condition = condition
-
-            self.profile_picture = "images/nonplayable_characters/{0}/{0}_profile_picture.webp".format(name.lower())
+            self.condition = True
 
             for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, name.lower(), "large_profile_pictures")):
                 self.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(name.lower(), filename) for filename in filenames]
 
-            self.sentMessages = []
-            self.pendingMessages = []
+            self.sent_messages = []
+            self.pending_messages = []
 
-            simplr_pendingContacts.append(self)
+        @property
+        def profile_picture(self):
+            return "images/nonplayable_characters/{0}/{0}_profile_picture.webp".format(self.name.lower())
 
         def removeContact(self):
             simplr_pendingContacts.pop(0)
@@ -34,7 +32,7 @@ init python:
             if self.condition:
                 simplr_contacts.append(self)
             
-        def newMessage(self, message, queue=True):
+        def newMessage(self, message, force_send=False):
             message = Message(self, message)
 
             # Moves contact to the top when recieving a new message
@@ -42,17 +40,17 @@ init python:
                 simplr_contacts.insert(0, simplr_contacts.pop(simplr_contacts.index(self)))
 
             # Add message to queue
-            if queue:
-                self.pendingMessages.append(message)
+            if not force_send:
+                self.pending_messages.append(message)
             else:
-                self.pendingMessages = []
-                self.sentMessages.append(message)
+                self.pending_messages = []
+                self.sent_messages.append(message)
 
-            if self in simplr_contacts: simplrApp.newNotification()
+            if self in simplr_contacts: simplr_app.notification = True
             
             return message
 
-        def newImgMessage(self, img, queue=True):
+        def newImgMessage(self, img, force_send=False):
             message = ImageMessage(self, img)
 
             # Moves contact to the top when recieving a new message
@@ -60,13 +58,13 @@ init python:
                 simplr_contacts.insert(0, simplr_contacts.pop(simplr_contacts.index(self)))
 
             # Add message to queue
-            if queue:
-                self.pendingMessages.append(message)
+            if not force_send:
+                self.pending_messages.append(message)
             else:
-                self.pendingMessages = []
-                self.sentMessages.append(message)
+                self.pending_messages = []
+                self.sent_messages.append(message)
 
-            if self in simplr_contacts: simplrApp.newNotification()
+            if self in simplr_contacts: simplr_app.notification = True
 
             return message
 
@@ -75,12 +73,12 @@ init python:
 
             # Append reply to last sent message
             try:
-                if self.pendingMessages:
-                    self.pendingMessages[-1].replies.append(reply)
+                if self.pending_messages:
+                    self.pending_messages[-1].replies.append(reply)
                 else:
-                    self.sentMessages[-1].replies.append(reply)
+                    self.sent_messages[-1].replies.append(reply)
             except IndexError:
-                message = self.newMessage("", queue=False)
+                message = self.newMessage("", force_send=True)
                 message.replies.append(reply)
 
         def addImgReply(self, image, func):
@@ -88,20 +86,20 @@ init python:
 
             # Append reply to last sent message
             try:
-                if self.pendingMessages:
-                    self.pendingMessages[-1].replies.append(reply)
+                if self.pending_messages:
+                    self.pending_messages[-1].replies.append(reply)
                 else:
-                    self.sentMessages[-1].replies.append(reply)
+                    self.sent_messages[-1].replies.append(reply)
             except Exception:
-                self.newMessage("", queue=False)
-                self.pendingMessages[-1].replies.append(reply)
+                self.newMessage("", force_send=True)
+                self.pending_messages[-1].replies.append(reply)
 
         def seenMessage(self):
-            if not any([contact.replies for contact in simplr_contacts]):
-                simplrApp.seenNotification()
+            if not any(contact.replies for contact in simplr_contacts):
+                simplr_app.notification = False
 
         def getMessage(self, message):
-            for msg in self.sentMessages:
+            for msg in self.sent_messages:
                 try:
                     if message == msg.message:
                         return msg
@@ -115,12 +113,12 @@ init -1:
     default simplr_contacts = []
 
 screen simplr_app():
-    tag phoneTag
+    tag phone_tag
     python:
         try: simplr_contact = simplr_pendingContacts[0]
         except IndexError: simplr_contact = None
 
-    use phoneTemplate:
+    use base_phone:
         fixed:
             pos (770, 168)
             xysize (375, 740)
@@ -173,11 +171,11 @@ screen simplr_app():
 
 
 screen simplr_contacts():
-    tag phoneTag
+    tag phone_tag
 
-    use phoneTemplate:
+    use base_phone:
 
-        add "images/contactsscreen.webp" at truecenter # Contact Screen Background
+        add "images/phone/contacts_screen.webp" at truecenter # Contact Screen Background
 
         fixed:
             xysize(375, 78)
@@ -213,9 +211,9 @@ screen simplr_contacts():
 
 
 screen simplr_messenger(contact=None):
-    tag phoneTag
+    tag phone_tag
 
-    use phoneTemplate:
+    use base_phone:
 
         add "images/msg.webp" at truecenter # Messenger Screen Background
 
@@ -251,7 +249,7 @@ screen simplr_messenger(contact=None):
 
                 null height 5
                 
-                for message in contact.sentMessages:
+                for message in contact.sent_messages:
                     if isinstance(message, Message) and message.message.strip():
                         textbutton message.message style "msgleft"
                     elif isinstance(message, ImageMessage):
@@ -302,12 +300,11 @@ screen simplr_image(img=None):
         if os.path.splitext(img)[0][-3:] != "big":
             bigImage = os.path.splitext(img)[0] + "big" + os.path.splitext(img)[1]
 
-    add "images/darker.webp"
+    add "darker_80"
     if renpy.loadable(bigImage):
         add bigImage at truecenter
     else:
         add img at truecenter
 
-    imagebutton:
-        idle "images/bigbutton.webp"
-        action Hide("phone_image")
+    button:
+        action Hide("simplr_image")

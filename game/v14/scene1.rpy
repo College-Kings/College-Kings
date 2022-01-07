@@ -4,20 +4,20 @@
 # Time: Night
 
 label v14_start:
-
     if path_builder and not pb_name_set:
         $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
         $ pb_name_set = True
 
-    show screen phoneIcon
+    show screen phone_icon
     
-    if emmy.simplr.pendingMessages: #for compatibility with v12 players where emmy replies were not forced to be seen
-        $ emmy.simplr.pendingMessages = []
-        $ emmy.simplr.sentMessages[-1].replies = []
+    if emmy.simplr.pending_messages: #for compatibility with v12 players where emmy replies were not forced to be seen
+        $ emmy.simplr.pending_messages = []
+        $ emmy.simplr.sent_messages[-1].replies = []
 
-    if aubreyrs and rileyrs:
+    if aubrey.relationship.value >= Relationship.FWB.value and riley.relationship.value >= Relationship.FWB.value:
         $ v13_threesomeending = True
         jump v14s01
+
     else:
         jump v14s01a
     
@@ -29,7 +29,9 @@ label v14s01:
 
     u "(Are they seriously trying to have a threesome...?)"
 
-    call screen VoiceActing_Toggle()
+    call screen confirm("This act has voice acted sex scenes. Each girl has a unique voice and moans accordingly. Would you like to enable voice acting in the sex scenes?",
+        yes_action=[SetVariable("voice_acted", True), Return()],
+        no_action=[SetVariable("voice_acted", False), Return()])
 
     scene v14s01_1a # FPP. Same as v14s01_1, Riley and Aubrey removing their bras, they're looking at MC seductively, mouths closed
     with dissolve
@@ -46,7 +48,7 @@ label v14s01:
         "We're doing this":
             $ add_point(KCT.TROUBLEMAKER)
             
-            $ v13_FirstThreesome = True
+            $ sceneList.add("v14_threesome")
             u "I'm gonna feel much better after this."
 
             scene v14s01_1c # FPP. Samer as v14s01_1b, but Aubrey mouth open, Riley mouth closed, Aubrey looking at Riley, Riley looking at Aubrey

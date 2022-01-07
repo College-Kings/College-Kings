@@ -1,4 +1,4 @@
-# SCENE 14: If MC got mad at Ms Rose, she wants to make him dinner
+# SCENE 14: If MC got mad at Ms. Rose, she wants to make him dinner
 # Locations: Out front of College Building
 # Characters: MC (Outfit: 5), Ms. Rose (Outfit: 1)
 # Time: Afternoon
@@ -9,7 +9,7 @@ label v15s14:
 
     pause 0.75
 
-    scene v15s14_2 # TPP. Show Ms Rose standing by her car waving at MC, Slight smile, mouth open.
+    scene v15s14_2 # TPP. Show Ms. Rose standing by her car waving at MC, Slight smile, mouth open.
     with vpunch
 
     ro "Hey, [name]!"
@@ -19,7 +19,7 @@ label v15s14:
 
     u "*Sighs* (What does she want now?)"
 
-    scene v15s14_4 # TPP. Shot from behind MC walking towards Ms Rose who is stood by her car, Ms Rose slight smile, mouth closed, MC's face not shown.
+    scene v15s14_4 # TPP. Shot from behind MC walking towards Ms. Rose who is stood by her car, Ms. Rose slight smile, mouth closed, MC's face not shown.
     with dissolve
 
     pause 0.75
@@ -30,6 +30,7 @@ label v15s14:
     menu:
         "Say nothing":
             $ add_point(KCT.BRO)
+            
             u "..."
 
             scene v15s14_5a # FPp. Same as v15s14_5, Ms. Rose, Apologetic expression, mouth open
@@ -37,8 +38,9 @@ label v15s14:
 
             ro "Oh, is this the silent treatment?"
 
-        "Express you're not happy":
+        "I'm not happy":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s14_5b # FPP. Same as v15s15_5a, Ms. Rose, Apologetic expression, mouth closed.
             with dissolve
 
@@ -54,7 +56,7 @@ label v15s14:
 
     u "How are you going to make it up to me?"
 
-    scene v15s14_5c # FPP. Same as v15s5_5, Ms Rose, slight smile, mouth open.
+    scene v15s14_5c # FPP. Same as v15s5_5, Ms. Rose, slight smile, mouth open.
     with dissolve
 
     ro "I can start by making you dinner, come on."
@@ -71,6 +73,7 @@ label v15s14:
     menu:
         "Don't drug me":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s14_5b
             with dissolve
             
@@ -86,39 +89,57 @@ label v15s14:
 
             u "*Sighs*"
 
+            scene v15s14_5c
+            with dissolve
+
+            ro "Hop in!"
+
+            scene v15s14_6 # TPP. Show MC and Ms. Rose getting into her car, MC neutral face, mouth closed, Ms. Rose, slight smile, mouth closed.
+            with dissolve
+
+            pause 0.75
+
+            scene v15s14_7 # TPP. Close up of MC buckling his seatbelt in the passenger seat, neutral face, mouth closed.
+            with dissolve
+
+            pause 1
+
+            scene v15s14_8 # TPP. Nice aerial shot of the car leaving campus
+            with fade
+
+            pause 1
+
         "Let's go":
             $ add_point(KCT.TROUBLEMAKER)
-            $ v15s14_lets_go = True
-
+             
             u "Okay, let's go."
 
-    scene v15s14_5c
-    with dissolve
+            scene v15s14_5c
+            with dissolve
 
-    ro "Hop in!"
+            ro "Hop in!"
 
-    scene v15s14_6 # TPP. Show MC and Ms. Rose getting into her car, MC neutral face, mouth closed, Ms Rose, slight smile, mouth closed.
-    with dissolve
+            scene v15s14_6 # TPP. Show MC and Ms. Rose getting into her car, MC neutral face, mouth closed, Ms. Rose, slight smile, mouth closed.
+            with dissolve
 
-    pause 0.75
+            pause 0.75
 
-    scene v15s14_7 # TPP. Close up of MC buckling his seatbelt in the passenger seat, neutral face, mouth closed.
-    with dissolve
+            scene v15s14_7 # TPP. Close up of MC buckling his seatbelt in the passenger seat, neutral face, mouth closed.
+            with dissolve
 
-    pause 1
+            pause 1
 
-    scene v15s14_8 # TPP. Nice aerial shot of the car leaving campus
-    with fade
+            scene v15s14_8 # TPP. Nice aerial shot of the car leaving campus
+            with fade
 
-    pause 1
+            pause 1
 
-    if v15s14_lets_go:
-        scene v15s14_9 # FPP. Show Ms Rose's hand on MC's thigh near his crotch while she drives.
-        with dissolve
+            scene v15s14_9 # FPP. Show Ms. Rose's hand on MC's thigh near his crotch while she drives.
+            with dissolve
 
-        pause 1
+            pause 1
 
-    scene v15s14_10 # TPP. Show the car on a road near Ms Rose's house
+    scene v15s14_10 # TPP. Show the car on a road near Ms. Rose's house
     with fade
 
     pause 1

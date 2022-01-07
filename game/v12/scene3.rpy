@@ -12,8 +12,8 @@ label v12_penelope_roof:
 
     play music "music/v12/Track Scene 3_1.mp3" fadein 2
 
-    $ penelope.messenger.newMessage("Hey, are you up still?", queue=False)
-    $ penelope.messenger.newMessage("If you are, can you meet me in the hallway?", queue=False)
+    $ penelope.messenger.newMessage("Hey, are you up still?", force_send=True)
+    $ penelope.messenger.newMessage("If you are, can you meet me in the hallway?", force_send=True)
 
     u "(It's Penelope.)"
 
@@ -21,7 +21,7 @@ label v12_penelope_roof:
 
     menu:
         "Reply":
-            if penelopers:
+            if penelope.relationship.value >= Relationship.LIKES.value:
                 $ add_point(KCT.BOYFRIEND)
 
             $ penelope.messenger.addReply("Yeah, one sec", func=None)
@@ -289,7 +289,7 @@ label v12_penelope_roof:
 
             u "Do you think I'm a good guy?"
 
-            if (laurenrs and v11_aubrey_sex) or (v7_emily_bowling) or (not costumeaubrey and v2_caughtpeeking):
+            if (v11_lauren_caught_aubrey) or (v7_emily_bowling) or (not costumeaubrey and v2_caughtpeeking):
                 scene v12penr10a
                 with dissolve
 
@@ -312,7 +312,7 @@ label v12_penelope_roof:
 
             pe "Always."
 
-            if penelopers:
+            if penelope.relationship.value >= Relationship.LIKES.value:
                 pe "I kinda hope I end up marrying a guy like you."
 
                 scene v12penr10e
@@ -410,7 +410,7 @@ label v12_penelope_roof:
             stop music fadeout 3
             play music "music/v12/Track Scene 3_4.mp3" fadein 2
 
-            if penelopers:
+            if penelope.relationship.value >= Relationship.LIKES.value:
                 scene v12penr4a # TPP Same angle as v12penr4, MC and Penelope walking down hotel hallway holding hands
                 with dissolve
 
@@ -437,7 +437,7 @@ label v12_penelope_roof:
 
             pe "I better get to bed, Mr. Lee wants me up early to help with our departure."
 
-            if penelopers:
+            if penelope.relationship.value >= Relationship.LIKES.value:
                 scene v12penr16 # TPP Outside of Penelope's hotel room, show Penelope kissing MC
                 with dissolve
 

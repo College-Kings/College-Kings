@@ -12,7 +12,7 @@ label v14s40:
 
     play music "music/v12/Track Scene 24.mp3" fadein 2
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         play sound "sounds/vibrate.mp3"
         scene v14s40_2a # TPP. MC gets a call from Lauren, MC looks at his phone, no expression
         with dissolve

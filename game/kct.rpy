@@ -1,7 +1,4 @@
 init python:
-    from enum import Enum
-
-
     class KCT(Enum):
         BRO = "bro"
         BOYFRIEND = "boyfriend"
@@ -31,39 +28,37 @@ init python:
 
 
 # KCT Screens
-screen kct_choice():
-    fixed:
-        xysize (298, 76)
-        xalign 1.0
+screen kct_choice_hint():
+    style_prefix "kct_choice"
 
-        add "gui/kct.webp"
-        text kct:
-            align (0.5, 0.5)
-            font "fonts/Freshman.ttf"
-            size 40
-            if kct == "popular":
-                color "#53d769"
-            if kct == "loyal":
-                color "#fecb2e"
-            if kct == "confident":
-                color "#fc3d39"
+    window:
+        xalign 1.0
+        xoffset -50
+        background "kct_choice_hint_background"
+
+        hbox:
+            null width 10
+
+            add "gui/kct/logo.png" align (0.5, 0.5)
+
+            text kct.upper() align (0.5, 0.5)
+
+            null width 30
+
+
+style kct_choice_text is druk_wide_bold_22
 
 
 screen kct_popup(required_kct=None):
     modal True
     zorder 300
 
-    use endfrTemplate:
+    if required_kct is None or required_kct == kct:
+        $ message = "Congratulations! Your Key Character Trait {{b}}{}{{/b}} has just changed the outcome of a decision someone was making.".format(kct)
+    else:
+        $ message = "Unfortunately, your Key Character Trait {{b}}{}{{/b}} did not change the outcome of this decision.".format(kct)
 
-        if required_kct is None or required_kct == kct:
-            text "Congratulations! Your Key Character Trait {b}[kct!c]{/b} has just changed the outcome of a decision someone was making.":
-                style "endfree"
-                xalign 0.5
-        else:
-            text "Unfortunately, your Key Character Trait {b}[kct!c]{/b} did not change the outcome of this decision.":
-                style "endfree"
-                xalign 0.5
-
+    use alert_template(message):
         textbutton "OK":
             align (0.5, 1.0)
             action Return()

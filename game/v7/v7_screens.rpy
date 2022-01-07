@@ -1,5 +1,5 @@
 screen letter1():
-    add "images/darker.webp"
+    add "darker_80"
     add Transform("images/v7/emilyletter.webp", size=(764, 1080))
 
     button:
@@ -14,7 +14,7 @@ screen hc_select():
         ypos 285
 
         imagebutton:
-            if "amber" not in hcAsked and not laurenrs:
+            if "amber" not in hcAsked and lauren.relationship.value < Relationship.GIRLFRIEND.value:
                 idle "images/v7/HCAmber.webp"
                 hover "images/v7/HCAmber2.webp"
                 tooltip "I'm not that close with Amber but she does seem quite flirty around me."
@@ -23,67 +23,67 @@ screen hc_select():
                 idle "images/v7/HCAmber3.webp"
                 hover "images/v7/HCAmber23.webp"
             
-            if "amber" not in hcAsked and not laurenrs:
+            if "amber" not in hcAsked and lauren.relationship.value < Relationship.GIRLFRIEND.value:
                 action Jump("hc_asking_amber")
             else:
                 action NullAction()
 
         imagebutton:
-            if "aubrey" not in hcAsked and not laurenrs:
+            if "aubrey" not in hcAsked and lauren.relationship.value < Relationship.GIRLFRIEND.value:
                 idle "images/v7/HCAubrey.webp"
                 hover "images/v7/HCAubrey2.webp"
             else:
                 idle "images/v7/HCAubrey3.webp"
                 hover "images/v7/HCAubrey23.webp"
 
-            if aubreyrs:
+            if aubrey.relationship.value >= Relationship.FWB.value:
                 tooltip "I'm pretty sure that Aubrey would go with me and that would probably lead to a pretty hot night afterwards..."
             else:
                 tooltip "Aubrey and I get along well, she might be down to go with me."
             
-            if "aubrey" not in hcAsked and not laurenrs:
+            if "aubrey" not in hcAsked and lauren.relationship.value < Relationship.GIRLFRIEND.value:
                 action Jump("hc_asking_aubrey")
             else:
                 action NullAction()
 
         imagebutton:
-            if "autumn" not in hcAsked and not autumnmad and not laurenrs:
+            if "autumn" not in hcAsked and not autumn.relationship.value <= Relationship.MAD.value and lauren.relationship.value < Relationship.GIRLFRIEND.value:
                 idle "images/v7/HCAutumn.webp"
                 hover "images/v7/HCAutumn2.webp"
             else:
                 idle "images/v7/HCAutumn3.webp"
                 hover "images/v7/HCAutumn23.webp"
 
-            if autumnmad:
+            if autumn.relationship.value <= Relationship.MAD.value:
                 tooltip "I think Autumn might be mad at me, so I probably shouldn't ask her."
             else:
                 tooltip "Autumn and I aren't really close, but I'll never know if she'd say yes if I don't try."
             
-            if "autumn" not in hcAsked and not (laurenrs or autumnmad):
+            if "autumn" not in hcAsked and not lauren.relationship.value >= Relationship.GIRLFRIEND.value and not autumn.relationship.value <= Relationship.MAD.value:
                 action Jump("hc_asking_autumn")
             else:
                 action NullAction()
 
         imagebutton:
-            if "chloe" not in hcAsked and not chloemad and not laurenrs:
+            if "chloe" not in hcAsked and chloe.relationship.value > Relationship.MAD.value and lauren.relationship.value < Relationship.GIRLFRIEND.value:
                 idle "images/v7/HCChloe.webp"
                 hover "images/v7/HCChloe2.webp"
             else:
                 idle "images/v7/HCChloe3.webp"
                 hover "images/v7/HCChloe23.webp"
 
-            if chloemad:
+            if chloe.relationship.value <= Relationship.MAD.value:
                 tooltip "I think Chloe is mad at me, so I probably shouldn't ask her."
             else:
                 tooltip "Chloe and I have been getting closer recently. Who knows, I might have a shot."
             
-            if "chloe" not in hcAsked and not (laurenrs or chloemad):
+            if "chloe" not in hcAsked and not (lauren.relationship.value >= Relationship.GIRLFRIEND.value or chloe.relationship.value <= Relationship.MAD.value):
                 action Jump("hc_asking_chloe")
             else:
                 action NullAction()
 
         imagebutton:
-            if "emily" not in hcAsked and forgiveemily and not laurenrs:
+            if "emily" not in hcAsked and forgiveemily and lauren.relationship.value < Relationship.GIRLFRIEND.value:
                 idle "images/v7/HCEmily.webp"
                 hover "images/v7/HCEmily2.webp"
             else:
@@ -95,20 +95,20 @@ screen hc_select():
             else:
                 tooltip "I don't think asking Emily is the right call."
             
-            if "emily" not in hcAsked and not laurenrs and forgiveemily :
+            if "emily" not in hcAsked and lauren.relationship.value < Relationship.GIRLFRIEND.value and forgiveemily :
                 action Jump("hc_asking_emily")
             else:
                 action NullAction()
 
         imagebutton:
-            if "lauren" not in hcAsked and not laurenmad:
+            if "lauren" not in hcAsked and lauren.relationship.value > Relationship.MAD.value:
                 idle "images/v7/HCLauren.webp"
                 hover "images/v7/HCLauren2.webp"
             else:
                 idle "images/v7/HCLauren3.webp"
                 hover "images/v7/HCLauren23.webp"
 
-            if laurenmad:
+            if lauren.relationship.value <= Relationship.MAD.value:
                 tooltip "It's kinda weird between Lauren and me, I probably should ask someone else."
             else:
                 tooltip "I'm not sure Lauren sees me as more than a friend, but we have been getting closer."
@@ -119,39 +119,39 @@ screen hc_select():
                 action NullAction()
 
         imagebutton:
-            if "penelope" not in hcAsked and not (bowling and emilyrs) and not laurenrs:
+            if "penelope" not in hcAsked and not v7_emily_bowling and lauren.relationship.value < Relationship.GIRLFRIEND.value:
                 idle "images/v7/HCPenelope.webp"
                 hover "images/v7/HCPenelope2.webp"
             else:
                 idle "images/v7/HCPenelope3.webp"
                 hover "images/v7/HCPenelope23.webp"
 
-            if bowling and emilyrs:
+            if v7_emily_bowling:
                 tooltip "Penelope didn't seem too eager to talk to me today, I better ask someone else."
             elif bowling:
                 tooltip "Penelope and I got along really well when we went bowling together, I think she could say yes."
             else:
                 tooltip "I haven't done that much with Penelope so far, but maybe she'll yes."
 
-            if "penelope" not in hcAsked and not laurenrs and not (bowling and emilyrs):
+            if "penelope" not in hcAsked and lauren.relationship.value < Relationship.GIRLFRIEND.value and not v7_emily_bowling:
                 action Jump("hc_asking_penelope")
             else:
                 action NullAction()
 
         imagebutton:
-            if "riley" not in hcAsked and not laurenrs:
+            if "riley" not in hcAsked and lauren.relationship.value < Relationship.GIRLFRIEND.value:
                 idle "images/v7/HCRiley.webp"
                 hover "images/v7/HCRiley2.webp"
             else:
                 idle "images/v7/HCRiley3.webp"
                 hover "images/v7/HCRiley23.webp"
 
-            if rileyrs:
+            if riley.relationship.value >= Relationship.LIKES.value:
                 tooltip "Riley seems to really like me so I think she'll say yes."
             else:
                 tooltip "Riley and I are good friends. She might say yes if I ask her."
 
-            if "riley" not in hcAsked and not laurenrs:
+            if "riley" not in hcAsked and lauren.relationship.value < Relationship.GIRLFRIEND.value:
                 action Jump("hc_asking_riley")
             else:
                 action NullAction()
@@ -163,7 +163,7 @@ screen hc_select():
 
     $ tooltip = GetTooltip()
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         text "Lauren would kill me if I asked someone other than her.":
             color "#000"
             align (0.5, 0.88)
@@ -256,35 +256,35 @@ screen fr4dancefloor():
             pos (645, 30)
             idle "images/v7/fr4dancefloorchloe.webp"
             hover "images/v7/fr4dancefloorchloehover.webp"
-            action Show("v7_endFreeRoamConfirm", continueLabel="fr4chloedate", girl="Chloe")
+            action Show("confirm", message="Are you sure you want to end the free roam with Chloe?", yes_action=[Hide("confirm"), Jump("fr4chloedate")])
 
     elif hcGirl == "emily":
         imagebutton:
             xpos 615
             idle "images/v7/fr4danceflooremily.webp"
             hover "images/v7/fr4danceflooremilyhover.webp"
-            action Show("v7_endFreeRoamConfirm", continueLabel="fr4emilydate", girl="Emily")
+            action Show("confirm", message="Are you sure you want to end the free roam with Emily?", yes_action=[Hide("confirm"), Jump("fr4emilydate")])
 
     elif hcGirl == "lauren":
         imagebutton:
             xpos 617
             idle "images/v7/fr4dancefloorlauren.webp"
             hover "images/v7/fr4dancefloorlaurenhover.webp"
-            action Show("v7_endFreeRoamConfirm", continueLabel="fr4laurendate", girl="Lauren")
+            action Show("confirm", message="Are you sure you want to end the free roam with Lauren?", yes_action=[Hide("confirm"), Jump("fr4laurendate")])
 
     elif hcGirl == "penelope":
         imagebutton:
             xpos 655
             idle "images/v7/fr4dancefloorpenelope.webp"
             hover "images/v7/fr4dancefloorpenelopehover.webp"
-            action Show("v7_endFreeRoamConfirm", continueLabel="fr4penelopedate", girl="Penelope")
+            action Show("confirm", message="Are you sure you want to end the free roam with Penelope?", yes_action=[Hide("confirm"), Jump("fr4penelopedate")])
 
     elif hcGirl == "riley":
         imagebutton:
             pos (675, 25)
             idle "images/v7/fr4dancefloorriley.webp"
             hover "images/v7/fr4dancefloorrileyhover.webp"
-            action Show("v7_endFreeRoamConfirm", continueLabel="fr4rileydate", girl="Riley")
+            action Show("confirm", message="Are you sure you want to end the free roam with Riley?", yes_action=[Hide("confirm"), Jump("fr4rileydate")])
 
     imagebutton:
         align (0.5, 1.0)
@@ -432,7 +432,7 @@ screen fr4gymentrance():
             pos (365, 318)
             idle "images/v7/fr4gymentrancerileyidle.webp"
             hover "images/v7/fr4gymentrancerileyhover.webp"
-            action Show("v7_endFreeRoamConfirm", continueLabel="fr4riley2", girl="Riley")
+            action Show("confirm", message="Are you sure you want to end the free roam with Riley?", yes_action=[Hide("confirm"), Jump("fr4riley2")])
 
     if "nora" in freeroam4 and not "nora2" in freeroam4:
         imagebutton:
@@ -526,7 +526,7 @@ screen fr4hallway():
             idle "images/v7/fr4hallwaychloeidle.webp"
             hover "images/v7/fr4hallwaychloehover.webp"
             if not "chloe2" in freeroam4:
-                action Show("v7_endFreeRoamConfirm", continueLabel="fr4chloe2", girl="Chloe")
+                action Show("confirm", message="Are you sure you want to end the free roam with Chloe?", yes_action=[Hide("confirm"), Jump("fr4chloe2")])
             else:
                 action Jump("fr4chloe3")
 
@@ -573,7 +573,7 @@ screen fr4hallwaycorner():
         idle "images/v7/fr4hallwaycornerdoor.webp"
         hover "images/v7/fr4hallwaycornerdoorhover.webp"
         if "chloe" in freeroam4 and not preventgrayson:
-            action Show("v7_endFreeRoamConfirm", continueLabel="fr4lockerroomchloe", girl="Chloe")
+            action Show("confirm", message="Are you sure you want to end the free roam with Chloe?", yes_action=[Hide("confirm"), Jump("fr4lockerroomchloe")])
         else:
             action Jump("fr4lockerroom")
 
@@ -640,26 +640,6 @@ screen fr4outsidestreet():
         idle "images/v7/fr4bottom.webp"
         hover "images/v7/fr4bottomhover.webp"
         action Jump("labelfr4outsidestairs")
-
-
-screen v7_endFreeRoamConfirm(continueLabel, girl):
-    modal True
-    
-    use endfrTemplate:
-
-        text "Are you sure you want to end the free roam with [girl]?":
-            style "endfree"
-            xalign 0.5
-
-        hbox:
-            align (0.5, 1.0)
-            spacing 200
-
-            textbutton "Yes":
-                action [Hide("v7_endFreeRoamConfirm"), Jump(continueLabel)]
-                
-            textbutton "No":
-                action Hide("v7_endFreeRoamConfirm")
 
 
 screen rileysexoverlay():

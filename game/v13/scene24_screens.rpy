@@ -1,60 +1,60 @@
 screen v13s24_girl():
 
-    if not emmyrs and not kourtneyrs and not aryssars:
-        add im.Blur("images/v13/scene24/v13s24_20a.webp", 5)
-    elif emmyrs and kourtneyrs and aryssars:
-        add im.Blur("images/v13/scene24/v13s24_20b.webp", 5)
-    elif emmyrs and kourtneyrs:
-        add im.Blur("images/v13/scene24/v13s24_20c.webp", 5)
-    elif emmyrs and aryssars:
-        add im.Blur("images/v13/scene24/v13s24_20d.webp", 5)
-    elif kourtneyrs and aryssars:
-        add im.Blur("images/v13/scene24/v13s24_20e.webp", 5)
-    elif emmyrs:
-        add im.Blur("images/v13/scene24/v13s24_20f.webp", 5)
-    elif kourtneyrs:
-        add im.Blur("images/v13/scene24/v13s24_20g.webp", 5)
-    elif aryssars:
-        add im.Blur("images/v13/scene24/v13s24_20h.webp", 5)
+    if not emmy.relationship.value >= Relationship.LIKES.value and not kourtney.relationship.value >= Relationship.LIKES.value and not aryssa.relationship.value >= Relationship.LIKES.value:
+        add Transform("images/v13/Scene 24/v13s24_20a.webp", blur=15)
+    elif emmy.relationship.value >= Relationship.LIKES.value and kourtney.relationship.value >= Relationship.LIKES.value and aryssa.relationship.value >= Relationship.LIKES.value:
+        add Transform("images/v13/Scene 24/v13s24_20b.webp", blur=15)
+    elif emmy.relationship.value >= Relationship.LIKES.value and kourtney.relationship.value >= Relationship.LIKES.value:
+        add Transform("images/v13/Scene 24/v13s24_20c.webp", blur=15)
+    elif emmy.relationship.value >= Relationship.LIKES.value and aryssa.relationship.value >= Relationship.LIKES.value:
+        add Transform("images/v13/Scene 24/v13s24_20d.webp", blur=15)
+    elif kourtney.relationship.value >= Relationship.LIKES.value and aryssa.relationship.value >= Relationship.LIKES.value:
+        add Transform("images/v13/Scene 24/v13s24_20e.webp", blur=15)
+    elif emmy.relationship.value >= Relationship.LIKES.value:
+        add Transform("images/v13/Scene 24/v13s24_20f.webp", blur=15)
+    elif kourtney.relationship.value >= Relationship.LIKES.value:
+        add Transform("images/v13/Scene 24/v13s24_20g.webp", blur=15)
+    elif aryssa.relationship.value >= Relationship.LIKES.value:
+        add Transform("images/v13/Scene 24/v13s24_20h.webp", blur=15)
 
     hbox:
         align (0.5, 0.5)
         spacing 20
 
         button:
-            if emmyrs:
+            if emmy.relationship.value >= Relationship.LIKES.value:
                 action Jump("v13s24_emmy_date")
 
             fixed:
                 xysize (269, 74)
-                if emmyrs:
-                    add "images/button_gray.webp"
+                if emmy.relationship.value >= Relationship.LIKES.value:
+                    add "gui/common/button_gray.webp"
                 else:
-                    add "images/button_light_gray.webp"
+                    add "gui/common/button_light_gray.webp"
                 text "Emmy" align (0.5, 0.5)
 
         button:
-            if kourtneyrs:
+            if kourtney.relationship.value >= Relationship.LIKES.value:
                 action Jump("v13s24_kourtney_date")
 
             fixed:
                 xysize (269, 74)
-                if kourtneyrs:
-                    add "images/button_gray.webp"
+                if kourtney.relationship.value >= Relationship.LIKES.value:
+                    add "gui/common/button_gray.webp"
                 else:
-                    add "images/button_light_gray.webp"
+                    add "gui/common/button_light_gray.webp"
                 text "Kourtney" align (0.5, 0.5)
 
         button:
-            if aryssars:
+            if aryssa.relationship.value >= Relationship.LIKES.value:
                 action Jump("v13s24_aryssa_date")
 
             fixed:
                 xysize (269, 74)
-                if aryssars:
-                    add "images/button_gray.webp"
+                if aryssa.relationship.value >= Relationship.LIKES.value:
+                    add "gui/common/button_gray.webp"
                 else:
-                    add "images/button_light_gray.webp"
+                    add "gui/common/button_light_gray.webp"
                 text "Aryssa" align (0.5, 0.5)
 
         button:
@@ -62,5 +62,5 @@ screen v13s24_girl():
 
             fixed:
                 xysize (269, 74)
-                add "images/button_gray.webp"
+                add "gui/common/button_gray.webp"
                 text "No Date" align (0.5, 0.5)

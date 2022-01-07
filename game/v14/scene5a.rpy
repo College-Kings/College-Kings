@@ -47,7 +47,7 @@ label v14s05a:
 
     pause 0.75
 
-    if v13_FirstThreesome:
+    if "v14_threesome" in sceneList:
         scene v14s05a_7 # FPP. Riley just beside MC on her bedside sitting up straight, slight smile, mouth open
         with dissolve
 
@@ -245,9 +245,9 @@ label v14s05a:
 
         menu: 
             "Help Chloe":
-                if chloegf:
+                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                     $ add_point(KCT.BOYFRIEND)
-                elif v12_lindsey_sex:
+                elif lindsey.relationship.value >= Relationship.FWB.value:
                     $ add_point(KCT.TROUBLEMAKER)
                 scene v14s05a_13
                 with dissolve
@@ -255,9 +255,9 @@ label v14s05a:
                 u "Well, I'd support Chloe."
 
             "Help Lindsey":
-                if v12_lindsey_sex:
+                if lindsey.relationship.value >= Relationship.FWB.value:
                     $ add_point(KCT.BOYFRIEND)
-                elif chloegf:
+                elif chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                     $ add_point(KCT.TROUBLEMAKER)
                 scene v14s05a_13
                 with dissolve

@@ -4,7 +4,8 @@
 # Time: Saturday Night
 
 label v13s50a:
-    $ v13_emilysex = True
+    $ sceneList.add("v13_emily")
+    $ emily.relationship = Relationship.FWB
 
     if v13s48_ryan_double_date:
         scene v13s50a_1 # TPP Show MC with his hands on Emily's shoulders, pushing her down to her knees
@@ -34,10 +35,10 @@ label v13s50a:
     pause
 
     # FPP, Emily down on her knees with MC fucking her face
-    image v13emiff = Movie(play="images/v13/Scene50a/v13emiff.webm", loop=True, image="images/v13/Scene50a/v13s50b.webp", start_image="images/v13/Scene50a/v13s50b.webp")
-    image v13emifff = Movie(play="images/v13/Scene50a/v13emifff.webm", loop=True, image="images/v13/Scene50a/v13s50b.webp", start_image="images/v13/Scene50a/v13s50b.webp")
-    image v13emiff2 = Movie(play="images/v13/Scene50a/v13emiff2.webm", loop=True, image="images/v13/Scene50a/v13s50b2.webp", start_image="images/v13/Scene50a/v13s50b2.webp")
-    image v13emiff2f = Movie(play="images/v13/Scene50a/v13emiff2f.webm", loop=True, image="images/v13/Scene50a/v13s50b2.webp", start_image="images/v13/Scene50a/v13s50b2.webp")
+    image v13emiff = Movie(play="images/v13/Scene 50a/v13emiff.webm", loop=True, image="images/v13/Scene 50a/v13s50b.webp", start_image="images/v13/Scene 50a/v13s50b.webp")
+    image v13emifff = Movie(play="images/v13/Scene 50a/v13emifff.webm", loop=True, image="images/v13/Scene 50a/v13s50b.webp", start_image="images/v13/Scene 50a/v13s50b.webp")
+    image v13emiff2 = Movie(play="images/v13/Scene 50a/v13emiff2.webm", loop=True, image="images/v13/Scene 50a/v13s50b2.webp", start_image="images/v13/Scene 50a/v13s50b2.webp")
+    image v13emiff2f = Movie(play="images/v13/Scene 50a/v13emiff2f.webm", loop=True, image="images/v13/Scene 50a/v13s50b2.webp", start_image="images/v13/Scene 50a/v13s50b2.webp")
     
     scene v13emiff # MC fucking Emily's face
     with dissolve
@@ -65,8 +66,8 @@ label v13s50a:
     em "*Gags*"
 
     # FPP, MC grabbing Emily's neck and bending her against the sink as he fucks her
-    image v13s50av2 = Movie(play="images/v13/Scene50a/v13s50av2.webm", loop=True, image="images/v13/Scene50a/v13s50b3.webp", start_image="images/v13/Scene50a/v13s50b3.webp")
-    image v13s50av2f = Movie(play="images/v13/Scene50a/v13s50av2f.webm", loop=True, image="images/v13/Scene50a/v13s50b3.webp", start_image="images/v13/Scene50a/v13s50b3.webp")
+    image v13s50av2 = Movie(play="images/v13/Scene 50a/v13s50av2.webm", loop=True, image="images/v13/Scene 50a/v13s50b3.webp", start_image="images/v13/Scene 50a/v13s50b3.webp")
+    image v13s50av2f = Movie(play="images/v13/Scene 50a/v13s50av2f.webm", loop=True, image="images/v13/Scene 50a/v13s50b3.webp", start_image="images/v13/Scene 50a/v13s50b3.webp")
 
     scene v13s50b3
     with dissolve
@@ -90,8 +91,8 @@ label v13s50a:
     pause
 
     # FPP, MC bends Emily's head down toward the sink and fucks her from behind
-    image v13s50av3 = Movie(play="images/v13/Scene50a/v13s50av3.webm", loop=True, image="images/v13/Scene50a/v13s50av3Start.webp", start_image="images/v13/Scene50a/v13s50av3Start.webp")
-    image v13s50av3f = Movie(play="images/v13/Scene50a/v13s50av3f.webm", loop=True, image="images/v13/Scene50a/v13s50av3Start.webp", start_image="images/v13/Scene50a/v13s50av3Start.webp")
+    image v13s50av3 = Movie(play="images/v13/Scene 50a/v13s50av3.webm", loop=True, image="images/v13/Scene 50a/v13s50av3Start.webp", start_image="images/v13/Scene 50a/v13s50av3Start.webp")
+    image v13s50av3f = Movie(play="images/v13/Scene 50a/v13s50av3f.webm", loop=True, image="images/v13/Scene 50a/v13s50av3Start.webp", start_image="images/v13/Scene 50a/v13s50av3Start.webp")
 
     scene v13s50av3 # MC fucking Emily from behind over the sink
     with dissolve
@@ -111,10 +112,10 @@ label v13s50a:
     pause
 
     # FPP, MC wraps his elbow around Emily's neck and pulls her back into an arch as he continues to fuck her from behind
-    image v13s50av4 = Movie(play="images/v13/Scene50a/v13s50av4.webm", loop=True, image="images/v13/Scene50a/v13s50av4Start.webp", start_image="images/v13/Scene50a/v13s50av4Start.webp")
-    image v13s50av4f = Movie(play="images/v13/Scene50a/v13s50av4f.webm", loop=True, image="images/v13/Scene50a/v13s50av4Start.webp", start_image="images/v13/Scene50a/v13s50av4Start.webp")
-    image v13s50av4b = Movie(play="images/v13/Scene50a/v13s50av4b.webm", loop=True, image="images/v13/Scene50a/v13s50av4bStart.webp", start_image="images/v13/Scene50a/v13s50av4bStart.webp")
-    image v13s50av4bf = Movie(play="images/v13/Scene50a/v13s50av4bf.webm", loop=True, image="images/v13/Scene50a/v13s50av4bStart.webp", start_image="images/v13/Scene50a/v13s50av4bStart.webp")
+    image v13s50av4 = Movie(play="images/v13/Scene 50a/v13s50av4.webm", loop=True, image="images/v13/Scene 50a/v13s50av4Start.webp", start_image="images/v13/Scene 50a/v13s50av4Start.webp")
+    image v13s50av4f = Movie(play="images/v13/Scene 50a/v13s50av4f.webm", loop=True, image="images/v13/Scene 50a/v13s50av4Start.webp", start_image="images/v13/Scene 50a/v13s50av4Start.webp")
+    image v13s50av4b = Movie(play="images/v13/Scene 50a/v13s50av4b.webm", loop=True, image="images/v13/Scene 50a/v13s50av4bStart.webp", start_image="images/v13/Scene 50a/v13s50av4bStart.webp")
+    image v13s50av4bf = Movie(play="images/v13/Scene 50a/v13s50av4bf.webm", loop=True, image="images/v13/Scene 50a/v13s50av4bStart.webp", start_image="images/v13/Scene 50a/v13s50av4bStart.webp")
 
 
     scene v13s50av4 # MC fucking Emily from behind with his arm around her neck
@@ -251,10 +252,10 @@ label v13s50a:
 
         stop music fadeout 3
 
-    if chloegf and not v11_riley_roomate:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value and not v11_riley_roomate:
         jump v13s52
     
-    elif rileyrs and v11_riley_roomate:
+    elif riley.relationship.value >= Relationship.FWB.value and v11_riley_roomate:
         jump v13s53
     
     else: 

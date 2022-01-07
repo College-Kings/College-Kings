@@ -13,7 +13,7 @@ label apes_join_ceremony:
     play music "music/mindie1.mp3" fadein 2
     queue music ["music/m15punk.mp3", "music/m2punk.mp3"]
 
-    if ending == "riley" and rileyrs:
+    if "v8_riley" in sceneList:
         u "(I hope I run into Riley tonight. Last night was great.)"
     elif ending == "riley":
         u "(I hope I run into Riley tonight. She had me intrigued with that secret.)"

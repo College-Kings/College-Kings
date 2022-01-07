@@ -5,7 +5,6 @@
 # Phone Images: None
 
 label v12_escape_room:
-    $ v12_lindsey_sex = False #pathbuilder variable
     scene v12esr1 # FPP. MC, Charli, Imre, Lindsey and Aubrey in front of escape room building, MC looking at Aubrey, Aubrey looking at MC, Aubrey slight smile, mouth open
     with dissolve
 
@@ -800,7 +799,7 @@ label v12_escape_room:
     stop music fadeout 3
     play music "music/v12/Track Scene 17_4.mp3" fadein 2
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v12esr29
         with dissolve
 
@@ -895,8 +894,8 @@ label v12_lindsey_kiss_or_not:
 
             pause 1.5
 
-            if lindseyfirstkiss or kct == "popular" or len(v12s7_killList) >= 5:
-                if not lindseyfirstkiss and not len(v12s7_killList) >= 5:
+            if lindsey.relationship.value >= Relationship.KISS.value or kct == "popular" or len(v12s7_killList) >= 5:
+                if lindsey.relationship.value < Relationship.KISS.value and not len(v12s7_killList) >= 5:
                     call screen kct_popup
                 jump v12_lindsey_sex
             
@@ -928,8 +927,8 @@ label v12_lindsey_kiss_or_not:
             jump v12_after_sex
 
 label v12_lindsey_sex:
-    $ v12_lindsey_sex = True
-    $ lindseyrs = True
+    $ sceneList.add("v12_lindsey")
+    $ lindsey.relationship = Relationship.FWB
 
     scene v12esr29g # FPP. Same as v12esr29c, Lindsey eyes open, slight smile, mouth open, face close to MC
     with dissolve
@@ -1270,7 +1269,7 @@ label v12_after_sex:
 
     li "I'd say we've gotten a lot \"closer\" today, would you? *Chuckles*"
 
-    if v12_lindsey_sex:
+    if "v12_lindsey" in sceneList:
         scene v12esr29a
         with dissolve
 

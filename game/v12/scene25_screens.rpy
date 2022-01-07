@@ -17,7 +17,7 @@ screen v12_girls():
             action Jump("v12_jc_aubrey")
 
         imagebutton:
-            if not chloemad:
+            if chloe.relationship.value > Relationship.MAD.value:
                 idle "images/v7/HCChloe.webp"
                 hover "images/v7/HCChloe2.webp"
                 action Jump("v12_jc_chloe")
@@ -27,7 +27,7 @@ screen v12_girls():
                 hover "images/v7/HCChloe23.webp"
             
         imagebutton:
-            if not (laurenrs and v11_aubrey_sex):
+            if v11_lauren_caught_aubrey:
                 idle "images/v7/HCLauren.webp"
                 hover "images/v7/HCLauren2.webp"
                 action Jump("v12_jc_lauren")

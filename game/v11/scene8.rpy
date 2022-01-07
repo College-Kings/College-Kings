@@ -122,7 +122,7 @@ label v11_chicks_house:
     scene v11chh6
     with dissolve
 
-    li "I don't know, but Chloe needs to do something. She's the president. I understand balancing friendships and running everything can be complicated, but that's part of the job."
+    li "I don't know, but Chloe needs to do something. She's the President. I understand balancing friendships and running everything can be complicated, but that's part of the job."
 
     scene v11chh6a
     with dissolve
@@ -152,7 +152,7 @@ label v11_chicks_house:
     scene v11chh6b
     with dissolve
 
-    li "I don't know if she's really the best person to be president."
+    li "I don't know if she's really the best person to be President."
 
     scene v11chh6c
     with dissolve
@@ -183,7 +183,7 @@ label v11_chicks_house:
     scene v11chh6b
     with dissolve
 
-    li "Is it bad if I'm thinking about running for president?"
+    li "Is it bad if I'm thinking about running for President?"
     li "Like, I'm friends with Chloe and I wouldn't want me running to get between us. There's just so many people that are unhappy with her."
 
     scene v11chh6c
@@ -191,15 +191,15 @@ label v11_chicks_house:
 
     menu:
         "You should run":
-            if lindseyfirstkiss:
+            if lindsey.relationship.value >= Relationship.KISS.value:
                 $ add_point(KCT.BOYFRIEND)
-            elif chloers:
+            elif chloe.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.TROUBLEMAKER)
             
             scene v11chh6a
             with dissolve
 
-            u "I think you'd make a good president. And the only way to find out if the rest of the girls support you is by running and seeing how they vote."
+            u "I think you'd make a good President. And the only way to find out if the rest of the girls support you is by running and seeing how they vote."
 
             scene v11chh6
             with dissolve

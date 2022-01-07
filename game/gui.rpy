@@ -16,7 +16,7 @@ init python:
 ################################################################################
 ## GUI Configuration Variables
 ################################################################################
-define config.menu_include_disabled = True
+define config.menu_include_disabled = False
 
 ## Colors ######################################################################
 ##
@@ -87,8 +87,6 @@ define gui.title_text_size = 120
 ## Main and Game Menus #########################################################
 
 ## The images used for the main and game menus.
-
-define gui.main_menu_background = "gui/mainMenu/mainMenuBackground{}.webp".format("Steam" if config.enable_steam else "")
 
 
 ## Dialogue ####################################################################
@@ -213,19 +211,10 @@ define gui.navigation_button_width = 350
 ## image, and text describing the contents of the save slot. A save slot uses
 ## image files in gui/button, like the other kinds of buttons.
 
-## The save slot button.
-define gui.slot_button_width = 414
-define gui.slot_button_height = 309
-define gui.slot_button_borders = Borders(15, 15, 15, 15)
-define gui.slot_button_text_size = 21
-define gui.slot_button_text_xalign = 0.5
-define gui.slot_button_text_idle_color = gui.idle_small_color
-define gui.slot_button_text_selected_idle_color = gui.selected_color
-define gui.slot_button_text_selected_hover_color = gui.hover_color
 
 ## The width and height of thumbnails used by the save slots.
-define config.thumbnail_width = 384
-define config.thumbnail_height = 216
+define config.thumbnail_width = 372
+define config.thumbnail_height = 209
 
 ## The number of columns and rows in the grid of save slots.
 define gui.file_slot_cols = 3
@@ -264,9 +253,6 @@ define gui.pref_button_spacing = 0
 
 ## The spacing between file page buttons.
 define gui.page_spacing = 0
-
-## The spacing between file slots.
-define gui.slot_spacing = 15
 
 ## The position of the main menu text.
 define gui.main_menu_text_xalign = 0.5
@@ -321,7 +307,7 @@ define gui.vbar_borders = Borders(6, 6, 6, 6)
 define gui.vscrollbar_borders = Borders(6, 6, 6, 6)
 define gui.vslider_borders = Borders(6, 6, 6, 6)
 
-## What to do with unscrollable scrollbars in the gui. "hide" hides them, while
+## What to do with unscrollable scrollbars in the gui - "hide" hides them, while
 ## None shows them.
 define gui.unscrollable = "hide"
 

@@ -142,7 +142,7 @@ label v11_room_aubrey_shopping:
     au "Again, you said it, not me. *Laughs*"
 
     stop music fadeout 3
-    play music "music/v11/Scene Track 7_3.mp3" fadein 2
+    play music "music/v11/Track Scene 7_3.mp3" fadein 2
 
     scene v11auw7 # TPP. Show MC and Aubrey walking through the door of Lew's shop. They're both smiling, mouths closed
     with dissolve
@@ -249,7 +249,6 @@ label v11_room_aubrey_shopping:
             u "The white one."
 
         "The blue one":
-            $ v11_aubrey_blue_outfit = True
             u "The blue one."
         
     scene v11auw8e # FPP. Same cam as v11auw8, Aubrey is now holding the outfits by her side, she is smiling, mouth open

@@ -5,7 +5,7 @@
 
 label v13s16a:
     $ sceneList.add("v13_riley")
-    $ rileyrs = True
+    $ riley.relationship = Relationship.FWB
 
     scene v13s16a_1 # FPP Show Riley in bed, MC on top of her and very close to her face. Riley with a sexy smile, mouth open
     with dissolve
@@ -30,10 +30,10 @@ label v13s16a:
     u "Ha... Say no more."
 
     # -Position 1, MC holds Riley's wrists together with one hand and holds her head with the other as he fucks her face-
-    image v13rilff = Movie(play="images/v13/Scene16a/v13rilff.webm", loop=True, image="images/v13/Scene16a/v13rilffStart.webp", start_image="images/v13/Scene16a/v13rilffStart.webp")
-    image v13rilfff = Movie(play="images/v13/Scene16a/v13rilfff.webm", loop=True, image="images/v13/Scene16a/v13rilffStart.webp", start_image="images/v13/Scene16a/v13rilffStart.webp")
-    image v13rilff2 = Movie(play="images/v13/Scene16a/v13rilff2.webm", loop=True, image="images/v13/Scene16a/v13rilff2Start.webp", start_image="images/v13/Scene16a/v13rilff2Start.webp")
-    image v13rilff2f = Movie(play="images/v13/Scene16a/v13rilff2f.webm", loop=True, image="images/v13/Scene16a/v13rilff2Start.webp", start_image="images/v13/Scene16a/v13rilff2Start.webp")
+    image v13rilff = Movie(play="images/v13/Scene 16a/v13rilff.webm", loop=True, image="images/v13/Scene 16a/v13rilffStart.webp", start_image="images/v13/Scene 16a/v13rilffStart.webp")
+    image v13rilfff = Movie(play="images/v13/Scene 16a/v13rilfff.webm", loop=True, image="images/v13/Scene 16a/v13rilffStart.webp", start_image="images/v13/Scene 16a/v13rilffStart.webp")
+    image v13rilff2 = Movie(play="images/v13/Scene 16a/v13rilff2.webm", loop=True, image="images/v13/Scene 16a/v13rilff2Start.webp", start_image="images/v13/Scene 16a/v13rilff2Start.webp")
+    image v13rilff2f = Movie(play="images/v13/Scene 16a/v13rilff2f.webm", loop=True, image="images/v13/Scene 16a/v13rilff2Start.webp", start_image="images/v13/Scene 16a/v13rilff2Start.webp")
     
     scene v13rilff # Riley giving MC a rough blowjob
     with dissolve
@@ -107,10 +107,10 @@ label v13s16a:
     u "*Chuckles* Good girl..."
 
     # -Position 2, while she's laying on her back, MC puts one of Riley's legs in the air and fucks her-
-    image v13rilts = Movie(play="images/v13/Scene16a/v13rilts.webm", loop=True, image="images/v13/Scene16a/v13riltsStart.webp", start_image="images/v13/Scene16a/v13riltsStart.webp")
-    image v13riltsf = Movie(play="images/v13/Scene16a/v13riltsf.webm", loop=True, image="images/v13/Scene16a/v13riltsStart.webp", start_image="images/v13/Scene16a/v13riltsStart.webp")
-    image v13rilts2 = Movie(play="images/v13/Scene16a/v13rilts2.webm", loop=True, image="images/v13/Scene16a/v13rilts2Start.webp", start_image="images/v13/Scene16a/v13rilts2Start.webp")
-    image v13rilts2f = Movie(play="images/v13/Scene16a/v13rilts2f.webm", loop=True, image="images/v13/Scene16a/v13rilts2Start.webp", start_image="images/v13/Scene16a/v13rilts2Start.webp")
+    image v13rilts = Movie(play="images/v13/Scene 16a/v13rilts.webm", loop=True, image="images/v13/Scene 16a/v13riltsStart.webp", start_image="images/v13/Scene 16a/v13riltsStart.webp")
+    image v13riltsf = Movie(play="images/v13/Scene 16a/v13riltsf.webm", loop=True, image="images/v13/Scene 16a/v13riltsStart.webp", start_image="images/v13/Scene 16a/v13riltsStart.webp")
+    image v13rilts2 = Movie(play="images/v13/Scene 16a/v13rilts2.webm", loop=True, image="images/v13/Scene 16a/v13rilts2Start.webp", start_image="images/v13/Scene 16a/v13rilts2Start.webp")
+    image v13rilts2f = Movie(play="images/v13/Scene 16a/v13rilts2f.webm", loop=True, image="images/v13/Scene 16a/v13rilts2Start.webp", start_image="images/v13/Scene 16a/v13rilts2Start.webp")
 
     scene v13rilts # MC holding one of Riley's legs in the air and fucking her
     with dissolve
@@ -135,10 +135,10 @@ label v13s16a:
     u "*Chuckles* I think you're enjoying this a little too much..."
 
     # -Position 3, MC grabs both of Riley's ankles and holds them toward her head as he fucks her-
-    image v13riltp = Movie(play="images/v13/Scene16a/v13riltp.webm", loop=True, image="images/v13/Scene16a/v13riltpStart.webp", start_image="images/v13/Scene16a/v13riltpStart.webp")
-    image v13riltpf = Movie(play="images/v13/Scene16a/v13riltpf.webm", loop=True, image="images/v13/Scene16a/v13riltpStart.webp", start_image="images/v13/Scene16a/v13riltpStart.webp")
-    image v13riltp2 = Movie(play="images/v13/Scene16a/v13riltp2.webm", loop=True, image="images/v13/Scene16a/v13riltp2Start.webp", start_image="images/v13/Scene16a/v13riltp2Start.webp")
-    image v13riltp2f = Movie(play="images/v13/Scene16a/v13riltp2f.webm", loop=True, image="images/v13/Scene16a/v13riltp2Start.webp", start_image="images/v13/Scene16a/v13riltp2Start.webp")
+    image v13riltp = Movie(play="images/v13/Scene 16a/v13riltp.webm", loop=True, image="images/v13/Scene 16a/v13riltpStart.webp", start_image="images/v13/Scene 16a/v13riltpStart.webp")
+    image v13riltpf = Movie(play="images/v13/Scene 16a/v13riltpf.webm", loop=True, image="images/v13/Scene 16a/v13riltpStart.webp", start_image="images/v13/Scene 16a/v13riltpStart.webp")
+    image v13riltp2 = Movie(play="images/v13/Scene 16a/v13riltp2.webm", loop=True, image="images/v13/Scene 16a/v13riltp2Start.webp", start_image="images/v13/Scene 16a/v13riltp2Start.webp")
+    image v13riltp2f = Movie(play="images/v13/Scene 16a/v13riltp2f.webm", loop=True, image="images/v13/Scene 16a/v13riltp2Start.webp", start_image="images/v13/Scene 16a/v13riltp2Start.webp")
 
     scene v13riltp # MC holding Riley's ankles up near her head as he fucks her
     with dissolve
@@ -167,10 +167,10 @@ label v13s16a:
     ri "*Moans* Give me... M-more... *Chuckles*"
 
     # -Position 4, MC puts her legs down on each side of him and raises her up from her waist causing her back to arch as he fucks her-
-    image v13riltb = Movie(play="images/v13/Scene16a/v13riltb.webm", loop=True, image="images/v13/Scene16a/v13riltbStart.webp", start_image="images/v13/Scene16a/v13riltbStart.webp")
-    image v13riltbf = Movie(play="images/v13/Scene16a/v13riltbf.webm", loop=True, image="images/v13/Scene16a/v13riltbStart.webp", start_image="images/v13/Scene16a/v13riltbStart.webp")
-    image v13riltb2 = Movie(play="images/v13/Scene16a/v13riltb2.webm", loop=True, image="images/v13/Scene16a/v13riltb2Start.webp", start_image="images/v13/Scene16a/v13riltb2Start.webp")
-    image v13riltb2f = Movie(play="images/v13/Scene16a/v13riltb2f.webm", loop=True, image="images/v13/Scene16a/v13riltb2Start.webp", start_image="images/v13/Scene16a/v13riltb2Start.webp")
+    image v13riltb = Movie(play="images/v13/Scene 16a/v13riltb.webm", loop=True, image="images/v13/Scene 16a/v13riltbStart.webp", start_image="images/v13/Scene 16a/v13riltbStart.webp")
+    image v13riltbf = Movie(play="images/v13/Scene 16a/v13riltbf.webm", loop=True, image="images/v13/Scene 16a/v13riltbStart.webp", start_image="images/v13/Scene 16a/v13riltbStart.webp")
+    image v13riltb2 = Movie(play="images/v13/Scene 16a/v13riltb2.webm", loop=True, image="images/v13/Scene 16a/v13riltb2Start.webp", start_image="images/v13/Scene 16a/v13riltb2Start.webp")
+    image v13riltb2f = Movie(play="images/v13/Scene 16a/v13riltb2f.webm", loop=True, image="images/v13/Scene 16a/v13riltb2Start.webp", start_image="images/v13/Scene 16a/v13riltb2Start.webp")
 
     scene v13riltb # MC with his arm under Riley's waist, causing her back to arch as he fucks her
     with dissolve

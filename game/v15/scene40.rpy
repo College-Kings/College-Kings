@@ -5,11 +5,10 @@
 # Render Count: 4 Unique 18 Total
 
 label v15s40:
-
     scene v15s40_1 # FPP. Show just Autumn sitting beside Mc in the back of the Limo, Autumn has a slight smile, mouth open looking towards the front og the Limo at the other people, Don't show any other characters
     with dissolve
 
-    aut "Haha, look at them all."
+    aut "Haha, look at them. How did all three of them pass out?"
 
     scene v15s40_1a # FPP. same as v15s40_1 Show Autumn looking directly at Mc, still a slight smile, mouth is still closed.
     with dissolve
@@ -43,8 +42,7 @@ label v15s40:
 
     u "I mean, it's okay if you don't want to talk about it, but they're all asleep now and it's only me."
 
-    if not AutumnTrust:
-
+    if autumn.relationship.value < Relationship.TRUST.value:
         scene v15s40_1b
         with dissolve
 
@@ -88,7 +86,6 @@ label v15s40:
         u "Yeah, they're great."
 
         if not v15_lindsey_inviteseb:
-
             scene v15s40_1c
             with dissolve
 
@@ -97,7 +94,7 @@ label v15s40:
             scene v15s40_1a
             with dissolve
 
-            u "He's a bit, bittersweet. Yeah?"
+            u "He's a bit... bittersweet, huh?"
 
             scene v15s40_1b
             with dissolve
@@ -105,7 +102,6 @@ label v15s40:
             aut "That's a very polite way of putting it. *Giggles*"
 
         else:
-
             scene v15s40_1
             with dissolve
 
@@ -143,7 +139,7 @@ label v15s40:
         scene v15s40_1e # FPP. same as v15s40_1d Autumn is looking back at Mc, blushing even more, her face is still slightly turned away from Mc, mouth is still open
         with dissolve
 
-        aut "I do like you, [name]. I like you a lot, actually...."
+        aut "I do like you, [name]. I like you a lot, actually..."
 
         scene v15s40_1f # FPP. same as v15s40_1e Autumn is now looking directly at Mc, mouth is closed, still slightly embarrased, still blushing
         with dissolve
@@ -169,17 +165,16 @@ label v15s40:
         with dissolve
 
         menu:
-
             "I'd like that":
                 $ add_point(KCT.BRO)
-
+                
                 scene v15s40_1a
                 with dissolve
 
                 u "Yeah, I mean, I'd be happy to."
 
-                if laurengf:
-                    $ autumnloyal = True
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                    $ autumn.relationship = Relationship.LOYAL
 
                     scene v15s40_1b
                     with dissolve
@@ -222,7 +217,7 @@ label v15s40:
                     aut "Haha, thanks..."
 
                 else:
-                    $ autumnrs = True
+                    $ autumn.relationship = Relationship.FWB
 
                     scene v15s40_1a
                     with dissolve
@@ -257,22 +252,27 @@ label v15s40:
                     scene v15s40_2
                     with dissolve
 
-                    pause 0.50
+                    pause 0.75
 
                     scene v15s40_2a # TPP. same as v15s40_2 Autumn puts a hand on Mc's chest and leans in to give Mc a slight kiss
                     with dissolve
 
-                    pause 0.50
+                    pause 0.75
 
                     scene v15s40_2b # TPP. same as v15s40_2a Autumn pulls back and is now blushing head facing slightly down looking up at Mc slight smile mouth is closed, Mc has a hand on Autumns cheek looking at Autumn, slight smile, mouth is closed.
                     with dissolve
 
-                    pause 0.50
+                    pause 0.75
 
                     scene v15s40_2c # TPP. same as v15s40_2b Mc pulls Autumn closer for a passionate kiss his hand gently carressing the back of her head pulling her closer, Autumns hand is carressing Mc's throat
                     with dissolve
 
-                    pause 0.50
+                    pause
+
+                    scene v15s40_2a # TPP. same as v15s40_2a Autumn pulls back and is now blushing head facing slightly down looking up at Mc slight smile mouth is closed, Mc has a hand on Autumns cheek looking at Autumn, slight smile, mouth is closed.
+                    with dissolve
+
+                    pause 1.25
 
                     scene v15s40_1b
                     with dissolve
@@ -296,6 +296,8 @@ label v15s40:
 
                     scene v15s40_2d # TPP. same as v15s40_2 Mc and Autumn laugh, still looking at each other
                     with dissolve
+
+                    pause 0.75
 
             "It's not a good idea":
                 $ add_point(KCT.BOYFRIEND)
@@ -323,19 +325,18 @@ label v15s40:
                 scene v15s40_2
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v15s40_1b
                 with dissolve
 
                 aut "Okay, we can keep it like this. Thanks for being honest, it means a lot"
 
-            if laurengf:
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                    scene v15s40_1c
+                    with dissolve
 
-                scene v15s40_1c
-                with dissolve
-
-                aut "You're going out with my sister anyway, ha!  So yeah, nothing can happen."
+                    aut "You're going out with my sister anyway, ha! So yeah, nothing can happen."
             
         scene v15s40_1b
         with dissolve
@@ -355,7 +356,7 @@ label v15s40:
     scene v15s40_1i # FPP. same as v15s40_1 Autumn turns her head to look out the Limo's window, slight smile, mouth is closed
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v15s40_1b
     with dissolve
@@ -372,16 +373,17 @@ label v15s40:
     scene v15s40_3 # TPP. Show Autumn exiting the Limo, she is looking back and waving goodbye to Mc who is still sitting inside the Limo, both slight smiles, both mouths are closed
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
-    if autumnrs:
-
+    if autumn.relationship == Relationship.FWB:
         scene v15s40_4 # TPP. Autumn leans back into the limo to give Mc a kiss on the cheek, Mc slight smile mouth is closed
         with dissolve
 
-        pause 0.50
+        pause 1.75
 
     scene v15s40_3a # TPP. Autumn is walking away from the Limo slight smile mouth is closed, Mc is looking at Autumn slight smile mouth is closed
-    with fade
+    with dissolve
 
-    jump v14s41
+    pause 0.75
+
+    jump v15s41

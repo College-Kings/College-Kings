@@ -9,7 +9,7 @@ label v14s22a:
     scene v14s22a_1 # FPP. show just lindsey, looking at mc, half smile, mouth open, hand up gesture
     with dissolve
 
-    li "So... People have been treating me like the vice president of the United States."
+    li "So... People have been treating me like the Vice President of the United States."
 
     scene v14s22a_1a # FPP. same as v14s22a_1 lindsey's hand is down mouth closed
     with dissolve

@@ -16,12 +16,13 @@ label v11_nora_chloe_hallway:
 
     u "Hey Nora, are there a lot of people going on the trip?"
 
-    if noralikes:
+    if nora.relationship.value >= Relationship.LIKES.value:
 
         scene v11nohall2a # FPP. Same as 2, but now Nora is looking at MC, Nora mouth open, happy expression
         with dissolve
 
         no "Yeah, there's plenty. I'm surprised we actually got enough people."
+
     else:
         scene v11nohall2a # FPP. Same as 2, but now Nora is looking at MC, Nora mouth open, happy expression
         with dissolve
@@ -73,11 +74,12 @@ label v11_nora_chloe_hallway:
 
             u "Well I'll be there, I hope that's something good. *Chuckles*"
 
-            if noralikes:
+            if nora.relationship.value >= Relationship.LIKES.value:
                 scene v11nohall2a
                 with dissolve
 
                 no "*Chuckles* It's definitely something."
+
             else:
                 scene v11nohall2a
                 with dissolve
@@ -92,11 +94,12 @@ label v11_nora_chloe_hallway:
 
             u "Just try to enjoy yourself anyway."
 
-            if noralikes:
+            if nora.relationship.value >= Relationship.LIKES.value:
                 scene v11nohall2c
                 with dissolve
 
                 no "Thanks for trying, but I think it's clear where his priorities are."
+
             else:
                 scene v11nohall2c
                 with dissolve
@@ -341,7 +344,7 @@ label v11_nora_chloe_hallway:
                 "(I need to get home and pack.)"
 
         "Say something":
-            if chloemad:
+            if chloe.relationship.value <= Relationship.MAD.value:
                 scene v11clhall1c # FPP. Same as clhall1a, Chloe and MC are now looking at each other, Chloe's mouth is closed, she is annoyed
                 with dissolve
 
@@ -357,7 +360,7 @@ label v11_nora_chloe_hallway:
 
                 menu:
                     "Apologize":
-                        $ chloemad = False
+                        $ chloe.relationship = Relationship.FRIEND
                         $ add_point(KCT.BOYFRIEND)
 
                         scene v11clhall1c
@@ -578,22 +581,24 @@ label v11_nora_chloe_hallway:
                         pause 0.75
 
             else:
-                if chloers:
+                if chloe.relationship.value >= Relationship.FWB.value:
                     scene v11clhall1f
                     with dissolve
 
                     u "Hey, cutie."
+
                 else:
                     scene v11clhall1f
                     with dissolve
 
                     u "Hey Chloe."
 
-                if chloers:
+                if chloe.relationship.value >= Relationship.FWB.value:
                     scene v11clhall1e
                     with dissolve
 
                     cl "Oh, hey handsome. What's up?"
+
                 else:
                     scene v11clhall1e
                     with dissolve
@@ -757,23 +762,24 @@ label v11_nora_chloe_hallway:
 
                         u "Haha, well I won't be good company if I'm not there so I'm gonna go get packing."
 
-                        if chloers:
+                        if chloe.relationship.value >= Relationship.FWB.value:
                             scene v11clb1
                             with dissolve
 
                             cl "I need to run but I can't wait to spend some more time with you in Europe."
+
                         else:
                             scene v11clb1
                             with dissolve
 
                             cl "Alright, it was good talking to you."
 
-                        if chloers:
-
+                        if chloe.relationship.value >= Relationship.FWB.value:
                             scene v11clb1a
                             with dissolve
 
                             u "See you later, beautiful."
+
                         else:
                             scene v11clb1a
                             with dissolve

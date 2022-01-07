@@ -3,24 +3,23 @@
 # Characters: AMBER (Outfit: Detective), MC (Outfit: 1)
 # Time: Morning
 
-
 label v15s46:
     play sound "sounds/dooropen.mp3"
 
     scene v15s46_1 # TPP. Amber and MC entering the detective pinboard room, both slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
-    pause 
+    pause 0.75
 
     play sound "sounds/doorclose.mp3"
 
     scene v15s46_2 # TPP. Amber and MC inside the room, Amber turned around to face MC, MC looking at Amber, both slight smile, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s46_3 # FPP. MC looking at Amber, Amber looking at MC, Amber slight smile, mouth open.
-    with dissolve 
+    with dissolve
 
     am "I really hope we have enough clues to solve this now."
 
@@ -36,12 +35,14 @@ label v15s46:
     scene v15s46_4 # TPP. Show MC walking up to the pinboard, slight smile, mouth closed
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s46_5 # FPP. Looking at the pinboard.
-    with dissolve 
+    with dissolve
 
-    # -The UI pops up to show all the clues achieved and any new ones from the Chloe interrogation (CHLOE CLUES UNLOCKED: Nora always runs to her Dad for materialistic help. Nora & Ms Rose are really close. Nora still likes her ex-boyfriend from before Chris. Nora hates camping. CHLOE LOCATIONS UNLOCKED: Ex-boyfriend's house.)-
+    pause 0.75
+
+    # -The UI pops up to show all the clues achieved and any new ones from the Chloe interrogation (CHLOE CLUES UNLOCKED: Nora always runs to her Dad for materialistic help. Nora & Ms. rose are really close. Nora still likes her ex-boyfriend from before Chris. Nora hates camping. CHLOE LOCATIONS UNLOCKED: Ex-boyfriend's house.)-
 
     # -MC can study all the clues and locations, all of which have comments from Amber to help them (SEE MIRO). MC can choose one of the locations. Once MC has chosen the location they want to go with, they can exit the UI whenever. The correct location is Nora's Dad's cabin-
 
@@ -93,7 +94,7 @@ label v15s46:
         scene v15s46_3
         with dissolve
 
-        am "We know that Nora loves nature... Chris told us that Nora's aunt borrowed Mr Rose's cabin... Nora went to see her aunt only briefly."
+        am "We know that Nora loves nature... Chris told us that Nora's aunt borrowed Mr. Rose's cabin... Nora went to see her aunt only briefly."
 
         am "Understand?"
 
@@ -101,8 +102,9 @@ label v15s46:
         with dissolve
 
         menu:
-            "Nope, no idea.":
+            "Nope, no idea":
                 $ add_point(KCT.BRO)
+                
                 u "Nope. It's like you're talking in random words."
 
                 scene v15s46_3
@@ -139,8 +141,10 @@ label v15s46:
                 with dissolve
 
                 am "Yeah! It makes sense because that's the answer, haha!"
-            "Yeah, of course.":
-                $ add_point(KCT.BOYFRIEND)
+
+            "Yeah, of course":
+                scene v15s46_3a
+                #with dissolve
 
                 u "Yeah, of course!"
 
@@ -175,9 +179,9 @@ label v15s46:
                 with dissolve
 
                 menu:
-                    "To ask for her advice.":
+                    "To ask for her advice":
                         $ add_point(KCT.BRO)
-
+                        
                         u "To ask her for advice, obviously."
 
                         scene v15s46_3
@@ -199,8 +203,11 @@ label v15s46:
 
                         am "Haha, okay, Sherlock."
 
-                    "To pick up something.":
+                    "To pick up something":
                         $ add_point(KCT.TROUBLEMAKER)
+                        
+                        scene v15s46_3a
+                        #with dissolve
 
                         u "Because she needed to pick up something?"
 
@@ -215,9 +222,9 @@ label v15s46:
                         with dissolve
 
                         menu:
-                            "Food supplies.":
+                            "Food supplies":
                                 $ add_point(KCT.BRO)
-
+                                
                                 u "Well, to pick up some food for the cabin."
 
                                 scene v15s46_3
@@ -240,9 +247,9 @@ label v15s46:
 
                                 u "Oh- Yeah, of course. Haha."
 
-                            "The key.":
+                            "The key":
                                 $ add_point(KCT.BOYFRIEND)
-
+                                
                                 u "The key for the cabin."
 
                                 scene v15s46_3
@@ -261,8 +268,11 @@ label v15s46:
                                 with dissolve
 
                                 am "Ding, ding, ding! We have a winner. *Chuckles*"
+
     else:
-        # -if MC chose the correct location (ACHIEVEMENT: SUPER DETECTIVE)
+        if len(v15_nora_clues) == 9 and len(v15_nora_locations) == 6:
+            $ grant_achievement("just_one_more_thing")
+
         scene v15s46_3a
         with dissolve
 
@@ -306,27 +316,27 @@ label v15s46:
     scene v15s46_3
     with dissolve
 
-    am "I'll send a message to Techy. She can find Mr. Rose's property records and find us an address."
+    am "I'll send a message to Techie. She can find Mr. Rose's property records and find us an address."
 
     scene v15s46_3d # FPP. Amber taking out her phone, slight smile, mouth closed.
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s46_3e # FPP. Amber looking at her phone, slight smile, mouth closed.
-    with dissolve  
+    with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s46_3f # FPP. Amber pressing a button on her phone, slight smile, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s46_3g # FPP. Amber putting her phone away, slight smile, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s46_3a
     with dissolve
@@ -338,7 +348,7 @@ label v15s46:
 
     am "Yeah, I know. She's amazing at what she does, and she's the best."
 
-    if penelope_loyal
+    if penelope.relationship.value >= Relationship.LOYAL.value:
         scene v15s46_3a
         with dissolve
 
@@ -364,7 +374,7 @@ label v15s46:
     scene v15s46_3i # FPP. Amber chugging her coffee
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s46_3
     with dissolve
@@ -374,22 +384,22 @@ label v15s46:
     scene v15s46_3d
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s46_3e
-    with dissolve 
+    with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s46_3f
-    with dissolve 
+    with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s46_3g
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s46_3a
     with dissolve
@@ -414,15 +424,15 @@ label v15s46:
     scene v15s46_6
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s46_3i
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s46_3j # FPP. MC looking at Amber, Amber looking at MC, Amber frown, looks sick, mouth open.
-    with dissolve 
+    with dissolve
 
     am "*Stomach gurgles* Uh, oh."
 
@@ -477,7 +487,7 @@ label v15s46:
     scene v15s46_3l # FPP. MC looking at Amber, Amber looking at MC, Amber frown, fake crying, mouth open.
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s46_3a
     with dissolve
@@ -492,6 +502,8 @@ label v15s46:
     play sound "sounds/dooropen.mp3"
 
     scene v15s46_7 # TPP. Show Amber leaving the room holding her stomach, amber frown, mouth closed.
-    with dissolve 
+    with dissolve
+
+    pause 0.75
 
     jump v15s47

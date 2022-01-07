@@ -183,8 +183,7 @@ label v11_chloe_bathroom:
 
             cl "You really have been there for me whenever I needed you, [name]. Thank you."
 
-            if chloegf or chloers:
-
+            if chloe.relationship.value >= Relationship.FWB.value:
                 scene v11chb12b # TPP. Same as v11chb12a, MC and Chloe kissing (just a peck on the lips)
                 with dissolve
                 play sound "sounds/kiss.mp3"
@@ -234,11 +233,12 @@ label v11_chloe_bathroom:
 
             cl "*Moans*"
 
-            if chloers or chloegf or kct == "popular":
+            if chloe.relationship.value >= Relationship.FWB.value or kct == "popular":
                 $ sceneList.add("v11_chloe")
-                $ chloers = True
+                if chloe.relationship.value < Relationship.FWB.value:
+                    $ chloe.relationship = Relationship.FWB
 
-                if not chloers and not chloegf:
+                if chloe.relationship.value < Relationship.FWB.value:
                     call screen kct_popup
                 stop music fadeout 3
                 jump v11_chloe_sex_scene

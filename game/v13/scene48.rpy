@@ -639,7 +639,7 @@ label v13s48:
     scene v13s48_8
     with dissolve
 
-    if aubreyrs:
+    if aubrey.relationship.value >= Relationship.FWB.value:
         au "I know we're fucking, but..."
 
         scene v13s48_8c

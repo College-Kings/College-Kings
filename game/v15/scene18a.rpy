@@ -2,27 +2,27 @@
 # Locations: Deer's House/Rooms
 # Characters: MC (Outfit: Stripper Costume), AUBREY (Outfit: Clown Costume), RYAN (Outfit: Elvis Costume), AUTUMN (Outfit: Mummy), PENELOPE (Outfit: Sexy Witch), LAUREN (Outfit: Spider necklace costume), IMRE (Outfit: Cowboy Costume), RILEY (Outfit: Schoolgirl Costume), CHRIS (Outfit: Boxer Costume), AMBER (Outfit: Black bloody nurse costume)
 # Time: Night
-default v15s18_mention_list = False
+
 label v15s18a:
     # -Refer to images on Miro for exact placement, but Downstairs: Aubrey at the bar, Imre & Lauren on the couch, Riley in the kitchen, Chris & Amber on bar stools at kitchen counter; Upstairs: Ryan in the bathroom, Autumn & Penelope in Autumn's bedroom
     # -Clickable Objects (placement is irrelevant to plot, available to click on during both free roams): A bronze deer statue, A photo of Autumn and Lauren, A carved Halloween pumpkin, A Deer scarf wall hanging-
     # -Characters are greyed out after they are spoken too besides Lauren. She needs to stay highlighted as she is the way to end the free roam-
 
-    $ v15s18a_kiwiiPost1 = KiwiiPost("Lauren", Steamy and spooky photo of her costume before the party begins, _("Feeling one year older ;)"), numberLikes=854)
-    $ v15s18a_kiwiiPost1.newComment("Lindsey", _("Holy fuck, babe! You look spectacular, I hope you have the most amazing birthday <3"), queue=False)
-    $ v15s18a_kiwiiPost1.newComment("Autumn", _("Can't wait to celebrate! Happy Birthday, Renny <33"), queue=False)
-    $ v15s18a_kiwiiPost1.newComment("Chloe", _("Sorry I couldn't be there! I'm just so busy... Enjoy yourself and have the night of your life! Happy birthday :)"), queue=False)
-    $ v15s18a_kiwiiPost1.newComment("Amber", _("YES!! That costume is everything! Happy b-day hottie, see you in a bit <3"), queue=False)
-    $ v15s18a_kiwiiPost1.newComment("Lauren", _("Thank you ladies!!"), queue=False)
+    $ v15s18a_kiwiiPost1 = KiwiiPost(lauren, "v15/v15_lapost1.webp", _("Feeling one year older ;)"), numberLikes=854)
+    $ v15s18a_kiwiiPost1.newComment(lindsey, _("Holy fuck, babe! You look spectacular, I hope you have the most amazing birthday <3"), numberLikes=renpy.random.randint(360, 660), force_send=True)
+    $ v15s18a_kiwiiPost1.newComment(autumn, _("Can't wait to celebrate! Happy Birthday, Renny <33"), numberLikes=renpy.random.randint(360, 660), force_send=True)
+    $ v15s18a_kiwiiPost1.newComment(chloe, _("Sorry I couldn't be there! I'm just so busy... Enjoy yourself and have the night of your life! Happy birthday :)"), numberLikes=renpy.random.randint(360, 660), force_send=True)
+    $ v15s18a_kiwiiPost1.newComment(amber, _("YES!! That costume is everything! Happy b-day hottie, see you in a bit <3"), numberLikes=renpy.random.randint(360, 660), force_send=True)
+    $ v15s18a_kiwiiPost1.newComment(lauren, _("Thank you ladies!!"), numberLikes=renpy.random.randint(360, 660), force_send=True)
 
-    $ v15s18a_kiwiiPost2 = KiwiiPost("Autumn", Photo of halloween decorations for the party whether its inside or outside the house, _("Spooky sister season :)"), numberLikes=743)
-    $ v15s18a_kiwiiPost2.newComment("Penelope", _("I'll never understand your decorating skills... I'm so excited for tonight!"), queue=False)
-    $ v15s18a_kiwiiPost2.newComment("Lauren", _("The house looks absolutely perfect, I couldn't have asked for more! Love u <3"), queue=False)
-    $ v15s18a_kiwiiPost2.newComment("Riley", _("So fucking cool! You're planning my wedding one day, Autumn..."), queue=False)
-    $ v15s18a_kiwiiPost2.newComment("Autumn", _("Haha, sounds great!"), queue=False)
+    $ v15s18a_kiwiiPost2 = KiwiiPost(autumn, "v15/v15_autpost1.webp", _("Spooky sister season :)"), numberLikes=743)
+    $ v15s18a_kiwiiPost2.newComment(penelope, _("I'll never understand your decorating skills... I'm so excited for tonight!"), numberLikes=renpy.random.randint(360, 660), force_send=True)
+    $ v15s18a_kiwiiPost2.newComment(lauren, _("The house looks absolutely perfect, I couldn't have asked for more! Love u <3"), numberLikes=renpy.random.randint(360, 660), force_send=True)
+    $ v15s18a_kiwiiPost2.newComment(riley, _("So fucking cool! You're planning my wedding one day, Autumn..."), numberLikes=renpy.random.randint(360, 660), force_send=True)
+    $ v15s18a_kiwiiPost2.newComment(autumn, _("Haha, sounds great!"), numberLikes=renpy.random.randint(360, 660), force_send=True)
 
-    pause
-
+    pause 0.75
+    
     call screen v15s18a_room
 
 # -Free roam: Everyone can now be holding a drink. There's a punch bowl and food set up in the kitchen. MC can navigate around the house.
@@ -31,12 +31,12 @@ label v15s18a:
 # Location 1- At the bar in the deer's house
 # *Clicking on Aubrey*
 label v15s18a_Aubrey:
-    $ v15s18a_fraubrey = True
+    $ freeroam13.add("aubrey")
 
     scene v15s18aaub_1 # TPP. Show MC starting to sit on the stool next to Aubrey, slight smile, mouth closed. Just show Aubrey's backside.
-    with dissolve
+    #with dissolve
 
-    pause .25
+    pause 1.25
 
     scene v15s18aaub_2 # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at MC, MC looking at Aubrey, Aubrey slight smile, mouth closed
     with dissolve
@@ -73,12 +73,12 @@ label v15s18a_Aubrey:
     scene v15s18aaub_2b # FPP. MC sitting on the stool next to Aubrey, Aubrey looking down at the lower half of MC, Aubrey laughing.
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s18aaub_2c # FPP. MC sitting on the stool next to Aubrey, Aubrey looking back at MC's face, Aubrey laughing.
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s18aaub_2
     with dissolve
@@ -90,7 +90,7 @@ label v15s18a_Aubrey:
 
     au "Hey, I'm not complaining. I'm sure all the girls are enjoying the view."
 
-    if aubreyrs:
+    if aubrey.relationship.value >= Relationship.FWB.value:
         scene v15s18aaub_2d # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at MC's face, flirty, mouth open
         with dissolve
 
@@ -163,16 +163,17 @@ label v15s18a_Aubrey:
     scene v15s18aaub_2g # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at MC, MC looking at Aubrey, Aubrey slightly serious, mouth open
     with dissolve
 
-    au "You'll get to witness the favoritism, ha."
+    au "You'll get to witness the favoritism. *Sigh*"
 
-    au "They don't even try to hide it, so... I'm just preparing myself for that, you know."
+    au "They don't even try to hide it... I'm just preparing myself for that, you know."
 
     scene v15s18aaub_2i # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at MC, MC looking at Aubrey, Aubrey slight smile, mouth closed
     with dissolve
 
     menu:
-        "We'll have fun.":
+        "We'll have fun":
             $ add_point(KCT.BRO)
+            
             scene v15s18aaub_2
             with dissolve
 
@@ -183,8 +184,9 @@ label v15s18a_Aubrey:
 
             au "Ha, yeah. You're right, we'll have fun."
 
-        "I'll be there.":
+        "I'll be there":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s18aaub_2
             with dissolve
 
@@ -206,7 +208,7 @@ label v15s18a_Aubrey:
 
     u "Haha, that's a good thing, right?"
 
-    if aubreyrs:
+    if aubrey.relationship.value >= Relationship.FWB.value:
         scene v15s18aaub_2a
         with dissolve
 
@@ -224,32 +226,37 @@ label v15s18a_Aubrey:
         "Smile":
             $ v15s18a_aub_kiwii_smile = True
             $ add_point(KCT.TROUBLEMAKER)
+            
             scene v15s18aaub_4a # TPP. Show MC behind Aubrey as she leans back towards him, her hand holding her phone in the air for a selfie photo, Aubrey slight smile, mouth closed, MC slight smile, mouth closed.
             with flash
 
-            pause .50
-
-            scene v15s18aaub_2a
-            with dissolve 
-
-        "Don't smile":
-            $ add_point(KCT.BOYFRIEND)
-            scene v15s18aaub_4b # TPP. # TPP. Show MC behind Aubrey as she leans back towards him, her hand holding her phone in the air for a selfie photo, Aubrey slight smile, mouth closed, MC frown, mouth closed.
-            with flash
-
-            pause .50
+            pause 0.75
 
             scene v15s18aaub_2
             with dissolve
             
-    u "*Sighs* Thanks for the heads up..."
+            u "*Sighs* Thanks for the heads up..."
 
+        "Don't smile":
+            $ add_point(KCT.BOYFRIEND)
+            
+            scene v15s18aaub_4b # TPP. # TPP. Show MC behind Aubrey as she leans back towards him, her hand holding her phone in the air for a selfie photo, Aubrey slight smile, mouth closed, MC frown, mouth closed.
+            with flash
+
+            pause 0.75
+
+            scene v15s18aaub_2
+            with dissolve
+            
+            u "*Sighs* Thanks for the heads up..."
+
+            
     scene v15s18aaub_2a
     with dissolve
 
     au "Haha, no problem! I can't wait for everyone to see your amazing costume."
 
-    scene v15s18aaub_2j # FPP.  MC sitting on the stool next to Aubrey, Aubrey looking at her phone we can't see the screen of, MC looking at Aubrey, Aubrey slight smile, mouth closed
+    scene v15s18aaub_2j # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at her phone we can't see the screen of, MC looking at Aubrey, Aubrey slight smile, mouth closed
     with dissolve
 
     u "(Great... Her tens of thousands of followers are going to love that.)"
@@ -257,9 +264,10 @@ label v15s18a_Aubrey:
     u "(Now might be a good time to bring up the list... Do I want Aubrey's help with it?)"
 
     menu:
-        "Mention the list.":
+        "Mention the list":
             $ v15s18_mention_list_aubrey = True
             $ add_point(KCT.TROUBLEMAKER)
+            
             scene v15s18aaub_2
             with dissolve
 
@@ -273,12 +281,12 @@ label v15s18a_Aubrey:
             scene v15s18aaub_5 # FPP. Same camera as v15s18a_aub2, MC looking down slightly at his hand giving Aubrey the challenge paper, Aubrey grabbing the Challenge paper.
             with dissolve
 
-            pause 
+            pause 0.75
 
             scene v15s18aaub_2k # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at the list, MC looking at Aubrey, Aubrey shocked, mouth closed.
-            with dissolve 
+            with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s18aaub_2l # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at the list, MC looking at Aubrey, Aubrey smirking, mouth closed.
             with dissolve
@@ -298,12 +306,12 @@ label v15s18a_Aubrey:
             scene v15s18aaub_2l
             with dissolve
 
-            pause .50
+            pause 0.75
 
             scene v15s18aaub_5a # FPP. Same camera as v15s18a_aub2, MC looking down slightly at his hand, Aubrey handing back the challenge paper, MC grabbing the challenge paper.
             with dissolve
 
-            pause .25
+            pause 0.75
 
             scene v15s18aaub_2a
             with dissolve
@@ -335,8 +343,9 @@ label v15s18a_Aubrey:
 
             u "Okay, ha, that sounds perfect."
 
-        "Don't mention the list.":
+        "Don't mention the list":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s18aaub_2
             with dissolve
 
@@ -350,42 +359,41 @@ label v15s18a_Aubrey:
             au "Mhmm! Enjoy the party."
 
     if v15s18a_aub_kiwii_smile:
-        $ v15s18a_kiwiiPost3 = KiwiiPost("Aubrey", Selfie with MC smiling at halloween party, _("Spooky season? More like stripper season ;)"), numberLikes=2492)
-        $ v15s18a_kiwiiPost3.newComment("Chloe", _("O. M. G."), queue=False)
-        $ v15s18a_kiwiiPost3.newComment("Naomi", _("Hahahaha! I have to come to one of these parties soon..."), queue=False)
-        if apes:
-            $ v15s18a_kiwiiPost3.newComment("Grayson", _("What the fuck...?"), queue=False)
-        if wolves:
-            $ v15s18a_kiwiiPost3.newComment("Sebastian", _("Hell yeah! Can I borrow that outfit when you're done, [name]? :D"), queue=False)
-        $ v15s18a_kiwiiPost3.addReply(_("Lol, I love this. Happy birthday Lauren!"), mentions="Lauren")
-        $ v15s18a_kiwiiPost3.newComment("Lauren", _("Hehe, thank you!! You guys are the best <3"), queue=False)
-        $ v15s18a_kiwiiPost3.addReply(_("Now taking appointments... ;)"))
-        $ v15s18a_kiwiiPost3.newComment("Naomi", _("Can I book you for my birthday party, too? ;D"), queue=False)
+        $ v15s18a_kiwiiPost3 = KiwiiPost(aubrey, "v15/v15_aupost1.webp", _("Spooky season? More like stripper season ;)"), numberLikes=2492)
+        $ v15s18a_kiwiiPost3.newComment(chloe, _("O. M. G."), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
+        $ v15s18a_kiwiiPost3.newComment(naomi, _("Hahahaha! I have to come to one of these parties soon..."), numberLikes=renpy.random.randint(1860, 3060), force_send=True)
+        if joinwolves:
+            $ v15s18a_kiwiiPost3.newComment(sebastian, _("Hell yeah! Can I borrow that outfit when you're done, [name]? :D"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
+        else:
+            $ v15s18a_kiwiiPost3.newComment(grayson, _("What the fuck...?"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
+        $ v15s18a_kiwiiPost3.addReply(_("Lol, I love this. Happy birthday Lauren!"), numberLikes=renpy.random.randint(1060, 2260), mentions=[lauren])
+        $ v15s18a_kiwiiPost3.newComment(lauren, _("Hehe, thank you!! You guys are the best <3"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
+        $ v15s18a_kiwiiPost3.addReply(_("Now taking appointments... ;)"), numberLikes=renpy.random.randint(1060, 2260))
+        $ v15s18a_kiwiiPost3.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(1860, 3060), force_send=True)
+
     else:
-        $ v15s18a_kiwiiPost4 = KiwiiPost("Aubrey", Selfie with non-smiling MC at halloween party, _("I think something's wrong with our stripper... Is he supposed to be this sad? </3"), numberLikes=2415)
-        $ v15s18a_kiwiiPost4.newComment("Chloe", _("O. M. G."), queue=False)
-        $ v15s18a_kiwiiPost4.newComment("Naomi", _("Aww! You need to cheer him up, little sis! Or I will... ;)"), queue=False)
-        if apes:
-            $ v15s18a_kiwiiPost4.newComment("Grayson", _("What the fuck is this"), queue=False)
-        if wolves:
-            $ v15s18a_kiwiiPost4.newComment("Sebastian", _("Lmao, show them how it's done, [name]! #SadboyStriptease"), queue=False)
-        $ v15s18a_kiwiiPost4.addReply(_("Sigh... Happy birthday Lauren! Lol"), mentions="Lauren")
-        $ v15s18a_kiwiiPost4.newComment("Lauren", _("Hahaha! Thank you guys <3"), queue=False)
-        $ v15s18a_kiwiiPost4.addReply(_("Now taking appointments... ;)"))
-        $ v15s18a_kiwiiPost4.newComment("Naomi", _("Can I book you for my birthday party, too? ;D"), queue=False)
-
-    pause
-
+        $ v15s18a_kiwiiPost4 = KiwiiPost(aubrey, "v15/v15_aupost2.webp", _("I think something's wrong with our stripper... Is he supposed to be this sad? </3"), numberLikes=2415)
+        $ v15s18a_kiwiiPost4.newComment(chloe, _("O. M. G."), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
+        $ v15s18a_kiwiiPost4.newComment(naomi, _("Aww! You need to cheer him up, little sis! Or I will... ;)"), numberLikes=renpy.random.randint(1860, 3060), force_send=True)
+        if joinwolves:
+            $ v15s18a_kiwiiPost4.newComment(sebastian, _("Lmao, show them how it's done, [name]! #SadboyStriptease"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
+        else:
+            $ v15s18a_kiwiiPost4.newComment(grayson, _("What the fuck is this"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
+        $ v15s18a_kiwiiPost4.addReply(_("Sigh... Happy birthday Lauren! Lol"), numberLikes=renpy.random.randint(1060, 2260), mentions=[lauren])
+        $ v15s18a_kiwiiPost4.newComment(lauren, _("Hahaha! Thank you guys <3"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
+        $ v15s18a_kiwiiPost4.addReply(_("Now taking appointments... ;)"), numberLikes=renpy.random.randint(1060, 2260))
+        $ v15s18a_kiwiiPost4.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(1860, 3060), force_send=True)
+    
     call screen v15s18a_bar
 
 # Upstairs
 # Location 2- Bathroom on Upstairs of deer's house:
 # *Clicking on Bathroom*
 label v15s18a_Ryan:
-    $ V15s18a_frryan = True
+    $ freeroam13.add("ryan")
 
     scene v15s18a_ryan_1 # TPP. Show MC standing outside the bathroom, slight smile, mouth closed
-    with dissolve
+    #with dissolve
 
     u "(I think this is the bathroom...?)"
 
@@ -394,7 +402,7 @@ label v15s18a_Ryan:
     scene v15s18a_ryan_2 # TPP. Show MC entering into the bathroom, as he enters we see Ryan sitting on the floor with his head above the toilet since he is puking, his face obscured by the toilet and we don't ever see inside it.
     with dissolve
 
-    pause 
+    pause 1.25
 
     scene v15s18a_ryan_3 # FPP. MC looking at Ryan, Ryan's face still obscured by toilet, Ryan disgusted face, mouth closed.
     with dissolve
@@ -427,6 +435,7 @@ label v15s18a_Ryan:
         "Gag":
             $ add_point(KCT.BOYFRIEND)
             $ v15s18a_gag = True
+            $ add_point(KCT.BOYFRIEND)
 
             scene v15s18a_ryan_3
             with dissolve
@@ -435,6 +444,8 @@ label v15s18a_Ryan:
 
             scene v15s18a_ryan_4 # TPP. Shot of just MC with a disgusted face covering his mouth with his hand.
             with dissolve
+            
+            pause 0.75
 
         "Hold it back":
             $ add_point(KCT.BRO)
@@ -469,30 +480,27 @@ label v15s18a_Ryan:
 
     ry "Oh... Yeah. I just borrowed it from Cameron."
 
-    scene v15s18a_ryan_3
-    with dissolve
-
     ry "I didn't have much time to plan a costume this year... *Groans*"
 
-    scene v15s18a_ryan_3a
+    scene v15s18a_ryan_3
     with dissolve
 
     u "Trust me, I know the feeling... Ha."
 
-    scene v15s18a_ryan_3b # FPP.  MC looking at Ryan, Ryan now looking at MC,Ryan looks miserable, disgusted face, mouth open.
+    scene v15s18a_ryan_3b # FPP. MC looking at Ryan, Ryan now looking at MC,Ryan looks miserable, disgusted face, mouth open.
     with dissolve
 
     ry "..."
 
     ry "What the fuck are you wear-"
 
-    scene v15s18a_ryan_3
+    scene v15s18a_ryan_3a
     with dissolve
 
     ry "*Pukes*"
 
     if v15s18a_gag:
-        scene v15s18a_ryan_3a
+        scene v15s18a_ryan_3
         with dissolve
 
         u "*Gags* I- I'm out... I'm out!"
@@ -500,27 +508,25 @@ label v15s18a_Ryan:
         scene v15s18a_ryan_5 # TPP. Show MC running out of the bathroom
         with dissolve
 
-        pause 
-
-        play sound "sounds/doorclose.mp3"
+        pause 0.75
 
         scene v15s18a_ryan_2a # TPP. Show MC exiting the bathroom, as he leaves we see Ryan sitting on the floor with his head above the toilet since he is puking, his face obscured by the toilet and we don't ever see inside it.
         with dissolve
         
-        pause 
+        pause 0.75
 
     else:
-        scene v15s18a_ryan_3a
+        scene v15s18a_ryan_3
         with dissolve
 
         u "Ha, feel better soon, Ryan. Drink lots of water when you're able to."
 
-        play sound "sounds/doorclose.mp3"
-
         scene v15s18a_ryan_2a
         with dissolve
 
-        pause
+        pause 0.75
+
+    play sound "sounds/doorclose.mp3"
 
     scene v15s18a_ryan_6 # TPP. MC standing outside of the bathroom door, neutral face, mouth closed
     with dissolve
@@ -529,25 +535,25 @@ label v15s18a_Ryan:
 
     u "(Happy Halloween, Ryan...)"
 
-    pause
-
     call screen v15s18a_upstairsroom
 
 # Upstairs
 # Location 3- Autumn's room
 # *Clicking on Autumn's door
 label v15s18a_AutumPenelope:
-    $ v15s18a_frautumpenelope = True
+    $ freeroam13.add("autumn_penelope")
 
     scene v15s18apen_1 # TPP. Show MC putting his ear to Autumn's room door, slight smile, mouth closed.
-    with dissolve
+    #with dissolve
 
     u "(I think there's people in here...?)"
+
+    play sound "sounds/dooropen.mp3" volume 0.5
 
     scene v15s18apen_2 # FPP. Show MC opening the door slightly in and peeking through the crack to see Penelope and Autumn, Penelope is sitting on Autumn's computer chair with her legs crossed, Autumn standing by her, both slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
     scene v15s18apen_2a # FPP. Show MC opening the door slightly in and peeking through the crack to see Penelope and Autumn, Penelope is sitting on Autumn's computer chair with her legs crossed, Autumn standing by her, Both slight smile, Autumn mouth open, Penelope mouth closed.
     with dissolve
@@ -577,10 +583,10 @@ label v15s18a_AutumPenelope:
     scene v15s18apen_4 # FPP. MC standing closer to Autumn and Penelope, Both shocked face as they look at MC, mouth open.
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s18apen_4a # FPP. Penelope covering her mouth with her hand as she laughs, Autumn smiling, mouth open.
-    with dissolve 
+    with dissolve
 
     aut "Hey- [name]... *Chuckles*"
 
@@ -612,13 +618,13 @@ label v15s18a_AutumPenelope:
     scene v15s18apen_6a # FPP. MC looking at Penelope, Penelope looking at MC, Penelope slight smile, mouth closed.
     with dissolve
 
-    u "Oh, trust me, I know. Luckily, it's nice and warm in here. Thanks Autumn."
-
-    scene v15s18apen_7 # FPP. MC looking at Autumn as she is starting to sit comfortably on her bed, slight smile, mouth closed.
-    with dissolve
+    u "Oh, trust me, I know. Luckily, it's nice and warm in here. Thanks, Autumn."
 
     if signs:
-        pause  
+        scene v15s18apen_7 # FPP. MC looking at Autumn as she is starting to sit comfortably on her bed, slight smile, mouth closed.
+        with dissolve
+
+        pause 0.75
 
         scene v15s18apen_7a # FPP. Autumn sitting on her bed comfortably, MC looking at Autumn, Autumn looking at MC, slight smile, mouth open.
         with dissolve
@@ -655,23 +661,43 @@ label v15s18a_AutumPenelope:
     scene v15s18apen_6c # FPP. MC looking at Penelope, Penelope looking at MC, Penelope putting a finger to her lips to shush them.
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s18apen_6d # FPP. MC looking at Penelope, Penelope looking at MC, Penelope's finger not at her lips anymore, Penelope winking at MC, slight smile, mouth open.
+    with dissolve
 
     pe "*Whispers* We're actually vampires... Shhh!"
 
     scene v15s18apen_6a
     with dissolve
 
-    u "Oh shit, okay... Your secret is safe with me. *Chuckles*"
+    menu:
+
+        "Good thing I'm a werewolf":
+            $ add_point(KCT.TROUBLEMAKER)
+
+            u "Haha, good thing I'm a werewolf."
+
+            scene v15s18apen_6d # FPP. MC looking at Penelope, Penelope looking at MC, Penelope's finger not at her lips anymore, Penelope winking at MC, slight smile, mouth open.
+            with dissolve
+
+            pe "I don't think you've seen enough vampire movies. That's not a good thing."
+            
+
+        "Your secret is safe":
+            $ add_point(KCT.BOYFRIEND)
+
+            scene v15s18apen_6a
+            #with dissolve
+
+            u "Oh shit, okay... Your secret is safe with me. *Chuckles*"
 
     scene v15s18apen_7a
     with dissolve
 
     aut "So, did you end up finding Lauren a good gift?"
 
-    if not AutumnLunchBreak:
+    if not v15_autumn_lunchbreak:
         scene v15s18apen_7b
         with dissolve
 
@@ -733,8 +759,7 @@ label v15s18a_AutumPenelope:
 
     u "Yeah, Autumn let me name one that came in the other day."
 
-    if dog_name = "Blue":
-
+    if dog_name.lower() == "blue":
         scene v15s18apen_7a
         with dissolve
 
@@ -779,7 +804,7 @@ label v15s18a_AutumPenelope:
     scene v15s18apen_8 # TPP. Shot of Autumn laughing as she sits on the bed
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s18apen_6e # FPP. MC looking at Penelope, Penelope looking at MC but more near his waistband, confused, mouth closed.
     with dissolve
@@ -846,7 +871,7 @@ label v15s18a_AutumPenelope:
 
             aut "It's supposed to turn a virgin into a natural."
 
-            aut "The frat presidents would each choose one Freshman on Halloween, a virgin obviously, and they were given the list to complete by midnight."
+            aut "The frat Presidents would each choose one Freshman on Halloween, a virgin obviously, and they were given the list to complete by midnight."
 
             scene v15s18apen_6b
             with dissolve
@@ -866,7 +891,7 @@ label v15s18a_AutumPenelope:
             scene v15s18apen_6g # FPP. MC looking at Penelope, Penelope looking at the list, Penelope biting her lip.
             with dissolve
 
-            pause 
+            pause 0.75
 
             scene v15s18apen_7c
             with dissolve
@@ -881,7 +906,7 @@ label v15s18a_AutumPenelope:
             scene v15s18apen_7c
             with dissolve
 
-            aut "Not only does everyone at SVC know you're a virgin, but they also know you asked at least six different women to help you with the list and got denied."
+            aut "Then everyone at SVC knows you're a virgin, and also that you asked at least six different women to help you with the list and got denied."
 
             scene v15s18apen_7b
             with dissolve
@@ -943,14 +968,14 @@ label v15s18a_AutumPenelope:
             scene v15s18apen_6h # FPP. Penelope handing MC back the challenge paper, MC grabbing tha paper, Penelope slight smile, mouth closed.
             with dissolve
 
-            pause 
+            pause 0.75
 
             scene v15s18apen_6
             with dissolve
 
             pe "Umm, yeah! Especially while you're wearing that stripper costume... *Giggles*"
 
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v15s18apen_7a
                 with dissolve
 
@@ -971,9 +996,8 @@ label v15s18a_AutumPenelope:
 
                 u "Yeah, we're together."
 
-                if penelopeloyal:
-                    $ penelopeloyal = False 
-                    $ penelopers = True
+                if penelope.relationship.value >= Relationship.LOYAL.value:
+                    $ penelope.relationship.value >= Relationship.LIKES.value
 
                     scene v15s18apen_6k # FPP. MC looking at Penelope, Penelope looking at MC, Penelope slight sad face, mouth open.
                     with dissolve
@@ -985,7 +1009,7 @@ label v15s18a_AutumPenelope:
 
                     u "Pen-"
 
-                elif penelopers:
+                elif penelope.relationship.value >= Relationship.LIKES.value:
                     scene v15s18apen_6k
                     with dissolve
 
@@ -1020,6 +1044,7 @@ label v15s18a_AutumPenelope:
 
         "Don't show the list":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s18apen_6a
             with dissolve
 
@@ -1035,50 +1060,41 @@ label v15s18a_AutumPenelope:
 
             u "*Sighs* No, I wasn't lying."
 
-        scene v15s18apen_7b
+    scene v15s18apen_6a
+    with dissolve
+
+    u "Anyway, time for me to catch up with the others."
+
+    scene v15s18apen_6
+    with dissolve
+
+    pe "Catch you later!"
+
+    scene v15s18apen_7a
+    with dissolve
+
+    aut "Have fun."
+
+    scene v15s18apen_9 # TPP. MC waving as he starts leaving the room, Penelope and Autumn back to looking at the computer in the background
+    with dissolve
+
+    u "You too, ladies!"
+
+    play sound "sounds/doorclose.mp3"
+
+    if v15s18a_showlist_penelope_autumn:
+        scene v15s18apen_10 # TPP. MC standing outside Autumn's room, slight smile, mouth closed.
         with dissolve
 
-        u "Anyway, time for me to catch up with the others."
+        u "(The sexless checklist, huh? It's worth the practice, I think. *Chuckles*)"
 
-        pause 
-        
-        scene v15s18apen_6a
+        u "(Maybe I should keep the real name of the game to myself, wouldn't wanna harm Imre's ego now, would we? Hehe...)"
+
+    else:
+        scene v15s18apen_10
         with dissolve
 
-        u "Anyway, time for me to catch up with the others."
-
-        scene v15s18apen_6
-        with dissolve
-
-        pe "Catch you later!"
-
-        scene v15s18apen_7a
-        with dissolve
-
-        aut "Have fun."
-
-        scene v15s18apen_9 # TPP. MC waving as he starts leaving the room, Penelope and Autumn back to looking at the computer in the background
-        with dissolve
-
-        u "You too, ladies!"
-
-        play sound "sounds/doorclose.mp3"
-
-        if v15s18a_showlist_penelope_autumn:
-            scene v15s18apen_10 # TPP. MC standing outside Autumn's room, slight smile, mouth closed.
-            with dissolve
-
-            u "(The sexless checklist, huh? It's worth the practice, I think. *Chuckles*)"
-
-            u "(Maybe I should keep the real name of the game to myself, wouldn't wanna harm Imre's ego now, would we? Hehe...)"
-
-        else:
-            scene v15s18apen_10
-            with dissolve
-
-            u "(Maybe we can bring up the list later with Autumn or Penelope.)"
-
-    pause
+        u "(Maybe we can bring up the list later with Autumn or Penelope.)"
 
     call screen v15s18a_upstairsroom
 
@@ -1086,21 +1102,22 @@ label v15s18a_AutumPenelope:
 # Location 4- Couch in the living room
 # *Clicking on Imre and Lauren*
 label v15s18a_ImreLauren:
-    $ v15s18a_frimrelauren = True
+    $ freeroam13.add("imre_lauren")
     
     scene v15s18aimre_1 # TPP. MC walking over to Lauren and Imre, Imre looking at Lauren, Lauren looking at Imre, both slight smile, mouth closed.
-    with dissolve
+    #with dissolve
 
-    pause  
+    pause 1.25
 
     scene v15s18aimre_2 # FPP. MC looking at Lauren, Lauren looking at Imre, Lauren slight smile, mouth open.
+    with dissolve
 
     la "Yeah, it's... cute!"
 
     scene v15s18aimre_3 # FPP. MC looking at Imre, Imre looking at Lauren, Imre slight smile, mouth open.
     with dissolve
 
-    imre "Cute? I'm supposed to be a badass gunslinger, Lauren. I can shoot the head off a chicken .01 second."
+    imre "Cute? I'm supposed to be a badass gunslinger, Lauren. I can shoot the head off a chicken in a hundredth of a second."
 
     scene v15s18aimre_2
     with dissolve
@@ -1137,7 +1154,7 @@ label v15s18a_ImreLauren:
 
     la "Hey there, half-naked man!"
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s18aimre_4
         with dissolve
 
@@ -1150,6 +1167,8 @@ label v15s18a_ImreLauren:
 
         scene v15s18aimre_4b # FPP. MC sitting down next to Lauren, Lauren kissing MC, Imre in the background, Imre slight smile, mouth closed.
         with dissolve
+        
+        pause 0.75
 
         if v13_imre_disloyal:
             scene v15s18aimre_5 # TPP. Show MC and Lauren kissing on the couch, Imre unamused face, mouth open.
@@ -1174,8 +1193,9 @@ label v15s18a_ImreLauren:
     imre "So, tell me, [name]... Would you ever shoot the head off a chicken?"
 
     menu:
-        "With reason.":
+        "With reason":
             $ add_point(KCT.BRO)
+            
             scene v15s18aimre_6a # FPP. MC looking at Imre, Imre looking at Mc, Lauren looking at MC, Imre slight smile, mouth closed, Lauren slight smile, mouth closed.
             with dissolve
 
@@ -1191,8 +1211,9 @@ label v15s18a_ImreLauren:
 
             imre "Yeah, like, for food."
 
-        "No, I wouldn't.":
+        "No, I wouldn't":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s18aimre_6a
             with dissolve
 
@@ -1258,10 +1279,9 @@ label v15s18a_ImreLauren:
     scene v15s18aimre_7 # TPP. Show MC trying to play it cool, Imre and Lauren both looking at MC, Imre slight smile, mouth closed, Lauren confused, mouth closed.
     with dissolve
 
-    pause
+    pause 0.75
 
-    if laurenrs:
-
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s18aimre_6a
         with dissolve
 
@@ -1273,8 +1293,9 @@ label v15s18a_ImreLauren:
     la "What list?"
 
     menu:
-        "Be honest.":
+        "Be honest":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s18aimre_4f # FPP. MC looking at Lauren, Imre looking at Lauren, Lauren looking at MC, Lauren 
             with dissolve
 
@@ -1285,7 +1306,7 @@ label v15s18a_ImreLauren:
 
             la "Challenges? Like what?"
 
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 scene v15s18aimre_6d # FPP. Imre looking at MC, MC looking at Imre, Lauren looking at MC, Lauren confused, mouth closed, Imre guilty, mouth open.
                 with dissolve
 
@@ -1301,25 +1322,19 @@ label v15s18a_ImreLauren:
 
             la "It does sound a bit stupid... But I'll know who to blame if any of my panties go missing, haha."
 
-        "Lie.":      
+        "Lie": 
             $ add_point(KCT.TROUBLEMAKER)
             $ v15s18a_lie = True
+            
             scene v15s18aimre_6a
             with dissolve
 
-            u "Oh, it's just my grocery list. Why are you asking me about groceries, Imre? *Nervously laughs*"
+            u "Oh, it's just my grocery list. Why are you asking me about groceries, Imre? *Nervous laugh*"
 
             scene v15s18aimre_6c
             with dissolve
 
             imre "Oh, I- I don't know, ha. Sorry, bro."
-
-    scene v15s18aimre_6a
-    with dissolve
-
-    u "Haha, alright, I should go check in with the others. See you two in a bit!"
-
-    pause
 
     scene v15s18aimre_4
     with dissolve
@@ -1339,7 +1354,7 @@ label v15s18a_ImreLauren:
     scene v15s18aimre_8 # TPP. Show MC getting up off of the couch, slight smile, mouth closed.
     with dissolve
 
-    pause
+    pause 0.75
 
     call screen v15s18a_livingroom
 
@@ -1347,17 +1362,18 @@ label v15s18a_ImreLauren:
 # Location 5- Kitchen in Deer's house
 # *Clicking on Riley*
 label v15s18a_Riley:
-    $ v15s18a_frriley = True
+    $ freeroam13.add("riley")
+
 # -Riley is shifting around food and plates on the counter, she's wearing a schoolgirl outfit-
     scene v15s18ariley_1 # FPP. MC looking at the Kitchen area, Food and plates out, Riley carrying plates to the part of the counter by the fridge, Riley looks stressed, mouth closed.
-    with dissolve
+    #with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s18ariley_1a # FPP. MC looking at the Kitchen area, Riley putting down the plates on the counter.
-    with dissolve 
+    with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s18ariley_2 # FPP. MC looking at Riley, Riley looking at MC, Riley nervous, mouth closed.
     with dissolve
@@ -1377,7 +1393,7 @@ label v15s18a_Riley:
     scene v15s18ariley_3 # FPP. MC looking at the arrangement of the food.
     with dissolve
 
-    pause  
+    pause 1.25
 
     scene v15s18ariley_2
     with dissolve
@@ -1397,7 +1413,7 @@ label v15s18a_Riley:
     scene v15s18ariley_2a
     with dissolve
 
-    ri "Haha, what do you mean? I'm not worried I just-"
+    ri "Haha, what do you mean? I'm not worried, I just-"
 
     scene v15s18ariley_2
     with dissolve
@@ -1431,7 +1447,7 @@ label v15s18a_Riley:
 
     u "That's a good start to a sentence... *Chuckles*"
 
-    if v13_FirstThreesome:
+    if "v14_threesome" in sceneList:
         scene v15s18ariley_2c
         with dissolve
 
@@ -1451,11 +1467,12 @@ label v15s18a_Riley:
         with dissolve
 
         u "Because we hooked up?"
+
     else:
         scene v15s18ariley_2c
         with dissolve
 
-        ri "Aubrey and I don't hangout that much anymore."
+        ri "Aubrey and I don't hang out that much anymore."
 
         scene v15s18ariley_2d
         with dissolve
@@ -1512,12 +1529,12 @@ label v15s18a_Riley:
     scene v15s18ariley_2g # FPP. MC looking at Riley, Riley looking down at her chest and pulling out a dollar bill from her boob area, nip slip, Riley slight smile, mouth closed.
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s18ariley_2h # FPP. MC looking at Riley, Riley tucking the dollar in MC's waist band, Riley slight smile ,mouth closed.
-    with dissolve 
+    with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s18ariley_2e
     with dissolve
@@ -1537,7 +1554,7 @@ label v15s18a_Riley:
     scene v15s18ariley_2i # FPP. MC looking at Riley, Riley looking at MC, Riley smirking, mouth closed.
     with dissolve
 
-    u "Yeah, ha. Thanks, that dollar will definitely help me get through college."
+    u "Yeah, ha. Thanks, that will definitely help me get through college."
 
     scene v15s18ariley_2e
     with dissolve
@@ -1545,8 +1562,9 @@ label v15s18a_Riley:
     ri "Haha, no problem."
 
     menu:
-        "Dance.":
+        "Dance":
             $ add_point(KCT.TROUBLEMAKER)
+            
             scene v15s18ariley_2f
             with dissolve
 
@@ -1555,12 +1573,12 @@ label v15s18a_Riley:
             scene v15s18ariley_4 # TPP. MC with his hand in the air, swaying his hips to the left, Riley looking at MC, Riley slight smile, mouth closed, MC slight smile, mouth closed.
             with dissolve
 
-            pause 
+            pause 1.25
 
             scene v15s18ariley_4a # TPP. MC with his hand in the air, swaying his hips to the right, Riley looking at MC, Riley slight smile, mouth closed, MC slight smile, mouth closed.
             with dissolve
 
-            pause  
+            pause 1
 
             scene v15s18ariley_2e
             with dissolve
@@ -1569,9 +1587,9 @@ label v15s18a_Riley:
 
             ri "You've got some sexy moves there, [name]."
 
-
-        "Don't dance.":
+        "Don't dance":
             $ add_point(KCT.BRO)
+            
             scene v15s18ariley_2i
             with dissolve
 
@@ -1592,24 +1610,28 @@ label v15s18a_Riley:
 
             ri "*Laughs*"
 
+            scene v15s18ariley_2f
+            with dissolve
+
+            u "Happened like this..."
+
     scene v15s18ariley_5 # TPP. Show the Challenge list mid fall out of MC's costume and Riley looking at it, Riley slightly confused, mouth closed, MC slight smile, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s18ariley_5a # TPP. The Challenge list landing on the floor and Riley bending over to pick it up, Riley slightly confused, mouth closed, MC slight smile, mouth closed.
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s18ariley_2j # FPP. MC looking at Riley, Riley looking at the Challenge list in her hand, Riley slightly confused, mouth open.
     with dissolve
 
-    ri "What's this?"
+    ri "Oh my, what's this?"
 
     scene v15s18ariley_2k # FPP. MC looking at Riley, Riley looking at the Challenge list in her hand, Riley smirking, mouth closed.
     with dissolve
-
 
     u "A list of challenges that Imre gave to me. The usual college shenanigans... *Chuckles*"
 
@@ -1626,7 +1648,7 @@ label v15s18a_Riley:
     scene v15s18ariley_6 # FPP. Riley handing the challenge list to MC, MC grabbing the list, Riley slight smile, mouth closed.
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v15s18ariley_2e
     with dissolve
@@ -1634,8 +1656,9 @@ label v15s18a_Riley:
     ri "Do you need any help with it?"
 
     menu:
-        "No, its fine.":
+        "No, it's fine":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s18ariley_2i
             with dissolve
 
@@ -1668,10 +1691,9 @@ label v15s18a_Riley:
 
             ri "Okay, sure thing."
 
-        "Yeah, I do.":
+        "Yeah, I do":
             $ add_point(KCT.TROUBLEMAKER)
-            $ v15s18_partytask += 1
-
+            
             scene v15s18ariley_2i
             with dissolve
 
@@ -1682,8 +1704,7 @@ label v15s18a_Riley:
 
             ri "Well, yeah."
 
-            if v13_FirstThreesome:
-        
+            if "v14_threesome" in sceneList:
                 ri "I've been craving you since Amsterdam..."
 
                 scene v15s18ariley_2i
@@ -1699,17 +1720,19 @@ label v15s18a_Riley:
             scene v15s18ariley_2m # FPP. Show Riley smiling and covering her eyes with one hand.
             with dissolve
 
-            pause 
+            pause 0.75
 
             scene v15s18ariley_7 # TPP. Close up of Riley's finger pointing at the handjob challenge on the paper.
             with dissolve
 
-            pause  
+            pause 0.75
 
             scene v15s18ariley_2i
             with dissolve
         
             u "Haha, what is it?"
+
+            label v15s18a_rileysg:
 
             scene v15s18ariley_2n # FPP. Riley looking down at the paper that we can't see, Riley slight smile, mouth open.
             with dissolve
@@ -1734,19 +1757,19 @@ label v15s18a_Riley:
             scene v15s18ariley_8 # FPP. MC following Riley up the stairs.
             with dissolve
 
-            pause  
+            pause 0.75
 
             scene v15s18ariley_9 # TPP. Upskirt of Riley's outfit from behind.
             with dissolve
 
-            pause  
+            pause 0.75
 
             play sound "sounds/dooropen.mp3"
 
             scene v15s18ariley_10 # TPP. Show Riley entering the Guest room and MC right behind her, both slight smile, mouth closed.
             with dissolve
 
-            pause  
+            pause 0.75
 
             play sound "sounds/doorclose.mp3"
 
@@ -1758,17 +1781,19 @@ label v15s18a_Riley:
             scene v15s18ariley_12 # TPP. Show MC pulling the bottom part of his costume down
             with dissolve
 
-            pause 
+            pause 0.75
 
             play sound "sounds/kiss.mp3"
 
             scene v15s18ariley_13 # FPP. MC laying in the bed, Riley laying next to him and kissing him.
             with dissolve
 
-            pause 
+            pause 0.75
 
             scene v15s18ariley_14 # TPP. MC laying on the bed and Riley laying next to him them kissing.
-            with dissolve  
+            with dissolve
+            
+            pause 0.75
 
             image v15rileyhj = Movie(play="images/v15/Scene 18a/v15rileyhj.webm", loop=True, image="images/v15/Scene 18a/v15rileyhjStart.webp", start_image="images/v15/Scene 18a/v15rileyhjStart.webp")
             image v15rileyhjf = Movie(play="images/v15/Scene 18a/v15rileyhjf.webm", loop=True, image="images/v15/Scene 18a/v15rileyhjStart.webp", start_image="images/v15/Scene 18a/v15rileyhjStart.webp")
@@ -1777,7 +1802,8 @@ label v15s18a_Riley:
 
             scene v15rileyhj # Ignore as animation
             with dissolve
-            pause
+
+            pause 0.75
 
             u "*Moans*"
 
@@ -1785,7 +1811,8 @@ label v15s18a_Riley:
 
             scene v15rileyhjf # Ignore as animation
             with dissolve
-            pause
+
+            pause 0.75
 
             u "Yeah... Of course, I do."
 
@@ -1793,7 +1820,8 @@ label v15s18a_Riley:
 
             scene v15rileyhj # Ignore as animation
             with dissolve
-            pause
+
+            pause 0.75
 
             ri "Or slower and gentler?"
 
@@ -1801,7 +1829,8 @@ label v15s18a_Riley:
 
             scene v15rileyhjf # Ignore as animation
             with dissolve
-            pause
+
+            pause 0.75
 
             ri "*Giggles* What was that?"
 
@@ -1825,7 +1854,7 @@ label v15s18a_Riley:
             scene v15s18ariley_15 # TPP. Shot of Riley's costume as she lays on the bed next to MC her hand on his dick.
             with dissolve
 
-            pause  
+            pause 0.75
 
             scene v15s18ariley_13b
             with dissolve
@@ -1839,7 +1868,8 @@ label v15s18a_Riley:
 
             scene v15rileyhj2 # Ignore as animation
             with dissolve
-            pause
+
+            pause 0.75
 
             u "Keep going... Just like that..."
 
@@ -1856,7 +1886,8 @@ label v15s18a_Riley:
 
             scene v15rileyhj2f # Ignore as animation
             with dissolve
-            pause
+
+            pause 0.75
 
             ri "Yeah?"
 
@@ -1871,12 +1902,13 @@ label v15s18a_Riley:
 
             scene v15rileyhj2f # Ignore as animation
             with dissolve
-            pause 
+
+            pause 0.75
 
             scene v15s18ariley_17 # TPP. MC cumming onto Riley's hand
             with dissolve
 
-            pause  
+            pause 0.75
 
             scene v15s18ariley_13a
             with dissolve
@@ -1893,12 +1925,12 @@ label v15s18a_Riley:
 
             ri "You're welcome."
 
-            play sound "sound/kiss.mp3"
+            play sound "sounds/kiss.mp3"
 
             scene v15s18ariley_13d # FPP. Riley kissing MC on the cheek
             with dissolve
 
-            pause  
+            pause 0.75
 
             scene v15s18ariley_13a
             with dissolve
@@ -1913,39 +1945,46 @@ label v15s18a_Riley:
             scene v15s18ariley_13e # FPP. Show Riley getting off the bed, slight smile, mouth closed.
             with dissolve
 
-            pause 
+            pause 0.75
 
             play sound "sounds/dooropen.mp3"
 
             scene v15s18ariley_18 # FPP. Riley opening the door and exiting, slight smile, mouth closed.
             with dissolve
 
-            pause  
+            pause 0.75
 
             play sound "sounds/doorclose.mp3"
 
             scene v15s18ariley_18a # FPP. The door closed and Riley gone
             with dissolve
 
+            $ sceneList.add("v15_riley")
+
+            if not _in_replay:
+                $ checklist[3].complete = True
+
             u "(Well... That wasn't so hard. *Laughs* Where to next?)"
 
+            $ renpy.end_replay()
+            
             scene v15s18ariley_12a # TPP. MC putting his costume back on, slight smile, mouth closed.
             with dissolve
 
-        pause
+            pause 0
 
-        call screen v15s18a_upstairsroom
+    call screen v15s18a_kitchen
 
 # Ground Floor
 # location 6- Kitchen counter stools
 # *Clicking on Chris and Amber*
-label v15s18a_ChrisAmber
-    $ v15s18a_frchrisamber = True
+label v15s18a_ChrisAmber:
+    $ freeroam13.add("chris_amber")
 
     scene v15s18aamber_1 # TPP. MC walking towards the Kitchen stools Amber is sitting on, Chris talking to Amber, Chris slight smile, mouth open, Amber slight smile, mouth closed.
-    with dissolve
+    #with dissolve
 
-    pause 
+    pause 1.25
 
     scene v15s18aamber_2 # FPP. MC keeping a little bit of distance and watching the Convo, Chris looking at Amber, Amber looking at Chris, Chris slight smile, mouth open, Amber slight smile, mouth closed.
     with dissolve
@@ -1985,10 +2024,10 @@ label v15s18a_ChrisAmber
     scene v15s18aamber_2g # FPP. MC keeping a little bit of distance and watching the Convo, Chris walking away, Amber starting to sit back down on the stool.
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v15s18aamber_3 # FPP. MC sitting on the stool next to Amber, MC looking at Amber, Amber looking at MC, Amber slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     u "What the hell did I just witness? *Laughs*"
 
@@ -2016,30 +2055,17 @@ label v15s18a_ChrisAmber
     with dissolve
 
     am "Well, maybe I'll apologize later."
-
-    scene v15s18aamber_4 # TPP. MC and Amber looking at each other, both serious face, mouth closed.
-    with dissolve
-
-    pause  
-
-    scene v15s18aamber_4a # TPP. MC and Amber looking at each other, both laughing.
-    with dissolve
-
-    pause  
-
-    scene v15s18aamber_3
-    with dissolve
     
     am "Probably not though. *Laughs*"
 
     am "His game needs to improve and that's the only way some people learn."
 
-    scene v15s18aamber_3a
+    scene v15s18aamber_3
     with dissolve
 
     u "That's so charitable of you, Amber."
 
-    scene v15s18aamber_3
+    scene v15s18aamber_3a
     with dissolve
 
     am "I do my best."
@@ -2047,12 +2073,12 @@ label v15s18a_ChrisAmber
     scene v15s18aamber_3b # FPP. MC sitting on the stool next to Amber, MC looking at Amber, Amber looking down at MC's lower half checking out his costume, Amber smirking, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s18aamber_3c # FPP. MC sitting on the stool next to Amber, MC looking at Amber, Amber back to looking at MC's face, Amber smirking, mouth open.
     with dissolve
 
-    am "Now, holy fuck... What on earth is this outfit you're wearing?!"
+    am "Now, what on earth is this outfit you're wearing?!"
 
     scene v15s18aamber_3
     with dissolve
@@ -2089,6 +2115,8 @@ label v15s18a_ChrisAmber
         with dissolve
 
         u "Haha, whatever! We both know I'd make more than you any day of the week."
+        
+        call screen v15s18a_room
 
     else:
         scene v15s18aamber_3
@@ -2121,7 +2149,7 @@ label v15s18a_ChrisAmber
         u "Of course."
 
         menu:
-            "Don't mention the list.":
+            "Don't mention the list":
                 $ add_point(KCT.BOYFRIEND)
 
                 u "(Not feeling like this is the best moment, maybe later.)"
@@ -2133,8 +2161,9 @@ label v15s18a_ChrisAmber
 
                 am "Okay, good luck. I'll find you later."
 
-            "Mention the list.":
+            "Mention the list":
                 $ add_point(KCT.TROUBLEMAKER)
+                
                 scene v15s18aamber_3d # FPP. MC sitting on the stool next to Amber, MC looking at Amber, Amber back to looking at MC's face, Amber smirking, mouth closed.
                 with dissolve
             
@@ -2148,7 +2177,7 @@ label v15s18a_ChrisAmber
                 scene v15s18aamber_5 # FPP. Just Amber and MC's hands, MC handing Amber the challenge paper, Amber grabbing the paper.
                 with dissolve
 
-                pause
+                pause 0.75
 
                 scene v15s18aamber_3e # FPP. # FPP. MC sitting on the stool next to Amber, MC looking at Amber, Amber looking at the Challenge list, Amber slight smile, mouth open.
                 with dissolve
@@ -2163,26 +2192,16 @@ label v15s18a_ChrisAmber
                 u "It would be an orgy party. *Laughs*"
 
                 scene v15s18aamber_3a
-                with dissolve     
+                with dissolve
 
                 am "Ha, yes!"
 
-                if not KCT == Popular or not amberrs:
-
-                    am "Well, I'm sure you'll find some girls who will gladly help you mark a few things off of here tonight."
-
-                    scene v15s18aamber_3
-                    with dissolve
-
-                    u "Thanks, haha. I'm gonna go continue my search and catch up with everyone."
-
-                    scene v15s18aamber_3a
-                    with dissolve
-
-                    am "Good luck!"
-                else:
-                    $ v15s18_partytask += 1
-
+                if kct == "popular" or amber.relationship.value >= Relationship.FWB.value:
+                    if amber.relationship.value < Relationship.FWB.value:
+                        call screen kct_popup
+                    
+                    label v15s18a_ambersg:
+                    
                     scene v15s18aamber_3c
                     with dissolve
 
@@ -2198,22 +2217,22 @@ label v15s18a_ChrisAmber
                     scene v15s18aamber_3c
                     with dissolve
 
-                    am "You'll find out. Come on."
+                    am "You'll find out. Come on, let's go to the balcony."
 
                     scene v15s18aamber_6 # TPP. MC following Amber up the stairs of the Deer's house
                     with dissolve
 
-                    pause  
+                    pause 0.75
 
                     scene v15s18aamber_7 # FPP. MC focusing in on Amber's ass as they go up the stairs
-                    with dissolve 
+                    with dissolve
 
-                    pause 
+                    pause 0.75
 
                     scene v15s18aamber_8 # FPP. MC and Amber on the Balcony, MC looking at Amber, Amber looking at MC, Amber smirking, mouth closed.
-                    with fade(1,0,1)
+                    with fade
 
-                    pause  
+                    pause 0.75
 
                     scene v15s18aamber_8a # FPP. MC and Amber on the Balcony, MC looking at Amber, Amber looking at MC, Amber smirking, mouth open.
                     with dissolve
@@ -2233,15 +2252,17 @@ label v15s18a_ChrisAmber
                     scene v15s18aamber_9 # FPP. MC looking down as Amber is on her knees infront of him.
                     with dissolve
 
-                    pause  
+                    pause 0.75
 
                     scene v15s18aamber_9a # FPP. MC looking down as Amber is on her knees infront of him, Amber pulling down the bottom part of his costume.
                     with dissolve
 
-                    pause  
+                    pause 0.75
                     
                     scene v15s18aamber_9b # FPP. MC looking down as Amber is on her knees infront of him, MC's bottom part of his costume around his ankles and his dick is out infront of Amber's face.
                     with dissolve
+
+                    pause 0.75
 
                     image v15amberbj = Movie(play="images/v15/Scene 18a/v15amberbj.webm", loop=True, image="images/v15/Scene 18a/v15amberbjStart.webp", start_image="images/v15/Scene 18a/v15amberbjStart.webp")
                     image v15amberbjf = Movie(play="images/v15/Scene 18a/v15amberbjf.webm", loop=True, image="images/v15/Scene 18a/v15amberbjStart.webp", start_image="images/v15/Scene 18a/v15amberbjStart.webp")
@@ -2250,7 +2271,8 @@ label v15s18a_ChrisAmber
 
                     scene v15amberbj # Ignore as animation
                     with dissolve
-                    pause
+
+                    pause 0.75
 
                     am "Mmmm..."
 
@@ -2270,7 +2292,8 @@ label v15s18a_ChrisAmber
 
                     scene v15amberbjf # Ignore as animation.
                     with dissolve
-                    pause
+
+                    pause 0.75
 
                     u "*Moans* Take all of me."
 
@@ -2288,7 +2311,8 @@ label v15s18a_ChrisAmber
 
                     scene v15amberbj2 # Ignore as animation
                     with dissolve
-                    pause
+
+                    pause 0.75
 
                     u "*Moans* Fuck!"
 
@@ -2310,7 +2334,8 @@ label v15s18a_ChrisAmber
 
                     scene v15amberbj2f # Ignore as animation
                     with dissolve
-                    pause
+
+                    pause 0.75
 
                     u "I'm going to cum... Amber..."
 
@@ -2328,14 +2353,14 @@ label v15s18a_ChrisAmber
                     scene v15s18aamber_9j # FPP. MC looking down at Amber, Amber looking up at MC with a mouth full of cum winking at MC.
                     with dissolve
 
-                    pause  
+                    pause 0.75
 
                     scene v15s18aamber_10 # TPP. Just Amber spitting the cum over the side of the balcony.
-                    with dissolve 
+                    with dissolve
 
-                    pause  
+                    pause 0.75
 
-                    scene v15s18amber_11 # TPP. Just Amber wiping her mouth, slight smile, mouth closed.
+                    scene v15s18aamber_11 # TPP. Just Amber wiping her mouth, slight smile, mouth closed.
                     with dissolve
 
                     am "I hope nobody was standing under there, haha."
@@ -2370,17 +2395,39 @@ label v15s18a_ChrisAmber
                     scene v15s18aamber_12 # FPP. MC watching Amber walking back in the house.
                     with dissolve
 
+                    $ sceneList.add("v18_amber")
+
+                    if not _in_replay:
+                        $ checklist[2].complete = True
+
                     u "(Blow job, check!)"
 
                     scene v15s18aamber_13 # TPP. MC pulling the bottom part of his costume back up, slight smile, mouth closed.
-                    with dissolve 
+                    with dissolve
 
-                    pause
+                    pause 0.75
 
                     scene v15s18aamber_14 # TPP. Show Mc walking back inside the house, slight smile, mouth closed.
                     with dissolve
 
-        pause
+                    $ renpy.end_replay()
+
+                    pause 0
+
+                else:
+                    call screen kct_popup(required_kct="popular")
+                    
+                    am "Well, I'm sure you'll find some girls who will gladly help you mark a few things off of here tonight."
+
+                    scene v15s18aamber_3
+                    with dissolve
+
+                    u "Thanks, haha. I'm gonna go continue my search and catch up with everyone."
+
+                    scene v15s18aamber_3a
+                    with dissolve
+
+                    am "Good luck!"
 
         call screen v15s18a_upstairsroom
 
@@ -2388,14 +2435,12 @@ label v15s18a_ChrisAmber
 # Location 7- Upstairs hallway
 # *Clicking on the bronze deer statue*
 label v15s18a_BronzeDeer:
-    $ v15s18a_frdeer = True
+    $ freeroam13.add("deer")
 
     scene v15s18adeer_1 # FPP. MC looking at the bronze deer statue in the hallway upstairs
-    with dissolve
+    #with dissolve
 
     u "(That's an impressive deer... Looks expensive too. I wonder if it's been here since the beginning of the sorority?)"
-
-    pause
 
     call screen v15s18a_upstairsroom
 
@@ -2403,19 +2448,18 @@ label v15s18a_BronzeDeer:
 # Location 8- Magnet on Fridge downstairs
 # *Clicking on the magnet photo on the Fridge*
 label v15s18a_AutumnLaurenPhoto:
-    $ v15s18a_frphoto = True
+    $ freeroam13.add("photo")
+
 # -if MC clicks on a photo of Autumn and Lauren (Magnet on the fridge), it says "best friends forever". Also note that the player should have a good view of the other magnets on the fridge-
     scene v15s18aphoto_1 # FPP. MC looking at all the magnets on the fridge
-    with dissolve
+    #with dissolve
 
-    pause  
+    pause 1.25
 
     scene v15s18aphoto_2 # FPP. Close in view of the magnet on the fridge that is a picture of Autumn and Lauren, The magnet says "Best Friends Forever <3".
     with dissolve
 
     u "(Aww, haha. \"Best friends forever\". They're super close, aren't they...)"
-
-    pause
 
     call screen v15s18a_kitchen
 
@@ -2423,14 +2467,28 @@ label v15s18a_AutumnLaurenPhoto:
 # Location 9- Pumpkin on table next to the living room couch
 # *Clicking on pumpkin*
 label v15s18a_Pumpkin:
-    $ v15s18a_frpumpkin = True
+    $ freeroam13.add("pumpkin")
+    $ v15s18_pumpkin += 1
 
     scene v15s18apumpkin_1 # FPP. MC looking on a pumpkin on the table near the living room couch, The pumpkin has a cat-face carved into it.
-    with dissolve
+    #with dissolve
 
-    u "(Haha, it looks too cute for a Halloween pumpkin. I'm guessing Lauren made this one.)"
+    pause 0
 
-    pause
+    if v15s18_pumpkin == 5:
+        hide screen v15_imre_checklist_icon
+        $ grant_achievement("pumpkin_season")
+        u "(Okay [name], focus. Let's leave this pumpkin and check the rest of the party.)"
+        show screen v15_imre_checklist_icon
+
+    elif v15s18_pumpkin == 4:
+        u "(I don't know why I keep checking that pumpkin, it seems to have a strange influence on me.)"
+
+    elif v15s18_pumpkin == 3:
+        u "(Yep, it's still the same pumpkin there.)"
+
+    else:
+        u "(Haha, it looks too cute for a Halloween pumpkin. I'm guessing Lauren made this one.)"
 
     call screen v15s18a_livingroom
 

@@ -36,7 +36,7 @@ label v14s19:
 
     u "Damn, someone's eager..."
     
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v14s19_5 # TPP. Show MC leaning in to kiss Chloe, all mouths closed.
         with dissolve
 
@@ -104,7 +104,7 @@ label v14s19:
             people=[mc, chloe])
 
         chloe_board.add_task("Apes", "Host a small get together with Cameron, Grayson, Chloe, Aubrey and you",
-            opinion= "\"First thing's first: Get them all in a room, give them each a beer, and put on some good music. As soon as we've set the mood, we can get down to business.\" - Chloe",
+            opinion= "\"First things first: Get them all in a room, give them each a beer, and put on some good music. As soon as we've set the mood, we can get down to business.\" - Chloe",
             people=[mc, chloe, aubrey, grayson, cameron])
         v14s19_talk_cameron = chloe_board.add_subtask("Apes", "Talk to Cameron about a strategic alliance",
             opinion="\"Cameron secretly has amazing leadership skills, and I know he plans to use them one day. If we tell Cameron exactly what he wants to hear in terms of the future of the Apes, he'll have no reason to vote against me\" - Chloe",
@@ -125,15 +125,15 @@ label v14s19_continue:
 
     u "From the options we have, these are the final decisions I'd go with."
 
+    scene v14s19_99a # TPP. Same as v14s19_99, but Chloe mouth open, MC mouth closed
+    with dissolve
+
     if (v14_help_chloe and not v14_chloe_wolves):
         cl "Getting the Apes to side with us could take a lot of convincing but..."
         cl "If we manage to pull it off, a Chicks and Apes alliance would make for an interesting future of the Chicks."
 
     else:
         cl "I know Chris trusts me, so I'm pretty sure we've already got the Wolves on our side. Guess we'll find out, though..."
-
-    scene v14s19_99a # TPP. Same as v14s19_99, but Chloe mouth open, MC mouth closed
-    with dissolve
 
     cl "Hmm, okay..."
 

@@ -147,7 +147,7 @@ label v9_hang_w_linds:
 
     menu:
         "Let Lindsey grab your hand":
-            if chloers:
+            if chloe.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.TROUBLEMAKER)
 
             else:
@@ -200,13 +200,14 @@ label v9_hang_w_linds:
 
             menu:
                 "Make out with Lindsey":
-                    if chloers:
+                    if chloe.relationship.value >= Relationship.FWB.value:
                         $ add_point(KCT.TROUBLEMAKER)
                     
                     else:
                         $ add_point(KCT.BOYFRIEND)
 
-                    $ lindseyfirstkiss = True
+                    $ lindsey.relationship = Relationship.KISS
+                    $ sceneList.add("v9_lindsey")
                     
                     scene v9links # Animations pls ignore
                     with dissolve
@@ -310,8 +311,9 @@ label v9_hang_w_linds:
 
                     pause 1
                     $ renpy.end_replay()
+
                 "Pull away":
-                    if chloers:
+                    if chloe.relationship.value >= Relationship.FWB.value:
                         $ add_point(KCT.BOYFRIEND)
                         
                     scene v9hwl7b # TPP. Same camera as v9hwl7, Show MC pulling away from Lindsey who is trying to kiss him.

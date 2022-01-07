@@ -20,7 +20,7 @@ label v11_roommate:
 
         pause 0.75
 
-        if chloemad:
+        if chloe.relationship.value <= Relationship.MAD.value:
             scene v11rm4 # FPP. MC is now in talking distance to Chloe, Chloe is now looking at MC, Chloe is slightly annoyed, mouth closed (make sure counter is in backrgound)
             with dissolve
 
@@ -91,118 +91,7 @@ label v11_roommate:
 
             cl "[name], it's late."
 
-        elif not chloers:
-            scene v11rm4f # FPP. Same as v11rm4, but Chloe is smiling, mouth closed
-            with dissolve
-
-            u "Hey."
-
-            scene v11rm4g # FPP. Same as v11rm4f, but Chloe mouth open
-            with dissolve
-
-            cl "Hey."
-
-            scene v11rm4f
-            with dissolve
-
-            u "Please don't be a boring roommate and make me regret my choice."
-
-            scene v11rm4g
-            with dissolve
-
-            cl "Haha. Me? Boring? I should be saying that about you. You're probably ready to go straight to sleep."
-
-            scene v11rm4f
-            with dissolve
-
-            u "Well, it is like, three in the morning."
-
-            scene v11rm4g
-            with dissolve
-
-            cl "And?"
-
-            scene v11rm4f
-            with dissolve
-
-            u "And we just had a long ass flight..."
-
-            scene v11rm4g
-            with dissolve
-
-            cl "Who's the boring one again? *Chuckles*"
-
-            scene v11rm4f
-            with dissolve
-
-            u "What do you have in mind?"
-
-            scene v11rm4g
-            with dissolve
-
-            cl "Nothing. *Laughs* Just wanted to tease you for trying to call me boring."
-
-            scene v11rm4f
-            with dissolve
-
-            u "Haha."
-
-            scene v11rm4b
-            with dissolve
-
-            pause 0.75
-
-            scene v11rm4c 
-            with dissolve
-
-            pause 0.75
-
-            scene v11rm4d
-            with dissolve
-
-            pause 0.75
-
-            scene v11rm4h # FPP. Same as v11rm4e, but Chloe is slightly smiling, mouth open
-            with dissolve
-
-            cl "Here's your key."
-
-            scene v11rm4f
-            with dissolve
-
-            u "Thanks."
-
-            scene v11rm5a # TPP. Same as v11rm5, but they're both smiling instead
-            with dissolve
-
-            pause 0.75
-
-            scene v11rm6
-            with dissolve
-
-            pause 0.75
-
-            scene v11rm7
-            with dissolve
-
-            pause 0.75
-
-            scene v11rm7d # FPP. Same as v11rm7a, but Chloe is smiling, mouth closed
-            with dissolve
-
-            u "Just like that?"
-
-            scene v11rm7e # FPP. Same as v11rm7b, but Chloe is smiling, mouth open
-            with dissolve
-
-            cl "Haha, just like that."
-
-            $ v11s19_kiwiiPost1 = KiwiiPost("Chloe", "v11/v11_chloemcselfie.webp", _("My Europe roommate!"), numberLikes=256)
-            $ v11s19_kiwiiPost1.newComment("Aubrey", _("Look at you two!"), queue=False)
-            $ v11s19_kiwiiPost1.addReply(_("I think I made the correct choice of roommate ;)"), numberLikes=321)
-            $ v11s19_kiwiiPost1.addReply(_("Glad to have you as my roommate Chloe!"), numberLikes=334)
-
-        elif chloers:
+        elif chloe.relationship.value >= Relationship.FWB.value:
             scene v11rm4f
             with dissolve
 
@@ -318,10 +207,121 @@ label v11_roommate:
 
             cl "Goodnight."
 
-            $ v11s19_kiwiiPost2 = KiwiiPost("Chloe", "v11/v11_chloemcselfie.webp", _("My Europe roommate!"), numberLikes=256)
-            $ v11s19_kiwiiPost2.newComment("Aubrey", _("Look at you two!"), queue=False)
+            $ v11s19_kiwiiPost2 = KiwiiPost(chloe, "v11/v11_chloemcselfie.webp", _("My Europe roommate!"), numberLikes=256)
+            $ v11s19_kiwiiPost2.newComment(aubrey, _("Look at you two!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
             $ v11s19_kiwiiPost2.addReply(_("I think I made the correct choice of roommate ;)"), numberLikes=321)
             $ v11s19_kiwiiPost2.addReply(_("Glad to have you as my roommate Chloe!"), numberLikes=334)
+
+        else:
+            scene v11rm4f # FPP. Same as v11rm4, but Chloe is smiling, mouth closed
+            with dissolve
+
+            u "Hey."
+
+            scene v11rm4g # FPP. Same as v11rm4f, but Chloe mouth open
+            with dissolve
+
+            cl "Hey."
+
+            scene v11rm4f
+            with dissolve
+
+            u "Please don't be a boring roommate and make me regret my choice."
+
+            scene v11rm4g
+            with dissolve
+
+            cl "Haha. Me? Boring? I should be saying that about you. You're probably ready to go straight to sleep."
+
+            scene v11rm4f
+            with dissolve
+
+            u "Well, it is like, three in the morning."
+
+            scene v11rm4g
+            with dissolve
+
+            cl "And?"
+
+            scene v11rm4f
+            with dissolve
+
+            u "And we just had a long ass flight..."
+
+            scene v11rm4g
+            with dissolve
+
+            cl "Who's the boring one again? *Chuckles*"
+
+            scene v11rm4f
+            with dissolve
+
+            u "What do you have in mind?"
+
+            scene v11rm4g
+            with dissolve
+
+            cl "Nothing. *Laughs* Just wanted to tease you for trying to call me boring."
+
+            scene v11rm4f
+            with dissolve
+
+            u "Haha."
+
+            scene v11rm4b
+            with dissolve
+
+            pause 0.75
+
+            scene v11rm4c 
+            with dissolve
+
+            pause 0.75
+
+            scene v11rm4d
+            with dissolve
+
+            pause 0.75
+
+            scene v11rm4h # FPP. Same as v11rm4e, but Chloe is slightly smiling, mouth open
+            with dissolve
+
+            cl "Here's your key."
+
+            scene v11rm4f
+            with dissolve
+
+            u "Thanks."
+
+            scene v11rm5a # TPP. Same as v11rm5, but they're both smiling instead
+            with dissolve
+
+            pause 0.75
+
+            scene v11rm6
+            with dissolve
+
+            pause 0.75
+
+            scene v11rm7
+            with dissolve
+
+            pause 0.75
+
+            scene v11rm7d # FPP. Same as v11rm7a, but Chloe is smiling, mouth closed
+            with dissolve
+
+            u "Just like that?"
+
+            scene v11rm7e # FPP. Same as v11rm7b, but Chloe is smiling, mouth open
+            with dissolve
+
+            cl "Haha, just like that."
+
+            $ v11s19_kiwiiPost1 = KiwiiPost(chloe, "v11/v11_chloemcselfie.webp", _("My Europe roommate!"), numberLikes=256)
+            $ v11s19_kiwiiPost1.newComment(aubrey, _("Look at you two!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+            $ v11s19_kiwiiPost1.addReply(_("I think I made the correct choice of roommate ;)"), numberLikes=321)
+            $ v11s19_kiwiiPost1.addReply(_("Glad to have you as my roommate Chloe!"), numberLikes=334)
 
         scene v11rm7c # FPP. MC looks as Chloe is turned around with her back to him, sleeping
         with dissolve
@@ -377,7 +377,7 @@ label v11_roommate:
 
         ri "Ready to go check out this treasure hunt?"
 
-        if chloers:
+        if chloe.relationship.value >= Relationship.FWB.value:
             scene v11rm12 # FPP. MC still standing by the door, he looks back at Chloe who is still sleeping, show some of her boobs slipping out from her outfit (Day)
             with dissolve
 
@@ -412,7 +412,7 @@ label v11_roommate:
 
         pause 0.75
 
-        if not rileyrs:
+        if riley.relationship.value < Relationship.FWB.value:
             scene v11rm14 # FPP. MC is now in talking distance to Riley, Riley is now looking at MC, Riley is smiling, mouth closed (make sure counter is in backrgound)
             with dissolve
 
@@ -558,7 +558,7 @@ label v11_roommate:
 
             ri "Hmm, interesting... Well, you know how I'm, like, interested in girls? *Chuckles*"
 
-            if ending == "riley" and not v8_riley_lewd_ending:
+            if ending == "riley" and not "v8_riley" in sceneList:
                 scene v11rm21
                 with dissolve
 
@@ -892,8 +892,8 @@ label v11_roommate:
 
                     ri "...And all of a sudden I'm tired. *Chuckles*"
 
-        $ v11s19_kiwiiPost3 = KiwiiPost("Riley", "v11/v11_rileymcselfie.webp", _("Roll on Europe!"), numberLikes=456)
-        $ v11s19_kiwiiPost3.newComment("Ryan", _("Good roommate pick!"), queue=False)
+        $ v11s19_kiwiiPost3 = KiwiiPost(riley, "v11/v11_rileymcselfie.webp", _("Roll on Europe!"), numberLikes=456)
+        $ v11s19_kiwiiPost3.newComment(ryan, _("Good roommate pick!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
         $ v11s19_kiwiiPost3.addReply(_("Europe's gonna be a blast!"), numberLikes=321)
         $ v11s19_kiwiiPost3.addReply(_("Glad to have you as my roommate Riley!"), numberLikes=334)
 

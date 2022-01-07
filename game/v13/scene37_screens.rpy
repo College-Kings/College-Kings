@@ -2,10 +2,10 @@ screen v13s37_garden1():
     tag free_roam
 
     imagemap:
-        idle "images/v13/Scene37/Garden Free Roam.webp"
-        hover "images/v13/Scene37/garden_hover.webp"
+        idle "images/v13/Scene 37/Garden Free Roam.webp"
+        hover "images/v13/Scene 37/garden_hover.webp"
 
-        hotspot (218, 301, 226, 301) action Show("endFreeRoamConfirm", continueLabel="v13s37_end")
+        hotspot (218, 301, 226, 301) action Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v13s37_end")])
 
         if not "chris" in freeroam11:
             hotspot (531, 318, 309, 408) action Jump("v13s37_chris")

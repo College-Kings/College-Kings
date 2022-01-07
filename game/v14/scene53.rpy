@@ -187,7 +187,7 @@ label v14s53:
 
         sa "You know, I overdosed when we were in Amsterdam."
 
-        if cameronBro:
+        if cameron.relationship.value >= Relationship.BRO.value:
             scene v14s53_6e # FPP. same as v14s53_6d Sam's mouth is closed
             with dissolve
 
@@ -416,7 +416,7 @@ label v14s53:
             u "*Chuckles* What?"
 
             #if SamanthaRS:
-            if v11_samantha_spa:
+            if samantha.relationship.value >= Relationship.MOVE.value:
                 scene v14s53_3c # TPP. same as v14s53_3b Show sam pushing the bottle of beer and pills away from her on the couch, grabbing mc behind the head and pulling him in for a kiss, Sam's eyes are closed lustful expression, Mc's eyes are open slightly shocked expression
                 with dissolve
                 
@@ -600,7 +600,8 @@ label v14s53:
             menu:
                 "Take your pants off":
                     $ add_point(KCT.TROUBLEMAKER)
-                    $ v14_samantha_sex = True
+                    $ samantha.relationship = Relationship.FWB
+                    $ sceneList.add("v14_samantha")
                     
                     label v14s53_sg:
 

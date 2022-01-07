@@ -6,10 +6,10 @@
 label v13s35_buy_item_dialog(item):
     scene v13s35_sex_shop
 
-    if (cuffs not in mc.inventory.items) and (mc.money - item.cost < cuffs.cost):
+    if (cuffs not in mc.inventory) and (mc.money - item.cost < cuffs.cost):
         u "Only have a bit of money left, better get the cuffs."
     else:
-        $ mc.add_item(item)
+        $ mc.inventory.add_item(item)
         $ mc.money -= item.cost
 
     call screen v13s35_adult_shop
@@ -88,8 +88,15 @@ label v13s35:
     scene v13s35_4a # TPP. Same as v13s35_4, Show Aubrey walking away from mc.
     with dissolve
 
-    if chloers:
+    if chloe.relationship.value >= Relationship.FWB.value:
         u "(Guess I could look around a bit...)"
+        
+        menu:
+            "Look around":
+                pass
+            
+            "Not for me":
+                jump v13s35_no_shop
 
         scene v13s35_5 # FPP. MC looking at the general view of the shop.
         with dissolve
@@ -111,6 +118,7 @@ label v13s35:
         u "(She'll be happy with these, I think. We're gonna have some fun... *Chuckles*)"
 
     else:
+        label v13s35_no_shop:
         u "(Guess I'll just post up here...)"
 
     scene v13s35_8 # TPP. Show MC waiting by the door, slight smile, mouth closed.

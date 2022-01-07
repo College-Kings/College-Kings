@@ -145,7 +145,7 @@ label v13s47:
 
     u "Okay."
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v13s47_3
         with dissolve
 

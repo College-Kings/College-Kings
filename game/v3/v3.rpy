@@ -73,7 +73,7 @@ label v3start:
 
     cl "Girls join the Chicks 'cause they wanna party and have fun."
 
-    cl "If I don't show up to Ape parties as the Chicks' president, I risk losing the relationships I've built and being voted out."
+    cl "If I don't show up to Ape parties as the Chicks' President, I risk losing the relationships I've built and being voted out."
 
     scene s203e
     with dissolve
@@ -1155,8 +1155,7 @@ label conl:
 
     u "(Why do people come here so early in the morning just to work out?)"
 
-    if not evelynmove:
-
+    if evelyn.relationship.value < Relationship.MOVE.value: #if haven't made a move yet
         scene s243 # evelyn working out
         with dissolve
 
@@ -1299,7 +1298,7 @@ label conl:
     scene s248c
     with dissolve
 
-    imre "No, body shots. "
+    imre "No, body shots."
 
     imre "Hitting your opponent's body will leave them out of breath and in pain."
 
@@ -1383,7 +1382,7 @@ label conl:
                 jump talkedout
 
             else: # caught and she's mad
-                $ aubrey.messenger.newMessage(_("I wanna talk about what happened yesterday."), queue=False)
+                $ aubrey.messenger.newMessage(_("I wanna talk about what happened yesterday."), force_send=True)
                 $ aubrey.messenger.newMessage(_("Any chance that you could come over now?"))
                 $ aubrey.messenger.addReply(_("Yeah, I can."))
                 $ aubrey.messenger.newMessage(_("My room has a window facing the backyard. Can you climb in through there? I'll leave it open."))
@@ -1577,8 +1576,8 @@ label conl:
 
         else: # not caught peeking but met
             label talkedout:
-                $ aubrey.messenger.newMessage(_("Hey, I really need your help."), queue=False)
-                $ aubrey.messenger.newMessage(_("Any chance that you could come over now?"), queue=False)
+                $ aubrey.messenger.newMessage(_("Hey, I really need your help."), force_send=True)
+                $ aubrey.messenger.newMessage(_("Any chance that you could come over now?"), force_send=True)
                 $ aubrey.messenger.addReply(_("Yeah, I'll be right there.."))
                 $ aubrey.messenger.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
                 $ aubrey.messenger.newMessage(_("I'll leave it open."))
@@ -1837,8 +1836,8 @@ label conl:
                 au "Yeah..."
 
     else: # you didn't meet aubrey
-        $ aubrey.messenger.newMessage(_("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"), queue=False)
-        $ aubrey.messenger.newMessage(_("Wanna come over now?"), queue=False)
+        $ aubrey.messenger.newMessage(_("Hey, you know how you had to cancel on me yesterday and you really want to make it up to me?"), force_send=True)
+        $ aubrey.messenger.newMessage(_("Wanna come over now?"), force_send=True)
         $ aubrey.messenger.addReply(_("Uhh... okay."))
         $ aubrey.messenger.newMessage(_("My room has a window facing the backyard. Can you climb in through there instead of using the front door?"))
         $ aubrey.messenger.newMessage(_("I'll leave it open."))
@@ -2082,7 +2081,7 @@ label continuem: #for compatibility only
 
     menu:
         "Kiss her":
-            $ aubreyrs = True
+            $ aubrey.relationship = Relationship.FWB
             $ sceneList.add("v3_aubrey")
 
             stop music fadeout 3
@@ -2447,7 +2446,7 @@ label acream:
 
     u "(I can't believe I just had sex with Aubrey... that was amazing.)"
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND:
         u "(I wonder if Lauren would be upset if she knew. I guess I'll have to decide how honest I wanna be on our date tonight.)"
 
 label aubsexad:
@@ -2459,8 +2458,10 @@ label aubsexad:
 
 
 ### Meet Lauren
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        jump continueq
 
-    if not laurenrs: # you're not dating Lauren
+    else: # you're not dating Lauren
         scene s265 # lauren sitting in front of your door
         with dissolve
 
@@ -2502,9 +2503,6 @@ label aubsexad:
             with dissolve
 
             u "Uhm, okay. What is it?"
-
-    else:
-        jump continueq
 
 label continuen:
 
@@ -3025,7 +3023,7 @@ label continueq:
     scene s281 # close up riley sitting empathy FIRST PERSON
     with dissolve
 
-    ri "So what's going on between you and Chloe? She's the president of the Chicks, right?"
+    ri "So what's going on between you and Chloe? She's the President of the Chicks, right?"
 
     menu:
         "I like her":
@@ -3070,7 +3068,7 @@ label continueq:
 
             menu:
                 "Kiss her":
-                    $ rileykiss = True
+                    $ riley.relationship = Relationship.MOVE
                     $ add_point(KCT.TROUBLEMAKER)
 
                     show rikiss2
@@ -3127,7 +3125,7 @@ label continueq:
 
     stop music fadeout 3
 
-    if laurenrs: #LAUREN MOVIES
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: #LAUREN MOVIES
         play music "music/mindie2.mp3"
 
         scene s282  ## later that day transition pic
@@ -3180,7 +3178,7 @@ label continueq:
 
         la "So, what did you do all day?"
 
-        if aubreyrs:
+        if "v3_aubrey" in sceneList:
             scene s287a # lauren closeup while walking her mouth closed  FIRST PERSON
             with dissolve
             u "(Okay, time to make a decision. Should I tell her about what happened with Aubrey?)"
@@ -3189,7 +3187,7 @@ label continueq:
                 "Tell her what happened":
                     $ toldlauren = True
                     $ add_point(KCT.BOYFRIEND)
-                    $ laurenrs = False
+                    $ lauren.relationship = Relationship.MAD
 
                     u "(Lauren values honesty and we're not in a relationship yet, so she'll probably be understanding as long as I tell her the truth.)"
 
@@ -3332,8 +3330,6 @@ label continueq:
         label dl_b: #for compatibility only
         menu:
             "Kiss her":
-                $ laurenkissb = True
-
                 scene laurenkiss2 #self explanatory, same camera as s289
                 with dissolve
 
@@ -3354,7 +3350,7 @@ label continueq:
                             "Keep going":
                                 $ add_point(KCT.TROUBLEMAKER)
                                 $ laurentoofar = True
-                                $ laurenrs = False
+                                $ lauren.relationship = Relationship.MAD
 
                                 scene s291b # your hand moves further up
                                 with dissolve

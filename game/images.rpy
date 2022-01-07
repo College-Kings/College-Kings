@@ -1,7 +1,60 @@
+## Globals
+image darker_80 = Solid("#000c")
+image blue_button_idle = Frame("gui/button/blue_idle.webp", 24, 6)
+image blue_button_hover = Frame("gui/button/blue_hover.webp", 24, 6)
+
 # Splash Screen
-image splashone = "images/splash1.webp"
-image splashtwo = "images/splash2.webp"
-image splashthree = "images/splash 3.webp"
+image splashscreen_1 = "gui/splashscreen/1.png"
+image splashscreen_2 = "gui/splashscreen/2.png"
+image splashscreen_3 = "gui/splashscreen/3.png"
+
+# GUI
+## Common
+image quit_idle = "gui/common/quit_idle.webp"
+image quit_hover = Transform("gui/common/quit_hover.webp", offset=(-32, -27))
+image settings_idle = "gui/common/settings_idle.webp"
+image settings_hover = Transform("gui/common/settings_hover.webp", offset=(-35, -25))
+
+## Alert
+image alert_background = Frame("gui/alert/background.png", 8, 8)
+
+## Bar
+image blue_bar = Frame("gui/bar/blue.webp", 44, 22, 44, 40)
+image ruby_bar = Frame("gui/bar/ruby.webp", 30, 22, 29, 40)
+image yellow_bar = Frame("gui/bar/yellow.webp", 44, 22, 44, 40)
+
+## Choice
+image choice_button_idle = Frame("gui/choice/button_idle.png", 40, 8)
+image choice_button_hover = Frame("gui/choice/button_hover.png", 40, 8)
+
+## KCT Choice Hint
+image kct_choice_hint_background = Frame("gui/kct/background.png", 44, 6, 44, 0) 
+
+## Path Builder
+image path_builder_button_idle = Frame("main_menu/path_builder/images/button_idle.webp", 24, 6)
+image path_builder_button_hover = Frame("main_menu/path_builder/images/button_hover.webp", 24, 6)
+
+## Scene Gallery
+image scene_gallery_bar_base = Frame("main_menu/scene_gallery/images/bar_base.png", 5, 10)
+
+## Settings
+image settings_bar_left = Frame("gui/settings/bar_right.webp", 14, 5)
+image settings_bar_right = Frame("gui/settings/bar_right.webp", 14, 5)
+image settings_bar_thumb = "gui/settings/bar_thumb.webp"
+
+## Tutorial
+image tutorial_background = Frame("gui/tutorial/background.png", 42, 8, 8, 8)
+image tutorial_left_button_idle = "gui/tutorial/left_button_idle.png"
+image tutorial_right_button_idle = "gui/tutorial/right_button_idle.png"
+
+## Warning
+image warning_background_blue = Frame("gui/warning/background_blue.png", 42, 8, 8, 8)
+
+# Transitions
+image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm", loop=False)
+
+# Phone
+image phone_white_background = "images/phone/white_background.webp"
 
 # Achievements
 image no_hard_feelings = "images/achievements/v1/nohardfeelings.webp"
@@ -130,6 +183,21 @@ image say_chirp = "images/achievements/v14/say_chirp.webp"
 image grand_theft_chloe = "images/achievements/v14/grand_theft_chloe.webp"
 image clean_it_up = "images/achievements/v14/clean_it_up.webp"
 
+image childhood_memories = "images/achievements/v15/childhood_memories.webp"
+image christmas_is_dead = "images/achievements/v15/christmas_is_dead.webp"
+image counter_intelligence = "images/achievements/v15/counter_intelligence.webp"
+image da_ba_dee_da_ba_dai = "images/achievements/v15/da_ba_dee_da_ba_dai.webp"
+image emotional_blackmail = "images/achievements/v15/emotional_blackmail.webp"
+image honey_bear = "images/achievements/v15/honey_bear.webp"
+image horn_dog = "images/achievements/v15/horn_dog.webp"
+image just_one_more_thing = "images/achievements/v15/just_one_more_thing.webp"
+image karen = "images/achievements/v15/karen.webp"
+image mmmm_donut = "images/achievements/v15/mmmm_donut.webp"
+image polycurious = "images/achievements/v15/polycurious.webp"
+image pumpkin_season = "images/achievements/v15/pumpkin_season.webp"
+image taskmaster = "images/achievements/v15/taskmaster.webp"
+image too_much_information = "images/achievements/v15/too_much_information.webp"
+image what_goes_around = "images/achievements/v15/what_goes_around.webp"
 
 # v1.0 - v2.0
 image s14 = "images/v1/s14.webp"
@@ -145,7 +213,7 @@ image sdafj = Movie(play="images/v1/sdafj.webm", image="images/v1/sda4e.webp")
 image sdafjf = Movie(play="images/v1/sdafjf.webm", image="images/v1/sda4e.webp")
 image sdasex = Movie(play="images/v1/sdasex.webm", image="images/v1/sda7a.webp")
 image sdacum2 = Movie(play="images/v1/sdacum2.webm", image="images/v1/aftercum.webp", loop=False)
-image tompush = Movie(play="images/tompush.webm", start_image="images/v2/126a.webp", image="images/v2/push12.webp", loop=False)
+image tompush = Movie(play="images/v2/tompush.webm", start_image="images/v2/126a.webp", image="images/v2/push12.webp", loop=False)
 
 image abo = "images/abo.webp"
 image aboq = "images/q button.webp"
@@ -172,7 +240,6 @@ image jab1movie = Movie(play="images/v2/jab1.webm", start_image="images/v2/jab1s
 image hookcountermovie = Movie(play="images/v2/hookcounter.webm", start_image="images/v2/hookcounterstart.webp", image="images/v2/hookcounter.webp", loop=False)
 image jabcountermovie = Movie(play="images/v2/jabcounter.webm", start_image="images/v2/jabcounterstart.webp", image="images/v2/jabcounter.webp", loop=False)
 
-image farrow1 = "images/farrow1.webp"
 image targets = "images/targets.webp"
 
 image s145far = "images/v2/s145far.webp"
@@ -262,6 +329,7 @@ image carbacknight = Movie(play="images/v6/carbacknight.webm")
 
 # v7.0
 image s738avid = Movie(play="images/v7/s738avid.webm", loop=False, image="images/v7/s738avid75.webp", start_image="images/v7/s738avid16.webp")
+image s743vid = Movie(play="images/v7/s743vid.webm", loop=False, image="images/v7/s743c.webp", start_image="images/v7/s743c.webp")
 
 image risexvid1 = Movie(play="images/v7/risexvid1.webm", image="images/v7/risex1vid20.webp", start_image="images/v7/risex1vid00.webp")
 image risexvid2s = Movie(play="images/v7/risexvid2s.webm", image="images/v7/rivid378.webp", start_image="images/v7/rivid360.webp")
@@ -376,8 +444,6 @@ image Imre_Jab_hit = "images/v10/Scene 7/Animations/END/MCIMRE-JABHIT-END.webp"
 image Imre_Jab_block = "images/v10/Scene 7/Animations/END/MCIMRE-JABBLOCKED-END.webp"
 image Imre_Kick_hit = "images/v10/Scene 7/Animations/END/MCIMRE-KICKHIT-END.webp"
 image Imre_Kick_block = "images/v10/Scene 7/Animations/END/MCIMRE-KICKBLOCKED-END.webp"
-
-# v11.0
 
 # Misc
 image credits = Movie(play="images/credits.webm", Loop = True)

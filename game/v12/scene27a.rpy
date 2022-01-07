@@ -379,13 +379,13 @@ label v12s27a:
 
     u "Let me just take some pictures for Kiwii..."
 
-    $ v12s27a_kiwiiPost1 = KiwiiPost("MC", "v12/roastedape.webp", _("#RoastedApe"), numberLikes=469)
-    $ v12s27a_kiwiiPost1.newComment("Imre", "Holy shit... You make it way too easy, Ryan!", mentions="Ryan", numberLikes=renpy.random.randint(250,350), queue=False)
-    $ v12s27a_kiwiiPost1.newComment("Amber", "Haha, yes! That's what you get, moron...", mentions="Ryan", numberLikes=renpy.random.randint(250,400), queue=False)
+    $ v12s27a_kiwiiPost1 = KiwiiPost(mc, "v12/roastedape.webp", _("#RoastedApe"), numberLikes=469)
+    $ v12s27a_kiwiiPost1.newComment(imre, "Holy shit... You make it way too easy, Ryan!", mentions=[ryan], numberLikes=renpy.random.randint(250,350), force_send=True)
+    $ v12s27a_kiwiiPost1.newComment(amber, "Haha, yes! That's what you get, moron...", mentions=[ryan], numberLikes=renpy.random.randint(250,400), force_send=True)
    
-### ERROR: KiwiiPost("MC", "Ryan sitting in chair at salon not facing the mirror with black hair", "#RoastedApe", numberLikes=469)
-### ERROR: kiwiiPost.newComment("Imre", "Holy shit... You make it way to easy, Ryan!", mentions="Ryan")
-### ERROR: kiwiiPost.newComment("Amber", "Haha, yes! That's what you get, moron...”, mentions="Ryan")
+### ERROR: KiwiiPost(mc, "Ryan sitting in chair at salon not facing the mirror with black hair", "#RoastedApe", numberLikes=469)
+### ERROR: kiwiiPost.newComment(imre, "Holy shit... You make it way to easy, Ryan!", mentions=[ryan])
+### ERROR: kiwiiPost.newComment(amber, "Haha, yes! That's what you get, moron...”, mentions=[ryan])
 ### ERROR: kiwiiPost.addReply("Haha, an Ape doesn't back down!")### ERROR: kiwiiPost.addReply("Aw, come on guys! It doesn't look... that bad... Lmao")
   
     scene v12s27a_8b # same as 8a, ryan mouth open, outraged, hiding his face behind his hands

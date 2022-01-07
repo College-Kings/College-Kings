@@ -5,9 +5,9 @@
 
 label v14s33:
     if iris.simplr in simplr_contacts:
-        $ iris.simplr.newMessage("Hi... You're so cute. Haha", queue=False)
-        $ iris.simplr.newMessage("Sorry if that was too forward, lol", queue=False)
-        $ iris.simplr.newMessage("I guess what I mean is that I'm happy that we matched", queue=False)
+        $ iris.simplr.newMessage("Hi... You're so cute. Haha", force_send=True)
+        $ iris.simplr.newMessage("Sorry if that was too forward, lol", force_send=True)
+        $ iris.simplr.newMessage("I guess what I mean is that I'm happy that we matched", force_send=True)
     elif iris.simplr in simplr_pendingContacts:
         $ iris.simplr.removeContact()
 
@@ -22,21 +22,7 @@ label v14s33:
         scene v14s33_2 # TPP. Show MC looking at his phone while sitting on the bed in his Wolves Room, slight smile, mouth closed.
         with fade
 
-        if not laurenrs:
-            scene v14s33_2a # TPP. Same as v14s33_2, Mc in a different pose looking at his phone in his wolves room, slight smile, mouth closed.
-            with dissolve
-
-            pause 0.75
-
-            stop music fadeout 3
-
-            if penelopers and v11s23_penelope_date:
-                jump v14s34
-
-            else:
-                jump v14s35
-
-        else:
+        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
             pause 0.75
 
             play sound "sounds/call.mp3"
@@ -175,8 +161,9 @@ label v14s33:
 
                     stop music fadeout 3
 
-                    if penelopers and v11s23_penelope_date:
+                    if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
                         jump v14s34
+
                     else:
                         jump v14s35
 
@@ -236,11 +223,25 @@ label v14s33:
 
                     stop music fadeout 3
                     
-                    if penelopers and v11s23_penelope_date:
+                    if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
                         jump v14s34
 
                     else:
                         jump v14s35
+
+        else:
+            scene v14s33_2a # TPP. Same as v14s33_2, Mc in a different pose looking at his phone in his wolves room, slight smile, mouth closed.
+            with dissolve
+
+            pause 0.75
+
+            stop music fadeout 3
+
+            if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
+                jump v14s34
+
+            else:
+                jump v14s35
 
     else:
         scene v14s33_1 # TPP. Show MC showering, slight smile, mouth closed
@@ -255,21 +256,7 @@ label v14s33:
         
         pause 0.75
 
-        if not laurenrs:
-            scene v14s33_4a # TPP. Same as v14s33_4, Mc in a different pose looking at his phone in his Apes room, slight smile, mouth closed.
-            with dissolve
-
-            pause 0.75
-
-            stop music fadeout 3
-
-            if penelopers and v11s23_penelope_date:
-                jump v14s34
-
-            else:
-                jump v14s35
-
-        else:
+        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
             play sound "sounds/call.mp3"
 
             scene v14s33_2a
@@ -405,8 +392,9 @@ label v14s33:
 
                     stop music fadeout 3
 
-                    if penelopers and v11s23_penelope_date:
+                    if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
                         jump v14s34
+
                     else:
                         jump v14s35
 
@@ -465,7 +453,22 @@ label v14s33:
 
                     stop music fadeout 3
                     
-                    if penelopers and v11s23_penelope_date:
+                    if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
                         jump v14s34
+
                     else:
                         jump v14s35
+
+        else:
+            scene v14s33_4a # TPP. Same as v14s33_4, Mc in a different pose looking at his phone in his Apes room, slight smile, mouth closed.
+            with dissolve
+
+            pause 0.75
+
+            stop music fadeout 3
+
+            if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
+                jump v14s34
+
+            else:
+                jump v14s35

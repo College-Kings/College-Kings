@@ -14,12 +14,12 @@ init python:
     StatsInfo("Confident", "Confident individuals don’t rely on others to join them in their actions. They don’t crave their friends' approval, however they can be perceived as egotistical.", "#fc3d39")
 
 screen stats():
-    tag phoneTag
+    tag phone_tag
     zorder 200
 
-    use phoneTemplate:
+    use base_phone:
 
-        add "images/phone/whiteBackground.webp" at truecenter
+        add "images/phone/white_background.webp" at truecenter
 
         text "This is your current Key Character Trait.\nIt's based on your choices & behavior.\nYou can only have one KCT at a time.":
             xpos 250
@@ -28,15 +28,15 @@ screen stats():
             size 25
             color "#ffffff"
 
-        add "images/statscircle.webp":
+        add "images/phone/stats/appAssets/stats_circle.webp":
             xpos 520
             ypos 255
 
-        add "images/KCTdiagram.webp":
+        add "images/phone/stats/appAssets/kct_diagram.webp":
             yalign 0.5
             xalign 0.05
 
-        add "images/tutback.webp":
+        add "images/phone/stats/appAssets/tutback.webp":
             yalign 0.5
             xpos 1200
 

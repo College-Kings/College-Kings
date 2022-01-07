@@ -29,7 +29,7 @@ label v11_nightclub_with_josh:
 
     u "(Let's see who this is.)"
 
-    $ josh.messenger.newMessage("WE GETTIN FUCKED UP TONIGHT!", queue = False)
+    $ josh.messenger.newMessage("WE GETTIN FUCKED UP TONIGHT!", force_send=True)
     $ josh.messenger.addReply("Who?")
     $ josh.messenger.newMessage("You and me, meet me at the bar on Stevenson.")
     $ josh.messenger.addReply("There's a lot of bars on Stevenson.")
@@ -628,6 +628,7 @@ label v11s4_PhoneContinueJosh1:
         jump v11_thurs_night_room
 
     # If made Candy smile 3 or more times
+    $ candy.relationship = relationship.LIKES
 
     if candyLike < 3:
         call screen kct_popup
@@ -764,7 +765,8 @@ label v11s4_PhoneContinueJosh1:
             jump v11_thurs_night_room
 
         "Act like family":
-            $ v11_fucked_candy = True
+            $ sceneList.add("v11_candy")
+            $ candy.relationship = Relationship.FWB
             scene v11swc16e # TPP Same angle and characters as v11swc16, MC puts one hand on his waist, stands in a faminine way, and holds his other hand up, wrist limp
             with dissolve
             u "She's my cousin, dude."

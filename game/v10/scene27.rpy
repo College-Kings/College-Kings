@@ -23,14 +23,13 @@ label v10_econ_class:
     with dissolve
 
 
-    if laurenrs:
-            
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v10eco4 # FPP. Show Lauren, Slight smile, mouth open
         with dissolve
 
         la "Hey babe, I was starting to get a little worried. It's not like you to show up right on time."
-    else:
 
+    else:
         scene v10eco4
         with dissolve
 
@@ -47,26 +46,24 @@ label v10_econ_class:
     ri "Well after hanging all last night I bet you were tired."
 
     if joinwolves:
-
         scene v10eco6 # FPP. Show Ryan in seat on other side of room, mouth open
         with dissolve
 
         ry "What were you out doing?"
-    else:
 
+    else:
         scene v10eco6
         with dissolve
 
         ry "Wait, you were out having fun and didn't invite your main brother?"
 
-    ### ERROR: -If laurenrs true ###
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v10eco4
         with dissolve
 
         la "I didn't know you were out last night. What were you up to?"
-    else:
 
+    else:
         scene v10eco4
         with dissolve
 
@@ -187,7 +184,7 @@ label v10_econ_class:
     with dissolve
 
     if joinwolves:
-        if v10_ms_r_kiss:
+        if ms_rose.relationship.value >= Relationship.KISS.value:
             ro "I just wanted to see how you were doing after... everything."
             
             scene v10eco8a # FPP. same 8, mouth closed.

@@ -16,7 +16,7 @@ label v10_lauren_room:
 
     la "Heyyyy."
 
-    if laurenrs: # If in a relationship with Lauren
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # If in a relationship with Lauren
         scene v10lar1a # TPP Same angle as v10lar1: MC and Lauren kiss at her door
         with dissolve
 
@@ -91,8 +91,8 @@ label v10_lauren_room:
 
             u "I really do."
 
-            if laurenrs or kct == "loyal":
-                if not laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value or kct == "loyal":
+                if lauren.relationship.value < Relationship.GIRLFRIEND.value:
                     call screen kct_popup
                 $ v10s33_laurenBakeSale = False
 
@@ -204,8 +204,12 @@ label v10_lauren_room:
 
     u "You never know until you try."
 
-    if laurenrs or v1_laurenKiss or laurenkissb: # If dating or have made out
+    if lauren.relationship.value >= Relationship.KISS.value:
         label v10_lauren_room_sg:
+            if _in_replay:
+                $ lauren.relationship = Relationship.GIRLFRIEND
+
+    if lauren.relationship.value >= Relationship.KISS.value: # If dating or have made out        
         scene v10lar3g # FPP Same angle as v10lar3, Lauren looking seductive, mouth open
         with dissolve
 
@@ -291,10 +295,10 @@ label v10_lauren_room:
                 with dissolve
                 pause
 
-                if laurenrs or ((v1_laurenKiss or beachfirstkiss or laurenkissb) and kct == "loyal"):
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value or (lauren.relationship.value >= Relationship.KISS.value and kct == "loyal"):
 
-                    if not laurenrs:
-                        $ laurenrs = True
+                    if lauren.relationship.value < Relationship.GIRLFRIEND.value:
+                        $ lauren.relationship = Relationship.GIRLFRIEND
                         call screen kct_popup
                         
                     image v10lauts = Movie(play="images/v10/Scene 24/v10lauts.webm", loop=True, image="images/v10/Scene 24/v10lautsStart.webp", start_image="images/v10/Scene 24/v10lautsStart.webp") # TPP MC's arms around Lauren's waist while he sucks on her nipple, Lauren eyes rolled back in pleasure
@@ -595,13 +599,13 @@ label v10_lauren_room:
 
     u "Of course."
 
-    if laurenrs: # lauren and mc kiss goodbye at her door
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # lauren and mc kiss goodbye at her door
         scene v10lar1a
         with fade
 
         play sound "sounds/kiss.mp3"
         
-        pause 0.5
+        pause 1
 
     $ renpy.end_replay()
     if joinwolves:

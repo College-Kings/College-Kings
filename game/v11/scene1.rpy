@@ -4,7 +4,7 @@ label v11_start:
         $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
         $ pb_name_set = True
 
-    show screen phoneIcon
+    show screen phone_icon
 
     scene v11coc1 # FPP. Show entrance of college
     with fade
@@ -751,7 +751,7 @@ label v11_start:
 label v11s1_riley:
     $ freeroam7.add("riley")
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.FWB.value:
         scene v11cocri1 # FPP. MC and Riley looking at each other, Riley has mouth closed, neutral expression
         #with dissolve
 
@@ -762,11 +762,12 @@ label v11s1_riley:
 
         u "You came?"
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.FWB.value:
         scene v11cocri1a # FPP. Same as ri1, Riley has mouth open, same expression
         with dissolve
 
         ri "Yeah, of course. I mentioned before that I wanted to support both of you. I've been here a while but I didn't want to walk in half way through."
+
     else:
         scene v11cocri1a # FPP. Same as ri1, Riley has mouth open, same expression
         with dissolve
@@ -799,7 +800,7 @@ label v11s1_riley:
 
             ri "I'm sorry... Do your best to stay positive, Penelope needs all the support she can get at the moment."
 
-            if rileyrs:
+            if riley.relationship.value >= Relationship.FWB.value:
                 ri "It's really sweet of you to be so supportive of your friends."
 
     scene v11cocri1a
@@ -838,18 +839,17 @@ label v11s1_riley:
     ri "Well, you know I'm here for you both regardless. I'm gonna go check on Penelope and see if there's anything I can do to help settle her nerves."
 
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.FWB.value:
         scene v11cocri1
         with dissolve
 
         u "Sounds good, it's really sweet of you to care so much."
-    else:
 
+    else:
         scene v11cocri1
         with dissolve
 
         u "Sounds good."
-
 
     scene v11cocri1b # FPP. Same cam as 28, show Riley walking away
     with dissolve
@@ -1019,36 +1019,36 @@ label v11s1_delib:
     if not "delib" in freeroam7:
         $ freeroam7.add("delib")
 
-        scene v11coc17c
+        scene v11coc77c
         #with dissolve
 
         lee "You should never have been a member of this board."
 
-        scene v11coc17a
+        scene v11coc77a
         with dissolve
 
         art "She's an adult, I don't see the issue here."
 
-        scene v11coc17c
+        scene v11coc77c
         with dissolve
         lee "You... you are the issue here Clayton. I do my best to keep a cool tone, but you're aggravating me."
 
-        scene v11coc17e # TPP. Same cam as 17, Dean is looking at Art Director, mouth open, neutral expression, Art Director mouth closed, annoyed
+        scene v11coc77e # TPP. Same cam as 17, Dean is looking at Art Director, mouth open, neutral expression, Art Director mouth closed, annoyed
         with dissolve
 
         de "Calm down Bruce, it's nearly time to wrap this up. Clayton, let the kids know we've made a decision."
 
-        scene v11coc17f # TPP. Same cam as 17, Art Director is looking at Dean mouth open, angry, Dean is neutral, mouth closed
+        scene v11coc77f # TPP. Same cam as 17, Art Director is looking at Dean mouth open, angry, Dean is neutral, mouth closed
         with dissolve
 
         art "I'M NOT A SLAVE, I'M-"
 
-        scene v11coc17g # TPP. Same cam as 17, everyone mouth closed, Dean is neutral, Art Director is annoyed
+        scene v11coc77g # TPP. Same cam as 17, everyone mouth closed, Dean is neutral, Art Director is annoyed
         with dissolve
 
         de "..."
 
-        scene v11coc17b
+        scene v11coc77b
         with dissolve
 
         art "...OK"
@@ -1161,13 +1161,13 @@ label v11_case_verdict:
 
         u "*Whisper* You're welcome."
 
-        if penelopers:
+        if penelope.relationship.value >= Relationship.LIKES.value:
             scene v11coc24e # FPP. Same as 24c, but Penelope's mouth is open
             with dissolve
 
             pe "No I mean it, thank you. You have no idea how much this means to me. When I got that letter from the school I thought my life was ruined. I don't know what I would have done without you."
-        else:
 
+        else:
             scene v11coc24e # FPP. Same as 24c, but Penelope's mouth is open
             with dissolve
 
@@ -1215,7 +1215,7 @@ label v11_case_verdict:
         pe "I have to get going as well, thankfully I still have a class to get to."
 
         pause 0.75
-        if penelopers:
+        if penelope.relationship.value >= Relationship.LIKES.value:
             scene v11coc25b # TPP. Same cam as 25, but Penelope is kissing MC on the cheek
             with dissolve
 
@@ -1225,6 +1225,7 @@ label v11_case_verdict:
             with dissolve
 
             pe "Really [name], I can't thank you enough for all you've done."
+
         else:
             scene v11coc24e
             with dissolve
@@ -1297,10 +1298,10 @@ label v11_case_verdict:
     scene v11coc27 # TPP. Third person view of MC, he is alone and has a tired expression, mouth closed, in the hallway
     with dissolve
 
-    $ v11s1_kiwiiPost = KiwiiPost("Autumn", "v11/v11_autumn_kiwii.webp", _("Best charity event yet, thanks for all the donations!"), numberLikes=256)
-    $ v11s1_kiwiiPost.newComment("Aubrey", _("So psyched!"), queue=False)
-    $ v11s1_kiwiiPost.newComment("Cameron", _("What you doing later? ;)"), queue=False)
-    $ v11s1_kiwiiPost.newComment("Lindsey", _("It was an awesome day!"), queue=False)
+    $ v11s1_kiwiiPost = KiwiiPost(autumn, "v11/v11_autumn_kiwii.webp", _("Best charity event yet, thanks for all the donations!"), numberLikes=256)
+    $ v11s1_kiwiiPost.newComment(aubrey, _("So psyched!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+    $ v11s1_kiwiiPost.newComment(cameron, _("What you doing later? ;)"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+    $ v11s1_kiwiiPost.newComment(lindsey, _("It was an awesome day!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
     $ v11s1_kiwiiPost.addReply(_("Wish I could see more mud wrestling!"), numberLikes=321)
     $ v11s1_kiwiiPost.addReply(_("Thanks for doing the event Autumn!"), numberLikes=518)
 

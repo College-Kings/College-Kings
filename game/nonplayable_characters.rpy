@@ -1,4 +1,46 @@
 init python:
+    class Relationship(Enum):
+        MAD = -4
+        THREATEN = -3
+        MAKEFUN = -2
+        AWKWARD = -1
+        FRIEND = 0
+        MOVE = 1
+        DATE = 2
+        LIKES = 3
+        TRUST = 4
+        BRO = 5
+        KISS = 6
+        FWB = 7
+        LOYAL = 8
+        TAMED = 9
+        GIRLFRIEND = 10
+
+        def __lt__(self, other):
+            if not isinstance(other, Relationship):
+                raise TypeError("Relation {} must be of type Relationship.".format(other))
+
+            return self.value < other.value
+
+        def __le__(self, other):
+            if not isinstance(other, Relationship):
+                raise TypeError("Relation {} must be of type Relationship.".format(other))
+
+            return self.value <= other.value
+
+        def __gt__(self, other):
+            if not isinstance(other, Relationship):
+                raise TypeError("Relation {} must be of type Relationship".format(other))
+
+            return self.value > other.value
+
+        def __ge__(self, other):
+            if not isinstance(other, Relationship):
+                raise TypeError("Relation {} must be of type Relationship".format(other))
+
+            return self.value >= other.value
+
+
     class NonPlayableCharacter:
         """
         Custom character class primarily used for managing all the character specific function of the game.
@@ -8,13 +50,16 @@ init python:
             profile_picture (str): The file name for the characters profile picture, located in "images/nonplayable_characters/profile_pictures/"
         """
 
-        def __init__(self, name, profile_picture, messenger=False, simplr=False):
+        def __init__(self, name, username=None):
             self.name = name
-            self.name = name.replace(" ", "_")
-            self.profile_picture = "images/nonplayable_characters/profile_pictures/{}".format(profile_picture)
+            
+            if username is None:
+                self._username = name
+            else:
+                self._username = username
 
-            if messenger: self.create_contact()
-            if simplr: self.create_simplr()
+            self._messenger = None
+            self._simplr = None
 
             self.stats = {
                 "Competitive": None,
@@ -23,39 +68,80 @@ init python:
             }
 
             self.points = 0
-            self._relationship = False
-            self._girlfriend = False
+            self._relationship = Relationship.FRIEND
+
+        @property
+        def username(self):
+            try:
+                if self._username is not None:
+                    return self._username
+            except AttributeError: pass
+
+            return self.name
+
+        @username.setter
+        def username(self, value):
+            self._username = value
 
         @property
         def relationship(self):
-            return self._relationship
+            try: return self._relationship
+            except AttributeError: return Relationship.FRIEND
 
         @relationship.setter
         def relationship(self, value):
             self._relationship = value
-            if value:
+            
+            if value == Relationship.GIRLFRIEND:
                 mc.relationships.add(self)
+                mc.girlfriends.add(self)
+
+            elif value == Relationship.FWB:
+                try: mc.relationships.remove(self)
+                except KeyError: pass
+                mc.relationships.add(self)
+
             else:
-                mc.relationships.remove(self)
+                try:
+                    mc.relationships.remove(self)
+                    mc.girlfriends.remove(self)
+                except KeyError: pass
 
         @property
-        def girlfriend(self):
-            return self._girlfriend
+        def messenger(self):
+            if self._messenger is None:
+                self._messenger = Contact(self.name, self.profile_picture)
+                messenger.contacts.append(self.messenger)
+            return self._messenger
 
-        @girlfriend.setter
-        def girlfriend(self, value):
-            self._girlfriend = value
-            if value:
-                mc.girlfriends.add(self)
-            else:
-                mc.girlfriends.remove(self)
+        @messenger.setter
+        def messenger(self, value):
+            self._messenger = value
 
-        def create_contact(self, locked=True):
-            self.messenger = Contact(self.name, self.profile_picture, locked)
-            contacts.append(self.messenger)
-        
-        def create_simplr(self, condition="True"):
-            self.simplr = SimplrContact(self.name, condition)
+        @property
+        def simplr(self):
+            if self._simplr is None:
+                self._simplr = SimplrContact(self.name)
+                simplr_pendingContacts.append(self._simplr)
+            return self._simplr
+
+        @simplr.setter
+        def simplr(self, value):
+            self._simplr = value
+
+        @property
+        def profile_picture(self):
+            return "images/nonplayable_characters/profile_pictures/{}.webp".format(self.name.replace(' ', '_').lower())
+
+        def __after_load__(self):
+            attrs = vars(self)
+
+            self.__init__(self.name)
+
+            for var, value in attrs.items():
+                try: setattr(self, var, value)
+                except AttributeError: continue
+                
 
         def kill(self):
             # Check Competitive stat
@@ -86,37 +172,48 @@ init python:
         def reset_points(self):
             self.points = 0
 
-init offset = 1
-
-default chloe = NonPlayableCharacter("Chloe", "chloe.webp", messenger=True)
-default amber = NonPlayableCharacter("Amber", "amber.webp", messenger=True)
-default penelope = NonPlayableCharacter("Penelope", "penelope.webp", messenger=True)
-default riley = NonPlayableCharacter("Riley", "riley.webp", messenger=True)
-default lindsey = NonPlayableCharacter("Lindsey", "lindsey.webp", messenger=True)
-default lauren = NonPlayableCharacter("Lauren", "lauren.webp", messenger=True)
-default emily = NonPlayableCharacter("Emily", "emily.webp", messenger=True)
-default ms_rose = NonPlayableCharacter("Ms Rose", "ms_rose.webp")
-default nora = NonPlayableCharacter("Nora", "nora.webp", messenger=True)
-default aubrey = NonPlayableCharacter("Aubrey", "aubrey.webp", messenger=True)
-default ryan = NonPlayableCharacter("Ryan", "ryan.webp", messenger=True)
-default imre = NonPlayableCharacter("Imre", "imre.webp", messenger=True)
-default chris = NonPlayableCharacter("Chris", "chris.webp")
-default charli = NonPlayableCharacter("Charli", "charlie.webp")
-default cameron = NonPlayableCharacter("Cameron", "cameron.webp")
-default josh = NonPlayableCharacter("Josh", "josh.webp", messenger=True)
-default julia = NonPlayableCharacter("Julia", "julia.webp", messenger=True)
-default evelyn = NonPlayableCharacter("Evelyn", "evelyn.webp")
-default autumn = NonPlayableCharacter("Autumn", "autumn.webp", messenger=True)
-default sebastian = NonPlayableCharacter("Sebastian", "sebastian.webp", messenger=True)
-default grayson = NonPlayableCharacter("Grayson", "grayson.webp", messenger=True)
-default jenny = NonPlayableCharacter("Jenny", "jenny.webp", messenger=True)
-default mr_lee = NonPlayableCharacter("Mr Lee", "lee.webp")
-
-default beth = NonPlayableCharacter("Beth", "beth.webp", simplr=True)
-default iris = NonPlayableCharacter("Iris", "iris.webp", simplr=True)
-default samantha = NonPlayableCharacter("Samantha", "samantha.webp", simplr=True)
-default emmy = NonPlayableCharacter("Emmy", "emmy.webp", simplr=True)
-
-default wolf = NonPlayableCharacter("Wolf", "wolf.webp")
-default trainer = NonPlayableCharacter("Trainer", "trainer.webp")
-default buyer = NonPlayableCharacter("Buyer", "buyer.webp")
+default aaron = NonPlayableCharacter("Aaron", "DoubleARon")
+default adam = NonPlayableCharacter("Adam", "A.D.A.M.")
+default amber = NonPlayableCharacter("Amber", "Amber_xx") # Relationship progression: FRIEND, KISS, FWB
+default aryssa = NonPlayableCharacter("Aryssa") # Relationship progression: FRIEND, LIKES
+default aubrey = NonPlayableCharacter("Aubrey", "Aubs123") # Relationship progression: MAD, FRIEND, FWB, TAMED
+default autumn = NonPlayableCharacter("Autumn", "Its_Fall") # Relationship progression: MAD, FRIEND, KISS
+default beth = NonPlayableCharacter("Beth")
+default buyer = NonPlayableCharacter("Buyer")
+default caleb = NonPlayableCharacter("Caleb", "Aleb")
+default cameron = NonPlayableCharacter("Cameron", "Cameroon") # Relationship progression: FRIEND, BRO
+default candy = NonPlayableCharacter("Candy") # Relationship progression: FRIEND, LIKES, FWB
+default charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
+default chloe = NonPlayableCharacter("Chloe", "Chloe101") # Relationship progression: MAD, FRIEND, FWB, GIRLFRIEND
+default chris = NonPlayableCharacter("Chris", "Chriscuit") # Relationshp progression: MAD, FRIEND
+default dean = NonPlayableCharacter("Dean")
+default elijah = NonPlayableCharacter("Elijah", "Elijah_Woods") # Relationship progression: MAKEFUN, FRIEND
+default emily = NonPlayableCharacter("Emily", "emilyyyy") # Relationship progression: FRIEND, FWB
+default emmy = NonPlayableCharacter("Emmy") # Relationship progression: FRIEND, LIKES, FWB
+default evelyn = NonPlayableCharacter("Evelyn") # Relationship progression: FRIEND, MOVE, DATE, LIKES, KISS
+default grayson = NonPlayableCharacter("Grayson", "G-rayson")
+default imre = NonPlayableCharacter("Imre", "BadBoyImre") # Relationship progression: MAD, FRIEND
+default iris = NonPlayableCharacter("Iris")
+default jenny = NonPlayableCharacter("Jenny") # Relationship progression: AWKWARD, FRIEND, FWB
+default josh = NonPlayableCharacter("Josh", "Josh80085") # Relationship progression: MAD, FRIEND
+default julia = NonPlayableCharacter("Julia")
+default kai = NonPlayableCharacter("Kai", "KaiCriesWith2Ply")
+default kim = NonPlayableCharacter("Kim", "KimPlausible")
+default kourtney = NonPlayableCharacter("Kourtney") # Relationship progression: FRIEND, LIKES
+default lauren = NonPlayableCharacter("Lauren", "LoLoLauren") # Relationship progression: MAD, FRIEND, MOVE, KISS, GIRLFRIEND
+default lews_official = NonPlayableCharacter("LewsOfficial")
+default lindsey = NonPlayableCharacter("Lindsey", "LindsLou") # Relationship progression: FRIEND, KISS, FWB
+default mason = NonPlayableCharacter("Mason", "Mason_Mas")
+default mr_lee = NonPlayableCharacter("Mr Lee")
+default ms_rose = NonPlayableCharacter("Ms Rose") # Relationship progression: THREATEN, FRIEND, KISS, FWB
+default naomi = NonPlayableCharacter("Naomi", "NaomiXMarie") # Relationship progression: FRIEND, FWB
+default nora = NonPlayableCharacter("Nora", "Nora_12") # Relationship progression: MAD, FRIEND, MOVE, LIKES, FWB
+default parker = NonPlayableCharacter("Parker")
+default penelope = NonPlayableCharacter("Penelope", "Penelopeeps") # Relationship progression: FRIEND, LIKES, LOYAL
+default riley = NonPlayableCharacter("Riley", "RileyReads") # Relationship progression: FRIEND, MOVE, LIKES, FWB, LOYAL
+default ryan = NonPlayableCharacter("Ryan", "Ryanator")
+default samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam") # Relationship progression: FRIEND, MOVE, FWB
+default satin = NonPlayableCharacter("Satin") # Relationship progression: FRIEND, FWB
+default sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
+default trainer = NonPlayableCharacter("Trainer")
+default wolf = NonPlayableCharacter("Wolf")

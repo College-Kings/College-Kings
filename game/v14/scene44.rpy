@@ -98,9 +98,9 @@ label v14s44:
 
     menu:
         "Chloe":
-            if chloegf:
+            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.BOYFRIEND)
-            elif lindseyrs:
+            elif lindsey.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.TROUBLEMAKER)
             
             scene v14s44_4
@@ -120,9 +120,9 @@ label v14s44:
             u "Ha. Yeah."
 
         "Lindsey":
-            if lindseyrs:
+            if lindsey.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.BOYFRIEND)
-            elif chloegf:
+            elif chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.TROUBLEMAKER)
             scene v14s44_4
             with dissolve
@@ -144,7 +144,7 @@ label v14s44:
 
             el "It's not that I have anything against her, dude."
 
-            el "I'm used to Chloe being president, you know?"
+            el "I'm used to Chloe being President, you know?"
 
             scene v14s44_4
             with dissolve
@@ -247,7 +247,7 @@ label v14s44:
 
         "I'm Eli's friend":
             $ add_point(KCT.BRO)
-            $ ElijahFriend = True
+            $ elijah.relationship = Relationship.FRIEND
 
             scene v14s44_10
             with dissolve

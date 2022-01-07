@@ -194,7 +194,7 @@ label v2start:
     play sound "sounds/vibrate.mp3"
     queue sound "sounds/vibrate.mp3"
 
-    $ ryan.messenger.newMessage(_("You okay?"), queue=False)
+    $ ryan.messenger.newMessage(_("You okay?"), force_send=True)
     $ ryan.messenger.addReply(_("I'm fine"), v2_reply1)
     $ ryan.messenger.addReply(_("No, wtf was that?! Fuck Grayson and fuck the Apes"), v2_reply4)
 
@@ -204,11 +204,11 @@ label v2start:
     $ lauren.messenger.newMessage(_("Okay..."))
 
     if lauren.messenger.replies:
-        $ lauren.messenger.newMessage(_("Hello?? Can we please talk today?"), queue=False)
+        $ lauren.messenger.newMessage(_("Hello?? Can we please talk today?"), force_send=True)
         $ lauren.messenger.addReply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
         $ lauren.messenger.addReply(_("Sorry, I can't"), v2_reply6)
     else:
-        $ lauren.messenger.newMessage(_("Are we still on for today? :)"), queue=False)
+        $ lauren.messenger.newMessage(_("Are we still on for today? :)"), force_send=True)
         $ lauren.messenger.addReply(_("Yeah, SV cafe in 20 mins?"), v2_reply5)
         $ lauren.messenger.addReply(_("Sorry, I can't"), v2_reply6)
 
@@ -274,8 +274,6 @@ label v2start:
                     jump v1_tomShoutBack
 
                 "Walk away":
-                    $ fighttom = False
-
                     jump v1_tomWalkAway
 
 label bk_a: #for compatibility only
@@ -318,7 +316,9 @@ label gb:
     scene tomstancekick
     with dissolve
 
-    call screen fight_tutorialPopup
+    call screen confirm("Would you like to play the fighting tutorial?",
+        yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
+        no_action=[SetVariable("fight_tutorial", False), Return()])
 
     if fight_tutorial:
         call screen tomtut1
@@ -972,7 +972,6 @@ label tomFightStart:
     label tomkickhit:
     label tomkickhit2:
     label timer6:
-
         play sound "sounds/ks.mp3"
         scene tomkickhit
         with hpunch
@@ -1008,7 +1007,6 @@ label tomFightStart:
             call screen youattack
 
     label tomkickblocked:
-
         play sound "sounds/ks.mp3"
         scene tomkickblock
         with hpunch
@@ -1050,15 +1048,11 @@ label tomFightStart:
     label tomfinish5:
     label tomfinish6:
 
-    $ wintom = False
-
     scene tf
 
     " "
 
     jump v1_tomWalkAway
-
-
 
 label youfinish:
     if reaction == 0.5:
@@ -1067,7 +1061,6 @@ label youfinish:
     $ wintom = True
 
     menu:
-
         "Kick him":
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -1080,13 +1073,16 @@ label youfinish:
         "Walk away":
             $ add_point(KCT.BRO)
 
+    $ renpy.end_replay()
+
 label tf2: #for compatibility only
 label v1_tomWalkAway:
     $ firstfight = False
 
-    $ renpy.end_replay()
+    if meetlauren:
+        jump meet_lauren2
 
-    if not meetlauren:
+    else:
         scene s133
         with Fade (1,0,1) # in front of san vallejo
         if fighttom and not wintom:
@@ -1101,10 +1097,6 @@ label v1_tomWalkAway:
         u "(Also, what am I gonna do about Lauren? I can't avoid her forever.)"
 
         jump history2
-
-    else:
-        jump meet_lauren2
-
 
 label meet_lauren2:
     play music "music/mlove2.mp3"
@@ -1182,7 +1174,7 @@ label meet_lauren2:
         "There was something there":
             $ add_point(KCT.BOYFRIEND)
             
-            if v1_laurenKiss and v1_laurenPoints == 2:
+            if lauren.relationship.value >= Relationship.KISS.value:
                     scene s130c
                     with dissolve
                     u "I know you stopped kissing me after about a second..."
@@ -1191,7 +1183,7 @@ label meet_lauren2:
 
                     u "There was something real there and you know it."
 
-            elif v1_laurenKiss:
+            elif lauren.relationship.value >= Relationship.MOVE.value:
                 scene s130c
                 with dissolve
 
@@ -1209,12 +1201,13 @@ label meet_lauren2:
 
                 u "And I should have. There was something real there. Between us."
 
-            if kct == "loyal" or v1_kissLauren:
-                $ laurenrs = True
+            if lauren.relationship.value >= Relationship.KISS.value or kct == "loyal":
                 $ laawk = False
 
-                if not v1_kissLauren:
+                if lauren.relationship.value < Relationship.KISS.value:
                     call screen kct_popup
+
+                $ lauren.relationship = Relationship.GIRLFRIEND
 
                 scene s131 ### Lauren grabbing your hand on the table
                 with dissolve
@@ -1268,7 +1261,6 @@ label meet_lauren2:
 
                 menu:
                     "Give me a chance":
-
                         scene s130g
                         with dissolve
 
@@ -1294,7 +1286,6 @@ label meet_lauren2:
                             u "(I should probably wash the blood off my face before I go.)"
 
                     "You're right":
-
                         scene s130g
                         with dissolve
 
@@ -1322,7 +1313,7 @@ label meet_lauren2:
             scene s130a
             with dissolve
 
-            if v1_laurenKiss:
+            if lauren.relationship.value >= Relationship.MOVE.value:
                 u "That was uhm... nothing."
 
                 u "Let's just forget that ever happened."
@@ -1371,9 +1362,9 @@ label historye: #for compatibility only
 label history2:
     play sound "sounds/vibrate.mp3"
 
-    $ josh.messenger.newMessage(_("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."), queue=False)
-    $ josh.messenger.newMessage(_("YOURS"), queue=False)
-    $ josh.messenger.newMessage(_("What a bitch..."), queue=False)
+    $ josh.messenger.newMessage(_("Dude, I talked to this Aubrey chick the entire night and guess who's number she wanted..."), force_send=True)
+    $ josh.messenger.newMessage(_("YOURS"), force_send=True)
+    $ josh.messenger.newMessage(_("What a bitch..."), force_send=True)
     $ josh.messenger.addReply(_("Sorry, man. She doesn't know what she's missing."), v2_reply7)
     $ josh.messenger.addReply(_("Sooo, did you give it to her?"), v2_reply8)
 
@@ -1726,7 +1717,7 @@ label history2:
 
     no "Looks like he got beaten up."
 
-    if v1_hitOnNora:
+    if nora.relationship.value >= Relationship.MOVE.value:
         scene s142a # both mouths shut
         with dissolve
 
@@ -2338,8 +2329,8 @@ label bo_bd:
     # text from aubrey
     play sound "sounds/vibrate.mp3"
 
-    $ aubrey.messenger.newMessage(_("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled..."), queue=False)
-    $ aubrey.messenger.newMessage(_("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?"), queue=False)
+    $ aubrey.messenger.newMessage(_("Hey,\nJosh gave me your number\n\nI hope your face is feeling better after the shit that Grayson pulled..."), force_send=True)
+    $ aubrey.messenger.newMessage(_("He's not even dating Chloe and you guys didn't even do anything so I don't know what he was thinking.\n\nAnyway, do you wanna like... hang out tomorrow?"), force_send=True)
     $ aubrey.messenger.addReply(_("Wait they're not dating?"), v2_reply11)
     $ aubrey.messenger.addReply(_("My day tomorrow is quite full, but how about today?\n\nI need to buy a costume."), v2_reply12)
 
@@ -2508,7 +2499,7 @@ label bo_bd:
 
     play sound "sounds/vibrate.mp3"
 
-    $ aubrey.messenger.newMessage(_("Hey, are you nearby?"), queue=False)
+    $ aubrey.messenger.newMessage(_("Hey, are you nearby?"), force_send=True)
     $ aubrey.messenger.addReply(_("Yeah, I'm just on my way, I'll be right there."), v2_reply13)
     $ aubrey.messenger.addReply(_("Sorry, something came up and I can't make it."), v2_reply14)
 
@@ -2853,7 +2844,6 @@ label try2done:
 
 
 label try2new:
-
     $ v2_outfits += 1
 
     scene s167 # in changing room
@@ -4078,7 +4068,7 @@ label eve1:
 
     menu:
         "Make a move":
-            $ evelynmove = True
+            $ evelyn.relationship = Relationship.MOVE
             $ add_point(KCT.BRO)
 
             scene s188d

@@ -112,7 +112,7 @@ label v11_hotel_bar_wolves: #can only get here if joinwolves
     scene v11hrs6
     with dissolve
 
-    if msrosers:
+    if ms_rose.relationship.value >= Relationship.FWB.value:
         pause 0.5
 
         scene v11hrs8 # TPP Close up of Ms. Rose whispering in MC's ear, Ms. Rose smiling with mouth open
@@ -211,7 +211,7 @@ label v11_hotel_bar_wolves: #can only get here if joinwolves
 
         u "*Gulp*"
 
-    if msrosers:
+    if ms_rose.relationship.value >= Relationship.FWB.value:
         scene v11hrs2
         with dissolve
 

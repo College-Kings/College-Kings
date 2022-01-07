@@ -20,7 +20,7 @@ label steak_w_chloe:
     scene v8steak3 # FPP. Close up Chloe, Chloe smile, mouth open.
     with dissolve
 
-    if chloers:
+    if chloe.relationship.value >= Relationship.FWB.value:
         cl "It's about time! I'm starving."
 
         scene v8steak3a # FPP. Same camera as v8steak3, Chloe smile, mouth closed.
@@ -48,7 +48,7 @@ label steak_w_chloe:
 
         u "It sure does!"
 
-    if not chloers:
+    else:
         cl "Two more minutes and I would have started without you."
 
         scene v8steak3a
@@ -76,7 +76,7 @@ label steak_w_chloe:
 
     cl "Wow it's nice in here."
 
-    if chloers:
+    if chloe.relationship.value >= Relationship.FWB.value:
         scene v8steak3a
         with dissolve
 
@@ -107,7 +107,7 @@ label steak_w_chloe:
 
         cl "I'm sure you'll try."
 
-    if not chloers:
+    else:
         scene v8steak3a
         with dissolve
 
@@ -434,7 +434,7 @@ label steak_w_chloe_cont_2:
     scene v8steak15a # FPP. Same camera as v8steak15, chloe mouth closed.
     with dissolve
 
-    if chloers:
+    if chloe.relationship.value >= Relationship.FWB.value:
         menu:
             "Say a dirty joke":
                 jump steak_w_chloe_dirty
@@ -442,7 +442,7 @@ label steak_w_chloe_cont_2:
             "Don't say a joke":
                 jump steak_w_chloe_dirty_no
 
-    if not chloers:
+    else:
         u "Yeah, I was so hungry, I think I ordered too much."
 
         scene v8steak15b # FPP. Same camera as v8steak15, Chloe smile, mouth open.
@@ -547,7 +547,7 @@ label steak_w_chloe_cont_3:
 
     u "I'd love that!"
 
-    if chloers:
+    if chloe.relationship.value >= Relationship.FWB.value:
         scene v8steak17b # FPP. Same camera as v8steak17, flirty expression, mouth open.
         with dissolve
 
@@ -581,7 +581,7 @@ label steak_w_chloe_cont_3:
         scene v8steak18 # FPP. Show Chloe and MC kissing.
         with dissolve
 
-    if not chloers:
+    else:
         scene v8steak17 # FPP. Same camera as v8steak17, smile, mouth open.
         with dissolve
 
@@ -603,7 +603,7 @@ label steak_w_chloe_cont_3:
 
     cl "You too."
 
-    if chloers:
+    if chloe.relationship.value >= Relationship.FWB.value:
         scene v8steak20 # TPP. Show MC and Chloe kissing.
         with dissolve
 
@@ -620,7 +620,7 @@ label steak_w_chloe_cont_3:
         pause 0.5
         jump v8_julia_call
 
-    if not chloers:
+    else:
         scene v8steak21 # FPP. Show Chloe entering her house.
         with dissolve
 

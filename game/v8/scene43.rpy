@@ -255,7 +255,7 @@ label for_w_gray_cont_3:
         "Agree with Grayson":
             $ add_point(KCT.BRO)
             jump for_w_gray_agree
-        "Tell Grayson you joined for the fights":
+        "I joined for the fights":
             $ add_point(KCT.TROUBLEMAKER)
             jump for_w_gray_fights
 

@@ -4,16 +4,16 @@ init python:
         Creates a post for the in game phone app, Kiwii
 
         Attributes:
-            user (str): 
-            img (str): 
+            user (NonPlayableCharacter): 
+            image (str): 
             message (str, optional):
-            mentions (list, optional): 
+            mentions (list<NonPlayableCharacter>, optional): 
             numberLikes (int, optional):
         """
 
-        def __init__(self, user, img, message="", mentions=None, numberLikes=renpy.random.randint(250, 500)):
+        def __init__(self, user, image, message="", mentions=None, numberLikes=renpy.random.randint(250, 500)):
             self.user = user
-            self.img = "images/phone/kiwii/posts/{}".format(img)
+            self.image = "images/phone/kiwii/posts/{}".format(image)
             self.message = message
 
             if isinstance(mentions, basestring): self.mentions = [mentions]
@@ -28,16 +28,16 @@ init python:
 
             kiwiiPosts.append(self)
 
-            kiwiiApp.unlock()
-            kiwiiApp.notification = True
+            kiwii.unlock()
+            kiwii.notification = True
 
         @property
         def username(self):
-            return kiwiiUsers[self.user]["username"]
+            return self.user.username
 
         @property
         def profile_picture(self):
-            return kiwiiUsers[self.user]["profile_picture"]
+            return self.user.profile_picture
 
         @property
         def replies(self):
@@ -50,20 +50,20 @@ init python:
             if self.liked: self.numberLikes += 1
             else: self.numberLikes -= 1
             
-        def newComment(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None, queue=True):
+        def new_comment(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None, force_send=False):
             comment = KiwiiComment(user, message, numberLikes, mentions)
             
             # Add message to queue
-            if queue:
+            if not force_send:
                 self.pendingComments.append(comment)
             else:
                 self.pendingComments = []
                 self.sentComments.append(comment)
             
-            kiwiiApp.notification = True
+            kiwii.notification = True
             return comment
 
-        def addReply(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
+        def add_reply(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
             reply = KiwiiReply(message, func, numberLikes, mentions, disabled)
             
             # Append reply to last sent message
@@ -72,15 +72,15 @@ init python:
                     self.pendingComments[-1].replies.append(reply)
                 else:
                     self.sentComments[-1].replies.append(reply)
-            except Exception:
-                message = self.newComment("MC", "", queue=False)
+            except Exception as e:
+                message = self.newComment(mc, "", force_send=True)
                 message.replies.append(reply)
 
-            kiwiiApp.notification = True
+            kiwii.notification = True
             return reply
 
-        def selectedReply(self, reply):
-            self.newComment("MC", reply.message, reply.numberLikes, reply.mentions, queue=False)
+        def selected_reply(self, reply):
+            self.newComment(mc, reply.message, reply.numberLikes, reply.mentions, force_send=True)
             self.sentComments[-1].reply = reply
             self.sentComments[-1].replies = []
 
@@ -97,7 +97,7 @@ init python:
             except IndexError: pass
 
         def get_message(self):
-            usernames = [kiwiiUsers[mention]["username"] for mention in self.mentions]
+            usernames = [mention.username for mention in self.mentions]
 
             message = ", @".join(usernames)
             if usernames: message = "{{color=#3498DB}}{{b}}@{users}{{/b}}{{/color}} {text}".format(users=message, text=self.message)
@@ -105,8 +105,20 @@ init python:
 
             return message
 
-        def removePost(self):
+        def remove_post(self):
             kiwiiPosts.remove(self)
+            del self
+
+        # Backwards compatibility.
+        def newComment(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None, force_send=False):
+            return self.new_comment(user, message, numberLikes, mentions, force_send)
+
+        def addReply(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
+            return self.add_reply(message, func, numberLikes, mentions, disabled)
+
+        def selectedReply(self, reply):
+            return self.selected_reply(reply)
+
 
     class KiwiiComment(KiwiiPost):
         def __init__(self, user, message, numberLikes=renpy.random.randint(250, 500), mentions=None):
@@ -124,11 +136,15 @@ init python:
 
         @property
         def replies(self):
+            try: self._replies
+            except AttributeError: self._replies = []
+
             return self._replies
 
         @replies.setter
-        def replies(self, x):
-            self._replies = x
+        def replies(self, value):
+            self._replies = value
+
 
     class KiwiiReply(KiwiiComment):
         def __init__(self, message, func=None, numberLikes=renpy.random.randint(250, 500), mentions=None, disabled=False):
@@ -157,14 +173,19 @@ init python:
 
         return total
 
+    def find_kiwii_post(image=None, message=None):
+        for post in kiwiiPosts:
+            if post.image == image: return post
+            if post.message == message: return post
+
 init -100:
     define profile_pictures = [
-        "images/phone/kiwii/profile_pictures/mcpp1.webp",
-        "images/phone/kiwii/profile_pictures/mcpp2.webp",
-        "images/phone/kiwii/profile_pictures/mcpp3.webp",
-        "images/phone/kiwii/profile_pictures/mcpp4.webp"
+        "images/nonplayable_characters/profile_pictures/mc2.webp",
+        "images/nonplayable_characters/profile_pictures/mc3.webp",
+        "images/nonplayable_characters/profile_pictures/mc4.webp",
+        "images/nonplayable_characters/profile_pictures/mc5.webp"
         ]
-    default profile_pictures_count = 0
+    default profile_pictures_index = 0
 
     default kiwiiPosts = []
     default liked_kiwiPosts = []
@@ -173,7 +194,7 @@ screen kiwiiTemplate():
     modal True
     zorder 200
 
-    use phoneTemplate:
+    use base_phone:
         add Transform("images/phone/kiwii/AppAssets/Background.webp", size=(376, 744)) at truecenter
 
         transclude
@@ -204,28 +225,28 @@ screen kiwiiTemplate():
             action Show("kiwiiApp")
 
 screen kiwiiPreferences():
-    tag phoneTag
+    tag phone_tag
     modal True
     zorder 200
 
-    $ kiwiiUsers["MC"]["profile_picture"] = profile_pictures[profile_pictures_count]
+    $ mc.profile_picture = profile_pictures[profile_pictures_index]
 
     use kiwiiTemplate:
 
-        add Transform(kiwiiUsers["MC"]["profile_picture"], zoom=0.2) align(0.5, 0.3)
+        add Transform(mc.profile_picture, zoom=0.2) align(0.5, 0.3)
 
         hbox:
             spacing 50
             align(0.5, 0.48)
 
             textbutton "<":
-                if profile_pictures_count > 0:
-                    action SetVariable("profile_pictures_count", profile_pictures_count - 1)
+                if profile_pictures_index > 0:
+                    action SetVariable("profile_pictures_index", profile_pictures_index - 1)
                 text_style "kiwii_PrefTextButton"
 
             textbutton ">":
-                if profile_pictures_count + 1 < len(profile_pictures):
-                    action SetVariable("profile_pictures_count", profile_pictures_count + 1)
+                if profile_pictures_index + 1 < len(profile_pictures):
+                    action SetVariable("profile_pictures_index", profile_pictures_index + 1)
                 text_style "kiwii_PrefTextButton"
 
         vbox:
@@ -233,8 +254,8 @@ screen kiwiiPreferences():
 
             text "Username:" style "kiwii_ProfileName" xalign 0.5
             input:
-                value DictInputValue(kiwiiUsers["MC"], "username")
-                default kiwiiUsers["MC"]["username"]
+                value FieldInputValue(mc, "username")
+                default name
                 length 15
                 color "#006400"
                 outlines [ (absolute(0), "#000", absolute(0), absolute(0)) ]
@@ -249,10 +270,10 @@ screen kiwiiPreferences():
 
 
 screen kiwiiApp():
-    tag phoneTag
+    tag phone_tag
     zorder 200
 
-    $ kiwiiApp.notification = False
+    $ kiwii.notification = False
 
     use kiwiiTemplate:
 
@@ -284,8 +305,8 @@ screen kiwiiApp():
                         spacing 5
 
                         imagebutton:
-                            idle Transform(post.img, zoom=0.17)
-                            action Show("kiwii_image", img=post.img)
+                            idle Transform(post.image, zoom=0.17)
+                            action Show("kiwii_image", img=post.image)
                         text post.get_message() style "kiwii_CommentText" xalign 0.5
 
                     hbox:
@@ -315,7 +336,7 @@ screen kiwiiApp():
 
 
 screen kiwiiPost(post):
-    tag phoneTag
+    tag phone_tag
     zorder 200
 
     use kiwiiTemplate:
@@ -323,8 +344,8 @@ screen kiwiiPost(post):
         imagebutton:
             xalign 0.5
             ypos 265
-            idle Transform(post.img, size=(376, 212))
-            action Show("kiwii_image", img=post.img)
+            idle Transform(post.image, size=(376, 212))
+            action Show("kiwii_image", img=post.image)
 
         viewport:
             mousewheel True
@@ -380,7 +401,7 @@ screen kiwiiPost(post):
                         action Function(post.selectedReply, reply)
 
 screen liked_kiwii():
-    tag phoneTag
+    tag phone_tag
     zorder 200
 
     $ liked_kiwiPosts = filter(lambda post: post.liked, kiwiiPosts)
@@ -415,8 +436,8 @@ screen liked_kiwii():
                         spacing 5
 
                         imagebutton:
-                            idle Transform(post.img, zoom=0.17)
-                            action Show("kiwii_image", img=post.img)
+                            idle Transform(post.image, zoom=0.17)
+                            action Show("kiwii_image", img=post.image)
                         text post.message style "kiwii_CommentText" xalign 0.5
 
                     hbox:

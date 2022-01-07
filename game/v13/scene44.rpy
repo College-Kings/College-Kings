@@ -14,15 +14,8 @@ label v13s44:
     scene v13s44_1a # TPP. Same as v13s44_1a, Lauren caught up to MC, MC slight smile, mouth closed, Lauren slight smile, mouth open.
     with dissolve
     
-    if laurenrs and not v11_aubrey_sex:
-        la "Hey babe!"
-
-        scene v13s44_2 # TPP. Show Lauren kissing MC.
-        with dissolve
-
-        pause 0.75
-
-    elif laurenrs:
+    if v11_lauren_caught_aubrey:
+        $ lauren.relationship = Relationship.FRIEND
         la "[name]?"
 
         scene v13s44_3 # FPP. MC looking at Lauren, Lauren looking at MC, neutral expression, mouth closed
@@ -57,8 +50,13 @@ label v13s44:
 
         la "*Sighs* Yes, I'm sure. Now, look..."
 
-        $ laurenrs = False
-        $ laurenrs_v11aubrey = True
+    elif lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        la "Hey babe!"
+
+        scene v13s44_2 # TPP. Show Lauren kissing MC.
+        with dissolve
+
+        pause 0.75
 
     else:
         scene v13s44_4 # FPP. MC looking at Lauren, Lauren looking at MC, Lauren slight smile, mouth open.

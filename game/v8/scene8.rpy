@@ -143,7 +143,7 @@ label prot_w_au_no_wing:
     scene v8sprot3
     with dissolve
 
-    aut "It's okay. We're just here to make our voices heard, that's all. "
+    aut "It's okay. We're just here to make our voices heard, that's all."
 
     scene v8sprot8 # FPP. Show Autumn holding up her sign facing the camera, mouth closed.
     with dissolve
@@ -334,8 +334,7 @@ label prot_w_au_2:
 
     u "Yeah, anytime."
 
-    if evelynrs:
-
+    if evelyn.relationship.value >= Relationship.LIKES.value:
         scene v8sprot13 # TPP. Show Evelyn walking past MC, MC turns to look at Evenlyn walking past.
         with dissolve
 
@@ -407,7 +406,7 @@ label prot_w_au_2:
         scene v8sprot16b
         with dissolve
 
-        ev "Definitely a compliment. "
+        ev "Definitely a compliment."
 
         scene v8sprot16a
         with dissolve

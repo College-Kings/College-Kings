@@ -525,11 +525,11 @@ label v12_chase_robber:
 
     pause 0.75
 
-    $ v12s1a_kiwiiPost1 = KiwiiPost("Imre", "v12/impost1.webp", _("Would your man chase a robber down in the middle of the night? If not, you don't have a real man..."), numberLikes=216)
-    $ v12s1a_kiwiiPost1.newComment("Charli", _("If you want a man Imre I can take you to a few bars... All you had to do was ask."), numberLikes=14, queue=False)
-    $ v12s1a_kiwiiPost1.newComment("Ryan", _("LMAO"), numberLikes=1, mentions="Imre", queue=False)
+    $ v12s1a_kiwiiPost1 = KiwiiPost(imre, "v12/impost1.webp", _("Would your man chase a robber down in the middle of the night? If not, you don't have a real man..."), numberLikes=216)
+    $ v12s1a_kiwiiPost1.newComment(charli, _("If you want a man Imre I can take you to a few bars... All you had to do was ask."), numberLikes=14, force_send=True)
+    $ v12s1a_kiwiiPost1.newComment(ryan, _("LMAO"), numberLikes=1, mentions=[imre], force_send=True)
 
-    $ imre.messenger.newMessage("Check Kiwii... you're welcome. :)", queue=False)
+    $ imre.messenger.newMessage("Check Kiwii... you're welcome. :)", force_send=True)
     $ imre.messenger.addReply("Haha okay", func=None)
 
     call screen phone
@@ -540,10 +540,10 @@ label v12_chase_robber:
     
     # MC replies back to Imre-
     $ imre.messenger.addReply("Boosting me huh?", func=None)
-    $ imre.messenger.newMessage("You deserved it", queue=True)
+    $ imre.messenger.newMessage("You deserved it")
     $ imre.messenger.addReply("You see Charli's comment?", func=None)
-    $ imre.messenger.newMessage("No, one sec", queue=True)
-    $ imre.messenger.newMessage("I'm gonna beat his ass", queue=True)
+    $ imre.messenger.newMessage("No, one sec")
+    $ imre.messenger.newMessage("I'm gonna beat his ass")
     $ imre.messenger.addReply("Haha", func=None)
 
     scene v12car30a

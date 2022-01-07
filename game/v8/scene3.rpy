@@ -3,7 +3,8 @@ label v8_ri_start:
     # Note to renderers: Make sure the MC is in his suit and Riley is in her HoCo dress. Any other props are the same as Riley's lewd ending in v7. Context: MC and Riley are both sitting on her bed in her room and she's whispering in his ear
     stop music fadeout 3
 
-    $ v8_riley_lewd_ending = True
+    $ sceneList.add("v8_riley")
+    $ riley.relationship = Relationship.FWB
 
     scene v8s25 # Same as sfr4ri55 (from v7) but MC talking now
     with dissolve
@@ -35,7 +36,7 @@ label v8_ri_start:
     with dissolve
     ri "*Chuckles* Why don't you start unwrapping your present fully then?"
 
-    if not rileysex:
+    if "v7_riley" in sceneList:
         u "(Damn, did not expect Riley had this in her.)"
 
     scene v8s26a
@@ -267,7 +268,7 @@ label v8s3_rileyDoggy:
     with dissolve
     ri "She isn't gonna be back until noon tomorrow."
 
-    if rileysex:
+    if "v7_riley" in sceneList:
         scene v8s33b # Riley slightly flirty and mouth open
         with dissolve
         ri "Which is why you're gonna sleep here this time *Chuckles*"

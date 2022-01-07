@@ -41,7 +41,7 @@ label v13s56:
 
     u "I definitely feel that. *Chuckles*"
 
-    if v12_nora_sex:
+    if nora.relationship.value >= Relationship.FWB.value:
         scene v13s56_2
         with dissolve
 
@@ -128,8 +128,7 @@ label v13s56:
 
             u "I said my bad. *Chuckles*"
 
-            if v12_nora_sex:
-
+            if nora.relationship.value >= Relationship.FWB.value:
                 scene v13s56_5f # FPP. same as v13s56_5d nora slight smile
                 with dissolve
 
@@ -284,7 +283,6 @@ label v13s56:
             with dissolve
 
         "Bonsai":
-            $ v13_bonsai = True
             scene v13s56_6h
             with dissolve
 
@@ -357,7 +355,7 @@ label v13s56:
 
         pause 0.75
 
-    scene v13s56_3a # TPP. same as v13s56_3 MC no expression,  mouth closed, is waiting outside the gift shop alone
+    scene v13s56_3a # TPP. same as v13s56_3 MC no expression, mouth closed, is waiting outside the gift shop alone
     with dissolve
 
     pause 0.75

@@ -1,10 +1,10 @@
 init python:
     def v7_kiwiiReply1():
-        v7_kiwiiPost1.newComment("Cameron", _("Lol, pussy"), mentions="MC", numberLikes=renpy.random.randint(1, 10))
+        v7_kiwiiPost1.newComment(cameron, _("Lol, pussy"), mentions=[mc], numberLikes=renpy.random.randint(1, 10))
         add_point(KCT.BOYFRIEND)
 
     def v7_kiwiiReply2():
-        v7_kiwiiPost1.newComment("Imre", _("Slide into her DMs bro!"), mentions="MC", numberLikes=renpy.random.randint(5, 15))
+        v7_kiwiiPost1.newComment(imre, _("Slide into her DMs bro!"), mentions=[mc], numberLikes=renpy.random.randint(5, 15))
         add_point(KCT.BRO)
         add_point(KCT.TROUBLEMAKER)
 
@@ -12,15 +12,15 @@ init python:
         add_point(KCT.BOYFRIEND)
 
     def v7_kiwiiReply4():
-        v7_kiwiiPost2.newComment("Autumn", _("Yeah, they really are"), mentions="MC", numberLikes=renpy.random.randint(8, 18))
+        v7_kiwiiPost2.newComment(autumn, _("Yeah, they really are"), mentions=[mc], numberLikes=renpy.random.randint(8, 18))
     
     def v7_kiwiiReply5():
         add_point(KCT.BRO)
-        v7_kiwiiPost3.newComment("Aubrey", _("Bring it on!"), mentions="MC", numberLikes=renpy.random.randint(15, 35))
+        v7_kiwiiPost3.newComment(aubrey, _("Bring it on!"), mentions=[mc], numberLikes=renpy.random.randint(15, 35))
 
     def v7_kiwiiReply6():
         add_point(KCT.TROUBLEMAKER)
-        v7_kiwiiPost4.newComment("Josh", _("lol"), mentions="MC", numberLikes=renpy.random.randint(3, 7))
+        v7_kiwiiPost4.newComment(josh, _("lol"), mentions=[mc], numberLikes=renpy.random.randint(3, 7))
 
     def v7_msgReply1():
         add_point(KCT.BRO)
@@ -43,22 +43,21 @@ init python:
         riley.messenger.newMessage(_("Yayyy"))
 
     def v7_msgReply6():
-        setattr(store, "rileysex", False)
         riley.messenger.newMessage(_("Oh oki"))
 
     def kiwii_firstTimeMessages():
-        if emilyrs:
+        if emily.relationship.value >= Relationship.FWB.value:
             riley.messenger.addReply(_("We're not back together"))
             riley.messenger.newMessage(_("Okay... just looked like it"))
             riley.messenger.addReply(_("Well we're not."))
             riley.messenger.newMessage(_("k"))
-        if bowling and emilyrs:
-            penelope.messenger.newMessage(_("I didn't know you and Emily were a thing..."), queue=False)
+        if bowling and emily.relationship.value >= Relationship.FWB.value:
+            penelope.messenger.newMessage(_("I didn't know you and Emily were a thing..."), force_send=True)
             penelope.messenger.addReply(_("We're not a thing"), v7_msgReply1)
             penelope.messenger.addReply(_("It was a one time thing"), v7_msgReply2)
-        if emilyrs and laurenrs:
-            lauren.messenger.newMessage(_("I saw what Emily posted. I really thought you liked me..."), queue=False)
-            lauren.messenger.newMessage(_("I guess we're done now, so please just delete my number."), queue=False)
+        if emily.relationship.value >= Relationship.FWB.value and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            lauren.messenger.newMessage(_("I saw what Emily posted. I really thought you liked me..."), force_send=True)
+            lauren.messenger.newMessage(_("I guess we're done now, so please just delete my number."), force_send=True)
             lauren.messenger.addReply(_("Lauren can we please just talk about it? I can explain"))
             lauren.messenger.newMessage(_("What is there to talk about? How could you betray me like that?!"))
             lauren.messenger.addReply(_("Please, it's just a big misunderstanding"))
@@ -249,7 +248,7 @@ label v7start:
 
     u "Now that's actually insane."
 
-    u "So all these guys were Wolves presidents too?"
+    u "So all these guys were Wolves Presidents too?"
 
     scene s674d
     with dissolve
@@ -264,18 +263,18 @@ label v7start:
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
 
-            u "So, I don't know if it's weird asking, but if you're not one of the Fight Kings, how come you're the current president?"
+            u "So, I don't know if it's weird asking, but if you're not one of the Fight Kings, how come you're the current President?"
 
             scene s674
             with dissolve
 
-            ch "Well the year before me, Chuck was president. It was his last year, so I got voted in."
+            ch "Well the year before me, Chuck was President. It was his last year, so I got voted in."
 
-            ch "We need a new president every one or two years so some presidents aren't Fight Kings."
+            ch "We need a new President every one or two years so some Presidents aren't Fight Kings."
 
             ch "Of course my goal is to become one and get on that wall."
 
-            ch "But I also believe that being president whilst someone else wins for the Wolves is just as big of an honor as winning yourself."
+            ch "But I also believe that being President whilst someone else wins for the Wolves is just as big of an honor as winning yourself."
 
             ch "A good leader doesn't need to be the best fighter."
 
@@ -338,7 +337,7 @@ label v7start:
 
     queue music [ "music/mparty3.mp3", "music/mparty4.mp3"]
 
-    if imremad:
+    if imre.relationship.value <= Relationship.MAD.value:
         scene s680 # showing mc in Wolves house living room where Aaron is talking to Aubrey
         with fade
 
@@ -607,7 +606,7 @@ label hd_bd:
 
         u "(It's really late so I might as well go home now.)"
 
-    elif noramad:
+    elif nora.relationship.value <= Relationship.MAD.value:
         scene s699
         with dissolve
 
@@ -687,7 +686,7 @@ label hd_bd:
         scene s699b
         with dissolve
 
-        no "Maybe... Like it's fine that he's president and all and that's important, but he's been with everyone all night."
+        no "Maybe... Like it's fine that he's President and all and that's important, but he's been with everyone all night."
 
         no "I just wanted to know if he would wanna go to bed soon so we can at least have some private couple time this week."
 
@@ -850,7 +849,7 @@ label hd_bd:
 
             no "Cheated on someone."
 
-            if (laurenrs and aubreyrs) or (laurenrs and emilyrs):
+            if (lauren.relationship.value >= Relationship.GIRLFRIEND.value and aubrey.relationship.value >= Relationship.FWB.value) or (lauren.relationship.value >= Relationship.GIRLFRIEND.value and emily.relationship.value >= Relationship.FWB.value):
                 scene s703 # showing mc drinking
                 with dissolve
 
@@ -1008,7 +1007,7 @@ label hd_ad:
 
     menu:
         "Keep it friendly":
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.BOYFRIEND)
 
             u "I'm glad. A lot of the Wolves seem really cool. How's classes going? Finish the econ assignment yet?"
@@ -1083,7 +1082,7 @@ label hd_ad:
             jump conyourdorm
 
         "Start flirting":
-            if laurenrs :
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value :
                 $ add_point(KCT.TROUBLEMAKER)
 
             $ add_point(KCT.BRO)
@@ -1126,7 +1125,6 @@ label hd_ad:
             ri "*Laughs* It sounded a lot cooler in my head."
 
             if kct == "confident":
-
                 ri "I just thought. I'd give it a [name]-style response."
 
                 scene s706a
@@ -1161,10 +1159,11 @@ label hd_ad:
 
             u "No worries, it was a nice walk."
 
-            if kct == "confident":
-                call screen kct_popup
+            if kct == "confident" or riley.relationship.value >= Relationship.MOVE.value:
+                if riley.relationahip.value < Relationship.MOVE.value:
+                    call screen kct_popup
 
-            elif not rileykiss:
+            else:
                 scene s708 # riley smiling
                 with dissolve
 
@@ -1180,7 +1179,7 @@ label hd_ad:
                 scene s709 # you walking through the dorm hallways to his dorm
                 with fade
 
-                pause 0.5
+                pause 0.75
 
                 jump conyourdorm
 
@@ -1192,11 +1191,11 @@ label hd_ad:
 
     menu:
         "Yeah, I'd like that":
-            if laurenrs or emilyrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value or emily.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.TROUBLEMAKER)
 
             $ add_point(KCT.BRO)
-            $ rileyrs = True
+            $ riley.relationship = Relationship.LIKES
 
             u "Yeah, I'd like that."
 
@@ -1303,7 +1302,7 @@ label hd_ad:
             pause 0.5
 
         "Uhm... I shouldn't":
-            if laurenrs or emilyrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value or emily.relationship.value >= Relationship.FWB.value:
                 $ add_point(KCT.BOYFRIEND)
 
             u "Uhm... I probably shouldn't. It's quite late."
@@ -1341,39 +1340,39 @@ label conyourdorm:
 
     pause 0.5
 
-    $ v7_kiwiiPost1 = KiwiiPost("Chloe", "v7/clpost1.webp", _("I'll always follow the sun :)"), numberLikes=186)
-    $ v7_kiwiiPost1.newComment("Grayson", _("Check your DMs"), 14, queue=False)
-    $ v7_kiwiiPost1.newComment("Ryan", _("Whore."), 1, queue=False)
-    $ v7_kiwiiPost1.newComment("Aubrey", _("What I wouldn't give for your body..."), 32, queue=False)
-    $ v7_kiwiiPost1.newComment("Elijah", _("If you ever need a tutor, I'm free on Wednesdays and Fridays."), 2, queue=False)
-    $ v7_kiwiiPost1.newComment("Imre", _("SO FUCKING HOT WTFFF"), 10, queue=False)
-    $ v7_kiwiiPost1.newComment("Emily", _("Where did you get that bikini?"), 18, mentions="Chloe", queue=False)
-    $ v7_kiwiiPost1.newComment("Chloe", _("I can't remember :("), 11, mentions="Emily", queue=False)
+    $ v7_kiwiiPost1 = KiwiiPost(chloe, "v7/clpost1.webp", _("I'll always follow the sun :)"), numberLikes=186)
+    $ v7_kiwiiPost1.newComment(grayson, _("Check your DMs"), 14, force_send=True)
+    $ v7_kiwiiPost1.newComment(ryan, _("Whore."), 1, force_send=True)
+    $ v7_kiwiiPost1.newComment(aubrey, _("What I wouldn't give for your body..."), 32, force_send=True)
+    $ v7_kiwiiPost1.newComment(elijah, _("If you ever need a tutor, I'm free on Wednesdays and Fridays."), 2, force_send=True)
+    $ v7_kiwiiPost1.newComment(imre, _("SO FUCKING HOT WTFFF"), 10, force_send=True)
+    $ v7_kiwiiPost1.newComment(emily, _("Where did you get that bikini?"), 18, mentions=[chloe], force_send=True)
+    $ v7_kiwiiPost1.newComment(chloe, _("I can't remember :("), 11, mentions=[emily], force_send=True)
     $ v7_kiwiiPost1.addReply(_("You're so beautiful!"), v7_kiwiiReply1, numberLikes=renpy.random.randint(2, 8))
     $ v7_kiwiiPost1.addReply(_("I got some sun in my room..."), v7_kiwiiReply2, numberLikes=renpy.random.randint(20, 30))
 
-    $ v7_kiwiiPost2 = KiwiiPost("Lauren", "v7/lapost1.webp", _("Wishing I could go back..."), numberLikes=39)
-    $ v7_kiwiiPost2.newComment("Autumn", _("That was such a great vacation!"), 2, queue=False)
-    $ v7_kiwiiPost2.newComment("Penelope", _("Omg beautiful!"), 3, queue=False)
+    $ v7_kiwiiPost2 = KiwiiPost(lauren, "v7/lapost1.webp", _("Wishing I could go back..."), numberLikes=39)
+    $ v7_kiwiiPost2.newComment(autumn, _("That was such a great vacation!"), 2, force_send=True)
+    $ v7_kiwiiPost2.newComment(penelope, _("Omg beautiful!"), 3, force_send=True)
     $ v7_kiwiiPost2.addReply(_("You're a cutie!"), v7_kiwiiReply3, numberLikes=renpy.random.randint(3, 10))
     $ v7_kiwiiPost2.addReply(_("Winter vacations are the best"), v7_kiwiiReply4, numberLikes=renpy.random.randint(10, 17))
 
-    $ v7_kiwiiPost3 = KiwiiPost("Aubrey", "v7/aupost1.webp", _("Finally changed my profile pic!"), numberLikes=133)
-    $ v7_kiwiiPost3.newComment("Cameron", _("You put the hot into thot"), 2, queue=False)
-    $ v7_kiwiiPost3.newComment("Josh", _("You still single?"), 3, queue=False)
-    $ v7_kiwiiPost3.newComment("Riley", _("Holy hell... gorgeous Aubs!"), 6, queue=False)
-    $ v7_kiwiiPost3.newComment("Chloe", _("Most beautiful girl in the world <3"), 6, queue=False)
-    $ v7_kiwiiPost3.addReply(_("I'd destroy you in Air hockey!"), v7_kiwiiReply5, mentions="Aubrey", numberLikes=renpy.random.randint(15, 25))
+    $ v7_kiwiiPost3 = KiwiiPost(aubrey, "v7/aupost1.webp", _("Finally changed my profile pic!"), numberLikes=133)
+    $ v7_kiwiiPost3.newComment(cameron, _("You put the hot into thot"), 2, force_send=True)
+    $ v7_kiwiiPost3.newComment(josh, _("You still single?"), 3, force_send=True)
+    $ v7_kiwiiPost3.newComment(riley, _("Holy hell... gorgeous Aubs!"), 6, force_send=True)
+    $ v7_kiwiiPost3.newComment(chloe, _("Most beautiful girl in the world <3"), 6, force_send=True)
+    $ v7_kiwiiPost3.addReply(_("I'd destroy you in Air hockey!"), v7_kiwiiReply5, mentions=[aubrey], numberLikes=renpy.random.randint(15, 25))
 
-    if emilyrs: # first riley texts, then once you've opened the app you get 2 more messages.
-        $ v7_kiwiiPost4 = KiwiiPost("Emily", "v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), numberLikes=82)
-        $ v7_kiwiiPost4.newComment("Riley", _("You guys are so cute"), 5, queue=False)
-        $ v7_kiwiiPost4.newComment("Aubrey", _("GORGEOUS"), 8, queue=False)
-        $ v7_kiwiiPost4.newComment("Josh", _("Woah, you guys back together??"), 3, queue=False)
-        $ v7_kiwiiPost4.addReply(_("No, we're not."), v7_kiwiiReply6, mentions="Josh", numberLikes=renpy.random.randint(5, 15))
+    if emily.relationship.value >= Relationship.FWB.value: # first riley texts, then once you've opened the app you get 2 more messages.
+        $ v7_kiwiiPost4 = KiwiiPost(emily, "v7/empost1.webp", _("Finally fate brings us back together. What doesn't kill us only makes us stronger."), numberLikes=82)
+        $ v7_kiwiiPost4.newComment(riley, _("You guys are so cute"), 5, force_send=True)
+        $ v7_kiwiiPost4.newComment(aubrey, _("GORGEOUS"), 8, force_send=True)
+        $ v7_kiwiiPost4.newComment(josh, _("Woah, you guys back together??"), 3, force_send=True)
+        $ v7_kiwiiPost4.addReply(_("No, we're not."), v7_kiwiiReply6, mentions=[josh], numberLikes=renpy.random.randint(5, 15))
 
         play sound "sounds/vibrate.mp3"
-        $ riley.messenger.newMessage(_("Are you and Emily back together?"), queue=False)
+        $ riley.messenger.newMessage(_("Are you and Emily back together?"), force_send=True)
         $ riley.messenger.addReply(_("What are you talking about???"), v7_msgReply7)
         $ riley.messenger.newMessage(_("Check Kiwii..."))
 
@@ -1385,7 +1384,7 @@ label conyourdorm:
         u "(What the hell?)"
 
         label phoneam:
-            if bowling and emilyrs:
+            if bowling and emily.relationship.value >= Relationship.FWB.value:
                 $ v7_emily_bowling = True
         
             if riley.messenger.replies:
@@ -1398,11 +1397,11 @@ label conyourdorm:
                 u "(I should check out what Emily posted on Kiwii.)"
                 jump phoneam
 
-            if bowling and penelope.messenger.replies:
+            if penelope.messenger.replies:
                 u "(I should answer Penelope.)"
                 jump phoneam
 
-            if laurenrs and lauren.messenger.replies:
+            if lauren.messenger.replies:
                 u "(I should respond to Lauren.)"
                 jump phoneam
 
@@ -1520,16 +1519,16 @@ label conyourdorm:
                 with dissolve
                 u "*Sighs*"
 
-                $ v7_kiwiiPost4.removePost()
+                $ v7_kiwiiPost4.remove_post()
 
-                if laurenrs:
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     u "(Time to make things right with Lauren.)"
                     jump thisbelauren
 
                 else:
                     u "(I need to clear my head. Maybe going for a walk will help.)"
 
-                    if laurenmad:
+                    if lauren.relationship.value <= Relationship.MAD.value:
                         u "(But I should probably stop by Lauren's dorm first and see if we can talk things out... She's still mad at me and it really sucks.)"
                         jump apologylauren
                         
@@ -1599,9 +1598,9 @@ label conyourdorm:
 
                 u "(I forgot how fucking crazy she is...)"
 
-                $ v7_kiwiiPost4.removePost()
+                $ v7_kiwiiPost4.remove_post()
 
-                if laurenrs:
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     u "(Time to make things right with Lauren.)"
                     jump thisbelauren
 
@@ -1611,7 +1610,7 @@ label conyourdorm:
 
     else:
         play sound "sounds/vibrate.mp3"
-        $ riley.messenger.newMessage(_("Hey, how come you're not on Kiwii?"), queue=False)
+        $ riley.messenger.newMessage(_("Hey, how come you're not on Kiwii?"), force_send=True)
         $ riley.messenger.addReply(_("What's that?"))
         $ riley.messenger.newMessage(_("It's a new social media app, you should give it a try"))
         $ riley.messenger.addReply(_("Okay, I'll have a look"), v7_msgReply7)
@@ -1634,7 +1633,7 @@ label conyourdorm:
         with dissolve
         u "(It's a nice day for a walk. It'll do me good.)"
 
-        if laurenmad:
+        if lauren.relationship.value <= Relationship.MAD.value:
             u "(But I should probably stop by Lauren's dorm first and see if we can talk things out... She's still mad at me and it really sucks.)"
 
         else:
@@ -1644,7 +1643,6 @@ label conyourdorm:
 ##### SCENE 7 LAUREN'S DORM
 label apologylauren:
     $ seenlauren = True
-    $ laurenrs = False
 
     stop music fadeout 3
     scene s715 # mc walking through dorm hallways
@@ -1680,8 +1678,8 @@ label apologylauren:
     else:
         u "Listen, I know you said you needed more time, but it's been a few days and I just really want to be friends again... I know I messed up."
 
-    if not autumnmad:
-        $ laurenmad = False
+    if autumn.relationship.value > Relationship.MAD.value:
+        $ lauren.relationship = Relationship.FRIEND
         scene s717
         with dissolve
 
@@ -1739,7 +1737,7 @@ label apologylauren:
         jump thisbewalk
 
     elif kct == "loyal":
-        $ laurenmad = False
+        $ lauren.relationship = Relationship.FRIEND
         call screen kct_popup
 
         scene s717
@@ -1799,7 +1797,7 @@ label apologylauren:
         jump thisbewalk
 
     else:
-        $ laurenmad = True
+        $ lauren.relationship = Relationship.MAD
         scene s717
         with dissolve
 
@@ -1884,7 +1882,7 @@ label thisbelauren:
             scene s717a
             with dissolve
 
-            u "Yes, I did hook up with Emily. And before you say anything, I entirely regret it. I don't know what I was thinking. "
+            u "Yes, I did hook up with Emily. And before you say anything, I entirely regret it. I don't know what I was thinking."
 
             scene s717e # lauren sad mouth closed
             with dissolve
@@ -1930,9 +1928,8 @@ label thisbelauren:
                     if kct == "loyal":
                         call screen kct_popup
 
-                        $ laurenrs = True
-                        $ laurenmad = True
-                        $ autumnmad = True
+                        $ lauren.relationship = Relationship.FRIEND
+                        $ autumn.relationship = Relationship.MAD
 
                         scene s717
                         with dissolve
@@ -1947,14 +1944,13 @@ label thisbelauren:
                         scene s718 # mc walking back to his dorm
                         with fade
 
-                        u "(Not ideal, but at least we're still dating...)"
+                        u "(Not ideal, but at least we're still talking...)"
 
                         u "(I could really use a walk to clear my head.)"
 
                     else:
-                        $ laurenrs = False
-                        $ laurenmad = True
-                        $ autumnmad = True
+                        $ lauren.relationship = Relationship.MAD
+                        $ autumn.relationship = Relationship.MAD
 
                         scene s717d
                         with dissolve
@@ -1969,12 +1965,12 @@ label thisbelauren:
                         scene s717d
                         with dissolve
 
-                        la "This, I can't do this. I can't do us. "
+                        la "This, I can't do this. I can't do us."
 
                         scene s717e
                         with dissolve
 
-                        u "I told you I was sorry Lauren. It won't ever happen again."
+                        u "I told you I was sorry, Lauren. It won't ever happen again."
 
                         scene s717f
                         with dissolve
@@ -2029,11 +2025,10 @@ label thisbelauren:
                 "Open relationship?":
                     $ add_point(KCT.BRO)
                     $ add_point(KCT.TROUBLEMAKER)
-                    $ laurenrs = False
-                    $ laurenmad = True
-                    $ autumnmad = True
+                    $ lauren.relationship = Relationship.MAD
+                    $ autumn.relationship = Relationship.MAD
 
-                    u "Maybe we just rushed into this. "
+                    u "Maybe we just rushed into this."
 
                     u "I mean, I really like you and I wanna be with you... but this is college."
 
@@ -2077,8 +2072,7 @@ label thisbelauren:
         "Deny the cheating":
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
-            $ laurenrs = True
-            $ laurenmad = False
+            $ lauren.relationship = Relationship.GIRLFRIEND
 
             u "I know how this looks."
 
@@ -2182,7 +2176,8 @@ label thisbewalk:
 
     u "(Shit... just remembered that tomorrow's also my next history lecture. Gotta make sure to remember wearing that stupid costume I bought...)"
 
-    if not autumnmad:
+    if autumn.relationship.value > Relationship.MAD.value:
+        $ v7_visited_shelter = True
         scene s721 # close up of dogshelter shop window
         with dissolve
 
@@ -2241,7 +2236,7 @@ label thisbewalk:
 
         menu:
             "Almost as cute as you":
-                if laurenrs:
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
                     $ add_point(KCT.BOYFRIEND)
@@ -2537,31 +2532,31 @@ label thisbewalk:
 
     pause 0.5
 
-    if not laurenmad and not nobeach:
+    if lauren.relationship.value > Relationship.MAD.value and not nobeach:
         play sound "sounds/vibrate.mp3"
 
-        if seenlauren and laurenrs:
-            $ lauren.messenger.newMessage(_("Wanna go now babe?"), queue=False)
+        if seenlauren and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            $ lauren.messenger.newMessage(_("Wanna go now babe?"), force_send=True)
             $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
             $ lauren.messenger.newMessage(_("Great :)"))
 
         elif seenlauren:
-            $ lauren.messenger.newMessage(_("Wanna go now?"), queue=False)
+            $ lauren.messenger.newMessage(_("Wanna go now?"), force_send=True)
             $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
             $ lauren.messenger.newMessage(_("Great :)"))
 
         else:
-            $ lauren.messenger.newMessage(_("Hey :)"), queue=False)
+            $ lauren.messenger.newMessage(_("Hey :)"), force_send=True)
 
-            if laurenrs:
-                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), queue=False)
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), force_send=True)
                 $ lauren.messenger.addReply(_("Sounds good, when were you thinking?"))
                 $ lauren.messenger.newMessage(_("How about now?"))
                 $ lauren.messenger.addReply(_("Sure, I'll come pick you up"))
                 $ lauren.messenger.newMessage(_("Great :)"))
 
             else:
-                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), queue=False)
+                $ lauren.messenger.newMessage(_("You wanna go to the beach today?"), force_send=True)
                 $ lauren.messenger.addReply(_("Sounds good, when were you thinking?"), v7_msgReply3)
                 $ lauren.messenger.addReply(_("Sorry, I can't I'm really busy today"), v7_msgReply4)
 
@@ -2592,7 +2587,7 @@ label thisbewalk:
 
             pause 0.5
 
-            if emilyrs:
+            if emily.relationship.value >= Relationship.FWB.value:
                 scene s733a #mc turns his head to look at the door
                 with dissolve
 
@@ -2647,7 +2642,7 @@ label beachlauren:
 
     play sound "sounds/dooropen.mp3"
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         play music "music/mlove2.mp3"
         queue music [ "music/mlove.mp3", "music/mlove1.mp3" ]
 
@@ -2754,7 +2749,7 @@ label beachlauren:
         scene s742a
         with dissolve
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             menu:
                 "Tell her it's fine":
                     $ add_point(KCT.BRO)
@@ -2930,10 +2925,15 @@ label beachlauren:
 
         pause 0.5
 
+        scene s743vid
+        with dissolve
+        
+        pause 1.4
+
         scene s743apic
         with dissolve
 
-        " "
+        pause 0.75
 
         la "*Quiet moan* Mhmmm..."
 
@@ -2985,7 +2985,7 @@ label beachlauren:
         scene s749b #Lauren no particular emotion
         with dissolve
 
-        la "Yeah, I mean I know most of them really well and obviously my sister's the president so it's a pretty easy decision."
+        la "Yeah, I mean I know most of them really well and obviously my sister's the President so it's a pretty easy decision."
 
         scene s749c
         with dissolve
@@ -3090,7 +3090,7 @@ label beachlauren:
 
         la "Anything new with you lately?"
 
-        if emilyrs:
+        if emily.relationship.value >= Relationship.FWB.value:
             scene s742a
             with dissolve
 
@@ -3137,7 +3137,7 @@ label beachlauren:
         scene s742
         with dissolve
 
-        la "Yeah, I mean I know most of them really well and obviously my sister's the president so it's a pretty easy decision."
+        la "Yeah, I mean I know most of them really well and obviously my sister's the President so it's a pretty easy decision."
 
         scene s742a
         with dissolve
@@ -3154,7 +3154,7 @@ label beachlauren:
         scene s742a
         with dissolve
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             menu:
                 "Tell her it's fine":
                     $ add_point(KCT.BRO)
@@ -3296,13 +3296,17 @@ label beachlauren:
 
                             pause 0.5
 
+                            scene s743vid
+                            with dissolve
+                            
+                            pause 1.4
+
                             scene s743apic
                             with dissolve
 
-                            " "
+                            pause 0.75
 
                             la "*Quiet moan* Mhmmm..."
-
 
                             scene s745 # lauren mouth open, mc mouth closed
                             with dissolve
@@ -3316,7 +3320,6 @@ label beachlauren:
 
                         "Don't risk it":
                             $ add_point(KCT.BOYFRIEND)
-                            $ beachfirstkiss = False
 
                             u "*Chuckles*"
 
@@ -3353,7 +3356,7 @@ label beachlauren:
 
         pause 0.5
 
-        if laurenrs or beachfirstkiss:
+        if lauren.relationship.value >= Relationship.GIRLFRIEND.value or beachfirstkiss:
             scene s749b
             with dissolve
 
@@ -3419,7 +3422,7 @@ label beachlauren:
 
 ########## SCENE 12: MC BACK AT DORM WEDNESDAY EVENING
     label rightafterbeach: #for compatibility only
-    if emilyrs:
+    if emily.relationship.value >= Relationship.FWB.value:
         play sound "sounds/dooropen.mp3"
         scene s753 # mc opens his dorm door and looks on the ground, there's a letter
         with dissolve
@@ -3454,7 +3457,7 @@ label afterbeach:
 
         u "(But in the Apes, I can finally be someone. I can be a winner. Grayson may have done some questionable shit in the past, but he also said a lot of stuff that resonated with me...)"
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             u "(On the other hand, Imre would hate me even more if I pledged the Apes...)"
         else:
             u "(On the other hand, Imre would hate me if I pledged the Apes...)"
@@ -3479,7 +3482,7 @@ label afterbeach:
 
         u "(I'm pretty sure their pledging is at the same time as the Wolves, so I might be able to just go to the Apes' house and tell Grayson I changed my mind.)"
 
-        if imremad:
+        if imre.relationship.value <= Relationship.MAD.value:
             u "(But even so, the Wolves party was sick and Imre would hate me even more if I pledged the Apes...)"
         else:
             u "(But even so, the Wolves party was sick and Imre would hate me if I pledged the Apes...)"
@@ -3513,7 +3516,7 @@ label pledgewolves:
     with fade
     pause 0.7
 
-    if imremad:
+    if imre.relationship.value <= Relationship.MAD.value:
         scene s757a # Imre notices MC, so he is now looking at the camera and waves
         with dissolve
 
@@ -3920,8 +3923,7 @@ label chloe_call:
     scene sphone1a # mc on the phone mouth closed tense
     with dissolve
 
-    if chloemad:
-
+    if chloe.relationship.value <= Relationship.MAD.value:
         cl "Hey [name]... can we talk right now?"
 
         scene sphone1 # mc on the phone mouth open
@@ -4149,7 +4151,7 @@ label aftercall:
 
     ch "And last but not least, [name]."
 
-    if (laurenrs and aubreyrs) or (laurenrs and emilyrs):
+    if (lauren.relationship.value >= Relationship.GIRLFRIEND.value and aubrey.relationship.value >= Relationship.FWB.value) or (lauren.relationship.value >= Relationship.GIRLFRIEND.value and emily.relationship.value >= Relationship.FWB.value):
         ch "Is it true that you recently cheated on the girl you're currently dating?"
 
         scene s786c # chris looking directly at you mouth closed
@@ -4237,7 +4239,7 @@ label aftercall:
     with dissolve
     pause 0.5
 
-    if noramad:
+    if nora.relationship.value <= Relationship.MAD.value:
         # mad
         scene s791 # Camera - first person. MC and Nora close up but not very close, maintain abit more than two arms length distance between them. Nora slightly annoyed and talking
         with dissolve
@@ -4347,9 +4349,10 @@ label aftercall:
     with dissolve
     u "But the real question is, would you do it?"
 
-    if noramad:
+    if nora.relationship.value <= Relationship.MAD.value:
         scene s791
         with dissolve
+
     else:
         scene s791b
         with dissolve
@@ -4405,7 +4408,7 @@ label aftercall:
 
     menu:
         "Kiss her back":
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.TROUBLEMAKER, 2)
             else:
                 $ add_point(KCT.TROUBLEMAKER)
@@ -4455,7 +4458,7 @@ label aftercall:
         "Pull away":
             $ wolvesTasks.add("task4")
             $ add_point(KCT.BRO)
-            if laurenrs:
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.BOYFRIEND)
 
             scene s793f # MC tilts back when Nora is tilting towards him. MC talking, Nora mouth closed
@@ -4466,41 +4469,47 @@ label aftercall:
             with dissolve
             u "Nora, I'm sorr-"
 
-            if noramad:
+            if nora.relationship.value <= Relationship.MAD.value:
                 scene s791d
                 with dissolve
+
+                no "You passed!"
+
+                scene s791e
+                with dissolve
+                
+                u "What?"
+
+                scene s791d
+                with dissolve
+                
+                no "That was the real test, and you passed it!"
+
+                scene s791e
+                with dissolve
+                
+                u "Wait, really? That's great!"
+
             else:
                 scene s791b
                 with dissolve
 
-            no "You passed!"
+                no "You passed!"
 
-            if noramad:
-                scene s791e
-                with dissolve
-            else:
                 scene s791c
                 with dissolve
 
-            u "What?"
-
-            if noramad:
-                scene s791d
-                with dissolve
-            else:
+                u "What?"
+                
                 scene s791b
                 with dissolve
+                
+                no "That was the real test, and you passed it!"
 
-            no "That was the real test, and you passed it!"
-
-            if noramad:
-                scene s791e
-                with dissolve
-            else:
                 scene s791c
                 with dissolve
 
-            u "Wait, really? That's great!"
+                u "Wait, really? That's great!"
 
     scene s794 # Camera - first person. Nora moves to the door and knocks while talking
     with dissolve
@@ -4515,7 +4524,7 @@ label aftercall:
     with dissolve
     aa "Thanks Nora, you can go now."
 
-    if not noramad:
+    if nora.relationship.value > Relationship.MAD.value:
         scene s794b # Nora looks at the MC while slightly smiling. Aaron mouth closed and looking at MC
         with dissolve
         no "Good luck."
@@ -5318,7 +5327,7 @@ label ep7_cam_picture:
     pause 2
     stop sound
 
-    if chloemad:
+    if chloe.relationship.value <= Relationship.MAD.value:
         play sound "sounds/answercall.mp3"
         cl "What do you want, [name]?"
 
@@ -5406,7 +5415,7 @@ label after_pledges:
     scene s861a # MC walking home at night through the town, different shot
     with dissolve
 
-    if emilyrs: # Please confirm this is the right condition for her to send an apology letter to the MC
+    if emily.relationship.value >= Relationship.FWB.value: # Please confirm this is the right condition for her to send an apology letter to the MC
         u "(Oh my god, I completely forgot about Emily. Wonder if she's still up.)"
 
         menu:
@@ -5445,15 +5454,15 @@ label after_pledges:
     with Fade(1,0,1)
 
     if joinwolves:
-        $ v7_kiwiiPost5 = KiwiiPost("Chris", "v7/chpost1.webp", _("One of us!"), numberLikes=133, mentions="MC")
-        $ v7_kiwiiPost5.newComment("Cameron", _("Losers"), 3, queue=False)
-        $ v7_kiwiiPost5.newComment("Imre", _("Hell yeah bro!"), 14, queue=False)
-        $ v7_kiwiiPost5.newComment("Aubrey", _("Woohoo!"), 35, queue=False)
+        $ v7_kiwiiPost5 = KiwiiPost(chris, "v7/chpost1.webp", _("One of us!"), numberLikes=133, mentions=[mc])
+        $ v7_kiwiiPost5.newComment(cameron, _("Losers"), 3, force_send=True)
+        $ v7_kiwiiPost5.newComment(imre, _("Hell yeah bro!"), 14, force_send=True)
+        $ v7_kiwiiPost5.newComment(aubrey, _("Woohoo!"), 35, force_send=True)
 
     if emilyText:
         play sound "sounds/vibrate.mp3"
         
-        $ emily.messenger.newMessage(_("It's okay. You'll get the surprise another time..."), queue=False)
+        $ emily.messenger.newMessage(_("It's okay. You'll get the surprise another time..."), force_send=True)
         $ emily.messenger.addReply(_("Exciting :)"))
 
     " "
@@ -5461,7 +5470,7 @@ label after_pledges:
     play music "music/mindie2.mp3"
     queue music [ "music/m16punk.mp3", "music/mindie1.mp3" ]
     
-    if imremad:
+    if imre.relationship.value <= Relationship.MAD.value:
         scene s866 # Camera - TPP (shot should not include Imre's bed). MC sitting up on his bed, mouth closed.
         with dissolve
         u "(Oh shit, it's history class today, isn't it? Gotta wear that costume.)"
@@ -5731,7 +5740,7 @@ label after_pledges:
         with dissolve
         pause 0.5
 
-    if imremad and joinwolves:
+    if imre.relationship.value <= Relationship.MAD.value and joinwolves:
         scene s878 # Camera - FPP. MC sitting beside Imre. Imre looking at MC with a bored/uninterested expression. Imre mouth closed
         with dissolve
         u "Hey."
@@ -5785,7 +5794,7 @@ label after_pledges:
         imre "Of course! And I think we should start training together again."
         imre "But this time in the Wolves gym, it's gonna be awesome!"
 
-    elif imremad:
+    elif imre.relationship.value <= Relationship.MAD.value:
         scene s878b
         with dissolve
         pause
@@ -5800,7 +5809,7 @@ label after_pledges:
         with dissolve
         imre "Oh god, look at this clown."
 
-        scene s879 # Camera - TPP. Shot of Lee walking funny. "walking like he has a stick up his ass" is what it should look like xD
+        scene s879 # Camera - TPP. Shot of Lee walking funny."walking like he has a stick up his ass" is what it should look like xD
         with dissolve
         pause 0.5
 
@@ -6059,7 +6068,7 @@ label after_history:
 ########## SCENE 18 PENELOPE AFTER HISTORY
     # MC and Pen talking in classroom after class ### the next scene only works inside the classroom so this shouldn't be in the hallway
     label pen_after_history: #for compatibility only
-    if emilyrs and bowling:
+    if v7_emily_bowling:
         scene s891 # Camera - FPP (far shot). Penelope in classroom about to walk out (away from the camera) in her costume
         with fade
         u "Hey Penelope!"
@@ -6588,7 +6597,7 @@ label hc_asking_amber:
             "Alright, I'm in":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ hcGirl = "amber"
-                $ amberrs = True
+                $ amber.relationship = Relationship.FWB
 
                 scene s919e
                 with dissolve
@@ -6667,7 +6676,7 @@ label hc_asking_aubrey:
     with dissolve
     au "I'm pretty sure, I told you I'm not the romance type, haha."
 
-    if aubreyrs:
+    if aubrey.relationship.value >= Relationship.FWB.value:
         au "And I also like the secrecy of our relationship."
 
     scene s976a
@@ -6686,7 +6695,7 @@ label hc_asking_aubrey:
     with dissolve
     au "It's really nice that you asked though."
 
-    if aubreyrs and not simp:
+    if aubrey.relationship.value >= Relationship.FWB.value and not simp:
         scene s976b # aubrey flirty
         with dissolve
 
@@ -6922,7 +6931,7 @@ label hc_asking_emily:
 label hc_asking_lauren:
     $ hcAsked.append("lauren")
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         u "(Of course I'm gonna ask Lauren.)"
     else:
         u "(Wonder if Lauren would wanna go with me...)"
@@ -6947,7 +6956,7 @@ label hc_asking_lauren:
 
     u "Will you go to Homecoming with me?"
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         $ hcGirl = "lauren"
 
         scene s967b # lauren laughing
@@ -6975,7 +6984,7 @@ label hc_asking_lauren:
         if not beachfirstkiss:
             call screen kct_popup
 
-        $ laurenrs = True
+        $ lauren.relationship = Relationship.GIRLFRIEND
 
         scene s967b # lauren laughing
         with dissolve
@@ -7066,7 +7075,7 @@ label hc_asking_penelope:
 
     u "Will you go to homecoming with me?"
 
-    if emilyrs or not bowling:
+    if emily.relationship.value >= Relationship.FWB.value or not bowling:
         scene s957 # fpp close up penelope unsure smili ng
         with dissolve
 
@@ -7128,13 +7137,11 @@ label hc_asking_riley:
 
     u "Will you be my Cinderella for homecoming?"
 
-    if rileyrs or kct == "confident":
-        $ hcGirl = "riley"
-
-        if not rileyrs:
+    if riley.relationship.value >= Relationship.LIKES.value or kct == "confident":
+        if riley.relationship.value < Relationship.LIKES.value:
             call screen kct_popup
 
-        $ rileyrs = True
+        $ hcGirl = "riley"
 
         scene s959b # riley excited
         with dissolve
@@ -7231,7 +7238,7 @@ label suit_rental:
 
 ### SCENE 32: AFTER TUDEXO SHOPPING
 label thurs_night_dorm:
-    if joinwolves and imremad:
+    if joinwolves and imre.relationship.value <= Relationship.MAD.value:
         scene s1002 # Camera - TPP. MC packing his bag, same as the one he has in scene 34
         with fade
 
@@ -8032,31 +8039,9 @@ label wolves_ceremony:
     with fade
     play music "music/muffledparty.mp3"
 
-    if not imremad:
-        scene swc1 # FPP. Close up on Finn, mouth open with smile, welcoming gesture with hand.
-        with dissolve
+    pause 0.75
 
-        finn "What up guys? Head on in."
-
-        scene swc2 # FPP. Close up on Imre, mouth open slight smile.
-        with dissolve
-
-        imre "For sure."
-
-        scene swc3 # TPP. Show Imre and MC walking into Wolves house from behind, house entrance in view.
-        with dissolve
-        pause 0.5
-
-        scene swc3a # TPP. Same camera as above but MC and Imre now walking through Wolves door.
-        with dissolve
-
-        pause 0.5
-        #- CONTINUE at ceremonies -
-
-    #If Imre moved out:
-    #MC arrives alone to the Wolves house holding a sports bag of his stuff. A few Wolves , including marcus are outside and welcome him.
-
-    else:
+    if imre.relationship.value <= Relationship.MAD.value:
         scene swc4 # FPP. Close up on Marcus, mouth open with smile.
         with dissolve
 
@@ -8083,6 +8068,30 @@ label wolves_ceremony:
         with dissolve
 
         pause 0.5
+
+    else:
+        scene swc1 # FPP. Close up on Finn, mouth open with smile, welcoming gesture with hand.
+        with dissolve
+
+        finn "What up guys? Head on in."
+
+        scene swc2 # FPP. Close up on Imre, mouth open slight smile.
+        with dissolve
+
+        imre "For sure."
+
+        scene swc3 # TPP. Show Imre and MC walking into Wolves house from behind, house entrance in view.
+        with dissolve
+        pause 0.5
+
+        scene swc3a # TPP. Same camera as above but MC and Imre now walking through Wolves door.
+        with dissolve
+
+        pause 0.5
+        #- CONTINUE at ceremonies -
+
+    #If Imre moved out:
+    #MC arrives alone to the Wolves house holding a sports bag of his stuff. A few Wolves , including marcus are outside and welcome him.
 
     play music "music/mparty3.mp3"
     queue music [ "music/mparty4.mp3", "music/mparty2.mp3" ]
@@ -8413,6 +8422,8 @@ label wolves_ceremony:
 
     scene swc58 # FPP. Show Sebastian approaching MC.
     with dissolve
+
+    label wolves_ceremony_2:
 
     if len(wolvesTasks) == 4:
         scene swc59 # FPP. Close up Sebastian, mouth open smile.
@@ -8867,10 +8878,10 @@ label wolves_ceremony:
 ############# RILEY TEXT
 
 label rileytext:
-    if rileyrs:
+    if riley.relationship.value > Relationship.LIKES.value:
         play sound "sounds/vibrate.mp3"
 
-        $ riley.messenger.newMessage(_("Wanna come over? ;)"), queue=False)
+        $ riley.messenger.newMessage(_("Wanna come over? ;)"), force_send=True)
         $ riley.messenger.addReply(_("Sure, on my way :)"), v7_msgReply5)
         $ riley.messenger.addReply(_("Sorry I'm really exhausted. Another time"), v7_msgReply6)
         
@@ -8900,31 +8911,28 @@ label rileytext:
         jump scene35a
 
 ########## BEFORE SCENE 35: RILEY SEX SCENE
-#### RIley Sex Scene, if rileyrs = True,  you get a message in your dorm from Riley telling you that her roommate isnt home and if you wanna come over. Since you already did stuff, you say yes.
+#### RIley Sex Scene, if riley rs = True, you get a message in your dorm from Riley telling you that her roommate isnt home and if you wanna come over. Since you already did stuff, you say yes.
 # It's thurday night
 label rileysexscene:
+    $ riley.relationship = Relationship.FWB
+    $ sceneList.add("v7_riley")
+
     if joinwolves:
         stop music fadeout 3
         scene preri1 # You walking through the night to riley
         with fade
-
-        pause 0.5
 
     else:
         stop music fadeout 3
         scene preri2 # You walking through the dorms
         with fade
 
-        pause 0.5
+    pause 0.75
 
-# Pre-cursor to sex with Riley
-    $ rileyrs = True
-    $ sceneList.add("v7_riley")
-    
     scene ridrm1 # You knocking on Riley's dorm door (third person)
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene ridrm2 # Riley opens the door, grin expression (first person)
     with dissolve
@@ -9221,8 +9229,8 @@ label v7_nsfwSkipLabel1:
 
 ########## SCENE 36 MAKING SIGNS W/ AUTUMN
 label signs_with_autumn:
-    $ autumn.messenger.newMessage(_("Hey, it's Autumn."), queue=False)
-    $ autumn.messenger.newMessage(_("I'm just about to start making signs. Do you still want to join?"), queue=False)
+    $ autumn.messenger.newMessage(_("Hey, it's Autumn."), force_send=True)
+    $ autumn.messenger.newMessage(_("I'm just about to start making signs. Do you still want to join?"), force_send=True)
     $ autumn.messenger.addReply(_("Yes, of course. I'd love to."))
     $ autumn.messenger.newMessage(_("Great. I'm at the Deer's House. Do you know how to get there?"))
     $ autumn.messenger.addReply(_("Yeah, I think I do. On my way."))
@@ -9294,7 +9302,7 @@ label signs_with_autumn:
     scene sas7c # FPP. As above but mouth closed.
     with dissolve
 
-    aut "I appreciate the witty stuff, but I like to be direct. Feels like it gets right to the point. The more we fight, the more progress we will make. "
+    aut "I appreciate the witty stuff, but I like to be direct. Feels like it gets right to the point. The more we fight, the more progress we will make."
 
     scene sas7a2 # FPP. Same sas7a, Autumn no longer holding sign.
     with dissolve
@@ -9367,7 +9375,7 @@ label signs_with_autumn:
     scene sas9f # FPP. As above, empathetic expression, mouth open.
     with dissolve
 
-    aut "Your empathy is admirable. "
+    aut "Your empathy is admirable."
 
     scene sas9e # FPP. Same as sas9e.
     with dissolve
@@ -9407,7 +9415,7 @@ label signs_with_autumn:
     scene sas9b # FPP. Same as sas9b.
     with dissolve
 
-    aut "This movement definitely needs more men. Actually, I take that back. Haha. More men just need to realize their given privileges and stop being in denial. "
+    aut "This movement definitely needs more men. Actually, I take that back. Haha. More men just need to realize their given privileges and stop being in denial."
 
     scene sas9c # FPP. Same as sas9c.
     with dissolve
@@ -9452,7 +9460,7 @@ label signs_with_autumn:
     scene sas7a # FPP. Same as sas7a.
     with dissolve
 
-    u "I mean sex. That is the core to a man's mind. "
+    u "I mean sex. That is the core to a man's mind."
 
     scene sas9j # FPP. As above, but slightly agitated, mouth closed.
     with dissolve
@@ -9635,7 +9643,7 @@ label walking_through_hallways:
         $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
         $ pb_name_set = True
 
-    show screen phoneIcon
+    show screen phone_icon
 
     if joinwolves:
         stop music fadeout 3
@@ -11138,7 +11146,7 @@ label laurenhocodate:
 
     la "Oh, get in here."
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene sfr4la2 # showing lauren and mc kissing
         with dissolve
 
@@ -11971,7 +11979,7 @@ label rileyhocodate:
 
     play sound "sounds/dooropen.mp3"
 
-    scene sfr4ri1 # first person close up riley oepning hte door,  behind her are lauren and ryan sitting on the floor around a small wooden table filled with bottles of alcohol
+    scene sfr4ri1 # first person close up riley oepning hte door, behind her are lauren and ryan sitting on the floor around a small wooden table filled with bottles of alcohol
     with dissolve
 
     ry "Heyyy [name]! You ready for a wild night?"
@@ -12610,7 +12618,7 @@ label fr4chloedate:
 
                 no "Uhm..."
 
-                if not noramad and "nora" in freeroam3:
+                if nora.relationship.value > Relationship.MAD.value and "nora" in freeroam3:
                     #If Nora likes you:
                     no "Yeah, why not."
 
@@ -12701,7 +12709,7 @@ label fr4chloedate:
 
                     jump chloe_dance
 
-                elif not noramad:
+                elif nora.relationship.value > Relationship.MAD.value:
                     no "I don't really feel like dancing, sorry."
 
                     scene sfr4cl35c
@@ -12813,7 +12821,7 @@ label chloe_dance:
     scene sfr4cl45f # chloe serious, pose 2
     with dissolve
 
-    cl "Being a fraternity president is exhausting, but it doesn't mean you can treat the people around you like they're unimportant."
+    cl "Being a fraternity President is exhausting, but it doesn't mean you can treat the people around you like they're unimportant."
 
     cl "He always acts like this super nice guy, but some of the shit he's done..."
 
@@ -13024,7 +13032,7 @@ label fr4emilydate:
 
         "Get upset":
             $ forgiveemily = False
-            $ emilyrs = False
+            $ emily.relationship = Relationship.FRIEND
 
             u "I told you to stop drinking Emily. You never fucking listen!"
 
@@ -13201,8 +13209,7 @@ label fr4laurendate:
 
         "*Crowd cheers and applauds*"
 
-        if not chloesad:
-
+        if not v7_chloesad:
             label fr4laurendatechloe:
                 scene sfr4stage4 #Chloe runs up on stage
                 with dissolve
@@ -13447,8 +13454,7 @@ label fr4penelopedate:
 
         "*Crowd cheers and applauds*"
 
-        if not chloesad:
-
+        if not v7_chloesad:
             scene sfr4pe14d # penelope looking at the stage
             with dissolve
 
@@ -13917,8 +13923,7 @@ label fr4rileydate:
 
     "*Crowd cheers and applauds*"
 
-    if not chloesad:
-
+    if not v7_chloesad:
         label fr4rileydatechloe:
             scene sfr4stage4 #Chloe runs up on stage
             with dissolve
@@ -14117,7 +14122,7 @@ label fr4nora1:
                 scene sfr4no2a
                 with dissolve
 
-                u "Women, am I right? Haha. "
+                u "Women, am I right? Haha."
 
                 scene sfr4no2
                 with dissolve
@@ -14224,7 +14229,7 @@ label fr4elijah1:
 
             u "Sure thing, Krusty."
 
-            if funofelijah:
+            if elijah.relationship.value <= Relationship.MAKEFUN.value:
                 scene sfr4el2d # elijah raging
                 with dissolve
 
@@ -14647,7 +14652,7 @@ label fr4riley2:
 
     "*Crowd cheers and applauds*"
 
-    if not chloesad:
+    if not v7_chloesad:
         label fr4alonechloe:
 
             if not "crowning" in freeroam4:
@@ -14722,7 +14727,7 @@ label fr4riley2:
     ri "Well we've been here for a few hours now and it's getting kinda boring."
     $ freeroam4.add("crowning")
 
-    if rileyrs and hcGirl == "alone":
+    if riley.relationship.value >= Relationship.LIKES.value and hcGirl == "alone":
         scene sfr4ri51b
         with dissolve
 
@@ -14735,7 +14740,7 @@ label fr4riley2:
 
         jump fr4rileyending
 
-    elif rileyrs:
+    elif riley.relationship.value >= Relationship.LIKES.value:
         scene sfr4ri51b
         with dissolve
 
@@ -14854,7 +14859,7 @@ label fr4nora2:
 
     pause 0.5
 
-    if not noramad and "nora" in freeroam3:
+    if nora.relationship.value > Relationship.MAD.value and "nora" in freeroam3:
         scene sfr4no5 # close up nora smile with a bit of holding back or "this dance is stupid" attitude
         with dissolve
 
@@ -14912,7 +14917,7 @@ label fr4nora2:
             "Defend Chris":
                 $ add_point(KCT.BRO)
 
-                u "I mean I get where he's coming from. He's got his own priorities to deal with too. And he's president of a frat-"
+                u "I mean I get where he's coming from. He's got his own priorities to deal with too. And he's President of a frat-"
 
                 scene sfr4no5b
                 with dissolve
@@ -14939,7 +14944,7 @@ label fr4nora2:
 
                 no "Bye."
 
-    elif not noramad:
+    elif nora.relationship.value > Relationship.MAD.value:
         scene sfr4no5b
         with dissolve
 
@@ -15137,7 +15142,7 @@ label fr4aubrey1:
 
     u "Well, enjoy taking some more pictures. You better tag me on Kiwii, haha."
 
-    if not aubreyrs:
+    if aubrey.relationship.value < Relationship.FWB.value:
         scene sfr4ri39
         with dissolve
 
@@ -15228,7 +15233,7 @@ label fr4aubrey1:
 
                     u "Ahhh fuck. Mmmmm."
 
-                    scene sfr4ri44 # cum on aubreys face,  flirty smiling
+                    scene sfr4ri44 # cum on aubreys face, flirty smiling
                     with flash
 
                     au "*Grins* Seemed like you enjoyed it."
@@ -15306,7 +15311,7 @@ label fr4chloe1:
     $ freeroam4.add("grayson")
 
     if preventgrayson:
-        $ chloesad = True
+        $ v7_chloesad = True
 
     scene sfr4cl47 #Ryan and Chloe are having a heated argument.
 
@@ -15347,7 +15352,7 @@ label fr4chloe1:
 
     menu:
         "Defend Chloe":
-            $ chloemad = False
+            $ chloe.relationship = Relationship.FRIEND
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -15554,7 +15559,15 @@ label fr4cameron2:
 label fr4lauren1:
     $ freeroam4.add("lauren")
 
-    if not laurenmad:
+    if lauren.relationship.value <= Relationship.MAD.value:
+        scene sfr4la27a
+        with dissolve
+
+        u "(Lauren is mad at me, I should leave her alone)"
+
+        jump labelfr4gymright
+
+    else:
         scene sfr4la25 # fpp lauren & ms rose talking
 
         la "Yeah, I guess I was just having trouble with that one."
@@ -15705,23 +15718,18 @@ label fr4lauren1:
 
                 la "Bye, [name]."
         jump labelfr4gymright
-    else:
-        scene sfr4la27a
-        with dissolve
-
-        u "(Lauren is mad at me, I should leave her alone)"
-
-        jump labelfr4gymright
 
 label fr4lauren2:
     if hcGirl == "lauren":
         scene fr4gymrightnolauren
     else:
         scene fr4gymright
-    if not laurenmad:
-        u "(I'd rather not talk about the economics essay I forgot to turn in.)"
-    else:
+        
+    if lauren.relationship.value <= Relationship.MAD.value:
         u "(Lauren is mad at me, I should leave her alone)"
+    else:
+        u "(I'd rather not talk about the economics essay I forgot to turn in.)"
+
     jump labelfr4gymright
 
 label fr4msrose1:
@@ -15994,7 +16002,34 @@ label fr4penelope2:
 label fr4chloe2:
     $ freeroam4.add("chloe2")
 
-    if not chloemad:
+    if chloe.relationship.value <= Relationship.MAD.value:
+        scene sfr4cl53a # fpp close up chloe mad
+
+        u "You okay?"
+
+        scene sfr4cl53
+        with dissolve
+
+        cl "I really don't wanna talk right now."
+
+        scene sfr4cl53a
+        with dissolve
+
+        u "You sure?"
+
+        scene sfr4cl53
+        with dissolve
+
+        cl "Yes."
+
+        scene sfr4cl53a
+        with dissolve
+
+        u "Alright..."
+
+        jump labelfr4hallway
+
+    else:
         scene sfr4cl53a # fpp close up chloe mad
 
         u "You okay?"
@@ -16126,33 +16161,6 @@ label fr4chloe2:
                 cl "Yeah."
 
                 jump fr4chloeending
-
-    else:
-        scene sfr4cl53a # fpp close up chloe mad
-
-        u "You okay?"
-
-        scene sfr4cl53
-        with dissolve
-
-        cl "I really don't wanna talk right now."
-
-        scene sfr4cl53a
-        with dissolve
-
-        u "You sure?"
-
-        scene sfr4cl53
-        with dissolve
-
-        cl "Yes."
-
-        scene sfr4cl53a
-        with dissolve
-
-        u "Alright..."
-
-        jump labelfr4hallway
 
 label fr4chloe3:
     if not hcGirl == "penelope":
@@ -16358,7 +16366,31 @@ label fr4lockerroomchloe:
 
         u "Chloe? You in there?"
 
-        if not chloemad:
+        if chloe.relationship.value <= Relationship.MAD.value:
+            scene sfr4cl51 # fpp close up of the door
+            with dissolve
+
+            cl "What do you want, [name]?!"
+
+            u "Can I come in?"
+
+            pause 1.0
+
+            u "Chloe?"
+
+            pause 0.5
+
+            cl "No. Leave me alone!"
+
+            u "Chloe, come on!"
+
+            cl "I said leave me alone!"
+
+            u "Fine..."
+
+            jump labelfr4hallwaycorner
+
+        else:
             scene sfr4cl51 # fpp close up of the door
             with dissolve
 
@@ -16578,34 +16610,10 @@ label fr4lockerroomchloe:
                             pause 0.75 
                             jump labelfr4hallwaycorner
 
-        else:
-            scene sfr4cl51 # fpp close up of the door
-            with dissolve
-
-            cl "What do you want, [name]?!"
-
-            u "Can I come in?"
-
-            pause 1.0
-
-            u "Chloe?"
-
-            pause 0.5
-
-            cl "No. Leave me alone!"
-
-            u "Chloe, come on!"
-
-            cl "I said leave me alone!"
-
-            u "Fine..."
-
-            jump labelfr4hallwaycorner
-
     else:
         scene sfr4cl51
 
-        if chloemad:
+        if chloe.relationship.value <= Relationship.MAD.value:
             u "(I better leave her alone.)"
 
         else:
@@ -16871,7 +16879,7 @@ label fr4samantha1:
             scene sfr4sa4j
             with dissolve
 
-            u "Uhm, I'm good right now, but thanks. "
+            u "Uhm, I'm good right now, but thanks."
 
             scene sfr4sa4h
             with dissolve
@@ -17046,7 +17054,7 @@ label fr4rileyending:
 
     queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.LIKES.value:
         ri "Sooo homecoming was pretty fun... but I bet the night could get even better."
 
         scene sfr4ri52a # mc turns his face towards her
@@ -17099,7 +17107,7 @@ label fr4rileyending2:
 
     u "So, what's up?"
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.LIKES.value:
         scene sfr4ri55  #tpp close up riley whispers into your ear
         with dissolve
 
@@ -17237,7 +17245,7 @@ label fr4chloeending:
     u "(Hmm... Colony Crisis. Interesting.)"
 
     play sound "sounds/dooropen.mp3"
-    scene sfr4cl61c #showing mc,  mc looks up at the door
+    scene sfr4cl61c #showing mc, mc looks up at the door
     with dissolve
 
     "*Door opening*"

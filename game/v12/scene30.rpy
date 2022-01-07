@@ -13,7 +13,7 @@ label v12_room_sneak:
     play music "music/v12/Track Scene 30.mp3" fadein 2
 
     if not v11_riley_roomate:
-        if chloers or chloegf:
+        if chloe.relationship.value >= Relationship.FWB.value:
             scene v12rs2 # FPP. MC standing in front of Chloe's bed, looking at her as she sleeps
             with dissolve
 

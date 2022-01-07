@@ -239,7 +239,7 @@ label v11_Amber_Penelope:
 
         menu:
             "Kiss her":
-                $ penelopers = True
+                $ penelope.relationship = Relationship.LIKES
                 $ add_point(KCT.BOYFRIEND)
 
                 play sound "sounds/kiss.mp3"

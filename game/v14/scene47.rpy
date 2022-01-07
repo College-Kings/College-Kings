@@ -8,16 +8,16 @@
 
 init python:
     def v14s47_kiwiiReply1():
-        v14s47_kiwiiPost1.newComment("Lindsey", "A new future for the Chicks, haha. :)", numberLikes=418)
+        v14s47_kiwiiPost1.newComment(lindsey, "A new future for the Chicks, haha. :)", numberLikes=418)
 
     def v14s47_kiwiiReply2():
-        v14s47_kiwiiPost1.newComment("Lindsey", "Damn straight!", numberLikes=314)
+        v14s47_kiwiiPost1.newComment(lindsey, "Damn straight!", numberLikes=314)
 
     def v14s47_kiwiiReply3():
-        v14s47_kiwiiPost1.newComment("Lindsey", "You're a dork.", numberLikes=286)
+        v14s47_kiwiiPost1.newComment(lindsey, "You're a dork.", numberLikes=286)
     
     def v14s47_kiwiiReply4():
-        v14s47_kiwiiPost1.newComment("Lindsey", "Haha, I h8 you <3", numberLikes=266)
+        v14s47_kiwiiPost1.newComment(lindsey, "Haha, I h8 you <3", numberLikes=266)
 
 label v14s47:
 
@@ -48,7 +48,7 @@ label v14s47:
 
     u "Here who is?"
 
-    if lindseyrs:
+    if lindsey.relationship.value >= Relationship.FWB.value:
         scene v14s47_2
         with dissolve
 
@@ -352,7 +352,6 @@ label v14s47:
 
 label v14s47_hood:
     if v14_pics_with_linds:
-        $ v14s47_linds_hood = True
         $ v14s47_car_pics.append("v14s47_hood_2.webp")
 
         scene v14s47_hood_1 # TPP. MC walking over to the position he'll take Lindsey's picture, Lindsey moving towards the side of the hood
@@ -392,7 +391,6 @@ label v14s47_hood:
         li "Nice. Now what?"
     
     else:
-        $ v14s47_solo_hood = True
         $ v14s47_car_pics.append("v14s47_hood_2b.webp")
 
         scene v14s47_hood_1
@@ -440,8 +438,6 @@ label v14s47_hood:
 
 label v14s47_trunk:
     if v14_pics_with_linds:
-
-        $ v14s47_linds_trunk = True
         $ v14s47_car_pics.append("v14s47_trunk_2b.webp")
 
         scene v14s47_trunk_1 # TPP. MC and Lindsey walking over to the trunk of the car, both smiling, mouths closed
@@ -481,7 +477,6 @@ label v14s47_trunk:
         li "Okay. What's next?"
 
     else:
-        $ v14s47_solo_trunk = True
         $ v14s47_car_pics.append("v14s47_trunk_2c.webp")
 
         scene v14s47_trunk_1
@@ -544,7 +539,6 @@ label v14s47_trunk:
 
 label v14s47_driver:
     if v14_pics_with_linds:
-        $ v14s47_linds_driver = True
         $ v14s47_car_pics.append("v14s47_driver_2c.webp")
 
         scene v14s47_driver_1 # TPP. Show MC and Lindsey walking over to the driver side of the car, both smiling, mouths closed
@@ -564,7 +558,7 @@ label v14s47_driver:
         scene v14s47_driver_2b # FPP. Same as v14s47_driver_2, Lindsey looking at MC, unwrapping the lollipop, mouth closed, smiling
         with dissolve
 
-        if lindseyrs:
+        if lindsey.relationship.value >= Relationship.FWB.value:
             u "Is that even a question? *Chuckles*"
 
         else:
@@ -608,7 +602,6 @@ label v14s47_driver:
         u "Beautiful. What's next?"
     
     else:
-        $ v14s47_solo_driver = True
         $ v14s47_car_pics.append("v14s47_driver_2e.webp")
 
         scene v14s47_driver_1
@@ -680,13 +673,11 @@ label v14s47_driver:
     call screen v14s47_car
 
 label v14s47_passenger:
-    $ v14s47_passenger = True
     scene v14s47_passenger_1 # TPP. Show MC and Lindsey walking towards the passenger door
 
     pause 0.75
 
     if v14_pics_with_linds:
-        $ v14s47_linds_passenger = True
         scene v14s47_passenger_2 # FPP. Lindsey standing by the passenger door, MC looking at her (he's in a place where he can take her pic), Lindsey slightly confused, mouth open
         with dissolve
 
@@ -700,7 +691,6 @@ label v14s47_passenger:
         menu:
             "Hand on hips":
                 $ add_point(KCT.BOYFRIEND)
-                $ v14s47_linds_hips = True
                 $ v14s47_car_pics.append("v14s47_passenger_2b.webp")
 
                 scene v14s47_passenger_2b # FPP. Same as v14s47_passenger_2, Lindsey mouth closed, smiling
@@ -733,7 +723,6 @@ label v14s47_passenger:
             "Stand there and look pretty":
                 $ add_point(KCT.BRO)
                 $ add_point(KCT.TROUBLEMAKER)
-                $ v14s47_linds_knees = True
                 $ v14s47_car_pics.append("v14s47_passenger_2e.webp")
 
                 scene v14s47_passenger_2b
@@ -780,7 +769,6 @@ label v14s47_passenger:
     
     else:
         scene v14s47_passenger_2f # FPP. Same as v14s47_passenger_2, Lindsey not in shot, there is a bird on the roof, looking at the camera
-        $ v14s47_solo_passenger = True
         with dissolve
 
         u "Oh- We have a photo-bombing bird!"
@@ -802,7 +790,6 @@ label v14s47_passenger:
 
         menu:
             "Scare bird away":
-                $ v14s47_solo_no_bird = True
                 $ v14s47_car_pics.append("v14s47_passenger_2l.webp")
                 
                 u "Nah. Scare it away before it poops!"
@@ -850,7 +837,6 @@ label v14s47_passenger:
                 li "Alrighty... Anymore?"
 
             "Take photo with bird":
-                $ v14s47_solo_bird = True
                 $ v14s47_car_pics.append("v14s47_passenger_2f.webp")
 
                 u "Yeah, Linds. A crazy bird lady might buy the car simply because he's sitting on it. *Chuckles*"
@@ -1004,11 +990,11 @@ label v14s47_end:
     stop music fadeout 3
 
 
-    $ v14s47_kiwiiPost1 = KiwiiPost("Lindsey", "v14/v14s47_lindsey_kiwii.webp", "Making big moves ;)", numberLikes=720)
-    $ v14s47_kiwiiPost1.newComment("Nora", "Kick ass babe <3", queue=False, numberLikes=259)
-    $ v14s47_kiwiiPost1.newComment("Aubrey", "Aww, look at your cute little button!", queue=False, numberLikes=623)
-    $ v14s47_kiwiiPost1.newComment("Riley", "I have one too :) Hehe.", queue=False, numberLikes=367)
-    $ v14s47_kiwiiPost1.newComment("Sebastian", "Looking all official now, Linds!", queue=False, numberLikes=108)
+    $ v14s47_kiwiiPost1 = KiwiiPost(lindsey, "v14/v14s47_lindsey_kiwii.webp", "Making big moves ;)", numberLikes=720)
+    $ v14s47_kiwiiPost1.newComment(nora, "Kick ass babe <3", force_send=True, numberLikes=259)
+    $ v14s47_kiwiiPost1.newComment(aubrey, "Aww, look at your cute little button!", force_send=True, numberLikes=623)
+    $ v14s47_kiwiiPost1.newComment(riley, "I have one too :) Hehe.", force_send=True, numberLikes=367)
+    $ v14s47_kiwiiPost1.newComment(sebastian, "Looking all official now, Linds!", force_send=True, numberLikes=108)
     if v14_pics_with_linds:
         $ v14s47_kiwiiPost1.addReply("Damn, she's cute... What is she selling? ;)", v14s47_kiwiiReply1, numberLikes=351)
         $ v14s47_kiwiiPost1.addReply("#ThatsMyPresident", v14s47_kiwiiReply2, numberLikes=402)

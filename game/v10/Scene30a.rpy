@@ -89,7 +89,6 @@ label v10_emily_course:
                     "Join Emily":
                         $ add_point(KCT.BOYFRIEND)
                         $ emily.points += 1
-                        $ forgiveemily = True
 
                         u "I'm sure I could try it out."
 

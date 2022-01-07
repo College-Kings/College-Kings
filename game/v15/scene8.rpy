@@ -36,7 +36,7 @@ label v15s8:
 
     u "Yes, ma'am."
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s8_3b # FPP. Same as v15s8_3a, Chloe flirting expression, mouth open.
         with dissolve
 
@@ -67,17 +67,66 @@ label v15s8:
     scene v15s8_4 # TPP. Show MC upclose analyzing the planning board, MC in a generic standing thinking pose while he looks at the board, Chloe in the background, both slight smile, mouth closed.
     with dissolve
 
+    pause 0.75
+
 # -Insert Planning Board with the options for phase 2-
 # -The planning board pops up and MC makes his choices from what's presented, close when finished-
     python:
-        chloe_board = PlanningBoard("images/v15/chicks_presidency_race/planning_boards/chloe_background.webp", money=1500)
+        chloe_board = PlanningBoard("images/v15/planning_boards/chloe_background.webp", money=chloe_board.money)
+
+        chloe_board.add_approach("Sabotage",
+            "Damage Lindsey's reputation",
+            opinion="\"This idea isn't for the faint of heart, but I've got to play the game if I want to win it... We sabotage her campaign with a not-so-tiny bit of embarrassment.\"")
+        
+        chloe_board.add_approach("Tuition",
+            "Less tuition for all Chicks",
+            opinion="\"The one thing I have always dreamed of being able to do as the President of the Chicks is to get all members free tuition. If we make a good enough case, I might be able to convince the Dean into making this happen.\"")
+
+        chloe_board.add_task("Sabotage",
+            "Secretly record Lindsey",
+            opinion="\"After we get a few bottles of booze, you and Imre will do your best to get Lindsey wasted. I'm not sure what type of mood she'll be in, but maybe you should tell her she needs to relax for a bit. After all, she's probably stressed that she has nothing and I have everything...\"")
+
+        chloe_board.add_task("Sabotage",
+            "Provoke Lindsey to say something that might damage her reputation",
+            opinion="\"We need her to say something bad. Something hateful, and even better if it's about me. If she's drunk you'll have no problem getting something out of her, but then again, I'm not sure what type of mood she'll be in. Just make sure she's relaxed and under surveillance.\"")
+
+        v15s8_chloe_kiwii = chloe_board.add_subtask("Sabotage",
+            "Chloe posts the recording on Kiwii",
+            opinion="\"The final step to this awfully beautiful plan, is to upload the evidence to Kiwii. This is key. Once everyone hears wha horrible things she had to say, they'll come running my way.\"")
+
+        chloe_board.add_subtask("Sabotage",
+            "Share the recording through the Dean's announcement system",
+            opinion="\"The final step is very important, so why not go big? I can get us access to the Dean's announcemnt system, and we can play your recording for the entire campus to hear.\"")
+
+        v15s8_chloe_lee = chloe_board.add_subtask("Tuition",
+            "Try and convince Mr. Lee to support you in front of the Dean on this",
+            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from some of the lecturers. I think Mr. Lee is our best bet, he's smart and very well respected. Although he can be hard to read.\"")
+
+        chloe_board.add_subtask("Tuition",
+            "Try and convince Ms. Rose to support you in front of the Dean on this",
+            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from some of the lecturers. Ms. Rose could be worth a try. She's very empathetic, I just don't know how much she likes me...\"")
+            
+        chloe_board.add_task("Tuition",
+            "Talk to the Dean with Mr. Lee or Ms. Rose's support",
+            opinion="\"Finally, we have a meeting with the Dean. If we can show that a lecturer supports our idea, we should be able to get her approval. \"")
+
+    call screen planning_board(chloe_board)
+
+    if chloe_board.approach is not None:
+        $ v15_chloe_lindseysabotage = chloe_board.approach.id == "Sabotage"
+
+    if chloe_board.selected_task is not None:
+        $ v15_chloe_postkiwii = chloe_board.selected_task == v15s8_chloe_kiwii
+        $ v15_chloe_mrleesupport = chloe_board.selected_task == v15s8_chloe_lee
+
+    # End planning board (screen disappears)
 
     scene v15s8_4a # TPP. Same as v15s8_4, MC slight smile, mouth open, Chloe slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     u "I think that's the best way to go."
 
-    if v15s8_chloe_pb_DamageLindseyRep:
+    if v15_chloe_lindseysabotage:
         scene v15s8_3a
         with dissolve
 
@@ -98,7 +147,7 @@ label v15s8:
         scene v15s8_3
         with dissolve
 
-        cl "For some it slips out quicker than other, but yeah. Eventually."
+        cl "For some it slips out quicker than others, but yeah. Eventually."
 
         scene v15s8_3a
         with dissolve
@@ -113,7 +162,9 @@ label v15s8:
         scene v15s8_3
         with dissolve
 
-    if v15_LessChickTuition:
+        pause 0.75
+
+    elif v14_help_chloe:
         scene v15s8_3a
         with dissolve
 
@@ -144,7 +195,7 @@ label v15s8:
     scene v15s8_3
     with dissolve
 
-    cl "Then that's it for today I suppose thanks for helping me again."
+    cl "Then that's it for today I suppose. Thanks for helping me again."
 
     scene v15s8_3a
     with dissolve
@@ -156,13 +207,13 @@ label v15s8:
 
     cl "No, I uh- I need to make a few phone calls."
 
-    if "diary" in freeroam12stolen or ("cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen):
-        cl "And I still have to report the robbery to the dean, so..."
+    if "diary" in freeroam12stolen or "cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen:
+        cl "And I still have to report the robbery to the Dean, so..."
 
         scene v15s8_3a
         with dissolve
 
-        u "(Fuck! The dean? This is going a bit far...)"
+        u "(Fuck! The Dean? This is going a bit far...)"
 
         u "Okay, I'll leave you to it. I'm here for you if you need anything."
 
@@ -187,7 +238,7 @@ label v15s8:
 
         u "Right... Okay, whatever gets your juices flowing."
 
-        if chloegf or chloers:
+        if chloe.relationship.value >= Relationship.FWB.value:
             scene v15s8_3b
             with dissolve
 
@@ -206,9 +257,9 @@ label v15s8:
     scene v15s8_5 # TPP. Show MC winking at Chloe as she is holding her phone.
     with dissolve
 
-    u "Bye, Chlo."
+    u "Bye, Chloe."
 
-    if chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s8_6 # FPP. Show Chloe getting close up and personal with MC, Chloe biting her lip, Flirting expression, mouth closed
         with dissolve
 
@@ -231,13 +282,17 @@ label v15s8:
 
     pause 0.75
 
-    if "diary" in freeroam12stolen or ("cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen):
+    if "diary" in freeroam12stolen or "cash_large" in freeroam12stolen or "cash_small" in freeroam12stolen:
         scene v15s8_8 # FPP. MC some distance away from Chloe looking at her. Chloe stressed on the phone, mouth closed.
         with dissolve
+
+        pause 0.75
 
     else:
         scene v15s8_8a # FPP. Same as v15s8_8, Chloe on the phone winking at MC, slight smile, mouth closed.
         with dissolve
+
+        pause 0.75
 
     scene v15s8_7b # TPP. Same as v15s8_7, MC opening the door to the planning room to walk out.
     with dissolve
@@ -246,5 +301,7 @@ label v15s8:
 
     scene v15s8_9 # TPP. Show MC leaving the library and entering into the hallway, MC slight smile, mouth closed.
     with fade
+    
+    pause 0.75
 
     jump v15s9

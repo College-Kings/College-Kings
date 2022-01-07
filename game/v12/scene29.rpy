@@ -12,11 +12,11 @@ label v12_lauren_sex:
 
     play music "music/v12/Track Scene 29_1.mp3" fadein 2
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v12las2 # TPP. Show Lauren kissing MC, MC still sitting down
         with dissolve
 
-        pause 0.75
+        pause 1.75
 
     scene v12las1a # FPP. Same as v12las1, Lauren in talking distance now, Lauren slight smile, mouth closed
     with dissolve
@@ -795,7 +795,7 @@ label v12_lauren_sex:
                 jump v12_room_sneak
 
             else:
-                $ v12_lauren_sex = True
+                $ sceneList.add("v12_lauren")
 
                 if (kct == "loyal") and not (v12_lauren_points >= 3):
                     call screen kct_popup
@@ -1125,10 +1125,10 @@ label v12_lauren_sex:
                 scene v12las66 # FPP. MC and Lauren lieing down next to each other, looking at each other, Lauren smiling, mouth open, make her body a bit sweaty if possible
                 with dissolve
 
-                if laurenrs and not chloers and not aubreyrs and not evelynrs and not emilyrs and not rileyrs and not amberrs and not penelopers and not msrosers and not lindseyrs and not lindseyfirstkiss and not v11_fucked_candy and not v11_samantha_spa:
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value and (amber.relationship.value < Relationship.FWB.value) and (aubrey.relationship.value < Relationship.FWB.value) and (candy.relationship.value < Relationship.FWB.value) and (chloe.relationship.value < Relationship.FWB.value) and (emily.relationship.value < Relationship.FWB.value) and (evelyn.relationship.value < Relationship.LIKES.value) and (lindsey.relationship.value < Relationship.KISS.value) and (ms_rose.relationship.value < Relationship.FWB.value) and (penelope.relationship.value < Relationship.LIKES.value) and (riley.relationship.value < Relationship.FWB.value) and (samantha.relationship.value < Relationship.MOVE.value):
                     $ grant_achievement("worth_the_wait")
 
-                $ laurenrs = True
+                $ lauren.relationship = Relationship.GIRLFRIEND
 
                 la "Phew! Haha... That was absolutely perfect."
 

@@ -1,17 +1,14 @@
 screen achievements():
-    tag phoneTag
+    tag phone_tag
     zorder 200
     
-    use phoneTemplate:
+    use base_phone:
+        add "phone_white_background" at truecenter
 
-        add "images/phone/whiteBackground.webp" at truecenter
-
-        text "achievements":
-            color "#000000"
-            font "fonts/Freshman.ttf"
-            size 45
-            ypos 200
+        text "Achievements":
             xalign 0.5
+            ypos 200
+            style "achievements_header"
 
         viewport:
             pos (780, 280)
@@ -23,45 +20,33 @@ screen achievements():
                 spacing 10
                 
                 for ach in achievements:
-                    if achievement.has(ach.achievement):
-                        vbox:
-                            spacing -10
-                            
-                            textbutton ach.display_name style "ach"
-                            textbutton ach.text style "ach2"
-                    else:
-                        textbutton ach.display_name style "ach3"
+                    frame:
+                        xsize 358
+                        padding (15, 5)
+
+                        if achievement.has(ach.achievement):
+                            background "#d4af37"
+
+                            vbox:
+                                text ach.display_name style "achievements_display_name"
+                                text ach.text style "achievements_text"
+                        else:
+                            background "#dcdcdc"
+
+                            text ach.display_name style "achievements_display_name"
 
 
-style ach is button:
-    background "#d4af37"
-    xalign 0.5
-    xsize 358
+style achievements_header is text:
+    color "#000000"
+    font "fonts/Freshman.ttf"
+    size 45
 
-style ach_text is text:
+style achievements_display_name is text:
     color "#ffffff"
     font "fonts/Freshman.ttf"
     size 30
-    xoffset 10
 
-style ach2 is button:
-    background "#d4af37"
-    xalign 0.5
-    xsize 358
-
-style ach2_text is text:
+style achievements_text is text:
     color "#ffffff"
     font "fonts/opensans.ttf"
     size 20
-    xoffset 10
-
-style ach3 is button:
-    background "#dcdcdc"
-    xalign 0.5
-    xsize 358
-
-style ach3_text is text:
-    color "#ffffff"
-    font "fonts/Freshman.ttf"
-    size 30
-    xoffset 10

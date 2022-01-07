@@ -429,7 +429,7 @@ label fr5riley1:
 
     scene v9slake2 #FPP Close up as if sitting next to Riley, you look at her from the side, Riley is sitting on the pier, with her legs hanging over the ledge, Riley looking at the lake. -
 
-    if rileyrs:
+    if riley.relationship.value >= Relationship.FWB.value:
         u "What's a pretty lady doing all by herself?"
 
         scene v9slake2b #same as 2, but Riley now looking at you, flirting, mouth open
@@ -547,7 +547,7 @@ label fr5riley1:
 
         ri "Okay."
 
-    if not rileyrs:
+    if riley.relationship.value < Relationship.FWB.value:
         u "And I thought I was gonna find you close to the water. Wanna take a dip?"
 
         scene v9slake2f
@@ -757,7 +757,7 @@ label fr5aubrey1:
 
             u "For one living in the moment, I wouldn't say you expect much at all. Well, maybe you don't expect much, but you surely know how to seize the moment."
 
-            if aubreyrs:
+            if aubrey.relationship.value >= Relationship.FWB.value:
                 label v9_aubrey_scene_lake:
                     $ sceneList.add("v9_aubrey")
 
@@ -1060,12 +1060,12 @@ label fr5treeguy1:
 
     u "Kind of make sense."
 
-    scene v9slake10d # same as 10b,  guy holds up his hands to mc, mouth open, determind look (please look at script)
+    scene v9slake10d # same as 10b, guy holds up his hands to mc, mouth open, determind look (please look at script)
     with dissolve
 
     unknown "You see these two hands, son? If you want something, you gotta grab it with these."
 
-    scene v9slake10e #same as 10d,  mouth closed
+    scene v9slake10e #same as 10d, mouth closed
     with dissolve
 
     u "You've grabbed people?"
@@ -1127,7 +1127,7 @@ label fr5dogwalker1:
 
     scene v9slake11a #FPP close up of dogwalker petting his dog excited, looking at the dog, mouth closed
 
-    if not autumnmad:
+    if v7_visited_shelter:
         u "Wait a second. Is that Oscar?!"
 
         scene v9slake11b # same as 11, dogwalker looks at you smiling, mouth open

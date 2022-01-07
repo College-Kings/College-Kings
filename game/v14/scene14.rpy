@@ -11,13 +11,13 @@ label v14s14:
     
     pause 2
 
-    $ chloe.messenger.newMessage(_("You won't believe what I'm looking at right now!!!!"), queue=False)
+    $ chloe.messenger.newMessage(_("You won't believe what I'm looking at right now!!!!"), force_send=True)
     play sound "sounds/vibrate.mp3"
 
     scene v14s14_1 # FPP. MC looking at his room as he is waking up. 
     with fade
 
-    $ chloe.messenger.newMessage(_("Lindsey and I are NOT friends anymore."), queue=False)
+    $ chloe.messenger.newMessage(_("Lindsey and I are NOT friends anymore."), force_send=True)
     play sound "sounds/vibrate.mp3"
 
     u "Mmm... Huh?"
@@ -25,7 +25,7 @@ label v14s14:
     scene v14s14_2 # TPP. MC sitting up on his bed, confused face, mouth closed.
     with dissolve
 
-    $ chloe.messenger.newMessage(_("I'm gonna need your help with the president thing, big time"), queue=False)
+    $ chloe.messenger.newMessage(_("I'm gonna need your help with the President thing, big time"), force_send=True)
     play sound "sounds/vibrate.mp3"
 
     u "*Phone vibrates*"
@@ -33,14 +33,14 @@ label v14s14:
     scene v14s14_2a # TPP. Same as v14s14_2, MC looking at his phone which he is now holding, confused face, mouth closed.
     with dissolve
 
-    $ chloe.messenger.newMessage(_("[name]!!!"), queue=False)
+    $ chloe.messenger.newMessage(_("[name]!!!"), force_send=True)
     play sound "sounds/vibrate.mp3"
 
     u "*Phone vibrates*"
 
     u "(Who's blowing up my phone?)"
 
-    $ chloe.messenger.newMessage(_("Right, you're probably asleep. When you read this, just meet me in the hall near Ms. Rose's classroom at 10."), queue=False)
+    $ chloe.messenger.newMessage(_("Right, you're probably asleep. When you read this, just meet me in the hall near Ms. Rose's classroom at 10."), force_send=True)
 
     call screen phone
 

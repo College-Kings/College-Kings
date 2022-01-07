@@ -11,7 +11,7 @@ label v8_scene24_wolves:
     u "(I gotta get out of here. Wonder what everyone's up to.)"
 
     # Kiwii Pic Description (mcpost1w.webp, 1920x1080): Selfie of MC sitting at his desk in Wolves house, looking bored and showing his books/laptop in the frame. Should be continuation of v8monroom1
-    $ v8s25_kiwiiPost = KiwiiPost("MC", "v8/mcpost1w.webp", _("Ugh someone save me pls"), numberLikes=2)
+    $ v8s25_kiwiiPost = KiwiiPost(mc, "v8/mcpost1w.webp", _("Ugh someone save me pls"), numberLikes=2)
 
     scene v8monroom1a # MC looking at his phone now, neutral expression, mouth closed. Rest is same as v8monroom1
     with fade
@@ -27,7 +27,7 @@ label v8_scene24_apes:
     u "(I gotta get out of here. Wonder what everyone's up to.)"
 
     # Kiwii Pic Description (mcpost1a.webp, 1920x1080): Selfie of MC sitting at his desk in Apes house, looking bored and showing his books/laptop in the frame. Should be continuation of v8monroom2
-    $ v8s25_kiwiiPost = KiwiiPost("MC", "v8/mcpost1a.webp", _("Ugh someone save me pls"), numberLikes=2)
+    $ v8s25_kiwiiPost = KiwiiPost(mc, "v8/mcpost1a.webp", _("Ugh someone save me pls"), numberLikes=2)
 
     scene v8monroom2a # MC looking at his phone now, neutral expression, mouth closed. Rest is same as v8monroom2
     with fade
@@ -36,7 +36,7 @@ label v8_scene24_apes:
     jump phn_riley11_setup
 
 label phn_riley11_setup:
-    $ riley.messenger.newMessage(_("Bad day?"), queue=False)
+    $ riley.messenger.newMessage(_("Bad day?"), force_send=True)
     $ riley.messenger.addReply(_("I've read the same page four times :/"))
     $ riley.messenger.newMessage(_("At least you can read! I just found out I need glasses!"))
     $ riley.messenger.addReply(_("I think you'd look cute in glasses."))

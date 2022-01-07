@@ -386,7 +386,7 @@ label v4start:
 
     ri "Uhm... no, I don't think so. I like Imre, but he can be a bit gross, haha."
 
-    if rileykiss:
+    if riley.relationship.value >= Relationship.MOVE.value:
         scene s303e
         with dissolve
 
@@ -1085,7 +1085,7 @@ label v4start:
 
     u "(Oh that's Lauren's sister Autumn...)"
 
-    if not laurenrs and toldlauren:
+    if toldlauren:
         $ add_point(KCT.TROUBLEMAKER)
 
         u "(Hopefully Lauren didn't tell her about what happened...)"
@@ -1151,7 +1151,7 @@ label v4start:
                     jump autumnsita
 
                 else:
-                    $ autumnmad = True
+                    $ autumn.relationship = Relationship.MAD
                     scene s334b
                     with dissolve
 
@@ -1167,12 +1167,12 @@ label v4start:
                     jump readmontagea
 
             "Sit somewhere else":
-                $ autumnmad = True
+                $ autumn.relationship = Relationship.MAD
 
                 jump ea_b
 
 
-    elif not laurenrs and laurentoofar:
+    elif laurentoofar:
         $ add_point(KCT.TROUBLEMAKER)
 
         u "(Hopefully Lauren didn't tell her about what happened...)"
@@ -1205,7 +1205,7 @@ label v4start:
                 if kct == "loyal":
                     call screen kct_popup
 
-                    $ autumnmad = False
+                    $ autumn.relationship = Relationship.FRIEND
                     scene s334d # autumn emphatic
                     with dissolve
 
@@ -1238,7 +1238,7 @@ label v4start:
                     jump autumnsita
 
                 else:
-                    $ autumnmad = True
+                    $ autumn.relationship = Relationship.MAD
                     
                     scene s334b
                     with dissolve
@@ -1255,12 +1255,11 @@ label v4start:
                     jump readmontagea
 
             "Sit somewhere else":
-                $ autumnmad = True
+                $ autumn.relationship = Relationship.MAD
 
                 jump ea_b
 
-
-    elif not laurenrs:
+    elif lauren.relationship.value < Relationship.GIRLFRIEND.value: #if not a girlfriend, but not because messed up date
         $ add_point(KCT.BOYFRIEND)
         scene s334
         with dissolve
@@ -1333,7 +1332,7 @@ label v4start:
         jump autumnsita
 
 label ea_b:
-    $ autumnmad = True
+    $ autumn.relationship = Relationship.MAD
     scene s334c
     with dissolve
 
@@ -1529,7 +1528,7 @@ label readmontagea:
             ry "Look, man. I messed up, I'm sorry."
 
     label ec_bd: #for compatibility only
-    ry "I didn't mean to attack you like that. I just wanted to let you know about the things that I've heard. "
+    ry "I didn't mean to attack you like that. I just wanted to let you know about the things that I've heard."
 
     ry "You know, so she doesn't play you."
 
@@ -2159,7 +2158,7 @@ label continueab:
 
     play music "music/m9punk.mp3"
 
-    $ josh.messenger.newMessage(_("Hey man, you wanna hang out with me and some friends tonight?"), queue=False)
+    $ josh.messenger.newMessage(_("Hey man, you wanna hang out with me and some friends tonight?"), force_send=True)
     $ josh.messenger.addReply(_("Uhh, sure."), v4_reply1)
     $ josh.messenger.addReply(_("I'm meeting a friend at 11, so I can't really."), v4_reply2)
 
@@ -2170,7 +2169,7 @@ label continueab:
             u "(I should probably reply to my messages.)"
             jump phonew
 
-    if josh.messenger.sentMessages[-2].reply and josh.messenger.sentMessages[-2].reply.message == "I can't, sorry.":
+    if josh.messenger.sent_messages[-2].reply and josh.messenger.sent_messages[-2].reply.message == "I can't, sorry.":
         u "(Fucking hell, I forgot how persistent Josh could be...)"
         jump jorepb
 
@@ -2202,7 +2201,7 @@ label continueab:
 
     jo "What's up, bro?"
 
-    if josh.messenger.sentMessages[-2].reply and josh.messenger.sentMessages[-2].reply.message == "Alright, I'll come.":
+    if josh.messenger.sent_messages[-2].reply and josh.messenger.sent_messages[-2].reply.message == "Alright, I'll come.":
         jo "Picture of Amber did it, eh?"
 
         scene s353b
@@ -2418,6 +2417,7 @@ label continueab:
 
             menu:
                 "Alright, just for a bit":
+                    $ chloe.relationship = Relationship.MAD
                     scene s357a
                     with dissolve
 
@@ -2654,7 +2654,6 @@ label continueab:
 
     menu:
         "Amber":
-
             scene jomon14 # amber in bra ready for shot of her body
             with fade
 
@@ -2681,7 +2680,7 @@ label continueab:
             menu:
                 "Kiss her":
                     $ add_point(KCT.TROUBLEMAKER)
-                    $ kissamber = True
+                    $ amber.relationship = Relationship.KISS
 
                     play sound "sounds/spit.mp3"
 

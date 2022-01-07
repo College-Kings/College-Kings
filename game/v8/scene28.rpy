@@ -126,8 +126,10 @@ label int_deal_w_josh:
     with dissolve
 
     # Lars Fight
-    call screen fight_tutorialPopup
-
+    call screen confirm("Would you like to play the fighting tutorial?",
+        yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
+        no_action=[SetVariable("fight_tutorial", False), Return()])
+        
     scene v8sdd10
 
     call screen fight_typeMenu

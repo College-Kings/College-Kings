@@ -53,8 +53,7 @@ label v10_talk_nora:
     scene v10hal1a
     with dissolve
 
-    if noralikes:
-
+    if nora.relationship.value >= Relationship.LIKES.value:
         scene v10hal1a
         with dissolve
 
@@ -96,13 +95,12 @@ label v10_talk_nora:
                     no "Yeah, I'm pretty sure she'll take us. She likes Europe as much as I do."
 
                 "Leave it alone":
-
                     scene v10hal1
                     with dissolve
 
                     u "(I'll leave it alone as they'd rather keep it private.)"
-    elif not joinwolves and not noralikes:
 
+    elif not joinwolves and nora.relationship.value < Relationship.LIKES.value:
         scene v10hal1a
         with dissolve
 

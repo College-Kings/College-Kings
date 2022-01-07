@@ -17,7 +17,7 @@ label v12_chloe_cafe:
 
     pause 0.75
 
-    if chloegf or chloers:
+    if chloe.relationship.value >= Relationship.FWB.value:
         scene v12chc3 # TPP. Show MC pulling Chloe's chair out so she can sit down, both smiling, mouths closed
         with dissolve
 
@@ -39,7 +39,7 @@ label v12_chloe_cafe:
 
     cl "This is such a nice place! I feel like I'm underdressed... *Laughs*"
 
-    if chloegf or chloers:
+    if chloe.relationship.value >= Relationship.FWB.value:
         scene v12chc5a # FPP. Same as v12chc5, Chloe blushing, smiling, mouth closed, avoiding eye contact
         with dissolve
 
@@ -195,7 +195,43 @@ label v12_chloe_cafe:
 
     fwait "So, what can I get for the gorgeous couple?"
 
-    if not chloegf:
+    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+        scene v12chc5i # FPP. Same as v12chc5, Show Chloe blushing, slight smile, avoiding eye contact, putting her hair behind her ear, mouth closed
+        with dissolve
+
+        u "Haha, why are you smiling?"
+
+        scene v12chc7b
+        with dissolve
+
+        fwait "Was it something I said?"
+
+        scene v12chc5j # FPP. Same as v12chc5f, Chloe still blushing, mouth open, slight smile, 
+        with dissolve
+
+        cl "It was actually, but not in a bad way. My handsome boyfriend here actually asked me out pretty recently and well... This is our first time out as an official couple. *Chuckles*"
+
+        scene v12chc7b
+        with dissolve
+
+        fwait "Oh wow! Congrats... That's exciting stuff."
+
+        scene v12chc5c
+        with dissolve
+
+        u "\"Handsome boyfriend\". Hmm... I like the sound of that."
+
+        scene v12chc5
+        with dissolve
+
+        cl "*Chuckles*"
+
+        scene v12chc7a
+        with dissolve
+
+        u "Alright, now... Since my amazing girlfriend's French is so bad-"
+
+    else:
         scene v12chc5f
         with dissolve
 
@@ -233,42 +269,6 @@ label v12_chloe_cafe:
         with dissolve
 
         u "But, since my friend's French is so bad-"
-
-    else:
-        scene v12chc5i # FPP. Same as v12chc5, Show Chloe blushing, slight smile, avoiding eye contact, putting her hair behind her ear, mouth closed
-        with dissolve
-
-        u "Haha, why are you smiling?"
-
-        scene v12chc7b
-        with dissolve
-
-        fwait "Was it something I said?"
-
-        scene v12chc5j # FPP. Same as v12chc5f, Chloe still blushing, mouth open, slight smile, 
-        with dissolve
-
-        cl "It was actually, but not in a bad way. My handsome boyfriend here actually asked me out pretty recently and well... This is our first time out as an official couple. *Chuckles*"
-
-        scene v12chc7b
-        with dissolve
-
-        fwait "Oh wow! Congrats... That's exciting stuff."
-
-        scene v12chc5c
-        with dissolve
-
-        u "\"Handsome boyfriend\". Hmm... I like the sound of that."
-
-        scene v12chc5
-        with dissolve
-
-        cl "*Chuckles*"
-
-        scene v12chc7a
-        with dissolve
-
-        u "Alright, now... Since my amazing girlfriend's French is so bad-"
 
     scene v12chc5d
     with dissolve
@@ -407,9 +407,6 @@ label v12_chloe_cafe:
 
             scene v12chc5o # FPP. Same as v12chc5, Chloe angry, mouth closed
             with dissolve
-            
-            if political_strategist: #for v11-12 compatibility purposes
-                $ v11_lindsey_run = True
             
             if v11_lindsey_run and v11_told_aubrey:
                 $ grant_achievement("thrown_to_the_lions")
@@ -585,7 +582,7 @@ label v12_chloe_cafe:
     scene v12chc10 # TPP. Show MC sitting down, looking down at his phone, neutral expression, mouth closed
     with dissolve
 
-    $ riley.messenger.newMessage("TREASURE HUNT TIME!", queue=False)
+    $ riley.messenger.newMessage("TREASURE HUNT TIME!", force_send=True)
     $ riley.messenger.addReply("Really... now?")
     $ riley.messenger.newMessage("Yep, and I'm already at the spot of the next clue... I think.")
     $ riley.messenger.newImgMessage("images/v12/Scene 14/rileycatacomb.webp") # Riley selfie at the catacomb entrance with a street sign behind her with the address of where she is at, Riley smiling, mouth closed

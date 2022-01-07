@@ -36,19 +36,19 @@ label v15s18:
 
     la "Oh... Wow, [name]! That is quite the outfit. *Laughs*"
 
-    scene v15s18_4c # FPP. Same as v15s18_4b, Lauren looking back up at MC, Lauren slight smile, mouth open.
+    scene v15s18_4a # FPP. Same as v15s18_4b, Lauren looking back up at MC, Lauren slight smile, mouth open.
     with dissolve
 
     u "Haha, yeah... Um, it was the only costume they had left..."
 
-    scene v15s18_4a
+    scene v15s18_4c
     with dissolve
 
     la "It's not a surprise that nobody wanted to buy that thing, haha!"
 
     la "You should probably come inside before you get arrested for indecent exposure."
 
-    scene v15s18_4c
+    scene v15s18_4a
     with dissolve
 
     u "*Laughs* Okay, okay... You've completely roasted me and I'm not even inside yet."
@@ -56,24 +56,24 @@ label v15s18:
     scene v15s18_4d # FPP. Same as v15s18_4c, Lauren stepped to the side laughing and holding the door open for MC, Lauren slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v15s18_5 # TPP. Show MC walking into the Deer's house, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1
 
     play sound "sounds/doorclose.mp3"
 
     scene v15s18_6 # TPP. Show of some of the decorations in the house
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18_7 # TPP. More decorations in the house.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18_8 # FPP. MC and Lauren inside the Deer's house. Lauren looking at MC, MC looking at Lauren, Lauren slight smile, mouth closed.
     with dissolve
@@ -90,7 +90,7 @@ label v15s18:
 
     u "Really. And also, happy birthday."
 
-    if laurenrs: 
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: 
         scene v15s18_8b # FPP. Same as v15s18_8a, Lauren much closer to MC with her arms wrappe around his neck as she looks in his eyes, Lauren biting her lip, slight smile, mouth closed.
         with dissolve
 
@@ -108,10 +108,13 @@ label v15s18:
 
         pause 0.75
 
+        scene v15s18_8a # FPP. Same as v15s18_8, Lauren slight smile, mouth closed.
+        with dissolve
+
         la "Thank you, [name]."
 
     else:
-        scene v15s18_8
+        scene v15s18_8a
         with dissolve
 
         la "Hehe, thank you!"
@@ -156,7 +159,7 @@ label v15s18:
     
     pause 0.75
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v15s18_10 # FPP. Refer to v15s18_8h, Close up of Lauren's ass as she is walking away.
         with dissolve
         
@@ -214,7 +217,7 @@ label v15s18:
     scene v15s18_11d
     with dissolve
 
-    imre "Why didn't you just wear the same costume you got for Mr Lee's class?"
+    imre "Why didn't you just wear the same costume you got for Mr. Lee's class?"
 
     scene v15s18_11e
     with dissolve
@@ -319,7 +322,7 @@ label v15s18:
 
         imre "Man, I suspected you lost your damn mind after you joined the Apes. Then you ask me a question like that?"
 
-        imre "*Laughs* Is it that bad?"
+        imre "*Laughs* \"Is it that bad?\""
 
         scene v15s18_11e
         with dissolve
@@ -361,14 +364,26 @@ label v15s18:
     scene v15s18_13 # FPP. MC looking down at the paper in his hands, (writing can be added later in photoshop if need.) Challenge list: 1. Get Slapped, (Have this one crossed out because Imre already did it) 2. Have Sex, 3. Give Oral, 4. Get Orla, 5. Get a Handjob, 6. Finger a girl, 7. Make out, 8. Steal Someone's panties, 9. Find a condom.
     with dissolve
 
-    python:
-        checklist.add_item("Test1")
-        checklist.add_item("Test2")
-        checklist.add_item("Test3")
+    pause 0.75
 
-    show screen checklist
+    python:
+        checklist.add_item("Have Sex")
+        checklist.add_item("Give Oral")
+        checklist.add_item("Get Oral")
+        checklist.add_item("Get a Handjob")
+        checklist.add_item("Finger a girl")
+        checklist.add_item("Make out")
+        checklist.add_item("Steal someone's panties")
+        checklist.add_item("Find a condom")
+
+    show screen v15_imre_checklist_icon
     # -The Party Checklist UI pops up, showing the list of challenges-
     # -The UI list disappears when player chooses to close it-
+
+    show screen v15_imre_checklist
+
+    pause
+    
  
     scene v15s18_11e
     with dissolve
@@ -396,22 +411,22 @@ label v15s18:
     with dissolve
 
     menu:
-        "Seems difficult.":
-            $ add_point(KCT.BRO)
+        "I'm not interested":
+            $ add_point(KCT.BOYFRIEND)
 
-            u "That does seem kinda difficult, ha."
+            u "Listen Imre, I appreciate the thought, but I'm not really looking to hook up with every girl at this party."
 
             scene v15s18_11d
             with dissolve
 
-            imre "I think it's impossible, dude! But if you manage to do it, you'll be a legend, haha. The King of Parties!"
+            imre "Hey man, I won't tell you what to do, but keep the list anyway. Maybe you'll change your mind."
 
             scene v15s18_11e
             with dissolve
 
-            u "What an honor it would be to receive that title. *Laughs*"
+            u "Maybe... *Laughs*"
 
-        "Looks easy.":
+        "Looks easy":
             $ add_point(KCT.TROUBLEMAKER)
             
             u "It looks too easy... Is there a longer list?"

@@ -3,30 +3,29 @@
 # Characters: AMBER (Outfit: Detective costume), MC (Outfit: 1)
 # Time: Morning
 
-
 label v15s42:
 # -MC enters the SVC meeting room. It's quite dated with beige/grey walls, like an old room at the FBI, a large wooden desk with a coffee machine and croissants on it., filing cabinets, blinds drawn and sparse lighting. Amber is standing next to a pinboard on the wall. We don't see the details of it just yet. Amber is wearing a stylish, Sam Spade detective-style fedora hat-
     play sound "sounds/dooropen.mp3"
 
     scene v15s42_1 # TPP. Show MC walking into the SVC meeting room, Description of room: Dated grey/beige walls, a large wooden desk, filing cabinets, blinds drawn with sparse lighting in the room, MC slightly confused, mouth closed.
-    with fade (1,0,1)
+    with fade
 
-    pause  
+    pause 0.75
 
     play sound "sounds/dooropen.mp3"
 
     scene v15s42_2 # TPP. Show MC entering the room and closing the door behind him, slightly confused, mouth closed.
-    with dissolve  
+    with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s42_3 # FPP. View of the room, Amber is leaning against the wall on the side of her pinboard, Amber is looking at the floor, smug face, mouth closed.
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v15s42_3a # FPP. Amber leans against the wall and looks at MC, Amber with a smirk, mouth open.
-    with dissolve 
+    with dissolve
 
     am "[name], finally! Where have you been?"
 
@@ -40,13 +39,8 @@ label v15s42:
 
     am "Grab a coffee, we've got a lot of work to do."
 
-    scene v15s42_3d # FPP. Amber standing infront of MC, Amber smirking, mouth closed.
-    with dissolve
-
-    pause  
-
     scene v15s42_4 # FPP. show Amber pouring a cup of coffee from the coffee machine, slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     u "What is this place? *Chuckles*"
 
@@ -69,8 +63,9 @@ label v15s42:
     with dissolve
 
     menu:
-        "Ask about the room.":
+        "Ask about the room":
             $ add_point(KCT.TROUBLEMAKER)
+            
             scene v15s42_7a # FPP. Amber standing infront of MC, holding her cup of coffee, slight smile, mouth closed.
             with dissolve
 
@@ -79,7 +74,7 @@ label v15s42:
             scene v15s42_7
             with dissolve
 
-            am "You're in an old meeting room that the faculty doesn't... Use anymore."
+            am "You're in an old meeting room that the faculty doesn't... use anymore."
 
             scene v15s42_7a
             with dissolve
@@ -125,8 +120,10 @@ label v15s42:
             with dissolve
 
             u "*Laughs* Thank you. So, why are we here?"
-        "Let it go.":
+
+        "Let it go":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v15s42_7a
             with dissolve
 
@@ -158,7 +155,6 @@ label v15s42:
     u "(Since Tuesday?)"
 
     if joinwolves:
-
         u "(Chris said he saw her recently, so that can't be true.)"
 
     scene v15s42_7b
@@ -207,17 +203,19 @@ label v15s42:
         scene v15s42_9 # TPP. Show both MC and Amber laughing.
         with dissolve
 
-        pause  
+        pause 0.75
 
         scene v15s42_7a
         with dissolve
 
-        u "(Amber seems to be in a really good place right now, if I wanted to make things more serious between us... Maybe now's the time to start?)"
+        u "(Amber seems to be in a really good place right now, if I wanted to make things more serious between us..."
+        u "(Maybe now's the time to start?)"
 
         menu:
-            "Flirt.":
+            "Flirt":
                 $ add_point(KCT.BOYFRIEND)
                 $ v15s42_flirt = True
+                
                 u "Sobriety looks great on you."
 
                 u "But then again, everything looks great on you so..."
@@ -236,14 +234,20 @@ label v15s42:
                 with dissolve
 
                 am "*Giggles* Okay, I can manage that I think."
-            "Friendly compliment.":
+
+            "Friendly compliment":
                 $ add_point(KCT.BRO)
+
+                scene v15s42_7a
+                #with dissolve
+
                 u "Sobriety looks great on you, not gonna lie."
 
                 scene v15s42_7
                 with dissolve
 
                 am "Thanks, [name]."
+
     else:
         scene v15s42_7a
         with dissolve
@@ -285,7 +289,8 @@ label v15s42:
     scene v15s42_7
     with dissolve
 
-    am "Yes, it's true! A dependable outfit is one thing, your hat has to fit your attitude, but the main thing we need to decide on before we can start investigating is..."
+    am "Yes, it's true! A dependable outfit is one thing, your hat has to fit your attitude."
+    am "But the main thing we need to decide on before we can start investigating is..."
 
     scene v15s42_7e # FPP. MC looking at Amber, Amber looking at MC, Amber holding her coffee cup with both hands studying MC, Amber suspicious, mouth open.
     with dissolve
@@ -325,11 +330,11 @@ label v15s42:
     scene v15s42_7a
     with dissolve
 
-    pause
+    pause 0.75
 
     # -A UI pops up to show the three detective archetypes that MC can choose from (Professional, Psychologist, Loose Cannon). MC makes his choice and the UI disappears again-
 
-    if detective = "professional": # Placeholder?
+    if detective == "professional":
         scene v15s42_7a
         with dissolve
 
@@ -349,7 +354,8 @@ label v15s42:
         with dissolve
 
         am "Haha, okay fair. Yeah! I can see this."
-    elif detective = "psychologist": # Placeholder?
+
+    elif detective == "psychologist":
         scene v15s42_7a
         with dissolve
 
@@ -369,6 +375,7 @@ label v15s42:
         with dissolve
 
         am "Okay, cool! So, you'll be good at analyzing every word and figuring out if they're lying or telling us the truth."
+
     else:
         scene v15s42_7a
         with dissolve
@@ -394,6 +401,8 @@ label v15s42:
             scene v15s42_7g # FPP. MC looking at Amber, Amber looking at MC, Amber smirking, mouth closed.
             with dissolve
             
+            pause 0.75
+            
         scene v15s42_7
         with dissolve
 
@@ -418,6 +427,8 @@ label v15s42:
 
     scene v15s42_11 # FPP. MC standing closer looking at the board as Amber is looking at the board and pointing at it, Amber slight smile, mouth closed.
     with dissolve
+
+    pause 0.75
 
 # -The UI pops up to show MC the headings Clues and Possible Locations, they currently have question marks over the unlockable items. MC exits the UI whenever-
 
@@ -454,25 +465,28 @@ label v15s42:
     am "Oh wait, did you want to bring a snack with you? You should eat."
 
     scene v15s42_12
-    with dissolve  
+    with dissolve
 
-    pause 
+    pause 0.75
 
     menu:
-        "Grab breakfast.":
+        "Grab breakfast":
             $ add_point(KCT.BOYFRIEND)
             $ v15s42_grab_breakfast = True
+            
             scene v15s42_13 # TPP. Show MC grabbing a croissant, slight smile, mouth open.
             with dissolve
 
             u "I guess you're right. Most important meal of the day, huh?"
 
             scene v15s42_13a # TPP. MC takes a bite from the croissant.
-            with dissolve 
+            with dissolve
 
-            pause 
-        "Not hungry.":
+            pause 0.75
+
+        "Not hungry":
             $ add_point(KCT.BRO)
+            
             scene v15s42_12
             with dissolve
 
@@ -528,17 +542,22 @@ label v15s42:
 
         scene v15s42_14 # TPP. Show Amber and MC leaving the meeting room, Amber slight smile, mouth closed, MC eating the last of his croissant as they leave the room.
         with dissolve
-    else 
+
+        pause 0.75
+
+    else:
         play sound "sounds/dooropen.mp3"
 
         scene v15s42_14a # TPP. Show Amber and MC leaving the meeting room, Amber slight smile, mouth closed, MC slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
-    pause  
+    pause 0.75
 
     play sound "sounds/doorclose.mp3"
 
     scene v15s42_14b # TPP. Amber and MC gone the door to the meeting room closed.
     with dissolve
+
+    pause 0.75
 
     jump v15s43

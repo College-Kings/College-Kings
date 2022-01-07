@@ -143,7 +143,7 @@ label v14s20:
 
     u "Yeah, they seem to get along surprisingly well, haha."
 
-    if laurenmad or laurenrs_v11aubrey:
+    if v11_lauren_caught_aubrey:
         scene v14s20_3g # FPP Same angle as 3, Autumn with neutral expression, mouth open
         with dissolve
 
@@ -169,7 +169,7 @@ label v14s20:
 
         u "Not completely..."
 
-    elif laurenrs:
+    elif lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v14s20_3f
         with dissolve
 
@@ -220,10 +220,12 @@ label v14s20:
                 aut "Of course."
 
             "It's going great":
-                # -It's going great (Creates AutumnTrust)
                 $ autumn.points += 1
-                $ AutumnTrust = True
+                $ autumn.relationship = Relationship.TRUST
 
+                scene v14s20_3a
+                #with dissolve
+                
                 u "It's going great so far."
 
                 scene v14s20_3
@@ -522,10 +524,8 @@ label v14s20:
     pause 0.75
 
     stop music fadeout 3
-    # -Transition to Scene 21 if chloers/gf and Talk to Chris for Chloe-
-    if (chloers or chloegf) and v14_talk_to_chris: # ADD TALK TO CHRIS VARIABLE TO SCENE 19a
+    if chloe.relationship.value >= Relationship.FWB.value and v14_talk_to_chris:
         jump v14s21
 
-    # -Transition to Scene 21b if not chloers/gf and Talk to Chris for Chloe-
     else:
         jump v14s21b

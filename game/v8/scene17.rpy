@@ -294,7 +294,7 @@ label phn_penelope6_done:
     with dissolve
     u "Listen, I'm in the middle of something..."
 
-    if laurenrs:
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         scene v8rose15
         with dissolve
         la "Whatcha doooin?"

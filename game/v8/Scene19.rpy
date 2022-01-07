@@ -71,9 +71,22 @@ label sun_eve_room:
         scene v8sser1 # TPP. Show MC lying on his Wolves bed on his phone.
         with fade
 
-        if not laurenrs:
+        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            # -MC's phone buzzes-
+            $ lauren.messenger.newMessage(_("Hey, Sweetie, what are you up to?"), force_send=True)
+            $ lauren.messenger.addReply(_("Nothing, just catching up on some homework. You having a good night?"))
+            $ lauren.messenger.newMessage(_("It would be better if you were here..."))
+            $ lauren.messenger.addReply(_("Really?"))
+            $ lauren.messenger.newMessage(_("I could use some snuggles."))
+            $ lauren.messenger.addReply(_("Aww, I'd love to get some snuggles. When can I see you again?"))
+            $ lauren.messenger.newMessage(_("I have a big test coming up but after that? I miss you"))
+            $ lauren.messenger.addReply(_("I miss you too. It's a date. Just let me know"))
+            $ lauren.messenger.newMessage(_("Goodnight"))
+            $ lauren.messenger.addReply(_("Goodnight"))
+
+        else:
             play sound "sounds/vibrate.mp3"
-            $ amber.messenger.newMessage(_("Hey u up?"), queue=False)
+            $ amber.messenger.newMessage(_("Hey u up?"), force_send=True)
             $ amber.messenger.addReply(_("Always for you ;)"))
             $ amber.messenger.newMessage(_("That's what I was hoping to hear"))
             $ amber.messenger.addReply(_("I can be even more up if you want..."))
@@ -85,25 +98,12 @@ label sun_eve_room:
             $ amber.messenger.addReply(_("Wanna see what thinking about you has done to me?"), v8s19_reply1)
             $ amber.messenger.addReply(_("I look at your pic all the time...when I'm thinking about things"), v8s19_reply2)
 
-        else:
-            # -MC's phone buzzes-
-            $ lauren.messenger.newMessage(_("Hey, Sweetie, what are you up to?"), queue=False)
-            $ lauren.messenger.addReply(_("Nothing, just catching up on some homework. You having a good night?"))
-            $ lauren.messenger.newMessage(_("It would be better if you were here..."))
-            $ lauren.messenger.addReply(_("Really?"))
-            $ lauren.messenger.newMessage(_("I could use some snuggles."))
-            $ lauren.messenger.addReply(_("Aww, I'd love to get some snuggles. When can I see you again?"))
-            $ lauren.messenger.newMessage(_("I have a big test coming up but after that? I miss you"))
-            $ lauren.messenger.addReply(_("I miss you too. It's a date. Just let me know"))
-            $ lauren.messenger.newMessage(_("Goodnight"))
-            $ lauren.messenger.addReply(_("Goodnight"))
-
         call screen phone
 
         if forgiveemily:
             # -MC's phone buzzes-
             ### ERROR: (Aww, she couldn't get enough of me) [I figure this line works for either scenario but let me know if I should change it] ###
-            $ emily.messenger.newMessage(_("Hey, I was thinking"), queue=False)
+            $ emily.messenger.newMessage(_("Hey, I was thinking"), force_send=True)
             $ emily.messenger.addReply(_("Uh oh that can't be good ;)"))
             $ emily.messenger.newMessage(_("Wanna meet up at the arcade?"))
 
@@ -119,7 +119,7 @@ label sun_eve_room:
                     u "I should reply to Emily"
                     jump v8s19_phoneCheck1
 
-            if emily.messenger.get_message("Great! See you there!"):
+            if emily.messenger.find_message("Great! See you there!"):
                 jump emily_arcade
 
             scene v8sser1a # TPP. Same camera as v8sser1, show MC lying on his side as if to go to sleep.
@@ -139,9 +139,22 @@ label sun_eve_room:
         scene v8sser4 # TPP. Show MC sat on his Apes bed on his phone.
         with fade
 
-        if not laurenrs:
+        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            # -MC's phone buzzes-
+            $ lauren.messenger.newMessage(_("Hey, Sweetie, what are you up to?"), force_send=True)
+            $ lauren.messenger.addReply(_("Nothing, just catching up on some homework. You having a good night?"))
+            $ lauren.messenger.newMessage(_("It would be better if you were here..."))
+            $ lauren.messenger.addReply(_("Really?"))
+            $ lauren.messenger.newMessage(_("I could use some snuggles."))
+            $ lauren.messenger.addReply(_("Aww, I'd love to get some snuggles. When can I see you again?"))
+            $ lauren.messenger.newMessage(_("I have a big test coming up but after that? I miss you"))
+            $ lauren.messenger.addReply(_("I miss you too. It's a date. Just let me know"))
+            $ lauren.messenger.newMessage(_("Goodnight"))
+            $ lauren.messenger.addReply(_("Goodnight"))
+
+        else:
             play sound "sounds/vibrate.mp3"
-            $ amber.messenger.newMessage(_("Hey u up?"), queue=False)
+            $ amber.messenger.newMessage(_("Hey u up?"), force_send=True)
             $ amber.messenger.addReply(_("Always for you ;)"))
             $ amber.messenger.newMessage(_("That's what I was hoping to hear"))
             $ amber.messenger.addReply(_("I can be even more up if you want..."))
@@ -153,25 +166,12 @@ label sun_eve_room:
             $ amber.messenger.addReply(_("Wanna see what thinking about you has done to me?"), v8s19_reply1)
             $ amber.messenger.addReply(_("I look at your pic all the time...when I'm thinking about things"), v8s19_reply2)
 
-        else:
-            # -MC's phone buzzes-
-            $ lauren.messenger.newMessage(_("Hey, Sweetie, what are you up to?"), queue=False)
-            $ lauren.messenger.addReply(_("Nothing, just catching up on some homework. You having a good night?"))
-            $ lauren.messenger.newMessage(_("It would be better if you were here..."))
-            $ lauren.messenger.addReply(_("Really?"))
-            $ lauren.messenger.newMessage(_("I could use some snuggles."))
-            $ lauren.messenger.addReply(_("Aww, I'd love to get some snuggles. When can I see you again?"))
-            $ lauren.messenger.newMessage(_("I have a big test coming up but after that? I miss you"))
-            $ lauren.messenger.addReply(_("I miss you too. It's a date. Just let me know"))
-            $ lauren.messenger.newMessage(_("Goodnight"))
-            $ lauren.messenger.addReply(_("Goodnight"))
-
         call screen phone
             
         if forgiveemily:
             # -MC's phone buzzes-
             ### ERROR: (Aww, she couldn't get enough of me) [I figure this line works for either scenario but let me know if I should change it] ###
-            $ emily.messenger.newMessage(_("Hey, I was thinking"), queue=False)
+            $ emily.messenger.newMessage(_("Hey, I was thinking"), force_send=True)
             $ emily.messenger.addReply(_("Uh oh that can't be good ;)"))
             $ emily.messenger.newMessage(_("Wanna meet up at the arcade?"))
 
@@ -187,7 +187,7 @@ label sun_eve_room:
                     u "I should reply to Emily"
                     jump v8s19_phoneCheck2
 
-            if emily.messenger.get_message("Great! See you there!"):
+            if emily.messenger.find_message("Great! See you there!"):
                 jump emily_arcade
 
             scene v8sser4a # TPP. Same camera as v8sser4, show MC lying on his side as if to go to sleep.

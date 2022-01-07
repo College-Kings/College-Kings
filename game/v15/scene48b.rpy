@@ -4,20 +4,21 @@
 # Time: Evening
 
 label v15s48b:
-
-    if v15s48a_nora_sex: # Placeholder
+    if "v15_nora" in sceneList: # Placeholder
+        $ nora.relationship = Relationship.FWB
+    
         scene v15s48b_1 # TPP. MC and Nora spooning, MC big spoon with his arm around her, Nora holding his hand, both slight smile, mouth closed.
         with dissolve
 
-        pause
+        pause 0.75
 
         scene v15s48b_2 # TPP. Nora flips over and faces MC, both slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
-        pause
+        pause 0.75
 
         scene v15s48b_3 # FPP. MC and Nora laying in bed, Nora looking at MC, MC looking at Nora, Nora smirking, mouth open.
-        with dissolve 
+        with dissolve
 
         no "That was... incredible, [name]."
 
@@ -32,7 +33,7 @@ label v15s48b:
         no "*Laughs* Fine by me."
 
         scene v15s48b_4 # TPP. Show Nora grabbing her phone off the side of the bed, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         no "I guess it's time to switch this on."
 
@@ -56,10 +57,10 @@ label v15s48b:
         scene v15s48b_5a # TPP. Show Nora tapping on her phone, slight smile, mouth closed.
         with dissolve
 
-        pause
+        pause 0.75
 
         scene v15s48b_3a
-        with dissolve 
+        with dissolve
 
         u "Are you sure?"
 
@@ -98,10 +99,10 @@ label v15s48b:
         scene v15s48b_6 # TPP. MC and Nora kissing as they lay down.
         with dissolve
 
-        pause
+        pause 0.75
 
         scene v15s48b_3a
-        with dissolve 
+        with dissolve
 
         u "I'd better go find my clothes first."
 
@@ -113,17 +114,22 @@ label v15s48b:
         scene v15s48b_7 # TPP. Show MC walking out of the bedroom naked, Nora watching him, both slight smile, mouth closed.
         with dissolve
 
-        pause 
+        pause 0.75
         
         play sound "sounds/dooropen.mp3"
        
         scene v15s48b_8 # TPP. MC dressed and walking out the front door, Nora behind him watching him leave as her naked body is wrapped in a blanket, both slight smile, mouth closed.
-        with dissolve 
-    else:
-        scene v15s48b_9 # TPP. Show Nora trying to open a bottle of wine in the kitchen.
-        with fade (1,0,1)
+        with dissolve
 
-        pause  
+        pause 0.75
+
+    else:
+        $ nora.relationship = Relationship.FRIEND
+    
+        scene v15s48b_9 # TPP. Show Nora trying to open a bottle of wine in the kitchen.
+        with fade
+
+        pause 0.75
 
         scene v15s48b_10 # FPP. Show the bottle of wine on the counter in the Kitchen, MC looking at Nora, Nora looking at MC, Nora slight smile, mouth closed.
         with dissolve
@@ -143,12 +149,12 @@ label v15s48b:
         scene v15s48b_11 # TPP. Show MC pulling out his phone, slight smile, mouth closed.
         with dissolve
 
-        pause  
+        pause 0.75
 
         scene v15s48b_11a # TPP. MC looking at his phone and tapping on it, mouth closed.
-        with dissolve 
+        with dissolve
 
-        pause  
+        pause 0.75
 
         scene v15s48b_10
         with dissolve
@@ -176,12 +182,14 @@ label v15s48b:
         with dissolve
 
         menu:
-            "It's not shit.":
+            "It's not shit":
                 $ add_point(KCT.BOYFRIEND)
+                
                 u "Haha, it's not shit. It's important to talk through your feelings with someone. Helps you figure things out."
 
-            "You're welcome.":
+            "You're welcome":
                 $ add_point(KCT.TROUBLEMAKER)
+                
                 u "Haha, you're welcome. Any time, Nora."
 
         scene v15s48b_10a
@@ -192,15 +200,15 @@ label v15s48b:
         scene v15s48b_12 # TPP. Show Nora walking up to MC, both slight smile, mouth closed.
         with dissolve
 
-        pause  
+        pause 0.75
 
         scene v15s48b_13 # TPP. Nora and MC hugging, both slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
-        pause  
+        pause 0.75
 
         scene v15s48b_14 # FPP. Nora infront of MC, MC looking at Nora, Nora looking at MC, Nora slight smile, mouth open.
-        with dissolve 
+        with dissolve
 
         no "See you soon."
 
@@ -212,13 +220,15 @@ label v15s48b:
     play sound "sounds/revving.mp3"
 
     scene v15s48b_15 # TPP. MC standing outside as the cab arrives.
-    with fade(1,0,1) 
+    with fade
 
-    pause  
+    pause 0.75
 
     play sound "sounds/cardooropen.mp3"
 
     scene v15s48b_16 # TPP. MC getting in the cab
-    with dissolve 
+    with dissolve
+
+    pause 0.75
 
     jump v15s49

@@ -206,7 +206,7 @@ label v10_late_alley:
                 jo "Trust me, I hear you. I'm gonna get out of here man."
 
             else:
-                $ joshmad = True
+                $ josh.relationship = Relationship.MAD
                 $ josh_europe = False
                 scene v10all3
                 with dissolve

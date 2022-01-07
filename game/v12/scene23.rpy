@@ -22,78 +22,7 @@ label v12_ms_rose_sex: #can only get here if joinwolves
 
     u "I've been around..."
 
-    if not msrosers:
-        scene v12msr2
-        with dissolve
-
-        ro "Hmm, are you busy?"
-
-        scene v12msr2a
-        with dissolve
-
-        u "No, not really."
-
-        scene v12msr2
-        with dissolve
-
-        ro "How come? I'm sure there's plenty of things you and your friends could be doing."
-
-        scene v12msr2a
-        with dissolve
-
-        u "There's just not much going on today I guess. I came out here to see what was up."
-
-        scene v12msr2b # FPP. Same as v12msr2, different pose
-        with dissolve
-
-        ro "Well, sorry to disappoint you. But, it's already late and I've just finished walking my rounds around the hotel. Everyone is either asleep or at least in their rooms."
-
-        scene v12msr2c # FPP. Same as v12msr2b, Ms. Rose slight smile, mouth closed
-        with dissolve
-
-        u "Oh. Well I guess I might as well just go back to my room too. *Chuckles*"
-
-        scene v12msr2b
-        with dissolve
-
-        ro "*Chuckles* Alright, then. Be sure to make tomorrow a more fun-filled day."
-
-        scene v12msr2c
-        with dissolve
-
-        u "Will do."
-
-        scene v12msr2
-        with dissolve
-
-        ro "Have a good night, [name]."
-
-        scene v12msr2a
-        with dissolve
-
-        u "You too."
-
-        scene v12msr3 # TPP. Show Ms. Rose walking away from MC, Ms. Rose slight smile, mouth closed
-        with dissolve
-
-        pause 0.75
-
-        scene v12msr4 # TPP. Show MC walking into his room, slight smile, mouth closed
-        with dissolve
-
-        u "(And right back to my room.)"
-
-        scene v12msr33 # TPP. Show MC removing his shirt in the room, MC slight smile, mouth closed
-        with dissolve
-
-        pause 0.75
-
-        scene v12msr34 # TPP. Show MC getting in bed, slight smile, mouth closed, in his boxers
-        with dissolve
-
-        pause 0.75
-
-    else:
+    if ms_rose.relationship.value >= Relationship.FWB.value:
         scene v12msr2d # FPP. Same as v12msr2, Ms. Rose, slight smile, mouth open, caressing MC's cheek
         with dissolve
 
@@ -155,7 +84,8 @@ label v12_ms_rose_sex: #can only get here if joinwolves
             "Let's go":
                 $ add_point(KCT.TROUBLEMAKER)
                 
-                $ v12_msrose_sex = True
+                $ sceneList.add("v12_rose")
+                $ ms_rose.relationship = Relationship.FWB
 
                 label v12_ms_rose_sex_sg:
 
@@ -585,6 +515,77 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                     with dissolve
 
                     pause 0.75
+
+    else:
+        scene v12msr2
+        with dissolve
+
+        ro "Hmm, are you busy?"
+
+        scene v12msr2a
+        with dissolve
+
+        u "No, not really."
+
+        scene v12msr2
+        with dissolve
+
+        ro "How come? I'm sure there's plenty of things you and your friends could be doing."
+
+        scene v12msr2a
+        with dissolve
+
+        u "There's just not much going on today I guess. I came out here to see what was up."
+
+        scene v12msr2b # FPP. Same as v12msr2, different pose
+        with dissolve
+
+        ro "Well, sorry to disappoint you. But, it's already late and I've just finished walking my rounds around the hotel. Everyone is either asleep or at least in their rooms."
+
+        scene v12msr2c # FPP. Same as v12msr2b, Ms. Rose slight smile, mouth closed
+        with dissolve
+
+        u "Oh. Well I guess I might as well just go back to my room too. *Chuckles*"
+
+        scene v12msr2b
+        with dissolve
+
+        ro "*Chuckles* Alright, then. Be sure to make tomorrow a more fun-filled day."
+
+        scene v12msr2c
+        with dissolve
+
+        u "Will do."
+
+        scene v12msr2
+        with dissolve
+
+        ro "Have a good night, [name]."
+
+        scene v12msr2a
+        with dissolve
+
+        u "You too."
+
+        scene v12msr3 # TPP. Show Ms. Rose walking away from MC, Ms. Rose slight smile, mouth closed
+        with dissolve
+
+        pause 0.75
+
+        scene v12msr4 # TPP. Show MC walking into his room, slight smile, mouth closed
+        with dissolve
+
+        u "(And right back to my room.)"
+
+        scene v12msr33 # TPP. Show MC removing his shirt in the room, MC slight smile, mouth closed
+        with dissolve
+
+        pause 0.75
+
+        scene v12msr34 # TPP. Show MC getting in bed, slight smile, mouth closed, in his boxers
+        with dissolve
+
+        pause 0.75
 
     scene v12msr32 # TPP. Show MC sleeping on his bed, in his boxers
     with dissolve

@@ -29,7 +29,7 @@ label v14s43:
         scene v14s43_3a # TPP. Same as v14s43_3, MC looking down at his phone, slight smile, mouth closed
         with dissolve
 
-        $ emily.messenger.newMessage("Hey you. How's your day going?", queue=False)
+        $ emily.messenger.newMessage("Hey you. How's your day going?", force_send=True)
         $ emily.messenger.addReply("It's barely started, haha. What about yours?")
         $ emily.messenger.newMessage("Not bad. Still in bed... Lol")
         $ emily.messenger.addReply("Oh yeah?")
@@ -71,7 +71,7 @@ label v14s43:
     scene v14s43_6a # FPP. Same as v14s43_6, Penelope slight smile, mouth open
     with dissolve
 
-    if penelopers:
+    if penelope.relationship.value >= Relationship.LIKES.value:
         pe "Saved, actually."
 
         scene v14s43_6

@@ -35,7 +35,7 @@ label v9_satmorn_gfb_walk:
     with dissolve
     u "Well, we all need to hear it now and again."
 
-    if noralikes:
+    if nora.relationship.value >= Relationship.LIKES.value:
         scene v9gfb3b # FPP. Same camera as v9gfb3, Nora hand on hip, Neutral look, mouth open
         with dissolve
         no "What are you doing out this early? Shouldn't you be getting some extra rest, today's a big day for you."

@@ -9,7 +9,7 @@ label v11_aubrey_plane_sex:
     play music "music/v11/Track Scene 13_1.mp3" fadein 2
     pause 0.75
 
-    if not aubreyrs:
+    if aubrey.relationship.value < Relationship.FWB.value:
         jump v11_nora_chris_plane
 
     else:
@@ -31,7 +31,10 @@ label v11_aubrey_plane_sex:
         menu:
             "Go after her":
                 label v11_aubrey_plane_sex_sg:
-                $ v11_aubrey_sex = True
+                $ sceneList.add("v11_aubrey")
+                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                    $ v11_lauren_caught_aubrey = True
+                    $ lauren.relationship = Relationship.MAD
 
                 scene v11aub4
                 with dissolve
@@ -241,7 +244,7 @@ label v11_aubrey_plane_sex:
 
                 au "Damn [name]!"
                 
-                if laurenrs:
+                if v11_lauren_caught_aubrey:
                     u "Oh fuck it's Lauren!"
 
                 else:
@@ -265,7 +268,7 @@ label v11_aubrey_plane_sex:
                 scene v11aub17c # FPP. Same as v11aub17a, but Lauren is surprised, mouth open
                 with dissolve
 
-                if laurenrs:
+                if v11_lauren_caught_aubrey:
                     pause 0.75
                     
                     scene v11aub17a # FPP. Same cam as v11aub17, door fully open, Lauren is very angry, mouth open
@@ -326,8 +329,7 @@ label v11_aubrey_plane_sex:
 
                         u "*Chuckles* It was kinda hot."
 
-                        if laurenrs:
-
+                        if v11_lauren_caught_aubrey:
                             u "But now I'm gonna have to talk to her after the flight... fuck me."
 
                 scene v11aub19 # TPP. Shot of MC putting his shirt on, Aubrey is pulling her shorts up, still no top
@@ -390,7 +392,7 @@ label v11_aubrey_plane_sex:
                 scene v11aub5b
                 with dissolve
 
-                if laurenrs:
+                if v11_lauren_caught_aubrey:
                     ry "Lauren's pissed."
 
                     scene v11aub5a
@@ -454,6 +456,7 @@ label v11_aubrey_plane_sex:
                 jump v11_nora_chris_plane
 
             "Don't go after her":
+                $ v11s13_rejected_aubrey = True
                 scene v11aub4
                 with dissolve
 
