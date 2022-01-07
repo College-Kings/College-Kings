@@ -34,7 +34,7 @@ screen whos_most_likely_to(question):
                         align (0.5, 0.5)
                         spacing 20
 
-                        add option["character"].profile_picture xalign 0.5
+                        add Transform(option["character"].profile_picture, xsize=55, ysize=55) xalign 0.5
 
                         button:
                             xysize (324, 91)
