@@ -708,9 +708,7 @@ screen file_slots(title):
         pos (1662, 971)
 
 
-style file_slots_title is text:
-    font "fonts/Montserrat-ExtraBold.ttf"
-    size 64
+style file_slots_title is montserrat_extra_bold_64
 
 style file_slots_page_name is olympus_mount_30
 
