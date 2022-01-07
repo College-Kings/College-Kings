@@ -88,7 +88,7 @@ screen whos_most_likely_to_answers(question):
                         align (0.5, 0.5)
                         spacing 20
 
-                        text "{{color=#FFCC2B}{}{{/color}} VOTES".format(len(option["votes"])) style "game_show_vote_text" xalign 0.5
+                        text "{{color=#FFCC2B}}{}{{/color}} VOTES".format(len(option["votes"])) style "game_show_vote_text" xalign 0.5
 
                         hbox:
                             xalign 0.5
@@ -120,7 +120,7 @@ screen would_you_rather_answers(question):
 
                         text char + ":" yalign 0.5 style "game_show_char_text"
 
-                        text screen_options["option"].upper() yalign 0.5 style "game_show_option_text"
+                        text option["option"].upper() yalign 0.5 style "game_show_option_text"
 
                         text "{{color=#FFCC2B}}{}{{/color}} VOTES".format(len(option["votes"])) yalign 0.5 style "game_show_vote_text"
 
