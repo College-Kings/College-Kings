@@ -624,9 +624,9 @@ label v15s39:
 
                     u "(Now is the time to strike if we're gonna do this...)"
 
-                    menu (fail_label="v15_change_subject"): 
+                    menu (fail_label="v15s39_change_subject"): 
                         "Change subject":
-                            label v15_change_subject:
+                            label v15s39_change_subject:
                             
                             $ add_point(KCT.BRO)
 
@@ -739,9 +739,9 @@ label v15s39:
 
                             li "*Drunk* I mean no wonder she's such a bitch all the time..."
 
-                            menu (fail_label="v15_stop_lindsey"):
+                            menu (fail_label="v15s39_stop_lindsey"):
                                 "Stop Lindsey":
-                                    label v15_stop_lindsey:
+                                    label v15s39_stop_lindsey:
                                     
                                     $ add_point(KCT.BRO)
 

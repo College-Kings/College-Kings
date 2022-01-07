@@ -2672,14 +2672,14 @@ label v15s35:
                         scene v15s35_12k
                         with dissolve
 
-                        menu (fail_label="v15let_it_happen"):
+                        menu (fail_label="v15s35_let_it_happen"):
                             "Let it happen naturally":
                                 $ add_point(KCT.BRO)
 
                                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                     $ add_point(KCT.TROUBLEMAKER)
 
-                                jump v15let_it_happen
+                                jump v15s35_let_it_happen
 
                             "Bring up Chloe":
                                 $ v15bring_up_chloe = True
@@ -2693,7 +2693,7 @@ label v15s35:
                                     
                                 jump v15bring_up_chloe
                             
-                        label v15let_it_happen:
+                        label v15s35_let_it_happen:
                             scene v15s35_12k
                             with dissolve
 
@@ -2823,7 +2823,7 @@ label v15s35:
                             scene v15s35_14f
                             with dissolve
 
-                            menu (fail_label="v15stop_lindsey"):
+                            menu (fail_label="v15s35_stop_lindsey"):
                                 "Stop Lindsey":
                                     $ add_point(KCT.BRO)
                                     
@@ -2833,7 +2833,7 @@ label v15s35:
                                     if hangOutWithLindsey:
                                         $ add_point(KCT.BOYFRIEND)
                                         
-                                    jump v15stop_lindsey
+                                    jump v15s35_stop_lindsey
 
                                 "Say nothing":
                                     $ v15say_nothing = True
@@ -2847,7 +2847,7 @@ label v15s35:
                                         
                                     jump v15say_nothing
 
-                            label v15stop_lindsey:
+                            label v15s35_stop_lindsey:
                                 scene v15s35_12o # FPP. same as v15s35_12n Lindsey's glass is now empty, mouth is closed, still a slight smile, still a rosey face from being drunk
                                 with dissolve
 
