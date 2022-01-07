@@ -1,29 +1,52 @@
-transform credits_scroll(speed):
-    ypos 720
-    linear speed ypos -720
-
 screen end_screen():
     tag end_screen
     modal True
+    style_prefix "end_screen"
 
     default image_path = "gui/end_screen/"
 
     add image_path + "end_screen_background.png"
 
+    vbox:
+        xalign 0.5
+        ypos 345
+
+        text "ACT 4 PART 2" xalign 0.5
+        text "Coming this December!" xalign 0.5 color "EA54E8"
+
     hbox:
-        align (0.5, 0.9)
+        xalign 0.5
+        ypos 556
+        spacing 20
+
+        text "Exclusively on " yalign 0.5
+
+        hbox:
+            spacing 10
+
+            add image_path + "patreon_logo.png" yalign 0.5
+            add image_path + "patreon_wordmark.png" yalign 0.5
+
+    hbox:
+        xalign 0.5
+        ypos 764
         spacing 100
 
-        textbutton "MENU":
+        imagebutton:
+            idle image_path + "menu_idle.png"
             action MainMenu()
             yalign 0.5
-            text_size 100
 
-
-        textbutton "Credits":
-            action Jump("credits")
+        imagebutton:
+            idle image_path + "get_access_idle.png"
+            action OpenURL("https://www.patreon.com/collegekings")
             yalign 0.5
-            text_size 100
+
+        imagebutton:
+            idle image_path + "credits_idle.png"
+            action Show("patreon_credits")
+            yalign 0.5
+        
 
 
 screen patreon_credits():
@@ -130,3 +153,9 @@ screen team_credits():
         imagebutton:
             idle image_path + "credits_button.png"
             action Show("patreon_credits")
+
+transform credits_scroll(speed):
+    ypos 720
+    linear speed ypos -720
+
+style end_screen_text is montserrat_extra_bold_64
