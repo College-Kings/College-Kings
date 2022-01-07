@@ -6,7 +6,7 @@ screen end_screen():
 
     default image_path = "gui/end_screen/"
 
-    add image_path + "end_screen_background.png"
+    add image_path + "end_screen_background.webp"
 
     vbox:
         align (0.5, 0.375)
@@ -23,12 +23,12 @@ screen end_screen():
         text "Exclusively on " xalign 0.3 size 42 xoffset -18
 
         imagebutton:
-            idle image_path + "patreon_logo.png"
+            idle image_path + "patreon_logo.webp"
             action OpenURL("https://www.patreon.com/collegekings")
             xalign 0.5
 
         imagebutton:
-            idle image_path + "patreon_wordmark.png"
+            idle image_path + "patreon_wordmark.webp"
             action OpenURL("https://www.patreon.com/collegekings")
             xalign 0.7
 
@@ -37,20 +37,20 @@ screen end_screen():
         spacing 0
 
         imagebutton:
-            idle image_path + "menu_idle.png"
+            idle image_path + "menu_idle.webp"
             action MainMenu()
             xalign 0.20
             xoffset - 60
             yoffset 47
 
         imagebutton:
-            idle image_path + "get_access_idle.png"
+            idle image_path + "get_access_idle.webp"
             action OpenURL("https://www.patreon.com/collegekings")
             xalign 0.5
             xoffset 10
 
         imagebutton:
-            idle image_path + "credits_idle.png"
+            idle image_path + "credits_idle.webp"
             action Show("team_credits")
             xalign 1
             xoffset 90
@@ -64,7 +64,7 @@ screen patreon_credits():
 
     default image_path = "gui/end_screen/"
 
-    add image_path + "patreon_credits_background.png"
+    add image_path + "patreon_credits_background.webp"
 
 
     vbox:
@@ -78,7 +78,7 @@ screen patreon_credits():
         spacing 100
 
         imagebutton:
-            idle image_path + "support_development_idle.png"
+            idle image_path + "support_development_idle.webp"
             action OpenURL("https://www.patreon.com/collegekings")
 
     hbox:
@@ -87,12 +87,12 @@ screen patreon_credits():
         yoffset -40
 
         imagebutton:
-            idle image_path + "main_menu_idle.png"
+            idle image_path + "main_menu_idle.webp"
             action MainMenu()
             xoffset -12
 
         imagebutton:
-            idle image_path + "team_idle.png"
+            idle image_path + "team_idle.webp"
             action Show("team_credits")
 
 
@@ -104,7 +104,7 @@ screen team_credits():
 
     default image_path = "gui/end_screen/"
 
-    add image_path + "team_credits_background.png"
+    add image_path + "team_credits_background.webp"
 
     hbox:
         align (0.5, 0.5)
@@ -155,11 +155,11 @@ screen team_credits():
         yoffset -40
 
         imagebutton:
-            idle image_path + "main_menu_idle.png"
+            idle image_path + "main_menu_idle.webp"
             action MainMenu()
 
         imagebutton:
-            idle image_path + "credits_small_idle.png"
+            idle image_path + "credits_small_idle.webp"
             action Show("patreon_credits")
 
     on "show" action SetVariable("quick_menu", False)
