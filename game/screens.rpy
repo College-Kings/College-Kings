@@ -272,7 +272,7 @@ screen quick_menu():
             imagebutton idle image_path + "quick_load_idle.png" action QuickLoad()
             # textbutton _("Prefs") action ShowMenu("preferences")
 
-    if config.developer:
+    if quick_menu and config.developer:
         hbox:
             align (1.0, 1.0)
             xoffset -20
