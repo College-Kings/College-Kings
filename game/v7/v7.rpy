@@ -2925,10 +2925,15 @@ label beachlauren:
 
         pause 0.5
 
+        scene s743vid
+        with dissolve
+        
+        pause 1.4
+
         scene s743apic
         with dissolve
 
-        " "
+        pause 0.75
 
         la "*Quiet moan* Mhmmm..."
 
@@ -3291,10 +3296,15 @@ label beachlauren:
 
                             pause 0.5
 
+                            scene s743vid
+                            with dissolve
+                            
+                            pause 1.4
+
                             scene s743apic
                             with dissolve
 
-                            " "
+                            pause 0.75
 
                             la "*Quiet moan* Mhmmm..."
 

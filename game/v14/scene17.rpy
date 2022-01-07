@@ -335,9 +335,7 @@ label v14s17:
     with dissolve
 
     menu:
-
         "Make fun of her":
-
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Ooooohhh... *Coughs* Nerd! *Coughs*"
@@ -358,9 +356,11 @@ label v14s17:
             la "Mhmm, that's more like it."
 
         "Compliment her":
-
             $ add_point(KCT.BOYFRIEND)
 
+            scene v14s17_10b
+            #with dissolve
+            
             u "Damn, well done."
 
             scene v14s17_10d
@@ -524,10 +524,10 @@ label v14s17:
                 la "I'll talk to her and see what she needs me to do."
 
             else:
-                call screen kct_popup(required_kct="loyal")
                 scene v14s17_10g
                 with dissolve
 
+                call screen kct_popup(required_kct="loyal")
                 la "You're right, but..."
 
                 scene v14s17_10h # FPP. Same as v14s17_10a, serious expression 
@@ -720,7 +720,7 @@ label v14s17:
 
                         la "Okay, yeah I get it. Just don't bring it up again, okay?"
 
-                        scene v14s17_10g
+                        scene v14s17_10b
                         with dissolve
 
                         u "My lips are sealed."
@@ -747,10 +747,10 @@ label v14s17:
                             pause 1.75
 
                     else:
-                        call screen kct_popup(required_kct="loyal")
                         scene v14s17_17 # FPP. Lauren Looking at MC, serious expression, mouth open
                         with dissolve
                         
+                        call screen kct_popup(required_kct="loyal")
                         $ set_presidency_percent(v14_lindsey_popularity + 1)
                         la "Exactly, the most loyal person you know, and that's why you of all people should know that I wouldn't do something like that."
 

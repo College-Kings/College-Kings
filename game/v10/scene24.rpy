@@ -204,14 +204,10 @@ label v10_lauren_room:
 
     u "You never know until you try."
 
-    $ scene_fromgame = True
-    
     if lauren.relationship.value >= Relationship.KISS.value:
         label v10_lauren_room_sg:
-            if not scene_fromgame:
+            if _in_replay:
                 $ lauren.relationship = Relationship.GIRLFRIEND
-
-    $ scene_fromgame = False
 
     if lauren.relationship.value >= Relationship.KISS.value: # If dating or have made out        
         scene v10lar3g # FPP Same angle as v10lar3, Lauren looking seductive, mouth open

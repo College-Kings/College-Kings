@@ -187,6 +187,10 @@ label v14s19a:
 
                 "Make an excuse":
                     $ add_point(KCT.BRO)
+                    
+                    scene v14s19a_1g
+                    #with dissolve
+                    
                     u "I hate to state the obvious but, Chris and I aren't on the best of terms right now... And he's got Nora on his mind, so..."
 
                     scene v14s19a_1c

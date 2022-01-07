@@ -1,7 +1,7 @@
 # SCENE 21: Meeting with Ms. Rose
 # Locations: A Private room located in the Library
 # Characters: CHLOE (Outfit: 3), MC (Outfit: 9), Ms. Rose (Outfit: 1), Mr. LEE (Outfit: 1)
-# Time: AfterNoon
+# Time: Morning!
 # Render Count: 17 unique 148 total
 
 label v15s21:
@@ -99,7 +99,7 @@ label v15s21:
 
         menu:
             "Lindsey's wasting paper":
-                $ add_point(KCT.TROUBLEMAKER)
+                #$ add_point(KCT.TROUBLEMAKER)
                 $ v15s21_meeting_points -= 1
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
@@ -146,7 +146,7 @@ label v15s21:
 
             "Stay quiet":
                 $ v15s21_meeting_points += 0
-                $ add_point(KCT.BRO)
+                #$ add_point(KCT.BRO)
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
 
@@ -257,7 +257,7 @@ label v15s21:
         menu:
             "They just have to ask":
                 $ v15s21_meeting_points += 1
-                $ add_point(KCT.BRO)
+                #$ add_point(KCT.BRO)
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
 
@@ -285,8 +285,8 @@ label v15s21:
                 lee "And I'm certain they will if your plan goes through. So we should consider the implications of that carefully."
 
             "This is Chloe's idea":
-                $ add_point(KCT.BOYFRIEND)
-                $ add_point(KCT.TROUBLEMAKER)
+                #$ add_point(KCT.BOYFRIEND)
+                #$ add_point(KCT.TROUBLEMAKER)
                 $ v15s21_meeting_points -= 1
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
@@ -353,7 +353,7 @@ label v15s21:
 
         menu:
             "Make SVC more money":
-                $ add_point(KCT.TROUBLEMAKER)
+                #$ add_point(KCT.TROUBLEMAKER)
                 $ v15s21_meeting_points -= 1
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
@@ -389,7 +389,7 @@ label v15s21:
 
             "Improve students' livelihood":
                 $ v15s21_meeting_points += 1
-                $ add_point(KCT.BRO)
+                #$ add_point(KCT.BRO)
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
 
@@ -520,7 +520,7 @@ label v15s21:
 
         menu:
             "Defend the Dean's decision":
-                $ add_point(KCT.BOYFRIEND)
+                #$ add_point(KCT.BOYFRIEND)
                 $ v15s21_meeting_points -= 1
                 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
@@ -552,7 +552,7 @@ label v15s21:
 
             "Defend Mr. Lee's opinion":
                 $ v15s21_meeting_points += 1
-                $ add_point(KCT.BRO)
+                #$ add_point(KCT.BRO)
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 10, "MR. LEE")
 
@@ -1139,7 +1139,6 @@ label v15s21:
         ro "Oh! Very organized... Impressive."
 
         if ms_rose.relationship.value >= Relationship.FWB.value:
-        
             scene v15s21_10d # FPP. Chloe is walking away with her back turned and can't see Mc or Ms. Rose, Ms. Rose is giving Mc a wink, slight smile, mouth closed
             with dissolve
             
@@ -1202,7 +1201,7 @@ label v15s21:
 
         menu:
             "Mention Nora":
-                $ add_point(KCT.TROUBLEMAKER)
+                #$ add_point(KCT.TROUBLEMAKER)
                 $ v15s21_meeting_points -= 1
 
                 scene v15s21_13b
@@ -1241,7 +1240,7 @@ label v15s21:
                 u "(Not off to a great start... Should've kept my mouth shut, fuck.)"
 
             "Stay quiet":
-                $ add_point(KCT.BOYFRIEND)
+                #$ add_point(KCT.BOYFRIEND)
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
 
@@ -1338,7 +1337,7 @@ label v15s21:
         menu:
             "You understand sorority life":
                 $ v15s21_meeting_points += 1
-                $ add_point(KCT.BOYFRIEND)
+                #$ add_point(KCT.BOYFRIEND)
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
 
@@ -1365,7 +1364,7 @@ label v15s21:
                 ro "Haha... Well, I'm glad that you both feel that way. Thank you."
 
             "Mr. Lee doesn't listen":
-                $ add_point(KCT.TROUBLEMAKER)
+                #$ add_point(KCT.TROUBLEMAKER)
                 $ v15s21_meeting_points -= 1
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
@@ -1430,8 +1429,8 @@ label v15s21:
         menu:
             "They'll be motivated":
                 $ v15s21_meeting_points += 1
-                $ add_point(KCT.BRO)
-                $ add_point(KCT.BOYFRIEND)
+                #$ add_point(KCT.BRO)
+                #$ add_point(KCT.BOYFRIEND)
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
 
@@ -1485,7 +1484,7 @@ label v15s21:
                 ro "Ha. Alright, noted."
 
             "They'll get over it":
-                $ add_point(KCT.TROUBLEMAKER)
+                #$ add_point(KCT.TROUBLEMAKER)
                 $ v15s21_meeting_points -= 1
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
@@ -1552,8 +1551,8 @@ label v15s21:
 
         menu:
             "She shouldn't do that":
-                $ add_point(KCT.TROUBLEMAKER)
-                $ add_point(KCT.BOYFRIEND)
+                #$ add_point(KCT.TROUBLEMAKER)
+                #$ add_point(KCT.BOYFRIEND)
                 $ v15s21_meeting_points -= 1
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
@@ -1601,7 +1600,7 @@ label v15s21:
                 pause 0.75
 
             "Consider it":
-                $ add_point(KCT.BRO)
+                #$ add_point(KCT.BRO)
                 $ v15s21_meeting_points += 1
 
                 show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")

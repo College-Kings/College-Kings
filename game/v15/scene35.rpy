@@ -4,6 +4,39 @@
 # Time: Evening
 # Render Count: Unique Renders 18 Total: 144
 
+## EXAMPLE:
+    # $ screen_options = [
+    #     {
+    #         "character": lindsey,
+    #         "votes": [lindsey, nora]
+    #     },
+    #     {
+    #         "character": aubrey,
+    #         "votes": [chloe]
+    #     },
+    #     {
+    #         "character": nora,
+    #         "votes": [aubrey]
+    #     },
+    #     {
+    #         "character": chloe,
+    #         "votes": []
+    #     }
+    # ]
+    # call screen whos_most_likely_to("Would you rather?", options)
+
+    # $ screen_options = [
+    #     {
+    #         "option": "Travel to the maldivas",
+    #         "votes": [lindsey, nora, chloe]
+    #     },
+    #     {
+    #         "option": "Rock climb the everest",
+    #         "votes": [aubrey]
+    #     }
+    # ]
+    # call screen would_you_rather("Would you rather?", options)
+
 init python:
     def v15s35_kiwiireply1():
         v15s35_kiwiiPost1.newComment(imre, "Bro, you have no idea what you're getting yourself into. You're so fucking on!", numberLikes=renpy.random.randint(260, 560))
@@ -593,7 +626,6 @@ label v15s35:
             jump v15s35_afterkill
 
         # -if MC accepted blowjob from Naomi and Aubrey is mad with him then she should be more unplayful, not smiling at his jokes. But if he didn't do the blowjob and they're on good terms, especially if they're RS, she will be laughing and playing along with him.
-
 
         label v15_kill_easter_bunny:
             scene v15s35_7i # FPP. same as v15s35_7h Lindsey is looking at Autumn, still a slight smile, mouth is still open

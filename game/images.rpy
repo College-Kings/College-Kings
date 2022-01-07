@@ -329,6 +329,7 @@ image carbacknight = Movie(play="images/v6/carbacknight.webm")
 
 # v7.0
 image s738avid = Movie(play="images/v7/s738avid.webm", loop=False, image="images/v7/s738avid75.webp", start_image="images/v7/s738avid16.webp")
+image s743vid = Movie(play="images/v7/s743vid.webm", loop=False, image="images/v7/s743c.webp", start_image="images/v7/s743c.webp")
 
 image risexvid1 = Movie(play="images/v7/risexvid1.webm", image="images/v7/risex1vid20.webp", start_image="images/v7/risex1vid00.webp")
 image risexvid2s = Movie(play="images/v7/risexvid2s.webm", image="images/v7/rivid378.webp", start_image="images/v7/rivid360.webp")

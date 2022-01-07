@@ -727,12 +727,12 @@ label v14s37:
     lady "And that's also why you can't keep a fucking job, you're a loser!"
 
     if v14s37_focus_on_us or kct == "confident":
-        scene v14s37_10h
+        scene v14s37_10i
         with dissolve
 
         pe "*Sighs* [name]... I don't want to ruin our night, but-"
 
-        scene v14s37_10i
+        scene v14s37_10h
         with dissolve
 
         u "Say no more, let's go. We'll come back another time."

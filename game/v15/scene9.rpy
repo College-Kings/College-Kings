@@ -456,9 +456,7 @@ label v15s9:
 
         play sound "sounds/vibrate.mp3"
 
-        if v14s48_car_price <= v15s10_buyer_max_amount:
-            $ v15_lindsey_sold = True
-            
+        if v14s48_car_price <= v15s10_buyer_max_amount:            
             $ lindsey.messenger.newMessage("Hey! Somebody wants to check out the car and they sound really interested!", force_send=True)
             $ lindsey.messenger.newMessage("I'm meeting them now. Can you come to where we took the photos?", force_send=True)
 

@@ -887,7 +887,7 @@ label v15s18c_imre_aubrey:
 
             au "*Moans* You- OH!"
 
-            scene v15aubfin2f
+            scene v15aubfin2f 
             with dissolve
 
             pause 0.75
@@ -1331,6 +1331,8 @@ label v15s18c_lauren:
         "Balcony is better":
             $ add_point(KCT.BOYFRIEND)
 
+            $ add_point(KCT.BOYFRIEND)
+
             u "Eh, I like the balcony a lot better. I'd be out here all the time if I were you, haha."
 
             scene v15s18c_la_3a
@@ -1339,6 +1341,8 @@ label v15s18c_lauren:
             la "*Chuckles* I am out here a lot, it's just relaxing."
 
         "Bigger the better":
+            $ add_point(KCT.BRO)
+
             $ add_point(KCT.BRO)
 
             u "Yeah... Having a small room kind of sucks, the bigger the better in my opinion."
@@ -1870,11 +1874,10 @@ label v15s18c_autumn_amber:
                     jump v15s18c_autumn_kiss
 
                 else:
-                    call screen kct_popup(required_kct="loyal")
-                
                     scene v15s18c_auam_5d
                     with dissolve
 
+                    call screen kct_popup(required_kct="loyal")
                     aut "You just nothing. You're lucky I won't tell Lauren that you even asked me."
 
                     scene v15s18c_auam_5e
@@ -1963,10 +1966,10 @@ label v15s18c_autumn_amber:
                     u "(Well, that could've gone worse...)"
                 
                 else:
-                    call screen kct_popup(required_kct="loyal")
                     scene v15s18c_auam_5f
                     with dissolve
 
+                    call screen kct_popup(required_kct="loyal")
                     aut "Hmm... I don't-"
 
                     scene v15s18c_auam_5g

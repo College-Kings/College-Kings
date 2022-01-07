@@ -143,6 +143,9 @@ label v15s46:
                 am "Yeah! It makes sense because that's the answer, haha!"
 
             "Yeah, of course":
+                scene v15s46_3a
+                #with dissolve
+
                 u "Yeah, of course!"
 
                 scene v15s46_3
@@ -203,6 +206,9 @@ label v15s46:
                     "To pick up something":
                         $ add_point(KCT.TROUBLEMAKER)
                         
+                        scene v15s46_3a
+                        #with dissolve
+
                         u "Because she needed to pick up something?"
 
                         scene v15s46_3
@@ -352,7 +358,6 @@ label v15s46:
         with dissolve
 
         am "Good! More for us. Hehe..."
-
     else:
         scene v15s46_3a
         with dissolve

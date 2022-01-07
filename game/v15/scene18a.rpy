@@ -433,6 +433,7 @@ label v15s18a_Ryan:
     
     menu:
         "Gag":
+            $ add_point(KCT.BOYFRIEND)
             $ v15s18a_gag = True
             $ add_point(KCT.BOYFRIEND)
 
@@ -1731,8 +1732,6 @@ label v15s18a_Riley:
         
             u "Haha, what is it?"
 
-            $ scene_fromgame = True
-
             label v15s18a_rileysg:
 
             scene v15s18ariley_2n # FPP. Riley looking down at the paper that we can't see, Riley slight smile, mouth open.
@@ -1962,15 +1961,13 @@ label v15s18a_Riley:
 
             $ sceneList.add("v15_riley")
 
-            if scene_fromgame:
+            if not _in_replay:
                 $ checklist[3].complete = True
 
             u "(Well... That wasn't so hard. *Laughs* Where to next?)"
 
             $ renpy.end_replay()
             
-            $ scene_fromgame = False
-
             scene v15s18ariley_12a # TPP. MC putting his costume back on, slight smile, mouth closed.
             with dissolve
 
@@ -2203,8 +2200,6 @@ label v15s18a_ChrisAmber:
                     if amber.relationship.value < Relationship.FWB.value:
                         call screen kct_popup
                     
-                    $ scene_fromgame = True
-                    
                     label v15s18a_ambersg:
                     
                     scene v15s18aamber_3c
@@ -2402,7 +2397,7 @@ label v15s18a_ChrisAmber:
 
                     $ sceneList.add("v18_amber")
 
-                    if scene_fromgame:
+                    if not _in_replay:
                         $ checklist[2].complete = True
 
                     u "(Blow job, check!)"
@@ -2416,8 +2411,6 @@ label v15s18a_ChrisAmber:
                     with dissolve
 
                     $ renpy.end_replay()
-
-                    $ scene_fromgame = False
 
                     pause 0
 

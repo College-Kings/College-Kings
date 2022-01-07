@@ -355,24 +355,24 @@ label v14s45a:
 
     pause
 
-    scene v14s45a_1c
+    scene v14s45a_1d
     with dissolve
 
     u "Mmm, not bad."
 
-    scene v14s45a_1d
+    scene v14s45a_1c
     with dissolve
 
     am "Hell yeah, haha. I'm out of here on a high note."
 
     am "We'll catch up soon, okay?"
 
-    scene v14s45a_1c
+    scene v14s45a_1d
     with dissolve
 
     u "Sounds like a plan, yeah."
 
-    scene v14s45a_1d
+    scene v14s45a_1c
     with dissolve
 
     am "Bye!"

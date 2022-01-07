@@ -41,9 +41,9 @@ label v14s03e:
         with dissolve
 
         menu: 
-
             "Good to hear":
                 $ add_point(KCT.BRO)
+                
                 u "Oh, good to hear..."
 
                 scene v14s03e_3b # FPP. Same as v14s03e_3, mouth open
@@ -53,6 +53,10 @@ label v14s03e:
 
             "Oof, poor Satin":
                 $ add_point(KCT.TROUBLEMAKER)
+
+                scene v14s03e_3
+                #with dissolve
+
                 u "Oof, poor Satin, haha."
 
                 scene v14s03e_3b # FPP. Same as v14s03e_3, mouth open
@@ -428,6 +432,10 @@ label v14s03e:
 
         "Not cool, Ryan":
             $ add_point(KCT.BOYFRIEND)
+            
+            scene v14s03e_20a
+            #with dissolve
+            
             u "Not cool, Ryan."
 
             scene v14s03e_20

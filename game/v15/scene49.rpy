@@ -147,7 +147,6 @@ label v15s49:
                 with dissolve
 
                 ri "[name]... *Sighs* Thank God you're here. *Sniffles*"
-
             else:
                 scene v15s49_14
                 with dissolve
@@ -270,6 +269,9 @@ label v15s49:
         "Try to calm Tom":
             $ add_point(KCT.BOYFRIEND)
             
+            scene v15s49_13d
+            #with dissolve
+
             u "We don't have to do this, you know. We can just forget about it and go home."
 
             scene v15s49_13c
@@ -287,6 +289,10 @@ label v15s49:
     menu:
         "Nobody's walking away":
             $ add_point(KCT.TROUBLEMAKER)
+
+            scene v15s49_16
+            #with dissolve
+
             u "Nobody's walking away, Riley."
 
             scene v15s49_17 # TPP. Close up of MC's face looking at Tom, MC angry, mouth open.

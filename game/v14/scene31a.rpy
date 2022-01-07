@@ -343,6 +343,10 @@ label v14s31a:
 
         "To strengthen the Apes":
             $ add_point(KCT.BRO)
+
+            scene v14s31a_3e
+            #with dissolve
+            
             u "To strengthen the Apes."
 
             scene v14s31a_3d
@@ -391,12 +395,12 @@ label v14s31a:
             ca "Good point..."
 
     # -Continue regardless of choice
-    scene v14s31a_3e
+    scene v14s31a_3d
     with dissolve
 
     ca "You already got a shit ton of beef with Grayson. How would an alliance work if the President doesn't even fuck with you like that?"
 
-    scene v14s31a_3d
+    scene v14s31a_3e
     with dissolve
 
     u "That's why we came to you, you're someone he does listen to."
@@ -426,6 +430,10 @@ label v14s31a:
 
         "Collaboration":
             $ add_point(KCT.BOYFRIEND)
+            
+            scene v14s31a_3e
+            #with dissolve
+            
             u "I don't know exactly, we haven't decided just yet."
 
             u "Maybe just some sort of collaborative post on Kiwii would get the ball rolling and make people start talking."
@@ -578,6 +586,10 @@ label v14s31a:
             "She says what she needs to": # -If She says what she needs to (creates cameron Bro for Wolves)
                 $ add_point(KCT.BRO)
                 $ cameron.relationship = Relationship.BRO
+                
+                scene v14s31a_3e
+                #with dissolve
+                
                 u "She knows what she needs to say. She's damn good at it too."
 
                 scene v14s31a_3c

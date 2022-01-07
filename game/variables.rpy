@@ -34,7 +34,6 @@ default previous_location = ""
 default path_builder = False
 default pb_name_set = False
 default pb_start_location = "start"
-default scene_fromgame = False
 
     # Voice Acting
 default voice_acted = True
@@ -50,6 +49,9 @@ default troublemaker = 1
 
 # Scenes
 default sceneList = set()
+
+# Screens
+default screen_options = []
 
 # Sex Overlay
 default sex_overlay_options = []
@@ -401,7 +403,7 @@ default v15_stay_on_topic = False
 default v15_say_nothing = False
 default v15s48_interrupt = False
 default v15s48_follow_your_heart = False
-default v15_lindsey_sold = False
+default v15_car_sold_price = 0
 default v15s33_flirt = False
 default v15s33_cheese = False
 default v15s33_naomi_broke_aubreyrs = False
@@ -412,3 +414,4 @@ default v15say_nothing = False
 default v15s22_meeting_points = 0
 default v15_NoraFriendZone = True
 default v15s33_take_photo = False
+default v15_lindsey_recording = 0 # 1 if sober, 2 if drunk
