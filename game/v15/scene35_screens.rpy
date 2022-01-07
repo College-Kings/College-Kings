@@ -1,4 +1,4 @@
-screen whos_most_likely_to(question, answers):
+screen whos_most_likely_to(question, characters):
     tag game_show
     style_prefix "game_show"
 
