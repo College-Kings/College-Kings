@@ -2,35 +2,105 @@
 screen end_screen():
     tag end_screen
     modal True
+    style_prefix "end_screen"
 
     default image_path = "gui/end_screen/"
 
     add image_path + "end_screen_background.png"
 
+    vbox:
+        align (0.5, 0.375)
+        spacing 0
+
+        text "ACT 4 PART 2"
+        xalign 0.5
+
+        text "Coming this December!" color "#EA54E8"
+        xalign 0.5
+        yoffset -5
+
     hbox:
-        align (0.5, 0.9)
-        spacing 100
+        align (0.5, 0.55)
+        spacing 0
 
-        textbutton "MENU":
+        text "Exclusively on "
+        xalign 0.3
+        size 42
+        xoffset -18
+
+        imagebutton:
+            idle image_path + "patreon_logo.png"
+            action OpenURL("https://www.patreon.com/collegekings")
+            xalign 0.5
+
+        imagebutton:
+            idle image_path + "patreon_wordmark.png"
+            action OpenURL("https://www.patreon.com/collegekings")
+            xalign 0.7
+
+    hbox:
+        align (0.5, 0.80)
+        spacing 0
+
+        imagebutton:
+            idle image_path + "menu_idle.png"
             action MainMenu()
-            yalign 0.5
-            text_size 100
+            xalign 0.20
+            xoffset - 60
+            yoffset 47
+
+        imagebutton:
+            idle image_path + "get_access_idle.png"
+            action OpenURL("https://www.patreon.com/collegekings")
+            xalign 0.5
+            xoffset 10
+
+        imagebutton:
+            idle image_path + "credits_idle.png"
+            action Show("team_credits")
+            xalign 1
+            xoffset 90
+            yoffset 47
 
 
-        textbutton "Credits":
-            action Jump("credits")
-            yalign 0.5
-            text_size 100
-
-
-# NOT READY YET - Need the video file for the Patreons
 screen patreon_credits():
     tag end_screen
     modal True
+    style_prefix "patreon_credits"
 
     default image_path = "gui/end_screen/"
 
     add image_path + "patreon_credits_background.png"
+
+
+    vbox:
+        align(0.5, 0.334)
+        spacing 100
+
+        text "Patreons video file {b}HERE{/b}"
+
+    vbox:
+        align(0.5, 0.75)
+        spacing 100
+
+        imagebutton:
+            idle image_path + "support_development_idle.png"
+            action OpenURL("https://www.patreon.com/collegekings")
+
+    hbox:
+        spacing 50
+        align (0.5, 1.0)
+        yoffset -40
+
+        imagebutton:
+            idle image_path + "main_menu_idle.png"
+            action MainMenu()
+            xoffset -12
+
+        imagebutton:
+            idle image_path + "team_idle.png"
+            action Show("team_credits")
+
 
 
 screen team_credits():
@@ -98,8 +168,14 @@ screen team_credits():
     on "replaced" action SetVariable("quick_menu", True)
 
 
-style end_screen_text is montserrat_extra_bold_64
+style end_screen_text is text:
+    font "fonts/Montserrat-ExtraBold.ttf"
+    size 68
 
 style team_credits_text is text:
+    font "fonts/Montserrat-Regular.ttf"
+    size 38
+
+style patreon_credits_text is text:
     font "fonts/Montserrat-Regular.ttf"
     size 38
