@@ -1385,9 +1385,6 @@ label v15s35:
 
         li "So, the first one is..."
 
-        scene v15s35_7b
-        with dissolve
-
         li "Who is most likely to be the first to die and turn into a zombie in a zombie apocalypse?"
 
         scene v15s35_9
@@ -1409,6 +1406,11 @@ label v15s35:
         with dissolve
 
         aut "Ew, I want nothing to do with this."
+
+        scene v15s35_7h
+        with dissolve
+
+        li "Okay, let's get started. Just remember you can't vote for yourselves."
 
         scene v15s35_8k
         with dissolve
@@ -1432,6 +1434,11 @@ label v15s35:
                 "character": lindsey,
                 "votes": [autumn],
                 "label": "v15s35_wml1_lin"
+            },
+            {
+                "character": mc,
+                "votes": [],
+                "label": ""
             }
         ]
         call screen whos_most_likely_to("Most likely to turn into a zombie during an apocalypse?")
@@ -1615,6 +1622,11 @@ label v15s35:
                 "character": lindsey,
                 "votes": [],
                 "label": "v15s35_wml2"
+            },
+            {
+                "character": mc,
+                "votes": [aubrey, autumn, lindsey],
+                "label": ""
             }
         ]
         call screen whos_most_likely_to("Most likely to wake up drunk across the country?")
@@ -1826,6 +1838,11 @@ label v15s35:
                 "character": lindsey,
                 "votes": [],
                 "label": "v15s35_wml3"
+            },
+            {
+                "character": mc,
+                "votes": [aubrey],
+                "label": ""
             }
         ]
         call screen whos_most_likely_to("Most likely to become a super sexy spy?")
@@ -2024,6 +2041,11 @@ label v15s35:
                 "character": lindsey,
                 "votes": [autumn],
                 "label": "v15s35_wml4_lin"
+            },
+            {
+                "character": mc,
+                "votes": [aubrey],
+                "label": ""
             }
         ]
         call screen whos_most_likely_to("Most likely to get caught having sex on a plane?")

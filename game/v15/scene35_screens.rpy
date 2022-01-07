@@ -39,8 +39,16 @@ screen whos_most_likely_to(question):
                         button:
                             xysize (324, 91)
                             idle_background "images/v15/game_show/button_idle.png"
-                            hover_background "images/v15/game_show/button_idle.png"
-                            action [SetDict(option, "votes", option["votes"] + [mc]), Show("whos_most_likely_to_answers", question=question, mc_choice=option)]
+                            
+                            if option["character"] == mc:
+                                hover_background "images/v15/game_show/button_idle.png"
+                            else:
+                                hover_background "images/v15/game_show/button_hover.png"
+                            
+                            if option["character"] == mc:
+                                action NullAction()
+                            else:
+                                action [SetDict(option, "votes", option["votes"] + [mc]), Show("whos_most_likely_to_answers", question=question, mc_choice=option)]
 
                             text option["character"].name.upper() align (0.5, 0.5)
 
@@ -87,6 +95,8 @@ screen whos_most_likely_to_answers(question, mc_choice):
                     vbox:
                         align (0.5, 0.5)
                         spacing 20
+                        
+                        text option["character"].name.upper() xalign 0.5
                         
                         if len(option["votes"]) == 1:
                             text "{{color=#FFCC2B}}{}{{/color}} VOTE".format(len(option["votes"])) style "game_show_vote_text" xalign 0.5
