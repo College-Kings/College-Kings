@@ -12,21 +12,15 @@ screen end_screen():
         align (0.5, 0.375)
         spacing 0
 
-        text "ACT 4 PART 2"
-        xalign 0.5
+        text "ACT 4 PART 2" xalign 0.5
 
-        text "Coming this December!" color "#EA54E8"
-        xalign 0.5
-        yoffset -5
+        text "Coming this December!" color "#EA54E8" xalign 0.5 yoffset -5
 
     hbox:
         align (0.5, 0.55)
         spacing 0
 
-        text "Exclusively on "
-        xalign 0.3
-        size 42
-        xoffset -18
+        text "Exclusively on " xalign 0.3 size 42 xoffset -18
 
         imagebutton:
             idle image_path + "patreon_logo.png"
@@ -117,10 +111,13 @@ screen team_credits():
         spacing 150
 
         vbox:
+            yoffset -20
+            xoffset -113
+
             text "{b}UndergradSteve{/b} - Game Creator"
             text "{b}KingLui{/b} - Project Manager"
             text "{b}OscarSix{/b} - Technical Officer"
-            null height 20
+            null height 30
             text "{b}Oskin{/b} - Lead Enforcer"
             text "{b}Lucious Lordswill{/b} - Lead Writer"
             text "{b}Cheexmarie{/b} - Lead Editor"
@@ -128,12 +125,15 @@ screen team_credits():
             text "{b}Condy{/b} - Quality Assurance Manager"
             text "{b}Jany{/b} - Translation Manager"
             text "{b}Mozzart{/b} - Lead Artist & Coordinator"
-            null height 20
+            null height 30
             text "{b}Maro{/b} - Marketing Specialist"
             text "{b}HugeBoiV2{/b} - Transcriber"
             text "{b}Jeffly{/b} - Transcriber"
 
         vbox:
+            yoffset -20
+            xoffset -95
+
             text "{b}MegaManX{/b} - Transcriber"
             text "{b}mstep17{/b} - Transcriber"
             text "{b}SystemFailed{/b} - Transcriber"
