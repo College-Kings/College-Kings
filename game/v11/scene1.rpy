@@ -1112,7 +1112,7 @@ label v11_case_verdict:
         scene v11coc14c
         with dissolve
 
-        u "Thank you Mr. Lee."
+        u "Thank you, Mr. Lee."
 
         scene v11coc12
         with dissolve

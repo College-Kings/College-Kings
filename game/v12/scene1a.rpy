@@ -387,9 +387,6 @@ label v12_chase_robber:
 
         no "*Chuckles*"
 
-        scene v12car28a
-        with dissolve
-
         u "Here you go."
 
         scene v12car28b # FPP Same angle as v12car28, Nora standing close to MC, smiling with mouth open

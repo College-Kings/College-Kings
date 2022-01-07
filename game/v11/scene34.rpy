@@ -15,7 +15,7 @@ label v11_cardealership:
     pause 0.75
     
     scene v11cd3 # FPP. The car salesman comes in MCs and Chloe's direction, mouth opened 
-    with dissolve 
+    with dissolve
 
     csa "Hello there, how may I help you?"
 
@@ -727,7 +727,7 @@ label v11_cardealership:
     play sound "sounds/call.mp3"
 
     scene v11cd41 # FPP. now looking at chloe, mouth opened
-    with dissolve 
+    with dissolve
 
     cl "So sorry, one second... My phone is ringing."
 

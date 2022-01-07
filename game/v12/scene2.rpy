@@ -104,9 +104,6 @@ label v12_nora_checks_mc:
 
         u "*Gulp*"
 
-        scene v12ncm5l 
-        with dissolve
-
         no "Hmm, maybe you are fine."
 
         scene v12ncm5f # FPP. MC sitting back up, looking at nora, mouth closed
