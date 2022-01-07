@@ -40,7 +40,7 @@ screen whos_most_likely_to(question):
                             xysize (324, 91)
                             idle_background "images/v15/game_show/button_idle.png"
                             hover_background "images/v15/game_show/button_idle.png"
-                            action [SetDict(option, "votes", option["votes"] + [mc]), Show("whos_most_likely_to_answers", question=question)]
+                            action [SetDict(option, "votes", option["votes"] + [mc]), Show("whos_most_likely_to_answers", question=question, mc_choice=option)]
 
                             text option["character"].name.upper() align (0.5, 0.5)
 
@@ -59,7 +59,7 @@ screen would_you_rather(question):
                     background Frame("images/v15/game_show/answer_frame.png")
                     sensitive mc not in option["votes"]
                     selected mc in option["votes"]
-                    action [SetDict(option, "votes", option["votes"] + [mc]), Show("would_you_rather_answers", question=question)]
+                    action [SetDict(option, "votes", option["votes"] + [mc]), Show("would_you_rather_answers", question=question, mc_choice=option)]
 
                     hbox:
                         align (0.5, 0.5)
@@ -71,7 +71,7 @@ screen would_you_rather(question):
                         text option["option"].upper() yalign 0.5 style "game_show_option_text"
 
 
-screen whos_most_likely_to_answers(question):
+screen whos_most_likely_to_answers(question, mc_choice):
     tag game_show
     style_prefix "game_show"
 
@@ -97,10 +97,10 @@ screen whos_most_likely_to_answers(question):
                             for vote in option["votes"]:
                                 add Transform(vote.profile_picture, size=(65, 65))
 
-    button action Return()
+    button action Jump(mc_choice["label"])
 
 
-screen would_you_rather_answers(question):
+screen would_you_rather_answers(question, mc_choice):
     tag game_show
     style_prefix "game_show"
 
@@ -120,11 +120,11 @@ screen would_you_rather_answers(question):
 
                         text char + ":" yalign 0.5 style "game_show_char_text"
 
-                        text option["option"].upper() yalign 0.5 style "game_show_option_text"
+                        text option["option"].upper() xsize 450 yalign 0.5 style "game_show_option_text"
 
                         text "{{color=#FFCC2B}}{}{{/color}} VOTES".format(len(option["votes"])) yalign 0.5 style "game_show_vote_text"
 
-    button action Return()
+    button action Jump(mc_choice["label"])
 
 
 style game_show_question_text is text:
