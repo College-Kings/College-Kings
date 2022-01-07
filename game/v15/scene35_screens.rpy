@@ -87,8 +87,11 @@ screen whos_most_likely_to_answers(question, mc_choice):
                     vbox:
                         align (0.5, 0.5)
                         spacing 20
-
-                        text "{{color=#FFCC2B}}{}{{/color}} VOTES".format(len(option["votes"])) style "game_show_vote_text" xalign 0.5
+                        
+                        if len(option["votes"]) == 1:
+                            text "{{color=#FFCC2B}}{}{{/color}} VOTE".format(len(option["votes"])) style "game_show_vote_text" xalign 0.5
+                        else:
+                            text "{{color=#FFCC2B}}{}{{/color}} VOTES".format(len(option["votes"])) style "game_show_vote_text" xalign 0.5
 
                         hbox:
                             xalign 0.5
@@ -122,7 +125,10 @@ screen would_you_rather_answers(question, mc_choice):
 
                         text option["option"].upper() xsize 450 yalign 0.5 style "game_show_option_text"
 
-                        text "{{color=#FFCC2B}}{}{{/color}} VOTES".format(len(option["votes"])) yalign 0.5 style "game_show_vote_text"
+                        if len(option["votes"]) == 1:
+                            text "{{color=#FFCC2B}}{}{{/color}} VOTE".format(len(option["votes"])) yalign 0.5 style "game_show_vote_text"
+                        else:
+                            text "{{color=#FFCC2B}}{}{{/color}} VOTES".format(len(option["votes"])) yalign 0.5 style "game_show_vote_text"
 
     button action Jump(mc_choice["label"])
 
