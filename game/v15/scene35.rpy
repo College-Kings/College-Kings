@@ -1415,156 +1415,161 @@ label v15s35:
 
     # -We enter the UI for Most likely to-
 
-        menu:
-            "Lindsey":
-                jump v15_lindsey_zombie
-
-            "Autumn":
-                jump v15_autumn_or_aubrey_zombie
-
-            "Aubrey":
-                jump v15_autumn_or_aubrey_zombie
-
     # -After MC chooses an Icon, and then votes for a person, we see on the UI who everyone has chosen. Lindsey and Aubrey voted for Autumn. Autumn voted for Lindsey-
 
-        # -if MC voted for Lindsey, creating a tie
+        $ screen_options = [
+            {
+                "character": aubrey,
+                "votes": [],
+                "label": "v15s35_wml1_aub"
+            },
+            {
+                "character": autumn,
+                "votes": [aubrey, lindsey],
+                "label": "v15s35_wml1_aub"
+            },
+            {
+                "character": lindsey,
+                "votes": [autumn],
+                "label": "v15s35_wml1_lin"
+            }
+        ]
+        call screen whos_most_likely_to("Most likely to be the first to turn into a zombie?")
 
-        label v15_lindsey_zombie:
-            scene v15s35_7i
-            with dissolve
+    label v15s35_wml1_lin: # -if MC voted for Lindsey, creating a tie
+        scene v15s35_7i
+        with dissolve
 
-            li "It's a tie between me and Autumn?"
+        li "It's a tie between me and Autumn?"
 
-            scene v15s35_8
-            with dissolve
+        scene v15s35_8
+        with dissolve
 
-            aut "I don't want to be a zombie!"
+        aut "I don't want to be a zombie!"
 
-            scene v15s35_9a
-            with dissolve
+        scene v15s35_9a
+        with dissolve
 
-            au "I voted for you because I think you'd try to be friends with them, haha."
+        au "I voted for you because I think you'd try to be friends with them, haha."
 
-            scene v15s35_8b
-            with dissolve
+        scene v15s35_8b
+        with dissolve
 
-            aut "Really? You think I'd want to be friends with someone who wants to eat me?"
+        aut "Really? You think I'd want to be friends with someone who wants to eat me?"
 
-            scene v15s35_7i
-            with dissolve
+        scene v15s35_7i
+        with dissolve
 
-            li "You totally would."
+        li "You totally would."
 
-            scene v15s35_8e
-            with dissolve
+        scene v15s35_8e
+        with dissolve
 
-            u "Don't worry, Autumn. I think Lindsey would be right there with you."
+        u "Don't worry, Autumn. I think Lindsey would be right there with you."
 
-            scene v15s35_8a
-            with dissolve
+        scene v15s35_8a
+        with dissolve
 
-            u "*Laughs* Zombie sisters."
+        u "*Laughs* Zombie sisters."
 
-            scene v15s35_9a
-            with dissolve
+        scene v15s35_9a
+        with dissolve
 
-            au "You can share brains!"
+        au "You can share brains!"
 
-            scene v15s35_8b
-            with dissolve
+        scene v15s35_8b
+        with dissolve
 
-            aut "Okay, ew, ew , ew! Stop it!"
+        aut "Okay, ew, ew , ew! Stop it!"
 
-            scene v15s35_7h
-            with dissolve
+        scene v15s35_7h
+        with dissolve
 
-            li "No thank you. I'll pass."
-            
-            jump v15s35_afterzombie
+        li "No thank you. I'll pass."
+        
+        jump v15s35_wml1_end
 
-        # -if MC voted for Autumn or Aubrey, Autumn wins the vote
+    label v15s35_wml1_aub: # -if MC voted for Autumn or Aubrey, Autumn wins the vote
+        scene v15s35_7i
+        with dissolve
 
-        label v15_autumn_or_aubrey_zombie:
-            scene v15s35_7i
-            with dissolve
+        li "Sorry, Autumn. You're the first one to go."
 
-            li "Sorry, Autumn. You're the first one to go."
+        scene v15s35_8
+        with dissolve
 
-            scene v15s35_8
-            with dissolve
+        aut "What? Why?! I don't want to be a zombie."
 
-            aut "What? Why?! I don't want to be a zombie."
+        scene v15s35_8e
+        with dissolve
 
-            scene v15s35_8e
-            with dissolve
+        u "I think you got the most votes because you're kind natured... *Chuckles*"
 
-            u "I think you got the most votes because you're kind natured... *Chuckles*"
+        u "It's basically a compliment."
 
-            u "It's basically a compliment."
+        scene v15s35_8m
+        with dissolve
 
-            scene v15s35_8m
-            with dissolve
+        aut "Well, it's true that I'd probably try to help them... And then I'd get eaten."
 
-            aut "Well, it's true that I'd probably try to help them... And then I'd get eaten."
+        scene v15s35_8d
+        with dissolve
 
-            scene v15s35_8d
-            with dissolve
+        aut "In that case, I'm a proud zombie."
 
-            aut "In that case, I'm a proud zombie."
+        scene v15s35_9a
+        with dissolve
 
-            scene v15s35_9a
-            with dissolve
+        au "Haha, I knew you would embrace the zombie life."
 
-            au "Haha, I knew you would embrace the zombie life."
+        scene v15s35_8b
+        with dissolve
 
-            scene v15s35_8b
-            with dissolve
+        aut "Zombies are people too."
 
-            aut "Zombies are people too."
+        scene v15s35_8a
+        with dissolve
 
-            scene v15s35_8a
-            with dissolve
+        u "Even though you're rampaging killers who eat nothing but brains?"
 
-            u "Even though you're rampaging killers who eat nothing but brains?"
+        scene v15s35_8d
+        with dissolve
 
-            scene v15s35_8d
-            with dissolve
+        aut "*Laughs* You'd be safe, [name]. Don't worry."
 
-            aut "*Laughs* You'd be safe, [name]. Don't worry."
+        scene v15s35_8a
+        with dissolve
 
-            scene v15s35_8a
-            with dissolve
+        u "Haha, what are you saying? I'm brainless?"
 
-            u "Haha, what are you saying? I'm brainless?"
+        scene v15s35_8d
+        with dissolve
 
-            scene v15s35_8d
-            with dissolve
+        aut "Of course not! I'm too kind natured to say something like that to someone's face..."
 
-            aut "Of course not! I'm too kind natured to say something like that to someone's face..."
+        scene v15s35_8h
+        with dissolve
 
-            scene v15s35_8h
-            with dissolve
+        pause 0.75
 
-            pause 0.75
+        scene v15s35_8a
+        with dissolve
 
-            scene v15s35_8a
-            with dissolve
+        u "Haha, ouch!"
 
-            u "Haha, ouch!"
+        scene v15s35_8d
+        with dissolve
 
-            scene v15s35_8d
-            with dissolve
+        aut "*Laughs*"
 
-            aut "*Laughs*"
-
-        label v15s35_afterzombie:
+    label v15s35_wml1_end:
 
         scene v15s35_7b
         with dissolve
 
         li "Okay, time for the second one..."
 
-        li "Who is most likely to get shit-faced drunk and wake up the other side of the country?"
+        li "Who is most likely to get shit-faced drunk and wake up on the other side of the country?"
 
         scene v15s35_7c
         with dissolve
@@ -1593,79 +1598,88 @@ label v15s35:
 
     # -We enter the UI for Most likely to-
 
-        menu:
-            "Lindsey":
-                jump v15_mc_most_shitfaced
-
-            "Autumn":
-                jump v15_mc_most_shitfaced
-
-            "Aubrey":
-                jump v15_mc_most_shitfaced
-
     # -After MC votes for a person, we see on the UI who everyone has chosen. All three girls voted for MC-
 
-        label v15_mc_most_shitfaced:
-            scene v15s35_7d
-            with dissolve
+        $ screen_options = [
+            {
+                "character": aubrey,
+                "votes": [],
+                "label": "v15s35_wml2"
+            },
+            {
+                "character": autumn,
+                "votes": [],
+                "label": "v15s35_wml2"
+            },
+            {
+                "character": lindsey,
+                "votes": [],
+                "label": "v15s35_wml2"
+            }
+        ]
+        call screen whos_most_likely_to("Most likely to be get shit-faced drunk and wake up on the other side of the country?")
 
-            li "Haha, was it ever in doubt? [name], let us know where you end up."
+    label v15s35_wml2:
+        scene v15s35_7d
+        with dissolve
 
-            scene v15s35_7c
-            with dissolve
+        li "Haha, was it ever in doubt? [name], let us know where you end up."
 
-            u "Woah now, this is bullying. Why did you all vote for me?"
+        scene v15s35_7c
+        with dissolve
 
+        u "Woah now, this is bullying. Why did you all vote for me?"
+
+        scene v15s35_9b
+        with dissolve
+
+        au "You're in a frat. You guys get up to all kinds of stupid shit."
+
+        scene v15s35_8d
+        with dissolve
+
+        aut "Yeah, it's only a matter of time before you get shit-faced and end up on a random bus ride across country, haha."
+
+        scene v15s35_7d
+        with dissolve
+
+        li "Waking up in Alaska or something, wondering why it's so cold, haha."
+
+        scene v15s35_7c
+        with dissolve
+
+        u "Haha, to be honest, that does sound like something that would happen to me."
+
+        scene v15s35_9d
+        with dissolve
+
+        u "Hopefully, drunk me will choose somewhere nice though, like a tropical island."
+
+        scene v15s35_8d
+        with dissolve
+
+        aut "Well, just be sure to send us a postcard when you get there, haha."
+
+        scene v15s35_8a
+        with dissolve
+
+        u "I will. Now I'm really looking forward to the next time I get drunk..."
+
+        if aubrey.relationship.value >= Relationship.TAMED.value:
             scene v15s35_9b
             with dissolve
 
-            au "You're in a frat. You guys get up to all kinds of stupid shit."
-
-            scene v15s35_8d
-            with dissolve
-
-            aut "Yeah, it's only a matter of time before you get shit-faced and end up on a random bus ride across country, haha."
-
-            scene v15s35_7d
-            with dissolve
-
-            li "Waking up in Alaska or something, wondering why it's so cold, haha."
-
-            scene v15s35_7c
-            with dissolve
-
-            u "Haha, to be honest, that does sound like something that would happen to me."
+            au "If you're going to a tropical island, I'm coming with you."
 
             scene v15s35_9d
             with dissolve
 
-            u "Hopefully, drunk me will choose somewhere nice though, like a tropical island."
+            u "Okay, but only if you're shit-faced too."
 
-            scene v15s35_8d
+            scene v15s35_9h
             with dissolve
 
-            aut "Well, just be sure to send us a postcard when you get there, haha."
-
-            scene v15s35_8a
-            with dissolve
-
-            u "I will. Now I'm really looking forward to the next time I get drunk..."
-
-            if aubrey.relationship.value >= Relationship.TAMED.value:
-                scene v15s35_9b
-                with dissolve
-
-                au "If you're going to a tropical island, I'm coming with you."
-
-                scene v15s35_9d
-                with dissolve
-
-                u "Okay, but only if you're shit-faced too."
-
-                scene v15s35_9h
-                with dissolve
-
-                au "Deal!"
+            au "Deal!"
 
         scene v15s35_7b
         with dissolve
@@ -1795,84 +1809,93 @@ label v15s35:
 
     # -We enter the UI for Most likely to-
 
-        menu:
-            "Lindsey":
-                jump v15_aubrey_spy
-
-            "Autumn":
-                jump v15_aubrey_spy
-
-            "Aubrey":
-                jump v15_aubrey_spy
-
     # -After MC votes for a person, we see on the UI who everyone has chosen. Lindsey and Autumn voted for Aubrey. Aubrey voted for MC-
 
-        label v15_aubrey_spy:
-            if aubrey.relationship.value <= Relationship.MAD.value:
-                scene v15s35_9t # FPP. same as v15s35_9o Aubrey is avoiding eye contact with Mc, still no expression, mouth is still closed
-                with dissolve
+        $ screen_options = [
+            {
+                "character": aubrey,
+                "votes": [autumn, lindsey],
+                "label": "v15s35_wml3"
+            },
+            {
+                "character": autumn,
+                "votes": [],
+                "label": "v15s35_wml3"
+            },
+            {
+                "character": lindsey,
+                "votes": [],
+                "label": "v15s35_wml3"
+            }
+        ]
+        call screen whos_most_likely_to("Most likely to become a super sexy spy?")
 
-                pause 0.75
-
-            scene v15s35_7h
-            with dissolve
-
-            li "Aubrey is the new James Bond!"
-
-            scene v15s35_9u # FPP. same as v15s35_9 Aubrey is striking a sexy/seuctive pose, still facing Lindsey, mouth is open
-            with dissolve
-
-            au "Am I? Yes! Now I need to go practice my seduction techniques so I can steal top secret government files..."
-
-            scene v15s35_9d
-            with dissolve
-
-            u "How are you with a gun?"
-
-            scene v15s35_9b
-            with dissolve
-
-            au "Hmm, I'll have to practice that too."
-
-            scene v15s35_8b
-            with dissolve
-
-            aut "You can always get Moneypussy to help."
-
-            scene v15s35_8d
-            with dissolve
-
-            u "*Laughs* Moneypussy?"
-
-            scene v15s35_8m
-            with dissolve
-
-            aut "Yeah, there's a character called Moneypussy, isn't there?"
-
-            scene v15s35_7i
-            with dissolve
-
-            li "*Laughs* Not in any of the movies I've seen."
-
-            scene v15s35_9v # FPP. same as v15s35_9h Aubrey is leaning back in her chair laughing, full smile, facing Autumn
+    label v15s35_wml3:
+        if aubrey.relationship.value <= Relationship.MAD.value:
+            scene v15s35_9t # FPP. same as v15s35_9o Aubrey is avoiding eye contact with Mc, still no expression, mouth is still closed
             with dissolve
 
             pause 0.75
 
-            scene v15s35_9a
-            with dissolve
+        scene v15s35_7h
+        with dissolve
 
-            au "Money... Moneypussy?! *Laughs* You're killing me Autumn... Phew."
+        li "Aubrey is the new James Bond!"
 
-            scene v15s35_8b
-            with dissolve
+        scene v15s35_9u # FPP. same as v15s35_9 Aubrey is striking a sexy/seuctive pose, still facing Lindsey, mouth is open
+        with dissolve
 
-            aut "Haha, sorry! I thought that's what his name was..."
+        au "Am I? Yes! Now I need to go practice my seduction techniques so I can steal top secret government files..."
 
-            scene v15s35_8n
-            with dissolve
+        scene v15s35_9d
+        with dissolve
 
-            u "I wish that was someone's name."
+        u "How are you with a gun?"
+
+        scene v15s35_9b
+        with dissolve
+
+        au "Hmm, I'll have to practice that too."
+
+        scene v15s35_8b
+        with dissolve
+
+        aut "You can always get Moneypussy to help."
+
+        scene v15s35_8d
+        with dissolve
+
+        u "*Laughs* Moneypussy?"
+
+        scene v15s35_8m
+        with dissolve
+
+        aut "Yeah, there's a character called Moneypussy, isn't there?"
+
+        scene v15s35_7i
+        with dissolve
+
+        li "*Laughs* Not in any of the movies I've seen."
+
+        scene v15s35_9v # FPP. same as v15s35_9h Aubrey is leaning back in her chair laughing, full smile, facing Autumn
+        with dissolve
+
+        pause 0.75
+
+        scene v15s35_9a
+        with dissolve
+
+        au "Money... Moneypussy?! *Laughs* You're killing me Autumn... Phew."
+
+        scene v15s35_8b
+        with dissolve
+
+        aut "Haha, sorry! I thought that's what his name was..."
+
+        scene v15s35_8n
+        with dissolve
+
+        u "I wish that was someone's name."
 
         scene v15s35_7b
         with dissolve
@@ -1984,130 +2007,138 @@ label v15s35:
 
     # -We enter the UI for Most likely to-
 
-        menu:
-            "Lindsey":
-                jump v15_lindsey_plane
-
-            "Autumn":
-                jump v15_autumn_plane
-
-            "Aubrey":
-                jump v15_aubrey_plane
-
     # -After MC votes for a person, we see on the UI who everyone has chosen. Lindsey voted for Aubrey. Autumn voted for Lindsey. Aubrey voted for MC-
 
-        label v15_autumn_plane:
-            scene v15s35_7b
+        $ screen_options = [
+            {
+                "character": aubrey,
+                "votes": [lindsey],
+                "label": "v15s35_wml4_aub"
+            },
+            {
+                "character": autumn,
+                "votes": [],
+                "label": "v15s35_wml4_aut"
+            },
+            {
+                "character": lindsey,
+                "votes": [autumn],
+                "label": "v15s35_wml4_lin"
+            }
+        ]
+        call screen whos_most_likely_to("Most likely to get caught having sex on a plane?")
+
+    label v15s35_wml4_aub:
+        scene v15s35_7h
+        with dissolve
+
+        li "The votes are in. Aubrey is definitely most likely!"
+
+        scene v15s35_9
+        with dissolve
+
+        au "Was it ever in doubt?"
+
+        scene v15s35_8b
+        with dissolve
+
+        aut "Just another one of Aubrey's sexual adventures, hehe."
+
+        scene v15s35_9a
+        with dissolve
+
+        au "You've gotta spice things up, ladies! Haven't you ever done anything like that?"
+
+        scene v15s35_8b
+        with dissolve
+
+        aut "Nope. And I don't think I ever would."
+        
+        jump v15s35_wml4_end
+
+    label v15s35_wml4_aut:
+        scene v15s35_7b
+        with dissolve
+
+        li "It's a four-way tie!"
+
+        scene v15s35_7c
+        with dissolve
+
+        u "Do you think we could all fit in an airplane bathroom?"
+
+        if aubrey.relationship.value > Relationship.MAD.value:
+            scene v15s35_9h
             with dissolve
 
-            li "It's a four-way tie!"
+            au "Haha, only one way to find out!"
 
-            scene v15s35_7c
-            with dissolve
+        scene v15s35_8b
+        with dissolve
 
-            u "Do you think we could all fit in an airplane bathroom?"
+        aut "Not happening, haha!"
+        
+        jump v15s35_wml4_end
 
-            if aubrey.relationship.value > Relationship.MAD.value:
-                scene v15s35_9h
-                with dissolve
+    label v15s35_wml4_lin:
+        scene v15s35_7d
+        with dissolve
 
-                au "Haha, only one way to find out!"
+        li "Me? Haha, no way."
 
-            scene v15s35_8b
-            with dissolve
+        scene v15s35_9
+        with dissolve
 
-            aut "Not happening, haha!"
-            
-            jump v15s35_afterplane
+        au "You're smiling, so you obviously like the sound of it..."
 
-        label v15_aubrey_plane:
-            scene v15s35_7h
-            with dissolve
+        scene v15s35_7m # FPP. same as v15s35_7h Lindsey is blushing, still looking at Aubrey, mouth is still open, still a slight smile
+        with dissolve
 
-            li "The votes are in. Aubrey is definitely most likely!"
+        pause 0.75
 
+        scene v15s35_9
+        with dissolve
+
+        au "That's why I voted for you. You protest like you're all innocent, but you totally would!"
+
+        scene v15s35_7m
+        with dissolve
+
+        li "Ha, stop it! I mean, I'm not going to lie, it sounds hot... I would just hate to get caught."
+
+        scene v15s35_7c
+        with dissolve
+
+        u "Yeah, I think in all the excitement you'd forget to lock the door, haha."
+
+        if v11_aubrey_sex and aubrey.relationship.value > Relationship.MAD.value:
             scene v15s35_9
             with dissolve
 
-            au "Was it ever in doubt?"
-
-            scene v15s35_8b
-            with dissolve
-
-            aut "Just another one of Aubrey's sexual adventures, hehe."
-
-            scene v15s35_9a
-            with dissolve
-
-            au "You've gotta spice things up, ladies! Haven't you ever done anything like that?"
-
-            scene v15s35_8b
-            with dissolve
-
-            aut "Nope. And I don't think I ever would."
-            
-            jump v15s35_afterplane
-
-        label v15_lindsey_plane:
-            scene v15s35_7d
-            with dissolve
-
-            li "Me? Haha, no way."
-
-            scene v15s35_9
-            with dissolve
-
-            au "You're smiling, so you obviously like the sound of it..."
-
-            scene v15s35_7m # FPP. same as v15s35_7h Lindsey is blushing, still looking at Aubrey, mouth is still open, still a slight smile
-            with dissolve
+            au "It happens more often than you think..."
 
             pause 0.75
 
+            scene v15s35_9j
+            with dissolve
+
+        elif v11_aubrey_sex and aubrey.relationship.value <= Relationship.MAD.value:
             scene v15s35_9
             with dissolve
 
-            au "That's why I voted for you. You protest like you're all innocent, but you totally would!"
+            au "It happens more often than you think..."
 
-            scene v15s35_7m
+            pause 0.75
+
+            scene v15s35_9t
             with dissolve
 
-            li "Ha, stop it! I mean, I'm not going to lie, it sounds hot... I would just hate to get caught."
+        scene v15s35_8b
+        with dissolve
 
-            scene v15s35_7c
-            with dissolve
+        aut "I'd never put myself in that situation."
 
-            u "Yeah, I think in all the excitement you'd forget to lock the door, haha."
-
-            if v11_aubrey_sex and aubrey.relationship.value > Relationship.MAD.value:
-                scene v15s35_9
-                with dissolve
-
-                au "It happens more often than you think..."
-
-                pause 0.75
-
-                scene v15s35_9j
-                with dissolve
-
-            elif v11_aubrey_sex and aubrey.relationship.value <= Relationship.MAD.value:
-                scene v15s35_9
-                with dissolve
-
-                au "It happens more often than you think..."
-
-                pause 0.75
-
-                scene v15s35_9t
-                with dissolve
-
-            scene v15s35_8b
-            with dissolve
-
-            aut "I'd never put myself in that situation."
-
-        label v15s35_afterplane:
-
+    label v15s35_wml4_end:
         scene v15s35_9a
         with dissolve
 
@@ -2166,944 +2197,943 @@ label v15s35:
 # -Regardless of game choice
 
     label v15s35_autumn_reveal:
-
-    scene v15s35_8o
-    with dissolve
-
-    aut "I just don't desire sex. I don't get the urges that you all have."
-
-    scene v15s35_7n
-    with dissolve
-
-    li "So, you've never wanted to try it?"
-
-    scene v15s35_8p
-    with dissolve
-
-    aut "No, I've never felt the need to."
-
-    scene v15s35_9g
-    with dissolve
-
-    au "Do you think you ever will?"
-
-    scene v15s35_8n
-    with dissolve
-
-    pause 0.75
-
-    scene v15s35_8o
-    with dissolve
-
-    aut "Maybe?"
-
-    scene v15s35_8m
-    with dissolve
-
-    aut "I mean... You never know."
-
-    scene v15s35_8o
-    with dissolve
-
-    aut "But... I doubt it."
-
-    scene v15s35_8n
-    with dissolve
-
-    u "(That might be enough for right now...)"
-
-    scene v15s35_8n
-    with dissolve
-
-    menu:
-        "Stop the questions":
-            $ add_point(KCT.BRO)
-            $ add_point(KCT.BOYFRIEND)
-            if protest or v15_autumn_lunchbreak: # -if Stop the questions (and helped Autumn with boxes at dog shelter and/or went to the protest with her in Act1, creates AutumnTrust)
-                $ autumn.relationship = Relationship.TRUST
-
-            scene v15s35_9o
-            with dissolve
-
-            u "So, shall we move on? Maybe interrogate Autumn some other time? *Chuckles*"
-
-            scene v15s35_9e
-            with dissolve
-
-            pause 0.75
-
-            scene v15s35_9g
-            with dissolve
-
-            au "Oh, yeah. Of course! Sorry, Autumn. I didn't mean to-"
-
-            scene v15s35_8o
-            with dissolve
-
-            aut "It's okay. I.. I chose to bring it up. But yeah, let's have another drink?"
-
-            scene v15s35_9a
-            with dissolve
-
-            au "Yes!"
-
-            scene v15s35_8d
-            with dissolve
-
-            aut "Thanks, [name]."
-
-            scene v15s35_8a
-            with fade
-
-            u "Sure thing."
-
-        "Ask one more":
-            $ add_point(KCT.TROUBLEMAKER)
-
-            scene v15s35_8n
-            with dissolve
-
-            u "So, do you know if you would be into guys or girls, or both?"
-
-            scene v15s35_8q # FPP. same as v15s35_8n Autumn is even more embarrased, covering her body with her arms, avoiding eye contact with everyone, mouth is still closed
-            with dissolve
-
-            pause 0.75
-
-            scene v15s35_8r # FPP. same as v15s35_8q Autumn's mouth is open everything else is the same
-            with dissolve
-
-            aut "..."
-
-            aut "Um..."
-
-            scene v15s35_7k
-            with dissolve
-
-            li "I think we may be getting a bit too personal now."
-
-            scene v15s35_7n
-            with dissolve
-
-            li "You don't have to keep talking about this, Autumn. Can I get anyone another drink?"
-
-            scene v15s35_8p
-            with dissolve
-
-            aut "Thanks, Lindsey. Another drink sounds great."
-
-            scene v15s35_8e
-            with dissolve
-
-            u "Oh, sorry about that."
-
-            scene v15s35_8m
-            with fade
-
-            aut "No worries. I brought it up, ha."
-
-    scene v15s35_11 # TPP. Show Lindsey pouring a couple of liquids into a cocktail shaker can be different juice colours or the same color, slight smile, mouth closed
-    with dissolve
-
-    pause 0.75
-
-    scene v15s35_11a # TPP. same as v15s35_11 Show Lindsey shaking the cocktail shaker, still slight smile, still mouth closed
-    with dissolve
-
-    pause 0.75
-
-    scene v15s35_11b # TPP. same as v15s35_11 Show Lindsey pouring drinks into glasses, 4 glasses total, still slight smile, still mouth closed
-    with dissolve
-
-    pause 0.75
-
-    scene v15s35_6g # TPP. same as v15s35_6 Lindsey approaches the table with the drinks from render v15s35_11b, Lindsey has a slight smile mouth is open, Autumn, Aubrey and Mc are still sitting in their original seats looking at Lindsey all of them have slight smiles, mouths are closed
-    with dissolve
-
-    li "Drinks are served!"
-
-    scene v15s35_6h # TPP. same as v15s35_6h Lindsey is handing a drink to Aubrey, slight smile mouth is closed, Aubrey's mouth is open still a slight smile, Autumn and Mc are looking at Lindsey slight smiles mouths are closed
-    with dissolve
-
-    au "These look even better than the last ones!"
-
-    scene v15s35_6i # TPP. Lindsey sits down in her seat, Everyone now has their new drinks in their hands, all slight smiles all mouths closed Autumn Aubrey and Mc looking at Lindsey, Lindsey looking at Aubrey
-    with dissolve
-
-    pause 0.75
-
-    scene v15s35_12 # FPP. Use the same positioning and background from renders v15s35_7, Lindsey takes a drink from her glass (if different colors for drinks were used make sure she has the color of the one she gave herself,) all v15s35_12 renders Lindsey will be holding her drink unless otherwise stated
-    with dissolve
-
-    pause 0.75
-
-    scene v15s35_12a # FPP. same as v15s35_12 Lindsey's is holding her glass it is 3/4 full (Lindsey will be holding her drink in all all v15s35_12 renders unless otherwise stated), slight smile, mouth is open, looking at Autumn
-    with dissolve
-
-    li "So, I just want to talk about something really quick and then we can get back to having fun, okay?"
-
-    scene v15s35_13 # FPP. Use the same positioning and background from renders v15s35_8, Autumn is holding her drink it is full (if different colors for drinks were used make sure she has the color of the one she gave herself,) all v15s35_13 renders Autumn will be holding her drink unless otherwise stated, slight smile, mouth is open, looking at Lindsey
-    with dissolve
-
-    aut "Is this the part where we talk about your campaign?"
-
-    scene v15s35_12b # FPP. same as v15s35_12a Lindsey is looking at Mc, mouth is closed, still a slight smile, her glass is still 3/4 full
-    with dissolve
-
-    u "The big campaign speech?"
-
-    scene v15s35_12c # FPP. same as v15s35_12b Lindsey's mouth is open, still looking at Mc, still a slight smile, her glass is still 3/4 full
-    with dissolve
-
-    li "Haha, yeah. It's about supporting me."
-
-    scene v15s35_14 # FPP. Use the same positioning and background from renders v15s35_9, Autumn is holding her drink it is full (if different colors for drinks were used make sure she has the color of the one she gave herself,) all v15s35_14 renders Aubrey will be holding her drink unless otherwise stated, slight smile, mouth is open, looking at Lindsey
-    with dissolve
-
-    au "That's okay. Go ahead."
-
-    scene v15s35_12d # FPP. same as v15s35_12a Lindsey is looking at Aubrey, no expression, mouth is still open, her glass is still 3/4 full
-    with dissolve
-
-    li "I just wanted to ask; What has Chloe ever done for you? Like, actually done for you?"
-
-    if v15_chloe_lindseysabotage:
-        scene v15s35_15 # TPP. Show only Mc sitting in his seat, reaching into his pant's pocket, looking at his pocket, slight smile, mouth is closed
+        scene v15s35_8o
         with dissolve
 
-        u "(This might get juicy... Maybe I can try and record Lindsey bitching about Chloe?)"
+        aut "I just don't desire sex. I don't get the urges that you all have."
 
-        scene v15s35_15a # TPP. same as v15s35_15 MC takes out his phone to one side, keeping his phone lower than the table height so no-one can see his phone, and taps on it
+        scene v15s35_7n
+        with dissolve
+
+        li "So, you've never wanted to try it?"
+
+        scene v15s35_8p
+        with dissolve
+
+        aut "No, I've never felt the need to."
+
+        scene v15s35_9g
+        with dissolve
+
+        au "Do you think you ever will?"
+
+        scene v15s35_8n
         with dissolve
 
         pause 0.75
 
-        scene v15s35_15
+        scene v15s35_8o
         with dissolve
 
-        u "(Okay, it's recording. If I'm careful, maybe I can trick her into saying something bad too.)"
+        aut "Maybe?"
 
-    scene v15s35_13a # FPP. same as v15s35_13 Autumn takes a drink from her glass
-    with dissolve
+        scene v15s35_8m
+        with dissolve
 
-    pause 0.75
+        aut "I mean... You never know."
 
-    scene v15s35_13b # FPP. same as v15s35_13 Autumn has no expression, still looking at Lindsey, mouth is still open, her glass is 3/4 full now
-    with dissolve
+        scene v15s35_8o
+        with dissolve
 
-    aut "In general, Chloe's been good to me. She's helped me out with a few things in the past, but, well, nothing lately."
+        aut "But... I doubt it."
 
-    aut "I've invited her to participate in some of the Deer events. She came to one, but all the others, she was a no-show. Not even a text to say sorry."
+        scene v15s35_8n
+        with dissolve
 
-    scene v15s35_14a # FPP. same as v15s35_14 Aubrey takes a drink from her glass
-    with dissolve
+        u "(That might be enough for right now...)"
 
-    pause 0.75
+        scene v15s35_8n
+        with dissolve
 
-    scene v15s35_14b # FPP. same as v15s35_14 Aubrey has no expression, looking at Autumn, mouth is still open, her glass is 3/4 full now
-    with dissolve
+        menu:
+            "Stop the questions":
+                $ add_point(KCT.BRO)
+                $ add_point(KCT.BOYFRIEND)
+                if protest or v15_autumn_lunchbreak: # -if Stop the questions (and helped Autumn with boxes at dog shelter and/or went to the protest with her in Act1, creates AutumnTrust)
+                    $ autumn.relationship = Relationship.TRUST
 
-    au "She is the type of person who makes a lot of promises. She likes to tell people what they want to hear."
+                scene v15s35_9o
+                with dissolve
 
-    scene v15s35_12c
-    with dissolve
+                u "So, shall we move on? Maybe interrogate Autumn some other time? *Chuckles*"
 
-    li "Yeah, so she can get what she wants. She doesn't seem to follow up on any of her promises, does she?"
+                scene v15s35_9e
+                with dissolve
 
-    scene v15s35_13a
-    with dissolve
+                pause 0.75
 
-    aut "Not lately. But that doesn't mean she's a bad person."
+                scene v15s35_9g
+                with dissolve
 
-    scene v15s35_12e # FPP. same as v15s35_12c Lindsey is looking at Autumn, still no expression, mouth is still open, her glass is still 3/4 full
-    with dissolve
+                au "Oh, yeah. Of course! Sorry, Autumn. I didn't mean to-"
 
-    li "I'm not saying she's a bad person. But is she capable of doing the job she's supposed to be doing?"
+                scene v15s35_8o
+                with dissolve
 
-    scene v15s35_12c
-    with dissolve
+                aut "It's okay. I.. I chose to bring it up. But yeah, let's have another drink?"
 
-    li "This is the whole reason why I'm challenging her. It's nothing personal. I just think she should be doing more as our President."
+                scene v15s35_9a
+                with dissolve
 
-    scene v15s35_12e
-    with dissolve
+                au "Yes!"
 
-    li "She should be supporting you at all your events, Autumn. Wouldn't you prefer that?"
+                scene v15s35_8d
+                with dissolve
 
-    scene v15s35_13a
-    with dissolve
+                aut "Thanks, [name]."
 
-    aut "Yeah, I would."
+                scene v15s35_8a
+                with fade
 
-    scene v15s35_12c
-    with dissolve
+                u "Sure thing."
 
-    li "I want to create an environment where we can rely on each other."
+            "Ask one more":
+                $ add_point(KCT.TROUBLEMAKER)
 
-    scene v15s35_12e
-    with dissolve
+                scene v15s35_8n
+                with dissolve
 
-    li "To me, supporting other sororities benefits everyone, and that's why we're all here, right?"
+                u "So, do you know if you would be into guys or girls, or both?"
 
-    scene v15s35_13a
-    with dissolve
+                scene v15s35_8q # FPP. same as v15s35_8n Autumn is even more embarrased, covering her body with her arms, avoiding eye contact with everyone, mouth is still closed
+                with dissolve
 
-    aut "Right."
+                pause 0.75
 
-    scene v15s35_12c
-    with dissolve
+                scene v15s35_8r # FPP. same as v15s35_8q Autumn's mouth is open everything else is the same
+                with dissolve
 
-    li "We all want our experiences to be the best they can be."
+                aut "..."
 
-    scene v15s35_12e
-    with dissolve
+                aut "Um..."
 
-    li "We can maintain healthy rivalries or whatever, but we need to be there for each other... And Chloe doesn't seem to get that."
+                scene v15s35_7k
+                with dissolve
 
-    scene v15s35_13a
-    with dissolve
+                li "I think we may be getting a bit too personal now."
 
-    aut "I totally understand what you're saying. It's a better approach for sure."
+                scene v15s35_7n
+                with dissolve
 
-    scene v15s35_14a
-    with dissolve
+                li "You don't have to keep talking about this, Autumn. Can I get anyone another drink?"
 
-    au "I've been trying to stay out of this whole thing as much as possible, but I agree with what you're saying, Lindsey."
+                scene v15s35_8p
+                with dissolve
 
-    scene v15s35_12f # FPP. same as v15s35_12 Lindsey is looking at Aubrey, still a slight smile, mouth is still open, her glass is still 3/4 full
-    with dissolve
+                aut "Thanks, Lindsey. Another drink sounds great."
 
-    li "Thank you. It means a lot that you both feel the same way."
+                scene v15s35_8e
+                with dissolve
 
-    scene v15s35_12a
-    with dissolve
+                u "Oh, sorry about that."
 
-    if v15_chloe_lindseysabotage:
-        if v15_lindsey_alcohol:
-            scene v15s35_12a
-            with dissolve
+                scene v15s35_8m
+                with fade
 
-            u "(It'll help if Lindsey's more drunk. She'll be easier to trick into bad-mouthing Chloe.)"
+                aut "No worries. I brought it up, ha."
 
-            scene v15s35_12a
-            with dissolve
-
-            menu:
-                "Stay quiet":
-                    $ add_point(KCT.BRO)
-
-                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                        $ add_point(KCT.TROUBLEMAKER)
-
-                    if hangOutWithLindsey:
-                        $ add_point(KCT.BOYFRIEND)
-
-                    scene v15s35_12a
-                    with dissolve
-
-                    u "(Not feeling that this is the best time.)"
-
-                    scene v15s35_14c # FPP. same as v15s35_14b Aubrey's mouth is open, looking at Lindsey, still a slight smile, her glass is still 3/4 full
-                    with dissolve
-
-                    au "I think we've talked enough about Chloe now anyway."
-
-                    scene v15s35_13c # FPP. same as v15s35_13 Autumn's glass is 3/4 full, still a slight smile, still looking at Lindsey, mouth is still open
-                    with dissolve
-
-                    aut "Yeah, I'm feeling pretty sleepy."
-
-                    scene v15s35_12a
-                    with dissolve
-
-                    u "It's been a long day for sure, but I had a great time."
-
-                    scene v15s35_13c
-                    with dissolve
-
-                    aut "Yeah, it was a lot of fun Lindsey!"
-
-                    scene v15s35_14c
-                    with dissolve
-
-                    au "We should definitely do it again sometime."
-
-                    scene v15s35_12f
-                    with dissolve
-
-                    li "Aw, yes, we will!"
-
-                    scene v15s35_14d # FPP. same as scene v15s35_14c Aubrey stands up from her chair, her mouth is closed, still a slight smile, looking at Mc, her glass is still 3/4 full and sitting on the table not in her hand
-                    with dissolve
-
-                    pause 0.75
-
-                "Offer shots":
-                    $ add_point(KCT.TROUBLEMAKER)
-
-                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                        $ add_point(KCT.BOYFRIEND)
-
-                    if hangOutWithLindsey:
-                        $ add_point(KCT.TROUBLEMAKER)
-
-                    scene v15s35_12a 
-                    with dissolve
-
-                    u "Let's take shots!"
-
-                    scene v15s35_12g # FPP. same as v15s35_12b Lindsey has no expression, still looking at Mc, mouth is still open, her glass is still 3/4 full
-                    with dissolve
-
-                    li "We're in the middle of something here, [name]."
-
-                    scene v15s35_12h # FPP. same as v15s35_12g Lindsey's mouth is closed, still looking at Mc, still no expression, her glass is still 3/4 full
-                    with dissolve
-
-                    u "Yeah, but look at the time. It's shots o'clock!"
-
-                    scene v15s35_16 # TPP. show MC in the kitchen, show Mc holding an alcohol bottle pouring it into 3 shot glasses in front of him, and a second different style alcohol bottle same color liquid as the one he is pouring on the counter, he has a slight smile, mouth is closed
-                    with dissolve
-
-                    pause 0.75
-
-                    scene v15s35_16a # TPP. same as v15s35_16 MC has put down the first bottle and grabs the second bottle, same colour liquid as the first, and fills a 4th shot glass with it, still a slight smile, mouth is still closed
-                    with dissolve
-
-                    u "(I'll put something extra strong in Lindsey's glass.)"
-
-                    scene v15s35_6j # TPP. same as v15s35_6j Show Mc coming back to the table with the 4 filled shot glasses, Autumn Aubrey and Lindsey are sitting in their seats all looking at Mc all slight smiles all mouths are closed, if possible show all of their drinks in their hands 3/4 full (not necessary if not possible)
-                    with dissolve
-
-                    pause 0.75
-
-                    scene v15s35_12i # FPP. same as v15s35_12b Lindsey's glass is 3/4 full, still looking at Mc, still a slight smile, mouth is still open
-                    with dissolve
-
-                    li "I'm already buzzed, though. I don't think I can handle a shot, ha."
-
-                    scene v15s35_14e # FPP. same as v15s35_14c Aubrey is looking at Mc, still a slight smile, mouth is still open, her glass is still 3/4 full
-                    with dissolve
-
-                    au "I want one!"
-
-                    scene v15s35_14c
-                    with dissolve
-
-                    u "That's what I like to hear!"
-
-                    scene v15s35_6k # TPP. same as v15s35_6j All of them are standing where they were seated, MC is handing a shot glass to Lindsey slight smile mouth is closed, Lindsey is taking the glass from Mc, no expression mouth is closed, Aubrey and Autumn are looking at Mc holding their shot glasses, both of them slight smiles, mouths are closed
-                    with dissolve
-
-                    pause 0.75
-
-                    scene v15s35_6l # TPP. same as v15s35_6k All of them raise their shot glasses together if possible otherwise just show them raising them in the air, Mc's mouth is open, All of them slight smiles, Aubrey Lindsey and Autumn's mouths are closed
-                    with dissolve
-
-                    u "3, 2, 1. Shots!"
-
-                    scene v15s35_6m # TPP. same as v15s35_6l They all drink their shots
-                    with dissolve
-
-                    pause 0.75
-
-                    scene v15s35_12j # FPP. same as v15s35_12i Lindsey's face is rosey from being drunk, still a slight smile, still looking at Mc, mouth is still open, her glass is still 3/4 full
-                    with dissolve
-
-                    li "*Drunk* Okay, now what was I saying?"
-
-                    scene v15s35_12k # FPP. same as v15s35_12j Lindsey's mouth is closed, still looking at Mc, still a slight smile, her glass is still 3/4 full, still a rosey face from being drunk
-                    with dissolve
-
-                    u "(This is my chance...)"
-
-                    scene v15s35_12k
-                    with dissolve
-
-                    menu (fail_label="v15let_it_happen"):
-                        "Let it happen naturally":
-                            $ add_point(KCT.BRO)
-
-                            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                                $ add_point(KCT.TROUBLEMAKER)
-
-                            jump v15let_it_happen
-
-                        "Bring up Chloe":
-                            $ v15bring_up_chloe = True
-                            $ add_point(KCT.TROUBLEMAKER)
-                            
-                            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                                $ add_point(KCT.BOYFRIEND)
-                                
-                            if hangOutWithLindsey:
-                                $ add_point(KCT.TROUBLEMAKER)
-                                
-                            jump v15bring_up_chloe
-                        
-                    label v15let_it_happen:
-                        scene v15s35_12k
-                        with dissolve
-
-                        u "(Let's see if she makes a mess on her own.)"
-
-                        scene v15s35_14c
-                        with dissolve
-
-                        au "Eh, we get the jist. *Chuckles*"
-
-                        scene v15s35_12l # FPP. same as v15s35_12j Lindsey is looking at Autumn, still a slight smile, mouth is still open, her glass is still 3/4 full, still a rosey face from being drunk
-                        with dissolve
-
-                        li "*Drunk* Anyway, I think that's all I had to say..."
-
-                        scene v15s35_12m # FPP. same as v15s35_12l Lindsey is looking at Aubrey, still a slight smile, mouth is still open, her glass is still 3/4 full, still a rosey face from being drunk
-                        with dissolve
-
-                        li "Just please think about what I've said and consider supporting me. Please?"
-
-                        scene v15s35_13c
-                        with dissolve
-
-                        aut "I totally will."
-
-                        scene v15s35_14c
-                        with dissolve
-
-                        au "Yeah, everything you've said makes a lot of sense."
-
-                        scene v15s35_12m
-                        with dissolve
-
-                        li "*Drunk* Thanks girlies!"
-
-                        scene v15s35_12l
-                        with dissolve
-
-                        li "*Drunk* We should probably end the night here before I pass out on you guys, haha!"
-
-                        scene v15s35_13c
-                        with dissolve
-
-                        aut "*Chuckles* I had a great time. I'm so glad I came."
-
-                        scene v15s35_12k
-                        with dissolve
-
-                        u "Yeah, it's been fun!"
-
-                        scene v15s35_14c
-                        with dissolve
-
-                        au "Let's do it again sometime."
-
-                        scene v15s35_12m
-                        with dissolve
-
-                        li "*Drunk* Yes! That sounds perfect."
-
-                    label v15bring_up_chloe:
-                        
-                        scene v15s35_12k
-                        with dissolve
-
-                        u "You were telling us what you don't like about Chloe."
-
-                        scene v15s35_12j
-                        with dissolve
-
-                        li "*Drunk* What I don't like about Chloe?"
-
-                        scene v15s35_12k
-                        with dissolve
-
-                        u "Yeah, the most annoying things about her?"
-
-                        scene v15s35_14f # FPP. same as v15s35_14e Aubrey has a concerned/worried expression, mouth is closed, still looking at Mc, her glass is still 3/4 full
-                        with dissolve
-
-                        pause 0.75
-
-                        scene v15s35_12d
-                        with dissolve
-
-                        pause 0.75
-
-                        scene v15s35_12n # FPP. same as v15s35_12j Lindsey's glass is now half full, still a slight smile, still looking at Mc, mouth is still open, still a rosey face from being drunk
-                        with dissolve
-
-                        li "*Giggles* do you want a list? I mean, where do I start?"
-
-                        scene v15s35_13b
-                        with dissolve
-
-                        aut "Um..."
-
-                        scene v15s35_12n
-                        with dissolve
-
-                        $ set_presidency_percent(v14_lindsey_popularity - 3)
-
-                        li "*Drunk* Her plastic boobs?"
-
-                        scene v15s35_14f
-                        with dissolve
-
-                        u "(Oof.)"
-
-                        scene v15s35_12n
-                        with dissolve
-
-                        $ set_presidency_percent(v14_lindsey_popularity - 3)
-
-                        li "*Drunk* Or her plastic nose?"
-
-                        scene v15s35_14g # FPP. same as v15s35_14f Aubrey is looking at Lindsey, mouth is open, still a worried/concerned expression, her glass is still 3/4 full
-                        with dissolve
-
-                        au "I think that's enough, Lindsey."
-
-                        scene v15s35_12d
-                        with dissolve
-
-                        pause 0.75
-
-                        scene v15s35_14f
-                        with dissolve
-
-                        menu (fail_label="v15stop_lindsey"):
-                            "Stop Lindsey":
-                                $ add_point(KCT.BRO)
-                                
-                                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                                    $ add_point(KCT.TROUBLEMAKER)
-                                    
-                                if hangOutWithLindsey:
-                                    $ add_point(KCT.BOYFRIEND)
-                                    
-                                jump v15stop_lindsey
-
-                            "Say nothing":
-                                $ v15say_nothing = True
-                                $ add_point(KCT.TROUBLEMAKER)
-                                
-                                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                                    $ add_point(KCT.BOYFRIEND)
-                                    
-                                if hangOutWithLindsey:
-                                    $ add_point(KCT.TROUBLEMAKER)
-                                    
-                                jump v15say_nothing
-
-                        label v15stop_lindsey:
-                            scene v15s35_12o # FPP. same as v15s35_12n Lindsey's glass is now empty, mouth is closed, still a slight smile, still a rosey face from being drunk
-                            with dissolve
-
-                            u "Yeah, maybe stop talking now... Ha."
-
-                            scene v15s35_12p # FPP. same as v15s35_12o Lindsey has a worried/concerned expression, mouth is open, still looking at Mc, her glass is still Empty
-                            with dissolve
-
-                            $ set_presidency_percent(v14_lindsey_popularity + 3)
-
-                            li "*Drunk* Whoops! I probably just sounded like such a bitch. I'm sorry..."
-
-                            scene v15s35_13c
-                            with dissolve
-
-                            aut "It happens. Drinking can turn people's moods just like that."
-
-                            scene v15s35_14c
-                            with dissolve
-
-                            au "It's probably a good time to end the night anyway."
-
-                            scene v15s35_12q # FPP. same as v15s35_12p Lindsey is looking at Aubrey, still has a worried/concerned expression, mouth is still open, her glass is still empty
-                            with dissolve
-
-                            li "*Drunk* Yeah, okay. It is getting late."
-
-                            scene v15s35_14h # FPP. same as scene v15s35_14d Aubrey has no expression, is still standing up from her chair, her mouth is closed, still looking at Mc, her glass is still 3/4 full and sitting on the table not in her hand
-                            with dissolve
-
-                            pause 0.75
-
-                        label v15say_nothing:
-                            scene v15s35_12r # FPP. same as v15s35_12o Lindsey's mouth is open, still looking at Mc, still a slight smile, her glass is still empty, still a rosey face from being drunk
-                            with dissolve
-
-                            li "*Drunk* That's why she's doing everything she can to not lose her scholarship."
-
-                            li "She'd have to sell a good chunk of her body back to the surgeons in order to pay for school, ha!"
-
-                            scene v15s35_14i # FPP. same as v15s35_14g Aubrey has an angry expression, still looking at Lindsey, mouth is still open, her glass is still 3/4 full
-                            with dissolve
-
-                            au "Lindsey, stop. That's way too far."
-
-                            scene v15s35_12q
-                            with dissolve
-
-                            li "*Drunk* Oh, shit... You're so right. Oh my-"
-
-                            scene v15s35_12p
-                            with dissolve
-
-                            li "I'm so sorry. That was a horrible thing to say."
-
-                            scene v15s35_12s # FPP. same as v15s35_12q Lindsey is looking at Autumn, still a worried/concerned expression, mouth is still open, her glass is still empty
-                            with dissolve
-
-                            li "*Drunk* I'm just stressed from all this campaign work... *Sighs* I shouldn't be getting this drunk. I'm really, really sorry."
-
-                            scene v15s35_15
-                            with dissolve
-
-                            pause 0.75
-
-                            scene v15s35_15a
-                            with dissolve
-
-                            u "(Thank you, Lindsey! That's exactly what I needed!)"
-
-                            scene v15s35_15
-                            with dissolve
-
-                            pause 0.75
-
-                            scene v15s35_13d # FPP. same as v15s35_13c Autumn has a slightly angry expression, still looking at Lindsey, mouth is still open, her glass is still 3/4 full
-                            with dissolve
-
-                            aut "I can't imagine how stressed you are, but you should go to bed now. Sleep it off and wake up with a new attitude."
-
-                            scene v15s35_12s
-                            with dissolve
-
-                            li "*Drunk* Yeah, you're right..."
-
-                            scene v15s35_14j # FPP. same as scene v15s35_14h Aubrey has a slightly angry expression, still standing up from her chair, her mouth is closed, still looking at Mc, her glass is still 3/4 full and sitting on the table not in her hand
-                            with dissolve
-
-                            pause 0.75
-        
-        else:
-            scene v15s35_12a
-            with dissolve
-
-            u "(This is going to be almost impossible without alcohol. I can try to trick Lindsey, but I doubt she'll take the bait.)"
-
-            scene v15s35_12a
-            with dissolve
-
-            menu:
-                "Say nothing":
-                    $ add_point(KCT.BRO)
-                    
-                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                        $ add_point(KCT.TROUBLEMAKER)
-                        
-                    if hangOutWithLindsey:
-                        $ add_point(KCT.BOYFRIEND)
-
-                    scene v15s35_12a
-                    with dissolve
-
-                    u "(It's not even worth trying...)"
-
-                    scene v15s35_14c
-                    with dissolve
-
-                    au "I think we've talked enough about Chloe now anyway."
-
-                    scene v15s35_13c
-                    with dissolve
-
-                    aut "Yeah, I'm feeling pretty sleepy."
-
-                    scene v15s35_12a
-                    with dissolve
-
-                    u "It's been a long day for sure, but I had a great time."
-
-                    scene v15s35_13c
-                    with dissolve
-
-                    aut "Yeah, it was a lot of fun Lindsey!"
-
-                    scene v15s35_14c
-                    with dissolve
-
-                    au "We should definitely do it again sometime."
-
-                    scene v15s35_12f
-                    with dissolve
-
-                    li "Aw, yes, we will!"
-
-                    scene v15s35_14d
-                    with dissolve
-
-                    pause 0.75
-                    
-                "Try to trick her":
-                    $ add_point(KCT.TROUBLEMAKER)
-                    
-                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                        $ add_point(KCT.BOYFRIEND)
-                        
-                    if hangOutWithLindsey:
-                        $ add_point(KCT.TROUBLEMAKER)
-
-                    scene v15s35_12a
-                    with dissolve
-
-                    u "Lindsey, be honest with us for a minute, what do you hate most about Chloe?"
-
-                    scene v15s35_14k # FPP. same as v15s35_14i Aubrey has a slightly angry expression, looking at Mc, mouth is closed, her glass is still 3/4 full
-                    with dissolve
-
-                    pause 0.75
-
-                    scene v15s35_12b
-                    with dissolve
-
-                    li "Haha, I don't hate her, [name]. She's my sorority sister."
-
-                    li "I care about her. She's my campaign rival, but I don't hate her."
-
-                    scene v15s35_12a
-                    with dissolve
-
-                    u "Not even a little bit?"
-
-                    scene v15s35_14k
-                    with dissolve
-
-                    pause 0.75
-
-                    if kct == "popular":
-                        call screen kct_popup
-                        scene v15s35_12b
-                        with dissolve
-
-                        $ set_presidency_percent(v14_lindsey_popularity - 3)
-
-                        li "What do you want me to say? That her boobs are obviously fake? Everyone knows that I think."
-
-                        scene v15s35_12a
-                        with dissolve
-
-                        u "I don't know, but you kind of just did."
-
-                        scene v15s35_12b
-                        with dissolve
-
-                        li "Well, I did, but I didn't mean it in a bad way... I was just joking."
-
-                    else:
-                        scene v15s35_12b
-                        with dissolve
-
-                        li "No. Not at all. Stop trying to cause trouble, [name], haha."
-
-                    scene v15s35_14g
-                    with dissolve
-
-                    au "Is it okay if we stop talking about Chloe now?"
-
-                    scene v15s35_13b
-                    with dissolve
-
-                    aut "Yeah, I'm ready to go, I think. Getting a little sleepy over here, haha."
-
-                    scene v15s35_12c
-                    with dissolve
-
-                    li "Oh, okay. Well, thanks for listening to me anyway. I really appreciate it you guys."
-
-                    scene v15s35_13c
-                    with dissolve
-
-                    aut "Of course, I had a great night. Thanks again for the invite."
-
-                    scene v15s35_12a
-                    with dissolve
-
-                    u "Yeah, this was fun."
-
-                    scene v15s35_14j
-                    with dissolve
-
-                    pause 0.75
-
-    else: # -if helping/not helping Chloe and did not choose Embarrass Lindsey-
-        scene v15s35_15b # TPP same as v15s35_15 Mc is stretching and yawning, eyes and mouth are closed
+        scene v15s35_11 # TPP. Show Lindsey pouring a couple of liquids into a cocktail shaker can be different juice colours or the same color, slight smile, mouth closed
         with dissolve
 
         pause 0.75
+
+        scene v15s35_11a # TPP. same as v15s35_11 Show Lindsey shaking the cocktail shaker, still slight smile, still mouth closed
+        with dissolve
+
+        pause 0.75
+
+        scene v15s35_11b # TPP. same as v15s35_11 Show Lindsey pouring drinks into glasses, 4 glasses total, still slight smile, still mouth closed
+        with dissolve
+
+        pause 0.75
+
+        scene v15s35_6g # TPP. same as v15s35_6 Lindsey approaches the table with the drinks from render v15s35_11b, Lindsey has a slight smile mouth is open, Autumn, Aubrey and Mc are still sitting in their original seats looking at Lindsey all of them have slight smiles, mouths are closed
+        with dissolve
+
+        li "Drinks are served!"
+
+        scene v15s35_6h # TPP. same as v15s35_6h Lindsey is handing a drink to Aubrey, slight smile mouth is closed, Aubrey's mouth is open still a slight smile, Autumn and Mc are looking at Lindsey slight smiles mouths are closed
+        with dissolve
+
+        au "These look even better than the last ones!"
+
+        scene v15s35_6i # TPP. Lindsey sits down in her seat, Everyone now has their new drinks in their hands, all slight smiles all mouths closed Autumn Aubrey and Mc looking at Lindsey, Lindsey looking at Aubrey
+        with dissolve
+
+        pause 0.75
+
+        scene v15s35_12 # FPP. Use the same positioning and background from renders v15s35_7, Lindsey takes a drink from her glass (if different colors for drinks were used make sure she has the color of the one she gave herself,) all v15s35_12 renders Lindsey will be holding her drink unless otherwise stated
+        with dissolve
+
+        pause 0.75
+
+        scene v15s35_12a # FPP. same as v15s35_12 Lindsey's is holding her glass it is 3/4 full (Lindsey will be holding her drink in all all v15s35_12 renders unless otherwise stated), slight smile, mouth is open, looking at Autumn
+        with dissolve
+
+        li "So, I just want to talk about something really quick and then we can get back to having fun, okay?"
+
+        scene v15s35_13 # FPP. Use the same positioning and background from renders v15s35_8, Autumn is holding her drink it is full (if different colors for drinks were used make sure she has the color of the one she gave herself,) all v15s35_13 renders Autumn will be holding her drink unless otherwise stated, slight smile, mouth is open, looking at Lindsey
+        with dissolve
+
+        aut "Is this the part where we talk about your campaign?"
+
+        scene v15s35_12b # FPP. same as v15s35_12a Lindsey is looking at Mc, mouth is closed, still a slight smile, her glass is still 3/4 full
+        with dissolve
+
+        u "The big campaign speech?"
+
+        scene v15s35_12c # FPP. same as v15s35_12b Lindsey's mouth is open, still looking at Mc, still a slight smile, her glass is still 3/4 full
+        with dissolve
+
+        li "Haha, yeah. It's about supporting me."
+
+        scene v15s35_14 # FPP. Use the same positioning and background from renders v15s35_9, Autumn is holding her drink it is full (if different colors for drinks were used make sure she has the color of the one she gave herself,) all v15s35_14 renders Aubrey will be holding her drink unless otherwise stated, slight smile, mouth is open, looking at Lindsey
+        with dissolve
+
+        au "That's okay. Go ahead."
+
+        scene v15s35_12d # FPP. same as v15s35_12a Lindsey is looking at Aubrey, no expression, mouth is still open, her glass is still 3/4 full
+        with dissolve
+
+        li "I just wanted to ask; What has Chloe ever done for you? Like, actually done for you?"
+
+        if v15_chloe_lindseysabotage:
+            scene v15s35_15 # TPP. Show only Mc sitting in his seat, reaching into his pant's pocket, looking at his pocket, slight smile, mouth is closed
+            with dissolve
+
+            u "(This might get juicy... Maybe I can try and record Lindsey bitching about Chloe?)"
+
+            scene v15s35_15a # TPP. same as v15s35_15 MC takes out his phone to one side, keeping his phone lower than the table height so no-one can see his phone, and taps on it
+            with dissolve
+
+            pause 0.75
+
+            scene v15s35_15
+            with dissolve
+
+            u "(Okay, it's recording. If I'm careful, maybe I can trick her into saying something bad too.)"
+
+        scene v15s35_13a # FPP. same as v15s35_13 Autumn takes a drink from her glass
+        with dissolve
+
+        pause 0.75
+
+        scene v15s35_13b # FPP. same as v15s35_13 Autumn has no expression, still looking at Lindsey, mouth is still open, her glass is 3/4 full now
+        with dissolve
+
+        aut "In general, Chloe's been good to me. She's helped me out with a few things in the past, but, well, nothing lately."
+
+        aut "I've invited her to participate in some of the Deer events. She came to one, but all the others, she was a no-show. Not even a text to say sorry."
+
+        scene v15s35_14a # FPP. same as v15s35_14 Aubrey takes a drink from her glass
+        with dissolve
+
+        pause 0.75
+
+        scene v15s35_14b # FPP. same as v15s35_14 Aubrey has no expression, looking at Autumn, mouth is still open, her glass is 3/4 full now
+        with dissolve
+
+        au "She is the type of person who makes a lot of promises. She likes to tell people what they want to hear."
 
         scene v15s35_12c
         with dissolve
 
-        li "Oh, wow. Are we boring you?"
+        li "Yeah, so she can get what she wants. She doesn't seem to follow up on any of her promises, does she?"
 
-        scene v15s35_12b
+        scene v15s35_13a
         with dissolve
 
-        u "I'm sorry, it's been a long day, haha."
+        aut "Not lately. But that doesn't mean she's a bad person."
 
-        scene v15s35_13c
+        scene v15s35_12e # FPP. same as v15s35_12c Lindsey is looking at Autumn, still no expression, mouth is still open, her glass is still 3/4 full
         with dissolve
 
-        aut "Yeah, I need to get going if I plan on getting a good night's rest."
+        li "I'm not saying she's a bad person. But is she capable of doing the job she's supposed to be doing?"
 
-        scene v15s35_12b
+        scene v15s35_12c
         with dissolve
 
-        u "This was fun, though."
+        li "This is the whole reason why I'm challenging her. It's nothing personal. I just think she should be doing more as our President."
 
-        scene v15s35_14c
+        scene v15s35_12e
         with dissolve
 
-        au "Yeah, I loved the game."
+        li "She should be supporting you at all your events, Autumn. Wouldn't you prefer that?"
 
-        scene v15s35_13c
+        scene v15s35_13a
         with dissolve
 
-        aut "And the drinks!"
+        aut "Yeah, I would."
+
+        scene v15s35_12c
+        with dissolve
+
+        li "I want to create an environment where we can rely on each other."
+
+        scene v15s35_12e
+        with dissolve
+
+        li "To me, supporting other sororities benefits everyone, and that's why we're all here, right?"
+
+        scene v15s35_13a
+        with dissolve
+
+        aut "Right."
+
+        scene v15s35_12c
+        with dissolve
+
+        li "We all want our experiences to be the best they can be."
+
+        scene v15s35_12e
+        with dissolve
+
+        li "We can maintain healthy rivalries or whatever, but we need to be there for each other... And Chloe doesn't seem to get that."
+
+        scene v15s35_13a
+        with dissolve
+
+        aut "I totally understand what you're saying. It's a better approach for sure."
+
+        scene v15s35_14a
+        with dissolve
+
+        au "I've been trying to stay out of this whole thing as much as possible, but I agree with what you're saying, Lindsey."
+
+        scene v15s35_12f # FPP. same as v15s35_12 Lindsey is looking at Aubrey, still a slight smile, mouth is still open, her glass is still 3/4 full
+        with dissolve
+
+        li "Thank you. It means a lot that you both feel the same way."
 
         scene v15s35_12a
         with dissolve
 
-        li "Haha, thanks guys. I appreciate you all coming."
+        if v15_chloe_lindseysabotage:
+            if v15_lindsey_alcohol:
+                scene v15s35_12a
+                with dissolve
 
-        scene v15s35_14d
+                u "(It'll help if Lindsey's more drunk. She'll be easier to trick into bad-mouthing Chloe.)"
+
+                scene v15s35_12a
+                with dissolve
+
+                menu:
+                    "Stay quiet":
+                        $ add_point(KCT.BRO)
+
+                        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                            $ add_point(KCT.TROUBLEMAKER)
+
+                        if hangOutWithLindsey:
+                            $ add_point(KCT.BOYFRIEND)
+
+                        scene v15s35_12a
+                        with dissolve
+
+                        u "(Not feeling that this is the best time.)"
+
+                        scene v15s35_14c # FPP. same as v15s35_14b Aubrey's mouth is open, looking at Lindsey, still a slight smile, her glass is still 3/4 full
+                        with dissolve
+
+                        au "I think we've talked enough about Chloe now anyway."
+
+                        scene v15s35_13c # FPP. same as v15s35_13 Autumn's glass is 3/4 full, still a slight smile, still looking at Lindsey, mouth is still open
+                        with dissolve
+
+                        aut "Yeah, I'm feeling pretty sleepy."
+
+                        scene v15s35_12a
+                        with dissolve
+
+                        u "It's been a long day for sure, but I had a great time."
+
+                        scene v15s35_13c
+                        with dissolve
+
+                        aut "Yeah, it was a lot of fun Lindsey!"
+
+                        scene v15s35_14c
+                        with dissolve
+
+                        au "We should definitely do it again sometime."
+
+                        scene v15s35_12f
+                        with dissolve
+
+                        li "Aw, yes, we will!"
+
+                        scene v15s35_14d # FPP. same as scene v15s35_14c Aubrey stands up from her chair, her mouth is closed, still a slight smile, looking at Mc, her glass is still 3/4 full and sitting on the table not in her hand
+                        with dissolve
+
+                        pause 0.75
+
+                    "Offer shots":
+                        $ add_point(KCT.TROUBLEMAKER)
+
+                        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                            $ add_point(KCT.BOYFRIEND)
+
+                        if hangOutWithLindsey:
+                            $ add_point(KCT.TROUBLEMAKER)
+
+                        scene v15s35_12a 
+                        with dissolve
+
+                        u "Let's take shots!"
+
+                        scene v15s35_12g # FPP. same as v15s35_12b Lindsey has no expression, still looking at Mc, mouth is still open, her glass is still 3/4 full
+                        with dissolve
+
+                        li "We're in the middle of something here, [name]."
+
+                        scene v15s35_12h # FPP. same as v15s35_12g Lindsey's mouth is closed, still looking at Mc, still no expression, her glass is still 3/4 full
+                        with dissolve
+
+                        u "Yeah, but look at the time. It's shots o'clock!"
+
+                        scene v15s35_16 # TPP. show MC in the kitchen, show Mc holding an alcohol bottle pouring it into 3 shot glasses in front of him, and a second different style alcohol bottle same color liquid as the one he is pouring on the counter, he has a slight smile, mouth is closed
+                        with dissolve
+
+                        pause 0.75
+
+                        scene v15s35_16a # TPP. same as v15s35_16 MC has put down the first bottle and grabs the second bottle, same colour liquid as the first, and fills a 4th shot glass with it, still a slight smile, mouth is still closed
+                        with dissolve
+
+                        u "(I'll put something extra strong in Lindsey's glass.)"
+
+                        scene v15s35_6j # TPP. same as v15s35_6j Show Mc coming back to the table with the 4 filled shot glasses, Autumn Aubrey and Lindsey are sitting in their seats all looking at Mc all slight smiles all mouths are closed, if possible show all of their drinks in their hands 3/4 full (not necessary if not possible)
+                        with dissolve
+
+                        pause 0.75
+
+                        scene v15s35_12i # FPP. same as v15s35_12b Lindsey's glass is 3/4 full, still looking at Mc, still a slight smile, mouth is still open
+                        with dissolve
+
+                        li "I'm already buzzed, though. I don't think I can handle a shot, ha."
+
+                        scene v15s35_14e # FPP. same as v15s35_14c Aubrey is looking at Mc, still a slight smile, mouth is still open, her glass is still 3/4 full
+                        with dissolve
+
+                        au "I want one!"
+
+                        scene v15s35_14c
+                        with dissolve
+
+                        u "That's what I like to hear!"
+
+                        scene v15s35_6k # TPP. same as v15s35_6j All of them are standing where they were seated, MC is handing a shot glass to Lindsey slight smile mouth is closed, Lindsey is taking the glass from Mc, no expression mouth is closed, Aubrey and Autumn are looking at Mc holding their shot glasses, both of them slight smiles, mouths are closed
+                        with dissolve
+
+                        pause 0.75
+
+                        scene v15s35_6l # TPP. same as v15s35_6k All of them raise their shot glasses together if possible otherwise just show them raising them in the air, Mc's mouth is open, All of them slight smiles, Aubrey Lindsey and Autumn's mouths are closed
+                        with dissolve
+
+                        u "3, 2, 1. Shots!"
+
+                        scene v15s35_6m # TPP. same as v15s35_6l They all drink their shots
+                        with dissolve
+
+                        pause 0.75
+
+                        scene v15s35_12j # FPP. same as v15s35_12i Lindsey's face is rosey from being drunk, still a slight smile, still looking at Mc, mouth is still open, her glass is still 3/4 full
+                        with dissolve
+
+                        li "*Drunk* Okay, now what was I saying?"
+
+                        scene v15s35_12k # FPP. same as v15s35_12j Lindsey's mouth is closed, still looking at Mc, still a slight smile, her glass is still 3/4 full, still a rosey face from being drunk
+                        with dissolve
+
+                        u "(This is my chance...)"
+
+                        scene v15s35_12k
+                        with dissolve
+
+                        menu (fail_label="v15let_it_happen"):
+                            "Let it happen naturally":
+                                $ add_point(KCT.BRO)
+
+                                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                    $ add_point(KCT.TROUBLEMAKER)
+
+                                jump v15let_it_happen
+
+                            "Bring up Chloe":
+                                $ v15bring_up_chloe = True
+                                $ add_point(KCT.TROUBLEMAKER)
+                                
+                                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                    $ add_point(KCT.BOYFRIEND)
+                                    
+                                if hangOutWithLindsey:
+                                    $ add_point(KCT.TROUBLEMAKER)
+                                    
+                                jump v15bring_up_chloe
+                            
+                        label v15let_it_happen:
+                            scene v15s35_12k
+                            with dissolve
+
+                            u "(Let's see if she makes a mess on her own.)"
+
+                            scene v15s35_14c
+                            with dissolve
+
+                            au "Eh, we get the jist. *Chuckles*"
+
+                            scene v15s35_12l # FPP. same as v15s35_12j Lindsey is looking at Autumn, still a slight smile, mouth is still open, her glass is still 3/4 full, still a rosey face from being drunk
+                            with dissolve
+
+                            li "*Drunk* Anyway, I think that's all I had to say..."
+
+                            scene v15s35_12m # FPP. same as v15s35_12l Lindsey is looking at Aubrey, still a slight smile, mouth is still open, her glass is still 3/4 full, still a rosey face from being drunk
+                            with dissolve
+
+                            li "Just please think about what I've said and consider supporting me. Please?"
+
+                            scene v15s35_13c
+                            with dissolve
+
+                            aut "I totally will."
+
+                            scene v15s35_14c
+                            with dissolve
+
+                            au "Yeah, everything you've said makes a lot of sense."
+
+                            scene v15s35_12m
+                            with dissolve
+
+                            li "*Drunk* Thanks girlies!"
+
+                            scene v15s35_12l
+                            with dissolve
+
+                            li "*Drunk* We should probably end the night here before I pass out on you guys, haha!"
+
+                            scene v15s35_13c
+                            with dissolve
+
+                            aut "*Chuckles* I had a great time. I'm so glad I came."
+
+                            scene v15s35_12k
+                            with dissolve
+
+                            u "Yeah, it's been fun!"
+
+                            scene v15s35_14c
+                            with dissolve
+
+                            au "Let's do it again sometime."
+
+                            scene v15s35_12m
+                            with dissolve
+
+                            li "*Drunk* Yes! That sounds perfect."
+
+                        label v15bring_up_chloe:
+                            
+                            scene v15s35_12k
+                            with dissolve
+
+                            u "You were telling us what you don't like about Chloe."
+
+                            scene v15s35_12j
+                            with dissolve
+
+                            li "*Drunk* What I don't like about Chloe?"
+
+                            scene v15s35_12k
+                            with dissolve
+
+                            u "Yeah, the most annoying things about her?"
+
+                            scene v15s35_14f # FPP. same as v15s35_14e Aubrey has a concerned/worried expression, mouth is closed, still looking at Mc, her glass is still 3/4 full
+                            with dissolve
+
+                            pause 0.75
+
+                            scene v15s35_12d
+                            with dissolve
+
+                            pause 0.75
+
+                            scene v15s35_12n # FPP. same as v15s35_12j Lindsey's glass is now half full, still a slight smile, still looking at Mc, mouth is still open, still a rosey face from being drunk
+                            with dissolve
+
+                            li "*Giggles* do you want a list? I mean, where do I start?"
+
+                            scene v15s35_13b
+                            with dissolve
+
+                            aut "Um..."
+
+                            scene v15s35_12n
+                            with dissolve
+
+                            $ set_presidency_percent(v14_lindsey_popularity - 3)
+
+                            li "*Drunk* Her plastic boobs?"
+
+                            scene v15s35_14f
+                            with dissolve
+
+                            u "(Oof.)"
+
+                            scene v15s35_12n
+                            with dissolve
+
+                            $ set_presidency_percent(v14_lindsey_popularity - 3)
+
+                            li "*Drunk* Or her plastic nose?"
+
+                            scene v15s35_14g # FPP. same as v15s35_14f Aubrey is looking at Lindsey, mouth is open, still a worried/concerned expression, her glass is still 3/4 full
+                            with dissolve
+
+                            au "I think that's enough, Lindsey."
+
+                            scene v15s35_12d
+                            with dissolve
+
+                            pause 0.75
+
+                            scene v15s35_14f
+                            with dissolve
+
+                            menu (fail_label="v15stop_lindsey"):
+                                "Stop Lindsey":
+                                    $ add_point(KCT.BRO)
+                                    
+                                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                        $ add_point(KCT.TROUBLEMAKER)
+                                        
+                                    if hangOutWithLindsey:
+                                        $ add_point(KCT.BOYFRIEND)
+                                        
+                                    jump v15stop_lindsey
+
+                                "Say nothing":
+                                    $ v15say_nothing = True
+                                    $ add_point(KCT.TROUBLEMAKER)
+                                    
+                                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                        $ add_point(KCT.BOYFRIEND)
+                                        
+                                    if hangOutWithLindsey:
+                                        $ add_point(KCT.TROUBLEMAKER)
+                                        
+                                    jump v15say_nothing
+
+                            label v15stop_lindsey:
+                                scene v15s35_12o # FPP. same as v15s35_12n Lindsey's glass is now empty, mouth is closed, still a slight smile, still a rosey face from being drunk
+                                with dissolve
+
+                                u "Yeah, maybe stop talking now... Ha."
+
+                                scene v15s35_12p # FPP. same as v15s35_12o Lindsey has a worried/concerned expression, mouth is open, still looking at Mc, her glass is still Empty
+                                with dissolve
+
+                                $ set_presidency_percent(v14_lindsey_popularity + 3)
+
+                                li "*Drunk* Whoops! I probably just sounded like such a bitch. I'm sorry..."
+
+                                scene v15s35_13c
+                                with dissolve
+
+                                aut "It happens. Drinking can turn people's moods just like that."
+
+                                scene v15s35_14c
+                                with dissolve
+
+                                au "It's probably a good time to end the night anyway."
+
+                                scene v15s35_12q # FPP. same as v15s35_12p Lindsey is looking at Aubrey, still has a worried/concerned expression, mouth is still open, her glass is still empty
+                                with dissolve
+
+                                li "*Drunk* Yeah, okay. It is getting late."
+
+                                scene v15s35_14h # FPP. same as scene v15s35_14d Aubrey has no expression, is still standing up from her chair, her mouth is closed, still looking at Mc, her glass is still 3/4 full and sitting on the table not in her hand
+                                with dissolve
+
+                                pause 0.75
+
+                            label v15say_nothing:
+                                scene v15s35_12r # FPP. same as v15s35_12o Lindsey's mouth is open, still looking at Mc, still a slight smile, her glass is still empty, still a rosey face from being drunk
+                                with dissolve
+
+                                li "*Drunk* That's why she's doing everything she can to not lose her scholarship."
+
+                                li "She'd have to sell a good chunk of her body back to the surgeons in order to pay for school, ha!"
+
+                                scene v15s35_14i # FPP. same as v15s35_14g Aubrey has an angry expression, still looking at Lindsey, mouth is still open, her glass is still 3/4 full
+                                with dissolve
+
+                                au "Lindsey, stop. That's way too far."
+
+                                scene v15s35_12q
+                                with dissolve
+
+                                li "*Drunk* Oh, shit... You're so right. Oh my-"
+
+                                scene v15s35_12p
+                                with dissolve
+
+                                li "I'm so sorry. That was a horrible thing to say."
+
+                                scene v15s35_12s # FPP. same as v15s35_12q Lindsey is looking at Autumn, still a worried/concerned expression, mouth is still open, her glass is still empty
+                                with dissolve
+
+                                li "*Drunk* I'm just stressed from all this campaign work... *Sighs* I shouldn't be getting this drunk. I'm really, really sorry."
+
+                                scene v15s35_15
+                                with dissolve
+
+                                pause 0.75
+
+                                scene v15s35_15a
+                                with dissolve
+
+                                u "(Thank you, Lindsey! That's exactly what I needed!)"
+
+                                scene v15s35_15
+                                with dissolve
+
+                                pause 0.75
+
+                                scene v15s35_13d # FPP. same as v15s35_13c Autumn has a slightly angry expression, still looking at Lindsey, mouth is still open, her glass is still 3/4 full
+                                with dissolve
+
+                                aut "I can't imagine how stressed you are, but you should go to bed now. Sleep it off and wake up with a new attitude."
+
+                                scene v15s35_12s
+                                with dissolve
+
+                                li "*Drunk* Yeah, you're right..."
+
+                                scene v15s35_14j # FPP. same as scene v15s35_14h Aubrey has a slightly angry expression, still standing up from her chair, her mouth is closed, still looking at Mc, her glass is still 3/4 full and sitting on the table not in her hand
+                                with dissolve
+
+                                pause 0.75
+            
+            else:
+                scene v15s35_12a
+                with dissolve
+
+                u "(This is going to be almost impossible without alcohol. I can try to trick Lindsey, but I doubt she'll take the bait.)"
+
+                scene v15s35_12a
+                with dissolve
+
+                menu:
+                    "Say nothing":
+                        $ add_point(KCT.BRO)
+                        
+                        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                            $ add_point(KCT.TROUBLEMAKER)
+                            
+                        if hangOutWithLindsey:
+                            $ add_point(KCT.BOYFRIEND)
+
+                        scene v15s35_12a
+                        with dissolve
+
+                        u "(It's not even worth trying...)"
+
+                        scene v15s35_14c
+                        with dissolve
+
+                        au "I think we've talked enough about Chloe now anyway."
+
+                        scene v15s35_13c
+                        with dissolve
+
+                        aut "Yeah, I'm feeling pretty sleepy."
+
+                        scene v15s35_12a
+                        with dissolve
+
+                        u "It's been a long day for sure, but I had a great time."
+
+                        scene v15s35_13c
+                        with dissolve
+
+                        aut "Yeah, it was a lot of fun Lindsey!"
+
+                        scene v15s35_14c
+                        with dissolve
+
+                        au "We should definitely do it again sometime."
+
+                        scene v15s35_12f
+                        with dissolve
+
+                        li "Aw, yes, we will!"
+
+                        scene v15s35_14d
+                        with dissolve
+
+                        pause 0.75
+                        
+                    "Try to trick her":
+                        $ add_point(KCT.TROUBLEMAKER)
+                        
+                        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                            $ add_point(KCT.BOYFRIEND)
+                            
+                        if hangOutWithLindsey:
+                            $ add_point(KCT.TROUBLEMAKER)
+
+                        scene v15s35_12a
+                        with dissolve
+
+                        u "Lindsey, be honest with us for a minute, what do you hate most about Chloe?"
+
+                        scene v15s35_14k # FPP. same as v15s35_14i Aubrey has a slightly angry expression, looking at Mc, mouth is closed, her glass is still 3/4 full
+                        with dissolve
+
+                        pause 0.75
+
+                        scene v15s35_12b
+                        with dissolve
+
+                        li "Haha, I don't hate her, [name]. She's my sorority sister."
+
+                        li "I care about her. She's my campaign rival, but I don't hate her."
+
+                        scene v15s35_12a
+                        with dissolve
+
+                        u "Not even a little bit?"
+
+                        scene v15s35_14k
+                        with dissolve
+
+                        pause 0.75
+
+                        if kct == "popular":
+                            call screen kct_popup
+                            scene v15s35_12b
+                            with dissolve
+
+                            $ set_presidency_percent(v14_lindsey_popularity - 3)
+
+                            li "What do you want me to say? That her boobs are obviously fake? Everyone knows that I think."
+
+                            scene v15s35_12a
+                            with dissolve
+
+                            u "I don't know, but you kind of just did."
+
+                            scene v15s35_12b
+                            with dissolve
+
+                            li "Well, I did, but I didn't mean it in a bad way... I was just joking."
+
+                        else:
+                            scene v15s35_12b
+                            with dissolve
+
+                            li "No. Not at all. Stop trying to cause trouble, [name], haha."
+
+                        scene v15s35_14g
+                        with dissolve
+
+                        au "Is it okay if we stop talking about Chloe now?"
+
+                        scene v15s35_13b
+                        with dissolve
+
+                        aut "Yeah, I'm ready to go, I think. Getting a little sleepy over here, haha."
+
+                        scene v15s35_12c
+                        with dissolve
+
+                        li "Oh, okay. Well, thanks for listening to me anyway. I really appreciate it you guys."
+
+                        scene v15s35_13c
+                        with dissolve
+
+                        aut "Of course, I had a great night. Thanks again for the invite."
+
+                        scene v15s35_12a
+                        with dissolve
+
+                        u "Yeah, this was fun."
+
+                        scene v15s35_14j
+                        with dissolve
+
+                        pause 0.75
+
+        else: # -if helping/not helping Chloe and did not choose Embarrass Lindsey-
+            scene v15s35_15b # TPP same as v15s35_15 Mc is stretching and yawning, eyes and mouth are closed
+            with dissolve
+
+            pause 0.75
+
+            scene v15s35_12c
+            with dissolve
+
+            li "Oh, wow. Are we boring you?"
+
+            scene v15s35_12b
+            with dissolve
+
+            u "I'm sorry, it's been a long day, haha."
+
+            scene v15s35_13c
+            with dissolve
+
+            aut "Yeah, I need to get going if I plan on getting a good night's rest."
+
+            scene v15s35_12b
+            with dissolve
+
+            u "This was fun, though."
+
+            scene v15s35_14c
+            with dissolve
+
+            au "Yeah, I loved the game."
+
+            scene v15s35_13c
+            with dissolve
+
+            aut "And the drinks!"
+
+            scene v15s35_12a
+            with dissolve
+
+            li "Haha, thanks guys. I appreciate you all coming."
+
+            scene v15s35_14d
+            with dissolve
+
+            pause 0.75
+
+        scene v15s35_17 # FPP. Aubrey is walking up the stairs looking back and waving to everyone, slight smile, mouth is open
+        with fade
+
+        au "Goodnight, losers!"
+
+        scene v15s35_18 # TPP. MC and Autumn walking out the Chicks front door together, waving to Lindsey, slight smiles, mouths are closed, Lindsey waving back at Mc and Autumn slight smile, mouth is open
         with dissolve
 
-        pause 0.75
+        li "Later guys, be safe!"
 
-    scene v15s35_17 # FPP. Aubrey is walking up the stairs looking back and waving to everyone, slight smile, mouth is open
-    with fade
+        scene v15s35_18a # TPP. same as v15s35_18 Lindsey has closed the door and is no longer visible, Autumn and Mc are looking at each other, Autumn's mouth is open slight smile hand extended out like she's explaining something, Mc's mouth is closed slight smile
+        with fade
 
-    au "Goodnight, losers!"
+        $ v15s35_kiwiiPost1= KiwiiPost(lindsey, "v15s35Kiwii1", "Always a good time with these good people <3 #GameNight", numberLikes=648)
+        $ v15s35_kiwiiPost1.newComment(imre, "The fuck? Where's my invite?", numberLikes=renpy.random.randint(260, 560))
+        $ v15s35_kiwiiPost1.newComment(riley, "Omg, I love game nights! Can I come to the next one?", numberLikes=renpy.random.randint(260, 560))
+        $ v15s35_kiwiiPost1.newComment(lindsey, "Don't worry, everyone's invited next time. Promise!", numberLikes=renpy.random.randint(260, 560))
+        $ v15s35_kiwiiPost1.newComment(chloe, "I'd never leave you guys out, hope you had fun without the rest of us!", numberLikes=renpy.random.randint(260, 560))
+        $ v15s35_kiwiiPost1.addReply("The more the merrier! Except you don't stand a chance when it comes to the games, Imre", v15s35_kiwiireply1, mentions=imre, numberLikes=renpy.random.randint(260, 560))
+        $ v15s35_kiwiiPost1.addReply("It was a really good night, gonna have to do it again with the whole gang.", v15s35_kiwiireply2, numberLikes=renpy.random.randint(260, 560))
 
-    scene v15s35_18 # TPP. MC and Autumn walking out the Chicks front door together, waving to Lindsey, slight smiles, mouths are closed, Lindsey waving back at Mc and Autumn slight smile, mouth is open
-    with dissolve
+        if False: # for Lint
+            scene v15s35Kiwii1 # picture of game night set up or a picture of the group playing/talking at the game night
 
-    li "Later guys, be safe!"
-
-    scene v15s35_18a # TPP. same as v15s35_18 Lindsey has closed the door and is no longer visible, Autumn and Mc are looking at each other, Autumn's mouth is open slight smile hand extended out like she's explaining something, Mc's mouth is closed slight smile
-    with fade
-
-    $ v15s35_kiwiiPost1= KiwiiPost(lindsey, "v15s35Kiwii1", "Always a good time with these good people <3 #GameNight", numberLikes=648)
-    $ v15s35_kiwiiPost1.newComment(imre, "The fuck? Where's my invite?", numberLikes=renpy.random.randint(260, 560))
-    $ v15s35_kiwiiPost1.newComment(riley, "Omg, I love game nights! Can I come to the next one?", numberLikes=renpy.random.randint(260, 560))
-    $ v15s35_kiwiiPost1.newComment(lindsey, "Don't worry, everyone's invited next time. Promise!", numberLikes=renpy.random.randint(260, 560))
-    $ v15s35_kiwiiPost1.newComment(chloe, "I'd never leave you guys out, hope you had fun without the rest of us!", numberLikes=renpy.random.randint(260, 560))
-    $ v15s35_kiwiiPost1.addReply("The more the merrier! Except you don't stand a chance when it comes to the games, Imre", v15s35_kiwiireply1, mentions=imre, numberLikes=renpy.random.randint(260, 560))
-    $ v15s35_kiwiiPost1.addReply("It was a really good night, gonna have to do it again with the whole gang.", v15s35_kiwiireply2, numberLikes=renpy.random.randint(260, 560))
-
-    if False: # for Lint
-        scene v15s35Kiwii1 # picture of game night set up or a picture of the group playing/talking at the game night
-
-    jump v15s36
+        jump v15s36
