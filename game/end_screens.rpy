@@ -3,8 +3,8 @@
 default image_path = "gui/end_screen/"
 
 transform credits_scroll(speed):
-ypos 720
-linear speed ypos -720
+    ypos 720
+    linear speed ypos -720
 
 screen end_screen():
     tag end_screen
@@ -26,6 +26,7 @@ screen end_screen():
             action Jump("credits")
             yalign 0.5
             text_size 100
+
 
 screen patreon_credits():
     tag end_screen
