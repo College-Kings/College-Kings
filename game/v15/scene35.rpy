@@ -356,123 +356,140 @@ label v15s35:
 
         # -After choosing, we see on the UI what everyone has chosen. All three girls chose $50m to charity-
 
-        menu:
-            "$50mil to charity":
-                $ add_point(KCT.BOYFRIEND)
-                
-                scene v15s35_7d
-                with dissolve
+        $ screen_options = [
+            {
+                "option": "$50 million to charity",
+                "votes": [aubrey, autumn, lindsey],
+                "label": "v15s35_wyr1_charity"
+            },
+            {
+                "option": "$500k for me",
+                "votes": [],
+                "label": "v15s35_wyr1_me"
+            }
+        ]
+        call screen would_you_rather("Would you rather?")
 
-                li "And it's unanimous! We're all good people. *Chuckles*"
+        label v15s35_wyr1_charity:
+        $ add_point(KCT.BOYFRIEND)
+        
+        scene v15s35_7d
+        with dissolve
 
-                scene v15s35_8
-                with dissolve
+        li "And it's unanimous! We're all good people. *Chuckles*"
 
-                aut "Of course we are!"
+        scene v15s35_8
+        with dissolve
 
-                scene v15s35_9a # FPP. same as v15s35_9 Aubrey is looking at Autumn, mouth is still open, still a slight smile
-                with dissolve
+        aut "Of course we are!"
 
-                au "But the real question is, what charities would you donate to?"
+        scene v15s35_9a # FPP. same as v15s35_9 Aubrey is looking at Autumn, mouth is still open, still a slight smile
+        with dissolve
 
-                scene v15s35_8b # FPP. same as v15s35_8 Autumn is looking at Aubrey, still a slight smile, mouth is still open
-                with dissolve
+        au "But the real question is, what charities would you donate to?"
 
-                aut "Homes for Huskies! Or actually..."
+        scene v15s35_8b # FPP. same as v15s35_8 Autumn is looking at Aubrey, still a slight smile, mouth is still open
+        with dissolve
 
-                aut "Maybe I could give some to Narwhals in Need and some to Protect the Pandas too."
+        aut "Homes for Huskies! Or actually..."
 
-                scene v15s35_9a
-                with dissolve
+        aut "Maybe I could give some to Narwhals in Need and some to Protect the Pandas too."
 
-                au "Hehe, damn. You've got a list ready to go, huh?"
+        scene v15s35_9a
+        with dissolve
 
-                scene v15s35_8b
-                with dissolve
+        au "Hehe, damn. You've got a list ready to go, huh?"
 
-                aut "Ha, I guess yeah. I'm just interested in all of it and helping all of them."
+        scene v15s35_8b
+        with dissolve
 
-                scene v15s35_8a
-                with dissolve
+        aut "Ha, I guess yeah. I'm just interested in all of it and helping all of them."
 
-                u "So pure."
+        scene v15s35_8a
+        with dissolve
 
-                scene v15s35_9b # FPP. same as v15s35_9 Aubrey is looking at Mc, still a slight smile, mouth is still open
-                with dissolve
+        u "So pure."
 
-                au "It's almost disgusting... *Giggles*"
+        scene v15s35_9b # FPP. same as v15s35_9 Aubrey is looking at Mc, still a slight smile, mouth is still open
+        with dissolve
 
-            "$500k for me":
-                $ add_point(KCT.BRO)
+        au "It's almost disgusting... *Giggles*"
+        
+        jump v15s35_wyr1_end
 
-                scene v15s35_7d
-                with dissolve
+        label v15s35_wyr1_me:
+        $ add_point(KCT.BRO)
 
-                li "Well, it looks like [name] is the only uncharitable one here..."
+        scene v15s35_7d
+        with dissolve
 
-                scene v15s35_8c # FPP. same as v15s35_8a Autumn is slightly shocked, mouth is open, still looking at Mc
-                with dissolve
+        li "Well, it looks like [name] is the only uncharitable one here..."
 
-                aut "[name]!"
+        scene v15s35_8c # FPP. same as v15s35_8a Autumn is slightly shocked, mouth is open, still looking at Mc
+        with dissolve
 
-                scene v15s35_8a
-                with dissolve
+        aut "[name]!"
 
-                u "What?"
+        scene v15s35_8a
+        with dissolve
 
-                scene v15s35_8d # FPP. same as v15s35_8a Autumn's mouth is open, still looking at Mc, still Slight smile
-                with dissolve
+        u "What?"
 
-                aut "Fifty million dollars to people in need? And you'd rather have half a million to spend on what? BoobGroup subscriptions?"
+        scene v15s35_8d # FPP. same as v15s35_8a Autumn's mouth is open, still looking at Mc, still Slight smile
+        with dissolve
 
-                scene v15s35_8a
-                with dissolve
+        aut "Fifty million dollars to people in need? And you'd rather have half a million to spend on what? BoobGroup subscriptions?"
 
-                u "*Chuckles* Boob group?"
+        scene v15s35_8a
+        with dissolve
 
-                scene v15s35_9b
-                with dissolve
+        u "*Chuckles* Boob group?"
 
-                au "You could feed the starving world with that kind of money"
+        scene v15s35_9b
+        with dissolve
 
-                scene v15s35_7d
-                with dissolve
+        au "You could feed the starving world with that kind of money"
 
-                li "But now they'll continue to suffer because of [name]. *Sighs*"
+        scene v15s35_7d
+        with dissolve
 
-                scene v15s35_7e # FPP. same as v15s35_7c Lindsey has no expression, still looking at Mc, mouth is still closed
-                with dissolve
+        li "But now they'll continue to suffer because of [name]. *Sighs*"
 
-                u "Woah, woah, woah... Hang on. This is a game!"
+        scene v15s35_7e # FPP. same as v15s35_7c Lindsey has no expression, still looking at Mc, mouth is still closed
+        with dissolve
 
-                scene v15s35_8e # FPP. same as v15s35_8a Autumn has no expression, still looking at Mc, mouth is still closed
-                with dissolve
+        u "Woah, woah, woah... Hang on. This is a game!"
 
-                u "I didn't realize how seriously we were taking this..."
+        scene v15s35_8e # FPP. same as v15s35_8a Autumn has no expression, still looking at Mc, mouth is still closed
+        with dissolve
 
-                scene v15s35_9c # FPP. same as v15s35_9b Aubrey is fake crying, still looking at Mc, mouth is still open
-                with dissolve
+        u "I didn't realize how seriously we were taking this..."
 
-                au "Those poor starving children. *Fake sobbing* You could have saved them!"
+        scene v15s35_9c # FPP. same as v15s35_9b Aubrey is fake crying, still looking at Mc, mouth is still open
+        with dissolve
 
-                scene v15s35_7f # FPP. same as v15s35_7d Lindsey is fake crying, still looking at Mc, mouth is still open
-                with dissolve
+        au "Those poor starving children. *Fake sobbing* You could have saved them!"
 
-                pause 0.75
+        scene v15s35_7f # FPP. same as v15s35_7d Lindsey is fake crying, still looking at Mc, mouth is still open
+        with dissolve
 
-                scene v15s35_8f # FPP. same as v15s35_8c Autumn is fake crying, still looking at Mc, mouth is still open
-                with dissolve
+        pause 0.75
 
-                pause 0.75
+        scene v15s35_8f # FPP. same as v15s35_8c Autumn is fake crying, still looking at Mc, mouth is still open
+        with dissolve
 
-                scene v15s35_8a
-                with dissolve
+        pause 0.75
 
-                u "Okay, I'm sorry! Jeez..."
+        scene v15s35_8a
+        with dissolve
 
-                scene v15s35_6b # TPP. same as v15s35_6a Aubrey, Autumn and Lindsey are laughing at Mc, Mc is rolling his eyes, Everyone is still holding their phones
-                with dissolve
+        u "Okay, I'm sorry! Jeez..."
 
+        scene v15s35_6b # TPP. same as v15s35_6a Aubrey, Autumn and Lindsey are laughing at Mc, Mc is rolling his eyes, Everyone is still holding their phones
+        with dissolve
+
+        label v15s35_wyr1_end:
+        
         scene v15s35_7d
         with dissolve
 
@@ -520,221 +537,238 @@ label v15s35:
 
         # -After choosing, we see on the UI what everyone has chosen. Autumn chose Kill Santa. Lindsey and Aubrey chose Kill the Easter bunny-
 
-        menu:
-            "Kill Santa Claus":
-                $ add_point(KCT.BRO)
-                
-                scene v15s35_7g # FPP. same as v15s35_7d Lindsey is slightly shocked, still looking at Mc, mouth is still open
-                with dissolve
+        $ screen_options = [
+            {
+                "option": "Kill Santa Claus",
+                "votes": [autumn],
+                "label": "v15s35_wyr2_santa"
+            },
+            {
+                "option": "Kill the Easter bunny",
+                "votes": [aubrey, lindsey],
+                "label": "v15s35_wyr2_easter"
+            }
+        ]
+        call screen would_you_rather("Would you rather?")
 
-                $ grant_achievement("christmas_is_dead")
-                li "*Gasps* Autumn and [name]! How dare you kill Santa?!"
+        label v15s35_wyr2_santa:
+        $ add_point(KCT.BRO)
+        
+        scene v15s35_7g # FPP. same as v15s35_7d Lindsey is slightly shocked, still looking at Mc, mouth is still open
+        with dissolve
 
-                scene v15s35_9b
-                with dissolve
+        $ grant_achievement("christmas_is_dead")
+        li "*Gasps* Autumn and [name]! How dare you kill Santa?!"
 
-                au "How?! Santa only brings gifts and joy! Why kill him for that, you psychos?"
+        scene v15s35_9b
+        with dissolve
 
-                scene v15s35_8b
-                with dissolve
+        au "How?! Santa only brings gifts and joy! Why kill him for that, you psychos?"
 
-                aut "How could you two kill a poor defenseless bunny rabbit?!"
+        scene v15s35_8b
+        with dissolve
 
-                scene v15s35_9a
-                with dissolve
+        aut "How could you two kill a poor defenseless bunny rabbit?!"
 
-                au "With a shotgun..."
+        scene v15s35_9a
+        with dissolve
 
-                scene v15s35_6c # TPP. same as v15s35_6b Aubrey and Lindsey look at each other and laugh, Autumn is slightly shocked looking at Aubrey, Mc is rolling his eyes still a slight smile, everyone is still holding their phones
-                with dissolve
+        au "With a shotgun..."
 
-                pause 0.75
+        scene v15s35_6c # TPP. same as v15s35_6b Aubrey and Lindsey look at each other and laugh, Autumn is slightly shocked looking at Aubrey, Mc is rolling his eyes still a slight smile, everyone is still holding their phones
+        with dissolve
 
-                scene v15s35_9d # FPP. same as v15s35_9b Aubrey's mouth is closed, still looking at Mc, still a slight smile
-                with dissolve
+        pause 0.75
 
-                u "Santa has lived plenty of years, alright? A bunny that leaves surprise-filled eggs, is far superior."
+        scene v15s35_9d # FPP. same as v15s35_9b Aubrey's mouth is closed, still looking at Mc, still a slight smile
+        with dissolve
 
-                scene v15s35_9b
-                with dissolve
+        u "Santa has lived plenty of years, alright? A bunny that leaves surprise-filled eggs, is far superior."
 
-                au "I can't believe this."
+        scene v15s35_9b
+        with dissolve
 
-                scene v15s35_9d
-                with dissolve
+        au "I can't believe this."
 
-                u "And we can't believe you shot the Easter bunny. No more Easter baskets for you."
+        scene v15s35_9d
+        with dissolve
 
-                scene v15s35_9b
-                with dissolve
+        u "And we can't believe you shot the Easter bunny. No more Easter baskets for you."
 
-                au "Fine, I don't care. Easter's super lame compared to Christmas; Everyone knows that."
+        scene v15s35_9b
+        with dissolve
 
-                scene v15s35_7h # FPP. same as v15s35_7d Lindsey is looking at Aubrey, mouth is still open, still a slight smile
-                with dissolve
+        au "Fine, I don't care. Easter's super lame compared to Christmas; Everyone knows that."
 
-                li "We can still celebrate Easter. Let's just find a new animal."
+        scene v15s35_7h # FPP. same as v15s35_7d Lindsey is looking at Aubrey, mouth is still open, still a slight smile
+        with dissolve
 
-                scene v15s35_9
-                with dissolve
+        li "We can still celebrate Easter. Let's just find a new animal."
 
-                au "The Easter panda!"
+        scene v15s35_9
+        with dissolve
 
-                scene v15s35_7h
-                with dissolve
+        au "The Easter panda!"
 
-                li "The Easter giraffe. *Laughs*"
+        scene v15s35_7h
+        with dissolve
 
-                scene v15s35_8g # FPP. same as v15s35_8d Autumn rolls her eyes, mouth is still open, still a slight smile
-                with dissolve
+        li "The Easter giraffe. *Laughs*"
 
-                aut "Unbelievable..."
+        scene v15s35_8g # FPP. same as v15s35_8d Autumn rolls her eyes, mouth is still open, still a slight smile
+        with dissolve
 
-                scene v15s35_8a
-                with dissolve
+        aut "Unbelievable..."
 
-                u "At least with Santa gone, one of the elves has a chance to move up in the company."
+        scene v15s35_8a
+        with dissolve
 
-                scene v15s35_9e # FPP. same as v15s35_9b Aubrey is slightly shocked, still looking at Mc, mouth is still open
-                with dissolve
+        u "At least with Santa gone, one of the elves has a chance to move up in the company."
 
-                au "So, you're saying it's okay to murder Santa if it opens a job for an elf?"
+        scene v15s35_9e # FPP. same as v15s35_9b Aubrey is slightly shocked, still looking at Mc, mouth is still open
+        with dissolve
 
-                scene v15s35_9d
-                with dissolve
+        au "So, you're saying it's okay to murder Santa if it opens a job for an elf?"
 
-                u "I feel good about my decision, Aubrey. I helped an elf. You murdered a bunny."
+        scene v15s35_9d
+        with dissolve
 
-            "Kill the Easter bunny":
-                $ add_point(KCT.TROUBLEMAKER)
+        u "I feel good about my decision, Aubrey. I helped an elf. You murdered a bunny."
+        
+        jump v15s35_wyr2_end
 
-                scene v15s35_7i # FPP. same as v15s35_7h Lindsey is looking at Autumn, still a slight smile, mouth is still open
-                with dissolve
+        label v15s35_wyr2_easter:
+        $ add_point(KCT.TROUBLEMAKER)
 
-                li "Autumn! You killed Santa?"
+        scene v15s35_7i # FPP. same as v15s35_7h Lindsey is looking at Autumn, still a slight smile, mouth is still open
+        with dissolve
 
-                scene v15s35_8
-                with dissolve
+        li "Autumn! You killed Santa?"
 
-                aut "Well, I'm not killing an animal! Sorry not sorry."
+        scene v15s35_8
+        with dissolve
 
-                scene v15s35_8a
-                with dissolve
+        aut "Well, I'm not killing an animal! Sorry not sorry."
 
-                u "Tell that to Santa's wife!"
+        scene v15s35_8a
+        with dissolve
 
-                if aubrey.relationship.value <= Relationship.MAD.value:
-                    scene v15s35_9f # FPP. same as v15s35_9d Aubrey has a disgusted look on her face, still looking at Mc, mouth is still closed
-                    with dissolve
+        u "Tell that to Santa's wife!"
 
-                    pause 0.75
+        if aubrey.relationship.value <= Relationship.MAD.value:
+            scene v15s35_9f # FPP. same as v15s35_9d Aubrey has a disgusted look on her face, still looking at Mc, mouth is still closed
+            with dissolve
 
-                    scene v15s35_9g # FPP. same as v15s35_9a Aubrey has no expression, still looking at Autumn, mouth is still open
-                    with dissolve
+            pause 0.75
 
-                    au "Yeah, and all the elves."
+            scene v15s35_9g # FPP. same as v15s35_9a Aubrey has no expression, still looking at Autumn, mouth is still open
+            with dissolve
 
-                else:
-                    scene v15s35_9h # FPP. same as v15s35_9b Aubrey has a full smile and is laughing, still looking at Mc
-                    with dissolve
+            au "Yeah, and all the elves."
 
-                    pause 0.75
+        else:
+            scene v15s35_9h # FPP. same as v15s35_9b Aubrey has a full smile and is laughing, still looking at Mc
+            with dissolve
 
-                    scene v15s35_9a
-                    with dissolve
+            pause 0.75
 
-                    au "Yeah, and all the elves."
+            scene v15s35_9a
+            with dissolve
 
-                scene v15s35_7i
-                with dissolve
+            au "Yeah, and all the elves."
 
-                li "They're all crying themselves to sleep tonight because of you."
+        scene v15s35_7i
+        with dissolve
 
-                scene v15s35_8h # FPP. same as v15s35_8a Autumn is smirking, still looking at Mc, mouth is still closed
-                with dissolve
+        li "They're all crying themselves to sleep tonight because of you."
 
-                u "Damn, Autumn. Shame on you..."
+        scene v15s35_8h # FPP. same as v15s35_8a Autumn is smirking, still looking at Mc, mouth is still closed
+        with dissolve
 
-                scene v15s35_7j # FPP. same as v15s35_7f Lindsey is looking at Autumn, still fake crying, mouth is still open
-                with dissolve
+        u "Damn, Autumn. Shame on you..."
 
-                li "Christmas is over... *Fake sobbing*"
+        scene v15s35_7j # FPP. same as v15s35_7f Lindsey is looking at Autumn, still fake crying, mouth is still open
+        with dissolve
 
-                scene v15s35_8
-                with dissolve
+        li "Christmas is over... *Fake sobbing*"
 
-                aut "What? Haha, come on you guys... They'd have a contingency plan for that, I'm sure."
+        scene v15s35_8
+        with dissolve
 
-                scene v15s35_8a
-                with dissolve
+        aut "What? Haha, come on you guys... They'd have a contingency plan for that, I'm sure."
 
-                u "I guess we'll find out soon enough."
+        scene v15s35_8a
+        with dissolve
 
-                scene v15s35_8b
-                with dissolve
+        u "I guess we'll find out soon enough."
 
-                aut "How can you all be so okay with killing the Easter bunny?"
+        scene v15s35_8b
+        with dissolve
 
-                scene v15s35_9a
-                with dissolve
+        aut "How can you all be so okay with killing the Easter bunny?"
 
-                au "At least we can eat the Easter bunny. I wouldn't want to chew on Santa. *Laughs*"
+        scene v15s35_9a
+        with dissolve
 
-                scene v15s35_7h
-                with dissolve
+        au "At least we can eat the Easter bunny. I wouldn't want to chew on Santa. *Laughs*"
 
-                li "Eww, that's so gross, Aubrey..."
+        scene v15s35_7h
+        with dissolve
 
-                scene v15s35_9
-                with dissolve
+        li "Eww, that's so gross, Aubrey..."
 
-                au "You're welcome."
+        scene v15s35_9
+        with dissolve
 
-                scene v15s35_8a
-                with dissolve
+        au "You're welcome."
 
-                u "Anyone can dress up as a bunny to take its place. Get me a basket and some eggs and our problem is solved."
+        scene v15s35_8a
+        with dissolve
 
-                if aubrey.relationship.value <= Relationship.MAD.value:
-                    scene v15s35_9f
-                    with dissolve
+        u "Anyone can dress up as a bunny to take its place. Get me a basket and some eggs and our problem is solved."
 
-                    pause 0.75
+        if aubrey.relationship.value <= Relationship.MAD.value:
+            scene v15s35_9f
+            with dissolve
 
-                elif aubrey.relationship.value >= Relationship.TAMED.value:
-                    scene v15s35_9i # FPP. same as v15s35_9d Aubrey is biting her finger, looking at Mc seductively
-                    with dissolve
+            pause 0.75
 
-                else:
-                    scene v15s35_9h
-                    with dissolve
+        elif aubrey.relationship.value >= Relationship.TAMED.value:
+            scene v15s35_9i # FPP. same as v15s35_9d Aubrey is biting her finger, looking at Mc seductively
+            with dissolve
 
-                scene v15s35_8a
-                with dissolve
+        else:
+            scene v15s35_9h
+            with dissolve
 
-                u "But finding a new Santa? Sheesh... That's a recruiting nightmare."
+        scene v15s35_8a
+        with dissolve
 
-                if aubrey.relationship.value <= Relationship.MAD.value:
-                    scene v15s35_9g
-                    with dissolve
+        u "But finding a new Santa? Sheesh... That's a recruiting nightmare."
 
-                    au "Yeah, Autumn, you really fucked us on this one."
+        if aubrey.relationship.value <= Relationship.MAD.value:
+            scene v15s35_9g
+            with dissolve
 
-                    scene v15s35_9f
-                    with dissolve
+            au "Yeah, Autumn, you really fucked us on this one."
 
-                    pause 0.75
+            scene v15s35_9f
+            with dissolve
 
-                elif aubrey.relationship.value >= Relationship.TAMED.value:
-                    scene v15s35_9j # FPP. same as v15s35_9i Aubrey is winking at Mc, not biting her finger, full smile, mouth is closed
-                    with dissolve
+            pause 0.75
 
-                    pause 0.75
+        elif aubrey.relationship.value >= Relationship.TAMED.value:
+            scene v15s35_9j # FPP. same as v15s35_9i Aubrey is winking at Mc, not biting her finger, full smile, mouth is closed
+            with dissolve
 
-                scene v15s35_8b
-                with dissolve
+            pause 0.75
 
-                aut "Alright, alright. Say what you want, but I'm never going to kill that poor bunny."
+        scene v15s35_8b
+        with dissolve
+
+        aut "Alright, alright. Say what you want, but I'm never going to kill that poor bunny."
+
+        label v15s35_wyr2_end:
 
         scene v15s35_7i
         with dissolve
@@ -783,196 +817,213 @@ label v15s35:
 
         # -After choosing, we see on the UI what everyone has chosen. Lindsey and Autumn chose frog body, human mind. Aubrey chose human body, frog mind-
 
-        menu:
-            "Human body, frog mind":
-                $ add_point(KCT.BRO)
-                
-                scene v15s35_7h
-                with dissolve
+        $ screen_options = [
+            {
+                "option": "Human body, frog mind",
+                "votes": [aubrey],
+                "label": "v15s35_wyr3_humanbody"
+            },
+            {
+                "option": "Frog body, human mind",
+                "votes": [autumn, lindsey],
+                "label": "v15s35_wyr3_frogbody"
+            }
+        ]
+        call screen would_you_rather("Would you rather?")
 
-                li "Really, Aubrey?"
+        label v15s35_wyr3_humanbody:
+        $ add_point(KCT.BRO)
+        
+        scene v15s35_7h
+        with dissolve
 
-                scene v15s35_9
-                with dissolve
+        li "Really, Aubrey?"
 
-                au "What?"
+        scene v15s35_9
+        with dissolve
 
-                scene v15s35_7h
-                with dissolve
+        au "What?"
 
-                u "So, you're happy just jumping around all day, swimming in rivers and eating flies?"
+        scene v15s35_7h
+        with dissolve
 
-                scene v15s35_9
-                with dissolve
+        u "So, you're happy just jumping around all day, swimming in rivers and eating flies?"
 
-                au "Ha! Yeah, actually. It sounds great."
+        scene v15s35_9
+        with dissolve
 
-                au "I could still do human things using my human body, but since I have a frog brain... No expectations, no pressure at all."
+        au "Ha! Yeah, actually. It sounds great."
 
-                scene v15s35_9d
-                with dissolve
+        au "I could still do human things using my human body, but since I have a frog brain... No expectations, no pressure at all."
 
-                u "Huh..."
+        scene v15s35_9d
+        with dissolve
 
-                scene v15s35_9
-                with dissolve
+        u "Huh..."
 
-                au "Just enjoying life, sunbathing all day. It would be the life!"
+        scene v15s35_9
+        with dissolve
 
-                scene v15s35_8b
-                with dissolve
+        au "Just enjoying life, sunbathing all day. It would be the life!"
 
-                aut "Wait, that sounds really nice... Can I change my answer?"
+        scene v15s35_8b
+        with dissolve
 
-                scene v15s35_7i
-                with dissolve
+        aut "Wait, that sounds really nice... Can I change my answer?"
 
-                li "Absolutely not! You made your choice. You're now a tiny frog with a human mind."
+        scene v15s35_7i
+        with dissolve
 
-                scene v15s35_8j # FPP. same as v15s35_8a Autumn has a cute pouting expression, still looking at Mc, mouth is still closed
-                with dissolve
+        li "Absolutely not! You made your choice. You're now a tiny frog with a human mind."
 
-                pause 0.75
+        scene v15s35_8j # FPP. same as v15s35_8a Autumn has a cute pouting expression, still looking at Mc, mouth is still closed
+        with dissolve
 
-                scene v15s35_8a
-                with dissolve
+        pause 0.75
 
-                u "Yeah, but we're hyper-intelligent frogs. We could build cities, you know."
+        scene v15s35_8a
+        with dissolve
 
-                scene v15s35_7d
-                with dissolve
+        u "Yeah, but we're hyper-intelligent frogs. We could build cities, you know."
 
-                li "True. Whatever we wanted."
+        scene v15s35_7d
+        with dissolve
 
-                scene v15s35_8a
-                with dissolve
+        li "True. Whatever we wanted."
 
-                u "Maybe one day we could take over the planet."
+        scene v15s35_8a
+        with dissolve
 
-                scene v15s35_8d
-                with dissolve
+        u "Maybe one day we could take over the planet."
 
-                aut "Okay, I'm happy with my choice again. *Giggles* Animals taking the planet back!"
+        scene v15s35_8d
+        with dissolve
 
-                scene v15s35_7i
-                with dissolve
+        aut "Okay, I'm happy with my choice again. *Giggles* Animals taking the planet back!"
 
-                li "Frog power!"
+        scene v15s35_7i
+        with dissolve
 
-                scene v15s35_8d
-                with dissolve
+        li "Frog power!"
 
-                aut "Frog power!"
+        scene v15s35_8d
+        with dissolve
 
-                scene v15s35_8a
-                with dissolve
+        aut "Frog power!"
 
-                u "Frog power!"
+        scene v15s35_8a
+        with dissolve
 
-                scene v15s35_9l # FPP. same asv15s35_9j Aubrey is sticking her tongue out, still winking, still full smile, mouth is still open
-                with dissolve
+        u "Frog power!"
 
-                au "Human with frog brain power!"
+        scene v15s35_9l # FPP. same asv15s35_9j Aubrey is sticking her tongue out, still winking, still full smile, mouth is still open
+        with dissolve
 
-                scene v15s35_6d # same as v15s35_6c Everyone is looking at each other and laughing
-                with dissolve
-                
-                pause 0.75
-                
-            "Frog body, human mind":
-                $ add_point(KCT.BOYFRIEND)
+        au "Human with frog brain power!"
 
-                scene v15s35_7i
-                with dissolve
+        scene v15s35_6d # same as v15s35_6c Everyone is looking at each other and laughing
+        with dissolve
+        
+        pause 0.75
+        
+        jump v15s35_wyr3_end
+        
+        label v15s35_wyr3_frogbody:
+        $ add_point(KCT.BOYFRIEND)
 
-                li "Looks like it's just me and Autumn keeping each other company as frogs."
+        scene v15s35_7i
+        with dissolve
 
-                scene v15s35_8
-                with dissolve
+        li "Looks like it's just me and Autumn keeping each other company as frogs."
 
-                aut "Haha, I think it would be a lot of fun! Plus, we'd be cute frogs."
+        scene v15s35_8
+        with dissolve
 
-                scene v15s35_7i
-                with dissolve
+        aut "Haha, I think it would be a lot of fun! Plus, we'd be cute frogs."
 
-                li "Are you kidding? We'd be the hottest frogs!"
+        scene v15s35_7i
+        with dissolve
 
-                scene v15s35_8a
-                with dissolve
+        li "Are you kidding? We'd be the hottest frogs!"
 
-                u "What type of adventures do you think you'll have?"
+        scene v15s35_8a
+        with dissolve
 
-                scene v15s35_8d
-                with dissolve
+        u "What type of adventures do you think you'll have?"
 
-                aut "I just like the simplicity of exploring nature from a frog's perspective."
+        scene v15s35_8d
+        with dissolve
 
-                scene v15s35_8a
-                with dissolve
+        aut "I just like the simplicity of exploring nature from a frog's perspective."
 
-                u "But you would also have to eat flies for the rest of your life."
+        scene v15s35_8a
+        with dissolve
 
-                scene v15s35_7k # FPP. same as v15s35_7e Lindsey's mouth is open, still no expression, still looking at Mc
-                with dissolve
+        u "But you would also have to eat flies for the rest of your life."
 
-                li "Ugh, no! No more coffee or Chinese food or... anything?"
+        scene v15s35_7k # FPP. same as v15s35_7e Lindsey's mouth is open, still no expression, still looking at Mc
+        with dissolve
 
-                scene v15s35_7e
-                with dissolve
+        li "Ugh, no! No more coffee or Chinese food or... anything?"
 
-                u "Nope. Just flies, all day, every day. *Laughs*"
+        scene v15s35_7e
+        with dissolve
 
-                scene v15s35_9
-                with dissolve
+        u "Nope. Just flies, all day, every day. *Laughs*"
 
-                au "Yeah, I'm happy with my choice. I still get to eat whatever I want."
+        scene v15s35_9
+        with dissolve
 
-                scene v15s35_8b
-                with dissolve
+        au "Yeah, I'm happy with my choice. I still get to eat whatever I want."
 
-                aut "But would your frog mind appreciate human food?"
+        scene v15s35_8b
+        with dissolve
 
-                scene v15s35_7h
-                with dissolve
+        aut "But would your frog mind appreciate human food?"
 
-                li "Yeah, it would reject everything, and it wouldn't be long before you're eating flies like us."
+        scene v15s35_7h
+        with dissolve
 
-                scene v15s35_9
-                with dissolve
+        li "Yeah, it would reject everything, and it wouldn't be long before you're eating flies like us."
 
-                au "Fuck, that's true. Okay, I'll eat the damn flies."
+        scene v15s35_9
+        with dissolve
 
-                scene v15s35_9d
-                with dissolve
+        au "Fuck, that's true. Okay, I'll eat the damn flies."
 
-                u "Aubrey, let's just go live in a river and eat flies. These two will need our help protecting them from predators anyway."
+        scene v15s35_9d
+        with dissolve
 
-                if aubrey.relationship.value <= Relationship.MAD.value:
-                    scene v15s35_9m # FPP. same as v15s35_9g Aubrey is looking at Mc, still no expression, mouth is still open
-                    with dissolve
+        u "Aubrey, let's just go live in a river and eat flies. These two will need our help protecting them from predators anyway."
 
-                    au "Ha."
+        if aubrey.relationship.value <= Relationship.MAD.value:
+            scene v15s35_9m # FPP. same as v15s35_9g Aubrey is looking at Mc, still no expression, mouth is still open
+            with dissolve
 
-                else:
-                    scene v15s35_9h
-                    with dissolve
+            au "Ha."
 
-                    au "Haha, okay, sounds like a plan."
+        else:
+            scene v15s35_9h
+            with dissolve
 
-                scene v15s35_8a
-                with dissolve
+            au "Haha, okay, sounds like a plan."
 
-                aut "Aww, we have personal human bodyguards!"
+        scene v15s35_8a
+        with dissolve
 
-                scene v15s35_7d
-                with dissolve
+        aut "Aww, we have personal human bodyguards!"
 
-                li "I feel so protected... Hehe."
+        scene v15s35_7d
+        with dissolve
 
-                scene v15s35_9
-                with dissolve
+        li "I feel so protected... Hehe."
 
-                au "What's the next creep question, huh?"
+        scene v15s35_9
+        with dissolve
+
+        au "What's the next creep question, huh?"
+        
+        label v15s35_wyr3_end:
 
         scene v15s35_7b
         with dissolve
@@ -1044,196 +1095,214 @@ label v15s35:
 
         # -After choosing, we see on the UI what everyone has chosen. Autumn chose no sex forever. Lindsey and Aubrey chose Orgy with twenty people forever-
 
-        menu:
-            "No sex forever":
-                $ add_point(KCT.BOYFRIEND)
-                
-                scene v15s35_7g
-                with dissolve
+        $ screen_options = [
+            {
+                "option": "No sex forever",
+                "votes": [autumn],
+                "label": "v15s35_wyr4_nosex"
+            },
+            {
+                "option": "20-person orgy every time",
+                "votes": [aubrey, lindsey],
+                "label": "v15s35_wyr4_orgy"
+            }
+        ]
+        call screen would_you_rather("Would you rather?")
 
-                li "Interesting!"
+        label v15s35_wyr4_nosex:
+        $ add_point(KCT.BOYFRIEND)
+        
+        scene v15s35_7g
+        with dissolve
 
-                scene v15s35_9e
-                with dissolve
+        li "Interesting!"
 
-                au "No sex forever? Are you fucking crazy? *Laughs*"
+        scene v15s35_9e
+        with dissolve
 
-                scene v15s35_9o # FPP. same as v15s35_9m Aubrey's mouth is closed, still no expression, still looking at Mc
-                with dissolve
+        au "No sex forever? Are you fucking crazy? *Laughs*"
 
-                u "I think an orgy with the same twenty people every time would just get-"
+        scene v15s35_9o # FPP. same as v15s35_9m Aubrey's mouth is closed, still no expression, still looking at Mc
+        with dissolve
 
-                scene v15s35_8e
-                with dissolve
+        u "I think an orgy with the same twenty people every time would just get-"
 
-                u "Well... Depressing after a while, you know?"
+        scene v15s35_8e
+        with dissolve
 
-                scene v15s35_8a
-                with dissolve
+        u "Well... Depressing after a while, you know?"
 
-                pause 0.75
+        scene v15s35_8a
+        with dissolve
 
-                scene v15s35_9m
-                with dissolve
+        pause 0.75
 
-                au "Hard to tell. I'll let you know though."
+        scene v15s35_9m
+        with dissolve
 
-                scene v15s35_9p # FPP. same as v15s35_9d Aubrey is smirking, still looking at Mc, still a slight smile, mouth is still closed
-                with dissolve
+        au "Hard to tell. I'll let you know though."
 
-                pause 0.75
+        scene v15s35_9p # FPP. same as v15s35_9d Aubrey is smirking, still looking at Mc, still a slight smile, mouth is still closed
+        with dissolve
 
-                scene v15s35_9o
-                with dissolve
+        pause 0.75
 
-                u "And what if you had serious feelings for one of the people there?"
+        scene v15s35_9o
+        with dissolve
 
-                u "You would have to watch them get fucked by all those other people, forever?"
+        u "And what if you had serious feelings for one of the people there?"
 
-                if aubrey.relationship.value <= Relationship.MAD.value or "v14_threesome" in sceneList:
-                    scene v15s35_9q # FPP. same as v15s35_9m Aubrey is slightly sad, still looking at Mc, mouth is still open
-                    with dissolve
+        u "You would have to watch them get fucked by all those other people, forever?"
 
-                    au "Oh... Yeah, you're right..."
+        if aubrey.relationship.value <= Relationship.MAD.value or "v14_threesome" in sceneList:
+            scene v15s35_9q # FPP. same as v15s35_9m Aubrey is slightly sad, still looking at Mc, mouth is still open
+            with dissolve
 
-                else:
-                    scene v15s35_9m
-                    with dissolve
+            au "Oh... Yeah, you're right..."
 
-                    au "Oh... Yeah, you're right..."
+        else:
+            scene v15s35_9m
+            with dissolve
 
-                scene v15s35_7k
-                with dissolve
+            au "Oh... Yeah, you're right..."
 
-                li "That sounds awful, actually..."
+        scene v15s35_7k
+        with dissolve
 
-                scene v15s35_7d
-                with dissolve
+        li "That sounds awful, actually..."
 
-                li "But I still think I would choose the orgy because I can't imagine life without sex, haha. That would be torture."
+        scene v15s35_7d
+        with dissolve
 
-                scene v15s35_7c
-                with dissolve
+        li "But I still think I would choose the orgy because I can't imagine life without sex, haha. That would be torture."
 
-                u "I mean, it would totally suck, but still. I'd rather have no sex than be stuck with twenty people."
+        scene v15s35_7c
+        with dissolve
 
-                scene v15s35_7i
-                with dissolve
+        u "I mean, it would totally suck, but still. I'd rather have no sex than be stuck with twenty people."
 
-                li "Is that why you chose it, Autumn?"
+        scene v15s35_7i
+        with dissolve
 
-            "20-person orgy every time":
-                $ add_point(KCT.BRO)
-                $ add_point(KCT.TROUBLEMAKER)
-                
-                scene v15s35_7d
-                with dissolve
+        li "Is that why you chose it, Autumn?"
 
-                li "*Laughs* Looks like I'll be seeing [name] and Aubrey at the orgy."
+        jump v15s35_wyr4_end
+        
+        label v15s35_wyr4_orgy:
 
-                if aubrey.relationship.value <= Relationship.MAD.value:
-                    scene v15s35_9
-                    with dissolve
+        $ add_point(KCT.BRO)
+        $ add_point(KCT.TROUBLEMAKER)
+        
+        scene v15s35_7d
+        with dissolve
 
-                    au "About time!"
+        li "*Laughs* Looks like I'll be seeing [name] and Aubrey at the orgy."
 
-                else:
-                    scene v15s35_9h
-                    with dissolve
+        if aubrey.relationship.value <= Relationship.MAD.value:
+            scene v15s35_9
+            with dissolve
 
-                    au "About time!"
+            au "About time!"
 
-                scene v15s35_9d
-                with dissolve
+        else:
+            scene v15s35_9h
+            with dissolve
 
-                u "I wonder who else we would see there."
+            au "About time!"
 
-                scene v15s35_9b
-                with dissolve
+        scene v15s35_9d
+        with dissolve
 
-                au "I hope we get to choose a few of them..."
+        u "I wonder who else we would see there."
 
-                scene v15s35_7h
-                with dissolve
+        scene v15s35_9b
+        with dissolve
 
-                li "I don't think we'd get a choice, hate to break it to you."
+        au "I hope we get to choose a few of them..."
 
-                scene v15s35_7c
-                with dissolve
+        scene v15s35_7h
+        with dissolve
 
-                u "Well, that's a little weird. Strangers?"
+        li "I don't think we'd get a choice, hate to break it to you."
 
-                if aubrey.relationship.value <= Relationship.MAD.value:
-                    scene v15s35_9r # FPP. same as v15s35_9f Aubrey's mouth is open, still a disgusted expression, still looking at Mc
-                    with dissolve
+        scene v15s35_7c
+        with dissolve
 
-                    au "It doesn't matter who's there. It's not like you have to fuck everyone."
+        u "Well, that's a little weird. Strangers?"
 
-                    scene v15s35_9f
-                    with dissolve
+        if aubrey.relationship.value <= Relationship.MAD.value:
+            scene v15s35_9r # FPP. same as v15s35_9f Aubrey's mouth is open, still a disgusted expression, still looking at Mc
+            with dissolve
 
-                    u "Isn't that the idea?"
+            au "It doesn't matter who's there. It's not like you have to fuck everyone."
 
-                    scene v15s35_9r
-                    with dissolve
+            scene v15s35_9f
+            with dissolve
 
-                    au "No! You just do stuff with whoever you want."
+            u "Isn't that the idea?"
 
-                    scene v15s35_9f
-                    with dissolve
+            scene v15s35_9r
+            with dissolve
 
-                    u "I guess you could just sit and watch then..."
+            au "No! You just do stuff with whoever you want."
 
-                else:
-                    scene v15s35_9b
-                    with dissolve
+            scene v15s35_9f
+            with dissolve
 
-                    au "It doesn't matter who's there. It's not like you have to fuck everyone."
+            u "I guess you could just sit and watch then..."
 
-                    scene v15s35_9d
-                    with dissolve
+        else:
+            scene v15s35_9b
+            with dissolve
 
-                    u "Isn't that the idea?"
+            au "It doesn't matter who's there. It's not like you have to fuck everyone."
 
-                    scene v15s35_9b
-                    with dissolve
+            scene v15s35_9d
+            with dissolve
 
-                    au "No! You just do stuff with whoever you want."
+            u "Isn't that the idea?"
 
-                    scene v15s35_9c
-                    with dissolve
+            scene v15s35_9b
+            with dissolve
 
-                    u "I guess you could just sit and watch then..."
+            au "No! You just do stuff with whoever you want."
 
-                scene v15s35_6e # TPP. same as v15s35_6d Aubrey, Autumn, and Lindsey are all looking at MC awkwardly, Mc has no expression, all mouths are closed
-                with dissolve
+            scene v15s35_9c
+            with dissolve
 
-                pause 0.75
+            u "I guess you could just sit and watch then..."
 
-                scene v15s35_6f # TPP. same as v15s35_6e Mc's mouth is open
-                with dissolve
+        scene v15s35_6e # TPP. same as v15s35_6d Aubrey, Autumn, and Lindsey are all looking at MC awkwardly, Mc has no expression, all mouths are closed
+        with dissolve
 
-                u "If you wanted to, of course."
+        pause 0.75
 
-                scene v15s35_6e
-                with dissolve
+        scene v15s35_6f # TPP. same as v15s35_6e Mc's mouth is open
+        with dissolve
 
-                pause 0.75
+        u "If you wanted to, of course."
 
-                scene v15s35_6d
-                with dissolve
+        scene v15s35_6e
+        with dissolve
 
-                pause 0.75
+        pause 0.75
 
-                scene v15s35_7i
-                with dissolve
+        scene v15s35_6d
+        with dissolve
 
-                li "So Autumn, you could really give up sex forever?"
+        pause 0.75
 
-                scene v15s35_9a
-                with dissolve
+        scene v15s35_7i
+        with dissolve
 
-                au "Insanity!"
+        li "So Autumn, you could really give up sex forever?"
+
+        scene v15s35_9a
+        with dissolve
+
+        au "Insanity!"
+
+        label v15s35_wyr4_end:
 
         scene v15s35_8i
         with dissolve
