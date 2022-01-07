@@ -19,6 +19,7 @@ label start:
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
     hide no_hard_feelings
 
+    call screen end_screen
     call screen real_life_mode
 
 label end_credits: # for compatibility
@@ -26,7 +27,9 @@ label gameEnd:
     stop music fadeout 3
     play music "music/vocal.mp3"
 
-    if not config.enable_steam:
+    if config.enable_steam:
+        call screen steam_end
+    else:
         call screen getaccess
 
 label credits:
