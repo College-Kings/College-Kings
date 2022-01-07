@@ -126,19 +126,24 @@ screen would_you_rather_answers(question, mc_choice):
                     xysize (789, 293)
                     background Frame("images/v15/game_show/answer_frame.png")
 
-                    hbox:
+                    vbox:
                         align (0.5, 0.5)
                         spacing 20
-                        xsize 630
 
-                        text char + ":" yalign 0.5 style "game_show_char_text"
+                        text option["option"].upper() yalign 0.5 style "game_show_option_text"
 
-                        text option["option"].upper() xsize 450 yalign 0.5 style "game_show_option_text"
+                        hbox:
+                            align (0.5, 0.5)
+                            spacing 20
+                            
+                            if len(option["votes"]) == 1:
+                                text "{{color=#FFCC2B}}{}{{/color}} VOTE".format(len(option["votes"])) yalign 0.5 style "game_show_vote_text"
+                            else:
+                                text "{{color=#FFCC2B}}{}{{/color}} VOTES".format(len(option["votes"])) yalign 0.5 style "game_show_vote_text"
 
-                        if len(option["votes"]) == 1:
-                            text "{{color=#FFCC2B}}{}{{/color}} VOTE".format(len(option["votes"])) yalign 0.5 style "game_show_vote_text"
-                        else:
-                            text "{{color=#FFCC2B}}{}{{/color}} VOTES".format(len(option["votes"])) yalign 0.5 style "game_show_vote_text"
+                            for vote in option["votes"]:
+                                add Transform(vote.profile_picture, size=(65, 65))
+
 
     button action Jump(mc_choice["label"])
 
