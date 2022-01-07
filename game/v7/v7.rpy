@@ -12329,9 +12329,8 @@ label rileyhocodate:
 
     jump labelfr4dancefloor
 
-
 ############# SCENE 45 HOMECOMING FREE ROAM
-######
+
 label fr4:
     play music "music/mhoco1.mp3"
 
@@ -12882,7 +12881,6 @@ label chloe_dance:
 
     jump fr4chloeending
 
-
 label fr4emilydate:
     scene sfr4em20 #fpp close up emily dancing very drunkenly
 
@@ -13136,7 +13134,6 @@ label fr4emilydate:
 
         jump fr4rileyending
 
-
 label fr4laurendate:
     scene sfr4la19a # close up lauren smiling mouth closed
 
@@ -13378,7 +13375,6 @@ label fr4laurendate:
     la "Home sweet home."
 
     jump fr4laurenending
-
 
 label fr4penelopedate:
     scene sfr4pe14 # fpp penelope turned around dancing close up
@@ -13837,7 +13833,6 @@ label fr4penelopedate:
         queue music [ "music/mchill1.mp3", "music/m7punk.mp3" ]
 
         jump fr4rileyending2
-
 
 label fr4rileydate:
     #Talking to riley & she's your date:
@@ -14584,9 +14579,7 @@ label fr4aaron2:
 
     jump labelfr4gymentrance
 
-
 label fr4riley2:
-
     scene sfr4ri50 # showing riley getting a drink
 
     u "Hey."
@@ -15998,7 +15991,6 @@ label fr4penelope2:
 
     jump labelfr4hallway
 
-
 label fr4chloe2:
     $ freeroam4.add("chloe2")
 
@@ -16357,7 +16349,6 @@ label fr4lockerroom:
 
     jump labelfr4hallwaycorner
 
-
 label fr4lockerroomchloe:
     if not "chloe2" in freeroam4:
         $ freeroam4.add("chloe2")
@@ -16624,6 +16615,7 @@ label fr4lockerroomchloe:
     ##### OUTSIDE #####
 
     ### LOCATION 9: STAIRS
+    
 label fr4emily1:
     $ freeroam4.add("emily")
     $ forgiveemily = True
@@ -16715,6 +16707,7 @@ label fr4emily2:
     jump labelfr4outsidestairs
 
     ### LOCATION 10: STREET
+    
 label fr4samantha1:
     $ freeroam4.add("samantha")
 
@@ -17132,7 +17125,6 @@ label fr4rileyending2:
         ri "I-"
 
         jump v7end
-
 
 ############### SCENE 48 CHLOE ENDING
 label fr4chloeending:
