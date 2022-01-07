@@ -323,7 +323,7 @@ label v14s43c:
 
     u "*Whispers* Wait... Is this a romance or an argument scene?"
 
-    scene v14s43c_1a
+    scene v14s43c_1e
     with dissolve
 
     pe "*Whispers* Just play along! Ahem..."

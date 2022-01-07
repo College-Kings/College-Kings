@@ -125,15 +125,15 @@ label v14s19_continue:
 
     u "From the options we have, these are the final decisions I'd go with."
 
+    scene v14s19_99a # TPP. Same as v14s19_99, but Chloe mouth open, MC mouth closed
+    with dissolve
+
     if (v14_help_chloe and not v14_chloe_wolves):
         cl "Getting the Apes to side with us could take a lot of convincing but..."
         cl "If we manage to pull it off, a Chicks and Apes alliance would make for an interesting future of the Chicks."
 
     else:
         cl "I know Chris trusts me, so I'm pretty sure we've already got the Wolves on our side. Guess we'll find out, though..."
-
-    scene v14s19_99a # TPP. Same as v14s19_99, but Chloe mouth open, MC mouth closed
-    with dissolve
 
     cl "Hmm, okay..."
 

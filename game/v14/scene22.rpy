@@ -296,7 +296,7 @@ label v14s22_steal:
 
     li "Haha! This is going to be insane..."
 
-    scene v14s22_5
+    scene v14s22_5a
     with dissolve
 
     u "It's a really smart plan, I just hope we can pull it off."
@@ -394,9 +394,6 @@ label v14s22_end:
     with dissolve
 
     li "Guess we'll never know."
-
-    scene v14s22_5g
-    with dissolve
 
     li "Let's get out of here before the night crew comes in to work."
 

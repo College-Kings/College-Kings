@@ -86,16 +86,14 @@ label v13s40:
     stop music fadeout 3
     play music "music/v13/Track Scene 40_2.mp3" fadein 2
 
-    $ scene_fromgame = True #to distinguish whether seeing this scene coming from gallery or from game
     label v13s40_sg:
-        if not scene_fromgame:
+        if _in_replay:
             $ mc.money += 1000
-            $ mc.add_item(honey)
-            $ mc.add_item(butt_plug)
-            $ mc.add_item(spankers)
-            $ mc.add_item(feather)
+            $ mc.inventory.add_item(honey)
+            $ mc.inventory.add_item(butt_plug)
+            $ mc.inventory.add_item(spankers)
+            $ mc.inventory.add_item(feather)
             $ mc.money -= 1000
-    $ scene_fromgame = False
 
     scene v13s40_8 # FPP. Chloe wrapping her arms around MC, looking at him, Chloe sexy look, mouth open
     with dissolve
@@ -162,7 +160,7 @@ label v13s40:
     if mc.has_item(feather):
         $ sex_overlay_options[0].append((feather.name, "v13s40_feather"))
 
-    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
+    call screen sex_overlay("v13s40_end_free_roam")
 
 label v13s40_honey:
     $ chloeturnedon.add("honey")
@@ -213,7 +211,7 @@ label v13s40_honey:
 
     u "I've got plenty more where that came from."
 
-    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
+    call screen sex_overlay("v13s40_end_free_roam")
 
 label v13s40_feather:
     $ chloeturnedon.add("feather")
@@ -262,7 +260,7 @@ label v13s40_feather:
 
     u "We can try something else..."
 
-    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
+    call screen sex_overlay("v13s40_end_free_roam")
 
 label v13s40_spanker:
     $ chloeturnedon.add("spanker")
@@ -351,7 +349,7 @@ label v13s40_spanker:
 
     pause
 
-    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
+    call screen sex_overlay("v13s40_end_free_roam")
 
 label v13s40_neck:
     scene v13s40neck_1 # TPP. Close up of Chloe's neck
@@ -372,7 +370,7 @@ label v13s40_neck:
 
             pause
         
-    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
+    call screen sex_overlay("v13s40_end_free_roam")
 
 label v13s40_chest:
     scene v13s40chest_1 # TPP. Close up of Chloe's boobs
@@ -413,7 +411,7 @@ label v13s40_chest:
 
             pause
     
-    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
+    call screen sex_overlay("v13s40_end_free_roam")
 
 label v13s40_back:
     scene v13s40back_1 # TPP. Close up of Chloe's back
@@ -454,7 +452,7 @@ label v13s40_back:
 
             pause
     
-    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
+    call screen sex_overlay("v13s40_end_free_roam")
 
 label v13s40_shoulder:
     scene v13s40shoulder_1 # TPP. Close up of Chloe's shoulder
@@ -486,7 +484,7 @@ label v13s40_shoulder:
 
             pause
     
-    call screen sex_overlay(v13s40_sex_overlay, continue_label="v13s40_end_free_roam")
+    call screen sex_overlay("v13s40_end_free_roam")
         
 label v13s40_end_free_roam:
     if len(chloeturnedon) >= 2:
@@ -739,7 +737,9 @@ label v13s40_end_free_roam:
         scene v13s40end_18 # TPP. Show MC laying in bed, naked, smiling, mouth closed
         with dissolve
 
-        $ grant_achievement("we_like_them_wild")
+        if not _in_replay:
+            $ grant_achievement("we_like_them_wild")
+        
         u "(This girl is gonna drive me crazy...) *Laughs*"
 
         scene v13s40end_17a # FPP. Same as v13s40end_17, Chloe coming out of bathroom, smiling, mouth closed, naked

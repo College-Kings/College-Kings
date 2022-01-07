@@ -284,9 +284,6 @@ label v14s03b:
 
     u "Thank you, you-"
 
-    scene v14s03b_8a
-    with dissolve
-
     ry "What is it about me that you find so handsome?"
 
     scene v14s03b_9 # TPP Show Emerald putting her arms around Ryan's neck, her face close to his, she is smiling with her mouth open. MC is smiling

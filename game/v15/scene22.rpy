@@ -941,7 +941,7 @@ label v15s22:
             scene v15s22_6b
             with dissolve
 
-            u "And in terms of fairness with the other sororities and fraternities, when they see the Chicks leading the way, they will want the same treatment."
+            u "And in terms of fairness with the other sororities and frats, when they see the Chicks leading the way, they will want the same treatment."
 
             scene v15s22_6n
             with dissolve

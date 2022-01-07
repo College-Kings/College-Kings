@@ -4,6 +4,8 @@
 # Time: Night 
 
 label v15s18e:
+    label v15s18e_sg:
+
     $ sceneList.add("v15_lauren")
     
     play sound "sounds/dooropen.mp3"
@@ -11,7 +13,7 @@ label v15s18e:
     scene v15s18e_1 # TPP. Show MC and Lauren entering Lauren's room, her door open, Both slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     if config_censored:
         call screen censoredPopup("v15s18e_nsfwSkipLabel1")
@@ -21,27 +23,29 @@ label v15s18e:
     scene v15s18e_2 # TPP. MC and Lauren in the room with the door closed, MC pulling off Lauren's costume, MC slight smile, mouth closed, Lauren biting her lip.
     with dissolve
     
-    pause 0.75
+    pause 1.25
 
     scene v15s18e_3 # TPP. Of just Lauren's costume landing somewhere on the floor after being tossed off.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18e_4 # TPP. MC and Lauren now in the middle of the room, Lauren pulling off MC's costume, MC slight smile, mouth closed, Lauren with a flirty expression, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18e_3a # TPP. Just MC's costume landing next to Lauren's after being tossed off.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18e_4a # TPP. MC and Lauren in the middle of the room, naked, and kissing.
     with dissolve
 
-    pause 0.75
+    play sound "sounds/kiss.mp3"
+
+    pause 1.25
 
     scene v15s18e_5 # TPP. Lauren laying on the bed naked. Her boobs, neck, feet, and vagina need to be visibl(Need to be clicked on for freeroam)
     with dissolve
@@ -53,13 +57,12 @@ label v15s18e:
     ], continue_label="v15s18e_end")
 
 label v15s18e_neck:
-    $ v15s18e_frneck = True
-
     scene v15s18ene_1 # TPP. Close up of Lauren's bare neck 
     with dissolve
 
     menu:
         "Kiss":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s18ene_2 # TPP. Show MC kissing Lauren's neck, Lauren flirty, mouth open.
             with dissolve
 
@@ -87,6 +90,7 @@ label v15s18e_neck:
             u "Ha, good."
 
         "Choke":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v15s18ene_1a # TPP. Show MC's hand on Lauren's neck
             with dissolve
 
@@ -158,13 +162,12 @@ label v15s18e_neck:
     ], continue_label="v15s18e_end")
 
 label v15s18e_boobs:
-    $ v15s18e_frboobs = True
-
     scene v15s18ebo_1 # TPP. Close up shot of Lauren's boobs
     with dissolve
     
     menu:
         "Massage":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s18ebo_2 # TPP. MC ontop of Lauren, his hand massaging her breast as he looks at Lauren, Lauren flirty, mouth open, MC slight smile, mouth closed.
             with dissolve
 
@@ -206,6 +209,7 @@ label v15s18e_boobs:
             u "(I bet you wouldn't... Hehe.)"
 
         "Suck":
+            $ add_point(KCT.BRO)
             scene v15s18ebo_4 # TPP. Show MC sucking on Lauren's boob, Lauren flirty, mouth open.
             with dissolve
 
@@ -258,13 +262,12 @@ label v15s18e_boobs:
     ], continue_label="v15s18e_end")
 
 label v15s18e_feet:
-    $ v15s18e_frfeet = True
-    
     scene v15s18efe_1 # FPP. Lauren's feet in MC's face, MC looking up from her feet seeing her naked body, Lauren biting her lip.
     with dissolve
 
     menu:
         "Massage":
+            $ add_point(KCT.BOYFRIEND)
             scene v15s18efe_2 # FPP. MC's view a little further back, MC looking up from her feet we are able to see her face, Lauren flirty, mouth open.
             with dissolve
 
@@ -310,6 +313,7 @@ label v15s18e_feet:
             u "(Let's give her something else to moan about...)"
 
         "Suck":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v15s18efe_3 # TPP. Show MC kissing Lauren's feet, Lauren's face visible, Lauren shocked, mouth open.
             with dissolve
 
@@ -637,6 +641,8 @@ label v15s18e_end:
 
     menu:
         "Cum inside her":
+            $ add_point(KCT.BOYFRIEND)
+            $ add_point(KCT.TROUBLEMAKER)
             $ v15s18e_cum_in_lauren = True
             
             scene v15s18eend_8
@@ -655,6 +661,7 @@ label v15s18e_end:
             la "*Gasps* Yes, [name]... Yes! *Moans*"
 
         "Pull out":
+            $ add_point(KCT.BRO)
             scene v15s18eend_9 # FPP. MC looking down and pulling his cock out of Lauren.
             with dissolve
 
@@ -713,10 +720,14 @@ label v15s18e_end:
     scene v15s18end_12 # FPP. MC looking at the empty room.
     with dissolve
 
-    $ checklist[0].complete = True
+    if not _in_replay:
+        $ checklist[0].complete = True
 
     $ lauren.relationship = Relationship.GIRLFRIEND
 
     u "(What a fucking party...) *Laughs*"
+
+    $ renpy.end_replay()
+
 
     jump v15s18f

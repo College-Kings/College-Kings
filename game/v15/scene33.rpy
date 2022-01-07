@@ -1,3 +1,4 @@
+
 # SCENE 33: Aubrey's Parent's Wedding
 # Locations: Aubrey's Parent's Wedding
 # Characters: MC (Outfit: Wedding), AUBREY (Outfit: Wedding), NAOMI (Outfit: Wedding), AUBREY'S DAD (Outfit: Wedding), AUBREY'S MOM (Outfit: Wedding), UNCLE RICKY (Outfit: Wedding), WEDDING OFFICIAL (Outfit: 1)
@@ -566,7 +567,7 @@ label v15s33:
     scene v15s33_22b
     with dissolve
 
-    aumom "Flowers make a wedding, honey. You might not care much about it, but your grandma was a professional florist and I know a thing or two ab-"
+    aumom "Flowers make a wedding, honey. You might not care much, but your grandma was a professional florist and I know a thing or two ab-"
 
     scene v15s33_19c
     with dissolve
@@ -2079,7 +2080,8 @@ label v15s33:
     scene v15s33_66 # TPP. Close up of the Wedding official standing between Aubrey's parents, Wedding official slight smile, mouth closed.
     with dissolve
 
-    wedoff "Today is the most special and sacred day, as we celebrate the love held between two people whose bond grows stronger with each passing day..."
+    wedoff "Today is a most special and sacred day."
+    wedoff "Today we celebrate the love held between two people whose bond grows stronger with each passing day..."
 
     scene v15s33_67 # TPP. Later in the day, Close up of Aubrey's Mom, looking at Aubrey's dad(off camera), Aubrey's mom tearing up, slight smile, mouth closed.
     with fade
@@ -2377,7 +2379,6 @@ label v15s33:
                 u "Fuck... I need to stop opening my mouth."
 
                 jump v15s34
-
     else:
         scene v15s33_75a
         with dissolve

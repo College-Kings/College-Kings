@@ -46,14 +46,10 @@ label v10_riley_sex:
 
     u "(Okay, she should be coming out soon.)"
 
-    $ scene_fromgame = True
-
     if riley.relationship.value >= Relationship.FWB.value or kct == "confident":
         label v10s40_galleryScene:
-            if not scene_fromgame:
+            if _in_replay:
                 $ riley.relationship = Relationship.FWB
-
-    $ scene_fromgame = False
 
     scene v10srds3 # FPP. Show Riley walking into her dorm room, wrapped in a towel, her hair down and still wet. She has a little smile, mouth open.
     with fade
