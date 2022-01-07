@@ -1,6 +1,3 @@
-transform credits_scroll(speed):
-    ypos 720
-    linear speed ypos -720
 
 screen end_screen():
     tag end_screen
@@ -26,6 +23,7 @@ screen end_screen():
             text_size 100
 
 
+# NOT READY YET - Need the video file for the Patreons
 screen patreon_credits():
     tag end_screen
     modal True
@@ -33,33 +31,6 @@ screen patreon_credits():
     default image_path = "gui/end_screen/"
 
     add image_path + "patreon_credits_background.png"
-
-    frame at credits_scroll(5.0):
-        background None
-        xalign 0.5
-
-        vbox:
-            label "Credits"
-
-            null height 20
-
-            hbox:
-                text "Role 1"
-                text "NAME 1"
-
-            hbox:
-                text "Role 2"
-                text "NAME 2"
-
-style credits_hbox:
-    spacing 40
-    ysize 30
-
-style credits_label:
-    xalign 0.5
-
-style credits_text:
-    xalign 0.5
 
 
 screen team_credits():
