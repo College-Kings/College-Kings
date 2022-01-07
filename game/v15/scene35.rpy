@@ -23,7 +23,7 @@
     #         "votes": []
     #     }
     # ]
-    # call screen whos_most_likely_to("Would you rather?", options)
+    # call screen whos_most_likely_to("Would you rather?")
 
     # $ screen_options = [
     #     {
@@ -35,7 +35,7 @@
     #         "votes": [aubrey]
     #     }
     # ]
-    # call screen would_you_rather("Would you rather?", options)
+    # call screen would_you_rather("Would you rather?")
 
 init python:
     def v15s35_kiwiireply1():
