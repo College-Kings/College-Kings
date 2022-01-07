@@ -242,17 +242,14 @@ label v13s48:
 
     au "Get in my bikini and tell you to meet me at the beach."
 
-    scene v13s48_4a
-    with dissolve
-
     au "That's about it. *Chuckles*"
 
-    scene v13s48_4
+    scene v13s48_4a
     with dissolve
 
     u "I like that plan so far. *Chuckles* How about we walk along the beach?"
 
-    scene v13s48_4a
+    scene v13s48_4
     with dissolve
 
     au "Yes! I'm down."
@@ -636,20 +633,15 @@ label v13s48:
 
     au "Sounds kinda romantic don't you think?"
 
-    scene v13s48_8
-    with dissolve
-
     if aubrey.relationship.value >= Relationship.FWB.value:
         au "I know we're fucking, but..."
 
-        scene v13s48_8c
+        scene v13s48_8
         with dissolve
         
         menu:
             "I meant as friends":
                 $ add_point(KCT.BRO)
-                scene v13s48_8
-                with dissolve
 
                 u "I meant it as friends."
 
@@ -660,13 +652,18 @@ label v13s48:
 
             "I meant as a date":
                 $ add_point(KCT.BOYFRIEND)
+
                 scene v13s48_8
-                with dissolve
+                #with dissolve
 
                 u "I meant it as a date."
 
                 if s12v32_get_aubrey_flowers and v13s48_get_aubrey_chocolate:
                     $ v13s48_canoeing_as_date = True
+
+                    scene v13s48_8a
+                    with dissolve
+                    
                     au "You've been working overtime trying to \"woo\" me, huh?"
 
                     scene v13s48_8

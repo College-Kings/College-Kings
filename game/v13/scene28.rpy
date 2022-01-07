@@ -238,7 +238,7 @@ label v13s28:
 
                 sa "Don't worry, I'll be good. *Chuckles*"
 
-                scene v13s28_7
+                scene v13s28_7b
                 with dissolve
 
                 u "Alright. (I hope so.)"

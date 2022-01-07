@@ -131,9 +131,6 @@ label v13s37_nora:
 
     no "Obviously not good enough... *Chuckles*"
 
-    scene v13s37no_2
-    with dissolve
-
     no "But it's no surprise you'd be the one to find me."
 
     scene v13s37no_2b # FPP. Same as v13s37no2, Nora slightly sad, mouth closed

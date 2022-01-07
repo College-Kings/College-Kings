@@ -31,17 +31,14 @@ label v13s12a:
 
     u "Imre had some... trouble."
 
-    scene v13s12a_2a
-    with dissolve
-
     u "Ryan and I were just keeping an eye out for him."
 
-    scene v13s12a_2a
+    scene v13s12a_2
     with dissolve
 
     au "Ahh... Alright, sounds good. Ready?"
 
-    scene v13s12a_2
+    scene v13s12a_2a
     with dissolve
 
     u "Yeah, let's go."
@@ -188,7 +185,7 @@ label v13s12a:
     scene v13s12a_6f
     with dissolve
 
-    au "*SINGING* I CAN *MUMBLE* *MUMBLE*LOVE IS LIKE A BATTERY, IT POWERS UP MY SOUL!"
+    au "*SINGING* I CAN *MUMBLE* *MUMBLE* LOVE IS LIKE A BATTERY, IT POWERS UP MY SOUL!"
 
     scene v13s12a_6e
     with dissolve

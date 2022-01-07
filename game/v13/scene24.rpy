@@ -376,21 +376,29 @@ label v13s24:
         "No kids for me":
             $ add_point(KCT.BRO)
             $ v13_emmy_points += 1
+            
+            scene v13s24_11a
+            #with dissolve
+
             u "Yeah, I'm on the no kids vibe at the moment too. Guess it's just not something I think about."
 
             scene v13s24_16d # FPP. same as v13s24_16b emmy head tilted, playing with her hair, happy smile
             with dissolve
 
-            pause
+            pause 0.75
 
         "I'm a family man":
             $ add_point(KCT.BOYFRIEND)
+            
+            scene v13s24_11a
+            #with dissolve
+            
             u "I'm a family man of course, a little bit of me continued through our generations. That's really what I'm all about."
 
             scene v13s24_16e # FPP. same as v13s24_16b emmy flirty smirk, squinting a little like she's trying to figure him out
             with dissolve
 
-            pause
+            pause 0.75
 
     scene v13s24_16
     with dissolve
