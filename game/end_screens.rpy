@@ -1,7 +1,3 @@
-#NEW SCREENS
-
-default image_path = "gui/end_screen/"
-
 transform credits_scroll(speed):
     ypos 720
     linear speed ypos -720
@@ -9,6 +5,8 @@ transform credits_scroll(speed):
 screen end_screen():
     tag end_screen
     modal True
+
+    default image_path = "gui/end_screen/"
 
     add image_path + "end_screen_background.png"
 
@@ -32,7 +30,9 @@ screen patreon_credits():
     tag end_screen
     modal True
 
-    add image_path + "patreon_credits_background.webp"
+    default image_path = "gui/end_screen/"
+
+    add image_path + "patreon_credits_background.png"
 
     frame at credits_scroll(5.0):
         background None
@@ -66,7 +66,9 @@ screen team_credits():
     tag end_screen
     modal True
 
-    add image_path + "team_credits_background.webp"
+    default image_path = "gui/end_screen/"
+
+    add image_path + "team_credits_background.png"
 
     text "TEAM CREDITS":
         xalign 0.5
