@@ -203,7 +203,7 @@ label v15s12:
 
             menu:
                 "Tell me":
-                    $ add_point(KCT.TROUBLEMAKER)# TODO - KCT and character points
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ chloe.points -= 1 
                     
                     scene v15s12_5
@@ -270,7 +270,7 @@ label v15s12:
                     li "No problem."
 
                 "Not interested":
-                    $ add_point(KCT.BOYFRIEND) # TODO: KCT and character points 
+                    $ add_point(KCT.BOYFRIEND)
                     $ chloe.points += 1
                     
                     scene v15s12_5
@@ -317,7 +317,7 @@ label v15s12:
         menu: 
             "It's pretty serious": # -if It's pretty serious (Lindsey RS becomes Lindsey Friend)
                 $ lindsey.relationship = Relationship.FRIEND
-                $ add_point(KCT.BOYFRIEND) # TODO KCT and character points 
+                $ add_point(KCT.BOYFRIEND)
                 $ chloe.points += 1
                 $ lindsey.points -= 1
 

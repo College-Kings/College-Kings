@@ -583,6 +583,9 @@ label v12_late_night_workout:
                 "Best spot ever":
                     $ add_point(KCT.TROUBLEMAKER)
 
+                    scene v12lnw21d
+                    #with dissolve
+
                     u "Don't apologize, that was the best spot I ever had."
 
                     scene v12lnw21e

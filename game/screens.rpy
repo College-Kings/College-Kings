@@ -1049,6 +1049,8 @@ screen confirm(message, yes_action, no_action=Hide("confirm")):
     modal True
     style_prefix "confirm"
 
+    add "darker_80"
+
     use alert_template(message):
 
         button:

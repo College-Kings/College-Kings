@@ -73,12 +73,9 @@ label v13s15a:
 
     ri "It's because I still don't sit right with it..."
 
-    scene v13s15a_6d
-    with dissolve
-
     ri "I wanna make sure I balance the scale, you know?"
 
-    scene v13s15a_6c
+    scene v13s15a_6d
     with dissolve
 
     u "I hear you."

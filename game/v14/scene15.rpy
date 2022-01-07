@@ -110,7 +110,6 @@ label v14s15:
     with dissolve
 
     menu:
-
         "It's genius":
             $ add_point(KCT.BRO)
             u "Not gonna lie, that seems like a genius way to decide things, haha."
@@ -123,6 +122,9 @@ label v14s15:
         "It's idiotic":
             $ add_point(KCT.TROUBLEMAKER)
 
+            scene v14s15_7e
+            #with dissolve
+            
             u "Not gonna lie, that is a ridiculously stupid way to make decisions, haha."
 
             scene v14s15_7f

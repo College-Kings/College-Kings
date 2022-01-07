@@ -22,12 +22,12 @@ label v13s49:
     pause 0.75
     
     $ v13s49_kiwiiPost1 = KiwiiPost(aubrey, "v13/aubrey_beach.webp", _("Swimming up the ladder! #ScheveningenBeach"), numberLikes=4218)
-    $ v13s49_kiwiiPost1.newComment(imre, _("Hot as fuck Aubrey!!"), numberLikes=renpy.random.randint(15, 35))
-    $ v13s49_kiwiiPost1.newComment(chloe, _("This is the hottest pic I've ever seen of you!"), mentions=[aubrey], numberLikes=renpy.random.randint(15, 35))
-    $ v13s49_kiwiiPost1.addReply(_("Wow, they turned out great!"), numberLikes=renpy.random.randint(15, 35))
-    $ v13s49_kiwiiPost1.addReply(_("Ah, beautiful. But even better in person ;)"), mentions=[aubrey], numberLikes=renpy.random.randint(15, 35))
-    $ v13s49_kiwiiPost1.newComment(aubrey, _("Thank you! <3"), numberLikes=renpy.random.randint(15, 35))
-    $ v13s49_kiwiiPost1.newComment(naomi, _("OMG! You look just like me! <3"), numberLikes=renpy.random.randint(15, 35))
+    $ v13s49_kiwiiPost1.newComment(imre, _("Hot as fuck Aubrey!!"), numberLikes=renpy.random.randint(1800, 3600))
+    $ v13s49_kiwiiPost1.newComment(chloe, _("This is the hottest pic I've ever seen of you!"), mentions=[aubrey], numberLikes=renpy.random.randint(1800, 3600))
+    $ v13s49_kiwiiPost1.addReply(_("Wow, they turned out great!"), numberLikes=renpy.random.randint(1800, 3600))
+    $ v13s49_kiwiiPost1.addReply(_("Ah, beautiful. But even better in person ;)"), mentions=[aubrey], numberLikes=renpy.random.randint(1800, 3600))
+    $ v13s49_kiwiiPost1.newComment(aubrey, _("Thank you! <3"), numberLikes=renpy.random.randint(2400, 3800))
+    $ v13s49_kiwiiPost1.newComment(naomi, _("OMG! You look just like me! <3"), numberLikes=renpy.random.randint(3800, 6000))
 
     scene v13s49_2b # FPP. Same as v13s49_2, (Aubrey's phone off camera), Aubrey slight smile, mouth closed.
     with dissolve

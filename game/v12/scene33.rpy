@@ -1025,7 +1025,6 @@ label v12s33_door1:
         call screen v12s33_three_doors
 
 label v12s33_three_doors_back:
-
     scene v12s33_20
     with dissolve
 

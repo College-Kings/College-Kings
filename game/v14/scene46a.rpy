@@ -77,17 +77,13 @@ label v14s46a:
 
     u "It's fine, I'm just teasing."
 
-    $ scene_fromgame = True
-
     if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
         label v14s46a_sga:
-            if not scene_fromgame:
+            if _in_replay:
                 $ lauren.relationship = Relationship.GIRLFRIEND
         
     else:
         label v14s46a_sgb:
-
-    $ scene_fromgame = False
 
     scene v14s46a_5 # TPP. MC lays on Lauren bed.
     with dissolve

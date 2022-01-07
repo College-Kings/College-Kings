@@ -35,13 +35,11 @@ label v15s48a:
         with dissolve
 
         u "(Damn straight.)"
-
     if achievement.has("helping_hand"):
         scene v15s48a_2
         with dissolve
 
         no "I mean, you helped me get people signed up for the Europe trip. And I didn't even have to ask."
-
     if v10_cheerfornora:
         scene v15s48a_2
         with dissolve
@@ -67,13 +65,11 @@ label v15s48a:
         with dissolve
 
         no "*Giggles*"
-
     if not v12_chase_robber:
         scene v15s48a_2
         with dissolve
 
         no "When I got robbed in Europe, your first instinct was to make sure that I was okay."
-
     if v12_fight_win:
         scene v15s48a_2
         with dissolve
@@ -94,7 +90,6 @@ label v15s48a:
         with dissolve
 
         u "Of course, I did."
-
     if v12_followed_nora:
         scene v15s48a_2
         with dissolve
@@ -219,9 +214,10 @@ label v15s48a:
 
     pause 0
 
-    call screen sex_overlay([
+    $ sex_overlay_options = [
         [("Boobs", "v15s48a_boobs"), ("Feet", "v15s48a_feet"), ("Vagina", "v15s48a_vagina")],
-    ], continue_label="v15s48a_end")
+    ]
+    call screen sex_overlay("v15s48a_end")
 
 label v15s48a_boobs:
     $ v15s48a_frboobs = True
@@ -305,9 +301,10 @@ label v15s48a_boobs:
 
             u "Hmm, I guess we will."
 
-    call screen sex_overlay([
-        [("boobs", "v15s48a_boobs"), ("feet", "v15s48a_feet"), ("vagina", "v15s48a_vagina")],
-    ], continue_label="v15s48a_end")
+    $ sex_overlay_options = [
+        [("Boobs", "v15s48a_boobs"), ("Feet", "v15s48a_feet"), ("Vagina", "v15s48a_vagina")],
+    ]
+    call screen sex_overlay("v15s48a_end")
 
 label v15s48a_feet:
     $ v15s48a_frfeet = True
@@ -377,9 +374,10 @@ label v15s48a_feet:
 
             u "And I can't wait to find out what they are."
 
-    call screen sex_overlay([
-        [("boobs", "v15s48a_boobs"), ("feet", "v15s48a_feet"), ("vagina", "v15s48a_vagina")],
-    ], continue_label="v15s48a_end")
+    $ sex_overlay_options = [
+        [("Boobs", "v15s48a_boobs"), ("Feet", "v15s48a_feet"), ("Vagina", "v15s48a_vagina")],
+    ]
+    call screen sex_overlay("v15s48a_end")
 
 label v15s48a_vagina:
     $ v15s48a_frvagina = True
@@ -475,9 +473,10 @@ label v15s48a_vagina:
 
             no "Oh, [name]. Please..."
 
-    call screen sex_overlay([
-        [("boobs", "v15s48a_boobs"), ("feet", "v15s48a_feet"), ("vagina", "v15s48a_vagina")],
-    ], continue_label="v15s48a_end")
+    $ sex_overlay_options = [
+        [("Boobs", "v15s48a_boobs"), ("Feet", "v15s48a_feet"), ("Vagina", "v15s48a_vagina")],
+    ]
+    call screen sex_overlay("v15s48a_end")
 
 label v15s48a_end:
 # -Clicking on Nora's mouth-
@@ -581,9 +580,6 @@ label v15s48a_end:
             no "Ha, I guess..."
 
         "Get used to it":
-            scene v15s48aend_4
-            #with dissolve
-        
             u "Good, get used to it."
 
             scene v15s48aend_4a

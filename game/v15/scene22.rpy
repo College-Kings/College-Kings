@@ -7,7 +7,12 @@
 label v15s22:
     $ v15s22_kiwiiPost1= KiwiiPost(chloe, "v15s22Kiwii1", "Making changes for my girls!", numberLikes=515)
     $ v15s22_kiwiiPost1.newComment(aubrey, "Ooooh, what are you up to?", numberLikes=renpy.random.randint(160, 460))
-    $ v15s22_kiwiiPost1.newComment(grayson, "Hanging out with the Dean now? That's one way to get votes I guess...", numberLikes=renpy.random.randint(160, 460))
+
+    if v14_ApesPostChloePics:
+        $ v15s22_kiwiiPost1.newComment(grayson, "What are you with the Dean for? Ugh...", numberLikes=renpy.random.randint(160, 460))
+    else:
+        $ v15s22_kiwiiPost1.newComment(grayson, "Hanging out with the Dean now? That's one way to get votes I guess...", numberLikes=renpy.random.randint(160, 460))
+    
     $ v15s22_kiwiiPost1.newComment(chris, "Looks like the President of the Chicks is making some big moves, huh?", numberLikes=renpy.random.randint(160, 460))
     $ v15s22_kiwiiPost1.newComment(chloe, "Trying to! Also, fuck off Gray :)", numberLikes=renpy.random.randint(160, 460))
 
@@ -941,7 +946,7 @@ label v15s22:
             scene v15s22_6b
             with dissolve
 
-            u "And in terms of fairness with the other sororities and fraternities, when they see the Chicks leading the way, they will want the same treatment."
+            u "And in terms of fairness with the other sororities and frats, when they see the Chicks leading the way, they will want the same treatment."
 
             scene v15s22_6n
             with dissolve

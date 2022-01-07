@@ -525,7 +525,7 @@ label v11_mc_amber_gokart:
     clerk "Yeah, you. Your name must have not been interesting enough for me to remember... Anyways, I have a message for you from the gun show... Don't cheat this beautiful lady out of a win."
     
     scene v11cam16a 
-    with dissolve 
+    with dissolve
 
     am "Yeah [name], don't cheat. *Chuckles*"
 

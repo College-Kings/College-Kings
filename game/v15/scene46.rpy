@@ -358,7 +358,6 @@ label v15s46:
         with dissolve
 
         am "Good! More for us. Hehe..."
-
     else:
         scene v15s46_3a
         with dissolve

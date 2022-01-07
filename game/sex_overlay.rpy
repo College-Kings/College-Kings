@@ -1,10 +1,10 @@
-screen sex_overlay(options=sex_overlay_options, continue_label):
+screen sex_overlay(continue_label):
     vbox:
         align (0.5, 1.0)
         yoffset -100
         spacing 10
 
-        for row in options:
+        for row in sex_overlay_options:
             hbox:
                 align (0.5, 0.5)
                 spacing 25

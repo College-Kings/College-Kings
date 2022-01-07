@@ -214,7 +214,7 @@ label v15s20:
         scene v15s20_5a
         with dissolve
 
-        cl "So, you'll need to tread carefully and just make sure you don't interrupt either of us or sound like you're mansplaining anything, haha."
+        cl "Just tread carefully and make sure you don't interrupt either of us or sound like you're mansplaining anything, haha."
 
         scene v15s20_5
         with dissolve

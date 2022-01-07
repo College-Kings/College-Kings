@@ -34,7 +34,6 @@ default previous_location = ""
 default path_builder = False
 default pb_name_set = False
 default pb_start_location = "start"
-default scene_fromgame = False
 
     # Voice Acting
 default voice_acted = True
@@ -50,6 +49,9 @@ default troublemaker = 1
 
 # Scenes
 default sceneList = set()
+
+# Screens
+default screen_options = []
 
 # Sex Overlay
 default sex_overlay_options = []
