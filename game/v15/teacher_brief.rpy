@@ -115,9 +115,7 @@ screen v15_teacher_brief(key):
                 text "LOCKED SECRET INSIGHT" style "teacher_brief_header1"
 
 
-style teacher_brief_title is text:
-    font "fonts/Montserrat-ExtraBold.ttf"
-    size 64
+style teacher_brief_title is montserrat_extra_bold_64
 
 style teacher_brief_subtitle is text:
     font "fonts/Montserrat-Bold.ttf"
