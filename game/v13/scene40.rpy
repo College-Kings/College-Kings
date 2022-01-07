@@ -737,7 +737,9 @@ label v13s40_end_free_roam:
         scene v13s40end_18 # TPP. Show MC laying in bed, naked, smiling, mouth closed
         with dissolve
 
-        $ grant_achievement("we_like_them_wild")
+        if not _in_replay:
+            $ grant_achievement("we_like_them_wild")
+        
         u "(This girl is gonna drive me crazy...) *Laughs*"
 
         scene v13s40end_17a # FPP. Same as v13s40end_17, Chloe coming out of bathroom, smiling, mouth closed, naked
