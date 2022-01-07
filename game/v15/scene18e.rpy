@@ -4,8 +4,6 @@
 # Time: Night 
 
 label v15s18e:
-    $ scene_fromgame = True
-    
     label v15s18e_sg:
 
     $ sceneList.add("v15_lauren")
@@ -713,10 +711,8 @@ label v15s18e_end:
     scene v15s18end_12 # FPP. MC looking at the empty room.
     with dissolve
 
-    if scene_fromgame:
+    if not _in_replay:
         $ checklist[0].complete = True
-
-    $ scene_fromgame = False
 
     $ lauren.relationship = Relationship.GIRLFRIEND
 

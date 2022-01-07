@@ -2536,8 +2536,6 @@ label fz_a:
             $ emily.relationship = Relationship.FWB
             $ forgiveemily = True
 
-            $ scene_fromgame = True
-
             jump emsex_a
 
         "Push her away":
@@ -2719,11 +2717,9 @@ label emsex_a:
 
     play music "music/msexy.mp3"
 
-    if scene_fromgame:
+    if not _in_replay:
         $ grant_achievement("reignition")
     
-    $ scene_fromgame = False
-
     " "
 
     scene em5
