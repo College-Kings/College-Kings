@@ -272,6 +272,7 @@ label v15s15:
 
             menu:
                 "Spank her":
+                    $ add_point(KCT.BRO)
                     scene v15s15_16a # TPP. MC fucking Ms. Rose from behind, she has her mouth closed, MC mouth open (MC not in max penetration, this is to make it look like there is movement, as if he were thrusting)
                     with dissolve
 
@@ -300,6 +301,7 @@ label v15s15:
                     ro "*Moans* Fuck... Yes, [name]..."
 
                 "Degrade her":
+                    $ add_point(KCT.TROUBLEMAKER)
                     scene v15s15_18 # TPP. MC fucking Ms. Rose from behind (different camera angle than v15s15_16), MC, mouth open, slightly angry, Ms. Rose mouth closed, in max penetration
                     with dissolve
 

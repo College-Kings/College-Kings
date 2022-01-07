@@ -1,3 +1,4 @@
+
 # SCENE 33: Aubrey's Parent's Wedding
 # Locations: Aubrey's Parent's Wedding
 # Characters: MC (Outfit: Wedding), AUBREY (Outfit: Wedding), NAOMI (Outfit: Wedding), AUBREY'S DAD (Outfit: Wedding), AUBREY'S MOM (Outfit: Wedding), UNCLE RICKY (Outfit: Wedding), WEDDING OFFICIAL (Outfit: 1)
@@ -2377,7 +2378,6 @@ label v15s33:
                 u "Fuck... I need to stop opening my mouth."
 
                 jump v15s34
-
     else:
         scene v15s33_75a
         with dissolve

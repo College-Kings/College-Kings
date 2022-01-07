@@ -582,7 +582,6 @@ label v15s25:
                         with dissolve
 
                         u "Bye."
-
     else:
         scene v15s25_7
         with dissolve

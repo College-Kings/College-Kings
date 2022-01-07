@@ -147,7 +147,6 @@ label v15s49:
                 with dissolve
 
                 ri "[name]... *Sighs* Thank God you're here. *Sniffles*"
-
             else:
                 scene v15s49_14
                 with dissolve

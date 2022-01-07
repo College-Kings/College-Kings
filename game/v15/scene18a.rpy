@@ -433,6 +433,7 @@ label v15s18a_Ryan:
     
     menu:
         "Gag":
+            $ add_point(KCT.BOYFRIEND)
             $ v15s18a_gag = True
             $ add_point(KCT.BOYFRIEND)
 
