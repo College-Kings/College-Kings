@@ -48,7 +48,6 @@ screen end_screen():
             yalign 0.5
         
 
-
 screen patreon_credits():
     tag end_screen
     modal True
@@ -57,32 +56,30 @@ screen patreon_credits():
 
     add image_path + "patreon_credits_background.png"
 
-    frame at credits_scroll(5.0):
-        background None
+    # add "credits" xalign 0.5 ypos 150 # Current credits have background
+    add "#f00" xalign 0.5 ypos 150 xysize (378, 560)
+
+    imagebutton:
+        idle image_path + "support_development_idle.png"
+        action OpenURL("https://www.patreon.com/collegekings")
         xalign 0.5
+        ypos 765
 
-        vbox:
-            label "Credits"
+    hbox:
+        align (0.5, 1.0)
+        yoffset -40
+        spacing 60
 
-            null height 20
+        imagebutton:
+            idle image_path + "main_menu_idle.png"
+            action MainMenu()
 
-            hbox:
-                text "Role 1"
-                text "NAME 1"
+        imagebutton:
+            idle image_path + "team_idle.png"
+            action Show("team_credits")
 
-            hbox:
-                text "Role 2"
-                text "NAME 2"
-
-style credits_hbox:
-    spacing 40
-    ysize 30
-
-style credits_label:
-    xalign 0.5
-
-style credits_text:
-    xalign 0.5
+    on "show" action SetVariable("quick_menu", False)
+    on "hide" action SetVariable("quick_menu", True)
 
 
 screen team_credits():
@@ -153,9 +150,5 @@ screen team_credits():
         imagebutton:
             idle image_path + "credits_button.png"
             action Show("patreon_credits")
-
-transform credits_scroll(speed):
-    ypos 720
-    linear speed ypos -720
 
 style end_screen_text is montserrat_extra_bold_64
