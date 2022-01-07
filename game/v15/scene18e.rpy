@@ -716,10 +716,13 @@ label v15s18e_end:
     if scene_fromgame:
         $ checklist[0].complete = True
 
+    $ scene_fromgame = False
+
     $ lauren.relationship = Relationship.GIRLFRIEND
 
     u "(What a fucking party...) *Laughs*"
 
     $ renpy.end_replay()
+
 
     jump v15s18f

@@ -90,10 +90,10 @@ label v13s40:
     label v13s40_sg:
         if not scene_fromgame:
             $ mc.money += 1000
-            $ mc.add_item(honey)
-            $ mc.add_item(butt_plug)
-            $ mc.add_item(spankers)
-            $ mc.add_item(feather)
+            $ mc.inventory.add_item(honey)
+            $ mc.inventory.add_item(butt_plug)
+            $ mc.inventory.add_item(spankers)
+            $ mc.inventory.add_item(feather)
             $ mc.money -= 1000
     $ scene_fromgame = False
 

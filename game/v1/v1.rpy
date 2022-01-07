@@ -2013,6 +2013,8 @@ label at_bd:
 
     stop music fadeout 3
 
+    $ scene_fromgame = True
+
     ### Sex dream
     label sexdream1: #for compatibility only
     show screen fantasyOverlay
@@ -2048,12 +2050,15 @@ label at_bd:
 
     play music "music/msexy.mp3"
 
-    if not config_censored:
-        call screen nsfw_Toggle
+    if scene_fromgame:
+        if not config_censored:
+            call screen nsfw_Toggle
 
-    if config_censored:
-        call screen censoredPopup("v1_nsfwSkipLabel1")
-        
+        if config_censored:
+            call screen censoredPopup("v1_nsfwSkipLabel1")
+
+    $ scene_fromgame = False
+    
     scene sda2
     with dissolve
 
