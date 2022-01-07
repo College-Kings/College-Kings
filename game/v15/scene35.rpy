@@ -1617,7 +1617,7 @@ label v15s35:
                 "label": "v15s35_wml2"
             }
         ]
-        call screen whos_most_likely_to("Most likely to be get shit-faced drunk and wake up on the other side of the country?")
+        call screen whos_most_likely_to("Most likely to wake up drunk across the country?")
 
     label v15s35_wml2:
         scene v15s35_7d
