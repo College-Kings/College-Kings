@@ -1,7 +1,4 @@
-screen whos_most_likely_to(question, characters):
-    tag game_show
-    style_prefix "game_show"
-
+screen game_show_base(question):
     vbox:
         align (0.5, 1.0)
         yoffset -50
@@ -15,10 +12,18 @@ screen whos_most_likely_to(question, characters):
 
             text question.upper() align (0.5, 0.5)
 
+        transclude
+
+
+screen whos_most_likely_to(question, options):
+    tag game_show
+    style_prefix "game_show"
+
+    use game_show_base(question):
         hbox:
             xalign 0.5
 
-            for character in characters:
+            for option in options:
                 button:
                     xysize (460, 297)
                     background Frame("images/v15/game_show/character_frame.png")
@@ -29,38 +34,22 @@ screen whos_most_likely_to(question, characters):
                         align (0.5, 0.5)
                         spacing 20
 
-                        add character.profile_picture xalign 0.5
+                        add option["character"].profile_picture xalign 0.5
 
                         button:
                             xysize (324, 91)
                             idle_background "images/v15/game_show/button_idle.png"
                             hover_background "images/v15/game_show/button_idle.png"
-                            action NullAction()
+                            action [SetDict(option, "votes", option["votes"] + [mc]), Show("whos_most_likely_to_answers", question=question, options=options)]
 
-                            text character.name.upper() align (0.5, 0.5)
+                            text option["character"].name.upper() align (0.5, 0.5)
 
 
 screen would_you_rather(question, options):
     tag game_show
     style_prefix "game_show"
 
-    vbox:
-        for char in options[0]["votes"]:
-            text char.name
-
-    vbox:
-        align (0.5, 1.0)
-        yoffset -50
-        spacing -85
-
-        frame:
-            style_prefix "game_show_question"
-            xalign 0.5
-            xysize (1200, 224)
-            background Frame("images/v15/game_show/question_frame.png")
-
-            text question.upper() align (0.5, 0.5)
-
+    use game_show_base(question):
         hbox:
             xalign 0.5
 
@@ -70,9 +59,7 @@ screen would_you_rather(question, options):
                     background Frame("images/v15/game_show/answer_frame.png")
                     sensitive mc not in option["votes"]
                     selected mc in option["votes"]
-                    action SetDict(option, "votes", option["votes"] + [mc])
-
-                    style_prefix "game_show_character"
+                    action [SetDict(option, "votes", option["votes"] + [mc]), Show("would_you_rather_answers", question=question, options=options)]
 
                     hbox:
                         align (0.5, 0.5)
@@ -83,10 +70,69 @@ screen would_you_rather(question, options):
 
                         text option["option"].upper() yalign 0.5 style "game_show_option_text"
 
+
+screen whos_most_likely_to_answers(question, options):
+    tag game_show
+    style_prefix "game_show"
+
+    use game_show_base(question):
+        hbox:
+            xalign 0.5
+
+            for option in options:
+                frame:
+                    xysize (460, 297)
+                    background Frame("images/v15/game_show/character_frame.png")
+
+                    vbox:
+                        align (0.5, 0.5)
+                        spacing 20
+
+                        text "{{color=#FFCC2B}{}{{/color}} VOTES".format(len(option["votes"])) style "game_show_vote_text" xalign 0.5
+
+                        hbox:
+                            xalign 0.5
+                            spacing -20
+
+                            for vote in option["votes"]:
+                                add Transform(vote.profile_picture, size=(65, 65))
+
+    button action Return(options)
+
+
+screen would_you_rather_answers(question, options):
+    tag game_show
+    style_prefix "game_show"
+
+    use game_show_base(question):
+        hbox:
+            xalign 0.5
+
+            for char, option in zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ", options):
+                frame:
+                    xysize (789, 293)
+                    background Frame("images/v15/game_show/answer_frame.png")
+
+                    hbox:
+                        align (0.5, 0.5)
+                        spacing 20
+                        xsize 630
+
+                        text char + ":" yalign 0.5 style "game_show_char_text"
+
+                        text option["option"].upper() yalign 0.5 style "game_show_option_text"
+
+                        text "{{color=#FFCC2B}}{}{{/color}} VOTES".format(len(option["votes"])) yalign 0.5 style "game_show_vote_text"
+
+    button action Return(options)
+
+
 style game_show_question_text is text:
     font "fonts/Montserrat-Bold.ttf"
     size 30
     yoffset -5
+
+style game_show_vote_text is game_show_question_text
 
 style game_show_character_text is olympus_mount_30
 
