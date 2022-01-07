@@ -38,15 +38,14 @@ label v15s39:
     barworker "So happy to see you all tonight. Welcome to the Mango Lounge VIP area!"
 
     if v15_lindsey_alcohol:
-        scene v15s39_5
-        with dissolve
-
         barworker "We have a full range of drinks for you tonight, from beer to prosecco to tequila, even cocktails, all included in your VIP party package."
 
-        scene v15s39_5
-        with dissolve
-
         barworker "Just give me a few minutes and I'll be back with your glasses."
+
+        if v15_lindsey_alcohol:
+            $ set_presidency_percent(v14_lindsey_popularity + 5)
+        else:
+            $ set_presidency_percent(v14_lindsey_popularity + 3)
 
         if v15_lindsey_inviteseb:
             scene v15s39_7 # FPP. Mc looks directrly ahead and see's Sebastian, sitting in the booth, Sebastian looking at MC, slight smile, mouth open
@@ -276,14 +275,8 @@ label v15s39:
 
         pause 0.75
 
-        if v15_lindsey_alcohol:
-            scene v15s39_3d # same as v15s39_3a render is exactly the same except instead of fancy glasses they all have shot glasses
-            with dissolve
-
-            pause 0.75
-
     scene v15s39_8
-    with dissolve
+    with fade
 
     u "(Tonight seems to be going well, but Lindsey hasn't mentioned anything about getting their support...)"
 
@@ -306,7 +299,7 @@ label v15s39:
         scene v15s39_7a
         with dissolve
 
-        se "If it's about supporting you, you know you've got my vote."
+        se "If it's about your campaign, you know you've got my support."
 
         scene v15s39_8
         with dissolve
@@ -493,9 +486,6 @@ label v15s39:
     with dissolve
 
     li "I want to create an environment where we can rely on each other."
-
-    scene v15s39_8f
-    with dissolve
 
     li "To me, supporting other sororities benefits everyone, and that's why we're all here, right?"
 
@@ -685,6 +675,7 @@ label v15s39:
                         "Stay on topic":
                             $ add_point(KCT.TROUBLEMAKER)
                             $ v15_stay_on_topic = True
+                            $ v15_lindsey_recording = 2
 
                             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                                 $ add_point(KCT.BOYFRIEND)
@@ -817,7 +808,7 @@ label v15s39:
                                     li "*Drunk* Without the President's scholarship, she'd have to sell all of that plastic back to the surgeons... *Laughs*"
 
                                     if v15_lindsey_inviteseb:
-                                        scene v15s39_7d
+                                        scene v15s39_7f
                                         with dissolve
 
                                         se "Li-lindsey..."
@@ -892,10 +883,31 @@ label v15s39:
                     if hangOutWithLindsey:
                         $ add_point(KCT.BOYFRIEND)
 
-                    scene v15s39_8c
-                    with dissolve
+                    scene v15s39_8e
+                    #with dissolve
 
                     u "(On second thought, that's just not my style...)"
+
+                    scene v15s39_12d
+                    with dissolve
+
+                    au "I think we've talked enough for now... Can we go dance?"
+
+                    scene v15s39_11g # FPP. same as v15s39_11 Autumn is looking at Aubrey, still a slight smile, mouth is still open
+                    with dissolve
+
+                    aut "I'm so ready for a dance, yes!"
+
+                    scene v15s39_8g
+                    with dissolve
+
+                    li "Okay, let's groove!"
+
+                    if not v15_lindsey_inviteseb:
+                        scene v15s39_6i # FPP. same as v15s39_6g Grayson has a drink in each hand, still looking at Lindsey, still a full smile
+                        with dissolve
+
+                        gr "Don't be surprised if there's no drinks left when you get back, haha."
 
         else:
             scene v15s39_8e
@@ -962,6 +974,8 @@ label v15s39:
                     u "(Sorry Aubrey... I'm trying to start a storm here.)"
 
                     if kct == "popular":
+                        $ v15_lindsey_recording = 1
+                        
                         scene v15s39_8i
                         with dissolve
 
@@ -1163,23 +1177,12 @@ label v15s39:
     scene v15s39_23 # TPP. MC exits the club. Lindsey and Aubrey are ahead of him, getting into the limo
     with fade
 
-    if v15_lindsey_alcohol:
-        $ set_presidency_percent(v14_lindsey_popularity + 5)
-    else:
-        $ set_presidency_percent(v14_lindsey_popularity + 3)
-
     u "(So, that's what it's like to be a VIP, huh? I could get used to that...)"
 
     if v15_lindsey_alcohol:
-        scene v15s39_23
-        with dissolve
-
         u "(We got lucky with the alcohol, too.)"
 
     else:
-        scene v15s39_23
-        with dissolve
-
         u "(Still sucks that we couldn't get drunk, but you can't win 'em all, ha.)"
 
     if v15_chloe_lindseysabotage:
@@ -1187,23 +1190,19 @@ label v15s39:
             scene v15s39_24 # TPP. Show Sebastian being a gentlemen holding Autumns hand and helping Autumn into the Limo looking at Autumn slight smile mouth open, Autumn looking back at Sebastian slight smile mouth closed, Mc is taking his phone out of his pocket looking at his phone slight smile mouth is closed
             with dissolve
 
-            u "(Just need to send the recording to Chloe... Hopefully she can find something to do with it.)"
-
-            scene v15s39_25 # FPP. Close up shot of Mc's phone it shows Chloe as the person he has messaged, and a "message sent" text appears on his phone
-            with dissolve
-
-            pause 0.75
-
         else:
             scene v15s39_24a # TPP. same as v15s39_21 Show Autumn getting into the Limo by herself her back is turned to Grayson, Grayson is checking out Autumns ass with a smirk on his face, MC is still taking his phone out of his pocket looking at his phone slight smile mouth is closed
             with dissolve
 
-            u "(Just need to send the recording to Chloe... Hopefully she can find something to do with it.)"
+        u "(Just need to send the recording to Chloe... Hopefully she can find something to do with it.)"
 
-            scene v15s39_25
-            with dissolve
+        if v15_lindsey_recording == 0:
+            u "(But I don't really think there's a lot she can use in here...)"
 
-            pause 0.75
+        scene v15s39_25
+        with dissolve
+
+        pause 0.75
 
     scene v15s39_26 # TPP. Show Mc getting into the Limo slight smile mouth is closed, no need to show anyone else.
     with fade

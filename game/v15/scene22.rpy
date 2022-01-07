@@ -115,6 +115,8 @@ label v15s22:
                         $ add_point(KCT.TROUBLEMAKER)
                     else:
                         $ add_point(KCT.BRO)
+                        
+                    $ chloeSus += 1
 
                     scene v15s22_2d
                     with dissolve
@@ -437,7 +439,7 @@ label v15s22:
 
                     de "So now you're here to convince me."
 
-                "Make a joke":
+                "Sarcastic joke":
                     #$ add_point(KCT.TROUBLEMAKER)
 
                     scene v15s22_6b
@@ -533,7 +535,7 @@ label v15s22:
 
                     de "So now you're here to convince me."
 
-                "Be funny":
+                "Scarcastic joke":
                     #$ add_point(KCT.TROUBLEMAKER)
 
                     scene v15s22_6d
@@ -675,7 +677,7 @@ label v15s22:
                 $ v15s22_meeting_points += 1
                 show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
 
-                u "In all honesty, we could've done better. We've reflected on it and learned a lot from the experience."
+                u "In all honesty, we could've done better. However, we have learned a lot from the experience."
 
                 scene v15s22_6d
                 with dissolve
@@ -1379,7 +1381,7 @@ label v15s22:
 
             pause 0.75
 
-        elif chloe.relationship.value < Relationship.FWB.value: 
+        else:
             scene v15s22_1b # TPP. same as v15s22_1a Mc and Chloe stop walking and Chloe gives Mc and friendly hug, both slight smiles, both mouths are closed
             with dissolve
 

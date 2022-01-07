@@ -14,12 +14,12 @@ label v15s18b:
     scene v15s18b_2 # TPP. Shot of the while room everyone sitting in chairs and on the couch.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18b_3 # TPP. Close up of Lauren so we don't have to render everyone, Lauren picking up a gift, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18b_3a # TPP. Lauren reading the label on the gift she is holding, Lauren slight smile, mouth open.
     with dissolve
@@ -247,11 +247,6 @@ label v15s18b:
             la "Yeah. That's true, I guess."
 
     if white_horse_black_mane in mc.inventory:
-        scene v15s18b_3i 
-        with dissolve
-
-        pause 0.75
-
         scene v15s18b_3j # TPP. Lauren holding up a white horse toy with a black mane, Lauren looking at the toy, Lauren excited, mouth open
         with dissolve
 
@@ -282,17 +277,15 @@ label v15s18b:
         u "You're welcome, I'm happy you like it."
 
     if brown_horse_golden_mane in mc.inventory:
-        scene v15s18b_3i 
-        with dissolve
-
-        pause 0.75
-
-        scene v15s18b_3k # TPP. Lauren holding up a brown horse toy with a golden mane, lauren looking at the toy, Lauren excited, mouth open.
+        scene v15s18b_3q
         with dissolve
 
         la "*Gasps* [name]!"
 
-        la "I can't believe it, How did you know?!"
+        scene v15s18b_3n
+        with dissolve
+
+        la "I can't believe it, how did you know?!"
 
         scene v15s18b_9b # TPP. Close up of just Autumn looking in MC's direction with her thumb up and shooting him a wink, slight smile, mouth closed.
         with dissolve
@@ -302,35 +295,29 @@ label v15s18b:
         scene v15s18b_5g
         with dissolve
 
-        u "Haha, I have my secret ways."
+        u "Haha, I have my methods."
 
         scene v15s18b_11a # TPP. Close up of just Riley looking Lauren's direction, slightly confused, mouth open.
         with dissolve
 
         ri "What even is it?"
 
-        scene v15s18b_3l # TPP. Close up of just Lauren looking in Riley's direction, Lauren excited, mouth closed
+        scene v15s18b_3k
         with dissolve
 
         la "It's just a horse, haha. It's a toy. But it looks exactly the same as the one I had when I was a kid."
 
-        scene v15s18b_3
-        with dissolve
-
         $ grant_achievement("childhood_memories")
         u "(Nice, picked the right color and everything. Phew!)"
 
-        scene v15s18b_3k
-        with dissolve
-
-        la "I would take it everywhere with me and then I lost it when we moved houses. That day made me so sad, remember Autumn?"
+        la "I would take it everywhere with me and then I lost it when we moved houses. That day made me so sad. Remember, Autumn?"
 
         scene v15s18b_9
         with dissolve
 
         aut "Oh, trust me. I remember. *Chuckles*"
 
-        scene v15s18b_3k
+        scene v15s18b_3k # TPP. Close up of just Lauren looking in Riley's direction, Lauren excited, mouth closed
         with dissolve
 
         la "But now we're reunited!"
@@ -348,21 +335,19 @@ label v15s18b:
         scene v15s18b_3m # TPP. Show Lauren starting to stand up off the couch.
         with dissolve
 
-        pause 0.75
+        pause 0.5
 
         scene v15s18b_5h # FPP. Show Lauren walking over to MC, Lauren slight smile, mouth closed.
         with dissolve
 
-        pause 0.75
+        pause 0.5
 
         scene v15s18b_12 # FPP. MC standing up Lauren standing infront of him, MC looking at Lauren, Lauren looking at MC, Lauren excited, mouth closed.
         with dissolve
 
-        pause 0.75
+        pause 0.5
         
         if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
-            play sound "sounds/kiss.mp3"
-
             scene v15s18b_12a # FPP. Lauren giving MC a passionate kiss.
             with dissolve
 
@@ -370,14 +355,14 @@ label v15s18b:
 
             scene v15s18b_13a # TPP. Show just MC and Lauren passionately kissing.
             with dissolve
-            
+            play sound "sounds/kiss.mp3"
             pause 0.75
 
         else:
             scene v15s18b_13 # TPP. Show just MC and Lauren hugging, both slight smile, mouth closed.
             with dissolve
             
-            pause 0.75
+            pause 1
 
         scene v15s18b_12b # MC standing up Lauren standing infront of him, MC looking at Lauren, Lauren looking at MC, Lauren excited, mouth open.
         with dissolve
@@ -387,19 +372,17 @@ label v15s18b:
         scene v15s18b_12
         with dissolve
 
-        u "You're very welcome, Happy Birthday."
+        u "You're very welcome. Happy Birthday!"
 
     if emerald_bracelet in mc.inventory or ruby_choker_necklace in mc.inventory:
         if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
-            scene v15s18b_3i
-            with dissolve
-
-            pause 0.75
-
-            scene v15s18b_3n # TPP. Lauren looking in the gift box none of the contents inside shown,Lauren excited, mouth open.
+            scene v15s18b_3q
             with dissolve
 
             la "[name]!"
+
+            scene v15s18b_3n # TPP. Lauren looking in the gift box none of the contents inside shown,Lauren excited, mouth open.
+            with dissolve
 
             la "You bought me jewelry?!"
 
@@ -422,14 +405,9 @@ label v15s18b:
                 scene v15s18b_3p # TPP. Show Lauren looking down at her chest and admiring the necklace, Lauren excited, mouth closed.
                 with dissolve
 
-                pause 0.75
+                la "Wow. This is..."
 
-                scene v15s18b_3q # TPP. Show Lauren without any Jewelry on with her hand in the gift box to signify she is putting the Jewelry away as to not lose it right now, Lauren excited, mouth closed.
-                with dissolve
-
-                pause 0.75
-
-            elif emerald_bracelet in mc.inventory:
+            else:
                 scene v15s18b_3r # TPP. Show Lauren putting the Emerald bracelet around her wrist, Lauren excited, mouth closed
                 with dissolve
 
@@ -438,17 +416,7 @@ label v15s18b:
                 scene v15s18b_3s # TPP. Show Lauren looking at her wrist with the emerald bracelet on, Lauren excited, mouth closed.
                 with dissolve
 
-                pause 0.75
-
-                scene v15s18b_3q 
-                with dissolve
-
-                pause 0.75
-
-            scene v15s18b_3t # TPP. Show Lauren looking in the gift box at the Jewelry, don't show the jewelry, Lauren in awe, mouth open.
-            with dissolve
-
-            la "Wow. This is..."
+                la "Wow. This is..."
 
             scene v15s18b_9
             with dissolve
@@ -458,9 +426,9 @@ label v15s18b:
             scene v15s18b_8
             with dissolve
 
-            am "Nice choice, [name]. That looked so pretty on you, Lauren."
-
-            scene v15s18b_11
+            am "Nice choice, [name]. That looks so pretty on you, Lauren."
+            
+            scene v15s18b_18
             with dissolve
 
             ch "Last year I bought Nora a new necklace. She really liked it, too."
@@ -475,36 +443,43 @@ label v15s18b:
 
             pause 0.75
 
+            scene v15s18b_3q
+            with dissolve
+            
+            if ruby_choker_necklace in mc.inventory:
+                la "I'll keep it safe here. Don't want my spidey to scratch it. *Chuckles*"
+                
+            else:
+                la "I'll keep it here because this isn't really the outfit for it. *Chuckles*"
+
             scene v15s18b_3u # TPP. Lauren starting to get up off the couch, slight smile, mouth open.
             with dissolve
 
-            la "Best birthday ever."
+            la "But thanks to you this was the..."
 
             scene v15s18b_5h 
             with dissolve
 
             pause 0.75
-
-            play sound "sounds/kiss.mp3"
-            scene v15s18b_12 
+            
+            scene v15s18b_12b
             with dissolve
 
-            pause 1.75
+            la "Best birthday ever."
 
             scene v15s18b_12a 
             with dissolve
-
             pause 0.75
 
             scene v15s18b_13a
             with dissolve
-
-            pause 0.75
+            play sound "sounds/kiss.mp3"
+            pause 1.25
 
             scene v15s18b_13b # TPP. Show just MC and Lauren kissing in a different position.
             with dissolve
-
-            pause 0.75
+            play sound "sounds/kiss.mp3"
+            pause 1.25
 
             scene v15s18b_12
             with dissolve
@@ -531,7 +506,8 @@ label v15s18b:
             scene v15s18b_12
             with dissolve
 
-            u "Of course. Happy birthday."
+            u "Of course. Happy Birthday!"
+            
         else:
             scene v15s18b_3n
             with dissolve
@@ -623,14 +599,11 @@ label v15s18b:
 
     pause 0.75
 
-    $ v15s18b_kiwiiPost1= KiwiiPost(riley, "v15s18bKiwii1", "Celebrating this pure soul tonight!", numberLikes=648)
+    $ v15s18b_kiwiiPost1= KiwiiPost(riley, "v15/rilpost1.webp", "Celebrating this pure soul tonight!", numberLikes=648)
     $ v15s18b_kiwiiPost1.newComment(lindsey, "So cute! Your costumes are perfect <3", numberLikes=renpy.random.randint(260, 560))
     $ v15s18b_kiwiiPost1.newComment(amber, "Ugh, where am I?!", numberLikes=renpy.random.randint(260, 560))
     $ v15s18b_kiwiiPost1.newComment(lauren, "Aw! Dammit Imre!", numberLikes=renpy.random.randint(260, 560))
     $ v15s18b_kiwiiPost1.addReply("Haha! Great pic you guys... Imre looks great!", numberLikes=renpy.random.randint(260, 560))
     $ v15s18b_kiwiiPost1.newComment(imre, "Oh hey! Hell yeah! I do look good...", numberLikes=renpy.random.randint(260, 560))
-
-    if False: # for Lint
-        scene v15s18bKiwii1 # Selfie with Lauren at her birthday party and Imre photobombing them in the background
 
     jump v15s18c

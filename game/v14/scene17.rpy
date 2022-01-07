@@ -335,9 +335,7 @@ label v14s17:
     with dissolve
 
     menu:
-
         "Make fun of her":
-
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Ooooohhh... *Coughs* Nerd! *Coughs*"
@@ -358,9 +356,11 @@ label v14s17:
             la "Mhmm, that's more like it."
 
         "Compliment her":
-
             $ add_point(KCT.BOYFRIEND)
 
+            scene v14s17_10b
+            #with dissolve
+            
             u "Damn, well done."
 
             scene v14s17_10d
@@ -720,7 +720,7 @@ label v14s17:
 
                         la "Okay, yeah I get it. Just don't bring it up again, okay?"
 
-                        scene v14s17_10g
+                        scene v14s17_10b
                         with dissolve
 
                         u "My lips are sealed."

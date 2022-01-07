@@ -528,7 +528,7 @@ label v14s03a:
 
                 "Don't take the wallet": # -If Don't take the wallet
                     $ add_point(KCT.BOYFRIEND)
-                    scene v14s03a_4
+                    scene v14s03a_4e
                     with dissolve
                     
                     u "Imre, cool it. I'm pretty sure he won't be scamming people anymore after this."

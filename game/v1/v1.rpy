@@ -2061,12 +2061,13 @@ label at_bd:
 
     play music "music/msexy.mp3"
 
-    if not config_censored:
-        call screen nsfw_Toggle
+    if not _in_replay:
+        if not config_censored:
+            call screen nsfw_Toggle
 
-    if config_censored:
-        call screen censoredPopup("v1_nsfwSkipLabel1")
-        
+        if config_censored:
+            call screen censoredPopup("v1_nsfwSkipLabel1")
+
     scene sda2
     with dissolve
 
