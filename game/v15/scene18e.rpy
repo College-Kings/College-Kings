@@ -52,9 +52,10 @@ label v15s18e:
 
     u "(Hmm... Where should I start?)"
 
-    call screen sex_overlay([
+    $ sex_overlay_options = [
         [("Neck", "v15s18e_neck"), ("Boobs", "v15s18e_boobs"), ("Feet", "v15s18e_feet"), ("Vagina", "v15s18e_vagina")]
-    ], continue_label="v15s18e_end")
+    ]
+    call screen sex_overlay("v15s18e_end")
 
 label v15s18e_neck:
     scene v15s18ene_1 # TPP. Close up of Lauren's bare neck 
@@ -157,9 +158,10 @@ label v15s18e_neck:
 
             u "Ha, me too."
 
-    call screen sex_overlay([
+    $ sex_overlay_options = [
         [("Neck", "v15s18e_neck"), ("Boobs", "v15s18e_boobs"), ("Feet", "v15s18e_feet"), ("Vagina", "v15s18e_vagina")]
-    ], continue_label="v15s18e_end")
+    ]
+    call screen sex_overlay("v15s18e_end")
 
 label v15s18e_boobs:
     scene v15s18ebo_1 # TPP. Close up shot of Lauren's boobs
@@ -257,9 +259,10 @@ label v15s18e_boobs:
 
             u "Yes ma'am."
 
-    call screen sex_overlay([
+    $ sex_overlay_options = [
         [("Neck", "v15s18e_neck"), ("Boobs", "v15s18e_boobs"), ("Feet", "v15s18e_feet"), ("Vagina", "v15s18e_vagina")]
-    ], continue_label="v15s18e_end")
+    ]
+    call screen sex_overlay("v15s18e_end")
 
 label v15s18e_feet:
     scene v15s18efe_1 # FPP. Lauren's feet in MC's face, MC looking up from her feet seeing her naked body, Lauren biting her lip.
@@ -363,9 +366,10 @@ label v15s18e_feet:
 
             u "We can move on then."
 
-    call screen sex_overlay([
+    $ sex_overlay_options = [
         [("Neck", "v15s18e_neck"), ("Boobs", "v15s18e_boobs"), ("Feet", "v15s18e_feet"), ("Vagina", "v15s18e_vagina")]
-    ], continue_label="v15s18e_end")
+    ]
+    call screen sex_overlay("v15s18e_end")
 
 label v15s18e_vagina:
     scene v15s18eva_1 # FPP. MC looking at Lauren's vagina
