@@ -15,7 +15,7 @@ screen game_show_base(question):
         transclude
 
 
-screen whos_most_likely_to(question, options):
+screen whos_most_likely_to(question):
     tag game_show
     style_prefix "game_show"
 
@@ -23,7 +23,7 @@ screen whos_most_likely_to(question, options):
         hbox:
             xalign 0.5
 
-            for option in options:
+            for option in screen_options:
                 button:
                     xysize (460, 297)
                     background Frame("images/v15/game_show/character_frame.png")
@@ -40,12 +40,12 @@ screen whos_most_likely_to(question, options):
                             xysize (324, 91)
                             idle_background "images/v15/game_show/button_idle.png"
                             hover_background "images/v15/game_show/button_idle.png"
-                            action [SetDict(option, "votes", option["votes"] + [mc]), Show("whos_most_likely_to_answers", question=question, options=options)]
+                            action [SetDict(option, "votes", option["votes"] + [mc]), Show("whos_most_likely_to_answers", question=question)]
 
                             text option["character"].name.upper() align (0.5, 0.5)
 
 
-screen would_you_rather(question, options):
+screen would_you_rather(question):
     tag game_show
     style_prefix "game_show"
 
@@ -53,13 +53,13 @@ screen would_you_rather(question, options):
         hbox:
             xalign 0.5
 
-            for char, option in zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ", options):
+            for char, option in zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ", screen_options):
                 button:
                     xysize (720, 293)
                     background Frame("images/v15/game_show/answer_frame.png")
                     sensitive mc not in option["votes"]
                     selected mc in option["votes"]
-                    action [SetDict(option, "votes", option["votes"] + [mc]), Show("would_you_rather_answers", question=question, options=options)]
+                    action [SetDict(option, "votes", option["votes"] + [mc]), Show("would_you_rather_answers", question=question)]
 
                     hbox:
                         align (0.5, 0.5)
@@ -71,7 +71,7 @@ screen would_you_rather(question, options):
                         text option["option"].upper() yalign 0.5 style "game_show_option_text"
 
 
-screen whos_most_likely_to_answers(question, options):
+screen whos_most_likely_to_answers(question):
     tag game_show
     style_prefix "game_show"
 
@@ -79,7 +79,7 @@ screen whos_most_likely_to_answers(question, options):
         hbox:
             xalign 0.5
 
-            for option in options:
+            for option in screen_options:
                 frame:
                     xysize (460, 297)
                     background Frame("images/v15/game_show/character_frame.png")
@@ -97,10 +97,10 @@ screen whos_most_likely_to_answers(question, options):
                             for vote in option["votes"]:
                                 add Transform(vote.profile_picture, size=(65, 65))
 
-    button action Return(options)
+    button action Return()
 
 
-screen would_you_rather_answers(question, options):
+screen would_you_rather_answers(question):
     tag game_show
     style_prefix "game_show"
 
@@ -108,7 +108,7 @@ screen would_you_rather_answers(question, options):
         hbox:
             xalign 0.5
 
-            for char, option in zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ", options):
+            for char, option in zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ", screen_options):
                 frame:
                     xysize (789, 293)
                     background Frame("images/v15/game_show/answer_frame.png")
@@ -120,11 +120,11 @@ screen would_you_rather_answers(question, options):
 
                         text char + ":" yalign 0.5 style "game_show_char_text"
 
-                        text option["option"].upper() yalign 0.5 style "game_show_option_text"
+                        text screen_options["option"].upper() yalign 0.5 style "game_show_option_text"
 
                         text "{{color=#FFCC2B}}{}{{/color}} VOTES".format(len(option["votes"])) yalign 0.5 style "game_show_vote_text"
 
-    button action Return(options)
+    button action Return()
 
 
 style game_show_question_text is text:

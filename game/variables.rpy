@@ -50,6 +50,9 @@ default troublemaker = 1
 # Scenes
 default sceneList = set()
 
+# Screens
+default screen_options = []
+
 # Sex Overlay
 default sex_overlay_options = []
 

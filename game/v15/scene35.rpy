@@ -5,7 +5,7 @@
 # Render Count: Unique Renders 18 Total: 144
 
 ## EXAMPLE:
-    # $ options = [
+    # $ screen_options = [
     #     {
     #         "character": lindsey,
     #         "votes": [lindsey, nora]
@@ -25,7 +25,7 @@
     # ]
     # call screen whos_most_likely_to("Would you rather?", options)
 
-    # $ options = [
+    # $ screen_options = [
     #     {
     #         "option": "Travel to the maldivas",
     #         "votes": [lindsey, nora, chloe]
