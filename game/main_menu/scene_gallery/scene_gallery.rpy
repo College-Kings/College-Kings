@@ -143,6 +143,7 @@ screen scene_gallery():
             spacing 20
             xalign 0.5
             top_margin 50
+            bottom_margin 80
             mousewheel True
             
             for gallery_item in scene_gallery_items:

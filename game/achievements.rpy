@@ -198,17 +198,17 @@ init python:
     
     #v15
     if renpy.loadable("v15/scene1.rpy"):
-        Achievement("childhood_memories", "Surprise the birthday girl") #s18
-        Achievement("counter_intelligence", "Lindsey was expecting that strategy") #s12
-        Achievement("da_ba_dee_da_ba_dai", "I'm Blue") #s4
-        Achievement("emotional_blackmail", "Threaten Ms. Rose") #s21
-        Achievement("honey_bear", "Lick Ms. Rose's pancakes") #s15
         Achievement("horn_dog", "Peek on Autumn") #s4
-        Achievement("just_one_more_thing", "Find all the clues and crack the case") #s46
-        Achievement("karen", "Where is your manager?!") #s24
+        Achievement("da_ba_dee_da_ba_dai", "I'm Blue") #s4
+        Achievement("counter_intelligence", "Lindsey was expecting that strategy") #s12
         Achievement("mmmm_donut", "Eat the donut") #s13
-        Achievement("polycurious", "Monogamy is overrated") #s26
+        Achievement("honey_bear", "Lick Ms. Rose's pancakes") #s15
         Achievement("pumpkin_season", "You really like that pumpkin, huh?") #s18
+        Achievement("childhood_memories", "Surprise the birthday girl") #s18
         Achievement("taskmaster", "Clear the checklist") #s18
         Achievement("too_much_information", "Check your meeting notes often") #s21
+        Achievement("emotional_blackmail", "Threaten Ms. Rose") #s21
+        Achievement("karen", "Where is your manager?!") #s24
+        Achievement("polycurious", "Monogamy is overrated") #s26
         Achievement("what_goes_around", "Aubrey tastes her own medicine at the wedding") #s33
+        Achievement("just_one_more_thing", "Find all the clues and crack the case") #s46
