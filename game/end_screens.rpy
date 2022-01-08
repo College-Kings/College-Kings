@@ -14,25 +14,26 @@ screen end_screen():
         text "ACT 4 PART 2" xalign 0.5
         text "Coming this December!" color "#EA54E8" xalign 0.5
 
-    hbox:
-        xalign 0.5
-        ypos 556
-        spacing 20
-
-        text "Exclusively on " size 40 yalign 0.5
-
+    if not config.enable_steam:
         hbox:
-            spacing 10
+            xalign 0.5
+            ypos 556
+            spacing 20
 
-            imagebutton:
-                idle image_path + "patreon_logo.webp"
-                action OpenURL("https://www.patreon.com/collegekings")
-                yalign 0.5
+            text "Exclusively on " size 40 yalign 0.5
 
-            imagebutton:
-                idle image_path + "patreon_wordmark.webp"
-                action OpenURL("https://www.patreon.com/collegekings")
-                yalign 0.5
+            hbox:
+                spacing 10
+
+                imagebutton:
+                    idle image_path + "patreon_logo.webp"
+                    action OpenURL("https://www.patreon.com/collegekings")
+                    yalign 0.5
+
+                imagebutton:
+                    idle image_path + "patreon_wordmark.webp"
+                    action OpenURL("https://www.patreon.com/collegekings")
+                    yalign 0.5
 
     hbox:
         xalign 0.5
@@ -44,10 +45,11 @@ screen end_screen():
             action MainMenu()
             yalign 0.5
 
-        imagebutton:
-            idle image_path + "get_access_idle.webp"
-            action OpenURL("https://www.patreon.com/collegekings")
-            yalign 0.5
+        if not config.enable_steam:
+            imagebutton:
+                idle image_path + "get_access_idle.webp"
+                action OpenURL("https://www.patreon.com/collegekings")
+                yalign 0.5
 
         imagebutton:
             idle image_path + "credits_idle.webp"
@@ -71,11 +73,12 @@ screen patreon_credits():
 
         text "Patreons video file {b}HERE{/b}"
 
-    imagebutton:
-        idle image_path + "support_development_idle.webp"
-        action OpenURL("https://www.patreon.com/collegekings")
-        xalign 0.5
-        ypos 765
+    if not config.enable_steam:
+        imagebutton:
+            idle image_path + "support_development_idle.webp"
+            action OpenURL("https://www.patreon.com/collegekings")
+            xalign 0.5
+            ypos 765
 
     hbox:
         align (0.5, 1.0)

@@ -178,7 +178,7 @@ screen scene_gallery():
 
 
 style scene_gallery_text is olympus_mount_30:
-    size 23
+    size 22
 
 
 label scene_gallery_name_change:
