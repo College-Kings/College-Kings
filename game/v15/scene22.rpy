@@ -201,7 +201,6 @@ label v15s22:
                 else:
                     $ add_point(KCT.BRO)
 
-
                 scene v15s22_2a
                 with dissolve
 
@@ -1071,6 +1070,9 @@ label v15s22:
             jump v15dean_successful
 
         else: # -if won signature and no dean support
+            if v15s22_meeting_points == 0 and not kct == "popular":
+                call screen kct_popup(required_kct="popular")
+        
             scene v15s22_6g
             with dissolve
 
@@ -1177,7 +1179,6 @@ label v15s22:
 
     elif v15s22_meeting_points >= 1: # -if no signature, and medium/low dean support
         if kct == "popular":
-        
             if v15s22_meeting_points == 1:
                 call screen kct_popup
         
@@ -1253,7 +1254,10 @@ label v15s22:
 
         jump v15dean_successful
 
-    else: # -if no signature and MC scored 2 points or less
+    else: # -if no signature and no dean support
+        if v15s22_meeting_points == 0 and not kct == "popular":
+            call screen kct_popup(required_kct="popular")
+        
         scene v15s22_6
         with dissolve
 
