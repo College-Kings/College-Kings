@@ -2,10 +2,11 @@ init python:
     pb_items = []
 
     class PathBuilderCatagories(Enum):
-        FRATERNITY = "Step 1: Pick a fraternity"
-        KCT = "Step 2: Pick your starting KCT"
-        GIRL = "Step 3: Pick which girls you want to be romantically involved with"
-        START_LOCATION = "Step 4: Pick your starting location"
+        FRATERNITY          =   "Step 1: Pick a fraternity"
+        KCT                 =   "Step 2: Pick your starting KCT"
+        GIRL                =   "Step 3: Pick which girls you want to be romantically involved with"
+        START_LOCATION      =   "Step 4: Pick your starting location"
+        HOMECOMING_DATE     =   "Step 5: Pick your Homecoming date"
     
 
     class PathBuilderItem:
