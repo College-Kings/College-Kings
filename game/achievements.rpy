@@ -28,7 +28,7 @@ init python:
 
 
     def grant_achievement(_achievement):
-        if path_builder:
+        if path_builder or _in_replay:
             return
             
         try:

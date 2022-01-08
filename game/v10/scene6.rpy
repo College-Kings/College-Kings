@@ -420,11 +420,12 @@ label v10_mc_vs_ryan_fight:
                 stop music fadeout 3
             jump v10_fight_result
 
-        "Don't Fight":
+        "Don't fight":
             scene v10mvr6a
             with dissolve
 
             $ grant_achievement("fright_club")
+            
             u "I don't think I can do this. Sorry guys."
 
             scene v10mvr7 # FPP. Show Close up from ring of Chris and imre stood watching, Imre mouth open, chris mouth closed
