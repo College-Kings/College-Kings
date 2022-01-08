@@ -26,10 +26,7 @@ label gameEnd:
     stop music fadeout 3
     play music "music/vocal.mp3"
 
-    if config.enable_steam:
-        call screen steam_end
-    else:
-        call screen getaccess
+    call screen end_screen
 
 label credits:
     show credits:
