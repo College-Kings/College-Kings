@@ -100,15 +100,18 @@ label v15s8:
 
         v15s8_chloe_lee = chloe_board.add_subtask("Tuition",
             "Try and convince Mr. Lee to support you in front of the Dean on this",
-            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from some of the lecturers. I think Mr. Lee is our best bet, he's smart and very well respected. Although he can be hard to read.\"")
+            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from some of the lecturers. I think Mr. Lee is our best bet, he's smart and very well respected. Although he can be hard to read.\"",
+            people=[mr_lee])
 
         chloe_board.add_subtask("Tuition",
             "Try and convince Ms. Rose to support you in front of the Dean on this",
-            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from some of the lecturers. Ms. Rose could be worth a try. She's very empathetic, I just don't know how much she likes me...\"")
+            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from some of the lecturers. Ms. Rose could be worth a try. She's very empathetic, I just don't know how much she likes me...\"",
+            people=[ms_rose])
             
         chloe_board.add_task("Tuition",
             "Talk to the Dean with Mr. Lee or Ms. Rose's support",
-            opinion="\"Finally, we have a meeting with the Dean. If we can show that a lecturer supports our idea, we should be able to get her approval. \"")
+            opinion="\"Finally, we have a meeting with the Dean. If we can show that a lecturer supports our idea, we should be able to get her approval. \"",
+            people=[dean])
 
     call screen planning_board(chloe_board)
 
