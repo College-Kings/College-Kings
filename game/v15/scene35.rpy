@@ -2682,7 +2682,7 @@ label v15s35:
                                 jump v15s35_let_it_happen
 
                             "Bring up Chloe":
-                                $ v15bring_up_chloe = True
+                                $ v15s35_bring_up_chloe = True
                                 $ add_point(KCT.TROUBLEMAKER)
                                 
                                 if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -2755,7 +2755,6 @@ label v15s35:
                             li "*Drunk* Yes! That sounds perfect."
 
                         label v15s35_bring_up_chloe:
-                            
                             scene v15s35_12k
                             with dissolve
 
