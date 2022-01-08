@@ -2498,4 +2498,6 @@ label v15s18a_Pumpkin:
 label v15s18a_end:
 
     # End freeroam screen
+    stop music fadeout 3
+    
     jump v15s18b

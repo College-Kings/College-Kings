@@ -620,4 +620,7 @@ label v15s1:
     u "*Groans* (No time for snoozing today... Need to get up.)"
 
     stop sound
+
+    stop music fadeout 3
+
     jump v15s4

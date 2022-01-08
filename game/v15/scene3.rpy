@@ -277,4 +277,6 @@ label v15s3: # 3) Dean comes to Apes about posted image
 
     u "(I'll just go check on Autumn at the shelter...)"
 
-    jump v15s4 # -Transition to Scene 4-
+    stop music fadeout 3
+
+    jump v15s4

@@ -73,4 +73,6 @@ label v15s37:
 
         u "(I'm so excited to spend more time with her.)"
 
-jump v15s41
+    stop music fadeout 3
+
+    jump v15s41

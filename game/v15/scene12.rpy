@@ -665,10 +665,10 @@ label v15s12_PhoneContinue:
 
     u "(I'm a man on a mission. Find Lauren a gift and find a costume. Easy.)"
     
-    if v15_mad_at_ms_rose: # -if RoseRs and MC acted angry in v15.5
-        # -Transition to Scene 14-
+    stop music fadeout 3
+    
+    if v15_mad_at_ms_rose:
         jump v15s14
 
-    else: # -Otherwise-
-        # -Transition to Scene 17-
+    else:
         jump v15s17

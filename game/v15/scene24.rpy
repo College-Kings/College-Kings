@@ -1513,6 +1513,8 @@ label v15s24:
         scene v15s24_20a # FPP. MC watching Lindsey walk off empty handed, Lindsey neutral face, mouth closed.
         with dissolve
 
-pause 0.75
+    pause 0.75
 
-jump v15s26
+    stop music fadeout 3
+
+    jump v15s26

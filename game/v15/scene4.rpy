@@ -1682,7 +1682,11 @@ label v15s4:
         pause 1
 
     if "v12_rose" in sceneList:
+        stop music fadeout 3
+    
         jump v15s5
 
     else:
+        stop music fadeout 3
+    
         jump v15s6

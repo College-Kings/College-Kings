@@ -229,4 +229,6 @@ label v15s27: # -MC walks out of the Chicks house-
     
     pause 0.75
 
-jump v15s28 # -Transition to Scene 28-
+    stop music fadeout 3
+
+    jump v15s28

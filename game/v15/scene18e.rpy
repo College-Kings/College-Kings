@@ -733,5 +733,6 @@ label v15s18e_end:
 
     $ renpy.end_replay()
 
+    stop music fadeout 3
 
     jump v15s18f
