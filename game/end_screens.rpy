@@ -141,7 +141,7 @@ screen team_credits():
             text "{b}3D4FUN{/b} - Renderer"
             text "{b}Bwonerart{/b} - Renderer"
             text "{b}Sznuk{/b} - Renderer"
-            text "{b}Raystorm41{/b} - Render"
+            text "{b}Raystorm41{/b} - Renderer"
             text "{b}Stefan{/b} - Photoshopper"
             text "{b}Space-Storm{/b} - Tech Assistant"
 
