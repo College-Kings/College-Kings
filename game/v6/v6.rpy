@@ -2717,8 +2717,7 @@ label emsex_a:
 
     play music "music/msexy.mp3"
 
-    if not _in_replay:
-        $ grant_achievement("reignition")
+    $ grant_achievement("reignition")
     
     " "
 

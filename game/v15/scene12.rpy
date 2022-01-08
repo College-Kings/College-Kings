@@ -495,7 +495,7 @@ label v15s12:
         lindsey_board.add_task("Game Night",
             "Host the game night",
             opinion="\"Once we got the games and (hopefully) the booze, all that's left is to make sure everyone has a good time and leaves wanting to vote for me.\"",
-            people=[mc, lindsey, autumn, aubrey],
+            people=[autumn, aubrey, mc],
             cost=0)
 
         lindsey_board.add_task("VIP Night",
