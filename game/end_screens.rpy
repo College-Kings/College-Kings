@@ -91,7 +91,6 @@ screen patreon_credits():
             action Show("team_credits")
 
 
-
 screen team_credits():
     tag end_screen
     modal True
@@ -106,13 +105,10 @@ screen team_credits():
         spacing 150
 
         vbox:
-            yoffset -20
-            xoffset -113
-
             text "{b}UndergradSteve{/b} - Game Creator"
             text "{b}KingLui{/b} - Project Manager"
             text "{b}OscarSix{/b} - Technical Officer"
-            null height 30
+            null height 20
             text "{b}Oskin{/b} - Lead Enforcer"
             text "{b}Lucious Lordswill{/b} - Lead Writer"
             text "{b}Cheexmarie{/b} - Lead Editor"
@@ -120,15 +116,12 @@ screen team_credits():
             text "{b}Condy{/b} - Quality Assurance Manager"
             text "{b}Jany{/b} - Translation Manager"
             text "{b}Mozzart{/b} - Lead Artist & Coordinator"
-            null height 30
+            null height 20
             text "{b}Maro{/b} - Marketing Specialist"
             text "{b}HugeBoiV2{/b} - Transcriber"
             text "{b}Jeffly{/b} - Transcriber"
 
         vbox:
-            yoffset -20
-            xoffset -95
-
             text "{b}MegaManX{/b} - Transcriber"
             text "{b}mstep17{/b} - Transcriber"
             text "{b}SystemFailed{/b} - Transcriber"
