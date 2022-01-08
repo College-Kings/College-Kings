@@ -59,7 +59,7 @@ label v10_linds_room:
 
     u "Uhm... my life was alright."
 
-    u "My mom was always quite a... uhm... cold person. When I was a kid she just really wanted to travel the world, so she and my dad split I stayed with him."
+    u "My mom was always quite a... uhm... cold person. When I was a kid she just really wanted to travel the world, so she and my dad split and I stayed with him."
     
     u "Then he married my stepmom Julia. But you could tell that this wasn't the kind of family he wanted. It seemed like he saw our family as broken."
 

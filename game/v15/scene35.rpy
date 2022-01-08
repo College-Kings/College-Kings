@@ -3052,6 +3052,8 @@ label v15s35:
                             li "Well, I did, but I didn't mean it in a bad way... I was just joking."
 
                         else:
+                            call screen kct_popup(required_kct="popular")
+                        
                             scene v15s35_12b
                             with dissolve
 

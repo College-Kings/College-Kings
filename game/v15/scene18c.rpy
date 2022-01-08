@@ -2519,6 +2519,9 @@ label v15s18c_chris_penelope:
                 pe "Sorry, haha."
  
             else:
+                if v14_penelope_date:
+                    call screen kct_popup(required_kct="confident")
+            
                 scene v15s18c_chpe_5d
                 with dissolve
 

@@ -324,7 +324,7 @@ label v15s18d:
                     jump v15s18e
 
             else: 
-                if kct == "loyal" and lauren.relationship.value >= Relationship.KISS.value and not v11_lauren_caught_aubrey and not "v12_lauren" in sceneList:
+                if kct == "loyal" and lauren.relationship.value >= Relationship.KISS.value and not v11_lauren_caught_aubrey # and not "v12_lauren" in sceneList, but this is implied by not having Lauren GIRLFRIEND:
                     $ v15s18_LaurensBed = True
                     call screen kct_popup
                     
@@ -375,6 +375,9 @@ label v15s18d:
                     jump v15s18e
                 
                 else:
+                    if lauren.relationship.value >= Relationship.KISS.value and not v11_lauren_caught_aubrey:
+                        call screen kct_popup(required_kct="loyal")
+                
                     scene v15s18d_8f
                     with dissolve
 
