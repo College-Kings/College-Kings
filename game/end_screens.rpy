@@ -71,23 +71,20 @@ screen patreon_credits():
 
         text "Patreons video file {b}HERE{/b}"
 
-    vbox:
-        align(0.5, 0.75)
-        spacing 100
-
-        imagebutton:
-            idle image_path + "support_development_idle.webp"
-            action OpenURL("https://www.patreon.com/collegekings")
+    imagebutton:
+        idle image_path + "support_development_idle.webp"
+        action OpenURL("https://www.patreon.com/collegekings")
+        xalign 0.5
+        ypos 765
 
     hbox:
-        spacing 50
         align (0.5, 1.0)
         yoffset -40
+        spacing 60
 
         imagebutton:
             idle image_path + "main_menu_idle.webp"
             action MainMenu()
-            xoffset -12
 
         imagebutton:
             idle image_path + "team_idle.webp"
