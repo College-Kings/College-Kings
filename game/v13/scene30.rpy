@@ -678,7 +678,10 @@ label v13s30:
 
         jump v13s31 
 
-    if not v13_lauren_smoke:
+    else:
+        if not "v11_aubrey" in sceneList:
+            call screen kct_popup(required_kct="loyal")
+    
         scene v13s30_21 # FPP. Amber the only one sitting. MC looking at Lauren, Lauren looking at Amber where she is sitting, Lauren slight frown, mouth open, Amber slight frown, mouth closed.
         with dissolve
 

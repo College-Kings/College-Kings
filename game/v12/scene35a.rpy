@@ -271,6 +271,8 @@ label v12_nora_room:
 
                 jump v12_nora_sex
     else:
+        call screen kct_popup(required_kct="loyal")
+    
         jump v12_nora_no_sex
 
 label v12_nora_no_sex:

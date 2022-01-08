@@ -1912,6 +1912,8 @@ label v12s18_bet: # END OF FREE ROAM
                 pause 1.75
 
             else:
+                call screen kct_popup(required_kct="popular")
+            
                 scene v12slpbet17
                 with dissolve
 

@@ -338,16 +338,17 @@ label v11_dinner_with_lauren:
                 
                 u "Haha, I don't think so, no. Why?"
 
-                if not kct == "loyal":
-                    scene v11dwl1e
-                    with dissolve
-                    
-                    la "Sure you didn't..."
-                else:
+                if kct == "loyal":
                     scene v11dwl1e
                     with dissolve
 
                     la "I remember her telling she told me about it some guy did, but she never said who it was."
+
+                else:
+                    scene v11dwl1e
+                    with dissolve
+                    
+                    la "Sure you didn't..."
 
                 scene v11dwl1d
                 with dissolve

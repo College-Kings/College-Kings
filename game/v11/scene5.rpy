@@ -585,6 +585,9 @@ label v11s4_PhoneContinueJosh1:
     u "That's smart, actually. Probably makes it harder for the creeps at the bar to stalk you on Kiwii."
 
     if candyLike < 3 and not kct == "popular":
+        if not kct == "popular":
+            call screen kct_popup(required_kct="popular")
+    
         scene v11swc6o
         with dissolve
 

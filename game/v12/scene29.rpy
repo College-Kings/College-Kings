@@ -736,68 +736,10 @@ label v12_lauren_sex:
 
             u "Yes. *Chuckles* Yes, Lauren."
 
-            if not (v12_lauren_points >= 3) and not (kct == "loyal"):
-                scene v12las46e
-                with dissolve
-
-                la "I love you, [name]."
-
-                scene v12las47 # TPP. Show Lauren kissing MC while they lay on the ground
-                with dissolve
-
-                pause
-
-                scene v12las46e
-                with dissolve
-
-                la "Let's not rush this, okay? When all is said and done, I want our first time to be all that I've dreamed of."
-
-                scene v12las46d
-                with dissolve
-
-                u "When the time comes, it will be."
-
-                scene v12las48 # TPP. Show MC standing up and helping Lauren get up
-                with dissolve
-
-                pause 0.75
-
-                scene v12las44a
-                with dissolve
-
-                u "Let's get in bed before a gust of wind knocks us off the roof. *Chuckles*"
-
-                scene v12las44
-                with dissolve
-
-                la "*Chuckles* Yeah, let's do that."
-
-                scene v12las49 # TPP. Show MC and Lauren walking into the hallway from the roof, both smiling, mouths closed
-                with dissolve
-
-                pause 0.75
-
-                scene v12las39b # FPP. Same as v12las39a, Lauren slight smile, mouth open
-                with dissolve
-
-                la "Have a good night, [name]."
-
-                scene v12las39c # FPP. Same as v12las39b, Lauren slight smile, mouth closed
-                with dissolve
-
-                u "You too, Lauren."
-
-                scene v12las41a # TPP. Same as v12las41, both slightly smiling, mouths closed
-                with dissolve
-
-                pause 0.75
-
-                jump v12_room_sneak
-
-            else:
+            if v12_lauren_points >= 3 or kct == "loyal":
                 $ sceneList.add("v12_lauren")
 
-                if (kct == "loyal") and not (v12_lauren_points >= 3):
+                if v12_lauren_points < 3:
                     call screen kct_popup
 
                 label v12_lauren_sex_sg:
@@ -1231,5 +1173,66 @@ label v12_lauren_sex:
                 pause 0.75
 
                 stop music fadeout 3
+
+                jump v12_room_sneak
+                
+            else:
+            
+                scene v12las46e
+                with dissolve
+
+                la "I love you, [name]."
+
+                scene v12las47 # TPP. Show Lauren kissing MC while they lay on the ground
+                with dissolve
+
+                pause
+
+                scene v12las46e
+                with dissolve
+                
+                call screen kct_popup(required_kct="loyal")
+
+                la "Let's not rush this, okay? When all is said and done, I want our first time to be all that I've dreamed of."
+
+                scene v12las46d
+                with dissolve
+
+                u "When the time comes, it will be."
+
+                scene v12las48 # TPP. Show MC standing up and helping Lauren get up
+                with dissolve
+
+                pause 0.75
+
+                scene v12las44a
+                with dissolve
+
+                u "Let's get in bed before a gust of wind knocks us off the roof. *Chuckles*"
+
+                scene v12las44
+                with dissolve
+
+                la "*Chuckles* Yeah, let's do that."
+
+                scene v12las49 # TPP. Show MC and Lauren walking into the hallway from the roof, both smiling, mouths closed
+                with dissolve
+
+                pause 0.75
+
+                scene v12las39b # FPP. Same as v12las39a, Lauren slight smile, mouth open
+                with dissolve
+
+                la "Have a good night, [name]."
+
+                scene v12las39c # FPP. Same as v12las39b, Lauren slight smile, mouth closed
+                with dissolve
+
+                u "You too, Lauren."
+
+                scene v12las41a # TPP. Same as v12las41, both slightly smiling, mouths closed
+                with dissolve
+
+                pause 0.75
 
                 jump v12_room_sneak
