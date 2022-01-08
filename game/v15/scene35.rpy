@@ -1128,7 +1128,7 @@ label v15s35:
         scene v15s35_8e
         with dissolve
 
-        u "Well... Depressing after a while, you know?"
+        u "Well... depressing after a while, you know?"
 
         scene v15s35_8a
         with dissolve
