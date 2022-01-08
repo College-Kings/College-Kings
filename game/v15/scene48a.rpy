@@ -836,7 +836,7 @@ label v15s48a_end:
             scene v15s48aend_15c # FPP. On the bed, MC's two fingers all the way in Nora's vagina, Nora flirty, mouth open.
             with vpunch
 
-            no "Oh- *Moans* [Name]... *Gasps*"
+            no "Oh- *Moans* [name]... *Gasps*"
 
     scene v15s48aend_16 # FPP. Nora and MC both laying on the bed Nora on her side looking at MC, MC looking at Nora, Nora biting her lip.
     with dissolve
