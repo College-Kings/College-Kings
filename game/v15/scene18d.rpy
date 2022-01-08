@@ -277,6 +277,8 @@ label v15s18d:
                     
                     pause 0.75
 
+                    stop music fadeout 3
+
                     jump v15s18f
 
                 else:
@@ -316,6 +318,8 @@ label v15s18d:
                     with dissolve
 
                     pause 0.75
+
+                    stop music fadeout 3
 
                     jump v15s18e
 
@@ -365,6 +369,8 @@ label v15s18d:
                     with dissolve
 
                     pause 0.75
+
+                    stop music fadeout 3
 
                     jump v15s18e
                 
@@ -422,6 +428,8 @@ label v15s18d:
                     with dissolve
 
                     pause 0.75
+                    
+                    stop music fadeout 3
                     
                     jump v15s18f
 
@@ -531,5 +539,7 @@ label v15s18d:
                 with dissolve
 
                 pause 0.75
+
+            stop music fadeout 3
 
             jump v15s18f

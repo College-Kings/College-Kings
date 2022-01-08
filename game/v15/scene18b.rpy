@@ -606,4 +606,6 @@ label v15s18b:
     $ v15s18b_kiwiiPost1.addReply("Haha! Great pic you guys... Imre looks great!", numberLikes=renpy.random.randint(260, 560))
     $ v15s18b_kiwiiPost1.newComment(imre, "Oh hey! Hell yeah! I do look good...", numberLikes=renpy.random.randint(260, 560))
 
+    stop music fadeout 3
+
     jump v15s18c

@@ -670,4 +670,6 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
 
     pause 0.75
 
-    jump v15s33 # -Transition to Scene 33-
+    stop music fadeout 3
+
+    jump v15s33

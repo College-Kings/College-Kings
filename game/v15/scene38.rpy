@@ -1029,4 +1029,6 @@ label v15s38:
 
         pause 0.75
 
-    jump v15s39 # -Transition to Scene 39-
+    stop music fadeout 3
+
+    jump v15s39

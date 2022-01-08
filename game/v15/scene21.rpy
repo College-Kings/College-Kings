@@ -922,7 +922,9 @@ label v15s21:
 
             pause 0.75
 
-            jump v15s22 # -Transition to Scene 22-
+            stop music fadeout 3
+
+            jump v15s22
 
         scene v15s21_6
         with dissolve
@@ -1080,7 +1082,9 @@ label v15s21:
 
         pause 0.75
 
-        jump v15s22 # -Transition to Scene 22-
+        stop music fadeout 3
+
+        jump v15s22
 
     else: # -if meeting Ms. Rose
         if kct == "confident":
@@ -1898,7 +1902,9 @@ label v15s21:
 
             pause 0.75
 
-            jump v15s22 # -Transition to Scene 22-
+            stop music fadeout 3
+
+            jump v15s22
 
         scene v15s21_13
         with dissolve
@@ -2190,7 +2196,9 @@ label v15s21:
 
                                 ro "I'll see you soon, handsome."
 
-                                jump v15s22 # -Transition to Scene 22-
+                                stop music fadeout 3
+
+                                jump v15s22
 
                             "Threaten Ms. Rose":
                                 $ v15_threaten_ms_rose = True
@@ -2338,7 +2346,9 @@ label v15s21:
 
                                 pause 0.75
 
-                                jump v15s22 # -Transition to Scene 22-
+                                stop music fadeout 3
+
+                                jump v15s22
 
                     else:
                         scene v15s21_7a
@@ -2421,4 +2431,6 @@ label v15s21:
 
         pause 0.75
 
-        jump v15s22 # -Transition to Scene 22-
+        stop music fadeout 3
+
+        jump v15s22

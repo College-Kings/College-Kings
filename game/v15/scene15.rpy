@@ -172,6 +172,9 @@ label v15s15:
             with dissolve
 
             u "(Time for shopping.)"
+            
+            stop music fadeout 3
+            
             jump v15s17
 
         "Lick the honey":
@@ -566,5 +569,7 @@ label v15s15:
             with dissolve
 
             u "(And a gift to buy... Fuck.)"
+
+            stop music fadeout 3
 
             jump v15s17

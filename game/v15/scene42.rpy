@@ -560,4 +560,6 @@ label v15s42:
 
     pause 0.75
 
+    stop music fadeout 3
+
     jump v15s43

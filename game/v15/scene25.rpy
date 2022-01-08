@@ -821,4 +821,6 @@ label v15s25:
 
     u "*Sighs* (Still no Nora, but it sounds like Aubrey's got something fun planned for me.)"
 
+    stop music fadeout 3
+
     jump v15s26

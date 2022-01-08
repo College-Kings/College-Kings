@@ -428,7 +428,9 @@ label v15s6:
 
             pause 0.75
         
-            jump v15s8 # -Transition to Scene 8-
+            stop music fadeout 3
+        
+            jump v15s8
 
         else: # -if MC is not helping Chloe
             u "I'll see you later? Lauren's party?"
@@ -494,7 +496,9 @@ label v15s6:
 
             pause 0.75
         
-            jump v15s9 # -Transition to Scene 9-
+            stop music fadeout 3
+        
+            jump v15s9
 
     else: # -if MC stole nothing from Chloe's room or never went to Chloe's room
         scene v15s6_2a # FPP Show Chloe near library door, smiling and chatting with two random students
@@ -605,7 +609,9 @@ label v15s6:
 
             pause 0.75
 
-            jump v15s8 # -Transition to Scene 8-
+            stop music fadeout 3
+
+            jump v15s8
 
         else: # -if MC is not helping Chloe
             scene v15s7_8b
@@ -669,4 +675,6 @@ label v15s6:
 
             pause 0.75
         
-            jump v15s9 # -Transition to Scene 9-
+            stop music fadeout 3
+        
+            jump v15s9

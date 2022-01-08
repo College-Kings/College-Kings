@@ -356,6 +356,8 @@ label v15s19:
 
     # -MC leaves out the front door with Lauren watching him go, smiling-
     
+    stop music fadeout 3
+    
     if v14_help_chloe and not v15_chloe_lindseysabotage:
         jump v15s20 # -if helping Chloe with tuition-
 
