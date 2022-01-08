@@ -259,7 +259,7 @@ screen quick_menu():
     if quick_menu:
         hbox:
             align (0.5, 1.0)
-            yoffset -40
+            yoffset -30
             spacing 30
 
             if not realmode:
@@ -272,7 +272,7 @@ screen quick_menu():
             imagebutton idle image_path + "quick_load_idle.png" action QuickLoad()
             # textbutton _("Prefs") action ShowMenu("preferences")
 
-    if config.developer:
+    if quick_menu and config.developer:
         hbox:
             align (1.0, 1.0)
             xoffset -20
@@ -708,9 +708,7 @@ screen file_slots(title):
         pos (1662, 971)
 
 
-style file_slots_title is text:
-    font "fonts/Montserrat-ExtraBold.ttf"
-    size 64
+style file_slots_title is montserrat_extra_bold_64
 
 style file_slots_page_name is olympus_mount_30
 

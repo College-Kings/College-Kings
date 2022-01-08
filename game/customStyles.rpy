@@ -14,3 +14,24 @@ style endfree is text:
     color "#ffffff"
     text_align 0.5
     xmaximum 700
+
+style credits_bold is text:
+    font "fonts/Montserrat-bold.ttf"
+    size 32
+    color "#ffffff"
+
+style credits_regular is text:
+    font "fonts/Montserrat-Regular.ttf"
+    size 32
+    color "#ffffff"
+
+style credits_thank_you is text:
+    font "fonts/Montserrat-Regular.ttf"
+    size 28
+    color "#ffffff"
+    kerning 2.5
+
+style credits_heading is text:
+    font "fonts/Montserrat-Black.ttf"
+    color "#ffffff"
+    kerning 15
