@@ -420,10 +420,10 @@ label v15s2:
     u "*Groans* (No time for a snooze today. Need to get up.)"
 
     stop sound
+    
+    stop music fadeout 3
 
     if v14_ApesPostChloePics and not joinwolves:
-        stop music fadeout 3
-
         jump v15s3
 
     elif v14_ApesPostChloePics:
@@ -435,12 +435,8 @@ label v15s2:
             $ v14s43b_kiwiiPost4.remove_post()
             $ v14s43b_kiwiiPost5.remove_post()
             $ v14s43b_kiwiiPost6.remove_post()
-        
-        stop music fadeout 3
 
         jump v15s4
 
     else:
-        stop music fadeout 3
-
         jump v15s4

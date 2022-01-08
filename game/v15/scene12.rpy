@@ -665,12 +665,10 @@ label v15s12_PhoneContinue:
 
     u "(I'm a man on a mission. Find Lauren a gift and find a costume. Easy.)"
     
+    stop music fadeout 3
+    
     if v15_mad_at_ms_rose:
-        stop music fadeout 3
-        
         jump v15s14
 
     else:
-        stop music fadeout 3
-        
         jump v15s17
