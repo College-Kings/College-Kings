@@ -830,7 +830,7 @@ label v15s35:
         ]
         call screen would_you_rather("Would you rather?")
 
-    label v15s35_wyr3_humanbody:
+    label v15s35_wyr3_frogbody:
         $ add_point(KCT.BRO)
         
         scene v15s35_7h
@@ -927,7 +927,7 @@ label v15s35:
         
         jump v15s35_wyr3_end
         
-    label v15s35_wyr3_frogbody:
+    label v15s35_wyr3_humanbody:
         $ add_point(KCT.BOYFRIEND)
 
         scene v15s35_7i
