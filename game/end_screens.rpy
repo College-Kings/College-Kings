@@ -1,4 +1,3 @@
-
 screen end_screen():
     tag end_screen
     modal True
@@ -9,52 +8,51 @@ screen end_screen():
     add image_path + "end_screen_background.webp"
 
     vbox:
-        align (0.5, 0.375)
-        spacing 0
+        xalign 0.5
+        ypos 345
 
         text "ACT 4 PART 2" xalign 0.5
-
-        text "Coming this December!" color "#EA54E8" xalign 0.5 yoffset -5
-
-    hbox:
-        align (0.5, 0.55)
-        spacing 0
-
-        text "Exclusively on " xalign 0.3 size 42 xoffset -18
-
-        imagebutton:
-            idle image_path + "patreon_logo.webp"
-            action OpenURL("https://www.patreon.com/collegekings")
-            xalign 0.5
-
-        imagebutton:
-            idle image_path + "patreon_wordmark.webp"
-            action OpenURL("https://www.patreon.com/collegekings")
-            xalign 0.7
+        text "Coming this December!" color "#EA54E8" xalign 0.5
 
     hbox:
-        align (0.5, 0.80)
-        spacing 0
+        xalign 0.5
+        ypos 556
+        spacing 20
+
+        text "Exclusively on " size 40 yalign 0.5
+
+        hbox:
+            spacing 10
+
+            imagebutton:
+                idle image_path + "patreon_logo.webp"
+                action OpenURL("https://www.patreon.com/collegekings")
+                yalign 0.5
+
+            imagebutton:
+                idle image_path + "patreon_wordmark.webp"
+                action OpenURL("https://www.patreon.com/collegekings")
+                yalign 0.5
+
+    hbox:
+        xalign 0.5
+        ypos 764
+        spacing 100
 
         imagebutton:
             idle image_path + "menu_idle.webp"
             action MainMenu()
-            xalign 0.20
-            xoffset - 60
-            yoffset 47
+            yalign 0.5
 
         imagebutton:
             idle image_path + "get_access_idle.webp"
             action OpenURL("https://www.patreon.com/collegekings")
-            xalign 0.5
-            xoffset 10
+            yalign 0.5
 
         imagebutton:
             idle image_path + "credits_idle.webp"
-            action Show("team_credits")
-            xalign 1
-            xoffset 90
-            yoffset 47
+            action Show("patreon_credits")
+            yalign 0.5
 
 
 screen patreon_credits():
@@ -168,14 +166,8 @@ screen team_credits():
     on "replaced" action SetVariable("quick_menu", True)
 
 
-style end_screen_text is text:
-    font "fonts/Montserrat-ExtraBold.ttf"
-    size 68
+style end_screen_text is montserrat_extra_bold_64
 
 style team_credits_text is text:
-    font "fonts/Montserrat-Regular.ttf"
-    size 38
-
-style patreon_credits_text is text:
     font "fonts/Montserrat-Regular.ttf"
     size 38
