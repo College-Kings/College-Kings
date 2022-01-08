@@ -176,7 +176,6 @@ screen scene_gallery():
         value YScrollValue("vpg")
 
 
-
 style scene_gallery_text is olympus_mount_30:
     size 22
 
