@@ -272,16 +272,6 @@ screen quick_menu():
             imagebutton idle image_path + "quick_load_idle.png" action QuickLoad()
             # textbutton _("Prefs") action ShowMenu("preferences")
 
-    if quick_menu and config.developer:
-        hbox:
-            align (1.0, 1.0)
-            xoffset -20
-            spacing 15
-
-            textbutton "CHEATS" action Show("bugTesting_cheatMenu")
-            add "gui/common/arrow.png" yalign 0.5
-
-
 style quick_menu_button:
     align (0.5, 0.5)
 
