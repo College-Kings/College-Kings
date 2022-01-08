@@ -690,6 +690,9 @@ label v15s24:
                 scene v15s24_13
                 with dissolve
 
+                if not kct == "popular":
+                    call screen kct_popup(required_kct="popular")
+
                 cashier "I'm not selling you alcohol, kid."
 
                 cashier "You can argue and bribe all you want, but it won't work. It never has, and it never will."
@@ -1142,6 +1145,9 @@ label v15s24:
 
                 scene v15s24_13k
                 with dissolve
+                
+                if not kct == "popular":
+                    call screen kct_popup(required_kct="popular")
 
                 cashier "I wouldn't even wipe my ass with your ten extra bucks."
 

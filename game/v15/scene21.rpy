@@ -771,7 +771,7 @@ label v15s21:
 
         hide screen v15_teacher_brief_icon
 
-        if v15s21_meeting_points >= 5: #TBD optimal difficulty level
+        if v15s21_meeting_points >= 5:
             if v15s21_meeting_points == 5 and kct == "loyal":
                 call screen kct_popup
                 
@@ -868,6 +868,9 @@ label v15s21:
             cl "You'll sign?"
 
         else:
+            if v15s21_meeting_points == 0 and not kct == "loyal":
+                call screen kct_popup(required_kct="loyal")
+        
             scene v15s21_6h
             with dissolve
 
@@ -1741,7 +1744,7 @@ label v15s21:
 
         hide screen v15_teacher_brief_icon
 
-        if v15s21_meeting_points >= 5: #TBD optimal difficulty level
+        if v15s21_meeting_points >= 5:
             if v15s21_meeting_points == 5 and kct == "confident":
                 call screen kct_popup
         
@@ -1845,6 +1848,9 @@ label v15s21:
             pause 0.75
 
         else:
+            if v15s21_meeting_points == 0 and not kct == "confident":
+                call screen kct_popup(required_kct="confident")
+        
             scene v15s21_13p # FPP. same as v15s21_13o Ms. Rose has a disapointed expression, mouth is open, still looking at Chloe
             with dissolve
 
@@ -2351,6 +2357,8 @@ label v15s21:
                                 jump v15s22
 
                     else:
+                        call screen kct_popup(required_kct="popular")
+                    
                         scene v15s21_7a
                         with dissolve
 
