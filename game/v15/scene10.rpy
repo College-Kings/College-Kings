@@ -131,7 +131,7 @@ label v15s10:
 
             male_buyer "*Scoffs* Yeah, right!"
 
-            scene v15s10_7b
+            scene v15s10_7a
             with dissolve
 
             u "Haha no, he's actually an MMA fighter. In New York this week, right?"
@@ -298,7 +298,7 @@ label v15s10:
 
             li "For real."
 
-            scene v15s10_12d
+            scene v15s10_12l
             with dissolve
 
             male_buyer "Okay, umm... This still isn't the car I thought I was coming to see, I mean..."
@@ -316,10 +316,11 @@ label v15s10:
                 scene v15s10_12e # FPP. Same as v15s10_12d, Man holding cash up, slight smile, mouth closed.
                 with dissolve
 
-                pause 0.75
+                if v15s10_buyer_max_amount >= 150:
+                    pause 0.75
 
-                scene v15s10_14 # FPP. MC looking down at his hands counting the money.
-                with dissolve
+                    scene v15s10_14 # FPP. MC looking down at his hands counting the money.
+                    with dissolve
 
                 if v15s10_buyer_max_amount < v14s48_car_price - 100:
                     u "(That's a lot less than what we asked for! What should I do here?)"
@@ -335,12 +336,12 @@ label v15s10:
 
                         u "I'm sorry but... We need more than that."
 
-                        scene v15s10_12g # FPP. Same as v15s10_12f, the man neutral face, mouth open.
+                        scene v15s10_12b # FPP. Same as v15s10_12f, the man neutral face, mouth open.
                         with dissolve
 
                         male_buyer "I'm not going a cent higher, mister pants on fire..."
 
-                        scene v15s10_12f
+                        scene v15s10_12a
                         with dissolve
 
                         u "*Scoffs* Come on, it-"
@@ -363,8 +364,9 @@ label v15s10:
                     "Accept offer":
                         $ add_point(KCT.BRO)
                         
-                        scene v15s10_14
-                        with dissolve
+                        if v15s10_buyer_max_amount >= 150:
+                            scene v15s10_14
+                            with dissolve
 
                         u "Okay, yeah. I guess that's fair."
 
