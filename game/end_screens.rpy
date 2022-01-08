@@ -90,6 +90,11 @@ screen patreon_credits():
             idle image_path + "team_idle.webp"
             action Show("team_credits")
 
+    on "show" action SetVariable("quick_menu", False)
+    on "hide" action SetVariable("quick_menu", True)
+    on "replace" action SetVariable("quick_menu", False)
+    on "replaced" action SetVariable("quick_menu", True)
+
 
 screen team_credits():
     tag end_screen
