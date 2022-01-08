@@ -10,8 +10,8 @@ init python:
     
 
     class PathBuilderItem:
-        def __init__(self, catagory, name, actions=None):
-            self.catagory = catagory
+        def __init__(self, category, name, actions=None):
+            self.category = category
             self.name = name
 
             if actions is None: self.actions = []
@@ -21,10 +21,10 @@ init python:
             pb_items.append(self)
 
 
-    def get_catagory(step):
-        for catagory in PathBuilderCategories:
-            if catagory.value.startswith("Step {}".format(step)):
-                return catagory
+    def get_category(step):
+        for category in PathBuilderCategories:
+            if category.value.startswith("Step {}".format(step)):
+                return category
         return None
 
     def get_selected(item):
@@ -105,37 +105,51 @@ screen path_builder_base(header=""):
         transclude
 
 
-screen path_builder(catagory_step=1):
+screen path_builder(category_step=1):
     tag menu
     modal True
 
     default image_path = "main_menu/path_builder/images/"
 
-    default catagory = get_catagory(catagory_step)
-    default items = [item for item in pb_items if item.catagory == catagory]
+    default category = get_category(category_step)
+    default items = [item for item in pb_items if item.category == category]
 
-    use path_builder_base(header=catagory.value):
+    use path_builder_base(header=category.value):
         vpgrid:
+            xalign 0.5
             cols 4
-            xspacing 50
-            yspacing 20
+            spacing 25
 
             for item in items:
                 vbox:
-                    imagebutton:
-                        idle  image_path + "path_builder_button_idle.webp"
-                        hover image_path + "path_builder_button_selected.webp"
-                        selected_idle image_path + "path_builder_button_selected.webp"
-                        selected get_selected(item)
-                        action [a for a in item.actions]
+                    if category == PathBuilderCategories.GIRL:
+                        imagebutton:
+                            idle  image_path + "girls/girl_" + item.name + "_idle.webp"
+                            hover image_path + "girls/girl_" + item.name + ".webp"
+                            selected_idle image_path + "girls/girl_" + item.name + ".webp"
+                            selected get_selected(item)
+                            action [a for a in item.actions]
 
-                    text item.name:
-                        align (0.5, 0.5)
-                        yoffset -50
-                        color "#fff"
+                        text item.name:
+                            align (0.70, 0.5)
+                            color "#fff"
+                            yoffset -75
+                            size 26
+                    else:
+                        imagebutton:
+                            idle  image_path + "path_builder_button_idle.webp"
+                            hover image_path + "path_builder_button_selected.webp"
+                            selected_idle image_path + "path_builder_button_selected.webp"
+                            selected get_selected(item)
+                            action [a for a in item.actions]
+
+                        text item.name:
+                            align (0.5, 0.5)
+                            yoffset -50
+                            color "#fff"   
 
         # Option to lock KCT
-        if catagory == PathBuilderCategories.KCT:
+        if category == PathBuilderCategories.KCT:
             hbox:
                 spacing 20
                 
@@ -154,17 +168,17 @@ screen path_builder(catagory_step=1):
             textbutton "BACK":
                 xalign 0
                 selected False
-                if catagory_step > 1:
-                    action Show("path_builder", None, catagory_step - 1)
+                if category_step > 1:
+                    action Show("path_builder", None, category_step - 1)
                 else:
                     action ShowMenu("main_menu")
 
             textbutton "CONTINUE":
                 xalign 1.0
                 selected False
-                if catagory_step < len(PathBuilderCategories):
+                if category_step < len(PathBuilderCategories):
                     sensitive any(get_selected(item) for item in items)
-                    action Show("path_builder", None, catagory_step + 1)
+                    action Show("path_builder", None, category_step + 1)
                 elif pb_start_location == "v7_homecoming":
                     action Start("v7_homecoming")
                 else:
