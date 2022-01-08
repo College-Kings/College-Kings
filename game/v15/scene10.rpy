@@ -575,6 +575,8 @@ label v15s10:
 
             pause 0.75
 
+            stop music fadeout 3
+
             jump v15s12
             
         else:
@@ -812,6 +814,8 @@ label v15s10:
             with fade
             
             pause 0.75
+            
+            stop music fadeout 3
             
             jump v15s12
 
@@ -1183,6 +1187,8 @@ label v15s10:
 
             pause 0.75
 
+            stop music fadeout 3
+
             jump v15s12
 
         else:
@@ -1361,5 +1367,7 @@ label v15s10:
         with dissolve
 
         pause 0.75
+
+    stop music fadeout 3
 
     jump v15s12

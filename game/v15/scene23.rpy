@@ -186,5 +186,6 @@ label v15s23:
 
         u "(Time to find out!)"
     
-    # -Transition to Scene 26-
+    stop music fadeout 3
+    
     jump v15s26

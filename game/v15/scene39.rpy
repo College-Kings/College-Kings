@@ -1222,4 +1222,6 @@ label v15s39:
     $ v15s39_kiwiiPost1.addReply("Next time? I need a nap... Lol.", numberLikes=renpy.random.randint(360, 860))
     $ v15s39_kiwiiPost1.addReply("Let me know when, I'm down!", numberLikes=renpy.random.randint(360, 860))
 
+    stop music fadeout 3
+
     jump v15s40

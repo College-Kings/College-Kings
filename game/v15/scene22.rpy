@@ -1583,6 +1583,8 @@ label v15s22:
 
         pause 0.75
 
+    stop music fadeout 3
+
     if v15_lindsey_gamenight:
         jump v15s24
 

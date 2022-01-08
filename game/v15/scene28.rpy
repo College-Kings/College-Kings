@@ -1337,6 +1337,8 @@ label v15s28:
 
     pause 1
 
+    stop music fadeout 3
+
     if joinwolves: # -if Wolves, transition to Scene 29-
         jump v15s29
 

@@ -561,4 +561,6 @@ label v15s44_continue2:
 
     pause 0.75
 
+    stop music fadeout 3
+
     jump v15s45

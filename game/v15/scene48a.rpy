@@ -858,4 +858,6 @@ label v15s48a_end:
 
     no "No, you are."
 
+    stop music fadeout 3
+
     jump v15s48b

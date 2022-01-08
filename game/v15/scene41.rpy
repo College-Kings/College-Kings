@@ -121,6 +121,8 @@ label v15s41:
 
         pause 0.75
 
+        stop music fadeout 3
+
         jump v15s42
 
     else:
@@ -225,5 +227,7 @@ label v15s41:
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v15s42

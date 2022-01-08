@@ -112,6 +112,8 @@ label v15s34:
 
         pause 0.75
 
+        stop music fadeout 3
+
         if v14_help_lindsey and not v15_lindsey_gamenight: #If Helping Lindsey with VIP Night, go there
             jump v15s38
 
@@ -226,6 +228,8 @@ label v15s34:
         play sound "sounds/doorclose.mp3"
 
         pause 0.75
+
+        stop music fadeout 3
 
         if v14_help_lindsey and not v15_lindsey_gamenight: #If Helping Lindsey with VIP Night, go there
             jump v15s38

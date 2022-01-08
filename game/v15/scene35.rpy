@@ -2691,7 +2691,7 @@ label v15s35:
                                 if hangOutWithLindsey:
                                     $ add_point(KCT.TROUBLEMAKER)
                                     
-                                jump v15bring_up_chloe
+                                jump v15s35_bring_up_chloe
                             
                         label v15s35_let_it_happen:
                             scene v15s35_12k
@@ -2754,7 +2754,7 @@ label v15s35:
 
                             li "*Drunk* Yes! That sounds perfect."
 
-                        label v15bring_up_chloe:
+                        label v15s35_bring_up_chloe:
                             
                             scene v15s35_12k
                             with dissolve
@@ -3157,5 +3157,7 @@ label v15s35:
 
         if False: # for Lint
             scene v15s35Kiwii1 # picture of game night set up or a picture of the group playing/talking at the game night
+
+        stop music fadeout 3
 
         jump v15s36

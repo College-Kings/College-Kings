@@ -868,6 +868,8 @@ label v15s48:
 
         u "Me too."
 
+        stop music fadeout 3
+
         jump v15s48b
 
     else:
@@ -1008,6 +1010,8 @@ label v15s48:
 
                 u "Me too."
 
+                stop music fadeout 3
+
                 jump v15s48b
 
             "I want you too":
@@ -1044,5 +1048,7 @@ label v15s48:
                     with dissolve
 
                     u "I think I can guess... *Chuckles*"
+
+                stop music fadeout 3
 
                 jump v15s48a

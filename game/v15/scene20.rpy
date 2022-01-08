@@ -286,4 +286,6 @@ label v15s20:
 
             cl "Haha, okay Mr. Confident. I trust you."
 
+    stop music fadeout 3
+
     jump v15s21

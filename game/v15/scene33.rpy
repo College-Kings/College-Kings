@@ -2356,6 +2356,8 @@ label v15s33:
                 
                 u "I'm sorry. I'll go back inside. Just let me know if you want to talk, okay?"
 
+                stop music fadeout 3
+
                 jump v15s34
 
             "Try to talk":
@@ -2378,7 +2380,10 @@ label v15s33:
 
                 u "Fuck... I need to stop opening my mouth."
 
+                stop music fadeout 3
+
                 jump v15s34
+    
     else:
         scene v15s33_75a
         with dissolve
@@ -2521,5 +2526,7 @@ label v15s33:
             with dissolve
 
             u "It's what friends are for."
+
+        stop music fadeout 3
 
         jump v15s34

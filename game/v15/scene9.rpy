@@ -478,6 +478,8 @@ label v15s9:
 
             pause 0.75
 
+            stop music fadeout 3
+
             jump v15s10
 
         else:
@@ -515,6 +517,8 @@ label v15s9:
 
             pause 0.75
 
+            stop music fadeout 3
+
             jump v15s12
 
     elif v14_help_lindsey:
@@ -538,6 +542,8 @@ label v15s9:
                 u "(I should reply to Lindsey.)"
                 jump v15s9_PhoneContinueLin
 
+        stop music fadeout 3
+
         jump v15s12
 
     elif v15_mad_at_ms_rose:
@@ -546,6 +552,8 @@ label v15s9:
 
         pause 0.75
 
+        stop music fadeout 3
+
         jump v15s14
 
     else:
@@ -553,5 +561,7 @@ label v15s9:
         with dissolve
 
         pause 0.75
+        
+        stop music fadeout 3
         
         jump v15s13

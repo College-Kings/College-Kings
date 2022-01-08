@@ -1070,7 +1070,9 @@ label v15s26:
 
         pause 0.75
 
-        jump v15s27 # -Transition to Scene 27-
+        stop music fadeout 3
+
+        jump v15s27
 
     else: # -if they didn't have threesome
         scene v15s26_14a
@@ -1153,4 +1155,6 @@ label v15s26:
 
         pause 0.75
     
-        jump v15s27 # -Transition to Scene 27-
+        stop music fadeout 3
+    
+        jump v15s27

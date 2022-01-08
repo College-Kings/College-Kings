@@ -422,6 +422,8 @@ label v15s2:
     stop sound
 
     if v14_ApesPostChloePics and not joinwolves:
+        stop music fadeout 3
+
         jump v15s3
 
     elif v14_ApesPostChloePics:
@@ -434,7 +436,11 @@ label v15s2:
             $ v14s43b_kiwiiPost5.remove_post()
             $ v14s43b_kiwiiPost6.remove_post()
         
+        stop music fadeout 3
+
         jump v15s4
 
-    else: 
+    else:
+        stop music fadeout 3
+
         jump v15s4
