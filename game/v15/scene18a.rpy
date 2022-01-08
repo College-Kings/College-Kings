@@ -2395,7 +2395,7 @@ label v15s18a_ChrisAmber:
                     scene v15s18aamber_12 # FPP. MC watching Amber walking back in the house.
                     with dissolve
 
-                    $ sceneList.add("v18_amber")
+                    $ sceneList.add("v15_amber")
 
                     if not _in_replay:
                         $ checklist[2].complete = True

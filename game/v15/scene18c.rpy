@@ -1084,7 +1084,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_34 # FPP. MC watches as Aubrey walks out of the room, she looks back at him over her shoulders, sexy expression, winking, mouth closed
     with dissolve
 
-    $ sceneList.add("v15_autumn")
+    $ sceneList.add("v15_aubrey")
 
     $ checklist[4].complete = True
     u "*Exhales* (Damn, what a night so far.)"
