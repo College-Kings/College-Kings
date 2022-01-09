@@ -302,6 +302,8 @@ label v15s22:
 
     cl "*Deep breath* Okay, let's go."
 
+    hide screen v15_teacher_brief_icon
+
     play sound "sounds/knock.mp3"
 
     scene v15s22_2g # FPP. same as v15s22_2f Chloe turns away from Mc and knocks on the Dean's door, still no expression, mouth is still closed
@@ -800,7 +802,7 @@ label v15s22:
 
                 u "I feel like it should be enough that we secured support from a teacher. Let's not pretend that's an easy thing to do."
 
-                scene v15s22_7d
+                scene v15s22_7b
                 with dissolve
 
                 cl "Well, we can still try to summarize our goal for the Dean, [name]."
@@ -878,18 +880,12 @@ label v15s22:
 
             u "And it will encourage other sororities and fraternities to want the same treatment as the Chicks."
 
-            scene v15s22_6m # FPP. same as v15s22_6l The Dean's mouth is open, still a slightly confused expression, still looking at Mc
-            with dissolve
-
             u "And this should help improve enrollment numbers if we're offering reduced tuition fees."
-
-            scene v15s22_6l
-            with dissolve
-
-            de "..."
 
             scene v15s22_6m
             with dissolve
+
+            de "..."
 
             de "Oh, have you finished? That's it?"
 
@@ -984,6 +980,11 @@ label v15s22:
         u "And you should also know that Chloe has agreed to give up her scholarship as part of the proposal."
 
         scene v15s22_6o # FPP. same as v15s22_6b The Dean is slightly shocked, mouth is still closed, still looking at Mc
+        with dissolve
+
+        pause 0.75
+        
+        scene v15s22_6c
         with dissolve
 
         de "Oh- Wow..."
