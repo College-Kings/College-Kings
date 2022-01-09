@@ -604,7 +604,7 @@ screen file_slots(title):
         ## The grid of file slots.
         grid gui.file_slot_cols gui.file_slot_rows:
             xalign 0.5
-            ypos 110
+            yalign 0.5
             spacing 35
 
             for slot in range(1, gui.file_slot_cols * gui.file_slot_rows + 1):
@@ -614,25 +614,32 @@ screen file_slots(title):
                     renpy_version = '.'.join(str(i) for i in renpy_version)
                     file_compatible = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
+                vbox:
+                    yalign 0.5
 
-                button:
-                    background Transform(image_path + "save_game_frame.png", size=(config.thumbnail_width, config.thumbnail_height))
-                    if title == _("Save"):
-                        action Show("enter_save_name", slot=slot)
-                    else:
-                        action FileAction(slot)
-                    xysize (config.thumbnail_width, config.thumbnail_height)
+                    button:
+                        background Transform(FileScreenshot(slot), size=(config.thumbnail_width, config.thumbnail_height))
+                        if title == _("Save"):
+                            action Show("enter_save_name", slot=slot)
+                        else:
+                            action FileAction(slot)
+                        xysize (config.thumbnail_width, config.thumbnail_height)
 
-                    if file_compatible:
-                        vbox:
-                            align (0.5, 1.0)
+                        key "save_delete" action FileDelete(slot)
 
-                            text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")).upper() xalign 0.5
-                            text FileSaveName(slot).upper() xalign 0.5
-                    else:
-                        add image_path + "incompatible.png" xalign 0.5 yoffset -7
+                        add image_path + "save_game_frame.png" xalign 0.5 yoffset -12 xysize (config.thumbnail_width+12, config.thumbnail_height+12)
 
-                    key "save_delete" action FileDelete(slot)
+                        if file_compatible:
+                            vbox:
+                                align (0.5, 0.9)
+
+                                text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")).upper() xalign 0.5 yoffset 20
+                                text FileSaveName(slot).upper() xalign 0.5 yoffset 20
+
+                                # NEED IF STATEMNET BUT UNSURE OF WHAT VARIABLE TO CHECK
+                                add image_path + "load_game_idle.png" xalign 0.5
+                        else:
+                            add image_path + "incompatible.png" xalign 0.5 yoffset -7
 
     # Buttons to access other pages.
     hbox:
