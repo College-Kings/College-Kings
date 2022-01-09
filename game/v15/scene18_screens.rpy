@@ -1,17 +1,6 @@
 screen v15s18a_room():
     tag free_roam
 
-    # Backgrounds
-    # add image_path + "v15s18a_room_3.webp"
-    # add image_path + "v15s18a_room_4.webp"
-
-    # Aubrey (with Imre)
-    # imagebutton:
-    #     idle Transform("#0000", size=(323, 664))
-    #     hover image_path + "v15s18a_room_hover_aubrey.webp"
-    #     action NullAction()
-    #     pos (774, 66)
-
     default image_path = "images/v15/Scene 18a/Free Roam Screens/room/"
 
     if not "lauren2" in freeroam13:
@@ -89,11 +78,6 @@ screen v15s18a_room():
 screen v15s18a_livingroom():
     tag free_roam
 
-    # Backgrounds
-    #add image_path + "v15s18a_livingroom_1.webp"
-    #add image_path + "v15s18a_livingroom_3.webp"
-    #add image_path + "v15s18a_livingroom_4.webp"
-
     default image_path = "images/v15/Scene 18a/Free Roam Screens/livingroom/"
 
     if not "lauren2" in freeroam13:
@@ -159,16 +143,14 @@ screen v15s18a_livingroom():
 screen v15s18a_bar():
     tag free_roam
 
-    # Backgrounds
-    # add image_path + "v15s18a_bar_2.webp"
-    # add image_path + "v15s18a_bar_3.webp"
-
     default image_path = "images/v15/Scene 18a/Free Roam Screens/bar/"
 
     if not "lauren2" in freeroam13:
         add image_path + "v15s18a_bar_1.webp"
-    else:
+    elif not "autumn_amber" in freeroam14:
         add image_path + "v15s18a_bar_2.webp"
+    else:
+        add image_path + "v15s18a_bar_3.webp"
 
     if not "lauren2" in freeroam13:
         # Aubrey
@@ -181,7 +163,7 @@ screen v15s18a_bar():
                 action Call("freeRoamSpokenToo", backgroundImg="v15s18a_bar_1", returnScreen="v15s18a_bar")
             pos (510, 110)
 
-    else:
+    elif not "autumn_amber" in freeroam14:
         # Autumn
         imagebutton:
             idle Transform("#0000", size=(245, 369))
@@ -210,9 +192,6 @@ screen v15s18a_bar():
 
 screen v15s18a_kitchen():
     tag free_roam
-
-    # Backgrounds
-    # add image_path + "v15s18a_kitchen_2.webp"
 
     default image_path = "images/v15/Scene 18a/Free Roam Screens/kitchen/"
 

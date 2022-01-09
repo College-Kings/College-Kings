@@ -103,7 +103,9 @@ label v10_sun_morn:
 
         scene black
         with fade
+
         stop music fadeout 3
+
         if v10s10_hangWLinds:
             jump v10_linds_room
 
@@ -198,7 +200,9 @@ label v10_sun_morn:
 
         scene black
         with fade
+
         stop music fadeout 3
+
         if v10s10_hangWLinds:
             jump v10_linds_room
 

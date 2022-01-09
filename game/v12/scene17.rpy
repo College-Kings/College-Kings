@@ -900,6 +900,8 @@ label v12_lindsey_kiss_or_not:
                 jump v12_lindsey_sex
             
             else:
+                call screen kct_popup(required_kct="popular")
+            
                 jump v12_after_sex
                 
         "Don't kiss her":

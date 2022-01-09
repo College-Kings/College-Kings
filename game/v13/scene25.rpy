@@ -227,6 +227,8 @@ label v13s25:
                         jump v13s25_no_sex
 
             else:
+                call screen kct_popup(required_kct="confident")
+                
                 scene v13s25_3a
                 with dissolve
 

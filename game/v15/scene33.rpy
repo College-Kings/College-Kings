@@ -1,4 +1,3 @@
-
 # SCENE 33: Aubrey's Parent's Wedding
 # Locations: Aubrey's Parent's Wedding
 # Characters: MC (Outfit: Wedding), AUBREY (Outfit: Wedding), NAOMI (Outfit: Wedding), AUBREY'S DAD (Outfit: Wedding), AUBREY'S MOM (Outfit: Wedding), UNCLE RICKY (Outfit: Wedding), WEDDING OFFICIAL (Outfit: 1)
@@ -2510,18 +2509,19 @@ label v15s33:
 
         au "I'm happy you're here with me."
 
-        if aubrey.relationship.value >= Relationship.TAMED.value:
+        if aubrey.relationship.value > Relationship.FRIEND.value:
             scene v15s33_75h
             with dissolve
 
             u "I'm happy I'm with you."
 
-            scene v15s33_89 # TPP. Shot from behind the bench. Looking at Aubrey resting her head on MC's shoulder, MC with his arm wrapped around Aubrey, They are looking out at the lake view.
-            with dissolve
+            if aubrey.relationship.value >= Relationship.TAMED.value:
+                scene v15s33_89 # TPP. Shot from behind the bench. Looking at Aubrey resting her head on MC's shoulder, MC with his arm wrapped around Aubrey, They are looking out at the lake view.
+                with dissolve
 
-            pause 0.75
+                pause 1.25
 
-        elif aubrey.relationship.value < Relationship.FWB.value:
+        else:
             scene v15s33_75h
             with dissolve
 

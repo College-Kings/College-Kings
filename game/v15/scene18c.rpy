@@ -9,10 +9,12 @@ label v15s18c:
 label v15s18c_riley:
     $ freeroam14.add("riley")
 
+    play sound "sounds/dooropen.mp3"
+
     scene v15s18c_ri_1 # TPP. Show MC walking into the bathroom, Riley adjusting her make up in front of the mirror, MC slightly startled, Riley slightly startled, both mouths closed
     #with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18c_ri_2 # FPP. MC in bathroom, Riley in front of mirror, Riley looking at MC through the mirror, she's still adjusting her make up, Riley slight smile, mouth closed
     with dissolve
@@ -74,6 +76,9 @@ label v15s18c_riley:
             "You can't shop for yourself":
                 $ add_point(KCT.BRO)
                 
+                scene v15s18c_ri_2c
+                with dissolve
+
                 u "What? You can't shop for yourself, haha. That ruins the surprise."
 
                 if riley.relationship.value >= Relationship.FWB.value:
@@ -172,7 +177,7 @@ label v15s18c_riley:
 
         u "That's true."
 
-        scene v15s18c_ri_2g
+        scene v15s18c_ri_2f
         with dissolve
 
         ri "Of course it's true, why would I speak in lies?"
@@ -358,7 +363,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_1 # TPP. Show MC walking up to Imre and Aubrey, MC slight smile, mouth closed, Imre slight smile, mouth open, looking at Aubrey, Aubrey looking at Imre, mouth closed, slightly annoyed
     #with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18c_imau_2 # FPP. MC standing close to Aubrey and Imre, MC looking only at Imre, Imre looking at Aubrey, Imre slight smile, mouth open
     with dissolve
@@ -852,7 +857,7 @@ label v15s18c_imre_aubrey:
 
     au "*Moans* YES!"
 
-    scene v15aubfin2Start # IGNORE AS ALREADY RENDERED
+    scene v15aubfin2 # IGNORE AS ALREADY RENDERED
     with dissolve
 
     menu:
@@ -1084,7 +1089,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_34 # FPP. MC watches as Aubrey walks out of the room, she looks back at him over her shoulders, sexy expression, winking, mouth closed
     with dissolve
 
-    $ sceneList.add("v15_autumn")
+    $ sceneList.add("v15_aubrey")
 
     $ checklist[4].complete = True
     u "*Exhales* (Damn, what a night so far.)"
@@ -1133,7 +1138,7 @@ label v15s18c_ryan:
     scene v15s18c_ry_1 # TPP. Show MC walking up to Ryan (Ryan is sleeping on the couch), MC mouth closed, slightly confused (make sure there is a visible condom in his shirt pocket)
     #with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18c_ry_2 # FPP. MC standing in front of Ryan, Ryan sleeping, mouth closed
     with dissolve
@@ -1205,12 +1210,18 @@ label v15s18c_ryan:
 
     ry "..."
 
-    scene v15s18c_ry_2
+    scene v15s18c_ry_2c
     with dissolve
 
     u "Ryan?"
 
+    scene v15s18c_ry_2a
+    with dissolve
+
     ry "*Snoring*"
+
+    scene v15s18c_ry_2c
+    with dissolve
 
     u "*Sighs*"
 
@@ -1253,8 +1264,6 @@ label v15s18c_ryan:
             $ checklist[7].complete = True
             u "*Whispers* Hey, thanks man!"
 
-            ry "*Snoring*"
-
         "Don't take it":
             $ add_point(KCT.BRO)
             
@@ -1265,10 +1274,10 @@ label v15s18c_ryan:
 
             u "(He's probably had that thing for a few years, it'd be like stealing his best friend. *Laughs*)"
 
-    scene v15s18c_ry_6
-    with dissolve
+            scene v15s18c_ry_6
+            with dissolve
 
-    u "Good luck, Ryan."
+            u "Good luck, Ryan."
 
     scene v15s18c_ry_7 # TPP. Show MC walking away from Ryan, smiling, mouth closed
     with dissolve
@@ -1283,7 +1292,7 @@ label v15s18c_lauren:
     scene v15s18c_la_1 # TPP. Show MC walking on to the balcony, Lauren already there, looking at the view, both slight smiles, mouths closed
     #with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18c_la_2 # TPP. Show MC standing next to Lauren, both leaning on the rail, facing the view, mouths closed, slight smile, not looking at each other
     with dissolve
@@ -1331,8 +1340,6 @@ label v15s18c_lauren:
         "Balcony is better":
             $ add_point(KCT.BOYFRIEND)
 
-            $ add_point(KCT.BOYFRIEND)
-
             u "Eh, I like the balcony a lot better. I'd be out here all the time if I were you, haha."
 
             scene v15s18c_la_3a
@@ -1343,7 +1350,8 @@ label v15s18c_lauren:
         "Bigger the better":
             $ add_point(KCT.BRO)
 
-            $ add_point(KCT.BRO)
+            scene v15s18c_la_3
+            with dissolve
 
             u "Yeah... Having a small room kind of sucks, the bigger the better in my opinion."
 
@@ -1622,7 +1630,7 @@ label v15s18c_autumn_amber:
 
     aut "Okay, haha. Fair."
 
-    scene v15s18c_auam_3a
+    scene v15s18c_auam_3
     with dissolve
 
     am "I'm gonna run to the bathroom, be right back."
@@ -2356,10 +2364,8 @@ label v15s18c_chris_penelope:
 
                 pe "I see where this is going."
 
-                image v15penor = Movie(play="images/v15/Scene 18c/v15penor.webm", loop=True, image="images/v15/Scene 18c/v15penorStart.webp", start_image="images/v15/Scene 18c/v15penorStart.webp") 
-                image v15penorf = Movie(play="images/v15/Scene 18c/v15penorf.webm", loop=True, image="images/v15/Scene 18c/v15penorStart.webp", start_image="images/v15/Scene 18c/v15penorStart.webp") 
+                image v15penor = Movie(play="images/v15/Scene 18c/v15penor.webm", loop=True, image="images/v15/Scene 18c/v15penorStart.webp", start_image="images/v15/Scene 18c/v15penorStart.webp")
                 image v15penor2 = Movie(play="images/v15/Scene 18c/v15penor2.webm", loop=True, image="images/v15/Scene 18c/v15penor2Start.webp", start_image="images/v15/Scene 18c/v15penor2Start.webp")
-                image v15penor2f = Movie(play="images/v15/Scene 18c/v15penor2f.webm", loop=True, image="images/v15/Scene 18c/v15penor2Start.webp", start_image="images/v15/Scene 18c/v15penor2Start.webp")
 
                 scene v15penor # IGNORE AS ANIMATION
                 with dissolve
@@ -2372,13 +2378,7 @@ label v15s18c_chris_penelope:
 
                 pe "*Whispers* Fuck..."
 
-                scene v15penorf # IGNORE AS ANIMATION
-                with dissolve
-
-                pause 0.75
-
                 u "Do you like it when I taste you?"
-
 
                 pe "*Moans* I love it, [name]... Fuck..."
 
@@ -2394,11 +2394,6 @@ label v15s18c_chris_penelope:
                 u "*Muffled* Mhmm..."
 
                 pe "Yes, yes! *Moans* Just like that..."
-
-                scene v15penor2f # IGNORE AS ANIMATION
-                with dissolve
-
-                pause 0.75
 
                 pe "Oh, I can't believe we're doing this."
 

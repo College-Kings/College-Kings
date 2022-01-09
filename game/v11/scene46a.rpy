@@ -309,6 +309,7 @@ label v11_dinner_with_aubrey:
                 with dissolve
 
                 u "I know you said that before, but I thought that maybe things felt a little different lately."
+
                 if kct == "confident":
                     scene v11dwa1e
                     with dissolve

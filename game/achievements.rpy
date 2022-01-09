@@ -99,10 +99,10 @@ init python:
         Achievement("thick_and_thin", "Help Penelope")
         Achievement("text_with_an_s", "Return to sender")
         Achievement("lucky_7", "Flashing lights at the arcade")
-        Achievement("ip_man", "Win The Alley Fight")
-        Achievement("get_a_room", "Stay With Amber at Josh's")
+        Achievement("ip_man", "Win the alley fight")
+        Achievement("get_a_room", "Stay with Amber at Josh's")
         Achievement("helping_hand", "Help Nora hand out flyers for the trip")
-        Achievement("up_for_more", "Flirt With Chloe")
+        Achievement("up_for_more", "Flirt with Chloe at the Steakhouse")
 
     # v9
     if renpy.loadable("v9/scene01.rpy"):
