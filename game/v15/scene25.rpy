@@ -407,7 +407,7 @@ label v15s25:
         menu:
             "Accept the price":
                 $ add_point(KCT.BOYFRIEND)
-                $ lindsey_board.money -= 800
+                $ v15s25_price -= 800
                 
                 scene v15s25_7a
                 with dissolve
@@ -453,7 +453,7 @@ label v15s25:
                 menu:
                     "Be honest":
                         $ add_point(KCT.BOYFRIEND)
-                        $ lindsey_board.money -= 400
+                        $ v15s25_price -= 400
                         
                         scene v15s25_7a
                         with dissolve
@@ -512,7 +512,7 @@ label v15s25:
 
                     "Lie":
                         $ add_point(KCT.TROUBLEMAKER)
-                        $ lindsey_board.money -= 800
+                        $ v15s25_price -= 800
                         
                         scene v15s25_7a
                         with dissolve
@@ -594,7 +594,7 @@ label v15s25:
         menu:
             "Accept the price":
                 $ add_point(KCT.BOYFRIEND)
-                $ lindsey_board.money -= 700
+                $ v15s25_price -= 700
                 
                 scene v15s25_7a
                 with dissolve
@@ -664,7 +664,7 @@ label v15s25:
                 menu:
                     "Lindsey's mom passed away recently":
                         $ add_point(KCT.BOYFRIEND)
-                        $ lindsey_board.money -= 500
+                        $ v15s25_price -= 500
                         
                         scene v15s25_7h
                         with dissolve
@@ -747,7 +747,7 @@ label v15s25:
 
                     "Ask about student discounts":
                         $ add_point(KCT.TROUBLEMAKER)
-                        $ lindsey_board.money -= 700
+                        $ v15s25_price -= 700
                         
                         scene v15s25_7a
                         with dissolve
@@ -822,5 +822,7 @@ label v15s25:
     u "*Sighs* (Still no Nora, but it sounds like Aubrey's got something fun planned for me.)"
 
     stop music fadeout 3
+
+    $ lindsey_board.money -= v15s25_price
 
     jump v15s26
