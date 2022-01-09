@@ -210,16 +210,19 @@ label v15s39:
 
         se "Oh, yeah. I was on the phone for hours with these people trying to get a cheaper price. It's close to a thousand bucks."
 
-        scene v15s39_7c
-        with dissolve
-
-        u "(Damn right it is.)"
-
         if not v15_lindsey_alcohol:
             scene v15s39_7
             with dissolve
 
             se "But since it's mocktails instead, it might have been cheaper."
+
+        scene v15s39_7c
+        with dissolve
+
+        u "(Damn right it was expensive.)"
+
+        if not v15s25_price == 800:
+            u "(Luckily we could get the price down.)"
 
     elif v15_lindsey_alcohol:
         scene v15s39_6c # FPP. same as v15s39_6 Grayson is looking at Autumn's location, still a slight snmile, mouth is still open
