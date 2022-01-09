@@ -332,9 +332,18 @@ label v15s42:
 
     pause 0.75
 
+    menu:
+        "Select detective type"
+        "Professional":
+            $ mc.detective = Detective.PROFESSIONAL
+        "Psychologist":
+            $ mc.detective = Detective.PSYCHOLOGIST
+        "Loose Cannon":
+            $ mc.detective = Detective.LOOSE_CANNON
+
     # -A UI pops up to show the three detective archetypes that MC can choose from (Professional, Psychologist, Loose Cannon). MC makes his choice and the UI disappears again-
 
-    if detective == "professional":
+    if mc.detective = Detective.PROFESSIONAL:
         scene v15s42_7a
         with dissolve
 
@@ -355,7 +364,7 @@ label v15s42:
 
         am "Haha, okay fair. Yeah! I can see this."
 
-    elif detective == "psychologist":
+    elif mc.detective = Detective.PSYCHOLOGIST:
         scene v15s42_7a
         with dissolve
 
@@ -376,7 +385,7 @@ label v15s42:
 
         am "Okay, cool! So, you'll be good at analyzing every word and figuring out if they're lying or telling us the truth."
 
-    else:
+    elif mc.detective = Detective.LOOSE_CANNON:
         scene v15s42_7a
         with dissolve
 
