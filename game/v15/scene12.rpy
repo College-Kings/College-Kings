@@ -590,6 +590,7 @@ label v15s12:
                 
                 if joinwolves:
                     u "(Damn, will it? What have I done? We really don't need any more drama back at the house...)"
+                
                 else:
                     u "(If it causes any issues for them, it's their problem...)"
         
@@ -597,11 +598,19 @@ label v15s12:
                 u "Chloe has just announced the Wolves as her official brotherhood, so we have to focus on the Apes now."
                 
                 if v14_ApesPostChloePics:
-                    u "(Wherever Grayson's mind is, it's not on supporting Chloe, so it should be easy.)"
+                    u "(Wherever Grayson's mind is, it's not on supporting Chloe, anyway...)"
         
         else: #If Chloe is with Apes 
-            pass
+            if v15_lindsey_inviteseb:
+                u "(Getting the Apes to support Chloe and now trying to get Sebastian to influence the Wolves. I'm getting everyone involved, ha!)"
+                
+            else:
+                if not v14_chloe_cameron:
+                    u "(Grayson's getting a lot of attention from both sides of the campaign... *Chuckles*)"
 
+                    if v14_ApesPostChloePics:
+                        u "(But I don't think he's rooting for Chloe right now anyway...)"
+                
     # -Regardless-
     scene v15s12_8a
     with dissolve
