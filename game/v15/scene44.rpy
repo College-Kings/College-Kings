@@ -278,8 +278,8 @@ label v15s44_continue:
     with dissolve
 
     pe "\"Was so nice to see my baby niece today... She never stays for long, but it's always perfect <3 See you soon, Nora Bora!\""
-    $ v15_nora_clues.append("visited_aunt")
-    $ v15_nora_locations.append("aunt")
+    $ v15_nora_clues.add("visited_aunt")
+    $ v15_nora_locations.add("aunt")
 
     scene v15s44_8
     with dissolve
@@ -295,7 +295,7 @@ label v15s44_continue:
     with dissolve
 
     pe "I think her whole family are huge nature freaks. There's pictures of them camping, fishing... You name it."
-    $ v15_nora_clues.append("loves_nature")
+    $ v15_nora_clues.add("loves_nature")
 
     if "camping" in v15_nora_clues:
         scene v15s44_8
@@ -309,7 +309,7 @@ label v15s44_continue:
         
         am "Camping... now that's an activity for someone who wants some peace and quiet."
         
-        $ v15_nora_locations.append("camping")
+        $ v15_nora_locations.add("camping")
 
     menu:
         "Ask about Nora's family":
@@ -358,7 +358,7 @@ label v15s44_continue:
             u "Wait, they're still friends?"
             
             u "That's an interesting development."
-            $ v15_nora_clues.append("likes_ex")
+            $ v15_nora_clues.add("likes_ex")
             
             scene v15s44_8a
             with dissolve
@@ -369,7 +369,7 @@ label v15s44_continue:
             with dissolve
 
             am "Hmm, that's something that we might want to consider. Maybe Nora ran off to this ex."
-            $ v15_nora_locations.append("ex")
+            $ v15_nora_locations.add("ex")
 
     scene v15s44_8a
     with dissolve
