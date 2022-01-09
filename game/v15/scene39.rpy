@@ -311,6 +311,30 @@ label v15s39:
 
         u "(So, they are really, really good friends. Interesting...)"
 
+        if v14_chloe_wolves or not v14_help_chloe: # If helping Chloe and chose Wolves path, or not helping Chloe at all (default is Wolves path)
+            if v14_chloe_wolves:
+                u "(Even after we've just gotten the Wolves' support for Chloe's campaign, he's still here for his friend.)"
+
+                u "(I should speak for myself, I'm also leading the double agent life, ha!)"
+            
+            else:
+                u "(Even after Chloe just announced the Wolves as her official brotherhood, he's still here for his friend.)"
+            
+            if joinwolves:
+                u "(I hope this doesn't cause a rift back at the house...)"
+
+            else:
+                u "(I wonder if this will influence how the Wolves will behave...)"
+                
+        if v14_help_chloe and not v14_chloe_wolves:
+            u "(This might just help balance the scales after we got the Apes' support for Chloe.)"
+
+            if joinwolves:
+                u "(At least I thought we had their support, that picture was a low blow...)"
+
+            elif v14_ApesPostChloePics:
+                u "(Though after that picture I'm not sure what Grayson is thinking anymore.)"
+
     else:
         scene v15s39_6f # FPP. same as v15s39_6b Grayson is looking at Lindsey, still aggravated, mouth is still open.
         with dissolve
