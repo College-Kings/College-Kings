@@ -852,7 +852,7 @@ label v15s18c_imre_aubrey:
 
     au "*Moans* YES!"
 
-    scene v15aubfin2Start # IGNORE AS ALREADY RENDERED
+    scene v15aubfin2 # IGNORE AS ALREADY RENDERED
     with dissolve
 
     menu:
@@ -2356,10 +2356,8 @@ label v15s18c_chris_penelope:
 
                 pe "I see where this is going."
 
-                image v15penor = Movie(play="images/v15/Scene 18c/v15penor.webm", loop=True, image="images/v15/Scene 18c/v15penorStart.webp", start_image="images/v15/Scene 18c/v15penorStart.webp") 
-                image v15penorf = Movie(play="images/v15/Scene 18c/v15penorf.webm", loop=True, image="images/v15/Scene 18c/v15penorStart.webp", start_image="images/v15/Scene 18c/v15penorStart.webp") 
+                image v15penor = Movie(play="images/v15/Scene 18c/v15penor.webm", loop=True, image="images/v15/Scene 18c/v15penorStart.webp", start_image="images/v15/Scene 18c/v15penorStart.webp")
                 image v15penor2 = Movie(play="images/v15/Scene 18c/v15penor2.webm", loop=True, image="images/v15/Scene 18c/v15penor2Start.webp", start_image="images/v15/Scene 18c/v15penor2Start.webp")
-                image v15penor2f = Movie(play="images/v15/Scene 18c/v15penor2f.webm", loop=True, image="images/v15/Scene 18c/v15penor2Start.webp", start_image="images/v15/Scene 18c/v15penor2Start.webp")
 
                 scene v15penor # IGNORE AS ANIMATION
                 with dissolve
@@ -2372,13 +2370,7 @@ label v15s18c_chris_penelope:
 
                 pe "*Whispers* Fuck..."
 
-                scene v15penorf # IGNORE AS ANIMATION
-                with dissolve
-
-                pause 0.75
-
                 u "Do you like it when I taste you?"
-
 
                 pe "*Moans* I love it, [name]... Fuck..."
 
@@ -2394,11 +2386,6 @@ label v15s18c_chris_penelope:
                 u "*Muffled* Mhmm..."
 
                 pe "Yes, yes! *Moans* Just like that..."
-
-                scene v15penor2f # IGNORE AS ANIMATION
-                with dissolve
-
-                pause 0.75
 
                 pe "Oh, I can't believe we're doing this."
 
