@@ -147,8 +147,10 @@ screen v15s18a_bar():
 
     if not "lauren2" in freeroam13:
         add image_path + "v15s18a_bar_1.webp"
-    else:
+    elif not "autumn_amber" in freeroam14:
         add image_path + "v15s18a_bar_2.webp"
+    else:
+        add image_path + "v15s18a_bar_3.webp"
 
     if not "lauren2" in freeroam13:
         # Aubrey
@@ -161,7 +163,7 @@ screen v15s18a_bar():
                 action Call("freeRoamSpokenToo", backgroundImg="v15s18a_bar_1", returnScreen="v15s18a_bar")
             pos (510, 110)
 
-    else:
+    elif not "autumn_amber" in freeroam14:
         # Autumn
         imagebutton:
             idle Transform("#0000", size=(245, 369))
