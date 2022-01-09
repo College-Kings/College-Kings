@@ -482,7 +482,7 @@ label v15s43:
 
     ch "And I suggest you should respect that too."
 
-    $ v15_nora_clues.add("be_alone")
+    $ v15_nora_clues.add(Clue("Be Alone"))
 
     scene v15s43_14g # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth closed.
     with dissolve

@@ -19,6 +19,20 @@ label start:
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
     hide no_hard_feelings
 
+    python:
+        v15_nora_clues.add(Clue("Keys", "images/v15/detective_board/keys.png"))
+        v15_nora_clues.add(Clue("Diary", "images/v15/detective_board/diary.png"))
+        v15_nora_clues.add(Clue("Earring", "images/v15/detective_board/earring.png"))
+        v15_nora_clues.add(Clue("Broken Bottle", "images/v15/detective_board/broken_bottle.png"))
+        v15_nora_clues.add(Clue("Message", "images/v15/detective_board/message.png"))
+        v15_nora_clues.add(Clue("Phone Number", "images/v15/detective_board/phone_number.png"))
+        v15_nora_clues.add(Clue("Unknown", "images/v15/detective_board/unknown.png"))
+        v15_nora_clues.add(Clue("Unknown", "images/v15/detective_board/unknown.png"))
+        v15_nora_clues.add(Clue("Unknown", "images/v15/detective_board/unknown.png"))
+        v15_nora_clues.add(Clue("Unknown", "images/v15/detective_board/unknown.png"))
+    
+
+    call screen detective_board
     call screen real_life_mode
 
 label end_credits: # for compatibility
