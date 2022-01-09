@@ -4,6 +4,8 @@
 # Time: Night
 
 label v15s18c:
+    $ freeroam13.add("lauren2")
+
     call screen v15s18a_livingroom
 
 label v15s18c_riley:
