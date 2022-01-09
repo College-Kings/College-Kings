@@ -351,12 +351,14 @@ label v15s18b:
             scene v15s18b_12a # FPP. Lauren giving MC a passionate kiss.
             with dissolve
 
-            pause 0.75
+            pause 1.75
+
+            play sound "sounds/kiss.mp3"
 
             scene v15s18b_13a # TPP. Show just MC and Lauren passionately kissing.
             with dissolve
-            play sound "sounds/kiss.mp3"
-            pause 0.75
+
+            pause 1.75
 
         else:
             scene v15s18b_13 # TPP. Show just MC and Lauren hugging, both slight smile, mouth closed.

@@ -96,6 +96,8 @@ label v15s48b:
 
         u "You really don't have to thank me, Nora. I'd do it all over again a million times, you know that."
 
+        play sound "sounds/kiss.mp3"
+
         scene v15s48b_6 # TPP. MC and Nora kissing as they lay down.
         with dissolve
 

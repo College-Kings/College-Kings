@@ -64,6 +64,9 @@ label v15s18e_neck:
     menu:
         "Kiss":
             $ add_point(KCT.BOYFRIEND)
+            
+            play sound "sounds/kiss.mp3"
+            
             scene v15s18ene_2 # TPP. Show MC kissing Lauren's neck, Lauren flirty, mouth open.
             with dissolve
 
@@ -77,6 +80,8 @@ label v15s18e_neck:
             u "Well, I definitely like kissing you there..."
 
             u "And here..."
+
+            play sound "sounds/kiss.mp3"
 
             scene v15s18ene_4 # TPP. Show MC kissing the other side of Lauren's neck, Lauren flirty, mouth open.
             with dissolve
@@ -96,6 +101,8 @@ label v15s18e_neck:
             with dissolve
 
             la "Oh-"
+
+            play sound "sounds/kiss.mp3"
 
             scene v15s18ene_5 # TPP. Close up side view of MC kissing lauren as he has his hand on her neck holding it.
             with dissolve
@@ -317,10 +324,15 @@ label v15s18e_feet:
 
         "Suck":
             $ add_point(KCT.TROUBLEMAKER)
+            
+            play sound "sounds/kiss.mp3"
+            
             scene v15s18efe_3 # TPP. Show MC kissing Lauren's feet, Lauren's face visible, Lauren shocked, mouth open.
             with dissolve
 
             la "Ah! What are you- Oh...?"
+
+            play sound "sounds/kiss.mp3"
 
             scene v15s18efe_3a # TPP. Show MC kissing Lauren's feet, Lauren's face visible, Lauren flirty, mouth open.
             with dissolve

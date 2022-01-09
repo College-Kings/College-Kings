@@ -870,22 +870,19 @@ label v15s22:
 
             u "Well, if we're pushed for time..."
 
-            scene v15s22_6b
-            with dissolve
-
             u "Basically, we think you should agree to this proposal because in the long term it will attract a lot more students to SVC."
-
-            scene v15s22_6l # FPP. same as v15s22_6k The Dean has a slightly confused expression, still looking at Mc, mouth is still closed
-            with dissolve
 
             u "And it will encourage other sororities and fraternities to want the same treatment as the Chicks."
 
             u "And this should help improve enrollment numbers if we're offering reduced tuition fees."
 
-            scene v15s22_6m
+            scene v15s22_6l # FPP. same as v15s22_6k The Dean has a slightly confused expression, still looking at Mc, mouth is still closed
             with dissolve
 
             de "..."
+
+            scene v15s22_6m
+            with dissolve
 
             de "Oh, have you finished? That's it?"
 
@@ -1011,6 +1008,8 @@ label v15s22:
     with dissolve
 
     de "Well, I think I've heard enough to make my decision."
+
+    hide screen teacher_conviction_bar with dissolve
 
     scene v15s22_5b
     with dissolve

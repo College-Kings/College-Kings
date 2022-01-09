@@ -101,12 +101,14 @@ label v15s18:
         scene v15s18_8c # FPP. Same as v15s18_8b, Lauren kissing MC
         with dissolve
 
-        pause 0.75
+        pause 1.75
+
+        play sound "sounds/kiss.mp3"
 
         scene v15s18_9 # TPP. Shot of MC and Lauren kissing
         with dissolve
 
-        pause 0.75
+        pause 1.5
 
         scene v15s18_8a # FPP. Same as v15s18_8, Lauren slight smile, mouth closed.
         with dissolve

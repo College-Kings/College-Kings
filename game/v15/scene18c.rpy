@@ -805,10 +805,14 @@ label v15s18c_imre_aubrey:
 
     pause 0.75
 
+    play sound "sounds/kiss.mp3"
+
     scene v15s18c_imau_18 # TPP. Show MC kissing Aubrey's neck, Aubrey biting her lip, mouth closed
     with dissolve
 
     pause 0.75
+
+    play sound "sounds/kiss.mp3"
 
     scene v15s18c_imau_19 # TPP. Show MC kissing Aubrey's abdomen, Aubrey mouth open, moaning
     with dissolve
@@ -1055,10 +1059,12 @@ label v15s18c_imre_aubrey:
 
     pause 0.75
 
+    play sound "sounds/kiss.mp3"
+
     scene v15s18c_imau_31 # TPP. Show Aubrey giving MC a passionate kiss
     with dissolve
 
-    pause 0.75
+    pause 1.75
 
     scene v15s18c_imau_32 # FPP. Aubrey standing in front of MC, Aubrey mouth closed, sexy expression
     with dissolve
@@ -1465,10 +1471,12 @@ label v15s18c_lauren:
 
         la "Aww! Come here, you."
 
+        play sound "sounds/kiss.mp3"
+
         scene v15s18c_la_5 # TPP. Show Lauren giving MC a kiss
         with dissolve
 
-        pause 0.75
+        pause 1.5
 
         scene v15s18c_la_6 # FPP. Lauren now standing right in front of MC, slight smile, mouth open
         with dissolve
@@ -2057,6 +2065,8 @@ label v15s18c_autumn_kiss:
     with dissolve
 
     u "Haha, okay, no tongues."
+    
+    play sound "sounds/kiss.mp3"
 
     scene v15s18c_auam_11 # TPP. Show MC and Autumn kissing (no tongue)
     with dissolve
@@ -2067,6 +2077,8 @@ label v15s18c_autumn_kiss:
     with dissolve
 
     pause 0.75
+    
+    play sound "sounds/kiss.mp3"
 
     scene v15s18c_auam_13 # TPP. MC and Autumn kissing (no tongue), MC now reaching for her ass
     with dissolve
@@ -2428,6 +2440,8 @@ label v15s18c_chris_penelope:
                 with dissolve
 
                 pause 0.75
+
+                play sound "sounds/kiss.mp3"
 
                 scene v15s18c_chpe_16 # TPP. MC on top of Penelope, they're kissing
                 with dissolve

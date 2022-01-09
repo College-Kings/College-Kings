@@ -1033,6 +1033,8 @@ label v15s48:
 
                     pause 0.75
 
+                    play sound "sounds/kiss.mp3"
+
                     scene v15s48_23a # FPP. Nora bending over and kissing MC.
                     with dissolve
 
