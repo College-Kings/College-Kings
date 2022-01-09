@@ -1368,7 +1368,7 @@ label v15s18a_Riley:
     scene v15s18ariley_1 # FPP. MC looking at the Kitchen area, Food and plates out, Riley carrying plates to the part of the counter by the fridge, Riley looks stressed, mouth closed.
     #with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18ariley_1a # FPP. MC looking at the Kitchen area, Riley putting down the plates on the counter.
     with dissolve
