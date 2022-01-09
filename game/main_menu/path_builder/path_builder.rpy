@@ -2,11 +2,11 @@ init python:
     pb_items = []
 
     class PathBuilderCategories(Enum):
-        FRATERNITY          =   "Step 1: PICK A FRATERNITY"
-        KCT                 =   "Step 2: PICK YOUR STARTING KCT"
-        GIRL                =   "Step 3: PICK WHICH GIRLS YOU WANT TO BE ROMANTICALLY INVOLVED WITH"
-        START_LOCATION      =   "Step 4: PICK YOUR STARTING LOCATION"
-        HOMECOMING_DATE     =   "Step 5: PICK YOUR HOMECOMING DATE"
+        FRATERNITY          =   "1. PICK A FRATERNITY"
+        KCT                 =   "2. PICK YOUR STARTING KCT"
+        GIRL                =   "3. PICK WHICH GIRLS YOU WANT TO BE ROMANTICALLY INVOLVED WITH"
+        START_LOCATION      =   "4. PICK YOUR STARTING LOCATION"
+        HOMECOMING_DATE     =   "5. PICK YOUR HOMECOMING DATE"
     
 
     class PathBuilderItem:
@@ -23,7 +23,7 @@ init python:
 
     def get_category(step):
         for category in PathBuilderCategories:
-            if category.value.startswith("Step {}".format(step)):
+            if category.value.startswith("{}".format(step)):
                 return category
         return None
 
@@ -98,9 +98,9 @@ screen path_builder_base(header=""):
 
     vbox:
         spacing 20
-        pos (200, 300)
+        align (0.5, 0.5)
 
-        text header
+        text header xalign 0.5
 
         transclude
 
@@ -116,24 +116,25 @@ screen path_builder(category_step=1):
 
     use path_builder_base(header=category.value):
         vpgrid:
-            xalign 0.5
             cols 4
-            spacing 25
+            xspacing 10
+            yspacing 0
 
             for item in items:
                 vbox:
-                    if category == PathBuilderCategories.GIRL:
+                    if category == PathBuilderCategories.GIRL or category == PathBuilderCategories.HOMECOMING_DATE:
                         imagebutton:
                             idle  image_path + "girls/girl_" + item.name + "_idle.webp"
                             hover image_path + "girls/girl_" + item.name + ".webp"
                             selected_idle image_path + "girls/girl_" + item.name + ".webp"
                             selected get_selected(item)
                             action [a for a in item.actions]
+                            bottom_padding -15
 
                         text item.name:
                             align (0.70, 0.5)
                             color "#fff"
-                            yoffset -75
+                            yoffset -60
                             size 26
                     else:
                         imagebutton:
@@ -162,24 +163,25 @@ screen path_builder(category_step=1):
                 text "Lock KCT (Prevent it from changing)":
                     yoffset -7
 
-        hbox: 
-            spacing 200
+    hbox: 
+        spacing 50
+        align (0.5, 0.9)
 
-            textbutton "BACK":
-                xalign 0
-                selected False
-                if category_step > 1:
-                    action Show("path_builder", None, category_step - 1)
-                else:
-                    action ShowMenu("main_menu")
+        textbutton "BACK":
+            xalign 0
+            selected False
+            if category_step > 1:
+                action Show("path_builder", None, category_step - 1)
+            else:
+                action ShowMenu("main_menu")
 
-            textbutton "CONTINUE":
-                xalign 1.0
-                selected False
-                if category_step < len(PathBuilderCategories):
-                    sensitive any(get_selected(item) for item in items)
-                    action Show("path_builder", None, category_step + 1)
-                elif pb_start_location == "v7_homecoming":
-                    action Start("v7_homecoming")
-                else:
-                    action Start(pb_start_location)
+        textbutton "CONTINUE":
+            xalign 1.0
+            selected False
+            if category_step < len(PathBuilderCategories):
+                sensitive any(get_selected(item) for item in items)
+                action Show("path_builder", None, category_step + 1)
+            elif pb_start_location == "v7_homecoming":
+                action Start("v7_homecoming")
+            else:
+                action Start(pb_start_location)

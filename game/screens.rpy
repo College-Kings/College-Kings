@@ -532,7 +532,7 @@ screen enter_save_name(slot):
     frame:
         xysize (1083, 99)
         pos (477, 210)
-        background "gui/file_slots/save_name.png"
+        background "gui/file_slots/save_game_idle.png"
 
         input:
             align (0.5, 0.5)
@@ -572,7 +572,7 @@ screen file_slots(title):
         game_version = FileJson(1, key="_version") or ""
         renpy_version = FileJson(1, key="_renpy_version") or ""
         renpy_version = '.'.join(str(i) for i in renpy_version)
-        file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
+        file_compatible = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
     add image_path + "background.png"
 
@@ -612,18 +612,18 @@ screen file_slots(title):
                     game_version = FileJson(slot, key="_version") or ""
                     renpy_version = FileJson(slot, key="_renpy_version") or ""
                     renpy_version = '.'.join(str(i) for i in renpy_version)
-                    file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
+                    file_compatible = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
 
                 button:
-                    background Transform(FileScreenshot(slot), size=(config.thumbnail_width, config.thumbnail_height))
+                    background Transform(image_path + "save_game_frame.png", size=(config.thumbnail_width, config.thumbnail_height))
                     if title == _("Save"):
                         action Show("enter_save_name", slot=slot)
                     else:
                         action FileAction(slot)
                     xysize (config.thumbnail_width, config.thumbnail_height)
 
-                    if file_compatable:
+                    if file_compatible:
                         vbox:
                             align (0.5, 1.0)
 
