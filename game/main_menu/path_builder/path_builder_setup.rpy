@@ -22,6 +22,8 @@ label path_builder_setup:
             ]
         )
 
+
+        #KCT
         PB_LOYAL = PathBuilderItem(
             PathBuilderCategories.KCT,
             "LOYAL",
