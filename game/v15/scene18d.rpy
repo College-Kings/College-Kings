@@ -299,10 +299,12 @@ label v15s18d:
 
                     la "Yeah, especially after the gift you gave me, hehe. Best boyfriend ever."
 
+                    play sound "sounds/kiss.mp3"
+
                     scene v15s18d_14a # TPP. Show MC and Lauren having a passionate kiss
                     with dissolve
 
-                    pause 0.75
+                    pause 1.75
 
                     scene v15s18d_8f
                     with dissolve
@@ -484,6 +486,8 @@ label v15s18d:
                 with dissolve
 
                 u "Haha... Okay, little spoon. Let's go."
+
+                play sound "sounds/kiss.mp3"
 
                 scene v15s18d_14 # TPP. Show MC kissing Lauren's forehead, Lauren slight smile, eyes closed, mouth closed.
                 with dissolve

@@ -603,6 +603,8 @@ label v15s33:
 
     aumom "Haha, my silly man."
 
+    play sound "sounds/kiss.mp3"
+
     scene v15s33_20a # FPP. Show Aubrey's parents kissing.
     with dissolve
 
@@ -773,10 +775,12 @@ label v15s33:
 
         u "*Laughs* Thank you. I appreciate it. I hope she keeps me..."
 
+        play sound "sounds/kiss.mp3"
+
         scene v15s33_30 # TPP. MC kissing Aubrey on the Cheek. Aubrey smiling and blushing, mouth closed.
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
     else:
         scene v15s33_28b
@@ -1543,6 +1547,8 @@ label v15s33:
 
             na "Ooh..."
 
+            play sound "sounds/kiss.mp3"
+
             scene v15s33_50a # FPP. MC looking at Naomi, Naomi kissing the tip of MC's dick.
             with dissolve
 
@@ -2008,10 +2014,12 @@ label v15s33:
 
                     u "*Laughs* Gladly."
 
+                    play sound "sounds/kiss.mp3"
+
                     scene v15s33_60 # TPP. At the ceremony in their seats, MC and Aubrey kissing each other romantically and holding each others hands.
                     with dissolve
 
-                    pause 0.75
+                    pause 1.75
 
                     scene v15s33_61 # TPP. Close up of Aubrey's Mom and Dad looking in MC's and Aubrey's direction, both slight smile, mouth closed.
                     with dissolve
@@ -2124,6 +2132,8 @@ label v15s33:
     with dissolve
     
     wedoff "You may now kiss the bride... Again."
+
+    play sound "sounds/kiss.mp3"
 
     scene v15s33_70 # TPP. Show Aubrey's Mom and Dad kissing.
     with dissolve
@@ -2282,10 +2292,12 @@ label v15s33:
             pause 0.75
 
             if aubrey.relationship.value >= Relationship.TAMED.value:
+                play sound "sounds/kiss.mp3"
+            
                 scene v15s33_81b # TPP. Aubrey kissing MC's cheek.
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
             scene v15s33_79a # TPP. Aubrey, her parents, and Naomi all standing and posing together smiling for a photo.
             with dissolve
