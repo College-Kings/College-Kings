@@ -44,6 +44,8 @@ label v15s20:
 
                 cl "Of course, haha. Sorry! My mind is just like, completely focused on this meeting with the Dean."
 
+                play sound "sounds/kiss.mp3"
+
                 scene v15s20_6 # TPP. Show MC and Chloe having a quick kiss.
                 with dissolve
 

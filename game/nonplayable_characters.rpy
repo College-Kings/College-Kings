@@ -52,11 +52,7 @@ init python:
 
         def __init__(self, name, username=None):
             self.name = name
-            
-            if username is None:
-                self._username = name
-            else:
-                self._username = username
+            self._username = name if username is None else username
 
             self._messenger = None
             self._simplr = None
@@ -66,6 +62,7 @@ init python:
                 "Vindictive": [],
                 "Talkative": None
             }
+            self.detective = None
 
             self.points = 0
             self._relationship = Relationship.FRIEND

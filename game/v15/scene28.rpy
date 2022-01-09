@@ -985,6 +985,8 @@ label v15s28:
             "Kiss Penelope":
                 $ add_point(KCT.TROUBLEMAKER)
 
+                play sound "sounds/kiss.mp3"
+
                 scene v15s28_16 # TPP MC leans across the table and kisses Penelope on the lips. Jenny (if visible) smiling at them, mouth open
                 with dissolve
 
@@ -1010,10 +1012,12 @@ label v15s28:
 
                 pe "Why blame anything for such perfection?"
 
+                play sound "sounds/kiss.mp3"
+
                 scene v15s28_16a # TPP MC and Penelope each lean part way across the table for a gentle kiss
                 with dissolve
 
-                pause 0.75
+                pause 1.5
 
                 scene v15s28_3a
                 with dissolve
@@ -1046,6 +1050,8 @@ label v15s28:
             "Kiss Jenny":
                 $ add_point(KCT.TROUBLEMAKER)
 
+                play sound "sounds/kiss.mp3"
+
                 scene v15s28_13 # TPP MC leans across the table and kisses Jenny on the lips, Penelope (if visible) leaning away from them with mouth open
                 with dissolve
 
@@ -1071,10 +1077,12 @@ label v15s28:
 
                 pause 0.75
 
+                play sound "sounds/kiss.mp3"
+
                 scene v15s28_13a # TPP Same angle as 13, Jenny leaning across the table to kiss MC this time, Penelope (if visible) smiling and rolling her eyes, mouth closed
                 with dissolve
 
-                pause 0.75
+                pause 1.5
 
             "Don't kiss her":
                 $ add_point(KCT.BOYFRIEND)

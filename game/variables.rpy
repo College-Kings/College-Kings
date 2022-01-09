@@ -367,7 +367,6 @@ default v15_lindsey_mostlikelyto = False ##Approach A2A. Would You Rather = (v15
 default v15_lindsey_inviteseb = False ##Approach B2A. Invite Grayson = (v14_help_lindsey and not v15_lindsey_gamenight and not v15_lindsey_inviteseb)
 
 default aubrey_riley_awkward = False
-default detective = "None" # Archetypes: professional, psychologist, loose cannon
 default dog_name = "Blue"
 default freeroam13 = set() # halloween, part 1 (18a)
 default freeroam14 = set() # halloween, part 2 (18c)

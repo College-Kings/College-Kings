@@ -254,6 +254,8 @@ label v15s40:
 
                     pause 0.75
 
+                    play sound "sounds/kiss.mp3"
+
                     scene v15s40_2a # TPP. same as v15s40_2 Autumn puts a hand on Mc's chest and leans in to give Mc a slight kiss
                     with dissolve
 
@@ -263,6 +265,8 @@ label v15s40:
                     with dissolve
 
                     pause 0.75
+
+                    play sound "sounds/kiss.mp3"
 
                     scene v15s40_2c # TPP. same as v15s40_2b Mc pulls Autumn closer for a passionate kiss his hand gently carressing the back of her head pulling her closer, Autumns hand is carressing Mc's throat
                     with dissolve
@@ -376,6 +380,8 @@ label v15s40:
     pause 0.75
 
     if autumn.relationship == Relationship.FWB:
+        play sound "sounds/kiss.mp3"
+    
         scene v15s40_4 # TPP. Autumn leans back into the limo to give Mc a kiss on the cheek, Mc slight smile mouth is closed
         with dissolve
 

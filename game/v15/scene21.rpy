@@ -2147,10 +2147,12 @@ label v15s21:
 
                                 ro "[name], stop... You're making me horny."
 
+                                play sound "sounds/kiss.mp3"
+
                                 scene v15s21_15 # TPP. Show Ms. Rose sitting in her chair from previous renders, Mc is standing above her, and pulls her in for a passionate kiss
                                 with dissolve
 
-                                pause 0.75
+                                pause 1.5
 
                                 scene v15s21_15a # TPP. same as v15s21_15 Ms. Rose and Mc are no longer kissing, Ms. Rose grasps Mc's shirt and pulls him close to whisper in his ear her mouth is open, Mc looks proud of himself mouth is closed
                                 with dissolve

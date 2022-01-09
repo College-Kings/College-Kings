@@ -110,7 +110,7 @@ label v15s43:
 
                 pause 0.75
 
-            "Strategize" if detective == "professional":
+            "Strategize" if mc.detective == Detective.PROFESSIONAL:
                 scene v15s43_2b
                 with dissolve
 
@@ -173,7 +173,7 @@ label v15s43:
 
                 am "I didn't think it would be that easy, haha."
 
-            "What is Chris thinking?" if detective == "psychologist":
+            "What is Chris thinking?" if mc.detective == Detective.PSYCHOLOGIST:
                 scene v15s43_2b
                 with dissolve
 
@@ -218,7 +218,7 @@ label v15s43:
 
                 u "He's already playing mind games with us, this isn't good."
 
-            "Kick the door open" if detective == "loose_cannon":
+            "Kick the door open" if mc.detective == Detective.LOOSE_CANNON:
                 scene v15s43_2b
                 with dissolve
 
@@ -306,7 +306,7 @@ label v15s43:
 
             am "Chris, get your ass downstairs!"
         
-        "Use your instinct" if detective == "professional":
+        "Use your instinct" if mc.detective == Detective.PROFESSIONAL:
             scene v15s43_9
             with dissolve
 
@@ -324,7 +324,7 @@ label v15s43:
 
             u "I know when something isn't right, okay? I can feel it!"
 
-        "Analyze how you feel" if detective == "psychologist":
+        "Analyze how you feel" if mc.detective == Detective.PSYCHOLOGIST:
             scene v15s43_9
             with dissolve
 
@@ -340,7 +340,7 @@ label v15s43:
 
             u "*Gasps* A psychological horror!"
 
-        "Be angry" if detective == "loose_cannon":
+        "Be angry" if mc.detective == Detective.LOOSE_CANNON:
             scene v15s43_11 # TPP. View showing MC on one side of a couch in the living room, Amber on the other side with her hands in the shape of a gun, both suspicious, mouth closed.
             with dissolve
 
@@ -532,7 +532,7 @@ label v15s43:
 
             am "That's no good, Chris. You need to start telling us something we can use."
 
-        "You're lying" if detective == "professional":
+        "You're lying" if mc.detective == Detective.PROFESSIONAL:
             scene v15s43_14g
             #with dissolve
             
@@ -544,7 +544,7 @@ label v15s43:
             ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
             $ v15_nora_locations.add("camping")
 
-        "Analyze Chris" if detective == "psychologist":
+        "Analyze Chris" if mc.detective == Detective.PSYCHOLOGIST:
             scene v15s43_14g
             #with dissolve
 
@@ -571,7 +571,7 @@ label v15s43:
             ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
             $ v15_nora_locations.add("camping")
 
-        "Accuse Chris" if detective == "loose_cannon":
+        "Accuse Chris" if mc.detective == Detective.LOOSE_CANNON:
             play sound "sounds/thud.mp3"
 
             scene v15s43_16 # TPP. Show MC slamming his hands on the table, MC angry, mouth open.
@@ -693,7 +693,7 @@ label v15s43:
 
             am "Hmm... I don't know if we can trust you."
 
-        "Use logic" if detective == "professional":
+        "Use logic" if mc.detective == Detective.PROFESSIONAL:
             scene v15s43_14g
             #with dissolve
 
@@ -720,7 +720,7 @@ label v15s43:
 
             u "Help us make sense out of what you're saying, Chris!"
 
-        "Examine further" if detective == "psychologist":
+        "Examine further" if mc.detective == Detective.PSYCHOLOGIST:
             u "This aunt. Does Nora like her?"
 
             scene v15s43_14h
@@ -754,7 +754,7 @@ label v15s43:
 
             u "Hate is a very strong word. Are those your words or Nora's words?"
 
-        "Shout at Chris" if detective == "loose_cannon":
+        "Shout at Chris" if mc.detective == Detective.LOOSE_CANNON:
             scene v15s43_14g
             with vpunch
 
@@ -872,7 +872,7 @@ label v15s43:
 
     u "Great idea, chief."
 
-    if detective == "loose_cannon":
+    if mc.detective == Detective.LOOSE_CANNON:
         menu:
             "Kick table":
                 $ add_point(KCT.TROUBLEMAKER)

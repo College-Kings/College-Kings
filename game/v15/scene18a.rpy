@@ -1164,19 +1164,25 @@ label v15s18a_ImreLauren:
         with dissolve
 
         la "Haha... *Whispers* Save it for the bedroom."
+        
+        play sound "sounds/kiss.mp3"
 
         scene v15s18aimre_4b # FPP. MC sitting down next to Lauren, Lauren kissing MC, Imre in the background, Imre slight smile, mouth closed.
         with dissolve
         
-        pause 0.75
+        pause 1.5
 
         if v13_imre_disloyal:
+            play sound "sounds/kiss.mp3"
+        
             scene v15s18aimre_5 # TPP. Show MC and Lauren kissing on the couch, Imre unamused face, mouth open.
             with dissolve
 
             imre "*Scoffs*"
 
         else:
+            play sound "sounds/kiss.mp3"
+        
             scene v15s18aimre_5a # TPP. Show MC and Lauren kissing on the couch, Imre slight smile, mouth open. 
             with dissolve
 
@@ -1790,6 +1796,8 @@ label v15s18a_Riley:
 
             pause 0.75
 
+            play sound "sounds/kiss.mp3"
+
             scene v15s18ariley_14 # TPP. MC laying on the bed and Riley laying next to him them kissing.
             with dissolve
             
@@ -1860,6 +1868,8 @@ label v15s18a_Riley:
             with dissolve
 
             u "It is. You're a naughty-"
+
+            play sound "sounds/kiss.mp3"
 
             scene v15s18ariley_16 # TPP. Close up of Riley kissing MC's neck
             with dissolve

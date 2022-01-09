@@ -302,6 +302,8 @@ label v15s22:
 
     cl "*Deep breath* Okay, let's go."
 
+    hide screen v15_teacher_brief_icon
+
     play sound "sounds/knock.mp3"
 
     scene v15s22_2g # FPP. same as v15s22_2f Chloe turns away from Mc and knocks on the Dean's door, still no expression, mouth is still closed
@@ -324,7 +326,7 @@ label v15s22:
     if kct == "popular":
         $ v15s22_meeting_points += 1
 
-    $ animated_value_percent = v15s21_meeting_points+5
+    $ animated_value_percent = v15s22_meeting_points+5
 
     scene v15s22_4a # TPP. same as v15s22_4 The only difference is that Chloe's mouth is open, The dean does not look up at Chloe or Mc
     with dissolve
@@ -344,7 +346,7 @@ label v15s22:
     scene v15s22_4
     with dissolve
 
-    show screen teacher_conviction_bar(5 * 100 / 13, "DEAN")
+    show screen teacher_conviction_bar(5 * 100 / 13, "DEAN HARRISON")
 
     menu:
         "Say hello to the Dean":
@@ -356,7 +358,7 @@ label v15s22:
             u "Hi, Dean Harrison."
 
             $ v15s22_meeting_points -= 1
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
             scene v15s22_4b
             with dissolve
@@ -365,7 +367,7 @@ label v15s22:
 
         "Just sit down":
             $ v15s22_meeting_points += 0
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
             #$ add_point(KCT.BRO)
 
@@ -415,7 +417,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points += 1
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
             de "Mr. Lee? You must have been very convincing."
 
@@ -437,7 +439,7 @@ label v15s22:
                     with dissolve
 
                     $ v15s22_meeting_points += 1
-                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                     de "Well, I look forward to hearing from him how he came to that conclusion."
 
@@ -485,7 +487,7 @@ label v15s22:
                     with dissolve
 
                     $ v15s22_meeting_points -= 1
-                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                     de "I can assure you, nobody finds you funny."
 
@@ -511,7 +513,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points += 1
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
             de "Oh, good. You've already convinced Ms. Rose."
 
@@ -533,7 +535,7 @@ label v15s22:
                     with dissolve
 
                     $ v15s22_meeting_points += 1
-                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                     de "Did she? I'll be interested to hear from her how she arrived at that conclusion."
 
@@ -583,7 +585,7 @@ label v15s22:
                     de "Timing is everything, [name]. And this certainly isn't the time."
 
                     $ v15s22_meeting_points -= 1
-                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
                     de "The next time you speak, make sure it's something sensible."
 
                     scene v15s22_6f
@@ -606,7 +608,7 @@ label v15s22:
         with dissolve
 
         $ v15s22_meeting_points -= 1
-        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
         de "It doesn't look like you managed to secure any support from a teacher. There's no signature on here."
 
@@ -648,7 +650,7 @@ label v15s22:
                 with dissolve
 
                 $ v15s22_meeting_points -= 1
-                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                 de "I'm sure whoever you met with, you obviously didn't do a very good job of convincing them."
 
@@ -679,7 +681,7 @@ label v15s22:
                 with dissolve
 
                 $ v15s22_meeting_points += 1
-                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                 u "In all honesty, we could've done better. However, we have learned a lot from the experience."
 
@@ -703,7 +705,7 @@ label v15s22:
         with dissolve
         
         $ v15s22_meeting_points += 1
-        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN") 
+        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON") 
 
         de "You did a fine job defending your friend when we met last time, [name]."
         
@@ -751,7 +753,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points -= 1
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
             de "That's not necessary. I know what you're asking for, I need you to convince me."
 
@@ -767,7 +769,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points += 1
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
             de "Thank you. I'm glad you understand."
 
@@ -785,7 +787,7 @@ label v15s22:
                 with dissolve
 
                 $ v15s22_meeting_points += 1
-                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                 de "That would be appreciated."
 
@@ -800,7 +802,7 @@ label v15s22:
 
                 u "I feel like it should be enough that we secured support from a teacher. Let's not pretend that's an easy thing to do."
 
-                scene v15s22_7d
+                scene v15s22_7b
                 with dissolve
 
                 cl "Well, we can still try to summarize our goal for the Dean, [name]."
@@ -809,7 +811,7 @@ label v15s22:
                 with dissolve
 
                 $ v15s22_meeting_points -= 1
-                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                 de "That would be advisable, yes."
 
@@ -824,7 +826,7 @@ label v15s22:
                         with dissolve
 
                         $ v15s22_meeting_points += 1
-                        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                         u "Okay, sure. Let's do that then."
 
@@ -835,7 +837,7 @@ label v15s22:
                         with dissolve
 
                         $ v15s22_meeting_points -= 1
-                        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                         u "We've worked very hard all day to prepare that signature for you, but sure. You're the boss."
 
@@ -868,22 +870,13 @@ label v15s22:
 
             u "Well, if we're pushed for time..."
 
-            scene v15s22_6b
-            with dissolve
-
             u "Basically, we think you should agree to this proposal because in the long term it will attract a lot more students to SVC."
-
-            scene v15s22_6l # FPP. same as v15s22_6k The Dean has a slightly confused expression, still looking at Mc, mouth is still closed
-            with dissolve
 
             u "And it will encourage other sororities and fraternities to want the same treatment as the Chicks."
 
-            scene v15s22_6m # FPP. same as v15s22_6l The Dean's mouth is open, still a slightly confused expression, still looking at Mc
-            with dissolve
-
             u "And this should help improve enrollment numbers if we're offering reduced tuition fees."
 
-            scene v15s22_6l
+            scene v15s22_6l # FPP. same as v15s22_6k The Dean has a slightly confused expression, still looking at Mc, mouth is still closed
             with dissolve
 
             de "..."
@@ -902,7 +895,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points -= 1
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
             de "That was... very quick."
 
@@ -933,7 +926,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points += 1
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
             de "Okay, that's a valid first point."
 
@@ -986,13 +979,18 @@ label v15s22:
         scene v15s22_6o # FPP. same as v15s22_6b The Dean is slightly shocked, mouth is still closed, still looking at Mc
         with dissolve
 
+        pause 0.75
+        
+        scene v15s22_6c
+        with dissolve
+
         de "Oh- Wow..."
 
         scene v15s22_6h
         with dissolve
 
         $ v15s22_meeting_points += 1
-        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
         
         de "That is a surprise. I was opposed to the scholarship from the beginning, so that's a major bonus point, Chloe."
 
@@ -1010,6 +1008,8 @@ label v15s22:
     with dissolve
 
     de "Well, I think I've heard enough to make my decision."
+
+    hide screen teacher_conviction_bar with dissolve
 
     scene v15s22_5b
     with dissolve

@@ -121,10 +121,14 @@ label v15s48a:
             $ add_point(KCT.BOYFRIEND)
             u "You are."
 
+            play sound "sounds/kiss.mp3"
+
             scene v15s48a_3 # TPP. MC kissing Nora's right cheek.
             with dissolve
 
             u "Completely"
+
+            play sound "sounds/kiss.mp3"
 
             scene v15s48a_4 # TPP. MC kissing Nora's left cheek.
             with dissolve
@@ -137,6 +141,8 @@ label v15s48a:
             with dissolve
 
             pause 0.75
+
+            play sound "sounds/kiss.mp3"
 
             scene v15s48a_5 # TPP. Show MC and Nora kissing.
             with dissolve
@@ -194,6 +200,8 @@ label v15s48a:
 
     pause 0.75
 
+    play sound "sounds/kiss.mp3"
+
     scene v15s48a_7a # TPP. MC and Nora kissing, Nora is topless.
     with dissolve
 
@@ -203,6 +211,8 @@ label v15s48a:
     with dissolve
 
     pause 0.75
+
+    play sound "sounds/kiss.mp3"
 
     scene v15s48a_7c # TPP. MC and Nora kissing, both topless.
     with dissolve
@@ -358,6 +368,8 @@ label v15s48a_feet:
 
             no "My toes sucked before."
 
+            play sound "sounds/kiss.mp3"
+
             scene v15s48afe_6 # TPP. Show MC kissing Nora's foot, Nora flirty, mouth open.
             with dissolve
 
@@ -381,6 +393,8 @@ label v15s48a_vagina:
 
     menu:
         "Tease with kissing":
+            play sound "sounds/kiss.mp3"
+        
             scene v15s48ava_2 # TPP. Show MC kissing Nora's inner thigh, Nora flirty, mouth open.
             with dissolve
 
@@ -392,6 +406,8 @@ label v15s48a_vagina:
             with dissolve
 
             u "I want to make you feel good, but I'm still going to have some fun."
+
+            play sound "sounds/kiss.mp3"
 
             scene v15s48ava_2a # TPP. Show MC kissing closer to Nora's vagina, Nora flirty, mouth open.
             with dissolve

@@ -380,6 +380,8 @@ label v15s6:
             u "You won't. I know you won't."
 
         if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            play sound "sounds/kiss.mp3"
+            
             scene v15s7_4 # TPP Chloe giving MC a kiss, a little bit of mascara still streaking her face
             with dissolve
 
@@ -650,10 +652,12 @@ label v15s6:
 
                 cl "*Giggles*"
 
+                play sound "sounds/kiss.mp3"
+
                 scene v15s7_4a # TPP Same as 4, Chloe giving MC a kiss, no mascara streaking
                 with dissolve
 
-                pause 0.75
+                pause 1.75
 
             scene v15s7_8b
             with dissolve
