@@ -377,8 +377,8 @@ default v15_autumn_smoke = False
 default v15_blame_nora = False # blame_chris = (v13_imre_disloyal and not v15_blame_nora)
 default v15_mad_at_ms_rose = False
 default v15s21_meeting_points = 0
-default v15_nora_clues = set() #detective clues: be_alone, loves_nature, hates_camping, likes_ex, runs_dad, hates_dad, close_rose, visited_aunt, aunt_cabin
-default v15_nora_locations = set() #detective locations: dad, ms_rose, aunt, cabin, camping, ex
+default v15_nora_clues = [] #detective clues: be_alone, loves_nature, hates_camping, likes_ex, runs_dad, hates_dad, close_rose, visited_aunt, aunt_cabin
+default v15_nora_locations = [] #detective locations: dad, ms_rose, aunt, cabin, camping, ex
 default v15_RileyUpset = False
 default v15_seduce_ms_rose = False
 default v15_stuck_up_for_nora = False

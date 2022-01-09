@@ -442,8 +442,8 @@ label v15s43:
     with dissolve
 
     pause 0.75
-    $ v15_nora_locations.add("dad")
-    $ v15_nora_locations.add("ms_rose")
+    $ v15_nora_locations.append("dad")
+    $ v15_nora_locations.append("ms_rose")
 
     scene v15s43_15
     with dissolve
@@ -482,7 +482,7 @@ label v15s43:
 
     ch "And I suggest you should respect that too."
 
-    $ v15_nora_clues.add("be_alone")
+    $ v15_nora_clues.append("be_alone")
 
     scene v15s43_14g # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth closed.
     with dissolve
@@ -510,7 +510,7 @@ label v15s43:
             with dissolve
 
             ch "Why are you acting so weird? Listen, I don't know where she is. She could have gone camping for all I know."
-            $ v15_nora_locations.add("camping")
+            $ v15_nora_locations.append("camping")
 
             ch "Just wait until she comes back. She's fine. I swear she's fine."
 
@@ -542,7 +542,7 @@ label v15s43:
             with dissolve
 
             ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
-            $ v15_nora_locations.add("camping")
+            $ v15_nora_locations.append("camping")
 
         "Analyze Chris" if mc.detective == Detective.PSYCHOLOGIST:
             scene v15s43_14g
@@ -569,7 +569,7 @@ label v15s43:
             with dissolve
 
             ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
-            $ v15_nora_locations.add("camping")
+            $ v15_nora_locations.append("camping")
 
         "Accuse Chris" if mc.detective == Detective.LOOSE_CANNON:
             play sound "sounds/thud.mp3"
@@ -625,8 +625,8 @@ label v15s43:
     with dissolve
 
     ch "Her aunt... Oh yeah! Sometimes her aunt will rent out her dad's cabin."
-    $ v15_nora_clues.add("aunt_cabin")
-    $ v15_nora_locations.add("cabin")
+    $ v15_nora_clues.append("aunt_cabin")
+    $ v15_nora_locations.append("cabin")
 
     ch "And there, that answers your question about other properties, too. Can you leave me alone now?"
 
@@ -686,7 +686,7 @@ label v15s43:
             with dissolve
 
             ch "She pretty much hates him. That's the last place she'd go."
-            $ v15_nora_clues.add("hates_dad")
+            $ v15_nora_clues.append("hates_dad")
 
             scene v15s43_15
             with dissolve
@@ -747,7 +747,7 @@ label v15s43:
             with dissolve
 
             ch "I doubt it. She hates her dad."
-            $ v15_nora_clues.add("hates_dad")
+            $ v15_nora_clues.append("hates_dad")
 
             scene v15s43_14g
             with dissolve
@@ -794,7 +794,7 @@ label v15s43:
             with dissolve
 
             ch "She hates her dad. She wouldn't go to him."
-            $ v15_nora_clues.add("hates_dad")
+            $ v15_nora_clues.append("hates_dad")
 
             scene v15s43_16a # TPP. Show MC kicking the coffee table, MC angry, mouth open.
             with dissolve
