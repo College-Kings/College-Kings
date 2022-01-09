@@ -2182,6 +2182,7 @@ label v15s18c_chris_penelope:
             call screen v15s18a_upstairsroom
 
         "Save Penelope":
+            $ freeroam14.add("penelope")
             $ add_point(KCT.BOYFRIEND)
             
             scene v15s18c_chpe_2 # TPP. Show MC walking up to Chris and Penelope, MC waving at Chris, MC mouth open, slight smile, Penelope slight smile, Chris slight smile, both looking at MC, mouths closed

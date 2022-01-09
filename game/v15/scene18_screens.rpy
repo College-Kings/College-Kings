@@ -236,13 +236,13 @@ screen v15s18a_upstairsroom():
 
     default image_path = "images/v15/Scene 18a/Free Roam Screens/upstairsroom/"
 
-    if ("lauren2" not in freeroam13) or ("chris_penelope" in freeroam14):
+    if ("lauren2" not in freeroam13) or ("penelope" in freeroam14):
         add image_path + "v15s18a_upstairsroom_1.webp"
     else:
         add image_path + "v15s18a_upstairsroom_2.webp"
 
     # Chris and Penelope
-    if ("lauren2" in freeroam13) and not ("chris_penelope" in freeroam14):
+    if ("lauren2" in freeroam13) and not ("penelope" in freeroam14):
         imagebutton:
             idle Transform("#0000", size=(420, 672))
             hover image_path + "v15s18a_upstairsroom_hover_chris.webp"
