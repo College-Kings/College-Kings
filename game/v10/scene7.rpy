@@ -440,6 +440,4 @@ label v10_mc_vs_imre_fight:
             
             stop music fadeout 3
 
-            jump v10_avoid_fight
-
-    # -Transition to Scene 8-
+            jump v10_avoid_fight # -Transition to Scene 8-

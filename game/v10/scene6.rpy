@@ -446,5 +446,7 @@ label v10_mc_vs_ryan_fight:
             with dissolve
 
             u "I can't, I just can't."
+            
             stop music fadeout 3
+            
             jump v10_avoid_fight

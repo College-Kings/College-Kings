@@ -193,7 +193,8 @@ label v10_wolves_redec:
             scene v10swhr7 # TPP. Show wide shot of MC's new wolves room.
             with Fade(1, 0, 1)             
 
-            u "(Now that's what I'm talking about!)"          
+            u "(Now that's what I'm talking about!)"    
+            
     stop music fadeout 3  
 
     jump v10_call_with_lauren1

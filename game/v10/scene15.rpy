@@ -105,6 +105,7 @@ label v10_call_with_lauren1:
 
         scene v10scwl2
         with dissolve
+
         menu:
             "Two truths one lie":
                 scene v10scwl2c # TPP. Same camera as v10scwl2. Show MC in his Wolves bedroom. MC is laying on his bed, normal/content expression, mouth open
@@ -253,6 +254,7 @@ label v10_call_with_lauren1:
 
                 scene v10scwl2
                 with dissolve
+
                 menu:
                     "I could play":      
                         scene v10scwl2c
@@ -319,7 +321,6 @@ label v10_call_with_lauren1:
                             u "*Chuckles* Fine, we can do that too."
 
                         else: # RCS - MC is not in a relationship with Lauren, and didn't makeout with her
-                        
                             scene v10scwl2
                             with dissolve
                             
@@ -364,7 +365,6 @@ label v10_call_with_lauren1:
                 u "I just name a topic, say my favorite thing in that topic and then you answer your favorite. Then the game continues, but switched."
 
                 if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # RCS - MC is in a relationship with Lauren
-                
                     scene v10scwl2
                     with dissolve
 
@@ -391,7 +391,6 @@ label v10_call_with_lauren1:
                     la "Yeah, yeah, yeah. *Laughs* Can we start already?"
 
                 else:
-
                     scene v10scwl2
                     with dissolve
                     
@@ -404,6 +403,7 @@ label v10_call_with_lauren1:
 
                 scene v10scwl2
                 with dissolve
+
                 menu:
                     "Orange":
                         scene v10scwl2c 
@@ -429,6 +429,7 @@ label v10_call_with_lauren1:
 
                 scene v10scwl2
                 with dissolve
+
                 menu:
                     "Gecko":
                         scene v10scwl2c 
@@ -445,6 +446,7 @@ label v10_call_with_lauren1:
 
                 scene v10scwl2
                 with dissolve
+
                 menu:
                     "Spring":
                         scene v10scwl2c 
@@ -554,6 +556,7 @@ label v10_call_with_lauren1:
                 u "I actually love Halloween, but I-"
 
         play sound "sounds/twig.mp3"
+
         scene v10saow1b # TPP. Same camera as v10saow1. MC laying in his bed relaxing. He has the phone up to his ear, talking with Lauren. He looks over towards his window. Curious/thoughtful expression, mouth closed.
         with dissolve
         
@@ -592,6 +595,7 @@ label v10_call_with_lauren1:
 
             scene v10saow5
             with dissolve
+
             menu:
                 "Walk her home":
                     scene v10saow5
@@ -685,6 +689,7 @@ label v10_call_with_lauren1:
 
             scene v10saow5
             with dissolve
+
             menu:
                 "Walk her home":
                     scene v10saow5
@@ -865,6 +870,7 @@ label v10_call_with_lauren1:
 
         scene v10saow3 
         with dissolve
+
         menu:
             "Two truths one lie":
                 scene v10saow3c # TPP. Same camera as v10scwl2. Show MC in his Ape bedroom. MC is laying on his bed, normal/content expression, mouth open
@@ -1013,6 +1019,7 @@ label v10_call_with_lauren1:
 
                 scene v10saow3
                 with dissolve
+
                 menu:
                     "I could play":      
                         scene v10saow3c
@@ -1149,7 +1156,6 @@ label v10_call_with_lauren1:
                     la "Yeah, yeah, yeah. *Laughs* Can we start already?"
 
                 else:
-
                     scene v10saow3
                     with dissolve
                     
@@ -1162,6 +1168,7 @@ label v10_call_with_lauren1:
 
                 scene v10saow3
                 with dissolve
+
                 menu:
                     "Orange":
                         scene v10saow3c
@@ -1187,6 +1194,7 @@ label v10_call_with_lauren1:
 
                 scene v10saow3
                 with dissolve
+
                 menu:
                     "Gecko":
                         scene v10saow3c
@@ -1203,6 +1211,7 @@ label v10_call_with_lauren1:
 
                 scene v10saow3
                 with dissolve
+
                 menu:
                     "Spring":
                         scene v10saow3c
@@ -1349,6 +1358,7 @@ label v10_call_with_lauren1:
 
             scene v10saow5
             with dissolve
+
             menu:
                 "Walk her home":
                     scene v10saow5
@@ -1509,6 +1519,7 @@ label v10_call_with_lauren1:
                     with dissolve
 
                     u "Something like that."
+
     stop music fadeout 3
 
     jump v10_call_with_lauren2 # scene 18 for mc who didn't leave with aubrey
