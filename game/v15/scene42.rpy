@@ -439,7 +439,7 @@ label v15s42:
 
     pause 0.75
 
-# -The UI pops up to show MC the headings Clues and Possible Locations, they currently have question marks over the unlockable items. MC exits the UI whenever-
+    call screen detective_board # -The UI pops up to show MC the headings Clues and Possible Locations, they currently have question marks over the unlockable items. MC exits the UI whenever-
 
     scene v15s42_12 # FPP. MC standing by the board, MC looking at Amber, Amber looking at Mc, Amber slight smile, mouth closed.
     with dissolve

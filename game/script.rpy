@@ -38,8 +38,6 @@ label start:
         v15_nora_locations.add(Location("Club", "images/v15/detective_board/club.png"))
         v15_nora_locations.add(Location("Suburb", "images/v15/detective_board/suburb.png"))
     
-
-    call screen detective_board
     call screen real_life_mode
 
 label end_credits: # for compatibility
