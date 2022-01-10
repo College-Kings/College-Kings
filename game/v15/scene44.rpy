@@ -297,7 +297,7 @@ label v15s44_continue:
     pe "I think her whole family are huge nature freaks. There's pictures of them camping, fishing... You name it."
     $ v15_nora_clues.add(Clue("Penelope", "Nora loves nature", "Penelope confirmed that Nora loves nature. Could be a useful clue."))
 
-    if "camping" in v15_nora_clues:
+    if v15s43_camping_from_chris:
         scene v15s44_8
         with dissolve
 
@@ -309,7 +309,7 @@ label v15s44_continue:
         
         am "Camping... now that's an activity for someone who wants some peace and quiet."
         
-        $ v15_nora_locations.add("camping")
+        $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/unknown.png", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
 
     menu:
         "Ask about Nora's family":
@@ -360,7 +360,8 @@ label v15s44_continue:
             u "Wait, they're still friends?"
             
             u "That's an interesting development."
-            $ v15_nora_clues.add("likes_ex")
+            
+            $ v15_nora_clues.add(Clue("Penelope", "Nora's still likes her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
             
             scene v15s44_8a
             with dissolve
@@ -371,7 +372,7 @@ label v15s44_continue:
             with dissolve
 
             am "Hmm, that's something that we might want to consider. Maybe Nora ran off to this ex."
-            $ v15_nora_locations.add("ex")
+            $ v15_nora_locations.add(Location("Nora's ex-boyfriend's place", "images/v15/detective_board/unknown.png", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
 
     scene v15s44_8a
     with dissolve

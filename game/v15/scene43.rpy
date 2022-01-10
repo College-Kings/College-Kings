@@ -490,6 +490,8 @@ label v15s43:
 
     menu:
         "Where did she go?":
+            $ v15s43_camping_from_chris = True
+        
             $ add_point(KCT.BRO)
             
             scene v15s43_14g
@@ -511,7 +513,7 @@ label v15s43:
             with dissolve
 
             ch "Why are you acting so weird? Listen, I don't know where she is. She could have gone camping for all I know."
-            $ v15_nora_locations.add("camping")
+            $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/unknown.png", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
 
             ch "Just wait until she comes back. She's fine. I swear she's fine."
 
@@ -534,6 +536,8 @@ label v15s43:
             am "That's no good, Chris. You need to start telling us something we can use."
 
         "You're lying" if mc.detective == Detective.PROFESSIONAL:
+            $ v15s43_camping_from_chris = True
+        
             scene v15s43_14g
             #with dissolve
             
@@ -543,7 +547,7 @@ label v15s43:
             with dissolve
 
             ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
-            $ v15_nora_locations.add("camping")
+            $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/unknown.png", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
 
         "Analyze Chris" if mc.detective == Detective.PSYCHOLOGIST:
             scene v15s43_14g
@@ -570,9 +574,11 @@ label v15s43:
             with dissolve
 
             ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
-            $ v15_nora_locations.add("camping")
+            $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/unknown.png", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
 
         "Accuse Chris" if mc.detective == Detective.LOOSE_CANNON:
+            $ v15s43_camping_from_chris = True
+        
             play sound "sounds/thud.mp3"
 
             scene v15s43_16 # TPP. Show MC slamming his hands on the table, MC angry, mouth open.
