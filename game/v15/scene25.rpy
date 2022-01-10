@@ -706,7 +706,7 @@ label v15s25:
 
                         admin "Let's see... Well, I think I can help you out a little bit."
 
-                        admin "I can give you a 25% discount. That brings the price down to $600."
+                        admin "I can give you a 25\% discount. That brings the price down to $600."
 
                         scene v15s25_7a
                         with dissolve
