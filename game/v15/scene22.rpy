@@ -970,7 +970,7 @@ label v15s22:
 
             cl "Exactly."
         
-    if not v15_seduce_ms_rose and not v15_threaten_ms_rose:
+    if v15s21_meeting_points >= 1 and not v15_seduce_ms_rose and not v15_threaten_ms_rose:
         scene v15s22_6b
         with dissolve
 
