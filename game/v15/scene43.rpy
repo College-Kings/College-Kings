@@ -436,16 +436,15 @@ label v15s43:
     scene v15s43_15
     with dissolve
 
-    am "The obvious answer is that she's at her dad's house, or her stepmother's..."
+    am "The obvious answer is that she's at her dad's house..."
 
     scene v15s43_14d # FPP. MC looking at Chris, Chris looking at Amber, Chris nervous, mouth closed.
     with dissolve
 
     $ v15_nora_locations.add(Location("Nora's dad's house", "images/v15/detective_board/dad_house.webp", "Too obvious. And if Nora wanted to get away, is going to her Dad's house far enough away?"))
     
-
-    pause
-
+    am "...or her stepmother's."
+    
     scene v15s43_15
     with dissolve
 
