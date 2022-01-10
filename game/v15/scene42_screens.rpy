@@ -1,5 +1,21 @@
-screen detective_popup():
-    pass
+screen detective_popup(message):
+    tag detective
+    
+    default image_path = "images/v15/detective_board/"
+
+    button:
+        action Hide("detective")
+        background image_path + "detective_popup_background.png"
+        xysize (933, 153)
+
+        fixed:
+            xysize (768, 85)
+            pos (153, 31)
+            
+            text message yalign 0.5 size 48
+
+    timer 4 action Hide("detective")
+
 
 screen detective_board():
     tag detective
