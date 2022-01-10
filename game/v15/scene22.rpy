@@ -311,9 +311,6 @@ label v15s22:
 
     pause 0.75
 
-    scene v15s22_2h # FPP. same as v15s22_2g Chloe is no longer knocking on the door, still no expression, mouth is still closed
-    with dissolve
-
     de "Come in."
 
     pause 0.75
@@ -321,7 +318,7 @@ label v15s22:
     scene v15s22_4 # TPP. MC and Chloe are standing in front of the Dean's desk, Chloe has a slight smile, mouth is closed, Mc has a slight smile mouth is closed, The Dean is sat behind her desk, writing on a piece of paper, she is looking at her paperwork and not Chloe or Mc, no expression, mouth is closed, try to get the image as close as possible to avoid showing an excess amount of the office
     with dissolve
 
-    pause 0.75
+    u "(Damn, does she have a new office?)"
 
     if kct == "popular":
         $ v15s22_meeting_points += 1
@@ -741,13 +738,13 @@ label v15s22:
     with dissolve
 
     menu:
-        "I'll take my time":
+        "Be thorough":
             #$ add_point(KCT.TROUBLEMAKER)
 
             scene v15s22_6b
             with dissolve
 
-            u "I'll take my time if that's alright. I don't want to leave out any major details."
+            u "I'll take my time if that's alright. I want to be thorough."
 
             scene v15s22_6c
             with dissolve
@@ -755,7 +752,7 @@ label v15s22:
             $ v15s22_meeting_points -= 1
             show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
-            de "That's not necessary. I know what you're asking for, I need you to convince me."
+            de "That's not necessary. I know what you're asking for, I just need you to convince me."
 
         "Your time is important":
             #$ add_point(KCT.BRO)
@@ -790,9 +787,6 @@ label v15s22:
                 show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                 de "That would be appreciated."
-
-                scene v15s22_6d
-                with dissolve
                 
             "Stress the teacher's support":
                 #$ add_point(KCT.TROUBLEMAKER)
@@ -814,9 +808,6 @@ label v15s22:
                 show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                 de "That would be advisable, yes."
-
-                scene v15s22_6f
-                with dissolve
 
                 menu:
                     "Agree": # (CORRECT CHOICE - ONE POINT)
@@ -851,7 +842,7 @@ label v15s22:
     scene v15s22_6g
     with dissolve
 
-    de "Quickly, please. I have another meeting soon."
+    de "So?"
 
     scene v15s22_6b
     with dissolve
@@ -862,7 +853,7 @@ label v15s22:
     with dissolve
 
     menu:
-        "Quick version":
+        "Quickly run through everything":
             #$ add_point(KCT.TROUBLEMAKER)
 
             scene v15s22_6b
@@ -909,7 +900,7 @@ label v15s22:
 
             pause 0.75
 
-        "Main points":
+        "Emphasize each main point":
             #$ add_point(KCT.BRO)
 
             scene v15s22_6b

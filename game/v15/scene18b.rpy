@@ -594,11 +594,6 @@ label v15s18b:
 
     aut "*Chuckles* Better."
 
-    scene v15s18b_16 # TPP. Show MC standing up slight smile, mouth closed.
-    with dissolve
-
-    pause 0.75
-
     $ v15s18b_kiwiiPost1= KiwiiPost(riley, "v15/rilpost1.webp", "Celebrating this pure soul tonight!", numberLikes=648)
     $ v15s18b_kiwiiPost1.newComment(lindsey, "So cute! Your costumes are perfect <3", numberLikes=renpy.random.randint(260, 560))
     $ v15s18b_kiwiiPost1.newComment(amber, "Ugh, where am I?!", numberLikes=renpy.random.randint(260, 560))
