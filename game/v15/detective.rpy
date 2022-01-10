@@ -11,9 +11,13 @@ init python:
             self.description = description
             self.opinion = opinion
 
+            renpy.show_screen("detective_popup", "Clue found!")
+
 
     class Location:
         def __init__(self, name, image, opinion=""):
             self.name = name
             self.image = image
             self.opinion = opinion
+
+            renpy.show_screen("detective_popup", "Location found!")
