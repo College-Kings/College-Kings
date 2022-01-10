@@ -7,7 +7,7 @@ init python:
 
     def add_point(var, value=1):
         # Don't update kct if kct is locked
-        if locked_kct:
+        if locked_kct or _in_replay:
             return
 
         # Update the KCT variables
