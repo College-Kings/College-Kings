@@ -434,6 +434,8 @@ label v15s42:
 
     am "There's a shit ton of clues, we just have to find them."
 
+    am "But remember, not all clues we find are accurate. People might lie or misremember, you can't trust everything we hear."
+
     scene v15s42_11 # FPP. MC standing closer looking at the board as Amber is looking at the board and pointing at it, Amber slight smile, mouth closed.
     with dissolve
 
