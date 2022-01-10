@@ -73,6 +73,7 @@ label v15s29:
             "Sext Emily":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BRO)
+                $ v15_emily_sext = True
                 
                 scene v15s29_4
                 with dissolve
