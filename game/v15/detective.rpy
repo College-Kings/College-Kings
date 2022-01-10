@@ -11,7 +11,7 @@ init python:
             self.description = description
             self.opinion = opinion
 
-            renpy.show_screen("detective_popup",type= "Clue Unlocked", message=self.description)
+            renpy.show_screen("detective_popup", type="Clue Unlocked", message=self.description)
             renpy.with_statement(dissolve)
 
 
@@ -21,5 +21,5 @@ init python:
             self.image = image
             self.opinion = opinion
 
-            renpy.show_screen("detective_popup",type= "Location Unlocked", message=self.name)
+            renpy.show_screen("detective_popup", type="Location Unlocked", message=self.name)
             renpy.with_statement(dissolve)

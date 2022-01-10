@@ -5,19 +5,19 @@ screen detective_popup(type, message):
 
     button:
         action Hide("detective")
-        background image_path + "detective_popup_background.png"
-        xysize (655, 108)
-        pos(10,10)
+        background Frame(image_path + "detective_popup_background.png")
+        minimum (655, 108)
+        pos(10, 10)
 
         vbox:
-            pos (130,15)
+            pos (130, 15)
             spacing -2
 
             text type size 25 color "#FFD166"
             
             text message size 18
 
-    timer 4 action Hide("detective", transition = dissolve)
+    timer 4 action Hide("detective", transition=dissolve)
 
 
 screen detective_board():
