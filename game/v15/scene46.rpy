@@ -4,10 +4,6 @@
 # Time: Morning
 
 label v15s46:
-    python:
-        
-        v15_nora_locations.add(Location("Nora's ex-boyfriend's place", "images/v15/detective_board/ex_house.webp", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
-    
     call screen detective_board
 
     play sound "sounds/dooropen.mp3"
