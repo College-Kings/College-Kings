@@ -628,14 +628,20 @@ label v15s43:
 
     u "How is that supposed to help?"
 
+    label test:
+
     scene v15s43_14h
     with dissolve
 
     ch "Her aunt... Oh yeah! Sometimes her aunt will rent out her dad's cabin."
+
+    #show screen detective_popup("Clue Unlocked: Nora's aunt frequently borrows her dad's cabin") with dissolve
+
     $ v15_nora_clues.add(Clue("Chris", "Nora's aunt frequently borrows her dad's cabin", "So her aunt borrows Mr Rose's cabin. Not sure if it's relevant, but maybe some other clues will help."))
-    $ v15_nora_locations.add(Location("Nora's dad's cabin", "images/v15/detective_board/dad_cabin.webp", "She could be at the cabin. It sounds like it's out in nature and she could be alone. Although other clues might take us in a different direction."))
 
     ch "And there, that answers your question about other properties, too. Can you leave me alone now?"
+
+    $ v15_nora_locations.add(Location("Nora's dad's cabin", "images/v15/detective_board/dad_cabin.webp", "She could be at the cabin. It sounds like it's out in nature and she could be alone. Although other clues might take us in a different direction."))
 
     scene v15s43_15
     with dissolve

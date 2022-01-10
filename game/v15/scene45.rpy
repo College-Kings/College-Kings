@@ -734,7 +734,7 @@ label v15s45:
             cl "But that's Nora for you, always looking to the past..."
             
             if not v15s44_ex_from_penelope:
-                $ v15_nora_clues.add(Clue("Chloe", "Nora's still likes her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
+                $ v15_nora_clues.add(Clue("Chloe", "Nora's still friends with her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
                 
         "Refer to a past clue":
             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -867,7 +867,7 @@ label v15s45:
             cl "No, no, no. She would never go back to him, it's just that they had good memories together, and always stayed friends."
             
             if not v15s44_ex_from_penelope:
-                $ v15_nora_clues.add(Clue("Chloe", "Nora's still likes her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
+                $ v15_nora_clues.add(Clue("Chloe", "Nora's still friends with her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
 
             scene v15s45_7a
             with dissolve

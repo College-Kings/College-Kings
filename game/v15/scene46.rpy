@@ -48,7 +48,7 @@ label v15s46:
 
     pause 0.75
 
-    # -The UI pops up to show all the clues achieved and any new ones from the Chloe interrogation (CHLOE CLUES UNLOCKED: Nora always runs to her Dad for materialistic help. Nora & Ms. rose are really close. Nora still likes her ex-boyfriend from before Chris. Nora hates camping. CHLOE LOCATIONS UNLOCKED: Ex-boyfriend's house.)-
+    call screen detective_board# -The UI pops up to show all the clues achieved and any new ones from the Chloe interrogation (CHLOE CLUES UNLOCKED: Nora always runs to her Dad for materialistic help. Nora & Ms. rose are really close. Nora still friends with her ex-boyfriend from before Chris. Nora hates camping. CHLOE LOCATIONS UNLOCKED: Ex-boyfriend's house.)-
 
     # -MC can study all the clues and locations, all of which have comments from Amber to help them (SEE MIRO). MC can choose one of the locations. Once MC has chosen the location they want to go with, they can exit the UI whenever. The correct location is Nora's Dad's cabin-
 
