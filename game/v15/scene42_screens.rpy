@@ -1,3 +1,6 @@
+screen detective_popup():
+    pass
+
 screen detective_board():
     tag detective
     style_prefix "detective"
@@ -28,14 +31,11 @@ screen detective_board():
             xysize (212, 256)
             background image_path + "card_background.png"
 
-            text clue.description align (0.5, 0.5) color "#fff"
+            text clue.description align (0.5, 0.5) color "#fff" xsize 190
             text clue.informant xalign 0.5 ypos 190
 
     for i in range(len(v15_nora_clues), 9):
-        button:
-            hovered Show("detective_board_description", card=clue)
-            unhovered Hide("detective_board_description")
-            action NullAction()
+        frame:
             pos clue_positions[i]
             xysize (212, 256)
             background image_path + "card_background.png"
@@ -58,10 +58,7 @@ screen detective_board():
                 text location.name xalign 0.5 ypos 195 xsize 200
 
         for i in range(len(v15_nora_locations), 6):
-            button:
-                hovered Show("detective_board_description", card=clue)
-                unhovered Hide("detective_board_description")
-                action NullAction()
+            frame:
                 xysize (212, 256)
                 background image_path + "card_background.png"
 
