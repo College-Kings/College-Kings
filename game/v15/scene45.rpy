@@ -710,7 +710,8 @@ label v15s45:
 
             cl "I think he lives round here though, or at least he used to."
             
-            $ v15_nora_locations.add("ex")
+            if not v15s44_ex_from_penelope:
+                $ v15_nora_locations.add("ex")
 
             scene v15s45_7a
             with dissolve
@@ -731,7 +732,9 @@ label v15s45:
             with dissolve
     
             cl "But that's Nora for you, always looking to the past..."
-            $ v15_nora_clues.add("likes_ex")
+            
+            if not v15s44_ex_from_penelope:
+                $ v15_nora_clues.add("likes_ex")
 
         "Refer to a past clue":
             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
@@ -862,7 +865,9 @@ label v15s45:
             with dissolve
 
             cl "No, no, no. She would never go back to him, it's just that they had good memories together, and always stayed friends."
-            $ v15_nora_clues.add("likes_ex")
+            
+            if not v15s44_ex_from_penelope:
+                $ v15_nora_clues.add("likes_ex")
 
             scene v15s45_7a
             with dissolve
@@ -874,7 +879,8 @@ label v15s45:
 
             cl "I can't say that she would have. He lives nearby, I think. Or he used to at least."
 
-            $ v15_nora_locations.add("ex")
+            if not v15s44_ex_from_penelope:
+                $ v15_nora_locations.add("ex")
 
             cl "Like I said, it was a long time ago. I don't even remember his name."
 
