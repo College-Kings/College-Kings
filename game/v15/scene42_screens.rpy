@@ -37,7 +37,13 @@ screen detective_board():
                 xysize (212, 256)
                 background image_path + "card_background.png"
 
-                add location.image xalign 0.5 ypos 22
+                add location.image:
+                    xalign 0.5
+                    if location.image == "images/v15/detective_board/unknown.png":
+                        yalign 0.5
+                    else:
+                        ypos 22
+                        
                 text location.name xalign 0.5 ypos 195 xsize 200
 
     button action Return()
