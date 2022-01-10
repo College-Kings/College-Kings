@@ -56,8 +56,11 @@ label path_builder_setup:
             actions=ToggleField(emily, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
 
         PB_ACT_1 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 1 Start", actions=SetVariable("pb_start_location", "start"))
-        PB_HOMECOMING = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 2 Start", actions=SetVariable("pb_start_location", "v7_homecoming"))
-        PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 3 Start", actions=SetVariable("pb_start_location", "v11_start"))
-        PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", actions=SetVariable("pb_start_location", "v14_start"))
+        if renpy.loadable("v8/scene1.rpy"):
+            PB_HOMECOMING = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 2 Start", actions=SetVariable("pb_start_location", "v7_homecoming"))
+        if renpy.loadable("v11/scene1.rpy"):
+            PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 3 Start", actions=SetVariable("pb_start_location", "v11_start"))
+        if renpy.loadable("v14/scene1.rpy"):
+            PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", actions=SetVariable("pb_start_location", "v14_start"))
 
     return
