@@ -4,7 +4,9 @@
 # Time: Night
 
 label v15s18c:
-    call screen v15s18a_livingroom
+    $ freeroam13.add("lauren2")
+
+    call screen v15s18a_room with fade
 
 label v15s18c_riley:
     $ freeroam14.add("riley")
@@ -904,11 +906,6 @@ label v15s18c_imre_aubrey:
             au "Fuck... You don't want that... Haha... *Moans*"
 
             u "(Maybe. But I definitely don't want anyone else to hear her, haha. Hmm...)"
-
-    scene v15s18c_imau_23 # TPP. Show MC positioning himself so he can cover Aubrey's mouth with one hand while he fingers her with the other hand
-    with dissolve
-
-    pause 0.75
     
     image v15aubfing = Movie(play="images/v15/Scene 18c/v15aubfing.webm", loop=True, image="images/v15/Scene 18c/v15aubfingStart.webp", start_image="images/v15/Scene 18c/v15aubfingStart.webp") 
     image v15aubfingf = Movie(play="images/v15/Scene 18c/v15aubfingf.webm", loop=True, image="images/v15/Scene 18c/v15aubfingStart.webp", start_image="images/v15/Scene 18c/v15aubfingStart.webp") 
@@ -2037,7 +2034,7 @@ label v15s18c_autumn_amber:
 
 label v15s18c_autumn_kiss:
     scene v15s18c_auam_8 # TPP. Show Autumn and MC leaving the bar, both slight smiles, mouths closed
-    #with dissolve
+    with dissolve
 
     pause 0.75
 
@@ -2308,18 +2305,53 @@ label v15s18c_chris_penelope:
 
                 pe "Oh, yeah... That thing."
 
+            scene v15s18c_chpe_5a
+            with dissolve
+            menu:
+
+                "Ask for her help":
+
+                    scene v15s18c_chpe_5a
+                    with dissolve
+
+                    u "How would you feel about helping me check off one of these?"
+
+                    jump v15s18c_askhelp
+
+                "Tell her the list is stupid":
+
+                    u "It's so stupid, right?"
+
+                    scene v15s18c_chpe_5
+                    with dissolve
+
+                    pe "Haha maybe. But it might also get some people really lucky. If you know what I mean."
+
+                    scene v15s18c_chpe_5a
+                    with dissolve
+
+                    u "I think I do, haha."
+
+                    jump v15s18c_backtoparty
+
+
+
+
+
+
+            label v15s18c_askhelp:
+
+
             if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
-                scene v15s18c_chpe_5d
-                with dissolve
 
                 pe "Um, I don't think we should do anything while we're here."
 
-                scene v15s18c_chpe_5e
+                scene v15s18c_chpe_5a
                 with dissolve
 
                 u "Oh, okay, sure."
 
-                scene v15s18c_chpe_5d
+                scene v15s18c_chpe_5
                 with dissolve
 
                 pe "Sorry, I just don't feel comfortable."
@@ -2511,19 +2543,19 @@ label v15s18c_chris_penelope:
                 call screen v15s18a_upstairsroom
 
             elif penelope.relationship.value < Relationship.LIKES.value:
-                scene v15s18c_chpe_5d # FPP. Same as v15s18c_chpe_5, Penelope different pose, slightly uncomfortable, mouth open
+                scene v15s18c_chpe_5 # FPP. Same as v15s18c_chpe_5, Penelope different pose, slightly uncomfortable, mouth open
                 with dissolve
 
                 pe "I think it would be kind of weird if we did anything on this list together."
 
                 pe "Since we're just friends. You know?"
 
-                scene v15s18c_chpe_5e # FPP. Same as v15s18c_chpe_5d, Penelope slightly uncomfortable, mouth closed
+                scene v15s18c_chpe_5a # FPP. Same as v15s18c_chpe_5d, Penelope slightly uncomfortable, mouth closed
                 with dissolve
 
                 u "Yeah, I get that."
 
-                scene v15s18c_chpe_5d
+                scene v15s18c_chpe_5
                 with dissolve
 
                 pe "Sorry, haha."
@@ -2532,17 +2564,17 @@ label v15s18c_chris_penelope:
                 if v14_penelope_date:
                     call screen kct_popup(required_kct="confident")
             
-                scene v15s18c_chpe_5d
+                scene v15s18c_chpe_5
                 with dissolve
 
                 pe "Um, I don't think we should do anything while we're here."
 
-                scene v15s18c_chpe_5e
+                scene v15s18c_chpe_5a
                 with dissolve
 
                 u "Oh, okay, sure."
 
-                scene v15s18c_chpe_5d
+                scene v15s18c_chpe_5
                 with dissolve
 
                 pe "Sorry, I just don't feel comfortable."
@@ -2559,6 +2591,8 @@ label v15s18c_chris_penelope:
 
             scene v15s18c_chpe_5a
             with dissolve
+
+            label v15s18c_backtoparty:
 
             u "Anyway, time to get back to the party. Ready?"
 
