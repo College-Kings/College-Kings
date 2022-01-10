@@ -7,7 +7,7 @@ label v9_wolves_pre_fight:
     scene v9wpf1 # TPP. Show MC sat on his bed in his Wolves room.
     with fade
 
-    if lindsey.relationship.value >= Relationship.KISS.value:
+    if lindsey.relationship >= Relationship.KISS:
         u "(What a day!)"
 
         scene v9wpf1a # TPP. Same camera as v9wpf1, MC smiling.

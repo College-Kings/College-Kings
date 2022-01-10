@@ -67,7 +67,7 @@ label v14s43d:
 
     ri "Let's get started on this before I get bored. I don't plan on being here long."
 
-    if riley.relationship.value >= Relationship.FWB.value:
+    if riley.relationship >= Relationship.FWB:
         scene v14s43d_2b # FPP. Same as v14s43d_2a, Riley flirtatious smile, mouth closed
         with dissolve
 
@@ -145,7 +145,7 @@ label v14s43d:
 
     u "Ha, okay. And how is that?"
 
-    if riley.relationship.value >= Relationship.FWB.value:
+    if riley.relationship >= Relationship.FWB:
         scene v14s43d_2f # FPP. Same as v14s43_2e,in the same pose from last scene, Riley flirtatious smile, mouth open.
         with dissolve
 

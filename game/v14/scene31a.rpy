@@ -654,7 +654,7 @@ label v14s31a:
 
         u "Haha, you do that."
 
-        if cameron.relationship.value >= Relationship.BRO.value:
+        if cameron.relationship >= Relationship.BRO:
             scene v14s31a_3a
             with dissolve
 

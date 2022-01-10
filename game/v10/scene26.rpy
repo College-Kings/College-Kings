@@ -75,7 +75,7 @@ label v10_amber_skatepark:
 
         am "I'm just kidding. *Chuckles*"
             
-        if amber.relationship.value >= Relationship.FWB.value:
+        if amber.relationship >= Relationship.FWB:
             scene v10sasp1c
             with dissolve
 
@@ -361,7 +361,7 @@ label v10_amber_skatepark:
 
     u "*Laughs*"
 
-    if amber.relationship.value >= Relationship.FWB.value:
+    if amber.relationship >= Relationship.FWB:
         label v10_amber_skatepark_sg:
         scene v10sasp5b # FPP. Same camera as v10sasp5. Show Amber leaning in to whisper into MC's ear, smiling, mouth open.
         with fade

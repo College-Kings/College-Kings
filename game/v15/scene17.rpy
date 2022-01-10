@@ -71,7 +71,7 @@ label v15s17:
 
     u "Um, hi there."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s17_4
         with dissolve
 
@@ -175,7 +175,7 @@ label v15s17:
 
     clerk "May I suggest jewelry?"
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value and v15_autumn_lunchbreak:
+    if lauren.relationship >= Relationship.GIRLFRIEND and v15_autumn_lunchbreak:
         scene v15s17_4f # FPP. same as v15s17_4d SC's mouth is closed
         with dissolve
 
@@ -263,7 +263,7 @@ label v15s17:
 
     clerk "Both beautiful items, and currently on sale for only $50."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s17_8b
         with dissolve
 

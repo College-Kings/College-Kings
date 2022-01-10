@@ -245,9 +245,9 @@ label v14s05a:
 
         menu: 
             "Help Chloe":
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                if chloe.relationship >= Relationship.GIRLFRIEND:
                     $ add_point(KCT.BOYFRIEND)
-                elif lindsey.relationship.value >= Relationship.FWB.value:
+                elif lindsey.relationship >= Relationship.FWB:
                     $ add_point(KCT.TROUBLEMAKER)
                 scene v14s05a_13
                 with dissolve
@@ -255,9 +255,9 @@ label v14s05a:
                 u "Well, I'd support Chloe."
 
             "Help Lindsey":
-                if lindsey.relationship.value >= Relationship.FWB.value:
+                if lindsey.relationship >= Relationship.FWB:
                     $ add_point(KCT.BOYFRIEND)
-                elif chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                elif chloe.relationship >= Relationship.GIRLFRIEND:
                     $ add_point(KCT.TROUBLEMAKER)
                 scene v14s05a_13
                 with dissolve

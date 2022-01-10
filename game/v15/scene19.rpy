@@ -293,7 +293,7 @@ label v15s19:
 
     la "Are you kidding? Thank you for coming. It was such a special night for me!"
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         play sound "sounds/kiss.mp3"
 
         scene v15s19_9c # FPP. Lauren, eyes closed, kissing MC on the lips [Deer House Living Room Front Door]. 

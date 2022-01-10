@@ -849,7 +849,7 @@ label v12s18_bottlespin:
 
     u "Oh, uhh-"
 
-    if nora.relationship.value >= Relationship.LIKES.value:
+    if nora.relationship >= Relationship.LIKES:
         scene v12slpbs16 # TPP. Show Nora grabbing MC's face and kissing him (try and make this a bit passionate)
         with dissolve
         play sound "sounds/kiss.mp3"
@@ -1344,7 +1344,7 @@ label v12s18_fmk:
 
     u "*Laughs* Alright Nora, your turn."
 
-    if nora.relationship.value >= Relationship.LIKES.value:
+    if nora.relationship >= Relationship.LIKES:
         scene v12slpfmk5g
         with dissolve
 
@@ -1892,8 +1892,8 @@ label v12s18_bet: # END OF FREE ROAM
 
             u "Something like that."
 
-            if amber.relationship.value >= Relationship.FWB.value or kct == "popular":
-                if amber.relationship.value < Relationship.FWB.value:
+            if amber.relationship >= Relationship.FWB or kct == "popular":
+                if amber.relationship < Relationship.FWB:
                     call screen kct_popup
                 
                 scene v12slpbet17

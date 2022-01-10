@@ -29,7 +29,7 @@ label v15s28:
 
     u "Haha, no. Why should they?"
 
-    if jenny.relationship.value >= Relationship.FWB.value: # -if JennyRs
+    if jenny.relationship >= Relationship.FWB: # -if JennyRs
         scene v15s28_3b # FPP Same angle as 3, Penelope smiling at MC with mouth open, Jenny smiling at MC with mouth closed
         with dissolve
 
@@ -70,7 +70,7 @@ label v15s28:
 
         jen "We tell each other everything, babe. *Laughs*"
 
-        if penelope.relationship.value >= Relationship.LIKES.value: # -if PenelopeRS
+        if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS
             scene v15s28_3c # FPP Same angle as 3, Penelope looks a little sad and is looking down, mouth open
             with dissolve
 
@@ -205,7 +205,7 @@ label v15s28:
 
         pause 1
 
-    elif jenny.relationship.value >= Relationship.FRIEND.value and penelope.relationship.value >= Relationship.LOYAL.value: # -if JennyFriend and PenelopeLoyal
+    elif jenny.relationship >= Relationship.FRIEND and penelope.relationship >= Relationship.LOYAL: # -if JennyFriend and PenelopeLoyal
         scene v15s28_3a
         with dissolve
 
@@ -977,7 +977,7 @@ label v15s28:
 
     pe "What's next?!"
 
-    if penelope.relationship.value >= Relationship.LOYAL.value: # -if PenelopeLoyal
+    if penelope.relationship >= Relationship.LOYAL: # -if PenelopeLoyal
         scene v15s28_15 # FPP Closer view of Penelope, who is giving MC a slight smile across the table
         with dissolve
 
@@ -1042,7 +1042,7 @@ label v15s28:
 
                 u "(The tequila is trying to take control...Stay strong, [name].)"
 
-    elif jenny.relationship.value >= Relationship.FWB.value: # -if JennyRs
+    elif jenny.relationship >= Relationship.FWB: # -if JennyRs
         scene v15s28_12 # FPP Closer view of Jenny, who is giving MC a smile across the table
         with dissolve
 
@@ -1141,7 +1141,7 @@ label v15s28:
 
     pause 0.75
 
-    if jenny.relationship.value >= Relationship.FWB.value and penelope.relationship.value >= Relationship.LIKES.value: # -if JennyRs and PenelopeRs (Lagoon with Jenny but had RS with Penelope prior to that)
+    if jenny.relationship >= Relationship.FWB and penelope.relationship >= Relationship.LIKES: # -if JennyRs and PenelopeRs (Lagoon with Jenny but had RS with Penelope prior to that)
         scene v15s28_19 # TPP Show Penelope stopping MC by grabbing his arm, Penelopewith neutral expression and mouth open, Jenny walking away toward the door in the background
         with dissolve
 
@@ -1187,7 +1187,7 @@ label v15s28:
 
         pe "We're good."
 
-    elif penelope.relationship.value >= Relationship.LOYAL.value: # -if PenelopeLoyal
+    elif penelope.relationship >= Relationship.LOYAL: # -if PenelopeLoyal
         scene v15s28_19b # TPP Same angle as 19, show Jenny stopping MC by grabbing his arm, Jenny smiling with mouth open, Penelope walking away toward the door in the background
         with dissolve
 

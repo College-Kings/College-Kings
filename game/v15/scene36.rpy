@@ -65,7 +65,7 @@ label v15s36:
 
     u "Only if you're comfortable talking about it, of course."
 
-    if autumn.relationship.value < Relationship.TRUST.value:
+    if autumn.relationship < Relationship.TRUST:
         scene v15s36_4a
         with dissolve
 
@@ -259,7 +259,7 @@ label v15s36:
                 
                 u "Honestly, I'd really like that... I feel the same way."
 
-                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                if lauren.relationship >= Relationship.GIRLFRIEND:
                     $ autumn.relationship = Relationship.LOYAL
                     scene v15s36_5
                     with dissolve
@@ -409,7 +409,7 @@ label v15s36:
 
                 aut "No, no. There's nothing to apologize for. You're right, and thanks for being honest."
 
-                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                if lauren.relationship >= Relationship.GIRLFRIEND:
                     scene v15s36_5
                     with dissolve
 
@@ -465,7 +465,7 @@ label v15s36:
 
     pause 0.75
 
-    if autumn.relationship.value >= Relationship.FWB.value:
+    if autumn.relationship >= Relationship.FWB:
         scene v15s36_11c # FPP. Show Autumn stopping in place.
         with dissolve
 

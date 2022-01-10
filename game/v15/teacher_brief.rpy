@@ -39,7 +39,7 @@ screen v15_teacher_brief(key):
             "loves": ["Supporting good causes, especially helping the sororities.", "Making sure things are fair and nobody is upset."],
             "hates": ["Selfishness.", "Misogyny."],
             "insight_info": "If needed, seduction might work best.",
-            "insight_condition": ms_rose.relationship.value >= Relationship.FWB.value
+            "insight_condition": ms_rose.relationship >= Relationship.FWB
         }
     }
     default teacher = teachers[key]

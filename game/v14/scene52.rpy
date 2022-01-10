@@ -220,7 +220,7 @@ label v14s52:
     if "v12_nora" in sceneList: ###addition just in case rs variable was not triggered
         $ nora.relationship = Relationship.FWB
 
-    if nora.relationship.value >= Relationship.FWB.value:
+    if nora.relationship >= Relationship.FWB:
         scene v14s52_12
         with dissolve
 

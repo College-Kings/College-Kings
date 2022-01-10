@@ -137,7 +137,7 @@ label v15s49:
         "Check on Riley":
             $ add_point(KCT.BOYFRIEND)
 
-            if riley.relationship.value >= Relationship.FWB.value:
+            if riley.relationship >= Relationship.FWB:
                 scene v15s49_14 # FPP. Show MC on his knee checking on Riley, MC looking at Riley, Riley looking at MC, Riley angry, mouth closed.
                 with dissolve
 

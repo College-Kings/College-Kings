@@ -30,13 +30,13 @@ label v15s37:
 
         pause 0.75
 
-    if autumn.relationship.value < Relationship.TRUST.value:
+    if autumn.relationship < Relationship.TRUST:
         scene v15s37_3 # TPP. Show MC walking further down the street, slight smile, mouth closed
         with dissolve
 
         u "(That was a fun night, especially with Autumn there. I'm glad I'm getting to know her better.)"
 
-    elif v15s36_not_good_idea and lauren.relationship.value >= Relationship.GIRLFRIEND.value: 
+    elif v15s36_not_good_idea and lauren.relationship >= Relationship.GIRLFRIEND: 
         scene v15s37_3
         with dissolve
 
@@ -55,7 +55,7 @@ label v15s37:
 
         u "(Not right now anyway.)"
 
-    elif lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    elif lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s37_3
         with dissolve
 

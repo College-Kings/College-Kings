@@ -35,7 +35,7 @@ label v14s50:
 
     u "Got it."
 
-    if lindsey.relationship.value >= Relationship.FWB.value:
+    if lindsey.relationship >= Relationship.FWB:
         scene v14s50_2
         with dissolve
         
@@ -440,7 +440,7 @@ label v14s50:
 
                             u "(I think I've heard enough about Maria's injury. And gained enough knowledge about anal thanks to Aubrey...)"
 
-                            if aubrey.relationship.value >= Relationship.FWB.value:
+                            if aubrey.relationship >= Relationship.FWB:
                                 scene v14s50_15 # TPP  Close up on MC face, smiling mischievously, thinking dirty thoughts, mouth closed.
                                 with dissolve
 

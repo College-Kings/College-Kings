@@ -344,7 +344,7 @@ label v15s46:
 
     am "Yeah, I know. She's amazing at what she does, and she's the best."
 
-    if penelope.relationship.value >= Relationship.LOYAL.value:
+    if penelope.relationship >= Relationship.LOYAL:
         scene v15s46_3a
         with dissolve
 

@@ -80,10 +80,10 @@ label v15s45:
 
     menu:
         "Be polite":
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BOYFRIEND)
                 
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.TROUBLEMAKER)
                 
             else:
@@ -95,10 +95,10 @@ label v15s45:
             u "Please, Chloe. If you don't mind, we'd like to sit and talk to you."
 
         "Be impatient":
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BRO)
                 
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.BOYFRIEND)
                 
             else:
@@ -110,10 +110,10 @@ label v15s45:
             u "Go back inside, Chloe. We have important business to take care of."
         
         "State the facts" if mc.detective == Detective.PROFESSIONAL:
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BOYFRIEND)
                 
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.BRO)
                 
             else:
@@ -125,9 +125,9 @@ label v15s45:
             u "We're just looking for the facts, ma'am. If you're honest with us, this shouldn't take up much of your time."
 
         "Analyze Chloe" if mc.detective == Detective.PSYCHOLOGIST:
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BRO)
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.TROUBLEMAKER)
             else:
                 $ add_point(KCT.BOYFRIEND)
@@ -140,10 +140,10 @@ label v15s45:
             u "There's a weight on your shoulders, I can feel it. You need to talk to us. We can help you."
 
         "Threaten Chloe" if mc.detective == Detective.LOOSE_CANNON:
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.TROUBLEMAKER)
 
-            elif nora.relationship.value >= Relationship.FWB.value: 
+            elif nora.relationship >= Relationship.FWB: 
                 $ add_point(KCT.BOYFRIEND)
 
             else:
@@ -214,10 +214,10 @@ label v15s45:
 
     menu:
         "Be polite":
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BOYFRIEND)
 
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.TROUBLEMAKER)
 
             else:
@@ -229,10 +229,10 @@ label v15s45:
             u "We like to think on our feet, thank you."
 
         "Be impatient":
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BRO)
 
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.BOYFRIEND)
 
             else:
@@ -244,10 +244,10 @@ label v15s45:
             u "Let's skip the pleasantries and get straight to the questions, okay?"
         
         "Speak your wisdom" if mc.detective == Detective.PROFESSIONAL:
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BOYFRIEND)
 
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.BRO)
 
             else:
@@ -259,10 +259,10 @@ label v15s45:
             u "If a detective sits down on his ass, he also sits down in his mind."
 
         "Analyze Chloe" if mc.detective == Detective.PSYCHOLOGIST:
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BRO)
 
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.TROUBLEMAKER)
 
             else:
@@ -274,10 +274,10 @@ label v15s45:
             u "Hmm, deflecting the attention to us this early in the conversation? You must be nervous, Chloe."
 
         "Kick a chair" if mc.detective == Detective.LOOSE_CANNON:
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.TROUBLEMAKER)
 
-            elif nora.relationship.value >= Relationship.FWB.value: 
+            elif nora.relationship >= Relationship.FWB: 
                 $ add_point(KCT.BOYFRIEND)
 
             else:
@@ -288,7 +288,7 @@ label v15s45:
 
             u "That's what I think about sitting down!"
 
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 scene v15s45_7b # same as v15s45_7a Chloe gets a little turned on, looking at Mc seductively, with a smirk
                 with dissolve
 
@@ -330,7 +330,7 @@ label v15s45:
 
     u "Zip it, baby doll!"
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v15s45_7f # FPP. same as v15s45_7 Chloe has a slight smile, still looking at Mc, mouth is still open
         with dissolve
 
@@ -379,10 +379,10 @@ label v15s45:
 
     menu:
         "Where do you think?":
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BOYFRIEND)
 
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.TROUBLEMAKER)
 
             else:
@@ -414,10 +414,10 @@ label v15s45:
             cl "...Mr. Rose? I guess?"
 
         "Who was she with?":
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BRO)
 
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.BOYFRIEND)
 
             else:
@@ -454,10 +454,10 @@ label v15s45:
             cl "Probably Mr. Rose, her dad."
 
         "You're lying" if mc.detective == Detective.PROFESSIONAL:
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BOYFRIEND)
                 
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.BRO)
                 
             else:
@@ -484,10 +484,10 @@ label v15s45:
             cl "Mr. Rose, probably? Her daddy? *Giggles* Whatever she needs, he'll get it for her."
 
         "Appeal to her ego" if mc.detective == Detective.PSYCHOLOGIST:
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BRO)
                 
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.TROUBLEMAKER)
                 
             else:
@@ -519,10 +519,10 @@ label v15s45:
             cl "Oh, well yeah. That would be her father."
 
         "Accuse Chloe" if mc.detective == Detective.LOOSE_CANNON:
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.TROUBLEMAKER)
                 
-            elif nora.relationship.value >= Relationship.FWB.value: 
+            elif nora.relationship >= Relationship.FWB: 
                 $ add_point(KCT.BOYFRIEND)
                 
             else:
@@ -659,10 +659,10 @@ label v15s45:
 
     menu:
         "Who else?":
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BOYFRIEND)
 
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.TROUBLEMAKER)
 
             else:
@@ -740,10 +740,10 @@ label v15s45:
             cl "But that's Nora for you, always looking to the past..."
             
         "Refer to a past clue":
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BRO)
 
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.BOYFRIEND)
 
             else:
@@ -795,10 +795,10 @@ label v15s45:
             am "Don't tell us how to do our job, blondie! This is our operation!"
 
         "Use your logic" if mc.detective == Detective.PROFESSIONAL:
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BOYFRIEND)
 
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.BRO)
 
             else:
@@ -830,10 +830,10 @@ label v15s45:
             am "That's new information."
 
         "Extract relationship info" if mc.detective == Detective.PSYCHOLOGIST:
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BRO)
 
-            elif nora.relationship.value >= Relationship.FWB.value:
+            elif nora.relationship >= Relationship.FWB:
                 $ add_point(KCT.TROUBLEMAKER)
 
             else:
@@ -861,7 +861,7 @@ label v15s45:
 
             am "So maybe she still likes him, even now?"
 
-            if nora.relationship.value >= Relationship.FWB.value:
+            if nora.relationship >= Relationship.FWB:
                 scene v15s45_8a
                 with dissolve
 
@@ -891,10 +891,10 @@ label v15s45:
             cl "Like I said, it was a long time ago. I don't even remember his name."
 
         "Angry mode" if mc.detective == Detective.LOOSE_CANNON:
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.TROUBLEMAKER)
 
-            elif nora.relationship.value >= Relationship.FWB.value: 
+            elif nora.relationship >= Relationship.FWB: 
                 $ add_point(KCT.BOYFRIEND)
 
             else:

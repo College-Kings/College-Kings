@@ -98,7 +98,7 @@ label v12_chris_nora_room:
 
             u "Nora..."
 
-            if nora.relationship.value < Relationship.LIKES.value or v11_kiss_nora: # if Nora likes she lets him in after a bit. If not Nora likes he has to convince her and can fail. If mc made a move on Nora before, she is not letting him in.
+            if nora.relationship < Relationship.LIKES or v11_kiss_nora: # if Nora likes she lets him in after a bit. If not Nora likes he has to convince her and can fail. If mc made a move on Nora before, she is not letting him in.
                 scene v12cnr13
                 with dissolve
 

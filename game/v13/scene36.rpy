@@ -29,7 +29,7 @@ label v13_walk_garden:
 
     li "He finished up with all of his frat planning with Sebastian and now for the last few days of our little vacay, he wants to be the perfect boyfriend. *Chuckles*"
 
-    if nora.relationship.value >= Relationship.FWB.value:
+    if nora.relationship >= Relationship.FWB:
         #scene v13s36_2 
         scene v13s36_3a
         with dissolve
@@ -74,7 +74,7 @@ label v13_walk_garden:
 
     imre "You know I don't."
 
-    if chris.relationship.value <= Relationship.MAD.value:
+    if chris.relationship <= Relationship.MAD:
         scene v13s36_5c # FPP. Chris has a mad face on, looking at lindsey, mouth opened (location 3)
         with dissolve
         

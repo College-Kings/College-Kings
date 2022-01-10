@@ -300,7 +300,7 @@ label v13s30:
 
         pause 0.75
    
-    elif lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    elif lauren.relationship >= Relationship.GIRLFRIEND:
         scene v13s30_6c # FPP. Same as v13s30_6a, Lauren slight smile, mouth open.
         with dissolve
 

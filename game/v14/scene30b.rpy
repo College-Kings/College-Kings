@@ -215,7 +215,7 @@ label v14s30b:
 
     cl "*Chuckles*"
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         play sound "sounds/kiss.mp3"
         scene v14s30b_5 # FPP. Chloe kissing MC.
         with dissolve

@@ -242,7 +242,7 @@ label v14s42:
     scene v14s42_16 # TPP. show Penelope holding mc from behind, they are both sleeping
     with dissolve
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         play sound "sounds/vibrate.mp3"
 
         scene v14s42_14a # TPP. same as v14s42_14 Mc sit's up and is looking at his phone

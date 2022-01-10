@@ -228,7 +228,7 @@ label v15s18e_boobs:
 
             la "I love that..."
             
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 scene v15s18ebo_5 # FPP. MC looking up at Lauren his boobs in his face, Lauren biting her lip.
                 with dissolve
 
@@ -739,7 +739,7 @@ label v15s18e_end:
     if not _in_replay:
         $ checklist[0].complete = True
 
-    if lauren.relationship.value < Relationship.FWB.value:
+    if lauren.relationship < Relationship.FWB:
         $ lauren.relationship = Relationship.FWB
 
     u "(What a fucking party...) *Laughs*"

@@ -43,7 +43,7 @@ label v15s12:
 
         li "And then there were a few interesting entries."
         
-        if chloe.relationship.value >= Relationship.FWB.value:
+        if chloe.relationship >= Relationship.FWB:
             scene v15s12_3a # TPP. MC worried, mouth closed [Checkpoint B].
             with dissolve
 
@@ -181,7 +181,7 @@ label v15s12:
 
             li "Ha, yeah. I know... Me too." 
 
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value: 
+        if chloe.relationship >= Relationship.GIRLFRIEND: 
             li "And... there was something else too."
 
             scene v15s12_5
@@ -286,7 +286,7 @@ label v15s12:
                     li "Yeah, fair enough, I respect that. That's why I wanted to ask." 
 
         # -regardless of previous choice, still if Chloe GF
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value and lindsey.relationship.value >= Relationship.FWB.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND and lindsey.relationship >= Relationship.FWB:
         scene v15s12_6 # FPP. Lindsey concerned mouth open [Checkpoint E].
         with dissolve
 
@@ -627,7 +627,7 @@ label v15s12:
 
     li "Hehe, thank you!" 
 
-    if lindsey.relationship.value >= Relationship.FWB.value:
+    if lindsey.relationship >= Relationship.FWB:
         # -Lindsey gives MC a passionate kiss- 
         scene v15s12_9 # FPP. Lindsey passionately kisses MC [Janitor's closet].
         with dissolve

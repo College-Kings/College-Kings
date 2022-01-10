@@ -191,9 +191,9 @@ label v11_chicks_house:
 
     menu:
         "You should run":
-            if lindsey.relationship.value >= Relationship.KISS.value:
+            if lindsey.relationship >= Relationship.KISS:
                 $ add_point(KCT.BOYFRIEND)
-            elif chloe.relationship.value >= Relationship.FWB.value:
+            elif chloe.relationship >= Relationship.FWB:
                 $ add_point(KCT.TROUBLEMAKER)
             
             scene v11chh6a

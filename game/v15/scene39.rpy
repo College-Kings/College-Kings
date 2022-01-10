@@ -363,7 +363,7 @@ label v15s39:
 
     li "Like, what has she ever actually done for you, herself?"
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v15s39_8b
         with dissolve
 
@@ -559,7 +559,7 @@ label v15s39:
                 "Shots!":
                     $ add_point(KCT.TROUBLEMAKER)
 
-                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                    if chloe.relationship >= Relationship.GIRLFRIEND:
                         $ add_point(KCT.BOYFRIEND)
 
                     scene v15s39_8b
@@ -660,7 +660,7 @@ label v15s39:
                             if hangOutWithLindsey:
                                 $ add_point(KCT.BOYFRIEND)
 
-                            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                            if chloe.relationship >= Relationship.GIRLFRIEND:
                                 $ add_point(KCT.TROUBLEMAKER)
 
                             scene v15s39_8c
@@ -704,7 +704,7 @@ label v15s39:
                             $ v15_stay_on_topic = True
                             $ v15_lindsey_recording = 2
 
-                            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                            if chloe.relationship >= Relationship.GIRLFRIEND:
                                 $ add_point(KCT.BOYFRIEND)
 
                             scene v15s39_8c
@@ -775,7 +775,7 @@ label v15s39:
                                     if hangOutWithLindsey:
                                         $ add_point(KCT.BOYFRIEND)
 
-                                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                    if chloe.relationship >= Relationship.GIRLFRIEND:
                                         $ add_point(KCT.TROUBLEMAKER)
 
                                     scene v15s39_8n # FPP. same as v15s39_8b Lindsey appears drunk, her face is flushed, she now has a full smile, mouth is still closed, still looking at MC
@@ -814,7 +814,7 @@ label v15s39:
                                     $ add_point(KCT.TROUBLEMAKER)
                                     $ v15_say_nothing = True
 
-                                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                    if chloe.relationship >= Relationship.GIRLFRIEND:
                                         $ add_point(KCT.BOYFRIEND)
 
                                     scene v15s39_8n # FPP. same as v15s39_8b Lindsey appears drunk, her face is flushed, she now has a full smile, mouth is still closed, still looking at MC
@@ -1075,7 +1075,7 @@ label v15s39:
 
                     $ add_point(KCT.TROUBLEMAKER)
 
-                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                    if chloe.relationship >= Relationship.GIRLFRIEND:
                         $ add_point(KCT.BOYFRIEND)
 
                     scene v15s39_12
@@ -1096,7 +1096,7 @@ label v15s39:
                 "Don't risk it":
                     $ add_point(KCT.BRO)
 
-                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                    if chloe.relationship >= Relationship.GIRLFRIEND:
                         $ add_point(KCT.TROUBLEMAKER)
 
                     if hangOutWithLindsey:

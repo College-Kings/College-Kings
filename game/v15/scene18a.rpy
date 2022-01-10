@@ -90,7 +90,7 @@ label v15s18a_Aubrey:
 
     au "Hey, I'm not complaining. I'm sure all the girls are enjoying the view."
 
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if aubrey.relationship >= Relationship.FWB:
         scene v15s18aaub_2d # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at MC's face, flirty, mouth open
         with dissolve
 
@@ -208,7 +208,7 @@ label v15s18a_Aubrey:
 
     u "Haha, that's a good thing, right?"
 
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if aubrey.relationship >= Relationship.FWB:
         scene v15s18aaub_2a
         with dissolve
 
@@ -975,7 +975,7 @@ label v15s18a_AutumPenelope:
 
             pe "Umm, yeah! Especially while you're wearing that stripper costume... *Giggles*"
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 scene v15s18apen_7a
                 with dissolve
 
@@ -996,8 +996,8 @@ label v15s18a_AutumPenelope:
 
                 u "Yeah, we're together."
 
-                if penelope.relationship.value >= Relationship.LOYAL.value:
-                    $ penelope.relationship.value >= Relationship.LIKES.value
+                if penelope.relationship >= Relationship.LOYAL:
+                    $ penelope.relationship >= Relationship.LIKES
 
                     scene v15s18apen_6k # FPP. MC looking at Penelope, Penelope looking at MC, Penelope slight sad face, mouth open.
                     with dissolve
@@ -1009,7 +1009,7 @@ label v15s18a_AutumPenelope:
 
                     u "Pen-"
 
-                elif penelope.relationship.value >= Relationship.LIKES.value:
+                elif penelope.relationship >= Relationship.LIKES:
                     scene v15s18apen_6k
                     with dissolve
 
@@ -1154,7 +1154,7 @@ label v15s18a_ImreLauren:
 
     la "Hey there, half-naked man!"
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18aimre_4
         with dissolve
 
@@ -1287,7 +1287,7 @@ label v15s18a_ImreLauren:
 
     pause 0.75
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18aimre_6a
         with dissolve
 
@@ -1312,7 +1312,7 @@ label v15s18a_ImreLauren:
 
             la "Challenges? Like what?"
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 scene v15s18aimre_6d # FPP. Imre looking at MC, MC looking at Imre, Lauren looking at MC, Lauren confused, mouth closed, Imre guilty, mouth open.
                 with dissolve
 
@@ -2206,8 +2206,8 @@ label v15s18a_ChrisAmber:
 
                 am "Ha, yes!"
 
-                if kct == "popular" or amber.relationship.value >= Relationship.FWB.value:
-                    if amber.relationship.value < Relationship.FWB.value:
+                if kct == "popular" or amber.relationship >= Relationship.FWB:
+                    if amber.relationship < Relationship.FWB:
                         call screen kct_popup
                     
                     label v15s18a_ambersg:

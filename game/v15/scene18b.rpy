@@ -121,7 +121,7 @@ label v15s18b:
 
     pause 0.75
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18b_9 # TPP. Shot of just Autumn looking in Lauren's direction, slight smile, mouth open.
         with dissolve
 
@@ -150,7 +150,7 @@ label v15s18b:
 
         u "A gift card is useful, you know, for a college student. You can get books or whatever..."
 
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        if lauren.relationship >= Relationship.GIRLFRIEND:
             scene v15s18b_3h # TPP. Lauren holding the $50 gift card, Lauren unamused face, mouth open.
             with dissolve
             
@@ -345,7 +345,7 @@ label v15s18b:
 
         pause 0.5
         
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        if lauren.relationship >= Relationship.GIRLFRIEND:
             scene v15s18b_12a # FPP. Lauren giving MC a passionate kiss.
             with dissolve
 
@@ -375,7 +375,7 @@ label v15s18b:
         u "You're very welcome. Happy Birthday!"
 
     if emerald_bracelet in mc.inventory or ruby_choker_necklace in mc.inventory:
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        if lauren.relationship >= Relationship.GIRLFRIEND:
             scene v15s18b_3q
             with dissolve
 

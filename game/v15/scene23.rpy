@@ -72,7 +72,7 @@ label v15s23:
 
     # Pre load Aubrey Text conversation before branching Ape or Wolf 
     $ aubrey.messenger.newMessage("Hey smelly, come to the Chicks house. I have an extra special surprise for you.", force_send=True)
-    if aubrey.relationship.value < Relationship.FWB.value:
+    if aubrey.relationship < Relationship.FWB:
         $ aubrey.messenger.addReply("Smelly? I just showered! Anyway, I'll see you soon :)", v15s23_reply1)
 
     else:

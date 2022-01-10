@@ -1145,7 +1145,7 @@ label v15s21:
 
         ro "Oh! Very organized... Impressive."
 
-        if ms_rose.relationship.value >= Relationship.FWB.value:
+        if ms_rose.relationship >= Relationship.FWB:
             scene v15s21_10d # FPP. Chloe is walking away with her back turned and can't see Mc or Ms. Rose, Ms. Rose is giving Mc a wink, slight smile, mouth closed
             with dissolve
             
@@ -1163,7 +1163,7 @@ label v15s21:
 
         show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
 
-        if ms_rose.relationship.value >= Relationship.FWB.value:
+        if ms_rose.relationship >= Relationship.FWB:
             $ v15s21_meeting_points += 2
 
             show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
@@ -1696,7 +1696,7 @@ label v15s21:
 
             ro "Oh, it's okay! Thank you. It was actually a gift that [name] and Nora gave to me before we left Europe."
 
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ chloeSus += 1
 
                 scene v15s21_7v # FPP. same as v15s21_7s Chloe raises an eyebrow, still slightly angry, still lookng at mc, mouth is still closed
@@ -1984,7 +1984,7 @@ label v15s21:
 
         u "Chloe..."
 
-        if ms_rose.relationship.value >= Relationship.FWB.value:
+        if ms_rose.relationship >= Relationship.FWB:
             u "(I won't feel great about it, but if I can get Chloe to give me a few moments alone with Ms. Rose...)"
             u "(...I might be able to get exactly what we want from her. No special conditions.)"
 
@@ -2018,8 +2018,8 @@ label v15s21:
 
                     u "I know. Trust me."
 
-                    if kct == "popular" or chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                        if chloe.relationship.value < Relationship.GIRLFRIEND.value:
+                    if kct == "popular" or chloe.relationship >= Relationship.GIRLFRIEND:
+                        if chloe.relationship < Relationship.GIRLFRIEND:
                             call screen kct_popup
 
                         scene v15s21_7y
@@ -2070,7 +2070,7 @@ label v15s21:
                                 $ v15_seduce_ms_rose = True
                                 $ add_point(KCT.BRO)
                                 
-                                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                if chloe.relationship >= Relationship.GIRLFRIEND:
                                     $ add_point(KCT.TROUBLEMAKER)
                                 else:
                                     $ add_point(KCT.BOYFRIEND)

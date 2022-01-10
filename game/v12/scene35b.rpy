@@ -43,7 +43,7 @@ label v12_game_roommate:
 
         u "Definitely does not look fun... I'll say that."
 
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+        if chloe.relationship >= Relationship.GIRLFRIEND:
             scene v12grm2
             with dissolve
 
@@ -179,7 +179,7 @@ label v12_game_roommate:
 
         u "Married!?"
 
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+        if chloe.relationship >= Relationship.GIRLFRIEND:
             scene v12grm2e
             with dissolve
 
@@ -449,7 +449,7 @@ label v12_game_roommate:
 
         cl "OH MY GOD! *Chuckles* STOP IT! [name]! PLEASE... PLEASE STOP! *Laughs*"
 
-        if chloe.relationship.value >= Relationship.FWB.value:
+        if chloe.relationship >= Relationship.FWB:
             #scene v12grm2a
             scene v12grm5
             with dissolve

@@ -90,7 +90,7 @@ label v15s18:
 
     u "Really. And also, happy birthday."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: 
+    if lauren.relationship >= Relationship.GIRLFRIEND: 
         scene v15s18_8b # FPP. Same as v15s18_8a, Lauren much closer to MC with her arms wrappe around his neck as she looks in his eyes, Lauren biting her lip, slight smile, mouth closed.
         with dissolve
 
@@ -161,7 +161,7 @@ label v15s18:
     
     pause 0.75
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18_10 # FPP. Refer to v15s18_8h, Close up of Lauren's ass as she is walking away.
         with dissolve
         

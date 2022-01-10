@@ -22,7 +22,7 @@ label v12_ms_rose_sex: #can only get here if joinwolves
 
     u "I've been around..."
 
-    if ms_rose.relationship.value >= Relationship.FWB.value:
+    if ms_rose.relationship >= Relationship.FWB:
         scene v12msr2d # FPP. Same as v12msr2, Ms. Rose, slight smile, mouth open, caressing MC's cheek
         with dissolve
 

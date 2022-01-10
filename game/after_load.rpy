@@ -174,7 +174,7 @@ label after_load:
             del emmyrs
         except NameError: pass
         try:
-            if "v13_emmy" in sceneList and emmy.relationship.value < Relationship.FWB.value: emmy.relationship = Relationship.FWB
+            if "v13_emmy" in sceneList: emmy.relationship = Relationship.FWB
         except NameError: pass
         try:
             if evelyndate: evelyn.relationship = Relationship.DATE

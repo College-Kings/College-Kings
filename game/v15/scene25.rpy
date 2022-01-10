@@ -795,7 +795,7 @@ label v15s25:
 
     $ aubrey.messenger.newMessage("Hey! Come to the Chicks house? I have an extra special surprise for you... I think you've earned it.", force_send=True)
 
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if aubrey.relationship >= Relationship.FWB:
         $ aubrey.messenger.addReply("A naked surprise? ;)")
         $ aubrey.messenger.newMessage("Haha you'll find out. Hurry up. I'm waiting :)", force_send=True)
 

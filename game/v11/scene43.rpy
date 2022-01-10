@@ -626,7 +626,7 @@ label v11_at_the_bank:
 
     ro "Will someone please explain to me exactly what has happened?"
 
-    if ms_rose.relationship.value >= Relationship.FWB.value and joinwolves: #sanitizing pathbuilder input
+    if ms_rose.relationship >= Relationship.FWB and joinwolves: #sanitizing pathbuilder input
         scene v11bank18
         with dissolve
 

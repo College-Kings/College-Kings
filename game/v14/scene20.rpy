@@ -169,7 +169,7 @@ label v14s20:
 
         u "Not completely..."
 
-    elif lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    elif lauren.relationship >= Relationship.GIRLFRIEND:
         scene v14s20_3f
         with dissolve
 
@@ -524,7 +524,7 @@ label v14s20:
     pause 0.75
 
     stop music fadeout 3
-    if chloe.relationship.value >= Relationship.FWB.value and v14_talk_to_chris:
+    if chloe.relationship >= Relationship.FWB and v14_talk_to_chris:
         jump v14s21
 
     else:

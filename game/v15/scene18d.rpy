@@ -229,7 +229,7 @@ label v15s18d:
 
             u "But I'd only want to if you wanted-"
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BOYFRIEND)
                 $ v15s18_LaurensBed = True
 
@@ -330,7 +330,7 @@ label v15s18d:
                     jump v15s18e
 
             else: 
-                if kct == "loyal" and lauren.relationship.value >= Relationship.KISS.value and not v11_lauren_caught_aubrey and not gift_card_50 in mc.inventory: # and not "v12_lauren" in sceneList, but this is implied by not having Lauren GIRLFRIEND
+                if kct == "loyal" and lauren.relationship >= Relationship.KISS and not v11_lauren_caught_aubrey and not gift_card_50 in mc.inventory: # and not "v12_lauren" in sceneList, but this is implied by not having Lauren GIRLFRIEND
                     $ v15s18_LaurensBed = True
                     call screen kct_popup
                     
@@ -381,7 +381,7 @@ label v15s18d:
                     jump v15s18e
                 
                 else:
-                    if lauren.relationship.value >= Relationship.KISS.value and not v11_lauren_caught_aubrey:
+                    if lauren.relationship >= Relationship.KISS and not v11_lauren_caught_aubrey:
                         call screen kct_popup(required_kct="loyal")
                 
                     scene v15s18d_8f
@@ -445,7 +445,7 @@ label v15s18d:
         "Don't try":
             u "But I don't want to do that to you, just ignore him. He's trying to get me to play this stupid game."
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 scene v15s18d_8g # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren confused, mouth open.
                 with dissolve
 
@@ -479,7 +479,7 @@ label v15s18d:
 
             la "Yeah, it was great! I'm so happy everyone had a good time."
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 $ v15s18_LaurensBed = True
                 scene v15s18d_8f
                 with dissolve

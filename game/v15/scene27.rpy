@@ -101,12 +101,12 @@ label v15s27: # -MC walks out of the Chicks house-
 
             u "*Laughs* Well, you are my two favorite girls, that's true..."
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value or chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND or chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.TROUBLEMAKER)
                 
                 u "(Well, maybe in the top three...)"
             
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value and chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND and chloe.relationship >= Relationship.GIRLFRIEND:
                 u "(Or four... Wait, how many girlfriends do I have?)"
 
             scene v15s27_4a

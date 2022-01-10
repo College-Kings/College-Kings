@@ -22,7 +22,7 @@ label v14s33:
         scene v14s33_2 # TPP. Show MC looking at his phone while sitting on the bed in his Wolves Room, slight smile, mouth closed.
         with fade
 
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        if lauren.relationship >= Relationship.GIRLFRIEND:
             pause 0.75
 
             play sound "sounds/call.mp3"
@@ -161,7 +161,7 @@ label v14s33:
 
                     stop music fadeout 3
 
-                    if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
+                    if penelope.relationship >= Relationship.LIKES and v11s23_penelope_date:
                         jump v14s34
 
                     else:
@@ -223,7 +223,7 @@ label v14s33:
 
                     stop music fadeout 3
                     
-                    if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
+                    if penelope.relationship >= Relationship.LIKES and v11s23_penelope_date:
                         jump v14s34
 
                     else:
@@ -237,7 +237,7 @@ label v14s33:
 
             stop music fadeout 3
 
-            if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
+            if penelope.relationship >= Relationship.LIKES and v11s23_penelope_date:
                 jump v14s34
 
             else:
@@ -256,7 +256,7 @@ label v14s33:
         
         pause 0.75
 
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        if lauren.relationship >= Relationship.GIRLFRIEND:
             play sound "sounds/call.mp3"
 
             scene v14s33_2a
@@ -392,7 +392,7 @@ label v14s33:
 
                     stop music fadeout 3
 
-                    if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
+                    if penelope.relationship >= Relationship.LIKES and v11s23_penelope_date:
                         jump v14s34
 
                     else:
@@ -453,7 +453,7 @@ label v14s33:
 
                     stop music fadeout 3
                     
-                    if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
+                    if penelope.relationship >= Relationship.LIKES and v11s23_penelope_date:
                         jump v14s34
 
                     else:
@@ -467,7 +467,7 @@ label v14s33:
 
             stop music fadeout 3
 
-            if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
+            if penelope.relationship >= Relationship.LIKES and v11s23_penelope_date:
                 jump v14s34
 
             else:

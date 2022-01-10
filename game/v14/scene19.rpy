@@ -36,7 +36,7 @@ label v14s19:
 
     u "Damn, someone's eager..."
     
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v14s19_5 # TPP. Show MC leaning in to kiss Chloe, all mouths closed.
         with dissolve
 

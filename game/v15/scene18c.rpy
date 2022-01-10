@@ -38,7 +38,7 @@ label v15s18c_riley:
 
     ri "Haha, no worries. I was just checking my makeup."
 
-    if gift_card_50 in mc.inventory and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if gift_card_50 in mc.inventory and lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18c_ri_2b
         with dissolve
 
@@ -63,7 +63,7 @@ label v15s18c_riley:
                 
                 u "Seriously? That would be great, haha."
 
-                if riley.relationship.value >= Relationship.FWB.value:
+                if riley.relationship >= Relationship.FWB:
                     scene v15s18c_ri_2d # FPP. Same as v15s18c_ri_2c, Riley slightly sad, mouth open
                     with dissolve
 
@@ -83,7 +83,7 @@ label v15s18c_riley:
 
                 u "What? You can't shop for yourself, haha. That ruins the surprise."
 
-                if riley.relationship.value >= Relationship.FWB.value:
+                if riley.relationship >= Relationship.FWB:
                     scene v15s18c_ri_2e # FPP. Same as v15s18c_ri_2b, Riley smirking, mouth open
                     with dissolve
 
@@ -235,7 +235,7 @@ label v15s18c_riley:
 
         ri "Why thank you, although I don't think we'll need it. Hehe..."
     
-    elif (emerald_bracelet in mc.inventory or ruby_choker_necklace in mc.inventory) and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    elif (emerald_bracelet in mc.inventory or ruby_choker_necklace in mc.inventory) and lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18c_ri_2b
         with dissolve
 
@@ -263,7 +263,7 @@ label v15s18c_riley:
 
         u "I love seeing her smile, but being the reason for it is even better, you know?"
 
-        if riley.relationship.value >= Relationship.FWB.value:
+        if riley.relationship >= Relationship.FWB:
             scene v15s18c_ri_2i # FPP. Same as v15s18c_ri_2f, Riley slightly sad, looking down, mouth closed
             with dissolve
 
@@ -524,7 +524,7 @@ label v15s18c_imre_aubrey:
 
         pause 0.75
 
-    elif (emerald_bracelet in mc.inventory or ruby_choker_necklace in mc.inventory) and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    elif (emerald_bracelet in mc.inventory or ruby_choker_necklace in mc.inventory) and lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18c_imau_6
         with dissolve
 
@@ -1082,7 +1082,7 @@ label v15s18c_imre_aubrey:
 
     u "Yeah, good idea, haha."
 
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if aubrey.relationship >= Relationship.FWB:
         scene v15s18c_imau_32a
         with dissolve
 
@@ -1131,7 +1131,7 @@ label v15s18c_imre_aubrey:
         "Don't steal the panties":
             $ add_point(KCT.BOYFRIEND)
             
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 u "(There's no way in hell I'm taking my girlfriend's sister's underwear. Not happening.)"
 
             else:
@@ -1467,7 +1467,7 @@ label v15s18c_lauren:
 
     u "*Laughs* Yeah, I hope so too."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18c_la_3
         with dissolve
 
@@ -1848,7 +1848,7 @@ label v15s18c_autumn_amber:
 
             u "Well, do you wanna make out?"
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 scene v15s18c_auam_5d # FPP. Same as v15s18c_auam_5a, Autumn angry, mouth open
                 with dissolve
 
@@ -2355,7 +2355,7 @@ label v15s18c_chris_penelope:
                     jump v15s18c_backtoparty
 
             label v15s18c_askhelp:
-                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                if lauren.relationship >= Relationship.GIRLFRIEND:
                     pe "Um, I don't think we should do anything while we're here."
 
                     scene v15s18c_chpe_5a
@@ -2368,8 +2368,8 @@ label v15s18c_chris_penelope:
 
                     pe "Sorry, I just don't feel comfortable."
 
-                elif v14_penelope_date and (kct == "confident" or penelope.relationship.value >= Relationship.LOYAL.value):
-                    if penelope.relationship.value < Relationship.LOYAL.value:
+                elif v14_penelope_date and (kct == "confident" or penelope.relationship >= Relationship.LOYAL):
+                    if penelope.relationship < Relationship.LOYAL:
                         call screen kct_popup
                 
                 
@@ -2555,7 +2555,7 @@ label v15s18c_chris_penelope:
 
                     call screen v15s18a_upstairsroom
 
-                elif penelope.relationship.value < Relationship.LIKES.value:
+                elif penelope.relationship < Relationship.LIKES:
                     scene v15s18c_chpe_5 # FPP. Same as v15s18c_chpe_5, Penelope different pose, slightly uncomfortable, mouth open
                     with dissolve
 

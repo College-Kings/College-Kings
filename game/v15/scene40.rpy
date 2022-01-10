@@ -42,7 +42,7 @@ label v15s40:
 
     u "I mean, it's okay if you don't want to talk about it, but they're all asleep now and it's only me."
 
-    if autumn.relationship.value < Relationship.TRUST.value:
+    if autumn.relationship < Relationship.TRUST:
         scene v15s40_1b
         with dissolve
 
@@ -173,7 +173,7 @@ label v15s40:
 
                 u "Yeah, I mean, I'd be happy to."
 
-                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                if lauren.relationship >= Relationship.GIRLFRIEND:
                     $ autumn.relationship = Relationship.LOYAL
 
                     scene v15s40_1b
@@ -336,7 +336,7 @@ label v15s40:
 
                 aut "Okay, we can keep it like this. Thanks for being honest, it means a lot"
 
-                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                if lauren.relationship >= Relationship.GIRLFRIEND:
                     scene v15s40_1c
                     with dissolve
 
