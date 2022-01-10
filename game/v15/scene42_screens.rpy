@@ -1,16 +1,15 @@
 screen detective_board():
-    tag detective_board
+    tag detective
     style_prefix "detective"
 
     default image_path = "images/v15/detective_board/"
     default clue_positions = {
-        0: (263, 203),
+        0: (263, 200),
         1: (460, 198),
         2: (657, 203),
-        3: (170, 425),
-        4: (370, 430),
-        5: (570, 425),
-        #6: (770, 430),
+        3: (240, 425),
+        4: (440, 430),
+        5: (640, 425),
         6: (220, 668),
         7: (420, 668),
         8: (620, 665),
@@ -24,27 +23,46 @@ screen detective_board():
             xysize (212, 256)
             background image_path + "card_background.png"
 
-            add clue.image align (0.5, 0.5)
-            text clue.name xalign 0.5 ypos 195
+            text clue.description align (0.5, 0.5) color "#fff"
+            text clue.informant xalign 0.5 ypos 195
+
+    for i in range(len(v15_nora_clues), 9):
+        frame:
+            pos clue_positions[i]
+            xysize (212, 256)
+            background image_path + "card_background.png"
+
+            add image_path + "unknown.png" align (0.5, 0.5)
+            text "Unknown" xalign 0.5 ypos 195
+
+
 
     vpgrid:
         cols 3
         pos (1125, 480)
         spacing -10
 
-        for location in v15_nora_locations:
+        for i in range(6):
             frame:
                 xysize (212, 256)
                 background image_path + "card_background.png"
 
-                add location.image:
-                    xalign 0.5
-                    if location.image == "images/v15/detective_board/unknown.png":
-                        yalign 0.5
-                    else:
-                        ypos 22
-                        
-                text location.name xalign 0.5 ypos 195 xsize 200
+                add image_path + "unknown.png" align (0.5, 0.5)
+                text "Unknown" xalign 0.5 ypos 195
+
+        # for location in v15_nora_locations:
+        #     frame:
+        #         xysize (212, 256)
+        #         background image_path + "card_background.png"
+
+        #         add location.image:
+        #             xalign 0.5
+        #             if location.image == "images/v15/detective_board/unknown.png":
+        #                 yalign 0.5
+        #             else:
+        #                 ypos 22
+
+        #         text location.name xalign 0.5 ypos 195 xsize 200
 
     button action Return()
 
