@@ -279,7 +279,7 @@ label v15s44_continue:
 
     pe "\"Was so nice to see my baby niece today... She never stays for long, but it's always perfect <3 See you soon, Nora Bora!\""
     $ v15_nora_clues.add(Clue("Penelope", "Nora visited her aunt the day she landed from Europe", "So we know for sure she visited her aunt. Why would she go there? And for only a quick visit?"))
-    $ v15_nora_locations.add(Location("Nora's aunt's apartment", "images/v15/detective_board/unknown.png", "Her aunt's post said she only visited for an hour. It could be a lie, but I think it's most likely the truth."))
+    $ v15_nora_locations.add(Location("Nora's aunt's apartment", "images/v15/detective_board/aunt_apartment.webp", "Her aunt's post said she only visited for an hour. It could be a lie, but I think it's most likely the truth."))
 
     scene v15s44_8
     with dissolve
@@ -297,7 +297,7 @@ label v15s44_continue:
     pe "I think her whole family are huge nature freaks. There's pictures of them camping, fishing... You name it."
     $ v15_nora_clues.add(Clue("Penelope", "Nora loves nature", "Penelope confirmed that Nora loves nature. Could be a useful clue."))
 
-    if "camping" in v15_nora_clues:
+    if v15s43_camping_from_chris:
         scene v15s44_8
         with dissolve
 
@@ -309,7 +309,7 @@ label v15s44_continue:
         
         am "Camping... now that's an activity for someone who wants some peace and quiet."
         
-        $ v15_nora_locations.add("camping")
+        $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/camping.webp", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
 
     menu:
         "Ask about Nora's family":
@@ -340,6 +340,8 @@ label v15s44_continue:
             u "Well, at least that's something."
         
         "Ask about Nora's posts":
+            $ v15s44_ex_from_penelope = True
+            
             scene v15s44_8b
             with dissolve
 
@@ -358,7 +360,8 @@ label v15s44_continue:
             u "Wait, they're still friends?"
             
             u "That's an interesting development."
-            $ v15_nora_clues.add("likes_ex")
+            
+            $ v15_nora_clues.add(Clue("Penelope", "Nora's still likes her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
             
             scene v15s44_8a
             with dissolve
@@ -369,7 +372,7 @@ label v15s44_continue:
             with dissolve
 
             am "Hmm, that's something that we might want to consider. Maybe Nora ran off to this ex."
-            $ v15_nora_locations.add("ex")
+            $ v15_nora_locations.add(Location("Nora's ex-boyfriend's place", "images/v15/detective_board/ex_house.webp", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
 
     scene v15s44_8a
     with dissolve
