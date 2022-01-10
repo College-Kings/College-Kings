@@ -441,13 +441,15 @@ label v15s43:
     scene v15s43_14d # FPP. MC looking at Chris, Chris looking at Amber, Chris nervous, mouth closed.
     with dissolve
 
-    pause 0.75
     $ v15_nora_locations.add(Location("Nora's dad's house", "images/v15/detective_board/dad_house.webp", "Too obvious. And if Nora wanted to get away, is going to her Dad's house far enough away?"))
     
-    $ v15_nora_locations.add(Location("Ms. Rose's house", "images/v15/detective_board/ms_rose_house.webp", "This is likely the first place people would look for Nora. So, for that reason, I'm not sure she would go there."))
+
+    pause
 
     scene v15s43_15
     with dissolve
+
+    $ v15_nora_locations.add(Location("Ms. Rose's house", "images/v15/detective_board/ms_rose_house.webp", "This is likely the first place people would look for Nora. So, for that reason, I'm not sure she would go there."))
 
     am "Care to comment on that?"
 
@@ -481,9 +483,9 @@ label v15s43:
 
     ch "She wanted to be alone after we broke up. I'm respecting that wish."
 
-    ch "And I suggest you should respect that too."
-
     $ v15_nora_clues.add(Clue("Chris", "Nora wanted to be alone after the break up", "An obvious clue, but the fact Nora wants to be alone can help us narrow things down."))
+
+    ch "And I suggest you should respect that too."
 
     scene v15s43_14g # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth closed.
     with dissolve
@@ -546,8 +548,9 @@ label v15s43:
             scene v15s43_14h
             with dissolve
 
-            ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
             $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/camping.webp", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
+
+            ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
 
         "Analyze Chris" if mc.detective == Detective.PSYCHOLOGIST:
             scene v15s43_14g
@@ -573,9 +576,10 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
             $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/camping.webp", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
 
+            ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
+        
         "Accuse Chris" if mc.detective == Detective.LOOSE_CANNON:
             $ v15s43_camping_from_chris = True
         
@@ -641,10 +645,10 @@ label v15s43:
 
     ch "And there, that answers your question about other properties, too. Can you leave me alone now?"
 
-    $ v15_nora_locations.add(Location("Nora's dad's cabin", "images/v15/detective_board/dad_cabin.webp", "She could be at the cabin. It sounds like it's out in nature and she could be alone. Although other clues might take us in a different direction."))
-
     scene v15s43_15
     with dissolve
+
+    $ v15_nora_locations.add(Location("Nora's dad's cabin", "images/v15/detective_board/dad_cabin.webp", "She could be at the cabin. It sounds like it's out in nature and she could be alone. Although other clues might take us in a different direction."))
 
     am "Not so fast, wise guy."
 
@@ -698,9 +702,10 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            ch "She pretty much hates him. That's the last place she'd go."
             $ v15_nora_clues.add(Clue("Chris", "Nora hates her dad", "I'm not so sure she hates her dad. That might just be from Chris not listening to her, like usual."))
 
+            ch "She pretty much hates him. That's the last place she'd go."
+    
             scene v15s43_15
             with dissolve
 
@@ -759,8 +764,9 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            ch "I doubt it. She hates her dad."
             $ v15_nora_clues.add(Clue("Chris", "Nora hates her dad", "I'm not so sure she hates her dad. That might just be from Chris not listening to her, like usual."))
+
+            ch "I doubt it. She hates her dad."
 
             scene v15s43_14g
             with dissolve
@@ -806,8 +812,9 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            ch "She hates her dad. She wouldn't go to him."
             $ v15_nora_clues.add(Clue("Chris", "Nora hates her dad", "I'm not so sure she hates her dad. That might just be from Chris not listening to her, like usual."))
+
+            ch "She hates her dad. She wouldn't go to him."
 
             scene v15s43_16a # TPP. Show MC kicking the coffee table, MC angry, mouth open.
             with dissolve
