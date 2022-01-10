@@ -603,8 +603,9 @@ label v15s45:
     scene v15s45_7
     with dissolve
 
-    cl "He's the one with all the money, so maybe she'd go to him. Or use one of his places to hideout."
     $ v15_nora_clues.add(Clue("Chloe", "Nora always runs to her dad for materialistic help", "So her dad is always there as a provider, but not for emotional support. Can this link to any other clues?"))
+
+    cl "He's the one with all the money, so maybe she'd go to him. Or use one of his places to hideout."
 
     scene v15s45_8
     with dissolve
@@ -634,8 +635,9 @@ label v15s45:
     scene v15s45_7e
     with dissolve
 
-    cl "Yeah, I mean. She prefers to spend time with her."
     $ v15_nora_clues.add(Clue("Chloe", "Nora & Ms Rose are really close", "Well, it's true they're close. But that doesn't mean she's with Ms Rose, does it?"))
+
+    cl "Yeah, I mean. She prefers to spend time with her."
 
     scene v15s45_8
     with dissolve
@@ -710,11 +712,12 @@ label v15s45:
 
             cl "I think he lives round here though, or at least he used to."
             
-            if not v15s44_ex_from_penelope:
-                $ v15_nora_locations.add(Location("Nora's ex-boyfriend's place", "images/v15/detective_board/ex_house.webp", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
-
+        
             scene v15s45_7a
             with dissolve
+
+            if not v15s44_ex_from_penelope:
+                $ v15_nora_locations.add(Location("Nora's ex-boyfriend's place", "images/v15/detective_board/ex_house.webp", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
 
             u "How conveniently vague..."
 
@@ -730,12 +733,12 @@ label v15s45:
 
             scene v15s45_7
             with dissolve
+
+            if not v15s44_ex_from_penelope:
+                $ v15_nora_clues.add(Clue("Chloe", "Nora's still friends with her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
     
             cl "But that's Nora for you, always looking to the past..."
             
-            if not v15s44_ex_from_penelope:
-                $ v15_nora_clues.add(Clue("Chloe", "Nora's still friends with her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
-                
         "Refer to a past clue":
             if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
                 $ add_point(KCT.BRO)
@@ -780,8 +783,11 @@ label v15s45:
             with dissolve
 
             cl "Mr. Rose took her on a camping trip when she was a kid. She said she hated it..."
-            cl "I think you might need to take another look at your evidence."
+
             $ v15_nora_clues.add(Clue("Chloe", "Nora hates camping", "Pretty definitive answer from Chloe on this one. Nora loves nature, but hates camping."))
+
+
+            cl "I think you might need to take another look at your evidence."
 
             scene v15s45_8
             with dissolve
@@ -864,11 +870,11 @@ label v15s45:
             scene v15s45_7
             with dissolve
 
-            cl "No, no, no. She would never go back to him, it's just that they had good memories together, and always stayed friends."
-            
             if not v15s44_ex_from_penelope:
                 $ v15_nora_clues.add(Clue("Chloe", "Nora's still friends with her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
 
+            cl "No, no, no. She would never go back to him, it's just that they had good memories together, and always stayed friends."
+            
             scene v15s45_7a
             with dissolve
 

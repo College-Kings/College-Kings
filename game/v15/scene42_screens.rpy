@@ -17,7 +17,7 @@ screen detective_popup(type, message):
             
             text message size 18
 
-    timer 4 action Hide("detective")
+    timer 4 action Hide("detective", transition = dissolve)
 
 
 screen detective_board():
