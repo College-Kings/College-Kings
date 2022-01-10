@@ -16,3 +16,4 @@ init python:
         def __init__(self, name, image, opinion=""):
             self.name = name
             self.image = image
+            self.opinion = opinion
