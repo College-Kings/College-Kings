@@ -110,9 +110,9 @@ init python:
     if renpy.loadable("v15/scene1.rpy"):
         SceneGallery("Angry with Ms. Rose", "images/v15/scene 15/v15s15_7f.webp", "v15s15sg") # 15, Ms. Rose
         SceneGallery("The List (Amber)", "images/v15/scene 18a/v15s18aamber_9e.webp", "v15s18a_ambersg") # 18a, Amber
-        SceneGallery("The List (Aubrey)", "images/3 hits.webp", "18c") # 18c, Aubrey
-        SceneGallery("The List (Autumn)", "images/3 hits.webp", "18c") # 18c, Autumn
-        SceneGallery("The List (Penelope)", "images/3 hits.webp", "18c") # 18c, Penelope
+        SceneGallery("The List (Aubrey)", "images/v15/scene 18c/v15s18c_imau_14.webp", "v15s18c_aubreysg") # 18c, Aubrey
+        SceneGallery("The List (Autumn)", "images/v15/scene 18c/v15autkiss.webp", "v15s18c_autumnsg") # 18c, Autumn
+        SceneGallery("The List (Penelope)", "images/v15/scene 18c/v15s18c_chpe_11.webp", "v15s18c_penelopesg") # 18c, Penelope
         SceneGallery("The List (Riley)", "images/v15/scene 18a/v15s18ariley_14.webp", "v15s18a_rileysg") # 18a, Riley
         SceneGallery("Birthday treat", "images/v15/scene 18e/v15s18eend_6.webp", "v15s18e_sg"), # 18e, Lauren
         SceneGallery("Fun at the wedding", "images/3 hits.webp", "33"), # 33, Naomi
