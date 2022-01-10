@@ -416,3 +416,4 @@ default v15s33_take_photo = False
 default v15_lindsey_recording = 0 # 1 if sober, 2 if drunk
 default v15s25_price = 0
 default v15s44_ex_from_penelope = False
+default v15s43_camping_from_chris = False
