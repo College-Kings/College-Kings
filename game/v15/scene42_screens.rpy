@@ -1,20 +1,23 @@
-screen detective_popup(message):
+screen detective_popup(type, message):
     tag detective
     
     default image_path = "images/v15/detective_board/"
 
     button:
         action Hide("detective")
-        background image_path + "detective_popup_background.png"
-        xysize (933, 153)
+        background Frame(image_path + "detective_popup_background.png")
+        minimum (655, 108)
+        pos(10, 10)
 
-        fixed:
-            xysize (768, 85)
-            pos (153, 31)
+        vbox:
+            pos (130, 15)
+            spacing -2
+
+            text type size 25 color "#FFD166"
             
-            text message yalign 0.5 size 48
+            text message size 18
 
-    timer 4 action Hide("detective")
+    timer 4 action Hide("detective", transition=dissolve)
 
 
 screen detective_board():
@@ -47,7 +50,7 @@ screen detective_board():
             xysize (212, 256)
             background image_path + "card_background.png"
 
-            text clue.description align (0.5, 0.5) color "#fff" xsize 190
+            text clue.description align (0.5, 0.4) color "#fff" xsize 150
             text clue.informant xalign 0.5 ypos 190
 
     for i in range(len(v15_nora_clues), 9):
@@ -100,15 +103,9 @@ screen detective_board_description(card):
             pos (50, 30)
             xsize 704
 
-            if isinstance(card, Clue):
-                text card.informant:
-                    color "#777777"
-                    size 30
-
-            if isinstance(card, Location):
-                text card.name:
-                    color "#777777"
-                    size 30
+            text "Amber's opinion":
+                color "#777777"
+                size 30
 
             text card.opinion:
                 color "#777777"

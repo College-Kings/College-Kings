@@ -11,7 +11,8 @@ init python:
             self.description = description
             self.opinion = opinion
 
-            renpy.show_screen("detective_popup", message="Clue found!")
+            renpy.show_screen("detective_popup", type="Clue Unlocked", message=self.description)
+            renpy.with_statement(dissolve)
 
 
     class Location:
@@ -20,4 +21,5 @@ init python:
             self.image = image
             self.opinion = opinion
 
-            renpy.show_screen("detective_popup", message="Location found!")
+            renpy.show_screen("detective_popup", type="Location Unlocked", message=self.name)
+            renpy.with_statement(dissolve)

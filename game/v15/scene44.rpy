@@ -14,7 +14,7 @@ label v15s44:
 
     pause 0.75
 
-    call screen clues_ui
+    call screen detective_board
 
 # -MC and Amber enter room 103 where the pinboard is. They approach the pinboard-
 
@@ -277,12 +277,14 @@ label v15s44_continue:
     scene v15s44_8e
     with dissolve
 
-    pe "\"Was so nice to see my baby niece today... She never stays for long, but it's always perfect <3 See you soon, Nora Bora!\""
     $ v15_nora_clues.add(Clue("Penelope", "Nora visited her aunt the day she landed from Europe", "So we know for sure she visited her aunt. Why would she go there? And for only a quick visit?"))
-    $ v15_nora_locations.add(Location("Nora's aunt's apartment", "images/v15/detective_board/aunt_apartment.webp", "Her aunt's post said she only visited for an hour. It could be a lie, but I think it's most likely the truth."))
+
+    pe "\"Was so nice to see my baby niece today... She never stays for long, but it's always perfect <3 See you soon, Nora Bora!\""
 
     scene v15s44_8
     with dissolve
+
+    $ v15_nora_locations.add(Location("Nora's aunt's apartment", "images/v15/detective_board/aunt_apartment.webp", "Her aunt's post said she only visited for an hour. It could be a lie, but I think it's most likely the truth."))
 
     am "Holy shit!"
 
@@ -294,8 +296,9 @@ label v15s44_continue:
     scene v15s44_8a
     with dissolve
 
-    pe "I think her whole family are huge nature freaks. There's pictures of them camping, fishing... You name it."
     $ v15_nora_clues.add(Clue("Penelope", "Nora loves nature", "Penelope confirmed that Nora loves nature. Could be a useful clue."))
+
+    pe "I think her whole family are huge nature freaks. There's pictures of them camping, fishing... You name it."
 
     if v15s43_camping_from_chris:
         scene v15s44_8
@@ -306,11 +309,11 @@ label v15s44_continue:
     else:
         scene v15s44_8
         with dissolve
+
+        $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/camping.webp", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
         
         am "Camping... now that's an activity for someone who wants some peace and quiet."
         
-        $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/camping.webp", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
-
     menu:
         "Ask about Nora's family":
             scene v15s44_8b
@@ -358,10 +361,10 @@ label v15s44_continue:
             with dissolve
 
             u "Wait, they're still friends?"
+
+            $ v15_nora_clues.add(Clue("Penelope", "Nora's still friends with her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
             
             u "That's an interesting development."
-            
-            $ v15_nora_clues.add(Clue("Penelope", "Nora's still likes her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
             
             scene v15s44_8a
             with dissolve
@@ -371,8 +374,9 @@ label v15s44_continue:
             scene v15s44_8
             with dissolve
 
-            am "Hmm, that's something that we might want to consider. Maybe Nora ran off to this ex."
             $ v15_nora_locations.add(Location("Nora's ex-boyfriend's place", "images/v15/detective_board/ex_house.webp", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
+
+            am "Hmm, that's something that we might want to consider. Maybe Nora ran off to this ex."
 
     scene v15s44_8a
     with dissolve
@@ -399,7 +403,7 @@ label v15s44_continue:
 
     u "Okay, so let's add those clues to the board and see how things are shaping up."
 
-    call screen clues_ui
+    call screen detective_board
 
 # -The UI pops up to show all the clues achieved from Penelope's search (CLUES UNLOCKED: Nora loves nature. Nora visited her aunt the day she landed from Europe. LOCATION UNLOCKED: Staying at her Aunt's apartment)-
 
