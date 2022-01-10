@@ -422,7 +422,7 @@ label v15s17:
 
             clerk "I'm sure she'll be very happy with it."
             
-        if emerald_bracelet in mc.inventory:
+        elif emerald_bracelet in mc.inventory:
             $ add_point(KCT.BOYFRIEND)
             
             scene v15s17_11b # FPP. same as v15s17_11 Close up shot of the Jewlry options

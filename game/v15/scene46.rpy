@@ -4,6 +4,13 @@
 # Time: Morning
 
 label v15s46:
+    python:
+        v15_nora_clues.add(Clue("Still likes her previous ex", "images/v15/detective_board/unknown.png", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
+        v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/unknown.png", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
+        v15_nora_locations.add(Location("Ex-boyfriend's place", "images/v15/detective_board/unknown.png", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
+    
+    # call screen detective_board
+
     play sound "sounds/dooropen.mp3"
 
     scene v15s46_1 # TPP. Amber and MC entering the detective pinboard room, both slight smile, mouth closed.
