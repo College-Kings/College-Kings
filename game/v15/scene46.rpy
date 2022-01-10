@@ -3,6 +3,27 @@
 # Characters: AMBER (Outfit: Detective), MC (Outfit: 1)
 # Time: Morning
 
+    # python:
+        # v15_nora_clues.add(Clue("Keys", "images/v15/detective_board/keys.png"))
+        # v15_nora_clues.add(Clue("Diary", "images/v15/detective_board/diary.png"))
+        # v15_nora_clues.add(Clue("Earring", "images/v15/detective_board/earring.png"))
+        # v15_nora_clues.add(Clue("Broken Bottle", "images/v15/detective_board/broken_bottle.png"))
+        # v15_nora_clues.add(Clue("Message", "images/v15/detective_board/message.png"))
+        # v15_nora_clues.add(Clue("Phone Number", "images/v15/detective_board/phone_number.png"))
+        # v15_nora_clues.add(Clue("Unknown", "images/v15/detective_board/unknown.png"))
+        # v15_nora_clues.add(Clue("Unknown", "images/v15/detective_board/unknown.png"))
+        # v15_nora_clues.add(Clue("Unknown", "images/v15/detective_board/unknown.png"))
+        # v15_nora_clues.add(Clue("Unknown", "images/v15/detective_board/unknown.png"))
+
+        # v15_nora_locations.add(Location("Dock", "images/v15/detective_board/dock.png"))
+        # v15_nora_locations.add(Location("Oldest Boulangerie", "images/v15/detective_board/oldest_boulangerie.png"))
+        # v15_nora_locations.add(Location("Old Mansion", "images/v15/detective_board/old_mansion.png"))
+        # v15_nora_locations.add(Location("Sewers", "images/v15/detective_board/sewers.png"))
+        # v15_nora_locations.add(Location("Club", "images/v15/detective_board/club.png"))
+        # v15_nora_locations.add(Location("Suburb", "images/v15/detective_board/suburb.png"))
+    
+    # call screen detective_board
+
 label v15s46:
     play sound "sounds/dooropen.mp3"
 
