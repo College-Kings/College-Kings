@@ -6,12 +6,13 @@ init python:
 
 
     class Clue:
-        def __init__(self, name, image):
+        def __init__(self, name, image, opinion=""):
             self.name = name
             self.image = image
+            self.opinion = opinion
 
 
     class Location:
-        def __init__(self, name, image=""):
+        def __init__(self, name, image="", opinion=""):
             self.name = name
             self.image = image
