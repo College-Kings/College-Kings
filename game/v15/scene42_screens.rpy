@@ -22,25 +22,35 @@ screen detective_board():
         frame:
             pos clue_positions[i]
             xysize (212, 256)
-            background image_path + "clue_background.png"
+            background image_path + "card_background.png"
 
             add clue.image align (0.5, 0.5)
             text clue.name xalign 0.5 ypos 195
 
     vpgrid:
         cols 3
+        pos (1125, 480)
+        spacing -10
 
         for location in v15_nora_locations:
             frame:
-                xysize (203, 247)
-                background image_path + "clue_background.png"
+                xysize (212, 256)
+                background image_path + "card_background.png"
 
-                add location.image xalign 0.5 ypos 20
-                text location.name xalign 0.5 ypos 200
+                add location.image xalign 0.5 ypos 22
+                text location.name xalign 0.5 ypos 195 xsize 200
 
     button action Return()
 
+    on "show" action SetVariable("quick_menu", False)
+    on "hide" action SetVariable("quick_menu", True)
+    on "replace" action SetVariable("quick_menu", False)
+    on "replaced" action SetVariable("quick_menu", True)
+
+
 style detective_text is text:
     font "fonts/RockSalt-Regular.ttf"
-    size 20
+    size 16
     color "#191814"
+    text_align 0.5
+    line_spacing -22

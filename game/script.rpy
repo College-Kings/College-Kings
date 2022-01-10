@@ -30,6 +30,13 @@ label start:
         v15_nora_clues.add(Clue("Unknown", "images/v15/detective_board/unknown.png"))
         v15_nora_clues.add(Clue("Unknown", "images/v15/detective_board/unknown.png"))
         v15_nora_clues.add(Clue("Unknown", "images/v15/detective_board/unknown.png"))
+
+        v15_nora_locations.add(Location("Dock", "images/v15/detective_board/dock.png"))
+        v15_nora_locations.add(Location("Oldest Boulangerie", "images/v15/detective_board/oldest_boulangerie.png"))
+        v15_nora_locations.add(Location("Old Mansion", "images/v15/detective_board/old_mansion.png"))
+        v15_nora_locations.add(Location("Sewers", "images/v15/detective_board/sewers.png"))
+        v15_nora_locations.add(Location("Club", "images/v15/detective_board/club.png"))
+        v15_nora_locations.add(Location("Suburb", "images/v15/detective_board/suburb.png"))
     
 
     call screen detective_board
