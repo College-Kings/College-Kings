@@ -379,7 +379,7 @@ screen main_menu():
         action Quit()
         pos (1662, 971)
 
-    text "Version " + config.version.split(" ")[0] yalign 1.0 xalign 0.95 color "#4e628f" size 30
+    text "v" + config.version.split(" ")[0] align (1.0, 1.0) xoffset -20 color "#4e628f" size 30
 
 ## Game Menu screen ############################################################
 ##
