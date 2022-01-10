@@ -50,7 +50,7 @@ screen detective_board():
             xysize (212, 256)
             background image_path + "card_background.png"
 
-            text clue.description align (0.5, 0.5) color "#fff" xsize 150
+            text clue.description align (0.5, 0.4) color "#fff" xsize 150
             text clue.informant xalign 0.5 ypos 190
 
     for i in range(len(v15_nora_clues), 9):
