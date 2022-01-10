@@ -711,7 +711,7 @@ label v15s45:
             cl "I think he lives round here though, or at least he used to."
             
             if not v15s44_ex_from_penelope:
-                $ v15_nora_locations.add(Location("Nora's ex-boyfriend's place", "images/v15/detective_board/unknown.png", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
+                $ v15_nora_locations.add(Location("Nora's ex-boyfriend's place", "images/v15/detective_board/ex_house.webp", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
 
             scene v15s45_7a
             with dissolve
@@ -880,7 +880,7 @@ label v15s45:
             cl "I can't say that she would have. He lives nearby, I think. Or he used to at least."
 
             if not v15s44_ex_from_penelope:
-                $ v15_nora_locations.add(Location("Nora's ex-boyfriend's place", "images/v15/detective_board/unknown.png", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
+                $ v15_nora_locations.add(Location("Nora's ex-boyfriend's place", "images/v15/detective_board/ex_house.webp", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
 
             cl "Like I said, it was a long time ago. I don't even remember his name."
 
