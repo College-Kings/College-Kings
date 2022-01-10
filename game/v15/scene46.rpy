@@ -5,22 +5,9 @@
 
 label v15s46:
     python:
-        v15_nora_clues.add(Clue("Wanted to be alone", "images/v15/detective_board/unknown.png", "An obvious clue, but the fact Nora wants to be alone can help us narrow things down."))
-        v15_nora_clues.add(Clue("Loves nature", "images/v15/detective_board/unknown.png", "Penelope confirmed that Nora loves nature. Could be a useful clue."))
-        v15_nora_clues.add(Clue("Hates camping", "images/v15/detective_board/unknown.png", "Pretty definitive answer from Chloe on this one. Nora loves nature, but hates camping."))
         v15_nora_clues.add(Clue("Still likes her previous ex", "images/v15/detective_board/unknown.png", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
-        v15_nora_clues.add(Clue("Runs to her \ndad for help", "images/v15/detective_board/unknown.png", "So her dad is always there as a provider, but not for emotional support. Can this link to any other clues?"))
-        v15_nora_clues.add(Clue("Hates her dad", "images/v15/detective_board/unknown.png", "I'm not so sure she hates her dad. That might just be from Chris not listening to her, like usual."))
-        v15_nora_clues.add(Clue("Really close with \nMs. Rose", "images/v15/detective_board/unknown.png", "Well, it's true they're close. But that doesn't mean she's with Ms Rose, does it?"))
-        v15_nora_clues.add(Clue("Visited aunt after Europe", "images/v15/detective_board/unknown.png", "So we know for sure she visited her aunt. Why would she go there? And for only a quick visit?"))
-        v15_nora_clues.add(Clue("Aunt borrows \ndad's cabin", "images/v15/detective_board/unknown.png", "So her aunt borrows Mr Rose's cabin. Not sure if it's relevant, but maybe some other clues will help."))
-
-        # v15_nora_locations.add(Location("Dock", "images/v15/detective_board/dock.png"))
-        # v15_nora_locations.add(Location("Oldest Boulangerie", "images/v15/detective_board/oldest_boulangerie.png"))
-        # v15_nora_locations.add(Location("Old Mansion", "images/v15/detective_board/old_mansion.png"))
-        # v15_nora_locations.add(Location("Sewers", "images/v15/detective_board/sewers.png"))
-        # v15_nora_locations.add(Location("Club", "images/v15/detective_board/club.png"))
-        # v15_nora_locations.add(Location("Suburb", "images/v15/detective_board/suburb.png"))
+        v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/unknown.png", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
+        v15_nora_locations.add(Location("Ex-boyfriend's place", "images/v15/detective_board/unknown.png", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
     
     # call screen detective_board
 
