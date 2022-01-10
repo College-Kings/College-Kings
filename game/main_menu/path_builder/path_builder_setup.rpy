@@ -142,27 +142,27 @@ label path_builder_setup:
         # Start positions
         PB_ACT_1 = PathBuilderItem(
             PathBuilderCategories.START_LOCATION,
-            "ACT 1 START",
+            "Act 1 Start",
             actions=SetVariable("pb_start_location", "start")
             )
-
-        PB_HOMECOMING = PathBuilderItem(
-            PathBuilderCategories.START_LOCATION,
-            "ACT 2 START",
-            actions=SetVariable("pb_start_location", "v7_homecoming")
-            )
-
-        PB_ACT_3 = PathBuilderItem(
-            PathBuilderCategories.START_LOCATION,
-            "ACT 3 START",
-            actions=SetVariable("pb_start_location", "v11_start")
-            )
-
-        PB_ACT_4 = PathBuilderItem(
-            PathBuilderCategories.START_LOCATION,
-            "ACT 4 START",
-            actions=SetVariable("pb_start_location", "v14_start")
-            )
+        if renpy.loadable("v8/scene1.rpy"):
+            PB_HOMECOMING = PathBuilderItem(
+                PathBuilderCategories.START_LOCATION,
+                "Act 2 Start",
+                actions=SetVariable("pb_start_location", "v7_homecoming")
+                )
+        if renpy.loadable("v11/scene1.rpy"):
+            PB_ACT_3 = PathBuilderItem(
+                PathBuilderCategories.START_LOCATION,
+                "Act 3 Start",
+                actions=SetVariable("pb_start_location", "v11_start")
+                )
+        if renpy.loadable("v14/scene1.rpy"):
+            PB_ACT_4 = PathBuilderItem(
+                PathBuilderCategories.START_LOCATION,
+                "Act 4 Start",
+                actions=SetVariable("pb_start_location", "v14_start")
+                )
         
 
         #Homecoming dates
