@@ -4,9 +4,9 @@ screen detective_board():
 
     default image_path = "images/v15/detective_board/"
     default clue_positions = {
-        4: (263, 200),
-        7: (460, 198),
-        5: (657, 203),
+        0: (263, 200),
+        1: (460, 198),
+        2: (657, 203),
         3: (240, 425),
         4: (440, 435),
         5: (640, 425),
