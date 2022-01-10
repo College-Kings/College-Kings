@@ -4,8 +4,6 @@
 # Time: Night
 
 label v15s18b:
-    $ freeroam13.add("lauren2")
-
     scene v15s18b_1 # TPP. Show Lauren sitting on the couch surrounded by gifts, slight smile, mouth open.
     #with dissolve
     
