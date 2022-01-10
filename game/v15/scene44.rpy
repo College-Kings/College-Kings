@@ -279,7 +279,7 @@ label v15s44_continue:
 
     pe "\"Was so nice to see my baby niece today... She never stays for long, but it's always perfect <3 See you soon, Nora Bora!\""
     $ v15_nora_clues.add(Clue("Penelope", "Nora visited her aunt the day she landed from Europe", "So we know for sure she visited her aunt. Why would she go there? And for only a quick visit?"))
-    $ v15_nora_locations.add(Location("Aunt's apartment", "images/v15/detective_board/unknown.png", "Her aunt's post said she only visited for an hour. It could be a lie, but I think it's most likely the truth."))
+    $ v15_nora_locations.add(Location("Nora's aunt's apartment", "images/v15/detective_board/unknown.png", "Her aunt's post said she only visited for an hour. It could be a lie, but I think it's most likely the truth."))
 
     scene v15s44_8
     with dissolve

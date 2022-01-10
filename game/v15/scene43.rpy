@@ -442,7 +442,7 @@ label v15s43:
     with dissolve
 
     pause 0.75
-    $ v15_nora_locations.add(Location("Dad's house", "images/v15/detective_board/unknown.png", "Too obvious. And if Nora wanted to get away, is going to her Dad's house far enough away?"))
+    $ v15_nora_locations.add(Location("Nora's dad's house", "images/v15/detective_board/unknown.png", "Too obvious. And if Nora wanted to get away, is going to her Dad's house far enough away?"))
     
     $ v15_nora_locations.add(Location("Ms. Rose's house", "images/v15/detective_board/unknown.png", "This is likely the first place people would look for Nora. So, for that reason, I'm not sure she would go there."))
 
