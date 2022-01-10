@@ -483,7 +483,7 @@ label v15s43:
 
     ch "And I suggest you should respect that too."
 
-    $ v15_nora_clues.add(Clue("Wanted to be alone", "images/v15/detective_board/unknown.png", "An obvious clue, but the fact Nora wants to be alone can help us narrow things down."))
+    $ v15_nora_clues.add(Clue("Chris", "Nora wanted to be alone after the break up", "An obvious clue, but the fact Nora wants to be alone can help us narrow things down."))
 
     scene v15s43_14g # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth closed.
     with dissolve
@@ -626,8 +626,8 @@ label v15s43:
     with dissolve
 
     ch "Her aunt... Oh yeah! Sometimes her aunt will rent out her dad's cabin."
-    $ v15_nora_clues.add(Clue("Aunt borrows \ndad's cabin", "images/v15/detective_board/unknown.png", "So her aunt borrows Mr Rose's cabin. Not sure if it's relevant, but maybe some other clues will help."))
-    $ v15_nora_locations.add(Location("Dad's cabin", "images/v15/detective_board/unknown.png", "She could be at the cabin. It sounds like it's out in nature and she could be alone. Although other clues might take us in a different direction."))
+    $ v15_nora_clues.add(Clue("Chris", "Nora's aunt frequently borrows her dad's cabin", "So her aunt borrows Mr Rose's cabin. Not sure if it's relevant, but maybe some other clues will help."))
+    $ v15_nora_locations.add(Location("Nora's dad's cabin", "images/v15/detective_board/unknown.png", "She could be at the cabin. It sounds like it's out in nature and she could be alone. Although other clues might take us in a different direction."))
 
     ch "And there, that answers your question about other properties, too. Can you leave me alone now?"
 
@@ -687,7 +687,7 @@ label v15s43:
             with dissolve
 
             ch "She pretty much hates him. That's the last place she'd go."
-            $ v15_nora_clues.add(Clue("Hates her dad", "images/v15/detective_board/unknown.png", "I'm not so sure she hates her dad. That might just be from Chris not listening to her, like usual."))
+            $ v15_nora_clues.add(Clue("Chris", "Nora hates her dad", "I'm not so sure she hates her dad. That might just be from Chris not listening to her, like usual."))
 
             scene v15s43_15
             with dissolve
@@ -748,7 +748,7 @@ label v15s43:
             with dissolve
 
             ch "I doubt it. She hates her dad."
-            $ v15_nora_clues.add(Clue("Hates her dad", "images/v15/detective_board/unknown.png", "I'm not so sure she hates her dad. That might just be from Chris not listening to her, like usual."))
+            $ v15_nora_clues.add(Clue("Chris", "Nora hates her dad", "I'm not so sure she hates her dad. That might just be from Chris not listening to her, like usual."))
 
             scene v15s43_14g
             with dissolve
@@ -795,7 +795,7 @@ label v15s43:
             with dissolve
 
             ch "She hates her dad. She wouldn't go to him."
-            $ v15_nora_clues.add(Clue("Hates her dad", "images/v15/detective_board/unknown.png", "I'm not so sure she hates her dad. That might just be from Chris not listening to her, like usual."))
+            $ v15_nora_clues.add(Clue("Chris", "Nora hates her dad", "I'm not so sure she hates her dad. That might just be from Chris not listening to her, like usual."))
 
             scene v15s43_16a # TPP. Show MC kicking the coffee table, MC angry, mouth open.
             with dissolve
