@@ -69,7 +69,10 @@ screen detective_board():
         spacing -10
 
         for location in v15_nora_locations:
-            frame:
+            button:
+                hovered Show("detective_board_description", card=location)
+                unhovered Hide("detective_board_description")
+                action NullAction()
                 xysize (212, 256)
                 background image_path + "card_background.png"
 
