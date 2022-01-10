@@ -182,7 +182,7 @@ label v15s12:
             li "Ha, yeah. I know... Me too." 
 
         if chloe.relationship.value >= Relationship.GIRLFRIEND.value: 
-            li "And... There was something else too."
+            li "And... there was something else too."
 
             scene v15s12_5
             with dissolve
@@ -434,6 +434,7 @@ label v15s12:
     with dissolve
 
     li "So, here's what I'm thinking... Basically, our focus this time is to gain more allies."
+
     li "Allies that we can trust to support us now, during the election, and also in the future, when I'm President of the Chicks."
 
     scene v15s12_8b # FPP. Same as v15s12_8a, but mouth closed [Janitor's closet].
@@ -572,6 +573,7 @@ label v15s12:
         with dissolve
         
         u "It might be more money that we're taking from the budget..."
+
         u "But there's no chance they'll vote for Chloe after you roll up in a limo to take them out for the night."
 
         scene v15s12_8a
@@ -579,6 +581,36 @@ label v15s12:
 
         li "Haha, that's so true. It's going to be epic!" 
 
+        scene v15s12_8b
+        with dissolve
+
+        if v14_chloe_wolves or not v14_help_chloe: #If Chloe is with Wolves
+            if v15_lindsey_inviteseb:
+                u "Chloe has just announced the Wolves as her official brotherhood but having Sebastian there will surely make them question it."
+                
+                if joinwolves:
+                    u "(Damn, will it? What have I done? We really don't need any more drama back at the house...)"
+                
+                else:
+                    u "(If it causes any issues for them, it's their problem...)"
+        
+            else:
+                u "Chloe has just announced the Wolves as her official brotherhood, so we have to focus on the Apes now."
+                
+                if v14_ApesPostChloePics:
+                    u "(Wherever Grayson's mind is, it's not on supporting Chloe, anyway...)"
+        
+        else: #If Chloe is with Apes 
+            if v15_lindsey_inviteseb:
+                u "(Getting the Apes to support Chloe and now trying to get Sebastian to influence the Wolves. I'm getting everyone involved, ha!)"
+                
+            else:
+                if not v14_chloe_cameron:
+                    u "(Grayson's getting a lot of attention from both sides of the campaign... *Chuckles*)"
+
+                    if v14_ApesPostChloePics:
+                        u "(But I don't think he's rooting for Chloe right now anyway...)"
+                
     # -Regardless-
     scene v15s12_8a
     with dissolve

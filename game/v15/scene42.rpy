@@ -343,7 +343,7 @@ label v15s42:
 
     # -A UI pops up to show the three detective archetypes that MC can choose from (Professional, Psychologist, Loose Cannon). MC makes his choice and the UI disappears again-
 
-    if mc.detective = Detective.PROFESSIONAL:
+    if mc.detective == Detective.PROFESSIONAL:
         scene v15s42_7a
         with dissolve
 
@@ -364,7 +364,7 @@ label v15s42:
 
         am "Haha, okay fair. Yeah! I can see this."
 
-    elif mc.detective = Detective.PSYCHOLOGIST:
+    elif mc.detective == Detective.PSYCHOLOGIST:
         scene v15s42_7a
         with dissolve
 
@@ -385,7 +385,7 @@ label v15s42:
 
         am "Okay, cool! So, you'll be good at analyzing every word and figuring out if they're lying or telling us the truth."
 
-    elif mc.detective = Detective.LOOSE_CANNON:
+    elif mc.detective == Detective.LOOSE_CANNON:
         scene v15s42_7a
         with dissolve
 
@@ -434,12 +434,14 @@ label v15s42:
 
     am "There's a shit ton of clues, we just have to find them."
 
+    am "But remember, not all clues we find are accurate. People might lie or misremember, you can't trust everything we hear."
+
     scene v15s42_11 # FPP. MC standing closer looking at the board as Amber is looking at the board and pointing at it, Amber slight smile, mouth closed.
     with dissolve
 
     pause 0.75
 
-# -The UI pops up to show MC the headings Clues and Possible Locations, they currently have question marks over the unlockable items. MC exits the UI whenever-
+    call screen detective_board # -The UI pops up to show MC the headings Clues and Possible Locations, they currently have question marks over the unlockable items. MC exits the UI whenever-
 
     scene v15s42_12 # FPP. MC standing by the board, MC looking at Amber, Amber looking at Mc, Amber slight smile, mouth closed.
     with dissolve

@@ -93,9 +93,9 @@ label v15s36:
         label v15s36_dontask:
 
         scene v15s36_5 # FPP. MC and Autumn further down the street, new set of houses in the background, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth open.
-        with dissolve
+        with fade
 
-        aut "Oh! Umm, let me think... There were some really crazy ones, haha."
+        aut "Now that I think about it, there were some really crazy ones, haha."
 
         scene v15s36_5a # FPP. MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth closed.
         with dissolve

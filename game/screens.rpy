@@ -259,7 +259,7 @@ screen quick_menu():
     if quick_menu:
         hbox:
             align (0.5, 1.0)
-            yoffset -30
+            yoffset 0
             spacing 30
 
             if not realmode:
@@ -378,6 +378,8 @@ screen main_menu():
         hover "quit_hover"
         action Quit()
         pos (1662, 971)
+
+    text "v" + config.version.split(" ")[0] align (1.0, 1.0) xoffset -20 color "#4e628f" size 30
 
 
 ## Game Menu screen ############################################################

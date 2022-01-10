@@ -93,7 +93,6 @@ label v13s40:
             $ mc.inventory.add_item(butt_plug)
             $ mc.inventory.add_item(spankers)
             $ mc.inventory.add_item(feather)
-            $ mc.money -= 1000
 
     scene v13s40_8 # FPP. Chloe wrapping her arms around MC, looking at him, Chloe sexy look, mouth open
     with dissolve

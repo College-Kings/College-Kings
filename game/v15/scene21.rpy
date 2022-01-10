@@ -814,7 +814,7 @@ label v15s21:
             scene v15s21_6h
             with dissolve
 
-            lee "You weren't 100% convincing throughout the meeting..."
+            lee "You weren't 100\% convincing throughout the meeting..."
 
             scene v15s21_7g
             with dissolve

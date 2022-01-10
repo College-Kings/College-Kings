@@ -4,8 +4,6 @@
 # Time: Night
 
 label v15s18b:
-    $ freeroam13.add("lauren2")
-
     scene v15s18b_1 # TPP. Show Lauren sitting on the couch surrounded by gifts, slight smile, mouth open.
     #with dissolve
     
@@ -595,11 +593,6 @@ label v15s18b:
     with dissolve
 
     aut "*Chuckles* Better."
-
-    scene v15s18b_16 # TPP. Show MC standing up slight smile, mouth closed.
-    with dissolve
-
-    pause 0.75
 
     $ v15s18b_kiwiiPost1= KiwiiPost(riley, "v15/rilpost1.webp", "Celebrating this pure soul tonight!", numberLikes=648)
     $ v15s18b_kiwiiPost1.newComment(lindsey, "So cute! Your costumes are perfect <3", numberLikes=renpy.random.randint(260, 560))
