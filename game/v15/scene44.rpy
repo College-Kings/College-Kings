@@ -340,6 +340,8 @@ label v15s44_continue:
             u "Well, at least that's something."
         
         "Ask about Nora's posts":
+            $ v15s44_ex_from_penelope = True
+            
             scene v15s44_8b
             with dissolve
 
