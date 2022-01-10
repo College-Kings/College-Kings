@@ -739,7 +739,8 @@ label v15s18e_end:
     if not _in_replay:
         $ checklist[0].complete = True
 
-    $ lauren.relationship = Relationship.GIRLFRIEND
+    if lauren.relationship.value < Relationship.FWB.value
+        $ lauren.relationship = Relationship.FWB
 
     u "(What a fucking party...) *Laughs*"
 

@@ -4,7 +4,6 @@
 # Time: Morning
 
 label v15s46:
-    call screen detective_board
 
     play sound "sounds/dooropen.mp3"
 
@@ -35,11 +34,6 @@ label v15s46:
     u "Let's see if I can work my magic."
 
     scene v15s46_4 # TPP. Show MC walking up to the pinboard, slight smile, mouth closed
-    with dissolve
-
-    pause 0.75
-
-    scene v15s46_5 # FPP. Looking at the pinboard.
     with dissolve
 
     pause 0.75
