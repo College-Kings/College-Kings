@@ -48,7 +48,7 @@ label v15s43:
                 
                 play sound "sounds/dooropen.mp3"
 
-                scene v15s42_3 # TPP. Close up shot of MC's hand turning the door knob and opening the door.
+                scene v15s43_3 # TPP. Close up shot of MC's hand turning the door knob and opening the door.
                 with dissolve
 
                 u "It's unlocked."
