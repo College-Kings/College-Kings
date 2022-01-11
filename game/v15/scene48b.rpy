@@ -4,6 +4,21 @@
 # Time: Evening
 
 label v15s48b:
+    scene v15s48b_97
+    with dissolve
+    
+    pause 0.75
+    
+    scene v15s48b_98
+    with dissolve
+    
+    pause 0.75
+    
+    scene v15s48b_99
+    with dissolve
+    
+    pause 0.75
+
     if "v15_nora" in sceneList: # Placeholder
         $ nora.relationship = Relationship.FWB
     
