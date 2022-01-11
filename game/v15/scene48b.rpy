@@ -19,7 +19,7 @@ label v15s48b:
     
     pause 0.75
 
-    if "v15_nora" in sceneList: # Placeholder
+    if "v15_nora" in sceneList:
         $ nora.relationship = Relationship.FWB
     
         scene v15s48b_1 # TPP. MC and Nora spooning, MC big spoon with his arm around her, Nora holding his hand, both slight smile, mouth closed.

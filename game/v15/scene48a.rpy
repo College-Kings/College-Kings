@@ -35,11 +35,13 @@ label v15s48a:
         with dissolve
 
         u "(Damn straight.)"
+
     if achievement.has("helping_hand"):
         scene v15s48a_2
         with dissolve
 
         no "I mean, you helped me get people signed up for the Europe trip. And I didn't even have to ask."
+
     if v10_cheerfornora:
         scene v15s48a_2
         with dissolve
@@ -65,11 +67,13 @@ label v15s48a:
         with dissolve
 
         no "*Giggles*"
+
     if not v12_chase_robber:
         scene v15s48a_2
         with dissolve
 
         no "When I got robbed in Europe, your first instinct was to make sure that I was okay."
+
     if v12_fight_win:
         scene v15s48a_2
         with dissolve
@@ -90,6 +94,7 @@ label v15s48a:
         with dissolve
 
         u "Of course, I did."
+
     if v12_followed_nora:
         scene v15s48a_2
         with dissolve
@@ -119,40 +124,35 @@ label v15s48a:
     menu:
         "You are wanted":
             $ add_point(KCT.BOYFRIEND)
-            u "You are."
-
-            play sound "sounds/kiss.mp3"
+            u "You are..."
 
             scene v15s48a_3 # TPP. MC kissing Nora's right cheek.
             with dissolve
-
-            u "Completely"
-
             play sound "sounds/kiss.mp3"
+
+            u "completely..."
 
             scene v15s48a_4 # TPP. MC kissing Nora's left cheek.
             with dissolve
-
-            u "And utterly."
-
             play sound "sounds/kiss.mp3"
+
+            u "and utterly..."
 
             scene v15s48a_2d # FPP. MC kissing Nora
             with dissolve
 
-            pause 0.75
-
-            play sound "sounds/kiss.mp3"
+            pause 1.25
 
             scene v15s48a_5 # TPP. Show MC and Nora kissing.
             with dissolve
+            play sound "sounds/kiss.mp3"
 
-            pause 0.75
+            pause 1.25
 
             scene v15s48a_2c
             with dissolve
 
-            u "Wanted."
+            u "wanted."
 
             scene v15s48a_2e # FPP. Nora still leaned in close to MC, MC looking at Nora, Nora looking at MC, Nora blushing, Nora smile, mouth open.
             with dissolve
@@ -161,17 +161,17 @@ label v15s48a:
 
         "Just kiss her":
             $ add_point(KCT.BRO)
-            play sound "sounds/kiss.mp3"
 
             scene v15s48a_2d
             with dissolve
+            play sound "sounds/kiss.mp3"
 
-            pause 0.75
+            pause 1.25
 
             scene v15s48a_5
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v15s48a_2b
             with dissolve
@@ -188,36 +188,36 @@ label v15s48a:
 
             no "Then don't."
 
-    play sound "sounds/kiss.mp3"
-
     scene v15s48a_6 # TPP. Show MC and Nora kissing romantically on the couch with the fireplace with a fire in the shot.
     with dissolve
 
-    pause 0.75
+    play sound "sounds/kiss.mp3"
+
+    pause 1.25
 
     scene v15s48a_7 # TPP. Closer up of MC and Nora, MC taking off Nora's shirt her boobs out, Nora's face obscured by her shirt, MC slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
-
-    play sound "sounds/kiss.mp3"
+    pause 1.25
 
     scene v15s48a_7a # TPP. MC and Nora kissing, Nora is topless.
     with dissolve
 
-    pause 0.75
+    play sound "sounds/kiss.mp3"
+
+    pause 1.25
 
     scene v15s48a_7b # TPP. Nora taking of MC's shirt, MC's face obscured by his shirt, Nora flirty, mouth closed.
     with dissolve
 
-    pause 0.75
-
-    play sound "sounds/kiss.mp3"
+    pause 1.25
 
     scene v15s48a_7c # TPP. MC and Nora kissing, both topless.
     with dissolve
 
-    pause 0.75
+    play sound "sounds/kiss.mp3"
+
+    pause 1.25
     
     scene v15s48a_8 # TPP. Nora laying on the couch fully nude, Nora's full body in the shot, Nora biting her lip.
     with fade
@@ -368,10 +368,10 @@ label v15s48a_feet:
 
             no "My toes sucked before."
 
-            play sound "sounds/kiss.mp3"
-
             scene v15s48afe_6 # TPP. Show MC kissing Nora's foot, Nora flirty, mouth open.
             with dissolve
+
+            play sound "sounds/kiss.mp3"
 
             no "I think it's my new favorite thing."
 
@@ -393,10 +393,10 @@ label v15s48a_vagina:
 
     menu:
         "Tease with kissing":
-            play sound "sounds/kiss.mp3"
-        
             scene v15s48ava_2 # TPP. Show MC kissing Nora's inner thigh, Nora flirty, mouth open.
             with dissolve
+
+            play sound "sounds/kiss.mp3"
 
             no "*Gasps*"
 
@@ -407,10 +407,10 @@ label v15s48a_vagina:
 
             u "I want to make you feel good, but I'm still going to have some fun."
 
-            play sound "sounds/kiss.mp3"
-
             scene v15s48ava_2a # TPP. Show MC kissing closer to Nora's vagina, Nora flirty, mouth open.
             with dissolve
+
+            play sound "sounds/kiss.mp3"
 
             no "God, you're such a fucking turn on."
 
@@ -886,5 +886,7 @@ label v15s48a_end:
     no "No, you are."
 
     stop music fadeout 3
+
+    $ renpy.end_replay()
 
     jump v15s48b

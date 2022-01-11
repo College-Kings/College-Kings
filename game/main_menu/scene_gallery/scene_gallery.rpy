@@ -116,7 +116,7 @@ init python:
         SceneGallery("The List (Riley)", "images/v15/scene 18a/v15s18ariley_14.webp", "v15s18a_rileysg") # 18a, Riley
         SceneGallery("Birthday treat", "images/v15/scene 18e/v15s18eend_6.webp", "v15s18e_sg"), # 18e, Lauren
         SceneGallery("Fun at the wedding", "images/3 hits.webp", "33"), # 33, Naomi
-        SceneGallery("Choosing Nora", "images/v15/scene 48a/v15noror2Start.webp", "48"), # 48, Nora
+        SceneGallery("Choosing Nora", "images/v15/scene 48a/v15noror2Start.webp", "v15s48a"), # 48, Nora
 
 
 screen scene_gallery():
