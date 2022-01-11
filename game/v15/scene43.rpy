@@ -491,7 +491,7 @@ label v15s43:
 
     menu:
         "Where did she go?":
-            $ v15s43_camping_from_chris = True
+            $ v15_nora_clue_camping = True
         
             $ add_point(KCT.BRO)
             
@@ -538,7 +538,7 @@ label v15s43:
             am "That's no good, Chris. You need to start telling us something we can use."
 
         "You're lying" if mc.detective == Detective.PROFESSIONAL:
-            $ v15s43_camping_from_chris = True
+            $ v15_nora_clue_camping = True
         
             scene v15s43_14g
             #with dissolve
@@ -581,7 +581,7 @@ label v15s43:
             ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
         
         "Accuse Chris" if mc.detective == Detective.LOOSE_CANNON:
-            $ v15s43_camping_from_chris = True
+            $ v15_nora_clue_camping = True
         
             play sound "sounds/thud.mp3"
 
