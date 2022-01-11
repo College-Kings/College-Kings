@@ -946,8 +946,6 @@ label v15s39:
                 "Try to trick her":
                     # KCT POINTS BELOW, AFTER CHECK
 
-                    label test:
-                
                     scene v15s39_8b
                     with dissolve
 
