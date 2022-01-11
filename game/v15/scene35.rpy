@@ -241,6 +241,8 @@ label v15s35:
     scene v15s35_6 # TPP. show everyone sitting at the kitchen table On Mc's Left is Lindsey, in front of Mc is Autumn, on Mc's right is Aubrey, Mc and Lindsey are looking at each other Lindsey's mouth is open, Mc's mouth is closed, Autumn and Aubrey are looking at each other Aubrey's mouth is open, Autumns mouth is closed
     with dissolve
 
+    pause 0.75
+
     if v15_lindsey_mostlikelyto: #If helping Lindsey and chose Most Likely To
         jump v15most_likely_to
 
@@ -488,6 +490,8 @@ label v15s35:
         scene v15s35_6b # TPP. same as v15s35_6a Aubrey, Autumn and Lindsey are laughing at Mc, Mc is rolling his eyes, Everyone is still holding their phones
         with dissolve
 
+        pause 0.75
+
     label v15s35_wyr1_end:
         scene v15s35_7d
         with dissolve
@@ -531,6 +535,8 @@ label v15s35:
 
         scene v15s35_8a
         with dissolve
+
+        pause 0.75
 
         # -We enter the UI for Would you rather-
 

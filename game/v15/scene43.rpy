@@ -632,8 +632,6 @@ label v15s43:
 
     u "How is that supposed to help?"
 
-    label test:
-
     scene v15s43_14h
     with dissolve
 
