@@ -1342,15 +1342,15 @@ label v15s18c_lauren:
     scene v15s18c_la_3a
     with dissolve
 
-    la "Yeah, it is. I was a little salty about Autumn getting the bigger room when we first moved in, but..."
+    la "Yeah, it is. Autumn's let me stay in this room for tonight."
 
-    la "I got this instead."
+    la "Her room is even bigger than this one, have you seen it?"
 
     scene v15s18c_la_3
     with dissolve
 
     menu:
-        "Balcony is better":
+        "This balcony is better":
             $ add_point(KCT.BOYFRIEND)
 
             u "Eh, I like the balcony a lot better. I'd be out here all the time if I were you, haha."
@@ -1358,7 +1358,7 @@ label v15s18c_lauren:
             scene v15s18c_la_3a
             with dissolve
 
-            la "*Chuckles* I am out here a lot, it's just relaxing."
+            la "*Chuckles* I drop by here a lot, it's just relaxing."
 
         "Bigger the better":
             $ add_point(KCT.BRO)
@@ -1366,12 +1366,12 @@ label v15s18c_lauren:
             scene v15s18c_la_3
             with dissolve
 
-            u "Yeah... Having a small room kind of sucks, the bigger the better in my opinion."
+            u "Yeah... Having a small dorm room kind of sucks, the bigger the better in my opinion."
 
             scene v15s18c_la_3a
             with dissolve
 
-            la "I mean it does suck sometimes, but I'd rather have this."
+            la "I mean it does suck sometimes, but I don't need something massive, haha."
 
             scene v15s18c_la_3
             with dissolve
