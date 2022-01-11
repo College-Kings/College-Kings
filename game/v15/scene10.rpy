@@ -707,6 +707,8 @@ label v15s10:
 
                     u "Okay, yeah. That's a good deal, great."
 
+            label test:
+
             scene v15s10_15 
             with dissolve
 
@@ -736,30 +738,31 @@ label v15s10:
 
             pause 0.75
 
-            scene v15s10_22a
-            with dissolve
+            if False:
+                scene v15s10_22a
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
-            scene v15s10_22
-            with dissolve
+                scene v15s10_22
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
-            scene v15s10_22a
-            with dissolve
+                scene v15s10_22a
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
-            scene v15s10_22
-            with dissolve
+                scene v15s10_22
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
-            scene v15s10_22a
-            with dissolve
+                scene v15s10_22a
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
             scene v15s10_23
             with dissolve
