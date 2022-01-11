@@ -13,9 +13,17 @@ label v15s44:
     with dissolve
 
     pause 0.75
+    
+    scene v15s44_3b
+    with dissolve
+    
+    am "Let's take another look at the board to see what we have so far."
 
     show screen detective_board
 
+    scene v15s44_3 # FPP. MC standing next to Amber, both facing the pinboard, MC looking at Amber, Amber looking at the pinboard, mouth closed, serious expression (don't actually show the pinboard)
+    with dissolve
+    
     pause
 
 # -MC and Amber enter room 103 where the pinboard is. They approach the pinboard-
@@ -23,11 +31,8 @@ label v15s44:
 # -The UI pops up to show all the clues achieved from the Chris interrogation (CLUES UNLOCKED: Nora wanted to be alone after the breakup. Nora hates her dad. LOCATIONS UNLOCKED: Her Dad's house. Ms. rose's House. Nora's Dad's cabin. Camping by herself)-
 
 label v15s44_continue:
-    scene v15s44_3 # FPP. MC standing next to Amber, both facing the pinboard, MC looking at Amber, Amber looking at the pinboard, mouth closed, serious expression (don't actually show the pinboard)
-    with dissolve
-
     menu:
-        "Ready to guess":
+        "I'm ready to guess":
             $ add_point(KCT.BRO)
             
             scene v15s44_3a # FPP. Same as v15s44_3, Amber looking at MC, Amber serious expression, mouth closed
