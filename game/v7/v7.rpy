@@ -17275,7 +17275,9 @@ label v7end:
 
     if renpy.loadable("v8/scene1.rpy"):
         jump v8start
+
     elif config.enable_steam:
         call screen steam_end(link="https://store.steampowered.com/app/1624520/College_Kings__Act_II/")
+
     else:
         jump gameEnd
