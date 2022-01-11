@@ -457,20 +457,47 @@ label v15s43:
 
     ch "No."
 
-    scene v15s43_14f # FPP. MC looking at Chris, Chris looking at MC, Chris nervous, mouth closed.
-    with dissolve
+    if joinwolves or "nora" in freeroam11:
+        scene v15s43_14f # FPP. MC looking at Chris, Chris looking at MC, Chris nervous, mouth closed.
+        with dissolve
 
-    u "One-word answers... Huh. That's never convincing, is it detective?"
+        u "One-word answers... Huh. That's never convincing, is it detective?"
+        
+        scene v15s43_15a # FPP. MC looking at Amber, Amber looking at MC, Amber suspicious, mouth open.
+        with dissolve
 
-    scene v15s43_15a # FPP. MC looking at Amber, Amber looking at MC, Amber suspicious, mouth open.
-    with dissolve
+        am "Not at all, my protégé... Not at all."
 
-    am "Not at all, my protege... Not at all."
+    else:
+        scene v15s43_15b
+        with dissolve
+        
+        u "Wait... stepmother?"
+        
+        scene v15s43_15c
+        with dissolve
+        
+        am "Yeah, Ms. Rose... She's Nora's stepmom."
+
+        scene v15s43_15b
+        with dissolve
+        
+        u "What the fuck? Why am I hearing about this for the first time now?"
+
+        scene v15s43_15a
+        with dissolve
+        
+        am "Well, try to pay attention to all these details from now on, [name]. They may become important."
+
+        scene v15s43_15
+        with dissolve
+
+        am "Especially considering our first suspect here probably knows more than he's willing to tell."
 
     scene v15s43_14h
     with dissolve
 
-    ch "Okay then, I don't think she's with either of them. Happy now?"
+    ch "I don't think she's with either parent. Happy now?"
 
     scene v15s43_15
     with dissolve
