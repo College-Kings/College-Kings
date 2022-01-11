@@ -14,7 +14,9 @@ label v15s44:
 
     pause 0.75
 
-    call screen detective_board
+    show screen detective_board
+
+    pause
 
 # -MC and Amber enter room 103 where the pinboard is. They approach the pinboard-
 
@@ -405,7 +407,9 @@ label v15s44_continue:
 
     u "Okay, so let's add those clues to the board and see how things are shaping up."
 
-    call screen detective_board
+    show screen detective_board
+
+    pause
 
 # -The UI pops up to show all the clues achieved from Penelope's search (CLUES UNLOCKED: Nora loves nature. Nora visited her aunt the day she landed from Europe. LOCATION UNLOCKED: Staying at her Aunt's apartment)-
 
