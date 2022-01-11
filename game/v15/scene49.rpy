@@ -290,13 +290,10 @@ label v15s49:
         "Nobody's walking away":
             $ add_point(KCT.TROUBLEMAKER)
 
-            scene v15s49_16
-            #with dissolve
-
-            u "Nobody's walking away, Riley."
-
             scene v15s49_17 # TPP. Close up of MC's face looking at Tom, MC angry, mouth open.
             with dissolve
+
+            u "Nobody's walking away, Riley."
 
             u "He's going to learn today."
 
