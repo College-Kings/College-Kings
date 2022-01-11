@@ -436,19 +436,19 @@ label v15s43:
     scene v15s43_15
     with dissolve
 
+    $ v15_nora_locations.add(Location("Nora's dad's house", "images/v15/detective_board/dad_house.webp", "Too obvious. And if Nora wanted to get away, is going to her Dad's house far enough away?"))
+
     am "The obvious answer is that she's at her dad's house..."
 
     scene v15s43_14d # FPP. MC looking at Chris, Chris looking at Amber, Chris nervous, mouth closed.
     with dissolve
+   
+    $ v15_nora_locations.add(Location("Ms. Rose's house", "images/v15/detective_board/ms_rose_house.webp", "This is likely the first place people would look for Nora. So, for that reason, I'm not sure she would go there."))
 
-    $ v15_nora_locations.add(Location("Nora's dad's house", "images/v15/detective_board/dad_house.webp", "Too obvious. And if Nora wanted to get away, is going to her Dad's house far enough away?"))
-    
     am "...or her stepmother's."
     
     scene v15s43_15
     with dissolve
-
-    $ v15_nora_locations.add(Location("Ms. Rose's house", "images/v15/detective_board/ms_rose_house.webp", "This is likely the first place people would look for Nora. So, for that reason, I'm not sure she would go there."))
 
     am "Care to comment on that?"
 
@@ -480,9 +480,9 @@ label v15s43:
     scene v15s43_14b #test2
     with dissolve
 
-    ch "She wanted to be alone after we broke up. I'm respecting that wish."
-
     $ v15_nora_clues.add(Clue("Chris", "Nora wanted to be alone after the break up", "An obvious clue, but the fact Nora wants to be alone can help us narrow things down."))
+
+    ch "She wanted to be alone after we broke up. I'm respecting that wish."
 
     ch "And I suggest you should respect that too."
 
@@ -513,9 +513,10 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            ch "Why are you acting so weird? Listen, I don't know where she is. She could have gone camping for all I know."
             $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/camping.webp", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
 
+            ch "Why are you acting so weird? Listen, I don't know where she is. She could have gone camping for all I know."
+            
             ch "Just wait until she comes back. She's fine. I swear she's fine."
 
         "Did she see someone?":
@@ -636,18 +637,16 @@ label v15s43:
     scene v15s43_14h
     with dissolve
 
+    $ v15_nora_clues.add(Clue("Chris", "Nora's aunt frequently borrows her dad's cabin", "So her aunt borrows Mr Rose's cabin. Not sure if it's relevant, but maybe some other clues will help."))
+
     ch "Her aunt... Oh yeah! Sometimes her aunt will rent out her dad's cabin."
 
-    #show screen detective_popup("Clue Unlocked: Nora's aunt frequently borrows her dad's cabin") with dissolve
-
-    $ v15_nora_clues.add(Clue("Chris", "Nora's aunt frequently borrows her dad's cabin", "So her aunt borrows Mr Rose's cabin. Not sure if it's relevant, but maybe some other clues will help."))
+    $ v15_nora_locations.add(Location("Nora's dad's cabin", "images/v15/detective_board/dad_cabin.webp", "She could be at the cabin. It sounds like it's out in nature and she could be alone. Although other clues might take us in a different direction."))
 
     ch "And there, that answers your question about other properties, too. Can you leave me alone now?"
 
     scene v15s43_15
     with dissolve
-
-    $ v15_nora_locations.add(Location("Nora's dad's cabin", "images/v15/detective_board/dad_cabin.webp", "She could be at the cabin. It sounds like it's out in nature and she could be alone. Although other clues might take us in a different direction."))
 
     am "Not so fast, wise guy."
 

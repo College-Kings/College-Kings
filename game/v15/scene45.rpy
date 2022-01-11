@@ -710,14 +710,13 @@ label v15s45:
 
             cl "But guys, this was like ages ago. So don't ask me for his name, I can't remember."
 
-            cl "I think he lives round here though, or at least he used to."
-            
-        
-            scene v15s45_7a
-            with dissolve
-
             if not v15s44_ex_from_penelope:
                 $ v15_nora_locations.add(Location("Nora's ex-boyfriend's place", "images/v15/detective_board/ex_house.webp", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
+
+            cl "I think he lives round here though, or at least he used to."
+            
+            scene v15s45_7a
+            with dissolve
 
             u "How conveniently vague..."
 
@@ -729,14 +728,14 @@ label v15s45:
             scene v15s45_7j
             with dissolve
 
+            if not v15s44_ex_from_penelope:
+                $ v15_nora_clues.add(Clue("Chloe", "Nora's still friends with her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
+
             cl "It's not like that! All I remember is that she still kept in touch with the guy."
 
             scene v15s45_7
             with dissolve
 
-            if not v15s44_ex_from_penelope:
-                $ v15_nora_clues.add(Clue("Chloe", "Nora's still friends with her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
-    
             cl "But that's Nora for you, always looking to the past..."
             
         "Refer to a past clue":
@@ -782,10 +781,9 @@ label v15s45:
             scene v15s45_7g
             with dissolve
 
-            cl "Mr. Rose took her on a camping trip when she was a kid. She said she hated it..."
-
             $ v15_nora_clues.add(Clue("Chloe", "Nora hates camping", "Pretty definitive answer from Chloe on this one. Nora loves nature, but hates camping."))
 
+            cl "Mr. Rose took her on a camping trip when she was a kid. She said she hated it..."
 
             cl "I think you might need to take another look at your evidence."
 
@@ -817,6 +815,7 @@ label v15s45:
             cl "You know, a walk down a designated nature trail? But she's not the type to get her hands dirty, that's for sure."
 
             $ v15_nora_clues.add(Clue("Chloe", "Nora hates camping", "Pretty definitive answer from Chloe on this one. Nora loves nature, but hates camping."))
+
             cl "The first and last time she went camping was with her dad. She hated it! Couldn't stand the bugs and the cold."
 
             scene v15s45_8a
@@ -883,10 +882,10 @@ label v15s45:
             scene v15s45_7
             with dissolve
 
-            cl "I can't say that she would have. He lives nearby, I think. Or he used to at least."
-
             if not v15s44_ex_from_penelope:
                 $ v15_nora_locations.add(Location("Nora's ex-boyfriend's place", "images/v15/detective_board/ex_house.webp", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
+
+            cl "I can't say that she would have. He lives nearby, I think. Or he used to at least."
 
             cl "Like I said, it was a long time ago. I don't even remember his name."
 
