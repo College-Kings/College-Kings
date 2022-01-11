@@ -335,6 +335,9 @@ label v15s1:
 
     imre "Yeah. I mean, I know this whole break up is totally on Nora because she's been acting like a bitch, but..."
 
+    if v13_imre_disloyal:
+        jump v15s1_saynothing
+
     scene v15s1_3m
     with dissolve
 
@@ -389,9 +392,10 @@ label v15s1:
 
         "Say nothing":
             $ v15_blame_nora = True
-
             $ add_point(KCT.BRO)
 
+            label v15s1_saynothing:
+            
             u "Yeah?"
 
             scene v15s1_3l
