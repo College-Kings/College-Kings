@@ -26,23 +26,29 @@ label v15s48a:
 
     no "Seriously. You've always been there for me."
 
+    no "Chris literally left me at the altar... and you were the only one who stepped up for me."
+
+    no "It took you just a few seconds to stand up and take his place."
+
     if achievement.has("you_may_kiss_the_bride"):
-        no "Chris literally left me at the altar... and you were the only one who stepped up for me."
+        no "And who can forget that kiss?"
 
-        no "It took you just a few seconds to stand up and take his place."
+    scene v15s48a_2a
+    with dissolve
 
-        scene v15s48a_2a
-        with dissolve
-
-        u "(Damn straight.)"
+    u "(Damn straight.)"
 
     if achievement.has("helping_hand"):
+        $ v15s48a_norapoints += 1
+        
         scene v15s48a_2
         with dissolve
 
         no "I mean, you helped me get people signed up for the Europe trip. And I didn't even have to ask."
 
     if v10_cheerfornora:
+        $ v15s48a_norapoints += 1
+        
         scene v15s48a_2
         with dissolve
 
@@ -69,12 +75,16 @@ label v15s48a:
         no "*Giggles*"
 
     if not v12_chase_robber:
+        $ v15s48a_norapoints += 1
+        
         scene v15s48a_2
         with dissolve
 
         no "When I got robbed in Europe, your first instinct was to make sure that I was okay."
 
     if v12_fight_win:
+        $ v15s48a_norapoints += 1
+        
         scene v15s48a_2
         with dissolve
 
@@ -96,17 +106,23 @@ label v15s48a:
         u "Of course, I did."
 
     if v12_followed_nora:
+        $ v15s48a_norapoints += 1
+        
         scene v15s48a_2
         with dissolve
 
         no "You didn't hesitate to choose me over \"the boys\"."
 
-        no "I just can't believe how much time I've wasted without you, ha."
-
     scene v15s48a_2b # FPP. Nora leaning in closer to MC's face, Nora looking at MC, MC looking at Nora, Nora flirty, mouth open.
     with dissolve
 
-    no "It's been you all along."
+    if v15s48a_norapoints > 1:
+        no "I just can't believe how much time I've wasted without you, ha."
+
+        no "It's been you all along."
+
+    else:
+        no "I just can't believe how much time I've wasted without you, ha."
 
     scene v15s48a_2c # FPP. Nora leaning in closer to MC's face, Nora looking at MC, MC looking at Nora, Nora biting her lip.
     with dissolve
