@@ -1764,10 +1764,11 @@ label v15s18a_Riley:
 
             pause 0.75
 
-            scene v15s18ariley_9 # TPP. Upskirt of Riley's outfit from behind.
-            with dissolve
+            if not config_censored:
+                scene v15s18ariley_9 # TPP. Upskirt of Riley's outfit from behind.
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
             play sound "sounds/dooropen.mp3"
 
@@ -1788,8 +1789,6 @@ label v15s18a_Riley:
 
             pause 0.75
 
-            play sound "sounds/kiss.mp3"
-
             scene v15s18ariley_13 # FPP. MC laying in the bed, Riley laying next to him and kissing him.
             with dissolve
 
@@ -1806,6 +1805,9 @@ label v15s18a_Riley:
             image v15rileyhjf = Movie(play="images/v15/Scene 18a/v15rileyhjf.webm", loop=True, image="images/v15/Scene 18a/v15rileyhjStart.webp", start_image="images/v15/Scene 18a/v15rileyhjStart.webp")
             image v15rileyhj2 = Movie(play="images/v15/Scene 18a/v15rileyhj2.webm", loop=True, image="images/v15/Scene 18a/v15rileyhj2Start.webp", start_image="images/v15/Scene 18a/v15rileyhj2Start.webp")
             image v15rileyhj2f = Movie(play="images/v15/Scene 18a/v15rileyhj2f.webm", loop=True, image="images/v15/Scene 18a/v15rileyhj2Start.webp", start_image="images/v15/Scene 18a/v15rileyhj2Start.webp") 
+
+            if config_censored:
+                call screen censoredPopup("v15s18a_nsfwSkipLabelR")
 
             scene v15rileyhj # Ignore as animation
             with dissolve
@@ -1951,6 +1953,8 @@ label v15s18a_Riley:
 
             u "Yeah, sounds good."
 
+            label v15s18a_nsfwSkipLabelR:
+
             scene v15s18ariley_13e # FPP. Show Riley getting off the bed, slight smile, mouth closed.
             with dissolve
 
@@ -1981,6 +1985,8 @@ label v15s18a_Riley:
             with dissolve
 
             pause 0
+            
+            call screen v15s18a_upstairsroom
 
     call screen v15s18a_kitchen
 
@@ -2233,10 +2239,11 @@ label v15s18a_ChrisAmber:
 
                     pause 0.75
 
-                    scene v15s18aamber_7 # FPP. MC focusing in on Amber's ass as they go up the stairs
-                    with dissolve
+                    if not config_censored:
+                        scene v15s18aamber_7 # FPP. MC focusing in on Amber's ass as they go up the stairs
+                        with dissolve
 
-                    pause 0.75
+                        pause 0.75
 
                     scene v15s18aamber_8 # FPP. MC and Amber on the Balcony, MC looking at Amber, Amber looking at MC, Amber smirking, mouth closed.
                     with fade
@@ -2268,6 +2275,9 @@ label v15s18a_ChrisAmber:
 
                     pause 0.75
                     
+                    if config_censored:
+                        call screen censoredPopup("v15s18e_nsfwSkipLabelAmb")
+
                     scene v15s18aamber_9b # FPP. MC looking down as Amber is on her knees infront of him, MC's bottom part of his costume around his ankles and his dick is out infront of Amber's face.
                     with dissolve
 
@@ -2368,6 +2378,8 @@ label v15s18a_ChrisAmber:
                     with dissolve
 
                     pause 0.75
+
+                    label v15s18e_nsfwSkipLabelAmb:
 
                     scene v15s18aamber_11 # TPP. Just Amber wiping her mouth, slight smile, mouth closed.
                     with dissolve

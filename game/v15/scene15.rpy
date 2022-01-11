@@ -98,6 +98,9 @@ label v15s15:
 
     u "A jar of honey?"
 
+    if config_censored:
+        call screen censoredPopup("v15s15_nsfwSkipLabel1")
+
     scene v15s15_7f # FPP. MC sitting at the head of the table Ms. Rose now standing close to MC, mouth open, seductive look, wearing lingerie, a pearl necklace, she is pouring honey on her boobs, she pulled her top down, but it's still on her
     with dissolve
 
@@ -145,6 +148,8 @@ label v15s15:
 
             ro "[name]! Wait!"
             
+            label v15s15_nsfwSkipLabel1:
+
             $ renpy.end_replay()
             
             # Scene 16
