@@ -141,6 +141,7 @@ label v15s48b:
         pause 0.75
 
     else:
+        label v15s48bnosex:
         $ nora.relationship = Relationship.FRIEND
     
         scene v15s48b_9 # TPP. Show Nora trying to open a bottle of wine in the kitchen.

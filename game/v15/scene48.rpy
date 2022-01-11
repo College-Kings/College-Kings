@@ -870,7 +870,7 @@ label v15s48:
 
         stop music fadeout 3
 
-        jump v15s48b
+        jump v15s48bnosex
 
     else:
         if (chloe.relationship >= Relationship.GIRLFRIEND or lauren.relationship >= Relationship.GIRLFRIEND or aubrey.relationship >= Relationship.TAMED):
@@ -1012,7 +1012,7 @@ label v15s48:
 
                 stop music fadeout 3
 
-                jump v15s48b
+                jump v15s48bnosex
 
             "I want you too":
                 scene v15s48_18k # FPP. MC looking at Nora, Nora looking at MC, Nora flirty, mouth closed.

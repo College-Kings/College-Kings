@@ -188,11 +188,6 @@ label v15s48a:
 
             no "Then don't."
 
-    scene v15s48a_99
-    with dissolve
-    
-    pause 0.75
-
     play sound "sounds/kiss.mp3"
 
     scene v15s48a_6 # TPP. Show MC and Nora kissing romantically on the couch with the fireplace with a fire in the shot.
@@ -519,11 +514,6 @@ label v15s48a_end:
     no "Gladly. *Giggles*"
     
     scene v15s48a_98
-    with dissolve
-    
-    pause 0.75
-    
-    scene v15s48a_99
     with dissolve
     
     pause 0.75
