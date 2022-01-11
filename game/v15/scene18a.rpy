@@ -1330,7 +1330,6 @@ label v15s18a_ImreLauren:
 
         "Lie": 
             $ add_point(KCT.TROUBLEMAKER)
-            $ v15s18a_lie = True
             
             scene v15s18aimre_6a
             with dissolve

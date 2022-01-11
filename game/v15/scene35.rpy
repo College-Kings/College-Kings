@@ -2841,7 +2841,7 @@ label v15s35:
                                     jump v15s35_stop_lindsey
 
                                 "Say nothing":
-                                    $ v15say_nothing = True
+                                    $ v15_say_nothing = True
                                     $ add_point(KCT.TROUBLEMAKER)
                                     
                                     if chloe.relationship >= Relationship.GIRLFRIEND:
@@ -2850,7 +2850,7 @@ label v15s35:
                                     if hangOutWithLindsey:
                                         $ add_point(KCT.TROUBLEMAKER)
                                         
-                                    jump v15say_nothing
+                                    jump v15s35_say_nothing
 
                             label v15s35_stop_lindsey:
                                 scene v15s35_12o # FPP. same as v15s35_12n Lindsey's glass is now empty, mouth is closed, still a slight smile, still a rosey face from being drunk
@@ -2885,7 +2885,7 @@ label v15s35:
 
                                 pause 0.75
 
-                            label v15say_nothing:
+                            label v15s35_say_nothing:
                                 scene v15s35_12r # FPP. same as v15s35_12o Lindsey's mouth is open, still looking at Mc, still a slight smile, her glass is still empty, still a rosey face from being drunk
                                 with dissolve
 

@@ -340,7 +340,6 @@ label v15s1:
 
     menu:
         "Stick up for Nora":
-            $ v15_stuck_up_for_nora = True
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -389,6 +388,8 @@ label v15s1:
             u "So, we have no room to judge, but I know damn well that all of this isn't just because of Nora."
 
         "Say nothing":
+            $ v15_blame_nora = True
+
             $ add_point(KCT.BRO)
 
             u "Yeah?"
