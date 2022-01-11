@@ -2140,8 +2140,13 @@ label v15s33:
 
     pause 0.75
 
-    scene v15s33_71 # TPP. A group of people smiling and clapping
-    with dissolve
+    if "v15_naomi" in sceneList:
+        scene v15s33_71alt
+        with dissolve
+
+    else:
+        scene v15s33_71 # TPP. A group of people smiling and clapping
+        with dissolve
 
     pause 0.75
 

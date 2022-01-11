@@ -1,3 +1,11 @@
+screen detective_icon():
+    zorder 90
+
+    imagebutton:
+        idle "images/v15/detective_board/detective_icon.webp"
+        action [ToggleScreen("detective_board")]
+
+
 screen detective_popup(type, message):
     tag detective
     
@@ -24,21 +32,24 @@ screen detective_board():
     tag detective
     style_prefix "detective"
 
+    modal True
+
     default image_path = "images/v15/detective_board/"
     default clue_positions = {
-        0: (263, 200),
-        1: (460, 198),
-        2: (657, 203),
-        3: (240, 425),
-        4: (440, 435),
-        5: (640, 425),
-        6: (220, 668),
-        7: (420, 668),
-        8: (620, 665),
+        0: (657, 203),
+        1: (420, 668),
+        2: (220, 668),
+        3: (263, 200),
+        4: (460, 198),
+        5: (440, 435),
+        6: (640, 425),
+        7: (620, 665),
+        8: (240, 425),
     }
 
     add image_path + "background.webp"
-    button action Return()
+    #button action Return()
+    button action Hide("detective_board")
 
     # Clues
     for i, clue in enumerate(v15_nora_clues):

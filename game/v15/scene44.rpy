@@ -14,7 +14,9 @@ label v15s44:
 
     pause 0.75
 
-    call screen detective_board
+    show screen detective_board
+
+    pause
 
 # -MC and Amber enter room 103 where the pinboard is. They approach the pinboard-
 
@@ -300,7 +302,7 @@ label v15s44_continue:
 
     pe "I think her whole family are huge nature freaks. There's pictures of them camping, fishing... You name it."
 
-    if v15s43_camping_from_chris:
+    if v15_nora_clue_camping:
         scene v15s44_8
         with dissolve
 
@@ -309,6 +311,8 @@ label v15s44_continue:
     else:
         scene v15s44_8
         with dissolve
+
+        $ v15_nora_clue_camping = True
 
         $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/camping.webp", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
         
@@ -343,7 +347,7 @@ label v15s44_continue:
             u "Well, at least that's something."
         
         "Ask about Nora's posts":
-            $ v15s44_ex_from_penelope = True
+            $ v15_nora_clue_ex = True
             
             scene v15s44_8b
             with dissolve
@@ -403,7 +407,9 @@ label v15s44_continue:
 
     u "Okay, so let's add those clues to the board and see how things are shaping up."
 
-    call screen detective_board
+    show screen detective_board
+
+    pause
 
 # -The UI pops up to show all the clues achieved from Penelope's search (CLUES UNLOCKED: Nora loves nature. Nora visited her aunt the day she landed from Europe. LOCATION UNLOCKED: Staying at her Aunt's apartment)-
 
