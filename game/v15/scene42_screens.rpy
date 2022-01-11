@@ -1,3 +1,11 @@
+screen detective_icon():
+    zorder 90
+
+    imagebutton:
+        idle "images/v15/detective_board/detective_icon.webp"
+        action [ToggleScreen("detective_board")]
+
+
 screen detective_popup(type, message):
     tag detective
     
@@ -5,7 +13,7 @@ screen detective_popup(type, message):
 
     button:
         action Hide("detective")
-        background Frame(image_path + "detective_popup_background.png")
+        background Frame(image_path + "detective_popup_background.webp")
         minimum (655, 108)
         pos(10, 10)
 
@@ -24,21 +32,24 @@ screen detective_board():
     tag detective
     style_prefix "detective"
 
+    modal True
+
     default image_path = "images/v15/detective_board/"
     default clue_positions = {
-        0: (263, 200),
-        1: (460, 198),
-        2: (657, 203),
-        3: (240, 425),
-        4: (440, 435),
-        5: (640, 425),
-        6: (220, 668),
-        7: (420, 668),
-        8: (620, 665),
+        0: (657, 203),
+        1: (420, 668),
+        2: (220, 668),
+        3: (263, 200),
+        4: (460, 198),
+        5: (440, 435),
+        6: (640, 425),
+        7: (620, 665),
+        8: (240, 425),
     }
 
-    add image_path + "background.png"
-    button action Return()
+    add image_path + "background.webp"
+    #button action Return()
+    button action Hide("detective_board")
 
     # Clues
     for i, clue in enumerate(v15_nora_clues):
@@ -48,7 +59,7 @@ screen detective_board():
             action NullAction()
             pos clue_positions[i]
             xysize (212, 256)
-            background image_path + "card_background.png"
+            background image_path + "card_background.webp"
 
             text clue.description align (0.5, 0.4) color "#fff" xsize 150
             text clue.informant xalign 0.5 ypos 190
@@ -57,9 +68,9 @@ screen detective_board():
         frame:
             pos clue_positions[i]
             xysize (212, 256)
-            background image_path + "card_background.png"
+            background image_path + "card_background.webp"
 
-            add image_path + "unknown.png" align (0.5, 0.5)
+            add image_path + "unknown.webp" align (0.5, 0.5)
             text "Unknown" xalign 0.5 ypos 195
 
     # Locations
@@ -69,9 +80,12 @@ screen detective_board():
         spacing -10
 
         for location in v15_nora_locations:
-            frame:
+            button:
+                hovered Show("detective_board_description", card=location)
+                unhovered Hide("detective_board_description")
+                action NullAction()
                 xysize (212, 256)
-                background image_path + "card_background.png"
+                background image_path + "card_background.webp"
 
                 add location.image xalign 0.5 ypos 22
                 text location.name xalign 0.5 ypos 195 xsize 200
@@ -79,9 +93,9 @@ screen detective_board():
         for i in range(len(v15_nora_locations), 6):
             frame:
                 xysize (212, 256)
-                background image_path + "card_background.png"
+                background image_path + "card_background.webp"
 
-                add image_path + "unknown.png" align (0.5, 0.5)
+                add image_path + "unknown.webp" align (0.5, 0.5)
                 text "Unknown" xalign 0.5 ypos 195
 
     on "show" action SetVariable("quick_menu", False)

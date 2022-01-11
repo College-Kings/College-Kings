@@ -554,7 +554,7 @@ label v12s7_aubrey1:
 
             au "Oh, sweetie. If I didn't take a look at this I wouldn't be able to call myself a nurse. Please come by my office so I can get you fixed up."
 
-            if aubrey.relationship.value >= Relationship.FWB.value:
+            if aubrey.relationship >= Relationship.FWB:
                 au "I'll need some privacy to give the best treatment possible."
 
                 scene v12ferau2 # TPP. Show Aubrey wispering in mc's ear
@@ -856,7 +856,7 @@ label v12s7_riley1:
     ri "*Southern accent* And now my confusion is all too much. It makes sense why the wealthy and a man such as yourself would be here..."
     ri "But I can't understand why Miss Blue Collar here would be allowed to join us."
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         # -Chloe kisses MC-
         scene v12ferri5 # FPP. Show chloe, looking at camera, neutral look mouth open
         with dissolve
@@ -1050,7 +1050,7 @@ label v12s7_riley1:
 
             u "Haha, alright. I'll catch up with you later."
 
-            if chloe.relationship.value >= Relationship.FWB.value:
+            if chloe.relationship >= Relationship.FWB:
                 scene v12ferri6 # TPP. Show MC kissing chloe
                 with dissolve
                 play sound "sounds/kiss.mp3"
@@ -1280,7 +1280,7 @@ label v12s7_chloe1:
 
     cl "That's actually a good point... Okay, now I'm not so sure about you being the killer. *Chuckles*"
 
-    if chloe.relationship.value >= Relationship.FWB.value:
+    if chloe.relationship >= Relationship.FWB:
         scene v12ferch3 # TPP. Show chloe, hand on mc's chest, chloe mouth open
         with dissolve
 
@@ -1776,7 +1776,7 @@ label v12s7_lauren1:
 
     la "And there you are."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v12ferla5 # TPP. Show lauren kissing mc.
         with dissolve
         play sound "sounds/kiss.mp3"
@@ -1924,7 +1924,7 @@ label v12s7_lauren1:
 
     la "You know what, go bother someone else. *Chuckles* Maybe someone will kill you for me. *Laughs*"
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v12ferla1d
         with dissolve
 
@@ -3144,7 +3144,7 @@ label v12s7_lindsey2:
     scene v12ferli3b
     with dissolve
 
-    if lindsey.relationship.value >= Relationship.KISS.value:
+    if lindsey.relationship >= Relationship.KISS:
         scene v12ferli5 # TPP. Show mc and lindsey kissing
         with dissolve
 
@@ -3644,7 +3644,7 @@ label v12s7_penelope1:
 
             pe "I am."
 
-            if penelope.relationship.value >= Relationship.LIKES.value:
+            if penelope.relationship >= Relationship.LIKES:
                 scene v12ferpen1
                 with dissolve
 
@@ -5414,7 +5414,7 @@ label v12s7_nora_kill:
 
     pause 0.75
 
-    if nora.relationship.value >= Relationship.LIKES.value:
+    if nora.relationship >= Relationship.LIKES:
         scene v12fernor5a # FPP. Show nora, slight smile mouth open
         with dissolve
 

@@ -134,7 +134,7 @@ label v14s05:
 
     cl "I have some campaign things I want to go over, I'll be back in a bit."
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v14s05_6 # TPP. Chloe, smiling, mouth closed, getting up from her bed.
         with dissolve
 

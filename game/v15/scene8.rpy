@@ -36,7 +36,7 @@ label v15s8:
 
     u "Yes, ma'am."
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v15s8_3b # FPP. Same as v15s8_3a, Chloe flirting expression, mouth open.
         with dissolve
 
@@ -241,7 +241,7 @@ label v15s8:
 
         u "Right... Okay, whatever gets your juices flowing."
 
-        if chloe.relationship.value >= Relationship.FWB.value:
+        if chloe.relationship >= Relationship.FWB:
             scene v15s8_3b
             with dissolve
 
@@ -262,7 +262,7 @@ label v15s8:
 
     u "Bye, Chloe."
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v15s8_6 # FPP. Show Chloe getting close up and personal with MC, Chloe biting her lip, Flirting expression, mouth closed
         with dissolve
 

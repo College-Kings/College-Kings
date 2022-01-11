@@ -751,7 +751,7 @@ label v11_start:
 label v11s1_riley:
     $ freeroam7.add("riley")
 
-    if riley.relationship.value >= Relationship.FWB.value:
+    if riley.relationship >= Relationship.FWB:
         scene v11cocri1 # FPP. MC and Riley looking at each other, Riley has mouth closed, neutral expression
         #with dissolve
 
@@ -762,7 +762,7 @@ label v11s1_riley:
 
         u "You came?"
 
-    if riley.relationship.value >= Relationship.FWB.value:
+    if riley.relationship >= Relationship.FWB:
         scene v11cocri1a # FPP. Same as ri1, Riley has mouth open, same expression
         with dissolve
 
@@ -800,7 +800,7 @@ label v11s1_riley:
 
             ri "I'm sorry... Do your best to stay positive, Penelope needs all the support she can get at the moment."
 
-            if riley.relationship.value >= Relationship.FWB.value:
+            if riley.relationship >= Relationship.FWB:
                 ri "It's really sweet of you to be so supportive of your friends."
 
     scene v11cocri1a
@@ -839,7 +839,7 @@ label v11s1_riley:
     ri "Well, you know I'm here for you both regardless. I'm gonna go check on Penelope and see if there's anything I can do to help settle her nerves."
 
 
-    if riley.relationship.value >= Relationship.FWB.value:
+    if riley.relationship >= Relationship.FWB:
         scene v11cocri1
         with dissolve
 
@@ -1161,7 +1161,7 @@ label v11_case_verdict:
 
         u "*Whisper* You're welcome."
 
-        if penelope.relationship.value >= Relationship.LIKES.value:
+        if penelope.relationship >= Relationship.LIKES:
             scene v11coc24e # FPP. Same as 24c, but Penelope's mouth is open
             with dissolve
 
@@ -1215,7 +1215,7 @@ label v11_case_verdict:
         pe "I have to get going as well, thankfully I still have a class to get to."
 
         pause 0.75
-        if penelope.relationship.value >= Relationship.LIKES.value:
+        if penelope.relationship >= Relationship.LIKES:
             scene v11coc25b # TPP. Same cam as 25, but Penelope is kissing MC on the cheek
             with dissolve
 

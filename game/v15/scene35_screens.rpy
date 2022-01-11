@@ -38,10 +38,14 @@ screen whos_most_likely_to(question):
 
                         button:
                             xysize (324, 91)
-                            idle_background "images/v15/game_show/button_idle.png"
+
+                            if option["character"] == mc:
+                                idle_background "images/v15/game_show/button_gray.png"
+                            else:
+                                idle_background "images/v15/game_show/button_idle.png"
                             
                             if option["character"] == mc:
-                                hover_background "images/v15/game_show/button_idle.png"
+                                hover_background "images/v15/game_show/button_gray.png"
                             else:
                                 hover_background "images/v15/game_show/button_hover.png"
                             

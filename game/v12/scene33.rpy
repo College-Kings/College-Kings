@@ -2,7 +2,6 @@
 # Locations: Hotel Lobby, Spa, Sauna, 3 door hallway
 # Characters: AUBREY (Outfit: 3), MC (Outfit: 2), Everyone else in towels
 # Time: Afternoon
-# Phone Images: images/v12/Scene 33/three_doors.png
 
 label v12s33:
 # -MC and Aubrey arrive in the hotel lobby-

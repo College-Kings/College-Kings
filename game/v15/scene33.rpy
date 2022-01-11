@@ -89,7 +89,7 @@ label v15s33:
 
     pause 0.75
 
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if aubrey.relationship >= Relationship.FWB:
         scene v15s33_7
         with dissolve
 
@@ -500,7 +500,7 @@ label v15s33:
 
     u "Haha, yeah. Barely..."
     
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if aubrey.relationship >= Relationship.FWB:
         scene v15s33_19b
         with dissolve
 
@@ -744,7 +744,7 @@ label v15s33:
 
     u "Hi."
 
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if aubrey.relationship >= Relationship.FWB:
         scene v15s33_25b
         with dissolve
 
@@ -1268,7 +1268,7 @@ label v15s33:
         u "(I didn't think she'd do something like that during the fancy lunch... Ha!)"
 
     else:
-        if aubrey.relationship.value >= Relationship.FWB.value:
+        if aubrey.relationship >= Relationship.FWB:
             scene v15s33_45a
             with dissolve
 
@@ -1374,7 +1374,7 @@ label v15s33:
                 na "*Scoffs* You're sorry?"
 
             else:
-                if aubrey.relationship.value >= Relationship.FWB.value:
+                if aubrey.relationship >= Relationship.FWB:
                     scene v15s33_46e
                     with dissolve
 
@@ -1535,7 +1535,7 @@ label v15s33:
             $ sceneList.add("v15_naomi")
             $ naomi.relationship = Relationship.FWB
 
-            if aubrey.relationship.value >= Relationship.FWB.value:
+            if aubrey.relationship >= Relationship.FWB:
                 $ v15s33_naomi_broke_aubreyrs = True
 
             $ aubrey.relationship = Relationship.MAD
@@ -1875,7 +1875,7 @@ label v15s33:
 
             u "(I'll just leave her alone for now... Hopefully she'll calm down and I can talk to her later.)"
 
-    if aubrey.relationship.value <= Relationship.MAD.value:
+    if aubrey.relationship <= Relationship.MAD:
         scene v15s33_56a # TPP. MC and Naomi sitting next to each other at the wedding ceremony, Aubrey seated far away from them, MC neutral face, mouth closed, Naomi smirking, mouth closed.
         with dissolve
         
@@ -1976,7 +1976,7 @@ label v15s33:
                 
                 u "One day it'll be us."
 
-                if aubrey.relationship.value >= Relationship.FWB.value:
+                if aubrey.relationship >= Relationship.FWB:
                     $ aubrey.relationship = Relationship.TAMED
                     
                     scene v15s33_57b # FPP. Aubrey looking at MC, MC looking at Aubrey, Aubrey looking at MC like she is in love, mouth closed.
@@ -2097,7 +2097,7 @@ label v15s33:
 
     aumom "*Sniffles* Together, we built a beautiful home and created a terrific family..."
 
-    if aubrey.relationship.value <= Relationship.MAD.value: 
+    if aubrey.relationship <= Relationship.MAD: 
         scene v15s33_65a # TPP. Close up of Aubrey looking at her parents, Aubrey smirking but still sad, mouth closed.
         with dissolve
         
@@ -2140,8 +2140,13 @@ label v15s33:
 
     pause 0.75
 
-    scene v15s33_71 # TPP. A group of people smiling and clapping
-    with dissolve
+    if "v15_naomi" in sceneList:
+        scene v15s33_71alt
+        with dissolve
+
+    else:
+        scene v15s33_71 # TPP. A group of people smiling and clapping
+        with dissolve
 
     pause 0.75
 
@@ -2291,7 +2296,7 @@ label v15s33:
 
             pause 0.75
 
-            if aubrey.relationship.value >= Relationship.TAMED.value:
+            if aubrey.relationship >= Relationship.TAMED:
                 play sound "sounds/kiss.mp3"
             
                 scene v15s33_81b # TPP. Aubrey kissing MC's cheek.
@@ -2331,7 +2336,7 @@ label v15s33:
 
     u "Hey... Are you okay?"
 
-    if aubrey.relationship.value <= Relationship.MAD.value:
+    if aubrey.relationship <= Relationship.MAD:
         scene v15s33_75a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey upset, mouth open.
         with dissolve
 
@@ -2411,7 +2416,7 @@ label v15s33:
 
         au "Yes."
 
-        if aubrey.relationship.value >= Relationship.TAMED.value:
+        if aubrey.relationship >= Relationship.TAMED:
             scene v15s33_87 # TPP. MC hugging Aubrey while they sit on the bench, Aubrey crying into his shoulder, MC slight frown, mouth closed.
             with dissolve
             
@@ -2521,13 +2526,13 @@ label v15s33:
 
         au "I'm happy you're here with me."
 
-        if aubrey.relationship.value > Relationship.FRIEND.value:
+        if aubrey.relationship > Relationship.FRIEND:
             scene v15s33_75h
             with dissolve
 
             u "I'm happy I'm with you."
 
-            if aubrey.relationship.value >= Relationship.TAMED.value:
+            if aubrey.relationship >= Relationship.TAMED:
                 scene v15s33_89 # TPP. Shot from behind the bench. Looking at Aubrey resting her head on MC's shoulder, MC with his arm wrapped around Aubrey, They are looking out at the lake view.
                 with dissolve
 

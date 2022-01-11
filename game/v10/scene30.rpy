@@ -163,7 +163,7 @@ label v10_chloe_gym:
 
     u "(Damn...)"
 
-    if chloe.relationship.value >= Relationship.FWB.value: # If in a relationship with Chloe
+    if chloe.relationship >= Relationship.FWB: # If in a relationship with Chloe
         # -Event1 Look closer-
         menu:
             "Look closer":

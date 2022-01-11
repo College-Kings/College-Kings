@@ -34,7 +34,7 @@ label v10_call_with_lauren1:
 
     u "Hello?"
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # RCS - MC is a relationship with Lauren
+    if lauren.relationship >= Relationship.GIRLFRIEND: # RCS - MC is a relationship with Lauren
         scene v10scwl1a # IGNORE, RENDER FROM SCENE 18
         with dissolve
         
@@ -327,7 +327,7 @@ label v10_call_with_lauren1:
 
                     u "I guess it wouldn't hurt to give a little performance sometime."
 
-                    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # MC is in a relationship with Lauren
+                    if lauren.relationship >= Relationship.GIRLFRIEND: # MC is in a relationship with Lauren
                         scene v10scwl1a
                         with dissolve
                         
@@ -367,7 +367,7 @@ label v10_call_with_lauren1:
 
                     u "You know, playing the harmonica requires quite a lot of tongue coordination, usually girls like that."
 
-                    if lauren.relationship.value >= Relationship.KISS.value: # maybe another variable for having madeout with lauren?
+                    if lauren.relationship >= Relationship.KISS: # maybe another variable for having madeout with lauren?
                         if joinwolves:
                             scene v10scwl2
                         else:
@@ -453,7 +453,7 @@ label v10_call_with_lauren1:
             
             u "I just name a topic, say my favorite thing in that topic and then you answer your favorite. Then the game continues, but switched."
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # RCS - MC is in a relationship with Lauren
+            if lauren.relationship >= Relationship.GIRLFRIEND: # RCS - MC is in a relationship with Lauren
                 if joinwolves:
                     scene v10scwl2
                 else:
@@ -748,7 +748,7 @@ label v10_call_with_lauren1:
 
     au "That must have been the wind. I'm just on my way home from the gym."
 
-    if aubrey.relationship.value >= Relationship.FWB.value: # RCS - MC is in a relationship with Aubrey
+    if aubrey.relationship >= Relationship.FWB: # RCS - MC is in a relationship with Aubrey
         au "I'm gonna have the house all to myself since none of the girls are home. You wanna come over?"
 
         scene v10saow5

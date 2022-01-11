@@ -21,7 +21,7 @@ label v12_penelope_roof:
 
     menu:
         "Reply":
-            if penelope.relationship.value >= Relationship.LIKES.value:
+            if penelope.relationship >= Relationship.LIKES:
                 $ add_point(KCT.BOYFRIEND)
 
             $ penelope.messenger.addReply("Yeah, one sec", func=None)
@@ -312,7 +312,7 @@ label v12_penelope_roof:
 
             pe "Always."
 
-            if penelope.relationship.value >= Relationship.LIKES.value:
+            if penelope.relationship >= Relationship.LIKES:
                 pe "I kinda hope I end up marrying a guy like you."
 
                 scene v12penr10e
@@ -413,7 +413,7 @@ label v12_penelope_roof:
             stop music fadeout 3
             play music "music/v12/Track Scene 3_4.mp3" fadein 2
 
-            if penelope.relationship.value >= Relationship.LIKES.value:
+            if penelope.relationship >= Relationship.LIKES:
                 scene v12penr4a # TPP Same angle as v12penr4, MC and Penelope walking down hotel hallway holding hands
                 with dissolve
 
@@ -440,7 +440,7 @@ label v12_penelope_roof:
 
             pe "I better get to bed, Mr. Lee wants me up early to help with our departure."
 
-            if penelope.relationship.value >= Relationship.LIKES.value:
+            if penelope.relationship >= Relationship.LIKES:
                 scene v12penr16 # TPP Outside of Penelope's hotel room, show Penelope kissing MC
                 with dissolve
 

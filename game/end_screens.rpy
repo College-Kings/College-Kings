@@ -12,7 +12,7 @@ screen end_screen():
         ypos 345
 
         text "ACT 4 PART 3" xalign 0.5
-        text "Coming this February!" color "#EA54E8" xalign 0.5
+        text "Coming Soon!" color "#EA54E8" xalign 0.5
 
     if not config.enable_steam:
         hbox:

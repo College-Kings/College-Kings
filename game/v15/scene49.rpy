@@ -54,7 +54,11 @@ label v15s49:
     scene v15s49_7 # TPP. Close up of Tom, Tom looking at Riley, Tom angry, mouth open.
     with dissolve
 
-    tom "Listen here, you little bitch... I know you had something to do with why Charli got expelled!"
+    if v13_charli_exposed:
+        tom "Listen here, you little bitch... I know you had something to do with why Charli got expelled!"
+        
+    else:
+        tom "Listen here, you little bitch... I know you had something to do with Charli!"
 
     scene v15s49_8 # TPP. Close up of Riley, Riley looking at Tom, Riley confused, mouth open.
     with dissolve
@@ -66,7 +70,11 @@ label v15s49:
 
     tom "Charli was the reason I'm still in school, you fucking rat!"
 
-    tom "Now that he's gone, I have to find someone else to do all of my assignments."
+    if v13_charli_exposed:
+        tom "Now that he's gone, I have to find someone else to do all of my assignments."
+    
+    else:
+        tom "But he's chickened out now, and I have to find someone else to do all of my assignments."
 
     scene v15s49_8
     with dissolve
@@ -137,7 +145,7 @@ label v15s49:
         "Check on Riley":
             $ add_point(KCT.BOYFRIEND)
 
-            if riley.relationship.value >= Relationship.FWB.value:
+            if riley.relationship >= Relationship.FWB:
                 scene v15s49_14 # FPP. Show MC on his knee checking on Riley, MC looking at Riley, Riley looking at MC, Riley angry, mouth closed.
                 with dissolve
 
@@ -290,13 +298,10 @@ label v15s49:
         "Nobody's walking away":
             $ add_point(KCT.TROUBLEMAKER)
 
-            scene v15s49_16
-            #with dissolve
-
-            u "Nobody's walking away, Riley."
-
             scene v15s49_17 # TPP. Close up of MC's face looking at Tom, MC angry, mouth open.
             with dissolve
+
+            u "Nobody's walking away, Riley."
 
             u "He's going to learn today."
 

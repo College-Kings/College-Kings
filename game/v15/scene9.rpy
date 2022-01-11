@@ -495,7 +495,7 @@ label v15s9:
             $ lindsey.messenger.newMessage("Meet me at the end of the main hallway?")
             $ lindsey.messenger.addReply("Sure thing, be with you in a bit.", func=None)
 
-            if lindsey.relationship.value >= Relationship.FWB.value:
+            if lindsey.relationship >= Relationship.FWB:
                 $ lindsey.messenger.addReply("Be there soon ;)", func=None)
             else:
                 $ lindsey.messenger.addReply("OMW", func=None)

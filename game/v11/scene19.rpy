@@ -20,7 +20,7 @@ label v11_roommate:
 
         pause 0.75
 
-        if chloe.relationship.value <= Relationship.MAD.value:
+        if chloe.relationship <= Relationship.MAD:
             scene v11rm4 # FPP. MC is now in talking distance to Chloe, Chloe is now looking at MC, Chloe is slightly annoyed, mouth closed (make sure counter is in backrgound)
             with dissolve
 
@@ -91,7 +91,7 @@ label v11_roommate:
 
             cl "[name], it's late."
 
-        elif chloe.relationship.value >= Relationship.FWB.value:
+        elif chloe.relationship >= Relationship.FWB:
             scene v11rm4f
             with dissolve
 
@@ -377,7 +377,7 @@ label v11_roommate:
 
         ri "Ready to go check out this treasure hunt?"
 
-        if chloe.relationship.value >= Relationship.FWB.value:
+        if chloe.relationship >= Relationship.FWB:
             scene v11rm12 # FPP. MC still standing by the door, he looks back at Chloe who is still sleeping, show some of her boobs slipping out from her outfit (Day)
             with dissolve
 
@@ -412,7 +412,7 @@ label v11_roommate:
 
         pause 0.75
 
-        if riley.relationship.value < Relationship.FWB.value:
+        if riley.relationship < Relationship.FWB:
             scene v11rm14 # FPP. MC is now in talking distance to Riley, Riley is now looking at MC, Riley is smiling, mouth closed (make sure counter is in backrgound)
             with dissolve
 

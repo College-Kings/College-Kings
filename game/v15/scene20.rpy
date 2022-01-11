@@ -29,7 +29,7 @@ label v15s20:
 
     pause 0.75
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         menu:
             "Ask for a kiss":
                 $ add_point(KCT.BOYFRIEND)
@@ -202,7 +202,7 @@ label v15s20:
 
             u "(Well, she loves it in the bedroom... Or should I say kitchen...)"
 
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 scene v15s20_5d # FPP. Same as v15s20_5c, Chloe confused, mouth open.
                 with dissolve
 

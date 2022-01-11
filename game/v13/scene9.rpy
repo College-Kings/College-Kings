@@ -21,7 +21,7 @@ label v13s9:
 
     pause 0.75
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v13s9_2 # FPP. Chloe full face smile, happy suprised, mouth open looking at MC.
         with dissolve
 
@@ -292,7 +292,7 @@ label v13s9:
 
             cl "I knew I could count on you."
 
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value: # -If Chloegirlfriend (extra dialog)
+            if chloe.relationship >= Relationship.GIRLFRIEND: # -If Chloegirlfriend (extra dialog)
                 $ add_point(KCT.BOYFRIEND)
 
                 play sound "sounds/kiss.mp3"
@@ -340,7 +340,7 @@ label v13s9:
 
             u "Chloe, it's not like that. I'm her friend and she came to me in confidence for my help. I'd be wrong to turn her away."
 
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value: # -If Chloegirlfriend (extra dialog)
+            if chloe.relationship >= Relationship.GIRLFRIEND: # -If Chloegirlfriend (extra dialog)
                 $ chloe.points -= 1 
                 
                 $ add_point(KCT.TROUBLEMAKER)
@@ -473,7 +473,7 @@ label v13s9:
 
     u "Oh... Well... That's spicy. *Laughs*"
 
-    if chloe.relationship.value >= Relationship.FWB.value:
+    if chloe.relationship >= Relationship.FWB:
         scene v13s9_12q # FPP. Chloe facing MC (not leaning), flirting/seductive, smiling, mouth open.
         with dissolve
 

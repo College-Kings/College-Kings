@@ -56,7 +56,7 @@ label v14s17:
 
     u "That's pretty messed up to call Lauren the class clown behind her back..."
 
-    if ms_rose.relationship.value >= Relationship.FWB.value and joinwolves: #sanitizing pathbuilder input
+    if ms_rose.relationship >= Relationship.FWB and joinwolves: #sanitizing pathbuilder input
         scene v14s17_4c
         with dissolve
 
@@ -123,7 +123,7 @@ label v14s17:
 
         pause 0.75
     
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v14s17_7a # TPP. Same as v14s17_7, Show MC and Lauren kissing
         with dissolve
 
@@ -204,7 +204,7 @@ label v14s17:
 
             u "*Chuckles*"
 
-    if lauren.relationship.value > Relationship.GIRLFRIEND.value or not "v11_aubrey" in sceneList: #correction for saves where this variable was defaulting to True - which can't be the case if v11_aubreysex is False, or if lauren rs is still True
+    if lauren.relationship >= Relationship.GIRLFRIEND or not "v11_aubrey" in sceneList: #correction for saves where this variable was defaulting to True - which can't be the case if v11_aubreysex is False, or if lauren rs is still True
         $ v11_lauren_caught_aubrey = False
 
     if v11_lauren_caught_aubrey or toldlauren or laurentoofar:
@@ -495,8 +495,8 @@ label v14s17:
 
             u "Plus, she came to you, of all people, for a reason. She trusts you, and knows what you're capable of."
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value or kct == "loyal":
-                if lauren.relationship.value < Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND or kct == "loyal":
+                if lauren.relationship < Relationship.GIRLFRIEND:
                     call screen kct_popup
             
                 $ v14_lauren_helps_lindsey = True
@@ -666,8 +666,8 @@ label v14s17:
 
                     u "You're the most loyal person I know, Lauren. That's why I'm asking you, the one person I trust with anything and everything."
 
-                    if lauren.relationship.value >= Relationship.GIRLFRIEND.value or kct == "loyal":
-                        if lauren.relationship.value < Relationship.GIRLFRIEND.value:
+                    if lauren.relationship >= Relationship.GIRLFRIEND or kct == "loyal":
+                        if lauren.relationship < Relationship.GIRLFRIEND:
                             call screen kct_popup
                         
                         $ v14_lauren_sabotage = True
@@ -730,7 +730,7 @@ label v14s17:
 
                         pause 0.75
                         
-                        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                        if lauren.relationship >= Relationship.GIRLFRIEND:
                             scene v14s17_16 # TPP. Show MC, neutral expression, mouth closed, Lauren beside and looking at MC, Lauren puts both her hands together, begging expression, mouth open
                             with dissolve
 
@@ -809,7 +809,7 @@ label v14s17_end:
 
     pause 0.75
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: 
+    if lauren.relationship >= Relationship.GIRLFRIEND: 
         scene v14s17_19 # TPP. Show MC and Lauren kissing
         with dissolve
 

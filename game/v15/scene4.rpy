@@ -341,7 +341,7 @@ label v15s4:
 
             u "You? Or the dog?"
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.TROUBLEMAKER)
                 
                 scene v15s4_13
@@ -740,7 +740,7 @@ label v15s4:
 
             u "(Can you blame me?) Sorry, I got distracted."
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 scene v15s4_24b
                 with dissolve
 
@@ -1597,7 +1597,7 @@ label v15s4:
 
         aut "So, If you found something similar to that, she'd probably die. *Laughs*"
 
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        if lauren.relationship >= Relationship.GIRLFRIEND:
             aut "But she's never gotten jewelry from a boyfriend before, and she's always mentioning that. So, either way I think you're good."
 
         scene v15s4_59

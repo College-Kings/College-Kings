@@ -435,7 +435,7 @@ label v14s26:
 
     u "See you around, Linds."
 
-    if lindsey.relationship.value >= Relationship.FWB.value:
+    if lindsey.relationship >= Relationship.FWB:
         scene v14s26_13 # FPP. Lindsey winks at MC, slight smile, mouth open
         with dissolve
 

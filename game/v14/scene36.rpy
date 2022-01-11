@@ -102,7 +102,7 @@ label v14s36:
 
     u "Oh, alright..."
     
-    if penelope.relationship.value >= Relationship.LIKES.value and v11s23_penelope_date:
+    if penelope.relationship >= Relationship.LIKES and v11s23_penelope_date:
         u "(Maybe it's a good thing I didn't try calling her...)"
 
     scene v14s36_4b # FPP. same as v14s36_4 Jenny has a curious expression, mouth open
@@ -648,7 +648,7 @@ label v14s36:
                 $ jenny.relationship = Relationship.FWB
                 $ sceneList.add("v14_jenny")
                 
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or penelope.relationship.value >= Relationship.LIKES.value:
+                if chloe.relationship >= Relationship.GIRLFRIEND or lauren.relationship >= Relationship.GIRLFRIEND or penelope.relationship >= Relationship.LIKES:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
                     $ add_point(KCT.BOYFRIEND)
@@ -1168,7 +1168,7 @@ label v14s36:
             "Don't kiss her":
                 $ jenny.relationship = Relationship.AWKWARD
                 
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or penelope.relationship.value >= Relationship.LIKES.value:
+                if chloe.relationship >= Relationship.GIRLFRIEND or lauren.relationship >= Relationship.GIRLFRIEND or penelope.relationship >= Relationship.LIKES:
                     $ add_point(KCT.BOYFRIEND)
                 else:
                     $ add_point(KCT.TROUBLEMAKER)
@@ -1307,7 +1307,7 @@ label v14s36:
 
     pause 0.75
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         play sound "sounds/vibrate.mp3"
 
         scene v14s36_13 # FPP. MC looks at his phone and see's that Lauren is calling him

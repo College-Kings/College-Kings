@@ -262,7 +262,7 @@ label v14s45a:
 
     am "A security blanket of some sorts... *Chuckles* Fucking it all up or doing it all perfectly, at the end of the day you've still got me feeling safe and warm."
 
-    if amber.relationship.value >= Relationship.FWB.value:
+    if amber.relationship >= Relationship.FWB:
         scene v14s45a_4 # TPP. Upclose of MC looking into Amber's eyes and Amber looking into MC's eyes, MC's finger lifting up Amber's chin, both slight smile, mouth closed.
         with dissolve
 
@@ -526,7 +526,7 @@ label v14s45a:
 
         li "Oh damn, sorry."
 
-        if lindsey.relationship.value >= Relationship.FWB.value:
+        if lindsey.relationship >= Relationship.FWB:
             scene v14s45a_10a
             with dissolve
 

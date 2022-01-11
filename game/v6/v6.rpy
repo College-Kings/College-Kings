@@ -48,7 +48,7 @@ init python:
 
 label script06: #for compatibility only
 label v6start:
-    if imre.relationship.value <= Relationship.MAD.value and chloe.relationship.value <= Relationship.MAD.value:
+    if imre.relationship <= Relationship.MAD and chloe.relationship <= Relationship.MAD:
         menu:
             "Find Imre":
                 $ add_point(KCT.BRO)
@@ -62,7 +62,7 @@ label v6start:
 
                 jump imreconc
 
-    elif imre.relationship.value <= Relationship.MAD.value:
+    elif imre.relationship <= Relationship.MAD:
         menu:
             "Find Imre":
                 $ add_point(KCT.BRO)
@@ -78,7 +78,7 @@ label v6start:
                 jump imrecond
 
 
-    elif chloe.relationship.value <= Relationship.MAD.value:
+    elif chloe.relationship <= Relationship.MAD:
         menu:
             "Help Imre":
                 $ add_point(KCT.BRO)
@@ -865,7 +865,7 @@ label fs_bd:
 
     pause 1.0
 
-    if imre.relationship.value <= Relationship.MAD.value:
+    if imre.relationship <= Relationship.MAD:
         scene s477 # FIRST PERSON you look at Imre's bed, all his stuff is gone, you find a note on his bed
         with dissolve
 
@@ -976,7 +976,7 @@ label continuebb:
     # amber texts if chloe not mad
     # if you chose imre chloe and amber both text you depending on chloe mad that you msised out etc.
 
-    if chooseimre and chloe.relationship.value <= Relationship.MAD.value: # Amber texts why you never got back to her
+    if chooseimre and chloe.relationship <= Relationship.MAD: # Amber texts why you never got back to her
         play sound "sounds/vibrate.mp3"
         
         $ amber.messenger.newMessage(_("I guess you didn't want my surprise :/"), force_send=True)
@@ -999,7 +999,7 @@ label continuebb:
         $ chloe.messenger.addReply(_("Sorry, something really important came up. Definitely another time"))
         $ chloe.messenger.newMessage(_("Okay"))
 
-    elif chloe.relationship.value <= Relationship.MAD.value and not chloecaught:
+    elif chloe.relationship <= Relationship.MAD and not chloecaught:
         jump continuebd
             
     play sound "sounds/vibrate.mp3"
@@ -1050,7 +1050,7 @@ label continuebd:
 
     pause 0.5
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene s486 #You stnad in between  riley and Lauren sitting in the back, seat in between them is emmpty, seat next to Lauren's right is also empty ALWAYS SHOW CLASSROOM STUFF FROM THE FRONT if it's last row so you don't have to show 50 students sitting but instead jsut the back wall
         with dissolve
 
@@ -1229,7 +1229,7 @@ label continuebd:
 
             u "*Grins* Whatever."
 
-    elif lauren.relationship.value <= Relationship.MAD.value:
+    elif lauren.relationship <= Relationship.MAD:
             scene s486e # you standing next to riley who's alone in the backrow, lauren's sitting somewhere else
             with dissolve
 
@@ -1431,7 +1431,7 @@ label continuebd:
 
         ri "So, how are things with Chloe?"
 
-        if chloe.relationship.value <= Relationship.MAD.value:
+        if chloe.relationship <= Relationship.MAD:
             scene s492e
             with dissolve
 
@@ -1761,7 +1761,7 @@ label continuebd:
 
     show flyer
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         u "(Homecoming. Hm. Lauren would probably be pissed if I didn't ask her...)"
 
     else:
@@ -1772,7 +1772,7 @@ label continuebd:
 
     pause 0.5
 
-    if imre.relationship.value <= Relationship.MAD.value and not imreforgives:
+    if imre.relationship <= Relationship.MAD and not imreforgives:
         scene s512 # mc lays back on bed
         with dissolve
 
@@ -2155,7 +2155,7 @@ label continuebd:
         scene s529 # showing blue volleyball on your desk
         with dissolve
 
-        if chloe.relationship.value <= Relationship.MAD.value:
+        if chloe.relationship <= Relationship.MAD:
             u "(I really need to patch things up with Chloe. It was going so great until-)"
 
             u "(Until I messed things up.)"
@@ -2994,7 +2994,7 @@ label fy_bd: # not gone to Emily's
 
     pause 1.0
 
-    if imre.relationship.value <= Relationship.MAD.value:
+    if imre.relationship <= Relationship.MAD:
         scene s540a # your head moves to look at your door
         with dissolve
 
@@ -3113,7 +3113,7 @@ label fy_bd: # not gone to Emily's
 
     pause 0.5
 
-    if evelyn.relationship.value >= Relationship.DATE.value:
+    if evelyn.relationship >= Relationship.DATE:
         play music "music/mlove1.mp3"
 
         queue music ["music/mlove2.mp3"]
@@ -3567,7 +3567,7 @@ label fy_bd: # not gone to Emily's
 
         ev "I've already called an Uber."
 
-        if evelyn.relationship.value >= Relationship.LIKES.value:
+        if evelyn.relationship >= Relationship.LIKES:
             ev "Are you just gonna walk back? We can share the Uber if you want."
 
             scene s560a
@@ -3586,7 +3586,7 @@ label fy_bd: # not gone to Emily's
 
         ev "There it is."
 
-        if evelyn.relationship.value >= Relationship.LIKES.value:
+        if evelyn.relationship >= Relationship.LIKES:
             scene s562 # Close up evelyn smiling at you, standing in front of you, about to enter the uber
             with dissolve
 
@@ -3608,7 +3608,7 @@ label fy_bd: # not gone to Emily's
             menu:
                 "Kiss her":
                     $ evelyn.relationship = Relationship.KISS
-                    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                    if lauren.relationship >= Relationship.GIRLFRIEND:
                         $ add_point(KCT.TROUBLEMAKER)
                     else:
                         $ add_point(KCT.BOYFRIEND)
@@ -3630,7 +3630,7 @@ label fy_bd: # not gone to Emily's
                     pause 0.75
 
                 "Don't kiss her":
-                    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                    if lauren.relationship >= Relationship.GIRLFRIEND:
                         $ add_point(KCT.BOYFRIEND)
                     else:
                         $ add_point(KCT.BRO)
@@ -3649,7 +3649,7 @@ label fy_bd: # not gone to Emily's
         scene s564 # you walking back to your dorm at night
         with fade
 
-        if evelyn.relationship.value >= Relationship.LIKES.value:
+        if evelyn.relationship >= Relationship.LIKES:
             u "(That went way better than expected. Once she started talking about her dreams, it's like she turned into this completely different person.)"
 
         else:
@@ -3792,7 +3792,7 @@ label fy_bd: # not gone to Emily's
     scene s570f # Aubrye curious smile
     with dissolve
 
-    if chloe.relationship.value <= Relationship.MAD.value:
+    if chloe.relationship <= Relationship.MAD:
         au "So, who have you been seducing lately? Certainly not Chloe. *laughs*"
 
         scene s570g
@@ -3823,7 +3823,7 @@ label fy_bd: # not gone to Emily's
 
             u "You know, a few different girls."
 
-            if aubrey.relationship.value >= Relationship.FWB.value:
+            if aubrey.relationship >= Relationship.FWB:
                 u "It's kinda crazy how you're so cool with it."
 
                 scene s571a
@@ -3887,7 +3887,7 @@ label fy_bd: # not gone to Emily's
 
             u "No one, really."
 
-            if aubrey.relationship.value >= Relationship.FWB.value:
+            if aubrey.relationship >= Relationship.FWB:
                 scene s571a
                 with dissolve
 
@@ -4406,7 +4406,7 @@ label afteraubrey:
     scene s573 # mc in his dorm in bed exhausted with his hand on his pocket
     with fade
 
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if aubrey.relationship >= Relationship.FWB:
         play sound "sounds/vibrate.mp3"
 
         if config_censored:
@@ -5097,7 +5097,7 @@ label wakeupa:
 
     queue music ["music/mfunk.mp3"]
 
-    if imre.relationship.value <= Relationship.MAD.value:
+    if imre.relationship <= Relationship.MAD:
         scene s604 # Mc wakes up in bed,
         with Fade (2,0,2)
 
@@ -6538,7 +6538,7 @@ label wakeupa:
 
         menu:
             "Kiss her":
-                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                if lauren.relationship >= Relationship.GIRLFRIEND:
                     $ add_point(KCT.TROUBLEMAKER)
                     $ add_point(KCT.BRO)
                 else:
@@ -6579,7 +6579,7 @@ label wakeupa:
                 with dissolve
 
             "Say Goodbye":
-                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                if lauren.relationship >= Relationship.GIRLFRIEND:
                     $ add_point(KCT.BOYFRIEND)
 
         u "I gotta go now and get ready for the Wolves' party, but I'll see you soon, okay?"
@@ -6599,7 +6599,7 @@ label wakeupa:
     stop music fadeout 3
     play music "music/m6punk.mp3"
 
-    if imre.relationship.value <= Relationship.MAD.value:
+    if imre.relationship <= Relationship.MAD:
         scene s660 # Mc getting ready for the party by himself
         with Fade (1,0,1)
 
@@ -7322,7 +7322,7 @@ label v6_fr3aubrey1:
 
     scene sfr3au1 # Opening : EMily and aubrey standing with beer bottle, Aubrey mouth open curious smile
 
-    if not forgiveemily and aubrey.relationship.value < Relationship.FWB.value: #If you didn't forgive Emily and didn't have sex with Aubrey:
+    if not forgiveemily and aubrey.relationship < Relationship.FWB: #If you didn't forgive Emily and didn't have sex with Aubrey:
         au "Really?"
 
         scene sfr3au2 # Emily close up smiling
@@ -7425,7 +7425,7 @@ label v6_fr3aubrey1:
 
         u "Nah, it's cool. Just saying hi, I'll go talk to some of the other people here."
 
-    elif aubrey.relationship.value < Relationship.FWB.value: #If you slept with Emily and didn't sleep with Aubrey:
+    elif aubrey.relationship < Relationship.FWB: #If you slept with Emily and didn't sleep with Aubrey:
         au "Really?"
 
         scene sfr3au2
@@ -9075,7 +9075,7 @@ label v6_fr3chloe1:
 
     u "Chloe? It's me, [name]."
 
-    if chloe.relationship.value <= Relationship.MAD.value:
+    if chloe.relationship <= Relationship.MAD:
         cl "*Sniff* Leave me alone."
 
         u "No, you're crying. I'm not just going to walk away. What happened?"
@@ -9451,7 +9451,7 @@ label v6_fr3aubrey3:
 
                 u "You wanna go upstairs and check out the Wolves' office?"
 
-                if aubrey.relationship.value >= Relationship.FWB.value:
+                if aubrey.relationship >= Relationship.FWB:
                     $ upstairs = "aubrey"
 
                     scene sfr3au3d
@@ -9733,7 +9733,7 @@ label v6_fr3riley3:
     ## OFFICE SCENES
 
 label upstairsaubrey:
-    if aubrey.relationship.value < Relationship.FWB.value:
+    if aubrey.relationship < Relationship.FWB:
         scene sufr3au1 # opening aubrey and you sitting on a couch in the office
         with fade
 

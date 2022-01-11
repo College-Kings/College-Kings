@@ -48,7 +48,7 @@ label v15s22:
 
             menu:
                 "Be supportive":
-                    if chloe.relationship.value >= Relationship.FWB.value:
+                    if chloe.relationship >= Relationship.FWB:
                         $ add_point(KCT.BOYFRIEND)
                     else:
                         $ add_point(KCT.BRO)
@@ -64,7 +64,7 @@ label v15s22:
                     cl "I really hope so."
 
                 "Be brutally honest":
-                    if chloe.relationship.value >= Relationship.FWB.value:
+                    if chloe.relationship >= Relationship.FWB:
                         $ add_point(KCT.BRO)
                     else:
                         $ add_point(KCT.TROUBLEMAKER)
@@ -95,7 +95,7 @@ label v15s22:
 
             menu:
                 "Change the subject":
-                    if chloe.relationship.value >= Relationship.FWB.value:
+                    if chloe.relationship >= Relationship.FWB:
                         $ add_point(KCT.BOYFRIEND)
                     else:
                         $ add_point(KCT.BRO)
@@ -116,7 +116,7 @@ label v15s22:
                     cl "Let's hope she's in a good mood."
 
                 "Lie":
-                    if chloe.relationship.value >= Relationship.FWB.value:
+                    if chloe.relationship >= Relationship.FWB:
                         $ add_point(KCT.TROUBLEMAKER)
                     else:
                         $ add_point(KCT.BRO)
@@ -154,7 +154,7 @@ label v15s22:
 
             menu:
                 "Be supportive":
-                    if chloe.relationship.value >= Relationship.FWB.value:
+                    if chloe.relationship >= Relationship.FWB:
                         $ add_point(KCT.BOYFRIEND)
                     else:
                         $ add_point(KCT.BRO)
@@ -170,7 +170,7 @@ label v15s22:
                     cl "I really hope so."
 
                 "Be brutally honest":
-                    if chloe.relationship.value >= Relationship.FWB.value:
+                    if chloe.relationship >= Relationship.FWB:
                         $ add_point(KCT.BRO)
                     else:
                         $ add_point(KCT.TROUBLEMAKER)
@@ -196,7 +196,7 @@ label v15s22:
 
         menu:
             "Be supportive":
-                if chloe.relationship.value >= Relationship.FWB.value:
+                if chloe.relationship >= Relationship.FWB:
                     $ add_point(KCT.BOYFRIEND)
                 else:
                     $ add_point(KCT.BRO)
@@ -217,7 +217,7 @@ label v15s22:
                 u "I know, but you have to stay positive. We still have a chance."
 
             "Be brutally honest":
-                if chloe.relationship.value >= Relationship.FWB.value:
+                if chloe.relationship >= Relationship.FWB:
                     $ add_point(KCT.BRO)
                 else:
                     $ add_point(KCT.TROUBLEMAKER)
@@ -1361,7 +1361,7 @@ label v15s22:
 
         u "Of course."
 
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+        if chloe.relationship >= Relationship.GIRLFRIEND:
             play sound "sounds/kiss.mp3"
         
             scene v15s22_1d # TPP. same as v15s22_1b Chloe gives Mc a romantic hug and kiss, both of them have their eyes closed
@@ -1444,7 +1444,7 @@ label v15s22:
 
         menu:
             "Call after her":
-                if chloe.relationship.value >= Relationship.FWB.value:
+                if chloe.relationship >= Relationship.FWB:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
                     $ add_point(KCT.BRO)
@@ -1474,7 +1474,7 @@ label v15s22:
                 pause 0.75
 
             "Say nothing":
-                if chloe.relationship.value >= Relationship.FWB.value:
+                if chloe.relationship >= Relationship.FWB:
                     $ add_point(KCT.BOYFRIEND)
                 else:
                     $ add_point(KCT.BRO)
@@ -1509,7 +1509,7 @@ label v15s22:
     else:
         $ aubrey.messenger.newMessage("Come to the Chicks house. I have an extra special surprise for you ;) I think you've earned it.", force_send=True)
 
-        if aubrey.relationship.value >= Relationship.FWB.value: # -if AubreyRs
+        if aubrey.relationship >= Relationship.FWB: # -if AubreyRs
             $ aubrey.messenger.addReply("A naked surprise? ;)", func=None)
             $ aubrey.messenger.newMessage("Guess you'll find out soon enough!", force_send=True)
 

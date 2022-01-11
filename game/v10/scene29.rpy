@@ -20,7 +20,7 @@ label v10_chloe_hallway:
 
     au "[name], settle an argument for us."
 
-    if chloe.relationship.value <= Relationship.MAD.value:
+    if chloe.relationship <= Relationship.MAD:
         scene v10such3a # FPP. Same as 3, Aubrey smile, Chloe slightly annoyed, Chloe mouth open.
         with dissolve
 

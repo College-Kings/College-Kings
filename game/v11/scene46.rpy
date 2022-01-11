@@ -154,7 +154,7 @@ label v11_dinner_with_lauren:
 
     la "I may or may not have already talked to her about this. *Chuckles*"
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v11dwl1e
         with dissolve
 

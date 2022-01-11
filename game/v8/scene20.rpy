@@ -18,7 +18,7 @@ label emily_arcade:
     play ambience "sounds/arcade_amb.mp3" fadein 2
     pause 1
 
-    if emily.relationship.value >= Relationship.FWB.value:
+    if emily.relationship >= Relationship.FWB:
         scene v8arcade2 # FPP. (after MC walks up to Emily). Emily cheerful, mouth open
         with dissolve
         em "Hey, sexy!"
@@ -801,7 +801,7 @@ label em_arcade_1:
 
     menu:
         "Kiss her":
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.TROUBLEMAKER)
 
             else:
@@ -851,7 +851,7 @@ label em_arcade_1:
             jump mon_morning_room
 
         "Good night":
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BOYFRIEND)
 
             scene v8arcade23a
@@ -1256,7 +1256,7 @@ label v8s20_nsfwSkipLabel1:
 
     menu:
         "Kiss her":
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.TROUBLEMAKER)
             else:
                 $ add_point(KCT.BOYFRIEND)
@@ -1305,7 +1305,7 @@ label v8s20_nsfwSkipLabel1:
             jump mon_morning_room
 
         "Good night":
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BOYFRIEND)
 
             scene v8arcade23a

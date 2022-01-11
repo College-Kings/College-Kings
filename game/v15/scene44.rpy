@@ -13,19 +13,26 @@ label v15s44:
     with dissolve
 
     pause 0.75
+    
+    scene v15s44_3b
+    with dissolve
+    
+    am "Let's take another look at the board to see what we have so far."
 
-    call screen detective_board
+    show screen detective_board
+
+    scene v15s44_3 # FPP. MC standing next to Amber, both facing the pinboard, MC looking at Amber, Amber looking at the pinboard, mouth closed, serious expression (don't actually show the pinboard)
+    with dissolve
+    
+    pause
 
 # -MC and Amber enter room 103 where the pinboard is. They approach the pinboard-
 
 # -The UI pops up to show all the clues achieved from the Chris interrogation (CLUES UNLOCKED: Nora wanted to be alone after the breakup. Nora hates her dad. LOCATIONS UNLOCKED: Her Dad's house. Ms. rose's House. Nora's Dad's cabin. Camping by herself)-
 
 label v15s44_continue:
-    scene v15s44_3 # FPP. MC standing next to Amber, both facing the pinboard, MC looking at Amber, Amber looking at the pinboard, mouth closed, serious expression (don't actually show the pinboard)
-    with dissolve
-
     menu:
-        "Ready to guess":
+        "I'm ready to guess":
             $ add_point(KCT.BRO)
             
             scene v15s44_3a # FPP. Same as v15s44_3, Amber looking at MC, Amber serious expression, mouth closed
@@ -300,7 +307,7 @@ label v15s44_continue:
 
     pe "I think her whole family are huge nature freaks. There's pictures of them camping, fishing... You name it."
 
-    if v15s43_camping_from_chris:
+    if v15_nora_clue_camping:
         scene v15s44_8
         with dissolve
 
@@ -309,6 +316,8 @@ label v15s44_continue:
     else:
         scene v15s44_8
         with dissolve
+
+        $ v15_nora_clue_camping = True
 
         $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/camping.webp", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
         
@@ -343,7 +352,7 @@ label v15s44_continue:
             u "Well, at least that's something."
         
         "Ask about Nora's posts":
-            $ v15s44_ex_from_penelope = True
+            $ v15_nora_clue_ex = True
             
             scene v15s44_8b
             with dissolve
@@ -403,7 +412,9 @@ label v15s44_continue:
 
     u "Okay, so let's add those clues to the board and see how things are shaping up."
 
-    call screen detective_board
+    show screen detective_board
+
+    pause
 
 # -The UI pops up to show all the clues achieved from Penelope's search (CLUES UNLOCKED: Nora loves nature. Nora visited her aunt the day she landed from Europe. LOCATION UNLOCKED: Staying at her Aunt's apartment)-
 

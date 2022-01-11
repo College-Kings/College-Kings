@@ -94,7 +94,7 @@ label v15s31:
 
         u "(Damn, it feels like that was ages ago already.)"
         
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+        if chloe.relationship >= Relationship.GIRLFRIEND:
             u "(How far we've come since then.)"
 
         play sound "sounds/swoosh.mp3"
@@ -115,7 +115,7 @@ label v15s31:
 
         u "(Damn, it feels like that was ages ago already.)"
         
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        if lauren.relationship >= Relationship.GIRLFRIEND:
             u "(How far we've come since then.)"
         
         elif v11_lauren_caught_aubrey:

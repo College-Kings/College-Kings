@@ -27,7 +27,7 @@ label v15s38:
     pause 0.75
 
     # Different reaction based on AubreyTamed, AubreyFriend, and/or if mc got caught with Naomi. If she's happy she'll smile, if not she won't react, and if they're dating she will be flirty-
-    if aubrey.relationship.value >= Relationship.TAMED.value:
+    if aubrey.relationship >= Relationship.TAMED:
         scene v15s38_5 # FPP Aubrey gives MC a sexy smile and winks at him
         with dissolve
 
@@ -142,7 +142,7 @@ label v15s38:
             u "Ha, true!"
 
     # -Regardless-
-    if aubrey.relationship.value >= Relationship.TAMED.value: # -if AubreyTamed
+    if aubrey.relationship >= Relationship.TAMED: # -if AubreyTamed
         scene v15s38_5c # FPP Same angle as 5, Aubrey smiling at MC, mouth open
         with dissolve
 
@@ -331,7 +331,7 @@ label v15s38:
 
                 pause 0.75
 
-                if aubrey.relationship.value >= Relationship.TAMED.value: # -if AubreyTamed, she raises hers after she sees MC raise his, and she winks at him-
+                if aubrey.relationship >= Relationship.TAMED: # -if AubreyTamed, she raises hers after she sees MC raise his, and she winks at him-
                     scene v15s38_5i # FPP Same angle as 5, Aubrey raising both of her hands, smiling and winking at MC
                     with dissolve
 

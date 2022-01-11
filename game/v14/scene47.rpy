@@ -48,7 +48,7 @@ label v14s47:
 
     u "Here who is?"
 
-    if lindsey.relationship.value >= Relationship.FWB.value:
+    if lindsey.relationship >= Relationship.FWB:
         scene v14s47_2
         with dissolve
 
@@ -558,7 +558,7 @@ label v14s47_driver:
         scene v14s47_driver_2b # FPP. Same as v14s47_driver_2, Lindsey looking at MC, unwrapping the lollipop, mouth closed, smiling
         with dissolve
 
-        if lindsey.relationship.value >= Relationship.FWB.value:
+        if lindsey.relationship >= Relationship.FWB:
             u "Is that even a question? *Chuckles*"
 
         else:

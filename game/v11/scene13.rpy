@@ -9,7 +9,7 @@ label v11_aubrey_plane_sex:
     play music "music/v11/Track Scene 13_1.mp3" fadein 2
     pause 0.75
 
-    if aubrey.relationship.value < Relationship.FWB.value:
+    if aubrey.relationship < Relationship.FWB:
         jump v11_nora_chris_plane
 
     else:
@@ -32,7 +32,7 @@ label v11_aubrey_plane_sex:
             "Go after her":
                 label v11_aubrey_plane_sex_sg:
                 $ sceneList.add("v11_aubrey")
-                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                if lauren.relationship >= Relationship.GIRLFRIEND:
                     $ v11_lauren_caught_aubrey = True
                     $ lauren.relationship = Relationship.MAD
 

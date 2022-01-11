@@ -174,7 +174,7 @@ label after_load:
             del emmyrs
         except NameError: pass
         try:
-            if "v13_emmy" in sceneList and emmy.relationship.value < Relationship.FWB.value: emmy.relationship = Relationship.FWB
+            if "v13_emmy" in sceneList: emmy.relationship = Relationship.FWB
         except NameError: pass
         try:
             if evelyndate: evelyn.relationship = Relationship.DATE
@@ -901,6 +901,9 @@ label after_load:
         except NameError: pass
         try:
             if v7_seencrowning: freeroam4.add("crowning")
+        except NameError: pass
+        try:
+            if v13s37_frnora: freeroam11.add("nora")
         except NameError: pass
 
 

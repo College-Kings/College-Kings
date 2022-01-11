@@ -17,7 +17,7 @@ screen v12_girls():
             action Jump("v12_jc_aubrey")
 
         imagebutton:
-            if chloe.relationship.value > Relationship.MAD.value:
+            if chloe.relationship > Relationship.MAD:
                 idle "images/v7/HCChloe.webp"
                 hover "images/v7/HCChloe2.webp"
                 action Jump("v12_jc_chloe")

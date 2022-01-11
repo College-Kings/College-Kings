@@ -40,7 +40,7 @@ label v14s46a:
 
     la "Go ahead and lie down on the bed."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v14s46a_4a # FPP. Same as v14s46a_3, but Lauren's mouth closed.
         with dissolve
 
@@ -77,7 +77,7 @@ label v14s46a:
 
     u "It's fine, I'm just teasing."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         label v14s46a_sga:
             if _in_replay:
                 $ lauren.relationship = Relationship.GIRLFRIEND
@@ -197,7 +197,7 @@ label v14s46a:
 
     stop music fadeout 3
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         play music "music/v14/Track Scene 46a_2.mp3" fadein 2
         #  replace with -LaurenGF plays some incredibly calming meditation music with an ocean gently lapping from her phone or radio.
      
@@ -238,7 +238,7 @@ label v14s46a:
 
     u "(Zzzz...)"
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v14s46a_7
         with dissolve
 

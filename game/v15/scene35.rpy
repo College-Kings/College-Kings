@@ -169,7 +169,7 @@ label v15s35:
 
     pause 0.75
 
-    if aubrey.relationship.value <= Relationship.MAD.value:
+    if aubrey.relationship <= Relationship.MAD:
         scene v15s35_5g # TPP. same as v15s35_5f Aubrey has no expression, mouth is open, still looking at Mc, Autumn and Lindsey still have their backs turned to MC and Aubrey
         with dissolve
 
@@ -240,6 +240,8 @@ label v15s35:
 
     scene v15s35_6 # TPP. show everyone sitting at the kitchen table On Mc's Left is Lindsey, in front of Mc is Autumn, on Mc's right is Aubrey, Mc and Lindsey are looking at each other Lindsey's mouth is open, Mc's mouth is closed, Autumn and Aubrey are looking at each other Aubrey's mouth is open, Autumns mouth is closed
     with dissolve
+
+    pause 0.75
 
     if v15_lindsey_mostlikelyto: #If helping Lindsey and chose Most Likely To
         jump v15most_likely_to
@@ -488,6 +490,8 @@ label v15s35:
         scene v15s35_6b # TPP. same as v15s35_6a Aubrey, Autumn and Lindsey are laughing at Mc, Mc is rolling his eyes, Everyone is still holding their phones
         with dissolve
 
+        pause 0.75
+
     label v15s35_wyr1_end:
         scene v15s35_7d
         with dissolve
@@ -531,6 +535,8 @@ label v15s35:
 
         scene v15s35_8a
         with dissolve
+
+        pause 0.75
 
         # -We enter the UI for Would you rather-
 
@@ -654,7 +660,7 @@ label v15s35:
 
         u "Tell that to Santa's wife!"
 
-        if aubrey.relationship.value <= Relationship.MAD.value:
+        if aubrey.relationship <= Relationship.MAD:
             scene v15s35_9f # FPP. same as v15s35_9d Aubrey has a disgusted look on her face, still looking at Mc, mouth is still closed
             with dissolve
 
@@ -726,13 +732,13 @@ label v15s35:
 
         u "Anyone can dress up as a bunny to take its place. Get me a basket and some eggs and our problem is solved."
 
-        if aubrey.relationship.value <= Relationship.MAD.value:
+        if aubrey.relationship <= Relationship.MAD:
             scene v15s35_9f
             with dissolve
 
             pause 0.75
 
-        elif aubrey.relationship.value >= Relationship.TAMED.value:
+        elif aubrey.relationship >= Relationship.TAMED:
             scene v15s35_9i # FPP. same as v15s35_9d Aubrey is biting her finger, looking at Mc seductively
             with dissolve
 
@@ -745,7 +751,7 @@ label v15s35:
 
         u "But finding a new Santa? Sheesh... That's a recruiting nightmare."
 
-        if aubrey.relationship.value <= Relationship.MAD.value:
+        if aubrey.relationship <= Relationship.MAD:
             scene v15s35_9g
             with dissolve
 
@@ -756,7 +762,7 @@ label v15s35:
 
             pause 0.75
 
-        elif aubrey.relationship.value >= Relationship.TAMED.value:
+        elif aubrey.relationship >= Relationship.TAMED:
             scene v15s35_9j # FPP. same as v15s35_9i Aubrey is winking at Mc, not biting her finger, full smile, mouth is closed
             with dissolve
 
@@ -995,7 +1001,7 @@ label v15s35:
 
         u "Aubrey, let's just go live in a river and eat flies. These two will need our help protecting them from predators anyway."
 
-        if aubrey.relationship.value <= Relationship.MAD.value:
+        if aubrey.relationship <= Relationship.MAD:
             scene v15s35_9m # FPP. same as v15s35_9g Aubrey is looking at Mc, still no expression, mouth is still open
             with dissolve
 
@@ -1035,7 +1041,7 @@ label v15s35:
 
         au "Orgy. For sure. One thousand percent."
 
-        if aubrey.relationship.value <= Relationship.MAD.value:
+        if aubrey.relationship <= Relationship.MAD:
             scene v15s35_9n # FPP. same as v15s35_9f Aubrey rolls her eyes, still a disgusted expression, mouth is still closed, still facing Mc
             with dissolve
 
@@ -1152,7 +1158,7 @@ label v15s35:
 
         u "You would have to watch them get fucked by all those other people, forever?"
 
-        if aubrey.relationship.value <= Relationship.MAD.value or "v14_threesome" in sceneList:
+        if aubrey.relationship <= Relationship.MAD or "v14_threesome" in sceneList:
             scene v15s35_9q # FPP. same as v15s35_9m Aubrey is slightly sad, still looking at Mc, mouth is still open
             with dissolve
 
@@ -1196,7 +1202,7 @@ label v15s35:
 
         li "*Laughs* Looks like I'll be seeing [name] and Aubrey at the orgy."
 
-        if aubrey.relationship.value <= Relationship.MAD.value:
+        if aubrey.relationship <= Relationship.MAD:
             scene v15s35_9
             with dissolve
 
@@ -1228,7 +1234,7 @@ label v15s35:
 
         u "Well, that's a little weird. Strangers?"
 
-        if aubrey.relationship.value <= Relationship.MAD.value:
+        if aubrey.relationship <= Relationship.MAD:
             scene v15s35_9r # FPP. same as v15s35_9f Aubrey's mouth is open, still a disgusted expression, still looking at Mc
             with dissolve
 
@@ -1677,7 +1683,7 @@ label v15s35:
 
         u "I will. Now I'm really looking forward to the next time I get drunk..."
 
-        if aubrey.relationship.value >= Relationship.TAMED.value:
+        if aubrey.relationship >= Relationship.TAMED:
             scene v15s35_9b
             with dissolve
 
@@ -1705,7 +1711,7 @@ label v15s35:
 
         u "Who says I'm not already a sexy super spy like James Bond?"
 
-        if aubrey.relationship.value <= Relationship.MAD.value:
+        if aubrey.relationship <= Relationship.MAD:
             scene v15s35_9r
             with dissolve
 
@@ -1721,7 +1727,7 @@ label v15s35:
 
             pause 0.75
 
-        elif aubrey.relationship.value >= Relationship.TAMED.value:
+        elif aubrey.relationship >= Relationship.TAMED:
             scene v15s35_9b
             with dissolve
 
@@ -1778,7 +1784,7 @@ label v15s35:
 
         au "Lame!"
 
-        if aubrey.relationship.value <= Relationship.MAD.value:
+        if aubrey.relationship <= Relationship.MAD:
             scene v15s35_9o
             with dissolve
 
@@ -1792,7 +1798,7 @@ label v15s35:
             scene v15s35_10a # TPP. Same as v15s35_10 Aubrey is rolling her eyes, still a disgusted expression, Mc looks slightly sad still looking at Aubrey
             with dissolve
 
-        elif aubrey.relationship.value >= Relationship.TAMED.value:
+        elif aubrey.relationship >= Relationship.TAMED:
             scene v15s35_9d
             with dissolve
 
@@ -1848,7 +1854,7 @@ label v15s35:
         call screen whos_most_likely_to("Most likely to become a super sexy spy?")
 
     label v15s35_wml3:
-        if aubrey.relationship.value <= Relationship.MAD.value:
+        if aubrey.relationship <= Relationship.MAD:
             scene v15s35_9t # FPP. same as v15s35_9o Aubrey is avoiding eye contact with Mc, still no expression, mouth is still closed
             with dissolve
 
@@ -1952,7 +1958,7 @@ label v15s35:
 
             u "She totally is, don't fall for it."
 
-            if aubrey.relationship.value > Relationship.MAD.value:
+            if aubrey.relationship > Relationship.MAD:
                 scene v15s35_9j
                 with dissolve
 
@@ -1975,7 +1981,7 @@ label v15s35:
 
                 u "(Is she talking about me?)"
 
-            if aubrey.relationship.value > Relationship.MAD.value:
+            if aubrey.relationship > Relationship.MAD:
                 scene v15s35_9y # FPP. same as v15s35_9d Aubrey is pouting cutely at Mc, still looking at Mc, mouth is still closed
                 with dissolve
 
@@ -2089,7 +2095,7 @@ label v15s35:
 
         u "Do you think we could all fit in an airplane bathroom?"
 
-        if aubrey.relationship.value > Relationship.MAD.value:
+        if aubrey.relationship > Relationship.MAD:
             scene v15s35_9h
             with dissolve
 
@@ -2133,7 +2139,7 @@ label v15s35:
 
         u "Yeah, I think in all the excitement you'd forget to lock the door, haha."
 
-        if v11_aubrey_sex and aubrey.relationship.value > Relationship.MAD.value:
+        if v11_aubrey_sex and aubrey.relationship > Relationship.MAD:
             scene v15s35_9
             with dissolve
 
@@ -2144,7 +2150,7 @@ label v15s35:
             scene v15s35_9j
             with dissolve
 
-        elif v11_aubrey_sex and aubrey.relationship.value <= Relationship.MAD.value:
+        elif v11_aubrey_sex and aubrey.relationship <= Relationship.MAD:
             scene v15s35_9
             with dissolve
 
@@ -2544,7 +2550,7 @@ label v15s35:
                     "Stay quiet":
                         $ add_point(KCT.BRO)
 
-                        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                        if chloe.relationship >= Relationship.GIRLFRIEND:
                             $ add_point(KCT.TROUBLEMAKER)
 
                         if hangOutWithLindsey:
@@ -2593,7 +2599,7 @@ label v15s35:
                     "Offer shots":
                         $ add_point(KCT.TROUBLEMAKER)
 
-                        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                        if chloe.relationship >= Relationship.GIRLFRIEND:
                             $ add_point(KCT.BOYFRIEND)
 
                         if hangOutWithLindsey:
@@ -2676,7 +2682,7 @@ label v15s35:
                             "Let it happen naturally":
                                 $ add_point(KCT.BRO)
 
-                                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                if chloe.relationship >= Relationship.GIRLFRIEND:
                                     $ add_point(KCT.TROUBLEMAKER)
 
                                 jump v15s35_let_it_happen
@@ -2685,7 +2691,7 @@ label v15s35:
                                 $ v15s35_bring_up_chloe = True
                                 $ add_point(KCT.TROUBLEMAKER)
                                 
-                                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                if chloe.relationship >= Relationship.GIRLFRIEND:
                                     $ add_point(KCT.BOYFRIEND)
                                     
                                 if hangOutWithLindsey:
@@ -2826,7 +2832,7 @@ label v15s35:
                                 "Stop Lindsey":
                                     $ add_point(KCT.BRO)
                                     
-                                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                    if chloe.relationship >= Relationship.GIRLFRIEND:
                                         $ add_point(KCT.TROUBLEMAKER)
                                         
                                     if hangOutWithLindsey:
@@ -2838,7 +2844,7 @@ label v15s35:
                                     $ v15say_nothing = True
                                     $ add_point(KCT.TROUBLEMAKER)
                                     
-                                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                    if chloe.relationship >= Relationship.GIRLFRIEND:
                                         $ add_point(KCT.BOYFRIEND)
                                         
                                     if hangOutWithLindsey:
@@ -2950,7 +2956,7 @@ label v15s35:
                     "Say nothing":
                         $ add_point(KCT.BRO)
                         
-                        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                        if chloe.relationship >= Relationship.GIRLFRIEND:
                             $ add_point(KCT.TROUBLEMAKER)
                             
                         if hangOutWithLindsey:
@@ -2999,7 +3005,7 @@ label v15s35:
                     "Try to trick her":
                         $ add_point(KCT.TROUBLEMAKER)
                         
-                        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                        if chloe.relationship >= Relationship.GIRLFRIEND:
                             $ add_point(KCT.BOYFRIEND)
                             
                         if hangOutWithLindsey:

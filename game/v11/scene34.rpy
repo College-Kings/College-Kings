@@ -85,7 +85,7 @@ label v11_cardealership:
     cl "What? *Chuckles* I just thought we could have a little fun."
 
 
-    if chloe.relationship.value >= Relationship.FWB.value:
+    if chloe.relationship >= Relationship.FWB:
         scene v11cd7 # TPP. chloe whispers in MCs ear, MC looks surprised, MCs mouth closed chloe's mouth opened
         with dissolve
         
@@ -184,7 +184,7 @@ label v11_cardealership:
 
     pause 0.75
 
-    if chloe.relationship.value >= Relationship.FWB.value:
+    if chloe.relationship >= Relationship.FWB:
         scene v11cd16 #FPP. Inside of the car, mc looking at chloe in passenger sit, mouth closed
         with dissolve
         
@@ -286,7 +286,7 @@ label v11_cardealership:
 
     cl "Haha, [name], this is amazing."
 
-    if chloe.relationship.value >= Relationship.FWB.value:
+    if chloe.relationship >= Relationship.FWB:
         menu:
             "Talk about \"us\"": 
                 scene v11cd22a # FPP. looking at chloe, mouth closed
@@ -382,7 +382,7 @@ label v11_cardealership:
 
     cl "What?"
 
-    if chloe.relationship.value >= Relationship.FWB.value:
+    if chloe.relationship >= Relationship.FWB:
         menu:
             "Kiss her":
                 scene v11cd30 # TPP. MC sits on the hood of the car, chloe is nearby
@@ -440,7 +440,7 @@ label v11_cardealership:
                         u "I don't know what I'd do if one day you were just... gone. The truth is... I love you, Chloe, and I don't want to go another day without you being mine."
                         u "So with all that said, can we make it official? Will you be my girl?"
 
-                        if chloe.relationship.value >= Relationship.GIRLFRIEND.value or (meetchloe and hcGirl == "chloe" and ending == "chloe"): #chloe gf in case of seeing this scene via pathbuilder
+                        if chloe.relationship >= Relationship.GIRLFRIEND or (meetchloe and hcGirl == "chloe" and ending == "chloe"): #chloe gf in case of seeing this scene via pathbuilder
                             $ chloe.relationship = Relationship.GIRLFRIEND
                             scene v11cd33d # FPP, sanme as 33c, chloe looking excited, mouth opened
                             with dissolve
@@ -457,7 +457,7 @@ label v11_cardealership:
 
                             play sound "sounds/kiss.mp3"
 
-                            if lauren.relationship.value >= Relationship.GIRLFRIEND.value and not v11_lauren_caught_aubrey:
+                            if lauren.relationship >= Relationship.GIRLFRIEND and not v11_lauren_caught_aubrey:
                                 $ grant_achievement("two_timer")
 
                             pause 2.5
@@ -465,7 +465,7 @@ label v11_cardealership:
                             scene v11cd36 # FPP. MC sets chloe down, mouth closed
                             with dissolve
 
-                            if lauren.relationship.value >= Relationship.GIRLFRIEND.value and not v11_lauren_caught_aubrey:
+                            if lauren.relationship >= Relationship.GIRLFRIEND and not v11_lauren_caught_aubrey:
                                 u "(Damn, two girlfriends. This could get complicated fast.)"
 
                             u "Wow... c'mon, let's get this car back."
@@ -697,7 +697,7 @@ label v11_cardealership:
 
     csa "Did you two enjoy the ride?"
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value: 
+    if chloe.relationship >= Relationship.GIRLFRIEND: 
         scene v11cd40a # FPP. same as 40, mouth closed
         with dissolve
 

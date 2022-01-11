@@ -60,7 +60,7 @@ label v9_room_thur_night:
 
         u "(Whew, glad to be alone... finally)"
 
-        if emily.relationship.value >= Relationship.FWB.value:
+        if emily.relationship >= Relationship.FWB:
             scene v9emi1a # TPP. Same camera as v9emi1, MC now on his phone on his bed.
             with dissolve
 
@@ -95,7 +95,7 @@ label v9_room_thur_night:
 
         u "(Whew, glad to be alone... finally)"
 
-        if emily.relationship.value >= Relationship.FWB.value:
+        if emily.relationship >= Relationship.FWB:
             scene v9emi4a # TPP. Same camera as v9emi4, MC now on his phone on his bed.
             with dissolve
 

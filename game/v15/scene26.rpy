@@ -396,13 +396,13 @@ label v15s26:
 
         pause 0.75
     
-    elif aubrey.relationship.value >= Relationship.TAMED.value and riley.relationship.value < Relationship.FWB.value:
+    elif aubrey.relationship >= Relationship.TAMED and riley.relationship < Relationship.FWB:
         scene v15s26_20a # TPP Show MC cuddling and holding hands with Aubrey, while Riley sits forward and watches the movie, all lit up by the movie screen
         with dissolve
 
         pause 0.75
 
-    elif riley.relationship.value >= Relationship.FWB.value and aubrey.relationship.value < Relationship.TAMED.value:
+    elif riley.relationship >= Relationship.FWB and aubrey.relationship < Relationship.TAMED:
         scene v15s26_20b # TPP Show MC cuddling and holding hands with Riley, while Aubrey leans back on the couch watching the movie, looking a little bored, all lit up by the movie screen
         with dissolve
 
@@ -704,7 +704,7 @@ label v15s26:
 
                 au "There's no way I could share the person I love with someone else."
 
-                if aubrey.relationship.value > Relationship.FWB.value: # -if Aubrey Tamed she gives a stern look to MC, but continue regardless-
+                if aubrey.relationship > Relationship.FWB: # -if Aubrey Tamed she gives a stern look to MC, but continue regardless-
                     $ aubrey.relationship = Relationship.FWB
 
                     scene v15s26_14d # FPP Same angle as 14, Aubrey looking at MC with a stern expression, mouth open
@@ -810,7 +810,7 @@ label v15s26:
                         
                         u "Basically, exactly what Aubrey said. I just couldn't commit like that to more than one person."
 
-                        if aubrey.relationship.value >= Relationship.TAMED.value: # -Aubrey soft smile, if AubreyTamed can she do something a little extra like a wink or idk be cute-
+                        if aubrey.relationship >= Relationship.TAMED: # -Aubrey soft smile, if AubreyTamed can she do something a little extra like a wink or idk be cute-
                             scene v15s26_14h # FPP Same angle as 14, Aubrey with a small smile, winking at MC
                             with dissolve
 
@@ -866,7 +866,7 @@ label v15s26:
                 $ add_point(KCT.TROUBLEMAKER)
                 $ grant_achievement("polycurious")
                 
-                if aubrey.relationship.value >= Relationship.TAMED.value:
+                if aubrey.relationship >= Relationship.TAMED:
                     $ aubrey.relationship = Relationship.FWB
                 $ riley.relationship = Relationship.LOYAL
                 

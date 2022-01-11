@@ -4,7 +4,22 @@
 # Time: Evening
 
 label v15s48b:
-    if "v15_nora" in sceneList: # Placeholder
+    scene v15s48b_97
+    with dissolve
+    
+    pause 0.75
+    
+    scene v15s48b_98
+    with dissolve
+    
+    pause 0.75
+    
+    scene v15s48b_99
+    with dissolve
+    
+    pause 0.75
+
+    if "v15_nora" in sceneList:
         $ nora.relationship = Relationship.FWB
     
         scene v15s48b_1 # TPP. MC and Nora spooning, MC big spoon with his arm around her, Nora holding his hand, both slight smile, mouth closed.
@@ -126,6 +141,7 @@ label v15s48b:
         pause 0.75
 
     else:
+        label v15s48bnosex:
         $ nora.relationship = Relationship.FRIEND
     
         scene v15s48b_9 # TPP. Show Nora trying to open a bottle of wine in the kitchen.

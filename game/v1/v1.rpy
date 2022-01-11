@@ -1026,7 +1026,7 @@ label starta: #for compatibility only
         scene s50el
         u "Hey, you're Elijah right?"
 
-        if elijah.relationship.value <= Relationship.MAKEFUN.value:
+        if elijah.relationship <= Relationship.MAKEFUN:
             scene s50el1
             with dissolve
 
@@ -1204,7 +1204,7 @@ label starta: #for compatibility only
         scene s56no1a
         
         u "Uhm..."
-        if nora.relationship.value >= Relationship.MOVE.value:
+        if nora.relationship >= Relationship.MOVE:
             scene s56no1
             with dissolve
             no "Dude, keep it moving."
@@ -2847,7 +2847,7 @@ label aw_bd:
     scene s92 # you head in hands
     with dissolve
 
-    if lauren.relationship.value >= Relationship.MOVE.value:
+    if lauren.relationship >= Relationship.MOVE:
         u "(Fuck... why did I try to kiss her?! That just made everything weird.)"
     else:
         u "(Fuck... should I have kissed her? Now it's just weird between us.)"
@@ -2890,7 +2890,7 @@ label aw_bd:
 
     imre "I take it your date didn't go as planned?"
 
-    if lauren.relationship.value >= Relationship.KISS.value:
+    if lauren.relationship >= Relationship.KISS:
         scene s96a
         with dissolve
         u "I just don't get it..."
@@ -2901,7 +2901,7 @@ label aw_bd:
 
         u "And now it's all just super weird."
 
-    elif lauren.relationship.value >= Relationship.MOVE.value:
+    elif lauren.relationship >= Relationship.MOVE:
         scene s96a
         with dissolve
 
