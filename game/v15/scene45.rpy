@@ -710,7 +710,7 @@ label v15s45:
 
             cl "But guys, this was like ages ago. So don't ask me for his name, I can't remember."
 
-            if not v15_nora_clue_ex:
+            if not v15s44_ex_from_penelope:
                 $ v15_nora_locations.add(Location("Nora's ex-boyfriend's place", "images/v15/detective_board/ex_house.webp", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
 
             cl "I think he lives round here though, or at least he used to."
@@ -728,9 +728,7 @@ label v15s45:
             scene v15s45_7j
             with dissolve
 
-            if not v15_nora_clue_ex:
-                $ v15_nora_clue_ex = True
-            
+            if not v15s44_ex_from_penelope:
                 $ v15_nora_clues.add(Clue("Chloe", "Nora's still friends with her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
 
             cl "It's not like that! All I remember is that she still kept in touch with the guy."
@@ -871,7 +869,7 @@ label v15s45:
             scene v15s45_7
             with dissolve
 
-            if not v15_nora_clue_ex:
+            if not v15s44_ex_from_penelope:
                 $ v15_nora_clues.add(Clue("Chloe", "Nora's still friends with her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
 
             cl "No, no, no. She would never go back to him, it's just that they had good memories together, and always stayed friends."
@@ -884,9 +882,7 @@ label v15s45:
             scene v15s45_7
             with dissolve
 
-            if not v15_nora_clue_ex:
-                $ v15_nora_clue_ex = True
-            
+            if not v15s44_ex_from_penelope:
                 $ v15_nora_locations.add(Location("Nora's ex-boyfriend's place", "images/v15/detective_board/ex_house.webp", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
 
             cl "I can't say that she would have. He lives nearby, I think. Or he used to at least."

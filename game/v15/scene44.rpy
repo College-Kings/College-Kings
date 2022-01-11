@@ -300,7 +300,7 @@ label v15s44_continue:
 
     pe "I think her whole family are huge nature freaks. There's pictures of them camping, fishing... You name it."
 
-    if v15_nora_clue_camping:
+    if v15s43_camping_from_chris:
         scene v15s44_8
         with dissolve
 
@@ -309,8 +309,6 @@ label v15s44_continue:
     else:
         scene v15s44_8
         with dissolve
-
-        $ v15_nora_clue_camping = True
 
         $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/camping.webp", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
         
@@ -345,7 +343,7 @@ label v15s44_continue:
             u "Well, at least that's something."
         
         "Ask about Nora's posts":
-            $ v15_nora_clue_ex = True
+            $ v15s44_ex_from_penelope = True
             
             scene v15s44_8b
             with dissolve
