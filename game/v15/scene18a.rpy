@@ -2276,7 +2276,7 @@ label v15s18a_ChrisAmber:
                     pause 0.75
                     
                     if config_censored:
-                        call screen censoredPopup("v15s18e_nsfwSkipLabelAmb")
+                        call screen censoredPopup("v15s18a_nsfwSkipLabelAmb")
 
                     scene v15s18aamber_9b # FPP. MC looking down as Amber is on her knees infront of him, MC's bottom part of his costume around his ankles and his dick is out infront of Amber's face.
                     with dissolve
@@ -2379,7 +2379,7 @@ label v15s18a_ChrisAmber:
 
                     pause 0.75
 
-                    label v15s18e_nsfwSkipLabelAmb:
+                    label v15s18a_nsfwSkipLabelAmb:
 
                     scene v15s18aamber_11 # TPP. Just Amber wiping her mouth, slight smile, mouth closed.
                     with dissolve

@@ -776,6 +776,9 @@ label v15s18c_imre_aubrey:
 
     u "(Well, when you put it like that...)"
 
+    if config_censored:
+        call screen censoredPopup("v15s18c_nsfwSkipLabelAub")
+
     scene v15s18c_imau_13 # TPP. Close up of Aubrey removing the bottom half of her costume
     with dissolve
 
@@ -1005,6 +1008,8 @@ label v15s18c_imre_aubrey:
 
     au "*Groans*"
 
+    label v15s18c_nsfwSkipLabelAub:
+
     scene v15s18c_imau_26 # FPP. MC in same position as fingering position, not fingering anymore Aubrey laying down, looking at the roof, MC looking at Aubrey, Aubrey smiling/excited (she just cummed so), mouth open
     with dissolve
 
@@ -1088,10 +1093,11 @@ label v15s18c_imre_aubrey:
 
         au "I'll miss you."
 
-    scene v15s18c_imau_33 # TPP. Close up of Aubrey getting dressed (pulling her panties up)
-    with dissolve
+    if not config_censored:
+        scene v15s18c_imau_33 # TPP. Close up of Aubrey getting dressed (pulling her panties up)
+        with dissolve
 
-    pause 0.75
+        pause 0.75
 
     scene v15s18c_imau_34 # FPP. MC watches as Aubrey walks out of the room, she looks back at him over her shoulders, sexy expression, winking, mouth closed
     with dissolve
@@ -1144,7 +1150,7 @@ label v15s18c_imre_aubrey:
 
     pause 0.75
 
-    call screen v15s18a_room
+    call screen v15s18a_upstairsroom
 
 label v15s18c_ryan:
     $ freeroam14.add("ryan")
@@ -2372,7 +2378,6 @@ label v15s18c_chris_penelope:
                     if penelope.relationship < Relationship.LOYAL:
                         call screen kct_popup
                 
-                
                     scene v15s18c_chpe_5f # FPP. Same as v15s18c_chpe_5, Penelope flirty expression, mouth open
                     with dissolve
 
@@ -2404,6 +2409,9 @@ label v15s18c_chris_penelope:
                     with dissolve
 
                     u "Get comfortable."
+
+                    if config_censored:
+                        call screen censoredPopup("v15s18c_nsfwSkipLabelP")
 
                     scene v15s18c_chpe_10 # TPP. Show Penelope taking her dress off, sexy expression and pose, mouth closed
                     with dissolve
@@ -2535,6 +2543,8 @@ label v15s18c_chris_penelope:
 
                     pause 0.75
 
+                    label v15s18c_nsfwSkipLabelP:
+
                     scene v15s18c_chpe_21 # FPP. MC and Penelope in the room, Penelope standing by the door, smiling, mouth open
                     with dissolve
 
@@ -2606,7 +2616,6 @@ label v15s18c_chris_penelope:
                 with dissolve
 
             label v15s18c_backtoparty:
-
                 u "Anyway, time to get back to the party. Ready?"
 
                 scene v15s18c_chpe_5
