@@ -902,6 +902,9 @@ label after_load:
         try:
             if v7_seencrowning: freeroam4.add("crowning")
         except NameError: pass
+        try:
+            if v13s37_frnora: freeroam11.add("nora")
+        except NameError: pass
 
 
         # v12 Renpy Fixes:
