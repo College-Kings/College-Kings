@@ -5,7 +5,7 @@ screen detective_popup(type, message):
 
     button:
         action Hide("detective")
-        background Frame(image_path + "detective_popup_background.png")
+        background Frame(image_path + "detective_popup_background.webp")
         minimum (655, 108)
         pos(10, 10)
 
@@ -37,7 +37,7 @@ screen detective_board():
         8: (620, 665),
     }
 
-    add image_path + "background.png"
+    add image_path + "background.webp"
     button action Return()
 
     # Clues
@@ -48,7 +48,7 @@ screen detective_board():
             action NullAction()
             pos clue_positions[i]
             xysize (212, 256)
-            background image_path + "card_background.png"
+            background image_path + "card_background.webp"
 
             text clue.description align (0.5, 0.4) color "#fff" xsize 150
             text clue.informant xalign 0.5 ypos 190
@@ -57,9 +57,9 @@ screen detective_board():
         frame:
             pos clue_positions[i]
             xysize (212, 256)
-            background image_path + "card_background.png"
+            background image_path + "card_background.webp"
 
-            add image_path + "unknown.png" align (0.5, 0.5)
+            add image_path + "unknown.webp" align (0.5, 0.5)
             text "Unknown" xalign 0.5 ypos 195
 
     # Locations
@@ -74,7 +74,7 @@ screen detective_board():
                 unhovered Hide("detective_board_description")
                 action NullAction()
                 xysize (212, 256)
-                background image_path + "card_background.png"
+                background image_path + "card_background.webp"
 
                 add location.image xalign 0.5 ypos 22
                 text location.name xalign 0.5 ypos 195 xsize 200
@@ -82,9 +82,9 @@ screen detective_board():
         for i in range(len(v15_nora_locations), 6):
             frame:
                 xysize (212, 256)
-                background image_path + "card_background.png"
+                background image_path + "card_background.webp"
 
-                add image_path + "unknown.png" align (0.5, 0.5)
+                add image_path + "unknown.webp" align (0.5, 0.5)
                 text "Unknown" xalign 0.5 ypos 195
 
     on "show" action SetVariable("quick_menu", False)
