@@ -178,6 +178,8 @@ label v15s48a:
         "Just kiss her":
             $ add_point(KCT.BRO)
 
+            label v15s48a_norasg:
+
             scene v15s48a_2d
             with dissolve
             play sound "sounds/kiss.mp3"
@@ -210,6 +212,9 @@ label v15s48a:
     play sound "sounds/kiss.mp3"
 
     pause 1.25
+
+    if config_censored:
+        call screen censoredPopup("v15s48a_nsfwSkipLabel1")
 
     scene v15s48a_7 # TPP. Closer up of MC and Nora, MC taking off Nora's shirt her boobs out, Nora's face obscured by her shirt, MC slight smile, mouth closed.
     with dissolve
@@ -829,7 +834,7 @@ label v15s48a_end:
             no "I'm- I... *Moans* Yes, [name]..."
 
         "Pull out":
-            u "(No. Fucking. Thank you,)"
+            u "(No. Fucking. Thank you.)"
 
             scene v15s48aend_12 # FPP. MC looking down at his dick inside of Nora as he is pulling it out.
             with dissolve
@@ -902,7 +907,5 @@ label v15s48a_end:
     no "No, you are."
 
     stop music fadeout 3
-
-    $ renpy.end_replay()
 
     jump v15s48b
