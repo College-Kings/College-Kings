@@ -127,4 +127,4 @@ label v8end:
     if renpy.loadable("v9/scene01.rpy"):
         jump v9start
     else:
-        jump gameEnd
+        jump end_screen

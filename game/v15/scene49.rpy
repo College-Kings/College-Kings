@@ -338,6 +338,5 @@ label end15:
 
     if renpy.loadable("v16/scene1.rpy"):
         jump v16_start
-
     else:
-        jump end_credits
+        call screen end_screen
