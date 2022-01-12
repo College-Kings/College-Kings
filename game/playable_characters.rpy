@@ -6,6 +6,7 @@ init python:
             self.username = self.name
             self.money = 0
             self.inventory = Inventory()
+            self.detective = None
 
             self.relationships = set()
             self.girlfriends = set()

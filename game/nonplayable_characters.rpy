@@ -62,7 +62,6 @@ init python:
                 "Vindictive": [],
                 "Talkative": None
             }
-            self.detective = None
 
             self.points = 0
             self._relationship = Relationship.FRIEND
