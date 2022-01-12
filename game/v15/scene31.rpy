@@ -4,11 +4,16 @@
 # Time: Morning
 
 label v15s31:
+    scene sleep_transition_fast
+    with fade
+
+    pause 2.2
+
     play music "music/v13/Track Scene 33.mp3" fadein 2
 
 # -MC is wearing his homecoming suit as he walks into the bathroom-
     scene v15s31_1 # TPP. Show MC looking at himself in the mirror as he is wearing the suit, slight smile, mouth closed.
-    with dissolve
+    with fade
 
     u "(Right, let's see how I'm looking.)"
 

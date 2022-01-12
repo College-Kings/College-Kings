@@ -185,11 +185,21 @@ label v15s29:
 
                 pause 0.75
 
+                scene v15s29_3
+                with dissolve
+
+                u "(Okay, time for sleep now.)"
+
     scene v15s29_5 # TPP. lights are out, and MC has laid down to go to sleep, no expression, eyes closed
     with fade
 
     pause 0.75
 
     stop music fadeout 3
+
+    scene black
+    with fade
+    
+    pause 2
 
     jump v15s31
