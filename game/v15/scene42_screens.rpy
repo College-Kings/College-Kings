@@ -29,6 +29,8 @@ screen detective_popup(type, message):
 
 
 screen detective_board():
+    zorder 1
+    
     tag detective
     style_prefix "detective"
 

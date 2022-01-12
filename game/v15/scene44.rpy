@@ -26,8 +26,6 @@ label v15s44:
     scene v15s44_3 # FPP. MC standing next to Amber, both facing the pinboard, MC looking at Amber, Amber looking at the pinboard, mouth closed, serious expression (don't actually show the pinboard)
     with dissolve
     
-    pause
-
 # -MC and Amber enter room 103 where the pinboard is. They approach the pinboard-
 
 # -The UI pops up to show all the clues achieved from the Chris interrogation (CLUES UNLOCKED: Nora wanted to be alone after the breakup. Nora hates her dad. LOCATIONS UNLOCKED: Her Dad's house. Ms. rose's House. Nora's Dad's cabin. Camping by herself)-
@@ -415,8 +413,6 @@ label v15s44_continue:
     u "Okay, so let's add those clues to the board and see how things are shaping up."
 
     show screen detective_board
-
-    pause
 
 # -The UI pops up to show all the clues achieved from Penelope's search (CLUES UNLOCKED: Nora loves nature. Nora visited her aunt the day she landed from Europe. LOCATION UNLOCKED: Staying at her Aunt's apartment)-
 
