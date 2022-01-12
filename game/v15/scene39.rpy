@@ -1242,7 +1242,7 @@ label v15s39:
 
     pause 0.75
 
-    $ v15s39_kiwiiPost1= KiwiiPost(lindsey, "v15_linpost1.webp", "Having the most luxurious night! #VIPs", numberLikes=931)
+    $ v15s39_kiwiiPost1= KiwiiPost(lindsey, "v15/v15_linpost2.webp", "Having the most luxurious night! #VIPs", numberLikes=931)
     $ v15s39_kiwiiPost1.newComment(imre, "The fuck? Where's my invite?", numberLikes=renpy.random.randint(360, 860))
     $ v15s39_kiwiiPost1.newComment(lauren, "That looks so fun... Where are you guys?!", numberLikes=renpy.random.randint(360, 860))
 

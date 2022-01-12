@@ -7,7 +7,7 @@
 label v15s22:
     play music "music/v13/Track Scene 39.mp3" fadein 2
 
-    $ v15s22_kiwiiPost1= KiwiiPost(chloe, "v15s22Kiwii1", "Making changes for my girls!", numberLikes=515)
+    $ v15s22_kiwiiPost1= KiwiiPost(chloe, "v15/v15_chlpost1.webp", "Making changes for my girls!", numberLikes=515)
     $ v15s22_kiwiiPost1.newComment(aubrey, "Ooooh, what are you up to?", numberLikes=renpy.random.randint(160, 460))
 
     if v14_ApesPostChloePics:
@@ -17,9 +17,6 @@ label v15s22:
     
     $ v15s22_kiwiiPost1.newComment(chris, "Looks like the President of the Chicks is making some big moves, huh?", numberLikes=renpy.random.randint(160, 460))
     $ v15s22_kiwiiPost1.newComment(chloe, "Trying to! Also, fuck off Gray :)", numberLikes=renpy.random.randint(160, 460))
-
-    if False: # for Lint
-        scene v15s22Kiwii1 # smile next the dean's office door
 
     scene v15s22_1 # TPP. Chloe and MC are walking in the school hallway, slight smiles, mouths are closed, looking forward
     with dissolve

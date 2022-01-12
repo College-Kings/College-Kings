@@ -3123,16 +3123,13 @@ label v15s35:
         scene v15s35_18a # TPP. same as v15s35_18 Lindsey has closed the door and is no longer visible, Autumn and Mc are looking at each other, Autumn's mouth is open slight smile hand extended out like she's explaining something, Mc's mouth is closed slight smile
         with fade
 
-        $ v15s35_kiwiiPost1= KiwiiPost(lindsey, "v15s35Kiwii1", "Always a good time with these good people <3 #GameNight", numberLikes=648)
+        $ v15s35_kiwiiPost1= KiwiiPost(lindsey, "v15/v15_linpost1.webp", "Always a good time with these good people <3 #GameNight", numberLikes=648)
         $ v15s35_kiwiiPost1.newComment(imre, "The fuck? Where's my invite?", numberLikes=renpy.random.randint(260, 560))
         $ v15s35_kiwiiPost1.newComment(riley, "Omg, I love game nights! Can I come to the next one?", numberLikes=renpy.random.randint(260, 560))
         $ v15s35_kiwiiPost1.newComment(lindsey, "Don't worry, everyone's invited next time. Promise!", numberLikes=renpy.random.randint(260, 560))
         $ v15s35_kiwiiPost1.newComment(chloe, "I'd never leave you guys out, hope you had fun without the rest of us!", numberLikes=renpy.random.randint(260, 560))
         $ v15s35_kiwiiPost1.addReply("The more the merrier! Except you don't stand a chance when it comes to the games, Imre", v15s35_kiwiireply1, mentions=imre, numberLikes=renpy.random.randint(260, 560))
         $ v15s35_kiwiiPost1.addReply("It was a really good night, gonna have to do it again with the whole gang.", v15s35_kiwiireply2, numberLikes=renpy.random.randint(260, 560))
-
-        if False: # for Lint
-            scene v15s35Kiwii1 # picture of game night set up or a picture of the group playing/talking at the game night
 
         stop music fadeout 3
 
