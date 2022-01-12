@@ -25,7 +25,7 @@ screen alert_template(message):
 
                 transclude
 
-style alert_text is olympus_mount_30
+style alert_text is bebas_neue_30
 
 
 screen warning_template(message, style="blue"):
@@ -55,7 +55,7 @@ screen warning_template(message, style="blue"):
 
             null height 50
 
-style warning_text is olympus_mount_30
+style warning_text is bebas_neue_30
 
 
 screen real_life_mode():

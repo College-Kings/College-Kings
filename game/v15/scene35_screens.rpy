@@ -159,7 +159,7 @@ style game_show_question_text is text:
 
 style game_show_vote_text is game_show_question_text
 
-style game_show_character_text is olympus_mount_30
+style game_show_character_text is bebas_neue_30
 
 style game_show_char_text is text:
     font "fonts/Montserrat-Bold.ttf"

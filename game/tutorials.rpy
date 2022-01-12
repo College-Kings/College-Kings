@@ -41,4 +41,4 @@ style tutorial_text is text:
     size 23
     text_align 0.5
 
-style tutorial_page_number is druk_wide_bold_22
+style tutorial_page_number is syne_extra_bold_22

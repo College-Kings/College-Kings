@@ -69,6 +69,6 @@ screen teacher_conviction_bar(new_value, teacher_name):
 
 
 style conviction_bar_text is text:
-    font "fonts/Olympus Mount.ttf"
+    font "fonts/BebasNeue-Regular.ttf"
     size 19
     yoffset -5

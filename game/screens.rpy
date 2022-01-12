@@ -238,7 +238,7 @@ screen choice(items, seconds=3, fail_label=None):
         on "show" action item.action
 
 
-style choice_text is olympus_mount_30
+style choice_text is bebas_neue_30
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
@@ -275,7 +275,7 @@ screen quick_menu():
 style quick_menu_button:
     align (0.5, 0.5)
 
-style quick_menu_button_text is olympus_mount_30
+style quick_menu_button_text is bebas_neue_30
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -697,13 +697,13 @@ screen file_slots(title):
 
 style file_slots_title is montserrat_extra_bold_64
 
-style file_slots_page_name is olympus_mount_30
+style file_slots_page_name is bebas_neue_30
 
-style file_slots_text is olympus_mount_30:
+style file_slots_text is bebas_neue_30:
     size 22
     yoffset 2
 
-style file_slots_button_text is druk_wide_bold_22
+style file_slots_button_text is syne_extra_bold_22
 
 
 ## Preferences screen ##########################################################
@@ -1058,7 +1058,7 @@ screen confirm(message, yes_action, no_action=Hide("confirm")):
     key "game_menu" action no_action
 
 
-style confirm_text is olympus_mount_30
+style confirm_text is bebas_neue_30
 
 
 ## Skip indicator screen #######################################################

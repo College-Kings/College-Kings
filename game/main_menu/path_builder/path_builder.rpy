@@ -84,7 +84,7 @@ screen path_builder_alert():
                 text "NO" align (0.5, 0.5)
 
 
-style path_builder_alert_text is olympus_mount_30
+style path_builder_alert_text is bebas_neue_30
 
 
 screen path_builder_base(header=""):

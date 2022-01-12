@@ -46,7 +46,7 @@ screen kct_choice_hint():
             null width 30
 
 
-style kct_choice_text is druk_wide_bold_22
+style kct_choice_text is syne_extra_bold_22
 
 
 screen kct_popup(required_kct=None):
