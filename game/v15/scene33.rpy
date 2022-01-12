@@ -450,6 +450,9 @@ label v15s33:
 
     audad "Naomi has done exceptionally well, thankfully, but a modeling career requires a lot of hard work."
 
+    scene v15s33_22b
+    with dissolve
+    
     aumom "And a lot of talent."
 
     scene v15s33_16
@@ -467,7 +470,7 @@ label v15s33:
 
     aumom "Exactly. Something more in line with your skillset."
 
-    scene v15s33_16
+    scene v15s33_16a
     with dissolve
 
     au "I can do modeling though. I'm good at modeling. Ha, they hired me on the spot when-"
@@ -1819,7 +1822,7 @@ label v15s33:
 
             u "Why?"
 
-            scene v15s33_46h
+            scene v15s33_46g
             with dissolve
 
             na "Just give it to me. Why do you ask so many questions?"
@@ -1925,6 +1928,9 @@ label v15s33:
 
             "Agree":
                 $ add_point(KCT.BOYFRIEND)
+                
+                scene v15s33_57f
+                #with dissolve
                 
                 u "Yeah, it's supposed to be the best day of your life. Right?"
 
@@ -2313,7 +2319,7 @@ label v15s33:
 
             u "Yeah, of course. It is a..."
 
-            u "Family photo. Isn't it?"
+            u "...\"family photo\". Isn't it?"
 
             na "Right! Come on, sissy!"
 
@@ -2526,17 +2532,17 @@ label v15s33:
                 pause 0.75
 
             "Monkey joke":
-                scene v15s33_75e
+                scene v15s33_75d
                 with dissolve
 
                 u "Why did the monkey eat the banana?"
 
-                scene v15s33_75d
+                scene v15s33_75e
                 with dissolve
 
                 au "I don't know... Why?"
 
-                scene v15s33_75e
+                scene v15s33_75d
                 with dissolve
 
                 u "Well, because monkeys like bananas... Didn't you know that?"
