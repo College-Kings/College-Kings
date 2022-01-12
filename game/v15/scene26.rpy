@@ -54,7 +54,7 @@ label v15s26:
 
     au "*Chuckles* Follow me!"
 
-    scene v15s26_4 # TPP Show Aubery, Riley, and MC, in that order, going up the stairs in the chicks house
+    scene v15s26_4 # TPP Show Aubery, Riley, and MC, in that order, going up the stairs in the Chicks house
     with dissolve
 
     pause 0.75
