@@ -621,6 +621,19 @@ label v15s4:
 
                 aut "*Laughs*"
 
+            elif dog_name.lower() in ("fido", "rover", "buddy"):
+                scene v15s4_12
+                with dissolve
+
+                aut "[dog_name]?!"
+
+                aut "That's so original... *Chuckles*"
+
+                scene v15s4_12a
+                with dissolve
+
+                u "Hahahah."
+
             else:
                 scene v15s4_12
                 with dissolve
