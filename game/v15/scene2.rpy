@@ -6,9 +6,13 @@
 init python:
     def v15s2_reply1():
         chloe.messenger.newMessage("You're unbelievable.")
+        chloe.messenger.newMessage("Just... stop talking about it.")
+        chloe.messenger.addReply("Okay. Done.") 
 
     def v15s2_reply2():
         chloe.messenger.newMessage("Well, at least you admit it...")
+        chloe.messenger.newMessage("Just... stop talking about it.")
+        chloe.messenger.addReply("Okay. Done.") 
 
 label v15s2:
     play music "music/v15/Track Scene 1_1.mp3" fadein 2
@@ -335,7 +339,7 @@ label v15s2:
     pause 0.75
 
     if v14_date_distraction:
-        $ chloe.messenger.newMessage("So, you wanna tell me why you didn't come?") 
+        $ chloe.messenger.newMessage("So, you wanna tell me why you didn't come?", force_send=True)
         $ chloe.messenger.addReply("Hey, I understand if you're upset. I'm sorry. Something came up, an emergency, and I couldn't make it.") 
         $ chloe.messenger.newMessage("What do you mean you couldn't make it? You told me to meet you there! What happened that was so important, you had to stand me up at a fancy restaurant?!")
         $ chloe.messenger.addReply("Chloe, I'm sorry. I can't talk about it, but everything's fine. It's over now, I just don't wanna talk about it.") 

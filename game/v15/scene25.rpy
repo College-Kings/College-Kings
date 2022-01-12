@@ -799,7 +799,7 @@ label v15s25:
 
     if aubrey.relationship >= Relationship.FWB:
         $ aubrey.messenger.addReply("A naked surprise? ;)")
-        $ aubrey.messenger.newMessage("Haha you'll find out. Hurry up. I'm waiting :)", force_send=True)
+        $ aubrey.messenger.newMessage("Haha you'll find out. Hurry up. I'm waiting :)")
 
     else:
         $ aubrey.messenger.addReply("Haha okay, see you there.")

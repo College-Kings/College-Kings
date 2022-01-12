@@ -7,9 +7,13 @@
 init python:
     def v15s1_reply1():
         chloe.messenger.newMessage("You're unbelievable.")
+        chloe.messenger.newMessage("Just... stop talking about it.")
+        chloe.messenger.addReply("Okay. Done.") 
 
     def v15s1_reply2():
         chloe.messenger.newMessage("Well, at least you admit it...")
+        chloe.messenger.newMessage("Just... stop talking about it.")
+        chloe.messenger.addReply("Okay. Done.") 
 
 label v15_start:
     $ autumn.relationship = Relationship.FRIEND #Reset Autumn to FRIEND
@@ -545,7 +549,7 @@ label v15s1:
 # -MC checks his texts and there's a message from Autumn-
 
     if v14_date_distraction:
-        $ chloe.messenger.newMessage("So, you wanna tell me why you didn't come?") 
+        $ chloe.messenger.newMessage("So, you wanna tell me why you didn't come?", force_send=True)
         $ chloe.messenger.addReply("Hey, I understand if you're upset. I'm sorry. Something came up, an emergency, and I couldn't make it.") 
         $ chloe.messenger.newMessage("What do you mean you couldn't make it? You told me to meet you there! What happened that was so important, you had to stand me up at a fancy restaurant?!")
         $ chloe.messenger.addReply("Chloe, I'm sorry. I can't talk about it, but everything's fine. It's over now, I just don't wanna talk about it.") 
@@ -554,8 +558,6 @@ label v15s1:
         $ chloe.messenger.newMessage("Okay, I'll just forget it happened. Is that fair?")
         $ chloe.messenger.addReply(_("Thank you."),v15s1_reply1)
         $ chloe.messenger.addReply(_("It's not fair, no."), v15s1_reply2)
-        $ chloe.messenger.newMessage("Just... stop talking about it.")
-        $ chloe.messenger.addReply("Okay. Done.") 
 
     $ autumn.messenger.newMessage("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)", force_send=True)
     $ autumn.messenger.addReply("Uhm, sure.")

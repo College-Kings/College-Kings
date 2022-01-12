@@ -681,13 +681,13 @@ label v15s12:
 
     $ riley.messenger.newMessage("Hey! I'm assuming you'll be at Lauren's birthday party later?", force_send=True)
     $ riley.messenger.addReply("Yeah, I'll be there.")
-    $ riley.messenger.newMessage("Cool. FYI, the stores are running low on costumes, you need to hurry up and buy one! Lol", force_send=True)
+    $ riley.messenger.newMessage("Cool. FYI, the stores are running low on costumes, you need to hurry up and buy one! Lol")
     $ riley.messenger.addReply("Ah, shit... You're right.")
-    $ riley.messenger.newMessage("Of course I am ;)", force_send=True)
+    $ riley.messenger.newMessage("Of course I am ;)")
     $ riley.messenger.addReply("I'd be lost without you")
-    $ riley.messenger.newMessage("Oh trust me, I know... hehe. See you soon!", force_send=True)
+    $ riley.messenger.newMessage("Oh trust me, I know... hehe. See you soon!")
     $ riley.messenger.addReply("Thanks red!")
-    $ riley.messenger.newMessage("Haha, welcome nerd!", force_send=True)
+    $ riley.messenger.newMessage("Haha, welcome nerd!")
 
 label v15s12_PhoneContinue:
     if riley.messenger.replies:
