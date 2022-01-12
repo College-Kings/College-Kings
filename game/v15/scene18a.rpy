@@ -773,6 +773,9 @@ label v15s18a_AutumPenelope:
         with dissolve
 
         aut "Yeah! From Blue to [dog_name]."
+        
+        if dog_name.lower() in ("autumn", "lauren", "penelope") or dog_name.lower() == name.lower():
+            aut "Don't ask..."
 
     scene v15s18apen_6b
     with dissolve

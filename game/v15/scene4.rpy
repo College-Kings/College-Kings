@@ -574,15 +574,73 @@ label v15s4:
             scene v15s4_12a
             with dissolve
 
-            u "He looks like a [dog_name] to me."
+            if dog_name.lower()[0] in ("a", "e", "i", "o"):
+                u "He looks like an [dog_name] to me."
+            else:
+                u "He looks like a [dog_name] to me."
 
-            if dog_name == name or dog_name.lower() == "autumn":
+            if dog_name.lower() == name.lower():
+                scene v15s4_12
+                with dissolve
+
+                aut "[dog_name]?!"
+
+                aut "Well, you two do look a bit alike. *Laughs*"
+
+                scene v15s4_12a
+                with dissolve
+
+                u "Hahahah."
+
+            elif dog_name.lower() in ("autumn", "lauren"):
                 scene v15s4_12
                 with dissolve
 
                 aut "[dog_name]?!"
 
                 aut "You're an idiot."
+
+                scene v15s4_12a
+                with dissolve
+
+                u "Hahahah."
+
+            elif dog_name.lower() in ("black", "grey", "gray", "pink", "white", "green", "red", "yellow", "orange", "purple", "brown"):
+                scene v15s4_12
+                with dissolve
+
+                aut "[dog_name]?!"
+
+                scene v15s4_12a
+                with dissolve
+                
+                u "I thought I'd give him a new coat of paint."
+
+                scene v15s4_12
+                with dissolve
+
+                aut "*Laughs*"
+
+            elif dog_name.lower() in ("fido", "rover", "buddy"):
+                scene v15s4_12
+                with dissolve
+
+                aut "[dog_name]?!"
+
+                aut "That's so original... *Chuckles*"
+
+                scene v15s4_12a
+                with dissolve
+
+                u "Hahahah."
+
+            elif len(dog_name.lower()) > 20:
+                scene v15s4_12
+                with dissolve
+
+                aut "[dog_name]?!"
+
+                aut "That's a mouthful. I'll try to remember it."
 
                 scene v15s4_12a
                 with dissolve
