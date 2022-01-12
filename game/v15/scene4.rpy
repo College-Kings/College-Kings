@@ -574,9 +574,25 @@ label v15s4:
             scene v15s4_12a
             with dissolve
 
-            u "He looks like a [dog_name] to me."
+            if dog_name.lower()[0] in ("a", "e", "i", "o"):
+                u "He looks lika an [dog_name] to me."
+            else:
+                u "He looks like a [dog_name] to me."
 
-            if dog_name == name or dog_name.lower() == "autumn":
+            if dog_name.lower() == name.lower():
+                scene v15s4_12
+                with dissolve
+
+                aut "[dog_name]?!"
+
+                aut "Well, you two do look a bit alike. *Laughs*"
+
+                scene v15s4_12a
+                with dissolve
+
+                u "Hahahah."
+
+            elif dog_name.lower() in ("autumn", "lauren"):
                 scene v15s4_12
                 with dissolve
 
@@ -588,6 +604,22 @@ label v15s4:
                 with dissolve
 
                 u "Hahahah."
+
+            elif dog_name.lower() in ("black", "grey", "gray", "pink", "white", "green", "red", "yellow", "orange", "purple", "brown"):
+                scene v15s4_12
+                with dissolve
+
+                aut "[dog_name]?!"
+
+                scene v15s4_12a
+                with dissolve
+                
+                u "I thought I'd give him a new coat of paint."
+
+                scene v15s4_12
+                with dissolve
+
+                aut "*Laughs*"
 
             else:
                 scene v15s4_12
