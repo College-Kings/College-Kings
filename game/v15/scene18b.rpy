@@ -3,6 +3,10 @@
 # Characters: MC (Outfit: Stripper Costume), AUBREY (Outfit: Clown Costume), RYAN (Outfit: Elvis Costume), AUTUMN (Outfit: Mummy), PENELOPE (Outfit: Sexy Witch), LAUREN (Outfit: Spider necklace costume), IMRE (Outfit: Cowboy Costume), RILEY (Outfit: Schoolgirl Costume), CHRIS (Outfit: Boxer Costume), AMBER (Outfit: Black bloody nurse costume)
 # Time: Night
 
+init python:
+    def v15s18b_kiwiireply1():
+        v15s18b_kiwiiPost1.newComment(imre, "Oh hey! Hell yeah! I do look good...", numberLikes=renpy.random.randint(260, 560), force_send=True)
+
 label v15s18b:
     play music "music/v13/Track Scene 18.mp3" fadein 2
 
@@ -597,11 +601,10 @@ label v15s18b:
     aut "*Chuckles* Better."
 
     $ v15s18b_kiwiiPost1= KiwiiPost(riley, "v15/v15_rilpost1.webp", "Celebrating this pure soul tonight!", numberLikes=648)
-    $ v15s18b_kiwiiPost1.newComment(lindsey, "So cute! Your costumes are perfect <3", numberLikes=renpy.random.randint(260, 560))
-    $ v15s18b_kiwiiPost1.newComment(amber, "Ugh, where am I?!", numberLikes=renpy.random.randint(260, 560))
-    $ v15s18b_kiwiiPost1.newComment(lauren, "Aw! Dammit Imre!", numberLikes=renpy.random.randint(260, 560))
-    $ v15s18b_kiwiiPost1.addReply("Haha! Great pic you guys... Imre looks great!", numberLikes=renpy.random.randint(260, 560))
-    $ v15s18b_kiwiiPost1.newComment(imre, "Oh hey! Hell yeah! I do look good...", numberLikes=renpy.random.randint(260, 560))
+    $ v15s18b_kiwiiPost1.newComment(lindsey, "So cute! Your costumes are perfect <3", numberLikes=renpy.random.randint(260, 560), force_send=True)
+    $ v15s18b_kiwiiPost1.newComment(amber, "Ugh, where am I?!", numberLikes=renpy.random.randint(260, 560), force_send=True)
+    $ v15s18b_kiwiiPost1.newComment(lauren, "Aw! Dammit Imre!", numberLikes=renpy.random.randint(260, 560), force_send=True)
+    $ v15s18b_kiwiiPost1.addReply("Haha! Great pic you guys... Imre looks great!", v15s18b_kiwiireply1, numberLikes=renpy.random.randint(260, 560))
 
     stop music fadeout 3
 
