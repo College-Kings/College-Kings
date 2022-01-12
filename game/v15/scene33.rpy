@@ -1134,13 +1134,13 @@ label v15s33:
 
         pause 0.75
 
-    play sound "sounds/bells.mp3"
     # Asked for hand bell sounds but we only have the clocktower bells.
 
     scene v15s33_28b
     with dissolve
 
-    rick "Oh shit- I believe that's lunch being served over there. Let's head over."
+    ### rick "Oh shit- I believe that's lunch being served over there. Let's head over."
+    rick "Hey, looks like lunch is about to get served over there. Let's head over."
 
     scene v15s33_28c
     with dissolve
