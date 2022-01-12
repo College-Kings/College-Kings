@@ -1559,6 +1559,9 @@ label v15s33:
 
             u "(Why the hell not...?) Ha..."
 
+            if config_censored:
+                call screen censoredPopup("v15s33_nsfwSkipLabel1")
+
             scene v15s33_50 # FPP. In the bathroom, Naomi on her knees infront of MC, MC looking down at Naomi, Naomi looking up at MC, smirking, mouth closed.
             with dissolve
 
@@ -1634,6 +1637,8 @@ label v15s33:
             pause 0.75
 
             u "You're so fucking hot, Naomi-"
+
+            label v15s33_nsfwSkipLabel1:
 
             play sound "sounds/dooropen.mp3"
 
