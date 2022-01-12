@@ -114,20 +114,20 @@ label v15s30:
                 $ emily.messenger.newMessage("Hehe, I'm thinking about you slipping of inside me...")
                 $ emily.messenger.newMessage("I do miss you... Both of you, haha.")
                 $ emily.messenger.addReply("I'm sure you'll see us again soon.", func=None)
-                $ emily.messenger.newMessage("How soon? I need you so bad...", force_send=True)
+                $ emily.messenger.newMessage("How soon? I need you so bad...")
                 $ emily.messenger.addReply("We'll see... If you're a good girl then maybe soon rather than later ;)")
 
                 if config_censored:
-                    $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
+                    $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp")
                 else:
-                    $ emily.messenger.newImgMessage("images/v15/Scene 29/emilynude2.webp", force_send=True) # Ignore as reused from Scene 29
+                    $ emily.messenger.newImgMessage("images/v15/Scene 29/emilynude2.webp") # Ignore as reused from Scene 29
 
-                $ emily.messenger.newMessage("I want you here. Now.", force_send=True)
+                $ emily.messenger.newMessage("I want you here. Now.")
                 $ emily.messenger.addReply("Fuck, that's so hot...", func=None)
                 $ emily.messenger.addReply("You have to earn it...", func=None)
-                $ emily.messenger.newMessage("I'm going to cum for you...", force_send=True)
+                $ emily.messenger.newMessage("I'm going to cum for you...")
                 $ emily.messenger.addReply("Good.", func=None)
-                $ emily.messenger.newMessage("Send me a pic when you're finished? ;)", force_send=True)
+                $ emily.messenger.newMessage("Send me a pic when you're finished? ;)")
 
                 label v15s30_PhoneContinue2:
                     if emily.messenger.replies:
@@ -166,7 +166,7 @@ label v15s30:
                 else: 
                     $ emily.messenger.addImgReply("images/v15/Scene 29/emilynude_MC_DicPic2.webp", func=None) # Ignore as reused from scene 29
 
-                $ emily.messenger.newMessage("God, I wish I was there to help clean that off you...", force_send=True)
+                $ emily.messenger.newMessage("God, I wish I was there to help clean that off you...")
                 $ emily.messenger.addReply("You're such a dirty girl, Emily.", func=None)
                 $ emily.messenger.addReply("Haha, my dirty girl...", func=None)
                 $ emily.messenger.newMessage("You know it ;)", force_send=True)
