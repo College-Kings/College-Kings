@@ -1318,6 +1318,8 @@ label v15s33:
 
     u "Naomi, I think-"
 
+    label test:
+
     scene v15s33_46b # FPP. Naomi standing infront of MC, MC looking at Naomi, Naomi looking at MC, Naomi's hand on MC's cheek, Naomi smirking, mouth open.
     with dissolve
 
@@ -1466,6 +1468,8 @@ label v15s33:
             u "Sorry."
 
             u "I'm going back to the table."
+
+            $ renpy.end_replay()
 
             scene v15s33_46f
             with dissolve
@@ -1640,7 +1644,9 @@ label v15s33:
             scene v15s33_51 # TPP. Close up of Aubrey at the entrance of the bathroom, Aubrey angry, mouth open.
             with vpunch
 
-            $ grant_achievement("what_goes_around")
+            if "v11_aubrey" in sceneList:
+                $ grant_achievement("what_goes_around")
+            
             au "I fucking KNEW IT!"
 
             scene v15s33_51a # FPP. CLose up of Aubrey at the entrance of the bathroom, Aubrey angry, mouth closed.
@@ -1707,6 +1713,8 @@ label v15s33:
             with dissolve
 
             u "*Sighs*"
+            
+            $ renpy.end_replay()
 
             scene v15s33_54c
             with dissolve
