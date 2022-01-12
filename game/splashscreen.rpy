@@ -3,9 +3,10 @@ screen disclaimer():
 
     imagebutton:
         idle "gui/splashscreen/confirm_idle.png"
+        hover "gui/splashscreen/confirm_hover.png"
         action [SetVariable("persistent.confirm_18", True), Return()]
         xalign 0.5
-        ypos 551
+        ypos 540
 
 
 label splashscreen:
