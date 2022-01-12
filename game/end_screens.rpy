@@ -66,12 +66,11 @@ screen patreon_credits(support_link="https://www.patreon.com/collegekings"):
 
     add image_path + "patreon_credits_background.webp"
 
-
     vbox:
         align(0.5, 0.334)
         spacing 100
 
-        text "Patreons video file {b}HERE{/b}"
+        add "patreon_credits"
 
     imagebutton:
         idle image_path + "support_development_idle.webp"
