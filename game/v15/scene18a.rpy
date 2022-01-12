@@ -3,6 +3,15 @@
 # Characters: MC (Outfit: Stripper Costume), AUBREY (Outfit: Clown Costume), RYAN (Outfit: Elvis Costume), AUTUMN (Outfit: Mummy), PENELOPE (Outfit: Sexy Witch), LAUREN (Outfit: Spider necklace costume), IMRE (Outfit: Cowboy Costume), RILEY (Outfit: Schoolgirl Costume), CHRIS (Outfit: Boxer Costume), AMBER (Outfit: Black bloody nurse costume)
 # Time: Night
 
+init python:
+    def v15s18a_kiwiireply1():
+        v15s18a_kiwiiPost3.newComment(lauren, _("Hehe, thank you!! You guys are the best <3"), numberLikes=renpy.random.randint(1060, 2260))
+        v15s18a_kiwiiPost3.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(1860, 3060))
+
+    def v15s18a_kiwiireply2():
+        v15s18a_kiwiiPost4.newComment(lauren, _("Hahaha! Thank you guys <3"), numberLikes=renpy.random.randint(1060, 2260))
+        v15s18a_kiwiiPost4.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(1860, 3060))
+
 label v15s18a:
     play music "music/v13/Track Scene 24_2.mp3" fadein 2
 
@@ -365,9 +374,7 @@ label v15s18a_Aubrey:
         else:
             $ v15s18a_kiwiiPost3.newComment(grayson, _("What the fuck...?"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
         $ v15s18a_kiwiiPost3.addReply(_("Lol, I love this. Happy birthday Lauren!"), numberLikes=renpy.random.randint(1060, 2260), mentions=[lauren])
-        $ v15s18a_kiwiiPost3.newComment(lauren, _("Hehe, thank you!! You guys are the best <3"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
-        $ v15s18a_kiwiiPost3.addReply(_("Now taking appointments... ;)"), numberLikes=renpy.random.randint(1060, 2260))
-        $ v15s18a_kiwiiPost3.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(1860, 3060), force_send=True)
+        $ v15s18a_kiwiiPost3.addReply(_("Now taking appointments... ;)"), v15s18a_kiwiireply1, numberLikes=renpy.random.randint(1060, 2260))
 
     else:
         $ v15s18a_kiwiiPost4 = KiwiiPost(aubrey, "v15/v15_aupost2.webp", _("I think something's wrong with our stripper... Is he supposed to be this sad? </3"), numberLikes=2415)
@@ -378,9 +385,7 @@ label v15s18a_Aubrey:
         else:
             $ v15s18a_kiwiiPost4.newComment(grayson, _("What the fuck is this"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
         $ v15s18a_kiwiiPost4.addReply(_("Sigh... Happy birthday Lauren! Lol"), numberLikes=renpy.random.randint(1060, 2260), mentions=[lauren])
-        $ v15s18a_kiwiiPost4.newComment(lauren, _("Hahaha! Thank you guys <3"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
-        $ v15s18a_kiwiiPost4.addReply(_("Now taking appointments... ;)"), numberLikes=renpy.random.randint(1060, 2260))
-        $ v15s18a_kiwiiPost4.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(1860, 3060), force_send=True)
+        $ v15s18a_kiwiiPost4.addReply(_("Now taking appointments... ;)"), v15s18a_kiwiireply2, numberLikes=renpy.random.randint(1060, 2260))
     
     call screen v15s18a_bar
 
