@@ -1557,13 +1557,13 @@ label v15s33:
 
             $ aubrey.relationship = Relationship.MAD
 
-            u "(Why the hell not...?) Ha..."
+            u "(Why the hell not...?)"
 
             if config_censored:
                 call screen censoredPopup("v15s33_nsfwSkipLabel1")
 
             scene v15s33_50 # FPP. In the bathroom, Naomi on her knees infront of MC, MC looking down at Naomi, Naomi looking up at MC, smirking, mouth closed.
-            with dissolve
+            with fade
 
             na "Ooh..."
 

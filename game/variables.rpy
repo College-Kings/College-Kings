@@ -378,7 +378,7 @@ default v15_blame_nora = False # blame_chris = (v13_imre_disloyal, or maybe not)
 default v15_car_sold_price = 0
 default v15_emily_sext = False
 default v15_lindsey_alcohol = False
-default v15_lindsey_recording = 0 # 1 if sober, 2 if drunk
+default v15_lindsey_recording = 0 
 default v15_mad_at_ms_rose = False
 default v15_nora_clue_camping = False
 default v15_nora_clue_ex = False

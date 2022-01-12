@@ -704,10 +704,11 @@ label v15s39:
                         "Stay on topic":
                             $ add_point(KCT.TROUBLEMAKER)
                             $ v15_stay_on_topic = True
-                            $ v15_lindsey_recording = 2
 
                             if chloe.relationship >= Relationship.GIRLFRIEND:
                                 $ add_point(KCT.BOYFRIEND)
+
+                            $ v15_lindsey_recording = 4
 
                             scene v15s39_8c
                             with dissolve
@@ -813,6 +814,8 @@ label v15s39:
                                     li "*Drunk* Yeah, okay, let's go dance! Wooo!"
 
                                 "Say nothing":
+                                    $ v15_lindsey_recording = 5
+
                                     $ add_point(KCT.TROUBLEMAKER)
                                     $ v15_say_nothing = True
 
@@ -1003,7 +1006,7 @@ label v15s39:
                     u "(Sorry Aubrey... I'm trying to start a storm here.)"
 
                     if kct == "popular":
-                        $ v15_lindsey_recording = 1
+                        $ v15_lindsey_recording = 6
                         
                         scene v15s39_8i
                         with dissolve
