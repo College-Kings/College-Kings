@@ -53,13 +53,13 @@ label v15s29:
         $ emily.messenger.addReply("Let me see? ;)", func=None)
 
         if config_censored:
-            $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
+            $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp")
         else:
-            $ emily.messenger.newImgMessage("images/v15/Scene 29/emilynude1.webp", force_send=True) # Emily sat on the edge of the bath, now naked, legs crossed
+            $ emily.messenger.newImgMessage("images/v15/Scene 29/emilynude1.webp") # Emily sat on the edge of the bath, now naked, legs crossed
 
-        $ emily.messenger.newMessage("What would we be doing right now if you were here with me? ;)", force_send=True)
+        $ emily.messenger.newMessage("What would we be doing right now if you were here with me? ;)")
         $ emily.messenger.addReply("We'd be getting very wet and extremely warm...", func=None)
-        $ emily.messenger.newMessage("Mmm... Send me a pic? ;)", force_send=True)
+        $ emily.messenger.newMessage("Mmm... Send me a pic? ;)")
 
         label v15s29_PhoneContinue:
             if emily.messenger.replies:
@@ -88,14 +88,14 @@ label v15s29:
                 pause 0.75
 
                 if config_censored:
-                    $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
+                    $ emily.messenger.addImgReply("gui/censoredPopup/censoredBackground.webp")
                 else:
-                    $ emily.messenger.newImgMessage("images/v15/Scene 29/emilynude_MC_DicPic1.webp", force_send=True) # MC dick pic, Just show a white sheet under Mc for the background
+                    $ emily.messenger.addImgReply("images/v15/Scene 29/emilynude_MC_DicPic1.webp") # MC dick pic, Just show a white sheet under Mc for the background
 
-                $ emily.messenger.newMessage("Omg, you're so hard for me... Are you touching yourself?", force_send=True)
+                $ emily.messenger.newMessage("Omg, you're so hard for me... Are you touching yourself?")
                 $ emily.messenger.addReply("I am now. Thinking about you in that bath ;)", func=None)
-                $ emily.messenger.newMessage("Hehe, I'm thinking about you slipping of inside me...", force_send=True)
-                $ emily.messenger.newMessage("I do miss you... Both of you, haha.", force_send=True)
+                $ emily.messenger.newMessage("Hehe, I'm thinking about you slipping of inside me...")
+                $ emily.messenger.newMessage("I do miss you... Both of you, haha.")
                 $ emily.messenger.addReply("I'm sure you'll see us again soon.", func=None)
                 $ emily.messenger.newMessage("How soon? I need you so bad...", force_send=True)
                 $ emily.messenger.addReply("We'll see... If you're a good girl then maybe soon rather than later ;)")
