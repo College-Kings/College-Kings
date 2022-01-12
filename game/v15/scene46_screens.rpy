@@ -3,9 +3,13 @@ screen v15s46_chooselocation():
 
     modal True
 
+    add "darker_80"
+
     vbox:
         align (0.5, 0.5)
         spacing 50
+
+        text "Where is Nora?" size 100
         
         hbox:
             spacing 20
