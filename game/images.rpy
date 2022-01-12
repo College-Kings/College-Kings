@@ -186,6 +186,7 @@ image say_chirp = "images/achievements/v14/say_chirp.webp"
 image grand_theft_chloe = "images/achievements/v14/grand_theft_chloe.webp"
 image clean_it_up = "images/achievements/v14/clean_it_up.webp"
 
+image blue_cheese_and_sambuca = "images/achievements/v15/blue_cheese_and_sambuca.webp"
 image childhood_memories = "images/achievements/v15/childhood_memories.webp"
 image christmas_is_dead = "images/achievements/v15/christmas_is_dead.webp"
 image counter_intelligence = "images/achievements/v15/counter_intelligence.webp"

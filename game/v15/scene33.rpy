@@ -281,6 +281,7 @@ label v15s33:
 
     menu:
         "Take the shot":
+            $ v15s33_sambuca = True
             $ add_point(KCT.TROUBLEMAKER)
 
             scene v15s33_13 # TPP. Show Naomi and MC clinking shot glasses, Naomi a little drunk, smirking looking at MC, MC looking at Naomi, slight smile, mouth closed.
@@ -655,6 +656,7 @@ label v15s33:
     menu:
         "Take it":
             $ add_point(KCT.BOYFRIEND)
+            $ v15s33_sambuca = True
 
             scene v15s33_13a # TPP. MC and Aubrey clinking shot glasses, Both slight smile, mouth closed.
             with dissolve
@@ -917,6 +919,9 @@ label v15s33:
             with dissolve
 
             u "Mmm! *Coughs* Thanks..."
+
+            if v15s33_sambuca:
+                $ grant_achievement("blue_cheese_and_sambuca")
 
             u "(Man, what the hell is this stuff?)"
 

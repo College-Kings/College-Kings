@@ -211,4 +211,5 @@ init python:
         Achievement("karen", "Where is your manager?!") #s24
         Achievement("polycurious", "Monogamy is overrated") #s26
         Achievement("what_goes_around", "Aubrey tastes her own medicine at the wedding") #s33
+        Achievement("blue_cheese_and_sambuca", "Worst wedding catering ever") #s33
         Achievement("just_one_more_thing", "Find all the leads and crack the case") #s46
