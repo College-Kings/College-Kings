@@ -10634,12 +10634,4 @@ label v6_fr3chris3: ### ENDING
     u "Holy shit."
     stop music fadeout 3
 
-if not renpy.loadable("v7/v7.rpy"):
-    scene savenow
-    with Fade (1,0,1)
-    " "
-
-if renpy.loadable("v7/v7.rpy"):
     jump v7start
-else:
-    jump gameEnd

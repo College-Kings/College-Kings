@@ -93,6 +93,6 @@ label end10:
     if renpy.loadable("v11/scene1.rpy"):
         jump v11_start
     elif config.enable_steam:
-        call screen steam_end(link="https://store.steampowered.com/app/1732640/College_Kings__Act_III/")
+        call screen end_screen(support_link="https://store.steampowered.com/dlc/1463120/College_Kings__Act_I/")
     else:
-        jump gameEnd
+        call screen end_screen

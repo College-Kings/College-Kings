@@ -378,7 +378,7 @@ default v15_blame_nora = False # blame_chris = (v13_imre_disloyal, or maybe not)
 default v15_car_sold_price = 0
 default v15_emily_sext = False
 default v15_lindsey_alcohol = False
-default v15_lindsey_recording = 0 
+default v15_lindsey_recording = 0 # (if recording happened in scene 35, value may be 1, 2 or 3; if recording happened in scene 39, value may be 4, 5 or 6)
 default v15_mad_at_ms_rose = False
 default v15_nora_clue_camping = False
 default v15_nora_clue_ex = False

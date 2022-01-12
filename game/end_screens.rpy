@@ -1,4 +1,4 @@
-screen end_screen():
+screen end_screen(support_link="https://www.patreon.com/collegekings"):
     tag end_screen
     modal True
     style_prefix "end_screen"
@@ -48,16 +48,16 @@ screen end_screen():
         if not config.enable_steam:
             imagebutton:
                 idle image_path + "get_access_idle.webp"
-                action OpenURL("https://www.patreon.com/collegekings")
+                action OpenURL(support_link)
                 yalign 0.5
 
         imagebutton:
             idle image_path + "credits_idle.webp"
-            action Show("patreon_credits")
+            action Show("patreon_credits", None, support_link)
             yalign 0.5
 
 
-screen patreon_credits():
+screen patreon_credits(support_link="https://www.patreon.com/collegekings"):
     tag end_screen
     modal True
     style_prefix "patreon_credits"
@@ -73,12 +73,11 @@ screen patreon_credits():
 
         text "Patreons video file {b}HERE{/b}"
 
-    if not config.enable_steam:
-        imagebutton:
-            idle image_path + "support_development_idle.webp"
-            action OpenURL("https://www.patreon.com/collegekings")
-            xalign 0.5
-            ypos 765
+    imagebutton:
+        idle image_path + "support_development_idle.webp"
+        action OpenURL(support_link)
+        xalign 0.5
+        ypos 765
 
     hbox:
         align (0.5, 1.0)

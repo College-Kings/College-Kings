@@ -97,6 +97,6 @@ label end13:
     if renpy.loadable("v14/scene1.rpy"):
         jump v14_start
     elif config.enable_steam:
-        call screen steam_join_discord
+        call screen end_screen(support_link="https://store.steampowered.com/dlc/1463120/College_Kings__Act_I/")
     else:
-        jump end_credits
+        call screen end_screen
