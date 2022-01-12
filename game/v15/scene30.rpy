@@ -169,9 +169,16 @@ label v15s30:
                 $ emily.messenger.newMessage("God, I wish I was there to help clean that off you...")
                 $ emily.messenger.addReply("You're such a dirty girl, Emily.", func=None)
                 $ emily.messenger.addReply("Haha, my dirty girl...", func=None)
-                $ emily.messenger.newMessage("You know it ;)", force_send=True)
-                $ emily.messenger.newMessage("Night, [name]. Thanks for the show :)", force_send=True)
+                $ emily.messenger.newMessage("You know it ;)")
+                $ emily.messenger.newMessage("Night, [name]. Thanks for the show :)")
                 $ emily.messenger.addReply("You too. <3 Night.", func=None)
+
+                label v15s30_PhoneContinue3:
+                    if emily.messenger.replies:
+                        call screen phone
+                    if emily.messenger.replies:
+                        u "(I should reply to Emily.)"
+                        jump v15s30_PhoneContinue3
 
                 scene v15s30_4f # same as v15s30_4d FPP. MC wipes his dick clean of cum
                 with dissolve
@@ -187,15 +194,15 @@ label v15s30:
                 $ add_point(KCT.BOYFRIEND)
                 
                 $ emily.messenger.addReply("Not really in the mood... I'm sorry", func=None)
-                $ emily.messenger.newMessage("Oh, okay. No worries. I'll talk to you soon, I miss you <3", force_send=True)
+                $ emily.messenger.newMessage("Oh, okay. No worries. I'll talk to you soon, I miss you <3")
                 $ emily.messenger.addReply("You too, night :)", func=None)
 
-                label v15s30_PhoneContinue3:
+                label v15s30_PhoneContinue4:
                     if emily.messenger.replies:
                         call screen phone
                     if emily.messenger.replies:
                         u "(I should reply to Emily.)"
-                        jump v15s30_PhoneContinue3
+                        jump v15s30_PhoneContinue4
 
                 scene v15s30_4
                 with dissolve
