@@ -634,6 +634,19 @@ label v15s4:
 
                 u "Hahahah."
 
+            elif len(dog_name.lower()) > 20:
+                scene v15s4_12
+                with dissolve
+
+                aut "[dog_name]?!"
+
+                aut "That's a mouthful. I'll try to remember it."
+
+                scene v15s4_12a
+                with dissolve
+
+                u "Hahahah."
+
             else:
                 scene v15s4_12
                 with dissolve
