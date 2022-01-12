@@ -1900,6 +1900,7 @@ label v15s35:
         li "Who is most likely to get caught having sex on an airplane?"
 
         if "v11_aubrey" in sceneList:
+            label test:
             scene v15s35_9w # FPP. same as v15s35_9h Aubrey is looking at Lindsey, trying to cover her laughter with her mouth, mouth is still open
             with dissolve
 
@@ -1917,13 +1918,10 @@ label v15s35:
 
             u "(I'm not sure I want everyone knowing about us on the plane, haha.)"
 
-            scene v15s35_8b
+            scene v15s35_7l # FPP. same as v15s35_7h Lindsey has a full smile, still looking at Aubrey, mouth is still open
             with dissolve
 
-            aut "She's just trying to win all the votes again."
-
-            scene v15s35_8a
-            with dissolve
+            li "Or maybe you're just fishing for votes."
 
             u "She totally is, don't fall for it."
 
@@ -2036,13 +2034,16 @@ label v15s35:
 
         au "Was it ever in doubt?"
 
-        scene v15s35_8b
-        with dissolve
 
-        aut "Just another one of Aubrey's sexual adventures, hehe."
+        if "v11_aubrey" not in sceneList:
 
-        scene v15s35_9a
-        with dissolve
+            scene v15s35_8b
+            with dissolve
+
+            aut "Just another one of Aubrey's sexual adventures, hehe."
+
+            scene v15s35_9a
+            with dissolve
 
         au "You've gotta spice things up, ladies! Haven't you ever done anything like that?"
 
@@ -2730,6 +2731,7 @@ label v15s35:
                             li "*Drunk* Yes! That sounds perfect."
 
                         label v15s35_bring_up_chloe:
+                            $ v15_lindsey_recording = 1
                             scene v15s35_12k
                             with dissolve
 
@@ -2855,6 +2857,7 @@ label v15s35:
                                 pause 0.75
 
                             label v15s35_say_nothing:
+                                $ v15_lindsey_recording = 2
                                 scene v15s35_12r # FPP. same as v15s35_12o Lindsey's mouth is open, still looking at Mc, still a slight smile, her glass is still empty, still a rosey face from being drunk
                                 with dissolve
 
@@ -3008,6 +3011,7 @@ label v15s35:
                         pause 0.75
 
                         if kct == "popular":
+                            $ v15_lindsey_recording = 3
                             call screen kct_popup
                             scene v15s35_12b
                             with dissolve
