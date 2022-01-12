@@ -77,6 +77,9 @@ label v15s29:
                 $ add_point(KCT.BRO)
                 $ v15_emily_sext = True
                 
+                if config_censored:
+                    call screen censoredPopup("v15s29_nsfwSkipLabel1")
+                
                 scene v15s29_4
                 with dissolve
 
@@ -191,6 +194,8 @@ label v15s29:
                 with dissolve
 
                 pause 0.75
+
+                label v15s29_nsfwSkipLabel1:
 
                 scene v15s29_3
                 with dissolve
