@@ -575,7 +575,7 @@ label v15s4:
             with dissolve
 
             if dog_name.lower()[0] in ("a", "e", "i", "o"):
-                u "He looks lika an [dog_name] to me."
+                u "He looks like an [dog_name] to me."
             else:
                 u "He looks like a [dog_name] to me."
 
