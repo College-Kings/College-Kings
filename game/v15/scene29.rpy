@@ -76,6 +76,8 @@ label v15s29:
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BRO)
                 $ v15_emily_sext = True
+
+                label v15s29_emilysg:
                 
                 if config_censored:
                     call screen censoredPopup("v15s29_nsfwSkipLabel1")
@@ -201,6 +203,8 @@ label v15s29:
                 with dissolve
 
                 u "(Okay, time for sleep now.)"
+
+                $ renpy.end_replay()
 
     scene v15s29_5 # TPP. lights are out, and MC has laid down to go to sleep, no expression, eyes closed
     with fade
