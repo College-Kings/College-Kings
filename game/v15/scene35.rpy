@@ -1900,7 +1900,6 @@ label v15s35:
         li "Who is most likely to get caught having sex on an airplane?"
 
         if "v11_aubrey" in sceneList:
-            label test:
             scene v15s35_9w # FPP. same as v15s35_9h Aubrey is looking at Lindsey, trying to cover her laughter with her mouth, mouth is still open
             with dissolve
 

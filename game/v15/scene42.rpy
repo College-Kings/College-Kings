@@ -329,21 +329,8 @@ label v15s42:
 
     am "So, take a look and see what speaks to you..."
 
-    scene v15s42_7a
-    with dissolve
-
-    pause 0.75
-
-    menu:
-        "Professional":
-            $ mc.detective = Detective.PROFESSIONAL
-        "Psychologist":
-            $ mc.detective = Detective.PSYCHOLOGIST
-        "Loose Cannon":
-            $ mc.detective = Detective.LOOSE_CANNON
-
-    # -A UI pops up to show the three detective archetypes that MC can choose from (Professional, Psychologist, Loose Cannon). MC makes his choice and the UI disappears again-
-
+    call screen archetype_selection
+    
     if mc.detective == Detective.PROFESSIONAL:
         scene v15s42_7a
         with dissolve

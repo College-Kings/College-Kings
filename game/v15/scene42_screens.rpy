@@ -1,3 +1,25 @@
+screen archetype_selection():
+    add "images/v15/detective_board/archetype_background.png"
+
+    imagebutton:
+        pos (212, 881)
+        idle "images/v15/detective_board/archetype_blue_button.png"
+        hover "images/v15/detective_board/archetype_blue_button_hover.png"
+        action SetField(mc, "detective", Detective.PROFESSIONAL)
+
+    imagebutton:
+        pos (801, 881)
+        idle "images/v15/detective_board/archetype_yellow_button.png"
+        hover "images/v15/detective_board/archetype_yellow_button_hover.png"
+        action SetField(mc, "detective", Detective.PSYCHOLOGIST)
+    
+    imagebutton:
+        pos (1380, 881)
+        idle "images/v15/detective_board/archetype_pink_button.png"
+        hover "images/v15/detective_board/archetype_pink_button_hover.png"
+        action SetField(mc, "detective", Detective.LOOSE_CANNON)
+
+
 screen detective_icon():
     zorder 90
 
