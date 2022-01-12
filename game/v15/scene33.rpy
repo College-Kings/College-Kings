@@ -42,7 +42,7 @@ label v15s33:
     with dissolve
 
     menu:
-        "Be brutally honest":
+        "Not really, I'm an only child":
             $ add_point(KCT.TROUBLEMAKER)
             
             u "To be honest, not really. I'm an only child."
@@ -1172,6 +1172,9 @@ label v15s33:
 
     u "(Holy sh- *Gasps*)"
 
+    scene v15s33_38
+    with dissolve
+
     u "(There it was again! Is she...?)"
 
     scene v15s33_40 # FPP. MC looking under the table, Naomi's shoeless foot rubbing on MC's crotch.
@@ -1182,12 +1185,7 @@ label v15s33:
     scene v15s33_38
     with dissolve
 
-    pause 0.75
-
-    scene v15s33_39
-    with dissolve
-
-    u "(*Moans* Okay, what the fuck... *Chuckles* Is she really doing this right now?)"
+    u "(*Moans* Okay, what the fuck... *Chuckles* Is she really doing this while she's eating right now?)"
 
     scene v15s33_40
     with dissolve
@@ -1342,7 +1340,7 @@ label v15s33:
 
     u "(Okay, [name]... Use your head here...)"
 
-    u "(No, no, no! Not that one, not that head!"
+    u "(No, no, no! Not that one, not that head!)"
 
     scene v15s33_46b
     with dissolve
@@ -2389,7 +2387,7 @@ label v15s33:
         scene v15s33_75a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey upset, mouth open.
         with dissolve
 
-        au "I'm still processing everything what happened today, [name]."
+        au "I'm still processing everything that happened today, [name]."
 
         scene v15s33_75
         with dissolve

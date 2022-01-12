@@ -10,7 +10,7 @@ label v15s34:
         play sound "sounds/dooropen.mp3"
 
         scene v15s34_1 # TPP. Show MC entering his room in the Wolves room in his suit from the wedding, slight smile ,mouth closed.
-        with dissolve
+        with fade
 
         pause 0.75
 
@@ -126,7 +126,7 @@ label v15s34:
         play sound "sounds/dooropen.mp3"
 
         scene v15s34_6 # TPP. Show MC entering his room in the apes room in his suit from the wedding, slight smile ,mouth closed.
-        with dissolve
+        with fade
 
         pause 0.75
 
