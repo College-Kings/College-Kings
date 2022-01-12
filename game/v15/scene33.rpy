@@ -810,10 +810,6 @@ label v15s33:
 
         u "(So, he's the second black sheep of the family I assume? Hah!)"
 
-    stop music fadeout 3
-    
-    play music "music/v15/Track Scene 33_2.mp3" fadein 2
-
     scene v15s33_28b
     with dissolve
 
@@ -1134,12 +1130,13 @@ label v15s33:
 
         pause 0.75
 
-    # Asked for hand bell sounds but we only have the clocktower bells.
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 33_2.mp3" fadein 2
 
     scene v15s33_28b
     with dissolve
 
-    ### rick "Oh shit- I believe that's lunch being served over there. Let's head over."
     rick "Hey, looks like lunch is about to get served over there. Let's head over."
 
     scene v15s33_28c
