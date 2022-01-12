@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s43:
+    play music "music/v15/Track Scene 43.mp3" fadein 2
+
     scene v15s43_1 # TPP. Show MC and Amber walking up to the wolves front door, both slight smile, mouths closed.
     with fade
 

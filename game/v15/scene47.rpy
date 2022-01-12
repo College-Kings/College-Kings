@@ -4,6 +4,8 @@
 # Time: Afternoon
 
 label v15s47:
+    play music "music/v15/Track Scene 47.mp3" fadein 2
+
     scene v15s47_1 # TPP. MC in the back of the Cab looking out the window seeing the trees and countryside area, Neutral face, mouth closed.
     with dissolve
 

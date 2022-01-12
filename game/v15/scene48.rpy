@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v15s48:
+    play music "music/v15/Track Scene 48.mp3" fadein 2
+
     scene v15s48_1 # TPP. Show the cab showing up on a dirt road near the cabin, the cabin shown in the distance.
     with fade
 
@@ -870,6 +872,8 @@ label v15s48:
 
         stop music fadeout 3
 
+        play music "music/v15/Track Scene 48b.mp3" fadein 2
+
         jump v15s48bnosex
 
     else:
@@ -1011,6 +1015,8 @@ label v15s48:
                 u "Me too."
 
                 stop music fadeout 3
+
+                play music "music/v15/Track Scene 48b.mp3" fadein 2
 
                 jump v15s48bnosex
 

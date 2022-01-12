@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s42:
+    play music "music/v15/Track Scene 42.mp3" fadein 2
+
 # -MC enters the SVC meeting room. It's quite dated with beige/grey walls, like an old room at the FBI, a large wooden desk with a coffee machine and croissants on it., filing cabinets, blinds drawn and sparse lighting. Amber is standing next to a pinboard on the wall. We don't see the details of it just yet. Amber is wearing a stylish, Sam Spade detective-style fedora hat-
     play sound "sounds/dooropen.mp3"
 

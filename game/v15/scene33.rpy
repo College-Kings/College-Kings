@@ -1318,7 +1318,7 @@ label v15s33:
 
     u "Naomi, I think-"
 
-    label test:
+    label v15s35_naomisg:
 
     scene v15s33_46b # FPP. Naomi standing infront of MC, MC looking at Naomi, Naomi looking at MC, Naomi's hand on MC's cheek, Naomi smirking, mouth open.
     with dissolve

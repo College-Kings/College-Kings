@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v15s48b:
+    ### music cue is not in this scene, it is included in the previous scenes which jump to this one
+
     scene v15s48b_97
     with dissolve
     

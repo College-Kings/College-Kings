@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s44:
+    play music "music/v15/Track Scene 42.mp3" fadein 2
+
     scene v15s44_1 # TPP. Show MC and Amber entering room 103, both serious, mouths closed
     with dissolve
 

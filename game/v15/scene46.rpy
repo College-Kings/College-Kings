@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s46:
+    play music "music/v15/Track Scene 46.mp3" fadein 2
+
     play sound "sounds/dooropen.mp3"
 
     scene v15s46_1 # TPP. Amber and MC entering the detective pinboard room, both slight smile, mouth closed.

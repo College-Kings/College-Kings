@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v15s48a:
+    play music "music/v15/Track Scene 48a.mp3" fadein 2
+
     $ sceneList.add("v15_nora")
     
     scene v15s48a_1 # TPP. Show Nora sitting down next to MC, both slight smile, mouth closed.
@@ -907,5 +909,7 @@ label v15s48a_end:
     no "No, you are."
 
     stop music fadeout 3
+
+    play music "music/v15/Track Scene 48b.mp3" fadein 2
 
     jump v15s48b

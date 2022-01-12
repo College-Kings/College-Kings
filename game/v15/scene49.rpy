@@ -4,6 +4,8 @@
 # Time: Night
 
 label v15s49:
+    play music "music/v15/Track Scene 49.mp3" fadein 2
+
     scene v15s49_1 # TPP. MC looking out the window of the cab, its night time and raining outside, MC slight smile, mouth closed.
     with dissolve
 

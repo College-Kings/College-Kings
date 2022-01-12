@@ -5,6 +5,8 @@
 # Render Count 9 Unique 39 Total
 
 label v15s45:
+    play music "music/v15/Track Scene 45.mp3" fadein 2
+
     scene v15s45_1 # TPP. MC and Amber are walking along the street, both no expressions, mouths are closed, looking directly ahead.
     with dissolve
 
