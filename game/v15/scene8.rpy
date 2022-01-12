@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s8:
+    play music "music/v13/Track Scene 18.mp3" fadein 2
+
     scene v15s8_1 # TPP. Show MC walking into the planning board room with Chloe, both slight smile, mouth closed.
     with fade
 

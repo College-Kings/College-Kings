@@ -4,6 +4,8 @@
 # Time: Afternoon
 
 label v15s10:
+    play music "music/v13/Track Scene 23.mp3" fadein 2
+
 # -Car totals for this scene can be calculated via Oscar or the document that Cheex can give you access to-
 # -MC arrives at the Lindsey car location. The car is in the same position as before. Lindsey is leaning against it, waiting. She turns to see MC approaching and gives him a nice smile-
 

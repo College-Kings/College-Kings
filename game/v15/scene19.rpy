@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v15s19:
-    # -TODO: Transition from Night to Morning-
+    play music "music/v12/Track Scene 13.mp3" fadein 2
 
     if v15s18_LaurensBed: # -if sleeping in Lauren's bed
         # -MC wakes up alone in Lauren's bed-

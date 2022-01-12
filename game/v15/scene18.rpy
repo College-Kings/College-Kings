@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v15s18:
+    play music "music/v12/Track Scene 33_2.mp3" fadein 2
+
     scene v15s18_1 # TPP. Behind shot of MC walking up to the Deer's house in his Stripper Costume.
     with dissolve
 

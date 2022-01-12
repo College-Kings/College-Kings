@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s33:
+    play music "music/v13/Track Scene 48.mp3" fadein 2
+
     scene v15s33_1 # TPP. Show the car that MC and Aubrey are in arrived at the Venue (The Venue is a huge white tent)
     with fade
 
@@ -805,6 +807,10 @@ label v15s33:
 
         u "(So, he's the second black sheep of the family I assume? Hah!)"
 
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 33_2.mp3" fadein 2
+
     scene v15s33_28b
     with dissolve
 
@@ -1531,6 +1537,10 @@ label v15s33:
             u "(Phew... Let's hope no one noticed any of that.)"
 
         "Let her continue":
+            stop music fadeout 3
+            
+            play music "music/v14/Track Scene 25a_1.mp3" fadein 2
+        
             $ add_point(KCT.TROUBLEMAKER)
             $ sceneList.add("v15_naomi")
             $ naomi.relationship = Relationship.FWB
@@ -1619,6 +1629,10 @@ label v15s33:
             u "You're so fucking hot, Naomi-"
 
             play sound "sounds/dooropen.mp3"
+
+            stop music fadeout 3
+            
+            play music "music/v15/Track Scene 33_4.mp3" fadein 2
 
             scene v15s33_51 # TPP. Close up of Aubrey at the entrance of the bathroom, Aubrey angry, mouth open.
             with vpunch
@@ -1847,6 +1861,10 @@ label v15s33:
             u "(I hope she's not out there telling the entire party what just happened...)"
 
             u "(I'd better get back out there.) *Sighs*"
+
+            stop music fadeout 3
+            
+            play music "music/v15/Track Scene 33_5.mp3" fadein 2
 
             scene v15s33_34a
             with fade
@@ -2084,6 +2102,10 @@ label v15s33:
 
                     au "Ha, true."
 
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 33_6.mp3" fadein 2
+
     scene v15s33_66 # TPP. Close up of the Wedding official standing between Aubrey's parents, Wedding official slight smile, mouth closed.
     with dissolve
 
@@ -2159,6 +2181,10 @@ label v15s33:
     with dissolve
 
     au "Congratulations, you guys. That was so beautiful..."
+
+    stop music fadeout 3
+    
+    play music "music/v13/Track Scene 48.mp3" fadein 2
 
     scene v15s33_74 # FPP. MC looking at both of Aubrey's parents, both slight smile, mouth closed.
     with dissolve
@@ -2325,6 +2351,10 @@ label v15s33:
             with dissolve
 
             pause 0.75
+
+    stop music fadeout 3
+    
+    play music "music/v13/Track Scene 17.mp3" fadein 2
 
     scene v15s33_84 # TPP. MC sitting down next to Aubrey who is sitting on a bench overlooking the distant lake.
     with fade

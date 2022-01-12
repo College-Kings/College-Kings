@@ -6,6 +6,8 @@
 label v15s18e:
     label v15s18e_sg:
 
+    play music "music/v12/Track Scene 23a.mp3" fadein 2
+
     $ sceneList.add("v15_lauren")
     
     play sound "sounds/dooropen.mp3"

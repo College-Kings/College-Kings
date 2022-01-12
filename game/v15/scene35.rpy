@@ -4,39 +4,6 @@
 # Time: Evening
 # Render Count: Unique Renders 18 Total: 144
 
-## EXAMPLE:
-    # $ screen_options = [
-    #     {
-    #         "character": lindsey,
-    #         "votes": [lindsey, nora]
-    #     },
-    #     {
-    #         "character": aubrey,
-    #         "votes": [chloe]
-    #     },
-    #     {
-    #         "character": nora,
-    #         "votes": [aubrey]
-    #     },
-    #     {
-    #         "character": chloe,
-    #         "votes": []
-    #     }
-    # ]
-    # call screen whos_most_likely_to("Would you rather?")
-
-    # $ screen_options = [
-    #     {
-    #         "option": "Travel to the maldivas",
-    #         "votes": [lindsey, nora, chloe]
-    #     },
-    #     {
-    #         "option": "Rock climb the everest",
-    #         "votes": [aubrey]
-    #     }
-    # ]
-    # call screen would_you_rather("Would you rather?")
-
 init python:
     def v15s35_kiwiireply1():
         v15s35_kiwiiPost1.newComment(imre, "Bro, you have no idea what you're getting yourself into. You're so fucking on!", numberLikes=renpy.random.randint(260, 560))
@@ -45,6 +12,8 @@ init python:
         v15s35_kiwiiPost1.newComment(lindsey, "Agreed! :) Thanks again for coming, [name].", numberLikes=renpy.random.randint(260, 560))
 
 label v15s35:
+    play music "music/v13/Track Scene 18.mp3" fadein 2
+
     scene v15s35_1 # TPP. MC arrives at the Chicks house, knocks on the front door, slight smile, mouth is closed
     with dissolve
 

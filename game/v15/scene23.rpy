@@ -11,6 +11,8 @@ init python:
         aubrey.messenger.newMessage("Hehe, I know you will ;)")
 
 label v15s23:
+    play music "music/v12/Track Scene 32_1.mp3" fadein 2
+
     # -MC takes a shower-
     scene v15s23_1 # TPP. We see MC neutral expression, mouth closed waist up in the shower (rinsing his hair render as best as possible).
     with dissolve

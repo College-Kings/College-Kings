@@ -11,6 +11,8 @@ init python:
         chloe.messenger.newMessage("Well, at least you admit it...")
 
 label v15s2:
+    play music "music/v15/Track Scene 1_1.mp3" fadein 2
+
     scene v15s2_1 # FPP. Show the material of the bag over MC's head. (Maybe reuse the same images from the dungeon in v13)
     with dissolve
 
@@ -289,6 +291,10 @@ label v15s2:
         pause 0.75
 
     play sound "sounds/doorclose.mp3"
+
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 1_3.mp3" fadein 2
 
     scene v15s2_6 # TPP. Show MC in his room pulling the door closed, MC serious face, mouth closed.
     with dissolve

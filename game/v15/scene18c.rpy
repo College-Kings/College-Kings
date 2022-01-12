@@ -4,6 +4,8 @@
 # Time: Night
 
 label v15s18c:
+    play music "music/v15/Track Scene 18c_1.mp3" fadein 2
+
     $ freeroam13.add("lauren2")
 
     call screen v15s18a_room with fade
@@ -756,6 +758,10 @@ label v15s18c_imre_aubrey:
 
     pause 0.75
 
+    stop music fadeout 3
+    
+    play music "music/v12/Track Scene 33_5.mp3" fadein 2
+
     scene v15s18c_imau_11 # TPP. Show MC and Aubrey entering Aubrey's room, Aubrey smiling, mouth open, MC slightly worried, mouth closed
     with dissolve
 
@@ -1099,6 +1105,10 @@ label v15s18c_imre_aubrey:
 
         pause 0.75
 
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 18c_3.mp3" fadein 2
+
     scene v15s18c_imau_34 # FPP. MC watches as Aubrey walks out of the room, she looks back at him over her shoulders, sexy expression, winking, mouth closed
     with dissolve
 
@@ -1149,6 +1159,10 @@ label v15s18c_imre_aubrey:
     $ renpy.end_replay()
 
     pause 0.75
+
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 18c_1.mp3" fadein 2
 
     call screen v15s18a_upstairsroom
 
@@ -1307,6 +1321,10 @@ label v15s18c_ryan:
 
 label v15s18c_lauren:
     $ freeroam14.add("lauren")
+
+    stop music fadeout 3
+    
+    play music "music/v13/Track Scene 41_3.mp3" fadein 2
 
     scene v15s18c_la_1 # TPP. Show MC walking on to the balcony, Lauren already there, looking at the view, both slight smiles, mouths closed
     #with dissolve
@@ -1540,8 +1558,12 @@ label v15s18c_lauren:
 
     scene v15s18c_la_9 # TPP. Show MC walking back inside, slight smile, mouth closed
     with dissolve
-
+    
     pause 0.75
+
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 18c_1.mp3" fadein 2
 
     call screen v15s18a_upstairsroom
 
@@ -2388,6 +2410,10 @@ label v15s18c_chris_penelope:
 
                     u "Follow me."
 
+                    stop music fadeout 3
+                    
+                    play music "music/v14/Track Scene 25a_1.mp3" fadein 2
+
                     scene v15s18c_chpe_8 # TPP. Show MC leading Penelope into the spare room, both sexy expressions, mouths closed
                     with dissolve
 
@@ -2562,6 +2588,10 @@ label v15s18c_chris_penelope:
                     with dissolve
 
                     pause 0.75
+                    
+                    stop music fadeout 3
+                    
+                    play music "music/v15/Track Scene 18c_1.mp3" fadein 2
 
                     call screen v15s18a_upstairsroom
 

@@ -42,6 +42,8 @@ init python:
         iris.simplr.addReply("Lol, okay. Bye.")
 
 label v15s17:
+    play music "music/v13/Track Scene 21.mp3" fadein 2
+
     if iris.simplr in simplr_contacts or True:
         $ iris.simplr.newImgMessage("selfie somewhere in Paris")
         $ iris.simplr.newMessage("The only thing missing is a cute boy ;)")

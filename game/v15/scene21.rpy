@@ -5,6 +5,8 @@
 # Render Count: 17 unique 148 total
 
 label v15s21:
+    play music "music/v13/Track Scene 8.mp3" fadein 2
+
     if v15_chloe_mrleesupport:
         if kct == "loyal":
             $ v15s21_meeting_points += 1

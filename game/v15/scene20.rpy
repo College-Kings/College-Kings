@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s20:
+    play music "music/v13/Track Scene 18.mp3" fadein 2
+
     scene v15s20_1 # TPP. Show MC walking into the Libray, slight smile, mouth closed.
     with dissolve
 

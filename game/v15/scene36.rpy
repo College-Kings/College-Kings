@@ -4,6 +4,8 @@
 # Time: Night
 
 label v15s36:
+    play music "music/v13/Track Scene 5.mp3" fadein 2
+
     scene v15s36_1 # TPP. Shot of MC and Autumn walking down the street, both slight smile, mouth closed.
     with fade
 

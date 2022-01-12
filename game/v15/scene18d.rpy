@@ -4,6 +4,8 @@
 # Time: 
 
 label v15s18d:
+    play music "music/v13/Track Scene 41_2.mp3" fadein 2
+
     scene black
 
     pause 0.01

@@ -5,6 +5,8 @@
 # Render Count: 8 Unique 71 Total
 
 label v15s22:
+    play music "music/v13/Track Scene 39.mp3" fadein 2
+
     $ v15s22_kiwiiPost1= KiwiiPost(chloe, "v15s22Kiwii1", "Making changes for my girls!", numberLikes=515)
     $ v15s22_kiwiiPost1.newComment(aubrey, "Ooooh, what are you up to?", numberLikes=renpy.random.randint(160, 460))
 
@@ -305,6 +307,10 @@ label v15s22:
     hide screen v15_teacher_brief_icon
 
     play sound "sounds/knock.mp3"
+    
+    stop music fadeout 3
+    
+    play music "music/v12/Track Scene 17_3.mp3" fadein 2
 
     scene v15s22_2g # FPP. same as v15s22_2f Chloe turns away from Mc and knocks on the Dean's door, still no expression, mouth is still closed
     with dissolve
@@ -1279,6 +1285,10 @@ label v15s22:
         jump v15dean_unsuccessful
 
     label v15dean_successful:
+        stop music fadeout 3
+        
+        play music "music/v13/Track Scene 10.mp3" fadein 2
+    
         scene v15s22_6h
         with dissolve
 
@@ -1402,6 +1412,10 @@ label v15s22:
         jump v15s22_afterchloe
 
     label v15dean_unsuccessful:
+        stop music fadeout 3
+        
+        play music "music/v13/Track Scene 10.mp3" fadein 2
+    
         scene v15s22_5d # TPP. same as v15s22_5c The Dean is walking away from Mc and Chloe not shaking Chloe's hand no expression mouth is closed, Mc and Chloe are both still standing, Chloe has a sad expressions looking at Mc mouth is closed, Mc has no expression looking at Chloe mouth is closed
         with dissolve
 

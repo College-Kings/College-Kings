@@ -4,6 +4,8 @@
 # Time: Saturday evening
 
 label v15s26:
+    play music "music/v12/Track Scene 33_2.mp3" fadein 2
+
     scene v15s26_1 # TPP Show MC knocking on the door to the Chicks' house
     with dissolve
 
@@ -155,6 +157,10 @@ label v15s26:
     with dissolve
 
     u "Damn... A theater room?"
+
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 26_2.mp3" fadein 2
 
     scene v15s26_10 # FPP Aubrey, now in theater room, with a big, excited smile, mouth open
     with dissolve
@@ -373,6 +379,10 @@ label v15s26:
 
     pause 0.75
 
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 26_3.mp3" fadein 2
+
     # -We see some opening credits, white text on black screen (be creative, use patron names, talk to Steve about what he would like to add here. 
     # Cheex suggests high-tier patrons can be listed? If not, let's stick to people from the team for the credits)
 
@@ -459,6 +469,10 @@ label v15s26:
     with dissolve
 
     mactor "But it is! This is exactly what you signed up for!"
+    
+    stop music fadeout 3
+    
+    play music "music/v13/Track Scene 52.mp3" fadein 2
 
     scene v15s26_22 # FPP Show Aubrey holding the remote control pointed forward, pausing the movie
     with dissolve

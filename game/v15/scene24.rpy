@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s24:
+    play music "music/v13/Track Scene 11_1.mp3" fadein 2
+
     scene v15s24_1 # TPP. Show MC walking up to the convenient store, MC slightly confused, mouth closed.
     with dissolve
 
@@ -304,6 +306,10 @@ label v15s24:
     u "(No pressure...)"
 
     play sound "sounds/dooropen.mp3"
+
+    stop music fadeout 3
+    
+    play music "music/v13/Track Scene 10.mp3" fadein 2
 
     scene v15s24_8 # TPP. Show MC entering the store, slight smile, mouth closed.
     with dissolve
@@ -1245,6 +1251,10 @@ label v15s24:
                     u "*Chuckles* Thanks."
     
     if v15_lindsey_alcohol:
+        stop music fadeout 3
+        
+        play music "music/v13/Track Scene 30_1.mp3" fadein 2
+    
         scene v15s24_8a # TPP. Show MC exiting the store with a bag of alcohol, slight smile, mouth closed.
         with dissolve
 
@@ -1361,6 +1371,10 @@ label v15s24:
                 li "Can't wait. *Laughs*"
 
     else:
+        stop music fadeout 3
+        
+        play music "music/v13/Track Scene 30_1.mp3" fadein 2
+    
         scene v15s24_8b # TPP. Show MC exiting the store empty handed, MC slight frown, mouth closed.
         with dissolve
 

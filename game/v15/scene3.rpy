@@ -4,6 +4,8 @@
 # Time: Friday
 
 label v15s3: # 3) Dean comes to Apes about posted image
+    play music "music/v15/Track Scene 3.mp3" fadein 2
+
     scene v15s3_1 # TPP Show MC, now dressed, entering the main lounge of the Apes' House
     with fade
 

@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s41:
+    play music "music/v15/Track Scene 41.mp3" fadein 2
+
     scene black
     with dissolve
     

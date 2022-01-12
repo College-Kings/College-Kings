@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v15s31:
-# -Transition from night to morning-
+    play music "music/v13/Track Scene 33.mp3" fadein 2
 
 # -MC is wearing his homecoming suit as he walks into the bathroom-
     scene v15s31_1 # TPP. Show MC looking at himself in the mirror as he is wearing the suit, slight smile, mouth closed.

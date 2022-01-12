@@ -9,6 +9,8 @@
 # Time: Evening
 
 label v15s15:
+    play music "music/v12/Track Scene 33_3.mp3" fadein 2
+
     scene v15s15_1 # TPP. Show MC and Ms. Rose entering the dining room, Ms. Rose slight smile, MC slightly annoyed, mouths closed
     with dissolve
 
@@ -57,6 +59,10 @@ label v15s15:
     with dissolve
 
     pause 0.75
+    
+    stop music fadeout 3
+    
+    play music "music/v14/Track Scene 3d_1.mp3" fadein 2
 
     label v15s15sg:
 
@@ -151,6 +157,10 @@ label v15s15:
             label v15s15_nsfwSkipLabel1:
 
             $ renpy.end_replay()
+            
+            stop music fadeout 3
+            
+            play music "music/v12/Track Scene 26b.mp3" fadein 2
             
             # Scene 16
             scene v15s16_1 # TPP. Show MC walking out of Ms. Rose's house, MC mad, mouth closed.
@@ -491,6 +501,10 @@ label v15s15:
             ro "Oh, wow... *Giggles* What an incredible experience that was."
 
             ro "Let me go clean up, be back in a bit."
+
+            stop music fadeout 3
+            
+            play music "music/v13/Track Scene 11_1.mp3" fadein 2
 
             scene v15s15_28 # TPP. Show MC back by the dining table, getting dressed, smiling, mouth closed
             with fade

@@ -4,6 +4,8 @@
 # Time: 
 
 label v15s18f:
+    play music "music/v15/Track Scene 18f.mp3" fadein 2
+
     if v15s18_LaurensBed:
         scene v15s18f_1 # TPP. Show MC and Lauren in an affectionate cuddle, MC big spoon, Lauren little spoon, both have their eyes closed, both slight smile, mouth closed.
         with dissolve
@@ -30,7 +32,5 @@ label v15s18f:
         with dissolve
 
         pause 0.75
-
-    stop music fadeout 3
 
     jump v15s19

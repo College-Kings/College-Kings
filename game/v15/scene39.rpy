@@ -5,6 +5,8 @@
 # Render Count: Unique 26 Total 113
 
 label v15s39:
+    play music "music/v13/Track Scene 14a_1.mp3" fadein 2
+
     scene v15s39_1 # TPP. Lindsey, Mc, first in line followed by, Autmun, and Aubrey are shown entering the club, all slight smiles, all mouths closed, all looking forward towards the club entrance. Have them in a staggered formation so it's believable that other characters are possibly off screen because either grayson or sebastian can be in this scene. But at this point don't show grayson or sebastian
     with dissolve
 
@@ -1200,6 +1202,10 @@ label v15s39:
         with dissolve
 
         pause 0.75
+
+    stop music fadeout 3
+    
+    play music "music/v13/Track Scene 27_2.mp3" fadein 2
 
     scene v15s39_23 # TPP. MC exits the club. Lindsey and Aubrey are ahead of him, getting into the limo
     with fade

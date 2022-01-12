@@ -5,6 +5,8 @@
 # Render Count: 4 Unique 18 Total
 
 label v15s40:
+    play music "music/v14/Track Scene 3d_2.mp3" fadein 2
+
     scene v15s40_1 # FPP. Show just Autumn sitting beside Mc in the back of the Limo, Autumn has a slight smile, mouth open looking towards the front og the Limo at the other people, Don't show any other characters
     with dissolve
 

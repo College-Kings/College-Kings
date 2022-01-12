@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v15s27: # -MC walks out of the Chicks house-
+    play music "music/v13/Track Scene 22.mp3" fadein 2
+
     scene v15s27_1 # TPP. Camera facing Chicks' front door with MC opening the door; MC neutral expression mouth closed.
     with dissolve
 

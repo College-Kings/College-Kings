@@ -5,6 +5,8 @@
 # Render Count: 5 Unique, 14 total
 
 label v15s30:
+    play music "music/v13/Track Scene 15.mp3" fadein 2
+
     scene v15s30_1 # TPP. MC walks into his Ape's bedroom, slight smile, mouth closed
     with dissolve
 

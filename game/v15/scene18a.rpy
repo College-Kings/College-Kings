@@ -4,9 +4,7 @@
 # Time: Night
 
 label v15s18a:
-    # -Refer to images on Miro for exact placement, but Downstairs: Aubrey at the bar, Imre & Lauren on the couch, Riley in the kitchen, Chris & Amber on bar stools at kitchen counter; Upstairs: Ryan in the bathroom, Autumn & Penelope in Autumn's bedroom
-    # -Clickable Objects (placement is irrelevant to plot, available to click on during both free roams): A bronze deer statue, A photo of Autumn and Lauren, A carved Halloween pumpkin, A Deer scarf wall hanging-
-    # -Characters are greyed out after they are spoken too besides Lauren. She needs to stay highlighted as she is the way to end the free roam-
+    play music "music/v13/Track Scene 24_2.mp3" fadein 2
 
     $ v15s18a_kiwiiPost1 = KiwiiPost(lauren, "v15/v15_lapost1.webp", _("Feeling one year older ;)"), numberLikes=854)
     $ v15s18a_kiwiiPost1.newComment(lindsey, _("Holy fuck, babe! You look spectacular, I hope you have the most amazing birthday <3"), numberLikes=renpy.random.randint(360, 660), force_send=True)
@@ -1772,6 +1770,10 @@ label v15s18a_Riley:
 
             play sound "sounds/dooropen.mp3"
 
+            stop music fadeout 3
+            
+            play music "music/v14/Track Scene 25a_1.mp3" fadein 2
+
             scene v15s18ariley_10 # TPP. Show Riley entering the Guest room and MC right behind her, both slight smile, mouth closed.
             with dissolve
 
@@ -1980,6 +1982,10 @@ label v15s18a_Riley:
             u "(Well... That wasn't so hard. *Laughs* Where to next?)"
 
             $ renpy.end_replay()
+            
+            stop music fadeout 3
+            
+            play music "music/v13/Track Scene 24_2.mp3" fadein 2
             
             scene v15s18ariley_12a # TPP. MC putting his costume back on, slight smile, mouth closed.
             with dissolve
@@ -2245,6 +2251,10 @@ label v15s18a_ChrisAmber:
 
                         pause 0.75
 
+                    stop music fadeout 3
+                    
+                    play music "music/v12/Track Scene 23_2.mp3" fadein 2
+
                     scene v15s18aamber_8 # FPP. MC and Amber on the Balcony, MC looking at Amber, Amber looking at MC, Amber smirking, mouth closed.
                     with fade
 
@@ -2427,6 +2437,10 @@ label v15s18a_ChrisAmber:
                     with dissolve
 
                     pause 0.75
+
+                    stop music fadeout 3
+                    
+                    play music "music/v13/Track Scene 24_2.mp3" fadein 2
 
                     scene v15s18aamber_14 # TPP. Show Mc walking back inside the house, slight smile, mouth closed.
                     with dissolve

@@ -3,7 +3,9 @@
 # Characters: MC (Outfit: Homecoming Suit), CHLOE (Outfit: 1), AUBREY (Outfit: 7), RILEY (Outfit: 3) Sunday 
 # Time: Morning
 
-label v15s32: #32) MC picks up Aubrey at Chicks' house 
+label v15s32:
+    play music "music/v13/Track Scene 16.mp3" fadein 2
+
     scene v15s32_1 # TPP. MC, smiling mouth closed walking [Sidewalk-exterior].
     with dissolve
 
@@ -302,6 +304,10 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
         with dissolve
 
         ri "Hey, come on, Aubrey!" 
+
+        stop music fadeout 3
+        
+        play music "music/v13/Track Scene 17.mp3" fadein 2
 
         # -Aubrey then starts coming down the stairs. We see her slow-motion from her feet to her head, revealing her full outfit-
         # Special scene wth 1920x5000 pic the pans from feet to head

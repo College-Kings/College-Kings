@@ -25,6 +25,8 @@ label v15_start:
 
 label v15s1:
     if v13_imre_disloyal:
+        play music "music/v15/Track Scene 1_1.mp3" fadein 2
+    
         scene v15s1_1 # TPP. Imre's looking fully angry, standing at the door close, MC is sitting at his study desk, turned in the chair, facing Imre
         with dissolve
 
@@ -160,6 +162,10 @@ label v15s1:
 
         u "We need to lay low and let them work out their shit or else this drama never ends, Imre."
 
+        stop music fadeout 3
+
+        play music "music/v15/Track Scene 1_2.mp3" fadein 2
+
         scene v15s1_3f
         with dissolve
 
@@ -253,6 +259,8 @@ label v15s1:
                 u "*Chuckles* Alright."
             
     else:
+        play music "music/v15/Track Scene 1_2.mp3" fadein 2
+    
         scene v15s1_2a # FPP. same as v15s1_2 MC is sitting at his study desk, looking at his phone. Imre enters the room. MC turns to Imre, and stays sat in the chair, Imre has a concerned expression, is not angry, mouth open, looking at mc
         with dissolve
 
@@ -498,6 +506,10 @@ label v15s1:
     with dissolve
 
     pause 0.75
+    
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 1_3.mp3" fadein 2
 
     scene v15s1_4 # TPP. Mc stands up from his desk and takes off his shirt, no expression, mouth is closed
     with dissolve

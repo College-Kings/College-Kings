@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s5:
+    play music "music/v11/Track Scene 10.mp3" fadein 2
+
     # -MC is walking outside on campus, near the library-
     scene v15s5_1 # TPP. Show MC walking outside of campus near the library, MC slight smile, mouth closed.
     with fade

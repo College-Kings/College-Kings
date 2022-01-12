@@ -4,6 +4,8 @@
 # Time: Night
 
 label v15s37:
+    play music "music/v13/Track Scene 5.mp3" fadein 2
+
     scene v15s37_1 # TPP. Show MC walking down the street towards the frat houses, slight smile, mouth closed.
     with dissolve
 

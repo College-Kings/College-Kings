@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s4:
+    play music "music/v13/Track Scene 21.mp3" fadein 2
+
     scene v15s4_1 # TPP. Show MC walking up to the main entrance of the dog shelter, slight smile, mouth closed.
     with fade
 

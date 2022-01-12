@@ -4,6 +4,8 @@
 # Time: Night
 
 label v15s18b:
+    play music "music/v13/Track Scene 18.mp3" fadein 2
+
     scene v15s18b_1 # TPP. Show Lauren sitting on the couch surrounded by gifts, slight smile, mouth open.
     #with dissolve
     

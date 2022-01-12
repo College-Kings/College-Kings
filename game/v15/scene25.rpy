@@ -6,6 +6,8 @@
 # show screen generic_conviction_bar(800, 1000, "HAGGLING THE PRICE", "images/v15/conviction_bars/s25_background.png", "TOTAL PRICE $ {}".format(800))
 
 label v15s25:
+    play music "music/v15/Track Scene 25.mp3" fadein 2
+
     if joinwolves:
         play sound "sounds/dooropen.mp3"
 

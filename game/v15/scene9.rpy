@@ -5,6 +5,8 @@
 # Render Count: 4 Unique, 31 Total
 
 label v15s9:
+    play music "music/v13/Track Scene 8.mp3" fadein 2
+
     scene v15s9_1 # TPP. MC is now walking along the hallway near the library, slight smile, mouth closed
     with dissolve
 

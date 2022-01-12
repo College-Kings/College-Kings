@@ -4,6 +4,8 @@
 # Time: Afternoon
 
 label v15s34:
+    play music "music/v13/Track Scene 52a.mp3" fadein 2
+
     if joinwolves:
         play sound "sounds/dooropen.mp3"
 

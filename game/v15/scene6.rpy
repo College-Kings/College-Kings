@@ -9,6 +9,8 @@
 # Time: Friday
 
 label v15s6:
+    play music "music/v13/Track Scene 19_1.mp3" fadein 2
+
     scene v15s6_1 # TPP Show MC walking in school hallway toward library
     with fade
 
@@ -20,6 +22,10 @@ label v15s6:
 
         u "(There's Chloe. Oh shit- Is she crying?)"
         u "(Oh no, I think I know what this is about... *Sighs*)"
+        
+        stop music fadeout 3
+        
+        play music "music/v13/Track Scene 8.mp3" fadein 2
 
         scene v15s7_1 # FPP At entrance to library, Chloe is obviously crying and doing a bad job of hiding it with her hand
         with dissolve
@@ -507,6 +513,10 @@ label v15s6:
         with dissolve
 
         u "(Oh, there's Chloe. Putting on the charm for support no doubt, haha.)"
+        
+        stop music fadeout 3
+        
+        play music "music/v13/Track Scene 8.mp3" fadein 2
         
         scene v15s7_8 # FPP At entrance to library, Chloe is talking to two random students, a man and a woman. Chloe smiling with mouth open
         with dissolve

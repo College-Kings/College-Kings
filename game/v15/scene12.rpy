@@ -4,6 +4,8 @@
 # Time: Afternoon
 
 label v15s12:
+    play music "music/v13/Track Scene 1_1.mp3" fadein 2
+
     if "diary" in freeroam12stolen:
         # -MC and Lindsey are walking along the hallway, in the general direction of the janitor's closet-
         scene v15s12_1 # TPP. MC and Lindsey walking down the school hallway.
@@ -428,6 +430,10 @@ label v15s12:
         with dissolve
 
         pause 0.75
+
+    stop music fadeout 3
+    
+    play music "music/v13/Track Scene 21.mp3" fadein 2
 
     # -Lindsey points at the planning board-
     scene v15s12_8 # FPP. Lindsey smiling, mouth open, pointing at the planning board [Janitor's closet].

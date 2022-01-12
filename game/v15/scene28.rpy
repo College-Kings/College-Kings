@@ -4,6 +4,8 @@
 # Time: Saturday night
 
 label v15s28:
+    play music "music/v15/Track Scene 28_1.mp3" fadein 2
+
     scene v15s28_1 # TPP Show MC walking into the underground bar
     with dissolve
 
@@ -1239,6 +1241,10 @@ label v15s28:
         pause 0.75
 
     # -Regardless-
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 28_2.mp3" fadein 2
+    
     scene v15s28_22 # TPP Show MC, Penelope, and Jenny leaving the bar
     with dissolve
 

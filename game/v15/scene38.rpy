@@ -4,6 +4,8 @@
 # Time: Sunday
 
 label v15s38:
+    play music "music/v15/Track Scene 38.mp3" fadein 2
+
     scene v15s38_1 # FPP The limo parks curbside
     with dissolve
 
