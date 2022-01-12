@@ -2581,8 +2581,12 @@ label v15s18c_chris_penelope:
 
                     $ sceneList.add("v15_penelope")
 
-                    $ checklist[1].complete = True
+                    if not _in_replay:
+                        $ checklist[1].complete = True
+                    
                     u "After you."
+
+                    $ renpy.end_replay()
 
                     scene v15s18c_chpe_22 # TPP. Show Penelope leaving the room, MC leaving behind her, both smiling, mouths closed
                     with dissolve
