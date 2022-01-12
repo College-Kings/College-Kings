@@ -52,7 +52,7 @@ screen end_screen(support_link="https://www.patreon.com/collegekings"):
                 yalign 0.5
 
         imagebutton:
-            idle image_path + "credits_idle.webp"
+            idle image_path + "credits_idle.png"
             action Show("patreon_credits", None, support_link)
             yalign 0.5
 
@@ -108,40 +108,56 @@ screen team_credits():
 
     hbox:
         align (0.5, 0.5)
+        yoffset -20
         spacing 150
 
         vbox:
-            text "{b}UndergradSteve{/b} - Game Creator"
+            text "{b}UndergradSteve{/b} - Chief Executive Officer"
             text "{b}KingLui{/b} - Project Manager"
             text "{b}OscarSix{/b} - Technical Officer"
             null height 20
-            text "{b}Oskin{/b} - Lead Enforcer"
-            text "{b}Lucious Lordswill{/b} - Lead Writer"
             text "{b}Cheexmarie{/b} - Lead Editor"
-            text "{b}Peace{/b} - Head Transcriber"
-            text "{b}Condy{/b} - Quality Assurance Manager"
-            text "{b}Jany{/b} - Translation Manager"
+            text "{b}Condy{/b} - Senior Production Engineer"
             text "{b}Mozzart{/b} - Lead Artist & Coordinator"
+            text "{b}Peace{/b} - Head Transcriber"
             null height 20
-            text "{b}Maro{/b} - Marketing Specialist"
-            text "{b}HugeBoiV2{/b} - Transcriber"
+            text "{b}Jany{/b} - Community Manager"
+            text "{b}Oskin{/b} - Community Manager"
+
+            text "{b}MrSkeletor{/b} - Writer"
+
             text "{b}Jeffly{/b} - Transcriber"
+            text "{b}MegaManX{/b} - Transcriber"
+            text "{b}messy{/b} - Transcriber"
+            text "{b}SystemFailed{/b} - Transcriber"
+
+            text "{b}kaim{/b} - Animator"
 
         vbox:
-            text "{b}MegaManX{/b} - Transcriber"
-            text "{b}mstep17{/b} - Transcriber"
-            text "{b}SystemFailed{/b} - Transcriber"
-            text "{b}Wolf{/b} - Transcriber"
-            text "{b}Dorkby{/b} - Animator"
-            text "{b}Wiebley{/b} - Renderer"
-            text "{b}Ranger{/b} - 3d Modeler"
-            text "{b}François Gibon{/b} - Renderer"
+            text "{b}xidcat{/b} - Animator"
+
             text "{b}3D4FUN{/b} - Renderer"
             text "{b}Bwonerart{/b} - Renderer"
-            text "{b}Sznuk{/b} - Renderer"
-            text "{b}Raystorm41{/b} - Renderer"
+            text "{b}François Gibon{/b} - Renderer"
+            text "{b}ITtechnology{/b} - Renderer"
+            text "{b}Oduvan{/b} - Renderer"
+            text "{b}Meg{/b} - Renderer"
+            
             text "{b}Stefan{/b} - Photoshopper"
-            text "{b}Space-Storm{/b} - Tech Assistant"
+
+            text "{b}ClearanceClarence{/b} - Gameplay Engineer"
+
+            text "{b}Ana Paula Cunha{/b} - UI/UX Designer"
+            text "{b}Danielrothier{/b} - UI/UX Designer"
+            text "{b}Natalimartins{/b} - UI/UX Designer"
+
+            text "{b}Ema9000{/b} - Human Resources Manager"
+
+            text "{b}Sawsbucky{/b} - Gameplay Designer"
+
+            text "{b}MimeFlayer{/b} - Assistant Editor"
+            text "{b}slgeorge864{/b} - Assistant Editor"
+
 
     hbox:
         spacing 50

@@ -1,23 +1,45 @@
 screen archetype_selection():
     add "images/v15/detective_board/archetype_background.png"
 
-    imagebutton:
-        pos (212, 881)
-        idle "images/v15/detective_board/archetype_blue_button.png"
-        hover "images/v15/detective_board/archetype_blue_button_hover.png"
-        action SetField(mc, "detective", Detective.PROFESSIONAL)
+    text "You're logical. You piece things together like a true detective.":
+        pos (190,700)
+        xsize 400
+        text_align 0.5
+        font "fonts/Effra-Regular.ttf"
+        size 23
+
+    text "You're interested in the emotions of people. What do they feel and why?":
+        pos (787,700)
+        xsize 400
+        text_align 0.5
+        font "fonts/Effra-Regular.ttf"
+        size 23
+
+    text "The bad cop approach. It doesn't always make sense, but you're angry, and that can be useful... sometimes.":
+        pos (1345,700)
+        xsize 400
+        text_align 0.5
+        font "fonts/Effra-Regular.ttf"
+        size 23
+
 
     imagebutton:
-        pos (801, 881)
+        pos (176, 850)
+        idle "images/v15/detective_board/archetype_blue_button.png"
+        hover "images/v15/detective_board/archetype_blue_button_hover.png"
+        action [SetField(mc, "detective", Detective.PROFESSIONAL), Return()]
+
+    imagebutton:
+        pos (755, 850)
         idle "images/v15/detective_board/archetype_yellow_button.png"
         hover "images/v15/detective_board/archetype_yellow_button_hover.png"
-        action SetField(mc, "detective", Detective.PSYCHOLOGIST)
+        action [SetField(mc, "detective", Detective.PSYCHOLOGIST), Return()]
     
     imagebutton:
-        pos (1380, 881)
+        pos (1334, 850)
         idle "images/v15/detective_board/archetype_pink_button.png"
         hover "images/v15/detective_board/archetype_pink_button_hover.png"
-        action SetField(mc, "detective", Detective.LOOSE_CANNON)
+        action [SetField(mc, "detective", Detective.LOOSE_CANNON), Return()]
 
 
 screen detective_icon():
