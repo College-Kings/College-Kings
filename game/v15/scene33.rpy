@@ -1589,52 +1589,57 @@ label v15s33:
             image v15naohj = Movie(play="images/v15/Scene 33/v15naohj.webm", loop=True, image="images/v15/Scene 33/v15naohjStart.webp", start_image="images/v15/Scene 33/v15naohjStart.webp")
             image v15naohjf = Movie(play="images/v15/Scene 33/v15naohjf.webm", loop=True, image="images/v15/Scene 33/v15naohjStart.webp", start_image="images/v15/Scene 33/v15naohjStart.webp")
 
-            scene v15naobj # Ignore as anim
+            image v15naobj2 = Movie(play="images/v15/Scene 33/v15naobj2.webm", loop=True, image="images/v15/Scene 33/v15naobj2Start.webp", start_image="images/v15/Scene 33/v15naobj2Start.webp")
+            image v15naobj2f = Movie(play="images/v15/Scene 33/v15naobj2f.webm", loop=True, image="images/v15/Scene 33/v15naobj2Start.webp", start_image="images/v15/Scene 33/v15naobj2Start.webp")
+            image v15naohj2 = Movie(play="images/v15/Scene 33/v15naohj2.webm", loop=True, image="images/v15/Scene 33/v15naohj2Start.webp", start_image="images/v15/Scene 33/v15naohj2Start.webp")
+            image v15naohj2f = Movie(play="images/v15/Scene 33/v15naohj2f.webm", loop=True, image="images/v15/Scene 33/v15naohj2Start.webp", start_image="images/v15/Scene 33/v15naohj2Start.webp")
+            
+            scene v15naobj
             with dissolve
-
-            pause 0.75
 
             na "Mmmm..."
 
             if v15s33_naomi_broke_aubreyrs:
                 u "Fuuuuck... (This is so fucking wrong...)"
-                
             else:
                 u "Oh, my god... Naomi... (Aubrey probably wouldn't like this...)"
 
-            u "*Moans*"
-
-            scene v15naobjf # Ignore as anim
+            scene v15naobjf
             with dissolve
-
-            pause 0.75
 
             u "(But it feels so... Right... Ha.)"
 
+            u "*Moans*"
+
+            scene v15naobj2
+            with dissolve
+
             u "Mmm, Naomi... *Moans*"
+
+            scene v15naobj2f
+            with dissolve
 
             na "*Mumbling* Mmm hmm?"
 
-            u "Yesss..."
-
-            scene v15naohj # Ignore as anim
+            scene v15naohj
             with dissolve
-
-            pause 0.75
 
             na "You like it when supermodels suck on your dick, huh? *Giggles*"
 
-            scene v15naohjf # Ignore as anim
+            scene v15naohjf
+            with dissolve
+
+            u "Yesss..."
+
+            scene v15naohj2
             with dissolve
 
             u "Are you..."
 
             u "Kidding? Ha..."
 
-            scene v15naobjf
+            scene v15naohj2f
             with dissolve
-
-            pause 0.75
 
             u "You're so fucking hot, Naomi-"
 
