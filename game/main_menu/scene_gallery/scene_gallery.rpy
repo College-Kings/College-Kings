@@ -114,10 +114,10 @@ init python:
         SceneGallery("The List (Autumn)", "images/v15/scene 18c/v15autkiss.webp", "v15s18c_autumnsg") # 18c, Autumn
         SceneGallery("The List (Penelope)", "images/v15/scene 18c/v15s18c_chpe_11.webp", "v15s18c_penelopesg") # 18c, Penelope
         SceneGallery("The List (Riley)", "images/v15/scene 18a/v15s18ariley_14.webp", "v15s18a_rileysg") # 18a, Riley
-        SceneGallery("Birthday treat", "images/v15/scene 18e/v15s18eend_6.webp", "v15s18e_sg"), # 18e, Lauren
-        SceneGallery("Late night sexting", "images/v15/scene 29/v15s29_emily_lingerie.webp", "v15s29_emilysg"), # 18e, Lauren
-        SceneGallery("Fun at the wedding", "images/v15/scene 33/v15s33_46b.webp", "v15s35_naomisg"), # 33, Naomi
-        SceneGallery("Choosing Nora", "images/v15/scene 48a/v15noror2Start.webp", "v15s48a_norasg"), # 48, Nora
+        SceneGallery("Birthday treat", "images/v15/scene 18e/v15s18eend_6.webp", "v15s18e_sg") # 18e, Lauren
+        SceneGallery("Late night sexting", "images/v15/scene 29/v15s29_emily_lingerie.webp", "v15s29_emilysg") # 18e, Lauren
+        SceneGallery("Fun at the wedding", "images/v15/scene 33/v15s33_46b.webp", "v15s35_naomisg") # 33, Naomi
+        SceneGallery("Choosing Nora", "images/v15/scene 48a/v15noror2Start.webp", "v15s48a_norasg") # 48, Nora
 
 
 screen scene_gallery():
