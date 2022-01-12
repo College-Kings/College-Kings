@@ -897,7 +897,7 @@ label v15s28:
     scene v15s28_3ac # FPP Same angle as 3, Jenny and Penelope with that slightly disgusted face people get after a shot when they're not used to it and putting empty shot glasses down, Jenny's mouth open
     with dissolve
 
-    jen "Ewugh! That's one!"
+    jen "Eugh! That's one!"
 
     scene v15s28_11
     with dissolve

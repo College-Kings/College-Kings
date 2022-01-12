@@ -579,6 +579,18 @@ label v15s4:
             else:
                 u "He looks like a [dog_name] to me."
 
+            if dog_name.lower() == "oscar":
+                scene v15s4_12
+                with dissolve
+
+                aut "[dog_name]?!"
+
+                aut "We already have one, I don't want them to get confused. *Chuckles*"
+                
+                aut "Try a different name."
+                
+                jump v15s4_dog
+
             if dog_name.lower() == name.lower():
                 scene v15s4_12
                 with dissolve
