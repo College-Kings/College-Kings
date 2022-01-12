@@ -596,7 +596,7 @@ label v15s18b:
 
     aut "*Chuckles* Better."
 
-    $ v15s18b_kiwiiPost1= KiwiiPost(riley, "v15/rilpost1.webp", "Celebrating this pure soul tonight!", numberLikes=648)
+    $ v15s18b_kiwiiPost1= KiwiiPost(riley, "v15/v15_rilpost1.webp", "Celebrating this pure soul tonight!", numberLikes=648)
     $ v15s18b_kiwiiPost1.newComment(lindsey, "So cute! Your costumes are perfect <3", numberLikes=renpy.random.randint(260, 560))
     $ v15s18b_kiwiiPost1.newComment(amber, "Ugh, where am I?!", numberLikes=renpy.random.randint(260, 560))
     $ v15s18b_kiwiiPost1.newComment(lauren, "Aw! Dammit Imre!", numberLikes=renpy.random.randint(260, 560))
