@@ -4,6 +4,11 @@
 # Time: Morning
 
 label v15s41:
+    scene sleep_transition_fast
+    with fade
+
+    pause 2.2
+
     play music "music/v15/Track Scene 41.mp3" fadein 2
 
     scene black

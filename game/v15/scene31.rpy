@@ -4,10 +4,15 @@
 # Time: Morning
 
 label v15s31:
-    scene sleep_transition_fast
-    with fade
-
-    pause 2.2
+    if joinwolves:
+        scene v14s14_2
+        with dissolve
+                
+    else:
+        scene v14s14a_1
+        with dissolve
+        
+    u "Let's wake up and dress up."
 
     play music "music/v13/Track Scene 33.mp3" fadein 2
 
