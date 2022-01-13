@@ -310,11 +310,11 @@ label v15s46:
     label v15s46_choosecabin:
         hide screen detective_icon
         
-        if len(v15_nora_clues) == 9 and len(v15_nora_locations) == 6:
-            $ grant_achievement("just_one_more_thing")
-
         scene v15s46_3a
         with dissolve
+
+        if len(v15_nora_clues) == 9 and len(v15_nora_locations) == 6:
+            $ grant_achievement("just_one_more_thing")
 
         u "She's at her dad's cabin, then."
 
