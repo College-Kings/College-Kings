@@ -339,4 +339,6 @@ label end15:
     if renpy.loadable("v16/scene1.rpy"):
         jump v16_start
     else:
+        play music "music/vocal.mp3"
+    
         call screen end_screen
