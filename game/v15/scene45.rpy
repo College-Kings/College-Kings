@@ -637,7 +637,7 @@ label v15s45:
     scene v15s45_7e
     with dissolve
 
-    $ v15_nora_clues.add(Clue("Chloe", "Nora & Ms Rose are really close", "Well, it's true they're close. But that doesn't mean she's with Ms Rose, does it?"))
+    $ v15_nora_clues.add(Clue("Chloe", "Nora & Ms. Rose are really close", "Well, it's true they're close. But that doesn't mean she's with Ms. Rose, does it?"))
 
     cl "Yeah, I mean. She prefers to spend time with her."
 

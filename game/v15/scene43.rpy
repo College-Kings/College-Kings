@@ -664,7 +664,7 @@ label v15s43:
     scene v15s43_14h
     with dissolve
 
-    $ v15_nora_clues.add(Clue("Chris", "Nora's aunt frequently borrows her dad's cabin", "So her aunt borrows Mr Rose's cabin. Not sure if it's relevant, but maybe some other clues will help."))
+    $ v15_nora_clues.add(Clue("Chris", "Nora's aunt frequently borrows her dad's cabin", "So her aunt borrows Mr. Rose's cabin. Not sure if it's relevant, but maybe some other clues will help."))
 
     ch "Her aunt... Oh yeah! Sometimes her aunt will rent out her dad's cabin."
 

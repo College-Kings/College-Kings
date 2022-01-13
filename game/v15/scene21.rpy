@@ -13,7 +13,7 @@ label v15s21:
 
         $ animated_value_percent = (v15s21_meeting_points + 4) * 10
 
-        scene v15s21_1 # FPP. Mr . Lee enters the library, slight smile, mouth closed
+        scene v15s21_1 # FPP. Mr. Lee enters the library, slight smile, mouth closed
         with dissolve
 
         pause 0.75

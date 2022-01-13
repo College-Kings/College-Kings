@@ -541,7 +541,7 @@ label v15s22:
 
                     de "So now you're here to convince me."
 
-                "Scarcastic joke":
+                "Sarcastic joke":
                     #$ add_point(KCT.TROUBLEMAKER)
 
                     scene v15s22_6d
