@@ -708,8 +708,7 @@ label v15s10:
                     with dissolve
 
                     u "Okay, yeah. That's a good deal, great."
-            
-            label test:
+
             scene v15s10_15 
             with dissolve
 

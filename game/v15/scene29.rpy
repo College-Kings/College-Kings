@@ -8,7 +8,7 @@ label v15s29:
     play music "music/v13/Track Scene 15.mp3" fadein 2
 
     scene v15s29_1 # TPP. MC walks into his wolve's bedroom, slight smile, mouth closed
-    with dissolve
+    with fade
 
     pause 0.75
 

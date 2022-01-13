@@ -164,17 +164,6 @@ label v15s28:
 
         pe "More drinks!"
 
-        scene v15s28_3n # FPP Same angle as 3, Jenny and Penelope banging empty shot glasses on the table and shouting
-        with dissolve
-
-        jen "More drinks!"
-        
-        pe "More drinks!"
-
-        jen "More drinks!"
-        
-        pe "More drinks!"
-
         scene v15s28_3o # FPP Same angle as 3, Jenny and Penelope holding empty shot glasses and smiling at MC
         with dissolve
 
@@ -278,23 +267,12 @@ label v15s28:
 
         pe "More drinks!"
 
-        scene v15s28_3n
-        with dissolve
-
-        jen "More drinks!"
-        
-        pe "More drinks!"
-
-        jen "More drinks!"
-        
-        pe "More drinks!"
-
         scene v15s28_3o
         with dissolve
 
         u "I'm going! I'm going!"
 
-        scene v15s28_ # -All three laugh. MC goes to the bar-
+        scene v15s28_4 # -All three laugh. MC goes to the bar-
         with dissolve
 
         pause 1
@@ -357,11 +335,6 @@ label v15s28:
 
         u "You ladies keep guessing because a gentleman never tells."
 
-        scene v15s28_5 # TPP Show MC, sitting in the booth, winking at Penelope and Jenny
-        with dissolve
-
-        pause 1
-
         scene v15s28_3y # FPP Same angle as 3, Jenny looking at MC with a fake angry expression, mouth open, giving him a "thumbs down" gesture
         with dissolve
 
@@ -405,17 +378,6 @@ label v15s28:
         scene v15s28_3m
         with dissolve
 
-        pe "More drinks!"
-
-        scene v15s28_3n
-        with dissolve
-
-        jen "More drinks!"
-        
-        pe "More drinks!"
-
-        jen "More drinks!"
-        
         pe "More drinks!"
 
         scene v15s28_3o
@@ -711,8 +673,6 @@ label v15s28:
 
         scene v15s28_9b
         with dissolve
-
-        sa "For everything, okay?"
 
         sa "Taking the time to talk to me the other night, it really helped me re-evaluate some things."
 
