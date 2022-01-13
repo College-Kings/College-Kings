@@ -404,19 +404,19 @@ label v15s28:
     scene v15s28_7 # TPP Show MC at the bar, just the edge of Samantha's bar stool visible next to him, bartender behind the bar looking at MC, mouth open
     with dissolve
 
-    barworker "What can I get you?"
+    bartender "What can I get you?"
 
-    scene v15s28_8 # FPP MC's view of the barworker behind the bar, neutral expression, mouth closed
+    scene v15s28_8 # FPP MC's view of the bartender behind the bar, neutral expression, mouth closed
     with dissolve
 
     u "(Oh, wow. As easy as that? No ID check at all!)"
 
     u "Six tequilas, please."
 
-    scene v15s28_8a # FPP Same angle as 8, barworker looking at MC, neutral expression, mouth open
+    scene v15s28_8a # FPP Same angle as 8, bartender looking at MC, neutral expression, mouth open
     with dissolve
 
-    barworker "Sure thing! Coming right up."
+    bartender "Sure thing! Coming right up."
 
     scene v15s28_7a # TPP Same angle as 7, Bartender is busy getting a drink, Samantha barely visible at the edge of the frame, looking at MC with mouth open
     with dissolve
@@ -832,7 +832,7 @@ label v15s28:
     scene v15s28_10 # FPP MC looks down at the counter in front of him and sees six shots of tequila on a tray
     with dissolve
 
-    barworker "Here are your drinks."
+    bartender "Here are your drinks."
 
     scene v15s28_10a # FPP Same angle as 10, MC taking his card back from the bartender
     with dissolve
