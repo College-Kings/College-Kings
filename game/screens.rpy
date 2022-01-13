@@ -270,7 +270,7 @@ screen quick_menu():
             imagebutton idle image_path + "save_idle.webp" action ShowMenu("save")
             imagebutton idle image_path + "quick_save_idle.webp" action QuickSave()
             imagebutton idle image_path + "quick_load_idle.webp" action QuickLoad()
-            # textbutton _("Prefs") action ShowMenu("preferences")
+            imagebutton idle image_path + "settings.webp" action ShowMenu("preferences")
 
 style quick_menu_button:
     align (0.5, 0.5)
