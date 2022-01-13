@@ -1,6 +1,7 @@
 label before_main_menu:
     call path_builder_setup
-    
+    call nonplayable_characters_setup
+
     python:
         # Phone Setup
         phone.applications = []

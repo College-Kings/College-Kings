@@ -213,3 +213,13 @@ default satin = NonPlayableCharacter("Satin") # Relationship progression: FRIEND
 default sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
 default trainer = NonPlayableCharacter("Trainer")
 default wolf = NonPlayableCharacter("Wolf")
+
+
+label nonplayable_characters_setup:
+    python:
+        beth.simplr
+        iris.simplr
+        samantha.simplr
+        emmy.simplr
+
+    return
