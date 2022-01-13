@@ -130,8 +130,8 @@ screen scene_gallery():
     add image_path + "background.webp"
 
     imagebutton:
-        idle image_path + "return_idle.png"
-        hover image_path + "return_hover.png"
+        idle image_path + "return_idle.webp"
+        hover image_path + "return_hover.webp"
         action ShowMenu("main_menu")
         pos (120, 80)
 
@@ -155,9 +155,9 @@ screen scene_gallery():
                     button:
                         background Transform(gallery_item.image, size=(362, 230), pos=(6, 16))
                         insensitive_background Transform(gallery_item.image, blur=50, size=(362, 230), pos=(6, 16))
-                        idle_foreground image_path + "button_idle.png"
-                        hover_foreground image_path + "button_hover.png"
-                        insensitive_foreground image_path + "button_idle.png"
+                        idle_foreground image_path + "button_idle.webp"
+                        hover_foreground image_path + "button_hover.webp"
+                        insensitive_foreground image_path + "button_idle.webp"
                         action Replay(gallery_item.label, scope=update_scope(gallery_item.scope))
 
                     fixed:

@@ -41,20 +41,20 @@ screen end_screen(support_link="https://www.patreon.com/collegekings"):
         spacing 50
 
         imagebutton:
-            idle image_path + "menu_idle.png"
-            hover image_path + "menu_hover.png"
+            idle image_path + "menu_idle.webp"
+            hover image_path + "menu_hover.webp"
             action MainMenu()
             yalign 0.5
 
         imagebutton:
-            idle image_path + "get_access_idle.png"
-            hover image_path + "get_access_hover.png"
+            idle image_path + "get_access_idle.webp"
+            hover image_path + "get_access_hover.webp"
             action OpenURL(support_link)
             yalign 0.5
 
         imagebutton:
-            idle "gui/common/credits_idle.png"
-            hover "gui/common/credits_hover.png"
+            idle "gui/common/credits_idle.webp"
+            hover "gui/common/credits_hover.webp"
             action Show("patreon_credits", None, support_link)
             yalign 0.5
 
@@ -75,8 +75,8 @@ screen patreon_credits(support_link="https://www.patreon.com/collegekings"):
         add "patreon_credits"
 
     imagebutton:
-        idle image_path + "support_development_idle.png"
-        hover image_path + "support_development_hover.png"
+        idle image_path + "support_development_idle.webp"
+        hover image_path + "support_development_hover.webp"
         action OpenURL(support_link)
         xalign 0.5
         ypos 735
@@ -85,14 +85,14 @@ screen patreon_credits(support_link="https://www.patreon.com/collegekings"):
         align (0.5, 1.0)
 
         imagebutton:
-            idle image_path + "main_menu_idle.png"
-            hover image_path + "main_menu_hover.png"
+            idle image_path + "main_menu_idle.webp"
+            hover image_path + "main_menu_hover.webp"
             action MainMenu()
             yalign 0.5
 
         imagebutton:
-            idle image_path + "team_idle.png"
-            hover image_path + "team_hover.png"
+            idle image_path + "team_idle.webp"
+            hover image_path + "team_hover.webp"
             action Show("team_credits")
             yalign 0.5
 
@@ -172,14 +172,14 @@ screen team_credits():
         align (0.5, 1.0)
 
         imagebutton:
-            idle image_path + "main_menu_idle.png"
-            hover image_path + "main_menu_hover.png"
+            idle image_path + "main_menu_idle.webp"
+            hover image_path + "main_menu_hover.webp"
             action MainMenu()
             yalign 0.5
 
         imagebutton:
-            idle Transform("gui/common/credits_idle.png", zoom=0.72)
-            hover Transform("gui/common/credits_hover.png", zoom=0.72)
+            idle Transform("gui/common/credits_idle.webp", zoom=0.72)
+            hover Transform("gui/common/credits_hover.webp", zoom=0.72)
             action Show("patreon_credits")
             yalign 0.5
 

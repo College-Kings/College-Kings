@@ -370,14 +370,14 @@ screen main_menu():
 
         # SETTINGS
         imagebutton:
-            idle "gui/common/settings_idle.png"
-            hover "gui/common/settings_hover.png"
+            idle "gui/common/settings_idle.webp"
+            hover "gui/common/settings_hover.webp"
             action ShowMenu("preferences")
 
         # QUIT
         imagebutton:
-            idle "gui/common/quit_idle.png"
-            hover "gui/common/quit_hover.png"
+            idle "gui/common/quit_idle.webp"
+            hover "gui/common/quit_hover.webp"
             action Quit()
 
     text "v" + config.version.split(" ")[0] align (1.0, 1.0) xoffset -20 color "#4e628f" size 30
@@ -545,8 +545,8 @@ screen enter_save_name(slot):
             allow " .,_-0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
 
         imagebutton:
-            idle "gui/file_slots/save_game_idle.png"
-            hover "gui/file_slots/save_game_hover.png"
+            idle "gui/file_slots/save_game_idle.webp"
+            hover "gui/file_slots/save_game_hover.webp"
             action [Show("save"), FileAction(slot)]
             align (1.0, 0.5)
             xoffset 13
@@ -587,8 +587,8 @@ screen file_slots(title):
         style "file_slots_title"
 
     imagebutton:
-        idle "gui/common/return_idle.png"
-        hover "gui/common/return_hover.png"
+        idle "gui/common/return_idle.webp"
+        hover "gui/common/return_hover.webp"
         action Return()
         pos (120, 80)
 
@@ -675,31 +675,31 @@ screen file_slots(title):
 
         if title == _("Save"):
             imagebutton:
-                idle image_path + "load_idle.png"
-                hover image_path + "load_hover.png"
+                idle image_path + "load_idle.webp"
+                hover image_path + "load_hover.webp"
                 action ShowMenu("load")
         else:
             imagebutton:
-                idle image_path + "save_idle.png"
-                hover image_path + "save_hover.png"
+                idle image_path + "save_idle.webp"
+                hover image_path + "save_hover.webp"
                 action ShowMenu("save")
 
         imagebutton:
-            idle image_path + "menu_idle.png"
-            hover image_path + "menu_hover.png"
+            idle image_path + "menu_idle.webp"
+            hover image_path + "menu_hover.webp"
             action MainMenu(confirm=not main_menu)
 
     hbox:
         align (1.0, 1.0)
 
         imagebutton:
-            idle "gui/common/settings_idle.png"
-            hover "gui/common/settings_hover.png"
+            idle "gui/common/settings_idle.webp"
+            hover "gui/common/settings_hover.webp"
             action ShowMenu("preferences")
 
         imagebutton:
-            idle "gui/common/quit_idle.png"
-            hover "gui/common/quit_hover.png"
+            idle "gui/common/quit_idle.webp"
+            hover "gui/common/quit_hover.webp"
             action Quit(confirm=not main_menu)
 
 
