@@ -25,20 +25,20 @@ screen archetype_selection():
 
     imagebutton:
         pos (176, 850)
-        idle "images/v15/detective_board/archetype_blue_button.png"
-        hover "images/v15/detective_board/archetype_blue_button_hover.png"
+        idle "images/v15/detective_board/archetype_blue_button.webp"
+        hover "images/v15/detective_board/archetype_blue_button_hover.webp"
         action [SetField(mc, "detective", Detective.PROFESSIONAL), Return()]
 
     imagebutton:
         pos (755, 850)
-        idle "images/v15/detective_board/archetype_yellow_button.png"
-        hover "images/v15/detective_board/archetype_yellow_button_hover.png"
+        idle "images/v15/detective_board/archetype_yellow_button.webp"
+        hover "images/v15/detective_board/archetype_yellow_button_hover.webp"
         action [SetField(mc, "detective", Detective.PSYCHOLOGIST), Return()]
     
     imagebutton:
         pos (1334, 850)
-        idle "images/v15/detective_board/archetype_pink_button.png"
-        hover "images/v15/detective_board/archetype_pink_button_hover.png"
+        idle "images/v15/detective_board/archetype_pink_button.webp"
+        hover "images/v15/detective_board/archetype_pink_button_hover.webp"
         action [SetField(mc, "detective", Detective.LOOSE_CANNON), Return()]
 
 

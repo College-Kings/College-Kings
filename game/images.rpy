@@ -4,9 +4,9 @@ image blue_button_idle = Frame("gui/button/blue_idle.webp", 24, 6)
 image blue_button_hover = Frame("gui/button/blue_hover.webp", 24, 6)
 
 # Splash Screen
-image splashscreen_1 = "gui/splashscreen/1.png"
-image splashscreen_2 = "gui/splashscreen/2.png"
-image splashscreen_3 = "gui/splashscreen/3.png"
+image splashscreen_1 = "gui/splashscreen/1.webp"
+image splashscreen_2 = "gui/splashscreen/2.webp"
+image splashscreen_3 = "gui/splashscreen/3.webp"
 
 # GUI
 ## Common
@@ -16,7 +16,7 @@ image settings_idle = "gui/common/settings_idle.webp"
 image settings_hover = Transform("gui/common/settings_hover.webp", offset=(-35, -25))
 
 ## Alert
-image alert_background = Frame("gui/alert/background.png", 8, 8)
+image alert_background = Frame("gui/alert/background.webp", 8, 8)
 
 ## Bar
 image blue_bar = Frame("gui/bar/blue.webp", 44, 22, 44, 40)
@@ -24,21 +24,21 @@ image ruby_bar = Frame("gui/bar/ruby.webp", 30, 22, 29, 40)
 image yellow_bar = Frame("gui/bar/yellow.webp", 44, 22, 44, 40)
 
 ## Choice
-image choice_button_idle = Frame("gui/choice/button_idle.png", 40, 8)
-image choice_button_hover = Frame("gui/choice/button_hover.png", 40, 8)
+image choice_button_idle = Frame("gui/choice/button_idle.webp", 40, 8)
+image choice_button_hover = Frame("gui/choice/button_hover.webp", 40, 8)
 
 ## End Screen
 image patreon_credits = Movie(channel="movie", play="gui/end_screen/patreon_credits.webm")
 
 ## KCT Choice Hint
-image kct_choice_hint_background = Frame("gui/kct/background.png", 44, 6, 44, 0) 
+image kct_choice_hint_background = Frame("gui/kct/background.webp", 44, 6, 44, 0) 
 
 ## Path Builder
 image path_builder_button_idle = Frame("main_menu/path_builder/images/button_idle.webp", 24, 6)
 image path_builder_button_hover = Frame("main_menu/path_builder/images/button_hover.webp", 24, 6)
 
 ## Scene Gallery
-image scene_gallery_bar_base = Frame("main_menu/scene_gallery/images/bar_base.png", 5, 10)
+image scene_gallery_bar_base = Frame("main_menu/scene_gallery/images/bar_base.webp", 5, 10)
 
 ## Settings
 image settings_bar_left = Frame("gui/settings/bar_right.webp", 14, 5)
@@ -46,12 +46,12 @@ image settings_bar_right = Frame("gui/settings/bar_right.webp", 14, 5)
 image settings_bar_thumb = "gui/settings/bar_thumb.webp"
 
 ## Tutorial
-image tutorial_background = Frame("gui/tutorial/background.png", 42, 8, 8, 8)
-image tutorial_left_button_idle = "gui/tutorial/left_button_idle.png"
-image tutorial_right_button_idle = "gui/tutorial/right_button_idle.png"
+image tutorial_background = Frame("gui/tutorial/background.webp", 42, 8, 8, 8)
+image tutorial_left_button_idle = "gui/tutorial/left_button_idle.webp"
+image tutorial_right_button_idle = "gui/tutorial/right_button_idle.webp"
 
 ## Warning
-image warning_background_blue = Frame("gui/warning/background_blue.png", 42, 8, 8, 8)
+image warning_background_blue = Frame("gui/warning/background_blue.webp", 42, 8, 8, 8)
 
 # Transitions
 image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm", loop=False)

@@ -127,10 +127,10 @@ screen scene_gallery():
 
     default image_path = "main_menu/scene_gallery/images/"
 
-    add image_path + "background.png"
+    add image_path + "background.webp"
 
     imagebutton:
-        idle image_path + "return_idle.png"
+        idle image_path + "return_idle.webp"
         action ShowMenu("main_menu")
         pos (129, 82)
 
@@ -154,9 +154,9 @@ screen scene_gallery():
                     button:
                         background Transform(gallery_item.image, size=(362, 230), pos=(6, 6))
                         insensitive_background Transform(gallery_item.image, blur=50, size=(362, 230), pos=(6, 6))
-                        idle_foreground image_path + "button_idle.png"
-                        hover_foreground image_path + "button_hover.png"
-                        insensitive_foreground image_path + "button_idle.png"
+                        idle_foreground image_path + "button_idle.webp"
+                        hover_foreground image_path + "button_hover.webp"
+                        insensitive_foreground image_path + "button_idle.webp"
                         action Replay(gallery_item.label, scope=update_scope(gallery_item.scope))
 
                     fixed:
@@ -167,14 +167,14 @@ screen scene_gallery():
                         # add "#0f0"
                         text gallery_item.title.upper() align (0.5, 0.5)
 
-    add image_path + "shadow.png" xalign 0.5 ypos 893
+    add image_path + "shadow.webp" xalign 0.5 ypos 893
 
     add "scene_gallery_bar_base" pos (1743, 226) xysize (27, 734)
     vbar:
         pos (1748, 231)
         xysize (17, 724)
         base_bar "#0000"
-        thumb image_path + "bar_thumb.png"
+        thumb image_path + "bar_thumb.webp"
         value YScrollValue("vpg")
 
 

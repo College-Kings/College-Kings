@@ -39,7 +39,7 @@ screen kct_choice_hint():
         hbox:
             null width 10
 
-            add "gui/kct/logo.png" align (0.5, 0.5)
+            add "gui/kct/logo.webp" align (0.5, 0.5)
 
             text kct.upper() align (0.5, 0.5)
 

@@ -263,13 +263,13 @@ screen quick_menu():
             spacing 30
 
             if not realmode:
-                imagebutton idle image_path + "rollback_idle.png" action Rollback()
-            imagebutton idle image_path + "history_idle.png" action ShowMenu("history")
-            imagebutton idle image_path + "skip_idle.png" action Skip() alternate Skip(fast=True, confirm=True)
-            imagebutton idle image_path + "auto_forward_idle.png" action Preference("auto-forward", "toggle")
-            imagebutton idle image_path + "save_idle.png" action ShowMenu("save")
-            imagebutton idle image_path + "quick_save_idle.png" action QuickSave()
-            imagebutton idle image_path + "quick_load_idle.png" action QuickLoad()
+                imagebutton idle image_path + "rollback_idle.webp" action Rollback()
+            imagebutton idle image_path + "history_idle.webp" action ShowMenu("history")
+            imagebutton idle image_path + "skip_idle.webp" action Skip() alternate Skip(fast=True, confirm=True)
+            imagebutton idle image_path + "auto_forward_idle.webp" action Preference("auto-forward", "toggle")
+            imagebutton idle image_path + "save_idle.webp" action ShowMenu("save")
+            imagebutton idle image_path + "quick_save_idle.webp" action QuickSave()
+            imagebutton idle image_path + "quick_load_idle.webp" action QuickLoad()
             # textbutton _("Prefs") action ShowMenu("preferences")
 
 style quick_menu_button:
@@ -534,7 +534,7 @@ screen enter_save_name(slot):
     frame:
         xysize (1083, 99)
         pos (477, 210)
-        background "gui/file_slots/save_name.png"
+        background "gui/file_slots/save_name.webp"
 
         input:
             align (0.5, 0.5)
@@ -544,7 +544,7 @@ screen enter_save_name(slot):
             allow " .,_-0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
 
         imagebutton:
-            idle "gui/file_slots/save_game_idle.png"
+            idle "gui/file_slots/save_game_idle.webp"
             action [Show("save"), FileAction(slot)]
             align (1.0, 0.5)
 
@@ -576,7 +576,7 @@ screen file_slots(title):
         renpy_version = '.'.join(str(i) for i in renpy_version)
         file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
-    add image_path + "background.png"
+    add image_path + "background.webp"
 
     text "{} Game".format(title):
         xalign 0.5
@@ -584,7 +584,7 @@ screen file_slots(title):
         style "file_slots_title"
 
     imagebutton:
-        idle image_path + "return_idle.png"
+        idle image_path + "return_idle.webp"
         action Return()
         pos (129, 82)
 
@@ -632,7 +632,7 @@ screen file_slots(title):
                             text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")).upper() xalign 0.5
                             text FileSaveName(slot).upper() xalign 0.5
                     else:
-                        add image_path + "incompatible.png" xalign 0.5 yoffset -7
+                        add image_path + "incompatible.webp" xalign 0.5 yoffset -7
 
                     key "save_delete" action FileDelete(slot)
 
@@ -645,7 +645,7 @@ screen file_slots(title):
         xoffset 20
 
         imagebutton:
-            idle image_path + "left_arrow.png"
+            idle image_path + "left_arrow.webp"
             action FilePagePrevious()
             yalign 0.5
 
@@ -661,24 +661,24 @@ screen file_slots(title):
         textbutton "99" action FilePage(99) yalign 0.5
 
         imagebutton:
-            idle image_path + "right_arrow.png"
+            idle image_path + "right_arrow.webp"
             action FilePageNext()
             yalign 0.5
 
     # Menu buttons
     if title == _("Save"):
         imagebutton:
-            idle image_path + "load_idle.png"
+            idle image_path + "load_idle.webp"
             action ShowMenu("load")
             pos (129, 967)
     else:
         imagebutton:
-            idle image_path + "save_idle.png"
+            idle image_path + "save_idle.webp"
             action ShowMenu("save")
             pos (129, 967)
 
     imagebutton:
-        idle image_path + "menu_idle.png"
+        idle image_path + "menu_idle.webp"
         action MainMenu()
         pos (314, 975)
 
@@ -896,7 +896,7 @@ style radio_vbox:
 
 style radio_button:
     properties gui.button_properties("radio_button")
-    foreground "gui/button/radio_[prefix_]foreground.png"
+    foreground "gui/button/radio_[prefix_]foreground.webp"
 
 style radio_button_text:
     properties gui.button_text_properties("radio_button")
@@ -906,7 +906,7 @@ style check_vbox:
 
 style check_button:
     properties gui.button_properties("check_button")
-    foreground "gui/button/check_[prefix_]foreground.png"
+    foreground "gui/button/check_[prefix_]foreground.webp"
 
 style check_button_text:
     properties gui.button_text_properties("check_button")
