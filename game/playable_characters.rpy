@@ -7,6 +7,7 @@ init python:
             self.money = 0
             self.inventory = Inventory()
             self.detective = None
+            self._profile_picture = profile_pictures[0]
 
             self.relationships = set()
             self.girlfriends = set()
@@ -18,6 +19,10 @@ init python:
         @property
         def profile_picture(self):
             return profile_pictures[0]
+
+        @profile_picture.setter
+        def profile_picture(self, value):
+            self._profile_picture = value
 
         def has_item(self, item):
             return (item in self.inventory)
