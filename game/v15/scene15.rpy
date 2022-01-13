@@ -228,6 +228,9 @@ label v15s15:
             scene v15rosoral # IGNORE AS ANIMATION
             with dissolve
 
+            if voice_acted:
+                $ renpy.sound.play("Scene 15 - oral_slow_2loops.mp3", loop=True)
+
             pause 0.75
 
             ro "*Moans* Oh... Yes... You are a hungry boy! *Laughs*"
@@ -237,6 +240,9 @@ label v15s15:
             scene v15rosoral2 # IGNORE AS ANIMATION
             with dissolve
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s15/Scene 15 - ffb_slow_2loops.mp3", loop=True)
+
             pause 0.75
 
             u "*Muffled* Yes, I love it..."
@@ -244,6 +250,8 @@ label v15s15:
             ro "I'm so... *Gasps* Happy to hear you say that... *Panting*"
 
             ro "I think it's time you flip this pancake over and fuck it."
+
+            stop sound
 
             scene v15s15_15 # TPP. Show MC standing, flipping Ms. Rose over, he's getting ready to fuck her from behind
             with dissolve
@@ -258,19 +266,25 @@ label v15s15:
             scene v15rosffb # IGNORE AS ANIMATION
             with dissolve
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s15/Scene 15 - ffb_slow_2loops.mp3", loop=True)
+
             pause 0.75
 
             ro "*Moans* Are you... still angry with me, [name]?"
 
-            scene v15rosffbf # IGNORE AS ANIMATION
+            scene v15rosffb2 # IGNORE AS ANIMATION
             with dissolve
 
             pause 0.75
 
             u "Of course I'm still angry."
 
-            scene v15rosffb2 # IGNORE AS ANIMATION
+            scene v15rosffbf # IGNORE AS ANIMATION
             with dissolve
+
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s15/Scene 15 - ffb_fast_2loops.mp3", loop=True)
 
             pause 0.75
 
@@ -284,6 +298,8 @@ label v15s15:
             pause 0.75
 
             ro "Show me how angry you are..."
+
+            stop sound
 
             scene v15s15_16 # TPP. MC fucking Ms. Rose from behind, she has her mouth closed, MC mouth closed (MC in max penetration)
             with dissolve
@@ -393,19 +409,25 @@ label v15s15:
             scene v15rossd # IGNORE AS ANIMATION
             with dissolve
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s15/Scene 15 - sd_slow_2loops.mp3", loop=True)
+
             pause 0.75
 
             ro "I've never..."
 
-            scene v15rossdf # IGNORE AS ANIMATION
+            scene v15rossd2 # IGNORE AS ANIMATION
             with dissolve
 
             pause 0.75
 
             ro "Been fucked..."
 
-            scene v15rossd2 # IGNORE AS ANIMATION
+            scene v15rossdf # IGNORE AS ANIMATION
             with dissolve
+
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s15/Scene 15 - sd_fast_4loops.mp3", loop=True)
 
             pause 0.75
 
@@ -424,6 +446,8 @@ label v15s15:
             pause 0.75
 
             ro "God, yes! Yes!"
+
+            stop sound
 
             scene v15s15_22 # TPP. Show MC fucking Ms. Rose in standign doggy, she is leaning on the fridge, MS. Rose mouth closed, MC mouth open
             with dissolve
@@ -458,16 +482,27 @@ label v15s15:
             scene v15rosffbstove # IGNORE AS ANIMATION
             with dissolve
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s15/Scene 15 - ffbstove_slow_2loops.mp3", loop=True)
+
             pause 0.75
 
             ro "Yes! Keep going! *Moans* Just like that..."
 
-            scene v15rosffbstovef # IGNORE AS ANIMATION
+            scene v15rosffbstove2 # IGNORE AS ANIMATION
             with dissolve
 
             pause 0.75
 
             ro "You're hitting the... spot... perfec-"
+
+            scene v15rosffbstovef # IGNORE AS ANIMATION
+            with dissolve
+
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s15/Scene 15 - ffbstove_fast_2loops.mp3", loop=True)
+
+            pause 0.75
 
             ro "Ohh, fuuuck! I'm cumming, I'm cu-"
 
@@ -479,6 +514,8 @@ label v15s15:
             ro "*Moans* Oh, [name]... Oh, honey..."
 
             ro "*Panting* You're so-"
+
+            stop sound
 
             scene v15s15_26 # TPP. MC pushing Ms. Rose down on her knees so he can cum on her face
             with dissolve

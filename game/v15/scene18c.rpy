@@ -857,6 +857,9 @@ label v15s18c_imre_aubrey:
     scene v15aubfin # IGNORE AS ANIMATION
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     au "Oh... Shhit... *Moans*"
@@ -868,6 +871,9 @@ label v15s18c_imre_aubrey:
     scene v15aubfinf # IGNORE AS ANIMATION
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_fast_4loops.mp3", loop=True)
+
     pause 0.75
    
     au "*Moans* Yes... [name], please..."
@@ -878,6 +884,9 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfin2 # IGNORE AS ALREADY RENDERED
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_slow_2loops.mp3", loop=True)
 
     menu:
         "Keep her quiet":
@@ -891,6 +900,9 @@ label v15s18c_imre_aubrey:
             u "Shh, shh, shh..."
 
             u "We don't want anyone interrupting us, do we?"
+
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_fast_4loops.mp3", loop=True)
 
             scene v15aubfin2f # IGNORE AS ANIMATION
             with dissolve
@@ -914,6 +926,9 @@ label v15s18c_imre_aubrey:
             scene v15aubfin2f 
             with dissolve
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_fast_4loops.mp3", loop=True)
+
             pause 0.75
 
             au "Fuck... You don't want that... Haha... *Moans*"
@@ -928,12 +943,18 @@ label v15s18c_imre_aubrey:
     scene v15aubfing # IGNORE AS ANIMATION
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     au "Mmm!"
 
     scene v15aubfingf # IGNORE AS ANIMATION
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_fast_4loops.mp3", loop=True)
 
     pause 0.75
 
@@ -942,6 +963,9 @@ label v15s18c_imre_aubrey:
     scene v15aubfing2 # IGNORE AS ANIMATION
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     au "*Moans*"
@@ -949,11 +973,16 @@ label v15s18c_imre_aubrey:
     scene v15aubfing2f # IGNORE AS ANIMATION
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_fast_4loops.mp3", loop=True)
+
     pause 0.75
 
     u "You're so wet..."
 
     au "Mmm, mmm! *Moans*"
+
+    stop sound
 
     scene v15s18c_imau_24 # TPP. MC fingering Aubrey, no longer covering her mouth (make it similar to the first animation positioning), Aubrey moaning, mouth open
     with dissolve
@@ -962,6 +991,9 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfin
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_slow_2loops.mp3", loop=True)
 
     pause 0.75
 
@@ -972,6 +1004,9 @@ label v15s18c_imre_aubrey:
     scene v15aubfinf
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_fast_4loops.mp3", loop=True)
+
     pause 0.75
 
     au "*Whispers* Yes..."
@@ -981,6 +1016,9 @@ label v15s18c_imre_aubrey:
     scene v15aubfin2
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     au "Mmm, yes... *Moans* I-"
@@ -988,11 +1026,16 @@ label v15s18c_imre_aubrey:
     scene v15aubfin2f
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_fast_4loops.mp3", loop=True)
+
     pause 0.75
 
     au "Fuck... Oh, [name]..."
 
     au "*Moans* I'm gonna cum."
+
+    stop sound
 
     scene v15s18c_imau_25 # TPP. MC fingering Aubrey (finger not fully inside, Aubrey moaning, mouth closed (don't show MC's face), she is cumming her, make this very intense (maybe pulling bedsheets), finger fully inserted
     with dissolve
@@ -2462,6 +2505,9 @@ label v15s18c_chris_penelope:
                     scene v15penor # IGNORE AS ANIMATION
                     with dissolve
 
+                    if voice_acted:
+                        $ renpy.sound.play("voice/v15/s18c/Scene 18c - pe_oral_slow_2loops.mp3", loop=True)
+
                     pause 0.75
 
                     pe "*Chuckles* Mmm..."
@@ -2492,6 +2538,8 @@ label v15s18c_chris_penelope:
                     u "(I can't believe how good you taste... Holy shit-)"
 
                     pe "I'm going to cum! [name], I-"
+
+                    stop sound
 
                     scene v15s18c_chpe_13 # TPP. MC giving Penelope oral, she holds his head in, she is moaning heavily
                     with dissolve

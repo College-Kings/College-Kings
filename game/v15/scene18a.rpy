@@ -1824,12 +1824,18 @@ label v15s18a_Riley:
 
             pause 0.75
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18a/Scene 18a - ri_hj_slow_2loops.mp3", loop=True)
+
             u "*Moans*"
 
             ri "Ha, do you like it?"
 
             scene v15rileyhjf # Ignore as animation
             with dissolve
+
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18a/Scene 18a - ri_hj_fast_4loops.mp3", loop=True)
 
             pause 0.75
 
@@ -1839,6 +1845,9 @@ label v15s18a_Riley:
 
             scene v15rileyhj # Ignore as animation
             with dissolve
+
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18a/Scene 18a - ri_hj_slow_2loops.mp3", loop=True)
 
             pause 0.75
 
@@ -1851,9 +1860,14 @@ label v15s18a_Riley:
 
             pause 0.75
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18a/Scene 18a - ri_hj_fast_4loops.mp3", loop=True)
+
             ri "*Giggles* What was that?"
 
             u "Mmm, mix... I like a good mix..."
+
+            stop sound
 
             scene v15s18ariley_13a # FPP. Riley laying close to MC her hand on his dick, Riley looking at MC, MC looking at Riley, Riley smirking, mouth open.
             with dissolve
@@ -1890,11 +1904,17 @@ label v15s18a_Riley:
             scene v15rileyhj2 # Ignore as animation
             with dissolve
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18a/Scene 18a - ri_hj_slow_2loops.mp3", loop=True)
+
             pause 0.75
 
             u "Keep going... Just like that..."
 
             ri "Like this?"
+
+            stop sound
+            
 
             scene v15s18ariley_13b
             with dissolve
@@ -1908,11 +1928,16 @@ label v15s18a_Riley:
             scene v15rileyhj2f # Ignore as animation
             with dissolve
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18a/Scene 18a - ri_hj_fast_4loops.mp3", loop=True)
+
             pause 0.75
 
             ri "Yeah?"
 
             ri "You're gonna cum for me?"
+
+            stop sound
 
             scene v15s18ariley_13c # FPP. Riley laying close to MC her hand on his dick, Riley's other hand on MC's cheek, Riley looking at MC, MC looking at Riley, Riley biting her lip, mouth closed.
             with dissolve
@@ -1924,7 +1949,12 @@ label v15s18a_Riley:
             scene v15rileyhj2f # Ignore as animation
             with dissolve
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18a/Scene 18a - ri_hj_fast_4loops.mp3", loop=True)
+
             pause 0.75
+
+            stop sound
 
             scene v15s18ariley_17 # TPP. MC cumming onto Riley's hand
             with dissolve
@@ -2311,11 +2341,16 @@ label v15s18a_ChrisAmber:
 
                     pause 0.75
 
+                    if voice_acted:
+                        $ renpy.sound.play("voice/v15/s18a/Scene 18a - am_bj_slow_2loops.mp3", loop=True)
+
                     am "Mmmm..."
 
                     u "Oh, yes..."
 
                     u "Ssssshit, Amber..."
+
+                    stop sound
 
                     scene v15s18aamber_9d # FPP. MC looking down at Amber on her knees, Amber has all of MC's dick in her mouth, MC's hand holding the back of her head
                     with dissolve
@@ -2327,14 +2362,19 @@ label v15s18a_ChrisAmber:
 
                     am "*Gagging*"
 
-                    scene v15amberbjf # Ignore as animation.
+                    scene v15amberbj2 # Ignore as animation.
                     with dissolve
+
+                    if voice_acted:
+                        $ renpy.sound.play("voice/v15/s18a/Scene 18a - am_bj_slow_2loops.mp3", loop=True)
 
                     pause 0.75
 
                     u "*Moans* Take all of me."
 
                     am "Mmm..."
+
+                    stop sound
 
                     scene v15s18aamber_9f # FPP. MC looking down at Amber, Amber not sucking his dick at the moment, Amber looking up at MC, Amber smirking, mouth open.
                     with dissolve
@@ -2346,8 +2386,11 @@ label v15s18a_ChrisAmber:
 
                     u "Ha, you can have it whenever you want."
 
-                    scene v15amberbj2 # Ignore as animation
+                    scene v15amberbjf # Ignore as animation
                     with dissolve
+
+                    if voice_acted:
+                        $ renpy.sound.play("voice/v15/s18a/Scene 18a - am_bj_fast_4loops.mp3", loop=True)
 
                     pause 0.75
 
@@ -2358,6 +2401,8 @@ label v15s18a_ChrisAmber:
                     u "You like that?"
 
                     am "Mhmm!"
+
+                    stop sound
 
                     scene v15s18aamber_9h # FPP. MC looking down at Amber, Amber's lips on MC's dick, MC's hand on the top of her head.
                     with dissolve
@@ -2372,6 +2417,9 @@ label v15s18a_ChrisAmber:
                     scene v15amberbj2f # Ignore as animation
                     with dissolve
 
+                    if voice_acted:
+                        $ renpy.sound.play("voice/v15/s18a/Scene 18a - am_bj_fast_4loops.mp3", loop=True)
+
                     pause 0.75
 
                     u "I'm going to cum... Amber..."
@@ -2381,6 +2429,8 @@ label v15s18a_ChrisAmber:
                     am "Mmm!"
 
                     u "Yes, Amber... Yes... *Moans*"
+
+                    stop sound
 
                     scene v15s18aamber_9e
                     with vpunch
