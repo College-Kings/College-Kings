@@ -44,83 +44,7 @@ label v15s40:
 
     u "I mean, it's okay if you don't want to talk about it, but they're all asleep now and it's only me."
 
-    if autumn.relationship < Relationship.TRUST:
-        scene v15s40_1b
-        with dissolve
-
-        aut "I think I've talked about it enough for today."
-
-        scene v15s40_1a
-        with dissolve
-
-        u "Yeah, I get it. It's no problem at all."
-
-        scene v15s40_1b
-        with dissolve
-
-        aut "I get that you have questions. I just need more time to process things, I guess."
-
-        scene v15s40_1a
-        with dissolve
-
-        u "Absolutely. I understand."
-
-        scene v15s40_1b
-        with dissolve
-
-        aut "Thanks."
-
-        scene v15s40_1a
-        with dissolve
-
-        u "So, you had fun tonight at the club?"
-
-        scene v15s40_1c # FPP. same as v15s40_1b Autumn increases to a full smile, still looking at Mc, mouth is still open
-        with dissolve
-
-        aut "Yeah! I've haven't danced like that in way too long..."
-
-        aut "Solid company too. Aubrey and Lindsey are a lot of fun!"
-
-        scene v15s40_1a
-        with dissolve
-
-        u "Yeah, they're great."
-
-        if not v15_lindsey_inviteseb:
-            scene v15s40_1c
-            with dissolve
-
-            aut "Grayson, not so much, haha."
-
-            scene v15s40_1a
-            with dissolve
-
-            u "He's a bit... bittersweet, huh?"
-
-            scene v15s40_1b
-            with dissolve
-
-            aut "That's a very polite way of putting it. *Giggles*"
-
-        else:
-            scene v15s40_1
-            with dissolve
-
-            aut "And Sebastian... He's such a nice guy."
-
-            scene v15s40_1a
-            with dissolve
-
-            u "Yeah, he's one of those people that just seems to fit into any crowd."
-
-            scene v15s40_1b
-            with dissolve
-
-            aut "Yeah, that's exactly it! It's a good skill to have too."
-
-    else:
-
+    if AutumnTrust:
         scene v15s40_1b
         with dissolve
 
@@ -358,6 +282,81 @@ label v15s40:
         with dissolve
 
         aut "Haha, good."
+
+    else:
+        scene v15s40_1b
+        with dissolve
+
+        aut "I think I've talked about it enough for today."
+
+        scene v15s40_1a
+        with dissolve
+
+        u "Yeah, I get it. It's no problem at all."
+
+        scene v15s40_1b
+        with dissolve
+
+        aut "I get that you have questions. I just need more time to process things, I guess."
+
+        scene v15s40_1a
+        with dissolve
+
+        u "Absolutely. I understand."
+
+        scene v15s40_1b
+        with dissolve
+
+        aut "Thanks."
+
+        scene v15s40_1a
+        with dissolve
+
+        u "So, you had fun tonight at the club?"
+
+        scene v15s40_1c # FPP. same as v15s40_1b Autumn increases to a full smile, still looking at Mc, mouth is still open
+        with dissolve
+
+        aut "Yeah! I've haven't danced like that in way too long..."
+
+        aut "Solid company too. Aubrey and Lindsey are a lot of fun!"
+
+        scene v15s40_1a
+        with dissolve
+
+        u "Yeah, they're great."
+
+        if not v15_lindsey_inviteseb:
+            scene v15s40_1c
+            with dissolve
+
+            aut "Grayson, not so much, haha."
+
+            scene v15s40_1a
+            with dissolve
+
+            u "He's a bit... bittersweet, huh?"
+
+            scene v15s40_1b
+            with dissolve
+
+            aut "That's a very polite way of putting it. *Giggles*"
+
+        else:
+            scene v15s40_1
+            with dissolve
+
+            aut "And Sebastian... He's such a nice guy."
+
+            scene v15s40_1a
+            with dissolve
+
+            u "Yeah, he's one of those people that just seems to fit into any crowd."
+
+            scene v15s40_1b
+            with dissolve
+
+            aut "Yeah, that's exactly it! It's a good skill to have too."
 
     scene v15s40_1i # FPP. same as v15s40_1 Autumn turns her head to look out the Limo's window, slight smile, mouth is closed
     with dissolve

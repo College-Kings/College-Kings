@@ -146,10 +146,6 @@ label after_load:
             del aubreyrs
         except NameError: pass
         try:
-            if AutumnTrust: autumn.relationship = Relationship.TRUST
-            del AutumnTrust
-        except NameError: pass
-        try:
             if cameronBro: cameron.relationship = Relationship.BRO
             del cameronBro
         except NameError: pass

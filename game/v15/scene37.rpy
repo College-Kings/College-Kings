@@ -32,7 +32,7 @@ label v15s37:
 
         pause 0.75
 
-    if autumn.relationship < Relationship.TRUST:
+    if not AutumnTrust:
         scene v15s37_3 # TPP. Show MC walking further down the street, slight smile, mouth closed
         with dissolve
 
