@@ -596,7 +596,7 @@ label v15s1:
 
 # -MC checks his texts and there's a message from Lauren-
     $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren")
-
+    $ lauren.messenger.addReply("Looking forward to it!")
     call screen phone
 
     scene v15s1_5e # TPP. same as v15s1_5a Mc has a slight smile, and a happy expression

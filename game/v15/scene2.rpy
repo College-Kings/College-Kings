@@ -381,7 +381,7 @@ label v15s2:
     pause 0.75
 
     $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren", force_send=True)
-
+    $ lauren.messenger.addReply("Looking forward to it!")
     play sound "sounds/vibrate.mp3"
 
     scene v15s2_9
