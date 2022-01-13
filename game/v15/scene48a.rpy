@@ -531,8 +531,6 @@ label v15s48a_end:
 
     u "Then come get it."
 
-    label test:
-
     scene v15s48aend_1a
     with dissolve
 
