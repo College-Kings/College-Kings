@@ -531,6 +531,8 @@ label v15s48a_end:
 
     u "Then come get it."
 
+    label test:
+
     scene v15s48aend_1a
     with dissolve
 
@@ -549,13 +551,16 @@ label v15s48a_end:
     scene v15norbj # Ignore as anim
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - bj_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     u "Ah, fuck... yeah."
 
     u "Wow, you REALLY want it!"
 
-    scene v15norbjf # Ignore as anim
+    scene v15norbj2 # Ignore as anim
     with dissolve
 
     pause 0.75
@@ -564,8 +569,11 @@ label v15s48a_end:
 
     no "*Gagging*"
 
-    scene v15norbj2 # Ignore as anim
+    scene v15norbjf # Ignore as anim
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - bj_fast_2loops.mp3", loop=True)
 
     pause 0.75
 
@@ -577,6 +585,8 @@ label v15s48a_end:
     pause 0.75
 
     u "I'm not going to last much longer if you keep that up..."
+
+    stop sound
 
     scene v15s48aend_2 # TPP. MC leading Nora over to the window, both naked, both slight smile, mouth closed.
     with dissolve
@@ -599,11 +609,16 @@ label v15s48a_end:
     scene v15noror # Ignore as anim 
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - oral_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     no "Oh... Fuck!"
 
     no "*Panting* I've never felt this good before, [name]."
+
+    stop sound
 
     scene v15s48aend_4 # FPP. MC looking up at Nora from on his knees, Nora looking down at MC, Nora biting her lip.
     with dissolve
@@ -638,6 +653,10 @@ label v15s48a_end:
     scene v15noror2 # Ignore as anim
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - oral_slow_2loops.mp3", loop=True)
+
+
     pause 0.75
 
     no "*Moans* Yeah?"
@@ -649,6 +668,8 @@ label v15s48a_end:
     no "You..."
 
     no "Y-you have to fuck me."
+
+    stop sound
 
     scene v15s48aend_4
     with dissolve
@@ -685,21 +706,27 @@ label v15s48a_end:
     scene v15norsdg # Ignore as anim 
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - sdg_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     no "*Gasps*"
 
     u "*Groans*"
 
-    scene v15norsdgf # Ignore as anim 
+    scene v15norsdg2 # Ignore as anim 
     with dissolve
     
     pause 0.75
 
     no "Oh, shit!"
 
-    scene v15norsdg2 # Ignore as anim 
+    scene v15norsdgf # Ignore as anim 
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - sdg_fast_2loops.mp3", loop=True)
 
     pause 0.75
 
@@ -711,6 +738,8 @@ label v15s48a_end:
     pause 0.75
 
     no "You... *Moans* Too..."
+
+    stop sound
 
     scene v15s48aend_5c # TPP. Nora turned back around, Nora looking at MC, Nora biting her lip.
     with dissolve
@@ -765,13 +794,16 @@ label v15s48a_end:
     scene v15normis # Ignore as anim
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - missionary_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     no "Oh my- *Moans*"
 
     no "Harder, [name]. Please!"
 
-    scene v15normisf # Ignore as anim
+    scene v15normis2 # Ignore as anim
     with dissolve
 
     pause 0.75
@@ -780,8 +812,11 @@ label v15s48a_end:
 
     no "I... love that... Yes!"
 
-    scene v15normis2 # Ignore as anim
+    scene v15normisf # Ignore as anim
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - missionary_fast_2loops.mp3", loop=True)
 
     pause 0.75
 
@@ -799,6 +834,8 @@ label v15s48a_end:
     u "I'm... *Moans* Nora-"
 
     no "Yes, baby..."
+
+    stop sound
 
     scene v15s48aend_11 # FPP. MC and Nora in missionairy on the bed, MC close to her face, MC looking at Nora, Nora looking at MC, Nora with her hand on MC's cheek, Nora flirty, mouth open.
     with dissolve

@@ -1597,6 +1597,9 @@ label v15s33:
             scene v15naobj
             with dissolve
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s33/Scene 33 - bj_slow_2loops.mp3", loop=True)
+
             na "Mmmm..."
 
             if v15s33_naomi_broke_aubreyrs:
@@ -1604,15 +1607,18 @@ label v15s33:
             else:
                 u "Oh, my god... Naomi... (Aubrey probably wouldn't like this...)"
 
-            scene v15naobjf
+            scene v15naobj2
             with dissolve
 
             u "(But it feels so... Right... Ha.)"
 
             u "*Moans*"
 
-            scene v15naobj2
+            scene v15naobjf
             with dissolve
+
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s33/Scene 33 - bj_fast_4loops.mp3", loop=True)
 
             u "Mmm, Naomi... *Moans*"
 
@@ -1624,15 +1630,21 @@ label v15s33:
             scene v15naohj
             with dissolve
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s33/Scene 33 - hj_slow_2loops.mp3", loop=True)
+
             na "You like it when supermodels suck on your dick, huh? *Giggles*"
 
-            scene v15naohjf
+            scene v15naohj2
             with dissolve
 
             u "Yesss..."
 
-            scene v15naohj2
+            scene v15naohjf
             with dissolve
+
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s33/Scene 33 - hj_fast_2loops.mp3", loop=True)
 
             u "Are you..."
 
@@ -1642,6 +1654,8 @@ label v15s33:
             with dissolve
 
             u "You're so fucking hot, Naomi-"
+
+            stop sound
 
             label v15s33_nsfwSkipLabel1:
 

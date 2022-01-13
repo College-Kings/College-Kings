@@ -411,6 +411,9 @@ label v15s18e_end:
 
     scene v15lauor # Ignore as anim
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - oral_slow_2loops.mp3", loop=True)
     
     pause 0.75
 
@@ -433,6 +436,8 @@ label v15s18e_end:
     la "*Panting* Mmm, fuuuuck..."
 
     la "*Moans* Stop."
+
+    stop sound
 
     scene v15s18eend_3 # FPP. MC looking up at Lauren, Lauren looking at MC, Lauren biting her lip.
     with dissolve
@@ -462,13 +467,16 @@ label v15s18e_end:
     scene v15laubj # Ignore as anim
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - bj_slow_4loops.mp3", loop=True)
+
     pause 0.75
 
     la "*Gagging*"
 
     u "*Moans* Oh, fuck! (She took it so deep straight away...)"
 
-    scene v15laubjf # Ignore as anim
+    scene v15laubj2 # Ignore as anim
     with dissolve
 
     pause 0.75
@@ -477,8 +485,11 @@ label v15s18e_end:
 
     u "You like that?"
 
-    scene v15laubj2 # Ignore as anim
+    scene v15laubjf # Ignore as anim
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - bj_fast_4loops.mp3", loop=True)
 
     pause 0.75
 
@@ -494,6 +505,8 @@ label v15s18e_end:
     u "Fuck Lauren... *Moans*"
 
     u "You... You're going to make me-"
+
+    stop sound
 
     scene v15s18eend_5a # MC looking down at Lauren, Lauren sitting on the edge of the bed, Lauren sucking MC's dick.
     with vpunch
@@ -523,13 +536,16 @@ label v15s18e_end:
     scene v15lausf # Ignore as anim
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - spoon_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     la "I... *Moans* I love this position."
 
     u "*Panting* Yeah?"
 
-    scene v15lausff # Ignore as anim
+    scene v15lausf2 # Ignore as anim
     with dissolve
 
     pause 0.75
@@ -538,14 +554,19 @@ label v15s18e_end:
 
     la "You're so... fucking deep inside of me..."
 
-    scene v15lausf2 # Ignore as anim
+    scene v15lausff # Ignore as anim
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - spoon_fast_4loops.mp3", loop=True)
 
     pause 0.75
 
     la "*Whispers* Oh, fuck..."
 
     u "You're so fucking wet, ha..."
+
+    stop sound
 
     scene v15s18eend_6 # TPP. Show MC grabbing Lauren's boob as he fucks her from behind, Lauren flirty, mouth open.
     with dissolve
@@ -584,11 +605,16 @@ label v15s18e_end:
     scene v15lausf2f # Ignore as anim
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - spoon_fast_4loops.mp3", loop=True)
+
     pause 0.75
 
     la "Yes... I'm gonna-"
 
     la "I'm about to... *Moans*"
+
+    stop sound
 
     scene v15s18eend_7 # FPP. MC looking down seeing Lauren's ass and pulling his dick out of Lauren.
     with dissolve
@@ -605,13 +631,16 @@ label v15s18e_end:
     scene v15laum # Ignore as anim
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - missionary_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     la "Oh, fuck..."
 
     u "Is this okay?"
 
-    scene v15laumf # Ignore as anim
+    scene v15laum2 # Ignore as anim
     with dissolve
 
     pause 0.75
@@ -620,8 +649,11 @@ label v15s18e_end:
 
     u "(Fuck, she's so tight...)"
 
-    scene v15laum2 # Ignore as anim
+    scene v15laumf # Ignore as anim
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - missionary_fast_4loops.mp3", loop=True)
 
     pause 0.75
 
@@ -637,6 +669,8 @@ label v15s18e_end:
     u "I'm gonna cum..."
 
     la "Cum inside of me."
+
+    stop sound
 
     scene v15s18eend_8 # FPP. MC fucking Lauren in Missionary, Don't show lower body so can be reused later, MC looking at Lauren, Lauren looking at MC, Lauren biting her lip.
     with dissolve
