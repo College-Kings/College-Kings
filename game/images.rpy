@@ -9,12 +9,6 @@ image splashscreen_2 = "gui/splashscreen/2.webp"
 image splashscreen_3 = "gui/splashscreen/3.webp"
 
 # GUI
-## Common
-image quit_idle = "gui/common/quit_idle.webp"
-image quit_hover = Transform("gui/common/quit_hover.webp", offset=(-32, -27))
-image settings_idle = "gui/common/settings_idle.webp"
-image settings_hover = Transform("gui/common/settings_hover.webp", offset=(-35, -25))
-
 ## Alert
 image alert_background = Frame("gui/alert/background.webp", 8, 8)
 

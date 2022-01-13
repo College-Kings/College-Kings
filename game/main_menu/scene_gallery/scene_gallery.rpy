@@ -130,9 +130,10 @@ screen scene_gallery():
     add image_path + "background.webp"
 
     imagebutton:
-        idle image_path + "return_idle.webp"
+        idle image_path + "return_idle.png"
+        hover image_path + "return_hover.png"
         action ShowMenu("main_menu")
-        pos (129, 82)
+        pos (120, 80)
 
     fixed:
         pos (114, 178)
@@ -149,23 +150,24 @@ screen scene_gallery():
             
             for gallery_item in scene_gallery_items:
                 fixed:
-                    xysize (374, 264)
+                    xysize (374, 286)
 
                     button:
-                        background Transform(gallery_item.image, size=(362, 230), pos=(6, 6))
-                        insensitive_background Transform(gallery_item.image, blur=50, size=(362, 230), pos=(6, 6))
-                        idle_foreground image_path + "button_idle.webp"
-                        hover_foreground image_path + "button_hover.webp"
-                        insensitive_foreground image_path + "button_idle.webp"
+                        background Transform(gallery_item.image, size=(362, 230), pos=(6, 16))
+                        insensitive_background Transform(gallery_item.image, blur=50, size=(362, 230), pos=(6, 16))
+                        idle_foreground image_path + "button_idle.png"
+                        hover_foreground image_path + "button_hover.png"
+                        insensitive_foreground image_path + "button_idle.png"
                         action Replay(gallery_item.label, scope=update_scope(gallery_item.scope))
 
                     fixed:
                         xysize (250, 49)
                         xalign 0.5
-                        ypos 210
+                        ypos 220
 
-                        # add "#0f0"
                         text gallery_item.title.upper() align (0.5, 0.5)
+
+            null
 
     add image_path + "shadow.webp" xalign 0.5 ypos 893
 

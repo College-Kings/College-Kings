@@ -364,20 +364,21 @@ screen main_menu():
         action OpenURL("http://collegekingsgame.com")
         pos (303, 976)
 
+    hbox:
+        align (1.0, 1.0)
+        yoffset -40
 
-    # SETTINGS
-    imagebutton:
-        idle "settings_idle"
-        hover "settings_hover"
-        action ShowMenu("preferences")
-        pos (1439, 967)
+        # SETTINGS
+        imagebutton:
+            idle "gui/common/settings_idle.png"
+            hover "gui/common/settings_hover.png"
+            action ShowMenu("preferences")
 
-    # QUIT
-    imagebutton:
-        idle "quit_idle"
-        hover "quit_hover"
-        action Quit()
-        pos (1662, 971)
+        # QUIT
+        imagebutton:
+            idle "gui/common/quit_idle.png"
+            hover "gui/common/quit_hover.png"
+            action Quit()
 
     text "v" + config.version.split(" ")[0] align (1.0, 1.0) xoffset -20 color "#4e628f" size 30
 
@@ -544,9 +545,11 @@ screen enter_save_name(slot):
             allow " .,_-0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
 
         imagebutton:
-            idle "gui/file_slots/save_game_idle.webp"
+            idle "gui/file_slots/save_game_idle.png"
+            hover "gui/file_slots/save_game_hover.png"
             action [Show("save"), FileAction(slot)]
             align (1.0, 0.5)
+            xoffset 13
 
 
 style save_text is file_slot_text
@@ -584,9 +587,10 @@ screen file_slots(title):
         style "file_slots_title"
 
     imagebutton:
-        idle image_path + "return_idle.webp"
+        idle "gui/common/return_idle.png"
+        hover "gui/common/return_hover.png"
         action Return()
-        pos (129, 82)
+        pos (120, 80)
 
     fixed:
         pos (243, 206)
@@ -666,33 +670,37 @@ screen file_slots(title):
             yalign 0.5
 
     # Menu buttons
-    if title == _("Save"):
+    hbox:
+        yalign 1.0
+
+        if title == _("Save"):
+            imagebutton:
+                idle image_path + "load_idle.png"
+                hover image_path + "load_hover.png"
+                action ShowMenu("load")
+        else:
+            imagebutton:
+                idle image_path + "save_idle.png"
+                hover image_path + "save_hover.png"
+                action ShowMenu("save")
+
         imagebutton:
-            idle image_path + "load_idle.webp"
-            action ShowMenu("load")
-            pos (129, 967)
-    else:
+            idle image_path + "menu_idle.png"
+            hover image_path + "menu_hover.png"
+            action MainMenu(confirm=not main_menu)
+
+    hbox:
+        align (1.0, 1.0)
+
         imagebutton:
-            idle image_path + "save_idle.webp"
-            action ShowMenu("save")
-            pos (129, 967)
+            idle "gui/common/settings_idle.png"
+            hover "gui/common/settings_hover.png"
+            action ShowMenu("preferences")
 
-    imagebutton:
-        idle image_path + "menu_idle.webp"
-        action MainMenu()
-        pos (314, 975)
-
-    imagebutton:
-        idle "settings_idle"
-        hover "settings_hover"
-        action ShowMenu("preferences")
-        pos (1439, 967)
-
-    imagebutton:
-        idle "quit_idle"
-        hover "quit_hover"
-        action Quit(confirm=not main_menu)
-        pos (1662, 971)
+        imagebutton:
+            idle "gui/common/quit_idle.png"
+            hover "gui/common/quit_hover.png"
+            action Quit(confirm=not main_menu)
 
 
 style file_slots_title is montserrat_extra_bold_64

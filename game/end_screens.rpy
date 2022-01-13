@@ -38,21 +38,23 @@ screen end_screen(support_link="https://www.patreon.com/collegekings"):
     hbox:
         xalign 0.5
         ypos 764
-        spacing 100
+        spacing 50
 
         imagebutton:
-            idle image_path + "menu_idle.webp"
+            idle image_path + "menu_idle.png"
+            hover image_path + "menu_hover.png"
             action MainMenu()
             yalign 0.5
 
-        if not config.enable_steam:
-            imagebutton:
-                idle image_path + "get_access_idle.webp"
-                action OpenURL(support_link)
-                yalign 0.5
+        imagebutton:
+            idle image_path + "get_access_idle.png"
+            hover image_path + "get_access_hover.png"
+            action OpenURL(support_link)
+            yalign 0.5
 
         imagebutton:
-            idle image_path + "credits_idle.webp"
+            idle "gui/common/credits_idle.png"
+            hover "gui/common/credits_hover.png"
             action Show("patreon_credits", None, support_link)
             yalign 0.5
 
@@ -73,23 +75,26 @@ screen patreon_credits(support_link="https://www.patreon.com/collegekings"):
         add "patreon_credits"
 
     imagebutton:
-        idle image_path + "support_development_idle.webp"
+        idle image_path + "support_development_idle.png"
+        hover image_path + "support_development_hover.png"
         action OpenURL(support_link)
         xalign 0.5
-        ypos 765
+        ypos 735
 
     hbox:
         align (0.5, 1.0)
-        yoffset -40
-        spacing 60
 
         imagebutton:
-            idle image_path + "main_menu_idle.webp"
+            idle image_path + "main_menu_idle.png"
+            hover image_path + "main_menu_hover.png"
             action MainMenu()
+            yalign 0.5
 
         imagebutton:
-            idle image_path + "team_idle.webp"
+            idle image_path + "team_idle.png"
+            hover image_path + "team_hover.png"
             action Show("team_credits")
+            yalign 0.5
 
     on "show" action SetVariable("quick_menu", False)
     on "hide" action SetVariable("quick_menu", True)
@@ -109,9 +114,11 @@ screen team_credits():
     hbox:
         align (0.5, 0.5)
         yoffset -20
-        spacing 150
+        spacing 100
 
         vbox:
+            align (0.5, 0.5)
+
             text "{b}UndergradSteve{/b} - Chief Executive Officer"
             text "{b}KingLui{/b} - Project Manager"
             text "{b}OscarSix{/b} - Technical Officer"
@@ -122,7 +129,7 @@ screen team_credits():
             text "{b}Peace{/b} - Head Transcriber"
             null height 20
             text "{b}Jany{/b} - Community Manager"
-            text "{b}Oskin{/b} - Community Manager"
+            text "{b}Oskin{/b} - Product Enforcer"
 
             text "{b}MrSkeletor{/b} - Writer"
 
@@ -132,15 +139,17 @@ screen team_credits():
             text "{b}SystemFailed{/b} - Transcriber"
 
             text "{b}kaim{/b} - Animator"
+            text "{b}xidcat{/b} - Animator"
 
         vbox:
-            text "{b}xidcat{/b} - Animator"
+            align (0.5, 0.5)
 
             text "{b}3D4FUN{/b} - Renderer"
             text "{b}Bwonerart{/b} - Renderer"
             text "{b}François Gibon{/b} - Renderer"
             text "{b}ITtechnology{/b} - Renderer"
             text "{b}Oduvan{/b} - Renderer"
+            text "{b}sznuk{/b} - Renderer"
             text "{b}Meg{/b} - Renderer"
             
             text "{b}Stefan{/b} - Photoshopper"
@@ -160,17 +169,19 @@ screen team_credits():
 
 
     hbox:
-        spacing 50
         align (0.5, 1.0)
-        yoffset -40
 
         imagebutton:
-            idle image_path + "main_menu_idle.webp"
+            idle image_path + "main_menu_idle.png"
+            hover image_path + "main_menu_hover.png"
             action MainMenu()
+            yalign 0.5
 
         imagebutton:
-            idle image_path + "credits_small_idle.webp"
+            idle Transform("gui/common/credits_idle.png", zoom=0.72)
+            hover Transform("gui/common/credits_hover.png", zoom=0.72)
             action Show("patreon_credits")
+            yalign 0.5
 
     on "show" action SetVariable("quick_menu", False)
     on "hide" action SetVariable("quick_menu", True)
@@ -182,4 +193,4 @@ style end_screen_text is montserrat_extra_bold_64
 
 style team_credits_text is text:
     font "fonts/Montserrat-Regular.ttf"
-    size 38
+    size 36
