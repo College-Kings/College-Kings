@@ -428,7 +428,7 @@ label v15s15:
             scene v15s15_22 # TPP. Show MC fucking Ms. Rose in standign doggy, she is leaning on the fridge, MS. Rose mouth closed, MC mouth open
             with dissolve
 
-            u "I'm... About to... Where do you want dessert? *Moans*"
+            u "I'm... about to... Where do you want dessert? *Moans*"
 
             scene v15s15_23 # FPP. MC looks over at the stove
             with dissolve
