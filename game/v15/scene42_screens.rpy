@@ -1,5 +1,5 @@
 screen archetype_selection():
-    add "images/v15/detective_board/archetype_background.png"
+    add "images/v15/detective_board/archetype_background.webp"
 
     text "You're logical. You piece things together like a true detective.":
         pos (190,700)
