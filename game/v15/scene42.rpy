@@ -302,7 +302,7 @@ label v15s42:
     scene v15s42_7a
     with dissolve
 
-    u "What type of detective am I? I thought you were the lead investigator"
+    u "What type of detective am I? I thought you were the lead investigator."
 
     scene v15s42_7
     with dissolve
