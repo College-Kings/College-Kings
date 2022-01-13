@@ -36,6 +36,7 @@ define gui.about = _p("""
 ## or semicolons.
 
 define build.name = "CollegeKings"
+define build.directory_name = "CollegeKings-" + config.version.split(" ")[0]
 
 
 ## Sounds and music ############################################################
