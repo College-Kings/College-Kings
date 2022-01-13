@@ -56,9 +56,6 @@ label v15s17:
         $ iris.simplr.addReply(_("Amazing! How are you?"), v15_iris_simplr1)
         $ iris.simplr.addReply(_("God, I miss Paris..."), v15_iris_simplr2)
 
-    if False: #For Lint
-        scene iris_simplr_selfie
-
     scene v15s17_1 # TPP. MC enters the department store, slight smile, mouth closed
     with dissolve
 
