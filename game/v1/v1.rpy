@@ -909,7 +909,7 @@ label starta: #for compatibility only
         "At certain parts of the game, you'll unlock free roam.",
         "During free roam, you choose where you go and who you want to talk to next.",
         "You will also be able to use your phone and you might just find some hidden content."
-    ])
+    ], position=(1050, 700))
     call screen v1_freeRoam1_1
     with dissolve
     label fr1a2: #for compatibility only
