@@ -854,6 +854,11 @@ label v15s18c_imre_aubrey:
     image v15aubfin2 = Movie(play="images/v15/Scene 18c/v15aubfin2.webm", loop=True, image="images/v15/Scene 18c/v15aubfin2Start.webp", start_image="images/v15/Scene 18c/v15aubfin2Start.webp")
     image v15aubfin2f = Movie(play="images/v15/Scene 18c/v15aubfin2f.webm", loop=True, image="images/v15/Scene 18c/v15aubfin2Start.webp", start_image="images/v15/Scene 18c/v15aubfin2Start.webp")
 
+    image v15aubfing = Movie(play="images/v15/Scene 18c/v15aubfing.webm", loop=True, image="images/v15/Scene 18c/v15aubfingStart.webp", start_image="images/v15/Scene 18c/v15aubfingStart.webp") 
+    image v15aubfingf = Movie(play="images/v15/Scene 18c/v15aubfingf.webm", loop=True, image="images/v15/Scene 18c/v15aubfingStart.webp", start_image="images/v15/Scene 18c/v15aubfingStart.webp") 
+    image v15aubfing2 = Movie(play="images/v15/Scene 18c/v15aubfing2.webm", loop=True, image="images/v15/Scene 18c/v15aubfing2Start.webp", start_image="images/v15/Scene 18c/v15aubfing2Start.webp")
+    image v15aubfing2f = Movie(play="images/v15/Scene 18c/v15aubfin2gf.webm", loop=True, image="images/v15/Scene 18c/v15aubfing2Start.webp", start_image="images/v15/Scene 18c/v15aubfing2Start.webp")
+
     scene v15aubfin # IGNORE AS ANIMATION
     with dissolve
 
@@ -886,13 +891,13 @@ label v15s18c_imre_aubrey:
     with dissolve
 
     if voice_acted:
-        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_slow_2loops.mp3", loop=True)
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_slow_2loops.mp3", loop=True)
 
     menu:
         "Keep her quiet":
             $ add_point(KCT.BOYFRIEND)
             
-            scene v15aubfin2 # IGNORE AS ANIMATION
+            scene v15aubfing2 # IGNORE AS ANIMATION
             with dissolve
 
             pause 0.75
@@ -904,7 +909,7 @@ label v15s18c_imre_aubrey:
             if voice_acted:
                 $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_fast_4loops.mp3", loop=True)
 
-            scene v15aubfin2f # IGNORE AS ANIMATION
+            scene v15aubfing2f # IGNORE AS ANIMATION
             with dissolve
 
             pause 0.75
@@ -927,7 +932,7 @@ label v15s18c_imre_aubrey:
             with dissolve
 
             if voice_acted:
-                $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_fast_4loops.mp3", loop=True)
+                $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_fast_4loops.mp3", loop=True)
 
             pause 0.75
 
@@ -935,16 +940,11 @@ label v15s18c_imre_aubrey:
 
             u "(Maybe. But I definitely don't want anyone else to hear her, haha. Hmm...)"
     
-    image v15aubfing = Movie(play="images/v15/Scene 18c/v15aubfing.webm", loop=True, image="images/v15/Scene 18c/v15aubfingStart.webp", start_image="images/v15/Scene 18c/v15aubfingStart.webp") 
-    image v15aubfingf = Movie(play="images/v15/Scene 18c/v15aubfingf.webm", loop=True, image="images/v15/Scene 18c/v15aubfingStart.webp", start_image="images/v15/Scene 18c/v15aubfingStart.webp") 
-    image v15aubfing2 = Movie(play="images/v15/Scene 18c/v15aubfing2.webm", loop=True, image="images/v15/Scene 18c/v15aubfing2Start.webp", start_image="images/v15/Scene 18c/v15aubfing2Start.webp")
-    image v15aubfing2f = Movie(play="images/v15/Scene 18c/v15aubfin2gf.webm", loop=True, image="images/v15/Scene 18c/v15aubfing2Start.webp", start_image="images/v15/Scene 18c/v15aubfing2Start.webp")
-
     scene v15aubfing # IGNORE AS ANIMATION
     with dissolve
 
     if voice_acted:
-        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_slow_2loops.mp3", loop=True)
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_slow_2loops.mp3", loop=True)
 
     pause 0.75
 
@@ -954,7 +954,7 @@ label v15s18c_imre_aubrey:
     with dissolve
 
     if voice_acted:
-        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_fast_4loops.mp3", loop=True)
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_fast_4loops.mp3", loop=True)
 
     pause 0.75
 
@@ -1017,7 +1017,7 @@ label v15s18c_imre_aubrey:
     with dissolve
 
     if voice_acted:
-        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_slow_2loops.mp3", loop=True)
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_slow_2loops.mp3", loop=True)
 
     pause 0.75
 
@@ -1027,7 +1027,7 @@ label v15s18c_imre_aubrey:
     with dissolve
 
     if voice_acted:
-        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_fast_4loops.mp3", loop=True)
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_fast_4loops.mp3", loop=True)
 
     pause 0.75
 
