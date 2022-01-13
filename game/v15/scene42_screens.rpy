@@ -1,14 +1,14 @@
 screen archetype_selection():
     add "images/v15/detective_board/archetype_background.png"
 
-    text "You're logical. You piece things together like a true detective.":
+    text "You've watched enough crime shows to know what questions need to be asked. You've got the mind of a true detective.":
         pos (190,700)
         xsize 400
         text_align 0.5
         font "fonts/Effra-Regular.ttf"
         size 23
 
-    text "You're interested in the emotions of people. What do they feel and why?":
+    text "Why do people do the things they do? What are the obvious signs of a liar? You're perceptive, mindful, and thorough.":
         pos (787,700)
         xsize 400
         text_align 0.5
