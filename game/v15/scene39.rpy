@@ -37,12 +37,12 @@ label v15s39:
     scene v15s39_5 # FPP. Show the BW standing up looking down at Mc, slight smile, mouth is open
     with dissolve
 
-    barworker "So happy to see you all tonight. Welcome to the Mango Lounge VIP area!"
+    bartender "So happy to see you all tonight. Welcome to the Mango Lounge VIP area!"
 
     if v15_lindsey_alcohol:
-        barworker "We have a full range of drinks for you tonight, from beer to prosecco to tequila, even cocktails, all included in your VIP party package."
+        bartender "We have a full range of drinks for you tonight, from beer to prosecco to tequila, even cocktails, all included in your VIP party package."
 
-        barworker "Just give me a few minutes and I'll be back with your glasses."
+        bartender "Just give me a few minutes and I'll be back with your glasses."
 
         if v15_lindsey_alcohol:
             $ set_presidency_percent(v14_lindsey_popularity + 5)
@@ -85,12 +85,12 @@ label v15s39:
         scene v15s39_5a # FPP. same as v15s39_5 BW has no expression, still looking at MC, mouth is still open
         with dissolve
 
-        barworker "I've been informed that you're underage, so although we can't serve you our normal alcoholic line-up..."
+        bartender "I've been informed that you're underage, so although we can't serve you our normal alcoholic line-up..."
 
         scene v15s39_5
         with dissolve
 
-        barworker "We do have a wide range of juices and sodas, and we can also create mocktails."
+        bartender "We do have a wide range of juices and sodas, and we can also create mocktails."
 
         if v15_lindsey_inviteseb:
             scene v15s39_7b # FPP. same as v15s39_7 Sebastian is now looking at the BW's location, raised eyebrow, mouth is still open, still a slight smile
@@ -101,7 +101,7 @@ label v15s39:
             scene v15s39_5d # FPP. same as v15s39_5b BW has a slight smile, Still looking at Sebastian/Grayson's position, Still don't show sebastian or Grayson, mouth is still open
             with dissolve
 
-            barworker "Yes, exactly. We do have a wide range to choose from."
+            bartender "Yes, exactly. We do have a wide range to choose from."
 
             scene v15s39_5c
             with dissolve
@@ -116,7 +116,7 @@ label v15s39:
             scene v15s39_5d
             with dissolve
 
-            barworker "Very well! I'll be right back with your drinks."
+            bartender "Very well! I'll be right back with your drinks."
 
         else:
             scene v15s39_6b # FPP. same as v15s39_6 Show Grayson looking up towards where the BW is standing, aggravated expression, mouth is still open
@@ -127,7 +127,7 @@ label v15s39:
             scene v15s39_5b # FPP. same as v15s39_5 BW is looking towards Grayson/Sebastian's seating location, don't show sebastian or grayson, annoyed expression, mouth is open
             with dissolve
 
-            barworker "Would you prefer a mocktail, sir?"
+            bartender "Would you prefer a mocktail, sir?"
 
             scene v15s39_6b
             with dissolve
@@ -137,7 +137,7 @@ label v15s39:
             scene v15s39_5b
             with dissolve
 
-            barworker "They're cocktails without alcohol."
+            bartender "They're cocktails without alcohol."
 
             scene v15s39_5c # FPP. same as v15s39_5 BW's mouth is closed, still a slight smile, still looking at MC
             with dissolve
@@ -157,7 +157,7 @@ label v15s39:
             scene v15s39_5b
             with dissolve
 
-            barworker "...Yes. I'll be back in a bit."
+            bartender "...Yes. I'll be back in a bit."
 
     scene v15s39_8h # FPP. same as v15s39_8a Lindsey is now looking at MC, still a slight smile, mouth is still closed
     with dissolve
