@@ -216,12 +216,6 @@ screen kiwiiTemplate():
 
         button:
             xysize(30, 30)
-            pos (1086, 220)
-            #action Show("contactsscreen")
-            action NullAction()
-
-        button:
-            xysize(30, 30)
             pos (800, 870)
             action Show("kiwiiApp")
 
