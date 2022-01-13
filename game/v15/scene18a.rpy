@@ -1003,7 +1003,7 @@ label v15s18a_AutumPenelope:
                 u "Yeah, we're together."
 
                 if penelope.relationship >= Relationship.LOYAL:
-                    $ penelope.relationship >= Relationship.LIKES
+                    $ penelope.relationship = Relationship.LIKES
 
                     scene v15s18apen_6k # FPP. MC looking at Penelope, Penelope looking at MC, Penelope slight sad face, mouth open.
                     with dissolve

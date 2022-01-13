@@ -30,7 +30,7 @@ screen v15s17_gift_selection():
                     
                     imagebutton:
                         idle "images/v15/Scene 17/gift_picking_screen/pick_item_idle.webp"
-                        hover "images/v15/Scene 17/gift_picking_screen/pick_item_hover.png"
+                        hover "images/v15/Scene 17/gift_picking_screen/pick_item_hover.webp"
                         action [Function(mc.inventory.add_item, item), Jump("v15s17_gift_choice")]
 
         
@@ -50,7 +50,7 @@ screen v15s17_gift_selection():
                     
                     imagebutton:
                         idle "images/v15/Scene 17/gift_picking_screen/pick_item_idle.webp"
-                        hover "images/v15/Scene 17/gift_picking_screen/pick_item_hover.png"
+                        hover "images/v15/Scene 17/gift_picking_screen/pick_item_hover.webp"
                         action [Function(mc.inventory.add_item, item), Jump("v15s17_gift_choice")]
 
 

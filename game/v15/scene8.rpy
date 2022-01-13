@@ -94,11 +94,11 @@ label v15s8:
 
         v15s8_chloe_kiwii = chloe_board.add_subtask("Sabotage",
             "Chloe posts the recording on Kiwii",
-            opinion="\"The final step to this awfully beautiful plan, is to upload the evidence to Kiwii. This is key. Once everyone hears wha horrible things she had to say, they'll come running my way.\"")
+            opinion="\"The final step to this awfully beautiful plan, is to upload the evidence to Kiwii. This is key. Once everyone hears what horrible things she had to say, they'll come running my way.\"")
 
         chloe_board.add_subtask("Sabotage",
             "Share the recording through the Dean's announcement system",
-            opinion="\"The final step is very important, so why not go big? I can get us access to the Dean's announcemnt system, and we can play your recording for the entire campus to hear.\"")
+            opinion="\"The final step is very important, so why not go big? I can get us access to the Dean's announcement system, and we can play your recording for the entire campus to hear.\"")
 
         v15s8_chloe_lee = chloe_board.add_subtask("Tuition",
             "Try and convince Mr. Lee to support you in front of the Dean on this",

@@ -763,7 +763,7 @@ label v15s38:
             $ add_point(KCT.BOYFRIEND)
             
             if protest or v15_autumn_lunchbreak: # Went to protest
-                $ autumn.relationship = Relationship.TRUST
+                $ AutumnTrust = True
             
             u "Okay, I think that's enough questions for right now, haha."
 

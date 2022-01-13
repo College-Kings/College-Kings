@@ -298,7 +298,7 @@ label v10s33_deergirl11:
     
     pause 0.5
     
-    scene v10cfrdg11e # FPP. same 12d, now both hands anime peace sign infront of face, like this. OLI NO FUNNY IDEAS WITH THE FACIAL EXPRESSION https://cdn.discordapp.com/attachments/822182656938082364/841735636565622914/daa.png
+    scene v10cfrdg11e # FPP. same 12d, now both hands anime peace sign infront of face
     with dissolve
 
     menu:
@@ -313,7 +313,7 @@ label v10s33_deergirl11:
 
             pause 0.5
 
-            scene v10cfrdg13b # TPP. now both hands anime peace sign infront of face, like this. OLI NO FUNNY IDEAS WITH THE FACIAL EXPRESSION https://cdn.discordapp.com/attachments/822182656938082364/841735636565622914/daa.png
+            scene v10cfrdg13b # TPP. now both hands anime peace sign infront of face
             with dissolve
 
             pause 0.5

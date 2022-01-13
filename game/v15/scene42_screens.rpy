@@ -1,5 +1,5 @@
 screen archetype_selection():
-    add "images/v15/detective_board/archetype_background.png"
+    add "images/v15/detective_board/archetype_background.webp"
 
     text "You've watched enough crime shows to know what questions need to be asked. You've got the mind of a true detective.":
         pos (190,700)

@@ -120,7 +120,6 @@ label v14s25a:
     pause
 
     # ANIMATION: Butterfly position - Amber now has her legs over MC's shoulders, they're both close together
-    # (https://imgix.bustle.com/lovelace/uploads/906/bc559480-3317-0133-09dd-0e76e5725d9d.png?w=760&h=760&fit=crop&crop=faces&auto=format%2Ccompress)
     image v14ambtbFPP = Movie(play="images/v14/Scene 25a/v14ambtbFPP.webm", loop=True, image="images/v14/Scene 25a/v14ambtbFPP.webp", start_image="images/v14/Scene 25a/v14ambtbFPP.webp")
     image v14ambtbFPPf = Movie(play="images/v14/Scene 25a/v14ambtbFPPf.webm", loop=True, image="images/v14/Scene 25a/v14ambtbFPP.webp", start_image="images/v14/Scene 25a/v14ambtbFPP.webp")
 

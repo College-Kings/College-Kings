@@ -354,6 +354,7 @@ default freeroam12 = set() #chloe heist
 default freeroam12stolen = set()
 default v14s5a_riley_should_join_chicks = False
 default v14_Samantha_clean = False # Placeholder?
+default AutumnTrust = False
 
 # 15.0 
 # Chloe Planning Board (v15s8)

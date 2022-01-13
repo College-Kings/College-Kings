@@ -52,7 +52,7 @@ screen end_screen(support_link="https://www.patreon.com/collegekings"):
                 yalign 0.5
 
         imagebutton:
-            idle image_path + "credits_idle.png"
+            idle image_path + "credits_idle.webp"
             action Show("patreon_credits", None, support_link)
             yalign 0.5
 

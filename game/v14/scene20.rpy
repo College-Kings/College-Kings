@@ -221,7 +221,7 @@ label v14s20:
 
             "It's going great":
                 $ autumn.points += 1
-                $ autumn.relationship = Relationship.TRUST
+                $ AutumnTrust = True
 
                 scene v14s20_3a
                 #with dissolve

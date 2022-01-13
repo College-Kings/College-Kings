@@ -8,7 +8,7 @@ screen game_show_base(question):
             style_prefix "game_show_question"
             xalign 0.5
             xysize (1200, 224)
-            background Frame("images/v15/game_show/question_frame.png")
+            background Frame("images/v15/game_show/question_frame.webp")
 
             text question.upper() align (0.5, 0.5)
 
@@ -26,7 +26,7 @@ screen whos_most_likely_to(question):
             for option in screen_options:
                 button:
                     xysize (460, 297)
-                    background Frame("images/v15/game_show/character_frame.png")
+                    background Frame("images/v15/game_show/character_frame.webp")
                     action NullAction()
                     style_prefix "game_show_character"
 
@@ -40,14 +40,14 @@ screen whos_most_likely_to(question):
                             xysize (324, 91)
 
                             if option["character"] == mc:
-                                idle_background "images/v15/game_show/button_gray.png"
+                                idle_background "images/v15/game_show/button_gray.webp"
                             else:
-                                idle_background "images/v15/game_show/button_idle.png"
+                                idle_background "images/v15/game_show/button_idle.webp"
                             
                             if option["character"] == mc:
-                                hover_background "images/v15/game_show/button_gray.png"
+                                hover_background "images/v15/game_show/button_gray.webp"
                             else:
-                                hover_background "images/v15/game_show/button_hover.png"
+                                hover_background "images/v15/game_show/button_hover.webp"
                             
                             if option["character"] == mc:
                                 action NullAction()
@@ -68,7 +68,7 @@ screen would_you_rather(question):
             for char, option in zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ", screen_options):
                 button:
                     xysize (720, 293)
-                    background Frame("images/v15/game_show/answer_frame.png")
+                    background Frame("images/v15/game_show/answer_frame.webp")
                     sensitive mc not in option["votes"]
                     selected mc in option["votes"]
                     action [SetDict(option, "votes", option["votes"] + [mc]), Show("would_you_rather_answers", question=question, mc_choice=option)]
@@ -94,7 +94,7 @@ screen whos_most_likely_to_answers(question, mc_choice):
             for option in screen_options:
                 frame:
                     xysize (460, 297)
-                    background Frame("images/v15/game_show/character_frame.png")
+                    background Frame("images/v15/game_show/character_frame.webp")
 
                     vbox:
                         align (0.5, 0.5)
@@ -128,7 +128,7 @@ screen would_you_rather_answers(question, mc_choice):
             for char, option in zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ", screen_options):
                 frame:
                     xysize (789, 293)
-                    background Frame("images/v15/game_show/answer_frame.png")
+                    background Frame("images/v15/game_show/answer_frame.webp")
 
                     vbox:
                         align (0.5, 0.5)

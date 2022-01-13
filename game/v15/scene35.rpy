@@ -2247,7 +2247,7 @@ label v15s35:
                 $ add_point(KCT.BRO)
                 $ add_point(KCT.BOYFRIEND)
                 if protest or v15_autumn_lunchbreak: # -if Stop the questions (and helped Autumn with boxes at dog shelter and/or went to the protest with her in Act1, creates AutumnTrust)
-                    $ autumn.relationship = Relationship.TRUST
+                    $ AutumnTrust = True
 
                 scene v15s35_9o
                 with dissolve
