@@ -229,7 +229,7 @@ label v15s15:
             with dissolve
 
             if voice_acted:
-                $ renpy.sound.play("Scene 15 - oral_slow_2loops.mp3", loop=True)
+                $ renpy.sound.play("voice/v15/s15/Scene 15 - oral_slow_2loops.mp3", loop=True)
 
             pause 0.75
 
