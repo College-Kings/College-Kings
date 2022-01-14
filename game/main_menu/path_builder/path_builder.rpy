@@ -1,16 +1,17 @@
 init python:
     pb_items = []
 
-    class PathBuilderCatagories(Enum):
+    class PathBuilderCategories(Enum):
         FRATERNITY = "Step 1: Pick a fraternity"
         KCT = "Step 2: Pick your starting KCT"
         GIRL = "Step 3: Pick which girls you want to be romantically involved with"
         START_LOCATION = "Step 4: Pick your starting location"
+        HOMECOMING_DATE = "Step 5: Pick your homecoming date"
     
 
     class PathBuilderItem:
-        def __init__(self, catagory, name, actions=None):
-            self.catagory = catagory
+        def __init__(self, category, name, actions=None):
+            self.category = category
             self.name = name
 
             if actions is None: self.actions = []
@@ -20,10 +21,10 @@ init python:
             pb_items.append(self)
 
 
-    def get_catagory(step):
-        for catagory in PathBuilderCatagories:
-            if catagory.value.startswith("Step {}".format(step)):
-                return catagory
+    def get_category(step):
+        for category in PathBuilderCategories:
+            if category.value.startswith("Step {}".format(step)):
+                return category
         return None
 
     def get_selected(item):
@@ -103,14 +104,14 @@ screen path_builder_base(header=""):
         transclude
 
 
-screen path_builder(catagory_step=1):
+screen path_builder(category_step=1):
     tag menu
     modal True
 
-    default catagory = get_catagory(catagory_step)
-    default items = [item for item in pb_items if item.catagory == catagory]
+    default category = get_category(category_step)
+    default items = [item for item in pb_items if item.category == category]
 
-    use path_builder_base(header=catagory.value):
+    use path_builder_base(header=category.value):
         vpgrid:
             cols 4
             xspacing 50
@@ -131,7 +132,7 @@ screen path_builder(catagory_step=1):
                         color "#000"
 
         # Option to lock KCT
-        if catagory == PathBuilderCatagories.KCT:
+        if category == PathBuilderCategories.KCT:
             hbox:
                 spacing 20
                 
@@ -150,62 +151,16 @@ screen path_builder(catagory_step=1):
             textbutton "BACK":
                 xalign 0
                 selected False
-                if catagory_step > 1:
-                    action Show("path_builder", None, catagory_step - 1)
+                if category_step > 1:
+                    action Show("path_builder", None, category_step - 1)
                 else:
                     action ShowMenu("main_menu")
 
             textbutton "CONTINUE":
                 xalign 1.0
                 selected False
-                if catagory_step < len(PathBuilderCatagories):
+                if category_step < len(PathBuilderCategories):
                     sensitive any(get_selected(item) for item in items)
-                    action Show("path_builder", None, catagory_step + 1)
-                elif pb_start_location == "v7_homecoming":
-                    action Show("pb_select_homecoming_date")
+                    action Show("path_builder", None, category_step + 1)
                 else:
                     action Start(pb_start_location)
-
-
-screen pb_select_homecoming_date():
-    tag menu
-    modal True
-
-    default items = [
-        ["Chloe", "hcGirl", "chloe"],
-        ["Riley", "hcGirl", "riley"],
-        ["Lauren", "hcGirl", "lauren"],
-        ["Penelope", "hcGirl", "penelope"],
-        ["Emily", "hcGirl", "emily"],
-        ["Amber", "hcGirl", "amber"],
-    ]
-
-    use path_builder_base(header="Step 5: Pick your homecoming date"):
-        vpgrid:
-            cols 4
-            xspacing 50
-            yspacing 20
-
-            for name, variable, value in items:
-                vbox:
-                    imagebutton:
-                        idle "images/path builder/pb_button.webp"
-                        hover "images/path builder/pb_selected.webp"
-                        selected_idle "images/path builder/pb_selected.webp"
-                        action ToggleVariable(variable, value)
-
-                    text name:
-                        align (0.5, 0.5)
-                        yoffset -70
-                        color "#000"
-
-        hbox: 
-            spacing 200
-
-            textbutton "BACK":        
-                xalign 0
-                action Show("path_builder", catagory_step=3)
-
-            textbutton "CONTINUE":          
-                xalign 1.0
-                action Start("v7_homecoming")
