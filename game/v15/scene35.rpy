@@ -22,6 +22,11 @@ label v15s35:
     scene v15s35_1a # TPP. same as v15s35_1 Lindsey opens the door slight smile, mouth is open, Mc slight smile, mouth is closed
     with dissolve
 
+    if v15_lindsey_alcohol:
+        $ set_presidency_percent(v14_lindsey_popularity + 5)
+    else:
+        $ set_presidency_percent(v14_lindsey_popularity + 3)
+
     li "Hey, [name], you're right on time. We're about to start!"
 
     scene v15s35_2 # FPP. Show Lindsey standing in the doorway of the Chicks Sorority house, slight smile, mouth is closed
