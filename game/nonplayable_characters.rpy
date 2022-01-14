@@ -105,6 +105,9 @@ init python:
 
         @property
         def messenger(self):
+            try: self._messenger
+            except AttributeError: self._messenger = None
+
             if self._messenger is None:
                 self._messenger = Contact(self.name, self.profile_picture)
                 messenger.contacts.append(self.messenger)
@@ -116,6 +119,9 @@ init python:
 
         @property
         def simplr(self):
+            try: self._simplr
+            except AttributeError: self._simplr = None
+
             if self._simplr is None:
                 self._simplr = SimplrContact(self.name)
                 simplr_pendingContacts.append(self._simplr)
