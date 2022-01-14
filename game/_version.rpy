@@ -18,12 +18,10 @@ python early:
         return short_hash
 
 
-    def get_version(major, minor, patch):
+    def get_version(major, minor, patch, development=False):
         act_1 = 7
-        if minor == 9:
-            act = "DEVELOPMENT"
-        else:
-            act = max(-((major - act_1) // -3) + 1, 1)
+
+        act = "DEVELOPMENT" if development else max(-((major - act_1) // -3) + 1, 1)    
 
         version = "{}.{}.{}{}".format(major, minor, patch, "s" if config.enable_steam else "")
 
