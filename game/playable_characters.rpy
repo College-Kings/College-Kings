@@ -24,6 +24,14 @@ init python:
         def profile_picture(self, value):
             self._profile_picture = value
 
+        def __after_load__(self):
+            attrs = vars(self)
+
+            self.__init__()
+
+            for var, value in attrs.items():
+                setattr(self, var, value)
+
         def has_item(self, item):
             return (item in self.inventory)
 
