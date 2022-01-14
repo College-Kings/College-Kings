@@ -1,7 +1,5 @@
 label path_builder_setup:
     python:
-        pb_items = []
-
         PB_WOLVES = PathBuilderItem(
             PathBuilderCatagories.FRATERNITY,
             "Wolves",
