@@ -4,7 +4,7 @@ define config.console = True
 define config_debug = False
 define config_censored = False
 
-define config.version = get_version("15.0.1{}".format("s" if config.enable_steam else ""))
+define config.version = get_version(15, 0, 1)
 
 define config.steam_appid = 1463120
 

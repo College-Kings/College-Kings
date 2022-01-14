@@ -18,13 +18,13 @@ python early:
         return short_hash
 
 
-    def get_version(version):
-        if version.endswith('s'): version = version[:-1]
-        major, minor, patch = map(lambda x: int(x), version.split("."))
+    def get_version(major, minor, patch):
         act_1 = 7
         if minor == 9:
             act = "DEVELOPMENT"
         else:
             act = max(-((major - act_1) // -3) + 1, 1)
+
+        version = "{}.{}.{}{}".format(major, minor, patch, "s" if config.enable_steam else "")
 
         return "{} (Act: {}) (SHA: {})".format(version, act, get_short_git_sha())
