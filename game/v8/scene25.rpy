@@ -41,7 +41,7 @@ label phn_riley11_setup:
     $ riley.messenger.newMessage(_("At least you can read! I just found out I need glasses!"))
     $ riley.messenger.addReply(_("I think you'd look cute in glasses."))
     $ riley.messenger.newMessage(_("I don't know. Why don't you come with me and Aubrey to try some on?"))
-    $ riley.messenger.addReply(_("sure I will come but where is the store ?"))
+    $ riley.messenger.addReply(_("Sure, I will come. But where is the store?"))
     $ riley.messenger.newMessage(_("Just down the road from the gym on the right hand side of the road"))
     $ riley.messenger.addReply(_("Cool will meet you both there"))
     $ riley.messenger.newMessage(_("Great!"))
