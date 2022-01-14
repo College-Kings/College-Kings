@@ -1,3 +1,4 @@
+init offset = 1
 ## This file contains options that can be changed to customize your game.
 ##
 ## Lines beginning with two '#' marks are comments, and you shouldn't uncomment

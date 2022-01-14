@@ -23,6 +23,8 @@ python early:
 
         act = "DEVELOPMENT" if development else max(-((major - act_1) // -3) + 1, 1)    
 
-        version = "{}.{}.{}{}".format(major, minor, patch, "s" if config.enable_steam else "")
+        version = "{}.{}.{}".format(major, minor, patch)
+        if config.enable_steam:
+            version += "s"
 
         return "{} (Act: {}) (SHA: {})".format(version, act, get_short_git_sha())
