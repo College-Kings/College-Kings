@@ -585,7 +585,7 @@ label v15s4:
 
                 aut "[dog_name]?!"
 
-                aut "We already have one, I don't want them to get confused. *Chuckles*"
+                aut "We already had one, I don't want to get confused. *Chuckles*"
                 
                 aut "Try a different name."
                 
