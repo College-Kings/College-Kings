@@ -128,6 +128,39 @@ label after_load:
         try: samantha
         except NameError: samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam")
 
+        if isinstance(chloe, CustomCharacter):
+            chloe = NonPlayableCharacter("Chloe", "Chloe101")
+        if isinstance(amber, CustomCharacter):
+            amber = NonPlayableCharacter("Amber", "Amber_xx")
+        if isinstance(penelope, CustomCharacter):
+            penelope = NonPlayableCharacter("Penelope", "Penelopeeps")
+        if isinstance(riley, CustomCharacter):
+            riley = NonPlayableCharacter("Riley", "RileyReads")
+        if isinstance(lindsey, CustomCharacter):
+            lindsey = NonPlayableCharacter("Lindsey", "LindsLou")
+        if isinstance(lauren, CustomCharacter):
+            lauren = NonPlayableCharacter("Lauren", "LoLoLauren")
+        if isinstance(emily, CustomCharacter):
+            emily = NonPlayableCharacter("Emily", "emilyyyy")
+        if isinstance(ms_rose, CustomCharacter):
+            ms_rose = NonPlayableCharacter("Ms Rose")
+        if isinstance(nora, CustomCharacter):
+            nora = NonPlayableCharacter("Nora", "Nora_12")
+        if isinstance(aubrey, CustomCharacter):
+            aubrey = NonPlayableCharacter("Aubrey", "Aubs123")
+        if isinstance(ryan, CustomCharacter):
+            ryan = NonPlayableCharacter("Ryan", "Ryanator")
+        if isinstance(imre, CustomCharacter):
+            imre = NonPlayableCharacter("Imre", "BadBoyImre")
+        if isinstance(chris, CustomCharacter):
+            chris = NonPlayableCharacter("Chris", "Chriscuit")
+        if isinstance(charli, CustomCharacter):
+            charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
+        if isinstance(cameron, CustomCharacter):
+            cameron = NonPlayableCharacter("Cameron", "Cameroon")
+        if isinstance(josh, CustomCharacter):
+            josh = NonPlayableCharacter("Josh", "Josh80085")
+
         for character in (
             chloe,
             amber,
@@ -290,38 +323,6 @@ label after_load:
             if "v14_samantha" in sceneList: samantha.relationship = Relationship.FWB
         except NameError: pass
 
-        if isinstance(chloe, CustomCharacter):
-            chloe = NonPlayableCharacter("Chloe", "Chloe101")
-        if isinstance(amber, CustomCharacter):
-            amber = NonPlayableCharacter("Amber", "Amber_xx")
-        if isinstance(penelope, CustomCharacter):
-            penelope = NonPlayableCharacter("Penelope", "Penelopeeps")
-        if isinstance(riley, CustomCharacter):
-            riley = NonPlayableCharacter("Riley", "RileyReads")
-        if isinstance(lindsey, CustomCharacter):
-            lindsey = NonPlayableCharacter("Lindsey", "LindsLou")
-        if isinstance(lauren, CustomCharacter):
-            lauren = NonPlayableCharacter("Lauren", "LoLoLauren")
-        if isinstance(emily, CustomCharacter):
-            emily = NonPlayableCharacter("Emily", "emilyyyy")
-        if isinstance(ms_rose, CustomCharacter):
-            ms_rose = NonPlayableCharacter("Ms Rose")
-        if isinstance(nora, CustomCharacter):
-            nora = NonPlayableCharacter("Nora", "Nora_12")
-        if isinstance(aubrey, CustomCharacter):
-            aubrey = NonPlayableCharacter("Aubrey", "Aubs123")
-        if isinstance(ryan, CustomCharacter):
-            ryan = NonPlayableCharacter("Ryan", "Ryanator")
-        if isinstance(imre, CustomCharacter):
-            imre = NonPlayableCharacter("Imre", "BadBoyImre")
-        if isinstance(chris, CustomCharacter):
-            chris = NonPlayableCharacter("Chris", "Chriscuit")
-        if isinstance(charli, CustomCharacter):
-            charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
-        if isinstance(cameron, CustomCharacter):
-            cameron = NonPlayableCharacter("Cameron", "Cameroon")
-        if isinstance(josh, CustomCharacter):
-            josh = NonPlayableCharacter("Josh", "Josh80085")
 
         chloe.username = "Chloe101"
         amber.username = "Amber_xx"
