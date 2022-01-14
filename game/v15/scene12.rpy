@@ -460,7 +460,7 @@ label v15s12:
         elif not v14_lindsey_sell:
             li "It's a shame that you couldn't find anything in Chloe's room..."
             
-        elif v15_lindsey_sold:
+        elif v15_car_sold_price > 0:
             li "We just didn't get a good enough offer on the car, but hopefully we can put that money to good use in the future."
             
         elif v14_lindsey_sell:

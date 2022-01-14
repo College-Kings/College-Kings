@@ -2108,7 +2108,7 @@ label v15s35:
 
         u "Yeah, I think in all the excitement you'd forget to lock the door, haha."
 
-        if v11_aubrey_sex and aubrey.relationship > Relationship.MAD:
+        if "v11_aubrey" in sceneList and aubrey.relationship > Relationship.MAD:
             scene v15s35_9
             with dissolve
 
@@ -2119,7 +2119,7 @@ label v15s35:
             scene v15s35_9j
             with dissolve
 
-        elif v11_aubrey_sex and aubrey.relationship <= Relationship.MAD:
+        elif "v11_aubrey" in sceneList and aubrey.relationship <= Relationship.MAD:
             scene v15s35_9
             with dissolve
 
