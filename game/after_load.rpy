@@ -128,6 +128,32 @@ label after_load:
         try: samantha
         except NameError: samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam")
 
+        for character in (
+            chloe,
+            amber,
+            penelope,
+            riley,
+            lindsey,
+            lauren,
+            emily,
+            ms_rose,
+            nora,
+            aubrey,
+            ryan,
+            imre,
+            chris,
+            charli,
+            cameron,
+            josh,
+            julia,
+            evelyn,
+            autumn,
+            sebastian,
+            grayson,
+            jenny,
+        ):
+            character.__after_load__()
+
         ## Relationship types
         try:
             if kissamber: amber.relationship = Relationship.KISS
@@ -296,32 +322,6 @@ label after_load:
             cameron = NonPlayableCharacter("Cameron", "Cameroon")
         if isinstance(josh, CustomCharacter):
             josh = NonPlayableCharacter("Josh", "Josh80085")
-
-        for character in (
-            chloe,
-            amber,
-            penelope,
-            riley,
-            lindsey,
-            lauren,
-            emily,
-            ms_rose,
-            nora,
-            aubrey,
-            ryan,
-            imre,
-            chris,
-            charli,
-            cameron,
-            josh,
-            julia,
-            evelyn,
-            autumn,
-            sebastian,
-            grayson,
-            jenny,
-        ):
-            character.__after_load__()
 
         chloe.username = "Chloe101"
         amber.username = "Amber_xx"
