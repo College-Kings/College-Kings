@@ -1477,6 +1477,13 @@ label efra:
 
             jump v1_phoneCheck1
 
+    label v1_phoneCheck2:
+        if julia.messenger.replies:
+            call screen phone
+        if julia.messenger.replies:
+            "(I should reply to Julia as well, by the way.)"
+            jump v1_phoneCheck2
+
     scene s61a
     with dissolve
 
