@@ -3,6 +3,8 @@ label v11_start:
     if path_builder and not pb_name_set:
         $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
         $ pb_name_set = True
+        
+        $ simplr_app.unlock()
 
     show screen phone_icon
 
