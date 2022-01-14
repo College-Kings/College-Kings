@@ -339,7 +339,7 @@ label v14s16:
 
                 u "(Oh, well... Time for class!)"
 
-    scene v14s16_7 # TPP. MC standing next to Mrs. Rose's classroom, slight smile, mouth open.
+    scene v14s16_7 # TPP. MC standing next to Ms. Rose's classroom, slight smile, mouth open.
     with dissolve
 
     u "*Exhales* (Feels so good to be back.)"

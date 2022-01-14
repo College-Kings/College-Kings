@@ -143,6 +143,7 @@ label v10_aft_walk_home:
                     with dissolve
 
                     jo "I was just gonna do it until I had enough, but I'm hoping I won't have to do it much longer."
+
                     jo "I met this guy and he might be able to get me a scholarship."
 
                     scene v10smwh3e # FPP. Same camera as v10smwh3. Show Josh, smiling, mouth closed.
@@ -154,6 +155,7 @@ label v10_aft_walk_home:
                     with dissolve
 
                     jo "Haha, he's some big shot. Can't remember his name honestly, but he's a bit intimidating."
+
                     jo "Kinda reminds me of my dad, but more flexible."
                 
                 "Let it go":
