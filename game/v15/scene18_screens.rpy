@@ -266,7 +266,10 @@ screen v15s18a_upstairsroom():
             if not "riley" in freeroam14:
                 action Jump("v15s18c_riley")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v15s18a_upstairsroom_2", returnScreen="v15s18a_upstairsroom")
+                if "penelope" in freeroam14:
+                    action Call("freeRoamSpokenToo", backgroundImg="v15s18a_upstairsroom_1", returnScreen="v15s18a_upstairsroom")
+                else:
+                    action Call("freeRoamSpokenToo", backgroundImg="v15s18a_upstairsroom_2", returnScreen="v15s18a_upstairsroom")
         pos (247, 13)
 
     # Door 2
