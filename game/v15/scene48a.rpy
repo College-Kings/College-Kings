@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v15s48a:
+    label v15s48a_norasg:
+
     play music "music/v15/Track Scene 48a.mp3" fadein 2
 
     $ sceneList.add("v15_nora")
@@ -179,8 +181,6 @@ label v15s48a:
 
         "Just kiss her":
             $ add_point(KCT.BRO)
-
-            label v15s48a_norasg:
 
             scene v15s48a_2d
             with dissolve

@@ -440,7 +440,6 @@ label v14s52:
     u "(What the fuck does that mean?!)"
 
     if v13_imre_disloyal:
-
         scene v14s52_17 # FPP. show a full size image of mc's wolves bedroom door closed
         with dissolve
 

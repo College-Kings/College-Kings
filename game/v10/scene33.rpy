@@ -1744,7 +1744,8 @@ label v10s33_deergirl21:
     with dissolve
 
     u "Well I wish it was going better for you."
-    u "Maybe if you get Autumn to sell fake oil cans people can act as though they're loosening your joints Mrs. Tin Man. *Laughs*"
+    
+    u "Maybe if you get Autumn to sell fake oil cans people can act as though they're loosening your joints, Mrs. Tin Man. *Laughs*"
 
     scene v10cfrla3d
     with dissolve
@@ -2951,7 +2952,7 @@ label v10s33_riley2:
     scene v10cfram1
     with dissolve
 
-    am "I'm looking forward to a good little cat fight. It would be even better though if it was the guys doing the wrestling."
+    am "I'm looking forward to a good little catfight. It would be even better though if it was the guys doing the wrestling."
 
     scene v10cfram1a
     with dissolve

@@ -1,6 +1,6 @@
 # SCENE 24: Lauren's Room
 # Location: Lauren Bedroom
-# Characters: MC (Outfit X), Lauren, (Outift X), Samantha (Outfit X), Mrs. Rose (Outfit X)
+# Characters: MC (Outfit X), Lauren, (Outift X), Samantha (Outfit X), Ms. Rose (Outfit X)
 # Time: Tuesday Evening
 
 label v10_lauren_room:
@@ -530,7 +530,7 @@ label v10_lauren_room:
     u "Uhm, hold on."
 
     if joinwolves:
-        scene v10lar11 # FPP Show Mrs. Rose on phone, worried expression, mouth closed, plain black background
+        scene v10lar11 # FPP Show Ms. Rose on phone, worried expression, mouth closed, plain black background
         with dissolve
 
         u "Hello?"

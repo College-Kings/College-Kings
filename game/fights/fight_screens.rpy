@@ -193,7 +193,7 @@ screen fight_overlay(stance=None):
 screen tomtut1():
     tag fightScreen
 
-    add "images/tomstancekick.webp"
+    add "images/v2/tomstancekick.webp"
 
     key w:
         action Jump ("tomtut1hook")
@@ -262,7 +262,7 @@ screen youattack():
     if tomstance == 1:
 
 
-        image "images/tomstancekick.webp"
+        image "images/v2/tomstancekick.webp"
 
         key r:
             action Jump ("tomkick1")
@@ -298,7 +298,7 @@ screen youattack():
 
 
     if tomstance == 2:
-        image "images/tomstancehook.webp"
+        image "images/v2/tomstancehook.webp"
 
         key w:
             action Jump ("tomhook1")
@@ -334,7 +334,7 @@ screen youattack():
 
 
     if tomstance == 3:
-        image "images/tomstancejab.webp"
+        image "images/v2/tomstancejab.webp"
 
         key q:
             action Jump ("tomjab1")
@@ -408,7 +408,7 @@ screen tomattack():
 
 
     if tomattack == 2:
-        image "images/tomjab.webp"
+        image "images/v2/tomjab.webp"
 
         key q:
             action Jump ("tomjabhit")
@@ -441,7 +441,7 @@ screen tomattack():
         timer reaction action Jump("timer5")
 
     if tomattack == 3:
-        image "images/tomkick.webp"
+        image "images/v2/tomkick.webp"
 
         key w:
             action Jump ("tomkickhit")
