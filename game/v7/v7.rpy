@@ -17268,7 +17268,7 @@ label fr4amberending:
 
 label v7end:
     if not renpy.loadable("v8/scene1.rpy"):
-        scene savenow
+        call screen savenow()
         with Fade (1,0,1)
         " "
 

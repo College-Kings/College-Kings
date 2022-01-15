@@ -90,7 +90,7 @@ label v13s62:
 
 label end13:
     if not renpy.loadable("v14/scene1.rpy"):
-        scene savenow
+        call screen savenow()
         with Fade (1,0,1)
         " "
 

@@ -86,7 +86,7 @@ label v10_waking_up_end:
 
 label end10:
     if not renpy.loadable("v11/scene1.rpy"):
-        scene savenow
+        call screen savenow()
         with Fade (1,0,1)
         " "
 

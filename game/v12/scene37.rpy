@@ -109,7 +109,7 @@ label v12_riley_ending:
 
 label end12:
     if not renpy.loadable("v13/scene1.rpy"):
-        scene savenow
+        call screen savenow()
         with Fade (1,0,1)
         " "
 
