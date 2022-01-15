@@ -224,7 +224,7 @@ screen tomtut1():
 
 screen fight_defendTutorial():
 
-    add "images/tomhook.webp"
+    add "images/v2/tomhook.webp"
 
     key q:
         action Jump ("tuthookblock")
@@ -374,7 +374,7 @@ screen youattack():
 screen tomattack():
 
     if tomattack == 1:
-        image "images/tomhook.webp"
+        image "images/v2/tomhook.webp"
 
         key r:
             action Jump ("tomhookhit")
