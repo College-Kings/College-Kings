@@ -2403,12 +2403,6 @@ label v15s18c_chris_penelope:
 
             menu:
                 "Ask for her help":
-                    label v15s18c_penelopesg:
-                    
-                    if _in_replay:
-                        $ penelope.relationship = Relationship.LOYAL
-                        $ v14_penelope_date = True
-                
                     scene v15s18c_chpe_5a
                     with dissolve
 
@@ -2432,6 +2426,12 @@ label v15s18c_chris_penelope:
                     jump v15s18c_backtoparty
 
             label v15s18c_askhelp:
+                if v14_penelope_date and (kct == "confident" or penelope.relationship >= Relationship.LOYAL):
+                    label v15s18c_penelopesg:                        
+                        if _in_replay:
+                            $ penelope.relationship = Relationship.LOYAL
+                            $ v14_penelope_date = True
+
                 if lauren.relationship >= Relationship.GIRLFRIEND:
                     pe "Um, I don't think we should do anything while we're here."
 
