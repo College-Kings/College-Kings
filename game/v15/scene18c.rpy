@@ -639,8 +639,7 @@ label v15s18c_imre_aubrey:
             "Ask for help":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BRO)
-
-                label v15s18c_aubreysg:
+                
                 scene v15s18c_imau_6b
                 with dissolve
                
@@ -738,6 +737,8 @@ label v15s18c_imre_aubrey:
                 call screen v15s18a_room
 
     else:
+        label v15s18c_aubreysg:
+    
         scene v15s18c_imau_6c
         with dissolve
 

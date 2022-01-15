@@ -43,6 +43,7 @@ label v15s37:
         with dissolve
 
         u "(I'm glad Autumn was okay with what I said back there.)"
+
         u "(I think she was forgetting for a moment that I'm dating her sister, ha... Or maybe she was testing me?)"
 
         u "(Anyway, even if I wanted to date two sisters...)"
@@ -65,15 +66,19 @@ label v15s37:
 
         u "(I can't mess things up with Lauren, no matter how much I like her sister.)"
 
-    else:
+    elif not v15s36_autumn_kiss:
         scene v15s37_3
         with dissolve
 
         u "(That was a fun night, especially with Autumn there. I'm glad I'm getting to know her better.)"
 
-        ###u "(What a fucking night... I never thought it would end with kissing Autumn!)"
-        ###u "(You just never know what girls are really thinking, haha.)"
-        ###u "(I'm so excited to spend more time with her.)"
+    else:
+        scene v15s37_3
+        with dissolve
+        
+        u "(What a fucking night... I never thought it would end with kissing Autumn!)"
+        u "(You just never know what girls are really thinking, haha.)"
+        u "(I'm so excited to spend more time with her.)"
 
     stop music fadeout 3
 
