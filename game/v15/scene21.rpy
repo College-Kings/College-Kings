@@ -23,7 +23,7 @@ label v15s21:
 
         cl "Here he is."
 
-        $ renpy.get_screen("v15_teacher_brief_icon").scope["opened_count"] = 0 # reset counter
+        $ v15s20_teacher_brief_open_count = 0 # reset counter
         scene v15s21_3 # FPP. Mr. Lee approaches them slight smile mouth open, Chloe and MC stand up, Chloe slight smile, mouth closed
         with dissolve
 
@@ -1124,7 +1124,7 @@ label v15s21:
 
             u "(Don't think about sex, don't think about sex, don't think abou-)"
 
-        $ renpy.get_screen("v15_teacher_brief_icon").scope["opened_count"] = 0 # reset counter
+        $ v15s20_teacher_brief_open_count = 0 # reset counter
         scene v15s21_10b # FPP. same as v15s21_10a Ms. Rose looking at Chloe slight smile mouth open, Chloe looking at Ms. Rose slight smile mouth closed
         with dissolve
 

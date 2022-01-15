@@ -1,11 +1,9 @@
 screen v15_teacher_brief_icon(key):
     tag teacher_brief
 
-    default opened_count = 0
-
     imagebutton:
         idle "images/v15/Scene 20/teacher_brief/icon.webp"
-        action [SetScreenVariable("opened_count", opened_count + 1), Show("v15_teacher_brief", None, key)]
+        action [SetVariable("v15s20_teacher_brief_open_count", v15s20_teacher_brief_open_count + 1), Show("v15_teacher_brief", None, key)]
 
 
 screen v15_teacher_brief(key):
