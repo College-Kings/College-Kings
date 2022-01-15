@@ -8,8 +8,8 @@ label v14_start:
         $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
         $ pb_name_set = True
     
-    elif path_builder:
-        sceneList.add("v13_emily")
+        if emily.relationship == Relationship.GIRLFRIEND:
+            sceneList.add("v13_emily")
 
     show screen phone_icon
     
