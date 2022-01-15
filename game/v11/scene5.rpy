@@ -631,7 +631,7 @@ label v11s4_PhoneContinueJosh1:
         jump v11_thurs_night_room
 
     # If made Candy smile 3 or more times
-    $ candy.relationship = relationship.LIKES
+    $ candy.relationship = Relationship.LIKES
 
     if candyLike < 3:
         call screen kct_popup
