@@ -10,7 +10,7 @@ python early:
             short_hash = subprocess.check_output([ "git", "rev-parse", "--short", "HEAD"]).strip()
             with open(os.path.join(config.basedir, "game", "version.txt"), "w") as file:
                 file.write(str(short_hash))
-        except subprocess.CalledProcessError:
+        except (subprocess.CalledProcessError, WindowsError):
             with open(os.path.join(config.basedir, "game", "version.txt"), "r") as file:
                 short_hash = file.read().strip()
 

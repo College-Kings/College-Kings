@@ -69,11 +69,11 @@ label v15s37:
         scene v15s37_3
         with dissolve
 
-        u "(What a fucking night... I never thought it would end with kissing Autumn!)"
+        u "(That was a fun night, especially with Autumn there. I'm glad I'm getting to know her better.)"
 
-        u "(You just never know what girls are really thinking, haha.)"
-
-        u "(I'm so excited to spend more time with her.)"
+        ###u "(What a fucking night... I never thought it would end with kissing Autumn!)"
+        ###u "(You just never know what girls are really thinking, haha.)"
+        ###u "(I'm so excited to spend more time with her.)"
 
     stop music fadeout 3
 

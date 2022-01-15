@@ -11750,7 +11750,6 @@ label penelopehocodate:
 
     menu:
         "You didn't have four cats":
-
             u "You definitely did not have four cats."
 
             scene sfr4pe8d

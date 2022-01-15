@@ -400,6 +400,7 @@ default v15s18a_aub_kiwii_smile = False
 default v15s18a_gag = False
 default v15s18a_showlist_penelope_autumn = False
 default v15s18e_cum_in_lauren = False
+default v15s20_teacher_brief_open_count = 0
 default v15s21_meeting_points = 0
 default v15s22_meeting_points = 0
 default v15s24_nancy_dick = False
