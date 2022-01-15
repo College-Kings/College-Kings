@@ -63,7 +63,8 @@ label v15s30:
         with dissolve
 
         pause 1.5
-
+        
+        $ emily.messenger.newMessage("Hey.", force_send=True)
         $ emily.messenger.newImgMessage("images/v15/Scene 29/v15s29_emily_lingerie.webp", force_send=True) #Standing next to a full bathtub, in sexy *new* lingerie
         $ emily.messenger.newMessage("About to have a late night bath, thinking of you.", force_send=True)
         $ emily.messenger.addReply("Oh, yeah?", func=None)
@@ -218,6 +219,8 @@ label v15s30:
                 with dissolve
 
                 u "(Okay, time for sleep now.)"
+    
+    $ renpy.end_replay()
 
     scene v15s30_5 # TPP. lights are out, and MC has laid down to go to sleep, no expression, eyes closed
     with fade
