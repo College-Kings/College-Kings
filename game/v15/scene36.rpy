@@ -57,6 +57,7 @@ label v15s36:
     menu:
         "Oh no, I wasn't":
             $ add_point(KCT.BRO)
+
             u "Oh no, I wasn't. Actually I wanted to know what your favorite question from tonight was."
 
             jump v15s36_dontask
