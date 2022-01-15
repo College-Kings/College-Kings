@@ -9,7 +9,7 @@ label v14_start:
         $ pb_name_set = True
     
         if emily.relationship == Relationship.GIRLFRIEND:
-            sceneList.add("v13_emily")
+            $ sceneList.add("v13_emily")
 
     show screen phone_icon
     
