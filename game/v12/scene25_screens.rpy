@@ -27,7 +27,7 @@ screen v12_girls():
                 hover "images/v7/HCChloe23.webp"
             
         imagebutton:
-            if v11_lauren_caught_aubrey:
+            if not v11_lauren_caught_aubrey:
                 idle "images/v7/HCLauren.webp"
                 hover "images/v7/HCLauren2.webp"
                 action Jump("v12_jc_lauren")
