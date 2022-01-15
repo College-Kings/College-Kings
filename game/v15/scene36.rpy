@@ -63,10 +63,10 @@ label v15s36:
 
         "I'm really curious":
             $ add_point(KCT.BOYFRIEND)
+
             u "Well, I'm curious about getting to know the real Autumn, but I know it's a sensitive issue."
 
     u "Only if you're comfortable talking about it, of course."
-
 
     if AutumnTrust:
         scene v15s36_4a
@@ -469,6 +469,8 @@ label v15s36:
     pause 0.75
 
     if autumn.relationship >= Relationship.FWB:
+        $ v15s36_autumn_kiss = True
+    
         scene v15s36_11c # FPP. Show Autumn stopping in place.
         with dissolve
 
