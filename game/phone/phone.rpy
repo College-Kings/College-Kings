@@ -43,16 +43,16 @@ screen base_phone():
         # Click background to close phone
         button:
             if renpy.get_screen("free_roam"):
-                action [Hide("tutorial"), Hide("phone")]
+                action [Hide("tutorial"), Hide("phone"), Hide("messenger_reply")]
             else:
-                action [Hide("tutorial"), Return()]
+                action [Hide("tutorial"), Hide("messenger_reply"), Return()]
 
         textbutton "Exit Phone":
             style "phonebutton"
             if renpy.get_screen("free_roam"):
-                action [Hide("tutorial"), Hide("phone")]
+                action [Hide("tutorial"), Hide("phone"), Hide("messenger_reply")]
             else:
-                action [Hide("tutorial"), Return()]
+                action [Hide("tutorial"), Hide("messenger_reply"), Return()]
 
     # Button to prevent phone closing on phone ui
     button:
