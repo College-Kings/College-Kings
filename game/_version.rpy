@@ -11,8 +11,11 @@ python early:
             with open(os.path.join(config.basedir, "game", "version.txt"), "w") as file:
                 file.write(str(short_hash))
         except (subprocess.CalledProcessError, WindowsError):
-            with open(os.path.join(config.basedir, "game", "version.txt"), "r") as file:
-                short_hash = file.read().strip()
+            try:
+                with open(os.path.join(config.basedir, "game", "version.txt"), "r") as file:
+                    short_hash = file.read().strip()
+            except Exception:
+                short_hash = ""
 
         os.chdir(cwd)
         return short_hash
