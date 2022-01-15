@@ -64,7 +64,7 @@ label after_load:
         renpy.music.stop(channel=u'music') ### temporary emergency break
 
         ## PLAYABLE CHARACTERS
-        if isinstance(mc, FightCharacter):
+        if isinstance(mc, FightCharacter) or isinstance(mc, MainCharacter):
             mc = PlayableCharacter()
 
         mc.__after_load__()
