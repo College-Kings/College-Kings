@@ -751,7 +751,7 @@ label v15s33:
 
     u "Hi."
 
-    if aubrey.relationship >= Relationship.FWB:
+    if v15s9_wedding_date:
         scene v15s33_25b
         with dissolve
 
