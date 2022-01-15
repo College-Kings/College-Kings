@@ -2169,7 +2169,7 @@ label continueab:
             u "(I should probably reply to my messages.)"
             jump phonew
 
-    if josh.messenger.sent_messages[-2].reply and josh.messenger.sent_messages[-2].reply.message == "I can't, sorry.":
+    if len(josh.messenger.sent_messages) >= 2 and josh.messenger.sent_messages[-2].reply and josh.messenger.sent_messages[-2].reply.message == "I can't, sorry.":
         u "(Fucking hell, I forgot how persistent Josh could be...)"
         jump jorepb
 
