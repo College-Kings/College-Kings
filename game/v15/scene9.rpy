@@ -166,6 +166,7 @@ label v15s9:
 
             if v13s48_canoeing_as_date:
                 $ aubrey.relationship = Relationship.TAMED
+                $ v15s9_wedding_date = True
 
                 scene v15s9_3g # FPP. same as v15s9_3b Aubrey slightly blushes, head slightly tilted down, looking at mc, full smile, mouth closed
                 with dissolve
