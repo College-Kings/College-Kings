@@ -51,7 +51,10 @@ label path_builder_setup:
         PB_JENNY = PathBuilderItem(PathBuilderCatagories.GIRL, "Jenny",
             actions=ToggleField(jenny, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
         PB_EMILY = PathBuilderItem(PathBuilderCatagories.GIRL, "Emily",
-            actions=ToggleField(emily, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+            actions=[
+                ToggleField(emily, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND),
+                ToggleVariable("emily_europe"),
+                ToggleVariable("v14_emily_ily")])
 
         PB_ACT_1 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 1 Start", actions=SetVariable("pb_start_location", "start"))
         if renpy.loadable("v8/scene1.rpy"):
