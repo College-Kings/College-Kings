@@ -1919,6 +1919,12 @@ label v15s18c_autumn_amber:
 
             u "Well, do you wanna make out?"
 
+            if kct == "loyal" and (lauren.relationship >= Relationship.GIRLFRIEND or not v11_lauren_caught_aubrey):
+                label v15s18c_autumnsg:
+                    if _in_replay:
+                        $ lauren.relationship = Relationship.GIRLFRIEND
+                        $ kct = "loyal"
+
             if lauren.relationship >= Relationship.GIRLFRIEND:
                 scene v15s18c_auam_5d # FPP. Same as v15s18c_auam_5a, Autumn angry, mouth open
                 with dissolve
@@ -1931,7 +1937,8 @@ label v15s18c_autumn_amber:
                 u "Yeah, I know, I'm sorry... I just-"
 
                 if kct == "loyal":
-                    call screen kct_popup
+                    if not _in_replay:
+                        call screen kct_popup
                 
                     scene v15s18c_auam_5f # FPP. Same as v15s18c_5e, Autumn slightly sad, mouth open
                     with dissolve
@@ -1997,8 +2004,6 @@ label v15s18c_autumn_amber:
             else:
                 if kct == "loyal" and not v11_lauren_caught_aubrey:
                     call screen kct_popup
-                    
-                    label v15s18c_autumnsg:
                     
                     scene v15s18c_auam_5b
                     with dissolve
