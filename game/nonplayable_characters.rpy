@@ -136,14 +136,12 @@ init python:
             return "images/nonplayable_characters/profile_pictures/{}.webp".format(self.name.replace(' ', '_').lower())
 
         def __after_load__(self):
-            attrs = vars(self)
+            attrs = vars(self).copy()
 
             self.__init__(self.name)
 
             for var, value in attrs.items():
-                try: setattr(self, var, value)
-                except AttributeError: continue
-                
+                setattr(self, var, value)  
 
         def kill(self):
             # Check Competitive stat
