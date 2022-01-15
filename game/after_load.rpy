@@ -35,7 +35,7 @@ python early:
             import subprocess
             subprocess.call([os.path.join(config.basedir, "CollegeKings.exe")])
             renpy.quit()
-        except WindowsError:
+        except OSError:
             raise Exception("Deleting old files please RESTART GAME.")
 
     # Helper function
@@ -1063,7 +1063,7 @@ label after_load:
         except NameError: v13_aubrey_vote = "na"
         try: v14_ryan_satin
         except NameError: v14_ryan_satin = False
-        
+
 
     call setup
 
