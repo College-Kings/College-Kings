@@ -1105,6 +1105,8 @@ label after_load:
 
         josh.stats["Competitive"] = True
 
+    call setup
+
     show no_hard_feelings at achievementShow
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
     hide no_hard_feelings

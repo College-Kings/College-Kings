@@ -1,4 +1,4 @@
-label before_main_menu:
+label setup:
     call path_builder_setup from _call_path_builder_setup
     call nonplayable_characters_setup from _call_nonplayable_characters_setup
 

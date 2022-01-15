@@ -1,6 +1,4 @@
 init python:
-    pb_items = []
-
     class PathBuilderCatagories(Enum):
         FRATERNITY = "Step 1: Pick a fraternity"
         KCT = "Step 2: Pick your starting KCT"
