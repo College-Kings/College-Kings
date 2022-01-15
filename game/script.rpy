@@ -27,10 +27,4 @@ label gameEnd:
     play music "music/vocal.mp3"
 
     call screen end_screen
-
-label credits:
-    show credits:
-        ypos 50
-        xalign 0.5
-
-    call screen credits
+    
