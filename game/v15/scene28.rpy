@@ -1313,6 +1313,12 @@ label v15s28:
 
     stop music fadeout 3
 
+    if v14_emily_ily:
+        label v15s29_emilysg:
+            if _in_replay:
+                $ phone.applications.append(messenger)
+                $ v14_emily_ily = True
+
     if joinwolves: # -if Wolves, transition to Scene 29-
         jump v15s29
 
