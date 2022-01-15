@@ -256,7 +256,7 @@ label v11_dinner_with_aubrey:
                 with dissolve
 
                 u "*Laughs* Okay, that was pretty funny."
-    elif aubrey.relationship >= Relationship.FWB:
+    else
         scene v11dwa1
         with dissolve
 
