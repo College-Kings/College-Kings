@@ -15,7 +15,8 @@ label fight_test_insult:
 
     show screen fight_popup("MENTAL HIT")
 
-    $ opponent_guard -= 1
+    if opponent_guard > 0:
+        $ opponent_guard -= 1
 
     if opponent_guard == 2:
         scene tomstancekick
@@ -40,10 +41,8 @@ label fight_test_hook:
     scene hook2start
 
     pause 0.5
-
-    $ fight_hit = renpy.random.choice([0, 1, 2]) #chance to hit
     
-    if fight_hit == 0: # player hits opp
+    if opponent_guard == 0 or opponent_guard == 1: # guard down or semi, player hits
 
         scene hook2pic
         with vpunch
@@ -52,9 +51,9 @@ label fight_test_hook:
 
         pause 1
 
-        call screen player_attack
+        jump opponent_attacks
     
-    elif fight_hit == 1: # opp blocks
+    else: # guard up, opp blocks
 
         scene hook1pic
         with vpunch
@@ -63,20 +62,61 @@ label fight_test_hook:
 
         pause 1
 
-        call screen player_attack
+        jump opponent_attacks
 
-    else: # opp attacks
+label fight_test_jab:
 
-        scene hook1pic
+    if opponent_guard == 2:
+        scene tomstancekick
+    elif opponent_guard == 1:
+        scene tomstancehook
+    else: 
+        scene tomstancejab
+
+    scene jab2start
+
+    pause 0.5
+    
+    if opponent_guard == 0: #guard down
+
+        $ counter_chance = renpy.random.choice([light_attack_fury]) #chance to counter
+
+        if counter_chance == 0: # opponent counters
+
+            scene jab1pic
+            with vpunch
+
+            show screen fight_popup("COUNTERED")
+
+            pause 1
+
+            $ light_attack_fury = 3
+
+            jump opponent_counter
+
+        else: # player hits
+
+            scene jab2pic
+            with vpunch
+
+            show screen fight_popup("PHYSICAL HIT")
+
+            pause 1
+
+            $ light_attack_fury -= 1
+
+            call screen player_attack
+    
+    else: #guard semi or up opp blocks
+
+        scene jab1pic
         with vpunch
 
-        show screen fight_popup("COUNTERED")
+        show screen fight_popup("BLOCKED")
 
         pause 1
 
-        $ opponent_attack = renpy.random.choice([0, 1]) #opponent attack choice
-
-        call screen opponent_attack with dissolve
+        call screen player_attack
 
 label opponent_attacks:
 
@@ -90,7 +130,9 @@ label opponent_attacks:
             scene tomstancejab
             with dissolve
 
-        pause 0.5
+        pause 0.7
+
+        label opponent_counter:
 
         $ opponent_attack = renpy.random.choice([0, 1]) #opponent attack choice
 
@@ -106,6 +148,9 @@ label fight_test_blocked_jab:
 
     pause 1
 
+    if opponent_guard > 0:
+        $ opponent_guard -= 1
+
     jump opponent_attacks
 
 label fight_test_blocked_kick:
@@ -117,22 +162,14 @@ label fight_test_blocked_kick:
 
     pause 1
 
-    jump opponent_attacks
+    if opponent_guard < 2:
+        $ opponent_guard += 1
+
+    call screen player_attack
 
 label fight_test_countered_jab:
 
     scene tomjabblock
-    with vpunch
-
-    show screen fight_popup("COUNTERED")
-
-    pause 1
-
-    call screen player_attack
-
-label fight_test_countered_kick:
-
-    scene tomkickblock
     with vpunch
 
     show screen fight_popup("COUNTERED")
@@ -150,6 +187,9 @@ label fight_test_jab_hit:
 
     pause 1
 
+    if opponent_guard < 2:
+        $ opponent_guard += 1
+
     jump opponent_attacks
 
 label fight_test_kick_hit:
@@ -161,6 +201,9 @@ label fight_test_kick_hit:
 
     pause 1
 
-    jump opponent_attacks
+    $ opponent_guard = 2
+
+    call screen player_attack
+
 
 

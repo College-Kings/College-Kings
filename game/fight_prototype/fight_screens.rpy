@@ -7,10 +7,14 @@ screen player_attack():
     else:  # no guard
         add "images/v2/tomstancejab.webp"
 
-    key q: #verbal attack
-        action Jump ("fight_test_insult")
-    key w: #phyiscal attack
+    key q: #jab attack
+        action Jump ("fight_test_jab")
+    key w: #heavy attack
         action Jump ("fight_test_hook")
+    key e: #verbal attack
+        action Jump ("fight_test_insult")
+
+    timer 1 action Jump ("opponent_counter")
 
 screen opponent_attack():
 
@@ -28,7 +32,7 @@ screen opponent_attack():
         if opponent_attack == 0: # tom jabbed
             action Jump ("fight_test_countered_jab")
         else: # tom kicked
-            action Jump ("fight_test_countered_kick")
+            action Jump ("fight_test_kick_hit")
 
 
     if opponent_attack == 0: #tom jabbed and time ran out
