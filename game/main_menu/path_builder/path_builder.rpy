@@ -265,12 +265,15 @@ screen path_builder(catagory_step=1):
                 action Start(pb_start_location)
 
 screen path_builder_advanced_settings():
+
     default image_path = "main_menu/path_builder/images/"
     default button_img_path = "main_menu/path_builder/images/"
     tag menu
     modal True
 
     add image_path + "path_builder_background.webp"
+
+    text "Advanced Settings" align (0.5, 0.15)
 
     imagebutton:
         idle "gui/common/return_idle.webp"
@@ -294,4 +297,4 @@ screen path_builder_advanced_settings():
                         yoffset -7
     
 
-
+style path_builder_advanced_settings_text is bebas_neue_30
