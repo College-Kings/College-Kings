@@ -64,6 +64,10 @@ screen patreon_credits(support_link="https://www.patreon.com/collegekings"):
     modal True
     style_prefix "patreon_credits"
 
+    default music_file ="music/vocal.mp3"
+
+    on "show" action Play("music", music_file)
+
     default image_path = "gui/end_screen/"
 
     add image_path + "patreon_credits_background.webp"

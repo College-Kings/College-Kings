@@ -332,7 +332,7 @@ label v15s49:
 
 label end15:
     if not renpy.loadable("v16/scene1.rpy"):
-        scene savenow #nothing needed
+        call screen savenow()
         with Fade (1,0,1)
         " "
 
