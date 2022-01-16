@@ -90,7 +90,6 @@ screen path_builder(catagory_step=1):
     modal True
 
     default image_path = "main_menu/path_builder/images/"
-    default image_path_2 = "images/path builder/"
 
     default catagory = get_catagory(catagory_step)
     default items = [item for item in pb_items if item.catagory == catagory]
@@ -111,8 +110,8 @@ screen path_builder(catagory_step=1):
         $ heading = "Pick your homecoming date"
     
 
-    add image_path_2 + "path_builder_background.webp"
-    add image_path_2 + "path_builder_box_background.webp" align (0.5, 0.5)
+    add image_path + "path_builder_background.webp"
+    add image_path + "path_builder_box_background.webp" align (0.5, 0.5)
 
     imagebutton:
         idle "gui/common/return_idle.webp"
@@ -124,15 +123,15 @@ screen path_builder(catagory_step=1):
         align (0.5, 0.215)
 
         if catagory == PathBuilderCatagories.FRATERNITY:
-            add image_path_2 + "path_builder_step_1.webp" xalign 0.5
+            add image_path + "path_builder_step_1.webp" xalign 0.5
         elif catagory == PathBuilderCatagories.KCT:
-            add image_path_2 + "path_builder_step_2.webp" xalign 0.5
+            add image_path + "path_builder_step_2.webp" xalign 0.5
         elif catagory == PathBuilderCatagories.GIRL:
-            add image_path_2 + "path_builder_step_3.webp" xalign 0.5
+            add image_path + "path_builder_step_3.webp" xalign 0.5
         elif catagory == PathBuilderCatagories.START_LOCATION:
-            add image_path_2 + "path_builder_step_4.webp" xalign 0.5
+            add image_path + "path_builder_step_4.webp" xalign 0.5
         elif catagory == PathBuilderCatagories.HOMECOMING_DATE:
-            add image_path_2 + "path_builder_step_5.webp" xalign 0.5
+            add image_path + "path_builder_step_5.webp" xalign 0.5
 
     vbox:
         spacing 20
@@ -183,7 +182,7 @@ screen path_builder(catagory_step=1):
                     vbox:
                         xalign 0.5
 
-                        default girl_image_path = image_path_2 + "girls/"
+                        default girl_image_path = image_path + "girls/"
 
                         imagebutton:
                             idle girl_image_path + item.name +"_idle.webp"
@@ -202,7 +201,7 @@ screen path_builder(catagory_step=1):
                     vbox:
                         xalign 0.5
 
-                        default start_image_path = image_path_2 + "starts/"
+                        default start_image_path = image_path + "starts/"
 
                         imagebutton:
                             idle Transform(start_image_path + item.name +".webp", zoom=.8)
@@ -250,9 +249,9 @@ screen path_builder(catagory_step=1):
                 yoffset 40
                 
                 imagebutton:
-                    idle "images/path builder/pb_tick.webp"
-                    hover "images/path builder/pb_ticked.webp"
-                    selected_idle "images/path builder/pb_ticked.webp"
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
                     action ToggleVariable("locked_kct")
 
                 text "Lock KCT (Prevent it from changing)":
