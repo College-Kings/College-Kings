@@ -117,10 +117,9 @@ label v15s22:
                 "Lie":
                     if chloe.relationship >= Relationship.FWB:
                         $ add_point(KCT.TROUBLEMAKER)
+                        $ chloeSus += 1
                     else:
                         $ add_point(KCT.BRO)
-                        
-                    $ chloeSus += 1
 
                     scene v15s22_2d
                     with dissolve
