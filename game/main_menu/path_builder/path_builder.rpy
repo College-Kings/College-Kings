@@ -1,10 +1,25 @@
 init python:
     class PathBuilderCatagories(Enum):
-        FRATERNITY          =   "Step 1: Pick a fraternity"
-        KCT                 =   "Step 2: Pick your starting KCT"
-        GIRL                =   "Step 3: Pick which girls you want to be romantically involved with"
-        START_LOCATION      =   "Step 4: Pick your starting location"
-        HOMECOMING_DATE     =   "Step 5: Pick your homecoming date"
+        FRATERNITY = {
+            1: "Pick a fraternity",
+            "background": "main_menu/path_builder/images/path_builder_step_1.webp"
+        }
+        KCT = {
+            2: "Pick your starting KCT",
+            "background": "main_menu/path_builder/images/path_builder_step_2.webp"
+        }
+        GIRL = {
+            3: "Pick which girls you want to be romantically involved with",
+            "background": "main_menu/path_builder/images/path_builder_step_3.webp"
+        }
+        START_LOCATION = {
+            4: "Pick your starting location",
+            "background": "main_menu/path_builder/images/path_builder_step_4.webp"
+        }
+        HOMECOMING_DATE = {
+            5: "Pick your homecoming date",
+            "background": "main_menu/path_builder/images/path_builder_step_5.webp"
+        }
     
 
     class PathBuilderItem:
@@ -23,7 +38,7 @@ init python:
 
     def get_catagory(step):
         for catagory in PathBuilderCatagories:
-            if catagory.value.startswith("Step {}".format(step)):
+            if step in catagory.value:
                 return catagory
         return None
 
@@ -92,25 +107,19 @@ screen path_builder(catagory_step=1):
     modal True
 
     default image_path = "main_menu/path_builder/images/"
+    default grid_size = { # item_count : (rows, cols)
+        2: (2, 1),
+        3: (3, 1),
+        4: (4, 1),
+        6: (4, 2),
+        12: (4, 3),
+    }
 
     default catagory = get_catagory(catagory_step)
     default items = [item for item in PathBuilderItem.items if item.catagory == catagory]
-
-    default header = catagory.value
-
-    $ heading = 0
-
-    if header == "Step 1: Pick a fraternity":
-        $ heading = "Pick a fraternity"
-    elif header == "Step 2: Pick your starting KCT":
-        $ heading = "Pick your starting KCT"
-    elif header == "Step 3: Pick which girls you want to be romantically involved with":
-        $ heading = "Pick which girls you want to be romantically involved with"
-    elif header == "Step 4: Pick your starting location":
-        $ heading = "Pick your starting location"
-    elif header == "Step 5: Pick your homecoming date":
-        $ heading = "Pick your homecoming date"
+    default heading = catagory.value[catagory_step]
     
+    $ cols, rows = grid_size[len(items)]
 
     add image_path + "path_builder_background.webp"
     add image_path + "path_builder_box_background.webp" align (0.5, 0.5)
@@ -124,16 +133,7 @@ screen path_builder(catagory_step=1):
     vbox:
         align (0.5, 0.215)
 
-        if catagory == PathBuilderCatagories.FRATERNITY:
-            add image_path + "path_builder_step_1.webp" xalign 0.5
-        elif catagory == PathBuilderCatagories.KCT:
-            add image_path + "path_builder_step_2.webp" xalign 0.5
-        elif catagory == PathBuilderCatagories.GIRL:
-            add image_path + "path_builder_step_3.webp" xalign 0.5
-        elif catagory == PathBuilderCatagories.START_LOCATION:
-            add image_path + "path_builder_step_4.webp" xalign 0.5
-        elif catagory == PathBuilderCatagories.HOMECOMING_DATE:
-            add image_path + "path_builder_step_5.webp" xalign 0.5
+        add catagory.value["background"]
 
     vbox:
         spacing 20
@@ -141,40 +141,9 @@ screen path_builder(catagory_step=1):
 
         text heading xalign 0.5
 
-        $ count = 0
-        $ col   = 0
-        $ row   = 0
-
-        for item in items:
-            $ count += 1
-
-
-        if count == 1:
-            $ col = 1
-            $ row = 1
-        elif count == 2:
-            $ col = 2
-            $ row = 1
-        elif count == 3:
-            $ col = 3
-            $ row = 1
-        elif count == 4:
-            $ col = 4
-            $ row = 1
-        elif count >= 5 and count <= 8:
-            $ col = 4
-            $ row = 2
-        elif count >= 9 and count <= 12:
-            $ col = 4
-            $ row = 3
-        elif count >= 13 and count <= 15:
-            $ col = 4
-            $ row = 4
-            
-
         vpgrid:
-            cols col
-            rows row
+            cols cols
+            rows rows
             xspacing 10
             xalign 0.5
             yoffset 40
@@ -240,9 +209,6 @@ screen path_builder(catagory_step=1):
                             align (0.5, 0.5)
                             yoffset -50
                             color "#FFF"
-
-            
-
 
         # Option to lock KCT
         if catagory == PathBuilderCatagories.KCT:
