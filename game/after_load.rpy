@@ -1065,7 +1065,7 @@ label after_load:
         except NameError: v14_ryan_satin = False
 
 
-    call setup
+    call setup from _call_setup
 
     show no_hard_feelings at achievementShow
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
