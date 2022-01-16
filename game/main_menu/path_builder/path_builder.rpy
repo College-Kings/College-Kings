@@ -114,9 +114,11 @@ screen path_builder(catagory_step=1):
     add image_path_2 + "path_builder_background.webp"
     add image_path_2 + "path_builder_box_background.webp" align (0.5, 0.5)
 
-    text "PATH BUILDER":
-        size 50
-        align (0.5, 0.1)
+    imagebutton:
+        idle "gui/common/return_idle.webp"
+        hover "gui/common/return_hover.webp"
+        action ShowMenu("main_menu")
+        align (0.015, 0.015)
     
     vbox:
         align (0.5, 0.215)
