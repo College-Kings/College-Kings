@@ -1160,7 +1160,7 @@ label hd_ad:
             u "No worries, it was a nice walk."
 
             if kct == "confident" or riley.relationship >= Relationship.MOVE:
-                if riley.relationahip.value < Relationship.MOVE.value:
+                if riley.relationship < Relationship.MOVE:
                     call screen kct_popup
 
             else:
@@ -8878,7 +8878,7 @@ label wolves_ceremony:
 ############# RILEY TEXT
 
 label rileytext:
-    if riley.relationship > Relationship.LIKES:
+    if riley.relationship >= Relationship.LIKES:
         play sound "sounds/vibrate.mp3"
 
         $ riley.messenger.newMessage(_("Wanna come over? ;)"), force_send=True)

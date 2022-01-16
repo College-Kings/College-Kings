@@ -35,7 +35,7 @@ python early:
             import subprocess
             subprocess.call([os.path.join(config.basedir, "CollegeKings.exe")])
             renpy.quit()
-        except WindowsError:
+        except OSError:
             raise Exception("Deleting old files please RESTART GAME.")
 
     # Helper function
@@ -163,30 +163,7 @@ label after_load:
         if isinstance(josh, CustomCharacter):
             josh = NonPlayableCharacter("Josh", "Josh80085")
 
-        for character in (
-            chloe,
-            amber,
-            penelope,
-            riley,
-            lindsey,
-            lauren,
-            emily,
-            ms_rose,
-            nora,
-            aubrey,
-            ryan,
-            imre,
-            chris,
-            charli,
-            cameron,
-            josh,
-            julia,
-            evelyn,
-            autumn,
-            sebastian,
-            grayson,
-            jenny,
-        ):
+        for character in NonPlayableCharacter.Characters
             character.__after_load__()
 
         ## Relationship types
@@ -354,6 +331,8 @@ label after_load:
         naomi.username = "NaomiXMarie"
         samantha.username = "SamFromSpaceJam"
 
+        if chloe.relationship == 4:
+            chloe.relationship = Relationship.MAD
 
         ## PHONE
         ### APPLICATIONS
@@ -1063,16 +1042,15 @@ label after_load:
         except NameError: v13_aubrey_vote = "na"
         try: v14_ryan_satin
         except NameError: v14_ryan_satin = False
-        
 
-    call setup
+
+    call setup from _call_setup
 
     show no_hard_feelings at achievementShow
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
     hide no_hard_feelings
 
     show screen phone_icon
-    hide screen getaccess
     hide screen phone
 
     if config.developer:

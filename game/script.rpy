@@ -4,7 +4,7 @@ define config.console = True
 define config_debug = False
 define config_censored = False
 
-define config.version = get_version(15, 0, 2)
+define config.version = get_version(15, 0, 3)
 
 define config.steam_appid = 1463120
 
@@ -19,7 +19,7 @@ label start:
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
     hide no_hard_feelings
 
-    call setup
+    call setup from _call_setup_1
 
     call screen real_life_mode
 
