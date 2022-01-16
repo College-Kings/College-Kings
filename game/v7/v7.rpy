@@ -1160,7 +1160,7 @@ label hd_ad:
             u "No worries, it was a nice walk."
 
             if kct == "confident" or riley.relationship >= Relationship.MOVE:
-                if riley.relationahip.value < Relationship.MOVE.value:
+                if riley.relationship < Relationship.MOVE:
                     call screen kct_popup
 
             else:
