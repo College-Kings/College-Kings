@@ -163,30 +163,7 @@ label after_load:
         if isinstance(josh, CustomCharacter):
             josh = NonPlayableCharacter("Josh", "Josh80085")
 
-        for character in (
-            chloe,
-            amber,
-            penelope,
-            riley,
-            lindsey,
-            lauren,
-            emily,
-            ms_rose,
-            nora,
-            aubrey,
-            ryan,
-            imre,
-            chris,
-            charli,
-            cameron,
-            josh,
-            julia,
-            evelyn,
-            autumn,
-            sebastian,
-            grayson,
-            jenny,
-        ):
+        for character in NonPlayableCharacter.Characters
             character.__after_load__()
 
         ## Relationship types
@@ -1074,7 +1051,6 @@ label after_load:
     hide no_hard_feelings
 
     show screen phone_icon
-    hide screen getaccess
     hide screen phone
 
     if config.developer:
