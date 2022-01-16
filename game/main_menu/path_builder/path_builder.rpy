@@ -85,27 +85,6 @@ screen path_builder_alert():
 
 style path_builder_alert_text is bebas_neue_30
 
-
-screen path_builder_base(header=""):
-
-    default image_path = "images/path builder/"
-
-    add image_path + "path_builder_background.webp"
-    add image_path + "path_builder_box_background.webp" align (0.5, 0.5)
-
-    text "PATH BUILDER":
-        size 50
-        align (0.5, 0.1)
-
-    vbox:
-        spacing 20
-        align (0.5, 0.5)
-
-        text header xalign 0.5
-
-        transclude
-
-
 screen path_builder(catagory_step=1):
     tag menu
     modal True
@@ -116,27 +95,61 @@ screen path_builder(catagory_step=1):
     default catagory = get_catagory(catagory_step)
     default items = [item for item in pb_items if item.catagory == catagory]
 
-    use path_builder_base(header=catagory.value):
+    default header = catagory.value
+
+    $ heading = 0
+
+    if header == "Step 1: Pick a fraternity":
+        $ heading = "Pick a fraternity"
+    elif header == "Step 2: Pick your starting KCT":
+        $ heading = "Pick your starting KCT"
+    elif header == "Step 3: Pick which girls you want to be romantically involved with":
+        $ heading = "Pick which girls you want to be romantically involved with"
+    elif header == "Step 4: Pick your starting location":
+        $ heading = "Pick your starting location"
+    elif header == "Step 5: Pick your homecoming date":
+        $ heading = "Pick your homecoming date"
+    
+
+    add image_path_2 + "path_builder_background.webp"
+    add image_path_2 + "path_builder_box_background.webp" align (0.5, 0.5)
+
+    text "PATH BUILDER":
+        size 50
+        align (0.5, 0.1)
+    
+    vbox:
+        align (0.5, 0.215)
 
         if catagory == PathBuilderCatagories.FRATERNITY:
-            add image_path_2 + "path_builder_step_1.webp" xalign 0.5 yoffset -225
+            add image_path_2 + "path_builder_step_1.webp" xalign 0.5
         elif catagory == PathBuilderCatagories.KCT:
-            add image_path_2 + "path_builder_step_2.webp" xalign 0.5 yoffset -225
+            add image_path_2 + "path_builder_step_2.webp" xalign 0.5
         elif catagory == PathBuilderCatagories.GIRL:
-            add image_path_2 + "path_builder_step_3.webp" xalign 0.5 yoffset -225
+            add image_path_2 + "path_builder_step_3.webp" xalign 0.5
         elif catagory == PathBuilderCatagories.START_LOCATION:
-            add image_path_2 + "path_builder_step_4.webp" xalign 0.5 yoffset -225
+            add image_path_2 + "path_builder_step_4.webp" xalign 0.5
         elif catagory == PathBuilderCatagories.HOMECOMING_DATE:
-            add image_path_2 + "path_builder_step_5.webp" xalign 0.5 yoffset -225
+            add image_path_2 + "path_builder_step_5.webp" xalign 0.5
+
+    vbox:
+        spacing 20
+        align (0.5, 0.5)
+
+        text heading xalign 0.5
 
         $ count = 0
-        $ col = 0
-        $ row = 0
+        $ col   = 0
+        $ row   = 0
 
         for item in items:
             $ count += 1
 
-        if count == 2:
+
+        if count == 1:
+            $ col = 1
+            $ row = 1
+        elif count == 2:
             $ col = 2
             $ row = 1
         elif count == 3:
@@ -155,34 +168,84 @@ screen path_builder(catagory_step=1):
             $ col = 4
             $ row = 4
             
-        
 
         vpgrid:
             cols col
             rows row
-            spacing 20
+            xspacing 10
             xalign 0.5
+            yoffset 40
 
             for item in items:
-                vbox:
-                    xalign 0.5
+                if catagory == PathBuilderCatagories.GIRL or catagory == PathBuilderCatagories.HOMECOMING_DATE:
+                    vbox:
+                        xalign 0.5
 
-                    imagebutton:
-                        idle image_path + "button_idle.webp"
-                        hover image_path + "button_hover.webp"
-                        selected_idle image_path + "button_hover.webp"
-                        selected get_selected(item)
-                        action [a for a in item.actions]
+                        default girl_image_path = image_path_2 + "girls/"
 
-                    text item.name:
-                        align (0.5, 0.5)
-                        yoffset -50
-                        color "#FFF"
+                        imagebutton:
+                            idle girl_image_path + item.name +"_idle.webp"
+                            hover girl_image_path + item.name +".webp"
+                            selected_idle girl_image_path + item.name +".webp"
+                            selected get_selected(item)
+                            action [a for a in item.actions]
+
+                        text item.name:
+                            align (0.5, 0.5)
+                            yoffset -75
+                            xoffset 30
+                            size 30
+                            color "#FFF"
+                elif catagory == PathBuilderCatagories.START_LOCATION:
+                    vbox:
+                        xalign 0.5
+
+                        default start_image_path = image_path_2 + "starts/"
+
+                        imagebutton:
+                            idle Transform(start_image_path + item.name +".webp", zoom=.8)
+                            selected get_selected(item)
+                            action [a for a in item.actions]
+                            xalign 0.5
+
+                        imagebutton:
+                            idle image_path + "button_idle_dark.webp"
+                            hover image_path + "button_hover.webp"
+                            selected_idle image_path + "button_hover.webp"
+                            selected get_selected(item)
+                            action [a for a in item.actions]
+                            xalign 0.5
+                            yoffset -35
+
+                        text item.name:
+                            align (0.5, 0.5)
+                            yoffset -87
+                            size 30
+                            color "#FFF"
+                else:
+                    vbox:
+                        xalign 0.5
+
+                        imagebutton:
+                            idle image_path + "button_idle.webp"
+                            hover image_path + "button_hover.webp"
+                            selected_idle image_path + "button_hover.webp"
+                            selected get_selected(item)
+                            action [a for a in item.actions]
+
+                        text item.name:
+                            align (0.5, 0.5)
+                            yoffset -50
+                            color "#FFF"
+
+            
+
 
         # Option to lock KCT
         if catagory == PathBuilderCatagories.KCT:
             hbox:
                 spacing 20
+                yoffset 40
                 
                 imagebutton:
                     idle "images/path builder/pb_tick.webp"
@@ -193,22 +256,28 @@ screen path_builder(catagory_step=1):
                 text "Lock KCT (Prevent it from changing)":
                     yoffset -7
 
-        hbox: 
-            spacing 200
+    hbox: 
+        spacing 50
+        align (0.5, 0.9)
 
-            textbutton "BACK":
-                xalign 0
-                selected False
-                if catagory_step > 1:
-                    action Show("path_builder", None, catagory_step - 1)
-                else:
-                    action ShowMenu("main_menu")
+        default button_img_path = "main_menu/path_builder/images/"
 
-            textbutton "CONTINUE":
-                xalign 1.0
-                selected False
-                if catagory_step < len(PathBuilderCatagories):
-                    sensitive any(get_selected(item) for item in items)
-                    action Show("path_builder", None, catagory_step + 1)
-                else:
-                    action Start(pb_start_location)
+        if catagory_step > 1:
+
+            imagebutton:
+                idle button_img_path + "back.webp"
+                action Show("path_builder", None, catagory_step - 1)
+        else:
+            imagebutton:
+                idle button_img_path + "back_blocked.webp"
+                action ShowMenu("main_menu")
+
+
+        imagebutton:
+            idle button_img_path + "continue.webp"
+
+            if catagory_step < len(PathBuilderCatagories):
+                sensitive any(get_selected(item) for item in items)
+                action Show("path_builder", None, catagory_step + 1)
+            else:
+                action Start(pb_start_location)
