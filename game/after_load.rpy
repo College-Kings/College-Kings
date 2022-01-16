@@ -354,6 +354,8 @@ label after_load:
         naomi.username = "NaomiXMarie"
         samantha.username = "SamFromSpaceJam"
 
+        if chloe.relationship == 4:
+            chloe.relationship = Relationship.MAD
 
         ## PHONE
         ### APPLICATIONS
