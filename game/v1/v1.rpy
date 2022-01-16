@@ -139,12 +139,14 @@ label starta: #for compatibility only
 
     scene v1jul1a
     with dissolve
+
     ju "Look at you, all grown-up. I'm so proud of you."
 
     scene s3f
     with dissolve
 
     ju "You better not forget to come visit."
+
     u "I'll think about it, if you make lasagna."
 
     scene v1jul1a
@@ -389,6 +391,7 @@ label starta: #for compatibility only
 
     scene s27
     with dissolve
+
     ma "Dude, that's my sister you're talking about!"
 
     stop music fadeout 3
@@ -496,8 +499,10 @@ label starta: #for compatibility only
             aut "He's uhm-"
 
             aut "Let's just say he doesn't have the best of tempers."
+
             scene s33c
             with dissolve
+
             aut "Anyways, I gotta go. Nice to meet you."
 
     label ad_db: #for compatibility only
@@ -638,6 +643,7 @@ label starta: #for compatibility only
 
     scene s46
     with fade
+
     ro "It seems that Elijah here fixed the laptop and we can start the induction. Thank you, Elijah."
 
     menu:
@@ -652,6 +658,7 @@ label starta: #for compatibility only
 
             scene s46b
             with dissolve
+
             el "..."
 
         "Stay quiet":
@@ -675,22 +682,22 @@ label starta: #for compatibility only
 
     play sound "sounds/clock2.mp3"
 
-    pause (0.5)
+    pause 0.5
 
     scene clockb
     with dissolve
 
-    pause (0.5)
+    pause 0.5
 
     scene clockc
     with dissolve
 
-    pause (0.5)
+    pause 0.5
 
     scene clockd
     with dissolve
 
-    pause (0.5)
+    pause 0.5
     stop sound
     scene clocke
     with dissolve
@@ -726,6 +733,7 @@ label starta: #for compatibility only
 
     scene s49
     with dissolve
+
     la "Sorry... I overheard you guys talking and I just wanted to say that... this fighting thing? It's really stupid."
 
     menu:
@@ -761,35 +769,43 @@ label starta: #for compatibility only
 
             scene s51a
             with dissolve
+
             u "Really?"
 
             scene s49
             with dissolve
+
             la "Yeah, most of the Deer for example."
 
     label af_db: #for compatibility only
     scene s51a
     with dissolve
+
     u "The Deer?"
 
     scene s52
     with dissolve
+
     la "They're one of the two sororities at San Vallejo. My sister Autumn is their President, so I know most of them quite well."
 
     scene s53a
     with dissolve
+
     u "Autumn? I've actually met her just before this class."
 
     scene s52
     with dissolve
+
     la "You did? I hope she didn't weird you out. She can be a bit much."
 
     scene s51a
     with dissolve
+
     u "Really? She was super nice to me."
 
     scene s49
     with dissolve
+
     la "Well... she's really passionate about political stuff and that can be a bit annoying haha."
 
     menu:
@@ -826,6 +842,7 @@ label starta: #for compatibility only
 
             scene s54
             with dissolve
+
             la "Haha, prince charming huh?"
 
             scene s53a
@@ -838,14 +855,17 @@ label starta: #for compatibility only
 
             scene s53a
             with dissolve
+
             u "Yeah, she's kinda cute."
 
             scene s49
             with dissolve
 
             la "She's always been the pretty one."
+
             scene s53a
             with dissolve
+
             u "Oh cmon, you're just as pretty."
 
             scene s54
@@ -918,6 +938,7 @@ label starta: #for compatibility only
         $ freeroam1.add("riley")
         
         scene s50ri
+        #with dissolve
 
         u "Hey, you were the girl sitting next to Elijah!"
 
@@ -977,6 +998,7 @@ label starta: #for compatibility only
 
                 scene s50ri1a
                 with dissolve
+
                 u "Next time, just sit with me. Sitting in the last row is where it's at."
 
                 scene s50ri4
@@ -1010,6 +1032,7 @@ label starta: #for compatibility only
 
     label v1_freeRoam1_riley2:
         scene s50ri1a
+        #with dissolve
 
         u "You should really consider sitting in the last row."
 
@@ -1099,6 +1122,7 @@ label starta: #for compatibility only
 
                 scene s50el2a
                 with dissolve
+
                 u "I think that's pretty cool."
 
                 scene s50el1
@@ -1111,12 +1135,14 @@ label starta: #for compatibility only
         call screen v1_freeRoam1_1
 
     label v1_freeRoam1_elijah2:
-        
         scene s50el1a
+        #with dissolve
+        
         u "Elijah?"
 
         scene s50el1
         with dissolve
+
         el "Leave me alone."
         
         call screen v1_freeRoam1_1
@@ -1125,31 +1151,40 @@ label starta: #for compatibility only
         $ freeroam1.add("chris")
     
         scene s55ch1
+        #with dissolve
+
         ch "Babe... you know I gotta prepare our rush party."
 
         scene s55ch1a
         with dissolve
+
         no "It's just annoying, you haven't come to mine in like a week."
 
         scene s55ch1
         with dissolve
+
         ch "Most years there's only one or two good fighters. I can't risk letting the Apes get them... Not again."
 
         scene s55ch1a
         with dissolve
+
         no "Then why did you even delay your guys' party by a week? Won't everyone have already joined the Apes by then?"
 
         scene s55ch2
         with dissolve
+
         ch "Naah, everyone will come to our party and since they've already been to the Apes' party, they'll be able to tell how much better the Wolves are."
 
         scene s55ch2a
         with dissolve
+
         no "Okay... well, I hope your plan works."
 
         scene s55ch2
         with dissolve
+
         ch "Trust me babe, it will."
+
         ch "Okay I have to find Aaron, we were gonna buy some new speakers for the party."
 
         scene s55ch3
@@ -1170,10 +1205,13 @@ label starta: #for compatibility only
         $ freeroam1.add("nora")
     
         scene s56no1a
+        #with dissolve
+
         u "Hey, could you tell me where the dorms are?"
 
         scene s56no1
         with dissolve
+
         no "They're right through the doors behind you."
 
         menu:
@@ -1190,6 +1228,7 @@ label starta: #for compatibility only
 
                 scene s56no1
                 with dissolve
+
                 no "Look, I've got a boyfriend, so keep it moving."
 
             "Leave":
@@ -1207,11 +1246,13 @@ label starta: #for compatibility only
         if nora.relationship >= Relationship.MOVE:
             scene s56no1
             with dissolve
+
             no "Dude, keep it moving."
 
         else:
             scene s56no1
             with dissolve
+
             no "I'm busy."
 
         call screen v1_freeRoam1_2
@@ -1228,8 +1269,11 @@ label starta: #for compatibility only
         show adam1
 
         au "Ohhh shit, that feels good!"
+
         u "(Oh my god... she's so fucking hot.)"
+
         au "YESSSSS, FASTER!"
+
         u "(I should probably stop peeking, before I get caught.)"
         
         stop music fadeout 3
@@ -1237,11 +1281,17 @@ label starta: #for compatibility only
 
     label v1_freeRoam1_aubrey2:
         scene s58
+        #with dissolve
+
         u "I shouldn't risk peeking again."
         call screen v1_freeRoam1_3
 
 label efra:
     scene s59
+    with dissolve
+    
+    pause 0.75
+    
     stop music fadeout 3
     play sound "sounds/knock.mp3"
     
@@ -1269,6 +1319,7 @@ label efra:
 
     scene s62a
     with dissolve
+    
     u "Oh, does she make a lot of \"sexy noises\"?"
 
     scene s63d
@@ -1282,9 +1333,12 @@ label efra:
     with dissolve
 
     u "I'm [name]... did you say Imre? First time I'm hearing that name."
+
     scene s63d
     with dissolve
+
     imre "It's Hungarian. My family and I moved to the States about eight years ago."
+
     scene s63e
     with dissolve
 
@@ -1292,9 +1346,12 @@ label efra:
 
     scene s63d
     with dissolve
+
     imre "And, I got some weights as well, so we can get a pump before going to parties."
+
     scene s63e
     with dissolve
+
     u "Haha, seems like you got it all figured out."
 
     scene s63d
@@ -1331,8 +1388,8 @@ label efra:
 
     scene s63
     with dissolve
+    
     imre "Yeah they did, but that doesn't mean shit. The Wolves have won 5 out of the last 10 years."
-
 
     menu:
         "So, they're equally good?":
@@ -1361,6 +1418,7 @@ label efra:
 
             scene s64a
             with dissolve
+
             u " Honestly, after listening to you, the Wolves sound sick!"
 
             scene s63d
@@ -1383,6 +1441,7 @@ label efra:
 
     scene s63e
     with dissolve
+
     u "Hmm... I'll give it a think."
 
     scene s63d
@@ -1416,6 +1475,7 @@ label efra:
     with dissolve
 
     imre "See, that's where you come in. None of my friends went to San Vallejo."
+
     imre "Instead, I thought my new roommate could invite a cute girl as well, so that it's not as awkward?"
 
     scene s61a
@@ -1469,10 +1529,12 @@ label efra:
 
             scene s61
             with dissolve
+
             imre "Did you ask?"
 
             scene s61
             with dissolve
+
             u "Oops I forgot."
 
             jump v1_phoneCheck1
@@ -1509,37 +1571,45 @@ label efra:
 
     scene s67
     with fade
+
     ri "Heyyyy!"
 
     scene s67a
     with dissolve
+
     imre "Hey, come on in Riley. This is my roommate [name]."
 
     if "riley" in freeroam1:
         scene s67
         with dissolve
+
         ri "Yeah, we've met."
 
         scene s67a
         with dissolve
+
         imre "Oh really?"
 
         scene s67a
         with dissolve
+
         u "Yeah, we were in the same induction class."
 
     else:
         scene s67
         with dissolve
+
         ri "Hey, you were in my induction class, right?"
 
         scene s67a
         with dissolve
+
         u "Yeah, that's right. Good to see you again."
 
     label talktorib: #for compatibility only
     scene s68
     with fade
+
     ri "Sooo, is it just us three for tonight?"
 
     scene s68a
@@ -1709,6 +1779,7 @@ label efra:
 
     scene s73ar
     with dissolve
+
     la "I think I'll drink."
 
     menu:
@@ -1790,6 +1861,7 @@ label efra:
 
     scene s71cf
     with dissolve
+
     ri "Take your shirt off."
 
     menu:
@@ -1830,6 +1902,7 @@ label efra:
     label ap_bd: #for compatibility only
     scene s71bl
     with dissolve
+
     ri "What?! Can he just dare me back like that?"
 
     scene s72r
@@ -1844,9 +1917,9 @@ label efra:
 
     imre "Nnnnnnice."
 
-
     scene s71cf
     with dissolve
+
     ri "So I feel like that dare is kinda unfair."
 
     menu:
@@ -1855,6 +1928,7 @@ label efra:
 
             scene s71ef
             with dissolve
+
             u "You gotta do the dare, or drink."
 
             scene s71cf
@@ -1872,12 +1946,13 @@ label efra:
             
             scene s71ef
             with dissolve
+
             u "You're right, let's continue."
 
+    label ar_bd: #for compatibility only
     scene s73cf
     with dissolve
 
-    label ar_bd: #for compatibility only
     la "Guys, I don't wanna kill the vibe, but we have class pretty early tomorrow and I don't wanna be late for my first Economics class."
 
     scene s72ef
@@ -1969,6 +2044,7 @@ label efra:
 
             scene s79
             with dissolve
+
             u "Hahaha, to be honest they're both pretty hot."
 
     scene s80
@@ -1994,6 +2070,7 @@ label at_bd:
 
     scene s80a
     with dissolve
+
     imre "Man, I'm not saying it's impossible, but why make it so hard for yourself?"
 
     imre "Being in a frat is the easiest way to get girls, plus you get to fight."
@@ -2082,12 +2159,14 @@ label at_bd:
 
     scene sda2a ## riley grabbing his dick and seeing both
     with dissolve
+
     " "
 
     scene sdakisso
     with dissolve
 
     " "
+
     u "(Okay, this is definitely a dream, but I do like where this is going.)"
 
     menu:
@@ -2111,6 +2190,7 @@ label at_bd:
 
             scene sda3a
             with dissolve
+
             ri "Tell me what you want."
 
             menu:
@@ -2194,11 +2274,12 @@ label at_bd:
 
             scene sda4c ## turning her around
             with dissolve
+
             u "Bend over."
 
             scene sda4d ## grabing her neck
             with dissolve
-            pause (0.5)
+            pause 0.5
             scene sda5 ## slamming her onto the counter
             with vpunch
 
@@ -2272,7 +2353,6 @@ label at_bd:
             scene aftercum
             show sdacum2
             with dissolve
-
             u "Hngh..."
 
             scene sda7
@@ -2374,6 +2454,7 @@ label v1_nsfwSkipLabel1:
 
     scene s83
     with dissolve
+
     ry "You know, 'cause the class is boring as shit, but at least the teacher's hot."
 
     scene s84 #showing ms rose bendt over forwards
@@ -2383,6 +2464,7 @@ label v1_nsfwSkipLabel1:
 
     scene s84a
     with dissolve
+
     ro "Good morning everyone. Welcome to your first economics class."
 
     ro "Today, we're gonna learn about-"
@@ -2405,27 +2487,28 @@ label v1_nsfwSkipLabel1:
     scene clocka
     with fade
 
-    pause (0.5)
+    pause 0.5
 
     scene clockb
     with dissolve
 
-    pause (0.5)
+    pause 0.5
 
     scene clockc
     with dissolve
 
-    pause (0.5)
+    pause 0.5
 
     scene clockd
     with dissolve
 
-    pause (0.5)
+    pause 0.5
 
     scene clocke
     with dissolve
-    # disscussiion after class with Lauren
 
+    pause 0.5
+    
     scene s86
     with fade
 
@@ -2434,16 +2517,22 @@ label v1_nsfwSkipLabel1:
     play music "music/m11punk.mp3"
     scene s86a
     with dissolve
+
     ri "Agreed. Also Ms. Rose offers no chances to show that we've actually done the prereading."
+
     scene s86b
     with dissolve
+
     ry "Yeah, 'cause she knows that no one actually does that shit anyways."
+
     scene s86a
     with dissolve
+
     ri "Uhm... right."
 
     scene s87a
     with dissolve
+
     u "So... trouble with your roommate?"
 
     scene s87
@@ -2457,6 +2546,7 @@ label v1_nsfwSkipLabel1:
 
             scene s87a
             with dissolve
+
             u "You should move in with me."
 
             scene s87b
@@ -2468,6 +2558,7 @@ label v1_nsfwSkipLabel1:
 
             scene s87c
             with dissolve
+
             u "How about we go to the park this afternoon? I'll bring some sandwiches and we'll make your day better."
 
         "Bad roommates suck":
@@ -2475,6 +2566,7 @@ label v1_nsfwSkipLabel1:
 
             scene s87a
             with dissolve
+
             u "I get that, bad roommates suck."
 
             scene s87
@@ -2484,13 +2576,15 @@ label v1_nsfwSkipLabel1:
 
             scene s87a
             with dissolve
+
             u "How about we go to the park this afternoon? I'll bring some sandwiches and we'll make your day better."
+
+    label au_bd: #for compatibility only
+    stop music fadeout 3
 
     scene s87b
     with dissolve
-    stop music fadeout 3
 
-    label au_bd: #for compatibility only
     la "Yeah, I'd like that."
 
     ### park with Lauren (secret sharing)
@@ -2573,10 +2667,12 @@ label v1_nsfwSkipLabel1:
         "You could get any guy":
             scene s89d
             with dissolve
+
             u "I bet you could get any guy you want."
 
             scene s89f
             with dissolve
+
             la "Uhm... thanks. Not really though, haha."
 
         "Yet, you're here with me":
@@ -2584,19 +2680,23 @@ label v1_nsfwSkipLabel1:
 
             scene s89d
             with dissolve
+
             u "And yet, you're here with me. How surprising."
 
             scene s89b
             with dissolve
+
             la "Okay Casanova, I'm pretty sure you invited me and not the other way around."
 
             scene s89d
             with dissolve
+
             u "Let's not get caught up on the details."
 
             u "I'm gonna assume that there's no jealous boyfriend or ex that'll beat me up after this?"
             scene s89
             with dissolve
+
             la "Don't worry, I haven't had a boyfriend since 10th grade."
 
             scene s89f
@@ -2629,38 +2729,43 @@ label v1_nsfwSkipLabel1:
 
     menu:
         "I'm still in love with my ex":
-
             scene s89d
             with dissolve
+
             u "Hmmm... okay. I'm - I'm still in love with my... ex."
 
             scene s89h
             with dissolve
+
             la "Oh shit... what happened between you guys?"
 
             scene s89j
             with dissolve
+
             u "I broke up with her a couple of months ago, 'cause she cheated on me."
 
             scene s89h
             with dissolve
+
             la "Damn... I'm really sorry."
 
             scene s89j
             with dissolve
+
             u "Yeah, it's whatever."
 
             u "Now it's time for your secret."
 
         "I've broken into an Ikea":
-
             $ v1_laurenPoints += 1
             scene s89d
             with dissolve
+
             u "Hmm... okay. A couple years ago me and my best friend Josh saw this video of a guy staying 24 hours in an Ikea store."
 
             scene s89j
             with dissolve
+
             u "It looked so cool that we decided to try the same thing."
 
             u "We were gonna hide inside the closets until they closed the doors."
@@ -2686,6 +2791,7 @@ label v1_nsfwSkipLabel1:
 
             scene s89j
             with dissolve
+
             u "Yeah, the stupid thing was that it triggered the silent alarm."
 
             u "Just a few minutes later we got escorted out by the police."
@@ -2775,7 +2881,6 @@ label aw_bd:
 
     u "It's not weird, it's just..."
 
-
     menu:
         "You're really beautiful":
             $ add_point(KCT.BOYFRIEND)
@@ -2784,6 +2889,7 @@ label aw_bd:
 
             scene s89
             with dissolve
+
             la "Awww."
 
         "You're not ugly":
@@ -2807,31 +2913,31 @@ label aw_bd:
             $ lauren.relationship = Relationship.MOVE
 
             if v1_laurenPoints == 2:
+                $ lauren.relationship = Relationship.KISS                
+
                 scene s90
                 with dissolve # kiss
-                $ lauren.relationship = Relationship.KISS
-                
+                play sound "sounds/kiss.mp3"
                 $ grant_achievement("romeo")
 
-                play sound "sounds/kiss.mp3"
-
-                " "
+                pause
 
                 scene s90a
                 with dissolve
 
-                " "
+                pause
 
             else:
                 scene s90a
                 with dissolve
 
-                " "
+                pause
 
         "Don't kiss her":
             scene s90b # you scratching your head
             with dissolve
-            " "
+
+            pause
 
     scene s89h
     with dissolve
@@ -2900,6 +3006,7 @@ label aw_bd:
     if lauren.relationship >= Relationship.KISS:
         scene s96a
         with dissolve
+
         u "I just don't get it..."
 
         u "I kissed her... and for a second she kissed me back."
@@ -2957,7 +3064,6 @@ label aw_bd:
     label backtophone: #for compatibility only
     u "I guess..."
 
-    scene s96c
     stop music fadeout 3
     play sound "sounds/vibrate.mp3"
 
@@ -2974,10 +3080,10 @@ label aw_bd:
             u "(I should really check who texted me.)"
             jump repeata
 
-    scene s96c
-    with dissolve
-    
     play music "music/m3punk.mp3"
+
+    scene s96c
+    with dissolve    
 
     u "Actually dude, I can't make tonight. I'm going to the Apes' rush party with my friend."
 
@@ -3119,8 +3225,8 @@ label v1_freeRoam2_sam:
     call screen v1_freeRoam2_1
 
 label v1_freeRoam2_sam2:
-
     scene s100a
+    #with dissolve
 
     u "(I don't wanna risk getting dragged into their argument.)"
 
@@ -3130,14 +3236,15 @@ label v1_freeRoam2_door:
     $ freeroam2.add("door")
     
     play music "music/mparty2.mp3"
-
     queue music [ "music/mparty3.mp3", "music/mparty4.mp3" ]
     
     scene s103
+    #with dissolve
 
     ry "Alright man, I'm gonna look around, I'll see you in a bit."
 
     scene s103a
+    with dissolve
 
     u "Cool."
 
@@ -3148,6 +3255,7 @@ label v1_freeRoam2_door:
 label v1_freeRoam2_pool:
     if not "josh" in freeroam2:
         scene s102
+        #with dissolve
 
         u "(I should talk to Josh first, I haven't seen him in a while.)"
 
@@ -3159,6 +3267,7 @@ label v1_freeRoam2_courtney:
     $ freeroam2.add("courtney")
 
     scene fr2co1
+    #with dissolve
 
     u "Hey there."
 
@@ -3221,6 +3330,7 @@ label v1_freeRoam2_josh:
     $ freeroam2.add("josh")
 
     scene fr2jo1a
+    #with dissolve
 
     jo "[name]! I didn't know you're also going to San Vallejo. *sniff*"
 
@@ -3487,6 +3597,7 @@ label v1_freeRoam2_josh:
 
 label v1_freeRoam2_josh2:
     scene s102
+    #with dissolve
 
     u "(I should talk to some other people around here and make some new friends.)"
 
@@ -3495,6 +3606,7 @@ label v1_freeRoam2_josh2:
 label v1_freeRoam2_stairs:
     if not "josh" in freeroam2:
         scene s102
+        #with dissolve
 
         u "(I should talk to Josh first, I haven't seen him in a while.)"
 
@@ -3505,6 +3617,7 @@ label v1_freeRoam2_stairs:
 label v1_freeRoam2_camp:
     if not "josh" in freeroam2:
         scene s102
+        #with dissolve
 
         u "(I should talk to Josh first, I haven't seen him in a while.)"
 
@@ -3524,10 +3637,13 @@ label v1_freeRoam2_mason:
     $ freeroam2.add("mason")
 
     scene fr2ma1
+    #with dissolve
+    
     ma "Eyyyy, you're the kid that tried to fight Cameron yesterday!"
 
     scene fr2ma1a
     with dissolve
+
     u "What? I didn't-"
 
     scene fr2ma1b
@@ -3582,6 +3698,7 @@ label v1_freeRoam2_mason:
             u "I need to go, but I'll talk to you later."
 
             scene s104
+            with dissolve
 
             u "(Oh no, what have I gotten myself into?!)"
 
@@ -3636,6 +3753,7 @@ label v1_freeRoam2_mason:
             u "I need to go, but I'll talk to you later."
 
             scene s104
+            with dissolve
 
             u "(Oh no, what have I gotten myself into?!)"
 
@@ -3644,6 +3762,7 @@ label v1_freeRoam2_mason:
 
 label v1_freeRoam2_mason2:
     scene s104
+    #with dissolve
 
     u "I've already talked to these guys."
 
@@ -3653,6 +3772,7 @@ label v1_freeRoam2_katy:
     $ freeroam2.add("katy")
 
     scene fr2ka1
+    #with dissolve
 
     katy "And then she said \"Those jeans look so good on you.\" Can you believe that?!"
 
@@ -3737,6 +3857,7 @@ label v1_freeRoam2_katy:
 
 label v1_freeRoam2_katy2:
     scene s104
+    #with dissolve
 
     u "(I'm definitely not going back there.)"
 
@@ -3746,6 +3867,7 @@ label v1_freeRoam2_grayson:
     $ freeroam2.add("grayson")
     
     scene fr2gr1
+    #with dissolve
 
     ca "Dude, all these freshmen are shit. I've been watching most of tonight's fights and they're garbage."
 
@@ -4205,8 +4327,10 @@ label fr2end: #for compatibility only
     with dissolve
 
     pause 0.5
+
     scene s120a
     with dissolve
+
     pause 0.5
 
     stop music
