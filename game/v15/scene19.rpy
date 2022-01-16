@@ -235,7 +235,7 @@ label v15s19:
             u "(I should check my phone.)"
             jump v15s19_PhoneContinueChloe
 
-    if v14_help_lindsey: # -if helping Lindsey TN: Helping Chloe and Lindsey are NOT mutually exclusive-- no else if
+    elif v14_help_lindsey:
         if v15_lindsey_gamenight: # -if helping Lindsey with Game night
             $ lindsey.messenger.newMessage("Hey, can you come meet me now to buy the alcohol for our game night? I have a plan. I'll send the details of which store to come to.", force_send=True)
             $ lindsey.messenger.addReply("Okay, sounds good.")
