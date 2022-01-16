@@ -574,11 +574,6 @@ screen file_slots(title):
         incompatible_game_versions = {"12.0.0", "0.6.4"}
         incompatible_renpy_versions = {"7.4.8.1895", "7.4.7.1862"}
 
-        game_version = FileJson(1, key="_version") or ""
-        renpy_version = FileJson(1, key="_renpy_version") or ""
-        renpy_version = '.'.join(str(i) for i in renpy_version)
-        file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
-
     add image_path + "background.webp"
 
     text "{} Game".format(title):
