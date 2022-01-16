@@ -8,6 +8,8 @@ init python:
     
 
     class PathBuilderItem:
+        items = []
+
         def __init__(self, catagory, name, actions=None):
             self.catagory = catagory
             self.name = name
@@ -16,7 +18,7 @@ init python:
             elif isinstance(actions, list): self.actions = actions
             else: self.actions = [actions]
 
-            pb_items.append(self)
+            PathBuilderItem.items.append(self)
 
 
     def get_catagory(step):
@@ -92,7 +94,7 @@ screen path_builder(catagory_step=1):
     default image_path = "main_menu/path_builder/images/"
 
     default catagory = get_catagory(catagory_step)
-    default items = [item for item in pb_items if item.catagory == catagory]
+    default items = [item for item in PathBuilderItem.items if item.catagory == catagory]
 
     default header = catagory.value
 
