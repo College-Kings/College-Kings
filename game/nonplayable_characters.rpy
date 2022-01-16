@@ -86,6 +86,9 @@ init python:
 
         @relationship.setter
         def relationship(self, value):
+            if not isinstance(value, Relationship):
+                raise TypeError("{} must be of type Relationship".format(value))
+
             self._relationship = value
             
             if value == Relationship.GIRLFRIEND:
