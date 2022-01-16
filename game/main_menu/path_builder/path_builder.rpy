@@ -19,8 +19,7 @@ init python:
         HOMECOMING_DATE = {
             5: "Pick your homecoming date",
             "background": "main_menu/path_builder/images/path_builder_step_5.webp"
-        }
-    
+        }     
 
     class PathBuilderItem:
         items = []
@@ -123,6 +122,20 @@ screen path_builder(catagory_step=1):
 
     add image_path + "path_builder_background.webp"
     add image_path + "path_builder_box_background.webp" align (0.5, 0.5)
+
+    vbox:
+        align (0.95,0.05)
+
+        imagebutton:
+            idle image_path + "button_idle.webp"
+            hover image_path + "button_hover.webp"
+            selected_idle image_path + "button_hover.webp"
+            action ShowMenu("path_builder_advanced_settings")
+
+        text "Advanced":
+            align (0.5, 0.5)
+            yoffset -50
+            color "#FFF"
 
     imagebutton:
         idle "gui/common/return_idle.webp"
@@ -250,3 +263,35 @@ screen path_builder(catagory_step=1):
                 action Show("path_builder", None, catagory_step + 1)
             else:
                 action Start(pb_start_location)
+
+screen path_builder_advanced_settings():
+    default image_path = "main_menu/path_builder/images/"
+    default button_img_path = "main_menu/path_builder/images/"
+    tag menu
+    modal True
+
+    add image_path + "path_builder_background.webp"
+
+    imagebutton:
+        idle "gui/common/return_idle.webp"
+        hover "gui/common/return_hover.webp"
+        action ShowMenu("path_builder")
+        align (0.015, 0.015)
+
+    vbox:
+        align (0.25, 0.5)
+        hbox:
+                    spacing 20
+                    yoffset 40
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("locked_kct")
+
+                    text "Lock KCT (Prevent it from changing)":
+                        yoffset -7
+    
+
+
