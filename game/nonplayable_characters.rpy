@@ -148,7 +148,8 @@ init python:
             self.__init__(self.name)
 
             for var, value in attrs.items():
-                setattr(self, var, value)  
+                try: setattr(self, var, value)
+                except AttributeError: continue
 
         def kill(self):
             # Check Competitive stat
