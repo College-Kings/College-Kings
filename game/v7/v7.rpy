@@ -8878,7 +8878,7 @@ label wolves_ceremony:
 ############# RILEY TEXT
 
 label rileytext:
-    if riley.relationship > Relationship.LIKES:
+    if riley.relationship >= Relationship.LIKES:
         play sound "sounds/vibrate.mp3"
 
         $ riley.messenger.newMessage(_("Wanna come over? ;)"), force_send=True)
