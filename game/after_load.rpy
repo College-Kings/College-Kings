@@ -163,7 +163,7 @@ label after_load:
         if isinstance(josh, CustomCharacter):
             josh = NonPlayableCharacter("Josh", "Josh80085")
 
-        for character in NonPlayableCharacter.Characters
+        for character in NonPlayableCharacter.Characters:
             character.__after_load__()
 
         ## Relationship types
