@@ -4,7 +4,7 @@
 # Time: Saturday Morning
 
 label v9_ri_sex:
-    sceneList.add("v9_riley")
+    $ sceneList.add("v9_riley")
 
     scene v9ris1 # TPP. Show MC outside Riley's dorm knocking on the door.
     with fade
