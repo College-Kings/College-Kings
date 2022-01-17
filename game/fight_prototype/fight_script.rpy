@@ -1,5 +1,7 @@
 label fight_test:
 
+    show screen opponent_health_bar(opp_health)
+
     call screen player_attack
 
 label fight_test_insult:
@@ -47,6 +49,9 @@ label fight_test_hook:
         scene hook2pic
         with vpunch
 
+        $ opp_health -= 10
+        show screen opponent_health_bar(opp_health)
+
         show screen fight_popup("PHYSICAL HIT")
 
         pause 1
@@ -57,6 +62,8 @@ label fight_test_hook:
 
         scene hook1pic
         with vpunch
+
+        $ opp_health -= 2
 
         show screen fight_popup("BLOCKED")
 
@@ -98,6 +105,8 @@ label fight_test_jab:
 
             scene jab2pic
             with vpunch
+
+            $ opp_health -= 5
 
             show screen fight_popup("PHYSICAL HIT")
 
