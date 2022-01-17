@@ -420,3 +420,4 @@ default v15s7_chloe_empathize = False
 default v15s33_sambuca = False
 default v15s9_wedding_date = False
 default v15s36_autumn_kiss = False
+default v1502fix = False

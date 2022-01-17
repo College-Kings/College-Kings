@@ -1043,6 +1043,101 @@ label after_load:
         try: v14_ryan_satin
         except NameError: v14_ryan_satin = False
 
+        # v1502 fixes:
+        
+        if renpy.loadable("v15/scene1.rpy") and not v1502fix:
+            if ms_rose.relationship == Relationship.FRIEND:
+                if v15_threaten_ms_rose:
+                    ms_rose.relationship = Relationship.THREATEN
+                
+                elif any(scene in sceneList for scene in ("v11_rose", "v12_rose", "v15_rose")):
+                    ms_rose.relationship = Relationship.FWB
+            
+            if chloe.relationship == Relationship.FRIEND:
+                if (v15s7_chloe_empathize and chloeSus > 2) or (not v15s7_chloe_empathize and chloeSus > 1):
+                    chloe.relationship = Relationship.GIRLFRIEND
+                
+                elif meetchloe and hcGirl == "chloe" and ending == "chloe":
+                    chloe.relationship = Relationship.GIRLFRIEND # don't have another way of checking if the question was asked, so we'll give this status for free
+                
+                elif any(scene in sceneList for scene in ("v8_chloe", "v10_chloe", "v11_chloe", "v13_chloe", "v14_chloe")):
+                    chloe.relationship = Relationship.FWB
+                
+                elif chloeSus == 1 + v15s7_chloe_empathize:
+                    chloe.relationship = Relationship.FWB
+            
+            if emily.relationship == Relationship.FRIEND:
+                if any(scene in sceneList for scene in ("v6_emily", "v9_emily", "v13_emily")):
+                    emily.relationship = Relationship.FWB
+                
+            if aubrey.relationship == Relationship.FRIEND:
+                if "v15_naomi" in sceneList:
+                    aubrey.relationship = Relationship.MAD
+                
+                elif achievement.has("polycurious"):
+                    if any(scene in sceneList for scene in ("v3_aubrey", "v6_aubrey")):
+                        aubrey.relationship = Relationship.FWB
+                
+                elif v13s48_canoeing_as_date and v15s9_wedding_date:
+                    aubrey.relationship = Relationship.TAMED
+                
+                elif "v3_aubrey" in sceneList or "v6_aubrey" in sceneList:
+                    aubrey.relationship = Relationship.FWB
+            
+            if lauren.relationship == Relationship.FRIEND:
+                if any(scene in sceneList for scene in ("v10_lauren", "v12_lauren")):
+                    lauren.relationship = Relationship.GIRLFRIEND
+                
+                # elif lauren.points >= 4 or (lauren.points == 2 and v11_hp_points < 3) or (lauren.points == 0 and v11_hp_points < 2) or (lauren.points == -2 and v11_hp_points == 0): lauren.relationship = Relationship.GIRLFRIEND
+                elif lauren.points >= v11_hp_points * 2 - 2 and not "v11_aubrey" in sceneList:
+                    lauren.relationship = Relationship.GIRLFRIEND
+                                
+                elif "v15_lauren" in sceneList:
+                    lauren.relationship = Relationship.FWB
+            
+            if amber.relationship == Relationship.FRIEND:
+                if any(scene in sceneList for scene in ("v8_amber", "v8_amber2", "v10_amber", "v14_amber")):
+                    amber.relationship = Relationship.FWB
+                
+            if jenny.relationship == Relationship.FRIEND:
+                if "v14_jenny" in sceneList:
+                    jenny.relationship = Relationship.FWB
+                
+            if lindsey.relationship == Relationship.FRIEND:
+                if "v12_lindsey" in sceneList:
+                    lindsey.relationship = Relationship.FWB
+
+                elif "v9_lindsey" in sceneList:
+                    lindsey.relationship = Relationship.KISS
+            
+            if samantha.relationship == Relationship.FRIEND:
+                if "v14_samantha" in sceneList: samantha.relationship = Relationship.FWB
+
+                elif "v11_samantha" in sceneList: samanatha.relationship = Relationship.MOVE
+            
+            if candy.relationship == Relationship.FRIEND:
+                if "v11_candy" in sceneList:
+                    candy.relationship = Relationship.FWB
+                
+            if riley.relationship == Relationship.FRIEND:
+                if achievement.has("polycurious"):
+                    riley.relationship = Relationship.LOYAL
+            
+                elif any(scene in sceneList for scene in ("v7_riley", "v8_riley", "v10_riley", "v11_riley", "v13_riley")):
+                    riley.relationship = Relationship.FWB
+                
+                elif achievement.has("lips_dont_lie"):
+                    riley.relationship = Relationship.LIKES # technically it should be MOVE, but we're feeling generous
+            
+            if penelope.relationship == Relationship.FRIEND:
+                if v14_penelope_date and not (v15s18a_showlist_penelope_autumn and lauren.relationship == Relationship.GIRLFRIEND):
+                    penelope.relationship = Relationship.LOYAL
+
+                elif v14_penelope_date or achievement.has("cross_your_heart"):
+                    penelope.relationship = Relationship.LIKES
+                       
+            v1502fix = True
+
 
     call setup from _call_setup
 
