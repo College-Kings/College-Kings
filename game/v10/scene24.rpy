@@ -296,7 +296,6 @@ label v10_lauren_room:
                 pause
 
                 if lauren.relationship >= Relationship.GIRLFRIEND or (lauren.relationship >= Relationship.KISS and kct == "loyal"):
-
                     if lauren.relationship < Relationship.GIRLFRIEND:
                         $ lauren.relationship = Relationship.GIRLFRIEND
                         call screen kct_popup

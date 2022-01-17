@@ -115,7 +115,7 @@ label v15s22:
                     cl "Let's hope she's in a good mood."
 
                 "Lie":
-                    if chloe.relationship >= Relationship.FWB:
+                    if chloe.relationship >= Relationship.GIRLFRIEND:
                         $ add_point(KCT.TROUBLEMAKER)
                         $ chloeSus += 1
                     else:
