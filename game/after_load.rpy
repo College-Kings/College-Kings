@@ -889,6 +889,9 @@ label after_load:
         try:
             if v13s37_frnora: freeroam11.add("nora")
         except NameError: pass
+        try:
+            if v9_sex_with_riley: sceneList.add("v9_riley")
+        except NameError: pass
 
 
         # v12 Renpy Fixes:
@@ -1125,7 +1128,7 @@ label after_load:
                 if achievement.has("polycurious"):
                     riley.relationship = Relationship.LOYAL
             
-                elif any(scene in sceneList for scene in ("v7_riley", "v8_riley", "v10_riley", "v11_riley", "v13_riley")):
+                elif any(scene in sceneList for scene in ("v7_riley", "v8_riley", "v9_riley", "v10_riley", "v11_riley", "v13_riley")):
                     riley.relationship = Relationship.FWB
                 
                 elif achievement.has("lips_dont_lie"):
