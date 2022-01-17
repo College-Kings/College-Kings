@@ -172,6 +172,7 @@ default s28_fightWinner = "MC"
 default sideWithCameron = False
 default simLarsFight = False
 default v8_dodged_pipe = False
+default musicstop = False
 
 # 9.0
 default dreamFightChoice = "na"
