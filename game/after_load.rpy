@@ -1099,6 +1099,14 @@ label after_load:
                                 
                 elif "v15_lauren" in sceneList:
                     lauren.relationship = Relationship.FWB
+
+            if lauren.relationship == Relationship.GIRLFRIEND:
+                if autumn.relationship == Relationship.FWB:
+                    autumn.relationship = Relationship.LOYAL
+                    
+            if autumn.relationship == Relationship.FRIEND:
+                if AutumnTrust:
+                    autumn.relationship = Relationship.LOYAL
             
             if amber.relationship == Relationship.FRIEND:
                 if any(scene in sceneList for scene in ("v8_amber", "v8_amber2", "v10_amber", "v14_amber")):
@@ -1140,7 +1148,7 @@ label after_load:
 
                 elif v14_penelope_date or achievement.has("cross_your_heart"):
                     penelope.relationship = Relationship.LIKES
-                       
+
             v1502fix = True
 
 
