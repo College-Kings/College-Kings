@@ -263,6 +263,7 @@ default v12s7_lindsey_moved = False
 default v12s7_riley_moved = False
 default v12s7_seenList = []
 default v12s7_victims = 12 #Amber, Aubrey, Charli, Chloe, Chris, Imre, Lauren, Lindsey, Nora, Riley, Rose, Ryan + Emily, Josh, Penelope, Samantha. Cameron and Lee don't count.
+default v12_followed_nora = False
 
 # 13.0
 default chloeSus = 0
@@ -371,7 +372,6 @@ default aubrey_riley_awkward = False
 default dog_name = "Blue"
 default freeroam13 = set() # halloween, part 1 (18a)
 default freeroam14 = set() # halloween, part 2 (18c)
-default v12_followed_nora = False
 default v15_autumn_freemug = False
 default v15_autumn_lunchbreak = False
 default v15_autumn_smoke = False
