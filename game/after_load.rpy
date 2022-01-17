@@ -1059,7 +1059,7 @@ label after_load:
                     ms_rose.relationship = Relationship.FWB
             
             if chloe.relationship == Relationship.FRIEND:
-                if (v15s7_chloe_empathize and chloeSus > 2) or (not v15s7_chloe_empathize and chloeSus > 1):
+                if chloeSus > 1 + v15s7_chloe_empathize:
                     chloe.relationship = Relationship.GIRLFRIEND
                 
                 elif meetchloe and hcGirl == "chloe" and ending == "chloe":
