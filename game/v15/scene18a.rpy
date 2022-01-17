@@ -2218,6 +2218,8 @@ label v15s18a_ChrisAmber:
                 with dissolve
 
                 am "Okay, good luck. I'll find you later."
+                
+                call screen v15s18a_room
 
             "Mention the list":
                 $ add_point(KCT.TROUBLEMAKER)
@@ -2505,6 +2507,8 @@ label v15s18a_ChrisAmber:
                     $ renpy.end_replay()
 
                     pause 0
+                    
+                    call screen v15s18a_upstairsroom
 
                 else:
                     call screen kct_popup(required_kct="popular")
@@ -2521,7 +2525,7 @@ label v15s18a_ChrisAmber:
 
                     am "Good luck!"
 
-        call screen v15s18a_upstairsroom
+                    call screen v15s18a_room
 
 # Upstairs
 # Location 7- Upstairs hallway
