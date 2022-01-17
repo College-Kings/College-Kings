@@ -994,7 +994,7 @@ label v14s47_end:
 
 
     $ v14s47_kiwiiPost1 = KiwiiPost(lindsey, "v14/v14s47_lindsey_kiwii.webp", "Making big moves ;)", numberLikes=720)
-    # $ v14s47_kiwiiPost1.newComment(nora, "Kick ass babe <3", force_send=True, numberLikes=259)
+    $ v14s47_kiwiiPost1.newComment(nora, "Kick ass babe <3", force_send=True, numberLikes=259)
     $ v14s47_kiwiiPost1.newComment(aubrey, "Aww, look at your cute little button!", force_send=True, numberLikes=623)
     $ v14s47_kiwiiPost1.newComment(riley, "I have one too :) Hehe.", force_send=True, numberLikes=367)
     $ v14s47_kiwiiPost1.newComment(sebastian, "Looking all official now, Linds!", force_send=True, numberLikes=108)

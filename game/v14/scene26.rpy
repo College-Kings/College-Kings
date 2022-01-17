@@ -278,7 +278,7 @@ label v14s26:
         #Selfie with Lauren in front of slogan banner that says Lindsey, Returning The Promise
         $ v14s26_kiwiiPost1 = KiwiiPost(lindsey, "v14/v14kw26.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! For the future of the Chicks! <3", mentions=[lauren], numberLikes=748)
         $ v14s26_kiwiiPost1.newComment(lauren, "#Vote4Lindsey! <3", force_send=True, numberLikes=382)
-        # $ v14s26_kiwiiPost1.newComment(nora, "Cuties <3", numberLikes=renpy.random.randint(150, 300), force_send=True)
+        $ v14s26_kiwiiPost1.newComment(nora, "Cuties <3", numberLikes=renpy.random.randint(150, 300), force_send=True)
         $ v14s26_kiwiiPost1.newComment(imre, "Actually that cookie this morning made me shit myself!", numberLikes=renpy.random.randint(150, 300), force_send=True)
         $ v14s26_kiwiiPost1.newComment(chloe, "Eww...", numberLikes=renpy.random.randint(150, 300), force_send=True)
         $ v14s26_kiwiiPost1.newComment(lauren, "Oh, is that why you came back for three more?", mentions=[imre], numberLikes=renpy.random.randint(150, 300), force_send=True)
@@ -294,7 +294,7 @@ label v14s26:
         #Selfie with Lauren in front of slogan banner that says Lindsey, Say Bye To The Bullshit
         $ v14s26_kiwiiPost2 = KiwiiPost(lindsey, "v14/v14kw26_1.webp", "Don't forget to stop by and pick up one of Lauren's famous cakes today! For the future of the Chicks! <3", mentions=[lauren], numberLikes=748)
         $ v14s26_kiwiiPost2.newComment(lauren, "#Vote4Lindsey! <3", numberLikes=renpy.random.randint(300, 600), force_send=True)
-        # $ v14s26_kiwiiPost2.newComment(nora, "Cuties <3", numberLikes=renpy.random.randint(300, 600), force_send=True)
+        $ v14s26_kiwiiPost2.newComment(nora, "Cuties <3", numberLikes=renpy.random.randint(300, 600), force_send=True)
         $ v14s26_kiwiiPost2.newComment(imre, "Actually that cookie this morning made me shit myself!", numberLikes=renpy.random.randint(300, 600), force_send=True)
         $ v14s26_kiwiiPost2.newComment(chloe, "Eww...", numberLikes=renpy.random.randint(300, 600), force_send=True)
         $ v14s26_kiwiiPost2.newComment(lauren, "Oh, is that why you came back for three more?", mentions=[imre], numberLikes=renpy.random.randint(300, 600), force_send=True)
