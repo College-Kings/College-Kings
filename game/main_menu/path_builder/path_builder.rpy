@@ -37,7 +37,7 @@ init python:
 
     class PathBuilderGirl(PathBuilderItem):
         def __init__(self, catagory, name, kct, actions):
-            PathBuilderItem.__init__(catagory, name, actions)
+            PathBuilderItem.__init__(self, catagory, name, actions)
 
             self.kct = kct
 
@@ -176,9 +176,10 @@ screen path_builder():
                                 size 30
                                 color "#FFF"
 
-                            text "Loyal": # This could show the kct for each girl
-                                size 15
-                                color "#FFD166"
+                            if isinstance(item, PathBuilderGirl):
+                                text item.kct: # This could show the kct for each girl
+                                    size 15
+                                    color "#FFD166"
 
                         
                 elif catagory == PathBuilderCatagories.START_LOCATION:
@@ -301,6 +302,8 @@ screen path_builder_advanced_settings():
 
             text "Unlimited Presidency Campaign Budget":
                 yoffset -7
+
+        textbutton "Enable KCT Hints"
     
 
 style path_builder_advanced_settings_text is bebas_neue_30
