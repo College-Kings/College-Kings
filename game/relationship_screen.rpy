@@ -42,19 +42,19 @@ screen relationship_screen():
                             size 15
                             color "#FFD166"
                             xoffset 120
-                    elif girl.relationship.value < Relationship.KISS: # Penelope needs an exception
+                    elif girl.relationship < Relationship.KISS: # Penelope needs an exception
                         text "Friends":
                             size 15
                             color "#FFD166"
                             xoffset 120
 
-                    elif girl.relationship.value == Relationships.KISS:
+                    elif girl.relationship == Relationships.KISS:
                         text "Kissed":
                             size 15
                             color "#FFD166"
                             xoffset 120
 
-                    elif girl.relationship.value == Relationship.FWB:
+                    elif girl.relationship == Relationship.FWB:
                         text "Friends with Benefits":
                             size 15
                             color "#FFD166"
