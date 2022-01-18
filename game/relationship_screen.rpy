@@ -9,6 +9,8 @@ screen relationship_screen():
 
     add image_path + "path_builder_box_background.webp" align (0.5, 0.5)
 
+    button action Hide("relationship_screen")
+
     text "Your Relationships" xalign 0.5 ypos 300
 
 
@@ -48,10 +50,16 @@ screen relationship_screen():
                             color "#FFD166"
                             xoffset 120
                     elif girl.relationship < Relationship.KISS: # Penelope needs an exception
-                        text "Friends":
-                            size 15
-                            color "#FFD166"
-                            xoffset 120
+                        if girl == "penelope" and girl.relationship < Relationship.LIKES:
+                            text "Kissed":
+                                size 15
+                                color "#FFD166"
+                                xoffset 120                             
+                        else:
+                            text "Friends":
+                                size 15
+                                color "#FFD166"
+                                xoffset 120
 
                     elif girl.relationship == Relationship.KISS:
                         text "Kissed":

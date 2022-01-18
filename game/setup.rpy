@@ -9,6 +9,7 @@ init python:
         phone.applications.append(achievement_app)
         phone.applications.append(kiwii)
         phone.applications.append(simplr_app)
+        phone.applications.append(relationship_app)
 
 
         # Set up murder mystery stats
