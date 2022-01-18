@@ -364,10 +364,8 @@ label after_load:
             if kiwii is False:
                 kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=False)
 
-        # Transfer simplrApp to simplr_app
-        try:
-            simplr_app.locked = simplrApp.locked
-        except NameError: pass
+        # Unlock simplr_app
+        simplr_app.unlock()
 
         ### MESSENGER
         #### MESSENGER CONTRACTS
