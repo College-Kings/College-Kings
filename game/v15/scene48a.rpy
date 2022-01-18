@@ -859,6 +859,8 @@ label v15s48a_end:
     menu (fail_label="v15s48a_cum"):
         "Cum inside Nora":
             label v15s48a_cum:
+            
+            $ v15_nora_cum = True
         
             scene v15s48aend_11a
             with vpunch

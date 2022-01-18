@@ -417,6 +417,7 @@ default v15s42_grab_breakfast = False
 default v15s48_follow_your_heart = False
 default v15s48_interrupt = False
 default v15s48a_norapoints = 0
+default v15_nora_cum = False
 default v15s7_chloe_empathize = False
 default v15s33_sambuca = False
 default v15s9_wedding_date = False
