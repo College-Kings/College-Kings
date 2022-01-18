@@ -58,13 +58,13 @@ label path_builder_setup:
                 ToggleVariable("emily_europe"),
                 ToggleVariable("v14_emily_ily")])
 
-        PB_ACT_1 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 1 Start", actions=SetVariable("start_location", "start"))
+        PB_ACT_1 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 1 Start", actions=SetScreenVariable("start_label", "start"))
         if renpy.loadable("v8/scene1.rpy"):
-            PB_ACT_2 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 2 Start", actions=SetVariable("start_location", "v7_homecoming"))
+            PB_ACT_2 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 2 Start", actions=SetScreenVariable("start_label", "v7_homecoming"))
         if renpy.loadable("v11/scene1.rpy"):
-            PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 3 Start", actions=SetVariable("start_location", "v11_start"))
+            PB_ACT_3 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 3 Start", actions=SetScreenVariable("start_label", "v11_start"))
         if renpy.loadable("v14/scene1.rpy"):
-            PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", actions=SetVariable("start_location", "v14_start"))
+            PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", actions=SetScreenVariable("start_label", "v14_start"))
 
         HC_CHLOE = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Chloe",actions=ToggleVariable("hcGirl", "chloe"))
         HC_RILEY = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Riley",actions=ToggleVariable("hcGirl", "riley"))

@@ -41,20 +41,6 @@ init python:
                 return catagory
         return None
 
-    def get_selected(item):
-        for a in item.actions:
-            try:
-                if a.true_value is None:
-                    a.true_value = True
-
-                if getattr(a.object, a.field) != a.true_value:
-                    return False
-            except AttributeError:
-                if getattr(a.object, a.field) != a.value:
-                    return False
-
-        return True
-
 
 screen path_builder_alert():
     modal True
@@ -101,7 +87,7 @@ screen path_builder_alert():
 
 style path_builder_alert_text is bebas_neue_30
 
-screen path_builder(catagory_step=1):
+screen path_builder():
     tag menu
     modal True
 
@@ -114,10 +100,13 @@ screen path_builder(catagory_step=1):
         11: (4, 3),
         12: (4, 3),
     }
+    
+    default catagory_step = 1
+    default start_label = "start"
 
-    default catagory = get_catagory(catagory_step)
-    default items = [item for item in PathBuilderItem.items if item.catagory == catagory]
-    default heading = catagory.value[catagory_step]
+    $ catagory = get_catagory(catagory_step)
+    $ items = [item for item in PathBuilderItem.items if item.catagory == catagory]
+    $ heading = catagory.value[catagory_step]
 
     $ cols, rows = grid_size[len(items)]
 
@@ -168,7 +157,7 @@ screen path_builder(catagory_step=1):
                         idle_background image_path + "girls/{}_idle.webp".format(item.name)
                         hover_background image_path + "girls/{}.webp".format(item.name)
                         selected_idle_background image_path + "girls/{}.webp".format(item.name)
-                        selected get_selected(item)
+                        selected all([a.get_selected() for a in item.actions])
                         action [a for a in item.actions]
                         xysize (307, 112)
 
@@ -193,7 +182,7 @@ screen path_builder(catagory_step=1):
 
                         imagebutton:
                             idle Transform(start_image_path + item.name +".webp", zoom=.8)
-                            selected get_selected(item)
+                            selected all([a.get_selected() for a in item.actions])
                             action [a for a in item.actions]
                             xalign 0.5
 
@@ -201,7 +190,7 @@ screen path_builder(catagory_step=1):
                             idle image_path + "button_idle_dark.webp"
                             hover image_path + "button_hover.webp"
                             selected_idle image_path + "button_hover.webp"
-                            selected get_selected(item)
+                            selected all([a.get_selected() for a in item.actions])
                             action [a for a in item.actions]
                             xalign 0.5
                             yoffset -35
@@ -219,7 +208,7 @@ screen path_builder(catagory_step=1):
                             idle image_path + "button_idle.webp"
                             hover image_path + "button_hover.webp"
                             selected_idle image_path + "button_hover.webp"
-                            selected get_selected(item)
+                            selected all([a.get_selected() for a in item.actions])
                             action [a for a in item.actions]
 
                         text item.name:
@@ -263,10 +252,10 @@ screen path_builder(catagory_step=1):
             idle button_img_path + "continue.webp"
 
             if catagory_step < len(PathBuilderCatagories):
-                sensitive any(get_selected(item) for item in items)
-                action Show("path_builder", None, catagory_step + 1)
+                sensitive any(all([a.get_selected() for a in item.actions]) for item in items)
+                action SetScreenVariable("catagory_step", catagory_step + 1)
             else:
-                action Start("setup")
+                action Start(start_label)
 
 
 screen path_builder_advanced_settings():

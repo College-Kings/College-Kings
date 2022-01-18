@@ -6,9 +6,7 @@ define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
 define config.default_sfx_volume = 1
 default menu_set = set()
-default achievementAtList = None
 
-default start_location = "start"
 default name = "Alex"
 default realmode = False
 default showkct = True
@@ -349,7 +347,7 @@ default v14s4_tell_imre = False
 default v14s41a_standup = False #stand up for Chloe during the Apes meeting
 default v14s46a_love_lauren_more = False # MC love Lauren more because of her sex experimenting on MC.
 default v14s47_car_pics = []
-default v14s48_car_description = CarDescription.LIE
+default v14s48_car_description = None
 default v14s48_car_price = 100
 default v14s50_listen_to_aubrey_lindsey = 0 # MC choses to listen to Lindsey and Aubrey's conversation. 
 default freeroam12 = set() #chloe heist
