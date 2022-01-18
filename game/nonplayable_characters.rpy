@@ -180,6 +180,14 @@ init python:
         def reset_points(self):
             self.points = 0
 
+
+    def nonplayable_character_setup():
+        beth.simplr
+        iris.simplr
+        samantha.simplr
+        emmy.simplr
+
+
 default aaron = NonPlayableCharacter("Aaron", "DoubleARon")
 default adam = NonPlayableCharacter("Adam", "A.D.A.M.")
 default amber = NonPlayableCharacter("Amber", "Amber_xx") # Relationship progression: FRIEND, KISS, FWB
@@ -225,13 +233,3 @@ default satin = NonPlayableCharacter("Satin") # Relationship progression: FRIEND
 default sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
 default trainer = NonPlayableCharacter("Trainer")
 default wolf = NonPlayableCharacter("Wolf")
-
-
-label nonplayable_characters_setup:
-    python:
-        beth.simplr
-        iris.simplr
-        samantha.simplr
-        emmy.simplr
-
-    return

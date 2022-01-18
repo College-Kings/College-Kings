@@ -56,6 +56,8 @@ init 100 python:
 
 label after_load:
     python:
+        setup()
+
         # SAVE FIXES:
 
         # Disable skip transitions
@@ -1156,13 +1158,6 @@ label after_load:
                     penelope.relationship = Relationship.LIKES
 
             v1502fix = True
-
-
-    call setup from _call_setup
-
-    show no_hard_feelings at achievementShow
-    $ achievementAtList = renpy.get_at_list("no_hard_feelings")
-    hide no_hard_feelings
 
     show screen phone_icon
     hide screen phone

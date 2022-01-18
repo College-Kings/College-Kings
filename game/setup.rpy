@@ -1,7 +1,7 @@
-label setup:
-    call nonplayable_characters_setup from _call_nonplayable_characters_setup
-
-    python:
+init python:
+    def setup():
+        nonplayable_character_setup()
+        
         # Phone Setup
         phone.applications = []
         phone.applications.append(messenger)
@@ -41,11 +41,3 @@ label setup:
         charli.stats["Talkative"] = False
 
         josh.stats["Competitive"] = True
-
-    # Renpy Script
-    # Get Animation/Transform List
-    show no_hard_feelings at achievementShow
-    $ achievementAtList = renpy.get_at_list("no_hard_feelings")
-    hide no_hard_feelings
-
-    jump expression start_location
