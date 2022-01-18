@@ -361,8 +361,7 @@ label after_load:
             kiwii.contacts = []
             del kiwiiApp
         except NameError:
-            if kiwii is False:
-                kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=False)
+            kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=False)
 
         # Unlock simplr_app
         simplr_app.unlock()
