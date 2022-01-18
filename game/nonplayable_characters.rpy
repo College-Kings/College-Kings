@@ -1,4 +1,9 @@
 init python:
+    class Frat(Enum):
+        APES = 0
+        WOLVES = 1
+
+
     class Relationship(Enum):
         MAD = -4
         THREATEN = -3
