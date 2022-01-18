@@ -35,6 +35,13 @@ init python:
             PathBuilderItem.items.append(self)
 
 
+    class PathBuilderGirl(PathBuilderItem):
+        def __init__(self, catagory, name, kct, actions):
+            PathBuilderItem.__init__(catagory, name, actions)
+
+            self.kct = kct
+
+
     def get_catagory(step):
         for catagory in PathBuilderCatagories:
             if step in catagory.value:
