@@ -61,9 +61,11 @@ label after_load:
         # Disable skip transitions
         preferences.transitions = 2
 
-        if renpy.loadable("v8/scene1.rpy") and not musicstop:
-            renpy.music.stop(channel=u'music')
-            musicstop = True
+        try:
+            if renpy.loadable("v8/scene1.rpy") and not musicstop:
+                renpy.music.stop(channel=u'music')
+                musicstop = True
+        except NameError: pass
 
         ## PLAYABLE CHARACTERS
         if isinstance(mc, FightCharacter) or isinstance(mc, MainCharacter):
