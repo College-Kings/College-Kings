@@ -5,7 +5,7 @@ screen relationship_screen():
     add "darker_80"
 
     default image_path = "main_menu/path_builder/images/"
-    default relationship_girls = [chloe, lindsey]
+    default relationship_girls = [amber, aubrey, autumn, chloe, emily, jenny, lauren, lindsey, ms_rose, nora, penelope, samantha, riley]
 
     add image_path + "path_builder_box_background.webp" align (0.5, 0.5)
 
@@ -17,13 +17,18 @@ screen relationship_screen():
         align (0.5, 0.5)
 
         vpgrid:
+            #scrollbars "vertical"
+            mousewheel True
+            draggable True
             cols 4
-            rows 3
-            xspacing 10
+            rows 5
+            xspacing 30
             xalign 0.5
             yoffset 40
+            ysize 500
+            xsize 1550
 
-            for girl in relationship_girls:
+            for girl in relationship_girls if :
 
                 vbox:
                     xpos 120
@@ -48,7 +53,7 @@ screen relationship_screen():
                             color "#FFD166"
                             xoffset 120
 
-                    elif girl.relationship == Relationships.KISS:
+                    elif girl.relationship == Relationship.KISS:
                         text "Kissed":
                             size 15
                             color "#FFD166"
