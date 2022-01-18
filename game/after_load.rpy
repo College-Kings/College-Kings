@@ -1164,5 +1164,7 @@ label after_load:
 
     if config.developer:
         show screen bugTesting_Overlay
+    else:
+        hide screen bugTesting_Overlay
 
     return
