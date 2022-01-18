@@ -32,6 +32,7 @@ default previous_location = ""
     ## Path Builder
 default path_builder = False
 default pb_name_set = False
+default pb_kct_shown = False
 
     # Voice Acting
 default voice_acted = True

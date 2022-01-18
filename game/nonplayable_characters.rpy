@@ -1,4 +1,9 @@
 init python:
+    class Frat(Enum):
+        APES = 0
+        WOLVES = 1
+
+
     class Relationship(Enum):
         MAD = -4
         THREATEN = -3
@@ -50,7 +55,7 @@ init python:
             profile_picture (str): The file name for the characters profile picture, located in "images/nonplayable_characters/profile_pictures/"
         """
 
-        Characters = {}
+        characters = {}
 
         def __init__(self, name, username=None):
             self.name = name
@@ -68,7 +73,7 @@ init python:
             self.points = 0
             self._relationship = Relationship.FRIEND
 
-            NonPlayableCharacter.Characters[name] = self
+            NonPlayableCharacter.characters[name] = self
 
         @property
         def username(self):
