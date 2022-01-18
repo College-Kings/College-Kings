@@ -35,7 +35,7 @@ python early:
             import subprocess
             subprocess.call([os.path.join(config.basedir, "CollegeKings.exe")])
             renpy.quit()
-        except WindowsError:
+        except OSError:
             raise Exception("Deleting old files please RESTART GAME.")
 
     # Helper function
@@ -67,7 +67,7 @@ label after_load:
         if isinstance(mc, FightCharacter) or isinstance(mc, MainCharacter):
             mc = PlayableCharacter()
 
-        mc.__after_load__()
+        # mc.__after_load__()
 
         try: mc.profile_picture
         except AttributeError: mc.profile_picture = profile_pictures[0]
@@ -163,30 +163,7 @@ label after_load:
         if isinstance(josh, CustomCharacter):
             josh = NonPlayableCharacter("Josh", "Josh80085")
 
-        for character in (
-            chloe,
-            amber,
-            penelope,
-            riley,
-            lindsey,
-            lauren,
-            emily,
-            ms_rose,
-            nora,
-            aubrey,
-            ryan,
-            imre,
-            chris,
-            charli,
-            cameron,
-            josh,
-            julia,
-            evelyn,
-            autumn,
-            sebastian,
-            grayson,
-            jenny,
-        ):
+        for character in NonPlayableCharacter.Characters.values():
             character.__after_load__()
 
         ## Relationship types
@@ -354,6 +331,8 @@ label after_load:
         naomi.username = "NaomiXMarie"
         samantha.username = "SamFromSpaceJam"
 
+        if chloe.relationship == 4:
+            chloe.relationship = Relationship.MAD
 
         ## PHONE
         ### APPLICATIONS
@@ -1065,54 +1044,13 @@ label after_load:
         except NameError: v14_ryan_satin = False
 
 
-        # Before main menu redundancy
-            ## Phone setup
-        phone.applications = []
-        phone.applications.append(messenger)
-        phone.applications.append(stats_app)
-        phone.applications.append(achievement_app)
-        phone.applications.append(kiwii)
-        phone.applications.append(simplr_app)
-
-            ## Set up murder mystery stats
-        chloe.stats["Competitive"] = True
-        chloe.stats["Vindictive"] = [nora]
-
-        amber.stats["Competitive"] = amber.stats["Talkative"] = True
-        amber.stats["Vindictive"] = [riley]
-
-        riley.stats["Competitive"] = riley.stats["Talkative"] = True
-
-        lindsey.stats["Competitive"] = lindsey.stats["Talkative"] = True
-        lindsey.stats["Vindictive"] = [chloe]
-
-        emily.stats["Talkative"] = False
-
-        nora.stats["Talkative"] = True
-        nora.stats["Vindictive"] = [chris, chloe]
-
-        aubrey.stats["Competitive"] = True
-
-        ryan.stats["Vindictive"] = [imre]
-
-        imre.stats["Competitive"] = False
-        imre.stats["Vindictive"] = [ryan]
-
-        chris.stats["Competitive"] = chris.stats["Talkative"] = False
-
-        charli.stats["Competitive"] = True
-        charli.stats["Talkative"] = False
-
-        josh.stats["Competitive"] = True
-
-    call setup
+    call setup from _call_setup
 
     show no_hard_feelings at achievementShow
     $ achievementAtList = renpy.get_at_list("no_hard_feelings")
     hide no_hard_feelings
 
     show screen phone_icon
-    hide screen getaccess
     hide screen phone
 
     if config.developer:

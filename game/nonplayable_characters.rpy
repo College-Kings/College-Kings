@@ -50,6 +50,8 @@ init python:
             profile_picture (str): The file name for the characters profile picture, located in "images/nonplayable_characters/profile_pictures/"
         """
 
+        Characters = {}
+
         def __init__(self, name, username=None):
             self.name = name
             self._username = name if username is None else username
@@ -65,6 +67,8 @@ init python:
 
             self.points = 0
             self._relationship = Relationship.FRIEND
+
+            NonPlayableCharacter.Characters[name] = self
 
         @property
         def username(self):
@@ -86,6 +90,9 @@ init python:
 
         @relationship.setter
         def relationship(self, value):
+            if not isinstance(value, Relationship):
+                raise TypeError("{} must be of type Relationship".format(value))
+
             self._relationship = value
             
             if value == Relationship.GIRLFRIEND:
@@ -136,14 +143,13 @@ init python:
             return "images/nonplayable_characters/profile_pictures/{}.webp".format(self.name.replace(' ', '_').lower())
 
         def __after_load__(self):
-            attrs = vars(self)
+            attrs = vars(self).copy()
 
             self.__init__(self.name)
 
             for var, value in attrs.items():
                 try: setattr(self, var, value)
                 except AttributeError: continue
-                
 
         def kill(self):
             # Check Competitive stat
