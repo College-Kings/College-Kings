@@ -28,7 +28,7 @@ screen relationship_screen():
             ysize 500
             xsize 1550
 
-            for girl in relationship_girls if :
+            for girl in filter(lambda girl: girl._messenger is not None, relationship_girls):
 
                 vbox:
                     xpos 120
