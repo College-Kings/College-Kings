@@ -182,7 +182,6 @@ label v15s48:
     with dissolve
 
     menu:
-
         "Cool off":
             $ add_point(KCT.TROUBLEMAKER)
 
