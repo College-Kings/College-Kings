@@ -42,4 +42,10 @@ label setup:
 
         josh.stats["Competitive"] = True
 
-    return
+    # Renpy Script
+    # Get Animation/Transform List
+    show no_hard_feelings at achievementShow
+    $ achievementAtList = renpy.get_at_list("no_hard_feelings")
+    hide no_hard_feelings
+
+    jump expression start_location

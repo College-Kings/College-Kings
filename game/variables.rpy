@@ -8,6 +8,7 @@ define config.default_sfx_volume = 1
 default menu_set = set()
 default achievementAtList = None
 
+default start_location = "start"
 default name = "Alex"
 default realmode = False
 default showkct = True
@@ -33,7 +34,6 @@ default previous_location = ""
     ## Path Builder
 default path_builder = False
 default pb_name_set = False
-default pb_start_location = "start"
 
     # Voice Acting
 default voice_acted = True

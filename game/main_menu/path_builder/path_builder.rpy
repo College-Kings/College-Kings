@@ -118,7 +118,7 @@ screen path_builder(catagory_step=1):
     default catagory = get_catagory(catagory_step)
     default items = [item for item in PathBuilderItem.items if item.catagory == catagory]
     default heading = catagory.value[catagory_step]
-    
+
     $ cols, rows = grid_size[len(items)]
 
     add image_path + "path_builder_background.webp"
@@ -164,31 +164,25 @@ screen path_builder(catagory_step=1):
 
             for item in items:
                 if catagory == PathBuilderCatagories.GIRL or catagory == PathBuilderCatagories.HOMECOMING_DATE:
-                    vbox:
-                        xalign 0.5
+                    button:
+                        idle_background image_path + "girls/{}_idle.webp".format(item.name)
+                        hover_background image_path + "girls/{}.webp".format(item.name)
+                        selected_idle_background image_path + "girls/{}.webp".format(item.name)
+                        selected get_selected(item)
+                        action [a for a in item.actions]
+                        xysize (307, 112)
 
-                        default girl_image_path = image_path + "girls/"
+                        vbox:
+                            xpos 120
+                            yalign 0.5
 
-                        imagebutton:
-                            idle girl_image_path + item.name +"_idle.webp"
-                            hover girl_image_path + item.name +".webp"
-                            selected_idle girl_image_path + item.name +".webp"
-                            selected get_selected(item)
-                            action [a for a in item.actions]
+                            text item.name:
+                                size 30
+                                color "#FFF"
 
-                        text item.name:
-                            align (0.5, 0.5)
-                            yoffset -75
-                            xoffset 30
-                            size 30
-                            color "#FFF"
-
-                        #text "Loyal": # This could show the kct for each girl
-                        #    align (0.5, 0.5)
-                        #    yoffset -75
-                        #    xoffset 30
-                        #    size 15
-                        #    color "#FFF"
+                            text "Loyal": # This could show the kct for each girl
+                                size 15
+                                color "#FFD166"
 
                         
                 elif catagory == PathBuilderCatagories.START_LOCATION:
@@ -272,7 +266,7 @@ screen path_builder(catagory_step=1):
                 sensitive any(get_selected(item) for item in items)
                 action Show("path_builder", None, catagory_step + 1)
             else:
-                action Start(pb_start_location)
+                action Start("setup")
 
 
 screen path_builder_advanced_settings():

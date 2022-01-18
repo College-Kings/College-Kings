@@ -14,12 +14,6 @@ define _quit_slot = "99-1"
 
 # The game starts here.
 label start:
-    # Get Animation/Transform List
-    show no_hard_feelings at achievementShow
-    $ achievementAtList = renpy.get_at_list("no_hard_feelings")
-    hide no_hard_feelings
-
-    call setup from _call_setup_1
 
     call screen real_life_mode
 
