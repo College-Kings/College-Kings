@@ -4,7 +4,7 @@ define config.console = True
 define config_debug = False
 define config_censored = False
 
-define config.version = get_version(15, 0, 3)
+define config.version = get_version(15, 1, 0)
 
 define config.steam_appid = 1463120
 
@@ -14,7 +14,6 @@ define _quit_slot = "99-1"
 
 # The game starts here.
 label start:
-
     call screen real_life_mode
 
 label end_credits: # for compatibility

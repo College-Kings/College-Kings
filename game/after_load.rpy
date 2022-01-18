@@ -53,21 +53,22 @@ init 100 python:
     class MainCharacter(PlayableCharacter):
         pass
 
+    class Teacher(NonPlayableCharacter):
+        pass
+
 
 label after_load:
     python:
-        setup()
-
-        # SAVE FIXES:
+        # SAVE FIXES
+        ## Force developer mode off on load
+        config.developer = False
 
         # Disable skip transitions
         preferences.transitions = 2
 
-        try:
-            if renpy.loadable("v8/scene1.rpy") and not musicstop:
-                renpy.music.stop(channel=u'music')
-                musicstop = True
-        except NameError: pass
+        if renpy.loadable("v8/scene1.rpy") and not musicstop:
+            renpy.music.stop(channel=u'music')
+            musicstop = True
 
         ## PLAYABLE CHARACTERS
         if isinstance(mc, FightCharacter) or isinstance(mc, MainCharacter):
@@ -1159,8 +1160,13 @@ label after_load:
 
             v1502fix = True
 
-    show screen phone_icon
-    hide screen phone
+        setup()
+
+    if renpy.get_screen("phone_icon") is None:
+        show screen phone_icon
+
+    hide screen reply
+    hide screen simplr_reply
 
     if config.developer:
         show screen bugTesting_Overlay

@@ -30,13 +30,11 @@ init python:
             self.__init__()
 
             for var, value in attrs.items():
-                setattr(self, var, value)
+                try: setattr(self, var, value)
+                except AttributeError: continue
                 
-
         def has_item(self, item):
             return (item in self.inventory)
 
-
-init offset = 1
 
 default mc = PlayableCharacter()
