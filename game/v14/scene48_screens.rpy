@@ -40,7 +40,6 @@ screen iBuy():
             sensitive car_images_index < len(v14s47_car_pics) - 1
             yalign 0.5
 
-
     # Select Car Description
     add "images/v14/iBuy/descriptions_only.webp":
         xalign 0.5
@@ -59,7 +58,6 @@ screen iBuy():
 
     if v14s48_car_description == CarDescription.TRUTH:
         add "images/v14/iBuy/truth_hover.webp" pos (1650, 750)
-
 
     # Determine Price
     bar:

@@ -1052,7 +1052,11 @@ label after_load:
 
         # v1502 fixes:
         
+        if chloe.relationship == Relationship.MAD.value:
+            chloe.relationship = Relationship.MAD
+
         if renpy.loadable("v15/scene1.rpy") and not v1502fix:
+       
             if ms_rose.relationship == Relationship.FRIEND:
                 if v15_threaten_ms_rose:
                     ms_rose.relationship = Relationship.THREATEN
