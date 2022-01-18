@@ -1,6 +1,16 @@
+init python:
+    def change_opponent_health(value):
+        current_health = getattr(store, "opp_health")
+        renpy.show_screen("opponent_health_bar", current_health, current_health + value)
+        setattr(store, "opp_health", value)
+
 label fight_test:
 
-    show screen opponent_health_bar(opp_health)
+    show screen opponent_health_bar(100, 100)
+
+    ""
+
+    $ change_opponent_health(-20)
 
     call screen player_attack
 

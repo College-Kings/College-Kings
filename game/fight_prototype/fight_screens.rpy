@@ -54,12 +54,13 @@ screen fight_popup(message):
 
     timer 2 action Hide("fight_popup", transition=dissolve)
 
-screen opponent_health_bar(opp_health):
+screen opponent_health_bar(current_health, new_health, max_health=100):
+    tag health_bar
+    zorder 100
 
     fixed:
         xysize (820, 95)
         xalign 0.5
         ypos 83
-        use animated_value_bar(None, opp_health, 100, "blue_bar", "ruby_bar", offset=(13, 0), size=(820, 95))
+        use animated_value_bar(current_health, new_health, max_health, "blue_bar", "ruby_bar", offset=(13, 0), size=(820, 95))
         
-    zorder 100
