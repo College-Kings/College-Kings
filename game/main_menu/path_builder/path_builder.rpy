@@ -182,6 +182,15 @@ screen path_builder(catagory_step=1):
                             xoffset 30
                             size 30
                             color "#FFF"
+
+                        #text "Loyal": # This could show the kct for each girl
+                        #    align (0.5, 0.5)
+                        #    yoffset -75
+                        #    xoffset 30
+                        #    size 15
+                        #    color "#FFF"
+
+                        
                 elif catagory == PathBuilderCatagories.START_LOCATION:
                     vbox:
                         xalign 0.5
@@ -289,12 +298,18 @@ screen path_builder_advanced_settings():
                     yoffset 40
                     
                     imagebutton:
-                        idle image_path + "pb_tick.webp"
-                        hover image_path + "pb_ticked.webp"
-                        selected_idle image_path + "pb_ticked.webp"
-                        action ToggleVariable("locked_kct")
+                        if lindsey_board.money == 10000:
+                            idle image_path + "pb_ticked.webp"
+                        else: 
+                            idle image_path + "pb_tick.webp"
+                            hover image_path + "pb_ticked.webp"
 
-                    text "Lock KCT (Prevent it from changing)":
+                        if lindsey_board.money == 10000:
+                            action [SetVariable("lindsey_board.money", 200), SetVariable("lindsey_board.money", 1500)]
+                        else:
+                            action [SetVariable("lindsey_board.money", 10000), SetVariable("lindsey_board.money", 10000)]
+
+                    text "Unlimited Presidency Campaign Budget":
                         yoffset -7
     
 
