@@ -36,10 +36,11 @@ init python:
 
 
     class PathBuilderGirl(PathBuilderItem):
-        def __init__(self, catagory, name, kct, actions):
+        def __init__(self, catagory, name, kct, actions, frat_requirement=None):
             PathBuilderItem.__init__(self, catagory, name, actions)
 
             self.kct = kct
+            self.frat_requirement = frat_requirement
 
 
     def get_catagory(step):
@@ -164,7 +165,9 @@ screen path_builder():
                         idle_background image_path + "girls/{}_idle.webp".format(item.name)
                         hover_background image_path + "girls/{}.webp".format(item.name)
                         selected_idle_background image_path + "girls/{}.webp".format(item.name)
+                        insensitive_background Transform(image_path + "girls/{}_idle.webp".format(item.name), matrixcolor=SaturationMatrix(0))
                         selected all([a.get_selected() for a in item.actions])
+                        sensitive (item.frat_requirement is None or item.frat_requirement.value == int(joinwolves))
                         action [a for a in item.actions]
                         xysize (307, 112)
 
@@ -176,10 +179,11 @@ screen path_builder():
                                 size 30
                                 color "#FFF"
 
-                            if isinstance(item, PathBuilderGirl):
+                            if isinstance(item, PathBuilderGirl) and pb_kct_shown:
                                 text item.kct: # This could show the kct for each girl
                                     size 15
                                     color "#FFD166"
+
 
                         
                 elif catagory == PathBuilderCatagories.START_LOCATION:
@@ -249,7 +253,7 @@ screen path_builder():
 
             imagebutton:
                 idle button_img_path + "back.webp"
-                action Show("path_builder", None, catagory_step - 1)
+                action SetScreenVariable("catagory_step", catagory_step - 1)
         else:
             imagebutton:
                 idle button_img_path + "back_blocked.webp"
@@ -284,26 +288,30 @@ screen path_builder_advanced_settings():
 
     vbox:
         align (0.25, 0.5)
+
         hbox:
             spacing 20
-            yoffset 40
             
             imagebutton:
-                if lindsey_board.money == 10000:
-                    idle image_path + "pb_ticked.webp"
-                else: 
-                    idle image_path + "pb_tick.webp"
-                    hover image_path + "pb_ticked.webp"
-
-                if lindsey_board.money == 10000:
-                    action [SetVariable("lindsey_board.money", 200), SetVariable("lindsey_board.money", 1500)]
-                else:
-                    action [SetVariable("lindsey_board.money", 10000), SetVariable("lindsey_board.money", 10000)]
+                idle image_path + "pb_tick.webp"
+                hover image_path + "pb_ticked.webp"
+                selected_idle image_path + "pb_ticked.webp"
+                action [ToggleVariable("lindsey_board.money", 10000, 200), ToggleVariable("chloe_board.money", 10000, 1500)]
 
             text "Unlimited Presidency Campaign Budget":
                 yoffset -7
 
-        textbutton "Enable KCT Hints"
+        hbox:
+            spacing 20
+            
+            imagebutton:
+                idle image_path + "pb_tick.webp"
+                hover image_path + "pb_ticked.webp"
+                selected_idle image_path + "pb_ticked.webp"
+                action ToggleVariable("pb_kct_shown")
+
+            text "Show KCT Hints":
+                yoffset -7
     
 
 style path_builder_advanced_settings_text is bebas_neue_30
