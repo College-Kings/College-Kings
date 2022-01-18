@@ -119,6 +119,9 @@ label v14s25:
 
             am "Thank you."
 
+    scene v14s25_4f
+    with dissolve
+
     am "Did you have any trouble getting here?"
 
     scene v14s25_4e
