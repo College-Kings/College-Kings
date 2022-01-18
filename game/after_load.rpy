@@ -362,7 +362,7 @@ label after_load:
             del kiwiiApp
         except NameError:
             if kiwii is False:
-                kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=True)
+                kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=False)
 
         # Transfer simplrApp to simplr_app
         try:

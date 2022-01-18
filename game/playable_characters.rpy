@@ -36,5 +36,5 @@ init python:
         def has_item(self, item):
             return (item in self.inventory)
 
-
-default mc = PlayableCharacter()
+init 1:
+    default mc = PlayableCharacter()
