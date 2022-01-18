@@ -47,9 +47,11 @@ label path_builder_setup:
         PB_LINDSEY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Lindsey", "Popular",
             actions=ToggleField(lindsey, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
         PB_MS_ROSE = PathBuilderGirl(PathBuilderCatagories.GIRL, "Ms Rose", "Confident",
-            actions=ToggleField(ms_rose, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+            actions=ToggleField(ms_rose, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND),
+            frat_requirement=Frat.WOLVES)
         PB_SAMANTHA = PathBuilderGirl(PathBuilderCatagories.GIRL, "Samantha", "Loyal",
-            actions=ToggleField(samantha, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+            actions=ToggleField(samantha, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND),
+            frat_requirement=Frat.APES)
         PB_JENNY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Jenny", "Popular",
             actions=ToggleField(jenny, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
         PB_EMILY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Emily", "Loyal",
