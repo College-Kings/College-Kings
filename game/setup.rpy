@@ -1,7 +1,7 @@
-label setup:
-    call nonplayable_characters_setup from _call_nonplayable_characters_setup
-
-    python:
+init python:
+    def setup():
+        nonplayable_character_setup()
+        
         # Phone Setup
         phone.applications = []
         phone.applications.append(messenger)
@@ -41,5 +41,3 @@ label setup:
         charli.stats["Talkative"] = False
 
         josh.stats["Competitive"] = True
-
-    return

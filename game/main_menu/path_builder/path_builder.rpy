@@ -41,20 +41,6 @@ init python:
                 return catagory
         return None
 
-    def get_selected(item):
-        for a in item.actions:
-            try:
-                if a.true_value is None:
-                    a.true_value = True
-
-                if getattr(a.object, a.field) != a.true_value:
-                    return False
-            except AttributeError:
-                if getattr(a.object, a.field) != a.value:
-                    return False
-
-        return True
-
 
 screen path_builder_alert():
     modal True
@@ -101,7 +87,7 @@ screen path_builder_alert():
 
 style path_builder_alert_text is bebas_neue_30
 
-screen path_builder(catagory_step=1):
+screen path_builder():
     tag menu
     modal True
 
@@ -114,11 +100,14 @@ screen path_builder(catagory_step=1):
         11: (4, 3),
         12: (4, 3),
     }
-
-    default catagory = get_catagory(catagory_step)
-    default items = [item for item in PathBuilderItem.items if item.catagory == catagory]
-    default heading = catagory.value[catagory_step]
     
+    default catagory_step = 1
+    default start_label = "start"
+
+    $ catagory = get_catagory(catagory_step)
+    $ items = [item for item in PathBuilderItem.items if item.catagory == catagory]
+    $ heading = catagory.value[catagory_step]
+
     $ cols, rows = grid_size[len(items)]
 
     add image_path + "path_builder_background.webp"
@@ -164,24 +153,27 @@ screen path_builder(catagory_step=1):
 
             for item in items:
                 if catagory == PathBuilderCatagories.GIRL or catagory == PathBuilderCatagories.HOMECOMING_DATE:
-                    vbox:
-                        xalign 0.5
+                    button:
+                        idle_background image_path + "girls/{}_idle.webp".format(item.name)
+                        hover_background image_path + "girls/{}.webp".format(item.name)
+                        selected_idle_background image_path + "girls/{}.webp".format(item.name)
+                        selected all([a.get_selected() for a in item.actions])
+                        action [a for a in item.actions]
+                        xysize (307, 112)
 
-                        default girl_image_path = image_path + "girls/"
+                        vbox:
+                            xpos 120
+                            yalign 0.5
 
-                        imagebutton:
-                            idle girl_image_path + item.name +"_idle.webp"
-                            hover girl_image_path + item.name +".webp"
-                            selected_idle girl_image_path + item.name +".webp"
-                            selected get_selected(item)
-                            action [a for a in item.actions]
+                            text item.name:
+                                size 30
+                                color "#FFF"
 
-                        text item.name:
-                            align (0.5, 0.5)
-                            yoffset -75
-                            xoffset 30
-                            size 30
-                            color "#FFF"
+                            text "Loyal": # This could show the kct for each girl
+                                size 15
+                                color "#FFD166"
+
+                        
                 elif catagory == PathBuilderCatagories.START_LOCATION:
                     vbox:
                         xalign 0.5
@@ -190,7 +182,7 @@ screen path_builder(catagory_step=1):
 
                         imagebutton:
                             idle Transform(start_image_path + item.name +".webp", zoom=.8)
-                            selected get_selected(item)
+                            selected all([a.get_selected() for a in item.actions])
                             action [a for a in item.actions]
                             xalign 0.5
 
@@ -198,7 +190,7 @@ screen path_builder(catagory_step=1):
                             idle image_path + "button_idle_dark.webp"
                             hover image_path + "button_hover.webp"
                             selected_idle image_path + "button_hover.webp"
-                            selected get_selected(item)
+                            selected all([a.get_selected() for a in item.actions])
                             action [a for a in item.actions]
                             xalign 0.5
                             yoffset -35
@@ -216,7 +208,7 @@ screen path_builder(catagory_step=1):
                             idle image_path + "button_idle.webp"
                             hover image_path + "button_hover.webp"
                             selected_idle image_path + "button_hover.webp"
-                            selected get_selected(item)
+                            selected all([a.get_selected() for a in item.actions])
                             action [a for a in item.actions]
 
                         text item.name:
@@ -260,17 +252,17 @@ screen path_builder(catagory_step=1):
             idle button_img_path + "continue.webp"
 
             if catagory_step < len(PathBuilderCatagories):
-                sensitive any(get_selected(item) for item in items)
-                action Show("path_builder", None, catagory_step + 1)
+                sensitive any(all([a.get_selected() for a in item.actions]) for item in items)
+                action SetScreenVariable("catagory_step", catagory_step + 1)
             else:
-                action Start(pb_start_location)
+                action Start(start_label)
+
 
 screen path_builder_advanced_settings():
-
-    default image_path = "main_menu/path_builder/images/"
-    default button_img_path = "main_menu/path_builder/images/"
     tag menu
     modal True
+
+    default image_path = "main_menu/path_builder/images/"
 
     add image_path + "path_builder_background.webp"
 
@@ -285,17 +277,23 @@ screen path_builder_advanced_settings():
     vbox:
         align (0.25, 0.5)
         hbox:
-                    spacing 20
-                    yoffset 40
-                    
-                    imagebutton:
-                        idle image_path + "pb_tick.webp"
-                        hover image_path + "pb_ticked.webp"
-                        selected_idle image_path + "pb_ticked.webp"
-                        action ToggleVariable("locked_kct")
+            spacing 20
+            yoffset 40
+            
+            imagebutton:
+                if lindsey_board.money == 10000:
+                    idle image_path + "pb_ticked.webp"
+                else: 
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
 
-                    text "Lock KCT (Prevent it from changing)":
-                        yoffset -7
+                if lindsey_board.money == 10000:
+                    action [SetVariable("lindsey_board.money", 200), SetVariable("lindsey_board.money", 1500)]
+                else:
+                    action [SetVariable("lindsey_board.money", 10000), SetVariable("lindsey_board.money", 10000)]
+
+            text "Unlimited Presidency Campaign Budget":
+                yoffset -7
     
 
 style path_builder_advanced_settings_text is bebas_neue_30

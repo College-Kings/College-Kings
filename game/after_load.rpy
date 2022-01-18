@@ -53,10 +53,15 @@ init 100 python:
     class MainCharacter(PlayableCharacter):
         pass
 
+    class Teacher(NonPlayableCharacter):
+        pass
+
 
 label after_load:
     python:
-        # SAVE FIXES:
+        # SAVE FIXES
+        ## Force developer mode off on load
+        config.developer = False
 
         # Disable skip transitions
         preferences.transitions = 2
@@ -1153,17 +1158,17 @@ label after_load:
 
             v1502fix = True
 
+        setup()
 
-    call setup from _call_setup
+    if renpy.get_screen("phone_icon") is None:
+        show screen phone_icon
 
-    show no_hard_feelings at achievementShow
-    $ achievementAtList = renpy.get_at_list("no_hard_feelings")
-    hide no_hard_feelings
-
-    show screen phone_icon
-    hide screen phone
+    hide screen reply
+    hide screen simplr_reply
 
     if config.developer:
         show screen bugTesting_Overlay
+    else:
+        hide screen bugTesting_Overlay
 
     return
