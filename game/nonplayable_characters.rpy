@@ -50,7 +50,7 @@ init python:
             profile_picture (str): The file name for the characters profile picture, located in "images/nonplayable_characters/profile_pictures/"
         """
 
-        Characters = []
+        Characters = {}
 
         def __init__(self, name, username=None):
             self.name = name
@@ -68,7 +68,7 @@ init python:
             self.points = 0
             self._relationship = Relationship.FRIEND
 
-            NonPlayableCharacter.Characters.append(self)
+            NonPlayableCharacter.Characters[name] = self
 
         @property
         def username(self):
