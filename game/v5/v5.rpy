@@ -704,7 +704,7 @@ label continuez:
 
     # Kiss in public
 
-    if lauren.relationship >= Relationship.KISS:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene s379a # lauren kisses you
         with dissolve
         play sound "sounds/kiss.mp3"
