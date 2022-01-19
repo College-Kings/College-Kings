@@ -34,6 +34,7 @@ screen phone_icon():
 
 label call_screen_phone:
     call screen phone
+    return
 
 
 screen base_phone():
