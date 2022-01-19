@@ -3100,6 +3100,7 @@ label continueq:
                     ri "Just a really great guy."
 
                     scene s281e
+                    with dissolve
 
                     u "Thanks, Riley."
 

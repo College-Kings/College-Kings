@@ -11,6 +11,21 @@ label v14_start:
         if emily.relationship == Relationship.GIRLFRIEND:
             $ sceneList.add("v13_emily")
 
+        if ms_rose.relationship == Relationship.GIRLFRIEND:
+            $ sceneList.add("v12_rose")
+
+        if lauren.relationship == Relationship.GIRLFRIEND:
+            $ sceneList.add("v12_lauren")
+            
+        if nora.relationship == Relationship.GIRLFRIEND:
+            $ sceneList.add("v12_nora")
+            
+        if chloe.relationship == Relationship.GIRLFRIEND:
+            $ sceneList.add("v13_chloe")
+            
+        if lindsey.relationship == Relationship.GIRLFRIEND:
+            $ sceneList.add("v12_lindsey")
+
     show screen phone_icon
     
     if emmy.simplr.pending_messages: #for compatibility with v12 players where emmy replies were not forced to be seen
