@@ -6,22 +6,40 @@ screen letter1():
         action Hide ("letter1")
 
 screen hc_select():
-    add "images/v7/homecomingchoice.webp"
+
+    default image_path = "images/v7/select_date_test/"
+    default girl_path = image_path + "girls/"
+
+    add image_path + "hoco_date_select_background.webp"
+
+    hbox:
+        pos (175, 97)
+
+        text "CHOOSE A GIRL TO ASK TO BE YOUR DATE":
+            size 55
+    hbox:
+        pos (1460, 105)
+
+        imagebutton:
+            idle image_path + "go_alone_idle.webp"
+            action Jump("hc_no_girl")
+
 
     grid 4 2:
-        spacing 40
+        xspacing 40
+        yspacing 40
         xalign 0.5
-        ypos 285
+        ypos 335
 
         imagebutton:
             if "amber" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
-                idle "images/v7/HCAmber.webp"
-                hover "images/v7/HCAmber2.webp"
+                idle Transform(girl_path + "HCAmber.webp", zoom=.925)
+                hover Transform(girl_path + "HCAmber2.webp", zoom=.925)
                 tooltip "I'm not that close with Amber but she does seem quite flirty around me."
 
             else:
-                idle "images/v7/HCAmber3.webp"
-                hover "images/v7/HCAmber23.webp"
+                idle Transform(girl_path + "HCAmber3.webp", zoom=.925)
+                hover Transform(girl_path + "HCAmber23.webp", zoom=.925)
             
             if "amber" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
                 action Jump("hc_asking_amber")
@@ -30,11 +48,11 @@ screen hc_select():
 
         imagebutton:
             if "aubrey" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
-                idle "images/v7/HCAubrey.webp"
-                hover "images/v7/HCAubrey2.webp"
+                idle Transform(girl_path + "HCAubrey.webp", zoom=.925)
+                hover Transform(girl_path + "HCAubrey2.webp", zoom=.925)
             else:
-                idle "images/v7/HCAubrey3.webp"
-                hover "images/v7/HCAubrey23.webp"
+                idle Transform(girl_path + "HCAubrey3.webp", zoom=.925)
+                hover Transform(girl_path + "HCAubrey23.webp", zoom=.925)
 
             if aubrey.relationship >= Relationship.FWB:
                 tooltip "I'm pretty sure that Aubrey would go with me and that would probably lead to a pretty hot night afterwards..."
@@ -48,11 +66,11 @@ screen hc_select():
 
         imagebutton:
             if "autumn" not in hcAsked and not autumn.relationship <= Relationship.MAD and lauren.relationship < Relationship.GIRLFRIEND:
-                idle "images/v7/HCAutumn.webp"
-                hover "images/v7/HCAutumn2.webp"
+                idle Transform(girl_path + "HCAutumn.webp", zoom=.925)
+                hover Transform(girl_path + "HCAutumn2.webp", zoom=.925)
             else:
-                idle "images/v7/HCAutumn3.webp"
-                hover "images/v7/HCAutumn23.webp"
+                idle Transform(girl_path + "HCAutumn3.webp", zoom=.925)
+                hover Transform(girl_path + "HCAutumn23.webp", zoom=.925)
 
             if autumn.relationship <= Relationship.MAD:
                 tooltip "I think Autumn might be mad at me, so I probably shouldn't ask her."
@@ -66,11 +84,11 @@ screen hc_select():
 
         imagebutton:
             if "chloe" not in hcAsked and chloe.relationship > Relationship.MAD and lauren.relationship < Relationship.GIRLFRIEND:
-                idle "images/v7/HCChloe.webp"
-                hover "images/v7/HCChloe2.webp"
+                idle Transform(girl_path + "HCChloe.webp", zoom=.925)
+                hover Transform(girl_path + "HCChloe2.webp", zoom=.925)
             else:
-                idle "images/v7/HCChloe3.webp"
-                hover "images/v7/HCChloe23.webp"
+                idle Transform(girl_path + "HCChloe3.webp", zoom=.925)
+                hover Transform(girl_path + "HCChloe23.webp", zoom=.925)
 
             if chloe.relationship <= Relationship.MAD:
                 tooltip "I think Chloe is mad at me, so I probably shouldn't ask her."
@@ -84,11 +102,11 @@ screen hc_select():
 
         imagebutton:
             if "emily" not in hcAsked and forgiveemily and lauren.relationship < Relationship.GIRLFRIEND:
-                idle "images/v7/HCEmily.webp"
-                hover "images/v7/HCEmily2.webp"
+                idle Transform(girl_path + "HCEmily.webp", zoom=.925)
+                hover Transform(girl_path + "/HCEmily2.webp", zoom=.925)
             else:
-                idle "images/v7/HCEmily3.webp"
-                hover "images/v7/HCEmily23.webp"
+                idle Transform(girl_path + "HCEmily3.webp", zoom=.925)
+                hover Transform(girl_path + "HCEmily23.webp", zoom=.925)
 
             if forgiveemily:
                 tooltip "I could take Emily. She definitely still has a thing for me."
@@ -102,11 +120,11 @@ screen hc_select():
 
         imagebutton:
             if "lauren" not in hcAsked and lauren.relationship > Relationship.MAD:
-                idle "images/v7/HCLauren.webp"
-                hover "images/v7/HCLauren2.webp"
+                idle Transform(girl_path + "HCLauren.webp", zoom=.925)
+                hover Transform(girl_path + "HCLauren2.webp", zoom=.925)
             else:
-                idle "images/v7/HCLauren3.webp"
-                hover "images/v7/HCLauren23.webp"
+                idle Transform(girl_path + "HCLauren3.webp", zoom=.925)
+                hover Transform(girl_path + "HCLauren23.webp", zoom=.925)
 
             if lauren.relationship <= Relationship.MAD:
                 tooltip "It's kinda weird between Lauren and me, I probably should ask someone else."
@@ -120,11 +138,11 @@ screen hc_select():
 
         imagebutton:
             if "penelope" not in hcAsked and not v7_emily_bowling and lauren.relationship < Relationship.GIRLFRIEND:
-                idle "images/v7/HCPenelope.webp"
-                hover "images/v7/HCPenelope2.webp"
+                idle Transform(girl_path + "HCPenelope.webp", zoom=.925)
+                hover Transform(girl_path + "HCPenelope2.webp", zoom=.925)
             else:
-                idle "images/v7/HCPenelope3.webp"
-                hover "images/v7/HCPenelope23.webp"
+                idle Transform(girl_path + "HCPenelope3.webp", zoom=.925)
+                hover Transform(girl_path + "HCPenelope23.webp", zoom=.925)
 
             if v7_emily_bowling:
                 tooltip "Penelope didn't seem too eager to talk to me today, I better ask someone else."
@@ -140,11 +158,11 @@ screen hc_select():
 
         imagebutton:
             if "riley" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
-                idle "images/v7/HCRiley.webp"
-                hover "images/v7/HCRiley2.webp"
+                idle Transform(girl_path + "HCRiley.webp", zoom=.925)
+                hover Transform(girl_path + "/HCRiley2.webp", zoom=.925)
             else:
-                idle "images/v7/HCRiley3.webp"
-                hover "images/v7/HCRiley23.webp"
+                idle Transform(girl_path + "HCRiley3.webp", zoom=.925)
+                hover Transform(girl_path + "HCRiley23.webp", zoom=.925)
 
             if riley.relationship >= Relationship.LIKES:
                 tooltip "Riley seems to really like me so I think she'll say yes."
@@ -156,29 +174,30 @@ screen hc_select():
             else:
                 action NullAction()
 
-    textbutton "Go Alone":
-        pos (1500, 100)
-        action Jump("hc_no_girl")
-
-
     $ tooltip = GetTooltip()
 
     if lauren.relationship >= Relationship.GIRLFRIEND:
         text "Lauren would kill me if I asked someone other than her.":
-            color "#000"
-            align (0.5, 0.88)
+            color "#FFF"
+            size 35
+            xalign 0.5
+            ypos 920
 
     elif tooltip:
         text tooltip:
-            color "#000"
-            xmaximum 700
-            align (0.5, 0.88)
+            color "#FFF"
+            size 35
+            xmaximum 1700
+            xalign 0.5
+            ypos 920
 
     else:
         text "I could always go alone...":
-            color "#000"
-            xmaximum 700
-            align (0.5, 0.88)
+            color "#FFF"
+            size 35
+            xmaximum 1700
+            xalign 0.5
+            ypos 920
 
 # GYM
 screen fr4dancefloor():
