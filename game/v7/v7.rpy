@@ -11845,7 +11845,6 @@ label penelopehocodate:
             pe "*Laughs* I'm just kidding! You should have seen your face though."
 
         "You didn't learn to drive":
-
             u "No way you learned to drive that early. I guess you lost your virginity?"
 
             scene sfr4pe8d
