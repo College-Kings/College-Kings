@@ -8,12 +8,12 @@ init python:
             2: "Pick your starting KCT",
             "background": "main_menu/path_builder/images/path_builder_step_2.webp"
         }
-        GIRL = {
-            3: "Pick which girls you want to be romantically involved with",
+        START_LOCATION = {
+            3: "Pick your starting location",
             "background": "main_menu/path_builder/images/path_builder_step_3.webp"
         }
-        START_LOCATION = {
-            4: "Pick your starting location",
+        GIRL = {
+            4: "Pick which girls you want to be romantically involved with",
             "background": "main_menu/path_builder/images/path_builder_step_4.webp"
         }
         HOMECOMING_DATE = {
@@ -36,11 +36,12 @@ init python:
 
 
     class PathBuilderGirl(PathBuilderItem):
-        def __init__(self, catagory, name, kct, actions, frat_requirement=None):
+        def __init__(self, catagory, name, kct, actions, frat_requirement=None, act=2):
             PathBuilderItem.__init__(self, catagory, name, actions)
 
             self.kct = kct
             self.frat_requirement = frat_requirement
+            self.act = act
 
 
     def get_catagory(step):
@@ -111,6 +112,7 @@ screen path_builder():
     
     default catagory_step = 1
     default start_label = "start"
+    default act_number = 1
 
     $ catagory = get_catagory(catagory_step)
     $ items = [item for item in PathBuilderItem.items if item.catagory == catagory]
@@ -168,7 +170,7 @@ screen path_builder():
                         insensitive_background Transform(image_path + "girls/{}_idle.webp".format(item.name), matrixcolor=SaturationMatrix(0))
                         selected all([a.get_selected() for a in item.actions])
                         if isinstance(item, PathBuilderGirl):
-                            sensitive (item.frat_requirement is None or item.frat_requirement.value == int(joinwolves))
+                            sensitive ((item.frat_requirement is None or item.frat_requirement.value == int(joinwolves)) and (item.act <= act_number))
                         action [a for a in item.actions]
                         xysize (307, 112)
 
@@ -272,7 +274,7 @@ screen path_builder():
 
 
 screen path_builder_advanced_settings():
-    tag menu
+    zorder 100
     modal True
 
     default image_path = "main_menu/path_builder/images/"
@@ -284,11 +286,12 @@ screen path_builder_advanced_settings():
     imagebutton:
         idle "gui/common/return_idle.webp"
         hover "gui/common/return_hover.webp"
-        action ShowMenu("path_builder")
+        action Hide("path_builder_advanced_settings")
         align (0.015, 0.015)
 
     vbox:
         align (0.25, 0.5)
+        spacing 20
 
         hbox:
             spacing 20
@@ -311,7 +314,7 @@ screen path_builder_advanced_settings():
                 selected_idle image_path + "pb_ticked.webp"
                 action ToggleVariable("pb_kct_shown")
 
-            text "Show KCT Hints":
+            text "Show preferred KCT for each girl":
                 yoffset -7
     
 

@@ -5,7 +5,6 @@ screen relationship_screen():
     add "darker_80"
 
     default image_path = "main_menu/path_builder/images/"
-    default relationship_girls = [amber, aubrey, autumn, chloe, emily, jenny, lauren, lindsey, ms_rose, nora, penelope, samantha, riley]
 
     add image_path + "path_builder_box_background.webp" align (0.5, 0.5)
 
@@ -30,7 +29,7 @@ screen relationship_screen():
             ysize 500
             xsize 1550
 
-            for girl in filter(lambda girl: girl._messenger is not None, relationship_girls):
+            for girl in relationship_girls:
 
                 vbox:
                     xpos 120

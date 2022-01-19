@@ -55,10 +55,13 @@ default screen_options = []
 # Sex Overlay
 default sex_overlay_options = []
 
-# Start
+# Splashscreen
 default persistent.confirm_18 = False
 
 # 1.0 - 6.0
+# Relationship Screen
+default relationship_girls = []
+
 default adamattack = 1
 default adamdmg = 0
 default adamfight = 5
