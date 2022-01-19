@@ -10,6 +10,9 @@ init python:
         if locked_kct or _in_replay:
             return
 
+        if pb_kct_notification:
+            renpy.show_screen("popup", message="{} point added".format(var.value.capitalize()))
+
         # Update the KCT variables
         setattr(store, var.value, getattr(store, var.value) + value)
         
