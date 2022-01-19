@@ -316,6 +316,18 @@ screen path_builder_advanced_settings():
 
             text "Show preferred KCT for each girl":
                 yoffset -7
+
+        hbox:
+            spacing 20
+            
+            imagebutton:
+                idle image_path + "pb_tick.webp"
+                hover image_path + "pb_ticked.webp"
+                selected_idle image_path + "pb_ticked.webp"
+                action ToggleVariable("pb_kct_notification")
+
+            text "Show a notification whenever you gain KCT points":
+                yoffset -7
     
 
 style path_builder_advanced_settings_text is bebas_neue_30
