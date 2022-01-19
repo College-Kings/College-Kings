@@ -1079,11 +1079,22 @@ label after_load:
                 if any(scene in sceneList for scene in ("v6_emily", "v9_emily", "v13_emily")):
                     emily.relationship = Relationship.FWB
                 
+            if riley.relationship == Relationship.LOYAL:
+                riley.relationship = Relationship.FRIEND
+                RileyLoyal = True
+            
+            if riley.relationship == Relationship.FRIEND:
+                if any(scene in sceneList for scene in ("v7_riley", "v8_riley", "v9_riley", "v10_riley", "v11_riley", "v13_riley")):
+                    riley.relationship = Relationship.FWB
+                
+                elif "riley" in hcAsked:
+                    riley.relationship = Relationship.LIKES # technically it should be MOVE, but we're feeling generous
+            
             if aubrey.relationship == Relationship.FRIEND:
                 if "v15_naomi" in sceneList:
                     aubrey.relationship = Relationship.MAD
                 
-                elif achievement.has("polycurious"):
+                elif RileyLoyal:
                     if any(scene in sceneList for scene in ("v3_aubrey", "v6_aubrey")):
                         aubrey.relationship = Relationship.FWB
                 
@@ -1135,22 +1146,12 @@ label after_load:
             if candy.relationship == Relationship.FRIEND:
                 if "v11_candy" in sceneList:
                     candy.relationship = Relationship.FWB
-                
-            if riley.relationship == Relationship.FRIEND:
-                if achievement.has("polycurious"):
-                    riley.relationship = Relationship.LOYAL
-            
-                elif any(scene in sceneList for scene in ("v7_riley", "v8_riley", "v9_riley", "v10_riley", "v11_riley", "v13_riley")):
-                    riley.relationship = Relationship.FWB
-                
-                elif achievement.has("lips_dont_lie"):
-                    riley.relationship = Relationship.LIKES # technically it should be MOVE, but we're feeling generous
-            
+
             if penelope.relationship == Relationship.FRIEND:
                 if v14_penelope_date and not (v15s18a_showlist_penelope_autumn and lauren.relationship == Relationship.GIRLFRIEND):
                     penelope.relationship = Relationship.LOYAL
 
-                elif v14_penelope_date or achievement.has("cross_your_heart"):
+                elif v14_penelope_date:
                     penelope.relationship = Relationship.LIKES
 
             v1502fix = True
