@@ -366,6 +366,10 @@ label after_load:
         # Unlock simplr_app
         simplr_app.unlock()
 
+        for app in phone.applications.copy():
+            try: app.locked
+            except AttributeError: phone.applications.remove(app)
+
         ### MESSENGER
         #### MESSENGER CONTRACTS
         for contact in messenger.contacts:
