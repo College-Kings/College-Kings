@@ -291,6 +291,7 @@ screen path_builder_advanced_settings():
 
     vbox:
         align (0.25, 0.5)
+        spacing 20
 
         hbox:
             spacing 20
