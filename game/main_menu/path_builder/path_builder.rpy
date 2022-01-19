@@ -268,7 +268,7 @@ screen path_builder():
                 sensitive any(all([a.get_selected() for a in item.actions]) for item in items)
                 action SetScreenVariable("catagory_step", catagory_step + 1)
             else:
-                action Start(start_label)
+                action [Function(setup), Start(start_label)]
 
 
 screen path_builder_advanced_settings():

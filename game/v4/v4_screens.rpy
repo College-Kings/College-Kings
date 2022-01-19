@@ -1,5 +1,5 @@
 screen girls():
-    default girlLabels = [ "juchloe", "juaubrey", "julauren", "juriley", "juemily", "jupenelope" ]
+    default girlLabels = ("juchloe", "juaubrey", "julauren", "juriley", "juemily", "jupenelope")
 
     add "images/v4/girls.webp"
 
@@ -7,8 +7,8 @@ screen girls():
         pos (110, 360)
         spacing 50
 
-        for i in girlLabels:
+        for l in girlLabels:
             imagebutton:
                 idle "images/v4/girl.webp"
                 hover "images/v4/girlhover.webp"
-                action Jump(i)
+                action Jump(l)
