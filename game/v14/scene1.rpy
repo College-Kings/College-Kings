@@ -26,6 +26,9 @@ label v14_start:
         if lindsey.relationship == Relationship.GIRLFRIEND:
             $ sceneList.add("v12_lindsey")
 
+        if lauren.relationship == Relationship.FRIEND:
+            $ lauren.relationship = Relationship.KISS
+
     show screen phone_icon
     
     if emmy.simplr.pending_messages: #for compatibility with v12 players where emmy replies were not forced to be seen
