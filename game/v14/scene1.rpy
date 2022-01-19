@@ -29,7 +29,7 @@ label v14_start:
         if lauren.relationship == Relationship.FRIEND:
             $ lauren.relationship = Relationship.KISS
 
-        if aubrey.relationship == Relationship.GIRLFRIEND
+        if aubrey.relationship == Relationship.GIRLFRIEND:
             $ s12v32_get_aubrey_flowers = True
             $ v13s48_canoeing_as_date = True
             $ v13s48_get_aubrey_chocolate = True
