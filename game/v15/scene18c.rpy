@@ -1923,7 +1923,6 @@ label v15s18c_autumn_amber:
             if kct == "loyal" and (lauren.relationship >= Relationship.GIRLFRIEND or not v11_lauren_caught_aubrey):
                 label v15s18c_autumnsg:
                     if _in_replay:
-                        $ lauren.relationship = Relationship.GIRLFRIEND
                         $ kct = "loyal"
 
             if lauren.relationship >= Relationship.GIRLFRIEND:
