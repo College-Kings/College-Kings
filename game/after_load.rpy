@@ -1109,7 +1109,7 @@ label after_load:
                     lauren.relationship = Relationship.GIRLFRIEND
                 
                 # elif lauren.points >= 4 or (lauren.points == 2 and v11_hp_points < 3) or (lauren.points == 0 and v11_hp_points < 2) or (lauren.points == -2 and v11_hp_points == 0): lauren.relationship = Relationship.GIRLFRIEND
-                elif lauren.points >= v11_hp_points * 2 - 2 and not "v11_aubrey" in sceneList and not (len(freeroam7) == 0):
+                elif lauren.points >= v11_hp_points * 2 - 2 and not "v11_aubrey" in sceneList and not (len(freeroam7) == 0) and not (lauren.points == 0 and v11_hp_points == 0):
                     lauren.relationship = Relationship.GIRLFRIEND
                                 
                 elif "v15_lauren" in sceneList:
