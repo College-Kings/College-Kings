@@ -25,13 +25,12 @@ screen hc_select():
             action Jump("hc_no_girl")
 
 
-    grid 4 2:
-        xspacing 40
-        yspacing 40
+    grid 8 1:
+        xspacing 10
         xalign 0.5
-        ypos 335
+        ypos 400
 
-        imagebutton:
+imagebutton:
             if "amber" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
                 idle Transform(girl_path + "HCAmber.webp", zoom=.925)
                 hover Transform(girl_path + "HCAmber2.webp", zoom=.925)
