@@ -68,11 +68,11 @@ label path_builder_setup:
         if renpy.loadable("v14/scene1.rpy"):
             PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", actions=[SetScreenVariable("start_label", "v14_start"), SetScreenVariable("act_number", 4)])
 
-        HC_CHLOE = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Chloe",actions=ToggleVariable("hcGirl", "chloe"))
-        HC_RILEY = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Riley",actions=ToggleVariable("hcGirl", "riley"))
-        HC_LAUREN = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Lauren",actions=ToggleVariable("hcGirl", "lauren"))
-        HC_PENELOPE = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Penelope",actions=ToggleVariable("hcGirl", "penelope"))
-        HC_EMILY = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Emily",actions=ToggleVariable("hcGirl", "emily"))
-        HC_AMBER = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Amber",actions=ToggleVariable("hcGirl", "amber"))
+        HC_CHLOE = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Chloe", actions=ToggleVariable("hcGirl", "chloe"))
+        HC_RILEY = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Riley", actions=ToggleVariable("hcGirl", "riley"))
+        HC_LAUREN = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Lauren", actions=ToggleVariable("hcGirl", "lauren"))
+        HC_PENELOPE = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Penelope", actions=ToggleVariable("hcGirl", "penelope"))
+        HC_EMILY = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Emily", actions=ToggleVariable("hcGirl", "emily"))
+        HC_AMBER = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Amber", actions=ToggleVariable("hcGirl", "amber"))
 
     return
