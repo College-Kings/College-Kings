@@ -42,8 +42,6 @@ label v14_start:
 
         if samantha.relationship == Relationship.FWB:
             $ cameron.relationship = Relationship.BRO
-
-    show screen phone_icon
     
     if emmy.simplr.pending_messages: #for compatibility with v12 players where emmy replies were not forced to be seen
         $ emmy.simplr.pending_messages = []

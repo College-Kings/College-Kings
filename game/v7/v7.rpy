@@ -9643,8 +9643,6 @@ label walking_through_hallways:
         $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
         $ pb_name_set = True
 
-    show screen phone_icon
-
     if joinwolves:
         stop music fadeout 3
 

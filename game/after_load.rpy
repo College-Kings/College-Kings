@@ -1162,9 +1162,6 @@ label after_load:
 
         setup()
 
-    if renpy.get_screen("phone_icon") is None:
-        show screen phone_icon
-
     hide screen reply
     hide screen simplr_reply
 
