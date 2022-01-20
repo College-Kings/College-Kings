@@ -281,10 +281,10 @@ screen path_builder():
         imagebutton:
             idle button_img_path + "continue.webp"
 
-            if catagory_step < len(PathBuilderCatagories):
-                action SetScreenVariable("catagory_step", catagory_step + 1)
-            else:
+            if catagory_step >= len(PathBuilderCatagories) or (act_number == 1 and catagory_step == 2):
                 action [Function(setup), Start(start_label)]
+            else:
+                action SetScreenVariable("catagory_step", catagory_step + 1)
 
 
 screen path_builder_advanced_settings():
