@@ -31,32 +31,32 @@ label path_builder_setup:
                 ToggleVariable("ending", "chloe", "riley"),
                 ToggleVariable("hcGirl", "chloe", "alone")])
         PB_NORA = PathBuilderGirl(PathBuilderCatagories.GIRL, "Nora", "Loyal/Confident",
-            ToggleField(nora, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+            ToggleField(nora, "relationship", Relationship.FWB, Relationship.FRIEND))
         PB_AUBREY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Aubrey", "Popular",
-            actions=ToggleField(aubrey, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+            actions=ToggleField(aubrey, "relationship", Relationship.FWB, Relationship.FRIEND))
         PB_RILEY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Riley", "Confident",
-            actions=ToggleField(riley, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+            actions=ToggleField(riley, "relationship", Relationship.FWB, Relationship.FRIEND))
         PB_LAUREN = PathBuilderGirl(PathBuilderCatagories.GIRL, "Lauren", "Loyal",
             actions=ToggleField(lauren, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
         PB_PENELOPE = PathBuilderGirl(PathBuilderCatagories.GIRL, "Penelope", "Confident",
             actions=[
-                ToggleField(penelope, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND), 
+                ToggleField(penelope, "relationship", Relationship.LOYAL, Relationship.FRIEND), 
                 ToggleVariable("v11_pen_goes_europe")], act=4)
         PB_AMBER = PathBuilderGirl(PathBuilderCatagories.GIRL, "Amber", "Popular",
-            actions=ToggleField(amber, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+            actions=ToggleField(amber, "relationship", Relationship.FWB, Relationship.FRIEND))
         PB_LINDSEY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Lindsey", "Popular",
-            actions=ToggleField(lindsey, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND), act=3)
+            actions=ToggleField(lindsey, "relationship", Relationship.FWB, Relationship.FRIEND), act=3)
         PB_MS_ROSE = PathBuilderGirl(PathBuilderCatagories.GIRL, "Ms Rose", "Confident",
-            actions=ToggleField(ms_rose, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND),
+            actions=ToggleField(ms_rose, "relationship", Relationship.FWB, Relationship.FRIEND),
             frat_requirement=Frat.WOLVES, act=3)
         PB_SAMANTHA = PathBuilderGirl(PathBuilderCatagories.GIRL, "Samantha", "Loyal",
-            actions=ToggleField(samantha, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND),
+            actions=ToggleField(samantha, "relationship", Relationship.FWB, Relationship.FRIEND),
             frat_requirement=Frat.APES, act=4)
         PB_JENNY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Jenny", "Popular",
-            actions=ToggleField(jenny, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
+            actions=ToggleField(jenny, "relationship", Relationship.FWB, Relationship.FRIEND))
         PB_EMILY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Emily", "Loyal",
             actions=[
-                ToggleField(emily, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND),
+                ToggleField(emily, "relationship", Relationship.FWB, Relationship.FRIEND),
                 ToggleVariable("emily_europe"),
                 ToggleVariable("v14_emily_ily")])
 

@@ -2,7 +2,7 @@ init python:
     class PathBuilderCatagories(Enum):
         START_LOCATION = {
             1: "Pick your starting location",
-            "background": "main_menu/path_builder/images/path_builder_step_3.webp"
+            "background": "main_menu/path_builder/images/path_builder_step_1.webp"
         }
         KCT = {
             2: "Pick your starting KCT",
@@ -10,7 +10,7 @@ init python:
         }
         FRATERNITY = {
             3: "Pick a fraternity",
-            "background": "main_menu/path_builder/images/path_builder_step_1.webp"
+            "background": "main_menu/path_builder/images/path_builder_step_3.webp"
         }
         GIRL = {
             4: "Pick which girls you want to be romantically involved with",
