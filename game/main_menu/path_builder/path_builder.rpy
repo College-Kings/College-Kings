@@ -346,7 +346,7 @@ screen path_builder_advanced_settings():
                     selected_idle image_path + "pb_ticked.webp"
                     action ToggleVariable("v14_help_chloe")
 
-                text "Help Chloe":
+                text "Help Chloe's Campaign":
                     yoffset -7
             
             hbox:
@@ -358,7 +358,7 @@ screen path_builder_advanced_settings():
                     selected_idle image_path + "pb_ticked.webp"
                     action ToggleVariable("v14_help_lindsey")
 
-                text "Help Lindsey":
+                text "Help Lindsey's Campaign":
                     yoffset -7
 
             hbox:
