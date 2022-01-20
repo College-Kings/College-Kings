@@ -40,9 +40,6 @@ label v15_start:
         if lindsey.relationship == Relationship.FWB:
             $ sceneList.add("v12_lindsey")
 
-        if lauren.relationship == Relationship.FRIEND:
-            $ lauren.relationship = Relationship.KISS
-
         if aubrey.relationship >= Relationship.FWB:
             $ s12v32_get_aubrey_flowers = True
             $ v13s48_canoeing_as_date = True

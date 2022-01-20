@@ -1,7 +1,7 @@
 init python:
     class PathBuilderCatagories(Enum):
         START_LOCATION = {
-            1: "Pick your starting location",
+            1: "Pick your starting location (Act 1 Start skips steps 3-5)",
             "background": "main_menu/path_builder/images/path_builder_step_1.webp"
         }
         KCT = {
@@ -215,6 +215,7 @@ screen path_builder():
                             yoffset -87
                             size 30
                             color "#FFF"
+
                 else:
                     vbox:
                         xalign 0.5
@@ -409,7 +410,7 @@ screen path_builder_advanced_settings():
                         selected_idle image_path + "pb_ticked.webp"
                         action ToggleVariable("AutumnTrust")
 
-                    text "Get closer to Autumn":
+                    text "Autumn trusts you":
                         yoffset -7
 
                 hbox:
@@ -426,6 +427,18 @@ screen path_builder_advanced_settings():
                             action AddToSet(sceneList, "v14_threesome")
 
                     text "Had Riley & Aubrey Threesome":
+                        yoffset -7
+                        
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleField(lauren, "relationship", Relationship.KISS, Relationship.FRIEND)
+
+                    text "Kissed Lauren":
                         yoffset -7
 
         vbox:
