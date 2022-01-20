@@ -251,6 +251,7 @@ screen path_builder():
                 idle_background image_path + "button_idle.webp"
                 hover_background image_path + "button_hover.webp"
                 selected_idle_background image_path + "button_hover.webp"
+                selected False
                 action [
                     SetScreenVariable("start_label", "v{}s1".format(config.version.split(' ')[0].split('.')[0])),
                     SetScreenVariable("catagory_step", catagory_step + 1),
