@@ -1,7 +1,7 @@
 init python:
     class PathBuilderCatagories(Enum):
         START_LOCATION = {
-            1: "Pick your starting location",
+            1: "Pick your starting location (Act 1 Start skips steps 3-5)",
             "background": "main_menu/path_builder/images/path_builder_step_1.webp"
         }
         KCT = {
@@ -215,6 +215,7 @@ screen path_builder():
                             yoffset -87
                             size 30
                             color "#FFF"
+
                 else:
                     vbox:
                         xalign 0.5
@@ -246,14 +247,14 @@ screen path_builder():
                 text "Lock KCT (Prevent it from changing)":
                     yoffset -7
 
-        elif catagory == PathBuilderCatagories.START_LOCATION:
+        elif catagory == PathBuilderCatagories.START_LOCATION and not config.enable_steam:
             button:
                 idle_background image_path + "button_idle.webp"
                 hover_background image_path + "button_hover.webp"
                 selected_idle_background image_path + "button_hover.webp"
                 selected False
                 action [
-                    SetScreenVariable("start_label", "v{}s1".format(config.version.split(' ')[0].split('.')[0])),
+                    SetScreenVariable("start_label", "v{}_start".format(config.version.split(' ')[0].split('.')[0])),
                     SetScreenVariable("catagory_step", catagory_step + 1),
                     SetScreenVariable("act_number", int(config.version.split(' ')[2][:-1]))
                     ]
@@ -409,7 +410,7 @@ screen path_builder_advanced_settings():
                         selected_idle image_path + "pb_ticked.webp"
                         action ToggleVariable("AutumnTrust")
 
-                    text "Get closer to Autumn":
+                    text "Autumn trusts you":
                         yoffset -7
 
                 hbox:
@@ -426,6 +427,18 @@ screen path_builder_advanced_settings():
                             action AddToSet(sceneList, "v14_threesome")
 
                     text "Had Riley & Aubrey Threesome":
+                        yoffset -7
+                        
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleField(lauren, "relationship", Relationship.KISS, Relationship.FRIEND)
+
+                    text "Kissed Lauren":
                         yoffset -7
 
         vbox:
