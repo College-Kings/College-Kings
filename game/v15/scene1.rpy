@@ -24,26 +24,26 @@ label v15_start:
         $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
         $ pb_name_set = True
 
-        if ms_rose.relationship == Relationship.GIRLFRIEND:
+        if ms_rose.relationship == Relationship.FWB:
             $ sceneList.add("v12_rose")
             $ v13_perfume = True
 
         if lauren.relationship == Relationship.GIRLFRIEND:
             $ sceneList.add("v12_lauren")
             
-        if nora.relationship == Relationship.GIRLFRIEND:
+        if nora.relationship >= Relationship.FWB:
             $ sceneList.add("v12_nora")
             
         if chloe.relationship == Relationship.GIRLFRIEND:
             $ sceneList.add("v13_chloe")
             
-        if lindsey.relationship == Relationship.GIRLFRIEND:
+        if lindsey.relationship == Relationship.FWB:
             $ sceneList.add("v12_lindsey")
 
         if lauren.relationship == Relationship.FRIEND:
             $ lauren.relationship = Relationship.KISS
 
-        if aubrey.relationship == Relationship.GIRLFRIEND:
+        if aubrey.relationship >= Relationship.FWB:
             $ s12v32_get_aubrey_flowers = True
             $ v13s48_canoeing_as_date = True
             $ v13s48_get_aubrey_chocolate = True

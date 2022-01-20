@@ -10,37 +10,37 @@ label v14_start:
     
         $ v11_lindsey_slogan = 1
     
-        if emily.relationship == Relationship.GIRLFRIEND:
+        if emily.relationship == Relationship.FWB:
             $ sceneList.add("v13_emily")
 
-        if ms_rose.relationship == Relationship.GIRLFRIEND:
+        if ms_rose.relationship == Relationship.FWB:
             $ sceneList.add("v12_rose")
             $ v13_perfume = True
 
         if lauren.relationship == Relationship.GIRLFRIEND:
             $ sceneList.add("v12_lauren")
             
-        if nora.relationship == Relationship.GIRLFRIEND:
+        if nora.relationship >= Relationship.FWB:
             $ sceneList.add("v12_nora")
             
         if chloe.relationship == Relationship.GIRLFRIEND:
             $ sceneList.add("v13_chloe")
             
-        if lindsey.relationship == Relationship.GIRLFRIEND:
+        if lindsey.relationship == Relationship.FWB:
             $ sceneList.add("v12_lindsey")
 
         if lauren.relationship == Relationship.FRIEND:
             $ lauren.relationship = Relationship.KISS
 
-        if aubrey.relationship == Relationship.GIRLFRIEND:
+        if aubrey.relationship >= Relationship.FWB:
             $ s12v32_get_aubrey_flowers = True
             $ v13s48_canoeing_as_date = True
             $ v13s48_get_aubrey_chocolate = True
 
-        if penelope.relationship == Relationship.GIRLFRIEND:
+        if penelope.relationship >= Relationship.LOYAL:
             $ v11_pen_goes_europe = True
 
-        if samantha.relationship == Relationship.GIRLFRIEND:
+        if samantha.relationship == Relationship.FWB:
             $ cameron.relationship = Relationship.BRO
 
     show screen phone_icon
