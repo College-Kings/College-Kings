@@ -267,6 +267,7 @@ default v12s7_riley_moved = False
 default v12s7_seenList = []
 default v12s7_victims = 12 #Amber, Aubrey, Charli, Chloe, Chris, Imre, Lauren, Lindsey, Nora, Riley, Rose, Ryan + Emily, Josh, Penelope, Samantha. Cameron and Lee don't count.
 default v12_followed_nora = False
+default v12s16_kissnora = False
 
 # 13.0
 default chloeSus = 0

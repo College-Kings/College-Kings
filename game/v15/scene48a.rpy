@@ -34,7 +34,7 @@ label v15s48a:
 
     no "It took you just a few seconds to stand up and take his place."
 
-    if achievement.has("you_may_kiss_the_bride"):
+    if v12s16_kissnora:
         no "And who can forget that kiss?"
 
     scene v15s48a_2a
@@ -42,7 +42,7 @@ label v15s48a:
 
     u "(Damn straight.)"
 
-    if achievement.has("helping_hand"):
+    if v10_help_nora_freeroam:
         $ v15s48a_norapoints += 1
         
         scene v15s48a_2
