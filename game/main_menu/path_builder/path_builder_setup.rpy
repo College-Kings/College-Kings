@@ -58,7 +58,7 @@ label path_builder_setup:
             actions=[
                 ToggleField(emily, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND),
                 ToggleVariable("emily_europe"),
-                ToggleVariable("v14_emily_ily")], act=1)
+                ToggleVariable("v14_emily_ily")])
 
         PB_ACT_1 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 1 Start", actions=[SetScreenVariable("start_label", "start"), SetScreenVariable("act_number", 1)])
         if renpy.loadable("v8/scene1.rpy"):
