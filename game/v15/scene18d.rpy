@@ -63,9 +63,6 @@ label v15s18d:
 
         imre "Oh! You actually did pretty well..."
 
-        if len(checklist.get_completed()) == 8:
-            $ grant_achievement("taskmaster")
-
         imre "I'm impressed."
 
         scene v15s18d_7 # TPP. Shot of Imre putting the challenge list in his pocket while infront of MC, slight smile, mouth closed.

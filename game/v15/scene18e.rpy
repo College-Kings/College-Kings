@@ -778,6 +778,9 @@ label v15s18e_end:
     if lauren.relationship < Relationship.FWB:
         $ lauren.relationship = Relationship.FWB
 
+    if len(checklist.get_completed()) == 8:
+        $ grant_achievement("taskmaster")
+
     u "(What a fucking party...) *Laughs*"
 
     $ renpy.end_replay()
