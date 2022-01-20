@@ -41,17 +41,17 @@ label path_builder_setup:
         PB_PENELOPE = PathBuilderGirl(PathBuilderCatagories.GIRL, "Penelope", "Confident",
             actions=[
                 ToggleField(penelope, "relationship", Relationship.LOYAL, Relationship.FRIEND), 
-                ToggleVariable("v11_pen_goes_europe")], act=4)
+                ToggleVariable("v11_pen_goes_europe")], act_requirement=4)
         PB_AMBER = PathBuilderGirl(PathBuilderCatagories.GIRL, "Amber", "Popular",
             actions=ToggleField(amber, "relationship", Relationship.FWB, Relationship.FRIEND))
         PB_LINDSEY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Lindsey", "Popular",
-            actions=ToggleField(lindsey, "relationship", Relationship.FWB, Relationship.FRIEND), act=3)
+            actions=ToggleField(lindsey, "relationship", Relationship.FWB, Relationship.FRIEND), act_requirement=3)
         PB_MS_ROSE = PathBuilderGirl(PathBuilderCatagories.GIRL, "Ms Rose", "Confident",
             actions=ToggleField(ms_rose, "relationship", Relationship.FWB, Relationship.FRIEND),
-            frat_requirement=Frat.WOLVES, act=3)
+            frat_requirement=Frat.WOLVES, act_requirement=3)
         PB_SAMANTHA = PathBuilderGirl(PathBuilderCatagories.GIRL, "Samantha", "Loyal",
             actions=ToggleField(samantha, "relationship", Relationship.FWB, Relationship.FRIEND),
-            frat_requirement=Frat.APES, act=4)
+            frat_requirement=Frat.APES, act_requirement=4)
         PB_JENNY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Jenny", "Popular",
             actions=ToggleField(jenny, "relationship", Relationship.FWB, Relationship.FRIEND))
         PB_EMILY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Emily", "Loyal",
@@ -68,11 +68,11 @@ label path_builder_setup:
         if renpy.loadable("v14/scene1.rpy"):
             PB_ACT_4 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 4 Start", actions=[SetScreenVariable("start_label", "v14_start"), SetScreenVariable("act_number", 4)])
 
-        HC_CHLOE = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Chloe",actions=ToggleVariable("hcGirl", "chloe"))
-        HC_RILEY = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Riley",actions=ToggleVariable("hcGirl", "riley"))
-        HC_LAUREN = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Lauren",actions=ToggleVariable("hcGirl", "lauren"))
-        HC_PENELOPE = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Penelope",actions=ToggleVariable("hcGirl", "penelope"))
-        HC_EMILY = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Emily",actions=ToggleVariable("hcGirl", "emily"))
-        HC_AMBER = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Amber",actions=ToggleVariable("hcGirl", "amber"))
+        HC_CHLOE = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Chloe", actions=ToggleVariable("hcGirl", "chloe"))
+        HC_RILEY = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Riley", actions=ToggleVariable("hcGirl", "riley"))
+        HC_LAUREN = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Lauren", actions=ToggleVariable("hcGirl", "lauren"))
+        HC_PENELOPE = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Penelope", actions=ToggleVariable("hcGirl", "penelope"))
+        HC_EMILY = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Emily", actions=ToggleVariable("hcGirl", "emily"))
+        HC_AMBER = PathBuilderItem(PathBuilderCatagories.HOMECOMING_DATE, "Amber", actions=ToggleVariable("hcGirl", "amber"))
 
     return
