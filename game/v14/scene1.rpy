@@ -15,6 +15,7 @@ label v14_start:
 
         if ms_rose.relationship == Relationship.GIRLFRIEND:
             $ sceneList.add("v12_rose")
+            $ v13_perfume = True
 
         if lauren.relationship == Relationship.GIRLFRIEND:
             $ sceneList.add("v12_lauren")
