@@ -366,6 +366,10 @@ label after_load:
         # Unlock simplr_app
         simplr_app.unlock()
 
+        for app in phone.applications.copy():
+            try: app.locked
+            except AttributeError: phone.applications.remove(app)
+
         ### MESSENGER
         #### MESSENGER CONTRACTS
         for contact in messenger.contacts:
@@ -1157,9 +1161,6 @@ label after_load:
             v1502fix = True
 
         setup()
-
-    if renpy.get_screen("phone_icon") is None:
-        show screen phone_icon
 
     hide screen reply
     hide screen simplr_reply

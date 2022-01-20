@@ -1860,7 +1860,10 @@ label v15s18c_autumn_amber:
         scene v15s18c_auam_5
         with dissolve
 
-        u "Haha, yeah. Some things are complete, still have a few left though."
+        if len(checklist.get_completed()) > 0:
+            u "Haha, yeah. Some things are complete, still have a few left though."
+        else:
+            u "Not really, still have a few left to complete."
 
     scene v15s18c_auam_5a
     with dissolve

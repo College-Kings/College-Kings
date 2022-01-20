@@ -1,19 +1,19 @@
 init python:
     class PathBuilderCatagories(Enum):
-        FRATERNITY = {
-            1: "Pick a fraternity",
+        START_LOCATION = {
+            1: "Pick your starting location (Act 1 Start skips steps 3-5)",
             "background": "main_menu/path_builder/images/path_builder_step_1.webp"
         }
         KCT = {
             2: "Pick your starting KCT",
             "background": "main_menu/path_builder/images/path_builder_step_2.webp"
         }
-        GIRL = {
-            3: "Pick which girls you want to be romantically involved with",
+        FRATERNITY = {
+            3: "Pick a fraternity",
             "background": "main_menu/path_builder/images/path_builder_step_3.webp"
         }
-        START_LOCATION = {
-            4: "Pick your starting location",
+        GIRL = {
+            4: "Pick which girls you want to be romantically involved with",
             "background": "main_menu/path_builder/images/path_builder_step_4.webp"
         }
         HOMECOMING_DATE = {
@@ -36,11 +36,12 @@ init python:
 
 
     class PathBuilderGirl(PathBuilderItem):
-        def __init__(self, catagory, name, kct, actions, frat_requirement=None):
+        def __init__(self, catagory, name, kct, actions, frat_requirement=None, act_requirement=2):
             PathBuilderItem.__init__(self, catagory, name, actions)
 
             self.kct = kct
             self.frat_requirement = frat_requirement
+            self.act_requirement = act_requirement
 
 
     def get_catagory(step):
@@ -111,6 +112,7 @@ screen path_builder():
     
     default catagory_step = 1
     default start_label = "start"
+    default act_number = 1
 
     $ catagory = get_catagory(catagory_step)
     $ items = [item for item in PathBuilderItem.items if item.catagory == catagory]
@@ -168,7 +170,7 @@ screen path_builder():
                         insensitive_background Transform(image_path + "girls/{}_idle.webp".format(item.name), matrixcolor=SaturationMatrix(0))
                         selected all([a.get_selected() for a in item.actions])
                         if isinstance(item, PathBuilderGirl):
-                            sensitive (item.frat_requirement is None or item.frat_requirement.value == int(joinwolves))
+                            sensitive ((item.frat_requirement is None or item.frat_requirement.value == int(joinwolves)) and (item.act_requirement <= act_number))
                         action [a for a in item.actions]
                         xysize (307, 112)
 
@@ -213,6 +215,7 @@ screen path_builder():
                             yoffset -87
                             size 30
                             color "#FFF"
+
                 else:
                     vbox:
                         xalign 0.5
@@ -244,6 +247,22 @@ screen path_builder():
                 text "Lock KCT (Prevent it from changing)":
                     yoffset -7
 
+        elif catagory == PathBuilderCatagories.START_LOCATION and not config.enable_steam:
+            button:
+                idle_background image_path + "button_idle.webp"
+                hover_background image_path + "button_hover.webp"
+                selected_idle_background image_path + "button_hover.webp"
+                selected False
+                action [
+                    SetScreenVariable("start_label", "v{}_start".format(config.version.split(' ')[0].split('.')[0])),
+                    SetScreenVariable("catagory_step", catagory_step + 1),
+                    SetScreenVariable("act_number", int(config.version.split(' ')[2][:-1]))
+                    ]
+                xysize (270, 61)
+                xalign 0.5
+
+                text "Latest Update" align (0.5, 0.5)
+
     hbox: 
         spacing 50
         align (0.5, 0.9)
@@ -264,15 +283,14 @@ screen path_builder():
         imagebutton:
             idle button_img_path + "continue.webp"
 
-            if catagory_step < len(PathBuilderCatagories):
-                sensitive any(all([a.get_selected() for a in item.actions]) for item in items)
-                action SetScreenVariable("catagory_step", catagory_step + 1)
-            else:
+            if catagory_step >= len(PathBuilderCatagories) or (act_number == 1 and catagory_step == 2):
                 action [Function(setup), Start(start_label)]
+            else:
+                action SetScreenVariable("catagory_step", catagory_step + 1)
 
 
 screen path_builder_advanced_settings():
-    tag menu
+    zorder 100
     modal True
 
     default image_path = "main_menu/path_builder/images/"
@@ -284,35 +302,186 @@ screen path_builder_advanced_settings():
     imagebutton:
         idle "gui/common/return_idle.webp"
         hover "gui/common/return_hover.webp"
-        action ShowMenu("path_builder")
+        action Hide("path_builder_advanced_settings")
         align (0.015, 0.015)
+        
 
-    vbox:
-        align (0.25, 0.5)
-
-        hbox:
+    hbox: 
+        align (0.5, 0.5)
+        spacing 100
+        vbox:
             spacing 20
-            
-            imagebutton:
-                idle image_path + "pb_tick.webp"
-                hover image_path + "pb_ticked.webp"
-                selected_idle image_path + "pb_ticked.webp"
-                action [ToggleVariable("lindsey_board.money", 10000, 200), ToggleVariable("chloe_board.money", 10000, 1500)]
 
-            text "Unlimited Presidency Campaign Budget":
-                yoffset -7
+            text "Extras" color "#FFD166" size 50
 
-        hbox:
+            if renpy.loadable("v10/scene1.rpy"):
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("emily_europe")
+
+                    text "Invite Emily to Europe":
+                        yoffset -7
+
+            if renpy.loadable("v11/scene1.rpy"):
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("v11s1_courtpoints", 100, 0)
+
+                    text "Win Penelope's court case":
+                        yoffset -7
+
+            if renpy.loadable("v14/scene1.rpy"):
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("v14_help_chloe")
+
+                    text "Help Chloe's Campaign":
+                        yoffset -7
+                
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("v14_help_lindsey")
+
+                    text "Help Lindsey's Campaign":
+                        yoffset -7
+
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("v14_SamanthaDrugs", False, True)
+
+                    text "Encourage Sam to get clean":
+                        yoffset -7
+
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("v14_amber_clean")
+
+                    text "Encourage Amber to get clean":
+                        yoffset -7
+
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("v14_emily_ily")
+
+                    text "Tell Emily you love her":
+                        yoffset -7
+
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("AutumnTrust")
+
+                    text "Autumn trusts you":
+                        yoffset -7
+
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        selected "v14_threesome" in sceneList
+                        if "v14_threesome" in sceneList:
+                            action RemoveFromSet(sceneList, "v14_threesome")
+                        else:
+                            action AddToSet(sceneList, "v14_threesome")
+
+                    text "Had Riley & Aubrey Threesome":
+                        yoffset -7
+                        
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleField(lauren, "relationship", Relationship.KISS, Relationship.FRIEND)
+
+                    text "Kissed Lauren":
+                        yoffset -7
+
+        vbox:
             spacing 20
-            
-            imagebutton:
-                idle image_path + "pb_tick.webp"
-                hover image_path + "pb_ticked.webp"
-                selected_idle image_path + "pb_ticked.webp"
-                action ToggleVariable("pb_kct_shown")
 
-            text "Show KCT Hints":
-                yoffset -7
+            text "Gameplay Changes" color "#FFD166" size 50
+
+            if renpy.loadable("v14/scene1.rpy"):            
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action [ToggleVariable("lindsey_board.money", 10000, 200), ToggleVariable("chloe_board.money", 10000, 1500)]
+
+                    text "Unlimited Presidency Campaign Budget":
+                        yoffset -7
+
+            hbox:
+                spacing 20
+                
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    action ToggleVariable("pb_kct_shown")
+
+                text "Show preferred KCT for each girl":
+                    yoffset -7
+
+            hbox:
+                spacing 20
+                
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    action ToggleVariable("pb_kct_notification")
+
+                text "Show a notification whenever you gain KCT points":
+                    yoffset -7
     
 
 style path_builder_advanced_settings_text is bebas_neue_30

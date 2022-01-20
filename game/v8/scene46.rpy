@@ -120,11 +120,7 @@ label v8_ending:
 
 label v8end:
     if not renpy.loadable("v9/scene01.rpy"):
-        scene savenow
-        with Fade (1,0,1)
-        " "
+        call screen save_now(9)
+        with Fade(1, 0, 1)
 
-    if renpy.loadable("v9/scene01.rpy"):
-        jump v9start
-    else:
-        call screen end_screen
+    jump v9start

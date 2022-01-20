@@ -58,6 +58,18 @@ screen warning_template(message, style="blue"):
 style warning_text is bebas_neue_30
 
 
+screen popup(message):
+    frame:
+        background "alert_background"
+        padding (30, 10)
+        pos (10, 10)
+        at achievementShow
+
+        text _(message)
+
+    timer 4 action Hide("popup")
+
+
 screen real_life_mode():
     modal True
 

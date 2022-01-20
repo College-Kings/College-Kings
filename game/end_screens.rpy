@@ -1,12 +1,10 @@
-screen save_now():
+screen save_now(next_version):
     tag save_now
     modal True
     style_prefix "save_now"
 
     default music_file = "music/horror2.mp3"
     default image_path = "gui/end_screen/"
-
-    on "show" action Play("music", music_file)
 
     add image_path + "end_screen_background.webp"
 
@@ -16,22 +14,28 @@ screen save_now():
 
         text "WARNING" color "#FF0000" xalign 0.5 size 105
         null height 100
-        text "END OF CURRENT VERSION" color "#FFFFFF" xalign 0.5 size 70
-        text "SAVE HERE TO KEEP PROGRESS" color "#FFFFFF" xalign 0.5 size 70
+        text "END OF CURRENT VERSION" xalign 0.5
+        text "SAVE HERE TO KEEP PROGRESS" xalign 0.5
         null height 50
-        text "DO NOT CLICK CONTINUE UNTIL YOU HAVE SAVED!" color "#FFFFFF" xalign 0.5 size 50
-
+        text "DO NOT CLICK CONTINUE UNTIL YOU HAVE SAVED!" xalign 0.5 size 50
+            
         imagebutton:
+            xalign 0.5
             idle image_path + "continue_idle.webp"
             hover image_path + "continue_hover.webp"
-            action Show("patreon_credits")
-            xalign 0.5
+            if renpy.loadable("v{}/scene1.rpy".format(next_version)):
+                action Return()
+            else:
+                action Show("patreon_credits")
 
     text "v" + config.version.split(" ")[0] align (1.0, 1.0) xoffset -20 color "#4e628f" size 30
-
+    
+    on "show" action Play("music", music_file)
 
 style save_now_text is text:
     font "fonts/Freshman.ttf"
+    color "#FFFFFF"
+    size 70
 
 
 screen end_screen(support_link="https://www.patreon.com/collegekings"):
