@@ -19,7 +19,6 @@ label path_builder_setup:
             PathBuilderCatagories.KCT,
             "Popular",
             actions=[SetVariable("kct", "popular"), SetVariable("bro", 2), SetVariable("boyfriend", 1), SetVariable("troublemaker", 2)])
-
         PB_CONFIDENT = PathBuilderItem(
             PathBuilderCatagories.KCT,
             "Confident",

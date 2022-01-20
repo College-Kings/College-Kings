@@ -251,6 +251,7 @@ screen path_builder():
                 idle_background image_path + "button_idle.webp"
                 hover_background image_path + "button_hover.webp"
                 selected_idle_background image_path + "button_hover.webp"
+                selected False
                 action [
                     SetScreenVariable("start_label", "v{}s1".format(config.version.split(' ')[0].split('.')[0])),
                     SetScreenVariable("catagory_step", catagory_step + 1),
@@ -281,10 +282,10 @@ screen path_builder():
         imagebutton:
             idle button_img_path + "continue.webp"
 
-            if catagory_step < len(PathBuilderCatagories):
-                action SetScreenVariable("catagory_step", catagory_step + 1)
-            else:
+            if catagory_step >= len(PathBuilderCatagories) or (act_number == 1 and catagory_step == 2):
                 action [Function(setup), Start(start_label)]
+            else:
+                action SetScreenVariable("catagory_step", catagory_step + 1)
 
 
 screen path_builder_advanced_settings():
@@ -370,9 +371,9 @@ screen path_builder_advanced_settings():
                         idle image_path + "pb_tick.webp"
                         hover image_path + "pb_ticked.webp"
                         selected_idle image_path + "pb_ticked.webp"
-                        action ToggleVariable("v14_SamanthaDrugs")
+                        action ToggleVariable("v14_SamanthaDrugs", False, True)
 
-                    text "Encourage Sam to take drugs":
+                    text "Encourage Sam to get clean":
                         yoffset -7
 
                 hbox:
