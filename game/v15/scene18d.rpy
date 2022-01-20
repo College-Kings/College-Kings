@@ -331,7 +331,7 @@ label v15s18d:
 
                     jump v15s18e
 
-            else: 
+            else:
                 if kct == "loyal" and lauren.relationship >= Relationship.KISS and not v11_lauren_caught_aubrey and not gift_card_50 in mc.inventory: # and not "v12_lauren" in sceneList, but this is implied by not having Lauren GIRLFRIEND
                     $ v15s18_LaurensBed = True
                     call screen kct_popup

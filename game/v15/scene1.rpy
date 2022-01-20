@@ -24,6 +24,9 @@ label v15_start:
         $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
         $ pb_name_set = True
 
+        if emily.relationship == Relationship.FWB:
+            $ v14_emily_ily = True
+
         if ms_rose.relationship == Relationship.FWB:
             $ sceneList.add("v12_rose")
             $ v13_perfume = True
@@ -40,17 +43,13 @@ label v15_start:
         if lindsey.relationship == Relationship.FWB:
             $ sceneList.add("v12_lindsey")
 
-        if lauren.relationship == Relationship.FRIEND:
-            $ lauren.relationship = Relationship.KISS
-
         if aubrey.relationship >= Relationship.FWB:
             $ s12v32_get_aubrey_flowers = True
             $ v13s48_canoeing_as_date = True
             $ v13s48_get_aubrey_chocolate = True
 
         if penelope.relationship >= Relationship.LOYAL:
-            $ v14_penelope_date = True
-        
+            $ v14_penelope_date = True        
 
     if (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction:
         $ lindsey_board.money -= 100 # we forgot about this one in v14
