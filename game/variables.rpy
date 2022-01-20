@@ -225,7 +225,7 @@ default v11_invite_sam_europe = False
 default v11_josh_nightclub = False
 default v11_kiss_nora = False
 default v11_linds_inv_imre = False # If true Lindsey will invite Imre, if false, Lindsey will invite Ryan
-default v11_lindsey_slogan = 0 # 1 is Lindsey, Returning The Promise // 2 is Lindsey, Say Bye To The Bullshit
+default v11_lindsey_slogan = 1 # 1 is Lindsey, Returning The Promise // 2 is Lindsey, Say Bye To The Bullshit
 default v11_manhunt_winner = "Ryan"
 default v11_overtake_points = 0
 default v11_pen_goes_europe = False
@@ -358,7 +358,6 @@ default v14s50_listen_to_aubrey_lindsey = 0 # MC choses to listen to Lindsey and
 default freeroam12 = set() #chloe heist
 default freeroam12stolen = set()
 default v14s5a_riley_should_join_chicks = False
-default v14_Samantha_clean = False # Placeholder?
 default AutumnTrust = False
 
 # 15.0 
@@ -427,3 +426,5 @@ default v15s9_wedding_date = False
 default v15s36_autumn_kiss = False
 default v1502fix = False
 default RileyLoyal = False
+default pb_kct_notification = False
+default pb_threesome = False
