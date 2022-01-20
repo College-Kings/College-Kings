@@ -288,46 +288,168 @@ screen path_builder_advanced_settings():
         hover "gui/common/return_hover.webp"
         action Hide("path_builder_advanced_settings")
         align (0.015, 0.015)
+        
 
-    vbox:
-        align (0.25, 0.5)
-        spacing 20
-
-        hbox:
+    hbox: 
+        align (0.5, 0.5)
+        spacing 100
+        vbox:
             spacing 20
+
+            text "Extras" color "#FFD166" size 50
+
+            hbox:
+                spacing 20
+                
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    action ToggleVariable("emily_europe")
+
+                text "Invite Emily to Europe":
+                    yoffset -7
+
+            hbox:
+                spacing 20
+                
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    action ToggleVariable("v11s1_courtpoints", 100, 0)
+
+                text "Win Penelope's court case":
+                    yoffset -7
+
+            hbox:
+                spacing 20
+                
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    action ToggleVariable("v14_help_chloe")
+
+                text "Help Chloe":
+                    yoffset -7
             
-            imagebutton:
-                idle image_path + "pb_tick.webp"
-                hover image_path + "pb_ticked.webp"
-                selected_idle image_path + "pb_ticked.webp"
-                action [ToggleVariable("lindsey_board.money", 10000, 200), ToggleVariable("chloe_board.money", 10000, 1500)]
+            hbox:
+                spacing 20
+                
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    action ToggleVariable("v14_help_lindsey")
 
-            text "Unlimited Presidency Campaign Budget":
-                yoffset -7
+                text "Help Lindsey":
+                    yoffset -7
 
-        hbox:
+            hbox:
+                spacing 20
+                
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    action ToggleVariable("v14_SamanthaDrugs")
+
+                text "Encourage Sam to take drugs":
+                    yoffset -7
+
+            hbox:
+                spacing 20
+                
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    action ToggleVariable("v14_amber_clean")
+
+                text "Encourage Amber to get clean":
+                    yoffset -7
+
+            hbox:
+                spacing 20
+                
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    action ToggleVariable("v14_emily_ily")
+
+                text "Tell Emily you love her":
+                    yoffset -7
+
+            hbox:
+                spacing 20
+                
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    action ToggleVariable("AutumnTrust")
+
+                text "Get closer to Autumn":
+                    yoffset -7
+
+            hbox:
+                spacing 20
+                
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    selected "v14_threesome" in sceneList
+                    if "v14_threesome" in sceneList:
+                        action RemoveFromSet(sceneList, "v14_threesome")
+                    else:
+                        action AddToSet(sceneList, "v14_threesome")
+
+                text "Had Riley & Aubrey Threesome":
+                    yoffset -7
+
+        vbox:
             spacing 20
-            
-            imagebutton:
-                idle image_path + "pb_tick.webp"
-                hover image_path + "pb_ticked.webp"
-                selected_idle image_path + "pb_ticked.webp"
-                action ToggleVariable("pb_kct_shown")
 
-            text "Show preferred KCT for each girl":
-                yoffset -7
+            text "Gameplay Changes" color "#FFD166" size 50
 
-        hbox:
-            spacing 20
-            
-            imagebutton:
-                idle image_path + "pb_tick.webp"
-                hover image_path + "pb_ticked.webp"
-                selected_idle image_path + "pb_ticked.webp"
-                action ToggleVariable("pb_kct_notification")
+            hbox:
+                spacing 20
+                
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    action [ToggleVariable("lindsey_board.money", 10000, 200), ToggleVariable("chloe_board.money", 10000, 1500)]
 
-            text "Show a notification whenever you gain KCT points":
-                yoffset -7
+                text "Unlimited Presidency Campaign Budget":
+                    yoffset -7
+
+            hbox:
+                spacing 20
+                
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    action ToggleVariable("pb_kct_shown")
+
+                text "Show preferred KCT for each girl":
+                    yoffset -7
+
+            hbox:
+                spacing 20
+                
+                imagebutton:
+                    idle image_path + "pb_tick.webp"
+                    hover image_path + "pb_ticked.webp"
+                    selected_idle image_path + "pb_ticked.webp"
+                    action ToggleVariable("pb_kct_notification")
+
+                text "Show a notification whenever you gain KCT points":
+                    yoffset -7
     
 
 style path_builder_advanced_settings_text is bebas_neue_30
