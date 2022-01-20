@@ -170,7 +170,7 @@ screen path_builder():
                         insensitive_background Transform(image_path + "girls/{}_idle.webp".format(item.name), matrixcolor=SaturationMatrix(0))
                         selected all([a.get_selected() for a in item.actions])
                         if isinstance(item, PathBuilderGirl):
-                            sensitive ((item.frat_requirement is None or item.frat_requirement.value == int(joinwolves)) and (item.act <= act_number))
+                            sensitive ((item.frat_requirement is None or item.frat_requirement.value == int(joinwolves)) and (item.act_requirement <= act_number))
                         action [a for a in item.actions]
                         xysize (307, 112)
 
