@@ -41,24 +41,24 @@ label path_builder_setup:
         PB_PENELOPE = PathBuilderGirl(PathBuilderCatagories.GIRL, "Penelope", "Confident",
             actions=[
                 ToggleField(penelope, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND), 
-                ToggleVariable("v11_pen_goes_europe")], act=4)
+                ToggleVariable("v11_pen_goes_europe")], act_requirement=4)
         PB_AMBER = PathBuilderGirl(PathBuilderCatagories.GIRL, "Amber", "Popular",
             actions=ToggleField(amber, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
         PB_LINDSEY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Lindsey", "Popular",
-            actions=ToggleField(lindsey, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND), act=3)
+            actions=ToggleField(lindsey, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND), act_requirement=3)
         PB_MS_ROSE = PathBuilderGirl(PathBuilderCatagories.GIRL, "Ms Rose", "Confident",
             actions=ToggleField(ms_rose, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND),
-            frat_requirement=Frat.WOLVES, act=3)
+            frat_requirement=Frat.WOLVES, act_requirement=3)
         PB_SAMANTHA = PathBuilderGirl(PathBuilderCatagories.GIRL, "Samantha", "Loyal",
             actions=ToggleField(samantha, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND),
-            frat_requirement=Frat.APES, act=4)
+            frat_requirement=Frat.APES, act_requirement=4)
         PB_JENNY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Jenny", "Popular",
             actions=ToggleField(jenny, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND))
         PB_EMILY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Emily", "Loyal",
             actions=[
                 ToggleField(emily, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND),
                 ToggleVariable("emily_europe"),
-                ToggleVariable("v14_emily_ily")], act=1)
+                ToggleVariable("v14_emily_ily")], act_requirement=1)
 
         PB_ACT_1 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 1 Start", actions=[SetScreenVariable("start_label", "start"), SetScreenVariable("act_number", 1)])
         if renpy.loadable("v8/scene1.rpy"):

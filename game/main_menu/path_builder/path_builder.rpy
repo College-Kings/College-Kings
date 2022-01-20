@@ -36,12 +36,12 @@ init python:
 
 
     class PathBuilderGirl(PathBuilderItem):
-        def __init__(self, catagory, name, kct, actions, frat_requirement=None, act=2):
+        def __init__(self, catagory, name, kct, actions, frat_requirement=None, act_requirement=2):
             PathBuilderItem.__init__(self, catagory, name, actions)
 
             self.kct = kct
             self.frat_requirement = frat_requirement
-            self.act = act
+            self.act_requirement = act_requirement
 
 
     def get_catagory(step):
