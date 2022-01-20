@@ -246,14 +246,14 @@ screen path_builder():
                 text "Lock KCT (Prevent it from changing)":
                     yoffset -7
 
-        elif catagory == PathBuilderCatagories.START_LOCATION:
+        elif catagory == PathBuilderCatagories.START_LOCATION and not config.enable_steam:
             button:
                 idle_background image_path + "button_idle.webp"
                 hover_background image_path + "button_hover.webp"
                 selected_idle_background image_path + "button_hover.webp"
                 selected False
                 action [
-                    SetScreenVariable("start_label", "v{}s1".format(config.version.split(' ')[0].split('.')[0])),
+                    SetScreenVariable("start_label", "v{}_start".format(config.version.split(' ')[0].split('.')[0])),
                     SetScreenVariable("catagory_step", catagory_step + 1),
                     SetScreenVariable("act_number", int(config.version.split(' ')[2][:-1]))
                     ]
