@@ -370,9 +370,9 @@ screen path_builder_advanced_settings():
                         idle image_path + "pb_tick.webp"
                         hover image_path + "pb_ticked.webp"
                         selected_idle image_path + "pb_ticked.webp"
-                        action ToggleVariable("v14_SamanthaDrugs")
+                        action ToggleVariable("v14_SamanthaDrugs", False, True)
 
-                    text "Encourage Sam to take drugs":
+                    text "Encourage Sam to get clean":
                         yoffset -7
 
                 hbox:
