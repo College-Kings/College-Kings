@@ -259,7 +259,7 @@ screen quick_menu():
     if quick_menu:
         hbox:
             align (0.5, 1.0)
-            yoffset 0
+            yoffset -5
             spacing 30
 
             if not realmode:

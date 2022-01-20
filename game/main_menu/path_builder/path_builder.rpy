@@ -246,6 +246,21 @@ screen path_builder():
                 text "Lock KCT (Prevent it from changing)":
                     yoffset -7
 
+        elif catagory == PathBuilderCatagories.START_LOCATION:
+            button:
+                idle_background image_path + "button_idle.webp"
+                hover_background image_path + "button_hover.webp"
+                selected_idle_background image_path + "button_hover.webp"
+                action [
+                    SetScreenVariable("start_label", "v{}s1".format(config.version.split(' ')[0].split('.')[0])),
+                    SetScreenVariable("catagory_step", catagory_step + 1),
+                    SetScreenVariable("act_number", int(config.version.split(' ')[2][:-1]))
+                    ]
+                xysize (270, 61)
+                xalign 0.5
+
+                text "Latest Update" align (0.5, 0.5)
+
     hbox: 
         spacing 50
         align (0.5, 0.9)

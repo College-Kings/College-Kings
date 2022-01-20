@@ -8,6 +8,8 @@ label v14_start:
         $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
         $ pb_name_set = True
     
+        $ v11_lindsey_slogan = 1
+    
         if emily.relationship == Relationship.GIRLFRIEND:
             $ sceneList.add("v13_emily")
 
@@ -28,6 +30,17 @@ label v14_start:
 
         if lauren.relationship == Relationship.FRIEND:
             $ lauren.relationship = Relationship.KISS
+
+        if aubrey.relationship == Relationship.GIRLFRIEND:
+            $ s12v32_get_aubrey_flowers = True
+            $ v13s48_canoeing_as_date = True
+            $ v13s48_get_aubrey_chocolate = True
+
+        if penelope.relationship == Relationship.GIRLFRIEND:
+            $ v11_pen_goes_europe = True
+
+        if samantha.relationship == Relationship.GIRLFRIEND:
+            $ cameron.relationship = Relationship.BRO
 
     show screen phone_icon
     
