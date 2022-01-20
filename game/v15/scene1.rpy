@@ -16,8 +16,13 @@ init python:
         chloe.messenger.addReply("Okay. Done.") 
 
 label v15_start:
-    $ autumn.relationship = Relationship.FRIEND #Reset Autumn to FRIEND
-    $ imre.relationship = Relationship.FRIEND #Reset Imre to FRIEND
+    if not path_builder or pb_name_set:
+        $ autumn.relationship = Relationship.FRIEND #Reset Autumn to FRIEND
+        $ imre.relationship = Relationship.FRIEND #Reset Imre to FRIEND
+
+    if path_builder and not pb_name_set:
+        $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
+        $ pb_name_set = True
 
     if (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction:
         $ lindsey_board.money -= 100 # we forgot about this one in v14
