@@ -86,13 +86,7 @@ label v10_waking_up_end:
 
 label end10:
     if not renpy.loadable("v11/scene1.rpy"):
-        scene savenow
-        with Fade (1,0,1)
-        " "
+        call screen save_now(11)
+        with Fade(1, 0, 1)
 
-    if renpy.loadable("v11/scene1.rpy"):
-        jump v11_start
-    elif config.enable_steam:
-        call screen end_screen(support_link="https://store.steampowered.com/dlc/1463120/College_Kings__Act_I/")
-    else:
-        call screen end_screen
+    jump v11_start
