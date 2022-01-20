@@ -283,7 +283,7 @@ screen path_builder():
             idle button_img_path + "continue.webp"
 
             if catagory_step >= len(PathBuilderCatagories) or (act_number == 1 and catagory_step == 2):
-                action [Function(setup), Start(start_label)]
+                action [Function(setup), Show("phone_icon"), Start(start_label)]
             else:
                 action SetScreenVariable("catagory_step", catagory_step + 1)
 
