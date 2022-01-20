@@ -1,15 +1,15 @@
 init python:
     class PathBuilderCatagories(Enum):
-        FRATERNITY = {
-            1: "Pick a fraternity",
+        START_LOCATION = {
+            1: "Pick your starting location",
             "background": "main_menu/path_builder/images/path_builder_step_1.webp"
         }
         KCT = {
             2: "Pick your starting KCT",
             "background": "main_menu/path_builder/images/path_builder_step_2.webp"
         }
-        START_LOCATION = {
-            3: "Pick your starting location",
+        FRATERNITY = {
+            3: "Pick a fraternity",
             "background": "main_menu/path_builder/images/path_builder_step_3.webp"
         }
         GIRL = {
@@ -36,12 +36,12 @@ init python:
 
 
     class PathBuilderGirl(PathBuilderItem):
-        def __init__(self, catagory, name, kct, actions, frat_requirement=None, act=2):
+        def __init__(self, catagory, name, kct, actions, frat_requirement=None, act_requirement=2):
             PathBuilderItem.__init__(self, catagory, name, actions)
 
             self.kct = kct
             self.frat_requirement = frat_requirement
-            self.act = act
+            self.act_requirement = act_requirement
 
 
     def get_catagory(step):
@@ -170,7 +170,7 @@ screen path_builder():
                         insensitive_background Transform(image_path + "girls/{}_idle.webp".format(item.name), matrixcolor=SaturationMatrix(0))
                         selected all([a.get_selected() for a in item.actions])
                         if isinstance(item, PathBuilderGirl):
-                            sensitive ((item.frat_requirement is None or item.frat_requirement.value == int(joinwolves)) and (item.act <= act_number))
+                            sensitive ((item.frat_requirement is None or item.frat_requirement.value == int(joinwolves)) and (item.act_requirement <= act_number))
                         action [a for a in item.actions]
                         xysize (307, 112)
 
@@ -282,7 +282,6 @@ screen path_builder():
             idle button_img_path + "continue.webp"
 
             if catagory_step < len(PathBuilderCatagories):
-                sensitive any(all([a.get_selected() for a in item.actions]) for item in items)
                 action SetScreenVariable("catagory_step", catagory_step + 1)
             else:
                 action [Function(setup), Start(start_label)]

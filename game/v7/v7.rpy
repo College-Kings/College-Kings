@@ -17267,13 +17267,7 @@ label fr4amberending:
 
 label v7end:
     if not renpy.loadable("v8/scene1.rpy"):
-        scene savenow
-        with Fade (1,0,1)
-        " "
+        call screen save_now(8)
+        with Fade(1, 0, 1)
 
-    if renpy.loadable("v8/scene1.rpy"):
-        jump v8start
-    elif config.enable_steam:
-        call screen end_screen(support_link="https://store.steampowered.com/dlc/1463120/College_Kings__Act_I/")
-    else:
-        call screen end_screen
+    jump v8start
