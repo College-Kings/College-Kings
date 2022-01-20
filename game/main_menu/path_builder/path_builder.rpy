@@ -282,7 +282,6 @@ screen path_builder():
             idle button_img_path + "continue.webp"
 
             if catagory_step < len(PathBuilderCatagories):
-                sensitive any(all([a.get_selected() for a in item.actions]) for item in items)
                 action SetScreenVariable("catagory_step", catagory_step + 1)
             else:
                 action [Function(setup), Start(start_label)]
