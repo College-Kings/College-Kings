@@ -12,8 +12,6 @@ init python:
             relationship_girls.append(character)
             setattr(store, "relationship_girls", relationship_girls)
 
-#  [amber, aubrey, autumn, chloe, emily, jenny, lauren, lindsey, ms_rose, nora, penelope, samantha, riley]
-
 # Declare characters used by this game. The color argument colorizes the name of the character.
 define character.narrator = Character (None, what_outlines=[ (2, "#000") ])
 define character.u = Character("[name]", who_color="#53d769", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
