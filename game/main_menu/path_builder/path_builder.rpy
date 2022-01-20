@@ -1,16 +1,16 @@
 init python:
     class PathBuilderCatagories(Enum):
-        FRATERNITY = {
-            1: "Pick a fraternity",
-            "background": "main_menu/path_builder/images/path_builder_step_1.webp"
+        START_LOCATION = {
+            1: "Pick your starting location",
+            "background": "main_menu/path_builder/images/path_builder_step_3.webp"
         }
         KCT = {
             2: "Pick your starting KCT",
             "background": "main_menu/path_builder/images/path_builder_step_2.webp"
         }
-        START_LOCATION = {
-            3: "Pick your starting location",
-            "background": "main_menu/path_builder/images/path_builder_step_3.webp"
+        FRATERNITY = {
+            3: "Pick a fraternity",
+            "background": "main_menu/path_builder/images/path_builder_step_1.webp"
         }
         GIRL = {
             4: "Pick which girls you want to be romantically involved with",
