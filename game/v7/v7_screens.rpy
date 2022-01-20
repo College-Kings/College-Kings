@@ -7,16 +7,11 @@ screen letter1():
 
 screen hc_select():
 
-    default image_path = "images/v7/select_date_test/"
-    default girl_path = image_path + "girls/"
+    default image_path = "images/v7/HC_Date_Select_screen/"
+    default girl_path = "gui/julia_call/"
 
     add image_path + "hoco_date_select_background.webp"
 
-    hbox:
-        pos (175, 97)
-
-        text "CHOOSE A GIRL TO ASK TO BE YOUR DATE":
-            size 55
     hbox:
         pos (1460, 105)
 
@@ -24,154 +19,250 @@ screen hc_select():
             idle image_path + "go_alone_idle.webp"
             action Jump("hc_no_girl")
 
-
-    grid 8 1:
-        xspacing 10
+    vpgrid:
+        rows 2
+        cols 4
+        spacing 30
         xalign 0.5
         ypos 400
 
-imagebutton:
+        vbox:
+            align (0.5, 0.5)
+
             if "amber" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
-                idle Transform(girl_path + "HCAmber.webp", zoom=.925)
-                hover Transform(girl_path + "HCAmber2.webp", zoom=.925)
-                tooltip "I'm not that close with Amber but she does seem quite flirty around me."
+                imagebutton:
+                    idle girl_path + "Amber_idle.webp"
+                    hover girl_path + "Amber.webp"
+                    tooltip "I'm not that close with Amber but she does seem quite flirty around me."
+                    action Jump("hc_asking_amber")
 
+                text "Amber":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
             else:
-                idle Transform(girl_path + "HCAmber3.webp", zoom=.925)
-                hover Transform(girl_path + "HCAmber23.webp", zoom=.925)
-            
-            if "amber" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
-                action Jump("hc_asking_amber")
-            else:
-                action NullAction()
+                imagebutton:
+                    idle girl_path + "Amber_grey.webp"
+                    action NullAction()
+                    
+                text "Amber":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
 
-        imagebutton:
+        vbox:
+            align (0.5, 0.5)
+
             if "aubrey" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
-                idle Transform(girl_path + "HCAubrey.webp", zoom=.925)
-                hover Transform(girl_path + "HCAubrey2.webp", zoom=.925)
-            else:
-                idle Transform(girl_path + "HCAubrey3.webp", zoom=.925)
-                hover Transform(girl_path + "HCAubrey23.webp", zoom=.925)
+                imagebutton:
+                    idle girl_path + "Aubrey_idle.webp"
+                    hover girl_path + "Aubrey.webp"
+                    action Jump("hc_asking_aubrey")
 
-            if aubrey.relationship >= Relationship.FWB:
-                tooltip "I'm pretty sure that Aubrey would go with me and that would probably lead to a pretty hot night afterwards..."
-            else:
-                tooltip "Aubrey and I get along well, she might be down to go with me."
-            
-            if "aubrey" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
-                action Jump("hc_asking_aubrey")
-            else:
-                action NullAction()
+                    if aubrey.relationship >= Relationship.FWB:
+                        tooltip "I'm pretty sure that Aubrey would go with me and that would probably lead to a pretty hot night afterwards..."
+                    else:
+                        tooltip "Aubrey and I get along well, she might be down to go with me."
 
-        imagebutton:
+                text "Aubrey":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
+            else:
+                imagebutton:
+                    idle girl_path + "Aubrey_grey.webp"
+                    action NullAction()
+
+                text "Aubrey":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
+
+        vbox:
+            align (0.5, 0.5)
+
             if "autumn" not in hcAsked and not autumn.relationship <= Relationship.MAD and lauren.relationship < Relationship.GIRLFRIEND:
-                idle Transform(girl_path + "HCAutumn.webp", zoom=.925)
-                hover Transform(girl_path + "HCAutumn2.webp", zoom=.925)
-            else:
-                idle Transform(girl_path + "HCAutumn3.webp", zoom=.925)
-                hover Transform(girl_path + "HCAutumn23.webp", zoom=.925)
+                imagebutton:
+                    idle girl_path + "Autumn_idle.webp"
+                    hover girl_path + "Autumn.webp"
+                    action Jump("hc_asking_autumn")
 
-            if autumn.relationship <= Relationship.MAD:
-                tooltip "I think Autumn might be mad at me, so I probably shouldn't ask her."
-            else:
-                tooltip "Autumn and I aren't really close, but I'll never know if she'd say yes if I don't try."
-            
-            if "autumn" not in hcAsked and not lauren.relationship >= Relationship.GIRLFRIEND and not autumn.relationship <= Relationship.MAD:
-                action Jump("hc_asking_autumn")
-            else:
-                action NullAction()
+                    if autumn.relationship <= Relationship.MAD:
+                        tooltip "I think Autumn might be mad at me, so I probably shouldn't ask her."
+                    else:
+                        tooltip "Autumn and I aren't really close, but I'll never know if she'd say yes if I don't try."
 
-        imagebutton:
+                text "Autumn":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
+            else:
+                imagebutton:
+                    idle girl_path + "Autumn_grey.webp"
+                    action NullAction()
+
+                text "Autumn":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
+
+        vbox:
+            align (0.5, 0.5)
+
             if "chloe" not in hcAsked and chloe.relationship > Relationship.MAD and lauren.relationship < Relationship.GIRLFRIEND:
-                idle Transform(girl_path + "HCChloe.webp", zoom=.925)
-                hover Transform(girl_path + "HCChloe2.webp", zoom=.925)
-            else:
-                idle Transform(girl_path + "HCChloe3.webp", zoom=.925)
-                hover Transform(girl_path + "HCChloe23.webp", zoom=.925)
+                imagebutton:
+                    idle girl_path + "Chloe_idle.webp"
+                    hover girl_path + "Chloe.webp"
+                    action Jump("hc_asking_chloe")
 
-            if chloe.relationship <= Relationship.MAD:
-                tooltip "I think Chloe is mad at me, so I probably shouldn't ask her."
-            else:
-                tooltip "Chloe and I have been getting closer recently. Who knows, I might have a shot."
-            
-            if "chloe" not in hcAsked and not (lauren.relationship >= Relationship.GIRLFRIEND or chloe.relationship <= Relationship.MAD):
-                action Jump("hc_asking_chloe")
-            else:
-                action NullAction()
+                    if chloe.relationship <= Relationship.MAD:
+                        tooltip "I think Chloe is mad at me, so I probably shouldn't ask her."
+                    else:
+                        tooltip "Chloe and I have been getting closer recently. Who knows, I might have a shot."
 
-        imagebutton:
+                text "Chloe":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
+            else:
+                imagebutton:
+                    idle girl_path + "Chloe_grey.webp"
+                    action NullAction()
+
+                text "Chloe":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
+
+        vbox:
+            align (0.5, 0.5)
+
             if "emily" not in hcAsked and forgiveemily and lauren.relationship < Relationship.GIRLFRIEND:
-                idle Transform(girl_path + "HCEmily.webp", zoom=.925)
-                hover Transform(girl_path + "/HCEmily2.webp", zoom=.925)
-            else:
-                idle Transform(girl_path + "HCEmily3.webp", zoom=.925)
-                hover Transform(girl_path + "HCEmily23.webp", zoom=.925)
+                imagebutton:
+                    idle girl_path + "Emily_idle.webp"
+                    hover girl_path + "Emily.webp"
+                    action Jump("hc_asking_emily")
 
-            if forgiveemily:
-                tooltip "I could take Emily. She definitely still has a thing for me."
-            else:
-                tooltip "I don't think asking Emily is the right call."
-            
-            if "emily" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND and forgiveemily :
-                action Jump("hc_asking_emily")
-            else:
-                action NullAction()
+                    if forgiveemily:
+                        tooltip "I could take Emily. She definitely still has a thing for me."
+                    else:
+                        tooltip "I don't think asking Emily is the right call."
 
-        imagebutton:
+                text "Emily":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
+            else:
+                imagebutton:
+                    idle girl_path + "Emily_grey.webp"
+                    action NullAction()
+
+                text "Emily":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
+
+        vbox:
+            align (0.5, 0.5)
+
             if "lauren" not in hcAsked and lauren.relationship > Relationship.MAD:
-                idle Transform(girl_path + "HCLauren.webp", zoom=.925)
-                hover Transform(girl_path + "HCLauren2.webp", zoom=.925)
-            else:
-                idle Transform(girl_path + "HCLauren3.webp", zoom=.925)
-                hover Transform(girl_path + "HCLauren23.webp", zoom=.925)
+                imagebutton:
+                    idle girl_path + "Lauren_idle.webp"
+                    hover girl_path + "Lauren.webp"
+                    action Jump("hc_asking_lauren")
 
-            if lauren.relationship <= Relationship.MAD:
-                tooltip "It's kinda weird between Lauren and me, I probably should ask someone else."
-            else:
-                tooltip "I'm not sure Lauren sees me as more than a friend, but we have been getting closer."
+                    if lauren.relationship <= Relationship.MAD:
+                        tooltip "It's kinda weird between Lauren and me, I probably should ask someone else."
+                    else:
+                        tooltip "I'm not sure Lauren sees me as more than a friend, but we have been getting closer."
 
-            if "lauren" not in hcAsked:
-                action Jump("hc_asking_lauren")
+                text "Lauren":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
             else:
-                action NullAction()
+                imagebutton:
+                    idle girl_path + "Lauren_grey.webp"
+                    action NullAction()
 
-        imagebutton:
+                text "Lauren":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
+
+        vbox:
+            align (0.5, 0.5)
+
             if "penelope" not in hcAsked and not v7_emily_bowling and lauren.relationship < Relationship.GIRLFRIEND:
-                idle Transform(girl_path + "HCPenelope.webp", zoom=.925)
-                hover Transform(girl_path + "HCPenelope2.webp", zoom=.925)
-            else:
-                idle Transform(girl_path + "HCPenelope3.webp", zoom=.925)
-                hover Transform(girl_path + "HCPenelope23.webp", zoom=.925)
+                imagebutton:
+                    idle girl_path + "Penelope_idle.webp"
+                    hover girl_path + "Penelope.webp"
+                    action Jump("hc_asking_penelope")
 
-            if v7_emily_bowling:
-                tooltip "Penelope didn't seem too eager to talk to me today, I better ask someone else."
-            elif bowling:
-                tooltip "Penelope and I got along really well when we went bowling together, I think she could say yes."
-            else:
-                tooltip "I haven't done that much with Penelope so far, but maybe she'll yes."
+                    if v7_emily_bowling:
+                        tooltip "Penelope didn't seem too eager to talk to me today, I better ask someone else."
+                    elif bowling:
+                        tooltip "Penelope and I got along really well when we went bowling together, I think she could say yes."
+                    else:
+                        tooltip "I haven't done that much with Penelope so far, but maybe she'll yes."
 
-            if "penelope" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND and not v7_emily_bowling:
-                action Jump("hc_asking_penelope")
+                text "Penelope":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
             else:
-                action NullAction()
+                imagebutton:
+                    idle girl_path + "Penelope_grey.webp"
+                    action NullAction()
 
-        imagebutton:
+                text "Penelope":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
+
+        vbox:
+            align (0.5, 0.5)
+
             if "riley" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
-                idle Transform(girl_path + "HCRiley.webp", zoom=.925)
-                hover Transform(girl_path + "/HCRiley2.webp", zoom=.925)
-            else:
-                idle Transform(girl_path + "HCRiley3.webp", zoom=.925)
-                hover Transform(girl_path + "HCRiley23.webp", zoom=.925)
+                imagebutton:
+                    idle girl_path + "Riley_idle.webp"
+                    hover girl_path + "Riley.webp"
+                    action Jump("hc_asking_riley")
 
-            if riley.relationship >= Relationship.LIKES:
-                tooltip "Riley seems to really like me so I think she'll say yes."
-            else:
-                tooltip "Riley and I are good friends. She might say yes if I ask her."
+                    if riley.relationship >= Relationship.LIKES:
+                        tooltip "Riley seems to really like me so I think she'll say yes."
+                    else:
+                        tooltip "Riley and I are good friends. She might say yes if I ask her."
 
-            if "riley" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
-                action Jump("hc_asking_riley")
+                text "Riley":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
             else:
-                action NullAction()
+                imagebutton:
+                    idle girl_path + "Riley_grey.webp"
+                    action NullAction()
+
+                text "Riley":
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
 
     $ tooltip = GetTooltip()
 

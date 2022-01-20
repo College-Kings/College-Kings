@@ -1,33 +1,36 @@
 screen girls():
+
+    default image_path = "gui/julia_call/"
+
     default girlLabels = [ 
-            ["juchloe","CHLOE"],
-            ["juaubrey","AUBREY"],
-            ["julauren","LAUREN"],
-            ["juriley","RILEY"],
-            ["juemily","EMILY"],
-            ["jupenelope","PENELOPE"],
+            ["juchloe","Chloe"],
+            ["juaubrey","Aubrey"],
+            ["julauren","Lauren"],
+            ["juriley","Riley"],
+            ["juemily","Emily"],
+            ["jupenelope","Penelope"],
         ]
 
-    add "images/v4/julia_call/girls.webp"
+    add image_path + "jc_background.webp"
 
-    hbox:
-        pos (175, 120)
-
-        text "WHICH GIRL DO YOU WANT TO TELL JULIA ABOUT?":
-            size 55
-
-    grid 3 2:
-        ypos 360
-        xspacing 25
-        yspacing 50
+    vpgrid:
+        cols 3
+        rows 2
+        spacing 60
         xalign 0.5
+        ypos 450
 
         for i in girlLabels:
             vbox:
                 align (0.5, 0.5)
 
                 imagebutton:
-                    idle Transform("images/v4/julia_call/" + i[0] + ".webp", zoom=.8)
+                    idle image_path + i[1] + "_idle.webp"
+                    hover image_path + i[1] + ".webp"
                     action Jump(i[0])
 
-                text i[1] xalign 0.5
+                text i[1]:
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30
