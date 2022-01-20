@@ -313,134 +313,138 @@ screen path_builder_advanced_settings():
 
             text "Extras" color "#FFD166" size 50
 
-            hbox:
-                spacing 20
+            if renpy.loadable("v10/scene1.rpy"):
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("emily_europe")
+
+                    text "Invite Emily to Europe":
+                        yoffset -7
+
+            if renpy.loadable("v11/scene1.rpy"):
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("v11s1_courtpoints", 100, 0)
+
+                    text "Win Penelope's court case":
+                        yoffset -7
+
+            if renpy.loadable("v14/scene1.rpy"):
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("v14_help_chloe")
+
+                    text "Help Chloe's Campaign":
+                        yoffset -7
                 
-                imagebutton:
-                    idle image_path + "pb_tick.webp"
-                    hover image_path + "pb_ticked.webp"
-                    selected_idle image_path + "pb_ticked.webp"
-                    action ToggleVariable("emily_europe")
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("v14_help_lindsey")
 
-                text "Invite Emily to Europe":
-                    yoffset -7
+                    text "Help Lindsey's Campaign":
+                        yoffset -7
 
-            hbox:
-                spacing 20
-                
-                imagebutton:
-                    idle image_path + "pb_tick.webp"
-                    hover image_path + "pb_ticked.webp"
-                    selected_idle image_path + "pb_ticked.webp"
-                    action ToggleVariable("v11s1_courtpoints", 100, 0)
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("v14_SamanthaDrugs")
 
-                text "Win Penelope's court case":
-                    yoffset -7
+                    text "Encourage Sam to take drugs":
+                        yoffset -7
 
-            hbox:
-                spacing 20
-                
-                imagebutton:
-                    idle image_path + "pb_tick.webp"
-                    hover image_path + "pb_ticked.webp"
-                    selected_idle image_path + "pb_ticked.webp"
-                    action ToggleVariable("v14_help_chloe")
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("v14_amber_clean")
 
-                text "Help Chloe's Campaign":
-                    yoffset -7
-            
-            hbox:
-                spacing 20
-                
-                imagebutton:
-                    idle image_path + "pb_tick.webp"
-                    hover image_path + "pb_ticked.webp"
-                    selected_idle image_path + "pb_ticked.webp"
-                    action ToggleVariable("v14_help_lindsey")
+                    text "Encourage Amber to get clean":
+                        yoffset -7
 
-                text "Help Lindsey's Campaign":
-                    yoffset -7
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("v14_emily_ily")
 
-            hbox:
-                spacing 20
-                
-                imagebutton:
-                    idle image_path + "pb_tick.webp"
-                    hover image_path + "pb_ticked.webp"
-                    selected_idle image_path + "pb_ticked.webp"
-                    action ToggleVariable("v14_SamanthaDrugs")
+                    text "Tell Emily you love her":
+                        yoffset -7
 
-                text "Encourage Sam to take drugs":
-                    yoffset -7
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action ToggleVariable("AutumnTrust")
 
-            hbox:
-                spacing 20
-                
-                imagebutton:
-                    idle image_path + "pb_tick.webp"
-                    hover image_path + "pb_ticked.webp"
-                    selected_idle image_path + "pb_ticked.webp"
-                    action ToggleVariable("v14_amber_clean")
+                    text "Get closer to Autumn":
+                        yoffset -7
 
-                text "Encourage Amber to get clean":
-                    yoffset -7
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        selected "v14_threesome" in sceneList
+                        if "v14_threesome" in sceneList:
+                            action RemoveFromSet(sceneList, "v14_threesome")
+                        else:
+                            action AddToSet(sceneList, "v14_threesome")
 
-            hbox:
-                spacing 20
-                
-                imagebutton:
-                    idle image_path + "pb_tick.webp"
-                    hover image_path + "pb_ticked.webp"
-                    selected_idle image_path + "pb_ticked.webp"
-                    action ToggleVariable("v14_emily_ily")
-
-                text "Tell Emily you love her":
-                    yoffset -7
-
-            hbox:
-                spacing 20
-                
-                imagebutton:
-                    idle image_path + "pb_tick.webp"
-                    hover image_path + "pb_ticked.webp"
-                    selected_idle image_path + "pb_ticked.webp"
-                    action ToggleVariable("AutumnTrust")
-
-                text "Get closer to Autumn":
-                    yoffset -7
-
-            hbox:
-                spacing 20
-                
-                imagebutton:
-                    idle image_path + "pb_tick.webp"
-                    hover image_path + "pb_ticked.webp"
-                    selected_idle image_path + "pb_ticked.webp"
-                    selected "v14_threesome" in sceneList
-                    if "v14_threesome" in sceneList:
-                        action RemoveFromSet(sceneList, "v14_threesome")
-                    else:
-                        action AddToSet(sceneList, "v14_threesome")
-
-                text "Had Riley & Aubrey Threesome":
-                    yoffset -7
+                    text "Had Riley & Aubrey Threesome":
+                        yoffset -7
 
         vbox:
             spacing 20
 
             text "Gameplay Changes" color "#FFD166" size 50
 
-            hbox:
-                spacing 20
-                
-                imagebutton:
-                    idle image_path + "pb_tick.webp"
-                    hover image_path + "pb_ticked.webp"
-                    selected_idle image_path + "pb_ticked.webp"
-                    action [ToggleVariable("lindsey_board.money", 10000, 200), ToggleVariable("chloe_board.money", 10000, 1500)]
+            if renpy.loadable("v14/scene1.rpy"):            
+                hbox:
+                    spacing 20
+                    
+                    imagebutton:
+                        idle image_path + "pb_tick.webp"
+                        hover image_path + "pb_ticked.webp"
+                        selected_idle image_path + "pb_ticked.webp"
+                        action [ToggleVariable("lindsey_board.money", 10000, 200), ToggleVariable("chloe_board.money", 10000, 1500)]
 
-                text "Unlimited Presidency Campaign Budget":
-                    yoffset -7
+                    text "Unlimited Presidency Campaign Budget":
+                        yoffset -7
 
             hbox:
                 spacing 20
