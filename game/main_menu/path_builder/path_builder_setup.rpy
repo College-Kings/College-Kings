@@ -53,12 +53,22 @@ label path_builder_setup:
             frat_requirement=Frat.APES, act_requirement=4)
         PB_JENNY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Jenny", "Popular",
             actions=ToggleField(jenny, "relationship", Relationship.FWB, Relationship.FRIEND))
-        PB_EMILY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Emily", "Loyal",
-            actions=[
-                ToggleField(emily, "relationship", Relationship.FWB, Relationship.FRIEND),
-                ToggleVariable("emily_europe"),
-                ToggleVariable("v14_emily_ily")])
-
+        if renpy.loadable("v14/scene1.rpy"):
+            PB_EMILY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Emily", "Loyal",
+                actions=[
+                    ToggleField(emily, "relationship", Relationship.FWB, Relationship.FRIEND),
+                    ToggleVariable("emily_europe"),
+                    ToggleVariable("v14_emily_ily")])
+        elif renpy.loadable("v11/scene1.rpy"):
+            PB_EMILY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Emily", "Loyal",
+                actions=[
+                    ToggleField(emily, "relationship", Relationship.FWB, Relationship.FRIEND),
+                    ToggleVariable("emily_europe")])
+        else:
+            PB_EMILY = PathBuilderGirl(PathBuilderCatagories.GIRL, "Emily", "Loyal",
+                actions=[
+                    ToggleField(emily, "relationship", Relationship.FWB, Relationship.FRIEND)])
+                    
         PB_ACT_1 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 1 Start", actions=[SetScreenVariable("start_label", "start"), SetScreenVariable("act_number", 1)])
         if renpy.loadable("v8/scene1.rpy"):
             PB_ACT_2 = PathBuilderItem(PathBuilderCatagories.START_LOCATION, "Act 2 Start", actions=[SetScreenVariable("start_label", "v7_homecoming"), SetScreenVariable("act_number", 2)])
