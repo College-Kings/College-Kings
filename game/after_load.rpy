@@ -66,7 +66,8 @@ label after_load:
         # Disable skip transitions
         preferences.transitions = 2
 
-        renpy.music.stop(channel=u'music')
+        ### renpy.music.stop(channel=u'music')
+        ### If using dummy files, don't need to stop music anymore
 
         ## PLAYABLE CHARACTERS
         if isinstance(mc, FightCharacter) or isinstance(mc, MainCharacter):
