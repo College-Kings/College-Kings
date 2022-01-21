@@ -49,7 +49,9 @@ label v15_start:
             $ v13s48_get_aubrey_chocolate = True
 
         if penelope.relationship >= Relationship.LOYAL:
-            $ v14_penelope_date = True        
+            $ v14_penelope_date = True  
+
+        $ v14_ApesPostChloePics = False
 
     if (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction:
         $ lindsey_board.money -= 100 # we forgot about this one in v14
