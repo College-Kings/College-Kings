@@ -13,10 +13,7 @@ define _quit_slot = "99-1"
 
 
 # The game starts here.
-label start:
-
-    call screen girls
-    
+label start:    
     call screen real_life_mode
 
 label end_credits: # for compatibility
