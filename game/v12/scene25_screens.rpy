@@ -1,5 +1,6 @@
 screen v12_girls():
 
+    #name, action
     default girlLabels = [
         ["Amber", "v12_jc_amber"],
         ["Aubrey", "v12_jc_aubrey"],

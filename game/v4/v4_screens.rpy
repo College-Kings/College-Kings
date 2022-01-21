@@ -2,7 +2,8 @@ screen girls():
 
     default image_path = "gui/julia_call/"
 
-    default girlLabels = [ 
+    #label , Name
+    default girlLabels = [
             ["juchloe","Chloe"],
             ["juaubrey","Aubrey"],
             ["julauren","Lauren"],
