@@ -71,11 +71,13 @@ screen relationship_screen():
                             size 15
                             color "#FFD166"
                             xoffset 120
+                    elif girl.relationship == Relationship.LOYAL and girl == "autumn":
+                        text "Trust":
+                            size 15
+                            color "#FFD166"
+                            xoffset 120
                     else:
                         text "Dating":
                             size 15
                             color "#FFD166"
                             xoffset 120
-
-                    
-
