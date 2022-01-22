@@ -104,24 +104,80 @@ screen censoredPopup(continueLabel):
     add "gui/censoredPopup/censoredBackground.webp"
 
     vbox:
-        pos (365, 566)
-        spacing 148
+        ypos 125
+        xalign 0.5
+
+        text "THE NEXT SCENE HAS NSFW CONTENT":
+            size 70
+            color "#FFFFFF"
+            style "nsfw_text"
+
+    vbox:
+        ypos 255
+        xalign 0.5
+
+        text "* CONTENT NOT SUITABLE FOR TWITCH OR YOUTUBE":
+            size 40
+            color "#FFFFFF"
+            style "nsfw_italic_text"
+
+    vbox:
+        ypos 450
+        xalign 0.5
+        xsize 1050
+
+        text "TO VIEW THIS SCENE YOU MUST HAVE NSFW ENABLED":
+            size 35
+            color "#FFFFFF"
+            style "nsfw_text"
+            xalign 0.5
+
+        text "IN THE SETTINGS MENU":
+            size 35
+            color "#FFFFFF"
+            style "nsfw_text"
+            xalign 0.5
+
+    vbox:
+        ypos 730
+        xalign 0.5
+        xsize 1050
+
+        text "OR YOU MAY CHOOSE TO SKIP THIS SCENE":
+            size 35
+            color "#FFFFFF"
+            style "nsfw_text"
+            xalign 0.5
+
+    vbox:
+        ypos 555
+        xalign 0.5
 
         if config_censored:
             imagebutton:
-                idle "gui/censoredPopup/censoredSettings.webp"
-                hover "gui/censoredPopup/censoredSettingsHover.webp"
+                idle Transform("gui/censoredPopup/censoredSettings.webp", zoom=0.65)
+                hover Transform("gui/censoredPopup/censoredSettingsHover.webp", zoom=0.65)
                 action ShowMenu("preferences")
         else:
             imagebutton:
-                idle "gui/censoredPopup/censoredContinue.webp"
-                hover "gui/censoredPopup/censoredContinueHover.webp"
+                idle Transform("gui/censoredPopup/censoredContinue.webp", zoom=0.65)
+                hover Transform("gui/censoredPopup/censoredContinueHover.webp", zoom=0.65)
                 action Return()
+    vbox:
+        ypos 790
+        xalign 0.5
 
         imagebutton:
-            idle "gui/censoredPopup/censoredSkipScene.webp"
-            hover "gui/censoredPopup/censoredSkipSceneHover.webp"
+            idle Transform("gui/censoredPopup/censoredSkipScene.webp", zoom=0.65)
+            hover Transform("gui/censoredPopup/censoredSkipSceneHover.webp", zoom=0.65)
             action Jump(continueLabel)
+
+
+style nsfw_text is text:
+    font "fonts/Montserrat-Bold.ttf"
+
+style nsfw_italic_text is text:
+    font "fonts/Montserrat-MediumItalic.ttf"
 
 
 screen timerBar(seconds=3):
