@@ -110,6 +110,9 @@ screen test_health():
         text "[opp_health]":
             size 100
             color "#eb5858"  
+        text "[opponent_guard]":
+            size 100
+            color "#494ce6"  
 
     vbox:
         align (0.1, 0.9)

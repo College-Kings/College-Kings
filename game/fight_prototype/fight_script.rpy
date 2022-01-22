@@ -9,6 +9,7 @@ label fight_test:
     show screen opponent_health_bar(100, 100)
     $ opp_health = 100
     $ player_health = 100
+    $ player_guard = 1
 
     call screen player_attack
 
@@ -41,7 +42,7 @@ label player_hook:
 
         $ opponent_guard = 1
 
-        jump opponent_attacks
+        jump opponent_counters
 
     elif opponent_guard == 1:
 
@@ -107,6 +108,8 @@ label player_jab:
             $ reset_chance = 1
             $ opponent_guard = 2
 
+            $ player_guard = 1
+
             call screen player_attack
 
         else:
@@ -121,6 +124,8 @@ label player_jab:
             pause 1
 
             $ reset_chance += 1
+
+            $ player_guard = 1
 
             call screen player_attack
     
@@ -144,6 +149,8 @@ label player_jab:
             $ break_chance = 1
             $ opponent_guard = 0
 
+            $ player_guard = 1
+
             call screen player_attack
 
         else: # guard doesn't break
@@ -157,6 +164,8 @@ label player_jab:
 
             $ break_chance += 1
 
+            $ player_guard = 1
+
             call screen player_attack
 
 
@@ -169,17 +178,32 @@ label player_jab:
 
             pause 1
 
+            $ player_guard = 1
+
             call screen player_attack
+
+label opponent_readys:
+
+        call screen opponent_ready
 
 label opponent_attacks:
 
-        call screen opponent_ready
+        if opponent_guard == 2:
+            scene tomstancekick
+        elif opponent_guard == 1:
+            scene tomstancehook
+        else: 
+            scene tomstancejab
+
+        pause 0.7
 
         label opponent_counters:
 
         $ opponent_attack = renpy.random.choice([0, 1]) #opponent attack choice
 
         label opp_light_counter:
+
+        $ opponent_guard = 1
 
         call screen opponent_attack
 
@@ -193,7 +217,7 @@ label player_blocks_jab:
 
     pause 1
 
-    jump opponent_attacks
+    jump opponent_readys
 
 label player_blocks_kick:
 
@@ -205,6 +229,8 @@ label player_blocks_kick:
     show screen fight_popup("BLOCKED")
 
     pause 1
+
+    $ player_guard = 1
 
     call screen player_attack
 
@@ -219,7 +245,7 @@ label opp_jab:
 
     pause 1
 
-    jump opponent_attacks
+    jump opponent_readys
 
 label opp_kick:
 
@@ -231,6 +257,8 @@ label opp_kick:
     show screen fight_popup("HEAVY HIT")
 
     pause 1
+
+    $ player_guard = 1
 
     call screen player_attack
 
