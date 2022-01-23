@@ -1,17 +1,44 @@
 screen v12_girls():
 
-    #name, action
-    default girlLabels = [
-        ["Amber", "v12_jc_amber"],
-        ["Aubrey", "v12_jc_aubrey"],
-        ["Chloe", "v12_jc_chole"],
-        ["Lauren", "v12_jc_lauren"],
-        ["Lindsey", "v12_jc_lindsey"],
-        ["Nora", "v12_jc_nora"],
-        ["Penelope", "v12_jc_penelope"],
-        ["Riley", "v12_jc_riley"],
-        ["Samantha", "v12_jc_samantha"],
-    ]
+    # character: label
+    default girlLabels = {
+        "Amber": {
+            "label": "v12_jc_amber",
+            "condition": True
+        },
+        "Aubrey": {
+            "label": "v12_jc_aubrey",
+            "condition": True
+        },
+        "Chloe": {
+            "label": "v12_jc_chole",
+            "condition": chloe.relationship > Relationship.MAD
+        },
+        "Lauren": {
+            "label": "v12_jc_lauren",
+            "condition": not v11_lauren_caught_aubrey
+        },
+        "Lindsey": {
+            "label": "v12_jc_lindsey",
+            "condition": True
+        },
+        "Nora": {
+            "label": "v12_jc_nora",
+            "condition": True
+        },
+        "Penelope": {
+            "label": "v12_jc_penelope",
+            "condition": True
+        },
+        "Riley": {
+            "label": "v12_jc_riley",
+            "condition": True
+        },
+        "Samantha": {
+            "label": "v12_jc_samantha",
+            "condition": v11_invite_sam_europe
+        }
+    }
 
     default image_path = "gui/julia_call/"
 
@@ -24,47 +51,18 @@ screen v12_girls():
         xalign 0.5
         ypos 350
 
-        for i in girlLabels:
+        for character, i in girlLabels.items():
             vbox:
                 align (0.5, 0.5)
 
-                if i[0] == "Chloe":
-                    imagebutton:
-                        if chloe.relationship > Relationship.MAD:
-                            idle image_path + i[0] + "_idle.webp"
-                            hover image_path + i[0] + ".webp"
-                            action Jump(i[1])
-                        else:
-                            idle image_path + i[0] + "_grey.webp"
-                            hover image_path + i[0] + "_grey.webp"
-                elif not v11_lauren_caught_aubrey:
-                    if not v11_lauren_caught_aubrey:
-                        imagebutton:
-                            idle image_path + i[0] + "_idle.webp"
-                            hover image_path + i[0] + ".webp"
-                            action Jump(i[1])
-                    else:
-                        imagebutton:
-                            idle image_path + i[0] + "_grey.webp"
-                            hover image_path + i[0] + "_grey.webp"
+                imagebutton:
+                    idle image_path  + "{}_idle.webp".format(character)
+                    hover image_path + "{}.webp".format(character)
+                    insensitive image_path + "{}_grey.webp".format(character)
+                    sensitive i["condition"]
+                    action Jump(i["label"])
 
-                elif v11_invite_sam_europe:
-                    if v11_invite_sam_europe:
-                        imagebutton:
-                            idle image_path + i[0] + "_idle.webp"
-                            hover image_path + i[0] + ".webp"
-                            action Jump(i[1])
-                    else:
-                        imagebutton:
-                            idle image_path + i[0] + "_grey.webp"
-                            hover image_path + i[0] + "_grey.webp"
-                else:
-                    imagebutton:
-                        idle image_path + i[0] + "_idle.webp"
-                        hover image_path + i[0] + ".webp"
-                        action Jump(i[1])
-
-                text i[0]:
+                text character:
                     yoffset -80
                     xoffset 30
                     xalign 0.5
