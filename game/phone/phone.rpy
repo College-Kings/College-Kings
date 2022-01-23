@@ -16,7 +16,7 @@ init python:
 
     config.overlay_screens.append("phone_icon")
 
-default phone = Phone("phone_icon.webp")
+define phone = Phone("phone_icon.webp")
 
 
 screen phone_icon():
