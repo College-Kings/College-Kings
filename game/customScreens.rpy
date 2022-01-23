@@ -140,7 +140,13 @@ screen censoredPopup(continueLabel):
                 xalign 0.5
 
         else:
-            text "YOU HAVE ENABLED NSFW CONTENT SO YOU MAY CONTINUE":
+            text "YOU HAVE NSFW CONTENT ENABLED SO YOU MAY":
+                size 35
+                color "#FFFFFF"
+                style "nsfw_text"
+                xalign 0.5
+
+            text "CONTINUE TO VIEW THE FOLLOWING SCENE":
                 size 35
                 color "#FFFFFF"
                 style "nsfw_text"
