@@ -588,11 +588,13 @@ screen file_slots(title):
         ypos 56
         style "file_slots_title"
 
-    imagebutton:
-        idle "gui/common/return_idle.webp"
-        hover "gui/common/return_hover.webp"
-        action Return()
-        pos (120, 80)
+    hbox:
+        align (0.0, 0.0)
+        
+        imagebutton:
+            idle "gui/common/return_idle.webp"
+            hover "gui/common/return_hover.webp"
+            action Return()
 
     fixed:
         pos (243, 206)
