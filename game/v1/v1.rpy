@@ -493,7 +493,7 @@ label starta: #for compatibility only
 
             u "Why is that?"
 
-            scene s36
+            scene s33c
             with dissolve
 
             aut "He's uhm-"
