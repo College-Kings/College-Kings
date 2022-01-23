@@ -588,13 +588,10 @@ screen file_slots(title):
         ypos 56
         style "file_slots_title"
 
-    hbox:
-        align (0.0, 0.0)
-        
-        imagebutton:
-            idle "gui/common/return_idle.webp"
-            hover "gui/common/return_hover.webp"
-            action Return()
+    imagebutton:
+        idle "gui/common/return_idle.webp"
+        hover "gui/common/return_hover.webp"
+        action Return()
 
     fixed:
         pos (243, 206)
@@ -929,11 +926,6 @@ screen preferences():
         hover "gui/settings/return_hover.webp"
         action Return()
         pos (129, 82)
-
-# style settings_imagebutton:
-#     idle "blue_button_idle"
-#     hover "blue_button_hover"
-#     selected_idle "blue_button_hover"
 
 
 style radio_label is pref_label
