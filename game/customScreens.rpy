@@ -98,7 +98,7 @@ screen fantasyOverlay():
     add "images/fantasyoverlay.webp"
 
 
-screen censoredPopup(continueLabel):
+screen censored_popup(continueLabel):
     modal True
 
     add "gui/censoredPopup/censoredBackground.webp"

@@ -216,7 +216,7 @@ label v15s48a:
     pause 1.25
 
     if config_censored:
-        call screen censoredPopup("v15s48a_nsfwSkipLabel1")
+        call screen censored_popup("v15s48a_nsfwSkipLabel1")
 
     scene v15s48a_7 # TPP. Closer up of MC and Nora, MC taking off Nora's shirt her boobs out, Nora's face obscured by her shirt, MC slight smile, mouth closed.
     with dissolve

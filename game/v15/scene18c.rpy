@@ -784,7 +784,7 @@ label v15s18c_imre_aubrey:
     u "(Well, when you put it like that...)"
 
     if config_censored:
-        call screen censoredPopup("v15s18c_nsfwSkipLabelAub")
+        call screen censored_popup("v15s18c_nsfwSkipLabelAub")
 
     scene v15s18c_imau_13 # TPP. Close up of Aubrey removing the bottom half of her costume
     with dissolve
@@ -2488,7 +2488,7 @@ label v15s18c_chris_penelope:
                     u "Get comfortable."
 
                     if config_censored:
-                        call screen censoredPopup("v15s18c_nsfwSkipLabelP")
+                        call screen censored_popup("v15s18c_nsfwSkipLabelP")
 
                     scene v15s18c_chpe_10 # TPP. Show Penelope taking her dress off, sexy expression and pose, mouth closed
                     with dissolve

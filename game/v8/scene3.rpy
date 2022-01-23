@@ -11,7 +11,7 @@ label v8_ri_start:
     u "Mhm... Tell me more."
 
     if config_censored:
-        call screen censoredPopup("v8s3_nsfwSkipLabel1")
+        call screen censored_popup("v8s3_nsfwSkipLabel1")
 
     scene v8s26 # FPP (MC still sitting on the bed). Riley stands up and is looking into the camera and talking seductively, about to take her dress off. She should be visible at least down until her knees
     with dissolve

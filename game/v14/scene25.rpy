@@ -822,7 +822,7 @@ label v14s25:
             #pause 1
 
             if config_censored:
-                call screen censoredPopup("v14s25_nsfwSkipLabel1")
+                call screen censored_popup("v14s25_nsfwSkipLabel1")
 
             scene v14s25_18 # TPP. (MC off Camera) Close up of Amber standing at the entrance of her room, Amber topless in a flirty pose, Wearing nothing but black panties, Amber Slight Smile, Mouth closed.
             with dissolve

@@ -18,7 +18,7 @@ label v15s18e:
     pause 1.25
 
     if config_censored:
-        call screen censoredPopup("v15s18e_nsfwSkipLabel1")
+        call screen censored_popup("v15s18e_nsfwSkipLabel1")
 
     play sound "sounds/doorclose.mp3"
 

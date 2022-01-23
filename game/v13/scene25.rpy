@@ -172,7 +172,7 @@ label v13s25:
                         stop music fadeout 3
 
                         if config_censored:
-                            call screen censoredPopup("v13s25_nsfwSkipLabel1")
+                            call screen censored_popup("v13s25_nsfwSkipLabel1")
 
                         jump v13_emmy_sex
 

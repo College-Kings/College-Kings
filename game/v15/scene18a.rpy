@@ -1816,7 +1816,7 @@ label v15s18a_Riley:
             image v15rileyhj2f = Movie(play="images/v15/Scene 18a/v15rileyhj2f.webm", loop=True, image="images/v15/Scene 18a/v15rileyhj2Start.webp", start_image="images/v15/Scene 18a/v15rileyhj2Start.webp") 
 
             if config_censored:
-                call screen censoredPopup("v15s18a_nsfwSkipLabelR")
+                call screen censored_popup("v15s18a_nsfwSkipLabelR")
 
             scene v15rileyhj # Ignore as animation
             with dissolve
@@ -2325,7 +2325,7 @@ label v15s18a_ChrisAmber:
                     pause 0.75
                     
                     if config_censored:
-                        call screen censoredPopup("v15s18a_nsfwSkipLabelAmb")
+                        call screen censored_popup("v15s18a_nsfwSkipLabelAmb")
 
                     scene v15s18aamber_9b # FPP. MC looking down as Amber is on her knees infront of him, MC's bottom part of his costume around his ankles and his dick is out infront of Amber's face.
                     with dissolve
