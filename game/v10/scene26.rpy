@@ -4,11 +4,11 @@
 # Time: Night
 
 init python:
-
     def v10s26_reply1():
         setattr(store, "v10_amber_condoms", True)
         add_point(KCT.BOYFRIEND)
         amber.messenger.newMessage("Beer, obviously")
+
 
 label v10_amber_skatepark:
     play music "music/v10/Track Scene 26_1.mp3" fadein 2

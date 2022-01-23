@@ -639,7 +639,7 @@ label newchloec:
         $ amber.messenger.addReply(_("We did, I'll make it up to you."), v5_reply1)
         $ amber.messenger.addReply(_("Sorry, something came up."), v5_reply4)
 
-    elif josh.messenger.sent_messages[-2].reply and josh.messenger.sent_messages[-2].reply.message == "I can't, sorry.":
+    elif len(josh.messenger.sent_messages) >= 2 and josh.messenger.sent_messages[-2].reply and josh.messenger.sent_messages[-2].reply.message == "I can't, sorry.":
         $ amber.messenger.newMessage(_("Hey, it's Amber"), force_send=True)
         $ amber.messenger.newMessage(_("Josh gave me your number"), force_send=True)
         $ amber.messenger.newMessage(_("How come you didn't show up yesterday? Everything okay? xx"), force_send=True)
@@ -704,7 +704,7 @@ label continuez:
 
     # Kiss in public
 
-    if lauren.relationship >= Relationship.KISS:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene s379a # lauren kisses you
         with dissolve
         play sound "sounds/kiss.mp3"

@@ -26,12 +26,8 @@ label v14s53b:
 
 label end14:
     if not renpy.loadable("v15/scene1.rpy"):
-        scene savenow #nothing needed
-        with Fade (1,0,1)
-        " "
+        call screen save_now(15)
+        with Fade(1, 0, 1)
 
-    if renpy.loadable("v15/scene1.rpy"):
-        jump v15_start
-    else:
-        call screen end_screen
+    jump v15_start
         

@@ -683,7 +683,7 @@ label v15s26:
         menu:
             "Side with Riley":
                 $ add_point(KCT.TROUBLEMAKER)
-                $ riley.relationship = Relationship.LOYAL
+                $ RileyLoyal = True
                 $ grant_achievement("polycurious")
 
                 u "I mean, I've never tried it, so...I wouldn't know for sure, haha. But I don't see any problems with it personally."
@@ -882,7 +882,7 @@ label v15s26:
                 
                 if aubrey.relationship >= Relationship.TAMED:
                     $ aubrey.relationship = Relationship.FWB
-                $ riley.relationship = Relationship.LOYAL
+                $ RileyLoyal = True
                 
                 u "I think you're onto something here, Riley..."
 

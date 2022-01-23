@@ -218,7 +218,7 @@ label v2start:
     with dissolve
 
     label repeatb:
-        if lauren.messenger.replies or ryan.messsenger.replies:
+        if lauren.messenger.replies or ryan.messenger.replies:
             call screen phone
         if lauren.messenger.replies or ryan.messenger.replies:
             u "(Damn, my phone's blowing up. I should probably check my messages.)"

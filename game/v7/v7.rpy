@@ -1160,7 +1160,7 @@ label hd_ad:
             u "No worries, it was a nice walk."
 
             if kct == "confident" or riley.relationship >= Relationship.MOVE:
-                if riley.relationahip.value < Relationship.MOVE.value:
+                if riley.relationship < Relationship.MOVE:
                     call screen kct_popup
 
             else:
@@ -8878,7 +8878,7 @@ label wolves_ceremony:
 ############# RILEY TEXT
 
 label rileytext:
-    if riley.relationship > Relationship.LIKES:
+    if riley.relationship >= Relationship.LIKES:
         play sound "sounds/vibrate.mp3"
 
         $ riley.messenger.newMessage(_("Wanna come over? ;)"), force_send=True)
@@ -9642,8 +9642,6 @@ label walking_through_hallways:
     if path_builder and not pb_name_set:
         $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
         $ pb_name_set = True
-
-    show screen phone_icon
 
     if joinwolves:
         stop music fadeout 3
@@ -11845,7 +11843,6 @@ label penelopehocodate:
             pe "*Laughs* I'm just kidding! You should have seen your face though."
 
         "You didn't learn to drive":
-
             u "No way you learned to drive that early. I guess you lost your virginity?"
 
             scene sfr4pe8d
@@ -17268,13 +17265,7 @@ label fr4amberending:
 
 label v7end:
     if not renpy.loadable("v8/scene1.rpy"):
-        scene savenow
-        with Fade (1,0,1)
-        " "
+        call screen save_now(8)
+        with Fade(1, 0, 1)
 
-    if renpy.loadable("v8/scene1.rpy"):
-        jump v8start
-    elif config.enable_steam:
-        call screen end_screen(support_link="https://store.steampowered.com/dlc/1463120/College_Kings__Act_I/")
-    else:
-        call screen end_screen
+    jump v8start

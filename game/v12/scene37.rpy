@@ -109,11 +109,7 @@ label v12_riley_ending:
 
 label end12:
     if not renpy.loadable("v13/scene1.rpy"):
-        scene savenow
-        with Fade (1,0,1)
-        " "
+        call screen save_now(13)
+        with Fade(1, 0, 1)
 
-    if renpy.loadable("v13/scene1.rpy"):
-        jump v13_start
-    else:
-        call screen end_screen
+    jump v13_start

@@ -6,7 +6,6 @@ define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
 define config.default_sfx_volume = 1
 default menu_set = set()
-default achievementAtList = None
 
 default name = "Alex"
 default realmode = False
@@ -33,7 +32,7 @@ default previous_location = ""
     ## Path Builder
 default path_builder = False
 default pb_name_set = False
-default pb_start_location = "start"
+default pb_kct_shown = False
 
     # Voice Acting
 default voice_acted = True
@@ -56,10 +55,13 @@ default screen_options = []
 # Sex Overlay
 default sex_overlay_options = []
 
-# Start
+# Splashscreen
 default persistent.confirm_18 = False
 
 # 1.0 - 6.0
+# Relationship Screen
+default relationship_girls = []
+
 default adamattack = 1
 default adamdmg = 0
 default adamfight = 5
@@ -172,6 +174,7 @@ default s28_fightWinner = "MC"
 default sideWithCameron = False
 default simLarsFight = False
 default v8_dodged_pipe = False
+default musicstop = False
 
 # 9.0
 default dreamFightChoice = "na"
@@ -222,7 +225,7 @@ default v11_invite_sam_europe = False
 default v11_josh_nightclub = False
 default v11_kiss_nora = False
 default v11_linds_inv_imre = False # If true Lindsey will invite Imre, if false, Lindsey will invite Ryan
-default v11_lindsey_slogan = 0 # 1 is Lindsey, Returning The Promise // 2 is Lindsey, Say Bye To The Bullshit
+default v11_lindsey_slogan = 1 # 1 is Lindsey, Returning The Promise // 2 is Lindsey, Say Bye To The Bullshit
 default v11_manhunt_winner = "Ryan"
 default v11_overtake_points = 0
 default v11_pen_goes_europe = False
@@ -263,6 +266,8 @@ default v12s7_lindsey_moved = False
 default v12s7_riley_moved = False
 default v12s7_seenList = []
 default v12s7_victims = 12 #Amber, Aubrey, Charli, Chloe, Chris, Imre, Lauren, Lindsey, Nora, Riley, Rose, Ryan + Emily, Josh, Penelope, Samantha. Cameron and Lee don't count.
+default v12_followed_nora = False
+default v12s16_kissnora = False
 
 # 13.0
 default chloeSus = 0
@@ -347,13 +352,12 @@ default v14s4_tell_imre = False
 default v14s41a_standup = False #stand up for Chloe during the Apes meeting
 default v14s46a_love_lauren_more = False # MC love Lauren more because of her sex experimenting on MC.
 default v14s47_car_pics = []
-default v14s48_car_description = CarDescription.LIE
+default v14s48_car_description = None
 default v14s48_car_price = 100
 default v14s50_listen_to_aubrey_lindsey = 0 # MC choses to listen to Lindsey and Aubrey's conversation. 
 default freeroam12 = set() #chloe heist
 default freeroam12stolen = set()
 default v14s5a_riley_should_join_chicks = False
-default v14_Samantha_clean = False # Placeholder?
 default AutumnTrust = False
 
 # 15.0 
@@ -371,7 +375,6 @@ default aubrey_riley_awkward = False
 default dog_name = "Blue"
 default freeroam13 = set() # halloween, part 1 (18a)
 default freeroam14 = set() # halloween, part 2 (18c)
-default v12_followed_nora = False
 default v15_autumn_freemug = False
 default v15_autumn_lunchbreak = False
 default v15_autumn_smoke = False
@@ -416,7 +419,12 @@ default v15s42_grab_breakfast = False
 default v15s48_follow_your_heart = False
 default v15s48_interrupt = False
 default v15s48a_norapoints = 0
+default v15_nora_cum = False
 default v15s7_chloe_empathize = False
 default v15s33_sambuca = False
 default v15s9_wedding_date = False
 default v15s36_autumn_kiss = False
+default v1502fix = False
+default RileyLoyal = False
+default pb_kct_notification = False
+default pb_threesome = False

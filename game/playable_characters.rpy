@@ -25,17 +25,16 @@ init python:
             self._profile_picture = value
 
         def __after_load__(self):
-            attrs = vars(self)
+            attrs = vars(self).copy()
 
             self.__init__()
 
             for var, value in attrs.items():
-                setattr(self, var, value)
-
+                try: setattr(self, var, value)
+                except AttributeError: continue
+                
         def has_item(self, item):
             return (item in self.inventory)
 
-
-init offset = 1
-
-default mc = PlayableCharacter()
+init 1:
+    default mc = PlayableCharacter()

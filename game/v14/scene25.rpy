@@ -119,6 +119,9 @@ label v14s25:
 
             am "Thank you."
 
+    scene v14s25_4f
+    with dissolve
+
     am "Did you have any trouble getting here?"
 
     scene v14s25_4e
@@ -213,18 +216,12 @@ label v14s25:
 
             $ add_point(KCT.TROUBLEMAKER)
 
-            u "Nice pull you got there."
+            u "Nice pills you got there."
 
             scene v14s25_8
             with dissolve
 
             am "Thank you, I call 'em a good time."
-
-            scene v14s25_8a
-            with dissolve
-
-            u "You don't think taking pills is a little too much?"
-
 
         "What are those, Amber?":
 

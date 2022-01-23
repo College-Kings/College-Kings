@@ -1860,7 +1860,10 @@ label v15s18c_autumn_amber:
         scene v15s18c_auam_5
         with dissolve
 
-        u "Haha, yeah. Some things are complete, still have a few left though."
+        if len(checklist.get_completed()) > 0:
+            u "Haha, yeah. Some things are complete, still have a few left though."
+        else:
+            u "Not really, still have a few left to complete."
 
     scene v15s18c_auam_5a
     with dissolve
@@ -1923,7 +1926,6 @@ label v15s18c_autumn_amber:
             if kct == "loyal" and (lauren.relationship >= Relationship.GIRLFRIEND or not v11_lauren_caught_aubrey):
                 label v15s18c_autumnsg:
                     if _in_replay:
-                        $ lauren.relationship = Relationship.GIRLFRIEND
                         $ kct = "loyal"
 
             if lauren.relationship >= Relationship.GIRLFRIEND:
@@ -2403,12 +2405,6 @@ label v15s18c_chris_penelope:
 
             menu:
                 "Ask for her help":
-                    label v15s18c_penelopesg:
-                    
-                    if _in_replay:
-                        $ penelope.relationship = Relationship.LOYAL
-                        $ v14_penelope_date = True
-                
                     scene v15s18c_chpe_5a
                     with dissolve
 
@@ -2432,6 +2428,12 @@ label v15s18c_chris_penelope:
                     jump v15s18c_backtoparty
 
             label v15s18c_askhelp:
+                if v14_penelope_date and (kct == "confident" or penelope.relationship >= Relationship.LOYAL):
+                    label v15s18c_penelopesg:                        
+                        if _in_replay:
+                            $ penelope.relationship = Relationship.LOYAL
+                            $ v14_penelope_date = True
+
                 if lauren.relationship >= Relationship.GIRLFRIEND:
                     pe "Um, I don't think we should do anything while we're here."
 

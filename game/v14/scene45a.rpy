@@ -220,6 +220,10 @@ label v14s45a:
     scene v14s45a_3 # TPP. Camera view from the park infront of them. MC and Amber looking at the Camera. Amber laying her head on MC's shoulder.
     with dissolve
 
+    stop music fadeout 3
+    
+    play music "music/v14/Track Scene 45a_slow.mp3" fadein 2
+
 # -Note for music; This is where the slow version of "Blanket" by Van Stee comes into play, see Mozzart for questions-
 # -Waiting on song to be ready. Song should start playing here.-
 

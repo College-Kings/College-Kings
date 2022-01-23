@@ -9168,7 +9168,7 @@ label v6_fr3chloe1:
     menu:
         "Maybe you should step down":
             $ add_point(KCT.BOYFRIEND)
-            $ chloe.relationship = Relationship.MAD.value
+            $ chloe.relationship = Relationship.MAD
 
             u "You ever think, maybe you should step down?"
 

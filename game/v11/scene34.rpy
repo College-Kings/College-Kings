@@ -382,6 +382,8 @@ label v11_cardealership:
 
     cl "What?"
 
+    label v11s34_c1:
+
     if chloe.relationship >= Relationship.FWB:
         menu:
             "Kiss her":

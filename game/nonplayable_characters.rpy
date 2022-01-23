@@ -1,5 +1,10 @@
 init python:
-    class Relationship(Enum):
+    class Frat(Enum):
+        APES = 0
+        WOLVES = 1
+
+
+    class Relationship(SmartEnum):
         MAD = -4
         THREATEN = -3
         MAKEFUN = -2
@@ -16,30 +21,6 @@ init python:
         TAMED = 9
         GIRLFRIEND = 10
 
-        def __lt__(self, other):
-            if not isinstance(other, Relationship):
-                raise TypeError("Relation {} must be of type Relationship.".format(other))
-
-            return self.value < other.value
-
-        def __le__(self, other):
-            if not isinstance(other, Relationship):
-                raise TypeError("Relation {} must be of type Relationship.".format(other))
-
-            return self.value <= other.value
-
-        def __gt__(self, other):
-            if not isinstance(other, Relationship):
-                raise TypeError("Relation {} must be of type Relationship".format(other))
-
-            return self.value > other.value
-
-        def __ge__(self, other):
-            if not isinstance(other, Relationship):
-                raise TypeError("Relation {} must be of type Relationship".format(other))
-
-            return self.value >= other.value
-
 
     class NonPlayableCharacter:
         """
@@ -50,7 +31,7 @@ init python:
             profile_picture (str): The file name for the characters profile picture, located in "images/nonplayable_characters/profile_pictures/"
         """
 
-        Characters = {}
+        characters = {}
 
         def __init__(self, name, username=None):
             self.name = name
@@ -68,7 +49,7 @@ init python:
             self.points = 0
             self._relationship = Relationship.FRIEND
 
-            NonPlayableCharacter.Characters[name] = self
+            NonPlayableCharacter.characters[name] = self
 
         @property
         def username(self):
@@ -180,6 +161,14 @@ init python:
         def reset_points(self):
             self.points = 0
 
+
+    def nonplayable_character_setup():
+        beth.simplr
+        iris.simplr
+        samantha.simplr
+        emmy.simplr
+
+
 default aaron = NonPlayableCharacter("Aaron", "DoubleARon")
 default adam = NonPlayableCharacter("Adam", "A.D.A.M.")
 default amber = NonPlayableCharacter("Amber", "Amber_xx") # Relationship progression: FRIEND, KISS, FWB
@@ -225,13 +214,3 @@ default satin = NonPlayableCharacter("Satin") # Relationship progression: FRIEND
 default sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
 default trainer = NonPlayableCharacter("Trainer")
 default wolf = NonPlayableCharacter("Wolf")
-
-
-label nonplayable_characters_setup:
-    python:
-        beth.simplr
-        iris.simplr
-        samantha.simplr
-        emmy.simplr
-
-    return
