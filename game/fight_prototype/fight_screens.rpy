@@ -9,24 +9,26 @@ screen fight_template():
 screen fight_neutral():
     use fight_template
 
-    key q: #light attack
+    key "q": #light attack
         action Jump ("player_light")
-    key w: #heavy attack
+    key "w": #heavy attack
         action Jump ("player_heavy")
-    key e: # semi guard
+    key "e": # semi guard
         action Jump ("player_semi_guard")
-    key r: #full guard
+    key "r": #full guard
         action Jump ("player_full_guard")
 
     timer 1 action Jump ("opponent_attacks")
 
 screen fight_defense(attack):
+    tag fight
+    modal True
+
     add attack.image
 
     for k in player.moves.keys():
         key k:
             action Function(player.turn, k, attack)
-
 
     timer 1: 
         if attack == opponent.attacks[AttackType.LIGHT]: #tom light and time ran out ## NEEDS FIX
@@ -58,6 +60,10 @@ screen health_bar(current_health, new_health, max_health=100):
         
 screen test_health():
     zorder 100
+
+    vbox:
+        text str(renpy.get_screen("fight_defense"))
+        text str(renpy.get_screen("fight_neutral"))
 
     vbox:
         align (0.1, 0.1)

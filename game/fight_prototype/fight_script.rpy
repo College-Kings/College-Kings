@@ -1,4 +1,4 @@
-init python:   
+init python:
     class AttackType:
         LIGHT = 0
         HEAVY = 1
@@ -105,7 +105,7 @@ init python:
                         renpy.jump("opponent_heavy_hit")
 
             elif isinstance(move, Defence): ## Defence Move
-                if move.defence_type == "semi_guard": # Player semi guard
+                if move.defence_type == Guard.SEMI_GUARD: # Player semi guard
                     self.guard = Guard.SEMI_GUARD
 
                     if attack.attack_type == AttackType.LIGHT: # Opponent light attack
@@ -116,7 +116,7 @@ init python:
                         opponent.guard = Guard.LOW_GUARD
                         renpy.jump("opponent_heavy_hit")
 
-                elif move.defence_type == "full_guard": # Player full guard
+                elif move.defence_type == Guard.FULL_GUARD: # Player full guard
                     self.guard = Guard.FULL_GUARD
                     
                     if attack.attack_type == AttackType.LIGHT:
@@ -126,10 +126,9 @@ init python:
                         opponent.guard = Guard.LOW_GUARD
                         renpy.jump("opponent_heavy_block")
 
-            else:
-                raise TypeError("SOMETHING WENT WRONG!")
-
-
+    config.keymap["launch_editor"].remove('E')
+    config.keymap["reload_game"].remove('R')
+    renpy.clear_keymap_cache()
 
 label fight_test:
     show screen test_health
