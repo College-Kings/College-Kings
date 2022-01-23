@@ -1,90 +1,44 @@
-screen player_attack():
-
-    if opponent_guard == 2: #opp heavy guard
+screen fight_template():
+    if opponent.guard == Guard.FULL_GUARD: #opp full guard
         add "images/v2/tomstancekick.webp"
-    elif opponent_guard == 1: #opp light guard
+    elif opponent.guard == Guard.LOW_GUARD: #opp light guard
         add "images/v2/tomstancehook.webp"
     else:  #opp no guard
         add "images/v2/tomstancejab.webp"
+    
+screen fight_neutral():
+    use fight_template
 
-    text "OFFENSE":
-        size 100
-        xalign 0.9
+    key q: #light attack
+        action Jump ("player_light")
+    key w: #heavy attack
+        action Jump ("player_heavy")
+    key e: # semi guard
+        action Jump ("player_semi_guard")
+    key r: #full guard
+        action Jump ("player_full_guard")
 
-    key q: #light jab attack
-        action Jump ("player_jab")
-    key w: #heavy hook attack
-        action Jump ("player_hook")
-    key e: # light guard
-        action Jump ("opponent_counters")
-    key r: #heavy guard
-        action Jump ("opponent_counters")
+    timer 1 action Jump ("opponent_attacks")
 
-    timer 1 action Jump ("opponent_counters")
+screen fight_defense(attack="light"):
+    add opponent.attacks[attack].image
 
-screen opponent_ready():
-
-    if opponent_guard == 2: #opp heavy guard
-        add "images/v2/tomstancekick.webp"
-    elif opponent_guard == 1: #opp light guard
-        add "images/v2/tomstancehook.webp"
-    else:  #opp no guard
-        add "images/v2/tomstancejab.webp"
-
-    text "NEUTRAL":
-        size 100
-        xalign 0.9
-
-    key q: #light jab attack
-        if player_guard < 2:
-            action Jump ("player_jab")
-        else:
-            action Jump ("player_jab")
-    key w: #heavy hook attack
-        action Jump ("opponent_counters")
-    key e: # light guard
-        action Jump ("opponent_counters")
-    key r: #heavy guard
-        action Jump ("opponent_counters")
-
-    timer 0.5 action Jump ("opponent_counters")
-
-screen opponent_attack():
-    if opponent_attack == 0: # tom jabs, light attack
-        add "images/v2/tomjab.webp"
-    else: # tom kicks, heavy attack
-        add "images/v2/tomkick.webp"
-
-    text "DEFENSE":
-        size 100
-        xalign 0.9
-
-    key q: #light jab attack
-        if opponent_attack == 0: # tom light
-            action Jump ("opp_jab")
-        else: # tom heavy
-            action Jump ("player_jab")
-    key w: #heavy hook attack
-        if opponent_attack == 0: # tom light
-            action Jump ("opp_jab")
-        else: # tom heavy
-            action Jump ("opp_kick")
-    key e: # light guard
-        if opponent_attack == 0: # tom light
-            action [SetVariable("player_guard", 1), Jump ("player_blocks_jab")]
-        else: # tom heavy
-            action [SetVariable("player_guard", 1), Jump ("opp_kick")]
-    key r: #heavy guard
-        if opponent_attack == 0: # tom light
-            action [SetVariable("player_guard", 2), Jump ("player_blocks_jab")]
-        else: # tom heavy
-            action [SetVariable("player_guard", 2), Jump ("player_blocks_kick")]
+    for k in player.moves.keys():
+        key k:
+            action Function(player.turn)
 
 
-    if opponent_attack == 0: #tom light and time ran out
-        timer 0.5 action Jump ("opp_jab")
-    else: # tom heavy and time ran out
-        timer 1 action Jump ("opp_kick")
+    timer 1:
+        if opponent_attack == 0: #tom light and time ran out
+            if player_guard == 0: # player no guard
+                action Jump ("opponent_light_hit")
+            else: # player full or semi guard
+                action Jump ("opponent_light_block")
+        else: # tom heavy and time ran out
+            if player_guard == 2: # player full guard
+                action Jump ("opponent_heavy_block")
+            else: # player no or semi guard
+                action Jump ("opponent_heavy_hit")
 
 screen fight_popup(message):
     text message:
@@ -92,7 +46,7 @@ screen fight_popup(message):
 
     timer 2 action Hide("fight_popup", transition=dissolve)
 
-screen opponent_health_bar(current_health, new_health, max_health=100):
+screen health_bar(current_health, new_health, max_health=100):
     tag health_bar
     zorder 100
 
@@ -107,7 +61,7 @@ screen test_health():
 
     vbox:
         align (0.1, 0.1)
-        text "[opp_health]":
+        text "[opponent.health]":
             size 100
             color "#eb5858"  
         text "[opponent_guard]":
@@ -119,3 +73,6 @@ screen test_health():
         text "[player_health]":
             size 100
             color "#eb5858"
+        text "[player_guard]":
+            size 100
+            color "#494ce6"  

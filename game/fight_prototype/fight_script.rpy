@@ -1,266 +1,355 @@
 init python:
-    def change_opponent_health(value):
-        current_health = getattr(store, "opp_health")
-        renpy.show_screen("opponent_health_bar", current_health, current_health + value)
-        setattr(store, "opp_health", value)
+    class Guard(SmartEnum):
+        NO_GUARD = 0
+        LOW_GUARD = 1
+        SEMI_GUARD = 2
+        HIGH_GUARD = 3
+
+
+    class Attack:
+        def __init__(self, attack_type, counter_guard, image):
+            self.attack_type = attack_type
+            self.counter_guard = counter_guard
+            self.image = image
+            
+
+    class Defence:
+        def __init__(self, defence_type, image):
+            self.defence_type = defence_type
+            self.image = image
+
+
+    class BasePlayer:
+        def __init__(self, guard=None, stamina=10, health=100, attack_multiplier=1):
+            self.guard = guard
+            self.max_stamina = stamina
+            self.max_health = health
+            self.attack_multiplier = attack_multiplier
+            
+            self._stamina = stamina
+            self._health = health
+
+            self.attacks = {
+                "light": None,
+                "heavy": None
+            }
+
+        @property
+        def stamina(self):
+            return self._stamina
+
+        @stamina.setter
+        def stamina(self, value):
+            self._stamina += value
+            
+        @property
+        def health(self):
+            return self._health
+
+        @health.setter
+        def health(self, value):
+            self._health += value
+
+        def change_health(self, value):
+            current_health = self._health
+            self._health += value
+
+            renpy.show_screen("health_bar", current_health, self._health)
+
+
+    class Opponent(BasePlayer):
+        pass
+
+    
+    class Player(BasePlayer):
+        def __init__(self, guard, stamina, health, attack_multiplier):
+            BaseAttack.__init__(self, guard, stamina, health, attack_multiplier)
+            
+            self.moves = {
+                "q": None, # light attack
+                "w": None, # heavy attack
+                "e": None, # semi guard
+                "r": None # full guard
+            }
+
+        def turn(self, key, attack):
+            move = self.moves[key]
+            attack = opponent.attacks[attack]
+
+            try: ## Attack Move
+                if move.attack_type == "light": # Player light attack
+                    self.guard = Guard.SEMI_GUARD
+
+                    if attack.attack_type == "light": # Opponent light attack
+                        opponent.guard = Guard.SEMI_GUARD
+                        renpy.jump("opponent_light_hit")
+
+                    else: # Opponent Heavy attack
+                        opponent.guard = Guard.LOW_GUARD
+                        renpy.jump("player_light")
+
+                elif move.attack_type == "heavy":
+                    self.guard = Guard.LOW_GUARD
+                    
+                    if attack.attack_type == "light":
+                        opponent.guard = Guard.SEMI_GUARD
+                    else:
+                        opponent.guard = Guard.LOW_GUARD
+
+                    renpy.jump("opponent_light_hit")
+
+            except AttributeError: ## Defence Move
+                if move.defence_type == "semi_guard": # Player semi guard
+                    self.guard = Guard.SEMI_GUARD
+
+                    if attack.attack_type == "light": # Opponent light attack
+                        opponent.guard = Guard.SEMI_GUARD
+                        renpy.jump("opponent_light_block")
+
+                    else: # Opponent Heavy attack
+                        opponent.guard = Guard.LOW_GUARD
+                        renpy.jump("opponent_heavy_hit")
+
+                elif move.attack_type == "full_guard": # Player full guard
+                    self.guard = Guard.FULL_GUARD
+                    
+                    if attack.attack_type == "light":
+                        opponent.guard = Guard.SEMI_GUARD
+                    else:
+                        opponent.guard = Guard.LOW_GUARD
+
+                    renpy.jump("opponent_light_block")
+
 
 label fight_test:
     show screen test_health
     show screen opponent_health_bar(100, 100)
-    $ opp_health = 100
-    $ player_health = 100
-    $ player_guard = 1
+    opponent = Opponent(Guard.LOW_GUARD)
+    player = Player(Guard.LOW_GUARD)
 
-    call screen player_attack
+    opponent.light = BaseAttack("images/v2/tomjab.webp")
 
-label player_hook:
+    call screen fight_neutral
 
-    if opponent_guard == 2:
-        scene tomstancekick
-    elif opponent_guard == 1:
-        scene tomstancehook
-    else: 
-        scene tomstancejab
+label player_light:
 
-    scene hook2start
+    if (player.stamina >= 2 and player_guard < 2) or player.stamina >= 4:
 
-    pause 0.5
-    
-    if opponent_guard == 0: # guard down, player hits
+        $ player_guard = 1
+        $ player.stamina -= 2
 
-        label hook_hit:
+        scene jab2start
 
-        scene hook2pic
-        with vpunch
+        pause 0.5
 
-        $ opp_health -= 10
-        #show screen opponent_health_bar(opp_health, opp_health-10)
-
-        show screen fight_popup("PHYSICAL HIT")
-
-        pause 1
-
-        $ opponent_guard = 1
-
-        jump opponent_counters
-
-    elif opponent_guard == 1:
-
-        $ heavy_hit_chance = renpy.random.choice([0, 1, 2])
-
-        if heavy_hit_chance == 0:
-            jump hook_blocked
-
-        elif heavy_hit_chance == 1:
-            jump hook_hit
-
-        else:
-            $ opponent_attack = 0
-            jump opp_light_counter
-
-    else: # guard up, opp blocks
-
-        label hook_blocked:
-
-        scene hook1pic
-        with vpunch
-
-        $ opp_health -= 2
-
-        show screen fight_popup("BLOCKED")
-
-        pause 1
-
-        $ opponent_guard = 0
-
-        jump opponent_attacks
-
-label player_jab:
-
-    if opponent_guard == 2:
-        scene tomstancekick
-    elif opponent_guard == 1:
-        scene tomstancehook
-    else: 
-        scene tomstancejab
-
-    scene jab2start
-
-    pause 0.5
-    
-    if opponent_guard == 0: #guard down
-
-        if reset_chance == 1:
-            $ reset = renpy.random.choice([0,1,2,3,4,5]) #chance to reset = 2/6
-        elif reset_chance == 2:
-            $ reset = renpy.random.choice([0,1,2,3]) #chance to reset, 3/6
-        else:
-            $ reset = renpy.random.choice([0,1,2]) #chance to reset 4/6
-
-        if reset == 0 or reset == 1: # opponent resets
-
-            scene jab1pic # Opp blocks
-            with vpunch
-
-            show screen fight_popup("RESET")
-
-            pause 1
-            $ reset_chance = 1
-            $ opponent_guard = 2
-
-            $ player_guard = 1
-
-            call screen player_attack
-
-        else:
+        if opponent_guard == 0: # opponent no guard
 
             scene jab2pic # Player hits
             with vpunch
-
-            $ opp_health -= 5
 
             show screen fight_popup("Light Hit")
 
             pause 1
 
-            $ reset_chance += 1
+            $ opponent.health -= 5
 
-            $ player_guard = 1
+            call screen fight_neutral
 
-            call screen player_attack
-    
-    elif opponent_guard == 1: # opp light guard
+        elif oppponent_guard == 1: #opponent semi guard
 
-        if break_chance == 1:
-            $ breaking = renpy.random.choice([0,1,2,3,4,5]) #chance to reset = 2/6
-        elif break_chance == 2:
-            $ breaking = renpy.random.choice([0,1,2,3]) #chance to reset, 3/6
-        else:
-            $ breaking = renpy.random.choice([0,1,2]) #chance to reset 4/6
-
-        if breaking == 0 or breaking == 1: # guard breaks
-
-            scene jab1pic # opp blocks
+            scene jab1pic # Opponent blocks hits
             with vpunch
 
-            show screen fight_popup("GUARD BROKEN")
+            show screen fight_popup("Blocked")
 
             pause 1
-            $ break_chance = 1
+
+            $ opponent_stamina += 5
+
+            $ opponent_shielding_chance = renpy.random.value([0,1,2])
+
+            if opponent_shielding_chance == 2: # opponent goes into full guard
+
+                $ opponent_guard == 2 
+                $ opponent_shielding_chance = 0
+
+            call screen fight_neutral
+            
+        else: # opponent full guard
+            
+            scene jab1pic # Opponent blocks hits
+            with vpunch
+
+            show screen fight_popup("Blocked")
+
+            pause 1
+
+            $ opponent_stamina += 5
+
+            call screen fight_neutral
+
+    else:
+
+        jump opponent_attacks
+
+label player_heavy:
+
+    if (player_stamina >= 5 and player_guard < 2) or player_stamina >= 7:
+
+        $ player_guard = 0
+        $ player_stamina -= 5
+
+        scene hook2start
+
+        pause 0.5
+
+        if opponent_guard == 0: # opponent no guard
+
+            scene hook2pic # Player hits
+            with vpunch
+
+            show screen fight_popup("Heavy Hit")
+
+            pause 1
+
+            $ opponent.health -= 10
+
+            call screen fight_neutral
+
+        elif oppponent_guard == 1: #opponent semi guard
+
+            $ opponent_attack = renpy.random.choice([0, 1])
+
+            if opponent_stamina >= 2 and opponent_attack == 0: # opponent counters
+
+                call screen fight_defense
+                
+            else: # player hits
+
+                scene hook2pic # Player hits
+                with vpunch
+
+                show screen fight_popup("Heavy Hit")
+
+                pause 1
+
+                $ opponent.health -= 10
+                $ opponent_guard = 0 
+
+                call screen fight_neutral
+            
+        else: # opponent full guard
+            scene hook1pic # Opponent blocks hits
+            with vpunch
+
+            show screen fight_popup("Guard Shattered")
+
+            $ opponent.health -= 2 #negated damage
+
+            pause 1
+            
             $ opponent_guard = 0
+            $ opponent_stamina += 5
 
-            $ player_guard = 1
+            call screen fight_neutral
 
-            call screen player_attack
+    else:
 
-        else: # guard doesn't break
+        jump opponent_attacks
 
-            scene jab1pic # opp blocks
-            with vpunch
+label player_semi_guard: #player changes to semi guard
 
-            show screen fight_popup("BLOCKED")
+    $ player_guard == 1:
+    $ player_stamina += 5
 
-            pause 1
+    jump opponent_attacks
 
-            $ break_chance += 1
+label player_full_guard: #player changes to full guard
 
-            $ player_guard = 1
+    $ player_guard == 2:
+    $ player_stamina += 5
 
-            call screen player_attack
-
-
-    else: # opponent_guard = 2, opp blocks
-
-            scene jab1pic
-            with vpunch
-
-            show screen fight_popup("BLOCKED")
-
-            pause 1
-
-            $ player_guard = 1
-
-            call screen player_attack
-
-label opponent_readys:
-
-        call screen opponent_ready
+    jump opponent_attacks
 
 label opponent_attacks:
+    
+    if (opponent_stamina >= 5 and opponent_guard < 2) or opponent_stamina >= 7: # opponent has enough stamina for heavy attack
 
-        if opponent_guard == 2:
-            scene tomstancekick
-        elif opponent_guard == 1:
-            scene tomstancehook
-        else: 
-            scene tomstancejab
+        if player_guard == 0 or playerguard == 2: # player low  or full guard
 
-        pause 0.7
+            $ opponent_attack = 1 # opponent does a heavy attack
 
-        label opponent_counters:
+        else: # player has semi guard
 
-        $ opponent_attack = renpy.random.choice([0, 1]) #opponent attack choice
+            $ opponent_attack = renpy.random.choice([0, 1]) #opponent can attack light or heavy
 
-        label opp_light_counter:
+        call screen fight_defense
 
+    elif (opponent_stamina >= 2 and opponent_guard < 2) or opponent_stamina >= 4: # opponent has enough stamina for light attack
+
+        $ opponent_attack = 0 # opponent does a light attack
+
+        call screen fight_defense
+        
+    else: # opponent doesn't have enough stamina to attack
         $ opponent_guard = 1
+        $ opponent_stamina += 5
 
-        call screen opponent_attack
+        call screen fight_neutral
+
+label opponent_light_hit:
+
+        scene tomjabhit
+        with vpunch
+
+        $ player_health -= 5
+
+        show screen fight_popup("LIGHT HIT")
+
+        pause 1
+
+        call screen fight_neutral
+
+label opponent_light_block:
+
+        scene tomjabblock
+        with vpunch
+
+        $ player_stamina += 5
+
+        show screen fight_popup("BLOCKED")
+
+        pause 1
+
+        call screen fight_neutral
 
 
-label player_blocks_jab:
+label opponent_heavy_hit:
 
-    scene tomjabblock
-    with vpunch
+        scene tomhookhit
+        with vpunch
 
-    show screen fight_popup("BLOCKED")
+        $ player_health -= 10
 
-    pause 1
+        show screen fight_popup("HEAVY HIT")
 
-    jump opponent_readys
+        pause 1
 
-label player_blocks_kick:
+        call screen fight_neutral
 
-    scene tomkickblock
-    with vpunch
+label opponent_heavy_block:
 
-    $ player_health -= 2
+        scene tomhookblock
+        with vpunch
 
-    show screen fight_popup("BLOCKED")
+        $ player_stamina += 5
+        $ player_health -= 2 #Negated Damage
+        $ player_guard = 0
 
-    pause 1
+        show screen fight_popup("GUARD SHATTERED")
 
-    $ player_guard = 1
+        pause 1
 
-    call screen player_attack
-
-label opp_jab:
-
-    scene tomjabhit
-    with vpunch
-
-    $ player_health -= 5
-
-    show screen fight_popup("LIGHT HIT")
-
-    pause 1
-
-    jump opponent_readys
-
-label opp_kick:
-
-    scene tomkickhit
-    with vpunch
-
-    $ player_health -= 10
-
-    show screen fight_popup("HEAVY HIT")
-
-    pause 1
-
-    $ player_guard = 1
-
-    call screen player_attack
-
+        call screen fight_neutral
 
 
