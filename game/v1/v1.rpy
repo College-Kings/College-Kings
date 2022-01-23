@@ -38,6 +38,8 @@ label starta: #for compatibility only
     if config.developer:
         show screen bugTesting_Overlay
 
+    jump fight_test
+
     show screen fightDamage
     show screen fantasyOverlay
     
