@@ -14,6 +14,8 @@ define _quit_slot = "99-1"
 
 # The game starts here.
 label start:
+    $ phone = Phone("phone_icon.webp")
+
     call screen real_life_mode
 
 label end_credits: # for compatibility
