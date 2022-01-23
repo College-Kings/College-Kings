@@ -182,7 +182,7 @@ label player_light:
 
             $ opponent.stamina += 5
 
-            $ opponent_shielding_chance = renpy.random.value([0,1,2])
+            $ opponent_shielding_chance = renpy.random.choice([0,1,2])
 
             if opponent_shielding_chance == 2: # opponent goes into full guard
 
