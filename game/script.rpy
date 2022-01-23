@@ -24,4 +24,3 @@ label gameEnd:
     play music "music/vocal.mp3"
 
     call screen end_screen
-    

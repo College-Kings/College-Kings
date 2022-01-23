@@ -22,7 +22,7 @@ define phone = Phone("phone_icon.webp")
 screen phone_icon():
     zorder 100
     
-    if not renpy.get_screen("choice") and not renpy.get_screen("censoredPopup"):
+    if not renpy.get_screen("choice") and not renpy.get_screen("censored_popup"):
         imagebutton:
             idle phone.image
             

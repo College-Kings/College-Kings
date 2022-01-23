@@ -848,7 +848,7 @@ label v11s5_galleryScene:
     u "Candy it is."
 
     if config_censored:
-        call screen censoredPopup("v11s5_nsfwSkipLabel1")
+        call screen censored_popup("v11s5_nsfwSkipLabel1")
 
     scene v11swc21a # TPP Same angle as v11swc21, Candy removing her clothing
     with dissolve

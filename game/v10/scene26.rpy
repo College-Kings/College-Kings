@@ -396,7 +396,7 @@ label v10_amber_skatepark:
                 show screen v10s26_amberSexOverlay
 
                 if config_censored:
-                    call screen censoredPopup("v10s26_nsfwSkipLabel1")
+                    call screen censored_popup("v10s26_nsfwSkipLabel1")
 
                 stop music fadeout 3
                 play music "music/v10/Track Scene 26_2.mp3" fadein 2
@@ -713,7 +713,7 @@ label v10_amber_skatepark:
                             $ sceneList.add("v10_amber")
 
                             if config_censored:
-                                call screen censoredPopup("v10s26_nsfwSkipLabel1")
+                                call screen censored_popup("v10s26_nsfwSkipLabel1")
                                 
                             scene v10ambbj
                             with dissolve
