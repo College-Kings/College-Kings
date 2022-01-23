@@ -259,7 +259,7 @@ screen quick_menu():
     if quick_menu:
         hbox:
             align (0.5, 1.0)
-            yoffset 0
+            yoffset -5
             spacing 30
 
             if not realmode:
@@ -347,7 +347,7 @@ screen main_menu():
     imagebutton:
         idle image_path + "play_now_idle.webp"
         hover Transform(image_path + "play_now_hover.webp", pos=(-31, -31))
-        action Start()
+        action [Function(setup), Start()]
         pos (564, 880)
 
     # Load
@@ -563,6 +563,13 @@ screen load():
 
     use file_slots(_("Load"))
 
+    text "We do our best to retain save integrity with every update, however due to the dynamic nature of game development some saves might break. If you experience any errors please let us know via the support channel on the College Kings Discord.\nYou can find a link to our Discord in the Main Menu.":
+        font "fonts/BebasNeue-Regular.ttf"
+        xalign 0.5
+        text_align 0.5
+        xsize 1450
+        ypos 900
+
 
 screen file_slots(title):
     style_prefix "file_slots"
@@ -573,11 +580,6 @@ screen file_slots(title):
     python:
         incompatible_game_versions = {"12.0.0", "0.6.4"}
         incompatible_renpy_versions = {"7.4.8.1895", "7.4.7.1862"}
-
-        game_version = FileJson(1, key="_version") or ""
-        renpy_version = FileJson(1, key="_renpy_version") or ""
-        renpy_version = '.'.join(str(i) for i in renpy_version)
-        file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
 
     add image_path + "background.webp"
 

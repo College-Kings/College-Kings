@@ -134,6 +134,8 @@ label v10_call_with_lauren1:
 
     menu:
         "Two truths one lie":
+            label v10s15_c1:
+        
             if joinwolves:
                 scene v10scwl2c # TPP. Same camera as v10scwl2. Show MC in his Wolves bedroom. MC is laying on his bed, normal/content expression, mouth open
             else:
@@ -430,6 +432,8 @@ label v10_call_with_lauren1:
                         la "Good."
     
         "Favorites":
+            label v10s15_c2:
+            
             if joinwolves:
                 scene v10scwl2c
             else:
@@ -706,6 +710,7 @@ label v10_call_with_lauren1:
 
     play sound "sounds/twig.mp3"
 
+    label v10s15_c3:
     if joinwolves:
         scene v10saow1b # TPP. Same camera as v10saow1. MC laying in his bed relaxing. He has the phone up to his ear, talking with Lauren. He looks over towards his window. Curious/thoughtful expression, mouth closed.
     else:

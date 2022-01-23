@@ -317,8 +317,10 @@ label v15s6:
 
                 "Empathize":
                     $ add_point(KCT.BRO)
-                    $ chloeSus += 1
                     $ v15s7_chloe_empathize = True
+
+                    if chloe.relationship == Relationship.GIRLFRIEND:
+                        $ chloeSus += 1
 
                     # -Chloe slowly gets annoyed with MC through this empathizing bit-
                     scene v15s7_1b

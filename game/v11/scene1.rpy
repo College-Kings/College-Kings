@@ -6,8 +6,6 @@ label v11_start:
         
         $ simplr_app.unlock()
 
-    show screen phone_icon
-
     scene v11coc1 # FPP. Show entrance of college
     with fade
 

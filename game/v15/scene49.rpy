@@ -332,13 +332,7 @@ label v15s49:
 
 label end15:
     if not renpy.loadable("v16/scene1.rpy"):
-        scene savenow #nothing needed
-        with Fade (1,0,1)
-        " "
+        call screen save_now(16)
+        with Fade(1, 0, 1)
 
-    if renpy.loadable("v16/scene1.rpy"):
-        jump v16_start
-    else:
-        play music "music/vocal.mp3"
-    
-        call screen end_screen
+    jump v16_start

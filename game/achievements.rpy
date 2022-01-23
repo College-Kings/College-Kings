@@ -32,7 +32,7 @@ init python:
             return
             
         try:
-            renpy.show(_achievement, at_list=achievementAtList)
+            renpy.show(_achievement, [achievementShow])
         except TypeError: pass
         achievement.grant(_achievement) 
         achievement.sync()

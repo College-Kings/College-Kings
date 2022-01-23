@@ -1,8 +1,7 @@
-label setup:
-    call path_builder_setup from _call_path_builder_setup
-    call nonplayable_characters_setup from _call_nonplayable_characters_setup
-
-    python:
+init python:
+    def setup():
+        nonplayable_character_setup()
+        
         # Phone Setup
         phone.applications = []
         phone.applications.append(messenger)
@@ -10,6 +9,7 @@ label setup:
         phone.applications.append(achievement_app)
         phone.applications.append(kiwii)
         phone.applications.append(simplr_app)
+        phone.applications.append(relationship_app)
 
 
         # Set up murder mystery stats
@@ -42,5 +42,3 @@ label setup:
         charli.stats["Talkative"] = False
 
         josh.stats["Competitive"] = True
-
-    return

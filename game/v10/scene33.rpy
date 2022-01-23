@@ -2424,7 +2424,7 @@ label v10s33_riley1:
 
     ri "Like I said, I'm a kind person. *Chuckles* Have you been to the dance stand?"
 
-    if "rachel" in freeroam6 or v10s33_aubrey:
+    if "rachel" in freeroam6 or "aubrey" in freeroam6:
 
         scene v10cfrri2e
         with dissolve

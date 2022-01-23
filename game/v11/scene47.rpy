@@ -114,11 +114,7 @@ label v11_walking_back:
 
 label end11:
     if not renpy.loadable("v12/scene1.rpy"):
-        scene savenow
-        with Fade (1,0,1)
-        " "
+        call screen save_now(12)
+        with Fade(1, 0, 1)
 
-    if renpy.loadable("v12/scene1.rpy"):
-        jump v12_start
-    else:
-        call screen end_screen
+    jump v12_start

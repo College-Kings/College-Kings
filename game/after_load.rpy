@@ -53,15 +53,21 @@ init 100 python:
     class MainCharacter(PlayableCharacter):
         pass
 
+    class Teacher(NonPlayableCharacter):
+        pass
+
 
 label after_load:
     python:
-        # SAVE FIXES:
+        # SAVE FIXES
+        ## Force developer mode off on load
+        config.developer = False
 
         # Disable skip transitions
         preferences.transitions = 2
 
-        renpy.music.stop(channel=u'music') ### temporary emergency break
+        ### renpy.music.stop(channel=u'music')
+        ### If using dummy files, don't need to stop music anymore
 
         ## PLAYABLE CHARACTERS
         if isinstance(mc, FightCharacter) or isinstance(mc, MainCharacter):
@@ -163,7 +169,7 @@ label after_load:
         if isinstance(josh, CustomCharacter):
             josh = NonPlayableCharacter("Josh", "Josh80085")
 
-        for character in NonPlayableCharacter.Characters.values():
+        for character in NonPlayableCharacter.characters.values():
             character.__after_load__()
 
         ## Relationship types
@@ -356,13 +362,14 @@ label after_load:
             kiwii.contacts = []
             del kiwiiApp
         except NameError:
-            if kiwii is False:
-                kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=True)
+            kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=False)
 
-        # Transfer simplrApp to simplr_app
-        try:
-            simplr_app.locked = simplrApp.locked
-        except NameError: pass
+        # Unlock simplr_app
+        simplr_app.unlock()
+
+        for app in phone.applications.copy():
+            try: app.locked
+            except AttributeError: phone.applications.remove(app)
 
         ### MESSENGER
         #### MESSENGER CONTRACTS
@@ -887,6 +894,9 @@ label after_load:
         try:
             if v13s37_frnora: freeroam11.add("nora")
         except NameError: pass
+        try:
+            if v9_sex_with_riley: sceneList.add("v9_riley")
+        except NameError: pass
 
 
         # v12 Renpy Fixes:
@@ -1043,17 +1053,122 @@ label after_load:
         try: v14_ryan_satin
         except NameError: v14_ryan_satin = False
 
+        # v1502 fixes:
+        
+        if chloe.relationship == Relationship.MAD.value:
+            chloe.relationship = Relationship.MAD
 
-    call setup from _call_setup
+        if renpy.loadable("v15/scene1.rpy") and not v1502fix:
+       
+            if ms_rose.relationship == Relationship.FRIEND:
+                if v15_threaten_ms_rose:
+                    ms_rose.relationship = Relationship.THREATEN
+                
+                elif any(scene in sceneList for scene in ("v11_rose", "v12_rose", "v15_rose")):
+                    ms_rose.relationship = Relationship.FWB
+            
+            if chloe.relationship == Relationship.FRIEND:
+                if chloeSus > 1 + v15s7_chloe_empathize:
+                    chloe.relationship = Relationship.GIRLFRIEND
+                
+                elif meetchloe and hcGirl == "chloe" and ending == "chloe":
+                    chloe.relationship = Relationship.GIRLFRIEND # don't have another way of checking if the question was asked, so we'll give this status for free
+                
+                elif any(scene in sceneList for scene in ("v8_chloe", "v10_chloe", "v11_chloe", "v13_chloe", "v14_chloe")):
+                    chloe.relationship = Relationship.FWB
+                
+                elif chloeSus == 1 + v15s7_chloe_empathize:
+                    chloe.relationship = Relationship.FWB
+            
+            if emily.relationship == Relationship.FRIEND:
+                if any(scene in sceneList for scene in ("v6_emily", "v9_emily", "v13_emily")):
+                    emily.relationship = Relationship.FWB
+                
+            if riley.relationship == Relationship.LOYAL:
+                riley.relationship = Relationship.FRIEND
+                RileyLoyal = True
+            
+            if riley.relationship == Relationship.FRIEND:
+                if any(scene in sceneList for scene in ("v7_riley", "v8_riley", "v9_riley", "v10_riley", "v11_riley", "v13_riley")):
+                    riley.relationship = Relationship.FWB
+                
+                elif "riley" in hcAsked:
+                    riley.relationship = Relationship.LIKES # technically it should be MOVE, but we're feeling generous
+            
+            if aubrey.relationship == Relationship.FRIEND:
+                if "v15_naomi" in sceneList:
+                    aubrey.relationship = Relationship.MAD
+                
+                elif RileyLoyal:
+                    if any(scene in sceneList for scene in ("v3_aubrey", "v6_aubrey")):
+                        aubrey.relationship = Relationship.FWB
+                
+                elif v13s48_canoeing_as_date and v15s9_wedding_date:
+                    aubrey.relationship = Relationship.TAMED
+                
+                elif "v3_aubrey" in sceneList or "v6_aubrey" in sceneList:
+                    aubrey.relationship = Relationship.FWB
+            
+            if lauren.relationship == Relationship.FRIEND:
+                if any(scene in sceneList for scene in ("v10_lauren", "v12_lauren")):
+                    lauren.relationship = Relationship.GIRLFRIEND
+                
+                # elif lauren.points >= 4 or (lauren.points == 2 and v11_hp_points < 3) or (lauren.points == 0 and v11_hp_points < 2) or (lauren.points == -2 and v11_hp_points == 0): lauren.relationship = Relationship.GIRLFRIEND
+                elif lauren.points >= v11_hp_points * 2 - 2 and not "v11_aubrey" in sceneList and not (len(freeroam7) == 0) and not (lauren.points == 0 and v11_hp_points == 0):
+                    lauren.relationship = Relationship.GIRLFRIEND
+                                
+                elif "v15_lauren" in sceneList:
+                    lauren.relationship = Relationship.FWB
 
-    show no_hard_feelings at achievementShow
-    $ achievementAtList = renpy.get_at_list("no_hard_feelings")
-    hide no_hard_feelings
+            if lauren.relationship == Relationship.GIRLFRIEND:
+                if autumn.relationship == Relationship.FWB:
+                    autumn.relationship = Relationship.LOYAL
+                    
+            if autumn.relationship == Relationship.FRIEND:
+                if AutumnTrust:
+                    autumn.relationship = Relationship.LOYAL
+            
+            if amber.relationship == Relationship.FRIEND:
+                if any(scene in sceneList for scene in ("v8_amber", "v8_amber2", "v10_amber", "v14_amber")):
+                    amber.relationship = Relationship.FWB
+                
+            if jenny.relationship == Relationship.FRIEND:
+                if "v14_jenny" in sceneList:
+                    jenny.relationship = Relationship.FWB
+                
+            if lindsey.relationship == Relationship.FRIEND:
+                if "v12_lindsey" in sceneList:
+                    lindsey.relationship = Relationship.FWB
 
-    show screen phone_icon
-    hide screen phone
+                elif "v9_lindsey" in sceneList:
+                    lindsey.relationship = Relationship.KISS
+            
+            if samantha.relationship == Relationship.FRIEND:
+                if "v14_samantha" in sceneList: samantha.relationship = Relationship.FWB
+
+                elif "v11_samantha" in sceneList: samanatha.relationship = Relationship.MOVE
+            
+            if candy.relationship == Relationship.FRIEND:
+                if "v11_candy" in sceneList:
+                    candy.relationship = Relationship.FWB
+
+            if penelope.relationship == Relationship.FRIEND:
+                if v14_penelope_date and not (v15s18a_showlist_penelope_autumn and lauren.relationship == Relationship.GIRLFRIEND):
+                    penelope.relationship = Relationship.LOYAL
+
+                elif v14_penelope_date:
+                    penelope.relationship = Relationship.LIKES
+
+            v1502fix = True
+
+        setup()
+
+    hide screen reply
+    hide screen simplr_reply
 
     if config.developer:
         show screen bugTesting_Overlay
+    else:
+        hide screen bugTesting_Overlay
 
     return

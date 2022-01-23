@@ -42,8 +42,11 @@ screen v13s35_adult_shop():
                 hover cuffs.hover_image
                 insensitive cuffs.insensitive_image
                 sensitive (cuffs not in mc.inventory) and (mc.money >= cuffs.cost)
-                action Show("confirm", message="Are you sure you want to finish shopping?",
-                    yes_action=[Hide("confirm"), Jump("v13s35_adult_shop_continue")])
+                action [
+                    Function(mc.inventory.add_item, cuffs),
+                    SetField(mc, "money", mc.money - cuffs.cost),
+                    Show("confirm", message="Are you sure you want to finish shopping?", yes_action=[Hide("confirm"), Jump("v13s35_adult_shop_continue")])
+                ]
 
             imagebutton:
                 idle feather.idle_image
