@@ -38,24 +38,9 @@ label starta: #for compatibility only
     if config.developer:
         show screen bugTesting_Overlay
 
-    jump fight_test
-
     show screen fightDamage
     show screen fantasyOverlay
     
-    $ options = [
-        {
-            "option": "Travel to the maldivas",
-            "votes": [chloe, mc]
-        },
-        {
-            "option": "Rock climb the everest",
-            "votes": [chloe, mc]
-        }
-    ]
-
-
-    # call screen would_you_rather("Would you rather eat your dad or your mum", options)
     play music "music/msexy.mp3"
     
     scene s0a
