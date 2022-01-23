@@ -126,17 +126,25 @@ screen censoredPopup(continueLabel):
         xalign 0.5
         xsize 1050
 
-        text "TO VIEW THIS SCENE YOU MUST HAVE NSFW ENABLED":
-            size 35
-            color "#FFFFFF"
-            style "nsfw_text"
-            xalign 0.5
+        if config_censored:
+            text "TO VIEW THIS SCENE YOU MUST HAVE NSFW ENABLED":
+                size 35
+                color "#FFFFFF"
+                style "nsfw_text"
+                xalign 0.5
 
-        text "IN THE SETTINGS MENU":
-            size 35
-            color "#FFFFFF"
-            style "nsfw_text"
-            xalign 0.5
+            text "IN THE SETTINGS MENU":
+                size 35
+                color "#FFFFFF"
+                style "nsfw_text"
+                xalign 0.5
+
+        else:
+            text "YOU HAVE ENABLED NSFW CONTENT SO YOU MAY CONTINUE":
+                size 35
+                color "#FFFFFF"
+                style "nsfw_text"
+                xalign 0.5
 
     vbox:
         ypos 730
