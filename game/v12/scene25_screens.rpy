@@ -1,7 +1,7 @@
 screen v12_girls():
 
     # character: label
-    default girlLabels = {
+    default girl_labels = {
         "Amber": {
             "label": "v12_jc_amber",
             "condition": True
@@ -51,7 +51,7 @@ screen v12_girls():
         xalign 0.5
         ypos 350
 
-        for character, i in girlLabels.items():
+        for character, i in girl_labels.items():
             vbox:
                 align (0.5, 0.5)
 

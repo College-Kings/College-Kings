@@ -1,16 +1,17 @@
 screen girls():
+    modal True
 
-    default image_path = "gui/julia_call/"
-
-    #label , Name
-    default girlLabels = [
-            ["juchloe","Chloe"],
-            ["juaubrey","Aubrey"],
-            ["julauren","Lauren"],
-            ["juriley","Riley"],
-            ["juemily","Emily"],
-            ["jupenelope","Penelope"],
+    # character, label
+    default girl_labels = [
+            ["Chloe", "juchloe"],
+            ["Aubrey", "juaubrey"],
+            ["Lauren", "julauren"],
+            ["Riley", "juriley"],
+            ["Emily", "juemily"],
+            ["Penelope", "jupenelope"],
         ]
+        
+    default image_path = "gui/julia_call/"
 
     add image_path + "jc_background.webp"
 
@@ -21,16 +22,16 @@ screen girls():
         xalign 0.5
         ypos 450
 
-        for i in girlLabels:
+        for character, l in girl_labels:
             vbox:
                 align (0.5, 0.5)
 
                 imagebutton:
-                    idle image_path + i[1] + "_idle.webp"
-                    hover image_path + i[1] + ".webp"
-                    action Jump(i[0])
+                    idle image_path + character + "_idle.webp"
+                    hover image_path + character + ".webp"
+                    action Jump(l)
 
-                text i[1]:
+                text character:
                     yoffset -80
                     xoffset 30
                     xalign 0.5
