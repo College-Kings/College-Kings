@@ -924,6 +924,7 @@ screen preferences():
 
     imagebutton:
         idle "gui/settings/return_idle.webp"
+        hover "gui/settings/return_hover.webp"
         action Return()
         pos (129, 82)
 
