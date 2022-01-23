@@ -20,22 +20,22 @@ screen fight_neutral():
 
     timer 1 action Jump ("opponent_attacks")
 
-screen fight_defense(attack="light"):
-    add opponent.attacks[attack].image
+screen fight_defense(attack):
+    add attack.image
 
     for k in player.moves.keys():
         key k:
-            action Function(player.turn)
+            action Function(player.turn, k, attack)
 
 
-    timer 1:
-        if opponent_attack == 0: #tom light and time ran out
-            if player_guard == 0: # player no guard
+    timer 1: 
+        if attack == opponent.attacks[AttackType.LIGHT]: #tom light and time ran out ## NEEDS FIX
+            if player.guard == Guard.LOW_GUARD: # player no guard
                 action Jump ("opponent_light_hit")
             else: # player full or semi guard
                 action Jump ("opponent_light_block")
         else: # tom heavy and time ran out
-            if player_guard == 2: # player full guard
+            if player.guard == Guard.FULL_GUARD: # player full guard
                 action Jump ("opponent_heavy_block")
             else: # player no or semi guard
                 action Jump ("opponent_heavy_hit")
@@ -62,17 +62,23 @@ screen test_health():
     vbox:
         align (0.1, 0.1)
         text "[opponent.health]":
-            size 100
+            size 50
             color "#eb5858"  
-        text "[opponent_guard]":
-            size 100
-            color "#494ce6"  
+        text "[opponent.guard]":
+            size 50
+            color "#494ce6"
+        text str(opponent.stamina):
+            size 50
+            color "#ffa600"
 
     vbox:
         align (0.1, 0.9)
-        text "[player_health]":
-            size 100
+        text "[player.health]":
+            size 50
             color "#eb5858"
-        text "[player_guard]":
-            size 100
-            color "#494ce6"  
+        text "[player.guard]":
+            size 50
+            color "#494ce6"
+        text str(player.stamina):
+            size 50
+            color "#ffa600"
