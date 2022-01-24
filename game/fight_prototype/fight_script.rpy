@@ -92,6 +92,7 @@ init python:
 
                     else: # Opponent Heavy attack
                         opponent.guard = Guard.LOW_GUARD
+                        opponent.stamina -= heavy_attack_stamina_cost # test
                         renpy.jump("player_light")
 
                 elif move.attack_type == AttackType.HEAVY:
@@ -143,15 +144,30 @@ label fight_test:
         player.moves["e"] = Defence(Guard.SEMI_GUARD, "images/v2/tomjab.webp")
         player.moves["r"] = Defence(Guard.FULL_GUARD, "images/v2/tomjab.webp")
 
+    menu:
+
+        "Easy":
+            $ fight_reaction_time = 1.5
+
+        "Medium":
+            $ fight_reaction_time = 1
+
+        "Hard":
+            $ fight_reaction_time = 0.75
+
+        "Impossible":
+            $ fight_reaction_time = 0.5
+
+
 
     call screen fight_neutral
 
 label player_light:
 
-    if (player.stamina >= 2 and player.guard < Guard.FULL_GUARD) or player.stamina >= 4:
+    if (player.stamina >= light_attack_stamina_cost and player.guard < Guard.FULL_GUARD) or player.stamina >= (light_attack_stamina_cost + full_guard_stamina_cost):
 
         $ player.guard = Guard.SEMI_GUARD
-        $ player.stamina -= 2
+        $ player.stamina -= light_attack_stamina_cost
 
         scene jab2start
 
@@ -166,7 +182,7 @@ label player_light:
 
             pause 1
 
-            $ opponent.health -= 5
+            $ opponent.health -= player_light_attack_damage
 
             call screen fight_neutral
 
@@ -179,14 +195,13 @@ label player_light:
 
             pause 1
 
-            $ opponent.stamina += 5
+            $ opponent.stamina += light_block_stamina_gain
+            $ player_fury += 1
 
-            $ opponent_shielding_chance = renpy.random.choice([0,1,2])
+            if player_fury == 2: # opponent goes into full guard
 
-            if opponent_shielding_chance == 2: # opponent goes into full guard
-
-                $ opponent.guard == Guard.FULL_GUARD 
-                $ opponent_shielding_chance = 0
+                $ opponent.guard = Guard.FULL_GUARD 
+                $ player_fury = 0
 
             call screen fight_neutral
             
@@ -199,8 +214,6 @@ label player_light:
 
             pause 1
 
-            $ opponent.stamina += 5
-
             call screen fight_neutral
 
     else:
@@ -209,10 +222,10 @@ label player_light:
 
 label player_heavy:
 
-    if (player.stamina >= 5 and player.guard < Guard.FULL_GUARD) or player.stamina >= 7:
+    if (player.stamina >= heavy_attack_stamina_cost and player.guard < Guard.FULL_GUARD) or player.stamina >= (heavy_attack_stamina_cost + full_guard_stamina_cost):
 
         $ player.guard = Guard.LOW_GUARD
-        $ player.stamina -= 5
+        $ player.stamina -= heavy_attack_stamina_cost
 
         scene hook2start
 
@@ -227,7 +240,7 @@ label player_heavy:
 
             pause 1
 
-            $ opponent.health -= 10
+            $ opponent.health -= player_heavy_attack_damage
 
             call screen fight_neutral
 
@@ -235,7 +248,7 @@ label player_heavy:
 
             $ opponent_attack = renpy.random.choice([AttackType.LIGHT, AttackType.HEAVY])
 
-            if opponent.stamina >= 2 and opponent_attack == AttackType.LIGHT: # opponent counters
+            if opponent.stamina >= light_attack_stamina_cost and opponent_attack == AttackType.LIGHT: # opponent counters
 
                 call screen fight_defense(opponent.attacks[opponent_attack])
                 
@@ -248,7 +261,7 @@ label player_heavy:
 
                 pause 1
 
-                $ opponent.health -= 10
+                $ opponent.health -= player_heavy_attack_damage
                 $ opponent.guard = Guard.LOW_GUARD
 
                 call screen fight_neutral
@@ -259,12 +272,11 @@ label player_heavy:
 
             show screen fight_popup("Guard Shattered")
 
-            $ opponent.health -= 2 #negated damage
+            $ opponent.health -= player_heavy_attack_negated_damage #negated damage
 
             pause 1
             
             $ opponent.guard = Guard.LOW_GUARD
-            $ opponent.stamina += 5
 
             call screen fight_neutral
 
@@ -275,22 +287,24 @@ label player_heavy:
 label player_semi_guard: #player changes to semi guard
 
     $ player.guard = Guard.SEMI_GUARD
-    $ player.stamina += 5
 
     jump opponent_attacks
 
 label player_full_guard: #player changes to full guard
 
     $ player.guard = Guard.FULL_GUARD
-    $ player.stamina += 5
 
     jump opponent_attacks
 
 label opponent_attacks:
     
-    if (opponent.stamina >= 5 and opponent.guard < Guard.FULL_GUARD) or opponent.stamina >= 7: # opponent has enough stamina for heavy attack
+    if (opponent.stamina >= heavy_attack_stamina_cost and opponent.guard < Guard.FULL_GUARD) or opponent.stamina >= (heavy_attack_stamina_cost + full_guard_stamina_cost): # opponent has enough stamina for heavy attack
 
-        if player.guard == Guard.LOW_GUARD or player.guard == Guard.FULL_GUARD: # player low  or full guard
+        if player.guard == Guard.LOW_GUARD: # player low  or full guard
+
+            call screen fight_defense(opponent.attacks[renpy.random.choice([AttackType.LIGHT, AttackType.HEAVY])]) #opponent can attack light or heavy
+
+        elif player.guard == Guard.FULL_GUARD:
 
             call screen fight_defense(opponent.attacks[AttackType.HEAVY])
 
@@ -298,22 +312,27 @@ label opponent_attacks:
 
             call screen fight_defense(opponent.attacks[renpy.random.choice([AttackType.LIGHT, AttackType.HEAVY])]) #opponent can attack light or heavy
  
-    elif (opponent.stamina >= 2 and opponent.guard < Guard.FULL_GUARD) or opponent.stamina >= 4: # opponent has enough stamina for light attack
+    elif (opponent.stamina >= light_attack_stamina_cost and opponent.guard < Guard.FULL_GUARD) or opponent.stamina >= (light_attack_stamina_cost + full_guard_stamina_cost): # opponent has enough stamina for light attack
 
         call screen fight_defense(opponent.attacks[AttackType.LIGHT])
         
     else: # opponent doesn't have enough stamina to attack
         $ opponent.guard = Guard.SEMI_GUARD
-        $ opponent.stamina += 5
+
+        $ opponent.stamina += 4
+
+        $ player.stamina += 4
 
         call screen fight_neutral
 
 label opponent_light_hit:
 
+        $ opponent.stamina -= light_attack_stamina_cost
+
         scene tomjabhit
         with vpunch
 
-        $ player.health -= 5
+        $ player.health -= opponent_light_attack_damage
 
         show screen fight_popup("LIGHT HIT")
 
@@ -323,10 +342,13 @@ label opponent_light_hit:
 
 label opponent_light_block:
 
+        $ opponent.stamina -= light_attack_stamina_cost
+
         scene tomjabblock
         with vpunch
 
-        $ player.stamina += 5
+        if player.guard == Guard.SEMI_GUARD:
+            $ player.stamina += light_block_stamina_gain
 
         show screen fight_popup("BLOCKED")
 
@@ -337,10 +359,12 @@ label opponent_light_block:
 
 label opponent_heavy_hit:
 
+        $ opponent.stamina -= heavy_attack_stamina_cost
+
         scene tomkickhit
         with vpunch
 
-        $ player.health -= 10
+        $ player.health -= opponent_heavy_attack_damage
 
         show screen fight_popup("HEAVY HIT")
 
@@ -350,11 +374,12 @@ label opponent_heavy_hit:
 
 label opponent_heavy_block:
 
+        $ opponent.stamina -= heavy_attack_stamina_cost
+
         scene tomkickblock
         with vpunch
 
-        $ player.stamina += 5
-        $ player.health -= 2 #Negated Damage
+        $ player.health -= opponent_heavy_attack_negated_damage #Negated Damage
         $ player.guard = Guard.LOW_GUARD
 
         show screen fight_popup("GUARD SHATTERED")

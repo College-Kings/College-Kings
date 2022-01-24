@@ -18,7 +18,7 @@ screen fight_neutral():
     key "r": #full guard
         action Jump ("player_full_guard")
 
-    timer 1 action Jump ("opponent_attacks")
+    timer fight_reaction_time action Jump ("opponent_attacks")
 
 screen fight_defense(attack):
     tag fight
@@ -30,7 +30,7 @@ screen fight_defense(attack):
         key k:
             action Function(player.turn, k, attack)
 
-    timer 1: 
+    timer fight_reaction_time: 
         if attack == opponent.attacks[AttackType.LIGHT]: #tom light and time ran out ## NEEDS FIX
             if player.guard == Guard.LOW_GUARD: # player no guard
                 action Jump ("opponent_light_hit")
