@@ -36,7 +36,7 @@ screen kct_choice_hint():
 
     window:
         xalign 1.0
-        xoffset -50
+        xoffset -100
         background Transform("gui/kct/background.webp", zoom=0.4531)
 
         hbox:
@@ -44,7 +44,7 @@ screen kct_choice_hint():
 
             add Transform("gui/kct/logo.webp", zoom=0.2382) align (0.5, 0.5)
 
-            text kct.upper() align (0.5, 0.5)
+            text kct.upper() align (0.5, 0.5) xoffset 10
 
             null width 30
 
