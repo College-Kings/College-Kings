@@ -37,7 +37,13 @@ screen kct_choice_hint():
     window:
         xalign 1.0
         xoffset -100
-        background Transform("gui/kct/background.webp", zoom=0.4531)
+
+        if kct == "loyal":
+            background "gui/kct/background_loyal.webp"
+        elif kct == "popular":
+            background "gui/kct/background_popular.webp"
+        elif kct == "confident":
+            background "gui/kct/background_confident.webp"
 
         hbox:
             null width 10
