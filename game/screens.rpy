@@ -264,44 +264,44 @@ screen quick_menu():
 
             if not realmode:
                 imagebutton:
-                    idle Transform (image_path + "rollback_idle.webp", zoom=0.35)
-                    hover Transform (image_path + "rollback_hover.webp" , zoom=0.35)
+                    idle Transform(image_path + "rollback_idle.webp", zoom=0.35)
+                    hover Transform(image_path + "rollback_hover.webp", zoom=0.35)
                     action Rollback()
             
             imagebutton:
-                idle Transform (image_path + "history_idle.webp", zoom=0.35)
-                hover Transform (image_path + "history_hover.webp" , zoom=0.35)
+                idle Transform(image_path + "history_idle.webp", zoom=0.35)
+                hover Transform(image_path + "history_hover.webp", zoom=0.35)
                 action ShowMenu("history")
 
             imagebutton:
-                idle Transform (image_path + "skip_idle.webp", zoom=0.35)
-                hover Transform (image_path + "skip_hover.webp" , zoom=0.35)
+                idle Transform(image_path + "skip_idle.webp", zoom=0.35)
+                hover Transform(image_path + "skip_hover.webp", zoom=0.35)
                 action Skip()
                 alternate Skip(fast=True, confirm=True)
 
             imagebutton:
-                idle Transform (image_path + "auto_forward_idle.webp", zoom=0.35)
-                hover Transform (image_path + "auto_forward_hover.webp" , zoom=0.35)
+                idle Transform(image_path + "auto_forward_idle.webp", zoom=0.35)
+                hover Transform(image_path + "auto_forward_hover.webp", zoom=0.35)
                 action Preference("auto-forward", "toggle")
 
             imagebutton:
-                idle Transform (image_path + "save_idle.webp", zoom=0.35)
-                hover Transform (image_path + "save_hover.webp" , zoom=0.35)
+                idle Transform(image_path + "save_idle.webp", zoom=0.35)
+                hover Transform(image_path + "save_hover.webp", zoom=0.35)
                 action ShowMenu("save")
 
             imagebutton:
-                idle Transform (image_path + "quick_save_idle.webp", zoom=0.35)
-                hover Transform (image_path + "quick_save_hover.webp" , zoom=0.35)
+                idle Transform(image_path + "quick_save_idle.webp", zoom=0.35)
+                hover Transform(image_path + "quick_save_hover.webp", zoom=0.35)
                 action QuickSave()
 
             imagebutton:
-                idle Transform (image_path + "quick_load_idle.webp" , zoom=0.35)
-                hover Transform (image_path + "quick_load_hover.webp" , zoom=0.35)
+                idle Transform(image_path + "quick_load_idle.webp", zoom=0.35)
+                hover Transform(image_path + "quick_load_hover.webp", zoom=0.35)
                 action QuickLoad()
 
             imagebutton:
-                idle Transform (image_path + "settings.webp", zoom=0.35)
-                hover Transform (image_path + "settings_hover.webp", zoom=0.35)
+                idle Transform(image_path + "settings.webp", zoom=0.35)
+                hover Transform(image_path + "settings_hover.webp", zoom=0.35)
                 action ShowMenu("preferences")
 
 style quick_menu_button:
