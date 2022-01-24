@@ -34,26 +34,20 @@ init python:
 screen kct_choice_hint():
     style_prefix "kct_choice"
 
-    window:
+    frame:
         xalign 1.0
         xoffset -100
 
-        if kct == "loyal":
-            background "gui/kct/background_loyal.webp"
-        elif kct == "popular":
-            background "gui/kct/background_popular.webp"
-        elif kct == "confident":
-            background "gui/kct/background_confident.webp"
+        background "gui/kct/background_{}.webp".format(kct)
 
         hbox:
-            null width 10
+            spacing 5
+            align (0.5, 0.5)
+            xoffset 20
 
-            add Transform("gui/kct/logo.webp", zoom=0.2382) align (0.5, 0.5)
+            add Transform("gui/kct/logo.webp", zoom=0.2382) yalign 0.5
 
-            text kct.upper() align (0.5, 0.5) xoffset 10
-
-            null width 30
-
+            text kct.upper() yalign 0.5
 
 style kct_choice_text is syne_extra_bold_22
 
