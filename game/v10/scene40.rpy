@@ -246,7 +246,7 @@ label v10_riley_sex:
                         pause 0.75
 
                         if config_censored:
-                            call screen censoredPopup("v10_mc_pen_call")
+                            call screen censored_popup("v10_mc_pen_call")
 
                         scene v10srds5
                         with dissolve
@@ -340,7 +340,7 @@ label v10_riley_sex:
                 pause 0.75
 
                 if config_censored:
-                    call screen censoredPopup("v10_mc_pen_call")
+                    call screen censored_popup("v10_mc_pen_call")
 
                 scene v10srds5 # FPP. Show Riley naked, towel at her feet, smiling, mouth closed.
                 with dissolve
@@ -589,7 +589,7 @@ label v10_riley_sex:
                 pause 0.75
 
                 if config_censored:
-                    call screen censoredPopup("v10_mc_pen_call")
+                    call screen censored_popup("v10_mc_pen_call")
 
                 scene v10srds5
                 with dissolve
@@ -840,7 +840,7 @@ label v10_riley_sex:
                         pause 0.75
 
                         if config_censored:
-                            call screen censoredPopup("v10_mc_pen_call")
+                            call screen censored_popup("v10_mc_pen_call")
 
                         scene v10srds5
                         with dissolve

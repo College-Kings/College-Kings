@@ -256,7 +256,7 @@ label v10_lauren_room:
         u "(Oh wow!)"
 
         if config_censored:
-            call screen censoredPopup("v10s24_nsfwSkipLabel1")
+            call screen censored_popup("v10s24_nsfwSkipLabel1")
 
         scene v10lar7 # TPP Show Lauren on MC's lap facing him, MC arms around her waist, Lauren eyes closed and mouth open
         with dissolve

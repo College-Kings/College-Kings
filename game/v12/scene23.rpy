@@ -193,7 +193,7 @@ label v12_ms_rose_sex: #can only get here if joinwolves
                 u "Good... Fucking... God."
 
                 if config_censored:
-                    call screen censoredPopup("v12s23_nsfwSkipLabel1")
+                    call screen censored_popup("v12s23_nsfwSkipLabel1")
 
                 scene v12msr15a # FPP. Same as v12msr15, Ms. Rose topless, seductive look, mouth open
                 with dissolve

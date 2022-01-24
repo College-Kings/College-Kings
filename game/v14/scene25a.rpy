@@ -28,7 +28,7 @@ label v14s25a:
     u "*Drowsy* Get over here, you..."
 
     if config_censored:
-        call screen censoredPopup("v14s25a_nsfwSkipLabel1")
+        call screen censored_popup("v14s25a_nsfwSkipLabel1")
 
     scene v14s25a_3 # TPP Show Amber landing on the bed, smiling with mouth open, MC with arms out as if he just threw her onto the bed
     with dissolve

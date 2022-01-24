@@ -4,7 +4,7 @@ init python:
         WOLVES = 1
 
 
-    class Relationship(Enum):
+    class Relationship(SmartEnum):
         MAD = -4
         THREATEN = -3
         MAKEFUN = -2
@@ -20,30 +20,6 @@ init python:
         LOYAL = 8
         TAMED = 9
         GIRLFRIEND = 10
-
-        def __lt__(self, other):
-            if not isinstance(other, Relationship):
-                raise TypeError("Relation {} must be of type Relationship.".format(other))
-
-            return self.value < other.value
-
-        def __le__(self, other):
-            if not isinstance(other, Relationship):
-                raise TypeError("Relation {} must be of type Relationship.".format(other))
-
-            return self.value <= other.value
-
-        def __gt__(self, other):
-            if not isinstance(other, Relationship):
-                raise TypeError("Relation {} must be of type Relationship".format(other))
-
-            return self.value > other.value
-
-        def __ge__(self, other):
-            if not isinstance(other, Relationship):
-                raise TypeError("Relation {} must be of type Relationship".format(other))
-
-            return self.value >= other.value
 
 
     class NonPlayableCharacter:

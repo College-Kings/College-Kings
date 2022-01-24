@@ -96,7 +96,7 @@ label v15s30:
                 $ v15_emily_sext = True
                 
                 if config_censored:
-                    call screen censoredPopup("v15s30_nsfwSkipLabel1")
+                    call screen censored_popup("v15s30_nsfwSkipLabel1")
                 
                 scene v15s30_4
                 with dissolve

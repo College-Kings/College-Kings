@@ -815,7 +815,7 @@ label v14s36:
                 pause
 
                 if config_censored:
-                    call screen censoredPopup("v14s36_nsfwSkipLabel1")
+                    call screen censored_popup("v14s36_nsfwSkipLabel1")
 
                 scene v14s36_lagsex_1 # TPP. MC starts to goes underwater, Jenny has a curious expression looking at Mc, mouth closed
                 with dissolve
