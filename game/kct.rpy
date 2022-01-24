@@ -37,12 +37,12 @@ screen kct_choice_hint():
     window:
         xalign 1.0
         xoffset -50
-        background "kct_choice_hint_background"
+        background Transform("gui/kct/background.webp", zoom=0.4531)
 
         hbox:
             null width 10
 
-            add "gui/kct/logo.webp" align (0.5, 0.5)
+            add Transform("gui/kct/logo.webp", zoom=0.2382) align (0.5, 0.5)
 
             text kct.upper() align (0.5, 0.5)
 
