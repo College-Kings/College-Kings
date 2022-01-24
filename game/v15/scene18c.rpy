@@ -1922,12 +1922,7 @@ label v15s18c_autumn_amber:
             with dissolve
 
             u "Well, do you wanna make out?"
-
-            if kct == "loyal" and (lauren.relationship >= Relationship.GIRLFRIEND or not v11_lauren_caught_aubrey):
-                label v15s18c_autumnsg:
-                    if _in_replay:
-                        $ kct = "loyal"
-
+            
             if lauren.relationship >= Relationship.GIRLFRIEND:
                 scene v15s18c_auam_5d # FPP. Same as v15s18c_auam_5a, Autumn angry, mouth open
                 with dissolve
@@ -1938,190 +1933,157 @@ label v15s18c_autumn_amber:
                 with dissolve
 
                 u "Yeah, I know, I'm sorry... I just-"
-
-                if kct == "loyal":
-                    if not _in_replay:
-                        call screen kct_popup
-                
-                    scene v15s18c_auam_5f # FPP. Same as v15s18c_5e, Autumn slightly sad, mouth open
-                    with dissolve
-
-                    aut "*Sighs* Fine."
-
-                    scene v15s18c_auam_5g # FPP. Same as v15s18c_5f, Autumn slightly sad, mouth closed
-                    with dissolve
-
-                    u "Wait, what?"
-
-                    scene v15s18c_auam_5f
-                    with dissolve
-
-                    aut "I know this is just for some stupid list, haha... So..."
-
-                    aut "It's fine."
-
-                    scene v15s18c_auam_5g
-                    with dissolve
-
-                    u "Exactly, yeah. I would never do anything to hurt Lau-"
-
-                    scene v15s18c_auam_5f
-                    with dissolve
-
-                    aut "No more talking. Seriously. Zip it."
-
-                    scene v15s18c_auam_5g
-                    with dissolve
-
-                    u "Yup. Got it."
-
-                    jump v15s18c_autumn_kiss
-
-                else:
-                    scene v15s18c_auam_5d
-                    with dissolve
-
-                    call screen kct_popup(required_kct="loyal")
-                    aut "You just nothing. You're lucky I won't tell Lauren that you even asked me."
-
-                    scene v15s18c_auam_5e
-                    with dissolve
-
-                    u "I'm sorry, Autumn. I thought-"
-
-                    scene v15s18c_auam_5d
-                    with dissolve
-
-                    aut "This never happened, [name]. Go away."
-
-                    scene v15s18c_auam_5e
-                    with dissolve
-
-                    u "Yeah. Okay..."
-
-                    scene v15s18c_auam_6
-                    with dissolve
-
-                    u "(Well, fuck...)"
-                
-            else:
-                if kct == "loyal" and not v11_lauren_caught_aubrey:
-                    call screen kct_popup
-                    
-                    scene v15s18c_auam_5b
-                    with dissolve
-
-                    aut "Haha! What?"
-
-                    scene v15s18c_auam_5c
-                    with dissolve
-
-                    u "I have to make out with someone, ha."
-
-                    scene v15s18c_auam_5b
-                    with dissolve
-
-                    aut "Oh... Sure. That's easy. *Chuckles*"
-
-                    scene v15s18c_auam_5c
-                    with dissolve
-
-                    u "Yeah!"
-
-                    u "Wait, really?"
-
-                    jump v15s18c_autumn_kiss
-
-                elif kct == "loyal":
-                    scene v15s18c_auam_5a
-                    with dissolve
-
-                    aut "Ha, I uh..."
-
-                    aut "There's too much drama I think... Between you and Lauren."
-
-                    aut "It's just hard to-"
-
-                    scene v15s18c_auam_5
-                    with dissolve
-
-                    u "I understand. No worries."
-
-                    scene v15s18c_auam_5a
-                    with dissolve
-
-                    aut "Okay, thanks."
-
-                    aut "I'm gonna go force Amber out of the bathroom, haha! I have to pee really bad..."
-
-                    scene v15s18c_auam_5
-                    with dissolve
-
-                    u "Haha, okay. See you around."
-
-                    scene v15s18c_auam_5a
-                    with dissolve
-
-                    aut "Later!"
-
-                    scene v15s18c_auam_6
-                    with dissolve
-
-                    u "(Well, that could've gone worse...)"
-                
-                else:
-                    scene v15s18c_auam_5f
-                    with dissolve
-
-                    call screen kct_popup(required_kct="loyal")
-                    aut "Hmm... I don't-"
-
-                    scene v15s18c_auam_5g
-                    with dissolve
-
-                    u "It's cool, no worries."
-
-                    scene v15s18c_auam_5f
-                    with dissolve
-
-                    aut "I'm just not feeling it... I'm sorry, [name]."
-
-                    scene v15s18c_auam_5g
-                    with dissolve
-
-                    u "Really, it's okay. *Chuckles*"
-
-                    scene v15s18c_auam_5f
-                    with dissolve
-
-                    aut "Thanks."
-
-                    scene v15s18c_auam_5a
-                    with dissolve
-
-                    aut "I'm gonna go force Amber out of the bathroom, haha! I have to pee really bad..."
-
-                    scene v15s18c_auam_5
-                    with dissolve
-
-                    u "Haha, okay. See you around."
-
-                    scene v15s18c_auam_5a
-                    with dissolve
-
-                    aut "Later!"
-
-                    scene v15s18c_auam_6
-                    with dissolve
-
-                    u "(Well, that could've gone worse...)"
-                
-                scene v15s18c_auam_7
+            
+                scene v15s18c_auam_5d
                 with dissolve
 
-                pause 0.75
+                aut "You just nothing. You're lucky I won't tell Lauren that you even asked me."
 
-                call screen v15s18a_bar
+                scene v15s18c_auam_5e
+                with dissolve
+
+                u "I'm sorry, Autumn. I thought-"
+
+                scene v15s18c_auam_5d
+                with dissolve
+
+                aut "This never happened, [name]. Go away."
+
+                scene v15s18c_auam_5e
+                with dissolve
+
+                u "Yeah. Okay..."
+
+                scene v15s18c_auam_6
+                with dissolve
+
+                u "(Well, fuck...)"
+
+                scene v15s18c_auam_5d
+                with dissolve
+
+                aut "I'm just gonna leave and go check on Amber."
+
+            elif v11_lauren_caught_aubrey:
+                scene v15s18c_auam_5a
+                with dissolve
+
+                aut "Ha, I uh..."
+
+                aut "There's too much drama I think... Between you and Lauren."
+
+                aut "It's just hard to-"
+
+                scene v15s18c_auam_5
+                with dissolve
+
+                u "I understand. No worries."
+
+                scene v15s18c_auam_5a
+                with dissolve
+
+                aut "Okay, thanks."
+
+                aut "I'm gonna go force Amber out of the bathroom, haha! I have to pee really bad..."
+
+                scene v15s18c_auam_5
+                with dissolve
+
+                u "Haha, okay. See you around."
+
+                scene v15s18c_auam_5a
+                with dissolve
+
+                aut "Later!"
+
+                scene v15s18c_auam_6
+                with dissolve
+
+                u "(Well, that could've gone worse...)"
+            
+            elif kct == "loyal" or v15_autumn_lunchbreak:
+                if not v15_autumn_lunchbreak:
+                    call screen kct_popup
+            
+                label v15s18c_autumnsg:
+        
+                scene v15s18c_auam_5b
+                with dissolve
+
+                aut "Haha! What?"
+
+                scene v15s18c_auam_5c
+                with dissolve
+
+                u "I have to make out with someone, ha."
+
+                scene v15s18c_auam_5b
+                with dissolve
+
+                aut "Oh... Sure. That's easy. *Chuckles*"
+
+                scene v15s18c_auam_5c
+                with dissolve
+
+                u "Yeah!"
+
+                u "Wait, really?"
+
+                jump v15s18c_autumn_kiss
+    
+            else:
+                scene v15s18c_auam_5f
+                with dissolve
+
+                call screen kct_popup(required_kct="loyal")
+                aut "Hmm... I don't-"
+
+                scene v15s18c_auam_5g
+                with dissolve
+
+                u "It's cool, no worries."
+
+                scene v15s18c_auam_5f
+                with dissolve
+
+                aut "I'm just not feeling it... I'm sorry, [name]."
+
+                scene v15s18c_auam_5g
+                with dissolve
+
+                u "Really, it's okay. *Chuckles*"
+
+                scene v15s18c_auam_5f
+                with dissolve
+
+                aut "Thanks."
+
+                scene v15s18c_auam_5a
+                with dissolve
+
+                aut "I'm gonna go force Amber out of the bathroom, haha! I have to pee really bad..."
+
+                scene v15s18c_auam_5
+                with dissolve
+
+                u "Haha, okay. See you around."
+
+                scene v15s18c_auam_5a
+                with dissolve
+
+                aut "Later!"
+
+                scene v15s18c_auam_6
+                with dissolve
+
+                u "(Well, that could've gone worse...)"
+                
+            scene v15s18c_auam_7
+            with dissolve
+
+            pause 0.75
+
+            call screen v15s18a_bar
 
 label v15s18c_autumn_kiss:
     scene v15s18c_auam_8 # TPP. Show Autumn and MC leaving the bar, both slight smiles, mouths closed
