@@ -145,8 +145,8 @@ label player_attack_turn(move, player, opponent):
         # Player attack hit
         scene expression move.images["hit_image"]
         with vpunch
-                
-        $ opponent.health -= move.damage
+
+        opponent.change_health(-move.damage)
 
         show screen fight_popup("{} Hit".format(move.move_type.name))
         pause 1.0
@@ -158,7 +158,7 @@ label player_attack_turn(move, player, opponent):
         with vpunch
 
         if move.move_type == AttackType.HEAVY:
-            $ opponent.health -= 2 # Reduced damage
+            opponent.change_health(-2) # Reduced damage
             show screen fight_popup("Guard Shattered")
         else:
             $ opponent.stamina += 3
