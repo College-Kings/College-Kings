@@ -1,52 +1,45 @@
-screen fight_template():
-    if opponent.guard == Guard.FULL_GUARD: #opp full guard
-        add "images/v2/tomstancekick.webp"
-    elif opponent.guard == Guard.LOW_GUARD: #opp light guard
-        add "images/v2/tomstancehook.webp"
-    else:  #opp no guard
-        add "images/v2/tomstancejab.webp"
-    
-screen fight_neutral():
-    use fight_template
-
-    key "q": #light attack
-        action Jump ("player_light")
-    key "w": #heavy attack
-        action Jump ("player_heavy")
-    key "e": # semi guard
-        action Jump ("player_semi_guard")
-    key "r": #full guard
-        action Jump ("player_full_guard")
-
-    timer fight_reaction_time action Jump ("opponent_attacks")
-
-screen fight_defense(attack):
+screen fight_attack():
     tag fight
     modal True
 
-    add attack.image
+    add opponent.guard_image
 
     for k in player.moves.keys():
         key k:
-            action Function(player.turn, k, attack)
+            action Function(player.attack_turn, k)
 
-    timer fight_reaction_time: 
-        if attack == opponent.attacks[AttackType.LIGHT]: #tom light and time ran out ## NEEDS FIX
-            if player.guard == Guard.LOW_GUARD: # player no guard
-                action Jump ("opponent_light_hit")
-            else: # player full or semi guard
-                action Jump ("opponent_light_block")
-        else: # tom heavy and time ran out
-            if player.guard == Guard.FULL_GUARD: # player full guard
-                action Jump ("opponent_heavy_block")
-            else: # player no or semi guard
-                action Jump ("opponent_heavy_hit")
+    # timer fight_reaction_time action Jump("opponent_attacks")
+
+
+screen fight_defense(opponent_attack):
+    tag fight
+    modal True
+
+    add opponent_attack.images["start_image"]
+
+    for k in player.moves.keys():
+        key k:
+            action Function(player.defence_turn, k, opponent_attack)
+
+    # timer fight_reaction_time: 
+    #     if attack == opponent.attacks[AttackType.LIGHT]: #tom light and time ran out ## NEEDS FIX
+    #         if player.guard == Guard.LOW_GUARD: # player no guard
+    #             action Jump ("opponent_light_hit")
+    #         else: # player full or semi guard
+    #             action Jump ("opponent_light_block")
+    #     else: # tom heavy and time ran out
+    #         if player.guard == Guard.FULL_GUARD: # player full guard
+    #             action Jump ("opponent_heavy_block")
+    #         else: # player no or semi guard
+    #             action Jump ("opponent_heavy_hit")
+
 
 screen fight_popup(message):
     text message:
         size 100
 
     timer 2 action Hide("fight_popup", transition=dissolve)
+
 
 screen health_bar(current_health, new_health, max_health=100):
     tag health_bar
@@ -57,13 +50,10 @@ screen health_bar(current_health, new_health, max_health=100):
         xalign 0.5
         ypos 83
         use animated_value_bar(current_health, new_health, max_health, "blue_bar", "ruby_bar", offset=(13, 0), size=(820, 95))
-        
+
+
 screen test_health():
     zorder 100
-
-    vbox:
-        text str(renpy.get_screen("fight_defense"))
-        text str(renpy.get_screen("fight_neutral"))
 
     vbox:
         align (0.1, 0.1)
