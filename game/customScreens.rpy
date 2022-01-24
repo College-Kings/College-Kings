@@ -156,20 +156,17 @@ screen censored_popup(continueLabel):
         ypos 730
         xsize 1050    
 
-    if config_censored:
-        imagebutton:
+    imagebutton:
+        xalign 0.5
+        ypos 555
+        if config_censored:
             idle Transform("gui/censoredPopup/censoredSettings.webp", zoom=0.65)
             hover Transform("gui/censoredPopup/censoredSettingsHover.webp", zoom=0.65)
             action ShowMenu("preferences")
-            xalign 0.5
-            ypos 555
-    else:
-        imagebutton:
+        else:
             idle Transform("gui/censoredPopup/censoredContinue.webp", zoom=0.65)
             hover Transform("gui/censoredPopup/censoredContinueHover.webp", zoom=0.65)
             action Return()
-            xalign 0.5
-            ypos 555
 
     imagebutton:
         idle Transform("gui/censoredPopup/censoredSkipScene.webp", zoom=0.65)
