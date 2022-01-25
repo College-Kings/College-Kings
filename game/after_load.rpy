@@ -73,7 +73,7 @@ label after_load:
         if isinstance(mc, FightCharacter) or isinstance(mc, MainCharacter):
             mc = PlayableCharacter()
 
-        # mc.__after_load__()
+        mc.__after_load__()
 
         try: mc.profile_picture
         except AttributeError: mc.profile_picture = profile_pictures[0]
