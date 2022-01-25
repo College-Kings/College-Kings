@@ -31,9 +31,7 @@ init python:
         if path_builder or _in_replay:
             return
             
-        try:
-            renpy.show(_achievement, [achievementShow])
-        except TypeError: pass
+        renpy.show(_achievement, [achievementShow])
         achievement.grant(_achievement) 
         achievement.sync()
 
