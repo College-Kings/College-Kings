@@ -368,8 +368,8 @@ label after_load:
         simplr_app.unlock()
 
         for app in phone.applications.copy():
-            try: app.locked
-            except AttributeError: phone.applications.remove(app)
+            if not isinstance(app, Application):
+                phone.applications.remove(app)
 
         ### MESSENGER
         #### MESSENGER CONTRACTS

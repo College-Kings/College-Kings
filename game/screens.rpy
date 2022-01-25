@@ -379,7 +379,7 @@ screen main_menu():
     imagebutton:
         idle image_path + "play_now_idle.webp"
         hover Transform(image_path + "play_now_hover.webp", pos=(-31, -31))
-        action [Function(setup), Start()]
+        action Start()
         pos (564, 880)
 
     # Load
