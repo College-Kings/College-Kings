@@ -29,7 +29,7 @@ label v15s30:
 
     pause 0.75
 
-    if v14_Samantha_clean:
+    if not v14_SamanthaDrugs:
         scene v15s30_3
         with dissolve
 

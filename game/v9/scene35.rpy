@@ -26,8 +26,10 @@ init python:
 
     def v9s35_reply5():
         chloe.messenger.newImgMessage("images/v9/Scene 35/chloetxtimg.webp")
-        chloe.messenger.addReply(_("OMG! I miss those!"))
-        chloe.messenger.addReply(_("OMG! You are magnificent!"))
+        chloe.messenger.addReply(_("OMG! I miss those!"), v9s35_reply5a)
+        chloe.messenger.addReply(_("OMG! You are magnificent!"), v9s35_reply5a)
+
+    def v9s35_reply5a():
         chloe.messenger.newMessage(_("Thought you'd like that :)"))
         chloe.messenger.addReply(_("Like? I love it! That just made my whole day better."))
         chloe.messenger.newMessage(_("Awww, such a charmer haha. Your turn. Let me see yours."))
