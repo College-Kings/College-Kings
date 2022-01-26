@@ -102,6 +102,7 @@ default forgiveemily = True
 default freeroam1 = set()
 default freeroam2 = set()
 default freeroam3 = set()
+default aubrey_boyfriend_threesome = False
 default freeroam3asked = set()
 default girl = ""
 default imreforgives = False
