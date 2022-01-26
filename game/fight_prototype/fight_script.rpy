@@ -162,7 +162,7 @@ label player_attack_turn(player_move, player, opponent):
             show screen fight_popup("Guard Shattered")
         else:
             $ opponent.stamina += 3
-            $ player.set_fury(self.fury + 1, opponent)
+            $ player.set_fury(player.fury + 1, opponent)
             show screen fight_popup("Blocked")
         pause 1.0
 
@@ -242,8 +242,6 @@ label opponent_attack_turn(player, opponent):
 
 
 label fight_test:
-    show screen test_health
-    show screen health_bar(100, 100)
 
     python:
         player_light_attack = Attack(AttackType.LIGHT, 5, 2, Guard.SEMI_GUARD, {
@@ -251,7 +249,7 @@ label fight_test:
             "hit_image": "images/v2/jab2pic.webp",
             "block_image": "images/v2/jab1pic.webp"
         })
-        player_heavy_attack = Attack(AttackType.HEAVY, 5, 4, Guard.FULL_GUARD, {
+        player_heavy_attack = Attack(AttackType.HEAVY, 10, 4, Guard.FULL_GUARD, {
             "start_image": "images/v2/hook2start.webp",
             "hit_image": "images/v2/hook2pic.webp",
             "block_image": "images/v2/hook1pic.webp"
@@ -274,6 +272,15 @@ label fight_test:
         player.moves["w"] = player_heavy_attack
         player.moves["e"] = player_semi_guard
         player.moves["r"] = player_full_guard
+
+    call screen fight_style_selection
+    
+    call screen fight_menu
+
+    label fight_start:
+
+    show screen test_health
+    show screen health_bar(100, 100)
 
     menu:
 

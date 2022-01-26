@@ -78,3 +78,193 @@ screen test_health():
         text str(player.stamina):
             size 50
             color "#ffa600"
+
+screen fight_style_selection():
+
+    add "images/v15/detective_board/archetype_background.webp"
+
+    text "You've watched enough crime shows to know what questions need to be asked. You've got the mind of a true detective.":
+        pos (190,700)
+        xsize 400
+        text_align 0.5
+        font "fonts/Effra-Regular.ttf"
+        size 23
+
+    text "Why do people do the things they do? What are the obvious signs of a liar? You're perceptive, mindful, and thorough.":
+        pos (787,700)
+        xsize 400
+        text_align 0.5
+        font "fonts/Effra-Regular.ttf"
+        size 23
+
+    text "The bad cop approach. It doesn't always make sense, but you're angry, and that can be useful... sometimes.":
+        pos (1345,700)
+        xsize 400
+        text_align 0.5
+        font "fonts/Effra-Regular.ttf"
+        size 23
+
+
+    imagebutton:
+        pos (176, 850)
+        idle "images/v15/detective_board/archetype_blue_button.webp"
+        hover "images/v15/detective_board/archetype_blue_button_hover.webp"
+        action [SetField(mc, "detective", Detective.PROFESSIONAL), Return()]
+
+    imagebutton:
+        pos (755, 850)
+        idle "images/v15/detective_board/archetype_yellow_button.webp"
+        hover "images/v15/detective_board/archetype_yellow_button_hover.webp"
+        action [SetField(mc, "detective", Detective.PSYCHOLOGIST), Return()]
+    
+    imagebutton:
+        pos (1334, 850)
+        idle "images/v15/detective_board/archetype_pink_button.webp"
+        hover "images/v15/detective_board/archetype_pink_button_hover.webp"
+        action [SetField(mc, "detective", Detective.LOOSE_CANNON), Return()]
+
+screen fight_menu():
+
+    hbox:
+        align (0.5,0.5)
+        spacing 100
+        fixed:
+            xysize (700,900)
+            add Transform("gui/alert/background.webp", size=(700, 900))
+
+            vbox:
+                spacing 10
+                align (0.5,0.5)
+
+                text name:
+                    size 50
+
+                text "Health: [player.health]":
+                    size 50
+                    color "#eb5858"
+
+                text "Stamina: [player.stamina]":
+                    size 50
+                    color "#ffa600"
+
+                text "Fame: Unknown Brawler"
+
+                text "Fight Style: [player_fight_style]"
+
+                text "Heavy Attack Damage: [player_heavy_attack.damage]"
+
+                text "Light Attack Damage: [player_light_attack.damage]"
+
+                fixed:
+                    xysize (137, 61)
+
+                    imagebutton:
+                        idle "blue_button_idle"
+                        hover "blue_button_hover"
+                        selected_idle "blue_button_hover"
+                        action ToggleVariable("player_attack_1", "Hook", "Jab")
+                    text player_attack_1 align (0.5, 0.5)
+
+                fixed:
+                    xysize (137, 61)
+
+                    imagebutton:
+                        idle "blue_button_idle"
+                        hover "blue_button_hover"
+                        selected_idle "blue_button_hover"
+                        action ToggleVariable("player_attack_1", "Hook", "Jab")
+                    text player_attack_1 align (0.5, 0.5)
+
+                fixed:
+                    xysize (137, 61)
+
+                    imagebutton:
+                        idle "blue_button_idle"
+                        hover "blue_button_hover"
+                        selected_idle "blue_button_hover"
+                        action ToggleVariable("player_attack_1", "Hook", "Jab")
+                    text player_attack_1 align (0.5, 0.5)
+
+                fixed:
+                    xysize (137, 61)
+
+                    imagebutton:
+                        idle "blue_button_idle"
+                        hover "blue_button_hover"
+                        selected_idle "blue_button_hover"
+                        action ToggleVariable("player_attack_1", "Hook", "Jab")
+                    text player_attack_1 align (0.5, 0.5)
+
+                textbutton "Start":
+                    action Jump ("fight_start")
+
+        fixed:
+            xysize (700,900)
+            add Transform("gui/alert/background.webp", size=(700, 900))
+
+            vbox:
+                spacing 10
+                align (0.5,0.5)
+
+                text name:
+                    size 50
+
+                text "Health: [opponent.health]":
+                    size 50
+                    color "#eb5858"
+
+                text "Stamina: [opponent.stamina]":
+                    size 50
+                    color "#ffa600"
+
+                text "Fame: Unknown Brawler"
+
+                text "Fight Style: [player_fight_style]"
+
+                text "Heavy Attack Damage: {}".format(opponent.attacks[AttackType.HEAVY].damage)
+
+                text "Light Attack Damage: {}".format(opponent.attacks[AttackType.LIGHT].damage)
+
+                fixed:
+                    xysize (137, 61)
+
+                    imagebutton:
+                        idle "blue_button_idle"
+                        hover "blue_button_hover"
+                        selected_idle "blue_button_hover"
+                        action ToggleVariable("player_attack_1", "Hook", "Jab")
+                    text player_attack_1 align (0.5, 0.5)
+
+                fixed:
+                    xysize (137, 61)
+
+                    imagebutton:
+                        idle "blue_button_idle"
+                        hover "blue_button_hover"
+                        selected_idle "blue_button_hover"
+                        action ToggleVariable("player_attack_1", "Hook", "Jab")
+                    text player_attack_1 align (0.5, 0.5)
+
+                fixed:
+                    xysize (137, 61)
+
+                    imagebutton:
+                        idle "blue_button_idle"
+                        hover "blue_button_hover"
+                        selected_idle "blue_button_hover"
+                        action ToggleVariable("player_attack_1", "Hook", "Jab")
+                    text player_attack_1 align (0.5, 0.5)
+
+                fixed:
+                    xysize (137, 61)
+
+                    imagebutton:
+                        idle "blue_button_idle"
+                        hover "blue_button_hover"
+                        selected_idle "blue_button_hover"
+                        action ToggleVariable("player_attack_1", "Hook", "Jab")
+                    text player_attack_1 align (0.5, 0.5)
+
+                textbutton "Start":
+                    action Jump ("fight_start")
+
