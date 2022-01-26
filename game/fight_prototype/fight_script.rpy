@@ -259,16 +259,20 @@ label fight_test:
         player_semi_guard = Defence(Guard.SEMI_GUARD, 2)
         player_full_guard = Defence(Guard.FULL_GUARD, 3)
 
-        opponent.attacks[AttackType.LIGHT] = Attack(AttackType.LIGHT, 5, 2, Guard.SEMI_GUARD, {
+        opponent_light_attack = Attack(AttackType.LIGHT, 5, 2, Guard.SEMI_GUARD, {
             "start_image": "images/v2/tomjab.webp",
             "hit_image": "images/v2/tomjabhit.webp",
             "block_image": "images/v2/tomjabblock.webp"
         })
-        opponent.attacks[AttackType.HEAVY] = Attack(AttackType.HEAVY, 10, 4, Guard.FULL_GUARD, {
+        opponent_heavy_attack = Attack(AttackType.HEAVY, 10, 4, Guard.FULL_GUARD, {
             "start_image": "images/v2/tomkick.webp",
             "hit_image": "images/v2/tomkickhit.webp",
             "block_image": "images/v2/tomkickblock.webp"
         })
+
+
+        opponent.attacks[AttackType.LIGHT] = opponent_light_attack
+        opponent.attacks[AttackType.HEAVY] = opponent_heavy_attack
 
         player.moves["q"] = player_light_attack
         player.moves["w"] = player_heavy_attack
