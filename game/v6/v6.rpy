@@ -9995,6 +9995,8 @@ label upstairsaubrey:
         scene sufr3au2b
         with dissolve
 
+        $ aubrey_boyfriend_threesome = True
+
         au "There was this one time for his birthday, where I had blindfolded him and tied him to the bed for his present."
 
         au "When I removed the blindfold, my best friend, was right in front of him, completely naked. And she was fucking hot."
