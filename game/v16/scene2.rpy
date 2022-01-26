@@ -4,7 +4,7 @@
 # Time: Night
 
 label v16s2:
-    if v16s2_walkalone: #Placeholder variable
+    if not v16_home_riley: #Placeholder variable
         scene v16s2_1 # TPP. Shot of MC walking along the street onto campus, neutral face, mouth closed
         with dissolve
 
