@@ -128,6 +128,7 @@ label v10_amber_skatepark:
 
     scene v10sasp1g
     with dissolve
+
     menu:
         "Yeah, you should":
             scene v10sasp1g
@@ -150,7 +151,7 @@ label v10_amber_skatepark:
             with dissolve
 
             ri "It's okay, I need a break anyway. Are we drinking?"
-                
+
     scene v10sasp1e 
     with dissolve
 
@@ -238,6 +239,7 @@ label v10_amber_skatepark:
 
     scene v10sasp4a
     with dissolve
+
     menu:
         "Drink":
             scene v10sasp7 # TPP. Show MC taking a drink of beer.
@@ -273,6 +275,7 @@ label v10_amber_skatepark:
 
     scene v10sasp4a 
     with dissolve
+
     menu:
         "Stripped":
             scene v10sasp4a 
@@ -363,6 +366,7 @@ label v10_amber_skatepark:
 
     if amber.relationship >= Relationship.FWB:
         label v10_amber_skatepark_sg:
+
         scene v10sasp5b # FPP. Same camera as v10sasp5. Show Amber leaning in to whisper into MC's ear, smiling, mouth open.
         with fade
 

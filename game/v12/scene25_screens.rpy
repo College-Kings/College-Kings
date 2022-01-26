@@ -11,7 +11,7 @@ screen v12_girls():
             "condition": True
         },
         "Chloe": {
-            "label": "v12_jc_chole",
+            "label": "v12_jc_chloe",
             "condition": chloe.relationship > Relationship.MAD
         },
         "Lauren": {

@@ -70,7 +70,7 @@ label v15s31:
                 $ emily.messenger.addReply("Getting prom flashbacks.")
                 $ emily.messenger.newMessage("OMG! Haha, you actually look the same. Where are you headed?", force_send=True)
                 $ emily.messenger.addReply("Wedding ceremony for Aubrey's parents.")
-                $ emily.messenger.newMessage("Oh, nice! Tell her I said hi! Miss you guys! Have fun! :)", force_send=True)
+                $ emily.messenger.newMessage("Oh, nice! Tell her I said hi! Miss you guys! Have fun! :)")
                 $ emily.messenger.addReply("Will do. We miss you too :)")
 
                 label v15s31_PhoneContinue:

@@ -7,7 +7,7 @@ label v16s3:
     play sound "sounds/dooropen.mp3"
 
     scene v16s3_1 # TPP. Show Riley walking into her dorm while opening the door, MC following in right behind her, both neutral face, mouth closed.
-    with dissolve
+    with dissolve 
 
     pause 0.75
 
@@ -16,7 +16,7 @@ label v16s3:
     scene v16s3_1a # TPP. Riley Off-camera, Just MC stepped into the dorm and shutting the door, neutral face, mouth closed.
     with dissolve
 
-    pause 0.75  
+    pause 0.75
 
     scene v16s3_2 # FPP. In Riley's dorm, MC looking at Riley, Riley looking at MC, Riley neutral face, mouth open.
     with dissolve
@@ -34,7 +34,7 @@ label v16s3:
     ri "I'll be right back."
 
     scene v16s3_3 # TPP. Show MC sitting on Riley's bed, neutral face, mouth closed.
-    with dissolve
+    with dissolve 
     
     pause 0.75
 
@@ -46,7 +46,7 @@ label v16s3:
     pause 0.75
 
     scene v16s3_3a # TPP. Show MC laying on Riley's bed, with his eyes closed, neutral face, mouth closed.
-    with fade (1,0,1())
+    with fade
 
     u "(Damn, I'm tired. I could fall asleep right now.)"
 
@@ -82,7 +82,7 @@ label v16s3:
 
     else:
         scene v16s3_5a
-        with dissolve
+        with dissolve 
 
         u "Fuck, that's cold!"
 
@@ -134,7 +134,7 @@ label v16s3:
         ri "Yeah, yeah. Poor you... *Giggles*"
 
     scene v16s3_6 # TPP. MC throwing the icepack off somewhere, MC slight smile, mouth closed, Riley slight smile, mouth closed.
-    with dissolve
+    with dissolve 
 
     pause 0.75
 
@@ -192,12 +192,12 @@ label v16s3:
         with dissolve
 
         menu:
-            "Kiss her.":
+            "Kiss her":
                 $ add_point(KCT.BOYFRIEND)
 
                 jump v16s3a
 
-            "Too tired.":
+            "Too tired":
                 $ add_point(KCT.BRO)
 
                 scene v16s3_5h # FPP. MC looking at Riley, Riley looking at MC, Riley slight frown, mouth closed.
@@ -228,7 +228,7 @@ label v16s3:
 
                     ri "I just wanted to say that I understand where she was coming from about the polygamy thing."
 
-                    if upstairs == "aubrey":
+                    if aubrey_boyfriend_threesome:
                         ri "But I remember her saying something about an old boyfriend of hers turning down a threesome, and she was angry about it."
 
                         scene v16s3_5e
@@ -265,7 +265,7 @@ label v16s3:
 
         # [End of Checkpoint 1.1. Continues to Checkpoint 2]
 
-    elif riley.relationship >= Relationship.FRIEND: # [Checkpoint 1.2]
+    else: # [Checkpoint 1.2]
         scene v16s3_5d
         with dissolve
 
@@ -414,7 +414,7 @@ label v16s3:
     u "(Should I mention Tom again?)"
 
     menu:
-        "Reassure her.":
+        "Reassure her":
             u "And don't worry any more about Tom. We'll make sure he doesn't bother you again."
 
             scene v16s3_5d
@@ -422,9 +422,9 @@ label v16s3:
 
             ri "Okay. I'll try my best. Thanks, [name]."
             
-        "Don't bring it up.":
+        "Don't bring it up":
             scene v16s3_5e
-            #with dissolve
+            with dissolve
 
             u "(Don't want to put her head in a spiral.)"
 
@@ -439,25 +439,25 @@ label v16s3:
             u "Yeah, you too. Night, Riley."
 
     scene v16s3_8 # TPP. Show MC and Riley sitting on the bed and hugging.
-    with dissolve
+    with dissolve 
 
     pause 0.75
 
     scene v16s3_9 # TPP. Show MC walking towards the dorm door to leave, slight smile, mouth closed.
-    with dissolve
+    with dissolve 
 
     pause 0.75
 
     play sound "sounds/dooropen.mp3"
 
     scene v16s3_10 # TPP. Show MC opening the door and leaving, slight smile, mouth closed.
-    with dissolve
+    with dissolve 
 
-    pause 0.75 
+    pause 0.75
 
     play sound "sounds/dooropen.mp3"
 
     scene v16s3_11 # TPP. Shot of just the door closed.
-    with dissolve
+    with dissolve 
 
     jump v16s4

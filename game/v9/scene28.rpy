@@ -85,7 +85,7 @@ label v9_call_w_lindsey:
         scene v9cwl3d # TPP. Same camera as v9cwl1, MC laugh, mouth open.
         with dissolve
 
-        u "So are you calling all the fighters tonight or just me."
+        u "So are you calling all the fighters tonight or just me?"
 
         scene v9cwl2
         with dissolve
@@ -212,7 +212,7 @@ label v9_call_w_lindsey:
         scene v9cwl1d # TPP. Same camera as v9cwl1, MC laugh, mouth open.
         with dissolve
 
-        u "So are you calling all the fighters tonight or just me."
+        u "So are you calling all the fighters tonight or just me?"
 
         scene v9cwl2
         with dissolve
