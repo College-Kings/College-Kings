@@ -7,7 +7,7 @@ init python:
         Achievement data class for storing and managing the creation, syncing and managing of in-game achievements
 
         Args:
-            _achievement (str): Programic name for the achievement
+            _achievement (str): Programic name for the achievement, should be same as steam api name
             text (str): Short description of achievement
         """
 
