@@ -73,7 +73,7 @@ label after_load:
         if isinstance(mc, FightCharacter) or isinstance(mc, MainCharacter):
             mc = PlayableCharacter()
 
-        # mc.__after_load__()
+        mc.__after_load__()
 
         try: mc.profile_picture
         except AttributeError: mc.profile_picture = profile_pictures[0]
@@ -368,8 +368,8 @@ label after_load:
         simplr_app.unlock()
 
         for app in phone.applications.copy():
-            try: app.locked
-            except AttributeError: phone.applications.remove(app)
+            if not isinstance(app, Application):
+                phone.applications.remove(app)
 
         ### MESSENGER
         #### MESSENGER CONTRACTS
