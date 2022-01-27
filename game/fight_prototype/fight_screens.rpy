@@ -4,8 +4,7 @@ screen fight_menu(attacks=None, player=player):
 
     default temp_attribute_1 = 0
     default temp_attribute_2 = 0
-    default temp_max_attributes = 15
-    default temp_available_attributes = temp_max_attributes
+    default temp_max_available_attributes = 15
 
     frame:
         background Transform("gui/fight_prototype/fight_background.png", size=(700, 900))
@@ -95,7 +94,7 @@ screen fight_menu(attacks=None, player=player):
                                 hover "gui/fight_prototype/fight_circle_hover.png"
                                 insensitive "gui/fight_prototype/fight_circle_insensitive.png"
                                 selected_idle "gui/fight_prototype/fight_circle_hover.png"
-                                sensitive ( temp_available_attributes - (temp_attribute_1 + temp_attribute_2) - (i - temp_attribute_1) ) >= 0
+                                sensitive ( temp_max_available_attributes - (temp_attribute_1 + temp_attribute_2) - (i - temp_attribute_1) ) >= 0
                                 selected i <= temp_attribute_1
                                 action SetScreenVariable("temp_attribute_1", i)
 
@@ -108,7 +107,7 @@ screen fight_menu(attacks=None, player=player):
                                 hover "gui/fight_prototype/fight_circle_hover.png"
                                 insensitive "gui/fight_prototype/fight_circle_insensitive.png"
                                 selected_idle "gui/fight_prototype/fight_circle_hover.png"
-                                sensitive ( temp_available_attributes - (temp_attribute_1 + temp_attribute_2) - (i - temp_attribute_2) ) >= 0
+                                sensitive ( temp_max_available_attributes - (temp_attribute_1 + temp_attribute_2) - (i - temp_attribute_2) ) >= 0
                                 selected i <= temp_attribute_2
                                 action SetScreenVariable("temp_attribute_2", i)
 
