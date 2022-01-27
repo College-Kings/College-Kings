@@ -8,7 +8,7 @@ screen fight_attack(player=player, opponent=opponent):
         key k:
             action Call("player_attack_turn", move, player, opponent) 
 
-    # timer fight_reaction_time action Jump("opponent_attacks")
+    timer fight_reaction_time action Call("opponent_attack_turn", player, opponent)
 
 
 screen fight_defense(opponent_attack, player=player, opponent=opponent):
@@ -21,17 +21,7 @@ screen fight_defense(opponent_attack, player=player, opponent=opponent):
         key k:
             action Call("player_defence_turn", move, player, opponent_attack, opponent)
 
-    # timer fight_reaction_time: 
-    #     if attack == opponent.attacks[AttackType.LIGHT]: #tom light and time ran out ## NEEDS FIX
-    #         if player.guard == Guard.LOW_GUARD: # player no guard
-    #             action Jump ("opponent_light_hit")
-    #         else: # player full or semi guard
-    #             action Jump ("opponent_light_block")
-    #     else: # tom heavy and time ran out
-    #         if player.guard == Guard.FULL_GUARD: # player full guard
-    #             action Jump ("opponent_heavy_block")
-    #         else: # player no or semi guard
-    #             action Jump ("opponent_heavy_hit")
+    timer fight_reaction_time action Call("player_defence_turn", None, player, opponent_attack, opponent)
 
 
 screen fight_popup(message):

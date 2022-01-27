@@ -170,20 +170,21 @@ label player_defence_turn(player_move, player, opponent_attack, opponent):
     elif opponent_attack.move_type == AttackType.HEAVY:
         $ opponent.guard = Guard.LOW_GUARD
 
-    ## Player Attack Moves
-    if player_move.move_type == AttackType.LIGHT:
-        $ player.guard = Guard.SEMI_GUARD
+    if player_move is not None:
+        ## Player Attack Moves
+        if player_move.move_type == AttackType.LIGHT:
+            $ player.guard = Guard.SEMI_GUARD
 
-        # Player Counter Attack
-        if opponent_attack.move_type == AttackType.HEAVY:
-            call player_attack_turn(player_move, player, opponent)
-    
-    elif player_move.move_type == AttackType.HEAVY:
-        $ player.guard = Guard.LOW_GUARD
+            # Player Counter Attack
+            if opponent_attack.move_type == AttackType.HEAVY:
+                call player_attack_turn(player_move, player, opponent)
+        
+        elif player_move.move_type == AttackType.HEAVY:
+            $ player.guard = Guard.LOW_GUARD
 
-    ## Defence Moves
-    if isinstance(player_move.move_type, Guard):
-        $ player.guard = player_move.move_type
+        ## Defence Moves
+        if isinstance(player_move.move_type, Guard):
+            $ player.guard = player_move.move_type
 
     # Opponent's attack hits
     if player.guard < opponent_attack.counter_guard:
