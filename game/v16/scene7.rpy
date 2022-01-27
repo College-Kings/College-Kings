@@ -246,7 +246,7 @@ label v16s7:
         pause 0.75
 
     else: # -if MC not helping Chloe and/or did not get Lindsey drunk at Games night or VIP night
-        jump label did_not_sabotage_lindsey
+        jump did_not_sabotage_lindsey
 
     scene v16s7_6 # FPP. Show Autumn with a concerned expression, mouth is open, looking at MC
     with dissolve

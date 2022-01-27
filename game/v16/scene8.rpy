@@ -18,7 +18,7 @@ label v16s8:
             scene v16s8_3 # TPP. Show MC sitting next to Chloe no expression, mouth is closed, looking at Chloe, Chloe is looking at MC tears in her eyes, mouth closed, looking at MC, The other Random Characters have given MC space to sit down, but are still there
             with dissolve
 
-            if chloe.relationship >= Relationship.GIRLFRIEND
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 scene v16s8_4 # FPP. Show just Chloe looking at MC, tears in her eyes, sad expression, mouth is closed, looking at MC
                 with dissolve
 

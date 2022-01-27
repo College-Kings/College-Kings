@@ -75,7 +75,7 @@ label v16s4:
 
         if "v15_naomi" in sceneList:
             $ naomi.messenger.newMessage("Just wanted to say, as much as I enjoyed our little bathroom break, don't read too much into it. I just wanted to piss off Aubrey and well... mission succeeded!")
-            $ naomi.messenger.newMessage("Anyway, maybe I'll message you again..."
+            $ naomi.messenger.newMessage("Anyway, maybe I'll message you again...")
             $ naomi.messenger.newMessage("Maybe I won't ;)")
 
         else:
@@ -217,7 +217,7 @@ label v16s4:
 
         if "v15_naomi" in sceneList:
             $ naomi.messenger.newMessage("Just wanted to say, as much as I enjoyed our little bathroom break, don't read too much into it. I just wanted to piss off Aubrey and well... mission succeeded!")
-            $ naomi.messenger.newMessage("Anyway, maybe I'll message you again..."
+            $ naomi.messenger.newMessage("Anyway, maybe I'll message you again...")
             $ naomi.messenger.newMessage("Maybe I won't ;)")
 
         else:
