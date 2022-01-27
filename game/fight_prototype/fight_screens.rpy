@@ -7,7 +7,7 @@ screen fight_menu(attacks=None, player=player):
     default temp_attribute_light_attack_damage = 0
     default temp_attribute_heavy_attack_damage = 0
 
-    default temp_max_available_attributes = 15
+    default temp_max_available_attributes = 18
     
     python:
         temp_available_attributes = temp_max_available_attributes - sum((temp_attribute_health, temp_attribute_stamina, temp_attribute_light_attack_damage, temp_attribute_heavy_attack_damage))
@@ -119,16 +119,23 @@ screen fight_menu(attacks=None, player=player):
 
                                 for i in range(1, 11):
                                     imagebutton:
-                                        idle "gui/fight_prototype/fight_circle_idle.png"
-                                        hover "gui/fight_prototype/fight_circle_hover.png"
+                                        if i == 5 or i == 10:
+                                            idle "gui/fight_prototype/fight_circle_gold_idle.png"
+                                            hover "gui/fight_prototype/fight_circle_gold_hover.png"
+                                            selected_idle "gui/fight_prototype/fight_circle_gold_hover.png"
+                                        else:
+                                            idle "gui/fight_prototype/fight_circle_idle.png"
+                                            hover "gui/fight_prototype/fight_circle_hover.png"
+                                            selected_idle "gui/fight_prototype/fight_circle_hover.png"
                                         insensitive "gui/fight_prototype/fight_circle_insensitive.png"
-                                        selected_idle "gui/fight_prototype/fight_circle_hover.png"
                                         sensitive ( temp_available_attributes - i + attribute_var ) >= 0
                                         selected i <= attribute_var
                                         action ToggleScreenVariable(attr[1], i, 0)
 
                                 if attribute_var == 10:
-                                    text "MAX" color "#0f0" size 16 yalign 0.5
+                                    text "Active Unlocked" color "#0f0" size 16 yalign 0.5
+                                elif attribute_var >= 5:
+                                    text "Passive Unlocked" color "#0f0" size 16 yalign 0.5
 
 # TODO: Improve slider experiance on attributes
 
