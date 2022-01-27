@@ -17,7 +17,7 @@ label v16s3:
     scene v16s3_1a # TPP. Riley Off-camera, Just MC stepped into the dorm and shutting the door, neutral face, mouth closed.
     with dissolve
 
-    pause .25  
+    pause .25
 
     scene v16s3_2 # FPP. In Riley's dorm, MC looking at Riley, Riley looking at MC, Riley neutral face, mouth open.
     with dissolve
