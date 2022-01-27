@@ -81,12 +81,19 @@ screen fight_menu(attacks=None, player=player):
             vbox:
                 spacing 10
 
-                text "Attributes"
+                hbox:
+                    spacing 10
+                    text "Attributes"
+                    text "+5" color "#44D7B6"
+
+
                 vbox:
                     spacing 10
 
                     hbox:
-                        spacing 10
+                        spacing 20
+
+                        text "Health" xalign 1.0 size 15
                         
                         for i in range(1, 11):
                             imagebutton:
