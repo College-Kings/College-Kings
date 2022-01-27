@@ -195,7 +195,7 @@ screen kiwiiTemplate():
     zorder 200
 
     use base_phone:
-        add Transform("images/phone/kiwii/AppAssets/Background.webp", size=(376, 744)) at truecenter
+        add Transform("images/phone/kiwii/AppAssets/Background.webp", zoom=0.25) at truecenter xoffset 2
 
         transclude
 
@@ -276,23 +276,27 @@ screen kiwiiApp():
             cols 1
             mousewheel True
             draggable True
-            xysize(350, 575)
-            xalign 0.5
-            ypos 265
-            spacing 10
+            xysize (390, 675)
+            pos (767, 236)
 
             for post in reversed(kiwiiPosts):
                 fixed:
-                    xysize (350, 350)
-                    add "images/phone/Kiwii/AppAssets/Post.webp"
+                    xysize (398, 398)
+                    add Transform("images/phone/Kiwii/AppAssets/Post.webp", size=(398, 398))
 
                     hbox:
-                        spacing 10
-                        xoffset 20
+                        spacing 5
                         yoffset 20
+                        xoffset 20
 
                         add Transform(post.profile_picture, size=(55, 55))
                         text post.username style "kiwii_ProfileName" yalign 0.5
+
+                        imagebutton:
+                            idle Transform("images/phone/kiwii/appAssets/static_button_1.webp", size=(20, 20)) xoffset 150 yalign 0.5
+
+                        imagebutton:
+                            idle Transform("images/phone/kiwii/appAssets/static_button_1a.webp", size=(20, 20)) xoffset 150 yalign 0.5
 
                     vbox:
                         align(0.5, 0.5)
@@ -300,34 +304,33 @@ screen kiwiiApp():
                         spacing 5
 
                         imagebutton:
-                            idle Transform(post.image, zoom=0.17)
+                            idle Transform(post.image, size=(402, 225)) xoffset -10 yoffset -10
                             action Show("kiwii_image", img=post.image)
-                        text post.get_message() style "kiwii_CommentText" xalign 0.5
+                        text post.get_message() style "kiwii_CommentText" xalign 0.5 yoffset 35
 
                     hbox:
-                        xoffset 20
-                        yoffset 220
+                        xoffset 5
+                        yoffset 315
                         spacing 5
 
                         imagebutton:
-                            idle "images/phone/Kiwii/AppAssets/Like.webp"
-                            hover "images/phone/Kiwii/AppAssets/LikePress.webp"
-                            selected_idle "images/phone/Kiwii/AppAssets/LikePress.webp"
+                            idle Transform("images/phone/Kiwii/AppAssets/Like.webp", size=(32, 32))
+                            hover Transform("images/phone/Kiwii/AppAssets/LikePress.webp", size=(32, 32))
+                            selected_idle Transform("images/phone/Kiwii/AppAssets/LikePress.webp", size=(32, 32))
                             selected post.liked
                             action Function(post.toggleLike)
                         frame:
-                            background "#fff"
                             yalign 0.5
                             padding (5, 2)
 
                             text "{}".format(post.numberLikes) style "kiwii_LikeCounter"
 
                     imagebutton:
-                        idle "images/phone/Kiwii/AppAssets/Comment.webp"
-                        hover "images/phone/Kiwii/AppAssets/CommentHover.webp"
+                        idle Transform("images/phone/Kiwii/AppAssets/Comment.webp", size=(32, 32))
+                        hover Transform("images/phone/Kiwii/AppAssets/CommentHover.webp", size=(32, 32))
                         action Show("kiwiiPost", post=post)
-                        xoffset 290
-                        yoffset 220
+                        xoffset 340
+                        yoffset 320
 
 
 screen kiwiiPost(post):
@@ -338,16 +341,18 @@ screen kiwiiPost(post):
 
         imagebutton:
             xalign 0.5
-            ypos 265
-            idle Transform(post.image, size=(376, 212))
+            ypos 255
+            xoffset 2
+            idle Transform(post.image, size=(390, 225))
             action Show("kiwii_image", img=post.image)
 
         viewport:
             mousewheel True
             draggable True
-            xysize(350, 362)
+            xysize(357, 450)
             xalign 0.5
-            ypos 485
+            ypos 500
+            xoffset 20
             
             vbox:
                 spacing 20
@@ -373,9 +378,9 @@ screen kiwiiPost(post):
                                 spacing 5
 
                                 imagebutton:
-                                    idle "images/phone/Kiwii/AppAssets/Like.webp"
-                                    hover "images/phone/Kiwii/AppAssets/LikePress.webp"
-                                    selected_idle "images/phone/Kiwii/AppAssets/LikePress.webp"
+                                    idle Transform("images/phone/Kiwii/AppAssets/Like.webp", zoom=0.13)
+                                    hover Transform("images/phone/Kiwii/AppAssets/LikePress.webp", zoom=0.13)
+                                    selected_idle Transform("images/phone/Kiwii/AppAssets/LikePress.webp", zoom=0.13)
                                     selected comment.liked
                                     action Function(comment.toggleLike)
                                 text "[comment.numberLikes]" style "kiwii_LikeCounter" yalign 0.5

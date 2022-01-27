@@ -24,7 +24,7 @@ screen phone_icon():
     
     if not renpy.get_screen("choice") and not renpy.get_screen("censored_popup"):
         imagebutton:
-            idle phone.image
+            idle Transform(phone.image, zoom=0.55)
             
             if renpy.get_screen("free_roam"):
                 action Show("phone")
@@ -32,6 +32,8 @@ screen phone_icon():
                 action Call("call_screen_phone")
 
             align (0.999, 0.05)
+            yoffset -118
+            xoffset 73
 
 label call_screen_phone:
     call screen phone
@@ -41,7 +43,7 @@ label call_screen_phone:
 screen base_phone():
     modal True
 
-    add "images/phone/phone_screen.webp"
+    add Transform("images/phone/phone_screen.webp", zoom=0.25)
 
     if renpy.get_screen("phone"):
         # Click background to close phone

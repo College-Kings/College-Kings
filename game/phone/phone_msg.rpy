@@ -176,21 +176,16 @@ screen messenger_contacts():
 
     use base_phone:
 
-        add "images/phone/contacts_screen.webp" at truecenter
+        default image_path = "images/phone/messages/appAssets/"
 
-        fixed:
-            xysize(375, 78)
-            pos(772, 168)
-
-            text "Messages" align(0.1, 0.5) style "phonetext"
+        add Transform(image_path + "contacts_screen.webp", zoom=0.25) at truecenter xoffset 2
 
         vpgrid:
             cols 1
             mousewheel True
             draggable True
-            scrollbars "vertical"
-            xysize (375, 663)
-            pos (772, 247)
+            xysize (390, 663)
+            pos (760, 236)
 
             for contact in messenger.contacts:
                 if not contact.locked:
@@ -219,33 +214,36 @@ screen messager(contact=None):
 
     use base_phone:
 
-        add "images/msg.webp" at truecenter ## Messenger Screen Background
+        default image_path = "images/phone/messages/appAssets/"
+
+        add Transform(image_path + "convo_screen.webp", zoom=0.25) at truecenter xoffset 2
 
         fixed:
             xysize(375, 112)
             xalign 0.5
             ypos 168
 
-            imagebutton:
-                idle "images/msgarrow.webp"
-                action [Hide("messenger_reply"), Show("messenger_contacts")]
+            hbox:
                 yalign 0.5
 
-            vbox:
-                align (0.5, 0.5)
+                imagebutton:
+                    idle Transform(image_path + "back_button.webp", size=(25, 25))
+                    action [Hide("messenger_reply"), Show("messenger_contacts")]
+                    yalign 0.5
+                    xoffset 15
 
                 if hasattr(contact, "profile_picture"):
-                    add contact.profile_picture xalign 0.5
+                    add Transform(contact.profile_picture, size=(64, 64)) yalign 0.5 xoffset 30
                 else:
-                    add contact.profilePicture xalign 0.5
+                    add Transform(contact.profilePicture, size=(64, 64)) yalign 0.5 xoffset 30
 
-                text contact.name style "nametext"
+                text contact.name style "nametext" yalign 0.5 xoffset 50
 
         viewport:
             yadjustment yadj
             mousewheel True
             pos (773, 282)
-            xysize (374, 550)
+            xysize (374, 525)
 
             vbox:
                 xsize 374

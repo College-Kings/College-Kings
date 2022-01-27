@@ -23,7 +23,7 @@ init python:
             self.locked = False
 
 default messenger = Application("Messages", "messages/appAssets/messagesIcon.webp", "messenger_contacts")
-default stats_app = Application("Stats", "stats/appAssets/statsIcon.webp", "stats", locked=True)
+default stats_app = Application("KCT", "stats/appAssets/statsIcon.webp", "stats", locked=True)
 default achievement_app = Application("Achievements", "achievements/appAssets/achievementsIcon.webp", "achievements")
 default kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=True)
 default simplr_app = Application("Simplr", "simplr/appAssets/simplrIcon.webp", "simplr_app", locked=True)
