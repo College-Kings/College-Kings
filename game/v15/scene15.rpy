@@ -193,7 +193,6 @@ label v15s15:
             jump v15s17
 
         "Lick the honey":
-            $ v15_kitchensex = True
             $ grant_achievement("honey_bear")
             $ sceneList.add("v15_rose")
             u "(Don't mind if I do...)"
