@@ -3,8 +3,6 @@ screen fight_menu(attacks=None, player=player, max_points=18):
     style_prefix "fight_menu_style"
 
     default locked_attributes = player.attributes.copy()
-    $ available_points = max_points - sum(player.attributes.values())
-
 
     frame:
         background Transform("gui/fight_prototype/fight_background.png", size=(700, 900))
@@ -40,7 +38,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                                     hover_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected player.attacks[AttackType.LIGHT] == attack
-                                    action Function(player.set_attack, AttackType.LIGHT, attack)
+                                    action SetDict(player.attacks, AttackType.HEAVY, attack)
 
                                     text attack.name align (0.5, 0.9) size 15
 
@@ -58,7 +56,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                                     hover_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected player.attacks[AttackType.HEAVY] == attack
-                                    action Function(player.set_attack, AttackType.HEAVY, attack)
+                                    action SetDict(player.attacks, AttackType.HEAVY, attack)
 
                                     text attack.name align (0.5, 0.9) size 15
 
@@ -78,14 +76,17 @@ screen fight_menu(attacks=None, player=player, max_points=18):
 
                             text guard.name.replace('_', ' ') align (0.5, 0.9) size 15
 
+            # Attributes
             vbox:
                 spacing 10
+
+                $ available_points = max_points - sum(player.attributes.values())
 
                 hbox:
                     spacing 10
                     text "Attributes"
                     text "+" + str(available_points) color "#44D7B6"
-                    textbutton "Confirm" action SetScreenVariable("locked_attributes", player.attributes)
+                    textbutton "Confirm" action SetScreenVariable("locked_attributes", player.attributes.copy())
 
                 hbox:
                     spacing 10
@@ -99,6 +100,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                     vbox:
                         spacing 10
 
+                        
                         for attr in Attributes:
                             hbox:
                                 spacing 10
@@ -126,7 +128,6 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                                     text "Active Unlocked" color "#44D7B6" size 16 yalign 0.5
                                 elif player.attributes[attr] >= 5:
                                     text "Passive Unlocked" color "#44D7B6" size 16 yalign 0.5
-
 
                 hbox:
                     spacing 100

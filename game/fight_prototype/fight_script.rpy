@@ -73,9 +73,6 @@ init python:
             self._health = value
             self._health = max(self._health, 0)
 
-        def set_attack(self, attack_type, attack):
-            self.attacks[attack_type] = attack
-
         def change_health(self, value):
             current_health = self._health
             self._health += value
