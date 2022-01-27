@@ -53,8 +53,6 @@ label v10_room_mon_night:
             scene v10smnr1
             with dissolve
 
-        $ simplr_app.unlock()
-
         u "(Hmm, I can see why so many people are talking about it.)"
         u "(It would be kinda weird though if I saw someone I knew.)"
         u "(Do you try to match with friends you see on there, or is that weird?)"
@@ -109,8 +107,6 @@ label v10_room_mon_night:
 
             scene v10smnr3
             with dissolve
-
-        $ simplr_app.unlock()
 
         u "(Hmm, I can see why so many people are talking about it.)"
         u "(It would be kinda weird though if I saw someone I knew.)"

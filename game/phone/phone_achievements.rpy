@@ -1,52 +1,55 @@
-screen achievements():
+screen achievements_home():
     tag phone_tag
-    zorder 200
+
+    default image_path = "images/phone/achievements/app-assets/"
     
     use base_phone:
-        add "phone_white_background" at truecenter
+        frame:
+            background image_path + "achievement-background.webp"
 
-        text "Achievements":
-            xalign 0.5
-            ypos 200
-            style "achievements_header"
+            viewport:
+                ysize 710
+                ypos 134
+                mousewheel True
+                draggable True
 
-        viewport:
-            pos (780, 280)
-            xysize (358, 600)
-            mousewheel True
-            draggable True
+                vbox:
+                    xalign 0.5
+                    spacing -40
 
-            vbox:
-                spacing 10
-                
-                for ach in achievements:
-                    frame:
-                        xsize 358
-                        padding (15, 5)
+                    for ach in achievements:
+                        frame:
+                            xsize 415
+                            ypadding 35
+                            xalign 0.5
 
-                        if achievement.has(ach.achievement):
-                            background "#d4af37"
+                            if achievement.has(ach.achievement):
+                                background "achievement_unlocked"
 
-                            vbox:
-                                text ach.display_name style "achievements_display_name"
-                                text ach.text style "achievements_text"
-                        else:
-                            background "#dcdcdc"
+                                vbox:
+                                    xsize 320
+                                    pos (50, -2)
 
-                            text ach.display_name style "achievements_display_name"
+                                    text ach.display_name.upper() style "achievement_name"
+                                    text ach.text style "achievement_text"
+                                
+                            else:
+                                background "achievement_locked"
+
+                                text ach.display_name.upper() style "achievement_locked_name" xsize 320 pos (50, -2)
 
 
-style achievements_header is text:
-    color "#000000"
-    font "fonts/Freshman.ttf"
-    size 45
+style achievement_name is text:
+    color "#fff"
+    font "fonts/Montserrat-ExtraBold.ttf"
+    size 18
 
-style achievements_display_name is text:
-    color "#ffffff"
-    font "fonts/Freshman.ttf"
-    size 30
+style achievement_text is text:
+    color "#fff"
+    font "fonts/Montserrat-SemiBold.ttf"
+    size 15
 
-style achievements_text is text:
-    color "#ffffff"
-    font "fonts/opensans.ttf"
-    size 20
+style achievement_locked_name is text:
+    color "#777"
+    font "fonts/Montserrat-ExtraBold.ttf"
+    size 18

@@ -98,7 +98,7 @@ init python:
             except AttributeError: self._messenger = None
 
             if self._messenger is None:
-                self._messenger = Contact(self.name, self.profile_picture)
+                self._messenger = Contact(self.name)
                 messenger.contacts.append(self.messenger)
             return self._messenger
 
@@ -113,7 +113,7 @@ init python:
 
             if self._simplr is None:
                 self._simplr = SimplrContact(self.name)
-                simplr_pendingContacts.append(self._simplr)
+                simplr_app.pending_contacts.append(self._simplr)
             return self._simplr
 
         @simplr.setter
