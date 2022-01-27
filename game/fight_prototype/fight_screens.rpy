@@ -3,6 +3,7 @@ screen fight_menu(attacks=None, player=player):
     style_prefix "fight_menu_style"
 
     default temp_attribute_1 = 5
+    default temp_available_attributes = 8
 
     frame:
         background Transform("gui/fight_prototype/fight_background.png", size=(700, 900))
@@ -70,7 +71,7 @@ screen fight_menu(attacks=None, player=player):
                     for guard in Guard:
                         button:
                             xysize (58, 58)
-                            idle_background "gui/fight_prototype/fight_circle_hover.png"
+                            idle_background "gui/fight_prototype/fight_slot_hover.png"
                             action NullAction()
 
                             text guard.name.replace('_', ' ') align (0.5, 0.9) size 15
@@ -83,15 +84,19 @@ screen fight_menu(attacks=None, player=player):
                     spacing 5
 
                     hbox:
-                        spacing 20
+                        spacing 10
                         
                         for i in range(10):
                             imagebutton:
                                 idle "gui/fight_prototype/fight_circle_idle.png"
                                 hover "gui/fight_prototype/fight_circle_hover.png"
+                                insensitive "gui/fight_prototype/fight_circle_insensitive.png"
                                 selected_idle "gui/fight_prototype/fight_circle_hover.png"
+                                sensitive i <= temp_available_attributes
                                 selected i <= temp_attribute_1
                                 action SetScreenVariable("temp_attribute_1", i)
+
+# TODO: Improve slider experiance on attributes
 
 style fight_menu_style_text is text:
     color "#000"
