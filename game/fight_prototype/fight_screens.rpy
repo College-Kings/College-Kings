@@ -40,7 +40,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                                     hover_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected player.attacks[AttackType.LIGHT] == attack
-                                    action SetDict(player.set_attack, AttackType.HEAVY, attack)
+                                    action SetDict(player.attacks, AttackType.HEAVY, attack)
 
                                     text attack.name align (0.5, 0.9) size 15
 
@@ -58,7 +58,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                                     hover_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected player.attacks[AttackType.HEAVY] == attack
-                                    action SetDict(player.set_attack, AttackType.HEAVY, attack)
+                                    action SetDict(player.attacks, AttackType.HEAVY, attack)
 
                                     text attack.name align (0.5, 0.9) size 15
 
