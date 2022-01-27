@@ -7,7 +7,7 @@ label v16s3:
     play sound "sounds/dooropen.mp3"
 
     scene v16s3_1 # TPP. Show Riley walking into her dorm while opening the door, MC following in right behind her, both neutral face, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -34,7 +34,7 @@ label v16s3:
     ri "I'll be right back."
 
     scene v16s3_3 # TPP. Show MC sitting on Riley's bed, neutral face, mouth closed.
-    with dissolve 
+    with dissolve
     
     pause 0.75
 
@@ -82,7 +82,7 @@ label v16s3:
 
     else:
         scene v16s3_5a
-        with dissolve 
+        with dissolve
 
         u "Fuck, that's cold!"
 
@@ -134,7 +134,7 @@ label v16s3:
         ri "Yeah, yeah. Poor you... *Giggles*"
 
     scene v16s3_6 # TPP. MC throwing the icepack off somewhere, MC slight smile, mouth closed, Riley slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -439,25 +439,25 @@ label v16s3:
             u "Yeah, you too. Night, Riley."
 
     scene v16s3_8 # TPP. Show MC and Riley sitting on the bed and hugging.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v16s3_9 # TPP. Show MC walking towards the dorm door to leave, slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     play sound "sounds/dooropen.mp3"
 
     scene v16s3_10 # TPP. Show MC opening the door and leaving, slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     play sound "sounds/dooropen.mp3"
 
     scene v16s3_11 # TPP. Shot of just the door closed.
-    with dissolve 
+    with dissolve
 
     jump v16s4

@@ -5,14 +5,11 @@
 # Render Count: 11 Unique Renders 49
 
 label v16s8:
-
     scene v16s8_1 # TPP. MC walks outside. He sees Chloe sitting on a bench, crying. There is an empty seat next to her, but A few people, Random Characters, (2 Males, 1 Female) are standing around her the female is standing closest to Chloe, making sure she's okay, all of them with concerned/worried expressions on their faces.
     with dissolve
 
     menu:
-
         "Play along":
-
             scene v16s8_2 # FPP. Show Chloe in the same position and people around her from v16s8_1, Mc has gotten closer to them
             with dissolve
 
@@ -22,7 +19,6 @@ label v16s8:
             with dissolve
 
             if chloe.relationship >= Relationship.GIRLFRIEND
-
                 scene v16s8_4 # FPP. Show just Chloe looking at MC, tears in her eyes, sad expression, mouth is closed, looking at MC
                 with dissolve
 
@@ -31,7 +27,7 @@ label v16s8:
                 scene v16s8_3a # TPP. He pulls Chloe in for a hug as she sobs, Chloe is still crying, mouth is closed, MC no expression, mouth is closed, Other Random Characters still present looking at them
                 with dissolve
 
-                pause 0.50
+                pause 0.75
 
                 scene v16s8_4a # FPP. Show Chloe slight smile, tears still in her eyes, mouth is open
                 with dissolve
@@ -39,7 +35,6 @@ label v16s8:
                 cl "I'm so happy to see you..."
 
             else:
-
                 scene v16s8_4
                 with dissolve
 
@@ -68,13 +63,12 @@ label v16s8:
             scene v16s8_3b # TPP. The 2 Male Random Characters lean into listen to them better, MC is looking at the Male Characters strangely, The Female Random character holds Chloe's hand in solidarity, Chloe looks at the Random Female Character
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v16s8_3c # TPP. Chloe looks back towards MC, tears still in her eyes, mouth is still closed, Mc looks at Chloe, no expression, mouth is closed, The Random Characters all look at each other with concerned/worried expressions
             with dissolve
 
         "Just listen for now":
-
             scene v16s8_4d # FPP. Chloe has a sad expression, tears still in her eyes, mouth is open, looking at MC
             with dissolve
 
@@ -92,8 +86,7 @@ label v16s8:
 
     cl "It's not my fault I was born with such huge boobs. They're not even fake! They're completely natural!"
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v16s8_4c
         with dissolve
 
@@ -102,7 +95,7 @@ label v16s8:
         scene v16s8_4f # FPP. Chloe raises an eyebrow at MC, and a "suspicious expression," mouth is still closed
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v16s8_4g # FPP. Chloe gives MC a "don't you dare look," mouth is still closed
         with dissolve
@@ -152,7 +145,7 @@ label v16s8:
     scene v16s8_3h # TPP. Chloe stands up from the bench, Chloe and Lindsey have angry expressions looking at each other, mouths are closed, MC also stands up from the bench, MC and the others have stepped back from Chloe and Lindsey slightly shocked expressions looking at Chloe and Lindsey
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v16s8_5 # FPP. Show just Chloe and Lindsey, full body images, looking at each other with angry expressions, Chloe's mouth is open, Lindsey's mouth is closed
     with dissolve
@@ -164,7 +157,7 @@ label v16s8:
     scene v16s8_5a # FPP Lindsey steps closer to Chloe, Lindsey's anger intensifies, both of their mouths are closed Chloe still has an angry expression
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v16s8_5b # FPP same v16s8_5a Chloe's mouth is closed, Lindsey's mouth is open
     with dissolve
@@ -194,13 +187,11 @@ label v16s8:
     with dissolve
 
     menu:
-
         "Stop the argument":
-
             scene v16s8_6 # TPP. Show MC from the back, MC steps between Chloe and Lindsey render can look like v16s8_5 just with MC stepping between them
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v16s8_6
             with dissolve
@@ -240,12 +231,12 @@ label v16s8:
             scene v16s8_6b # TPP. same as v16s8_6a Mr. Lee is now standing behind Chloe and MC with his arms crossed looking at Lindsey, no expression, mouth is closed, Lindsey has stopped trying to hit Chloe and has lowered both her arms to here sides she has a shocked expression as she looks at Mr. Lee., MC's hands are now at his side, Chloe and MC are looking at Lindsey with no expressions, mouths are closed.
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v16s8_6c # TPP. same as v16s8_6b MC and Chloe turn around and see Mr. Lee they both have a slightly shocked expression looking at Mr. Lee, Lindsey is still in the same position as v16s8_6b but she has no expression, Mr. Lee is looking at Chloe, no expression, mouth is closed, arms are still crossed
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v16s8_6d # TPP. same as v16s8_6c Mr. Lee has a slight smile mouth is open looking at MC, Chloe, MC, and Lindsey all have no expressions, mouths closed all looking at Mr. Lee
             with dissolve
@@ -258,7 +249,6 @@ label v16s8:
             u "(Oh, shit. Where did he come from?)"
 
         "Let it continue":
-
             scene v16s8_5e # FPP. same as v16s8_5d Chloe now has her finger in Lindsey's face and Lindsey has lowered finger
             with dissolve
 
@@ -307,17 +297,17 @@ label v16s8:
             scene v16s8_5g # FPP. Lindsey Archs back her arm like she's going to hit Chloe looking at Chloe, Lindsey has a fully angry expression, Chloe has a shocked expression looking at Lindsey
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v16s8_5h # FPP. same as v16s8_5g Mr. Lee is now standing behind Chloe with his arms crossed looking at Lindsey, no expression, mouth is closed, Lindsey has stopped trying to hit Chloe and has lowered both her arms to here sides she has a shocked expression as she looks at Mr. Lee., Chloe has a concenred expression looking at Lindsey
             with dissolve
         
-            pause 0.50
+            pause 0.75
 
             scene v16s8_5i # FPP. Chloe turns around and sees Mr. Lee, Chloe has a slightly shocked expression looking at Mr. Lee, Mr. Lee is looking at Chloe, no expression, mouth is closed, arms are still crossed, Lindsey still has the same expression and posture from render v16s8_5h
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v16s8_5j # FPP. Chloe and Lindsey both have no expressions looking at Mr. Lee mouths are closed, Mr. Lee is looking at both of them, no expression, mouth is open
             with dissolve
@@ -327,7 +317,7 @@ label v16s8:
             scene v16s8_5k # FPP. Chloe and Lindsey look at each other disgustingly, Mr. Lee rolls his eyes
             with dissolve
 
-            pause 0.50
+            pause 0.75
 
             scene v16s8_5k
             with dissolve
@@ -362,7 +352,7 @@ label v16s8:
     scene v16s8_10 # TPP. Mr Lee walks away with Chloe and Lindsey following no expression his mouth is closed. Chloe and Lindsey look at each other with concerned expressions their mouths are closed, MC watches them go, no expression mouth is closed.
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v16s8_11 # TPP. Show just MC sitting on the bench no expression mouth is closed as the random characters from renders v16s8_3 walk away from MC talking with each other, all slightly shocked expressions
     with dissolve
