@@ -2,7 +2,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
     modal True
     style_prefix "fight_menu_style"
 
-    default locked_attributes = player.attributes.copy()
+    default locked_attribute_values = list(attr.value for attr in player.attributes)
 
     frame:
         background Transform("gui/fight_prototype/fight_background.png", size=(700, 900))
@@ -80,13 +80,13 @@ screen fight_menu(attacks=None, player=player, max_points=18):
             vbox:
                 spacing 10
 
-                $ available_points = max_points - sum(player.attributes.values())
+                $ available_points = max_points - sum(attr.value for attr in player.attributes)
 
                 hbox:
                     spacing 10
                     text "Attributes"
                     text "+" + str(available_points) color "#44D7B6"
-                    textbutton "Confirm" action SetScreenVariable("locked_attributes", player.attributes.copy())
+                    textbutton "Confirm" action [SetScreenVariable("locked_attribute_values", list(attr.value for attr in player.attributes)), Function(player.set_specials)]
 
                 hbox:
                     spacing 10
@@ -94,23 +94,25 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                     vbox:
                         spacing 10
 
-                        for attr in Attributes:
-                            text attr.name.replace('_', ' ') xalign 1.0 size 15 # Name
+                        for attr in player.attributes:
+                            text attr.name xalign 1.0 size 15
 
                     vbox:
                         spacing 10
 
-                        
-                        for attr in Attributes:
+                        for i, attr in enumerate(player.attributes):
                             hbox:
                                 spacing 10
 
-                                for i in range(1, 11):
+                                for x in range(1, 11):
                                     imagebutton:
-                                        if i <= locked_attributes[attr]:
+                                        if (x == 5 or x == 10) and x <= locked_attribute_values[i]:
+                                            idle "gui/fight_prototype/fight_circle_gold_hover.png"
+                                            insensitive "gui/fight_prototype/fight_circle_gold_hover.png"
+                                        elif x <= locked_attribute_values[i]:
                                             idle "gui/fight_prototype/fight_circle_dark_idle.png"
                                             insensitive "gui/fight_prototype/fight_circle_dark_idle.png"
-                                        elif i == 5 or i == 10:
+                                        elif x == 5 or x == 10:
                                             idle "gui/fight_prototype/fight_circle_gold_idle.png"
                                             hover "gui/fight_prototype/fight_circle_gold_hover.png"
                                             selected_idle "gui/fight_prototype/fight_circle_gold_hover.png"
@@ -119,14 +121,14 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                                             hover "gui/fight_prototype/fight_circle_hover.png"
                                             selected_idle "gui/fight_prototype/fight_circle_hover.png"
                                         insensitive "gui/fight_prototype/fight_circle_insensitive.png"
-                                        sensitive ( available_points - i + player.attributes[attr] ) >= 0
-                                        selected i <= player.attributes[attr]
-                                        if i > locked_attributes[attr]:
-                                            action ToggleDict(player.attributes, attr, i, locked_attributes[attr])
+                                        sensitive ( available_points - x + attr.value ) >= 0
+                                        selected x <= attr.value
+                                        if x > locked_attribute_values[i]:
+                                            action ToggleField(attr, "value", x, locked_attribute_values[i])
 
-                                if player.attributes[attr] == 10:
+                                if attr.value == 10:
                                     text "Active Unlocked" color "#44D7B6" size 16 yalign 0.5
-                                elif player.attributes[attr] >= 5:
+                                elif attr.value >= 5:
                                     text "Passive Unlocked" color "#44D7B6" size 16 yalign 0.5
 
                 hbox:
@@ -146,7 +148,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                                     hover_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected player.attacks[AttackType.LIGHT] == attack 
-                                    action Function(player.set_attack, AttackType.LIGHT, attack) #TODO: no effect, unlocked based on attributes
+                                    action SetDict(player.attacks, AttackType.HEAVY, attack) #TODO: no effect, unlocked based on attributes
 
                                     text attack.name align (0.5, 0.9) size 15
 
@@ -164,7 +166,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                                     hover_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected player.attacks[AttackType.HEAVY] == attack
-                                    action Function(player.set_attack, AttackType.HEAVY, attack) #TODO: no effect, unlocked based on attributes
+                                    action SetDict(player.attacks, AttackType.HEAVY, attack) #TODO: no effect, unlocked based on attributes
 
                                     text attack.name align (0.5, 0.9) size 15
 
