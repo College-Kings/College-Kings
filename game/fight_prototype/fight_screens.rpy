@@ -5,7 +5,14 @@ screen fight_menu(attacks=None, player=player):
     default temp_attribute_1 = 0
     default temp_attribute_2 = 0
     default temp_max_available_attributes = 15
-    $ temp_available_attributes = temp_max_available_attributes - sum((temp_attribute_1, temp_attribute_2))
+    
+    python:
+        temp_available_attributes = temp_max_available_attributes - sum((temp_attribute_1, temp_attribute_2))
+
+        attributes = [
+            ("Health", "temp_attribute_1"),
+            ("Stamina", "temp_attribute_2")
+        ]
 
     frame:
         background Transform("gui/fight_prototype/fight_background.png", size=(700, 900))
@@ -87,39 +94,36 @@ screen fight_menu(attacks=None, player=player):
                     text "Attributes"
                     text "+" + str(temp_available_attributes) color "#44D7B6"
 
-
-                grid 2 2:
+                hbox:
                     spacing 10
 
-                    text "Health" xalign 1.0 size 15
-
-                    hbox:
+                    vbox:
                         spacing 10
 
-                        for i in range(1, 11):
-                            imagebutton:
-                                idle "gui/fight_prototype/fight_circle_idle.png"
-                                hover "gui/fight_prototype/fight_circle_hover.png"
-                                insensitive "gui/fight_prototype/fight_circle_insensitive.png"
-                                selected_idle "gui/fight_prototype/fight_circle_hover.png"
-                                sensitive ( temp_available_attributes - i + temp_attribute_1 ) >= 0
-                                selected i <= temp_attribute_1
-                                action SetScreenVariable("temp_attribute_1", i)
+                        for attr in attributes:
+                            text attr[0] xalign 1.0 size 15 # Name
 
-                    text "Steve Coolness" xalign 1.0 size 15
-
-                    hbox:
+                    vbox:
                         spacing 10
 
-                        for i in range(1, 11):
-                            imagebutton:
-                                idle "gui/fight_prototype/fight_circle_idle.png"
-                                hover "gui/fight_prototype/fight_circle_hover.png"
-                                insensitive "gui/fight_prototype/fight_circle_insensitive.png"
-                                selected_idle "gui/fight_prototype/fight_circle_hover.png"
-                                sensitive ( temp_available_attributes - i + temp_attribute_2 ) >= 0
-                                selected i <= temp_attribute_2
-                                action SetScreenVariable("temp_attribute_2", i)
+                        for attr in attributes:
+                            $ attribute_var = renpy.current_screen().scope[attr[1]]
+
+                            hbox:
+                                spacing 10
+
+                                for i in range(1, 11):
+                                    imagebutton:
+                                        idle "gui/fight_prototype/fight_circle_idle.png"
+                                        hover "gui/fight_prototype/fight_circle_hover.png"
+                                        insensitive "gui/fight_prototype/fight_circle_insensitive.png"
+                                        selected_idle "gui/fight_prototype/fight_circle_hover.png"
+                                        sensitive ( temp_available_attributes - i + attribute_var ) >= 0
+                                        selected i <= attribute_var
+                                        action ToggleScreenVariable(attr[1], i, 0)
+
+                                if attribute_var == 10:
+                                    text "MAX" color "#0f0" size 16 yalign 0.5
 
 # TODO: Improve slider experiance on attributes
 
