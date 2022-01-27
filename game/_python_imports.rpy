@@ -3,6 +3,10 @@ python early:
     from enum import Enum
 
     class SmartEnum(Enum):
+        """
+        Extention of the enum class that adds comparison opperations
+        """
+
         def __lt__(self, other):
             if not isinstance(other, self.__class__):
                 raise TypeError("{} must be of type {}.".format(other, self.__class__.__name__))
