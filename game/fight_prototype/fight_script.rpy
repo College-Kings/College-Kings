@@ -49,10 +49,10 @@ init python:
             }
 
             self.attributes = {
-                Attributes.HEALTH: 0,
-                Attributes.STAMINA: 0,
-                Attributes.LIGHT_ATTACK_DAMAGE: 0,
-                Attributes.HEAVY_ATTACK_DAMAGE: 0
+                Attributes.HEALTH: 1,
+                Attributes.STAMINA: 1,
+                Attributes.LIGHT_ATTACK_DAMAGE: 1,
+                Attributes.HEAVY_ATTACK_DAMAGE: 1
             }
 
         @property
