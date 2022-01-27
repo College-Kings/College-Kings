@@ -1,23 +1,10 @@
-screen fight_menu(attacks=None, player=player):
+screen fight_menu(attacks=None, player=player, max_points=18):
     modal True
     style_prefix "fight_menu_style"
 
-    default temp_attribute_health = 0
-    default temp_attribute_stamina = 0
-    default temp_attribute_light_attack_damage = 0
-    default temp_attribute_heavy_attack_damage = 0
+    default locked_attributes = player.attributes.copy()
+    $ available_points = max_points - sum(player.attributes.values())
 
-    default temp_max_available_attributes = 18
-    
-    python:
-        temp_available_attributes = temp_max_available_attributes - sum((temp_attribute_health, temp_attribute_stamina, temp_attribute_light_attack_damage, temp_attribute_heavy_attack_damage))
-
-        attributes = [
-            ("Health", "temp_attribute_health"),
-            ("Stamina", "temp_attribute_stamina"),
-            ("Light Attack Damage", "temp_attribute_light_attack_damage"),
-            ("Heavy Attack Damage", "temp_attribute_heavy_attack_damage")
-        ]
 
     frame:
         background Transform("gui/fight_prototype/fight_background.png", size=(700, 900))
@@ -97,7 +84,7 @@ screen fight_menu(attacks=None, player=player):
                 hbox:
                     spacing 10
                     text "Attributes"
-                    text "+" + str(temp_available_attributes) color "#44D7B6"
+                    text "+" + str(available_points) color "#44D7B6"
 
                 hbox:
                     spacing 10
@@ -105,21 +92,22 @@ screen fight_menu(attacks=None, player=player):
                     vbox:
                         spacing 10
 
-                        for attr in attributes:
-                            text attr[0] xalign 1.0 size 15 # Name
+                        for attr in Attributes:
+                            text attr.name xalign 1.0 size 15 # Name
 
                     vbox:
                         spacing 10
 
-                        for attr in attributes:
-                            $ attribute_var = renpy.current_screen().scope[attr[1]]
-
+                        for attr in Attributes:
                             hbox:
                                 spacing 10
 
                                 for i in range(1, 11):
                                     imagebutton:
-                                        if i == 5 or i == 10:
+                                        if i <= locked_attributes[attr]:
+                                            idle "gui/fight_prototype/fight_circle_dark_idle.png"
+                                            insensitive "gui/fight_prototype/fight_circle_dark_idle.png"
+                                        elif i == 5 or i == 10:
                                             idle "gui/fight_prototype/fight_circle_gold_idle.png"
                                             hover "gui/fight_prototype/fight_circle_gold_hover.png"
                                             selected_idle "gui/fight_prototype/fight_circle_gold_hover.png"
@@ -128,13 +116,14 @@ screen fight_menu(attacks=None, player=player):
                                             hover "gui/fight_prototype/fight_circle_hover.png"
                                             selected_idle "gui/fight_prototype/fight_circle_hover.png"
                                         insensitive "gui/fight_prototype/fight_circle_insensitive.png"
-                                        sensitive ( temp_available_attributes - i + attribute_var ) >= 0
-                                        selected i <= attribute_var
-                                        action ToggleScreenVariable(attr[1], i, 0)
+                                        sensitive ( available_points - i + player.attributes[attr] ) >= 0
+                                        selected i <= player.attributes[attr]
+                                        if i > locked_attributes[attr]:
+                                            action ToggleDict(player.attributes, attr, i, locked_attributes[attr])
 
-                                if attribute_var == 10:
+                                if player.attributes[attr] == 10:
                                     text "Active Unlocked" color "#0f0" size 16 yalign 0.5
-                                elif attribute_var >= 5:
+                                elif player.attributes[attr] >= 5:
                                     text "Passive Unlocked" color "#0f0" size 16 yalign 0.5
 
 # TODO: Improve slider experiance on attributes

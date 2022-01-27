@@ -10,6 +10,13 @@ init python:
         FULL_GUARD = 2
 
 
+    class Attributes(Enum):
+        HEALTH = 0
+        STAMINA = 1
+        LIGHT_ATTACK_DAMAGE = 2
+        HEAVY_ATTACK_DAMAGE = 3
+
+
     class Attack:
         def __init__(self, move_type, name, damage, stamina_cost, counter_guard, images):
             self.move_type = move_type
@@ -39,6 +46,13 @@ init python:
             self.attacks = {
                 AttackType.LIGHT: None,
                 AttackType.HEAVY: None
+            }
+
+            self.attributes = {
+                Attributes.HEALTH: 2,
+                Attributes.STAMINA: 2,
+                Attributes.LIGHT_ATTACK_DAMAGE: 2,
+                Attributes.HEAVY_ATTACK_DAMAGE: 2
             }
 
         @property
