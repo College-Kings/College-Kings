@@ -280,7 +280,38 @@ label fight_test:
 
     call screen fight_style_selection
     
-    call screen fight_menu
+    call screen fight_menu([
+        Attack(AttackType.LIGHT, "Jab", 5, 2, Guard.SEMI_GUARD, {
+            "start_image": "images/v2/jab2start.webp",
+            "hit_image": "images/v2/jab2pic.webp",
+            "block_image": "images/v2/jab1pic.webp"
+        }),
+        Attack(AttackType.LIGHT, "Jab", 5, 2, Guard.SEMI_GUARD, {
+            "start_image": "images/v2/jab2start.webp",
+            "hit_image": "images/v2/jab2pic.webp",
+            "block_image": "images/v2/jab1pic.webp"
+        }),
+        Attack(AttackType.LIGHT, "Jab", 5, 2, Guard.SEMI_GUARD, {
+            "start_image": "images/v2/jab2start.webp",
+            "hit_image": "images/v2/jab2pic.webp",
+            "block_image": "images/v2/jab1pic.webp"
+        }),
+        Attack(AttackType.HEAVY, "Jab", 5, 2, Guard.SEMI_GUARD, {
+            "start_image": "images/v2/jab2start.webp",
+            "hit_image": "images/v2/jab2pic.webp",
+            "block_image": "images/v2/jab1pic.webp"
+        }),
+        Attack(AttackType.HEAVY, "Jab", 5, 2, Guard.SEMI_GUARD, {
+            "start_image": "images/v2/jab2start.webp",
+            "hit_image": "images/v2/jab2pic.webp",
+            "block_image": "images/v2/jab1pic.webp"
+        }),
+        Attack(AttackType.HEAVY, "Jab", 5, 2, Guard.SEMI_GUARD, {
+            "start_image": "images/v2/jab2start.webp",
+            "hit_image": "images/v2/jab2pic.webp",
+            "block_image": "images/v2/jab1pic.webp"
+        })
+    ])
 
     label fight_start:
 
