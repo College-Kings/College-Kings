@@ -2966,16 +2966,15 @@ label v15s35:
                         scene v15s35_14c
                         with dissolve
 
-<<<<<<< HEAD
                         au "We should definitely do it again sometime."
 
                         scene v15s35_12f
-=======
-                    if kct == "popular":
-                        $ v15game_night_kct_check = True
-                        call screen kct_popup
+                        with dissolve
+
+                        if kct == "popular":
+                            call screen kct_popup
+
                         scene v15s35_12b
->>>>>>> origin/development
                         with dissolve
 
                         li "Aw, yes, we will!"
@@ -3148,12 +3147,8 @@ label v15s35:
 
         stop music fadeout 3
 
-<<<<<<< HEAD
-        jump v15s36
-=======
     jump v15s36
 
-    "She's constantly worried about losing her free ride to a degree. Without the president's scholarship, she'd have to sell all that plastic back to the surgeons. *Laughs*"
+    # "She's constantly worried about losing her free ride to a degree. Without the president's scholarship, she'd have to sell all that plastic back to the surgeons. *Laughs*"
 
-    "What I don't like about Chloe? Everything about her is annoying."
->>>>>>> origin/development
+    # "What I don't like about Chloe? Everything about her is annoying."
