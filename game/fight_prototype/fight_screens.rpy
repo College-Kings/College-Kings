@@ -12,10 +12,16 @@ screen fight_menu(attacks=None, player=player, max_points=18):
 
         vbox:
             spacing 30
-
             vbox:
                 text name size 50 
-                text "Brawler" size 25 # TODO: Fighting style
+                hbox: 
+                    spacing 100
+                    text "Brawler" size 25 # TODO: Fighting style
+
+                    hbox:
+                        spacing 5
+                        text "Rivalry:" size 25
+                        text "First Fight" size 25 # TODO: Rivalry style
 
             vbox:
                 spacing 10
@@ -86,6 +92,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                     spacing 10
                     text "Attributes"
                     text "+" + str(available_points) color "#44D7B6"
+                    null width 50
                     textbutton "Confirm" action [SetScreenVariable("locked_attribute_values", list(attr.value for attr in player.attributes)), Function(player.set_specials)]
 
                 hbox:
@@ -131,6 +138,8 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                                 elif attr.value >= 5:
                                     text "Passive Unlocked" color "#44D7B6" size 16 yalign 0.5
 
+                null height 30
+
                 hbox:
                     spacing 100
 
@@ -175,6 +184,14 @@ screen fight_menu(attacks=None, player=player, max_points=18):
 style fight_menu_style_text is text:
     color "#000"
     font "fonts/Montserrat-Bold.ttf"
+
+style fight_menu_style_button_text is button_text:
+    color "#000"
+    font "fonts/Montserrat-Bold.ttf"
+    size 25
+    outlines [(0, "#000", 0, 0)]
+    hover_outlines [(0, "#44D7B6", 0, 0)]
+    hover_color "#44D7B6"
 
 
 screen fight_attack(player=player, opponent=opponent):
