@@ -190,7 +190,7 @@ label v16s7:
 
                 pha "What do you want me to say? That her boobs are obviously fake? Everyone knows that..."
 
-                scene v16s7_5a
+                scene v16s7_5
                 with dissolve
 
                 u "(Oh, shit...)"
@@ -205,7 +205,7 @@ label v16s7:
 
                 pha "*Tipsy* What doesn't annoy me? Everything about her is annoying."
 
-                scene v16s7_6
+                scene v16s7_5
                 with dissolve
 
                 u "(Oh, my fucking god, it's happening.)"
