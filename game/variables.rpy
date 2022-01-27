@@ -384,6 +384,7 @@ default v15_stuck_up_for_nora = False
 default v15_threaten_ms_rose = False
 default v15_took_notes = False
 default v15s10_buyer_max_amount = 0
+default v15_kitchensex = False
 default v15s18_LaurensBed = False
 default v15s18_mention_list_aubrey = False
 default v15s18a_aub_kiwii_smile = False
