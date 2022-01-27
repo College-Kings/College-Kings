@@ -291,8 +291,6 @@ label fight_test:
         player.moves["r"] = player_full_guard
 
         mc.fighter = player
-
-    call screen fight_style_selection
     
     call screen fight_menu([
         Attack(AttackType.LIGHT, "Jab", 5, 2, Guard.SEMI_GUARD, {
