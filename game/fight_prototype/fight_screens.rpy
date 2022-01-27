@@ -3,8 +3,6 @@ screen fight_menu(attacks=None, player=player, max_points=18):
     style_prefix "fight_menu_style"
 
     default locked_attributes = player.attributes.copy()
-    $ available_points = max_points - sum(player.attributes.values())
-
 
     frame:
         background Transform("gui/fight_prototype/fight_background.png", size=(700, 900))
@@ -78,8 +76,11 @@ screen fight_menu(attacks=None, player=player, max_points=18):
 
                             text guard.name.replace('_', ' ') align (0.5, 0.9) size 15
 
+            # Attributes
             vbox:
                 spacing 10
+
+                $ available_points = max_points - sum(player.attributes.values())
 
                 hbox:
                     spacing 10
@@ -98,6 +99,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                     vbox:
                         spacing 10
 
+                        
                         for attr in Attributes:
                             hbox:
                                 spacing 10
