@@ -5,6 +5,7 @@ screen fight_menu(attacks=None, player=player):
     default temp_attribute_1 = 0
     default temp_attribute_2 = 0
     default temp_max_available_attributes = 15
+    $ temp_available_attributes = temp_max_available_attributes - sum((temp_attribute_1, temp_attribute_2))
 
     frame:
         background Transform("gui/fight_prototype/fight_background.png", size=(700, 900))
@@ -84,37 +85,39 @@ screen fight_menu(attacks=None, player=player):
                 hbox:
                     spacing 10
                     text "Attributes"
-                    text "+5" color "#44D7B6"
+                    text "+" + str(temp_available_attributes) color "#44D7B6"
 
 
-                vbox:
+                grid 2 2:
                     spacing 10
 
-                    hbox:
-                        spacing 20
-
-                        text "Health" xalign 1.0 size 15
-                        
-                        for i in range(1, 11):
-                            imagebutton:
-                                idle "gui/fight_prototype/fight_circle_idle.png"
-                                hover "gui/fight_prototype/fight_circle_hover.png"
-                                insensitive "gui/fight_prototype/fight_circle_insensitive.png"
-                                selected_idle "gui/fight_prototype/fight_circle_hover.png"
-                                sensitive ( temp_max_available_attributes - (temp_attribute_1 + temp_attribute_2) - (i - temp_attribute_1) ) >= 0
-                                selected i <= temp_attribute_1
-                                action SetScreenVariable("temp_attribute_1", i)
+                    text "Health" xalign 1.0 size 15
 
                     hbox:
                         spacing 10
-                        
+
                         for i in range(1, 11):
                             imagebutton:
                                 idle "gui/fight_prototype/fight_circle_idle.png"
                                 hover "gui/fight_prototype/fight_circle_hover.png"
                                 insensitive "gui/fight_prototype/fight_circle_insensitive.png"
                                 selected_idle "gui/fight_prototype/fight_circle_hover.png"
-                                sensitive ( temp_max_available_attributes - (temp_attribute_1 + temp_attribute_2) - (i - temp_attribute_2) ) >= 0
+                                sensitive ( temp_available_attributes - i + temp_attribute_1 ) >= 0
+                                selected i <= temp_attribute_1
+                                action SetScreenVariable("temp_attribute_1", i)
+
+                    text "Steve Coolness" xalign 1.0 size 15
+
+                    hbox:
+                        spacing 10
+
+                        for i in range(1, 11):
+                            imagebutton:
+                                idle "gui/fight_prototype/fight_circle_idle.png"
+                                hover "gui/fight_prototype/fight_circle_hover.png"
+                                insensitive "gui/fight_prototype/fight_circle_insensitive.png"
+                                selected_idle "gui/fight_prototype/fight_circle_hover.png"
+                                sensitive ( temp_available_attributes - i + temp_attribute_2 ) >= 0
                                 selected i <= temp_attribute_2
                                 action SetScreenVariable("temp_attribute_2", i)
 
