@@ -106,7 +106,7 @@ label v16s5:
 
                 ro "*Laughs* It'll be fun. I promise."
 
-                scene v16s6_2b
+                scene v16s5_2b
                 with dissolve
 
                 u "It sounds awfully public... I just want to make sure you don't get in any trouble."
@@ -263,7 +263,7 @@ label v16s5:
 
                 u "Have fun finding someone your own age!"
 
-        scene v16s5_1c # TPP. MC and Ms. Rose walking away from each other, further away from each other, MC neutral face looking at the ground as he walks back to the wolves house.
+        scene v16s5_1d # TPP. MC and Ms. Rose walking away from each other, further away from each other, MC neutral face looking at the ground as he walks back to the wolves house.
         with dissolve 
 
         #[End of Checkpoint 1.2. Continues to Checkpoint 2]

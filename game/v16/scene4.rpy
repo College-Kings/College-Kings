@@ -61,7 +61,7 @@ label v16s4:
 
         pause .10 
 
-        scene v16s3_9 # TPP. In wolves room, Show MC in bed looking at his phone, tired, mouth closed.
+        scene v16s4_9 # TPP. In wolves room, Show MC in bed looking at his phone, tired, mouth closed.
         with dissolve
 
         $ naomi.messenger.newMessage("Hey, [name]! This is Naomi. The one and only... Lol.", force_send=True)
@@ -120,7 +120,7 @@ label v16s4:
 
             ro "[name], it's Lorraine. I'm outside... Can you come down, please? I want to talk."
 
-            scene v16s3_12 # TPP. Just Ms. Rose outside of the wolves house on her phone, slight smile, mouth closed.
+            scene v16s4_12 # TPP. Just Ms. Rose outside of the wolves house on her phone, slight smile, mouth closed.
             with dissolve            
 
             u "You're... outside?! Is everything okay?"
@@ -203,7 +203,7 @@ label v16s4:
 
         pause .10 
 
-        scene v16s3_22 # TPP. In apes room, Show MC in bed looking at his phone, tired, mouth closed.
+        scene v16s4_22 # TPP. In apes room, Show MC in bed looking at his phone, tired, mouth closed.
         with dissolve
 
         $ naomi.messenger.newMessage("Hey, [name]! This is Naomi. The one and only... Lol.", force_send=True)
