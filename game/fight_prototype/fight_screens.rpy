@@ -1,37 +1,27 @@
-screen fight_attack():
+screen fight_attack(player=player, opponent=opponent):
     tag fight
     modal True
 
     add opponent.guard_image
 
-    for k in player.moves.keys():
+    for k, move in player.moves.items():
         key k:
-            action Function(player.attack_turn, k)
+            action Call("player_attack_turn", move, player, opponent) 
 
-    # timer fight_reaction_time action Jump("opponent_attacks")
+    timer fight_reaction_time action Call("opponent_attack_turn", player, opponent)
 
 
-screen fight_defense(opponent_attack):
+screen fight_defense(opponent_attack, player=player, opponent=opponent):
     tag fight
     modal True
 
     add opponent_attack.images["start_image"]
 
-    for k in player.moves.keys():
+    for k, move in player.moves.items():
         key k:
-            action Function(player.defence_turn, k, opponent_attack)
+            action Call("player_defence_turn", move, player, opponent_attack, opponent)
 
-    # timer fight_reaction_time: 
-    #     if attack == opponent.attacks[AttackType.LIGHT]: #tom light and time ran out ## NEEDS FIX
-    #         if player.guard == Guard.LOW_GUARD: # player no guard
-    #             action Jump ("opponent_light_hit")
-    #         else: # player full or semi guard
-    #             action Jump ("opponent_light_block")
-    #     else: # tom heavy and time ran out
-    #         if player.guard == Guard.FULL_GUARD: # player full guard
-    #             action Jump ("opponent_heavy_block")
-    #         else: # player no or semi guard
-    #             action Jump ("opponent_heavy_hit")
+    timer fight_reaction_time action Call("player_defence_turn", None, player, opponent_attack, opponent)
 
 
 screen fight_popup(message):

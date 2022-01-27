@@ -39,6 +39,8 @@ init python:
 
             self._messenger = None
             self._simplr = None
+            self._relationship = Relationship.FRIEND
+            self._fighter = None
 
             self.stats = {
                 "Competitive": None,
@@ -47,7 +49,6 @@ init python:
             }
 
             self.points = 0
-            self._relationship = Relationship.FRIEND
 
             NonPlayableCharacter.characters[name] = self
 
@@ -118,6 +119,14 @@ init python:
         @simplr.setter
         def simplr(self, value):
             self._simplr = value
+
+        @property
+        def fighter(self):
+            return self._fighter
+
+        @fighter.setter
+        def fighter(self, value):
+            self._fighter = value
 
         @property
         def profile_picture(self):

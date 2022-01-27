@@ -99,20 +99,10 @@ init python:
                 opponent.guard = Guard.FULL_GUARD
                 self.fury = 0
 
-        def attack_turn(self, key, opponent=None):
-            if opponent is None: opponent = store.opponent
-            move = self.moves[key]
-
-            renpy.call_in_new_context("player_attack_turn", move, self, opponent)
-
-        def defence_turn(self, key, opponent_attack, opponent=None):
-            if opponent is None: opponent = store.opponent
-            move = self.moves[key]
-
-            renpy.call("player_defence_turn", move, self, opponent_attack, opponent)
-
 
 label player_attack_turn(player_move, player, opponent):
+    $ renpy.set_return_stack([])
+
     if isinstance(player_move.move_type, Guard):
         $ player.guard = player_move.move_type
 
@@ -170,6 +160,8 @@ label player_attack_turn(player_move, player, opponent):
 
 
 label player_defence_turn(player_move, player, opponent_attack, opponent):
+    $ renpy.set_return_stack([])
+
     $ opponent.stamina -= opponent_attack.stamina_cost
 
     # Set opponent passive guard
@@ -178,20 +170,21 @@ label player_defence_turn(player_move, player, opponent_attack, opponent):
     elif opponent_attack.move_type == AttackType.HEAVY:
         $ opponent.guard = Guard.LOW_GUARD
 
-    ## Player Attack Moves
-    if player_move.move_type == AttackType.LIGHT:
-        $ player.guard = Guard.SEMI_GUARD
+    if player_move is not None:
+        ## Player Attack Moves
+        if player_move.move_type == AttackType.LIGHT:
+            $ player.guard = Guard.SEMI_GUARD
 
-        # Player Counter Attack
-        if opponent_attack.move_type == AttackType.HEAVY:
-            call player_attack_turn(player_move, player, opponent)
-    
-    elif player_move.move_type == AttackType.HEAVY:
-        $ player.guard = Guard.LOW_GUARD
+            # Player Counter Attack
+            if opponent_attack.move_type == AttackType.HEAVY:
+                call player_attack_turn(player_move, player, opponent)
+        
+        elif player_move.move_type == AttackType.HEAVY:
+            $ player.guard = Guard.LOW_GUARD
 
-    ## Defence Moves
-    if isinstance(player_move.move_type, Guard):
-        $ player.guard = player_move.move_type
+        ## Defence Moves
+        if isinstance(player_move.move_type, Guard):
+            $ player.guard = player_move.move_type
 
     # Opponent's attack hits
     if player.guard < opponent_attack.counter_guard:
@@ -221,6 +214,8 @@ label player_defence_turn(player_move, player, opponent_attack, opponent):
 
 
 label opponent_attack_turn(player, opponent):
+    $ renpy.set_return_stack([])
+
     if player.guard == Guard.FULL_GUARD: # Heavily favour heavy attack 
         $ p = (0.1, 0.9)
     elif opponent.attacks[AttackType.LIGHT].stamina_cost < opponent.stamina < opponent.attacks[AttackType.HEAVY].stamina_cost: # Heavily favour light attack
@@ -276,6 +271,8 @@ label fight_test:
         player.moves["w"] = player_heavy_attack
         player.moves["e"] = player_semi_guard
         player.moves["r"] = player_full_guard
+
+        mc.fighter = player
 
     call screen fight_style_selection
     
