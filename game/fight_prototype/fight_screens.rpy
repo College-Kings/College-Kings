@@ -93,7 +93,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                         spacing 10
 
                         for attr in Attributes:
-                            text attr.name xalign 1.0 size 15 # Name
+                            text attr.name.replace('_', ' ') xalign 1.0 size 15 # Name
 
                     vbox:
                         spacing 10
@@ -125,6 +125,8 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                                     text "Active Unlocked" color "#0f0" size 16 yalign 0.5
                                 elif player.attributes[attr] >= 5:
                                     text "Passive Unlocked" color "#0f0" size 16 yalign 0.5
+
+                textbutton "Confirm" action SetScreenVariable("locked_attributes", player.attributes)
 
 # TODO: Improve slider experiance on attributes
 
