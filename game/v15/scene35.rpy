@@ -1952,17 +1952,17 @@ label v15s35:
 
                 u "(Is she talking about me?)"
 
-                if aubrey.relationship > Relationship.MAD:
-                    scene v15s35_9y # FPP. same as v15s35_9d Aubrey is pouting cutely at Mc, still looking at Mc, mouth is still closed
-                    with dissolve
+            if aubrey.relationship > Relationship.MAD:
+                scene v15s35_9y # FPP. same as v15s35_9d Aubrey is pouting cutely at Mc, still looking at Mc, mouth is still closed
+                with dissolve
 
-                    pause 0.75
+                pause 0.75
 
-                else:
-                    scene v15s35_9t
-                    with dissolve
+            else:
+                scene v15s35_9t
+                with dissolve
 
-                    pause 0.75
+                pause 0.75
 
             scene v15s35_9
             with dissolve
@@ -2971,12 +2971,6 @@ label v15s35:
                         scene v15s35_12f
                         with dissolve
 
-                        if kct == "popular":
-                            call screen kct_popup
-
-                        scene v15s35_12b
-                        with dissolve
-
                         li "Aw, yes, we will!"
 
                         scene v15s35_14d
@@ -3147,8 +3141,4 @@ label v15s35:
 
         stop music fadeout 3
 
-    jump v15s36
-
-    # "She's constantly worried about losing her free ride to a degree. Without the president's scholarship, she'd have to sell all that plastic back to the surgeons. *Laughs*"
-
-    # "What I don't like about Chloe? Everything about her is annoying."
+        jump v15s36
