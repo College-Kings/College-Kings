@@ -72,6 +72,7 @@ screen fight_menu(attacks=None, player=player):
                         button:
                             xysize (58, 58)
                             idle_background "gui/fight_prototype/fight_slot_hover.png"
+                            hover_background "gui/fight_prototype/fight_slot_hover.png"
                             action NullAction()
 
                             text guard.name.replace('_', ' ') align (0.5, 0.9) size 15
