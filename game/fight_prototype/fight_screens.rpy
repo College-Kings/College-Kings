@@ -39,6 +39,7 @@ screen fight_menu(attacks=None, player=player):
                                     selected_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected player.attacks[AttackType.LIGHT] == attack
                                     action Function(player.set_attack, AttackType.LIGHT, attack)
+
                                     text attack.name align (0.5, 0.9) size 15
 
                     vbox:
@@ -56,34 +57,24 @@ screen fight_menu(attacks=None, player=player):
                                     selected_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected player.attacks[AttackType.HEAVY] == attack
                                     action Function(player.set_attack, AttackType.HEAVY, attack)
+
                                     text attack.name align (0.5, 0.9) size 15
 
             vbox:
-
                 spacing 10
 
                 text "Defense"
                 hbox:
-                    spacing 100
-                    vbox:
-                        spacing 5
-                        hbox:
-                            spacing 20
-                            button:
-                                xysize (58,58)
-                                idle_background "gui/fight_prototype/fight_slot_idle.png"
-                                action NullAction()
-                                text "Low Guard" align (0.5, 0.9) size 15
-                            button:
-                                xysize (58,58)
-                                idle_background "gui/fight_prototype/fight_slot_idle.png"
-                                action NullAction()
-                                text "Semi Guard" align (0.5, 0.9) size 15
-                            button:
-                                xysize (58,58)
-                                idle_background "gui/fight_prototype/fight_slot_idle.png"
-                                action NullAction()
-                                text "Full Guard" align (0.5, 0.9) size 15
+                    spacing 20
+
+                    for guard in Guard:
+                        button:
+                            xysize (58, 58)
+                            idle_background "gui/fight_prototype/fight_slot_idle.png"
+                            hover_background "gui/fight_prototype/fight_slot_hover.png"
+                            action NullAction()
+
+                            text guard.name.replace('_', ' ') align (0.5, 0.9) size 15
 
             vbox:
                 spacing 10
