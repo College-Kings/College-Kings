@@ -10,11 +10,16 @@ init python:
         FULL_GUARD = 2
 
 
-    class Attributes(Enum):
+    class AttributeType(Enum):
         HEALTH = 0
         STAMINA = 1
         LIGHT_ATTACK_DAMAGE = 2
         HEAVY_ATTACK_DAMAGE = 3
+
+
+    class SpecialAbilityType(Enum):
+        PASSIVE = 0
+        ACTIVE = 1
 
 
     class Attack:
@@ -32,6 +37,23 @@ init python:
             self.move_type = move_type
             self.stamina_cost = stamina_cost
 
+    
+    class Attribute:
+        def __init__(self, type, name, value, description, passive_ability, active_ability):
+            self.type = type
+            self.name = name
+            self.value = value
+            self.description = description
+            self.passive_ability = passive_ability
+            self.active_ability = active_ability
+
+
+    class SpecialAbility:
+        def __init__(self, type, name, description):
+            self.type = type
+            self.name = name
+            self.description = description
+
 
     class BasePlayer:
         def __init__(self, guard=None, stamina=10, health=100, attack_multiplier=1):
@@ -47,13 +69,8 @@ init python:
                 AttackType.LIGHT: None,
                 AttackType.HEAVY: None
             }
-
-            self.attributes = {
-                Attributes.HEALTH: 1,
-                Attributes.STAMINA: 1,
-                Attributes.LIGHT_ATTACK_DAMAGE: 1,
-                Attributes.HEAVY_ATTACK_DAMAGE: 1
-            }
+            self.attributes = []
+            self.special_abilities = []
 
         @property
         def stamina(self):
@@ -72,6 +89,13 @@ init python:
         def health(self, value):
             self._health = value
             self._health = max(self._health, 0)
+
+        def set_specials(self):
+            for attr in self.attributes:
+                if attr == 10:
+                    self.special_abilities.append(attr.active_ability)
+                if attr >= 5:
+                    self.special_abilities.append(attr.passive_ability)
 
         def change_health(self, value):
             current_health = self._health
@@ -278,7 +302,6 @@ label fight_test:
             "block_image": "images/v2/tomkickblock.webp"
         })
 
-
         opponent.attacks[AttackType.LIGHT] = opponent_light_attack
         opponent.attacks[AttackType.HEAVY] = opponent_heavy_attack
 
@@ -286,6 +309,11 @@ label fight_test:
         player.moves["w"] = player_heavy_attack
         player.moves["e"] = player_semi_guard
         player.moves["r"] = player_full_guard
+
+        player.attributes.append(Attribute(AttributeType.HEALTH, "Health", 1, "", None, None))
+        player.attributes.append(Attribute(AttributeType.STAMINA, "Stamina", 1, "", None, None))
+        player.attributes.append(Attribute(AttributeType.LIGHT_ATTACK_DAMAGE, "Light Attack Damage", 1, "", None, None))
+        player.attributes.append(Attribute(AttributeType.HEAVY_ATTACK_DAMAGE, "Heavy Attack Damage", 1, "", None, None))
 
         mc.fighter = player
     
@@ -295,27 +323,27 @@ label fight_test:
             "hit_image": "images/v2/jab2pic.webp",
             "block_image": "images/v2/jab1pic.webp"
         }),
-        Attack(AttackType.LIGHT, "Jab", 5, 2, Guard.SEMI_GUARD, {
+        Attack(AttackType.LIGHT, "Body Hook", 5, 2, Guard.SEMI_GUARD, {
             "start_image": "images/v2/jab2start.webp",
             "hit_image": "images/v2/jab2pic.webp",
             "block_image": "images/v2/jab1pic.webp"
         }),
-        Attack(AttackType.LIGHT, "Jab", 5, 2, Guard.SEMI_GUARD, {
+        Attack(AttackType.LIGHT, "Knee", 5, 2, Guard.SEMI_GUARD, {
             "start_image": "images/v2/jab2start.webp",
             "hit_image": "images/v2/jab2pic.webp",
             "block_image": "images/v2/jab1pic.webp"
         }),
-        Attack(AttackType.HEAVY, "Jab", 5, 2, Guard.SEMI_GUARD, {
+        Attack(AttackType.HEAVY, "Hook", 5, 2, Guard.SEMI_GUARD, {
             "start_image": "images/v2/jab2start.webp",
             "hit_image": "images/v2/jab2pic.webp",
             "block_image": "images/v2/jab1pic.webp"
         }),
-        Attack(AttackType.HEAVY, "Jab", 5, 2, Guard.SEMI_GUARD, {
+        Attack(AttackType.HEAVY, "Uppercut", 5, 2, Guard.SEMI_GUARD, {
             "start_image": "images/v2/jab2start.webp",
             "hit_image": "images/v2/jab2pic.webp",
             "block_image": "images/v2/jab1pic.webp"
         }),
-        Attack(AttackType.HEAVY, "Jab", 5, 2, Guard.SEMI_GUARD, {
+        Attack(AttackType.HEAVY, "Kick", 5, 2, Guard.SEMI_GUARD, {
             "start_image": "images/v2/jab2start.webp",
             "hit_image": "images/v2/jab2pic.webp",
             "block_image": "images/v2/jab1pic.webp"
