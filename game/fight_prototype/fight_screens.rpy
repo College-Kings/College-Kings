@@ -126,7 +126,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                                 elif player.attributes[attr] >= 5:
                                     text "Passive Unlocked" color "#0f0" size 16 yalign 0.5
 
-                textbutton "Confirm" action SetScreenVariable("locked_attributes", player.attributes)
+                textbutton "Confirm" action SetScreenVariable("locked_attributes", player.attributes.copy())
 
 # TODO: Improve slider experiance on attributes
 
