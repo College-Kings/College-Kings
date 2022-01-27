@@ -2924,6 +2924,7 @@ label v15s35:
                     pause 0.75
 
                     if kct == "popular":
+                        $ v15game_night_kct_check = True
                         call screen kct_popup
                         scene v15s35_12b
                         with dissolve
@@ -3049,3 +3050,7 @@ label v15s35:
         scene v15s35Kiwii1 # picture of game night set up or a picture of the group playing/talking at the game night
 
     jump v15s36
+
+    "She's constantly worried about losing her free ride to a degree. Without the president's scholarship, she'd have to sell all that plastic back to the surgeons. *Laughs*"
+
+    "What I don't like about Chloe? Everything about her is annoying."
