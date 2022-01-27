@@ -14,7 +14,7 @@ screen fight_menu(attacks=None, player=player):
 
         attributes = [
             ("Health", "temp_attribute_health"),
-            ("Stamina", "temp_attribute_health"),
+            ("Stamina", "temp_attribute_stamina"),
             ("Light Attack Damage", "temp_attribute_light_attack_damage"),
             ("Heavy Attack Damage", "temp_attribute_heavy_attack_damage")
         ]
