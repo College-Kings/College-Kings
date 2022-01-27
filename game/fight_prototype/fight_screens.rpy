@@ -2,16 +2,21 @@ screen fight_menu(attacks=None, player=player):
     modal True
     style_prefix "fight_menu_style"
 
-    default temp_attribute_1 = 0
-    default temp_attribute_2 = 0
+    default temp_attribute_health = 0
+    default temp_attribute_stamina = 0
+    default temp_attribute_light_attack_damage = 0
+    default temp_attribute_heavy_attack_damage = 0
+
     default temp_max_available_attributes = 15
     
     python:
-        temp_available_attributes = temp_max_available_attributes - sum((temp_attribute_1, temp_attribute_2))
+        temp_available_attributes = temp_max_available_attributes - sum((temp_attribute_health, temp_attribute_stamina, temp_attribute_light_attack_damage, temp_attribute_heavy_attack_damage))
 
         attributes = [
-            ("Health", "temp_attribute_1"),
-            ("Stamina", "temp_attribute_2")
+            ("Health", "temp_attribute_health"),
+            ("Stamina", "temp_attribute_health"),
+            ("Light Attack Damage", "temp_attribute_light_attack_damage"),
+            ("Heavy Attack Damage", "temp_attribute_heavy_attack_damage")
         ]
 
     frame:
