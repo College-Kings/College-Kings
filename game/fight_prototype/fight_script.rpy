@@ -11,8 +11,9 @@ init python:
 
 
     class Attack:
-        def __init__(self, move_type, damage, stamina_cost, counter_guard, images):
+        def __init__(self, move_type, name, damage, stamina_cost, counter_guard, images):
             self.move_type = move_type
+            self.name = name
             self.damage = damage
             self.stamina_cost = stamina_cost
             self.counter_guard = counter_guard
@@ -57,6 +58,9 @@ init python:
         def health(self, value):
             self._health = value
             self._health = max(self._health, 0)
+
+        def set_attack(self, attack_type, attack):
+            self.attacks[attack_type] = attack
 
         def change_health(self, value):
             current_health = self._health
@@ -239,12 +243,12 @@ label opponent_attack_turn(player, opponent):
 label fight_test:
 
     python:
-        player_light_attack = Attack(AttackType.LIGHT, 5, 2, Guard.SEMI_GUARD, {
+        player_light_attack = Attack(AttackType.LIGHT, "Jab", 5, 2, Guard.SEMI_GUARD, {
             "start_image": "images/v2/jab2start.webp",
             "hit_image": "images/v2/jab2pic.webp",
             "block_image": "images/v2/jab1pic.webp"
         })
-        player_heavy_attack = Attack(AttackType.HEAVY, 10, 4, Guard.FULL_GUARD, {
+        player_heavy_attack = Attack(AttackType.HEAVY, "Jab", 10, 4, Guard.FULL_GUARD, {
             "start_image": "images/v2/hook2start.webp",
             "hit_image": "images/v2/hook2pic.webp",
             "block_image": "images/v2/hook1pic.webp"
@@ -252,12 +256,12 @@ label fight_test:
         player_semi_guard = Defence(Guard.SEMI_GUARD, 2)
         player_full_guard = Defence(Guard.FULL_GUARD, 3)
 
-        opponent_light_attack = Attack(AttackType.LIGHT, 5, 2, Guard.SEMI_GUARD, {
+        opponent_light_attack = Attack(AttackType.LIGHT, "Jab", 5, 2, Guard.SEMI_GUARD, {
             "start_image": "images/v2/tomjab.webp",
             "hit_image": "images/v2/tomjabhit.webp",
             "block_image": "images/v2/tomjabblock.webp"
         })
-        opponent_heavy_attack = Attack(AttackType.HEAVY, 10, 4, Guard.FULL_GUARD, {
+        opponent_heavy_attack = Attack(AttackType.HEAVY, "Jab", 10, 4, Guard.FULL_GUARD, {
             "start_image": "images/v2/tomkick.webp",
             "hit_image": "images/v2/tomkickhit.webp",
             "block_image": "images/v2/tomkickblock.webp"

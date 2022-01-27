@@ -1,81 +1,99 @@
-screen fight_menu():
+screen fight_menu(attacks=None, player=player):
     modal True
     style_prefix "fight_menu_style"
+
+    python:
+        attacks = (
+            Attack(AttackType.LIGHT, "Jab", 5, 2, Guard.SEMI_GUARD, {
+                "start_image": "images/v2/jab2start.webp",
+                "hit_image": "images/v2/jab2pic.webp",
+                "block_image": "images/v2/jab1pic.webp"
+            }),
+            Attack(AttackType.LIGHT, "Jab", 5, 2, Guard.SEMI_GUARD, {
+                "start_image": "images/v2/jab2start.webp",
+                "hit_image": "images/v2/jab2pic.webp",
+                "block_image": "images/v2/jab1pic.webp"
+            }),
+            Attack(AttackType.LIGHT, "Jab", 5, 2, Guard.SEMI_GUARD, {
+                "start_image": "images/v2/jab2start.webp",
+                "hit_image": "images/v2/jab2pic.webp",
+                "block_image": "images/v2/jab1pic.webp"
+            }),
+            Attack(AttackType.HEAVY, "Jab", 5, 2, Guard.SEMI_GUARD, {
+                "start_image": "images/v2/jab2start.webp",
+                "hit_image": "images/v2/jab2pic.webp",
+                "block_image": "images/v2/jab1pic.webp"
+            }),
+            Attack(AttackType.HEAVY, "Jab", 5, 2, Guard.SEMI_GUARD, {
+                "start_image": "images/v2/jab2start.webp",
+                "hit_image": "images/v2/jab2pic.webp",
+                "block_image": "images/v2/jab1pic.webp"
+            }),
+            Attack(AttackType.HEAVY, "Jab", 5, 2, Guard.SEMI_GUARD, {
+                "start_image": "images/v2/jab2start.webp",
+                "hit_image": "images/v2/jab2pic.webp",
+                "block_image": "images/v2/jab1pic.webp"
+            })
+        )
+
+    default temp_attribute_1 = 5
 
     hbox:
         align (0.5, 0.5)
         spacing 100
 
-        fixed:
+        frame:
+            background Transform("gui/fight_prototype/fight_background.png", size=(700, 900))
             xysize (700, 900)
-            add Transform("gui/fight_prototype/fight_background.png", size=(700, 900))
+            padding (50, 50)
 
             vbox:
-                pos (50,50)
                 spacing 50
+
                 vbox:
                     text name size 50 
-                    text "Brawler" size 25 font "fonts/Montserrat-Regular.ttf"
+                    text "Brawler" size 25 # TODO: Fighting style
 
                 vbox:
-
                     spacing 10
 
                     text "Attacks"
                     hbox:
                         spacing 100
+
                         vbox:
                             spacing 5
-                            text "Light Attack" size 15 font "fonts/Montserrat-Regular.ttf"
+
+                            text "Light Attack" size 15
                             hbox:
                                 spacing 20
-                                button:
-                                    xysize (58,58)
-                                    selected_background "gui/fight_prototype/fight_slot.png"
-                                    hover_background "gui/fight_prototype/fight_slot.png"
-                                    idle_background "gui/fight_prototype/fight_slot_unselected.png"
-                                    action ToggleVariable ("light_attack", 1, 0)
-                                    text "Jab" align (0.5, 0.9) size 15
-                                button:
-                                    xysize (58,58)
-                                    selected_background "gui/fight_prototype/fight_slot.png"
-                                    hover_background "gui/fight_prototype/fight_slot.png"
-                                    idle_background "gui/fight_prototype/fight_slot_unselected.png"
-                                    action ToggleVariable ("light_attack", 2, 0)
-                                    text "Body Hook" align (0.5, 0.9) size 15
-                                button:
-                                    xysize (58,58)
-                                    selected_background "gui/fight_prototype/fight_slot.png"
-                                    hover_background "gui/fight_prototype/fight_slot.png"
-                                    idle_background "gui/fight_prototype/fight_slot_unselected.png"
-                                    action ToggleVariable ("light_attack", 3, 0)
-                                    text "Knee" align (0.5, 0.9) size 15
+
+                                for attack in filter(lambda attack: attack.move_type == AttackType.LIGHT, attacks):
+                                    button:
+                                        xysize (58, 58)
+                                        idle_background "gui/fight_prototype/fight_slot_idle.png"
+                                        hover_background "gui/fight_prototype/fight_slot_hover.png"
+                                        selected_background "gui/fight_prototype/fight_slot_hover.png"
+                                        selected player.attacks[AttackType.LIGHT] == attack
+                                        action Function(player.set_attack, AttackType.LIGHT, attack)
+                                        text attack.name align (0.5, 0.9) size 15
+
                         vbox:
                             spacing 5
-                            text "Heavy Attack" size 15 font "fonts/Montserrat-Regular.ttf"
+
+                            text "Heavy Attack" size 15
                             hbox:
                                 spacing 20
-                                button:
-                                    xysize (58,58)
-                                    selected_background "gui/fight_prototype/fight_slot.png"
-                                    hover_background "gui/fight_prototype/fight_slot.png"
-                                    idle_background "gui/fight_prototype/fight_slot_unselected.png"
-                                    action ToggleVariable ("heavy_attack", 1, 0)
-                                    text "Hook" align (0.5, 0.9) size 15
-                                button:
-                                    xysize (58,58)
-                                    selected_background "gui/fight_prototype/fight_slot.png"
-                                    hover_background "gui/fight_prototype/fight_slot.png"
-                                    idle_background "gui/fight_prototype/fight_slot_unselected.png"
-                                    action ToggleVariable ("heavy_attack", 2, 0)
-                                    text "Uppercut" align (0.5, 0.9) size 15
-                                button:
-                                    xysize (58,58)
-                                    selected_background "gui/fight_prototype/fight_slot.png"
-                                    hover_background "gui/fight_prototype/fight_slot.png"
-                                    idle_background "gui/fight_prototype/fight_slot_unselected.png"
-                                    action ToggleVariable ("heavy_attack", 3, 0)
-                                    text "Kick" align (0.5, 0.9) size 15
+
+                                for attack in filter(lambda attack: attack.move_type == AttackType.HEAVY, attacks):
+                                    button:
+                                        xysize (58, 58)
+                                        idle_background "gui/fight_prototype/fight_slot_idle.png"
+                                        hover_background "gui/fight_prototype/fight_slot_hover.png"
+                                        selected_background "gui/fight_prototype/fight_slot_hover.png"
+                                        selected player.attacks[AttackType.HEAVY] == attack
+                                        action Function(player.set_attack, AttackType.HEAVY, attack)
+                                        text attack.name align (0.5, 0.9) size 15
 
                 vbox:
 
@@ -90,31 +108,42 @@ screen fight_menu():
                                 spacing 20
                                 button:
                                     xysize (58,58)
-                                    idle_background "gui/fight_prototype/fight_slot.png"
-                                    action NullAction
+                                    idle_background "gui/fight_prototype/fight_slot_idle.png"
+                                    action NullAction()
                                     text "Low Guard" align (0.5, 0.9) size 15
                                 button:
                                     xysize (58,58)
-                                    idle_background "gui/fight_prototype/fight_slot.png"
-                                    action NullAction
+                                    idle_background "gui/fight_prototype/fight_slot_idle.png"
+                                    action NullAction()
                                     text "Semi Guard" align (0.5, 0.9) size 15
                                 button:
                                     xysize (58,58)
-                                    idle_background "gui/fight_prototype/fight_slot.png"
-                                    action NullAction
+                                    idle_background "gui/fight_prototype/fight_slot_idle.png"
+                                    action NullAction()
                                     text "Full Guard" align (0.5, 0.9) size 15
 
                 vbox:
-
                     spacing 10
 
                     text "Attributes"
-                    hbox:
-                        spacing 100
-                        vbox:
-                            spacing 5
-                            hbox:
-                                spacing 20
+                    vbox:
+                        spacing 5
+
+                        hbox:
+                            spacing 20
+                            
+                            for i in range(10):
+                                imagebutton:
+                                    idle "gui/fight_prototype/fight_circle_idle.png"
+                                    hover "gui/fight_prototype/fight_circle_hover.png"
+                                    selected_idle "gui/fight_prototype/fight_circle_hover.png"
+                                    selected i <= temp_attribute_1
+                                    action SetScreenVariable("temp_attribute_1", i)
+
+
+style fight_menu_style_text is text:
+    color "#000"
+    font "fonts/Montserrat-Bold.ttf"
 
 
 screen fight_attack(player=player, opponent=opponent):
@@ -231,8 +260,3 @@ screen fight_style_selection():
         idle "images/v15/detective_board/archetype_pink_button.webp"
         hover "images/v15/detective_board/archetype_pink_button_hover.webp"
         action [SetField(mc, "detective", Detective.LOOSE_CANNON), Return()]
-                                
-
-style fight_menu_style_text:
-    color "#000"
-    font "fonts/Montserrat-Bold.ttf"
