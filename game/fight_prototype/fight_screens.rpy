@@ -13,7 +13,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
         align (0.5, 0.5)
 
         vbox:
-            spacing 50
+            spacing 30
 
             vbox:
                 text name size 50 
@@ -85,6 +85,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                     spacing 10
                     text "Attributes"
                     text "+" + str(available_points) color "#44D7B6"
+                    textbutton "Confirm" action SetScreenVariable("locked_attributes", player.attributes)
 
                 hbox:
                     spacing 10
@@ -122,13 +123,51 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                                             action ToggleDict(player.attributes, attr, i, locked_attributes[attr])
 
                                 if player.attributes[attr] == 10:
-                                    text "Active Unlocked" color "#0f0" size 16 yalign 0.5
+                                    text "Active Unlocked" color "#44D7B6" size 16 yalign 0.5
                                 elif player.attributes[attr] >= 5:
-                                    text "Passive Unlocked" color "#0f0" size 16 yalign 0.5
+                                    text "Passive Unlocked" color "#44D7B6" size 16 yalign 0.5
 
-                textbutton "Confirm" action SetScreenVariable("locked_attributes", player.attributes)
 
-# TODO: Improve slider experiance on attributes
+                hbox:
+                    spacing 100
+
+                    vbox:
+                        spacing 5
+
+                        text "Attribute Passives" size 15
+                        hbox:
+                            spacing 20
+
+                            for attack in filter(lambda attack: attack.move_type == AttackType.LIGHT, attacks): #TODO: show attribute passives
+                                button:
+                                    xysize (58, 58)
+                                    idle_background "gui/fight_prototype/fight_slot_idle.png"
+                                    hover_background "gui/fight_prototype/fight_slot_hover.png"
+                                    selected_background "gui/fight_prototype/fight_slot_hover.png"
+                                    selected player.attacks[AttackType.LIGHT] == attack 
+                                    action Function(player.set_attack, AttackType.LIGHT, attack) #TODO: no effect, unlocked based on attributes
+
+                                    text attack.name align (0.5, 0.9) size 15
+
+                    vbox:
+                        spacing 5
+
+                        text "Attribute Actives" size 15
+                        hbox:
+                            spacing 20
+
+                            for attack in filter(lambda attack: attack.move_type == AttackType.HEAVY, attacks): #TODO: show attribute actives
+                                button:
+                                    xysize (58, 58)
+                                    idle_background "gui/fight_prototype/fight_slot_idle.png"
+                                    hover_background "gui/fight_prototype/fight_slot_hover.png"
+                                    selected_background "gui/fight_prototype/fight_slot_hover.png"
+                                    selected player.attacks[AttackType.HEAVY] == attack
+                                    action Function(player.set_attack, AttackType.HEAVY, attack) #TODO: no effect, unlocked based on attributes
+
+                                    text attack.name align (0.5, 0.9) size 15
+
+# TODO: Improve slider experience on attributes
 
 style fight_menu_style_text is text:
     color "#000"
