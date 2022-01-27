@@ -59,9 +59,6 @@ init 100 python:
 
 label after_load:
     python:
-        # SAVE FIXES
-        ## Force developer mode off on load
-        config.developer = False
 
         # Disable skip transitions
         preferences.transitions = 2
