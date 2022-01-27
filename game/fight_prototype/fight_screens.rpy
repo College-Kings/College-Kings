@@ -86,7 +86,7 @@ screen fight_menu(attacks=None, player=player):
                     hbox:
                         spacing 10
                         
-                        for i in range(10):
+                        for i in range(1, 11):
                             imagebutton:
                                 idle "gui/fight_prototype/fight_circle_idle.png"
                                 hover "gui/fight_prototype/fight_circle_hover.png"
