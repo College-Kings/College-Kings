@@ -272,6 +272,8 @@ label fight_test:
         player.moves["e"] = player_semi_guard
         player.moves["r"] = player_full_guard
 
+        mc.fighter = player
+
     call screen fight_style_selection
     
     call screen fight_menu
