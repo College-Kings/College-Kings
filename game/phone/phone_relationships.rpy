@@ -5,7 +5,7 @@ screen relationship_app():
 
         default image_path = "images/phone/relationships/appAssets/"
 
-        add Transform(image_path + "rela_bg.webp", zoom=0.40) at truecenter
+        add Transform(image_path + "rela_bg.webp", zoom=0.40) at truecenter yoffset 3 xoffset 1
             
         vpgrid:
             mousewheel True

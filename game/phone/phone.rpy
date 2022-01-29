@@ -43,6 +43,7 @@ label call_screen_phone:
 screen base_phone():
     modal True
 
+    add "darker_80"
     add Transform("images/phone/phone_screen.webp", zoom=0.25)
 
     if renpy.get_screen("phone"):
@@ -89,6 +90,7 @@ screen base_phone_rotated():
     modal True
 
     add "darker_80"
+    add Transform("images/phone/phone_screen.webp", zoom=0.40) at rotation
 
     if renpy.get_screen("phone"):
         # Click background to close phone
@@ -120,6 +122,11 @@ screen base_phone_rotated():
             action [Hide("messenger_reply"), Show("phone")]
             xalign 0.16
             yalign 0.5  
+
+transform rotation:
+    around (.5, .5) alignaround (.5, .5) xalign .5 yalign .5
+    linear 0.0 rotate 90 
+
 
 
 screen phone():
