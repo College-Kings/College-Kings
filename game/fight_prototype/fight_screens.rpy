@@ -243,10 +243,10 @@ screen test_health():
 
     vbox:
         align (0.1, 0.1)
-        text "[opponent.health]":
+        text str(opponent.health):
             size 50
             color "#eb5858"  
-        text "[opponent.guard]":
+        text str(opponent.guard):
             size 50
             color "#494ce6"
         text str(opponent.stamina):
@@ -255,10 +255,10 @@ screen test_health():
 
     vbox:
         align (0.1, 0.9)
-        text "[player.health]":
+        text str(player.health):
             size 50
             color "#eb5858"
-        text "[player.guard]":
+        text str(player.guard):
             size 50
             color "#494ce6"
         text str(player.stamina):
