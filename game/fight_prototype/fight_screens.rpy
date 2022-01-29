@@ -141,7 +141,8 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                 null height 30
 
                 hbox:
-                    spacing 100
+                    xsize 650
+                    xoffset -25
 
                     vbox:
                         spacing 5
@@ -163,6 +164,8 @@ screen fight_menu(attacks=None, player=player, max_points=18):
 
                     vbox:
                         spacing 5
+                        xalign 1.0
+                        xsize 292
 
                         text "Attribute Actives" size 15
                         hbox:
@@ -175,7 +178,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                                     hover_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected player.special_ability == ability
-                                    action SetField(player, "special_ability", ability)
+                                    action ToggleField(player, "special_ability", ability, None)
 
                                     text ability.name.replace('_', ' ') align (0.5, 0.9) size 15
 
