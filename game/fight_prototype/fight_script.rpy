@@ -84,7 +84,9 @@ init python:
                 AttackType.HEAVY: None
             }
             self.attributes = []
-            self.special_abilities = []
+            self.passive_abilities = set()
+            self.special_abilities = set()
+            self.special_ability = None
             self.previous_attack = None # Only successful attack
 
         @property
@@ -107,10 +109,10 @@ init python:
 
         def set_specials(self):
             for attr in self.attributes:
-                if attr == 10:
-                    self.special_abilities.append(attr.active_ability)
-                if attr >= 5:
-                    self.special_abilities.append(attr.passive_ability)
+                if attr.value == 10:
+                    self.special_abilities.add(attr.active_ability)
+                if attr.value >= 5:
+                    self.passive_abilities.add(attr.passive_ability)
 
         def change_health(self, value):
             current_health = self._health
@@ -143,7 +145,8 @@ init python:
                 "q": None, # light attack
                 "w": None, # heavy attack
                 "e": None, # semi guard
-                "r": None # full guard
+                "r": None, # full guard
+                "K_SPACE": None # Active ability
             }
 
         def set_fury(self, value, opponent):
@@ -194,15 +197,15 @@ label player_attack_turn(player_move, player, opponent):
         $ damage = player_move.damage
 
         # Passive Ability: Health
-        if (player.passive_ability == AttributePassives.BERSERK) and (player.health <= player.max_health * 0.2):
+        if (AttributePassives.BERSERK in player.passive_abilities) and (player.health <= player.max_health * 0.2):
             $ damage *= 1.5
 
         # Passive Ability: Stamina
-        if (player.passive_ability == AttributePassives.FULLY_CHARGED) and (player.stamina >= player.max_stamina * 0.75):
+        if (AttributePassives.FULLY_CHARGED in player.passive_abilities) and (player.stamina >= player.max_stamina * 0.75):
             $ damage *= 1.25
 
         # Passive Ability: Light Attack Damage
-        if (player.passive_ability == AttributePassives.COMBO) and (player_move.type == AttackType.LIGHT and player.previous_attack == AttackType.LIGHT):
+        if (AttributePassives.COMBO in player.passive_abilities) and (player_move.type == AttackType.LIGHT and player.previous_attack == AttackType.LIGHT):
             $ damage *= 1.25
             
         $ opponent.change_health(-damage)
@@ -222,7 +225,7 @@ label player_attack_turn(player_move, player, opponent):
             $ damage = 2 # Reduced damage
             
             # Passive Ability: Heavy Attack Damage
-            if player.passive_ability == AttributePassives.BRUISER:
+            if AttributePassives.BRUISER in player.passive_abilities:
                 $ damage *= 1.25
 
             $ opponent.change_health(-damage)
@@ -350,10 +353,10 @@ label fight_test:
         player.moves["e"] = player_semi_guard
         player.moves["r"] = player_full_guard
 
-        player.attributes.append(Attribute(AttributeType.HEALTH, "Health", 1, "", None, None))
-        player.attributes.append(Attribute(AttributeType.STAMINA, "Stamina", 1, "", None, None))
-        player.attributes.append(Attribute(AttributeType.LIGHT_ATTACK_DAMAGE, "Light Attack Damage", 1, "", None, None))
-        player.attributes.append(Attribute(AttributeType.HEAVY_ATTACK_DAMAGE, "Heavy Attack Damage", 1, "", None, None))
+        player.attributes.append(Attribute(AttributeType.HEALTH, "Health", 1, "", AttributePassives.BERSERK, AttributeActives.SECOND_WIND))
+        player.attributes.append(Attribute(AttributeType.STAMINA, "Stamina", 1, "", AttributePassives.FULLY_CHARGED, AttributeActives.RESET))
+        player.attributes.append(Attribute(AttributeType.LIGHT_ATTACK_DAMAGE, "Light Attack Damage", 1, "", AttributePassives.COMBO, AttributeActives.FURY))
+        player.attributes.append(Attribute(AttributeType.HEAVY_ATTACK_DAMAGE, "Heavy Attack Damage", 1, "", AttributePassives.BRUISER, AttributeActives.BAZOOKA))
 
         mc.fighter = player
     

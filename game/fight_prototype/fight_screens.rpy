@@ -150,16 +150,16 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                         hbox:
                             spacing 20
 
-                            for attack in filter(lambda attack: attack.move_type == AttackType.LIGHT, attacks): #TODO: show attribute passives
+                            for ability in player.passive_abilities:
                                 button:
                                     xysize (58, 58)
                                     idle_background "gui/fight_prototype/fight_slot_idle.png"
                                     hover_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected_background "gui/fight_prototype/fight_slot_hover.png"
-                                    selected player.attacks[AttackType.LIGHT] == attack 
-                                    action SetDict(player.attacks, AttackType.HEAVY, attack) #TODO: no effect, unlocked based on attributes
+                                    selected ability in player.passive_abilities
+                                    action NullAction()
 
-                                    text attack.name align (0.5, 0.9) size 15
+                                    text ability.name.replace('_', ' ') align (0.5, 0.9) size 15
 
                     vbox:
                         spacing 5
@@ -168,16 +168,16 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                         hbox:
                             spacing 20
 
-                            for attack in filter(lambda attack: attack.move_type == AttackType.HEAVY, attacks): #TODO: show attribute actives
+                            for ability in player.special_abilities:
                                 button:
                                     xysize (58, 58)
                                     idle_background "gui/fight_prototype/fight_slot_idle.png"
                                     hover_background "gui/fight_prototype/fight_slot_hover.png"
                                     selected_background "gui/fight_prototype/fight_slot_hover.png"
-                                    selected player.attacks[AttackType.HEAVY] == attack
-                                    action SetDict(player.attacks, AttackType.HEAVY, attack) #TODO: no effect, unlocked based on attributes
+                                    selected player.special_ability == ability
+                                    action SetField(player, "special_ability", ability)
 
-                                    text attack.name align (0.5, 0.9) size 15
+                                    text ability.name.replace('_', ' ') align (0.5, 0.9) size 15
 
 # TODO: Improve slider experience on attributes
 
