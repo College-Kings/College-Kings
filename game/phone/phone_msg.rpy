@@ -192,7 +192,7 @@ screen messenger_contacts():
                     fixed:
                         xysize(375, 74)
                         
-                        add contact.profile_picture yalign 0.5 xpos 20
+                        add Transform(contact.profile_picture, xysize=(65,65)) yalign 0.5 xpos 20
 
                         text contact.name style "nametext" yalign 0.5 xpos 100
 
@@ -253,19 +253,39 @@ screen messager(contact=None):
 
                 for message in contact.sent_messages:
                     if isinstance(message, Message) and message.message.strip():
-                        textbutton message.message style "msgleft"
+                        frame:
+                            background Frame(image_path + "msg_text_bg.webp")
+                            padding (30,30)
+
+                            vbox:
+                                text message.message  style "msgleft_text"
+                            
                     elif isinstance(message, ImageMessage):
-                        imagebutton:
-                            idle Transform(message.image, size=(307, 173))
-                            style "msgleft"
-                            action Show("phone_image", img=message.image)
+                        frame:
+                            background Frame(image_path + "msg_text_bg.webp")
+                            padding (30,30)
+                            xalign 1.0
+
+                            imagebutton:
+                                idle Transform(message.image, size=(307, 173))
+                                action Show("phone_image", img=message.image)
                     elif isinstance(message, Reply):
-                        textbutton message.message style "msgright"
+                        frame:
+                            background Frame(image_path + "msg_text_bg.webp")
+                            padding (30,30)
+                            xalign 1.0
+
+                            vbox:
+                                text message.message  style "msgright_text"
                     elif isinstance(message, ImgReply):
-                        imagebutton:
-                            idle Transform(message.image, size=(307, 173))
-                            style "msgright"
-                            action Show("phone_image", img=message.image)
+                        frame:
+                            background Frame(image_path + "msg_text_bg.webp")
+                            padding (30,30)
+                            xalign 1.0
+
+                            imagebutton:
+                                idle Transform(message.image, size=(307, 173))
+                                action Show("phone_image", img=message.image)
 
         if contact.replies:
                 hbox:

@@ -349,7 +349,7 @@ screen kiwiiPost(post):
         viewport:
             mousewheel True
             draggable True
-            xysize(357, 450)
+            xysize(357, 400)
             xalign 0.5
             ypos 500
             xoffset 20

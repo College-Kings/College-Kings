@@ -39,7 +39,7 @@ style msgleft_text is text:
     color "#333"
     yoffset 4
     font "fonts/Effra_Regular.ttf"
-    size 22
+    size 18
     line_spacing 5
 
 style msgright is button:
@@ -51,11 +51,11 @@ style msgright is button:
     xoffset -10
 
 style msgright_text is text:
-    color "#ffffff"
     yoffset 4
     font "fonts/Effra_Regular.ttf"
-    size 22
+    size 18
     line_spacing 5
+    color "#333"
 
 style nametext is text:
     font "fonts/Montserrat-Black.ttf"
@@ -70,9 +70,9 @@ style replies_style is button:
     xmaximum 350
 
 style replies_style_text is text:
-    color "#ffffff"
     font "fonts/Effra_Regular.ttf"
     size 20
+    color "#333"
 
 style reply_disabled is button:
     background "#333"
@@ -123,3 +123,9 @@ style kiwii_reply is button:
     xpadding 15
     ypadding 5
     xmaximum 350
+
+#Simplr
+style simplr_no_more_profiles is text:
+    font "fonts/Effra_Regular.ttf"
+    size 28
+    color "#333"
