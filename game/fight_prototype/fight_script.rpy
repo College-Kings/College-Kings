@@ -21,6 +21,20 @@ init python:
         PASSIVE = 0
         ACTIVE = 1
 
+    
+    class AttributePassives(Enum):
+        BERSERK = 0
+        FULLY_CHARGED = 1
+        COMBO = 2
+        BRUISER = 3
+
+    
+    class AttributeActives(Enum):
+        SECOND_WIND = 0
+        RESET = 1
+        FURY = 2
+        BAZOOKA = 3
+
 
     class Attack:
         def __init__(self, move_type, name, damage, stamina_cost, counter_guard, images):
@@ -56,14 +70,14 @@ init python:
 
 
     class BasePlayer:
-        def __init__(self, guard=None, stamina=10, health=100, attack_multiplier=1):
+        def __init__(self, guard=None, health=100, stamina=10, attack_multiplier=1):
             self.guard = guard
-            self.max_stamina = stamina
             self.max_health = health
+            self.max_stamina = stamina
             self.attack_multiplier = attack_multiplier
             
-            self._stamina = stamina
             self._health = health
+            self._stamina = stamina
 
             self.attacks = {
                 AttackType.LIGHT: None,
@@ -71,6 +85,7 @@ init python:
             }
             self.attributes = []
             self.special_abilities = []
+            self.previous_attack = None # Only successful attack
 
         @property
         def stamina(self):
@@ -106,7 +121,7 @@ init python:
 
     class Opponent(BasePlayer):
         def __init__(self, guard=None, stamina=10, health=100, attack_multiplier=1):
-            BasePlayer.__init__(self, guard, stamina, health, attack_multiplier)
+            BasePlayer.__init__(self, guard, health, stamina, attack_multiplier)
 
             self.guard_images = {
                 Guard.FULL_GUARD: "images/v2/tomstancekick.webp",
@@ -121,7 +136,7 @@ init python:
     
     class Player(BasePlayer):
         def __init__(self, guard=None, stamina=10, health=100, attack_multiplier=1):
-            BasePlayer.__init__(self, guard, stamina, health, attack_multiplier)
+            BasePlayer.__init__(self, guard, health, stamina, attack_multiplier)
             
             self.fury = 0
             self.moves = {
@@ -175,10 +190,27 @@ label player_attack_turn(player_move, player, opponent):
         scene expression player_move.images["hit_image"]
         with vpunch
 
-        $ opponent.change_health(-player_move.damage)
+        # Passive Abilities
+        $ damage = player_move.damage
+
+        # Passive Ability: Health
+        if (player.passive_ability == AttributePassives.BERSERK) and (player.health <= player.max_health * 0.2):
+            $ damage *= 1.5
+
+        # Passive Ability: Stamina
+        if (player.passive_ability == AttributePassives.FULLY_CHARGED) and (player.stamina >= player.max_stamina * 0.75):
+            $ damage *= 1.25
+
+        # Passive Ability: Light Attack Damage
+        if (player.passive_ability == AttributePassives.COMBO) and (player_move.type == AttackType.LIGHT and player.previous_attack == AttackType.LIGHT):
+            $ damage *= 1.25
+            
+        $ opponent.change_health(-damage)
 
         show screen fight_popup("{} Hit".format(player_move.move_type.name))
         pause 1.0
+
+        $ player.previous_attack = player_move
 
 
     # Player attack blocked
@@ -187,12 +219,20 @@ label player_attack_turn(player_move, player, opponent):
         with vpunch
 
         if player_move.move_type == AttackType.HEAVY:
-            $ opponent.change_health(-2) # Reduced damage
+            $ damage = 2 # Reduced damage
+            
+            # Passive Ability: Heavy Attack Damage
+            if player.passive_ability == AttributePassives.BRUISER:
+                $ damage *= 1.25
+
+            $ opponent.change_health(-damage)
             show screen fight_popup("Guard Shattered")
+
         else:
             $ opponent.stamina += 3
             $ player.set_fury(player.fury + 1, opponent)
             show screen fight_popup("Blocked")
+
         pause 1.0
 
     call screen fight_attack
