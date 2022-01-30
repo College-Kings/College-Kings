@@ -16,7 +16,7 @@ label v16s3a:
 
     ri "I'm going to take such good care of you..."
 
-    if v16s18a_riley_bj:
+    if v15s18a_riley_bj:
 
         scene v16s3a_2 
         with dissolve
@@ -72,28 +72,28 @@ label v16s3a:
 
             u "(Oh, Riley... What did I do to deserve you?)"
 
-            "Put her on top.":
-                scene v16s3a_2a
-                with dissolve
+        "Put her on top.":
+            scene v16s3a_2a
+            with dissolve
 
-                u "Come here, I want you on top of me."
+            u "Come here, I want you on top of me."
 
-                scene v16s3a_2
-                with dissolve
+            scene v16s3a_2
+            with dissolve
 
-                ri "No, no, no..."
+            ri "No, no, no..."
 
-                ri "You just relax and let me take care of you, okay?"
+            ri "You just relax and let me take care of you, okay?"
 
-                scene v16s3a_2a
-                with dissolve
+            scene v16s3a_2a
+            with dissolve
 
-                u "Whatever you say, ha."
+            u "Whatever you say, ha."
 
-    image v16rileybj = Movie(play="images/v16/scene 3a/v16rileybj.webm", loop=True, image="images/v16/scene 3a/v16rileybjStart.webp", start_image="images/v16/scene 3a/v16rileybjStart.webp")
-    image v16rileybj2 = Movie(play="images/v16/scene 3a/v16rileybj2.webm", loop=True, image="images/v16/scene 3a/v16rileybj2Start.webp", start_image="images/v16/scene 3a/v16rileybj2Start.webp")
-    image v16rileybjf = Movie(play="images/v16/scene 3a/v16rileybjf.webm", loop=True, image="images/v16/scene 3a/v16rileybjStart.webp", start_image="images/v16/scene 3a/v16rileybjStart.webp")
-    image v16rileybj2f = Movie(play="images/v16/scene 3a/v16rileybj2f.webm", loop=True, image="images/v16/scene 3a/v16rileybj2Start.webp", start_image="images/v16/scene 3a/v16rileybj2Start.webp")
+    image v16rileybj = Movie(play="images/v16/scene_3a/v16rileybj.webm", loop=True, image="images/v16/scene_3a/v16rileybjStart.webp", start_image="images/v16/scene_3a/v16rileybjStart.webp")
+    image v16rileybj2 = Movie(play="images/v16/scene_3a/v16rileybj2.webm", loop=True, image="images/v16/scene_3a/v16rileybj2Start.webp", start_image="images/v16/scene_3a/v16rileybj2Start.webp")
+    image v16rileybjf = Movie(play="images/v16/scene_3a/v16rileybjf.webm", loop=True, image="images/v16/scene_3a/v16rileybjStart.webp", start_image="images/v16/scene_3a/v16rileybjStart.webp")
+    image v16rileybj2f = Movie(play="images/v16/scene_3a/v16rileybj2f.webm", loop=True, image="images/v16/scene_3a/v16rileybj2Start.webp", start_image="images/v16/scene_3a/v16rileybj2Start.webp")
 
     scene v16rileybj # Ignore as anim
     with dissolve
@@ -218,7 +218,7 @@ label v16s3a:
             scene v16s3a_1
             with dissolve
 
-        "I like being pleased."
+        "I like being pleased.":
             scene v16s3a_2a
             with dissolve 
 
