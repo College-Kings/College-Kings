@@ -334,7 +334,7 @@ label prot_w_au_2:
 
     u "Yeah, anytime."
 
-    if evelyn.relationship.value >= Relationship.LIKES.value:
+    if evelyn.relationship >= Relationship.LIKES:
         scene v8sprot13 # TPP. Show Evelyn walking past MC, MC turns to look at Evenlyn walking past.
         with dissolve
 

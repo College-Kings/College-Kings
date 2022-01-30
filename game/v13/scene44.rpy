@@ -50,7 +50,7 @@ label v13s44:
 
         la "*Sighs* Yes, I'm sure. Now, look..."
 
-    elif lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    elif lauren.relationship >= Relationship.GIRLFRIEND:
         la "Hey babe!"
 
         scene v13s44_2 # TPP. Show Lauren kissing MC.
@@ -94,7 +94,7 @@ label v13s44:
 
     la "There's a really nice little bike trail up the street and I thought it'd be nice to take a ride for a bit."
 
-    scene v13s44_4
+    scene v13s44_4a
     with dissolve
 
     u "That does sound kinda nice. Plus, I probably should start getting back into shape. *Chuckles*"

@@ -29,7 +29,7 @@ label caf_w_aub:
     scene scaf8 # FPP. Close up of Aubrey sat at cafe table, Aubrey slight smile.
     with dissolve
 
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if aubrey.relationship >= Relationship.FWB:
         u "How you doin?"
 
         scene scaf8a # FPP. Same camera as scaf8, Aubrey slight smile, mouth open.

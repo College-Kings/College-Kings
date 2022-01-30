@@ -4,6 +4,8 @@
 # Time: Night
 
 label v15s49:
+    play music "music/v15/Track Scene 49.mp3" fadein 2
+
     scene v15s49_1 # TPP. MC looking out the window of the cab, its night time and raining outside, MC slight smile, mouth closed.
     with dissolve
 
@@ -54,7 +56,11 @@ label v15s49:
     scene v15s49_7 # TPP. Close up of Tom, Tom looking at Riley, Tom angry, mouth open.
     with dissolve
 
-    tom "Listen here, you little bitch... I know you had something to do with why Charli got expelled!"
+    if v13_charli_exposed:
+        tom "Listen here, you little bitch... I know you had something to do with why Charli got expelled!"
+        
+    else:
+        tom "Listen here, you little bitch... I know you had something to do with Charli!"
 
     scene v15s49_8 # TPP. Close up of Riley, Riley looking at Tom, Riley confused, mouth open.
     with dissolve
@@ -66,7 +72,11 @@ label v15s49:
 
     tom "Charli was the reason I'm still in school, you fucking rat!"
 
-    tom "Now that he's gone, I have to find someone else to do all of my assignments."
+    if v13_charli_exposed:
+        tom "Now that he's gone, I have to find someone else to do all of my assignments."
+    
+    else:
+        tom "But he's chickened out now, and I have to find someone else to do all of my assignments."
 
     scene v15s49_8
     with dissolve
@@ -103,7 +113,7 @@ label v15s49:
     scene v15s49_9
     with dissolve
 
-    ri "*Moans* Let... Go!"
+    ri "*Grunts* Let... Go!"
 
     scene v15s49_9a
     with dissolve
@@ -137,7 +147,7 @@ label v15s49:
         "Check on Riley":
             $ add_point(KCT.BOYFRIEND)
 
-            if riley.relationship.value >= Relationship.FWB.value:
+            if riley.relationship >= Relationship.FWB:
                 scene v15s49_14 # FPP. Show MC on his knee checking on Riley, MC looking at Riley, Riley looking at MC, Riley angry, mouth closed.
                 with dissolve
 
@@ -186,18 +196,15 @@ label v15s49:
 
             tom "Does it look like I give it fuck?! How about I drop your weak ass too?"
 
-        "Be angry":
+        "Get angry":
             $ add_point(KCT.TROUBLEMAKER)
 
-            scene v15s49_13
-            #with dissolve
-
-            u "What the fuck is your problem?"
+            u "BACK THE FUCK OFF!"
 
             scene v15s49_13a
             with dissolve
 
-            tom "You! You're my problem, motherfucker!"
+            tom "MAKE ME, MOTHERFUCKER!"
 
     if wintom:
         scene v15s49_13
@@ -289,20 +296,14 @@ label v15s49:
 
     ri "We can walk away from this without a fight."
 
-    scene v15s49_16
-    with dissolve
-
     menu:
         "Nobody's walking away":
             $ add_point(KCT.TROUBLEMAKER)
 
-            scene v15s49_16
-            #with dissolve
-
-            u "Nobody's walking away, Riley."
-
             scene v15s49_17 # TPP. Close up of MC's face looking at Tom, MC angry, mouth open.
             with dissolve
+
+            u "Nobody's walking away, Riley."
 
             u "He's going to learn today."
 
@@ -318,23 +319,20 @@ label v15s49:
     scene v15s49_13e # FPP. Show Tom in a fighting stance looking at MC, MC looking at Tom, Tom angry, mouth closed.
     with dissolve
 
-    tom "Come at me, bro!"
+    tom "You're about to die."
 
     scene v15s49_18 # TPP. A nice cinematic kind of shot of MC's fist clenched and the rain dripping off of it.
     with dissolve
 
     pause 0.75
 
+    stop music fadeout 3
+
     jump end15
 
 label end15:
     if not renpy.loadable("v16/scene1.rpy"):
-        scene savenow #nothing needed
-        with Fade (1,0,1)
-        " "
+        call screen save_now(16)
+        with Fade(1, 0, 1)
 
-    if renpy.loadable("v16/scene1.rpy"):
-        jump v16_start
-
-    else:
-        jump end_credits
+    jump v16_start

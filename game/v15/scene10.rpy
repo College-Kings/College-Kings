@@ -4,6 +4,8 @@
 # Time: Afternoon
 
 label v15s10:
+    play music "music/v13/Track Scene 23.mp3" fadein 2
+
 # -Car totals for this scene can be calculated via Oscar or the document that Cheex can give you access to-
 # -MC arrives at the Lindsey car location. The car is in the same position as before. Lindsey is leaning against it, waiting. She turns to see MC approaching and gives him a nice smile-
 
@@ -120,7 +122,7 @@ label v15s10:
 
         male_buyer "This guy?"
 
-        if lindsey.relationship.value >= Relationship.FWB.value:
+        if lindsey.relationship >= Relationship.FWB:
             scene v15s10_10 # FPP. MC turned around looking at Lindsey (v15s10_8 just FFP), Lindsey looking straight ahead at MC while she leans against the car, winking at MC, slight smile, mouth open.
             with dissolve
 
@@ -131,7 +133,7 @@ label v15s10:
 
             male_buyer "*Scoffs* Yeah, right!"
 
-            scene v15s10_7b
+            scene v15s10_7a
             with dissolve
 
             u "Haha no, he's actually an MMA fighter. In New York this week, right?"
@@ -298,7 +300,7 @@ label v15s10:
 
             li "For real."
 
-            scene v15s10_12d
+            scene v15s10_12l
             with dissolve
 
             male_buyer "Okay, umm... This still isn't the car I thought I was coming to see, I mean..."
@@ -316,10 +318,11 @@ label v15s10:
                 scene v15s10_12e # FPP. Same as v15s10_12d, Man holding cash up, slight smile, mouth closed.
                 with dissolve
 
-                pause 0.75
+                if v15s10_buyer_max_amount >= 150:
+                    pause 0.75
 
-                scene v15s10_14 # FPP. MC looking down at his hands counting the money.
-                with dissolve
+                    scene v15s10_14 # FPP. MC looking down at his hands counting the money.
+                    with dissolve
 
                 if v15s10_buyer_max_amount < v14s48_car_price - 100:
                     u "(That's a lot less than what we asked for! What should I do here?)"
@@ -335,12 +338,12 @@ label v15s10:
 
                         u "I'm sorry but... We need more than that."
 
-                        scene v15s10_12g # FPP. Same as v15s10_12f, the man neutral face, mouth open.
+                        scene v15s10_12b # FPP. Same as v15s10_12f, the man neutral face, mouth open.
                         with dissolve
 
                         male_buyer "I'm not going a cent higher, mister pants on fire..."
 
-                        scene v15s10_12f
+                        scene v15s10_12a
                         with dissolve
 
                         u "*Scoffs* Come on, it-"
@@ -363,8 +366,9 @@ label v15s10:
                     "Accept offer":
                         $ add_point(KCT.BRO)
                         
-                        scene v15s10_14
-                        with dissolve
+                        if v15s10_buyer_max_amount >= 150:
+                            scene v15s10_14
+                            with dissolve
 
                         u "Okay, yeah. I guess that's fair."
 
@@ -562,7 +566,7 @@ label v15s10:
 
             li "*Laughs* We'll see about that nap."
 
-            if lindsey.relationship.value >= Relationship.FWB.value:
+            if lindsey.relationship >= Relationship.FWB:
                 scene v15s10_26b # FPP. Same as 26a, Lindsey winking at MC, slight smile, mouth closed.
                 with dissolve
                 
@@ -572,6 +576,8 @@ label v15s10:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
 
             jump v15s12
             
@@ -732,30 +738,31 @@ label v15s10:
 
             pause 0.75
 
-            scene v15s10_22a
-            with dissolve
+            if False:
+                scene v15s10_22a
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
-            scene v15s10_22
-            with dissolve
+                scene v15s10_22
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
-            scene v15s10_22a
-            with dissolve
+                scene v15s10_22a
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
-            scene v15s10_22
-            with dissolve
+                scene v15s10_22
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
-            scene v15s10_22a
-            with dissolve
+                scene v15s10_22a
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
             scene v15s10_23
             with dissolve
@@ -810,6 +817,8 @@ label v15s10:
             with fade
             
             pause 0.75
+            
+            stop music fadeout 3
             
             jump v15s12
 
@@ -1181,6 +1190,8 @@ label v15s10:
 
             pause 0.75
 
+            stop music fadeout 3
+
             jump v15s12
 
         else:
@@ -1359,5 +1370,7 @@ label v15s10:
         with dissolve
 
         pause 0.75
+
+    stop music fadeout 3
 
     jump v15s12

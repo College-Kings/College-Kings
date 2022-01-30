@@ -3,8 +3,12 @@
 # Characters: MC (Outfit: Stripper Costume), AUBREY (Outfit: Clown Costume), RYAN (Outfit: Elvis Costume), AUTUMN (Outfit: Mummy), PENELOPE (Outfit: Sexy Witch), LAUREN (Outfit: Spider necklace costume), IMRE (Outfit: Cowboy Costume), RILEY (Outfit: Schoolgirl Costume), CHRIS (Outfit: Boxer Costume), AMBER (Outfit: Black bloody nurse costume)
 # Time: Night
 
+init python:
+    def v15s18b_kiwiireply1():
+        v15s18b_kiwiiPost1.newComment(imre, "Oh hey! Hell yeah! I do look good...", numberLikes=renpy.random.randint(260, 560), force_send=True)
+
 label v15s18b:
-    $ freeroam13.add("lauren2")
+    play music "music/v13/Track Scene 18.mp3" fadein 2
 
     scene v15s18b_1 # TPP. Show Lauren sitting on the couch surrounded by gifts, slight smile, mouth open.
     #with dissolve
@@ -123,7 +127,7 @@ label v15s18b:
 
     pause 0.75
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18b_9 # TPP. Shot of just Autumn looking in Lauren's direction, slight smile, mouth open.
         with dissolve
 
@@ -152,7 +156,7 @@ label v15s18b:
 
         u "A gift card is useful, you know, for a college student. You can get books or whatever..."
 
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        if lauren.relationship >= Relationship.GIRLFRIEND:
             scene v15s18b_3h # TPP. Lauren holding the $50 gift card, Lauren unamused face, mouth open.
             with dissolve
             
@@ -347,16 +351,18 @@ label v15s18b:
 
         pause 0.5
         
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        if lauren.relationship >= Relationship.GIRLFRIEND:
             scene v15s18b_12a # FPP. Lauren giving MC a passionate kiss.
             with dissolve
 
-            pause 0.75
+            pause 1.75
+
+            play sound "sounds/kiss.mp3"
 
             scene v15s18b_13a # TPP. Show just MC and Lauren passionately kissing.
             with dissolve
-            play sound "sounds/kiss.mp3"
-            pause 0.75
+
+            pause 1.75
 
         else:
             scene v15s18b_13 # TPP. Show just MC and Lauren hugging, both slight smile, mouth closed.
@@ -375,7 +381,7 @@ label v15s18b:
         u "You're very welcome. Happy Birthday!"
 
     if emerald_bracelet in mc.inventory or ruby_choker_necklace in mc.inventory:
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        if lauren.relationship >= Relationship.GIRLFRIEND:
             scene v15s18b_3q
             with dissolve
 
@@ -594,16 +600,12 @@ label v15s18b:
 
     aut "*Chuckles* Better."
 
-    scene v15s18b_16 # TPP. Show MC standing up slight smile, mouth closed.
-    with dissolve
+    $ v15s18b_kiwiiPost1= KiwiiPost(riley, "v15/v15_rilpost1.webp", "Celebrating this pure soul tonight!", numberLikes=648)
+    $ v15s18b_kiwiiPost1.newComment(lindsey, "So cute! Your costumes are perfect <3", numberLikes=renpy.random.randint(260, 560), force_send=True)
+    $ v15s18b_kiwiiPost1.newComment(amber, "Ugh, where am I?!", numberLikes=renpy.random.randint(260, 560), force_send=True)
+    $ v15s18b_kiwiiPost1.newComment(lauren, "Aw! Dammit Imre!", numberLikes=renpy.random.randint(260, 560), force_send=True)
+    $ v15s18b_kiwiiPost1.addReply("Haha! Great pic you guys... Imre looks great!", v15s18b_kiwiireply1, numberLikes=renpy.random.randint(260, 560))
 
-    pause 0.75
-
-    $ v15s18b_kiwiiPost1= KiwiiPost(riley, "v15/rilpost1.webp", "Celebrating this pure soul tonight!", numberLikes=648)
-    $ v15s18b_kiwiiPost1.newComment(lindsey, "So cute! Your costumes are perfect <3", numberLikes=renpy.random.randint(260, 560))
-    $ v15s18b_kiwiiPost1.newComment(amber, "Ugh, where am I?!", numberLikes=renpy.random.randint(260, 560))
-    $ v15s18b_kiwiiPost1.newComment(lauren, "Aw! Dammit Imre!", numberLikes=renpy.random.randint(260, 560))
-    $ v15s18b_kiwiiPost1.addReply("Haha! Great pic you guys... Imre looks great!", numberLikes=renpy.random.randint(260, 560))
-    $ v15s18b_kiwiiPost1.newComment(imre, "Oh hey! Hell yeah! I do look good...", numberLikes=renpy.random.randint(260, 560))
+    stop music fadeout 3
 
     jump v15s18c

@@ -744,7 +744,7 @@ label v11_carriage_ride:
     pause 0.75
 
     scene v11car12d # FPP. Same as v11car12c, Nora and Chloe looking at MC, both angry, mouths closed
-    with dissolve 
+    with dissolve
 
     u "And look at that, we're back! Wasn't that fun?"
 

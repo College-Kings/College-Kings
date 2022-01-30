@@ -60,7 +60,7 @@ label v12_aubrey_wake_up:
     scene v12auw4b # FPP. Same as v12auw4a, Chloe slight smile, mouth open
     with dissolve
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         cl "You know I'm just messing around, I wouldn't make fun of my boyfriend. Even if he is slow... *Chuckles*"
 
         scene v12auw4a
@@ -99,7 +99,9 @@ label v12_aubrey_wake_up:
         u "We'll have time for all the stories later, gotta hurry, remember? C'mon."
 
     else:
-
+        scene v12auw4b
+        #with dissolve
+        
         cl "Chicks always ride together."
 
         scene v12auw5c # FPP. Same as v12auw5b, Aubrey slight smile, mouth open

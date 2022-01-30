@@ -9,6 +9,8 @@ init python:
         riley.messenger.newMessage("Good luck! You're gonna need it...")
 
 label v15s13:
+    play music "music/v13/Track Scene 32.mp3" fadein 2
+
     if joinwolves:
         scene v15s13_1 # TPP. MC enters his WOLVES bedroom, carrying a small bag of donuts, He leaves the door half open, slight smile, mouth closed
         with dissolve
@@ -34,6 +36,10 @@ label v15s13:
         with dissolve
 
         u "Okay, break time."
+        
+        stop music fadeout 3
+        
+        play music "music/v12/Track Scene 16_1.mp3" fadein 2
 
         scene v15s13_3 # FPP. MC's WOLVES bedroom door swings open suddenly with Imre standing in the doorway looking at MC with a disgusted expression, hands and palms up raised to chest level, mouth open
         with dissolve
@@ -149,6 +155,8 @@ label v15s13:
         with dissolve
 
         pause 0.75
+        
+        stop music fadeout 3
 
         jump v15s17
 
@@ -177,6 +185,10 @@ label v15s13:
         with dissolve
 
         u "Okay, break time."
+
+        stop music fadeout 3
+        
+        play music "music/v12/Track Scene 16_1.mp3" fadein 2
 
         scene v15s13_9 # FPP. MC's APES bedroom door swings open suddenly with Grayson standing in the doorway looking at MC with a disgusted expression, hands and palms up raised to chest level, mouth open
         with dissolve
@@ -373,4 +385,7 @@ label v15s13:
         with dissolve
 
         pause 0.75
+        
+        stop music fadeout 3
+        
         jump v15s17

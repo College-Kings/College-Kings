@@ -554,10 +554,7 @@ label v12s7_aubrey1:
 
             au "Oh, sweetie. If I didn't take a look at this I wouldn't be able to call myself a nurse. Please come by my office so I can get you fixed up."
 
-            if aubrey.relationship.value >= Relationship.FWB.value:
-                scene v12ferau1a
-                with dissolve
-
+            if aubrey.relationship >= Relationship.FWB:
                 au "I'll need some privacy to give the best treatment possible."
 
                 scene v12ferau2 # TPP. Show Aubrey wispering in mc's ear
@@ -793,8 +790,6 @@ label v12s7_riley1:
 
     show screen murder_button_overlay(riley)
 
-    ### ERROR: -If talk to Chloe and Riley 1 ###
-    ### ERROR: -If MC uses the button at all during this conversation he is caught ###
     scene v12ferri1 # FPP. location is the upper rear outside seating area on the right side of the ship as seen on miro. Show chloe(from a distance as mc is overhearing the convo), looking at riley out of shot, slight annoyed look, mouth open
     #with dissolve
 
@@ -861,7 +856,7 @@ label v12s7_riley1:
     ri "*Southern accent* And now my confusion is all too much. It makes sense why the wealthy and a man such as yourself would be here..."
     ri "But I can't understand why Miss Blue Collar here would be allowed to join us."
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         # -Chloe kisses MC-
         scene v12ferri5 # FPP. Show chloe, looking at camera, neutral look mouth open
         with dissolve
@@ -873,7 +868,6 @@ label v12s7_riley1:
         ri "*Shocked* Oh... I see."
 
     else:
-        ### ERROR: -Any other Chloe variable ###
         scene v12ferri5
         with dissolve
 
@@ -1056,7 +1050,7 @@ label v12s7_riley1:
 
             u "Haha, alright. I'll catch up with you later."
 
-            if chloe.relationship.value >= Relationship.FWB.value:
+            if chloe.relationship >= Relationship.FWB:
                 scene v12ferri6 # TPP. Show MC kissing chloe
                 with dissolve
                 play sound "sounds/kiss.mp3"
@@ -1067,8 +1061,6 @@ label v12s7_riley1:
     play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_left_viewpoint
-
-    ### ERROR: -Back to free roam ###
 
 label v12s7_chloe1:
     $ freeroam9.add("chloe")
@@ -1288,7 +1280,7 @@ label v12s7_chloe1:
 
     cl "That's actually a good point... Okay, now I'm not so sure about you being the killer. *Chuckles*"
 
-    if chloe.relationship.value >= Relationship.FWB.value:
+    if chloe.relationship >= Relationship.FWB:
         scene v12ferch3 # TPP. Show chloe, hand on mc's chest, chloe mouth open
         with dissolve
 
@@ -1310,12 +1302,12 @@ label v12s7_chloe1:
 
         pause 1.5
 
-        scene v12ferch1
+        scene v12ferch1a
         with dissolve
 
         cl "So, are you the killer? Seriously, [name]."
 
-        scene v12ferch1a
+        scene v12ferch1
         with dissolve
 
         u "There's only one way to find out who the killer is, my love."
@@ -1402,12 +1394,12 @@ label v12s7_chloe_kill:
 
     u "Think about it this way: The faster I kill, the faster this is over."
 
-    scene v12ferch1
+    scene v12ferch1d
     with dissolve
 
     cl "Yeah, yeah, whatever. Go finish your massacre Mr. Boxer."
 
-    scene v12ferch1a
+    scene v12ferch1
     with dissolve
 
     u "*Chuckles*"
@@ -1520,7 +1512,7 @@ label v12s7_riley3:
 
     ri "*Southern accent* That's a rule the poor and the rich can both live by."
 
-    scene v12ferric2a
+    scene v12ferric2b
     with dissolve
 
     u "Is there a sign on me that says \"killer\" or something? *Chuckles* I haven't done anything."
@@ -1540,7 +1532,7 @@ label v12s7_riley3:
 
     ri "*Southern accent* \"Tactics\"? That sounds like a murder plotting term to me..."
 
-    scene v12ferric2a
+    scene v12ferric2b
     with dissolve
 
     u "No, I just meant... You know what, nevermind. *Chuckles* I'll let you two run your brains dry."
@@ -1559,8 +1551,6 @@ label v12s7_riley3:
     $ v12s7_endtalkList.append(riley)
 
     call screen v12s7_left_viewpoint
-    ### ERROR: -If MC presses the murder button during this scene he gets caught ###
-    ### ERROR: -Back to free roam ###
     
 label v12s7_riley3a:
     $ freeroam9.add("riley3")
@@ -1571,7 +1561,6 @@ label v12s7_riley3a:
 
     show screen murder_button_overlay(riley)
 
-    ### ERROR: -If talk to Riley 3 No Chloe ###
     scene v12ferril1 # FPP. Show riley, slight smile mouth closed.
     #with dissolve
 
@@ -1644,7 +1633,7 @@ label v12s7_riley3a:
             ri "*Whisper* Hey, I am not playing hardcore. I just don't wanna get in trouble and I'll have you know I actually enjoy stuff like this."
             ri "You gotta admit, Mr. Lee creates very interactive situations for us students. I appreciate that."
 
-            scene v12ferril1a
+            scene v12ferril1
             with dissolve
 
             u "Haha, suck up."
@@ -1787,7 +1776,7 @@ label v12s7_lauren1:
 
     la "And there you are."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v12ferla5 # TPP. Show lauren kissing mc.
         with dissolve
         play sound "sounds/kiss.mp3"
@@ -1935,7 +1924,7 @@ label v12s7_lauren1:
 
     la "You know what, go bother someone else. *Chuckles* Maybe someone will kill you for me. *Laughs*"
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v12ferla1d
         with dissolve
 
@@ -2958,9 +2947,6 @@ label v12s7_lindsey_charlie1:
 
     call screen v12s7_captains_room
 
-    ### ERROR: -If Mc presses the button during this convo he is caught ###
-    ### ERROR: -Back to free roam ###
-
 label v12s7_lindsey2:
     $ freeroam9.add("lindsey2")
     $ v12s7_seenList = []
@@ -3033,51 +3019,54 @@ label v12s7_lindsey2:
     menu:
         "Me":
             $ add_point(KCT.BOYFRIEND)
-            scene v12ferli3a
+            scene v12ferli3
             with dissolve
             
             u "I can be your distraction. I'll just try and separate them... then see if I get murked or not."
 
         "Charli":
             $ add_point(KCT.TROUBLEMAKER)
-            scene v12ferli3a
+            scene v12ferli3
             with dissolve
 
             u "Let Charli be your distraction."
 
-            scene v12ferli3
+            scene v12ferli3a
             with dissolve
 
             li "Charli can't leave his spot though."
 
-            scene v12ferli3a
+            scene v12ferli3
             with dissolve
 
             u "Just start talking to people about how vulnerable Charli is and see who takes the bait."
 
+    scene v12ferli3a
+    with dissolve
+
     li "Hmmm, not a bad idea."
 
-    scene v12ferli3a
+    scene v12ferli3
     with dissolve
 
     u "*Whisper* Why are you taking this so serious?"
 
-    scene v12ferli3
+    scene v12ferli3a
     with dissolve
 
     li "The same reason you're whispering. *Chuckles* But I'm also having fun with it."
 
-    scene v12ferli3a
+    scene v12ferli3
     with dissolve
 
     u "Keeping your mind off the Chicks stuff?"
 
-    scene v12ferli3
+    scene v12ferli3a
     with dissolve
 
     li "I'm not even worried about all that anymore."
 
-    scene v12ferli3a
+    scene v12ferli3
     with dissolve
 
     u "Wait, you're not running anymore?"
@@ -3155,7 +3144,7 @@ label v12s7_lindsey2:
     scene v12ferli3b
     with dissolve
 
-    if lindsey.relationship.value >= Relationship.KISS.value:
+    if lindsey.relationship >= Relationship.KISS:
         scene v12ferli5 # TPP. Show mc and lindsey kissing
         with dissolve
 
@@ -3511,8 +3500,6 @@ label v12s7_msrose1:
 label v12s7_ms_rose_kill:
     hide screen murder_button_overlay
 
-    ### ERROR: -If MC presses the murder button during this convo ###
-
     scene v12fermsr4 # TPP. MC points a finger gun at Ms. Rose, mc mouth open
     with dissolve
 
@@ -3657,7 +3644,7 @@ label v12s7_penelope1:
 
             pe "I am."
 
-            if penelope.relationship.value >= Relationship.LIKES.value:
+            if penelope.relationship >= Relationship.LIKES:
                 scene v12ferpen1
                 with dissolve
 
@@ -3889,7 +3876,6 @@ label v12s7_amber1:
 
     show screen murder_button_overlay(amber)
 
-    ### ERROR: -If talk to Amber ###
     scene v12feram1 # FPP. Show amber from a distance, slight smile, mouth open
     #with dissolve
 
@@ -4362,7 +4348,6 @@ label v12s7_riley2_amber:
 
     show screen murder_button_overlay(riley)
 
-    ### ERROR: -If talk to Riley 2 and Amber ###
     scene v12feramb1 # FPP. Show amber, from a distance, looking at riley out of shot, mouth open
     #with dissolve
 
@@ -4430,9 +4415,6 @@ label v12s7_riley2_amber:
     play music "music/v12/Track Scene 7_2.mp3" fadein 2
 
     call screen v12s7_front_gallery
-
-    ### ERROR: -If MC presses the murder button during this scene he gets caught ###
-    ### ERROR: -Back to free roam ###
 
 label v12s7_sam_cameron:
     $ freeroam9.add("samantha")
@@ -5385,22 +5367,22 @@ label v12s7_nora1:
 
                     u "For sure. You're way more fun to be around, and a hell of a lot more attractive. *Chuckles*"
 
-                    scene v12fernor1e
+                    scene v12fernor1d
                     with dissolve
 
                     no "Haha! You aren't wrong. *Chuckles*"
 
-                    scene v12fernor1d
+                    scene v12fernor1e
                     with dissolve
 
                     u "Well, now that you're smiling again, I should get back to the game. Talk later?"
 
-                    scene v12fernor1e
+                    scene v12fernor1d
                     with dissolve
 
                     no "Yeah. And... thank you, really."
 
-                    scene v12fernor1d
+                    scene v12fernor1e
                     with dissolve
 
                     u "Of course."
@@ -5432,7 +5414,7 @@ label v12s7_nora_kill:
 
     pause 0.75
 
-    if nora.relationship.value >= Relationship.LIKES.value:
+    if nora.relationship >= Relationship.LIKES:
         scene v12fernor5a # FPP. Show nora, slight smile mouth open
         with dissolve
 
@@ -6239,7 +6221,3 @@ label v12s7_mc_caught:
     stop music fadeout 3
 
     jump v12_murder_mystery_reveal
-    
-    ### ERROR: -If MC doesn't kill someone but they're still in the right spot for him to kill them then they say "Yes?" as he walks up. At point he has the opportunity to kill which triggers the presses murder button actions and dialog ###
-
-    ### ERROR: -If MC kills everyone then the free roam ends by clicking on Mr. Lee ###

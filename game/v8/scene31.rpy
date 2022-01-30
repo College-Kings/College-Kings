@@ -54,7 +54,7 @@ label v8_tues_eco_class:
     scene v8stec5
     with dissolve
 
-    if riley.relationship.value >= Relationship.FWB.value:
+    if riley.relationship >= Relationship.FWB:
         u "It's too bad, though."
 
         scene v8stec5b # FPP. Same camera as v8stec5, Riley confused, mouth open.
@@ -185,7 +185,7 @@ label tec_cont:
 
     pause 0.5
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v8stec8 # FPP. Show Lauren, Lauren looking at camera, Lauren smile, mouth open.
         with dissolve
 

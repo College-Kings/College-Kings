@@ -218,9 +218,9 @@ label v2start:
     with dissolve
 
     label repeatb:
-        if lauren.messenger.replies:
+        if lauren.messenger.replies or ryan.messenger.replies:
             call screen phone
-        if lauren.messenger.replies:
+        if lauren.messenger.replies or ryan.messenger.replies:
             u "(Damn, my phone's blowing up. I should probably check my messages.)"
             jump repeatb
 
@@ -1174,7 +1174,7 @@ label meet_lauren2:
         "There was something there":
             $ add_point(KCT.BOYFRIEND)
             
-            if lauren.relationship.value >= Relationship.KISS.value:
+            if lauren.relationship >= Relationship.KISS:
                     scene s130c
                     with dissolve
                     u "I know you stopped kissing me after about a second..."
@@ -1183,7 +1183,7 @@ label meet_lauren2:
 
                     u "There was something real there and you know it."
 
-            elif lauren.relationship.value >= Relationship.MOVE.value:
+            elif lauren.relationship >= Relationship.MOVE:
                 scene s130c
                 with dissolve
 
@@ -1201,10 +1201,10 @@ label meet_lauren2:
 
                 u "And I should have. There was something real there. Between us."
 
-            if lauren.relationship.value >= Relationship.KISS.value or kct == "loyal":
+            if lauren.relationship >= Relationship.KISS or kct == "loyal":
                 $ laawk = False
 
-                if lauren.relationship.value < Relationship.KISS.value:
+                if lauren.relationship < Relationship.KISS:
                     call screen kct_popup
 
                 $ lauren.relationship = Relationship.GIRLFRIEND
@@ -1313,7 +1313,7 @@ label meet_lauren2:
             scene s130a
             with dissolve
 
-            if lauren.relationship.value >= Relationship.MOVE.value:
+            if lauren.relationship >= Relationship.MOVE:
                 u "That was uhm... nothing."
 
                 u "Let's just forget that ever happened."
@@ -1717,7 +1717,7 @@ label history2:
 
     no "Looks like he got beaten up."
 
-    if nora.relationship.value >= Relationship.MOVE.value:
+    if nora.relationship >= Relationship.MOVE:
         scene s142a # both mouths shut
         with dissolve
 
@@ -2726,7 +2726,7 @@ label try1new:
             menu:
                 "Risk it":
                     if config_censored:
-                        call screen censoredPopup("v2_nsfwSkipLabel1")
+                        call screen censored_popup("v2_nsfwSkipLabel1")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
 
@@ -2865,7 +2865,7 @@ label try2new:
             menu:
                 "Risk it":
                     if config_censored:
-                        call screen censoredPopup("v2_nsfwSkipLabel2")
+                        call screen censored_popup("v2_nsfwSkipLabel2")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
 
@@ -3017,7 +3017,7 @@ label try3new:
             menu:
                 "Risk it":
                     if config_censored:
-                        call screen censoredPopup("v2_nsfwSkipLabel3")
+                        call screen censored_popup("v2_nsfwSkipLabel3")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
 
@@ -3259,7 +3259,7 @@ label try4new:
             menu:
                 "Risk it":
                     if config_censored:
-                        call screen censoredPopup("v2_nsfwSkipLabel4")
+                        call screen censored_popup("v2_nsfwSkipLabel4")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
 
@@ -3404,7 +3404,7 @@ label try5new:
             menu:
                 "Risk it":
                     if config_censored:
-                        call screen censoredPopup("v2_nsfwSkipLabel5")
+                        call screen censored_popup("v2_nsfwSkipLabel5")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
 
@@ -3541,7 +3541,7 @@ label try6new:
             menu:
                 "Risk it":
                     if config_censored:
-                        call screen censoredPopup("v2_nsfwSkipLabel6")
+                        call screen censored_popup("v2_nsfwSkipLabel6")
 
                     $ v2_caughtpeeking = renpy.random.choice([True, False])
 

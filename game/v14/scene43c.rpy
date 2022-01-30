@@ -61,7 +61,7 @@ label v14s43c:
 
             pe "*Chuckles* Right..."
 
-            if penelope.relationship.value >= Relationship.LOYAL.value:
+            if penelope.relationship >= Relationship.LOYAL:
                 scene v14s43c_1c
                 with dissolve
 
@@ -307,7 +307,7 @@ label v14s43c:
 
     u "*British accent* I haven't lied!"
 
-    if penelope.relationship.value >= Relationship.LOYAL.value and (chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value):
+    if penelope.relationship >= Relationship.LOYAL and (chloe.relationship >= Relationship.GIRLFRIEND or lauren.relationship >= Relationship.GIRLFRIEND):
         scene v14s43c_1j #FPP. same as v14s43c_1b Penelope has a slightly confused expression, mouth closed
         with dissolve
 
@@ -323,7 +323,7 @@ label v14s43c:
 
     u "*Whispers* Wait... Is this a romance or an argument scene?"
 
-    scene v14s43c_1a
+    scene v14s43c_1e
     with dissolve
 
     pe "*Whispers* Just play along! Ahem..."
@@ -600,7 +600,7 @@ label v14s43c:
 
     pe "Good, see ya!"
 
-    if penelope.relationship.value >= Relationship.LOYAL.value and v14_PenRomScene:
+    if penelope.relationship >= Relationship.LOYAL and v14_PenRomScene:
 
         scene v14s43c_3c # same as v14s43c_3c Penelope quickly kisses MC on the cheek, Penelope eyes closed, Mc eyes open, slight smile
         with dissolve

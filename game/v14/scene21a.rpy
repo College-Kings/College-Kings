@@ -12,7 +12,7 @@ label v14s21a:
     pause 1.25
 
     if config_censored:
-        call screen censoredPopup("v14s21a_nsfwSkipLabel1")
+        call screen censored_popup("v14s21a_nsfwSkipLabel1")
 
     scene v14s21a_1a # TPP Same angle as 1. Chloe, now topless, removing MC's shirt
     with dissolve

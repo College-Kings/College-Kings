@@ -5,14 +5,18 @@
 # Render Count: 8 Unique 71 Total
 
 label v15s22:
-    $ v15s22_kiwiiPost1= KiwiiPost(chloe, "v15s22Kiwii1", "Making changes for my girls!", numberLikes=515)
-    $ v15s22_kiwiiPost1.newComment(aubrey, "Ooooh, what are you up to?", numberLikes=renpy.random.randint(160, 460))
-    $ v15s22_kiwiiPost1.newComment(grayson, "Hanging out with the Dean now? That's one way to get votes I guess...", numberLikes=renpy.random.randint(160, 460))
-    $ v15s22_kiwiiPost1.newComment(chris, "Looks like the President of the Chicks is making some big moves, huh?", numberLikes=renpy.random.randint(160, 460))
-    $ v15s22_kiwiiPost1.newComment(chloe, "Trying to! Also, fuck off Gray :)", numberLikes=renpy.random.randint(160, 460))
+    play music "music/v13/Track Scene 39.mp3" fadein 2
 
-    if False: # for Lint
-        scene v15s22Kiwii1 # smile next the dean's office door
+    $ v15s22_kiwiiPost1= KiwiiPost(chloe, "v15/v15_chlpost1.webp", "Making changes for my girls!", numberLikes=515)
+    $ v15s22_kiwiiPost1.newComment(aubrey, "Ooooh, what are you up to?", numberLikes=renpy.random.randint(160, 460), force_send=True)
+
+    if v14_ApesPostChloePics:
+        $ v15s22_kiwiiPost1.newComment(grayson, "What are you with the Dean for? Ugh...", numberLikes=renpy.random.randint(160, 460), force_send=True)
+    else:
+        $ v15s22_kiwiiPost1.newComment(grayson, "Hanging out with the Dean now? That's one way to get votes I guess...", numberLikes=renpy.random.randint(160, 460), force_send=True)
+    
+    $ v15s22_kiwiiPost1.newComment(chris, "Looks like the President of the Chicks is making some big moves, huh?", numberLikes=renpy.random.randint(160, 460), force_send=True)
+    $ v15s22_kiwiiPost1.newComment(chloe, "Trying to! Also, fuck off Gray :)", numberLikes=renpy.random.randint(160, 460), force_send=True)
 
     scene v15s22_1 # TPP. Chloe and MC are walking in the school hallway, slight smiles, mouths are closed, looking forward
     with dissolve
@@ -43,7 +47,7 @@ label v15s22:
 
             menu:
                 "Be supportive":
-                    if chloe.relationship.value >= Relationship.FWB.value:
+                    if chloe.relationship >= Relationship.FWB:
                         $ add_point(KCT.BOYFRIEND)
                     else:
                         $ add_point(KCT.BRO)
@@ -59,7 +63,7 @@ label v15s22:
                     cl "I really hope so."
 
                 "Be brutally honest":
-                    if chloe.relationship.value >= Relationship.FWB.value:
+                    if chloe.relationship >= Relationship.FWB:
                         $ add_point(KCT.BRO)
                     else:
                         $ add_point(KCT.TROUBLEMAKER)
@@ -90,7 +94,7 @@ label v15s22:
 
             menu:
                 "Change the subject":
-                    if chloe.relationship.value >= Relationship.FWB.value:
+                    if chloe.relationship >= Relationship.FWB:
                         $ add_point(KCT.BOYFRIEND)
                     else:
                         $ add_point(KCT.BRO)
@@ -111,12 +115,11 @@ label v15s22:
                     cl "Let's hope she's in a good mood."
 
                 "Lie":
-                    if chloe.relationship.value >= Relationship.FWB.value:
+                    if chloe.relationship >= Relationship.GIRLFRIEND:
                         $ add_point(KCT.TROUBLEMAKER)
+                        $ chloeSus += 1
                     else:
                         $ add_point(KCT.BRO)
-                        
-                    $ chloeSus += 1
 
                     scene v15s22_2d
                     with dissolve
@@ -149,7 +152,7 @@ label v15s22:
 
             menu:
                 "Be supportive":
-                    if chloe.relationship.value >= Relationship.FWB.value:
+                    if chloe.relationship >= Relationship.FWB:
                         $ add_point(KCT.BOYFRIEND)
                     else:
                         $ add_point(KCT.BRO)
@@ -165,7 +168,7 @@ label v15s22:
                     cl "I really hope so."
 
                 "Be brutally honest":
-                    if chloe.relationship.value >= Relationship.FWB.value:
+                    if chloe.relationship >= Relationship.FWB:
                         $ add_point(KCT.BRO)
                     else:
                         $ add_point(KCT.TROUBLEMAKER)
@@ -191,11 +194,10 @@ label v15s22:
 
         menu:
             "Be supportive":
-                if chloe.relationship.value >= Relationship.FWB.value:
+                if chloe.relationship >= Relationship.FWB:
                     $ add_point(KCT.BOYFRIEND)
                 else:
                     $ add_point(KCT.BRO)
-
 
                 scene v15s22_2a
                 with dissolve
@@ -213,7 +215,7 @@ label v15s22:
                 u "I know, but you have to stay positive. We still have a chance."
 
             "Be brutally honest":
-                if chloe.relationship.value >= Relationship.FWB.value:
+                if chloe.relationship >= Relationship.FWB:
                     $ add_point(KCT.BRO)
                 else:
                     $ add_point(KCT.TROUBLEMAKER)
@@ -298,15 +300,18 @@ label v15s22:
 
     cl "*Deep breath* Okay, let's go."
 
+    hide screen v15_teacher_brief_icon
+
     play sound "sounds/knock.mp3"
+    
+    stop music fadeout 3
+    
+    play music "music/v12/Track Scene 17_3.mp3" fadein 2
 
     scene v15s22_2g # FPP. same as v15s22_2f Chloe turns away from Mc and knocks on the Dean's door, still no expression, mouth is still closed
     with dissolve
 
     pause 0.75
-
-    scene v15s22_2h # FPP. same as v15s22_2g Chloe is no longer knocking on the door, still no expression, mouth is still closed
-    with dissolve
 
     de "Come in."
 
@@ -315,12 +320,12 @@ label v15s22:
     scene v15s22_4 # TPP. MC and Chloe are standing in front of the Dean's desk, Chloe has a slight smile, mouth is closed, Mc has a slight smile mouth is closed, The Dean is sat behind her desk, writing on a piece of paper, she is looking at her paperwork and not Chloe or Mc, no expression, mouth is closed, try to get the image as close as possible to avoid showing an excess amount of the office
     with dissolve
 
-    pause 0.75
+    u "(Damn, does she have a new office?)"
 
     if kct == "popular":
         $ v15s22_meeting_points += 1
 
-    $ animated_value_percent = v15s21_meeting_points+5
+    $ animated_value_percent = v15s22_meeting_points+5
 
     scene v15s22_4a # TPP. same as v15s22_4 The only difference is that Chloe's mouth is open, The dean does not look up at Chloe or Mc
     with dissolve
@@ -340,7 +345,7 @@ label v15s22:
     scene v15s22_4
     with dissolve
 
-    show screen teacher_conviction_bar(5 * 100 / 13, "DEAN")
+    show screen teacher_conviction_bar(5 * 100 / 13, "DEAN HARRISON")
 
     menu:
         "Say hello to the Dean":
@@ -352,7 +357,7 @@ label v15s22:
             u "Hi, Dean Harrison."
 
             $ v15s22_meeting_points -= 1
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
             scene v15s22_4b
             with dissolve
@@ -361,7 +366,7 @@ label v15s22:
 
         "Just sit down":
             $ v15s22_meeting_points += 0
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
             #$ add_point(KCT.BRO)
 
@@ -411,7 +416,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points += 1
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
             de "Mr. Lee? You must have been very convincing."
 
@@ -433,7 +438,7 @@ label v15s22:
                     with dissolve
 
                     $ v15s22_meeting_points += 1
-                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                     de "Well, I look forward to hearing from him how he came to that conclusion."
 
@@ -481,7 +486,7 @@ label v15s22:
                     with dissolve
 
                     $ v15s22_meeting_points -= 1
-                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                     de "I can assure you, nobody finds you funny."
 
@@ -507,7 +512,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points += 1
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
             de "Oh, good. You've already convinced Ms. Rose."
 
@@ -529,13 +534,13 @@ label v15s22:
                     with dissolve
 
                     $ v15s22_meeting_points += 1
-                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                     de "Did she? I'll be interested to hear from her how she arrived at that conclusion."
 
                     de "So now you're here to convince me."
 
-                "Scarcastic joke":
+                "Sarcastic joke":
                     #$ add_point(KCT.TROUBLEMAKER)
 
                     scene v15s22_6d
@@ -579,7 +584,7 @@ label v15s22:
                     de "Timing is everything, [name]. And this certainly isn't the time."
 
                     $ v15s22_meeting_points -= 1
-                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                    show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
                     de "The next time you speak, make sure it's something sensible."
 
                     scene v15s22_6f
@@ -602,7 +607,7 @@ label v15s22:
         with dissolve
 
         $ v15s22_meeting_points -= 1
-        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
         de "It doesn't look like you managed to secure any support from a teacher. There's no signature on here."
 
@@ -644,7 +649,7 @@ label v15s22:
                 with dissolve
 
                 $ v15s22_meeting_points -= 1
-                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                 de "I'm sure whoever you met with, you obviously didn't do a very good job of convincing them."
 
@@ -675,7 +680,7 @@ label v15s22:
                 with dissolve
 
                 $ v15s22_meeting_points += 1
-                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                 u "In all honesty, we could've done better. However, we have learned a lot from the experience."
 
@@ -699,7 +704,7 @@ label v15s22:
         with dissolve
         
         $ v15s22_meeting_points += 1
-        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN") 
+        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON") 
 
         de "You did a fine job defending your friend when we met last time, [name]."
         
@@ -735,21 +740,21 @@ label v15s22:
     with dissolve
 
     menu:
-        "I'll take my time":
+        "Be thorough":
             #$ add_point(KCT.TROUBLEMAKER)
 
             scene v15s22_6b
             with dissolve
 
-            u "I'll take my time if that's alright. I don't want to leave out any major details."
+            u "I'll take my time if that's alright. I want to be thorough."
 
             scene v15s22_6c
             with dissolve
 
             $ v15s22_meeting_points -= 1
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
-            de "That's not necessary. I know what you're asking for, I need you to convince me."
+            de "That's not necessary. I know what you're asking for, I just need you to convince me."
 
         "Your time is important":
             #$ add_point(KCT.BRO)
@@ -763,7 +768,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points += 1
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
             de "Thank you. I'm glad you understand."
 
@@ -781,12 +786,9 @@ label v15s22:
                 with dissolve
 
                 $ v15s22_meeting_points += 1
-                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                 de "That would be appreciated."
-
-                scene v15s22_6d
-                with dissolve
                 
             "Stress the teacher's support":
                 #$ add_point(KCT.TROUBLEMAKER)
@@ -796,7 +798,7 @@ label v15s22:
 
                 u "I feel like it should be enough that we secured support from a teacher. Let's not pretend that's an easy thing to do."
 
-                scene v15s22_7d
+                scene v15s22_7b
                 with dissolve
 
                 cl "Well, we can still try to summarize our goal for the Dean, [name]."
@@ -805,12 +807,9 @@ label v15s22:
                 with dissolve
 
                 $ v15s22_meeting_points -= 1
-                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                 de "That would be advisable, yes."
-
-                scene v15s22_6f
-                with dissolve
 
                 menu:
                     "Agree": # (CORRECT CHOICE - ONE POINT)
@@ -820,7 +819,7 @@ label v15s22:
                         with dissolve
 
                         $ v15s22_meeting_points += 1
-                        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                         u "Okay, sure. Let's do that then."
 
@@ -831,7 +830,7 @@ label v15s22:
                         with dissolve
 
                         $ v15s22_meeting_points -= 1
-                        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+                        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
                         u "We've worked very hard all day to prepare that signature for you, but sure. You're the boss."
 
@@ -845,7 +844,7 @@ label v15s22:
     scene v15s22_6g
     with dissolve
 
-    de "Quickly, please. I have another meeting soon."
+    de "So?"
 
     scene v15s22_6b
     with dissolve
@@ -856,7 +855,7 @@ label v15s22:
     with dissolve
 
     menu:
-        "Quick version":
+        "Quickly run through everything":
             #$ add_point(KCT.TROUBLEMAKER)
 
             scene v15s22_6b
@@ -864,22 +863,13 @@ label v15s22:
 
             u "Well, if we're pushed for time..."
 
-            scene v15s22_6b
-            with dissolve
-
             u "Basically, we think you should agree to this proposal because in the long term it will attract a lot more students to SVC."
-
-            scene v15s22_6l # FPP. same as v15s22_6k The Dean has a slightly confused expression, still looking at Mc, mouth is still closed
-            with dissolve
 
             u "And it will encourage other sororities and fraternities to want the same treatment as the Chicks."
 
-            scene v15s22_6m # FPP. same as v15s22_6l The Dean's mouth is open, still a slightly confused expression, still looking at Mc
-            with dissolve
-
             u "And this should help improve enrollment numbers if we're offering reduced tuition fees."
 
-            scene v15s22_6l
+            scene v15s22_6l # FPP. same as v15s22_6k The Dean has a slightly confused expression, still looking at Mc, mouth is still closed
             with dissolve
 
             de "..."
@@ -898,7 +888,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points -= 1
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
             de "That was... very quick."
 
@@ -912,7 +902,7 @@ label v15s22:
 
             pause 0.75
 
-        "Main points":
+        "Emphasize each main point":
             #$ add_point(KCT.BRO)
 
             scene v15s22_6b
@@ -929,7 +919,7 @@ label v15s22:
             with dissolve
 
             $ v15s22_meeting_points += 1
-            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+            show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
 
             de "Okay, that's a valid first point."
 
@@ -941,7 +931,7 @@ label v15s22:
             scene v15s22_6b
             with dissolve
 
-            u "And in terms of fairness with the other sororities and fraternities, when they see the Chicks leading the way, they will want the same treatment."
+            u "And in terms of fairness with the other sororities and frats, when they see the Chicks leading the way, they will want the same treatment."
 
             scene v15s22_6n
             with dissolve
@@ -973,7 +963,7 @@ label v15s22:
 
             cl "Exactly."
         
-    if not v15_seduce_ms_rose and not v15_threaten_ms_rose:
+    if v15s21_meeting_points >= 1 and not v15_seduce_ms_rose and not v15_threaten_ms_rose:
         scene v15s22_6b
         with dissolve
 
@@ -982,13 +972,18 @@ label v15s22:
         scene v15s22_6o # FPP. same as v15s22_6b The Dean is slightly shocked, mouth is still closed, still looking at Mc
         with dissolve
 
+        pause 0.75
+        
+        scene v15s22_6c
+        with dissolve
+
         de "Oh- Wow..."
 
         scene v15s22_6h
         with dissolve
 
         $ v15s22_meeting_points += 1
-        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN")
+        show screen teacher_conviction_bar((v15s22_meeting_points + 5) * 100 / 13, "DEAN HARRISON")
         
         de "That is a surprise. I was opposed to the scholarship from the beginning, so that's a major bonus point, Chloe."
 
@@ -1006,6 +1001,8 @@ label v15s22:
     with dissolve
 
     de "Well, I think I've heard enough to make my decision."
+
+    hide screen teacher_conviction_bar with dissolve
 
     scene v15s22_5b
     with dissolve
@@ -1066,6 +1063,9 @@ label v15s22:
             jump v15dean_successful
 
         else: # -if won signature and no dean support
+            if v15s22_meeting_points == 0 and not kct == "popular":
+                call screen kct_popup(required_kct="popular")
+        
             scene v15s22_6g
             with dissolve
 
@@ -1172,7 +1172,6 @@ label v15s22:
 
     elif v15s22_meeting_points >= 1: # -if no signature, and medium/low dean support
         if kct == "popular":
-        
             if v15s22_meeting_points == 1:
                 call screen kct_popup
         
@@ -1248,7 +1247,10 @@ label v15s22:
 
         jump v15dean_successful
 
-    else: # -if no signature and MC scored 2 points or less
+    else: # -if no signature and no dean support
+        if v15s22_meeting_points == 0 and not kct == "popular":
+            call screen kct_popup(required_kct="popular")
+        
         scene v15s22_6
         with dissolve
 
@@ -1279,6 +1281,10 @@ label v15s22:
         jump v15dean_unsuccessful
 
     label v15dean_successful:
+        stop music fadeout 3
+        
+        play music "music/v13/Track Scene 10.mp3" fadein 2
+    
         scene v15s22_6h
         with dissolve
 
@@ -1361,7 +1367,7 @@ label v15s22:
 
         u "Of course."
 
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+        if chloe.relationship >= Relationship.GIRLFRIEND:
             play sound "sounds/kiss.mp3"
         
             scene v15s22_1d # TPP. same as v15s22_1b Chloe gives Mc a romantic hug and kiss, both of them have their eyes closed
@@ -1402,6 +1408,10 @@ label v15s22:
         jump v15s22_afterchloe
 
     label v15dean_unsuccessful:
+        stop music fadeout 3
+        
+        play music "music/v13/Track Scene 10.mp3" fadein 2
+    
         scene v15s22_5d # TPP. same as v15s22_5c The Dean is walking away from Mc and Chloe not shaking Chloe's hand no expression mouth is closed, Mc and Chloe are both still standing, Chloe has a sad expressions looking at Mc mouth is closed, Mc has no expression looking at Chloe mouth is closed
         with dissolve
 
@@ -1444,7 +1454,7 @@ label v15s22:
 
         menu:
             "Call after her":
-                if chloe.relationship.value >= Relationship.FWB.value:
+                if chloe.relationship >= Relationship.FWB:
                     $ add_point(KCT.TROUBLEMAKER)
                 else:
                     $ add_point(KCT.BRO)
@@ -1474,7 +1484,7 @@ label v15s22:
                 pause 0.75
 
             "Say nothing":
-                if chloe.relationship.value >= Relationship.FWB.value:
+                if chloe.relationship >= Relationship.FWB:
                     $ add_point(KCT.BOYFRIEND)
                 else:
                     $ add_point(KCT.BRO)
@@ -1509,7 +1519,7 @@ label v15s22:
     else:
         $ aubrey.messenger.newMessage("Come to the Chicks house. I have an extra special surprise for you ;) I think you've earned it.", force_send=True)
 
-        if aubrey.relationship.value >= Relationship.FWB.value: # -if AubreyRs
+        if aubrey.relationship >= Relationship.FWB: # -if AubreyRs
             $ aubrey.messenger.addReply("A naked surprise? ;)", func=None)
             $ aubrey.messenger.newMessage("Guess you'll find out soon enough!", force_send=True)
 
@@ -1577,6 +1587,8 @@ label v15s22:
         with dissolve
 
         pause 0.75
+
+    stop music fadeout 3
 
     if v15_lindsey_gamenight:
         jump v15s24

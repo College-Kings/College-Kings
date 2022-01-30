@@ -110,13 +110,14 @@ init python:
     if renpy.loadable("v15/scene1.rpy"):
         SceneGallery("Angry with Ms. Rose", "images/v15/scene 15/v15s15_7f.webp", "v15s15sg") # 15, Ms. Rose
         SceneGallery("The List (Amber)", "images/v15/scene 18a/v15s18aamber_9e.webp", "v15s18a_ambersg") # 18a, Amber
-        SceneGallery("The List (Aubrey)", "images/3 hits.webp", "18c") # 18c, Aubrey
-        SceneGallery("The List (Autumn)", "images/3 hits.webp", "18c") # 18c, Autumn
-        SceneGallery("The List (Penelope)", "images/3 hits.webp", "18c") # 18c, Penelope
+        SceneGallery("The List (Aubrey)", "images/v15/scene 18c/v15s18c_imau_14.webp", "v15s18c_aubreysg") # 18c, Aubrey
+        SceneGallery("The List (Autumn)", "images/v15/scene 18c/v15autkiss.webp", "v15s18c_autumnsg") # 18c, Autumn
+        SceneGallery("The List (Penelope)", "images/v15/scene 18c/v15s18c_chpe_11.webp", "v15s18c_penelopesg") # 18c, Penelope
         SceneGallery("The List (Riley)", "images/v15/scene 18a/v15s18ariley_14.webp", "v15s18a_rileysg") # 18a, Riley
-        SceneGallery("Birthday treat", "images/v15/scene 18e/v15s18eend_6.webp", "v15s18e_sg"), # 18e, Lauren
-        SceneGallery("Fun at the wedding", "images/3 hits.webp", "33"), # 33, Naomi
-        SceneGallery("Choosing Nora", "images/v15/scene 48a/v15noror2Start.webp", "48"), # 48, Nora
+        SceneGallery("Birthday treat", "images/v15/scene 18e/v15s18eend_6.webp", "v15s18e_sg") # 18e, Lauren
+        SceneGallery("Late night sexting", "images/v15/scene 29/v15s29_emily_lingerie.webp", "v15s29_emilysg") # 18e, Lauren
+        SceneGallery("Fun at the wedding", "images/v15/scene 33/v15s33_46b.webp", "v15s35_naomisg") # 33, Naomi
+        SceneGallery("Choosing Nora", "images/v15/scene 48a/v15noror2Start.webp", "v15s48a_norasg") # 48, Nora
 
 
 screen scene_gallery():
@@ -126,12 +127,13 @@ screen scene_gallery():
 
     default image_path = "main_menu/scene_gallery/images/"
 
-    add image_path + "background.png"
+    add image_path + "background.webp"
 
     imagebutton:
-        idle image_path + "return_idle.png"
+        idle image_path + "return_idle.webp"
+        hover image_path + "return_hover.webp"
         action ShowMenu("main_menu")
-        pos (129, 82)
+        pos (120, 80)
 
     fixed:
         pos (114, 178)
@@ -143,42 +145,43 @@ screen scene_gallery():
             spacing 20
             xalign 0.5
             top_margin 50
+            bottom_margin 80
             mousewheel True
             
             for gallery_item in scene_gallery_items:
                 fixed:
-                    xysize (374, 264)
+                    xysize (374, 300)
 
                     button:
-                        background Transform(gallery_item.image, size=(362, 230), pos=(6, 6))
-                        insensitive_background Transform(gallery_item.image, blur=50, size=(362, 230), pos=(6, 6))
-                        idle_foreground image_path + "button_idle.png"
-                        hover_foreground image_path + "button_hover.png"
-                        insensitive_foreground image_path + "button_idle.png"
+                        background Transform(gallery_item.image, size=(362, 230), pos=(6, 16))
+                        insensitive_background Transform(gallery_item.image, blur=50, size=(362, 230), pos=(6, 16))
+                        idle_foreground image_path + "button_idle.webp"
+                        hover_foreground image_path + "button_hover.webp"
+                        insensitive_foreground image_path + "button_idle.webp"
                         action Replay(gallery_item.label, scope=update_scope(gallery_item.scope))
 
                     fixed:
                         xysize (250, 49)
                         xalign 0.5
-                        ypos 210
+                        ypos 224
 
-                        # add "#0f0"
                         text gallery_item.title.upper() align (0.5, 0.5)
 
-    add image_path + "shadow.png" xalign 0.5 ypos 893
+            null
+
+    add image_path + "shadow.webp" xalign 0.5 ypos 893
 
     add "scene_gallery_bar_base" pos (1743, 226) xysize (27, 734)
     vbar:
         pos (1748, 231)
         xysize (17, 724)
         base_bar "#0000"
-        thumb image_path + "bar_thumb.png"
+        thumb image_path + "bar_thumb.webp"
         value YScrollValue("vpg")
 
 
-
-style scene_gallery_text is olympus_mount_30:
-    size 25
+style scene_gallery_text is bebas_neue_30:
+    size 22
 
 
 label scene_gallery_name_change:
@@ -186,6 +189,6 @@ label scene_gallery_name_change:
     if not persistent.name.strip():
         $ persistent.name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
 
-    $ scopeDict = {"name":persistent.name}
+    $ scopeDict = {"name": persistent.name}
 
     return

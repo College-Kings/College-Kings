@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s24:
+    play music "music/v13/Track Scene 11_1.mp3" fadein 2
+
     scene v15s24_1 # TPP. Show MC walking up to the convenient store, MC slightly confused, mouth closed.
     with dissolve
 
@@ -219,7 +221,7 @@ label v15s24:
 
     li "Here some cash too."
 
-    if lindsey.relationship.value >= Relationship.FWB.value: 
+    if lindsey.relationship >= Relationship.FWB: 
         scene v15s24_5c
         with dissolve
 
@@ -304,6 +306,10 @@ label v15s24:
     u "(No pressure...)"
 
     play sound "sounds/dooropen.mp3"
+
+    stop music fadeout 3
+    
+    play music "music/v13/Track Scene 10.mp3" fadein 2
 
     scene v15s24_8 # TPP. Show MC entering the store, slight smile, mouth closed.
     with dissolve
@@ -689,6 +695,9 @@ label v15s24:
 
                 scene v15s24_13
                 with dissolve
+
+                if not kct == "popular":
+                    call screen kct_popup(required_kct="popular")
 
                 cashier "I'm not selling you alcohol, kid."
 
@@ -1142,6 +1151,9 @@ label v15s24:
 
                 scene v15s24_13k
                 with dissolve
+                
+                if not kct == "popular":
+                    call screen kct_popup(required_kct="popular")
 
                 cashier "I wouldn't even wipe my ass with your ten extra bucks."
 
@@ -1239,6 +1251,10 @@ label v15s24:
                     u "*Chuckles* Thanks."
     
     if v15_lindsey_alcohol:
+        stop music fadeout 3
+        
+        play music "music/v13/Track Scene 30_1.mp3" fadein 2
+    
         scene v15s24_8a # TPP. Show MC exiting the store with a bag of alcohol, slight smile, mouth closed.
         with dissolve
 
@@ -1261,7 +1277,7 @@ label v15s24:
 
         li "Oh my god, it worked! You did it!"
 
-        if lindsey.relationship.value >= Relationship.FWB.value: 
+        if lindsey.relationship >= Relationship.FWB: 
             play sound "sounds/kiss.mp3"
 
             scene v15s24_5i
@@ -1355,6 +1371,10 @@ label v15s24:
                 li "Can't wait. *Laughs*"
 
     else:
+        stop music fadeout 3
+        
+        play music "music/v13/Track Scene 30_1.mp3" fadein 2
+    
         scene v15s24_8b # TPP. Show MC exiting the store empty handed, MC slight frown, mouth closed.
         with dissolve
 
@@ -1440,9 +1460,9 @@ label v15s24:
 
     $ aubrey.messenger.newMessage("Come to the Chicks house, asap! I have an extra special surprise for you. I think you've earned it ;)", force_send=True)
 
-    if aubrey.relationship.value >= Relationship.FWB.value: #if RS or Tamed 
+    if aubrey.relationship >= Relationship.FWB: #if RS or Tamed 
         $ aubrey.messenger.addReply("Ooh, Is it a naked surprise? ;)", func=None)
-        $ aubrey.messenger.newMessage("Haha, you'll have to come find out. Hurry up!", force_send=True)
+        $ aubrey.messenger.newMessage("Haha, you'll have to come find out. Hurry up!")
 
     else:
         $ aubrey.messenger.addReply("Ooh, okay. See you soon.", func=None)
@@ -1513,6 +1533,8 @@ label v15s24:
         scene v15s24_20a # FPP. MC watching Lindsey walk off empty handed, Lindsey neutral face, mouth closed.
         with dissolve
 
-pause 0.75
+    pause 0.75
 
-jump v15s26
+    stop music fadeout 3
+
+    jump v15s26

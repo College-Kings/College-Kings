@@ -429,7 +429,7 @@ label fr5riley1:
 
     scene v9slake2 #FPP Close up as if sitting next to Riley, you look at her from the side, Riley is sitting on the pier, with her legs hanging over the ledge, Riley looking at the lake. -
 
-    if riley.relationship.value >= Relationship.FWB.value:
+    if riley.relationship >= Relationship.FWB:
         u "What's a pretty lady doing all by herself?"
 
         scene v9slake2b #same as 2, but Riley now looking at you, flirting, mouth open
@@ -547,7 +547,7 @@ label fr5riley1:
 
         ri "Okay."
 
-    if riley.relationship.value < Relationship.FWB.value:
+    if riley.relationship < Relationship.FWB:
         u "And I thought I was gonna find you close to the water. Wanna take a dip?"
 
         scene v9slake2f
@@ -757,7 +757,7 @@ label fr5aubrey1:
 
             u "For one living in the moment, I wouldn't say you expect much at all. Well, maybe you don't expect much, but you surely know how to seize the moment."
 
-            if aubrey.relationship.value >= Relationship.FWB.value:
+            if aubrey.relationship >= Relationship.FWB:
                 label v9_aubrey_scene_lake:
                     $ sceneList.add("v9_aubrey")
 
@@ -787,7 +787,7 @@ label fr5aubrey1:
                     u "What is this?"
 
                     if config_censored:
-                        call screen censoredPopup("v9s7_nsfwSkipLabel1")
+                        call screen censored_popup("v9s7_nsfwSkipLabel1")
 
                     scene v9slake8 # same as 8a, mouth open
                     with dissolve

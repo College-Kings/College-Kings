@@ -419,6 +419,9 @@ label v12s27a:
         "It's not your best look":
             $ add_point(KCT.TROUBLEMAKER)
 
+            scene v12s27a_8a
+            #with dissolve
+
             u "Well, honestly... It's not your best look, in my opinion."
 
             scene v12s27a_8

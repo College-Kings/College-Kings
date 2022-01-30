@@ -150,7 +150,7 @@ label v13s29:
 
     am "Pot."
 
-    scene v13s29_10a # FPP. Same angle as v13s29_10, Gary has new pose [https://i.imgur.com/uW0r1g2.png] Gary mouth open
+    scene v13s29_10a # FPP. Same angle as v13s29_10, Gary has new pose, Gary mouth open
     with dissolve
 
     gary "More specifically?"

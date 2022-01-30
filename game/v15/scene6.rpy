@@ -9,6 +9,8 @@
 # Time: Friday
 
 label v15s6:
+    play music "music/v13/Track Scene 19_1.mp3" fadein 2
+
     scene v15s6_1 # TPP Show MC walking in school hallway toward library
     with fade
 
@@ -20,6 +22,10 @@ label v15s6:
 
         u "(There's Chloe. Oh shit- Is she crying?)"
         u "(Oh no, I think I know what this is about... *Sighs*)"
+        
+        stop music fadeout 3
+        
+        play music "music/v13/Track Scene 8.mp3" fadein 2
 
         scene v15s7_1 # FPP At entrance to library, Chloe is obviously crying and doing a bad job of hiding it with her hand
         with dissolve
@@ -31,7 +37,7 @@ label v15s6:
 
         cl "[name]... *Sniffles* I don't know what I'm going to do."
 
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+        if chloe.relationship >= Relationship.GIRLFRIEND:
             scene v15s7_2 # FPP MC reaches out and takes Chloe's hand
             with dissolve
 
@@ -164,7 +170,7 @@ label v15s6:
 
                     u "Holy shit... You have a diary?"
 
-                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                    if chloe.relationship >= Relationship.GIRLFRIEND:
                         $ chloeSus += 1
 
                     scene v15s7_1c # FPP Same angle as 1, Chloe looking at MC, tears on her face, she looks angry
@@ -172,7 +178,7 @@ label v15s6:
                 
                     cl "Yes, [name]. I DID have a diary."
 
-                    if chloe.relationship.value >= Relationship.FWB.value: #If Chloe GF or Chloe RS
+                    if chloe.relationship >= Relationship.FWB: #If Chloe GF or Chloe RS
                         scene v15s7_1a
                         with dissolve
 
@@ -254,7 +260,7 @@ label v15s6:
 
             u "Oh fuck, Chloe. I'm so sorry..."
 
-            if chloe.relationship.value >= Relationship.FWB.value:
+            if chloe.relationship >= Relationship.FWB:
                 scene v15s7_1a
                 with dissolve
 
@@ -311,8 +317,10 @@ label v15s6:
 
                 "Empathize":
                     $ add_point(KCT.BRO)
-                    $ chloeSus += 1
                     $ v15s7_chloe_empathize = True
+
+                    if chloe.relationship == Relationship.GIRLFRIEND:
+                        $ chloeSus += 1
 
                     # -Chloe slowly gets annoyed with MC through this empathizing bit-
                     scene v15s7_1b
@@ -379,7 +387,9 @@ label v15s6:
 
             u "You won't. I know you won't."
 
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+        if chloe.relationship >= Relationship.GIRLFRIEND:
+            play sound "sounds/kiss.mp3"
+            
             scene v15s7_4 # TPP Chloe giving MC a kiss, a little bit of mascara still streaking her face
             with dissolve
 
@@ -390,7 +400,7 @@ label v15s6:
 
             pause 1
         
-        elif chloe.relationship.value >= Relationship.FWB.value: # -if Chloe Rs, they hug tightly
+        elif chloe.relationship >= Relationship.FWB: # -if Chloe Rs, they hug tightly
             scene v15s7_3 # TPP Chloe giving MC a tight hug
             with dissolve
 
@@ -428,7 +438,9 @@ label v15s6:
 
             pause 0.75
         
-            jump v15s8 # -Transition to Scene 8-
+            stop music fadeout 3
+        
+            jump v15s8
 
         else: # -if MC is not helping Chloe
             u "I'll see you later? Lauren's party?"
@@ -453,7 +465,7 @@ label v15s6:
 
             u "Don't mention it."
 
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 scene v15s7_1l # FPP Same angle as 1, Chloe looking down at MC's dick, sexy expression, mouth open
                 with dissolve
 
@@ -494,13 +506,19 @@ label v15s6:
 
             pause 0.75
         
-            jump v15s9 # -Transition to Scene 9-
+            stop music fadeout 3
+        
+            jump v15s9
 
     else: # -if MC stole nothing from Chloe's room or never went to Chloe's room
         scene v15s6_2a # FPP Show Chloe near library door, smiling and chatting with two random students
         with dissolve
 
         u "(Oh, there's Chloe. Putting on the charm for support no doubt, haha.)"
+        
+        stop music fadeout 3
+        
+        play music "music/v13/Track Scene 8.mp3" fadein 2
         
         scene v15s7_8 # FPP At entrance to library, Chloe is talking to two random students, a man and a woman. Chloe smiling with mouth open
         with dissolve
@@ -605,7 +623,9 @@ label v15s6:
 
             pause 0.75
 
-            jump v15s8 # -Transition to Scene 8-
+            stop music fadeout 3
+
+            jump v15s8
 
         else: # -if MC is not helping Chloe
             scene v15s7_8b
@@ -628,7 +648,7 @@ label v15s6:
 
             u "Aw, okay. I'll try. *Chuckles*"
 
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 scene v15s7_8f
                 with dissolve
 
@@ -644,10 +664,12 @@ label v15s6:
 
                 cl "*Giggles*"
 
+                play sound "sounds/kiss.mp3"
+
                 scene v15s7_4a # TPP Same as 4, Chloe giving MC a kiss, no mascara streaking
                 with dissolve
 
-                pause 0.75
+                pause 1.75
 
             scene v15s7_8b
             with dissolve
@@ -669,4 +691,6 @@ label v15s6:
 
             pause 0.75
         
-            jump v15s9 # -Transition to Scene 9-
+            stop music fadeout 3
+        
+            jump v15s9

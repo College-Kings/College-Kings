@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s46:
+    play music "music/v15/Track Scene 46.mp3" fadein 2
+
     play sound "sounds/dooropen.mp3"
 
     scene v15s46_1 # TPP. Amber and MC entering the detective pinboard room, both slight smile, mouth closed.
@@ -30,23 +32,57 @@ label v15s46:
 
     u "No pressure then!"
 
-    u "Let's see if I can work my magic."
+    u "Let's take one final look at the board and see if I can work my magic."
 
     scene v15s46_4 # TPP. Show MC walking up to the pinboard, slight smile, mouth closed
     with dissolve
 
     pause 0.75
 
-    scene v15s46_5 # FPP. Looking at the pinboard.
-    with dissolve
-
-    pause 0.75
-
-    # -The UI pops up to show all the clues achieved and any new ones from the Chloe interrogation (CHLOE CLUES UNLOCKED: Nora always runs to her Dad for materialistic help. Nora & Ms. rose are really close. Nora still likes her ex-boyfriend from before Chris. Nora hates camping. CHLOE LOCATIONS UNLOCKED: Ex-boyfriend's house.)-
+    show screen detective_board # -The UI pops up to show all the clues achieved and any new ones from the Chloe interrogation (CHLOE CLUES UNLOCKED: Nora always runs to her Dad for materialistic help. Nora & Ms. rose are really close. Nora still friends with her ex-boyfriend from before Chris. Nora hates camping. CHLOE LOCATIONS UNLOCKED: Ex-boyfriend's house.)-
 
     # -MC can study all the clues and locations, all of which have comments from Amber to help them (SEE MIRO). MC can choose one of the locations. Once MC has chosen the location they want to go with, they can exit the UI whenever. The correct location is Nora's Dad's cabin-
 
-    if not nora_cabin: # Placeholder.
+    #pause
+    
+    call screen v15s46_chooselocation    
+
+    label v15s46_choosedad:
+        hide screen detective_icon
+        
+        u "She's at her dad's house, of course."
+        
+        jump v15s46_nocabin
+        
+    label v15s46_choosemsrose:
+        hide screen detective_icon
+        
+        u "She's with Ms. Rose, of course."
+    
+        jump v15s46_nocabin
+        
+    label v15s46_chooseaunt:
+        hide screen detective_icon
+        
+        u "She has to be at her aunt's apartment, of course."
+    
+        jump v15s46_nocabin
+        
+    label v15s46_choosecamping:
+        hide screen detective_icon
+        
+        u "I'm sure she's gone camping."
+    
+        jump v15s46_nocabin
+        
+    label v15s46_chooseex:
+        hide screen detective_icon
+
+        u "She must be with her ex from before."
+    
+        jump v15s46_nocabin
+
+    label v15s46_nocabin:
         scene v15s46_3b # FPP. MC looking at Amber, Amber looking at MC, Amber confused, mouth open.
         with dissolve
 
@@ -269,12 +305,16 @@ label v15s46:
 
                                 am "Ding, ding, ding! We have a winner. *Chuckles*"
 
-    else:
-        if len(v15_nora_clues) == 9 and len(v15_nora_locations) == 6:
-            $ grant_achievement("just_one_more_thing")
+        jump v15s46_afterchoice
 
+    label v15s46_choosecabin:
+        hide screen detective_icon
+        
         scene v15s46_3a
         with dissolve
+
+        if len(v15_nora_clues) == 9 and len(v15_nora_locations) == 6:
+            $ grant_achievement("just_one_more_thing")
 
         u "She's at her dad's cabin, then."
 
@@ -313,8 +353,7 @@ label v15s46:
 
         am "We're the best detective duo ever. *Giggles*"
 
-    scene v15s46_3
-    with dissolve
+    label v15s46_afterchoice:
 
     am "I'll send a message to Techie. She can find Mr. Rose's property records and find us an address."
 
@@ -348,7 +387,7 @@ label v15s46:
 
     am "Yeah, I know. She's amazing at what she does, and she's the best."
 
-    if penelope.relationship.value >= Relationship.LOYAL.value:
+    if penelope.relationship >= Relationship.LOYAL:
         scene v15s46_3a
         with dissolve
 
@@ -505,5 +544,7 @@ label v15s46:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v15s47

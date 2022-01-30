@@ -4,6 +4,8 @@
 # Time: Saturday Morning
 
 label v9_ri_sex:
+    $ sceneList.add("v9_riley")
+
     scene v9ris1 # TPP. Show MC outside Riley's dorm knocking on the door.
     with fade
 
@@ -81,7 +83,7 @@ label v9_ri_sex:
     u "Can't help it. You're so fucking hot."
 
     if config_censored:
-        call screen censoredPopup("v9s34_nsfwSkipLabel1")
+        call screen censored_popup("v9s34_nsfwSkipLabel1")
 
     scene v9ris6a # FPP. Same camera as v9ris6, seductive, mouth open.
     with dissolve

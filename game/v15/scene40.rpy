@@ -5,6 +5,8 @@
 # Render Count: 4 Unique 18 Total
 
 label v15s40:
+    play music "music/v14/Track Scene 3d_2.mp3" fadein 2
+
     scene v15s40_1 # FPP. Show just Autumn sitting beside Mc in the back of the Limo, Autumn has a slight smile, mouth open looking towards the front og the Limo at the other people, Don't show any other characters
     with dissolve
 
@@ -42,83 +44,7 @@ label v15s40:
 
     u "I mean, it's okay if you don't want to talk about it, but they're all asleep now and it's only me."
 
-    if autumn.relationship.value < Relationship.TRUST.value:
-        scene v15s40_1b
-        with dissolve
-
-        aut "I think I've talked about it enough for today."
-
-        scene v15s40_1a
-        with dissolve
-
-        u "Yeah, I get it. It's no problem at all."
-
-        scene v15s40_1b
-        with dissolve
-
-        aut "I get that you have questions. I just need more time to process things, I guess."
-
-        scene v15s40_1a
-        with dissolve
-
-        u "Absolutely. I understand."
-
-        scene v15s40_1b
-        with dissolve
-
-        aut "Thanks."
-
-        scene v15s40_1a
-        with dissolve
-
-        u "So, you had fun tonight at the club?"
-
-        scene v15s40_1c # FPP. same as v15s40_1b Autumn increases to a full smile, still looking at Mc, mouth is still open
-        with dissolve
-
-        aut "Yeah! I've haven't danced like that in way too long..."
-
-        aut "Solid company too. Aubrey and Lindsey are a lot of fun!"
-
-        scene v15s40_1a
-        with dissolve
-
-        u "Yeah, they're great."
-
-        if not v15_lindsey_inviteseb:
-            scene v15s40_1c
-            with dissolve
-
-            aut "Grayson, not so much, haha."
-
-            scene v15s40_1a
-            with dissolve
-
-            u "He's a bit... bittersweet, huh?"
-
-            scene v15s40_1b
-            with dissolve
-
-            aut "That's a very polite way of putting it. *Giggles*"
-
-        else:
-            scene v15s40_1
-            with dissolve
-
-            aut "And Sebastian... He's such a nice guy."
-
-            scene v15s40_1a
-            with dissolve
-
-            u "Yeah, he's one of those people that just seems to fit into any crowd."
-
-            scene v15s40_1b
-            with dissolve
-
-            aut "Yeah, that's exactly it! It's a good skill to have too."
-
-    else:
-
+    if AutumnTrust:
         scene v15s40_1b
         with dissolve
 
@@ -173,7 +99,7 @@ label v15s40:
 
                 u "Yeah, I mean, I'd be happy to."
 
-                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                if lauren.relationship >= Relationship.GIRLFRIEND:
                     $ autumn.relationship = Relationship.LOYAL
 
                     scene v15s40_1b
@@ -254,6 +180,8 @@ label v15s40:
 
                     pause 0.75
 
+                    play sound "sounds/kiss.mp3"
+
                     scene v15s40_2a # TPP. same as v15s40_2 Autumn puts a hand on Mc's chest and leans in to give Mc a slight kiss
                     with dissolve
 
@@ -263,6 +191,8 @@ label v15s40:
                     with dissolve
 
                     pause 0.75
+
+                    play sound "sounds/kiss.mp3"
 
                     scene v15s40_2c # TPP. same as v15s40_2b Mc pulls Autumn closer for a passionate kiss his hand gently carressing the back of her head pulling her closer, Autumns hand is carressing Mc's throat
                     with dissolve
@@ -332,7 +262,7 @@ label v15s40:
 
                 aut "Okay, we can keep it like this. Thanks for being honest, it means a lot"
 
-                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                if lauren.relationship >= Relationship.GIRLFRIEND:
                     scene v15s40_1c
                     with dissolve
 
@@ -352,6 +282,81 @@ label v15s40:
         with dissolve
 
         aut "Haha, good."
+
+    else:
+        scene v15s40_1b
+        with dissolve
+
+        aut "I think I've talked about it enough for today."
+
+        scene v15s40_1a
+        with dissolve
+
+        u "Yeah, I get it. It's no problem at all."
+
+        scene v15s40_1b
+        with dissolve
+
+        aut "I get that you have questions. I just need more time to process things, I guess."
+
+        scene v15s40_1a
+        with dissolve
+
+        u "Absolutely. I understand."
+
+        scene v15s40_1b
+        with dissolve
+
+        aut "Thanks."
+
+        scene v15s40_1a
+        with dissolve
+
+        u "So, you had fun tonight at the club?"
+
+        scene v15s40_1c # FPP. same as v15s40_1b Autumn increases to a full smile, still looking at Mc, mouth is still open
+        with dissolve
+
+        aut "Yeah! I've haven't danced like that in way too long..."
+
+        aut "Solid company too. Aubrey and Lindsey are a lot of fun!"
+
+        scene v15s40_1a
+        with dissolve
+
+        u "Yeah, they're great."
+
+        if not v15_lindsey_inviteseb:
+            scene v15s40_1c
+            with dissolve
+
+            aut "Grayson, not so much, haha."
+
+            scene v15s40_1a
+            with dissolve
+
+            u "He's a bit... bittersweet, huh?"
+
+            scene v15s40_1b
+            with dissolve
+
+            aut "That's a very polite way of putting it. *Giggles*"
+
+        else:
+            scene v15s40_1
+            with dissolve
+
+            aut "And Sebastian... He's such a nice guy."
+
+            scene v15s40_1a
+            with dissolve
+
+            u "Yeah, he's one of those people that just seems to fit into any crowd."
+
+            scene v15s40_1b
+            with dissolve
+
+            aut "Yeah, that's exactly it! It's a good skill to have too."
 
     scene v15s40_1i # FPP. same as v15s40_1 Autumn turns her head to look out the Limo's window, slight smile, mouth is closed
     with dissolve
@@ -376,6 +381,8 @@ label v15s40:
     pause 0.75
 
     if autumn.relationship == Relationship.FWB:
+        play sound "sounds/kiss.mp3"
+    
         scene v15s40_4 # TPP. Autumn leans back into the limo to give Mc a kiss on the cheek, Mc slight smile mouth is closed
         with dissolve
 
@@ -385,5 +392,7 @@ label v15s40:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v15s41

@@ -4,7 +4,6 @@
 # Time: Sunday Morning
 
 label v10_linds_room:
-
     scene v10slds1 # TPP. Show MC arriving at the door to Lindsey's house and knocking. Normal expression, mouth closed.
     with fade
 
@@ -59,11 +58,12 @@ label v10_linds_room:
 
     u "Uhm... my life was alright."
 
-    u "My mom was always quite a... uhm... cold person. When I was a kid she just really wanted to travel the world, so she and my dad split I stayed with him."
+    u "My mom was always quite a... uhm... cold person. When I was a kid she just really wanted to travel the world, so she and my dad split and I stayed with him."
     
     u "Then he married my stepmom Julia. But you could tell that this wasn't the kind of family he wanted. It seemed like he saw our family as broken."
 
     u "So at some point he just got really distant, cheated on Julia and started a new family."
+
     u "I really liked her though and as I was already quite old at that point, I just decided to stay with her."
 
     u "It's not like my dad wanted me to go with him anyway."
@@ -77,7 +77,9 @@ label v10_linds_room:
     with dissolve
 
     u "Don't get me wrong, it wasn't all that bad."
+
     u "Living as if you're an only child with a stepmother that's set on spoiling you."
+
     u "Lots of love and attention in order to make up for the lack of blood relation isn't the worst life in the world. *Chuckles*"
 
     scene v10slds3b # FPP. Same camera as v10slds3. Show Lindsey, uncomfortable expression, mouth closed.
@@ -171,9 +173,9 @@ label v10_linds_room:
 
     scene v10slds3d
     with dissolve
+
     menu:
         "Keep listening":
-
             scene v10slds3c
             with dissolve
             
@@ -188,10 +190,12 @@ label v10_linds_room:
             with dissolve
 
             li "\"Stop moping, start hoping!\" Haha, she said the same thing anytime I was sad ever since I was a little girl."
+
             li "Being sad around my mother was a big no no. My mother had this \"always be positive\" attitude about her."
 
             scene v10slds3d
             with dissolve
+
             menu:
                 "Talk about her mother":
                     scene v10slds3d
@@ -211,11 +215,8 @@ label v10_linds_room:
 
                     li "Honestly, just venting it all out already has me feeling a lot better."
 
-
         "Make a joke":
-            
-            if kct == "confident": # RCS - if MC chooses 'Make a joke' with KCT confident
-
+            if kct == "confident":
                 scene v10slds3e # FPP. Same camera as v10slds3. Show Lindsey, with a somewhat amused smile, mouth closed.
                 with dissolve
 
@@ -252,6 +253,7 @@ label v10_linds_room:
 
                 scene v10slds3e
                 with dissolve
+
                 menu:
                     "Speak on her mother":
                         scene v10slds3e
@@ -362,9 +364,7 @@ label v10_linds_room:
 
     menu:
         "I like it":
-            
-            if kct == "confident": # RCS - if MC chooses 'I like it' with KCT confident
-                
+            if kct == "confident":
                 scene v10slds3e
                 with dissolve
                 u "I'd never say no to any attention you wanted to give."
@@ -399,7 +399,6 @@ label v10_linds_room:
                 u "Uhm yeah... no... I get that. We don't have to, you know... ugh nevermind."
    
         "I understand":
-
             scene v10slds3e
             with dissolve
 
@@ -426,7 +425,6 @@ label v10_linds_room:
     u "Yeah, of course."
 
     if not sadlind_reaction: # -If no bad reaction (no flirting, no joke without KCT)-
-
         scene v10slds4 # TPP. Show Lindsey leaning over and hugging MC while they sit on the bed. MC facing away from camera. Lindsey has a little smile, mouth open.
         with dissolve
 
@@ -441,7 +439,6 @@ label v10_linds_room:
         with fade
 
     else: # -If bad reactions-
-
         scene v10slds3c
         with dissolve
         
@@ -469,8 +466,8 @@ label v10_linds_room:
 
         scene v10slds5a # TPP. Same camera as v10slds5. Show MC leaving Lindsey's house. The door is closed behind him. (Lindsey is not in sight.)
         with fade
-    stop music fadeout 3
 
+    stop music fadeout 3
 
 if joinwolves: # I don't know this variable name
     jump v10_wolves_redec

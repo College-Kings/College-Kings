@@ -1,10 +1,11 @@
-
 # SCENE 33: Aubrey's Parent's Wedding
 # Locations: Aubrey's Parent's Wedding
 # Characters: MC (Outfit: Wedding), AUBREY (Outfit: Wedding), NAOMI (Outfit: Wedding), AUBREY'S DAD (Outfit: Wedding), AUBREY'S MOM (Outfit: Wedding), UNCLE RICKY (Outfit: Wedding), WEDDING OFFICIAL (Outfit: 1)
 # Time: Morning
 
 label v15s33:
+    play music "music/v13/Track Scene 48.mp3" fadein 2
+
     scene v15s33_1 # TPP. Show the car that MC and Aubrey are in arrived at the Venue (The Venue is a huge white tent)
     with fade
 
@@ -41,7 +42,7 @@ label v15s33:
     with dissolve
 
     menu:
-        "Be brutally honest":
+        "Not really, I'm an only child":
             $ add_point(KCT.TROUBLEMAKER)
             
             u "To be honest, not really. I'm an only child."
@@ -90,7 +91,7 @@ label v15s33:
 
     pause 0.75
 
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if aubrey.relationship >= Relationship.FWB:
         scene v15s33_7
         with dissolve
 
@@ -280,6 +281,7 @@ label v15s33:
 
     menu:
         "Take the shot":
+            $ v15s33_sambuca = True
             $ add_point(KCT.TROUBLEMAKER)
 
             scene v15s33_13 # TPP. Show Naomi and MC clinking shot glasses, Naomi a little drunk, smirking looking at MC, MC looking at Naomi, slight smile, mouth closed.
@@ -449,6 +451,9 @@ label v15s33:
 
     audad "Naomi has done exceptionally well, thankfully, but a modeling career requires a lot of hard work."
 
+    scene v15s33_22b
+    with dissolve
+    
     aumom "And a lot of talent."
 
     scene v15s33_16
@@ -466,7 +471,7 @@ label v15s33:
 
     aumom "Exactly. Something more in line with your skillset."
 
-    scene v15s33_16
+    scene v15s33_16a
     with dissolve
 
     au "I can do modeling though. I'm good at modeling. Ha, they hired me on the spot when-"
@@ -501,7 +506,7 @@ label v15s33:
 
     u "Haha, yeah. Barely..."
     
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if v15s9_wedding_date:
         scene v15s33_19b
         with dissolve
 
@@ -567,7 +572,7 @@ label v15s33:
     scene v15s33_22b
     with dissolve
 
-    aumom "Flowers make a wedding, honey. You might not care much about it, but your grandma was a professional florist and I know a thing or two ab-"
+    aumom "Flowers make a wedding, honey. You might not care much, but your grandma was a professional florist and I know a thing or two ab-"
 
     scene v15s33_19c
     with dissolve
@@ -603,6 +608,8 @@ label v15s33:
     with dissolve
 
     aumom "Haha, my silly man."
+
+    play sound "sounds/kiss.mp3"
 
     scene v15s33_20a # FPP. Show Aubrey's parents kissing.
     with dissolve
@@ -649,6 +656,7 @@ label v15s33:
     menu:
         "Take it":
             $ add_point(KCT.BOYFRIEND)
+            $ v15s33_sambuca = True
 
             scene v15s33_13a # TPP. MC and Aubrey clinking shot glasses, Both slight smile, mouth closed.
             with dissolve
@@ -743,7 +751,7 @@ label v15s33:
 
     u "Hi."
 
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if v15s9_wedding_date:
         scene v15s33_25b
         with dissolve
 
@@ -774,10 +782,12 @@ label v15s33:
 
         u "*Laughs* Thank you. I appreciate it. I hope she keeps me..."
 
+        play sound "sounds/kiss.mp3"
+
         scene v15s33_30 # TPP. MC kissing Aubrey on the Cheek. Aubrey smiling and blushing, mouth closed.
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
     else:
         scene v15s33_28b
@@ -909,6 +919,9 @@ label v15s33:
             with dissolve
 
             u "Mmm! *Coughs* Thanks..."
+
+            if v15s33_sambuca:
+                $ grant_achievement("blue_cheese_and_sambuca")
 
             u "(Man, what the hell is this stuff?)"
 
@@ -1122,13 +1135,14 @@ label v15s33:
 
         pause 0.75
 
-    play sound "sounds/bells.mp3"
-    # Asked for hand bell sounds but we only have the clocktower bells.
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 33_2.mp3" fadein 2
 
     scene v15s33_28b
     with dissolve
 
-    rick "Oh shit- I believe that's lunch being served over there. Let's head over."
+    rick "Hey, looks like lunch is about to get served over there. Let's head over."
 
     scene v15s33_28c
     with dissolve
@@ -1160,6 +1174,9 @@ label v15s33:
 
     u "(Holy sh- *Gasps*)"
 
+    scene v15s33_38
+    with dissolve
+
     u "(There it was again! Is she...?)"
 
     scene v15s33_40 # FPP. MC looking under the table, Naomi's shoeless foot rubbing on MC's crotch.
@@ -1170,12 +1187,7 @@ label v15s33:
     scene v15s33_38
     with dissolve
 
-    pause 0.75
-
-    scene v15s33_39
-    with dissolve
-
-    u "(*Moans* Okay, what the fuck... *Chuckles* Is she really doing this right now?)"
+    u "(*Moans* Okay, what the fuck... *Chuckles* Is she really doing this while she's eating right now?)"
 
     scene v15s33_40
     with dissolve
@@ -1265,7 +1277,7 @@ label v15s33:
         u "(I didn't think she'd do something like that during the fancy lunch... Ha!)"
 
     else:
-        if aubrey.relationship.value >= Relationship.FWB.value:
+        if aubrey.relationship >= Relationship.FWB:
             scene v15s33_45a
             with dissolve
 
@@ -1306,6 +1318,8 @@ label v15s33:
 
     u "Naomi, I think-"
 
+    label v15s35_naomisg:
+
     scene v15s33_46b # FPP. Naomi standing infront of MC, MC looking at Naomi, Naomi looking at MC, Naomi's hand on MC's cheek, Naomi smirking, mouth open.
     with dissolve
 
@@ -1328,7 +1342,7 @@ label v15s33:
 
     u "(Okay, [name]... Use your head here...)"
 
-    u "(No, no, no! Not that one, not that head!"
+    u "(No, no, no! Not that one, not that head!)"
 
     scene v15s33_46b
     with dissolve
@@ -1371,7 +1385,7 @@ label v15s33:
                 na "*Scoffs* You're sorry?"
 
             else:
-                if aubrey.relationship.value >= Relationship.FWB.value:
+                if aubrey.relationship >= Relationship.FWB:
                     scene v15s33_46e
                     with dissolve
 
@@ -1455,6 +1469,8 @@ label v15s33:
 
             u "I'm going back to the table."
 
+            $ renpy.end_replay()
+
             scene v15s33_46f
             with dissolve
 
@@ -1528,21 +1544,30 @@ label v15s33:
             u "(Phew... Let's hope no one noticed any of that.)"
 
         "Let her continue":
+            stop music fadeout 3
+            
+            play music "music/v14/Track Scene 25a_1.mp3" fadein 2
+        
             $ add_point(KCT.TROUBLEMAKER)
             $ sceneList.add("v15_naomi")
             $ naomi.relationship = Relationship.FWB
 
-            if aubrey.relationship.value >= Relationship.FWB.value:
+            if aubrey.relationship >= Relationship.FWB:
                 $ v15s33_naomi_broke_aubreyrs = True
 
             $ aubrey.relationship = Relationship.MAD
 
-            u "(Why the hell not...?) Ha..."
+            u "(Why the hell not...?)"
+
+            if config_censored:
+                call screen censored_popup("v15s33_nsfwSkipLabel1")
 
             scene v15s33_50 # FPP. In the bathroom, Naomi on her knees infront of MC, MC looking down at Naomi, Naomi looking up at MC, smirking, mouth closed.
-            with dissolve
+            with fade
 
             na "Ooh..."
+
+            play sound "sounds/kiss.mp3"
 
             scene v15s33_50a # FPP. MC looking at Naomi, Naomi kissing the tip of MC's dick.
             with dissolve
@@ -1564,61 +1589,88 @@ label v15s33:
             image v15naohj = Movie(play="images/v15/Scene 33/v15naohj.webm", loop=True, image="images/v15/Scene 33/v15naohjStart.webp", start_image="images/v15/Scene 33/v15naohjStart.webp")
             image v15naohjf = Movie(play="images/v15/Scene 33/v15naohjf.webm", loop=True, image="images/v15/Scene 33/v15naohjStart.webp", start_image="images/v15/Scene 33/v15naohjStart.webp")
 
-            scene v15naobj # Ignore as anim
+            image v15naobj2 = Movie(play="images/v15/Scene 33/v15naobj2.webm", loop=True, image="images/v15/Scene 33/v15naobj2Start.webp", start_image="images/v15/Scene 33/v15naobj2Start.webp")
+            image v15naobj2f = Movie(play="images/v15/Scene 33/v15naobj2f.webm", loop=True, image="images/v15/Scene 33/v15naobj2Start.webp", start_image="images/v15/Scene 33/v15naobj2Start.webp")
+            image v15naohj2 = Movie(play="images/v15/Scene 33/v15naohj2.webm", loop=True, image="images/v15/Scene 33/v15naohj2Start.webp", start_image="images/v15/Scene 33/v15naohj2Start.webp")
+            image v15naohj2f = Movie(play="images/v15/Scene 33/v15naohj2f.webm", loop=True, image="images/v15/Scene 33/v15naohj2Start.webp", start_image="images/v15/Scene 33/v15naohj2Start.webp")
+            
+            scene v15naobj
             with dissolve
 
-            pause 0.75
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s33/Scene 33 - bj_slow_2loops.mp3", loop=True)
 
             na "Mmmm..."
 
             if v15s33_naomi_broke_aubreyrs:
                 u "Fuuuuck... (This is so fucking wrong...)"
-                
             else:
                 u "Oh, my god... Naomi... (Aubrey probably wouldn't like this...)"
 
-            u "*Moans*"
-
-            scene v15naobjf # Ignore as anim
+            scene v15naobj2
             with dissolve
-
-            pause 0.75
 
             u "(But it feels so... Right... Ha.)"
 
+            u "*Moans*"
+
+            scene v15naobjf
+            with dissolve
+
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s33/Scene 33 - bj_fast_4loops.mp3", loop=True)
+
             u "Mmm, Naomi... *Moans*"
+
+            scene v15naobj2f
+            with dissolve
 
             na "*Mumbling* Mmm hmm?"
 
-            u "Yesss..."
-
-            scene v15naohj # Ignore as anim
+            scene v15naohj
             with dissolve
 
-            pause 0.75
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s33/Scene 33 - hj_slow_2loops.mp3", loop=True)
 
             na "You like it when supermodels suck on your dick, huh? *Giggles*"
 
-            scene v15naohjf # Ignore as anim
+            scene v15naohj2
             with dissolve
+
+            u "Yesss..."
+
+            scene v15naohjf
+            with dissolve
+
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s33/Scene 33 - hj_fast_2loops.mp3", loop=True)
 
             u "Are you..."
 
             u "Kidding? Ha..."
 
-            scene v15naobjf
+            scene v15naohj2f
             with dissolve
-
-            pause 0.75
 
             u "You're so fucking hot, Naomi-"
 
+            stop sound
+
+            label v15s33_nsfwSkipLabel1:
+
             play sound "sounds/dooropen.mp3"
+
+            stop music fadeout 3
+            
+            play music "music/v15/Track Scene 33_4.mp3" fadein 2
 
             scene v15s33_51 # TPP. Close up of Aubrey at the entrance of the bathroom, Aubrey angry, mouth open.
             with vpunch
 
-            $ grant_achievement("what_goes_around")
+            if "v11_aubrey" in sceneList:
+                $ grant_achievement("what_goes_around")
+            
             au "I fucking KNEW IT!"
 
             scene v15s33_51a # FPP. CLose up of Aubrey at the entrance of the bathroom, Aubrey angry, mouth closed.
@@ -1685,6 +1737,8 @@ label v15s33:
             with dissolve
 
             u "*Sighs*"
+            
+            $ renpy.end_replay()
 
             scene v15s33_54c
             with dissolve
@@ -1800,7 +1854,7 @@ label v15s33:
 
             u "Why?"
 
-            scene v15s33_46h
+            scene v15s33_46g
             with dissolve
 
             na "Just give it to me. Why do you ask so many questions?"
@@ -1843,6 +1897,10 @@ label v15s33:
 
             u "(I'd better get back out there.) *Sighs*"
 
+            stop music fadeout 3
+            
+            play music "music/v15/Track Scene 33_5.mp3" fadein 2
+
             scene v15s33_34a
             with fade
 
@@ -1870,7 +1928,7 @@ label v15s33:
 
             u "(I'll just leave her alone for now... Hopefully she'll calm down and I can talk to her later.)"
 
-    if aubrey.relationship.value <= Relationship.MAD.value:
+    if aubrey.relationship <= Relationship.MAD:
         scene v15s33_56a # TPP. MC and Naomi sitting next to each other at the wedding ceremony, Aubrey seated far away from them, MC neutral face, mouth closed, Naomi smirking, mouth closed.
         with dissolve
         
@@ -1902,6 +1960,9 @@ label v15s33:
 
             "Agree":
                 $ add_point(KCT.BOYFRIEND)
+                
+                scene v15s33_57f
+                #with dissolve
                 
                 u "Yeah, it's supposed to be the best day of your life. Right?"
 
@@ -1971,7 +2032,7 @@ label v15s33:
                 
                 u "One day it'll be us."
 
-                if aubrey.relationship.value >= Relationship.FWB.value:
+                if aubrey.relationship >= Relationship.FWB:
                     $ aubrey.relationship = Relationship.TAMED
                     
                     scene v15s33_57b # FPP. Aubrey looking at MC, MC looking at Aubrey, Aubrey looking at MC like she is in love, mouth closed.
@@ -2009,10 +2070,12 @@ label v15s33:
 
                     u "*Laughs* Gladly."
 
+                    play sound "sounds/kiss.mp3"
+
                     scene v15s33_60 # TPP. At the ceremony in their seats, MC and Aubrey kissing each other romantically and holding each others hands.
                     with dissolve
 
-                    pause 0.75
+                    pause 1.75
 
                     scene v15s33_61 # TPP. Close up of Aubrey's Mom and Dad looking in MC's and Aubrey's direction, both slight smile, mouth closed.
                     with dissolve
@@ -2077,10 +2140,15 @@ label v15s33:
 
                     au "Ha, true."
 
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 33_6.mp3" fadein 2
+
     scene v15s33_66 # TPP. Close up of the Wedding official standing between Aubrey's parents, Wedding official slight smile, mouth closed.
     with dissolve
 
-    wedoff "Today is the most special and sacred day, as we celebrate the love held between two people whose bond grows stronger with each passing day..."
+    wedoff "Today is a most special and sacred day."
+    wedoff "Today we celebrate the love held between two people whose bond grows stronger with each passing day..."
 
     scene v15s33_67 # TPP. Later in the day, Close up of Aubrey's Mom, looking at Aubrey's dad(off camera), Aubrey's mom tearing up, slight smile, mouth closed.
     with fade
@@ -2089,7 +2157,7 @@ label v15s33:
 
     aumom "*Sniffles* Together, we built a beautiful home and created a terrific family..."
 
-    if aubrey.relationship.value <= Relationship.MAD.value: 
+    if aubrey.relationship <= Relationship.MAD: 
         scene v15s33_65a # TPP. Close up of Aubrey looking at her parents, Aubrey smirking but still sad, mouth closed.
         with dissolve
         
@@ -2125,13 +2193,20 @@ label v15s33:
     
     wedoff "You may now kiss the bride... Again."
 
+    play sound "sounds/kiss.mp3"
+
     scene v15s33_70 # TPP. Show Aubrey's Mom and Dad kissing.
     with dissolve
 
     pause 0.75
 
-    scene v15s33_71 # TPP. A group of people smiling and clapping
-    with dissolve
+    if "v15_naomi" in sceneList:
+        scene v15s33_71alt
+        with dissolve
+
+    else:
+        scene v15s33_71 # TPP. A group of people smiling and clapping
+        with dissolve
 
     pause 0.75
 
@@ -2144,6 +2219,10 @@ label v15s33:
     with dissolve
 
     au "Congratulations, you guys. That was so beautiful..."
+
+    stop music fadeout 3
+    
+    play music "music/v13/Track Scene 48.mp3" fadein 2
 
     scene v15s33_74 # FPP. MC looking at both of Aubrey's parents, both slight smile, mouth closed.
     with dissolve
@@ -2272,7 +2351,7 @@ label v15s33:
 
             u "Yeah, of course. It is a..."
 
-            u "Family photo. Isn't it?"
+            u "...\"family photo\". Isn't it?"
 
             na "Right! Come on, sissy!"
 
@@ -2281,11 +2360,13 @@ label v15s33:
 
             pause 0.75
 
-            if aubrey.relationship.value >= Relationship.TAMED.value:
+            if aubrey.relationship >= Relationship.TAMED:
+                play sound "sounds/kiss.mp3"
+            
                 scene v15s33_81b # TPP. Aubrey kissing MC's cheek.
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
             scene v15s33_79a # TPP. Aubrey, her parents, and Naomi all standing and posing together smiling for a photo.
             with dissolve
@@ -2309,6 +2390,10 @@ label v15s33:
 
             pause 0.75
 
+    stop music fadeout 3
+    
+    play music "music/v13/Track Scene 17.mp3" fadein 2
+
     scene v15s33_84 # TPP. MC sitting down next to Aubrey who is sitting on a bench overlooking the distant lake.
     with fade
 
@@ -2319,11 +2404,11 @@ label v15s33:
 
     u "Hey... Are you okay?"
 
-    if aubrey.relationship.value <= Relationship.MAD.value:
+    if aubrey.relationship <= Relationship.MAD:
         scene v15s33_75a # FPP. MC looking at Aubrey, Aubrey looking at MC, Aubrey upset, mouth open.
         with dissolve
 
-        au "I'm still processing everything what happened today, [name]."
+        au "I'm still processing everything that happened today, [name]."
 
         scene v15s33_75
         with dissolve
@@ -2355,6 +2440,8 @@ label v15s33:
                 
                 u "I'm sorry. I'll go back inside. Just let me know if you want to talk, okay?"
 
+                stop music fadeout 3
+
                 jump v15s34
 
             "Try to talk":
@@ -2377,7 +2464,10 @@ label v15s33:
 
                 u "Fuck... I need to stop opening my mouth."
 
+                stop music fadeout 3
+
                 jump v15s34
+    
     else:
         scene v15s33_75a
         with dissolve
@@ -2394,7 +2484,7 @@ label v15s33:
 
         au "Yes."
 
-        if aubrey.relationship.value >= Relationship.TAMED.value:
+        if aubrey.relationship >= Relationship.TAMED:
             scene v15s33_87 # TPP. MC hugging Aubrey while they sit on the bench, Aubrey crying into his shoulder, MC slight frown, mouth closed.
             with dissolve
             
@@ -2474,17 +2564,17 @@ label v15s33:
                 pause 0.75
 
             "Monkey joke":
-                scene v15s33_75e
+                scene v15s33_75d
                 with dissolve
 
                 u "Why did the monkey eat the banana?"
 
-                scene v15s33_75d
+                scene v15s33_75e
                 with dissolve
 
                 au "I don't know... Why?"
 
-                scene v15s33_75e
+                scene v15s33_75d
                 with dissolve
 
                 u "Well, because monkeys like bananas... Didn't you know that?"
@@ -2504,21 +2594,24 @@ label v15s33:
 
         au "I'm happy you're here with me."
 
-        if aubrey.relationship.value >= Relationship.TAMED.value:
+        if aubrey.relationship > Relationship.FRIEND:
             scene v15s33_75h
             with dissolve
 
             u "I'm happy I'm with you."
 
-            scene v15s33_89 # TPP. Shot from behind the bench. Looking at Aubrey resting her head on MC's shoulder, MC with his arm wrapped around Aubrey, They are looking out at the lake view.
-            with dissolve
+            if aubrey.relationship >= Relationship.TAMED:
+                scene v15s33_89 # TPP. Shot from behind the bench. Looking at Aubrey resting her head on MC's shoulder, MC with his arm wrapped around Aubrey, They are looking out at the lake view.
+                with dissolve
 
-            pause 0.75
+                pause 1.25
 
-        elif aubrey.relationship.value < Relationship.FWB.value:
+        else:
             scene v15s33_75h
             with dissolve
 
             u "It's what friends are for."
+
+        stop music fadeout 3
 
         jump v15s34

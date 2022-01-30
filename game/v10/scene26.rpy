@@ -4,11 +4,11 @@
 # Time: Night
 
 init python:
-
     def v10s26_reply1():
         setattr(store, "v10_amber_condoms", True)
         add_point(KCT.BOYFRIEND)
         amber.messenger.newMessage("Beer, obviously")
+
 
 label v10_amber_skatepark:
     play music "music/v10/Track Scene 26_1.mp3" fadein 2
@@ -75,7 +75,7 @@ label v10_amber_skatepark:
 
         am "I'm just kidding. *Chuckles*"
             
-        if amber.relationship.value >= Relationship.FWB.value:
+        if amber.relationship >= Relationship.FWB:
             scene v10sasp1c
             with dissolve
 
@@ -128,6 +128,7 @@ label v10_amber_skatepark:
 
     scene v10sasp1g
     with dissolve
+
     menu:
         "Yeah, you should":
             scene v10sasp1g
@@ -150,7 +151,7 @@ label v10_amber_skatepark:
             with dissolve
 
             ri "It's okay, I need a break anyway. Are we drinking?"
-                
+
     scene v10sasp1e 
     with dissolve
 
@@ -238,6 +239,7 @@ label v10_amber_skatepark:
 
     scene v10sasp4a
     with dissolve
+
     menu:
         "Drink":
             scene v10sasp7 # TPP. Show MC taking a drink of beer.
@@ -273,6 +275,7 @@ label v10_amber_skatepark:
 
     scene v10sasp4a 
     with dissolve
+
     menu:
         "Stripped":
             scene v10sasp4a 
@@ -361,8 +364,9 @@ label v10_amber_skatepark:
 
     u "*Laughs*"
 
-    if amber.relationship.value >= Relationship.FWB.value:
+    if amber.relationship >= Relationship.FWB:
         label v10_amber_skatepark_sg:
+
         scene v10sasp5b # FPP. Same camera as v10sasp5. Show Amber leaning in to whisper into MC's ear, smiling, mouth open.
         with fade
 
@@ -396,7 +400,7 @@ label v10_amber_skatepark:
                 show screen v10s26_amberSexOverlay
 
                 if config_censored:
-                    call screen censoredPopup("v10s26_nsfwSkipLabel1")
+                    call screen censored_popup("v10s26_nsfwSkipLabel1")
 
                 stop music fadeout 3
                 play music "music/v10/Track Scene 26_2.mp3" fadein 2
@@ -713,7 +717,7 @@ label v10_amber_skatepark:
                             $ sceneList.add("v10_amber")
 
                             if config_censored:
-                                call screen censoredPopup("v10s26_nsfwSkipLabel1")
+                                call screen censored_popup("v10s26_nsfwSkipLabel1")
                                 
                             scene v10ambbj
                             with dissolve

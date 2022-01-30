@@ -17,7 +17,7 @@ label v12_chloe_cafe:
 
     pause 0.75
 
-    if chloe.relationship.value >= Relationship.FWB.value:
+    if chloe.relationship >= Relationship.FWB:
         scene v12chc3 # TPP. Show MC pulling Chloe's chair out so she can sit down, both smiling, mouths closed
         with dissolve
 
@@ -39,7 +39,7 @@ label v12_chloe_cafe:
 
     cl "This is such a nice place! I feel like I'm underdressed... *Laughs*"
 
-    if chloe.relationship.value >= Relationship.FWB.value:
+    if chloe.relationship >= Relationship.FWB:
         scene v12chc5a # FPP. Same as v12chc5, Chloe blushing, smiling, mouth closed, avoiding eye contact
         with dissolve
 
@@ -195,7 +195,7 @@ label v12_chloe_cafe:
 
     fwait "So, what can I get for the gorgeous couple?"
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v12chc5i # FPP. Same as v12chc5, Show Chloe blushing, slight smile, avoiding eye contact, putting her hair behind her ear, mouth closed
         with dissolve
 

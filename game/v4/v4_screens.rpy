@@ -1,14 +1,38 @@
 screen girls():
-    default girlLabels = [ "juchloe", "juaubrey", "julauren", "juriley", "juemily", "jupenelope" ]
+    modal True
 
-    add "images/v4/girls.webp"
+    # character, label
+    default girl_labels = [
+            ["Chloe", "juchloe"],
+            ["Aubrey", "juaubrey"],
+            ["Lauren", "julauren"],
+            ["Riley", "juriley"],
+            ["Emily", "juemily"],
+            ["Penelope", "jupenelope"],
+        ]
+        
+    default image_path = "gui/julia_call/"
 
-    grid 3 2:
-        pos (110, 360)
-        spacing 50
+    add image_path + "jc_background.webp"
 
-        for i in girlLabels:
-            imagebutton:
-                idle "images/v4/girl.webp"
-                hover "images/v4/girlhover.webp"
-                action Jump(i)
+    vpgrid:
+        cols 3
+        rows 2
+        spacing 60
+        xalign 0.5
+        ypos 450
+
+        for character, l in girl_labels:
+            vbox:
+                align (0.5, 0.5)
+
+                imagebutton:
+                    idle image_path + character + "_idle.webp"
+                    hover image_path + character + ".webp"
+                    action Jump(l)
+
+                text character:
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30

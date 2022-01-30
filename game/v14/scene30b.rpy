@@ -215,7 +215,7 @@ label v14s30b:
 
     cl "*Chuckles*"
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         play sound "sounds/kiss.mp3"
         scene v14s30b_5 # FPP. Chloe kissing MC.
         with dissolve
@@ -262,98 +262,98 @@ label v14s30b:
     if not v14_realwolf and v14s30b_image == 1 and v14s30b_its_perfect:
         $ v14s30b_kiwiiPost1 = KiwiiPost(chloe, "v14/v14s30b_pw_image_one.webp", _("What's a Chick without her Wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=712)
         if v14_chrissupport > 1:
-            $ v14s30b_kiwiiPost1.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost1.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost1.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost1.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost1.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(15, 35), mentions=[grayson], force_send=True)
-        $ v14s30b_kiwiiPost1.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost1.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35))
-        $ v14s30b_kiwiiPost1.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(15, 35))
+            $ v14s30b_kiwiiPost1.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(300, 600), force_send=True)
+        $ v14s30b_kiwiiPost1.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(300, 600), force_send=True)
+        $ v14s30b_kiwiiPost1.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(300, 600), force_send=True)
+        $ v14s30b_kiwiiPost1.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(300, 600), force_send=True)
+        $ v14s30b_kiwiiPost1.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(300, 600), mentions=[grayson], force_send=True)
+        $ v14s30b_kiwiiPost1.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(300, 600), force_send=True)
+        $ v14s30b_kiwiiPost1.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(300, 600))
+        $ v14s30b_kiwiiPost1.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(300, 600))
 
     elif not v14_realwolf and v14s30b_image == 1:
         $ v14s30b_kiwiiPost2 = KiwiiPost(chloe, "v14/v14s30b_pw_image_one.webp", _("It's official! The Wolves and The Chicks are uniting! #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=812)
         if v14_chrissupport > 1:
-            $ v14s30b_kiwiiPost2.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost2.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost2.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost2.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost2.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(15, 35), mentions=[grayson], force_send=True)
-        $ v14s30b_kiwiiPost2.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost2.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35))
-        $ v14s30b_kiwiiPost2.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(15, 35))
+            $ v14s30b_kiwiiPost2.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(350, 650), force_send=True)
+        $ v14s30b_kiwiiPost2.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(350, 650), force_send=True)
+        $ v14s30b_kiwiiPost2.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(350, 650), force_send=True)
+        $ v14s30b_kiwiiPost2.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(350, 650), force_send=True)
+        $ v14s30b_kiwiiPost2.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(350, 650), mentions=[grayson], force_send=True)
+        $ v14s30b_kiwiiPost2.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(350, 650), force_send=True)
+        $ v14s30b_kiwiiPost2.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(350, 650))
+        $ v14s30b_kiwiiPost2.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(350, 650))
 
     elif not v14_realwolf and v14s30b_image == 2 and v14s30b_its_perfect:
         $ v14s30b_kiwiiPost3 = KiwiiPost(chloe, "v14/v14s30b_pw_image_two.webp", _("I'd like to officially announce The Chicks' partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
         if v14_chrissupport > 1:
-            $ v14s30b_kiwiiPost3.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost3.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost3.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost3.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost3.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(15, 35), mentions=[grayson], force_send=True)
-        $ v14s30b_kiwiiPost3.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost3.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35))
-        $ v14s30b_kiwiiPost3.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(15, 35))
+            $ v14s30b_kiwiiPost3.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(300, 600), force_send=True)
+        $ v14s30b_kiwiiPost3.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(300, 600), force_send=True)
+        $ v14s30b_kiwiiPost3.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(300, 600), force_send=True)
+        $ v14s30b_kiwiiPost3.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(300, 600), force_send=True)
+        $ v14s30b_kiwiiPost3.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(300, 600), mentions=[grayson], force_send=True)
+        $ v14s30b_kiwiiPost3.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(300, 600), force_send=True)
+        $ v14s30b_kiwiiPost3.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(300, 600))
+        $ v14s30b_kiwiiPost3.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(300, 600))
 
     elif not v14_realwolf and v14s30b_image == 2:
         $ v14s30b_kiwiiPost4 = KiwiiPost(chloe, "v14/v14s30b_pw_image_two.webp", _("It's official! The Wolves and The Chicks are uniting! #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=856)
         if v14_chrissupport > 1:
-            $ v14s30b_kiwiiPost4.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost4.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost4.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost4.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost4.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(15, 35), mentions=[grayson], force_send=True)
-        $ v14s30b_kiwiiPost4.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost4.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35))
-        $ v14s30b_kiwiiPost4.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(15, 35))
+            $ v14s30b_kiwiiPost4.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(300, 700), force_send=True)
+        $ v14s30b_kiwiiPost4.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(300, 700), force_send=True)
+        $ v14s30b_kiwiiPost4.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(300, 700), force_send=True)
+        $ v14s30b_kiwiiPost4.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(300, 700), force_send=True)
+        $ v14s30b_kiwiiPost4.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(300, 700), mentions=[grayson], force_send=True)
+        $ v14s30b_kiwiiPost4.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(300, 700), force_send=True)
+        $ v14s30b_kiwiiPost4.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(300, 700))
+        $ v14s30b_kiwiiPost4.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(300, 700))
 
     elif v14s30b_image == 1 and v14s30b_its_perfect:
         $ v14s30b_kiwiiPost5 = KiwiiPost(chloe, "v14/v14s30b_rw_image_one.webp", _("What's a Chick without her Wolf? <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=973)
         if v14_chrissupport > 1:
-            $ v14s30b_kiwiiPost5.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost5.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost5.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost5.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost5.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(15, 35), mentions=[grayson], force_send=True)
-        $ v14s30b_kiwiiPost5.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost5.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35))
-        $ v14s30b_kiwiiPost5.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(15, 35))
+            $ v14s30b_kiwiiPost5.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(400, 800), force_send=True)
+        $ v14s30b_kiwiiPost5.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(400, 800), force_send=True)
+        $ v14s30b_kiwiiPost5.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(400, 800), force_send=True)
+        $ v14s30b_kiwiiPost5.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(400, 800), force_send=True)
+        $ v14s30b_kiwiiPost5.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(400, 800), mentions=[grayson], force_send=True)
+        $ v14s30b_kiwiiPost5.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(400, 800), force_send=True)
+        $ v14s30b_kiwiiPost5.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(400, 800))
+        $ v14s30b_kiwiiPost5.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(400, 800))
 
     elif v14s30b_image == 1:
         $ v14s30b_kiwiiPost6 = KiwiiPost(chloe, "v14/v14s30b_rw_image_one.webp", _("   A vote for me is a vote for The Chicks AND a vote for The Wolves :) #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=1273)
         if v14_chrissupport > 1:
-            $ v14s30b_kiwiiPost6.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost6.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost6.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost6.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost6.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(15, 35), mentions=[grayson], force_send=True)
-        $ v14s30b_kiwiiPost6.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost6.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35))
-        $ v14s30b_kiwiiPost6.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(15, 35))
+            $ v14s30b_kiwiiPost6.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(400, 1000), force_send=True)
+        $ v14s30b_kiwiiPost6.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(400, 1000), force_send=True)
+        $ v14s30b_kiwiiPost6.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(400, 1000), force_send=True)
+        $ v14s30b_kiwiiPost6.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(400, 1000), force_send=True)
+        $ v14s30b_kiwiiPost6.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(400, 1000), mentions=[grayson], force_send=True)
+        $ v14s30b_kiwiiPost6.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(400, 1000), force_send=True)
+        $ v14s30b_kiwiiPost6.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(400, 1000))
+        $ v14s30b_kiwiiPost6.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(400, 1000))
 
     elif v14s30b_image == 2 and v14s30b_its_perfect:
         $ v14s30b_kiwiiPost7 = KiwiiPost(chloe, "v14/v14s30b_rw_image_two.webp", _("Teamwork makes the dreamwork! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=981)
         if v14_chrissupport > 1:
-            $ v14s30b_kiwiiPost7.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost7.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost7.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost7.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost7.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(15, 35), mentions=[grayson], force_send=True)
-        $ v14s30b_kiwiiPost7.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost7.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35))
-        $ v14s30b_kiwiiPost7.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(15, 35))
+            $ v14s30b_kiwiiPost7.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(350, 850), force_send=True)
+        $ v14s30b_kiwiiPost7.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(350, 850), force_send=True)
+        $ v14s30b_kiwiiPost7.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(350, 850), force_send=True)
+        $ v14s30b_kiwiiPost7.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(350, 850), force_send=True)
+        $ v14s30b_kiwiiPost7.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(350, 850), mentions=[grayson], force_send=True)
+        $ v14s30b_kiwiiPost7.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(350, 850), force_send=True)
+        $ v14s30b_kiwiiPost7.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(350, 850))
+        $ v14s30b_kiwiiPost7.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(350, 850))
 
     else: #possible because scene30b implies photoshoot
         $ v14s30b_kiwiiPost8 = KiwiiPost(chloe, "v14/v14s30b_rw_image_two.webp", _("Teamwork makes the dreamwork! <3 #TheChicksWhoCriedWolves #Vote4ChloeVote4Wolves"), numberLikes=1294)
         if v14_chrissupport > 1:
-            $ v14s30b_kiwiiPost8.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost8.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost8.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost8.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost8.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(15, 35), mentions=[grayson], force_send=True)
-        $ v14s30b_kiwiiPost8.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s30b_kiwiiPost8.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35))
-        $ v14s30b_kiwiiPost8.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(15, 35))
+            $ v14s30b_kiwiiPost8.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(400, 1000), force_send=True)
+        $ v14s30b_kiwiiPost8.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(400, 1000), force_send=True)
+        $ v14s30b_kiwiiPost8.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(400, 1000), force_send=True)
+        $ v14s30b_kiwiiPost8.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(400, 1000), force_send=True)
+        $ v14s30b_kiwiiPost8.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(400, 1000), mentions=[grayson], force_send=True)
+        $ v14s30b_kiwiiPost8.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(400, 1000), force_send=True)
+        $ v14s30b_kiwiiPost8.addReply(_("These turned out perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(400, 1000))
+        $ v14s30b_kiwiiPost8.addReply(_("Aww, haha. Congrats!"), numberLikes=renpy.random.randint(400, 1000))
 
     u "Let me check how the announcement came out."
 

@@ -3,7 +3,9 @@
 # Characters: MC (Outfit: Homecoming Suit), CHLOE (Outfit: 1), AUBREY (Outfit: 7), RILEY (Outfit: 3) Sunday 
 # Time: Morning
 
-label v15s32: #32) MC picks up Aubrey at Chicks' house 
+label v15s32:
+    play music "music/v13/Track Scene 16.mp3" fadein 2
+
     scene v15s32_1 # TPP. MC, smiling mouth closed walking [Sidewalk-exterior].
     with dissolve
 
@@ -106,7 +108,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
 
                     u "Not exactly... Just trying out those smooth rom com moves, haha." 
 
-                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value: # -if ChloeGF
+                    if chloe.relationship >= Relationship.GIRLFRIEND: # -if ChloeGF
                         $ chloeSus += 1
                         # -Chloe looks a little pissed-
                         scene v15s32_5b # FPP. Chloe, slightly angry, mouth open, with her upper body leaning out the window looking downward [Chloe's window (left)-exterior].
@@ -266,7 +268,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
 
         u "Aww, that's sweet of you." 
 
-        if riley.relationship.value >= Relationship.FWB.value: # -if RileyRS
+        if riley.relationship >= Relationship.FWB: # -if RileyRS
             scene v15s32_7e # FPP. Riley, smiling, mouth open, stepping aside gesturing for MC to enter the house [Chicks' front door-exterior].
             with dissolve
 
@@ -303,6 +305,10 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
 
         ri "Hey, come on, Aubrey!" 
 
+        stop music fadeout 3
+        
+        play music "music/v13/Track Scene 17.mp3" fadein 2
+
         # -Aubrey then starts coming down the stairs. We see her slow-motion from her feet to her head, revealing her full outfit-
         # Special scene wth 1920x5000 pic the pans from feet to head
         scene v15s32_8d: # TPP. Full body shot of Aubrey, smiling, at the bottom of the stairs, beautiful pose (pic resolution 1920x5000 slow vertical pan from feet to head) [Chicks' front door-interior].
@@ -315,7 +321,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
                 
         # -MC is mesmerized by her-
 
-        if aubrey.relationship.value >= Relationship.FWB.value: # -if AubreyRs
+        if aubrey.relationship >= Relationship.FWB: # -if AubreyRs
             scene v15s32_8e # TPP. MC happily surprised smiling, mouth open looking at Aubrey (off camera) with Riley behind him smiling, mouth closed with the front door still open [Chicks' front door-interior].
             with dissolve
 
@@ -361,7 +367,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
 
         pause 0.75
 
-        if aubrey.relationship.value >= Relationship.FWB.value: # -if AubreyRs 
+        if aubrey.relationship >= Relationship.FWB: # -if AubreyRs 
             u "She's right. You look absolutely stunning."
             
         else: # -if AubreyFriend
@@ -375,7 +381,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
 
         au "Haha, okay... Stop it you two, I'm already wearing too much blush."
             
-        if aubrey.relationship.value >= Relationship.FWB.value: # -if AubreyRs
+        if aubrey.relationship >= Relationship.FWB: # -if AubreyRs
             scene v15s32_8l # FPP. Aubrey smiling mouth open looking at MC stairs are behind her [Chicks' front door-interior]. 
             with dissolve
             
@@ -570,7 +576,7 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
 
         au "Thanks." 
 
-        if aubrey.relationship.value >= Relationship.FWB.value: # -if AubreyRs
+        if aubrey.relationship >= Relationship.FWB: # -if AubreyRs
             scene v15s32_8j
             with dissolve
 
@@ -670,4 +676,6 @@ label v15s32: #32) MC picks up Aubrey at Chicks' house
 
     pause 0.75
 
-    jump v15s33 # -Transition to Scene 33-
+    stop music fadeout 3
+
+    jump v15s33

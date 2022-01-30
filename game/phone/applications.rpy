@@ -27,3 +27,4 @@ default stats_app = Application("Stats", "stats/appAssets/statsIcon.webp", "stat
 default achievement_app = Application("Achievements", "achievements/appAssets/achievementsIcon.webp", "achievements")
 default kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=True)
 default simplr_app = Application("Simplr", "simplr/appAssets/simplrIcon.webp", "simplr_app", locked=True)
+default relationship_app = Application("Relationships", "relationships_icon.webp", "relationship_screen", locked=False)

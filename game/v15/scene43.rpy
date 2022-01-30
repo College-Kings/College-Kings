@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s43:
+    play music "music/v15/Track Scene 43.mp3" fadein 2
+
     scene v15s43_1 # TPP. Show MC and Amber walking up to the wolves front door, both slight smile, mouths closed.
     with fade
 
@@ -48,7 +50,7 @@ label v15s43:
                 
                 play sound "sounds/dooropen.mp3"
 
-                scene v15s42_3 # TPP. Close up shot of MC's hand turning the door knob and opening the door.
+                scene v15s43_3 # TPP. Close up shot of MC's hand turning the door knob and opening the door.
                 with dissolve
 
                 u "It's unlocked."
@@ -110,7 +112,7 @@ label v15s43:
 
                 pause 0.75
 
-            "Strategize" if detective == "professional":
+            "Strategize" if mc.detective == Detective.PROFESSIONAL:
                 scene v15s43_2b
                 with dissolve
 
@@ -173,7 +175,7 @@ label v15s43:
 
                 am "I didn't think it would be that easy, haha."
 
-            "What is Chris thinking?" if detective == "psychologist":
+            "What is Chris thinking?" if mc.detective == Detective.PSYCHOLOGIST:
                 scene v15s43_2b
                 with dissolve
 
@@ -218,7 +220,7 @@ label v15s43:
 
                 u "He's already playing mind games with us, this isn't good."
 
-            "Kick the door open" if detective == "loose_cannon":
+            "Kick the door open" if mc.detective == Detective.LOOSE_CANNON:
                 scene v15s43_2b
                 with dissolve
 
@@ -306,7 +308,7 @@ label v15s43:
 
             am "Chris, get your ass downstairs!"
         
-        "Use your instinct" if detective == "professional":
+        "Use your instinct" if mc.detective == Detective.PROFESSIONAL:
             scene v15s43_9
             with dissolve
 
@@ -324,7 +326,7 @@ label v15s43:
 
             u "I know when something isn't right, okay? I can feel it!"
 
-        "Analyze how you feel" if detective == "psychologist":
+        "Analyze how you feel" if mc.detective == Detective.PSYCHOLOGIST:
             scene v15s43_9
             with dissolve
 
@@ -340,7 +342,7 @@ label v15s43:
 
             u "*Gasps* A psychological horror!"
 
-        "Be angry" if detective == "loose_cannon":
+        "Be angry" if mc.detective == Detective.LOOSE_CANNON:
             scene v15s43_11 # TPP. View showing MC on one side of a couch in the living room, Amber on the other side with her hands in the shape of a gun, both suspicious, mouth closed.
             with dissolve
 
@@ -436,15 +438,17 @@ label v15s43:
     scene v15s43_15
     with dissolve
 
-    am "The obvious answer is that she's at her dad's house, or her stepmother's..."
+    $ v15_nora_locations.add(Location("Nora's dad's house", "images/v15/detective_board/dad_house.webp", "Too obvious. And if Nora wanted to get away, is going to her Dad's house far enough away?"))
+
+    am "The obvious answer is that she's at her dad's house..."
 
     scene v15s43_14d # FPP. MC looking at Chris, Chris looking at Amber, Chris nervous, mouth closed.
     with dissolve
+   
+    $ v15_nora_locations.add(Location("Ms. Rose's house", "images/v15/detective_board/ms_rose_house.webp", "This is likely the first place people would look for Nora. So, for that reason, I'm not sure she would go there."))
 
-    pause 0.75
-    $ v15_nora_locations.add("dad")
-    $ v15_nora_locations.add("ms_rose")
-
+    am "...or her stepmother's."
+    
     scene v15s43_15
     with dissolve
 
@@ -455,40 +459,69 @@ label v15s43:
 
     ch "No."
 
-    scene v15s43_14f # FPP. MC looking at Chris, Chris looking at MC, Chris nervous, mouth closed.
-    with dissolve
+    if joinwolves or "nora" in freeroam11:
+        scene v15s43_14f # FPP. MC looking at Chris, Chris looking at MC, Chris nervous, mouth closed.
+        with dissolve
 
-    u "One-word answers... Huh. That's never convincing, is it detective?"
+        u "One-word answers... Huh. That's never convincing, is it detective?"
+        
+        scene v15s43_15a # FPP. MC looking at Amber, Amber looking at MC, Amber suspicious, mouth open.
+        with dissolve
 
-    scene v15s43_15a # FPP. MC looking at Amber, Amber looking at MC, Amber suspicious, mouth open.
-    with dissolve
+        am "Not at all, my protégé... Not at all."
 
-    am "Not at all, my protege... Not at all."
+    else:
+        scene v15s43_15b
+        with dissolve
+        
+        u "Wait... stepmother?"
+        
+        scene v15s43_15c
+        with dissolve
+        
+        am "Yeah, Ms. Rose... She's Nora's stepmom."
+
+        scene v15s43_15b
+        with dissolve
+        
+        u "What the fuck? Why am I hearing about this for the first time now?"
+
+        scene v15s43_15a
+        with dissolve
+        
+        am "Well, try to pay attention to all these details from now on, [name]. They may become important."
+
+        scene v15s43_15
+        with dissolve
+
+        am "Especially considering our first suspect here probably knows more than he's willing to tell."
 
     scene v15s43_14h
     with dissolve
 
-    ch "Okay then, I don't think she's with either of them. Happy now?"
+    ch "I don't think she's with either parent. Happy now?"
 
     scene v15s43_15
     with dissolve
 
     am "No. You're hiding something."
 
-    scene v15s43_14b
+    scene v15s43_14b #test2
     with dissolve
+
+    $ v15_nora_clues.add(Clue("Chris", "Nora wanted to be alone after the break up", "An obvious clue, but the fact Nora wants to be alone can help us narrow things down."))
 
     ch "She wanted to be alone after we broke up. I'm respecting that wish."
 
     ch "And I suggest you should respect that too."
-
-    $ v15_nora_clues.add("be_alone")
 
     scene v15s43_14g # FPP. MC looking at Chris, Chris looking at MC, Chris neutral face, mouth closed.
     with dissolve
 
     menu:
         "Where did she go?":
+            $ v15_nora_clue_camping = True
+        
             $ add_point(KCT.BRO)
             
             scene v15s43_14g
@@ -509,9 +542,10 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            ch "Why are you acting so weird? Listen, I don't know where she is. She could have gone camping for all I know."
-            $ v15_nora_locations.add("camping")
+            $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/camping.webp", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
 
+            ch "Why are you acting so weird? Listen, I don't know where she is. She could have gone camping for all I know."
+            
             ch "Just wait until she comes back. She's fine. I swear she's fine."
 
         "Did she see someone?":
@@ -532,7 +566,9 @@ label v15s43:
 
             am "That's no good, Chris. You need to start telling us something we can use."
 
-        "You're lying" if detective == "professional":
+        "You're lying" if mc.detective == Detective.PROFESSIONAL:
+            $ v15_nora_clue_camping = True
+        
             scene v15s43_14g
             #with dissolve
             
@@ -541,10 +577,11 @@ label v15s43:
             scene v15s43_14h
             with dissolve
 
-            ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
-            $ v15_nora_locations.add("camping")
+            $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/camping.webp", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
 
-        "Analyze Chris" if detective == "psychologist":
+            ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
+
+        "Analyze Chris" if mc.detective == Detective.PSYCHOLOGIST:
             scene v15s43_14g
             #with dissolve
 
@@ -568,10 +605,13 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
-            $ v15_nora_locations.add("camping")
+            $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/camping.webp", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
 
-        "Accuse Chris" if detective == "loose_cannon":
+            ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
+        
+        "Accuse Chris" if mc.detective == Detective.LOOSE_CANNON:
+            $ v15_nora_clue_camping = True
+        
             play sound "sounds/thud.mp3"
 
             scene v15s43_16 # TPP. Show MC slamming his hands on the table, MC angry, mouth open.
@@ -624,9 +664,11 @@ label v15s43:
     scene v15s43_14h
     with dissolve
 
+    $ v15_nora_clues.add(Clue("Chris", "Nora's aunt frequently borrows her dad's cabin", "So her aunt borrows Mr. Rose's cabin. Not sure if it's relevant, but maybe some other clues will help."))
+
     ch "Her aunt... Oh yeah! Sometimes her aunt will rent out her dad's cabin."
-    $ v15_nora_clues.add("aunt_cabin")
-    $ v15_nora_locations.add("cabin")
+
+    $ v15_nora_locations.add(Location("Nora's dad's cabin", "images/v15/detective_board/dad_cabin.webp", "She could be at the cabin. It sounds like it's out in nature and she could be alone. Although other clues might take us in a different direction."))
 
     ch "And there, that answers your question about other properties, too. Can you leave me alone now?"
 
@@ -685,15 +727,16 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
-            ch "She pretty much hates him. That's the last place she'd go."
-            $ v15_nora_clues.add("hates_dad")
+            $ v15_nora_clues.add(Clue("Chris", "Nora hates her dad", "I'm not so sure she hates her dad. That might just be from Chris not listening to her, like usual."))
 
+            ch "She pretty much hates him. That's the last place she'd go."
+    
             scene v15s43_15
             with dissolve
 
             am "Hmm... I don't know if we can trust you."
 
-        "Use logic" if detective == "professional":
+        "Use logic" if mc.detective == Detective.PROFESSIONAL:
             scene v15s43_14g
             #with dissolve
 
@@ -720,7 +763,7 @@ label v15s43:
 
             u "Help us make sense out of what you're saying, Chris!"
 
-        "Examine further" if detective == "psychologist":
+        "Examine further" if mc.detective == Detective.PSYCHOLOGIST:
             u "This aunt. Does Nora like her?"
 
             scene v15s43_14h
@@ -746,15 +789,16 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
+            $ v15_nora_clues.add(Clue("Chris", "Nora hates her dad", "I'm not so sure she hates her dad. That might just be from Chris not listening to her, like usual."))
+
             ch "I doubt it. She hates her dad."
-            $ v15_nora_clues.add("hates_dad")
 
             scene v15s43_14g
             with dissolve
 
             u "Hate is a very strong word. Are those your words or Nora's words?"
 
-        "Shout at Chris" if detective == "loose_cannon":
+        "Shout at Chris" if mc.detective == Detective.LOOSE_CANNON:
             scene v15s43_14g
             with vpunch
 
@@ -793,8 +837,9 @@ label v15s43:
             scene v15s43_14b
             with dissolve
 
+            $ v15_nora_clues.add(Clue("Chris", "Nora hates her dad", "I'm not so sure she hates her dad. That might just be from Chris not listening to her, like usual."))
+
             ch "She hates her dad. She wouldn't go to him."
-            $ v15_nora_clues.add("hates_dad")
 
             scene v15s43_16a # TPP. Show MC kicking the coffee table, MC angry, mouth open.
             with dissolve
@@ -872,7 +917,7 @@ label v15s43:
 
     u "Great idea, chief."
 
-    if detective == "loose_cannon":
+    if mc.detective == Detective.LOOSE_CANNON:
         menu:
             "Kick table":
                 $ add_point(KCT.TROUBLEMAKER)
@@ -900,5 +945,7 @@ label v15s43:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v15s44

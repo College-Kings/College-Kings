@@ -4,6 +4,8 @@
 # Time: Afternoon
 
 label v15s47:
+    play music "music/v15/Track Scene 47.mp3" fadein 2
+
     scene v15s47_1 # TPP. MC in the back of the Cab looking out the window seeing the trees and countryside area, Neutral face, mouth closed.
     with dissolve
 
@@ -47,9 +49,11 @@ label v15s47:
 
             u "(No reason to call. I'm almost there anyway... Plus, I doubt she's gonna answer.)"
 
-scene v15s47_4 # TPP. Outside shot of the Cab driving down the road.
-with dissolve
+    scene v15s47_4 # TPP. Outside shot of the Cab driving down the road.
+    with dissolve
 
-pause 0.75
+    pause 0.75
 
-jump v15s48
+    stop music fadeout 3
+
+    jump v15s48

@@ -228,7 +228,7 @@ screen messager(contact=None):
 
             imagebutton:
                 idle "images/msgarrow.webp"
-                action [Show("messenger_contacts"), Hide("messenger_reply")]
+                action [Hide("messenger_reply"), Show("messenger_contacts")]
                 yalign 0.5
 
             vbox:

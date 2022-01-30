@@ -42,7 +42,7 @@ label v12_nora_checks_mc:
 
         no "Are you okay?"
 
-        if nora.relationship.value >= Relationship.LIKES.value:
+        if nora.relationship >= Relationship.LIKES:
             scene v12ncm5a # FPP. Nora with a slight smile, mouth opened
             with dissolve
 
@@ -103,9 +103,6 @@ label v12_nora_checks_mc:
         with dissolve
 
         u "*Gulp*"
-
-        scene v12ncm5l 
-        with dissolve
 
         no "Hmm, maybe you are fine."
 
@@ -284,7 +281,7 @@ label v12_nora_checks_mc:
 
     no "I like that."
 
-    if nora.relationship.value >= Relationship.LIKES.value:
+    if nora.relationship >= Relationship.LIKES:
         scene v12ncm8 # TPP. Nora gives MC a hug
         with dissolve
 

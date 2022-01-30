@@ -5,8 +5,10 @@
 # Render Count: 5 Unique, 14 total
 
 label v15s29:
+    play music "music/v13/Track Scene 15.mp3" fadein 2
+
     scene v15s29_1 # TPP. MC walks into his wolve's bedroom, slight smile, mouth closed
-    with dissolve
+    with fade
 
     pause 0.75
 
@@ -51,13 +53,13 @@ label v15s29:
         $ emily.messenger.addReply("Let me see? ;)", func=None)
 
         if config_censored:
-            $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
+            $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp")
         else:
-            $ emily.messenger.newImgMessage("images/v15/Scene 29/emilynude1.webp", force_send=True) # Emily sat on the edge of the bath, now naked, legs crossed
+            $ emily.messenger.newImgMessage("images/v15/Scene 29/emilynude1.webp") # Emily sat on the edge of the bath, now naked, legs crossed
 
-        $ emily.messenger.newMessage("What would we be doing right now if you were here with me? ;)", force_send=True)
+        $ emily.messenger.newMessage("What would we be doing right now if you were here with me? ;)")
         $ emily.messenger.addReply("We'd be getting very wet and extremely warm...", func=None)
-        $ emily.messenger.newMessage("Mmm... Send me a pic? ;)", force_send=True)
+        $ emily.messenger.newMessage("Mmm... Send me a pic? ;)")
 
         label v15s29_PhoneContinue:
             if emily.messenger.replies:
@@ -73,6 +75,10 @@ label v15s29:
             "Sext Emily":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BRO)
+                $ v15_emily_sext = True
+
+                if config_censored:
+                    call screen censored_popup("v15s29_nsfwSkipLabel1")
                 
                 scene v15s29_4
                 with dissolve
@@ -85,29 +91,29 @@ label v15s29:
                 pause 0.75
 
                 if config_censored:
-                    $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
+                    $ emily.messenger.addImgReply("gui/censoredPopup/censoredBackground.webp")
                 else:
-                    $ emily.messenger.newImgMessage("images/v15/Scene 29/emilynude_MC_DicPic1.webp", force_send=True) # MC dick pic, Just show a white sheet under Mc for the background
+                    $ emily.messenger.addImgReply("images/v15/Scene 29/emilynude_MC_DicPic1.webp") # MC dick pic, Just show a white sheet under Mc for the background
 
-                $ emily.messenger.newMessage("Omg, you're so hard for me... Are you touching yourself?", force_send=True)
+                $ emily.messenger.newMessage("Omg, you're so hard for me... Are you touching yourself?")
                 $ emily.messenger.addReply("I am now. Thinking about you in that bath ;)", func=None)
-                $ emily.messenger.newMessage("Hehe, I'm thinking about you slipping of inside me...", force_send=True)
-                $ emily.messenger.newMessage("I do miss you... Both of you, haha.", force_send=True)
+                $ emily.messenger.newMessage("Hehe, I'm thinking about you slipping of inside me...")
+                $ emily.messenger.newMessage("I do miss you... Both of you, haha.")
                 $ emily.messenger.addReply("I'm sure you'll see us again soon.", func=None)
-                $ emily.messenger.newMessage("How soon? I need you so bad...", force_send=True)
+                $ emily.messenger.newMessage("How soon? I need you so bad...")
                 $ emily.messenger.addReply("We'll see... If you're a good girl then maybe soon rather than later ;)")
 
                 if config_censored:
-                    $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp", force_send=True)
+                    $ emily.messenger.newImgMessage("gui/censoredPopup/censoredBackground.webp")
                 else:
-                    $ emily.messenger.newImgMessage("images/v15/Scene 29/emilynude2.webp", force_send=True) # Image of her fingering herself, Inside or outside the tub, whatever is possible
+                    $ emily.messenger.newImgMessage("images/v15/Scene 29/emilynude2.webp") # Image of her fingering herself, Inside or outside the tub, whatever is possible
 
-                $ emily.messenger.newMessage("I want you here. Now.", force_send=True)
+                $ emily.messenger.newMessage("I want you here. Now.")
                 $ emily.messenger.addReply("Fuck, that's so hot...", func=None)
                 $ emily.messenger.addReply("You have to earn it...", func=None)
-                $ emily.messenger.newMessage("I'm going to cum for you...", force_send=True)
+                $ emily.messenger.newMessage("I'm going to cum for you...")
                 $ emily.messenger.addReply("Good.", func=None)
-                $ emily.messenger.newMessage("Send me a pic when you're finished? ;)", force_send=True)
+                $ emily.messenger.newMessage("Send me a pic when you're finished? ;)")
 
                 label v15s29_PhoneContinue2:
                     if emily.messenger.replies:
@@ -146,12 +152,19 @@ label v15s29:
                 else: 
                     $ emily.messenger.addImgReply("images/v15/Scene 29/emilynude_MC_DicPic2.webp", func=None) # MC's Post Cum Hand Pic
 
-                $ emily.messenger.newMessage("God, I wish I was there to help clean that off you...", force_send=True)
+                $ emily.messenger.newMessage("God, I wish I was there to help clean that off you...")
                 $ emily.messenger.addReply("You're such a dirty girl, Emily.", func=None)
                 $ emily.messenger.addReply("Haha, my dirty girl...", func=None)
-                $ emily.messenger.newMessage("You know it ;)", force_send=True)
-                $ emily.messenger.newMessage("Night, [name]. Thanks for the show :)", force_send=True)
+                $ emily.messenger.newMessage("You know it ;)")
+                $ emily.messenger.newMessage("Night, [name]. Thanks for the show :)")
                 $ emily.messenger.addReply("You too. <3 Night.", func=None)
+
+                label v15s29_PhoneContinue3:
+                    if emily.messenger.replies:
+                        call screen phone
+                    if emily.messenger.replies:
+                        u "(I should reply to Emily.)"
+                        jump v15s29_PhoneContinue3
 
                 scene v15s29_4f # same as v15s29_4d FPP. MC wipes his dick clean of cum
                 with dissolve
@@ -167,24 +180,40 @@ label v15s29:
                 $ add_point(KCT.BOYFRIEND)
                 
                 $ emily.messenger.addReply("Not really in the mood... I'm sorry", func=None)
-                $ emily.messenger.newMessage("Oh, okay. No worries. I'll talk to you soon, I miss you <3", force_send=True)
+                $ emily.messenger.newMessage("Oh, okay. No worries. I'll talk to you soon, I miss you <3")
                 $ emily.messenger.addReply("You too, night :)", func=None)
 
-                label v15s29_PhoneContinue3:
+                label v15s29_PhoneContinue4:
                     if emily.messenger.replies:
                         call screen phone
                     if emily.messenger.replies:
                         u "(I should reply to Emily.)"
-                        jump v15s29_PhoneContinue3
+                        jump v15s29_PhoneContinue4
 
                 scene v15s29_4
                 with dissolve
 
                 pause 0.75
 
+                label v15s29_nsfwSkipLabel1:
+
+                scene v15s29_3
+                with dissolve
+
+                u "(Okay, time for sleep now.)"
+
+    $ renpy.end_replay()
+
     scene v15s29_5 # TPP. lights are out, and MC has laid down to go to sleep, no expression, eyes closed
     with fade
 
     pause 0.75
+
+    stop music fadeout 3
+
+    scene black
+    with fade
+    
+    pause 2
 
     jump v15s31

@@ -26,8 +26,10 @@ init python:
 
     def v9s35_reply5():
         chloe.messenger.newImgMessage("images/v9/Scene 35/chloetxtimg.webp")
-        chloe.messenger.addReply(_("OMG! I miss those!"))
-        chloe.messenger.addReply(_("OMG! You are magnificent!"))
+        chloe.messenger.addReply(_("OMG! I miss those!"), v9s35_reply5a)
+        chloe.messenger.addReply(_("OMG! You are magnificent!"), v9s35_reply5a)
+
+    def v9s35_reply5a():
         chloe.messenger.newMessage(_("Thought you'd like that :)"))
         chloe.messenger.addReply(_("Like? I love it! That just made my whole day better."))
         chloe.messenger.newMessage(_("Awww, such a charmer haha. Your turn. Let me see yours."))
@@ -79,14 +81,14 @@ label v9_room_sat_aft:
 
         u "(How much longer do I have?)"
 
-        if chloe.relationship.value > Relationship.MAD.value:
+        if chloe.relationship > Relationship.MAD:
             scene v9rsa3 # TPP. Show MC now on his back on his bed, looking at his phone (don't show phone screen)
             with dissolve
             
             $ chloe.messenger.newMessage(_("Hey [name], what you up to?"), force_send=True)
             $ chloe.messenger.addReply(_("Nothing much. Just relaxing. I'm kind of tired."))
             $ chloe.messenger.newMessage(_("Awwww. Long day?"))
-            if chloe.relationship.value >= Relationship.FWB.value:
+            if chloe.relationship >= Relationship.FWB:
                 $ chloe.messenger.addReply(_("Yeah haha, I feel wiped."), v9s35_reply1)
             else:
                 $ chloe.messenger.addReply(_("Yeah haha, I feel wiped."), v9s35_reply8)
@@ -127,7 +129,7 @@ label v9_room_sat_aft:
 
         u "(How much longer do I have?)"
 
-        if chloe.relationship.value > Relationship.MAD.value:
+        if chloe.relationship > Relationship.MAD:
             scene v9rsa7 # TPP. Show MC now on his back on his bed, looking at his phone (don't show phone screen)
             with dissolve
             
@@ -138,7 +140,7 @@ label v9_room_sat_aft:
             $ chloe.messenger.newMessage(_("Hey [name], what you up to?"), force_send=True)
             $ chloe.messenger.addReply(_("Nothing much. Just relaxing. I'm kind of tired."))
             $ chloe.messenger.newMessage(_("Awwww. Long day?"))
-            if chloe.relationship.value >= Relationship.FWB.value:
+            if chloe.relationship >= Relationship.FWB:
                 $ chloe.messenger.addReply(_("Yeah haha, I feel wiped."), v9s35_reply1)
             else:
                 $ chloe.messenger.addReply(_("Yeah haha, I feel wiped."), v9s35_reply8)

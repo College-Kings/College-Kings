@@ -755,7 +755,7 @@ label v14s23:
 
     cl "*Laughs* Really, it's fine."
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value: 
+    if chloe.relationship >= Relationship.GIRLFRIEND: 
         scene v14s23_4h # FPP. Same as v14s23_4b, Chloe kissing MC on the cheek.
         with dissolve
 

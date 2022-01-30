@@ -3,13 +3,11 @@
 # Characters: MC (Outfit: 1), Ms. Rose (Outfit: 1)
 # Time: Night
 
-
 label v16s5:
-
     scene v16s5_1 # TPP. Shot from behind of MC, MC walking towards Ms. Rose who is standing by a tree along the wolves house, The frat house not shown, Ms Rose, neutral face, mouth closed.
     with dissolve
 
-    pause
+    pause 0.75
 
     scene v16s5_2 # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms.Rose looking at MC, Ms.Rose neutral face, mouth closed.
     with dissolve
@@ -21,7 +19,7 @@ label v16s5:
 
     ro "I know, but I had to come see you."
 
-    if v15_mad_at_ms_rose and not v15_kitchensex:
+    if v15_mad_at_ms_rose and not "v15_rose" in sceneList:
         scene v16s5_2a
         with dissolve
 
@@ -29,17 +27,17 @@ label v16s5:
 
         if v15_seduce_ms_rose:
             scene v16s5_2a
-            with dissolve 
+            with dissolve
 
             ro "But, when you came with Chloe to ask for my support, and you made those...promises to persuade me to sign, and I still don't know if you really meant it."
 
         scene v16s5_2a
-        with dissolve    
+        with dissolve
 
         ro "I just need to know... Do you want to keep seeing me? Or is this..."
 
         menu:
-            "Of course I do.":
+            "Of course I do":
                 $ add_point(KCT.BOYFRIEND)
                 scene v16s5_2
                 with dissolve
@@ -59,7 +57,7 @@ label v16s5:
                 scene v16s5_3 # TPP. Show Ms. Rose with her arms wrapped around MC hugging him, One of her legs lifted back the generic happy lady hug, Ms. Rose smile, mouth closed, MC slight smile, mouth closed.
                 with dissolve
 
-                pause .15
+                pause 0.75
 
                 scene v16s5_2c # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose slight smile, mouth open.
                 with dissolve
@@ -138,14 +136,14 @@ label v16s5:
                 scene v16s5_4 # TPP. Show MC and Ms. Rose sharing a kiss.
                 with dissolve
 
-                pause
+                pause 0.75
 
                 scene v16s5_1a # TPP. Show MC walking the way he came from in v16s5_1, Ms Rose in the background walking away from the wolves house, MC neutral face, mouth closed.
                 with dissolve
 
                 u "(Another day of dressing up and impressing ladies... Sign me up!)"
 
-            "It's over.":
+            "It's over":
                 $ add_point(KCT.BRO)
                 scene v16s5_2
                 with dissolve
@@ -170,7 +168,7 @@ label v16s5:
                 scene v16s5_2f
                 with dissolve
 
-                pause 
+                pause 0.75 
 
                 scene v16s5_2g # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose upset, Ms. Rose mouth open.
                 with dissolve
@@ -202,6 +200,7 @@ label v16s5:
                 u "(Breakups suck... Fuck.)"
 
                 # [End of Checkpoint 1.1. Continues to Checkpoint 2]
+
     elif v15_threaten_ms_rose:  
         # [Checkpoint 1.2]
         scene v16s5_2a
@@ -247,7 +246,7 @@ label v16s5:
         u "(Did I just get dumped?)"
 
         menu:
-            "Say sorry.":
+            "Say sorry":
                 $ add_point(KCT.BRO)
                 scene v16s5_1b # TPP. MC and Ms. Rose standing still with their backs to each other. Close enough for Ms Rose to hear MC, MC slight frown, looking at the ground, mouth open.
                 with dissolve
@@ -256,7 +255,7 @@ label v16s5:
 
                 u "I hope one day you can forgive me."
 
-            "Insult her.":
+            "Insult her":
                 $ add_point(KCT.TROUBLEMAKER)
                 scene v16s5_1c # TPP. MC and Ms. Rose standing still with their backs to each other. Close enough for Ms Rose to hear MC, MC angry, looking at the ground, mouth open.
                 with dissolve
@@ -264,9 +263,10 @@ label v16s5:
                 u "Have fun finding someone your own age!"
 
         scene v16s5_1d # TPP. MC and Ms. Rose walking away from each other, further away from each other, MC neutral face looking at the ground as he walks back to the wolves house.
-        with dissolve 
+        with dissolve
 
         #[End of Checkpoint 1.2. Continues to Checkpoint 2]
+
     else:
     # [Checkpoint 1.3]
 
@@ -286,7 +286,7 @@ label v16s5:
         ro "There's a performance Friday evening at the Opera house. It's the one just out of town."
 
         menu:
-            "Be excited.":
+            "Be excited":
                 $ add_point(KCT.BOYFRIEND)
                 scene v16s5_2b
                 with dissolve
@@ -307,7 +307,8 @@ label v16s5:
                 with dissolve
 
                 ro "Only the best for my baby. *Laughs quietly*"
-            "Be unsure.":
+
+            "Be unsure":
                 $ add_point(KCT.TROUBLEMAKER)
                 scene v16s5_2b
                 with dissolve
@@ -346,7 +347,7 @@ label v16s5:
                 scene v16s5_5 # TPP. Shot of Ms Rose playing with the Collar of MC's shirt, Ms Rose flirty, mouth closed, MC slight smile, mouth closed.
                 with dissolve
 
-                pause
+                pause 0.75
 
                 scene v16s5_2i # FPP. Ms Rose close to MC's face biting her lip and playing with MC's collar.
                 with dissolve
@@ -359,9 +360,10 @@ label v16s5:
                 ro "Is it?"
 
                 scene v16s5_2i
-                with dissolve 
+                with dissolve
 
                 u "What can I say, you make everything interesting."
+
         scene v16s5_2c
         with dissolve
         
@@ -377,7 +379,7 @@ label v16s5:
         scene v16s5_4
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v16s5_1a
         with dissolve

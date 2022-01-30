@@ -4,15 +4,21 @@
 # Time: Night
 
 label v15s18c:
-    call screen v15s18a_livingroom
+    play music "music/v15/Track Scene 18c_1.mp3" fadein 2
+
+    $ freeroam13.add("lauren2")
+
+    call screen v15s18a_room with fade
 
 label v15s18c_riley:
     $ freeroam14.add("riley")
 
+    play sound "sounds/dooropen.mp3"
+
     scene v15s18c_ri_1 # TPP. Show MC walking into the bathroom, Riley adjusting her make up in front of the mirror, MC slightly startled, Riley slightly startled, both mouths closed
     #with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18c_ri_2 # FPP. MC in bathroom, Riley in front of mirror, Riley looking at MC through the mirror, she's still adjusting her make up, Riley slight smile, mouth closed
     with dissolve
@@ -34,7 +40,7 @@ label v15s18c_riley:
 
     ri "Haha, no worries. I was just checking my makeup."
 
-    if gift_card_50 in mc.inventory and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if gift_card_50 in mc.inventory and lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18c_ri_2b
         with dissolve
 
@@ -59,7 +65,7 @@ label v15s18c_riley:
                 
                 u "Seriously? That would be great, haha."
 
-                if riley.relationship.value >= Relationship.FWB.value:
+                if riley.relationship >= Relationship.FWB:
                     scene v15s18c_ri_2d # FPP. Same as v15s18c_ri_2c, Riley slightly sad, mouth open
                     with dissolve
 
@@ -74,9 +80,12 @@ label v15s18c_riley:
             "You can't shop for yourself":
                 $ add_point(KCT.BRO)
                 
+                scene v15s18c_ri_2c
+                with dissolve
+
                 u "What? You can't shop for yourself, haha. That ruins the surprise."
 
-                if riley.relationship.value >= Relationship.FWB.value:
+                if riley.relationship >= Relationship.FWB:
                     scene v15s18c_ri_2e # FPP. Same as v15s18c_ri_2b, Riley smirking, mouth open
                     with dissolve
 
@@ -172,7 +181,7 @@ label v15s18c_riley:
 
         u "That's true."
 
-        scene v15s18c_ri_2g
+        scene v15s18c_ri_2f
         with dissolve
 
         ri "Of course it's true, why would I speak in lies?"
@@ -228,7 +237,7 @@ label v15s18c_riley:
 
         ri "Why thank you, although I don't think we'll need it. Hehe..."
     
-    elif (emerald_bracelet in mc.inventory or ruby_choker_necklace in mc.inventory) and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    elif (emerald_bracelet in mc.inventory or ruby_choker_necklace in mc.inventory) and lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18c_ri_2b
         with dissolve
 
@@ -256,7 +265,7 @@ label v15s18c_riley:
 
         u "I love seeing her smile, but being the reason for it is even better, you know?"
 
-        if riley.relationship.value >= Relationship.FWB.value:
+        if riley.relationship >= Relationship.FWB:
             scene v15s18c_ri_2i # FPP. Same as v15s18c_ri_2f, Riley slightly sad, looking down, mouth closed
             with dissolve
 
@@ -358,7 +367,7 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_1 # TPP. Show MC walking up to Imre and Aubrey, MC slight smile, mouth closed, Imre slight smile, mouth open, looking at Aubrey, Aubrey looking at Imre, mouth closed, slightly annoyed
     #with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18c_imau_2 # FPP. MC standing close to Aubrey and Imre, MC looking only at Imre, Imre looking at Aubrey, Imre slight smile, mouth open
     with dissolve
@@ -517,7 +526,7 @@ label v15s18c_imre_aubrey:
 
         pause 0.75
 
-    elif (emerald_bracelet in mc.inventory or ruby_choker_necklace in mc.inventory) and lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    elif (emerald_bracelet in mc.inventory or ruby_choker_necklace in mc.inventory) and lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18c_imau_6
         with dissolve
 
@@ -631,6 +640,9 @@ label v15s18c_imre_aubrey:
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BRO)
                 
+                scene v15s18c_imau_6b
+                with dissolve
+               
                 u "So, I'm just curious..."
 
                 scene v15s18c_imau_6c
@@ -725,6 +737,8 @@ label v15s18c_imre_aubrey:
                 call screen v15s18a_room
 
     else:
+        label v15s18c_aubreysg:
+    
         scene v15s18c_imau_6c
         with dissolve
 
@@ -745,6 +759,10 @@ label v15s18c_imre_aubrey:
 
     pause 0.75
 
+    stop music fadeout 3
+    
+    play music "music/v12/Track Scene 33_5.mp3" fadein 2
+
     scene v15s18c_imau_11 # TPP. Show MC and Aubrey entering Aubrey's room, Aubrey smiling, mouth open, MC slightly worried, mouth closed
     with dissolve
 
@@ -764,6 +782,9 @@ label v15s18c_imre_aubrey:
     with dissolve
 
     u "(Well, when you put it like that...)"
+
+    if config_censored:
+        call screen censored_popup("v15s18c_nsfwSkipLabelAub")
 
     scene v15s18c_imau_13 # TPP. Close up of Aubrey removing the bottom half of her costume
     with dissolve
@@ -800,10 +821,14 @@ label v15s18c_imre_aubrey:
 
     pause 0.75
 
+    play sound "sounds/kiss.mp3"
+
     scene v15s18c_imau_18 # TPP. Show MC kissing Aubrey's neck, Aubrey biting her lip, mouth closed
     with dissolve
 
     pause 0.75
+
+    play sound "sounds/kiss.mp3"
 
     scene v15s18c_imau_19 # TPP. Show MC kissing Aubrey's abdomen, Aubrey mouth open, moaning
     with dissolve
@@ -830,8 +855,16 @@ label v15s18c_imre_aubrey:
     image v15aubfin2 = Movie(play="images/v15/Scene 18c/v15aubfin2.webm", loop=True, image="images/v15/Scene 18c/v15aubfin2Start.webp", start_image="images/v15/Scene 18c/v15aubfin2Start.webp")
     image v15aubfin2f = Movie(play="images/v15/Scene 18c/v15aubfin2f.webm", loop=True, image="images/v15/Scene 18c/v15aubfin2Start.webp", start_image="images/v15/Scene 18c/v15aubfin2Start.webp")
 
+    image v15aubfing = Movie(play="images/v15/Scene 18c/v15aubfing.webm", loop=True, image="images/v15/Scene 18c/v15aubfingStart.webp", start_image="images/v15/Scene 18c/v15aubfingStart.webp") 
+    image v15aubfingf = Movie(play="images/v15/Scene 18c/v15aubfingf.webm", loop=True, image="images/v15/Scene 18c/v15aubfingStart.webp", start_image="images/v15/Scene 18c/v15aubfingStart.webp") 
+    image v15aubfing2 = Movie(play="images/v15/Scene 18c/v15aubfing2.webm", loop=True, image="images/v15/Scene 18c/v15aubfing2Start.webp", start_image="images/v15/Scene 18c/v15aubfing2Start.webp")
+    image v15aubfing2f = Movie(play="images/v15/Scene 18c/v15aubfin2gf.webm", loop=True, image="images/v15/Scene 18c/v15aubfing2Start.webp", start_image="images/v15/Scene 18c/v15aubfing2Start.webp")
+
     scene v15aubfin # IGNORE AS ANIMATION
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_slow_2loops.mp3", loop=True)
 
     pause 0.75
 
@@ -844,6 +877,9 @@ label v15s18c_imre_aubrey:
     scene v15aubfinf # IGNORE AS ANIMATION
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_fast_4loops.mp3", loop=True)
+
     pause 0.75
    
     au "*Moans* Yes... [name], please..."
@@ -852,14 +888,17 @@ label v15s18c_imre_aubrey:
 
     au "*Moans* YES!"
 
-    scene v15aubfin2Start # IGNORE AS ALREADY RENDERED
+    scene v15aubfin2 # IGNORE AS ALREADY RENDERED
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_slow_2loops.mp3", loop=True)
 
     menu:
         "Keep her quiet":
             $ add_point(KCT.BOYFRIEND)
             
-            scene v15aubfin2 # IGNORE AS ANIMATION
+            scene v15aubfing2 # IGNORE AS ANIMATION
             with dissolve
 
             pause 0.75
@@ -868,7 +907,10 @@ label v15s18c_imre_aubrey:
 
             u "We don't want anyone interrupting us, do we?"
 
-            scene v15aubfin2f # IGNORE AS ANIMATION
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_fast_4loops.mp3", loop=True)
+
+            scene v15aubfing2f # IGNORE AS ANIMATION
             with dissolve
 
             pause 0.75
@@ -890,24 +932,20 @@ label v15s18c_imre_aubrey:
             scene v15aubfin2f 
             with dissolve
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_fast_4loops.mp3", loop=True)
+
             pause 0.75
 
             au "Fuck... You don't want that... Haha... *Moans*"
 
             u "(Maybe. But I definitely don't want anyone else to hear her, haha. Hmm...)"
-
-    scene v15s18c_imau_23 # TPP. Show MC positioning himself so he can cover Aubrey's mouth with one hand while he fingers her with the other hand
-    with dissolve
-
-    pause 0.75
     
-    image v15aubfing = Movie(play="images/v15/Scene 18c/v15aubfing.webm", loop=True, image="images/v15/Scene 18c/v15aubfingStart.webp", start_image="images/v15/Scene 18c/v15aubfingStart.webp") 
-    image v15aubfingf = Movie(play="images/v15/Scene 18c/v15aubfingf.webm", loop=True, image="images/v15/Scene 18c/v15aubfingStart.webp", start_image="images/v15/Scene 18c/v15aubfingStart.webp") 
-    image v15aubfing2 = Movie(play="images/v15/Scene 18c/v15aubfing2.webm", loop=True, image="images/v15/Scene 18c/v15aubfing2Start.webp", start_image="images/v15/Scene 18c/v15aubfing2Start.webp")
-    image v15aubfing2f = Movie(play="images/v15/Scene 18c/v15aubfin2gf.webm", loop=True, image="images/v15/Scene 18c/v15aubfing2Start.webp", start_image="images/v15/Scene 18c/v15aubfing2Start.webp")
-
     scene v15aubfing # IGNORE AS ANIMATION
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_slow_2loops.mp3", loop=True)
 
     pause 0.75
 
@@ -916,12 +954,18 @@ label v15s18c_imre_aubrey:
     scene v15aubfingf # IGNORE AS ANIMATION
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_fast_4loops.mp3", loop=True)
+
     pause 0.75
 
     u "Faster?"
 
     scene v15aubfing2 # IGNORE AS ANIMATION
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_slow_2loops.mp3", loop=True)
 
     pause 0.75
 
@@ -930,11 +974,16 @@ label v15s18c_imre_aubrey:
     scene v15aubfing2f # IGNORE AS ANIMATION
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing2_fast_4loops.mp3", loop=True)
+
     pause 0.75
 
     u "You're so wet..."
 
     au "Mmm, mmm! *Moans*"
+
+    stop sound
 
     scene v15s18c_imau_24 # TPP. MC fingering Aubrey, no longer covering her mouth (make it similar to the first animation positioning), Aubrey moaning, mouth open
     with dissolve
@@ -943,6 +992,9 @@ label v15s18c_imre_aubrey:
 
     scene v15aubfin
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_slow_2loops.mp3", loop=True)
 
     pause 0.75
 
@@ -953,6 +1005,9 @@ label v15s18c_imre_aubrey:
     scene v15aubfinf
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_fast_4loops.mp3", loop=True)
+
     pause 0.75
 
     au "*Whispers* Yes..."
@@ -962,6 +1017,9 @@ label v15s18c_imre_aubrey:
     scene v15aubfin2
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     au "Mmm, yes... *Moans* I-"
@@ -969,11 +1027,16 @@ label v15s18c_imre_aubrey:
     scene v15aubfin2f
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18c/Scene 18c - au_fing1_fast_4loops.mp3", loop=True)
+
     pause 0.75
 
     au "Fuck... Oh, [name]..."
 
     au "*Moans* I'm gonna cum."
+
+    stop sound
 
     scene v15s18c_imau_25 # TPP. MC fingering Aubrey (finger not fully inside, Aubrey moaning, mouth closed (don't show MC's face), she is cumming her, make this very intense (maybe pulling bedsheets), finger fully inserted
     with dissolve
@@ -994,6 +1057,8 @@ label v15s18c_imre_aubrey:
     with dissolve
 
     au "*Groans*"
+
+    label v15s18c_nsfwSkipLabelAub:
 
     scene v15s18c_imau_26 # FPP. MC in same position as fingering position, not fingering anymore Aubrey laying down, looking at the roof, MC looking at Aubrey, Aubrey smiling/excited (she just cummed so), mouth open
     with dissolve
@@ -1050,10 +1115,12 @@ label v15s18c_imre_aubrey:
 
     pause 0.75
 
+    play sound "sounds/kiss.mp3"
+
     scene v15s18c_imau_31 # TPP. Show Aubrey giving MC a passionate kiss
     with dissolve
 
-    pause 0.75
+    pause 1.75
 
     scene v15s18c_imau_32 # FPP. Aubrey standing in front of MC, Aubrey mouth closed, sexy expression
     with dissolve
@@ -1070,23 +1137,30 @@ label v15s18c_imre_aubrey:
 
     u "Yeah, good idea, haha."
 
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if aubrey.relationship >= Relationship.FWB:
         scene v15s18c_imau_32a
         with dissolve
 
         au "I'll miss you."
 
-    scene v15s18c_imau_33 # TPP. Close up of Aubrey getting dressed (pulling her panties up)
-    with dissolve
+    if not config_censored:
+        scene v15s18c_imau_33 # TPP. Close up of Aubrey getting dressed (pulling her panties up)
+        with dissolve
 
-    pause 0.75
+        pause 0.75
+
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 18c_3.mp3" fadein 2
 
     scene v15s18c_imau_34 # FPP. MC watches as Aubrey walks out of the room, she looks back at him over her shoulders, sexy expression, winking, mouth closed
     with dissolve
 
-    $ sceneList.add("v15_autumn")
+    $ sceneList.add("v15_aubrey")
 
-    $ checklist[4].complete = True
+    if not _in_replay:
+        $ checklist[4].complete = True
+
     u "*Exhales* (Damn, what a night so far.)"
 
     scene v15s18c_imau_35 # TPP. Show MC walking towards the door, mouth closed, smiling
@@ -1109,13 +1183,15 @@ label v15s18c_imre_aubrey:
             scene v15s18c_imau_37 # TPP. Show MC taking the panties, smiliing, mouth closed
             with dissolve
 
-            $ checklist[6].complete = True
+            if not _in_replay:
+                $ checklist[6].complete = True
+
             u "(Double check.)"
 
         "Don't steal the panties":
             $ add_point(KCT.BOYFRIEND)
             
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 u "(There's no way in hell I'm taking my girlfriend's sister's underwear. Not happening.)"
 
             else:
@@ -1124,16 +1200,22 @@ label v15s18c_imre_aubrey:
     scene v15s18c_imau_38 # TPP. Show MC leaving the room, smiling, mouth closed
     with dissolve
 
+    $ renpy.end_replay()
+
     pause 0.75
 
-    call screen v15s18a_room
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 18c_1.mp3" fadein 2
+
+    call screen v15s18a_upstairsroom
 
 label v15s18c_ryan:
     $ freeroam14.add("ryan")
     scene v15s18c_ry_1 # TPP. Show MC walking up to Ryan (Ryan is sleeping on the couch), MC mouth closed, slightly confused (make sure there is a visible condom in his shirt pocket)
     #with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18c_ry_2 # FPP. MC standing in front of Ryan, Ryan sleeping, mouth closed
     with dissolve
@@ -1205,12 +1287,18 @@ label v15s18c_ryan:
 
     ry "..."
 
-    scene v15s18c_ry_2
+    scene v15s18c_ry_2c
     with dissolve
 
     u "Ryan?"
 
+    scene v15s18c_ry_2a
+    with dissolve
+
     ry "*Snoring*"
+
+    scene v15s18c_ry_2c
+    with dissolve
 
     u "*Sighs*"
 
@@ -1253,8 +1341,6 @@ label v15s18c_ryan:
             $ checklist[7].complete = True
             u "*Whispers* Hey, thanks man!"
 
-            ry "*Snoring*"
-
         "Don't take it":
             $ add_point(KCT.BRO)
             
@@ -1265,10 +1351,10 @@ label v15s18c_ryan:
 
             u "(He's probably had that thing for a few years, it'd be like stealing his best friend. *Laughs*)"
 
-    scene v15s18c_ry_6
-    with dissolve
+            scene v15s18c_ry_6
+            with dissolve
 
-    u "Good luck, Ryan."
+            u "Good luck, Ryan."
 
     scene v15s18c_ry_7 # TPP. Show MC walking away from Ryan, smiling, mouth closed
     with dissolve
@@ -1280,10 +1366,14 @@ label v15s18c_ryan:
 label v15s18c_lauren:
     $ freeroam14.add("lauren")
 
+    stop music fadeout 3
+    
+    play music "music/v13/Track Scene 41_3.mp3" fadein 2
+
     scene v15s18c_la_1 # TPP. Show MC walking on to the balcony, Lauren already there, looking at the view, both slight smiles, mouths closed
     #with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18c_la_2 # TPP. Show MC standing next to Lauren, both leaning on the rail, facing the view, mouths closed, slight smile, not looking at each other
     with dissolve
@@ -1320,17 +1410,15 @@ label v15s18c_lauren:
     scene v15s18c_la_3a
     with dissolve
 
-    la "Yeah, it is. I was a little salty about Autumn getting the bigger room when we first moved in, but..."
+    la "Yeah, it is. Autumn's let me stay in this room for tonight."
 
-    la "I got this instead."
+    la "Her room is even bigger than this one, have you seen it?"
 
     scene v15s18c_la_3
     with dissolve
 
     menu:
-        "Balcony is better":
-            $ add_point(KCT.BOYFRIEND)
-
+        "This balcony is better":
             $ add_point(KCT.BOYFRIEND)
 
             u "Eh, I like the balcony a lot better. I'd be out here all the time if I were you, haha."
@@ -1338,19 +1426,20 @@ label v15s18c_lauren:
             scene v15s18c_la_3a
             with dissolve
 
-            la "*Chuckles* I am out here a lot, it's just relaxing."
+            la "*Chuckles* I drop by here a lot, it's just relaxing."
 
         "Bigger the better":
             $ add_point(KCT.BRO)
 
-            $ add_point(KCT.BRO)
+            scene v15s18c_la_3
+            with dissolve
 
-            u "Yeah... Having a small room kind of sucks, the bigger the better in my opinion."
+            u "Yeah... Having a small dorm room kind of sucks, the bigger the better in my opinion."
 
             scene v15s18c_la_3a
             with dissolve
 
-            la "I mean it does suck sometimes, but I'd rather have this."
+            la "I mean it does suck sometimes, but I don't need something massive, haha."
 
             scene v15s18c_la_3
             with dissolve
@@ -1446,7 +1535,7 @@ label v15s18c_lauren:
 
     u "*Laughs* Yeah, I hope so too."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18c_la_3
         with dissolve
 
@@ -1457,10 +1546,12 @@ label v15s18c_lauren:
 
         la "Aww! Come here, you."
 
+        play sound "sounds/kiss.mp3"
+
         scene v15s18c_la_5 # TPP. Show Lauren giving MC a kiss
         with dissolve
 
-        pause 0.75
+        pause 1.5
 
         scene v15s18c_la_6 # FPP. Lauren now standing right in front of MC, slight smile, mouth open
         with dissolve
@@ -1511,8 +1602,12 @@ label v15s18c_lauren:
 
     scene v15s18c_la_9 # TPP. Show MC walking back inside, slight smile, mouth closed
     with dissolve
-
+    
     pause 0.75
+
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 18c_1.mp3" fadein 2
 
     call screen v15s18a_upstairsroom
 
@@ -1622,7 +1717,7 @@ label v15s18c_autumn_amber:
 
     aut "Okay, haha. Fair."
 
-    scene v15s18c_auam_3a
+    scene v15s18c_auam_3
     with dissolve
 
     am "I'm gonna run to the bathroom, be right back."
@@ -1765,7 +1860,10 @@ label v15s18c_autumn_amber:
         scene v15s18c_auam_5
         with dissolve
 
-        u "Haha, yeah. Some things are complete, still have a few left though."
+        if len(checklist.get_completed()) > 0:
+            u "Haha, yeah. Some things are complete, still have a few left though."
+        else:
+            u "Not really, still have a few left to complete."
 
     scene v15s18c_auam_5a
     with dissolve
@@ -1824,8 +1922,8 @@ label v15s18c_autumn_amber:
             with dissolve
 
             u "Well, do you wanna make out?"
-
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 scene v15s18c_auam_5d # FPP. Same as v15s18c_auam_5a, Autumn angry, mouth open
                 with dissolve
 
@@ -1835,193 +1933,161 @@ label v15s18c_autumn_amber:
                 with dissolve
 
                 u "Yeah, I know, I'm sorry... I just-"
-
-                if kct == "loyal":
-                    call screen kct_popup
-                
-                    scene v15s18c_auam_5f # FPP. Same as v15s18c_5e, Autumn slightly sad, mouth open
-                    with dissolve
-
-                    aut "*Sighs* Fine."
-
-                    scene v15s18c_auam_5g # FPP. Same as v15s18c_5f, Autumn slightly sad, mouth closed
-                    with dissolve
-
-                    u "Wait, what?"
-
-                    scene v15s18c_auam_5f
-                    with dissolve
-
-                    aut "I know this is just for some stupid list, haha... So..."
-
-                    aut "It's fine."
-
-                    scene v15s18c_auam_5g
-                    with dissolve
-
-                    u "Exactly, yeah. I would never do anything to hurt Lau-"
-
-                    scene v15s18c_auam_5f
-                    with dissolve
-
-                    aut "No more talking. Seriously. Zip it."
-
-                    scene v15s18c_auam_5g
-                    with dissolve
-
-                    u "Yup. Got it."
-
-                    jump v15s18c_autumn_kiss
-
-                else:
-                    scene v15s18c_auam_5d
-                    with dissolve
-
-                    call screen kct_popup(required_kct="loyal")
-                    aut "You just nothing. You're lucky I won't tell Lauren that you even asked me."
-
-                    scene v15s18c_auam_5e
-                    with dissolve
-
-                    u "I'm sorry, Autumn. I thought-"
-
-                    scene v15s18c_auam_5d
-                    with dissolve
-
-                    aut "This never happened, [name]. Go away."
-
-                    scene v15s18c_auam_5e
-                    with dissolve
-
-                    u "Yeah. Okay..."
-
-                    scene v15s18c_auam_6
-                    with dissolve
-
-                    u "(Well, fuck...)"
-                
-            else:
-                if kct == "loyal" and not v11_lauren_caught_aubrey:
-                    call screen kct_popup
-                    
-                    scene v15s18c_auam_5b
-                    with dissolve
-
-                    aut "Haha! What?"
-
-                    scene v15s18c_auam_5c
-                    with dissolve
-
-                    u "I have to make out with someone, ha."
-
-                    scene v15s18c_auam_5b
-                    with dissolve
-
-                    aut "Oh... Sure. That's easy. *Chuckles*"
-
-                    scene v15s18c_auam_5c
-                    with dissolve
-
-                    u "Yeah!"
-
-                    u "Wait, really?"
-
-                    jump v15s18c_autumn_kiss
-
-                elif kct == "loyal":
-                    scene v15s18c_auam_5a
-                    with dissolve
-
-                    aut "Ha, I uh..."
-
-                    aut "There's too much drama I think... Between you and Lauren."
-
-                    aut "It's just hard to-"
-
-                    scene v15s18c_auam_5
-                    with dissolve
-
-                    u "I understand. No worries."
-
-                    scene v15s18c_auam_5a
-                    with dissolve
-
-                    aut "Okay, thanks."
-
-                    aut "I'm gonna go force Amber out of the bathroom, haha! I have to pee really bad..."
-
-                    scene v15s18c_auam_5
-                    with dissolve
-
-                    u "Haha, okay. See you around."
-
-                    scene v15s18c_auam_5a
-                    with dissolve
-
-                    aut "Later!"
-
-                    scene v15s18c_auam_6
-                    with dissolve
-
-                    u "(Well, that could've gone worse...)"
-                
-                else:
-                    scene v15s18c_auam_5f
-                    with dissolve
-
-                    call screen kct_popup(required_kct="loyal")
-                    aut "Hmm... I don't-"
-
-                    scene v15s18c_auam_5g
-                    with dissolve
-
-                    u "It's cool, no worries."
-
-                    scene v15s18c_auam_5f
-                    with dissolve
-
-                    aut "I'm just not feeling it... I'm sorry, [name]."
-
-                    scene v15s18c_auam_5g
-                    with dissolve
-
-                    u "Really, it's okay. *Chuckles*"
-
-                    scene v15s18c_auam_5f
-                    with dissolve
-
-                    aut "Thanks."
-
-                    scene v15s18c_auam_5a
-                    with dissolve
-
-                    aut "I'm gonna go force Amber out of the bathroom, haha! I have to pee really bad..."
-
-                    scene v15s18c_auam_5
-                    with dissolve
-
-                    u "Haha, okay. See you around."
-
-                    scene v15s18c_auam_5a
-                    with dissolve
-
-                    aut "Later!"
-
-                    scene v15s18c_auam_6
-                    with dissolve
-
-                    u "(Well, that could've gone worse...)"
-                
-                scene v15s18c_auam_7
+            
+                scene v15s18c_auam_5d
                 with dissolve
 
-                pause 0.75
+                aut "You just nothing. You're lucky I won't tell Lauren that you even asked me."
 
-                call screen v15s18a_bar
+                scene v15s18c_auam_5e
+                with dissolve
+
+                u "I'm sorry, Autumn. I thought-"
+
+                scene v15s18c_auam_5d
+                with dissolve
+
+                aut "This never happened, [name]. Go away."
+
+                scene v15s18c_auam_5e
+                with dissolve
+
+                u "Yeah. Okay..."
+
+                scene v15s18c_auam_6
+                with dissolve
+
+                u "(Well, fuck...)"
+
+                scene v15s18c_auam_5d
+                with dissolve
+
+                aut "I'm just gonna leave and go check on Amber."
+
+            elif v11_lauren_caught_aubrey:
+                scene v15s18c_auam_5a
+                with dissolve
+
+                aut "Ha, I uh..."
+
+                aut "There's too much drama I think... Between you and Lauren."
+
+                aut "It's just hard to-"
+
+                scene v15s18c_auam_5
+                with dissolve
+
+                u "I understand. No worries."
+
+                scene v15s18c_auam_5a
+                with dissolve
+
+                aut "Okay, thanks."
+
+                aut "I'm gonna go force Amber out of the bathroom, haha! I have to pee really bad..."
+
+                scene v15s18c_auam_5
+                with dissolve
+
+                u "Haha, okay. See you around."
+
+                scene v15s18c_auam_5a
+                with dissolve
+
+                aut "Later!"
+
+                scene v15s18c_auam_6
+                with dissolve
+
+                u "(Well, that could've gone worse...)"
+            
+            elif kct == "loyal" or v15_autumn_lunchbreak:
+                if not v15_autumn_lunchbreak:
+                    call screen kct_popup
+            
+                label v15s18c_autumnsg:
+        
+                scene v15s18c_auam_5b
+                with dissolve
+
+                aut "Haha! What?"
+
+                scene v15s18c_auam_5c
+                with dissolve
+
+                u "I have to make out with someone, ha."
+
+                scene v15s18c_auam_5b
+                with dissolve
+
+                aut "Oh... Sure. That's easy. *Chuckles*"
+
+                scene v15s18c_auam_5c
+                with dissolve
+
+                u "Yeah!"
+
+                u "Wait, really?"
+
+                jump v15s18c_autumn_kiss
+    
+            else:
+                scene v15s18c_auam_5f
+                with dissolve
+
+                call screen kct_popup(required_kct="loyal")
+                aut "Hmm... I don't-"
+
+                scene v15s18c_auam_5g
+                with dissolve
+
+                u "It's cool, no worries."
+
+                scene v15s18c_auam_5f
+                with dissolve
+
+                aut "I'm just not feeling it... I'm sorry, [name]."
+
+                scene v15s18c_auam_5g
+                with dissolve
+
+                u "Really, it's okay. *Chuckles*"
+
+                scene v15s18c_auam_5f
+                with dissolve
+
+                aut "Thanks."
+
+                scene v15s18c_auam_5a
+                with dissolve
+
+                aut "I'm gonna go force Amber out of the bathroom, haha! I have to pee really bad..."
+
+                scene v15s18c_auam_5
+                with dissolve
+
+                u "Haha, okay. See you around."
+
+                scene v15s18c_auam_5a
+                with dissolve
+
+                aut "Later!"
+
+                scene v15s18c_auam_6
+                with dissolve
+
+                u "(Well, that could've gone worse...)"
+                
+            scene v15s18c_auam_7
+            with dissolve
+
+            pause 0.75
+
+            call screen v15s18a_bar
 
 label v15s18c_autumn_kiss:
     scene v15s18c_auam_8 # TPP. Show Autumn and MC leaving the bar, both slight smiles, mouths closed
-    #with dissolve
+    with dissolve
 
     pause 0.75
 
@@ -2049,6 +2115,8 @@ label v15s18c_autumn_kiss:
     with dissolve
 
     u "Haha, okay, no tongues."
+    
+    play sound "sounds/kiss.mp3"
 
     scene v15s18c_auam_11 # TPP. Show MC and Autumn kissing (no tongue)
     with dissolve
@@ -2059,6 +2127,8 @@ label v15s18c_autumn_kiss:
     with dissolve
 
     pause 0.75
+    
+    play sound "sounds/kiss.mp3"
 
     scene v15s18c_auam_13 # TPP. MC and Autumn kissing (no tongue), MC now reaching for her ass
     with dissolve
@@ -2100,12 +2170,16 @@ label v15s18c_autumn_kiss:
 
     $ sceneList.add("v15_autumn")
 
-    $ checklist[5].complete = True
+    if not _in_replay:
+        $ checklist[5].complete = True
+    
     u "*Laughs* Okay."
 
     scene v15s18c_auam_15 # TPP. Show MC walking back to where he stands on the screen, sligth smile, mouth closed
     with dissolve
 
+    $ renpy.end_replay()
+    
     pause 0.75
 
     call screen v15s18a_bar
@@ -2174,6 +2248,7 @@ label v15s18c_chris_penelope:
             call screen v15s18a_upstairsroom
 
         "Save Penelope":
+            $ freeroam14.add("penelope")
             $ add_point(KCT.BOYFRIEND)
             
             scene v15s18c_chpe_2 # TPP. Show MC walking up to Chris and Penelope, MC waving at Chris, MC mouth open, slight smile, Penelope slight smile, Chris slight smile, both looking at MC, mouths closed
@@ -2287,276 +2362,322 @@ label v15s18c_chris_penelope:
 
                 pe "Oh, yeah... That thing."
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
-                scene v15s18c_chpe_5d
+            scene v15s18c_chpe_5a
+            with dissolve
+
+            menu:
+                "Ask for her help":
+                    scene v15s18c_chpe_5a
+                    with dissolve
+
+                    u "How would you feel about helping me check off one of these?"
+
+                    jump v15s18c_askhelp
+
+                "Tell her the list is stupid":
+                    u "It's so stupid, right?"
+
+                    scene v15s18c_chpe_5
+                    with dissolve
+
+                    pe "Haha maybe. But it might also get some people really lucky. If you know what I mean."
+
+                    scene v15s18c_chpe_5a
+                    with dissolve
+
+                    u "I think I do, haha."
+
+                    jump v15s18c_backtoparty
+
+            label v15s18c_askhelp:
+                if v14_penelope_date and (kct == "confident" or penelope.relationship >= Relationship.LOYAL):
+                    label v15s18c_penelopesg:                        
+                        if _in_replay:
+                            $ penelope.relationship = Relationship.LOYAL
+                            $ v14_penelope_date = True
+
+                if lauren.relationship >= Relationship.GIRLFRIEND:
+                    pe "Um, I don't think we should do anything while we're here."
+
+                    scene v15s18c_chpe_5a
+                    with dissolve
+
+                    u "Oh, okay, sure."
+
+                    scene v15s18c_chpe_5
+                    with dissolve
+
+                    pe "Sorry, I just don't feel comfortable."
+
+                elif v14_penelope_date and (kct == "confident" or penelope.relationship >= Relationship.LOYAL):
+                    if penelope.relationship < Relationship.LOYAL:
+                        call screen kct_popup
+                
+                    scene v15s18c_chpe_5f # FPP. Same as v15s18c_chpe_5, Penelope flirty expression, mouth open
+                    with dissolve
+
+                    pe "So, what do you need help with?"
+
+                    scene v15s18c_chpe_5g # FPP. Same as v15s18c_chpe_5f, Penelope flirty expression, mouth closed
+                    with dissolve
+
+                    u "Follow me."
+
+                    stop music fadeout 3
+                    
+                    play music "music/v14/Track Scene 25a_1.mp3" fadein 2
+
+                    scene v15s18c_chpe_8 # TPP. Show MC leading Penelope into the spare room, both sexy expressions, mouths closed
+                    with dissolve
+
+                    pause 0.75
+
+                    scene v15s18c_chpe_9 # FPP. MC and Penelope inside the spare room, looking at each other, Penelope sexy expression, mouth closed
+                    with dissolve
+
+                    u "I want to do something for you."
+
+                    scene v15s18c_chpe_9a # FPP. Same as v15s18c_chpe_9, Penelope sexy expression, mouth open
+                    with dissolve
+
+                    pe "Hmm, that would be nice."
+
+                    pe "Usually, I'm the one who does all the work, haha."
+
+                    scene v15s18c_chpe_9
+                    with dissolve
+
+                    u "Get comfortable."
+
+                    if config_censored:
+                        call screen censored_popup("v15s18c_nsfwSkipLabelP")
+
+                    scene v15s18c_chpe_10 # TPP. Show Penelope taking her dress off, sexy expression and pose, mouth closed
+                    with dissolve
+
+                    pause 0.75
+
+                    scene v15s18c_chpe_11 # TPP. Show Penelope getting into bed, MC getting on his knees in front of her, sexy expressions, mouths closed (Penelope naked)
+                    with dissolve
+
+                    pause 0.75
+
+                    scene v15s18c_chpe_12 # FPP. MC kneeling in front of Penelope, her lags hanging off the bed, Penelope sexy expression, mouth open
+                    with dissolve
+
+                    pe "Oh, hehe..."
+
+                    pe "I see where this is going."
+
+                    image v15penor = Movie(play="images/v15/Scene 18c/v15penor.webm", loop=True, image="images/v15/Scene 18c/v15penorStart.webp", start_image="images/v15/Scene 18c/v15penorStart.webp")
+                    image v15penor2 = Movie(play="images/v15/Scene 18c/v15penor2.webm", loop=True, image="images/v15/Scene 18c/v15penor2Start.webp", start_image="images/v15/Scene 18c/v15penor2Start.webp")
+
+                    scene v15penor # IGNORE AS ANIMATION
+                    with dissolve
+
+                    if voice_acted:
+                        $ renpy.sound.play("voice/v15/s18c/Scene 18c - pe_oral_slow_2loops.mp3", loop=True)
+
+                    pause 0.75
+
+                    pe "*Chuckles* Mmm..."
+
+                    pe "Oh... [name]..."
+
+                    pe "*Whispers* Fuck..."
+
+                    u "Do you like it when I taste you?"
+
+                    pe "*Moans* I love it, [name]... Fuck..."
+
+                    pe "You... *Gasps*"
+
+                    scene v15penor2 # IGNORE AS ANIMATION
+                    with dissolve
+
+                    pause 0.75
+
+                    pe "You really know what you're doing... Ha! Down there..."
+
+                    u "*Muffled* Mhmm..."
+
+                    pe "Yes, yes! *Moans* Just like that..."
+
+                    pe "Oh, I can't believe we're doing this."
+
+                    u "(I can't believe how good you taste... Holy shit-)"
+
+                    pe "I'm going to cum! [name], I-"
+
+                    stop sound
+
+                    scene v15s18c_chpe_13 # TPP. MC giving Penelope oral, she holds his head in, she is moaning heavily
+                    with dissolve
+
+                    pe "I'm..."
+
+                    scene v15s18c_chpe_14 # TPP. MC giving Penelope oral, Penelope orgasming
+                    with dissolve
+
+                    pe "*Gasps* Mmm, fuck!"
+
+                    scene v15s18c_chpe_12
+                    with dissolve
+
+                    pe "Ha..."
+
+                    pe "You made me cum. *Panting*"
+
+                    scene v15s18c_chpe_12a # FPP. Same as v15s18c_chpe_12, Penelope sexy expression, mouth closed
+                    with dissolve
+
+                    u "I could tell. *Chuckles*"
+
+                    scene v15s18c_chpe_15 # TPP. MC climbs up on top of Penelope, both sexy expressions, mouths closed
+                    with dissolve
+
+                    pause 0.75
+
+                    play sound "sounds/kiss.mp3"
+
+                    scene v15s18c_chpe_16 # TPP. MC on top of Penelope, they're kissing
+                    with dissolve
+
+                    pause 0.75
+
+                    scene v15s18c_chpe_17 # TPP. MC getting off the bed, Penelope still laying down, both sexy expressions, mouths closed
+                    with dissolve
+
+                    pause 0.75
+
+                    scene v15s18c_chpe_18 # FPP. MC standing in front of Penelope, Penelope laying down, Penelope mouth open, smiling
+                    with dissolve
+
+                    pe "That was incredible..."
+
+                    scene v15s18c_chpe_18a # FPP. Same as v15s18c_chpe_18, Penelope smiling, mouth closed
+                    with dissolve
+
+                    u "I'm glad you enjoyed it, haha. Thanks for your help."
+
+                    scene v15s18c_chpe_18
+                    with dissolve
+
+                    pe "*Sighs* You're so welcome..."
+
+                    pe "I could lay here forever..."
+
+                    scene v15s18c_chpe_18a
+                    with dissolve
+
+                    u "People might start to wonder where we are, but same."
+
+                    scene v15s18c_chpe_18
+                    with dissolve
+
+                    pe "Haha, okay. You're right."
+
+                    scene v15s18c_chpe_19 # TPP. Show MC helping Penelope off the bed
+                    with dissolve
+
+                    pause 0.75
+
+                    scene v15s18c_chpe_20 # TPP. Show Penelope getting dressed
+                    with dissolve
+
+                    pause 0.75
+
+                    label v15s18c_nsfwSkipLabelP:
+
+                    scene v15s18c_chpe_21 # FPP. MC and Penelope in the room, Penelope standing by the door, smiling, mouth open
+                    with dissolve
+
+                    pe "Ready?"
+
+                    scene v15s18c_chpe_21a # FPP. Same as v15s18c_chpe_21, Penelope smiling, mouth closed
+                    with dissolve
+
+                    $ sceneList.add("v15_penelope")
+
+                    if not _in_replay:
+                        $ checklist[1].complete = True
+                    
+                    u "After you."
+
+                    $ renpy.end_replay()
+
+                    scene v15s18c_chpe_22 # TPP. Show Penelope leaving the room, MC leaving behind her, both smiling, mouths closed
+                    with dissolve
+
+                    pause 0.75
+                    
+                    stop music fadeout 3
+                    
+                    play music "music/v15/Track Scene 18c_1.mp3" fadein 2
+
+                    call screen v15s18a_upstairsroom
+
+                elif penelope.relationship < Relationship.LIKES:
+                    scene v15s18c_chpe_5 # FPP. Same as v15s18c_chpe_5, Penelope different pose, slightly uncomfortable, mouth open
+                    with dissolve
+
+                    pe "I think it would be kind of weird if we did anything on this list together."
+
+                    pe "Since we're just friends. You know?"
+
+                    scene v15s18c_chpe_5a # FPP. Same as v15s18c_chpe_5d, Penelope slightly uncomfortable, mouth closed
+                    with dissolve
+
+                    u "Yeah, I get that."
+
+                    scene v15s18c_chpe_5
+                    with dissolve
+
+                    pe "Sorry, haha."
+     
+                else:
+                    if v14_penelope_date:
+                        call screen kct_popup(required_kct="confident")
+                
+                    scene v15s18c_chpe_5
+                    with dissolve
+
+                    pe "Um, I don't think we should do anything while we're here."
+
+                    scene v15s18c_chpe_5a
+                    with dissolve
+
+                    u "Oh, okay, sure."
+
+                    scene v15s18c_chpe_5
+                    with dissolve
+
+                    pe "Sorry, I just don't feel comfortable."
+
+                scene v15s18c_chpe_5a
                 with dissolve
 
-                pe "Um, I don't think we should do anything while we're here."
+                u "Trust me, don't worry about it. *Chuckles*"
 
-                scene v15s18c_chpe_5e
+                scene v15s18c_chpe_5
                 with dissolve
 
-                u "Oh, okay, sure."
+                pe "Okay. Thanks."
 
-                scene v15s18c_chpe_5d
+                scene v15s18c_chpe_5a
                 with dissolve
 
-                pe "Sorry, I just don't feel comfortable."
+            label v15s18c_backtoparty:
+                u "Anyway, time to get back to the party. Ready?"
 
-            elif v14_penelope_date and (kct == "confident" or penelope.relationship.value >= Relationship.LOYAL.value):
-                if penelope.relationship.value < Relationship.LOYAL.value:
-                    call screen kct_popup
-            
-                scene v15s18c_chpe_5f # FPP. Same as v15s18c_chpe_5, Penelope flirty expression, mouth open
+                scene v15s18c_chpe_5
                 with dissolve
 
-                pe "So, what do you need help with?"
+                pe "Yes! So ready, haha."
 
-                scene v15s18c_chpe_5g # FPP. Same as v15s18c_chpe_5f, Penelope flirty expression, mouth closed
-                with dissolve
-
-                u "Follow me."
-
-                scene v15s18c_chpe_8 # TPP. Show MC leading Penelope into the spare room, both sexy expressions, mouths closed
-                with dissolve
-
-                pause 0.75
-
-                scene v15s18c_chpe_9 # FPP. MC and Penelope inside the spare room, looking at each other, Penelope sexy expression, mouth closed
-                with dissolve
-
-                u "I want to do something for you."
-
-                scene v15s18c_chpe_9a # FPP. Same as v15s18c_chpe_9, Penelope sexy expression, mouth open
-                with dissolve
-
-                pe "Hmm, that would be nice."
-
-                pe "Usually, I'm the one who does all the work, haha."
-
-                scene v15s18c_chpe_9
-                with dissolve
-
-                u "Get comfortable."
-
-                scene v15s18c_chpe_10 # TPP. Show Penelope taking her dress off, sexy expression and pose, mouth closed
-                with dissolve
-
-                pause 0.75
-
-                scene v15s18c_chpe_11 # TPP. Show Penelope getting into bed, MC getting on his knees in front of her, sexy expressions, mouths closed (Penelope naked)
-                with dissolve
-
-                pause 0.75
-
-                scene v15s18c_chpe_12 # FPP. MC kneeling in front of Penelope, her lags hanging off the bed, Penelope sexy expression, mouth open
-                with dissolve
-
-                pe "Oh, hehe..."
-
-                pe "I see where this is going."
-
-                image v15penor = Movie(play="images/v15/Scene 18c/v15penor.webm", loop=True, image="images/v15/Scene 18c/v15penorStart.webp", start_image="images/v15/Scene 18c/v15penorStart.webp") 
-                image v15penorf = Movie(play="images/v15/Scene 18c/v15penorf.webm", loop=True, image="images/v15/Scene 18c/v15penorStart.webp", start_image="images/v15/Scene 18c/v15penorStart.webp") 
-                image v15penor2 = Movie(play="images/v15/Scene 18c/v15penor2.webm", loop=True, image="images/v15/Scene 18c/v15penor2Start.webp", start_image="images/v15/Scene 18c/v15penor2Start.webp")
-                image v15penor2f = Movie(play="images/v15/Scene 18c/v15penor2f.webm", loop=True, image="images/v15/Scene 18c/v15penor2Start.webp", start_image="images/v15/Scene 18c/v15penor2Start.webp")
-
-                scene v15penor # IGNORE AS ANIMATION
-                with dissolve
-
-                pause 0.75
-
-                pe "*Chuckles* Mmm..."
-
-                pe "Oh... [name]..."
-
-                pe "*Whispers* Fuck..."
-
-                scene v15penorf # IGNORE AS ANIMATION
-                with dissolve
-
-                pause 0.75
-
-                u "Do you like it when I taste you?"
-
-
-                pe "*Moans* I love it, [name]... Fuck..."
-
-                pe "You... *Gasps*"
-
-                scene v15penor2 # IGNORE AS ANIMATION
-                with dissolve
-
-                pause 0.75
-
-                pe "You really know what you're doing... Ha! Down there..."
-
-                u "*Muffled* Mhmm..."
-
-                pe "Yes, yes! *Moans* Just like that..."
-
-                scene v15penor2f # IGNORE AS ANIMATION
-                with dissolve
-
-                pause 0.75
-
-                pe "Oh, I can't believe we're doing this."
-
-                u "(I can't believe how good you taste... Holy shit-)"
-
-                pe "I'm going to cum! [name], I-"
-
-                scene v15s18c_chpe_13 # TPP. MC giving Penelope oral, she holds his head in, she is moaning heavily
-                with dissolve
-
-                pe "I'm..."
-
-                scene v15s18c_chpe_14 # TPP. MC giving Penelope oral, Penelope orgasming
-                with dissolve
-
-                pe "*Gasps* Mmm, fuck!"
-
-                scene v15s18c_chpe_12
-                with dissolve
-
-                pe "Ha..."
-
-                pe "You made me cum. *Panting*"
-
-                scene v15s18c_chpe_12a # FPP. Same as v15s18c_chpe_12, Penelope sexy expression, mouth closed
-                with dissolve
-
-                u "I could tell. *Chuckles*"
-
-                scene v15s18c_chpe_15 # TPP. MC climbs up on top of Penelope, both sexy expressions, mouths closed
-                with dissolve
-
-                pause 0.75
-
-                scene v15s18c_chpe_16 # TPP. MC on top of Penelope, they're kissing
-                with dissolve
-
-                pause 0.75
-
-                scene v15s18c_chpe_17 # TPP. MC getting off the bed, Penelope still laying down, both sexy expressions, mouths closed
-                with dissolve
-
-                pause 0.75
-
-                scene v15s18c_chpe_18 # FPP. MC standing in front of Penelope, Penelope laying down, Penelope mouth open, smiling
-                with dissolve
-
-                pe "That was incredible..."
-
-                scene v15s18c_chpe_18a # FPP. Same as v15s18c_chpe_18, Penelope smiling, mouth closed
-                with dissolve
-
-                u "I'm glad you enjoyed it, haha. Thanks for your help."
-
-                scene v15s18c_chpe_18
-                with dissolve
-
-                pe "*Sighs* You're so welcome..."
-
-                pe "I could lay here forever..."
-
-                scene v15s18c_chpe_18a
-                with dissolve
-
-                u "People might start to wonder where we are, but same."
-
-                scene v15s18c_chpe_18
-                with dissolve
-
-                pe "Haha, okay. You're right."
-
-                scene v15s18c_chpe_19 # TPP. Show MC helping Penelope off the bed
-                with dissolve
-
-                pause 0.75
-
-                scene v15s18c_chpe_20 # TPP. Show Penelope getting dressed
-                with dissolve
-
-                pause 0.75
-
-                scene v15s18c_chpe_21 # FPP. MC and Penelope in the room, Penelope standing by the door, smiling, mouth open
-                with dissolve
-
-                pe "Ready?"
-
-                scene v15s18c_chpe_21a # FPP. Same as v15s18c_chpe_21, Penelope smiling, mouth closed
-                with dissolve
-
-                $ sceneList.add("v15_penelope")
-
-                $ checklist[1].complete = True
-                u "After you."
-
-                scene v15s18c_chpe_22 # TPP. Show Penelope leaving the room, MC leaving behind her, both smiling, mouths closed
+                scene v15s18c_chpe_23 # TPP. Show MC and Penelope going downstairs together, both smiling, mouths closed
                 with dissolve
 
                 pause 0.75
 
                 call screen v15s18a_upstairsroom
-
-            elif penelope.relationship.value < Relationship.LIKES.value:
-                scene v15s18c_chpe_5d # FPP. Same as v15s18c_chpe_5, Penelope different pose, slightly uncomfortable, mouth open
-                with dissolve
-
-                pe "I think it would be kind of weird if we did anything on this list together."
-
-                pe "Since we're just friends. You know?"
-
-                scene v15s18c_chpe_5e # FPP. Same as v15s18c_chpe_5d, Penelope slightly uncomfortable, mouth closed
-                with dissolve
-
-                u "Yeah, I get that."
-
-                scene v15s18c_chpe_5d
-                with dissolve
-
-                pe "Sorry, haha."
- 
-            else:
-                scene v15s18c_chpe_5d
-                with dissolve
-
-                pe "Um, I don't think we should do anything while we're here."
-
-                scene v15s18c_chpe_5e
-                with dissolve
-
-                u "Oh, okay, sure."
-
-                scene v15s18c_chpe_5d
-                with dissolve
-
-                pe "Sorry, I just don't feel comfortable."
-
-            scene v15s18c_chpe_5a
-            with dissolve
-
-            u "Trust me, don't worry about it. *Chuckles*"
-
-            scene v15s18c_chpe_5
-            with dissolve
-
-            pe "Okay. Thanks."
-
-            scene v15s18c_chpe_5a
-            with dissolve
-
-            u "Anyway, time to get back to the party. Ready?"
-
-            scene v15s18c_chpe_5
-            with dissolve
-
-            pe "Yes! So ready, haha."
-
-            scene v15s18c_chpe_23 # TPP. Show MC and Penelope going downstairs together, both smiling, mouths closed
-            with dissolve
-
-            pause 0.75
-
-            call screen v15s18a_upstairsroom

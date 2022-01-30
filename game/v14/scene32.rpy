@@ -81,9 +81,7 @@ label v14s32:
     with dissolve
 
     menu:
-
         "Chris":
-
             $ add_point(KCT.TROUBLEMAKER)
 
             u "Chris?"
@@ -92,12 +90,13 @@ label v14s32:
             with dissolve
 
             imre "What? No. Ryan."
-        
 
         "Ryan":
-
             $ add_point(KCT.BRO)
 
+            scene v14s32_2d
+            #with dissolve
+            
             u "Ryan?"
 
             scene v14s32_2e
@@ -133,7 +132,6 @@ label v14s32:
     with dissolve
     
     menu:
-
         "You're right":
             $ add_point(KCT.BRO)
 
@@ -145,8 +143,11 @@ label v14s32:
             imre "Exactly. That's what I'm saying!"
 
         "Please just get along":
-
             $ add_point(KCT.BOYFRIEND)
+
+            scene v14s32_2d
+            #with dissolve
+            
             u "*Sighs*"
 
             u "It'd be really nice if you two just got along."
@@ -487,12 +488,12 @@ label v14s32:
 
     if not v14_help_chloe:
         $ v14s32_kiwiiPost1 = KiwiiPost(chloe, "v14/v14s30b_pw_image_two.webp", _("I'd like to officially announce The Chicks' partnership with The Wolves! <3 #PresidentialStatus #Vote4ChloeVote4Wolves"), numberLikes=756)
-        $ v14s32_kiwiiPost1.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s32_kiwiiPost1.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s32_kiwiiPost1.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s32_kiwiiPost1.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-        $ v14s32_kiwiiPost1.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(15, 35), mentions=[grayson], force_send=True)
-        $ v14s32_kiwiiPost1.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v14s32_kiwiiPost1.newComment(chris, _("Haha, perfect! #Vote4Chloe"), numberLikes=renpy.random.randint(300, 600), force_send=True)
+        $ v14s32_kiwiiPost1.newComment(aubrey, _("Aww! Hell yeah! This is so cute, Chloe <3"), numberLikes=renpy.random.randint(300, 600), force_send=True)
+        $ v14s32_kiwiiPost1.newComment(imre, _("Yessss!!!!!"), numberLikes=renpy.random.randint(300, 600), force_send=True)
+        $ v14s32_kiwiiPost1.newComment(grayson, _("LMAO you're down bad, huh?"), numberLikes=renpy.random.randint(300, 600), force_send=True)
+        $ v14s32_kiwiiPost1.newComment(chloe, _("Be civil at least, Grayson"), numberLikes=renpy.random.randint(300, 600), mentions=[grayson], force_send=True)
+        $ v14s32_kiwiiPost1.newComment(riley, _("Omg! Can I have that thing?"), numberLikes=renpy.random.randint(300, 600), force_send=True)
 
         $ set_presidency_percent(v14_lindsey_popularity - 2)
         imre "She just made an announcement on Kiwii, did you see it yet?"

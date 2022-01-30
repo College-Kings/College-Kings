@@ -79,7 +79,7 @@ label v14s20:
     scene v14s20_3
     with dissolve
 
-    aut "We didn't really. We just had some major exterior renovations and they also renamed the place."
+    aut "We didn't really. We just had some major renovations and they also renamed the place."
     aut "It took a few weeks and we wanted to have a little celebration day for the community."
 
     scene v14s20_3a
@@ -169,7 +169,7 @@ label v14s20:
 
         u "Not completely..."
 
-    elif lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    elif lauren.relationship >= Relationship.GIRLFRIEND:
         scene v14s20_3f
         with dissolve
 
@@ -221,7 +221,7 @@ label v14s20:
 
             "It's going great":
                 $ autumn.points += 1
-                $ autumn.relationship = Relationship.TRUST
+                $ AutumnTrust = True
 
                 scene v14s20_3a
                 #with dissolve
@@ -280,7 +280,7 @@ label v14s20:
     scene v14s20_3
     with dissolve
 
-    aut "So... The re-opening is on Saturday, don't forget!"
+    aut "So... We're setting up for the re-opening on Saturday, don't forget!"
 
     scene v14s20_3a
     with dissolve
@@ -468,7 +468,7 @@ label v14s20:
             scene v14s20_3
             with dissolve
 
-            aut "So, I might shoot you a text on Friday and see if you're free? For the event on Saturday?"
+            aut "So, I might shoot you a text on Friday and see if you're free? To help at the shelter on Saturday?"
 
             scene v14s20_3a
             with dissolve
@@ -524,7 +524,7 @@ label v14s20:
     pause 0.75
 
     stop music fadeout 3
-    if chloe.relationship.value >= Relationship.FWB.value and v14_talk_to_chris:
+    if chloe.relationship >= Relationship.FWB and v14_talk_to_chris:
         jump v14s21
 
     else:

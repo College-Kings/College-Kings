@@ -31,7 +31,7 @@ label v14s16:
 
     cl "\"Serious\" isn't even close."
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v14s16_3 # TPP. Close up of MC and Chloe, MC kissing Chloe's forehead, both slight smile, mouth closed.
         with dissolve
 
@@ -142,7 +142,7 @@ label v14s16:
 
     cl "I'd do anything to thank you."
 
-    if chloe.relationship.value >= Relationship.FWB.value:
+    if chloe.relationship >= Relationship.FWB:
         scene v14s16_2c # FPP. Same as v14s16_2a, Chloe winking, slight smile, mouth open.
         with dissolve
 
@@ -174,9 +174,9 @@ label v14s16:
             hide screen tutorial
 
             $ set_presidency_percent(v14_lindsey_popularity - 5)
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BOYFRIEND)
-            elif lindsey.relationship.value >= Relationship.FWB.value:
+            elif lindsey.relationship >= Relationship.FWB:
                 $ add_point(KCT.TROUBLEMAKER)
             else:
                 $ add_point(KCT.BRO)
@@ -211,7 +211,7 @@ label v14s16:
 
             cl "Meet me in the library after your class, we have lots to discuss!"
 
-            if chloe.relationship.value >= Relationship.FWB.value:
+            if chloe.relationship >= Relationship.FWB:
                 scene v14s16_6a # TPP. Same as v14s16_6, Chloe kisses MC.
                 with dissolve
 
@@ -244,9 +244,9 @@ label v14s16:
         "I don't have the time":
             hide screen tutorial
 
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.TROUBLEMAKER)
-            elif lindsey.relationship.value >= Relationship.FWB.value:
+            elif lindsey.relationship >= Relationship.FWB:
                 $ add_point(KCT.BOYFRIEND)
                 
             scene v14s16_2a
@@ -264,7 +264,7 @@ label v14s16:
 
             u "I'm sorry, Chloe. I'm just really busy now that we're back on campus and things with the-."
 
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 scene v14s16_2j # FPP. Same as v14s16_2a, Chloe angry expression, mouth open.
                 with dissolve
 
@@ -339,7 +339,7 @@ label v14s16:
 
                 u "(Oh, well... Time for class!)"
 
-    scene v14s16_7 # TPP. MC standing next to Mrs. Rose's classroom, slight smile, mouth open.
+    scene v14s16_7 # TPP. MC standing next to Ms. Rose's classroom, slight smile, mouth open.
     with dissolve
 
     u "*Exhales* (Feels so good to be back.)"

@@ -46,7 +46,7 @@ label v10_riley_sex:
 
     u "(Okay, she should be coming out soon.)"
 
-    if riley.relationship.value >= Relationship.FWB.value or kct == "confident":
+    if riley.relationship >= Relationship.FWB or kct == "confident":
         label v10s40_galleryScene:
             if _in_replay:
                 $ riley.relationship = Relationship.FWB
@@ -66,7 +66,7 @@ label v10_riley_sex:
 
     ri "*Chuckles* I forgot a change of clothes."
 
-    if riley.relationship.value >= Relationship.FWB.value: # mc in a relationship with riley
+    if riley.relationship >= Relationship.FWB: # mc in a relationship with riley
         scene v10srds1f # TPP. Same camera as v10srds1. Show MC standing up from Riley's bed, smiling, mouth closed.
         with fade
 
@@ -246,7 +246,7 @@ label v10_riley_sex:
                         pause 0.75
 
                         if config_censored:
-                            call screen censoredPopup("v10_mc_pen_call")
+                            call screen censored_popup("v10_mc_pen_call")
 
                         scene v10srds5
                         with dissolve
@@ -340,7 +340,7 @@ label v10_riley_sex:
                 pause 0.75
 
                 if config_censored:
-                    call screen censoredPopup("v10_mc_pen_call")
+                    call screen censored_popup("v10_mc_pen_call")
 
                 scene v10srds5 # FPP. Show Riley naked, towel at her feet, smiling, mouth closed.
                 with dissolve
@@ -589,7 +589,7 @@ label v10_riley_sex:
                 pause 0.75
 
                 if config_censored:
-                    call screen censoredPopup("v10_mc_pen_call")
+                    call screen censored_popup("v10_mc_pen_call")
 
                 scene v10srds5
                 with dissolve
@@ -840,7 +840,7 @@ label v10_riley_sex:
                         pause 0.75
 
                         if config_censored:
-                            call screen censoredPopup("v10_mc_pen_call")
+                            call screen censored_popup("v10_mc_pen_call")
 
                         scene v10srds5
                         with dissolve

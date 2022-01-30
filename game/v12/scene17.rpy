@@ -458,8 +458,8 @@ label v12_escape_room:
 
     unknown "One."
 
-    scene v12esr16d
-    with dissolve
+    #scene v12esr16d
+    #with dissolve
 
     u "What the fuck was that?"
 
@@ -799,7 +799,7 @@ label v12_escape_room:
     stop music fadeout 3
     play music "music/v12/Track Scene 17_4.mp3" fadein 2
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v12esr29
         with dissolve
 
@@ -894,12 +894,14 @@ label v12_lindsey_kiss_or_not:
 
             pause 1.5
 
-            if lindsey.relationship.value >= Relationship.KISS.value or kct == "popular" or len(v12s7_killList) >= 5:
-                if lindsey.relationship.value < Relationship.KISS.value and not len(v12s7_killList) >= 5:
+            if lindsey.relationship >= Relationship.KISS or kct == "popular" or len(v12s7_killList) >= 5:
+                if lindsey.relationship < Relationship.KISS and not len(v12s7_killList) >= 5:
                     call screen kct_popup
                 jump v12_lindsey_sex
             
             else:
+                call screen kct_popup(required_kct="popular")
+            
                 jump v12_after_sex
                 
         "Don't kiss her":
@@ -1025,7 +1027,7 @@ label v12_lindsey_sex:
     pause
 
     if config_censored:
-        call screen censoredPopup("v12s17_nsfwSkipLabel1")
+        call screen censored_popup("v12s17_nsfwSkipLabel1")
 
     show screen v12s17_lindsey_sex_overlay
 

@@ -23,7 +23,7 @@ label v10_chloe_vs_nora:
     no "C'mon Madame President."
 
     if config_censored:
-        call screen censoredPopup("v10s35_nsfwSkipLabel1")
+        call screen censored_popup("v10s35_nsfwSkipLabel1")
 
     scene v10cvn5 # fifth is of Chloe lifting her waist throwing Nora up a little bit at which point her strap falls down on one side letting her breast slip out of her top and Nora gets extremely shocked,
     with dissolve
@@ -62,7 +62,7 @@ label v10s35_nsfwSkipLabel1:
 
             u "Hey! Good job."
 
-            if chloe.relationship.value <= Relationship.MAD.value:
+            if chloe.relationship <= Relationship.MAD:
                 scene v10cvn9a
                 with dissolve
                 cl "Uhm thanks, [name]."

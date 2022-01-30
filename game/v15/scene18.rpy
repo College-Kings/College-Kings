@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v15s18:
+    play music "music/v12/Track Scene 33_2.mp3" fadein 2
+
     scene v15s18_1 # TPP. Behind shot of MC walking up to the Deer's house in his Stripper Costume.
     with dissolve
 
@@ -90,7 +92,7 @@ label v15s18:
 
     u "Really. And also, happy birthday."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: 
+    if lauren.relationship >= Relationship.GIRLFRIEND: 
         scene v15s18_8b # FPP. Same as v15s18_8a, Lauren much closer to MC with her arms wrappe around his neck as she looks in his eyes, Lauren biting her lip, slight smile, mouth closed.
         with dissolve
 
@@ -101,12 +103,14 @@ label v15s18:
         scene v15s18_8c # FPP. Same as v15s18_8b, Lauren kissing MC
         with dissolve
 
-        pause 0.75
+        pause 1.75
+
+        play sound "sounds/kiss.mp3"
 
         scene v15s18_9 # TPP. Shot of MC and Lauren kissing
         with dissolve
 
-        pause 0.75
+        pause 1.5
 
         scene v15s18_8a # FPP. Same as v15s18_8, Lauren slight smile, mouth closed.
         with dissolve
@@ -159,7 +163,7 @@ label v15s18:
     
     pause 0.75
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18_10 # FPP. Refer to v15s18_8h, Close up of Lauren's ass as she is walking away.
         with dissolve
         
@@ -454,5 +458,7 @@ label v15s18:
     u "(Hmm, I guess if I want to play Imre's little game I can... Otherwise, I'm just here to have a good night and celebrate Lauren.)"
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v15s18a

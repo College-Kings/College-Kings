@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s42:
+    play music "music/v15/Track Scene 42.mp3" fadein 2
+
 # -MC enters the SVC meeting room. It's quite dated with beige/grey walls, like an old room at the FBI, a large wooden desk with a coffee machine and croissants on it., filing cabinets, blinds drawn and sparse lighting. Amber is standing next to a pinboard on the wall. We don't see the details of it just yet. Amber is wearing a stylish, Sam Spade detective-style fedora hat-
     play sound "sounds/dooropen.mp3"
 
@@ -300,7 +302,7 @@ label v15s42:
     scene v15s42_7a
     with dissolve
 
-    u "What type of detective am I? I thought you were the lead investigator"
+    u "What type of detective am I? I thought you were the lead investigator."
 
     scene v15s42_7
     with dissolve
@@ -327,14 +329,9 @@ label v15s42:
 
     am "So, take a look and see what speaks to you..."
 
-    scene v15s42_7a
-    with dissolve
-
-    pause 0.75
-
-    # -A UI pops up to show the three detective archetypes that MC can choose from (Professional, Psychologist, Loose Cannon). MC makes his choice and the UI disappears again-
-
-    if detective == "professional":
+    call screen archetype_selection
+    
+    if mc.detective == Detective.PROFESSIONAL:
         scene v15s42_7a
         with dissolve
 
@@ -355,7 +352,7 @@ label v15s42:
 
         am "Haha, okay fair. Yeah! I can see this."
 
-    elif detective == "psychologist":
+    elif mc.detective == Detective.PSYCHOLOGIST:
         scene v15s42_7a
         with dissolve
 
@@ -376,7 +373,7 @@ label v15s42:
 
         am "Okay, cool! So, you'll be good at analyzing every word and figuring out if they're lying or telling us the truth."
 
-    else:
+    elif mc.detective == Detective.LOOSE_CANNON:
         scene v15s42_7a
         with dissolve
 
@@ -425,15 +422,18 @@ label v15s42:
 
     am "There's a shit ton of clues, we just have to find them."
 
+    am "But remember, not all clues we find are accurate. People might lie or misremember, you can't trust everything we hear."
+
     scene v15s42_11 # FPP. MC standing closer looking at the board as Amber is looking at the board and pointing at it, Amber slight smile, mouth closed.
     with dissolve
 
     pause 0.75
 
-# -The UI pops up to show MC the headings Clues and Possible Locations, they currently have question marks over the unlockable items. MC exits the UI whenever-
+    show screen detective_icon
+
+    show screen detective_board # -The UI pops up to show MC the headings Clues and Possible Locations, they currently have question marks over the unlockable items. MC exits the UI whenever-
 
     scene v15s42_12 # FPP. MC standing by the board, MC looking at Amber, Amber looking at Mc, Amber slight smile, mouth closed.
-    with dissolve
 
     u "Okay, nice. So, where do you think we'll find clues?"
 
@@ -559,5 +559,7 @@ label v15s42:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v15s43

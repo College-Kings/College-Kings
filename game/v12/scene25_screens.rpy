@@ -1,65 +1,69 @@
 screen v12_girls():
-    add "images/v12/Scene 25/juliabackground.webp"
 
-    grid 3 3:
-        spacing 50
+    # character: label
+    default girl_labels = {
+        "Amber": {
+            "label": "v12_jc_amber",
+            "condition": True
+        },
+        "Aubrey": {
+            "label": "v12_jc_aubrey",
+            "condition": True
+        },
+        "Chloe": {
+            "label": "v12_jc_chloe",
+            "condition": chloe.relationship > Relationship.MAD
+        },
+        "Lauren": {
+            "label": "v12_jc_lauren",
+            "condition": not v11_lauren_caught_aubrey
+        },
+        "Lindsey": {
+            "label": "v12_jc_lindsey",
+            "condition": True
+        },
+        "Nora": {
+            "label": "v12_jc_nora",
+            "condition": True
+        },
+        "Penelope": {
+            "label": "v12_jc_penelope",
+            "condition": True
+        },
+        "Riley": {
+            "label": "v12_jc_riley",
+            "condition": True
+        },
+        "Samantha": {
+            "label": "v12_jc_samantha",
+            "condition": v11_invite_sam_europe
+        }
+    }
+
+    default image_path = "gui/julia_call/"
+
+    add image_path + "jc_background.webp"
+
+    vpgrid:
+        cols 4
+        rows 3
+        spacing 40
         xalign 0.5
-        ypos 250
+        ypos 350
 
-        imagebutton:
-            idle "images/v7/HCAmber.webp"
-            hover "images/v7/HCAmber2.webp"
-            action Jump("v12_jc_amber")
+        for character, i in girl_labels.items():
+            vbox:
+                align (0.5, 0.5)
 
-        imagebutton:
-            idle "images/v7/HCAubrey.webp"
-            hover "images/v7/HCAubrey2.webp"
-            action Jump("v12_jc_aubrey")
+                imagebutton:
+                    idle image_path  + "{}_idle.webp".format(character)
+                    hover image_path + "{}.webp".format(character)
+                    insensitive image_path + "{}_grey.webp".format(character)
+                    sensitive i["condition"]
+                    action Jump(i["label"])
 
-        imagebutton:
-            if chloe.relationship.value > Relationship.MAD.value:
-                idle "images/v7/HCChloe.webp"
-                hover "images/v7/HCChloe2.webp"
-                action Jump("v12_jc_chloe")
-
-            else:
-                idle "images/v7/HCChloe3.webp"
-                hover "images/v7/HCChloe23.webp"
-            
-        imagebutton:
-            if v11_lauren_caught_aubrey:
-                idle "images/v7/HCLauren.webp"
-                hover "images/v7/HCLauren2.webp"
-                action Jump("v12_jc_lauren")
-            else:
-                idle "images/v7/HCLauren3.webp"
-                hover "images/v7/HCLauren23.webp"
-
-        imagebutton:
-            idle "images/head shots/Lindsey1.webp"
-            hover "images/head shots/Lindsey2.webp"
-            action Jump("v12_jc_lindsey")
-
-        imagebutton:
-            idle "images/head shots/Nora1.webp"
-            hover "images/head shots/Nora2.webp"
-            action Jump("v12_jc_nora")
-
-        imagebutton:
-            idle "images/v7/HCPenelope.webp"
-            hover "images/v7/HCPenelope2.webp"
-            action Jump("v12_jc_penelope")
-
-        imagebutton:
-            idle "images/v7/HCRiley.webp"
-            hover "images/v7/HCRiley2.webp"
-            action Jump("v12_jc_riley")
-
-        imagebutton:
-            if v11_invite_sam_europe:
-                idle "images/head shots/Samantha1.webp"
-                hover "images/head shots/Samantha2.webp"
-                action Jump("v12_jc_samantha")
-            else:
-                idle "images/head shots/Samantha3.webp"
-                hover "images/head shots/Samantha3.webp"
+                text character:
+                    yoffset -80
+                    xoffset 30
+                    xalign 0.5
+                    size 30

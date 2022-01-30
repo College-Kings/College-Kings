@@ -71,7 +71,7 @@ label v14s43:
     scene v14s43_6a # FPP. Same as v14s43_6, Penelope slight smile, mouth open
     with dissolve
 
-    if penelope.relationship.value >= Relationship.LIKES.value:
+    if penelope.relationship >= Relationship.LIKES:
         pe "Saved, actually."
 
         scene v14s43_6

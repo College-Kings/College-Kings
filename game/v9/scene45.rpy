@@ -40,13 +40,7 @@ label v9_ending:
 
 label end9:
     if not renpy.loadable("v10/scene1.rpy"):
-        scene savenow
-        with Fade (1,0,1)
-        " "
+        call screen save_now(10)
+        with Fade(1, 0, 1)
 
-    if renpy.loadable("v10/scene1.rpy"):
-        jump v10start
-    else:
-        jump gameEnd
-
-# <3 ~Lew
+    jump v10start

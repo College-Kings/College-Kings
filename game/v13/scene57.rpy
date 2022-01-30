@@ -89,7 +89,7 @@ label v13s57:
 
     no "I'm out of money, so [name] was actually the one who paid for it."
 
-    if ms_rose.relationship.value >= Relationship.FWB.value and joinwolves: #sanitizing pathbuilder input
+    if ms_rose.relationship >= Relationship.FWB and joinwolves: #sanitizing pathbuilder input
         scene v13s57_6 # TPP. Show Ms Rose sincerely hugging MC, Rose very grateful, Rose mouth open
         with dissolve
 

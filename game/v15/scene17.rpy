@@ -4,7 +4,58 @@
 # Time: Evening
 # Render Count: 
 
+init python:
+    def v15_iris_simplr1():
+        iris.simplr.newMessage(_("I'm doing really well! Thanks for asking :)"))
+        iris.simplr.newMessage("It's always amazing here.")
+        iris.simplr.addReply("Nothing but drama here, haha.", v15_iris_simplr3)
+
+    def v15_iris_simplr2():
+        iris.simplr.newMessage("It's always amazing here.")
+        iris.simplr.addReply("Nothing but drama here, haha.", v15_iris_simplr3)
+
+    def v15_iris_simplr3():
+        iris.simplr.newMessage("Wait, really? That's the worst, what's going on?")
+        iris.simplr.addReply(_("Sorority Presidents are at war"), v15_iris_simplr4)
+        iris.simplr.addReply(_("I'd rather not talk about it"), v15_iris_simplr5)
+
+    def v15_iris_simplr4():
+        iris.simplr.newMessage(_("Oof... I can't even imagine, lol."))
+        iris.simplr.addReply("Yeah... It's not exactly easy to stay out of it, ha.", v15_iris_simplr6)
+
+    def v15_iris_simplr5():
+        iris.simplr.newMessage(_("That's fair. I hope it all clears up for you soon. Just try to stay out of it, yeah?"))
+        iris.simplr.addReply("Yeah... It's not exactly easy to stay out of it, ha.", v15_iris_simplr6)
+        
+    def v15_iris_simplr6():
+        iris.simplr.newMessage("Hmm...")
+        iris.simplr.addReply(_("So, when do you get back to America?"), v15_iris_simplr7)
+        iris.simplr.addReply(_("It's like I'm the rope in a game of tug of war, you know?"), v15_iris_simplr8)
+
+    def v15_iris_simplr7():
+        iris.simplr.newMessage("Not for another month or so... ")
+        iris.simplr.newMessage("Why? Got plans for us when I get back? ;)")
+        iris.simplr.addReply("Haha...")
+        iris.simplr.newMessage(_("We can leave it at that for now, I gotta go. Talk to you again soon? <3"))
+        iris.simplr.addReply("Oh, okay. Yeah. See ya!")
+        iris.simplr.addReply("Lol, okay. Bye.")
+
+    def v15_iris_simplr8():
+        iris.simplr.newMessage("Right. Yeah, I get it.")
+        iris.simplr.newMessage(_("But hey, my phone is about to die so I'll talk to you later, okay?"))
+        iris.simplr.addReply("Oh, okay. Yeah. See ya!")
+        iris.simplr.addReply("Lol, okay. Bye.")
+    
+
 label v15s17:
+    play music "music/v13/Track Scene 21.mp3" fadein 2
+
+    if iris.simplr in simplr_contacts:
+        $ iris.simplr.newImgMessage("images/v15/Scene 17/iris_simplr.webp", force_send=True)
+        $ iris.simplr.newMessage("The only thing I'm missing here in Paris is a cute boy ;)", force_send=True)
+        $ iris.simplr.addReply(_("Amazing! How are you?"), v15_iris_simplr1)
+        $ iris.simplr.addReply(_("God, I miss Paris..."), v15_iris_simplr2)
+
     scene v15s17_1 # TPP. MC enters the department store, slight smile, mouth closed
     with dissolve
 
@@ -25,7 +76,7 @@ label v15s17:
 
     u "Um, hi there."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s17_4
         with dissolve
 
@@ -129,7 +180,7 @@ label v15s17:
 
     clerk "May I suggest jewelry?"
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value and v15_autumn_lunchbreak:
+    if lauren.relationship >= Relationship.GIRLFRIEND and v15_autumn_lunchbreak:
         scene v15s17_4f # FPP. same as v15s17_4d SC's mouth is closed
         with dissolve
 
@@ -217,7 +268,7 @@ label v15s17:
 
     clerk "Both beautiful items, and currently on sale for only $50."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s17_8b
         with dissolve
 
@@ -376,7 +427,7 @@ label v15s17:
 
             clerk "I'm sure she'll be very happy with it."
             
-        if emerald_bracelet in mc.inventory:
+        elif emerald_bracelet in mc.inventory:
             $ add_point(KCT.BOYFRIEND)
             
             scene v15s17_11b # FPP. same as v15s17_11 Close up shot of the Jewlry options
@@ -588,5 +639,7 @@ label v15s17:
         with fade
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v15s18
