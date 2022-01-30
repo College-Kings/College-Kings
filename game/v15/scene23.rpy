@@ -11,6 +11,8 @@ init python:
         aubrey.messenger.newMessage("Hehe, I know you will ;)")
 
 label v15s23:
+    play music "music/v12/Track Scene 32_1.mp3" fadein 2
+
     # -MC takes a shower-
     scene v15s23_1 # TPP. We see MC neutral expression, mouth closed waist up in the shower (rinsing his hair render as best as possible).
     with dissolve
@@ -72,7 +74,7 @@ label v15s23:
 
     # Pre load Aubrey Text conversation before branching Ape or Wolf 
     $ aubrey.messenger.newMessage("Hey smelly, come to the Chicks house. I have an extra special surprise for you.", force_send=True)
-    if aubrey.relationship.value < Relationship.FWB.value:
+    if aubrey.relationship < Relationship.FWB:
         $ aubrey.messenger.addReply("Smelly? I just showered! Anyway, I'll see you soon :)", v15s23_reply1)
 
     else:
@@ -186,5 +188,6 @@ label v15s23:
 
         u "(Time to find out!)"
     
-    # -Transition to Scene 26-
+    stop music fadeout 3
+    
     jump v15s26

@@ -3,6 +3,7 @@
 # Characters: RILEY (Outfit: 2), MC (Outfit: 1), TOM (outfit: 1)
 # Time: Night
 
+label v16_start:
 
 label v16s1:
 ### ERROR: 1) Fight with Tom
@@ -37,7 +38,6 @@ label v16s1_lose:
 
     menu:
         "I'm fine":
-
             u "Yeah, I'm fine"
 
             u "He just got a few lucky hits, that's all."
@@ -48,7 +48,6 @@ label v16s1_lose:
             ri "Ha, right."
 
         "It hurts like hell":
-
             u "Honestly, no. It hurts like hell."
 
             scene v16s1_lose_2
@@ -167,7 +166,6 @@ label v16s1_lose:
 
     menu:
         "Go home alone":
-            
             u "Honestly, I just want to go home and crash in my own bed. I'm exhausted."
 
             scene v16s1_lose_2b
@@ -200,8 +198,7 @@ label v16s1_lose:
 
             ri "Stop thanking people when you're the hero."
 
-            if rileyrs:
-
+            if riley.relationship >= Relationship.FWB:
                 scene v16s1_lose_3 # TPP. Riley giving MC a quick kiss on the cheek, MC feeling pain, mouth open
                 with vpunch
 
@@ -241,7 +238,7 @@ label v16s1_lose:
             scene v16s1_lose_4 # TPP. MC walking away in pain, mouth closed, Riley watching him go, she is worried, mouth closed
             with dissolve
 
-            pause
+            pause 0.75
 
         "Go home with Riley":
             $ v16_home_riley = True
@@ -299,7 +296,7 @@ label v16s1_win:
     scene v16s1_win_1 # TPP. Tom is on the ground, in pain, MC is looking at him, MC very angry, both mouths closed
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v16s1_win_2 # TPP. Show Tom walking away in pain in the background, Riley running towards MC, Riley excited, mouth open, MC mouth closed, slight smile, looking at Riley
     with dissolve
@@ -362,7 +359,6 @@ label v16s1_win:
             u "I heard the shouting, and... I wasn't about to let that asshole lay a finger on you."
 
         "Always count on me":
-
             u "You can always count on me, Riley."
 
             scene v16s1_win_3b
@@ -404,7 +400,6 @@ label v16s1_win:
 
     menu:
         "Go home alone":
-
             u "You'll be okay, I promise. Just order a cab."
 
             scene v16s1_win_3d
@@ -432,11 +427,11 @@ label v16s1_win:
 
             ri "Okay, well...Thanks again."
 
-            if rileyrs:
+            if riley.relationship >= Relationship.FWB:
                 scene v16s1_win_4 # TPP. Riley giving MC a kiss on the cheek
                 with dissolve
 
-                pause  
+                pause 0.75
 
                 scene v16s1_win_3 
                 with dissolve
@@ -456,11 +451,13 @@ label v16s1_win:
             scene v16s1_win_5 # TPP. Show MC walking away, slight smile, mouth closed, Riley watchign him walk away, she is slightly scared, mouth closed
             with dissolve
 
-            pause  
+            pause 0.75
 
             jump v16s1_end
 
         "Go home with Riley":
+            $ v16_home_riley = True
+            
             scene v16s1_win_3
             with dissolve
 
@@ -494,10 +491,9 @@ label v16s1_win:
             scene v16s1_win_5a # TPP. Same angle as v16s1_win_5, Riley and MC walking away together, both slightly smiling, mouths closed
             with dissolve
 
-            pause  
+            pause 0.75
 
             jump v16s1_end
 
 label v16s1_end:
     jump v16s2
-

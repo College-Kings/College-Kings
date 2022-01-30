@@ -41,9 +41,9 @@ screen teacher_conviction_bar(new_value, teacher_name):
     $ teacher_name = teacher_name.upper()
 
     default foregrounds = {
-        "MR. LEE": "images/v15/conviction_bars/mr_lee_background.png",
-        "MS. ROSE": "images/v15/conviction_bars/ms_rose_background.png",
-        "DEAN": "images/v15/conviction_bars/dean_background.png"
+        "MR. LEE": "images/v15/conviction_bars/mr_lee_background.webp",
+        "MS. ROSE": "images/v15/conviction_bars/ms_rose_background.webp",
+        "DEAN HARRISON": "images/v15/conviction_bars/dean_background.webp"
     }
 
     frame:
@@ -60,12 +60,14 @@ screen teacher_conviction_bar(new_value, teacher_name):
             ypos 65
             xysize (262, 35)
 
-            text "CONVINCE TEACHER" align (0.5, 0.5)
+            if teacher_name == "DEAN HARRISON":
+                text "CONVINCE DEAN" align (0.5, 0.5)
+            else:
+                text "CONVINCE TEACHER" align (0.5, 0.5)
 
         text teacher_name pos (220, 141)
 
 
 style conviction_bar_text is text:
-    font "fonts/Olympus Mount.ttf"
+    font "fonts/BebasNeue-Regular.ttf"
     size 19
-    yoffset -5

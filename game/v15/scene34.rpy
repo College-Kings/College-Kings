@@ -4,11 +4,13 @@
 # Time: Afternoon
 
 label v15s34:
+    play music "music/v13/Track Scene 52a.mp3" fadein 2
+
     if joinwolves:
         play sound "sounds/dooropen.mp3"
 
         scene v15s34_1 # TPP. Show MC entering his room in the Wolves room in his suit from the wedding, slight smile ,mouth closed.
-        with dissolve
+        with fade
 
         pause 0.75
 
@@ -31,7 +33,7 @@ label v15s34:
             u "(I really enjoyed my day with Aubrey.)"
             u "(She seems comfortable sharing so much of her life with me now and sees me as someone she can trust.)"
 
-            if aubrey.relationship.value >= Relationship.TAMED.value:
+            if aubrey.relationship >= Relationship.TAMED:
                 u "(And I'm so excited to see what's next for us...)"
         
         scene v15s34_3 # TPP. Show MC taking off the top part of his suit in the middle of his wolves room.
@@ -86,7 +88,7 @@ label v15s34:
         else:
             $ lindsey.messenger.newMessage("Hey, I'm having a game night to help secure some extra influence and votes for my campaign. Someone bailed on me at the last minute, so... Wanna come take their place? :)", force_send=True)
             $ lindsey.messenger.addReply("Hey! Yeah, sounds fun.")
-            $ lindsey.messenger.newMessage("Amazing! Be at the chicks house in 15 minutes :)")
+            $ lindsey.messenger.newMessage("Amazing! Be at the Chicks house in 15 minutes :)")
             $ lindsey.messenger.addReply("Haha, that soon? Damn, okay. I'm OMW!", func=None)
 
         label v15s34_PhoneContinue:
@@ -112,6 +114,8 @@ label v15s34:
 
         pause 0.75
 
+        stop music fadeout 3
+
         if v14_help_lindsey and not v15_lindsey_gamenight: #If Helping Lindsey with VIP Night, go there
             jump v15s38
 
@@ -122,7 +126,7 @@ label v15s34:
         play sound "sounds/dooropen.mp3"
 
         scene v15s34_6 # TPP. Show MC entering his room in the apes room in his suit from the wedding, slight smile ,mouth closed.
-        with dissolve
+        with fade
 
         pause 0.75
 
@@ -145,7 +149,7 @@ label v15s34:
             u "(I really enjoyed my day with Aubrey.)"
             u "(She seems comfortable sharing so much of her life with me now and sees me as someone she can trust.)"
 
-            if aubrey.relationship.value >= Relationship.TAMED.value:
+            if aubrey.relationship >= Relationship.TAMED:
                 u "(And I'm so excited to see what's next for us...)"
         
         scene v15s34_8 # TPP. Show MC taking off the top part of his suit in the middle of his apes room.
@@ -201,7 +205,7 @@ label v15s34:
         else:
             $ lindsey.messenger.newMessage("Hey, I'm having a game night to help secure some extra influence and votes for my campaign. Someone bailed on me at the last minute, so... Wanna come take their place? :)", force_send=True)
             $ lindsey.messenger.addReply("Hey! Yeah, sounds fun.")
-            $ lindsey.messenger.newMessage("Amazing! Be at the chicks house in 15 minutes :)", force_send=True)
+            $ lindsey.messenger.newMessage("Amazing! Be at the Chicks house in 15 minutes :)")
             $ lindsey.messenger.addReply("Haha, that soon? Damn, okay. I'm OMW!", func=None)
 
         label v15s34_PhoneContinueL:
@@ -226,6 +230,8 @@ label v15s34:
         play sound "sounds/doorclose.mp3"
 
         pause 0.75
+
+        stop music fadeout 3
 
         if v14_help_lindsey and not v15_lindsey_gamenight: #If Helping Lindsey with VIP Night, go there
             jump v15s38

@@ -1,11 +1,9 @@
 screen v15_teacher_brief_icon(key):
     tag teacher_brief
 
-    default opened_count = 0
-
     imagebutton:
         idle "images/v15/Scene 20/teacher_brief/icon.webp"
-        action [SetScreenVariable("opened_count", opened_count + 1), Show("v15_teacher_brief", None, key)]
+        action [SetVariable("v15s20_teacher_brief_open_count", v15s20_teacher_brief_open_count + 1), Show("v15_teacher_brief", None, key)]
 
 
 screen v15_teacher_brief(key):
@@ -39,7 +37,7 @@ screen v15_teacher_brief(key):
             "loves": ["Supporting good causes, especially helping the sororities.", "Making sure things are fair and nobody is upset."],
             "hates": ["Selfishness.", "Misogyny."],
             "insight_info": "If needed, seduction might work best.",
-            "insight_condition": ms_rose.relationship.value >= Relationship.FWB.value
+            "insight_condition": ms_rose.relationship >= Relationship.FWB
         }
     }
     default teacher = teachers[key]
@@ -115,9 +113,7 @@ screen v15_teacher_brief(key):
                 text "LOCKED SECRET INSIGHT" style "teacher_brief_header1"
 
 
-style teacher_brief_title is text:
-    font "fonts/Montserrat-ExtraBold.ttf"
-    size 64
+style teacher_brief_title is montserrat_extra_bold_64
 
 style teacher_brief_subtitle is text:
     font "fonts/Montserrat-Bold.ttf"

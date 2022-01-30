@@ -4,7 +4,24 @@
 # Time: Evening
 
 label v15s48b:
-    if "v15_nora" in sceneList: # Placeholder
+    ### music cue is not in this scene, it is included in the previous scenes which jump to this one
+
+    scene v15s48b_97
+    with dissolve
+    
+    pause 0.75
+    
+    scene v15s48b_98
+    with dissolve
+    
+    pause 0.75
+    
+    scene v15s48b_99
+    with dissolve
+    
+    pause 0.75
+
+    if "v15_nora" in sceneList:
         $ nora.relationship = Relationship.FWB
     
         scene v15s48b_1 # TPP. MC and Nora spooning, MC big spoon with his arm around her, Nora holding his hand, both slight smile, mouth closed.
@@ -99,6 +116,7 @@ label v15s48b:
         scene v15s48b_6 # TPP. MC and Nora kissing as they lay down.
         with dissolve
 
+        play sound "sounds/kiss.mp3"
         pause 0.75
 
         scene v15s48b_3a
@@ -114,16 +132,21 @@ label v15s48b:
         scene v15s48b_7 # TPP. Show MC walking out of the bedroom naked, Nora watching him, both slight smile, mouth closed.
         with dissolve
 
-        pause 0.75
+        pause 1.5
         
         play sound "sounds/dooropen.mp3"
        
         scene v15s48b_8 # TPP. MC dressed and walking out the front door, Nora behind him watching him leave as her naked body is wrapped in a blanket, both slight smile, mouth closed.
         with dissolve
 
-        pause 0.75
+        pause 1.5
+
+        label v15s48a_nsfwSkipLabel1:
+
+        $ renpy.end_replay()
 
     else:
+        label v15s48bnosex:
         $ nora.relationship = Relationship.FRIEND
     
         scene v15s48b_9 # TPP. Show Nora trying to open a bottle of wine in the kitchen.
@@ -230,5 +253,7 @@ label v15s48b:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v15s49

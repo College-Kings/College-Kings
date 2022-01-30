@@ -2,8 +2,8 @@
 # Locations: MC - Apes Living Room
 # Characters: Sam (Outfit 2), MC (Outfit 1), Cameron (Outfit 3)
 # Time: Sunday Morning
-label v10_apes_samantha:
 
+label v10_apes_samantha:
     scene v10ssap1 # TPP. Show MC in the Ape's living room. He's sitting on the couch, appearing exhausted, mouth closed.
     with fade
 
@@ -78,6 +78,7 @@ label v10_apes_samantha:
 
     scene v10ssap2
     with dissolve
+
     menu:
         "I can be a hothead":
             $ add_point(KCT.TROUBLEMAKER)
@@ -116,8 +117,11 @@ label v10_apes_samantha:
             with dissolve
 
             u "Back in high school I had a teacher that was just always out to get me."
+
             u "People were doing all kinds of shit, they were throwing paper planes at him during class, cheating on his tests and just making fun of him even with him in the room."
+
             u "But they never got into any trouble. I did anything remotely questionable, there I go, straight to detention."
+
             u "Well at some point I got really fed up and I wanted to piss him off you know, get him really good."
 
             scene v10ssap2b
@@ -129,8 +133,11 @@ label v10_apes_samantha:
             with dissolve
 
             u "Not quite. He announced that he was gonna be one of the chaperones for our senior prom and I knew his daughter just happened to be going to our school and graduating with me."
+
             u "Sooo... long story short, I asked his daughter to prom and - after some very painful back and forth - she said yes."
+
             u "We danced all night and I tried to give him as much eye contact as I possibly could, it was so funny."
+
             u "To be honest, the girl really wasn't keen on it once she found out why I had asked her, but... totally worth it. *Laughs*"
 
             scene v10ssap2b
@@ -203,6 +210,7 @@ label v10_apes_samantha:
 
     scene v10ssap3a # FPP. Same camera as v10ssap3. Show Cameron with an angry expression, mouth closed.
     with dissolve
+
     menu:
         "Maybe":
             $ add_point(KCT.TROUBLEMAKER)
@@ -357,6 +365,7 @@ label v10_apes_samantha:
             with fade
 
             u "(He can really be a dick sometimes. Good ol' Cameron. I should head up to my room.)"
+
     stop music fadeout 3
 
     jump v10_call_with_lauren1 # jump to scene 15

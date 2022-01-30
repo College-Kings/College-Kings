@@ -432,6 +432,8 @@ label v11_treasure_hunt:
             scene v11th22b # FPP. Same as v11th22, Riley sad, mouth open, different pose, holding the gun
             with dissolve
 
+            stop sound
+
             ri "Oh no... I'm so sorry! You have to get a bullseye, [name]. This is our only chance!"
 
             scene v11th22c # FPP. Same as v11th22b, Riley sad, mouth closed, handing the gun to MC
@@ -457,6 +459,8 @@ label v11_treasure_hunt:
             with dissolve
 
             $ grant_achievement("on_target")
+
+            stop sound
 
             pause 2
 

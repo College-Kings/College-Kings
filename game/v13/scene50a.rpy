@@ -14,7 +14,7 @@ label v13s50a:
         pause 1
 
     if config_censored:
-        call screen censoredPopup("v13s50a_nsfwSkipLabel1")
+        call screen censored_popup("v13s50a_nsfwSkipLabel1")
 
     play music "music/v13/Track Scene 50a.mp3" fadein 2
 
@@ -252,10 +252,10 @@ label v13s50a:
 
         stop music fadeout 3
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value and not v11_riley_roomate:
+    if chloe.relationship >= Relationship.GIRLFRIEND and not v11_riley_roomate:
         jump v13s52
     
-    elif riley.relationship.value >= Relationship.FWB.value and v11_riley_roomate:
+    elif riley.relationship >= Relationship.FWB and v11_riley_roomate:
         jump v13s53
     
     else: 

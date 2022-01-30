@@ -98,9 +98,9 @@ label v14s44:
 
     menu:
         "Chloe":
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BOYFRIEND)
-            elif lindsey.relationship.value >= Relationship.FWB.value:
+            elif lindsey.relationship >= Relationship.FWB:
                 $ add_point(KCT.TROUBLEMAKER)
             
             scene v14s44_4
@@ -120,9 +120,9 @@ label v14s44:
             u "Ha. Yeah."
 
         "Lindsey":
-            if lindsey.relationship.value >= Relationship.FWB.value:
+            if lindsey.relationship >= Relationship.FWB:
                 $ add_point(KCT.BOYFRIEND)
-            elif chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            elif chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.TROUBLEMAKER)
             scene v14s44_4
             with dissolve
@@ -378,7 +378,6 @@ label v14s44:
     with dissolve
 
     menu:
-
         "She was pretty hot":
             $ add_point(KCT.BRO)
 
@@ -389,6 +388,9 @@ label v14s44:
 
         "Meh, not my type":
             $ add_point(KCT.TROUBLEMAKER)
+
+            scene v14s44_15
+            #with dissolve
 
             u "Meh, she's not really my type."
 

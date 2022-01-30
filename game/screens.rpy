@@ -238,7 +238,7 @@ screen choice(items, seconds=3, fail_label=None):
         on "show" action item.action
 
 
-style choice_text is olympus_mount_30
+style choice_text is bebas_neue_30
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
@@ -259,38 +259,55 @@ screen quick_menu():
     if quick_menu:
         hbox:
             align (0.5, 1.0)
-            yoffset -40
+            yoffset -5
             spacing 30
 
             if not realmode:
-                imagebutton idle image_path + "rollback_idle.png" action Rollback()
-            imagebutton idle image_path + "history_idle.png" action ShowMenu("history")
-            imagebutton idle image_path + "skip_idle.png" action Skip() alternate Skip(fast=True, confirm=True)
-            imagebutton idle image_path + "auto_forward_idle.png" action Preference("auto-forward", "toggle")
-            imagebutton idle image_path + "save_idle.png" action ShowMenu("save")
-            imagebutton idle image_path + "quick_save_idle.png" action QuickSave()
-            imagebutton idle image_path + "quick_load_idle.png" action QuickLoad()
-            # textbutton _("Prefs") action ShowMenu("preferences")
+                imagebutton:
+                    idle Transform(image_path + "rollback_idle.webp", zoom=0.35)
+                    hover Transform(image_path + "rollback_hover.webp", zoom=0.35)
+                    action Rollback()
+            
+            imagebutton:
+                idle Transform(image_path + "history_idle.webp", zoom=0.35)
+                hover Transform(image_path + "history_hover.webp", zoom=0.35)
+                action ShowMenu("history")
 
-    if config.developer:
-        hbox:
-            align (1.0, 1.0)
-            xoffset -20
-            spacing 15
+            imagebutton:
+                idle Transform(image_path + "skip_idle.webp", zoom=0.35)
+                hover Transform(image_path + "skip_hover.webp", zoom=0.35)
+                action Skip()
+                alternate Skip(fast=True, confirm=True)
 
-            textbutton "SCENE SELECT" action Show("bugTesting_SceneSelect")
-            add "gui/common/arrow.png" yalign 0.5
+            imagebutton:
+                idle Transform(image_path + "auto_forward_idle.webp", zoom=0.35)
+                hover Transform(image_path + "auto_forward_hover.webp", zoom=0.35)
+                action Preference("auto-forward", "toggle")
 
-            null width 10
+            imagebutton:
+                idle Transform(image_path + "save_idle.webp", zoom=0.35)
+                hover Transform(image_path + "save_hover.webp", zoom=0.35)
+                action ShowMenu("save")
 
-            textbutton "CHEATS" action Show("bugTesting_cheatMenu")
-            add "gui/common/arrow.png" yalign 0.5
+            imagebutton:
+                idle Transform(image_path + "quick_save_idle.webp", zoom=0.35)
+                hover Transform(image_path + "quick_save_hover.webp", zoom=0.35)
+                action QuickSave()
 
+            imagebutton:
+                idle Transform(image_path + "quick_load_idle.webp", zoom=0.35)
+                hover Transform(image_path + "quick_load_hover.webp", zoom=0.35)
+                action QuickLoad()
+
+            imagebutton:
+                idle Transform(image_path + "settings.webp", zoom=0.35)
+                hover Transform(image_path + "settings_hover.webp", zoom=0.35)
+                action ShowMenu("preferences")
 
 style quick_menu_button:
     align (0.5, 0.5)
 
-style quick_menu_button_text is olympus_mount_30
+style quick_menu_button_text is bebas_neue_30
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -379,20 +396,23 @@ screen main_menu():
         action OpenURL("http://collegekingsgame.com")
         pos (303, 976)
 
+    hbox:
+        align (1.0, 1.0)
+        yoffset -40
 
-    # SETTINGS
-    imagebutton:
-        idle "settings_idle"
-        hover "settings_hover"
-        action ShowMenu("preferences")
-        pos (1439, 967)
+        # SETTINGS
+        imagebutton:
+            idle "gui/common/settings_idle.webp"
+            hover "gui/common/settings_hover.webp"
+            action ShowMenu("preferences")
 
-    # QUIT
-    imagebutton:
-        idle "quit_idle"
-        hover "quit_hover"
-        action Quit()
-        pos (1662, 971)
+        # QUIT
+        imagebutton:
+            idle "gui/common/quit_idle.webp"
+            hover "gui/common/quit_hover.webp"
+            action Quit()
+
+    text "v" + config.version.split(" ")[0] align (1.0, 1.0) xoffset -20 color "#4e628f" size 30
 
 
 ## Game Menu screen ############################################################
@@ -547,7 +567,7 @@ screen enter_save_name(slot):
     frame:
         xysize (1083, 99)
         pos (477, 210)
-        background "gui/file_slots/save_name.png"
+        background "gui/file_slots/save_name.webp"
 
         input:
             align (0.5, 0.5)
@@ -557,9 +577,11 @@ screen enter_save_name(slot):
             allow " .,_-0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
 
         imagebutton:
-            idle "gui/file_slots/save_game_idle.png"
+            idle "gui/file_slots/save_game_idle.webp"
+            hover "gui/file_slots/save_game_hover.webp"
             action [Show("save"), FileAction(slot)]
             align (1.0, 0.5)
+            xoffset 13
 
 
 style save_text is file_slot_text
@@ -573,6 +595,13 @@ screen load():
 
     use file_slots(_("Load"))
 
+    text "We do our best to retain save integrity with every update, however due to the dynamic nature of game development some saves might break. If you experience any errors please let us know via the support channel on the College Kings Discord.\nYou can find a link to our Discord in the Main Menu.":
+        font "fonts/BebasNeue-Regular.ttf"
+        xalign 0.5
+        text_align 0.5
+        xsize 1450
+        ypos 900
+
 
 screen file_slots(title):
     style_prefix "file_slots"
@@ -584,12 +613,7 @@ screen file_slots(title):
         incompatible_game_versions = {"12.0.0", "0.6.4"}
         incompatible_renpy_versions = {"7.4.8.1895", "7.4.7.1862"}
 
-        game_version = FileJson(1, key="_version") or ""
-        renpy_version = FileJson(1, key="_renpy_version") or ""
-        renpy_version = '.'.join(str(i) for i in renpy_version)
-        file_compatable = not (game_version in incompatible_game_versions or renpy_version in incompatible_renpy_versions)
-
-    add image_path + "background.png"
+    add image_path + "background.webp"
 
     text "{} Game".format(title):
         xalign 0.5
@@ -597,9 +621,9 @@ screen file_slots(title):
         style "file_slots_title"
 
     imagebutton:
-        idle image_path + "return_idle.png"
+        idle "gui/common/return_idle.webp"
+        hover "gui/common/return_hover.webp"
         action Return()
-        pos (129, 82)
 
     fixed:
         pos (243, 206)
@@ -645,7 +669,7 @@ screen file_slots(title):
                             text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")).upper() xalign 0.5
                             text FileSaveName(slot).upper() xalign 0.5
                     else:
-                        add image_path + "incompatible.png" xalign 0.5 yoffset -7
+                        add image_path + "incompatible.webp" xalign 0.5 yoffset -7
 
                     key "save_delete" action FileDelete(slot)
 
@@ -658,7 +682,7 @@ screen file_slots(title):
         xoffset 20
 
         imagebutton:
-            idle image_path + "left_arrow.png"
+            idle image_path + "left_arrow.webp"
             action FilePagePrevious()
             yalign 0.5
 
@@ -674,51 +698,53 @@ screen file_slots(title):
         textbutton "99" action FilePage(99) yalign 0.5
 
         imagebutton:
-            idle image_path + "right_arrow.png"
+            idle image_path + "right_arrow.webp"
             action FilePageNext()
             yalign 0.5
 
     # Menu buttons
-    if title == _("Save"):
+    hbox:
+        yalign 1.0
+
+        if title == _("Save"):
+            imagebutton:
+                idle image_path + "load_idle.webp"
+                hover image_path + "load_hover.webp"
+                action ShowMenu("load")
+        else:
+            imagebutton:
+                idle image_path + "save_idle.webp"
+                hover image_path + "save_hover.webp"
+                action ShowMenu("save")
+
         imagebutton:
-            idle image_path + "load_idle.png"
-            action ShowMenu("load")
-            pos (129, 967)
-    else:
+            idle image_path + "menu_idle.webp"
+            hover image_path + "menu_hover.webp"
+            action MainMenu(confirm=not main_menu)
+
+    hbox:
+        align (1.0, 1.0)
+
         imagebutton:
-            idle image_path + "save_idle.png"
-            action ShowMenu("save")
-            pos (129, 967)
+            idle "gui/common/settings_idle.webp"
+            hover "gui/common/settings_hover.webp"
+            action ShowMenu("preferences")
 
-    imagebutton:
-        idle image_path + "menu_idle.png"
-        action MainMenu()
-        pos (314, 975)
-
-    imagebutton:
-        idle "settings_idle"
-        hover "settings_hover"
-        action ShowMenu("preferences")
-        pos (1439, 967)
-
-    imagebutton:
-        idle "quit_idle"
-        hover "quit_hover"
-        action Quit(confirm=not main_menu)
-        pos (1662, 971)
+        imagebutton:
+            idle "gui/common/quit_idle.webp"
+            hover "gui/common/quit_hover.webp"
+            action Quit(confirm=not main_menu)
 
 
-style file_slots_title is text:
-    font "fonts/Montserrat-ExtraBold.ttf"
-    size 64
+style file_slots_title is montserrat_extra_bold_64
 
-style file_slots_page_name is olympus_mount_30
+style file_slots_page_name is bebas_neue_30
 
-style file_slots_text is olympus_mount_30:
+style file_slots_text is bebas_neue_30:
     size 22
     yoffset 2
 
-style file_slots_button_text is druk_wide_bold_22
+style file_slots_button_text is syne_extra_bold_22
 
 
 ## Preferences screen ##########################################################
@@ -791,10 +817,35 @@ screen preferences():
         pos (618, 663)
         spacing 22
 
-        for variable in ("config_censored", "voice_acted", "showkct"):
-            hbox:
-                spacing 6
+        # CENSORSHIP POPUPS / STREAMER MODE
+        hbox:
+            spacing 6
 
+            fixed:
+                xysize (137, 61)
+
+                imagebutton:
+                    idle "blue_button_idle"
+                    hover "blue_button_hover"
+                    selected_idle "blue_button_hover"
+                    action SetVariable("config_censored", True)
+                text "On" align (0.5, 0.5)
+
+            fixed:
+                xysize (137, 61)
+
+                imagebutton:
+                    idle "blue_button_idle"
+                    hover "blue_button_hover"
+                    selected_idle "blue_button_hover"
+                    action SetVariable("config_censored", False)
+                text "Off" align (0.5, 0.5)
+
+        # VOICE ACTING
+        hbox:
+            spacing 6
+
+            if renpy.loadable("v14/scene1.rpy"):
                 fixed:
                     xysize (137, 61)
 
@@ -802,7 +853,7 @@ screen preferences():
                         idle "blue_button_idle"
                         hover "blue_button_hover"
                         selected_idle "blue_button_hover"
-                        action SetVariable(variable, True)
+                        action SetVariable("voice_acted", True)
                     text "On" align (0.5, 0.5)
 
                 fixed:
@@ -812,8 +863,37 @@ screen preferences():
                         idle "blue_button_idle"
                         hover "blue_button_hover"
                         selected_idle "blue_button_hover"
-                        action SetVariable(variable, False)
+                        action SetVariable("voice_acted", False)
                     text "Off" align (0.5, 0.5)
+            else:
+                fixed:
+                    xysize (280, 61)
+                    
+                    text "(from Act 4 only)" align (0.5, 0.5)
+
+        # SHOW KCT
+        hbox:
+            spacing 6
+
+            fixed:
+                xysize (137, 61)
+
+                imagebutton:
+                    idle "blue_button_idle"
+                    hover "blue_button_hover"
+                    selected_idle "blue_button_hover"
+                    action SetVariable("showkct", True)
+                text "On" align (0.5, 0.5)
+
+            fixed:
+                xysize (137, 61)
+
+                imagebutton:
+                    idle "blue_button_idle"
+                    hover "blue_button_hover"
+                    selected_idle "blue_button_hover"
+                    action SetVariable("showkct", False)
+                text "Off" align (0.5, 0.5)
 
         # REAL LIFE MODE
         hbox:
@@ -875,13 +955,9 @@ screen preferences():
 
     imagebutton:
         idle "gui/settings/return_idle.webp"
+        hover "gui/settings/return_hover.webp"
         action Return()
         pos (129, 82)
-
-# style settings_imagebutton:
-#     idle "blue_button_idle"
-#     hover "blue_button_hover"
-#     selected_idle "blue_button_hover"
 
 
 style radio_label is pref_label
@@ -911,7 +987,7 @@ style radio_vbox:
 
 style radio_button:
     properties gui.button_properties("radio_button")
-    foreground "gui/button/radio_[prefix_]foreground.png"
+    foreground "gui/button/radio_[prefix_]foreground.webp"
 
 style radio_button_text:
     properties gui.button_text_properties("radio_button")
@@ -921,7 +997,7 @@ style check_vbox:
 
 style check_button:
     properties gui.button_properties("check_button")
-    foreground "gui/button/check_[prefix_]foreground.png"
+    foreground "gui/button/check_[prefix_]foreground.webp"
 
 style check_button_text:
     properties gui.button_text_properties("check_button")
@@ -1049,6 +1125,8 @@ screen confirm(message, yes_action, no_action=Hide("confirm")):
     modal True
     style_prefix "confirm"
 
+    add "darker_80"
+
     use alert_template(message):
 
         button:
@@ -1071,7 +1149,7 @@ screen confirm(message, yes_action, no_action=Hide("confirm")):
     key "game_menu" action no_action
 
 
-style confirm_text is olympus_mount_30
+style confirm_text is bebas_neue_30
 
 
 ## Skip indicator screen #######################################################

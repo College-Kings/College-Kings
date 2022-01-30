@@ -4,6 +4,10 @@
 # Time: Evening
 
 label v15s48a:
+    label v15s48a_norasg:
+
+    play music "music/v15/Track Scene 48a.mp3" fadein 2
+
     $ sceneList.add("v15_nora")
     
     scene v15s48a_1 # TPP. Show Nora sitting down next to MC, both slight smile, mouth closed.
@@ -26,21 +30,29 @@ label v15s48a:
 
     no "Seriously. You've always been there for me."
 
-    if achievement.has("you_may_kiss_the_bride"):
-        no "Chris literally left me at the altar... and you were the only one who stepped up for me."
+    no "Chris literally left me at the altar... and you were the only one who stepped up for me."
 
-        no "It took you just a few seconds to stand up and take his place."
+    no "It took you just a few seconds to stand up and take his place."
 
-        scene v15s48a_2a
-        with dissolve
+    if v12s16_kissnora:
+        no "And who can forget that kiss?"
 
-        u "(Damn straight.)"
-    if achievement.has("helping_hand"):
+    scene v15s48a_2a
+    with dissolve
+
+    u "(Damn straight.)"
+
+    if v10_help_nora_freeroam:
+        $ v15s48a_norapoints += 1
+        
         scene v15s48a_2
         with dissolve
 
         no "I mean, you helped me get people signed up for the Europe trip. And I didn't even have to ask."
+
     if v10_cheerfornora:
+        $ v15s48a_norapoints += 1
+        
         scene v15s48a_2
         with dissolve
 
@@ -65,12 +77,18 @@ label v15s48a:
         with dissolve
 
         no "*Giggles*"
+
     if not v12_chase_robber:
+        $ v15s48a_norapoints += 1
+        
         scene v15s48a_2
         with dissolve
 
         no "When I got robbed in Europe, your first instinct was to make sure that I was okay."
+
     if v12_fight_win:
+        $ v15s48a_norapoints += 1
+        
         scene v15s48a_2
         with dissolve
 
@@ -90,18 +108,25 @@ label v15s48a:
         with dissolve
 
         u "Of course, I did."
+
     if v12_followed_nora:
+        $ v15s48a_norapoints += 1
+        
         scene v15s48a_2
         with dissolve
 
         no "You didn't hesitate to choose me over \"the boys\"."
 
-        no "I just can't believe how much time I've wasted without you, ha."
-
     scene v15s48a_2b # FPP. Nora leaning in closer to MC's face, Nora looking at MC, MC looking at Nora, Nora flirty, mouth open.
     with dissolve
 
-    no "It's been you all along."
+    if v15s48a_norapoints > 1:
+        no "I just can't believe how much time I've wasted without you, ha."
+
+        no "It's been you all along."
+
+    else:
+        no "I just can't believe how much time I've wasted without you, ha."
 
     scene v15s48a_2c # FPP. Nora leaning in closer to MC's face, Nora looking at MC, MC looking at Nora, Nora biting her lip.
     with dissolve
@@ -119,34 +144,35 @@ label v15s48a:
     menu:
         "You are wanted":
             $ add_point(KCT.BOYFRIEND)
-            u "You are."
+            u "You are..."
 
             scene v15s48a_3 # TPP. MC kissing Nora's right cheek.
             with dissolve
+            play sound "sounds/kiss.mp3"
 
-            u "Completely"
+            u "completely..."
 
             scene v15s48a_4 # TPP. MC kissing Nora's left cheek.
             with dissolve
-
-            u "And utterly."
-
             play sound "sounds/kiss.mp3"
+
+            u "and utterly..."
 
             scene v15s48a_2d # FPP. MC kissing Nora
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v15s48a_5 # TPP. Show MC and Nora kissing.
             with dissolve
+            play sound "sounds/kiss.mp3"
 
-            pause 0.75
+            pause 1.25
 
             scene v15s48a_2c
             with dissolve
 
-            u "Wanted."
+            u "wanted."
 
             scene v15s48a_2e # FPP. Nora still leaned in close to MC, MC looking at Nora, Nora looking at MC, Nora blushing, Nora smile, mouth open.
             with dissolve
@@ -155,17 +181,17 @@ label v15s48a:
 
         "Just kiss her":
             $ add_point(KCT.BRO)
-            play sound "sounds/kiss.mp3"
 
             scene v15s48a_2d
             with dissolve
+            play sound "sounds/kiss.mp3"
 
-            pause 0.75
+            pause 1.25
 
             scene v15s48a_5
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v15s48a_2b
             with dissolve
@@ -182,45 +208,51 @@ label v15s48a:
 
             no "Then don't."
 
-    play sound "sounds/kiss.mp3"
-
     scene v15s48a_6 # TPP. Show MC and Nora kissing romantically on the couch with the fireplace with a fire in the shot.
     with dissolve
 
-    pause 0.75
+    play sound "sounds/kiss.mp3"
+
+    pause 1.25
+
+    if config_censored:
+        call screen censored_popup("v15s48a_nsfwSkipLabel1")
 
     scene v15s48a_7 # TPP. Closer up of MC and Nora, MC taking off Nora's shirt her boobs out, Nora's face obscured by her shirt, MC slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s48a_7a # TPP. MC and Nora kissing, Nora is topless.
     with dissolve
 
-    pause 0.75
+    play sound "sounds/kiss.mp3"
+
+    pause 1.25
 
     scene v15s48a_7b # TPP. Nora taking of MC's shirt, MC's face obscured by his shirt, Nora flirty, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s48a_7c # TPP. MC and Nora kissing, both topless.
     with dissolve
 
-    pause 0.75
+    play sound "sounds/kiss.mp3"
+
+    pause 1.25
     
     scene v15s48a_8 # TPP. Nora laying on the couch fully nude, Nora's full body in the shot, Nora biting her lip.
     with fade
 
     pause 0
 
-    call screen sex_overlay([
+    $ sex_overlay_options = [
         [("Boobs", "v15s48a_boobs"), ("Feet", "v15s48a_feet"), ("Vagina", "v15s48a_vagina")],
-    ], continue_label="v15s48a_end")
+    ]
+    call screen sex_overlay("v15s48a_end")
 
 label v15s48a_boobs:
-    $ v15s48a_frboobs = True
-
     scene v15s48abo_1 # TPP. Close up of Nora's boobs as she lays on her back on the couch.
     with dissolve
 
@@ -300,13 +332,12 @@ label v15s48a_boobs:
 
             u "Hmm, I guess we will."
 
-    call screen sex_overlay([
-        [("boobs", "v15s48a_boobs"), ("feet", "v15s48a_feet"), ("vagina", "v15s48a_vagina")],
-    ], continue_label="v15s48a_end")
+    $ sex_overlay_options = [
+        [("Boobs", "v15s48a_boobs"), ("Feet", "v15s48a_feet"), ("Vagina", "v15s48a_vagina")],
+    ]
+    call screen sex_overlay("v15s48a_end")
 
 label v15s48a_feet:
-    $ v15s48a_frfeet = True
-
     scene v15s48afe_1 # TPP. Close up of Nora's feet.
     with dissolve
 
@@ -363,6 +394,8 @@ label v15s48a_feet:
             scene v15s48afe_6 # TPP. Show MC kissing Nora's foot, Nora flirty, mouth open.
             with dissolve
 
+            play sound "sounds/kiss.mp3"
+
             no "I think it's my new favorite thing."
 
             no "But I have a lot of favorites when it comes to sex..."
@@ -372,13 +405,12 @@ label v15s48a_feet:
 
             u "And I can't wait to find out what they are."
 
-    call screen sex_overlay([
-        [("boobs", "v15s48a_boobs"), ("feet", "v15s48a_feet"), ("vagina", "v15s48a_vagina")],
-    ], continue_label="v15s48a_end")
+    $ sex_overlay_options = [
+        [("Boobs", "v15s48a_boobs"), ("Feet", "v15s48a_feet"), ("Vagina", "v15s48a_vagina")],
+    ]
+    call screen sex_overlay("v15s48a_end")
 
 label v15s48a_vagina:
-    $ v15s48a_frvagina = True
-
     scene v15s48ava_1 # FPP. MC looking at Nora's vagina.
     with dissolve
 
@@ -386,6 +418,8 @@ label v15s48a_vagina:
         "Tease with kissing":
             scene v15s48ava_2 # TPP. Show MC kissing Nora's inner thigh, Nora flirty, mouth open.
             with dissolve
+
+            play sound "sounds/kiss.mp3"
 
             no "*Gasps*"
 
@@ -398,6 +432,8 @@ label v15s48a_vagina:
 
             scene v15s48ava_2a # TPP. Show MC kissing closer to Nora's vagina, Nora flirty, mouth open.
             with dissolve
+
+            play sound "sounds/kiss.mp3"
 
             no "God, you're such a fucking turn on."
 
@@ -470,9 +506,10 @@ label v15s48a_vagina:
 
             no "Oh, [name]. Please..."
 
-    call screen sex_overlay([
-        [("boobs", "v15s48a_boobs"), ("feet", "v15s48a_feet"), ("vagina", "v15s48a_vagina")],
-    ], continue_label="v15s48a_end")
+    $ sex_overlay_options = [
+        [("Boobs", "v15s48a_boobs"), ("Feet", "v15s48a_feet"), ("Vagina", "v15s48a_vagina")],
+    ]
+    call screen sex_overlay("v15s48a_end")
 
 label v15s48a_end:
 # -Clicking on Nora's mouth-
@@ -498,6 +535,11 @@ label v15s48a_end:
     with dissolve
 
     no "Gladly. *Giggles*"
+    
+    scene v15s48a_98
+    with dissolve
+    
+    pause 0.75
 
     image v15norbj = Movie(play="images/v15/Scene 48a/v15norbj.webm", loop=True, image="images/v15/Scene 48a/v15norbjStart.webp", start_image="images/v15/Scene 48a/v15norbjStart.webp")
     image v15norbjf = Movie(play="images/v15/Scene 48a/v15norbjf.webm", loop=True, image="images/v15/Scene 48a/v15norbjStart.webp", start_image="images/v15/Scene 48a/v15norbjStart.webp")
@@ -507,13 +549,16 @@ label v15s48a_end:
     scene v15norbj # Ignore as anim
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - bj_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     u "Ah, fuck... yeah."
 
     u "Wow, you REALLY want it!"
 
-    scene v15norbjf # Ignore as anim
+    scene v15norbj2 # Ignore as anim
     with dissolve
 
     pause 0.75
@@ -522,8 +567,11 @@ label v15s48a_end:
 
     no "*Gagging*"
 
-    scene v15norbj2 # Ignore as anim
+    scene v15norbjf # Ignore as anim
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - bj_fast_2loops.mp3", loop=True)
 
     pause 0.75
 
@@ -535,6 +583,8 @@ label v15s48a_end:
     pause 0.75
 
     u "I'm not going to last much longer if you keep that up..."
+
+    stop sound
 
     scene v15s48aend_2 # TPP. MC leading Nora over to the window, both naked, both slight smile, mouth closed.
     with dissolve
@@ -557,11 +607,16 @@ label v15s48a_end:
     scene v15noror # Ignore as anim 
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - oral_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     no "Oh... Fuck!"
 
     no "*Panting* I've never felt this good before, [name]."
+
+    stop sound
 
     scene v15s48aend_4 # FPP. MC looking up at Nora from on his knees, Nora looking down at MC, Nora biting her lip.
     with dissolve
@@ -578,7 +633,7 @@ label v15s48a_end:
         "Get used to it":
             scene v15s48aend_4
             #with dissolve
-        
+            
             u "Good, get used to it."
 
             scene v15s48aend_4a
@@ -588,10 +643,17 @@ label v15s48a_end:
 
     no "Mmm..."
 
+    scene v15s48aend_4
+    with dissolve
+
     u "You're so fucking wet, Nora."
 
     scene v15noror2 # Ignore as anim
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - oral_slow_2loops.mp3", loop=True)
+
 
     pause 0.75
 
@@ -604,6 +666,8 @@ label v15s48a_end:
     no "You..."
 
     no "Y-you have to fuck me."
+
+    stop sound
 
     scene v15s48aend_4
     with dissolve
@@ -640,21 +704,27 @@ label v15s48a_end:
     scene v15norsdg # Ignore as anim 
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - sdg_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     no "*Gasps*"
 
     u "*Groans*"
 
-    scene v15norsdgf # Ignore as anim 
+    scene v15norsdg2 # Ignore as anim 
     with dissolve
     
     pause 0.75
 
     no "Oh, shit!"
 
-    scene v15norsdg2 # Ignore as anim 
+    scene v15norsdgf # Ignore as anim 
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - sdg_fast_2loops.mp3", loop=True)
 
     pause 0.75
 
@@ -666,6 +736,8 @@ label v15s48a_end:
     pause 0.75
 
     no "You... *Moans* Too..."
+
+    stop sound
 
     scene v15s48aend_5c # TPP. Nora turned back around, Nora looking at MC, Nora biting her lip.
     with dissolve
@@ -720,13 +792,16 @@ label v15s48a_end:
     scene v15normis # Ignore as anim
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - missionary_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     no "Oh my- *Moans*"
 
     no "Harder, [name]. Please!"
 
-    scene v15normisf # Ignore as anim
+    scene v15normis2 # Ignore as anim
     with dissolve
 
     pause 0.75
@@ -735,8 +810,11 @@ label v15s48a_end:
 
     no "I... love that... Yes!"
 
-    scene v15normis2 # Ignore as anim
+    scene v15normisf # Ignore as anim
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s48a/Scene 48a - missionary_fast_2loops.mp3", loop=True)
 
     pause 0.75
 
@@ -754,6 +832,8 @@ label v15s48a_end:
     u "I'm... *Moans* Nora-"
 
     no "Yes, baby..."
+
+    stop sound
 
     scene v15s48aend_11 # FPP. MC and Nora in missionairy on the bed, MC close to her face, MC looking at Nora, Nora looking at MC, Nora with her hand on MC's cheek, Nora flirty, mouth open.
     with dissolve
@@ -776,8 +856,12 @@ label v15s48a_end:
     u "Ahhh... (Fuck!)"
 
 # -Timed Event
-    menu:
+    menu (fail_label="v15s48a_cum"):
         "Cum inside Nora":
+            label v15s48a_cum:
+            
+            $ v15_nora_cum = True
+        
             scene v15s48aend_11a
             with vpunch
 
@@ -789,7 +873,7 @@ label v15s48a_end:
             no "I'm- I... *Moans* Yes, [name]..."
 
         "Pull out":
-            u "(No. Fucking. Thank you,)"
+            u "(No. Fucking. Thank you.)"
 
             scene v15s48aend_12 # FPP. MC looking down at his dick inside of Nora as he is pulling it out.
             with dissolve
@@ -839,7 +923,7 @@ label v15s48a_end:
             scene v15s48aend_15c # FPP. On the bed, MC's two fingers all the way in Nora's vagina, Nora flirty, mouth open.
             with vpunch
 
-            no "Oh- *Moans* [Name]... *Gasps*"
+            no "Oh- *Moans* [name]... *Gasps*"
 
     scene v15s48aend_16 # FPP. Nora and MC both laying on the bed Nora on her side looking at MC, MC looking at Nora, Nora biting her lip.
     with dissolve
@@ -860,5 +944,9 @@ label v15s48a_end:
     with dissolve
 
     no "No, you are."
+
+    stop music fadeout 3
+
+    play music "music/v15/Track Scene 48b.mp3" fadein 2
 
     jump v15s48b

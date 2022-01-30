@@ -4,8 +4,8 @@
 # Time: Saturday Night
 label v10_avoid_fight:
     $ renpy.end_replay()
+    
     if not v10_ryan_fight and not v10_imre_fight:   
-
         scene v10frr1 # TPP. Show MC leaving the warehouse.(camera from inside wearhouse positioned behind mc)
         with dissolve
 
@@ -19,6 +19,7 @@ label v10_avoid_fight:
         if joinwolves:
             scene v10frr2a # TPP. same camera as v10frr2, Show MC having just left the warehouse (camera from outside, mc facing camera), Show chris just exiting the warehouse. MC mouth closed, Chris mouth open
             with dissolve
+
             ch "Hey!"
 
             u "(Really don't wanna talk right now.)"
@@ -95,6 +96,7 @@ label v10_avoid_fight:
                     with dissolve
 
                     ch "Just go home."
+
                 "Stand your ground":
                     scene v10frr3b
                     with dissolve
@@ -254,5 +256,7 @@ label v10_avoid_fight:
             with dissolve
 
             u "(Fuck that hurt, I'm going home.)"
+
     stop music fadeout 3
+
     jump v10_leave_fight

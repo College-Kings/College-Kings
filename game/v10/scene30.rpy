@@ -163,7 +163,7 @@ label v10_chloe_gym:
 
     u "(Damn...)"
 
-    if chloe.relationship.value >= Relationship.FWB.value: # If in a relationship with Chloe
+    if chloe.relationship >= Relationship.FWB: # If in a relationship with Chloe
         # -Event1 Look closer-
         menu:
             "Look closer":
@@ -230,7 +230,7 @@ label v10_chloe_gym:
                 pause 0.5
 
                 if config_censored:
-                    call screen censoredPopup("v10s30_nsfwSkipLabel1")
+                    call screen censored_popup("v10s30_nsfwSkipLabel1")
 
                 scene v10chg10 # FPP Close up on Chloe, laying on her back on the bench, small smile and mouth closed, mc reaching to pull off her top.
                 with dissolve

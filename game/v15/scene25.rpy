@@ -3,9 +3,11 @@
 # Characters: MC (Outfit: 9), BOOKING ADMIN (Outfit: 1)
 # Time: Morning
 
-# show screen generic_conviction_bar(800, 1000, "HAGGLING THE PRICE", "images/v15/conviction_bars/s25_background.png", "TOTAL PRICE $ {}".format(800))
+# show screen generic_conviction_bar(800, 1000, "HAGGLING THE PRICE", "images/v15/conviction_bars/s25_background.webp", "TOTAL PRICE $ {}".format(800))
 
 label v15s25:
+    play music "music/v15/Track Scene 25.mp3" fadein 2
+
     if joinwolves:
         play sound "sounds/dooropen.mp3"
 
@@ -407,7 +409,7 @@ label v15s25:
         menu:
             "Accept the price":
                 $ add_point(KCT.BOYFRIEND)
-                $ lindsey_board.money -= 800
+                $ v15s25_price = 800
                 
                 scene v15s25_7a
                 with dissolve
@@ -453,7 +455,7 @@ label v15s25:
                 menu:
                     "Be honest":
                         $ add_point(KCT.BOYFRIEND)
-                        $ lindsey_board.money -= 400
+                        $ v15s25_price = 400
                         
                         scene v15s25_7a
                         with dissolve
@@ -512,7 +514,7 @@ label v15s25:
 
                     "Lie":
                         $ add_point(KCT.TROUBLEMAKER)
-                        $ lindsey_board.money -= 800
+                        $ v15s25_price = 800
                         
                         scene v15s25_7a
                         with dissolve
@@ -594,7 +596,7 @@ label v15s25:
         menu:
             "Accept the price":
                 $ add_point(KCT.BOYFRIEND)
-                $ lindsey_board.money -= 700
+                $ v15s25_price = 700
                 
                 scene v15s25_7a
                 with dissolve
@@ -664,7 +666,7 @@ label v15s25:
                 menu:
                     "Lindsey's mom passed away recently":
                         $ add_point(KCT.BOYFRIEND)
-                        $ lindsey_board.money -= 500
+                        $ v15s25_price = 500
                         
                         scene v15s25_7h
                         with dissolve
@@ -706,7 +708,7 @@ label v15s25:
 
                         admin "Let's see... Well, I think I can help you out a little bit."
 
-                        admin "I can give you a 25% discount. That brings the price down to $600."
+                        admin "I can give you a 25\% discount. That brings the price down to $600."
 
                         scene v15s25_7a
                         with dissolve
@@ -747,7 +749,7 @@ label v15s25:
 
                     "Ask about student discounts":
                         $ add_point(KCT.TROUBLEMAKER)
-                        $ lindsey_board.money -= 700
+                        $ v15s25_price = 700
                         
                         scene v15s25_7a
                         with dissolve
@@ -795,9 +797,9 @@ label v15s25:
 
     $ aubrey.messenger.newMessage("Hey! Come to the Chicks house? I have an extra special surprise for you... I think you've earned it.", force_send=True)
 
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if aubrey.relationship >= Relationship.FWB:
         $ aubrey.messenger.addReply("A naked surprise? ;)")
-        $ aubrey.messenger.newMessage("Haha you'll find out. Hurry up. I'm waiting :)", force_send=True)
+        $ aubrey.messenger.newMessage("Haha you'll find out. Hurry up. I'm waiting :)")
 
     else:
         $ aubrey.messenger.addReply("Haha okay, see you there.")
@@ -820,5 +822,9 @@ label v15s25:
     with dissolve
 
     u "*Sighs* (Still no Nora, but it sounds like Aubrey's got something fun planned for me.)"
+
+    stop music fadeout 3
+
+    $ lindsey_board.money -= v15s25_price
 
     jump v15s26

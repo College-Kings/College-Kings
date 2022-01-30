@@ -4,11 +4,21 @@
 # Time: Morning
 
 label v15s31:
-# -Transition from night to morning-
+    if joinwolves:
+        scene v14s14_2
+        with dissolve
+                
+    else:
+        scene v14s14a_1
+        with dissolve
+        
+    u "Let's wake up and dress up."
+
+    play music "music/v13/Track Scene 33.mp3" fadein 2
 
 # -MC is wearing his homecoming suit as he walks into the bathroom-
     scene v15s31_1 # TPP. Show MC looking at himself in the mirror as he is wearing the suit, slight smile, mouth closed.
-    with dissolve
+    with fade
 
     u "(Right, let's see how I'm looking.)"
 
@@ -60,7 +70,7 @@ label v15s31:
                 $ emily.messenger.addReply("Getting prom flashbacks.")
                 $ emily.messenger.newMessage("OMG! Haha, you actually look the same. Where are you headed?", force_send=True)
                 $ emily.messenger.addReply("Wedding ceremony for Aubrey's parents.")
-                $ emily.messenger.newMessage("Oh, nice! Tell her I said hi! Miss you guys! Have fun! :)", force_send=True)
+                $ emily.messenger.newMessage("Oh, nice! Tell her I said hi! Miss you guys! Have fun! :)")
                 $ emily.messenger.addReply("Will do. We miss you too :)")
 
                 label v15s31_PhoneContinue:
@@ -94,7 +104,7 @@ label v15s31:
 
         u "(Damn, it feels like that was ages ago already.)"
         
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+        if chloe.relationship >= Relationship.GIRLFRIEND:
             u "(How far we've come since then.)"
 
         play sound "sounds/swoosh.mp3"
@@ -115,7 +125,7 @@ label v15s31:
 
         u "(Damn, it feels like that was ages ago already.)"
         
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        if lauren.relationship >= Relationship.GIRLFRIEND:
             u "(How far we've come since then.)"
         
         elif v11_lauren_caught_aubrey:
@@ -194,5 +204,7 @@ label v15s31:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v15s32

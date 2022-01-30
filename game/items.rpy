@@ -7,10 +7,9 @@ init python:
             cost (int): Amount item costs in dollars 
         """
 
-        def __init__(self, name, cost, label=None, idle_image=None, hover_image=None, insensitive_image=None):
+        def __init__(self, name, cost, idle_image=None, hover_image=None, insensitive_image=None):
             self.name = name
             self.cost = cost
-            self.label = label
             self.idle_image = idle_image
             self.hover_image = hover_image
             self.insensitive_image = insensitive_image

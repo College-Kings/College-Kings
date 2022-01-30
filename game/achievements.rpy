@@ -7,7 +7,7 @@ init python:
         Achievement data class for storing and managing the creation, syncing and managing of in-game achievements
 
         Args:
-            _achievement (str): Programic name for the achievement
+            _achievement (str): Programic name for the achievement, should be same as steam api name
             text (str): Short description of achievement
         """
 
@@ -28,12 +28,10 @@ init python:
 
 
     def grant_achievement(_achievement):
-        if path_builder:
+        if path_builder or _in_replay:
             return
             
-        try:
-            renpy.show(_achievement, at_list=achievementAtList)
-        except TypeError: pass
+        renpy.show(_achievement, [achievementShow])
         achievement.grant(_achievement) 
         achievement.sync()
 
@@ -99,10 +97,10 @@ init python:
         Achievement("thick_and_thin", "Help Penelope")
         Achievement("text_with_an_s", "Return to sender")
         Achievement("lucky_7", "Flashing lights at the arcade")
-        Achievement("ip_man", "Win The Alley Fight")
-        Achievement("get_a_room", "Stay With Amber at Josh's")
+        Achievement("ip_man", "Win the alley fight")
+        Achievement("get_a_room", "Stay with Amber at Josh's")
         Achievement("helping_hand", "Help Nora hand out flyers for the trip")
-        Achievement("up_for_more", "Flirt With Chloe")
+        Achievement("up_for_more", "Flirt with Chloe at the Steakhouse")
 
     # v9
     if renpy.loadable("v9/scene01.rpy"):
@@ -198,17 +196,18 @@ init python:
     
     #v15
     if renpy.loadable("v15/scene1.rpy"):
-        Achievement("childhood_memories", "Surprise the birthday girl") #s18
-        Achievement("counter_intelligence", "Lindsey was expecting that strategy") #s12
-        Achievement("da_ba_dee_da_ba_dai", "I'm Blue") #s4
-        Achievement("emotional_blackmail", "Threaten Ms. Rose") #s21
-        Achievement("honey_bear", "Lick Ms. Rose's pancakes") #s15
         Achievement("horn_dog", "Peek on Autumn") #s4
-        Achievement("just_one_more_thing", "Find all the clues and crack the case") #s46
-        Achievement("karen", "Where is your manager?!") #s24
+        Achievement("da_ba_dee_da_ba_dai", "I'm Blue") #s4
+        Achievement("counter_intelligence", "Lindsey was expecting that strategy") #s12
         Achievement("mmmm_donut", "Eat the donut") #s13
-        Achievement("polycurious", "Monogamy is overrated") #s26
+        Achievement("honey_bear", "Lick Ms. Rose's pancakes") #s15
         Achievement("pumpkin_season", "You really like that pumpkin, huh?") #s18
+        Achievement("childhood_memories", "Surprise the birthday girl") #s18
         Achievement("taskmaster", "Clear the checklist") #s18
         Achievement("too_much_information", "Check your meeting notes often") #s21
+        Achievement("emotional_blackmail", "Threaten Ms. Rose") #s21
+        Achievement("karen", "Where is your manager?!") #s24
+        Achievement("polycurious", "Monogamy is overrated") #s26
+        Achievement("blue_cheese_and_sambuca", "Worst wedding catering ever") #s33
         Achievement("what_goes_around", "Aubrey tastes her own medicine at the wedding") #s33
+        Achievement("just_one_more_thing", "Find all the leads and crack the case") #s46

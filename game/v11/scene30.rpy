@@ -126,7 +126,7 @@ label v11_lauren_store:
     pause 0.75
 
     scene v11las5 # FPP. MC and Lauren standing next to each other on the sidewalk, MC and Lauren looking at each other, Lauren slight smile, mouth closed
-    with dissolve 
+    with dissolve
 
     u "Where are we going?"
 
@@ -609,7 +609,7 @@ label v11_quiz_q3:
 
     jud "Jerry, please."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v11las21 # TPP. Show MC getting up from his chair, MC is very angry, mouth closed
         with dissolve
 
@@ -1064,7 +1064,7 @@ label v11_quiz_bonus:
 
     la "I'm glad we won, but it feels even better knowing we beat that jerk."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         play sound "sounds/kiss.mp3"
         scene v11las33 # TPP. Show Lauren kissing MC, they're both still sitting down
         with dissolve
@@ -1267,7 +1267,7 @@ label v11_quiz_bonus:
 
     jud "I'd be happy to! Please, squish together a bit."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         play sound "sounds/kiss.mp3"
         scene v11las45 # TPP. Show MC and Lauren posing for a picture, Lauren has her arms wrapped around MC's neck and they're kissing
         with dissolve
@@ -1334,8 +1334,8 @@ label v11_quiz_bonus:
 
     u "Wouldn't have missed it for the world."
 
-    if (lauren.relationship.value >= Relationship.GIRLFRIEND.value or (kct == "loyal" and lauren.relationship.value >= Relationship.KISS.value)) and not "v11_aubrey" in sceneList:
-        if lauren.relationship.value < Relationship.GIRLFRIEND.value:
+    if (lauren.relationship >= Relationship.GIRLFRIEND or (kct == "loyal" and lauren.relationship >= Relationship.KISS)) and not "v11_aubrey" in sceneList:
+        if lauren.relationship < Relationship.GIRLFRIEND:
             call screen kct_popup
 
         scene v11las44f # FPP. Lauren has her hands around MC's neck, she is looking into his eyes, she is nervous, mouth open
@@ -1419,7 +1419,7 @@ label v11_quiz_bonus:
 
     pause 0.75
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v11las49
         with dissolve
 
@@ -1463,7 +1463,7 @@ label v11_quiz_bonus:
                 jump v11s30_PhoneContinuelauren1
 
     scene v11las49
-    with dissolve 
+    with dissolve
 
     u "(That's how you start a day off right. Let's see what else today has to offer.)"
 

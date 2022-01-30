@@ -4,6 +4,8 @@
 # Time: Night
 
 label v15s36:
+    play music "music/v13/Track Scene 5.mp3" fadein 2
+
     scene v15s36_1 # TPP. Shot of MC and Autumn walking down the street, both slight smile, mouth closed.
     with fade
 
@@ -55,138 +57,19 @@ label v15s36:
     menu:
         "Oh no, I wasn't":
             $ add_point(KCT.BRO)
+
             u "Oh no, I wasn't. Actually I wanted to know what your favorite question from tonight was."
 
             jump v15s36_dontask
 
         "I'm really curious":
             $ add_point(KCT.BOYFRIEND)
+
             u "Well, I'm curious about getting to know the real Autumn, but I know it's a sensitive issue."
 
     u "Only if you're comfortable talking about it, of course."
 
-    if autumn.relationship.value < Relationship.TRUST.value:
-        scene v15s36_4a
-        with dissolve
-
-        aut "I get it, you've got questions, ha."
-
-        aut "I'm just done talking about it for today."
-
-        scene v15s36_4
-        with dissolve
-
-        u "Oh, okay. Sure. Sorry for-."
-
-        scene v15s36_4a
-        with dissolve
-
-        aut "No, it's fine, really. I just need time to think about it all, you know. Maybe another time."
-
-        scene v15s36_4
-        with dissolve
-
-        u "Yeah, I get that. No worries..."
-
-        u "So, what was your favorite question from the game tonight?"
-
-        label v15s36_dontask:
-
-        scene v15s36_5 # FPP. MC and Autumn further down the street, new set of houses in the background, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth open.
-        with dissolve
-
-        aut "Oh! Umm, let me think... There were some really crazy ones, haha."
-
-        scene v15s36_5a # FPP. MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth closed.
-        with dissolve
-
-        u "*Laughs*"
-
-        if v15_lindsey_mostlikelyto:
-            scene v15s36_5
-            with dissolve
-
-            aut "The one about getting shit-face drunk and waking up on the other side of the country, haha."
-
-            scene v15s36_5a
-            with dissolve
-
-            u "*Laughs* Because everyone said it would be me?"
-
-            scene v15s36_5
-            with dissolve
-
-            aut "It's only a matter of time. *Giggles*"
-
-            scene v15s36_5a
-            with dissolve
-
-            u "I can see you all taking bets on what state I'll wake up in."
-
-            scene v15s36_5
-            with dissolve
-
-            aut "A drunken state... Haha!"
-
-            scene v15s36_5a
-            with dissolve
-
-            u "Wow... Good one. Haha, I was going to say Missouri."
-
-            scene v15s36_5
-            with dissolve
-
-            aut "Okay... That was way worse than my cheesy joke..."
-
-            scene v15s36_6 # TPP. Show MC and Autumn laughing while looking at each other now further down the street.
-            with dissolve
-
-            pause 0.75
-
-        else:
-            scene v15s36_5
-            with dissolve
-
-            aut "It's gotta be the frogs, haha."
-
-            aut "Little frog adventures? Sign me up!"
-
-            scene v15s36_5a
-            with dissolve
-
-            u "Ha, what's so good about being a frog?"
-
-            scene v15s36_5
-            with dissolve
-
-            aut "Everything! I wouldn't care if it rained..."
-
-            scene v15s36_5a
-            with dissolve
-
-            u "And you could breathe underwater..."
-
-            scene v15s36_5
-            with dissolve
-
-            aut "Mhmm... And jumping ability!"
-
-            scene v15s36_5a
-            with dissolve
-
-            u "Okay, yeah. You're right. Frogs are kinda sick."
-
-            scene v15s36_5
-            with dissolve
-
-            aut "Haha, exactly! Just don't let any of the actual frogs hearing you say that..."
-
-            scene v15s36_5a
-            with dissolve
-
-            u "*Laughs* Good advice, thanks."
-
-    else:
+    if AutumnTrust:
         scene v15s36_4a
         with dissolve
 
@@ -259,7 +142,7 @@ label v15s36:
                 
                 u "Honestly, I'd really like that... I feel the same way."
 
-                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                if lauren.relationship >= Relationship.GIRLFRIEND:
                     $ autumn.relationship = Relationship.LOYAL
                     scene v15s36_5
                     with dissolve
@@ -409,7 +292,7 @@ label v15s36:
 
                 aut "No, no. There's nothing to apologize for. You're right, and thanks for being honest."
 
-                if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+                if lauren.relationship >= Relationship.GIRLFRIEND:
                     scene v15s36_5
                     with dissolve
 
@@ -434,6 +317,127 @@ label v15s36:
                 with dissolve
 
                 aut "Haha, me too."
+
+    else:
+        scene v15s36_4a
+        with dissolve
+
+        aut "I get it, you've got questions, ha."
+
+        aut "I'm just done talking about it for today."
+
+        scene v15s36_4
+        with dissolve
+
+        u "Oh, okay. Sure. Sorry for-."
+
+        scene v15s36_4a
+        with dissolve
+
+        aut "No, it's fine, really. I just need time to think about it all, you know. Maybe another time."
+
+        scene v15s36_4
+        with dissolve
+
+        u "Yeah, I get that. No worries..."
+
+        u "So, what was your favorite question from the game tonight?"
+
+        label v15s36_dontask:
+
+        scene v15s36_5 # FPP. MC and Autumn further down the street, new set of houses in the background, MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth open.
+        with fade
+
+        aut "Now that I think about it, there were some really crazy ones, haha."
+
+        scene v15s36_5a # FPP. MC looking at Autumn, Autumn looking at MC, Autumn slight smile, mouth closed.
+        with dissolve
+
+        u "*Laughs*"
+
+        if v15_lindsey_mostlikelyto:
+            scene v15s36_5
+            with dissolve
+
+            aut "The one about getting shit-face drunk and waking up on the other side of the country, haha."
+
+            scene v15s36_5a
+            with dissolve
+
+            u "*Laughs* Because everyone said it would be me?"
+
+            scene v15s36_5
+            with dissolve
+
+            aut "It's only a matter of time. *Giggles*"
+
+            scene v15s36_5a
+            with dissolve
+
+            u "I can see you all taking bets on what state I'll wake up in."
+
+            scene v15s36_5
+            with dissolve
+
+            aut "A drunken state... Haha!"
+
+            scene v15s36_5a
+            with dissolve
+
+            u "Wow... Good one. Haha, I was going to say Missouri."
+
+            scene v15s36_5
+            with dissolve
+
+            aut "Okay... That was way worse than my cheesy joke..."
+
+            scene v15s36_6 # TPP. Show MC and Autumn laughing while looking at each other now further down the street.
+            with dissolve
+
+            pause 0.75
+
+        else:
+            scene v15s36_5
+            with dissolve
+
+            aut "It's gotta be the frogs, haha."
+
+            aut "Little frog adventures? Sign me up!"
+
+            scene v15s36_5a
+            with dissolve
+
+            u "Ha, what's so good about being a frog?"
+
+            scene v15s36_5
+            with dissolve
+
+            aut "Everything! I wouldn't care if it rained..."
+
+            scene v15s36_5a
+            with dissolve
+
+            u "And you could breathe underwater..."
+
+            scene v15s36_5
+            with dissolve
+
+            aut "Mhmm... And jumping ability!"
+
+            scene v15s36_5a
+            with dissolve
+
+            u "Okay, yeah. You're right. Frogs are kinda sick."
+
+            scene v15s36_5
+            with dissolve
+
+            aut "Haha, exactly! Just don't let any of the actual frogs hearing you say that..."
+
+            scene v15s36_5a
+            with dissolve
+
+            u "*Laughs* Good advice, thanks."
 
     scene v15s36_10 # TPP. Show MC and Autumn arriving at the Deer's house front.
     with fade 
@@ -465,7 +469,9 @@ label v15s36:
 
     pause 0.75
 
-    if autumn.relationship.value >= Relationship.FWB.value:
+    if autumn.relationship >= Relationship.FWB:
+        $ v15s36_autumn_kiss = True
+    
         scene v15s36_11c # FPP. Show Autumn stopping in place.
         with dissolve
 
@@ -501,5 +507,7 @@ label v15s36:
         with dissolve
 
         pause 0.75
+
+    stop music fadeout 3
 
     jump v15s37

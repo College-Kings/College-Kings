@@ -263,10 +263,10 @@ label v13s51_emily_fight:
 
             stop music fadeout 3
 
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 jump v13s52
 
-            elif riley.relationship.value >= Relationship.FWB.value:
+            elif riley.relationship >= Relationship.FWB:
                 jump v13s53
                             
             else:

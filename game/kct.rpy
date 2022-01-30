@@ -7,8 +7,11 @@ init python:
 
     def add_point(var, value=1):
         # Don't update kct if kct is locked
-        if locked_kct:
+        if locked_kct or _in_replay:
             return
+
+        if pb_kct_notification:
+            renpy.show_screen("popup", message="{} point added".format(var.value.capitalize()))
 
         # Update the KCT variables
         setattr(store, var.value, getattr(store, var.value) + value)
@@ -31,22 +34,22 @@ init python:
 screen kct_choice_hint():
     style_prefix "kct_choice"
 
-    window:
+    frame:
         xalign 1.0
-        xoffset -50
-        background "kct_choice_hint_background"
+        xoffset -100
+
+        background "gui/kct/background_{}.webp".format(kct)
 
         hbox:
-            null width 10
+            spacing 5
+            align (0.5, 0.5)
+            xoffset 20
 
-            add "gui/kct/logo.png" align (0.5, 0.5)
+            add Transform("gui/kct/logo.webp", zoom=0.2382) yalign 0.5
 
-            text kct.upper() align (0.5, 0.5)
+            text kct.upper() yalign 0.5
 
-            null width 30
-
-
-style kct_choice_text is druk_wide_bold_22
+style kct_choice_text is syne_extra_bold_22
 
 
 screen kct_popup(required_kct=None):

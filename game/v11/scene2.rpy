@@ -16,8 +16,7 @@ label v11_nora_chloe_hallway:
 
     u "Hey Nora, are there a lot of people going on the trip?"
 
-    if nora.relationship.value >= Relationship.LIKES.value:
-
+    if nora.relationship >= Relationship.LIKES:
         scene v11nohall2a # FPP. Same as 2, but now Nora is looking at MC, Nora mouth open, happy expression
         with dissolve
 
@@ -74,7 +73,7 @@ label v11_nora_chloe_hallway:
 
             u "Well I'll be there, I hope that's something good. *Chuckles*"
 
-            if nora.relationship.value >= Relationship.LIKES.value:
+            if nora.relationship >= Relationship.LIKES:
                 scene v11nohall2a
                 with dissolve
 
@@ -94,7 +93,7 @@ label v11_nora_chloe_hallway:
 
             u "Just try to enjoy yourself anyway."
 
-            if nora.relationship.value >= Relationship.LIKES.value:
+            if nora.relationship >= Relationship.LIKES:
                 scene v11nohall2c
                 with dissolve
 
@@ -234,16 +233,19 @@ label v11_nora_chloe_hallway:
     with dissolve
 
     charli "*Chuckles* You said you're closer with some more than others? I can tell you're close with Nora, but who else?"
+
     charli "Anyone you'd recommend for me to start getting to know? Or even avoid?"
 
     scene v11nohall11b
     with dissolve
 
     u "Depends on the company you like to keep..."
+
     u "If you're looking for a more mellow time then Lauren or Lindsey may be nice to talk to, but if you have a more wild side then getting to know Amber or Aubrey is probably right up your alley."
 
     if joinwolves:
         u "In terms of people to avoid, It's always best to avoid Grayson. *Laughs*"
+
     else:
         u "In terms of people to avoid, It's always best to keep a good distance between yourself and Cameron. *Laughs*"
 
@@ -274,8 +276,10 @@ label v11_nora_chloe_hallway:
     menu:
         "Hanging with the girls":
             $ add_point(KCT.BOYFRIEND)
+
             scene v11nohall11c
             with dissolve
+
             u "Well, we'll be in another country surrounded by beautiful women... I'm sure you can imagine what I plan on doing. *Chuckles* Really though, I just wanna have fun no matter what."
 
             scene v11nohall11d
@@ -286,6 +290,7 @@ label v11_nora_chloe_hallway:
         "Sleeping":
             scene v11nohall11c
             with dissolve
+
             u "I don't know... sleeping? *Chuckles*"
 
             scene v11nohall11d
@@ -344,7 +349,7 @@ label v11_nora_chloe_hallway:
                 "(I need to get home and pack.)"
 
         "Say something":
-            if chloe.relationship.value <= Relationship.MAD.value:
+            if chloe.relationship <= Relationship.MAD:
                 scene v11clhall1c # FPP. Same as clhall1a, Chloe and MC are now looking at each other, Chloe's mouth is closed, she is annoyed
                 with dissolve
 
@@ -581,7 +586,7 @@ label v11_nora_chloe_hallway:
                         pause 0.75
 
             else:
-                if chloe.relationship.value >= Relationship.FWB.value:
+                if chloe.relationship >= Relationship.FWB:
                     scene v11clhall1f
                     with dissolve
 
@@ -593,7 +598,7 @@ label v11_nora_chloe_hallway:
 
                     u "Hey Chloe."
 
-                if chloe.relationship.value >= Relationship.FWB.value:
+                if chloe.relationship >= Relationship.FWB:
                     scene v11clhall1e
                     with dissolve
 
@@ -762,7 +767,7 @@ label v11_nora_chloe_hallway:
 
                         u "Haha, well I won't be good company if I'm not there so I'm gonna go get packing."
 
-                        if chloe.relationship.value >= Relationship.FWB.value:
+                        if chloe.relationship >= Relationship.FWB:
                             scene v11clb1
                             with dissolve
 
@@ -774,7 +779,7 @@ label v11_nora_chloe_hallway:
 
                             cl "Alright, it was good talking to you."
 
-                        if chloe.relationship.value >= Relationship.FWB.value:
+                        if chloe.relationship >= Relationship.FWB:
                             scene v11clb1a
                             with dissolve
 

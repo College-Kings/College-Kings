@@ -386,7 +386,7 @@ label v4start:
 
     ri "Uhm... no, I don't think so. I like Imre, but he can be a bit gross, haha."
 
-    if riley.relationship.value >= Relationship.MOVE.value:
+    if riley.relationship >= Relationship.MOVE:
         scene s303e
         with dissolve
 
@@ -1259,7 +1259,7 @@ label v4start:
 
                 jump ea_b
 
-    elif lauren.relationship.value < Relationship.GIRLFRIEND.value: #if not a girlfriend, but not because messed up date
+    elif lauren.relationship < Relationship.GIRLFRIEND: #if not a girlfriend, but not because messed up date
         $ add_point(KCT.BOYFRIEND)
         scene s334
         with dissolve
@@ -2169,7 +2169,7 @@ label continueab:
             u "(I should probably reply to my messages.)"
             jump phonew
 
-    if josh.messenger.sent_messages[-2].reply and josh.messenger.sent_messages[-2].reply.message == "I can't, sorry.":
+    if len(josh.messenger.sent_messages) >= 2 and josh.messenger.sent_messages[-2].reply and josh.messenger.sent_messages[-2].reply.message == "I can't, sorry.":
         u "(Fucking hell, I forgot how persistent Josh could be...)"
         jump jorepb
 

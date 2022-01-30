@@ -7,13 +7,51 @@
 init python:
     def v15s1_reply1():
         chloe.messenger.newMessage("You're unbelievable.")
+        chloe.messenger.newMessage("Just... stop talking about it.")
+        chloe.messenger.addReply("Okay. Done.") 
 
     def v15s1_reply2():
         chloe.messenger.newMessage("Well, at least you admit it...")
+        chloe.messenger.newMessage("Just... stop talking about it.")
+        chloe.messenger.addReply("Okay. Done.") 
 
 label v15_start:
-    $ autumn.relationship = Relationship.FRIEND #Reset Autumn to FRIEND
-    $ imre.relationship = Relationship.FRIEND #Reset Imre to FRIEND
+    if not path_builder or pb_name_set:
+        $ autumn.relationship = Relationship.FRIEND #Reset Autumn to FRIEND
+        $ imre.relationship = Relationship.FRIEND #Reset Imre to FRIEND
+
+    if path_builder and not pb_name_set:
+        $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
+        $ pb_name_set = True
+
+        if emily.relationship == Relationship.FWB:
+            $ v14_emily_ily = True
+
+        if ms_rose.relationship == Relationship.FWB:
+            $ sceneList.add("v12_rose")
+            $ v13_perfume = True
+
+        if lauren.relationship == Relationship.GIRLFRIEND:
+            $ sceneList.add("v12_lauren")
+            
+        if nora.relationship >= Relationship.FWB:
+            $ sceneList.add("v12_nora")
+            
+        if chloe.relationship == Relationship.GIRLFRIEND:
+            $ sceneList.add("v13_chloe")
+            
+        if lindsey.relationship == Relationship.FWB:
+            $ sceneList.add("v12_lindsey")
+
+        if aubrey.relationship >= Relationship.FWB:
+            $ s12v32_get_aubrey_flowers = True
+            $ v13s48_canoeing_as_date = True
+            $ v13s48_get_aubrey_chocolate = True
+
+        if penelope.relationship >= Relationship.LOYAL:
+            $ v14_penelope_date = True  
+
+        $ v14_ApesPostChloePics = False
 
     if (v14_help_lindsey and not v14_lindsey_sell) and not v14_date_distraction:
         $ lindsey_board.money -= 100 # we forgot about this one in v14
@@ -25,6 +63,8 @@ label v15_start:
 
 label v15s1:
     if v13_imre_disloyal:
+        play music "music/v15/Track Scene 1_1.mp3" fadein 2
+    
         scene v15s1_1 # TPP. Imre's looking fully angry, standing at the door close, MC is sitting at his study desk, turned in the chair, facing Imre
         with dissolve
 
@@ -160,6 +200,10 @@ label v15s1:
 
         u "We need to lay low and let them work out their shit or else this drama never ends, Imre."
 
+        stop music fadeout 3
+
+        play music "music/v15/Track Scene 1_2.mp3" fadein 2
+
         scene v15s1_3f
         with dissolve
 
@@ -253,6 +297,8 @@ label v15s1:
                 u "*Chuckles* Alright."
             
     else:
+        play music "music/v15/Track Scene 1_2.mp3" fadein 2
+    
         scene v15s1_2a # FPP. same as v15s1_2 MC is sitting at his study desk, looking at his phone. Imre enters the room. MC turns to Imre, and stays sat in the chair, Imre has a concerned expression, is not angry, mouth open, looking at mc
         with dissolve
 
@@ -335,12 +381,14 @@ label v15s1:
 
     imre "Yeah. I mean, I know this whole break up is totally on Nora because she's been acting like a bitch, but..."
 
+    if v13_imre_disloyal:
+        jump v15s1_saynothing
+
     scene v15s1_3m
     with dissolve
 
     menu:
         "Stick up for Nora":
-            $ v15_stuck_up_for_nora = True
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -389,8 +437,11 @@ label v15s1:
             u "So, we have no room to judge, but I know damn well that all of this isn't just because of Nora."
 
         "Say nothing":
+            $ v15_blame_nora = True
             $ add_point(KCT.BRO)
 
+            label v15s1_saynothing:
+            
             u "Yeah?"
 
             scene v15s1_3l
@@ -493,6 +544,10 @@ label v15s1:
     with dissolve
 
     pause 0.75
+    
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 1_3.mp3" fadein 2
 
     scene v15s1_4 # TPP. Mc stands up from his desk and takes off his shirt, no expression, mouth is closed
     with dissolve
@@ -528,7 +583,7 @@ label v15s1:
 # -MC checks his texts and there's a message from Autumn-
 
     if v14_date_distraction:
-        $ chloe.messenger.newMessage("So, you wanna tell me why you didn't come?") 
+        $ chloe.messenger.newMessage("So, you wanna tell me why you didn't come?", force_send=True)
         $ chloe.messenger.addReply("Hey, I understand if you're upset. I'm sorry. Something came up, an emergency, and I couldn't make it.") 
         $ chloe.messenger.newMessage("What do you mean you couldn't make it? You told me to meet you there! What happened that was so important, you had to stand me up at a fancy restaurant?!")
         $ chloe.messenger.addReply("Chloe, I'm sorry. I can't talk about it, but everything's fine. It's over now, I just don't wanna talk about it.") 
@@ -537,8 +592,6 @@ label v15s1:
         $ chloe.messenger.newMessage("Okay, I'll just forget it happened. Is that fair?")
         $ chloe.messenger.addReply(_("Thank you."),v15s1_reply1)
         $ chloe.messenger.addReply(_("It's not fair, no."), v15s1_reply2)
-        $ chloe.messenger.newMessage("Just... stop talking about it.")
-        $ chloe.messenger.addReply("Okay. Done.") 
 
     $ autumn.messenger.newMessage("Hey! Just reminding you that I'll be setting up the shelter tomorrow if you wanted to swing by? :)", force_send=True)
     $ autumn.messenger.addReply("Uhm, sure.")
@@ -577,7 +630,7 @@ label v15s1:
 
 # -MC checks his texts and there's a message from Lauren-
     $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren")
-
+    $ lauren.messenger.addReply("Looking forward to it!")
     call screen phone
 
     scene v15s1_5e # TPP. same as v15s1_5a Mc has a slight smile, and a happy expression
@@ -620,4 +673,7 @@ label v15s1:
     u "*Groans* (No time for snoozing today... Need to get up.)"
 
     stop sound
+
+    stop music fadeout 3
+
     jump v15s4

@@ -14,12 +14,15 @@ init python:
             else:
                 return self._image
 
+    config.overlay_screens.append("phone_icon")
 
 default phone = Phone("phone_icon.webp")
 
 
 screen phone_icon():
-    if not renpy.get_screen("choice") and not renpy.get_screen("censoredPopup"):
+    zorder 100
+    
+    if not renpy.get_screen("choice") and not renpy.get_screen("censored_popup"):
         imagebutton:
             idle phone.image
             
@@ -32,6 +35,7 @@ screen phone_icon():
 
 label call_screen_phone:
     call screen phone
+    return
 
 
 screen base_phone():
@@ -43,16 +47,16 @@ screen base_phone():
         # Click background to close phone
         button:
             if renpy.get_screen("free_roam"):
-                action [Hide("tutorial"), Hide("phone")]
+                action [Hide("tutorial"), Hide("phone"), Hide("messenger_reply")]
             else:
-                action [Hide("tutorial"), Return()]
+                action [Hide("tutorial"), Hide("messenger_reply"), Return()]
 
         textbutton "Exit Phone":
             style "phonebutton"
             if renpy.get_screen("free_roam"):
-                action [Hide("tutorial"), Hide("phone")]
+                action [Hide("tutorial"), Hide("phone"), Hide("messenger_reply")]
             else:
-                action [Hide("tutorial"), Return()]
+                action [Hide("tutorial"), Hide("messenger_reply"), Return()]
 
     # Button to prevent phone closing on phone ui
     button:

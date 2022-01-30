@@ -38,7 +38,7 @@ label v14s35_afterinvite:
 
     if joinwolves:
         if config_censored:
-            call screen censoredPopup("v14s35_nsfwSkipLabel1")
+            call screen censored_popup("v14s35_nsfwSkipLabel1")
 
         scene v14s35_3 # TPP. Show MC standing naked in his wolves room, slight smile, mouth closed.
         with dissolve
@@ -59,7 +59,7 @@ label v14s35_afterinvite:
 
     else:
         if config_censored:
-            call screen censoredPopup("v14s35_nsfwSkipLabel2")
+            call screen censored_popup("v14s35_nsfwSkipLabel2")
     
         scene v14s35_4 # TPP. Show MC standing naked in his Apes room, slight smile, mouth closed.
         with dissolve

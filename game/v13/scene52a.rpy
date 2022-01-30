@@ -45,19 +45,19 @@ label v13s52a:
     scene v13s52a_2 # TPP. Chloe kisses MC who is still laying in bed
     with dissolve
 
-    pause 0.75
-
-    scene v13s52a_1a
-    with dissolve
-
-    cl "We have to leave the room because they're getting ready to clean them. I have errands to run with Amber, believe it or not. *Laughs*"
+    pause 1.25
 
     scene v13s52a_1
     with dissolve
 
-    u "Haha, okay. I'll find something to do I'm sure."
+    cl "We have to leave the room because they're getting ready to clean them. I have errands to run with Amber, believe it or not. *Laughs*"
 
     scene v13s52a_1a
+    with dissolve
+
+    u "Haha, okay. I'll find something to do I'm sure."
+
+    scene v13s52a_1
     with dissolve
 
     cl "Good, let's get up."

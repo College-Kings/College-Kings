@@ -6,11 +6,6 @@
 label v14s24:
     play music "music/v12/Track Scene 30.mp3" fadein 2
 
-    scene v14s24_1 # TPP. MC, slight smile, mouth closed. m walking down the side walk (similar to v14s23_7 but different angle)
-    with dissolve
-
-    pause 0.75
-
     $ amber.messenger.newMessage("Hey.", force_send=True)
     $ amber.messenger.newMessage("Are you busy?", force_send=True)
     $ amber.messenger.addReply("Nope, what's up?")

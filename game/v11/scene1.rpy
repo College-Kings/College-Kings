@@ -3,8 +3,8 @@ label v11_start:
     if path_builder and not pb_name_set:
         $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
         $ pb_name_set = True
-
-    show screen phone_icon
+        
+        $ simplr_app.unlock()
 
     scene v11coc1 # FPP. Show entrance of college
     with fade
@@ -751,7 +751,7 @@ label v11_start:
 label v11s1_riley:
     $ freeroam7.add("riley")
 
-    if riley.relationship.value >= Relationship.FWB.value:
+    if riley.relationship >= Relationship.FWB:
         scene v11cocri1 # FPP. MC and Riley looking at each other, Riley has mouth closed, neutral expression
         #with dissolve
 
@@ -762,7 +762,7 @@ label v11s1_riley:
 
         u "You came?"
 
-    if riley.relationship.value >= Relationship.FWB.value:
+    if riley.relationship >= Relationship.FWB:
         scene v11cocri1a # FPP. Same as ri1, Riley has mouth open, same expression
         with dissolve
 
@@ -800,7 +800,7 @@ label v11s1_riley:
 
             ri "I'm sorry... Do your best to stay positive, Penelope needs all the support she can get at the moment."
 
-            if riley.relationship.value >= Relationship.FWB.value:
+            if riley.relationship >= Relationship.FWB:
                 ri "It's really sweet of you to be so supportive of your friends."
 
     scene v11cocri1a
@@ -839,7 +839,7 @@ label v11s1_riley:
     ri "Well, you know I'm here for you both regardless. I'm gonna go check on Penelope and see if there's anything I can do to help settle her nerves."
 
 
-    if riley.relationship.value >= Relationship.FWB.value:
+    if riley.relationship >= Relationship.FWB:
         scene v11cocri1
         with dissolve
 
@@ -1112,7 +1112,7 @@ label v11_case_verdict:
         scene v11coc14c
         with dissolve
 
-        u "Thank you Mr. Lee."
+        u "Thank you, Mr. Lee."
 
         scene v11coc12
         with dissolve
@@ -1161,7 +1161,7 @@ label v11_case_verdict:
 
         u "*Whisper* You're welcome."
 
-        if penelope.relationship.value >= Relationship.LIKES.value:
+        if penelope.relationship >= Relationship.LIKES:
             scene v11coc24e # FPP. Same as 24c, but Penelope's mouth is open
             with dissolve
 
@@ -1215,7 +1215,7 @@ label v11_case_verdict:
         pe "I have to get going as well, thankfully I still have a class to get to."
 
         pause 0.75
-        if penelope.relationship.value >= Relationship.LIKES.value:
+        if penelope.relationship >= Relationship.LIKES:
             scene v11coc25b # TPP. Same cam as 25, but Penelope is kissing MC on the cheek
             with dissolve
 
@@ -1298,10 +1298,10 @@ label v11_case_verdict:
     scene v11coc27 # TPP. Third person view of MC, he is alone and has a tired expression, mouth closed, in the hallway
     with dissolve
 
-    $ v11s1_kiwiiPost = KiwiiPost(autumn, "v11/v11_autumn_kiwii.webp", _("Best charity event yet, thanks for all the donations!"), numberLikes=256)
-    $ v11s1_kiwiiPost.newComment(aubrey, _("So psyched!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-    $ v11s1_kiwiiPost.newComment(cameron, _("What you doing later? ;)"), numberLikes=renpy.random.randint(15, 35), force_send=True)
-    $ v11s1_kiwiiPost.newComment(lindsey, _("It was an awesome day!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+    $ v11s1_kiwiiPost = KiwiiPost(autumn, "v11/v11_autumn_kiwii.webp", _("Best charity event yet, thanks for all the donations!"), numberLikes=556)
+    $ v11s1_kiwiiPost.newComment(aubrey, _("So psyched!"), numberLikes=renpy.random.randint(200, 500), force_send=True)
+    $ v11s1_kiwiiPost.newComment(cameron, _("What you doing later? ;)"), numberLikes=renpy.random.randint(200, 500), force_send=True)
+    $ v11s1_kiwiiPost.newComment(lindsey, _("It was an awesome day!"), numberLikes=renpy.random.randint(200, 500), force_send=True)
     $ v11s1_kiwiiPost.addReply(_("Wish I could see more mud wrestling!"), numberLikes=321)
     $ v11s1_kiwiiPost.addReply(_("Thanks for doing the event Autumn!"), numberLikes=518)
 

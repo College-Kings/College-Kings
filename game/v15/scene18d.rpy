@@ -4,6 +4,12 @@
 # Time: 
 
 label v15s18d:
+    play music "music/v13/Track Scene 41_2.mp3" fadein 2
+
+    scene black
+
+    pause 0.01
+
     scene v15s18d_1 # TPP. Show Lauren holding the door open for all the guest to leave, Lauren slight smile, mouth closed.
     with fade
 
@@ -56,9 +62,6 @@ label v15s18d:
         with dissolve
 
         imre "Oh! You actually did pretty well..."
-
-        if len(checklist.get_completed()) == 8:
-            $ grant_achievement("taskmaster")
 
         imre "I'm impressed."
 
@@ -225,7 +228,7 @@ label v15s18d:
 
             u "But I'd only want to if you wanted-"
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.BOYFRIEND)
                 $ v15s18_LaurensBed = True
 
@@ -277,6 +280,8 @@ label v15s18d:
                     
                     pause 0.75
 
+                    stop music fadeout 3
+
                     jump v15s18f
 
                 else:
@@ -297,10 +302,12 @@ label v15s18d:
 
                     la "Yeah, especially after the gift you gave me, hehe. Best boyfriend ever."
 
+                    play sound "sounds/kiss.mp3"
+
                     scene v15s18d_14a # TPP. Show MC and Lauren having a passionate kiss
                     with dissolve
 
-                    pause 0.75
+                    pause 1.75
 
                     scene v15s18d_8f
                     with dissolve
@@ -317,10 +324,12 @@ label v15s18d:
 
                     pause 0.75
 
+                    stop music fadeout 3
+
                     jump v15s18e
 
-            else: 
-                if kct == "loyal" and lauren.relationship.value >= Relationship.KISS.value and not v11_lauren_caught_aubrey and not "v12_lauren" in sceneList:
+            else:
+                if kct == "loyal" and lauren.relationship >= Relationship.KISS and not v11_lauren_caught_aubrey and not gift_card_50 in mc.inventory: # and not "v12_lauren" in sceneList, but this is implied by not having Lauren GIRLFRIEND
                     $ v15s18_LaurensBed = True
                     call screen kct_popup
                     
@@ -366,9 +375,14 @@ label v15s18d:
 
                     pause 0.75
 
+                    stop music fadeout 3
+
                     jump v15s18e
                 
                 else:
+                    if lauren.relationship >= Relationship.KISS and not v11_lauren_caught_aubrey:
+                        call screen kct_popup(required_kct="loyal")
+                
                     scene v15s18d_8f
                     with dissolve
 
@@ -423,12 +437,14 @@ label v15s18d:
 
                     pause 0.75
                     
+                    stop music fadeout 3
+                    
                     jump v15s18f
 
         "Don't try":
             u "But I don't want to do that to you, just ignore him. He's trying to get me to play this stupid game."
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 scene v15s18d_8g # FPP. Lauren standing infront of MC, MC looking at Lauren, Lauren looking at MC, Imre gone, Lauren confused, mouth open.
                 with dissolve
 
@@ -462,7 +478,7 @@ label v15s18d:
 
             la "Yeah, it was great! I'm so happy everyone had a good time."
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 $ v15s18_LaurensBed = True
                 scene v15s18d_8f
                 with dissolve
@@ -473,6 +489,8 @@ label v15s18d:
                 with dissolve
 
                 u "Haha... Okay, little spoon. Let's go."
+
+                play sound "sounds/kiss.mp3"
 
                 scene v15s18d_14 # TPP. Show MC kissing Lauren's forehead, Lauren slight smile, eyes closed, mouth closed.
                 with dissolve
@@ -531,5 +549,7 @@ label v15s18d:
                 with dissolve
 
                 pause 0.75
+
+            stop music fadeout 3
 
             jump v15s18f

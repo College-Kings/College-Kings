@@ -6,6 +6,8 @@ init python:
             self.username = self.name
             self.money = 0
             self.inventory = Inventory()
+            self.detective = None
+            self._profile_picture = profile_pictures[0]
 
             self.relationships = set()
             self.girlfriends = set()
@@ -18,10 +20,21 @@ init python:
         def profile_picture(self):
             return profile_pictures[0]
 
+        @profile_picture.setter
+        def profile_picture(self, value):
+            self._profile_picture = value
+
+        def __after_load__(self):
+            attrs = vars(self).copy()
+
+            self.__init__()
+
+            for var, value in attrs.items():
+                try: setattr(self, var, value)
+                except AttributeError: continue
+                
         def has_item(self, item):
             return (item in self.inventory)
 
-
-init offset = 1
-
-default mc = PlayableCharacter()
+init 1:
+    default mc = PlayableCharacter()

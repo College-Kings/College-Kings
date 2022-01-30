@@ -6,6 +6,8 @@
 label v15s18e:
     label v15s18e_sg:
 
+    play music "music/v12/Track Scene 23a.mp3" fadein 2
+
     $ sceneList.add("v15_lauren")
     
     play sound "sounds/dooropen.mp3"
@@ -16,7 +18,7 @@ label v15s18e:
     pause 1.25
 
     if config_censored:
-        call screen censoredPopup("v15s18e_nsfwSkipLabel1")
+        call screen censored_popup("v15s18e_nsfwSkipLabel1")
 
     play sound "sounds/doorclose.mp3"
 
@@ -52,9 +54,10 @@ label v15s18e:
 
     u "(Hmm... Where should I start?)"
 
-    call screen sex_overlay([
+    $ sex_overlay_options = [
         [("Neck", "v15s18e_neck"), ("Boobs", "v15s18e_boobs"), ("Feet", "v15s18e_feet"), ("Vagina", "v15s18e_vagina")]
-    ], continue_label="v15s18e_end")
+    ]
+    call screen sex_overlay("v15s18e_end")
 
 label v15s18e_neck:
     scene v15s18ene_1 # TPP. Close up of Lauren's bare neck 
@@ -63,6 +66,9 @@ label v15s18e_neck:
     menu:
         "Kiss":
             $ add_point(KCT.BOYFRIEND)
+            
+            play sound "sounds/kiss.mp3"
+            
             scene v15s18ene_2 # TPP. Show MC kissing Lauren's neck, Lauren flirty, mouth open.
             with dissolve
 
@@ -76,6 +82,8 @@ label v15s18e_neck:
             u "Well, I definitely like kissing you there..."
 
             u "And here..."
+
+            play sound "sounds/kiss.mp3"
 
             scene v15s18ene_4 # TPP. Show MC kissing the other side of Lauren's neck, Lauren flirty, mouth open.
             with dissolve
@@ -95,6 +103,8 @@ label v15s18e_neck:
             with dissolve
 
             la "Oh-"
+
+            play sound "sounds/kiss.mp3"
 
             scene v15s18ene_5 # TPP. Close up side view of MC kissing lauren as he has his hand on her neck holding it.
             with dissolve
@@ -157,9 +167,10 @@ label v15s18e_neck:
 
             u "Ha, me too."
 
-    call screen sex_overlay([
+    $ sex_overlay_options = [
         [("Neck", "v15s18e_neck"), ("Boobs", "v15s18e_boobs"), ("Feet", "v15s18e_feet"), ("Vagina", "v15s18e_vagina")]
-    ], continue_label="v15s18e_end")
+    ]
+    call screen sex_overlay("v15s18e_end")
 
 label v15s18e_boobs:
     scene v15s18ebo_1 # TPP. Close up shot of Lauren's boobs
@@ -219,7 +230,7 @@ label v15s18e_boobs:
 
             la "I love that..."
             
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 scene v15s18ebo_5 # FPP. MC looking up at Lauren his boobs in his face, Lauren biting her lip.
                 with dissolve
 
@@ -257,9 +268,10 @@ label v15s18e_boobs:
 
             u "Yes ma'am."
 
-    call screen sex_overlay([
+    $ sex_overlay_options = [
         [("Neck", "v15s18e_neck"), ("Boobs", "v15s18e_boobs"), ("Feet", "v15s18e_feet"), ("Vagina", "v15s18e_vagina")]
-    ], continue_label="v15s18e_end")
+    ]
+    call screen sex_overlay("v15s18e_end")
 
 label v15s18e_feet:
     scene v15s18efe_1 # FPP. Lauren's feet in MC's face, MC looking up from her feet seeing her naked body, Lauren biting her lip.
@@ -314,10 +326,15 @@ label v15s18e_feet:
 
         "Suck":
             $ add_point(KCT.TROUBLEMAKER)
+            
+            play sound "sounds/kiss.mp3"
+            
             scene v15s18efe_3 # TPP. Show MC kissing Lauren's feet, Lauren's face visible, Lauren shocked, mouth open.
             with dissolve
 
             la "Ah! What are you- Oh...?"
+
+            play sound "sounds/kiss.mp3"
 
             scene v15s18efe_3a # TPP. Show MC kissing Lauren's feet, Lauren's face visible, Lauren flirty, mouth open.
             with dissolve
@@ -363,9 +380,10 @@ label v15s18e_feet:
 
             u "We can move on then."
 
-    call screen sex_overlay([
+    $ sex_overlay_options = [
         [("Neck", "v15s18e_neck"), ("Boobs", "v15s18e_boobs"), ("Feet", "v15s18e_feet"), ("Vagina", "v15s18e_vagina")]
-    ], continue_label="v15s18e_end")
+    ]
+    call screen sex_overlay("v15s18e_end")
 
 label v15s18e_vagina:
     scene v15s18eva_1 # FPP. MC looking at Lauren's vagina
@@ -393,6 +411,9 @@ label v15s18e_end:
 
     scene v15lauor # Ignore as anim
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - oral_slow_2loops.mp3", loop=True)
     
     pause 0.75
 
@@ -415,6 +436,8 @@ label v15s18e_end:
     la "*Panting* Mmm, fuuuuck..."
 
     la "*Moans* Stop."
+
+    stop sound
 
     scene v15s18eend_3 # FPP. MC looking up at Lauren, Lauren looking at MC, Lauren biting her lip.
     with dissolve
@@ -444,13 +467,16 @@ label v15s18e_end:
     scene v15laubj # Ignore as anim
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - bj_slow_4loops.mp3", loop=True)
+
     pause 0.75
 
     la "*Gagging*"
 
     u "*Moans* Oh, fuck! (She took it so deep straight away...)"
 
-    scene v15laubjf # Ignore as anim
+    scene v15laubj2 # Ignore as anim
     with dissolve
 
     pause 0.75
@@ -459,8 +485,11 @@ label v15s18e_end:
 
     u "You like that?"
 
-    scene v15laubj2 # Ignore as anim
+    scene v15laubjf # Ignore as anim
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - bj_fast_4loops.mp3", loop=True)
 
     pause 0.75
 
@@ -476,6 +505,8 @@ label v15s18e_end:
     u "Fuck Lauren... *Moans*"
 
     u "You... You're going to make me-"
+
+    stop sound
 
     scene v15s18eend_5a # MC looking down at Lauren, Lauren sitting on the edge of the bed, Lauren sucking MC's dick.
     with vpunch
@@ -505,13 +536,16 @@ label v15s18e_end:
     scene v15lausf # Ignore as anim
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - spoon_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     la "I... *Moans* I love this position."
 
     u "*Panting* Yeah?"
 
-    scene v15lausff # Ignore as anim
+    scene v15lausf2 # Ignore as anim
     with dissolve
 
     pause 0.75
@@ -520,14 +554,19 @@ label v15s18e_end:
 
     la "You're so... fucking deep inside of me..."
 
-    scene v15lausf2 # Ignore as anim
+    scene v15lausff # Ignore as anim
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - spoon_fast_4loops.mp3", loop=True)
 
     pause 0.75
 
     la "*Whispers* Oh, fuck..."
 
     u "You're so fucking wet, ha..."
+
+    stop sound
 
     scene v15s18eend_6 # TPP. Show MC grabbing Lauren's boob as he fucks her from behind, Lauren flirty, mouth open.
     with dissolve
@@ -566,11 +605,16 @@ label v15s18e_end:
     scene v15lausf2f # Ignore as anim
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - spoon_fast_4loops.mp3", loop=True)
+
     pause 0.75
 
     la "Yes... I'm gonna-"
 
     la "I'm about to... *Moans*"
+
+    stop sound
 
     scene v15s18eend_7 # FPP. MC looking down seeing Lauren's ass and pulling his dick out of Lauren.
     with dissolve
@@ -587,13 +631,16 @@ label v15s18e_end:
     scene v15laum # Ignore as anim
     with dissolve
 
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - missionary_slow_2loops.mp3", loop=True)
+
     pause 0.75
 
     la "Oh, fuck..."
 
     u "Is this okay?"
 
-    scene v15laumf # Ignore as anim
+    scene v15laum2 # Ignore as anim
     with dissolve
 
     pause 0.75
@@ -602,8 +649,11 @@ label v15s18e_end:
 
     u "(Fuck, she's so tight...)"
 
-    scene v15laum2 # Ignore as anim
+    scene v15laumf # Ignore as anim
     with dissolve
+
+    if voice_acted:
+        $ renpy.sound.play("voice/v15/s18e/Scene 18e - missionary_fast_4loops.mp3", loop=True)
 
     pause 0.75
 
@@ -619,6 +669,8 @@ label v15s18e_end:
     u "I'm gonna cum..."
 
     la "Cum inside of me."
+
+    stop sound
 
     scene v15s18eend_8 # FPP. MC fucking Lauren in Missionary, Don't show lower body so can be reused later, MC looking at Lauren, Lauren looking at MC, Lauren biting her lip.
     with dissolve
@@ -723,11 +775,16 @@ label v15s18e_end:
     if not _in_replay:
         $ checklist[0].complete = True
 
-    $ lauren.relationship = Relationship.GIRLFRIEND
+    if lauren.relationship < Relationship.FWB:
+        $ lauren.relationship = Relationship.FWB
+
+    if len(checklist.get_completed()) == 8:
+        $ grant_achievement("taskmaster")
 
     u "(What a fucking party...) *Laughs*"
 
     $ renpy.end_replay()
 
+    stop music fadeout 3
 
     jump v15s18f

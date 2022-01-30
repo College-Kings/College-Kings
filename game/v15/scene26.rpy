@@ -4,6 +4,8 @@
 # Time: Saturday evening
 
 label v15s26:
+    play music "music/v12/Track Scene 33_2.mp3" fadein 2
+
     scene v15s26_1 # TPP Show MC knocking on the door to the Chicks' house
     with dissolve
 
@@ -52,7 +54,7 @@ label v15s26:
 
     au "*Chuckles* Follow me!"
 
-    scene v15s26_4 # TPP Show Aubery, Riley, and MC, in that order, going up the stairs in the chicks house
+    scene v15s26_4 # TPP Show Aubery, Riley, and MC, in that order, going up the stairs in the Chicks house
     with dissolve
 
     pause 0.75
@@ -155,6 +157,10 @@ label v15s26:
     with dissolve
 
     u "Damn... A theater room?"
+
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 26_2.mp3" fadein 2
 
     scene v15s26_10 # FPP Aubrey, now in theater room, with a big, excited smile, mouth open
     with dissolve
@@ -373,6 +379,10 @@ label v15s26:
 
     pause 0.75
 
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 26_3.mp3" fadein 2
+
     # -We see some opening credits, white text on black screen (be creative, use patron names, talk to Steve about what he would like to add here. 
     # Cheex suggests high-tier patrons can be listed? If not, let's stick to people from the team for the credits)
 
@@ -396,13 +406,13 @@ label v15s26:
 
         pause 0.75
     
-    elif aubrey.relationship.value >= Relationship.TAMED.value and riley.relationship.value < Relationship.FWB.value:
+    elif aubrey.relationship >= Relationship.TAMED and riley.relationship < Relationship.FWB:
         scene v15s26_20a # TPP Show MC cuddling and holding hands with Aubrey, while Riley sits forward and watches the movie, all lit up by the movie screen
         with dissolve
 
         pause 0.75
 
-    elif riley.relationship.value >= Relationship.FWB.value and aubrey.relationship.value < Relationship.TAMED.value:
+    elif riley.relationship >= Relationship.FWB and aubrey.relationship < Relationship.TAMED:
         scene v15s26_20b # TPP Show MC cuddling and holding hands with Riley, while Aubrey leans back on the couch watching the movie, looking a little bored, all lit up by the movie screen
         with dissolve
 
@@ -459,6 +469,10 @@ label v15s26:
     with dissolve
 
     mactor "But it is! This is exactly what you signed up for!"
+    
+    stop music fadeout 3
+    
+    play music "music/v13/Track Scene 52.mp3" fadein 2
 
     scene v15s26_22 # FPP Show Aubrey holding the remote control pointed forward, pausing the movie
     with dissolve
@@ -669,7 +683,7 @@ label v15s26:
         menu:
             "Side with Riley":
                 $ add_point(KCT.TROUBLEMAKER)
-                $ riley.relationship = Relationship.LOYAL
+                $ RileyLoyal = True
                 $ grant_achievement("polycurious")
 
                 u "I mean, I've never tried it, so...I wouldn't know for sure, haha. But I don't see any problems with it personally."
@@ -704,7 +718,7 @@ label v15s26:
 
                 au "There's no way I could share the person I love with someone else."
 
-                if aubrey.relationship.value > Relationship.FWB.value: # -if Aubrey Tamed she gives a stern look to MC, but continue regardless-
+                if aubrey.relationship > Relationship.FWB: # -if Aubrey Tamed she gives a stern look to MC, but continue regardless-
                     $ aubrey.relationship = Relationship.FWB
 
                     scene v15s26_14d # FPP Same angle as 14, Aubrey looking at MC with a stern expression, mouth open
@@ -810,7 +824,7 @@ label v15s26:
                         
                         u "Basically, exactly what Aubrey said. I just couldn't commit like that to more than one person."
 
-                        if aubrey.relationship.value >= Relationship.TAMED.value: # -Aubrey soft smile, if AubreyTamed can she do something a little extra like a wink or idk be cute-
+                        if aubrey.relationship >= Relationship.TAMED: # -Aubrey soft smile, if AubreyTamed can she do something a little extra like a wink or idk be cute-
                             scene v15s26_14h # FPP Same angle as 14, Aubrey with a small smile, winking at MC
                             with dissolve
 
@@ -866,9 +880,9 @@ label v15s26:
                 $ add_point(KCT.TROUBLEMAKER)
                 $ grant_achievement("polycurious")
                 
-                if aubrey.relationship.value >= Relationship.TAMED.value:
+                if aubrey.relationship >= Relationship.TAMED:
                     $ aubrey.relationship = Relationship.FWB
-                $ riley.relationship = Relationship.LOYAL
+                $ RileyLoyal = True
                 
                 u "I think you're onto something here, Riley..."
 
@@ -1070,7 +1084,9 @@ label v15s26:
 
         pause 0.75
 
-        jump v15s27 # -Transition to Scene 27-
+        stop music fadeout 3
+
+        jump v15s27
 
     else: # -if they didn't have threesome
         scene v15s26_14a
@@ -1153,4 +1169,6 @@ label v15s26:
 
         pause 0.75
     
-        jump v15s27 # -Transition to Scene 27-
+        stop music fadeout 3
+    
+        jump v15s27

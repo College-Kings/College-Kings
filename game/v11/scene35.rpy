@@ -5,7 +5,7 @@
 
 label v11_riley_sex:
     play music "music/v10/Track Scene 40_2.mp3" fadein 2
-    if riley.relationship.value < Relationship.FWB.value:
+    if riley.relationship < Relationship.FWB:
 
         scene v11ris1 # TPP. Show MC walking through the door to his hotel room, MC slight smile, mouth closed (Riley not in shot here)
         with dissolve
@@ -468,7 +468,7 @@ label v11_riley_sex:
                 ri "Then I guess I'll say it again..."
 
                 if config_censored:
-                    call screen censoredPopup("v11s35_nsfwSkipLabel1")
+                    call screen censored_popup("v11s35_nsfwSkipLabel1")
 
                 scene v11ris12d # FPP. Same as v11ris12, Riley no longer under the blanket, smiling seductively, mouth open
                 with dissolve

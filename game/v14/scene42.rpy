@@ -42,17 +42,17 @@ label v14s42:
 
     pe "You're gonna make me blush, hehe..."
 
-    scene v14s42_2b
+    scene v14s42_2c
     with dissolve
 
     pe "Let me go to the restroom to brush my teeth and get comfortable really quickly. Just make yourself at home, okay?"
 
-    scene v14s42_2c
+    scene v14s42_2b
     with dissolve
 
     u "Sure, I can do that."
 
-    scene v14s42_2b
+    scene v14s42_2c
     with dissolve
 
     pe "*Chuckles*"
@@ -242,7 +242,7 @@ label v14s42:
     scene v14s42_16 # TPP. show Penelope holding mc from behind, they are both sleeping
     with dissolve
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         play sound "sounds/vibrate.mp3"
 
         scene v14s42_14a # TPP. same as v14s42_14 Mc sit's up and is looking at his phone

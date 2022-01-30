@@ -20,10 +20,9 @@ screen v15s17_gift_selection():
 
             for item in (gift_card_50, emerald_bracelet, ruby_choker_necklace):
                 vbox:
-                    spacing 10
-
                     fixed:
                         xysize (225, 350)
+                        align (0.5, 0.5)
 
                         add "images/v15/Scene 17/gift_picking_screen/item_box.webp"
                         text item.name xalign 0.5 ypos 25 style "item_name_text"
@@ -31,6 +30,7 @@ screen v15s17_gift_selection():
                     
                     imagebutton:
                         idle "images/v15/Scene 17/gift_picking_screen/pick_item_idle.webp"
+                        hover "images/v15/Scene 17/gift_picking_screen/pick_item_hover.webp"
                         action [Function(mc.inventory.add_item, item), Jump("v15s17_gift_choice")]
 
         
@@ -40,10 +40,9 @@ screen v15s17_gift_selection():
 
             for item in (brown_horse_golden_mane, white_horse_black_mane):
                 vbox:
-                    spacing 10
-
                     fixed:
                         xysize (225, 350)
+                        align (0.5, 0.5)
 
                         add "images/v15/Scene 17/gift_picking_screen/item_box.webp"
                         text item.name xalign 0.5 ypos 15 style "item_name_text"
@@ -51,6 +50,7 @@ screen v15s17_gift_selection():
                     
                     imagebutton:
                         idle "images/v15/Scene 17/gift_picking_screen/pick_item_idle.webp"
+                        hover "images/v15/Scene 17/gift_picking_screen/pick_item_hover.webp"
                         action [Function(mc.inventory.add_item, item), Jump("v15s17_gift_choice")]
 
 

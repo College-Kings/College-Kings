@@ -72,9 +72,6 @@ label v14s53:
             $ v14_badsinging_Sam = True
             $ add_point(KCT.TROUBLEMAKER)
 
-            scene v14s53_4c
-            with dissolve
-
             u "Well, I don't think those lyrics are going to win any awards... like ever. *Chuckles*"
 
             scene v14s53_4d # FPP. same as v14s53_4b Sam has an angry expression
@@ -97,7 +94,7 @@ label v14s53:
 
             u "Stupid? I said I was joking, Sam."
 
-            scene v14s53_4b
+            scene v14s53_4d
             with dissolve
 
             sa "Guess I forgot to laugh then..."
@@ -107,9 +104,6 @@ label v14s53:
 
         "Compliment her":
             $ add_point(KCT.BOYFRIEND)
-
-            scene v14s53_4c
-            with dissolve
 
             u "Yeah, you've got a nice voice. You should sing more often."
 
@@ -123,12 +117,12 @@ label v14s53:
 
             sa "Do you really think so? Thank you! I do enjoy it a lot, not many people know."
 
-    scene v14s53_4c
+    scene v14s53_4b
     with dissolve
 
     u "What are you doing down here on your own anyway?"
 
-    scene v14s53_4b
+    scene v14s53_4c
     with dissolve
 
     sa "I just wanted some privacy."
@@ -138,7 +132,7 @@ label v14s53:
 
     u "Sorry, should I leave you alone?"
 
-    scene v14s53_4b
+    scene v14s53_4c
     with dissolve
 
     sa "Well, you're here now. You might as well come in and talk with me."
@@ -187,7 +181,7 @@ label v14s53:
 
         sa "You know, I overdosed when we were in Amsterdam."
 
-        if cameron.relationship.value >= Relationship.BRO.value:
+        if cameron.relationship >= Relationship.BRO:
             scene v14s53_6e # FPP. same as v14s53_6d Sam's mouth is closed
             with dissolve
 
@@ -390,7 +384,7 @@ label v14s53:
 
             sa "*Sobbing*"
 
-            scene v14s53_6n
+            scene v14s53_6m
             with dissolve
 
             u "I think you need to get help on how to deal with the emotional stuff. Real help. From people who want to help. There's a way out of all this."
@@ -416,7 +410,7 @@ label v14s53:
             u "*Chuckles* What?"
 
             #if SamanthaRS:
-            if samantha.relationship.value >= Relationship.MOVE.value:
+            if samantha.relationship >= Relationship.MOVE:
                 scene v14s53_3c # TPP. same as v14s53_3b Show sam pushing the bottle of beer and pills away from her on the couch, grabbing mc behind the head and pulling him in for a kiss, Sam's eyes are closed lustful expression, Mc's eyes are open slightly shocked expression
                 with dissolve
                 
@@ -618,12 +612,12 @@ label v14s53:
                     $ add_point(KCT.BOYFRIEND)
                     $ add_point(KCT.BRO)
 
-                    scene v14s53_6zc
+                    scene v14s53_6zd
                     with dissolve
 
                     u "Um, actually... I don't think that's a good idea, Sam."
 
-                    scene v14s53_6zd # FPP. same as v14s53_6zc Sam has a slightly angry expression, mouth is still open
+                    scene v14s53_6zc # FPP. same as v14s53_6zc Sam has a slightly angry expression, mouth is still open
                     with dissolve
 
                     sa "What? W- Why not?! You think I'm hot, don't you?"
@@ -633,7 +627,7 @@ label v14s53:
 
                     u "That's not the point. You've been drinking, and I just don't think it's a good idea."
 
-                    scene v14s53_6zd
+                    scene v14s53_6zc
                     with dissolve
 
                     sa "This is my second beer, [name]."

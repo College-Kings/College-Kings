@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s44:
+    play music "music/v15/Track Scene 42.mp3" fadein 2
+
     scene v15s44_1 # TPP. Show MC and Amber entering room 103, both serious, mouths closed
     with dissolve
 
@@ -13,19 +15,24 @@ label v15s44:
     with dissolve
 
     pause 0.75
+    
+    scene v15s44_3b
+    with dissolve
+    
+    am "Let's take another look at the board to see what we have so far."
 
-    call screen clues_ui
+    show screen detective_board
 
+    scene v15s44_3 # FPP. MC standing next to Amber, both facing the pinboard, MC looking at Amber, Amber looking at the pinboard, mouth closed, serious expression (don't actually show the pinboard)
+    with dissolve
+    
 # -MC and Amber enter room 103 where the pinboard is. They approach the pinboard-
 
 # -The UI pops up to show all the clues achieved from the Chris interrogation (CLUES UNLOCKED: Nora wanted to be alone after the breakup. Nora hates her dad. LOCATIONS UNLOCKED: Her Dad's house. Ms. rose's House. Nora's Dad's cabin. Camping by herself)-
 
 label v15s44_continue:
-    scene v15s44_3 # FPP. MC standing next to Amber, both facing the pinboard, MC looking at Amber, Amber looking at the pinboard, mouth closed, serious expression (don't actually show the pinboard)
-    with dissolve
-
     menu:
-        "Ready to guess":
+        "I'm ready to guess":
             $ add_point(KCT.BRO)
             
             scene v15s44_3a # FPP. Same as v15s44_3, Amber looking at MC, Amber serious expression, mouth closed
@@ -277,12 +284,14 @@ label v15s44_continue:
     scene v15s44_8e
     with dissolve
 
+    $ v15_nora_clues.add(Clue("Penelope", "Nora visited her aunt the day she landed from Europe", "So we know for sure she visited her aunt. Why would she go there? And for only a quick visit?"))
+
     pe "\"Was so nice to see my baby niece today... She never stays for long, but it's always perfect <3 See you soon, Nora Bora!\""
-    $ v15_nora_clues.add("visited_aunt")
-    $ v15_nora_locations.add("aunt")
 
     scene v15s44_8
     with dissolve
+
+    $ v15_nora_locations.add(Location("Nora's aunt's apartment", "images/v15/detective_board/aunt_apartment.webp", "Her aunt's post said she only visited for an hour. It could be a lie, but I think it's most likely the truth."))
 
     am "Holy shit!"
 
@@ -294,10 +303,11 @@ label v15s44_continue:
     scene v15s44_8a
     with dissolve
 
-    pe "I think her whole family are huge nature freaks. There's pictures of them camping, fishing... You name it."
-    $ v15_nora_clues.add("loves_nature")
+    $ v15_nora_clues.add(Clue("Penelope", "Nora loves nature", "Penelope confirmed that Nora loves nature. Could be a useful clue."))
 
-    if "camping" in v15_nora_clues:
+    pe "I think her whole family are huge nature freaks. There's pictures of them camping, fishing... You name it."
+
+    if v15_nora_clue_camping:
         scene v15s44_8
         with dissolve
 
@@ -306,11 +316,13 @@ label v15s44_continue:
     else:
         scene v15s44_8
         with dissolve
+
+        $ v15_nora_clue_camping = True
+
+        $ v15_nora_locations.add(Location("Camping by herself", "images/v15/detective_board/camping.webp", "She could be camping out in nature. Do we have any clues that can help confirm this?"))
         
         am "Camping... now that's an activity for someone who wants some peace and quiet."
         
-        $ v15_nora_locations.add("camping")
-
     menu:
         "Ask about Nora's family":
             scene v15s44_8b
@@ -340,6 +352,8 @@ label v15s44_continue:
             u "Well, at least that's something."
         
         "Ask about Nora's posts":
+            $ v15_nora_clue_ex = True
+            
             scene v15s44_8b
             with dissolve
 
@@ -356,9 +370,10 @@ label v15s44_continue:
             with dissolve
 
             u "Wait, they're still friends?"
+
+            $ v15_nora_clues.add(Clue("Penelope", "Nora's still friends with her ex-boyfriend from before Chris", "The ex-boyfriend from before Chris is an interesting clue. But I think there's a more likely conclusion."))
             
             u "That's an interesting development."
-            $ v15_nora_clues.add("likes_ex")
             
             scene v15s44_8a
             with dissolve
@@ -368,8 +383,9 @@ label v15s44_continue:
             scene v15s44_8
             with dissolve
 
+            $ v15_nora_locations.add(Location("Nora's ex-boyfriend's place", "images/v15/detective_board/ex_house.webp", "I think this one is a long-shot. She could be with him, but would she really go running straight to an ex-boyfriend after a breakup?"))
+
             am "Hmm, that's something that we might want to consider. Maybe Nora ran off to this ex."
-            $ v15_nora_locations.add("ex")
 
     scene v15s44_8a
     with dissolve
@@ -396,7 +412,7 @@ label v15s44_continue:
 
     u "Okay, so let's add those clues to the board and see how things are shaping up."
 
-    call screen clues_ui
+    show screen detective_board
 
 # -The UI pops up to show all the clues achieved from Penelope's search (CLUES UNLOCKED: Nora loves nature. Nora visited her aunt the day she landed from Europe. LOCATION UNLOCKED: Staying at her Aunt's apartment)-
 
@@ -560,5 +576,7 @@ label v15s44_continue2:
     with dissolve
 
     pause 0.75
+
+    stop music fadeout 3
 
     jump v15s45

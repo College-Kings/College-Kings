@@ -48,7 +48,7 @@ label v14s47:
 
     u "Here who is?"
 
-    if lindsey.relationship.value >= Relationship.FWB.value:
+    if lindsey.relationship >= Relationship.FWB:
         scene v14s47_2
         with dissolve
 
@@ -385,7 +385,7 @@ label v14s47_hood:
 
         pause 
         
-        scene v14s47_hood_2
+        scene v14s47_hood_2a
         with dissolve
 
         li "Nice. Now what?"
@@ -558,7 +558,7 @@ label v14s47_driver:
         scene v14s47_driver_2b # FPP. Same as v14s47_driver_2, Lindsey looking at MC, unwrapping the lollipop, mouth closed, smiling
         with dissolve
 
-        if lindsey.relationship.value >= Relationship.FWB.value:
+        if lindsey.relationship >= Relationship.FWB:
             u "Is that even a question? *Chuckles*"
 
         else:
@@ -838,6 +838,9 @@ label v14s47_passenger:
 
             "Take photo with bird":
                 $ v14s47_car_pics.append("v14s47_passenger_2f.webp")
+
+                scene v14s47_passenger_4
+                #with dissolve
 
                 u "Yeah, Linds. A crazy bird lady might buy the car simply because he's sitting on it. *Chuckles*"
 

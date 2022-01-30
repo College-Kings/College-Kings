@@ -53,7 +53,7 @@ label v10_talk_nora:
     scene v10hal1a
     with dissolve
 
-    if nora.relationship.value >= Relationship.LIKES.value:
+    if nora.relationship >= Relationship.LIKES:
         scene v10hal1a
         with dissolve
 
@@ -100,7 +100,7 @@ label v10_talk_nora:
 
                     u "(I'll leave it alone as they'd rather keep it private.)"
 
-    elif not joinwolves and nora.relationship.value < Relationship.LIKES.value:
+    elif not joinwolves and nora.relationship < Relationship.LIKES:
         scene v10hal1a
         with dissolve
 

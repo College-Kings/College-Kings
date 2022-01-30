@@ -4,6 +4,8 @@
 # Time: Saturday night
 
 label v15s28:
+    play music "music/v15/Track Scene 28_1.mp3" fadein 2
+
     scene v15s28_1 # TPP Show MC walking into the underground bar
     with dissolve
 
@@ -29,7 +31,7 @@ label v15s28:
 
     u "Haha, no. Why should they?"
 
-    if jenny.relationship.value >= Relationship.FWB.value: # -if JennyRs
+    if jenny.relationship >= Relationship.FWB: # -if JennyRs
         scene v15s28_3b # FPP Same angle as 3, Penelope smiling at MC with mouth open, Jenny smiling at MC with mouth closed
         with dissolve
 
@@ -70,7 +72,7 @@ label v15s28:
 
         jen "We tell each other everything, babe. *Laughs*"
 
-        if penelope.relationship.value >= Relationship.LIKES.value: # -if PenelopeRS
+        if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS
             scene v15s28_3c # FPP Same angle as 3, Penelope looks a little sad and is looking down, mouth open
             with dissolve
 
@@ -162,17 +164,6 @@ label v15s28:
 
         pe "More drinks!"
 
-        scene v15s28_3n # FPP Same angle as 3, Jenny and Penelope banging empty shot glasses on the table and shouting
-        with dissolve
-
-        jen "More drinks!"
-        
-        pe "More drinks!"
-
-        jen "More drinks!"
-        
-        pe "More drinks!"
-
         scene v15s28_3o # FPP Same angle as 3, Jenny and Penelope holding empty shot glasses and smiling at MC
         with dissolve
 
@@ -205,7 +196,7 @@ label v15s28:
 
         pause 1
 
-    elif jenny.relationship.value >= Relationship.FRIEND.value and penelope.relationship.value >= Relationship.LOYAL.value: # -if JennyFriend and PenelopeLoyal
+    elif jenny.relationship >= Relationship.FRIEND and penelope.relationship >= Relationship.LOYAL: # -if JennyFriend and PenelopeLoyal
         scene v15s28_3a
         with dissolve
 
@@ -276,23 +267,12 @@ label v15s28:
 
         pe "More drinks!"
 
-        scene v15s28_3n
-        with dissolve
-
-        jen "More drinks!"
-        
-        pe "More drinks!"
-
-        jen "More drinks!"
-        
-        pe "More drinks!"
-
         scene v15s28_3o
         with dissolve
 
         u "I'm going! I'm going!"
 
-        scene v15s28_ # -All three laugh. MC goes to the bar-
+        scene v15s28_4 # -All three laugh. MC goes to the bar-
         with dissolve
 
         pause 1
@@ -355,11 +335,6 @@ label v15s28:
 
         u "You ladies keep guessing because a gentleman never tells."
 
-        scene v15s28_5 # TPP Show MC, sitting in the booth, winking at Penelope and Jenny
-        with dissolve
-
-        pause 1
-
         scene v15s28_3y # FPP Same angle as 3, Jenny looking at MC with a fake angry expression, mouth open, giving him a "thumbs down" gesture
         with dissolve
 
@@ -405,17 +380,6 @@ label v15s28:
 
         pe "More drinks!"
 
-        scene v15s28_3n
-        with dissolve
-
-        jen "More drinks!"
-        
-        pe "More drinks!"
-
-        jen "More drinks!"
-        
-        pe "More drinks!"
-
         scene v15s28_3o
         with dissolve
 
@@ -440,19 +404,19 @@ label v15s28:
     scene v15s28_7 # TPP Show MC at the bar, just the edge of Samantha's bar stool visible next to him, bartender behind the bar looking at MC, mouth open
     with dissolve
 
-    barworker "What can I get you?"
+    bartender "What can I get you?"
 
-    scene v15s28_8 # FPP MC's view of the barworker behind the bar, neutral expression, mouth closed
+    scene v15s28_8 # FPP MC's view of the bartender behind the bar, neutral expression, mouth closed
     with dissolve
 
     u "(Oh, wow. As easy as that? No ID check at all!)"
 
     u "Six tequilas, please."
 
-    scene v15s28_8a # FPP Same angle as 8, barworker looking at MC, neutral expression, mouth open
+    scene v15s28_8a # FPP Same angle as 8, bartender looking at MC, neutral expression, mouth open
     with dissolve
 
-    barworker "Sure thing! Coming right up."
+    bartender "Sure thing! Coming right up."
 
     scene v15s28_7a # TPP Same angle as 7, Bartender is busy getting a drink, Samantha barely visible at the edge of the frame, looking at MC with mouth open
     with dissolve
@@ -710,8 +674,6 @@ label v15s28:
         scene v15s28_9b
         with dissolve
 
-        sa "For everything, okay?"
-
         sa "Taking the time to talk to me the other night, it really helped me re-evaluate some things."
 
         scene v15s28_9c
@@ -870,7 +832,7 @@ label v15s28:
     scene v15s28_10 # FPP MC looks down at the counter in front of him and sees six shots of tequila on a tray
     with dissolve
 
-    barworker "Here are your drinks."
+    bartender "Here are your drinks."
 
     scene v15s28_10a # FPP Same angle as 10, MC taking his card back from the bartender
     with dissolve
@@ -935,7 +897,7 @@ label v15s28:
     scene v15s28_3ac # FPP Same angle as 3, Jenny and Penelope with that slightly disgusted face people get after a shot when they're not used to it and putting empty shot glasses down, Jenny's mouth open
     with dissolve
 
-    jen "Ewugh! That's one!"
+    jen "Eugh! That's one!"
 
     scene v15s28_11
     with dissolve
@@ -977,13 +939,15 @@ label v15s28:
 
     pe "What's next?!"
 
-    if penelope.relationship.value >= Relationship.LOYAL.value: # -if PenelopeLoyal
+    if penelope.relationship >= Relationship.LOYAL: # -if PenelopeLoyal
         scene v15s28_15 # FPP Closer view of Penelope, who is giving MC a slight smile across the table
         with dissolve
 
         menu:
             "Kiss Penelope":
                 $ add_point(KCT.TROUBLEMAKER)
+
+                play sound "sounds/kiss.mp3"
 
                 scene v15s28_16 # TPP MC leans across the table and kisses Penelope on the lips. Jenny (if visible) smiling at them, mouth open
                 with dissolve
@@ -1010,10 +974,12 @@ label v15s28:
 
                 pe "Why blame anything for such perfection?"
 
+                play sound "sounds/kiss.mp3"
+
                 scene v15s28_16a # TPP MC and Penelope each lean part way across the table for a gentle kiss
                 with dissolve
 
-                pause 0.75
+                pause 1.5
 
                 scene v15s28_3a
                 with dissolve
@@ -1038,13 +1004,15 @@ label v15s28:
 
                 u "(The tequila is trying to take control...Stay strong, [name].)"
 
-    elif jenny.relationship.value >= Relationship.FWB.value: # -if JennyRs
+    elif jenny.relationship >= Relationship.FWB: # -if JennyRs
         scene v15s28_12 # FPP Closer view of Jenny, who is giving MC a smile across the table
         with dissolve
 
         menu:
             "Kiss Jenny":
                 $ add_point(KCT.TROUBLEMAKER)
+
+                play sound "sounds/kiss.mp3"
 
                 scene v15s28_13 # TPP MC leans across the table and kisses Jenny on the lips, Penelope (if visible) leaning away from them with mouth open
                 with dissolve
@@ -1071,10 +1039,12 @@ label v15s28:
 
                 pause 0.75
 
+                play sound "sounds/kiss.mp3"
+
                 scene v15s28_13a # TPP Same angle as 13, Jenny leaning across the table to kiss MC this time, Penelope (if visible) smiling and rolling her eyes, mouth closed
                 with dissolve
 
-                pause 0.75
+                pause 1.5
 
             "Don't kiss her":
                 $ add_point(KCT.BOYFRIEND)
@@ -1133,7 +1103,7 @@ label v15s28:
 
     pause 0.75
 
-    if jenny.relationship.value >= Relationship.FWB.value and penelope.relationship.value >= Relationship.LIKES.value: # -if JennyRs and PenelopeRs (Lagoon with Jenny but had RS with Penelope prior to that)
+    if jenny.relationship >= Relationship.FWB and penelope.relationship >= Relationship.LIKES: # -if JennyRs and PenelopeRs (Lagoon with Jenny but had RS with Penelope prior to that)
         scene v15s28_19 # TPP Show Penelope stopping MC by grabbing his arm, Penelopewith neutral expression and mouth open, Jenny walking away toward the door in the background
         with dissolve
 
@@ -1179,7 +1149,7 @@ label v15s28:
 
         pe "We're good."
 
-    elif penelope.relationship.value >= Relationship.LOYAL.value: # -if PenelopeLoyal
+    elif penelope.relationship >= Relationship.LOYAL: # -if PenelopeLoyal
         scene v15s28_19b # TPP Same angle as 19, show Jenny stopping MC by grabbing his arm, Jenny smiling with mouth open, Penelope walking away toward the door in the background
         with dissolve
 
@@ -1231,6 +1201,10 @@ label v15s28:
         pause 0.75
 
     # -Regardless-
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 28_2.mp3" fadein 2
+    
     scene v15s28_22 # TPP Show MC, Penelope, and Jenny leaving the bar
     with dissolve
 
@@ -1336,6 +1310,14 @@ label v15s28:
     with dissolve
 
     pause 1
+
+    stop music fadeout 3
+
+    if v14_emily_ily:
+        label v15s29_emilysg:
+            if _in_replay:
+                $ phone.applications.append(messenger)
+                $ v14_emily_ily = True
 
     if joinwolves: # -if Wolves, transition to Scene 29-
         jump v15s29

@@ -21,7 +21,7 @@ label v13s9:
 
     pause 0.75
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v13s9_2 # FPP. Chloe full face smile, happy suprised, mouth open looking at MC.
         with dissolve
 
@@ -277,19 +277,14 @@ label v13s9:
 
     cl "I'm not too worried about losing it though, I have a pretty set in stone plan. Not only that, but I'll have your help as well. Or at least, I'd hope so."
     
-    scene v13s9_12g # FPP. Same as v13s9_12b but Chloe has slighty sad expression (pouting), mouth closed, looking directly at MC (sad eyes, making it difficult for MC not to want help her).		
+    scene v13s9_12g # FPP. Same as v13s9_12b but Chloe has slighty sad expression (pouting), mouth closed, looking directly at MC (sad eyes, making it difficult for MC not to want help her).
     with dissolve
-
-    pause 0.75
 
     menu:
         "Help Chloe":
             $ v13_help_chloe = True
             $ chloe.points += 1
-                        
-            scene v13s9_12f
-            with dissolve
-
+            
             u "Of course I'll help. You obviously care about the girls, you've been running the sorority perfectly fine, and I'd hate for you to lose your scholarship."
 
             scene v13s9_12h # FPP. Chole facing MC (no longer leaning against rail) looking at MC, happy, mouth open.
@@ -297,7 +292,7 @@ label v13s9:
 
             cl "I knew I could count on you."
 
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value: # -If Chloegirlfriend (extra dialog)
+            if chloe.relationship >= Relationship.GIRLFRIEND: # -If Chloegirlfriend (extra dialog)
                 $ add_point(KCT.BOYFRIEND)
 
                 play sound "sounds/kiss.mp3"
@@ -345,7 +340,7 @@ label v13s9:
 
             u "Chloe, it's not like that. I'm her friend and she came to me in confidence for my help. I'd be wrong to turn her away."
 
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value: # -If Chloegirlfriend (extra dialog)
+            if chloe.relationship >= Relationship.GIRLFRIEND: # -If Chloegirlfriend (extra dialog)
                 $ chloe.points -= 1 
                 
                 $ add_point(KCT.TROUBLEMAKER)
@@ -478,7 +473,7 @@ label v13s9:
 
     u "Oh... Well... That's spicy. *Laughs*"
 
-    if chloe.relationship.value >= Relationship.FWB.value:
+    if chloe.relationship >= Relationship.FWB:
         scene v13s9_12q # FPP. Chloe facing MC (not leaning), flirting/seductive, smiling, mouth open.
         with dissolve
 
@@ -688,9 +683,6 @@ label v13s9_continue: # -Regardless of all scene continued
     u "Imre has a date and Ryan thinks it's a catfish."
 
     if not v13_aubrey_concert or not v13_penelope_concert:
-        scene v13s9_12p
-        with dissolve
-
         u "I need to go back and meet him so we can spy on Imre."
 
     scene v13s9_12h

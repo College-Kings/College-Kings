@@ -1,205 +1,236 @@
-## NEW SCREENS
-# Patreon
-screen end_screen():
+screen save_now(next_version):
+    tag save_now
+    modal True
+    style_prefix "save_now"
+
+    default music_file = "music/horror2.mp3"
+    default image_path = "gui/end_screen/"
+
+    add image_path + "end_screen_background.webp"
+
+    vbox:
+        align (0.5, 0.5)
+        spacing 25
+
+        text "WARNING" color "#FF0000" xalign 0.5 size 105
+        null height 100
+        text "END OF CURRENT VERSION" xalign 0.5
+        text "SAVE HERE TO KEEP PROGRESS" xalign 0.5
+        null height 50
+        text "DO NOT CLICK CONTINUE UNTIL YOU HAVE SAVED!" xalign 0.5 size 50
+            
+        imagebutton:
+            xalign 0.5
+            idle image_path + "continue_idle.webp"
+            hover image_path + "continue_hover.webp"
+            if renpy.loadable("v{}/scene1.rpy".format(next_version)):
+                action Return()
+            else:
+                action Show("patreon_credits")
+
+    text "v" + config.version.split(" ")[0] align (1.0, 1.0) xoffset -20 color "#4e628f" size 30
+    
+    on "show" action Play("music", music_file)
+
+style save_now_text is text:
+    font "fonts/Freshman.ttf"
+    color "#FFFFFF"
+    size 70
+
+
+screen end_screen(support_link="https://www.patreon.com/collegekings"):
     tag end_screen
     modal True
+    style_prefix "end_screen"
 
     default image_path = "gui/end_screen/"
 
-    add image_path + "end_screen_background.png"
+    add image_path + "end_screen_background.webp"
 
-    # hbox:
-    #     align (0.5, 0.9)
-    #     spacing 100
+    vbox:
+        xalign 0.5
+        ypos 345
 
-    #     textbutton "MENU":
-    #         action MainMenu()
-    #         yalign 0.5
-    #         text_size 100
+        text "ACT 4 PART 3" xalign 0.5
+        text "Coming Soon!" color "#EA54E8" xalign 0.5
 
-    #     imagebutton:
-    #         idle "images/get.webp"
-    #         hover "images/get.webp"
-    #         action OpenURL("https://www.patreon.com/collegekings")
-    #         align (0.5, 0.65)
+    if not config.enable_steam:
+        hbox:
+            xalign 0.5
+            ypos 556
+            spacing 20
 
-    #     textbutton "Credits":
-    #         action Jump("credits")
-    #         yalign 0.5
-    #         text_size 100
+            text "Exclusively on " size 40 yalign 0.5
 
-screen patreon_credits():
+            hbox:
+                spacing 10
+
+                imagebutton:
+                    idle image_path + "patreon_logo.webp"
+                    action OpenURL("https://www.patreon.com/collegekings")
+                    yalign 0.5
+
+                imagebutton:
+                    idle image_path + "patreon_wordmark.webp"
+                    action OpenURL("https://www.patreon.com/collegekings")
+                    yalign 0.5
+
+    hbox:
+        xalign 0.5
+        ypos 764
+        spacing 50
+
+        imagebutton:
+            idle image_path + "menu_idle.webp"
+            hover image_path + "menu_hover.webp"
+            action MainMenu()
+            yalign 0.5
+
+        imagebutton:
+            idle image_path + "get_access_idle.webp"
+            hover image_path + "get_access_hover.webp"
+            action OpenURL(support_link)
+            yalign 0.5
+
+        imagebutton:
+            idle "gui/common/credits_idle.webp"
+            hover "gui/common/credits_hover.webp"
+            action Show("patreon_credits", None, support_link)
+            yalign 0.5
+
+
+screen patreon_credits(support_link="https://www.patreon.com/collegekings"):
     tag end_screen
     modal True
+    style_prefix "patreon_credits"
 
-    # if config.enable_steam:
-    #     add "images/steamCredits.webp"
-    # else:
-    #     add "images/patreonCredits.webp"
+    default image_path = "gui/end_screen/"
 
-    # if config.enable_steam:
-    #     imagebutton:
-    #         xalign 0.5
-    #         ypos 675
-    #         idle "images/discordbutton1.webp"
-    #         hover "images/discordbutton2.webp"
-    #         action OpenURL ("http://discord.collegekingsgame.com")
-    # else:
-    #     imagebutton:
-    #         pos (394, 677)
-    #         idle "images/supportdevelopmentblank.webp"
-    #         hover "images/supportdevelopment.webp"
-    #         action OpenURL ("https://www.patreon.com/collegekings")
+    add image_path + "patreon_credits_background.webp"
 
-    # hbox:
-    #     xalign 0.5
-    #     ypos 950
-    #     spacing 50
+    vbox:
+        align(0.5, 0.334)
+        spacing 100
 
-    #     textbutton "Main Menu":
-    #         text_style "steam_endScreenTextButton"
-    #         action MainMenu()
+        add "patreon_credits"
 
-    #     textbutton "The Team":
-    #         text_style "steam_endScreenTextButton"
-    #         action Show("team_credits")
+    imagebutton:
+        idle image_path + "support_development_idle.webp"
+        hover image_path + "support_development_hover.webp"
+        action OpenURL(support_link)
+        xalign 0.5
+        ypos 735
+
+    hbox:
+        align (0.5, 1.0)
+
+        imagebutton:
+            idle image_path + "main_menu_idle.webp"
+            hover image_path + "main_menu_hover.webp"
+            action MainMenu()
+            yalign 0.5
+
+        imagebutton:
+            idle image_path + "team_idle.webp"
+            hover image_path + "team_hover.webp"
+            action Show("team_credits")
+            yalign 0.5
+
+    on "show" action [SetVariable("quick_menu", False), Play("music", "music/vocal.mp3")]
+    on "hide" action SetVariable("quick_menu", True)
+    on "replace" action SetVariable("quick_menu", False)
+    on "replaced" action SetVariable("quick_menu", True)
 
 
 screen team_credits():
     tag end_screen
     modal True
+    style_prefix "team_credits"
 
-    # add "images/stockBackgrounds/eveningSunshine.webp"
+    default image_path = "gui/end_screen/"
 
-    # text "Team Credits":
-    #     xalign 0.5
-    #     ypos 15
-    #     size 72
-
-    # hbox:
-    #     align (0.5, 0.5)
-    #     spacing 300
-
-    #     vbox:
-    #         spacing 10
-
-    #         text "UndergradSteve - Game Creator"
-    #         text "KingLui - Project Manager"
-    #         text "OscarSix - Technical Officer"
-    #         null height 20
-    #         text "Oskin - Lead Enforcer"
-    #         text "Lucious Lordswill - Lead Writer"
-    #         text "Cheexmarie - Lead Editor"
-    #         text "Peace - Head Transcriber"
-    #         text "Condy - Quality Assurance Manager"
-    #         text "Jany - Translation Manager"
-    #         text "Mozzart - Lead Artist & Coordinator"
-    #         null height 20
-    #         text "Maro - Marketing Specialist"
-    #         text "HugeBoiV2 - Transcriber"
-    #         text "Jeffly - Transcriber"
-
-    #     vbox:
-    #         spacing 10
-
-    #         text "MegaManX - Transcriber"
-    #         text "mstep17 - Transcriber"
-    #         text "SystemFailed - Transcriber"
-    #         text "Wolf - Transcriber"
-    #         text "Dorkby - Animator"
-    #         text "Wiebley - Renderer"
-    #         text "Ranger - 3d Modeler"
-    #         text "François Gibon - Renderer"
-    #         text "3D4FUN - Renderer"
-    #         text "Bwonerart - Renderer"
-    #         text "Sznuk - Renderer"
-    #         text "Raystorm41 - Render"
-    #         text "Stefan - Photoshopper"
-    #         text "Space-Storm - Tech Assistant"
-
-    # text "Special thanks to all the community members and players who have made this project possible :)":
-    #     align (0.5, 0.9)
-    #     size 24
-
-    # hbox:
-    #     spacing 50
-    #     xpos 20
-    #     yalign 1.0
-
-    #     textbutton "Main Menu":
-    #         text_style "steam_endScreenTextButton"
-    #         action MainMenu()
-
-    #     textbutton "Credits":
-    #         text_style "steam_endScreenTextButton"
-    #         action Jump("credits")
-
-
-
-
-# Steam
-screen steam_join_discord():
-    tag credits
-    modal True
-    zorder 100
-
-    add "images/steam/end_screen_discord.webp"
-
-    imagebutton:
-        idle "images/discordbutton1.webp"
-        hover "images/discordbutton2.webp"
-        action OpenURL("https://discord.gg/collegekings")
-        align (0.5, 0.65)
+    add image_path + "team_credits_background.webp"
 
     hbox:
-        spacing 50
-        xpos 20
-        yalign 1.0
+        align (0.5, 0.5)
+        yoffset -20
+        spacing 100
 
-        textbutton "Main Menu":
-            text_style "steam_endScreenTextButton"
-            action MainMenu()
+        vbox:
+            align (0.5, 0.5)
 
-        textbutton "Credits":
-            text_style "steam_endScreenTextButton"
-            action Jump("gameEnd")
+            text "{b}UndergradSteve{/b} - Chief Executive Officer"
+            text "{b}KingLui{/b} - Project Manager"
+            text "{b}OscarSix{/b} - Technical Officer"
+            null height 20
+            text "{b}Cheexmarie{/b} - Lead Editor"
+            text "{b}Condy{/b} - Senior Production Engineer"
+            text "{b}Mozzart{/b} - Lead Artist & Coordinator"
+            text "{b}Peace{/b} - Head Transcriber"
+            null height 20
+            text "{b}Jany{/b} - Community Manager"
+            text "{b}Oskin{/b} - Product Enforcer"
 
-        textbutton "The Team":
-            text_style "steam_endScreenTextButton"
-            action Show("team_credits")
+            text "{b}MrSkeletor{/b} - Writer"
 
-screen steam_end(link="https://store.steampowered.com/app/1463120/College_Kings__Act_I/"):
-    tag credits
-    modal True
-    zorder 100
+            text "{b}Jeffly{/b} - Transcriber"
+            text "{b}MegaManX{/b} - Transcriber"
+            text "{b}messy{/b} - Transcriber"
+            text "{b}SystemFailed{/b} - Transcriber"
 
-    add "images/steam/end_screen.webp"
+            text "{b}kaim{/b} - Animator"
+            text "{b}xidcat{/b} - Animator"
 
-    imagebutton:
-        idle "images/steam/playNow.webp"
-        hover "images/steam/playNowHover.webp"
+        vbox:
+            align (0.5, 0.5)
 
-        if achievement.steam.dlc_installed(1624520):
-            action Function(renpy.quit, relaunch=True, save=True)
-        elif achievement.steam.is_overlay_enabled():
-            action Function(achievement.steam.activate_overlay_to_web_page, link)
-        else:
-            action OpenURL(link)
-        align (0.5, 0.55)
+            text "{b}3D4FUN{/b} - Renderer"
+            text "{b}Bwonerart{/b} - Renderer"
+            text "{b}François Gibon{/b} - Renderer"
+            text "{b}ITtechnology{/b} - Renderer"
+            text "{b}Oduvan{/b} - Renderer"
+            text "{b}sznuk{/b} - Renderer"
+            text "{b}Meg{/b} - Renderer"
+            
+            text "{b}Stefan{/b} - Photoshopper"
+
+            text "{b}ClearanceClarence{/b} - Gameplay Engineer"
+
+            text "{b}Ana Paula Cunha{/b} - UI/UX Designer"
+            text "{b}Danielrothier{/b} - UI/UX Designer"
+            text "{b}Natalimartins{/b} - UI/UX Designer"
+
+            text "{b}Ema9000{/b} - Human Resources Manager"
+
+            text "{b}Sawsbucky{/b} - Gameplay Designer"
+
+            text "{b}MimeFlayer{/b} - Assistant Editor"
+            text "{b}slgeorge864{/b} - Assistant Editor"
+
 
     hbox:
-        spacing 50
-        xpos 20
-        yalign 1.0
+        align (0.5, 1.0)
 
-        textbutton "Main Menu":
-            text_style "steam_endScreenTextButton"
+        imagebutton:
+            idle image_path + "main_menu_idle.webp"
+            hover image_path + "main_menu_hover.webp"
             action MainMenu()
+            yalign 0.5
 
-        textbutton "Credits":
-            text_style "steam_endScreenTextButton"
-            action Jump("gameEnd")
+        imagebutton:
+            idle Transform("gui/common/credits_idle.webp", zoom=0.72)
+            hover Transform("gui/common/credits_hover.webp", zoom=0.72)
+            action Show("patreon_credits")
+            yalign 0.5
 
-        textbutton "The Team":
-            text_style "steam_endScreenTextButton"
-            action Show("team_credits")
+    on "show" action SetVariable("quick_menu", False)
+    on "hide" action SetVariable("quick_menu", True)
+    on "replace" action SetVariable("quick_menu", False)
+    on "replaced" action SetVariable("quick_menu", True)
+
+
+style end_screen_text is montserrat_extra_bold_64
+
+style team_credits_text is text:
+    font "fonts/Montserrat-Regular.ttf"
+    size 36

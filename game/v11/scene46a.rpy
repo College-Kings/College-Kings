@@ -129,7 +129,7 @@ label v11_dinner_with_aubrey:
     scene v11dwa1
     with dissolve
 
-    if aubrey.relationship.value < Relationship.FWB.value:
+    if aubrey.relationship < Relationship.FWB:
         scene v11dwa1e # FPP. Same 1, different pose, neutral look, mouth open
         with dissolve
         au "I'm surprised you're not like all the other guys."
@@ -256,7 +256,8 @@ label v11_dinner_with_aubrey:
                 with dissolve
 
                 u "*Laughs* Okay, that was pretty funny."
-    elif aubrey.relationship.value >= Relationship.FWB.value:
+                
+    else:
         scene v11dwa1
         with dissolve
 
@@ -309,6 +310,7 @@ label v11_dinner_with_aubrey:
                 with dissolve
 
                 u "I know you said that before, but I thought that maybe things felt a little different lately."
+
                 if kct == "confident":
                     scene v11dwa1e
                     with dissolve

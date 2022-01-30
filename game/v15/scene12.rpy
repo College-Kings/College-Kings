@@ -4,6 +4,8 @@
 # Time: Afternoon
 
 label v15s12:
+    play music "music/v13/Track Scene 1_1.mp3" fadein 2
+
     if "diary" in freeroam12stolen:
         # -MC and Lindsey are walking along the hallway, in the general direction of the janitor's closet-
         scene v15s12_1 # TPP. MC and Lindsey walking down the school hallway.
@@ -43,7 +45,7 @@ label v15s12:
 
         li "And then there were a few interesting entries."
         
-        if chloe.relationship.value >= Relationship.FWB.value:
+        if chloe.relationship >= Relationship.FWB:
             scene v15s12_3a # TPP. MC worried, mouth closed [Checkpoint B].
             with dissolve
 
@@ -181,8 +183,8 @@ label v15s12:
 
             li "Ha, yeah. I know... Me too." 
 
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value: 
-            li "And... There was something else too."
+        if chloe.relationship >= Relationship.GIRLFRIEND: 
+            li "And... there was something else too."
 
             scene v15s12_5
             with dissolve
@@ -203,7 +205,7 @@ label v15s12:
 
             menu:
                 "Tell me":
-                    $ add_point(KCT.TROUBLEMAKER)# TODO - KCT and character points
+                    $ add_point(KCT.TROUBLEMAKER)
                     $ chloe.points -= 1 
                     
                     scene v15s12_5
@@ -270,7 +272,7 @@ label v15s12:
                     li "No problem."
 
                 "Not interested":
-                    $ add_point(KCT.BOYFRIEND) # TODO: KCT and character points 
+                    $ add_point(KCT.BOYFRIEND)
                     $ chloe.points += 1
                     
                     scene v15s12_5
@@ -286,7 +288,7 @@ label v15s12:
                     li "Yeah, fair enough, I respect that. That's why I wanted to ask." 
 
         # -regardless of previous choice, still if Chloe GF
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value and lindsey.relationship.value >= Relationship.FWB.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND and lindsey.relationship >= Relationship.FWB:
         scene v15s12_6 # FPP. Lindsey concerned mouth open [Checkpoint E].
         with dissolve
 
@@ -317,7 +319,7 @@ label v15s12:
         menu: 
             "It's pretty serious": # -if It's pretty serious (Lindsey RS becomes Lindsey Friend)
                 $ lindsey.relationship = Relationship.FRIEND
-                $ add_point(KCT.BOYFRIEND) # TODO KCT and character points 
+                $ add_point(KCT.BOYFRIEND)
                 $ chloe.points += 1
                 $ lindsey.points -= 1
 
@@ -429,11 +431,16 @@ label v15s12:
 
         pause 0.75
 
+    stop music fadeout 3
+    
+    play music "music/v13/Track Scene 21.mp3" fadein 2
+
     # -Lindsey points at the planning board-
     scene v15s12_8 # FPP. Lindsey smiling, mouth open, pointing at the planning board [Janitor's closet].
     with dissolve
 
     li "So, here's what I'm thinking... Basically, our focus this time is to gain more allies."
+
     li "Allies that we can trust to support us now, during the election, and also in the future, when I'm President of the Chicks."
 
     scene v15s12_8b # FPP. Same as v15s12_8a, but mouth closed [Janitor's closet].
@@ -453,7 +460,7 @@ label v15s12:
         elif not v14_lindsey_sell:
             li "It's a shame that you couldn't find anything in Chloe's room..."
             
-        elif v15_lindsey_sold:
+        elif v15_car_sold_price > 0:
             li "We just didn't get a good enough offer on the car, but hopefully we can put that money to good use in the future."
             
         elif v14_lindsey_sell:
@@ -495,7 +502,7 @@ label v15s12:
         lindsey_board.add_task("Game Night",
             "Host the game night",
             opinion="\"Once we got the games and (hopefully) the booze, all that's left is to make sure everyone has a good time and leaves wanting to vote for me.\"",
-            people=[mc, lindsey, autumn, aubrey],
+            people=[autumn, aubrey, mc],
             cost=0)
 
         lindsey_board.add_task("VIP Night",
@@ -572,6 +579,7 @@ label v15s12:
         with dissolve
         
         u "It might be more money that we're taking from the budget..."
+
         u "But there's no chance they'll vote for Chloe after you roll up in a limo to take them out for the night."
 
         scene v15s12_8a
@@ -579,6 +587,36 @@ label v15s12:
 
         li "Haha, that's so true. It's going to be epic!" 
 
+        scene v15s12_8b
+        with dissolve
+
+        if v14_chloe_wolves or not v14_help_chloe: #If Chloe is with Wolves
+            if v15_lindsey_inviteseb:
+                u "Chloe has just announced the Wolves as her official brotherhood but having Sebastian there will surely make them question it."
+                
+                if joinwolves:
+                    u "(Damn, will it? What have I done? We really don't need any more drama back at the house...)"
+                
+                else:
+                    u "(If it causes any issues for them, it's their problem...)"
+        
+            else:
+                u "Chloe has just announced the Wolves as her official brotherhood, so we have to focus on the Apes now."
+                
+                if v14_ApesPostChloePics:
+                    u "(Wherever Grayson's mind is, it's not on supporting Chloe, anyway...)"
+        
+        else: #If Chloe is with Apes 
+            if v15_lindsey_inviteseb:
+                u "(Getting the Apes to support Chloe and now trying to get Sebastian to influence the Wolves. I'm getting everyone involved, ha!)"
+                
+            else:
+                if not v14_chloe_cameron:
+                    u "(Grayson's getting a lot of attention from both sides of the campaign... *Chuckles*)"
+
+                    if v14_ApesPostChloePics:
+                        u "(But I don't think he's rooting for Chloe right now anyway...)"
+                
     # -Regardless-
     scene v15s12_8a
     with dissolve
@@ -595,7 +633,7 @@ label v15s12:
 
     li "Hehe, thank you!" 
 
-    if lindsey.relationship.value >= Relationship.FWB.value:
+    if lindsey.relationship >= Relationship.FWB:
         # -Lindsey gives MC a passionate kiss- 
         scene v15s12_9 # FPP. Lindsey passionately kisses MC [Janitor's closet].
         with dissolve
@@ -643,13 +681,13 @@ label v15s12:
 
     $ riley.messenger.newMessage("Hey! I'm assuming you'll be at Lauren's birthday party later?", force_send=True)
     $ riley.messenger.addReply("Yeah, I'll be there.")
-    $ riley.messenger.newMessage("Cool. FYI, the stores are running low on costumes, you need to hurry up and buy one! Lol", force_send=True)
+    $ riley.messenger.newMessage("Cool. FYI, the stores are running low on costumes, you need to hurry up and buy one! Lol")
     $ riley.messenger.addReply("Ah, shit... You're right.")
-    $ riley.messenger.newMessage("Of course I am ;)", force_send=True)
+    $ riley.messenger.newMessage("Of course I am ;)")
     $ riley.messenger.addReply("I'd be lost without you")
-    $ riley.messenger.newMessage("Oh trust me, I know... hehe. See you soon!", force_send=True)
+    $ riley.messenger.newMessage("Oh trust me, I know... hehe. See you soon!")
     $ riley.messenger.addReply("Thanks red!")
-    $ riley.messenger.newMessage("Haha, welcome nerd!", force_send=True)
+    $ riley.messenger.newMessage("Haha, welcome nerd!")
 
 label v15s12_PhoneContinue:
     if riley.messenger.replies:
@@ -665,10 +703,10 @@ label v15s12_PhoneContinue:
 
     u "(I'm a man on a mission. Find Lauren a gift and find a costume. Easy.)"
     
-    if v15_mad_at_ms_rose: # -if RoseRs and MC acted angry in v15.5
-        # -Transition to Scene 14-
+    stop music fadeout 3
+    
+    if v15_mad_at_ms_rose:
         jump v15s14
 
-    else: # -Otherwise-
-        # -Transition to Scene 17-
+    else:
         jump v15s17

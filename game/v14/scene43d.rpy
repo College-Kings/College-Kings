@@ -67,7 +67,7 @@ label v14s43d:
 
     ri "Let's get started on this before I get bored. I don't plan on being here long."
 
-    if riley.relationship.value >= Relationship.FWB.value:
+    if riley.relationship >= Relationship.FWB:
         scene v14s43d_2b # FPP. Same as v14s43d_2a, Riley flirtatious smile, mouth closed
         with dissolve
 
@@ -145,7 +145,7 @@ label v14s43d:
 
     u "Ha, okay. And how is that?"
 
-    if riley.relationship.value >= Relationship.FWB.value:
+    if riley.relationship >= Relationship.FWB:
         scene v14s43d_2f # FPP. Same as v14s43_2e,in the same pose from last scene, Riley flirtatious smile, mouth open.
         with dissolve
 
@@ -210,29 +210,31 @@ label v14s43d:
     menu:
         "I'm dominant": # ;)
             $ add_point(KCT.BRO)
-            scene v14s43d_2
+
+            scene v14s43d_2b
             with dissolve
 
             u "Well if that's the case, I'm the dominant."
 
-            scene v14s43d_2b
+            scene v14s43d_2
             with dissolve
 
             ri "Oh... You like taking control, huh?"
 
         "I'm submissive": # ;O 
             $ add_point(KCT.BOYFRIEND)
-            scene v14s43d_2
+
+            scene v14s43d_2b
             with dissolve
             
             u "If that's the case, I'll play the submissive."
 
-            scene v14s43d_2b
+            scene v14s43d_2
             with dissolve
 
             ri "You like being told what to do, huh?"
 
-            scene v14s43d_2c
+            scene v14s43d_2b
             with dissolve
 
             u "Haha. Umm..."
@@ -303,13 +305,13 @@ label v14s43d:
 
         u "*Laughs* (She can't get enough of her Aubs, can she?)"
 
-        scene v14s43d_2
+        scene v14s43d_2a
         with dissolve
 
         u "Later!"
 
     else:
-        scene v14s43d_2
+        scene v14s43d_2a
         with dissolve
         
         u "Yeah, later."

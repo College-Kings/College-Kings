@@ -10,7 +10,7 @@ init python:
         chloe.messenger.newMessage(_("I'll give you 10 more minutes. If you're still not here by then, I'm going home."))
 
     def v14s51_reply2():
-        if chloe.relationship.value >= Relationship.FWB.value:
+        if chloe.relationship >= Relationship.FWB:
             setattr(store, "chloeSus", chloeSus +1)
         chloe.messenger.newMessage(_("I'm already full on breadsticks... Ugh! Hurry up, [name]. Please?"))
         chloe.messenger.addReply(_("I'll be there as soon as I can, Chloe."))
@@ -888,7 +888,7 @@ label v14s51_continue:
 
         u "*Whispers* Anytime, Linds."
 
-        if lindsey.relationship.value >= Relationship.FWB.value:
+        if lindsey.relationship >= Relationship.FWB:
             play sound "sounds/kiss.mp3"
 
             scene v14s51_43 # FPP. Lindsey kissing MC on the lips

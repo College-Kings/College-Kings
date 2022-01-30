@@ -2,10 +2,11 @@ screen disclaimer():
     add "splashscreen_3"
 
     imagebutton:
-        idle "gui/splashscreen/confirm_idle.png"
+        idle "gui/splashscreen/confirm_idle.webp"
+        hover "gui/splashscreen/confirm_hover.webp"
         action [SetVariable("persistent.confirm_18", True), Return()]
         xalign 0.5
-        ypos 551
+        ypos 540
 
 
 label splashscreen:
