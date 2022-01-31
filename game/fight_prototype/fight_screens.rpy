@@ -1,4 +1,4 @@
-screen fight_menu(attacks=None, player=player, max_points=18):
+screen fight_menu(player_attacks=None, player=player, max_points=18):
     tag fight_screens
     modal True
     style_prefix "fight_menu_style"
@@ -40,7 +40,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                         hbox:
                             spacing 20
 
-                            for attack in filter(lambda attack: attack.move_type == AttackType.LIGHT, attacks):
+                            for attack in filter(lambda attack: attack.move_type == AttackType.LIGHT, player_attacks):
                                 button:
                                     xysize (58, 58)
                                     idle_background "gui/fight_prototype/fight_slot_idle.png"
@@ -49,7 +49,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                                     selected player.attacks[AttackType.LIGHT] == attack
                                     action SetDict(player.attacks, AttackType.LIGHT, attack)
 
-                                    text attack.name align (0.5, 0.9) size 15
+                                    text attack.name.name.replace('_', ' ') align (0.5, 0.9) size 15
 
                     vbox:
                         spacing 5
@@ -58,7 +58,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                         hbox:
                             spacing 20
 
-                            for attack in filter(lambda attack: attack.move_type == AttackType.HEAVY, attacks):
+                            for attack in filter(lambda attack: attack.move_type == AttackType.HEAVY, player_attacks):
                                 button:
                                     xysize (58, 58)
                                     idle_background "gui/fight_prototype/fight_slot_idle.png"
@@ -67,7 +67,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
                                     selected player.attacks[AttackType.HEAVY] == attack
                                     action SetDict(player.attacks, AttackType.HEAVY, attack)
 
-                                    text attack.name align (0.5, 0.9) size 15
+                                    text attack.name.name.replace('_', ' ') align (0.5, 0.9) size 15
 
             vbox:
                 spacing 10
