@@ -40,6 +40,9 @@ label starta: #for compatibility only
 
     jump fight_test
     label fight_end:
+        hide screen test_health
+        hide screen new_fight_overlay
+
     show screen fightDamage
     show screen fantasyOverlay
 
