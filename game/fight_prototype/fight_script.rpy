@@ -396,7 +396,7 @@ label fight_test:
     label fight_start:
 
     show screen test_health
-    show screen health_bar(100, 100)
+    show screen new_fight_overlay(player, opponent)
 
     menu:
 

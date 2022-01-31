@@ -1,8 +1,10 @@
 screen fight_menu(attacks=None, player=player, max_points=18):
+    tag fight_screens
     modal True
     style_prefix "fight_menu_style"
 
-    default locked_attribute_values = list(attr.value for attr in player.attributes)
+    $ selected_attrs = list(attr.value for attr in player.attributes)
+    default locked_attribute_values = selected_attrs
 
     frame:
         background Transform("gui/fight_prototype/fight_background.png", size=(700, 900))
@@ -12,6 +14,7 @@ screen fight_menu(attacks=None, player=player, max_points=18):
 
         vbox:
             spacing 30
+
             vbox:
                 text name size 50 
                 hbox: 
@@ -86,14 +89,17 @@ screen fight_menu(attacks=None, player=player, max_points=18):
             vbox:
                 spacing 10
 
-                $ available_points = max_points - sum(attr.value for attr in player.attributes)
+                $ available_points = max_points - sum(selected_attrs)
 
                 hbox:
                     spacing 10
+                    
                     text "Attributes"
                     text "+" + str(available_points) color "#44D7B6"
+                    
                     null width 50
-                    textbutton "Confirm" action [SetScreenVariable("locked_attribute_values", list(attr.value for attr in player.attributes)), Function(player.set_specials)]
+
+                    textbutton "Confirm" action [SetScreenVariable("locked_attribute_values", selected_attrs), Function(player.set_specials)]
 
                 hbox:
                     spacing 10
@@ -182,7 +188,13 @@ screen fight_menu(attacks=None, player=player, max_points=18):
 
                                     text ability.name.replace('_', ' ') align (0.5, 0.9) size 15
 
-# TODO: Improve slider experience on attributes
+        # Confirm Button
+        textbutton "Continue":
+            action Return()
+            sensitive (locked_attribute_values == selected_attrs)
+            align (1.0, 1.0)
+
+# IMPROVEMENT: Improve slider experience on attributes
 
 style fight_menu_style_text is text:
     color "#000"
@@ -198,7 +210,7 @@ style fight_menu_style_button_text is button_text:
 
 
 screen fight_attack(player=player, opponent=opponent):
-    tag fight
+    tag fight_screens
     modal True
 
     add opponent.guard_image
@@ -211,7 +223,7 @@ screen fight_attack(player=player, opponent=opponent):
 
 
 screen fight_defense(opponent_attack, player=player, opponent=opponent):
-    tag fight
+    tag fight_screens
     modal True
 
     add opponent_attack.images["start_image"]
@@ -230,15 +242,16 @@ screen fight_popup(message):
     timer 2 action Hide("fight_popup", transition=dissolve)
 
 
-screen health_bar(current_health, new_health, max_health=100):
-    tag health_bar
+screen new_fight_overlay(player, opponent):
     zorder 100
 
-    fixed:
-        xysize (820, 95)
+    hbox:
         xalign 0.5
-        ypos 83
-        use animated_value_bar(current_health, new_health, max_health, "blue_bar", "ruby_bar", offset=(13, 0), size=(820, 95))
+        ypos 50
+        spacing 100
+
+        use animated_value_bar(None, player.health, player.max_health, "blue_bar", "ruby_bar", offset=(13, 0), size=(600, 95))
+        use animated_value_bar(None, opponent.health, opponent.max_health, "blue_bar", "ruby_bar", offset=(13, 0), size=(600, 95))
 
 
 screen test_health():
@@ -248,7 +261,7 @@ screen test_health():
         align (0.1, 0.1)
         text str(opponent.health):
             size 50
-            color "#eb5858"  
+            color "#eb5858"
         text str(opponent.guard):
             size 50
             color "#494ce6"
