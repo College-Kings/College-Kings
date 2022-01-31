@@ -292,6 +292,9 @@ label player_defence_turn(player_move, player, opponent_attack, opponent):
             show screen fight_popup("BLOCKED")
         pause 1
 
+    if player.health <= 0:
+        jump expression fight_end_label
+
     call screen fight_attack
 
 

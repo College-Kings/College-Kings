@@ -245,13 +245,22 @@ screen fight_popup(message):
 screen new_fight_overlay(player, opponent):
     zorder 100
 
-    hbox:
+    vbox:
+        pos (50, 900)
+        spacing -25
+
+        hbox:
+            text "Health bar:" yalign 0.5
+            use animated_value_bar(None, player.health, player.max_health, "blue_bar", "ruby_bar", offset=(13, 0), size=(400, 95)) # Player Health Bar
+        hbox:
+            text "Stamina bar:" yalign 0.5
+            use animated_value_bar(None, player.stamina, player.max_stamina, "blue_bar", "ruby_bar", offset=(13, 0), size=(400, 95)) # Player Stamina Bar
+
+    vbox:
         xalign 0.5
         ypos 50
-        spacing 100
 
-        use animated_value_bar(None, player.health, player.max_health, "blue_bar", "ruby_bar", offset=(13, 0), size=(600, 95))
-        use animated_value_bar(None, opponent.health, opponent.max_health, "blue_bar", "ruby_bar", offset=(13, 0), size=(600, 95))
+        use animated_value_bar(None, opponent.health, opponent.max_health, "blue_bar", "ruby_bar", offset=(13, 0), size=(1000, 95)) # Opponent Health Bar
 
 
 screen test_health():
@@ -260,22 +269,14 @@ screen test_health():
     vbox:
         align (0.1, 0.1)
 
-        text "Health: {}".format(player.health):
-            size 50
-            color "#eb5858"
+        text "Player" size 50
         text "Guard: {}".format(player.guard):
             size 50
             color "#494ce6"
-        text "Stamina: {}".format(player.stamina):
-            size 50
-            color "#ffa600"
 
-    vbox:
-        align (0.1, 0.9)
+        null height 100
 
-        text "Health: {}".format(opponent.health):
-            size 50
-            color "#eb5858"
+        text "Opponent" size 50
         text "Guard: {}".format(opponent.guard):
             size 50
             color "#494ce6"
