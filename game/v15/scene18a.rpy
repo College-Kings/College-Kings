@@ -1703,6 +1703,7 @@ label v15s18a_Riley:
 
         "Yeah, I do":
             $ add_point(KCT.TROUBLEMAKER)
+            $ v15s18a_riley_bj = True
             
             scene v15s18ariley_2i
             with dissolve
