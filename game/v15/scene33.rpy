@@ -194,15 +194,15 @@ label v15s33:
 
     au "*Laughs* True."
 
-    scene v15s33_8
-    with dissolve
+    # scene v15s33_8
+    # with dissolve
 
-    na "A stripper costume? Haha, what?"
+    # na "A stripper costume? Haha, what?"
 
-    scene v15s33_7
-    with dissolve
+    # scene v15s33_7
+    # with dissolve
 
-    au "Long story..."
+    # au "Long story..."
 
     scene v15s33_8c
     with dissolve
