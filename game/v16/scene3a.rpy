@@ -16,7 +16,7 @@ label v16s3a:
 
     ri "I'm going to take such good care of you..."
 
-    if v16s18a_riley_bj:
+    if v15s18a_riley_bj:
 
         scene v16s3a_2 
         with dissolve
@@ -90,10 +90,10 @@ label v16s3a:
 
             u "Whatever you say, ha."
 
-    image v16rileybj = Movie(play="images/v16/scene 3a/v16rileybj.webm", loop=True, image="images/v16/scene 3a/v16rileybjStart.webp", start_image="images/v16/scene 3a/v16rileybjStart.webp")
-    image v16rileybj2 = Movie(play="images/v16/scene 3a/v16rileybj2.webm", loop=True, image="images/v16/scene 3a/v16rileybj2Start.webp", start_image="images/v16/scene 3a/v16rileybj2Start.webp")
-    image v16rileybjf = Movie(play="images/v16/scene 3a/v16rileybjf.webm", loop=True, image="images/v16/scene 3a/v16rileybjStart.webp", start_image="images/v16/scene 3a/v16rileybjStart.webp")
-    image v16rileybj2f = Movie(play="images/v16/scene 3a/v16rileybj2f.webm", loop=True, image="images/v16/scene 3a/v16rileybj2Start.webp", start_image="images/v16/scene 3a/v16rileybj2Start.webp")
+    image v16rileybj = Movie(play="images/v16/scene_3a/v16rileybj.webm", loop=True, image="images/v16/scene_3a/v16rileybjStart.webp", start_image="images/v16/scene_3a/v16rileybjStart.webp")
+    image v16rileybj2 = Movie(play="images/v16/scene_3a/v16rileybj2.webm", loop=True, image="images/v16/scene_3a/v16rileybj2Start.webp", start_image="images/v16/scene_3a/v16rileybj2Start.webp")
+    image v16rileybjf = Movie(play="images/v16/scene_3a/v16rileybjf.webm", loop=True, image="images/v16/scene_3a/v16rileybjStart.webp", start_image="images/v16/scene_3a/v16rileybjStart.webp")
+    image v16rileybj2f = Movie(play="images/v16/scene_3a/v16rileybj2f.webm", loop=True, image="images/v16/scene_3a/v16rileybj2Start.webp", start_image="images/v16/scene_3a/v16rileybj2Start.webp")
 
     scene v16rileybj # Ignore as anim
     with dissolve
