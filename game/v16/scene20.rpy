@@ -23,14 +23,14 @@ label v16s20:
 
         jump v16s20_amber_dirty
 
-label v16s20_amber_clean # -if AmberSober, the room is fairly neat
+label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
 
     scene v16s20_1 # FPP. the room is fairly neat In the free roam, we can select Unpaid bills, which are on the coffee table. Open laptop, which is sat on the couch. Photos, which are on the wall. Twazzlers candy (same as we used in v14orv15), which is on the floor beside the couch. Phone charger, which is on the floor next to the plant pot. Selecting Phone charger will end the free roam- 
     with dissolve
 
     u "(Hmm, I could have a little look around first. Learn a little bit more about Amber. There's the phone charger though. She is in need after all...)"
 
-    v16s20_amber_living_room_twazzlers: # -if Twazzlers candy
+    label v16s20_amber_living_room_twazzlers: # -if Twazzlers candy
         $ freeroamalr.add("twazzlers")
         $ v16s20_seenList = []
 
@@ -63,7 +63,7 @@ label v16s20_amber_clean # -if AmberSober, the room is fairly neat
 
                 call screen v16s20_amber_living_room_clean # -Return to free roam-
 
-    v16s20_amber_living_room_unpaid_bills: # -if Unpaid Bills
+    label v16s20_amber_living_room_unpaid_bills: # -if Unpaid Bills
         $ freeroamalr.add("bills")
         $ v16s20_seenList = []
 
@@ -80,7 +80,7 @@ label v16s20_amber_clean # -if AmberSober, the room is fairly neat
 
             call screen v16s20_amber_living_room_clean
 
-    v16s20_amber_living_room_laptop: # -if Open Laptop
+    label v16s20_amber_living_room_laptop: # -if Open Laptop
         $ freeroamalr.add("laptop")
         $ v16s20_seenList = []
 
@@ -122,7 +122,7 @@ label v16s20_amber_clean # -if AmberSober, the room is fairly neat
 
             call screen v16s20_amber_living_room_clean
 
-    v16s20_amber_living_room_photos: # -if Photos
+    label v16s20_amber_living_room_photos: # -if Photos
         $ freeroamalr.add("photos")
         $ v16s20_seenList = []
 
@@ -159,7 +159,7 @@ label v16s20_amber_clean # -if AmberSober, the room is fairly neat
 
             call screen v16s20_amber_living_room_clean
 
-    v16s20_amber_living_room_phone_charger: # -if Phone charger (Ends Free Roam)
+    label v16s20_amber_living_room_phone_charger: # -if Phone charger (Ends Free Roam)
         $ freeroamalr.add("charger")
         $ v16s20_seenList = []
 
@@ -186,14 +186,14 @@ label v16s20_amber_clean # -if AmberSober, the room is fairly neat
 
             call screen v16s20_end
 
-label v16s20_amber_dirty # -if AmberDrugs, the room is messier with some beer bottles, pizza box, etc, but clickable items are in exactly the same places as AmberSober
+label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer bottles, pizza box, etc, but clickable items are in exactly the same places as AmberSober
 
     scene v16s20_1a # FPP. same as v16s20_1 the room is messier with some beer bottles, pizza box, etc, but clickable items are in exactly the same places as AmberSober
     with dissolve
 
     u "(Hmm, I could have a little look around first. Learn a little bit more about Amber. There's the phone charger though. She is in need after all...)"
 
-    v16s20_amber_living_room_twazzlers: # -if Twazzlers candy
+    label v16s20_amber_living_room_twazzlers2: # -if Twazzlers candy
         $ freeroamalr.add("twazzlers")
         $ v16s20_seenList = []
 
@@ -226,7 +226,7 @@ label v16s20_amber_dirty # -if AmberDrugs, the room is messier with some beer bo
 
                 call screen v16s20_amber_living_room_dirty
 
-    v16s20_amber_living_room_unpaid_bills: # -if Unpaid Bills
+    label v16s20_amber_living_room_unpaid_bills2: # -if Unpaid Bills
         $ freeroamalr.add("bills")
         $ v16s20_seenList = []
 
@@ -243,7 +243,7 @@ label v16s20_amber_dirty # -if AmberDrugs, the room is messier with some beer bo
 
             call screen v16s20_amber_living_room_dirty
 
-    v16s20_amber_living_room_laptop: # -if Open Laptop
+    label v16s20_amber_living_room_laptop2: # -if Open Laptop
         $ freeroamalr.add("laptop")
         $ v16s20_seenList = []
 
@@ -285,7 +285,7 @@ label v16s20_amber_dirty # -if AmberDrugs, the room is messier with some beer bo
 
             call screen v16s20_amber_living_room_dirty
 
-    v16s20_amber_living_room_photos: # -if Photos
+    label v16s20_amber_living_room_photos2: # -if Photos
         $ freeroamalr.add("photos")
         $ v16s20_seenList = []
 
@@ -322,7 +322,7 @@ label v16s20_amber_dirty # -if AmberDrugs, the room is messier with some beer bo
 
             call screen v16s20_amber_living_room_dirty # -Return to free roam-
 
-    v16s20_amber_living_room_phone_charger: # -if Phone charger (Ends Free Roam)
+    label v16s20_amber_living_room_phone_charger2: # -if Phone charger (Ends Free Roam)
         $ freeroamalr.add("charger")
         $ v16s20_seenList = []
 
@@ -349,7 +349,7 @@ label v16s20_amber_dirty # -if AmberDrugs, the room is messier with some beer bo
 
             call screen v16s20_end
 
-label v16s20_end
+label v16s20_end:
 
     scene v16s20_15 # FPP Show MC turning the lights off as he leaves the house, slight smile, mouth is closed
     with dissolve
