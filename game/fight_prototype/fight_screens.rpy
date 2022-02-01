@@ -20,15 +20,15 @@ screen fight_menu(player_attacks=None, player=player, extra_points=0):
                 text name size 50 
                 vbox: 
                     spacing 10
-                    text "Victories [player.wins] | Rank: [player.rank]" size 25 font "fonts/Montserrat-Regular.ttf" # TODO: Fighting style
+                    text "Total Victories: [player.wins] | Rank: [player.rank.name]" size 25 font "fonts/Montserrat-Regular.ttf" # TODO: Fighting style
 
                     fixed:
                         xysize(476,10)
                         add "gui/fight_prototype/rank_bar_background.png"
                         add Transform("gui/fight_prototype/rank_bar_fill.png", size=(476, 10))
-                        if player.wins:
-                            add "gui/fight_prototype/rank_circle.png" 
+                        text "X victories to next rank." font "fonts/Montserrat-Regular.ttf" size 15 ypos 20
 
+                        
 
 
 
