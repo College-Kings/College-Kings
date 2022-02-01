@@ -115,14 +115,20 @@ label v13s35:
         call screen v13s35_adult_shop
         
         label v13s35_adult_shop_continue:
+        scene v13s35_6
+        with dissolve
+        
         u "(She'll be happy with these, I think. We're gonna have some fun... *Chuckles*)"
+
+        $ mc.inventory.add_item(cuffs)
+        $ mc.money -= 10
 
     else:
         label v13s35_no_shop:
         u "(Guess I'll just post up here...)"
 
     scene v13s35_8 # TPP. Show MC waiting by the door, slight smile, mouth closed.
-    with dissolve
+    with fade
 
     pause 0.75
 
