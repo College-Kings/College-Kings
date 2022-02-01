@@ -3,7 +3,6 @@
 # Characters: CHLOE (Outfit: 2), MC (Outfit: 5)
 # Time: Afternoon
 
-
 label v16s12:
     scene v16s12_1 # TPP. Show Chloe and MC walking into the planning board room, both slight smiles, mouths closed, Chloe walking in in front of MC
     with dissolve
@@ -16,8 +15,7 @@ label v16s12:
 
         cl "Phew! Now that we're in private, we can finally talk about how the announcement went, and..."
 
-        if chloegf:
-
+        if chloe.relationship >= Relationship.GIRLFRIEND:
             scene v16s12_3 # TPP. Show Chloe giving MC a kiss
             with dissolve
 
@@ -59,7 +57,6 @@ label v16s12:
         cl "Phase three!"
 
         if v16_embarass and not v16_lindsey_drunk:
-
             scene v16s12_2c # FPP. Same as v16s12_2, Chloe slightly sad, mouth open
             with dissolve
 
@@ -268,7 +265,7 @@ label v16s12:
 
     cl "Now get out there and get to work."
 
-    if chloegf:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v16s12_3
         with dissolve
 

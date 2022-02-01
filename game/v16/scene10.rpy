@@ -9,55 +9,46 @@ label v16s10: # Econ class
     
     pause 1
 
-
     scene v16s10_2 # TPP Show MC taking a seat in the back row of the class, the empty seat next to him in view
     with dissolve
 
     pause 1
-    
-    
+        
     scene v16s10_2a # TPP Same angle as 2, Lauren taking her normal seat next to MC, Lauren smiling at MC with mouth open
     with dissolve
 
     la "Hey, [name]."
-
 
     scene v16s10_3 # FPP View of Lauren sitting next to MC. Lauren smiling with mouth closed
     with dissolve
 
     u "Hey, Lauren. Have you recovered from your epic party yet?"
 
-
     scene v16s10_3a # FPP Same angle as 3, Lauren smiling with mouth open
     with dissolve
 
     la "Haha, yeah, just about."
-
 
     scene v16s10_3
     with dissolve
 
     u "I had a lot of fun that night."
 
-
     scene v16s10_3a
     with dissolve
 
     la "I think we all did."
 
-
-    if v15s18_LAUREN_SEX: # PLACEHOLDER VARIABLE # if MC and Lauren had sex after Lauren's party
+    if "v15_lauren" in sceneList: # PLACEHOLDER VARIABLE # if MC and Lauren had sex after Lauren's party
         scene v16s10_3b # FPP Same angle as 3, Lauren looking down with a shy expression, slight smile, mouth open
         with dissolve
 
         la "I was really looking forward to class today."
 
-
         scene v16s10_3
         with dissolve
 
         u "Do you have a passion for economics now?"
-
 
         scene v16s10_3a
         with dissolve
@@ -66,13 +57,11 @@ label v16s10: # Econ class
 
         la "I can't stop thinking about us having sex. All the things you did to me. *Giggles*"
 
-
         if not "v12_lauren" in sceneList: # PLACEHOLDER VARIABLE # if it was also Lauren's first time
             scene v16s10_3b
             with dissolve
 
             la "People talk about your first time being special. That certainly was."
-
 
         # -Regardless of it being Lauren's first time-
         scene v16s10_3
@@ -80,18 +69,15 @@ label v16s10: # Econ class
 
         u "Well, I'm happy to be of service, haha."
 
-
         scene v16s10_3a
         with dissolve
 
         la "We'll have to do it again. Really soon."
 
-
         scene v16s10_3
         with dissolve
 
         u "Definitely. I'd like that a lot."
-
 
     # -Regardless of if MC and Lauren had sex after Lauren's party-
     scene v16s10_4 # FPP Show Ms Rose at the front of the class, looking over the students, neutral expression, mouth open
@@ -101,37 +87,31 @@ label v16s10: # Econ class
 
     ro "We're going to start off with one of your favorites. A slideshow presentation!"
 
-
     scene v16s10_5 # TPP View of the students in the class, they all look annoyed, many mouths open to groan
     with dissolve
     
     "*Groans*" ### NOT SURE HOW TO CODE IT FOR ALL STUDENTS
-
 
     scene v16s10_4
     with dissolve
     
     ro "Sorry guys, no one said economics was fun!"
 
-
-    if (lauren.relationship == Relationship.FWB or lauren.relationship == Relationship.GIRLFRIEND): # PLEASE VERIFY - MY FIRST EXPERIENCE WITH THE NEW RELATIONSHIP SYSTEM # -if LaurenRS or LaurenSex
+    if (lauren.relationship >= Relationship.FWB): # PLEASE VERIFY - MY FIRST EXPERIENCE WITH THE NEW RELATIONSHIP SYSTEM # -if LaurenRS or LaurenSex
         scene v16s10_2b # TPP Same angle as 2, Lauren passing MC a note under the table, Lauren has a naughty smile
         with dissolve
 
         pause 1
-
 
         scene v16s10_6 # FPP Show the note from Lauren. It just says, "I'm horny"
         with dissolve
 
         u "(Oh, shit... What is she trying to do?)"
 
-
         scene v16s10_2c # TPP Same angle as 2, Lauren reaching her hand over to MC's thigh under the table
         with dissolve
 
         u "(Oh, my... She actually wants to do this.)"
-
 
         scene v16s10_7 # FPP MC looking down at his lap, where Lauren, reaching under the table, is rubbing his crotch
         with dissolve
@@ -140,8 +120,7 @@ label v16s10: # Econ class
 
         u "(Damn, it feels really good.)"
 
-
-    elif lauren.relationship == Relationship.FRIEND: # -if LaurenFriend
+    else: # -if LaurenFriend
         scene v16s10_2d # TPP Same angle as 2, Lauren passing MC a note under the table, Lauren with a slight smile, mouth closed
         with dissolve
 
@@ -153,7 +132,6 @@ label v16s10: # Econ class
 
         u "(Do you think Ms Rose and Mr Lee have ever...)"
 
-
         menu:
             "Hooked up with each other":
                 scene v16s10_8 # TPP MC leaning over to whisper in Lauren's ear
@@ -161,13 +139,11 @@ label v16s10: # Econ class
 
                 u "*Whispers* They've definitely banged each other. Probably right here in the classroom!"
 
-
             "Hooked up with the Dean":
                 scene v16s10_8
                 with dissolve
 
                 u "*Whispers* Had sex with the Dean? Of course they have! All three of them, in her office."
-
 
         # -Regardless of LaurenFriend note reply choice-
         scene v16s10_2e # TPP Same angle as 2, Lauren laughing while trying to stay quiet
@@ -175,12 +151,10 @@ label v16s10: # Econ class
 
         la "*Laughs*"
 
-
         scene v16s10_2f # TPP Same angle as 2, Lauren with mouth closed, slight smile like she's trying not to laugh, eyes forward, hands on the table in front of her
         with dissolve
 
         pause 1
-
 
     # -Regardless of which note was passed-
     scene v16s10_4a # FPP Same angle as 4, Ms Rose looking directly at MC, she looks annoyed, mouth open
@@ -188,57 +162,47 @@ label v16s10: # Econ class
 
     ro "[name]!"
 
-
     scene v16s10_4b # FPP Same angle as 4, Ms Rose looking directly at MC, she looks annoyed, mouth closed
     with dissolve
 
     u "Huh?"
-
 
     scene v16s10_4a
     with dissolve
 
     ro "Please answer the question."
 
-
     scene v16s10_4b
     with dissolve
 
     u "Oh, okay... Um..."
-
 
     scene v16s10_4a
     with dissolve
 
     ro "You were listening, weren't you?"
 
-
     scene v16s10_4b
     with dissolve
 
     u "O-of course."
-
 
     scene v16s10_4a
     with dissolve
 
     ro "So, what's the answer?"
 
-
     scene v16s10_4b
     with dissolve
 
     menu:
         "Forty-two?":
-
             u "Uh, the answer is forty-two?"
-
 
             scene v16s10_4c # FPP Same angle as 4, Ms Rose looking at MC, neutral expression, mouth open
             with dissolve
 
             ro "Nice try. You were close. It's actually forty-seven."
-
 
             scene v16s10_4d # FPP Same angle as 4, Ms Rose looking at MC, neutral expression, mouth closed
             with dissolve
@@ -247,45 +211,31 @@ label v16s10: # Econ class
 
             u "Right, yeah... Sorry."
 
-
         "I don't know":
-
             u "Sorry, I don't know. I...  was thinking about something else."
-
 
             scene v16s10_4a
             with dissolve
 
             ro "Do I need to separate you and Lauren?"
 
-
             scene v16s10_3c # FPP Same angle as 3, Lauren looking forward and giggling, hand over her mouth
             with dissolve
 
             la "*Giggles*"
-
 
             scene v16s10_4b
             with dissolve
 
             u "No, it's okay. You have my full attention."
 
-
             scene v16s10_4c
             with dissolve
 
             ro "Good, please concentrate. I'd hate to fail my students just because they can't focus."
 
-
     # -Regardless of choice-
-    if lauren.relationship == Relationship.FRIEND: # -if LaurenFriend
-        scene v16s10_4d
-        with dissolve
-
-        u "(I'd better concentrate now. I hate being called out like that...)"
-
-
-    elif (lauren.relationship == Relationship.FWB or lauren.relationship == Relationship.GIRLFRIEND): # -if LaurenRS or LaurenSex
+    if lauren.relationship >= Relationship.FWB: # -if LaurenRS or LaurenSex
         scene v16s10_2c
         with dissolve
 
@@ -412,6 +362,11 @@ label v16s10: # Econ class
 
                 u "(She's gonna be the death of me. Lauren of all people... Damn.)"
 
+    else: # -if LaurenFriend
+        scene v16s10_4d
+        with dissolve
+
+        u "(I'd better concentrate now. I hate being called out like that...)"
 
     # -Regardless of all-
     scene v16s10_9 # FPP View of clock in the classroom, set at time for class to end
@@ -419,51 +374,43 @@ label v16s10: # Econ class
 
     pause 1
 
-
     scene v16s10_4f # FPP Same angle as 4, Ms Rose smiling out over the class, mouth open
     with dissolve
 
     ro "See, that wasn't so bad, huh? You all survived."
-
 
     scene v16s10_4
     with dissolve
 
     ro "And if I'm lucky, some of you learned a thing or two as well."
 
-
     scene v16s10_10 # TPP MC and Lauren getting out of their seats, along with the other students
     with dissolve
 
     pause 1
 
-
-    if (lauren.relationship == Relationship.FWB or lauren.relationship == Relationship.GIRLFRIEND):
+    if lauren.relationship >= Relationship.FWB:
         scene v16s10_11 # TPP MC walking toward the door to the classroom, Lauren catches him by grabbing his upper arm from behind
         with dissolve
 
         pause 1
-
 
         if v16s10_let_her_continue:
             scene v16s10_12 # TPP MC and Lauren standing at back of the classroom, close up view of Lauren whispering in MC's ear, slight smile, mouth open
             with dissolve
 
             la "Next time, I want you inside of me."
-
-        
+            
         else: # -if stop her
             scene v16s10_12
             with dissolve
 
             la "I hope you plan on making it up to me later."
 
-
         scene v16s10_13 # TPP MC and Lauren standing at back of the classroom, Lauren kissing MC on the cheek
         with dissolve
 
         pause 1
 
-
 # -regardless-
-jump b16s11 # -Transition to Scene 11-
+jump v16s11 # -Transition to Scene 11-
