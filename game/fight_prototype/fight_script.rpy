@@ -49,7 +49,7 @@ init python:
         SECOND_WIND = 0
         RESET = 1
         FURY = 2
-        BAZOOKA = 3
+        DEVASTATING_FORCE = 3
 
 
     class Attack:
@@ -377,7 +377,7 @@ label fight_test:
         player.attributes.append(Attribute(AttributeType.HEALTH, "Health", 1, "", SpecialPassives.BERSERK, SpecialActives.SECOND_WIND))
         player.attributes.append(Attribute(AttributeType.STAMINA, "Stamina", 1, "", SpecialPassives.FULLY_CHARGED, SpecialActives.RESET))
         player.attributes.append(Attribute(AttributeType.LIGHT_ATTACK_DAMAGE, "Light Attack Damage", 1, "", SpecialPassives.COMBO, SpecialActives.FURY))
-        player.attributes.append(Attribute(AttributeType.HEAVY_ATTACK_DAMAGE, "Heavy Attack Damage", 1, "", SpecialPassives.BRUISER, SpecialActives.BAZOOKA))
+        player.attributes.append(Attribute(AttributeType.HEAVY_ATTACK_DAMAGE, "Heavy Attack Damage", 1, "", SpecialPassives.BRUISER, SpecialActives.DEVASTATING_FORCE))
 
         mc.fighter = player
     
