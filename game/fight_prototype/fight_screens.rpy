@@ -1,11 +1,11 @@
-screen fight_menu(player_attacks=None, player=player):
+screen fight_menu(player_attacks=None, player=player, extra_points=0):
     tag fight_screens
     modal True
     style_prefix "fight_menu_style"
 
     $ selected_attrs = list(attr.value for attr in player.attributes)
     default locked_attribute_values = selected_attrs
-    default available_points = player.fight_rank.value
+    default available_points = player.rank.value + extra_points
 
     frame:
         background Transform("gui/fight_prototype/fight_background.png", size=(700, 900))

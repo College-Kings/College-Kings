@@ -79,8 +79,8 @@ init python:
 
 
     class BasePlayer:
-        def __init__(self, fight_rank, guard=None, health=100, stamina=10, attack_multiplier=1):
-            self.fight_rank = fight_rank
+        def __init__(self, rank, guard=None, health=100, stamina=10, attack_multiplier=1):
+            self.rank = rank
             self.guard = guard
             self.max_health = health
             self.max_stamina = stamina
@@ -89,6 +89,7 @@ init python:
             self._health = health
             self._stamina = stamina
 
+            self.wins = 0
             self.attacks = {
                 AttackType.LIGHT: None,
                 AttackType.HEAVY: None
