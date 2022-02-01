@@ -298,7 +298,7 @@ label v10s33_deergirl11:
     
     pause 0.5
     
-    scene v10cfrdg11e # FPP. same 12d, now both hands anime peace sign infront of face, like this. OLI NO FUNNY IDEAS WITH THE FACIAL EXPRESSION https://cdn.discordapp.com/attachments/822182656938082364/841735636565622914/daa.png
+    scene v10cfrdg11e # FPP. same 12d, now both hands anime peace sign infront of face
     with dissolve
 
     menu:
@@ -313,7 +313,7 @@ label v10s33_deergirl11:
 
             pause 0.5
 
-            scene v10cfrdg13b # TPP. now both hands anime peace sign infront of face, like this. OLI NO FUNNY IDEAS WITH THE FACIAL EXPRESSION https://cdn.discordapp.com/attachments/822182656938082364/841735636565622914/daa.png
+            scene v10cfrdg13b # TPP. now both hands anime peace sign infront of face
             with dissolve
 
             pause 0.5
@@ -748,7 +748,7 @@ label v10s33_deergirl11:
     menu:
         "Hot":
             $ add_point(KCT.BOYFRIEND)
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 u "Hot, obviously."
 
                 scene v10cfrau4
@@ -931,7 +931,7 @@ label v10s33_deergirl11:
 
 label v10s33_chloe1:
     $ freeroam6.add("chloe")
-    if chloe.relationship.value <= Relationship.MAD.value:
+    if chloe.relationship <= Relationship.MAD:
         scene v10cfrcl1 # FPP. Show Chloe, mouth closed
         
         u "I think Chloe's still mad at me, I'd rather not talk to her."
@@ -1026,7 +1026,7 @@ label v10s33_chloe1:
     menu:
         "Date with Chloe":
             $ chloe.points += 1
-            if chloe.relationship.value >= Relationship.FWB.value:
+            if chloe.relationship >= Relationship.FWB:
                 scene v10cfrcl1
                 with dissolve
 
@@ -1185,7 +1185,7 @@ label v10s33_chloe1:
                                     scene v10cfrcl1a
                                     with dissolve
 
-                                    if kct == "popular" or chloe.relationship.value >= Relationship.FWB.value:
+                                    if kct == "popular" or chloe.relationship >= Relationship.FWB:
                                         scene v10cfrcl1a
                                         with dissolve
 
@@ -1410,7 +1410,7 @@ label v10s33_deergirl21:
     label v10s33_laurenbake1:
     $ freeroam6.add("lauren")
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v10cfrla1 #FPP Show Lauren, Looking at mc, happy smile, mouth open
         la "Hey babe!"
 
@@ -1443,7 +1443,7 @@ label v10s33_deergirl21:
 
     la "Haha, to answer your question, bad. Sales are going bad. I only sold one and that was to my mother when she stopped by earlier."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v10cfrla1
         with dissolve
 
@@ -1565,7 +1565,7 @@ label v10s33_deergirl21:
 
     u "I'm sure you people are gonna get hungry at some point."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         u "I know, I'd love some of... Lauren's Moist Muffins."
 
         scene v10cfrla1d
@@ -1643,7 +1643,7 @@ label v10s33_deergirl21:
 
     u "What a beautiful statue."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v10cfrla4 #TPP shows mc leaning in for the kiss, but lauren holds him back, lauren mouth open, neutral face
         with dissolve
 
@@ -1744,7 +1744,8 @@ label v10s33_deergirl21:
     with dissolve
 
     u "Well I wish it was going better for you."
-    u "Maybe if you get Autumn to sell fake oil cans people can act as though they're loosening your joints Mrs. Tin Man. *Laughs*"
+    
+    u "Maybe if you get Autumn to sell fake oil cans people can act as though they're loosening your joints, Mrs. Tin Man. *Laughs*"
 
     scene v10cfrla3d
     with dissolve
@@ -1776,7 +1777,7 @@ label v10s33_deergirl21:
 
     u "So committed, we love to see it."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         u "Oh I wanted to ask, I'm planning on going on this year's Europe trip. Would you want to go?"
 
         scene v10cfrla3d
@@ -2423,7 +2424,7 @@ label v10s33_riley1:
 
     ri "Like I said, I'm a kind person. *Chuckles* Have you been to the dance stand?"
 
-    if "rachel" in freeroam6 or v10s33_aubrey:
+    if "rachel" in freeroam6 or "aubrey" in freeroam6:
 
         scene v10cfrri2e
         with dissolve
@@ -2951,7 +2952,7 @@ label v10s33_riley2:
     scene v10cfram1
     with dissolve
 
-    am "I'm looking forward to a good little cat fight. It would be even better though if it was the guys doing the wrestling."
+    am "I'm looking forward to a good little catfight. It would be even better though if it was the guys doing the wrestling."
 
     scene v10cfram1a
     with dissolve
@@ -3690,7 +3691,7 @@ label v10s33_emily1:
     label v10s33_evelyn1:
     $ freeroam6.add("evelyn")
 
-    if evelyn.relationship.value >= Relationship.LIKES.value: #If Date successful
+    if evelyn.relationship >= Relationship.LIKES: #If Date successful
         scene v10cfrev1a
 
         u "Out of everyone here, I'm most surprised to see you."
@@ -3759,7 +3760,7 @@ label v10s33_emily1:
 
         call screen v10s33_toilet
 
-    elif evelyn.relationship.value >= Relationship.DATE.value: #if Date but unsuccessful
+    elif evelyn.relationship >= Relationship.DATE: #if Date but unsuccessful
         if not "ryan" in freeroam6:
             scene fr6toilet # toilet screen
         else:

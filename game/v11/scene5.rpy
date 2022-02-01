@@ -585,6 +585,9 @@ label v11s4_PhoneContinueJosh1:
     u "That's smart, actually. Probably makes it harder for the creeps at the bar to stalk you on Kiwii."
 
     if candyLike < 3 and not kct == "popular":
+        if not kct == "popular":
+            call screen kct_popup(required_kct="popular")
+    
         scene v11swc6o
         with dissolve
 
@@ -628,7 +631,7 @@ label v11s4_PhoneContinueJosh1:
         jump v11_thurs_night_room
 
     # If made Candy smile 3 or more times
-    $ candy.relationship = relationship.LIKES
+    $ candy.relationship = Relationship.LIKES
 
     if candyLike < 3:
         call screen kct_popup
@@ -845,7 +848,7 @@ label v11s5_galleryScene:
     u "Candy it is."
 
     if config_censored:
-        call screen censoredPopup("v11s5_nsfwSkipLabel1")
+        call screen censored_popup("v11s5_nsfwSkipLabel1")
 
     scene v11swc21a # TPP Same angle as v11swc21, Candy removing her clothing
     with dissolve

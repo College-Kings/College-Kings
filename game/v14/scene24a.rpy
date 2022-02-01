@@ -1,5 +1,5 @@
 # SCENE 24a: Gas station pickup
-# Locations: Gas Stateion 
+# Locations: Gas Station 
 # Characters: MC (Outfit:9), GRAYSON (Gas Station Outfit)
 # Time: Evening (Tuesday)
 

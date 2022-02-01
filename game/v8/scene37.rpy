@@ -14,7 +14,7 @@ label v8_tues_evening:
         scene v8ster2 # TPP. Show MC still sat at his desk but now on his phone.
         with dissolve
 
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        if lauren.relationship >= Relationship.GIRLFRIEND:
             $ lauren.messenger.addReply(_("Still fine with drinking instead of making out with me?"))
             $ lauren.messenger.newMessage(_("Of course, that drink was just my cup of tea. :)"))
             $ lauren.messenger.addReply(_("Oh haha, is that so? I think it at least poured a bit of courage in there."))
@@ -40,7 +40,7 @@ label v8_tues_evening:
                 u "I should reply to Lauren."
                 jump v8s37_phoneContinue1
 
-        if riley.relationship.value >= Relationship.FWB.value:
+        if riley.relationship >= Relationship.FWB:
             $ riley.messenger.addReply(_("If your legs were lies, you could call me a liar. For I would be gladly spreading them."))
             $ riley.messenger.newMessage(_("That was the most corny, idiotic joke I've ever heard, Mr. Liar. :)"))
             $ riley.messenger.addReply(_("Thinking of you makes it harder to study. And in some other places as well..."))
@@ -82,7 +82,7 @@ label v8_tues_evening:
         scene v8ster5 # TPP. Show MC still sat at his desk but now on his phone.
         with dissolve
 
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        if lauren.relationship >= Relationship.GIRLFRIEND:
             $ lauren.messenger.addReply(_("Still fine with drinking instead of making out with me?"))
             $ lauren.messenger.newMessage(_("Of course, that drink was just my cup of tea. :)"))
             $ lauren.messenger.addReply(_("Oh haha, is that so? I think it at least poured a bit of courage in there."))
@@ -108,7 +108,7 @@ label v8_tues_evening:
                 u "I should reply to Lauren."
                 jump v8s37_phoneContinue3
 
-        if riley.relationship.value >= Relationship.FWB.value:
+        if riley.relationship >= Relationship.FWB:
             $ riley.messenger.addReply(_("If your legs were lies, you could call me a liar. For I would be gladly spreading them."))
             $ riley.messenger.newMessage(_("That was the most corny, idiotic joke I've ever heard, Mr. Liar. :)"))
             $ riley.messenger.addReply(_("Thinking of you makes it harder to study. And in some other places as well..."))

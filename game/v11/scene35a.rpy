@@ -5,7 +5,7 @@
 
 label v11_chloe_hotel_room_amber_call:
     play music "music/v10/Track Scene 40_2.mp3" fadein 2
-    if chloe.relationship.value <= Relationship.MAD.value and not v11_riley_roomate:
+    if chloe.relationship <= Relationship.MAD and not v11_riley_roomate:
         scene v11hrc1 # TPP. MC is inside his hotel room, next to the door, mouth closed
         with fade
         
@@ -180,7 +180,7 @@ label v11_chloe_hotel_room_amber_call:
 
     cl "Yep."
 
-    if chloe.relationship.value < Relationship.FWB.value and chloe.relationship.value > Relationship.MAD.value: #if car dealership (===chloe not mad) but chloe not rs either
+    if chloe.relationship < Relationship.FWB and chloe.relationship > Relationship.MAD: #if car dealership (===chloe not mad) but chloe not rs either
         scene v11hrc11a
         with dissolve
 
@@ -230,7 +230,7 @@ label v11_chloe_hotel_room_amber_call:
 
         cl "*Sighs* One sec."
 
-    elif chloe.relationship.value >= Relationship.FWB.value and not v11_riley_roomate: 
+    elif chloe.relationship >= Relationship.FWB and not v11_riley_roomate: 
         scene v11hrc11
         with dissolve
 
@@ -332,7 +332,7 @@ label v11_chloe_hotel_room_amber_call:
 
     pause 0.75
 
-    if chloe.relationship.value >= Relationship.FWB.value:
+    if chloe.relationship >= Relationship.FWB:
         scene v11hrc18 # TPP. MC wakes up with chloe sitting on top of him
         with fade
 
@@ -360,7 +360,7 @@ label v11_chloe_hotel_room_amber_call:
 
         cl "C'mon, get up. Mr. Lee has something planned tonight. I'm not sure what it is, but if there's anything else you wanna do today, you should get to it now."
 
-    elif chloe.relationship.value > Relationship.MAD.value:
+    elif chloe.relationship > Relationship.MAD:
         scene v11hrc9b # FPP. same as 9, chloe is smiling
         with fade
 

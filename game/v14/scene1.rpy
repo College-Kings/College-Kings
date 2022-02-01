@@ -7,14 +7,47 @@ label v14_start:
     if path_builder and not pb_name_set:
         $ name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
         $ pb_name_set = True
+    
+        $ v11_lindsey_slogan = 1
+    
+        if emily.relationship == Relationship.FWB:
+            $ sceneList.add("v13_emily")
 
-    show screen phone_icon
+        if ms_rose.relationship == Relationship.FWB:
+            $ sceneList.add("v12_rose")
+            $ v13_perfume = True
+
+        if lauren.relationship == Relationship.GIRLFRIEND:
+            $ sceneList.add("v12_lauren")
+            
+        if nora.relationship >= Relationship.FWB:
+            $ sceneList.add("v12_nora")
+            
+        if chloe.relationship == Relationship.GIRLFRIEND:
+            $ sceneList.add("v13_chloe")
+            
+        if lindsey.relationship == Relationship.FWB:
+            $ sceneList.add("v12_lindsey")
+
+        if lauren.relationship == Relationship.FRIEND:
+            $ lauren.relationship = Relationship.KISS
+
+        if aubrey.relationship >= Relationship.FWB:
+            $ s12v32_get_aubrey_flowers = True
+            $ v13s48_canoeing_as_date = True
+            $ v13s48_get_aubrey_chocolate = True
+
+        if penelope.relationship >= Relationship.LOYAL:
+            $ v11_pen_goes_europe = True
+
+        if samantha.relationship == Relationship.FWB:
+            $ cameron.relationship = Relationship.BRO
     
     if emmy.simplr.pending_messages: #for compatibility with v12 players where emmy replies were not forced to be seen
         $ emmy.simplr.pending_messages = []
         $ emmy.simplr.sent_messages[-1].replies = []
 
-    if aubrey.relationship.value >= Relationship.FWB.value and riley.relationship.value >= Relationship.FWB.value:
+    if aubrey.relationship >= Relationship.FWB and riley.relationship >= Relationship.FWB:
         $ v13_threesomeending = True
         jump v14s01
 
@@ -39,7 +72,7 @@ label v14s01:
     u "(Oh, shit. This is happening.)"
 
     if config_censored:
-        call screen censoredPopup("v14s01_nsfwSkipLabel1")
+        call screen censored_popup("v14s01_nsfwSkipLabel1")
 
     scene v14s01_1b # FPP. Same as v14s01_1a, Riley and Aubrey topless, looking at MC seductively, both mouths closed
     with dissolve

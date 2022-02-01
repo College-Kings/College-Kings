@@ -4,15 +4,17 @@
 # Time: Morning
 
 label v15s41:
-    scene black
-    with dissolve
-    
-    pause 1
-
     scene sleep_transition_fast
     with fade
 
     pause 2.2
+
+    play music "music/v15/Track Scene 41.mp3" fadein 2
+
+    scene black
+    with dissolve
+    
+    pause 1
 
     if joinwolves:
         scene v15s41_1 # TPP. In wolves room, Camera close to MC's nightstand, his phone sitting on his nightstand turned off, MC sleeping on his side facing away from the camera.
@@ -121,6 +123,8 @@ label v15s41:
 
         pause 0.75
 
+        stop music fadeout 3
+
         jump v15s42
 
     else:
@@ -225,5 +229,7 @@ label v15s41:
         with dissolve
 
         pause 0.75
+
+        stop music fadeout 3
 
         jump v15s42

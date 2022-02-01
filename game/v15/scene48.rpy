@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v15s48:
+    play music "music/v15/Track Scene 48.mp3" fadein 2
+
     scene v15s48_1 # TPP. Show the cab showing up on a dirt road near the cabin, the cabin shown in the distance.
     with fade
 
@@ -100,7 +102,7 @@ label v15s48:
 
             pause 0.75
 
-            if nora.relationship.value >= Relationship.FWB.value:
+            if nora.relationship >= Relationship.FWB:
                 scene v15s48_13a # TPP. MC hugging Nora, Nora hugging MC back, Nora's eyes closed, Nora flirty, mouth open, MC slight smile, eyes's closed, mouth closed.
                 with dissolve
                
@@ -180,7 +182,6 @@ label v15s48:
     with dissolve
 
     menu:
-
         "Cool off":
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -246,7 +247,7 @@ label v15s48:
 
     no "Come sit, I'll make you a tea. Do you have time?"
 
-    if nora.relationship.value >= Relationship.FWB.value:
+    if nora.relationship >= Relationship.FWB:
         scene v15s48_12b
         with dissolve
 
@@ -501,7 +502,7 @@ label v15s48:
 
     no "Probably stay single for a while..."
 
-    if nora.relationship.value >= Relationship.FWB.value:
+    if nora.relationship >= Relationship.FWB:
         scene v15s48_16
         with vpunch
 
@@ -566,7 +567,7 @@ label v15s48:
 
             no "My heart is telling me to find real love."
 
-            if nora.relationship.value >= Relationship.FWB.value:
+            if nora.relationship >= Relationship.FWB:
                 no "And to give it a chance."
 
             scene v15s48_18a
@@ -587,7 +588,7 @@ label v15s48:
 
             u "Listen to that little voice inside your head. What is she telling you to do?"
 
-            if nora.relationship.value >= Relationship.FWB.value:
+            if nora.relationship >= Relationship.FWB:
                 scene v15s48_18f
                 with dissolve
                 
@@ -712,7 +713,7 @@ label v15s48:
 
                 no "You're not wrong. *Sighs*"
 
-    if nora.relationship.value < Relationship.FWB.value and not kct == "confident" and not (v15s48_follow_your_heart and not v15s48_interrupt):
+    if nora.relationship < Relationship.FWB and not kct == "confident" and not (v15s48_follow_your_heart and not v15s48_interrupt):
         call screen kct_popup(required_kct="confident")
 
         if v15s48_follow_your_heart:
@@ -733,7 +734,7 @@ label v15s48:
         
         jump v15s48_norawine
 
-    if nora.relationship.value >= Relationship.FWB.value:
+    if nora.relationship >= Relationship.FWB:
         if v15s48_follow_your_heart:
             scene v15s48_18
             with dissolve
@@ -774,7 +775,7 @@ label v15s48:
 
         u "Yeah?"
     
-    if (chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or aubrey.relationship.value >= Relationship.TAMED.value) and not (kct == "confident"):
+    if (chloe.relationship >= Relationship.GIRLFRIEND or lauren.relationship >= Relationship.GIRLFRIEND or aubrey.relationship >= Relationship.TAMED) and not (kct == "confident"):
         scene v15s48_18
         with dissolve
 
@@ -868,10 +869,14 @@ label v15s48:
 
         u "Me too."
 
-        jump v15s48b
+        stop music fadeout 3
+
+        play music "music/v15/Track Scene 48b.mp3" fadein 2
+
+        jump v15s48bnosex
 
     else:
-        if (chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value or aubrey.relationship.value >= Relationship.TAMED.value):
+        if (chloe.relationship >= Relationship.GIRLFRIEND or lauren.relationship >= Relationship.GIRLFRIEND or aubrey.relationship >= Relationship.TAMED):
             call screen kct_popup
         
         scene v15s48_18h
@@ -1008,7 +1013,11 @@ label v15s48:
 
                 u "Me too."
 
-                jump v15s48b
+                stop music fadeout 3
+
+                play music "music/v15/Track Scene 48b.mp3" fadein 2
+
+                jump v15s48bnosex
 
             "I want you too":
                 scene v15s48_18k # FPP. MC looking at Nora, Nora looking at MC, Nora flirty, mouth closed.
@@ -1029,6 +1038,8 @@ label v15s48:
 
                     pause 0.75
 
+                    play sound "sounds/kiss.mp3"
+
                     scene v15s48_23a # FPP. Nora bending over and kissing MC.
                     with dissolve
 
@@ -1044,5 +1055,7 @@ label v15s48:
                     with dissolve
 
                     u "I think I can guess... *Chuckles*"
+
+                stop music fadeout 3
 
                 jump v15s48a

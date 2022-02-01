@@ -5,6 +5,8 @@
 # Render Count: 4 Unique, 31 Total
 
 label v15s9:
+    play music "music/v13/Track Scene 8.mp3" fadein 2
+
     scene v15s9_1 # TPP. MC is now walking along the hallway near the library, slight smile, mouth closed
     with dissolve
 
@@ -164,6 +166,7 @@ label v15s9:
 
             if v13s48_canoeing_as_date:
                 $ aubrey.relationship = Relationship.TAMED
+                $ v15s9_wedding_date = True
 
                 scene v15s9_3g # FPP. same as v15s9_3b Aubrey slightly blushes, head slightly tilted down, looking at mc, full smile, mouth closed
                 with dissolve
@@ -478,6 +481,8 @@ label v15s9:
 
             pause 0.75
 
+            stop music fadeout 3
+
             jump v15s10
 
         else:
@@ -493,7 +498,7 @@ label v15s9:
             $ lindsey.messenger.newMessage("Meet me at the end of the main hallway?")
             $ lindsey.messenger.addReply("Sure thing, be with you in a bit.", func=None)
 
-            if lindsey.relationship.value >= Relationship.FWB.value:
+            if lindsey.relationship >= Relationship.FWB:
                 $ lindsey.messenger.addReply("Be there soon ;)", func=None)
             else:
                 $ lindsey.messenger.addReply("OMW", func=None)
@@ -514,6 +519,8 @@ label v15s9:
             with dissolve
 
             pause 0.75
+
+            stop music fadeout 3
 
             jump v15s12
 
@@ -538,6 +545,8 @@ label v15s9:
                 u "(I should reply to Lindsey.)"
                 jump v15s9_PhoneContinueLin
 
+        stop music fadeout 3
+
         jump v15s12
 
     elif v15_mad_at_ms_rose:
@@ -546,6 +555,8 @@ label v15s9:
 
         pause 0.75
 
+        stop music fadeout 3
+
         jump v15s14
 
     else:
@@ -553,5 +564,7 @@ label v15s9:
         with dissolve
 
         pause 0.75
+        
+        stop music fadeout 3
         
         jump v15s13

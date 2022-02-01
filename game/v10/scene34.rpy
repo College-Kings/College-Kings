@@ -93,7 +93,7 @@ label v10_autumn_announcement:
     
             u "Let's go Chloe!"
 
-            if chloe.relationship.value <= Relationship.MAD.value: # chloe mad at mc
+            if chloe.relationship <= Relationship.MAD: # chloe mad at mc
                 scene v10samw7 # tpp. show mc hand in air mouth open
                 with dissolve
 

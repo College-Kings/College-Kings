@@ -4,7 +4,7 @@
 # Time: Morning
 
 label v15s19:
-    # -TODO: Transition from Night to Morning-
+    play music "music/v12/Track Scene 13.mp3" fadein 2
 
     if v15s18_LaurensBed: # -if sleeping in Lauren's bed
         # -MC wakes up alone in Lauren's bed-
@@ -235,7 +235,7 @@ label v15s19:
             u "(I should check my phone.)"
             jump v15s19_PhoneContinueChloe
 
-    if v14_help_lindsey: # -if helping Lindsey TN: Helping Chloe and Lindsey are NOT mutually exclusive-- no else if
+    elif v14_help_lindsey:
         if v15_lindsey_gamenight: # -if helping Lindsey with Game night
             $ lindsey.messenger.newMessage("Hey, can you come meet me now to buy the alcohol for our game night? I have a plan. I'll send the details of which store to come to.", force_send=True)
             $ lindsey.messenger.addReply("Okay, sounds good.")
@@ -293,7 +293,7 @@ label v15s19:
 
     la "Are you kidding? Thank you for coming. It was such a special night for me!"
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         play sound "sounds/kiss.mp3"
 
         scene v15s19_9c # FPP. Lauren, eyes closed, kissing MC on the lips [Deer House Living Room Front Door]. 
@@ -355,6 +355,8 @@ label v15s19:
     u "Yeah, thanks. Bye!" 
 
     # -MC leaves out the front door with Lauren watching him go, smiling-
+    
+    stop music fadeout 3
     
     if v14_help_chloe and not v15_chloe_lindseysabotage:
         jump v15s20 # -if helping Chloe with tuition-

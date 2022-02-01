@@ -22,7 +22,7 @@ label v11_lauren_airport_convo:
         pause 0.75
 
         scene v11laac2 # FPP. Show MC tapping Lauren's shoulder, she has her back turned to him, MC is very close to her now
-        with dissolve 
+        with dissolve
 
         pause 0.75
 
@@ -201,7 +201,7 @@ label v11_lauren_airport_convo:
 
         u "Like?"
 
-        if lauren.relationship.value >= Relationship.KISS.value:
+        if lauren.relationship >= Relationship.KISS:
             scene v11laac2g # FPP. Same as v11laac2e, Lauren has a slightly seductive look, mouth open
             with dissolve
 
@@ -259,7 +259,7 @@ label v11_lauren_airport_convo:
 
         la "Time to go."
 
-    elif lauren.relationship.value >= Relationship.KISS.value: #and not plane sex scene
+    elif lauren.relationship >= Relationship.KISS: #and not plane sex scene
         scene v11laac1c 
         with dissolve
 

@@ -14,6 +14,7 @@ label v10_leave_fight:
             with dissolve
 
             u "(What a fucking day! Definitely didn't expect any of this when I came to college. So many ups, so many downs. Crazy shit.)"
+
         else:
             scene v10sraf1b # TPP. Same camera as v10swaf1. Show MC sitting on the bed in his room. MC looks disappointed, mouth closed.
             with dissolve
@@ -23,6 +24,7 @@ label v10_leave_fight:
         if v10_ryan_fight:
             scene v10sraf1c # TPP. Same camera as v10swaf1. Show MC sitting on bed in his room. MC reacts to someone knocking on his door.
             with dissolve
+
             play sound "sounds/knock.mp3"
 
             pause 0.5
@@ -145,6 +147,7 @@ label v10_leave_fight:
             with dissolve
 
             u "(What a fucking day! Definitely didn't expect any of this when I came to college. So many ups, so many downs. Crazy shit.)"
+
         else:
             scene v10sraf4b # TPP. Same camera as v10sraf4. Show MC sitting on the bed in his room. MC looks disappointed, mouth closed.
             with dissolve

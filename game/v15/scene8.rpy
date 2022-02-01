@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s8:
+    play music "music/v13/Track Scene 18.mp3" fadein 2
+
     scene v15s8_1 # TPP. Show MC walking into the planning board room with Chloe, both slight smile, mouth closed.
     with fade
 
@@ -36,7 +38,7 @@ label v15s8:
 
     u "Yes, ma'am."
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v15s8_3b # FPP. Same as v15s8_3a, Chloe flirting expression, mouth open.
         with dissolve
 
@@ -92,23 +94,26 @@ label v15s8:
 
         v15s8_chloe_kiwii = chloe_board.add_subtask("Sabotage",
             "Chloe posts the recording on Kiwii",
-            opinion="\"The final step to this awfully beautiful plan, is to upload the evidence to Kiwii. This is key. Once everyone hears wha horrible things she had to say, they'll come running my way.\"")
+            opinion="\"The final step to this awfully beautiful plan, is to upload the evidence to Kiwii. This is key. Once everyone hears what horrible things she had to say, they'll come running my way.\"")
 
         chloe_board.add_subtask("Sabotage",
             "Share the recording through the Dean's announcement system",
-            opinion="\"The final step is very important, so why not go big? I can get us access to the Dean's announcemnt system, and we can play your recording for the entire campus to hear.\"")
+            opinion="\"The final step is very important, so why not go big? I can get us access to the Dean's announcement system, and we can play your recording for the entire campus to hear.\"")
 
         v15s8_chloe_lee = chloe_board.add_subtask("Tuition",
             "Try and convince Mr. Lee to support you in front of the Dean on this",
-            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from some of the lecturers. I think Mr. Lee is our best bet, he's smart and very well respected. Although he can be hard to read.\"")
+            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from some of the lecturers. I think Mr. Lee is our best bet, he's smart and very well respected. Although he can be hard to read.\"",
+            people=[mr_lee])
 
         chloe_board.add_subtask("Tuition",
             "Try and convince Ms. Rose to support you in front of the Dean on this",
-            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from some of the lecturers. Ms. Rose could be worth a try. She's very empathetic, I just don't know how much she likes me...\"")
+            opinion="\"Before we throw this crazy idea out in front of the Dean, we need support from some of the lecturers. Ms. Rose could be worth a try. She's very empathetic, I just don't know how much she likes me...\"",
+            people=[ms_rose])
             
         chloe_board.add_task("Tuition",
             "Talk to the Dean with Mr. Lee or Ms. Rose's support",
-            opinion="\"Finally, we have a meeting with the Dean. If we can show that a lecturer supports our idea, we should be able to get her approval. \"")
+            opinion="\"Finally, we have a meeting with the Dean. If we can show that a lecturer supports our idea, we should be able to get her approval. \"",
+            people=[dean])
 
     call screen planning_board(chloe_board)
 
@@ -238,7 +243,7 @@ label v15s8:
 
         u "Right... Okay, whatever gets your juices flowing."
 
-        if chloe.relationship.value >= Relationship.FWB.value:
+        if chloe.relationship >= Relationship.FWB:
             scene v15s8_3b
             with dissolve
 
@@ -259,7 +264,7 @@ label v15s8:
 
     u "Bye, Chloe."
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v15s8_6 # FPP. Show Chloe getting close up and personal with MC, Chloe biting her lip, Flirting expression, mouth closed
         with dissolve
 
@@ -303,5 +308,7 @@ label v15s8:
     with fade
     
     pause 0.75
+
+    stop music fadeout 3
 
     jump v15s9

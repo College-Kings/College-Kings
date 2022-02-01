@@ -4,6 +4,8 @@
 # Time: Evening
 
 label v15s27: # -MC walks out of the Chicks house-
+    play music "music/v13/Track Scene 22.mp3" fadein 2
+
     scene v15s27_1 # TPP. Camera facing Chicks' front door with MC opening the door; MC neutral expression mouth closed.
     with dissolve
 
@@ -101,12 +103,12 @@ label v15s27: # -MC walks out of the Chicks house-
 
             u "*Laughs* Well, you are my two favorite girls, that's true..."
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value or chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND or chloe.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.TROUBLEMAKER)
                 
                 u "(Well, maybe in the top three...)"
             
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value and chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND and chloe.relationship >= Relationship.GIRLFRIEND:
                 u "(Or four... Wait, how many girlfriends do I have?)"
 
             scene v15s27_4a
@@ -229,4 +231,6 @@ label v15s27: # -MC walks out of the Chicks house-
     
     pause 0.75
 
-jump v15s28 # -Transition to Scene 28-
+    stop music fadeout 3
+
+    jump v15s28

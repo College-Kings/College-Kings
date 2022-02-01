@@ -411,11 +411,12 @@ label v10_mc_vs_imre_fight:
 
             jump v10_fight_result
 
-        "Don't Fight":
+        "Don't fight":
             scene v10mvi3 # FPP. Show Imre infront of camera in ring, mouth closed, hands raised ready to fight.
             with dissolve
 
             $ grant_achievement("bros_before_blows")
+            
             u "I don't think I can do this. I- I... I'm sorry guys."
 
             scene v10mvi4 # FPP. Show Close up from ring of Imre and grayson stood watching, Imre mouth open, Grayson mouth closed
@@ -439,6 +440,4 @@ label v10_mc_vs_imre_fight:
             
             stop music fadeout 3
 
-            jump v10_avoid_fight
-
-    # -Transition to Scene 8-
+            jump v10_avoid_fight # -Transition to Scene 8-

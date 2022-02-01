@@ -35,7 +35,7 @@ python early:
             import subprocess
             subprocess.call([os.path.join(config.basedir, "CollegeKings.exe")])
             renpy.quit()
-        except WindowsError:
+        except OSError:
             raise Exception("Deleting old files please RESTART GAME.")
 
     # Helper function
@@ -53,19 +53,27 @@ init 100 python:
     class MainCharacter(PlayableCharacter):
         pass
 
+    class Teacher(NonPlayableCharacter):
+        pass
+
 
 label after_load:
     python:
-        # SAVE FIXES:
+        # SAVE FIXES
+        ## Force developer mode off on load
+        config.developer = False
 
         # Disable skip transitions
         preferences.transitions = 2
 
-        renpy.music.stop(channel=u'music') ### temporary emergency break
+        ### renpy.music.stop(channel=u'music')
+        ### If using dummy files, don't need to stop music anymore
 
         ## PLAYABLE CHARACTERS
-        if isinstance(mc, FightCharacter):
+        if isinstance(mc, FightCharacter) or isinstance(mc, MainCharacter):
             mc = PlayableCharacter()
+
+        mc.__after_load__()
 
         try: mc.profile_picture
         except AttributeError: mc.profile_picture = profile_pictures[0]
@@ -128,6 +136,42 @@ label after_load:
         try: samantha
         except NameError: samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam")
 
+        if isinstance(chloe, CustomCharacter):
+            chloe = NonPlayableCharacter("Chloe", "Chloe101")
+        if isinstance(amber, CustomCharacter):
+            amber = NonPlayableCharacter("Amber", "Amber_xx")
+        if isinstance(penelope, CustomCharacter):
+            penelope = NonPlayableCharacter("Penelope", "Penelopeeps")
+        if isinstance(riley, CustomCharacter):
+            riley = NonPlayableCharacter("Riley", "RileyReads")
+        if isinstance(lindsey, CustomCharacter):
+            lindsey = NonPlayableCharacter("Lindsey", "LindsLou")
+        if isinstance(lauren, CustomCharacter):
+            lauren = NonPlayableCharacter("Lauren", "LoLoLauren")
+        if isinstance(emily, CustomCharacter):
+            emily = NonPlayableCharacter("Emily", "emilyyyy")
+        if isinstance(ms_rose, CustomCharacter):
+            ms_rose = NonPlayableCharacter("Ms Rose")
+        if isinstance(nora, CustomCharacter):
+            nora = NonPlayableCharacter("Nora", "Nora_12")
+        if isinstance(aubrey, CustomCharacter):
+            aubrey = NonPlayableCharacter("Aubrey", "Aubs123")
+        if isinstance(ryan, CustomCharacter):
+            ryan = NonPlayableCharacter("Ryan", "Ryanator")
+        if isinstance(imre, CustomCharacter):
+            imre = NonPlayableCharacter("Imre", "BadBoyImre")
+        if isinstance(chris, CustomCharacter):
+            chris = NonPlayableCharacter("Chris", "Chriscuit")
+        if isinstance(charli, CustomCharacter):
+            charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
+        if isinstance(cameron, CustomCharacter):
+            cameron = NonPlayableCharacter("Cameron", "Cameroon")
+        if isinstance(josh, CustomCharacter):
+            josh = NonPlayableCharacter("Josh", "Josh80085")
+
+        for character in NonPlayableCharacter.characters.values():
+            character.__after_load__()
+
         ## Relationship types
         try:
             if kissamber: amber.relationship = Relationship.KISS
@@ -144,10 +188,6 @@ label after_load:
         try:
             if aubreyrs: aubrey.relationship = Relationship.FWB
             del aubreyrs
-        except NameError: pass
-        try:
-            if AutumnTrust: autumn.relationship = Relationship.TRUST
-            del AutumnTrust
         except NameError: pass
         try:
             if cameronBro: cameron.relationship = Relationship.BRO
@@ -174,7 +214,7 @@ label after_load:
             del emmyrs
         except NameError: pass
         try:
-            if "v13_emmy" in sceneList and emmy.relationship.value < Relationship.FWB.value: emmy.relationship = Relationship.FWB
+            if "v13_emmy" in sceneList: emmy.relationship = Relationship.FWB
         except NameError: pass
         try:
             if evelyndate: evelyn.relationship = Relationship.DATE
@@ -268,64 +308,6 @@ label after_load:
             if "v14_samantha" in sceneList: samantha.relationship = Relationship.FWB
         except NameError: pass
 
-        if isinstance(chloe, CustomCharacter):
-            chloe = NonPlayableCharacter("Chloe", "Chloe101")
-        if isinstance(amber, CustomCharacter):
-            amber = NonPlayableCharacter("Amber", "Amber_xx")
-        if isinstance(penelope, CustomCharacter):
-            penelope = NonPlayableCharacter("Penelope", "Penelopeeps")
-        if isinstance(riley, CustomCharacter):
-            riley = NonPlayableCharacter("Riley", "RileyReads")
-        if isinstance(lindsey, CustomCharacter):
-            lindsey = NonPlayableCharacter("Lindsey", "LindsLou")
-        if isinstance(lauren, CustomCharacter):
-            lauren = NonPlayableCharacter("Lauren", "LoLoLauren")
-        if isinstance(emily, CustomCharacter):
-            emily = NonPlayableCharacter("Emily", "emilyyyy")
-        if isinstance(ms_rose, CustomCharacter):
-            ms_rose = NonPlayableCharacter("Ms Rose")
-        if isinstance(nora, CustomCharacter):
-            nora = NonPlayableCharacter("Nora", "Nora_12")
-        if isinstance(aubrey, CustomCharacter):
-            aubrey = NonPlayableCharacter("Aubrey", "Aubs123")
-        if isinstance(ryan, CustomCharacter):
-            ryan = NonPlayableCharacter("Ryan", "Ryanator")
-        if isinstance(imre, CustomCharacter):
-            imre = NonPlayableCharacter("Imre", "BadBoyImre")
-        if isinstance(chris, CustomCharacter):
-            chris = NonPlayableCharacter("Chris", "Chriscuit")
-        if isinstance(charli, CustomCharacter):
-            charli = NonPlayableCharacter("Charli", "CharliAndTheCockFactory")
-        if isinstance(cameron, CustomCharacter):
-            cameron = NonPlayableCharacter("Cameron", "Cameroon")
-        if isinstance(josh, CustomCharacter):
-            josh = NonPlayableCharacter("Josh", "Josh80085")
-
-        for character in (
-            chloe,
-            amber,
-            penelope,
-            riley,
-            lindsey,
-            lauren,
-            emily,
-            ms_rose,
-            nora,
-            aubrey,
-            ryan,
-            imre,
-            chris,
-            charli,
-            cameron,
-            josh,
-            julia,
-            evelyn,
-            autumn,
-            sebastian,
-            grayson,
-            jenny,
-        ):
-            character.__after_load__()
 
         chloe.username = "Chloe101"
         amber.username = "Amber_xx"
@@ -355,6 +337,8 @@ label after_load:
         naomi.username = "NaomiXMarie"
         samantha.username = "SamFromSpaceJam"
 
+        if chloe.relationship == 4:
+            chloe.relationship = Relationship.MAD
 
         ## PHONE
         ### APPLICATIONS
@@ -378,13 +362,14 @@ label after_load:
             kiwii.contacts = []
             del kiwiiApp
         except NameError:
-            if kiwii is False:
-                kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=True)
+            kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=False)
 
-        # Transfer simplrApp to simplr_app
-        try:
-            simplr_app.locked = simplrApp.locked
-        except NameError: pass
+        # Unlock simplr_app
+        simplr_app.unlock()
+
+        for app in phone.applications.copy():
+            if not isinstance(app, Application):
+                phone.applications.remove(app)
 
         ### MESSENGER
         #### MESSENGER CONTRACTS
@@ -810,10 +795,14 @@ label after_load:
             del simplr_Emmy
         except NameError: pass
 
-        for contact in simplr_contacts + simplr_pendingContacts:            
-            contact.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/1.webp".format(contact.name.lower())]
+        for contact in (simplr_contacts + simplr_pendingContacts):
             for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, contact.name.lower(), "large_profile_pictures")):
                 contact.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(contact.name.lower(), filename) for filename in filenames]
+
+            try: contact.pending_messages
+            except AttributeError:
+                contact.pending_messages = contact.pendingMessages
+                del contact.pendingMessages
 
             try: contact.sent_messages
             except AttributeError:
@@ -901,6 +890,12 @@ label after_load:
         except NameError: pass
         try:
             if v7_seencrowning: freeroam4.add("crowning")
+        except NameError: pass
+        try:
+            if v13s37_frnora: freeroam11.add("nora")
+        except NameError: pass
+        try:
+            if v9_sex_with_riley: sceneList.add("v9_riley")
         except NameError: pass
 
 
@@ -1058,56 +1053,122 @@ label after_load:
         try: v14_ryan_satin
         except NameError: v14_ryan_satin = False
 
+        # v1502 fixes:
+        
+        if chloe.relationship == Relationship.MAD.value:
+            chloe.relationship = Relationship.MAD
 
-        # Before main menu redundancy
-            ## Phone setup
-        phone.applications = []
-        phone.applications.append(messenger)
-        phone.applications.append(stats_app)
-        phone.applications.append(achievement_app)
-        phone.applications.append(kiwii)
-        phone.applications.append(simplr_app)
+        if renpy.loadable("v15/scene1.rpy") and not v1502fix:
+       
+            if ms_rose.relationship == Relationship.FRIEND:
+                if v15_threaten_ms_rose:
+                    ms_rose.relationship = Relationship.THREATEN
+                
+                elif any(scene in sceneList for scene in ("v11_rose", "v12_rose", "v15_rose")):
+                    ms_rose.relationship = Relationship.FWB
+            
+            if chloe.relationship == Relationship.FRIEND:
+                if chloeSus > 1 + v15s7_chloe_empathize:
+                    chloe.relationship = Relationship.GIRLFRIEND
+                
+                elif meetchloe and hcGirl == "chloe" and ending == "chloe":
+                    chloe.relationship = Relationship.GIRLFRIEND # don't have another way of checking if the question was asked, so we'll give this status for free
+                
+                elif any(scene in sceneList for scene in ("v8_chloe", "v10_chloe", "v11_chloe", "v13_chloe", "v14_chloe")):
+                    chloe.relationship = Relationship.FWB
+                
+                elif chloeSus == 1 + v15s7_chloe_empathize:
+                    chloe.relationship = Relationship.FWB
+            
+            if emily.relationship == Relationship.FRIEND:
+                if any(scene in sceneList for scene in ("v6_emily", "v9_emily", "v13_emily")):
+                    emily.relationship = Relationship.FWB
+                
+            if riley.relationship == Relationship.LOYAL:
+                riley.relationship = Relationship.FRIEND
+                RileyLoyal = True
+            
+            if riley.relationship == Relationship.FRIEND:
+                if any(scene in sceneList for scene in ("v7_riley", "v8_riley", "v9_riley", "v10_riley", "v11_riley", "v13_riley")):
+                    riley.relationship = Relationship.FWB
+                
+                elif "riley" in hcAsked:
+                    riley.relationship = Relationship.LIKES # technically it should be MOVE, but we're feeling generous
+            
+            if aubrey.relationship == Relationship.FRIEND:
+                if "v15_naomi" in sceneList:
+                    aubrey.relationship = Relationship.MAD
+                
+                elif RileyLoyal:
+                    if any(scene in sceneList for scene in ("v3_aubrey", "v6_aubrey")):
+                        aubrey.relationship = Relationship.FWB
+                
+                elif v13s48_canoeing_as_date and v15s9_wedding_date:
+                    aubrey.relationship = Relationship.TAMED
+                
+                elif "v3_aubrey" in sceneList or "v6_aubrey" in sceneList:
+                    aubrey.relationship = Relationship.FWB
+            
+            if lauren.relationship == Relationship.FRIEND:
+                if any(scene in sceneList for scene in ("v10_lauren", "v12_lauren")):
+                    lauren.relationship = Relationship.GIRLFRIEND
+                
+                # elif lauren.points >= 4 or (lauren.points == 2 and v11_hp_points < 3) or (lauren.points == 0 and v11_hp_points < 2) or (lauren.points == -2 and v11_hp_points == 0): lauren.relationship = Relationship.GIRLFRIEND
+                elif lauren.points >= v11_hp_points * 2 - 2 and not "v11_aubrey" in sceneList and not (len(freeroam7) == 0) and not (lauren.points == 0 and v11_hp_points == 0):
+                    lauren.relationship = Relationship.GIRLFRIEND
+                                
+                elif "v15_lauren" in sceneList:
+                    lauren.relationship = Relationship.FWB
 
-            ## Set up murder mystery stats
-        chloe.stats["Competitive"] = True
-        chloe.stats["Vindictive"] = [nora]
+            if lauren.relationship == Relationship.GIRLFRIEND:
+                if autumn.relationship == Relationship.FWB:
+                    autumn.relationship = Relationship.LOYAL
+                    
+            if autumn.relationship == Relationship.FRIEND:
+                if AutumnTrust:
+                    autumn.relationship = Relationship.LOYAL
+            
+            if amber.relationship == Relationship.FRIEND:
+                if any(scene in sceneList for scene in ("v8_amber", "v8_amber2", "v10_amber", "v14_amber")):
+                    amber.relationship = Relationship.FWB
+                
+            if jenny.relationship == Relationship.FRIEND:
+                if "v14_jenny" in sceneList:
+                    jenny.relationship = Relationship.FWB
+                
+            if lindsey.relationship == Relationship.FRIEND:
+                if "v12_lindsey" in sceneList:
+                    lindsey.relationship = Relationship.FWB
 
-        amber.stats["Competitive"] = amber.stats["Talkative"] = True
-        amber.stats["Vindictive"] = [riley]
+                elif "v9_lindsey" in sceneList:
+                    lindsey.relationship = Relationship.KISS
+            
+            if samantha.relationship == Relationship.FRIEND:
+                if "v14_samantha" in sceneList: samantha.relationship = Relationship.FWB
 
-        riley.stats["Competitive"] = riley.stats["Talkative"] = True
+                elif "v11_samantha" in sceneList: samanatha.relationship = Relationship.MOVE
+            
+            if candy.relationship == Relationship.FRIEND:
+                if "v11_candy" in sceneList:
+                    candy.relationship = Relationship.FWB
 
-        lindsey.stats["Competitive"] = lindsey.stats["Talkative"] = True
-        lindsey.stats["Vindictive"] = [chloe]
+            if penelope.relationship == Relationship.FRIEND:
+                if v14_penelope_date and not (v15s18a_showlist_penelope_autumn and lauren.relationship == Relationship.GIRLFRIEND):
+                    penelope.relationship = Relationship.LOYAL
 
-        emily.stats["Talkative"] = False
+                elif v14_penelope_date:
+                    penelope.relationship = Relationship.LIKES
 
-        nora.stats["Talkative"] = True
-        nora.stats["Vindictive"] = [chris, chloe]
+            v1502fix = True
 
-        aubrey.stats["Competitive"] = True
+        setup()
 
-        ryan.stats["Vindictive"] = [imre]
-
-        imre.stats["Competitive"] = False
-        imre.stats["Vindictive"] = [ryan]
-
-        chris.stats["Competitive"] = chris.stats["Talkative"] = False
-
-        charli.stats["Competitive"] = True
-        charli.stats["Talkative"] = False
-
-        josh.stats["Competitive"] = True
-
-    show no_hard_feelings at achievementShow
-    $ achievementAtList = renpy.get_at_list("no_hard_feelings")
-    hide no_hard_feelings
-
-    show screen phone_icon
-    hide screen getaccess
-    hide screen phone
+    hide screen reply
+    hide screen simplr_reply
 
     if config.developer:
         show screen bugTesting_Overlay
+    else:
+        hide screen bugTesting_Overlay
 
     return

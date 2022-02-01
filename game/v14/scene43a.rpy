@@ -11,7 +11,7 @@ label v14s43a:
 
     play music "music/v12/Track Scene 13.mp3" fadein 2
 
-    if penelope.relationship.value >= Relationship.LOYAL.value:
+    if penelope.relationship >= Relationship.LOYAL:
         scene v14s43a_2 # TPP. Show MC and Penelope walking together, holding hands, smiling, mouths closed, different location to v14s43a_1
         with dissolve
 

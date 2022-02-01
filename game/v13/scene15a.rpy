@@ -73,17 +73,14 @@ label v13s15a:
 
     ri "It's because I still don't sit right with it..."
 
-    scene v13s15a_6d
-    with dissolve
-
     ri "I wanna make sure I balance the scale, you know?"
 
-    scene v13s15a_6c
+    scene v13s15a_6d
     with dissolve
 
     u "I hear you."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value and not v11_lauren_caught_aubrey: #if healthy lauren relationship
+    if lauren.relationship >= Relationship.GIRLFRIEND and not v11_lauren_caught_aubrey: #if healthy lauren relationship
         play sound "sounds/vibrate.mp3"
 
         scene v13s15a_7 # TPP. MC looking down at his phone, he is standing in same place as v13s15a_6, slightly surprised, mouth closed
@@ -126,7 +123,7 @@ label v13s15a:
         u "Yeah?"
 
         if config_censored:
-            call screen censoredPopup("v13s15a_nsfwSkipLabel1")
+            call screen censored_popup("v13s15a_nsfwSkipLabel1")
 
         scene v13s15a_6g # FPP. Same as v13s15a_6f, Riley sexy look, mouth open
         with dissolve
@@ -249,7 +246,7 @@ label v13s15a:
         u "How so?"
 
         if config_censored:
-            call screen censoredPopup("v13s15a_nsfwSkipLabel1")
+            call screen censored_popup("v13s15a_nsfwSkipLabel1")
 
         scene v13s15a_6j
         with dissolve

@@ -5,13 +5,15 @@
 # Render Count: 17 unique 148 total
 
 label v15s21:
+    play music "music/v13/Track Scene 8.mp3" fadein 2
+
     if v15_chloe_mrleesupport:
         if kct == "loyal":
             $ v15s21_meeting_points += 1
 
         $ animated_value_percent = (v15s21_meeting_points + 4) * 10
 
-        scene v15s21_1 # FPP. Mr . Lee enters the library, slight smile, mouth closed
+        scene v15s21_1 # FPP. Mr. Lee enters the library, slight smile, mouth closed
         with dissolve
 
         pause 0.75
@@ -21,7 +23,7 @@ label v15s21:
 
         cl "Here he is."
 
-        $ renpy.get_screen("v15_teacher_brief_icon").scope["opened_count"] = 0 # reset counter
+        $ v15s20_teacher_brief_open_count = 0 # reset counter
         scene v15s21_3 # FPP. Mr. Lee approaches them slight smile mouth open, Chloe and MC stand up, Chloe slight smile, mouth closed
         with dissolve
 
@@ -592,7 +594,7 @@ label v15s21:
 
         u "*Sighs* Okay, is there anything else?"
 
-        if v15_took_notes and renpy.get_screen("v15_teacher_brief_icon").scope["opened_count"] >= 5: # -if TookNotes and clicks on the journal five times- #
+        if v15_took_notes and v15s20_teacher_brief_open_count >= 5: # -if TookNotes and clicks on the journal five times- #
             scene v15s21_6c
             with dissolve
 
@@ -771,7 +773,7 @@ label v15s21:
 
         hide screen v15_teacher_brief_icon
 
-        if v15s21_meeting_points >= 5: #TBD optimal difficulty level
+        if v15s21_meeting_points >= 5:
             if v15s21_meeting_points == 5 and kct == "loyal":
                 call screen kct_popup
                 
@@ -814,7 +816,7 @@ label v15s21:
             scene v15s21_6h
             with dissolve
 
-            lee "You weren't 100% convincing throughout the meeting..."
+            lee "You weren't 100\% convincing throughout the meeting..."
 
             scene v15s21_7g
             with dissolve
@@ -868,6 +870,9 @@ label v15s21:
             cl "You'll sign?"
 
         else:
+            if v15s21_meeting_points == 0 and not kct == "loyal":
+                call screen kct_popup(required_kct="loyal")
+        
             scene v15s21_6h
             with dissolve
 
@@ -922,7 +927,9 @@ label v15s21:
 
             pause 0.75
 
-            jump v15s22 # -Transition to Scene 22-
+            stop music fadeout 3
+
+            jump v15s22
 
         scene v15s21_6
         with dissolve
@@ -1080,7 +1087,9 @@ label v15s21:
 
         pause 0.75
 
-        jump v15s22 # -Transition to Scene 22-
+        stop music fadeout 3
+
+        jump v15s22
 
     else: # -if meeting Ms. Rose
         if kct == "confident":
@@ -1115,7 +1124,7 @@ label v15s21:
 
             u "(Don't think about sex, don't think about sex, don't think abou-)"
 
-        $ renpy.get_screen("v15_teacher_brief_icon").scope["opened_count"] = 0 # reset counter
+        $ v15s20_teacher_brief_open_count = 0 # reset counter
         scene v15s21_10b # FPP. same as v15s21_10a Ms. Rose looking at Chloe slight smile mouth open, Chloe looking at Ms. Rose slight smile mouth closed
         with dissolve
 
@@ -1138,7 +1147,7 @@ label v15s21:
 
         ro "Oh! Very organized... Impressive."
 
-        if ms_rose.relationship.value >= Relationship.FWB.value:
+        if ms_rose.relationship >= Relationship.FWB:
             scene v15s21_10d # FPP. Chloe is walking away with her back turned and can't see Mc or Ms. Rose, Ms. Rose is giving Mc a wink, slight smile, mouth closed
             with dissolve
             
@@ -1156,7 +1165,7 @@ label v15s21:
 
         show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
 
-        if ms_rose.relationship.value >= Relationship.FWB.value:
+        if ms_rose.relationship >= Relationship.FWB:
             $ v15s21_meeting_points += 2
 
             show screen teacher_conviction_bar((v15s21_meeting_points + 4) * 100 / 11, "MS. ROSE")
@@ -1625,7 +1634,7 @@ label v15s21:
 
         u "Okay. Well..."
 
-        if v15_took_notes and renpy.get_screen("v15_teacher_brief_icon").scope["opened_count"] >= 5: # -if TookNotes and clicks on the journal five times-:
+        if v15_took_notes and v15s20_teacher_brief_open_count >= 5: # -if TookNotes and clicks on the journal five times-:
             scene v15s21_13n
             with dissolve
 
@@ -1689,7 +1698,7 @@ label v15s21:
 
             ro "Oh, it's okay! Thank you. It was actually a gift that [name] and Nora gave to me before we left Europe."
 
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 $ chloeSus += 1
 
                 scene v15s21_7v # FPP. same as v15s21_7s Chloe raises an eyebrow, still slightly angry, still lookng at mc, mouth is still closed
@@ -1737,7 +1746,7 @@ label v15s21:
 
         hide screen v15_teacher_brief_icon
 
-        if v15s21_meeting_points >= 5: #TBD optimal difficulty level
+        if v15s21_meeting_points >= 5:
             if v15s21_meeting_points == 5 and kct == "confident":
                 call screen kct_popup
         
@@ -1841,6 +1850,9 @@ label v15s21:
             pause 0.75
 
         else:
+            if v15s21_meeting_points == 0 and not kct == "confident":
+                call screen kct_popup(required_kct="confident")
+        
             scene v15s21_13p # FPP. same as v15s21_13o Ms. Rose has a disapointed expression, mouth is open, still looking at Chloe
             with dissolve
 
@@ -1898,7 +1910,9 @@ label v15s21:
 
             pause 0.75
 
-            jump v15s22 # -Transition to Scene 22-
+            stop music fadeout 3
+
+            jump v15s22
 
         scene v15s21_13
         with dissolve
@@ -1972,7 +1986,7 @@ label v15s21:
 
         u "Chloe..."
 
-        if ms_rose.relationship.value >= Relationship.FWB.value:
+        if ms_rose.relationship >= Relationship.FWB:
             u "(I won't feel great about it, but if I can get Chloe to give me a few moments alone with Ms. Rose...)"
             u "(...I might be able to get exactly what we want from her. No special conditions.)"
 
@@ -2006,8 +2020,8 @@ label v15s21:
 
                     u "I know. Trust me."
 
-                    if kct == "popular" or chloe.relationship.value >= Relationship.GIRLFRIEND.value:
-                        if chloe.relationship.value < Relationship.GIRLFRIEND.value:
+                    if kct == "popular" or chloe.relationship >= Relationship.GIRLFRIEND:
+                        if chloe.relationship < Relationship.GIRLFRIEND:
                             call screen kct_popup
 
                         scene v15s21_7y
@@ -2058,7 +2072,7 @@ label v15s21:
                                 $ v15_seduce_ms_rose = True
                                 $ add_point(KCT.BRO)
                                 
-                                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                if chloe.relationship >= Relationship.GIRLFRIEND:
                                     $ add_point(KCT.TROUBLEMAKER)
                                 else:
                                     $ add_point(KCT.BOYFRIEND)
@@ -2135,10 +2149,12 @@ label v15s21:
 
                                 ro "[name], stop... You're making me horny."
 
+                                play sound "sounds/kiss.mp3"
+
                                 scene v15s21_15 # TPP. Show Ms. Rose sitting in her chair from previous renders, Mc is standing above her, and pulls her in for a passionate kiss
                                 with dissolve
 
-                                pause 0.75
+                                pause 1.5
 
                                 scene v15s21_15a # TPP. same as v15s21_15 Ms. Rose and Mc are no longer kissing, Ms. Rose grasps Mc's shirt and pulls him close to whisper in his ear her mouth is open, Mc looks proud of himself mouth is closed
                                 with dissolve
@@ -2190,7 +2206,9 @@ label v15s21:
 
                                 ro "I'll see you soon, handsome."
 
-                                jump v15s22 # -Transition to Scene 22-
+                                stop music fadeout 3
+
+                                jump v15s22
 
                             "Threaten Ms. Rose":
                                 $ v15_threaten_ms_rose = True
@@ -2338,9 +2356,13 @@ label v15s21:
 
                                 pause 0.75
 
-                                jump v15s22 # -Transition to Scene 22-
+                                stop music fadeout 3
+
+                                jump v15s22
 
                     else:
+                        call screen kct_popup(required_kct="popular")
+                    
                         scene v15s21_7a
                         with dissolve
 
@@ -2421,4 +2443,6 @@ label v15s21:
 
         pause 0.75
 
-        jump v15s22 # -Transition to Scene 22-
+        stop music fadeout 3
+
+        jump v15s22

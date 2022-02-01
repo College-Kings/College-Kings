@@ -491,7 +491,7 @@ label v11s28a_galleryScene:
     pause 1.25
 
     if config_censored:
-        call screen censoredPopup("v11s28a_nsfwSkipLabel1")
+        call screen censored_popup("v11s28a_nsfwSkipLabel1")
 
     scene v11sas13d # FPP. Same as v11sas13c, Samantha with no bra, seductive look, mouth closed
     with dissolve

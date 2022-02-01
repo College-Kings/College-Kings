@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s4:
+    play music "music/v13/Track Scene 21.mp3" fadein 2
+
     scene v15s4_1 # TPP. Show MC walking up to the main entrance of the dog shelter, slight smile, mouth closed.
     with fade
 
@@ -341,7 +343,7 @@ label v15s4:
 
             u "You? Or the dog?"
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.TROUBLEMAKER)
                 
                 scene v15s4_13
@@ -572,15 +574,85 @@ label v15s4:
             scene v15s4_12a
             with dissolve
 
-            u "He looks like a [dog_name] to me."
+            if dog_name.lower()[0] in ("a", "e", "i", "o"):
+                u "He looks like an [dog_name] to me."
+            else:
+                u "He looks like a [dog_name] to me."
 
-            if dog_name == name or dog_name.lower() == "autumn":
+            if dog_name.lower() == "oscar":
+                scene v15s4_12
+                with dissolve
+
+                aut "[dog_name]?!"
+
+                aut "We already had one, I don't want to get confused. *Chuckles*"
+                
+                aut "Try a different name."
+                
+                jump v15s4_dog
+
+            if dog_name.lower() == name.lower():
+                scene v15s4_12
+                with dissolve
+
+                aut "[dog_name]?!"
+
+                aut "Well, you two do look a bit alike. *Laughs*"
+
+                scene v15s4_12a
+                with dissolve
+
+                u "Hahahah."
+
+            elif dog_name.lower() in ("autumn", "lauren"):
                 scene v15s4_12
                 with dissolve
 
                 aut "[dog_name]?!"
 
                 aut "You're an idiot."
+
+                scene v15s4_12a
+                with dissolve
+
+                u "Hahahah."
+
+            elif dog_name.lower() in ("black", "grey", "gray", "pink", "white", "green", "red", "yellow", "orange", "purple", "brown"):
+                scene v15s4_12
+                with dissolve
+
+                aut "[dog_name]?!"
+
+                scene v15s4_12a
+                with dissolve
+                
+                u "I thought I'd give him a new coat of paint."
+
+                scene v15s4_12
+                with dissolve
+
+                aut "*Laughs*"
+
+            elif dog_name.lower() in ("fido", "rover", "buddy"):
+                scene v15s4_12
+                with dissolve
+
+                aut "[dog_name]?!"
+
+                aut "That's so original... *Chuckles*"
+
+                scene v15s4_12a
+                with dissolve
+
+                u "Hahahah."
+
+            elif len(dog_name.lower()) > 20:
+                scene v15s4_12
+                with dissolve
+
+                aut "[dog_name]?!"
+
+                aut "That's a mouthful. I'll try to remember it."
 
                 scene v15s4_12a
                 with dissolve
@@ -740,7 +812,7 @@ label v15s4:
 
             u "(Can you blame me?) Sorry, I got distracted."
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 scene v15s4_24b
                 with dissolve
 
@@ -1597,7 +1669,7 @@ label v15s4:
 
         aut "So, If you found something similar to that, she'd probably die. *Laughs*"
 
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        if lauren.relationship >= Relationship.GIRLFRIEND:
             aut "But she's never gotten jewelry from a boyfriend before, and she's always mentioning that. So, either way I think you're good."
 
         scene v15s4_59
@@ -1682,7 +1754,11 @@ label v15s4:
         pause 1
 
     if "v12_rose" in sceneList:
+        stop music fadeout 3
+    
         jump v15s5
 
     else:
+        stop music fadeout 3
+    
         jump v15s6

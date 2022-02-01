@@ -169,7 +169,7 @@ label v9_thur_w_punch:
 
         jump v9_thur_room_w_seb_cont1
         
-    elif kct != "loyal":
+    else:
         scene v9trs5b
         with dissolve
 

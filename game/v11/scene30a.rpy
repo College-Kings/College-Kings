@@ -151,7 +151,7 @@ label v11_lauren_apology:
     pause 0.75
 
     scene v11laa11 # TPP. Show MC walking through the lobby, sad, mouth closed
-    with dissolve 
+    with dissolve
 
     u "(Fuck man, I've gotta clear my fucking head.)"
 

@@ -4,6 +4,8 @@
 # Time: Afternoon
 
 label v15s14:
+    play music "music/v13/Track Scene 39a.mp3" fadein 2
+
     scene v15s14_1 # TPP. Show MC walking out of the College building, slight smile, mouth closed
     with dissolve
 
@@ -148,5 +150,7 @@ label v15s14:
     with dissolve
 
     pause 1
+
+    stop music fadeout 3
 
     jump v15s15

@@ -3,10 +3,17 @@
 # Characters: MC (Outfit: Stripper Costume), AUBREY (Outfit: Clown Costume), RYAN (Outfit: Elvis Costume), AUTUMN (Outfit: Mummy), PENELOPE (Outfit: Sexy Witch), LAUREN (Outfit: Spider necklace costume), IMRE (Outfit: Cowboy Costume), RILEY (Outfit: Schoolgirl Costume), CHRIS (Outfit: Boxer Costume), AMBER (Outfit: Black bloody nurse costume)
 # Time: Night
 
+init python:
+    def v15s18a_kiwiireply1():
+        v15s18a_kiwiiPost3.newComment(lauren, _("Hehe, thank you!! You guys are the best <3"), numberLikes=renpy.random.randint(1060, 2260))
+        v15s18a_kiwiiPost3.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(1860, 3060))
+
+    def v15s18a_kiwiireply2():
+        v15s18a_kiwiiPost4.newComment(lauren, _("Hahaha! Thank you guys <3"), numberLikes=renpy.random.randint(1060, 2260))
+        v15s18a_kiwiiPost4.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(1860, 3060))
+
 label v15s18a:
-    # -Refer to images on Miro for exact placement, but Downstairs: Aubrey at the bar, Imre & Lauren on the couch, Riley in the kitchen, Chris & Amber on bar stools at kitchen counter; Upstairs: Ryan in the bathroom, Autumn & Penelope in Autumn's bedroom
-    # -Clickable Objects (placement is irrelevant to plot, available to click on during both free roams): A bronze deer statue, A photo of Autumn and Lauren, A carved Halloween pumpkin, A Deer scarf wall hanging-
-    # -Characters are greyed out after they are spoken too besides Lauren. She needs to stay highlighted as she is the way to end the free roam-
+    play music "music/v13/Track Scene 24_2.mp3" fadein 2
 
     $ v15s18a_kiwiiPost1 = KiwiiPost(lauren, "v15/v15_lapost1.webp", _("Feeling one year older ;)"), numberLikes=854)
     $ v15s18a_kiwiiPost1.newComment(lindsey, _("Holy fuck, babe! You look spectacular, I hope you have the most amazing birthday <3"), numberLikes=renpy.random.randint(360, 660), force_send=True)
@@ -90,7 +97,7 @@ label v15s18a_Aubrey:
 
     au "Hey, I'm not complaining. I'm sure all the girls are enjoying the view."
 
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if aubrey.relationship >= Relationship.FWB:
         scene v15s18aaub_2d # FPP. MC sitting on the stool next to Aubrey, Aubrey looking at MC's face, flirty, mouth open
         with dissolve
 
@@ -208,7 +215,7 @@ label v15s18a_Aubrey:
 
     u "Haha, that's a good thing, right?"
 
-    if aubrey.relationship.value >= Relationship.FWB.value:
+    if aubrey.relationship >= Relationship.FWB:
         scene v15s18aaub_2a
         with dissolve
 
@@ -367,9 +374,7 @@ label v15s18a_Aubrey:
         else:
             $ v15s18a_kiwiiPost3.newComment(grayson, _("What the fuck...?"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
         $ v15s18a_kiwiiPost3.addReply(_("Lol, I love this. Happy birthday Lauren!"), numberLikes=renpy.random.randint(1060, 2260), mentions=[lauren])
-        $ v15s18a_kiwiiPost3.newComment(lauren, _("Hehe, thank you!! You guys are the best <3"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
-        $ v15s18a_kiwiiPost3.addReply(_("Now taking appointments... ;)"), numberLikes=renpy.random.randint(1060, 2260))
-        $ v15s18a_kiwiiPost3.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(1860, 3060), force_send=True)
+        $ v15s18a_kiwiiPost3.addReply(_("Now taking appointments... ;)"), v15s18a_kiwiireply1, numberLikes=renpy.random.randint(1060, 2260))
 
     else:
         $ v15s18a_kiwiiPost4 = KiwiiPost(aubrey, "v15/v15_aupost2.webp", _("I think something's wrong with our stripper... Is he supposed to be this sad? </3"), numberLikes=2415)
@@ -380,9 +385,7 @@ label v15s18a_Aubrey:
         else:
             $ v15s18a_kiwiiPost4.newComment(grayson, _("What the fuck is this"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
         $ v15s18a_kiwiiPost4.addReply(_("Sigh... Happy birthday Lauren! Lol"), numberLikes=renpy.random.randint(1060, 2260), mentions=[lauren])
-        $ v15s18a_kiwiiPost4.newComment(lauren, _("Hahaha! Thank you guys <3"), numberLikes=renpy.random.randint(1060, 2260), force_send=True)
-        $ v15s18a_kiwiiPost4.addReply(_("Now taking appointments... ;)"), numberLikes=renpy.random.randint(1060, 2260))
-        $ v15s18a_kiwiiPost4.newComment(naomi, _("Can I book you for my birthday party, too? ;D"), numberLikes=renpy.random.randint(1860, 3060), force_send=True)
+        $ v15s18a_kiwiiPost4.addReply(_("Now taking appointments... ;)"), v15s18a_kiwiireply2, numberLikes=renpy.random.randint(1060, 2260))
     
     call screen v15s18a_bar
 
@@ -433,7 +436,6 @@ label v15s18a_Ryan:
     
     menu:
         "Gag":
-            $ add_point(KCT.BOYFRIEND)
             $ v15s18a_gag = True
             $ add_point(KCT.BOYFRIEND)
 
@@ -775,6 +777,9 @@ label v15s18a_AutumPenelope:
         with dissolve
 
         aut "Yeah! From Blue to [dog_name]."
+        
+        if dog_name.lower() in ("autumn", "lauren", "penelope") or dog_name.lower() == name.lower():
+            aut "Don't ask..."
 
     scene v15s18apen_6b
     with dissolve
@@ -975,7 +980,7 @@ label v15s18a_AutumPenelope:
 
             pe "Umm, yeah! Especially while you're wearing that stripper costume... *Giggles*"
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 scene v15s18apen_7a
                 with dissolve
 
@@ -996,8 +1001,8 @@ label v15s18a_AutumPenelope:
 
                 u "Yeah, we're together."
 
-                if penelope.relationship.value >= Relationship.LOYAL.value:
-                    $ penelope.relationship.value >= Relationship.LIKES.value
+                if penelope.relationship >= Relationship.LOYAL:
+                    $ penelope.relationship = Relationship.LIKES
 
                     scene v15s18apen_6k # FPP. MC looking at Penelope, Penelope looking at MC, Penelope slight sad face, mouth open.
                     with dissolve
@@ -1009,7 +1014,7 @@ label v15s18a_AutumPenelope:
 
                     u "Pen-"
 
-                elif penelope.relationship.value >= Relationship.LIKES.value:
+                elif penelope.relationship >= Relationship.LIKES:
                     scene v15s18apen_6k
                     with dissolve
 
@@ -1154,7 +1159,7 @@ label v15s18a_ImreLauren:
 
     la "Hey there, half-naked man!"
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18aimre_4
         with dissolve
 
@@ -1164,19 +1169,25 @@ label v15s18a_ImreLauren:
         with dissolve
 
         la "Haha... *Whispers* Save it for the bedroom."
+        
+        play sound "sounds/kiss.mp3"
 
         scene v15s18aimre_4b # FPP. MC sitting down next to Lauren, Lauren kissing MC, Imre in the background, Imre slight smile, mouth closed.
         with dissolve
         
-        pause 0.75
+        pause 1.5
 
         if v13_imre_disloyal:
+            play sound "sounds/kiss.mp3"
+        
             scene v15s18aimre_5 # TPP. Show MC and Lauren kissing on the couch, Imre unamused face, mouth open.
             with dissolve
 
             imre "*Scoffs*"
 
         else:
+            play sound "sounds/kiss.mp3"
+        
             scene v15s18aimre_5a # TPP. Show MC and Lauren kissing on the couch, Imre slight smile, mouth open. 
             with dissolve
 
@@ -1281,7 +1292,7 @@ label v15s18a_ImreLauren:
 
     pause 0.75
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v15s18aimre_6a
         with dissolve
 
@@ -1306,7 +1317,7 @@ label v15s18a_ImreLauren:
 
             la "Challenges? Like what?"
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND:
                 scene v15s18aimre_6d # FPP. Imre looking at MC, MC looking at Imre, Lauren looking at MC, Lauren confused, mouth closed, Imre guilty, mouth open.
                 with dissolve
 
@@ -1324,7 +1335,6 @@ label v15s18a_ImreLauren:
 
         "Lie": 
             $ add_point(KCT.TROUBLEMAKER)
-            $ v15s18a_lie = True
             
             scene v15s18aimre_6a
             with dissolve
@@ -1368,7 +1378,7 @@ label v15s18a_Riley:
     scene v15s18ariley_1 # FPP. MC looking at the Kitchen area, Food and plates out, Riley carrying plates to the part of the counter by the fridge, Riley looks stressed, mouth closed.
     #with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v15s18ariley_1a # FPP. MC looking at the Kitchen area, Riley putting down the plates on the counter.
     with dissolve
@@ -1693,6 +1703,7 @@ label v15s18a_Riley:
 
         "Yeah, I do":
             $ add_point(KCT.TROUBLEMAKER)
+            $ v15s18a_riley_bj = True
             
             scene v15s18ariley_2i
             with dissolve
@@ -1759,12 +1770,17 @@ label v15s18a_Riley:
 
             pause 0.75
 
-            scene v15s18ariley_9 # TPP. Upskirt of Riley's outfit from behind.
-            with dissolve
+            if not config_censored:
+                scene v15s18ariley_9 # TPP. Upskirt of Riley's outfit from behind.
+                with dissolve
 
-            pause 0.75
+                pause 0.75
 
             play sound "sounds/dooropen.mp3"
+
+            stop music fadeout 3
+            
+            play music "music/v14/Track Scene 25a_1.mp3" fadein 2
 
             scene v15s18ariley_10 # TPP. Show Riley entering the Guest room and MC right behind her, both slight smile, mouth closed.
             with dissolve
@@ -1783,12 +1799,12 @@ label v15s18a_Riley:
 
             pause 0.75
 
-            play sound "sounds/kiss.mp3"
-
             scene v15s18ariley_13 # FPP. MC laying in the bed, Riley laying next to him and kissing him.
             with dissolve
 
             pause 0.75
+
+            play sound "sounds/kiss.mp3"
 
             scene v15s18ariley_14 # TPP. MC laying on the bed and Riley laying next to him them kissing.
             with dissolve
@@ -1800,10 +1816,16 @@ label v15s18a_Riley:
             image v15rileyhj2 = Movie(play="images/v15/Scene 18a/v15rileyhj2.webm", loop=True, image="images/v15/Scene 18a/v15rileyhj2Start.webp", start_image="images/v15/Scene 18a/v15rileyhj2Start.webp")
             image v15rileyhj2f = Movie(play="images/v15/Scene 18a/v15rileyhj2f.webm", loop=True, image="images/v15/Scene 18a/v15rileyhj2Start.webp", start_image="images/v15/Scene 18a/v15rileyhj2Start.webp") 
 
+            if config_censored:
+                call screen censored_popup("v15s18a_nsfwSkipLabelR")
+
             scene v15rileyhj # Ignore as animation
             with dissolve
 
             pause 0.75
+
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18a/Scene 18a - ri_hj_slow_2loops.mp3", loop=True)
 
             u "*Moans*"
 
@@ -1811,6 +1833,9 @@ label v15s18a_Riley:
 
             scene v15rileyhjf # Ignore as animation
             with dissolve
+
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18a/Scene 18a - ri_hj_fast_4loops.mp3", loop=True)
 
             pause 0.75
 
@@ -1820,6 +1845,9 @@ label v15s18a_Riley:
 
             scene v15rileyhj # Ignore as animation
             with dissolve
+
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18a/Scene 18a - ri_hj_slow_2loops.mp3", loop=True)
 
             pause 0.75
 
@@ -1832,9 +1860,14 @@ label v15s18a_Riley:
 
             pause 0.75
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18a/Scene 18a - ri_hj_fast_4loops.mp3", loop=True)
+
             ri "*Giggles* What was that?"
 
             u "Mmm, mix... I like a good mix..."
+
+            stop sound
 
             scene v15s18ariley_13a # FPP. Riley laying close to MC her hand on his dick, Riley looking at MC, MC looking at Riley, Riley smirking, mouth open.
             with dissolve
@@ -1861,6 +1894,8 @@ label v15s18a_Riley:
 
             u "It is. You're a naughty-"
 
+            play sound "sounds/kiss.mp3"
+
             scene v15s18ariley_16 # TPP. Close up of Riley kissing MC's neck
             with dissolve
 
@@ -1869,11 +1904,17 @@ label v15s18a_Riley:
             scene v15rileyhj2 # Ignore as animation
             with dissolve
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18a/Scene 18a - ri_hj_slow_2loops.mp3", loop=True)
+
             pause 0.75
 
             u "Keep going... Just like that..."
 
             ri "Like this?"
+
+            stop sound
+            
 
             scene v15s18ariley_13b
             with dissolve
@@ -1887,11 +1928,16 @@ label v15s18a_Riley:
             scene v15rileyhj2f # Ignore as animation
             with dissolve
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18a/Scene 18a - ri_hj_fast_4loops.mp3", loop=True)
+
             pause 0.75
 
             ri "Yeah?"
 
             ri "You're gonna cum for me?"
+
+            stop sound
 
             scene v15s18ariley_13c # FPP. Riley laying close to MC her hand on his dick, Riley's other hand on MC's cheek, Riley looking at MC, MC looking at Riley, Riley biting her lip, mouth closed.
             with dissolve
@@ -1903,7 +1949,12 @@ label v15s18a_Riley:
             scene v15rileyhj2f # Ignore as animation
             with dissolve
 
+            if voice_acted:
+                $ renpy.sound.play("voice/v15/s18a/Scene 18a - ri_hj_fast_4loops.mp3", loop=True)
+
             pause 0.75
+
+            stop sound
 
             scene v15s18ariley_17 # TPP. MC cumming onto Riley's hand
             with dissolve
@@ -1942,6 +1993,8 @@ label v15s18a_Riley:
 
             u "Yeah, sounds good."
 
+            label v15s18a_nsfwSkipLabelR:
+
             scene v15s18ariley_13e # FPP. Show Riley getting off the bed, slight smile, mouth closed.
             with dissolve
 
@@ -1968,10 +2021,16 @@ label v15s18a_Riley:
 
             $ renpy.end_replay()
             
+            stop music fadeout 3
+            
+            play music "music/v13/Track Scene 24_2.mp3" fadein 2
+            
             scene v15s18ariley_12a # TPP. MC putting his costume back on, slight smile, mouth closed.
             with dissolve
 
             pause 0
+            
+            call screen v15s18a_upstairsroom
 
     call screen v15s18a_kitchen
 
@@ -2160,6 +2219,8 @@ label v15s18a_ChrisAmber:
                 with dissolve
 
                 am "Okay, good luck. I'll find you later."
+                
+                call screen v15s18a_room
 
             "Mention the list":
                 $ add_point(KCT.TROUBLEMAKER)
@@ -2196,8 +2257,8 @@ label v15s18a_ChrisAmber:
 
                 am "Ha, yes!"
 
-                if kct == "popular" or amber.relationship.value >= Relationship.FWB.value:
-                    if amber.relationship.value < Relationship.FWB.value:
+                if kct == "popular" or amber.relationship >= Relationship.FWB:
+                    if amber.relationship < Relationship.FWB:
                         call screen kct_popup
                     
                     label v15s18a_ambersg:
@@ -2224,10 +2285,15 @@ label v15s18a_ChrisAmber:
 
                     pause 0.75
 
-                    scene v15s18aamber_7 # FPP. MC focusing in on Amber's ass as they go up the stairs
-                    with dissolve
+                    if not config_censored:
+                        scene v15s18aamber_7 # FPP. MC focusing in on Amber's ass as they go up the stairs
+                        with dissolve
 
-                    pause 0.75
+                        pause 0.75
+
+                    stop music fadeout 3
+                    
+                    play music "music/v12/Track Scene 23_2.mp3" fadein 2
 
                     scene v15s18aamber_8 # FPP. MC and Amber on the Balcony, MC looking at Amber, Amber looking at MC, Amber smirking, mouth closed.
                     with fade
@@ -2259,6 +2325,9 @@ label v15s18a_ChrisAmber:
 
                     pause 0.75
                     
+                    if config_censored:
+                        call screen censored_popup("v15s18a_nsfwSkipLabelAmb")
+
                     scene v15s18aamber_9b # FPP. MC looking down as Amber is on her knees infront of him, MC's bottom part of his costume around his ankles and his dick is out infront of Amber's face.
                     with dissolve
 
@@ -2274,11 +2343,16 @@ label v15s18a_ChrisAmber:
 
                     pause 0.75
 
+                    if voice_acted:
+                        $ renpy.sound.play("voice/v15/s18a/Scene 18a - am_bj_slow_2loops.mp3", loop=True)
+
                     am "Mmmm..."
 
                     u "Oh, yes..."
 
                     u "Ssssshit, Amber..."
+
+                    stop sound
 
                     scene v15s18aamber_9d # FPP. MC looking down at Amber on her knees, Amber has all of MC's dick in her mouth, MC's hand holding the back of her head
                     with dissolve
@@ -2290,14 +2364,19 @@ label v15s18a_ChrisAmber:
 
                     am "*Gagging*"
 
-                    scene v15amberbjf # Ignore as animation.
+                    scene v15amberbj2 # Ignore as animation.
                     with dissolve
+
+                    if voice_acted:
+                        $ renpy.sound.play("voice/v15/s18a/Scene 18a - am_bj_slow_2loops.mp3", loop=True)
 
                     pause 0.75
 
                     u "*Moans* Take all of me."
 
                     am "Mmm..."
+
+                    stop sound
 
                     scene v15s18aamber_9f # FPP. MC looking down at Amber, Amber not sucking his dick at the moment, Amber looking up at MC, Amber smirking, mouth open.
                     with dissolve
@@ -2309,8 +2388,11 @@ label v15s18a_ChrisAmber:
 
                     u "Ha, you can have it whenever you want."
 
-                    scene v15amberbj2 # Ignore as animation
+                    scene v15amberbjf # Ignore as animation
                     with dissolve
+
+                    if voice_acted:
+                        $ renpy.sound.play("voice/v15/s18a/Scene 18a - am_bj_fast_4loops.mp3", loop=True)
 
                     pause 0.75
 
@@ -2321,6 +2403,8 @@ label v15s18a_ChrisAmber:
                     u "You like that?"
 
                     am "Mhmm!"
+
+                    stop sound
 
                     scene v15s18aamber_9h # FPP. MC looking down at Amber, Amber's lips on MC's dick, MC's hand on the top of her head.
                     with dissolve
@@ -2335,6 +2419,9 @@ label v15s18a_ChrisAmber:
                     scene v15amberbj2f # Ignore as animation
                     with dissolve
 
+                    if voice_acted:
+                        $ renpy.sound.play("voice/v15/s18a/Scene 18a - am_bj_fast_4loops.mp3", loop=True)
+
                     pause 0.75
 
                     u "I'm going to cum... Amber..."
@@ -2344,6 +2431,8 @@ label v15s18a_ChrisAmber:
                     am "Mmm!"
 
                     u "Yes, Amber... Yes... *Moans*"
+
+                    stop sound
 
                     scene v15s18aamber_9e
                     with vpunch
@@ -2359,6 +2448,8 @@ label v15s18a_ChrisAmber:
                     with dissolve
 
                     pause 0.75
+
+                    label v15s18a_nsfwSkipLabelAmb:
 
                     scene v15s18aamber_11 # TPP. Just Amber wiping her mouth, slight smile, mouth closed.
                     with dissolve
@@ -2395,7 +2486,7 @@ label v15s18a_ChrisAmber:
                     scene v15s18aamber_12 # FPP. MC watching Amber walking back in the house.
                     with dissolve
 
-                    $ sceneList.add("v18_amber")
+                    $ sceneList.add("v15_amber")
 
                     if not _in_replay:
                         $ checklist[2].complete = True
@@ -2407,12 +2498,18 @@ label v15s18a_ChrisAmber:
 
                     pause 0.75
 
+                    stop music fadeout 3
+                    
+                    play music "music/v13/Track Scene 24_2.mp3" fadein 2
+
                     scene v15s18aamber_14 # TPP. Show Mc walking back inside the house, slight smile, mouth closed.
                     with dissolve
 
                     $ renpy.end_replay()
 
                     pause 0
+                    
+                    call screen v15s18a_upstairsroom
 
                 else:
                     call screen kct_popup(required_kct="popular")
@@ -2429,7 +2526,7 @@ label v15s18a_ChrisAmber:
 
                     am "Good luck!"
 
-        call screen v15s18a_upstairsroom
+                    call screen v15s18a_room
 
 # Upstairs
 # Location 7- Upstairs hallway
@@ -2498,4 +2595,6 @@ label v15s18a_Pumpkin:
 label v15s18a_end:
 
     # End freeroam screen
+    stop music fadeout 3
+    
     jump v15s18b

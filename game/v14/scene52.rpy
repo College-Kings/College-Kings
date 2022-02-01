@@ -220,7 +220,7 @@ label v14s52:
     if "v12_nora" in sceneList: ###addition just in case rs variable was not triggered
         $ nora.relationship = Relationship.FWB
 
-    if nora.relationship.value >= Relationship.FWB.value:
+    if nora.relationship >= Relationship.FWB:
         scene v14s52_12
         with dissolve
 
@@ -440,7 +440,6 @@ label v14s52:
     u "(What the fuck does that mean?!)"
 
     if v13_imre_disloyal:
-
         scene v14s52_17 # FPP. show a full size image of mc's wolves bedroom door closed
         with dissolve
 

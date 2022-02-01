@@ -5,6 +5,8 @@
 # Render Count: Unique 26 Total 113
 
 label v15s39:
+    play music "music/v13/Track Scene 14a_1.mp3" fadein 2
+
     scene v15s39_1 # TPP. Lindsey, Mc, first in line followed by, Autmun, and Aubrey are shown entering the club, all slight smiles, all mouths closed, all looking forward towards the club entrance. Have them in a staggered formation so it's believable that other characters are possibly off screen because either grayson or sebastian can be in this scene. But at this point don't show grayson or sebastian
     with dissolve
 
@@ -35,12 +37,12 @@ label v15s39:
     scene v15s39_5 # FPP. Show the BW standing up looking down at Mc, slight smile, mouth is open
     with dissolve
 
-    barworker "So happy to see you all tonight. Welcome to the Mango Lounge VIP area!"
+    bartender "So happy to see you all tonight. Welcome to the Mango Lounge VIP area!"
 
     if v15_lindsey_alcohol:
-        barworker "We have a full range of drinks for you tonight, from beer to prosecco to tequila, even cocktails, all included in your VIP party package."
+        bartender "We have a full range of drinks for you tonight, from beer to prosecco to tequila, even cocktails, all included in your VIP party package."
 
-        barworker "Just give me a few minutes and I'll be back with your glasses."
+        bartender "Just give me a few minutes and I'll be back with your glasses."
 
         if v15_lindsey_alcohol:
             $ set_presidency_percent(v14_lindsey_popularity + 5)
@@ -83,12 +85,12 @@ label v15s39:
         scene v15s39_5a # FPP. same as v15s39_5 BW has no expression, still looking at MC, mouth is still open
         with dissolve
 
-        barworker "I've been informed that you're underage, so although we can't serve you our normal alcoholic line-up..."
+        bartender "I've been informed that you're underage, so although we can't serve you our normal alcoholic line-up..."
 
         scene v15s39_5
         with dissolve
 
-        barworker "We do have a wide range of juices and sodas, and we can also create mocktails."
+        bartender "We do have a wide range of juices and sodas, and we can also create mocktails."
 
         if v15_lindsey_inviteseb:
             scene v15s39_7b # FPP. same as v15s39_7 Sebastian is now looking at the BW's location, raised eyebrow, mouth is still open, still a slight smile
@@ -99,7 +101,7 @@ label v15s39:
             scene v15s39_5d # FPP. same as v15s39_5b BW has a slight smile, Still looking at Sebastian/Grayson's position, Still don't show sebastian or Grayson, mouth is still open
             with dissolve
 
-            barworker "Yes, exactly. We do have a wide range to choose from."
+            bartender "Yes, exactly. We do have a wide range to choose from."
 
             scene v15s39_5c
             with dissolve
@@ -114,7 +116,7 @@ label v15s39:
             scene v15s39_5d
             with dissolve
 
-            barworker "Very well! I'll be right back with your drinks."
+            bartender "Very well! I'll be right back with your drinks."
 
         else:
             scene v15s39_6b # FPP. same as v15s39_6 Show Grayson looking up towards where the BW is standing, aggravated expression, mouth is still open
@@ -125,7 +127,7 @@ label v15s39:
             scene v15s39_5b # FPP. same as v15s39_5 BW is looking towards Grayson/Sebastian's seating location, don't show sebastian or grayson, annoyed expression, mouth is open
             with dissolve
 
-            barworker "Would you prefer a mocktail, sir?"
+            bartender "Would you prefer a mocktail, sir?"
 
             scene v15s39_6b
             with dissolve
@@ -135,7 +137,7 @@ label v15s39:
             scene v15s39_5b
             with dissolve
 
-            barworker "They're cocktails without alcohol."
+            bartender "They're cocktails without alcohol."
 
             scene v15s39_5c # FPP. same as v15s39_5 BW's mouth is closed, still a slight smile, still looking at MC
             with dissolve
@@ -155,7 +157,7 @@ label v15s39:
             scene v15s39_5b
             with dissolve
 
-            barworker "...Yes. I'll be back in a bit."
+            bartender "...Yes. I'll be back in a bit."
 
     scene v15s39_8h # FPP. same as v15s39_8a Lindsey is now looking at MC, still a slight smile, mouth is still closed
     with dissolve
@@ -210,16 +212,19 @@ label v15s39:
 
         se "Oh, yeah. I was on the phone for hours with these people trying to get a cheaper price. It's close to a thousand bucks."
 
-        scene v15s39_7c
-        with dissolve
-
-        u "(Damn right it is.)"
-
         if not v15_lindsey_alcohol:
             scene v15s39_7
             with dissolve
 
             se "But since it's mocktails instead, it might have been cheaper."
+
+        scene v15s39_7c
+        with dissolve
+
+        u "(Damn right it was expensive.)"
+
+        if not v15s25_price == 800:
+            u "(Luckily we could get the price down.)"
 
     elif v15_lindsey_alcohol:
         scene v15s39_6c # FPP. same as v15s39_6 Grayson is looking at Autumn's location, still a slight snmile, mouth is still open
@@ -311,6 +316,30 @@ label v15s39:
 
         u "(So, they are really, really good friends. Interesting...)"
 
+        if v14_chloe_wolves or not v14_help_chloe: # If helping Chloe and chose Wolves path, or not helping Chloe at all (default is Wolves path)
+            if v14_chloe_wolves:
+                u "(Even after we've just gotten the Wolves' support for Chloe's campaign, he's still here for his friend.)"
+
+                u "(I should speak for myself, I'm also leading the double agent life, ha!)"
+            
+            else:
+                u "(Even after Chloe just announced the Wolves as her official brotherhood, he's still here for his friend.)"
+            
+            if joinwolves:
+                u "(I hope this doesn't cause a rift back at the house...)"
+
+            else:
+                u "(I wonder if this will influence how the Wolves will behave...)"
+                
+        if v14_help_chloe and not v14_chloe_wolves:
+            u "(This might just help balance the scales after we got the Apes' support for Chloe.)"
+
+            if joinwolves:
+                u "(At least I thought we had their support, that picture was a low blow...)"
+
+            elif v14_ApesPostChloePics:
+                u "(Though after that picture I'm not sure what Grayson is thinking anymore.)"
+
     else:
         scene v15s39_6f # FPP. same as v15s39_6b Grayson is looking at Lindsey, still aggravated, mouth is still open.
         with dissolve
@@ -336,7 +365,7 @@ label v15s39:
 
     li "Like, what has she ever actually done for you, herself?"
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v15s39_8b
         with dissolve
 
@@ -532,7 +561,7 @@ label v15s39:
                 "Shots!":
                     $ add_point(KCT.TROUBLEMAKER)
 
-                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                    if chloe.relationship >= Relationship.GIRLFRIEND:
                         $ add_point(KCT.BOYFRIEND)
 
                     scene v15s39_8b
@@ -624,16 +653,16 @@ label v15s39:
 
                     u "(Now is the time to strike if we're gonna do this...)"
 
-                    menu (fail_label="v15_change_subject"): 
+                    menu (fail_label="v15s39_change_subject"): 
                         "Change subject":
-                            label v15_change_subject:
+                            label v15s39_change_subject:
                             
                             $ add_point(KCT.BRO)
 
                             if hangOutWithLindsey:
                                 $ add_point(KCT.BOYFRIEND)
 
-                            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                            if chloe.relationship >= Relationship.GIRLFRIEND:
                                 $ add_point(KCT.TROUBLEMAKER)
 
                             scene v15s39_8c
@@ -675,10 +704,11 @@ label v15s39:
                         "Stay on topic":
                             $ add_point(KCT.TROUBLEMAKER)
                             $ v15_stay_on_topic = True
-                            $ v15_lindsey_recording = 2
 
-                            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                            if chloe.relationship >= Relationship.GIRLFRIEND:
                                 $ add_point(KCT.BOYFRIEND)
+
+                            $ v15_lindsey_recording = 4
 
                             scene v15s39_8c
                             with dissolve
@@ -739,16 +769,16 @@ label v15s39:
 
                             li "*Drunk* I mean no wonder she's such a bitch all the time..."
 
-                            menu (fail_label="v15_stop_lindsey"):
+                            menu (fail_label="v15s39_stop_lindsey"):
                                 "Stop Lindsey":
-                                    label v15_stop_lindsey:
+                                    label v15s39_stop_lindsey:
                                     
                                     $ add_point(KCT.BRO)
 
                                     if hangOutWithLindsey:
                                         $ add_point(KCT.BOYFRIEND)
 
-                                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                    if chloe.relationship >= Relationship.GIRLFRIEND:
                                         $ add_point(KCT.TROUBLEMAKER)
 
                                     scene v15s39_8n # FPP. same as v15s39_8b Lindsey appears drunk, her face is flushed, she now has a full smile, mouth is still closed, still looking at MC
@@ -784,10 +814,12 @@ label v15s39:
                                     li "*Drunk* Yeah, okay, let's go dance! Wooo!"
 
                                 "Say nothing":
+                                    $ v15_lindsey_recording = 5
+
                                     $ add_point(KCT.TROUBLEMAKER)
                                     $ v15_say_nothing = True
 
-                                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                                    if chloe.relationship >= Relationship.GIRLFRIEND:
                                         $ add_point(KCT.BOYFRIEND)
 
                                     scene v15s39_8n # FPP. same as v15s39_8b Lindsey appears drunk, her face is flushed, she now has a full smile, mouth is still closed, still looking at MC
@@ -918,7 +950,7 @@ label v15s39:
             menu:
                 "Try to trick her":
                     # KCT POINTS BELOW, AFTER CHECK
-                
+
                     scene v15s39_8b
                     with dissolve
 
@@ -974,7 +1006,7 @@ label v15s39:
                     u "(Sorry Aubrey... I'm trying to start a storm here.)"
 
                     if kct == "popular":
-                        $ v15_lindsey_recording = 1
+                        $ v15_lindsey_recording = 6
                         
                         scene v15s39_8i
                         with dissolve
@@ -1048,7 +1080,7 @@ label v15s39:
 
                     $ add_point(KCT.TROUBLEMAKER)
 
-                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                    if chloe.relationship >= Relationship.GIRLFRIEND:
                         $ add_point(KCT.BOYFRIEND)
 
                     scene v15s39_12
@@ -1069,7 +1101,7 @@ label v15s39:
                 "Don't risk it":
                     $ add_point(KCT.BRO)
 
-                    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                    if chloe.relationship >= Relationship.GIRLFRIEND:
                         $ add_point(KCT.TROUBLEMAKER)
 
                     if hangOutWithLindsey:
@@ -1174,6 +1206,10 @@ label v15s39:
 
         pause 0.75
 
+    stop music fadeout 3
+    
+    play music "music/v13/Track Scene 27_2.mp3" fadein 2
+
     scene v15s39_23 # TPP. MC exits the club. Lindsey and Aubrey are ahead of him, getting into the limo
     with fade
 
@@ -1209,17 +1245,19 @@ label v15s39:
 
     pause 0.75
 
-    $ v15s39_kiwiiPost1= KiwiiPost(lindsey, "v15_linpost1.webp", "Having the most luxurious night! #VIPs", numberLikes=931)
-    $ v15s39_kiwiiPost1.newComment(imre, "The fuck? Where's my invite?", numberLikes=renpy.random.randint(360, 860))
-    $ v15s39_kiwiiPost1.newComment(lauren, "That looks so fun... Where are you guys?!", numberLikes=renpy.random.randint(360, 860))
+    $ v15s39_kiwiiPost1= KiwiiPost(lindsey, "v15/v15_linpost2.webp", "Having the most luxurious night! #VIPs", numberLikes=931)
+    $ v15s39_kiwiiPost1.newComment(imre, "The fuck? Where's my invite?", numberLikes=renpy.random.randint(360, 860), force_send=True)
+    $ v15s39_kiwiiPost1.newComment(lauren, "That looks so fun... Where are you guys?!", numberLikes=renpy.random.randint(360, 860), force_send=True)
 
     if v15_lindsey_inviteseb:
-        $ v15s39_kiwiiPost1.newComment(sebastian, "No idea, but a really sick nightclub, haha! Lindsey planned this amazing night, thank you Lindsey!", numberLikes=renpy.random.randint(360, 860))
+        $ v15s39_kiwiiPost1.newComment(sebastian, "No idea, but a really sick nightclub, haha! Lindsey planned this amazing night, thank you Lindsey!", numberLikes=renpy.random.randint(360, 860), force_send=True)
     else:
-        $ v15s39_kiwiiPost1.newComment(grayson, "Wouldn't you like to know? Haha! Thanks for the night out, Lindsey.", numberLikes=renpy.random.randint(360, 860))
+        $ v15s39_kiwiiPost1.newComment(grayson, "Wouldn't you like to know? Haha! Thanks for the night out, Lindsey.", numberLikes=renpy.random.randint(360, 860), force_send=True)
 
-    $ v15s39_kiwiiPost1.newComment(lindsey, "You're welcome guys! I wish we could've brought more people... Next time everyone goes.", numberLikes=renpy.random.randint(360, 860))
+    $ v15s39_kiwiiPost1.newComment(lindsey, "You're welcome guys! I wish we could've brought more people... Next time everyone goes.", numberLikes=renpy.random.randint(360, 860), force_send=True)
     $ v15s39_kiwiiPost1.addReply("Next time? I need a nap... Lol.", numberLikes=renpy.random.randint(360, 860))
     $ v15s39_kiwiiPost1.addReply("Let me know when, I'm down!", numberLikes=renpy.random.randint(360, 860))
+
+    stop music fadeout 3
 
     jump v15s40

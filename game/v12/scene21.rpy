@@ -272,7 +272,7 @@ label v12_nora_exploring:
 
             no "Look lady, your home has been chosen for inspection by King [name]."
 
-            if nora.relationship.value >= Relationship.LIKES.value:
+            if nora.relationship >= Relationship.LIKES:
                 scene v12noe6b
                 with dissolve
 
@@ -330,7 +330,7 @@ label v12_nora_exploring:
 
             clady "I'm not homeless, you're on my lawn right now! Take your wife and leave this instant."
 
-            if nora.relationship.value >= Relationship.LIKES.value:
+            if nora.relationship >= Relationship.LIKES:
                 scene v12noe6d
                 with dissolve
 
@@ -372,7 +372,7 @@ label v12_nora_exploring:
 
     pause 0.75
 
-    if nora.relationship.value >= Relationship.LIKES.value:
+    if nora.relationship >= Relationship.LIKES:
         scene v12noe10 # FPP. Nora and MC stop walking, they're on the sidewalk, looking at each other, Nora slight smile, avoiding eye contact, blushing, mouth closed
         with dissolve
 

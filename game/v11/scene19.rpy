@@ -20,7 +20,7 @@ label v11_roommate:
 
         pause 0.75
 
-        if chloe.relationship.value <= Relationship.MAD.value:
+        if chloe.relationship <= Relationship.MAD:
             scene v11rm4 # FPP. MC is now in talking distance to Chloe, Chloe is now looking at MC, Chloe is slightly annoyed, mouth closed (make sure counter is in backrgound)
             with dissolve
 
@@ -91,7 +91,7 @@ label v11_roommate:
 
             cl "[name], it's late."
 
-        elif chloe.relationship.value >= Relationship.FWB.value:
+        elif chloe.relationship >= Relationship.FWB:
             scene v11rm4f
             with dissolve
 
@@ -207,8 +207,8 @@ label v11_roommate:
 
             cl "Goodnight."
 
-            $ v11s19_kiwiiPost2 = KiwiiPost(chloe, "v11/v11_chloemcselfie.webp", _("My Europe roommate!"), numberLikes=256)
-            $ v11s19_kiwiiPost2.newComment(aubrey, _("Look at you two!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+            $ v11s19_kiwiiPost2 = KiwiiPost(chloe, "v11/v11_chloemcselfie.webp", _("My Europe roommate!"), numberLikes=756)
+            $ v11s19_kiwiiPost2.newComment(aubrey, _("Look at you two!"), numberLikes=renpy.random.randint(100, 200), force_send=True)
             $ v11s19_kiwiiPost2.addReply(_("I think I made the correct choice of roommate ;)"), numberLikes=321)
             $ v11s19_kiwiiPost2.addReply(_("Glad to have you as my roommate Chloe!"), numberLikes=334)
 
@@ -318,8 +318,8 @@ label v11_roommate:
 
             cl "Haha, just like that."
 
-            $ v11s19_kiwiiPost1 = KiwiiPost(chloe, "v11/v11_chloemcselfie.webp", _("My Europe roommate!"), numberLikes=256)
-            $ v11s19_kiwiiPost1.newComment(aubrey, _("Look at you two!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+            $ v11s19_kiwiiPost1 = KiwiiPost(chloe, "v11/v11_chloemcselfie.webp", _("My Europe roommate!"), numberLikes=756)
+            $ v11s19_kiwiiPost1.newComment(aubrey, _("Look at you two!"), numberLikes=renpy.random.randint(100, 200), force_send=True)
             $ v11s19_kiwiiPost1.addReply(_("I think I made the correct choice of roommate ;)"), numberLikes=321)
             $ v11s19_kiwiiPost1.addReply(_("Glad to have you as my roommate Chloe!"), numberLikes=334)
 
@@ -377,7 +377,7 @@ label v11_roommate:
 
         ri "Ready to go check out this treasure hunt?"
 
-        if chloe.relationship.value >= Relationship.FWB.value:
+        if chloe.relationship >= Relationship.FWB:
             scene v11rm12 # FPP. MC still standing by the door, he looks back at Chloe who is still sleeping, show some of her boobs slipping out from her outfit (Day)
             with dissolve
 
@@ -412,7 +412,7 @@ label v11_roommate:
 
         pause 0.75
 
-        if riley.relationship.value < Relationship.FWB.value:
+        if riley.relationship < Relationship.FWB:
             scene v11rm14 # FPP. MC is now in talking distance to Riley, Riley is now looking at MC, Riley is smiling, mouth closed (make sure counter is in backrgound)
             with dissolve
 
@@ -893,7 +893,7 @@ label v11_roommate:
                     ri "...And all of a sudden I'm tired. *Chuckles*"
 
         $ v11s19_kiwiiPost3 = KiwiiPost(riley, "v11/v11_rileymcselfie.webp", _("Roll on Europe!"), numberLikes=456)
-        $ v11s19_kiwiiPost3.newComment(ryan, _("Good roommate pick!"), numberLikes=renpy.random.randint(15, 35), force_send=True)
+        $ v11s19_kiwiiPost3.newComment(ryan, _("Good roommate pick!"), numberLikes=renpy.random.randint(100, 300), force_send=True)
         $ v11s19_kiwiiPost3.addReply(_("Europe's gonna be a blast!"), numberLikes=321)
         $ v11s19_kiwiiPost3.addReply(_("Glad to have you as my roommate Riley!"), numberLikes=334)
 

@@ -198,6 +198,9 @@ label v13_start:
             $ add_point(KCT.BOYFRIEND)
             $ riley.points += 1
 
+            scene v13s1_3d
+            #with dissolve
+
             u "It's fine Riley, really. Of course I was pissed at first, it's a little upsetting to have one of your best friends calling you a liar but... I can't stay mad at you forever. Apology accepted."
 
             scene v13s1_3c

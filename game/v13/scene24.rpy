@@ -97,7 +97,7 @@ label v13s24:
 
         "Fuck yeah, let's mingle":
             $ add_point(KCT.BRO)
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value or lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND or lauren.relationship >= Relationship.GIRLFRIEND:
                 $ add_point(KCT.TROUBLEMAKER)
 
             scene v13s24_3a
@@ -376,21 +376,29 @@ label v13s24:
         "No kids for me":
             $ add_point(KCT.BRO)
             $ v13_emmy_points += 1
+            
+            scene v13s24_11a
+            #with dissolve
+
             u "Yeah, I'm on the no kids vibe at the moment too. Guess it's just not something I think about."
 
             scene v13s24_16d # FPP. same as v13s24_16b emmy head tilted, playing with her hair, happy smile
             with dissolve
 
-            pause
+            pause 0.75
 
         "I'm a family man":
             $ add_point(KCT.BOYFRIEND)
+            
+            scene v13s24_11a
+            #with dissolve
+            
             u "I'm a family man of course, a little bit of me continued through our generations. That's really what I'm all about."
 
             scene v13s24_16e # FPP. same as v13s24_16b emmy flirty smirk, squinting a little like she's trying to figure him out
             with dissolve
 
-            pause
+            pause 0.75
 
     scene v13s24_16
     with dissolve
@@ -752,7 +760,7 @@ label v13s24:
 
     barh "Right then... Ladies, go ahead and decide on your man. If you would be willing to go on a date with [name], please raise your hand."
 
-    if not emmy.relationship.value >= Relationship.LIKES.value and not kourtney.relationship.value >= Relationship.LIKES.value and not aryssa.relationship.value >= Relationship.LIKES.value:
+    if not emmy.relationship >= Relationship.LIKES and not kourtney.relationship >= Relationship.LIKES and not aryssa.relationship >= Relationship.LIKES:
         scene v13s24_20a # FPP. same as v13s24_20 emmy kourtney and aryssa looking in different directions, no expressions, hands MUST be at sides or in laps NOT raised, mouths closed
         with dissolve
 
@@ -763,7 +771,7 @@ label v13s24:
 
         pause 1
 
-    elif emmy.relationship.value >= Relationship.LIKES.value and kourtney.relationship.value >= Relationship.LIKES.value and aryssa.relationship.value >= Relationship.LIKES.value:
+    elif emmy.relationship >= Relationship.LIKES and kourtney.relationship >= Relationship.LIKES and aryssa.relationship >= Relationship.LIKES:
         scene v13s24_20b # FPP. same as v13s24_20 emmy kourtney and aryssa looking at MC, all with one hand raised, all fully smiling, all mouths closed
         with dissolve
 
@@ -779,37 +787,37 @@ label v13s24:
 
         pause 1
 
-    elif emmy.relationship.value >= Relationship.LIKES.value and kourtney.relationship.value >= Relationship.LIKES.value:
+    elif emmy.relationship >= Relationship.LIKES and kourtney.relationship >= Relationship.LIKES:
         scene v13s24_20c # FPP. same as v13s24_20b aryssa no expression and doesn't raise her hand
         with dissolve
 
         pause 2
 
-    elif emmy.relationship.value >= Relationship.LIKES.value and aryssa.relationship.value >= Relationship.LIKES.value:
+    elif emmy.relationship >= Relationship.LIKES and aryssa.relationship >= Relationship.LIKES:
         scene v13s24_20d # FPP. same as v13s24_20b kourtney no expression and doesn't raise her hand
         with dissolve
 
         pause 2
 
-    elif kourtney.relationship.value >= Relationship.LIKES.value and aryssa.relationship.value >= Relationship.LIKES.value:
+    elif kourtney.relationship >= Relationship.LIKES and aryssa.relationship >= Relationship.LIKES:
         scene v13s24_20e # FPP. same as v13s24_20b emmy no expression and doesn't raise her hand
         with dissolve
 
         pause 2
 
-    elif emmy.relationship.value >= Relationship.LIKES.value:
+    elif emmy.relationship >= Relationship.LIKES:
         scene v13s24_20f # FPP. same as v13s24_20b show just emmy raising her hand, full smile, mouth closed, 
         with dissolve
 
         pause 2
 
-    elif kourtney.relationship.value >= Relationship.LIKES.value:
+    elif kourtney.relationship >= Relationship.LIKES:
         scene v13s24_20g # FPP. same as v13s24_20b show just kourtney raising her hand, full smile, mouth closed, 
         with dissolve
 
         pause 2
 
-    elif aryssa.relationship.value >= Relationship.LIKES.value:
+    elif aryssa.relationship >= Relationship.LIKES:
         scene v13s24_20h # FPP. same as v13s24_20b show just aryssa raising her hand, full smile, mouth closed, 
         with dissolve
 
@@ -853,7 +861,7 @@ label v13s24:
     scene v13s24_12a
     with dissolve
 
-    if not emmy.relationship.value >= Relationship.LIKES.value and not kourtney.relationship.value >= Relationship.LIKES.value and not aryssa.relationship.value >= Relationship.LIKES.value:
+    if not emmy.relationship >= Relationship.LIKES and not kourtney.relationship >= Relationship.LIKES and not aryssa.relationship >= Relationship.LIKES:
         scene v13s24_12a
         with dissolve
 

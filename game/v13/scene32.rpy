@@ -22,7 +22,7 @@ label v13s32:
 
         la "I'm not here for your games Amber, but I am going to bed. *Chuckles*"
 
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+        if lauren.relationship >= Relationship.GIRLFRIEND:
             play sound "sounds/kiss.mp3"
             scene v13s32_4 # TPP. Show Lauren kissing MC
             with dissolve

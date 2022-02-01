@@ -164,7 +164,7 @@ label v14s30a:
 
     cl "Make us look good."
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v14s30a_5
         with dissolve
 

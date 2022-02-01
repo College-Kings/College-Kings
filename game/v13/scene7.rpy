@@ -256,7 +256,7 @@ label v13_ticket_transfer:
 
                     u "Of course. I can't wait for this."
 
-                    if penelope.relationship.value >= Relationship.LIKES.value:
+                    if penelope.relationship >= Relationship.LIKES:
                         scene v13s7_9 # TPP Show Penelope kissing MC
                         with dissolve
 
@@ -453,7 +453,7 @@ label v13_ticket_transfer:
 
         u "Haha, I can do that. Thanks for inviting me by the way."
 
-        if penelope.relationship.value >= Relationship.LIKES.value:
+        if penelope.relationship >= Relationship.LIKES:
             scene v13s7_8a
             with dissolve
 

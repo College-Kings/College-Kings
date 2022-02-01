@@ -19,7 +19,8 @@ screen tutorial(tutorial_text, position=(1046, 73)):
 
             imagebutton:
                 yalign 0.5
-                idle "tutorial_left_button_idle"
+                idle Transform(image_path + "left_button_idle.webp", zoom=0.6406)
+                hover Transform(image_path + "left_button_hover.webp", zoom=0.6406)
                 if page_number > 1:
                     action SetScreenVariable("page_number", page_number - 1)
                 else:
@@ -27,7 +28,8 @@ screen tutorial(tutorial_text, position=(1046, 73)):
 
             imagebutton:
                 align (1.0, 0.5)
-                idle "tutorial_right_button_idle"
+                idle Transform(image_path + "right_button_idle.webp", zoom=0.6406)
+                hover Transform(image_path + "right_button_hover.webp", zoom=0.6406)
                 if page_number < len(tutorial_text):
                     action SetScreenVariable("page_number", page_number + 1)
                 else:
@@ -41,4 +43,4 @@ style tutorial_text is text:
     size 23
     text_align 0.5
 
-style tutorial_page_number is druk_wide_bold_22
+style tutorial_page_number is syne_extra_bold_22

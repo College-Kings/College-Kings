@@ -83,7 +83,7 @@ label v14s31:
 
     pause 0.75
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v14s31_4a # TPP Same angle as 4, MC crossing his arms over his chest and looking worried
         with dissolve
 

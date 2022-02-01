@@ -305,7 +305,7 @@ label v13s34:
 
             clipps "I'm not intimidated."
 
-    scene v13s34_19 
+    scene v13s34_19
     with dissolve
 
     ri "AHHHH!"

@@ -23,7 +23,7 @@ label v10_econ_class:
     with dissolve
 
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v10eco4 # FPP. Show Lauren, Slight smile, mouth open
         with dissolve
 
@@ -57,7 +57,7 @@ label v10_econ_class:
 
         ry "Wait, you were out having fun and didn't invite your main brother?"
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v10eco4
         with dissolve
 
@@ -184,7 +184,7 @@ label v10_econ_class:
     with dissolve
 
     if joinwolves:
-        if ms_rose.relationship.value >= Relationship.KISS.value:
+        if ms_rose.relationship >= Relationship.KISS:
             ro "I just wanted to see how you were doing after... everything."
             
             scene v10eco8a # FPP. same 8, mouth closed.

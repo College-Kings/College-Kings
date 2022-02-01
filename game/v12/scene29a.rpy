@@ -583,6 +583,9 @@ label v12_late_night_workout:
                 "Best spot ever":
                     $ add_point(KCT.TROUBLEMAKER)
 
+                    scene v12lnw21d
+                    #with dissolve
+
                     u "Don't apologize, that was the best spot I ever had."
 
                     scene v12lnw21e
@@ -749,7 +752,7 @@ label v12_late_night_workout:
     scene v12lnw22f
     with dissolve
 
-    li "Well, I won't be messing with the bench anytime soon. That made me tired."
+    li "Well, I won't be messing with those kinds of weights anytime soon. That made me tired."
 
     scene v12lnw22g
     with dissolve

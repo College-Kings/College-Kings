@@ -4,6 +4,8 @@
 # Time: Morning
 
 label v15s20:
+    play music "music/v13/Track Scene 18.mp3" fadein 2
+
     scene v15s20_1 # TPP. Show MC walking into the Libray, slight smile, mouth closed.
     with dissolve
 
@@ -29,7 +31,7 @@ label v15s20:
 
     pause 0.75
 
-    if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         menu:
             "Ask for a kiss":
                 $ add_point(KCT.BOYFRIEND)
@@ -43,6 +45,8 @@ label v15s20:
                 with dissolve
 
                 cl "Of course, haha. Sorry! My mind is just like, completely focused on this meeting with the Dean."
+
+                play sound "sounds/kiss.mp3"
 
                 scene v15s20_6 # TPP. Show MC and Chloe having a quick kiss.
                 with dissolve
@@ -200,7 +204,7 @@ label v15s20:
 
             u "(Well, she loves it in the bedroom... Or should I say kitchen...)"
 
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 scene v15s20_5d # FPP. Same as v15s20_5c, Chloe confused, mouth open.
                 with dissolve
 
@@ -214,7 +218,7 @@ label v15s20:
         scene v15s20_5a
         with dissolve
 
-        cl "So, you'll need to tread carefully and just make sure you don't interrupt either of us or sound like you're mansplaining anything, haha."
+        cl "Just tread carefully and make sure you don't interrupt either of us or sound like you're mansplaining anything, haha."
 
         scene v15s20_5
         with dissolve
@@ -285,5 +289,7 @@ label v15s20:
             with dissolve
 
             cl "Haha, okay Mr. Confident. I trust you."
+
+    stop music fadeout 3
 
     jump v15s21

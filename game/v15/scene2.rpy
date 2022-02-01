@@ -6,11 +6,17 @@
 init python:
     def v15s2_reply1():
         chloe.messenger.newMessage("You're unbelievable.")
+        chloe.messenger.newMessage("Just... stop talking about it.")
+        chloe.messenger.addReply("Okay. Done.") 
 
     def v15s2_reply2():
         chloe.messenger.newMessage("Well, at least you admit it...")
+        chloe.messenger.newMessage("Just... stop talking about it.")
+        chloe.messenger.addReply("Okay. Done.") 
 
 label v15s2:
+    play music "music/v15/Track Scene 1_1.mp3" fadein 2
+
     scene v15s2_1 # FPP. Show the material of the bag over MC's head. (Maybe reuse the same images from the dungeon in v13)
     with dissolve
 
@@ -290,6 +296,10 @@ label v15s2:
 
     play sound "sounds/doorclose.mp3"
 
+    stop music fadeout 3
+    
+    play music "music/v15/Track Scene 1_3.mp3" fadein 2
+
     scene v15s2_6 # TPP. Show MC in his room pulling the door closed, MC serious face, mouth closed.
     with dissolve
 
@@ -329,7 +339,7 @@ label v15s2:
     pause 0.75
 
     if v14_date_distraction:
-        $ chloe.messenger.newMessage("So, you wanna tell me why you didn't come?") 
+        $ chloe.messenger.newMessage("So, you wanna tell me why you didn't come?", force_send=True)
         $ chloe.messenger.addReply("Hey, I understand if you're upset. I'm sorry. Something came up, an emergency, and I couldn't make it.") 
         $ chloe.messenger.newMessage("What do you mean you couldn't make it? You told me to meet you there! What happened that was so important, you had to stand me up at a fancy restaurant?!")
         $ chloe.messenger.addReply("Chloe, I'm sorry. I can't talk about it, but everything's fine. It's over now, I just don't wanna talk about it.") 
@@ -371,7 +381,7 @@ label v15s2:
     pause 0.75
 
     $ lauren.messenger.newMessage("Hey gang! You're invited to Lauren's birthday party tomorrow night at the Deer's house! It's a Halloween theme of course, so make sure you dress to impress your ghoulish empress, haha! -Lauren", force_send=True)
-
+    $ lauren.messenger.addReply("Looking forward to it!")
     play sound "sounds/vibrate.mp3"
 
     scene v15s2_9
@@ -420,6 +430,8 @@ label v15s2:
     u "*Groans* (No time for a snooze today. Need to get up.)"
 
     stop sound
+    
+    stop music fadeout 3
 
     if v14_ApesPostChloePics and not joinwolves:
         jump v15s3
@@ -433,8 +445,8 @@ label v15s2:
             $ v14s43b_kiwiiPost4.remove_post()
             $ v14s43b_kiwiiPost5.remove_post()
             $ v14s43b_kiwiiPost6.remove_post()
-        
+
         jump v15s4
 
-    else: 
+    else:
         jump v15s4

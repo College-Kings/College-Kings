@@ -68,7 +68,7 @@ label v12_amber_after_spa:
         if not (v11_tease_amber <= 2):
             call screen kct_popup
 
-        scene v12ams2b
+        scene v12ams2a
         with dissolve
 
         am "You know what?"

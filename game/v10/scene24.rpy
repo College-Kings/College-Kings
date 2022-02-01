@@ -1,6 +1,6 @@
 # SCENE 24: Lauren's Room
 # Location: Lauren Bedroom
-# Characters: MC (Outfit X), Lauren, (Outift X), Samantha (Outfit X), Mrs. Rose (Outfit X)
+# Characters: MC (Outfit X), Lauren, (Outift X), Samantha (Outfit X), Ms. Rose (Outfit X)
 # Time: Tuesday Evening
 
 label v10_lauren_room:
@@ -16,7 +16,7 @@ label v10_lauren_room:
 
     la "Heyyyy."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # If in a relationship with Lauren
+    if lauren.relationship >= Relationship.GIRLFRIEND: # If in a relationship with Lauren
         scene v10lar1a # TPP Same angle as v10lar1: MC and Lauren kiss at her door
         with dissolve
 
@@ -91,8 +91,8 @@ label v10_lauren_room:
 
             u "I really do."
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value or kct == "loyal":
-                if lauren.relationship.value < Relationship.GIRLFRIEND.value:
+            if lauren.relationship >= Relationship.GIRLFRIEND or kct == "loyal":
+                if lauren.relationship < Relationship.GIRLFRIEND:
                     call screen kct_popup
                 $ v10s33_laurenBakeSale = False
 
@@ -204,12 +204,12 @@ label v10_lauren_room:
 
     u "You never know until you try."
 
-    if lauren.relationship.value >= Relationship.KISS.value:
+    if lauren.relationship >= Relationship.KISS:
         label v10_lauren_room_sg:
             if _in_replay:
                 $ lauren.relationship = Relationship.GIRLFRIEND
 
-    if lauren.relationship.value >= Relationship.KISS.value: # If dating or have made out        
+    if lauren.relationship >= Relationship.KISS: # If dating or have made out        
         scene v10lar3g # FPP Same angle as v10lar3, Lauren looking seductive, mouth open
         with dissolve
 
@@ -256,7 +256,7 @@ label v10_lauren_room:
         u "(Oh wow!)"
 
         if config_censored:
-            call screen censoredPopup("v10s24_nsfwSkipLabel1")
+            call screen censored_popup("v10s24_nsfwSkipLabel1")
 
         scene v10lar7 # TPP Show Lauren on MC's lap facing him, MC arms around her waist, Lauren eyes closed and mouth open
         with dissolve
@@ -295,9 +295,8 @@ label v10_lauren_room:
                 with dissolve
                 pause
 
-                if lauren.relationship.value >= Relationship.GIRLFRIEND.value or (lauren.relationship.value >= Relationship.KISS.value and kct == "loyal"):
-
-                    if lauren.relationship.value < Relationship.GIRLFRIEND.value:
+                if lauren.relationship >= Relationship.GIRLFRIEND or (lauren.relationship >= Relationship.KISS and kct == "loyal"):
+                    if lauren.relationship < Relationship.GIRLFRIEND:
                         $ lauren.relationship = Relationship.GIRLFRIEND
                         call screen kct_popup
                         
@@ -530,7 +529,7 @@ label v10_lauren_room:
     u "Uhm, hold on."
 
     if joinwolves:
-        scene v10lar11 # FPP Show Mrs. Rose on phone, worried expression, mouth closed, plain black background
+        scene v10lar11 # FPP Show Ms. Rose on phone, worried expression, mouth closed, plain black background
         with dissolve
 
         u "Hello?"
@@ -599,7 +598,7 @@ label v10_lauren_room:
 
     u "Of course."
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # lauren and mc kiss goodbye at her door
+    if lauren.relationship >= Relationship.GIRLFRIEND: # lauren and mc kiss goodbye at her door
         scene v10lar1a
         with fade
 

@@ -1,5 +1,10 @@
 init python:
-    class Relationship(Enum):
+    class Frat(Enum):
+        APES = 0
+        WOLVES = 1
+
+
+    class Relationship(SmartEnum):
         MAD = -4
         THREATEN = -3
         MAKEFUN = -2
@@ -16,30 +21,6 @@ init python:
         TAMED = 9
         GIRLFRIEND = 10
 
-        def __lt__(self, other):
-            if not isinstance(other, Relationship):
-                raise TypeError("Relation {} must be of type Relationship.".format(other))
-
-            return self.value < other.value
-
-        def __le__(self, other):
-            if not isinstance(other, Relationship):
-                raise TypeError("Relation {} must be of type Relationship.".format(other))
-
-            return self.value <= other.value
-
-        def __gt__(self, other):
-            if not isinstance(other, Relationship):
-                raise TypeError("Relation {} must be of type Relationship".format(other))
-
-            return self.value > other.value
-
-        def __ge__(self, other):
-            if not isinstance(other, Relationship):
-                raise TypeError("Relation {} must be of type Relationship".format(other))
-
-            return self.value >= other.value
-
 
     class NonPlayableCharacter:
         """
@@ -50,13 +31,11 @@ init python:
             profile_picture (str): The file name for the characters profile picture, located in "images/nonplayable_characters/profile_pictures/"
         """
 
+        characters = {}
+
         def __init__(self, name, username=None):
             self.name = name
-            
-            if username is None:
-                self._username = name
-            else:
-                self._username = username
+            self._username = name if username is None else username
 
             self._messenger = None
             self._simplr = None
@@ -69,6 +48,8 @@ init python:
 
             self.points = 0
             self._relationship = Relationship.FRIEND
+
+            NonPlayableCharacter.characters[name] = self
 
         @property
         def username(self):
@@ -90,6 +71,9 @@ init python:
 
         @relationship.setter
         def relationship(self, value):
+            if not isinstance(value, Relationship):
+                raise TypeError("{} must be of type Relationship".format(value))
+
             self._relationship = value
             
             if value == Relationship.GIRLFRIEND:
@@ -109,6 +93,9 @@ init python:
 
         @property
         def messenger(self):
+            try: self._messenger
+            except AttributeError: self._messenger = None
+
             if self._messenger is None:
                 self._messenger = Contact(self.name, self.profile_picture)
                 messenger.contacts.append(self.messenger)
@@ -120,6 +107,9 @@ init python:
 
         @property
         def simplr(self):
+            try: self._simplr
+            except AttributeError: self._simplr = None
+
             if self._simplr is None:
                 self._simplr = SimplrContact(self.name)
                 simplr_pendingContacts.append(self._simplr)
@@ -134,14 +124,13 @@ init python:
             return "images/nonplayable_characters/profile_pictures/{}.webp".format(self.name.replace(' ', '_').lower())
 
         def __after_load__(self):
-            attrs = vars(self)
+            attrs = vars(self).copy()
 
             self.__init__(self.name)
 
             for var, value in attrs.items():
                 try: setattr(self, var, value)
                 except AttributeError: continue
-                
 
         def kill(self):
             # Check Competitive stat
@@ -171,6 +160,14 @@ init python:
 
         def reset_points(self):
             self.points = 0
+
+
+    def nonplayable_character_setup():
+        beth.simplr
+        iris.simplr
+        samantha.simplr
+        emmy.simplr
+
 
 default aaron = NonPlayableCharacter("Aaron", "DoubleARon")
 default adam = NonPlayableCharacter("Adam", "A.D.A.M.")

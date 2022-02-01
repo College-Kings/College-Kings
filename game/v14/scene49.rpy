@@ -46,7 +46,7 @@ label v14s49:
 
         li "Hey, now is the perfect time. Text Chloe and tell her to meet you at Classico Cuisine."
 
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+        if chloe.relationship >= Relationship.GIRLFRIEND:
             scene v14s49_3a # TPP. Same as v14s49_3, Lindsey slight smile, mouth closed.
             with dissolve
 
@@ -65,7 +65,7 @@ label v14s49:
         scene v14s49_2
         with dissolve
 
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+        if chloe.relationship >= Relationship.GIRLFRIEND:
             $ chloe.messenger.addReply(_("Hey... Think I'm in the mood for a little Italian cuisine and a beautiful woman across from me..."))
             $ chloe.messenger.newMessage(_("Haha, hi there Mr. Sweet Talk..."))
             $ chloe.messenger.newMessage(_("I could definitely eat, and... I suppose I'm down to see you ;)"))

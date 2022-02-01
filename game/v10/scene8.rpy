@@ -4,17 +4,16 @@
 # Time: Saturday Night
 label v10_fight_result:
     $ renpy.end_replay()
+    
     scene v10fr1 # FPP. Show close up of Josh pointing down towards the floor, slight smile, mouth open
     with dissolve
+    
     jo "*Laughs* In the words of Smokey, \"you got knocked the fuck out!\""
 
     play music "music/v10/Track Scene 8.mp3" fadein 2
 
     if joinwolves:
-    # -If MC wins the fight against Ryan-
-
-        if v10_ryan_win:
-
+        if v10_ryan_win: # -If MC wins the fight against Ryan-
             scene v10fr1
             with dissolve
 
@@ -40,7 +39,7 @@ label v10_fight_result:
             scene v10fr5 # FPP. Show close up of MC exiting the ring, mouth closed
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v10fr4 # FPP. Show chris and sebastian, chris one hand up in the air, excited face, chris mouth open, sebatian mouth closed
             with dissolve
@@ -50,13 +49,12 @@ label v10_fight_result:
             u "(I fucking did it!)"
             
             u "(Phew, I'm so exhausted now... I just wanna go to bed.)"
-
             
             stop music fadeout 3
+
             jump v10_leave_fight
 
         else:
-
             scene v10fr3b # TPP. Show imre and Josh standing in ring, MC on the floor in the ring, Josh mouth open, imre mouth closed
             with dissolve
             jo "I definitely didn't see that happening, I don't think anyone did. Any words from the man himself?"
@@ -84,10 +82,11 @@ label v10_fight_result:
             scene v10fr5
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v10fr4a # FPP. Show chris and sebastian, both slight frown, chris mouth open, sebastian mouth open
             with dissolve
+
             ch "Losing's always hard, but you put up a good fight."
 
             scene v10fr4b # FPP. Show chris and sebastian, both slight frown, chris mouth closed, sebastian mouth closed
@@ -97,22 +96,25 @@ label v10_fight_result:
 
             scene v10fr4a # FPP. Show chris and sebastian, both slight frown, chris mouth open, sebastian mouth open
             with dissolve
+
             ch "That's alright, man. You'll get him next time."
 
             scene v10fr4b # FPP. Show chris and sebastian, both slight frown, chris mouth closed, sebastian mouth closed
             with dissolve
 
             u "(Fuck, I let my entire frat down...)"
+
             u "(God, I just wanna go to bed.)"
 
             stop music fadeout 3
 
             jump v10_leave_fight
-    else:
 
+    else:
         if v10_imre_win:
             scene v10fr1
             with dissolve
+
             jo "I think as we all expected, [name] has dominated! So ladies if you're itching for a winner tonight, I found one."
 
             jo "Anything from the man himself?"
@@ -134,12 +136,14 @@ label v10_fight_result:
 
             scene v10fr4c # FPP. Show Grayson and cameron, both slight smile, grayson mouth open, cameron mouth closed
             with dissolve
+
             gr "*Chanting* Apes! Apes! Apes!"
             gr "Fuck yeah, man!"
 
             u "(I fucking did it!)"
             
             u "(Phew, I'm so exhausted now... I just wanna go to bed.)"
+
             stop music fadeout 3
 
             jump v10_leave_fight
@@ -147,6 +151,7 @@ label v10_fight_result:
         else:
             scene v10fr3d # TPP. Show imre and Josh standing in ring, MC on the floor in the ring, Josh mouth open, imre mouth closed
             with dissolve
+
             jo "I definitely didn't see that happening, I don't think anyone did. Any words from the man himself?"
 
             scene v10fr3e # TPP. Show imre and Josh standing in ring, MC on the floor in the ring, Josh mouth closed, imre mouth open
@@ -162,10 +167,11 @@ label v10_fight_result:
             scene v10fr5 # FPP. Show close up of MC exiting the ring, mouth closed
             with dissolve
 
-            pause 0.5
+            pause 0.75
 
             scene v10fr4d # FPP. Show grayson and cameron, both slight frown, grayson mouth open, cameron mouth closed
             with dissolve
+
             gr "That was absolute shit, man! You gotta do better if you wanna rep the Apes!"
 
             scene v10fr4e # FPP. Show grayson and cameron, both slight frown, grayson mouth closed, cameron mouth closed
@@ -175,14 +181,13 @@ label v10_fight_result:
 
             scene v10fr4d # FPP. Show grayson and cameron, both slight frown, grayson mouth open, cameron mouth closed
             with dissolve
+            
             gr "Sorry's not fucking good enough. I saw something in you, don't make me regret it."
 
             u "(Fuck, I let my entire frat down...)"
             
             u "(God, I just wanna go to bed.)"
+            
             stop music fadeout 3
             
             jump v10_leave_fight
-
-
-

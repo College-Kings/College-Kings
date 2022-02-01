@@ -147,9 +147,6 @@ label phn_chloe11_done:
             with dissolve
             u "I'm already behind on my work. I really need to focus."
 
-            ### Maybe change the achievement name ###
-            
-
             u "Don't want to get kicked out of school now that I'm finally an Ape!"
 
             scene v8apes25f # Grayson disbelief, disappointed and talking
