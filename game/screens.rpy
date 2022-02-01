@@ -238,7 +238,8 @@ screen choice(items, seconds=3, fail_label=None):
         on "show" action item.action
 
 
-style choice_text is bebas_neue_30
+style choice_text is bebas_neue_30:
+    properties gui.button_text_properties("choice_button")
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
@@ -309,6 +310,8 @@ screen main_menu():
     default image_path = "gui/main_menu/"
 
     add image_path + "background.webp"
+
+    textbutton ("Test Language") action Language("template_lang")
 
     # Patreon
     if not config.enable_steam:

@@ -1,10 +1,11 @@
-screen fight_menu(player_attacks=None, player=player, max_points=18):
+screen fight_menu(player_attacks=None, player=player):
     tag fight_screens
     modal True
     style_prefix "fight_menu_style"
 
     $ selected_attrs = list(attr.value for attr in player.attributes)
     default locked_attribute_values = selected_attrs
+    default available_points = player.fight_rank.value
 
     frame:
         background Transform("gui/fight_prototype/fight_background.png", size=(700, 900))
@@ -94,7 +95,7 @@ screen fight_menu(player_attacks=None, player=player, max_points=18):
             vbox:
                 spacing 10
 
-                $ available_points = max_points - sum(selected_attrs)
+                # $ available_points = max_points - sum(selected_attrs)
 
                 hbox:
                     spacing 10
@@ -142,7 +143,10 @@ screen fight_menu(player_attacks=None, player=player, max_points=18):
                                         sensitive ( available_points - x + attr.value ) >= 0
                                         selected x <= attr.value
                                         if x > locked_attribute_values[i]:
-                                            action ToggleField(attr, "value", x, locked_attribute_values[i])
+                                            action [
+                                                ToggleField(attr, "value", x, locked_attribute_values[i]),
+                                                ToggleScreenVariable("available_points", available_points + selected_attrs[i] - x, available_points + selected_attrs[i] - locked_attribute_values[i])
+                                                ]
 
                                 if attr.value == 10:
                                     text "Active Unlocked" color "#44D7B6" size 16 yalign 0.5
@@ -204,6 +208,7 @@ screen fight_menu(player_attacks=None, player=player, max_points=18):
 style fight_menu_style_text is text:
     color "#000"
     font "fonts/Montserrat-Bold.ttf"
+    text_align 0.5
 
 style fight_menu_style_button_text is button_text:
     color "#000"
@@ -259,7 +264,7 @@ screen new_fight_overlay(player, opponent):
             use animated_value_bar(None, player.health, player.max_health, "blue_bar", "ruby_bar", offset=(13, 0), size=(400, 95)) # Player Health Bar
         hbox:
             text "Stamina bar:" yalign 0.5
-            use animated_value_bar(None, player.stamina, player.max_stamina, "blue_bar", "ruby_bar", offset=(13, 0), size=(400, 95)) # Player Stamina Bar
+            use animated_value_bar(None, player.stamina, player.max_stamina, "blue_bar", "ruby_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Stamina Bar
 
     vbox:
         xalign 0.5
