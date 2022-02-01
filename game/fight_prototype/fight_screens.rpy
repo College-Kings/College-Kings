@@ -18,14 +18,19 @@ screen fight_menu(player_attacks=None, player=player, extra_points=0):
 
             vbox:
                 text name size 50 
-                hbox: 
-                    spacing 100
-                    text "Brawler" size 25 # TODO: Fighting style
+                vbox: 
+                    spacing 10
+                    text "Victories [player.wins] | Rank: [player.rank]" size 25 font "fonts/Montserrat-Regular.ttf" # TODO: Fighting style
 
-                    hbox:
-                        spacing 5
-                        text "Rivalry:" size 25
-                        text "First Fight" size 25 # TODO: Rivalry style
+                    fixed:
+                        xysize(476,10)
+                        add "gui/fight_prototype/rank_bar_background.png"
+                        add Transform("gui/fight_prototype/rank_bar_fill.png", size=(476, 10))
+                        if player.wins:
+                            add "gui/fight_prototype/rank_circle.png" 
+
+
+
 
             vbox:
                 spacing 10
