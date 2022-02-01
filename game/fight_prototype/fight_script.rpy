@@ -1,4 +1,12 @@
 init python:
+    class FightRank(Enum):
+        UNDERDOG = 3
+        BRAWLER = 3
+        COMPETITOR = 4
+        GLADIATOR = 4
+        SAVAGE = 5
+        OVERDOG = 5
+
     class AttackType(Enum):
         LIGHT = 0
         HEAVY = 1
@@ -71,7 +79,8 @@ init python:
 
 
     class BasePlayer:
-        def __init__(self, guard=None, health=100, stamina=10, attack_multiplier=1):
+        def __init__(self, fight_rank, guard=None, health=100, stamina=10, attack_multiplier=1):
+            self.fight_rank = fight_rank
             self.guard = guard
             self.max_health = health
             self.max_stamina = stamina
@@ -116,8 +125,8 @@ init python:
                     self.passive_abilities.add(attr.passive_ability)
 
     class Opponent(BasePlayer):
-        def __init__(self, guard=None, stamina=10, health=100, attack_multiplier=1, guard_images=None):
-            BasePlayer.__init__(self, guard, health, stamina, attack_multiplier)
+        def __init__(self, fight_rank, guard=None, stamina=10, health=100, attack_multiplier=1, guard_images=None):
+            BasePlayer.__init__(self, fight_rank, guard, health, stamina, attack_multiplier)
 
             self.guard_images = None
 
@@ -127,8 +136,8 @@ init python:
 
     
     class Player(BasePlayer):
-        def __init__(self, guard=None, stamina=10, health=100, attack_multiplier=1):
-            BasePlayer.__init__(self, guard, health, stamina, attack_multiplier)
+        def __init__(self, fight_rank, guard=None, stamina=10, health=100, attack_multiplier=1):
+            BasePlayer.__init__(self, fight_rank, guard, health, stamina, attack_multiplier)
             
             self.moves = {
                 "q": None, # light attack
@@ -324,6 +333,9 @@ label opponent_attack_turn(player, opponent):
 label fight_test:
 
     python:
+        opponent = Opponent(FightRank.UNDERDOG, Guard.LOW_GUARD)
+        player = Player(FightRank.UNDERDOG, Guard.LOW_GUARD)
+
         player_light_attack = Attack(AttackType.LIGHT, "Jab", 5, 2, Guard.SEMI_GUARD, {
             "start_image": "images/v2/jab2start.webp",
             "hit_image": "images/v2/jab2pic.webp",
