@@ -123,6 +123,11 @@ screen censoredPopup(continueLabel):
             hover "gui/censoredPopup/censoredSkipSceneHover.webp"
             action Jump(continueLabel)
 
+    on "show" action [SetVariable("quick_menu", False), Hide("phone_icon")]
+    on "hide" action [SetVariable("quick_menu", True), Show("phone_icon")]
+    on "replace" action [SetVariable("quick_menu", False), Hide("phone_icon")]
+    on "replaced" action [SetVariable("quick_menu", True), Show("phone_icon")]
+    
 
 screen timerBar(seconds=3):
     bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve

@@ -14,24 +14,21 @@ init python:
             else:
                 return self._image
 
-    config.overlay_screens.append("phone_icon")
-
 define phone = Phone("phone_icon.webp")
 
 
 screen phone_icon():
     zorder 100
     
-    if not renpy.get_screen("choice") and not renpy.get_screen("censoredPopup"):
-        imagebutton:
-            idle phone.image
-            
-            if renpy.get_screen("free_roam"):
-                action Show("phone")
-            else:
-                action Call("call_screen_phone")
+    imagebutton:
+        idle phone.image
+        
+        if renpy.get_screen("free_roam"):
+            action Show("phone")
+        else:
+            action Call("call_screen_phone")
 
-            align (0.999, 0.05)
+        align (0.999, 0.05)
 
 label call_screen_phone:
     call screen phone
