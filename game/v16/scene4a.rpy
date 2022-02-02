@@ -5,7 +5,16 @@
 
 label v16s4a:
 
-# -Transition from night to day-
+    # -Transition from night to day-
+    scene sleep_transition_fast # Ignore Animation
+    with fade
+
+    pause 2.2
+
+    scene black
+    with dissolve
+    
+    pause 1
 
 # -MC wakes up, stretching and yawning-
     if joinwolves:
