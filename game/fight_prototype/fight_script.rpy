@@ -1,11 +1,29 @@
 init python:
     class FightRank(Enum):
-        UNDERDOG = 3
-        BRAWLER = 3
-        COMPETITOR = 4
-        GLADIATOR = 4
-        SAVAGE = 5
-        OVERDOG = 5
+        UNDERDOG = {
+            "win_requirement": 0,
+            "bonus_attribute_points": 3
+        }
+        BRAWLER = {
+            "win_requirement": 1,
+            "bonus_attribute_points": 3
+        }
+        COMPETITOR = {
+            "win_requirement": 3,
+            "bonus_attribute_points": 4
+        }
+        GLADIATOR = {
+            "win_requirement": 6,
+            "bonus_attribute_points": 4
+        }
+        SAVAGE = {
+            "win_requirement": 10,
+            "bonus_attribute_points": 5
+        }
+        OVERDOG = {
+            "win_requirement": 15,
+            "bonus_attribute_points": 5
+        }
 
     class AttackType(Enum):
         LIGHT = 0
@@ -79,15 +97,14 @@ init python:
 
 
     class BasePlayer:
-        def __init__(self, rank, guard=None, health=100, stamina=10, attack_multiplier=1):
-            self.rank = rank
+        def __init__(self, guard=None, stamina=10, health=100, attack_multiplier=1):
             self.guard = guard
-            self.max_health = health
             self.max_stamina = stamina
+            self.max_health = health
             self.attack_multiplier = attack_multiplier
             
-            self._health = health
             self._stamina = stamina
+            self._health = health
 
             self.wins = 0
             self.attacks = {
@@ -118,6 +135,15 @@ init python:
             self._health = value
             self._health = max(self._health, 0)
 
+        @property
+        def rank(self):
+            rv = FightRank.UNDERDOG
+            for rank in FightRank:
+                if rank.value["win_requirement"] > self.wins:
+                    break
+                rv = rank
+            return rv
+
         def set_specials(self):
             for attr in self.attributes:
                 if attr.value == 10:
@@ -125,9 +151,10 @@ init python:
                 if attr.value >= 5:
                     self.passive_abilities.add(attr.passive_ability)
 
+
     class Opponent(BasePlayer):
-        def __init__(self, fight_rank, guard=None, stamina=10, health=100, attack_multiplier=1, guard_images=None):
-            BasePlayer.__init__(self, fight_rank, guard, health, stamina, attack_multiplier)
+        def __init__(self, guard=None, stamina=10, health=100, attack_multiplier=1, guard_images=None):
+            BasePlayer.__init__(self, guard, stamina, health, attack_multiplier)
 
             self.guard_images = None
 
@@ -137,8 +164,8 @@ init python:
 
     
     class Player(BasePlayer):
-        def __init__(self, fight_rank, guard=None, stamina=10, health=100, attack_multiplier=1):
-            BasePlayer.__init__(self, fight_rank, guard, health, stamina, attack_multiplier)
+        def __init__(self, guard=None, stamina=10, health=100, attack_multiplier=1):
+            BasePlayer.__init__(self, guard, stamina, health, attack_multiplier)
             
             self.moves = {
                 "q": None, # light attack
@@ -244,6 +271,9 @@ label player_attack_turn(player_move, player, opponent):
 
         pause 1.0
 
+    if opponent.health <= 0:
+        jump expression fight_end_label
+
     call screen fight_attack
 
 
@@ -334,8 +364,8 @@ label opponent_attack_turn(player, opponent):
 label fight_test:
 
     python:
-        opponent = Opponent(FightRank.UNDERDOG, Guard.LOW_GUARD)
-        player = Player(FightRank.UNDERDOG, Guard.LOW_GUARD)
+        opponent = Opponent(Guard.LOW_GUARD)
+        player = Player(Guard.LOW_GUARD)
 
         player_light_attack = Attack(AttackType.LIGHT, "Jab", 5, 2, Guard.SEMI_GUARD, {
             "start_image": "images/v2/jab2start.webp",
