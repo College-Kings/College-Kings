@@ -25,6 +25,17 @@ init python:
             "bonus_attribute_points": 5
         }
 
+        @staticmethod
+        def next_rank(number_wins):
+            return min(rank.value["win_requirement"] for rank in FightRank if rank.value["win_requirement"] > number_wins)
+
+
+    class FightingStyle(Enum):
+        STYLE_ONE = 1
+        STYLE_TWO = 2
+        STYLE_THREE = 3
+
+
     class AttackType(Enum):
         LIGHT = 0
         HEAVY = 1
@@ -97,7 +108,8 @@ init python:
 
 
     class BasePlayer:
-        def __init__(self, guard=None, stamina=10, health=100, attack_multiplier=1):
+        def __init__(self, fighting_style, guard=None, stamina=10, health=100, attack_multiplier=1):
+            self.fighting_style = fighting_style
             self.guard = guard
             self.max_stamina = stamina
             self.max_health = health
@@ -148,7 +160,8 @@ init python:
             for attr in self.attributes:
                 if attr.value == 10:
                     self.special_abilities.add(attr.active_ability)
-                if attr.value >= 5:
+                    self.passive_abilities.add(attr.passive_ability)
+                elif attr.value >= 5:
                     self.passive_abilities.add(attr.passive_ability)
 
 
@@ -161,6 +174,11 @@ init python:
         @property
         def guard_image(self):
             return self.guard_images[self.guard]
+
+        def set_specials(self):
+            for attr in self.attributes:
+                if attr.value >= 5:
+                    self.passive_abilities.add(attr.passive_ability)
 
     
     class Player(BasePlayer):
@@ -364,8 +382,8 @@ label opponent_attack_turn(player, opponent):
 label fight_test:
 
     python:
-        opponent = Opponent(Guard.LOW_GUARD)
-        player = Player(Guard.LOW_GUARD)
+        opponent = Opponent(FightingStyle.STYLE_ONE, Guard.LOW_GUARD)
+        player = Player(FightingStyle.STYLE_TWO, Guard.LOW_GUARD)
 
         player_light_attack = Attack(AttackType.LIGHT, "Jab", 5, 2, Guard.SEMI_GUARD, {
             "start_image": "images/v2/jab2start.webp",
@@ -410,8 +428,16 @@ label fight_test:
         player.attributes.append(Attribute(AttributeType.LIGHT_ATTACK_DAMAGE, "Light Attack Damage", 1, "", SpecialPassives.COMBO, SpecialActives.FURY))
         player.attributes.append(Attribute(AttributeType.HEAVY_ATTACK_DAMAGE, "Heavy Attack Damage", 1, "", SpecialPassives.BRUISER, SpecialActives.DEVASTATING_FORCE))
 
+        opponent.attributes.append(Attribute(AttributeType.HEALTH, "Health", 10, "", SpecialPassives.BERSERK, SpecialActives.SECOND_WIND))
+        opponent.attributes.append(Attribute(AttributeType.STAMINA, "Stamina", 10, "", SpecialPassives.FULLY_CHARGED, SpecialActives.RESET))
+        opponent.attributes.append(Attribute(AttributeType.LIGHT_ATTACK_DAMAGE, "Light Attack Damage", 10, "", SpecialPassives.COMBO, SpecialActives.FURY))
+        opponent.attributes.append(Attribute(AttributeType.HEAVY_ATTACK_DAMAGE, "Heavy Attack Damage", 10, "", SpecialPassives.BRUISER, SpecialActives.DEVASTATING_FORCE))
+        opponent.set_specials()
+
         mc.fighter = player
-    
+
+        opponent.wins = 2
+
     call screen fight_menu([
         Attack(AttackType.LIGHT, AttackType.JAB, 5, 2, Guard.SEMI_GUARD, {
             "start_image": "images/v2/jab2start.webp",
@@ -443,7 +469,7 @@ label fight_test:
             "hit_image": "images/v2/jab2pic.webp",
             "block_image": "images/v2/jab1pic.webp"
         })
-    ])
+    ], "First Fight")
 
     label fight_start:
 
