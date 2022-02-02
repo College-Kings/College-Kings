@@ -431,3 +431,8 @@ default v1502fix = False
 default RileyLoyal = False
 default pb_kct_notification = False
 default pb_threesome = False
+
+
+default v16s20_twazzlers = False
+default v16s10_let_her_continue = False
+default freeroam15 = set() #Amber

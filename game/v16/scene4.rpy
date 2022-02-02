@@ -1,6 +1,6 @@
 # SCENE 4: Mc goes to bed WOLVES OR APES room (both)
 # Locations: Wolves and Apes room.
-# Characters: MC (Outfit: 1)
+# Characters: MC (Outfit: 1), Ms Rose (Outfit: 1)
 # Time: Night
 
 init python:
@@ -29,7 +29,7 @@ label v16s4:
         scene v16s4_3 # FPP. In wolves room,  MC looking at his bed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4_4 # TPP. In wolves room,  Close up of just MC's face as he stands in his room, slight smile, mouth closed.
         with dissolve
@@ -49,12 +49,12 @@ label v16s4:
         scene v16s4_6 # TPP. In wolves room, Show MC getting into his bed, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4_7 # TPP. In the wolves room, Show MC laying in bed with his eyes closed his phone nearby in view (not turned on), neutral face, mouth closed.
         with fade
 
-        pause 0.75 
+        pause 0.75
         
         play sound "sounds/vibrate.mp3"
 
@@ -66,7 +66,7 @@ label v16s4:
         scene v16s4_8 # TPP. In wolves room, Show MC in bed reaching to grab his phone, tired, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4_9 # TPP. In wolves room, Show MC in bed looking at his phone, tired, mouth closed.
         with dissolve
@@ -98,6 +98,11 @@ label v16s4:
 
         pause 0.75
 
+        scene v16s4_23 # Black Screen (get from Photoshop or Mozzart)
+        with dissolve
+
+        pause 0.75
+
         if ms_rose.relationship >= Relationship.FWB or v15_threaten_ms_rose:
             play sound "sounds/call.mp3"
 
@@ -117,16 +122,16 @@ label v16s4:
             pause 0.75
 
             scene v16s4_10 # TPP. In wolves room, Show MC holding the phone to his ear, tired, mouth open.
-            with dissole
+            with dissolve
 
             u "Hello?"
 
-            scene v16s4_11 # TPP. Just Ms. Rose outside of wolves house on her phone, slight smile, mouth open.
+            scene v16s4_11 # TPP. Just Ms. Rose outside on her phone, slight smile, mouth open [DO NOT SHOW FRAT HOUSE].
             with dissolve
 
             ro "[name], it's Lorraine. I'm outside... Can you come down, please? I want to talk."
 
-            scene v16s4_12 # TPP. Just Ms. Rose outside of the wolves house on her phone, slight smile, mouth closed.
+            scene v16s4_12 # TPP. Just Ms. Rose outside on her phone, slight smile, mouth closed [DO NOT SHOW FRAT HOUSE].
             with dissolve
 
             u "You're... outside?! Is everything okay?"
@@ -152,7 +157,8 @@ label v16s4:
             with dissolve
 
             jump v16s5
-
+        else:
+            jump v16s4a
     else:
         play sound "sounds/dooropen.mp3"
 
@@ -171,7 +177,7 @@ label v16s4:
         scene v16s4_16 # FPP. In apes room,  MC looking at his bed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4_17 # TPP. In apes room,  Close up of just MC's face as he stands in his room, slight smile, mouth closed.
         with dissolve
@@ -191,16 +197,16 @@ label v16s4:
         scene v16s4_19 # TPP. In apes room, Show MC getting into his bed, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4_20 # TPP. In the apes room, Show MC laying in bed with his eyes closed his phone nearby in view (not turned on), neutral face, mouth closed.
         with fade
 
-        pause 0.75 
+        pause 0.75
         
         play sound "sounds/vibrate.mp3"
 
-        scene v16s4_20a # TPP. Show MC laying in bed with his eyes now open his phone nearby in view illuminating the room, Tired, mouth closed.
+        scene v16s4_20a # TPP. Show MC laying in bed in apes room with his eyes now open his phone nearby in view illuminating the room, Tired, mouth closed.
         with vpunch
 
         u "(For fuck's sake...)"
@@ -208,7 +214,7 @@ label v16s4:
         scene v16s4_21 # TPP. In apes room, Show MC in bed reaching to grab his phone, tired, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4_22 # TPP. In apes room, Show MC in bed looking at his phone, tired, mouth closed.
         with dissolve
@@ -238,4 +244,65 @@ label v16s4:
         scene v16s4_20
         with fade
 
-    jump v16s4a
+        scene v16s4_23
+        with dissolve
+
+        pause 0.75
+
+        if ms_rose.relationship >= Relationship.FWB or v15_threaten_ms_rose:
+            play sound "sounds/call.mp3"
+
+            scene v16s4_20a 
+            with vpunch
+
+            u "*Groans* (I'm about to throw this fucking phone out the window.)"
+
+            scene v16s4_21
+            with dissolve
+
+            pause 0.75
+
+            scene v16s4_22
+            with dissolve
+
+            pause 0.75
+
+            scene v16s4_24 # TPP. In apes room, Show MC holding the phone to his ear, tired, mouth open.
+            with dissolve
+
+            u "Hello?"
+
+            scene v16s4_11 
+            with dissolve
+
+            ro "[name], it's Lorraine. I'm outside... Can you come down, please? I want to talk."
+
+            scene v16s4_12 
+            with dissolve
+
+            u "You're... outside?! Is everything okay?"
+
+            scene v16s4_11
+            with dissolve
+
+            ro "Yes, I'm fine. Please hurry, it won't take long."
+
+            scene v16s4_12
+            with dissolve
+
+            u "Okay, I'll be right down."
+
+            play sound "sounds/rejectcall.mp3"
+
+            scene v16s4_22a # TPP. In apes room, MC laying in bed looking at his phone, slight smile, mouth closed.
+            with dissolve
+
+            u "(Am I dreaming? *laughs*)"
+
+            scene v16s4_25 # TPP. In apes room, shot from behind MC of him getting up.
+            with dissolve
+
+            jump v16s5
+        else:
+            jump v16s4a
+    

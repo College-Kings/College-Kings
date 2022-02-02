@@ -1,20 +1,20 @@
 # SCENE 5: MsRose at night outside the frat house
-# Locations: Outside Wolves House. 
+# Locations: Outside Frat House. 
 # Characters: MC (Outfit: 1), Ms. Rose (Outfit: 1)
 # Time: Night
 
 label v16s5:
-    scene v16s5_1 # TPP. Shot from behind of MC, MC walking towards Ms. Rose who is standing by a tree along the wolves house, The frat house not shown, Ms Rose, neutral face, mouth closed.
+    scene v16s5_1 # TPP. Shot from behind of MC, MC walking towards Ms. Rose who is standing by a tree (FRAT HOUSE NOT SHOWN), Ms Rose, neutral face, mouth closed.
     with dissolve
 
     pause 0.75
 
-    scene v16s5_2 # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms.Rose looking at MC, Ms.Rose neutral face, mouth closed.
+    scene v16s5_2 # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms.Rose looking at MC, Ms.Rose neutral face, mouth closed [DO NOT SHOW FRAT HOUSE].
     with dissolve
 
     u "This is risky, Lorraine. You shouldn't be here."
 
-    scene v16s5_2a # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose neutral face, mouth open.
+    scene v16s5_2a # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose neutral face, mouth open [DO NOT SHOW FRAT HOUSE].
     with dissolve
 
     ro "I know, but I had to come see you."
@@ -30,10 +30,7 @@ label v16s5:
             with dissolve
 
             ro "But, when you came with Chloe to ask for my support, and you made those...promises to persuade me to sign, and I still don't know if you really meant it."
-
-        scene v16s5_2a
-        with dissolve
-
+        
         ro "I just need to know... Do you want to keep seeing me? Or is this..."
 
         menu:
@@ -49,17 +46,17 @@ label v16s5:
                 
                 ro "So, you forgive me...?"
 
-                scene v16s5_2b # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose slight smile, mouth closed.
+                scene v16s5_2b # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose slight smile, mouth closed  [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 u "I could never hold anything against you to the point where I'd push you out of my life. I want you in it. Forgiven and forgotten."
 
-                scene v16s5_3 # TPP. Show Ms. Rose with her arms wrapped around MC hugging him, One of her legs lifted back the generic happy lady hug, Ms. Rose smile, mouth closed, MC slight smile, mouth closed.
+                scene v16s5_3 # TPP. Show Ms. Rose with her arms wrapped around MC hugging him, One of her legs lifted back the generic happy lady hug (https://thumbs.dreamstime.com/z/close-up-couple-wearing-jeans-white-sneakers-standing-hugging-kissing-outdoors-park-romantic-young-girlfriend-124813754.jpg), Ms. Rose smile, mouth closed, MC slight smile, mouth closed  [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 pause 0.75
 
-                scene v16s5_2c # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose slight smile, mouth open.
+                scene v16s5_2c # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose slight smile, mouth open [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 ro "I'm so glad you said that. Because to celebrate that, I want to plan a little treat for us."
@@ -69,7 +66,7 @@ label v16s5:
 
                 u "Does it involve spiking my drink again?"
 
-                scene v16s5_2d # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose neutral face, rolling her eyes, mouth open.
+                scene v16s5_2d # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose neutral face, rolling her eyes, mouth open [DO NOT SHOW FRAT HOUSE].
                 with dissolve
                 
                 ro  "*Sighs* No..." 
@@ -89,7 +86,7 @@ label v16s5:
 
                 u "Yeah, sure.  The guys and I go there all the time."
 
-                scene v16s5_2e # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose confused, mouth open.
+                scene v16s5_2e # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose confused, mouth open [DO NOT SHOW FRAT HOUSE].
                 with dissolve
                 
                 ro "...Really?"
@@ -138,7 +135,7 @@ label v16s5:
 
                 pause 0.75
 
-                scene v16s5_1a # TPP. Show MC walking the way he came from in v16s5_1, Ms Rose in the background walking away from the wolves house, MC neutral face, mouth closed.
+                scene v16s5_1a # TPP. Show MC walking the way he came from in v16s5_1, Ms Rose in the background walking away from MC, MC neutral face, mouth closed [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 u "(Another day of dressing up and impressing ladies... Sign me up!)"
@@ -150,7 +147,7 @@ label v16s5:
 
                 u "I'm sorry, Lorraine. I'm just not feeling this anymore."
 
-                scene v16s5_2f # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at the ground, Ms. Rose sad, mouth closed.
+                scene v16s5_2f # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at the ground, Ms. Rose sad, mouth closed [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 ro "..."
@@ -168,16 +165,16 @@ label v16s5:
                 scene v16s5_2f
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
-                scene v16s5_2g # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose upset, Ms. Rose mouth open.
+                scene v16s5_2g # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose upset, Ms. Rose mouth open [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 ro "Oh. Okay... I understand." 
                 
                 ro "I guess it was just a casual thing that got out of hand, huh?"
 
-                scene v16s5_2h # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose upset, Ms. Rose mouth closed.
+                scene v16s5_2h # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose upset, Ms. Rose mouth closed [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 u "Yeah, some things got out of hand for sure."
@@ -248,7 +245,7 @@ label v16s5:
         menu:
             "Say sorry":
                 $ add_point(KCT.BRO)
-                scene v16s5_1b # TPP. MC and Ms. Rose standing still with their backs to each other. Close enough for Ms Rose to hear MC, MC slight frown, looking at the ground, mouth open.
+                scene v16s5_1b # TPP. MC and Ms. Rose walking away (only a few steps from MC) with their backs to each other. Close enough for Ms Rose to hear MC, MC slight frown, looking at the ground, mouth open [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 u "I'm sorry, Lorraine. I really am."
@@ -257,12 +254,12 @@ label v16s5:
 
             "Insult her":
                 $ add_point(KCT.TROUBLEMAKER)
-                scene v16s5_1c # TPP. MC and Ms. Rose standing still with their backs to each other. Close enough for Ms Rose to hear MC, MC angry, looking at the ground, mouth open.
+                scene v16s5_1c # TPP. MC and Ms. Rose walking away (only a few steps from MC) with their backs to each other. Close enough for Ms Rose to hear MC, MC angry, looking at the ground, mouth open [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 u "Have fun finding someone your own age!"
 
-        scene v16s5_1d # TPP. MC and Ms. Rose walking away from each other, further away from each other, MC neutral face looking at the ground as he walks back to the wolves house.
+        scene v16s5_1d # TPP. MC and Ms. Rose walking away from each other, further away from each other (increase distance), MC neutral face looking at the ground as he walks toward frat house [DO NOT SHOW FRAT HOUSE].
         with dissolve
 
         #[End of Checkpoint 1.2. Continues to Checkpoint 2]
@@ -344,17 +341,17 @@ label v16s5:
 
                 ro "*Laughs* Don't worry, I promise it will be fun. I'll dress up nice for you and I'll book us a private area..."
 
-                scene v16s5_5 # TPP. Shot of Ms Rose playing with the Collar of MC's shirt, Ms Rose flirty, mouth closed, MC slight smile, mouth closed.
+                scene v16s5_5 # TPP. Shot of Ms Rose playing with the Collar of MC's shirt, Ms Rose flirty, mouth closed, MC slight smile, mouth closed [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 pause 0.75
 
-                scene v16s5_2i # FPP. Ms Rose close to MC's face biting her lip and playing with MC's collar.
+                scene v16s5_2i # FPP. Ms Rose close to MC's face biting her lip and playing with MC's collar [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 u "It's sounding much more interesting now, haha."
 
-                scene v16s5_2j # FPP. Ms Rose close to MC's face, playing with MC's collar, flirty face, mouth open
+                scene v16s5_2j # FPP. Ms Rose close to MC's face, playing with MC's collar, flirty face, mouth open [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 ro "Is it?"
@@ -364,10 +361,15 @@ label v16s5:
 
                 u "What can I say, you make everything interesting."
 
+                scene v16s5_2j 
+                with dissolve
+
+                ro "Ha, well thank you."
+
         scene v16s5_2c
         with dissolve
         
-        ro "Ha, well thank you. You deserve it. I'll see you soon, okay?"
+        ro "You deserve it. I'll see you soon, okay?"
 
         scene v16s5_2d
         with dissolve
