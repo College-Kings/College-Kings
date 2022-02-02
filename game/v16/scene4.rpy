@@ -29,7 +29,7 @@ label v16s4:
         scene v16s4_3 # FPP. In wolves room,  MC looking at his bed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4_4 # TPP. In wolves room,  Close up of just MC's face as he stands in his room, slight smile, mouth closed.
         with dissolve
@@ -49,12 +49,12 @@ label v16s4:
         scene v16s4_6 # TPP. In wolves room, Show MC getting into his bed, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4_7 # TPP. In the wolves room, Show MC laying in bed with his eyes closed his phone nearby in view (not turned on), neutral face, mouth closed.
         with fade
 
-        pause 0.75 
+        pause 0.75
         
         play sound "sounds/vibrate.mp3"
 
@@ -66,7 +66,7 @@ label v16s4:
         scene v16s4_8 # TPP. In wolves room, Show MC in bed reaching to grab his phone, tired, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4_9 # TPP. In wolves room, Show MC in bed looking at his phone, tired, mouth closed.
         with dissolve
@@ -122,7 +122,7 @@ label v16s4:
             pause 0.75
 
             scene v16s4_10 # TPP. In wolves room, Show MC holding the phone to his ear, tired, mouth open.
-            with dissole
+            with dissolve
 
             u "Hello?"
 
@@ -177,7 +177,7 @@ label v16s4:
         scene v16s4_16 # FPP. In apes room,  MC looking at his bed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4_17 # TPP. In apes room,  Close up of just MC's face as he stands in his room, slight smile, mouth closed.
         with dissolve
@@ -197,12 +197,12 @@ label v16s4:
         scene v16s4_19 # TPP. In apes room, Show MC getting into his bed, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4_20 # TPP. In the apes room, Show MC laying in bed with his eyes closed his phone nearby in view (not turned on), neutral face, mouth closed.
         with fade
 
-        pause 0.75 
+        pause 0.75
         
         play sound "sounds/vibrate.mp3"
 
@@ -214,7 +214,7 @@ label v16s4:
         scene v16s4_21 # TPP. In apes room, Show MC in bed reaching to grab his phone, tired, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4_22 # TPP. In apes room, Show MC in bed looking at his phone, tired, mouth closed.
         with dissolve
@@ -268,7 +268,7 @@ label v16s4:
             pause 0.75
 
             scene v16s4_24 # TPP. In apes room, Show MC holding the phone to his ear, tired, mouth open.
-            with dissole
+            with dissolve
 
             u "Hello?"
 

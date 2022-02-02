@@ -3,12 +3,11 @@
 # Characters: RILEY (Outfit: 3), MC (Outfit: 5), CHLOE (Outfit: 2)
 # Time: Morning
 
-
 label v16s11:
     scene v16s11_1 # TPP. Show MC walking the SVC hallways, MC slight smile, mouth closed.
-    with fade(1,0,1)
+    with fade
 
-    pause 0.05
+    pause 0.75
 
     scene v16s11_2 # TPP. Show Riley running up to MC from behind, MC standing still slightly turning to see Riley, MC slight smile, mouth closed, Riley slight smile, mouth closed.
     with vpunch
@@ -18,7 +17,7 @@ label v16s11:
     scene v16s11_1a # TPP. Show MC walking the SVC hallways with Riley, both slight smile, mouth closed.
     with dissolve
 
-    pause 0.10
+    pause 0.75
 
     scene v16s11_3 # FPP. Walking down the hallway, MC looking at Riley, Riley looking at MC, Riley slight smile, mouth closed.
     with dissolve 
@@ -36,7 +35,6 @@ label v16s11:
     u "Glad to hear it."
 
     if not v16_wintom:
-            
         scene v16s11_3a
         with dissolve
 
@@ -66,6 +64,7 @@ label v16s11:
         with dissolve
 
         u "Hmm... Maybe later."
+
     else:
         scene v16s11_3a
         with dissolve
@@ -117,12 +116,12 @@ label v16s11:
     scene v16s11_4 # TPP. MC and Riley walking up to a pinboard thats in the hallways somewhere, on the pinboard there is a sign up sheet for the newspaper on the paper it says "Looking for one to two more students to join the Newspaper squad!", a notice paper about sex education and that the school nurse provides free condoms to students, and a poster for Chloe's campaign some sort of poster where she is using her looks to her advantage for votes.
     with dissolve
 
-    pause 0.15
+    pause 0.75
 
     scene v16s11_5 # FPP. MC looking at the pinboard. 
     with dissolve 
 
-    pause
+    pause 0.75
 
     scene v16s11_6 # FPP. At the pinboard. MC looking at Riley, Riley looking at the Newspaper sign up sheet, Riley slight smile, mouth open.
     with dissolve 
@@ -144,7 +143,7 @@ label v16s11:
 
     u "Oooh... Risky."
 
-    if riley.relationship >= Relationship.RS:
+    if riley.relationship >= Relationship.FWB:
     
         scene v16s11_6c # FPP. At the pinboard, MC looking at Riley, Riley holding the sign up sheet to her side looking at MC, Riley laughing, mouth open.
         with dissolve
@@ -155,6 +154,7 @@ label v16s11:
         with dissolve
 
         u "Yes. Finished. What are we looking at?"
+
     else:
         scene v16s11_6e # FPP. At the pinboard, MC looking at Riley, Riley holding the sign up sheet to her side looking at MC, Riley unamused death stare, mouth closed.
         with dissolve
@@ -287,7 +287,7 @@ label v16s11:
     scene v16s11_6i # FPP. At the pinboard, MC looking at Riley, Riley looking at the sign up sheet holding a pencil in her other hand writing her name down, slight smile, mouth closed.
     with dissolve 
 
-    pause .10
+    pause 0.75
 
     scene v16s11_6j # FPP. At the pinboard, MC looking at Riley, Riley looking at MC and handing him the sign up sheet and pencil, riley slight smile, mouth open.
     with dissolve
@@ -325,6 +325,7 @@ label v16s11:
             with dissolve
 
             ri "*Laughs*"
+
         "Don't sign up..":
             scene v16s11_8
             with dissolve
@@ -336,28 +337,31 @@ label v16s11:
     scene v16s11_10 # TPP. Show Chloe walking up to MC and Riley, all slight smile, mouth closed
     with dissolve
 
-    pause 0.10 
+    pause 0.75
 
     scene v16s11_11 # FPP. At the pinboard, MC looking at Chloe, Chloe looking at MC, Chloe slight smile, mouth closed.
     with dissolve
 
     cl "Hey guys!"
 
-    if chloe.relationship >= Relationship.GF:  
+    if chloe.relationship >= Relationship.GIRLFRIEND:  
         play sound "sounds/kiss.mp3"  
 
         scene v16s11_11a # FPP. At the pinboard, MC looking at Chloe, Chloe leaning forward and kissing MC on the cheek.
         with dissolve  
 
-        if riley.relationship >= Relationship.RS:
+        pause 0.75
 
+        if riley.relationship >= Relationship.FWB:
             scene v16s11_12 # TPP. Close up of Riley facing MC and Chloe but her eyes looking else where.
             with dissolve
+
+            pause 0.75
 
     scene v16s11_10a # TPP. Show Chloe standing with MC and Riley at the pinboard.
     with dissolve
 
-    pause 0.10
+    pause 0.75
 
     scene v16s11_11b # FPP. At the pinboard, MC looking at Chloe, Chloe looking at her campaign poster on the pinboard, Chloe neutral face, mouth open.
     with dissolve
@@ -399,8 +403,10 @@ label v16s11:
             with dissolve
 
             u "Chloe, don't overthink it. You look great in every photo."
+
         "Not your best photo.":
             $ add_point(KCT.TROUBLEMAKER)
+
             scene v16s11_11e # FPP. At the pinboard, MC looking at Chloe, Chloe looking at MC, Chloe neutral face, mouth closed.
             with dissolve
 
@@ -548,12 +554,12 @@ label v16s11:
         scene v16s11_15 # TPP. Chloe leading MC by his arm further down the hallway 
         with dissolve
 
-        pause 0.10
+        pause 0.75
 
         scene v16s11_16 # TPP. MC pulling his phone out of his pocket, don't show Chloe so can be reused, slight smile, mouth closed.
         with dissolved 
 
-        pause 0.10 
+        pause 0.75
 
         scene v16s11_16a # TPP. MC looking at his phone, don't show Chloe so can be reused, slight smile, mouth closed.
         with dissolve 
@@ -575,8 +581,10 @@ label v16s11:
         with dissolve
 
         jump v16s12
+
     else:
         scene v16s11_11f
+        with dissolve
 
         cl "Sorry, [name]. But I just got the smartest idea, and I have to act now. Thank you!"
 
@@ -595,7 +603,7 @@ label v16s11:
         scene v16s11_16
         with dissolve
 
-        pause 
+        pause 0.75
         
         scene v16s11_16a
         with dissolve

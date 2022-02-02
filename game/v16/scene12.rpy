@@ -19,7 +19,7 @@ label v16s12:
             scene v16s12_3 # TPP. Show Chloe giving MC a kiss
             with dissolve
 
-            pause  
+            pause 0.75
 
         scene v16s12_2a # FPP. Same as v16s12_2, Chloe smiling, mouth open
         with dissolve
@@ -269,7 +269,7 @@ label v16s12:
         scene v16s12_3
         with dissolve
 
-        pause  
+        pause 0.75
 
     scene v16s12_2b
     with dissolve

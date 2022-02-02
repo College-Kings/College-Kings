@@ -165,7 +165,7 @@ label v16s5:
                 scene v16s5_2f
                 with dissolve
 
-                pause 0.75 
+                pause 0.75
 
                 scene v16s5_2g # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose upset, Ms. Rose mouth open [DO NOT SHOW FRAT HOUSE].
                 with dissolve

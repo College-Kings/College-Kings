@@ -75,12 +75,12 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
         scene v16s20_4 # FPP. Close up shot of just the laptop and the screen
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v16s20_5 # FPP. Close up shot of Mc pressing the mousepad of the laptop with a finger
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v16s20_6 # FPP. On the screen is the image of a man and woman wearing skimpy, tight, police uniforms, MC still has a finger on the mouse pad
         with dissolve
@@ -114,7 +114,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
         scene v16s20_9 # FPP. There are three photos: One with Amber, Kim & Josh. One with Amber and her young brother, Damian. One of young Amber playing violin shown from left to right.
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v16s20_10 # FPP. Close-up shot of the photo of the One with Amber, Kim & Josh. 
         with dissolve
@@ -223,12 +223,12 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
         scene v16s20_4
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v16s20_5
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v16s20_6
         with dissolve
@@ -262,7 +262,7 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
         scene v16s20_9
         with dissolve
 
-        pause 0.50
+        pause 0.75
 
         scene v16s20_10
         with dissolve
@@ -318,12 +318,12 @@ label v16s20_end:
     scene v16s20_15 # FPP Show MC turning the lights off as he leaves the house, slight smile, mouth is closed
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v16s20_16 # FPP. Show MC outside of the house placing the key back under the mat, slight smile, mouth is closed
     with dissolve
 
-    pause 0.50
+    pause 0.75
 
     scene v16s20_17 # FPP. Show MC walking away from Ambers House, slight smile, mouth is closed
     with dissolve

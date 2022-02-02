@@ -32,24 +32,24 @@ label v16s4a:
         scene v16s4a_4 # TPP. In wolves room, Show MC in the middle of his room putting on his pants, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4a_4a # TPP. In wolves room, Show MC in the middle of his room putting on his shirt, his face obscurred.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4a_5 # FPP. In wolves room, MC looking at himself in the mirror pointing finger guns, MC smirking, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         play sound "sounds/dooropen.mp3"
 
         scene v16s4a_6 # TPP. In wolves room, Shot from behind MC of him opening the door to his room and leaving
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         play sound "sounds/doorclose.mp3"
 
@@ -82,24 +82,24 @@ label v16s4a:
         scene v16s4a_10 # TPP. In apes room, Show MC in the middle of his room putting on his pants, slight smile, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4a_10a # TPP. In apes room, Show MC in the middle of his room putting on his shirt, his face obscurred.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s4a_11 # FPP. In apes room, MC looking at himself in the mirror pointing finger guns, MC smirking, mouth closed.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         play sound "sounds/dooropen.mp3"
 
         scene v16s4a_12 # TPP. In apes room, Shot from behind MC of him opening the door to his room and leaving
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         play sound "sounds/doorclose.mp3"
 

@@ -7,12 +7,12 @@ label v16s10: # Econ class
     scene v16s10_1 # TPP Show MC entering Ms Rose's classroom along with several other students
     with dissolve
     
-    pause 1
+    pause 0.75
 
     scene v16s10_2 # TPP Show MC taking a seat in the back row of the class, the empty seat next to him in view
     with dissolve
 
-    pause 1
+    pause 0.75
         
     scene v16s10_2a # TPP Same angle as 2, Lauren taking her normal seat next to MC, Lauren smiling at MC with mouth open
     with dissolve
@@ -101,7 +101,7 @@ label v16s10: # Econ class
         scene v16s10_2b # TPP Same angle as 2, Lauren passing MC a note under the table, Lauren has a naughty smile
         with dissolve
 
-        pause 1
+        pause 0.75
 
         scene v16s10_6 # FPP Show the note from Lauren. It just says, "I'm horny"
         with dissolve
@@ -154,7 +154,7 @@ label v16s10: # Econ class
         scene v16s10_2f # TPP Same angle as 2, Lauren with mouth closed, slight smile like she's trying not to laugh, eyes forward, hands on the table in front of her
         with dissolve
 
-        pause 1
+        pause 0.75
 
     # -Regardless of which note was passed-
     scene v16s10_4a # FPP Same angle as 4, Ms Rose looking directly at MC, she looks annoyed, mouth open
@@ -259,7 +259,7 @@ label v16s10: # Econ class
                 scene v16s10_3d # FPP Same angle as 3, Lauren looking forward, arms crossed over her chest, pouting in disappointment
                 with dissolve
 
-                pause 1
+                pause 0.75
 
 
             "Let her continue":
@@ -324,7 +324,7 @@ label v16s10: # Econ class
                 scene v16s10_7d # FPP Same angle as 7, MC cumming between his legs onto the floor
                 with dissolve
 
-                pause 1
+                pause 0.75
 
             
                 scene v16s10_4e # FPP Same angle as 4, Ms Rose looking at MC with her eyebrow raised in curiousity, mouth closed
@@ -372,7 +372,7 @@ label v16s10: # Econ class
     scene v16s10_9 # FPP View of clock in the classroom, set at time for class to end
     with fade
 
-    pause 1
+    pause 0.75
 
     scene v16s10_4f # FPP Same angle as 4, Ms Rose smiling out over the class, mouth open
     with dissolve
@@ -387,13 +387,13 @@ label v16s10: # Econ class
     scene v16s10_10 # TPP MC and Lauren getting out of their seats, along with the other students
     with dissolve
 
-    pause 1
+    pause 0.75
 
     if lauren.relationship >= Relationship.FWB:
         scene v16s10_11 # TPP MC walking toward the door to the classroom, Lauren catches him by grabbing his upper arm from behind
         with dissolve
 
-        pause 1
+        pause 0.75
 
         if v16s10_let_her_continue:
             scene v16s10_12 # TPP MC and Lauren standing at back of the classroom, close up view of Lauren whispering in MC's ear, slight smile, mouth open
@@ -410,7 +410,7 @@ label v16s10: # Econ class
         scene v16s10_13 # TPP MC and Lauren standing at back of the classroom, Lauren kissing MC on the cheek
         with dissolve
 
-        pause 1
+        pause 0.75
 
 # -regardless-
 jump v16s11 # -Transition to Scene 11-
