@@ -236,10 +236,12 @@ screen choice(items, seconds=3, fail_label=None):
     if config_debug:
         $ item = renpy.random.choice(items)
         on "show" action item.action
+    else:
+        on "show"  action Hide("phone_icon")
 
-    on "hide" action [SetVariable("quick_menu", True), Show("phone_icon")]
-    on "replace" action [SetVariable("quick_menu", False), Hide("phone_icon")]
-    on "replaced" action [SetVariable("quick_menu", True), Show("phone_icon")]
+    on "hide" action Show("phone_icon")
+    on "replace" action Hide("phone_icon")
+    on "replaced" action Show("phone_icon")
 
 style choice_text is bebas_neue_30:
     properties gui.button_text_properties("choice_button")
