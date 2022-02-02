@@ -5,7 +5,7 @@ screen fight_menu(player_attacks=None, player=player, extra_points=0):
 
     $ selected_attrs = list(attr.value for attr in player.attributes)
     default locked_attribute_values = selected_attrs
-    default available_points = player.rank.value + extra_points
+    default available_points = player.rank.value["bonus_attribute_points"] + extra_points
 
     frame:
         background Transform("gui/fight_prototype/fight_background.png", size=(700, 900))
@@ -261,7 +261,7 @@ screen new_fight_overlay(player, opponent):
 
         hbox:
             text "Health bar:" yalign 0.5
-            use animated_value_bar(None, player.health, player.max_health, "blue_bar", "ruby_bar", offset=(13, 0), size=(400, 95)) # Player Health Bar
+            use animated_value_bar(None, player.health, player.max_health, "blue_bar", "ruby_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Health Bar
         hbox:
             text "Stamina bar:" yalign 0.5
             use animated_value_bar(None, player.stamina, player.max_stamina, "blue_bar", "ruby_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Stamina Bar
@@ -270,7 +270,7 @@ screen new_fight_overlay(player, opponent):
         xalign 0.5
         ypos 50
 
-        use animated_value_bar(None, opponent.health, opponent.max_health, "blue_bar", "ruby_bar", offset=(13, 0), size=(1000, 95)) # Opponent Health Bar
+        use animated_value_bar(None, opponent.health, opponent.max_health, "blue_bar", "ruby_bar", offset=(13, 0), size=(1000, 95), delay=1) # Opponent Health Bar
 
 
 screen test_health():
