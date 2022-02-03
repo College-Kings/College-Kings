@@ -180,3 +180,6 @@ define character.aumom = Character("Aubrey's Mom", who_color="#a815f2", who_outl
 define character.audad = Character("Aubrey's Dad", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.rick = Character("Uncle Rick", who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.wedoff = Character("Wedding Officiant", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+
+# 16.0
+define character.alls = Character("All Students", who_color="#ff1694", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ]) 

@@ -432,7 +432,8 @@ default RileyLoyal = False
 default pb_kct_notification = False
 default pb_threesome = False
 
-
-default v16s20_twazzlers = False
-default v16s10_let_her_continue = False
+# 16.0
 default freeroam15 = set() #Amber
+default v16s1_win_fight_with_tom = False
+default v16s10_let_lauren_continue_hj = False
+default v16s20_twazzlers = False
