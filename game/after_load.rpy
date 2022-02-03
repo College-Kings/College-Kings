@@ -3,6 +3,7 @@ python early:
         "bugTesting/bugTesting_Overwrite.rpy",
         "bugTesting/bugTesting_typoNotes.rpy",
         "bugTesting/bugTesting_cheats.rpy",
+        "bugTesting/styles.rpy",
         "phone/phonescript.rpy",
         "phone/phoneStyle.rpy",
         "sceneGallery/sceneGallery.rpy",

@@ -5,7 +5,7 @@
 
 label v16s11:
     scene v16s11_1 # TPP. Show MC walking the SVC hallways, MC slight smile, mouth closed.
-    with fade(1,0,1)
+    with fade
 
     pause 0.75
 
@@ -17,7 +17,7 @@ label v16s11:
     scene v16s11_1a # TPP. Show MC walking the SVC hallways with Riley, both slight smile, mouth closed.
     with dissolve
 
-    pause 0.10
+    pause 0.75
 
     scene v16s11_3 # FPP. Walking down the hallway, MC looking at Riley, Riley looking at MC, Riley slight smile, mouth closed.
     with dissolve 
@@ -35,7 +35,6 @@ label v16s11:
     u "Glad to hear it."
 
     if not v16s1_win_fight_with_tom:
-            
         scene v16s11_3a
         with dissolve
 
@@ -65,6 +64,7 @@ label v16s11:
         with dissolve
 
         u "Hmm... Maybe later."
+
     else:
         scene v16s11_3a
         with dissolve
@@ -154,6 +154,7 @@ label v16s11:
         with dissolve
 
         u "Yes. Finished. What are we looking at?"
+
     else:
         scene v16s11_6e # FPP. At the pinboard, MC looking at Riley, Riley body facing the board, head turned toward MC, Riley unamused slight glare, mouth closed.
         with dissolve
@@ -302,7 +303,7 @@ label v16s11:
     with dissolve
 
     menu:
-        "Sign up."
+        "Sign up":
             scene v16s11_8
             with dissolve
 
@@ -354,6 +355,8 @@ label v16s11:
             scene v16s11_12 # TPP. Close up of Riley facing MC and Chloe but her she looks away from seeing MC and Chloe kiss.
             with dissolve
 
+            pause 0.75
+
     scene v16s11_10a # TPP. Show Chloe standing with MC and Riley at the pinboard.
     with dissolve
 
@@ -399,9 +402,10 @@ label v16s11:
             with dissolve
 
             u "Chloe, don't overthink it. You look great in every photo."
-        
+
         "Not your best photo.":
             $ add_point(KCT.TROUBLEMAKER)
+
             scene v16s11_11e # FPP. At the pinboard, MC looking at Chloe, Chloe looking at MC, Chloe neutral face, mouth closed.
             with dissolve
 
@@ -576,8 +580,10 @@ label v16s11:
         with dissolve
 
         jump v16s12
+
     else:
         scene v16s11_11f
+        with dissolve
 
         cl "Sorry, [name]. But I just got the smartest idea, and I have to act now. Thank you!"
 
@@ -596,7 +602,7 @@ label v16s11:
         scene v16s11_16
         with dissolve
 
-        pause 
+        pause 0.75
         
         scene v16s11_16a
         with dissolve
@@ -615,6 +621,6 @@ label v16s11:
                 jump v16s11_phoneContinue2
 
         scene v16s11_18 # TPP. Show MC walking down the hallways towards the park, slight smile, mouth closed.
-        with dissolve.
+        with dissolve
 
         jump v16s13
