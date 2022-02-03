@@ -303,7 +303,7 @@ label v16s11:
     with dissolve
 
     menu:
-        "Sign up."
+        "Sign up":
             scene v16s11_8
             with dissolve
 
@@ -326,7 +326,7 @@ label v16s11:
 
             ri "*Laughs*"
 
-        "Don't sign up..":
+        "Don't sign up":
             scene v16s11_8
             with dissolve
 
@@ -622,6 +622,6 @@ label v16s11:
                 jump v16s11_phoneContinue2
 
         scene v16s11_18 # TPP. Show MC walking down the hallways towards the park, slight smile, mouth closed.
-        with dissolve.
+        with dissolve
 
         jump v16s13
