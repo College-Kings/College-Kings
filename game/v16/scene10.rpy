@@ -3,8 +3,6 @@
 # Characters: LAUREN (Outfit: 3), MC (Outfit: 5), Ms Rose (Outfit: 2)
 # Time: Morning (Tuesday)
 
-default v16s10_let_her_continue = False
-
 label v16s10: # Econ class
 
     scene v16s10_1 # TPP Show MC entering Ms Rose's classroom along with several other students
@@ -275,7 +273,7 @@ label v16s10: # Econ class
                 pause 0.75
 
             "Let her continue":
-                $ v16s10_let_her_continue = True
+                $ v16s10_let_lauren_continue_hj = True
                 $ add_point(KCT.BOYFRIEND)
 
                 scene v16s10_7a # FPP Same angle as 7, Lauren's hand is fumbling at MC's pants, pulling the top down to get to his dick
@@ -389,7 +387,7 @@ label v16s10: # Econ class
 
         pause 0.75
 
-        if v16s10_let_her_continue:
+        if v16s10_let_lauren_continue_hj:
             scene v16s10_12 # TPP MC and Lauren standing at back of the classroom, close up view of Lauren whispering in MC's ear, slight smile, mouth open
             with dissolve
 
