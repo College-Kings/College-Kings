@@ -90,12 +90,12 @@ label v16s10: # Econ class
     scene v16s10_5 # TPP View of the students in the class, they all look annoyed, many mouths open to groan
     with dissolve
     
-    alls: "*Groans*" # NOT SURE HOW TO CODE IT FOR ALL STUDENTS
+    alls "*Groans*" # NOT SURE HOW TO CODE IT FOR ALL STUDENTS
 
     scene v16s10_4
     with dissolve
     
-    ro: "Sorry guys, no one said economics was fun!"
+    ro "Sorry guys, no one said economics was fun!"
     
     if lauren.relationship >= Relationship.KISS: # -if LaurenRS or LaurenSex
         scene v16s10_2b # TPP Same angle as 2, Lauren passing MC a note under the table, Lauren has a naughty smile
@@ -159,7 +159,7 @@ label v16s10: # Econ class
     scene v16s10_4a # FPP Same angle as 4, Ms Rose looking directly at MC, she looks annoyed, mouth open
     with dissolve
 
-    ro: "[name]!"
+    ro "[name]!"
 
     scene v16s10_4b # FPP Same angle as 4, Ms Rose looking directly at MC, she looks annoyed, mouth closed
     with dissolve
@@ -169,7 +169,7 @@ label v16s10: # Econ class
     scene v16s10_4a
     with dissolve
 
-    ro: "Please answer the question."
+    ro "Please answer the question."
 
     scene v16s10_4b
     with dissolve
@@ -179,7 +179,7 @@ label v16s10: # Econ class
     scene v16s10_4a
     with dissolve
 
-    ro: "You were listening, weren't you?"
+    ro "You were listening, weren't you?"
 
     scene v16s10_4b
     with dissolve
@@ -189,7 +189,7 @@ label v16s10: # Econ class
     scene v16s10_4a
     with dissolve
 
-    ro: "So, what's the answer?"
+    ro "So, what's the answer?"
 
     scene v16s10_4b
     with dissolve
@@ -216,7 +216,7 @@ label v16s10: # Econ class
             scene v16s10_4a
             with dissolve
 
-            ro: "Do I need to separate you and Lauren?"
+            ro "Do I need to separate you and Lauren?"
 
             scene v16s10_3c # FPP Same angle as 3, Lauren looking forward and giggling, hand over her mouth
             with dissolve
@@ -231,7 +231,7 @@ label v16s10: # Econ class
             scene v16s10_4c
             with dissolve
 
-            ro: "Good, please concentrate. I'd hate to fail my students just because they can't focus."
+            ro "Good, please concentrate. I'd hate to fail my students just because they can't focus."
 
     # -Regardless of choice-
     if lauren.relationship == Relationship.FRIEND: # -if LaurenFriend
@@ -365,13 +365,13 @@ label v16s10: # Econ class
     scene v16s10_4f # FPP Same angle as 4, Ms Rose smiling out over the class, mouth open
     with dissolve
 
-    ro: "See, that wasn't so bad, huh? You all survived."
+    ro "See, that wasn't so bad, huh? You all survived."
 
     scene v16s10_4
     with dissolve
 
 
-    ro: "And if I'm lucky, some of you learned a thing or two as well."
+    ro "And if I'm lucky, some of you learned a thing or two as well."
 
     scene v16s10_10 # TPP MC and Lauren getting out of their seats.
     with dissolve
