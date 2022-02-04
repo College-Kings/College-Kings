@@ -56,7 +56,7 @@ screen v10s33_cakestatue():
             pos (1579, 324)
             idle "images/v10/scene 33/fr6laurenbake.webp"
             hover "images/v10/scene 33/fr6laurenbakehover.webp"
-            if "lauren" in freeroam6:
+            if "lauren" not in freeroam6:
                 action Jump("v10s33_laurenbake1")
             else:
                 action Call("freeRoamSpokenToo", backgroundImg="v10cfrla1a", returnScreen="v10s33_cakestatue")
@@ -67,7 +67,7 @@ screen v10s33_cakestatue():
             pos (1182, 139)
             idle "images/v10/scene 33/fr6laurenstatue.webp"
             hover "images/v10/scene 33/fr6laurenstatuehover.webp"
-            if "lauren" in freeroam6:
+            if "lauren" not in freeroam6:
                 action Jump("v10s33_laurenstatue1")
             else:
                 action Call("freeRoamSpokenToo", backgroundImg="v10cfrla3", returnScreen="v10s33_cakestatue")
