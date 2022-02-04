@@ -1,6 +1,6 @@
 # SCENE 13: Transition Mc walks to park
 # Locations: Park
-# Characters: MC (Outfit: 5)
+# Characters: MC (Outfit: 7)
 # Time: Tuesday afternoon
 
 
