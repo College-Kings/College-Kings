@@ -9,7 +9,7 @@ label v16s12:
 
     pause 0.75
 
-    if v16_announcement:
+    if v15_chloe_lindseysabotage and not v15_chloe_postkiwii:        
         scene v16s12_2 # FPP. MC and Chloe in planning board room, standing in front of the board, next to each other, MC looking at Chloe, Chloe looking at MC, Chloe slight smile, mouth open
         with dissolve
 
@@ -56,7 +56,7 @@ label v16s12:
 
         cl "Phase three!"
 
-        if v16_embarass and not v16_lindsey_drunk:
+        if v15_chloe_lindseysabotage and not v15_lindsey_alcohol:
             scene v16s12_2c # FPP. Same as v16s12_2, Chloe slightly sad, mouth open
             with dissolve
 
@@ -77,7 +77,7 @@ label v16s12:
 
             cl "I think you'll like these ideas too."
 
-    if v16_lower_tuition:
+    if v14_help_chloe and not v15_chloe_lindseysabotage:
         scene v16s12_2
         with dissolve
 
@@ -145,7 +145,7 @@ label v16s12:
 
     u "Both great ideas, but... I think this is the smartest move."
 
-    if v16_newspaper_cover:
+    if v16s12_chloe_planboard_decide_newspaper_cover:
         scene v16s12_2e
         with dissolve
 
@@ -176,7 +176,7 @@ label v16s12:
 
         cl "Okay, now go. I'll text you when I need you. Have fun!"
     
-    elif v16_spa_day:
+    else:
         scene v16s12_2e
         with dissolve
 
@@ -229,6 +229,7 @@ label v16s12:
     
     menu:
         "Be enthusiastic":
+            $ add_point(KCT.BOYFRIEND)
             scene v16s12_2b
             with dissolve
 
@@ -240,6 +241,7 @@ label v16s12:
             cl "Haha, I'm so happy you're doing this with me."
 
         "Be negative":
+            $ add_point(KCT.TROUBLEMAKER)
             scene v16s12_2d
             with dissolve
 
