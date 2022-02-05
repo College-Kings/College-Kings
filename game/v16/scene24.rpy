@@ -3,15 +3,13 @@
 # Characters: MC (Outfit: 5)
 # Time: Tuesday night
 
-
 label v16s24: # 24) MC goes home
     scene v16s24_1 # -MC walks along the street
     with dissolve
 
-    pause 1
+    pause 0.75
 
-
-    if v16s23_amber_sober: # ASSUMING THIS IS GOING TO BE THE VARIABLE NAME - VERIFY # if AmberSober
+    if v14_amber_clean: 
         scene v16s24_2 # TPP Another shot of MC walking down the street
         with dissolve
 

@@ -26,7 +26,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
     label v16s20_amber_living_room_twazzlers: # -if Twazzlers candy
         $ freeroam16.add("twazzlers")
 
-        scene v16s20_2 # FPP. A close up shot of the Twazzlers in the location of the room from the call screen
+        scene v16s20_2 # FPP. A close up shot of the Twazzlers in the location of the room from the call screen (REUSED: CANNOT INCLUDE TRASH).
         with dissolve
 
         u "(Mmm, Twazzlers. She might appreciate a snack...)"
@@ -43,7 +43,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
 
                 u "(I'm just the most thoughtful guy, aren't I?)"
 
-                call screen v16s20_amber_living_room_twazzler_clean # same entire background as the clean scene, except this render is missing the twazzlers
+                call screen v16s20_amber_living_room_twazzler_clean # same entire background as the clean scene, except this render is missing the twazzlers (REUSED: CANNOT INCLUDE TRASH).
 
             "Leave them":
                 scene v16s20_2
@@ -56,7 +56,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
     label v16s20_amber_living_room_unpaid_bills: # -if Unpaid Bills
         $ freeroam16.add("bills")
 
-        scene v16s20_3 # FPP. Close up shot of bills. A big red stamp on the top one: "OVERDUE"
+        scene v16s20_3 # FPP. Close up shot of bills. A big red stamp on the top one: "OVERDUE" (REUSED: CANNOT INCLUDE TRASH).
         with dissolve
 
         u "(Why does Amber have unpaid bills? I thought she was earning good money...)"
@@ -72,27 +72,27 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
     label v16s20_amber_living_room_laptop: # -if Open Laptop
         $ freeroam16.add("laptop")
 
-        scene v16s20_4 # FPP. Close up shot of just the laptop and the screen
+        scene v16s20_4 # FPP. Close up shot of just the laptop and the screen (REUSED: CANNOT INCLUDE TRASH).
         with dissolve
 
         pause 0.75
 
-        scene v16s20_5 # FPP. Close up shot of Mc pressing the mousepad of the laptop with a finger
+        scene v16s20_5 # FPP. Close up shot of Mc pressing the touchpad of the laptop with a finger (REUSED: CANNOT INCLUDE TRASH).
         with dissolve
 
         pause 0.75
 
-        scene v16s20_6 # FPP. On the screen is the image of a man and woman wearing skimpy, tight, police uniforms, MC still has a finger on the mouse pad
+        scene v16s20_6 # FPP. On the screen is the image of a man and woman wearing skimpy, tight, police uniforms, MC still has a finger on the touchpad
         with dissolve
 
         u "(No password? It's like she's begging me to snoop through her computer ...)"
 
-        scene v16s20_7 # FPP. "Cop & Thief erotic fan fiction." is listed as a title in Bold Letters across the screen
+        scene v16s20_7 # FPP. "Cop & Thief erotic fan fiction." is listed as a title in Bold Letters across the screen (REUSED: CANNOT INCLUDE TRASH).
         with dissolve
 
         u "(And I'm not disappointed, haha. Cop & Thief erotic fan fiction. Great title! What the hell is Amber reading?)"
 
-        scene v16s20_8 # FPP. Show just MC's face and neck wide eyed and smiling, mouth open
+        scene v16s20_8 # FPP. Show just MC's face and neck wide eyed and smiling.
         with dissolve
 
         u "(\"Eric removed Alicia's handcuffs and, much to her surprise, he pulled out his lengthy baton, asking her to grasp it. Then Eric began to gently spank her begging ass with it...)"
@@ -145,13 +145,13 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
     label v16s20_amber_living_room_phone_charger: # -if Phone charger (Ends Free Roam)
         $ freeroam16.add("charger")
 
-        scene v16s20_13 # FPP. A close up shot of the phone charger in the location of the room from the call screen
+        scene v16s20_13 # FPP. A close up shot of the phone charger in the location of the room from the call screen (REUSED: CANNOT INCLUDE TRASH).
         with dissolve
 
         u "(Here it is! I bet her phone's dead by now. She'll be so desperate for this!)"
 
         if v16s20_twazzlers:
-            scene v16s20_14 # FPP. A close up shot of the phone charger in Mc's hand
+            scene v16s20_14 # FPP. A close up shot of the phone charger in Mc's hand (REUSED: CANNOT INCLUDE TRASH).
             with dissolve
 
             u "Alright, that's everything. Let's head out!"
