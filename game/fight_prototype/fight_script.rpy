@@ -166,7 +166,7 @@ init python:
 
 
     class Opponent(BasePlayer):
-        def __init__(self, guard=None, stamina=10, health=100, attack_multiplier=1, guard_images=None):
+        def __init__(self, fighting_style, guard=None, stamina=10, health=100, attack_multiplier=1, guard_images=None):
             BasePlayer.__init__(self, guard, stamina, health, attack_multiplier)
 
             self.guard_images = None
@@ -182,7 +182,7 @@ init python:
 
     
     class Player(BasePlayer):
-        def __init__(self, guard=None, stamina=10, health=100, attack_multiplier=1):
+        def __init__(self, fighting_style, guard=None, stamina=10, health=100, attack_multiplier=1):
             BasePlayer.__init__(self, guard, stamina, health, attack_multiplier)
             
             self.moves = {
