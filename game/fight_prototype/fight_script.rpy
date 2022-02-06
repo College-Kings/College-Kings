@@ -325,6 +325,7 @@ label player_defence_turn(player_move, player, opponent_attack, opponent):
         ## Defence Moves
         if player_move.move_type in Guard:
             $ player.guard = player_move.move_type
+            $ player.stamina -= player_move.stamina_cost
 
     # Opponent's attack hits
     if player.guard < opponent_attack.blocking_guard:
@@ -370,6 +371,7 @@ label opponent_attack_turn(player, opponent):
     $ move = opponent.attacks[move_type]
 
     if move.stamina_cost < opponent.stamina:
+        $ opponent.stamina -= move.stamina_cost
         call screen fight_defense(move)
     else:
         $ opponent.guard = Guard.SEMI_GUARD
