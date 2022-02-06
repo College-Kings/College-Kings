@@ -424,7 +424,7 @@ screen fight_attack(player=player, opponent=opponent):
         key k:
             action Call("player_attack_turn", move, player, opponent) 
 
-    timer fight_reaction_time action Call("opponent_attack_turn", player, opponent)
+    timer fight_reaction_time action [SetField(player, "stamina", 5), Call("opponent_attack_turn", player, opponent)]
 
 
 screen fight_defense(opponent_attack, player=player, opponent=opponent):
