@@ -197,6 +197,11 @@ init python:
 label player_attack_turn(player_move, player, opponent):
     $ renpy.set_return_stack([])
 
+    if player.stamina < player_move.stamina_cost:
+        call opponent_attack_turn(player, opponent)
+
+    $ player.stamina -= player_move.stamina_cost
+
     if isinstance(player_move.move_type, Guard):
         $ player.guard = player_move.move_type
 
@@ -204,11 +209,6 @@ label player_attack_turn(player_move, player, opponent):
 
     scene expression player_move.images["start_image"]
     pause 0.5
-
-    if player.stamina < player_move.stamina_cost:
-        call opponent_attack_turn(player, opponent)
-
-    $ player.stamina -= player_move.stamina_cost
 
     # Set player passive guard
     if player_move.move_type == AttackType.LIGHT:
@@ -256,7 +256,7 @@ label player_attack_turn(player_move, player, opponent):
 
         $ player.previous_attack = player_move
 
-    # Player attack blocked
+    # Opponent blocked player's attack
     else:
         scene expression player_move.images["block_image"]
         with vpunch
@@ -276,7 +276,7 @@ label player_attack_turn(player_move, player, opponent):
             show screen fight_popup("Guard Shattered")
 
         else:
-            $ opponent.stamina += 3
+            # $ opponent.stamina += 3
             show screen fight_popup("Blocked")
 
         # Jab special effect
@@ -284,8 +284,8 @@ label player_attack_turn(player_move, player, opponent):
             $ opponent.guard = Guard.LOW_GUARD
 
         # Body hook special effect
-        if player_move.name == AttackType.BODY_HOOK:
-            $ opponent.stamina -= 3 # No stamina gain
+        # if player_move.name == AttackType.BODY_HOOK:
+        #     $ opponent.stamina -= 3 # No stamina gain
 
         pause 1.0
 
@@ -346,7 +346,7 @@ label player_defence_turn(player_move, player, opponent_attack, opponent):
             $ player.guard = Guard.LOW_GUARD
             show screen fight_popup("GUARD SHATTERED")
         else:
-            $ player.stamina += 3
+            # $ player.stamina += 3
             show screen fight_popup("BLOCKED")
         pause 1
 
