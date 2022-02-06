@@ -307,7 +307,7 @@ label player_defence_turn(player_move, player, opponent_attack, opponent):
         $ opponent.guard = Guard.LOW_GUARD
 
     # Set player move to None if no stamina and not overhand special effect 
-    if (player_move is not None) and (player.stamina < player_move.stamina_cost) and (player.previous_attack.name == AttackType.OVERHAND_PUNCH):
+    if (player_move is not None) and (player.stamina < player_move.stamina_cost or player.previous_attack.name == AttackType.OVERHAND_PUNCH):
         $ player_move = None
 
     if player_move is not None:
@@ -324,8 +324,8 @@ label player_defence_turn(player_move, player, opponent_attack, opponent):
 
         ## Defence Moves
         if player_move.move_type in Guard:
-            $ player.guard = player_move.move_type
             $ player.stamina -= player_move.stamina_cost
+            $ player.guard = player_move.move_type
 
     # Opponent's attack hits
     if player.guard < opponent_attack.blocking_guard:
