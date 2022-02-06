@@ -376,7 +376,7 @@ label opponent_attack_turn(player, opponent):
     else:
         $ opponent.guard = Guard.SEMI_GUARD
         $ opponent.stamina += 4
-        $ player.stamina += 4
+        # $ player.stamina += 4
         
         call screen fight_attack
 
