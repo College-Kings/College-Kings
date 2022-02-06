@@ -1,4 +1,12 @@
 init python:
+    class FightGameState(Enum):
+        PLAYER_ATTACK = 0
+        PLAYER_DEFENCE = 1
+        OPPONENT_ATTACK = 2
+        OPPONENT_DEFENCE = 3
+        ERROR = 99
+
+
     class FightRank(Enum):
         UNDERDOG = {
             "win_requirement": 0,
@@ -196,6 +204,7 @@ init python:
 
 label player_attack_turn(player_move, player, opponent):
     $ renpy.set_return_stack([])
+    $ fight_game_state = FightGameState.PLAYER_ATTACK
 
     if player.stamina < player_move.stamina_cost:
         call opponent_attack_turn(player, opponent)
@@ -297,8 +306,7 @@ label player_attack_turn(player_move, player, opponent):
 
 label player_defence_turn(player_move, player, opponent_attack, opponent):
     $ renpy.set_return_stack([])
-
-    $ opponent.stamina -= opponent_attack.stamina_cost
+    $ fight_game_state = FightGameState.PLAYER_DEFENCE
 
     # Set opponent passive guard
     if opponent_attack.move_type == AttackType.LIGHT:
@@ -324,8 +332,8 @@ label player_defence_turn(player_move, player, opponent_attack, opponent):
 
         ## Defence Moves
         if player_move.move_type in Guard:
-            $ player.stamina -= player_move.stamina_cost
             $ player.guard = player_move.move_type
+            $ player.stamina -= player_move.stamina_cost
 
     # Opponent's attack hits
     if player.guard < opponent_attack.blocking_guard:
@@ -339,7 +347,7 @@ label player_defence_turn(player_move, player, opponent_attack, opponent):
 
     # Opponent's attack blocked
     else:
-        scene expression move.images["block_image"]
+        scene expression opponent_attack.images["block_image"]
         with vpunch
 
         if opponent_attack.move_type == AttackType.HEAVY:
@@ -359,6 +367,7 @@ label player_defence_turn(player_move, player, opponent_attack, opponent):
 
 label opponent_attack_turn(player, opponent):
     $ renpy.set_return_stack([])
+    $ fight_game_state = FightGameState.OPPONENT_ATTACK
 
     if player.guard == Guard.FULL_GUARD: # Heavily favour heavy attack 
         $ p = (0.1, 0.9)
@@ -367,12 +376,13 @@ label opponent_attack_turn(player, opponent):
     else:
         $ p = (0.5, 0.5)
 
-    $ move_type = weighted_choice((AttackType.LIGHT, AttackType.HEAVY), p=p)
-    $ move = opponent.attacks[move_type]
+    $ opponent_move_type = weighted_choice((AttackType.LIGHT, AttackType.HEAVY), p=p)
+    $ opponent_move = opponent.attacks[opponent_move_type]
 
-    if move.stamina_cost < opponent.stamina:
-        $ opponent.stamina -= move.stamina_cost
-        call screen fight_defense(move)
+    if opponent_move.stamina_cost < opponent.stamina:
+        $ opponent.stamina -= opponent_move.stamina_cost
+        call screen fight_defense(opponent_move)
+
     else:
         $ opponent.guard = Guard.SEMI_GUARD
         $ opponent.stamina += 4
@@ -382,37 +392,13 @@ label opponent_attack_turn(player, opponent):
 
 
 label fight_test:
-
+    $ fight_game_state = FightGameState.ERROR
     python:
         opponent = Opponent(FightingStyle.STYLE_ONE, Guard.LOW_GUARD)
         player = Player(FightingStyle.STYLE_TWO, Guard.LOW_GUARD)
 
-        player_light_attack = Attack(AttackType.LIGHT, "Jab", 5, 2, Guard.SEMI_GUARD, {
-            "start_image": "images/v2/jab2start.webp",
-            "hit_image": "images/v2/jab2pic.webp",
-            "block_image": "images/v2/jab1pic.webp"
-        })
-        player_heavy_attack = Attack(AttackType.HEAVY, "Jab", 10, 4, Guard.FULL_GUARD, {
-            "start_image": "images/v2/hook2start.webp",
-            "hit_image": "images/v2/hook2pic.webp",
-            "block_image": "images/v2/hook1pic.webp"
-        })
-        player_semi_guard = Defence(Guard.SEMI_GUARD, 2)
-        player_full_guard = Defence(Guard.FULL_GUARD, 3)
-
-        opponent_light_attack = Attack(AttackType.LIGHT, AttackType.JAB, 5, 2, Guard.SEMI_GUARD, {
-            "start_image": "images/v2/tomjab.webp",
-            "hit_image": "images/v2/tomjabhit.webp",
-            "block_image": "images/v2/tomjabblock.webp"
-        })
-        opponent_heavy_attack = Attack(AttackType.HEAVY, AttackType.KICK, 10, 4, Guard.FULL_GUARD, {
-            "start_image": "images/v2/tomkick.webp",
-            "hit_image": "images/v2/tomkickhit.webp",
-            "block_image": "images/v2/tomkickblock.webp"
-        })
-
-        opponent.attacks[AttackType.LIGHT] = opponent_light_attack
-        opponent.attacks[AttackType.HEAVY] = opponent_heavy_attack
+        opponent.attacks[AttackType.LIGHT] = OPPONENT_JAB
+        opponent.attacks[AttackType.HEAVY] = OPPONENT_KICK
 
         opponent.guard_images = {
             Guard.FULL_GUARD: "images/v2/tomstancekick.webp",
@@ -420,10 +406,10 @@ label fight_test:
             Guard.LOW_GUARD: "images/v2/tomstancejab.webp"
         }
 
-        player.moves["q"] = player_light_attack
-        player.moves["w"] = player_heavy_attack
-        player.moves["e"] = player_semi_guard
-        player.moves["r"] = player_full_guard
+        player.moves["q"] = PLAYER_JAB
+        player.moves["w"] = PLAYER_HOOK
+        player.moves["e"] = SEMI_GUARD
+        player.moves["r"] = FULL_GUARD
 
         player.attributes.append(Attribute(AttributeType.HEALTH, "Health", 1, "", SpecialPassives.BERSERK, SpecialActives.SECOND_WIND))
         player.attributes.append(Attribute(AttributeType.STAMINA, "Stamina", 1, "", SpecialPassives.FULLY_CHARGED, SpecialActives.RESET))
@@ -436,41 +422,15 @@ label fight_test:
         opponent.attributes.append(Attribute(AttributeType.HEAVY_ATTACK_DAMAGE, "Heavy Attack Damage", 10, "", SpecialPassives.BRUISER, SpecialActives.DEVASTATING_FORCE))
         opponent.set_specials()
 
-        mc.fighter = player
-
         opponent.wins = 2
 
     call screen fight_menu([
-        Attack(AttackType.LIGHT, AttackType.JAB, 5, 2, Guard.SEMI_GUARD, {
-            "start_image": "images/v2/jab2start.webp",
-            "hit_image": "images/v2/jab2pic.webp",
-            "block_image": "images/v2/jab1pic.webp"
-        }),
-        Attack(AttackType.LIGHT, AttackType.BODY_HOOK, 5, 2, Guard.SEMI_GUARD, {
-            "start_image": "images/v2/jab2start.webp",
-            "hit_image": "images/v2/jab2pic.webp",
-            "block_image": "images/v2/jab1pic.webp"
-        }),
-        Attack(AttackType.LIGHT, AttackType.OVERHAND_PUNCH, 5, 2, Guard.SEMI_GUARD, {
-            "start_image": "images/v2/jab2start.webp",
-            "hit_image": "images/v2/jab2pic.webp",
-            "block_image": "images/v2/jab1pic.webp"
-        }),
-        Attack(AttackType.HEAVY, AttackType.HOOK, 5, 2, Guard.FULL_GUARD, {
-            "start_image": "images/v2/jab2start.webp",
-            "hit_image": "images/v2/jab2pic.webp",
-            "block_image": "images/v2/jab1pic.webp"
-        }),
-        Attack(AttackType.HEAVY, AttackType.UPPERCUT, 5, 2, Guard.FULL_GUARD, {
-            "start_image": "images/v2/jab2start.webp",
-            "hit_image": "images/v2/jab2pic.webp",
-            "block_image": "images/v2/jab1pic.webp"
-        }),
-        Attack(AttackType.HEAVY, AttackType.KICK, 5, 2, Guard.FULL_GUARD, {
-            "start_image": "images/v2/jab2start.webp",
-            "hit_image": "images/v2/jab2pic.webp",
-            "block_image": "images/v2/jab1pic.webp"
-        })
+        PLAYER_JAB,
+        PLAYER_BODY_HOOK,
+        PLAYER_OVERHAND_PUNCH,
+        PLAYER_HOOK,
+        PLAYER_UPPERCUT,
+        PLAYER_KICK
     ], "First Fight")
 
     label fight_start:

@@ -424,7 +424,7 @@ screen fight_attack(player=player, opponent=opponent):
         key k:
             action Call("player_attack_turn", move, player, opponent) 
 
-    timer fight_reaction_time action [SetField(player, "stamina", player.stamina + 4), Call("opponent_attack_turn", player, opponent)]
+    timer fight_reaction_time action [SetField(player, "stamina", player.stamina + 3), Call("opponent_attack_turn", player, opponent)]
 
 
 screen fight_defense(opponent_attack, player=player, opponent=opponent):
@@ -471,6 +471,8 @@ screen new_fight_overlay(player, opponent):
 screen test_health():
     zorder 100
 
+    text str(fight_game_state.name) xalign 0.5
+
     vbox:
         align (0.1, 0.1)
 
@@ -478,6 +480,9 @@ screen test_health():
         text "Guard: {}".format(player.guard):
             size 50
             color "#494ce6"
+        text "Stamina: {}".format(player.stamina):
+            size 50
+            color "#ffa600"
 
         null height 100
 
