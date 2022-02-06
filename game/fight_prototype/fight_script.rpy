@@ -476,18 +476,4 @@ label fight_test:
     show screen test_health
     show screen new_fight_overlay(player, opponent)
 
-    menu:
-
-        "Easy":
-            $ fight_reaction_time = 1.5
-
-        "Medium":
-            $ fight_reaction_time = 1
-
-        "Hard":
-            $ fight_reaction_time = 0.75
-
-        "Impossible":
-            $ fight_reaction_time = 0.5
-
     call screen fight_attack
