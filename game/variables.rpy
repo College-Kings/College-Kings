@@ -214,6 +214,7 @@ default v10s33_ev_date_now = False
 default v10s33_laurenBakeSale = False
 default v10s33_ryan_flirt_emily = False
 default v10s33_toldChloe = False
+default v10lottery_ticket = False # Needed for v16S20
 
 # 11.0
 default candyLike = 0
