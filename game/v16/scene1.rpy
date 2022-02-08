@@ -38,7 +38,7 @@ label v16s1_lose:
 
     menu:
         "I'm fine":
-            u "Yeah, I'm fine"
+            u "Yeah, I'm fine."
 
             u "He just got a few lucky hits, that's all."
 

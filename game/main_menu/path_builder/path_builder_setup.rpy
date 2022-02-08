@@ -27,6 +27,7 @@ label path_builder_setup:
         PB_CHLOE = PathBuilderGirl(PathBuilderCatagories.GIRL, "Chloe", "Popular",
             actions=[
                 ToggleField(chloe, "relationship", Relationship.GIRLFRIEND, Relationship.FRIEND),
+                ToggleVariable("meetchloe"),
                 ToggleVariable("ending", "chloe", "riley"),
                 ToggleVariable("hcGirl", "chloe", "alone")])
         PB_NORA = PathBuilderGirl(PathBuilderCatagories.GIRL, "Nora", "Loyal/Confident",
