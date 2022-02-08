@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 5)
 # Time: Tuesday night
 
-
 label v16s19: # MC goes to Amber's house
     scene v16s19_1 # TPP MC arrives at Amber's front door.
     with dissolve
