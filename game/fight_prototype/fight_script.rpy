@@ -208,10 +208,10 @@ label player_attack_turn(player_move, player, opponent):
     
     # If Guard.FULL_GUARD lose stamina
     if player.guard == Guard.FULL_GUARD:
-        if player.stamina >= fight_full_guard_stamina_penalty
+        if player.stamina >= fight_full_guard_stamina_penalty:
             $ player.stamina -= fight_full_guard_stamina_penalty ## TODO: Fine tune stamina loss
         else:
-            call screen opponent_attack_turn(player, opponent)
+            call opponent_attack_turn(player, opponent)
 
     if player.stamina < player_move.stamina_cost:
         call opponent_attack_turn(player, opponent)
@@ -283,7 +283,7 @@ label player_defence_turn(player_move, player, opponent_attack, opponent):
     $ fight_game_state = FightGameState.PLAYER_DEFENCE
 
     # Set player move to None if no stamina and not overhand special effect 
-    if player.stamina < player_move.stamina_cost
+    if player_move is not None and player.stamina < player_move.stamina_cost:
         $ player_move = None
 
     if player_move is not None:
@@ -349,7 +349,7 @@ label opponent_attack_turn(player, opponent):
 
     # If Guard.FULL_GUARD lose stamina
     if opponent.guard == Guard.FULL_GUARD:
-        if opponent.stamina >= fight_full_guard_stamina_penalty
+        if opponent.stamina >= fight_full_guard_stamina_penalty:
             $ opponent.stamina -= fight_full_guard_stamina_penalty ## TODO: Fine tune stamina loss
         else:
             call screen fight_attack
