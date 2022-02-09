@@ -75,7 +75,7 @@ label v16s11:
         with dissolve
 
         menu:
-            "It was fun.":
+            "It was fun":
                 $ add_point(KCT.TROUBLEMAKER)
                 scene v16s11_3
                 with dissolve
@@ -97,7 +97,7 @@ label v16s11:
 
                 ri "*Sighs* Men and their violence..."
                 
-            "Don't think about it.":
+            "Don't think about it":
                 $ add_point(KCT.BRO)
                 scene v16s11_3
                 with dissolve
@@ -143,8 +143,7 @@ label v16s11:
 
     u "Oooh... Risky."
 
-    if riley.relationship >= Relationship.LIKES:
-    
+    if riley.relationship >= Relationship.LIKES: ###???
         scene v16s11_6c # FPP. At the pinboard, MC looking at Riley, Riley body facing the board, head turned toward MC, Riley laughing, mouth open.
         with dissolve
 
@@ -187,7 +186,7 @@ label v16s11:
     with dissolve
 
     menu:
-        "Be nice.":
+        "Be nice":
             $ add_point(KCT.BRO)
             scene v16s11_6b
             with dissolve
@@ -199,7 +198,7 @@ label v16s11:
 
             ri "Yeah, really cool."
 
-        "Joke about Elijah.":
+        "Joke about Elijah":
             $ add_point(KCT.TROUBLEMAKER)
             scene v16s11_6b
             with dissolve
@@ -252,7 +251,7 @@ label v16s11:
     with dissolve
 
     menu:
-        "Support her.":
+        "Support her":
             $ add_point(KCT.BRO)
             scene v16s11_6b
             with dissolve
@@ -264,7 +263,7 @@ label v16s11:
 
             ri "Right? Exactly!"
 
-        "Elijah sucks though.":
+        "Elijah sucks though":
             $ add_point(KCT.TROUBLEMAKER)
             scene v16s11_6b
             with dissolve
@@ -287,7 +286,7 @@ label v16s11:
     scene v16s11_6i # FPP. At the pinboard, MC looking at Riley, Riley leaning over, using a PEN to sign her name, slight smile, mouth closed.
     with dissolve 
 
-    pause .75
+    pause 0.75
 
     scene v16s11_6j # FPP. At the pinboard, MC looking at Riley, Riley looking at MC, handing PEN toward MC, Riley slight smile, mouth open.
     with dissolve
@@ -326,7 +325,7 @@ label v16s11:
 
             ri "*Laughs*"
 
-        "Don't sign up..":
+        "Don't sign up":
             scene v16s11_8
             with dissolve
 
@@ -350,8 +349,7 @@ label v16s11:
         scene v16s11_11a # TPP. At the pinboard, MC looking at Chloe, Chloe leaning forward and kissing MC on the cheek.
         with dissolve  
 
-        if riley.relationship >= Relationship.LIKES:
-
+        if riley.relationship >= Relationship.LIKES: ###???
             scene v16s11_12 # TPP. Close up of Riley facing MC and Chloe but her she looks away from seeing MC and Chloe kiss.
             with dissolve
 
@@ -390,20 +388,20 @@ label v16s11:
     scene v16s11_6m # FPP. At the pinboard, MC looking at Riley, Riley looking at MC, Riley confused, mouth open 
     with dissolve
 
-    ri "I think that's a bit extreme. [Name]? Tell her."
+    ri "I think that's a bit extreme. [name]? Tell her."
 
     scene v16s11_11c # FPP. At the pinboard, MC looking at Chloe, Chloe looking at her campaign poster, Chloe neutral face, mouth closed.
     with dissolve
 
     menu:
-        "You look great.":
+        "You look great":
             $ add_point(KCT.BOYFRIEND)
             scene v16s11_11d # FPP. At the pinboard, MC looking at Chloe, Chloe looking at MC, Chloe slight smile, mouth closed.
             with dissolve
 
             u "Chloe, don't overthink it. You look great in every photo."
 
-        "Not your best photo.":
+        "Not your best photo":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene v16s11_11e # FPP. At the pinboard, MC looking at Chloe, Chloe looking at MC, Chloe neutral face, mouth closed.
@@ -449,7 +447,7 @@ label v16s11:
     u "(I think Riley's over the Chicks at the moment.)"
 
 # -if Announcement, and Chloe and Lindsey went to Mr Lee's office
-    if v15_lindsey_recording > 0:  # VERIFY This gets us annoucenment (and I think that will flow to Mr. Lee's office, otherwise we can add sceen8 to sceneList and check for that)
+    if v15_lindsey_recording > 0:  ### VERIFY This gets us annoucenment (and I think that will flow to Mr. Lee's office, otherwise we can add sceen8 to sceneList and check for that)
         scene v16s11_11d
         with dissolve
 
@@ -562,6 +560,8 @@ label v16s11:
 
         scene v16s11_16a # TPP. MC looking at his phone, [don't show Chloe so can be reused], slight smile, mouth closed.
         with dissolve 
+        
+        ### check queue
         
         $ nora.messenger.newMessage("Hey, it's too nice out to be inside all day. Come join me at the park for yoga?")
         $ nora.messenger.addReply("I do need a good stretch... lol. Got a few things left to do on campus, but I'll be there ASAP.")

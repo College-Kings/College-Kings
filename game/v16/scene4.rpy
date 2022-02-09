@@ -157,8 +157,10 @@ label v16s4:
             with dissolve
 
             jump v16s5
+
         else:
             jump v16s4a
+
     else:
         play sound "sounds/dooropen.mp3"
 
@@ -303,6 +305,6 @@ label v16s4:
             with dissolve
 
             jump v16s5
+
         else:
             jump v16s4a
-    
