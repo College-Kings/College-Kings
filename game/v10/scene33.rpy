@@ -1373,6 +1373,7 @@ label v10s33_deergirl21:
 
     menu:
         "Get a lottery ticket":
+            $ v10lottery_ticket = True
             $ add_point(KCT.BOYFRIEND)
             u "Well I'll take one."
 
