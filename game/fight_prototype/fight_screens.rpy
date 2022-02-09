@@ -418,13 +418,16 @@ screen fight_attack(player=player, opponent=opponent):
     tag fight_screens
     modal True
 
+    default player_stamina = player.stamina
+    default opponent_stamina = opponent.stamina
+
     add opponent.guard_image
 
     for k, move in player.moves.items():
         key k:
             action Call("player_attack_turn", move, player, opponent) 
 
-    timer fight_reaction_time action [SetField(player, "stamina", player.stamina + 3), Call("opponent_attack_turn", player, opponent)]
+    timer fight_reaction_time action [SetField(player, "stamina", player_stamina + 4), SetField(opponent, "stamina", opponent_stamina + 4), Call("opponent_attack_turn", player, opponent)]
 
 
 screen fight_defense(opponent_attack, player=player, opponent=opponent):

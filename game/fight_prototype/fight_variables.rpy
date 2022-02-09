@@ -1,3 +1,5 @@
+define fight_full_guard_stamina_penalty = 2
+
 default fight_reaction_time = 1
 default fight_end_label = "fight_end"
 default fight_game_state = FightGameState.ERROR
@@ -40,8 +42,9 @@ define PLAYER_KICK = Attack(AttackType.HEAVY, AttackType.KICK, 5, 2, Guard.FULL_
 })
 
 # Guards
-define SEMI_GUARD = Defence(Guard.SEMI_GUARD, 2)
-define FULL_GUARD = Defence(Guard.FULL_GUARD, 5)
+define LOW_GUARD = Defence(Guard.LOW_GUARD, 0)
+define SEMI_GUARD = Defence(Guard.SEMI_GUARD, 0)
+define FULL_GUARD = Defence(Guard.FULL_GUARD, 0)
 
 # Opponent Light Attacks
 define OPPONENT_JAB = Attack(AttackType.LIGHT, AttackType.JAB, 5, 2, Guard.SEMI_GUARD, {

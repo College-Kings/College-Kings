@@ -29,11 +29,11 @@ python early:
             return self.value >= other.value
 
 
-    def weighted_choice(choices, size=1, p=None):
-        p = map(lambda x: int(round(x, 2) * 100), p)
+    def weighted_choice(choices, size=1, probability=None):
+        probability = tuple(int(round(x, 2) * 100) for x in probability)
 
         weighted_choices = []
-        for choice, probability in zip(choices, p):
-            weighted_choices += [choice] * probability
+        for c, p in zip(choices, probability):
+            weighted_choices += [c] * p
 
         return renpy.random.choice(weighted_choices)
