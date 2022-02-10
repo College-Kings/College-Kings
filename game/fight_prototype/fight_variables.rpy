@@ -7,55 +7,16 @@ default fight_game_state = FightGameState.ERROR
 default player_fight_style = "Aggressive"
 
 
-# Player Light Attacks
-define PLAYER_JAB = Attack(AttackType.LIGHT, AttackType.JAB, 5, 2, Guard.SEMI_GUARD, {
-    "start_image": "images/v2/jab2start.webp",
-    "hit_image": "images/v2/jab2pic.webp",
-    "block_image": "images/v2/jab1pic.webp"
-})
-define PLAYER_BODY_HOOK = Attack(AttackType.HEAVY, AttackType.BODY_HOOK, 10, 4, Guard.FULL_GUARD, {
-    "start_image": "images/v2/hook2start.webp",
-    "hit_image": "images/v2/hook2pic.webp",
-    "block_image": "images/v2/hook1pic.webp"
-})
-define PLAYER_OVERHAND_PUNCH = Attack(AttackType.LIGHT, AttackType.OVERHAND_PUNCH, 5, 2, Guard.SEMI_GUARD, {
-    "start_image": "images/v2/jab2start.webp",
-    "hit_image": "images/v2/jab2pic.webp",
-    "block_image": "images/v2/jab1pic.webp"
-})
+# Light Attacks
+define JAB = Attack(AttackType.LIGHT, AttackType.JAB, 5, 2)
+define HOOK = Attack(AttackType.HEAVY, AttackType.BODY_HOOK, 10, 4)
+define PUNCH = Attack(AttackType.LIGHT, AttackType.OVERHAND_PUNCH, 5, 2)
 
-# Player Heavy Attacks
-define PLAYER_HOOK = Attack(AttackType.HEAVY, AttackType.HOOK, 5, 2, Guard.FULL_GUARD, {
-    "start_image": "images/v2/jab2start.webp",
-    "hit_image": "images/v2/jab2pic.webp",
-    "block_image": "images/v2/jab1pic.webp"
-})
-define PLAYER_UPPERCUT = Attack(AttackType.HEAVY, AttackType.UPPERCUT, 5, 2, Guard.FULL_GUARD, {
-    "start_image": "images/v2/jab2start.webp",
-    "hit_image": "images/v2/jab2pic.webp",
-    "block_image": "images/v2/jab1pic.webp"
-})
-define PLAYER_KICK = Attack(AttackType.HEAVY, AttackType.KICK, 5, 2, Guard.FULL_GUARD, {
-    "start_image": "images/v2/jab2start.webp",
-    "hit_image": "images/v2/jab2pic.webp",
-    "block_image": "images/v2/jab1pic.webp"
-})
+# Heavy Attacks
+define HOOK = Attack(AttackType.HEAVY, AttackType.HOOK, 10, 6)
+define UPPERCUT = Attack(AttackType.HEAVY, AttackType.UPPERCUT, 10, 6)
+define KICK = Attack(AttackType.HEAVY, AttackType.KICK, 10, 6)
 
-# Guards
-define LOW_GUARD = Defence(Guard.LOW_GUARD, 0)
-define SEMI_GUARD = Defence(Guard.SEMI_GUARD, 0)
-define FULL_GUARD = Defence(Guard.FULL_GUARD, 0)
-
-# Opponent Light Attacks
-define OPPONENT_JAB = Attack(AttackType.LIGHT, AttackType.JAB, 5, 2, Guard.SEMI_GUARD, {
-    "start_image": "images/v2/tomjab.webp",
-    "hit_image": "images/v2/tomjabhit.webp",
-    "block_image": "images/v2/tomjabblock.webp"
-})
-
-# Opponent Heavy Attacks
-define OPPONENT_KICK = Attack(AttackType.HEAVY, AttackType.KICK, 10, 4, Guard.FULL_GUARD, {
-    "start_image": "images/v2/tomkick.webp",
-    "hit_image": "images/v2/tomkickhit.webp",
-    "block_image": "images/v2/tomkickblock.webp"
-})
+# Defensive Moves
+define BLOCK = Defence(DefensiveMove.BLOCK, 2)
+define DODGE = Defence(DefensiveMove.DODGE, 3)

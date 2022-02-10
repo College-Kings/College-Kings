@@ -56,6 +56,9 @@ init 100 python:
     class Teacher(NonPlayableCharacter):
         pass
 
+    class FightCharacter(NonPlayableCharacter):
+        pass
+
 
 label after_load:
     python:

@@ -36,17 +36,17 @@ screen base_fight_stats(character):
 
         text "Defenses" xalign 0.0
 
-        hbox:
-            spacing 20
+        # hbox:
+        #     spacing 20
 
-            for guard in Guard:
-                button:
-                    xysize (58, 58)
-                    idle_background "gui/fight_prototype/fight_slot_hover.png"
-                    hover_background "gui/fight_prototype/fight_slot_hover.png"
-                    action NullAction()
+            # for guard in Guard:
+            #     button:
+            #         xysize (58, 58)
+            #         idle_background "gui/fight_prototype/fight_slot_hover.png"
+            #         hover_background "gui/fight_prototype/fight_slot_hover.png"
+            #         action NullAction()
 
-                    text guard.name.replace('_', ' ') align (0.5, 0.9) size 15
+            #         text guard.name.replace('_', ' ') align (0.5, 0.9) size 15
 
 
 screen player_fight_stats(player_attacks=None, player=player, extra_points=0):
@@ -418,29 +418,44 @@ screen fight_attack(player=player, opponent=opponent):
     tag fight_screens
     modal True
 
-    default player_stamina = player.stamina
-    default opponent_stamina = opponent.stamina
+    default timing_var = 50 ## TODO: Remove debugging
 
-    add opponent.guard_image
+    add opponent.images["neutral"]
+
+    # use animated_value_bar(None, timing_var, 100, "blue_bar", "ruby_bar", offset=(13, 0), size=(800, 95), delay=0.025)
 
     for k, move in player.moves.items():
         key k:
-            action Call("player_attack_turn", move, player, opponent) 
+            action Call("player_attack_turn", move, player, opponent)
 
-    timer fight_reaction_time action [SetField(player, "stamina", player_stamina + 4), SetField(opponent, "stamina", opponent_stamina + 4), Call("opponent_attack_turn", player, opponent)]
+    # timer 0.025:
+    #     repeat True
+    #     if timing_var == 100:
+    #         action [SetField(player, "stamina", player.stamina + 5), Call("opponent_attack_turn", player, opponent)]
+    #     else:
+    #         action SetScreenVariable("timing_var", timing_var + 1)
 
 
 screen fight_defense(opponent_attack, player=player, opponent=opponent):
     tag fight_screens
     modal True
 
+    default timing_var = 50 ## TODO: Remove debugging
+
     add opponent_attack.images["start_image"]
+
+    # use animated_value_bar(None, timing_var, 100, "blue_bar", "ruby_bar", offset=(13, 0), size=(800, 95), delay=0.01)
 
     for k, move in player.moves.items():
         key k:
-            action Call("player_defence_turn", move, player, opponent_attack, opponent)
+            action Call("player_defence_turn", timing_var, move, player, opponent_attack, opponent)
 
-    timer fight_reaction_time action Call("player_defence_turn", None, player, opponent_attack, opponent)
+    # timer 0.01:
+    #     repeat True
+    #     if timing_var == 100:
+    #         action Call("player_defence_turn", timing_var, None, player, opponent_attack, opponent)
+    #     else:
+    #         action SetScreenVariable("timing_var", timing_var + 1)
 
 
 screen fight_popup(message):
@@ -480,9 +495,9 @@ screen test_health():
         align (0.1, 0.1)
 
         text "Player" size 50
-        text "Guard: {}".format(player.guard):
-            size 50
-            color "#494ce6"
+        # text "Guard: {}".format(player.guard):
+        #     size 50
+        #     color "#494ce6"
         text "Stamina: {}".format(player.stamina):
             size 50
             color "#ffa600"
@@ -490,9 +505,9 @@ screen test_health():
         null height 100
 
         text "Opponent" size 50
-        text "Guard: {}".format(opponent.guard):
-            size 50
-            color "#494ce6"
+        # text "Guard: {}".format(opponent.guard):
+        #     size 50
+        #     color "#494ce6"
         text "Stamina: {}".format(opponent.stamina):
             size 50
             color "#ffa600"
