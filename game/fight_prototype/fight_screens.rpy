@@ -431,7 +431,7 @@ screen fight_attack(player=player, opponent=opponent):
     # timer 0.025:
     #     repeat True
     #     if timing_var == 100:
-    #         action [SetField(player, "stamina", player.stamina + 5), Call("opponent_attack_turn", player, opponent)]
+    #         action [SetField(player, "stamina", player.stamina + 5), SetField(opponent, "stamina", opponent.stamina + 5), Call("opponent_attack_turn", player, opponent)]
     #     else:
     #         action SetScreenVariable("timing_var", timing_var + 1)
 
