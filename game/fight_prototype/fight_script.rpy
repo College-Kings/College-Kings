@@ -376,10 +376,12 @@ label fight_test:
 
     python:
         player = Player(FightingStyle.STYLE_TWO, images={
-            "neutral": "fight_prototype/images/player_neutral_stance.png"
+            "neutral": "fight_prototype/images/player_neutral_stance.png",
+            "lost_footing": "fight_prototype/images/player_lost_footing.png",
         })
         opponent = Opponent(FightingStyle.STYLE_ONE, images={
-            "neutral": "fight_prototype/images/opponent_neutral_stance.png"
+            "neutral": "fight_prototype/images/opponent_neutral_stance.png",
+            "lost_footing": "fight_prototype/images/opponent_lost_footing.png"
         })
 
         player.moves["q"] = JAB.copy({
