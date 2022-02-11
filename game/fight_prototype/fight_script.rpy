@@ -126,7 +126,7 @@ init python:
 
 
     class BasePlayer:
-        def __init__(self, fighting_style, stance=FightingStance.NEUTRAL, stamina=10, health=100, attack_multiplier=1, images=None):
+        def __init__(self, fighting_style, stance, stamina=10, health=100, attack_multiplier=1, images=None):
             self.fighting_style = fighting_style
             self.stance = stance
             self.max_stamina = stamina
@@ -195,7 +195,7 @@ init python:
 
     
     class Player(BasePlayer):
-        def __init__(self, fighting_style, stance=FightingStance.NEUTRAL, stamina=10, health=100, attack_multiplier=1, images=None):
+        def __init__(self, fighting_style, stance, stamina=10, health=100, attack_multiplier=1, images=None):
             BasePlayer.__init__(self, fighting_style, stance, stamina, health, attack_multiplier, images)
             
             self.moves = {
@@ -392,7 +392,9 @@ label fight_test:
     $ fight_game_state = FightGameState.ERROR
 
     python:
-        player = Player(FightingStyle.STYLE_TWO)
+        player = Player(FightingStyle.STYLE_TWO, FightingStance.NEUTRAL, images={
+            FightingStance.LOST_FOOTING: "fight_prototype/images/opponent_lost_footing.webp"
+        }))
         opponent = Opponent(FightingStyle.STYLE_ONE, FightingStance.NEUTRAL, images={
             FightingStance.NEUTRAL: "fight_prototype/images/opponent_neutral_stance.webp",
             FightingStance.LOST_FOOTING: "fight_prototype/images/opponent_lost_footing.webp"
