@@ -230,6 +230,10 @@ label player_attack_turn(player_move, player, opponent):
 
     $ opponent_move = renpy.random.choice((BLOCK, DODGE, None))
 
+    if opponent.stance == FightingStance.LOST_FOOTING:
+        $ opponent.move = None
+        $ opponent.stance = FightingStance.NEUTRAL
+
     if opponent_move is not None:
         if opponent.stamina < opponent_move.stamina_cost:
             $ opponent_move = None
@@ -367,7 +371,7 @@ label player_lost_footing(player, opponent):
     $ player.stance = FightingStance.LOST_FOOTING
 
     show screen fight_popup("LOST FOOTING")
-    call screen opponent_attack_turn(player, opponent)
+    call opponent_attack_turn(player, opponent)
 
     return
 
