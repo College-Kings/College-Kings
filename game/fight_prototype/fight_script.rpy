@@ -212,10 +212,9 @@ label player_attack_turn(player_move, player, opponent):
     $ fight_game_state = FightGameState.PLAYER_ATTACK
     
     if isinstance(player_move, Defence):
-        if player.stamina >= player_move.stamina_cost:
-            $ player.stamina -= player_move.stamina_cost
-            scene expression player_move.image
-            pause 0.5
+        $ player.stamina -= player_move.stamina_cost
+        scene expression player_move.image
+        pause 0.5
 
         call opponent_attack_turn(player, opponent)
 
@@ -270,10 +269,6 @@ label player_attack_turn(player_move, player, opponent):
 label player_defence_turn(timing_var, player_move, player, opponent_attack, opponent):
     $ renpy.set_return_stack([])
     $ fight_game_state = FightGameState.PLAYER_DEFENCE
-
-    # Set player move to None if no stamina and not overhand special effect 
-    if player_move is not None and player.stamina < player_move.stamina_cost:
-        $ player_move = None
 
     if player_move is None or isinstance(player_move, Attack):
         call opponent_attack_hit(opponent_attack, player, opponent)

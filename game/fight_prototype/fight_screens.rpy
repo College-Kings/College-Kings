@@ -426,7 +426,8 @@ screen fight_attack(player=player, opponent=opponent):
 
     for k, move in player.moves.items():
         key k:
-            action Call("player_attack_turn", move, player, opponent)
+            if player.stamina >= move.stamina:
+                action Call("player_attack_turn", move, player, opponent)
 
     timer 0.025:
         repeat True
@@ -448,7 +449,8 @@ screen fight_defense(opponent_attack, player=player, opponent=opponent):
 
     for k, move in player.moves.items():
         key k:
-            action Call("player_defence_turn", timing_var, move, player, opponent_attack, opponent)
+            if player.stamina >= move.stamina:
+                action Call("player_defence_turn", timing_var, move, player, opponent_attack, opponent)
 
     timer 0.01:
         repeat True
