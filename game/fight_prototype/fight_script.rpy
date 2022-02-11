@@ -231,7 +231,7 @@ label player_attack_turn(player_move, player, opponent):
     $ opponent_move = renpy.random.choice((BLOCK, DODGE, None))
 
     if opponent.stance == FightingStance.LOST_FOOTING:
-        $ opponent.move = None
+        $ opponent_move = None
         $ opponent.stance = FightingStance.NEUTRAL
 
     if opponent_move is not None:
@@ -419,7 +419,7 @@ label fight_test:
             "block_image": "fight_prototype/images/player_hook_blocked.webp",
             "dodge_image": "fight_prototype/images/player_hook_dodged.png"
         })
-        player.moves["e"] = BLOCK.copy("fight_prototype/images/player_block.webp")
+        player.moves["e"] = BLOCK.copy("fight_prototype/images/player_block.pmg")
         player.moves["r"] = DODGE.copy("fight_prototype/images/player_dodge.png")
 
         opponent.attacks[AttackType.LIGHT] = JAB.copy({
