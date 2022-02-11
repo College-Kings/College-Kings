@@ -203,7 +203,6 @@ init python:
                 "w": None, # heavy attack
                 "e": None, # semi guard
                 "r": None, # full guard
-                "K_SPACE": None # Active ability
             }
 
 
