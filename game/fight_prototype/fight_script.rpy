@@ -281,10 +281,10 @@ label player_defence_turn(timing_var, player_move, player, opponent_attack, oppo
                     call opponent_attack_hit(opponent_attack, player, opponent)
 
                 elif timing_var < 35: # Early
-                    call opponent_attack_blocked(opponent_attack)
+                    call opponent_attack_blocked(opponent_attack, player, opponent)
 
                 else: # Perfect
-                    call opponent_lost_footing(opponent)
+                    call opponent_lost_footing(player, opponent)
 
             elif player_move.name == DefensiveMove.DODGE:
                 if 35 < timing_var < 65: # Perfect
@@ -299,7 +299,7 @@ label player_defence_turn(timing_var, player_move, player, opponent_attack, oppo
                     call opponent_attack_hit(opponent_attack, player, opponent)
 
                 else: # Perfect
-                    call player_lost_footing(player)
+                    call player_lost_footing(player, opponent)
 
             elif player_move.name == DefensiveMove.DODGE:
                 if 35 < timing_var < 65: # Perfect
@@ -327,12 +327,12 @@ label opponent_attack_hit(opponent_attack, player, opponent):
     return
 
 
-label opponent_attack_blocked(opponent_attack):
+label opponent_attack_blocked(opponent_attack, player, opponent):
     scene expression opponent_attack.images["block_image"]
     with vpunch
 
     if opponent_attack.move_type == AttackType.HEAVY:
-        call player_lost_footing
+        call player_lost_footing(player, opponent)
     else:
         show screen fight_popup("BLOCKED")
 
@@ -348,24 +348,26 @@ label opponent_attack_dodged(opponent_attack):
     return
 
 
-label opponent_lost_footing(opponent):
-    scene expression opponent.images["lost_footing"]
+label opponent_lost_footing(player, opponent):
+    scene expression opponent.images[FightingStance.LOST_FOOTING]
     with vpunch
 
     $ opponent.stance = FightingStance.LOST_FOOTING
 
     show screen fight_popup("LOST FOOTING")
+    call screen fight_attack(player, opponent)
 
     return
 
 
-label player_lost_footing(player):
-    scene expression player.images["lost_footing"]
+label player_lost_footing(player, opponent):
+    scene expression player.images[FightingStance.LOST_FOOTING]
     with vpunch
 
     $ player.stance = FightingStance.LOST_FOOTING
 
     show screen fight_popup("LOST FOOTING")
+    call screen opponent_attack_turn(player, opponent)
 
     return
 
