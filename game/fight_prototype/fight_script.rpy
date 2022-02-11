@@ -195,8 +195,8 @@ init python:
 
     
     class Player(BasePlayer):
-        def __init__(self, fighting_style, stamina=10, health=100, attack_multiplier=1, images=None):
-            BasePlayer.__init__(self, fighting_style, stamina, health, attack_multiplier, images)
+        def __init__(self, fighting_style, stance, stamina=10, health=100, attack_multiplier=1, images=None):
+            BasePlayer.__init__(self, fighting_style, stance, stamina, health, attack_multiplier, images)
             
             self.moves = {
                 "q": None, # light attack
