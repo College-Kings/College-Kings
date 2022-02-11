@@ -44,6 +44,11 @@ init python:
         STYLE_THREE = 3
 
 
+    class FightingStance(Enum):
+        NEUTRAL = 0
+        LOST_FOOTING = 1
+
+
     class AttackType(Enum):
         LIGHT = 0
         HEAVY = 1
@@ -123,7 +128,7 @@ init python:
     class BasePlayer:
         def __init__(self, fighting_style, stance, stamina=10, health=100, attack_multiplier=1, images=None):
             self.fighting_style = fighting_style
-            self.stance = strance
+            self.stance = stance
             self.max_stamina = stamina
             self.max_health = health
             self.attack_multiplier = attack_multiplier
@@ -141,6 +146,10 @@ init python:
             self.passive_abilities = set()
             self.special_abilities = set()
             self.special_ability = None
+
+        @property
+        def stance_image(self):
+            return self.images[self.stance]
 
         @property
         def stamina(self):
@@ -343,6 +352,8 @@ label opponent_lost_footing(opponent):
     scene expression opponent.images["lost_footing"]
     with vpunch
 
+    $ opponent.stance = FightingStance.LOST_FOOTING
+
     show screen fight_popup("LOST FOOTING")
 
     return
@@ -351,6 +362,8 @@ label opponent_lost_footing(opponent):
 label player_lost_footing(player):
     scene expression player.images["lost_footing"]
     with vpunch
+
+    $ player.stance = FightingStance.LOST_FOOTING
 
     show screen fight_popup("LOST FOOTING")
 
@@ -379,13 +392,13 @@ label fight_test:
     $ fight_game_state = FightGameState.ERROR
 
     python:
-        player = Player(FightingStyle.STYLE_TWO, images={
-            "neutral": "fight_prototype/images/player_neutral_stance.png",
-            "lost_footing": "fight_prototype/images/player_lost_footing.png",
+        player = Player(FightingStyle.STYLE_TWO, FightingStance.NEUTRAL, images={
+            FightingStance.NEUTRAL: "fight_prototype/images/player_neutral_stance.png",
+            FightingStance.LOST_FOOTING: "fight_prototype/images/player_lost_footing.png",
         })
-        opponent = Opponent(FightingStyle.STYLE_ONE, images={
-            "neutral": "fight_prototype/images/opponent_neutral_stance.png",
-            "lost_footing": "fight_prototype/images/opponent_lost_footing.png"
+        opponent = Opponent(FightingStyle.STYLE_ONE, FightingStance.NEUTRAL, images={
+            FightingStance.NEUTRAL: "fight_prototype/images/opponent_neutral_stance.png",
+            FightingStance.LOST_FOOTING: "fight_prototype/images/opponent_lost_footing.png"
         })
 
         player.moves["q"] = JAB.copy({

@@ -420,7 +420,7 @@ screen fight_attack(player=player, opponent=opponent):
 
     default timing_var = 0 ## TODO: Remove debugging
 
-    add opponent.images["neutral"]
+    add opponent.stance_image
 
     use animated_value_bar(None, timing_var, 100, "blue_bar", "ruby_bar", offset=(13, 0), size=(800, 95), delay=0.025)
 
