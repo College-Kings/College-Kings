@@ -419,7 +419,7 @@ label fight_test:
             "block_image": "fight_prototype/images/player_hook_blocked.webp",
             "dodge_image": "fight_prototype/images/player_hook_dodged.png"
         })
-        player.moves["e"] = BLOCK.copy("fight_prototype/images/player_block.pmg")
+        player.moves["e"] = BLOCK.copy("fight_prototype/images/player_block.png")
         player.moves["r"] = DODGE.copy("fight_prototype/images/player_dodge.png")
 
         opponent.attacks[AttackType.LIGHT] = JAB.copy({
