@@ -394,36 +394,36 @@ label fight_test:
     python:
         player = Player(FightingStyle.STYLE_TWO)
         opponent = Opponent(FightingStyle.STYLE_ONE, FightingStance.NEUTRAL, images={
-            FightingStance.NEUTRAL: "fight_prototype/images/opponent_neutral_stance.png",
-            FightingStance.LOST_FOOTING: "fight_prototype/images/opponent_lost_footing.png"
+            FightingStance.NEUTRAL: "fight_prototype/images/opponent_neutral_stance.webp",
+            FightingStance.LOST_FOOTING: "fight_prototype/images/opponent_lost_footing.webp"
         })
 
         player.moves["q"] = JAB.copy({
             "start_image": "fight_prototype/images/player_start_jab.webp",
             "hit_image": "fight_prototype/images/player_hit_jab.webp",
             "block_image": "fight_prototype/images/player_jab_blocked.webp",
-            "dodge_image": "fight_prototype/images/player_jab_dodged.png"
+            "dodge_image": "fight_prototype/images/player_jab_dodged.webp"
         })
         player.moves["w"] = HOOK.copy({
             "start_image": "fight_prototype/images/player_start_hook.webp",
             "hit_image": "fight_prototype/images/player_hit_hook.webp",
             "block_image": "fight_prototype/images/player_hook_blocked.webp",
-            "dodge_image": "fight_prototype/images/player_hook_dodged.png"
+            "dodge_image": "fight_prototype/images/player_hook_dodged.webp"
         })
-        player.moves["e"] = BLOCK.copy("fight_prototype/images/player_block.png")
-        player.moves["r"] = DODGE.copy("fight_prototype/images/player_dodge.png")
+        player.moves["e"] = BLOCK.copy("fight_prototype/images/player_block.webp")
+        player.moves["r"] = DODGE.copy("fight_prototype/images/player_dodge.webp")
 
         opponent.attacks[AttackType.LIGHT] = JAB.copy({
             "start_image": "fight_prototype/images/opponent_start_jab.webp",
             "hit_image": "fight_prototype/images/opponent_hit_jab.webp",
             "block_image": "fight_prototype/images/opponent_jab_blocked.webp",
-            "dodge_image": "fight_prototype/images/opponent_jab_dodged.png"
+            "dodge_image": "fight_prototype/images/opponent_jab_dodged.webp"
         })
         opponent.attacks[AttackType.HEAVY] = KICK.copy({
             "start_image": "fight_prototype/images/opponent_start_kick.webp",
             "hit_image": "fight_prototype/images/opponent_hit_kick.webp",
             "block_image": "fight_prototype/images/opponent_kick_blocked.webp",
-            "dodge_image": "fight_prototype/images/opponent_kick_dodged.png"
+            "dodge_image": "fight_prototype/images/opponent_kick_dodged.webp"
         })
 
         opponent.wins = 2
