@@ -392,10 +392,10 @@ label fight_test:
     $ fight_game_state = FightGameState.ERROR
 
     python:
-        player = Player(FightingStyle.STYLE_TWO, FightingStance.NEUTRAL, images={
+        player = Player(FightingStyle.STYLE_TWO, FightingStance.NEUTRAL, health=50, images={
             FightingStance.LOST_FOOTING: "fight_prototype/images/player_lost_footing.webp"
         })
-        opponent = Opponent(FightingStyle.STYLE_ONE, FightingStance.NEUTRAL, images={
+        opponent = Opponent(FightingStyle.STYLE_ONE, FightingStance.NEUTRAL, health=50, images={
             FightingStance.NEUTRAL: "fight_prototype/images/opponent_neutral_stance.webp",
             FightingStance.LOST_FOOTING: "fight_prototype/images/opponent_lost_footing.webp"
         })
