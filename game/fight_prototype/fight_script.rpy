@@ -394,7 +394,7 @@ label fight_test:
     python:
         player = Player(FightingStyle.STYLE_TWO, FightingStance.NEUTRAL, images={
             FightingStance.LOST_FOOTING: "fight_prototype/images/opponent_lost_footing.webp"
-        }))
+        })
         opponent = Opponent(FightingStyle.STYLE_ONE, FightingStance.NEUTRAL, images={
             FightingStance.NEUTRAL: "fight_prototype/images/opponent_neutral_stance.webp",
             FightingStance.LOST_FOOTING: "fight_prototype/images/opponent_lost_footing.webp"
