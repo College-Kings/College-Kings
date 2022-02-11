@@ -418,44 +418,44 @@ screen fight_attack(player=player, opponent=opponent):
     tag fight_screens
     modal True
 
-    default timing_var = 50 ## TODO: Remove debugging
+    default timing_var = 0 ## TODO: Remove debugging
 
     add opponent.images["neutral"]
 
-    # use animated_value_bar(None, timing_var, 100, "blue_bar", "ruby_bar", offset=(13, 0), size=(800, 95), delay=0.025)
+    use animated_value_bar(None, timing_var, 100, "blue_bar", "ruby_bar", offset=(13, 0), size=(800, 95), delay=0.025)
 
     for k, move in player.moves.items():
         key k:
             action Call("player_attack_turn", move, player, opponent)
 
-    # timer 0.025:
-    #     repeat True
-    #     if timing_var == 100:
-    #         action [SetField(player, "stamina", player.stamina + 5), SetField(opponent, "stamina", opponent.stamina + 5), Call("opponent_attack_turn", player, opponent)]
-    #     else:
-    #         action SetScreenVariable("timing_var", timing_var + 1)
+    timer 0.025:
+        repeat True
+        if timing_var == 100:
+            action [SetField(player, "stamina", player.stamina + 5), SetField(opponent, "stamina", opponent.stamina + 5), Call("opponent_attack_turn", player, opponent)]
+        else:
+            action SetScreenVariable("timing_var", timing_var + 1)
 
 
 screen fight_defense(opponent_attack, player=player, opponent=opponent):
     tag fight_screens
     modal True
 
-    default timing_var = 50 ## TODO: Remove debugging
+    default timing_var = 0 ## TODO: Remove debugging
 
     add opponent_attack.images["start_image"]
 
-    # use animated_value_bar(None, timing_var, 100, "blue_bar", "ruby_bar", offset=(13, 0), size=(800, 95), delay=0.01)
+    use animated_value_bar(None, timing_var, 100, "blue_bar", "ruby_bar", offset=(13, 0), size=(800, 95), delay=0.01)
 
     for k, move in player.moves.items():
         key k:
             action Call("player_defence_turn", timing_var, move, player, opponent_attack, opponent)
 
-    # timer 0.01:
-    #     repeat True
-    #     if timing_var == 100:
-    #         action Call("player_defence_turn", timing_var, None, player, opponent_attack, opponent)
-    #     else:
-    #         action SetScreenVariable("timing_var", timing_var + 1)
+    timer 0.01:
+        repeat True
+        if timing_var == 100:
+            action Call("player_defence_turn", timing_var, None, player, opponent_attack, opponent)
+        else:
+            action SetScreenVariable("timing_var", timing_var + 1)
 
 
 screen fight_popup(message):

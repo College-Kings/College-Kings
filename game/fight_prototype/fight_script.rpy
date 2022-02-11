@@ -99,6 +99,7 @@ init python:
         def copy(self, images=None):
             return self.__class__(self.move_type, self.name, self.damage, self.stamina_cost, images)       
 
+
     class Defence:
         def __init__(self, name, stamina_cost, image=None):
             self.name = name
@@ -108,6 +109,7 @@ init python:
         def copy(self, image=None):
             return self.__class__(self.name, self.stamina_cost, image)       
     
+
     class Attribute:
         def __init__(self, type, name, value, description, passive_ability, active_ability):
             self.type = type
@@ -119,8 +121,9 @@ init python:
 
 
     class BasePlayer:
-        def __init__(self, fighting_style, stamina=10, health=100, attack_multiplier=1, images=None):
+        def __init__(self, fighting_style, stance, stamina=10, health=100, attack_multiplier=1, images=None):
             self.fighting_style = fighting_style
+            self.stance = strance
             self.max_stamina = stamina
             self.max_health = health
             self.attack_multiplier = attack_multiplier
@@ -262,38 +265,39 @@ label player_defence_turn(timing_var, player_move, player, opponent_attack, oppo
     if player_move is None or isinstance(player_move, Attack):
         call opponent_attack_hit(opponent_attack, player, opponent)
 
-    if opponent_attack.move_type == AttackType.LIGHT:
-        if player_move.name == DefensiveMove.BLOCK:
-            if timing_var > 65: # Late
-                call opponent_attack_hit(opponent_attack, player, opponent)
+    else:
+        if opponent_attack.move_type == AttackType.LIGHT:
+            if player_move.name == DefensiveMove.BLOCK:
+                if timing_var > 65: # Late
+                    call opponent_attack_hit(opponent_attack, player, opponent)
 
-            elif timing_var < 35: # Early
-                call opponent_attack_blocked(opponent_attack)
+                elif timing_var < 35: # Early
+                    call opponent_attack_blocked(opponent_attack)
 
-            else: # Perfect
-                call opponent_lost_footing(opponent)
+                else: # Perfect
+                    call opponent_lost_footing(opponent)
 
-        elif player_move.name == DefensiveMove.DODGE:
-            if 35 < timing_var < 65: # Perfect
-                call opponent_attack_dodged(opponent_attack)
+            elif player_move.name == DefensiveMove.DODGE:
+                if 35 < timing_var < 65: # Perfect
+                    call opponent_attack_dodged(opponent_attack)
 
-            else: # Late / Early
-                call opponent_attack_hit(opponent_attack, player, opponent)
+                else: # Late / Early
+                    call opponent_attack_hit(opponent_attack, player, opponent)
 
-    elif opponent_attack.move_type == AttackType.HEAVY:
-        if player_move.name == DefensiveMove.BLOCK:
-            if timing_var > 65: # Late
-                call opponent_attack_hit(opponent_attack, player, opponent)
+        elif opponent_attack.move_type == AttackType.HEAVY:
+            if player_move.name == DefensiveMove.BLOCK:
+                if timing_var > 65: # Late
+                    call opponent_attack_hit(opponent_attack, player, opponent)
 
-            else: # Perfect
-                call player_lost_footing(player)
+                else: # Perfect
+                    call player_lost_footing(player)
 
-        elif player_move.name == DefensiveMove.DODGE:
-            if 35 < timing_var < 65: # Perfect
-                call opponent_attack_dodged(opponent_attack)
+            elif player_move.name == DefensiveMove.DODGE:
+                if 35 < timing_var < 65: # Perfect
+                    call opponent_attack_dodged(opponent_attack)
 
-            else: # Late / Early
-                call opponent_attack_hit(opponent_attack, player, opponent)
+                else: # Late / Early
+                    call opponent_attack_hit(opponent_attack, player, opponent)
 
     pause 1
 
