@@ -429,12 +429,16 @@ screen fight_attack(player=player, opponent=opponent):
             if player.stamina >= move.stamina_cost:
                 action Call("player_attack_turn", move, player, opponent)
 
-    timer 0.025:
+    timer 0.001:
         repeat True
         if timing_var == 100:
             action [SetField(player, "stamina", player.stamina + 5), SetField(opponent, "stamina", opponent.stamina + 5), Call("opponent_attack_turn", player, opponent)]
         else:
             action SetScreenVariable("timing_var", timing_var + 1)
+
+    on "show":
+        if player.stamina < min(move.stamina_cost for move in player.moves.values()):
+            action [SetField(player, "stamina", player.stamina + 5), SetField(opponent, "stamina", opponent.stamina + 5), Call("opponent_attack_turn", player, opponent)]
 
 
 screen fight_defense(opponent_attack, player=player, opponent=opponent):
@@ -458,6 +462,11 @@ screen fight_defense(opponent_attack, player=player, opponent=opponent):
             action Call("player_defence_turn", timing_var, None, player, opponent_attack, opponent)
         else:
             action SetScreenVariable("timing_var", timing_var + 1)
+
+    on "show":
+        if player.stamina < min(move.stamina_cost for move in player.moves.values()):
+            action Call("player_defence_turn", timing_var, None, player, opponent_attack, opponent)
+
 
 
 screen fight_popup(message):
