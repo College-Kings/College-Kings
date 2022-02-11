@@ -126,7 +126,7 @@ init python:
 
 
     class BasePlayer:
-        def __init__(self, fighting_style, stance, stamina=10, health=100, attack_multiplier=1, images=None):
+        def __init__(self, fighting_style, stance=FightingStance.NEUTRAL, stamina=10, health=100, attack_multiplier=1, images=None):
             self.fighting_style = fighting_style
             self.stance = stance
             self.max_stamina = stamina
@@ -195,7 +195,7 @@ init python:
 
     
     class Player(BasePlayer):
-        def __init__(self, fighting_style, stance, stamina=10, health=100, attack_multiplier=1, images=None):
+        def __init__(self, fighting_style, stance=FightingStance.NEUTRAL, stamina=10, health=100, attack_multiplier=1, images=None):
             BasePlayer.__init__(self, fighting_style, stance, stamina, health, attack_multiplier, images)
             
             self.moves = {
@@ -212,10 +212,9 @@ label player_attack_turn(player_move, player, opponent):
     $ fight_game_state = FightGameState.PLAYER_ATTACK
     
     if isinstance(player_move, Defence):
-        if player.stamina >= player_move.stamina_cost:
-            $ player.stamina -= player_move.stamina_cost
-            scene expression player_move.image
-            pause 0.5
+        $ player.stamina -= player_move.stamina_cost
+        scene expression player_move.image
+        pause 0.5
 
         call opponent_attack_turn(player, opponent)
 
@@ -270,10 +269,6 @@ label player_attack_turn(player_move, player, opponent):
 label player_defence_turn(timing_var, player_move, player, opponent_attack, opponent):
     $ renpy.set_return_stack([])
     $ fight_game_state = FightGameState.PLAYER_DEFENCE
-
-    # Set player move to None if no stamina and not overhand special effect 
-    if player_move is not None and player.stamina < player_move.stamina_cost:
-        $ player_move = None
 
     if player_move is None or isinstance(player_move, Attack):
         call opponent_attack_hit(opponent_attack, player, opponent)
@@ -398,10 +393,7 @@ label fight_test:
     $ fight_game_state = FightGameState.ERROR
 
     python:
-        player = Player(FightingStyle.STYLE_TWO, FightingStance.NEUTRAL, images={
-            FightingStance.NEUTRAL: "fight_prototype/images/player_neutral_stance.webp",
-            FightingStance.LOST_FOOTING: "fight_prototype/images/player_lost_footing.webp",
-        })
+        player = Player(FightingStyle.STYLE_TWO)
         opponent = Opponent(FightingStyle.STYLE_ONE, FightingStance.NEUTRAL, images={
             FightingStance.NEUTRAL: "fight_prototype/images/opponent_neutral_stance.webp",
             FightingStance.LOST_FOOTING: "fight_prototype/images/opponent_lost_footing.webp"
