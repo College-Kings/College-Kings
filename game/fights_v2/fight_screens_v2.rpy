@@ -23,8 +23,7 @@ screen fight_player_turn():
 
             spacing 30
 
-            for move in Move2:
-
+            for move in FightMov.moves:
                 button:
                     xysize (100, 100)
                     idle_background "#fff"
@@ -32,7 +31,7 @@ screen fight_player_turn():
                     selected_background "#ffd000"
                     insensitive_background "#a7a7a7"
                     if actionpoints >= 4:
-                        action ToggleScreen ("action")
+                        action ToggleScreen("action", None, move.name, move.description, move.damage, move.stamina_cost)
 
                     hbox:
                         align (0, 1.0)
@@ -50,11 +49,9 @@ screen fight_player_turn():
         text "Player Health: [player_health]"
 
 
-screen action(action_cost, action_name, action_label, action_description, stance, action_damage = 0):
-
-    style_prefix "fight_turn"
-
+screen action(name, description, damage, stamina_cost, stance):
     zorder 100
+    style_prefix "fight_turn"
 
     frame:
         xalign (0.5)
@@ -68,13 +65,20 @@ screen action(action_cost, action_name, action_label, action_description, stance
             vbox:
                 xalign 0.5
                 spacing 10
+
                 button:
                     xalign 0.5
                     idle_background "#a8a8a8"
                     hover_background "#ffd000"
-                    action [SetVariable ("actionpoints", actionpoints-action_cost), SetVariable("player_stance", stance),SetVariable("opponent_health", opponent_health-action_damage), Hide ("action"), Jump(action_label)]
-                    text ">>[action_name] <<" size 40 font "fonts/Montserrat-Bold.ttf" align (0.5, 0.5)
-                text "[action_description]" xalign 0.5
+                    action [SetVariable("actionpoints", actionpoints - stamina_cost),
+                        SetVariable("player_stance", stance),
+                        SetVariable("opponent_health", opponent_health - damage),
+                        Hide("action"),
+                        Jump("player_hook_v2")] # Jumps will be changed to a single label with dynamic expressions
+
+                    text ">> {} <<".format(name) size 40 font "fonts/Montserrat-Bold.ttf" align (0.5, 0.5)
+
+                text description xalign 0.5
 
             hbox:
                 xalign 0.5
