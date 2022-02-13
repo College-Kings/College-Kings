@@ -5,3 +5,4 @@ default opponent_mindset = 0
 default player_mindset = 0
 default player_health = 100
 default opponent_health = 100
+default attack_damage = 0

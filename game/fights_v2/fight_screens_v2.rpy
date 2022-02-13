@@ -11,13 +11,6 @@ screen fight_player_turn():
     else:
         add "fight_prototype/images/opp_no_guard.webp"
 
-    # key r:
-    #     action Jump ("tomkick1")
-    # key w:
-    #     action Jump ("tomkick2")
-    # key q:
-    #     action Jump ("tomkick3")
-
     vbox:
         spacing 10
         align (0.5, 0.93)
@@ -30,70 +23,22 @@ screen fight_player_turn():
 
             spacing 30
 
-            button:
-                xysize (100, 100)
-                idle_background "#fff"
-                hover_background "#ffd000"
-                selected_background "#ffd000"
-                insensitive_background "#a7a7a7"
-                if actionpoints >= 4:
-                    action ToggleScreen ("action", action_cost = 4, action_name = "Hook", action_label = "player_hook_v2", action_description = "Hit the opponent with a devastating hook to the face.", stance = 0, action_damage = 10)
+            for move in Move2:
 
-                hbox:
-                    align (0, 1.0)
-                    spacing 10
-                    text "4" text_align 0.5 font "fonts/Montserrat-Bold.ttf" # action cost
-                    text "Hook" text_align 0.5 # action name
-                text "Q" align (0, 0) text_align 0.5 font "fonts/Montserrat-Bold.ttf" # keybind
+                button:
+                    xysize (100, 100)
+                    idle_background "#fff"
+                    hover_background "#ffd000"
+                    selected_background "#ffd000"
+                    insensitive_background "#a7a7a7"
+                    if actionpoints >= 4:
+                        action ToggleScreen ("action")
 
-            button:
-                xysize (100, 100)
-                idle_background "#fff"
-                hover_background "#ffd000"
-                selected_background "#ffd000"
-                insensitive_background "#a7a7a7"
-                if actionpoints >= 2:
-                    action ToggleScreen ("action", action_cost = 2, action_name = "Jab", action_label = "player_jab_v2", action_description = "Hit the opponent with a jab to the face.", stance = 1)
-
-                hbox:
-                    align (0, 1.0)
-                    spacing 10
-                    text "2" text_align 0.5 font "fonts/Montserrat-Bold.ttf" # action cost
-                    text "Jab" text_align 0.5 # action name
-                text "W" align (0, 0) text_align 0.5 font "fonts/Montserrat-Bold.ttf" # keybind
-
-            button:
-                xysize (100, 100)
-                idle_background "#fff"
-                hover_background "#ffd000"
-                selected_background "#ffd000"
-                insensitive_background "#a7a7a7"
-                if actionpoints >= 2:
-                    action ToggleScreen ("action", action_cost = 0, action_name = "Trash Talk", action_label = "opponent_attack_v2", action_description = "Trash Talk Description", stance = 1)
-
-                hbox:
-                    align (0, 1.0)
-                    spacing 10
-                    text "0" text_align 0.5 font "fonts/Montserrat-Bold.ttf" # action cost
-                    text "Trash Talk" text_align 0.5 # action name
-                text "R" align (0, 0) text_align 0.5 font "fonts/Montserrat-Bold.ttf" # keybind
-
-
-            button:
-                xysize (100, 100)
-                idle_background "#fff"
-                hover_background "#ffd000"
-                selected_background "#ffd000"
-                insensitive_background "#a7a7a7"
-                if actionpoints >= 2:
-                    action ToggleScreen ("action", action_cost = 4, action_name = "Guard Up", action_label = "opponent_attack_v2", action_description = "Go into a defensive stance.\nEnds Turn.", stance = 2)
-
-                hbox:
-                    align (0, 1.0)
-                    spacing 10
-                    text "4" text_align 0.5 font "fonts/Montserrat-Bold.ttf" # action cost
-                    text "Guard Up" text_align 0.5 # action name
-                text "E" align (0, 0) text_align 0.5 font "fonts/Montserrat-Bold.ttf" # keybind
+                    hbox:
+                        align (0, 1.0)
+                        spacing 10
+                        text move.stamina_cost text_align 0.5 font "fonts/Montserrat-Bold.ttf" # action cost
+                        text move.name text_align 0.5 # action name
 
     vbox:
         align (0.1,0.9)
