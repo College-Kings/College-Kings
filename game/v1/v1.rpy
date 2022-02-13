@@ -38,7 +38,7 @@ label starta: #for compatibility only
     if config.developer:
         show screen bugTesting_Overlay
 
-    jump fight_test
+    jump fight_v2
     label fight_end:
         hide screen test_health
         hide screen new_fight_overlay
