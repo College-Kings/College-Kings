@@ -31,7 +31,7 @@ screen fight_player_turn():
                     selected_background "#ffd000"
                     insensitive_background "#a7a7a7"
                     if actionpoints >= 4:
-                        action ToggleScreen("action", None, move.name, move.description, move.damage, move.stamina_cost)
+                        action ToggleScreen("action", None, move.name, move.description, move.damage, move.stamina_cost, move.stance)
 
                     hbox:
                         align (0, 1.0)
