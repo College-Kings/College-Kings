@@ -169,7 +169,7 @@ label v16s15:
         scene v16s15_9 # -A single-screen free-roam with all four now stood inside the carnival. We can select the Carousel, the Wheel of chance, the Hot dog stand, and the Shooting range. Selecting the Shooting range will end the free roam, don't show any characters
         with dissolve
 
-        v16s15pier_date_carousel: # -if Carousel
+        label v16s15pier_date_carousel: # -if Carousel
             $ freeroampier.add("carousel")
 
             scene v16s15_10 # TPP. The carousel has horses to sit on and also benches for more than one person. Imre and Karen sit on a bench. Imre puts his arm around Karen. She doesn't seem to notice, more interested in looking elsewhere. An older male carnival worker is standing nearby at the centre of the ride-
@@ -1212,7 +1212,7 @@ label v16s15:
 
         call screen v16s15pier_date        # -Return to free roam screen-
 
-        label v16s15pier_date_carousel: # -if HotDog Stand
+        label v16s15pier_date_carousel_2: ### -if HotDog Stand
             $ freeroampier.add("hotdog")
 
             scene v16s15_47 # FPP. Imre puts money on the hotdog stand counter, Imre and Karen are looking at each other, with slight smiles, mouths are closed
@@ -1687,7 +1687,7 @@ label v16s15:
 
             call screen v16s15pier_date            # -Return to free roam screen-
 
-    label v16s15pier_date_wheel: # -if Shooting range     # -Ends free roam-
+    label v16s15pier_date_wheel_2: ### -if Shooting range     # -Ends free roam-
         if not len(freeroampier) == 3:
             u "(We should probably check out the other attractions first)"
 

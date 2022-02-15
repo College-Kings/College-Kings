@@ -4,7 +4,6 @@
 # Time: Night
 
 label v16s25:
-
     if joinwolves:
         play sound "sounds/dooropen.mp3"
 
@@ -26,14 +25,14 @@ label v16s25:
         pause
 
         scene v16s25_2a # TPP. In his Wolves Frat Room, Show MC taking off his pants about to just be in his underwear, slight smile, mouth closed.
-        with dissolve.
+        with dissolve
 
-        pause
+        pause 0.75
 
         scene v16s25_3 # TPP. In his Wolves Frat Room, Show MC getting into bed, slight smile, mouth closed.
         with dissolve
 
-        pause 
+        pause 0.75
 
         scene v16s25_4 # TPP. In MC's Wolves Frat Room, Camera looking down from the ceiling as MC looks up at the ceiling where the camera is, MC slight smile, mouth closed.
         with dissolve
@@ -72,7 +71,7 @@ label v16s25:
 
                 u "(I'm glad she's happy.)"
 
-            elif amber.relationship <= Relationship.FWB and v16_tell_amber_to_quit_stripping #Placeholder:
+            elif amber.relationship <= Relationship.FWB and v16_tell_amber_to_quit_stripping: #Placeholder
                 scene v16s25_4
                 with dissolve
 
@@ -196,25 +195,26 @@ label v16s25:
                             with dissolve
 
                             u "(Come on...)"
-                                menu:
-                                    "boobiez123":
-                                        scene v16s25_11a
-                                        with dissolve
+                            
+                            menu:
+                                "boobiez123":
+                                    scene v16s25_11a
+                                    with dissolve
 
-                                        u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
+                                    u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
 
-                                    "696969":
-                                        scene v16s25_11b
-                                        with dissolve
+                                "696969":
+                                    scene v16s25_11b
+                                    with dissolve
 
-                                        u "(Come on...)"
-                                        
-                                        menu:
-                                            "boobiez123": ### 1-choice menu??
-                                                scene v16s25_11a
-                                                with dissolve
+                                    u "(Come on...)"
+                                    
+                                    menu:
+                                        "boobiez123": ### 1-choice menu??
+                                            scene v16s25_11a
+                                            with dissolve
 
-                                                u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
+                                            u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
                                             
                         "696969":
                             scene v16s25_11b
@@ -349,7 +349,7 @@ label v16s25:
 
                             em "Do as you please."
 
-                        "Not my favorite."
+                        "Not my favorite.":
                             $ add_point(KCT.TROUBLEMAKER)
                             scene v16s25_11g
                             with dissolve 
@@ -451,7 +451,7 @@ label v16s25:
 
                             em "*Laughs* Perfect."
 
-                        "Not a fan."
+                        "Not a fan.":
                             $ add_point(KCT.TROUBLEMAKER)
                             scene v16s25_11m
                             with dissolve
@@ -627,7 +627,7 @@ label v16s25:
         pause
 
         scene v16s25_15a # TPP. In his Apes Frat Room, Show MC taking off his pants about to just be in his underwear, slight smile, mouth closed.
-        with dissolve.
+        with dissolve
 
         pause
 
@@ -673,7 +673,7 @@ label v16s25:
 
                 u "(I'm glad she's happy.)"
 
-            elif amber.relationship <= Relationship.FWB and v16_tell_amber_to_quit_stripping #Placeholder:
+            elif amber.relationship <= Relationship.FWB and v16_tell_amber_to_quit_stripping: #Placeholder
                 scene v16s25_17
                 with dissolve
 
@@ -798,25 +798,25 @@ label v16s25:
 
                             u "(Come on...)"
                             
-                                menu:
-                                    "boobiez123":
-                                        scene v16s25_11a
-                                        with dissolve
+                            menu:
+                                "boobiez123":
+                                    scene v16s25_11a
+                                    with dissolve
 
-                                        u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
+                                    u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
 
-                                    "696969":
-                                        scene v16s25_11b
-                                        with dissolve
+                                "696969":
+                                    scene v16s25_11b
+                                    with dissolve
 
-                                        u "(Come on...)"
-                                        
-                                        menu:
-                                            "boobiez123": ### 1-choice menu??
-                                                scene v16s25_11a
-                                                with dissolve
+                                    u "(Come on...)"
+                                    
+                                    menu:
+                                        "boobiez123": ### 1-choice menu??
+                                            scene v16s25_11a
+                                            with dissolve
 
-                                                u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
+                                            u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
                                             
                         "696969":
                             scene v16s25_11b
@@ -951,7 +951,7 @@ label v16s25:
 
                             em "Do as you please."
 
-                        "Not my favorite."
+                        "Not my favorite.":
                             $ add_point(KCT.TROUBLEMAKER)
                             scene v16s25_11g
                             with dissolve 
@@ -1053,7 +1053,7 @@ label v16s25:
 
                             em "*Laughs* Perfect."
 
-                        "Not a fan."
+                        "Not a fan.":
                             $ add_point(KCT.TROUBLEMAKER)
                             scene v16s25_11m
                             with dissolve
