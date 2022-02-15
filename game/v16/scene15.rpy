@@ -5,12 +5,10 @@
 # Render Count: 63 Unique 169 Total
 
 label v16s15:
-
     scene v16s15_1 # TPP. MC arrives at the pier entrance, now back in regular clothes. Penelope is already waiting for him, both of them slight smiles, mouths are closed, both looking at each other, MC is walking up to Penelope
     with dissolve
 
-    if penelope.relationship.value >= Relationship.GIRLFRIEND.value: # -if PenelopeRS
-
+    if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS
         scene v16s15_2 # FPP MC gives Penelope a quick kiss
         with dissolve
 
@@ -26,8 +24,7 @@ label v16s15:
 
         pe "Haha, why thank you, handsome stranger. Someone's finally here to rescue me!"
 
-    elif penelope.relationship.value >= Relationship.FRIEND.value: # -if PenelopeFriend
-
+    else: # -if PenelopeFriend
         scene v16s15_3a
         with dissolve
 
@@ -73,7 +70,7 @@ label v16s15:
     scene v16s15_6a # FPP. Show only Imre and Karen, slight smiles, Imre's mouth is closed, Karen's mouth is open, both of them looking at MC
     with dissolve
 
-    karen "Hi, [name]."
+    dg3 "Hi, [name]."
 
     scene v16s15_6b # FPP. Show only Imre and Karen, slight smiles, both of their mouths are closed, both of them looking at MC
     with dissolve
@@ -88,7 +85,7 @@ label v16s15:
     scene v16s15_6c # FPP. Karen hugs Imre still looking at MC half smile mouth is open, Imre is blushing mouth is closed is looking slightly away from Karen holding the back of his head with one hand and the other arm is around Karen's back.
     with dissolve
 
-    karen "Imre won!"
+    dg3 "Imre won!"
 
     scene v16s15_6b
     with dissolve
@@ -96,7 +93,6 @@ label v16s15:
     u "Haha, nice!"
 
     if v10lottery_ticket:
-
         scene v16s15_6b
         with dissolve
 
@@ -105,7 +101,7 @@ label v16s15:
         scene v16s15_6d # FPP. Show only Imre and Karen, Imre slight smile mouth is closed, Karen is blushing slightly shocked expression, mouth is open, both of them looking at MC
         with dissolve
 
-        karen "Really? Because we could-"
+        dg3 "Really? Because we could-"
 
     scene v16s15_6e # FPP. Show only Imre and Karen, slight smiles, Imre's mouth is open, Karen's mouth is closed, Karen is looking at Imre, Imre is looking at MC
     with dissolve
@@ -120,7 +116,7 @@ label v16s15:
     scene v16s15_6a
     with dissolve
 
-    karen "We'll go in, you can hang out here, haha."
+    dg3 "We'll go in, you can hang out here, haha."
 
     scene v16s15_6b
     with dissolve
@@ -140,7 +136,7 @@ label v16s15:
     scene v16s15_6g # FPP. Show only Imre and Karen, slight smiles, Imre's mouth is closed, Karen's mouth is open, Karen and Imre are looking at each other
     with dissolve
 
-    karen "Aw, isn't he cute when he gets embarrassed?"
+    dg3 "Aw, isn't he cute when he gets embarrassed?"
 
     scene v16s15_6h # FPP. FPP. Show only Imre and Karen, slight smiles, Imre's mouth is open, Karen's mouth is closed, Karen and Imre are looking at each other
     with dissolve
@@ -162,23 +158,19 @@ label v16s15:
 
     pause 0.75
 
-    label v16s15_free_roam_pier_seen(backgroundImg, returnScreen, seenList):
-
-        $ v16s15_seenList = seenList
+    label v16s15_free_roam_pier_seen(backgroundImg, returnScreen):
 
         scene expression backgroundImg
         u "(We've already seen this attraction)"
         scene black
         $ renpy.call_screen(returnScreen)
 
-    label v16s15pier_date
-
+    label v16s15pier_date:
         scene v16s15_9 # -A single-screen free-roam with all four now stood inside the carnival. We can select the Carousel, the Wheel of chance, the Hot dog stand, and the Shooting range. Selecting the Shooting range will end the free roam, don't show any characters
         with dissolve
 
         v16s15pier_date_carousel: # -if Carousel
             $ freeroampier.add("carousel")
-            $ v16s15_seenList = []
 
             scene v16s15_10 # TPP. The carousel has horses to sit on and also benches for more than one person. Imre and Karen sit on a bench. Imre puts his arm around Karen. She doesn't seem to notice, more interested in looking elsewhere. An older male carnival worker is standing nearby at the centre of the ride-
             with dissolve
@@ -204,10 +196,10 @@ label v16s15:
             with dissolve
 
             menu:
-
                 "Sit alone":
                     $ add_point(KCT.BRO)
-                    if penelope.relationship.value >= Relationship.GIRLFRIEND.value:
+
+                    if penelope.relationship >= Relationship.LIKES:
                         $ add_point(KCT.TROUBLEMAKER)
 
                     scene v16s15_11a
@@ -281,7 +273,6 @@ label v16s15:
                     with dissolve
 
                     menu:
-
                         "Laugh":
                             $ add_point(KCT.TROUBLEMAKER)
 
@@ -370,8 +361,7 @@ label v16s15:
                     scene v16s15_11e # TPP. penelope giggles and blushes, they get on the horse together, Penelope in front with MC behind, up close, no space between them, Mc slight smile, mouth is closed, both of them looking at each other
                     with dissolve
 
-                    if penelope.relationship.value >= Relationship.GIRLFRIEND.value: # -if PenelopeRS
-
+                    if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS
                         scene v16s15_20 # FPP. Show Penelope sitting in front of MC on the horse, looking over her shoulder back at MC, slight smile, mouth is open
                         with dissolve
 
@@ -397,82 +387,80 @@ label v16s15:
 
                         pe "Haha, [name], behave."
 
-                    if v15s18cpen_oral: # -if MC also gave Penelope oral at Lauren's party
+                        if "v15_penelope" in sceneList: # -if MC also gave Penelope oral at Lauren's party
+                            scene v16s15_20a
+                            with dissolve
 
-                        scene v16s15_20a
-                        with dissolve
+                            u "Oh, yeah? Like you behaved at Lauren's party?"
 
-                        u "Oh, yeah? Like you behaved at Lauren's party?"
+                            scene v16s15_20b # FPP. Show Penelope sitting in front of MC on the horse, looking over her shoulder back at MC, full smile, mouth is open 
+                            with dissolve
 
-                        scene v16s15_20b # FPP. Show Penelope sitting in front of MC on the horse, looking over her shoulder back at MC, full smile, mouth is open 
-                        with dissolve
+                            pe "Oh, my God, [name]... Don't bring that up here, I'm gonna turn red!"
 
-                        pe "Oh, my God, [name]... Don't bring that up here, I'm gonna turn red!"
+                            scene v16s15_20a
+                            with dissolve
 
-                        scene v16s15_20a
-                        with dissolve
+                            u "*Laughs* Why?"
 
-                        u "*Laughs* Why?"
+                            scene v16s15_20
+                            with dissolve
 
-                        scene v16s15_20
-                        with dissolve
+                            pe "*Sighs* That night was amazing. I still think about it a lot, ha."
 
-                        pe "*Sighs* That night was amazing. I still think about it a lot, ha."
+                            scene v16s15_20a
+                            with dissolve
 
-                        scene v16s15_20a
-                        with dissolve
+                            u "Oh, yeah?"
 
-                        u "Oh, yeah?"
+                            scene v16s15_20
+                            with dissolve
 
-                        scene v16s15_20
-                        with dissolve
+                            pe "Haha. Yeah, when I'm by myself."
 
-                        pe "Haha. Yeah, when I'm by myself."
+                            scene v16s15_20a
+                            with dissolve
 
-                        scene v16s15_20a
-                        with dissolve
+                            u "Ah, sitting around and fantasizing about me? That's what you've been doing these days?"
 
-                        u "Ah, sitting around and fantasizing about me? That's what you've been doing these days?"
+                            scene v16s15_20c # FPP. Show Penelope sitting in front of MC on the horse, looking over her shoulder back at MC with puppy dog eyes, slight smile, mouth is open 
+                            with dissolve
 
-                        scene v16s15_20c # FPP. Show Penelope sitting in front of MC on the horse, looking over her shoulder back at MC with puppy dog eyes, slight smile, mouth is open 
-                        with dissolve
+                            pe "I didn't say that was all I was doing..."
 
-                        pe "I didn't say that was all I was doing..."
+                            scene v16s15_20a
+                            with dissolve
 
-                        scene v16s15_20a
-                        with dissolve
+                            u "*Gasps* Are you talking dirty to me Penelope? *Chuckles*"
 
-                        u "*Gasps* Are you talking dirty to me Penelope? *Chuckles*"
+                            scene v16s15_20b
+                            with dissolve
 
-                        scene v16s15_20b
-                        with dissolve
+                            pe "Haha, not anymore. I think I better stop before your \"phone\" bursts through your jeans... *Laughs*"
 
-                        pe "Haha, not anymore. I think I better stop before your \"phone\" bursts through your jeans... *Laughs*"
+                            scene v16s15_20a
+                            with dissolve
 
-                        scene v16s15_20a
-                        with dissolve
+                            u "(Oh, shit...) Yeah, it's a new model that... Um..."
 
-                        u "(Oh, shit...) Yeah, it's a new model that... Um..."
+                            u "It does that... When it's, uh... horny?"
 
-                        u "It does that... When it's, uh... horny?"
+                            scene v16s15_20b
+                            with dissolve
 
-                        scene v16s15_20b
-                        with dissolve
+                            pe "*Laughs*"
 
-                        pe "*Laughs*"
+                            scene v16s15_20a
+                            with dissolve
 
-                        scene v16s15_20a
-                        with dissolve
+                            u "Sorry, I couldn't figure out where to take the innuendo from there, haha."
 
-                        u "Sorry, I couldn't figure out where to take the innuendo from there, haha."
+                            scene v16s15_20
+                            with dissolve
 
-                        scene v16s15_20
-                        with dissolve
+                            pe "It's okay, you get an A for effort."
 
-                        pe "It's okay, you get an A for effort."
-
-                    elif penelope.relationship.value >= Relationship.FRIEND.value: # -if PenelopeFriend
-
+                    else: # -if PenelopeFriend
                         scene v16s15_20
                         with dissolve
 
@@ -526,7 +514,7 @@ label v16s15:
                     scene v16s15_12c
                     with dissolve
 
-                    karen "Yeah, boo!"
+                    dg3 "Yeah, boo!"
 
                     scene v16s15_12b
                     with dissolve
@@ -625,7 +613,7 @@ label v16s15:
             scene v16s15_23c # FPP. Show Imre and Karen sitting in their booth seat, Imre has a slightly sad expression mouth is closed, Karen has no expression mouth is open, both of them looking at each other 
             with dissolve
 
-            karen "Not on a first date, Imre... You have to work harder for it."
+            dg3 "Not on a first date, Imre... You have to work harder for it."
 
             scene v16s15_23d # # FPP. Show Imre and Karen sitting in their booth seat, Imre is slightly upset mouth is closed, Karen is blushing mouth is closed, both of them looking at each other 
             with dissolve
@@ -667,9 +655,8 @@ label v16s15:
 
             call screen v16s15pier_date        # -Return to free roam screen-
 
-        v16s15pier_date_wheel: # -if Wheel of chance
+        label v16s15pier_date_wheel: # -if Wheel of chance
             $ freeroampier.add("wheel")
-            $ v16s15_seenList = []
 
             scene v16s15_26 # TPP Keeping in pairs the group approaches the Wheel of Chance, "Dylan" A short dude in a pink 'respect women' t-shirt is seen standing in front of the Wheel with an angry expression, mouth is open like he is yelling at the stall attendant, Imre and Karen leading in front, MC and Penelope are walking together behind them, render can be made from back to avoid facial features, if not possible all slight smiles, mouths are closed, looking where they are walking
             with dissolve
@@ -754,7 +741,7 @@ label v16s15:
             scene v16s15_30d # FPP. Show just Imre and Karen, Imre and Karen are looking at each other, Imre's mouth is open with a piece of candy on his tongue slight smile, Karen is looking at Imre with a slightly disgusted expression, mouth is open
             with dissolve
 
-            karen "Eww!"
+            dg3 "Eww!"
 
             scene v16s15_30e # FPP. Show just Imre and Karen, Imre and Karen are looking at each other, Imre's mouth is open with a piece of candy on his tongue with a slightly concerned expression, Karen is looking at Imre with a slightly disgusted expression, mouth is closed
             with dissolve
@@ -779,7 +766,7 @@ label v16s15:
             scene v16s15_30d
             with dissolve
 
-            karen "That's so gross. Ugh..."
+            dg3 "That's so gross. Ugh..."
 
             scene v16s15_30e
             with dissolve
@@ -789,7 +776,7 @@ label v16s15:
             scene v16s15_30d
             with dissolve
 
-            karen "What? Who told you that?"
+            dg3 "What? Who told you that?"
 
             scene v16s15_30e
             with dissolve
@@ -856,7 +843,7 @@ label v16s15:
             scene v16s15_30k # FPP. Show just Imre and Karen, Imre and Karen are looking at the stall attendant, Imre has a slight smile mouth is closed, Karen has no expression mouth is open
             with dissolve
 
-            karen "Is every prize going to be garbage from your pocket?"
+            dg3 "Is every prize going to be garbage from your pocket?"
 
             scene v16s15_34
             with dissolve
@@ -866,7 +853,7 @@ label v16s15:
             scene v16s15_30k
             with dissolve
 
-            karen "... *Sighs* Fine."
+            dg3 "... *Sighs* Fine."
 
             scene v16s15_32a # FPP. Show just the top portion of the wheel with a dial pointing at a blue portion of the wheel with an image of a small piece of paper on it
             with dissolve
@@ -876,7 +863,7 @@ label v16s15:
             scene v16s15_30k
             with dissolve
 
-            karen "Wisdom? What does that mean?"
+            dg3 "Wisdom? What does that mean?"
 
             scene v16s15_31d # FPP. The attendant hands Karen (Instead of Imre, Imre is not shown) a small piece of paper (like from a fortune cookie, but no cookie), Karen takes it no expression mouth is closed, the stall attendant has a slight smile mouth is closed
             with dissolve
@@ -886,12 +873,12 @@ label v16s15:
             scene v16s15_30l # FPP. Show just Imre and Karen, Imre and Karen are looking at each other, Imre's mouth is closed, Karen's mouth is open Karen looks at the piece of paper, reading whatever is written on it, Karen has no expression, Imre has a slight smile
             with dissolve
 
-            karen "A great adventure awaits you today."
+            dg3 "A great adventure awaits you today."
 
             scene v16s15_30m # FPP. Show just Imre and Karen, Imre and Karen are looking at the stall attendant, both of them no expressions, Imre's mouth is closed, Karen's mouth is open
             with dissolve
 
-            karen "Is that it?"
+            dg3 "Is that it?"
 
             scene v16s15_33b # FPP. Show just Penelope looking at the Stall attendant with no expression, mouth is open
             with dissolve
@@ -938,8 +925,7 @@ label v16s15:
 
             pe "Such a gentleman..."
 
-            if penelope.relationship.value >= Relationship.GIRLFRIEND.value: # -penelopers kisses mc on the cheek-
-
+            if penelope.relationship >= Relationship.LIKES: # -penelopers kisses mc on the cheek-
                 scene v16s15_37 # TPP. Show just Penelope Kissing Mc on the cheek, both slight smiles
                 with dissolve
 
@@ -986,7 +972,7 @@ label v16s15:
             scene v16s15_40 # FPP. Show just Karen looking at MC, no expression, mouth is open
             with dissolve
 
-            karen "*Whispers* Does this lady even work here?"
+            dg3 "*Whispers* Does this lady even work here?"
 
             scene v16s15_33e # FPP. Show just Penelope looking at Karen with a slight smile, mouth is open
             with dissolve
@@ -1007,8 +993,7 @@ label v16s15:
             with dissolve
 
             menu:
-
-                "Gentle spin":        # -MC spins. It lands on 'Hotdog'-
+                "Gentle spin": # -MC spins. It lands on 'Hotdog'-
                     $ vs16s15hotdog_coupon = True
                     $ add_point(KCT.BRO)
 
@@ -1042,8 +1027,7 @@ label v16s15:
 
                     wa "You can redeem it at the hotdog stand."
 
-                    if v16s15_seenList = ["hotdog"]
-
+                    if "hotdog" in freeroampier:
                         scene v16s15_34e # FPP. Show just the Stall attendant standing behind the "Wheel Game" with a slight smile, mouth is closed, looking at MC 
                         with dissolve
 
@@ -1090,7 +1074,6 @@ label v16s15:
                         imre "But I wanted to-"
 
                     else: # -if did not already go to hot dog stand
-
                         scene v16s15_34c
                         with dissolve
 
@@ -1106,8 +1089,7 @@ label v16s15:
 
                         u "Hey, you turned down her pocket candy. This hot dog is mine!"
 
-                    if penelope.relationship.value >= Relationship.GIRLFRIEND.value: # -if PenelopeRS
-
+                    if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS
                         scene v16s15_33g # FPP. Penelope uses puppy dog eyes and flutters her lashes at MC, looking at MC, with a cute pouting expression, mouth is open
                         with dissolve
 
@@ -1131,7 +1113,6 @@ label v16s15:
                         pe "Hehe!"
 
                     else: # -if PenelopeFriend
-
                         scene v16s15_33k # FPP. Penelope frowns, and pouts her bottom lip, looking at Mc, mouth is open
                         with dissolve
 
@@ -1160,7 +1141,7 @@ label v16s15:
                     scene v16s15_40a # FPP. Show just Karen, slight smile, mouth is open, looking at Mc
                     with dissolve
 
-                    karen "Yes please!"
+                    dg3 "Yes please!"
 
                 "Strong spin":
                     $ add_point(KCT.TROUBLEMAKER)
@@ -1221,21 +1202,18 @@ label v16s15:
 
         # -the group walks away, karen looks grossed out by smiling imre, and penelope and mc are either holding hands and smiling if RS or they are just smiling if they are just friends
 
-        if penelope.relationship.value >= Relationship.GIRLFRIEND.value: # -if PenelopeRS
-
+        if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS
             scene v16s15_46 # TPP. The group walks away from the Wheel Stand, karen is walking next to Imre and looks grossed out by smiling imre both of their mouths are closed, Penelope and Mc are holding hands and smiling with mouths closed looking at each other as they are walking behind Imre and Karen
             with dissolve
 
         else: # -if PenelopeFriend
-
             scene v16s15_46a # TPP. The group walks away from the Wheel Stand, karen is walking next to Imre and looks grossed out by smiling imre both of their mouths are closed, Penelope and Mc are smiling with mouths closed looking at each other as they are walking behind Imre and Karen
             with dissolve
 
         call screen v16s15pier_date        # -Return to free roam screen-
 
-        v16s15pier_date_carousel: # -if HotDog Stand
+        label v16s15pier_date_carousel: # -if HotDog Stand
             $ freeroampier.add("hotdog")
-            $ v16s15_seenList = []
 
             scene v16s15_47 # FPP. Imre puts money on the hotdog stand counter, Imre and Karen are looking at each other, with slight smiles, mouths are closed
             with dissolve
@@ -1255,7 +1233,7 @@ label v16s15:
             scene v16s15_49 # FPP. Show just Karen looking at Penelope on Mc's left, no expression, mouth is open
             with dissolve
 
-            karen "I wouldn't mind a snack, but I'm vegan and they don't have any vegan options."
+            dg3 "I wouldn't mind a snack, but I'm vegan and they don't have any vegan options."
 
             scene v16s15_48
             with dissolve
@@ -1265,7 +1243,7 @@ label v16s15:
             scene v16s15_49
             with dissolve
 
-            karen "I asked, it's all real butter though. The one thing this place doesn't cheap out on is the food, can you believe it? *Laughs*"
+            dg3 "I asked, it's all real butter though. The one thing this place doesn't cheap out on is the food, can you believe it? *Laughs*"
 
             scene v16s15_48
             with dissolve
@@ -1275,7 +1253,7 @@ label v16s15:
             scene v16s15_49
             with dissolve
 
-            karen "It's okay. I'm used to it."
+            dg3 "It's okay. I'm used to it."
 
             scene v16s15_50 # TPP. Show Karen and Imre walking past Penelope and MC, Imre is leaning in towards MC's ear to whisper to him he has a slight smile mouth is open, Mc has a slight smile mouth is closed, Penelope is slightly ahead of MC's direction with her back turned to MC and Imre, and Karen is slightly ahead of Imre's direction with her back turned to MC and Imre
             with dissolve
@@ -1317,7 +1295,6 @@ label v16s15:
             hv "My powers never fail! One hotdog coming right up!"
 
             if vs16s15hotdog_coupon: # -if MC already went to the Wheel of Chance and chose 'gentle spin' leading to a free hotdog coupon
-
                 if penelope.relationship.value >= Relationship.GIRLFRIEND.value: # -if PenelopeRS
 
                     scene v16s15_53a # FPP. Show Just Penelope with part of the hotdog stand in the background, MC hands the hotdog coupon to Penelope, Penelope smiles, mouth is closed, looking at Mc
@@ -1435,7 +1412,7 @@ label v16s15:
             scene v16s15_58 # FPP. Mc looks diagonally and sees Karen looking at Penelope, slight smile, mouth is open
             with dissolve
 
-            karen "Yeah, I was raised in a vegan household."
+            dg3 "Yeah, I was raised in a vegan household."
 
             scene v16s15_59 # FPP. MC looks directly ahead and sees Imre looking at Karen, slight smile, mouth is open
             with dissolve
@@ -1445,7 +1422,7 @@ label v16s15:
             scene v16s15_58a # FPP. Mc looks diagonally and sees Karen looking at Imre, slight smile, mouth is open
             with dissolve
 
-            karen "No, Imre.... I mean that my parents were both vegan, so I was raised that way. Meat is just kind of disgusting to me."
+            dg3 "No, Imre.... I mean that my parents were both vegan, so I was raised that way. Meat is just kind of disgusting to me."
 
             scene v16s15_59
             with dissolve
@@ -1460,13 +1437,12 @@ label v16s15:
             scene v16s15_58
             with dissolve
 
-            karen "Oh, God... Not at all. I can't even think past the fact it's a cooked animal."
+            dg3 "Oh, God... Not at all. I can't even think past the fact it's a cooked animal."
 
             scene v16s15_58b # FPP. Mc looks diagonally and sees Karen looking at MC slight smile, mouth is closed
             with dissolve
 
             menu:
-
                 "Respect veganism":
                     $ add_point(KCT.BRO)
                     $ add_point(KCT.BOYFRIEND)
@@ -1481,7 +1457,7 @@ label v16s15:
                     scene v16s15_58c # FPP. Mc looks diagonally and sees Karen looking at MC slight smile, mouth is open
                     with dissolve
 
-                    karen "Haha, right... Good luck!"
+                    dg3 "Haha, right... Good luck!"
 
                     scene v16s15_59a # FPP. MC looks directly ahead and sees Imre looking at MC, slight shocked, mouth is open
                     with dissolve
@@ -1520,7 +1496,7 @@ label v16s15:
                     scene v16s15_58e # FPP. Mc looks diagonally and sees Karen looking at MC slightly sad, mouth is open
                     with dissolve
 
-                    karen "You wouldn't be saying that if you knew anything about the meat industry, and how the animals are treated."
+                    dg3 "You wouldn't be saying that if you knew anything about the meat industry, and how the animals are treated."
 
                     scene v16s15_58d
                     with dissolve
@@ -1530,7 +1506,7 @@ label v16s15:
                     scene v16s15_58c
                     with dissolve
 
-                    karen "*Laughs* I love when people make that joke."
+                    dg3 "*Laughs* I love when people make that joke."
 
                     scene v16s15_59
                     with dissolve
@@ -1545,7 +1521,7 @@ label v16s15:
                     scene v16s15_58a
                     with dissolve
 
-                    karen "Yeah, especially these days, there are a lot of vegan restaurants opening. Some of them you wouldn't be able to tell are vegan."
+                    dg3 "Yeah, especially these days, there are a lot of vegan restaurants opening. Some of them you wouldn't be able to tell are vegan."
 
                     scene v16s15_58b
                     with dissolve
@@ -1560,7 +1536,7 @@ label v16s15:
             scene v16s15_58a
             with dissolve
 
-            karen "You're right, I don't. It would probably make me sick, haha."
+            dg3 "You're right, I don't. It would probably make me sick, haha."
 
             scene v16s15_59
             with dissolve
@@ -1570,7 +1546,7 @@ label v16s15:
             scene v16s15_58a
             with dissolve
 
-            karen "No, thanks."
+            dg3 "No, thanks."
 
             scene v16s15_60 # FPP. Show Imre and Karen sitting next to each other from where MC is sitting, Imre moves his hotdog towards Karen's face, Imre has a slight smile, mouth is open, Karen has no expression, mouth is closed, both of them are looking at each other
             with dissolve
@@ -1580,7 +1556,7 @@ label v16s15:
             scene v16s15_60a # FPP. Show Imre and Karen sitting next to each other from where MC is sitting, Imre moves his hotdog closer towards Karen's face, Imre has a slight smile, mouth is closed, Karen has a slightly disgusted expression, mouth is open, both of them are looking at each other
             with dissolve
 
-            karen "I said no, Imre."
+            dg3 "I said no, Imre."
 
             scene v16s15_60b # FPP. Show Imre and Karen sitting next to each other from where MC is sitting, Imre hotdog is now right up in Karen's face, Imre has a slight smile, mouth is closed, Karen has a greatly disgusted expression, mouth is closed, and she is trying to back her face away from the hotdog, both of them are looking at each other
             with dissolve
@@ -1590,12 +1566,12 @@ label v16s15:
             scene v16s15_60c # FPP. Show Imre and Karen sitting next to each other from where MC is sitting, Karen slaps the hotdog away from her face, Imre is extremely shocked mouth is open, Karen is extremely angry, mouth is open, , both of them are looking at each other
             with vpunch
 
-            karen "No!"
+            dg3 "No!"
 
             scene v16s15_60d # FPP. Show Imre and Karen sitting next to each other from where MC is sitting, Imre has no expression mouth is closed, Karen is extremely angry, mouth is open, both of them are looking at each other
             with dissolve
 
-            karen "Fucking weirdo..."
+            dg3 "Fucking weirdo..."
 
             scene v16s15_60e # FPP. Show Imre and Karen sitting next to each other from where MC is sitting, Imre is looking down at the ground, Karen is looking at Imre, Imre has a slight sad expression mouth is open, Karen has a slightly angry expression looking at Imre
             with dissolve
@@ -1615,9 +1591,9 @@ label v16s15:
             scene v16s15_60d
             with dissolve
 
-            karen "Imre, I swear to every God there is..."
+            dg3 "Imre, I swear to every God there is..."
 
-            karen "If you eat that hotdog off the ground...!"
+            dg3 "If you eat that hotdog off the ground...!"
 
             scene v16s15_60f # FPP. Show Imre and Karen sitting next to each other from where MC is sitting, Imre has an anxious expression mouth is open, Karen is extremely angry, mouth is closed, both of them are looking at each other
             with dissolve
@@ -1642,7 +1618,7 @@ label v16s15:
             scene v16s15_58f # FPP. Mc looks diagonally and sees Karen looking at Penelope with no expression, mouth is open
             with dissolve
 
-            karen "Can we get back to the carnival games, please?"
+            dg3 "Can we get back to the carnival games, please?"
 
             scene v16s15_57a
             with dissolve
@@ -1711,11 +1687,9 @@ label v16s15:
 
             call screen v16s15pier_date            # -Return to free roam screen-
 
-    v16s15pier_date_wheel: # -if Shooting range     # -Ends free roam-
-        if not v16s15_seenList = ["wheel,""carousel,""hotdog"]
-
+    label v16s15pier_date_wheel: # -if Shooting range     # -Ends free roam-
+        if not len(freeroampier) == 3:
             u "(We should probably check out the other attractions first)"
 
-        else: 
-
+        else:
             jump v16s16

@@ -15,19 +15,19 @@ label v16s25a:
         scene black
         with dissolve
             
-        pause 1
+        pause 0.75
 
         play sound "sounds/vibrate.mp3"
 
         scene v16s25a_1 # TPP. In wolves room. Show MC sitting up from bed and yawning his arms stretched, MC yawning.
         with dissolve
 
-        pause 0.5
+        pause 0.75
 
         scene v16s25a_2 # TPP. In wolves room. Show MC grabbing his phone from off his nightstand, MC neutral face, mouth closed.
         with dissolve
 
-        pause 0.5
+        pause 0.75
 
         scene v16s25a_1a # TPP. In wolves room. Show MC looking at his phone, MC neutral face, mouth closed.
         with dissolve
@@ -36,6 +36,7 @@ label v16s25a:
         $ riley.messenger.newMessage("MEEEEEEEEE!")
         $ riley.messenger.addReply("Haha, congrats!")
         $ riley.messenger.newMessage("Thank you! :)")
+
         if v16s11_sign_up:
             $ riley.messenger.addReply("What about me? Do you know?")
             $ riley.messenger.newMessage("Um, no... As soon as he told me I got the job he acted like the search was over, haha. Sorry :(")
@@ -53,19 +54,19 @@ label v16s25a:
         scene v16s25a_3 # TPP. In wolves room. Show MC getting out of bed, slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v16s25a_4 # TPP. In wolves room. Show MC standing in the middle of his room putting on his shirt for the day, face obscured by the shirt.
         with dissolve
 
-        pause .15 
+        pause 0.75 
         
         play sound "sound/vibrate.mp3"
 
         scene v16s25a_4a # TPP. In wolves room. Show MC standing in the middle of his room looking at his phone, slight smile, mouth closed. 
         with dissolve 
 
-        pause .15 
+        pause 0.75 
 
         scene v16s25a_4b # TPP. In wolves room. Show MC with the phone to his ear, slight smile, mouth closed.
         with dissolve 
@@ -127,7 +128,7 @@ label v16s25a:
 
         au "No problem."
 
-        if aubrey.relationship = Relationship.TAMED:
+        if aubrey.relationship >= Relationship.TAMED:
             scene v16s25a_5b # TPP. Aubrey in the Chicks house in her room on the phone, slight smile, blushing, mouth open.
             with dissolve
 
@@ -187,7 +188,7 @@ label v16s25a:
         scene v16s25a_4c # TPP. In wolves room. Show MC standing in the middle of his room putting on his pants for the day, slight smile, mouth closed. 
         with dissolve 
 
-        pause .25
+        pause 0.75
 
         scene v16s25a_6 # TPP. In wolves room, show MC looking at himself in the Mirror pointing finger guns and winking, slight smile, mouth open.
         with dissolve
@@ -212,19 +213,19 @@ label v16s25a:
         scene black
         with dissolve
             
-        pause 1
+        pause 0.75
 
         play sound "sounds/vibrate.mp3"
 
         scene v16s25a_8 # TPP. In Apes room. Show MC sitting up from bed and yawning his arms stretched, MC yawning.
         with dissolve
 
-        pause 0.5
+        pause 0.75
 
         scene v16s25a_9 # TPP. In Apes room. Show MC grabbing his phone from off his nightstand, MC neutral face, mouth closed.
         with dissolve
 
-        pause 0.5
+        pause 0.75
 
         scene v16s25a_8a # TPP. In Apes room. Show MC looking at his phone, MC neutral face, mouth closed.
         with dissolve
@@ -233,6 +234,7 @@ label v16s25a:
         $ riley.messenger.newMessage("MEEEEEEEEE!")
         $ riley.messenger.addReply("Haha, congrats!")
         $ riley.messenger.newMessage("Thank you! :)")
+
         if v16s11_sign_up:
             $ riley.messenger.addReply("What about me? Do you know?")
             $ riley.messenger.newMessage("Um, no... As soon as he told me I got the job he acted like the search was over, haha. Sorry :(")
@@ -250,19 +252,19 @@ label v16s25a:
         scene v16s25a_10 # TPP. In Apes room. Show MC getting out of bed, slight smile, mouth closed.
         with dissolve
 
-        pause .25
+        pause 0.75
 
         scene v16s25a_11 # TPP. In Apes room. Show MC standing in the middle of his room putting on his shirt for the day, face obscured by the shirt.
         with dissolve
 
-        pause .15 
+        pause 0.75 
         
         play sound "sound/vibrate.mp3"
 
         scene v16s25a_11a # TPP. In Apes room. Show MC standing in the middle of his room looking at his phone, slight smile, mouth closed. 
         with dissolve 
 
-        pause .15 
+        pause 0.75 
 
         scene v16s25a_11b # TPP. In Apes room. Show MC with the phone to his ear, slight smile, mouth closed.
         with dissolve 
@@ -324,7 +326,7 @@ label v16s25a:
 
         au "No problem."
 
-        if aubrey.relationship = Relationship.TAMED:
+        if aubrey.relationship >= Relationship.TAMED:
             scene v16s25a_5b # TPP. Aubrey in the Chicks house in her room on the phone, slight smile, blushing, mouth open.
             with dissolve
 
@@ -384,7 +386,7 @@ label v16s25a:
         scene v16s25a_11c # TPP. In Apes room. Show MC standing in the middle of his room putting on his pants for the day, slight smile, mouth closed. 
         with dissolve 
 
-        pause .25
+        pause 0.75
 
         scene v16s25a_12 # TPP. In Apes room, show MC looking at himself in the Mirror pointing finger guns and winking, slight smile, mouth open.
         with dissolve
