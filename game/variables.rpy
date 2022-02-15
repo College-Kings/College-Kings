@@ -288,6 +288,7 @@ default v13_imre_disloyal = False
 default v13_invite_samantha = False
 default v13_lauren_smoke = False
 default v13_penelope_concert = False
+default v13_penelope_backstage = False
 default v13_perfume = False
 default v13_smoke_weed = False
 default v13_emmy_points = 0
