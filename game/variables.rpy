@@ -214,6 +214,7 @@ default v10s33_ev_date_now = False
 default v10s33_laurenBakeSale = False
 default v10s33_ryan_flirt_emily = False
 default v10s33_toldChloe = False
+default v10lottery_ticket = False # Needed for v16S20
 
 # 11.0
 default candyLike = 0
@@ -437,5 +438,7 @@ default pb_threesome = False
 default freeroam15 = set() #Amber
 default v16s1_win_fight_with_tom = False
 default v16s10_let_lauren_continue_hj = False
+default v16s11_sign_up = False
 default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
 default v16s20_twazzlers = False
+default vs16s15hotdog_coupon = False
