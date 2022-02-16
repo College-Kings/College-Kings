@@ -362,15 +362,30 @@ label v16s25:
 
                             u "It's your call, it doesn't look horrible, haha."
 
-                    scene v16s25_11j # TPP. Laptop Screen, Video chat overlay with Emily, Show Emily walking off screen in the first lingerie set, Emily slight smile, mouth open.
+                    scene v16s25_11j # TPP. Laptop Screen, Video chat overlay with Emily, Show Emily reaching behind her and dropping the top of the lingerie to the floor, Emily smirking, mouth open.
                     with dissolve
 
                     em "Okay, next!"
 
-                    scene v16s25_11k # TPP. Laptop Screen, Video chat overlay with Emily, Show Emily walking back onto screen in the second lingerie set, Emily slight smile, mouth closed.
+                    scene v16s25_11q # TPP. Laptop Screen, Video Chat overlay with Emily, Emily in the first set of lingerie turned around standing up straight with one hand on her butt as the bottom piece of the lingerie falls to the floor, Emily now naked, 
                     with dissolve
 
-                    pause .05
+                    pause
+
+                    scene v16s25_11k # TPP. Laptop Screen, Video chat overlay with Emily, Show Emily reaching off the screen of the chat to grab her second set of lingerie her boobs right in front of her laptop camera, Emily slight smile, mouth closed.
+                    with dissolve
+
+                    pause 
+
+                    scene v16s25_11r # TPP. Laptop Screen, Video Chat overlay with Emily, Emily putting on the top of the second lingerie set on while winking at MC on the chat, Emily smirking, mouth closed.
+                    with dissolve  
+
+                    pause 
+
+                    scene v16s25_11s # TPP. Laptop Screen, Video Chat Overlay with Emily, Emily standing a little back bent over showing her naked bottom as she pulls up the bottom part of the second lingerie set, Emily biting her lip.
+                    with dissolve
+
+                    pause
 
                     scene v16s25_11l # TPP. Laptop screen, Video chat overlay With Emily, Emily close to her screen using her arms to push up her boobs, Emily smirking, mouth open.
                     with dissolve
@@ -468,7 +483,7 @@ label v16s25:
 
                             em "Well, that sucks. *Sighs* Oh well!"
 
-                    scene v16s25_11o # TPP. Laptop screen, Video chat overlay with Emily, Emily walking off screen wearing her second set of lingerie, slight smile, mouth open.
+                    scene v16s25_11o # TPP. Laptop screen, Video chat overlay with Emily, Emily putting her robe on back over the lingerie set, the lingerie not visible anymore, slight smile, mouth open.
                     with dissolve
 
                     em "That's it. I hope you enjoyed the show."
@@ -958,10 +973,25 @@ label v16s25:
 
                     em "Okay, next!"
 
+                    scene v16s25_11q
+                    with dissolve
+                    
+                    pause
+
                     scene v16s25_11k
                     with dissolve
 
-                    pause .05
+                    pause
+
+                    scene v16s25_11r
+                    with dissolve 
+
+                    pause
+
+                    scene v16s25_11s
+                    with dissolve
+
+                    pause
 
                     scene v16s25_11l
                     with dissolve
