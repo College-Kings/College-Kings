@@ -1,6 +1,3 @@
-init python:
-    config.overlay_screens.append("bugTesting_Overlay")
-
 screen bugTesting_Overlay():
     zorder 1000
     
