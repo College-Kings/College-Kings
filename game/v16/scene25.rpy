@@ -1,6 +1,6 @@
 # SCENE 25: MC goes to bed WOLVES OR APES (both)
-# Locations: Wolves or Apes dorm room.
-# Characters: MC (Outfit: 5), EMILY (Outfit: Robe and Lingerie sets 1/2)
+# Locations: Wolves/Apes dorm room, Wolves/Apes living room
+# Characters: MC (Outfit: 5), EMILY (Robe; Lingerie1; Lingerie2)
 # Time: Night
 
 
@@ -12,42 +12,42 @@ label v16s25:
         scene v16s25_1 # TPP. Show MC entering his Wolves Frat Room, slight smile, mouth closed.
         with fade(1,0,1)
 
-        pause 0.10
+        pause 0.75
 
         play sound "sounds/doorclose.mp3"
 
         scene v16s25_1a # TPP. Show MC inside his Wolves Frat Room, closing the door now that he is inside, slight smile, mouth closed.
         with dissolve
 
-        pause 0.05
+        pause 0.75
 
         scene v16s25_2 # TPP. Show MC taking off his shirt in the middle of his Wolves Frat Room, face obscured by shirt.
         with dissolve
 
-        pause
+        pause 0.75
 
         scene v16s25_2a # TPP. In his Wolves Frat Room, Show MC taking off his pants about to just be in his underwear, slight smile, mouth closed.
         with dissolve.
 
-        pause
+        pause 0.75
 
         scene v16s25_3 # TPP. In his Wolves Frat Room, Show MC getting into bed, slight smile, mouth closed.
         with dissolve
 
-        pause 
+        pause 0.75
 
-        scene v16s25_4 # TPP. In MC's Wolves Frat Room, Camera looking down from the ceiling as MC looks up at the ceiling where the camera is, MC slight smile, mouth closed.
+        scene v16s25_4 # TPP. In MC's Wolves Frat Room, Camera looking down from the ceiling as MC looks up at the ceiling where the camera is, *thinking* MC slight smile, mouth closed.
         with dissolve
 
         if v14_amber_clean: # [Checkpoint 1.1]
-            if amber.relationship >= Relationship.RS:
+            if amber.relationship >= Relationship.RS: # TODO: Variable
                 scene v16s25_4
                 with dissolve
 
                 u "(Is Amber relationship material? Definitely something to think about...)"
 
                 u "(I never thought Amber would be the type for a serious relationship... Maybe things have changed.)"
-            elif amber.relationship == Relationship.Friend:
+            elif amber.relationship == Relationship.Friend: # TODO: Variable
                 scene v16s25_4
                 with dissolve
 
@@ -55,21 +55,21 @@ label v16s25:
 
                 # [End of Checkpoint 1.1. Continue to Checkpoint 2]
         else: # [Checkpoint 1.2]
-            if amber.relationship >= Relationship.RS and v16_amber_dance:
+            if amber.relationship >= Relationship.RS and v16_amber_dance: # TODO: Variable
                 scene v16s25_4
                 with dissolve
 
                 u "(Holy shit, I can't get Amber's body out of my mind now...)"
 
                 u "(Maybe being a stripper is her true calling... *Laughs*)"
-            elif amber.relationship == Relationship.Friend and AmberLoyal:
+            elif amber.relationship == Relationship.Friend and AmberLoyal: # TODO: Variable
                 scene v16s25_4
                 with dissolve
 
                 u "(If anyone can handle getting harassed by douchebags every night, it's Amber...)"
 
                 u "(I'm glad she's happy.)"
-            elif amber.relationship == Relationship.Friend and v16_tell_amber_to_quit_stripping #Placeholder:
+            elif amber.relationship == Relationship.Friend and v16_tell_amber_to_quit_stripping # TODO: Variable Placeholder:
                 scene v16s25_4
                 with dissolve
 
@@ -88,24 +88,24 @@ label v16s25:
             scene v16s25_4
             with vpunch
 
-            pause .10
+            pause 0.75
 
             scene v16s25_5 # TPP. Show MC grabbing his phone off his nightstand in his Wolves Frat Room, confused, mouth closed.
             with dissolve
 
-            pause .10
+            pause 0.75
 
             scene v16s25_6 # TPP. In his wolves frat room, Show MC sitting up in bed on his phone pressing a button, slight smile, mouth closed.
             with dissolve
 
-            pause .05
+            pause 0.75
 
-            scene v16s25_7 # FPP. Laying down in his Wolves Frat Room bed, MC looking at his phone, On the phone a video chat with Emily, Emily in a robe or some sort of nightwear, Looking at MC on her phone. Show MC's face in the corner small like its a face time, Emily slight smile, mouth closed.
+            scene v16s25_7 # FPP. Laying down in his Wolves Frat Room bed, MC looking at his phone, On the phone a video chat with Emily, Emily wears a robe, Looking at MC on her phone. Show MC's face in the corner small like its a face time, mouth open, Emily slight smile, mouth closed.
             with dissolve
 
             u "You love these late-night sessions, huh?"
 
-            scene v16s25_7a # FPP. MC looking at his phone, On the phone a video chat with Emily, Emily in a robe or some sort of nightwear, looking at MC on her phone, Show MC's face in the corner small like its a face time, Emily slight smile, mouth open.
+            scene v16s25_7a # FPP. MC looking at his phone, On the phone a video chat with Emily, Emily wears a robe, looking at MC on her phone, Show MC's face in the corner small like its a face time mouth closed, Emily slight smile, mouth open.
             with dissolve
 
             em "Haha, I do. I can't help but think about you every night when I'm getting naked and cozy."
@@ -115,10 +115,10 @@ label v16s25:
 
             u "Funny, I'm always thinking about you getting naked too..."
 
-            scene v16s25_7b # MC looking at his phone, On the phone a video chat with Emily, Emily in a robe or some sort of nightwear, Show MC's face in the corner small like its a face time, Emily blushing and biting her lip.
+            scene v16s25_7b # MC looking at his phone, On the phone a video chat with Emily, Emily wears a robe, Show MC's face in the corner small like its a face time mouth closed, Emily blushing and biting her lip.
             with dissolve
 
-            pause 0.10 
+            pause 0.75 
 
             scene v16s25_7
             with dissolve
@@ -139,10 +139,7 @@ label v16s25:
             with dissolve
 
             em "You'll want to see this on a bigger screen. Trust me. *Giggles*"
-
-            scene v16s25_7
-            with dissolve
-
+            
             menu:
                 "Find a laptop.": # [Checkpoint 2.1]
                     $ add_point(KCT.BOYFRIEND)
@@ -166,14 +163,14 @@ label v16s25:
                     scene v16s25_8 # TPP. Show MC walking into the Wolves Frat Living Room only in his underwear, slight smile, mouth closed.
                     with dissolve
 
-                    pause 0.5
+                    pause 0.75
 
                     scene v16s25_9 # TPP. Close up of a laptop on the couch in the Wolves Frat Living Room.
                     with dissolve
 
                     u "(Yes!)"
 
-                    scene v16s25_10 # TPP. In the wolves frat room, Show MC looking at the lock screen on the laptop.
+                    scene v16s25_10 # TPP. In the wolves frat room, Show MC. mouth closed, looking at the lock screen on the laptop.
                     with dissolve
 
                     u "(Dammit, of course it's locked. Um, let's try...)"
@@ -187,11 +184,15 @@ label v16s25:
                             with dissolve
 
                             u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
+
                         "i<3chloe":
                             scene v16s25_11b # TPP. Just the laptop password screen with a red exclamation to show the password is wrong.
                             with dissolve
 
                             u "(Come on...)"
+
+                                scene v16s25_11
+                                with dissolve
 
                                 menu:
                                     "boobiez123":
@@ -204,6 +205,9 @@ label v16s25:
                                         with dissolve
 
                                         u "(Come on...)"
+
+                                        scene v16s25_11
+                                        with dissolve
                                         
                                         menu:
                                             "boobiez123:":
@@ -218,6 +222,9 @@ label v16s25:
 
                             u "(Come on...)"
 
+                            scene v16s25_11 
+                            with dissolve
+
                             menu:
                                 "boobiez123":
                                     scene v16s25_11a
@@ -229,6 +236,9 @@ label v16s25:
                                     with dissolve
 
                                     u "(Come on...)"
+
+                                    scene v16s25_11 
+                                    with dissolve                                        
                                     
                                     menu:
                                         "boobiez123:":
@@ -241,19 +251,19 @@ label v16s25:
                     scene v16s25_1c # TPP. Show MC closing the door to his Wolves Room with the laptop in his other arm, slight smile, mouth closed.
                     with dissolve
 
-                    pause 
+                    pause 0.75
 
                     scene v16s25_6
                     with dissolve
 
                     u "(Okay, let's connect...)"
 
-                    scene v16s25_11c # TPP. Laptop screen, Video chat overlay with Emily, Emily looking at MC on the chat, Emily slight smile, mouth closed.
+                    scene v16s25_11c # TPP. Laptop screen, Video chat overlay with Emily, Emily looking at MC, mouth open, on the chat, Emily slight smile, mouth closed.
                     with dissolve
 
                     u "Should be good. Can you hear me?"
 
-                    scene v16s25_11d # TPP. Laptop screen, Video chat overlay with Emily, Emily looking at MC on the chat, Emily slight smile, mouth open.
+                    scene v16s25_11d # TPP. Laptop screen, Video chat overlay with Emily, Emily looking at MC, mouth closed, on the chat, Emily slight smile, mouth open.
                     with dissolve
 
                     em "I hear you! And see you! Hi cutie."
@@ -278,23 +288,45 @@ label v16s25:
 
                     em "Hehe, good. I wanted you to see some of my new outfits."
 
-                    scene v16s25_11e # TPP. Laptop screen, Video chat overlay with Emily, Emily stood back so Emily can see her whole body, Emily's robe falling off revealing her first set of lingerie, Emily slight smile, mouth closed.
+                    # OLD scene v16s25_11e # TPP. Laptop screen, Video chat overlay with Emily, Emily stood back so Emily can see her whole body, Emily's robe falling off revealing her first set of lingerie, Emily slight smile, mouth closed.
+                    # NEW 
+                    scene v16s25_11e # TPP. Laptop screen, Video chat overlay with Emily, Emily stood back so MC can see her whole body, Emily's robe falls off revealing her naked, Emily slight smile/MC mouth closed, smiling, surprised.
                     with dissolve
 
-                    pause .10
+                    pause 0.75
 
-                    scene v16s25_11f # TPP. Laptop screen, Video chat overlay with Emily, Emily close to the camera with one hand on her boob, Emily smirking, mouth open.
+                    # TR EDIT
+                    scene v16s25_27    # TPP. Laptop screen, Video chat overlay with Emily, Emily slight smile, looking at camera, arching her back a little (pushing out chest/boobs) as she turns her body away from the camera)/MC mouth closed, smiling, happy.
+                    with dissolve
+
+                    pause 0.75
+
+                    scene v16s25_27a   # TPP. Laptop screen, Video chat overlay with Emily, Emily bending over at the hips, pushing her nude ass (a slight view of her pussy is optional at Mozzart's direction) out a little towards the camera, while pulling up the bottoms of lingerie1/MC mouth closed, smiling, surprised.
+                    with dissolve
+
+                    pause 0.75
+
+                    scene v16s25_27b   # TPP. Laptop screen, Video chat overlay with Emily, Emily slight smile, looking at camera over shoulder, while pulling the strap to her bra of lingerie1 over her shoulder/MC mouth closed, smiling, happy.
+                    with dissolve
+
+                    pause 0.75
+
+                    scene v16s25_27c   # TPP. Laptop screen, Video chat overlay with Emily, Emily posing sexy for the camera, slight smile, mouth closed//MC mouth closed, smiling, happy.
+                    with dissolve
+
+                    pause 0.75
+
+                    # END TR EDIT 
+
+                    scene v16s25_11f # TPP. Laptop screen, Video chat overlay with Emily (lingerie1), Emily close to the camera with one hand on her boob, Emily smirking, mouth open/ MC mouth closed, smiling, happy
                     with dissolve
 
                     em "Do you like it?"
-
-                    scene v16s25_11g # TPP. Laptop screen, Video chat overlay with Emily, Emily close to the camera with one hand on her boob, Emily biting her lip.
-                    with dissolve
-
+                    
                     menu:
                         "Like it.":
                             $ add_point(KCT.BRO)
-                            scene v16s25_11g
+                            scene v16s25_11g # TPP. Laptop screen, Video chat overlay with Emily (lingerie1), Emily close to the camera with one hand on her boob, Emily biting her lip/ MC mouth open, smiling, happy.
                             with dissolve
 
                             u "Yeah, it looks great on you."
@@ -328,7 +360,9 @@ label v16s25:
 
                             em "Haha, good."
 
-                            scene v16s25_11h # TPP. Laptop screen, Video chat overlay with Emily, Emily turned around and bent over showing her butt
+                            # OLD scene v16s25_11h # TPP. Laptop screen, Video chat overlay with Emily, Emily turned around and bent over showing her butt
+                            # NEW
+                            scene v16s25_11h # TPP. Laptop screen, Video chat overlay with Emily (lingerie1), Emily slight smile, mouth open, looking into camera while both hands slightly pushing her boobs up/MC mouth closed, smiling, happy. 
                             with dissolve
 
                             em "Are you touching yourself yet?"
@@ -350,55 +384,56 @@ label v16s25:
 
                             u "Hmm, it's cute, I guess. Just not my favorite."
 
-                            scene v16s25_11p # TPP. Laptop Screen, Video chat overlay with Emily, Emily looking at MC on the video chat, Emily slightly frown, mouth open.
+                            scene v16s25_11p # TPP. Laptop Screen, Video chat overlay with Emily (lingerie1), Emily looking at MC on the video chat, Emily slightly frown, mouth open/ MC, mouth closed, slight smile.
                             with dissolve
 
                             em "Really? I thought you'd like this one..."
 
                             em "I guess I can always return it."
 
-                            scene v16s25_11i # TPP. Laptop Screen, Video chat overlay with Emily, Emily looking at MC on the video chat, Emily slight frown, mouth closed.
+                            scene v16s25_11i # TPP. Laptop Screen, Video chat overlay with Emily  (lingerie1), Emily looking at MC on the video chat, Emily slight frown, mouth closed/ MC, mouth open, slight smile.
                             with dissolve
 
                             u "It's your call, it doesn't look horrible, haha."
 
-                    scene v16s25_11j # TPP. Laptop Screen, Video chat overlay with Emily, Show Emily reaching behind her and dropping the top of the lingerie to the floor, Emily smirking, mouth open.
+                    # OLD scene v16s25_11j # TPP. Laptop Screen, Video chat overlay with Emily, Show Emily reaching behind her and dropping the top of the lingerie to the floor, Emily smirking, mouth open.
+                    # NEW 
+                    scene v16s25_11j # TPP. Laptop Screen, Video chat overlay with Emily, Emily, smiling, facing the camera, bra unhooked, off her bobos (as if she just took it off) but still draping on her arms/ MC, mouth closed, smiling, happy.
                     with dissolve
 
                     em "Okay, next!"
 
-                    scene v16s25_11q # TPP. Laptop Screen, Video Chat overlay with Emily, Emily in the first set of lingerie turned around standing up straight with one hand on her butt as the bottom piece of the lingerie falls to the floor, Emily now naked, 
+                    # OLD scene v16s25_11q # TPP. Laptop Screen, Video Chat overlay with Emily, Emily in the first set of lingerie turned around standing up straight with one hand on her butt as the bottom piece of the lingerie falls to the floor, Emily now naked, 
+                    # NEW 
+                    scene v16s25_11q # TPP.  Close up of MC laying in bed ,dark, looking at the laptop screen, smiling, enjoying what he sees on the screen. The light from the laptop shines on MC's face.
                     with dissolve
 
-                    pause
+                    pause 0.75
 
-                    scene v16s25_11k # TPP. Laptop Screen, Video chat overlay with Emily, Show Emily reaching off the screen of the chat to grab her second set of lingerie her boobs right in front of her laptop camera, Emily slight smile, mouth closed.
+                    scene v16s25_11k # TPP. Laptop Screen, Video chat overlay with Emily, Show Emily reaching off the screen to grab her lingerie2 her boobs right in front of her laptop camera, Emily slight smile, mouth closed/ MC, mouth closed, smiling, happy.
                     with dissolve
 
-                    pause 
+                    pause 0.75
 
-                    scene v16s25_11r # TPP. Laptop Screen, Video Chat overlay with Emily, Emily putting on the top of the second lingerie set on while winking at MC on the chat, Emily smirking, mouth closed.
+                    scene v16s25_11r # TPP. Laptop Screen, Video Chat overlay with Emily, Emily putting on the top of lingerie2 on while winking at MC on the chat, Emily smirking, mouth closed/ MC, mouth closed, smiling, happy..
                     with dissolve  
 
-                    pause 
+                    pause 0.75
 
-                    scene v16s25_11s # TPP. Laptop Screen, Video Chat Overlay with Emily, Emily standing a little back bent over showing her naked bottom as she pulls up the bottom part of the second lingerie set, Emily biting her lip.
+                    scene v16s25_11s # TPP. Laptop Screen, Video Chat Overlay with Emily, Emily standing a little back bent over showing her naked bottom as she pulls up the bottom part of lingerie2, Emily biting her lip/ MC, mouth closed, smiling, happy. .
                     with dissolve
 
-                    pause
+                    pause 0.75
 
-                    scene v16s25_11l # TPP. Laptop screen, Video chat overlay With Emily, Emily close to her screen using her arms to push up her boobs, Emily smirking, mouth open.
+                    scene v16s25_11l # TPP. Laptop screen, Video chat overlay With Emily, Emily close to her screen using her arms to push up her boobs, Emily smirking, mouth open/ MC, mouth closed, smiling, happy..
                     with dissolve
 
                     em "What about this one?"
 
-                    scene v16s25_11m # TPP. Laptop Screen, Video chat overlay with Emily, Emily close to her screen using her amrs to push up her boobs, Emily biting her lip.
-                    with dissolve
-
                     menu:
                         "Like it.":
                             $ add_point(KCT.BRO)
-                            scene v16s25_11m
+                            scene v16s25_11m  # TPP. Laptop Screen, Video chat overlay with Emily, Emily close to her screen using her arms to push up her boobs, Emily biting her lip/ MC, mouth open, smiling.
                             with dissolve
 
                             u "Yeah, that one I like. It compliments your body really well."
@@ -408,7 +443,7 @@ label v16s25:
 
                             em "Yeah? Does it?"
 
-                            scene v16s25_11n # TPP. Laptop screen, Video chat overlay with Emily, Emily stood away a bit from the screen, Emily turned around on her tip toes, her hands on her hips showing off her butt, looking over her shoulder to see the chat, Emily smirking, mouth closed.
+                            scene v16s25_11n # TPP. Laptop screen, Video chat overlay with Emily, Emily stood away a bit from the screen, Emily turned around on her tip toes, her hands on her hips showing off her butt, looking over her shoulder to see the chat, Emily smirking, mouth closed/ MC mouth open, smiling, surprised.
                             with dissolve
 
                             u "Mm-hmm..."
@@ -483,7 +518,7 @@ label v16s25:
 
                             em "Well, that sucks. *Sighs* Oh well!"
 
-                    scene v16s25_11o # TPP. Laptop screen, Video chat overlay with Emily, Emily putting her robe on back over the lingerie set, the lingerie not visible anymore, slight smile, mouth open.
+                    scene v16s25_11o # TPP. Laptop screen, Video chat overlay with Emily, Emily putting her robe over the lingerie2, the lingerie not visible anymore, slight smile, mouth open/MC, mouth closed, smiling, happy.
                     with dissolve
 
                     em "That's it. I hope you enjoyed the show."
@@ -533,16 +568,16 @@ label v16s25:
                     scene v16s25_1d # TPP. In his wolves frat room, MC opening the door to his room with the laptop in his arm, only in his underwear, slight smile, mouth closed.
                     with dissolve
 
-                    pause .15
+                    pause 0.75
 
                     scene v16s25_13 # TPP. In the wolves living room, Show MC leaving the Laptop on the couch where he found it, slight smile, mouth closed.
                     with dissolve
 
-                    pause .15
+                    pause 0.75
 
                     play sound "sounds/doorclose.mp3"
 
-                    scene v16s25_1d # TPP. In his wolves frat room closing the door to his room in just his underwear, slight smile, mouth closed.
+                    scene v16s25_1e # TPP. In his wolves frat room closing the door to his room in just his underwear, slight smile, mouth closed.
                     with dissolve
                 "I'm too tired.": # [Checkpoint 2.2]
                     scene v16s25_7
@@ -577,9 +612,6 @@ label v16s25:
 
                     em "Goodnight, baby. I love you."
 
-                    scene v16s25_7
-                    with dissolve
-
                     menu:
                         "I love you, too.":
                             $ add_point(KCT.BOYFRIENDS)
@@ -591,6 +623,8 @@ label v16s25:
                             scene v16s25_7b
                             with dissolve
 
+                            pause 0.75
+
                         "Hang up.":
                             $ add_point(KCT.TROUBLEMAKER)
 
@@ -599,7 +633,7 @@ label v16s25:
                             scene v16s25_7
                             with dissolve
 
-                            pause .05
+                            pause 0.75
 
                             scene v16s25_4
                             with dissolve
@@ -607,7 +641,7 @@ label v16s25:
                             u "*Whistles* Anyway..."
 
         scene v16s25_4a # TPP. Show MC with his eyes closed as he falls asleep, neutral face, mouth closed.
-        with dissolve
+        with fade
             
             # [End of Checkpoint 2.2. Continue to Checkpoint 3]
             # [Checkpoint 3]
@@ -618,42 +652,42 @@ label v16s25:
         scene v16s25_14 # TPP. Show MC entering his Apes Frat Room, slight smile, mouth closed.
         with fade(1,0,1)
 
-        pause 0.10
+        pause 0.75
 
         play sound "sounds/doorclose.mp3"
 
         scene v16s25_14a # TPP. Show MC inside his Apes Frat Room, closing the door now that he is inside, slight smile, mouth closed.
         with dissolve
 
-        pause 0.05
+        pause 0.75
 
         scene v16s25_15 # TPP. Show MC taking off his shirt in the middle of his Apes Frat Room, face obscured by shirt.
         with dissolve
 
-        pause
+        pause 0.75
 
         scene v16s25_15a # TPP. In his Apes Frat Room, Show MC taking off his pants about to just be in his underwear, slight smile, mouth closed.
         with dissolve.
 
-        pause
+        pause 0.75
 
         scene v16s25_16 # TPP. In his Apes Frat Room, Show MC getting into bed, slight smile, mouth closed.
         with dissolve
 
-        pause 
+        pause 0.75
 
-        scene v16s25_17 # TPP. In MC's Apes Frat Room, Camera looking down from the ceiling as MC looks up at the ceiling where the camera is, MC slight smile, mouth closed.
+        scene v16s25_17 # TPP. In MC's Apes Frat Room, Camera looking down from the ceiling as MC looks up at the ceiling where the camera is, *thinking* MC slight smile, mouth closed.
         with dissolve
 
         if v14_amber_clean: # [Checkpoint 1.1]
-            if amber.relationship >= Relationship.RS:
+            if amber.relationship >= Relationship.RS: # TODO: Variable
                 scene v16s25_17
                 with dissolve
 
                 u "(Is Amber relationship material? Definitely something to think about...)"
 
                 u "(I never thought Amber would be the type for a serious relationship... Maybe things have changed.)"
-            elif amber.relationship == Relationship.Friend:
+            elif amber.relationship == Relationship.Friend: # TODO: Variable
                 scene v16s25_17
                 with dissolve
 
@@ -661,21 +695,21 @@ label v16s25:
 
                 # [End of Checkpoint 1.1. Continue to Checkpoint 2]
         else: # [Checkpoint 1.2]
-            if amber.relationship >= Relationship.RS and v16_amber_dance:
+            if amber.relationship >= Relationship.RS and v16_amber_dance: # TODO: Variable
                 scene v16s25_17
                 with dissolve
 
                 u "(Holy shit, I can't get Amber's body out of my mind now...)"
 
                 u "(Maybe being a stripper is her true calling... *Laughs*)"
-            elif amber.relationship == Relationship.Friend and AmberLoyal:
+            elif amber.relationship == Relationship.Friend and AmberLoyal: #TODO: Variable
                 scene v16s25_17
                 with dissolve
 
                 u "(If anyone can handle getting harassed by douchebags every night, it's Amber...)"
 
                 u "(I'm glad she's happy.)"
-            elif amber.relationship == Relationship.Friend and v16_tell_amber_to_quit_stripping #Placeholder:
+            elif amber.relationship == Relationship.Friend and v16_tell_amber_to_quit_stripping  # TODO: Variable #Placeholder:
                 scene v16s25_17
                 with dissolve
 
@@ -694,24 +728,24 @@ label v16s25:
             scene v16s25_17
             with vpunch
 
-            pause .10
+            pause 0.75
 
             scene v16s25_18 # TPP. Show MC grabbing his phone off his nightstand in his Apes Frat Room, confused, mouth closed.
             with dissolve
 
-            pause .10
+            pause 0.75
 
             scene v16s25_19 # TPP. In his Apes frat room, Show MC sitting up in bed on his phone pressing a button, slight smile, mouth closed.
             with dissolve
 
-            pause .05
+            pause 0.75
 
-            scene v16s25_20 # FPP. Laying down in his Apes Frat Room bed, MC looking at his phone, On the phone a video chat with Emily, Emily in a robe or some sort of nightwear, Looking at MC on her phone. Show MC's face in the corner small like its a face time, Emily slight smile, mouth closed.
+            scene v16s25_20 # FPP. Laying down in his Apes Frat Room bed, MC looking at his phone, On the phone a video chat with Emily, Emily wears a robe, Looking at MC on her phone. Show MC's face in the corner small like its a face time, Emily slight smile, mouth closed.
             with dissolve
 
             u "You love these late-night sessions, huh?"
 
-            scene v16s25_20a # FPP. MC looking at his phone, On the phone a video chat with Emily, Emily in a robe or some sort of nightwear, looking at MC on her phone, Show MC's face in the corner small like its a face time, Emily slight smile, mouth open.
+            scene v16s25_20a # FPP. MC looking at his phone, On the phone a video chat with Emily, Emily wears a robe, looking at MC on her phone, Show MC's face in the corner small like its a face time, Emily slight smile, mouth open.
             with dissolve
 
             em "Haha, I do. I can't help but think about you every night when I'm getting naked and cozy."
@@ -721,10 +755,10 @@ label v16s25:
 
             u "Funny, I'm always thinking about you getting naked too..."
 
-            scene v16s25_20b # MC looking at his phone, On the phone a video chat with Emily, Emily in a robe or some sort of nightwear, Show MC's face in the corner small like its a face time, Emily blushing and biting her lip.
+            scene v16s25_20b # MC looking at his phone, On the phone a video chat with Emily, Emily wears a robe, Show MC's face in the corner small like its a face time mouth closed, Emily blushing and biting her lip.
             with dissolve
 
-            pause 0.10 
+            pause 0.75 
 
             scene v16s25_20
             with dissolve
@@ -745,10 +779,7 @@ label v16s25:
             with dissolve
 
             em "You'll want to see this on a bigger screen. Trust me. *Giggles*"
-
-            scene v16s25_20
-            with dissolve
-
+            
             menu:
                 "Find a laptop.": # [Checkpoint 2.1]
                     $ add_point(KCT.BOYFRIEND)
@@ -799,6 +830,9 @@ label v16s25:
 
                             u "(Come on...)"
 
+                            scene v16s25_11 
+                            with dissolve
+
                                 menu:
                                     "boobiez123":
                                         scene v16s25_11a
@@ -806,10 +840,14 @@ label v16s25:
 
                                         u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
                                     "696969":
+                                        
                                         scene v16s25_11b
                                         with dissolve
 
                                         u "(Come on...)"
+
+                                        scene v16s25_11 
+                                        with dissolve
                                         
                                         menu:
                                             "boobiez123:":
@@ -824,6 +862,9 @@ label v16s25:
 
                             u "(Come on...)"
 
+                            scene v16s25_11 
+                            with dissolve
+
                             menu:
                                 "boobiez123":
                                     scene v16s25_11a
@@ -835,19 +876,23 @@ label v16s25:
                                     with dissolve
 
                                     u "(Come on...)"
+
+                                    scene v16s25_11 
+                                    with dissolve
                                     
                                     menu:
                                         "boobiez123:":
                                             scene v16s25_11a
                                             with dissolve
 
-                                            u "(Haha, no way...  I'm in! Are we really that predictable guys?)"      
+                                            u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
+
                     play sound "sounds/doorclosed.mp3"
 
                     scene v16s25_14c # TPP. Show MC closing the door to his Apes Room with the laptop in his other arm, slight smile, mouth closed.
                     with dissolve
 
-                    pause 
+                    pause 0.75
 
                     scene v16s25_19
                     with dissolve
@@ -887,15 +932,35 @@ label v16s25:
                     scene v16s25_11e
                     with dissolve
 
-                    pause .10
+                    pause 0.75
+
+                    # TR EDIT
+                    scene v16s25_27
+                    with dissolve
+
+                    pause 0.75
+
+                    scene v16s25_27a
+                    with dissolve
+
+                    pause 0.75
+
+                    scene v16s25_27b
+                    with dissolve
+
+                    pause 0.75
+
+                    scene v16s25_27c
+                    with dissolve
+
+                    pause 0.75
+
+                    # END TR EDIT
 
                     scene v16s25_11f
                     with dissolve
 
                     em "Do you like it?"
-
-                    scene v16s25_11g
-                    with dissolve
 
                     menu:
                         "Like it.":
@@ -976,30 +1041,27 @@ label v16s25:
                     scene v16s25_11q
                     with dissolve
                     
-                    pause
+                    pause 0.75
 
                     scene v16s25_11k
                     with dissolve
 
-                    pause
+                    pause 0.75
 
                     scene v16s25_11r
                     with dissolve 
 
-                    pause
+                    pause 0.75
 
                     scene v16s25_11s
                     with dissolve
 
-                    pause
+                    pause 0.75
 
                     scene v16s25_11l
                     with dissolve
 
                     em "What about this one?"
-
-                    scene v16s25_11m
-                    with dissolve
 
                     menu:
                         "Like it.":
@@ -1139,17 +1201,18 @@ label v16s25:
                     scene v16s25_14d # TPP. In his Apes frat room, MC opening the door to his room with the laptop in his arm, only in his underwear, slight smile, mouth closed.
                     with dissolve
 
-                    pause .15
+                    pause 0.75
 
                     scene v16s25_25 # TPP. In the Apes living room, Show MC leaving the Laptop on the couch where he found it, slight smile, mouth closed.
                     with dissolve
 
-                    pause .15
+                    pause 0.75
 
                     play sound "sounds/doorclose.mp3"
 
-                    scene v16s25_14d # TPP. In his Apes frat room closing the door to his room in just his underwear, slight smile, mouth closed.
+                    scene v16s25_14e # TPP. In his Apes frat room closing the door to his room in just his underwear, slight smile, mouth closed.
                     with dissolve
+                
                 "I'm too tired.": # [Checkpoint 2.2]
                     scene v16s25_20
                     with dissolve
@@ -1183,9 +1246,6 @@ label v16s25:
 
                     em "Goodnight, baby. I love you."
 
-                    scene v16s25_20
-                    with dissolve
-
                     menu:
                         "I love you, too.":
                             $ add_point(KCT.BOYFRIENDS)
@@ -1213,7 +1273,7 @@ label v16s25:
                             u "*Whistles* Anyway..."
 
         scene v16s25_17a # TPP. Show MC with his eyes closed as he falls asleep, neutral face, mouth closed.
-        with dissolve
+        with fade
             
             # [End of Checkpoint 2.2. Continue to Checkpoint 3]
             # [Checkpoint 3]
