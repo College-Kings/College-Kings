@@ -14,7 +14,8 @@ define _quit_slot = "99-1"
 
 # The game starts here.
 label start:
-    $ phone = Phone("phone_icon.webp")
+    if config.developer:
+        show screen bugTesting_Overlay
 
     call screen real_life_mode
 
