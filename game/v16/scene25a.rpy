@@ -3,26 +3,37 @@
 # Characters: MC (Outfit: Underwear to 9), AUBREY (Outfit: 3)
 # Time: Morning
 
+init python:
+        
+    def v16s25a_reply_thankyou():
+        riley.messenger.newMessage("Thank you! :)")
+    def v16s25a_reply_sorry():
+        riley.messenger.newMessage("Um, no... As soon as he told me I got the job he acted like the search was over, haha. Sorry :(")
+    def v16s25a_reply_assistant():
+        riley.messenger.newMessage("Aw, well, who knows? Maybe I'll need an assistant one day.")
+    def v16s25a_reply_tongue_emoji():
+        riley.messenger.newMessage(":P")
+
 label v16s25a:
+    
+    scene sleep_transition_fast # Ignore animation 
+    with fade
+
+    pause 2.2
+    
+    scene black
+    with dissolve
+        
+    pause 1
+
     if joinwolves:
-        scene sleep_transition_fast # Ignore animation 
-        with fade
 
-        pause 2.2
-
-        play sound "sound/vibrate.mp3"
-                
-        scene black
+        scene v16s25a_1 # TPP. In wolves room. Show MC sitting up from bed and yawning his arms stretched, MC yawning (underware only).
         with dissolve
-            
+
         pause 0.75
 
         play sound "sounds/vibrate.mp3"
-
-        scene v16s25a_1 # TPP. In wolves room. Show MC sitting up from bed and yawning his arms stretched, MC yawning.
-        with dissolve
-
-        pause 0.75
 
         scene v16s25a_2 # TPP. In wolves room. Show MC grabbing his phone from off his nightstand, MC neutral face, mouth closed.
         with dissolve
@@ -34,17 +45,13 @@ label v16s25a:
 
         $ riley.messenger.newMessage("Guess who got the newspaper job?", force_send=True)
         $ riley.messenger.newMessage("MEEEEEEEEE!")
-        $ riley.messenger.addReply("Haha, congrats!")
-        $ riley.messenger.newMessage("Thank you! :)")
-
-        if v16s11_sign_up:
-            $ riley.messenger.addReply("What about me? Do you know?")
-            $ riley.messenger.newMessage("Um, no... As soon as he told me I got the job he acted like the search was over, haha. Sorry :(")
-            $ riley.messenger.addReply("Ouch. There go my journalist dreams :(", v16s11_reply1)
-            $ riley.messenger.addReply("Ah, nice. I was kind of hoping I didn't get it, haha.", v16s11_reply2)
-            $ riley.messenger.newMessage("Aw, well, who knows? Maybe I'll need an assistant one day.")
-            $ riley.messenger.addReply("Jeez, the power is already going straight to your head...")
-            $ riley.messenger.newMessage(":P")
+        $ riley.messenger.addReply("Haha, congrats!", v16s25a_reply_thankyou)        
+        
+        if v16s11_sign_up: # TODO: Variable
+            $ riley.messenger.addReply("What about me? Do you know?", v16s25a_reply_sorry)            
+            $ riley.messenger.addReply("Ouch. There go my journalist dreams :(")
+            $ riley.messenger.addReply("Ah, nice. I was kind of hoping I didn't get it, haha.", v16s25a_reply_assistant)            
+            $ riley.messenger.addReply("Jeez, the power is already going straight to your head...", v16s25a_reply_tongue_emoji)            
 
         scene v16s25a_1a
         with dissolve
@@ -66,12 +73,12 @@ label v16s25a:
         scene v16s25a_4a # TPP. In wolves room. Show MC standing in the middle of his room looking at his phone, slight smile, mouth closed. 
         with dissolve 
 
-        pause 0.75 
+        pause .0.75 
 
         scene v16s25a_4b # TPP. In wolves room. Show MC with the phone to his ear, slight smile, mouth closed.
         with dissolve 
 
-        pause 
+        pause 0.75
 
         scene v16s25a_5 # TPP. Aubrey in the Chicks house in her room on the phone, slight smile, mouth open.
         with dissolve 
@@ -128,7 +135,8 @@ label v16s25a:
 
         au "No problem."
 
-        if aubrey.relationship >= Relationship.TAMED:
+        if aubrey.relationship = Relationship.TAMED: # TODO: Variable
+
             scene v16s25a_5b # TPP. Aubrey in the Chicks house in her room on the phone, slight smile, blushing, mouth open.
             with dissolve
 
@@ -203,24 +211,13 @@ label v16s25a:
         jump v16s26
 
     else:
-        scene sleep_transition_fast # Ignore animation 
-        with fade
-
-        pause 2.2
-
-        play sound "sound/vibrate.mp3"
                 
-        scene black
-        with dissolve
-            
-        pause 0.75
-
-        play sound "sounds/vibrate.mp3"
-
         scene v16s25a_8 # TPP. In Apes room. Show MC sitting up from bed and yawning his arms stretched, MC yawning.
         with dissolve
 
         pause 0.75
+
+        play sound "sounds/vibrate.mp3"
 
         scene v16s25a_9 # TPP. In Apes room. Show MC grabbing his phone from off his nightstand, MC neutral face, mouth closed.
         with dissolve
@@ -232,17 +229,13 @@ label v16s25a:
 
         $ riley.messenger.newMessage("Guess who got the newspaper job?", force_send=True)
         $ riley.messenger.newMessage("MEEEEEEEEE!")
-        $ riley.messenger.addReply("Haha, congrats!")
-        $ riley.messenger.newMessage("Thank you! :)")
-
-        if v16s11_sign_up:
-            $ riley.messenger.addReply("What about me? Do you know?")
-            $ riley.messenger.newMessage("Um, no... As soon as he told me I got the job he acted like the search was over, haha. Sorry :(")
-            $ riley.messenger.addReply("Ouch. There go my journalist dreams :(", v16s11_reply1)
-            $ riley.messenger.addReply("Ah, nice. I was kind of hoping I didn't get it, haha.", v16s11_reply2)
-            $ riley.messenger.newMessage("Aw, well, who knows? Maybe I'll need an assistant one day.")
-            $ riley.messenger.addReply("Jeez, the power is already going straight to your head...")
-            $ riley.messenger.newMessage(":P")
+        $ riley.messenger.addReply("Haha, congrats!", v16s25a_reply_thankyou)        
+        
+        if v16s11_sign_up: # TODO: Variable
+            $ riley.messenger.addReply("What about me? Do you know?", v16s25a_reply_sorry)            
+            $ riley.messenger.addReply("Ouch. There go my journalist dreams :(")
+            $ riley.messenger.addReply("Ah, nice. I was kind of hoping I didn't get it, haha.", v16s25a_reply_assistant)            
+            $ riley.messenger.addReply("Jeez, the power is already going straight to your head...", v16s25a_reply_tongue_emoji)            
 
         scene v16s25a_8a
         with dissolve
@@ -257,19 +250,19 @@ label v16s25a:
         scene v16s25a_11 # TPP. In Apes room. Show MC standing in the middle of his room putting on his shirt for the day, face obscured by the shirt.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
         
         play sound "sound/vibrate.mp3"
 
         scene v16s25a_11a # TPP. In Apes room. Show MC standing in the middle of his room looking at his phone, slight smile, mouth closed. 
         with dissolve 
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s25a_11b # TPP. In Apes room. Show MC with the phone to his ear, slight smile, mouth closed.
         with dissolve 
 
-        pause 
+        pause 0.75
 
         scene v16s25a_5 # TPP. Aubrey in the Chicks house in her room on the phone, slight smile, mouth open.
         with dissolve 
@@ -326,15 +319,16 @@ label v16s25a:
 
         au "No problem."
 
-        if aubrey.relationship >= Relationship.TAMED:
-            scene v16s25a_5b # TPP. Aubrey in the Chicks house in her room on the phone, slight smile, blushing, mouth open.
+        if aubrey.relationship = Relationship.TAMED: # TODO: Variable
+        
+            scene v16s25a_5b
             with dissolve
 
             au "Also..."
 
             au "I'm free for a date tonight."
 
-            scene v16s25a_5c # TPP. Aubrey in the Chicks house in her room on the phone, slight smile, blushing, mouth closed.
+            scene v16s25a_5c
             with dissolve
 
             u "Oh. Are you?"
@@ -366,7 +360,7 @@ label v16s25a:
 
             au "Quit asking before I change my mind... Haha."
 
-            scene v16s25a_a
+            scene v16s25a_5a
             with dissolve
 
             u "Okay, deal. Dinner tonight. I'll sort the details, stay by the phone."
@@ -389,8 +383,8 @@ label v16s25a:
         pause 0.75
 
         scene v16s25a_12 # TPP. In Apes room, show MC looking at himself in the Mirror pointing finger guns and winking, slight smile, mouth open.
-        with dissolve
-
+        with dissol
+        
         u "Let's get this day started, shall we?"
 
         play sound "sounds/dooropen.mp3"
