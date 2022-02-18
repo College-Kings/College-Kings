@@ -220,6 +220,7 @@ default v10lottery_ticket = False # Needed for v16S20
 default candyLike = 0
 default freeroam7 = set() #Penelope Court
 default freeroam8 = set() #London Museum
+default v11_she_will_miss = False
 default v11_amber_sauna_convo = False
 default v11_check_on_nora = False
 default v11_hp_points = 0
