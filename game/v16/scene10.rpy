@@ -122,7 +122,7 @@ label v16s10: # Econ class
 
     ### elif lauren.relationship == Relationship.FRIEND: # -if LaurenFriend
     else:
-    scene v16s10_2d # TPP Same angle as 2, Lauren passing MC a note under the table, Lauren with a slight smile, mouth closed
+        scene v16s10_2d # TPP Same angle as 2, Lauren passing MC a note under the table, Lauren with a slight smile, mouth closed
         with dissolve
 
         u "(Haha, Lauren must be as bored as me.)"

@@ -303,6 +303,7 @@ label v16s11:
 
     menu:
         "Sign up":
+            $ v16s11_sign_up = True
             scene v16s11_8
             with dissolve
 
