@@ -4,7 +4,6 @@
 # Time: Morning
 
 label v16s4a:
-
     # -Transition from night to day-
     scene sleep_transition_fast # Ignore Animation
     with fade

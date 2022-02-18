@@ -16,8 +16,7 @@ label v16s3a:
 
     ri "I'm going to take such good care of you..."
 
-    if v15s18a_riley_bj:
-
+    if "v15_riley" in sceneList:
         scene v16s3a_2 
         with dissolve
 
@@ -66,13 +65,13 @@ label v16s3a:
     with dissolve
 
     menu:
-        "Let her continue.":
+        "Let her continue":
             scene v16s3a_2b
             with dissolve
 
             u "(Oh, Riley... What did I do to deserve you?)"
 
-        "Put her on top.":
+        "Put her on top":
             scene v16s3a_2a
             with dissolve
 
@@ -182,7 +181,7 @@ label v16s3a:
     with dissolve
 
     menu:
-        "I like pleasing you.":
+        "I like pleasing you":
             scene v16s3a_2a
             with dissolve
 
@@ -218,7 +217,7 @@ label v16s3a:
             scene v16s3a_1
             with dissolve
 
-        "I like being pleased.":
+        "I like being pleased":
             scene v16s3a_2a
             with dissolve 
 

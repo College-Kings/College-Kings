@@ -772,15 +772,16 @@ label v11s23_penelope1:
 
                 pe "When we get back do you think we could go on a real date?"
 
-                scene v11frmpe10c
-                with dissolve
+                if bowling:
+                    scene v11frmpe10c
+                    with dissolve
 
-                u "I'd love that."
+                    u "I'd love that."
 
-                scene v11frmpe10b
-                with dissolve
+                    scene v11frmpe10b
+                    with dissolve
 
-                pe "We can't go bowling though, I wouldn't want to do that to you. *Chuckles*"
+                    pe "We can't go bowling though, I wouldn't want to do that to you. *Chuckles*"
 
                 scene v11frmpe10c
                 with dissolve

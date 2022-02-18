@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 5), EMILY (Robe; Lingerie1; Lingerie2)
 # Time: Night
 
-
 label v16s25:
 
     if joinwolves:

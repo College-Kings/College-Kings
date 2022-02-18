@@ -4,8 +4,7 @@
 # Time: Morning
 
 init python:
-    
-    
+        
     def v16s25a_reply_thankyou():
         riley.messenger.newMessage("Thank you! :)")
     def v16s25a_reply_sorry():

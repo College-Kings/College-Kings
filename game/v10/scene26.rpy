@@ -364,9 +364,13 @@ label v10_amber_skatepark:
 
     u "*Laughs*"
 
-    if amber.relationship >= Relationship.FWB:
-        label v10_amber_skatepark_sg:
+    if amber.relationship >= Relationship.FWB or kct == "popular":
+        if in_replay:
+            label v10_amber_skatepark_sg:
 
+            $ amber.relationship = Relationship.FWB
+
+    if amber.relationship >= Relationship.FWB:
         scene v10sasp5b # FPP. Same camera as v10sasp5. Show Amber leaning in to whisper into MC's ear, smiling, mouth open.
         with fade
 

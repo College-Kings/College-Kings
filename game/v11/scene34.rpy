@@ -4,6 +4,8 @@
 # Time: Day
 
 label v11_cardealership:
+    $ v11_dealership = True
+
     scene v11cd1 # TPP. Shows MC and Chloe getting into the car dealership
     with fade
     play music "music/v11/Track Scene 3.mp3" fadein 2
@@ -83,7 +85,6 @@ label v11_cardealership:
     with dissolve
 
     cl "What? *Chuckles* I just thought we could have a little fun."
-
 
     if chloe.relationship >= Relationship.FWB:
         scene v11cd7 # TPP. chloe whispers in MCs ear, MC looks surprised, MCs mouth closed chloe's mouth opened
