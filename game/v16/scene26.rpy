@@ -8,14 +8,14 @@ label v16s26:
     scene v16s26_1 # TPP. Show MC walking down the hallway of SVC, neutral face, mouth closed.
     with dissolve 
 
-    pause .25
+    pause 0.75
 
     scene v16s26_2 # TPP. Show MC walking down the Hallway of SVC further down the hall, Lindsey now walking to next to MC but he doesn't notice, Lindsey slight smile, mouth closed, MC neutral face, mouth closed.
     with dissolve 
 
-    pause .25
+    pause 0.75
 
-    scene v16s26_2a # TPP. MC flinching as he turns to see Lindsey next to him, Lindsey slight smile, mouth closed, MC surprised, mouth open.
+    scene v16s26_2a # TPP. MC jumps back, slightly scared as he turns to see Lindsey next to him, Lindsey slight smile, mouth closed, MC surprised, mouth open.
     with dissolve
 
     u "Oh shi- Hey, Linds."
@@ -60,101 +60,95 @@ label v16s26:
 
     u "Hmph. Agree to disagree."
 
-    if v15_lindsey_recording >= 1:
-        scene v16s26_3
+    if v15_lindsey_recording >= 1: # TODO: Variable
+        scene v16s26_3a
         with dissolve
 
         u "How are you getting on with those bonsai therapy sessions?"
 
-        scene v16s26_3a
+        scene v16s26_3
         with dissolve
 
         li "Ah, you heard about that."
 
-        li "Mr Lee's got us pruning his little trees for an hour every day."
+        li "Mr. Lee's got us pruning his little trees for an hour every day."
 
-        scene v16s26_3
+        scene v16s26_3a
         with dissolve
 
         u "A whole hour?"
 
-        scene v16s26_3a
+        scene v16s26_3
         with dissolve
 
         li "Yes... *Sighs*"
 
         li "It's the weirdest punishment ever. He even plays meditation music while we're doing it."
 
-        scene v16s26_3
+        scene v16s26_3a
         with dissolve
 
         u "*Laughs*"
 
-        scene v16s26_3a
+        scene v16s26_3
         with dissolve
 
         li "It's not funny! He also reads out quotes from some book about positive thinking and the importance of respect... Ugh."
 
-        scene v16s26_3
+        scene v16s26_3a
         with dissolve
 
         u "Classic Mr. Lee... The man is an actual character."
 
-        scene v16s26_3a
+        scene v16s26_3
         with dissolve
 
         li "*Sighs* Anyway, enough about that."
 
-    scene v16s26_3a
-    with dissolve
-
     li "Autumn was telling me about the dog shelter re-opening and how you've been helping her?"
-
-    scene v16s26_3
-    with dissolve
-
+    
     menu:
         "Yeah, it's great.":
             $ add_point(KCT.BRO)
-            scene v16s26_3
+            scene v16s26_3a
             with dissolve
 
             u "Oh, yeah! It's been great. I'm excited to go back and see how the little guys are doing."
 
         "Yeah, she's great":
             $ add_point(KCT.BOYFRIEND)
-            scene v16s26_3
+            scene v16s26_3a
 
             u "Oh, yeah! Autumn's great. She really cares about the animals and honestly, a lot cooler than I thought she was, haha."
 
-            scene v16s26_3a
+            scene v16s26_3
             with dissolve
 
             li "I know! Ever since we hung out the other night, I can't help but love her. She's so chill."
 
-            scene v16s26_3
+            scene v16s26_3a
             with dissolve
 
             u "Yeah, for sure. Helping her out at the shelter has been a blast, the dogs are amazing."
 
-    scene v16s26_3a
+    scene v16s26_3
+    with dissolve
 
     li "Haha, that's sweet."
 
     li "I really wanted to attend the re-opening, but I won't have the time that day... Can you take the donation for me and make sure it gets into the right hands?"
 
-    scene v16s26_3
+    scene v16s26_3a
     with dissolve
 
     u "Yeah, sure."
 
-    scene v16s26_3b # FPP. MC and Lindsey still standing in the middle of the hallway, Lindsey handing MC $50(Or just a stack of cash what ever is better for rendering), Lindsey slight smile, mouth open.
+    scene v16s26_3b # FPP. MC and Lindsey still standing in the middle of the hallway, Lindsey handing MC some cash, Lindsey slight smile, mouth open.
     with dissolve
-
 
     li "Thanks. That should help a few fur babies."
 
-    scene v16s26_3c # FPP. MC and Lindsey still standing in the middle of the hallway, MC grabbing the $50/Cash stack, Lindsey slight smile, mouth closed.
+    scene v16s26_3c # FPP. MC and Lindsey still standing in the middle of the hallway, MC grabbing the cash, Lindsey slight smile, mouth closed.
     with dissolve
 
     u "Haha, I'm sure they'll appreciate it. I'll give it Autumn as soon as I see her."
@@ -162,9 +156,9 @@ label v16s26:
     scene v16s26_4 # TPP. Show Penelope walking up to Lindsey and MC, All slight smile, mouth closed.
     with dissolve
 
-    pause .25
+    pause 0.75
 
-    scene v16s26_5 # FPP. MC looking at Penelope who is next to him and Lindsey(Lindsey off camera), Penlope looking at MC, Penelope slight smile, mouth closed.
+    scene v16s26_5 # FPP. MC looking at Penelope who is next to him and Lindsey(Lindsey off camera [MC is in between them]), Penlope looking at MC, Penelope slight smile, mouth open.
     with dissolve
 
     pe "Hey, you two!"
@@ -179,7 +173,7 @@ label v16s26:
 
     pe "No, come on! Wake up! I have huge news, guys."
 
-    scene v16s26_3a
+    scene v16s26_3
     with dissolve
 
     li "Uh, oh. Huge news, [name]."
@@ -194,9 +188,6 @@ label v16s26:
 
     pe "Okay... So, guess who's coming to perform a little concert for us tomorrow night, all because of me?"
 
-    scene v16s26_5a
-    with dissolve
-
     menu:
         "The music majors":
             scene v16s26_5a
@@ -204,12 +195,12 @@ label v16s26:
 
             u "The music majors?"
 
-            scene v16s26_3a
+            scene v16s26_3
             with dissolve
 
             li "Oh, nice guess."
 
-            scene v16s26_3
+            scene v16s26_3a
             with dissolve
 
             u "Hey, thanks."
@@ -219,7 +210,7 @@ label v16s26:
 
             pe "Haha, no, you idiot!"
 
-            scene v16s26_5a
+            scene v16s26_3
             with dissolve
 
             li "*Laughs*"
@@ -238,6 +229,7 @@ label v16s26:
             with dissolve
 
             li "Yeah, don't keep us in suspense over here!"
+
     scene v16s26_5
     with dissolve
 
@@ -248,7 +240,7 @@ label v16s26:
 
     li "Polly? THE Polly?!"
 
-    scene v16s26_5b # FPP. MC looking at Penelope, Penelope looking at Lindsey, Penelope slight smile, mouth open.
+    scene v16s26_5b # FPP. MC looking at Penelope, Penelope looking at Lindsey (off camera), Penelope slight smile, mouth open.
     with dissolve
 
     pe "The one and only Polly!"
@@ -258,7 +250,7 @@ label v16s26:
 
     li "Wha- Ahh! That's amazing, Penelope!"
 
-    scene v16s26_6 # TPP. Show Penelope and Lindsey fangirling while MC is stuck in the middle, MC awkward face, mouth closed, Lindsey and Penelope excited, mouth open.
+    scene v16s26_6 # TPP. Show Penelope and Lindsey holding hands around MC while jumping in the air (fangirling) while MC is stuck in the middle, MC awkward face, mouth closed, Lindsey and Penelope excited, mouth open.
     with dissolve
 
     li "OMG!"
@@ -270,19 +262,20 @@ label v16s26:
 
     li "How the hell did you make friends with her?"
 
-    if v13_penelope_concert:
-        scene v16s26_3
+    if v13_penelope_concert: # TODO: Variable
+        scene v16s26_3a
         with dissolve
 
         u "We went to her concert in Amsterdam."
 
-        if v12s7_victims >= 5:
+        if v12s7_victims >= 5: # TODO: Variable
             scene v16s26_5b
             with dissolve
 
             pe "Yeah, backstage passes and all!"
-        elif v13_penelope_backstage:
-            scene v16s25_5b
+
+        elif v13_penelope_backstage: # TODO: Variable
+            scene v16s26_5b
             with dissolve
 
             pe "Yeah, she invited us backstage!"
@@ -301,7 +294,8 @@ label v16s26:
         with dissolve
 
         li "I'm so fucking jealous."
-    elif not v13_penelope_concert:
+
+    elif not v13_penelope_concert: # TODO: Variable
         scene v16s26_5b
         with dissolve
 
@@ -309,11 +303,12 @@ label v16s26:
 
         pe "We just hit it off, I don't even know how to explain it. She said we were like long lost sisters or something, haha!"
         
-        if v13_aubrey_concert:
-            scene v16s26_5c # FPP. MC looking at Penelope, Penelope looking at Lindest, Penelope slight smile, mouth closed.
+        if v13_aubrey_concert: # TODO: Variable
+            scene v16s26_5c # FPP. MC looking at Penelope, Penelope looking at Lindesy, Penelope slight smile, mouth closed.
             with dissolve 
 
             u "(Polly's in town? Huh. I wonder if she'd recognize me?)"
+
     elif not v13_penelope_concert and not v13_aubrey_concert:
         scene v16s26_5a
         with dissolve
@@ -325,7 +320,7 @@ label v16s26:
 
         pe "A pop sensation, [name]."
 
-    scene v15s26_3d
+    scene v16s26_3d
     with dissolve
 
     li "Oh my god, you're living my actual dream!"
@@ -377,7 +372,7 @@ label v16s26:
 
     u "Ah, it's always drama with him. But I think he had real feelings for Karen, sadly. He really wanted a second date."
 
-    scene v16s26_3a
+    scene v16s26_3
     with dissolve
 
     li "Wait. Imre and Karen? What happened?"
@@ -417,17 +412,17 @@ label v16s26:
 
     u "Yikes, it sucks for Imre."
 
-    scene v16s26_3a
+    scene v16s26_3
     with dissolve
 
     li "Yeah, but if you're with the wrong person, your heart will keep searching for the right one."
 
-    scene v16s26_3
+    scene v16s26_3a
     with dissolve
 
     u "Wow. Very wisdomous today."
 
-    scene v16s26_3a
+    scene v16s26_3
     with dissolve
 
     li "Again, I don't think that's word..."
@@ -437,7 +432,7 @@ label v16s26:
 
     pe "But he's right. That was a smart sentence, I'm proud of you. *Giggles*"
 
-    scene v16s26_3e # FPP. Lindsey jokingly pretending to have a breakdown, MC looking at Lindsey, Lindsey slight smile, mouth open..
+    scene v16s26_3e # FPP. Lindsey jokingly pretending tobe upset, MC looking at Lindsey, Lindsey slight smile, mouth open..
     with dissolve
 
     li "Oh god... It's the therapy sessions!"
@@ -456,7 +451,7 @@ label v16s26:
 
     li "Classes are cancelled today, but we're all supposed to attend a lecture about parenting or sex, or something."
 
-    scene v16s26_3
+    scene v16s26_3a
     with dissolve
 
     u "Hmm. Parenting or sex or something..."
@@ -471,7 +466,7 @@ label v16s26:
 
     u "We shall!"
 
-    scene v16s26_7 # TPP. Show MC in the middle of Penelope and Lindsey, the girls arms linked with MC's arms as they skid down the hallway, all slight smile, mouth closed.
+    scene v16s26_7 # TPP. Show MC in the middle of Penelope and Lindsey, the girls arms linked with MC's arms as they skip/walk down the hallway, all slight smile, mouth closed.
     with dissolve
 
     jump v16s27
