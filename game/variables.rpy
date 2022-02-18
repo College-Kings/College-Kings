@@ -440,3 +440,5 @@ default v16s10_let_lauren_continue_hj = False
 default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
 default v16s20_twazzlers = False
 default vs16s15hotdog_coupon = False
+default v16s22mention_bills = False
+default v16s22mention_laptop = False
