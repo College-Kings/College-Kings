@@ -17,7 +17,8 @@ label v16s17: # 17) MC catches up to Imre
 
     u "Imre, wait!"
 
-    scene v16s17_3 # TPP Show MC next to Imre on the bridge. Imre has his hands on the railing, looking out, angry expression, mouth open
+
+    scene v16s17_3 # TPP Show MC next to Imre on the bridge. Imre has his hands on the stone railing, looking out, angry expression, mouth open
     with dissolve
 
     imre "It never works out!"
@@ -85,7 +86,7 @@ label v16s17: # 17) MC catches up to Imre
 
     imre "There wouldn't be any hot girls crying at my funeral, that's for sure..."
 
-    scene v16s17_4bb
+    scene v16s17_4b
     with dissolve
 
     u "Is that really what you're worried about? Hot girls being at your funeral?"
@@ -107,7 +108,7 @@ label v16s17: # 17) MC catches up to Imre
 
     menu:
         "Be brutally honest":
-            scene v16s17_4f # FPP Same angle as 4, Imre looking out over the side of the bridge, leaning on the rail (if possible), neutral expression, mouth closed
+            scene v16s17_4f # FPP Same angle as 4, Imre looking out over the side of the bridge, leaning over the stone rail (if possible), neutral expression, mouth closed
             with dissolve
 
             u "This is just another girl, that you don't actually like, but that you expected more from. Forget Karen, honestly. She's not even hot!"
@@ -129,15 +130,15 @@ label v16s17: # 17) MC catches up to Imre
 
             scene v16s17_4f
             with dissolve
-
+            
             u "Seriously, you'll forget about her as soon as you someone else who's hotter. *Laughs*"
 
-            scene v16s17_4g # FPP Same angle as 4, Imre looking out over the side of the bridge, leaning on the rail (if possible), neutral expression, mouth open
+            scene v16s17_4g # FPP Same angle as 4, Imre looking out over the side of the bridge, leaning over the stone rail (if possible), neutral expression, mouth open
             with dissolve
 
             imre "Maybe you're right. I don't know..."
 
-            scene v16s17_3a # TPP Same angle as 3, Imre standing by the rail of the bridge, looking down at his hands on the rail, MC looking at him. Imre's mouth open
+            scene v16s17_3a # TPP Same angle as 3, Imre standing by the stone rail of the bridge, looking down at his hands on the rail, MC looking at him. Imre's mouth open
             with dissolve
 
             imre "I'm gonna head home. I uh, I need to think."
@@ -184,7 +185,7 @@ label v16s17: # 17) MC catches up to Imre
             with dissolve
 
             imre "..."
-
+            
             u "Seriously though, you have no idea. You might meet your future wife next week."
 
             scene v16s17_4g
@@ -211,9 +212,8 @@ label v16s17: # 17) MC catches up to Imre
             with dissolve
 
             u "That's the spirit. Now you sound like yourself again. *Laughs*"
-
-            # Animated bro hug example: https://gifimage.net/wp-content/uploads/2017/07/bro-hug-gif-21.gif
-            scene v16s17_6 # TPP Imre gives MC a "bro hug," like this: https://hhsadvocate.com/wp-content/uploads/2016/05/Screen-Shot-2016-05-02-at-10.40.52-AM.png
+            
+            scene v16s17_6 # TPP Imre gives MC a "bro hug," (Imre's right shoulder to MC's right sholder) [similar to this: https://hhsadvocate.com/wp-content/uploads/2016/05/Screen-Shot-2016-05-02-at-10.40.52-AM.png or https://gifimage.net/wp-content/uploads/2017/07/bro-hug-gif-21.gif]
             with dissolve
 
             pause 0.75
@@ -228,7 +228,7 @@ label v16s17: # 17) MC catches up to Imre
 
             u "No problem."
 
-            if not joinwolves: # -if Apes
+            if joinapes: # -if Apes
                 scene v16s17_4d
                 with dissolve
 
@@ -260,7 +260,6 @@ label v16s17: # 17) MC catches up to Imre
 
                 imre "You're a brother for life, man. I'm glad you were here with me tonight."
 
-
                 scene v16s17_4i
                 with dissolve
 
@@ -286,6 +285,6 @@ label v16s17: # 17) MC catches up to Imre
                 scene v16s17_7 # TPP View from behind of MC and Imre walking away from the bridge together
                 with dissolve
 
-                pause 0.75            
+                pause 0.75
 
-    jump v16s17 # -Transition to Scene 18-
+    jump v16s18 # -Transition to Scene 18-
