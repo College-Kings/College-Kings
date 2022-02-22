@@ -1,15 +1,9 @@
-screen fight_player_turn():
-
-    zorder 50
-
+screen fight_player_turn(player, opponent):
     style_prefix "fight_turn"
 
-    if opponent_stance == 2: # opponent guard image
-        add "fight_prototype/images/opp_full_guard.webp"
-    elif opponent_stance == 1:
-        add "fight_prototype/images/opp_semi_guard.webp"
-    else:
-        add "fight_prototype/images/opp_no_guard.webp"
+    default selected_move = None
+
+    add opponent.stance_image
 
     vbox:
         spacing 10
@@ -23,33 +17,25 @@ screen fight_player_turn():
 
             spacing 30
 
-            for move in FightMove.moves:
+            for move in player.base_attacks + player.turn_moves:
                 button:
                     xysize (100, 100)
                     idle_background "#fff"
                     hover_background "#ffd000"
                     selected_background "#ffd000"
                     insensitive_background "#a7a7a7"
-                    if actionpoints >= move.stamina_cost:
-                        action ToggleScreen("action", None, move.name, move.description, move.damage, move.accuracy, move.stamina_cost, move.stance, move.effect, move.jump_to)
+                    selected (selected_move == move)
+                    if selected_move == move:
+                        action [SetScreenVariable("selected_move", None), Hide("action_info")]
+                    else:
+                        action [SetScreenVariable("selected_move", move), Show("action_info", None, move, player, opponent)]
 
                     text str (move.stamina_cost) align (1.0, 0) font "fonts/Montserrat-Bold.ttf" # action cost
                     text move.name align (0.5, 0.5) text_align 0.5 # action name
-
-    frame:
-        align (0.1,0.9)
-        background "#fff"
-        vbox:
-            text "Player Stance: [player_stance]" 
-            text "Player Mindset: [player_mindset]"
-            text "Opponent Stance: [opponent_stance]"
-            text "Opponent Mindset: [opponent_mindset]"
-            text "Opponent Health: [opponent_health]"
-            text "Player Health: [player_health]"
         
 
 
-screen action(name, description, damage, accuracy, stamina_cost, stance, effect, jump_to):
+screen action_info(move, player, opponent):
     zorder 100
     style_prefix "fight_turn"
 
@@ -64,38 +50,32 @@ screen action(name, description, damage, accuracy, stamina_cost, stance, effect,
             align (0.5, 0.5)
             spacing 50
 
-            if accuracy > 0:
-
+            # Accuracy Breakdown
+            if hasattr(move, "accuracy") and move.accuracy is not None:
                 hbox:
                     xsize 240
 
                     vbox:
                         spacing 5
                         xsize 200
+
                         text "Hit" font "fonts/Montserrat-Bold.ttf"
                         null height 15
                         text "Base Accuracy"
-                        if opponent_stance == 2 or opponent_stance == 0:
-                            text "Opponent Stance"
-                        if player_mindset == 2:
-                            text "Shaken"
-                        elif player_mindset == 0:
-                            text "Confident"
+                        text "Opponent Stance"
+                        # if player_mindset == 2:
+                        #     text "Shaken"
+                        # elif player_mindset == 0:
+                        #     text "Confident"
 
                     vbox:
                         spacing 5
                         xsize 40
-                        text "X%" font "fonts/Montserrat-Bold.ttf"
+
+                        text "{}%".format(get_accuracy(move, opponent)) font "fonts/Montserrat-Bold.ttf"
                         null height 15
-                        text "+[accuracy]"
-                        if opponent_stance == 2:
-                            text "+10%"
-                        elif opponent_stance == 0: 
-                            text "-10%"
-                        if player_mindset == 2:
-                            text "-10%"
-                        elif player_mindset == 0:
-                            text "+10%"
+                        text "{:+}%".format(move.accuracy)
+                        text "{:+}%".format(FightMove.ACCURACY_DICT[opponent.stance])
 
             vbox:
                 xsize 300
@@ -106,54 +86,59 @@ screen action(name, description, damage, accuracy, stamina_cost, stance, effect,
                     xalign 0.5
                     idle_background "#a8a8a8"
                     hover_background "#ffd000"
-                    if stamina_cost == 0:
-                        action [SetVariable("opponent_health", opponent_health - damage),
-                            Hide("action"),
-                            Jump(jump_to)] # Jumps will be changed to a single label with dynamic expressions
-                    else:
-                        action [SetVariable("actionpoints", actionpoints - stamina_cost),
-                            SetVariable("player_stance", stance), 
-                            SetVariable("opponent_health", opponent_health - damage),
-                            Hide("action"),
-                            Jump(jump_to)] # Jumps will be changed to a single label with dynamic expressions
+                    if player.stamina >= move.stamina_cost:
+                        action [Hide("action_info"), Call("player_attack_turn", move, player, opponent)]
+                    
+                    text ">> {} <<".format(move.name) size 30 font "fonts/Montserrat-Bold.ttf" align (0.5, 0.5)
 
-                    text ">> {} <<".format(name) size 30 font "fonts/Montserrat-Bold.ttf" align (0.5, 0.5)
+                text move.description xalign 0.5 text_align 0.5
 
-                text description xalign 0.5 text_align 0.5
+                text move.effect xalign 0.5 font "fonts/Montserrat-Bold.ttf"
 
-                text effect xalign 0.5 font "fonts/Montserrat-Bold.ttf"
-
-            if damage > 0:
-
+            # Damage Breakdown
+            if hasattr(move, "damage") and move.damage is not None:
                 hbox:
                     xsize 240
 
                     vbox:
                         spacing 5
                         xsize 200
+
                         text "Damage" font "fonts/Montserrat-Bold.ttf"
                         null height 15
                         text "Base Damage"
-                        if player_stance == 2:
-                            text "Aggressive Stance"
-                        elif player_stance == 0: 
-                            text "Defensive Stance"
+                        text "Player Stance"
 
                     vbox:
                         spacing 5
                         xsize 40
-                        text "X" font "fonts/Montserrat-Bold.ttf"
+
+                        text str(get_total_damage(move, player)) font "fonts/Montserrat-Bold.ttf"
                         null height 15
-                        text "+[damage]"
-                        if player_stance == 2:
-                            text "+5"
-                        elif player_stance == 0: 
-                            text "-5"
-                    
+                        text "{:+}".format(move.damage)
+                        text "{:+}".format(FightMove.DAMAGE_DICT[player.stance])
 
 
+screen fight_debug(player, opponent):
+    zorder 1000
+    style_prefix "fight_turn"
 
-    
+    frame:
+        xpos 50
+        yalign 0.9
+        background "#fff"
+        
+        vbox:
+            text "Player Health: {}".format(player.health) 
+            text "Player Stance: {}".format(player.stance)
+            text "Player Stamina: {}".format(player.stamina)
+
+            null height 10
+
+            text "Opponent Health: {}".format(opponent.health) 
+            text "Opponent Stance: {}".format(opponent.stance) 
+            text "Opponent Stamina: {}".format(opponent.stamina)
+
 
 style fight_turn_text is text:
     size 20

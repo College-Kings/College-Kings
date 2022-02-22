@@ -57,12 +57,6 @@ init python:
         KICK = 7            # If guard breaking deal more reduced damage
 
 
-    class Guard(SmartEnum):
-        LOW_GUARD = 0
-        SEMI_GUARD = 1
-        FULL_GUARD = 2
-
-
     class AttributeType(Enum):
         HEALTH = 0
         STAMINA = 1
@@ -115,91 +109,6 @@ init python:
             self.active_ability = active_ability
 
 
-    class BasePlayer:
-        def __init__(self, fighting_style, guard=None, stamina=10, health=100, attack_multiplier=1):
-            self.fighting_style = fighting_style
-            self.guard = guard
-            self.max_stamina = stamina
-            self.max_health = health
-            self.attack_multiplier = attack_multiplier
-            
-            self._stamina = stamina
-            self._health = health
-
-            self.wins = 0
-            self.attacks = {
-                AttackType.LIGHT: None,
-                AttackType.HEAVY: None
-            }
-            self.attributes = []
-            self.passive_abilities = set()
-            self.special_abilities = set()
-            self.special_ability = None
-            self.previous_attack = None # Only successful attack
-
-        @property
-        def stamina(self):
-            return self._stamina
-
-        @stamina.setter
-        def stamina(self, value):
-            self._stamina = value
-            self._stamina = min(self._stamina, self.max_stamina)
-            
-        @property
-        def health(self):
-            return self._health
-
-        @health.setter
-        def health(self, value):
-            self._health = value
-            self._health = max(self._health, 0)
-
-        @property
-        def rank(self):
-            rv = FightRank.UNDERDOG
-            for rank in FightRank:
-                if rank.value["win_requirement"] > self.wins:
-                    break
-                rv = rank
-            return rv
-
-        def set_specials(self):
-            for attr in self.attributes:
-                if attr.value == 10:
-                    self.special_abilities.add(attr.active_ability)
-                    self.passive_abilities.add(attr.passive_ability)
-                elif attr.value >= 5:
-                    self.passive_abilities.add(attr.passive_ability)
-
-
-    class Opponent(BasePlayer):
-        def __init__(self, fighting_style, guard=None, stamina=10, health=100, attack_multiplier=1, guard_images=None):
-            BasePlayer.__init__(self, fighting_style, guard, stamina, health, attack_multiplier)
-
-            self.guard_images = guard_images
-
-        @property
-        def guard_image(self):
-            return self.guard_images[self.guard]
-
-        def set_specials(self):
-            for attr in self.attributes:
-                if attr.value >= 5:
-                    self.passive_abilities.add(attr.passive_ability)
-
-    
-    class Player(BasePlayer):
-        def __init__(self, fighting_style, guard=None, stamina=10, health=100, attack_multiplier=1):
-            BasePlayer.__init__(self, fighting_style, guard, stamina, health, attack_multiplier)
-            
-            self.moves = {
-                "q": None, # light attack
-                "w": None, # heavy attack
-                "e": None, # semi guard
-                "r": None, # full guard
-                "K_SPACE": None # Active ability
-            }
 
 
 label player_attack_turn(player_move, player, opponent):

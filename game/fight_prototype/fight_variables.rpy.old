@@ -1,0 +1,7 @@
+define fight_full_guard_stamina_penalty = 2
+
+default fight_reaction_time = 1
+default fight_end_label = "fight_end"
+default fight_game_state = FightGameState.ERROR
+
+default player_fight_style = "Aggressive"

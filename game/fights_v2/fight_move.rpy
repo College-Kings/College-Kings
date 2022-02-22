@@ -1,81 +1,98 @@
+init offset = 1
 init python:
-
-    # class FightStance(Enum):
-    #     DEFENSE = 0
-    #     NEUTRAL = 1
-    #     AGGRESSIVE = 2
-
-    class FightMove:
-        moves = []
-
-        def __init__(self, name, description, damage, accuracy, stamina_cost, stance, effect, jump_to, images=None):
+    class BaseMove:
+        def __init__(self, name, description, stamina_cost, ideal_stance, end_stance, effect="", stance_bonus=None):
             self.name = name
             self.description = description
+            self.stamina_cost = stamina_cost
+            self.ideal_stance = ideal_stance
+            self.end_stance = end_stance
+            self.effect = effect
+
+
+    class FightMove(BaseMove):
+        ACCURACY_DICT = {
+            FightStance.AGGRESSIVE: 10,
+            FightStance.DEFENSIVE: -10,
+            FightStance.FORWARD: 5,
+            FightStance.SOLID: -5
+        }
+
+        DAMAGE_DICT = {
+            FightStance.AGGRESSIVE: 5,
+            FightStance.DEFENSIVE: -5,
+            FightStance.FORWARD: 0,
+            FightStance.SOLID: 0
+        }
+
+        def __init__(self, name, description, damage, accuracy, stamina_cost, ideal_stance, end_stance, effect="", images=None):
+            BaseMove.__init__(self, name, description, stamina_cost, ideal_stance, end_stance, effect)
             self.damage = damage
             self.accuracy = accuracy
-            self.stamina_cost = stamina_cost
-            self.stance = stance
-            self.effect = effect
-            self.jump_to = jump_to
             self.images = images
-        
-
-            FightMove.moves.append(self)
 
         def copy(self, images):
-            return self.__class__(self.name, self.description, self.damage, self.accuracy, self.stamina_cost, self.stance, self.effect, self.jump_to, images)
+            return self.__class__(self.name, self.description, self.damage, self.accuracy, self.stamina_cost, self.ideal_stance, self.end_stance, self.effect, images)
 
-define HOOK = FightMove(
-    name="Hook",
-    description="A devastating attack to your opponent's head.",
-    damage=10,
-    accuracy=70,
-    stamina_cost=4,
-    stance=2,
-    effect="|> Aggressive Stance",
-    jump_to="player_hook_v2"
+
+define BODY_HOOK = FightMove(
+    name="Body Hook",
+    description="A devastating attack to your opponent's body",
+    damage=5,
+    accuracy=85,
+    stamina_cost=2,
+    ideal_stance=FightStance.FORWARD,
+    end_stance=FightStance.SOLID,
+    effect="|> Solid stance"
 )
 
 define JAB = FightMove(
     name="Jab",
     description="Attack with a quick jab straight to the chin.",
-    damage=5,
+    damage=10,
     accuracy=80,
-    stamina_cost=2,
-    stance=1,
-    effect="|> Neutral Stance",
-    jump_to="player_jab_v2"
+    stamina_cost=3,
+    ideal_stance=FightStance.AGGRESSIVE,
+    end_stance=FightStance.FORWARD,
+    effect="|> Forward Stance"
 )
 
-define TRASHTALK = FightMove(
-    name="Trash Talk",
-    description="Trash talk your opponent to shake their confidence.",
-    damage=0,
-    accuracy=0,
-    stamina_cost=2,
-    stance=2,
-    effect="|> Neutral Stance",
-    jump_to="player_trash_talk_v2"
-)
-
-define GUARDUP = FightMove(
-    name="Guard Up",
-    description="End your turn with your guard up.",
-    damage=0,
-    accuracy=0,
+define HOOK = FightMove(
+    name="Hook",
+    description="A devastating attack to your opponent's head.",
+    damage=15,
+    accuracy=70,
     stamina_cost=4,
-    stance=0,
-    effect="|> Defensive Stance",
-    jump_to="player_guard_up_v2"
+    ideal_stance=FightStance.FORWARD,
+    end_stance=FightStance.AGGRESSIVE,
+    effect="|> Aggressive Stance"
 )
 
-define ENDTURN = FightMove(
+define KICK = FightMove(
+    name="Kick",
+    description="A devastating attack to your opponent's body.",
+    damage=20,
+    accuracy=60,
+    stamina_cost=5,
+    ideal_stance=FightStance.SOLID,
+    end_stance=FightStance.FORWARD,
+    effect="|> Forward Stance"
+)
+
+define END_TURN = BaseMove(
     name="End Turn",
     description="End your turn and retain up to 2 stamina",
-    damage=0,
-    accuracy=0,
     stamina_cost=0,
-    stance=0,
-    effect="|> Keep Current Stance",
-    jump_to="opponent_attack_v2"
+    ideal_stance=None,
+    end_stance=None,
+    effect="|> Keep Current Stance"
+)
+
+define TURTLE = BaseMove(
+    name="Turtle",
+    description="End turn and set stance to Defensive",
+    stamina_cost=4,
+    ideal_stance=FightStance.SOLID,
+    end_stance=FightStance.DEFENSIVE,
+    effect="|> Defensive Stance"
 )
