@@ -6,18 +6,16 @@ screen fight_player_turn(player, opponent):
     add opponent.stance_image
 
     vbox:
-        spacing 10
-        align (0.5, 0.93)
-        hbox:
-            spacing 5
-            for x in range(0, actionpoints):
-                imagebutton:
-                    idle "gui/fight_prototype/fight_circle_dark_idle.png"
-        hbox:
+        xalign 0.5
+        yalign 1.0
+        yoffset -50
+        spacing 20
 
+        hbox:
             spacing 30
+            xalign 0.5
 
-            for move in player.base_attacks + player.turn_moves:
+            for move in player.base_attacks:
                 button:
                     xysize (100, 100)
                     idle_background "#fff"
@@ -30,9 +28,37 @@ screen fight_player_turn(player, opponent):
                     else:
                         action [SetScreenVariable("selected_move", move), Show("action_info", None, move, player, opponent)]
 
-                    text str (move.stamina_cost) align (1.0, 0) font "fonts/Montserrat-Bold.ttf" # action cost
-                    text move.name align (0.5, 0.5) text_align 0.5 # action name
+                    text str(move.stamina_cost) xalign 1.0 font "fonts/Montserrat-Bold.ttf"
+                    text move.name align (0.5, 0.5) text_align 0.5
+
+        hbox:
+            spacing 30
+            xalign 0.5
+
+            for move in player.turn_moves:
+                button:
+                    xysize (200, 50)
+                    idle_background "#fff"
+                    hover_background "#ffd000"
+                    selected_background "#ffd000"
+                    insensitive_background "#a7a7a7"
+                    selected (selected_move == move)
+                    if selected_move == move:
+                        action [SetScreenVariable("selected_move", None), Hide("action_info")]
+                    else:
+                        action [SetScreenVariable("selected_move", move), Show("action_info", None, move, player, opponent)]
+
+                    text str(move.stamina_cost) xalign 1.0 font "fonts/Montserrat-Bold.ttf"
+                    text move.name align (0.5, 0.5) text_align 0.5
+
+    frame:
+        xpos 35
+        yalign 1.0
+        yoffset -35
+        background "#fff"
+        padding (50, 5)
         
+        text "Current Stance: {{color=#6a0dad}}{}".format(player.stance.name) align (0.5, 0.5)
 
 
 screen action_info(move, player, opponent):
@@ -40,47 +66,17 @@ screen action_info(move, player, opponent):
     style_prefix "fight_turn"
 
     frame:
-        xalign (0.5)
-        ypos 670
+        xalign 0.5
+        ypos 650
         xysize (900, 200)
         background "#fff"
-        padding (10,10)
+        padding (10, 10)
 
-        hbox:
-            align (0.5, 0.5)
-            spacing 50
+        vbox:
+            spacing 20
 
-            # Accuracy Breakdown
-            if hasattr(move, "accuracy") and move.accuracy is not None:
-                hbox:
-                    xsize 240
-
-                    vbox:
-                        spacing 5
-                        xsize 200
-
-                        text "Hit" font "fonts/Montserrat-Bold.ttf"
-                        null height 15
-                        text "Base Accuracy"
-                        text "Opponent Stance"
-                        # if player_mindset == 2:
-                        #     text "Shaken"
-                        # elif player_mindset == 0:
-                        #     text "Confident"
-
-                    vbox:
-                        spacing 5
-                        xsize 40
-
-                        text "{}%".format(get_accuracy(move, opponent)) font "fonts/Montserrat-Bold.ttf"
-                        null height 15
-                        text "{:+}%".format(move.accuracy)
-                        text "{:+}%".format(FightMove.ACCURACY_DICT[opponent.stance])
-
-            vbox:
-                xsize 300
+            hbox:
                 spacing 20
-                xalign 0.5
 
                 button:
                     xalign 0.5
@@ -89,34 +85,29 @@ screen action_info(move, player, opponent):
                     if player.stamina >= move.stamina_cost:
                         action [Hide("action_info"), Call("player_attack_turn", move, player, opponent)]
                     
-                    text ">> {} <<".format(move.name) size 30 font "fonts/Montserrat-Bold.ttf" align (0.5, 0.5)
+                    text ">>> {} <<<".format(move.name) size 30 font "fonts/Montserrat-Bold.ttf" align (0.5, 0.5)
 
-                text move.description xalign 0.5 text_align 0.5
+                vbox:
+                    if hasattr(move, "accuracy") and move.accuracy is not None:
+                        text "{{font=fonts/Montserrat-Bold.ttf}}Accuracy:{{/font}} {}%".format(get_accuracy(move, opponent))
+                    if hasattr(move, "damage") and move.damage is not None:
+                        text "{{font=fonts/Montserrat-Bold.ttf}}Damage:{{/font}} {}".format(get_total_damage(move, player))
 
-                text move.effect xalign 0.5 font "fonts/Montserrat-Bold.ttf"
+            text move.description
+            text "{{font=fonts/Montserrat-Bold.ttf}}Ideal Stance Effect:{{/font}} {}".format(move.effect)
 
-            # Damage Breakdown
-            if hasattr(move, "damage") and move.damage is not None:
-                hbox:
-                    xsize 240
+        vbox:
+            align (1.0, 0.5)
 
-                    vbox:
-                        spacing 5
-                        xsize 200
+            if move.ideal_stance is not None:
+                text "Ideal Stance:" font "fonts/Montserrat-Bold.ttf"
+                text move.ideal_stance.name
 
-                        text "Damage" font "fonts/Montserrat-Bold.ttf"
-                        null height 15
-                        text "Base Damage"
-                        text "Player Stance"
+            null height 10
 
-                    vbox:
-                        spacing 5
-                        xsize 40
-
-                        text str(get_total_damage(move, player)) font "fonts/Montserrat-Bold.ttf"
-                        null height 15
-                        text "{:+}".format(move.damage)
-                        text "{:+}".format(FightMove.DAMAGE_DICT[player.stance])
+            if move.end_stance is not None:
+                text "End Stance:" font "fonts/Montserrat-Bold.ttf"
+                text move.end_stance.name
 
 
 screen fight_debug(player, opponent):
@@ -124,8 +115,7 @@ screen fight_debug(player, opponent):
     style_prefix "fight_turn"
 
     frame:
-        xpos 50
-        yalign 0.9
+        pos (50, 100)
         background "#fff"
         
         vbox:
