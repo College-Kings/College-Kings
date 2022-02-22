@@ -523,7 +523,7 @@ label v16s16:
 
             u "(Hmm, I guess I have done pretty well in the past with shooting.)"
 
-        elif penelope.relationship >= relationship.RS # TODO: Variable
+        elif penelope.relationship >= relationship.RS: # TODO: Variable
             scene v16s16_7a
             with dissolve
 
