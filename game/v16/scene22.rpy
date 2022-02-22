@@ -38,50 +38,50 @@ label v16s22:
 
     # -if MC also took the Twazzlers
 
-        scene v16s22_3b
-        with dissolve
+    scene v16s22_3b
+    with dissolve
 
-        u "Also..."
+    u "Also..."
 
-        scene v16s22_3c # FPP. MC hands Amber the Twazzlers and Amber takes the Twazzlers out of his hand, Amber has a slight smile, mouth is closed
-        with dissolve
+    scene v16s22_3c # FPP. MC hands Amber the Twazzlers and Amber takes the Twazzlers out of his hand, Amber has a slight smile, mouth is closed
+    with dissolve
 
-        u "I saw these and grabbed them. Thought you might want a snack?"
+    u "I saw these and grabbed them. Thought you might want a snack?"
 
-        scene v16s22_3a
-        with dissolve
+    scene v16s22_3a
+    with dissolve
 
-        am "No fucking way... *Laughs*"
+    am "No fucking way... *Laughs*"
 
-        scene v16s22_3b
-        with dissolve
+    scene v16s22_3b
+    with dissolve
 
-        u "What?"
+    u "What?"
 
-        scene v16s22_3a
-        with dissolve
+    scene v16s22_3a
+    with dissolve
 
-        am "You seriously read my mind."
+    am "You seriously read my mind."
 
-        scene v16s22_3b
-        with dissolve
+    scene v16s22_3b
+    with dissolve
 
-        u "Haha, you're welcome."
+    u "Haha, you're welcome."
 
-        scene v16s22_4 # TPP. Amber leans over the Lews counter and gives MC a hug, both of them slight smiles, mouths are closed
-        with dissolve
+    scene v16s22_4 # TPP. Amber leans over the Lews counter and gives MC a hug, both of them slight smiles, mouths are closed
+    with dissolve
 
-        pause 0.75
+    pause 0.75
 
-        scene v16s22_3a
-        with dissolve
+    scene v16s22_3a
+    with dissolve
 
-        am "I'll hide them here so my boss can't find them."
+    am "I'll hide them here so my boss can't find them."
 
-        scene v16s22_3b
-        with dissolve
+    scene v16s22_3b
+    with dissolve
 
-        u "Smart idea."
+    u "Smart idea."
 
     # -Regardless of Twazzlers-
 
@@ -217,7 +217,7 @@ label v16s22:
 
     ab "Even though she gets an employee discount here at Lew's..."
 
-    if v16s20_seenList = ["bills"] # -if clicked on the bills at amber's house
+    if v16s20_seenList = ["bills"]: # -if clicked on the bills at amber's house
 
         scene v16s22_5b
         with dissolve
@@ -299,7 +299,7 @@ label v16s22:
 
     am "Ha! I'm glad."
 
-    if v16s20_seenList = ["bills"] # -if MC looked at the Unpaid bills at amber's house
+    if v16s20_seenList = ["bills"]: # -if MC looked at the Unpaid bills at amber's house
 
         scene v16s22_9
         with dissolve
@@ -561,7 +561,7 @@ label v16s22:
 
             # -Regardless-
 
-    if v16s20_seenList = ["laptop"] # -if MC looked at the Open laptop
+    if v16s20_seenList = ["laptop"]: # -if MC looked at the Open laptop
 
         scene v16s22_9
         with dissolve
@@ -663,7 +663,7 @@ label v16s22:
 
                     pause 0.75
 
-                if amber.relationship.value <= Relationship.FRIEND.value # -if NOT AmberRS
+                if amber.relationship <= Relationship.FRIEND: # -if NOT AmberRS
 
                     scene v16s22_9g
                     with dissolve
@@ -746,7 +746,7 @@ label v16s22:
 
     # -Regardless-
 
-    if v16s20_seenList = ["photos"] # -if MC looked at the Photos in amber's house
+    if v16s20_seenList = ["photos"]: # -if MC looked at the Photos in amber's house
 
         scene v16s22_9a
         with dissolve
@@ -1111,7 +1111,7 @@ label v16s22:
 
     ### ERROR: [End of Checkpoint 1.1. Continue to Checkpoint 2]
 
-    if amber.relationship.value >= Relationship.FRIEND.value    # -if AmberFriend [Checkpoint 1.2]
+    if amber.relationship >= Relationship.FRIEND:    # -if AmberFriend [Checkpoint 1.2]
 
         scene v16s22_9
         with dissolve
