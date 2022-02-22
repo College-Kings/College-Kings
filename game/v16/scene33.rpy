@@ -81,7 +81,7 @@ label v16s33: # 33) MC showers
             $ contact_lauren.addReply("Alright, alright, I'm coming.")
             $ contact_lauren.newMessage("Yay! I'll meet you at the park :)")
 
-        else lauren.relationship == Relationship.GIRLFRIEND: # -if LaurenGF/RS
+        elif lauren.relationship == Relationship.GIRLFRIEND: # -if LaurenGF/RS
             $ contact_lauren.addReply("Better be worth it... ;)")
             $ contact_lauren.newMessage("A kiss is worth a thousand words...?")
             $ contact_lauren.addReply("Sold! I'm in.")
