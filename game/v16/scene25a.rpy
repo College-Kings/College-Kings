@@ -73,7 +73,7 @@ label v16s25a:
         scene v16s25a_4a # TPP. In wolves room. Show MC standing in the middle of his room looking at his phone, slight smile, mouth closed. 
         with dissolve 
 
-        pause .0.75 
+        pause 0.75 
 
         scene v16s25a_4b # TPP. In wolves room. Show MC with the phone to his ear, slight smile, mouth closed.
         with dissolve 
