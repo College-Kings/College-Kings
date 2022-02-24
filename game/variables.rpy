@@ -449,3 +449,4 @@ default v16s22mention_laptop = False
 default v16birthday_reservation = False
 default v16aubrey_cab = False
 default v16aubrey_flower_cab = False
+default v16s38tippped_driver = False
