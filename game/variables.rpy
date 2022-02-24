@@ -243,6 +243,7 @@ default v11s23_penelope_date = True # late addition, defaulting to True to enhan
 default v11s25_beer = True
 default v11_ride_with_mrlee = False
 default v11s13_rejected_aubrey = False
+default v11_dealership = False
 
 # 12.0
 default freeroam9 = set() #Ferry
@@ -443,3 +444,8 @@ default v16s11_sign_up = False
 default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
 default v16s20_twazzlers = False
 default vs16s15hotdog_coupon = False
+default v16s22mention_bills = False
+default v16s22mention_laptop = False
+default v16birthday_reservation = False
+default v16aubrey_cab = False
+default v16aubrey_flower_cab = False

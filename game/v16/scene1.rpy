@@ -38,7 +38,7 @@ label v16s1_lose:
 
     menu:
         "I'm fine":
-            u "Yeah, I'm fine"
+            u "Yeah, I'm fine."
 
             u "He just got a few lucky hits, that's all."
 
@@ -128,7 +128,7 @@ label v16s1_lose:
     scene v16s1_lose_2b
     with dissolve
 
-    ri "[Name]... Who knows what injuries you have?"
+    ri "[name]... Who knows what injuries you have?"
 
     if "v14_threesome" in sceneList:
         scene v16s1_lose_2d # FPP. Same as v16s1_lose_2, Riley slight smirk, mouth open

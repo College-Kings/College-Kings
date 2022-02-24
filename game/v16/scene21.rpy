@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 5)
 # Time: Night
 
-
 label v16s21:
     scene v16s21_1 # TPP. MC walking along the street, slight smile, mouth closed
     with dissolve
@@ -17,5 +16,6 @@ label v16s21:
 
     if v14_amber_clean:
         jump v16s22
+
     else:
         jump v16s23

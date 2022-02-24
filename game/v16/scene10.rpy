@@ -97,7 +97,7 @@ label v16s10: # Econ class
     
     ro "Sorry guys, no one said economics was fun!"
     
-    if lauren.relationship >= Relationship.KISS: # -if LaurenRS or LaurenSex
+    if lauren.relationship >= Relationship.GIRLFRIEND or "v15_lauren" in sceneList: # -if LaurenRS or LaurenSex
         scene v16s10_2b # TPP Same angle as 2, Lauren passing MC a note under the table, Lauren has a naughty smile
         with dissolve
 
@@ -120,7 +120,8 @@ label v16s10: # Econ class
 
         u "(Damn, it feels really good.)"
 
-    elif lauren.relationship == Relationship.FRIEND: # -if LaurenFriend
+    ### elif lauren.relationship == Relationship.FRIEND: # -if LaurenFriend
+    else:
         scene v16s10_2d # TPP Same angle as 2, Lauren passing MC a note under the table, Lauren with a slight smile, mouth closed
         with dissolve
 
@@ -240,7 +241,7 @@ label v16s10: # Econ class
 
         u "(I'd better concentrate now. I hate being called out like that...)"
 
-    elif lauren.relationship >= Relationship.KISS: # -if LaurenRS or LaurenSex        
+    elif lauren.relationship >= Relationship.GIRLFRIEND or "v15_lauren" in sceneList: # -if LaurenRS or LaurenSex        
         scene v16s10_2c
         with dissolve
 
@@ -281,7 +282,6 @@ label v16s10: # Econ class
                 with dissolve
 
                 u "(This is... *Moans* This is so wrong.)"
-
 
                 # -ANIMATION: We see Lauren's face, how much she's enjoying giving the handjob-
                 image v16lahjTPP = Movie(play="images/v16/Scene_10/v16lahjTPP.webm", loop=True, image="images/v16/Scene_10/v16lahjTPP.webp", start_image="images/v16/Scene_10/v16lahjTPP.webp")
@@ -378,9 +378,7 @@ label v16s10: # Econ class
 
     pause 0.75
 
-
-    if lauren.relationship >= Relationship.KISS:
-        
+    if lauren.relationship >= Relationship.GIRLFRIEND or "v15_lauren" in sceneList:        
         scene v16s10_11 # TPP MC walking toward the door to the classroom, Lauren catches him by grabbing his upper arm from behind
         with dissolve
 
@@ -391,6 +389,7 @@ label v16s10: # Econ class
             with dissolve
 
             la "Next time, I want you inside of me."
+
         else: # -if stop her
             scene v16s10_12
             with dissolve

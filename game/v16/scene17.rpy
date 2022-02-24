@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 5), IMRE (Outfit: 1)
 # Time: Tuesday
 
-
 label v16s17: # 17) MC catches up to Imre
     # -Imre walks along a street, onto a remote bridge. MC catches up to him 
     # (This scene tone is drama with some humor. Slightly adjusted from original Miro outline, we need to avoid any suggestion of suicidal thoughts or making fun/being dismissive of suicidal thoughts)
@@ -17,6 +16,7 @@ label v16s17: # 17) MC catches up to Imre
     with dissolve
 
     u "Imre, wait!"
+
 
     scene v16s17_3 # TPP Show MC next to Imre on the bridge. Imre has his hands on the stone railing, looking out, angry expression, mouth open
     with dissolve
@@ -43,7 +43,6 @@ label v16s17: # 17) MC catches up to Imre
 
     menu:
         "Support Imre":
-
             u "I don't know why she did it, but you can't blow up like this, Imre. Don't let her get to you."
 
             scene v16s17_4
@@ -57,7 +56,6 @@ label v16s17: # 17) MC catches up to Imre
             imre "I can't catch a fucking break."
 
         "Support Karen":
-
             u "Well, don't take this personally, but..."
 
             u "You did try to shove a hotdog in her mouth, and she's vegan."
@@ -288,6 +286,5 @@ label v16s17: # 17) MC catches up to Imre
                 with dissolve
 
                 pause 0.75
-
 
     jump v16s18 # -Transition to Scene 18-
