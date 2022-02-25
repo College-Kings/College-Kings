@@ -189,4 +189,7 @@ define character.wa = Character("Wheel Attendant", who_color="#8b0000", who_outl
 define character.hd = Character("Hotdog Vendor", who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.tb = Character("The Bullseye", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.ab = Character("Amber's Boss", who_color="#ecd9c9", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.ds = Character("Drunk Sleze", who_color="#0055ff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ]) 
+define character.ds = Character("Drunk Sleeze", who_color="#0055ff", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.baby = Character("[baby]", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.wtv = Character("Woman on TV Show", who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.mtv = Character("Man on TV Show", who_color="#046307", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ]) 
