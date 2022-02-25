@@ -1,12 +1,4 @@
 init python:
-    class FightGameState(Enum):
-        PLAYER_ATTACK = 0
-        PLAYER_DEFENCE = 1
-        OPPONENT_ATTACK = 2
-        OPPONENT_DEFENCE = 3
-        ERROR = 99
-
-
     class FightRank(Enum):
         UNDERDOG = {
             "win_requirement": 0,

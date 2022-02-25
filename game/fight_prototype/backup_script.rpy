@@ -45,3 +45,40 @@ label backup:
     $ player.previous_attack = player_move
 
     # or (player.previous_attack is not None and player.previous_attack.name == AttackType.OVERHAND_PUNCH):
+
+screen fight_overlay(stance=None):
+    add "images/fight_background.webp"
+
+    text "[w]":
+        align (0.122, 0.3)
+        style "fight_overlayText"
+
+    text "[e]":
+        align (0.235, 0.5)
+        style "fight_overlayText"
+
+    text "[q]":
+        align (0.02, 0.5)
+        style "fight_overlayText"
+
+    text "[r]":
+        align (0.122, 0.7)
+        style "fight_overlayText"
+
+    if stance == "attack":
+        add "images/hook.webp" align (0.115, 0.4)
+        add "images/body.webp" align (0.172, 0.5)
+        add "images/kick.webp" align (0.115, 0.61)
+        add "images/jab.webp" align (0.06, 0.5)
+    elif stance == "defend":
+        add "images/jabblock.webp" align (0.115, 0.4)
+        add "images/bodyblock.webp" align (0.172, 0.5)
+        add "images/kickblock.webp" align (0.115, 0.61)
+        add "images/hookblock.webp" align (0.06, 0.5)
+
+
+screen fight_popup(message):
+    text message:
+        size 100
+
+    timer 2 action Hide("fight_popup", transition=dissolve)

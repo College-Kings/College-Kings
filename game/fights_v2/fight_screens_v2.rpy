@@ -119,12 +119,14 @@ screen fight_debug(player, opponent):
         background "#fff"
         
         vbox:
-            text "Player Health: {}".format(player.health) 
+            text "Player Guard: {}".format(player.guard)
+            text "Player Health: {}".format(player.health)
             text "Player Stance: {}".format(player.stance)
             text "Player Stamina: {}".format(player.stamina)
 
             null height 10
 
+            text "Opponent Guard: {}".format(opponent.guard)
             text "Opponent Health: {}".format(opponent.health) 
             text "Opponent Stance: {}".format(opponent.stance) 
             text "Opponent Stamina: {}".format(opponent.stamina)

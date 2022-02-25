@@ -1,5 +1,14 @@
 init python:
+    class FightGameState(Enum):
+        PLAYER_ATTACK = 0
+        PLAYER_DEFENCE = 1
+        OPPONENT_ATTACK = 2
+        OPPONENT_DEFENCE = 3
+        ERROR = 99
+
+
     class FightStance(SmartEnum):
+        NONE = 0
         AGGRESSIVE = 5
         FORWARD = 10
         SOLID = 15
@@ -7,14 +16,16 @@ init python:
 
 
     class BasePlayer:
-        def __init__(self, guard, stamina=10, health=100, attack_multiplier=1):
-            self.guard = guard
+        def __init__(self, stance, health=100, stamina=10, attack_multiplier=1):
+            self.stance = stance
             self.max_stamina = stamina
             self.max_health = health
             self.attack_multiplier = attack_multiplier
-            
-            self._stamina = stamina
+
+            self.guard = stance.value
+
             self._health = health
+            self._stamina = stamina
 
             self.wins = 0
             self.turn_moves = []
@@ -24,16 +35,6 @@ init python:
             # self.special_abilities = set()
             # self.special_ability = None
             self.previous_attack = None
-
-        @property
-        def stance(self):
-            stance = FightStance.AGGRESSIVE
-            
-            for s in FightStance:
-                if s.value > self.guard:
-                    return stance
-
-                stance = s  
 
         @property
         def stamina(self):
@@ -72,8 +73,8 @@ init python:
 
 
     class Opponent(BasePlayer):
-        def __init__(self, stance, stamina=10, health=100, attack_multiplier=1, stance_images=None):
-            BasePlayer.__init__(self, stance, stamina, health, attack_multiplier)
+        def __init__(self, stance, health=100, stamina=10, attack_multiplier=1, stance_images=None):
+            BasePlayer.__init__(self, stance, health, stamina, attack_multiplier)
 
             self.stance_images = stance_images
 
@@ -104,7 +105,12 @@ label hit_move(move, total_damage, target):
     scene expression move.images["hit_image"]
     with vpunch
 
-    $ target.health -= total_damage
+    if target.guard < total_damage:
+        $ target.health -= (total_damage - target.guard)
+        $ target.guard = 0
+
+    else:
+        $ target.guard -= total_damage
 
     show screen fight_popup("{} Hit".format(move.name))
     pause 1.0
@@ -222,8 +228,8 @@ label fight_opponent_turn(player, opponent):
 
 label fight_v2:
     python:
-        player = Player(FightStance.FORWARD.value)
-        opponent = Opponent(FightStance.FORWARD.value)
+        player = Player(FightStance.FORWARD)
+        opponent = Opponent(FightStance.FORWARD)
 
         player.turn_moves.append(END_TURN)
         player.turn_moves.append(TURTLE)
