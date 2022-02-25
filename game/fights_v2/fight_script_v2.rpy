@@ -110,7 +110,7 @@ label blocked_move(move, target):
 
     $ target.guard -= move.damage
 
-    show screen fight_popup("{} Miss".format(move.name))
+    show screen fight_popup("{} Blocked".format(move.name))
     pause 1.0
 
     return
@@ -121,7 +121,7 @@ label player_attack_turn(player_move, player, opponent):
     $ fight_game_state = FightGameState.PLAYER_ATTACK
 
     if player_move == END_TURN:
-        $ player.stamina = min(player.max_stamina + 3, player.stamina + 3)
+        $ player.stamina = player.max_stamina + min(player.stamina, 2)
         call fight_opponent_turn(player, opponent)
 
     elif player_move == TURTLE:
@@ -159,6 +159,7 @@ label player_attack_turn(player_move, player, opponent):
     if player.stamina > 0:
         call screen fight_player_turn(player, opponent)
     else:
+        $ player.stamina = player.max_stamina
         call fight_opponent_turn(player, opponent)
 
 
@@ -169,10 +170,11 @@ label fight_opponent_turn(player, opponent):
     $ opponent_move = renpy.random.choice(opponent.base_attacks)
 
     if opponent.stamina < opponent_move.stamina_cost:
+        $ opponent.stamina = opponent.max_stamina
         call screen fight_player_turn(player, opponent)
 
     if opponent_move == END_TURN:
-        $ opponent.stamina = min(opponent.max_stamina + 3, opponent.stamina + 3)
+        $ opponent.stamina = opponent.max_stamina + min(opponent.stamina, 2)
         call screen fight_player_turn(player, opponent)
 
     elif opponent_move == TURTLE:
