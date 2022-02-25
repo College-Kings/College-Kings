@@ -87,30 +87,16 @@ init python:
         pass
 
 
-    def get_accuracy(move, target):
-        if hasattr(move, "accuracy") and move.accuracy is not None:
-            return move.accuracy + FightMove.ACCURACY_DICT[target.stance]
-        else:
-            return None
-
-
-    def get_total_damage(move, attacker):
-        if hasattr(move, "damage") and move.damage is not None:
-            return move.damage + FightMove.DAMAGE_DICT[attacker.stance]
-        else:
-            return None
-
-
-label hit_move(move, total_damage, target):
+label hit_move(move, target):
     scene expression move.images["hit_image"]
     with vpunch
 
-    if target.guard < total_damage:
-        $ target.health -= (total_damage - target.guard)
+    if target.guard < move.damage:
+        $ target.health -= (move.damage - target.guard)
         $ target.guard = 0
 
     else:
-        $ target.guard -= total_damage
+        $ target.guard -= move.damage
 
     show screen fight_popup("{} Hit".format(move.name))
     pause 1.0
@@ -118,9 +104,11 @@ label hit_move(move, total_damage, target):
     return
 
 
-label missed_move(move):
-    scene expression move.images["miss_image"]
+label blocked_move(move, target):
+    scene expression move.images["blocked_image"]
     with vpunch
+
+    $ target.guard -= move.damage
 
     show screen fight_popup("{} Miss".format(move.name))
     pause 1.0
@@ -145,8 +133,6 @@ label player_attack_turn(player_move, player, opponent):
 
         call fight_opponent_turn(player, opponent)
 
-    $ accuracy_check = renpy.random.randint(0, 100)
-
     if hasattr(player_move, "images") and player_move.images is None:
         $ raise NotImplementedError("Player move is missing images.")
 
@@ -155,13 +141,13 @@ label player_attack_turn(player_move, player, opponent):
     scene expression player_move.images["start_image"]
     pause 0.5
 
-    # Player misses
-    if get_accuracy(player_move, opponent) < accuracy_check:
-        call missed_move(player_move)
-    
     # Player hits attack
+    if opponent.guard < player_move.damage:
+        call hit_move(player_move, opponent)
+    
+    # Opponent blocks player attack
     else:
-        call hit_move(player_move, get_total_damage(player_move, player), opponent)
+        call blocked_move(player_move, opponent)
 
     if opponent.health <= 0:
         jump expression fight_end_label
@@ -208,13 +194,13 @@ label fight_opponent_turn(player, opponent):
     scene expression opponent_move.images["start_image"]
     pause 0.5
 
-    # Opponent misses
-    if get_accuracy(opponent_move, player) < accuracy_check:
-        call missed_move(opponent_move)
-    
     # Opponent hits attack
+    if opponent.guard < opponent_move.damage:
+        call hit_move(player_move, opponent)
+    
+    # Player blocks opponent attack
     else:
-        call hit_move(opponent_move, get_total_damage(opponent_move, opponent), player)
+        call blocked_move(player_move, opponent)
 
     if player.health <= 0:
         jump expression fight_end_label
@@ -238,12 +224,12 @@ label fight_v2:
         player.base_attacks.append(JAB.copy({
             "start_image": "fight_prototype/images/player_start_jab.webp",
             "hit_image": "fight_prototype/images/player_hit_jab.webp",
-            "miss_image": "fight_prototype/images/player_jab_dodged.webp"
+            "blocked_image": "fight_prototype/images/player_jab_dodged.webp"
         }))
         player.base_attacks.append(HOOK.copy({
             "start_image": "fight_prototype/images/player_start_hook.webp",
             "hit_image": "fight_prototype/images/player_hit_hook.webp",
-            "miss_image": "fight_prototype/images/player_hook_dodged.webp"
+            "blocked_image": "fight_prototype/images/player_hook_dodged.webp"
         }))
         # player.base_attacks.append(KICK.copy(None))
 
@@ -251,13 +237,13 @@ label fight_v2:
         opponent.base_attacks.append(JAB.copy({
             "start_image": "fight_prototype/images/opponent_start_jab.webp",
             "hit_image": "fight_prototype/images/opponent_hit_jab.webp",
-            "miss_image": "fight_prototype/images/opponent_jab_dodged.webp"
+            "blocked_image": "fight_prototype/images/opponent_jab_dodged.webp"
         }))
         # opponent.base_attacks.append(HOOK.copy(None))
         opponent.base_attacks.append(KICK.copy({
             "start_image": "fight_prototype/images/opponent_start_kick.webp",
             "hit_image": "fight_prototype/images/opponent_hit_kick.webp",
-            "miss_image": "fight_prototype/images/opponent_kick_dodged.webp"
+            "blocked_image": "fight_prototype/images/opponent_kick_dodged.webp"
         }))
 
         opponent.stance_images = {

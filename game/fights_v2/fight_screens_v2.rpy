@@ -88,10 +88,8 @@ screen action_info(move, player, opponent):
                     text ">>> {} <<<".format(move.name) size 30 font "fonts/Montserrat-Bold.ttf" align (0.5, 0.5)
 
                 vbox:
-                    if hasattr(move, "accuracy") and move.accuracy is not None:
-                        text "{{font=fonts/Montserrat-Bold.ttf}}Accuracy:{{/font}} {}%".format(get_accuracy(move, opponent))
                     if hasattr(move, "damage") and move.damage is not None:
-                        text "{{font=fonts/Montserrat-Bold.ttf}}Damage:{{/font}} {}".format(get_total_damage(move, player))
+                        text "{{font=fonts/Montserrat-Bold.ttf}}Damage:{{/font}} {}".format(move.damage)
 
             text move.description
             text "{{font=fonts/Montserrat-Bold.ttf}}Ideal Stance Effect:{{/font}} {}".format(move.effect)
