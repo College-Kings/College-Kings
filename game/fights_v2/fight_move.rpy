@@ -11,13 +11,6 @@ init python:
 
 
     class FightMove(BaseMove):
-        ACCURACY_DICT = {
-            FightStance.AGGRESSIVE: 10,
-            FightStance.DEFENSIVE: -10,
-            FightStance.FORWARD: 5,
-            FightStance.SOLID: -5
-        }
-
         DAMAGE_DICT = {
             FightStance.AGGRESSIVE: 5,
             FightStance.DEFENSIVE: -5,
@@ -25,21 +18,19 @@ init python:
             FightStance.SOLID: 0
         }
 
-        def __init__(self, name, description, damage, accuracy, stamina_cost, ideal_stance, end_stance, effect="", images=None):
+        def __init__(self, name, description, damage, stamina_cost, ideal_stance, end_stance, effect="", images=None):
             BaseMove.__init__(self, name, description, stamina_cost, ideal_stance, end_stance, effect)
             self.damage = damage
-            self.accuracy = accuracy
             self.images = images
 
         def copy(self, images):
-            return self.__class__(self.name, self.description, self.damage, self.accuracy, self.stamina_cost, self.ideal_stance, self.end_stance, self.effect, images)
+            return self.__class__(self.name, self.description, self.damage, self.stamina_cost, self.ideal_stance, self.end_stance, self.effect, images)
 
 
 define BODY_HOOK = FightMove(
     name="Body Hook",
     description="A devastating attack to your opponent's body",
     damage=5,
-    accuracy=85,
     stamina_cost=2,
     ideal_stance=FightStance.FORWARD,
     end_stance=FightStance.SOLID,
@@ -50,7 +41,6 @@ define JAB = FightMove(
     name="Jab",
     description="Attack with a quick jab straight to the chin.",
     damage=10,
-    accuracy=80,
     stamina_cost=3,
     ideal_stance=FightStance.AGGRESSIVE,
     end_stance=FightStance.FORWARD,
@@ -61,7 +51,6 @@ define HOOK = FightMove(
     name="Hook",
     description="A devastating attack to your opponent's head.",
     damage=15,
-    accuracy=70,
     stamina_cost=4,
     ideal_stance=FightStance.FORWARD,
     end_stance=FightStance.AGGRESSIVE,
@@ -72,7 +61,6 @@ define KICK = FightMove(
     name="Kick",
     description="A devastating attack to your opponent's body.",
     damage=20,
-    accuracy=60,
     stamina_cost=5,
     ideal_stance=FightStance.SOLID,
     end_stance=FightStance.FORWARD,

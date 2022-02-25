@@ -175,7 +175,7 @@ label fight_opponent_turn(player, opponent):
         $ opponent.stamina = min(opponent.max_stamina + 3, opponent.stamina + 3)
         call screen fight_player_turn(player, opponent)
 
-    elif player_move == TURTLE:
+    elif opponent_move == TURTLE:
         $ opponent.guard = FightStance.DEFENSIVE.value
 
         # Stance Bonus
@@ -195,12 +195,12 @@ label fight_opponent_turn(player, opponent):
     pause 0.5
 
     # Opponent hits attack
-    if opponent.guard < opponent_move.damage:
-        call hit_move(player_move, opponent)
+    if player.guard < opponent_move.damage:
+        call hit_move(opponent_move, player)
     
     # Player blocks opponent attack
     else:
-        call blocked_move(player_move, opponent)
+        call blocked_move(opponent_move, player)
 
     if player.health <= 0:
         jump expression fight_end_label
