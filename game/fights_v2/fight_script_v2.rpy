@@ -18,14 +18,14 @@ init python:
     class BasePlayer:
         def __init__(self, stance, health=100, stamina=10, attack_multiplier=1):
             self.stance = stance
-            self.max_stamina = stamina
+            self.stamina = stamina
             self.max_health = health
             self.attack_multiplier = attack_multiplier
 
+            self.max_stamina = stamina
             self.guard = stance.value
 
             self._health = health
-            self._stamina = stamina
 
             self.wins = 0
             self.turn_moves = []
@@ -35,15 +35,6 @@ init python:
             # self.special_abilities = set()
             # self.special_ability = None
             self.previous_attack = None
-
-        @property
-        def stamina(self):
-            return self._stamina
-
-        @stamina.setter
-        def stamina(self, value):
-            self._stamina = value
-            self._stamina = min(self._stamina, self.max_stamina)
             
         @property
         def health(self):
@@ -258,4 +249,5 @@ label fight_v2:
         opponent.wins = 2
 
     show screen fight_debug(player, opponent)
+    show screen health_bar(opponent)
     call screen fight_player_turn(player, opponent)

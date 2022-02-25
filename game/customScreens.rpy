@@ -140,7 +140,6 @@ screen animated_value_bar(old_value, new_value, max_value, left_frame=None, righ
         value AnimatedValue(new_value, max_value, delay, old_value)
         left_bar left_frame
         right_bar right_frame
-        align (0.5, 0.5)
         offset offset
         xysize size
 

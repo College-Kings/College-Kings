@@ -51,14 +51,28 @@ screen fight_player_turn(player, opponent):
                     text str(move.stamina_cost) xalign 1.0 font "fonts/Montserrat-Bold.ttf"
                     text move.name align (0.5, 0.5) text_align 0.5
 
-    frame:
+    vbox:
         xpos 35
         yalign 1.0
         yoffset -35
-        background "#fff"
-        padding (50, 5)
-        
-        text "Current Stance: {{color=#6a0dad}}{}".format(player.stance.name) align (0.5, 0.5)
+        spacing 25
+
+        hbox:
+            spacing 5
+
+            text "Stamina: " yalign 0.5
+
+            for i in range(player.stamina):
+                add "gui/fight_prototype/fight_circle_hover.png" yalign 0.5
+
+            for i in range(player.max_stamina - player.stamina):
+                add "gui/fight_prototype/fight_circle_idle.png" yalign 0.5
+
+        frame:
+            background "#fff"
+            padding (50, 5)
+            
+            text "Current Stance: {{color=#6a0dad}}{}".format(player.stance.name) align (0.5, 0.5)
 
 
 screen action_info(move, player, opponent):
@@ -106,6 +120,19 @@ screen action_info(move, player, opponent):
             if move.end_stance is not None:
                 text "End Stance:" font "fonts/Montserrat-Bold.ttf"
                 text move.end_stance.name
+
+
+screen health_bar(target):
+    zorder 100
+    default max_guard = target.guard
+
+    fixed:
+        xalign 0.5
+        ypos 50
+        xysize (800, 95)
+
+        use animated_value_bar(None, target.health, target.max_health, "ruby_bar", "transparent_bar", offset=(13, 0), size=(800, 95), delay=1) # Player Health Bar
+        use animated_value_bar(None, target.guard, max_guard, "blue_bar", "transparent_bar", offset=(13, 0), size=(800, 95), delay=1) # Player Guard Bar
 
 
 screen fight_debug(player, opponent):
