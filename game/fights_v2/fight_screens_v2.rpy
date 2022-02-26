@@ -135,7 +135,7 @@ screen health_bars(player, opponent):
         xysize (400, 95)
 
         use animated_value_bar(None, player.health, player.max_health, "ruby_bar", "transparent_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Health Bar
-        use animated_value_bar(None, player.guard, player_max_guard, "blue_bar", "transparent_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Guard Bar
+        use animated_value_bar(None, player.guard, 30, "blue_bar", "transparent_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Guard Bar
 
 
 screen fight_debug(player, opponent):
