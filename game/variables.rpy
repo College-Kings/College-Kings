@@ -450,5 +450,6 @@ default v16birthday_reservation = False
 default v16aubrey_cab = False
 default v16aubrey_flower_cab = False
 default v16s38tippped_driver = False
+default baby = "Baby" # Used to store the player designated name of the baby
 default v16food_critic = False
 default v16s39aubrey_date_points = 0
