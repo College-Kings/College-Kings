@@ -155,11 +155,11 @@ label player_attack_turn(player_move, player, opponent):
     # Set end stance
     if player_move.end_stance is not None:
         $ player.stance = player_move.end_stance
-        $ player.guard = player_move.end_stance.value
 
     if player.stamina > 0:
         call screen fight_player_turn(player, opponent)
     else:
+        $ player.guard = player_move.stance.value
         $ player.stamina = player.max_stamina
         call fight_start_opponent_turn(player, opponent)
 
