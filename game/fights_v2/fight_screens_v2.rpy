@@ -12,36 +12,30 @@ screen fight_player_turn(player, opponent):
         spacing 20
 
         hbox:
-            spacing 30
+            spacing 5
             xalign 0.5
 
-            for move in player.base_attacks:
-                button:
-                    xysize (100, 100)
-                    idle_background "#fff"
-                    hover_background "#ffd000"
-                    selected_background "#ffd000"
-                    insensitive_background "#a7a7a7"
-                    selected (selected_move == move)
-                    if selected_move == move:
-                        action [SetScreenVariable("selected_move", None), Hide("action_info")]
-                    else:
-                        action [SetScreenVariable("selected_move", move), Show("action_info", None, move, player, opponent)]
+            for i in range(player.stamina):
+                add "gui/fight_prototype/fight_circle_hover.png" yalign 0.5
 
-                    text str(move.stamina_cost) xalign 1.0 font "fonts/Montserrat-Bold.ttf"
-                    text move.name align (0.5, 0.5) text_align 0.5
+            for i in range(player.max_stamina - player.stamina):
+                add "gui/fight_prototype/fight_circle_idle.png" yalign 0.5
 
         hbox:
             spacing 30
             xalign 0.5
 
-            for move in player.turn_moves:
+            for move in player.base_attacks + player.turn_moves:
                 button:
-                    xysize (200, 50)
-                    idle_background "#fff"
+                    xysize (100, 100)
+                    if move.ideal_stance == player.stance:
+                        idle_background "#7cf87c"
+                    else:
+                        idle_background "#fff"
                     hover_background "#ffd000"
                     selected_background "#ffd000"
                     insensitive_background "#a7a7a7"
+                    sensitive (player.stamina >= move.stamina_cost)
                     selected (selected_move == move)
                     if selected_move == move:
                         action [SetScreenVariable("selected_move", None), Hide("action_info")]
@@ -57,22 +51,15 @@ screen fight_player_turn(player, opponent):
         yoffset -35
         spacing 25
 
-        hbox:
-            spacing 5
-
-            text "Stamina: " yalign 0.5
-
-            for i in range(player.stamina):
-                add "gui/fight_prototype/fight_circle_hover.png" yalign 0.5
-
-            for i in range(player.max_stamina - player.stamina):
-                add "gui/fight_prototype/fight_circle_idle.png" yalign 0.5
-
         frame:
             background "#fff"
             padding (50, 5)
             
             text "Current Stance: {{color=#6a0dad}}{}".format(player.stance.name) align (0.5, 0.5)
+
+
+screen fight_opponent_turn():
+    add "images/3 hits.webp"
 
 
 screen action_info(move, player, opponent):
@@ -96,8 +83,7 @@ screen action_info(move, player, opponent):
                     xalign 0.5
                     idle_background "#a8a8a8"
                     hover_background "#ffd000"
-                    if player.stamina >= move.stamina_cost:
-                        action [Hide("action_info"), Call("player_attack_turn", move, player, opponent)]
+                    action [Hide("action_info"), Call("player_attack_turn", move, player, opponent)]
                     
                     text ">>> {} <<<".format(move.name) size 30 font "fonts/Montserrat-Bold.ttf" align (0.5, 0.5)
 
@@ -122,17 +108,34 @@ screen action_info(move, player, opponent):
                 text move.end_stance.name
 
 
-screen health_bar(target):
+screen health_bars(player, opponent):
     zorder 100
-    default max_guard = target.guard
 
-    fixed:
+    vbox:
         xalign 0.5
         ypos 50
-        xysize (800, 95)
 
-        use animated_value_bar(None, target.health, target.max_health, "ruby_bar", "transparent_bar", offset=(13, 0), size=(800, 95), delay=1) # Player Health Bar
-        use animated_value_bar(None, target.guard, max_guard, "blue_bar", "transparent_bar", offset=(13, 0), size=(800, 95), delay=1) # Player Guard Bar
+        # Opponent Guard
+        bar:
+            value AnimatedValue(opponent.guard, 30, delay=1)
+            left_bar "#00f"
+            right_bar "#808080"
+            xysize (400, 20)
+            xalign 1.0
+
+        # Opponent Health
+        bar:
+            value AnimatedValue(opponent.health, opponent.max_health, delay=1)
+            left_bar "#f00"
+            right_bar "#000"
+            xysize (800, 20)
+
+    fixed:
+        pos (15, 925)
+        xysize (400, 95)
+
+        use animated_value_bar(None, player.health, player.max_health, "ruby_bar", "transparent_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Health Bar
+        use animated_value_bar(None, player.guard, player_max_guard, "blue_bar", "transparent_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Guard Bar
 
 
 screen fight_debug(player, opponent):

@@ -107,13 +107,22 @@ label blocked_move(move, target):
     return
 
 
+label fight_start_player_turn(player, opponent):
+    hide screen fight_opponent_turn
+    scene black
+    show text "Your Turn"
+    pause 1.0
+
+    call screen fight_player_turn(player, opponent)
+
+
 label player_attack_turn(player_move, player, opponent):
     $ renpy.set_return_stack([])
     $ fight_game_state = FightGameState.PLAYER_ATTACK
 
     if player_move == END_TURN:
         $ player.stamina = player.max_stamina + min(player.stamina, 2)
-        call fight_opponent_turn(player, opponent)
+        call fight_start_opponent_turn(player, opponent)
 
     elif player_move == TURTLE:
         $ player.guard = FightStance.DEFENSIVE.value
@@ -122,7 +131,7 @@ label player_attack_turn(player_move, player, opponent):
         if player.stance == FightStance.SOLID:
             $ player.guard += 10
 
-        call fight_opponent_turn(player, opponent)
+        call fight_start_opponent_turn(player, opponent)
 
     if hasattr(player_move, "images") and player_move.images is None:
         $ raise NotImplementedError("Player move is missing images.")
@@ -130,7 +139,7 @@ label player_attack_turn(player_move, player, opponent):
     $ player.stamina -= player_move.stamina_cost
 
     scene expression player_move.images["start_image"]
-    pause 0.5
+    pause 1.0
 
     # Player hits attack
     if opponent.guard < player_move.damage:
@@ -151,7 +160,16 @@ label player_attack_turn(player_move, player, opponent):
         call screen fight_player_turn(player, opponent)
     else:
         $ player.stamina = player.max_stamina
-        call fight_opponent_turn(player, opponent)
+        call fight_start_opponent_turn(player, opponent)
+
+
+label fight_start_opponent_turn(player, opponent):
+    scene black
+    show text "Opponent's turn"
+    pause 1.0
+    show screen fight_opponent_turn
+
+    call fight_opponent_turn(player, opponent)
 
 
 label fight_opponent_turn(player, opponent):
@@ -162,11 +180,11 @@ label fight_opponent_turn(player, opponent):
 
     if opponent.stamina < opponent_move.stamina_cost:
         $ opponent.stamina = opponent.max_stamina
-        call screen fight_player_turn(player, opponent)
+        call fight_start_player_turn(player, opponent)
 
     if opponent_move == END_TURN:
         $ opponent.stamina = opponent.max_stamina + min(opponent.stamina, 2)
-        call screen fight_player_turn(player, opponent)
+        call fight_start_player_turn(player, opponent)
 
     elif opponent_move == TURTLE:
         $ opponent.guard = FightStance.DEFENSIVE.value
@@ -175,7 +193,7 @@ label fight_opponent_turn(player, opponent):
         if opponent.stance == FightStance.SOLID:
             $ opponent.guard += 10
 
-        call screen fight_player_turn(player, opponent)
+        call fight_start_player_turn(player, opponent)
 
     $ accuracy_check = renpy.random.randint(0, 100)
 
@@ -185,7 +203,7 @@ label fight_opponent_turn(player, opponent):
     $ opponent.stamina -= opponent_move.stamina_cost
 
     scene expression opponent_move.images["start_image"]
-    pause 0.5
+    pause 1.0
 
     # Opponent hits attack
     if player.guard < opponent_move.damage:
@@ -249,5 +267,5 @@ label fight_v2:
         opponent.wins = 2
 
     show screen fight_debug(player, opponent)
-    show screen health_bar(opponent)
-    call screen fight_player_turn(player, opponent)
+    show screen health_bars(player, opponent)
+    call fight_start_player_turn(player, opponent)

@@ -14,7 +14,7 @@ image alert_background = Frame("gui/alert/background.webp", 8, 8)
 
 ## Bar
 image blue_bar = Frame("gui/bar/blue.webp", 44, 22, 44, 40)
-image ruby_bar = Frame("gui/bar/ruby.webp", 30, 22, 29, 40)
+image ruby_bar = Frame("gui/bar/ruby.webp", 44, 22, 44, 40)
 image yellow_bar = Frame("gui/bar/yellow.webp", 44, 22, 44, 40)
 image transparent_bar = Frame("#0000")
 
