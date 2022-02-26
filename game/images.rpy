@@ -54,6 +54,25 @@ image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm"
 # Phone
 image phone_white_background = "images/phone/white_background.webp"
 
+# Fights
+image fight_circle_animation:
+    "gui/fight_prototype/fight_circle_hover.png" with Dissolve(0.5)
+    pause 1.0
+
+    "gui/fight_prototype/fight_circle_gold_hover.png" with Dissolve(0.5)
+    pause 1.0
+    
+    repeat
+
+image fight_health_animation:
+    "#500000ff" with Dissolve(0.5)
+    pause 1.0
+
+    "#0000" with Dissolve(0.5)
+    pause 1.0
+
+    repeat
+
 # Achievements
 image no_hard_feelings = "images/achievements/v1/nohardfeelings.webp"
 image open_wound = "images/achievements/v1/openwound.webp"

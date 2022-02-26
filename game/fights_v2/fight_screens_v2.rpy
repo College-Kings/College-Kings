@@ -2,8 +2,12 @@ screen fight_player_turn(player, opponent):
     style_prefix "fight_turn"
 
     default selected_move = None
+    default opponent_health_bar_width = 800
+    default opponent_health_bar_segment_width = opponent_health_bar_width / opponent.health
 
     add opponent.stance_image
+
+    # if selected_move is not None:
 
     vbox:
         xalign 0.5
@@ -15,12 +19,14 @@ screen fight_player_turn(player, opponent):
             spacing 5
             xalign 0.5
 
-            for i in range(player.stamina):
-                add "gui/fight_prototype/fight_circle_hover.png" yalign 0.5
-
-            for i in range(player.max_stamina - player.stamina):
-                add "gui/fight_prototype/fight_circle_idle.png" yalign 0.5
-
+            for i in range(1, player.max_stamina + 1):
+                if i > player.stamina:
+                    add "gui/fight_prototype/fight_circle_idle.png" yalign 0.5
+                elif selected_move is None or i <= (player.stamina - selected_move.stamina_cost):
+                    add "gui/fight_prototype/fight_circle_hover.png" yalign 0.5
+                else:
+                    add "fight_circle_animation" yalign 0.5
+                
         hbox:
             spacing 30
             xalign 0.5
@@ -136,6 +142,11 @@ screen health_bars(player, opponent):
 
         use animated_value_bar(None, player.health, player.max_health, "ruby_bar", "transparent_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Health Bar
         use animated_value_bar(None, player.guard, player.stance.value, "blue_bar", "transparent_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Guard Bar
+
+    add Transform("fight_health_animation", size=(200, 20)):
+        xalign 1.0
+        xoffset -560
+        ypos 70
 
 
 screen fight_debug(player, opponent):
