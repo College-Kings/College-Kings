@@ -111,6 +111,8 @@ screen action_info(move, player, opponent):
 screen health_bars(player, opponent):
     zorder 100
 
+    default player_max_guard = player.guard
+
     vbox:
         xalign 0.5
         ypos 50
@@ -119,9 +121,9 @@ screen health_bars(player, opponent):
         bar:
             value AnimatedValue(opponent.guard, 30, delay=1)
             left_bar "#00f"
-            right_bar "#808080"
+            right_bar "#404040"
             xysize (400, 20)
-            xalign 1.0
+            xalign 0.5
 
         # Opponent Health
         bar:
@@ -135,7 +137,7 @@ screen health_bars(player, opponent):
         xysize (400, 95)
 
         use animated_value_bar(None, player.health, player.max_health, "ruby_bar", "transparent_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Health Bar
-        use animated_value_bar(None, player.guard, 30, "blue_bar", "transparent_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Guard Bar
+        use animated_value_bar(None, player.guard, player_max_guard, "blue_bar", "transparent_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Guard Bar
 
 
 screen fight_debug(player, opponent):
