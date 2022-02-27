@@ -2,7 +2,7 @@ screen fight_player_turn(player, opponent):
     style_prefix "fight_turn"
 
     default selected_move = None
-    default opponent_guard_bar_segment_width = 400.0 / 30.0 # Bar Width / Max Guard
+    default opponent_guard_bar_segment_width = 400.0 / float(BasePlayer.MAX_GUARD) # Bar Width / Max Guard
     default opponent_health_bar_segment_width = 800.0 / float(opponent.max_health) # Bar Width / Max Health
 
     add opponent.stance_image
@@ -12,7 +12,7 @@ screen fight_player_turn(player, opponent):
     if isinstance(selected_move, FightMove):
         add Transform("fight_guard_animation", size=(min(opponent_guard_bar_segment_width * opponent.guard, opponent_guard_bar_segment_width * selected_move.damage), 20)):
             xalign 1.0
-            xoffset (-760 - (opponent_guard_bar_segment_width * (30 - opponent.guard)))
+            xoffset (-760 - (opponent_guard_bar_segment_width * (BasePlayer.MAX_GUARD - opponent.guard)))
             ypos 50
 
         add Transform("fight_health_animation", size=(min(opponent_guard_bar_segment_width * opponent.health, opponent_health_bar_segment_width * (selected_move.damage - opponent.guard)), 20)):
@@ -139,7 +139,7 @@ screen health_bars(player, opponent):
 
         # Opponent Guard
         bar:
-            value AnimatedValue(opponent.guard, 30, delay=1)
+            value AnimatedValue(opponent.guard, BasePlayer.MAX_GUARD, delay=1)
             left_bar "#00f"
             right_bar "#404040"
             xysize (400, 20)
