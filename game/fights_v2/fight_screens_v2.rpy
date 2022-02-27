@@ -31,7 +31,7 @@ screen fight_player_turn(player, opponent):
                 elif selected_move is None or i <= (player.stamina - selected_move.stamina_cost):
                     add "gui/fight_prototype/fight_circle_hover.png" yalign 0.5
                 else:
-                    add "fight_circle_animation" yalign 0.5
+                    add "gui/fight_prototype/fight_circle_gold_hover.png" yalign 0.5
                 
         hbox:
             spacing 30
