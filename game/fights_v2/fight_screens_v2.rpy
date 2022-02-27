@@ -2,8 +2,8 @@ screen fight_player_turn(player, opponent):
     style_prefix "fight_turn"
 
     default selected_move = None
-    default opponent_health_bar_width = 800
-    default opponent_health_bar_segment_width = opponent_health_bar_width / opponent.health
+    default opponent_guard_bar_segment_width = 400 / 30 # Bar Width / Max Guard
+    default opponent_health_bar_segment_width = 800 / opponent.max_health # Bar Width / Max Health
 
     add opponent.stance_image
 
@@ -12,7 +12,7 @@ screen fight_player_turn(player, opponent):
     if selected_move is not None:
         add Transform("fight_health_animation", size=(opponent_health_bar_segment_width * selected_move.damage, 20)):
             xalign 1.0
-            xoffset -560
+            xoffset (-560 + (opponent_health_bar_segment_width * (opponent.max_health - opponent.health)))
             ypos 70
 
     vbox:

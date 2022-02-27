@@ -159,7 +159,7 @@ label player_attack_turn(player_move, player, opponent):
     if player.stamina > 0:
         call screen fight_player_turn(player, opponent)
     else:
-        $ player.guard = player_move.stance.value
+        $ player.guard = player_move.end_stance.value
         $ player.stamina = player.max_stamina
         call fight_start_opponent_turn(player, opponent)
 
