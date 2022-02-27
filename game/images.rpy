@@ -55,13 +55,13 @@ image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm"
 image phone_white_background = "images/phone/white_background.webp"
 
 # Fights
-image fight_circle_animation:
-    "gui/fight_prototype/fight_circle_hover.png" with Dissolve(0.5)
+image fight_guard_animation:
+    "#000070ff" with Dissolve(0.5)
     pause 1.0
 
-    "gui/fight_prototype/fight_circle_gold_hover.png" with Dissolve(0.5)
+    "#00000000" with Dissolve(0.5)
     pause 1.0
-    
+
     repeat
 
 image fight_health_animation:
