@@ -2,7 +2,6 @@
 # Locations: Wolves house
 # Characters: MC (Outfit: 9), CHRIS (Outfit: 2), SEBASTIAN (Outfit: 1), IMRE (Outfit: 2)
 # Time: Afternoon
-# NOTE: There is a power outage so the entire scnee is in candlelight
 
 label v16s30:
     scene v16s30_1 # TPP. MC walking into the Wolves house, slight smile, mouth closed

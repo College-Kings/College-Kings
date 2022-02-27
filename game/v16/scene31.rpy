@@ -128,7 +128,7 @@ label v16s31:
 
         "Agree with Grayson":
 
-            scene v16s31_3a
+            scene v16s31_2b
             with dissolve
 
             u "I do see where Grayson is coming from, Sam. Not many frats have girls living on their couches."
@@ -145,7 +145,7 @@ label v16s31:
 
                 gr "*Scoffs* Do you see what I have to deal with?"
 
-                scene v16s31_3d
+                scene v16s31_2b
                 with dissolve
 
                 u "*Sighs* Sam-"
@@ -164,7 +164,7 @@ label v16s31:
 
         "Defend Samantha":
 
-            scene v16s31_2c
+            scene v16s31_2b
             with dissolve
 
             u "Grayson, go easy on her."
@@ -179,7 +179,7 @@ label v16s31:
 
             sa "*Giggles*"
 
-            scene v16s31_2c
+            scene v16s31_2b
             with dissolve
 
             u "I know it's frustrating, I get it. But this is Cameron's sister. By helping Sam, we're helping one of the Apes."
@@ -189,7 +189,7 @@ label v16s31:
 
             gr "You sound like you've been watching too many daytime talk shows, [name]."
 
-            scene v16s31_2c
+            scene v16s31_2b
             with dissolve
 
             u "(What...?)"
@@ -201,7 +201,7 @@ label v16s31:
 
             if v14_SamanthaDrugs: # -if SamanthaDrugs
 
-                scene v16s31_3e
+                scene v16s31_3c
                 with dissolve
 
                 sa "*Whispers* I think he's angry because he wants to bang me. That's what this is."
@@ -287,7 +287,7 @@ label v16s31:
     scene v16s31_5 # TPP. Show just Samantha gets up to walk out and Mc standing a few feet away from her, both looking at each other slight smiles, mouths are closed
     with dissolve
 
-    if v14_SamanthaDrugs: # -if SamanthaDrugs and MC had sex
+    if v14_SamanthaDrugs: # TODO: Variable # -if SamanthaDrugs and MC had sex
 
         scene v16s31_5a # TPP. As Sam passes MC, she stops for a moment and leans in towards Mc's ear, both slight smiles, Samantha's mouth is open, Mc's mouth is closed
         with dissolve
