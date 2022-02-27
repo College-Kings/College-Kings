@@ -3,16 +3,21 @@ python early:
         import os
         import subprocess
 
+        VERSION_DIR = os.path.join(config.basedir, "game", "version.txt")
+
         cwd = os.getcwd()
         os.chdir(config.basedir)
 
         try:
             short_hash = subprocess.check_output([ "git", "rev-parse", "--short", "HEAD"]).strip()
-            with open(os.path.join(config.basedir, "game", "version.txt"), "w") as file:
+            with open(os.path.join(VERSION_DIR, "w") as file:
                 file.write(str(short_hash))
         except (subprocess.CalledProcessError, OSError):
-            with open(os.path.join(config.basedir, "game", "version.txt"), "r") as file:
-                short_hash = file.read().strip()
+            try:
+                with open(VERSION_DIR, "r") as file:
+                    short_hash = file.read().strip()
+            except IOError:
+                open(VERSION_DIR, "w").close()
 
         os.chdir(cwd)
         return short_hash
