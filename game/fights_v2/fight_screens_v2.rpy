@@ -7,7 +7,13 @@ screen fight_player_turn(player, opponent):
 
     add opponent.stance_image
 
-    # if selected_move is not None:
+    use health_bars(player, opponent)
+
+    if selected_move is not None:
+        add Transform("fight_health_animation", size=(opponent_health_bar_segment_width * selected_move.damage, 20)):
+            xalign 1.0
+            xoffset -560
+            ypos 70
 
     vbox:
         xalign 0.5
@@ -115,8 +121,6 @@ screen action_info(move, player, opponent):
 
 
 screen health_bars(player, opponent):
-    zorder 100
-
     vbox:
         xalign 0.5
         ypos 50
@@ -142,11 +146,6 @@ screen health_bars(player, opponent):
 
         use animated_value_bar(None, player.health, player.max_health, "ruby_bar", "transparent_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Health Bar
         use animated_value_bar(None, player.guard, player.stance.value, "blue_bar", "transparent_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Guard Bar
-
-    add Transform("fight_health_animation", size=(200, 20)):
-        xalign 1.0
-        xoffset -560
-        ypos 70
 
 
 screen fight_debug(player, opponent):

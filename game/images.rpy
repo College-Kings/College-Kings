@@ -65,10 +65,10 @@ image fight_circle_animation:
     repeat
 
 image fight_health_animation:
-    "#500000ff" with Dissolve(0.5)
+    "#700000ff" with Dissolve(0.5)
     pause 1.0
 
-    "#0000" with Dissolve(0.5)
+    "#00000000" with Dissolve(0.5)
     pause 1.0
 
     repeat
