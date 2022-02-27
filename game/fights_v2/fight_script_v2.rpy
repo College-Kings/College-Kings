@@ -8,7 +8,6 @@ init python:
 
 
     class FightStance(SmartEnum):
-        NONE = 0
         AGGRESSIVE = 5
         FORWARD = 10
         SOLID = 15

@@ -66,13 +66,20 @@ screen fight_player_turn(player, opponent):
         xpos 35
         yalign 1.0
         yoffset -35
-        spacing 25
+        spacing 5
 
-        frame:
-            background "#fff"
-            padding (50, 5)
-            
-            text "Current Stance: {{color=#6a0dad}}{}".format(player.stance.name) align (0.5, 0.5)
+        for stance in FightStance:
+            frame:
+                background "#fff"
+                xysize (250, 50)
+
+                text stance.name align (0.5, 0.5)
+
+                if player.stance == stance:
+                    add "#ffd000" xysize (35, 50)
+
+                if (selected_move is not None) and ((selected_move.end_stance is None and player.stance == stance) or (selected_move.end_stance == stance)):
+                    add "#ffd000" xysize (35, 50) xalign 1.0
 
 
 screen fight_opponent_turn():
@@ -146,7 +153,7 @@ screen health_bars(player, opponent):
             xysize (800, 20)
 
     fixed:
-        pos (15, 925)
+        pos (15, 700)
         xysize (400, 95)
 
         use animated_value_bar(None, player.health, player.max_health, "ruby_bar", "transparent_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Health Bar
