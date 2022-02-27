@@ -10,7 +10,7 @@ python early:
 
         try:
             short_hash = subprocess.check_output([ "git", "rev-parse", "--short", "HEAD"]).strip()
-            with open(os.path.join(VERSION_DIR, "w") as file:
+            with open(VERSION_DIR, "w") as file:
                 file.write(str(short_hash))
         except (subprocess.CalledProcessError, OSError):
             try:
