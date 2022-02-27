@@ -4,9 +4,9 @@
 # Time: Tuesday night
 
 
-$ default v16s23_mention_bills = False  # TODO: Variable
-$ default v16s23_mention_laptop = False # TODO: Variable
-$ default v16s23_support_amber = False # TODO: Variable
+default v16s23_mention_bills = False  # TODO: Variable
+default v16s23_mention_laptop = False # TODO: Variable
+default v16s23_support_amber = False # TODO: Variable
 
 label v16s23: # 23) Meet Amber at strip club
     # -MC arrives at the front entrance of The Blue Lounge to see Amber smoking a cigarette, wearing a flirty stripper outfit 
@@ -548,7 +548,7 @@ label v16s23: # 23) Meet Amber at strip club
 
                 # -If AmberRS, she opens up about her brother.
                 # -if not AmberRS but MC passes a Amber KCT check (i believe it's currently confident), Amber also opens up about her brother
-                if ( (amber.relationship >= Relationship.FWB) or ( amber.relationship < Relationship.FWB and kct == confident ): # TODO: Variable # This is a guess based on the new relationship system. It would be nice if everyone was using the same language for relationship stuff
+                if amber.relationship >= Relationship.FWB or (amber.relationship < Relationship.FWB and kct == "confident" ): # TODO: Variable # This is a guess based on the new relationship system. It would be nice if everyone was using the same language for relationship stuff
                     scene v16s23_17d
                     with dissolve
 
@@ -627,7 +627,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     # -Regardless of all that-
     # -if AmberRS (at least one sex scene with Amber before Lauren's Halloween party) [Checkpoint 1.1]
-    if ( amber.relationship >= Relationship.FWB) or any(scene in sceneList for scene in ("v8_amber", "v8_amber2", "v10_amber", "v14_amber") : # TODO: Variable  # Again, a guess at what the writer was getting at in the new relationship system
+    if amber.relationship >= Relationship.FWB) or any(scene in sceneList for scene in ("v8_amber", "v8_amber2", "v10_amber", "v14_amber")) : # TODO: Variable  # Again, a guess at what the writer was getting at in the new relationship system
         
         scene v16s23_18 # FPP Amber stepping up onto the small table in the private booth [CHECKPOINT C: on table]
         with dissolve

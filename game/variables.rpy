@@ -437,6 +437,13 @@ default pb_kct_notification = False
 default pb_threesome = False
 
 # 16.0
+
+# Chloe Planning Board 
+
+
+# Lindsey Planning Board
+default v16s28_lindsey_pb_intereview_polly_choice = False # True = Interview / False = Polly 
+
 default freeroam15 = set() #Amber
 default v16s1_win_fight_with_tom = False
 default v16s10_let_lauren_continue_hj = False
