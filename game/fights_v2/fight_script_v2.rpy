@@ -8,14 +8,14 @@ init python:
 
 
     class FightStance(SmartEnum):
-        AGGRESSIVE = 5
-        FORWARD = 10
-        SOLID = 15
-        DEFENSIVE = 20
+        AGGRESSIVE = 1
+        FORWARD = 2
+        SOLID = 3
+        DEFENSIVE = 4
 
 
     class BasePlayer:
-        def __init__(self, stance, health=100, stamina=10, attack_multiplier=1):
+        def __init__(self, stance, health=20, stamina=10, attack_multiplier=1):
             self.stance = stance
             self.stamina = stamina
             self.max_health = health
@@ -63,7 +63,7 @@ init python:
 
 
     class Opponent(BasePlayer):
-        def __init__(self, stance, health=100, stamina=10, attack_multiplier=1, stance_images=None):
+        def __init__(self, stance, health=20, stamina=10, attack_multiplier=1, stance_images=None):
             BasePlayer.__init__(self, stance, health, stamina, attack_multiplier)
 
             self.stance_images = stance_images
@@ -128,7 +128,7 @@ label player_attack_turn(player_move, player, opponent):
 
         # Stance Bonus
         if player.stance == FightStance.SOLID:
-            $ player.guard += 10
+            $ player.guard += 2
 
         call fight_start_opponent_turn(player, opponent)
 
