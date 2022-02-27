@@ -453,6 +453,7 @@ default v16s20_twazzlers = False
 default vs16s15hotdog_coupon = False
 default v16s22mention_bills = False
 default v16s22mention_laptop = False
+default v16s25a_date_with_aubrey = False 
 default v16birthday_reservation = False
 default v16aubrey_cab = False
 default v16aubrey_flower_cab = False

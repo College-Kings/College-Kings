@@ -135,7 +135,9 @@ label v16s25a:
 
         au "No problem."
 
-        if aubrey.relationship = Relationship.TAMED: # TODO: Variable
+        if aubrey.relationship == Relationship.TAMED: # TODO: Variable
+
+            $ v16s25a_date_with_aubrey = True # TODO: Variable
 
             scene v16s25a_5b # TPP. Aubrey in the Chicks house in her room on the phone, slight smile, blushing, mouth open.
             with dissolve
@@ -319,7 +321,9 @@ label v16s25a:
 
         au "No problem."
 
-        if aubrey.relationship = Relationship.TAMED: # TODO: Variable
+        if aubrey.relationship == Relationship.TAMED: # TODO: Variable
+
+            $ v16s25a_date_with_aubrey = True
         
             scene v16s25a_5b
             with dissolve
