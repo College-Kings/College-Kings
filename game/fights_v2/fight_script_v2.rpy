@@ -123,6 +123,7 @@ label player_attack_turn(player_move, player, opponent):
 
     if player_move == END_TURN:
         $ player.stamina = player.max_stamina + min(player.stamina, 2)
+        $ player.guard = player.stance.value
         call fight_start_opponent_turn(player, opponent)
 
     elif player_move == TURTLE:
@@ -160,7 +161,7 @@ label player_attack_turn(player_move, player, opponent):
     if player.stamina > 0:
         call screen fight_player_turn(player, opponent)
     else:
-        $ player.guard = player_move.end_stance.value
+        $ player.guard = player.stance.value
         $ player.stamina = player.max_stamina
         call fight_start_opponent_turn(player, opponent)
 
@@ -220,7 +221,7 @@ label fight_opponent_turn(player, opponent):
 
     # Set end stance
     if opponent_move.end_stance is not None:
-        $ opponent.guard = opponent_move.end_stance.value
+        $ opponent.stance = opponent_move.end_stance
 
     call fight_opponent_turn(player, opponent)
 

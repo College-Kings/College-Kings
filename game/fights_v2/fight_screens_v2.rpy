@@ -2,23 +2,59 @@ screen fight_player_turn(player, opponent):
     style_prefix "fight_turn"
 
     default selected_move = None
-    default opponent_guard_bar_segment_width = 400.0 / float(BasePlayer.MAX_GUARD) # Bar Width / Max Guard
-    default opponent_health_bar_segment_width = 800.0 / float(opponent.max_health) # Bar Width / Max Health
+    default opponent_bar_segment_width = 50
 
     add opponent.stance_image
 
     use health_bars(player, opponent)
 
     if isinstance(selected_move, FightMove):
-        add Transform("fight_guard_animation", size=(min(opponent_guard_bar_segment_width * opponent.guard, opponent_guard_bar_segment_width * selected_move.damage), 20)):
-            xalign 1.0
-            xoffset (-760 - (opponent_guard_bar_segment_width * (BasePlayer.MAX_GUARD - opponent.guard)))
-            ypos 50
+        # add Transform("fight_guard_animation", size=(min(opponent_bar_segment_width * opponent.guard, opponent_bar_segment_width * selected_move.damage), 20)):
+        #     xalign 1.0
+        #     xoffset (-760 - (opponent_bar_segment_width * (BasePlayer.MAX_GUARD - opponent.guard)))
+        #     ypos 50
 
-        add Transform("fight_health_animation", size=(min(opponent_guard_bar_segment_width * opponent.health, opponent_health_bar_segment_width * (selected_move.damage - opponent.guard)), 20)):
-            xalign 1.0
-            xoffset (-560 - (opponent_health_bar_segment_width * (opponent.max_health - opponent.health)))
-            ypos 70
+        # add Transform("fight_health_animation", size=(min(opponent_bar_segment_width * opponent.health, opponent_bar_segment_width * (selected_move.damage - opponent.guard)), 20)):
+        #     xalign 1.0
+        #     xoffset (-560 - (opponent_bar_segment_width * (opponent.max_health - opponent.health)))
+        #     ypos 70
+
+        vbox:
+            xalign 0.5
+            ypos 50
+            spacing 5
+
+            # Opponent Guard
+            hbox:
+                xalign 0.5
+                spacing 2
+                ysize 20
+
+                for i in range(opponent.guard - selected_move.damage):
+                    null width 50
+
+                for i in range(min(opponent.guard, selected_move.damage)):
+                    add Transform("fight_guard_animation", size=(50, 20))
+
+                for i in range(BasePlayer.MAX_GUARD - opponent.guard):
+                    null width 50
+
+            # Opponent Health
+            hbox:
+                xalign 0.5
+                spacing 2
+
+                for i in range(opponent.max_health - min(opponent.health, (selected_move.damage - opponent.guard)) - (opponent.max_health - opponent.health)):
+                    null width 50
+
+                for i in range(min(opponent.health, (selected_move.damage - opponent.guard))):
+                    add Transform("fight_health_animation", size=(50, 20))
+
+                for i in range(opponent.max_health - opponent.health):
+                    null width 50
+
+
+
 
     vbox:
         xalign 0.5
@@ -78,6 +114,9 @@ screen fight_player_turn(player, opponent):
                 if player.stance == stance:
                     add "#ffd000" xysize (35, 50)
 
+                if selected_move is not None and selected_move.ideal_stance == stance:
+                    add "#7cf87c" xysize (35, 50)
+
                 if (selected_move is not None) and ((selected_move.end_stance is None and player.stance == stance) or (selected_move.end_stance == stance)):
                     add "#ffd000" xysize (35, 50) xalign 1.0
 
@@ -136,21 +175,29 @@ screen health_bars(player, opponent):
     vbox:
         xalign 0.5
         ypos 50
+        spacing 5
 
         # Opponent Guard
-        bar:
-            value AnimatedValue(opponent.guard, BasePlayer.MAX_GUARD, delay=1)
-            left_bar "#00f"
-            right_bar "#404040"
-            xysize (400, 20)
+        hbox:
             xalign 0.5
+            spacing 2
+
+            for i in range(1, BasePlayer.MAX_GUARD + 1):
+                if i > opponent.guard:
+                    add Transform("#404040", size=(50, 20))
+                else:
+                    add Transform("#00f", size=(50, 20))
 
         # Opponent Health
-        bar:
-            value AnimatedValue(opponent.health, opponent.max_health, delay=1)
-            left_bar "#f00"
-            right_bar "#000"
-            xysize (800, 20)
+        hbox:
+            xalign 0.5
+            spacing 2
+
+            for i in range(1, opponent.max_health + 1):
+                if i > opponent.health:
+                    add Transform("#404040", size=(50, 20))
+                else:
+                    add Transform("#f00", size=(50, 20))
 
     fixed:
         pos (15, 700)

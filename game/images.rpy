@@ -56,7 +56,7 @@ image phone_white_background = "images/phone/white_background.webp"
 
 # Fights
 image fight_guard_animation:
-    "#000070ff" with Dissolve(0.5)
+    "#000070" with Dissolve(0.5)
     pause 1.0
 
     "#00000000" with Dissolve(0.5)
@@ -65,7 +65,7 @@ image fight_guard_animation:
     repeat
 
 image fight_health_animation:
-    "#700000ff" with Dissolve(0.5)
+    "#700000" with Dissolve(0.5)
     pause 1.0
 
     "#00000000" with Dissolve(0.5)
