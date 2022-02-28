@@ -9,16 +9,6 @@ screen fight_player_turn(player, opponent):
     use health_bars(player, opponent)
 
     if isinstance(selected_move, FightMove):
-        # add Transform("fight_guard_animation", size=(min(opponent_bar_segment_width * opponent.guard, opponent_bar_segment_width * selected_move.damage), 20)):
-        #     xalign 1.0
-        #     xoffset (-760 - (opponent_bar_segment_width * (BasePlayer.MAX_GUARD - opponent.guard)))
-        #     ypos 50
-
-        # add Transform("fight_health_animation", size=(min(opponent_bar_segment_width * opponent.health, opponent_bar_segment_width * (selected_move.damage - opponent.guard)), 20)):
-        #     xalign 1.0
-        #     xoffset (-560 - (opponent_bar_segment_width * (opponent.max_health - opponent.health)))
-        #     ypos 70
-
         vbox:
             xalign 0.5
             ypos 50
