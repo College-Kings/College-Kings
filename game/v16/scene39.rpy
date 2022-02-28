@@ -220,7 +220,7 @@ label v16s39:
     scene v16s39_7 # TPP. We now enter a free roam screen from MC's POV. The player can click on Aubrey, Wall clock, MC (bottom of screen highlighted), and a food Menu. Clicking on the Menu will give the option to end the free roam-
     with dissolve
 
-    v16s39Aubrey_date: # -if Aubrey
+    if v16s39Aubrey_date: # -if Aubrey
         $ freeroam_aub_date.add("aubrey")
         $ v16s39_seenList = []
 
@@ -363,7 +363,7 @@ label v16s39:
 
         # -Return to free roam screen-
 
-    v16s39Aubrey_date: # -if Wall clock
+    if v16s39Aubrey_date: # -if Wall clock
         $ freeroam_aub_date.add("clock")
         $ v16s39_seenList = []
 
@@ -450,7 +450,7 @@ label v16s39:
 
         # -Return to free roam screen-
 
-    v16s39Aubrey_date: # -if MC (bottom of screen highlighted)
+    if v16s39Aubrey_date: # -if MC (bottom of screen highlighted)
         $ freeroam_aub_date.add("mc")
         $ v16s39_seenList = []
 
@@ -565,7 +565,7 @@ label v16s39:
             
         # -Return to free roam screen-
 
-    v16s39Aubrey_date: # -if Menu, free roam ends
+    if v16s39Aubrey_date: # -if Menu, free roam ends
         $ freeroam_aub_date.add("menu")
         $ v16s39_seenList = []
 
@@ -810,7 +810,7 @@ label v16s39:
         scene v16s39_10 # TPP. We enter the free roam screen from MC's POV. The player can click on Aubrey, Aubrey's food, MC's food, and Dessert menu. Clicking on the Dessert menu will give the option to end the free roam, Aubrey and MC are both looking at each other slight smiles, mouths are closed
         with dissolve
 
-    v16s39Aubrey_date: # -if Aubrey
+    if v16s39Aubrey_date: # -if Aubrey
         $ freeroam_aub_date.add("aubrey2")
         $ v16s39_seenList = []
 
@@ -894,7 +894,7 @@ label v16s39:
             
         # -Return to free roam-
 
-    v16s39Aubrey_date: # -if Aubrey's food
+    if v16s39Aubrey_date: # -if Aubrey's food
         $ freeroam_aub_date.add("aubreyfood")
         $ v16s39_seenList = []
 
@@ -994,7 +994,7 @@ label v16s39:
 
     # -Return to free roam-
 
-    v16s39Aubrey_date: # -if MC's food
+    if v16s39Aubrey_date: # -if MC's food
         $ freeroam_aub_date.add("mcfood")
         $ v16s39_seenList = []
 
@@ -1173,7 +1173,7 @@ label v16s39:
 
                 # -Return to free roam-
 
-    v16s39Aubrey_date:  # -if Dessert menu, free roam ends
+    if v16s39Aubrey_date:  # -if Dessert menu, free roam ends
         $ freeroam_aub_date.add("dessertmenu")
         $ v16s39_seenList = []
 

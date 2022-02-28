@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 9), CHRIS (Outfit: 2), SEBASTIAN (Outfit: 1), IMRE (Outfit: 2)
 # Time: Afternoon
 
-
 label v16s30:
     scene v16s30_1 # TPP. MC walking into the Wolves house, slight smile, mouth closed
     with fade
@@ -55,7 +54,7 @@ label v16s30:
 
     ch "*Sighs* It's been about... an hour?"
 
-    scene v16s30_8 # FPP. MC looking at Sebastian, Sebastian looking at MCm Sebastian neutral expression, mouth open
+    scene v16s30_8 # FPP. MC looking at Sebastian, Sebastian looking at MC, Sebastian neutral expression, mouth open
     with dissolve
 
     se "Yeah, something like that."
@@ -170,7 +169,7 @@ label v16s30:
     scene v16s30_8d # FPP. Same as v16s30_8c, Sebastian shocked, mouth open from shock (not talking)
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v16s30_6c
     with dissolve
@@ -247,7 +246,8 @@ label v16s30:
 
     imre "We all stood by and listened to you cry and complain about Nora. You even suggested that she might have been seeing someone else."
 
-    if mc_nora_park_kiss:
+    if v13_imre_disloyal: # MC kissed Nora and Imre caught them in v13s37 
+        
         scene v16s30_9d # TPP. Same as v16s30_9c, both mouths closed, both very angry
         with dissolve
 
@@ -281,17 +281,17 @@ label v16s30:
     scene v16s30_11 # TPP. Show Chris raising his fist (about to punch Imre), both very angry, mouths closed
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v16s30_12 # TPP. Show Chris connecting the punch to Imre's face, both very angry, mouths closed
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v16s30_13 # TPP. Show Imre falling to the ground, Chris has his fists up, both very angry, mouths closed
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v16s30_14 # TPP. Imre on the floor, Chris standing over him, Imre mouth open, blood trickling down his nose, Imre wiping the blood off, very angry, Chris very angry, looking down at Imre, Chris mouth closed, fists still up
     with dissolve
@@ -307,6 +307,7 @@ label v16s30:
     with dissolve
 
     menu:
+        
         "Push Chris":
             scene v16s30_15 # TPP. Show MC pushing Chris back, Chris lowering his fists, slightly less angry, Sebastian checking on Imre on the floor, Imre angry, Sebastian concerned, MC angry, all mouths closed, only MC mouth open
             with dissolve
@@ -321,7 +322,7 @@ label v16s30:
             scene v16s30_16a # FPP. Same as v16s30_16, Chris looking shocked, mouth closed
             with dissolve
 
-            pause  
+            pause 0.75
 
             scene v16s30_16b # FPP. Same as v16s30_16, Chris looking down at Imre, Chris sorry expression, mouth open
             with dissolve
@@ -344,6 +345,7 @@ label v16s30:
             ch "I snapped."
 
         "Stop Imre":
+            
             scene v16s30_15a # TPP. Same as v16s30_15, instead, MC and Sebastian standing next to Imre on the floor, Chris same positiong, MC annoyed, Chris and Imre very angry, Sebastian worried, all mouths closed
             with dissolve
 
@@ -354,7 +356,7 @@ label v16s30:
 
             u "Imre, for once in your life... Shut up."
 
-            scene v16s30_18a # FPP. Same as v16s30_18, Imre mouth open, very angrys
+            scene v16s30_18a # FPP. Same as v16s30_18, Imre mouth open, very angry
             with dissolve
 
             imre "You're seriously siding with him after what he did?!"
