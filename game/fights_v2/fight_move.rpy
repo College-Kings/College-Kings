@@ -83,3 +83,4 @@ define TURTLE = BaseMove(
     ideal_stance=FightStance.SOLID,
     end_stance=FightStance.DEFENSIVE,
     effect="Not Implimented Yet"
+)
