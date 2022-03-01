@@ -17,7 +17,7 @@ init python:
     class BasePlayer:
         MAX_GUARD = FightStance.DEFENSIVE.value + 2 # Turtle stance bonus
 
-        def __init__(self, stance, health=20, stamina=10, attack_multiplier=1):
+        def __init__(self, stance, health=20, stamina=8, attack_multiplier=1):
             self.stance = stance
             self.stamina = stamina
             self.max_health = health
@@ -65,7 +65,7 @@ init python:
 
 
     class Opponent(BasePlayer):
-        def __init__(self, stance, health=20, stamina=10, attack_multiplier=1, stance_images=None):
+        def __init__(self, stance, health=20, stamina=8, attack_multiplier=1, stance_images=None):
             BasePlayer.__init__(self, stance, health, stamina, attack_multiplier)
 
             self.stance_images = stance_images

@@ -2,7 +2,7 @@ screen fight_player_turn(player, opponent):
     style_prefix "fight_turn"
 
     default selected_move = None
-    default opponent_bar_segment_width = 50
+    default max_stamina = player.stamina
 
     add opponent.stance_image
 
@@ -43,9 +43,6 @@ screen fight_player_turn(player, opponent):
                 for i in range(opponent.max_health - opponent.health):
                     null width 50
 
-
-
-
     vbox:
         xalign 0.5
         yalign 1.0
@@ -56,7 +53,7 @@ screen fight_player_turn(player, opponent):
             spacing 5
             xalign 0.5
 
-            for i in range(1, player.max_stamina + 1):
+            for i in range(1, max_stamina + 1):
                 if i > player.stamina:
                     add "gui/fight_prototype/fight_circle_idle.png" yalign 0.5
                 elif selected_move is None or i <= (player.stamina - selected_move.stamina_cost):
