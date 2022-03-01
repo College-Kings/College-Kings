@@ -148,10 +148,10 @@ label v16s32:
 
                 # -if helping Chloe with Spa day
 
-                    scene v16s32_3b
-                    with dissolve
+                scene v16s32_3b
+                with dissolve
 
-                    u "(I can't spend any of the money Chloe gave me for spa supplies.)"
+                u "(I can't spend any of the money Chloe gave me for spa supplies.)"
 
                 scene v16s32_3
                 with dissolve
@@ -224,10 +224,10 @@ label v16s32:
         scene v16s32_5 # FPP. Close up shot of MC's phone in his hand, with a new message text appearing on his phone
         with dissolve
 
-        chloe.newMessage("Elijah is available rn, let's go meet with him?.")
-        chloe.addReply("Okay. OMW")
-        chloe.newMessage("Hurry up :)")
-        chloe.addReply("Running all the way, boss :P")
+        $ chloe.newMessage("Elijah is available rn, let's go meet with him?.")
+        $ chloe.addReply("Okay. OMW")
+        $ chloe.newMessage("Hurry up :)")
+        $ chloe.addReply("Running all the way, boss :P")
 
         scene v16s32_3
         with dissolve

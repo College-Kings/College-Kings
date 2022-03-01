@@ -15,7 +15,8 @@ label v16s28:
 
     pause 0.75
 
-    if lindsey_announcement:
+    if v15_chloe_lindseysabotage and not v15_chloe_postkiwii: # TODO: Variable
+        
         scene v16s28_3 # FPP. MC and Lindsey standing in front of the planning board, MC looking at Lindsey, Lindsey looking at MC, Lindsey worried expression, mouth open
         with dissolve
 
@@ -61,14 +62,14 @@ label v16s28:
 
     li "I had some other ideas but I think these are the strongest, especially after hearing what Penelope said earlier."
 
-    call screen planningboard
+    call screen planningboard # TODO: PLANNING BOARD CODE 
 
     scene v16s28_4 # TPP. Show MC pointing at something on the board (don't show the actual board, maybe just the back part of it where nothing is written), slight smile, Lindsey looking at where he's pointing with a curious expression, MC mouth open, Lindsey mouth closed
     with dissolve
 
     u "I think this idea is the strongest."
 
-    if lindsey_interview:
+    if v16s28_lindsey_pb_intereview_polly_choicelindsey_interview:  # Interview 
 
         scene v16s28_3e # FPP. Same as v16s28_3d, Lindsey slight smile, mouth closed
         with dissolve
@@ -95,7 +96,7 @@ label v16s28:
 
         u "We can practice, don't worry."
     
-    else:
+    else:  # Get Polly to endorse Lindsey 
         scene v16s28_3e
         with dissolve
 
@@ -177,22 +178,26 @@ label v16s28:
 
     li "Thanks for sticking to this with me."
 
-    if lindsey.Relationship == lindseyRS:
+    if lindsey.Relationship == Relationship.FWB: # TODO: Variable
+
         scene v16s28_5 # TPP. Lindsey pulling MC by his shirt, Lindsey sexy smile, MC slightly surprised, both mouths closed
         with dissolve
 
-        pause  
+        pause 0.75
+
+        play sound "sounds/kiss.mp3"
 
         scene v16s28_5a # TPP. Lindsey kissing MC
         with dissolve
 
-        pause  
+        pause 0.75
 
-    elif lindsey.Relationship == lindseyFriend:
+    elif lindsey.Relationship == Relationship.FRIEND:
+        
         scene v16s28_6 # TPP. Lindsey giving MC a hug
         with dissolve
 
-        pause  
+        pause 0.75
     
     scene v16s28_3e
     with dissolve
