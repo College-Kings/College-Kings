@@ -118,9 +118,8 @@ screen action_info(move, player, opponent):
 
     frame:
         xalign 0.5
-        ypos 650
-        xysize (900, 200)
-        background "#fff"
+        ypos 700
+        background Frame("#fff")
         padding (10, 10)
 
         vbox:
@@ -137,25 +136,11 @@ screen action_info(move, player, opponent):
                     
                     text ">>> {} <<<".format(move.name) size 30 font "fonts/Montserrat-Bold.ttf" align (0.5, 0.5)
 
-                vbox:
-                    if hasattr(move, "damage") and move.damage is not None:
-                        text "{{font=fonts/Montserrat-Bold.ttf}}Damage:{{/font}} {}".format(move.damage)
+                if hasattr(move, "damage") and move.damage is not None:
+                    text "{{font=fonts/Montserrat-Bold.ttf}}Damage:{{/font}} {}".format(move.damage) xalign 0.5
 
             text move.description
             text "{{font=fonts/Montserrat-Bold.ttf}}Ideal Stance Effect:{{/font}} {}".format(move.effect)
-
-        vbox:
-            align (1.0, 0.5)
-
-            if move.ideal_stance is not None:
-                text "Ideal Stance:" font "fonts/Montserrat-Bold.ttf"
-                text move.ideal_stance.name
-
-            null height 10
-
-            if move.end_stance is not None:
-                text "End Stance:" font "fonts/Montserrat-Bold.ttf"
-                text move.end_stance.name
 
 
 screen health_bars(player, opponent):
@@ -171,9 +156,9 @@ screen health_bars(player, opponent):
 
             for i in range(1, BasePlayer.MAX_GUARD + 1):
                 if i > opponent.guard:
-                    add Transform("#404040", size=(50, 20))
+                    add Transform("#404040", size=(206, 10))
                 else:
-                    add Transform("#00f", size=(50, 20))
+                    add Transform("#00f", size=(206, 10))
 
         # Opponent Health
         hbox:
