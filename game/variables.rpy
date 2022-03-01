@@ -454,9 +454,8 @@ default vs16s15hotdog_coupon = False
 default v16s22mention_bills = False
 default v16s22mention_laptop = False
 default v16s25a_date_with_aubrey = False 
-default v16birthday_reservation = False
-default v16aubrey_cab = False
-default v16aubrey_flower_cab = False
+default v16s32_birthday_reservation = 0  # 0 = neither, 1 = standard_reserveration, 2 = birthday_reservation  
+default v16s32_aubrey_cab_and_flowers = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers
 default v16s38tippped_driver = False
 default baby = "Baby" # Used to store the player designated name of the baby
 default v16food_critic = False
