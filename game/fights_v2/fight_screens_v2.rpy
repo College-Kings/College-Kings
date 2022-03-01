@@ -18,16 +18,16 @@ screen fight_player_turn(player, opponent):
             hbox:
                 xalign 0.5
                 spacing 2
-                ysize 20
+                ysize 10
 
                 for i in range(opponent.guard - selected_move.damage):
-                    null width 50
+                    null width 206
 
                 for i in range(min(opponent.guard, selected_move.damage)):
-                    add Transform("fight_guard_animation", size=(50, 20))
+                    add Transform("fight_guard_animation", size=(206, 10))
 
                 for i in range(BasePlayer.MAX_GUARD - opponent.guard):
-                    null width 50
+                    null width 206
 
             # Opponent Health
             hbox:
