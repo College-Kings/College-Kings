@@ -113,6 +113,7 @@ label fight_start_player_turn(player, opponent):
     scene black
     show text "Your Turn"
     pause 1.0
+    $ player.guard = player.stance.value
 
     call screen fight_player_turn(player, opponent)
 
@@ -171,6 +172,7 @@ label fight_start_opponent_turn(player, opponent):
     show text "Opponent's turn"
     pause 1.0
     show screen fight_opponent_turn
+    $ opponent.guard = opponent.stance.value
 
     call fight_opponent_turn(player, opponent)
 
