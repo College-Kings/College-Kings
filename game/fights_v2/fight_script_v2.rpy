@@ -233,10 +233,7 @@ label fight_v2:
         player = Player(FightStance.FORWARD)
         opponent = Opponent(FightStance.FORWARD)
 
-        player.turn_moves.append(END_TURN)
-        player.turn_moves.append(TURTLE)
-
-        player.base_attacks.append(BODY_HOOK.copy({
+        player.base_attacks.append(HOOK.copy({
             "start_image": "fight_prototype/images/player_start_hook.webp",
             "hit_image": "fight_prototype/images/player_hit_hook.webp",
             "blocked_image": "fight_prototype/images/player_hook_dodged.webp"
@@ -246,16 +243,21 @@ label fight_v2:
             "hit_image": "fight_prototype/images/player_hit_jab.webp",
             "blocked_image": "fight_prototype/images/player_jab_dodged.webp"
         }))
-        player.base_attacks.append(HOOK.copy({
-            "start_image": "fight_prototype/images/player_start_hook.webp",
-            "hit_image": "fight_prototype/images/player_hit_hook.webp",
-            "blocked_image": "fight_prototype/images/player_hook_dodged.webp"
-        }))
         player.base_attacks.append(KICK.copy({
             "start_image": "images/v2/kick1start.webp",
             "hit_image": "images/v2/kick2pic.webp",
             "blocked_image":  "images/v2/kick1pic.webp"
         }))
+
+        player.base_attacks.append(BODY_HOOK.copy({
+            "start_image": "fight_prototype/images/player_start_hook.webp",
+            "hit_image": "fight_prototype/images/player_hit_hook.webp",
+            "blocked_image": "fight_prototype/images/player_hook_dodged.webp"
+        }))
+
+        player.turn_moves.append(TURTLE)
+        player.turn_moves.append(END_TURN)
+
 
         # opponent.base_attacks.append(BODY_HOOK.copy(None))
         opponent.base_attacks.append(JAB.copy({

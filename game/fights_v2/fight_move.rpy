@@ -34,7 +34,7 @@ define BODY_HOOK = FightMove(
     stamina_cost=2,
     ideal_stance=FightStance.FORWARD,
     end_stance=FightStance.SOLID,
-    effect="|> Solid stance"
+    effect="Not Implimented Yet"
 )
 
 define JAB = FightMove(
@@ -44,7 +44,7 @@ define JAB = FightMove(
     stamina_cost=3,
     ideal_stance=FightStance.AGGRESSIVE,
     end_stance=FightStance.FORWARD,
-    effect="|> Forward Stance"
+    effect="Not Implimented Yet"
 )
 
 define HOOK = FightMove(
@@ -54,7 +54,7 @@ define HOOK = FightMove(
     stamina_cost=4,
     ideal_stance=FightStance.FORWARD,
     end_stance=FightStance.AGGRESSIVE,
-    effect="|> Aggressive Stance"
+    effect="Not Implimented Yet"
 )
 
 define KICK = FightMove(
@@ -64,7 +64,7 @@ define KICK = FightMove(
     stamina_cost=5,
     ideal_stance=FightStance.SOLID,
     end_stance=FightStance.FORWARD,
-    effect="|> Forward Stance"
+    effect="Not Implimented Yet"
 )
 
 define END_TURN = BaseMove(
@@ -73,7 +73,7 @@ define END_TURN = BaseMove(
     stamina_cost=0,
     ideal_stance=None,
     end_stance=None,
-    effect="|> Keep Current Stance"
+    effect="Not Implimented Yet"
 )
 
 define TURTLE = BaseMove(
@@ -82,5 +82,4 @@ define TURTLE = BaseMove(
     stamina_cost=4,
     ideal_stance=FightStance.SOLID,
     end_stance=FightStance.DEFENSIVE,
-    effect="|> Defensive Stance"
-)
+    effect="Not Implimented Yet"

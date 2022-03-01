@@ -140,7 +140,7 @@ screen action_info(move, player, opponent):
                     text "{{font=fonts/Montserrat-Bold.ttf}}Damage:{{/font}} {}".format(move.damage) xalign 0.5
 
             text move.description
-            text "{{font=fonts/Montserrat-Bold.ttf}}Ideal Stance Effect:{{/font}} {}".format(move.effect)
+            text "{{font=fonts/Montserrat-Bold.ttf}}Stance Bonus:{{/font}} {}".format(move.effect)
 
 
 screen health_bars(player, opponent):
