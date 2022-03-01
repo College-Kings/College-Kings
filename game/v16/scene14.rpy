@@ -1,4 +1,4 @@
-# SCENE 14: Nora & Ms Rose yoga in park scene
+# SCENE 14: Nora & Ms. Rose yoga in park scene
 # Locations: Park
 # Characters: MC (Outfit: GYM), NORA (Outfit: GYM), MS. ROSE (Outfit: GYM), PENELOPE (Outfit: 2)
 # Time: Afternoon
@@ -125,7 +125,7 @@ label v16s14:
         scene v16s14_6c # FPP. Same as v16s14_6a, Ms. Rose mouth closed, giving a sexy wink to MC (don't make it super obvious, Nora can't notice the wink)
         with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s14_6a
         with dissolve
@@ -721,7 +721,7 @@ label v16s14:
             scene v16s14_21d # FPP. Same as v16s14_21b, Nora looking mischievously at MC and smirking
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
         "It was painful":
             u "Um... I mean, it was kind of painful...?"
@@ -846,7 +846,7 @@ label v16s14:
     scene v16s14_26 # TPP. Show MC putting his phone away and turning back to face the girls, all smiling, mouths closed
     with dissolve
 
-    pause 0.75  
+    pause 0.75
 
     scene v16s14_21b
     with dissolve

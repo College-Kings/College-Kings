@@ -69,7 +69,7 @@ label v16s28:
 
     u "I think this idea is the strongest."
 
-    if v16s28_lindsey_pb_intereview_polly_choicelindsey_interview:  # Interview 
+    if v16s28_lindsey_pb_intereview_polly_choicelindsey_interview: # Interview 
 
         scene v16s28_3e # FPP. Same as v16s28_3d, Lindsey slight smile, mouth closed
         with dissolve
@@ -96,7 +96,7 @@ label v16s28:
 
         u "We can practice, don't worry."
     
-    else:  # Get Polly to endorse Lindsey 
+    else: # Get Polly to endorse Lindsey 
         scene v16s28_3e
         with dissolve
 
@@ -178,7 +178,7 @@ label v16s28:
 
     li "Thanks for sticking to this with me."
 
-    if lindsey.Relationship == Relationship.FWB: # TODO: Variable
+    if lindsey.relationship == Relationship.FWB: # TODO: Variable
 
         scene v16s28_5 # TPP. Lindsey pulling MC by his shirt, Lindsey sexy smile, MC slightly surprised, both mouths closed
         with dissolve
@@ -192,7 +192,7 @@ label v16s28:
 
         pause 0.75
 
-    elif lindsey.Relationship == Relationship.FRIEND:
+    elif lindsey.relationship == Relationship.FRIEND:
         
         scene v16s28_6 # TPP. Lindsey giving MC a hug
         with dissolve

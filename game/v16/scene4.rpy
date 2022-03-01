@@ -1,6 +1,6 @@
 # SCENE 4: Mc goes to bed WOLVES OR APES room (both)
 # Locations: Wolves and Apes room.
-# Characters: MC (Outfit: 1), Ms Rose (Outfit: 1)
+# Characters: MC (Outfit: 1), Ms. Rose (Outfit: 1)
 # Time: Night
 
 init python:

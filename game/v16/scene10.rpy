@@ -1,10 +1,10 @@
-# SCENE 10: Ms Rose Econ Class
-# Locations: Ms Rose's classroom
-# Characters: LAUREN (Outfit: 3), MC (Outfit: 5), Ms Rose (Outfit: 2)
+# SCENE 10: Ms. Rose Econ Class
+# Locations: Ms. Rose's classroom
+# Characters: LAUREN (Outfit: 3), MC (Outfit: 5), Ms. Rose (Outfit: 2)
 # Time: Morning (Tuesday)
 
 label v16s10: # Econ class
-    scene v16s10_1 # TPP Show MC entering Ms Rose's classroom along with several other students
+    scene v16s10_1 # TPP Show MC entering Ms. Rose's classroom along with several other students
     with dissolve
     
     pause 0.75
@@ -53,7 +53,7 @@ label v16s10: # Econ class
         scene v16s10_3a
         with dissolve
 
-        la "Not quite.  I was actually excited because I could sit next to you."
+        la "Not quite. I was actually excited because I could sit next to you."
 
         la "I can't stop thinking about us having sex. All the things you did to me. *Giggles*"
         
@@ -80,7 +80,7 @@ label v16s10: # Econ class
         u "Definitely. I'd like that a lot."
 
     # -Regardless of if MC and Lauren had sex after Lauren's party-
-    scene v16s10_4 # FPP Show Ms Rose at the front of the class, looking over the students, neutral expression, mouth open
+    scene v16s10_4 # FPP Show Ms. Rose at the front of the class, looking over the students, neutral expression, mouth open
     with dissolve
 
     ro "Okay, let's stop the chatter and settle down, please. We have a lot to go through today."
@@ -127,10 +127,10 @@ label v16s10: # Econ class
 
         u "(Haha, Lauren must be as bored as me.)"
 
-        scene v16s10_6a # FPP Same angle as 6, note from Lauren says, "Do you think Ms Rose and Mr Lee have ever…"
+        scene v16s10_6a # FPP Same angle as 6, note from Lauren says, "Do you think Ms. Rose and Mr. Lee have ever…"
         with dissolve
 
-        u "(Do you think Ms Rose and Mr Lee have ever...)"
+        u "(Do you think Ms. Rose and Mr. Lee have ever...)"
 
         menu:
             "Hooked up with each other":
@@ -157,12 +157,12 @@ label v16s10: # Econ class
         pause 0.75
 
     # -Regardless of which note was passed-
-    scene v16s10_4a # FPP Same angle as 4, Ms Rose looking directly at MC, she looks annoyed, mouth open
+    scene v16s10_4a # FPP Same angle as 4, Ms. Rose looking directly at MC, she looks annoyed, mouth open
     with dissolve
 
     ro "[name]!"
 
-    scene v16s10_4b # FPP Same angle as 4, Ms Rose looking directly at MC, she looks annoyed, mouth closed
+    scene v16s10_4b # FPP Same angle as 4, Ms. Rose looking directly at MC, she looks annoyed, mouth closed
     with dissolve
 
     u "Huh?"
@@ -199,12 +199,12 @@ label v16s10: # Econ class
         "Forty-two?":
             u "Uh, the answer is forty-two?"
 
-            scene v16s10_4c # FPP Same angle as 4, Ms Rose looking at MC, neutral expression, mouth open
+            scene v16s10_4c # FPP Same angle as 4, Ms. Rose looking at MC, neutral expression, mouth open
             with dissolve
 
             ro "Nice try. You were close. It's actually forty-seven."
 
-            scene v16s10_4d # FPP Same angle as 4, Ms Rose looking at MC, neutral expression, mouth closed
+            scene v16s10_4d # FPP Same angle as 4, Ms. Rose looking at MC, neutral expression, mouth closed
             with dissolve
 
             u "(How the fuck did I even get close?)"
@@ -212,7 +212,7 @@ label v16s10: # Econ class
             u "Right, yeah... Sorry."
 
         "I don't know":
-            u "Sorry, I don't know. I...  was thinking about something else."
+            u "Sorry, I don't know. I... was thinking about something else."
 
             scene v16s10_4a
             with dissolve
@@ -320,7 +320,7 @@ label v16s10: # Econ class
 
                 pause 0.75
             
-                scene v16s10_4e # FPP Same angle as 4, Ms Rose looking at MC with her eyebrow raised in curiousity, mouth closed
+                scene v16s10_4e # FPP Same angle as 4, Ms. Rose looking at MC with her eyebrow raised in curiousity, mouth closed
                 with dissolve
 
                 u "(Shit! Did she hear me?)"
@@ -362,7 +362,7 @@ label v16s10: # Econ class
 
     pause 0.75
 
-    scene v16s10_4f # FPP Same angle as 4, Ms Rose smiling out over the class, mouth open
+    scene v16s10_4f # FPP Same angle as 4, Ms. Rose smiling out over the class, mouth open
     with dissolve
 
     ro "See, that wasn't so bad, huh? You all survived."
@@ -378,7 +378,7 @@ label v16s10: # Econ class
 
     pause 0.75
 
-    if lauren.relationship >= Relationship.GIRLFRIEND or "v15_lauren" in sceneList:        
+    if lauren.relationship >= Relationship.GIRLFRIEND or "v15_lauren" in sceneList: 
         scene v16s10_11 # TPP MC walking toward the door to the classroom, Lauren catches him by grabbing his upper arm from behind
         with dissolve
 

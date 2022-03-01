@@ -105,7 +105,7 @@ label v16s7:
 
                     u "(Oh shit!)"
 
-            elif v15_lindsey_recording = 1: # Lindsey was not drunk, but MC passed a KCT Check
+            elif v15_lindsey_recording == 1: # Lindsey was not drunk, but MC passed a KCT Check
                 pa "What do you want me to say? That she gets everything handed to her?"
 
                 pa "Or that the only reason she wants to be President is because she can't afford tuition?"
@@ -123,7 +123,7 @@ label v16s7:
         scene v16s7_2e # TPP. The Random Characters are walking away smiling and now MC and Autumn are face to face looking at each other. Mc has no expression mouth is closed, Autumn has a concerned expression mouth is closed
         with dissolve
 
-    elif v15_chloe_lindseysabotage and v15s8_chloe_kiwii == chloe_board.add_subtask("Sabotage") and v15_chloe_postkiwii = chloe_board.selected_task == v15s8_chloe_kiwii:  # -if MC chose Embarrass Lindsey, Kiwii post announcement
+    elif v15_chloe_lindseysabotage and v15s8_chloe_kiwii == chloe_board.add_subtask("Sabotage") and v15_chloe_postkiwii = chloe_board.selected_task == v15s8_chloe_kiwii: # -if MC chose Embarrass Lindsey, Kiwii post announcement
         scene v16s7_1a # TPP. MC is still in the school hallway as v16s7_1 MC's phone vibrates and he pulls his phone from his pocket and looks at it
         with dissolve
 
@@ -222,7 +222,7 @@ label v16s7:
 
                     u "(Oh shit!)"
 
-            elif v15_lindsey_recording = 1: # Lindsey was not drunk, but MC passed a KCT Check
+            elif v15_lindsey_recording == 1: # Lindsey was not drunk, but MC passed a KCT Check
                 scene v16s7_4
                 with dissolve
 
@@ -297,7 +297,7 @@ label v16s7:
             scene v16s7_6
             with dissolve
 
-            u "I don't know.  People are more honest when they're drunk. Drunk words are sober thoughts, you know?"
+            u "I don't know. People are more honest when they're drunk. Drunk words are sober thoughts, you know?"
 
             scene v16s7_6a
             with dissolve

@@ -1,5 +1,5 @@
 # SCENE 17: Mc talks to Imre
-# Locations:  Street, bridge
+# Locations: Street, bridge
 # Characters: MC (Outfit: 5), IMRE (Outfit: 1)
 # Time: Tuesday
 
@@ -228,7 +228,7 @@ label v16s17: # 17) MC catches up to Imre
 
             u "No problem."
 
-            if joinapes: # -if Apes
+            if not joinwolves: # -if Apes
                 scene v16s17_4d
                 with dissolve
 

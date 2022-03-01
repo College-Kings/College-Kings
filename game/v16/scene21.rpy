@@ -7,7 +7,7 @@ label v16s21:
     scene v16s21_1 # TPP. MC walking along the street, slight smile, mouth closed
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v16s21_2 # TPP. MC walking along the street, different place now, slight smile, mouth closed
     with dissolve

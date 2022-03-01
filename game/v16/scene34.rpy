@@ -3,11 +3,6 @@
 # Characters: CHLOE (Outfit: 3), MC (Outfit: 9), ELIJAH (Outfit: x)
 # Time: Wednesday
 
-
-default v16s34_knock = False
-default v16s34_get_aggressive = False
-default v16s34_just_a_kiss = False
-
 label v16s34: # 34) Talk to Elijah about the cover with Chloe
     scene v16s34_1 # TPP Show MC walking along the school hallway
     with dissolve
@@ -87,7 +82,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
 
         "Just walk in":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v16s34_3c
             with dissolve
@@ -259,7 +254,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     menu:
         "Joke about Elijah":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ mock_elijah += 1 # PLACEHOLDER VARIABLE - NEED TO GO BACK AND INSERT THE VARIABLE AS FAR AS V1
 
             scene v16s34_7
@@ -311,7 +306,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
 
         "Compliment the idea":
-            $ addPoint("bro")
+            $ add_point(KCT.BRO)
 
             scene v16s34_7b
             with dissolve
@@ -496,21 +491,18 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     el "I want to lose my virginity to the most popular girl at SVC."
 
-
     scene v16s34_7b
     with dissolve
 
     u "(Is he being serious right now?)"
-
 
     scene v16s34_7a
     with dissolve
 
     el "I want Chloe to take my virginity."
 
-
     menu:
-        "Laugh histerically":
+        "Laugh hysterically":
             scene v16s34_7i
             with dissolve
 
@@ -570,7 +562,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
         "Get aggressive":
             $ v16s34_get_aggressive = True
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v16s34_7b
             with dissolve
@@ -837,7 +829,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     menu:
         "It's just a kiss":
-            $ addPoint("tm")
+            $ add_point(KCT.TROUBLEMAKER)
             $ v16s34_just_a_kiss = True
 
             scene v16s34_13b
@@ -865,7 +857,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
 
         "Tell him to fuck off":
-            $ addPoint ("bf")
+            $ add_point(KCT.BOYFRIEND)
 
             scene v16s34_13b
             with dissolve

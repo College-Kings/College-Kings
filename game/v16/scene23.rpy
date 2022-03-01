@@ -3,11 +3,6 @@
 # Characters: MC (Outfit: 5), AMBER (Outfit: Stripper Outfit), DRUNK SLEAZE (Outfit: 1)
 # Time: Tuesday night
 
-
-default v16s23_mention_bills = False  # TODO: Variable
-default v16s23_mention_laptop = False # TODO: Variable
-default v16s23_support_amber = False # TODO: Variable
-
 label v16s23: # 23) Meet Amber at strip club
     # -MC arrives at the front entrance of The Blue Lounge to see Amber smoking a cigarette, wearing a flirty stripper outfit 
     # (very close to being nude but please remember there are what we call "incels" who will not appreciate their love interest being fully nude for others :))-

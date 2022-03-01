@@ -334,7 +334,7 @@ label v16s22:
 
                 pause 0.75
 
-                if amber.relationship >= Relationship.FRIEND and kct == "confident":  # TODO: Variable  # -if AmberRS AND AmberKCT amber passed (I think it's KCT Confident, double check w/Condy)
+                if amber.relationship >= Relationship.FRIEND and kct == "confident": # TODO: Variable  # -if AmberRS AND AmberKCT amber passed (I think it's KCT Confident, double check w/Condy)
 
                     scene v16s22_9c # FPP. Show just Amber with no expression, mouth is open, looking at MC [LEWS STAFF ROOM]
                     with dissolve
@@ -993,7 +993,7 @@ label v16s22:
 
     # -Regardless of all-
 
-    if amber.relationship >= Relationship.FRIEND and sex_with_amber_before_laurens_Party:  #TODO: Variable # -if AmberRS (at least one sex scene with Amber before Lauren's Halloween party) [Checkpoint 1.1] Her sex scenes might need variables
+    if amber.relationship >= Relationship.FRIEND and sex_with_amber_before_laurens_Party: #TODO: Variable # -if AmberRS (at least one sex scene with Amber before Lauren's Halloween party) [Checkpoint 1.1] Her sex scenes might need variables
 
         scene v16s22_9
         with dissolve
@@ -1113,7 +1113,7 @@ label v16s22:
 
         ### ERROR: [End of Checkpoint 1.1. Continue to Checkpoint 2]
 
-    elif amber.relationship >= Relationship.FRIEND:    # -if AmberFriend [Checkpoint 1.2]
+    elif amber.relationship >= Relationship.FRIEND: # -if AmberFriend [Checkpoint 1.2]
 
         scene v16s22_9
         with dissolve

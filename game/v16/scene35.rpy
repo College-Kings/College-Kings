@@ -8,7 +8,7 @@ label v16s35:
     play sound "sounds/dooropen.mp3"
 
     scene v16s35_1 # TPP. Show MC walking into the store with all the spa items, MC slight smile, mouth closed.
-    with fade (1,0,1)
+    with fade
 
     u "(Okay, spa supplies...)"
 
@@ -17,7 +17,7 @@ label v16s35:
     scene v16s35_2 # TPP. Show MC walking through the store, MC slight smile, mouth closed.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v16s35_3 # FPP. MC looking at the part of the store with massage oil and face mask.
     with dissolve
@@ -60,12 +60,12 @@ label v16s35:
     scene v16s35_6 # TPP. Show MC approaching the cashier with the items, both slight smile, mouth closed.
     with dissolve
 
-    pause 0.5
+    pause 0.75
 
     scene v16s35_7 # TPP. Close up of MC's hand putting the money on the counter
-    with dissolve 
+    with dissolve
 
-    pause 0.5 
+    pause 0.75
 
     scene v16s35_7a # TPP. Close up of the Cashier handing MC the bag and MC grabbing it.
     with dissolve

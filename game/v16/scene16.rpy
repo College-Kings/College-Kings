@@ -48,7 +48,7 @@ label v16s16:
     with dissolve
 
     menu:
-        "Nah, it's fine.":
+        "Nah, it's fine":
             $ add_point(KCT.BRO)
             scene v16s16_5a
             with dissolve
@@ -104,7 +104,7 @@ label v16s16:
             pe "Imre... You tried to shove a piece of meat into her mouth."
 
             scene v16s16_5b # FPP. MC looking at Imre, Imre looking at Penelope, Imre neutral face, mouth closed.
-            with dissolve 
+            with dissolve
 
             imre "It was just a joke! I was trying to flirt..."
 
@@ -122,7 +122,7 @@ label v16s16:
             with dissolve
 
             menu:
-                "It's not over yet.":
+                "It's not over yet":
                     $ add_point(KCT.BRO)
                     scene v16s16_5a
                     with dissolve
@@ -188,7 +188,7 @@ label v16s16:
 
                     imre "Thanks, [name]."
 
-                "Yeah, its over.":
+                "Yeah, its over":
                     $ add_point(KCT.TROUBLEMAKER)
                     scene v16s16_5a
                     with dissolve
@@ -274,7 +274,7 @@ label v16s16:
                         scene v16s16_3f # FPP. MC looking at Penelope, Penelope (flirty, mouth closed) looking at MC
                         with dissolve
 
-                        pause .75
+                        pause 0.75
 
                         scene v16s16_5c
                         with dissolve
@@ -365,10 +365,10 @@ label v16s16:
     scene v16s16_11a # TPP. Shot of the targets, the second one getting hit.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v16s16_10
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -377,7 +377,7 @@ label v16s16:
     scene v16s16_11b # TPP. Shot of the tragets, the third one getting hit.
     with dissolve
 
-    pause 0.57
+    pause 0.757
 
     scene v16s16_9b # FPP. Show Imre cheering with the gun in one hand, slight smile, mouth open.
     with dissolve
@@ -395,7 +395,7 @@ label v16s16:
     tb "Easy on the cussin' there, sailor! And put down that rifle for me before you hurt yourself."
 
     scene v16s16_1a # TPP. Show MC and Penelope standing together by the shooting range Imre standing across from them and holding a huge teddy bear, Karen gone. All slight smile, mouth close.
-    with fade(1,0,1)
+    with fade
 
     pause 0.75
 
@@ -420,7 +420,7 @@ label v16s16:
     tb "Of course! Anyone else want to pull my trigger?"
 
     scene v16s16_3g # FPP. MC looking at Penelope (slight smile, mouth open) looking at MC
-    with dissolve 
+    with dissolve
 
     pe "Um... *Giggles*"
 
@@ -502,7 +502,7 @@ label v16s16:
     if v16_win_range: # TODO: Variable
 
         scene v16s16_9e
-        with dissolve 
+        with dissolve
 
         pe "Ahh! You actually did it!"
 
@@ -534,7 +534,7 @@ label v16s16:
             scene v16s16_7b # TPP. Show MC and Penelope kissing.
             with dissolve
 
-            pause .75
+            pause 0.75
             
             scene v16s16_9d
             with dissolve
@@ -582,7 +582,7 @@ label v16s16:
         u "(Eh, that's debatable.)"
 
         scene v16s16_8d # FPP.MC at the SHOOTING RANGE looking at the Bullseye (slight smile, mouth open) looking at MC while placing a heart candy on the table
-        with dissolve 
+        with dissolve
 
         tb "And here's what I have left. It's a love heart!"
 
@@ -626,7 +626,7 @@ label v16s16:
         scene v16s16_9f # FPP. Penelope (smiling, mouth closed) standing at the SHOOTING RANGE eating the candy.
         with dissolve
 
-        pause .75
+        pause 0.75
 
         scene v16s16_9e
         with dissolve
@@ -704,7 +704,7 @@ label v16s16:
     pe "I think she went to the bathroom over here..."
 
     scene v16s16_15 # TPP. MC and Penelope walking to the bathroom, Imre beside them (holding the prize teddy bear he won), slight smile, mouth closed.
-    with fade (1,0,1)
+    with fade
 
     pause 0.75
 
@@ -724,7 +724,7 @@ label v16s16:
     pause 0.75
 
     scene v16s16_18a # TPP. Close up of Imre's face, Imre sad, mouth closed.
-    with disoslve
+    with dissolve
 
     pause 0.75
 
@@ -781,7 +781,7 @@ label v16s16:
     with dissolve
 
     menu:
-        "Try to Calm Imre.":
+        "Try to Calm Imre":
             $ add_point(KCT.BRO)
             scene v16s16_19e
             with dissolve
@@ -798,7 +798,7 @@ label v16s16:
 
             pe "If that's what she wants, Imre... Let her do it. Let her learn from this mistake. You deserve better than that."
 
-        "Blame Karen, not him.":
+        "Blame Karen, not him":
             $ add_point(KCT.TROUBLEMAKER)
             scene v16s16_19e
             with dissolve
@@ -828,10 +828,10 @@ label v16s16:
     scene v16s16_20 # TPP. Imre storming away from MC and Penelope (towards the PIER ENTRANCE), Imre angry, mouth closed, MC and Penelope, both neutral face, mouth closed.
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v16s16_21 # TPP. Show Imre dunking the bear he won head first into the trash can, Imre angry, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 

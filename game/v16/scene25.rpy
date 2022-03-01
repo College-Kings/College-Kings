@@ -9,7 +9,7 @@ label v16s25:
         play sound "sounds/dooropen.mp3"
 
         scene v16s25_1 # TPP. Show MC entering his Wolves Frat Room, slight smile, mouth closed.
-        with fade(1,0,1)
+        with fade
 
         pause 0.75
 
@@ -117,7 +117,7 @@ label v16s25:
             scene v16s25_7b # MC looking at his phone, On the phone a video chat with Emily, Emily wears a robe, Show MC's face in the corner small like its a face time mouth closed, Emily blushing and biting her lip.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v16s25_7
             with dissolve
@@ -140,7 +140,7 @@ label v16s25:
             em "You'll want to see this on a bigger screen. Trust me. *Giggles*"
             
             menu:
-                "Find a laptop.": # [Checkpoint 2.1]
+                "Find a laptop": # [Checkpoint 2.1]
                     $ add_point(KCT.BOYFRIEND)
                     scene v16s25_7
                     with dissolve
@@ -182,7 +182,7 @@ label v16s25:
                             scene v16s25_11a # TPP. Just the laptop desktop screen so we can use it for the Apes version too.
                             with dissolve
 
-                            u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
+                            u "(Haha, no way... I'm in! Are we really that predictable guys?)"
 
                         "i<3chloe":
                             scene v16s25_11b # TPP. Just the laptop password screen with a red exclamation to show the password is wrong.
@@ -198,7 +198,7 @@ label v16s25:
                                     scene v16s25_11a
                                     with dissolve
 
-                                    u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
+                                    u "(Haha, no way... I'm in! Are we really that predictable guys?)"
                                 "696969":
                                     scene v16s25_11b
                                     with dissolve
@@ -213,7 +213,7 @@ label v16s25:
                                             scene v16s25_11a
                                             with dissolve
 
-                                            u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
+                                            u "(Haha, no way... I'm in! Are we really that predictable guys?)"
                                             
                         "696969":
                             scene v16s25_11b
@@ -229,7 +229,7 @@ label v16s25:
                                     scene v16s25_11a
                                     with dissolve
 
-                                    u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
+                                    u "(Haha, no way... I'm in! Are we really that predictable guys?)"
                                 "i<3chloe":
                                     scene v16s25_11b
                                     with dissolve
@@ -237,14 +237,14 @@ label v16s25:
                                     u "(Come on...)"
 
                                     scene v16s25_11 
-                                    with dissolve                                        
+                                    with dissolve
                                     
                                     menu:
                                         "boobiez123:":
                                             scene v16s25_11a
                                             with dissolve
 
-                                            u "(Haha, no way...  I'm in! Are we really that predictable guys?)"      
+                                            u "(Haha, no way... I'm in! Are we really that predictable guys?)"
                     play sound "sounds/doorclosed.mp3"
 
                     scene v16s25_1c # TPP. Show MC closing the door to his Wolves Room with the laptop in his other arm, slight smile, mouth closed.
@@ -295,22 +295,22 @@ label v16s25:
                     pause 0.75
 
                     # TR EDIT
-                    scene v16s25_27    # TPP. Laptop screen, Video chat overlay with Emily, Emily slight smile, looking at camera, arching her back a little (pushing out chest/boobs) as she turns her body away from the camera)/MC mouth closed, smiling, happy.
+                    scene v16s25_27 # TPP. Laptop screen, Video chat overlay with Emily, Emily slight smile, looking at camera, arching her back a little (pushing out chest/boobs) as she turns her body away from the camera)/MC mouth closed, smiling, happy.
                     with dissolve
 
                     pause 0.75
 
-                    scene v16s25_27a   # TPP. Laptop screen, Video chat overlay with Emily, Emily bending over at the hips, pushing her nude ass (a slight view of her pussy is optional at Mozzart's direction) out a little towards the camera, while pulling up the bottoms of lingerie1/MC mouth closed, smiling, surprised.
+                    scene v16s25_27a # TPP. Laptop screen, Video chat overlay with Emily, Emily bending over at the hips, pushing her nude ass (a slight view of her pussy is optional at Mozzart's direction) out a little towards the camera, while pulling up the bottoms of lingerie1/MC mouth closed, smiling, surprised.
                     with dissolve
 
                     pause 0.75
 
-                    scene v16s25_27b   # TPP. Laptop screen, Video chat overlay with Emily, Emily slight smile, looking at camera over shoulder, while pulling the strap to her bra of lingerie1 over her shoulder/MC mouth closed, smiling, happy.
+                    scene v16s25_27b # TPP. Laptop screen, Video chat overlay with Emily, Emily slight smile, looking at camera over shoulder, while pulling the strap to her bra of lingerie1 over her shoulder/MC mouth closed, smiling, happy.
                     with dissolve
 
                     pause 0.75
 
-                    scene v16s25_27c   # TPP. Laptop screen, Video chat overlay with Emily, Emily posing sexy for the camera, slight smile, mouth closed//MC mouth closed, smiling, happy.
+                    scene v16s25_27c # TPP. Laptop screen, Video chat overlay with Emily, Emily posing sexy for the camera, slight smile, mouth closed//MC mouth closed, smiling, happy.
                     with dissolve
 
                     pause 0.75
@@ -323,7 +323,7 @@ label v16s25:
                     em "Do you like it?"
                     
                     menu:
-                        "Like it.":
+                        "Like it":
                             $ add_point(KCT.BRO)
                             scene v16s25_11g # TPP. Laptop screen, Video chat overlay with Emily (lingerie1), Emily close to the camera with one hand on her boob, Emily biting her lip/ MC mouth open, smiling, happy.
                             with dissolve
@@ -347,7 +347,7 @@ label v16s25:
 
                             em "Do as you please."
                             
-                        "Love it.":
+                        "Love it":
                             $ add_point(KCT.BOYFRIEND)
                             scene v16s25_11g
                             with dissolve
@@ -376,10 +376,10 @@ label v16s25:
 
                             em "Do as you please."
 
-                        "Not my favorite.":
+                        "Not my favorite":
                             $ add_point(KCT.TROUBLEMAKER)
                             scene v16s25_11g
-                            with dissolve 
+                            with dissolve
 
                             u "Hmm, it's cute, I guess. Just not my favorite."
 
@@ -404,7 +404,7 @@ label v16s25:
 
                     # OLD scene v16s25_11q # TPP. Laptop Screen, Video Chat overlay with Emily, Emily in the first set of lingerie turned around standing up straight with one hand on her butt as the bottom piece of the lingerie falls to the floor, Emily now naked, 
                     # NEW 
-                    scene v16s25_11q # TPP.  Close up of MC laying in bed ,dark, looking at the laptop screen, smiling, enjoying what he sees on the screen. The light from the laptop shines on MC's face.
+                    scene v16s25_11q # TPP. Close up of MC laying in bed ,dark, looking at the laptop screen, smiling, enjoying what he sees on the screen. The light from the laptop shines on MC's face.
                     with dissolve
 
                     pause 0.75
@@ -415,7 +415,7 @@ label v16s25:
                     pause 0.75
 
                     scene v16s25_11r # TPP. Laptop Screen, Video Chat overlay with Emily, Emily putting on the top of lingerie2 on while winking at MC on the chat, Emily smirking, mouth closed/ MC, mouth closed, smiling, happy..
-                    with dissolve  
+                    with dissolve
 
                     pause 0.75
 
@@ -430,9 +430,9 @@ label v16s25:
                     em "What about this one?"
 
                     menu:
-                        "Like it.":
+                        "Like it":
                             $ add_point(KCT.BRO)
-                            scene v16s25_11m  # TPP. Laptop Screen, Video chat overlay with Emily, Emily close to her screen using her arms to push up her boobs, Emily biting her lip/ MC, mouth open, smiling.
+                            scene v16s25_11m # TPP. Laptop Screen, Video chat overlay with Emily, Emily close to her screen using her arms to push up her boobs, Emily biting her lip/ MC, mouth open, smiling.
                             with dissolve
 
                             u "Yeah, that one I like. It compliments your body really well."
@@ -452,7 +452,7 @@ label v16s25:
 
                             em "*Laughs* Perfect."
 
-                        "Love it.":
+                        "Love it":
                             $ add_point(KCT.BOYFRIEND)
                             scene v16s25_11m
                             with dissolve
@@ -494,7 +494,7 @@ label v16s25:
 
                             em "*Laughs* Perfect."
                         
-                        "Not a fan.":
+                        "Not a fan":
                             $ add_point(KCT.TROUBLEMAKER)
                             scene v16s25_11m
                             with dissolve
@@ -579,7 +579,7 @@ label v16s25:
 
                     scene v16s25_1e # TPP. In his wolves frat room closing the door to his room in just his underwear, slight smile, mouth closed.
                     with dissolve
-                "I'm too tired.": # [Checkpoint 2.2]
+                "I'm too tired": # [Checkpoint 2.2]
                     scene v16s25_7
                     with dissolve
 
@@ -613,8 +613,8 @@ label v16s25:
                     em "Goodnight, baby. I love you."
 
                     menu:
-                        "I love you, too.":
-                            $ add_point(KCT.BOYFRIENDS)
+                        "I love you, too":
+                            $ add_point(KCT.BOYFRIEND)
                             scene v16s25_7
                             with dissolve
 
@@ -625,7 +625,7 @@ label v16s25:
 
                             pause 0.75
 
-                        "Hang up.":
+                        "Hang up":
                             $ add_point(KCT.TROUBLEMAKER)
 
                             play sound "sounds/hangup.mp3"
@@ -650,7 +650,7 @@ label v16s25:
         play sound "sounds/dooropen.mp3"
 
         scene v16s25_14 # TPP. Show MC entering his Apes Frat Room, slight smile, mouth closed.
-        with fade(1,0,1)
+        with fade
 
         pause 0.75
 
@@ -709,7 +709,7 @@ label v16s25:
                 u "(If anyone can handle getting harassed by douchebags every night, it's Amber...)"
 
                 u "(I'm glad she's happy.)"
-            elif amber.relationship == Relationship.Friend and v16_tell_amber_to_quit_stripping:  # TODO: Variable #Placeholder:
+            elif amber.relationship == Relationship.Friend and v16_tell_amber_to_quit_stripping: # TODO: Variable #Placeholder:
                 scene v16s25_17
                 with dissolve
 
@@ -758,7 +758,7 @@ label v16s25:
             scene v16s25_20b # MC looking at his phone, On the phone a video chat with Emily, Emily wears a robe, Show MC's face in the corner small like its a face time mouth closed, Emily blushing and biting her lip.
             with dissolve
 
-            pause 0.75 
+            pause 0.75
 
             scene v16s25_20
             with dissolve
@@ -781,7 +781,7 @@ label v16s25:
             em "You'll want to see this on a bigger screen. Trust me. *Giggles*"
             
             menu:
-                "Find a laptop.": # [Checkpoint 2.1]
+                "Find a laptop": # [Checkpoint 2.1]
                     $ add_point(KCT.BOYFRIEND)
                     scene v16s25_20
                     with dissolve
@@ -803,7 +803,7 @@ label v16s25:
                     scene v16s25_21 # TPP. Show MC walking into the Apes Frat Living Room only in his underwear, slight smile, mouth closed.
                     with dissolve
 
-                    pause 0.5
+                    pause 0.75
 
                     scene v16s25_22 # TPP. Close up of a laptop on the couch in the Apes Frat Living Room.
                     with dissolve
@@ -823,7 +823,7 @@ label v16s25:
                             scene v16s25_11a
                             with dissolve
 
-                            u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
+                            u "(Haha, no way... I'm in! Are we really that predictable guys?)"
                         "i<3chloe":
                             scene v16s25_11b
                             with dissolve
@@ -838,7 +838,7 @@ label v16s25:
                                     scene v16s25_11a
                                     with dissolve
 
-                                    u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
+                                    u "(Haha, no way... I'm in! Are we really that predictable guys?)"
                                 "696969":
                                     
                                     scene v16s25_11b
@@ -854,7 +854,7 @@ label v16s25:
                                             scene v16s25_11a
                                             with dissolve
 
-                                            u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
+                                            u "(Haha, no way... I'm in! Are we really that predictable guys?)"
                                             
                         "696969":
                             scene v16s25_11b
@@ -870,7 +870,7 @@ label v16s25:
                                     scene v16s25_11a
                                     with dissolve
 
-                                    u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
+                                    u "(Haha, no way... I'm in! Are we really that predictable guys?)"
                                 "i<3chloe":
                                     scene v16s25_11b
                                     with dissolve
@@ -885,7 +885,7 @@ label v16s25:
                                             scene v16s25_11a
                                             with dissolve
 
-                                            u "(Haha, no way...  I'm in! Are we really that predictable guys?)"
+                                            u "(Haha, no way... I'm in! Are we really that predictable guys?)"
 
                     play sound "sounds/doorclosed.mp3"
 
@@ -963,7 +963,7 @@ label v16s25:
                     em "Do you like it?"
 
                     menu:
-                        "Like it.":
+                        "Like it":
                             $ add_point(KCT.BRO)
                             scene v16s25_11g
                             with dissolve
@@ -987,7 +987,7 @@ label v16s25:
 
                             em "Do as you please."
                             
-                        "Love it.":
+                        "Love it":
                             $ add_point(KCT.BOYFRIEND)
                             scene v16s25_11g
                             with dissolve
@@ -1014,10 +1014,10 @@ label v16s25:
 
                             em "Do as you please."
 
-                        "Not my favorite.":
+                        "Not my favorite":
                             $ add_point(KCT.TROUBLEMAKER)
                             scene v16s25_11g
-                            with dissolve 
+                            with dissolve
 
                             u "Hmm, it's cute, I guess. Just not my favorite."
 
@@ -1049,7 +1049,7 @@ label v16s25:
                     pause 0.75
 
                     scene v16s25_11r
-                    with dissolve 
+                    with dissolve
 
                     pause 0.75
 
@@ -1064,7 +1064,7 @@ label v16s25:
                     em "What about this one?"
 
                     menu:
-                        "Like it.":
+                        "Like it":
                             $ add_point(KCT.BRO)
                             scene v16s25_11m
                             with dissolve
@@ -1086,7 +1086,7 @@ label v16s25:
 
                             em "*Laughs* Perfect."
 
-                        "Love it.":
+                        "Love it":
                             $ add_point(KCT.BOYFRIEND)
                             scene v16s25_11m
                             with dissolve
@@ -1127,7 +1127,7 @@ label v16s25:
                             with dissolve
 
                             em "*Laughs* Perfect."
-                        "Not a fan.":
+                        "Not a fan":
                             $ add_point(KCT.TROUBLEMAKER)
                             scene v16s25_11m
                             with dissolve
@@ -1213,7 +1213,7 @@ label v16s25:
                     scene v16s25_14e # TPP. In his Apes frat room closing the door to his room in just his underwear, slight smile, mouth closed.
                     with dissolve
                 
-                "I'm too tired.": # [Checkpoint 2.2]
+                "I'm too tired": # [Checkpoint 2.2]
                     scene v16s25_20
                     with dissolve
 
@@ -1247,8 +1247,8 @@ label v16s25:
                     em "Goodnight, baby. I love you."
 
                     menu:
-                        "I love you, too.":
-                            $ add_point(KCT.BOYFRIENDS)
+                        "I love you, too":
+                            $ add_point(KCT.BOYFRIEND)
                             scene v16s25_20
                             with dissolve
 
@@ -1257,7 +1257,7 @@ label v16s25:
                             scene v16s25_20b
                             with dissolve
 
-                        "Hang up.":
+                        "Hang up":
                             $ add_point(KCT.TROUBLEMAKER)
 
                             play sound "sounds/hangup.mp3"
@@ -1265,7 +1265,7 @@ label v16s25:
                             scene v16s25_20
                             with dissolve
 
-                            pause .05
+                            pause 0.75
 
                             scene v16s25_17
                             with dissolve

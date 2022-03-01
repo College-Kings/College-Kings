@@ -461,3 +461,10 @@ default v16s38tippped_driver = False
 default baby = "Baby" # Used to store the player designated name of the baby
 default v16food_critic = False
 default v16s39aubrey_date_points = 0
+
+default v16s34_knock = False
+default v16s34_get_aggressive = False
+default v16s34_just_a_kiss = False
+default v16s23_mention_bills = False  # TODO: Variable
+default v16s23_mention_laptop = False # TODO: Variable
+default v16s23_support_amber = False # TODO: Variable

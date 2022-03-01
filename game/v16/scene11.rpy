@@ -20,7 +20,7 @@ label v16s11:
     pause 0.75
 
     scene v16s11_3 # FPP. Walking down the hallway, MC looking at Riley, Riley looking at MC, Riley slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     u "Hey, Riley. How are you?"
 
@@ -119,12 +119,12 @@ label v16s11:
     pause 0.75
 
     scene v16s11_5 # FPP. MC looking at the pinboard. 
-    with dissolve 
+    with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v16s11_6 # FPP. At the pinboard. MC looking at Riley, Riley looking at the Newspaper sign up sheet, Riley slight smile, mouth open.
-    with dissolve 
+    with dissolve
 
     ri "Oh, wait... Look at this."
 
@@ -284,7 +284,7 @@ label v16s11:
             with dissolve
 
     scene v16s11_6i # FPP. At the pinboard, MC looking at Riley, Riley leaning over, using a PEN to sign her name, slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -337,18 +337,18 @@ label v16s11:
     scene v16s11_10 # TPP. Show Chloe walking up to MC and Riley, all slight smile, mouth closed
     with dissolve
 
-    pause 0.75 
+    pause 0.75
 
     scene v16s11_11 # FPP. At the pinboard, MC looking at Chloe, Chloe looking at MC, Chloe slight smile, mouth closed.
     with dissolve
 
     cl "Hey guys!"
 
-    if chloe.relationship >= Relationship.GIRLFRIEND:  
-        play sound "sounds/kiss.mp3"  
+    if chloe.relationship >= Relationship.GIRLFRIEND: 
+        play sound "sounds/kiss.mp3"
 
         scene v16s11_11a # TPP. At the pinboard, MC looking at Chloe, Chloe leaning forward and kissing MC on the cheek.
-        with dissolve  
+        with dissolve
 
         if riley.relationship >= Relationship.LIKES: ###???
             scene v16s11_12 # TPP. Close up of Riley facing MC and Chloe but her she looks away from seeing MC and Chloe kiss.
@@ -447,8 +447,8 @@ label v16s11:
 
     u "(I think Riley's over the Chicks at the moment.)"
 
-# -if Announcement, and Chloe and Lindsey went to Mr Lee's office
-    if v15_lindsey_recording > 0:  ### VERIFY This gets us annoucenment (and I think that will flow to Mr. Lee's office, otherwise we can add sceen8 to sceneList and check for that)
+# -if Announcement, and Chloe and Lindsey went to Mr. Lee's office
+    if v15_lindsey_recording > 0: ### VERIFY This gets us annoucenment (and I think that will flow to Mr. Lee's office, otherwise we can add sceen8 to sceneList and check for that)
         scene v16s11_11d
         with dissolve
 
@@ -488,7 +488,7 @@ label v16s11:
         scene v16s11_11d
         with dissolve
 
-        u "Ha, wow. So, Mr Lee's bonsai tree behavioral therapy sessions have officially begun, huh?"
+        u "Ha, wow. So, Mr. Lee's bonsai tree behavioral therapy sessions have officially begun, huh?"
 
         scene v16s11_11f
         with dissolve
@@ -555,12 +555,12 @@ label v16s11:
         pause 0.75
 
         scene v16s11_16 # TPP. MC pulling his phone out of his pocket, [don't show Chloe so can be reused], slight smile, mouth closed.
-        with dissolved 
+        with dissolve
 
         pause 0.75
 
         scene v16s11_16a # TPP. MC looking at his phone, [don't show Chloe so can be reused], slight smile, mouth closed.
-        with dissolve 
+        with dissolve
         
         ### check queue
         

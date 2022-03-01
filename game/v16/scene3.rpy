@@ -401,7 +401,7 @@ label v16s3:
         scene v16s3_5e
         with dissolve
 
-        u "Haha, yup!  I've got two fists and a couple of brain cells left... I'll be fine."
+        u "Haha, yup! I've got two fists and a couple of brain cells left... I'll be fine."
 
         scene v16s3_5d
         with dissolve

@@ -4,7 +4,6 @@
 # Time: Morning
 
 init python:
-        
     def v16s25a_reply_thankyou():
         riley.messenger.newMessage("Thank you! :)")
     def v16s25a_reply_sorry():
@@ -15,7 +14,6 @@ init python:
         riley.messenger.newMessage(":P")
 
 label v16s25a:
-    
     scene sleep_transition_fast # Ignore animation 
     with fade
 
@@ -45,13 +43,13 @@ label v16s25a:
 
         $ riley.messenger.newMessage("Guess who got the newspaper job?", force_send=True)
         $ riley.messenger.newMessage("MEEEEEEEEE!")
-        $ riley.messenger.addReply("Haha, congrats!", v16s25a_reply_thankyou)        
+        $ riley.messenger.addReply("Haha, congrats!", v16s25a_reply_thankyou) 
         
         if v16s11_sign_up: # TODO: Variable
-            $ riley.messenger.addReply("What about me? Do you know?", v16s25a_reply_sorry)            
+            $ riley.messenger.addReply("What about me? Do you know?", v16s25a_reply_sorry) 
             $ riley.messenger.addReply("Ouch. There go my journalist dreams :(")
-            $ riley.messenger.addReply("Ah, nice. I was kind of hoping I didn't get it, haha.", v16s25a_reply_assistant)            
-            $ riley.messenger.addReply("Jeez, the power is already going straight to your head...", v16s25a_reply_tongue_emoji)            
+            $ riley.messenger.addReply("Ah, nice. I was kind of hoping I didn't get it, haha.", v16s25a_reply_assistant) 
+            $ riley.messenger.addReply("Jeez, the power is already going straight to your head...", v16s25a_reply_tongue_emoji) 
 
         scene v16s25a_1a
         with dissolve
@@ -66,22 +64,22 @@ label v16s25a:
         scene v16s25a_4 # TPP. In wolves room. Show MC standing in the middle of his room putting on his shirt for the day, face obscured by the shirt.
         with dissolve
 
-        pause 0.75 
+        pause 0.75
         
         play sound "sound/vibrate.mp3"
 
         scene v16s25a_4a # TPP. In wolves room. Show MC standing in the middle of his room looking at his phone, slight smile, mouth closed. 
-        with dissolve 
+        with dissolve
 
-        pause 0.75 
+        pause 0.75
 
         scene v16s25a_4b # TPP. In wolves room. Show MC with the phone to his ear, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         pause 0.75
 
         scene v16s25a_5 # TPP. Aubrey in the Chicks house in her room on the phone, slight smile, mouth open.
-        with dissolve 
+        with dissolve
 
         au "Hey, [name]. Did you guys have a power outage last night in the dorms?"
 
@@ -196,7 +194,7 @@ label v16s25a:
             play sound "sounds/rejectcall.mp3"
 
         scene v16s25a_4c # TPP. In wolves room. Show MC standing in the middle of his room putting on his pants for the day, slight smile, mouth closed. 
-        with dissolve 
+        with dissolve
 
         pause 0.75
 
@@ -231,13 +229,13 @@ label v16s25a:
 
         $ riley.messenger.newMessage("Guess who got the newspaper job?", force_send=True)
         $ riley.messenger.newMessage("MEEEEEEEEE!")
-        $ riley.messenger.addReply("Haha, congrats!", v16s25a_reply_thankyou)        
+        $ riley.messenger.addReply("Haha, congrats!", v16s25a_reply_thankyou) 
         
         if v16s11_sign_up: # TODO: Variable
-            $ riley.messenger.addReply("What about me? Do you know?", v16s25a_reply_sorry)            
+            $ riley.messenger.addReply("What about me? Do you know?", v16s25a_reply_sorry) 
             $ riley.messenger.addReply("Ouch. There go my journalist dreams :(")
-            $ riley.messenger.addReply("Ah, nice. I was kind of hoping I didn't get it, haha.", v16s25a_reply_assistant)            
-            $ riley.messenger.addReply("Jeez, the power is already going straight to your head...", v16s25a_reply_tongue_emoji)            
+            $ riley.messenger.addReply("Ah, nice. I was kind of hoping I didn't get it, haha.", v16s25a_reply_assistant) 
+            $ riley.messenger.addReply("Jeez, the power is already going straight to your head...", v16s25a_reply_tongue_emoji) 
 
         scene v16s25a_8a
         with dissolve
@@ -257,17 +255,17 @@ label v16s25a:
         play sound "sound/vibrate.mp3"
 
         scene v16s25a_11a # TPP. In Apes room. Show MC standing in the middle of his room looking at his phone, slight smile, mouth closed. 
-        with dissolve 
+        with dissolve
 
         pause 0.75
 
         scene v16s25a_11b # TPP. In Apes room. Show MC with the phone to his ear, slight smile, mouth closed.
-        with dissolve 
+        with dissolve
 
         pause 0.75
 
         scene v16s25a_5 # TPP. Aubrey in the Chicks house in her room on the phone, slight smile, mouth open.
-        with dissolve 
+        with dissolve
 
         au "Hey, [name]. Did you guys have a power outage last night in the dorms?"
 
@@ -382,12 +380,12 @@ label v16s25a:
             play sound "sounds/rejectcall.mp3"
 
         scene v16s25a_11c # TPP. In Apes room. Show MC standing in the middle of his room putting on his pants for the day, slight smile, mouth closed. 
-        with dissolve 
+        with dissolve
 
         pause 0.75
 
         scene v16s25a_12 # TPP. In Apes room, show MC looking at himself in the Mirror pointing finger guns and winking, slight smile, mouth open.
-        with dissol
+        with dissolve
         
         u "Let's get this day started, shall we?"
 

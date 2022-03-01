@@ -3,11 +3,8 @@
 # Characters: MC (Outfit: 9)
 # Time: Afternoon
 
-
 label v16s32:
-
-    if joinapes: # -if Apes
-
+    if not joinwolves: # -if Apes
         scene v16s32_1 # TPP. MC enters his bedroom, sitting on the edge of his bed, no expression, mouth is closed
         with dissolve
 
@@ -19,7 +16,6 @@ label v16s32:
         with dissolve
 
     else: # -if Wolves
-
         scene v16s32_2 # TPP. MC enters his bedroom, sitting on the edge of his bed, no expression, mouth is closed
         with dissolve
 
@@ -224,10 +220,10 @@ label v16s32:
         scene v16s32_5 # FPP. Close up shot of MC's phone in his hand, with a new message text appearing on his phone
         with dissolve
 
-        $ chloe.newMessage("Elijah is available rn, let's go meet with him?.")
-        $ chloe.addReply("Okay. OMW")
-        $ chloe.newMessage("Hurry up :)")
-        $ chloe.addReply("Running all the way, boss :P")
+        $ chloe.messenger.newMessage("Elijah is available rn, let's go meet with him?.")
+        $ chloe.messenger.addReply("Okay. OMW")
+        $ chloe.messenger.newMessage("Hurry up :)")
+        $ chloe.messenger.addReply("Running all the way, boss :P")
 
         scene v16s32_3
         with dissolve
