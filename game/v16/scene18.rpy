@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 5)
 # Time: Tuesday night
 
-
 label v16s18: # MC goes home
     if joinapes:
         scene v16s18_1 # TPP Show MC walking into his bedroom [APE ROOM].
@@ -29,6 +28,8 @@ label v16s18: # MC goes home
 
         pause 0.75
 
+        ### check queue (x2)
+
         $ contact_amber.newMessage("Hey. You know how much you love me? ;) I'm at work all night tonight and forgot my phone charger at home! Grab it for me please? Key is under the mat.")
         $ contact_amber.addReply("Yeah, I guess I can help you out this one time :P")
         $ contact_amber.addReply("Ughhhhh")
@@ -43,6 +44,7 @@ label v16s18: # MC goes home
         with dissolve
 
         pause 0.75
+
     else:
         scene v16s18_3 # TPP Show MC walking into his bedroom [WOLF ROOM].
         with dissolve

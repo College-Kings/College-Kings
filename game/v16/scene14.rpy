@@ -3,20 +3,18 @@
 # Characters: MC (Outfit: GYM), NORA (Outfit: GYM), MS. ROSE (Outfit: GYM), PENELOPE (Outfit: 2)
 # Time: Afternoon
 
-
 label v16s14:
-
 # -MC gym outfit, Nora & Rose yoga outfits. Nora's wearing her fav color royal blue if possible (just bc she looks good af in it), i'm gonna assume we should take advantage of this situation and have them be barefoot, especially the girls (painted nails plz)-
 
     scene v16s14_1 # FPP. MC sees Nora in the distance, leaning on a tree in the park, Nora slight smile, looking at MC, waving at him, mouth closed, three yoga mats are on the ground, one of the mats is behind the other 2
     with dissolve
 
-    pause  
+    pause 
 
     scene v16s14_2 #  TPP. Show MC walking over to Nora, both slight smiles, mouths closed
     with dissolve
 
-    pause  
+    pause 
 
     scene v16s14_3 # FPP. MC standing in front of Nora, Nora slight smile, mouth closed
     with dissolve
@@ -33,12 +31,11 @@ label v16s14:
 
     u "Ha, yeah. It's refreshing."
 
-    if norars:
-
+    if nora.relationship >= Relationship.FWB:
         scene v16s14_4 # TPP. SHow MC giving Nora a kiss, she is still leaning on the tree
         with dissolve
 
-        pause  
+        pause 0.75
 
         scene v16s14_3a
         with dissolve
@@ -47,8 +44,7 @@ label v16s14:
 
         no "You'll have to control yourself though. We're expecting company."
     
-    elif norafriend:
-
+    else:
         u "Are we ready to start?"
 
         scene v16s14_3a
@@ -74,19 +70,20 @@ label v16s14:
     scene v16s14_5 # FPP. MC turns and sees Ms. Rose approaching from a distance, Ms. Rose smiling, waving, mouth closed
     with dissolve
 
-    pause  
+    pause 0.75
 
-    if norars:
-        scene v16s14_5a # FPP. Same as v16s14_5, Ms. Rose closer, sm,iling, not waving anymore, still walking towards MC and Nora
-        with dissolve
-
-        u "(Seriously? There goes my alone time with Nora.)"
-    
-    elif norars and not msrosers:
+    if nora.relationship >= Relationship.FWB and ms_rose.relationship >= Relationship.FWB:
         scene v16s14_5a
         with dissolve
 
         u "Ms. Rose? (This could be interesting!)"
+
+    elif nora.relationship >= Relationship.FWB:
+        scene v16s14_5a # FPP. Same as v16s14_5, Ms. Rose closer, smiling, not waving anymore, still walking towards MC and Nora, mouths closed
+        with dissolve
+
+        u "(Seriously? There goes my alone time with Nora.)"
+    
 
     scene v16s14_6 # FPP. Ms. Rose now standing next to MC and Nora, MC looking at Ms. Rose, Ms. Rose looking at Nora, Ms. Rose slight smile, mouth open
     with dissolve
@@ -98,7 +95,7 @@ label v16s14:
 
     no "I said a friend was coming."
 
-    if not msrosers: # If never dated ms. rose, idk the variable
+    if not msrosers: ### TODO Variable If never dated ms. rose, idk the variable
         scene v16s14_6a # FPP. Same as v16s14_6, Ms. Rose looking at MC, Ms. Rose smiling, mouth open
         with dissolve
 
@@ -114,7 +111,7 @@ label v16s14:
 
         ro "I'm a woman of many talents."
     
-    elif msrosers: # if still dating ms. rose
+    elif ms_rose.relationship >= Relationship.FWB:# if still dating ms. rose
         scene v16s14_6b
         with dissolve
 
@@ -128,14 +125,14 @@ label v16s14:
         scene v16s14_6c # FPP. Same as v16s14_6a, Ms. Rose mouth closed, giving a sexy wink to MC (don't make it super obvious, Nora can't notice the wink)
         with dissolve
 
-        pause  
+        pause 0.75 
 
         scene v16s14_6a
         with dissolve
 
         ro "Now..."
     
-    else: # if broke up with ms. rose
+    else: ### if broke up with ms. rose
         scene v16s14_6d # FPP. Same as v16s14_6, Ms. Rose slightly stunned, mouth open
         with dissolve
 
@@ -211,7 +208,7 @@ label v16s14:
     scene v16s14_7 # TPP. Show the three of them walking towards their mats, all slight smiles, mouths closed (MC is walking towards the mat that is behind the other 2)
     with dissolve
 
-    pause  
+    pause 
 
     scene v16s14_8 # TPP. Camera looking at Ms. Rose, Ms. Rose looking at Nora's direction, Ms. Rose smiling, mouth open
     with dissolve
@@ -236,7 +233,7 @@ label v16s14:
     scene v16s14_10a # TPP. Same as v16s14_10. Show Ms. Rose getting on her hands and knees, Nora and MC watching Ms. Rose getting on her hands and knees
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v16s14_10b # TPP. Same as v16s14_10a, the three of them on their hands and knees, all smiling, Nora and MC mouths closed, Ms. Rose mouth open
     with dissolve
@@ -246,12 +243,12 @@ label v16s14:
     scene v16s14_10c # TPP. Same as v16s14_10b, Ms. Rose doing the "cow and cat pose", MC and Nora watching her do the pose (both on their hands and knees)
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v16s14_10d # TPP. Same as v16s14_10c, all three of them doing the "cow and cat pose"
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v16s14_11 # FPP. MC on his hands and knees, he looks forward, seeing both Nora and Ms. Rose with their asses sticking out from doing the pose
     with dissolve
@@ -296,7 +293,7 @@ label v16s14:
             scene v16s14_12b
             with dissolve
 
-            pause  
+            pause 0.75
 
             scene v16s14_12a
             with dissolve
@@ -310,12 +307,12 @@ label v16s14:
 
             u "Fantastic, thanks."
 
-            pause  
+            pause 0.75
 
             scene v16s14_12
             with dissolve
 
-            pause
+            pause 0.75
 
         "Stare at Ms. Rose":
             scene v16s14_13 # FPP. MC focusing only on Ms. Rose's ass while she does the cow pose
@@ -354,7 +351,7 @@ label v16s14:
             scene v16s14_13b
             with dissolve
 
-            pause  
+            pause 0.75
 
             scene v16s14_13a
             with dissolve
@@ -368,12 +365,12 @@ label v16s14:
 
             u "Fantastic, thanks."
 
-            pause  
+            pause 0.75
 
             scene v16s14_13
             with dissolve
 
-            pause  
+            pause 0.75
             
         "Stay focused":
             scene v16s14_10e # TPP. Same as v16s14_10d, all doing the cow pose
@@ -412,7 +409,7 @@ label v16s14:
             scene v16s14_10g
             with dissolve
 
-            pause  
+            pause 0.75
 
             scene v16s14_10f
             with dissolve
@@ -426,26 +423,26 @@ label v16s14:
 
             u "Fantastic, thanks."
 
-            pause  
+            pause 0.75
 
             scene v16s14_10e
             with dissolve
 
-            pause  
+            pause 0.75
 
     scene v16s14_10b
     with dissolve
 
     ro "Now..."
 
-    scene v16s14_10h # TPP. Same as v16s14_10b, Nora stretching her right leg behind her, mouth open, smiling, rest only on hands and knees
+    scene v16s14_10h # TPP. Same as v16s14_10b, Nora stretching her right leg behind her, Rose mouth open, smiling, rest only on hands and knees
     with dissolve
 
     ro "Stretch your right leg straight out behind you. *Moans*"
 
     u "(Are these noises necessary?)"
 
-    scene v16s14_10i # TPP. Same as v16s14_10h, Nora lifting her leg up, align it with her spine, mouth open, smiling
+    scene v16s14_10i # TPP. Same as v16s14_10h, Nora lifting her leg up, align it with her spine, Rose mouth open, smiling
     with dissolve
 
     ro "Lift it up, into the air..."
@@ -490,7 +487,7 @@ label v16s14:
     scene v16s14_10m # TPP. Same as v16s14_10j, ligting the left leg instead of the right leg, all mouths closed
     with dissolve
 
-    pause  
+    pause 0.75
 
     scene v16s14_10b
     with dissolve
@@ -694,7 +691,6 @@ label v16s14:
 
     menu:
         "It was relaxing":
-            
             u "Yeah, it was relaxing to be honest. I feel rejuvenated."
 
             scene v16s14_21b # FPP. Same as v16s14_21a, Nora smiling, mouth closed
@@ -725,10 +721,9 @@ label v16s14:
             scene v16s14_21d # FPP. Same as v16s14_21b, Nora looking mischievously at MC and smirking
             with dissolve
 
-            pause  
+            pause 0.75 
 
         "It was painful":
-
             u "Um... I mean, it was kind of painful...?"
 
             scene v16s14_20b # FPP. Same as v16s14_20a, Ms. Rose hiding a laugh with her hand, mouth closed
@@ -873,7 +868,7 @@ label v16s14:
 
     no "Haha, no problem! It was nice spending time with you."
 
-    scene v16s14_20a
+    scene v16s14_20d # FPP. Same as v16s14_20a, Ms. Rose smiling, mouth closed
     with dissolve
 
     u "And thank you, Lorraine, for being our instructor."
@@ -883,7 +878,7 @@ label v16s14:
 
     ro "Of course, thanks for joining us."
 
-    if msrosers or neverwasrosers:
+    if ms_rose.relationship > Relationship.FWB or neverwasrosers: ### TODO Variable
         scene v16s14_20c
         with dissolve
 
@@ -899,7 +894,7 @@ label v16s14:
 
     u "Bye guys!"
 
-    scene v16s14_21b
+    scene v16s14_21a
     with dissolve
 
     no "See ya, [name]!"

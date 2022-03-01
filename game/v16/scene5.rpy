@@ -29,7 +29,7 @@ label v16s5:
             scene v16s5_2a
             with dissolve
 
-            ro "But, when you came with Chloe to ask for my support, and you made those...promises to persuade me to sign, and I still don't know if you really meant it."
+            ro "But, when you came with Chloe to ask for my support, and you made those... promises to persuade me to sign, and I still don't know if you really meant it."
         
         ro "I just need to know... Do you want to keep seeing me? Or is this..."
 
@@ -142,6 +142,9 @@ label v16s5:
 
             "It's over":
                 $ add_point(KCT.BRO)
+                
+                $ ms_rose.relationship = Relationship.FRIEND
+                
                 scene v16s5_2
                 with dissolve
 

@@ -55,7 +55,7 @@ label v14s26a:
 
     li "Apparently not, [name]."
 
-    li "So far most of what I could sell as to my family. *Sighs*"
+    li "So far most of what I could sell was to my family. *Sighs*"
 
     scene v14s26a_2b
     with dissolve

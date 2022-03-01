@@ -220,6 +220,7 @@ default v10lottery_ticket = False # Needed for v16S20
 default candyLike = 0
 default freeroam7 = set() #Penelope Court
 default freeroam8 = set() #London Museum
+default v11_she_will_miss = False
 default v11_amber_sauna_convo = False
 default v11_check_on_nora = False
 default v11_hp_points = 0
@@ -242,6 +243,7 @@ default v11s23_penelope_date = True # late addition, defaulting to True to enhan
 default v11s25_beer = True
 default v11_ride_with_mrlee = False
 default v11s13_rejected_aubrey = False
+default v11_dealership = False
 
 # 12.0
 default freeroam9 = set() #Ferry
@@ -288,6 +290,7 @@ default v13_imre_disloyal = False
 default v13_invite_samantha = False
 default v13_lauren_smoke = False
 default v13_penelope_concert = False
+default v13_penelope_backstage = False
 default v13_perfume = False
 default v13_smoke_weed = False
 default v13_emmy_points = 0
@@ -434,8 +437,27 @@ default pb_kct_notification = False
 default pb_threesome = False
 
 # 16.0
+
+# Chloe Planning Board 
+
+
+# Lindsey Planning Board
+default v16s28_lindsey_pb_intereview_polly_choice = False # True = Interview / False = Polly 
+
 default freeroam15 = set() #Amber
 default v16s1_win_fight_with_tom = False
 default v16s10_let_lauren_continue_hj = False
+default v16s11_sign_up = False
 default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
 default v16s20_twazzlers = False
+default vs16s15hotdog_coupon = False
+default v16s22mention_bills = False
+default v16s22mention_laptop = False
+default v16s25a_date_with_aubrey = False 
+default v16s32_birthday_reservation = 0  # 0 = neither, 1 = standard_reserveration, 2 = birthday_reservation  
+default v16s32_aubrey_cab_and_flowers = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers
+default v16s38tippped_driver = False
+default baby = "Baby" # Used to store the player designated name of the baby
+default v16food_critic = False
+default v16s39aubrey_date_points = 0
+default v16s44rubius_park_walk = False
