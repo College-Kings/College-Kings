@@ -3,7 +3,6 @@
 # Characters: LINDSEY (Outfit: 1), MC (Outfit: 9)
 # Time: Morning
 
-
 label v16s28:
     scene v16s28_1 # TPP. Lindsey and MC walking into her planning board room, both neutral, mouths closed
     with dissolve
@@ -15,8 +14,7 @@ label v16s28:
 
     pause 0.75
 
-    if v15_chloe_lindseysabotage and not v15_chloe_postkiwii: # TODO: Variable
-        
+    if v15_chloe_lindseysabotage and not v15_chloe_postkiwii: ### TODO: Variable
         scene v16s28_3 # FPP. MC and Lindsey standing in front of the planning board, MC looking at Lindsey, Lindsey looking at MC, Lindsey worried expression, mouth open
         with dissolve
 
@@ -70,7 +68,6 @@ label v16s28:
     u "I think this idea is the strongest."
 
     if v16s28_lindsey_pb_intereview_polly_choicelindsey_interview: # Interview 
-
         scene v16s28_3e # FPP. Same as v16s28_3d, Lindsey slight smile, mouth closed
         with dissolve
 
@@ -124,7 +121,6 @@ label v16s28:
 
     menu:
         "Stay positive":
-
             u "I can't wait to get started, I feel good about this one, it's going to be interesting."
 
             scene v16s28_3e
@@ -179,7 +175,6 @@ label v16s28:
     li "Thanks for sticking to this with me."
 
     if lindsey.relationship == Relationship.FWB: # TODO: Variable
-
         scene v16s28_5 # TPP. Lindsey pulling MC by his shirt, Lindsey sexy smile, MC slightly surprised, both mouths closed
         with dissolve
 
@@ -192,8 +187,7 @@ label v16s28:
 
         pause 0.75
 
-    elif lindsey.relationship == Relationship.FRIEND:
-        
+    else: ### if Lindsey Friend
         scene v16s28_6 # TPP. Lindsey giving MC a hug
         with dissolve
 

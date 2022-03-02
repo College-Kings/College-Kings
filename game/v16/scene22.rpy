@@ -5,7 +5,6 @@
 # Render Count: 
 
 label v16s22:
-
     scene v16s22_1 # TPP. MC knocks on the door of Lew's, slight smile, mouth is closed
     with dissolve
 
@@ -37,7 +36,6 @@ label v16s22:
     u "Ah, no problem."
 
     if v16s20_seenList = ["twazzlers"]: # -if MC also took the Twazzlers # TODO:Variable
-
         scene v16s22_3b
         with dissolve
 
@@ -218,7 +216,6 @@ label v16s22:
     ab "Even though she gets an employee discount here at Lew's..."
 
     if v16s20_seenList = ["bills"]: # -if clicked on the bills at amber's house
-
         scene v16s22_5b
         with dissolve
 
@@ -300,7 +297,6 @@ label v16s22:
     am "Ha! I'm glad."
 
     if v16s20_seenList = ["bills"]: # -if MC looked at the Unpaid bills at amber's house
-
         scene v16s22_9a
         with dissolve
 
@@ -310,7 +306,6 @@ label v16s22:
         with dissolve
 
         menu:
-
             "Ask about bills":
                 $ v16s22_mention_bills = True # TODO: Variable
 
@@ -334,8 +329,7 @@ label v16s22:
 
                 pause 0.75
 
-                if amber.relationship >= Relationship.FRIEND and kct == "confident": # TODO: Variable  # -if AmberRS AND AmberKCT amber passed (I think it's KCT Confident, double check w/Condy)
-
+                if amber.relationship >= Relationship.FRIEND and kct == "popular": # TODO: Variable  # -if AmberRS AND AmberKCT amber passed
                     scene v16s22_9c # FPP. Show just Amber with no expression, mouth is open, looking at MC [LEWS STAFF ROOM]
                     with dissolve
 
@@ -418,8 +412,7 @@ label v16s22:
 
                     am "You're right, you shouldn't have. Lesson learned."
 
-                if amber.relationship >= Relationship.FRIEND and not kct == "confident": # TODO: Variable  # -if AmberRS BUT AmberKCT not passed (I think it's KCT Confident, double check w/Condy)
-
+                if amber.relationship >= Relationship.FRIEND and not kct == "popular": # TODO: Variable  # -if AmberRS BUT AmberKCT not passed
                     scene v16s22_9c
                     with dissolve
 
@@ -491,7 +484,6 @@ label v16s22:
                     am "Good, thank you."
 
                 if amber.relationship <= Relationship.FRIEND: # TODO: Variable  # -if not AmberRS, regardless of KCT
-
                     scene v16s22_9i # FPP. Show just Amber with an angry expression, mouth is open, looking at MC [LEWS STAFF ROOM] 
                     with dissolve
 
@@ -555,7 +547,6 @@ label v16s22:
                     am "Haha. Sometimes it does feel like it."
                 
             "Don't mention them":
-
                 scene v16s22_9a
                 with dissolve
 
@@ -564,7 +555,6 @@ label v16s22:
             # -Regardless-
 
     if v16s20_seenList = ["laptop"]: # TODO: VARIABLE  -if MC looked at the Open laptop
-
         scene v16s22_9a
         with dissolve
 
@@ -574,7 +564,6 @@ label v16s22:
         with dissolve
 
         menu:
-
             "Mention her laptop":
                 $ v16s22mention_laptop = True #  TODO: Variable
 
@@ -594,7 +583,6 @@ label v16s22:
                 am "*Whispers* Oh my fucking God..."
 
                 if amber.relationship >= Relationship.FRIEND: # TODO: Variable  # -if AmberRS
-
                     scene v16s22_9d
                     with dissolve
 
@@ -666,7 +654,6 @@ label v16s22:
                     pause 0.75
 
                 if amber.relationship <= Relationship.FRIEND: # TODO: Variable # -if NOT AmberRS
-
                     scene v16s22_9g
                     with dissolve
 
@@ -683,7 +670,6 @@ label v16s22:
                     am "So what? It's called privacy."
 
                     if v16s22mention_bills: # -if chose to mention the unpaid bills he saw [LEWS STAFF ROOM]
-
                         scene v16s22_9i
                         with dissolve
 
@@ -749,7 +735,6 @@ label v16s22:
     # -Regardless-
 
     if v16s20_seenList = ["photos"]: # TODO: Variable  # -if MC looked at the Photos in amber's house
-
         scene v16s22_9a
         with dissolve
 
@@ -759,9 +744,7 @@ label v16s22:
         with dissolve
 
         menu:
-
             "Ask about photos":
-
                 scene v16s22_9a
                 with dissolve
 
@@ -778,7 +761,6 @@ label v16s22:
                 u "Maybe..."
 
                 if v16s22mention_bills and v16s22mention_laptop: # -if MC chose Ask about bills AND Mention her laptop (extra dialogue)
-
                     scene v16s22_9n
                     with dissolve
 
@@ -982,7 +964,6 @@ label v16s22:
                 with dissolve
 
             "Leave it alone":
-
                 scene v16s22_9a
                 with dissolve
 
@@ -994,7 +975,6 @@ label v16s22:
     # -Regardless of all-
 
     if amber.relationship >= Relationship.FRIEND and sex_with_amber_before_laurens_Party: #TODO: Variable # -if AmberRS (at least one sex scene with Amber before Lauren's Halloween party) [Checkpoint 1.1] Her sex scenes might need variables
-
         scene v16s22_9
         with dissolve
 
@@ -1068,7 +1048,6 @@ label v16s22:
         u "To be honest, I thought you'd never be interested in the idea of something more serious."
 
         if amber_bj_laurens_party: #TODO: Variable# -if MC also received Amber blowjob at Lauren's party
-
             scene v16s22_9o
             with dissolve
 
@@ -1114,7 +1093,6 @@ label v16s22:
         ### ERROR: [End of Checkpoint 1.1. Continue to Checkpoint 2]
 
     elif amber.relationship >= Relationship.FRIEND: # -if AmberFriend [Checkpoint 1.2]
-
         scene v16s22_9
         with dissolve
 
@@ -1191,7 +1169,6 @@ label v16s22:
         am "*Laughs*"
 
         if amber_bj_laurens_party: #TODO: Variable # -if MC also received Amber blowjob at Lauren's party (friend status but blowjob was successful)
-
             scene v16s22_9a
             with dissolve
 
@@ -1246,7 +1223,6 @@ label v16s22:
     u "Of course."
 
     if v16s22mention_bills and v16s22mention_laptop: # -if MC chose Ask about bills or Mention her laptop at all in this convo (extra dialogue)
-
         scene v16s22_10a # FPP. Show just Amber from the shoulders up, slight smiles, mouth is open, looking at MC [LEWS STAFF ROOM]
         with dissolve
 

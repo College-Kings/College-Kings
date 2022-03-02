@@ -5,7 +5,6 @@
 
 label v16s36:
 # -MC gets dressed. Quick shots of different stages of dress. He ends up smiling, looking very smart for his date-
-
     if joinwolves:
         scene v16s36_1 # TPP. In wolves room. Show MC in his underwear putting on a black shirt, MC neutral face, mouth closed.
         with dissolve
@@ -34,6 +33,7 @@ label v16s36:
 
         scene v16s36_2a # TPP In wolves room. MC in his new nice outfit looking at himself in the mirror, MC slight smile, mouth closed.
         with dissolve
+
     else:
         scene v16s36_3 # TPP. In apes room. Show MC in his underwear putting on a black shirt, MC neutral face, mouth closed.
         with dissolve

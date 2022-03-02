@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 9), Cashier (Outfit: 1)
 # Time: Morning
 
-
 label v16s35:
     play sound "sounds/dooropen.mp3"
 
@@ -33,6 +32,7 @@ label v16s35:
         with dissolve
 
         u "(Tingling mint. That sounds refreshing, right?)"
+
     else:
         scene v16s35_4
         with dissolve
@@ -44,6 +44,7 @@ label v16s35:
         with dissolve
 
         u "(Let's go with the high-end masks. Only the best for the Chicks' skin!)"
+
     else:
         scene v16s35_5
         with dissolve
@@ -85,11 +86,11 @@ label v16s35:
     with dissolve
     
     if joinwolves:
-
         scene v16s35_9
         with dissolve
 
         u "(And hopefully there's no Chris and Imre drama waiting for me this time...)"
+
     else:
         scene v16s35_9
         with dissolve

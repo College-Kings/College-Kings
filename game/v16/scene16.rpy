@@ -50,6 +50,7 @@ label v16s16:
     menu:
         "Nah, it's fine":
             $ add_point(KCT.BRO)
+
             scene v16s16_5a
             with dissolve
 
@@ -86,8 +87,10 @@ label v16s16:
             with dissolve
 
             u "I know, buddy... I know."
+
         "Definitely":
             $ add_point(KCT.TROUBLEMAKER)
+
             scene v16s16_5a
             with dissolve
 
@@ -188,7 +191,7 @@ label v16s16:
 
                     imre "Thanks, [name]."
 
-                "Yeah, its over":
+                "Yeah, it's over":
                     $ add_point(KCT.TROUBLEMAKER)
                     scene v16s16_5a
                     with dissolve
@@ -225,7 +228,7 @@ label v16s16:
 
                     imre "Hmm... You're right!"
 
-                    if penelope.relationship >= relationship.RS: # TODO: Variable
+                    if penelope.relationship >= Relationship.RS: # TODO: Variable
                         scene v16s16_5d # FPP. Imre (slight smile, mouth open) leaning closer to MC and whispering in his ear.
                         with dissolve
 
@@ -377,7 +380,7 @@ label v16s16:
     scene v16s16_11b # TPP. Shot of the tragets, the third one getting hit.
     with dissolve
 
-    pause 0.757
+    pause 0.75
 
     scene v16s16_9b # FPP. Show Imre cheering with the gun in one hand, slight smile, mouth open.
     with dissolve
@@ -429,8 +432,7 @@ label v16s16:
 
     u "I don't know if I want to pull your trigger, but..."
 
-    if penelope.relationship >= relationship.rs: #TODO: Variable
-
+    if penelope.relationship >= Relationship.rs: #TODO: Variable
         scene v16s16_9c # FPP. MC looking at Penelope (winking, slight smile, mouth open) standing up to the shooting range who is looking at MC
         with dissolve
 
@@ -500,7 +502,6 @@ label v16s16:
     with dissolve
 
     if v16_win_range: # TODO: Variable
-
         scene v16s16_9e
         with dissolve
 
@@ -511,8 +512,7 @@ label v16s16:
 
         u "You weren't expecting me too? *Laughs*"
 
-        if penelope.relationship = relationship.FRIEND: # TODO: Variable
-            
+        if penelope.relationship == Relationship.FRIEND: # TODO: Variable
             scene v16s16_7a # TPP. MC and Penelope hugging, Both slight smile, Penelope mouth open, MC mouth closed.
             with dissolve
 
@@ -523,7 +523,7 @@ label v16s16:
 
             u "(Hmm, I guess I have done pretty well in the past with shooting.)"
 
-        elif penelope.relationship >= relationship.RS: # TODO: Variable
+        elif penelope.relationship >= Relationship.RS: # TODO: Variable
             scene v16s16_7a
             with dissolve
 
@@ -606,8 +606,7 @@ label v16s16:
 
         tb "Why wouldn't it have a wrap-"
 
-        if penelope.relationship >= relationship.RS: # TODO: Variable
-
+        if penelope.relationship >= Relationship.RS: # TODO: Variable
             scene v16s16_9e
             with dissolve
 
@@ -781,7 +780,7 @@ label v16s16:
     with dissolve
 
     menu:
-        "Try to Calm Imre":
+        "Try to calm Imre":
             $ add_point(KCT.BRO)
             scene v16s16_19e
             with dissolve
@@ -875,7 +874,7 @@ label v16s16:
 
     u "Yeah?"
 
-    if penelope.relationship >= relationship.RS: # TODO: Variable
+    if penelope.relationship >= Relationship.RS: # TODO: Variable
         scene v16s16_16d # FPP. Penelope and MC at the bathrooms, MC looking at Penelope, Penelope looking at MC, penelope slight smile, mouth open.
         with dissolve
 
@@ -885,7 +884,7 @@ label v16s16:
 
         scene v16s16_16e # TPP. Penelope leaned forward kissing MC.
         with dissolve
-    elif penelope.relationship = relationship.friend:
+    elif penelope.relationship == Relationship.friend:
         scene v16s16_16d
         with dissolve
 

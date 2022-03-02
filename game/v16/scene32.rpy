@@ -28,7 +28,8 @@ label v16s32:
 
         u "(I can't believe Chris actually punched him, though. He's clearly not in control of his emotions lately.)"
 
-    # -if AubreyTamed and having date
+    if aubreytamed and havingdate:
+    ### -if AubreyTamed and having date
 
         scene v16s32_3 # TPP. Show just Mc looking at his phone, slight smile, mouth is closed, (generic white wall) for the background
         with dissolve
@@ -68,9 +69,7 @@ label v16s32:
         with dissolve
 
         menu:
-
             "Standard reservation":
-
                 scene v16s32_3
                 with dissolve
 
@@ -98,9 +97,7 @@ label v16s32:
         with dissolve
 
         menu:
-
             "Book her a cab":
-
                 scene v16s32_3a
                 with dissolve
 
@@ -120,7 +117,6 @@ label v16s32:
                 with dissolve
 
                 menu:
-
                     "Just the cab":
                         $ v16aubrey_cab = True
 
@@ -129,7 +125,7 @@ label v16s32:
 
                         u "(Yeah, I don't think the flowers are necessary. Let's save the money.)"
 
-                    "Cab/Flower Combo":
+                    "Cab/Flower combo":
                         $ v16aubrey_flower_cab = True
 
                         scene v16s32_3a
@@ -142,12 +138,13 @@ label v16s32:
 
                 u "(Oh, shit. It says I have to pay the driver in cash. Can't use my card.)"
 
-                # -if helping Chloe with Spa day
+                if helping chloe with Spa day:
+                ### -if helping Chloe with Spa day
 
-                scene v16s32_3b
-                with dissolve
+                    scene v16s32_3b
+                    with dissolve
 
-                u "(I can't spend any of the money Chloe gave me for spa supplies.)"
+                    u "(I can't spend any of the money Chloe gave me for spa supplies.)"
 
                 scene v16s32_3
                 with dissolve
@@ -158,9 +155,7 @@ label v16s32:
                 with dissolve
 
                 menu:
-
                     "Use the money":
-
                         scene v16s32_3a
                         with dissolve
 
@@ -176,7 +171,6 @@ label v16s32:
                         u "(I can't use someone else's money for my date, haha. I think Aubrey would understand."
 
             "She can manage":
-
                 scene v16s32_3
                 with dissolve
 
@@ -189,8 +183,8 @@ label v16s32:
 
     # -Regardless of AubreyTamed-
 
-    # -if MC is not helping Chloe
-
+    if mc is not helping chloe:
+    ### -if MC is not helping Chloe
         scene v16s32_3b
         with dissolve
 
@@ -213,14 +207,15 @@ label v16s32:
 
         jump v16s33 # -Transition to Scene 33-
 
-    # -if MC is helping Chloe with newspaper cover
+    elif mc is helping chloe with newspaper cover:
+    ### -if MC is helping Chloe with newspaper cover
 
-        # -MC's phone vibrates. He checks it and sees a text from Chloe-
+        ### -MC's phone vibrates. He checks it and sees a text from Chloe-
 
         scene v16s32_5 # FPP. Close up shot of MC's phone in his hand, with a new message text appearing on his phone
         with dissolve
 
-        $ chloe.messenger.newMessage("Elijah is available rn, let's go meet with him?.")
+        $ chloe.messenger.newMessage("Elijah is available rn, let's go meet with him?")
         $ chloe.messenger.addReply("Okay. OMW")
         $ chloe.messenger.newMessage("Hurry up :)")
         $ chloe.messenger.addReply("Running all the way, boss :P")
@@ -232,7 +227,8 @@ label v16s32:
 
         jump v16s34 # -Transition to Scene 34-
 
-    # -if MC is helping Chloe with spa night
+    elif mc is helping chloe with spa night:
+    ### -if MC is helping Chloe with spa night
 
         # -MC checks his phone-
 

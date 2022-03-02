@@ -3,9 +3,7 @@
 # Characters: GRAYSON (Outfit: 3), SAMANTHA (Outfit: 1), MC (Outfit: 9)
 # Time: Afternoon
 
-
 label v16s31:
-
     scene v16s31_1 # TPP. MC enters the house, seeing Grayson and Samantha in the kitchen. Grayson is looking in the refrigerator, the refrigerator light is off, Grayson has a slightly annoyed expression, mouth is closed. Samantha sat on a stool at the countertop looking at MC slight smile mouth is closed. MC joins them slight smile mouth is closed
     with dissolve
 
@@ -81,7 +79,6 @@ label v16s31:
     sa "Tell that to my brother, meathead. I don't want to be here any longer than I have to!"
 
     if v14_SamanthaDrugs: # -if SamanthaDrugs
-
         scene v16s31_2c
         with dissolve
 
@@ -103,7 +100,6 @@ label v16s31:
         sa "*Laughs* Whatever."
 
     else: # -if SamanthaSober
-
         scene v16s31_3
         with dissolve
 
@@ -125,16 +121,13 @@ label v16s31:
         gr "This is a fucking frat! Not a halfway house, [name]."
 
     menu:
-
         "Agree with Grayson":
-
             scene v16s31_2b
             with dissolve
 
             u "I do see where Grayson is coming from, Sam. Not many frats have girls living on their couches."
 
             if v14_SamanthaDrugs: # -if SamanthaDrugs
-
                 scene v16s31_3d # FPP. Show Just Samantha sitting on a stool, slightly annoyed expression, mouth is closeed, looking at MC
                 with dissolve
 
@@ -156,14 +149,12 @@ label v16s31:
                 sa "Like I said, talk to Cameron about it!"
 
             else: # -if SamanthaSober
-
                 scene v16s31_3a
                 with dissolve
 
                 sa "You know why I'm here, though. This isn't exactly what I want either, remember?"
 
         "Defend Samantha":
-
             scene v16s31_2b
             with dissolve
 
@@ -200,7 +191,6 @@ label v16s31:
             gr "I don't care what it looks like or how it makes people feel. This is the Apes Fraternity house, I am the president of the Apes, and I want her out of here!"
 
             if v14_SamanthaDrugs: # -if SamanthaDrugs
-
                 scene v16s31_3c
                 with dissolve
 
@@ -212,7 +202,6 @@ label v16s31:
                 gr "I wouldn't even touch you with someone else's dick!"
 
             else: # -if SamanthaSober
-
                 scene v16s31_3c
                 with dissolve
 
@@ -288,7 +277,6 @@ label v16s31:
     with dissolve
 
     if v14_SamanthaDrugs: # TODO: Variable # -if SamanthaDrugs and MC had sex
-
         scene v16s31_5a # TPP. As Sam passes MC, she stops for a moment and leans in towards Mc's ear, both slight smiles, Samantha's mouth is open, Mc's mouth is closed
         with dissolve
 

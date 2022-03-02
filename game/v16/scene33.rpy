@@ -4,7 +4,6 @@
 # Time: Wednesday
 
 label v16s33: # 33) MC showers
-
     scene v16s33_1 # TPP Show MC washing himself in the shower, lips pursed, whistling
     with dissolve
 

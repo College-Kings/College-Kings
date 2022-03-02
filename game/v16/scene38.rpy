@@ -3,9 +3,7 @@
 # Characters: MC (Outfit: DATE NIGHT OUTFIT), AUBREY (Outfit: DATE NIGHT OUTFIT), DRIVER (Outfit: 1)
 # Time: EVENING
 
-
 label v16s38:
-
     scene v16s38_1 # TPP. MC arrives at the restaurant entrance and waits beside it (It's an Italian restaurant, but not a location we've been to before,) slight smile, mouth is closed
     with dissolve
 
@@ -55,7 +53,6 @@ label v16s38:
     with dissolve
 
     menu:
-
         "Reassure her":
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.BRO)
@@ -112,7 +109,6 @@ label v16s38:
     au "Can we just hurry inside?"
 
     if not v16aubrey_cab: ### ERROR: IF MC ordered Aubrey a cab
-
         scene v16s38_3b
         with dissolve
 
@@ -149,7 +145,6 @@ label v16s38:
         with dissolve
 
         menu:
-
             "Tip ten dollars":
                 $ v16s38tippped_driver = True
                 $ add_point(KCT.BRO)
@@ -261,7 +256,6 @@ label v16s38:
                 u "(Then again... Maybe I am a dick.)"
             
     else: ### ERROR: IF did not order Aubrey a cab
-
         scene v16s38_3b
         with dissolve
 
@@ -271,7 +265,6 @@ label v16s38:
     with dissolve
 
     if v16aubrey_flower_cab: ### ERROR: IF MC ordered flowers with the cab
-
         scene v16s38_11 # FPP. Show just Aubrey from the shoulders up, looking over at MC from the side, slight smile, mouth is open
         with dissolve
 
@@ -338,14 +331,12 @@ label v16s38:
         au "Haha, yeah. Let's do it."
 
     else: ### ERROR: IF MC did not order flowers
-
         scene v16s38_11
         with dissolve
 
         au "All paid?"
 
     if v16s38tippped_driver: ### ERROR: IF tipped the driver
-
         scene v16s38_11a
         with dissolve
 
@@ -357,7 +348,6 @@ label v16s38:
         au "*Giggles* Perfect."
 
     else: ### ERROR: IF did not tip the driver
-
         scene v16s38_11a
         with dissolve
 

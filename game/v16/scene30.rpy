@@ -247,7 +247,6 @@ label v16s30:
     imre "We all stood by and listened to you cry and complain about Nora. You even suggested that she might have been seeing someone else."
 
     if v13_imre_disloyal: # MC kissed Nora and Imre caught them in v13s37 
-        
         scene v16s30_9d # TPP. Same as v16s30_9c, both mouths closed, both very angry
         with dissolve
 
@@ -307,7 +306,6 @@ label v16s30:
     with dissolve
 
     menu:
-        
         "Push Chris":
             scene v16s30_15 # TPP. Show MC pushing Chris back, Chris lowering his fists, slightly less angry, Sebastian checking on Imre on the floor, Imre angry, Sebastian concerned, MC angry, all mouths closed, only MC mouth open
             with dissolve
@@ -345,7 +343,6 @@ label v16s30:
             ch "I snapped."
 
         "Stop Imre":
-            
             scene v16s30_15a # TPP. Same as v16s30_15, instead, MC and Sebastian standing next to Imre on the floor, Chris same positiong, MC annoyed, Chris and Imre very angry, Sebastian worried, all mouths closed
             with dissolve
 

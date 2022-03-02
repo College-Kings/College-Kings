@@ -159,7 +159,6 @@ label v16s15:
     pause 0.75
 
     label v16s15_free_roam_pier_seen(backgroundImg, returnScreen):
-
         scene expression backgroundImg
         u "(We've already seen this attraction)"
         scene black

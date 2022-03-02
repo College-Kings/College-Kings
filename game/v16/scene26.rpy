@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 9), LINDSEY (Outfit: 1), PENELOPE (Outfit: 3)
 # Time: Morning
 
-
 label v16s26:
     scene v16s26_1 # TPP. Show MC walking down the hallway of SVC, neutral face, mouth closed.
     with dissolve

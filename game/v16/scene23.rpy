@@ -38,7 +38,6 @@ label v16s23: # 23) Meet Amber at strip club
     pause 0.75
 
     if v16s20_twazzlers: # -if MC also took the Twazzlers # TODO:Variable
-
         scene v16s23_2c # FPP Same angle as 2, Amber with a slight smile, mouth closed, MC is holding Twazzlers package out to her [OUTSIDE ENTRANCE]
         with dissolve
 
@@ -80,7 +79,6 @@ label v16s23: # 23) Meet Amber at strip club
     with dissolve
 
     am "Let's go inside."
-
 
     scene v16s23_4 # TPP Show Amber walking into the strip club, with MC following close behind [OUTSIDE ENTRANCE]
     with dissolve
@@ -223,8 +221,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     am "Hmm... Maybe."
 
-    if v14_pics_with_linds: # TODO: VARIABLE # PLACEHOLDER VARIABLE # -if MC met Male Buyer in v15 scene 10
-        
+    if v14_pics_with_linds: # TODO: VARIABLE # PLACEHOLDER VARIABLE # -if MC met Male Buyer in v15 scene 10        
         scene v16s23_13
         with dissolve
 
@@ -454,13 +451,11 @@ label v16s23: # 23) Meet Amber at strip club
                 u "Ha. Okay. Understood. (*Gulps*)"
 
             "Keep it a secret":
-
                 u "(If I don't keep that a secret, I'll leave here tonight with a few bruises... Maybe even worse.)"
 
     # -Regardless-
     
     if "photos" in v16s20_seenList: #TODO: VARIABLE  # PLACEHOLDER VARIABLE # -if MC looked at the Photos
-        
         scene v16s23_17
         with dissolve
 
@@ -468,7 +463,6 @@ label v16s23: # 23) Meet Amber at strip club
 
         menu:
             "Ask about photos":
-
                 u "Those photos on your wall..."
 
                 scene v16s23_17a
@@ -540,7 +534,6 @@ label v16s23: # 23) Meet Amber at strip club
 
                 u "I get it. We don't have to talk about it if you-"
 
-
                 # -If AmberRS, she opens up about her brother.
                 # -if not AmberRS but MC passes a Amber KCT check (i believe it's currently confident), Amber also opens up about her brother
                 if amber.relationship >= Relationship.FWB or (amber.relationship < Relationship.FWB and kct == "confident" ): # TODO: Variable # This is a guess based on the new relationship system. It would be nice if everyone was using the same language for relationship stuff
@@ -599,7 +592,7 @@ label v16s23: # 23) Meet Amber at strip club
 
                     am "Yeah, he's something."
 
-                elif ( amber.relationship < Relationship.FWB and kct != confident ): # -if not AmberRS, and MC does not pass an Amber KCT check, she doesn't up about her brother
+                elif (amber.relationship < Relationship.FWB and kct != confident ): # -if not AmberRS, and MC does not pass an Amber KCT check, she doesn't up about her brother
                     scene v16s23_17d
                     with dissolve
 
@@ -616,14 +609,11 @@ label v16s23: # 23) Meet Amber at strip club
                     u "(Must be some rough history there...)"
 
             "Leave it alone":
-
                 u "(Maybe another day.)"
-
 
     # -Regardless of all that-
     # -if AmberRS (at least one sex scene with Amber before Lauren's Halloween party) [Checkpoint 1.1]
-    if amber.relationship >= Relationship.FWB) or any(scene in sceneList for scene in ("v8_amber", "v8_amber2", "v10_amber", "v14_amber")) : # TODO: Variable  # Again, a guess at what the writer was getting at in the new relationship system
-        
+    if amber.relationship >= Relationship.FWB) or any(scene in sceneList for scene in ("v8_amber", "v8_amber2", "v10_amber", "v14_amber")) : # TODO: Variable  # Again, a guess at what the writer was getting at in the new relationship system        
         scene v16s23_18 # FPP Amber stepping up onto the small table in the private booth [CHECKPOINT C: on table]
         with dissolve
 

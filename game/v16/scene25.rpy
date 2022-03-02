@@ -4,7 +4,6 @@
 # Time: Night
 
 label v16s25:
-
     if joinwolves:
         play sound "sounds/dooropen.mp3"
 
@@ -46,13 +45,15 @@ label v16s25:
                 u "(Is Amber relationship material? Definitely something to think about...)"
 
                 u "(I never thought Amber would be the type for a serious relationship... Maybe things have changed.)"
-            elif amber.relationship == Relationship.Friend: # TODO: Variable
+
+            else: ### if Amber Friend
                 scene v16s25_4
                 with dissolve
 
                 u "(Amber's still thinking about detective stuff... Haha, I think she has a fetish!)"
 
                 # [End of Checkpoint 1.1. Continue to Checkpoint 2]
+
         else: # [Checkpoint 1.2]
             if amber.relationship >= Relationship.RS and v16_amber_dance: # TODO: Variable
                 scene v16s25_4
@@ -61,6 +62,7 @@ label v16s25:
                 u "(Holy shit, I can't get Amber's body out of my mind now...)"
 
                 u "(Maybe being a stripper is her true calling... *Laughs*)"
+
             elif amber.relationship == Relationship.Friend and AmberLoyal: # TODO: Variable
                 scene v16s25_4
                 with dissolve
@@ -68,6 +70,7 @@ label v16s25:
                 u "(If anyone can handle getting harassed by douchebags every night, it's Amber...)"
 
                 u "(I'm glad she's happy.)"
+
             elif amber.relationship == Relationship.Friend and v16_tell_amber_to_quit_stripping: # TODO: Variable Placeholder:
                 scene v16s25_4
                 with dissolve
@@ -579,6 +582,7 @@ label v16s25:
 
                     scene v16s25_1e # TPP. In his wolves frat room closing the door to his room in just his underwear, slight smile, mouth closed.
                     with dissolve
+
                 "I'm too tired": # [Checkpoint 2.2]
                     scene v16s25_7
                     with dissolve
@@ -646,6 +650,7 @@ label v16s25:
             # [End of Checkpoint 2.2. Continue to Checkpoint 3]
             # [Checkpoint 3]
         jump v16s25a
+
     else:
         play sound "sounds/dooropen.mp3"
 
@@ -702,6 +707,7 @@ label v16s25:
                 u "(Holy shit, I can't get Amber's body out of my mind now...)"
 
                 u "(Maybe being a stripper is her true calling... *Laughs*)"
+
             elif amber.relationship == Relationship.Friend and AmberLoyal: #TODO: Variable
                 scene v16s25_17
                 with dissolve
@@ -709,6 +715,7 @@ label v16s25:
                 u "(If anyone can handle getting harassed by douchebags every night, it's Amber...)"
 
                 u "(I'm glad she's happy.)"
+
             elif amber.relationship == Relationship.Friend and v16_tell_amber_to_quit_stripping: # TODO: Variable #Placeholder:
                 scene v16s25_17
                 with dissolve
@@ -824,6 +831,7 @@ label v16s25:
                             with dissolve
 
                             u "(Haha, no way... I'm in! Are we really that predictable guys?)"
+
                         "i<3chloe":
                             scene v16s25_11b
                             with dissolve
@@ -839,8 +847,8 @@ label v16s25:
                                     with dissolve
 
                                     u "(Haha, no way... I'm in! Are we really that predictable guys?)"
-                                "696969":
-                                    
+
+                                "696969":                                    
                                     scene v16s25_11b
                                     with dissolve
 
@@ -871,6 +879,7 @@ label v16s25:
                                     with dissolve
 
                                     u "(Haha, no way... I'm in! Are we really that predictable guys?)"
+
                                 "i<3chloe":
                                     scene v16s25_11b
                                     with dissolve
@@ -1127,6 +1136,7 @@ label v16s25:
                             with dissolve
 
                             em "*Laughs* Perfect."
+
                         "Not a fan":
                             $ add_point(KCT.TROUBLEMAKER)
                             scene v16s25_11m

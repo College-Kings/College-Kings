@@ -6,7 +6,7 @@
 
 label v16s20_free_roam_alr_seen(backgroundImg, returnScreen):
     scene expression backgroundImg
-    u "(I've already seen this')"
+    u "(I've already seen this...)"
     scene black
     $ renpy.call_screen(returnScreen)
 

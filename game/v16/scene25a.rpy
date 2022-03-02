@@ -25,7 +25,6 @@ label v16s25a:
     pause 1
 
     if joinwolves:
-
         scene v16s25a_1 # TPP. In wolves room. Show MC sitting up from bed and yawning his arms stretched, MC yawning (underware only).
         with dissolve
 
@@ -134,7 +133,6 @@ label v16s25a:
         au "No problem."
 
         if aubrey.relationship == Relationship.TAMED: # TODO: Variable
-
             $ v16s25a_date_with_aubrey = True # TODO: Variable
 
             scene v16s25a_5b # TPP. Aubrey in the Chicks house in her room on the phone, slight smile, blushing, mouth open.
@@ -211,7 +209,6 @@ label v16s25a:
         jump v16s26
 
     else:
-                
         scene v16s25a_8 # TPP. In Apes room. Show MC sitting up from bed and yawning his arms stretched, MC yawning.
         with dissolve
 
@@ -320,7 +317,6 @@ label v16s25a:
         au "No problem."
 
         if aubrey.relationship == Relationship.TAMED: # TODO: Variable
-
             $ v16s25a_date_with_aubrey = True
         
             scene v16s25a_5b
