@@ -460,6 +460,7 @@ default v16s34_joke_about_elijah = False # used and checked in v16s34
 default v16s34_knock_on_svc_door = False # False = walk in 
 default v16s34_get_aggressive_with_elijah = False # False = Laugh
 default v16s34_chloe_kiss_elijah_for_frontpage = False # False = Tell Elijah to fuck off 
+default v16s35_mc_spa_shopping = set() # Tracks what MC purchased during spa shopping for chloe
 default v16s38tippped_driver = False
 default baby = "Baby" # Used to store the player designated name of the baby
 default v16food_critic = False
