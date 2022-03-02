@@ -3,9 +3,7 @@
 # Characters: MC (Outfit: 9)
 # Time: Night
 
-
 label v16s45:
-
     scene v16s45_1 # TPP. MC (slight smile, mouth is closed) walks along the hallway
     with dissolve
 

@@ -3,9 +3,7 @@
 # Characters: AUBREY (Outfit: DATE NIGHT OUTFIT), MC (Outfit: DATE NIGHT OUTFIT)
 # Time: Evening
 
-
 label v16s40:
-
     scene v16s40_1 # TPP. MC and Aubrey exit the front door of the restaurant both of them slight smiles, mouths are closed, looking at each other
     with dissolve
 
@@ -14,8 +12,9 @@ label v16s40:
     scene v16s40_2 # TPP. MC and Aubrey stop turn and face each other a few feet away from the entrance of the restaurant, both of them slight smiles, mouths are closed
     with dissolve
 
-    if v16s39aubrey_date_points >= 10: ### ERROR: IF MC scored maximum 10 points
+    pause 0.75
 
+    if v16s39aubrey_date_points >= 10: ### ERROR: IF MC scored maximum 10 points
         scene v16s40_3 # FPP. Show just Aubrey from the waist up, slight smile, mouth is open, looking at MC, show Aubrey holding both of Mc's hand 
         with dissolve
 
@@ -26,8 +25,9 @@ label v16s40:
         scene v16s40_4 # TPP. Aubrey kisses MC passionately, and holds MC's hand, both of their eyes are closed during the kiss, Mc wraps his arm around Aubreys back as she kisses him.
         with dissolve
 
-    if v16s39aubrey_date_points == 8 or v16s39aubrey_date_points == 9: ### ERROR: IF MC scored 8-9 points
+        pause 0.75
 
+    elif v16s39aubrey_date_points >= 8: ### ERROR: IF MC scored 8-9 points
         scene v16s40_3a # FPP. Show just Aubrey from the waist up, slight smile, mouth is open, looking at MC, show Aubrey holding one of Mc's hand 
         with dissolve
 
@@ -43,8 +43,7 @@ label v16s40:
 
         au "Something like that, hehe."
 
-    if v16s39aubrey_date_points >= 4 and v16s39aubrey_date_points <= 7: ### ERROR: IF MC scored 4-7 points
-
+    elif v16s39aubrey_date_points >= 4: ### ERROR: IF MC scored 4-7 points
         scene v16s40_3a
         with dissolve
 
@@ -61,7 +60,6 @@ label v16s40:
         au "Mmm, yeah you probably should, haha."
 
     ### ERROR: END IF
-
     if v16s39aubrey_date_points >= 4: ### ERROR: IF MC scored 4-10 points (passed the date)
         $ aubrey.relationship.value == Relationship.GIRLFRIEND.value
 
@@ -160,8 +158,10 @@ label v16s40:
         scene v16s40_4c # TPP. Aubrey leans in and gives MC's a quick kiss on the cheek, Mc also kisses Aubrey on the cheek, both of them slight smiles
         with dissolve
 
+        pause 0.75
+
     ### ERROR: IF MC has baby duties tonight 
-    ### TRANSCRIBER NOTE!!! ### THERE IS NO ALTERNATIVE SCENE TO TRAVEL TOO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO ### ATTENTION!!! ###
+    ### TRANSCRIBER NOTE!!! ### THERE IS NO ALTERNATIVE SCENE TO TRAVEL TO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO ### ATTENTION!!! ###
 
     scene v16s40_3c
     with dissolve
@@ -203,12 +203,14 @@ label v16s40:
     scene v16s40_2a # TPP. MC (slight smile, mouth is closed) is still in the same position from render v16s40_2 looking at Aubrey walking away, Aubrey (slight smile, mouth is closed) is looking at and waving to MC as she walks away
     with dissolve
 
+    pause 0.75
+
     jump v16s41 # -Transition to Scene 41-
 
     ### ERROR: END IF
 
     if v16s39aubrey_date_points <= 3: ### ERROR: IF MC scored 0-3 points (DATE FAIL = Loses AubreyTamed)
-        $ AubreyTamed = False
+        $ AubreyTamed = False ### variable
 
         scene v16s40_3h # FPP. Show just Aubrey from the waist up, no expression, mouth is closed, looking at MC
         with dissolve
@@ -268,7 +270,7 @@ label v16s40:
         u "*Sighs* Yeah, okay."
 
         ### ERROR: IF MC has baby duties tonight
-        ### TRANSCRIBER NOTE!!! ### THERE IS NO ALTERNATIVE SCENE TO TRAVEL TOO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO ### ATTENTION!!! ###
+        ### TRANSCRIBER NOTE!!! ### THERE IS NO ALTERNATIVE SCENE TO TRAVEL TO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO ### ATTENTION!!! ###
 
         scene v16s40_3c
         with dissolve
@@ -305,10 +307,14 @@ label v16s40:
         scene v16s40_4d # TPP. MC and Aubrey share a quick hug, slight smiles, mouths are closed
         with dissolve
 
+        pause 0.75
+
         ### ERROR: END IF
 
         scene v16s40_2a
         with dissolve
+
+        pause 0.75
 
         jump v16s41# -Transition to Scene 41-
 

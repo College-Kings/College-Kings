@@ -3,9 +3,7 @@
 # Characters: MC (Outfit: 9), LAUREN (Outfit: 1), Joggery (Outfit: 1)
 # Time: Evening
 
-
 label v16s44:
-
     scene v16s44_1 # TPP. In the park, Lauren (slight smile, mouth is closed) is waiting with a huge dog on a leash. MC (slight smile, mouth is closed) approaches Lauren
     with dissolve
 
@@ -22,7 +20,6 @@ label v16s44:
     la "Hey, [name]!"
 
     if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # -if LaurenGF/RS, they have a nice kiss
-
         scene v16s44_3 # TPP. Show Lauren and MC kissing, Lauren still holding onto Rubius (the dog) with one hand, Rubio watche's MC and Lauren Kiss tilting his head tounge is out
         with dissolve
 
@@ -44,7 +41,6 @@ label v16s44:
         u "Haha, it's okay."
 
         if v16s10_let_lauren_continue_hj: # -if Lauren also gave MC a hand job in econ class
-
             scene v16s44_2
             with dissolve
 
@@ -91,9 +87,7 @@ label v16s44:
     with dissolve
 
     menu:
-
         "Greet Rubius":
-
             scene v16s44_4
             with dissolve
 
@@ -115,7 +109,6 @@ label v16s44:
             u "I have a way with animals. Must be my loving personality, haha."
 
         "Don't greet Rubius":
-
             scene v16s44_4
             with dissolve
 
@@ -192,7 +185,6 @@ label v16s44:
     with dissolve
 
     menu:
-
         "Stay in the park":
             $ v16s44rubius_park_walk = True
 
@@ -386,7 +378,6 @@ label v16s44:
             pause 0.75
 
         "Follow Rubius":
-
             scene v16s44_6a
             with dissolve
 
@@ -427,8 +418,7 @@ label v16s44:
 
             u "Yeah, I think it was that old taco."
 
-            # -if mc gagged at ryan in the bathroom at laurens birthday party
-
+            ### -if mc gagged at ryan in the bathroom at laurens birthday party
                 scene v16s44_14a # FPP. Close up shot of the taco and the promo leaflet for the Blue Lounge, alleyway background
                 with dissolve
 
@@ -514,7 +504,6 @@ label v16s44:
             u "Oh, I am."
 
         if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # -if laurengf
-
             scene v16s44_18c # FPP. Show just Lauren (Lauren smirks, slight smile, mouth is open, looking at MC) Laurens shirt is completely soaked and you can see the full shape of her boobs and clearly visibly see her nipples through the wet shirt, alleyway background
             with dissolve
 
@@ -531,7 +520,6 @@ label v16s44:
             pause 0.75
 
         else:
-
             scene v16s44_18a
             with dissolve
 
@@ -607,7 +595,6 @@ label v16s44:
     u "Anytime. It was quite eventful in the end."
 
     if v16s44rubius_park_walk: # -if you stayed in the park
-
         scene v16s44_2a
         with dissolve
 
@@ -646,7 +633,6 @@ label v16s44:
         la "Me too."
 
     else: # -if you followed Rubius
-
         scene v16s44_2c # FPP. Show just Lauren (no expression, mouth is open, looking at MC)
         with dissolve
 
@@ -679,21 +665,20 @@ label v16s44:
 
 # -Regardless of that-
 
-    # -if on baby duty alone
-
+    ### -if on baby duty alone
         scene v16s44_2
         with dissolve
 
         u "And now, I need to go pick up a baby."
 
-    # -if sharing baby duty
+    ### -if sharing baby duty
 
         scene v16s44_2
         with dissolve
 
         u "And now, I need to go to the Chicks house for baby duty"
 
-    # -if partner is on baby duty
+    ### -if partner is on baby duty
 
         scene v16s44_2
         with dissolve
@@ -740,15 +725,15 @@ label v16s44:
     scene v16s44_2
     with dissolve
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # -if LaurenGF, they have a quick goodbye kiss
+     pause 0.75
 
+    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # -if LaurenGF, they have a quick goodbye kiss
         scene v16s44_3
         with dissolve
 
         pause 0.75
 
     else # -if not LaurenGf, they do a side hug as lauren is holding the leash in one hand
-
         scene v16s44_3a # TPP. Show Lauren and MC giving each other a side hug Lauren still holding onto Rubius (the dog) with one hand, Rubio watch's MC and Lauren Kiss tilting his head tounge is out
         with dissolve
 
@@ -756,15 +741,17 @@ label v16s44:
 
     scene v16s44_1a # TPP. same as v16s44_1 Mc is walking the other direction, and Lauren is waving goodbye
     with dissolve
+    
+    pause 0.75
 
-# -if on baby duty alone, transition to Scene 45-
+### -if on baby duty alone, transition to Scene45-
 
     jump v16s45
 
-# -if sharing baby duty, transition to Scene 47-
+### -if sharing baby duty, transition to Scene47-
 
     jump v16s47
 
-# -if partner is on baby duty, transition to Scene 42-
+### -if partner is on baby duty, transition to Scene42-
 
     jump v16s42

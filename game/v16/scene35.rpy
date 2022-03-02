@@ -29,7 +29,6 @@ label v16s35:
     # -Exit UI when choices have been made-
 
     if "Tingling mint massage oil" in v16s35_mc_spa_shopping: # TODO: Variable #Placeholder
-        
         scene v16s35_4 # FPP. MC focused on the massaging oils.
         with dissolve
 
@@ -42,14 +41,12 @@ label v16s35:
         u "(Calming citrus. Can't go wrong with a name like that, haha.)"
 
     if "Expensive face mask" in v16s35_mc_spa_shopping: # TODO: Variable #Placeholder
-        
         scene v16s35_5 # FPP. MC focused on the face mask.
         with dissolve
 
         u "(Let's go with the high-end masks. Only the best for the Chicks' skin!)"
 
     else:
-        
         scene v16s35_5
         with dissolve
         
