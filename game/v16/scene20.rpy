@@ -6,7 +6,7 @@
 
 label v16s20_free_roam_alr_seen(backgroundImg, returnScreen):
     scene expression backgroundImg
-    u "(I've already seen this')"
+    u "(I've already seen this...)"
     scene black
     $ renpy.call_screen(returnScreen)
 
@@ -327,5 +327,7 @@ label v16s20_end:
 
     scene v16s20_17 # FPP. Show MC walking away from Ambers House, slight smile, mouth is closed
     with dissolve
+
+    pause 0.75
 
     jump v16s21

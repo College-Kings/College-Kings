@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 9)
 # Time: Afternoon
 
-
 label v16s32:
 
     if joinapes: # -if Apes

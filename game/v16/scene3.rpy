@@ -401,7 +401,7 @@ label v16s3:
         scene v16s3_5e
         with dissolve
 
-        u "Haha, yup!  I've got two fists and a couple of brain cells left... I'll be fine."
+        u "Haha, yup! I've got two fists and a couple of brain cells left... I'll be fine."
 
         scene v16s3_5d
         with dissolve
@@ -452,12 +452,12 @@ label v16s3:
 
     scene v16s3_10 # TPP. Show MC opening the door and leaving, slight smile, mouth closed.
     with dissolve
-
-    pause 0.75
-
     play sound "sounds/dooropen.mp3"
+    pause 0.75
 
     scene v16s3_11 # TPP. Shot of just the door closed.
     with dissolve
+
+    pause 0.75
 
     jump v16s4

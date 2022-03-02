@@ -3,18 +3,13 @@
 # Characters: WAITER (Outfit: 1), AUBREY (Outfit: DATE NIGHT OUTFIT), MC (Outfit: DATE NIGHT OUTFIT)
 # Time: Evening
 
-
-label v16s39_free_roam_aubrey_date_seen(backgroundImg, returnScreen, seenList):
-
-    $ v16s39_seenList = seenList
-
+label v16s39_free_roam_aubrey_date_seen(backgroundImg, returnScreen):
     scene expression backgroundImg
     u "(We've already discussed that.)"
     scene black
     $ renpy.call_screen(returnScreen)
 
 label v16s39:
-
     scene v16s39_1 # TPP. Aubrey removes her jacket and hands it to the waiter, MC and Aubrey slight smiles, mouths are closed, looking at the waiter, The waiter has a creepy smile, mouth is closed taking Aubrey's jacket from her, the background includes a "coat room," and possibly a sign included to that effect
     with dissolve
 
@@ -61,8 +56,7 @@ label v16s39:
     with dissolve
 
     menu:
-
-        "Have the same ": #(ONE POINT)
+        "Have the same": #(ONE POINT)
             $ v16s39aubrey_date_points += 1
             $ add_point(KCT.BOYFRIEND)
 
@@ -76,7 +70,7 @@ label v16s39:
 
             au "Looks like we're both taking a walk on the wild side tonight."
 
-        "Order a Beer":
+        "Order a beer":
             $ add_point(KCT.BRO)
 
             scene v16s39_4b
@@ -125,7 +119,6 @@ label v16s39:
             u "...Yeah, okay then. A fruity soda."
 
 # -Regardless-
-
     scene v16s39_4
     with dissolve
 
@@ -183,7 +176,7 @@ label v16s39:
     scene v16s39_4h # FPP. Show just the waiter standing at the table, now holding an empty tray, slightly creepy smile, mouth is open, looking at Aubrey, the camera angle is from a seated position
     with dissolve
 
-    waiter "It's made with our own special blend of summer fruits.  It's one of our most popular beverages."
+    waiter "It's made with our own special blend of summer fruits. It's one of our most popular beverages."
 
     scene v16s39_5d
     with dissolve
@@ -220,15 +213,15 @@ label v16s39:
     scene v16s39_7 # TPP. We now enter a free roam screen from MC's POV. The player can click on Aubrey, Wall clock, MC (bottom of screen highlighted), and a food Menu. Clicking on the Menu will give the option to end the free roam-
     with dissolve
 
+    pause 0.75
+
     if v16s39Aubrey_date: # -if Aubrey
         $ freeroam_aub_date.add("aubrey")
-        $ v16s39_seenList = []
 
         scene v16s39_5b
         with dissolve
 
         menu:
-
             "Compliment her":
                 $ add_point(KCT.BOYFRIEND)
 
@@ -365,13 +358,11 @@ label v16s39:
 
     if v16s39Aubrey_date: # -if Wall clock
         $ freeroam_aub_date.add("clock")
-        $ v16s39_seenList = []
 
         scene v16s39_8 # FPP. Close up shot of the wall clock from the free roam, Show it on 9:45 PM
         with dissolve
 
         menu:
-
             "Complain about wait":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BRO)
@@ -452,13 +443,11 @@ label v16s39:
 
     if v16s39Aubrey_date: # -if MC (bottom of screen highlighted)
         $ freeroam_aub_date.add("mc")
-        $ v16s39_seenList = []
 
         scene v16s39_5a
         with dissolve
 
         menu:
-
             "Compliment yourself":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BRO)
@@ -567,7 +556,6 @@ label v16s39:
 
     if v16s39Aubrey_date: # -if Menu, free roam ends
         $ freeroam_aub_date.add("menu")
-        $ v16s39_seenList = []
 
         scene v16s39_9a # TPP. Show a side angle shot, camera is centered just above table level, Aubrey and MC are looking at their dinner menu's, slight smiles, mouths are closed, the waiter can be seen approaching them, slight creepy smile, mouth is closed
         with dissolve
@@ -583,7 +571,6 @@ label v16s39:
         with dissolve
 
         menu:
-
             "Order for Aubrey":
                 $ add_point(KCT.TROUBLEMAKER)
 
@@ -723,6 +710,8 @@ label v16s39:
                 scene v16s39_4j
                 with dissolve
 
+                pause 0.75
+
         # -Regardless of ordering choice-
 
         scene v16s39_9d # TPP. Show a side angle shot, camera is centered just above table level, Aubrey and Mc are taking a drink from their fruity soda's, looking at each other slight smiles
@@ -810,15 +799,15 @@ label v16s39:
         scene v16s39_10 # TPP. We enter the free roam screen from MC's POV. The player can click on Aubrey, Aubrey's food, MC's food, and Dessert menu. Clicking on the Dessert menu will give the option to end the free roam, Aubrey and MC are both looking at each other slight smiles, mouths are closed
         with dissolve
 
+        pause 0.75
+
     if v16s39Aubrey_date: # -if Aubrey
         $ freeroam_aub_date.add("aubrey2")
-        $ v16s39_seenList = []
 
         scene v16s39_5b
         with dissolve
 
         menu:
-
             "Discuss her parents": # (ONE POINT)
                 $ v16s39aubrey_date_points += 1
                 $ add_point(KCT.BOYFRIEND)
@@ -896,13 +885,11 @@ label v16s39:
 
     if v16s39Aubrey_date: # -if Aubrey's food
         $ freeroam_aub_date.add("aubreyfood")
-        $ v16s39_seenList = []
 
         scene v16s39_11 # FPP. Show a close up shot of the Pizza on the plate on the table that Aubrey is eating
         with dissolve
 
         menu:
-
             "Critique her food":
                 $ v16food_critic = True
                 $ add_point(KCT.TROUBLEMAKER)
@@ -996,13 +983,11 @@ label v16s39:
 
     if v16s39Aubrey_date: # -if MC's food
         $ freeroam_aub_date.add("mcfood")
-        $ v16s39_seenList = []
 
         scene v16s39_12 # FPP. Show a close up shot of the meatballs on the plate on the table that MC is eating
         with dissolve
 
         menu:
-
             "Critique your food":
                 $ v16food_critic = True
                 $ add_point(KCT.TROUBLEMAKER)
@@ -1083,7 +1068,7 @@ label v16s39:
 
                 au "*Sighs*"
 
-            "Compliment your food ": # (ONE POINT)
+            "Compliment your food": # (ONE POINT)
                 $ v16s39aubrey_date_points += 1
                 $ add_point(KCT.BOYFRIEND)
                 $ add_point(KCT.BRO)
@@ -1171,11 +1156,12 @@ label v16s39:
                 scene v16s39_9
                 with dissolve
 
+                pause 0.75
+
                 # -Return to free roam-
 
-    if v16s39Aubrey_date:  # -if Dessert menu, free roam ends
+    if v16s39Aubrey_date: # -if Dessert menu, free roam ends
         $ freeroam_aub_date.add("dessertmenu")
-        $ v16s39_seenList = []
 
         scene v16s39_9g # TPP. Show a side angle shot, camera is centered just above table level, Empty plates are in front of MC and Aubrey, Aubrey and MC are looking at their dessert menu's, slight smiles, mouths are closed, the waiter can be seen approaching them carrying an empty tray, slight creepy smile, mouth is closed
         with dissolve
@@ -1198,7 +1184,6 @@ label v16s39:
         u "Our compliments to the chef."
 
         if v16food_critic: # -if mc critiqued his food, aubreys food, or both of them
-
             scene v16s39_5a
             with dissolve
 
@@ -1220,7 +1205,6 @@ label v16s39:
         with dissolve
 
         menu:
-
             "Order dessert": # (ONE POINT)
                 $ v16s39aubrey_date_points += 1
                 $ add_point(KCT.BOYFRIEND)
@@ -1295,7 +1279,6 @@ label v16s39:
                 au "Okay, fine. I'll try it."
             
     # -Regardless of ordering choice-
-
         scene v16s39_4a
         with dissolve
 
@@ -1329,7 +1312,6 @@ label v16s39:
         au "*Laughs* Maybe he's just a very happy man."
 
         if v16birthday_reservation: # -if MC made a Birthday reservation
-
             scene v16s39_4m # FPP. The waiter is the same distance from the table as in render v16s39_4d, facing the camera, looking at MC, carrying a tray with 2 desserts on it, and one of them has a lit candle on it, slightly creepy smile, mouth is closed
             with dissolve
 
@@ -1439,7 +1421,6 @@ label v16s39:
             with dissolve
 
             menu:
-
                 "Confess your mistake": # (MINUS POINT)
                     $ v16s39aubrey_date_points -= 1
                     $ add_point(KCT.TROUBLEMAKER)
@@ -1661,5 +1642,7 @@ label v16s39:
 
         scene v16s39_2c # TPP. Aubrey now has her jacket on as her and MC leave the restaurant with slight smiles, mouths are closed, The waiter waves goodbye to MC and Aubrey with a creepy smile mouth is open
         with dissolve
+
+        pause 0.75
 
         jump v16s40 # -Transition to Scene 40-

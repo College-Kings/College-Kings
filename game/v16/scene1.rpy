@@ -48,6 +48,9 @@ label v16s1_lose:
             ri "Ha, right."
 
         "It hurts like hell":
+            scene v16s1_lose_2a
+            #with dissolve
+            
             u "Honestly, no. It hurts like hell."
 
             scene v16s1_lose_2
@@ -440,6 +443,7 @@ label v16s1_win:
 
             else:
                 scene v16s1_win_3
+                with dissolve
 
                 u "Anytime, Riley. Goodnight."
 

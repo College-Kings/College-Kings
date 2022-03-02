@@ -4,7 +4,7 @@
 # Time: Night
 
 label v16s5:
-    scene v16s5_1 # TPP. Shot from behind of MC, MC walking towards Ms. Rose who is standing by a tree (FRAT HOUSE NOT SHOWN), Ms Rose, neutral face, mouth closed.
+    scene v16s5_1 # TPP. Shot from behind of MC, MC walking towards Ms. Rose who is standing by a tree (FRAT HOUSE NOT SHOWN), Ms. Rose, neutral face, mouth closed.
     with dissolve
 
     pause 0.75
@@ -69,7 +69,7 @@ label v16s5:
                 scene v16s5_2d # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose neutral face, rolling her eyes, mouth open [DO NOT SHOW FRAT HOUSE].
                 with dissolve
                 
-                ro  "*Sighs* No..." 
+                ro "*Sighs* No..." 
 
                 scene v16s5_2b
                 with dissolve
@@ -84,7 +84,7 @@ label v16s5:
                 scene v16s5_2b
                 with dissolve
 
-                u "Yeah, sure.  The guys and I go there all the time."
+                u "Yeah, sure. The guys and I go there all the time."
 
                 scene v16s5_2e # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose confused, mouth open [DO NOT SHOW FRAT HOUSE].
                 with dissolve
@@ -135,7 +135,7 @@ label v16s5:
 
                 pause 0.75
 
-                scene v16s5_1a # TPP. Show MC walking the way he came from in v16s5_1, Ms Rose in the background walking away from MC, MC neutral face, mouth closed [DO NOT SHOW FRAT HOUSE].
+                scene v16s5_1a # TPP. Show MC walking the way he came from in v16s5_1, Ms. Rose in the background walking away from MC, MC neutral face, mouth closed [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 u "(Another day of dressing up and impressing ladies... Sign me up!)"
@@ -201,7 +201,7 @@ label v16s5:
 
                 # [End of Checkpoint 1.1. Continues to Checkpoint 2]
 
-    elif v15_threaten_ms_rose:  
+    elif v15_threaten_ms_rose: 
         # [Checkpoint 1.2]
         scene v16s5_2a
         with dissolve
@@ -248,7 +248,7 @@ label v16s5:
         menu:
             "Say sorry":
                 $ add_point(KCT.BRO)
-                scene v16s5_1b # TPP. MC and Ms. Rose walking away (only a few steps from MC) with their backs to each other. Close enough for Ms Rose to hear MC, MC slight frown, looking at the ground, mouth open [DO NOT SHOW FRAT HOUSE].
+                scene v16s5_1b # TPP. MC and Ms. Rose walking away (only a few steps from MC) with their backs to each other. Close enough for Ms. Rose to hear MC, MC slight frown, looking at the ground, mouth open [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 u "I'm sorry, Lorraine. I really am."
@@ -257,13 +257,15 @@ label v16s5:
 
             "Insult her":
                 $ add_point(KCT.TROUBLEMAKER)
-                scene v16s5_1c # TPP. MC and Ms. Rose walking away (only a few steps from MC) with their backs to each other. Close enough for Ms Rose to hear MC, MC angry, looking at the ground, mouth open [DO NOT SHOW FRAT HOUSE].
+                scene v16s5_1c # TPP. MC and Ms. Rose walking away (only a few steps from MC) with their backs to each other. Close enough for Ms. Rose to hear MC, MC angry, looking at the ground, mouth open [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 u "Have fun finding someone your own age!"
 
         scene v16s5_1d # TPP. MC and Ms. Rose walking away from each other, further away from each other (increase distance), MC neutral face looking at the ground as he walks toward frat house [DO NOT SHOW FRAT HOUSE].
         with dissolve
+
+        pause 0.75
 
         #[End of Checkpoint 1.2. Continues to Checkpoint 2]
 
@@ -344,17 +346,17 @@ label v16s5:
 
                 ro "*Laughs* Don't worry, I promise it will be fun. I'll dress up nice for you and I'll book us a private area..."
 
-                scene v16s5_5 # TPP. Shot of Ms Rose playing with the Collar of MC's shirt, Ms Rose flirty, mouth closed, MC slight smile, mouth closed [DO NOT SHOW FRAT HOUSE].
+                scene v16s5_5 # TPP. Shot of Ms. Rose playing with the Collar of MC's shirt, Ms. Rose flirty, mouth closed, MC slight smile, mouth closed [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 pause 0.75
 
-                scene v16s5_2i # FPP. Ms Rose close to MC's face biting her lip and playing with MC's collar [DO NOT SHOW FRAT HOUSE].
+                scene v16s5_2i # FPP. Ms. Rose close to MC's face biting her lip and playing with MC's collar [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 u "It's sounding much more interesting now, haha."
 
-                scene v16s5_2j # FPP. Ms Rose close to MC's face, playing with MC's collar, flirty face, mouth open [DO NOT SHOW FRAT HOUSE].
+                scene v16s5_2j # FPP. Ms. Rose close to MC's face, playing with MC's collar, flirty face, mouth open [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 ro "Is it?"
@@ -374,7 +376,7 @@ label v16s5:
         
         ro "You deserve it. I'll see you soon, okay?"
 
-        scene v16s5_2d
+        scene v16s5_2b
         with dissolve
 
         u "Yeah, for sure."

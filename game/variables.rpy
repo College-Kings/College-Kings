@@ -451,8 +451,9 @@ default v16s11_sign_up = False
 default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
 default v16s20_twazzlers = False
 default vs16s15hotdog_coupon = False
-default v16s22mention_bills = False
-default v16s22mention_laptop = False
+default v16s23_mention_bills = False  # TODO: Variable
+default v16s23_mention_laptop = False # TODO: Variable
+default v16s23_support_amber = False # TODO: Variable
 default v16s25a_date_with_aubrey = False 
 default v16s32_birthday_reservation = 0  # 0 = neither, 1 = standard_reserveration, 2 = birthday_reservation  
 default v16s32_aubrey_cab_and_flowers = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers

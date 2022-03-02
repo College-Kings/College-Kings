@@ -3,12 +3,11 @@
 # Characters: MC (Outfit: 9), Cashier (Outfit: 1)
 # Time: Morning
 
-
 label v16s35:
     play sound "sounds/dooropen.mp3"
 
     scene v16s35_1 # TPP. Show MC walking into the store with all the spa items, MC slight smile, mouth closed.
-    with fade (1,0,1)
+    with fade
 
     u "(Okay, spa supplies...)"
 
@@ -69,7 +68,7 @@ label v16s35:
     pause 0.75
 
     scene v16s35_7 # TPP. Close up of MC's hand putting the money on the counter
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -89,13 +88,15 @@ label v16s35:
 
     scene v16s35_9 # TPP. MC walking down the street with a shopping bag in his hand, MC slight smile, mouth closed.
     with dissolve
+
+    pause 0.75
     
     if joinwolves:
-
         scene v16s35_9
         with dissolve
 
         u "(And hopefully there's no Chris and Imre drama waiting for me this time...)"
+
     else:
         scene v16s35_9
         with dissolve

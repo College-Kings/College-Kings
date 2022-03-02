@@ -1,11 +1,11 @@
 # SCENE 17: Mc talks to Imre
-# Locations:  Street, bridge
+# Locations: Street, bridge
 # Characters: MC (Outfit: 5), IMRE (Outfit: 1)
 # Time: Tuesday
 
 label v16s17: # 17) MC catches up to Imre
     # -Imre walks along a street, onto a remote bridge. MC catches up to him 
-    # (This scene tone is drama with some humor. Slightly adjusted from original Miro outline, we need to avoid any suggestion of suicidal thoughts or making fun/being dismissive of suicidal thoughts)
+    # (This scene's tone is drama with some humor. Slightly adjusted from original Miro outline, we need to avoid any suggestion of suicidal thoughts or making fun/being dismissive of suicidal thoughts)
 
     scene v16s17_1 # TPP Show Imre walking along the street, MC a ways behind him, rushing to catch up
     with dissolve
@@ -16,7 +16,6 @@ label v16s17: # 17) MC catches up to Imre
     with dissolve
 
     u "Imre, wait!"
-
 
     scene v16s17_3 # TPP Show MC next to Imre on the bridge. Imre has his hands on the stone railing, looking out, angry expression, mouth open
     with dissolve
@@ -228,7 +227,7 @@ label v16s17: # 17) MC catches up to Imre
 
             u "No problem."
 
-            if joinapes: # -if Apes
+            if not joinwolves: # -if Apes
                 scene v16s17_4d
                 with dissolve
 

@@ -13,6 +13,8 @@ label v16s2:
         scene v16s2_2 # TPP. MC further down the street walking on campus, neutral face, mouth closed.
         with dissolve
 
+        pause 0.75
+
         jump v16s4
 
     else:
@@ -23,5 +25,7 @@ label v16s2:
 
         scene v16s2_2a # TPP. MC and Riley further down the stree walking on campus, both neutral face, mouth closed.
         with dissolve
+
+        pause 0.75
 
         jump v16s3

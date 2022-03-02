@@ -4,7 +4,7 @@
 # Time: Tuesday night
 
 label v16s18: # MC goes home
-    if joinapes:
+    if not joinwolves:
         scene v16s18_1 # TPP Show MC walking into his bedroom [APE ROOM].
         with dissolve
 
@@ -30,10 +30,10 @@ label v16s18: # MC goes home
 
         ### check queue (x2)
 
-        $ contact_amber.newMessage("Hey. You know how much you love me? ;) I'm at work all night tonight and forgot my phone charger at home! Grab it for me please? Key is under the mat.")
-        $ contact_amber.addReply("Yeah, I guess I can help you out this one time :P")
-        $ contact_amber.addReply("Ughhhhh")
-        $ contact_amber.newMessage("Hurry, please. Battery's almost dead!!!!!!!")
+        $ amber.messenger.newMessage("Hey. You know how much you love me? ;) I'm at work all night tonight and forgot my phone charger at home! Grab it for me please? Key is under the mat.")
+        $ amber.messenger.addReply("Yeah, I guess I can help you out this one time :P")
+        $ amber.messenger.addReply("Ughhhhh")
+        $ amber.messenger.newMessage("Hurry, please. Battery's almost dead!!!!!!!")
 
         scene v16s18_2b # TPP Same angle as 2, MC putting his phone back into his pocket [APE ROOM].
         with dissolve
@@ -69,10 +69,10 @@ label v16s18: # MC goes home
 
         pause 0.75
 
-        $ contact_amber.newMessage("Hey. You know how much you love me? ;) I'm at work all night tonight and forgot my phone charger at home! Grab it for me please? Key is under the mat.")
-        $ contact_amber.addReply("Yeah, I guess I can help you out this one time :P")
-        $ contact_amber.addReply("Ughhhhh")
-        $ contact_amber.newMessage("Hurry, please. Battery's almost dead!!!!!!!")
+        $ amber.messenger.newMessage("Hey. You know how much you love me? ;) I'm at work all night tonight and forgot my phone charger at home! Grab it for me please? Key is under the mat.")
+        $ amber.messenger.addReply("Yeah, I guess I can help you out this one time :P")
+        $ amber.messenger.addReply("Ughhhhh")
+        $ amber.messenger.newMessage("Hurry, please. Battery's almost dead!!!!!!!")
 
         scene v16s18_4b # TPP Same angle as 4, MC putting his phone back into his pocket [WOLF ROOM].
         with dissolve

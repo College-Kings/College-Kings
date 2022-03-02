@@ -48,10 +48,11 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
         "Knock":
             $ v16s34_knock_on_svc_door = True
 
+            play sound "sounds/knock.mp3"
+
             scene v16s34_5 # FPP Show MC's hand knocking on the door
             with dissolve
 
-            play sound "sounds/knock.mp3"
             pause 0.75
 
             scene v16s34_4
@@ -232,7 +233,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
             with dissolve
 
             cl "[name], no jokes today please."
-
+            
             scene v16s34_8a
             with dissolve
             
@@ -429,7 +430,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     el "I want Chloe to take my virginity."
 
     menu:
-        "Laugh histerically":
+        "Laugh hysterically":
             scene v16s34_7i
             with dissolve
 
@@ -532,6 +533,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     with dissolve
 
     u "(Wait until Chloe hears what this creepy asshole just said to me...)"
+
 
     scene v16s34_13 # FPP Show Chloe (neutral expression, mouth open) in hallway, lower her phone (she's done with the call)
     with dissolve
@@ -924,7 +926,6 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     cl "Way too much to do! I'll catch you later."
 
     if chloe.relationship == relationship.GIRLFRIEND: # IF ChloeGF
-        
         scene v16s34_15
         with dissolve
 
