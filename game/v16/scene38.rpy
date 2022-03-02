@@ -80,6 +80,8 @@ label v16s38:
             scene v16s38_3f # FPP. Show just Aubrey from the waist up, Aubrey has let go of both of MC's hands, and tries to hide her smile, slighlt smile, mouth is closed, looking at MC
             with dissolve
 
+            pause 0.75
+
         "Offer your jacket":
             $ add_point(KCT.BOYFRIEND)
 
@@ -202,6 +204,8 @@ label v16s38:
                 scene v16s38_7 # TPP. Show Mc watching the the driver getting into the cab and driving away, Mc slight smile, mouth is closed, The driver slight smile, mouth is closed
                 with dissolve
 
+                pause 0.75
+
             "Save your money":
                 $ add_point(KCT.TROUBLEMAKER)
 
@@ -263,6 +267,8 @@ label v16s38:
 
     scene v16s38_10 # TPP. Show Mc and Aubrey walking arm in arm towards the Restaurant entrance, slight smiles, mouths are closed
     with dissolve
+
+    pause 0.75
 
     if v16aubrey_flower_cab: ### ERROR: IF MC ordered flowers with the cab
         scene v16s38_11 # FPP. Show just Aubrey from the shoulders up, looking over at MC from the side, slight smile, mouth is open
@@ -360,5 +366,7 @@ label v16s38:
 
         scene v16s38_10a # TPP. Show Mc and Aubrey walking arm in arm into the Restaurant, slight smiles, mouths are closed
         with dissolve
+
+        pause 0.75
 
     jump v16s39 # -Transition to Scene 39-

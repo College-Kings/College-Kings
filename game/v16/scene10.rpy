@@ -335,7 +335,7 @@ label v16s10: # Econ class
 
                 la "*Whispers* I hope you enjoyed that as much as I did."
 
-                scene v16s10_3c
+                scene v16s10_3c ### check mouth
                 with dissolve
 
                 u "*Whispers* What was that all about, you sexy freak?"
@@ -369,7 +369,6 @@ label v16s10: # Econ class
 
     scene v16s10_4
     with dissolve
-
 
     ro "And if I'm lucky, some of you learned a thing or two as well."
 

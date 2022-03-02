@@ -48,10 +48,11 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
         "Knock":
             $ v16s34_knock = True
 
+            play sound "sounds/knock.mp3"
+
             scene v16s34_5 # FPP Show MC's hand knocking on the door
             with dissolve
 
-            play sound "sounds/knock.mp3"
             pause 0.75
 
             scene v16s34_4
@@ -338,7 +339,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     el "Is that really all you've got?"
 
-    # IF mc did THREE OR MORE OF made fun of Elijah on day one OR Homecoming dance OR in the scene where we meet his mom OR chose Joke About Elijah in this scene
+    # IF mc did THREE OR MORE OF made fun of Elijah on day one OR Homecoming dance OR where we meet his mom OR chose Joke About Elijah in v16s34
     if mock_elijah >= 3:
         scene v16s34_7j # FPP Same angle as 7, Elijah (neutral expression, mouth open) looking at MC
         with dissolve

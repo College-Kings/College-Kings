@@ -321,7 +321,6 @@ label v16s16:
     scene v16s16_8 # FPP. [Standing in front of the SHOOTING RANGE, MC looking at the vendor/The Bullseye on the RIGHT SIDE of the SHOOTING RANGE (man in the cowboy costume with a cowboy hat, if possible some nice old west facial hair, he has the rifle for the range)] BULLSEYE (slight smile, mouth open) looks at the MC. GUN is interchangable with PISTOL or RILFE depending on the prp chosen for the scene.
     with dissolve
     # -The shooting range vendor is wearing a cowboy costume (or normal clothes with cowboy hat), the "gun" is described as a rifle, if renders cannot match that description, please change it accordingly, cheex can help if needed-
-
     tb "Howdy partners! Welcome to the gallery made for shooting."
 
     tb "You can call me The Bullseye. Step right up to test y'all's rootin' tootin' shootin' skills and maybe you'll win yourself a prize!"
@@ -500,6 +499,8 @@ label v16s16:
 
     scene v16s16_13 # FPP. MC aiming down the range at the targets with the gun (This is FPP-- do down the lenght of the gun using the sighting marks with the target)
     with dissolve
+
+    pause 0.75
 
     if v16_win_range: # TODO: Variable
         scene v16s16_9e
@@ -884,6 +885,9 @@ label v16s16:
 
         scene v16s16_16e # TPP. Penelope leaned forward kissing MC.
         with dissolve
+        
+        pause 0.75
+        
     elif penelope.relationship == Relationship.friend:
         scene v16s16_16d
         with dissolve
@@ -914,5 +918,7 @@ label v16s16:
 
     scene v16s16_21b # TPP. Dylan walking off with the beat, Dylan full smile, mouth closed.
     with dissolve
+
+    pause 0.75
 
     jump v16s17

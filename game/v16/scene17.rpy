@@ -5,7 +5,7 @@
 
 label v16s17: # 17) MC catches up to Imre
     # -Imre walks along a street, onto a remote bridge. MC catches up to him 
-    # (This scene tone is drama with some humor. Slightly adjusted from original Miro outline, we need to avoid any suggestion of suicidal thoughts or making fun/being dismissive of suicidal thoughts)
+    # (This scene's tone is drama with some humor. Slightly adjusted from original Miro outline, we need to avoid any suggestion of suicidal thoughts or making fun/being dismissive of suicidal thoughts)
 
     scene v16s17_1 # TPP Show Imre walking along the street, MC a ways behind him, rushing to catch up
     with dissolve

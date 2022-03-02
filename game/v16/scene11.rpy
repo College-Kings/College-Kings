@@ -283,6 +283,8 @@ label v16s11:
             scene v16s11_6h # FPP. At the pinboard, MC looking at Riley, Riley body facing the board, head turned toward MC, Riley rolling her eyes, mouth closed.
             with dissolve
 
+            pause 0.75
+
     scene v16s11_6i # FPP. At the pinboard, MC looking at Riley, Riley leaning over, using a PEN to sign her name, slight smile, mouth closed.
     with dissolve
 
@@ -304,9 +306,6 @@ label v16s11:
     menu:
         "Sign up":
             $ v16s11_sign_up = True
-            scene v16s11_8
-            with dissolve
-
             u "I hope I don't regret this."
 
             ri "Haha, come on! This will be so fun."
@@ -327,9 +326,6 @@ label v16s11:
             ri "*Laughs*"
 
         "Don't sign up":
-            scene v16s11_8
-            with dissolve
-
             u "Nah, I'm good. Besides, I don't stand a chance against your creative eye and... superior intellect."
 
             ri "Haha, right. Whatever you say."
@@ -349,6 +345,8 @@ label v16s11:
 
         scene v16s11_11a # TPP. At the pinboard, MC looking at Chloe, Chloe leaning forward and kissing MC on the cheek.
         with dissolve
+
+        pause 0.75
 
         if riley.relationship >= Relationship.LIKES: ###???
             scene v16s11_12 # TPP. Close up of Riley facing MC and Chloe but her she looks away from seeing MC and Chloe kiss.
@@ -469,7 +467,13 @@ label v16s11:
 
         cl "He takes us into his office and makes us look each other in the eye while we apologize."
 
+        scene v16s11_11d
+        with dissolve
+
         u "Oh-"
+
+        scene v16s11_11f
+        with dissolve
 
         cl "Then, after a few moral lectures about patience and gratitude and whatever the fuck else..."
 
@@ -562,6 +566,8 @@ label v16s11:
         scene v16s11_16a # TPP. MC looking at his phone, [don't show Chloe so can be reused], slight smile, mouth closed.
         with dissolve
         
+        pause 0.75
+        
         ### check queue
         
         $ nora.messenger.newMessage("Hey, it's too nice out to be inside all day. Come join me at the park for yoga?")
@@ -579,6 +585,8 @@ label v16s11:
 
         scene v16s11_17 # TPP. Chloe continues to pull MC by his arm even further, both slight smile, mouth closed.
         with dissolve
+
+        pause 0.75
 
         jump v16s12
 
@@ -608,6 +616,8 @@ label v16s11:
         scene v16s11_16a
         with dissolve
 
+        pause 0.75
+
         $ nora.messenger.newMessage("Hey, It's such a nice day, it's too nice out to be inside all day. Come join me at the park for yoga?")
         $ nora.messenger.addReply("I do need a good stretch... lol. OMW", v16s11_reply3)
         $ nora.messenger.newMessage("Perfect :)")
@@ -623,5 +633,7 @@ label v16s11:
 
         scene v16s11_18 # TPP. Show MC walking down the hallways towards the park, slight smile, mouth closed.
         with dissolve
+
+        pause 0.75
 
         jump v16s13

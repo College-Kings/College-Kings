@@ -45,6 +45,9 @@ label v16s14:
         no "You'll have to control yourself though. We're expecting company."
     
     else:
+        scene v16s14_3
+        #with dissolve
+
         u "Are we ready to start?"
 
         scene v16s14_3a

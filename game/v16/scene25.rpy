@@ -37,6 +37,8 @@ label v16s25:
         scene v16s25_4 # TPP. In MC's Wolves Frat Room, Camera looking down from the ceiling as MC looks up at the ceiling where the camera is, *thinking* MC slight smile, mouth closed.
         with dissolve
 
+        pause 0.75
+
         if v14_amber_clean: # [Checkpoint 1.1]
             if amber.relationship >= Relationship.RS: # TODO: Variable
                 scene v16s25_4
@@ -290,7 +292,7 @@ label v16s25:
 
                     em "Hehe, good. I wanted you to see some of my new outfits."
 
-                    # OLD scene v16s25_11e # TPP. Laptop screen, Video chat overlay with Emily, Emily stood back so Emily can see her whole body, Emily's robe falling off revealing her first set of lingerie, Emily slight smile, mouth closed.
+                    # OLD v16s25_11e # TPP. Laptop screen, Video chat overlay with Emily, Emily stood back so Emily can see her whole body, Emily's robe falling off revealing her first set of lingerie, Emily slight smile, mouth closed.
                     # NEW 
                     scene v16s25_11e # TPP. Laptop screen, Video chat overlay with Emily, Emily stood back so MC can see her whole body, Emily's robe falls off revealing her naked, Emily slight smile/MC mouth closed, smiling, surprised.
                     with dissolve
@@ -362,7 +364,7 @@ label v16s25:
 
                             em "Haha, good."
 
-                            # OLD scene v16s25_11h # TPP. Laptop screen, Video chat overlay with Emily, Emily turned around and bent over showing her butt
+                            # OLD v16s25_11h # TPP. Laptop screen, Video chat overlay with Emily, Emily turned around and bent over showing her butt
                             # NEW
                             scene v16s25_11h # TPP. Laptop screen, Video chat overlay with Emily (lingerie1), Emily slight smile, mouth open, looking into camera while both hands slightly pushing her boobs up/MC mouth closed, smiling, happy. 
                             with dissolve
@@ -398,14 +400,14 @@ label v16s25:
 
                             u "It's your call, it doesn't look horrible, haha."
 
-                    # OLD scene v16s25_11j # TPP. Laptop Screen, Video chat overlay with Emily, Show Emily reaching behind her and dropping the top of the lingerie to the floor, Emily smirking, mouth open.
+                    # OLD v16s25_11j # TPP. Laptop Screen, Video chat overlay with Emily, Show Emily reaching behind her and dropping the top of the lingerie to the floor, Emily smirking, mouth open.
                     # NEW 
                     scene v16s25_11j # TPP. Laptop Screen, Video chat overlay with Emily, Emily, smiling, facing the camera, bra unhooked, off her bobos (as if she just took it off) but still draping on her arms/ MC, mouth closed, smiling, happy.
                     with dissolve
 
                     em "Okay, next!"
 
-                    # OLD scene v16s25_11q # TPP. Laptop Screen, Video Chat overlay with Emily, Emily in the first set of lingerie turned around standing up straight with one hand on her butt as the bottom piece of the lingerie falls to the floor, Emily now naked, 
+                    # OLD v16s25_11q # TPP. Laptop Screen, Video Chat overlay with Emily, Emily in the first set of lingerie turned around standing up straight with one hand on her butt as the bottom piece of the lingerie falls to the floor, Emily now naked, 
                     # NEW 
                     scene v16s25_11q # TPP. Close up of MC laying in bed ,dark, looking at the laptop screen, smiling, enjoying what he sees on the screen. The light from the laptop shines on MC's face.
                     with dissolve
@@ -583,6 +585,8 @@ label v16s25:
                     scene v16s25_1e # TPP. In his wolves frat room closing the door to his room in just his underwear, slight smile, mouth closed.
                     with dissolve
 
+                    pause 0.75
+
                 "I'm too tired": # [Checkpoint 2.2]
                     scene v16s25_7
                     with dissolve
@@ -646,6 +650,8 @@ label v16s25:
 
         scene v16s25_4a # TPP. Show MC with his eyes closed as he falls asleep, neutral face, mouth closed.
         with fade
+        
+        pause 0.75
             
             # [End of Checkpoint 2.2. Continue to Checkpoint 3]
             # [Checkpoint 3]
@@ -683,6 +689,8 @@ label v16s25:
 
         scene v16s25_17 # TPP. In MC's Apes Frat Room, Camera looking down from the ceiling as MC looks up at the ceiling where the camera is, *thinking* MC slight smile, mouth closed.
         with dissolve
+
+        pause 0.75
 
         if v14_amber_clean: # [Checkpoint 1.1]
             if amber.relationship >= Relationship.RS: # TODO: Variable
@@ -1223,6 +1231,8 @@ label v16s25:
                     scene v16s25_14e # TPP. In his Apes frat room closing the door to his room in just his underwear, slight smile, mouth closed.
                     with dissolve
                 
+                    pause 0.75
+                
                 "I'm too tired": # [Checkpoint 2.2]
                     scene v16s25_20
                     with dissolve
@@ -1267,6 +1277,8 @@ label v16s25:
                             scene v16s25_20b
                             with dissolve
 
+                            pause 0.75
+
                         "Hang up":
                             $ add_point(KCT.TROUBLEMAKER)
 
@@ -1284,6 +1296,8 @@ label v16s25:
 
         scene v16s25_17a # TPP. Show MC with his eyes closed as he falls asleep, neutral face, mouth closed.
         with fade
+        
+        pause 0.75
             
             # [End of Checkpoint 2.2. Continue to Checkpoint 3]
             # [Checkpoint 3]

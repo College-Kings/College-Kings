@@ -221,7 +221,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     am "Hmm... Maybe."
 
-    if v14_pics_with_linds: # TODO: VARIABLE # PLACEHOLDER VARIABLE # -if MC met Male Buyer in v15 scene 10        
+    if v14_pics_with_linds: # TODO: VARIABLE # PLACEHOLDER VARIABLE # -if MC met Male Buyer in v15 scene10
         scene v16s23_13
         with dissolve
 
@@ -612,8 +612,8 @@ label v16s23: # 23) Meet Amber at strip club
                 u "(Maybe another day.)"
 
     # -Regardless of all that-
-    # -if AmberRS (at least one sex scene with Amber before Lauren's Halloween party) [Checkpoint 1.1]
-    if amber.relationship >= Relationship.FWB) or any(scene in sceneList for scene in ("v8_amber", "v8_amber2", "v10_amber", "v14_amber")) : # TODO: Variable  # Again, a guess at what the writer was getting at in the new relationship system        
+    # -if AmberRS [Checkpoint 1.1]
+    if amber.relationship >= Relationship.FWB        
         scene v16s23_18 # FPP Amber stepping up onto the small table in the private booth [CHECKPOINT C: on table]
         with dissolve
 
@@ -953,9 +953,7 @@ label v16s23: # 23) Meet Amber at strip club
 
             scene v16s23_35 # TPP Show MC sucker-punching the drunk guy right in the jaw [OUTSIDE ENTRANCE]
             with dissolve
-
-            play sound facepunch1.mp3
-
+            play sound "sounds/facepunch1.mp3" ### play sound
             pause 0.75
 
             scene v16s23_36 # FPP MC looking down at drunk guy, who is on the ground rubbing his jaw, mouth closed [OUTSIDE ENTRANCE]

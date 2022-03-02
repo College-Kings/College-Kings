@@ -265,6 +265,8 @@ label v16s5:
         scene v16s5_1d # TPP. MC and Ms. Rose walking away from each other, further away from each other (increase distance), MC neutral face looking at the ground as he walks toward frat house [DO NOT SHOW FRAT HOUSE].
         with dissolve
 
+        pause 0.75
+
         #[End of Checkpoint 1.2. Continues to Checkpoint 2]
 
     else:
@@ -374,7 +376,7 @@ label v16s5:
         
         ro "You deserve it. I'll see you soon, okay?"
 
-        scene v16s5_2d
+        scene v16s5_2b
         with dissolve
 
         u "Yeah, for sure."

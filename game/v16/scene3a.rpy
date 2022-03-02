@@ -96,6 +96,7 @@ label v16s3a:
 
     scene v16rileybj # Ignore as anim
     with dissolve
+
     pause 0.75
 
     u "Oh, fuck Riley..."
@@ -108,6 +109,7 @@ label v16s3a:
 
     scene v16rileybj2 # Ignore as anim
     with dissolve
+
     pause 0.75
 
     u "Yes... This feels amazing, Riley."
@@ -116,6 +118,7 @@ label v16s3a:
 
     scene v16rileybjf # Ignore as anim
     with dissolve
+
     pause 0.75
 
     u "You really enjoy this, huh?"
@@ -124,6 +127,7 @@ label v16s3a:
 
     scene v16rileybjf2 # Ignore as anim
     with dissolve
+
     pause 0.75
 
     u "I'm so close to cumming already, I-"
@@ -217,6 +221,8 @@ label v16s3a:
             scene v16s3a_1
             with dissolve
 
+            pause 0.75
+
         "I like being pleased":
             scene v16s3a_2a
             with dissolve
@@ -242,6 +248,8 @@ label v16s3a:
 
             scene v16s3a_1
             with dissolve
+            
+            pause 0.75
 
     scene v16s3a_5 # TPP. MC getting off the bed, MC slight smile, mouth closed, Riley slight smile, mouth closed.
     with dissolve
@@ -309,5 +317,7 @@ label v16s3a:
 
     scene v16s3a_8a # TPP. Just the door to the dorm closed.
     with dissolve
+
+    pause 0.75
 
     jump v16s4

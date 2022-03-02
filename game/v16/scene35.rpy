@@ -84,6 +84,8 @@ label v16s35:
 
     scene v16s35_9 # TPP. MC walking down the street with his items in his hand, MC slight smile, mouth closed.
     with dissolve
+
+    pause 0.75
     
     if joinwolves:
         scene v16s35_9

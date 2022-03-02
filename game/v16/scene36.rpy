@@ -34,6 +34,8 @@ label v16s36:
         scene v16s36_2a # TPP In wolves room. MC in his new nice outfit looking at himself in the mirror, MC slight smile, mouth closed.
         with dissolve
 
+        pause 0.75
+
     else:
         scene v16s36_3 # TPP. In apes room. Show MC in his underwear putting on a black shirt, MC neutral face, mouth closed.
         with dissolve
@@ -62,5 +64,7 @@ label v16s36:
 
         scene v16s36_4a # TPP In apes room. MC in his new nice outfit looking at himself in the mirror, MC slight smile, mouth closed.
         with dissolve
+
+        pause 0.75
 
     jump v16s37

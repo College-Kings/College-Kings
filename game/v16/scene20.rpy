@@ -328,4 +328,6 @@ label v16s20_end:
     scene v16s20_17 # FPP. Show MC walking away from Ambers House, slight smile, mouth is closed
     with dissolve
 
+    pause 0.75
+
     jump v16s21

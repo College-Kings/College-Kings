@@ -230,6 +230,7 @@ label v16s22:
 
     scene v16s22_5b
     with dissolve
+
     u "Hmm... Does it?"
 
     scene v16s22_5c
@@ -725,8 +726,9 @@ label v16s22:
                 scene v16s22_8
                 with dissolve
 
-            "Keep it a secret":
+                pause 0.75
 
+            "Keep it a secret":
                 scene v16s22_9a
                 with dissolve
 
@@ -963,6 +965,8 @@ label v16s22:
                 scene v16s22_9o
                 with dissolve
 
+                pause 0.75
+
             "Leave it alone":
                 scene v16s22_9a
                 with dissolve
@@ -972,9 +976,11 @@ label v16s22:
                 scene v16s22_8e # TPP. Show Amber and Mc sitting down on a couch together, Amber is looking in a direction away from MC, both of them taking a sip from their coffee cups, both slight smiles [LEWS STAFF ROOM]
                 with dissolve
 
+                pause 0.75
+
     # -Regardless of all-
 
-    if amber.relationship >= Relationship.FRIEND and sex_with_amber_before_laurens_Party: #TODO: Variable # -if AmberRS (at least one sex scene with Amber before Lauren's Halloween party) [Checkpoint 1.1] Her sex scenes might need variables
+    if amber.relationship >= Relationship.FWB: # -if AmberRS [Checkpoint 1.1]
         scene v16s22_9
         with dissolve
 
@@ -1274,5 +1280,7 @@ label v16s22:
 
     scene v16s22_11 # TPP. Show Mc exiting Lews and is now on the sidewalk, slight smile, mouth is closed walking away from the Lews exit
     with dissolve
+
+    pause 0.75
 
     jump v16s24 # -Transition to Scene 24-

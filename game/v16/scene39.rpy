@@ -213,6 +213,8 @@ label v16s39:
     scene v16s39_7 # TPP. We now enter a free roam screen from MC's POV. The player can click on Aubrey, Wall clock, MC (bottom of screen highlighted), and a food Menu. Clicking on the Menu will give the option to end the free roam-
     with dissolve
 
+    pause 0.75
+
     if v16s39Aubrey_date: # -if Aubrey
         $ freeroam_aub_date.add("aubrey")
 
@@ -708,6 +710,8 @@ label v16s39:
                 scene v16s39_4j
                 with dissolve
 
+                pause 0.75
+
         # -Regardless of ordering choice-
 
         scene v16s39_9d # TPP. Show a side angle shot, camera is centered just above table level, Aubrey and Mc are taking a drink from their fruity soda's, looking at each other slight smiles
@@ -794,6 +798,8 @@ label v16s39:
 
         scene v16s39_10 # TPP. We enter the free roam screen from MC's POV. The player can click on Aubrey, Aubrey's food, MC's food, and Dessert menu. Clicking on the Dessert menu will give the option to end the free roam, Aubrey and MC are both looking at each other slight smiles, mouths are closed
         with dissolve
+
+        pause 0.75
 
     if v16s39Aubrey_date: # -if Aubrey
         $ freeroam_aub_date.add("aubrey2")
@@ -1149,6 +1155,8 @@ label v16s39:
 
                 scene v16s39_9
                 with dissolve
+
+                pause 0.75
 
                 # -Return to free roam-
 
@@ -1634,5 +1642,7 @@ label v16s39:
 
         scene v16s39_2c # TPP. Aubrey now has her jacket on as her and MC leave the restaurant with slight smiles, mouths are closed, The waiter waves goodbye to MC and Aubrey with a creepy smile mouth is open
         with dissolve
+
+        pause 0.75
 
         jump v16s40 # -Transition to Scene 40-

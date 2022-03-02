@@ -40,6 +40,10 @@ label v16s25a:
         scene v16s25a_1a # TPP. In wolves room. Show MC looking at his phone, MC neutral face, mouth closed.
         with dissolve
 
+        pause 0.75
+        
+        ### call phone and check for replies
+
         $ riley.messenger.newMessage("Guess who got the newspaper job?", force_send=True)
         $ riley.messenger.newMessage("MEEEEEEEEE!")
         $ riley.messenger.addReply("Haha, congrats!", v16s25a_reply_thankyou) 
@@ -206,6 +210,8 @@ label v16s25a:
         scene v16s25a_7 # TPP. In wolves room, show MC leaving his room.
         with dissolve
 
+        pause 0.75
+
         jump v16s26
 
     else:
@@ -224,9 +230,13 @@ label v16s25a:
         scene v16s25a_8a # TPP. In Apes room. Show MC looking at his phone, MC neutral face, mouth closed.
         with dissolve
 
+        pause 0.75
+
         $ riley.messenger.newMessage("Guess who got the newspaper job?", force_send=True)
         $ riley.messenger.newMessage("MEEEEEEEEE!")
         $ riley.messenger.addReply("Haha, congrats!", v16s25a_reply_thankyou) 
+        
+        ### call phone and check for replies
         
         if v16s11_sign_up: # TODO: Variable
             $ riley.messenger.addReply("What about me? Do you know?", v16s25a_reply_sorry) 
@@ -389,5 +399,7 @@ label v16s25a:
 
         scene v16s25a_13 # TPP. In Apes room, show MC leaving his room.
         with dissolve
+
+        pause 0.75
 
         jump v16s26

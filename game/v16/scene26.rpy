@@ -117,6 +117,7 @@ label v16s26:
         "Yeah, she's great":
             $ add_point(KCT.BOYFRIEND)
             scene v16s26_3a
+            with dissolve
 
             u "Oh, yeah! Autumn's great. She really cares about the animals and honestly, a lot cooler than I thought she was, haha."
 
@@ -221,6 +222,7 @@ label v16s26:
 
         "No idea, who?":
             scene v16s26_5a
+            with dissolve
 
             u "I've got no idea. Who?"
 
@@ -467,5 +469,7 @@ label v16s26:
 
     scene v16s26_7 # TPP. Show MC in the middle of Penelope and Lindsey, the girls arms linked with MC's arms as they skip/walk down the hallway, all slight smile, mouth closed.
     with dissolve
+
+    pause 0.75
 
     jump v16s27

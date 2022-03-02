@@ -18,6 +18,8 @@ label v16s8:
             scene v16s8_3 # TPP. Show MC sitting next to Chloe no expression, mouth is closed, looking at Chloe, Chloe is looking at MC tears in her eyes, mouth closed, looking at MC, The other Random Characters have given MC space to sit down, but are still there
             with dissolve
 
+            pause 0.75
+
             if chloe.relationship >= Relationship.GIRLFRIEND:
                 scene v16s8_4 # FPP. Show just Chloe looking at MC, tears in her eyes, sad expression, mouth is closed, looking at MC
                 with dissolve
@@ -67,6 +69,8 @@ label v16s8:
 
             scene v16s8_3c # TPP. Chloe looks back towards MC, tears still in her eyes, mouth is still closed, Mc looks at Chloe, no expression, mouth is closed, The Random Characters all look at each other with concerned/worried expressions
             with dissolve
+
+            pause 0.75
 
         "Just listen for now":
             scene v16s8_4d # FPP. Chloe has a sad expression, tears still in her eyes, mouth is open, looking at MC
@@ -361,5 +365,7 @@ label v16s8:
 
     scene v16s8_11a # TPP. Show just MC standing up and walking away, no expression, mouth is clsoed, the other random characters are already gone.
     with dissolve
+
+    pause 0.75
 
     jump v16s9 # -Transition to Scene 9-

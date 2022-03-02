@@ -8,6 +8,8 @@ label v16s15:
     scene v16s15_1 # TPP. MC approaches left pier entrance, now back in regular clothes. Penelope waits for him, both of them slight smiles, mouths are closed, both looking at each other, MC is walking up to Penelope [LEFT PIER ENTRANCE]
     with dissolve
 
+    pause 0.75
+
     if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS # TODO: Variable
         scene v16s15_2 # TPP MC gives Penelope a quick kiss [LEFT PIER ENTRANCE]
         with dissolve
@@ -168,6 +170,8 @@ label v16s15:
         scene v16s15_9 # -A single-screen free-roam with all four now stood inside the carnival. We can select the Carousel, the Wheel of chance, the Hot dog stand, and the Shooting range. Selecting the Shooting range will end the free roam, don't show any characters
         with dissolve
 
+        pause 0.75
+
         label v16s15pier_date_carousel: # -if Carousel
             $ freeroampier.add("carousel") # TODO: Variable
 
@@ -182,6 +186,7 @@ label v16s15:
             pause 0.75
 
             scene v16s14_10b # TPP Imre (inside) and Karen (outside) sitting in the front bench. Imre puts his arm around Karen. She doesn't seem to notice, more interested in looking toward her right [CAROUSEL: Ride Location: Carousel1, Camera: Carousel4]
+            with dissolve
 
             pause 0.75
 
@@ -352,6 +357,7 @@ label v16s15:
                     pe "Together?"
 
                     scene v16s15_19a # FPP. Show just Penelope (slght smile, mouth open) from the waist up, with the tops of carousel horses in the background, she is looking at Mc slight smile, mouth is closed [CAROUSEL: Ride Location: Carousel3]
+                    with dissolve
 
                     u "Sure. It'll be more fun."
 
@@ -367,6 +373,8 @@ label v16s15:
 
                     scene v16s15_11e # TPP. penelope giggles and blushes, they get on the horse together, Penelope in front with MC behind, up close, no space between them, Mc slight smile, mouth is closed, both of them looking at each other [CAROUSEL: Ride Location: Carousel3,  Camera: Carousel3]
                     with dissolve
+
+                    pause 0.75
 
                     if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS # TODO: Variable
                         scene v16s15_20 # TPP. Show Penelope sitting in front of MC on the horse, looking over her shoulder back at MC, slight smile, mouth is open [CAROUSEL: Ride Location: Carousel3,  Camera: Carousel2]
@@ -551,6 +559,8 @@ label v16s15:
                     scene v16s15_21 # TPP MC getting off the the back of the horse, neutral expression, while Penelope watches him over her shoulder, neutral expression, both mouths closed. [CAROUSEL: Ride Location: Carousel3, Camera: Carousel3].
                     with dissolve
 
+                    pause 0.75
+
                     scene v16s15_21b # TPP MC holding Penelope's hand as she gets off the horse, neutral expression, both mouths closed [CAROUSEL: Ride Location: Carousel3, Camera: Carousel3].
                     with dissolve
 
@@ -638,6 +648,8 @@ label v16s15:
             scene v16s15_23d # # TPP. Show Imre and Karen sitting in their booth seat, Imre is slightly upset mouth is closed, Karen is blushing mouth is closed, both of them looking at each other [CAROUSEL: Ride Location: Carousel1, Camera: Carousel4]
             with dissolve
 
+            pause 0.75
+
             # -The ride ends-
 
             scene v16s15_13
@@ -672,6 +684,8 @@ label v16s15:
 
             scene v16s15_25 # TPP. MC and Penelope walkinag away from the [CAROUSEL ENTRANCE], both looking at each other, both of them laughing.
             with dissolve
+
+            pause 0.75
 
             call screen v16s15pier_date # -Return to free roam screen-
 
@@ -954,6 +968,8 @@ label v16s15:
                 scene v16s15_37 # TPP. Show just Penelope Kissing Mc on the cheek in front of the WHEEL, both slight smiles [WHEEL]
                 with dissolve
 
+                pause 0.75
+
             scene v16s15_32
             with dissolve
 
@@ -1229,9 +1245,13 @@ label v16s15:
             scene v16s15_46 # TPP. The group walks away from the Wheel Stand, karen (disgusted, mouth closed) walks next to and is looking at Imre. Imre (mouth closed) smiles back at Karen. Penelope and Mc are holding hands and smiling with mouths closed looking at each other as they are walking behind Imre and Karen [WHEEL]
             with dissolve
 
+            pause 0.75
+
         else: # -if PenelopeFriend
             scene v16s15_46a # TPP. The group walks away from the Wheel Stand, karen (disgusted, mouth closed) walks next to and is looking at Imre. Imre (mouth closed) smiles back at Karen. Penelope and Mc are smiling with mouths closed looking at each other as they are walking behind Imre and Karen [WHEEL].
             with dissolve
+
+            pause 0.75
 
         call screen v16s15pier_date # -Return to free roam screen-
 
@@ -1714,6 +1734,8 @@ label v16s15:
 
             scene v16s15_63 # TPP. Show Penelope and Mc walking up to Imre and Karen (standing at the ARCADE ENTRANCE), Mc still has puffy cheeks, Penelope is mimicking Mc his puffy cheeks looking at Imre and Karen, Imre and Karen are looking at Penelope and laughing, Mc is trying to hold his food in his mouth from laughing at Penelope [HOTDOG]
             with dissolve
+
+            pause 0.75
 
             call screen v16s15pier_date # -Return to free roam screen-
 

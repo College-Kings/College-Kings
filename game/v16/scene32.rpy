@@ -15,6 +15,8 @@ label v16s32:
         scene v16s32_1a # TPP. MC (no expression, mouth closed) sitting on his bed with back to the corner (generic white wall) looking at his phone.
         with dissolve
 
+        pause 0.75
+
     else: # -if Wolves
         scene v16s32_2 # TPP. MC enters his bedroom, sitting on the edge of his bed, no expression, mouth is closed
         with dissolve
@@ -214,6 +216,8 @@ label v16s32:
 
         scene v16s32_5 # FPP. Close up shot of MC's phone in his hand, with a new message text appearing on his phone
         with dissolve
+
+        pause 0.75
 
         $ chloe.messenger.newMessage("Elijah is available rn, let's go meet with him?")
         $ chloe.messenger.addReply("Okay. OMW")

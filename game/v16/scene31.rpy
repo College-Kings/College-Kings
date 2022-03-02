@@ -276,6 +276,8 @@ label v16s31:
     scene v16s31_5 # TPP. Show just Samantha gets up to walk out and Mc standing a few feet away from her, both looking at each other slight smiles, mouths are closed
     with dissolve
 
+    pause 0.75
+
     if v14_SamanthaDrugs: # TODO: Variable # -if SamanthaDrugs and MC had sex
         scene v16s31_5a # TPP. As Sam passes MC, she stops for a moment and leans in towards Mc's ear, both slight smiles, Samantha's mouth is open, Mc's mouth is closed
         with dissolve
