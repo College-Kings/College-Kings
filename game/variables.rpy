@@ -469,3 +469,5 @@ default v16s39aubrey_date_points = 0
 default v16s44rubius_park_walk = False
 
 default v16s46_wrong_key = True
+default v16s27parent_nora = False
+default v16s27parent_chloe = False
