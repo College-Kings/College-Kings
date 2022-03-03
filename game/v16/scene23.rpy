@@ -613,7 +613,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     # -Regardless of all that-
     # -if AmberRS [Checkpoint 1.1]
-    if amber.relationship >= Relationship.FWB        
+    if amber.relationship >= Relationship.FWB:
         scene v16s23_18 # FPP Amber stepping up onto the small table in the private booth [CHECKPOINT C: on table]
         with dissolve
 

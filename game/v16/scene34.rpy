@@ -8,7 +8,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     with dissolve
     
     pause 0.75
-    
+
     scene v16s34_2 # FPP Show Chloe (slight smile, mouth open) waiting by a classroom door. Door has a piece of paper that says "SVC Times. KNOCK BEFORE ENTERING"
     with dissolve
 
@@ -46,7 +46,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     menu:
         "Knock":
-            $ v16s34_knock = True
+            $ v16s34_knock_on_svc_door = True
 
             play sound "sounds/knock.mp3"
 
@@ -97,7 +97,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     pause 0.75
 
-    if v16s34_knock: # IF Knock
+    if v16s34_knock_on_svc_door: # IF Knock
         scene v16s34_7a # FPP Same angle as 7, Elijah (slight smile, mouth open) looking at MC
         with dissolve
 
@@ -217,8 +217,8 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     menu:
         "Joke about Elijah":
             $ add_point(KCT.TROUBLEMAKER)
-            $ mock_elijah += 1 # PLACEHOLDER VARIABLE - NEED TO GO BACK AND INSERT THE VARIABLE AS FAR AS V1
-
+            $ v16s34_joke_about_elijah = True
+            
             scene v16s34_7
             with dissolve
 
@@ -260,7 +260,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
             cl "Moving on..."
 
         "Compliment the idea":
-            $ add_point(KCT.BRO)
+            $ add_point(KCT.BOYFRIEND)
 
             scene v16s34_7b
             with dissolve
@@ -307,6 +307,8 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     u "Yeah, pretty much."
 
+    play sound "sounds/vibrate.mp3"
+
     scene v16s34_9 # FPP Chloe (neutral expression, mouth open) looking down at her phone, in her hand
     with dissolve
 
@@ -339,8 +341,9 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     el "Is that really all you've got?"
 
-    # IF mc did THREE OR MORE OF made fun of Elijah on day one OR Homecoming dance OR where we meet his mom OR chose Joke About Elijah in v16s34
-    if mock_elijah >= 3:
+    # IF mc did THREE OR MORE OF made fun of Elijah on day one OR Homecoming dance OR in the scene where we meet his mom OR chose Joke About Elijah in this scene
+    if v16s34_joke_about_elijah and elijah.Relationship == Relationship.MAKEFUN:
+        
         scene v16s34_7j # FPP Same angle as 7, Elijah (neutral expression, mouth open) looking at MC
         with dissolve
 
@@ -477,7 +480,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
                 u "Are you out of your mind, Elijah?"
 
         "Get aggressive":
-            $ v16s34_get_aggressive = True
+            $ v16s34_get_aggressive_with_elijah = True
             $ add_point(KCT.TROUBLEMAKER)
 
             scene v16s34_7b
@@ -531,17 +534,18 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     u "(Wait until Chloe hears what this creepy asshole just said to me...)"
 
-    scene v16s34_13 # FPP Show Chloe (neutral expression, mouth open) in hallway, she is talking on the phone
+
+    scene v16s34_13 # FPP Show Chloe (neutral expression, mouth open) in hallway, lower her phone (she's done with the call)
     with dissolve
 
     pause 0.75
 
-    scene v16s34_13a # FPP Same angle as 13, Chloe (neutral expression, mouth open) now closer, talking to MC
+    scene v16s34_13a # FPP Same angle as 13, Chloe (neutral expression, mouth open) now closer, talking to MC (no phone)
     with dissolve
 
     cl "Did he agree?"
 
-    scene v16s34_13b # FPP Same angle as 13, Chloe (neutral expression, mouth closed) now closer, looking at MC
+    scene v16s34_13b # FPP Same angle as 13, Chloe (neutral expression, mouth closed) now closer, looking at MC (no phone)
     with dissolve
 
     u "Not yet."
@@ -551,8 +555,8 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     cl "What do you mean?"
 
-    if (v16s34_get_aggressive or chloe.relationship == Relationship.GIRLFRIEND): # IF chose Get Aggressive, or ChloeGF
-        scene v16s34_13c # FPP Same angle as 13, Chloe (curious expression, eyebrow raised, mouth open) looking at MC
+    if (v16s34_get_aggressive_with_elijah or chloe.relationship == Relationship.GIRLFRIEND): # IF chose Get Aggressive, or ChloeGF
+        scene v16s34_13c # FPP Same angle as 13, Chloe (curious expression, eyebrow raised, mouth open) looking at MC (no phone)
         with dissolve
 
         cl "And why do you look angry?"
@@ -562,7 +566,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     u "*Sighs* In return for giving us the cover, he wants..."
 
-    scene v16s34_13d # FPP Same angle as 13, Chloe (annoyed/impatient expression, mouth closed) looking at MC
+    scene v16s34_13d # FPP Same angle as 13, Chloe (annoyed/impatient expression, mouth closed) looking at MC (no phone)
     with dissolve
 
     u "Well... He-"
@@ -577,7 +581,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     u "He wants to have sex with you."
 
-    scene v16s34_13e # FPP Same angle as 13, Chloe (shocked, a little angry, mouth open) looking at MC
+    scene v16s34_13e # FPP Same angle as 13, Chloe (shocked, a little angry, mouth open) looking at MC (no phone)
     with dissolve
 
     cl "What the-"
@@ -587,12 +591,12 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     u "(I'm about to witness a murder.)"
 
-    scene v16s34_13f # FPP Same angle as 13, Chloe (smiling, mouth open) looking at MC
+    scene v16s34_13f # FPP Same angle as 13, Chloe (smiling, mouth open) looking at MC (no phone)
     with dissolve
 
     cl "*Laughs*"
 
-    scene v16s34_13g # FPP Same angle as 13, Chloe (smiling, mouth closed) looking at MC
+    scene v16s34_13g # FPP Same angle as 13, Chloe (smiling, mouth closed) looking at MC (no phone)
     with dissolve
 
     u "Ha... Ha... (We're laughing?)"
@@ -612,7 +616,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     cl "I hope you went easy on him. *Giggles*"
 
-    if v16s34_get_aggressive: # IF chose Get Aggressive
+    if v16s34_get_aggressive_with_elijah: # IF chose Get Aggressive
         scene v16s34_13g
         with dissolve
 
@@ -644,7 +648,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
         cl "Haha! I would've too! Holy shit... *Chuckles*"
 
-    scene v16s34_13h # FPP Same angle as 13, Chloe (smiling, eyebrow raised, mouth open) looking at MC
+    scene v16s34_13h # FPP Same angle as 13, Chloe (smiling, eyebrow raised, mouth open) looking at MC (no phone)
     with dissolve
 
     cl "I could make that twerp cum just by looking at him."
@@ -703,7 +707,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     menu:
         "It's just a kiss":
             $ add_point(KCT.TROUBLEMAKER)
-            $ v16s34_just_a_kiss = True
+            $ v16s34_chloe_kiss_elijah_for_frontpage = True
 
             scene v16s34_13b
             with dissolve
@@ -789,7 +793,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     el "So? What's your decision?"
 
-    if v16s34_just_a_kiss: # IF It's just a kiss
+    if v16s34_chloe_kiss_elijah_for_frontpage: # IF It's just a kiss
         scene v16s34_18 # FPP Chloe grabbing Elijah by the face and giving him a kiss on the lips. Elijah's body is stiff, clearly shocked
         with dissolve
 
@@ -820,11 +824,11 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
         cl "I told you!"
 
-        scene v16s34_19a
+        scene v16s34_19a # FPP Chloe (slight smile, mouth closed) looking at Elijah
         with dissolve
 
         u "You did."
-        
+
         scene v16s34_17b
         with dissolve
         
@@ -927,7 +931,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
         pause 0.75
 
-        if v16s34_just_a_kiss: # IF Chloe kissed Elijah
+        if v16s34_chloe_kiss_elijah_for_frontpage: # IF Chloe kissed Elijah
             scene v16s34_13f
             with dissolve
 
