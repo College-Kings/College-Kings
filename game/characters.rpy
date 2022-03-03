@@ -193,3 +193,7 @@ define character.ds = Character("Drunk Sleeze", who_color="#0055ff", who_outline
 define character.baby = Character("[baby]", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.wtv = Character("Woman on TV Show", who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.mtv = Character("Man on TV Show", who_color="#046307", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ]) 
+define character.hv = Character("hv")
+define character.pa = Character("pa")
+define character.pha = Character("pha")
+define character.jog = Character("jog")

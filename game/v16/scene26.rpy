@@ -3,15 +3,14 @@
 # Characters: MC (Outfit: 9), LINDSEY (Outfit: 1), PENELOPE (Outfit: 3)
 # Time: Morning
 
-
 label v16s26:
     scene v16s26_1 # TPP. Show MC walking down the hallway of SVC, neutral face, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v16s26_2 # TPP. Show MC walking down the Hallway of SVC further down the hall, Lindsey now walking to next to MC but he doesn't notice, Lindsey slight smile, mouth closed, MC neutral face, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -108,7 +107,7 @@ label v16s26:
     li "Autumn was telling me about the dog shelter re-opening and how you've been helping her?"
     
     menu:
-        "Yeah, it's great.":
+        "Yeah, it's great":
             $ add_point(KCT.BRO)
             scene v16s26_3a
             with dissolve
@@ -118,6 +117,7 @@ label v16s26:
         "Yeah, she's great":
             $ add_point(KCT.BOYFRIEND)
             scene v16s26_3a
+            with dissolve
 
             u "Oh, yeah! Autumn's great. She really cares about the animals and honestly, a lot cooler than I thought she was, haha."
 
@@ -222,6 +222,7 @@ label v16s26:
 
         "No idea, who?":
             scene v16s26_5a
+            with dissolve
 
             u "I've got no idea. Who?"
 
@@ -305,7 +306,7 @@ label v16s26:
         
         if v13_aubrey_concert: # TODO: Variable
             scene v16s26_5c # FPP. MC looking at Penelope, Penelope looking at Lindesy, Penelope slight smile, mouth closed.
-            with dissolve 
+            with dissolve
 
             u "(Polly's in town? Huh. I wonder if she'd recognize me?)"
 
@@ -468,5 +469,7 @@ label v16s26:
 
     scene v16s26_7 # TPP. Show MC in the middle of Penelope and Lindsey, the girls arms linked with MC's arms as they skip/walk down the hallway, all slight smile, mouth closed.
     with dissolve
+
+    pause 0.75
 
     jump v16s27

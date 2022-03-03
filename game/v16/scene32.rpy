@@ -3,12 +3,9 @@
 # Characters: MC (Outfit: 9)
 # Time: Afternoon
 
-
 label v16s32:
-
-    if joinapes: # -if Apes
-
-        scene v16s32_1 # TPP. MC enters his bedroom, sitting on the edge of his bed, no expression, mouth is closed
+    if not joinwolves: # -if Apes
+        scene v16s32_1 # TPP. MC enters his bedroom, sitting on the edge of his bed, no expression, mouth is closed [APE BEDROOM]
         with dissolve
 
         u "(This situation between Grayson and Samantha is going to explode soon. I can feel it coming...)"
@@ -18,9 +15,10 @@ label v16s32:
         scene v16s32_1a # TPP. MC (no expression, mouth closed) sitting on his bed with back to the corner (generic white wall) looking at his phone.
         with dissolve
 
-    else: # -if Wolves
+        pause 0.75
 
-        scene v16s32_2 # TPP. MC enters his bedroom, sitting on the edge of his bed, no expression, mouth is closed
+    else: # -if Wolves
+        scene v16s32_2 # TPP. MC enters his bedroom, sitting on the edge of his bed, no expression, mouth is closed [WOLF BEDROOM]
         with dissolve
 
         u "*Sighs* (Damn, Imre. What's gotten into him lately, talking himself into a punch like that?)"
@@ -33,7 +31,7 @@ label v16s32:
         u "(I can't believe Chris actually punched him, though. He's clearly not in control of his emotions lately.)"
 
     # -if AubreyTamed and having date
-
+    if aubrey.relationship == Relationship.TAMED and v16s25a_date_with_aubrey: # TODO:Variable
         scene v16s32_3 # TPP. Show just Mc looking at his phone, slight smile, mouth is closed, (generic white wall) for the background
         with dissolve
 
@@ -68,12 +66,9 @@ label v16s32:
 
         u "(Or should I keep it as a standard date reservation?)"
 
-        scene v16s32_3a
-        with dissolve
-
         menu:
-
             "Standard reservation":
+                $ v16s32_birthday_reservation = 1 # TODO: Variable                
 
                 scene v16s32_3
                 with dissolve
@@ -81,7 +76,7 @@ label v16s32:
                 u "(Standard it is. I've done some sneaky things, but lying about a birthday at a high-class restaurant? That's just evil...)"
 
             "Birthday reservation":
-                $ v16birthday_reservation = True
+                $ v16s32_birthday_reservation = 2 # TODO: Variable
 
                 scene v16s32_3
                 with dissolve
@@ -102,9 +97,7 @@ label v16s32:
         with dissolve
 
         menu:
-
             "Book her a cab":
-
                 scene v16s32_3a
                 with dissolve
 
@@ -124,17 +117,15 @@ label v16s32:
                 with dissolve
 
                 menu:
-
                     "Just the cab":
-                        $ v16aubrey_cab = True
-
+                        $ v16s32_aubrey_cab_and_flowers = 1 # TODO: Variable
                         scene v16s32_3a
                         with dissolve
 
                         u "(Yeah, I don't think the flowers are necessary. Let's save the money.)"
 
                     "Cab/Flower Combo":
-                        $ v16aubrey_flower_cab = True
+                        $ v16s32_aubrey_cab_and_flowers = 2 #TODO: Variable
 
                         scene v16s32_3a
                         with dissolve
@@ -147,54 +138,50 @@ label v16s32:
                 u "(Oh, shit. It says I have to pay the driver in cash. Can't use my card.)"
 
                 # -if helping Chloe with Spa day
+                if not v16s12_chloe_planboard_decide_newspaper_cover:
+                    scene v16s32_3b
+                    with dissolve
 
-                scene v16s32_3b
-                with dissolve
+                    u "(I can't spend any of the money Chloe gave me for spa supplies.)"
 
-                u "(I can't spend any of the money Chloe gave me for spa supplies.)"
+                    scene v16s32_3
+                    with dissolve
 
-                scene v16s32_3
-                with dissolve
+                    u "(The only cash I can really use is the fifty dollars that Lindsey gave me to donate to the animal shelter. Should I use that money for my date with Aubrey?)"
 
-                u "(The only cash I can really use is the fifty dollars that Lindsey gave me to donate to the animal shelter. Should I use that money for my date with Aubrey?)"
+                    scene v16s32_3b
+                    with dissolve
 
-                scene v16s32_3b
-                with dissolve
+                    menu:
+                        "Use the money":
+                            scene v16s32_3a
+                            with dissolve
 
-                menu:
+                            u "(What Lindsey doesn't know won't hurt her, right? Surely....)"
 
-                    "Use the money":
+                        "Cancel the booking":
+                            $ v16aubrey_cab = False
+                            $ v16aubrey_flower_cab = False
 
-                        scene v16s32_3a
-                        with dissolve
+                            scene v16s32_3a
+                            with dissolve
 
-                        u "(What Lindsey doesn't know won't hurt her, right? Surely....)"
-
-                    "Cancel the booking":
-                        $ v16aubrey_cab = False
-                        $ v16aubrey_flower_cab = False
-
-                        scene v16s32_3a
-                        with dissolve
-
-                        u "(I can't use someone else's money for my date, haha. I think Aubrey would understand."
+                            u "(I can't use someone else's money for my date, haha. I think Aubrey would understand."
 
             "She can manage":
-
                 scene v16s32_3
                 with dissolve
 
                 u "(She can find her own way there, ha. She's a tough girl.)"
 
-        scene v16s32_3a
-        with dissolve
+                scene v16s32_3a
+                with dissolve
 
-        u "And... Done."
+                u "And... Done."
 
     # -Regardless of AubreyTamed-
 
-    # -if MC is not helping Chloe
-
+    if not v14_help_chloe: # -if MC is not helping Chloe
         scene v16s32_3b
         with dissolve
 
@@ -217,17 +204,26 @@ label v16s32:
 
         jump v16s33 # -Transition to Scene 33-
 
-    # -if MC is helping Chloe with newspaper cover
-
+    elif v16s12_chloe_planboard_decide_newspaper_cover: # -if MC is helping Chloe with newspaper cover
         # -MC's phone vibrates. He checks it and sees a text from Chloe-
 
         scene v16s32_5 # FPP. Close up shot of MC's phone in his hand, with a new message text appearing on his phone
         with dissolve
 
-        $ chloe.newMessage("Elijah is available rn, let's go meet with him?.")
-        $ chloe.addReply("Okay. OMW")
-        $ chloe.newMessage("Hurry up :)")
-        $ chloe.addReply("Running all the way, boss :P")
+        pause 0.75
+
+        $ chloe.messenger.newMessage("Elijah is available rn, let's go meet with him?.")
+        $ chloe.messenger.addReply("Okay. OMW")
+        $ chloe.messenger.newMessage("Hurry up :)")
+        $ chloe.messenger.addReply("Running all the way, boss :P")
+        
+        play sound "sounds/vibrate.mp3"
+
+        label v16s32_phoneContinue1:
+            if chloe.messenger.replies:
+                call screen phones
+            if chloe.messenger.replies:
+                jump v16s32_phoneContinue1
 
         scene v16s32_3
         with dissolve
@@ -236,8 +232,7 @@ label v16s32:
 
         jump v16s34 # -Transition to Scene 34-
 
-    # -if MC is helping Chloe with spa night
-
+    elif not v16s12_chloe_planboard_decide_newspaper_cover:# -if MC is helping Chloe with spa night # TODO: Variable
         # -MC checks his phone-
 
         scene v16s32_3

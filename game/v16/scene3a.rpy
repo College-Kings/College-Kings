@@ -47,17 +47,17 @@ label v16s3a:
     play sound "sounds/kiss.mp3"
 
     scene v16s3a_1a # TPP. Riley kissing MC's neck, MC tilting his neck as Riley kisses it, MC slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v16s3a_3 # TPP. Close up of Riley's hand unziping MC's pants.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v16s3a_3a # TPP. Riley's hand pulling down MC's pants.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
@@ -96,6 +96,7 @@ label v16s3a:
 
     scene v16rileybj # Ignore as anim
     with dissolve
+
     pause 0.75
 
     u "Oh, fuck Riley..."
@@ -108,6 +109,7 @@ label v16s3a:
 
     scene v16rileybj2 # Ignore as anim
     with dissolve
+
     pause 0.75
 
     u "Yes... This feels amazing, Riley."
@@ -116,6 +118,7 @@ label v16s3a:
 
     scene v16rileybjf # Ignore as anim
     with dissolve
+
     pause 0.75
 
     u "You really enjoy this, huh?"
@@ -124,6 +127,7 @@ label v16s3a:
 
     scene v16rileybjf2 # Ignore as anim
     with dissolve
+
     pause 0.75
 
     u "I'm so close to cumming already, I-"
@@ -148,12 +152,12 @@ label v16s3a:
     pause 0.75
 
     scene v16s3a_4c # FPP. MC looking down at Riley, Riley looking up at MC, Riley swallowing, Riley smirking, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 
     scene v16s3a_4d # FPP. MC looking down at Riley, Riley looking up at MC, Riley smirking, mouth open.
-    with dissolve 
+    with dissolve
 
     ri "Mmm, delicious. *Giggles*"
 
@@ -217,9 +221,11 @@ label v16s3a:
             scene v16s3a_1
             with dissolve
 
+            pause 0.75
+
         "I like being pleased":
             scene v16s3a_2a
-            with dissolve 
+            with dissolve
 
             u "Well, I just so happen to like being pleased."
 
@@ -242,9 +248,11 @@ label v16s3a:
 
             scene v16s3a_1
             with dissolve
+            
+            pause 0.75
 
     scene v16s3a_5 # TPP. MC getting off the bed, MC slight smile, mouth closed, Riley slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     pause 0.75
     
@@ -259,7 +267,7 @@ label v16s3a:
     pause 0.75
 
     scene v16s3a_6 # FPP. MC stood up and looking at Riley sitting on the bed, Riley looking at MC, Riley slight smile, mouth closed.
-    with dissolve 
+    with dissolve
 
     u "Alright well, I know this is going to sound lame, but I really need to get home. Tomorrow's another big day..."
 
@@ -308,6 +316,8 @@ label v16s3a:
     play sound "sounds/doorclose.mp3"
 
     scene v16s3a_8a # TPP. Just the door to the dorm closed.
-    with dissolve 
+    with dissolve
+
+    pause 0.75
 
     jump v16s4

@@ -4,7 +4,6 @@
 # Time: Wednesday
 
 label v16s33: # 33) MC showers
-
     scene v16s33_1 # TPP Show MC washing himself in the shower, lips pursed, whistling
     with dissolve
 
@@ -45,9 +44,7 @@ label v16s33: # 33) MC showers
 
     scene v16s33_5 # FPP Show phone set on the edge of the sink
     with dissolve
-
     play sound "sounds/vibrate.mp3"
-
     pause 0.75
 
     scene v16s33_6 # TPP Show MC looking at his phone

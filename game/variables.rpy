@@ -451,13 +451,21 @@ default v16s11_sign_up = False
 default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
 default v16s20_twazzlers = False
 default vs16s15hotdog_coupon = False
-default v16s22mention_bills = False
-default v16s22mention_laptop = False
+default v16s23_mention_bills = False  # TODO: Variable
+default v16s23_mention_laptop = False # TODO: Variable
+default v16s23_support_amber = False # TODO: Variable
 default v16s25a_date_with_aubrey = False 
-default v16birthday_reservation = False
-default v16aubrey_cab = False
-default v16aubrey_flower_cab = False
+default v16s32_birthday_reservation = 0  # 0 = neither, 1 = standard_reserveration, 2 = birthday_reservation  
+default v16s32_aubrey_cab_and_flowers = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers
+default v16s34_joke_about_elijah = False # used and checked in v16s34 
+default v16s34_knock_on_svc_door = False # False = walk in 
+default v16s34_get_aggressive_with_elijah = False # False = Laugh
+default v16s34_chloe_kiss_elijah_for_frontpage = False # False = Tell Elijah to fuck off 
+default v16s35_mc_spa_shopping = set() # Tracks what MC purchased during spa shopping for chloe
 default v16s38tippped_driver = False
 default baby = "Baby" # Used to store the player designated name of the baby
 default v16food_critic = False
 default v16s39aubrey_date_points = 0
+default v16s44rubius_park_walk = False
+
+default v16s46_wrong_key = True

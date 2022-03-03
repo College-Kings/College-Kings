@@ -8,6 +8,8 @@ label v16s7:
     scene v16s7_1 # TPP. Show MC walking through a school hallway, slight smile, mouth is closed, Show a PA system on the wall somewhere behind MC
     with dissolve
 
+    pause 0.75
+
     if v15_chloe_lindseysabotage and not v15_chloe_postkiwii: # -if MC chose Embarrass Lindsey, PA system announcement
         scene v16s7_2 # TPP. MC and a few other random characters show up in frame, NO MAIN CHARACTERS, all of them stop walking and look up at the PA system speaker on the wall. All of them no expressions, mouths are closed
         with dissolve
@@ -105,7 +107,7 @@ label v16s7:
 
                     u "(Oh shit!)"
 
-            elif v15_lindsey_recording = 1: # Lindsey was not drunk, but MC passed a KCT Check
+            elif v15_lindsey_recording == 1: # Lindsey was not drunk, but MC passed a KCT Check
                 pa "What do you want me to say? That she gets everything handed to her?"
 
                 pa "Or that the only reason she wants to be President is because she can't afford tuition?"
@@ -123,12 +125,17 @@ label v16s7:
         scene v16s7_2e # TPP. The Random Characters are walking away smiling and now MC and Autumn are face to face looking at each other. Mc has no expression mouth is closed, Autumn has a concerned expression mouth is closed
         with dissolve
 
-    elif v15_chloe_lindseysabotage and v15s8_chloe_kiwii == chloe_board.add_subtask("Sabotage") and v15_chloe_postkiwii = chloe_board.selected_task == v15s8_chloe_kiwii:  # -if MC chose Embarrass Lindsey, Kiwii post announcement
+        pause 0.75
+
+    elif v15_chloe_lindseysabotage and v15s8_chloe_kiwii == chloe_board.add_subtask("Sabotage") and v15_chloe_postkiwii = chloe_board.selected_task == v15s8_chloe_kiwii: # -if MC chose Embarrass Lindsey, Kiwii post announcement
         scene v16s7_1a # TPP. MC is still in the school hallway as v16s7_1 MC's phone vibrates and he pulls his phone from his pocket and looks at it
         with dissolve
 
+        pause 0.75
+
         $ chloe.messenger.newMessage("Check out SVC's Kiwii page and play the audio ;)")
             
+        ### force open kiwii and/or check for Chloe message
         # -MC opens his Kiwii app to view the SVC Kiwii page. The most recent post is an audio file posted by an anonymous user with an empty avatar. The audio autoplays-
 
         if v15_lindsey_gamenight:
@@ -222,7 +229,7 @@ label v16s7:
 
                     u "(Oh shit!)"
 
-            elif v15_lindsey_recording = 1: # Lindsey was not drunk, but MC passed a KCT Check
+            elif v15_lindsey_recording == 1: # Lindsey was not drunk, but MC passed a KCT Check
                 scene v16s7_4
                 with dissolve
 
@@ -263,48 +270,45 @@ label v16s7:
 
     aut "Yeah, I remember that night, but there was no ill-intent behind it. Lindsey was drunk."
 
-    scene v16s7_6
+    scene v16s7_6a
     with dissolve
 
     u "I know."
 
-    scene v16s7_6a
+    scene v16s7_6
     with dissolve
 
     aut "I'm guessing Chloe is behind this? How the hell did she even get a recording of it, though?"
 
-    scene v16s7_6
-    with dissolve
-
     menu:
         "Defend Lindsey":
-            scene v16s7_6
+            scene v16s7_6a
             with dissolve
 
             u "No idea. You're right about Lindsey though, she didn't actually mean any of it. Chloe's playing dirty here."
 
         "Defend Chloe":
-            scene v16s7_6
+            scene v16s7_6a
             with dissolve
 
             u "No idea. But there's no denying that Lindsey said those things about Chloe."
 
-            scene v16s7_6a
+            scene v16s7_6
             with dissolve
 
             aut "But she was drunk, [name]. She didn't mean any of it."
 
-            scene v16s7_6
+            scene v16s7_6a
             with dissolve
 
-            u "I don't know.  People are more honest when they're drunk. Drunk words are sober thoughts, you know?"
+            u "I don't know. People are more honest when they're drunk. Drunk words are sober thoughts, you know?"
 
-            scene v16s7_6a
+            scene v16s7_6
             with dissolve
 
             aut "Yeah, yeah... Still, I feel sorry for her."
 
-            scene v16s7_6
+            scene v16s7_6a
             with dissolve
 
             u "I feel sorry for Chloe. Lindsey just roasted her, and the entire school heard it. Lindsey isn't really the victim here."
@@ -319,12 +323,12 @@ label v16s7:
 
     rg2 "I think she's crying, bro. Let's go make sure she's okay."
 
-    scene v16s7_6
+    scene v16s7_6a
     with dissolve
 
     u "Should we go check on her?"
 
-    scene v16s7_6a
+    scene v16s7_6
     with dissolve
 
     aut "No, I'm not getting involved in all the drama."
@@ -337,24 +341,26 @@ label v16s7:
     scene v16s7_7a # TPP. same as v16s7_7 Autumn grabs MC's face and turns his head facing back towards facing her, Autumn and MC both have no expressions, mouths are closed
     with dissolve
 
-    scene v16s7_6a
+    pause 0.75
+
+    scene v16s7_6
     with dissolve
 
     aut "And you shouldn't either. It's not worth the energy, [name]. This isn't your fight."
 
-    scene v16s7_6
+    scene v16s7_6a
     with dissolve
 
     u "You're probably right, but-"
 
     u "I need to see what's going on."
 
-    scene v16s7_6a
+    scene v16s7_6
     with dissolve
 
     aut "Alright, but don't say I didn't warn you."
 
-    scene v16s7_6
+    scene v16s7_6a
     with dissolve
 
     u "Don't worry, I'll come crying when I regret this decision."
@@ -384,7 +390,9 @@ label v16s7:
     scene v16s7_8 # TPP. Autumn walks away from MC, waving goodbye, slight smile mouth is closed, looking at MC, MC has a slight smile, mouth is closed, looking at Autumn
     with dissolve
 
-    jump v16s8 # -If PA system or Kiwii post Announcement, transition to scene 8-
+    pause 0.75
+
+    jump v16s8 # -If PA system or Kiwii post Announcement, transition to v16s8-
 
     label did_not_sabotage_lindsey:
         scene v16s7_1b # TPP. Show MC walking along the hallway. Autumn is walking the other way. They share a smile, stopping to chat
@@ -517,4 +525,6 @@ label v16s7:
         scene v16s7_8a # FPP. Mc is shown walking alone and away from Autumns direction in v16s7_8, slight smile, mouth is closed
         with dissolve
 
-        jump v16s9 # -If not on Announcement path, transition to scene 9-
+        pause 0.75
+
+        jump v16s9 # -If not on Announcement path, transition to v16s9-

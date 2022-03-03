@@ -1,6 +1,6 @@
 # SCENE 4: Mc goes to bed WOLVES OR APES room (both)
 # Locations: Wolves and Apes room.
-# Characters: MC (Outfit: 1), Ms Rose (Outfit: 1)
+# Characters: MC (Outfit: 1), Ms. Rose (Outfit: 1)
 # Time: Night
 
 init python:
@@ -68,9 +68,6 @@ label v16s4:
 
         pause 0.75
 
-        scene v16s4_9 # TPP. In wolves room, Show MC in bed looking at his phone, tired, mouth closed.
-        with dissolve
-
         $ naomi.messenger.newMessage("Hey, [name]! This is Naomi. The one and only... Lol.", force_send=True)
 
         if "v15_naomi" in sceneList:
@@ -85,6 +82,13 @@ label v16s4:
         
         $ naomi.messenger.addReply("Aw, come on... I saw that look in your eyes all night, we can have some fun together I think? ;)", v16s4_reply1)
         $ naomi.messenger.addReply("Please don't text me again. Thanks.", v16s4_reply2)
+
+        scene v16s4_9 # TPP. In wolves room, Show MC in bed looking at his phone, tired, mouth closed.
+        with dissolve
+
+        pause 0.75
+
+        ### call screen phone and check for replies
 
         scene v16s4_9
         with dissolve
@@ -156,6 +160,8 @@ label v16s4:
             scene v16s4_13 # TPP. In wolves room, shot from behind MC of him getting up.
             with dissolve
 
+            pause 0.75
+
             jump v16s5
 
         else:
@@ -221,6 +227,8 @@ label v16s4:
         scene v16s4_22 # TPP. In apes room, Show MC in bed looking at his phone, tired, mouth closed.
         with dissolve
 
+        pause 0.75
+
         $ naomi.messenger.newMessage("Hey, [name]! This is Naomi. The one and only... Lol.", force_send=True)
 
         if "v15_naomi" in sceneList:
@@ -232,9 +240,11 @@ label v16s4:
             $ naomi.messenger.newMessage("Just wanted to say, as much as I would've enjoyed getting closer with you at the wedding, don't read too much into it. I just wanted to piss off Aubrey, haha. Definitely not into you like that.")
             $ naomi.messenger.newMessage("Still can't believe you turned me down, though?? Things must be serious between you two... Gross.")
             $ naomi.messenger.newMessage("Either way, no second chances ;)")
-        
+               
         $ naomi.messenger.addReply("Aw, come on... I saw that look in your eyes all night, we can have some fun together I think? ;)", v16s4_reply1)
         $ naomi.messenger.addReply("Please don't text me again. Thanks.", v16s4_reply2)
+
+        ### call screen phone and check for replies
 
         scene v16s4_22
         with dissolve
@@ -245,6 +255,8 @@ label v16s4:
 
         scene v16s4_20
         with fade
+
+        pause 0.75
 
         scene v16s4_23
         with dissolve
@@ -303,6 +315,8 @@ label v16s4:
 
             scene v16s4_25 # TPP. In apes room, shot from behind MC of him getting up.
             with dissolve
+
+            pause 0.75
 
             jump v16s5
 

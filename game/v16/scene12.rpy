@@ -9,7 +9,7 @@ label v16s12:
 
     pause 0.75
 
-    if v15_chloe_lindseysabotage and not v15_chloe_postkiwii:        
+    if v15_chloe_lindseysabotage and not v15_chloe_postkiwii: 
         scene v16s12_2 # FPP. MC and Chloe in planning board room, standing in front of the board, next to each other, MC looking at Chloe, Chloe looking at MC, Chloe slight smile, mouth open
         with dissolve
 
