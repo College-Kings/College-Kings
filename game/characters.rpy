@@ -196,3 +196,4 @@ define character.mtv = Character("Man on TV Show", who_color="#046307", who_outl
 define character.hv = Character("hv")
 define character.pa = Character("pa")
 define character.pha = Character("pha")
+define character.jog = Character("jog")
