@@ -418,13 +418,15 @@ label v16s44:
 
             u "Yeah, I think it was that old taco."
 
-            ### -if mc gagged at ryan in the bathroom at laurens birthday party
+            # -if mc gagged at ryan in the bathroom at laurens birthday party
+            if mc_gagged_ryan: # PlaceHOLDER 
+
                 scene v16s44_14a # FPP. Close up shot of the taco and the promo leaflet for the Blue Lounge, alleyway background
                 with dissolve
 
                 u "(*Gags*) Oh... God..."
 
-                # -end if
+            # -end if
 
             scene v16s44_14b # FPP. Show Rubius licking the old Taco, alleyway background
             with dissolve
@@ -503,69 +505,71 @@ label v16s44:
 
             u "Oh, I am."
 
-        if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # -if laurengf
-            scene v16s44_18c # FPP. Show just Lauren (Lauren smirks, slight smile, mouth is open, looking at MC) Laurens shirt is completely soaked and you can see the full shape of her boobs and clearly visibly see her nipples through the wet shirt, alleyway background
+            if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # -if laurengf
+
+                scene v16s44_18c # FPP. Show just Lauren (Lauren smirks, slight smile, mouth is open, looking at MC) Laurens shirt is completely soaked and you can see the full shape of her boobs and clearly visibly see her nipples through the wet shirt, alleyway background
+                with dissolve
+
+                la "Ha, no, stop it! This is gross, and that's not polite to do..." 
+
+                scene v16s44_18
+                with dissolve
+
+                la "Rubius! Look what you did to me."
+
+                scene v16s44_19a # FPP. Show just Rubius (Proud deameanor, Big Proud smile, mouth is open, looking up at MC and Lauren)
+                with dissolve
+
+                pause 0.75
+
+            else:
+
+                scene v16s44_18a
+                with dissolve
+
+                la "Seriously, [name]?"
+
+                scene v16s44_18b
+                with dissolve
+
+                u "Sorry, I-"
+                
+                scene v16s44_19b # FPP. Show just Rubius (Disapointed expression, if possible a raised eyebrow, mouth is closed, looking at MC)
+                with dissolve
+
+                u "Rubius... Bad!"
+
+                scene v16s44_18
+                with dissolve
+
+                la "That was not very nice, Rubius! Look what you've done to my clothes."
+
+                scene v16s44_19a
+                with dissolve
+
+                pause 0.75
+
+            # -end if
+
+            scene v16s44_18d # FPP. Show just Lauren (slightly sad expression, mouth is open, looking down at her chest,) puffing her chest out attempting to dry her shirt off, both hands are cupping her breasts exposing them even more if possible, Laurens shirt is still completely soaked and you can see the full shape of her boobs and clearly visibly see her nipples through the wet shirt, alleyway background
             with dissolve
 
-            la "Ha, no, stop it! This is gross, and that's not polite to do..." 
+            la "*Sighs* The one day I choose to go braless in public..."
 
-            scene v16s44_18
+            scene v16s44_18e # FPP. Show just Lauren (slightly sad expression, mouth is open, looking at MC,) Laurens shirt is still completely soaked and you can see the full shape of her boobs and clearly visibly see her nipples through the wet shirt, alleyway background
             with dissolve
 
-            la "Rubius! Look what you did to me."
+            la "Can you take him now, please?"
 
-            scene v16s44_19a # FPP. Show just Rubius (Proud deameanor, Big Proud smile, mouth is open, looking up at MC and Lauren)
+            scene v16s44_18f # FPP. Show just Lauren (slightly sad expression, mouth is closed, looking at MC,) Laurens shirt is still completely soaked and you can see the full shape of her boobs and clearly visibly see her nipples through the wet shirt, alleyway background
             with dissolve
 
-            pause 0.75
+            u "Yeah, of course."
 
-        else:
-            scene v16s44_18a
+            scene v16s44_12d # TPP. Show Mc (no expression, mouth is closed, looking at Lauren,) Lauren (no expression, mouth is open, looking at MC,) and Rubius (mouth is open, tongue is hanging out, happy demeanor, looking at MC) all of them are in the alleyway with a trash can, and random scattered trash and puddles of water on each side
             with dissolve
 
-            la "Seriously, [name]?"
-
-            scene v16s44_18b
-            with dissolve
-
-            u "Sorry, I-"
-            
-            scene v16s44_19b # FPP. Show just Rubius (Disapointed expression, if possible a raised eyebrow, mouth is closed, looking at MC)
-            with dissolve
-
-            u "Rubius... Bad!"
-
-            scene v16s44_18
-            with dissolve
-
-            la "That was not very nice, Rubius! Look what you've done to my clothes."
-
-            scene v16s44_19a
-            with dissolve
-
-            pause 0.75
-
-        # -end if
-
-        scene v16s44_18d # FPP. Show just Lauren (slightly sad expression, mouth is open, looking down at her chest,) puffing her chest out attempting to dry her shirt off, both hands are cupping her breasts exposing them even more if possible, Laurens shirt is still completely soaked and you can see the full shape of her boobs and clearly visibly see her nipples through the wet shirt, alleyway background
-        with dissolve
-
-        la "*Sighs* The one day I choose to go braless in public..."
-
-        scene v16s44_18e # FPP. Show just Lauren (slightly sad expression, mouth is open, looking at MC,) Laurens shirt is still completely soaked and you can see the full shape of her boobs and clearly visibly see her nipples through the wet shirt, alleyway background
-        with dissolve
-
-        la "Can you take him now, please?"
-
-        scene v16s44_18f # FPP. Show just Lauren (slightly sad expression, mouth is closed, looking at MC,) Laurens shirt is still completely soaked and you can see the full shape of her boobs and clearly visibly see her nipples through the wet shirt, alleyway background
-        with dissolve
-
-        u "Yeah, of course."
-
-        scene v16s44_12d # TPP. Show Mc (no expression, mouth is closed, looking at Lauren,) Lauren (no expression, mouth is open, looking at MC,) and Rubius (mouth is open, tongue is hanging out, happy demeanor, looking at MC) all of them are in the alleyway with a trash can, and random scattered trash and puddles of water on each side
-        with dissolve
-
-        la "From now on, all walks stay WITHIN the park."
+            la "From now on, all walks stay WITHIN the park."
 
     scene v16s44_5d
     with dissolve
@@ -733,7 +737,8 @@ label v16s44:
 
         pause 0.75
 
-    else # -if not LaurenGf, they do a side hug as lauren is holding the leash in one hand
+    else: # -if not LaurenGf, they do a side hug as lauren is holding the leash in one hand
+
         scene v16s44_3a # TPP. Show Lauren and MC giving each other a side hug Lauren still holding onto Rubius (the dog) with one hand, Rubio watch's MC and Lauren Kiss tilting his head tounge is out
         with dissolve
 

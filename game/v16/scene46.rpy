@@ -109,7 +109,7 @@ label v16s46: # 46) Baby night, MC only
         scene v16s46_14 # FPP Show the closed door to MC's room
         with dissolve
 
-        *Banging on door* ### NOT SURE HOW TO CODE A NOISE
+        # TODO: *Banging on door* # NOT SURE HOW TO CODE A NOISE
 
         sa "[name]! Shut that thing up, now!"
 
@@ -271,7 +271,7 @@ label v16s46: # 46) Baby night, MC only
         scene v16s46_14
         with dissolve
 
-        *Banging on door* # NOT SURE HOW TO CODE NOISE
+        # TODO -- *Banging on door* # NOT SURE HOW TO CODE NOISE
 
         gr "Shut that fucking thing up before I rip this door down!"
 
