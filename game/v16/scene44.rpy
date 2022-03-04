@@ -729,7 +729,7 @@ label v16s44:
     scene v16s44_2
     with dissolve
 
-     pause 0.75
+    pause 0.75
 
     if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # -if LaurenGF, they have a quick goodbye kiss
         scene v16s44_3
