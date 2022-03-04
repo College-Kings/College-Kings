@@ -3,9 +3,7 @@
 # Characters: MR LEE (Outfit: 1), PENELOPE (Outfit: 3), MC (Outfit: 9), CHLOE (Outfit: 3), NORA (Outfit: 1), SEX ED TEACHER (Outfit: 1), CAMERON (Outfit: 3), LINDSEY (Outfit: 1)
 # Time: Morning
 
-
 label v16s27:
-
     scene v16s27_1 # TPP. MC (slight smile, mouth is closed,) Penelope (slight smile, mouth is closed,) and Lindsey (slight smile, mouth is closed,) enter the amphitheatre.
     with dissolve
 
@@ -68,7 +66,6 @@ label v16s27:
     with dissolve
 
     menu: # -TIMED EVENT-
-
         "Parent with Chloe":
             $ v16s27parent_chloe = True
 
@@ -163,14 +160,12 @@ label v16s27:
             u "(Nice. I figured she'd be totally into this.)"
         
     if timeRunsout: #Placeholder # -if time runs out before choice is made, MC will parent with Chloe
-
         scene v16s27_8
         with dissolve
 
         u "(Chloe's sitting closest to me. I'll just go with her.)"
 
 # -Regardless of parent choice-
-
     scene v16s27_4
     with dissolve
 
@@ -189,17 +184,15 @@ label v16s27:
     scene v16s27_11 # FPP. Show just Sex Ed Teacher (SET) (slight smile, mouth is open, looking at MC) holding up the baby doll with both hands
     with dissolve
 
-    set "Hello, class. I'd like everyone to look at this baby."
+    sexed "Hello, class. I'd like everyone to look at this baby."
 
     if v16s27parent_nora:
-
         scene v16s27_9b # FPP. Show just Nora (slight smile, mouth is open, looking at the (SET)) sitting in her seat, camera angle is from a seated positon
         with dissolve
 
         no "Awww!"
 
     else:
-
         scene v16s27_9c # FPP. Show just Nora (slight smile, mouth is open, looking at the (SET)) sitting in her seat, camera angle is from a seated positon, with multiple seats between MC and Nora (MC is not shown)
         with dissolve
 
@@ -208,7 +201,7 @@ label v16s27:
     scene v16s27_11a # FPP. Show just Sex Ed Teacher (SET) (slight smile, mouth is open, looking at Nora) cradling the baby doll
     with dissolve
 
-    set "No need to be jealous. *Chuckles* You're all going to be getting one of these to look after."
+    sexed "No need to be jealous. *Chuckles* You're all going to be getting one of these to look after."
 
     scene v16s27_11b # FPP. Show just Sex Ed Teacher (SET) (slight smile, mouth is closed, looking at MC) cradling the baby doll
     with dissolve
@@ -218,9 +211,9 @@ label v16s27:
     scene v16s27_11c # FPP. Show just Sex Ed Teacher (SET) (slight smile, mouth is open, looking at MC) cradling the baby doll
     with dissolve
 
-    set "Now, let's go through the rules."
+    sexed "Now, let's go through the rules."
 
-    set "What do these babies need? They need feeding, they need burping, they need their diapers changed."
+    sexed "What do these babies need? They need feeding, they need burping, they need their diapers changed."
 
     scene v16s27_12 # FPP. Show just Cameron (slight smile, mouth is open, looking at the (SET,))
     with dissolve
@@ -230,30 +223,29 @@ label v16s27:
     scene v16s27_11c
     with dissolve
 
-    set "If your baby is upset for any reason, it'll cry. But lucky for you, each baby comes with a set of keys."
+    sexed "If your baby is upset for any reason, it'll cry. But lucky for you, each baby comes with a set of keys."
 
     scene v16s27_11d # FPP. Show just Sex Ed Teacher (SET) (slight smile, mouth is open, looking at MC) cradling the baby doll with one arm, and now holding up three FOB keys
     with dissolve
 
-    set "Use the correct key and the crying will stop. The blue one is for feeding. The green one is for burping. The orange one is for changing its diaper."
+    sexed "Use the correct key and the crying will stop. The blue one is for feeding. The green one is for burping. The orange one is for changing its diaper."
 
     scene v16s27_11e # FPP Show just Sex Ed Teacher (SET) (slight smile, mouth is open, looking at MC) cradling the baby doll with one arm, and now only holding one FOB key and touching the key to the baby's lips, make a small green light appear on the FOB key
     with dissolve
 
-    set "Simply touch the correct key on the baby's mouth for feeding or burping." 
+    sexed "Simply touch the correct key on the baby's mouth for feeding or burping." 
 
     scene v16s27_11f # FPP Show just Sex Ed Teacher (SET) (slight smile, mouth is open, looking at MC) cradling the baby doll with one arm, and now only holding one FOB key and touching the key to the babys lower back, make a small green light appear on the FOB key
     with dissolve
 
-    set "Or to change the diaper, touch the correct key on the baby's lower back."
+    sexed "Or to change the diaper, touch the correct key on the baby's lower back."
 
     scene v16s27_11g # FPP Show just Sex Ed Teacher (SET) (slight smile, mouth is open, looking at MC) cradling the baby doll with one arm, and now only holding one FOB key and touching the key to the baby's lips, make a small red light appear on the FOB key
     with dissolve
 
-    set "The sensor inside will detect whether you've used the correct one or not."
+    sexed "The sensor inside will detect whether you've used the correct one or not."
 
     if v16s27parent_chloe: # -if MC is parenting with Chloe
-
         scene v16s27_8
         with dissolve
 
@@ -263,7 +255,6 @@ label v16s27:
         with dissolve
 
         menu:
-
             "Say something":
                 $ add_point(KCT.TROUBLEMAKER)
 
@@ -295,8 +286,7 @@ label v16s27:
 
                 u "(She's obviously not, and I don't feel like starting an argument.)"
 
-    else:# -if MC is parenting with Nora
-
+    else: # -if MC is parenting with Nora
         scene v16s27_9d # FPP. Show just Nora (slight smile, mouth is closed, looking at the (SET)) sitting in her seat, camera angle is from a seated positon
         with dissolve
 
@@ -306,7 +296,6 @@ label v16s27:
         with dissolve
 
         menu:
-
             "Talk to her":
                 $ add_point(KCT.TROUBLEMAKER)
 
@@ -338,11 +327,11 @@ label v16s27:
     scene v16s27_11c
     with dissolve
 
-    set "It's all pretty straight forward. Once you've spent some time with your baby, you will start to understand it's needs."
+    sexed "It's all pretty straight forward. Once you've spent some time with your baby, you will start to understand it's needs."
 
-    set "Just like in real life, the babies will cry when you're trying to sleep."
+    sexed "Just like in real life, the babies will cry when you're trying to sleep."
 
-    set "Therefore, these night babies, as they're called, will activate from ten at night until ten in the morning."
+    sexed "Therefore, these night babies, as they're called, will activate from ten at night until ten in the morning."
 
     scene v16s27_11b
     with dissolve
@@ -352,9 +341,9 @@ label v16s27:
     scene v16s27_11c
     with dissolve
 
-    set "You and your partner will be caring for the baby for three nights in total and return your baby on Saturday where I will evaluate your performance."
+    sexed "You and your partner will be caring for the baby for three nights in total and return your baby on Saturday where I will evaluate your performance."
 
-    set "As partners, each of you will spend one night alone with the baby as well as one night together. So, all that's left for you and your partner is to agree on a schedule."
+    sexed "As partners, each of you will spend one night alone with the baby as well as one night together. So, all that's left for you and your partner is to agree on a schedule."
 
     scene v16s27_11b
     with dissolve
@@ -371,7 +360,7 @@ label v16s27:
     scene v16s27_11c
     with dissolve
 
-    set "Oh, and one final thing. Feel free to name your baby whatever you want."
+    sexed "Oh, and one final thing. Feel free to name your baby whatever you want."
 
     scene v16s27_11b
     with dissolve
@@ -379,7 +368,6 @@ label v16s27:
     u "(I guess we'd better name it something...)"
 
     if v16s27parent_chloe: # -if chloe partner
-
         scene v16s27_8a
         with dissolve
 
@@ -404,7 +392,6 @@ label v16s27:
         with dissolve
 
         menu:
-
             "Plastic, it is":
                 $ add_point(KCT.BRO)
 
@@ -421,7 +408,6 @@ label v16s27:
                 cl "*Sighs* I don't think it has much of an opinion."
 
             "A different name":
-
                 # -Player gets to type baby name-
 
                 $ BABY_NAME = name = renpy.input(_("What's your baby's name?"), default=_("Baby")).strip() or _("Baby")
@@ -442,7 +428,6 @@ label v16s27:
                 cl "Okay, whatever you say."
 
     else: # -if nora partner
-
         scene v16s27_9
         with dissolve
 
@@ -477,10 +462,9 @@ label v16s27:
         with dissolve
 
         menu:
-
             "Scarlet or Henry?":
                 $ add_point(KCT.BOYFRIEND)
-                $ BABY_NAME = name = "Henry"
+                $ BABY_NAME = name = "Henry" ###
 
                 scene v16s27_9
                 with dissolve
@@ -513,10 +497,8 @@ label v16s27:
                 u "Sounds good, yeah."
 
             "Something else":
-
                 # -Player gets to type baby name-
-
-                $ BABY_NAME = name = renpy.input(_("What's your baby's name?"), default=_("Baby")).strip() or _("Baby")
+                $ BABY_NAME = name = renpy.input(_("What's your baby's name?"), default=_("Baby")).strip() or _("Baby") ###
 
                 scene v16s27_9g # FPP. Show just Nora (slight smile, mouth is closed, looking in the air) in a thinking pose sitting in her seat, camera angle is from a seated positon
                 with dissolve
@@ -535,14 +517,13 @@ label v16s27:
     scene v16s27_11c
     with dissolve
 
-    set "And that's everything!"
+    sexed "And that's everything!"
 
-    set "Congratulations, and welcome to parenthood! Your babies will be available for collection this evening so please stop by later to pick them up."
+    sexed "Congratulations, and welcome to parenthood! Your babies will be available for collection this evening so please stop by later to pick them up."
 
-    set "And I'll see you all in three days at the Nurse's office for your reviews. Have a good day, parents!"
+    sexed "And I'll see you all in three days at the Nurse's office for your reviews. Have a good day, parents!"
 
     if v16s27parent_chloe: # -if MC is parenting with Chloe
-
         scene v16s27_8e
         with dissolve
 
@@ -604,7 +585,6 @@ label v16s27:
         u "(I already feel like a single dad over here.)"
 
     else: # -if MC is parenting with Nora
-
         scene v16s27_9a
         with dissolve
 
@@ -662,7 +642,6 @@ label v16s27:
     pause 0.75
 
     if v14_help_lindsey:    # -if MC is helping Lindsey
-
         scene v16s27_14a # TPP. Show MC (slight smile, mouth is closed, looking at Lindsey) standing at the exit to the Amphitheatre, and Lindsey (slight smile, mouth is closed, looking at MC) approaching MC
         with dissolve
 
@@ -694,5 +673,4 @@ label v16s27:
         jump v16s28 # -Transition to Scene 28-
 
     else: # -if MC is not helping Lindsey
-
         jump v16s29 # -Transition to Scene 29-
