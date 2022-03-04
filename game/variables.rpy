@@ -463,9 +463,14 @@ default v16s34_get_aggressive_with_elijah = False # False = Laugh
 default v16s34_chloe_kiss_elijah_for_frontpage = False # False = Tell Elijah to fuck off 
 default v16s35_mc_spa_shopping = set() # Tracks what MC purchased during spa shopping for chloe
 default v16s38_tippped_driver = False
+default v16s39_fr_aubrey_date_list = set() # Tracks player selection during Aubrey date freeroam
+default v16s39_fr_aubrey_date_points = 0
+default v16s39_food_critic = False
+
+
+
 default baby = "Baby" # Used to store the player designated name of the baby
-default v16food_critic = False
-default v16s39aubrey_date_points = 0
+
 default v16s44rubius_park_walk = False
 
 default v16s46_wrong_key = True

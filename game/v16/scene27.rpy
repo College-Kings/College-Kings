@@ -162,7 +162,7 @@ label v16s27:
 
             u "(Nice. I figured she'd be totally into this.)"
         
-    if # -if time runs out before choice is made, MC will parent with Chloe
+    if timeRunsout: #Placeholder # -if time runs out before choice is made, MC will parent with Chloe
 
         scene v16s27_8
         with dissolve

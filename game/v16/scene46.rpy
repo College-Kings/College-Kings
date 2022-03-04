@@ -123,7 +123,7 @@ label v16s46: # 46) Baby night, MC only
 
         menu:
             "Be sorry":
-                 $ add_point(KCT.BRO)
+                $ add_point(KCT.BRO)
 
                 scene v16s46_14
                 with dissolve
@@ -136,7 +136,7 @@ label v16s46: # 46) Baby night, MC only
                 sa "Well, try harder!"
 
             "Be agitated":
-                 $ add_point(KCT.TROUBLEMAKER)
+                $ add_point(KCT.TROUBLEMAKER)
 
                 scene v16s46_14
                 with dissolve
