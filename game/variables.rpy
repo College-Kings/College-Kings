@@ -467,3 +467,7 @@ default baby = "Baby" # Used to store the player designated name of the baby
 default v16food_critic = False
 default v16s39aubrey_date_points = 0
 default v16s44rubius_park_walk = False
+
+default v16s46_wrong_key = True
+default v16s27parent_nora = False
+default v16s27parent_chloe = False

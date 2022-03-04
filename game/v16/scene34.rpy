@@ -217,8 +217,8 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     menu:
         "Joke about Elijah":
             $ add_point(KCT.TROUBLEMAKER)
-            $ v16s34_joke_about_elijah = True            
-
+            $ v16s34_joke_about_elijah = True
+            
             scene v16s34_7
             with dissolve
 
@@ -678,7 +678,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     u "Eww."
 
-    if chloe.relationship == relationship.GIRLFRIEND: # IF ChloeGf
+    if chloe.relationship == Relationship.GIRLFRIEND: # IF ChloeGf
         scene v16s34_14 # TPP Show Chloe (slight smile, mouth open) placing her hand on MC's (slightly angry, mouth closed) chest to comfort him
         with dissolve
 
@@ -752,7 +752,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
             cl "Yeah, that creepy little prick doesn't even deserve the satisfaction of my lips..."
 
-            if chloe.relationship == relationship.GIRLFRIEND:
+            if chloe.relationship == Relationship.GIRLFRIEND:
                 scene v16s34_13b
                 with dissolve
 
@@ -925,7 +925,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     cl "Way too much to do! I'll catch you later."
 
-    if chloe.relationship == relationship.GIRLFRIEND: # IF ChloeGF
+    if chloe.relationship == Relationship.GIRLFRIEND: # IF ChloeGF
         scene v16s34_15
         with dissolve
 

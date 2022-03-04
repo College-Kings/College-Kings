@@ -4,9 +4,7 @@
 # Time: Afternoon
 
 label v16s32:
-
-    if joinapes: # -if Apes
-
+    if not joinwolves: # -if Apes
         scene v16s32_1 # TPP. MC enters his bedroom, sitting on the edge of his bed, no expression, mouth is closed [APE BEDROOM]
         with dissolve
 
@@ -17,8 +15,9 @@ label v16s32:
         scene v16s32_1a # TPP. MC (no expression, mouth closed) sitting on his bed with back to the corner (generic white wall) looking at his phone.
         with dissolve
 
-    else: # -if Wolves
+        pause 0.75
 
+    else: # -if Wolves
         scene v16s32_2 # TPP. MC enters his bedroom, sitting on the edge of his bed, no expression, mouth is closed [WOLF BEDROOM]
         with dissolve
 
@@ -33,7 +32,6 @@ label v16s32:
 
     # -if AubreyTamed and having date
     if aubrey.relationship == Relationship.TAMED and v16s25a_date_with_aubrey: # TODO:Variable
-
         scene v16s32_3 # TPP. Show just Mc looking at his phone, slight smile, mouth is closed, (generic white wall) for the background
         with dissolve
 
@@ -69,7 +67,6 @@ label v16s32:
         u "(Or should I keep it as a standard date reservation?)"
 
         menu:
-
             "Standard reservation":
                 $ v16s32_birthday_reservation = 1 # TODO: Variable                
 
@@ -100,9 +97,7 @@ label v16s32:
         with dissolve
 
         menu:
-
             "Book her a cab":
-
                 scene v16s32_3a
                 with dissolve
 
@@ -122,7 +117,6 @@ label v16s32:
                 with dissolve
 
                 menu:
-
                     "Just the cab":
                         $ v16s32_aubrey_cab_and_flowers = 1 # TODO: Variable
                         scene v16s32_3a
@@ -145,7 +139,6 @@ label v16s32:
 
                 # -if helping Chloe with Spa day
                 if not v16s12_chloe_planboard_decide_newspaper_cover:
-
                     scene v16s32_3b
                     with dissolve
 
@@ -160,9 +153,7 @@ label v16s32:
                     with dissolve
 
                     menu:
-
                         "Use the money":
-
                             scene v16s32_3a
                             with dissolve
 
@@ -178,7 +169,6 @@ label v16s32:
                             u "(I can't use someone else's money for my date, haha. I think Aubrey would understand."
 
             "She can manage":
-
                 scene v16s32_3
                 with dissolve
 
@@ -192,7 +182,6 @@ label v16s32:
     # -Regardless of AubreyTamed-
 
     if not v14_help_chloe: # -if MC is not helping Chloe
-
         scene v16s32_3b
         with dissolve
 
@@ -216,11 +205,12 @@ label v16s32:
         jump v16s33 # -Transition to Scene 33-
 
     elif v16s12_chloe_planboard_decide_newspaper_cover: # -if MC is helping Chloe with newspaper cover
-
         # -MC's phone vibrates. He checks it and sees a text from Chloe-
 
         scene v16s32_5 # FPP. Close up shot of MC's phone in his hand, with a new message text appearing on his phone
         with dissolve
+
+        pause 0.75
 
         $ chloe.messenger.newMessage("Elijah is available rn, let's go meet with him?.")
         $ chloe.messenger.addReply("Okay. OMW")
@@ -243,7 +233,6 @@ label v16s32:
         jump v16s34 # -Transition to Scene 34-
 
     elif not v16s12_chloe_planboard_decide_newspaper_cover:# -if MC is helping Chloe with spa night # TODO: Variable
-
         # -MC checks his phone-
 
         scene v16s32_3
