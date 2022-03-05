@@ -14,7 +14,7 @@ label v16s40:
 
     pause 0.75
 
-    if v16s39aubrey_date_points >= 10: ### ERROR: IF MC scored maximum 10 points
+    if v16s39_fr_aubrey_date_points == 10: ### ERROR: IF MC scored maximum 10 points
         scene v16s40_3 # FPP. Show just Aubrey from the waist up, slight smile, mouth is open, looking at MC, show Aubrey holding both of Mc's hand 
         with dissolve
 
@@ -22,12 +22,12 @@ label v16s40:
 
         au "Thank you."
 
-        scene v16s40_4 # TPP. Aubrey kisses MC passionately, and holds MC's hand, both of their eyes are closed during the kiss, Mc wraps his arm around Aubreys back as she kisses him.
+        scene v16s40_4 # TPP. Aubrey kisses MC passionately, her hands on his waist, both of their eyes are closed during the kiss, Mc wraps his arm around Aubreys back as she kisses him.
         with dissolve
 
-        pause 0.75
+        pause 0.75        
 
-    elif v16s39aubrey_date_points >= 8: ### ERROR: IF MC scored 8-9 points
+    elif v16s39_fr_aubrey_date_points >= 8: ### ERROR: IF MC scored 8-9 points
         scene v16s40_3a # FPP. Show just Aubrey from the waist up, slight smile, mouth is open, looking at MC, show Aubrey holding one of Mc's hand 
         with dissolve
 
@@ -43,7 +43,7 @@ label v16s40:
 
         au "Something like that, hehe."
 
-    elif v16s39aubrey_date_points >= 4: ### ERROR: IF MC scored 4-7 points
+    elif v16s39_fr_aubrey_date_points >= 4: ### ERROR: IF MC scored 4-7 points
         scene v16s40_3a
         with dissolve
 
@@ -60,9 +60,8 @@ label v16s40:
         au "Mmm, yeah you probably should, haha."
 
     ### ERROR: END IF
-    if v16s39aubrey_date_points >= 4: ### ERROR: IF MC scored 4-10 points (passed the date)
-        $ aubrey.relationship.value == Relationship.GIRLFRIEND.value
-
+    if v16s39_fr_aubrey_date_points >= 4: ### ERROR: IF MC scored 4-10 points (passed the date)
+        
         scene v16s40_3c # FPP. Show just Aubrey from the waist up, slight smile, mouth is closed, looking at MC
         with dissolve
 
@@ -70,7 +69,7 @@ label v16s40:
 
         u "I guess this makes us a proper couple now?"
 
-        scene v16s40_3d # FPP. Show just Aubrey from the waist up, slight smile, mouth is closed, turning her head slightly away from MC but still looking at MC, slightly blushing
+        scene v16s40_3d # FPP. Show just Aubrey from the waist up, slight smile, mouth is closed, turning her head slightly away from MC but eyes looking at MC, slightly blushing
         with dissolve
 
         pause 0.75
@@ -115,27 +114,27 @@ label v16s40:
 
         u "Oh. How come?"
 
-        scene v16s40_3c
+        scene v16s40_3g
         with dissolve
 
         au "Tonight was like our first real date, so I want to do this right."
 
-        scene v16s40_3g
+        scene v16s40_3c
         with dissolve
 
         u "Okay... And?"
 
-        scene v16s40_3c
+        scene v16s40_3g
         with dissolve
 
         au "So, let's end the night here? Separately? Like adults?"
 
-        scene v16s40_3g
+        scene v16s40_3c
         with dissolve
 
         u "Haha, wow. Are you sure?"
 
-        scene v16s40_3c
+        scene v16s40_3g
         with dissolve
 
         au "Yeah, and trust me. When we see each other again, it's going to be extra special."
@@ -160,35 +159,35 @@ label v16s40:
 
         pause 0.75
 
-    ### ERROR: IF MC has baby duties tonight 
-    ### TRANSCRIBER NOTE!!! ### THERE IS NO ALTERNATIVE SCENE TO TRAVEL TO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO ### ATTENTION!!! ###
+        ### ERROR: IF MC has baby duties tonight 
+        ### TRANSCRIBER NOTE!!! ### THERE IS NO ALTERNATIVE SCENE TO TRAVEL TO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO ### ATTENTION!!! ###
+        if 1 & v16s27_mc_baby_duty_night == 1: # MC has babby duty Wednesday night
+            scene v16s40_3c
+            with dissolve
 
-    scene v16s40_3c
-    with dissolve
+            u "That's probably for the best, anyway. I just remembered I'm on baby duty tonight."
 
-    u "That's probably for the best, anyway. I just remembered I'm on baby duty tonight."
+            scene v16s40_3g
+            with dissolve
 
-    scene v16s40_3g
-    with dissolve
+            au "Oh, yeah... Been there and done that, no thank you! *Laughs*"
 
-    au "Oh, yeah... Been there and done that, no thank you! *Laughs*"
+            scene v16s40_3c
+            with dissolve
 
-    scene v16s40_3c
-    with dissolve
+            u "Well, think of me when you're enjoying a quiet, relaxing slumber..."
 
-    u "Well, think of me when you're enjoying a quiet, relaxing slumber..."
+            scene v16s40_3g
+            with dissolve
 
-    scene v16s40_3g
-    with dissolve
+            au "Haha, I will. Good luck!"
 
-    au "Haha, I will. Good luck!"
+            scene v16s40_3c
+            with dissolve
 
-    scene v16s40_3c
-    with dissolve
+            u "Thanks, ha."
 
-    u "Thanks, ha."
-
-    ### ERROR: END IF
+        ### ERROR: END IF
 
     scene v16s40_3c
     with dissolve
@@ -209,8 +208,8 @@ label v16s40:
 
     ### ERROR: END IF
 
-    if v16s39aubrey_date_points <= 3: ### ERROR: IF MC scored 0-3 points (DATE FAIL = Loses AubreyTamed)
-        $ AubreyTamed = False ### variable
+    if v16s39aubrey_date_points <= 3: ### ERROR: IF MC scored 0-3 points (DATE FAIL = Loses AubreyTamed)        
+        $ aubrey.relationship == Relationship.FWB
 
         scene v16s40_3h # FPP. Show just Aubrey from the waist up, no expression, mouth is closed, looking at MC
         with dissolve
@@ -269,23 +268,24 @@ label v16s40:
 
         u "*Sighs* Yeah, okay."
 
-        ### ERROR: IF MC has baby duties tonight
-        ### TRANSCRIBER NOTE!!! ### THERE IS NO ALTERNATIVE SCENE TO TRAVEL TO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO ### ATTENTION!!! ###
+            ### ERROR: IF MC has baby duties tonight
+            ### TRANSCRIBER NOTE!!! ### THERE IS NO ALTERNATIVE SCENE TO TRAVEL TO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO ### ATTENTION!!! ###
+        if 1 & v16s27_mc_baby_duty_night == 1: # MC has babby duty Wednesday night
 
-        scene v16s40_3c
-        with dissolve
+            scene v16s40_3c
+            with dissolve
 
-        u "I should uh, head back now. I'm on baby duty tonight."
+            u "I should uh, head back now. I'm on baby duty tonight."
 
-        scene v16s40_3g
-        with dissolve
+            scene v16s40_3g
+            with dissolve
 
-        au "Oh, yeah. Good luck with that, haha. I hope it doesn't cry too much."
+            au "Oh, yeah. Good luck with that, haha. I hope it doesn't cry too much."
 
-        scene v16s40_3c
-        with dissolve
+            scene v16s40_3c
+            with dissolve
 
-        u "Haha, I hope so too, thanks."
+            u "Haha, I hope so too, thanks."
 
         ### ERROR: END IF
 
@@ -309,13 +309,13 @@ label v16s40:
 
         pause 0.75
 
-        ### ERROR: END IF
+    ### ERROR: END IF
 
-        scene v16s40_2a
-        with dissolve
+    scene v16s40_2a
+    with dissolve
 
-        pause 0.75
+    pause 0.75
 
-        jump v16s41# -Transition to Scene 41-
+    jump v16s41# -Transition to Scene 41-
 
-    # EDITOR NOTE!!! # (Can you please double check that this makes sense according to miro, and it all adds up? From my pov I think it's good but want to make sure everything is covered and lines up evenly. DM with any questions -cheexi)
+# EDITOR NOTE!!! # (Can you please double check that this makes sense according to miro, and it all adds up? From my pov I think it's good but want to make sure everything is covered and lines up evenly. DM with any questions -cheexi)
