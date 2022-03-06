@@ -1,136 +1,153 @@
 # SCENE 46: Solo Baby Night WOLVES OR APES (both)
 # Locations: MC's room (either frat house)
-# Characters: MC (Outfit: 9), [BABY_NAME] (Outfit: x), SAMANTHA (unseen), CAMERON (unseen), GRAYSON (unseen)
+# Characters: MC (Outfit: 9), [V16_BABY] (Outfit: x), SAMANTHA (unseen), CAMERON (unseen), GRAYSON (unseen)
 # Time: Wednesday evening
 
 label v16s46: # 46) Baby night, MC only
     # -Scene is the same for Wolves and Apes unless specified.
     # ALL RENDERS SHOW ONLY THE INSIDE OF MC'S ROOM
+
+    if joinapes:
     
-    scene v16s46_1 # TPP Show MC (tired, mouth closed), holding baby doll, entering his room
-    with dissolve
+        scene v16s46_1 # TPP Show MC (tired, mouth closed), holding baby doll, entering his room [APE ROOM]
 
-    pause 0.75
-
-    scene v16s46_2 # TPP Show the baby doll on MC's bed, MC pulling a chair next to the bed
-    with dissolve
-    
-    pause 0.75
-    
-    scene v16s46_3 # FPP Show MC placing the baby on the chair
-    with dissolve
-    
-    pause 0.75
-    
-    scene v16s46_4 # TPP Show MC getting undressed
-    with dissolve
-    
-    pause 0.75
-    
-    scene v16s46_5 # TPP Show MC laying in bed, reaching for the light
-    with dissolve
-
-    u "(Let's see how long this lasts before I get woken up...)"
-
-    scene v16s46_6 # FPP Show glowing digital clock with a late-night time
-    with dissolve
-
-    u "*Snoring*"
-
-    scene v16s46_7a # FPP Same angle as 6, glowing digital clock reads 30 minutes later
-    with fade
-
-    baby "*Crying*"
-
-    scene v16s46_6
-    with dissolve
-
-    u "Hmm?"
-
-    scene v16s46_5a # TPP Same angle as 5, MC opens his eyes part way, confused
-    with dissolve
-
-    u "Ahh, fuck..."
-
-    scene v16s46_7 # TPP MC sitting on the edge of the bed, turning on the ligh, sleepy eyes half-open
-    with dissolve
-
-    baby "*Cries louder*"
-
-    scene v16s46_8 # FPP Looking at the baby doll, sitting on chair
-    with dissolve
-
-    u "(Let's see if we can shut this thing up quickly...)"
-
-    scene v16s46_9 # TPP MC (tired expression, mouth open) looking around on his desk
-    with dissolve
-
-    u "What did I-"
-
-    scene v16s46_8
-    with dissolve
-
-    baby "*Crying*"
-
-    u "(Where did I put the damn keys?)"
-
-    scene v16s46_10 # TPP Show MC (mouth closed) looking on his bed, pulling down the covers
-    with dissolve
-
-    u "(Not here...)"
-
-    scene v16s46_8
-    with dissolve
-
-    baby "*Cries*"
-
-    scene v16s46_11 # TPP MC (mouth open) holding his hands out to the baby doll, as if soothing a real baby
-    with dissolve
-
-    u "I'm sorry, [BABY_NAME]..."
-
-    scene v16s46_12 # TPP MC (mouth closed) searching under his bed
-    with dissolve
-
-    u "(Shit...)"
-
-    scene v16s46_8
-    with dissolve
-
-    baby "*Screaming cry*"
-
-    scene v16s46_13 # TPP MC (mouth open) searching in the bedside table
-    with dissolve
-
-    u "(Fuck!) Where are the fucking keys?!"
-
-    if not joinwolves: # -if Apes
-        # -Only the closed door is shown. The door never opens, and the voices are just coming from the other side-
-        scene v16s46_14 # FPP Show the closed door to MC's room
         with dissolve
 
-        # TODO: *Banging on door* # NOT SURE HOW TO CODE A NOISE
+        pause 0.75
 
-        sa "[name]! Shut that thing up, now!"
+        scene v16s46_2 # TPP Show the baby doll on MC's bed, MC pulling a chair next to the bed [APE ROOM]
+        with dissolve
+        
+        pause 0.75
+        
+        scene v16s46_3 # FPP Show MC placing the baby on the chair [APE ROOM]
+        with dissolve
+        
+        pause 0.75
+        
+        scene v16s46_4 # TPP Show MC taking off his shirt [APE ROOM]
+        with dissolve
+        
+        pause 0.75
+
+        scene v16s46_4a # TPP Show MC taking in his boxers/underwear [APE ROOM]
+        with dissolve
+        
+        pause 0.75
+        
+        scene v16s46_5 # TPP Show MC laying in bed, reaching for the light [APE ROOM]
+        with dissolve
+
+        u "(Let's see how long this lasts before I get woken up...)"
+
+        scene v16s46_6 # FPP Show MCs glowing phone with the time of 1:17am  [APE ROOM]
+        with fade
+
+        u "*Snoring*"
+
+        play sound "sounds/babycry.mp3"
+
+        scene v16s46_7a # FPP Same angle as 6, MCs glowing phone with a time of 1:47am [APE ROOM]
+        with fade
+
+        baby "*Crying*"
+        
+        u "Hmm?"
+
+        scene v16s46_5a # TPP Same angle as 5, MC (sleepy, mouth open) opens his eyes part way, confused [APE ROOM]
+        with dissolve
+
+        u "Ahh, fuck..."
+
+        play sound "sounds/babycry.mp3"
+
+        scene v16s46_7 # TPP MC sitting on the edge of the bed, turning on the light, sleepy eyes half-open [APE ROOM]
+        with dissolve
+
+        baby "*Cries louder*"
+
+        scene v16s46_8 # FPP Looking at the baby doll, sitting on chair [APE ROOM]
+        with dissolve
+
+        u "(Let's see if we can shut this thing up quickly...)"
+
+        scene v16s46_9 # TPP MC (tired expression, mouth open) looking around on his desk [APE ROOM]
+        with dissolve
+
+        u "What did I-"
+
+        play sound "sounds/babycry.mp3"    
+
+        scene v16s46_8
+        with dissolve
+
+        baby "*Crying*"
+
+        u "(Where did I put the damn keys?)"
+
+        scene v16s46_10 # TPP Show MC (mouth closed) looking on his bed, pulling down the covers [APE ROOM]
+        with dissolve
+
+        u "(Not here...)"
+
+        play sound "sounds/babycry.mp3"
 
         scene v16s46_8
         with dissolve
 
         baby "*Cries*"
 
-        scene v16s46_15 # TPP MC (mouth closed) on his hands and knees scanning the floor
+        scene v16s46_11 # TPP MC (mouth open) holding his hands out to the baby doll, as if soothing a real baby [APE ROOM]
+        with dissolve
+
+        u "I'm sorry, [v16_baby]..."
+
+        scene v16s46_12 # TPP MC (mouth closed) searching under his bed [APE ROOM]
+        with dissolve
+
+        u "(Shit...)"
+
+        play sound "sounds/babyscream.mp3"
+
+        scene v16s46_8
+        with dissolve
+
+        baby "*Screaming cry*"
+
+        scene v16s46_13 # TPP MC (mouth open) searching in the bedside table [APE ROOM]
+        with dissolve
+
+        u "(Fuck!) Where are the fucking keys?!"
+    
+        # -Only the closed door is shown. The door never opens, and the voices are just coming from the other side-
+
+        scene v16s46_14 # FPP Show the closed door to MC's room
+        with dissolve
+
+        play sound "sounds/bangdoor.mp3"
+
+        sa "[name]! Shut that thing up, now!"
+
+        scene v16s46_8
+        with dissolve
+
+        play sound "sounds/babycry.mp3"
+        
+        baby "*Cries*"
+
+        scene v16s46_15 # TPP MC (mouth closed) on his hands and knees scanning the floor [APE ROOM]
         with dissolve
 
         menu:
             "Be sorry":
                 $ add_point(KCT.BRO)
 
-                scene v16s46_14
+                scene v16s46_15
                 with dissolve
 
                 u "Yeah, I'm trying! Sorry!"
 
-                scene v16s46_15
+                scene v16s46_14
                 with dissolve
 
                 sa "Well, try harder!"
@@ -145,7 +162,7 @@ label v16s46: # 46) Baby night, MC only
 
                 sa "It's waking everyone up, [name]."
 
-                scene v16s46_16 # TPP MC (mouth open) searching his closet
+                scene v16s46_16 # TPP MC (mouth open) searching his closet [APE ROOM]
                 with dissolve
 
                 u "Thank you for the information, Sam!"
@@ -165,6 +182,8 @@ label v16s46: # 46) Baby night, MC only
 
         ca "What the hell is going on?"
 
+        play sound "sounds/babycry.mp3"
+
         scene v16s46_8
         with dissolve
 
@@ -178,6 +197,8 @@ label v16s46: # 46) Baby night, MC only
         ca "*Sighs*"
 
         ca "It's pretty simple, dingus! Just use the keys and it stops crying."
+
+        play sound "sounds/babycry.mp3"
 
         scene v16s46_8
         with dissolve
@@ -203,10 +224,12 @@ label v16s46: # 46) Baby night, MC only
 
         u "How can you even tell what it wants by the sound of its crying?!?"
 
-        scene v16s46_15
+        scene v16s46_14
         with dissolve
 
         ca "I have a very strong paternal instinct! Just, shut it up!"
+
+        play sound "sounds/babyscream.mp3"
 
         scene v16s46_8
         with dissolve
@@ -227,6 +250,8 @@ label v16s46: # 46) Baby night, MC only
 
         ca "Haha, fail!"
 
+        play sound "sounds/babycry.mp3"
+
         scene v16s46_8
         with dissolve
 
@@ -246,19 +271,21 @@ label v16s46: # 46) Baby night, MC only
 
         ca "Divorced father issues."
 
-        scene v16s46_17 # TPP MC (mouth closed) searching behind his bed
+        scene v16s46_17 # TPP MC (mouth closed) searching behind his bed [APE ROOM]
         with dissolve
 
         gr "Who's this time?"
 
         sa "[name] is playing daddy tonight."
 
+        play sound "sounds/babycry.mp3"
+
         scene v16s46_8
         with dissolve
 
         baby "*Cries*"
 
-        scene v16s46_
+        scene v16s46_14
         with dissolve
 
         gr "Why do-"
@@ -270,8 +297,8 @@ label v16s46: # 46) Baby night, MC only
 
         scene v16s46_14
         with dissolve
-
-        # TODO -- *Banging on door* # NOT SURE HOW TO CODE NOISE
+        
+        play sound "sounds/bangdoor.mp3"
 
         gr "Shut that fucking thing up before I rip this door down!"
 
@@ -282,66 +309,75 @@ label v16s46: # 46) Baby night, MC only
 
         u "Somehow..."
 
+        play sound "sounds/babycry.mp3"
+
         scene v16s46_8
         with dissolve
 
         baby "*Crying*"
 
-    # -Regardless of Apes-
-    scene v16s46_18 # TPP MC (mouth closed) picking up the baby and looking underneath - he see's the keys
-    with dissolve
+        # -Regardless of Apes-
+        scene v16s46_18 # TPP MC (mouth closed) picking up the baby and looking underneath - he see's the keys [APE ROOM]
+        with dissolve
 
-    u "(Fuck my life, dude!)"
+        u "(Fuck my life, dude!)"
 
-    scene v16s46_19 # FPP Closeup of the keys in MC's hand, all three clearly visible
-    with dissolve
+        scene v16s46_19 # FPP Closeup of the keys in MC's hand, all three clearly visible [APE ROOM]
+        with dissolve
 
-    u "(Okay, it's time for a diaper change. Which key was it?)"
+        u "(Okay, it's time for a diaper change. Which key was it?)"
 
-    # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
-    while v16s46_wrong_key: # NOT SURE IF THIS IS THE BEST WAY TO IMPLIMENT THIS
-        menu:
-            "Blue":
-                scene v16s46_20 # TPP MC (frustrated expression, mouth closed) using  the blue key on the baby doll
-                with dissolve
+        # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
+        while v16s46_wrong_key: # NOT SURE IF THIS IS THE BEST WAY TO IMPLIMENT THIS
+            menu:
+                "Blue":
 
-                baby "*Cries*"
+                    play sound "sounds/babycry.mp3" 
 
-                scene v16s46_19
-                with dissolve
+                    scene v16s46_20 # TPP MC (frustrated expression, mouth closed) using the blue key on the baby doll [APE ROOM]
+                    with dissolve
 
-                u "(Dammit... Not blue.)"
+                    baby "*Cries*"
 
-            "Green":
-                scene v16s46_20a # TPP Same angle as 20, MC (frustrated expression, mouth closed) using the green key on the baby doll
-                with dissolve
+                    scene v16s46_19
+                    with dissolve
 
-                baby "*Scream crying*"
+                    u "(Dammit... Not blue.)"
 
-                scene v16s46_19
-                with dissolve
+                "Green":
+                    
+                    play sound "sounds/babyscream.mp3"
+                    
+                    scene v16s46_20a # TPP Same angle as 20, MC (frustrated expression, mouth closed) using the green key on the baby doll [APE ROOM]
+                    with dissolve
 
-                u "(Ah, for fuck's sake...) Okay, okay! Wrong one, got it. Shhhh..."
+                    baby "*Scream crying*"
 
-            "Orange":
-                $ v16_wrong_key = False
+                    scene v16s46_19
+                    with dissolve
 
-                scene v16s46_20b # TPP Same angle as 20, MC (relieved expression, mouth closed) using the orange key on the baby doll
-                with dissolve
+                    u "(Ah, for fuck's sake...) Okay, okay! Wrong one, got it. Shhhh..."
 
-                baby "*Cooing*"
+                "Orange":
+                    $ v16_wrong_key = False
 
-                scene v16s46_21 # FPP MC holding baby doll up in front of him in both hands
-                with dissolve
+                    play sound "sounds/babycoo.mp3"
 
-                u "*Sighs* Finally..."
+                    scene v16s46_20b # TPP Same angle as 20, MC (relieved expression, mouth closed) using the orange key on the baby doll [APE ROOM]
+                    with dissolve
 
-    scene v16s46_22 # TPP MC (relieved, mouth closed) placing the baby doll on the chair with the keys next to it
-    with dissolve
+                    baby "*Cooing*"
 
-    pause 0.75
+                    scene v16s46_21 # FPP MC holding baby doll up in front of him in both hands [APE ROOM]
+                    with dissolve
 
-    if not joinwolves: # -if Apes
+                    u "*Sighs* Finally..."
+
+        scene v16s46_22 # TPP MC (relieved, mouth closed) placing the baby doll on the chair with the keys next to it [APE ROOM]
+        with dissolve
+
+        pause 0.75
+    
         ca "Well done, dad!"
 
         scene v16s46_14
@@ -353,7 +389,7 @@ label v16s46: # 46) Baby night, MC only
 
         sa "I'll explain tomorrow."
 
-        scene v16s46_23 # TPP MC (exhausted, mouth closed) sitting on the edge of the bed with his head in his hands
+        scene v16s46_23 # TPP MC (exhausted, mouth closed) sitting on the edge of the bed with his head in his hands [APE ROOM]
         with dissolve
 
         gr "Wha- Cam?"
@@ -365,14 +401,196 @@ label v16s46: # 46) Baby night, MC only
 
         gr "What the hell is happening around here?"
 
-    scene v16s46_24 # FPP MC shutting off the light
-    with dissolve
+        scene v16s46_24 # FPP MC shutting off the light [APE ROOM]
+        with dissolve
 
-    pause 0.75
+        pause 0.75
 
-    scene v16s46_25 # TPP MC (eyes closed, mouth open) lays in bed with his arm across his face
-    with dissolve
+        scene v16s46_25 # TPP MC (eyes closed, mouth open) lays in bed with his arm across his face [APE ROOM]
+        with dissolve
 
-    u "Okay, I don't want any more of that, [baby_name]... Please, let's get some sleep now."
+        u "Okay, I don't want any more of that, [v16_baby]... Please, let's get some sleep now."
+    
+    else: # Wolves
+
+        scene v16s46_31 # TPP Show MC (tired, mouth closed), holding baby doll, entering his room [WOLF ROOM]
+        with dissolve
+
+        pause 0.75
+
+        scene v16s46_32 # TPP Show the baby doll on MC's bed, MC pulling a chair next to the bed [WOLF ROOM]
+        with dissolve
+        
+        pause 0.75
+        
+        scene v16s46_33 # FPP Show MC placing the baby on the chair [WOLF ROOM]
+        with dissolve
+        
+        pause 0.75
+        
+        scene v16s46_34 # TPP Show MC taking off his shirt [WOLF ROOM]
+        with dissolve
+        
+        pause 0.75
+
+        scene v16s46_34a # TPP Show MC taking in his boxers/underwear [WOLF ROOM]
+        with dissolve
+        
+        pause 0.75
+        
+        scene v16s46_35 # TPP Show MC laying in bed, reaching for the light [WOLF ROOM]
+        with dissolve
+
+        u "(Let's see how long this lasts before I get woken up...)"
+
+        scene v16s46_36 # FPP Show MCs glowing phone with the time of 1:17am  [WOLF ROOM]
+        with fade
+
+        u "*Snoring*"
+
+        play sound "sounds/babycry.mp3"
+
+        scene v16s46_37a # FPP Same angle as 6, MCs glowing phone with a time of 1:47am [WOLF ROOM]
+        with fade
+
+        baby "*Crying*"
+        
+        u "Hmm?"
+
+        scene v16s46_35a # TPP Same angle as 5, MC (sleepy, mouth open) opens his eyes part way, confused [WOLF ROOM]
+        with dissolve
+
+        u "Ahh, fuck..."
+
+        play sound "sounds/babycry.mp3"
+
+        scene v16s46_37 # TPP MC sitting on the edge of the bed, turning on the light, sleepy eyes half-open [WOLF ROOM]
+        with dissolve
+
+        baby "*Cries louder*"
+
+        scene v16s46_38 # FPP Looking at the baby doll, sitting on chair [WOLF ROOM]
+        with dissolve
+
+        u "(Let's see if we can shut this thing up quickly...)"
+
+        scene v16s46_39 # TPP MC (tired expression, mouth open) looking around on his desk [WOLF ROOM]
+        with dissolve
+
+        u "What did I-"
+
+        play sound "sounds/babycry.mp3"
+
+        scene v16s46_38
+        with dissolve
+
+        baby "*Crying*"
+
+        u "(Where did I put the damn keys?)"
+
+        scene v16s46_40 # TPP Show MC (mouth closed) looking on his bed, pulling down the covers [WOLF ROOM]
+        with dissolve
+
+        u "(Not here...)"
+
+        play sound "sounds/babycry.mp3"
+
+        scene v16s46_38
+        with dissolve
+
+        baby "*Cries*"
+
+        scene v16s46_41 # TPP MC (mouth open) holding his hands out to the baby doll, as if soothing a real baby [WOLF ROOM]
+        with dissolve
+
+        u "I'm sorry, [v16_baby]..."
+
+        scene v16s46_42 # TPP MC (mouth closed) searching under his bed [WOLF ROOM]
+        with dissolve
+
+        u "(Shit...)"
+
+        play sound "sounds/babyscream.mp3"
+
+        scene v16s46_38
+        with dissolve
+
+        baby "*Screaming cry*"
+
+        scene v16s46_43 # TPP MC (mouth open) searching in the bedside table [WOLF ROOM]
+        with dissolve
+
+        u "(Fuck!) Where are the fucking keys?!"            
+        
+        scene v16s46_48 # TPP MC (mouth closed) picking up the baby and looking underneath - he see's the keys [WOLF ROOM]
+        with dissolve
+
+        u "(Fuck my life, dude!)"
+
+        scene v16s46_49 # FPP Closeup of the keys in MC's hand, all three clearly visible [WOLF ROOM]
+        with dissolve
+
+        u "(Okay, it's time for a diaper change. Which key was it?)"
+
+        # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
+        while v16s46_wrong_key: # NOT SURE IF THIS IS THE BEST WAY TO IMPLIMENT THIS
+            menu:
+                "Blue":
+
+                    play sound "sounds/babycry.mp3"
+
+                    scene v16s46_50 # TPP MC (frustrated expression, mouth closed) using the blue key on the baby doll [WOLF ROOM]
+                    with dissolve
+
+                    baby "*Cries*"
+
+                    scene v16s46_49
+                    with dissolve
+
+                    u "(Dammit... Not blue.)"
+
+                "Green":
+
+                    play sound "sounds/babyscream.mp3"
+
+                    scene v16s46_50a # TPP Same angle as 20, MC (frustrated expression, mouth closed) using the green key on the baby doll [WOLF ROOM]
+                    with dissolve
+
+                    baby "*Scream crying*"
+
+                    scene v16s46_49
+                    with dissolve
+
+                    u "(Ah, for fuck's sake...) Okay, okay! Wrong one, got it. Shhhh..."
+
+                "Orange":
+                    $ v16_wrong_key = False
+
+                    play sound "sounds/babycoo.mp3"
+
+                    scene v16s46_50b # TPP Same angle as 20, MC (relieved expression, mouth closed) using the orange key on the baby doll [WOLF ROOM]
+                    with dissolve
+
+                    baby "*Cooing*"
+
+                    scene v16s46_51 # FPP MC holding baby doll up in front of him in both hands [WOLF ROOM]
+                    with dissolve
+
+                    u "*Sighs* Finally..."
+
+        scene v16s46_52 # TPP MC (relieved, mouth closed) placing the baby doll on the chair with the keys next to it [WOLF ROOM]
+        with dissolve
+
+        pause 0.75
+
+        scene v16s46_54 # FPP MC shutting off the light [WOLF ROOM]
+        with dissolve
+
+        pause 0.75
+
+        scene v16s46_55 # TPP MC (eyes closed, mouth open) lays in bed with his arm across his face [WOLF ROOM]
+        with dissolve
+
+        u "Okay, I don't want any more of that, [v16_baby]... Please, let's get some sleep now."
 
     jump v16s50a # -Transition to Scene 50a-
