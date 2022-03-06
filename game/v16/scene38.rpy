@@ -1,5 +1,5 @@
 # SCENE 38: Aubrey arrives at the restaurant
-# Locations: Evening
+# Locations: Outside restaurant
 # Characters: MC (Outfit: DATE NIGHT OUTFIT), AUBREY (Outfit: DATE NIGHT OUTFIT), DRIVER (Outfit: 1)
 # Time: EVENING
 
@@ -19,7 +19,12 @@ label v16s38:
 
     u "Well, hello there, gorgeous... You look amazing, Aubrey."
 
-    scene v16s38_4 # TPP. Show MC and Aubrey exchanging a quick kiss, and hug
+    scene v16s38_4 # TPP. Show MC and Aubrey exchanging a quick hug.
+    with dissolve
+
+    pause 0.75
+
+    scene v16s38_4a # TPP. Show MC and Aubrey exchanging a quick kiss.
     with dissolve
 
     pause 0.75
@@ -62,7 +67,7 @@ label v16s38:
 
             u "Honestly, Aubrey..."
 
-            scene v16s38_3d # FPP. Show just Aubrey from the waist up, MC grabs both of Aubrey's hands (visible in render), slighlty sad/embarrassed expression, mouth is closed, looking at MC
+            scene v16s38_3d # FPP. Show just Aubrey (slighlty sad/embarrassed expression, mouth is closed) from the waist up, MC grabs both of Aubrey's hands (visible in render), looking at MC
             with dissolve
 
             u "You look absolutely perfect."
@@ -110,7 +115,7 @@ label v16s38:
 
     au "Can we just hurry inside?"
 
-    if not v16aubrey_cab: ### ERROR: IF MC ordered Aubrey a cab
+    if v16s32_aubrey_cab_and_flowers >= 1: ### ERROR: IF MC ordered Aubrey a cab
         scene v16s38_3b
         with dissolve
 
@@ -148,7 +153,7 @@ label v16s38:
 
         menu:
             "Tip ten dollars":
-                $ v16s38tippped_driver = True
+                $ v16s38_tippped_driver = True
                 $ add_point(KCT.BRO)
 
                 scene v16s38_6b
@@ -270,7 +275,7 @@ label v16s38:
 
     pause 0.75
 
-    if v16aubrey_flower_cab: ### ERROR: IF MC ordered flowers with the cab
+    if v16s32_aubrey_cab_and_flowers == 3 : ### ERROR: IF MC ordered flowers with the cab
         scene v16s38_11 # FPP. Show just Aubrey from the shoulders up, looking over at MC from the side, slight smile, mouth is open
         with dissolve
 
@@ -342,7 +347,7 @@ label v16s38:
 
         au "All paid?"
 
-    if v16s38tippped_driver: ### ERROR: IF tipped the driver
+    if v16s38_tippped_driver: ### ERROR: IF tipped the driver
         scene v16s38_11a
         with dissolve
 

@@ -437,6 +437,7 @@ default pb_kct_notification = False
 default pb_threesome = False
 
 # 16.0
+default v16_baby = "Baby" # Used to store the player designated name of the baby
 
 # Chloe Planning Board 
 
@@ -454,7 +455,9 @@ default vs16s15hotdog_coupon = False
 default v16s23_mention_bills = False  # TODO: Variable
 default v16s23_mention_laptop = False # TODO: Variable
 default v16s23_support_amber = False # TODO: Variable
-default v16s25a_date_with_aubrey = False 
+default v16s25a_date_with_aubrey = False
+default v16s27_parent_chloe = False  # True = Chloe; False = Nora
+default v16s27_mc_baby_duty_night = 0 # 0 = Unselected, 1 = Wednesday_alone, 2 = Thrusday_alone, 4 = Friday_alone, 0x10 = Wednesday_shared, 0x20 = Thursday_shared, 0x40 = Friday_shared
 default v16s32_birthday_reservation = 0  # 0 = neither, 1 = standard_reserveration, 2 = birthday_reservation  
 default v16s32_aubrey_cab_and_flowers = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers
 default v16s34_joke_about_elijah = False # used and checked in v16s34 
@@ -462,10 +465,10 @@ default v16s34_knock_on_svc_door = False # False = walk in
 default v16s34_get_aggressive_with_elijah = False # False = Laugh
 default v16s34_chloe_kiss_elijah_for_frontpage = False # False = Tell Elijah to fuck off 
 default v16s35_mc_spa_shopping = set() # Tracks what MC purchased during spa shopping for chloe
-default v16s38tippped_driver = False
-default baby = "Baby" # Used to store the player designated name of the baby
-default v16food_critic = False
-default v16s39aubrey_date_points = 0
-default v16s44rubius_park_walk = False
+default v16s38_tippped_driver = False
+default v16s39_fr_aubrey_date_list = set() # Tracks player selection during Aubrey date freeroam
+default v16s39_fr_aubrey_date_points = 0
+default v16s39_food_critic = False
+default v16s44_rubius_park_walk = False
 
 default v16s46_wrong_key = True

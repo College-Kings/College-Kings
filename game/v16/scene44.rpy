@@ -1,6 +1,6 @@
 # SCENE 44: Walk shelter dog with Lauren in park
 # Locations: In the Park 
-# Characters: MC (Outfit: 9), LAUREN (Outfit: 1), Joggery (Outfit: 1)
+# Characters: MC (Outfit: 9), LAUREN (Outfit: 1), Jogger (Outfit: 1)
 # Time: Evening
 
 label v16s44:
@@ -19,7 +19,7 @@ label v16s44:
 
     la "Hey, [name]!"
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # -if LaurenGF/RS, they have a nice kiss
+    if lauren.relationship >= Relationship.GIRLFRIEND: # -if LaurenGF/RS, they have a nice kiss
         scene v16s44_3 # TPP. Show Lauren and MC kissing, Lauren still holding onto Rubius (the dog) with one hand, Rubio watche's MC and Lauren Kiss tilting his head tounge is out
         with dissolve
 
@@ -186,7 +186,7 @@ label v16s44:
 
     menu:
         "Stay in the park":
-            $ v16s44rubius_park_walk = True
+            $ v16s44_rubius_park_walk = True
 
             scene v16s44_7
             with dissolve
@@ -213,7 +213,7 @@ label v16s44:
 
             pause 0.75
 
-            scene v16s44_8 # TPP. Show a male jogger (slight smile, mouth is closed, looking at Rubius) in running gear coming towards Lauren (slight smile, mouth is closed, looking at the jogger), MC (slight smile, mouth is closed, looking at the jogger), and Rubius (mouth is open, tongue is hanging out, happy demeanor, looking up at the jogger)
+            scene v16s44_8 # TPP. Show a male jogger (slight smile, mouth is closed, looking at Rubius) in shorts, tshirt, sneakers, coming towards Lauren (slight smile, mouth is closed, looking at the jogger), MC (slight smile, mouth is closed, looking at the jogger), and Rubius (mouth is open, tongue is hanging out, happy demeanor, looking up at the jogger)
             with dissolve
 
             pause 0.75
@@ -273,17 +273,17 @@ label v16s44:
 
             jog "King Rubius!"
 
-            scene v16s44_9g
+            scene v16s44_9h
             with dissolve
 
             jog "You said he's from the shelter?"
 
-            scene v16s44_9h
+            scene v16s44_9g
             with dissolve
 
             la "Yeah, he needs a new home."
 
-            scene v16s44_9g
+            scene v16s44_9h
             with dissolve
 
             jog "Hmm, you know, I think he would make the perfect jogging partner."
@@ -305,22 +305,22 @@ label v16s44:
 
             u "(Damn, looks like he needs someone to trauma-dump to.)"
 
-            scene v16s44_9g
+            scene v16s44_9j
             with dissolve
 
             jog "You know what? I'll come by the shelter and see about adopting him."
 
-            scene v16s44_9h
+            scene v16s44_9i
             with dissolve
 
             la "What? Wait- Really?!"
 
-            scene v16s44_9g
+            scene v16s44_9j
             with dissolve
 
             jog "Yeah, I can already tell we're going to be best friends!"
 
-            scene v16s44_9h
+            scene v16s44_9i
             with dissolve
 
             la "Amazing! Thank you so much!"
@@ -419,7 +419,7 @@ label v16s44:
             u "Yeah, I think it was that old taco."
 
             # -if mc gagged at ryan in the bathroom at laurens birthday party
-            if mc_gagged_ryan: # PlaceHOLDER 
+            if v15s18a_gag: # PlaceHOLDER 
 
                 scene v16s44_14a # FPP. Close up shot of the taco and the promo leaflet for the Blue Lounge, alleyway background
                 with dissolve
@@ -505,7 +505,7 @@ label v16s44:
 
             u "Oh, I am."
 
-            if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # -if laurengf
+            if lauren.relationship >= Relationship.GIRLFRIEND: # -if laurengf
 
                 scene v16s44_18c # FPP. Show just Lauren (Lauren smirks, slight smile, mouth is open, looking at MC) Laurens shirt is completely soaked and you can see the full shape of her boobs and clearly visibly see her nipples through the wet shirt, alleyway background
                 with dissolve
@@ -598,7 +598,7 @@ label v16s44:
 
     u "Anytime. It was quite eventful in the end."
 
-    if v16s44rubius_park_walk: # -if you stayed in the park
+    if v16s44_rubius_park_walk: # -if you stayed in the park
         scene v16s44_2a
         with dissolve
 
@@ -657,7 +657,7 @@ label v16s44:
 
         u "Hey, we were following the dog, remember?"
 
-        scene v16s44_2e # FPP. Show just Lauren (no expression, mouth is closed, looking at her chest) Lauren rubs her hands over her chest unintentionally puffing her breasts out, her shirt is dry and her nipples and breast CAN'T be seen through the shirt
+        scene v16s44_2e # FPP. Show just Lauren (no expression, mouth is open, looking at her chest) Lauren rubs her hands over her chest unintentionally puffing her breasts out, her shirt is dry and her nipples and breast CAN'T be seen through the shirt
         with dissolve
 
         la "Mhmm...  At least my shirts dried off... kind of."
@@ -669,20 +669,20 @@ label v16s44:
 
 # -Regardless of that-
 
-    ### -if on baby duty alone
+    if 1 & v16s27_mc_baby_duty_night == 1: ### -if on baby duty alone Wednesday
         scene v16s44_2
         with dissolve
 
         u "And now, I need to go pick up a baby."
 
-    ### -if sharing baby duty
+    elif 0x10 & v16s27_mc_baby_duty_night == 0x10: ### -if sharing baby duty Wednesday
 
         scene v16s44_2
         with dissolve
 
         u "And now, I need to go to the Chicks house for baby duty"
 
-    ### -if partner is on baby duty
+    else: ### -if partner is on baby duty
 
         scene v16s44_2
         with dissolve
@@ -729,9 +729,9 @@ label v16s44:
     scene v16s44_2
     with dissolve
 
-     pause 0.75
+    pause 0.75
 
-    if lauren.relationship.value >= Relationship.GIRLFRIEND.value: # -if LaurenGF, they have a quick goodbye kiss
+    if lauren.relationship >= Relationship.GIRLFRIEND: # -if LaurenGF, they have a quick goodbye kiss
         scene v16s44_3
         with dissolve
 
@@ -749,14 +749,13 @@ label v16s44:
     
     pause 0.75
 
-### -if on baby duty alone, transition to Scene45-
+    if 1 & v16s27_mc_baby_duty_night == 1: ### -if on baby duty alone Wednesday, transition to Scene45-
 
-    jump v16s45
+        jump v16s45
 
-### -if sharing baby duty, transition to Scene47-
-
-    jump v16s47
-
-### -if partner is on baby duty, transition to Scene42-
-
-    jump v16s42
+    elif 0x10 & v16s27_mc_baby_duty_night == 0x10: ### -if sharing baby duty Wednesday, transition to Scene47-
+        
+        jump v16s47
+    else:  ### -if partner is on baby duty Wednesday, transition to Scene42-
+        
+        jump v16s42

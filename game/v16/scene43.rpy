@@ -1,5 +1,5 @@
 # SCENE 43: Transition Mc walks to the park
-# Locations: Park
+# Locations: Sidewalk/Park Entrance
 # Characters: MC (Outfit: 9),
 # Time: Evening
 
