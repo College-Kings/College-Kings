@@ -6,43 +6,6 @@ screen fight_player_turn(player, opponent):
 
     add opponent.stance_image
 
-    use health_bars(player, opponent)
-
-    if isinstance(selected_move, FightMove):
-        vbox:
-            xalign 0.5
-            ypos 50
-            spacing 5
-
-            # Opponent Guard
-            hbox:
-                xalign 0.5
-                spacing 2
-                ysize 10
-
-                for i in range(opponent.guard - selected_move.damage):
-                    null width 206
-
-                for i in range(min(opponent.guard, selected_move.damage)):
-                    add Transform("fight_guard_animation", size=(206, 10))
-
-                for i in range(BasePlayer.MAX_GUARD - opponent.guard):
-                    null width 206
-
-            # Opponent Health
-            hbox:
-                xalign 0.5
-                spacing 2
-
-                for i in range(opponent.max_health - min(opponent.health, (selected_move.damage - opponent.guard)) - (opponent.max_health - opponent.health)):
-                    null width 50
-
-                for i in range(min(opponent.health, (selected_move.damage - opponent.guard))):
-                    add Transform("fight_health_animation", size=(50, 20))
-
-                for i in range(opponent.max_health - opponent.health):
-                    null width 50
-
     vbox:
         xalign 0.5
         yalign 1.0
@@ -78,9 +41,9 @@ screen fight_player_turn(player, opponent):
                     sensitive (player.stamina >= move.stamina_cost)
                     selected (selected_move == move)
                     if selected_move == move:
-                        action [SetScreenVariable("selected_move", None), Hide("action_info")]
+                        action [SetScreenVariable("selected_move", None), Hide("action_info"), Hide("fight_health_bar_animations")]
                     else:
-                        action [SetScreenVariable("selected_move", move), Show("action_info", None, move, player, opponent)]
+                        action [SetScreenVariable("selected_move", move), Show("action_info", None, move, player, opponent), Hide("fight_health_bar_animations"), Show("fight_health_bar_animations", None, player, opponent, move)]
 
                     text str(move.stamina_cost) xalign 1.0 font "fonts/Montserrat-Bold.ttf"
                     text move.name align (0.5, 0.5) text_align 0.5
@@ -106,6 +69,44 @@ screen fight_player_turn(player, opponent):
 
                 if (selected_move is not None) and ((selected_move.end_stance is None and player.stance == stance) or (selected_move.end_stance == stance)):
                     add "#ffd000" xysize (35, 50) xalign 1.0
+
+
+screen fight_health_bar_animations(player, opponent, move):
+    zorder 100
+
+    vbox:
+        xalign 0.5
+        ypos 50
+        spacing 5
+
+        # Opponent Guard
+        hbox:
+            xalign 0.5
+            spacing 2
+            ysize 10
+
+            for i in range(opponent.guard - move.damage):
+                null width 206
+
+            for i in range(min(opponent.guard, move.damage)):
+                add Transform("fight_guard_animation", size=(206, 10))
+
+            for i in range(BasePlayer.MAX_GUARD - opponent.guard):
+                null width 206
+
+        # Opponent Health
+        hbox:
+            xalign 0.5
+            spacing 2
+
+            for i in range(opponent.max_health - min(opponent.health, (move.damage - opponent.guard)) - (opponent.max_health - opponent.health)):
+                null width 50
+
+            for i in range(min(opponent.health, (move.damage - opponent.guard))):
+                add Transform("fight_health_animation", size=(50, 20))
+
+            for i in range(opponent.max_health - opponent.health):
+                null width 50
 
 
 screen fight_opponent_turn():
@@ -144,6 +145,8 @@ screen action_info(move, player, opponent):
 
 
 screen health_bars(player, opponent):
+    zorder 100
+
     vbox:
         xalign 0.5
         ypos 50
