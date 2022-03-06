@@ -207,4 +207,3 @@ define character.jog = Character("Jogger", who_color="#fd9426", who_outlines=[ (
 define character.hv = Character("hv")
 define character.pa = Character("pa")
 define character.pha = Character("pha")
-
