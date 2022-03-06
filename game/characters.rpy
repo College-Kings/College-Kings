@@ -202,8 +202,9 @@ define character.oscar_dog = Character("Oscar", who_color="#147efb", who_outline
 define character.bdygd = Character("Bodyguard", who_color="#800080", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.kobe = Character("Kobe", who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.crowd = Character("Crowd", who_color="#a815f2", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.jog = Character("Jogger", who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 
 define character.hv = Character("hv")
 define character.pa = Character("pa")
 define character.pha = Character("pha")
-define character.jog = Character("jog")
+

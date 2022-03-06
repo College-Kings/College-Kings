@@ -469,8 +469,6 @@ default v16s38_tippped_driver = False
 default v16s39_fr_aubrey_date_list = set() # Tracks player selection during Aubrey date freeroam
 default v16s39_fr_aubrey_date_points = 0
 default v16s39_food_critic = False
-
-
-default v16s44rubius_park_walk = False
+default v16s44_rubius_park_walk = False
 
 default v16s46_wrong_key = True
