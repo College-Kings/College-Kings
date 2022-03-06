@@ -57,7 +57,7 @@ label v16s39:
 
     menu:
         "Have the same": #(ONE POINT)
-            $ v16s39_aubrey_date_points += 1
+            $ v16s39_fr_aubrey_date_points += 1
             $ add_point(KCT.BOYFRIEND)
 
             scene v16s39_4b
