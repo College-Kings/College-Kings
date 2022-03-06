@@ -1,7 +1,7 @@
 # SCENE 46: Solo Baby Night WOLVES OR APES (both)
 # Locations: MC's room (either frat house)
 # Characters: MC (Outfit: 9), [V16_BABY] (Outfit: x), SAMANTHA (unseen), CAMERON (unseen), GRAYSON (unseen)
-# Time: Wednesday evening
+# Time: Wed Night
 
 label v16s46: # 46) Baby night, MC only
     # -Scene is the same for Wolves and Apes unless specified.
