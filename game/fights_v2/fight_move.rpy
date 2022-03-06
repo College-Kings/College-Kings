@@ -9,6 +9,9 @@ init python:
             self.end_stance = end_stance
             self.effect = effect
 
+        def __repr__(self):
+            return self.name.upper().replace(' ', '_')
+
 
     class FightMove(BaseMove):
         DAMAGE_DICT = {
