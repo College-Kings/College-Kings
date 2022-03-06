@@ -1,8 +1,7 @@
 # SCENE 49: Baby Night with Nora
 # Locations: Chicks Sorority House/Living Room
-# Characters: MC (Outfit: 9), NORA (Outfit: 1), WOMAN IN MOVIE (Outfit: 1), MAN IN MOVIE (Outfit: 1), [BABY_NAME] (Outfit: 1)
+# Characters: MC (Outfit: 9), NORA (Outfit: 1), WOMAN IN MOVIE (Outfit: 1), MAN IN MOVIE (Outfit: 1), [BABY] (Outfit: 1)
 # Time: Night
-
 
 label v16s49:
 
@@ -19,7 +18,7 @@ label v16s49:
     scene v16s49_3 # FPP. Nora (slight smile, mouth is closed, looking at MC) sitting on the couch, still holding the baby
     with dissolve
 
-    u "Getting attached to [baby_name] already, huh?"
+    u "Getting attached to [v16_baby] already, huh?"
 
     scene v16s49_3a # FPP. Nora (slight smile, mouth is open, looking at MC) sitting on the couch, still holding the baby
     with dissolve
@@ -51,17 +50,17 @@ label v16s49:
 
     no "*Chuckles* I'm expecting we'll need to use a key soon anyway."
 
-    scene v16s49_3c # FPP. Nora (half smile, mouth is closed, looking at MC) sitting on the couch, holds the baby face out towards MC to hold
+    scene v16s49_3c # FPP. Nora (half smile, mouth is open, looking at MC) sitting on the couch, holds the baby face out towards MC to hold
     with dissolve
 
-    no "Here, you hold [baby_name]."
+    no "Here, you hold [v16_baby]."
 
     scene v16s49_4 # TPP. Nora (slight smile, mouth is closed, looking at MC) hands MC (slight smile, mouths is closed, looking at Nora) the baby
     with dissolve
 
     pause 0.75
 
-    scene v16s49_5 # TPP. Nora (slight smile, mouth is closed, looking back at MC) starts the movie on the Tv in the Chicks Living Room, MC (slight smile, mouths is closed, looking at Nora) is holding the baby in his arms
+    scene v16s49_5 # TPP. Nora (slight smile, mouth is closed, looking back at MC) points the remote control at the TV in the Chicks Living Room, MC (slight smile, mouths is closed, looking at Nora) is holding the baby in his arms
     with dissolve
 
     pause 0.75
@@ -71,51 +70,50 @@ label v16s49:
 
     pause 0.75
 
-    scene v16s49_7 # FPP. The border of the render should resemble a TV screen and all angles should be from the POV of watching a TV screen, inside the "TV border" show a woman (WIM) (slight shocked expression, mouth is open, looking at (MIM)) and a man (MIM) (angry expression, mouth is closed, looking at WIM)
+    scene v16s49_7 #  TPP Nora( slight smile, mouth closed, watching the TV) and MC (slight smile, mouth closed, watching the TV) sitting close to each other on the couch while MC holds the baby in his arms (TV is the ambient light that fills the dark room [CAMERA FROM THE TV POV]
     with dissolve
 
     wim "The car was in neutral. I don't know how it happened!"
 
-    scene v16s49_7a # FPP. The border of the render should resemble a TV screen and all angles should be from the POV of watching a TV screen, inside the "TV border" show a woman (WIM) (slight sad expression, mouth is closed, looking at MIM) and a man (MIM) (angry expression, mouth is open, looking at WIM)
+    scene v16s49_7a # TPP Nora( slight smile, mouth closed, looking at MC) and MC (slight smile, mouth closed, watching the TV) sitting close to each other on the couch while MC holds the baby in his arms (TV is the ambient light that fills the dark room [CAMERA FROM THE TV POV]
     with dissolve
 
     mim "It doesn't matter what your excuse is, lady. You've crashed through my store window!"
 
-    scene v16s49_7b # FPP. The border of the render should resemble a TV screen and all angles should be from the POV of watching a TV screen, inside the "TV border" show a woman (WIM) (slight sad expression, mouth is open, looking at (MIM)) and a man (MIM) (angry expression, mouth is closed, looking at WIM)
+    scene v16s49_7b # TPP Nora( slight smile, mouth closed, watching TV) and MC (slight smile, mouth closed, looking at Nora) sitting close to each other on the couch while MC holds the baby in his arms (TV is the ambient light that fills the dark room [CAMERA FROM THE TV POV]
     with dissolve
 
     wim "I'm sorry!"
 
-    scene v16s49_7a
+    scene v16s49_7
     with dissolve
 
     mim "Sorry? I can't pay the bills with an-"
-
-    scene v16s49_7c # FPP. The border of the render should resemble a TV screen and all angles should be from the POV of watching a TV screen, inside the "TV border" show a woman (WIM) (slightly shocked expression, mouth is slighlty open, looking at MIM) holding a hand to her mouth as she gasps and a man (MIM) (slightly shocked expression, mouth is open, looking at WIM)
-    with dissolve
-
+    
     mim "Wait... Veronica?"
 
-    scene v16s49_7d # FPP. The border of the render should resemble a TV screen and all angles should be from the POV of watching a TV screen, inside the "TV border" show a woman (WIM) (slightly shocked expression, mouth is open, looking at MIM) and a man (MIM) (no expression, mouth is closed, looking at WIM)
+    scene v16s49_7b
     with dissolve
 
     wim "...David? I thought you had perished in that Bar Mitzvah explosion all those years ago..."
 
-    scene v16s49_7e # FPP. The border of the render should resemble a TV screen and all angles should be from the POV of watching a TV screen, inside the "TV border" show a woman (WIM) (no expression, mouth is closed, looking at MIM) and a man (MIM) (no expression, mouth is open, looking at WIM)
+    scene v16s49_7
     with dissolve
 
     mim "...And I thought YOU had died in quicksand!"
 
-    scene v16s49_7f # FPP. The border of the render should resemble a TV screen and all angles should be from the POV of watching a TV screen, inside the "TV border" show a woman (WIM) (slight smile, mouth is open, looking at MIM) and a man (MIM) (slight smile, mouth is closed, looking at WIM)
+    scene v16s49_7a
     with dissolve
 
     wim "No, that was Maggie, my twin! I'm alive, I'm here!"
 
-    scene v16s49_7g # FPP. The border of the render should resemble a TV screen and all angles should be from the POV of watching a TV screen, inside the "TV border" show a woman (WIM) (slight smile, mouth is closed, looking at MIM) and a man (MIM) (slight smile, mouth is open, looking at WIM)
+    scene v16s49_7
     with dissolve
 
     mim "Oh, Veronica! I thought I'd never get the chance to tell you my true feelings..."
 
+    play sound "sounds/babycry.mp3"
+    
     scene v16s49_8 # FPP. Close up shot of the baby doll in MC's Arms, Don't show the rest of MC
     with vpunch
 
@@ -136,6 +134,8 @@ label v16s49:
 
     no "Haha, parental duties come first."
 
+    play sound "sounds/babycry.mp3"
+
     scene v16s49_8
     with dissolve
 
@@ -144,7 +144,7 @@ label v16s49:
     scene v16s49_3d
     with dissolve
 
-    no "When I picked [baby_name] up from campus, the teacher let it slip that it had just been burped."
+    no "When I picked [v16_baby] up from campus, the teacher let it slip that it had just been burped."
 
     scene v16s49_3e
     with dissolve
@@ -176,6 +176,8 @@ label v16s49:
 
     no "What's the matter? Too afraid to get your hands dirty? *Giggles*"
 
+    play sound "sounds/babycry.mp3"
+
     scene v16s49_8
     with vpunch
 
@@ -189,140 +191,64 @@ label v16s49:
     scene v16s49_9
     with dissolve
 
+    $ v16_wrong_key = True
+
 # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
+    while v16_wrong_key:
+        menu:
 
-    menu:
+            "Blue":
 
-        "Blue":
+                scene v16s49_9a # FPP. Show just the BLUE Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
+                with dissolve
 
-            scene v16s49_9a # FPP. Show just the BLUE Fob Key in MC's hand pressing it to the baby's lower back
-            with dissolve
+                pause 0.75
 
-            pause 0.75
+                play sound "sounds/babycry.mp3"
 
-            scene v16s49_8
-            with vpunch
+                scene v16s49_8
+                with vpunch
 
-            baby "*Crying*"
-
-            scene v16s49_8
-            with dissolve
-
-            u "(Nope! I think blue is for feeding.)"
-
-            scene v16s49_9
-            with dissolve
-
-            menu:
-
-                "Green":
-
-                    scene v16s49_9b # FPP. Show just the GREEN Fob Key in MC's hand pressing it to the baby's lower back
-                    with dissolve
-
-                    pause 0.75
-
-                    scene v16s49_8
-                    with vpunch
-
-                    baby "*Crying*"
-
-                    scene v16s49_8
-                    with dissolve
-
-                    u "(Come on, [baby_name]! Please stop...)"
-
-                    scene v16s49_9c # FPP. Show just the ORANGE Fob Key in MC's hand pressing it to the baby's lower back
-                    with dissolve
-
-                    scene v16s49_3d
-                    with dissolve
-
-                    no "Nice, good job!"
-
-                "Orange": # (CORRECT)
-
-                    scene v16s49_9c
-                    with dissolve
-
-                    u "Got it! Diaper successfully changed."
-
-                    scene v16s49_3d
-                    with dissolve
-
-                    no "Nice, good job!"
+                baby "*Crying*"
                 
-        "Green":
+                u "(Nope! I think blue is for feeding.)"
 
-            scene v16s49_9b
-            with dissolve
+                scene v16s49_9
+                with dissolve               
+                    
+            "Green":
 
-            pause 0.75
+                scene v16s49_9b # FPP. Show just the GREEN Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
+                with dissolve
 
-            scene v16s49_8
-            with vpunch
+                pause 0.75
 
-            baby "*Crying*"
+                play sound "sounds/babycry.mp3"
 
-            scene v16s49_8
-            with dissolve
+                scene v16s49_8
+                with vpunch
 
-            u "(Come on, [baby_name]! Please stop...)"
+                baby "*Crying*"
+                
+                u "(Come on, [v16_baby]! Please stop...)"
 
-            menu:
+            "Orange": # (CORRECT)
 
-                "Blue":
+                $ v16_wrong_key = False
 
-                    scene v16s49_9a
-                    with dissolve
+                play sound "sounds/babycoo.mp3"
 
-                    pause 0.75
+                scene v16s49_9c # FPP. Show just the ORANGE Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
+                with dissolve
 
-                    scene v16s49_8
-                    with vpunch
+                u "Got it! Diaper successfully changed."
 
-                    baby "*Crying*"
+                scene v16s49_3d
+                with dissolve
 
-                    scene v16s49_8
-                    with dissolve
+                no "Nice, good job!"                
 
-                    u "(Nope! I think blue is for feeding.)"
-
-                    scene v16s49_9c
-                    with dissolve
-
-                    scene v16s49_3d
-                    with dissolve
-
-                    no "Nice, good job!"
-
-                "Orange": # (CORRECT)
-
-                    scene v16s49_9c
-                    with dissolve
-
-                    u "Got it! Diaper successfully changed."
-
-                    scene v16s49_3d
-                    with dissolve
-
-                    no "Nice, good job!"
-
-        "Orange" # (CORRECT)
-
-            scene v16s49_9c
-            with dissolve
-
-            u "Got it! Diaper successfully changed."
-
-            scene v16s49_3d
-            with dissolve
-
-            no "Nice, good job!"
-
-# -If MC chooses an incorrect key, the choice menu appears again for another attempt-
-
-    scene v16s49_6b # TPP. Nora (slight smile, mouth is closed, looking at the TV) and MC (slight smile, mouths is closed, looking at the TV) sitting close too each other on the couch while MC is holding the baby in his arms
+    scene v16s49_7
     with fade
 
     pause 0.75
@@ -330,7 +256,7 @@ label v16s49:
     scene v16s49_3d
     with dissolve
 
-    no "Here, I can take [baby_name] back now."
+    no "Here, I can take [v16_baby] back now."
 
     scene v16s49_3g # FPP. Nora (half smile, mouth is closed, looking at MC) sitting on the couch, MC is handing the baby to Nora baby's face is towards Nora and it's back is towards MC
     with dissolve
@@ -383,20 +309,22 @@ label v16s49:
 
     pause 0.75
 
-    scene v16s49_6c # TPP. Nora (slight smile, mouth is closed, looking at the TV) and MC (slight smile, mouths is closed, looking at the TV) sitting close too each other on the couch while Nora is holding the baby in her arms
+    scene v16s49_6c # TPP. Nora (slight smile, mouth is closed, looking at the TV) and MC (slight smile, mouths is closed, looking at the TV) sitting close too each other on the couch while Nora is holding the baby in her arms (TV is the ambient light that fills the dark room [CAMERA FROM THE TV POV]
     with dissolve
 
     pause 0.75
 
-    scene v16s49_6d # TPP. Nora (yawns, mouth is open, eyes closed) and MC (slight smile, mouths is closed, looking at Nora) sitting close too each other on the couch while Nora hands the baby to MC
+    scene v16s49_6d # TPP. Nora (yawns, mouth is open, eyes closed) and MC (slight smile, mouths is closed, looking at Nora) sitting close too each other on the couch while Nora hands the baby to MC (TV is the ambient light that fills the dark room [CAMERA FROM THE TV POV]
     with dissolve
 
     pause 0.75
 
-    scene v16s49_6e # TPP. Nora (sleeping, mouth is closed, eyes are closed) and MC (sleeping, mouth is closed, eyes are closed) sitting close too each other on the couch while MC holds up the baby with one arm, Mc has his other arm wrapped around Nora, Nora's head is resting on MC's shoulder, and Mc is resting his head on Nora's head
+    scene v16s49_6e # TPP. Nora (sleeping against MC shoulder, mouth is closed, eyes are closed) and MC (sleeping, head slightly forward, mouth is closed, eyes are closed) sitting close too each other on the couch while MC holds up the baby with one arm, Mc has his other arm wrapped around Nora, Nora's head is resting on MC's shoulder, and Mc is resting his head on Nora's head (TV is the ambient light that fills the dark room [CAMERA FROM THE TV POV]
     with fade
 
     pause 0.75
+
+    play sound "sounds/babycry.mp3"
 
     scene v16s49_8
     with dissolve
@@ -405,7 +333,9 @@ label v16s49:
 
     pause 0.75
 
-    scene v16s49_6f # TPP. Nora (shocked expression, mouth is open, eyes are wide open) and MC (shocked expression, mouth is open, eyes are wide open) sitting close too each other on the couch while Mc struggles to hold onto the baby, Mc has his arm wrapped around Nora, Nora's head is resting on MC's shoulder, and Mc is resting his head on Nora's head
+    play sound "sounds/babycry.mp3"
+
+    scene v16s49_6f # TPP. Nora (shocked expression, mouth is open, eyes are wide open, head against MC's chest) and MC (shocked expression, mouth is open, eyes are wide open, arm around Nora, head resting on Nora's head) sitting close too each other on the couch.  Mc struggles to hold onto the baby (TV is the ambient light that fills the dark room [CAMERA FROM THE TV POV]
     with vpunch
 
     baby "*Crying*"
@@ -434,6 +364,8 @@ label v16s49:
 
     u "Yeah, his name was Florian."
 
+    play sound "sounds/babycry.mp3"
+
     scene v16s49_8
     with dissolve
 
@@ -451,6 +383,8 @@ label v16s49:
 
     no "Momma's here."
 
+    play sound "sounds/babycry.mp3"
+
     scene v16s49_11 # FPP, Show just a close up shot of the baby's face
     with vpunch
 
@@ -460,6 +394,8 @@ label v16s49:
     with dissolve
 
     no "You need to calm your little head so mommy and daddy can get back to sleep."
+
+    play sound "sounds/babycry.mp3"
 
     scene v16s49_11
     with vpunch
@@ -508,10 +444,14 @@ label v16s49:
 
             u "We honestly do, I can't lie."
 
+            play sound "sounds/babycry.mp3"
+
             scene v16s49_11
             with vpunch
 
             baby "*Crying*"
+
+            play sound "sounds/babycoo.mp3"
 
             scene v16s49_12d # FPP. Nora (slight smile, mouth is open, looking at the baby) she is holding the FOB key to the babies mouth, camera angle is with both Mc and Nora standing
             with dissolve
@@ -558,9 +498,9 @@ label v16s49:
 
             no "And it's exactly that type of reply that makes you such a good partner, haha."
 
-            if sceneList("v15_nora"):  # -if MC and Nora also had sex at the cabin #!#!#! DOUBLE CHECK FOR CORRECT VARIABLE  #!#!#!
+            if "v15_nora" in sceneList:  # TODO: Variable -if MC and Nora also had sex at the cabin #!#!#! DOUBLE CHECK FOR CORRECT VARIABLE  #!#!#!
 
-                scene v16s49_13 # TPP. Show MC (slight smile, mouths is closed, looking at Nora) and Nora (slight smile/blushing expression, mouth is closed, eyes are closed, facing MC) sitting on the couch, Nora is still holding the baby leaning in for a kiss from MC, they are not kissing yet
+                scene v16s49_13 # TPP. Show MC (slight smile, mouths is closed, looking at Nora) and Nora (slight smile/blushing expression, mouth is closed, eyes are closed, facing MC) sitting on the couch, Nora is still holding the baby leaning in for a kiss from MC, they are not kissing yet (TV is the ambient light that fills the dark room [CAMERA FROM THE TV POV]
                 with dissolve
 
                 menu:
@@ -592,17 +532,17 @@ label v16s49:
 
                         pause 0.75
 
-                        scene v16s49_14 # FPP. Close up shot of MC closing his eyes with a tired expression
+                        scene v16s49_14 # TPP. Close up shot of MC closing his eyes with a tired expression
                         with dissolve
 
                         pause 0.75
 
-                        scene v16s49_14a # FPP. Close up shot of MC with closed eyes mouth agape
+                        scene v16s49_14a # TPP. Close up shot of MC with closed eyes mouth agape
                         with dissolve
 
                         pause 0.75
 
-                        scene v16s49_14b # FPP. Close up shot of MC waking up holding his neck, slight pained expression
+                        scene v16s49_14b # TPP. Close up shot of MC waking up holding his neck, slight pained expression
                         with dissolve
 
                         u "*Groans* (Ah, my neck. This really isn't comfortable.)"
@@ -610,7 +550,7 @@ label v16s49:
                         scene v16s49_15 # FPP. Show a close up shot of Nora sleeping happily in his lap, still holding the baby
                         with dissolve
 
-                        u "(Nora and [baby_name] are still fast asleep. I think this i a good time for me to head home.)"
+                        u "(Nora and [v16_baby] are still fast asleep. I think this i a good time for me to head home.)"
 
                         scene v16s49_16 # TPP. MC (slight smile, mouths is closed, looking at Nora) rests a pillow under Nora's head as he gets up from the couch, make sure MC and Nora's position matches v16s49_6j, Nora is still sleeping
                         with dissolve
@@ -640,17 +580,17 @@ label v16s49:
 
                         pause 0.75
 
-                        scene v16s49_14 # FPP. Close up shot of MC closing his eyes with a tired expression
+                        scene v16s49_14
                         with dissolve
 
                         pause 0.75
 
-                        scene v16s49_14a # FPP. Close up shot of MC with closed eyes mouth agape
+                        scene v16s49_14a 
                         with dissolve
 
                         pause 0.75
 
-                        scene v16s49_14b # FPP. Close up shot of MC waking up holding his neck, slight pained expression
+                        scene v16s49_14b 
                         with dissolve
 
                         u "*Groans* (Ah, my neck. This really isn't comfortable.)"
@@ -658,7 +598,7 @@ label v16s49:
                         scene v16s49_18 # FPP. Show a close up shot of Nora sleeping with her head on the other side of the couch, feet on the couch still holding the baby
                         with dissolve
 
-                        u "(Nora and [baby_name] are still fast asleep. I think this i a good time for me to head home.)"
+                        u "(Nora and [v16_baby] are still fast asleep. I think this i a good time for me to head home.)"
 
                         scene v16s49_19 # TPP. Show Nora (sleeping) still holding the baby and in the same position as v16s49_6i as MC (slight smile, mouths is closed, looking at Nora) gets up from the couch
                         with dissolve
@@ -676,6 +616,8 @@ label v16s49:
             with dissolve
 
             no "Really? Is that what you'd say if there was a real baby here?"
+
+            play sound "sounds/babycry.mp3"
 
             scene v16s49_11
             with vpunch
@@ -697,6 +639,8 @@ label v16s49:
 
             u "*Scoffs* I was only joking around."
 
+            play sound "sounds/babycry.mp3"
+
             scene v16s49_11
             with vpunch
 
@@ -712,6 +656,8 @@ label v16s49:
 
             u "Okay, okay."
 
+            play sound "sounds/babycry.mp3"
+
             scene v16s49_11
             with vpunch
 
@@ -726,6 +672,8 @@ label v16s49:
             with dissolve
 
             pause 0.75
+
+            play sound "sounds/babycoo.mp3"
 
             scene v16s49_12d
             with dissolve
@@ -747,17 +695,17 @@ label v16s49:
 
             pause 0.75
 
-            scene v16s49_14 # FPP. Close up shot of MC closing his eyes with a tired expression
+            scene v16s49_14 
             with dissolve
 
             pause 0.75
 
-            scene v16s49_14a # FPP. Close up shot of MC with closed eyes mouth agape
+            scene v16s49_14a 
             with dissolve
 
             pause 0.75
 
-            scene v16s49_14b # FPP. Close up shot of MC waking up holding his neck, slight pained expression
+            scene v16s49_14b 
             with dissolve
 
             u "*Groans* (Ah, my neck. This really isn't comfortable.)"
@@ -765,7 +713,7 @@ label v16s49:
             scene v16s49_18
             with dissolve
 
-            u "(Nora and [baby_name] are still fast asleep. I think this i a good time for me to head home.)"
+            u "(Nora and [v16_baby] are still fast asleep. I think this i a good time for me to head home.)"
 
             scene v16s49_19
             with dissolve
