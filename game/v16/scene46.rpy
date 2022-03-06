@@ -328,7 +328,7 @@ label v16s46: # 46) Baby night, MC only
         u "(Okay, it's time for a diaper change. Which key was it?)"
 
         # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
-        while v16s46_wrong_key: # NOT SURE IF THIS IS THE BEST WAY TO IMPLIMENT THIS
+        while v16_wrong_key: # NOT SURE IF THIS IS THE BEST WAY TO IMPLIMENT THIS
             menu:
                 "Blue":
 
@@ -533,7 +533,7 @@ label v16s46: # 46) Baby night, MC only
         u "(Okay, it's time for a diaper change. Which key was it?)"
 
         # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
-        while v16s46_wrong_key: # NOT SURE IF THIS IS THE BEST WAY TO IMPLIMENT THIS
+        while v16_wrong_key: # NOT SURE IF THIS IS THE BEST WAY TO IMPLIMENT THIS
             menu:
                 "Blue":
 
