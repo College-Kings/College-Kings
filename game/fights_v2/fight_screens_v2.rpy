@@ -74,39 +74,40 @@ screen fight_player_turn(player, opponent):
 screen fight_health_bar_animations(player, opponent, move):
     zorder 100
 
-    vbox:
-        xalign 0.5
-        ypos 50
-        spacing 5
-
-        # Opponent Guard
-        hbox:
+    if isinstance(move, FightMove):
+        vbox:
             xalign 0.5
-            spacing 2
-            ysize 10
+            ypos 50
+            spacing 5
 
-            for i in range(opponent.guard - move.damage):
-                null width 206
+            # Opponent Guard
+            hbox:
+                xalign 0.5
+                spacing 2
+                ysize 10
 
-            for i in range(min(opponent.guard, move.damage)):
-                add Transform("fight_guard_animation", size=(206, 10))
+                for i in range(opponent.guard - move.damage):
+                    null width 206
 
-            for i in range(BasePlayer.MAX_GUARD - opponent.guard):
-                null width 206
+                for i in range(min(opponent.guard, move.damage)):
+                    add Transform("fight_guard_animation", size=(206, 10))
 
-        # Opponent Health
-        hbox:
-            xalign 0.5
-            spacing 2
+                for i in range(BasePlayer.MAX_GUARD - opponent.guard):
+                    null width 206
 
-            for i in range(opponent.max_health - min(opponent.health, (move.damage - opponent.guard)) - (opponent.max_health - opponent.health)):
-                null width 50
+            # Opponent Health
+            hbox:
+                xalign 0.5
+                spacing 2
 
-            for i in range(min(opponent.health, (move.damage - opponent.guard))):
-                add Transform("fight_health_animation", size=(50, 20))
+                for i in range(opponent.max_health - min(opponent.health, (move.damage - opponent.guard)) - (opponent.max_health - opponent.health)):
+                    null width 50
 
-            for i in range(opponent.max_health - opponent.health):
-                null width 50
+                for i in range(min(opponent.health, (move.damage - opponent.guard))):
+                    add Transform("fight_health_animation", size=(50, 20))
+
+                for i in range(opponent.max_health - opponent.health):
+                    null width 50
 
 
 screen fight_opponent_turn():
