@@ -881,7 +881,7 @@ label v16s14:
 
     ro "Of course, thanks for joining us."
 
-    if ms_rose.relationship > Relationship.FWB or neverwasrosers: ### TODO Variable
+    if ms_rose.relationship >= Relationship.FWB or (not ms_rose.relationship == Relationship.THREATEN and not v16_ms_rose_breakup): ### TODO Variable
         scene v16s14_20c
         with dissolve
 
