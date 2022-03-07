@@ -438,7 +438,7 @@ default pb_threesome = False
 
 # 16.0
 default v16_baby = "Baby" # Used to store the player designated name of the baby
-
+default v16_wrong_key = True # This does default to True; not a typo. Used for baby menus
 # Chloe Planning Board 
 
 
@@ -471,4 +471,3 @@ default v16s39_fr_aubrey_date_points = 0
 default v16s39_food_critic = False
 default v16s44_rubius_park_walk = False
 
-default v16s46_wrong_key = True
