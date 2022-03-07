@@ -471,3 +471,6 @@ default v16s39_fr_aubrey_date_points = 0
 default v16s39_food_critic = False
 default v16s44_rubius_park_walk = False
 
+
+### to be removed
+default neverwasrosers = False
