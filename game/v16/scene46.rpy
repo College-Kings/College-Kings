@@ -326,10 +326,9 @@ label v16s46: # 46) Baby night, MC only
         u "(Okay, it's time for a diaper change. Which key was it?)"
 
         # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
-        while v16_wrong_key: # NOT SURE IF THIS IS THE BEST WAY TO IMPLIMENT THIS
+        while v16_wrong_key: ### NOT SURE IF THIS IS THE BEST WAY TO IMPLIMENT THIS
             menu:
                 "Blue":
-
                     play sound "sounds/babycry.mp3" 
 
                     scene v16s46_20 # TPP MC (frustrated expression, mouth closed) using the blue key on the baby doll [APE ROOM]
@@ -343,7 +342,6 @@ label v16s46: # 46) Baby night, MC only
                     u "(Dammit... Not blue.)"
 
                 "Green":
-                    
                     play sound "sounds/babyscream.mp3"
                     
                     scene v16s46_20a # TPP Same angle as 20, MC (frustrated expression, mouth closed) using the green key on the baby doll [APE ROOM]
@@ -410,7 +408,6 @@ label v16s46: # 46) Baby night, MC only
         u "Okay, I don't want any more of that, [v16_baby]... Please, let's get some sleep now."
     
     else: # Wolves
-
         scene v16s46_31 # TPP Show MC (tired, mouth closed), holding baby doll, entering his room [WOLF ROOM]
         with dissolve
 
@@ -531,10 +528,9 @@ label v16s46: # 46) Baby night, MC only
         u "(Okay, it's time for a diaper change. Which key was it?)"
 
         # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
-        while v16_wrong_key: # NOT SURE IF THIS IS THE BEST WAY TO IMPLIMENT THIS
+        while v16_wrong_key: ### NOT SURE IF THIS IS THE BEST WAY TO IMPLIMENT THIS
             menu:
                 "Blue":
-
                     play sound "sounds/babycry.mp3"
 
                     scene v16s46_50 # TPP MC (frustrated expression, mouth closed) using the blue key on the baby doll [WOLF ROOM]
@@ -548,7 +544,6 @@ label v16s46: # 46) Baby night, MC only
                     u "(Dammit... Not blue.)"
 
                 "Green":
-
                     play sound "sounds/babyscream.mp3"
 
                     scene v16s46_50a # TPP Same angle as 20, MC (frustrated expression, mouth closed) using the green key on the baby doll [WOLF ROOM]
