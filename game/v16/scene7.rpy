@@ -253,7 +253,7 @@ label v16s7:
         pause 0.75
 
     else: # -if MC not helping Chloe and/or did not get Lindsey drunk at Games night or VIP night
-        jump did_not_sabotage_lindsey
+        jump v16s7_did_not_sabotage_lindsey
 
     scene v16s7_6 # FPP. Show Autumn with a concerned expression, mouth is open, looking at MC
     with dissolve
@@ -394,7 +394,7 @@ label v16s7:
 
     jump v16s8 # -If PA system or Kiwii post Announcement, transition to v16s8-
 
-    label did_not_sabotage_lindsey:
+    label v16s7_did_not_sabotage_lindsey:
         scene v16s7_1b # TPP. Show MC walking along the hallway. Autumn is walking the other way. They share a smile, stopping to chat
         with dissolve
 
