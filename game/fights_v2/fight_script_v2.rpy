@@ -25,6 +25,8 @@ init python:
             self.attack_multiplier = attack_multiplier
 
             self.max_stamina = stamina
+            self.stance_bonus = None
+            self.guard_broken = 0
 
             self._health = health
             self._guard = stance.value
@@ -32,6 +34,7 @@ init python:
             self.wins = 0
             self.turn_moves = []
             self.base_attacks = []
+            self.special_attack = None
             self.previous_moves = []
             
         @property
@@ -40,8 +43,7 @@ init python:
 
         @health.setter
         def health(self, value):
-            self._health = value
-            self._health = max(self._health, 0)
+            self._health = max(value, 0)
 
         @property
         def guard(self):
@@ -49,7 +51,7 @@ init python:
 
         @guard.setter
         def guard(self, value):
-            self._guard = value
+            self._guard = max(value, 0)
 
         @property
         def rank(self):
@@ -74,6 +76,12 @@ init python:
         def reset_previous_moves(self):
             self.previous_moves = []
 
+        def set_stance_bonus(self, move):
+            if self.stance == move.ideal_stance:
+                self.stance_bonus = move.name
+            else:
+                self.stance_bonus = None
+
 
     class Opponent(BasePlayer):
         def __init__(self, name, stance, health=20, stamina=8, attack_multiplier=1, stance_images=None):
@@ -93,8 +101,11 @@ init python:
 default fight_previous_moves = []
 
 
-label move_attack(target, move, move_damage):
-    if target.guard < move_damage:
+label move_attack(target, move, move_damage, ignore_guard=False):
+    if move_damage > target.guard and target.guard <= 0:
+        $ target.guard_broken += 1
+
+    if target.guard < move_damage or ignore_guard:
         scene expression move.images["hit_image"]
         with vpunch
 
@@ -189,8 +200,18 @@ label player_attack_turn(player_move, player, opponent):
         else:
             $ player.health -= round(player_move.damage * 0.3)
 
-    $ damage = round(player_move.damage * primed_multiplier * reckless_multiplier)
-    call move_attack(opponent, player_move, damage)
+    # Stance Bonus
+    $ stance_multiplier = 1.0
+    
+    # Body Hook Stamina Bonus
+    if player.stance_bonus == BODY_HOOK.name:
+        $ stance_multiplier = 1.2
+
+    if player.stance_bonus == KICK.name and player.stamina == 6:
+        $ stance_multiplier = 1.2
+
+    $ damage = round(player_move.damage * primed_multiplier * reckless_multiplier * stance_multiplier)
+    call move_attack(opponent, player_move, damage, ignore_guard=(player.stance_bonus==JAB.name))
 
     if opponent.health <= 0:
         jump expression fight_end_label
@@ -225,6 +246,10 @@ label fight_start_opponent_turn(player, opponent):
         $ overwhelmed_multiplier = 1
 
     $ opponent.guard = round(opponent.stance.value * overwhelmed_multiplier)
+
+    # Hook stance bonus
+    if player.stance_bonus == HOOK.name:
+        $ opponent.stance -= 2
 
     $ fight_previous_moves.append({player.name: player.previous_moves.copy()})
     $ player.reset_previous_moves()
@@ -317,6 +342,8 @@ label fight_v2:
             "hit_image": "images/v2/kick2pic.webp",
             "blocked_image":  "images/v2/kick1pic.webp"
         }))
+
+        player.special_attack = HEADBUTT.copy({})
 
         player.turn_moves.append(TURTLE)
         player.turn_moves.append(END_TURN)

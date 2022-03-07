@@ -48,6 +48,29 @@ screen fight_player_turn(player, opponent):
                     text str(move.stamina_cost) xalign 1.0 font "fonts/Montserrat-Bold.ttf"
                     text move.name align (0.5, 0.5) text_align 0.5
 
+            if player.special_attack is not None:
+                button:
+                    xysize (100, 100)
+                    if player.special_attack.ideal_stance == player.stance:
+                        idle_background "#7cf87c"
+                    else:
+                        idle_background "#fff"
+                    hover_background "#ffd000"
+                    selected_background "#ffd000"
+                    insensitive_background "#a7a7a7"
+                    sensitive ((player.special_attack.name == HEADBUTT.name and player.guard_broken >= 3) or 
+                        (player.special_attack.name == OVERHAND_PUNCH.name and opponent.guard_broken >= 3) or 
+                        (player.special_attack.name == UPPERCUT.name and sum(move.damage for move in filter(lambda moves: player.name in moves, fight_previous_moves) if hasattr(move, "damage"))) or
+                        (player.special_attack == SUCKER_PUNCH.name and sum(move.damage for move in filter(lambda moves: opponent.name in moves, fight_previous_moves) if hasattr(move, "damage"))))
+                    selected (selected_move == player.special_attack)
+                    if selected_move == player.special_attack:
+                        action [SetScreenVariable("selected_move", None), Hide("action_info"), Hide("fight_health_bar_animations")]
+                    else:
+                        action [SetScreenVariable("selected_move", player.special_attack), Show("action_info", None, player.special_attack, player, opponent), Hide("fight_health_bar_animations"), Show("fight_health_bar_animations", None, player, opponent, player.special_attack)]
+
+                    text str(player.special_attack.stamina_cost) xalign 1.0 font "fonts/Montserrat-Bold.ttf"
+                    text player.special_attack.name align (0.5, 0.5) text_align 0.5
+
     vbox:
         xpos 35
         yalign 1.0
@@ -134,7 +157,7 @@ screen action_info(move, player, opponent):
                     xalign 0.5
                     idle_background "#a8a8a8"
                     hover_background "#ffd000"
-                    action [Hide("action_info"), Call("player_attack_turn", move, player, opponent)]
+                    action [Hide("action_info"), Function(player.set_stance_bonus, move), Call("player_attack_turn", move, player, opponent)]
                     
                     text ">>> {} <<<".format(move.name) size 30 font "fonts/Montserrat-Bold.ttf" align (0.5, 0.5)
 
