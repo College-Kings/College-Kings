@@ -450,7 +450,7 @@ default v16s1_win_fight_with_tom = False
 default v16s10_let_lauren_continue_hj = False
 default v16s11_sign_up = False
 default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
-default v16s20_twazzlers = False
+default v16s20_take_twazzlers = False
 default vs16s15hotdog_coupon = False
 default v16s23_mention_bills = False  # TODO: Variable
 default v16s23_mention_laptop = False # TODO: Variable

@@ -37,7 +37,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     pause 0.75
 
-    if v16s20_twazzlers: # -if MC also took the Twazzlers # TODO:Variable
+    if v16s20_take_twazzlers: # -if MC also took the Twazzlers # TODO:Variable
         scene v16s23_2c # FPP Same angle as 2, Amber with a slight smile, mouth closed, MC is holding Twazzlers package out to her [OUTSIDE ENTRANCE]
         with dissolve
 
@@ -329,7 +329,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     am "Good. People tell me not to keep a key under the mat, but it's saved me so many times, haha."
 
-    if "bills" in v16s20_seenList: # TODO: Variable# PLACEHOLDER VARIABLE -if MC looked at the Unpaid bills
+    if "bills" in freeroam15: # if MC looked at the Unpaid bills
         scene v16s23_17
         with dissolve
 
@@ -378,7 +378,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     # -Regardless-
     
-    if "laptop" in v16s20_seenList: #TODO: Variable# PLACEHOLDER VARIABLE # -if MC looked at the Open laptop
+    if "laptop" in freeroam15: # if MC looked at the Open laptop
         scene v16s23_17
         with dissolve
 
@@ -455,7 +455,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     # -Regardless-
     
-    if "photos" in v16s20_seenList: #TODO: VARIABLE  # PLACEHOLDER VARIABLE # -if MC looked at the Photos
+    if "photos" in freeroam15: # if MC looked at the Photos
         scene v16s23_17
         with dissolve
 
