@@ -142,7 +142,7 @@ label v16s42: # 42) MC changes into normal clothes
             with dissolve
         else:
             scene v16s42_4a # TPP Show MC under the covers in his bed, phone on nightstand [WOLF ROOM]
-            with dissolve        
+            with dissolve
         
         pause 0.75
 

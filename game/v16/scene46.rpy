@@ -76,7 +76,7 @@ label v16s46: # 46) Baby night, MC only
 
         u "What did I-"
 
-        play sound "sounds/babycry.mp3"    
+        play sound "sounds/babycry.mp3"
 
         scene v16s46_8
         with dissolve
@@ -520,7 +520,7 @@ label v16s46: # 46) Baby night, MC only
         scene v16s46_43 # TPP MC (mouth open) searching in the bedside table [WOLF ROOM]
         with dissolve
 
-        u "(Fuck!) Where are the fucking keys?!"            
+        u "(Fuck!) Where are the fucking keys?!"
         
         scene v16s46_48 # TPP MC (mouth closed) picking up the baby and looking underneath - he see's the keys [WOLF ROOM]
         with dissolve

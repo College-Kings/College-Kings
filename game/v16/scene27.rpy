@@ -172,7 +172,7 @@ label v16s27:
         scene v16s27_8
         with dissolve
 
-        u "(Perhaps she'll show more interest once we know exactly what we've got to do.)"        
+        u "(Perhaps she'll show more interest once we know exactly what we've got to do.)"
 
     label v16s27_continue_after_parent_choice:# -Regardless of parent choice-
 
@@ -667,7 +667,7 @@ label v16s27:
 
         pause 0.75
 
-        if v14_help_lindsey:    # -if MC is helping Lindsey
+        if v14_help_lindsey: # -if MC is helping Lindsey
 
             scene v16s27_14a # TPP. Show MC (slight smile, mouth is closed, looking at Lindsey) standing at the exit to the Amphitheatre, and Lindsey (slight smile, mouth is closed, looking at MC) approaching MC
             with dissolve

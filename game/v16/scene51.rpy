@@ -5,7 +5,7 @@
 
 label v16s51:
     scene v16s51_1 # TPP. Show MC (Slight smile, mouth closed) walking down the sidewalk to the dog shelter.
-    with dissolve 
+    with dissolve
 
     pause 0.75
 

@@ -34,7 +34,7 @@ label v16s47: # 47) MC goes to the Chicks house
             pause 0.75
 
             scene v16s47_4 # TPP MC walking down the hall of the Chicks house, Chloe (smiling, mouth closed) visible behind him, looking at him walk away
-            with dissolve            
+            with dissolve
         
         else:
             scene v16s47_5 # TPP MC (slight smile, mouth closed) entering the Chicks house past Chloe (bored expression, mouth closed) as she closes the door
@@ -67,7 +67,7 @@ label v16s47: # 47) MC goes to the Chicks house
             pause 0.75
 
             scene v16s47_4a # TPP Same angle as 4. MC walking down the hall of the Chicks house, Nora (smiling, mouth closed) visible behind him, holding the baby doll, looking at him walk away
-            with dissolve        
+            with dissolve
 
         else:
             scene v16s47_5a # TPP Same angle as 5. MC (slight smile, mouth closed) entering the Chicks house past Nora (slight smile, mouth closed) as she holds the baby with one hand and closes the door with the other

@@ -211,7 +211,7 @@ label v16s49:
                 u "(Nope! I think blue is for feeding.)"
 
                 scene v16s49_9
-                with dissolve               
+                with dissolve
                     
             "Green":
                 scene v16s49_9b # FPP. Show just the GREEN Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
@@ -241,7 +241,7 @@ label v16s49:
                 scene v16s49_3d
                 with dissolve
 
-                no "Nice, good job!"                
+                no "Nice, good job!"
 
     scene v16s49_7
     with fade
@@ -330,7 +330,7 @@ label v16s49:
 
     play sound "sounds/babycry.mp3"
 
-    scene v16s49_6f # TPP. Nora (shocked expression, mouth is open, eyes are wide open, head against MC's chest) and MC (shocked expression, mouth is open, eyes are wide open, arm around Nora, head resting on Nora's head) sitting close too each other on the couch.  Mc struggles to hold onto the baby (TV is the ambient light that fills the dark room [CAMERA FROM THE TV POV]
+    scene v16s49_6f # TPP. Nora (shocked expression, mouth is open, eyes are wide open, head against MC's chest) and MC (shocked expression, mouth is open, eyes are wide open, arm around Nora, head resting on Nora's head) sitting close too each other on the couch. Mc struggles to hold onto the baby (TV is the ambient light that fills the dark room [CAMERA FROM THE TV POV]
     with vpunch
 
     baby "*Crying*"
