@@ -25,7 +25,7 @@ label v16s41: # MC goes home dressed up
             u "(And then there were three... What am I doing out here? *Laughs* I need to start being extra careful around my ladies...)"
 
         # IF mc is dating chloe OR Lauren, and now also aubrey (not both chloe and lauren, only one of them, 2 GF variables total) 
-        elif aubrey.relationship == Relatiionship.TAMED and (lauren.relationship == Relationship.GIRLFRIEND or chloe.relationship == Relationship.GIRLFRIEND): # TODO: Variable
+        elif aubrey.relationship == Relationship.TAMED and (lauren.relationship == Relationship.GIRLFRIEND or chloe.relationship == Relationship.GIRLFRIEND): # TODO: Variable
             scene v16s41_3
             with dissolve
 
