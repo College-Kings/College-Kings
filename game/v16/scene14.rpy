@@ -9,12 +9,12 @@ label v16s14:
     scene v16s14_1 # FPP. MC sees Nora in the distance, leaning on a tree in the park, Nora slight smile, looking at MC, waving at him, mouth closed, three yoga mats are on the ground, one of the mats is behind the other 2
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v16s14_2 #  TPP. Show MC walking over to Nora, both slight smiles, mouths closed
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v16s14_3 # FPP. MC standing in front of Nora, Nora slight smile, mouth closed
     with dissolve
@@ -98,44 +98,7 @@ label v16s14:
 
     no "I said a friend was coming."
 
-    if not msrosers: ### TODO Variable If never dated ms. rose, idk the variable
-        scene v16s14_6a # FPP. Same as v16s14_6, Ms. Rose looking at MC, Ms. Rose smiling, mouth open
-        with dissolve
-
-        ro "Nice to see you, [name]."
-
-        scene v16s14_6b # FPP. Same as v16s14_6a, Ms. Rose smiling, mouth closed
-        with dissolve
-
-        u "Ms. Rose, I didn't know you were a yoga guru."
-
-        scene v16s14_6a
-        with dissolve
-
-        ro "I'm a woman of many talents."
-    
-    elif ms_rose.relationship >= Relationship.FWB:# if still dating ms. rose
-        scene v16s14_6b
-        with dissolve
-
-        u "(Act normal, act normal, act-)"
-
-        scene v16s14_6a
-        with dissolve
-
-        ro "No worries, the more the merrier."
-
-        scene v16s14_6c # FPP. Same as v16s14_6a, Ms. Rose mouth closed, giving a sexy wink to MC (don't make it super obvious, Nora can't notice the wink)
-        with dissolve
-
-        pause 0.75
-
-        scene v16s14_6a
-        with dissolve
-
-        ro "Now..."
-    
-    else: ### if broke up with ms. rose
+    if ms_rose.relationship == Relationship.THREATEN or v16_ms_rose_breakup: # if broke up with ms. rose
         scene v16s14_6d # FPP. Same as v16s14_6, Ms. Rose slightly stunned, mouth open
         with dissolve
 
@@ -161,6 +124,43 @@ label v16s14:
 
         ro "I'm fine, I promise. But..."
 
+    elif ms_rose.relationship >= Relationship.FWB:# if still dating ms. rose
+        scene v16s14_6b
+        with dissolve
+
+        u "(Act normal, act normal, act-)"
+
+        scene v16s14_6a
+        with dissolve
+
+        ro "No worries, the more the merrier."
+
+        scene v16s14_6c # FPP. Same as v16s14_6a, Ms. Rose mouth closed, giving a sexy wink to MC (don't make it super obvious, Nora can't notice the wink)
+        with dissolve
+
+        pause 0.75
+
+        scene v16s14_6a
+        with dissolve
+
+        ro "Now..."
+    
+    else: # If never dated ms. rose
+        scene v16s14_6a # FPP. Same as v16s14_6, Ms. Rose looking at MC, Ms. Rose smiling, mouth open
+        with dissolve
+
+        ro "Nice to see you, [name]."
+
+        scene v16s14_6b # FPP. Same as v16s14_6a, Ms. Rose smiling, mouth closed
+        with dissolve
+
+        u "Ms. Rose, I didn't know you were a yoga guru."
+
+        scene v16s14_6a
+        with dissolve
+
+        ro "I'm a woman of many talents."
+    
     scene v16s14_6
     with dissolve
 
