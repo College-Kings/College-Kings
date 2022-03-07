@@ -7,10 +7,8 @@ label v16s46: # 46) Baby night, MC only
     # -Scene is the same for Wolves and Apes unless specified.
     # ALL RENDERS SHOW ONLY THE INSIDE OF MC'S ROOM
 
-    if joinapes:
-    
+    if not joinwolves:
         scene v16s46_1 # TPP Show MC (tired, mouth closed), holding baby doll, entering his room [APE ROOM]
-
         with dissolve
 
         pause 0.75
