@@ -71,7 +71,7 @@ label v16s47: # 47) MC goes to the Chicks house
 
         else:
             scene v16s47_5a # TPP Same angle as 5. MC (slight smile, mouth closed) entering the Chicks house past Nora (slight smile, mouth closed) as she holds the baby with one hand and closes the door with the other
-            with dissovle
+            with dissolve
 
         pause 0.75
 
