@@ -10,7 +10,7 @@ label v16s7:
 
     pause 0.75
 
-    if v15_chloe_lindseysabotage and not v15_chloe_postkiwii: # -if MC chose Embarrass Lindsey, PA system announcement
+    if v15_chloe_postkiwii: # -if MC chose Embarrass Lindsey, PA system announcement
         scene v16s7_2 # TPP. MC and a few other random characters show up in frame, NO MAIN CHARACTERS, all of them stop walking and look up at the PA system speaker on the wall. All of them no expressions, mouths are closed
         with dissolve
 
@@ -127,7 +127,7 @@ label v16s7:
 
         pause 0.75
 
-    elif v15_chloe_lindseysabotage and v15s8_chloe_kiwii == chloe_board.add_subtask("Sabotage") and v15_chloe_postkiwii = chloe_board.selected_task == v15s8_chloe_kiwii: # -if MC chose Embarrass Lindsey, Kiwii post announcement
+    elif v15_chloe_postkiwii: # -if MC chose Embarrass Lindsey, Kiwii post announcement
         scene v16s7_1a # TPP. MC is still in the school hallway as v16s7_1 MC's phone vibrates and he pulls his phone from his pocket and looks at it
         with dissolve
 
