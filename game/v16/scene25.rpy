@@ -65,7 +65,7 @@ label v16s25:
 
                 u "(Maybe being a stripper is her true calling... *Laughs*)"
 
-            elif amber.relationship == Relationship.Friend and AmberLoyal: # TODO: Variable
+            elif amber.relationship == Relationship.FRIEND and AmberLoyal: # TODO: Variable
                 scene v16s25_4
                 with dissolve
 
@@ -73,7 +73,7 @@ label v16s25:
 
                 u "(I'm glad she's happy.)"
 
-            elif amber.relationship == Relationship.Friend and v16_tell_amber_to_quit_stripping: # TODO: Variable Placeholder:
+            elif amber.relationship == Relationship.FRIEND and v16_tell_amber_to_quit_stripping: # TODO: Variable Placeholder:
                 scene v16s25_4
                 with dissolve
 
@@ -700,7 +700,7 @@ label v16s25:
                 u "(Is Amber relationship material? Definitely something to think about...)"
 
                 u "(I never thought Amber would be the type for a serious relationship... Maybe things have changed.)"
-            elif amber.relationship == Relationship.Friend: # TODO: Variable
+            elif amber.relationship == Relationship.FRIEND: # TODO: Variable
                 scene v16s25_17
                 with dissolve
 
@@ -716,7 +716,7 @@ label v16s25:
 
                 u "(Maybe being a stripper is her true calling... *Laughs*)"
 
-            elif amber.relationship == Relationship.Friend and AmberLoyal: #TODO: Variable
+            elif amber.relationship == Relationship.FRIEND and AmberLoyal: #TODO: Variable
                 scene v16s25_17
                 with dissolve
 

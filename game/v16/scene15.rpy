@@ -1338,7 +1338,7 @@ label v16s15:
             hv "My powers never fail! One hotdog coming right up!"
 
             if vs16s15hotdog_coupon: # -if MC already went to the Wheel of Chance and chose 'gentle spin' leading to a free hotdog coupon TODO: Variable
-                if penelope.relationship.value >= Relationship.GIRLFRIEND.value: # -if PenelopeRS TODO: Variable
+                if penelope.relationship >= Relationship.GIRLFRIEND: ### -if PenelopeRS TODO: Variable
 
                     scene v16s15_53a # FPP. MC turning his head to his right, Show Just Penelope head turned looking at MC with with the HOT DOG STAND to her right, MC hands the hotdog coupon to Penelope, Penelope smiles, mouth is closed [HOTDOG]
                     with dissolve
@@ -1402,7 +1402,7 @@ label v16s15:
 
                         "Keep the coupon":
                             $ add_point(KCT.BRO)
-                            if penelope.relationship.value >= Relationship.GIRLFRIEND.value: # TODO: Variable
+                            if penelope.relationship >= Relationship.GIRLFRIEND: ### TODO: Variable
                                 $ add_point(KCT.TROUBLEMAKER)
 
                             scene v16s15_55
