@@ -4,7 +4,6 @@
 # Time: Wednesday night
 
 label v16s47: # 47) MC goes to the Chicks house
-    
     play sound "sounds/knock.mp3"
 
     scene v16s47_1 # TPP Show MC knocking on the front door of the Chicks house
@@ -13,7 +12,6 @@ label v16s47: # 47) MC goes to the Chicks house
     pause 0.75
 
     if v16s27_parent_chloe: # PLACEHOLDER VARIABLE # IF partnered with Chloe
-        
         scene v16s47_2 # FPP Chloe (bored expression, mouth open) answering the door to the Chicks house
         with dissolve
 
@@ -30,7 +28,6 @@ label v16s47: # 47) MC goes to the Chicks house
         cl "We'll see."
 
         if chloe.relationship == Relationship.GIRLFRIEND: # TODO: Variable IF chloeGF
-            
             scene v16s47_3 # TPP Show MC kissing Chloe on the cheek as he enters the Chicks house
             with dissolve
 
@@ -40,7 +37,6 @@ label v16s47: # 47) MC goes to the Chicks house
             with dissolve            
         
         else:
-            
             scene v16s47_5 # TPP MC (slight smile, mouth closed) entering the Chicks house past Chloe (bored expression, mouth closed) as she closes the door
             with dissolve
 
@@ -49,7 +45,6 @@ label v16s47: # 47) MC goes to the Chicks house
         jump v16s48 # -if partner Chloe, transition to Scene 48-
 
     else: # IF partnered with Nora
-        
         scene v16s47_6 # FPP Nora (smiling, mouth open) answering the door to the Chicks house. She is holding the baby doll like a real baby
         with dissolve
 

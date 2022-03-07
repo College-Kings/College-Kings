@@ -4,7 +4,6 @@
 # Time: Night
 
 label v16s49:
-
     scene v16s49_1 # TPP. MC (slight smile, mouths is closed, looking at Nora) follows Nora (slight smile, mouth is closed, looking at MC) carrying the baby into the living room.
     with dissolve
 
@@ -196,9 +195,7 @@ label v16s49:
 # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
     while v16_wrong_key:
         menu:
-
             "Blue":
-
                 scene v16s49_9a # FPP. Show just the BLUE Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
                 with dissolve
 
@@ -217,7 +214,6 @@ label v16s49:
                 with dissolve               
                     
             "Green":
-
                 scene v16s49_9b # FPP. Show just the GREEN Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
                 with dissolve
 
@@ -233,7 +229,6 @@ label v16s49:
                 u "(Come on, [v16_baby]! Please stop...)"
 
             "Orange": # (CORRECT)
-
                 $ v16_wrong_key = False
 
                 play sound "sounds/babycoo.mp3"
@@ -411,9 +406,7 @@ label v16s49:
     with dissolve
 
     menu:
-
         "Grab the keys":
-
             scene v16s49_12 # FPP. Nora (concerned expression, mouth is closed, looking at MC) she is holding the baby, MC hands Nora the BLUE FOB key, camera angle is with both Mc and Nora standing
             with dissolve
 
@@ -498,15 +491,12 @@ label v16s49:
 
             no "And it's exactly that type of reply that makes you such a good partner, haha."
 
-            if "v15_nora" in sceneList:  # TODO: Variable -if MC and Nora also had sex at the cabin #!#!#! DOUBLE CHECK FOR CORRECT VARIABLE  #!#!#!
-
+            if "v15_nora" in sceneList:
                 scene v16s49_13 # TPP. Show MC (slight smile, mouths is closed, looking at Nora) and Nora (slight smile/blushing expression, mouth is closed, eyes are closed, facing MC) sitting on the couch, Nora is still holding the baby leaning in for a kiss from MC, they are not kissing yet (TV is the ambient light that fills the dark room [CAMERA FROM THE TV POV]
                 with dissolve
 
                 menu:
-
                     "Kiss her":
-
                         scene v16s49_13a # TPP. Show MC (kissing Nora eyes are closed) with one hand holding Nora's cheek and pulling her closer towards him and Nora (kissing Mc eyes are closed) she is still holding the baby, both of them still sitting on the couch
                         with dissolve
 
@@ -563,7 +553,6 @@ label v16s49:
                         jump v16s49a # -Transition to Scene 49a-
 
                     "Keep it PG":
-
                         scene v16s49_13d # TPP. Show MC (no expression, mouths is open, looking at Nora) and Nora (slightly shocked expression, mouth is closed, looking at MC)  Nora is still holding the baby, sitting on the couch
 
                         u "Um... Sorry, it's just... It feels kind of weird to make out when there's a baby right there."
@@ -606,7 +595,6 @@ label v16s49:
                         jump v16s49a # -Transition to Scene 49a-
 
         "Cover your ears":
-
             scene v16s49_10c
             with dissolve
 
