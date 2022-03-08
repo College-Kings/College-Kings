@@ -134,7 +134,15 @@ label v16s7:
         pause 0.75
 
         $ chloe.messenger.newMessage("Check out SVC's Kiwii page and play the audio ;)")
+        $ chloe.messenger.addReply("Oooh, interesting...")
             
+        label v16s7_phoneContinue:
+            if chloe.messenger.replies:
+                call screen phone
+            if chloe.messenger.replies:
+                u "(I should check what Chloe wants.)"
+                jump v16s7_phoneContinue
+
         ### force open kiwii and/or check for Chloe message
         # -MC opens his Kiwii app to view the SVC Kiwii page. The most recent post is an audio file posted by an anonymous user with an empty avatar. The audio autoplays-
 
