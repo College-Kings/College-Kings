@@ -204,6 +204,6 @@ define character.kobe = Character("Kobe", who_color="#fd9426", who_outlines=[ (2
 define character.crowd = Character("Crowd", who_color="#a815f2", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.jog = Character("Jogger", who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 
-define character.hv = Character("hv")
+define character.hv = Character("Hot Dog Vendor")
 define character.pa = Character("pa")
 define character.pha = Character("pha")
