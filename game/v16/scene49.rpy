@@ -18,7 +18,7 @@ label v16s49:
     scene v16s49_3 # FPP. Nora (slight smile, mouth is closed, looking at MC) sitting on the couch, still holding the baby
     with dissolve
 
-    u "Getting attached to [v16_baby] already, huh?"
+    u "Getting attached to [v16_baby_name] already, huh?"
 
     scene v16s49_3a # FPP. Nora (slight smile, mouth is open, looking at MC) sitting on the couch, still holding the baby
     with dissolve
@@ -53,7 +53,7 @@ label v16s49:
     scene v16s49_3c # FPP. Nora (half smile, mouth is open, looking at MC) sitting on the couch, holds the baby face out towards MC to hold
     with dissolve
 
-    no "Here, you hold [v16_baby]."
+    no "Here, you hold [v16_baby_name]."
 
     scene v16s49_4 # TPP. Nora (slight smile, mouth is closed, looking at MC) hands MC (slight smile, mouths is closed, looking at Nora) the baby
     with dissolve
@@ -144,7 +144,7 @@ label v16s49:
     scene v16s49_3d
     with dissolve
 
-    no "When I picked [v16_baby] up from campus, the teacher let it slip that it had just been burped."
+    no "When I picked [v16_baby_name] up from campus, the teacher let it slip that it had just been burped."
 
     scene v16s49_3e
     with dissolve
@@ -230,7 +230,7 @@ label v16s49:
 
                 baby "*Crying*"
                 
-                u "(Come on, [v16_baby]! Please stop...)"
+                u "(Come on, [v16_baby_name]! Please stop...)"
 
             "Orange": # (CORRECT)
 
@@ -256,7 +256,7 @@ label v16s49:
     scene v16s49_3d
     with dissolve
 
-    no "Here, I can take [v16_baby] back now."
+    no "Here, I can take [v16_baby_name] back now."
 
     scene v16s49_3g # FPP. Nora (half smile, mouth is closed, looking at MC) sitting on the couch, MC is handing the baby to Nora baby's face is towards Nora and it's back is towards MC
     with dissolve
@@ -550,7 +550,7 @@ label v16s49:
                         scene v16s49_15 # FPP. Show a close up shot of Nora sleeping happily in his lap, still holding the baby
                         with dissolve
 
-                        u "(Nora and [v16_baby] are still fast asleep. I think this i a good time for me to head home.)"
+                        u "(Nora and [v16_baby_name] are still fast asleep. I think this i a good time for me to head home.)"
 
                         scene v16s49_16 # TPP. MC (slight smile, mouths is closed, looking at Nora) rests a pillow under Nora's head as he gets up from the couch, make sure MC and Nora's position matches v16s49_6j, Nora is still sleeping
                         with dissolve
@@ -598,7 +598,7 @@ label v16s49:
                         scene v16s49_18 # FPP. Show a close up shot of Nora sleeping with her head on the other side of the couch, feet on the couch still holding the baby
                         with dissolve
 
-                        u "(Nora and [v16_baby] are still fast asleep. I think this i a good time for me to head home.)"
+                        u "(Nora and [v16_baby_name] are still fast asleep. I think this i a good time for me to head home.)"
 
                         scene v16s49_19 # TPP. Show Nora (sleeping) still holding the baby and in the same position as v16s49_6i as MC (slight smile, mouths is closed, looking at Nora) gets up from the couch
                         with dissolve
@@ -713,7 +713,7 @@ label v16s49:
             scene v16s49_18
             with dissolve
 
-            u "(Nora and [v16_baby] are still fast asleep. I think this i a good time for me to head home.)"
+            u "(Nora and [v16_baby_name] are still fast asleep. I think this i a good time for me to head home.)"
 
             scene v16s49_19
             with dissolve

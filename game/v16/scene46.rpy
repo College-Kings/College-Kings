@@ -100,7 +100,7 @@ label v16s46: # 46) Baby night, MC only
         scene v16s46_11 # TPP MC (mouth open) holding his hands out to the baby doll, as if soothing a real baby [APE ROOM]
         with dissolve
 
-        u "I'm sorry, [v16_baby]..."
+        u "I'm sorry, [v16_baby_name]..."
 
         scene v16s46_12 # TPP MC (mouth closed) searching under his bed [APE ROOM]
         with dissolve
@@ -409,7 +409,7 @@ label v16s46: # 46) Baby night, MC only
         scene v16s46_25 # TPP MC (eyes closed, mouth open) lays in bed with his arm across his face [APE ROOM]
         with dissolve
 
-        u "Okay, I don't want any more of that, [v16_baby]... Please, let's get some sleep now."
+        u "Okay, I don't want any more of that, [v16_baby_name]... Please, let's get some sleep now."
     
     else: # Wolves
 
@@ -503,7 +503,7 @@ label v16s46: # 46) Baby night, MC only
         scene v16s46_41 # TPP MC (mouth open) holding his hands out to the baby doll, as if soothing a real baby [WOLF ROOM]
         with dissolve
 
-        u "I'm sorry, [v16_baby]..."
+        u "I'm sorry, [v16_baby_name]..."
 
         scene v16s46_42 # TPP MC (mouth closed) searching under his bed [WOLF ROOM]
         with dissolve
@@ -591,6 +591,6 @@ label v16s46: # 46) Baby night, MC only
         scene v16s46_55 # TPP MC (eyes closed, mouth open) lays in bed with his arm across his face [WOLF ROOM]
         with dissolve
 
-        u "Okay, I don't want any more of that, [v16_baby]... Please, let's get some sleep now."
+        u "Okay, I don't want any more of that, [v16_baby_name]... Please, let's get some sleep now."
 
     jump v16s50a # -Transition to Scene 50a-
