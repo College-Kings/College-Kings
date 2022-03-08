@@ -10,7 +10,7 @@ label v16s7:
 
     pause 0.75
 
-    if v15_chloe_lindseysabotage and not v15_chloe_postkiwii: # -if MC chose Embarrass Lindsey, PA system announcement
+    if v15_chloe_postkiwii: # -if MC chose Embarrass Lindsey, PA system announcement
         scene v16s7_2 # TPP. MC and a few other random characters show up in frame, NO MAIN CHARACTERS, all of them stop walking and look up at the PA system speaker on the wall. All of them no expressions, mouths are closed
         with dissolve
 
@@ -127,7 +127,7 @@ label v16s7:
 
         pause 0.75
 
-    elif v15_chloe_lindseysabotage and v15s8_chloe_kiwii == chloe_board.add_subtask("Sabotage") and v15_chloe_postkiwii = chloe_board.selected_task == v15s8_chloe_kiwii: # -if MC chose Embarrass Lindsey, Kiwii post announcement
+    elif v15_chloe_postkiwii: # -if MC chose Embarrass Lindsey, Kiwii post announcement
         scene v16s7_1a # TPP. MC is still in the school hallway as v16s7_1 MC's phone vibrates and he pulls his phone from his pocket and looks at it
         with dissolve
 
@@ -253,7 +253,7 @@ label v16s7:
         pause 0.75
 
     else: # -if MC not helping Chloe and/or did not get Lindsey drunk at Games night or VIP night
-        jump did_not_sabotage_lindsey
+        jump v16s7_did_not_sabotage_lindsey
 
     scene v16s7_6 # FPP. Show Autumn with a concerned expression, mouth is open, looking at MC
     with dissolve
@@ -394,7 +394,7 @@ label v16s7:
 
     jump v16s8 # -If PA system or Kiwii post Announcement, transition to v16s8-
 
-    label did_not_sabotage_lindsey:
+    label v16s7_did_not_sabotage_lindsey:
         scene v16s7_1b # TPP. Show MC walking along the hallway. Autumn is walking the other way. They share a smile, stopping to chat
         with dissolve
 

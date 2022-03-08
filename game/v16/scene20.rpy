@@ -24,7 +24,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
     u "(Hmm, I could have a little look around first. Learn a little bit more about Amber. There's the phone charger though. She is in need after all...)"
 
     label v16s20_amber_living_room_twazzlers: # -if Twazzlers candy
-        $ freeroam16.add("twazzlers")
+        $ freeroam15.add("twazzlers")
 
         scene v16s20_2 # FPP. A close up shot of the Twazzlers in the location of the room from the call screen (REUSED: CANNOT INCLUDE TRASH).
         with dissolve
@@ -36,7 +36,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
 
         menu:
             "Take the Twazzlers":
-                $ v16s20_twazzlers = True
+                $ v16s20_take_twazzlers = True
 
                 scene v16s20_2
                 with dissolve
@@ -54,23 +54,21 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
                 call screen v16s20_amber_living_room_clean # -Return to free roam-
 
     label v16s20_amber_living_room_unpaid_bills: # -if Unpaid Bills
-        $ freeroam16.add("bills")
+        $ freeroam15.add("bills")
 
         scene v16s20_3 # FPP. Close up shot of bills. A big red stamp on the top one: "OVERDUE" (REUSED: CANNOT INCLUDE TRASH).
         with dissolve
 
         u "(Why does Amber have unpaid bills? I thought she was earning good money...)"
 
-        if v16s20_twazzlers:
-
+        if v16s20_take_twazzlers:
             call screen v16s20_amber_living_room_twazzler_clean
 
         else:
-
             call screen v16s20_amber_living_room_clean
 
     label v16s20_amber_living_room_laptop: # -if Open Laptop
-        $ freeroam16.add("laptop")
+        $ freeroam15.add("laptop")
 
         scene v16s20_4 # FPP. Close up shot of just the laptop and the screen (REUSED: CANNOT INCLUDE TRASH).
         with dissolve
@@ -102,14 +100,14 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
 
         u "*Laughs* (I think I've read enough of that.)"
 
-        if v16s20_twazzlers:
+        if v16s20_take_twazzlers:
             call screen v16s20_amber_living_room_twazzler_clean
 
         else:
             call screen v16s20_amber_living_room_clean
 
     label v16s20_amber_living_room_photos: # -if Photos
-        $ freeroam16.add("photos")
+        $ freeroam15.add("photos")
 
         scene v16s20_9 # FPP. There are three photos: One with Amber, Kim & Josh. One with Amber and her young brother, Damian. One of young Amber playing violin shown from left to right.
         with dissolve
@@ -136,21 +134,21 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
 
         u "(I should do this more often. I feel like a detective, heh. .)"
 
-        if v16s20_twazzlers:
+        if v16s20_take_twazzlers:
             call screen v16s20_amber_living_room_twazzler_clean
 
         else:
             call screen v16s20_amber_living_room_clean
 
     label v16s20_amber_living_room_phone_charger: # -if Phone charger (Ends Free Roam)
-        $ freeroam16.add("charger")
+        $ freeroam15.add("charger")
 
         scene v16s20_13 # FPP. A close up shot of the phone charger in the location of the room from the call screen (REUSED: CANNOT INCLUDE TRASH).
         with dissolve
 
         u "(Here it is! I bet her phone's dead by now. She'll be so desperate for this!)"
 
-        if v16s20_twazzlers:
+        if v16s20_take_twazzlers:
             scene v16s20_14 # FPP. A close up shot of the phone charger in Mc's hand (REUSED: CANNOT INCLUDE TRASH).
             with dissolve
 
@@ -167,14 +165,13 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
             call screen v16s20_end
 
 label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer bottles, pizza box, etc, but clickable items are in exactly the same places as AmberSober
-
     scene v16s20_1a # FPP. same as v16s20_1 the room is messier with some beer bottles, pizza box, etc, but clickable items are in exactly the same places as AmberSober
     with dissolve
 
     u "(Hmm, I could have a little look around first. Learn a little bit more about Amber. There's the phone charger though. She is in need after all...)"
 
     label v16s20_amber_living_room_twazzlers2: # -if Twazzlers candy
-        $ freeroam16.add("twazzlers")
+        $ freeroam15.add("twazzlers")
 
         scene v16s20_2
         with dissolve
@@ -186,7 +183,7 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
 
         menu:
             "Take the Twazzlers":
-                $ v16s20_twazzlers = True
+                $ v16s20_take_twazzlers = True
 
                 scene v16s20_2
                 with dissolve
@@ -204,21 +201,21 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
                 call screen v16s20_amber_living_room_dirty
 
     label v16s20_amber_living_room_unpaid_bills2: # -if Unpaid Bills
-        $ freeroam16.add("bills")
+        $ freeroam15.add("bills")
 
         scene v16s20_3
         with dissolve
 
         u "(Why does Amber have unpaid bills? I thought she was earning good money...)"
 
-        if v16s20_twazzlers:
+        if v16s20_take_twazzlers:
             call screen v16s20_amber_living_room_twazzler_dirty
 
         else:
             call screen v16s20_amber_living_room_dirty
 
     label v16s20_amber_living_room_laptop2: # -if Open Laptop
-        $ freeroam16.add("laptop")
+        $ freeroam15.add("laptop")
 
         scene v16s20_4
         with dissolve
@@ -250,14 +247,14 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
 
         u "*Laughs* (I think I've read enough of that.)"
 
-        if v16s20_twazzlers:
+        if v16s20_take_twazzlers:
             call screen v16s20_amber_living_room_twazzler_dirty
 
         else:
             call screen v16s20_amber_living_room_dirty
 
     label v16s20_amber_living_room_photos2: # -if Photos
-        $ freeroam16.add("photos")
+        $ freeroam15.add("photos")
 
         scene v16s20_9
         with dissolve
@@ -284,21 +281,21 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
 
         u "(I should do this more often. I feel like a detective, heh. .)"
 
-        if v16s20_twazzlers:
+        if v16s20_take_twazzlers:
             call screen v16s20_amber_living_room_twazzler_dirty
 
         else:
             call screen v16s20_amber_living_room_dirty # -Return to free roam-
 
     label v16s20_amber_living_room_phone_charger2: # -if Phone charger (Ends Free Roam)
-        $ freeroam16.add("charger")
+        $ freeroam15.add("charger")
 
         scene v16s20_13
         with dissolve
 
         u "(Here it is! I bet her phone's dead by now. She'll be so desperate for this!)"
 
-        if v16s20_twazzlers:
+        if v16s20_take_twazzlers:
             scene v16s20_14
             with dissolve
 

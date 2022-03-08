@@ -9890,6 +9890,8 @@ label upstairsaubrey:
                 u "(I should probably talk to Chris soon.)"
 
     else:
+        $ aubrey_boyfriend_threesome = True
+
         scene sufr3au1
         with fade
 
@@ -9994,8 +9996,6 @@ label upstairsaubrey:
 
         scene sufr3au2b
         with dissolve
-
-        $ aubrey_boyfriend_threesome = True
 
         au "There was this one time for his birthday, where I had blindfolded him and tied him to the bed for his present."
 

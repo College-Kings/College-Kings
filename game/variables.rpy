@@ -438,7 +438,7 @@ default pb_threesome = False
 
 # 16.0
 default v16_baby = "Baby" # Used to store the player designated name of the baby
-
+default v16_wrong_key = True # This does default to True; not a typo. Used for baby menus
 # Chloe Planning Board 
 
 
@@ -450,7 +450,7 @@ default v16s1_win_fight_with_tom = False
 default v16s10_let_lauren_continue_hj = False
 default v16s11_sign_up = False
 default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
-default v16s20_twazzlers = False
+default v16s20_take_twazzlers = False
 default vs16s15hotdog_coupon = False
 default v16s23_mention_bills = False  # TODO: Variable
 default v16s23_mention_laptop = False # TODO: Variable
@@ -471,4 +471,4 @@ default v16s39_fr_aubrey_date_points = 0
 default v16s39_food_critic = False
 default v16s44_rubius_park_walk = False
 
-default v16s46_wrong_key = True
+default v16_wintom = False

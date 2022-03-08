@@ -18,9 +18,10 @@ label v16s42: # 42) MC changes into normal clothes
 
     if v16s25a_date_with_aubrey: # TODO: Variable PLACEHOLDER VARIABLE # IF Transitioning from Scene 41 [Checkpoint 1.1]
         
-        if joinapes:
+        if not joinwolves:
             scene v16s42_1 # TPP Show MC entering his room in fancy clothes (DATE NIGHT CLOTHES s41) [APE ROOM]
             with dissolve
+
         else:
             scene v16s42_1a # TPP Show MC entering his room in fancy clothes (DATE NIGHT CLOTHES s41) [WOLF ROOM]
             with dissolve
@@ -28,7 +29,7 @@ label v16s42: # 42) MC changes into normal clothes
         pause 0.75 
         
     else:
-        if joinapes:
+        if not joinwolves:
             scene v16s42_2 # TPP Show MC entering his room in normal clothes [APE ROOM]
             with dissolve
         else:
@@ -38,11 +39,8 @@ label v16s42: # 42) MC changes into normal clothes
         pause 0.75
 
     if (1 & v16s27_mc_baby_duty_night == 1) or (0x10 & v16s27_mc_baby_duty_night = 0x10): # IF on baby duty alone or sharing baby duty 1 = alone_duty_on_Wed, 0x10 = shared_duty_on_Wed
-        
         if v16s25a_date_with_aubrey: # PLACEHOLDER VARIABLE
-
-            if joinapes:
-            
+            if not joinwolves:
                 scene v16s42_1b # TPP Show MC Taking fancy clothes shirt off [APE ROOM]
                 with dissolve
 
@@ -101,11 +99,8 @@ label v16s42: # 42) MC changes into normal clothes
             jump v16s47
 
     else: # IF partner is on baby duty alone
-        
         if v16s25a_date_with_aubrey: # PLACEHOLDER VARIABLE
-            
-            if joinapes:
-                
+            if not joinwolves:
                 scene v16s42_1b # TPP Show MC Taking fancy clothes shirt off [APE ROOM]
                 with dissolve
 
@@ -113,8 +108,8 @@ label v16s42: # 42) MC changes into normal clothes
 
                 scene v16s42_1c # TPP Show MC standing in boxers/underwear [APE ROOM]
                 with dissolve
+
             else:
-                
                 scene v16s42_2b # TPP Show MC Taking fancy clothes shirt off [WOLF ROOM]
                 with dissolve
 
@@ -126,9 +121,7 @@ label v16s42: # 42) MC changes into normal clothes
             pause 0.75
 
         else:
-            
-            if joinapes: 
-
+            if not joinwolves:
                 scene v16s42_3 # TPP Show MC taking off shirt from outfit 9 (Exact same location as v16s42_1b so we can reuse v16s42_1c ) [APE ROOM]
                 with dissolve
 
@@ -136,23 +129,20 @@ label v16s42: # 42) MC changes into normal clothes
                 with dissolve
 
             else:
-
                 scene v16s42_3a # TPP Show MC taking off shirt from outfit 9 (Exact same location as v16s42_2b so we can reuse v16s42_2c ) [WOLF ROOM]
                 with dissolve
 
                 scene v16s42_2c
                 with dissolve
                
-
             pause 0.75
 
-        if joinapes:
+        if not joinwolves:
             scene v16s42_4 # TPP Show MC under the covers in his bed, phone on nightstand [APE ROOM]
             with dissolve
-
         else:
             scene v16s42_4a # TPP Show MC under the covers in his bed, phone on nightstand [WOLF ROOM]
-            with dissolve        
+            with dissolve
         
         pause 0.75
 

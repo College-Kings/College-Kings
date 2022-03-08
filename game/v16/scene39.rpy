@@ -413,7 +413,7 @@ label v16s39:
                 scene v16s39_5b
                 with dissolve
 
-                u "I was just pleasantly surprised that it's not as late as I thought it was."                
+                u "I was just pleasantly surprised that it's not as late as I thought it was."
 
                 u "The more time I get to spend with you the better, as far as I'm concerned."
 
