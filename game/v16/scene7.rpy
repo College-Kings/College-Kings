@@ -447,17 +447,25 @@ label v16s7:
         scene v16s7_6e
         with dissolve
 
+        $ DOG_NAME = dog_name # apparently this is necessary
+
         menu:
             "Ask about [dog_name]":
                 scene v16s7_6e
                 with dissolve
 
-                u "How's [dog_name]? Still happy with the awesome name I gave him?"
+                u "How's [dog_name]?"
+                
+                if not dog_name.lower() == "blue":
+                    u "Still happy with the awesome name I gave him?"
 
                 scene v16s7_6d
                 with dissolve
 
-                aut "Oh, of course! *Chuckles* He's still with us."
+                if not dog_name.lower() == "blue":
+                    aut "Oh, of course! *Chuckles*"
+                    
+                aut "He's still with us."
 
                 aut "There's been some interest in him though. There's a couple coming back to see him tomorrow."
 
