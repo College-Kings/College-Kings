@@ -227,33 +227,7 @@ label v16s17: # 17) MC catches up to Imre
 
             u "No problem."
 
-            if not joinwolves: # -if Apes
-                scene v16s17_4d
-                with dissolve
-
-                imre "I don't know if I've said this before, but you're okay for a stinky Ape."
-
-                scene v16s17_4i
-                with dissolve
-
-                u "Haha, thanks for the compliment."
-
-                scene v16s17_4d
-                with dissolve
-
-                imre "I think I'm gonna head back alone and really think about things. Later, man."
-
-                scene v16s17_4i
-                with dissolve
-
-                u "Yeah, see you, Imre. Good luck."
-
-                scene v16s17_5
-                with dissolve
-
-                pause 0.75
-
-            else: # -if Wolves
+            if joinwolves: # -if Wolves
                 scene v16s17_4j # FPP Same angle as 4, Imre and MC still gripping each other's right hand from the bro hug, Imre with a slight smile, mouth open
                 with dissolve
 
@@ -282,6 +256,33 @@ label v16s17: # 17) MC catches up to Imre
                 imre "Cool. *Sighs* Let's draw a fat line under this shit-show of a night..."
 
                 scene v16s17_7 # TPP View from behind of MC and Imre walking away from the bridge together
+                with dissolve
+
+                pause 0.75
+
+
+            else: # -if Apes
+                scene v16s17_4d
+                with dissolve
+
+                imre "I don't know if I've said this before, but you're okay for a stinky Ape."
+
+                scene v16s17_4i
+                with dissolve
+
+                u "Haha, thanks for the compliment."
+
+                scene v16s17_4d
+                with dissolve
+
+                imre "I think I'm gonna head back alone and really think about things. Later, man."
+
+                scene v16s17_4i
+                with dissolve
+
+                u "Yeah, see you, Imre. Good luck."
+
+                scene v16s17_5
                 with dissolve
 
                 pause 0.75
