@@ -548,5 +548,9 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
         u "(I'd mute my phone but, this is part of the project, I guess... Let's see how the rest of the night goes.)"
 
     # -Transition to Scene 50a-
+
+    # Set v16s50a_dotw to Thursday for s50a
+    $ v16s50a_dotw = 5
+
     jump v16s50a
 
