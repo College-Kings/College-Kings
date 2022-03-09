@@ -197,6 +197,8 @@ label v16s10: # Econ class
 
     menu:
         "Forty-two?":
+            $ grant_achievement("the_answer_to_everything")
+
             u "Uh, the answer is forty-two?"
 
             scene v16s10_4c # FPP Same angle as 4, Ms. Rose looking at MC, neutral expression, mouth open
