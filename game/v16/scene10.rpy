@@ -402,5 +402,5 @@ label v16s10: # Econ class
 
         pause 0.75
 
-# -regardless-
-jump v16s11 # -Transition to Scene 11-
+    # -regardless-
+    jump v16s11 # -Transition to Scene 11-
