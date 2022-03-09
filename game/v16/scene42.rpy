@@ -16,8 +16,7 @@ label v16s42: # 42) MC changes into normal clothes
     $ v16s42_kiwiiPost1.add_reply("You're supporting this, Lauren?! Lol", mentions=Lauren, numberLikes=92)
     $ v16s42_kiwiiPost1.new_comment(Lauren, "Fully! <3", numberLikes=128, force_send=True)
 
-    if v16s25a_date_with_aubrey: # TODO: Variable PLACEHOLDER VARIABLE # IF Transitioning from Scene 41 [Checkpoint 1.1]
-        
+    if v16s25a_date_with_aubrey: # TODO: Variable PLACEHOLDER VARIABLE # IF Transitioning from Scene 41 [Checkpoint 1.1]        
         if not joinwolves:
             scene v16s42_1 # TPP Show MC entering his room in fancy clothes (DATE NIGHT CLOTHES s41) [APE ROOM]
             with dissolve
