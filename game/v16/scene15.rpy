@@ -175,17 +175,17 @@ label v16s15:
         label v16s15pier_date_carousel: # -if Carousel
             $ freeroampier.add("carousel") # TODO: Variable
 
-            scene v16s14_10 # TPP. Imre leads Karen by the hand (both smiling mouths closed) into the carousel and past An older male CARNIVAL WORKER stands behind the TICKET STAND to the side of the ride [CAROUSEL: Location: Carousel2, Camera: Carousel2].
+            scene v16s15_10 # TPP. Imre leads Karen by the hand (both smiling mouths closed) into the carousel and past An older male CARNIVAL WORKER stands behind the TICKET STAND to the side of the ride [CAROUSEL: Location: Carousel2, Camera: Carousel2].
             with dissolve
 
             pause 0.75
 
-            scene v16s14_10a # TPP Imre sliding inside the front bench on the carousel with Karen following behind him, both smiling, mouths closed [CAROUSEL: Ride Location: Carousel1, Camera: Carousel4].
+            scene v16s15_10a # TPP Imre sliding inside the front bench on the carousel with Karen following behind him, both smiling, mouths closed [CAROUSEL: Ride Location: Carousel1, Camera: Carousel4].
             with dissolve
 
             pause 0.75
 
-            scene v16s14_10b # TPP Imre (inside) and Karen (outside) sitting in the front bench. Imre puts his arm around Karen. She doesn't seem to notice, more interested in looking toward her right [CAROUSEL: Ride Location: Carousel1, Camera: Carousel4]
+            scene v16s15_10b # TPP Imre (inside) and Karen (outside) sitting in the front bench. Imre puts his arm around Karen. She doesn't seem to notice, more interested in looking toward her right [CAROUSEL: Ride Location: Carousel1, Camera: Carousel4]
             with dissolve
 
             pause 0.75
