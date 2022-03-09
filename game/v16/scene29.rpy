@@ -15,7 +15,7 @@ label v16s29:
     pause 0.75
 
     if joinwolves:
-        jump v16s20
+        jump v16s30
 
     else:
         jump v16s31
