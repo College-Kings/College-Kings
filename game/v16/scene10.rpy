@@ -127,7 +127,7 @@ label v16s10: # Econ class
 
         u "(Haha, Lauren must be as bored as me.)"
 
-        scene v16s10_6a # FPP Same angle as 6, note from Lauren says, "Do you think Ms. Rose and Mr. Lee have ever…"
+        scene v16s10_6a # FPP Same angle as 6, note from Lauren says, "Do you think Ms. Rose and Mr. Lee have ever..."
         with dissolve
 
         u "(Do you think Ms. Rose and Mr. Lee have ever...)"
