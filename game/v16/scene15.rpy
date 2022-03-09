@@ -108,7 +108,7 @@ label v16s15:
     scene v16s15_6e # FPP. Show only Imre and Karen, slight smiles, Imre's mouth is open, Karen's mouth is closed, Karen is looking at Imre, Imre is looking at MC [CENTER PIER ENTRANCE].
     with dissolve
 
-    imre "So, yeah, anyway, it's just fun date."
+    imre "So, yeah, anyway, it's just a fun date."
 
     scene v16s15_6
     with dissolve
