@@ -421,7 +421,7 @@ label v16s27:
                     # -Player gets to type baby name-
 
                     # $ BABY_NAME = name = renpy.input(_("What's your baby's name?"), default=_("Baby")).strip() or _("Baby")
-                    $ baby.username = v16_baby = renpy.input("What's your baby's name?", default=("Plastic").strip())
+                    $ baby.username = v16_baby = renpy.input("What's your baby's name?", default=("Plastic").strip()) ###
 
                     scene v16s27_8c
                     with dissolve
