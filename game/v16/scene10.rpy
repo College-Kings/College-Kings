@@ -145,16 +145,16 @@ label v16s10: # Econ class
 
                 u "*Whispers* Had sex with the Dean? Of course they have! All three of them, in her office."
 
-        # -Regardless of LaurenFriend note reply choice-
-        scene v16s10_2e # TPP Same angle as 2, Lauren laughing quietly, mouth slighly open.
-        with dissolve
+    # -Regardless of LaurenFriend note reply choice-
+    scene v16s10_2e # TPP Same angle as 2, Lauren laughing quietly, mouth slighly open.
+    with dissolve
 
-        la "*Laughs*"
+    la "*Laughs*"
 
-        scene v16s10_2f # TPP Same angle as 2, Lauren with mouth closed, slight smile like she's trying not to laugh, eyes forward, hands on the table in front of her
-        with dissolve
+    scene v16s10_2f # TPP Same angle as 2, Lauren with mouth closed, slight smile like she's trying not to laugh, eyes forward, hands on the table in front of her
+    with dissolve
 
-        pause 0.75
+    pause 0.75
 
     # -Regardless of which note was passed-
     scene v16s10_4a # FPP Same angle as 4, Ms. Rose looking directly at MC, she looks annoyed, mouth open
