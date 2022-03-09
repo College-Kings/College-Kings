@@ -554,6 +554,7 @@ label v16s49:
 
                     "Keep it PG":
                         scene v16s49_13d # TPP. Show MC (no expression, mouths is open, looking at Nora) and Nora (slightly shocked expression, mouth is closed, looking at MC)  Nora is still holding the baby, sitting on the couch
+                        with dissolve
 
                         u "Um... Sorry, it's just... It feels kind of weird to make out when there's a baby right there."
 
