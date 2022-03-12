@@ -415,7 +415,7 @@ label v16s3:
 
     menu:
         "Reassure her":
-            u "And don't worry any more about Tom. We'll make sure he doesn't bother you again."
+            u "And don't worry anymore about Tom. We'll make sure he doesn't bother you again."
 
             scene v16s3_5d
             with dissolve

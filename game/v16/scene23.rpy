@@ -536,7 +536,7 @@ label v16s23: # 23) Meet Amber at strip club
 
                 # -If AmberRS, she opens up about her brother.
                 # -if not AmberRS but MC passes a Amber KCT check (i believe it's currently confident), Amber also opens up about her brother
-                if amber.relationship >= Relationship.FWB or (amber.relationship < Relationship.FWB and kct == "confident" ): # TODO: Variable # This is a guess based on the new relationship system. It would be nice if everyone was using the same language for relationship stuff
+                if amber.relationship >= Relationship.FWB or (amber.relationship < Relationship.FWB and kct == "popular" ): # TODO: Variable # This is a guess based on the new relationship system. It would be nice if everyone was using the same language for relationship stuff
                     scene v16s23_17d
                     with dissolve
 
@@ -592,7 +592,7 @@ label v16s23: # 23) Meet Amber at strip club
 
                     am "Yeah, he's something."
 
-                elif (amber.relationship < Relationship.FWB and kct != confident ): # -if not AmberRS, and MC does not pass an Amber KCT check, she doesn't up about her brother
+                elif (amber.relationship < Relationship.FWB and not kct == "popular" ): # -if not AmberRS, and MC does not pass an Amber KCT check, she doesn't up about her brother
                     scene v16s23_17d
                     with dissolve
 

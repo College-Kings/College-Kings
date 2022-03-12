@@ -405,7 +405,7 @@ label v16s27:
                 "Plastic, it is":
                     $ add_point(KCT.BRO)
 
-                    $ baby.username = "Plastic"
+                    $ v16_baby = "Plastic"
 
                     scene v16s27_8a
                     with dissolve
@@ -420,8 +420,7 @@ label v16s27:
                 "A different name":
                     # -Player gets to type baby name-
 
-                    # $ BABY_NAME = name = renpy.input(_("What's your baby's name?"), default=_("Baby")).strip() or _("Baby")
-                    $ baby.username = v16_baby = renpy.input("What's your baby's name?", default=("Plastic").strip())
+                    $ v16_baby = renpy.input("What's your baby's name?", default=("Plastic").strip())
 
                     scene v16s27_8c
                     with dissolve
@@ -510,7 +509,7 @@ label v16s27:
                 "Something else":
                     # -Player gets to type baby name-
 
-                    $ baby.username = v16_baby = renpy.input("What's your baby's name?", default=("Henry").strip())
+                    $ v16_baby = renpy.input("What's your baby's name?", default=("Henry").strip())
 
                     scene v16s27_9g # FPP. Show just Nora (slight smile, mouth is closed, looking in the air) in a thinking pose sitting in her seat, camera angle is from a seated positon
                     with dissolve

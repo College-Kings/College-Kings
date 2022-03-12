@@ -127,7 +127,7 @@ label v16s10: # Econ class
 
         u "(Haha, Lauren must be as bored as me.)"
 
-        scene v16s10_6a # FPP Same angle as 6, note from Lauren says, "Do you think Ms. Rose and Mr. Lee have ever…"
+        scene v16s10_6a # FPP Same angle as 6, note from Lauren says, "Do you think Ms. Rose and Mr. Lee have ever..."
         with dissolve
 
         u "(Do you think Ms. Rose and Mr. Lee have ever...)"
@@ -145,16 +145,16 @@ label v16s10: # Econ class
 
                 u "*Whispers* Had sex with the Dean? Of course they have! All three of them, in her office."
 
-        # -Regardless of LaurenFriend note reply choice-
-        scene v16s10_2e # TPP Same angle as 2, Lauren laughing quietly, mouth slighly open.
-        with dissolve
+    # -Regardless of LaurenFriend note reply choice-
+    scene v16s10_2e # TPP Same angle as 2, Lauren laughing quietly, mouth slighly open.
+    with dissolve
 
-        la "*Laughs*"
+    la "*Laughs*"
 
-        scene v16s10_2f # TPP Same angle as 2, Lauren with mouth closed, slight smile like she's trying not to laugh, eyes forward, hands on the table in front of her
-        with dissolve
+    scene v16s10_2f # TPP Same angle as 2, Lauren with mouth closed, slight smile like she's trying not to laugh, eyes forward, hands on the table in front of her
+    with dissolve
 
-        pause 0.75
+    pause 0.75
 
     # -Regardless of which note was passed-
     scene v16s10_4a # FPP Same angle as 4, Ms. Rose looking directly at MC, she looks annoyed, mouth open
@@ -197,6 +197,8 @@ label v16s10: # Econ class
 
     menu:
         "Forty-two?":
+            $ grant_achievement("the_answer_to_everything")
+
             u "Uh, the answer is forty-two?"
 
             scene v16s10_4c # FPP Same angle as 4, Ms. Rose looking at MC, neutral expression, mouth open
@@ -400,5 +402,5 @@ label v16s10: # Econ class
 
         pause 0.75
 
-# -regardless-
-jump v16s11 # -Transition to Scene 11-
+    # -regardless-
+    jump v16s11 # -Transition to Scene 11-

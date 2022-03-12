@@ -134,7 +134,15 @@ label v16s7:
         pause 0.75
 
         $ chloe.messenger.newMessage("Check out SVC's Kiwii page and play the audio ;)")
+        $ chloe.messenger.addReply("Oooh, interesting...")
             
+        label v16s7_phoneContinue:
+            if chloe.messenger.replies:
+                call screen phone
+            if chloe.messenger.replies:
+                u "(I should check what Chloe wants.)"
+                jump v16s7_phoneContinue
+
         ### force open kiwii and/or check for Chloe message
         # -MC opens his Kiwii app to view the SVC Kiwii page. The most recent post is an audio file posted by an anonymous user with an empty avatar. The audio autoplays-
 
@@ -447,17 +455,25 @@ label v16s7:
         scene v16s7_6e
         with dissolve
 
+        $ DOG_NAME = dog_name # apparently this is necessary
+
         menu:
             "Ask about [dog_name]":
                 scene v16s7_6e
                 with dissolve
 
-                u "How's [dog_name]? Still happy with the awesome name I gave him?"
+                u "How's [dog_name]?"
+                
+                if not dog_name.lower() == "blue":
+                    u "Still happy with the awesome name I gave him?"
 
                 scene v16s7_6d
                 with dissolve
 
-                aut "Oh, of course! *Chuckles* He's still with us."
+                if not dog_name.lower() == "blue":
+                    aut "Oh, of course! *Chuckles*"
+                    
+                aut "He's still with us."
 
                 aut "There's been some interest in him though. There's a couple coming back to see him tomorrow."
 
