@@ -67,7 +67,7 @@ label v16s28:
 
     u "I think this idea is the strongest."
 
-    if v16s28_lindsey_pb_intereview_polly_choicelindsey_interview: # Interview 
+    if v16s28_lindsey_pb_intereview_polly_choice: # Interview 
         scene v16s28_3e # FPP. Same as v16s28_3d, Lindsey slight smile, mouth closed
         with dissolve
 
