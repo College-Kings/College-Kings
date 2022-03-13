@@ -20,16 +20,12 @@ init python:
         def __repr__(self):
             return "<{}>".format(self.__class__.__name__)
 
-        @abstractmethod
-        def stance_bonus(self, fight, target, attacker):
-            pass
-
 
     class SpecialMove:
         __metaclass__ = ABCMeta
 
         @abstractmethod
-        def is_sensitive(self, target, attacker):
+        def is_sensitive(self, fight, target, attacker):
             pass
 
         @abstractmethod

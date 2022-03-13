@@ -58,7 +58,7 @@ screen fight_player_turn(fight, player, opponent):
                     hover_background "#ffd000"
                     selected_background "#ffd000"
                     insensitive_background "#a7a7a7"
-                    sensitive player.special_attack.is_sensitive(opponent, player)
+                    sensitive player.special_attack.is_sensitive(fight, opponent, player)
                     selected (selected_move == player.special_attack)
                     if selected_move == player.special_attack:
                         action [SetScreenVariable("selected_move", None), Hide("action_info"), Hide("fight_health_bar_animations")]
@@ -94,7 +94,7 @@ screen fight_player_turn(fight, player, opponent):
 screen fight_health_bar_animations(player, opponent, move):
     zorder 100
 
-    if isinstance(move, FightMove):
+    if hasattr(move, "damage"):
         vbox:
             xalign 0.5
             ypos 50
