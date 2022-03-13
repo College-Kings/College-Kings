@@ -167,7 +167,7 @@ label v16s32:
 
                         "Cancel the booking":
                             
-                            v16s32_aubrey_cab_and_flowers = 0
+                            $ v16s32_aubrey_cab_and_flowers = 0
 
                             scene v16s32_3a
                             with dissolve

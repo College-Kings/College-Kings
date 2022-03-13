@@ -190,12 +190,12 @@ label v16s52:
             aut "Thanks, [name]. That's really kind of her!"
 
             if mc.money >= 10:
-                mc.money -= 10                
+                $ mc.money -= 10                
 
         elif v16s26_lindsey_donation_money == 50:
 
             if mc.money >= 50:
-                mc.money -= 50
+                $ mc.money -= 50
 
             scene v16s52_9c 
             with dissolve
@@ -470,10 +470,10 @@ label v16s52:
 
                 $ v16s52_kiwiiPost1 = KiwiiPost(aubrey, "v16/v16s52kw_1.webp", "Good morning people! Today is such a huge day for a friend of mine. The re-opening of the local dog shelter is taking place right now, and they could use any help they can get! Head over there to donate, adopt, or even shop; They've got some really cute merchandise. #AdoptDon'tShop #OrDoBoth <3", numberLikes=3718)
                 $ v16s52_kiwiiPost1.new_comment(autumn, "Thank you Aubrey! <3 We can't wait to see everyone. Address is 0417 Alanis Street near SVC :)", numberLikes=1518, force_send=True)
-                $ v16s52_kiwiiPost1.new_comment(chloe, "When did you do this photoshoot, omg?!", numberLikes=417, force_send=True))
-                $ v16s52_kiwiiPost1.new_comment(imre, "Aw man! I want a puppy!", numberLikes=545, force_send=True))
-                $ v16s52_kiwiiPost1.new_comment(sebastian, "Hmm... A puppy, eh?", numberLikes=961, force_send=True))
-                $ v16s52_kiwiiPost1.new_comment(lauren, "This is so cool of you, Aubrey <3", numberLikes=1070, force_send=True))
+                $ v16s52_kiwiiPost1.new_comment(chloe, "When did you do this photoshoot, omg?!", numberLikes=417, force_send=True)
+                $ v16s52_kiwiiPost1.new_comment(imre, "Aw man! I want a puppy!", numberLikes=545, force_send=True)
+                $ v16s52_kiwiiPost1.new_comment(sebastian, "Hmm... A puppy, eh?", numberLikes=961, force_send=True)
+                $ v16s52_kiwiiPost1.new_comment(lauren, "This is so cool of you, Aubrey <3", numberLikes=1070, force_send=True)
 
             elif v16s25a_date_with_aubrey and aubrey.relationship != Relationship.TAMED:
 
@@ -1000,7 +1000,7 @@ label v16s52:
 
     aut "Of course! You're welcome here anytime."
 
-    is autumn.relationship >= relationship.KISS:
+    if autumn.relationship >= relationship.KISS:
 
         scene v16s52_41a
         with dissolve
@@ -1010,7 +1010,7 @@ label v16s52:
         scene v16s52_41
         with dissolve
 
-        aut "I suppose you might..."\
+        aut "I suppose you might..."
 
         play sound "sounds/kiss.mp3"
 
