@@ -1,14 +1,15 @@
 init offset = 1
 init python:
-    class SpecialMove:
+    class TurnMove:
         __metaclass__ = ABCMeta
 
-        @abstractmethod
-        def is_sensitive(self, target, attacker):
-            pass
+        def __repr__(self):
+            return "<{}>".format(self.__class__.__name__)
 
 
-    class FightMove:
+    class BaseAttack:
+        __metaclass__ = ABCMeta
+
         DAMAGE_DICT = {
             FightStance.AGGRESSIVE: 5,
             FightStance.DEFENSIVE: -5,
@@ -20,7 +21,18 @@ init python:
             return "<{}>".format(self.__class__.__name__)
 
 
-    class EndTurn:
+    class SpecialMove:
+        __metaclass__ = ABCMeta
+
+        @abstractmethod
+        def is_sensitive(self, target, attacker):
+            pass
+
+        def __repr__(self):
+            return "<{}>".format(self.__class__.__name__)
+
+
+    class EndTurn(TurnMove):
         def __init__(self):
             self.name = "End Turn"
             self.description = "End your turn and retain up to 2 stamina"
@@ -33,7 +45,7 @@ init python:
             return "<{}>".format(self.__class__.__name__)
 
 
-    class Turtle:
+    class Turtle(TurnMove):
         def __init__(self):
             self.name = "Turtle"
             self.description = "End turn and set stance to Defensive"
@@ -46,7 +58,7 @@ init python:
             return "<{}>".format(self.__class__.__name__)
 
 
-    class BodyHook(FightMove):
+    class BodyHook(BaseAttack):
         def __init__(self, images):
             self.images = images
             
@@ -59,7 +71,7 @@ init python:
             self.effect = "+20% Damage to next attack this turn"
 
 
-    class Jab(FightMove):
+    class Jab(BaseAttack):
         def __init__(self, images):
             self.images = images
             
@@ -72,7 +84,7 @@ init python:
             self.effect = "Next Attack this turn ignores guard"
 
 
-    class Hook(FightMove):
+    class Hook(BaseAttack):
         def __init__(self, images):
             self.images = images
             
@@ -85,7 +97,7 @@ init python:
             self.effect = "Opp has -2 Stamina at the start of their next turn if not blocked [[Once per turn]]"
 
 
-    class Kick(FightMove):
+    class Kick(BaseAttack):
         def __init__(self, images):
             self.images = images
 
