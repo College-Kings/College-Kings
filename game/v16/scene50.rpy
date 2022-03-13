@@ -377,6 +377,7 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
                 cl "*Scoffs* You're no help."            
 
                 # -Chloe hangs up-
+                play sound "sounds/hangup.mp3"
 
             "Be frustrated": # -if Be frustrated
 
@@ -475,6 +476,8 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
                 with dissolve
 
                 cl "Screw the fucking keys! I'll show it how to burp alright-"
+
+                play sound "sounds/hangup.mp3"
                 
             # -Chloe hangs up-
 
