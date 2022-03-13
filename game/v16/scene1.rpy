@@ -457,8 +457,6 @@ label v16s1_win:
 
             pause 0.75
 
-            jump v16s1_end
-
         "Go home with Riley":
             $ v16_home_riley = True
             
@@ -497,7 +495,7 @@ label v16s1_win:
 
             pause 0.75
 
-            jump v16s1_end
+    jump v16s1_end
 
 label v16s1_end:
     jump v16s2
