@@ -10,32 +10,32 @@ label v16s48a: ### ERROR: 48a) Chloe and MC sex scene
     $ sex_overlay_options = [("Boobs", "v16s48a_boobs"), ("Feet", "v16s48a_feet"), ("Vagina", "v16s48a_vagina")]
 
     # -Still standing, Chloe takes off all her clothes. MC stands and they kiss-
-    scene v16s48a_1   # TPP Chloe(frustrated, slighly angry, slight frown, mouth closed) standing in Living Room in front of couch removing her shirt [Show her full body]
+    scene v16s48a_1   # TPP Chloe(frustrated, slighly angry,  mouth closed) standing in Living Room in front of couch removing her shirt [Show her full body]
     with dissolve
 
     pause 0.75
 
-    scene v16s48a_1a  # FPP Chloe(frustrated, slightly angry, slight frown, mouth close, looking at MC) standing in Living Room in front of couch fully naked, hand oh hip, hip out to one side [Show her complete body]
+    scene v16s48a_1a  # FPP Chloe(frustrated, slightly angry,  mouth close, looking at MC) standing in Living Room in front of couch fully naked, hand oh hip, hip out to one side [Show her complete body]
     with dissolve
 
     pause 0.75
 
-    scene v16s48a_2   # FPP Chloe (frustrated, slightly angry, slight frown, mouth close, looking at MC) Camera chest and head only.
+    scene v16s48a_2   # FPP Chloe (frustrated, slightly angry,  mouth close, looking at MC) Camera chest and head only.
     with dissolve
 
     u "What if someone walks in on us?"
 
-    scene v16s48a_2a  # FPP Chloe (frustrated, slightly angry, slight frown, mouth open, looking at MC) Camera chest and head only.
+    scene v16s48a_2a  # FPP Chloe (frustrated, slightly angry,  mouth open, looking at MC) Camera chest and head only.
     with dissolve
 
     cl "*Heavy breathing* Who gives a fuck?"
 
-    scene v16s48a_3   # TPP Chloe (frustrated, slight frown, mouth closed, pulling MC's (face covered by shirt) shirt over his head. MC trying to help remove his shirt.
+    scene v16s48a_3   # TPP Chloe (frustrated,  mouth closed, pulling MC's (face covered by shirt) shirt over his head. MC trying to help remove his shirt.
     with dissolve
 
     pause 0.75
 
-    scene v16s48a_3a  # TPP Chloe (frustrated, slight frown, mouth closed, kneeling pulling of MC pants (at ankles). MC(slight smile, mouth closed, looking down at Chloe) shirtless, erect penis.
+    scene v16s48a_3a  # TPP Chloe (frustrated,  mouth closed, kneeling pulling of MC pants (at ankles). MC(slight smile, mouth closed, looking down at Chloe) shirtless, erect penis.
     with dissolve
 
     pause 0.75
@@ -88,7 +88,7 @@ label v16s48a_boobs:
             
             cl "Mmm... Squeeze them as hard as you want."
 
-            scene v16s48a_5b  # FPP Close on Chloe's boobs, both hands cupping and SQUEEZING her boobs, force her nipples to poke upwards)
+            scene v16s48a_5b  # FPP Close on Chloe's (slightly happy, mouth closed) boobs, both hands cupping and SQUEEZING her boobs, force her nipples to poke upwards)
             with dissolve
 
             u "Do you like it like that?"
@@ -143,22 +143,22 @@ label v16s48a_boobs:
 
             cl "Mm... I'm glad."
 
-            scene v16s48a_5l  # FPP Chloe (aroused, eyes closed, mouth open). 
+            scene v16s48a_5l  # FPP Chloe (aroused, eyes closed, mouth open) face a boobs . 
             with dissolve
 
             cl "Fuck... I'm pulsating for your dick, [name]."
 
-            scene v16s48a_5m  # FPP Chloe (aroused, eyes closed, mouth closed, biting lip). 
+            scene v16s48a_5m  # FPP Chloe (aroused, eyes closed, mouth closed, biting lip) face and boobs
             with dissolve
             
             u "A little waiting won't hurt you..."
 
-            scene v16s48a_5n  # FPP Chloe (aroused, sexy eyes open, mouth open). 
+            scene v16s48a_5n  # FPP Chloe (aroused, sexy eyes open, slight smile, mouth open) face and boobs, Chloe looking at MC  
             with dissolve
 
             cl "Wha- Hey! what's my line!"
 
-            scene v16s48a_5o  # FPP Chloe (aroused, sexy eyes open, mouth closed). 
+            scene v16s48a_5o  # FPP Chloe (aroused, sexy eyes open, mouth closed) face and boobs, Chloe looking at MC   
             with dissolve
 
             u "*Laughs* And?"
@@ -347,9 +347,6 @@ label v16s48a_vagina:  # -if Vagina
 
             cl "I'm on the brink... of death... Fuck me, [name]."
 
-            scene v16s48a_
-            with dissolve
-
     call screen sex_overlay("v16s48a_continue") # -Return to free roam-
 
     # -if Mouth
@@ -368,9 +365,6 @@ label v16s48a_continue:
     with dissolve
 
     u "Fuck, okay..."
-
-    scene v16s48a_
-    with dissolve
 
     image v16chlbj = Movie(play="images/v16/scene48a/v16chlbj.webm", loop=True, image="images/v16/scene48a/v16chlbjStart.webp", start_image="images/v16/scene48a/v16chlbjStart.webp")
     image v16chlbj2 = Movie(play="images/v16/scene48a/v16chlbj2.webm", loop=True, image="images/v16/scene48a/v16chlbj2Start.webp", start_image="images/v16/scene48a/v16chlbj2Start.webp")
@@ -418,13 +412,10 @@ label v16s48a_continue:
 
     cl "It's my turn now. *Giggles*"
 
-    scene v16s48a_
+    scene v16s48a_9a  # TPP MC (smiling, mouth open) laying on the couch [head towards the corner of the couch]. Chloe( smiling, mouth closed) climbing on top of his chest, facing the wall, with aiming her pussy for his mouth.
     with dissolve
 
     u "Come here, let me taste you."
-
-    scene v16s48a_9a  # TPP MC (smiling, mouth open) laying on the couch [head towards the corner of the couch]. Chloe( smiling, mouth closed) climbing on top of his chest, facing the wall, with aiming her pussy for his mouth.
-    with dissolve
 
     # -MC remains sitting, leaning back more, as Chloe stands on the couch to straddle MC's face, receiving oral # CHANGED-- EXISTING environment does not allow for this position.
 
@@ -566,7 +557,7 @@ label v16s48a_continue:
 
     u "Are you ready?"
 
-    scene v16chlfgf # ignore as admin
+    scene v16chlfgf # ignore as animation
     with dissolve 
 
     cl "Mmm!"
@@ -590,7 +581,7 @@ label v16s48a_continue:
     scene v16s48a_12   # FPP Chloe (intense orgasm, eyes closed) squatting on the floor in front of MC with her left hand holding MC's dick deep in her mouth, and her right hand fingers touching her pussy.
     with vpunch
 
-    pause 0.750
+    pause 0.75
 
     scene v16s48a_12a  # FPP Chloe (tired, smiling) squatting on the floor in front of MC with her left hand holding MC's dick and her right hand fingers touching her pussy. Chloe purposefully looking at MC and swallows.
     with dissolve
@@ -622,17 +613,11 @@ label v16s48a_continue:
 
     cl "Oh, my God. Yes!"
 
-    scene v16s48a_14a # FPP Chloe (tired, mouth closed, smiling, sweaty, head turned to the left looking at MC) sitting with her back to the couch.
-    with dissolve
-
     cl "*Sighs* I'm feeling so much better, haha."
-
-    scene v16s48a_14
-    with dissolve
-
+    
     cl "Except now I'm completely wiped."
 
-    scene v16s48a_14a
+    scene v16s48a_14a # FPP Chloe (tired, mouth closed, smiling, sweaty, head turned to the left looking at MC) sitting with her back to the couch.
     with dissolve
 
     u "Couldn't agree more, I'm ready to sleep."
