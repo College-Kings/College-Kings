@@ -20,12 +20,28 @@ init python:
         def __repr__(self):
             return "<{}>".format(self.__class__.__name__)
 
+        @abstractmethod
+        def stance_bonus(self, fight, target, attacker):
+            pass
+
 
     class SpecialMove:
         __metaclass__ = ABCMeta
 
         @abstractmethod
         def is_sensitive(self, target, attacker):
+            pass
+
+        @abstractmethod
+        def check_level_1_stance_bonus(self, fight, target, attacker):
+            pass
+
+        @abstractmethod
+        def check_level_2_stance_bonus(self, fight, target, attacker):
+            pass
+
+        @abstractmethod
+        def check_level_3_stance_bonus(self, fight, target, attacker):
             pass
 
         def __repr__(self):
@@ -122,9 +138,18 @@ init python:
             self.end_stance = FightStance.SOLID
             self.effect = "If you used \"Turtle\" last turn, deal +30% more Damage"
 
-        def is_sensitive(self, target, attacker):
+        def is_sensitive(self, fight, target, attacker):
             return fight.stats[target.name]["guards_broken"] >= 3
 
+        def check_level_1_stance_bonus(self, fight, target, attacker):
+            return isinstance(fight.move_list[-2][attacker.name][-1], Turtle)
+
+        def check_level_2_stance_bonus(self, fight, target, attacker):
+            return target.guard == 0
+
+        def check_level_3_stance_bonus(self, fight, target, attacker):
+            return not fight.move_list[-1][attacker.name]
+            
 
     class OverhandPunch(SpecialMove):
         def __init__(self, images):
@@ -140,6 +165,15 @@ init python:
 
         def is_sensitive(self, target, attacker):
             return fight.stats[attacker.name]["guards_broken"] >= 3
+
+        def check_level_1_stance_bonus(self, fight, target, attacker):
+            return target.guard <= BasePlayer.MAX_GUARD * 0.3
+
+        def check_level_2_stance_bonus(self, fight, target, attacker):
+            raise NotImplementedError()
+
+        def check_level_3_stance_bonus(self, fight, target, attacker):
+            raise NotImplementedError()
 
 
     class Uppercut(SpecialMove):
@@ -157,6 +191,15 @@ init python:
         def is_sensitive(self, target, attacker):
             return fight.stats[attacker.name]["damage_dealt"] >= 40
 
+        def check_level_1_stance_bonus(self, fight, target, attacker):
+            return target.health <= target.max_health * 0.2
+
+        def check_level_2_stance_bonus(self, fight, target, attacker):
+            raise NotImplementedError()
+
+        def check_level_3_stance_bonus(self, fight, target, attacker):
+            return not fight.move_list[-1][attacker.name]
+
 
     class SuckerPunch(SpecialMove):
         def __init__(self, images):
@@ -172,3 +215,12 @@ init python:
 
         def is_sensitive(self, target, attacker):
             return fight.stats[attacker.name]["damage_taken"] >= 40
+
+        def check_level_1_stance_bonus(self, fight, target, attacker):
+            return True
+
+        def check_level_2_stance_bonus(self, fight, target, attacker):
+            return True
+
+        def check_level_3_stance_bonus(self, fight, target, attacker):
+            return True
