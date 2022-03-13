@@ -295,7 +295,7 @@ label v16s3:
             scene v16s3_5e
             with dissolve
 
-            u "Yup. I can't make it up. She loves it apparently, too."
+            u "Yup. I can't make it up. Apparently she loves it too."
 
             scene v16s3_5d
             with dissolve
