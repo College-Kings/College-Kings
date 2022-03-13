@@ -8,6 +8,7 @@ label v16s48a: ### ERROR: 48a) Chloe and MC sex scene
 
     $ sex_overlay_options = [] # Reset the variable to default values
     $ sex_overlay_options = [("Boobs", "v16s48a_boobs"), ("Feet", "v16s48a_feet"), ("Vagina", "v16s48a_vagina")]
+    $ sceneList.add("v16s48a_chloe")
 
     # -Still standing, Chloe takes off all her clothes. MC stands and they kiss-
     scene v16s48a_1   # TPP Chloe(frustrated, slighly angry,  mouth closed) standing in Living Room in front of couch removing her shirt [Show her full body]

@@ -1,7 +1,7 @@
 # SCENE 49a: MC leaves Chicks house
 # Locations: Chicks Sorority House
 # Characters: MC (Outfit: 9)
-# Time: Night
+# Time: Wed Night
 
 
 label v16s49a:
@@ -9,19 +9,19 @@ label v16s49a:
     scene v16s49a_1 # TPP. MC (slight smile, mouth closed) exits the chicks house front door
     with dissolve
 
-    if v16s27_parent_chloe: # -if parent with Chloe and she threw baby out the window
+    if v16s27_parent_chloe and v16s48_chloe_throws_baby: # -if parent with Chloe and she threw baby out the window
 
-        scene v16s49a_2 # FPP. Show just the baby doll on the gorund in the grass
+        scene v16s49a_2 # FPP. Show just the baby doll on the ground in the grass
         with dissolve
 
-        u "(Sorry, [baby_name]... Mommy didn't mean it... Well, she did kind of mean it, but- *Sighs*)"
+        u "(Sorry, [v16_baby_name]... Mommy didn't mean it... Well, she did kind of mean it, but- *Sighs*)"
 
         scene v16s49a_1a # TPP. MC has turned his back to the render and is inside of the doorway, holding the baby doll
         with dissolve
 
         pause 0.75
 
-        scene v16s49a_2 # FPP. Show just the baby doll sitting on a small side table just inside the doorway, next to the door, from the entrances view
+        scene v16s49a_2a # FPP. Show just the baby doll sitting on a small side table just inside the doorway, next to the door, from the entrances view
         with dissolve
 
         pause 0.75
@@ -40,7 +40,7 @@ label v16s49a:
 
         u "(Reminder to never let Chloe babysit!)"
 
-        if # -if MC also had sex with Chloe         ####VARIABLE NEEDS TO BE ADDED TO SCENE 48 FOR CHLOE AND MC HAVING SEX!###
+        if "v16s48a_chloe" in sceneList: # -if MC also had sex with Chloe         ####VARIABLE NEEDS TO BE ADDED TO SCENE 48 FOR CHLOE AND MC HAVING SEX!###
 
             scene v16s49a_1b
             with dissolve

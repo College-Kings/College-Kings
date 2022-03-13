@@ -349,6 +349,7 @@ label v16s48: # 48) Baby night: Chloe & MC
             ### ERROR: [End of Checkpoint 1.1. Continue to Checkpoint 2]        
         "Complain about baby":
             $ add_point(KCT.TROUBLEMAKER)
+            $ v16s48_chloe_throws_baby = True
 
             u "I am so fucking done with this doll!"
 
