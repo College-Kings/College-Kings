@@ -1,6 +1,7 @@
 python early:
     import os
     import random
+    from abc import ABCMeta, abstractmethod
     from enum import Enum
 
     class SmartEnum(Enum):

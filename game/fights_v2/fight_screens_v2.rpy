@@ -1,4 +1,4 @@
-screen fight_player_turn(player, opponent):
+screen fight_player_turn(fight, player, opponent):
     style_prefix "fight_turn"
 
     default selected_move = None
@@ -43,7 +43,7 @@ screen fight_player_turn(player, opponent):
                     if selected_move == move:
                         action [SetScreenVariable("selected_move", None), Hide("action_info"), Hide("fight_health_bar_animations")]
                     else:
-                        action [SetScreenVariable("selected_move", move), Show("action_info", None, move, player, opponent), Hide("fight_health_bar_animations"), Show("fight_health_bar_animations", None, player, opponent, move)]
+                        action [SetScreenVariable("selected_move", move), Show("action_info", None, fight, player, opponent, move), Hide("fight_health_bar_animations"), Show("fight_health_bar_animations", None, player, opponent, move)]
 
                     text str(move.stamina_cost) xalign 1.0 font "fonts/Montserrat-Bold.ttf"
                     text move.name align (0.5, 0.5) text_align 0.5
@@ -58,15 +58,12 @@ screen fight_player_turn(player, opponent):
                     hover_background "#ffd000"
                     selected_background "#ffd000"
                     insensitive_background "#a7a7a7"
-                    sensitive ((player.special_attack.name == HEADBUTT.name and player.guard_broken >= 3) or 
-                        (player.special_attack.name == OVERHAND_PUNCH.name and opponent.guard_broken >= 3) or 
-                        (player.special_attack.name == UPPERCUT.name and sum(move.damage for move in filter(lambda moves: player.name in moves, fight_previous_moves) if hasattr(move, "damage"))) or
-                        (player.special_attack == SUCKER_PUNCH.name and sum(move.damage for move in filter(lambda moves: opponent.name in moves, fight_previous_moves) if hasattr(move, "damage"))))
+                    sensitive player.special_attack.is_sensitive(opponent, player)
                     selected (selected_move == player.special_attack)
                     if selected_move == player.special_attack:
                         action [SetScreenVariable("selected_move", None), Hide("action_info"), Hide("fight_health_bar_animations")]
                     else:
-                        action [SetScreenVariable("selected_move", player.special_attack), Show("action_info", None, player.special_attack, player, opponent), Hide("fight_health_bar_animations"), Show("fight_health_bar_animations", None, player, opponent, player.special_attack)]
+                        action [SetScreenVariable("selected_move", player.special_attack), Show("action_info", None, fight, player, opponent, player.special_attack), Hide("fight_health_bar_animations"), Show("fight_health_bar_animations", None, player, opponent, player.special_attack)]
 
                     text str(player.special_attack.stamina_cost) xalign 1.0 font "fonts/Montserrat-Bold.ttf"
                     text player.special_attack.name align (0.5, 0.5) text_align 0.5
@@ -137,7 +134,7 @@ screen fight_opponent_turn():
     add "images/3 hits.webp"
 
 
-screen action_info(move, player, opponent):
+screen action_info(fight, player, opponent, move):
     zorder 100
     style_prefix "fight_turn"
 
@@ -157,7 +154,7 @@ screen action_info(move, player, opponent):
                     xalign 0.5
                     idle_background "#a8a8a8"
                     hover_background "#ffd000"
-                    action [Hide("action_info"), Function(player.set_stance_bonus, move), Call("player_attack_turn", move, player, opponent)]
+                    action [Hide("action_info"), Hide("fight_health_bar_animations"), Function(player.set_stance_bonus, move), Call("fight_attack_turn", fight, opponent, player, move)]
                     
                     text ">>> {} <<<".format(move.name) size 30 font "fonts/Montserrat-Bold.ttf" align (0.5, 0.5)
 
@@ -198,12 +195,32 @@ screen health_bars(player, opponent):
                 else:
                     add Transform("#f00", size=(50, 20))
 
-    fixed:
-        pos (15, 700)
-        xysize (400, 95)
+    vbox:
+        pos (15, 800)
+        spacing 5
 
-        use animated_value_bar(None, player.health, player.max_health, "ruby_bar", "transparent_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Health Bar
-        use animated_value_bar(None, player.guard, player.stance.value, "blue_bar", "transparent_bar", offset=(13, 0), size=(400, 95), delay=1) # Player Guard Bar
+        # Player Guard
+        hbox:
+            xalign 0.5
+            spacing 2
+
+            for i in range(1, BasePlayer.MAX_GUARD + 1):
+                if i > player.guard:
+                    add Transform("#404040", size=(86, 4))
+                else:
+                    add Transform("#00f", size=(86, 4))
+
+        # Player Health
+        hbox:
+            xalign 0.5
+            spacing 2
+
+            for i in range(1, player.max_health + 1):
+                if i > player.health:
+                    add Transform("#404040", size=(20, 8))
+                else:
+                    add Transform("#f00", size=(20, 8))
+
 
 
 screen fight_debug(player, opponent):
