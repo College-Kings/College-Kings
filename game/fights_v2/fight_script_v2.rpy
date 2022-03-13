@@ -219,7 +219,14 @@ label fight_attack_turn(fight, target, attacker, move=None):
     $ renpy.set_return_stack([])
 
     if move is None:
-        $ move = renpy.random.choice(attacker.base_attacks)
+        if attacker.special_attack.is_sensitive() and attacker.stamina >= attacker.special_attack.stamina_cost:
+            $ move = attacker.special_attack
+        elif filter(lambda move: move.ideal_stance == attacker.stance and move.stamina_cost <= attacker.stamina, attacker.base_attacks):
+            $ move = renpy.random.choice(filter(lambda move: move.ideal_stance == attacker.stance, attacker.base_attacks))
+        elif filter(lambda move: move.stamina_cost <= attacker.stamina, attacker.base_attacks):
+            $ move = renpy.random.choice(filter(lambda move: move.stamina_cost <= attacker.stamina, attacker.base_attacks))
+        else:
+            $ move = renpy.random.choice(filter(lambda move: move.stamina_cost <= attacker.stamina, attacker.turn_moves))
 
     $ fight.move_list[-1][attacker.name].append(move)
 
@@ -305,10 +312,10 @@ label fight_v2:
             "blocked_image":  "images/v2/kick1pic.webp"
         }))
 
-        player.special_attack = Headbutt({})
-
         player.turn_moves.append(Turtle())
         player.turn_moves.append(EndTurn())
+
+        player.special_attack = Headbutt({})
 
 
         # opponent.base_attacks.append(BodyHook({}))
