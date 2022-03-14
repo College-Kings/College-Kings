@@ -450,7 +450,7 @@ default v16s1_win_fight_with_tom = False
 default v16s10_let_lauren_continue_hj = False
 default v16s11_sign_up = False
 default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
-default v16s20_twazzlers = False
+default v16s20_take_twazzlers = False
 default vs16s15hotdog_coupon = False
 default v16s23_mention_bills = False  # TODO: Variable
 default v16s23_mention_laptop = False # TODO: Variable
@@ -475,3 +475,5 @@ default v16s44_rubius_park_walk = False
 default v16s48_chloe_throws_baby = False
 default v16s50a_dotw = 0   # 0 = nothing, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday
 
+default v16_wintom = False
+default v16_home_riley = False

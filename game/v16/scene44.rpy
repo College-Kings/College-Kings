@@ -660,7 +660,7 @@ label v16s44:
         scene v16s44_2e # FPP. Show just Lauren (no expression, mouth is open, looking at her chest) Lauren rubs her hands over her chest unintentionally puffing her breasts out, her shirt is dry and her nipples and breast CAN'T be seen through the shirt
         with dissolve
 
-        la "Mhmm...  At least my shirts dried off... kind of."
+        la "Mhmm... At least my shirts dried off... kind of."
 
         scene v16s44_2
         with dissolve
@@ -756,6 +756,6 @@ label v16s44:
     elif 0x10 & v16s27_mc_baby_duty_night == 0x10: ### -if sharing baby duty Wednesday, transition to Scene47-
         
         jump v16s47
-    else:  ### -if partner is on baby duty Wednesday, transition to Scene42-
+    else: ### -if partner is on baby duty Wednesday, transition to Scene42-
         
         jump v16s42

@@ -37,7 +37,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     pause 0.75
 
-    if v16s20_twazzlers: # -if MC also took the Twazzlers # TODO:Variable
+    if v16s20_take_twazzlers: # -if MC also took the Twazzlers # TODO:Variable
         scene v16s23_2c # FPP Same angle as 2, Amber with a slight smile, mouth closed, MC is holding Twazzlers package out to her [OUTSIDE ENTRANCE]
         with dissolve
 
@@ -329,7 +329,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     am "Good. People tell me not to keep a key under the mat, but it's saved me so many times, haha."
 
-    if "bills" in v16s20_seenList: # TODO: Variable# PLACEHOLDER VARIABLE -if MC looked at the Unpaid bills
+    if "bills" in freeroam15: # if MC looked at the Unpaid bills
         scene v16s23_17
         with dissolve
 
@@ -378,7 +378,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     # -Regardless-
     
-    if "laptop" in v16s20_seenList: #TODO: Variable# PLACEHOLDER VARIABLE # -if MC looked at the Open laptop
+    if "laptop" in freeroam15: # if MC looked at the Open laptop
         scene v16s23_17
         with dissolve
 
@@ -455,7 +455,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     # -Regardless-
     
-    if "photos" in v16s20_seenList: #TODO: VARIABLE  # PLACEHOLDER VARIABLE # -if MC looked at the Photos
+    if "photos" in freeroam15: # if MC looked at the Photos
         scene v16s23_17
         with dissolve
 
@@ -536,7 +536,7 @@ label v16s23: # 23) Meet Amber at strip club
 
                 # -If AmberRS, she opens up about her brother.
                 # -if not AmberRS but MC passes a Amber KCT check (i believe it's currently confident), Amber also opens up about her brother
-                if amber.relationship >= Relationship.FWB or (amber.relationship < Relationship.FWB and kct == "confident" ): # TODO: Variable # This is a guess based on the new relationship system. It would be nice if everyone was using the same language for relationship stuff
+                if amber.relationship >= Relationship.FWB or (amber.relationship < Relationship.FWB and kct == "popular" ): # TODO: Variable # This is a guess based on the new relationship system. It would be nice if everyone was using the same language for relationship stuff
                     scene v16s23_17d
                     with dissolve
 
@@ -592,7 +592,7 @@ label v16s23: # 23) Meet Amber at strip club
 
                     am "Yeah, he's something."
 
-                elif (amber.relationship < Relationship.FWB and kct != confident ): # -if not AmberRS, and MC does not pass an Amber KCT check, she doesn't up about her brother
+                elif (amber.relationship < Relationship.FWB and not kct == "popular" ): # -if not AmberRS, and MC does not pass an Amber KCT check, she doesn't up about her brother
                     scene v16s23_17d
                     with dissolve
 

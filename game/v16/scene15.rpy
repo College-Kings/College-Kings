@@ -108,7 +108,7 @@ label v16s15:
     scene v16s15_6e # FPP. Show only Imre and Karen, slight smiles, Imre's mouth is open, Karen's mouth is closed, Karen is looking at Imre, Imre is looking at MC [CENTER PIER ENTRANCE].
     with dissolve
 
-    imre "So, yeah, anyway, it's just fun date."
+    imre "So, yeah, anyway, it's just a fun date."
 
     scene v16s15_6
     with dissolve
@@ -175,17 +175,17 @@ label v16s15:
         label v16s15pier_date_carousel: # -if Carousel
             $ freeroampier.add("carousel") # TODO: Variable
 
-            scene v16s14_10 # TPP. Imre leads Karen by the hand (both smiling mouths closed) into the carousel and past An older male CARNIVAL WORKER stands behind the TICKET STAND to the side of the ride [CAROUSEL: Location: Carousel2, Camera: Carousel2].
+            scene v16s15_10 # TPP. Imre leads Karen by the hand (both smiling mouths closed) into the carousel and past An older male CARNIVAL WORKER stands behind the TICKET STAND to the side of the ride [CAROUSEL: Location: Carousel2, Camera: Carousel2].
             with dissolve
 
             pause 0.75
 
-            scene v16s14_10a # TPP Imre sliding inside the front bench on the carousel with Karen following behind him, both smiling, mouths closed [CAROUSEL: Ride Location: Carousel1, Camera: Carousel4].
+            scene v16s15_10a # TPP Imre sliding inside the front bench on the carousel with Karen following behind him, both smiling, mouths closed [CAROUSEL: Ride Location: Carousel1, Camera: Carousel4].
             with dissolve
 
             pause 0.75
 
-            scene v16s14_10b # TPP Imre (inside) and Karen (outside) sitting in the front bench. Imre puts his arm around Karen. She doesn't seem to notice, more interested in looking toward her right [CAROUSEL: Ride Location: Carousel1, Camera: Carousel4]
+            scene v16s15_10b # TPP Imre (inside) and Karen (outside) sitting in the front bench. Imre puts his arm around Karen. She doesn't seem to notice, more interested in looking toward her right [CAROUSEL: Ride Location: Carousel1, Camera: Carousel4]
             with dissolve
 
             pause 0.75
@@ -1338,7 +1338,7 @@ label v16s15:
             hv "My powers never fail! One hotdog coming right up!"
 
             if vs16s15hotdog_coupon: # -if MC already went to the Wheel of Chance and chose 'gentle spin' leading to a free hotdog coupon TODO: Variable
-                if penelope.relationship.value >= Relationship.GIRLFRIEND.value: # -if PenelopeRS TODO: Variable
+                if penelope.relationship >= Relationship.GIRLFRIEND: ### -if PenelopeRS TODO: Variable
 
                     scene v16s15_53a # FPP. MC turning his head to his right, Show Just Penelope head turned looking at MC with with the HOT DOG STAND to her right, MC hands the hotdog coupon to Penelope, Penelope smiles, mouth is closed [HOTDOG]
                     with dissolve
@@ -1402,7 +1402,7 @@ label v16s15:
 
                         "Keep the coupon":
                             $ add_point(KCT.BRO)
-                            if penelope.relationship.value >= Relationship.GIRLFRIEND.value: # TODO: Variable
+                            if penelope.relationship >= Relationship.GIRLFRIEND: ### TODO: Variable
                                 $ add_point(KCT.TROUBLEMAKER)
 
                             scene v16s15_55

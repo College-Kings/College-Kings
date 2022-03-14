@@ -25,7 +25,7 @@ label v16s40:
         scene v16s40_4 # TPP. Aubrey kisses MC passionately, her hands on his waist, both of their eyes are closed during the kiss, Mc wraps his arm around Aubreys back as she kisses him.
         with dissolve
 
-        pause 0.75        
+        pause 0.75
 
     elif v16s39_fr_aubrey_date_points >= 8: ### ERROR: IF MC scored 8-9 points
         scene v16s40_3a # FPP. Show just Aubrey from the waist up, slight smile, mouth is open, looking at MC, show Aubrey holding one of Mc's hand 

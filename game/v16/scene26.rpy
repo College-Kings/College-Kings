@@ -428,7 +428,7 @@ label v16s26:
     scene v16s26_3
     with dissolve
 
-    li "Again, I don't think that's word..."
+    li "Again, I don't think that's a word..."
 
     scene v16s26_5b
     with dissolve

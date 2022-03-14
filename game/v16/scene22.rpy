@@ -35,7 +35,7 @@ label v16s22:
 
     u "Ah, no problem."
 
-    if v16s20_seenList = ["twazzlers"]: # -if MC also took the Twazzlers # TODO:Variable
+    if v16s20_take_twazzlers: # -if MC also took the Twazzlers
         scene v16s22_3b
         with dissolve
 
@@ -215,7 +215,7 @@ label v16s22:
 
     ab "Even though she gets an employee discount here at Lew's..."
 
-    if v16s20_seenList = ["bills"]: # -if clicked on the bills at amber's house
+    if "bills" in freeroam15: # if clicked on the bills at amber's house
         scene v16s22_5b
         with dissolve
 
@@ -297,7 +297,7 @@ label v16s22:
 
     am "Ha! I'm glad."
 
-    if v16s20_seenList = ["bills"]: # -if MC looked at the Unpaid bills at amber's house
+    if "bills" in freeroam15: # if MC looked at the Unpaid bills at amber's house
         scene v16s22_9a
         with dissolve
 
@@ -555,7 +555,7 @@ label v16s22:
 
             # -Regardless-
 
-    if v16s20_seenList = ["laptop"]: # TODO: VARIABLE  -if MC looked at the Open laptop
+    if "laptop" in freeroam15: # if MC looked at the Open laptop
         scene v16s22_9a
         with dissolve
 
@@ -736,7 +736,7 @@ label v16s22:
 
     # -Regardless-
 
-    if v16s20_seenList = ["photos"]: # TODO: Variable  # -if MC looked at the Photos in amber's house
+    if "photos" in freeroam15: # if MC looked at the Photos in amber's house
         scene v16s22_9a
         with dissolve
 
@@ -1053,7 +1053,7 @@ label v16s22:
 
         u "To be honest, I thought you'd never be interested in the idea of something more serious."
 
-        if amber_bj_laurens_party: #TODO: Variable# -if MC also received Amber blowjob at Lauren's party
+        if "v15_amber" in sceneList: # if MC also received Amber blowjob at Lauren's party
             scene v16s22_9o
             with dissolve
 
@@ -1174,7 +1174,7 @@ label v16s22:
 
         am "*Laughs*"
 
-        if amber_bj_laurens_party: #TODO: Variable # -if MC also received Amber blowjob at Lauren's party (friend status but blowjob was successful)
+        if "v15_amber" in sceneList: # if MC also received Amber blowjob at Lauren's party (friend status but blowjob was successful)
             scene v16s22_9a
             with dissolve
 

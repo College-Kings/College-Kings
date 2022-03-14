@@ -293,7 +293,7 @@ label v16s1_lose:
 
             pause 0.75
 
-            jump v16s1_end
+    jump v16s1_end
 
 label v16s1_win:
     scene v16s1_win_1 # TPP. Tom is on the ground, in pain, MC is looking at him, MC very angry, both mouths closed
@@ -457,8 +457,6 @@ label v16s1_win:
 
             pause 0.75
 
-            jump v16s1_end
-
         "Go home with Riley":
             $ v16_home_riley = True
             
@@ -497,7 +495,7 @@ label v16s1_win:
 
             pause 0.75
 
-            jump v16s1_end
+    jump v16s1_end
 
 label v16s1_end:
     jump v16s2

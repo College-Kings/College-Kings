@@ -513,18 +513,7 @@ label v16s16:
 
         u "You weren't expecting me too? *Laughs*"
 
-        if penelope.relationship == Relationship.FRIEND: # TODO: Variable
-            scene v16s16_7a # TPP. MC and Penelope hugging, Both slight smile, Penelope mouth open, MC mouth closed.
-            with dissolve
-
-            pe "*Sighs* You know what I mean. You're amazing with a gun!"
-
-            scene v16s16_9d
-            with dissolve
-
-            u "(Hmm, I guess I have done pretty well in the past with shooting.)"
-
-        elif penelope.relationship >= Relationship.RS: # TODO: Variable
+        if penelope.relationship >= Relationship.LIKES: ### TODO: Variable
             scene v16s16_7a
             with dissolve
 
@@ -542,6 +531,17 @@ label v16s16:
 
             u "(Hmm, I guess I have done pretty well in the past with shooting.)"
 
+        else:
+            scene v16s16_7a # TPP. MC and Penelope hugging, Both slight smile, Penelope mouth open, MC mouth closed.
+            with dissolve
+
+            pe "*Sighs* You know what I mean. You're amazing with a gun!"
+
+            scene v16s16_9d
+            with dissolve
+
+            u "(Hmm, I guess I have done pretty well in the past with shooting.)"
+            
         scene v16s16_8
         with dissolve
 
@@ -607,7 +607,7 @@ label v16s16:
 
         tb "Why wouldn't it have a wrap-"
 
-        if penelope.relationship >= Relationship.RS: # TODO: Variable
+        if penelope.relationship >= Relationship.LIKES: # TODO: Variable, if Penelope RS
             scene v16s16_9e
             with dissolve
 
@@ -875,7 +875,7 @@ label v16s16:
 
     u "Yeah?"
 
-    if penelope.relationship >= Relationship.RS: # TODO: Variable
+    if penelope.relationship >= Relationship.LIKES: ### TODO: Variable, if penelope rs
         scene v16s16_16d # FPP. Penelope and MC at the bathrooms, MC looking at Penelope, Penelope looking at MC, penelope slight smile, mouth open.
         with dissolve
 
@@ -888,7 +888,7 @@ label v16s16:
         
         pause 0.75
         
-    elif penelope.relationship == Relationship.friend:
+    else:
         scene v16s16_16d
         with dissolve
 

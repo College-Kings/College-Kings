@@ -144,6 +144,7 @@ label v16s5:
                 $ add_point(KCT.BRO)
                 
                 $ ms_rose.relationship = Relationship.FRIEND
+                $ v16_ms_rose_breakup = True
                 
                 scene v16s5_2
                 with dissolve

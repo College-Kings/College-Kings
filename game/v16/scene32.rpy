@@ -4,20 +4,7 @@
 # Time: Afternoon
 
 label v16s32:
-    if not joinwolves: # -if Apes
-        scene v16s32_1 # TPP. MC enters his bedroom, sitting on the edge of his bed, no expression, mouth is closed [APE BEDROOM]
-        with dissolve
-
-        u "(This situation between Grayson and Samantha is going to explode soon. I can feel it coming...)"
-
-        pause 0.75
-
-        scene v16s32_1a # TPP. MC (no expression, mouth closed) sitting on his bed with back to the corner (generic white wall) looking at his phone.
-        with dissolve
-
-        pause 0.75
-
-    else: # -if Wolves
+    if joinwolves: # -if Wolves
         scene v16s32_2 # TPP. MC enters his bedroom, sitting on the edge of his bed, no expression, mouth is closed [WOLF BEDROOM]
         with dissolve
 
@@ -29,6 +16,19 @@ label v16s32:
         with dissolve
 
         u "(I can't believe Chris actually punched him, though. He's clearly not in control of his emotions lately.)"
+
+    else: # -if Apes
+        scene v16s32_1 # TPP. MC enters his bedroom, sitting on the edge of his bed, no expression, mouth is closed [APE BEDROOM]
+        with dissolve
+
+        u "(This situation between Grayson and Samantha is going to explode soon. I can feel it coming...)"
+
+        pause 0.75
+
+        scene v16s32_1a # TPP. MC (no expression, mouth closed) sitting on his bed with back to the corner (generic white wall) looking at his phone.
+        with dissolve
+
+        pause 0.75
 
     # -if AubreyTamed and having date
     if aubrey.relationship == Relationship.TAMED and v16s25a_date_with_aubrey: # TODO:Variable
