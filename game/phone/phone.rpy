@@ -14,7 +14,7 @@ init python:
             else:
                 return self._image
 
-define phone = Phone("phone_icon.webp")
+    phone = Phone("phone_icon.webp")
 
 
 screen phone_icon():
