@@ -41,7 +41,7 @@ label v14s52:
     scene v14s52_3a
     with dissolve
 
-    u "Oh. (Nora? Fight king? What could possibly be happening now?)"
+    u "Oh. (Nora? Fight King? What could possibly be happening now?)"
 
     scene v14s52_4 # TPP. MC follows Imre into the next room, no expressions, mouths closed
     with dissolve
