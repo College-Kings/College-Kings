@@ -3,11 +3,8 @@
 # Characters: MC (Outfit: Boxers/Underwear), [BABY_NAME] (Outfit: None), NORA (Outfit: 1), CHLOE (Outfit: 3)
 # Time: Wednesday Night
 
-
 label v16s50:  ### ERROR: 50) Baby night, Partner only
-
-    if joinapes:
-        
+    if not joinwolves:        
         # -reminder that [baby_name] with Nora can be Henry or PlayerChosen and Chloe's can be Plastic or PlayerChosen
         # -MC's phone vibrates, making him jolt-
         play sound "sounds/vibrate.mp3"
@@ -36,7 +33,6 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
         u "(Oh, shit. Must be about [v16_baby_name]...)"
 
     else: # WOLF ROOM 
-
         # -reminder that [baby_name] with Nora can be Henry or PlayerChosen and Chloe's can be Plastic or PlayerChosen
         # -MC's phone vibrates, making him jolt-
         play sound "sounds/vibrate.mp3"
@@ -64,9 +60,7 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
 
         u "(Oh, shit. Must be about [v16_baby_name]...)"
 
-
     if not v16s27_parent_chloe:  # -if partner is Nora [Checkpoint 1.1]
-
         # -Split-screen with Nora?-
         scene v16s50_5   # SPLIT MC (worried, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth closed) holding phone with left hand [any Chicks room behind her].
         with dissolve
@@ -102,9 +96,9 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
         # -event2 Green
         # -event3 Orange
 
-            "Blue":# -if Blue
-
+            "Blue": # -if Blue
                 scene v16s50_5
+                with dissolve
 
                 u "It's the blue one, I think."
 
@@ -138,8 +132,8 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
                 no "I've got it clear in my head again now, thank you!"
                 
             "Green": # -if Green
-
                 scene v16s50_5
+                with dissolve
 
                 u "Green? I think?"
 
@@ -205,7 +199,6 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
                 u "Okay, got it. Next time we'll get it right."
                 
             "Orange": # -if Orange
-
                 scene v16s50_5
                 with dissolve
 
@@ -268,7 +261,6 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
                 u "All parents make mistakes occasionally, ha. I'm sure we'll be okay."
 
         # -Regardless of color choice-
-
         scene v16s50_6
         with dissolve
 
@@ -287,7 +279,6 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
     ### ERROR: [End of Checkpoint 1.1. Continue to Checkpoint 2]
 
     else: # -if partner is Chloe [Checkpoint 1.2]
-
         # -Split-screen with Chloe, she's pissed and tired-
         scene v16s50_7   # SPLIT MC (worried, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth closed) holding phone with left hand [any Chicks room behind her].
         with dissolve
@@ -345,7 +336,6 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
         # -event2 Be frustrated
 
             "Be calm": # -if Be calm
-
                 scene v16s50_7c   # SPLIT MC (worried, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth closed) holding phone with right hand [any Chicks room behind her].
                 with dissolve
 
@@ -380,7 +370,6 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
                 play sound "sounds/hangup.mp3"
 
             "Be frustrated": # -if Be frustrated
-
                 scene v16s50_7e   # SPLIT MC (frustrated, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth closed) holding phone with right hand [any Chicks room behind her].
                 with dissolve
                 
@@ -480,8 +469,7 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
                 play sound "sounds/hangup.mp3"
                 
             # -Chloe hangs up-
-
-                if joinapes: 
+                if not joinwolves:
                     scene v16s50_8    # TPP MC (neutral, mouth open) looking at his phone that he holds in his right hand [APE ROOM].
                     with dissolve
 
@@ -492,8 +480,7 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
 
                     u "(Jeez... Poor [v16_baby_name]... At least she's not yelling at me anymore.)"
 
-                else:  # WOLF
-
+                else: # WOLF
                     scene v16s50_18    # TPP MC (neutral, mouth open) looking at his phone that he holds in his right hand [WOLF ROOM].
                     with dissolve
 
@@ -512,10 +499,8 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
 
     ### ERROR: [Checkpoint 2]
 
-    if joinapes:
-
+    if not joinwolves:
         # -MC puts the phone down, gets comfy for sleep again-
-
         scene v16s50_8b   # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] places his phone on the night stand [APE ROOM]
         with dissolve
 
@@ -532,7 +517,6 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
         u "(I'd mute my phone but, this is part of the project, I guess... Let's see how the rest of the night goes.)"
     
     else: # Wolves
-
         # -MC puts the phone down, gets comfy for sleep again-
 
         scene v16s50_18b    # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] places his phone on the night stand [WOLF ROOM]
@@ -556,4 +540,3 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
     $ v16s50a_dotw = 5
 
     jump v16s50a
-

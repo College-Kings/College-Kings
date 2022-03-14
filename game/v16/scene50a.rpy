@@ -13,7 +13,6 @@
 # then the v16s50a_dotw variable MUST be set to Thursday.
 
 label v16s50a: ### ERROR: 50a) MC wakes up
-
     # -Night to morning transition-
     scene sleep_transition_fast # Ignore animation 
     with fade
@@ -25,15 +24,14 @@ label v16s50a: ### ERROR: 50a) MC wakes up
         
     pause 1
 
-    if v16s27_parent_chloe:  # -if Chloe was alone with the baby last night/is MC's partner
-
+    if v16s27_parent_chloe: # -if Chloe was alone with the baby last night/is MC's partner
         $ v16s50a_kiwii_post = KiwiiPost(aubrey, "v16/v16s50a_aubpost1.webp", "Umm, good morning from the Chicks?", numberLikes=817)
         $ v16s50a_kiwii_post.new_comment(autumn, "HAHAHA", numberLikes=16, force_send=True)
         $ v16s50a_kiwii_post.new_comment(lindsey, "I was wondering if there was a story behind this...", numberLikes=47, force_send=True)
         $ v16s50a_kiwii_post.new_comment(aubrey, "Chloe on baby duty, that's the story. Lol", numberLikes=75, force_send=True)
         $ v16s50a_kiwii_post.new_comment(cameron, "What the hell?", numberLikes=13, force_send=True)
 
-    if joinapes: 
+    if not joinwolves:
         # -MC is asleep in bed, only his bottom half under the covers. He opens his eyes. (Even if baby is there, it's not in shot)-
         scene v16s50a_1    # TPP Close up MC (neutral expression, mouth closed, eyes closed) sleeping in bed [APE ROOM]
         with dissolve
@@ -64,8 +62,7 @@ label v16s50a: ### ERROR: 50a) MC wakes up
 
         # -Regardless of who had the baby-
 
-        if v16s50a_dotw  == 5:  # -if Thursday morning [Checkpoint 1.1] Outfit 2 
-
+        if v16s50a_dotw == 5: # -if Thursday morning [Checkpoint 1.1] Outfit 2 
             scene v16s50a_3    # TPP MC (no expression, mouth closed) siting on the edge of his bed near his nightstand reaching for his phone on the nightstand. [APE ROOM]
             with dissolve
 
@@ -94,7 +91,6 @@ label v16s50a: ### ERROR: 50a) MC wakes up
         ### ERROR: [End of Checkpoint 1.1]
 
         if v16s50a_dotw == 6: # -if Friday morning [Checkpoint 1.2]  Outfit 5 
-
             # -MC's phone vibrates. He looks at his phone to see a text from Penelope-
             scene v16s50a_2
             with dissolve
@@ -141,8 +137,7 @@ label v16s50a: ### ERROR: 50a) MC wakes up
 
         ### ERROR: [End of Checkpoint 1.2]
 
-        if v16s50a_dotw  == 7: # -if Saturday morning [Checkpoint 1.3] Outfit 1
-
+        if v16s50a_dotw == 7: # -if Saturday morning [Checkpoint 1.3] Outfit 1
             # -MC looks at his phone, checking the date-
             scene v16s50a_3
             with dissolve
@@ -169,9 +164,8 @@ label v16s50a: ### ERROR: 50a) MC wakes up
             # -if Apes, transition to Scene 84-
             jump v16s84
     
-    else:  # Wolf
+    else: # Wolf
         # -MC is asleep in bed, only his bottom half under the covers. He opens his eyes. (Even if baby is there, it's not in shot)-
-        
         scene v16s50a_11    # TPP Close up MC (neutral expression, mouth closed, eyes closed) sleeping in bed [WOLF ROOM]
         with dissolve
 
@@ -185,10 +179,8 @@ label v16s50a: ### ERROR: 50a) MC wakes up
         scene v16s50a_12    # TPP MC (no expression, mouth closed) siting on the edge of his bed near his nightstand (phone on the nightstand). [WOLF ROOM]
         with dissolve
 
-
         # -if MC has the baby
-        if 1 & v16s27_mc_baby_duty_night == 1 or 2 & v16s27_mc_baby_duty_night == 2 or 4 & v16s27_mc_baby_duty_night == 4: # MC had the baby by himself 
-
+        if 1 & v16s27_mc_baby_duty_night == 1 or 2 & v16s27_mc_baby_duty_night == 2 or 4 & v16s27_mc_baby_duty_night == 4: # MC had the baby by himself  ###???
             scene v16s50a_12a   # TPP MC (smile, mouth closed) siting on the edge of his bed near his nightstand (phone on the nightstand), raising his arms in victory [that made it through the night with a baby] [WOLF ROOM]
             with dissolve
             
@@ -201,8 +193,7 @@ label v16s50a: ### ERROR: 50a) MC wakes up
 
         # -Regardless of who had the baby-
 
-        if v16s50a_dotw  == 5:  # -if Thursday morning [Checkpoint 1.1] Outfit 2 
-
+        if v16s50a_dotw == 5: # -if Thursday morning [Checkpoint 1.1] Outfit 2 
             scene v16s50a_13    # TPP MC (no expression, mouth closed) siting on the edge of his bed near his nightstand reaching for his phone on the nightstand. [WOLF ROOM]
             with dissolve
 
@@ -231,7 +222,6 @@ label v16s50a: ### ERROR: 50a) MC wakes up
         ### ERROR: [End of Checkpoint 1.1]
 
         if v16s50a_dotw == 6: # -if Friday morning [Checkpoint 1.2]  Outfit 5 
-
             # -MC's phone vibrates. He looks at his phone to see a text from Penelope-
             scene v16s50a_12
             with dissolve
@@ -278,8 +268,7 @@ label v16s50a: ### ERROR: 50a) MC wakes up
 
         ### ERROR: [End of Checkpoint 1.2]
 
-        if v16s50a_dotw  == 7: # -if Saturday morning [Checkpoint 1.3] Outfit 1
-
+        if v16s50a_dotw == 7: # -if Saturday morning [Checkpoint 1.3] Outfit 1
             # -MC looks at his phone, checking the date-
             scene v16s50a_13
             with dissolve
@@ -305,6 +294,4 @@ label v16s50a: ### ERROR: 50a) MC wakes up
 
             # -if Wolves, transition to Scene 83-            
             jump v16s83
-
     ### ERROR: [End of Checkpoint 1.3]
-
