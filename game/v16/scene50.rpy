@@ -71,7 +71,7 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
         scene v16s50_5   # SPLIT MC (worried, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth closed) holding phone with left hand [any Chicks room behind her].
         with dissolve
 
-        u "Hey, Nora. Everything okay with []?"
+        u "Hey, Nora. Everything okay with [v16_baby_name]?"
 
         play sound "sounds/babycry.mp3"
 
@@ -105,16 +105,14 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
             "Blue":# -if Blue
 
                 scene v16s50_5
+                with dissolve
 
                 u "It's the blue one, I think."
 
                 play sound "sounds/babycry.mp3"
 
                 baby "*Crying*"
-
-                scene v16s50_5a
-                with dissolve
-
+                
                 scene v16s50_5b   # SPLIT MC (worried, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth open) holding phone with left hand, looking down [At baby OC in her lap]) [any Chicks room behind her].
                 with dissolve
 
@@ -122,17 +120,17 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
 
                 play sound "sounds/babycoo.mp3"
 
-                scene v16s50_6   # SPLIT MC (slight smile, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (relieved, smiling, mout open) holding phone with left hand. [any Chicks room behind her].
+                scene v16s50_6   # SPLIT MC (slight smile, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (relieved, smiling, mouth open) holding phone with left hand. [any Chicks room behind her].
                 with dissolve
 
                 no "Yes! It stopped crying! Okay, so it's blue for feeding, green for burping, orange for diaper change, right?"
 
-                scene v16s50_6   # SPLIT MC (slight smile, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (relieved, smiling, mouth closed) holding phone with left hand. [any Chicks room behind her].
+                scene v16s50_6a   # SPLIT MC (slight smile, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (relieved, smiling, mouth closed) holding phone with left hand. [any Chicks room behind her].
                 with dissolve
 
                 u "Yeah, think that's right."
 
-                scene v16s50_6a   # SPLIT MC (slight smile, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (relieved, smiling, mouth closed) holding phone with left hand. [any Chicks room behind her].
+                scene v16s50_6  
                 with dissolve
 
                 no "I've got it clear in my head again now, thank you!"
@@ -140,6 +138,7 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
             "Green": # -if Green
 
                 scene v16s50_5
+                with dissolve
 
                 u "Green? I think?"
 
