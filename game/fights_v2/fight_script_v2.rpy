@@ -335,6 +335,12 @@ label fight_v2:
 
         player.special_attack = Headbutt({})
 
+        opponent.stance_images = {
+            FightStance.AGGRESSIVE: "images/v2/tomstancekick.webp",
+            FightStance.FORWARD: "images/v2/tomstancehook.webp",
+            FightStance.SOLID: "images/v2/tomstancejab.webp",
+            FightStance.DEFENSIVE: "images/v2/tomstancejab.webp"
+        }
 
         # opponent.base_attacks.append(BodyHook({}))
         opponent.base_attacks.append(Jab({
@@ -349,12 +355,8 @@ label fight_v2:
             "blocked_image": "fight_prototype/images/opponent_kick_dodged.webp"
         }))
 
-        opponent.stance_images = {
-            FightStance.AGGRESSIVE: "images/v2/tomstancekick.webp",
-            FightStance.FORWARD: "images/v2/tomstancehook.webp",
-            FightStance.SOLID: "images/v2/tomstancejab.webp",
-            FightStance.DEFENSIVE: "images/v2/tomstancejab.webp"
-        }
+        opponent.turn_moves.append(Turtle())
+        opponent.turn_moves.append(EndTurn())
 
         opponent.special_attack = Headbutt({})
 
