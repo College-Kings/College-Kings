@@ -3,7 +3,7 @@
 # Characters: MC (Outfit: boxers/2/5/1)
 # Time: Thursday/Friday/Saturday Morning 
 #
-#! KIWII image: v16s50a_aubpost1 "Chloe and MC's baby doll inside of a washing machine or dryer"
+
 
 # NOTE
 # This secne is called multiple times in the story timeline
@@ -25,9 +25,10 @@ label v16s50a: ### ERROR: 50a) MC wakes up
         
     pause 1
 
-    if v16s27_parent_chloe:  # -if Chloe was alone with the baby last night/is MC's partner
+    if if v16s27_parent_chloe and not 1 & v16s27_mc_baby_duty_night == 1 and not 0x10 & v16s27_mc_baby_duty_night == 0x10:  # -if Chloe was alone Wed night with the baby and is MC partner 
 
-        $ v16s50a_kiwii_post = KiwiiPost(aubrey, "v16/v16s50a_aubpost1.webp", "Umm, good morning from the Chicks?", numberLikes=817)
+        #! v16s50akw_1 "Chloe and MC's baby doll inside of a washing machine or dryer"
+        $ v16s50a_kiwii_post = KiwiiPost(aubrey, "v16/v16s50akw_1.webp", "Umm, good morning from the Chicks?", numberLikes=817)
         $ v16s50a_kiwii_post.new_comment(autumn, "HAHAHA", numberLikes=16, force_send=True)
         $ v16s50a_kiwii_post.new_comment(lindsey, "I was wondering if there was a story behind this...", numberLikes=47, force_send=True)
         $ v16s50a_kiwii_post.new_comment(aubrey, "Chloe on baby duty, that's the story. Lol", numberLikes=75, force_send=True)
