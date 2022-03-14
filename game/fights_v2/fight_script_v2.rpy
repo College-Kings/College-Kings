@@ -9,12 +9,13 @@ init python:
     class BasePlayer:
         MAX_GUARD = FightStance.DEFENSIVE.value + 1 # Turtle stance bonus
 
-        def __init__(self, name, stance, health=20, stamina=8, attack_multiplier=1):
+        def __init__(self, name, stance, health=20, stamina=8, attack_multiplier=1, quirk=None):
             self.name = name
             self.stance = stance
             self.stamina = stamina
             self.max_health = health
             self.attack_multiplier = attack_multiplier
+            self.quirk = quirk
 
             self.max_stamina = stamina
             self.stance_bonus = None
@@ -153,6 +154,10 @@ label move_attack(fight, target, attacker, move, move_damage):
     if move_damage > target.guard and target.guard <= 0 and not attacker.stance_bonus == "Jab":
         $ fight.stats[attacker.name]["guards_broken"] += 1
 
+        # Quirk: Backlash
+        if isinstance(target.quirk, Backlash) or isinstance(attacker.quirk, Backlash):
+            $ attacker.health -= 15
+
     if target.guard < move_damage or attacker.stance_bonus == "Jab":
         scene expression move.images["hit_image"]
         with vpunch
@@ -223,10 +228,8 @@ label fight_attack_turn(fight, target, attacker, move=None):
             $ move = attacker.special_attack
         elif filter(lambda move: move.ideal_stance == attacker.stance and move.stamina_cost <= attacker.stamina, attacker.base_attacks):
             $ move = renpy.random.choice(filter(lambda move: move.ideal_stance == attacker.stance, attacker.base_attacks))
-        elif filter(lambda move: move.stamina_cost <= attacker.stamina, attacker.base_attacks):
-            $ move = renpy.random.choice(filter(lambda move: move.stamina_cost <= attacker.stamina, attacker.base_attacks))
-        else:
-            $ move = renpy.random.choice(filter(lambda move: move.stamina_cost <= attacker.stamina, attacker.turn_moves))
+        elif filter(lambda move: move.stamina_cost <= attacker.stamina, attacker.base_attacks + attacker.turn_moves):
+            $ move = renpy.random.choice(filter(lambda move: move.stamina_cost <= attacker.stamina, attacker.base_attacks + attacker.turn_moves))
 
     $ fight.move_list[-1][attacker.name].append(move)
 
@@ -264,7 +267,17 @@ label fight_attack_turn(fight, target, attacker, move=None):
     # Stance Bonus
     $ stance_multiplier = target.get_stance_multiplier(fight)
 
-    $ damage = round(move.damage * primed_multiplier * reckless_multiplier * stance_multiplier)
+    # Quirk: The Great Equalizer
+    $ the_great_equalizer_multiplier = attacker.quirk.effect(target, attacker) if isinstance(attacker.quirk, TheGreatEqualizer) else 1.0
+
+    # Quirk: In The Zone
+    $ in_the_zone_multiplier = attacker.quirk.effect(attacker, move) if isinstance(attacker.quirk, InTheZone) else 1.0
+
+    $ damage = round(move.damage * primed_multiplier * reckless_multiplier * stance_multiplier * the_great_equalizer_multiplier)
+
+    # Seeing Red quirk
+    if isinstance(attacker.quirk, SeeingRed) and not fight.moves_list[-1][attacker.name]:
+        $ damage *= 2
 
     call move_attack(fight, target, attacker, move, damage)
 
@@ -280,8 +293,13 @@ label fight_attack_turn(fight, target, attacker, move=None):
             call screen fight_player_turn(fight, fight.player, fight.opponent)
         else:
             call fight_attack_turn(fight, target, attacker)
+
     else:
-        $ attacker.guard = attacker.stance.value
+        # Seeing Red quirk
+        if isinstance(attacker.quirk, SeeingRed) and attacker.stance == FightStance.AGGRESSIVE:
+            $ attacker.guard = 0
+        else:
+            $ attacker.guard = attacker.stance.value
         $ attacker.stamina = attacker.max_stamina
         call fight_start_turn(fight, attacker, target)
 
