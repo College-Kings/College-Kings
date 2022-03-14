@@ -119,6 +119,7 @@ label v16s32:
                 menu:
                     "Just the cab":
                         $ v16s32_aubrey_cab_and_flowers = 1 # TODO: Variable
+                        $ v16s32_cost_cab_and_flowers = 30 # TODO: Variable
                         scene v16s32_3a
                         with dissolve
 
@@ -126,6 +127,7 @@ label v16s32:
 
                     "Cab/Flower Combo":
                         $ v16s32_aubrey_cab_and_flowers = 2 #TODO: Variable
+                        $ v16s32_cost_cab_and_flowers = 40 # TODO: Variable
 
                         scene v16s32_3a
                         with dissolve
@@ -153,15 +155,19 @@ label v16s32:
                     with dissolve
 
                     menu:
-                        "Use the money":
+                        "Use the money" if mc.money >= v16s32_cost_cab_and_flowers :                                                        
+                            
+                            $ mc.money -= v16s32_cost_cab_and_flowers
+                            $ v16s26_lindsey_donation_money -= v16s32_cost_cab_and_flowers
+
                             scene v16s32_3a
                             with dissolve
 
                             u "(What Lindsey doesn't know won't hurt her, right? Surely....)"
 
                         "Cancel the booking":
-                            $ v16aubrey_cab = False
-                            $ v16aubrey_flower_cab = False
+                            
+                            $ v16s32_aubrey_cab_and_flowers = 0
 
                             scene v16s32_3a
                             with dissolve

@@ -152,8 +152,11 @@ label v16s38:
         with dissolve
 
         menu:
-            "Tip ten dollars":
+            "Tip ten dollars" if mc.money >= 10:
+                
                 $ v16s38_tippped_driver = True
+                $ mc.money -= 10
+                $ v16s26_lindsey_donation_money -= 10
                 $ add_point(KCT.BRO)
 
                 scene v16s38_6b
