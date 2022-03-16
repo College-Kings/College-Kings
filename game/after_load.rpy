@@ -5,6 +5,7 @@ python early:
         "bugTesting/bugTesting_cheats.rpy",
         "bugTesting/styles.rpy",
         "phone/phonescript.rpy",
+        "phone/phone_script.rpy",
         "phone/phoneStyle.rpy",
         "sceneGallery/sceneGallery.rpy",
         "v14/chicks_presidency_race/planning_board.rpy"
