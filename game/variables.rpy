@@ -439,6 +439,9 @@ default pb_threesome = False
 # 16.0
 default v16_baby_name = "Baby" # Used to store the player designated name of the baby
 default v16_wrong_key = True # This does default to True; not a typo. Used for baby menus
+default v16_wintom = False
+default v16_home_riley = False
+
 # Chloe Planning Board 
 
 
@@ -474,6 +477,4 @@ default v16s39_food_critic = False
 default v16s44_rubius_park_walk = False
 default v16s48_chloe_throws_baby = False
 default v16s50a_dotw = 0   # 0 = nothing, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday
-
-default v16_wintom = False
-default v16_home_riley = False
+default v16s57_agree_with_samantha_or_cameron = 0    # 0 = Stay out of it, 1 = Samantha, 2 = Cameron 

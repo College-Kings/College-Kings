@@ -1,7 +1,7 @@
 # SCENE 57: Apes Living Room Grayson tells Cameron Sam needs to go
 # Locations: Apes Frat House
 # Characters: SAMANTHA (Outfit: 1), MC (Outfit: 2), GRAYSON (Outfit: 2), CAMERON (Outfit: 2)
-# Time: Afternoon
+# Time: Thursday Morning
 
 
 label v16s57:
@@ -60,7 +60,7 @@ label v16s57:
 
     u "What trash?"
 
-    scene v16s57_5b # FPP. Show just Grayson (slight smile, mouth is closed, looking at MC) pointing at Samantha (not shown,) sitting on the couch between Samantha (not shown,) and Cameron (not shown)
+    scene v16s57_5b # FPP. Show just Grayson (slight smile, mouth is open, looking at MC) pointing at Samantha (not shown,) sitting on the couch between Samantha (not shown,) and Cameron (not shown)
     with dissolve
 
     gr "This trash."
@@ -135,9 +135,6 @@ label v16s57:
     with dissolve
 
     sa "Oh, wow. Now he's talking about himself in the third-person. *Laughs*"
-
-    scene v16s57_3c
-    with dissolve
 
     sa "I'd love to leave, buddy, but Cameron won't let me!"
 
@@ -228,7 +225,7 @@ label v16s57:
     menu:
 
         "Agree with Samantha":
-            $ v16s57agree_with_samantha # PlaceHolder Variable
+            $ v16s57_agree_with_samantha = 1 # TODO: Variable # PlaceHolder Variable
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -250,7 +247,7 @@ label v16s57:
             sa "Thanks, butt-munch."
 
         "Agree with Cameron":
-            $ v16s57agree_with_cameron # PlaceHolder Variable
+            $ v16s57_agree_with_samantha = 2 # TODO: Variable  # PlaceHolder Variable
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -286,7 +283,7 @@ label v16s57:
 
             sa "*Sighs* Okay, I'll try."
 
-        "Stay out of it"
+        "Stay out of it":
         
             scene v16s57_3h
             with dissolve
@@ -332,7 +329,7 @@ label v16s57:
 
     ca "Later, dickweed."
 
-    if samantha.relationship.value >= Relationship.FWB.value:# -samanthaRS winks at mc on his way out, Cameron sees it, mc can hear them arguing on his way out
+    if samantha.relationship >= Relationship.FWB:# -samanthaRS winks at mc on his way out, Cameron sees it, mc can hear them arguing on his way out
 
         scene v16s57_7c # FPP. Show both Samantha (slight smile, mouth is closed, winking at MC) sitting in her spot from v16s57_2 renders and Cameron (confused expression, mouth is closed, looking at Samantha) sitting in her spot from v16s57_2 renders and Cameron
         with dissolve
