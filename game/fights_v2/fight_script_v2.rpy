@@ -273,7 +273,13 @@ label fight_attack_turn(fight, target, attacker, move=None):
     # Quirk: In The Zone
     $ in_the_zone_multiplier = attacker.quirk.effect(attacker, move) if isinstance(attacker.quirk, InTheZone) else 1.0
 
-    $ damage = round(move.damage * primed_multiplier * reckless_multiplier * stance_multiplier * the_great_equalizer_multiplier)
+    # Quirk: Double Time
+    $ double_time_multiplier = 2.0 if isinstance(attacker.quirk, DoubleTime) or isinstance(target.quirk, DoubleTime) else 1.0
+
+    # Quirk: All In
+    $ all_in_multiplier = 2.0 if isinstance(attacker.quirk, DoubleTime) or isinstance(target.quirk, DoubleTime) else 1.0
+
+    $ damage = round(move.damage * primed_multiplier * reckless_multiplier * stance_multiplier * the_great_equalizer_multiplier * in_the_zone_multiplier * double_time_multiplier * all_in_multiplier)
 
     # Seeing Red quirk
     if isinstance(attacker.quirk, SeeingRed) and not fight.moves_list[-1][attacker.name]:
