@@ -446,7 +446,10 @@ default v16_home_riley = False
 
 
 # Lindsey Planning Board
-default v16s28_lindsey_pb_intereview_polly_choice = False # True = Interview / False = Polly 
+default v16s28_lindsey_pb_intereview_polly_choice = False # True = Interview / False = Polly
+default v16s28_lindsey_pb_riley_interview = False  # True = Riley interviews Lindsey / False = Elijah interviews Lindsey
+default v16s28_lindsey_pb_pretend_roomservice = False #  True =  Lindsey/MC wear roomservice disguises / Lindsey/MC go as themselves 
+
 
 default freeroam15 = set() #Amber
 default v16s1_win_fight_with_tom = False
@@ -478,3 +481,4 @@ default v16s44_rubius_park_walk = False
 default v16s48_chloe_throws_baby = False
 default v16s50a_dotw = 0   # 0 = nothing, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday
 default v16s57_agree_with_samantha_or_cameron = 0    # 0 = Stay out of it, 1 = Samantha, 2 = Cameron 
+default v16s59_just_knock = False  #  True == just knock on polly's door / False = Calm Lindsey down before knocking

@@ -1,12 +1,11 @@
 # SCENE 59: Talk to Polly at her hotel room with Lindsey
 # Locations: Hotel Hallway
-# Characters: LINDSEY (Outfit: 3, ROOM SERVICE UNIFORM), MC (Outfit: 2, ROOM SERVICE UNIFORM), POLLY (Outfit: Ask Mozzart), BODYGUARD (Outfit: 1)
-# Time: Afternoon
-
+# Characters: LINDSEY (Outfit: 3/ ROOM SERVICE UNIFORM), MC (Outfit: 2/ ROOM SERVICE UNIFORM), POLLY (Outfit: Ask Mozzart), BODYGUARD (Outfit: 1)
+# Time: Thurdsay Afternoon
 
 label v16s59:
 
-    if # -if MC chose Pretend to be room service
+    if v16s28_lindsey_pb_pretend_roomservice: # -if MC chose Pretend to be room service
 
         scene v16s59_1 # TPP. MC (slight smile, mouth closed, looking forward) and Lindsey (slight smile, mouth closed, looking forward) in hotel uniforms appear from a distance, walking along a hallway, past hotel room doors. They are wearing room service uniforms and MC is carrying a food tray with a domed lid covering the food-
         with dissolve
@@ -25,14 +24,14 @@ label v16s59:
 
     li "We've only got a few minutes while her bodyguard is on his break."
 
-    scene v16s59_2a # FPP. Show just Lindsey (slight smile, mouth open, looking at MC) from the shoulders up(check with mozzart for the clothes that will be shown on her shoulders since the image must relate to two different scenarios where they are wearing 2 different outfits) , MC and Lindsey are walking side by side so her head is turned towards MC, but her body is facing forward
+    scene v16s59_2a # FPP. Show just Lindsey (slight smile, mouth closed, looking at MC) from the shoulders up(check with mozzart for the clothes that will be shown on her shoulders since the image must relate to two different scenarios where they are wearing 2 different outfits) , MC and Lindsey are walking side by side so her head is turned towards MC, but her body is facing forward
     with dissolve
 
     u "Don't worry, we'll be quick."
 
     u "Here we are."
 
-    if # -if Pretending to be room service
+    if v16s28_lindsey_pb_pretend_roomservice:  # -if Pretending to be room service
 
         scene v16s59_3 # TPP. Full body image of (ROOM SERVICE UNIFORMS) MC (no expression, mouth is open, looking at Lindsey) scratching his chest with one hand, carrying the tray of food in the other, Lindsey (no expression, mouth is closed, looking at MC)
         with dissolve
@@ -105,7 +104,7 @@ label v16s59:
             u "Haha, worth a try, I'm just gonna knock now."
 
         "Just knock":
-            $ v16s59just_knock = True
+            $ v16s59_just_knock = True
             $ add_point(KCT.TROUBLEMAKER)
 
             scene v16s59_4a
@@ -138,7 +137,7 @@ label v16s59:
 
     polly "Um... Hi."
 
-    if # -if MC went backstage at Polly concert
+    if v13_penelope_backstage: # -if MC went backstage at Polly concert
 
         scene v16s59_4g # FPP. Show Lindsey (full smile, mouth closed, looking at Polly) just from the shoulders up (check with mozzart for clothing), Polly (staring/thinking expression, mouth open, looking at MC) tilts her head and stares at MC, with a hand on her chin
         with dissolve
@@ -201,14 +200,14 @@ label v16s59:
         polly "Can I... Help you guys with something?"
 
 
-    if # -if Pretending to be room service
+    if v16s28_lindsey_pb_pretend_roomservice: # -if Pretending to be room service
 
         scene v16s59_4d
         with dissolve
 
         li "We're here to deliver your meal!"
 
-        if # -if mc has already met Polly
+        if v13_penelope_backstage:  # TODO: Now clue what this means or how its different from meeting polly backstage so reusing it  # -if mc has already met Polly
 
             scene v16s59_4h
             with dissolve
@@ -479,7 +478,7 @@ label v16s59:
 
                 polly "A favor?"
 
-                if # -if mc met polly in Amsterdam
+                if v13_penelope_backstage: # -if mc met polly in Amsterdam
 
                     scene v16s59_4f
                     with dissolve
@@ -528,7 +527,7 @@ label v16s59:
 
                 polly "I'm not really sure if that would be appropriate..."
 
-                if v16s59just_knock: # -if MC also chose Just knock
+                if v16s59_just_knock: # -if MC also chose Just knock
 
                     scene v16s59_4y # FPP. Show Lindsey (nervous expression, mouth open, looking at Polly) just from the shoulders up (check with mozzart for clothing), Polly (concerned expression, mouth closed, looking at Lindsey)
                     with dissolve
@@ -602,7 +601,7 @@ label v16s59:
 
                 u "Really?"
 
-                if # -if mc met polly in amsterdam
+                if v13_penelope_backstage: # -if mc met polly in amsterdam
 
                     scene v16s59_4zb
                     with dissolve
@@ -980,7 +979,7 @@ label v16s59:
 
                 u "(Oh, bye.)"
 
-                scene v16s59_4zk # FPP. Show Lindsey (nervous expression, mouth closed, looking at PBG) just from the shoulders up (check with mozzart for clothing), Polly has closed the door and is not in the render anymore, Polly's Bodyguard (PBG) (slightly angry expression, mouth closed, looking at Lindsey) now standing closer to Lindsey, with one hand cupping a fist made with his other hand
+                scene v16s59_4zk # FPP. Show Lindsey (nervous expression, mouth closed, looking at PBG) just from the shoulders up (check with mozzart for clothing), Polly has closed the door and is not in the render anymore, Polly's Bodyguard (PBG) (slightly angry expression, mouth open, looking at Lindsey) now standing closer to Lindsey, with one hand cupping a fist made with his other hand
                 with dissolve
 
                 bdygd "I think it's time for the two of you to leave the building."
@@ -992,10 +991,10 @@ label v16s59:
 
                 u "Linds, let's just..."
 
-                li "I didn't get to hug you! Polly!!!"
-
                 scene v16s59_10f # TPP. Exactly the same as v16s59_10b except Mc and Lindsey are wearing their regular clothes
                 with dissolve
+
+                li "I didn't get to hug you! Polly!!!"
 
                 bdygd "And you never will."
 
