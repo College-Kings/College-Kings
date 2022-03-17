@@ -6,179 +6,114 @@ screen letter1():
         action Hide ("letter1")
 
 screen hc_select():
-    add "images/v7/homecomingchoice.webp"
+    modal True
 
-    grid 4 2:
-        spacing 40
-        xalign 0.5
-        ypos 285
+    default image_path = "images/v7/HC_Date_Select_screen/"
+    default girl_path = "gui/julia_call/"
 
-        imagebutton:
-            if "amber" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
-                idle "images/v7/HCAmber.webp"
-                hover "images/v7/HCAmber2.webp"
-                tooltip "I'm not that close with Amber but she does seem quite flirty around me."
+    $ girl_labels = {
+        "Amber": {
+            "label": "hc_asking_amber",
+            "condition": ("amber" not in hcAsked) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "tooltip": "I'm not that close with Amber but she does seem quite flirty around me"
+        },
+        "Aubrey": {
+            "label": "hc_asking_aubrey",
+            "condition": ("aubrey" not in hcAsked) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "tooltip": ("Aubrey and I get along well, she might be down to go with me."
+                if aubrey.relationship < Relationship.FWB else
+                "I'm pretty sure that Aubrey would go with me and that would probably lead to a pretty hot night afterwards...")
+        },
+        "Autumn": {
+            "label": "hc_asking_autumn",
+            "condition": ("autumn" not in hcAsked) and (not autumn.relationship <= Relationship.MAD) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "tooltip": ("Autumn and I aren't really close, but I'll never know if she'd say yes if I don't try."
+                if autumn.relationship > Relationship.MAD else
+                "I think Autumn might be mad at me, so I probably shouldn't ask her.")
+        },
+        "Chloe": {
+            "label": "hc_asking_chloe",
+            "condition": ("chloe" not in hcAsked) and (chloe.relationship > Relationship.MAD) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "tooltip": ("Chloe and I have been getting closer recently. Who knows, I might have a shot."
+                if chloe.relationship > Relationship.MAD else
+                "I think Chloe is mad at me, so I probably shouldn't ask her.")
+        },
+        "Emily": {
+            "label": "hc_asking_emily",
+            "condition": ("emily" not in hcAsked) and (forgiveemily) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "tooltip": ("I could take Emily. She definitely still has a thing for me."
+                if forgiveemily else
+                "I don't think asking Emily is the right call.")
+        },
+        "Lauren": {
+            "label": "hc_asking_lauren",
+            "condition": ("lauren" not in hcAsked) and (lauren.relationship > Relationship.MAD),
+            "tooltip": ("I'm not sure Lauren sees me as more than a friend, but we have been getting closer."
+                if lauren.relationship > Relationship.MAD else
+                "It's kinda weird between Lauren and me, I probably should ask someone else.")
+        },
+        "Penelope": {
+            "label": "hc_asking_penelope",
+            "condition": ("penelope" not in hcAsked) and (not v7_emily_bowling) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "tooltip": ("Penelope didn't seem too eager to talk to me today, I better ask someone else."
+                if v7_emily_bowling else
+                "Penelope and I got along really well when we went bowling together, I think she could say yes."
+                if bowling else
+                "I haven't done that much with Penelope so far, but maybe she'll yes.")
+        },
+        "Riley": {
+            "label": "hc_asking_riley",
+            "condition": ("riley" not in hcAsked) and (lauren.relationship < Relationship.GIRLFRIEND),
+            "tooltip": ("Riley and I are good friends. She might say yes if I ask her."
+                if riley.relationship < Relationship.LIKES else
+                "Riley and I are good friends. She might say yes if I ask her.")
+        }
+    }
 
-            else:
-                idle "images/v7/HCAmber3.webp"
-                hover "images/v7/HCAmber23.webp"
-            
-            if "amber" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
-                action Jump("hc_asking_amber")
-            else:
-                action NullAction()
+    add image_path + "hoco_date_select_background.webp"        
 
-        imagebutton:
-            if "aubrey" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
-                idle "images/v7/HCAubrey.webp"
-                hover "images/v7/HCAubrey2.webp"
-            else:
-                idle "images/v7/HCAubrey3.webp"
-                hover "images/v7/HCAubrey23.webp"
-
-            if aubrey.relationship >= Relationship.FWB:
-                tooltip "I'm pretty sure that Aubrey would go with me and that would probably lead to a pretty hot night afterwards..."
-            else:
-                tooltip "Aubrey and I get along well, she might be down to go with me."
-            
-            if "aubrey" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
-                action Jump("hc_asking_aubrey")
-            else:
-                action NullAction()
-
-        imagebutton:
-            if "autumn" not in hcAsked and not autumn.relationship <= Relationship.MAD and lauren.relationship < Relationship.GIRLFRIEND:
-                idle "images/v7/HCAutumn.webp"
-                hover "images/v7/HCAutumn2.webp"
-            else:
-                idle "images/v7/HCAutumn3.webp"
-                hover "images/v7/HCAutumn23.webp"
-
-            if autumn.relationship <= Relationship.MAD:
-                tooltip "I think Autumn might be mad at me, so I probably shouldn't ask her."
-            else:
-                tooltip "Autumn and I aren't really close, but I'll never know if she'd say yes if I don't try."
-            
-            if "autumn" not in hcAsked and not lauren.relationship >= Relationship.GIRLFRIEND and not autumn.relationship <= Relationship.MAD:
-                action Jump("hc_asking_autumn")
-            else:
-                action NullAction()
-
-        imagebutton:
-            if "chloe" not in hcAsked and chloe.relationship > Relationship.MAD and lauren.relationship < Relationship.GIRLFRIEND:
-                idle "images/v7/HCChloe.webp"
-                hover "images/v7/HCChloe2.webp"
-            else:
-                idle "images/v7/HCChloe3.webp"
-                hover "images/v7/HCChloe23.webp"
-
-            if chloe.relationship <= Relationship.MAD:
-                tooltip "I think Chloe is mad at me, so I probably shouldn't ask her."
-            else:
-                tooltip "Chloe and I have been getting closer recently. Who knows, I might have a shot."
-            
-            if "chloe" not in hcAsked and not (lauren.relationship >= Relationship.GIRLFRIEND or chloe.relationship <= Relationship.MAD):
-                action Jump("hc_asking_chloe")
-            else:
-                action NullAction()
-
-        imagebutton:
-            if "emily" not in hcAsked and forgiveemily and lauren.relationship < Relationship.GIRLFRIEND:
-                idle "images/v7/HCEmily.webp"
-                hover "images/v7/HCEmily2.webp"
-            else:
-                idle "images/v7/HCEmily3.webp"
-                hover "images/v7/HCEmily23.webp"
-
-            if forgiveemily:
-                tooltip "I could take Emily. She definitely still has a thing for me."
-            else:
-                tooltip "I don't think asking Emily is the right call."
-            
-            if "emily" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND and forgiveemily :
-                action Jump("hc_asking_emily")
-            else:
-                action NullAction()
-
-        imagebutton:
-            if "lauren" not in hcAsked and lauren.relationship > Relationship.MAD:
-                idle "images/v7/HCLauren.webp"
-                hover "images/v7/HCLauren2.webp"
-            else:
-                idle "images/v7/HCLauren3.webp"
-                hover "images/v7/HCLauren23.webp"
-
-            if lauren.relationship <= Relationship.MAD:
-                tooltip "It's kinda weird between Lauren and me, I probably should ask someone else."
-            else:
-                tooltip "I'm not sure Lauren sees me as more than a friend, but we have been getting closer."
-
-            if "lauren" not in hcAsked:
-                action Jump("hc_asking_lauren")
-            else:
-                action NullAction()
-
-        imagebutton:
-            if "penelope" not in hcAsked and not v7_emily_bowling and lauren.relationship < Relationship.GIRLFRIEND:
-                idle "images/v7/HCPenelope.webp"
-                hover "images/v7/HCPenelope2.webp"
-            else:
-                idle "images/v7/HCPenelope3.webp"
-                hover "images/v7/HCPenelope23.webp"
-
-            if v7_emily_bowling:
-                tooltip "Penelope didn't seem too eager to talk to me today, I better ask someone else."
-            elif bowling:
-                tooltip "Penelope and I got along really well when we went bowling together, I think she could say yes."
-            else:
-                tooltip "I haven't done that much with Penelope so far, but maybe she'll yes."
-
-            if "penelope" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND and not v7_emily_bowling:
-                action Jump("hc_asking_penelope")
-            else:
-                action NullAction()
-
-        imagebutton:
-            if "riley" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
-                idle "images/v7/HCRiley.webp"
-                hover "images/v7/HCRiley2.webp"
-            else:
-                idle "images/v7/HCRiley3.webp"
-                hover "images/v7/HCRiley23.webp"
-
-            if riley.relationship >= Relationship.LIKES:
-                tooltip "Riley seems to really like me so I think she'll say yes."
-            else:
-                tooltip "Riley and I are good friends. She might say yes if I ask her."
-
-            if "riley" not in hcAsked and lauren.relationship < Relationship.GIRLFRIEND:
-                action Jump("hc_asking_riley")
-            else:
-                action NullAction()
-
-    textbutton "Go Alone":
-        pos (1500, 100)
+    imagebutton:
+        idle image_path + "go_alone_idle.webp"
         action Jump("hc_no_girl")
+        pos (1460, 105)
 
+    vpgrid:
+        rows 2
+        cols 4
+        spacing 30
+        xalign 0.5
+        ypos 400
+
+        for character, i in girl_labels.items():
+            button:
+                idle_background girl_path + "{}_idle.webp".format(character)
+                hover_background girl_path + "{}.webp".format(character)
+                insensitive_background girl_path + "{}_grey.webp".format(character)
+                sensitive i["condition"]
+                tooltip i["tooltip"]
+                action Jump(i["label"])
+                xysize (307, 112)
+
+                text character:
+                    xpos 120
+                    yalign 0.5
+                    size 30
 
     $ tooltip = GetTooltip()
-
+    
     if lauren.relationship >= Relationship.GIRLFRIEND:
-        text "Lauren would kill me if I asked someone other than her.":
-            color "#000"
-            align (0.5, 0.88)
-
+        $ message = "Lauren would kill me if I asked someone other than her."
     elif tooltip:
-        text tooltip:
-            color "#000"
-            xmaximum 700
-            align (0.5, 0.88)
-
+        $ message = tooltip
     else:
-        text "I could always go alone...":
-            color "#000"
-            xmaximum 700
-            align (0.5, 0.88)
+        $ message = "I could always go alone..."
+    
+    text message:
+        color "#FFF"
+        size 35
+        xalign 0.5
+        ypos 920
+
 
 # GYM
 screen fr4dancefloor():

@@ -52,7 +52,7 @@ label v11_aubrey_plane_sex:
                 pause 0.75
 
                 if config_censored:
-                    call screen censoredPopup("v11s13_nsfwSkipLabel1")
+                    call screen censored_popup("v11s13_nsfwSkipLabel1")
 
                 stop music fadeout 3
                 play music "music/v11/Track Scene 13_2.mp3" fadein 2

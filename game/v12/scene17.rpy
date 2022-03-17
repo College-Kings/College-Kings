@@ -458,8 +458,8 @@ label v12_escape_room:
 
     unknown "One."
 
-    scene v12esr16d
-    with dissolve
+    #scene v12esr16d
+    #with dissolve
 
     u "What the fuck was that?"
 
@@ -1027,7 +1027,7 @@ label v12_lindsey_sex:
     pause
 
     if config_censored:
-        call screen censoredPopup("v12s17_nsfwSkipLabel1")
+        call screen censored_popup("v12s17_nsfwSkipLabel1")
 
     show screen v12s17_lindsey_sex_overlay
 

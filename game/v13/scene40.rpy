@@ -120,7 +120,7 @@ label v13s40:
     u "Haha, just try to relax."
 
     if config_censored:
-        call screen censoredPopup("v13s40_nsfwSkipLabel1")
+        call screen censored_popup("v13s40_nsfwSkipLabel1")
 
     scene v13s40_11 # TPP. Show MC removing Chloe's top, both slight smiles, mouths closed, Chloe's eyes closed
     with dissolve

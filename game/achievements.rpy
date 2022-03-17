@@ -7,7 +7,7 @@ init python:
         Achievement data class for storing and managing the creation, syncing and managing of in-game achievements
 
         Args:
-            _achievement (str): Programic name for the achievement
+            _achievement (str): Programic name for the achievement, should be same as steam api name
             text (str): Short description of achievement
         """
 
@@ -211,3 +211,7 @@ init python:
         Achievement("blue_cheese_and_sambuca", "Worst wedding catering ever") #s33
         Achievement("what_goes_around", "Aubrey tastes her own medicine at the wedding") #s33
         Achievement("just_one_more_thing", "Find all the leads and crack the case") #s46
+        
+    #v16
+    if renpy.loadable("v16/scene1.rpy"):
+        Achievement("the_answer_to_everything", "") #s10

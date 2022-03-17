@@ -39,6 +39,7 @@ label starta: #for compatibility only
         show screen bugTesting_Overlay
 
     jump fight_v2
+    
     label fight_end:
         hide screen test_health
         hide screen new_fight_overlay
@@ -1253,7 +1254,7 @@ label starta: #for compatibility only
         $ freeroam1.add("aubrey")
     
         if config_censored:
-            call screen censoredPopup("v1_freeRoam1_aubrey2")
+            call screen censored_popup("v1_freeRoam1_aubrey2")
 
         scene adamaubrey36
         stop music fadeout 3
@@ -2142,7 +2143,7 @@ label at_bd:
             call screen nsfw_Toggle
 
         if config_censored:
-            call screen censoredPopup("v1_nsfwSkipLabel1")
+            call screen censored_popup("v1_nsfwSkipLabel1")
 
     scene sda2
     with dissolve

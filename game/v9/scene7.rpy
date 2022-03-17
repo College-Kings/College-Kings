@@ -787,7 +787,7 @@ label fr5aubrey1:
                     u "What is this?"
 
                     if config_censored:
-                        call screen censoredPopup("v9s7_nsfwSkipLabel1")
+                        call screen censored_popup("v9s7_nsfwSkipLabel1")
 
                     scene v9slake8 # same as 8a, mouth open
                     with dissolve

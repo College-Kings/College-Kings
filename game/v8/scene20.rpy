@@ -1120,7 +1120,7 @@ label em_arcade_4:
     pause 0.5
 
     if config_censored:
-        call screen censoredPopup("v8s20_nsfwSkipLabel1")
+        call screen censored_popup("v8s20_nsfwSkipLabel1")
 
     scene v8arcade27c # Same as v8arcade27b but she pulled her top up completely
     with dissolve

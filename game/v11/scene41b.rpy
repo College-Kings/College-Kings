@@ -5,7 +5,7 @@
 label v11_chloe_sex_scene:
 
     if config_censored:
-        call screen censoredPopup("v11s41b_nsfwSkipLabel1")
+        call screen censored_popup("v11s41b_nsfwSkipLabel1")
 
     scene v11css1 # TPP. Mc and chloe removing their clothes
     with dissolve

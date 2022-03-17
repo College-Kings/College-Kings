@@ -4,7 +4,7 @@ define config.console = True
 define config_debug = False
 define config_censored = False
 
-define config.version = get_version(15, 1, 0)
+define config.version = get_version(15, 1, 1)
 
 define config.steam_appid = 1463120
 
@@ -14,9 +14,7 @@ define _quit_slot = "99-1"
 
 # The game starts here.
 label start:
-    if config.developer:
-        show screen bugTesting_Overlay
-
+    $ setup()
     call screen real_life_mode
 
 label end_credits: # for compatibility
@@ -25,4 +23,3 @@ label gameEnd:
     play music "music/vocal.mp3"
 
     call screen end_screen
-    

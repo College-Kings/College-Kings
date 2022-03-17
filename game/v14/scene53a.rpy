@@ -11,7 +11,7 @@ label v14s53a:
     pause 
 
     if config_censored:
-        call screen censoredPopup("v14s53a_nsfwSkipLabel1")
+        call screen censored_popup("v14s53a_nsfwSkipLabel1")
 
     scene v14s53a_1a # TPP. Same as v14s53a_1, Both sat on the couch still, MC's pants around his ankles, Samantha leaning towards MC and kissing him passionately as her hand sits on his lap near his dick.
     with dissolve

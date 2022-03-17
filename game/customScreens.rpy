@@ -98,30 +98,88 @@ screen fantasyOverlay():
     add "images/fantasyoverlay.webp"
 
 
-screen censoredPopup(continueLabel):
+screen censored_popup(continueLabel):
     modal True
 
     add "gui/censoredPopup/censoredBackground.webp"
 
+    text "THE NEXT SCENE HAS NSFW CONTENT":
+        size 70
+        color "#FFFFFF"
+        style "nsfw_text"
+        xalign 0.5
+        ypos 125
+
+    text "* CONTENT NOT SUITABLE FOR TWITCH OR YOUTUBE":
+        size 40
+        color "#FFFFFF"
+        style "nsfw_italic_text"
+        xalign 0.5
+        ypos 255
+
     vbox:
-        pos (365, 566)
-        spacing 148
+        ypos 450
+        xalign 0.5
+        xsize 1050
 
         if config_censored:
-            imagebutton:
-                idle "gui/censoredPopup/censoredSettings.webp"
-                hover "gui/censoredPopup/censoredSettingsHover.webp"
-                action ShowMenu("preferences")
-        else:
-            imagebutton:
-                idle "gui/censoredPopup/censoredContinue.webp"
-                hover "gui/censoredPopup/censoredContinueHover.webp"
-                action Return()
+            text "TO VIEW THIS SCENE YOU MUST HAVE NSFW ENABLED":
+                size 35
+                color "#FFFFFF"
+                style "nsfw_text"
+                xalign 0.5
 
-        imagebutton:
-            idle "gui/censoredPopup/censoredSkipScene.webp"
-            hover "gui/censoredPopup/censoredSkipSceneHover.webp"
-            action Jump(continueLabel)
+            text "IN THE SETTINGS MENU":
+                size 35
+                color "#FFFFFF"
+                style "nsfw_text"
+                xalign 0.5
+
+        else:
+            text "YOU HAVE NSFW CONTENT ENABLED SO YOU MAY":
+                size 35
+                color "#FFFFFF"
+                style "nsfw_text"
+                xalign 0.5
+
+            text "CONTINUE TO VIEW THE FOLLOWING SCENE":
+                size 35
+                color "#FFFFFF"
+                style "nsfw_text"
+                xalign 0.5
+
+    text "OR YOU MAY CHOOSE TO SKIP THIS SCENE":
+        size 35
+        color "#FFFFFF"
+        style "nsfw_text"
+        xalign 0.5
+        ypos 730
+        xsize 1050    
+
+    imagebutton:
+        xalign 0.5
+        ypos 555
+        if config_censored:
+            idle Transform("gui/censoredPopup/censoredSettings.webp", zoom=0.65)
+            hover Transform("gui/censoredPopup/censoredSettingsHover.webp", zoom=0.65)
+            action ShowMenu("preferences")
+        else:
+            idle Transform("gui/censoredPopup/censoredContinue.webp", zoom=0.65)
+            hover Transform("gui/censoredPopup/censoredContinueHover.webp", zoom=0.65)
+            action Return()
+
+    imagebutton:
+        idle Transform("gui/censoredPopup/censoredSkipScene.webp", zoom=0.65)
+        hover Transform("gui/censoredPopup/censoredSkipSceneHover.webp", zoom=0.65)
+        action Jump(continueLabel)
+        xalign 0.5
+        ypos 790
+
+style nsfw_text is text:
+    font "fonts/Montserrat-Bold.ttf"
+
+style nsfw_italic_text is text:
+    font "fonts/Montserrat-MediumItalic.ttf"
 
     on "show" action Hide("phone_icon")
     on "hide" action Show("phone_icon")

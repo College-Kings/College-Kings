@@ -2727,7 +2727,7 @@ label emsex_a:
     pause 0.5
 
     if config_censored:
-        call screen censoredPopup("v6_nsfwSkipLabel1")
+        call screen censored_popup("v6_nsfwSkipLabel1")
 
     scene em6
     with dissolve
@@ -3990,7 +3990,7 @@ label aubreysexb: # aubreysex scene
     au "*Quiet moan*"
 
     if config_censored:
-        call screen censoredPopup("wayhome")
+        call screen censored_popup("wayhome")
 
     scene naub1a
     with dissolve
@@ -9890,6 +9890,8 @@ label upstairsaubrey:
                 u "(I should probably talk to Chris soon.)"
 
     else:
+        $ aubrey_boyfriend_threesome = True
+
         scene sufr3au1
         with fade
 

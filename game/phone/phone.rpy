@@ -17,18 +17,20 @@ init python:
     phone = Phone("phone_icon.webp")
 
 
+
 screen phone_icon():
     zorder 100
     
-    imagebutton:
-        idle phone.image
-        
-        if renpy.get_screen("free_roam"):
-            action Show("phone")
-        else:
-            action Call("call_screen_phone")
+    if not renpy.get_screen("choice") and not renpy.get_screen("censored_popup"):
+        imagebutton:
+            idle phone.image
+            
+            if renpy.get_screen("free_roam"):
+                action Show("phone")
+            else:
+                action Call("call_screen_phone")
 
-        align (0.999, 0.05)
+            align (0.999, 0.05)
 
 label call_screen_phone:
     call screen phone

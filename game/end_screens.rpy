@@ -38,7 +38,7 @@ style save_now_text is text:
     size 70
 
 
-screen end_screen(support_link="https://www.patreon.com/collegekings"):
+screen end_screen(support_link="https://store.steampowered.com/app/1924480/College_Kings_2__Act_I/"):
     tag end_screen
     modal True
     style_prefix "end_screen"
@@ -47,12 +47,12 @@ screen end_screen(support_link="https://www.patreon.com/collegekings"):
 
     add image_path + "end_screen_background.webp"
 
-    vbox:
-        xalign 0.5
-        ypos 345
+    # vbox:
+    #     xalign 0.5
+    #     ypos 345
 
-        text "ACT 4 PART 3" xalign 0.5
-        text "Coming Soon!" color "#EA54E8" xalign 0.5
+    #     text "ACT 4 PART 3" xalign 0.5
+    #     text "Coming Soon!" color "#EA54E8" xalign 0.5
 
     if not config.enable_steam:
         hbox:
@@ -77,7 +77,7 @@ screen end_screen(support_link="https://www.patreon.com/collegekings"):
 
     hbox:
         xalign 0.5
-        ypos 764
+        ypos 800
         spacing 50
 
         imagebutton:

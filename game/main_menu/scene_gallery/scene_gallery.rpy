@@ -150,7 +150,7 @@ screen scene_gallery():
             
             for gallery_item in scene_gallery_items:
                 fixed:
-                    xysize (374, 286)
+                    xysize (374, 300)
 
                     button:
                         background Transform(gallery_item.image, size=(362, 230), pos=(6, 16))
@@ -163,7 +163,7 @@ screen scene_gallery():
                     fixed:
                         xysize (250, 49)
                         xalign 0.5
-                        ypos 220
+                        ypos 224
 
                         text gallery_item.title.upper() align (0.5, 0.5)
 
@@ -189,6 +189,6 @@ label scene_gallery_name_change:
     if not persistent.name.strip():
         $ persistent.name = renpy.input(_("What's your name?"), default=_("Alex")).strip() or _("Alex")
 
-    $ scopeDict = {"name":persistent.name}
+    $ scopeDict = {"name": persistent.name}
 
     return

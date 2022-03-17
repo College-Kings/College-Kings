@@ -523,7 +523,7 @@ label v9_emily_dorm:
     image v9emianf = Movie(play="images/v9/Scene 16/v9emianf.webm", loop=True, image="images/v9/Scene 16/v9emianStart.webp", start_image="images/v9/Scene 16/v9emianStart.webp")
 
     if config_censored:
-        call screen censoredPopup("v9s16_nsfwSkipLabel1")
+        call screen censored_popup("v9s16_nsfwSkipLabel1")
 
     show screen v9s16_emilySexOverlay
 

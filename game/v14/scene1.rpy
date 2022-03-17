@@ -72,7 +72,7 @@ label v14s01:
     u "(Oh, shit. This is happening.)"
 
     if config_censored:
-        call screen censoredPopup("v14s01_nsfwSkipLabel1")
+        call screen censored_popup("v14s01_nsfwSkipLabel1")
 
     scene v14s01_1b # FPP. Same as v14s01_1a, Riley and Aubrey topless, looking at MC seductively, both mouths closed
     with dissolve

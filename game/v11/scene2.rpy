@@ -17,7 +17,6 @@ label v11_nora_chloe_hallway:
     u "Hey Nora, are there a lot of people going on the trip?"
 
     if nora.relationship >= Relationship.LIKES:
-
         scene v11nohall2a # FPP. Same as 2, but now Nora is looking at MC, Nora mouth open, happy expression
         with dissolve
 
@@ -234,16 +233,19 @@ label v11_nora_chloe_hallway:
     with dissolve
 
     charli "*Chuckles* You said you're closer with some more than others? I can tell you're close with Nora, but who else?"
+
     charli "Anyone you'd recommend for me to start getting to know? Or even avoid?"
 
     scene v11nohall11b
     with dissolve
 
     u "Depends on the company you like to keep..."
+
     u "If you're looking for a more mellow time then Lauren or Lindsey may be nice to talk to, but if you have a more wild side then getting to know Amber or Aubrey is probably right up your alley."
 
     if joinwolves:
         u "In terms of people to avoid, It's always best to avoid Grayson. *Laughs*"
+
     else:
         u "In terms of people to avoid, It's always best to keep a good distance between yourself and Cameron. *Laughs*"
 
@@ -274,8 +276,10 @@ label v11_nora_chloe_hallway:
     menu:
         "Hanging with the girls":
             $ add_point(KCT.BOYFRIEND)
+
             scene v11nohall11c
             with dissolve
+
             u "Well, we'll be in another country surrounded by beautiful women... I'm sure you can imagine what I plan on doing. *Chuckles* Really though, I just wanna have fun no matter what."
 
             scene v11nohall11d
@@ -286,6 +290,7 @@ label v11_nora_chloe_hallway:
         "Sleeping":
             scene v11nohall11c
             with dissolve
+
             u "I don't know... sleeping? *Chuckles*"
 
             scene v11nohall11d

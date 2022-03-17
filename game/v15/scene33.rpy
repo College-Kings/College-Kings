@@ -194,15 +194,15 @@ label v15s33:
 
     au "*Laughs* True."
 
-    scene v15s33_8
-    with dissolve
+    # scene v15s33_8
+    # with dissolve
 
-    na "A stripper costume? Haha, what?"
+    # na "A stripper costume? Haha, what?"
 
-    scene v15s33_7
-    with dissolve
+    # scene v15s33_7
+    # with dissolve
 
-    au "Long story..."
+    # au "Long story..."
 
     scene v15s33_8c
     with dissolve
@@ -1560,7 +1560,7 @@ label v15s33:
             u "(Why the hell not...?)"
 
             if config_censored:
-                call screen censoredPopup("v15s33_nsfwSkipLabel1")
+                call screen censored_popup("v15s33_nsfwSkipLabel1")
 
             scene v15s33_50 # FPP. In the bathroom, Naomi on her knees infront of MC, MC looking down at Naomi, Naomi looking up at MC, smirking, mouth closed.
             with fade

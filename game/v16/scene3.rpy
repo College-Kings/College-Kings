@@ -16,7 +16,7 @@ label v16s3:
     scene v16s3_1a # TPP. Riley Off-camera, Just MC stepped into the dorm and shutting the door, neutral face, mouth closed.
     with dissolve
 
-    pause 0.75  
+    pause 0.75
 
     scene v16s3_2 # FPP. In Riley's dorm, MC looking at Riley, Riley looking at MC, Riley neutral face, mouth open.
     with dissolve
@@ -46,7 +46,7 @@ label v16s3:
     pause 0.75
 
     scene v16s3_3a # TPP. Show MC laying on Riley's bed, with his eyes closed, neutral face, mouth closed.
-    with fade (1,0,1())
+    with fade
 
     u "(Damn, I'm tired. I could fall asleep right now.)"
 
@@ -89,7 +89,7 @@ label v16s3:
         scene v16s3_5b # FPP. MC holding the icepack on his head, MC looking at Riley, Riley looking at MC, Riley slight smile, mouth open.
         with dissolve
 
-        ri "Yeah, [name]. frozen things tend to have that effect, haha."
+        ri "Yeah, [name]. Frozen things tend to have that effect, haha."
 
         scene v16s3_5c # FPP. MC holding the icepack on his head, MC looking at Riley, Riley looking at MC, Riley slight smile, mouth closed.
         with dissolve
@@ -192,12 +192,12 @@ label v16s3:
         with dissolve
 
         menu:
-            "Kiss her.":
+            "Kiss her":
                 $ add_point(KCT.BOYFRIEND)
 
                 jump v16s3a
 
-            "Too tired.":
+            "Too tired":
                 $ add_point(KCT.BRO)
 
                 scene v16s3_5h # FPP. MC looking at Riley, Riley looking at MC, Riley slight frown, mouth closed.
@@ -228,7 +228,7 @@ label v16s3:
 
                     ri "I just wanted to say that I understand where she was coming from about the polygamy thing."
 
-                    if upstairs == "aubrey":
+                    if aubrey_boyfriend_threesome:
                         ri "But I remember her saying something about an old boyfriend of hers turning down a threesome, and she was angry about it."
 
                         scene v16s3_5e
@@ -265,7 +265,7 @@ label v16s3:
 
         # [End of Checkpoint 1.1. Continues to Checkpoint 2]
 
-    elif riley.relationship >= Relationship.FRIEND: # [Checkpoint 1.2]
+    else: # [Checkpoint 1.2]
         scene v16s3_5d
         with dissolve
 
@@ -295,7 +295,7 @@ label v16s3:
             scene v16s3_5e
             with dissolve
 
-            u "Yup. I can't make it up. She loves it apparently, too."
+            u "Yup. I can't make it up. Apparently she loves it too."
 
             scene v16s3_5d
             with dissolve
@@ -401,7 +401,7 @@ label v16s3:
         scene v16s3_5e
         with dissolve
 
-        u "Haha, yup!  I've got two fists and a couple of brain cells left... I'll be fine."
+        u "Haha, yup! I've got two fists and a couple of brain cells left... I'll be fine."
 
         scene v16s3_5d
         with dissolve
@@ -414,17 +414,17 @@ label v16s3:
     u "(Should I mention Tom again?)"
 
     menu:
-        "Reassure her.":
-            u "And don't worry any more about Tom. We'll make sure he doesn't bother you again."
+        "Reassure her":
+            u "And don't worry anymore about Tom. We'll make sure he doesn't bother you again."
 
             scene v16s3_5d
             with dissolve
 
             ri "Okay. I'll try my best. Thanks, [name]."
             
-        "Don't bring it up.":
+        "Don't bring it up":
             scene v16s3_5e
-            #with dissolve
+            with dissolve
 
             u "(Don't want to put her head in a spiral.)"
 
@@ -452,12 +452,12 @@ label v16s3:
 
     scene v16s3_10 # TPP. Show MC opening the door and leaving, slight smile, mouth closed.
     with dissolve
-
-    pause 0.75 
-
     play sound "sounds/dooropen.mp3"
+    pause 0.75
 
     scene v16s3_11 # TPP. Shot of just the door closed.
     with dissolve
+
+    pause 0.75
 
     jump v16s4

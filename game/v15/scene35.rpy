@@ -1952,17 +1952,17 @@ label v15s35:
 
                 u "(Is she talking about me?)"
 
-                if aubrey.relationship > Relationship.MAD:
-                    scene v15s35_9y # FPP. same as v15s35_9d Aubrey is pouting cutely at Mc, still looking at Mc, mouth is still closed
-                    with dissolve
+            if aubrey.relationship > Relationship.MAD:
+                scene v15s35_9y # FPP. same as v15s35_9d Aubrey is pouting cutely at Mc, still looking at Mc, mouth is still closed
+                with dissolve
 
-                    pause 0.75
+                pause 0.75
 
-                else:
-                    scene v15s35_9t
-                    with dissolve
+            else:
+                scene v15s35_9t
+                with dissolve
 
-                    pause 0.75
+                pause 0.75
 
             scene v15s35_9
             with dissolve
