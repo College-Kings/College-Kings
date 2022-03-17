@@ -1,7 +1,7 @@
 # SCENE 58: Transition Mc leaves the house
 # Locations: Sidewalk
 # Characters: MC (Outfit: 2)
-# Time: Afternoon
+# Time: Thursday Afternoon
 
 
 label v16s58:
@@ -13,7 +13,7 @@ label v16s58:
 
     u "(Time to meet Lindsey.)"
 
-    if v16s28_lindsey_pb_intereview_polly_choicelindsey_interview: # -if helping Lindsey with interview, transition to Scene 60-
+    if v16s28_lindsey_pb_intereview_polly_choice: # -if helping Lindsey with interview, transition to Scene 60-
 
         jump v16s60
 
