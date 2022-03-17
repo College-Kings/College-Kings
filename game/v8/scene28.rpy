@@ -163,7 +163,7 @@ label int_deal_w_josh:
 label lars_McAttack:
     $ stance = 2
 
-    show screen fight_overlay(stance="defend")
+    # show screen fight_overlay(stance="defend") TODO: Update fight code
     
     # Lars hook
     if larsAttack == 1:
@@ -458,7 +458,7 @@ label mc_larsAttack:
 label mc_larsFightEnd: # MC wins fight against Lars
     hide screen s28_larsMcAttack
     hide screen s28_mcLarsAttack
-    hide screen fight_overlay
+    # hide screen fight_overlay TODO: Update fight code
     $ youDamage = 0
     $ stance = 0
     $ s28_fightWinner = "MC"
@@ -468,7 +468,7 @@ label mc_larsFightEnd: # MC wins fight against Lars
 label lars_McFightEnd: # MC loses fight against Lars
     hide screen s28_larsMcAttack
     hide screen s28_mcLarsAttack
-    hide screen fight_overlay
+    # hide screen fight_overlay TODO: Update fight code
     $ youDamage = 0
     $ stance = 0
     $ s28_fightWinner = "Lars"

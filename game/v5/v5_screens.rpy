@@ -168,7 +168,7 @@ screen youattack2():
 
         timer reactiona action Jump("adamattack")
 
-    use fight_overlay
+    # use fight_overlay TODO: Update fight code
 
 
 screen adamattack():
@@ -340,7 +340,7 @@ screen adamattack():
             yalign 0.6
             action Jump ("adamkickblocked")
 
-    use fight_overlay
+    # use fight_overlay TODO: Update fight code
 
 
 screen trolleyProblem(option1, option2):

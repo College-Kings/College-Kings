@@ -175,16 +175,16 @@ screen censored_popup(continueLabel):
         xalign 0.5
         ypos 790
 
+    on "show" action Hide("phone_icon")
+    on "hide" action Show("phone_icon")
+    on "replace" action Hide("phone_icon")
+    on "replaced" action Show("phone_icon")
+
 style nsfw_text is text:
     font "fonts/Montserrat-Bold.ttf"
 
 style nsfw_italic_text is text:
     font "fonts/Montserrat-MediumItalic.ttf"
-
-    on "show" action Hide("phone_icon")
-    on "hide" action Show("phone_icon")
-    on "replace" action Hide("phone_icon")
-    on "replaced" action Show("phone_icon")
 
 
 screen timerBar(seconds=3):

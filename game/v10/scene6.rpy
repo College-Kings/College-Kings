@@ -109,7 +109,7 @@ label v10_mc_vs_ryan_fight:
             label ryan_McAttack:
                 $ stance = 2 # Defence
 
-                show screen fight_overlay(stance="defend")
+                # show screen fight_overlay(stance="defend") TODO: Update fight code
 
                 # Ryan hook
                 if ryanAttack == 1:
@@ -414,7 +414,7 @@ label v10_mc_vs_ryan_fight:
             label ryan_fightEnd:
                 hide screen ryanFight_MCAttack
                 hide screen ryanFight_MCDefend
-                hide screen fight_overlay
+                # hide screen fight_overlay TODO: Update fight code
                 $ youDamage = 0
                 $ stance = 0
                 stop music fadeout 3
