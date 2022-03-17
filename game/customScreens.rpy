@@ -181,6 +181,11 @@ style nsfw_text is text:
 style nsfw_italic_text is text:
     font "fonts/Montserrat-MediumItalic.ttf"
 
+    on "show" action Hide("phone_icon")
+    on "hide" action Show("phone_icon")
+    on "replace" action Hide("phone_icon")
+    on "replaced" action Show("phone_icon")
+
 
 screen timerBar(seconds=3):
     bar value AnimatedValue(0, seconds, seconds, seconds) at alpha_dissolve
@@ -193,7 +198,6 @@ screen animated_value_bar(old_value, new_value, max_value, left_frame=None, righ
         value AnimatedValue(new_value, max_value, delay, old_value)
         left_bar left_frame
         right_bar right_frame
-        align (0.5, 0.5)
         offset offset
         xysize size
 

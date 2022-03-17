@@ -236,9 +236,15 @@ screen choice(items, seconds=3, fail_label=None):
     if config_debug:
         $ item = renpy.random.choice(items)
         on "show" action item.action
+    else:
+        on "show"  action Hide("phone_icon")
 
+    on "hide" action Show("phone_icon")
+    on "replace" action Hide("phone_icon")
+    on "replaced" action Show("phone_icon")
 
-style choice_text is bebas_neue_30
+style choice_text is bebas_neue_30:
+    properties gui.button_text_properties("choice_button")
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
@@ -341,6 +347,8 @@ screen main_menu():
     default image_path = "gui/main_menu/"
 
     add image_path + "background.webp"
+
+    textbutton ("Test Language") action Language("template_lang")
 
     # Patreon
     if not config.enable_steam:

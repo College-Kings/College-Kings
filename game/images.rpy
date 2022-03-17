@@ -14,8 +14,9 @@ image alert_background = Frame("gui/alert/background.webp", 8, 8)
 
 ## Bar
 image blue_bar = Frame("gui/bar/blue.webp", 44, 22, 44, 40)
-image ruby_bar = Frame("gui/bar/ruby.webp", 30, 22, 29, 40)
+image ruby_bar = Frame("gui/bar/ruby.webp", 44, 22, 44, 40)
 image yellow_bar = Frame("gui/bar/yellow.webp", 44, 22, 44, 40)
+image transparent_bar = Frame("#0000")
 
 ## Choice
 image choice_button_idle = Frame("gui/choice/button_idle.webp", 40, 8)
@@ -52,6 +53,25 @@ image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm"
 
 # Phone
 image phone_white_background = "images/phone/white_background.webp"
+
+# Fights
+image fight_guard_animation:
+    "#000070" with Dissolve(0.5)
+    pause 1.0
+
+    "#00000000" with Dissolve(0.5)
+    pause 1.0
+
+    repeat
+
+image fight_health_animation:
+    "#700000" with Dissolve(0.5)
+    pause 1.0
+
+    "#00000000" with Dissolve(0.5)
+    pause 1.0
+
+    repeat
 
 # Achievements
 image no_hard_feelings = "images/achievements/v1/nohardfeelings.webp"
