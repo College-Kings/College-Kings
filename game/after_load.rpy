@@ -3,6 +3,7 @@ python early:
         "bugTesting/bugTesting_Overwrite.rpy",
         "bugTesting/bugTesting_typoNotes.rpy",
         "bugTesting/bugTesting_cheats.rpy",
+        "bugTesting/styles.rpy",
         "phone/phonescript.rpy",
         "phone/phoneStyle.rpy",
         "sceneGallery/sceneGallery.rpy",
@@ -16,6 +17,11 @@ python early:
     }
 
     restart_game = False # NEVER CHANGE
+
+    try: v9s35_reply5a
+    except NameError:
+        def v9s35_reply5a():
+            pass
 
     for rpy_file in old_files:
         rpyc_file = rpy_file + "c"
@@ -73,7 +79,7 @@ label after_load:
         if isinstance(mc, FightCharacter) or isinstance(mc, MainCharacter):
             mc = PlayableCharacter()
 
-        # mc.__after_load__()
+        mc.__after_load__()
 
         try: mc.profile_picture
         except AttributeError: mc.profile_picture = profile_pictures[0]
@@ -368,8 +374,8 @@ label after_load:
         simplr_app.unlock()
 
         for app in phone.applications.copy():
-            try: app.locked
-            except AttributeError: phone.applications.remove(app)
+            if not isinstance(app, Application):
+                phone.applications.remove(app)
 
         ### MESSENGER
         #### MESSENGER CONTRACTS

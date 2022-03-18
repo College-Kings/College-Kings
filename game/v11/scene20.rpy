@@ -299,6 +299,7 @@ label v11_treasure_hunt:
 
     menu:
         "She will miss":
+            $ v11_she_will_miss = True
             $ add_point(KCT.TROUBLEMAKER)
             scene v11th14d # FPP. Same as v11th14, MC and Riley looking at each other, Riley holding the gun, Riley mouth closed, slight smirk
             with dissolve

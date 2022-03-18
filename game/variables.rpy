@@ -107,6 +107,7 @@ default forgiveemily = True
 default freeroam1 = set()
 default freeroam2 = set()
 default freeroam3 = set()
+default aubrey_boyfriend_threesome = False
 default freeroam3asked = set()
 default girl = ""
 default imreforgives = False
@@ -213,11 +214,13 @@ default v10s33_ev_date_now = False
 default v10s33_laurenBakeSale = False
 default v10s33_ryan_flirt_emily = False
 default v10s33_toldChloe = False
+default v10lottery_ticket = False # Needed for v16S20
 
 # 11.0
 default candyLike = 0
 default freeroam7 = set() #Penelope Court
 default freeroam8 = set() #London Museum
+default v11_she_will_miss = False
 default v11_amber_sauna_convo = False
 default v11_check_on_nora = False
 default v11_hp_points = 0
@@ -240,6 +243,7 @@ default v11s23_penelope_date = True # late addition, defaulting to True to enhan
 default v11s25_beer = True
 default v11_ride_with_mrlee = False
 default v11s13_rejected_aubrey = False
+default v11_dealership = False
 
 # 12.0
 default freeroam9 = set() #Ferry
@@ -286,6 +290,7 @@ default v13_imre_disloyal = False
 default v13_invite_samantha = False
 default v13_lauren_smoke = False
 default v13_penelope_concert = False
+default v13_penelope_backstage = False
 default v13_perfume = False
 default v13_smoke_weed = False
 default v13_emmy_points = 0
@@ -401,6 +406,8 @@ default v15s18_mention_list_aubrey = False
 default v15s18_pumpkin = 0
 default v15s18a_aub_kiwii_smile = False
 default v15s18a_gag = False
+default v15s18a_lie = False #????
+default v15s18a_riley_bj = False
 default v15s18a_showlist_penelope_autumn = False
 default v15s18e_cum_in_lauren = False
 default v15s20_teacher_brief_open_count = 0
@@ -428,3 +435,40 @@ default v1502fix = False
 default RileyLoyal = False
 default pb_kct_notification = False
 default pb_threesome = False
+
+# 16.0
+default v16_baby = "Baby" # Used to store the player designated name of the baby
+default v16_wrong_key = True # This does default to True; not a typo. Used for baby menus
+# Chloe Planning Board 
+
+
+# Lindsey Planning Board
+default v16s28_lindsey_pb_intereview_polly_choice = False # True = Interview / False = Polly 
+
+default freeroam15 = set() #Amber
+default v16s1_win_fight_with_tom = False
+default v16s10_let_lauren_continue_hj = False
+default v16s11_sign_up = False
+default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
+default v16s20_take_twazzlers = False
+default vs16s15hotdog_coupon = False
+default v16s23_mention_bills = False  # TODO: Variable
+default v16s23_mention_laptop = False # TODO: Variable
+default v16s23_support_amber = False # TODO: Variable
+default v16s25a_date_with_aubrey = False
+default v16s27_parent_chloe = False  # True = Chloe; False = Nora
+default v16s27_mc_baby_duty_night = 0 # 0 = Unselected, 1 = Wednesday_alone, 2 = Thrusday_alone, 4 = Friday_alone, 0x10 = Wednesday_shared, 0x20 = Thursday_shared, 0x40 = Friday_shared
+default v16s32_birthday_reservation = 0  # 0 = neither, 1 = standard_reserveration, 2 = birthday_reservation  
+default v16s32_aubrey_cab_and_flowers = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers
+default v16s34_joke_about_elijah = False # used and checked in v16s34 
+default v16s34_knock_on_svc_door = False # False = walk in 
+default v16s34_get_aggressive_with_elijah = False # False = Laugh
+default v16s34_chloe_kiss_elijah_for_frontpage = False # False = Tell Elijah to fuck off 
+default v16s35_mc_spa_shopping = set() # Tracks what MC purchased during spa shopping for chloe
+default v16s38_tippped_driver = False
+default v16s39_fr_aubrey_date_list = set() # Tracks player selection during Aubrey date freeroam
+default v16s39_fr_aubrey_date_points = 0
+default v16s39_food_critic = False
+default v16s44_rubius_park_walk = False
+
+default v16_wintom = False

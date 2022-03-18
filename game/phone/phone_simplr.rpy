@@ -119,11 +119,14 @@ screen simplr_app():
         except IndexError: simplr_contact = None
 
     use base_phone:
+
+        default image_path = "images/phone/simplr/appAssets/"
+
         fixed:
             pos (770, 168)
             xysize (375, 740)
 
-            add "images/phone/simplr/appAssets/background.webp"
+            add Transform(image_path + "simplr_main_bg.webp", zoom=0.25) at truecenter xoffset 4 yoffset 1
             
             # Top UI
             hbox:
@@ -133,16 +136,16 @@ screen simplr_app():
 
                 imagebutton:
                     yalign 0.5
-                    idle "images/phone/simplr/appAssets/profileIcon.webp"
-                    hover "images/phone/simplr/appAssets/profileIconHover.webp"
+                    idle Transform("images/phone/simplr/appAssets/profileIcon.webp", zoom=0.20)
+                    hover Transform("images/phone/simplr/appAssets/profileIconHover.webp", zoom=0.20)
                     action NullAction()
 
-                add "images/phone/simplr/appAssets/simplrLogo.webp" yalign 0.5
+                add Transform("images/phone/simplr/appAssets/simplrLogo.webp", zoom=0.20) yalign 0.5
 
                 imagebutton:
                     yalign 0.5
-                    idle "images/phone/simplr/appAssets/messageIcon.webp"
-                    hover "images/phone/simplr/appAssets/messageIconHover.webp"
+                    idle Transform("images/phone/simplr/appAssets/messageIcon.webp", zoom=0.20)
+                    hover Transform("images/phone/simplr/appAssets/messageIconHover.webp", zoom=0.20)
                     action Show("simplr_contacts")
 
             # Profile Picture
@@ -150,24 +153,35 @@ screen simplr_app():
                 add Transform(simplr_contact.large_profile_pictures[0], size=(362, 585)) align (0.5, 0.5)
 
             # Bottom UI
-            hbox:
-                xalign 0.5
-                yoffset 678
-                spacing 20
+            if simplr_contact is not None:
+                hbox:
+                    xalign 0.5
+                    yoffset 500
+                    spacing 10
 
-                imagebutton:
-                    yalign 0.5
-                    idle "images/phone/simplr/appAssets/yesButton.webp"
-                    hover "images/phone/simplr/appAssets/yesButtonHover.webp"
-                    if simplr_contact is not None:
-                        action Function(simplr_contact.likedContact)
+                    imagebutton:
+                        yalign 0.5
+                        idle Transform("images/phone/simplr/appAssets/yesButton.webp", zoom=0.25)
+                        hover Transform("images/phone/simplr/appAssets/yesButtonHover.webp", zoom=0.25)
+                        if simplr_contact is not None:
+                            action Function(simplr_contact.likedContact)
 
-                imagebutton:
-                    yalign 0.5
-                    idle "images/phone/simplr/appAssets/noButton.webp"
-                    hover "images/phone/simplr/appAssets/noButtonHover.webp"
-                    if simplr_contact is not None:
-                        action Function(simplr_contact.removeContact)
+                    imagebutton:
+                        yalign 0.5
+                        idle Transform("images/phone/simplr/appAssets/noButton.webp", zoom=0.25)
+                        hover Transform("images/phone/simplr/appAssets/noButtonHover.webp", zoom=0.25)
+                        if simplr_contact is not None:
+                            action Function(simplr_contact.removeContact)
+            else:
+                hbox:
+                    align (0.5, 0.5)
+                    spacing 10
+                    xmaximum 340
+
+                    text "No new profiles to show...\nYou can however still chat with your matches!\n\nBe sure to check back soon!":
+                        xalign 0.5
+                        style "simplr_no_more_profiles"
+                    
 
 
 screen simplr_contacts():
@@ -175,19 +189,14 @@ screen simplr_contacts():
 
     use base_phone:
 
-        add "images/phone/contacts_screen.webp" at truecenter # Contact Screen Background
+        default image_path = "images/phone/simplr/appAssets/"
 
-        fixed:
-            xysize(375, 78)
-            pos(772, 168)
-
-            text "Messages" align(0.1, 0.5) style "phonetext"
+        add Transform(image_path + "simplr_contacts_bg.webp", zoom=0.25) at truecenter xoffset 2
 
         vpgrid:
             cols 1
             mousewheel True
             draggable True
-            scrollbars "vertical"
             xysize(375, 663)
             pos(772, 247)
 
@@ -215,27 +224,30 @@ screen simplr_messenger(contact=None):
 
     use base_phone:
 
-        add "images/msg.webp" at truecenter # Messenger Screen Background
+        default image_path = "images/phone/simplr/appAssets/"
+
+        add Transform(image_path + "simplr_msg_bg.webp", zoom=0.25) at truecenter xoffset 2
 
         fixed:
             xysize(375, 112)
             xalign 0.5
             ypos 168
 
-            imagebutton:
-                idle "images/msgarrow.webp"
-                action [Show("simplr_app"), Hide("simplr_messenger"), Hide("simplr_reply")]
+            hbox:
                 yalign 0.5
 
-            vbox:
-                align (0.5, 0.5)
+                imagebutton:
+                    idle Transform("images/phone/messages/appAssets/back_button.webp", size=(25, 25))
+                    action [Show("simplr_app"), Hide("simplr_messenger"), Hide("simplr_reply")]
+                    yalign 0.5
+                    xoffset 15
 
                 if hasattr(contact, "profile_picture"):
-                    add Transform(contact.profile_picture, size=(55, 55)) xalign 0.5
+                    add Transform(contact.profile_picture, size=(64, 64)) yalign 0.5 xoffset 30
                 else:
-                    add Transform(contact.profilePicture, size=(55, 55)) xalign 0.5
+                    add Transform(contact.profilePicture, size=(64, 64)) yalign 0.5 xoffset 30
 
-                text contact.name style "nametext"
+                text contact.name style "nametext" yalign 0.5 xoffset 50
 
         viewport:
             yadjustment inf_adj

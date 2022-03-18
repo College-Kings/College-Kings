@@ -582,6 +582,8 @@ label v15s43:
             ch "I swear, man! She could have gone away camping for all I know. I really have no idea. You gotta believe me."
 
         "Analyze Chris" if mc.detective == Detective.PSYCHOLOGIST:
+            $ v15_nora_clue_camping = True
+
             scene v15s43_14g
             #with dissolve
 
@@ -609,9 +611,7 @@ label v15s43:
 
             ch "Why are you talking like this? I seriously don't know! Maybe she went camping or something..."
         
-        "Accuse Chris" if mc.detective == Detective.LOOSE_CANNON:
-            $ v15_nora_clue_camping = True
-        
+        "Accuse Chris" if mc.detective == Detective.LOOSE_CANNON:        
             play sound "sounds/thud.mp3"
 
             scene v15s43_16 # TPP. Show MC slamming his hands on the table, MC angry, mouth open.

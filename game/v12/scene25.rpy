@@ -185,7 +185,10 @@ label v12_jc_chloe:
     scene v12juc3b
     with dissolve
 
-    u "I guess Chloe, her and I have gotten a lot closer. We even test drove a luxury car together."
+    u "I guess Chloe, her and I have gotten a lot closer."
+    
+    if v11_dealership:
+        u "We even test drove a luxury car together."
 
     if volleyball and girl == "Chloe":
         scene v12juc3g

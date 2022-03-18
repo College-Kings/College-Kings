@@ -3,7 +3,6 @@ init python:
         nonplayable_character_setup()
         
         # Phone Setup
-        phone = Phone("phone_icon.webp")
         phone.applications = []
         phone.applications.append(messenger)
         phone.applications.append(stats_app)

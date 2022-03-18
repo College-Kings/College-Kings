@@ -9890,6 +9890,8 @@ label upstairsaubrey:
                 u "(I should probably talk to Chris soon.)"
 
     else:
+        $ aubrey_boyfriend_threesome = True
+
         scene sufr3au1
         with fade
 

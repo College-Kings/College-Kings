@@ -458,8 +458,8 @@ label v12_escape_room:
 
     unknown "One."
 
-    scene v12esr16d
-    with dissolve
+    #scene v12esr16d
+    #with dissolve
 
     u "What the fuck was that?"
 
