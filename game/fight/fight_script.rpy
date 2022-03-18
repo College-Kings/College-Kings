@@ -220,7 +220,7 @@ label fight_attack_turn(fight, target, attacker, move=None):
     $ renpy.set_return_stack([])
 
     if move is None:
-        if attacker.special_attack.is_sensitive(fight, target, attacker) and attacker.stamina >= attacker.special_attack.stamina_cost:
+        if attacker.special_attack is not None and attacker.special_attack.is_sensitive(fight, target, attacker) and attacker.stamina >= attacker.special_attack.stamina_cost:
             $ move = attacker.special_attack
         elif filter(lambda move: move.ideal_stance == attacker.stance and move.stamina_cost <= attacker.stamina, attacker.base_attacks):
             $ move = renpy.random.choice(filter(lambda move: move.ideal_stance == attacker.stance, attacker.base_attacks))
