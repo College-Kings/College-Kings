@@ -1,6 +1,5 @@
 python early:
     def get_short_git_sha():
-        import os
         import subprocess
 
         VERSION_DIR = os.path.join(config.basedir, "game", "version.txt")
