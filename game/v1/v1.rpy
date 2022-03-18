@@ -38,13 +38,6 @@ label starta: #for compatibility only
     if config.developer:
         show screen bugTesting_Overlay
 
-    jump fight_v2
-    
-    label fight_end:
-        hide screen test_health
-        hide screen new_fight_overlay
-
-    show screen fightDamage
     show screen fantasyOverlay
 
     play music "music/msexy.mp3"

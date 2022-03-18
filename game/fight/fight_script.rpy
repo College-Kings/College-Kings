@@ -24,7 +24,7 @@ init python:
             self._guard = stance.value
 
             self.wins = 0
-            self.turn_moves = []
+            self.turn_moves = [Turtle(), EndTurn()]
             self.base_attacks = []
             self.special_attack = None
             self.previous_moves = []
@@ -165,15 +165,11 @@ label move_attack(fight, target, attacker, move, move_damage):
         $ target.health -= (damage - target.guard)
         $ target.guard = 0
 
-        show screen fight_popup("{} Hit".format(move.name))
-
     else:
         scene expression move.images["blocked_image"]
         with vpunch
 
         $ target.guard -= move.damage
-
-        show screen fight_popup("{} Blocked".format(move.name))
 
     pause 1.0
 
@@ -308,69 +304,3 @@ label fight_attack_turn(fight, target, attacker, move=None):
             $ attacker.guard = attacker.stance.value
         $ attacker.stamina = attacker.max_stamina
         call fight_start_turn(fight, attacker, target)
-
-
-label fight_v2:
-    python:
-        player = Player(name, FightStance.FORWARD)
-        opponent = Opponent("Tom", FightStance.FORWARD)
-
-        player.base_attacks.append(Jab({
-            "start_image": "fight_prototype/images/player_start_jab.webp",
-            "hit_image": "fight_prototype/images/player_hit_jab.webp",
-            "blocked_image": "fight_prototype/images/player_jab_dodged.webp"
-        }))
-        player.base_attacks.append(BodyHook({
-            "start_image": "fight_prototype/images/player_start_hook.webp",
-            "hit_image": "fight_prototype/images/player_hit_hook.webp",
-            "blocked_image": "fight_prototype/images/player_hook_dodged.webp"
-        }))
-        player.base_attacks.append(Hook({
-            "start_image": "fight_prototype/images/player_start_hook.webp",
-            "hit_image": "fight_prototype/images/player_hit_hook.webp",
-            "blocked_image": "fight_prototype/images/player_hook_dodged.webp"
-        }))
-        player.base_attacks.append(Kick({
-            "start_image": "images/v2/kick1start.webp",
-            "hit_image": "images/v2/kick2pic.webp",
-            "blocked_image":  "images/v2/kick1pic.webp"
-        }))
-
-        player.turn_moves.append(Turtle())
-        player.turn_moves.append(EndTurn())
-
-        player.special_attack = Headbutt({})
-
-        opponent.stance_images = {
-            FightStance.AGGRESSIVE: "images/v2/tomstancekick.webp",
-            FightStance.FORWARD: "images/v2/tomstancehook.webp",
-            FightStance.SOLID: "images/v2/tomstancejab.webp",
-            FightStance.DEFENSIVE: "images/v2/tomstancejab.webp"
-        }
-
-        # opponent.base_attacks.append(BodyHook({}))
-        opponent.base_attacks.append(Jab({
-            "start_image": "fight_prototype/images/opponent_start_jab.webp",
-            "hit_image": "fight_prototype/images/opponent_hit_jab.webp",
-            "blocked_image": "fight_prototype/images/opponent_jab_dodged.webp"
-        }))
-        # opponent.base_attacks.append(Hook({}))
-        opponent.base_attacks.append(Kick({
-            "start_image": "fight_prototype/images/opponent_start_kick.webp",
-            "hit_image": "fight_prototype/images/opponent_hit_kick.webp",
-            "blocked_image": "fight_prototype/images/opponent_kick_dodged.webp"
-        }))
-
-        opponent.turn_moves.append(Turtle())
-        opponent.turn_moves.append(EndTurn())
-
-        opponent.special_attack = Headbutt({})
-
-        opponent.wins = 2
-
-        fight = Fight(player, opponent, "v1start")
-
-    show screen fight_debug(fight.player, fight.opponent)
-    show screen health_bars(fight.player, fight.opponent)
-
-    call fight_start_turn(fight, fight.opponent, fight.player)

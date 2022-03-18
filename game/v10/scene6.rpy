@@ -61,6 +61,7 @@ label v10_mc_vs_ryan_fight:
 
     ry "You ready to do this?"
 
+    # TODO: Update ryan fight
     menu:
         "Fight Ryan":
             $ v10_ryan_fight = True
@@ -77,16 +78,16 @@ label v10_mc_vs_ryan_fight:
 
             scene v10mvr6a
 
-            call screen fight_typeMenu
+            # call screen fight_typeMenu
 
             if fight_type == "normal":
                 $ simRyanFight = False
                 $ ryanStance = renpy.random.choice([1, 2, 3, 4])
                 $ ryanAttack = renpy.random.choice([1, 2, 3, 4])
 
-                call screen fight_selectDifficulty
+                # call screen fight_selectDifficulty
 
-                call screen fight_keybindOptions
+                # call screen fight_keybindOptions
 
             elif fight_type == "simReal" or fight_type == "simWin":
                 $ simRyanFight = True
@@ -128,7 +129,8 @@ label v10_mc_vs_ryan_fight:
                             jump ryan_McKickBlock
 
                     else:
-                        call screen ryanFight_MCDefend(attack="Hook")
+                        pass
+                        # call screen ryanFight_MCDefend(attack="Hook")
 
                 # Ryan jab
                 if ryanAttack == 2:
@@ -147,7 +149,8 @@ label v10_mc_vs_ryan_fight:
                             jump ryan_McJabBlock
 
                     else:
-                        call screen ryanFight_MCDefend(attack="Jab")
+                        pass
+                        # call screen ryanFight_MCDefend(attack="Jab")
 
                 # Ryan body hook
                 if ryanAttack == 3:
@@ -166,7 +169,8 @@ label v10_mc_vs_ryan_fight:
                             jump ryan_McHookBlock
 
                     else:
-                        call screen ryanFight_MCDefend(attack="BodyHook")
+                        pass
+                        # call screen ryanFight_MCDefend(attack="BodyHook")
 
                 # Ryan kick
                 if ryanAttack == 4:
@@ -185,7 +189,8 @@ label v10_mc_vs_ryan_fight:
                             jump ryan_McBodyhookBlock
 
                     else:
-                        call screen ryanFight_MCDefend(attack="Kick")
+                        pass
+                        # call screen ryanFight_MCDefend(attack="Kick")
 
 
             # label Attacker_TargetAction
@@ -399,7 +404,8 @@ label v10_mc_vs_ryan_fight:
                         if simyou == 4 or simyou == 5 or simyou == 6:
                             jump mc_ryanKickHit
                 else:
-                    call screen ryanFight_MCAttack
+                    pass
+                    # call screen ryanFight_MCAttack
 
 
             label mc_ryanFightEnd: # MC wins fight against Ryan
@@ -412,8 +418,8 @@ label v10_mc_vs_ryan_fight:
                 jump ryan_fightEnd
 
             label ryan_fightEnd:
-                hide screen ryanFight_MCAttack
-                hide screen ryanFight_MCDefend
+                # hide screen ryanFight_MCAttack
+                # hide screen ryanFight_MCDefend
                 # hide screen fight_overlay TODO: Update fight code
                 $ youDamage = 0
                 $ stance = 0
