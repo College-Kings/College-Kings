@@ -47,13 +47,6 @@ screen end_screen(support_link="https://store.steampowered.com/app/1924480/Colle
 
     add image_path + "end_screen_background.webp"
 
-    # vbox:
-    #     xalign 0.5
-    #     ypos 345
-
-    #     text "ACT 4 PART 3" xalign 0.5
-    #     text "Coming Soon!" color "#EA54E8" xalign 0.5
-
     if not config.enable_steam:
         hbox:
             xalign 0.5
