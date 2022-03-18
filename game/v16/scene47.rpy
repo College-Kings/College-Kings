@@ -48,7 +48,7 @@ label v16s47: # 47) MC goes to the Chicks house
         scene v16s47_6 # FPP Nora (smiling, mouth open) answering the door to the Chicks house. She is holding the baby doll like a real baby
         with dissolve
 
-        no "Look who it is, [v16_baby]! It's your daddy!"
+        no "Look who it is, [v16_baby_name]! It's your daddy!"
 
         scene v16s47_6a # FPP Same angle as 6. Nora (smiling, mouth closed) at the door to the chicks house, holding the baby doll
         with dissolve

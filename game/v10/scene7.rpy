@@ -50,6 +50,7 @@ label v10_mc_vs_imre_fight:
 
     imre "Ready to get your ass kicked?"
 
+    # TODO: Update Imre fight
     menu:
         "Fight Imre":
             $ v10_imre_fight = True
@@ -67,16 +68,16 @@ label v10_mc_vs_imre_fight:
                 
             scene v10mvi3
 
-            call screen fight_typeMenu
+            # call screen fight_typeMenu
 
             if fight_type == "normal":
                 $ simImreFight = False
                 $ imreStance = renpy.random.choice([1, 2, 3, 4])
                 $ imreAttack = renpy.random.choice([1, 2, 3, 4])
 
-                call screen fight_selectDifficulty
+                # call screen fight_selectDifficulty
 
-                call screen fight_keybindOptions
+                # call screen fight_keybindOptions
 
             elif fight_type == "simReal" or fight_type == "simWin":
                 $ simImreFight = True
@@ -99,7 +100,7 @@ label v10_mc_vs_imre_fight:
             label imre_McAttack:
                 $ stance = 2 # Defence
 
-                show screen fight_overlay(stance="defend")
+                # show screen fight_overlay(stance="defend") TODO: Update fight code
 
                 # Imre hook
                 if imreAttack == 1:
@@ -118,7 +119,8 @@ label v10_mc_vs_imre_fight:
                             jump imre_McKickBlock
 
                     else:
-                        call screen imreFight_MCDefend(attack="Hook")
+                        pass
+                        # call screen imreFight_MCDefend(attack="Hook")
 
                 # Imre jab
                 if imreAttack == 2:
@@ -137,7 +139,8 @@ label v10_mc_vs_imre_fight:
                             jump imre_McJabBlock
 
                     else:
-                        call screen imreFight_MCDefend(attack="Jab")
+                        pass
+                        # call screen imreFight_MCDefend(attack="Jab")
 
                 # Imre body hook
                 if imreAttack == 3:
@@ -156,7 +159,8 @@ label v10_mc_vs_imre_fight:
                             jump imre_McHookBlock
 
                     else:
-                        call screen imreFight_MCDefend(attack="BodyHook")
+                        pass
+                        # call screen imreFight_MCDefend(attack="BodyHook")
 
                 # Imre kick
                 if imreAttack == 4:
@@ -175,7 +179,8 @@ label v10_mc_vs_imre_fight:
                             jump imre_McBodyhookBlock
 
                     else:
-                        call screen imreFight_MCDefend(attack="Kick")
+                        pass
+                        # call screen imreFight_MCDefend(attack="Kick")
 
 
             # label Attacker_TargetAction
@@ -389,7 +394,8 @@ label v10_mc_vs_imre_fight:
                         if simyou == 4 or simyou == 5 or simyou == 6:
                             jump mc_imreKickHit
                 else:
-                    call screen imreFight_MCAttack
+                    pass
+                    # call screen imreFight_MCAttack
 
 
             label mc_imreFightEnd: # MC wins fight against Imre
@@ -402,9 +408,9 @@ label v10_mc_vs_imre_fight:
                 jump imre_fightEnd
 
             label imre_fightEnd:
-                hide screen imreFight_MCAttack
-                hide screen imreFight_MCDefend
-                hide screen fight_overlay
+                # hide screen imreFight_MCAttack
+                # hide screen imreFight_MCDefend
+                # hide screen fight_overlay TODO: Update fight code
                 $ youDamage = 0
                 $ stance = 0
                 stop music fadeout 3

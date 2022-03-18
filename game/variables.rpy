@@ -437,7 +437,7 @@ default pb_kct_notification = False
 default pb_threesome = False
 
 # 16.0
-default v16_baby = "Baby" # Used to store the player designated name of the baby
+default v16_baby_name = "Baby" # Used to store the player designated name of the baby
 default v16_wrong_key = True # This does default to True; not a typo. Used for baby menus
 # Chloe Planning Board 
 
@@ -450,16 +450,19 @@ default v16s1_win_fight_with_tom = False
 default v16s10_let_lauren_continue_hj = False
 default v16s11_sign_up = False
 default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
+default v16s15_fr_carnival = set() # Holds visited scenes for the free roam 
 default v16s20_take_twazzlers = False
 default vs16s15hotdog_coupon = False
 default v16s23_mention_bills = False  # TODO: Variable
 default v16s23_mention_laptop = False # TODO: Variable
 default v16s23_support_amber = False # TODO: Variable
 default v16s25a_date_with_aubrey = False
+default v16s26_lindsey_donation_money = 50 # Track if MC spends any of the money lindsey gives him (can be spend in s32 and s38)
 default v16s27_parent_chloe = False  # True = Chloe; False = Nora
 default v16s27_mc_baby_duty_night = 0 # 0 = Unselected, 1 = Wednesday_alone, 2 = Thrusday_alone, 4 = Friday_alone, 0x10 = Wednesday_shared, 0x20 = Thursday_shared, 0x40 = Friday_shared
 default v16s32_birthday_reservation = 0  # 0 = neither, 1 = standard_reserveration, 2 = birthday_reservation  
 default v16s32_aubrey_cab_and_flowers = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers
+default v16s32_cost_cab_and_flowers = 0 # Tracks the cost of Aubrey's cab ride to MC date
 default v16s34_joke_about_elijah = False # used and checked in v16s34 
 default v16s34_knock_on_svc_door = False # False = walk in 
 default v16s34_get_aggressive_with_elijah = False # False = Laugh
@@ -470,5 +473,8 @@ default v16s39_fr_aubrey_date_list = set() # Tracks player selection during Aubr
 default v16s39_fr_aubrey_date_points = 0
 default v16s39_food_critic = False
 default v16s44_rubius_park_walk = False
+default v16s48_chloe_throws_baby = False
+default v16s50a_dotw = 0   # 0 = nothing, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday
 
 default v16_wintom = False
+default v16_home_riley = False

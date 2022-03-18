@@ -420,12 +420,12 @@ label v16s27:
                 "A different name":
                     # -Player gets to type baby name-
 
-                    $ v16_baby = renpy.input("What's your baby's name?", default=("Plastic").strip())
+                    $ baby.username = v16_baby_name = renpy.input("What's your baby's name?", default=("Plastic").strip())
 
                     scene v16s27_8c
                     with dissolve
 
-                    cl "[v16_baby], huh?"
+                    cl "[v16_baby_name], huh?"
 
                     scene v16s27_8a
                     with dissolve
@@ -474,7 +474,7 @@ label v16s27:
             menu:
                 "Scarlet or Henry?":
                     $ add_point(KCT.BOYFRIEND)
-                    $ v16_baby = "Henry"
+                    $ v16_baby_name = "Henry"
 
                     scene v16s27_9
                     with dissolve
@@ -509,7 +509,7 @@ label v16s27:
                 "Something else":
                     # -Player gets to type baby name-
 
-                    $ v16_baby = renpy.input("What's your baby's name?", default=("Henry").strip())
+                    $ baby.username = v16_baby_name = renpy.input("What's your baby's name?", default=("Henry").strip())
 
                     scene v16s27_9g # FPP. Show just Nora (slight smile, mouth is closed, looking in the air) in a thinking pose sitting in her seat, camera angle is from a seated positon
                     with dissolve
@@ -521,7 +521,7 @@ label v16s27:
                     scene v16s27_9a
                     with dissolve
 
-                    no "Ha, sure. [v16_baby] it is."
+                    no "Ha, sure. [v16_baby_name] it is."
                 
         # -Regardless of baby name-
 
@@ -628,7 +628,7 @@ label v16s27:
             scene v16s27_9
             with dissolve
 
-            u "That sounds great, and I'm happy for you... But let's see how you do at 4am when [v16_baby] needs a diaper change. *Laughs*"
+            u "That sounds great, and I'm happy for you... But let's see how you do at 4am when [v16_baby_name] needs a diaper change. *Laughs*"
 
             scene v16s27_9h # FPP. Show just Nora (half smile, mouth is open, looking at MC) sitting in her seat, camera angle is from a seated positon
             with dissolve

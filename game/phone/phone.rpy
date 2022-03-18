@@ -14,9 +14,8 @@ init python:
             else:
                 return self._image
 
-    config.overlay_screens.append("phone_icon")
+    phone = Phone("phone_icon.webp")
 
-default phone = Phone("phone_icon.webp")
 
 
 screen phone_icon():

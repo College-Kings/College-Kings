@@ -89,7 +89,7 @@ label v16s3:
         scene v16s3_5b # FPP. MC holding the icepack on his head, MC looking at Riley, Riley looking at MC, Riley slight smile, mouth open.
         with dissolve
 
-        ri "Yeah, [name]. frozen things tend to have that effect, haha."
+        ri "Yeah, [name]. Frozen things tend to have that effect, haha."
 
         scene v16s3_5c # FPP. MC holding the icepack on his head, MC looking at Riley, Riley looking at MC, Riley slight smile, mouth closed.
         with dissolve
@@ -295,7 +295,7 @@ label v16s3:
             scene v16s3_5e
             with dissolve
 
-            u "Yup. I can't make it up. She loves it apparently, too."
+            u "Yup. I can't make it up. Apparently she loves it too."
 
             scene v16s3_5d
             with dissolve
