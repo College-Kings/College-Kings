@@ -177,6 +177,8 @@ label move_attack(fight, target, attacker, move, move_damage):
 
 
 label fight_start_turn(fight, target, attacker):
+    hide screen phone_icon
+
     if attacker == fight.player:
         hide screen fight_opponent_turn
 
@@ -284,6 +286,7 @@ label fight_attack_turn(fight, target, attacker, move=None):
     call move_attack(fight, target, attacker, move, damage)
 
     if target.health <= 0:
+        show screen phone_icon
         jump expression fight.end_label
 
     # Set end stance

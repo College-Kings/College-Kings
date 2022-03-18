@@ -21,3 +21,4 @@ init python:
             }
 
             self.move_list = []
+            
