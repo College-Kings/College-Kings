@@ -344,22 +344,22 @@ label tom_fight:
 
         # opponent.base_attacks.append(BodyHook({}))
         opponent.base_attacks.append(Jab({
-            "start_image": "images/v2/fight/tom-stances/tom-jab-start.webp",
-            "hit_image": "images/v2/fight/tom-stances/tom-jab-hit.webp",
-            "blocked_image": "images/v2/fight/tom-stances/tom-jab-blocked.webp"
+            "start_image": "images/v2/fight/tom-base-attacks/tom-jab-start.webp",
+            "hit_image": "images/v2/fight/tom-base-attacks/tom-jab-hit.webp",
+            "blocked_image": "images/v2/fight/tom-base-attacks/tom-jab-blocked.webp"
         }))
         opponent.base_attacks.append(Hook({
-            "start_image": "images/v2/fight/tom-stances/tom-hook-start.webp",
-            "hit_image": "images/v2/fight/tom-stances/tom-hook-hit.webp",
-            "blocked_image": "images/v2/fight/tom-stances/tom-hook-blocked.webp"
+            "start_image": "images/v2/fight/tom-base-attacks/tom-hook-start.webp",
+            "hit_image": "images/v2/fight/tom-base-attacks/tom-hook-hit.webp",
+            "blocked_image": "images/v2/fight/tom-base-attacks/tom-hook-blocked.webp"
         }))
         opponent.base_attacks.append(Kick({
-            "start_image": "images/v2/fight/tom-stances/tom-kick-start.webp",
-            "hit_image": "images/v2/fight/tom-stances/tom-kick-hit.webp",
-            "blocked_image": "images/v2/fight/tom-stances/tom-kick-blocked.webp"
+            "start_image": "images/v2/fight/tom-base-attacks/tom-kick-start.webp",
+            "hit_image": "images/v2/fight/tom-base-attacks/tom-kick-hit.webp",
+            "blocked_image": "images/v2/fight/tom-base-attacks/tom-kick-blocked.webp"
         }))
 
-        opponent.special_attack = Headbutt({})
+        # opponent.special_attack = Headbutt({})
 
         fight = Fight(player, opponent, "tom_fight_end")
 
