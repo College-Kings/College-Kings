@@ -5,44 +5,38 @@ screen achievements():
     default image_path = "images/phone/achievements/appAssets/"
     
     use base_phone:
-        
-        add Transform("images/phone/achievements/appAssets/ach_background.webp", zoom=0.25) at truecenter xoffset 2
+        window:
+            background "images/phone/achievements/appAssets/ach_background.webp"
+            align (0.5, 0.5)
+            xoffset 3
+            xysize (416, 906)
 
-        viewport:
-            xysize (450, 640)
-            pos (770, 246)
-            mousewheel True
-            draggable True
+            viewport:
+                ypos 128
+                ysize 710
+                mousewheel True
+                draggable True
 
-            vbox:
-                spacing 20
-                yminimum 100
-                ymaximum 150
-                
-                for ach in achievements:
+                vbox:
+                    spacing 20
 
-                    if achievement.has(ach.achievement):
-                        frame:
-                            xsize 450
-                            xoffset -15
-                            padding (10, 10)
-                            background Transform(image_path + "ach_unlocked.webp", xysize=(415, 115))
+                    for ach in achievements:
+                        if achievement.has(ach.achievement):
+                            frame:
+                                padding (10, 10)
+                                background Transform(image_path + "ach_unlocked.webp", xysize=(415, 115))
 
-                            vbox:
-                                
-                                text ach.display_name.upper() style "achievements_display_name" yoffset 25 xoffset 50
-                                text ach.text.upper() style "achievements_text" yoffset 25 xoffset 50 xmaximum 310
-                    else:
-                        frame:
-                            xsize 450 
-                            xoffset -15
-                            padding (10, 10)
-                            background Transform(image_path + "ach_locked.webp", xysize=(415, 115))
+                                vbox:
+                                    text ach.display_name.upper() style "achievements_display_name" yoffset 25 xoffset 50
+                                    text ach.text.upper() style "achievements_text" yoffset 25 xoffset 50 xmaximum 310
+                        else:
+                            frame:
+                                padding (10, 10)
+                                background Transform(image_path + "ach_locked.webp", xysize=(415, 115))
 
-                            vbox:
-
-                                text ach.display_name.upper() style "achievements_display_name_locked" yoffset 25 xoffset 50
-                                text "ACHIEVEMENT LOCKED" style "achievement_locked_text" yoffset 25 xoffset 50
+                                vbox:
+                                    text ach.display_name.upper() style "achievements_display_name_locked" yoffset 25 xoffset 50
+                                    text "ACHIEVEMENT LOCKED" style "achievement_locked_text" yoffset 25 xoffset 50
 
 
 style achievements_display_name is text:
