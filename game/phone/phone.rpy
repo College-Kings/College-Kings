@@ -69,14 +69,14 @@ screen base_phone():
         if not renpy.get_screen("phone"):
             imagebutton:
                 if renpy.get_screen("kiwiiPost") or renpy.get_screen("kiwiiApp") or renpy.get_screen("kiwiiPreferences"):
-                    idle Transform("images/phone/home_button_kiwii_idle.webp", size=(40,40))
-                    hover Transform("images/phone/home_button_kiwii_hover.webp", size=(40,40))
+                    idle "images/phone/home_button_kiwii_idle.webp"
+                    hover "images/phone/home_button_kiwii_hover.webp"
                 else:
-                    idle Transform("images/phone/home_button_idle.webp", size=(55,55))
-                    hover Transform("images/phone/home_button_hover.webp", size=(55,55))
+                    idle "images/phone/home_button_idle.webp"
+                    hover "images/phone/home_button_hover.webp"
                 action [Hide("messenger_reply"), Show("phone")]
                 align (0.5, 1.0)
-                yoffset -10
+                yoffset -15
                 
 
 screen base_phone_rotated():
@@ -111,14 +111,14 @@ screen base_phone_rotated():
         if not renpy.get_screen("phone"):
             imagebutton:
                 if renpy.get_screen("kiwiiPost") or renpy.get_screen("kiwiiApp") or renpy.get_screen("kiwiiPreferences"):
-                    idle Transform("images/phone/home_button_kiwii_idle.webp", size=(40,40))
-                    hover Transform("images/phone/home_button_kiwii_hover.webp", size=(40,40))
+                    idle "images/phone/home_button_kiwii_idle.webp"
+                    hover "images/phone/home_button_kiwii_hover.webp"
                 else:
-                    idle Transform("images/phone/home_button_idle.webp", size=(55,55))
-                    hover Transform("images/phone/home_button_hover.webp", size=(55,55))
+                    idle "images/phone/home_button_idle.webp"
+                    hover "images/phone/home_button_hover.webp"
                 action [Hide("messenger_reply"), Show("phone")]
                 align (0.5, 1.0)
-                yoffset -10
+                yoffset -15
 
 screen phone():
     tag phone_tag
