@@ -480,5 +480,8 @@ default v16s39_food_critic = False
 default v16s44_rubius_park_walk = False
 default v16s48_chloe_throws_baby = False
 default v16s50a_dotw = 0   # 0 = nothing, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday
+default v16s52_mc_dogshelter_kiwii_post = False  
+default v16s55_lindsey_question_set = set() # Possible values: three_positives  , important_quality  , random_kindness
+default v16s55_lindsey_followup_question_set = set() # Possible values: sounds_great or make_suggestion, thatll_do or expand, thats_good or ask_why, more_advice or finish_up
 default v16s57_agree_with_samantha_or_cameron = 0    # 0 = Stay out of it, 1 = Samantha, 2 = Cameron 
 default v16s59_just_knock = False  #  True == just knock on polly's door / False = Calm Lindsey down before knocking
