@@ -52,7 +52,9 @@ image warning_background_blue = Frame("gui/warning/background_blue.webp", 42, 8,
 image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm", loop=False)
 
 # Phone
-image message_background = Frame("images/phone/messages/appAssets/message-background.webp", 20, 20)
+image message_background = Frame("images/phone/messenger/app-assets/message-background.webp", 20, 20)
+image reply_background_idle = Frame("images/phone/messenger/app-assets/reply-background-idle.webp", 20, 20)
+image reply_background_hover = Frame("images/phone/messenger/app-assets/reply-background-hover.webp", 20, 20)
 
 # Fights
 image fight_guard_animation:
