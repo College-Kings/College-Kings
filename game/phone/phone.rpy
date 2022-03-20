@@ -1,21 +1,24 @@
 init python:
     class Phone:
         def __init__(self, image):
-            self._image = "images/phone/{}".format(image)
+            self.base_image = "images/phone/{}".format(image)
 
             self.applications = []
 
         @property
+        def notification(self):
+            return any(app.notification for app in self.applications)
+
+        @property
         def image(self):
-            file_name, extention = os.path.splitext(self._image)
+            if not self.notification:
+                return self.base_image
 
-            if any(app.notification for app in self.applications):
-                return file_name + "_notification" + extention
-            else:
-                return self._image
+            file_name, extention = os.path.splitext(self.base_image) 
+            return file_name + "-notification" + extention
 
-    phone = Phone("phone_icon.webp")
 
+    phone = Phone("phone-icon.webp")
 
 
 screen phone_icon():
@@ -67,16 +70,19 @@ screen base_phone():
         transclude
 
         if not renpy.get_screen("phone"):
-            imagebutton:
-                if renpy.get_screen("kiwiiPost") or renpy.get_screen("kiwiiApp") or renpy.get_screen("kiwiiPreferences"):
-                    idle "images/phone/home_button_kiwii_idle.webp"
-                    hover "images/phone/home_button_kiwii_hover.webp"
-                else:
-                    idle "images/phone/home_button_idle.webp"
-                    hover "images/phone/home_button_hover.webp"
-                action [Hide("messenger_reply"), Show("phone")]
-                align (0.5, 1.0)
-                yoffset -15
+            fixed:
+                ysize 69
+                ypos 843
+
+                imagebutton:
+                    if renpy.get_screen("kiwiiPost") or renpy.get_screen("kiwiiApp") or renpy.get_screen("kiwiiPreferences"):
+                        idle "images/phone/home_button_kiwii_idle.webp"
+                        hover "images/phone/home_button_kiwii_hover.webp"
+                    else:
+                        idle "images/phone/home_button_idle.webp"
+                        hover "images/phone/home_button_hover.webp"
+                    action [Hide("messenger_reply"), Show("phone")]
+                    align (0.5, 0.5)
                 
 
 screen base_phone_rotated():
@@ -131,15 +137,13 @@ screen phone():
             xalign 0.5
             ypos 100
             
-
             for app in phone.applications:
-                if not app.locked:
-                    vbox:
-                        imagebutton:
-                            idle Transform(app.image, size=(100, 100))
-                            action [Function(renpy.retain_after_load), Show(app.home_screen)]
-                                
-                        text app.name style "applabels"
+                vbox:
+                    imagebutton:
+                        idle app.image
+                        action [Function(renpy.retain_after_load), Show(app.home_screen)]
+                            
+                    text app.name style "application_name" xalign 0.5
         
 
 transform center_rotation(amount):
