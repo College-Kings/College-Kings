@@ -1,10 +1,24 @@
 init python:
     class Contact:
-        def __init__(self, name, locked=True):
+        def __init__(self, name):
             self.name = name
-            self.locked = locked
             self.sent_messages = []
             self.pending_messages = []
+            self._notification = False
+
+        @property
+        def notification(self):
+            if not self.sent_messages and not self.pending_messages:
+                return False
+            
+            if self.replies:
+                return True
+
+            return self._notification
+
+        @notification.setter
+        def notification(self, value):
+            self._notification = value
 
         @property
         def profile_picture(self):
@@ -33,7 +47,7 @@ init python:
                 self.sent_messages.append(message)
 
             self.unlock()
-            messenger.notification = True
+            self.notification = True
             
             return message
 
@@ -51,7 +65,7 @@ init python:
                 self.sent_messages.append(message)
 
             self.unlock()
-            messenger.notification = True
+            self.notification = True
 
             return message
 
@@ -72,6 +86,7 @@ init python:
                 message.replies.append(reply)
 
             self.unlock()
+            self.notification = True
 
         def add_image_reply(self, img, func=None, newMessage=False, disabled=False):
             reply = ImgReply(img, func, disabled)
@@ -90,6 +105,7 @@ init python:
                 message.replies.append(reply)
 
             self.unlock()
+            self.notification = True
 
         def selected_reply(self, reply):
             self.sent_messages.append(reply)
@@ -107,10 +123,6 @@ init python:
                 while not self.replies:
                     self.sent_messages.append(self.pending_messages.pop(0))
             except IndexError: pass
-
-            # Check if all replies been sent
-            if not any([contact.replies for contact in messenger.contacts]):
-                messenger.notification = False
 
         def unlock(self):
             if self not in messenger.contacts:
@@ -171,15 +183,21 @@ init python:
             self.disabled = disabled
 
 
-screen messenger_contacts():
+    def reply_focus_mask(x_offset, y_offset):    
+        if y_offset > 50 and x_offset > 50:
+            return True
+
+        return False
+
+
+screen messenger_home():
     tag phone_tag
 
-    default image_path = "images/phone/messages/appAssets/"
-
+    default image_path = "images/phone/messenger/app-assets/"
 
     use base_phone:
         frame:
-            background image_path + "contacts_screen.webp"
+            background image_path + "home-background.webp"
             xysize (433, 918)
 
             viewport:
@@ -194,32 +212,30 @@ screen messenger_contacts():
                     null height 10
 
                     for contact in messenger.contacts:
-                        if not contact.locked:
-                            button:
-                                action [Function(renpy.retain_after_load), Show("messager", contact=contact)]
-                                ysize 80
+                        button:
+                            action [Function(renpy.retain_after_load), SetField(contact, "notification", False), Show("messager", contact=contact)]
+                            ysize 80
 
-                                add Transform(contact.profile_picture, size=(65, 65)) xpos 20 yalign 0.5
-                                
-                                text contact.name style "nametext" xpos 100 yalign 0.5
+                            add Transform(contact.profile_picture, size=(65, 65)) xpos 20 yalign 0.5
+                            
+                            text contact.name style "nametext" xpos 100 yalign 0.5
 
-                                if contact.replies:
-                                    add image_path + "contact-notification.webp" align (1.0, 0.5) xoffset -25
+                            if contact.notification:
+                                add image_path + "contact-notification.webp" align (1.0, 0.5) xoffset -25
 
 
 screen messager(contact=None):
     tag phone_tag
-    zorder 200
     modal True
 
-    default image_path = "images/phone/messages/appAssets/"
+    default image_path = "images/phone/messenger/app-assets/"
 
     python:
         yadj.value = yadjValue
 
     use base_phone:
         frame:
-            background image_path + "convo_screen.webp"
+            background image_path + "conversation-background.webp"
             xysize (433, 918)
 
             hbox:
@@ -228,8 +244,8 @@ screen messager(contact=None):
                 spacing 15
 
                 imagebutton:
-                    idle image_path + "back_button.webp"
-                    action [Hide("messenger_reply"), Show("messenger_contacts")]
+                    idle image_path + "back-button.webp"
+                    action [Hide("messenger_reply"), Show("messenger_home")]
                     yalign 0.5
 
                 add Transform(contact.profile_picture, size=(65, 65)) yalign 0.5
@@ -275,53 +291,48 @@ screen messager(contact=None):
                                     idle Transform(message.image, ysize=216)
                                     action Show("phone_image", img=message.image)
 
-            if contact.replies or True:
-                button:
-                    action Show("messenger_reply", contact=contact)
+            if contact.replies:
+                fixed:
                     xysize (416, 63)
                     ypos 780
 
-                    add image_path + "reply-button.webp" xalign 0.5
+                    imagebutton:
+                        idle image_path + "reply-button-idle.webp"
+                        hover image_path + "reply-button-hover.webp"
+                        selected_idle image_path + "reply-button-hover.webp"
+                        action Show("messenger_reply", contact=contact)
+                        align (0.5, 0.5)
 
     if kiwii_firstTime:
         on "show" action Show("kiwiiPopup")
 
 
 screen messenger_reply(contact=None):
-    zorder 200
-
     vbox:
         xpos 1200
-        yalign 0.84
-        spacing 15
+        yalign 1.0
+        yoffset -100
+        spacing -75
 
         for reply in contact.replies:
-            if isinstance(reply, Reply):
-                textbutton reply.message:
-                    if reply.disabled:
-                        style "reply_disabled"
-                        text_style "replies_style_text"
-                    else:
-                        style "replies_style"
-                        action [Hide("messenger_reply"), Function(contact.selected_reply, reply)]
+            button:
+                idle_background "reply_background_idle"
+                hover_background "reply_background_hover"
+                padding (75, 65)
+                focus_mask reply_focus_mask
+                action [Hide("messenger_reply"), Function(contact.selected_reply, reply)]
 
-            elif isinstance(reply, ImgReply):
-                imagebutton:
-                    idle Transform(reply.image, zoom=0.15)
-                    if reply.disabled:
-                        style "reply_disabled"
-                    else:
-                        style "replies_style"
-                        action [Hide("messenger_reply"), Function(contact.selected_reply, reply)]
+                if isinstance(reply, Reply):
+                    text reply.message style "reply_text"
+
+                elif isinstance(reply, ImgReply):
+                    add Transform(reply.image, zoom=0.15)
 
 
 screen phone_image(img=None):
     modal True
-    zorder 200
-    
-    python:
-        if os.path.splitext(img)[0][-3:] != "big":
-            bigImage = os.path.splitext(img)[0] + "big" + os.path.splitext(img)[1]
+
+    $ bigImage = os.path.splitext(img)[0] + "big" + os.path.splitext(img)[1]
 
     add "darker_80"
     if renpy.loadable(bigImage):
