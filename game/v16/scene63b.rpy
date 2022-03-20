@@ -1,7 +1,7 @@
 # SCENE 63b: Kissing conversation
 # Locations: Chicks Living Room
-# Characters: MC (Outfit: 2), JENNY (Outfit: 1), LINDSEY (Outfit: 3), NORA (Outfit: 2), CHLOE (Outfit: 1), AUBREY (Outfit: 1)
-# Time: Night 
+# Characters: MC (Outfit: 2), JENNY (Outfit: Towel from s63), LINDSEY (Outfit: Towel from s63), NORA (Outfit: Towel from s63), CHLOE (Outfit: Towel from s63), AUBREY (Outfit: Towel from s63)
+# Time: Thursday Night 
 
 
 label v16s63b:
@@ -26,7 +26,7 @@ label v16s63b:
 
     pause 0.75
 
-    scene v16s63b_2a
+    scene v16s63b_2
     with dissolve
 
     u "Haha, good idea."
@@ -106,7 +106,7 @@ label v16s63b:
 
     no "Remember we played spin the bottle in Paris, and we had to kiss? Ha."
 
-    scene v16s63b_7b # FPP. Show Just Chloe (slight smile, mouth is closed, looking at Nora)
+    scene v16s63b_7b # FPP. Show Just Chloe (slight smile, mouth is open, looking at Nora)
     with dissolve
 
     cl "Haha, yeah, I remember. That was kind of awkward."
@@ -670,7 +670,7 @@ label v16s63b:
 
             u "Yeah, I figured."
 
-            scene v16s63b_25a
+            scene v16s63b_25b
             with dissolve
 
             no "I bet you're happy you came tonight."
@@ -695,7 +695,7 @@ label v16s63b:
 
             u "Yes. I promise!"
 
-            scene v16s63b_2g
+            scene v16s63b_2a
             with dissolve
 
             jen "Because if you did, I want a copy. *Laughs*"
@@ -746,7 +746,7 @@ label v16s63b:
 
             u "Oh, pfft... I just want it to be a fairly judged competition."
 
-            scene v16s63b_2g
+            scene v16s63b_2c
             with dissolve
 
             jen "Right... So honorable!"
@@ -763,7 +763,7 @@ label v16s63b:
 
             u "I think I'm the real winner tonight if I'm being honest..."
 
-            scene v16s63b_25a
+            scene v16s63b_25b
             with dissolve
 
             no "Haha, you might be right."
@@ -820,7 +820,7 @@ label v16s63b:
 
     u "Yeah, sure thing."
 
-    scene v16s63b_25f # FPP. Show just Chloe (no expression, mouth is open, looking at Chloe)
+    scene v16s63b_25f # FPP. Show just Nora (no expression, mouth is open, looking at Chloe)
     with dissolve
 
     no "What about Lindsey? Shouldn't we wait?"
@@ -852,19 +852,23 @@ label v16s63b:
 
         "Another compliment":
 
-            scene v16s63b_31 # FPP. Show just MC (slight smile, mouth is closed, looking at the paper) writing on a piece of paper
+            $ v16s63x_chloe_suggestion_set.add("v16s63b_compliment")
+
+            scene v16s63b_31 # TPP. Show just MC (slight smile, mouth is closed, looking at the paper) writing on a piece of paper
             with dissolve
 
             u "(Let's put... \"Keep doing what you're doing!\".)"
 
-            scene v16s63b_31a # FPP. MC (slight smile, mouth is closed, looking at the suggestion box) puts the paper in the box 
+            scene v16s63b_31a # TPP. MC (slight smile, mouth is closed, looking at the suggestion box) puts the paper in the box 
             with dissolve
 
             pause 0.75
 
         "Suggest a breath mint":
 
-            scene v16s63b_31b # FPP. Show just MC (smirking expression, mouth is closed, looking at the paper) on a piece of paper
+            $ v16s63x_chloe_suggestion_set.add("v16s63b_breath_mint")
+
+            scene v16s63b_31b # TPP. Show just MC (smirking expression, mouth is closed, looking at the paper) on a piece of paper
             with dissolve
 
             u "(I'll suggest that she buys some mints for her stinky breath... Heh... I feel like stirring up the pot a little bit.)"
@@ -874,9 +878,9 @@ label v16s63b:
 
             u "(Plus, after that kissing session, I'm the only one she won't expect to have written this. Perfect!)"
 
-        "Don't add anything"
+        "Don't add anything":
         
-            scene v16s63b_31c # FPP. Show just MC (slight smile, mouth is closed, looking at the suggestion box)
+            scene v16s63b_31c # TPP. Show just MC (slight smile, mouth is closed, looking at the suggestion box)
             with dissolve
 
             u "(Actually, let's not.)"
