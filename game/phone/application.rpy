@@ -4,15 +4,12 @@ init python:
             self.name = name
             self.home_screen = "{}_home".format(self.name.lower())
             
+            self.notification = False
             self.contacts = []
 
         @property
         def image(self):
             return "images/phone/{}/app-assets/icon{}.webp".format(self.name.lower(), "-notification" if self.notification else "")
-
-        @property
-        def notification(self):
-            return False
 
     
     class Messenger(Application):
@@ -23,9 +20,14 @@ init python:
         def notification(self):
             return any(contact.notification for contact in self.contacts)
 
+        @notification.setter
+        def notification(self, value):
+            pass
+
+
 default messenger = Messenger()
-default stats_app = Application("KCT", "stats/appAssets/statsIcon.webp", "stats", locked=True)
-default achievement_app = Application("Achievements", "achievements/appAssets/achievementsIcon.webp", "achievements")
-default kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=True)
+default stats_app = Application("KCT")
+default achievement_app = Application("Achievements")
+default kiwii = Application("Kiwii")
 default simplr_app = Application("Simplr", "simplr/appAssets/simplrIcon.webp", "simplr_app", locked=True)
 default relationship_app = Application("Relationships", "relationships/appAssets/relationships_icon.webp", "relationship_app", locked=False)
