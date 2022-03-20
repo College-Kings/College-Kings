@@ -194,7 +194,7 @@ screen simplr_contacts():
                             action [Function(renpy.retain_after_load), SetField(contact, "notification", False), Show("simplr_messenger", contact=contact)]
                             ysize 80
 
-                            add Transform(contact.profile_picture, size=(65, 65)) xpos 20 yalign 0.5
+                            add Transform(contact.profile_picture, xysize=(65, 65)) xpos 20 yalign 0.5
                             
                             text contact.name style "nametext" xpos 100 yalign 0.5
 
@@ -226,7 +226,7 @@ screen simplr_messenger(contact):
                     action [Hide("message_reply"), Show("simplr_home")]
                     yalign 0.5
 
-                add Transform(contact.profile_picture, size=(65, 65)) yalign 0.5
+                add Transform(contact.profile_picture, xysize=(65, 65)) yalign 0.5
 
                 text contact.name style "nametext" yalign 0.5
 

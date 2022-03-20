@@ -234,7 +234,7 @@ screen kiwii_preferences():
                 xalign 0.5
                 spacing 5
 
-                add Transform(mc.profile_picture, size=(200, 200)) xalign 0.5
+                add Transform(mc.profile_picture, xysize=(200, 200)) xalign 0.5
 
                 hbox:
                     spacing 50
@@ -308,7 +308,7 @@ screen kiwii_home(posts=kiwiiPosts):
                             hbox:
                                 spacing 10
 
-                                add Transform(post.profile_picture, size=(55, 55))
+                                add Transform(post.profile_picture, xysize=(55, 55))
                                 text post.username style "kiwii_ProfileName" yalign 0.5
 
                             hbox:
@@ -324,7 +324,7 @@ screen kiwii_home(posts=kiwiiPosts):
                             spacing 5
 
                             imagebutton:
-                                idle Transform(post.image, size=(366, 206))
+                                idle Transform(post.image, xysize=(366, 206))
                                 action Show("kiwii_image", img=post.image)
                                 xalign 0.5
                             text post.get_message() style "kiwii_CommentText" xalign 0.5
@@ -359,7 +359,7 @@ screen kiwiiPost(post):
 
     use kiwii_base:
         imagebutton:
-            idle Transform(post.image, size=(416, 234))
+            idle Transform(post.image, xysize=(416, 234))
             action Show("kiwii_image", img=post.image)
             xalign 0.5
             ypos 152
@@ -383,7 +383,7 @@ screen kiwiiPost(post):
                             hbox:
                                 spacing 10
 
-                                add Transform(comment.profile_picture, size=(55, 55))
+                                add Transform(comment.profile_picture, xysize=(55, 55))
                                 text comment.username style "kiwii_ProfileName" yalign 0.5
 
                             text comment.get_message() style "kiwii_CommentText"
