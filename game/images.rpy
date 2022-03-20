@@ -64,6 +64,9 @@ image reply_button_idle = "images/phone/common/reply-button-idle.webp"
 image achievement_locked = Frame("images/phone/achievements/app-assets/achievement-locked.webp", 20, 20)
 image achievement_unlocked = Frame("images/phone/achievements/app-assets/achievement-unlocked.webp", 20, 20)
 
+## Relationships
+image relationships_frame_background = Frame("images/phone/relationships/app-assets/frame-background.webp")
+
 # Fights
 image fight_guard_animation:
     "#000070" with Dissolve(0.5)

@@ -61,7 +61,7 @@ screen base_phone():
             else:
                 action [Hide("tutorial"), Hide("message_reply"), Return()]
 
-    window:
+    frame:
         background "images/phone/phone_screen.webp"
         align (0.5, 0.5)
         xysize (433, 918)
@@ -105,16 +105,17 @@ screen base_phone_rotated():
             else:
                 action [Hide("tutorial"), Hide("message_reply"), Return()]
 
-    window:
-        background "images/phone/phone_screen.webp"
+    frame:
         align (0.5, 0.5)
-        xysize (433, 918)
+        xysize (918, 433)
         modal True
-        at center_rotation(-90)
 
         transclude
 
-        if not renpy.get_screen("phone"):
+        fixed:
+            xsize 69
+            xpos 844
+
             imagebutton:
                 if renpy.get_screen("kiwiiPost") or renpy.get_screen("kiwiiApp") or renpy.get_screen("kiwiiPreferences"):
                     idle "images/phone/home_button_kiwii_idle.webp"
@@ -123,8 +124,7 @@ screen base_phone_rotated():
                     idle "images/phone/home_button_idle.webp"
                     hover "images/phone/home_button_hover.webp"
                 action [Hide("message_reply"), Show("phone")]
-                align (0.5, 1.0)
-                yoffset -15
+                align (0.5, 0.5)
 
 screen phone():
     tag phone_tag
@@ -147,9 +147,3 @@ screen phone():
                             
                     text app.name style "application_name" xalign 0.5
         
-
-transform center_rotation(amount):
-    around (0.5, 0.5)
-    alignaround (0.5, 0.5)
-    align (0.5, 0.5)
-    rotate amount

@@ -1,68 +1,37 @@
-screen relationship_app():
+screen relationships_home():
     tag phone_tag
 
+    default image_path = "images/phone/relationships/app-assets/"
+
     use base_phone_rotated:
-
-        default image_path = "images/phone/relationships/appAssets/"
-
-        add Transform(image_path + "rela_bg.webp", zoom=0.40) at truecenter yoffset 3 xoffset 1
+        frame:
+            background image_path + "background.webp"
             
-        vpgrid:
-            mousewheel True
-            draggable True
-            cols 3
-            rows 6
-            xspacing 30
-            yspacing 30
-            xoffset 50
-            xysize (1230, 490)
-            pos (410, 340)
+            vpgrid:
+                mousewheel True
+                draggable True
+                cols 3
+                rows 6
+                spacing 25
+                pos (85, 85)
+                xysize (765, 335)
 
-            for girl in relationship_girls:
+                for girl in relationship_girls:
+                    frame:
+                        padding (10, 10)
+                        xsize 238
+                        background "relationships_frame_background"
 
-                frame:
-                    padding(10, 10)
-                    xsize 350
-                    background Transform(image_path + "button_bg.webp".format(girl.name), xysize=(350,125))
+                        hbox:
+                            spacing 15
 
-                    vbox:
-                        text girl.name yoffset 15 xoffset 50 size 30
+                            add Transform(girl.profile_picture, xysize=(65, 65)) yalign 0.5
 
-                        if girl.relationship < Relationship.FRIEND: #lindsey should be replaced by girl name
-                            text "Complicated":
-                                size 20
-                                color "#FFD166"
-                                yoffset 10 xoffset 50
-                        elif girl.relationship < Relationship.KISS: # Penelope needs an exception
-                            if girl == "penelope" and girl.relationship < Relationship.LIKES:
-                                text "Kissed":
+                            vbox:
+                                yalign 0.5
+
+                                text girl.name
+
+                                text girl.relationship.name.capitalize():
                                     size 20
                                     color "#FFD166"
-                                    yoffset 10 xoffset 50                      
-                            else:
-                                text "Friends":
-                                    size 20
-                                    color "#FFD166"
-                                    yoffset 10 xoffset 50
-
-                        elif girl.relationship == Relationship.KISS:
-                            text "Kissed":
-                                size 20
-                                color "#FFD166"
-                                yoffset 10 xoffset 50
-
-                        elif girl.relationship == Relationship.FWB:
-                            text "Friends with Benefits":
-                                size 20
-                                color "#FFD166"
-                                yoffset 10 xoffset 50
-                        elif girl.relationship == Relationship.LOYAL and girl == "autumn":
-                            text "Trust":
-                                size 20
-                                color "#FFD166"
-                                yoffset 10 xoffset 50
-                        else:
-                            text "Dating":
-                                size 20
-                                color "#FFD166" 
-                                yoffset 10 xoffset 50 
