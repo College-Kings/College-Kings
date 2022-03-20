@@ -1,168 +1,96 @@
-init python:
-    statsInfos = []
-
-    class StatsInfo:
-        def __init__(self, title, info, textColor):
-            self.title = title
-            self.info = info
-            self.textColor = textColor
-
-            statsInfos.append(self)
-
-    StatsInfo("Popular", "Popular individuals are loved by the crowd and are often considered for important decisions. They prioritize their image and status over helping others.", "#1C69B9")
-    StatsInfo("Loyal", "Loyal individuals care about other people and gain trust easily. They are known to be responsible, but can be a bit of a buzzkill when it comes to doing crazy stuff.", "#DC9D05")
-    StatsInfo("Confident", "Confident individuals don’t rely on others to join them in their actions. They don’t crave their friends' approval, however they can be perceived as egotistical.", "#be66a8")
-
-screen stats():
+screen kct_home():
     tag phone_tag
-    zorder 200
 
-    default image_path = "images/phone/stats/appAssets/"
+    default image_path = "images/phone/kct/app-assets/"
+
+    default kct_info = [
+        {
+            "title": "Popular",
+            "text": "Popular individuals are loved by the crowd and are often considered for important decisions. They prioritize their image and status over helping others.",
+            "text_color": "#1C69B9"
+        },
+        {
+            "title": "Loyal",
+            "text": "Loyal individuals care about other people and gain trust easily. They are known to be responsible, but can be a bit of a buzzkill when it comes to doing crazy stuff.",
+            "text_color": "DC9D05"
+        },
+        {
+            "title": "Confident",
+            "text": "Confident individuals don't rely on others to join them in their actions. They don't crave their friends' approval, however they can be perceived as egotistical.",
+            "text_color": "#be66a8"
+        }
+    ]
+    default kct_info_index = 0
 
     use base_phone:
-
-        add Transform( image_path + "kct_background.webp" , zoom=0.25) at truecenter xoffset 2
-
-        add Transform( image_path + "kct_diagram.webp", zoom=0.3334):
-            yalign 0.5
-            xalign 0.05
-
-        add Transform(image_path + "kct_box.webp" , zoom=0.3334):
-            xalign 0.975
-            yalign 0.5
-
-        ## Stats Info
-        text statsInfos[statsPage - 1].title.upper():
-            style "statstitle"
-            if statsInfos[statsPage - 1].title == "Popular":
-                xalign 0.8375
-            elif statsInfos[statsPage - 1].title == "Confident":
-                xalign 0.8525
-            elif statsInfos[statsPage - 1].title == "Loyal":
-                xalign 0.835
-
-        text statsInfos[statsPage - 1].info style "statstext"
-
-        fixed:
-            xysize(650, 85)
-            pos(1200, 525)
-
-            hbox:
-                align(0.5, 0.5)
-
-                imagebutton:
-                    idle Transform(image_path + "left_button_idle.webp", zoom=0.75)
-                    hover Transform(image_path + "left_button_hover.webp", zoom=0.75)
-                    if statsPage > 1:
-                        action SetVariable("statsPage", statsPage - 1)
-                    else:
-                        action SetVariable("statsPage", 3)
-                    xoffset -226
-
-                imagebutton:
-                    idle Transform(image_path + "right_button_idle.webp", zoom=0.75)
-                    hover Transform(image_path + "right_button_hover.webp", zoom=0.75)
-                    if statsPage < 3:
-                        action SetVariable("statsPage", statsPage + 1)
-                    else:
-                        action SetVariable("statsPage", 1)
-                    xoffset 294
+        add image_path + "kct-background.webp"
 
         vbox:
-            align (0.525, 0.30)
-            spacing 40
-                    
+            xalign 0.5
+            ypos 300
+            spacing 20
 
-            if sortedKCT[0] == "popular":
+            for count, kct in enumerate(sortedKCT, start=1):
                 frame:
-                    xsize 450
-                    xoffset -15
-                    padding (0, 10)
-                    background Transform(image_path + "kct_popular.webp", xysize=(415, 125))
+                    background image_path + "kct-{}.webp".format(kct.lower() if count == 1 else "disabled")
+                    xysize (320, 79)
 
-                    text "1. " + sortedKCT[0].upper() color "#fff" yoffset 30 xoffset 50
+                    text "{}. {}".format(count, kct.upper()):
+                        align (0.5, 0.5)
+                        if count == 1:
+                            color "#fff"
+                        elif kct.lower() == "confident":
+                            color "#be66a8"
+                        elif kct.lower() == "loyal":
+                            color "#DC9D05"
+                        elif kct.lower() == "popular":
+                            color "#1C69B9"
 
-            elif sortedKCT[0] == "loyal":
-                frame:
-                    xsize 450
-                    xoffset -15
-                    padding (0, 10)
-                    background Transform(image_path + "kct_loyal.webp", xysize=(415, 125))
+    add image_path + "kct-diagram.webp" xpos 150 yalign 0.5
 
-                    text "1. " + sortedKCT[0].upper() color "#fff" yoffset 30 xoffset 50
-            else:
-                frame:
-                    xsize 450
-                    xoffset -15
-                    padding (0, 10)
-                    background Transform(image_path + "kct_confident.webp", xysize=(415, 125))
+    frame:
+        background image_path + "kct-box-background.webp"
+        xpos 1200
+        yalign 0.5
+        xysize (535, 330)
 
-                    text "1. " + sortedKCT[0].upper() color "#fff" yoffset 30 xoffset 50
+        fixed:
+            ysize 28
+            ypos 6
 
-            if sortedKCT[1] == "popular":
-                frame:
-                    xsize 450
-                    xoffset -15
-                    padding (0, 10)
-                    background Transform(image_path + "kct_disabled.webp", xysize=(415, 125))
+            text kct_info[kct_info_index]["title"].upper():
+                style "kct_info_title"
+                align (0.5, 0.5)
 
-                    text "2. " + sortedKCT[1].upper() color "#1C69B9" yoffset 30 xoffset 50
+        fixed:
+            ysize 281
+            ypos 42
 
-            elif sortedKCT[1] == "loyal":
-                frame:
-                    xsize 450
-                    xoffset -15
-                    padding (0, 10)
-                    background Transform(image_path + "kct_disabled.webp", xysize=(415, 125))
+            imagebutton:
+                idle image_path + "left-button-idle.webp"
+                hover image_path + "left-button-hover.webp"
+                action SetScreenVariable("kct_info_index", max(0, kct_info_index - 1))
+                yalign 0.5
 
-                    text "2. " + sortedKCT[1].upper() color "#DC9D05" yoffset 30 xoffset 50
-            else:
-                frame:
-                    xsize 450
-                    xoffset -15
-                    padding (0, 10)
-                    background Transform(image_path + "kct_disabled.webp", xysize=(415, 125))
+            text kct_info[kct_info_index]["text"]:
+                style "kct_info_text"
+                xsize 415
+                align (0.5, 0.5)
 
-                    text "2. " + sortedKCT[1].upper() color "#be66a8" yoffset 30 xoffset 50
+            imagebutton:
+                idle image_path + "right-button-idle.webp"
+                hover image_path + "right-button-hover.webp"
+                action SetScreenVariable("kct_info_index", min(kct_info_index + 1, len(kct_info) - 1))
+                align (1.0, 0.5)
 
-            if sortedKCT[2] == "popular":
-                frame:
-                    xsize 450
-                    xoffset -15
-                    padding (0, 10)
-                    background Transform(image_path + "kct_disabled.webp", xysize=(415, 125))
 
-                    text "3. " + sortedKCT[2].upper() color "#1C69B9" yoffset 30 xoffset 50
-
-            elif sortedKCT[2] == "loyal":
-                frame:
-                    xsize 450
-                    xoffset -15
-                    padding (0, 10)
-                    background Transform(image_path + "kct_disabled.webp", xysize=(415, 125))
-
-                    text "3. " + sortedKCT[2].upper() color "#DC9D05" yoffset 30 xoffset 50
-            else:
-                frame:
-                    xsize 450
-                    xoffset -15
-                    padding (0, 10)
-                    background Transform(image_path + "kct_disabled.webp", xysize=(415, 125))
-
-                    text "3. " + sortedKCT[2].upper() color "#be66a8" yoffset 30 xoffset 50
-
-style statstitle is text:
-    font "fonts/Syne-Bold.ttf"
-    size 30
-    text_align 0.5
-    ypos 345
+style kct_info_title is text:
+    font "fonts/Syne-ExtraBold.ttf"
+    size 19
     color "#ffffff"
 
-style statstext is text:
+style kct_info_text is text:
     font "fonts/Effra-Regular.ttf"
-    size 25
-    color "#ffffff"
+    size 23
+    color "#fff"
     text_align 0.5
-    xpos 1325
-    ypos 485
-    xmaximum 450
