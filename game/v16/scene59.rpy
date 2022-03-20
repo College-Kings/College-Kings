@@ -262,6 +262,8 @@ label v16s59:
         menu:
 
             "The hotel": # (SUCCESS)
+
+                $ v16s59_polly_endorse_lindsey = True 
                 $ add_point(KCT.BRO)
 
                 scene v16s59_4l
@@ -741,6 +743,8 @@ label v16s59:
         menu:
 
             "Interrupt Lindsey": # (SUCCESS)
+            
+                $ v16s59_polly_endorse_lindsey = True
                 $ add_point(KCT.BOYFRIEND)
                 $ add_point(KCT.BRO)
 
