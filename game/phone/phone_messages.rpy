@@ -174,34 +174,37 @@ init python:
 screen messenger_contacts():
     tag phone_tag
 
+    default image_path = "images/phone/messages/appAssets/"
+
+
     use base_phone:
+        frame:
+            background image_path + "contacts_screen.webp"
+            xysize (433, 918)
 
-        default image_path = "images/phone/messages/appAssets/"
+            viewport:
+                mousewheel True
+                draggable True
+                pos (11, 134)
+                xysize (416, 709)
 
-        add Transform(image_path + "contacts_screen.webp", zoom=0.25) at truecenter xoffset 2
+                vbox:
+                    spacing 5
 
-        vpgrid:
-            cols 1
-            mousewheel True
-            draggable True
-            xysize (390, 663)
-            pos (760, 236)
+                    null height 10
 
-            for contact in messenger.contacts:
-                if not contact.locked:
-                    fixed:
-                        xysize(375, 74)
-                        
-                        add Transform(contact.profile_picture, xysize=(65,65)) yalign 0.5 xpos 20
+                    for contact in messenger.contacts:
+                        if not contact.locked:
+                            button:
+                                action [Function(renpy.retain_after_load), Show("messager", contact=contact)]
+                                ysize 80
 
-                        text contact.name style "nametext" yalign 0.5 xpos 100
+                                add Transform(contact.profile_picture, size=(65, 65)) xpos 20 yalign 0.5
+                                
+                                text contact.name style "nametext" xpos 100 yalign 0.5
 
-                        if contact.replies:
-                            add "images/contactmsgnot.webp" yalign 0.5 xpos 275
-
-                        imagebutton:
-                            idle "images/contactbutton.webp" align(0.5, 0.5)
-                            action [Function(renpy.retain_after_load), Show("messager", contact=contact)]
+                                if contact.replies:
+                                    add image_path + "contact-notification.webp" align (1.0, 0.5) xoffset -25
 
 
 screen messager(contact=None):
@@ -209,95 +212,79 @@ screen messager(contact=None):
     zorder 200
     modal True
 
+    default image_path = "images/phone/messages/appAssets/"
+
     python:
         yadj.value = yadjValue
 
     use base_phone:
-
-        default image_path = "images/phone/messages/appAssets/"
-
-        add Transform(image_path + "convo_screen.webp", zoom=0.25) at truecenter xoffset 2
-
-        fixed:
-            xysize(375, 112)
-            xalign 0.5
-            ypos 168
+        frame:
+            background image_path + "convo_screen.webp"
+            xysize (433, 918)
 
             hbox:
-                yalign 0.5
+                pos (41, 62)
+                ysize 93
+                spacing 15
 
                 imagebutton:
-                    idle Transform(image_path + "back_button.webp", size=(25, 25))
+                    idle image_path + "back_button.webp"
                     action [Hide("messenger_reply"), Show("messenger_contacts")]
                     yalign 0.5
-                    xoffset 15
 
-                if hasattr(contact, "profile_picture"):
-                    add Transform(contact.profile_picture, size=(64, 64)) yalign 0.5 xoffset 30
-                else:
-                    add Transform(contact.profilePicture, size=(64, 64)) yalign 0.5 xoffset 30
+                add Transform(contact.profile_picture, size=(65, 65)) yalign 0.5
 
-                text contact.name style "nametext" yalign 0.5 xoffset 50
+                text contact.name style "nametext" yalign 0.5
 
-        viewport:
-            yadjustment yadj
-            mousewheel True
-            pos (773, 282)
-            xysize (374, 525)
+            viewport:
+                yadjustment yadj
+                mousewheel True
+                pos (11, 157)
+                xysize (416, 686)
 
-            vbox:
-                xsize 374
-                spacing 5
+                vbox:
+                    spacing 5
 
-                null height 5
+                    null height 5
 
-                for message in contact.sent_messages:
-                    if isinstance(message, Message) and message.message.strip():
+                    for message in contact.sent_messages:
                         frame:
-                            background Frame(image_path + "msg_text_bg.webp")
-                            padding (30,30)
+                            padding (50, 50)
 
-                            vbox:
-                                text message.message  style "msgleft_text"
-                            
-                    elif isinstance(message, ImageMessage):
-                        frame:
-                            background Frame(image_path + "msg_text_bg.webp")
-                            padding (30,30)
-                            xalign 1.0
+                            if isinstance(message, Message) and message.message.strip():
+                                background "message_background"
 
-                            imagebutton:
-                                idle Transform(message.image, size=(307, 173))
-                                action Show("phone_image", img=message.image)
-                    elif isinstance(message, Reply):
-                        frame:
-                            background Frame(image_path + "msg_text_bg.webp")
-                            padding (30,30)
-                            xalign 1.0
+                                text message.message  style "message_text"
 
-                            vbox:
+                            elif isinstance(message, ImageMessage):
+                                background "message_background"
+
+                                imagebutton:
+                                    idle Transform(message.image, ysize=216)
+                                    action Show("phone_image", img=message.image)
+
+                            elif isinstance(message, Reply):
+                                background "message_background"
+
                                 text message.message  style "msgright_text"
-                    elif isinstance(message, ImgReply):
-                        frame:
-                            background Frame(image_path + "msg_text_bg.webp")
-                            padding (30,30)
-                            xalign 1.0
 
-                            imagebutton:
-                                idle Transform(message.image, size=(307, 173))
-                                action Show("phone_image", img=message.image)
+                            elif isinstance(message, ImgReply):
+                                background "message_background"
 
-        if contact.replies:
-                hbox:
-                    xalign 0.5
-                    ypos 855
+                                imagebutton:
+                                    idle Transform(message.image, ysize=216)
+                                    action Show("phone_image", img=message.image)
 
-                    textbutton "Reply":
-                        style "replybox"
-                        action Show("messenger_reply", contact=contact)
+            if contact.replies or True:
+                button:
+                    action Show("messenger_reply", contact=contact)
+                    xysize (416, 63)
+                    ypos 780
+
+                    add image_path + "reply-button.webp" xalign 0.5
 
     if kiwii_firstTime:
-        timer 0.01 action Show("kiwiiPopup")
+        on "show" action Show("kiwiiPopup")
 
 
 screen messenger_reply(contact=None):
