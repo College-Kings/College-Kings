@@ -350,15 +350,10 @@ label after_load:
         ## PHONE
         ### APPLICATIONS
         try:
-            messenger.contacts = contacts
+            messenger.contacts = contacts.copy()
             del contacts
         except NameError: pass
 
-        # Transfer statsApp to stats_app
-        try:
-            stats_app.locked = statsApp.locked
-            del statsApp
-        except NameError: pass
 
         # Transfer kiwiiApp to kiwii
         try:
@@ -368,11 +363,10 @@ label after_load:
             kiwii.locked = kiwiiApp.locked
             kiwii.contacts = []
             del kiwiiApp
-        except NameError:
-            kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=False)
-
-        # Unlock simplr_app
-        simplr_app.unlock()
+        except NameError: pass
+            
+        if not isinstance(kiwii, Application):
+            kiwii = Application("kiwii")
 
         for app in phone.applications.copy():
             if not isinstance(app, Application):
