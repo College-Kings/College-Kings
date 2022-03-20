@@ -46,7 +46,6 @@ init python:
                 self.pending_messages = []
                 self.sent_messages.append(message)
 
-            self.unlock()
             self.notification = True
             
             return message
@@ -64,7 +63,6 @@ init python:
                 self.pending_messages = []
                 self.sent_messages.append(message)
 
-            self.unlock()
             self.notification = True
 
             return message
@@ -85,7 +83,6 @@ init python:
                 message = self.newMessage("", force_send=True)
                 message.replies.append(reply)
 
-            self.unlock()
             self.notification = True
 
         def add_image_reply(self, img, func=None, newMessage=False, disabled=False):
@@ -104,7 +101,6 @@ init python:
                 message = self.newMessage("", force_send=True)
                 message.replies.append(reply)
 
-            self.unlock()
             self.notification = True
 
         def selected_reply(self, reply):

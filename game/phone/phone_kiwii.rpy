@@ -29,6 +29,8 @@ init python:
 
             kiwiiPosts.append(self)
 
+            kiwii.unlock()
+
         @property
         def username(self):
             return self.user.username

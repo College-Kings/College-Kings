@@ -21,6 +21,8 @@ init python:
             self.sent_messages = []
             self.pending_messages = []
 
+            simplr_app.unlock()
+
         @property
         def notification(self):
             if not self.sent_messages and not self.pending_messages:

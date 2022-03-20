@@ -11,6 +11,10 @@ init python:
         def image(self):
             return "images/phone/{}/app-assets/icon{}.webp".format(self.name.lower(), "-notification" if self.notification else "")
 
+        def unlock(self):
+            if self not in phone.applications:
+                phone.applications.append(self)
+
     
     class Messenger(Application):
         def __init__(self):
