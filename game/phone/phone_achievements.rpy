@@ -27,6 +27,7 @@ screen achievements_home():
                                 background "achievement_unlocked"
 
                                 vbox:
+                                    xsize 320
                                     pos (50, -2)
 
                                     text ach.display_name.upper() style "achievement_name"
@@ -35,7 +36,7 @@ screen achievements_home():
                             else:
                                 background "achievement_locked"
 
-                                text ach.display_name.upper() style "achievement_locked_name" pos (50, -2)
+                                text ach.display_name.upper() style "achievement_locked_name" xsize 320 pos (50, -2)
 
 
 style achievement_name is text:
