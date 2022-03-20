@@ -139,6 +139,8 @@ screen phone():
             
             for app in phone.applications:
                 vbox:
+                    spacing 2
+                    
                     imagebutton:
                         idle app.image
                         action [Function(renpy.retain_after_load), Show(app.home_screen)]
