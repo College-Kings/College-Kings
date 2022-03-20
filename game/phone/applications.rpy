@@ -1,28 +1,29 @@
 init python:
     class Application:
-        def __init__(self, name, image, home_screen, locked=False):
+        def __init__(self, name, *args, **kwargs):
             self.name = name
-            self._image = "images/phone/{}".format(image)
-            self.home_screen = home_screen
-            self.locked = locked
+            self.home_screen = "{}_home".format(self.name.lower())
             
             self.contacts = []
-            self.notification = False
 
         @property
         def image(self):
-            if self.notification:
-                return os.path.splitext(self._image)[0] + "Notification" + os.path.splitext(self._image)[1]
-            return self._image
+            return "images/phone/{}/app-assets/icon{}.webp".format(self.name.lower(), "-notification" if self.notification else "")
 
-        @image.setter
-        def image(self, value):
-            self._image = value
+        @property
+        def notification(self):
+            return False
 
-        def unlock(self):
-            self.locked = False
+    
+    class Messenger(Application):
+        def __init__(self):
+            Application.__init__(self, "Messenger")
 
-default messenger = Application("Messages", "messages/appAssets/messagesIcon.webp", "messenger_contacts")
+        @property
+        def notification(self):
+            return any(contact.notification for contact in self.contacts)
+
+default messenger = Messenger()
 default stats_app = Application("KCT", "stats/appAssets/statsIcon.webp", "stats", locked=True)
 default achievement_app = Application("Achievements", "achievements/appAssets/achievementsIcon.webp", "achievements")
 default kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=True)
