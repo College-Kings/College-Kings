@@ -113,7 +113,7 @@ init python:
 
             if self._simplr is None:
                 self._simplr = SimplrContact(self.name)
-                simplr_pendingContacts.append(self._simplr)
+                simplr_app.pending_contacts.append(self._simplr)
             return self._simplr
 
         @simplr.setter

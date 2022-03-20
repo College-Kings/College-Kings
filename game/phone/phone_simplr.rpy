@@ -13,6 +13,8 @@ init python:
             self.name = name
             self.condition = True
 
+            self._notification = False
+
             for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, name.lower(), "large_profile_pictures")):
                 self.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(name.lower(), filename) for filename in filenames]
 
@@ -20,24 +22,38 @@ init python:
             self.pending_messages = []
 
         @property
+        def notification(self):
+            if not self.sent_messages and not self.pending_messages:
+                return False
+            
+            if self.replies:
+                return True
+
+            return self._notification
+
+        @notification.setter
+        def notification(self, value):
+            self._notification = value
+
+        @property
         def profile_picture(self):
             return "images/nonplayable_characters/{0}/{0}_profile_picture.webp".format(self.name.lower())
 
         def removeContact(self):
-            simplr_pendingContacts.pop(0)
+            simplr_app.pending_contacts.pop(0)
 
         def likedContact(self):
             self.removeContact()
 
             if self.condition:
-                simplr_contacts.append(self)
+                simplr_app.contacts.append(self)
             
         def newMessage(self, message, force_send=False):
             message = Message(self, message)
 
             # Moves contact to the top when recieving a new message
-            if self in simplr_contacts:
-                simplr_contacts.insert(0, simplr_contacts.pop(simplr_contacts.index(self)))
+            if self in simplr_app.contacts:
+                simplr_app.contacts.insert(0, simplr_app.contacts.pop(simplr_app.contacts.index(self)))
 
             # Add message to queue
             if not force_send:
@@ -45,8 +61,6 @@ init python:
             else:
                 self.pending_messages = []
                 self.sent_messages.append(message)
-
-            if self in simplr_contacts: simplr_app.notification = True
             
             return message
 
@@ -54,8 +68,8 @@ init python:
             message = ImageMessage(self, img)
 
             # Moves contact to the top when recieving a new message
-            if self in simplr_contacts:
-                simplr_contacts.insert(0, simplr_contacts.pop(simplr_contacts.index(self)))
+            if self in simplr_app.contacts:
+                simplr_app.contacts.insert(0, simplr_app.contacts.pop(simplr_app.contacts.index(self)))
 
             # Add message to queue
             if not force_send:
@@ -63,8 +77,6 @@ init python:
             else:
                 self.pending_messages = []
                 self.sent_messages.append(message)
-
-            if self in simplr_contacts: simplr_app.notification = True
 
             return message
 
@@ -94,10 +106,6 @@ init python:
                 self.newMessage("", force_send=True)
                 self.pending_messages[-1].replies.append(reply)
 
-        def seenMessage(self):
-            if not any(contact.replies for contact in simplr_contacts):
-                simplr_app.notification = False
-
         def getMessage(self, message):
             for msg in self.sent_messages:
                 try:
@@ -108,215 +116,165 @@ init python:
                         return msg
             return False
 
-init -1:
-    default simplr_pendingContacts = []
-    default simplr_contacts = []
 
-screen simplr_app():
+screen simplr_home():
     tag phone_tag
     python:
-        try: simplr_contact = simplr_pendingContacts[0]
+        try: simplr_contact = simplr_app.pending_contacts[0]
         except IndexError: simplr_contact = None
 
     use base_phone:
 
-        default image_path = "images/phone/simplr/appAssets/"
+        default image_path = "images/phone/simplr/app-assets/"
 
-        fixed:
-            pos (770, 168)
-            xysize (375, 740)
-
-            add Transform(image_path + "simplr_main_bg.webp", zoom=0.25) at truecenter xoffset 4 yoffset 1
+        frame:
+            background image_path + "background.webp"
             
             # Top UI
-            hbox:
-                xalign 0.5
-                yoffset 10
-                spacing 100
+            imagebutton:
+                pos (340, 100)
+                idle image_path + "message-icon.webp"
+                hover image_path + "message-icon-hover.webp"
+                action Show("simplr_contacts")
 
-                imagebutton:
-                    yalign 0.5
-                    idle Transform("images/phone/simplr/appAssets/profileIcon.webp", zoom=0.20)
-                    hover Transform("images/phone/simplr/appAssets/profileIconHover.webp", zoom=0.20)
-                    action NullAction()
-
-                add Transform("images/phone/simplr/appAssets/simplrLogo.webp", zoom=0.20) yalign 0.5
-
-                imagebutton:
-                    yalign 0.5
-                    idle Transform("images/phone/simplr/appAssets/messageIcon.webp", zoom=0.20)
-                    hover Transform("images/phone/simplr/appAssets/messageIconHover.webp", zoom=0.20)
-                    action Show("simplr_contacts")
-
-            # Profile Picture
             if simplr_contact is not None:
-                add Transform(simplr_contact.large_profile_pictures[0], size=(362, 585)) align (0.5, 0.5)
-
-            # Bottom UI
-            if simplr_contact is not None:
-                hbox:
+                frame:
+                    background simplr_contact.large_profile_pictures[0]
+                    xysize (370, 593)
                     xalign 0.5
-                    yoffset 500
-                    spacing 10
+                    ypos 200
+                    
+                    hbox:
+                        align (0.5, 1.0)
+                        yoffset -10
+                        spacing 10
 
-                    imagebutton:
-                        yalign 0.5
-                        idle Transform("images/phone/simplr/appAssets/yesButton.webp", zoom=0.25)
-                        hover Transform("images/phone/simplr/appAssets/yesButtonHover.webp", zoom=0.25)
-                        if simplr_contact is not None:
+                        imagebutton:
+                            idle image_path + "like-button-idle.webp"
+                            hover image_path + "like-button-hover.webp"
                             action Function(simplr_contact.likedContact)
 
-                    imagebutton:
-                        yalign 0.5
-                        idle Transform("images/phone/simplr/appAssets/noButton.webp", zoom=0.25)
-                        hover Transform("images/phone/simplr/appAssets/noButtonHover.webp", zoom=0.25)
-                        if simplr_contact is not None:
+                        imagebutton:
+                            idle image_path + "no-button-idle.webp"
+                            hover image_path + "no-button-hover.webp"
                             action Function(simplr_contact.removeContact)
-            else:
-                hbox:
-                    align (0.5, 0.5)
-                    spacing 10
-                    xmaximum 340
 
-                    text "No new profiles to show...\nYou can however still chat with your matches!\n\nBe sure to check back soon!":
-                        xalign 0.5
-                        style "simplr_no_more_profiles"
-                    
+            else:
+                text "No new profiles to show...\nYou can however still chat with your matches!\n\nBe sure to check back soon!":
+                    style "simplr_no_more_profiles"
+                    align (0.5, 0.5)
+                    xsize 340
 
 
 screen simplr_contacts():
     tag phone_tag
 
+    default image_path = "images/phone/simplr/app-assets/"
+
     use base_phone:
+        frame:
+            background image_path + "simplr_contacts_background.webp"
+            xysize (433, 918)
 
-        default image_path = "images/phone/simplr/appAssets/"
+            viewport:
+                mousewheel True
+                draggable True
+                pos (11, 134)
+                xysize (416, 709)
 
-        add Transform(image_path + "simplr_contacts_bg.webp", zoom=0.25) at truecenter xoffset 2
+                vbox:
+                    spacing 5
 
-        vpgrid:
-            cols 1
-            mousewheel True
-            draggable True
-            xysize(375, 663)
-            pos(772, 247)
+                    null height 10
 
-            for contact in simplr_contacts:
-                fixed:
-                    xysize(375, 74)
+                    for contact in simplr_app.contacts:
+                        button:
+                            action [Function(renpy.retain_after_load), SetField(contact, "notification", False), Show("simplr_messenger", contact=contact)]
+                            ysize 80
 
-                    if hasattr(contact, "profile_picture"):
-                        add Transform(contact.profile_picture, size=(55, 55)) yalign 0.5 xpos 20
-                    else:
-                        add Transform(contact.profilePicture, size=(55, 55)) yalign 0.5 xpos 20
+                            add Transform(contact.profile_picture, size=(65, 65)) xpos 20 yalign 0.5
+                            
+                            text contact.name style "nametext" xpos 100 yalign 0.5
 
-                    text contact.name style "nametext" yalign 0.5 xpos 100
-
-                    if contact.replies:
-                        add "images/contactmsgnot.webp" yalign 0.5 xpos 275
-
-                    imagebutton:
-                        idle "images/contactbutton.webp" align(0.5, 0.5)
-                        action [Function(renpy.retain_after_load), Function(contact.seenMessage), Show("simplr_messenger", contact=contact)]
+                            if contact.notification:
+                                add "contact_notification" align (1.0, 0.5) xoffset -25
 
 
-screen simplr_messenger(contact=None):
+screen simplr_messenger(contact):
     tag phone_tag
+    modal True
+
+    default image_path = "images/phone/simplr/app-assets/"
+
+    python:
+        yadj.value = yadjValue
 
     use base_phone:
-
-        default image_path = "images/phone/simplr/appAssets/"
-
-        add Transform(image_path + "simplr_msg_bg.webp", zoom=0.25) at truecenter xoffset 2
-
-        fixed:
-            xysize(375, 112)
-            xalign 0.5
-            ypos 168
+        frame:
+            background image_path + "conversation-background.webp"
+            xysize (433, 918)
 
             hbox:
-                yalign 0.5
+                pos (41, 62)
+                ysize 93
+                spacing 15
 
                 imagebutton:
-                    idle Transform("images/phone/messages/appAssets/back_button.webp", size=(25, 25))
-                    action [Show("simplr_app"), Hide("simplr_messenger"), Hide("simplr_reply")]
+                    idle "back_button"
+                    action [Hide("message_reply"), Show("simplr_home")]
                     yalign 0.5
-                    xoffset 15
 
-                if hasattr(contact, "profile_picture"):
-                    add Transform(contact.profile_picture, size=(64, 64)) yalign 0.5 xoffset 30
-                else:
-                    add Transform(contact.profilePicture, size=(64, 64)) yalign 0.5 xoffset 30
+                add Transform(contact.profile_picture, size=(65, 65)) yalign 0.5
 
-                text contact.name style "nametext" yalign 0.5 xoffset 50
+                text contact.name style "nametext" yalign 0.5
 
-        viewport:
-            yadjustment inf_adj
-            mousewheel True
-            pos(773, 282)
-            xysize(374, 556)
+            viewport:
+                yadjustment yadj
+                mousewheel True
+                pos (11, 157)
+                xysize (416, 686)
 
-            vbox:
-                xsize 374
-                spacing 5
+                vbox:
+                    spacing 5
 
-                null height 5
-                
-                for message in contact.sent_messages:
-                    if isinstance(message, Message) and message.message.strip():
-                        textbutton message.message style "msgleft"
-                    elif isinstance(message, ImageMessage):
-                        imagebutton:
-                            idle Transform(message.image, size=(307, 173))
-                            style "msgleft"
-                            action Show("phone_image", img=message.image)
-                    elif isinstance(message, Reply):
-                        textbutton message.message style "msgright"
-                    elif isinstance(message, ImgReply):
-                        imagebutton:
-                            idle Transform(message.image, size=(307, 173))
-                            style "msgright"
-                            action Show("simplr_image", img=message.image)
+                    null height 5
 
-        if contact.replies:
-                hbox:
-                    xalign 0.5
-                    ypos 855
+                    for message in contact.sent_messages:
+                        frame:
+                            padding (50, 50)
 
-                    textbutton "Reply":
-                        style "replybox"
-                        action Show("simplr_reply", contact=contact)
+                            if isinstance(message, Message) and message.message.strip():
+                                background "message_background"
 
+                                text message.message  style "message_text"
 
-screen simplr_reply(contact=None):
+                            elif isinstance(message, ImageMessage):
+                                background "message_background"
 
-    vbox:
-        xpos 1200
-        yalign 0.84
-        spacing 15
+                                imagebutton:
+                                    idle Transform(message.image, ysize=216)
+                                    action Show("phone_image", img=message.image)
 
-        for reply in contact.replies:
-            if isinstance(reply, Reply):
-                textbutton reply.message:
-                    style "replies_style"
-                    action [Hide("simplr_reply"), Function(contact.selected_reply, reply)]
+                            elif isinstance(message, Reply):
+                                background "message_background"
 
-            elif isinstance(reply, ImgReply):
-                imagebutton:
-                    idle Transform(reply.image, zoom=0.15)
-                    style "replies_style"
-                    action [Hide("simplr_reply"), Function(contact.selected_reply, reply)]
+                                text message.message style "message_text"
 
+                            elif isinstance(message, ImgReply):
+                                background "message_background"
 
-screen simplr_image(img=None):
-    python:
-        if os.path.splitext(img)[0][-3:] != "big":
-            bigImage = os.path.splitext(img)[0] + "big" + os.path.splitext(img)[1]
+                                imagebutton:
+                                    idle Transform(message.image, ysize=216)
+                                    action Show("phone_image", img=message.image)
 
-    add "darker_80"
-    if renpy.loadable(bigImage):
-        add bigImage at truecenter
-    else:
-        add img at truecenter
+            if contact.replies:
+                fixed:
+                    xysize (416, 63)
+                    ypos 780
 
-    button:
-        action Hide("simplr_image")
+                    imagebutton:
+                        idle "reply_button_idle"
+                        hover image_path + "reply-button-hover.webp"
+                        selected_idle image_path + "reply-button-hover.webp"
+                        action Show("message_reply", contact=contact)
+                        align (0.5, 0.5)

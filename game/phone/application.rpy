@@ -25,9 +25,24 @@ init python:
             pass
 
 
+    class Simplr(Application):
+        def __init__(self):
+            Application.__init__(self, "Simplr")
+
+            self.pending_contacts = []
+
+        @property
+        def notification(self):
+            return any(contact.notification for contact in self.contacts)
+
+        @notification.setter
+        def notification(self, value):
+            pass
+
+
 default messenger = Messenger()
 default stats_app = Application("KCT")
 default achievement_app = Application("Achievements")
 default kiwii = Application("Kiwii")
-default simplr_app = Application("Simplr", "simplr/appAssets/simplrIcon.webp", "simplr_app", locked=True)
+default simplr_app = Simplr()
 default relationship_app = Application("Relationships", "relationships/appAssets/relationships_icon.webp", "relationship_app", locked=False)
