@@ -1,8 +1,7 @@
 # SCENE 61: Transition Mc studies
-# Locations: apes/Apes Dorm Room.
+# Locations: Apes Dorm Room, Wolf Dorm Room
 # Characters: MC (Outfit: 2), CHLOE (Outfit: 1), [BABY_NAME] (Outfit: 1)
-# Time: Afternoon
-
+# Time: Thursday Afternoon
 
 label v16s61:
     if joinwolves:
@@ -11,7 +10,7 @@ label v16s61:
         scene v16s61_1 # TPP. Show MC (slight smile, mouth closed) walking into his wolves room.
         with fade (1,0,1)
 
-        pause 0.15
+        pause 0.75
 
         play sound "sounds/doorclose.mp3"
 
@@ -19,14 +18,15 @@ label v16s61:
         with dissolve
 
         # -if Transitioning directly from Scene 56 (Wolves 2)
-        if v16s56_jump_v16s61: # placeholder
+        if not v14_help_lindsey:  
+
             scene v16s61_2
             with dissolve 
 
             u "*Sighs* (What are we going to do about Chris and Imre? I feel like this whole house could use some anger management training.)"
         
         # -if Succeeded with Polly at hotel
-        if v16_polly_success: #placeholder
+        if v16s59_polly_endorse_lindsey: #placeholder
             scene v16s61_2
             with dissolve
 
@@ -38,26 +38,29 @@ label v16s61:
             u "(Well, that was embarrassing...)"
 
             # -if also wore room service uniforms
-            if room_service_uniform: # placeholder 
+            if v16s28_lindsey_pb_pretend_roomservice: # placeholder
+
                 play sound "sounds/vibrate.mp3"
                 
                 scene v16s61_2a # TPP. In wolves room. Show MC (slight smile, mouth closed) sitting on his bed pulling out his phone from his pocket
                 with dissolve 
 
-                pause 0.15 
+                pause 0.75 
                 
                 scene v16s61_2b # TPP In wolves room. Show MC (slight smile, mouth closed) sitting on his bed looking at his phone.
                 with dissolve 
 
                 u "(It was nice of the bodyguard to let us change out of those uniforms first, but did he really have to pick Lindsey up again? I swear he did it just for the photos! What a prick.)"
 
-                $ v16s61_kiwiiPost = KiwiiPost(Chloe, "MC and Lindsey (both regular clothes) with Polly's bodyguard at the exit of the hotel, Lindsey being carried out over his shoulder", "Umm... Is this you, Lindsey? LOL #FuturePresident?", mentions=Lindsey, numberLikes=645)
-                $ v16s61_kiwiiPost.newComment(Aubrey, "Wait, what the hell? And [name]?", numberLikes=51)
-                $ v16s61_kiwiiPost.newComment(Penelope, "Wait... Is that Polly's security guard?! What happened???", numberLikes=95)
-                $ v16s61_kiwiiPost.addReply("Just fooling around! Ha...", numberLikes=42, v16s51_Reply1)
-                $ v16s61_kiwiiPost.addReply("Uh, Lindsey will tell you. Right, Linds?", mentions=Lindsey, numberLikes=46, v16s61_Reply2)
-                $ v16s61_kiwiiPost.newComment(Lindsey, "Oh! I can't believe there was paparazzi! We were just having some fun :)", numberLikes=54)
-                $ v16s61_kiwiiPost.newComment(Ryan, "He doesn't look very excited...", numberLikes=78)
+                #! v16s61kw_1  MC and Lindsey (both regular clothes) with Polly's bodyguard at the exit of the hotel, Lindsey being carried out over his shoulder
+
+                $ v16s61_kiwiiPost = KiwiiPost(Chloe, "v16/v16s61kw_1", "Umm... Is this you, Lindsey? LOL #FuturePresident?", mentions=Lindsey, numberLikes=645)
+                $ v16s61_kiwiiPost.newComment(Aubrey, "Wait, what the hell? And [name]?", numberLikes=51, force_send=True)
+                $ v16s61_kiwiiPost.newComment(Penelope, "Wait... Is that Polly's security guard?! What happened???", numberLikes=95, force_send=True)
+                $ v16s61_kiwiiPost.addReply("Just fooling around! Ha...", numberLikes=42)
+                $ v16s61_kiwiiPost.addReply("Uh, Lindsey will tell you. Right, Linds?", mentions=Lindsey, numberLikes=46)
+                $ v16s61_kiwiiPost.newComment(Lindsey, "Oh! I can't believe there was paparazzi! We were just having some fun :)", numberLikes=54, force_send=True)
+                $ v16s61_kiwiiPost.newComment(Ryan, "He doesn't look very excited...", numberLikes=78, force_send=True)
                
                 $ set_presidency_percent(v14_lindsey_popularity - 3)
                 
@@ -67,7 +70,7 @@ label v16s61:
                 u "(Paparazzi?! What the fuck...)"
         
         # -if helping Chloe with Spa evening
-        if Chloe_spa_evening: #placeholder
+        if not v16s12_chloe_planboard_decide_newspaper_cover: 
         
             scene v16s61_2 
             with dissolve
@@ -75,7 +78,8 @@ label v16s61:
             u "(I've still got some time before I need to help Chloe with this spa thing. Definitely excited for that!)"
             
             # -if chose to be the masseuse on planning board
-            if mc_masseuse: #placeholder
+            if v16s12_chloe_planboard_decide_mc_gives_massages:
+
                 scene v16s61_2
                 with dissolve
 
@@ -91,27 +95,27 @@ label v16s61:
         scene v16s61_3 # TPP. In wolves room. Close up of MC(slight smile, mouth closed) sitting at his study desk
         with dissolve
 
-        pause .2
+        pause .75
 
         scene v16s61_4 # TPP. In wolves room. Close up of MC(slight smile, mouth closed) reading a book at his study desk
         with dissolve
 
-        pause .2
+        pause .75
 
         scene v16s61_5 # TPP. In wolves room. Close up of MC(bored, mouth closed) writing in a notepad.
         with dissolve
 
-        pause .2
+        pause .75
 
         scene v16s61_4
         with dissolve
 
-        pause .2
+        pause .75
         
         scene v16s61_6 # TPP. In wolves room. Close up of MC(bored, mouth closed) looking like he is falling asleep at his desk.
         with dissolve
 
-        if v14_help_chloe and chloe_spa_evening: #placeholder
+        if v14_help_chloe and not v16s12_chloe_planboard_decide_newspaper_cover:
             scene v16s61_6
             with dissolve
 
@@ -121,14 +125,16 @@ label v16s61:
             with dissolve
 
             u "(Nice! Time to go hang out with some half-naked ladies. Woohoo!)"
-        elif not v14_help_chloe: 
-            # -if not helping Chloe with her campaign
+
+            jump v16s62
+
+        elif not v14_help_chloe: # -if not helping Chloe with her campaign
             play sound "sounds/vibrate.mp3"
 
             scene v16s61_7
             with dissolve
 
-            pause
+            pause 0.75
 
             scene v16s61_8 # TPP. In wolves room. MC (slight smile, mouth open) standing up from his chair and holding his phone to his ear.
             with dissolve
@@ -137,13 +143,15 @@ label v16s61:
 
             # -You can show a couple of images, 2-3 max, of Chloe during this convo. I suggest that she's preparing the house and party supplies during the call (These images are not a priority and can be cut if needed, otherwise mc is just shown pacing his room during the call.)
             # -if ChloeGf 
-            if relationship.chloe >= relationship.GF:
+            if chloe.relationship == Relationship.GIRLFRIEND:
 
                 scene v16s61_9 # TPP. Shot of Chloe(slight smile, mouth open) at the chicks house holding her phone to her ear. The house looks almost ready for the party
                 with dissolve 
 
                 cl "Hey you! I need some help."
+            
             else:
+            
                 scene v16s61_9
                 with dissolve
 
@@ -211,6 +219,7 @@ label v16s61:
 
             menu:
                 "Be the masseuse.":
+                    $ v16s61_chloe_pb_override_mc_gives_massages = True
                     $ add_Point(KCT.TROUBLEMAKER)
 
                     scene v16s61_9a
@@ -281,43 +290,49 @@ label v16s61:
 
                     u "Oh. Right. Coming!"
 
-                scene v16s61_9 
-                with dissolve
+            scene v16s61_9 
+            with dissolve
 
-                cl "See you when you get here!"
+            cl "See you when you get here!"
 
-                play sound "sounds/rejectcall.mp3"
+            play sound "sounds/rejectcall.mp3"
 
-                scene v16s61_8
-                with dissolve
+            scene v16s61_8
+            with dissolve
 
-                pause 0.15 
+            pause 0.75 
 
-                play sound "sounds/dooropen.mp3"
+            play sound "sounds/dooropen.mp3"
 
-                scene v16s61_10 # TPP. Show MC(slight smile,mouth closed) leaving his wolves room.
-                with dissolve 
+            scene v16s61_10 # TPP. Show MC(slight smile,mouth closed) leaving his wolves room.
+            with dissolve                 
 
-                jump v16s62
+            jump v16s62
         else: 
+            
             play sound "sounds/thud.mp3"
 
             scene v16s61_6a # TPP. Show MC fallen asleep his head hitting the book on his desk.
-            with dissolve 
+            with vpunch 
 
-            pause 0.15 
+            pause 0.75
+
+            scene black
+            with dissolve
+
+            pause 0.75
 
             # -Fade to a nightmare. A black void all around MC. He looks confused for a moment. He turns to see a huge baby, standing up, towering over him (like the big baby from Spirited Away). It's five times the size of MC-
 
             scene v16s61_11 # TPP. Show MC(confused,mouth closed) standing in a black void nightmare and looking around.
             with fade (1,0,1) 
 
-            pause 0.15 
+            pause 0.75 
 
             scene v16s61_11a # TPP. Show MC(Jaw dropped) looking behind him we don't see whats behind him yet.
             with dissolve 
             
-            pause 0.15 
+            pause 0.75 
 
             scene v16s61_12 # TPP. Shot from a bit behind MC of him looking up at a gigantic baby(Angry, mouth closed.) that is towering over him. The Babys eyes locked onto MC
             with dissolve
@@ -365,9 +380,9 @@ label v16s61:
             u "(Noooooooooooo! AGHHHH-)"
 
             scene v16s61_6b # TPP. Show MC with his head on the book opening his eyes.
-            with dissolve
+            with vpunch
 
-            u "(Huh? Whoa, what the actual fuck? Why is [baby_name] invading my dreams? I need to get my head straight...)"
+            u "(Huh? Whoa, what the actual fuck? Why is [v16_baby_name] invading my dreams? I need to get my head straight...)"
 
             scene v16s61_7
             with dissolve
@@ -386,64 +401,69 @@ label v16s61:
         scene v16s61_14 # TPP. Show MC (slight smile, mouth closed) walking into his apes room.
         with fade (1,0,1)
 
-        pause 0.15
+        pause 0.75
 
         play sound "sounds/doorclose.mp3"
 
         scene v16s61_15 # TPP. In apes room. Show MC (slight smile, mouth closed) sitting on his bed.
         with dissolve
 
-        # -if Transitioning directly from Scene 56 (Wolve 2)
-        if v16s57_jump_v16s61: # placeholder
-            # -if Transitioning directly from Scene 57 (Apes 2)
+        # -if Transitioning directly from Scene 57 (Apes 2)
+        if not v14_help_lindsey:
+
             scene v16s61_15
+            with dissolve
 
             u "*Sighs* (This whole Sam thing is forcing everyone to choose sides. Whichever way you slice it, it's not good for the frat.)"
-
         
-        # -if Succeeded with Polly at hotel
-        if v16_polly_success: #placeholder
-            scene v16s61_15
-            with dissolve
-
-            u "(I can't believe we managed to get Polly on board with our crazy idea! Lindsey loves her more than ever now, haha.)"
-        else: 
-            scene v16s61_15
-            with dissolve
-
-            u "(Well, that was embarrassing...)"
-
-            # -if also wore room service uniforms
-            if room_service_uniform: # placeholder 
-                play sound "sounds/vibrate.mp3"
+        else:         
+            
+            # -if Succeeded with Polly at hotel
+            if v16s59_polly_endorse_lindsey: 
                 
-                scene v16s61_15a # TPP. In apes room. Show MC (slight smile, mouth closed) sitting on his bed pulling out his phone from his pocket
-                with dissolve 
+                scene v16s61_15
+                with dissolve
 
-                pause 0.15 
+                u "(I can't believe we managed to get Polly on board with our crazy idea! Lindsey loves her more than ever now, haha.)"
+
+            else: 
+                scene v16s61_15
+                with dissolve
+
+                u "(Well, that was embarrassing...)"
+
+                # -if also wore room service uniforms
+                if v16s28_lindsey_pb_pretend_roomservice:
+
+                    play sound "sounds/vibrate.mp3"
+                    
+                    scene v16s61_15a # TPP. In apes room. Show MC (slight smile, mouth closed) sitting on his bed pulling out his phone from his pocket
+                    with dissolve 
+
+                    pause 0.75 
+                    
+                    scene v16s61_15b # TPP In apes room. Show MC (slight smile, mouth closed) sitting on his bed looking at his phone.
+                    with dissolve 
+
+                    u "(It was nice of the bodyguard to let us change out of those uniforms first, but did he really have to pick Lindsey up again? I swear he did it just for the photos! What a prick.)"
+                    
+                    $ v16s61_kiwiiPost = KiwiiPost(chloe, "v16/v16s61kw_1", "Umm... Is this you, Lindsey? LOL #FuturePresident?", mentions=lindsey, numberLikes=645)
+                    $ v16s61_kiwiiPost.newComment(aubrey, "Wait, what the hell? And [name]?", numberLikes=51, force_send=True)
+                    $ v16s61_kiwiiPost.newComment(penelope, "Wait... Is that Polly's security guard?! What happened???", numberLikes=95, force_send=True)
+                    $ v16s61_kiwiiPost.addReply("Just fooling around! Ha...", numberLikes=42)
+                    $ v16s61_kiwiiPost.addReply("Uh, Lindsey will tell you. Right, Linds?", mentions=lindsey, numberLikes=46)
+                    $ v16s61_kiwiiPost.newComment(lindsey, "Oh! I can't believe there was paparazzi! We were just having some fun :)", force_send=True)
+                    $ v16s61_kiwiiPost.newComment(ryan, "He doesn't look very excited...", numberLikes=78, force_send=True)
                 
-                scene v16s61_15b # TPP In apes room. Show MC (slight smile, mouth closed) sitting on his bed looking at his phone.
-                with dissolve 
+                    $ set_presidency_percent(v14_lindsey_popularity - 3)
+                    
+                    scene v16s61_15b
+                    with dissolve 
 
-                u "(It was nice of the bodyguard to let us change out of those uniforms first, but did he really have to pick Lindsey up again? I swear he did it just for the photos! What a prick.)"
-
-                $ v16s61_kiwiiPost = KiwiiPost(Chloe, "MC and Lindsey (both regular clothes) with Polly's bodyguard at the exit of the hotel, Lindsey being carried out over his shoulder", "Umm... Is this you, Lindsey? LOL #FuturePresident?", mentions=Lindsey, numberLikes=645)
-                $ v16s61_kiwiiPost.newComment(Aubrey, "Wait, what the hell? And [name]?", numberLikes=51)
-                $ v16s61_kiwiiPost.newComment(Penelope, "Wait... Is that Polly's security guard?! What happened???", numberLikes=95)
-                $ v16s61_kiwiiPost.addReply("Just fooling around! Ha...", numberLikes=42, v16s51_Reply1)
-                $ v16s61_kiwiiPost.addReply("Uh, Lindsey will tell you. Right, Linds?", mentions=Lindsey, numberLikes=46, v16s61_Reply2)
-                $ v16s61_kiwiiPost.newComment(Lindsey, "Oh! I can't believe there was paparazzi! We were just having some fun :)", numberLikes=54)
-                $ v16s61_kiwiiPost.newComment(Ryan, "He doesn't look very excited...", numberLikes=78)
-               
-                $ set_presidency_percent(v14_lindsey_popularity - 3)
-                
-                scene v16s61_15b
-                with dissolve 
-
-                u "(Paparazzi?! What the fuck...)"
+                    u "(Paparazzi?! What the fuck...)"
         
         # -if helping Chloe with Spa evening
-        if Chloe_spa_evening: #placeholder
+        if not v16s12_chloe_planboard_decide_newspaper_cover:
         
             scene v16s61_15 
             with dissolve
@@ -451,7 +471,7 @@ label v16s61:
             u "(I've still got some time before I need to help Chloe with this spa thing. Definitely excited for that!)"
             
             # -if chose to be the masseuse on planning board
-            if mc_masseuse: #placeholder
+            if v16s12_chloe_planboard_decide_mc_gives_massages:
                 scene v16s61_15
                 with dissolve
 
@@ -467,27 +487,28 @@ label v16s61:
         scene v16s61_16 # TPP. In apes room. Close up of MC(slight smile, mouth closed) sitting at his study desk
         with dissolve
 
-        pause .2
+        pause .75
 
         scene v16s61_17 # TPP. In apes room. Close up of MC(slight smile, mouth closed) reading a book at his study desk
         with dissolve
 
-        pause .2
+        pause .75
 
         scene v16s61_18 # TPP. In apes room. Close up of MC(bored, mouth closed) writing in a notepad.
         with dissolve
 
-        pause .2
+        pause .75
 
         scene v16s61_17
         with dissolve
 
-        pause .2
+        pause .75
         
         scene v16s61_19 # TPP. In apes room. Close up of MC(bored, mouth closed) looking like he is falling asleep at his desk.
         with dissolve
 
-        if v14_help_chloe and chloe_spa_evening: #placeholder
+        if v14_help_chloe and not v16s12_chloe_planboard_decide_newspaper_cover: 
+            
             scene v16s61_19
             with dissolve
 
@@ -497,14 +518,17 @@ label v16s61:
             with dissolve
 
             u "(Nice! Time to go hang out with some half-naked ladies. Woohoo!)"
-        elif not v14_help_chloe: 
-            # -if not helping Chloe with her campaign
+
+            jump v16s62
+        
+        elif not v14_help_chloe: # -if not helping Chloe with her campaign
+
             play sound "sounds/vibrate.mp3"
 
             scene v16s61_20
             with dissolve
 
-            pause
+            pause 0.75
 
             scene v16s61_21 # TPP. In apes room. MC (slight smile, mouth open) standing up from his chair and holding his phone to his ear.
             with dissolve
@@ -513,9 +537,9 @@ label v16s61:
 
             # -You can show a couple of images, 2-3 max, of Chloe during this convo. I suggest that she's preparing the house and party supplies during the call (These images are not a priority and can be cut if needed, otherwise mc is just shown pacing his room during the call.)
             # -if ChloeGf 
-            if relationship.chloe >= relationship.GF:
+            if chloe.relationship == Relationship.GIRLFRIEND: 
 
-                scene v16s61_9 # TPP. Shot of Chloe(slight smile, mouth open) at the chicks house holding her phone to her ear. The house looks almost ready for the party
+                scene v16s61_9 
                 with dissolve 
 
                 cl "Hey you! I need some help."
@@ -525,7 +549,7 @@ label v16s61:
 
                 cl "Hey, [name]! I'm fine, thanks I need some help, though."
 
-            scene v16s61_9a # TPP. Shot of Chloe(slight smile, mouth closed.) at the chicks house holding her phone to her ear. The house looks almost ready for the party
+            scene v16s61_9a 
             with dissolve
 
             u "Don't we all? *Laughs*"
@@ -587,6 +611,8 @@ label v16s61:
 
             menu:
                 "Be the masseuse.":
+
+                    $ v16s61_chloe_pb_override_mc_gives_massages = True
                     $ add_Point(KCT.TROUBLEMAKER)
 
                     scene v16s61_9a
@@ -657,43 +683,48 @@ label v16s61:
 
                     u "Oh. Right. Coming!"
 
-                scene v16s61_9 
-                with dissolve
+            scene v16s61_9 
+            with dissolve
 
-                cl "See you when you get here!"
+            cl "See you when you get here!"
 
-                play sound "sounds/rejectcall.mp3"
+            play sound "sounds/rejectcall.mp3"
 
-                scene v16s61_21
-                with dissolve
+            scene v16s61_21
+            with dissolve
 
-                pause 0.15 
+            pause 0.75 
 
-                play sound "sounds/dooropen.mp3"
+            play sound "sounds/dooropen.mp3"
 
-                scene v16s61_22 # TPP. Show MC(slight smile,mouth closed) leaving his apes room.
-                with dissolve 
+            scene v16s61_22 # TPP. Show MC(slight smile,mouth closed) leaving his apes room.
+            with dissolve 
 
-                jump v16s62
+            jump v16s62
         else: 
             play sound "sounds/thud.mp3"
 
             scene v16s61_19a # TPP. Show MC fallen asleep his head hitting the book on his desk.
-            with dissolve 
+            with vpunch 
 
-            pause 0.15 
+            pause 0.75 
+
+            scene black
+            with dissolve
+
+            pause 0.75
 
             # -Fade to a nightmare. A black void all around MC. He looks confused for a moment. He turns to see a huge baby, standing up, towering over him (like the big baby from Spirited Away). It's five times the size of MC-
 
             scene v16s61_11 # TPP. Show MC(confused,mouth closed) standing in a black void nightmare and looking around.
             with fade (1,0,1) 
 
-            pause 0.15 
+            pause 0.75 
 
             scene v16s61_11a # TPP. Show MC(Jaw dropped) looking behind him we don't see whats behind him yet.
             with dissolve 
             
-            pause 0.15 
+            pause 0.75 
 
             scene v16s61_12 # TPP. Shot from a bit behind MC of him looking up at a gigantic baby(Angry, mouth closed.) that is towering over him. The Babys eyes locked onto MC
             with dissolve
@@ -741,9 +772,9 @@ label v16s61:
             u "(Noooooooooooo! AGHHHH-)"
 
             scene v16s61_19b # TPP. Show MC with his head on the book opening his eyes.
-            with dissolve
+            with vpunch
 
-            u "(Huh? Whoa, what the actual fuck? Why is [baby_name] invading my dreams? I need to get my head straight...)"
+            u "(Huh? Whoa, what the actual fuck? Why is [v16_baby_name] invading my dreams? I need to get my head straight...)"
 
             scene v16s61_20
             with dissolve
