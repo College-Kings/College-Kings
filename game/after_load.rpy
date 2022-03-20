@@ -796,19 +796,23 @@ label after_load:
             del simplr_Emmy
         except NameError: pass
 
-        for contact in (simplr_contacts + simplr_pendingContacts):
-            for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, contact.name.lower(), "large_profile_pictures")):
-                contact.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(contact.name.lower(), filename) for filename in filenames]
+        try:
+            for contact in (simplr_contacts + simplr_pendingContacts):
+                for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, contact.name.lower(), "large_profile_pictures")):
+                    contact.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(contact.name.lower(), filename) for filename in filenames]
 
-            try: contact.pending_messages
-            except AttributeError:
-                contact.pending_messages = contact.pendingMessages
-                del contact.pendingMessages
+                try: contact.pending_messages
+                except AttributeError:
+                    contact.pending_messages = contact.pendingMessages
+                    del contact.pendingMessages
 
-            try: contact.sent_messages
-            except AttributeError:
-                contact.sent_messages = contact.sentMessages
-                del contact.sentMessages
+                try: contact.sent_messages
+                except AttributeError:
+                    contact.sent_messages = contact.sentMessages
+                    del contact.sentMessages
+                    
+        except NameError:
+            pass
 
         
         # Items
