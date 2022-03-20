@@ -98,7 +98,7 @@ init python:
             except AttributeError: self._messenger = None
 
             if self._messenger is None:
-                self._messenger = Contact(self.name, self.profile_picture)
+                self._messenger = Contact(self.name)
                 messenger.contacts.append(self.messenger)
             return self._messenger
 
