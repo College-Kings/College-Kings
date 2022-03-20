@@ -56,6 +56,9 @@ image message_background = Frame("images/phone/messenger/app-assets/message-back
 image reply_background_idle = Frame("images/phone/messenger/app-assets/reply-background-idle.webp", 20, 20)
 image reply_background_hover = Frame("images/phone/messenger/app-assets/reply-background-hover.webp", 20, 20)
 
+image achievement_locked = Frame("images/phone/achievements/app-assets/achievement-locked.webp", 20, 20)
+image achievement_unlocked = Frame("images/phone/achievements/app-assets/achievement-unlocked.webp", 20, 20)
+
 # Fights
 image fight_guard_animation:
     "#000070" with Dissolve(0.5)

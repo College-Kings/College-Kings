@@ -21,7 +21,7 @@ style phonetext is text:
 # Applications
 style application_name is text:
     font "fonts/Montserrat-SemiBold.ttf"
-    size 15
+    size 12
     color "#fff"
 
 # Messanger

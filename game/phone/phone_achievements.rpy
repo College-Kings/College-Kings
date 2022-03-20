@@ -1,59 +1,54 @@
-screen achievements():
+screen achievements_home():
     tag phone_tag
-    zorder 200
 
-    default image_path = "images/phone/achievements/appAssets/"
+    default image_path = "images/phone/achievements/app-assets/"
     
     use base_phone:
-        window:
-            background "images/phone/achievements/appAssets/ach_background.webp"
-            align (0.5, 0.5)
-            xoffset 3
-            xysize (416, 906)
+        frame:
+            background image_path + "achievement-background.webp"
 
             viewport:
-                ypos 128
                 ysize 710
+                ypos 134
                 mousewheel True
                 draggable True
 
                 vbox:
-                    spacing 20
+                    xalign 0.5
+                    spacing -40
 
                     for ach in achievements:
-                        if achievement.has(ach.achievement):
-                            frame:
-                                padding (10, 10)
-                                background Transform(image_path + "ach_unlocked.webp", xysize=(415, 115))
+                        frame:
+                            xsize 415
+                            ypadding 35
+                            xalign 0.5
+
+                            if achievement.has(ach.achievement):
+                                background "achievement_unlocked"
 
                                 vbox:
-                                    text ach.display_name.upper() style "achievements_display_name" yoffset 25 xoffset 50
-                                    text ach.text.upper() style "achievements_text" yoffset 25 xoffset 50 xmaximum 310
-                        else:
-                            frame:
-                                padding (10, 10)
-                                background Transform(image_path + "ach_locked.webp", xysize=(415, 115))
+                                    pos (50, -2)
 
-                                vbox:
-                                    text ach.display_name.upper() style "achievements_display_name_locked" yoffset 25 xoffset 50
-                                    text "ACHIEVEMENT LOCKED" style "achievement_locked_text" yoffset 25 xoffset 50
+                                    text ach.display_name.upper() style "achievement_name"
+                                    text ach.text style "achievement_text"
+                                
+                            else:
+                                background "achievement_locked"
+
+                                text ach.display_name.upper() style "achievement_locked_name" pos (50, -2)
 
 
-style achievements_display_name is text:
-    color "#ffffff"
-    font "fonts/Montserrat-Bold.ttf"
+style achievement_name is text:
+    color "#fff"
+    font "fonts/Montserrat-ExtraBold.ttf"
     size 18
 
-style achievements_display_name_locked is text:
-    color "#555555"
-    font "fonts/Montserrat-Bold.ttf"
-    size 18
+style achievement_text is text:
+    color "#fff"
+    font "fonts/Montserrat-SemiBold.ttf"
+    size 15
 
-style achievements_text is text:
-    color "#ffffff"
-    font "fonts/Montserrat-SemiBold.ttf"
-    size 14
-style achievement_locked_text is text:
-    color "#555555"
-    font "fonts/Montserrat-SemiBold.ttf"
-    size 14
+style achievement_locked_name is text:
+    color "#777"
+    font "fonts/Montserrat-ExtraBold.ttf"
+    size 18
