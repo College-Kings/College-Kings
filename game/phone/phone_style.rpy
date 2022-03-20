@@ -19,53 +19,26 @@ style phonetext is text:
     color "#333"
 
 # Applications
-style applabels is text:
-    font "fonts/Montserrat-Medium.ttf"
-    size 12
-    color "#ffffff"
-    text_align 0.5
-    xalign 0.5
+style application_name is text:
+    font "fonts/Montserrat-SemiBold.ttf"
+    size 15
+    color "#fff"
 
 # Messanger
 style message_text is text:
     font "fonts/Effra-Regular.ttf"
     size 21
-    color "#777"
+    color "#333"
+
+style reply_text is text:
+    font "fonts/Effra-Regular.ttf"
+    size 21
+    color "#fff"
 
 style nametext is text:
     font "fonts/Montserrat-Black.ttf"
     size 20
     color "#333"
-
-style replies_style is button:
-    background "#147efb"
-    font "fonts/Effra-Regular.ttf"
-    xpadding 15
-    ypadding 5
-    xmaximum 350
-
-style replies_style_text is text:
-    font "fonts/Effra-Regular.ttf"
-    size 20
-    color "#333"
-
-style reply_disabled is button:
-    background "#333"
-    xpadding 15
-    ypadding 5
-    xmaximum 350
-
-style replybox is button:
-    background "#0f0"
-    xsize 250
-    ysize 40
-
-style replybox_text is text:
-    color "#333"
-    font "fonts/Effra-Regular.ttf"
-    size 20
-    xalign 0.5
-    yalign 0.5
 
 # Kiwii
 style kiwii_PrefTextButton is button_text:
