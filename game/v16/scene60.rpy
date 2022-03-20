@@ -1,15 +1,15 @@
 # SCENE 60: Lindsey gets interviewed
-# Locations: SVC Times Office
-# Characters: LINDSEY (Outfit: 3), MC (Outfit: 2), ELIJAH (Outfit: 1), RILEY (Outfit: 3)
-# Time: Afternoon
+# Locations: SVC Hallway, SVC Times Office
+# Characters: LINDSEY (Outfit: Business Outfit), MC (Outfit: 2), ELIJAH (Outfit: 1), RILEY (Outfit: 3)
+# Time: Thurdsay Afternoon
 
 label v16s60:
-    scene v16s60_1 # TPP. Show MC(slight smile, mouth closed) walking down the hallway close to the SVC Times Office.
+    scene v16s60_1 # TPP. Show MC(slight smile, mouth closed) walking down the SVC HALLWAY close to the SVC Times Office.
     with dissolve
 
-    pause 
+    pause 0.75
 
-    scene v16s60_2 # TPP. Show MC(slight smile, mouth closed) approaching the SVC Times Office.
+    scene v16s60_2 # TPP. Show MC(slight smile, mouth closed) approaching the door of the SVC Times Office.
     with dissolve
 
     li "*Laughs*"
@@ -47,14 +47,14 @@ label v16s60:
 
             li "Come on in!"
 
-    play sound "sounds/"
+    play sound "sounds/dooropen.mp3"
 
-    scene v16s60_3 # TPP. Show MC(slight smile,mouth closed.)opening the door and walking into the SVC Times Office
+    scene v16s60_3 # TPP. Show MC(slight smile,mouth closed.) opening the door and walking into the SVC Times Office
     with dissolve
 
     li "[name] is here just to take notes for me, I don't want to miss anything."
 
-    if Interview_Elijah: # Placeholder
+    if not v16s28_lindsey_pb_riley_interview:  # Elijah does the interview 
 
         scene v16s60_4 # FPP. MC looking at Lindsey(slight smile, mouth close) and Elijah (neutral face, mouth closed) sitting across from each other. Lindsey and Elijah both looking at MC.
         with dissolve
@@ -111,13 +111,14 @@ label v16s60:
         scene v16s60_5 # TPP. Close up of Elijah grabbing his pen and notepad.
         with dissolve
 
-        pause 0.15
+        pause 0.75
 
         # -Elijah picks up a pen and notepad. MC sits a little further away from them to observe-
 
         # -The progress bar for Lindsey's popularity appears, and changes depending on her answers-
 
         # -Whenever Lindsey is talking, Elijah can be writing notes (we never see what he's writing)-
+
         scene v16s60_6 # FPP. MC sitting to the side observing the interview. Lindsey (slight smile, mouth closed) looking at Elijah (neutral face,mouth open). Elijah looking back at Lindsey.
         with dissolve
 
@@ -129,8 +130,10 @@ label v16s60:
         u "(Damn, he's trying to unsettle her already)"
 
         # -if MC did not ask 'Can you say three positive things about your opponent?' or did ask the question and chose Sounds great in Scene 55 (LOSE 1 POPULARITY)
+        if "three_positives" not in v16s55_lindsey_question_set or ("three_positives" in v16s55_lindsey_question_set and "sounds_great" in v16s55_lindsey_followup_question_set):
 
-        if not interview_review_three_positives or interview_review_three_positives and not v16s55_suggest: # Placeholders
+            $ v14_lindsey_popularity -= 1
+
             scene v16s60_6a # FPP. MC sitting to the side observing the interview. Lindsey (slight smile, mouth open) looking at Elijah(Neutral face, mouth open). Elijah looking down at his notepad and writing (we don't see what he writes)
             with dissolve 
 
@@ -156,7 +159,10 @@ label v16s60:
             el "Okay... Interesting."
 
             # -if MC asked  'Can you say three positive things about your opponent?' and chose Make a suggestion in Scene 55 (GAIN 1 POPULARITY)
-        elif interview_review_three_positives and v16s55_suggest: # Placeholders
+        elif "three_positives" in v16s55_lindsey_question_set and "make_suggestion" in v16s55_lindsey_followup_question_set:
+
+            $ v14_lindsey_popularity += 1
+        
             scene v16s60_6d
             with dissolve
 
@@ -193,9 +199,11 @@ label v16s60:
             with dissolve
 
             el "I know people are going to want to hear your thoughts on this. Is there a specific quality that you feel every successful president should have?"
-        if not interview_review_presidential_qualities or interview_review_presidential_qualities and v16s55_that_will_do: #Placeholders
 
             # -if MC did not ask 'What is the most important quality of a good president?' or did ask the question and chose That'll do in Scene 55 (LOSE 1 POPULARITY)
+        if "important_quality" not in v16s55_lindsey_question_set or ("important_quality" in v16s55_lindsey_question_set and "thatll_do" in v16s55_lindsey_followup_question_set ):        
+            
+            $ v14_lindsey_popularity -= 1
 
             scene v16s60_6a
             with dissolve
@@ -264,8 +272,11 @@ label v16s60:
 
             el "Interesting..."
             
-            # -if MC asked  'What is the most important quality of a good president?' and chose Expand on that in Scene 55 (GAIN 1 POPULARITY)
-        elif interview_review_presidential_qualities and not v16s55_that_will_do: #Placeholders
+            # -if MC asked  'What is the most important quality of a good president?' and chose Expand on that in Scene 55 (GAIN 1 POPULARITY)        
+        elif "important_quality" in v16s55_lindsey_question_set and "expand" in v16s55_lindsey_followup_question_set:
+            
+            $ v14_lindsey_popularity += 1
+
             scene v16s60_6a
             with dissolve
 
@@ -300,9 +311,12 @@ label v16s60:
 
         el "I think it's important that people know you're a good person. So tell me, have you done anything recently to help someone other than yourself?"
 
-        if not interview_review_kindness_act or interview_review_kindness_act and v16s55_thats_good_enough: # Placeholders
 
-            # -if MC did not ask 'What was your last random act of kindness?' or did ask the question and chose That's good enough in Scene 55 (LOSE 1 POPULARITY)
+        # -if MC did not ask 'What was your last random act of kindness?' or did ask the question and chose That's good enough in Scene 55 (LOSE 1 POPULARITY)        
+        if "random_kindness" not in v16s55_lindsey_question_set or ("random_kindness" inv16s55_lindsey_question_set and "thats_good" in v16s55_lindsey_followup_question_set):
+
+            $ v14_lindsey_popularity -= 1
+
             scene v16s60_6a
             with dissolve
 
@@ -328,8 +342,11 @@ label v16s60:
 
             li "Of course not. That's horrible."
 
-    # -if MC also chose Let's finish up in Scene 55 (LOSE 1 POPULARITY)
-            if v16s55_lets_finish_up:
+            # -if MC also chose Let's finish up in Scene 55 (LOSE 1 POPULARITY)
+            if "finish_up" in v16s55_lindsey_followup_question_set:
+
+                $ v14_lindsey_popularity -= 1 
+            
                 scene v16s60_6a
                 with dissolve
 
@@ -361,7 +378,10 @@ label v16s60:
             li "I'm sorry, but I'm not lying to you. I donate to charity out of the kindness of my heart."
 
             # -if MC asked  'What was your last random act of kindness?' and chose Ask her why in Scene 55 (GAIN 1 POPULARITY)
-        elif interview_review_kindness_act and v16s55_ask_why: # Placeholders.
+        elif "random_kindness" in v16s55_lindsey_question_set and "ask_why" in v16s55_lindsey_followup_question_set:
+
+            $ v14_lindsey_popularity += 1
+        
             scene v16s60_6a
             with dissolve
 
@@ -416,14 +436,18 @@ label v16s60:
 
         scene v16s60_7 # TPP. Show MC (slight smile, mouth closed), lindsey(slight smile, mouth closed), and Elijah(neutral face, mouth closed.) all standing up from their seats in the room.
         with dissolve
-    # -if MC chose More advice in Scene 55 (GAIN 1 POPULARITY)
-        if v16s55_more_advice: # Placeholder
+        
+        # -if MC chose More advice in Scene 55 (GAIN 1 POPULARITY)
+        if "more_advice" in v16s55_lindsey_followup_question_set: 
 
+            $ v14_lindsey_popularity += 1
+    
             # -Lindsey gives Elijah a nice hug. Coming out of the hug, she squeezes his arm muscle-
+
             scene v16s60_8 # TPP. Close up of Lindsey(slight smile, mouth closed) giving Elijah(confused face,mouth closed.) a hug.
             with dissolve 
 
-            pause 0.15
+            pause 0.75
 
             scene v16s60_8a # TPP. Close up of Lindsey(slight smile, mouth open.) releasing from the hug and slightly touching Elijahs (confused, mouth closed) arm.
             with dissolve 
@@ -476,7 +500,7 @@ label v16s60:
 
         u "Hey. Have you already started the interview?"
 
-        scene v16s60_4e # FPP. MC looking at Lindsey(slight smile, mouth closed) and Riley (slight smile, mouth closed) sitting across from each other. Lindsey and Riley both looking at MC. 
+        scene v16s60_4e # FPP. MC looking at Lindsey(slight smile, mouth open) and Riley (slight smile, mouth closed) sitting across from each other. Lindsey and Riley both looking at MC. 
         with dissolve
 
         li "No, not yet. I just got here."
@@ -527,7 +551,10 @@ label v16s60:
 
         # -if MC did not ask 'Can you say three positive things about your opponent?' or did ask the question and chose Sounds great in Scene 55 (LOSE 1 POPULARITY)
         
-        if not interview_review_three_positives or interview_review_three_positives and not v16s55_suggest: # Placeholders
+        if "three_positives" not in v16s55_lindsey_question_set or ("three_positives" in v16s55_lindsey_question_set and "sounds_great" in v16s55_lindsey_followup_question_set):
+
+            $ v14_lindsey_popularity -= 1
+
             scene v16s60_11b # FPP. MC sitting to the side observing the interview. Lindsey (slight smile, mouth open) looking at Riley(slight smile, mouth closed). Riley looking at her notepad and writing.
             with dissolve
 
@@ -560,15 +587,18 @@ label v16s60:
 
             ri "Okay, I guess that's something I can work with."
 
-            scene v16s50_11d # FPP. MC sitting to the side observing the interview. Lindsey(slight smile, mouth closed) looking at Riley(slight smile, mouth closed) Riley looking at her Notepad and writing
+            scene v16s60_11d # FPP. MC sitting to the side observing the interview. Lindsey(slight smile, mouth closed) looking at Riley(slight smile, mouth closed) Riley looking at her Notepad and writing
             with dissolve
 
             u "(Damn, maybe I should've trained her better. But hindsight's 20/20!)"
 
 
         # -Riley takes a further moment writing-
-        elif interview_review_three_positives and v16s55_suggest:
+        elif "three_positives" in v16s55_lindsey_question_set and "make_suggestion" in v16s55_lindsey_followup_question_set:
+
             # -if MC asked  'Can you say three positive things about your opponent?' and chose Make a suggestion in Scene 55 (GAIN 1 POPULARITY)
+            $ v14_lindsey_popularity += 1
+
             scene v16s60_11b
             with dissolve
 
@@ -590,7 +620,7 @@ label v16s60:
             scene v16s60_11d
             with dissolve
 
-            pause 0.15
+            pause 0.75
 
             scene v16s60_11b
             with dissolve
@@ -603,7 +633,10 @@ label v16s60:
         ri "I'm interested to know, is there a specific quality that you feel every successful president should have?"
 
     # -if MC did not ask 'What is the most important quality of a good president?' or did ask the question and chose That'll do in Scene 55 (LOSE 1 POPULARITY)
-        if not interview_review_presidential_qualities or interview_review_presidential_qualities and v16s55_that_will_do: # Placeholders.
+        if "important_quality" not in v16s55_lindsey_question_set or ("important_quality" in v16s55_lindsey_question_set and "thatll_do" in v16s55_lindsey_followup_question_set ):        
+
+            $ v14_lindsey_popularity -= 1
+
             scene v16s60_11b
             with dissolve
 
@@ -640,9 +673,11 @@ label v16s60:
 
             u "(I don't think Riley was too impressed with that answer...)"
 
+        elif "important_quality" in v16s55_lindsey_question_set and "expand" in v16s55_lindsey_followup_question_set:
 
-        elif interview_review_presidential_qualities and not v16s55_that_will_do: #placeholders
             # -if MC asked  'What is the most important quality of a good president?' and chose Expand on that in Scene 55 (GAIN 1 POPULARITY)
+            $ v14_lindsey_popularity += 1
+
             scene v16s60_11b
             with dissolve 
 
@@ -683,8 +718,12 @@ label v16s60:
         ri "This is quite a nice one, to show people your kind side. Have you done anything recently to help someone other than yourself?"
 
     # -if MC did not ask 'What was your last random act of kindness?' or did ask the question and chose That's good enough in Scene 55 (LOSE 1 POPULARITY)
-        if not interview_review_kindness_act or interview_review_kindness_act and v16s55_thats_good_enough: # placeholders
+        if "random_kindness" not in v16s55_lindsey_question_set or ("random_kindness" inv16s55_lindsey_question_set and "thats_good" in v16s55_lindsey_followup_question_set):
+            
+            $ v14_lindsey_popularity -= 1
+
             scene v16s60_11b
+            with dissolve
 
             li "Most recently, I donated to the local dog charity."
 
@@ -716,7 +755,10 @@ label v16s60:
             ri "I disagree. They're independent for sure, that's what I like about them."
 
         # -if MC also chose Let's finish up in Scene 55 (LOSE 1 POPULARITY)
-            if v16s55_lets_finish_up:
+            if "finish_up" in v16s55_lindsey_followup_question_set:
+
+                $ v14_lindsey_popularity -= 1
+
                 scene v16s60_11b
                 with dissolve 
 
@@ -749,7 +791,10 @@ label v16s60:
             li "Well, let's just agree to disagree then."
 
             # -if MC asked  'What was your last random act of kindness?' and chose Ask her why in Scene 55 (GAIN 1 POPULARITY)
-        elif interview_review_kindness_act and v16s55_ask_why: # Placeholders
+        elif "random_kindness" in v16s55_lindsey_question_set and "ask_why" in v16s55_lindsey_followup_question_set:
+
+            $ v14_lindsey_popularity += 1
+
             scene v16s60_11b
             with dissolve
 
@@ -793,7 +838,10 @@ label v16s60:
         with dissolve
 
     # -if MC chose More advice in Scene 55 (GAIN 1 POPULARITY)
-        if v16_s55_more_advice:
+        if "more_advice" in v16s55_lindsey_followup_question_set: 
+
+            $ v14_lindsey_popularity += 1
+
             # -Lindsey holds out her hand for Riley to shake it-
             scene v16s60_8b # TPP. Close up of Lindsey(slight smile, mouth closed) holding out her hand for Riley(slight smile, mouth open) to shake.
             with dissolve 
