@@ -50,16 +50,16 @@ screen base_phone():
         # Click background to close phone
         button:
             if renpy.get_screen("free_roam"):
-                action [Hide("tutorial"), Hide("phone"), Hide("messenger_reply")]
+                action [Hide("tutorial"), Hide("phone"), Hide("message_reply")]
             else:
-                action [Hide("tutorial"), Hide("messenger_reply"), Return()]
+                action [Hide("tutorial"), Hide("message_reply"), Return()]
 
         textbutton "Exit Phone":
             style "phonebutton"
             if renpy.get_screen("free_roam"):
-                action [Hide("tutorial"), Hide("phone"), Hide("messenger_reply")]
+                action [Hide("tutorial"), Hide("phone"), Hide("message_reply")]
             else:
-                action [Hide("tutorial"), Hide("messenger_reply"), Return()]
+                action [Hide("tutorial"), Hide("message_reply"), Return()]
 
     window:
         background "images/phone/phone_screen.webp"
@@ -81,7 +81,7 @@ screen base_phone():
                     else:
                         idle "images/phone/home_button_idle.webp"
                         hover "images/phone/home_button_hover.webp"
-                    action [Hide("messenger_reply"), Show("phone")]
+                    action [Hide("message_reply"), Show("phone")]
                     align (0.5, 0.5)
                 
 
@@ -94,16 +94,16 @@ screen base_phone_rotated():
         # Click background to close phone
         button:
             if renpy.get_screen("free_roam"):
-                action [Hide("tutorial"), Hide("phone"), Hide("messenger_reply")]
+                action [Hide("tutorial"), Hide("phone"), Hide("message_reply")]
             else:
-                action [Hide("tutorial"), Hide("messenger_reply"), Return()]
+                action [Hide("tutorial"), Hide("message_reply"), Return()]
 
         textbutton "Exit Phone":
             style "phonebutton"
             if renpy.get_screen("free_roam"):
-                action [Hide("tutorial"), Hide("phone"), Hide("messenger_reply")]
+                action [Hide("tutorial"), Hide("phone"), Hide("message_reply")]
             else:
-                action [Hide("tutorial"), Hide("messenger_reply"), Return()]
+                action [Hide("tutorial"), Hide("message_reply"), Return()]
 
     window:
         background "images/phone/phone_screen.webp"
@@ -122,7 +122,7 @@ screen base_phone_rotated():
                 else:
                     idle "images/phone/home_button_idle.webp"
                     hover "images/phone/home_button_hover.webp"
-                action [Hide("messenger_reply"), Show("phone")]
+                action [Hide("message_reply"), Show("phone")]
                 align (0.5, 1.0)
                 yoffset -15
 

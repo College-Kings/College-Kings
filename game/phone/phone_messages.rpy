@@ -221,7 +221,7 @@ screen messenger_home():
                             text contact.name style "nametext" xpos 100 yalign 0.5
 
                             if contact.notification:
-                                add image_path + "contact-notification.webp" align (1.0, 0.5) xoffset -25
+                                add "contact_notification" align (1.0, 0.5) xoffset -25
 
 
 screen messager(contact=None):
@@ -244,8 +244,8 @@ screen messager(contact=None):
                 spacing 15
 
                 imagebutton:
-                    idle image_path + "back-button.webp"
-                    action [Hide("messenger_reply"), Show("messenger_home")]
+                    idle "back_button"
+                    action [Hide("message_reply"), Show("messenger_home")]
                     yalign 0.5
 
                 add Transform(contact.profile_picture, size=(65, 65)) yalign 0.5
@@ -282,7 +282,7 @@ screen messager(contact=None):
                             elif isinstance(message, Reply):
                                 background "message_background"
 
-                                text message.message  style "msgright_text"
+                                text message.message  style "message_text"
 
                             elif isinstance(message, ImgReply):
                                 background "message_background"
@@ -297,48 +297,11 @@ screen messager(contact=None):
                     ypos 780
 
                     imagebutton:
-                        idle image_path + "reply-button-idle.webp"
+                        idle "reply_button_idle"
                         hover image_path + "reply-button-hover.webp"
                         selected_idle image_path + "reply-button-hover.webp"
-                        action Show("messenger_reply", contact=contact)
+                        action Show("message_reply", contact=contact)
                         align (0.5, 0.5)
 
     if kiwii_firstTime:
         on "show" action Show("kiwiiPopup")
-
-
-screen messenger_reply(contact=None):
-    vbox:
-        xpos 1200
-        yalign 1.0
-        yoffset -100
-        spacing -75
-
-        for reply in contact.replies:
-            button:
-                idle_background "reply_background_idle"
-                hover_background "reply_background_hover"
-                padding (75, 65)
-                focus_mask reply_focus_mask
-                action [Hide("messenger_reply"), Function(contact.selected_reply, reply)]
-
-                if isinstance(reply, Reply):
-                    text reply.message style "reply_text"
-
-                elif isinstance(reply, ImgReply):
-                    add Transform(reply.image, zoom=0.15)
-
-
-screen phone_image(img=None):
-    modal True
-
-    $ bigImage = os.path.splitext(img)[0] + "big" + os.path.splitext(img)[1]
-
-    add "darker_80"
-    if renpy.loadable(bigImage):
-        add bigImage at truecenter
-    else:
-        add img at truecenter
-
-    button:
-        action Hide("phone_image")
