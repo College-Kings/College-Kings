@@ -443,7 +443,10 @@ default v16_wintom = False
 default v16_home_riley = False
 
 # Chloe Planning Board 
-
+default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
+default v16s12_chloe_planboard_decide_promote_chloe_on_cover = False #  True = promote chloe on newspaper cover / False = Embarrass Lindsey on front of newspaper cover
+default v16s12_chloe_planboard_decide_mc_gives_massages = False   # True = Hire a professional to give messages / False = MC gives massages
+# Check v16s60_chloe_pb_override_mc_gives_massages variable as well when determining if MC gives massages   
 
 # Lindsey Planning Board
 default v16s28_lindsey_pb_intereview_polly_choice = False # True = Interview / False = Polly
@@ -455,7 +458,6 @@ default freeroam15 = set() #Amber
 default v16s1_win_fight_with_tom = False
 default v16s10_let_lauren_continue_hj = False
 default v16s11_sign_up = False
-default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
 default v16s20_take_twazzlers = False
 default vs16s15hotdog_coupon = False
 default v16s23_mention_bills = False  # TODO: Variable
@@ -485,3 +487,5 @@ default v16s55_lindsey_question_set = set() # Possible values: three_positives  
 default v16s55_lindsey_followup_question_set = set() # Possible values: sounds_great or make_suggestion, thatll_do or expand, thats_good or ask_why, more_advice or finish_up
 default v16s57_agree_with_samantha_or_cameron = 0    # 0 = Stay out of it, 1 = Samantha, 2 = Cameron 
 default v16s59_just_knock = False  #  True == just knock on polly's door / False = Calm Lindsey down before knocking
+default v16s59_polly_endorse_lindsey = False # True == Polly will endorse Lindsey for Pres / False = Polly does not endorse Lindsey for Pres.
+default v16s61_chloe_pb_override_mc_gives_massages = False   # True = Mc says yes to helping chloe give massages as Spa night / False = Mc helps Chloe, but does not give massages.
