@@ -7,7 +7,7 @@ label v16s52:
     play sound "sounds/dooropen.mp3"
 
     scene v16s52_1 # TPP. Show MC(neutral face, mouth closed.) opening the door to the dog shelter and walking in.
-    with fade (1,0,1)
+    with fade
 
     pause 0.75
 
@@ -171,7 +171,6 @@ label v16s52:
     aut "Haha, okay. Thank you."
         
     if v16s26_lindsey_donation_money >= 10: # TODO: Variable
-
         scene v16s52_9d # FPP. MC looking at Autumn slight smile, mouth closed.) Autumn looking at MC and standing next to Lauren.
         with dissolve
 
@@ -248,6 +247,7 @@ label v16s52:
         pause 0.75
 
         scene v16s52_9a
+        with dissolve
 
         aut "*Laughs* Laters baby?"
 
@@ -719,7 +719,7 @@ label v16s52:
 
 # -Oscar the dog is sitting by the reception desk. A man wearing a trucker cap looks down at him-
     scene v16s52_26 # TPP. Inside of the dog shelter show Oscar the dog sitting by the reception desk with a happy oblivious look. A trucker(disgusted face, mouth open.) wearing a cap near Oscar looking down at him
-    with fade (1,0,1)
+    with fade
 
     trucker "Ah, man. Look at that ugly face... What a mutt!"
 
@@ -1022,5 +1022,7 @@ label v16s52:
 
     scene v16s52_43 # TPP. Shot from the front of MC(slight smile,mouth closed) walking away from the dog shelter. Autumn(smile, mouth closed.) in the background waving.
     with dissolve
+
+    pause 0.75
 
     jump v16s53

@@ -10,7 +10,7 @@ init python:
         emmy.simplr.addReply("No, it wasn't")
         emmy.simplr.addReply("Yeah, it was.")
         emmy.simplr.newMessage("Goodbye, [name].")
-        simplr_contacts.remove(emmy.simplr)
+        simplr_app.contacts.remove(emmy.simplr)
     
     def v14_emmy_simplr2():
         emmy.simplr.newMessage("That's completely fair")
@@ -18,11 +18,11 @@ init python:
         emmy.simplr.addReply("No, it wasn't")
         emmy.simplr.addReply("Yeah, it was.")
         emmy.simplr.newMessage("Goodbye, [name].")
-        simplr_contacts.remove(emmy.simplr)
+        simplr_app.contacts.remove(emmy.simplr)
 
     def v14_emmy_simplr3():
         emmy.simplr.newMessage("Well, regardless of what it is I've chosen to delete this app. So, this is goodbye.")
-        simplr_contacts.remove(emmy.simplr)
+        simplr_app.contacts.remove(emmy.simplr)
 
 label v14s12:
     play music "music/v12/Track Scene 33_2.mp3" fadein 2
@@ -200,7 +200,7 @@ label v14s12:
 
     u "(Still keeping this job a secret is really suspicious... And having to go to New York of all places is pretty... odd. Oh, well.)"
 
-    if emmy.simplr in simplr_contacts:
+    if emmy.simplr in simplr_app.contacts:
         if "v13_emmy" in sceneList:
             $ emmy.simplr.newMessage("Oh, hey...", force_send=True)
             $ emmy.simplr.addReply("Hey, we had a great time together, hope to see you again <3")
@@ -223,7 +223,7 @@ label v14s12:
             $ emmy.simplr.addReply("What the fuck?! Wait, you... what?")
             $ emmy.simplr.newMessage("Trust me, I already know what you're thinking.")
             $ emmy.simplr.addReply(_("I'm not sure that you do"), v14_emmy_simplr3)
-    elif emmy.simplr in simplr_pendingContacts:
+    elif emmy.simplr in simplr_app.pending_contacts:
         $ emmy.simplr.removeContact()
 
     stop music fadeout 3

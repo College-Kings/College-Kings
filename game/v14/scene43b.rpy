@@ -46,7 +46,7 @@ init python:
         setattr(store, "irisStrikes", irisStrikes +1)
 
 label v14s43b:
-    if iris.simplr in simplr_contacts:
+    if iris.simplr in simplr_app.contacts:
         $ iris.simplr.newMessage("Soooo....", force_send=True)
         $ iris.simplr.newMessage("I'm guessing you aren't that happy about it considering it's been a few days now with no response, haha. Sorry.", force_send=True)
         $ iris.simplr.addReply(_("Hey, Iris. So sorry if you felt like I wasn't interested, my Simplr has just been glitchy and I've been stuck out of it for a while. Back for good now."), v14_iris_simplr1)

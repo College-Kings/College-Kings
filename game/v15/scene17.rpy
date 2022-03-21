@@ -50,7 +50,7 @@ init python:
 label v15s17:
     play music "music/v13/Track Scene 21.mp3" fadein 2
 
-    if iris.simplr in simplr_contacts:
+    if iris.simplr in simplr_app.contacts:
         $ iris.simplr.newImgMessage("images/v15/Scene 17/iris_simplr.webp", force_send=True)
         $ iris.simplr.newMessage("The only thing I'm missing here in Paris is a cute boy ;)", force_send=True)
         $ iris.simplr.addReply(_("Amazing! How are you?"), v15_iris_simplr1)

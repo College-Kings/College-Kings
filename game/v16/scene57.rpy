@@ -3,9 +3,7 @@
 # Characters: SAMANTHA (Outfit: 1), MC (Outfit: 2), GRAYSON (Outfit: 2), CAMERON (Outfit: 2)
 # Time: Thursday Morning
 
-
 label v16s57:
-
     scene v16s57_1 # TPP. Show MC (slightly shocked, mouth closed) enters through the Apes Frat House front door, the door is still open
     with vpunch
     sa "Ow! Fuck off!"
@@ -147,7 +145,6 @@ label v16s57:
     with dissolve
 
     if v14_SamanthaDrugs: # -if SamDrugs
-
         scene v16s57_4d # FPP. Show just Cameron (no expression, mouth open, looking at Samantha)
         with dissolve
 
@@ -174,7 +171,6 @@ label v16s57:
         ca "What am I supposed to do?"
 
     else: # -if SamSober
-
         scene v16s57_4e # FPP. Show just Cameron (slight smile, mouth open, looking at Samantha)
         with dissolve
 
@@ -223,7 +219,6 @@ label v16s57:
     with dissolve
 
     menu:
-
         "Agree with Samantha":
             $ v16s57_agree_with_samantha = 1 # TODO: Variable # PlaceHolder Variable
             $ add_point(KCT.BOYFRIEND)
@@ -284,7 +279,6 @@ label v16s57:
             sa "*Sighs* Okay, I'll try."
 
         "Stay out of it":
-        
             scene v16s57_3h
             with dissolve
 
@@ -330,7 +324,6 @@ label v16s57:
     ca "Later, dickweed."
 
     if samantha.relationship >= Relationship.FWB:# -samanthaRS winks at mc on his way out, Cameron sees it, mc can hear them arguing on his way out
-
         scene v16s57_7c # FPP. Show both Samantha (slight smile, mouth is closed, winking at MC) sitting in her spot from v16s57_2 renders and Cameron (confused expression, mouth is closed, looking at Samantha) sitting in her spot from v16s57_2 renders and Cameron
         with dissolve
 
@@ -356,10 +349,10 @@ label v16s57:
     scene v16s57_9 # TPP. Show just MC (slight smile, mouth is closed) leavng the front door of the Apes Frat House
     with dissolve
 
-    if v14_help_lindsey: # -if helping Lindsey, transition to Scene 58-
+    pause 0.75
 
+    if v14_help_lindsey: # -if helping Lindsey, transition to Scene 58-
         jump v16s58
 
     else: # -if not helping Lindsey, transition to Scene 61-
-
         jump v16s61

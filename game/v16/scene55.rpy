@@ -3,7 +3,6 @@
 # Characters: MC (Outfit: 2), Lindsey (Outfit: 3)
 # Time: Thursday Morning
 
-
 label v16s55: # 55) Prepare Lindsey for the interview
     scene v16s55_1 # TPP Show MC from behind walking into library. Ahead of him, Lindsey is sitting at a table in the corner of the library, looking at her phone
     with dissolve
@@ -69,10 +68,8 @@ label v16s55: # 55) Prepare Lindsey for the interview
     # Implemented using the menu system 
 
     while len(v16s55_lindsey_question_set) < 2:
-
         menu:
             "Can you say three positive things about your opponent?" if "three_positives" not in v16s55_lindsey_question_set: 
-
                 $ v16s55_lindsey_question_set.add("three_positives")
 
             "What is the most important quality of a good president?" if "important_quality" not in v16s55_lindsey_question_set:
@@ -80,8 +77,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
 
             "What was your last random act of kindness?" if "random_kindness" not in v16s55_lindsey_question_set:
                 $ v16s55_lindsey_question_set.add("random_kindness")
-
-    
+                
     #-We exit the UI when the player has confirmed their selections-
 
     scene v16s55_3b
@@ -256,7 +252,6 @@ label v16s55: # 55) Prepare Lindsey for the interview
 
         menu:
             "That'll do":
-
                 $ v16s55_lindsey_followup_question_set.add("thatll_do")
 
                 u "Yeah, short but sweet. That'll do."
@@ -272,7 +267,6 @@ label v16s55: # 55) Prepare Lindsey for the interview
                 u "It was a good answer. Let's move on."
 
             "Expand on that":
-
                 $ v16s55_lindsey_followup_question_set.add("expand")
 
                 u "Okay, a little vague. What are you saying there? People skills?"
@@ -368,7 +362,6 @@ label v16s55: # 55) Prepare Lindsey for the interview
         # -Regardless of MC spending her money-
         menu:
             "That's good to mention":
-
                 $ v16s55_lindsey_followup_question_set.add("thats_good")
                 $ add_point(KCT.BOYFRIEND)
 
@@ -388,7 +381,6 @@ label v16s55: # 55) Prepare Lindsey for the interview
                 u "I'm loving that confidence, haha."
 
             "Ask her why":
-
                 $ v16s55_lindsey_followup_question_set.add("ask_why")
 
                 scene v16s55_3e
@@ -487,7 +479,6 @@ label v16s55: # 55) Prepare Lindsey for the interview
 
     menu:
         "More advice": # -if More advice [Checkpoint 1.4]
-            
             $ v16s55_lindsey_followup_question_set.add("more_advice")
             $ add_point(KCT.BOYFRIEND)
 
@@ -516,7 +507,6 @@ label v16s55: # 55) Prepare Lindsey for the interview
         # [End of Checkpoint 1.4]
         
         "Let's finish up": # -if Let's finish up [Checkpoint 1.5]
-            
             $ v16s55_lindsey_followup_question_set.add("finish_up")
             
             scene v16s55_3e
@@ -572,7 +562,6 @@ label v16s55: # 55) Prepare Lindsey for the interview
 
     # -if LindseyRS
     if relationship.lindsey >= Relationship.FWB: 
-        
         scene v16s55_7 # FPP Lindsey (sexy smile, mouth open), now standing, looking at MC
         with dissolve
 

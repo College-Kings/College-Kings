@@ -348,17 +348,15 @@ label after_load:
             chloe.relationship = Relationship.MAD
 
         ## PHONE
+        try: phone.base_image
+        except AttributeError: phone.base_image = "images/phone/phone-icon.webp"
+
         ### APPLICATIONS
         try:
-            messenger.contacts = contacts
+            messenger.contacts = contacts.copy()
             del contacts
         except NameError: pass
 
-        # Transfer statsApp to stats_app
-        try:
-            stats_app.locked = statsApp.locked
-            del statsApp
-        except NameError: pass
 
         # Transfer kiwiiApp to kiwii
         try:
@@ -368,11 +366,10 @@ label after_load:
             kiwii.locked = kiwiiApp.locked
             kiwii.contacts = []
             del kiwiiApp
-        except NameError:
-            kiwii = Application("Kiwii", "kiwii/appAssets/kiwiiIcon.webp", "kiwiiApp", locked=False)
-
-        # Unlock simplr_app
-        simplr_app.unlock()
+        except NameError: pass
+            
+        if not isinstance(kiwii, Application):
+            kiwii = Application("kiwii")
 
         for app in phone.applications.copy():
             if not isinstance(app, Application):
@@ -802,19 +799,23 @@ label after_load:
             del simplr_Emmy
         except NameError: pass
 
-        for contact in (simplr_contacts + simplr_pendingContacts):
-            for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, contact.name.lower(), "large_profile_pictures")):
-                contact.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(contact.name.lower(), filename) for filename in filenames]
+        try:
+            for contact in (simplr_contacts + simplr_pendingContacts):
+                for (dirpath, dirname, filenames) in os.walk(os.path.join(contacts_file_path, contact.name.lower(), "large_profile_pictures")):
+                    contact.large_profile_pictures = ["images/nonplayable_characters/{}/large_profile_pictures/{}".format(contact.name.lower(), filename) for filename in filenames]
 
-            try: contact.pending_messages
-            except AttributeError:
-                contact.pending_messages = contact.pendingMessages
-                del contact.pendingMessages
+                try: contact.pending_messages
+                except AttributeError:
+                    contact.pending_messages = contact.pendingMessages
+                    del contact.pendingMessages
 
-            try: contact.sent_messages
-            except AttributeError:
-                contact.sent_messages = contact.sentMessages
-                del contact.sentMessages
+                try: contact.sent_messages
+                except AttributeError:
+                    contact.sent_messages = contact.sentMessages
+                    del contact.sentMessages
+                    
+        except NameError:
+            pass
 
         
         # Items

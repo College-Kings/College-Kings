@@ -21,6 +21,7 @@ init python:
             else: self.mentions = []
 
             self.numberLikes = numberLikes
+
             self.liked = False
 
             self.sentComments = []
@@ -29,7 +30,6 @@ init python:
             kiwiiPosts.append(self)
 
             kiwii.unlock()
-            kiwii.notification = True
 
         @property
         def username(self):
@@ -161,196 +161,219 @@ init python:
 
             self.disabled = disabled
 
-    def totalLikes():
-        total = 0
-
-        for post in kiwiiPosts:
-            for comment in post.sentComments:
-                if comment.user == "MC":
-                    total += comment.numberLikes
-            if post.user == "MC":
-                total += comment.numberLikes
-
-        return total
+    def get_total_likes():
+        return sum(post.numberLikes for post in kiwiiPosts if post.user == mc) + sum(
+            comment.numberLikes
+            for post in kiwiiPosts
+            for comment in post.sentComments
+            if comment.user == mc
+        )
 
     def find_kiwii_post(image=None, message=None):
         for post in kiwiiPosts:
             if post.image == image: return post
             if post.message == message: return post
 
-init -100:
-    define profile_pictures = [
-        "images/nonplayable_characters/profile_pictures/mc2.webp",
-        "images/nonplayable_characters/profile_pictures/mc3.webp",
-        "images/nonplayable_characters/profile_pictures/mc4.webp",
-        "images/nonplayable_characters/profile_pictures/mc5.webp"
-        ]
-    default profile_pictures_index = 0
 
-    default kiwiiPosts = []
-    default liked_kiwiPosts = []
+default kiwiiPosts = []
+default liked_kiwiPosts = []
 
-screen kiwiiTemplate():
+
+screen kiwii_base():
     modal True
-    zorder 200
+
+    default image_path = "images/phone/kiwii/app-assets/"
 
     use base_phone:
-        add Transform("images/phone/kiwii/AppAssets/Background.webp", size=(376, 744)) at truecenter
+        frame:
+            background image_path + "background.webp"
 
-        transclude
+            transclude
 
-        button:
-            xysize(56, 55)
-            pos (932, 845)
-            action Show("kiwiiApp")
+            hbox:
+                ysize 72
+                xalign 0.5
+                ypos 843
+                spacing 45
 
-        button:
-            xysize(30, 30)
-            pos (1023, 870)
-            action Show("liked_kiwii")
+                imagebutton:
+                    idle image_path + "home-button-idle.webp"
+                    hover image_path + "home-button-hover.webp"
+                    action Show("kiwii_home")
+                    yalign 0.5
 
-        button:
-            xysize(30, 30)
-            pos (1085, 870)
-            action Show("kiwiiPreferences")
+                null width 25
 
-        button:
-            xysize(30, 30)
-            pos (800, 870)
-            action Show("kiwiiApp")
+                null width 45
 
-screen kiwiiPreferences():
+                imagebutton:
+                    idle image_path + "liked-button-idle.webp"
+                    hover image_path + "liked-button-hover.webp"
+                    action Show("kiwii_home", posts=filter(lambda post: post.liked, kiwiiPosts))
+                    yalign 0.5
+
+                imagebutton:
+                    idle Transform(mc.profile_picture, xysize=(30, 30))
+                    action Show("kiwii_preferences")
+                    yalign 0.5
+
+
+screen kiwii_preferences():
     tag phone_tag
     modal True
-    zorder 200
 
-    $ mc.profile_picture = profile_pictures[profile_pictures_index]
+    default profile_pictures_index = 0
 
-    use kiwiiTemplate:
-
-        add Transform(mc.profile_picture, zoom=0.2) align(0.5, 0.3)
-
-        hbox:
-            spacing 50
-            align(0.5, 0.48)
-
-            textbutton "<":
-                if profile_pictures_index > 0:
-                    action SetVariable("profile_pictures_index", profile_pictures_index - 1)
-                text_style "kiwii_PrefTextButton"
-
-            textbutton ">":
-                if profile_pictures_index + 1 < len(profile_pictures):
-                    action SetVariable("profile_pictures_index", profile_pictures_index + 1)
-                text_style "kiwii_PrefTextButton"
-
+    use kiwii_base:
         vbox:
-            align (0.5, 0.58)
+            xalign 0.5
+            ypos 175
+            spacing 25
 
-            text "Username:" style "kiwii_ProfileName" xalign 0.5
-            input:
-                value FieldInputValue(mc, "username")
-                default name
-                length 15
-                color "#006400"
-                outlines [ (absolute(0), "#000", absolute(0), absolute(0)) ]
-        vbox:
-            align (0.5, 0.7)
-            spacing 3
+            vbox:
+                xalign 0.5
+                spacing 5
 
-            text "Total Likes:" style "kiwii_ProfileName" at truecenter
-            text str(totalLikes()) at truecenter:
-                color "#006400"
-                outlines [ (absolute(0), "#000", absolute(0), absolute(0)) ]
+                add Transform(mc.profile_picture, xysize=(200, 200)) xalign 0.5
+
+                hbox:
+                    spacing 50
+                    align (0.5, 0.45)
+
+                    textbutton "<":
+                        if profile_pictures_index > 0:
+                            action [SetScreenVariable("profile_pictures_index", profile_pictures_index - 1),
+                                SetField(mc, "profile_picture", mc.profile_pictures[profile_pictures_index])]
+                        text_style "kiwii_PrefTextButton"
+
+                    textbutton ">":
+                        if profile_pictures_index + 1 < len(mc.profile_pictures):
+                            action [SetScreenVariable("profile_pictures_index", profile_pictures_index + 1),
+                                SetField(mc, "profile_picture", mc.profile_pictures[profile_pictures_index])]
+                        text_style "kiwii_PrefTextButton"
+
+            vbox:
+                xalign 0.5
+
+                text "Username:" style "kiwii_ProfileName" xalign 0.5
+                input:
+                    value FieldInputValue(mc, "username")
+                    default name
+                    length 15
+                    color "#006400"
+                    outlines [ (absolute(0), "#000", absolute(0), absolute(0)) ]
+                    xalign 0.5
+
+            vbox:
+                xalign 0.5
+
+                text "Total Likes:" style "kiwii_ProfileName" at truecenter
+                text str(get_total_likes()) at truecenter:
+                    color "#006400"
+                    outlines [ (absolute(0), "#000", absolute(0), absolute(0)) ]
 
 
-screen kiwiiApp():
+screen kiwii_home(posts=kiwiiPosts):
     tag phone_tag
-    zorder 200
+
+    default image_path = "images/phone/kiwii/app-assets/"
 
     $ kiwii.notification = False
 
-    use kiwiiTemplate:
+    use kiwii_base:
 
-        vpgrid:
-            cols 1
+        viewport:
             mousewheel True
             draggable True
-            xysize(350, 575)
-            xalign 0.5
-            ypos 265
-            spacing 10
+            ypos 152
+            ysize 692
 
-            for post in reversed(kiwiiPosts):
-                fixed:
-                    xysize (350, 350)
-                    add "images/phone/Kiwii/AppAssets/Post.webp"
+            vbox:
+                xalign 0.5
+                xsize 416
 
-                    hbox:
-                        spacing 10
-                        xoffset 20
-                        yoffset 20
+                null height 20
 
-                        add Transform(post.profile_picture, size=(55, 55))
-                        text post.username style "kiwii_ProfileName" yalign 0.5
+                for post in reversed(posts):
+                    frame:
+                        xalign 0.5
+                        xsize 386
+                        padding (10, 10)
 
-                    vbox:
-                        align(0.5, 0.5)
-                        yoffset 18
-                        spacing 5
+                        has vbox
 
-                        imagebutton:
-                            idle Transform(post.image, zoom=0.17)
-                            action Show("kiwii_image", img=post.image)
-                        text post.get_message() style "kiwii_CommentText" xalign 0.5
+                        hbox:
+                            xsize 366
 
-                    hbox:
-                        xoffset 20
-                        yoffset 220
-                        spacing 5
+                            hbox:
+                                spacing 10
 
-                        imagebutton:
-                            idle "images/phone/Kiwii/AppAssets/Like.webp"
-                            hover "images/phone/Kiwii/AppAssets/LikePress.webp"
-                            selected_idle "images/phone/Kiwii/AppAssets/LikePress.webp"
-                            selected post.liked
-                            action Function(post.toggleLike)
-                        frame:
-                            background "#fff"
-                            yalign 0.5
-                            padding (5, 2)
+                                add Transform(post.profile_picture, xysize=(55, 55))
+                                text post.username style "kiwii_ProfileName" yalign 0.5
 
-                            text "{}".format(post.numberLikes) style "kiwii_LikeCounter"
+                            hbox:
+                                spacing 5
+                                align (1.0, 0.5)
 
-                    imagebutton:
-                        idle "images/phone/Kiwii/AppAssets/Comment.webp"
-                        hover "images/phone/Kiwii/AppAssets/CommentHover.webp"
-                        action Show("kiwiiPost", post=post)
-                        xoffset 290
-                        yoffset 220
+                                add image_path + "static-button-1.webp"
+                                add image_path + "static-button-2.webp"
+
+                        null height 10
+
+                        vbox:
+                            spacing 5
+
+                            imagebutton:
+                                idle Transform(post.image, xysize=(366, 206))
+                                action Show("kiwii_image", img=post.image)
+                                xalign 0.5
+                            text post.get_message() style "kiwii_CommentText" xalign 0.5
+
+                        null height 10
+
+                        hbox:
+                            xsize 366
+
+                            hbox:
+                                imagebutton:
+                                    idle image_path + "like.webp"
+                                    hover image_path + "like-press.webp"
+                                    selected_idle image_path + "like-press.webp"
+                                    selected post.liked
+                                    action Function(post.toggleLike)
+
+                                text "{}".format(post.numberLikes) style "kiwii_LikeCounter" yalign 0.5
+
+                            imagebutton:
+                                idle image_path + "comment.webp"
+                                hover image_path + "commenthover.webp"
+                                action Show("kiwiiPost", post=post)
+                                xalign 1.0
 
 
 screen kiwiiPost(post):
     tag phone_tag
     zorder 200
 
-    use kiwiiTemplate:
+    default image_path = "/images/phone/kiwii/app-assets/"
 
+    use kiwii_base:
         imagebutton:
-            xalign 0.5
-            ypos 265
-            idle Transform(post.image, size=(376, 212))
+            idle Transform(post.image, xysize=(416, 234))
             action Show("kiwii_image", img=post.image)
-
+            xalign 0.5
+            ypos 152
+            
         viewport:
             mousewheel True
             draggable True
-            xysize(350, 362)
-            xalign 0.5
-            ypos 485
-            
+            xysize (357, 400)
+            pos (20, 386)
+
             vbox:
                 spacing 20
+
+                null
 
                 for comment in post.sentComments:
                     if comment.message.strip():
@@ -360,22 +383,18 @@ screen kiwiiPost(post):
                             hbox:
                                 spacing 10
 
-                                add Transform(comment.profile_picture, size=(55, 55))
+                                add Transform(comment.profile_picture, xysize=(55, 55))
                                 text comment.username style "kiwii_ProfileName" yalign 0.5
 
-                            hbox:
-                                xsize 275
-                                spacing 5
-
-                                text comment.get_message() style "kiwii_CommentText"
+                            text comment.get_message() style "kiwii_CommentText"
 
                             hbox:
                                 spacing 5
 
                                 imagebutton:
-                                    idle "images/phone/Kiwii/AppAssets/Like.webp"
-                                    hover "images/phone/Kiwii/AppAssets/LikePress.webp"
-                                    selected_idle "images/phone/Kiwii/AppAssets/LikePress.webp"
+                                    idle image_path + "like.webp"
+                                    hover image_path + "like-press.webp"
+                                    selected_idle image_path + "like-press.webp"
                                     selected comment.liked
                                     action Function(comment.toggleLike)
                                 text "[comment.numberLikes]" style "kiwii_LikeCounter" yalign 0.5
@@ -395,74 +414,9 @@ screen kiwiiPost(post):
                         style "kiwii_reply"
                         action Function(post.selectedReply, reply)
 
-screen liked_kiwii():
-    tag phone_tag
-    zorder 200
-
-    $ liked_kiwiPosts = filter(lambda post: post.liked, kiwiiPosts)
-
-    use kiwiiTemplate:
-
-        vpgrid:
-            cols 1
-            mousewheel True
-            draggable True
-            xysize(350, 575)
-            xalign 0.5
-            ypos 265
-            spacing 10
-
-            for post in reversed(liked_kiwiPosts):
-                fixed:
-                    xysize (350, 350)
-                    add "images/phone/Kiwii/AppAssets/Post.webp"
-
-                    hbox:
-                        spacing 10
-                        xoffset 20
-                        yoffset 20
-
-                        add Transform(post.profile_picture, size=(55, 55))
-                        text post.username style "kiwii_ProfileName" yalign 0.5
-
-                    vbox:
-                        align(0.5, 0.5)
-                        yoffset 18
-                        spacing 5
-
-                        imagebutton:
-                            idle Transform(post.image, zoom=0.17)
-                            action Show("kiwii_image", img=post.image)
-                        text post.message style "kiwii_CommentText" xalign 0.5
-
-                    hbox:
-                        xoffset 20
-                        yoffset 220
-                        spacing 5
-
-                        imagebutton:
-                            idle "images/phone/Kiwii/AppAssets/Like.webp"
-                            hover "images/phone/Kiwii/AppAssets/LikePress.webp"
-                            selected_idle "images/phone/Kiwii/AppAssets/LikePress.webp"
-                            selected post.liked
-                            action Function(post.toggleLike)
-                        frame:
-                            background "#fff"
-                            yalign 0.5
-                            padding (5, 2)
-
-                            text "{}".format(post.numberLikes) style "kiwii_LikeCounter"
-
-                    imagebutton:
-                        idle "images/phone/Kiwii/AppAssets/Comment.webp"
-                        hover "images/phone/Kiwii/AppAssets/CommentHover.webp"
-                        action Show("kiwiiPost", post=post)
-                        xoffset 290
-                        yoffset 220
 
 screen kiwii_image(img):
     modal True
-    zorder 300
 
     imagebutton:
         idle Transform(img, zoom=0.85)
