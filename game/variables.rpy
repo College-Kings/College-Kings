@@ -491,3 +491,5 @@ default v16s59_just_knock = False  #  True == just knock on polly's door / False
 default v16s59_polly_endorse_lindsey = False # True == Polly will endorse Lindsey for Pres / False = Polly does not endorse Lindsey for Pres.
 default v16s61_chloe_pb_override_mc_gives_massages = False   # True = Mc says yes to helping chloe give massages as Spa night / False = Mc helps Chloe, but does not give massages.
 default v16s63x_chloe_suggestion_set = set() # Possible values:  "v16s63_compliment", "v16s63b_compliment", "v16s63_breast_reduciton", "v16s63b_breath_mint"
+default v16s64_insulted_chloe = False  # True = Added an insult to suggestion box/ False = did not add insult to suggestion box - MC insults Chloe using suggestion box during Spa night
+default v16s64_confessed_insult = False  # True = Told Truth/ False = Denied it - MC tells the truth when confronted about insults from Spa Night.
