@@ -439,17 +439,25 @@ default pb_threesome = False
 # 16.0
 default v16_baby_name = "Baby" # Used to store the player designated name of the baby
 default v16_wrong_key = True # This does default to True; not a typo. Used for baby menus
-# Chloe Planning Board 
+default v16_wintom = False
+default v16_home_riley = False
 
+# Chloe Planning Board 
+default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
+default v16s12_chloe_planboard_decide_promote_chloe_on_cover = False #  True = promote chloe on newspaper cover / False = Embarrass Lindsey on front of newspaper cover
+default v16s12_chloe_planboard_decide_mc_gives_massages = False   # True = Hire a professional to give messages / False = MC gives massages
+# Check v16s60_chloe_pb_override_mc_gives_massages variable as well when determining if MC gives massages   
 
 # Lindsey Planning Board
-default v16s28_lindsey_pb_intereview_polly_choice = False # True = Interview / False = Polly 
+default v16s28_lindsey_pb_intereview_polly_choice = False # True = Interview / False = Polly
+default v16s28_lindsey_pb_riley_interview = False  # True = Riley interviews Lindsey / False = Elijah interviews Lindsey
+default v16s28_lindsey_pb_pretend_roomservice = False #  True =  Lindsey/MC wear roomservice disguises / Lindsey/MC go as themselves 
+
 
 default freeroam15 = set() #Amber
 default v16s1_win_fight_with_tom = False
 default v16s10_let_lauren_continue_hj = False
 default v16s11_sign_up = False
-default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
 default v16s15_fr_carnival = set() # Holds visited scenes for the free roam 
 default v16s20_take_twazzlers = False
 default vs16s15hotdog_coupon = False
@@ -475,6 +483,11 @@ default v16s39_food_critic = False
 default v16s44_rubius_park_walk = False
 default v16s48_chloe_throws_baby = False
 default v16s50a_dotw = 0   # 0 = nothing, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday
-
-default v16_wintom = False
-default v16_home_riley = False
+default v16s52_mc_dogshelter_kiwii_post = False  
+default v16s55_lindsey_question_set = set() # Possible values: three_positives  , important_quality  , random_kindness
+default v16s55_lindsey_followup_question_set = set() # Possible values: sounds_great or make_suggestion, thatll_do or expand, thats_good or ask_why, more_advice or finish_up
+default v16s57_agree_with_samantha_or_cameron = 0    # 0 = Stay out of it, 1 = Samantha, 2 = Cameron 
+default v16s59_just_knock = False  #  True == just knock on polly's door / False = Calm Lindsey down before knocking
+default v16s59_polly_endorse_lindsey = False # True == Polly will endorse Lindsey for Pres / False = Polly does not endorse Lindsey for Pres.
+default v16s61_chloe_pb_override_mc_gives_massages = False   # True = Mc says yes to helping chloe give massages as Spa night / False = Mc helps Chloe, but does not give massages.
+default v16s63x_chloe_suggestion_set = set() # Possible values:  "v16s63_compliment", "v16s63b_compliment", "v16s63_breast_reduciton", "v16s63b_breath_mint"

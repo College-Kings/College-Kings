@@ -519,6 +519,7 @@ label v16s52:
                 u "And... Posted."
 
                 #! v16s52kw_2 A stock photo that mc found on the internet of a puppy
+                $ v16s52_mc_dogshelter_kiwii_post = True
 
                 $ kiwii_post = KiwiiPost(mc, "v16/v16s52kw_2.webp", "The puppies need you! Come to 0417 Alanis Street near SVC if you're looking to adopt or donate. We need all the help we can get! :)", numberLikes=479)
                 $ kiwii_post.new_comment(autumn, "Yes, please come see us! We have merchandise too <3", numberLikes=47, force_send=True)
