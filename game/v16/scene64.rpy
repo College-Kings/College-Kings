@@ -398,7 +398,7 @@ label v16s64:
 
         u "(Dammit...)"
 
-    elif not v16s63compliment or v16s63bcompliment or v16s63breast_reduction or v16s63bbreath_mint  # -if MC chose to not write anything at all
+    elif not v16s63compliment or v16s63bcompliment or v16s63breast_reduction or v16s63bbreath_mint:  # -if MC chose to not write anything at all
         scene v16s64_2
         with dissolve
 
@@ -431,7 +431,7 @@ label v16s64:
 
     li "Finally! No boys, no boys, no boys!"
 
-    if lindsey.relationship >= Relationship.FWB # -if lindseyrs she winks at him-
+    if lindsey.relationship >= Relationship.FWB: # -if lindseyrs she winks at him-
         scene v16s64_3b # FPP. Show just Lindsey (slight smile, mouth closed, winking at MC)
         with dissolve
 
