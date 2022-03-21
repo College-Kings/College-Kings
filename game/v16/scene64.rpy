@@ -3,16 +3,13 @@
 # Characters: CHLOE (Outfit: 1), LINDSEY (Outfit: 3), MC (Outfit: 2), AUBREY (Outfit: 1), NORA (Outfit: 2), JENNY (Outfit: 1)
 # Time: Evening
 
-
 label v16s64:
-
     scene v16s64_1 # TPP. In the backyard, Chloe (slight smile, mouth open, looking at Jenny), and Jenny (slight smile, mouth closed, looking at Chloe) are sitting next to each other, Nora (slight smile, mouth open, looking at Aubrey) is sitting between Jenny and Aubrey, and Aubrey (slight smile, mouth closed, looking at Nora) is sitting next to Nora, everyone is sat around a small campfire with a neat stone circle around it, two open spots around the campfire are for MC (slight smile, mouth closed, looking at Lindsey) who will sit next to Chloe and Lindsey (slight smile, mouth open, looking at MC) who will sit next to Aubreywalking towards the campfire circle MC is holding the suggestion box from v16s63b
     with dissolve
 
     pause 0.75
 
     if v16s63kissing_convo: # -if Transitioning from Scene 63b-  !!!###PLACEHOLDER VARIABLE###!!!
-
         scene v16s64_2 # FPP. Show just Chloe already sitting (slight smile, mouth open, looking at Lindsey)
         with dissolve
 
@@ -24,7 +21,6 @@ label v16s64:
         li "Amazing. A little rough at points but hey, I like it hard sometimes, haha."
 
     else: # -if Transitioning from Scene 63a or 63c-
-
         scene v16s64_2
         with dissolve
 
@@ -66,7 +62,6 @@ label v16s64:
     with dissolve
 
     menu:
-
         "Take one":
             $ add_point(KCT.BRO)
 
@@ -164,7 +159,6 @@ label v16s64:
     # -regardless
 
     if v16s64insulted_chloe: # -if insulted Chloe
-
         # -chloe is pissed and the others girls can't believe it, but Lindsey and Nora are laughing about it, nora trying to hide her smile
 
         scene v16s64_4i # FPP. Show just Aubrey (concerned expression, mouth is open, looking at MC)
@@ -191,7 +185,6 @@ label v16s64:
         with dissolve
 
         menu:
-
             "Tell the truth":
                 $ v16s64confessed_insult = True # -try to keep this variable as it will possibly avoid a breakup i assume, thank you
                 $ add_point(KCT.BRO)
@@ -271,8 +264,7 @@ label v16s64:
 
         cl "*Sighs* I don't know about you sometimes, [name]. You have a strange sense of humor."
 
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value: # -if also ChloeGF
-
+        if chloe.relationship >= Relationship.GIRLFRIEND: # -if also ChloeGF
             scene v16s64_2j # FPP. Show just Chloe (slighty sad expression, mouth open, looking at MC)
             with dissolve
 
@@ -323,8 +315,7 @@ label v16s64:
 
         au "Listen, babe. Everyone here knows that your body is impeccable."
 
-        if # -if chloeGF (extra dialogue)
-
+        if chloe.relationship.value >= Relationship.GIRLFRIEND.value: ### -if chloeGF (extra dialogue)
             scene v16s64_4k # FPP. Show just Aubrey (slightly angry, mouth open, looking at MC) 
             with dissolve
 
@@ -335,14 +326,16 @@ label v16s64:
 
             u "I do. *Chuckles*"
 
-            if chloe.relationship.value >= Relationship.GIRLFRIEND.value and AubreyTamed: ###!!!Check for proper AubreyTamed Variable!!!###
+            if AubreyTamed: ###!!!Check for proper AubreyTamed Variable!!!###
             
                 scene v16s64_4m # FPP. Show just Aubrey (sad smile, mouth closed, trying not to look at MC) 
                 with dissolve
 
             else:
-
                 scene v16s64_4n # FPP. Show just Aubrey (slight smile, mouth closed, looking at MC) 
+                with dissolve
+                
+            pause 0.75
 
         scene v16s64_8b # FPP. Show just Jenny (full smile, mouth closed, looking at Chloe)
         with dissolve
@@ -375,7 +368,6 @@ label v16s64:
         u "Message received. (Not making any promises though, hehee...)"
 
     if v16s63compliment or v16s63bcompliment and not v16s63breast_reduction and not v16s63bbreath_mint: # if MC chose to compliment chloe in 16.36 and/or 16.63b (both times or just once with NO insults)
-
         scene v16s64_2b
         with dissolve
 
@@ -407,7 +399,6 @@ label v16s64:
         u "(Dammit...)"
 
     elif not v16s63compliment or v16s63bcompliment or v16s63breast_reduction or v16s63bbreath_mint  # -if MC chose to not write anything at all
-
         scene v16s64_2
         with dissolve
 
@@ -440,8 +431,7 @@ label v16s64:
 
     li "Finally! No boys, no boys, no boys!"
 
-    if # -if lindseyrs she winks at him-
-
+    if lindsey.relationship >= Relationship.FWB # -if lindseyrs she winks at him-
         scene v16s64_3b # FPP. Show just Lindsey (slight smile, mouth closed, winking at MC)
         with dissolve
 

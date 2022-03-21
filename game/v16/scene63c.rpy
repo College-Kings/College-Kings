@@ -3,7 +3,6 @@
 # Characters: LINDSEY (Outfit: Towel/Nude), MC (Outfit: 2)
 # Time: Thursday Evening
 
-
 label v16s63c:
 
     $ sex_overlay_options = []
@@ -27,17 +26,13 @@ label v16s63c:
     with dissolve
 
     call screen sex_overlay("v16s63c_end_foreplay_fr")
-
         
-label v16s6c_lindsey_sex_roam_boobs: # -if Boobs
-    
+label v16s6c_lindsey_sex_roam_boobs: # -if Boobs    
     scene v16s63c_3 # FPP. Close up shot of Lindsey full breast and head shot (seductive expression, mouth closed, looking at MC) lying down on the table, one hand behind her head and the other playing with one of her nipples
     with dissolve
 
     menu:
-
         "Massage boobs":
-
             scene v16s63c_3a # FPP. Close up shot of Lindsey full breast and head shot (seductive expression, mouth open, looking at MC) lying down on the table, both hands now behind her head, both of Mc's hands are shown massaging a single breast of Lindsey's with one of his thumbs rubbing her nipple 
             with dissolve
 
@@ -64,7 +59,6 @@ label v16s6c_lindsey_sex_roam_boobs: # -if Boobs
             li "Mmm."
 
         "Suck boobs":
-
             scene v16s63c_4 # TPP. Show Lindsey (pleasureable expression, mouth closed, eyes closed) lying down on the table, hands behind her head, and MC (slight smile, mouth open, looking at Lindsey) licking up towards one of Lindsey's nipples
             with dissolve
 
@@ -98,9 +92,7 @@ label v16s6c_lindsey_sex_roam_feet:     # -if Feet
     with dissolve
 
     menu:
-
         "Massage feet":
-
             scene v16s63c_6a # FPP. same as v16s63c_6 Except Lindsey's (seductive expression, mouth is open, looking at MC) and MC's hands are visible massgaing her foot that she had dangling
             with dissolve
 
@@ -132,7 +124,6 @@ label v16s6c_lindsey_sex_roam_feet:     # -if Feet
             li "I love feeling your hands all over me, [name]."
 
         "Suck toes":
-
             scene v16s63c_7 # TPP. Show Lindsey (pleasurable expression, eyes closed, mouth open) laying on the massage table fully nude grabbing one of her breasts and the edge of the massage table with her other hand while Mc (slight smile, mouth open, sucking on one of Lindsey's Big toes, looking at Lindsey) is standing at the end of the massage table near Lindsey's Feet, the heel of the foot MC is sucking on is raised up to Mc's sternum and he is bending his head down to suck on Lindsey's Big toe
             with dissolve
 
@@ -171,15 +162,11 @@ label v16s6c_lindsey_sex_roam_feet:     # -if Feet
     call screen sex_overlay("v16s63c_end_foreplay_fr")
 
 label v16s6c_lindsey_sex_roam_vagina:     # -if Vagina
-    
-
     scene v16s63c_8 # TPP. MC (slight smile, mouth closed, looking at Lindsey) kneels down on both knees and pulls Lindsey (slightly happily shocked expression, mouth open, looking at MC) towards the end of the massage table and puts her legs over his shoulders just enough so that her vagina is just barely off the table and is more accesible to lick or finger, Lindsey grabs Mc's head with her hands
     with dissolve
 
     menu:
-
         "Tease with kisses":
-
             scene v16s63c_8a # TPP. same as v16s63c_8 MC (slight smile, mouth open, eyes closed) kissing the lips of Lindsey's vagina, Lindsey (pleasurable expression, mouth open, eyes closed) 
             with dissolve
 
@@ -211,7 +198,6 @@ label v16s6c_lindsey_sex_roam_vagina:     # -if Vagina
             pause 0.75
 
         "Finger her":
-
             scene v16s63c_8c # TPP. same as v16s63c_8 MC (slight smile, mouth open, eyes closed) puts his middle finger inside of Lindsey's Vagina, Lindsey (pleasurable expression, mouth open, eyes closed) 
             with dissolve
 
@@ -260,7 +246,6 @@ label v16s6c_lindsey_sex_roam_vagina:     # -if Vagina
     call screen sex_overlay("v16s63c_end_foreplay_fr")
     
 label v16s63c_end_foreplay_fr: # -if Mouth / End of Foreplay freeroam 
-
             scene v16s63c_12 # TPP. Lindsey (seductive expression, mouth open, looking at MC's dick) is still lying on her back rubbing Mc's dick with one hand with the other behind her head, with MC (slight smile, mouth is closed, looking at Lindsey) standing up near her head
             with dissolve
 
