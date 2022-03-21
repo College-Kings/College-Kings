@@ -7,6 +7,15 @@
 label v16s69a:
 
     # -Night to morning transition-
+    scene sleep_transition_fast # Ignore animation 
+    with fade
+
+    pause 2.2
+            
+    scene black
+    with dissolve
+        
+    pause 1
 
     scene v16s69a_1 # TPP. Show MC (yawning and strecthing, eyes closed), wearing just his boxers (check scene 69 for boxer type) and Penelope (Slight smile, mouth closed, looking at MC), wearing just her bra and panties (check scene 69 for bra and panties type), wake up next to each other in Penelope's bed.
     with dissolve
@@ -97,7 +106,7 @@ label v16s69a:
 
     u "*Laughs* Not really!"
 
-    if # -if MC has baby
+    if 2 & v16s27_mc_baby_duty_night == 2: # -if MC has baby Thursday night 
 
         scene v16s69a_2a
         with dissolve
@@ -114,7 +123,7 @@ label v16s69a:
 
     pause 0.75
 
-    scene v16s69a_1b # TPP. Show Mc (slight smile, mouth closed, looking at Penelope) getting dressed, and Penelope (slight smile, mouth closed, looking at MC) getting dressed
+    scene v16s69a_1b # TPP. Show Mc (slight smile, mouth closed, looking at Penelope) getting dressed (outfit 2), and Penelope (slight smile, mouth closed, looking at MC) getting dressed
     with dissolve
 
     jump v16s70 # -Transition to Scene 70-
