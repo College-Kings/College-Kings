@@ -3,12 +3,10 @@
 # Characters: MC (Outfit: 9), CHLOE (Outfit: 3)
 # Time: Wed Night
 
-
 label v16s48a: ### ERROR: 48a) Chloe and MC sex scene
-
     $ sex_overlay_options = [] # Reset the variable to default values
     $ sex_overlay_options = [("Boobs", "v16s48a_boobs"), ("Feet", "v16s48a_feet"), ("Vagina", "v16s48a_vagina")]
-    $ sceneList.add("v16s48a_chloe")
+    $ sceneList.add("v16_chloe")
 
     # -Still standing, Chloe takes off all her clothes. MC stands and they kiss-
     scene v16s48a_1   # TPP Chloe(frustrated, slighly angry,  mouth closed) standing in Living Room in front of couch removing her shirt [Show her full body]
@@ -80,9 +78,7 @@ label v16s48a_boobs:
     with dissolve
     
     menu:
-    
-        "Massage Boobs": # -if Massage boobs
-        
+        "Massage boobs": # -if Massage boobs
         # -MC massages Chloe's boobs-
             scene v16s48a_5a  # TPP MC (slight smile, mouth closed, erect penis, looking at Chloe's boobs) leaning over Chloe with both hands on her boobs covering her nipples. Chloe (slightly happy, mouth open) looking at MC looking at MC.
             with dissolve
@@ -121,8 +117,7 @@ label v16s48a_boobs:
 
             cl "*Giggles* Me neither."
             
-        "Suck Boobs": # -if Suck boobs
-
+        "Suck boobs": # -if Suck boobs
         # -MC sucks on Chloe's boobs-
             scene v16s48a_5h  # TPP Chloe's (aroused, sexy eyes, mouth open, watching MC) face and Boobs, with MC (looking at left boob) sucking Chloe's erect left nipple.
             with dissolve
@@ -179,10 +174,8 @@ label v16s48a_feet: # -if Feet
     scene v16s48a_6   # TPP Close up on Chloe's feet at the end of the couch
     with dissolve
 
-    menu: 
-        
-        "Massage Feet": # -if Massage feet
-
+    menu:
+        "Massage feet": # -if Massage feet
         # -MC massages Chloe's foot-
             scene v16s48a_6a  # FPP MC holding Chloe's (aroused, eyes closed, mouth open) feet up in the air, his thumbs massaging the center of her feet, a small view of her pussy showing
             with dissolve
@@ -225,9 +218,7 @@ label v16s48a_feet: # -if Feet
             u "Ha, good."
 
         "Suck toes": # -if Suck toes
-
         # -MC sucks on Chloe's toes-
-            
             scene v16s48a_6h # TPP MC(mouth only in view) holding Chloe's feet up to his mouth, licking the bottom of her right foot upward towards her toes. Chloe (aroused, sexy eyes, mouth open), watching MC
             with dissolve
 
@@ -273,9 +264,7 @@ label v16s48a_vagina:  # -if Vagina
     with dissolve
 
     menu:
-
         "Tease with kisses": # -if Tease with kisses
-
         # -MC kisses close to Chloe's vagina-
             scene v16s48a_7a  # TPP MC on his knees, head between Chloe's legs , kissing slightly left of her pussy. Chloe [positioned like v16s48a_7] (aroused, eyes closed) pressing hard agaisnt (or gripping) the couch cushion.
             with dissolve
@@ -310,9 +299,7 @@ label v16s48a_vagina:  # -if Vagina
             cl "*Whispers* Oh, fuck... I am gonna cum so hard for you."            
 
         "Finger her": # -if Finger her
-
         # -MC fingers Chloe-
-
             scene v16s48a_7h  # TPP [positioned like v16s48a_7] Chloe (aroused, eyes closed, mouth closed) [hard nipples] neck and back slightly leaning back. MC (slight smile) sitting/kneeling between her legs, full view of her pussy, sucking his first two fingers of his right hand.
             with dissolve
 
@@ -354,7 +341,6 @@ label v16s48a_vagina:  # -if Vagina
     # -The option appears to end the free roam-
     # -End of free roam-
 label v16s48a_continue:
-
     # -Chloe stands, pushing MC so he sits down on the couch-
     scene v16s48a_8   # TPP Chloe (aroused, aggressive, smile, mouth open) standing in front of the couch pushing MC (smile, mouth closed), to sit on the couch. 
     with dissolve

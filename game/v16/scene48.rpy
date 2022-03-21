@@ -3,7 +3,6 @@
 # Characters: CHLOE (Outfit: 3), MC (Outfit: 9), WOMAN ON TV SHOW (Outfit: x), MAN ON TV SHOW (Outfit: x), [BABY_NAME] (Outfit: x)
 # Time: Wednesday night
 
-
 label v16s48: # 48) Baby night: Chloe & MC
     scene v16s48_1 # TPP Show MC following Chloe into the living room of the Chicks house, the baby is visible face down at the far side of couch
     with dissolve
@@ -225,8 +224,7 @@ label v16s48: # 48) Baby night: Chloe & MC
     cl "Get it to stop!"
 
     menu:
-        "Care for baby":
-            
+        "Care for baby":            
             play sound "sounds/babycry.mp3"
 
             u "I'm guessing it needs the burping key now?"
@@ -346,7 +344,8 @@ label v16s48: # 48) Baby night: Chloe & MC
 
             pause 0.75
 
-            ### ERROR: [End of Checkpoint 1.1. Continue to Checkpoint 2]        
+            ### ERROR: [End of Checkpoint 1.1. Continue to Checkpoint 2]
+
         "Complain about baby":
             $ add_point(KCT.TROUBLEMAKER)
             $ v16s48_chloe_throws_baby = True

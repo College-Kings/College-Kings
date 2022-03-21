@@ -3,6 +3,13 @@
 # Characters: RILEY (Outfit: 3), MC (Outfit: 5), CHLOE (Outfit: 2)
 # Time: Morning
 
+init python:
+    def v16s11_reply3():
+        nora.messenger.newMessage("Perfect :)")
+
+    def v16s11_reply4():
+        nora.messenger.newMessage("Lmao, see u soon ")
+
 label v16s11:
     scene v16s11_1 # TPP. Show MC walking the SVC hallways, MC slight smile, mouth closed.
     with fade
@@ -620,9 +627,7 @@ label v16s11:
 
         $ nora.messenger.newMessage("Hey, It's such a nice day, it's too nice out to be inside all day. Come join me at the park for yoga?")
         $ nora.messenger.addReply("I do need a good stretch... lol. OMW", v16s11_reply3)
-        $ nora.messenger.newMessage("Perfect :)")
         $ nora.messenger.addReply("Sigh... If I have to... ;)", v16s11_reply4)
-        $ nora.messenger.newMessage("Lmao, see u soon ")
 
         label v16s11_phoneContinue2:
             if nora.messenger.replies:

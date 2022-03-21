@@ -1,5 +1,6 @@
 python early:
     import os
+    from abc import ABCMeta, abstractmethod
     from enum import Enum
 
     class SmartEnum(Enum):

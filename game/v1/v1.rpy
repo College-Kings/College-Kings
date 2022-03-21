@@ -38,9 +38,8 @@ label starta: #for compatibility only
     if config.developer:
         show screen bugTesting_Overlay
 
-    show screen fightDamage
     show screen fantasyOverlay
-    
+
     play music "music/msexy.mp3"
     
     scene s0a

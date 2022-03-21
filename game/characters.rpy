@@ -193,7 +193,7 @@ define character.wtv = Character("Woman on TV Show", who_color="#fd9426", who_ou
 define character.mtv = Character("Man on TV Show", who_color="#046307", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ]) 
 define character.wim = Character("Woman in Moive", who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.mim = Character("Man in Movie", who_color="#046307", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.set = Character("Sex Ed Teacher", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.sexed = Character("Sex Ed Teacher", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.mped = Character("Male Pedestrian", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.trucker = Character("Trucker", who_color="#046307", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.oscar_dog = Character("Oscar", who_color="#147efb", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])

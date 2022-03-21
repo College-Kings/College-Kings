@@ -274,7 +274,7 @@ label v2start:
                     jump v1_tomShoutBack
 
                 "Walk away":
-                    jump v1_tomWalkAway
+                    jump v1_tom_walk_away
 
 label bk_a: #for compatibility only
 label v1_tomShoutBack:
@@ -307,776 +307,103 @@ label v1_tomShoutBack:
     stop music fadeout 3
 
 # Tom Fight
-label gb:
+label tom_fight:
+    python:
+        player = Player(name, FightStance.FORWARD)
+        opponent = Opponent("Tom", FightStance.FORWARD)
+
+        player.base_attacks.append(Jab({
+            "start_image": "images/v2/fight/player-base-attacks/player_start_jab.webp",
+            "hit_image": "images/v2/fight/player-base-attacks/player_hit_jab.webp",
+            "blocked_image": "images/v2/fight/player-base-attacks/player_jab_blocked.webp"
+        }))
+        player.base_attacks.append(BodyHook({
+            "start_image": "images/v2/fight/player-base-attacks/player_start_hook.webp",
+            "hit_image": "images/v2/fight/player-base-attacks/player_hit_hook.webp",
+            "blocked_image": "images/v2/fight/player-base-attacks/player_hook_blocked.webp"
+        }))
+        player.base_attacks.append(Hook({
+            "start_image": "images/v2/fight/player-base-attacks/player_start_hook.webp",
+            "hit_image": "images/v2/fight/player-base-attacks/player_hit_hook.webp",
+            "blocked_image": "images/v2/fight/player-base-attacks/player_hook_blocked.webp"
+        }))
+        player.base_attacks.append(Kick({
+            "start_image": "images/v2/fight/player-base-attacks/player_kick_start.webp",
+            "hit_image": "images/v2/fight/player-base-attacks/player_kick_hit.webp",
+            "blocked_image":  "images/v2/fight/player-base-attacks/player_kick_block.webp"
+        }))
+
+        player.special_attack = Headbutt({})
+
+        opponent.stance_images = {
+            FightStance.AGGRESSIVE: "images/v2/fight/tom-stances/tom-stance-aggressive.webp",
+            FightStance.FORWARD: "images/v2/fight/tom-stances/tom-stance-forward.webp",
+            FightStance.SOLID: "images/v2/fight/tom-stances/tom-stance-solid.webp",
+            FightStance.DEFENSIVE: "images/v2/fight/tom-stances/tom-stance-solid.webp"
+        }
+
+        # opponent.base_attacks.append(BodyHook({}))
+        opponent.base_attacks.append(Jab({
+            "start_image": "images/v2/fight/tom-base-attacks/tom-jab-start.webp",
+            "hit_image": "images/v2/fight/tom-base-attacks/tom-jab-hit.webp",
+            "blocked_image": "images/v2/fight/tom-base-attacks/tom-jab-blocked.webp"
+        }))
+        opponent.base_attacks.append(Hook({
+            "start_image": "images/v2/fight/tom-base-attacks/tom-hook-start.webp",
+            "hit_image": "images/v2/fight/tom-base-attacks/tom-hook-hit.webp",
+            "blocked_image": "images/v2/fight/tom-base-attacks/tom-hook-blocked.webp"
+        }))
+        opponent.base_attacks.append(Kick({
+            "start_image": "images/v2/fight/tom-base-attacks/tom-kick-start.webp",
+            "hit_image": "images/v2/fight/tom-base-attacks/tom-kick-hit.webp",
+            "blocked_image": "images/v2/fight/tom-base-attacks/tom-kick-blocked.webp"
+        }))
+
+        # opponent.special_attack = Headbutt({})
+
+        fight = Fight(player, opponent, "tom_fight_end")
 
     scene sf1
     with dissolve
     " "
 
-    scene tomstancekick
+    scene tom-stance-aggressive
     with dissolve
 
-    call screen confirm("Would you like to play the fighting tutorial?",
-        yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
-        no_action=[SetVariable("fight_tutorial", False), Return()])
+    show screen health_bars(fight.player, fight.opponent)
 
-    if fight_tutorial:
-        call screen tomtut1
-
-        label tomtut1kick:
-            scene kick2movie
-            pause 0.7
-
-            play sound "sounds/ks.mp3"
-            
-            scene kick2pic
-            with hpunch
-
-            tut "Great job! You've hit Tom and hurt him. He's now more likely to get tired, give up or even get knocked out."
-            tut "Beware, since you've let your guard down to attack, he's going to try and abuse it with an attack of his own."
-
-            scene tomhookmovie
-            $ renpy.pause(0.7)
-
-            scene tomhook
-            show screen fight_tutorial(stance="defend")
-
-            tut "Now it's time to block Tom's attack."
-
-            show screen fight_tutorial(highlight="q", stance="defend")
-            tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-            show screen fight_tutorial(highlight="w", stance="defend")
-            tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-            show screen fight_tutorial(highlight="r", stance="defend")
-            tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-            show screen fight_tutorial(highlight="q", stance="defend")
-            tut "As of right now, there's a hook flying at your head, press {b}Q{/b} in the upcoming screen in order to block it."
-            hide screen fight_tutorial
-
-            call screen fight_defendTutorial
+    call fight_start_turn(fight, fight.opponent, fight.player)
 
 
-        label tomtut1hook:
-            scene hook1movie
-            $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
-            scene hook1pic
-            with hpunch
+label tom_fight_end:
+    if fight.player.health <= 0:
+        scene tf
 
-            tut "Yeah, why follow what the tutorial says?? It's not like it's trying to help you or anything."
+        " "
 
-            tut "Because you decided to attack Tom's guarded areas, he was able to block your attack easily."
-
-            tut "He can now counter attack."
-            $ stance = 2
-
-            scene hookcountermovie
-            $ renpy.pause(0.7)
-
-            scene hookcounter
-
-            show screen fight_tutorial(highlight="q", stance="defend")
-            tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-            show screen fight_tutorial(highlight="w", stance="defend")
-            tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-            show screen fight_tutorial(highlight="r", stance="defend")
-            tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-            show screen fight_tutorial(highlight="w", stance="defend")
-            tut "As of right now, there's a jab flying at your face, press {b}W{/b} in the upcoming screen in order to block it."
-            hide screen fight_tutorial
-
-            call screen fight_defendTutorial
-
-
-        label tomtut1jab:
-            scene jab1movie
-            $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
-            scene jab1pic
-            with hpunch
-
-            tut "Yeah, why follow what the tutorial says?? It's not like it's trying to help you or anything."
-
-            tut "Because you decided to attack Tom's guarded areas, he was able to block your attack easily."
-
-            tut "He can now counter attack."
-
-            $ stance = 2
-
-            scene jabcountermovie
-            $ renpy.pause(0.7)
-
-            scene jabcounter
-
-            tut "Now it's time to block Tom's attack."
-
-            show screen fight_tutorial(highlight="q", stance="defend")
-            tut "{b}Q{/b} lets you block your head from heavy attacks such as hooks, which come from a slight angle."
-            show screen fight_tutorial(highlight="w", stance="defend")
-            tut "In order to protect yourself from attacks flying straight at your face, such as jabs, press {b}W{/b}."
-            show screen fight_tutorial(highlight="r", stance="defend")
-            tut "Lastly, you can protect your legs, from low kicks for example, by pressing {b}R{/b}."
-            show screen fight_tutorial(highlight="w", stance="defend")
-            tut "As of right now, there's a jab flying at your face, press {b}W{/b} in the upcoming screen in order to block it."
-            hide screen fight_tutorial
-
-            call screen fight_defendTutorial
-
-
-        label tuthookblock:
-            play sound "sounds/bs.mp3"
-            scene tomhookblock
-            with hpunch
-
-            tut "Great job, you blocked Tom's hook."
-
-            scene tomstancehook
-
-            tut "This ends the tutorial. The real fight will test your reaction times."
-            
-            jump tomFightStart
-
-
-        label tuthookhit:
-            play sound "sounds/hs.mp3"
-            scene tomhookhit
-            with hpunch
-
-            tut "You did not block your head by pressing {b}Q{/b} and got hit. Next time, try to block the correct part of your body."
-
-            scene tomstancehook
-
-            tut "This ends the tutorial. The real fight will test your reaction times."
-            
-            jump tomFightStart
-
-########FIGHT SYSTEM
-label tomFightStart:
-    call screen fight_typeMenu
-
-    if fight_type == "normal":
-        $ simtomfight = False
-
-        call screen fight_selectDifficulty
-
-        call screen fight_keybindOptions
-    
-    elif fight_type == "simReal" or fight_type == "simWin":
-        $ simtomfight = True
-        
-    $ stance = 1
-    $ tomstance = renpy.random.choice([1, 2, 3, 4])
-    $ tomattack = renpy.random.choice([1, 2, 3, 4])
-    $ simtom = renpy.random.choice([1, 2, 3, 4, 5, 6])
-    $ simyou = renpy.random.choice([1, 2, 3, 4, 5, 6])
-
-    if fight_type == "simWin":
-        $ youHealth = 100000
     else:
-        $ youHealth = 3
+    # TODO: Update fight achievements
+    # if reaction == 0.5:
+    #     $ grant_achievement("the_notorious")
 
-    $ enemyhealth = 5
-    $ youDamage = 0
-    $ tomdmg = 0
+        $ wintom = True
 
-    label tomkick1:
-        if tomdmg >= enemyhealth:
+        menu:
+            "Kick him":
+                $ add_point(KCT.TROUBLEMAKER)
 
-            scene youfinishmovie
-            $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
-            $ stance = 0
-            $ youDamage = 0
-            scene youfinish
-            with vpunch
-            $ renpy.pause()
+                play sound "sounds/js.mp3"
+                scene yf
+                with vpunch
 
-            jump youfinish
+                u "Fuck you!"
 
-        else:
-            $ tomdmg += 1
-            scene kick2movie
-            $ renpy.pause(0.7)
-            play sound "sounds/ks.mp3"
-            scene kick2pic
-            with hpunch
+            "Walk away":
+                $ add_point(KCT.BRO)
 
-            pause 0.5 #Variable here
-            jump tomattack1
+        $ renpy.end_replay()
 
-
-
-
-    label tomkick2:
-        if youDamage >= youHealth:
-
-            scene tomfinishmovie
-            $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
-            $ stance = 0
-            $ youDamage = 0
-            scene tomfinish
-            with vpunch
-
-            $ renpy.pause()
-
-
-            jump tomfinish6
-        else:
-
-
-            scene hook1movie
-            $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
-            scene hook1pic
-            with hpunch
-
-            pause 0.5
-            jump tomattack2
-
-
-
-    label tomkick3:
-        if youDamage >= youHealth:
-
-            scene tomfinishmovie
-            $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
-            $ stance = 0
-            $ youDamage = 0
-            scene tomfinish
-            with vpunch
-
-            $ renpy.pause()
-
-            jump tomfinish6
-        else:
-
-            scene jab1movie
-            $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
-            scene jab1pic
-            with hpunch
-
-            pause 0.5
-
-            jump tomattack3
-
-
-    label tomsimstart2:
-    label tomsimstart:
-    label tomhook1:
-        if tomdmg >= enemyhealth:
-
-            scene youfinishmovie
-            $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
-            $ stance = 0
-            $ youDamage = 0
-            scene youfinish
-            with vpunch
-            $ renpy.pause()
-
-            jump youfinish
-
-
-        else:
-
-            scene hook2movie
-            $ renpy.pause(0.7)
-            play sound "sounds/hs.mp3"
-            scene hook2pic
-            with hpunch
-
-            pause 0.5
-
-
-            $ tomdmg += 1
-            jump tomattack4
-
-    label tomhook2:
-        if youDamage >= youHealth:
-
-            scene tomfinishmovie
-            $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
-            $ stance = 0
-            $ youDamage = 0
-            scene tomfinish
-            with vpunch
-
-            $ renpy.pause()
-
-            jump tomfinish1
-        else:
-
-
-            scene jab1movie
-            $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
-            scene jab1pic
-            with hpunch
-
-            pause 0.5
-
-            jump tomattack5
-
-    label tomhook3:
-        if youDamage >= youHealth:
-
-            scene tomfinishmovie
-            $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
-            $ stance = 0
-            $ youDamage = 0
-            scene tomfinish
-            with vpunch
-
-            $ renpy.pause()
-
-            jump tomfinish2
-        else:
-
-
-            scene kick1movie
-            $ renpy.pause(0.7)
-            play sound "sounds/ks.mp3"
-            scene kick1pic
-            with hpunch
-
-            pause 0.5
-
-            jump tomattack6
-
-
-    label tomjab1:
-
-        if tomdmg >= enemyhealth:
-
-            scene youfinishmovie
-            $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
-            $ stance = 0
-            $ youDamage = 0
-            scene youfinish
-            with vpunch
-            $ renpy.pause()
-
-            jump youfinish
-
-        else:
-
-
-            scene jab2movie
-            $ renpy.pause(0.7)
-            play sound "sounds/js.mp3"
-            scene jab2pic
-            with hpunch
-
-
-            $ tomdmg += 1
-
-            pause 0.5
-
-            jump tomattack7
-
-
-    label tomjab2:
-        if youDamage >= youHealth:
-
-
-            scene tomfinishmovie
-            $ renpy.pause(1)
-            play sound "sounds/fall.mp3"
-            $ stance = 0
-            $ youDamage = 0
-            scene tomfinish
-            with vpunch
-
-            $ renpy.pause()
-
-            jump tomfinish3
-        else:
-            scene hook1movie
-            $ renpy.pause(0.7)
-            play sound "sounds/bs.mp3"
-            scene hook1pic
-            with hpunch
-
-            pause 0.5
-
-            jump tomattack8
-
-
-    label tomjab3:
-
-        if youDamage >= youHealth:
-
-
-            scene tomfinishmovie
-            $ renpy.pause(1)
-
-            play sound "sounds/fall.mp3"
-            $ stance = 0
-            $ youDamage = 0
-            scene tomfinish
-            with vpunch
-
-            $ renpy.pause()
-
-            jump tomfinish4
-        else:
-
-
-            scene kick1movie
-            $ renpy.pause(0.7)
-            play sound "sounds/ks.mp3"
-            scene kick1pic
-            with hpunch
-
-            pause 0.5
-            jump tomattack9
-
-
-    label tomattack1:
-    label tomattack2:
-    label tomattack3:
-    label tomattack4:
-    label tomattack5:
-    label tomattack6:
-    label tomattack7:
-    label tomattack8:
-    label tomattack9:
-    label timer1:
-    label timer2:
-    label timer3:
-        $ stance = 2
-
-        if tomattack == 1:
-
-
-            scene tomhookmovie
-            $ renpy.pause(0.4)
-
-            scene tomhook
-            $ tomstance = renpy.random.choice([1, 2, 3])
-            $ simyou = renpy.random.choice([1, 2, 3, 4])
-
-            if simtomfight:
-                if simtom == 1:
-                    jump tomhookhit2
-                if simtom == 2:
-                    jump tomhookhit
-                if simtom == 3 or 4:
-                    jump tomhookblocked
-
-            else:
-                call screen tomattack
-
-
-
-
-        if tomattack == 2:
-
-
-
-
-            scene tomjabmovie
-            $ renpy.pause(0.4)
-
-            scene tomjab
-            $ tomstance = renpy.random.choice([1, 2, 3])
-            $ simyou = renpy.random.choice([1, 2, 3, 4])
-
-            if simtomfight:
-                if simtom == 1:
-                    jump tomjabhit2
-                if simtom == 2:
-                    jump tomjabhit
-                if simtom == 3 or 4:
-                    jump tomjabblocked
-
-            else:
-                call screen tomattack
-
-        if tomattack == 3:
-
-
-
-            scene tomkickmovie
-            $ renpy.pause(0.4)
-
-            scene tomkick
-            $ tomstance = renpy.random.choice([1, 2, 3])
-            $ simyou = renpy.random.choice([1, 2, 3, 4])
-
-
-            if simtomfight:
-                if simtom == 1:
-                    jump tomkickhit
-                if simtom == 2:
-                    jump tomkickhit2
-                if simtom == 3 or 4:
-                    jump tomkickblocked
-            else:
-                call screen tomattack
-
-
-    label tomhookhit:
-    label tomhookhit2:
-    label timer4:
-
-        play sound "sounds/hs.mp3"
-        $ youDamage += 1
-        scene tomhookhit
-        with hpunch
-
-        pause 0.5
-        $ stance = 1
-        $ tomattack = renpy.random.choice([1, 2, 3])
-        $ simtom = renpy.random.choice([1, 2, 3, 4])
-
-        if simtomfight:
-            if tomstance == 1:
-                if simyou == 1:
-                    jump tomkick2
-                if simyou == 2:
-                    jump tomkick3
-                if simyou == 3 or 4:
-                    jump tomkick1
-            if tomstance == 2:
-                if simyou == 1:
-                    jump tomhook2
-                if simyou == 2:
-                    jump tomhook3
-                if simyou == 3 or 4:
-                    jump tomhook1
-            if tomstance == 3:
-                if simyou == 1:
-                    jump tomjab2
-                if simyou == 2:
-                    jump tomjab3
-                if simyou == 3 or 4:
-                    jump tomjab1
-        else:
-            call screen youattack
-
-    label tomhookblocked:
-
-        play sound "sounds/bs.mp3"
-        scene tomhookblock
-        with hpunch
-
-        pause 0.5
-        $ stance = 1
-        $ tomattack = renpy.random.choice([1, 2, 3])
-        $ simtom = renpy.random.choice([1, 2, 3, 4])
-        if simtomfight:
-            if tomstance == 1:
-                if simyou == 1:
-                    jump tomkick2
-                if simyou == 2:
-                    jump tomkick3
-                if simyou == 3 or 4:
-                    jump tomkick1
-            if tomstance == 2:
-                if simyou == 1:
-                    jump tomhook2
-                if simyou == 2:
-                    jump tomhook3
-                if simyou == 3 or 4:
-                    jump tomhook1
-            if tomstance == 3:
-                if simyou == 1:
-                    jump tomjab2
-                if simyou == 2:
-                    jump tomjab3
-                if simyou == 3 or 4:
-                    jump tomjab1
-        else:
-            call screen youattack
-
-    label tomjabhit:
-    label tomjabhit2:
-    label timer5:
-
-        play sound "sounds/js.mp3"
-        scene tomjabhit
-        with hpunch
-
-        pause 0.5
-        $ youDamage += 1
-        $ stance = 1
-        $ tomattack = renpy.random.choice([1, 2, 3])
-        $ simtom = renpy.random.choice([1, 2, 3, 4])
-        if simtomfight:
-            if tomstance == 1:
-                if simyou == 1:
-                    jump tomkick2
-                if simyou == 2:
-                    jump tomkick3
-                if simyou == 3 or 4:
-                    jump tomkick1
-            if tomstance == 2:
-                if simyou == 1:
-                    jump tomhook2
-                if simyou == 2:
-                    jump tomhook3
-                if simyou == 3 or 4:
-                    jump tomhook1
-            if tomstance == 3:
-                if simyou == 1:
-                    jump tomjab2
-                if simyou == 2:
-                    jump tomjab3
-                if simyou == 3 or 4:
-                    jump tomjab1
-        else:
-            call screen youattack
-
-    label tomjabblocked:
-
-        play sound "sounds/bs.mp3"
-        scene tomjabblock
-        with hpunch
-
-        pause 0.5
-        $ stance = 1
-        $ tomattack = renpy.random.choice([1, 2, 3])
-        $ simtom = renpy.random.choice([1, 2, 3, 4])
-        if simtomfight:
-            if tomstance == 1:
-                if simyou == 1:
-                    jump tomkick2
-                if simyou == 2:
-                    jump tomkick3
-                if simyou == 3 or 4:
-                    jump tomkick1
-            if tomstance == 2:
-                if simyou == 1:
-                    jump tomhook2
-                if simyou == 2:
-                    jump tomhook3
-                if simyou == 3 or 4:
-                    jump tomhook1
-            if tomstance == 3:
-                if simyou == 1:
-                    jump tomjab2
-                if simyou == 2:
-                    jump tomjab3
-                if simyou == 3 or 4:
-                    jump tomjab1
-        else:
-            call screen youattack
-
-    label tomkickhit:
-    label tomkickhit2:
-    label timer6:
-        play sound "sounds/ks.mp3"
-        scene tomkickhit
-        with hpunch
-
-        pause 0.5
-        $ youDamage += 1
-        $ stance = 1
-        $ tomattack = renpy.random.choice([1, 2, 3])
-        $ simtom = renpy.random.choice([1, 2, 3, 4])
-        if simtomfight:
-            if tomstance == 1:
-                if simyou == 1:
-                    jump tomkick2
-                if simyou == 2:
-                    jump tomkick3
-                if simyou == 3 or 4:
-                    jump tomkick1
-            if tomstance == 2:
-                if simyou == 1:
-                    jump tomhook2
-                if simyou == 2:
-                    jump tomhook3
-                if simyou == 3 or 4:
-                    jump tomhook1
-            if tomstance == 3:
-                if simyou == 1:
-                    jump tomjab2
-                if simyou == 2:
-                    jump tomjab3
-                if simyou == 3 or 4:
-                    jump tomjab1
-        else:
-            call screen youattack
-
-    label tomkickblocked:
-        play sound "sounds/ks.mp3"
-        scene tomkickblock
-        with hpunch
-
-        pause 0.5
-        $ stance = 1
-        $ tomattack = renpy.random.choice([1, 2, 3])
-        $ simtom = renpy.random.choice([1, 2, 3, 4])
-        if simtomfight:
-            if tomstance == 1:
-                if simyou == 1:
-                    jump tomkick2
-                if simyou == 2:
-                    jump tomkick3
-                if simyou == 3 or 4:
-                    jump tomkick1
-            if tomstance == 2:
-                if simyou == 1:
-                    jump tomhook2
-                if simyou == 2:
-                    jump tomhook3
-                if simyou == 3 or 4:
-                    jump tomhook1
-            if tomstance == 3:
-                if simyou == 1:
-                    jump tomjab2
-                if simyou == 2:
-                    jump tomjab3
-                if simyou == 3 or 4:
-                    jump tomjab1
-        else:
-            call screen youattack
-
-
-    label tomfinish1:
-    label tomfinish2:
-    label tomfinish3:
-    label tomfinish4:
-    label tomfinish5:
-    label tomfinish6:
-
-    scene tf
-
-    " "
-
-    jump v1_tomWalkAway
-
-label youfinish:
-    if reaction == 0.5:
-        $ grant_achievement("the_notorious")
-            
-    $ wintom = True
-
-    menu:
-        "Kick him":
-            $ add_point(KCT.TROUBLEMAKER)
-
-            play sound "sounds/js.mp3"
-            scene yf
-            with vpunch
-
-            u "Fuck you!"
-
-        "Walk away":
-            $ add_point(KCT.BRO)
-
-    $ renpy.end_replay()
-
-label tf2: #for compatibility only
-label v1_tomWalkAway:
+label v1_tom_walk_away:
     $ firstfight = False
 
     if meetlauren:
@@ -1085,6 +412,7 @@ label v1_tomWalkAway:
     else:
         scene s133
         with Fade (1,0,1) # in front of san vallejo
+
         if fighttom and not wintom:
             u "(Fuck, I feel like shit...)"
 

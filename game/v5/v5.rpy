@@ -2843,21 +2843,21 @@ label hospitala:
 
     scene af4
 
-    # Adam Fight
+    # TODO: Update Adam Fight
     call screen confirm("Would you like to play the fighting tutorial?",
         yes_action=[SetVariable("fight_tutorial", True), Call("fight_tutorialLabel")],
         no_action=[SetVariable("fight_tutorial", False), Return()])
 
     scene af4
 
-    call screen fight_typeMenu
+    # call screen fight_typeMenu
 
     if fight_type == "normal":
         $ simadamfight = False
 
-        call screen fight_selectDifficulty
+        # call screen fight_selectDifficulty
 
-        call screen fight_keybindOptions
+        # call screen fight_keybindOptions
     
     elif fight_type == "simReal" or fight_type == "simWin":
         $ simadamfight = True
