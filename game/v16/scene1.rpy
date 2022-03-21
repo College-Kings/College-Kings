@@ -4,7 +4,7 @@
 # Time: Night
 
 label v16_start:
-    play music "<from 28>music/v15/Track Scene 49.mp3" fadein 2 ### from 28 ?
+    play music "<from 28>music/v15/Track Scene 49.mp3" fadein 2
 label v16s1:
 ### ERROR: 1) Fight with Tom
 
