@@ -149,10 +149,13 @@ label v16s3:
     u "Me too."
 
     if riley.relationship >= Relationship.FWB: # [Checkpoint 1.1]
-        scene v16s3_5f # FPP. MC looking at Riley, Riley looking at MC, Riley winking, slight smile, mouth open.
+        scene v16s3_5d
         with dissolve
 
         ri "The way you fought for me... I've never been so..."
+
+        scene v16s3_5f # FPP. MC looking at Riley, Riley looking at MC, Riley winking, slight smile, mouth open.
+        with dissolve
 
         ri "Turned on. By like, fighting... Haha."
 
@@ -171,7 +174,7 @@ label v16s3:
 
         pause 1.5
 
-        scene v16s3_5f
+        scene v16s3_5d
         with dissolve
 
         ri "You proved how much you really care about me."
