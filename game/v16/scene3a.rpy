@@ -320,4 +320,6 @@ label v16s3a:
 
     pause 0.75
 
+    $ renpy.end_replay()
+
     jump v16s4

@@ -119,6 +119,13 @@ init python:
         SceneGallery("Fun at the wedding", "images/v15/scene 33/v15s33_46b.webp", "v15s35_naomisg") # 33, Naomi
         SceneGallery("Choosing Nora", "images/v15/scene 48a/v15noror2Start.webp", "v15s48a_norasg") # 48, Nora
 
+    if renpy.loadable("v16/scene1.rpy"):
+        SceneGallery("As yet untitled", "images/3 hits.webp", "v16s3a") # 3a, Riley
+        SceneGallery("As yet untitled", "images/3 hits.webp", "") # 10, Lauren
+        SceneGallery("As yet untitled", "images/3 hits.webp", "") # 48, Chloe
+        SceneGallery("As yet untitled", "images/3 hits.webp", "") # 63a, Nora
+        SceneGallery("As yet untitled", "images/3 hits.webp", "") # 63c, Lindsey
+        SceneGallery("As yet untitled", "images/3 hits.webp", "") # 71, Penelope
 
 screen scene_gallery():
     tag menu
