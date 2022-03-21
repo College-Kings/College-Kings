@@ -4,7 +4,7 @@
 # Time: Night
 
 label v16_start:
-
+    play music "<from 28>music/v15/Track Scene 49.mp3" fadein 2
 label v16s1:
 ### ERROR: 1) Fight with Tom
 
@@ -16,8 +16,10 @@ label v16s1_lose:
     scene v16s1_lose_1 # TPP. MC on the ground, holding his stomach, he is in pain, mouth closed, Riley running towards him, very worried, mouth open, Tom walking away, grinning, mouth closed
     with fade
 
-    ri "Oh, my God, [name]! Are you okay?"
+    play music "music/v15/Track Scene 28_2.mp3" fadein 2
 
+    ri "Oh, my God, [name]! Are you okay?"
+    
     scene v16s1_lose_1a # TPP. Riley now standing next to MC, Riley very worried, mouth closed, MC still in pain, looking up at Riley, MC mouth open, in pain, Tom not in shot anymore
     with dissolve
 
@@ -300,10 +302,11 @@ label v16s1_win:
     with dissolve
 
     pause 0.75
+    play music "music/v15/Track Scene 28_2.mp3" fadein 2
 
     scene v16s1_win_2 # TPP. Show Tom walking away in pain in the background, Riley running towards MC, Riley excited, mouth open, MC mouth closed, slight smile, looking at Riley
     with dissolve
-
+    
     ri "[name], holy shit! You kicked his ass!"
 
     scene v16s1_win_3 # FPP. Riley standing in front of MC, slight smile, mouth closed
