@@ -5,10 +5,7 @@ init python:
         # Phone Setup
         phone.applications = []
         phone.applications.append(messenger)
-        phone.applications.append(stats_app)
         phone.applications.append(achievement_app)
-        phone.applications.append(kiwii)
-        phone.applications.append(simplr_app)
         phone.applications.append(relationship_app)
 
 

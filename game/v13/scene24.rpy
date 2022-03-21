@@ -278,7 +278,7 @@ label v13s24:
 
     emmy "Hello boys! *Chuckles* It's nice to meet you all."
 
-    if emmy.simplr in simplr_contacts: #for v12-v13 compatibility
+    if emmy.simplr in simplr_app.contacts: #for v12-v13 compatibility
         $ v12s24_emmymatch = True
 
     if v12s24_emmymatch:
