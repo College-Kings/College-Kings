@@ -1,7 +1,7 @@
 # SCENE 65: Designing the cover with Chloe in her room
 # Locations: Chloe's Room
 # Characters: CHLOE (Outfit: 1), MC (Outfit: 2)
-# Time: Evening
+# Time: Thursday Evening
 
 
 label v16s65:
@@ -54,11 +54,12 @@ label v16s65:
     u "Funny. I walked right into that one..."
 
     # The UI pops up for the player to choose the cover design
+    # call UI screen =? UI screen needs to set the v16s12_chloe_planboard_decide_promote_chloe_on_cover variable to True or False 
+    # 
 
-    scene v16s65_4a 
-    with dissolve
-
-    if # -if MC chose Promote Chloe on the cover
+    # -We exit the UI when the player has made their choices-
+    
+    if v16s12_chloe_planboard_decide_promote_chloe_on_cover:  # -if MC chose Promote Chloe on the cover
 
         # -(Photo one: mid-shot of Chloe smiling and waving a "Vote for Chloe flag", wearing a Chicks t-shirt. Photo two: Chloe in a white bikini with white toenails, posing by Jenny's lagoon from v14, hand on hip. Headline one: Great leadership starts with a beautiful smile! Headline two: I'm ready to dive in, I just need your vote!)
 
@@ -112,7 +113,7 @@ label v16s65:
 
         u "(I can probably think of a few people...)"
 
-    if # -if MC chose Embarrass Lindsey on the cover
+    else: # -if MC chose Embarrass Lindsey on the cover
 
         # -(Photo one: Lindsey on her knees vomiting into the chicks bathroom toilet, in a party dress, old photo. Photo two: Lindsey's first driver's license picture when she was 16 with an awkward smile, wearing no make-up, a big zit on her forehead, and she has one eyelid half-closed. Headline one: #NotMyPresident Headline two: Lindsey WHO???
 
@@ -158,21 +159,18 @@ label v16s65:
 
         u "Oh-"
 
-    # -We exit the UI when the player has made their choices-
-
     # -Regardless-
 
     scene v16s65_4
     with dissolve
 
     cl "Let me email our final decision to Elijah really quick."
-
-    scene v16s65_4a
-    with dissolve
-
+    
     menu:
 
         "Mention their kiss":
+
+            $ add_point(KCT.TROUBLEMAKER)
 
             scene v16s65_4a
             with dissolve
@@ -228,7 +226,7 @@ label v16s65:
 
     cl "Sent."
 
-    if # -if ChloeGF
+    if chloe.relationship == Relationship.GIRLFRIEND: # -if ChloeGF
 
         scene v16s65_4b
         with dissolve
@@ -290,7 +288,7 @@ label v16s65:
 
     cl "*Chuckles* Bye!"
 
-    scene v16s65_6 # TPP. Chloe (slight smile, mouth closed, looking at MC) watches MC (slight smile, mouth closed, looking at her bedroom door) exit the room
+    scene v16s65_6 # TPP. Chloe (slight smile, mouth closed) watches MC (slight smile, mouth closed) exit the room.
     with dissolve
 
     jump v16s65 # -Transition to Scene 66-
