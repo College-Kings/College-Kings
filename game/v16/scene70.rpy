@@ -1,17 +1,17 @@
 # SCENE 70: Transition Mc walks to Deans office
-# Locations: School Hallway
+# Locations: School Hallway, Dean's Office Entrance
 # Characters: PENELOPE (Outfit: 1), MC (Outfit: 5)
-# Time: Morning
+# Time: Friday Morning
 
 
 label v16s70:
 
-    if: # -if MC spent the night with Penelope              #TRANSCRIBER NOTE# I don't know which variable will be used to leading MC to spending the night with Penelope or not #TRANSCRIBER NOTE#
+    if penelope.relationship == Relationship.LIKES and 0x20 & v16s27_mc_baby_duty_night != 0x20: # -if MC spent the night with Penelope From s68 -if PenelopeRS and MC is not on baby duty with partner, transition to Scene 69 -> 69a -> 70
 
         scene v16s70_2 # FPP. Show Penelope (slight smile, mouth is closed, looking at MC), Camera angle is from MC and Penelope walking side by side in the school hallway
         with dissolve
 
-        u "I don't want to sound like a deadbeat dad, but it felt so good dropping off [baby_name]."
+        u "I don't want to sound like a deadbeat dad, but it felt so good dropping off [v16_baby_name]."
 
         scene v16s70_2a # FPP. Show Penelope (slight smile, mouth is open, looking at MC), Camera angle is from MC and Penelope walking side by side in the school hallway
         with dissolve
@@ -23,14 +23,14 @@ label v16s70:
 
         u "I'm sure it'll find a new father in about a day or two. *Laughs*"
 
-        scene v16s70_1
+        scene v16s70_1 # FPP. Show Penelope (slight smile, mouth is open, looking at MC) standing by the Dean's office door
         with dissolve
 
         pe "Well here we are"
 
     else: # -if MC did not spend the night with Penelope 
 
-        scene v16s70_1 # FPP. Show Penelope (slight smile, mouth is open, looking at MC) standing by the Dean's office door
+        scene v16s70_1
         with dissolve
 
         pe "Hey, thanks for coming. I wasn't too sure if I'd be able to handle this on my own."
