@@ -8,7 +8,7 @@ label v16s61:
         play sound "sounds/dooropen.mp3"
         
         scene v16s61_1 # TPP. Show MC (slight smile, mouth closed) walking into his wolves room.
-        with fade (1,0,1)
+        with fade
 
         pause 0.75
 
@@ -18,8 +18,7 @@ label v16s61:
         with dissolve
 
         # -if Transitioning directly from Scene 56 (Wolves 2)
-        if not v14_help_lindsey:  
-
+        if not v14_help_lindsey:
             scene v16s61_2
             with dissolve 
 
@@ -31,6 +30,7 @@ label v16s61:
             with dissolve
 
             u "(I can't believe we managed to get Polly on board with our crazy idea! Lindsey loves her more than ever now, haha.)"
+
         else: 
             scene v16s61_2
             with dissolve
@@ -39,7 +39,6 @@ label v16s61:
 
             # -if also wore room service uniforms
             if v16s28_lindsey_pb_pretend_roomservice: # placeholder
-
                 play sound "sounds/vibrate.mp3"
                 
                 scene v16s61_2a # TPP. In wolves room. Show MC (slight smile, mouth closed) sitting on his bed pulling out his phone from his pocket
@@ -70,8 +69,7 @@ label v16s61:
                 u "(Paparazzi?! What the fuck...)"
         
         # -if helping Chloe with Spa evening
-        if not v16s12_chloe_planboard_decide_newspaper_cover: 
-        
+        if not v16s12_chloe_planboard_decide_newspaper_cover:
             scene v16s61_2 
             with dissolve
 
@@ -79,7 +77,6 @@ label v16s61:
             
             # -if chose to be the masseuse on planning board
             if v16s12_chloe_planboard_decide_mc_gives_massages:
-
                 scene v16s61_2
                 with dissolve
 
@@ -95,22 +92,22 @@ label v16s61:
         scene v16s61_3 # TPP. In wolves room. Close up of MC(slight smile, mouth closed) sitting at his study desk
         with dissolve
 
-        pause .75
+        pause 0.75
 
         scene v16s61_4 # TPP. In wolves room. Close up of MC(slight smile, mouth closed) reading a book at his study desk
         with dissolve
 
-        pause .75
+        pause 0.75
 
         scene v16s61_5 # TPP. In wolves room. Close up of MC(bored, mouth closed) writing in a notepad.
         with dissolve
 
-        pause .75
+        pause 0.75
 
         scene v16s61_4
         with dissolve
 
-        pause .75
+        pause 0.75
         
         scene v16s61_6 # TPP. In wolves room. Close up of MC(bored, mouth closed) looking like he is falling asleep at his desk.
         with dissolve
@@ -144,14 +141,12 @@ label v16s61:
             # -You can show a couple of images, 2-3 max, of Chloe during this convo. I suggest that she's preparing the house and party supplies during the call (These images are not a priority and can be cut if needed, otherwise mc is just shown pacing his room during the call.)
             # -if ChloeGf 
             if chloe.relationship == Relationship.GIRLFRIEND:
-
                 scene v16s61_9 # TPP. Shot of Chloe(slight smile, mouth open) at the chicks house holding her phone to her ear. The house looks almost ready for the party
                 with dissolve 
 
                 cl "Hey you! I need some help."
             
             else:
-            
                 scene v16s61_9
                 with dissolve
 
@@ -218,7 +213,7 @@ label v16s61:
             with dissolve
 
             menu:
-                "Be the masseuse.":
+                "Be the masseuse":
                     $ v16s61_chloe_pb_override_mc_gives_massages = True
                     $ add_Point(KCT.TROUBLEMAKER)
 
@@ -252,7 +247,7 @@ label v16s61:
 
                     cl "*Laughs* Terrific."
 
-                "Be a helper.":
+                "Be a helper":
                     $ add_Point(KCT.BRO)
 
                     scene v16s61_9a
@@ -308,8 +303,8 @@ label v16s61:
             with dissolve                 
 
             jump v16s62
-        else: 
-            
+
+        else:             
             play sound "sounds/thud.mp3"
 
             scene v16s61_6a # TPP. Show MC fallen asleep his head hitting the book on his desk.
@@ -410,17 +405,14 @@ label v16s61:
 
         # -if Transitioning directly from Scene 57 (Apes 2)
         if not v14_help_lindsey:
-
             scene v16s61_15
             with dissolve
 
             u "*Sighs* (This whole Sam thing is forcing everyone to choose sides. Whichever way you slice it, it's not good for the frat.)"
         
-        else:         
-            
+        else:
             # -if Succeeded with Polly at hotel
-            if v16s59_polly_endorse_lindsey: 
-                
+            if v16s59_polly_endorse_lindsey:
                 scene v16s61_15
                 with dissolve
 
@@ -434,7 +426,6 @@ label v16s61:
 
                 # -if also wore room service uniforms
                 if v16s28_lindsey_pb_pretend_roomservice:
-
                     play sound "sounds/vibrate.mp3"
                     
                     scene v16s61_15a # TPP. In apes room. Show MC (slight smile, mouth closed) sitting on his bed pulling out his phone from his pocket
@@ -464,7 +455,6 @@ label v16s61:
         
         # -if helping Chloe with Spa evening
         if not v16s12_chloe_planboard_decide_newspaper_cover:
-        
             scene v16s61_15 
             with dissolve
 
@@ -487,28 +477,27 @@ label v16s61:
         scene v16s61_16 # TPP. In apes room. Close up of MC(slight smile, mouth closed) sitting at his study desk
         with dissolve
 
-        pause .75
+        pause 0.75
 
         scene v16s61_17 # TPP. In apes room. Close up of MC(slight smile, mouth closed) reading a book at his study desk
         with dissolve
 
-        pause .75
+        pause 0.75
 
         scene v16s61_18 # TPP. In apes room. Close up of MC(bored, mouth closed) writing in a notepad.
         with dissolve
 
-        pause .75
+        pause 0.75
 
         scene v16s61_17
         with dissolve
 
-        pause .75
+        pause 0.75
         
         scene v16s61_19 # TPP. In apes room. Close up of MC(bored, mouth closed) looking like he is falling asleep at his desk.
         with dissolve
 
-        if v14_help_chloe and not v16s12_chloe_planboard_decide_newspaper_cover: 
-            
+        if v14_help_chloe and not v16s12_chloe_planboard_decide_newspaper_cover:
             scene v16s61_19
             with dissolve
 
@@ -522,7 +511,6 @@ label v16s61:
             jump v16s62
         
         elif not v14_help_chloe: # -if not helping Chloe with her campaign
-
             play sound "sounds/vibrate.mp3"
 
             scene v16s61_20
@@ -538,11 +526,11 @@ label v16s61:
             # -You can show a couple of images, 2-3 max, of Chloe during this convo. I suggest that she's preparing the house and party supplies during the call (These images are not a priority and can be cut if needed, otherwise mc is just shown pacing his room during the call.)
             # -if ChloeGf 
             if chloe.relationship == Relationship.GIRLFRIEND: 
-
                 scene v16s61_9 
                 with dissolve 
 
                 cl "Hey you! I need some help."
+
             else:
                 scene v16s61_9
                 with dissolve
@@ -610,8 +598,7 @@ label v16s61:
             with dissolve
 
             menu:
-                "Be the masseuse.":
-
+                "Be the masseuse":
                     $ v16s61_chloe_pb_override_mc_gives_massages = True
                     $ add_Point(KCT.TROUBLEMAKER)
 
@@ -645,7 +632,7 @@ label v16s61:
 
                     cl "*Laughs* Terrific."
 
-                "Be a helper.":
+                "Be a helper":
                     $ add_Point(KCT.BRO)
 
                     scene v16s61_9a
@@ -701,6 +688,7 @@ label v16s61:
             with dissolve 
 
             jump v16s62
+
         else: 
             play sound "sounds/thud.mp3"
 
@@ -786,4 +774,4 @@ label v16s61:
             scene v16s61_22
             with dissolve
 
-            jump v16s66 
+            jump v16s66

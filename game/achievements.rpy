@@ -56,7 +56,7 @@ init python:
     # v3
     if renpy.loadable("v3/v3.rpy"):
         Achievement("not_now_mom", "Decline Julia's call")
-        Achievement("lips_dont_lie", "Kiss Riley in the Park")
+        Achievement("lips_dont_lie", "Kiss Riley at the Park")
         Achievement("truth_hurts", "Tell Lauren about Aubrey")
 
     # v4
@@ -128,7 +128,7 @@ init python:
     #v11
     if renpy.loadable("v11/scene1.rpy"):
         Achievement("perry_mason", "Successfully defend Penelope")
-        Achievement("candy_crusher", "Candy's sex scene")
+        Achievement("candy_crusher", "Have fun with Candy")
         Achievement("hold_your_horses", "Balance the horse at the end of the manhunt")
         Achievement("off_your_high_horse", "Don't balance the horse at the end of the manhunt")
         Achievement("cross_your_heart", "Kiss Penelope at the airport")

@@ -52,7 +52,20 @@ image warning_background_blue = Frame("gui/warning/background_blue.webp", 42, 8,
 image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm", loop=False)
 
 # Phone
-image phone_white_background = "images/phone/white_background.webp"
+## Common
+image contact_notification = "images/phone/common/contact-notification.webp"
+image back_button = "images/phone/common/back-button.webp"
+image message_background = Frame("images/phone/common/message-background.webp", 20, 20)
+image reply_background_idle = Frame("images/phone/common/reply-background-idle.webp", 20, 20)
+image reply_background_hover = Frame("images/phone/common/reply-background-hover.webp", 20, 20)
+image reply_button_idle = "images/phone/common/reply-button-idle.webp"
+
+## Achievements
+image achievement_locked = Frame("images/phone/achievements/app-assets/achievement-locked.webp", 20, 20)
+image achievement_unlocked = Frame("images/phone/achievements/app-assets/achievement-unlocked.webp", 20, 20)
+
+## Relationships
+image relationships_frame_background = Frame("images/phone/relationships/app-assets/frame-background.webp")
 
 # Fights
 image fight_guard_animation:
@@ -244,6 +257,19 @@ image bbor = "images/block r.webp"
 image 3hits = "images/3 hits.webp"
 image 4hits = "images/4 hits.webp"
 image 5hits = "images/5 hits.webp"
+image jab2movie = Movie(play="images/v2/jab2.webm", start_image="images/v2/jab2start.webp", image="images/v2/jab2pic.webp", loop=False)
+image tomfinishmovie = Movie(play="images/v2/tomfinish.webm", start_image="images/v2/tomfinishstart.webp", image="images/v2/tomfinish.webp", loop=False)
+image youfinishmovie = Movie(play="images/v2/youfinish.webm", start_image="images/v2/youfinishstart.webp", image="images/v2/youfinish.webp", loop=False)
+image hook2movie = Movie(play="images/v2/hook2.webm", start_image="images/v2/hook2start.webp", image="images/v2/hook2pic.webp", loop=False)
+image kick1movie = Movie(play="images/v2/kick1.webm", start_image="images/v2/kick1start.webp", image="images/v2/kick1pic.webp", loop=False)
+image tomjabmovie = Movie(play="images/v2/tomjab.webm", start_image="images/v2/tomjabstart.webp", image="images/v2/tomjab.webp", loop=False)
+image tomkickmovie = Movie(play="images/v2/tomkick.webm", start_image="images/v2/tomkickstart.webp", image="images/v2/tomkick.webp", loop=False)
+image kick2movie = Movie(play="images/v2/kick2.webm", start_image="images/v2/kick2start.webp", image="images/v2/kick2pic.webp", loop=False)
+image tomhookmovie = Movie(play="images/v2/tomhook.webm", start_image="images/v2/tomhookstart.webp", image="images/v2/tomhook.webp", loop=False)
+image hook1movie = Movie(play="images/v2/hook1.webm", start_image="images/v2/hook1start.webp", image="images/v2/hook1pic.webp", loop=False)
+image jab1movie = Movie(play="images/v2/jab1.webm", start_image="images/v2/jab1start.webp", image="images/v2/jab1pic.webp", loop=False)
+image hookcountermovie = Movie(play="images/v2/hookcounter.webm", start_image="images/v2/hookcounterstart.webp", image="images/v2/hookcounter.webp", loop=False)
+image jabcountermovie = Movie(play="images/v2/jabcounter.webm", start_image="images/v2/jabcounterstart.webp", image="images/v2/jabcounter.webp", loop=False)
 
 image targets = "images/targets.webp"
 

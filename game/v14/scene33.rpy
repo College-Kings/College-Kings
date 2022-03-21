@@ -4,11 +4,11 @@
 # Time: Evening
 
 label v14s33:
-    if iris.simplr in simplr_contacts:
+    if iris.simplr in simplr_app.contacts:
         $ iris.simplr.newMessage("Hi... You're so cute. Haha", force_send=True)
         $ iris.simplr.newMessage("Sorry if that was too forward, lol", force_send=True)
         $ iris.simplr.newMessage("I guess what I mean is that I'm happy that we matched", force_send=True)
-    elif iris.simplr in simplr_pendingContacts:
+    elif iris.simplr in simplr_app.pending_contacts:
         $ iris.simplr.removeContact()
 
     if joinwolves:

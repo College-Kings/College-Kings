@@ -39,7 +39,7 @@ label v12_simplr_convo:
 
     u "(Haven't checked out Simplr in a while.)"
 
-    if emmy.simplr in simplr_contacts:
+    if emmy.simplr in simplr_app.contacts:
         $ v12s24_emmymatch = True
 
         $ emmy.simplr.newMessage("Hey handsome, I was hoping I'd match with you. Where are you from?", force_send=True)

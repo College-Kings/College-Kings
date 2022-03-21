@@ -6,9 +6,10 @@ init python:
             if username is None: self.username = self.name
             else: self.username = username
 
-            self._profile_picture = profile_pictures[0]
+            self._profile_pictures = None
             self._fighter = None
 
+            self.profile_picture = self.profile_pictures[0]
             self.money = 0
             self.inventory = Inventory()
             self.detective = None
@@ -18,14 +19,19 @@ init python:
         @property
         def name(self):
             return store.name
-
+                
         @property
-        def profile_picture(self):
-            return profile_pictures[0]
+        def profile_pictures(self):
+            if self._profile_pictures is not None:
+                return self._profile_pictures
 
-        @profile_picture.setter
-        def profile_picture(self, value):
-            self._profile_picture = value
+            DIRECTORY = os.path.join(config.basedir, "game", "images", "nonplayable_characters", "profile_pictures")
+
+            self._profile_pictures = []
+            for root, dirs, files in os.walk(DIRECTORY):
+                self._profile_pictures.extend(os.path.join(root, file).replace(os.sep, '/') for file in files if file.startswith("mc"))
+
+            return self._profile_pictures
 
         @property
         def fighter(self):

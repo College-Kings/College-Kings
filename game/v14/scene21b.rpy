@@ -6,7 +6,7 @@
 init python:
     def v14_beth_simplr():
         beth.simplr.newMessage("The best kind. Bye wiener boy!")
-        simplr_contacts.remove(beth.simplr)
+        simplr_app.contacts.remove(beth.simplr)
 
 label v14s21b:
     play music "music/v13/Track Scene 45.mp3" fadein 2
@@ -16,10 +16,10 @@ label v14s21b:
 
     pause 1
 
-    if beth.simplr in simplr_contacts:
+    if beth.simplr in simplr_app.contacts:
         $ beth.simplr.newMessage("Oh, my bad... I thought you were a really cute chick XD", force_send=True)
-        $ beth.simplr.addReply(_("You thought I was a girl? Lmao, what kind of girls have you been talking to?"),v14_beth_simplr)
-    elif beth.simplr in simplr_pendingContacts:
+        $ beth.simplr.addReply(_("You thought I was a girl? Lmao, what kind of girls have you been talking to?"), v14_beth_simplr)
+    elif beth.simplr in simplr_app.pending_contacts:
         $ beth.simplr.removeContact()
 
     scene v14s21b_1a # TPP. Show the sky, it's now evening

@@ -133,10 +133,10 @@ init python:
 
 
     class Opponent(BasePlayer):
-        def __init__(self, name, stance, health=20, stamina=8, attack_multiplier=1, stance_images=None):
+        def __init__(self, name, stance, health=20, stamina=8, attack_multiplier=1):
             BasePlayer.__init__(self, name, stance, health, stamina, attack_multiplier)
 
-            self.stance_images = stance_images
+            self.stance_images = None
 
         @property
         def stance_image(self):
