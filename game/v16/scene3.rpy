@@ -4,6 +4,7 @@
 # Time: Night
 
 label v16s3:
+    play music "music/v15/Track Scene 1_3.mp3" fadein 2
     play sound "sounds/dooropen.mp3"
 
     scene v16s3_1 # TPP. Show Riley walking into her dorm while opening the door, MC following in right behind her, both neutral face, mouth closed.

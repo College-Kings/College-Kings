@@ -14,6 +14,7 @@ label v16s4a:
     with dissolve
     
     pause 1
+    play music "music/v16/Track_Scene_4a.mp3" fadein 2
 
 # -MC wakes up, stretching and yawning-
     if joinwolves:
