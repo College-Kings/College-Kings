@@ -458,7 +458,7 @@ label v16s48: # 48) Baby night: Chloe & MC
             scene v16s48_16b
             with dissolve
 
-            cl "That crying is just.... So. Annoying."
+            cl "That crying is just... So. Annoying."
 
             scene v16s48_16
             with dissolve

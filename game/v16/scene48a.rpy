@@ -122,7 +122,7 @@ label v16s48a_boobs:
             scene v16s48a_5h  # TPP Chloe's (aroused, sexy eyes, mouth open, watching MC) face and Boobs, with MC (looking at left boob) sucking Chloe's erect left nipple.
             with dissolve
 
-            cl "*Moans* Yes... My nipples are sssssso sensitive, haa...."
+            cl "*Moans* Yes... My nipples are ssssssooo sensitive, haa..."
 
             scene v16s48a_5i  # TPP Chloe's (aroused, sexy eyes, mouth open, watching MC) face and Boobs, pushing her shoulders together to make her boobs closer and stick up, with MC(looking at left boob) sucking Chloe's erect left nipple.
             with dissolve

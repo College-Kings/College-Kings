@@ -162,7 +162,7 @@ label v16s25:
                     scene v16s25_1b # TPP. In his Wolves Frat Room, Show MC leaving his room in his underwear, slight smile, mouth closed.
                     with dissolve
 
-                    u "(Laptop... Laptop.... Let's check the living room first.)"
+                    u "(Laptop... Laptop... Let's check the living room first.)"
 
                     scene v16s25_8 # TPP. Show MC walking into the Wolves Frat Living Room only in his underwear, slight smile, mouth closed.
                     with dissolve
@@ -419,7 +419,7 @@ label v16s25:
 
                     pause 0.75
 
-                    scene v16s25_11r # TPP. Laptop Screen, Video Chat overlay with Emily, Emily putting on the top of lingerie2 on while winking at MC on the chat, Emily smirking, mouth closed/ MC, mouth closed, smiling, happy..
+                    scene v16s25_11r # TPP. Laptop Screen, Video Chat overlay with Emily, Emily putting on the top of lingerie2 on while winking at MC on the chat, Emily smirking, mouth closed/ MC, mouth closed, smiling, happy.
                     with dissolve
 
                     pause 0.75
@@ -429,7 +429,7 @@ label v16s25:
 
                     pause 0.75
 
-                    scene v16s25_11l # TPP. Laptop screen, Video chat overlay With Emily, Emily close to her screen using her arms to push up her boobs, Emily smirking, mouth open/ MC, mouth closed, smiling, happy..
+                    scene v16s25_11l # TPP. Laptop screen, Video chat overlay With Emily, Emily close to her screen using her arms to push up her boobs, Emily smirking, mouth open/ MC, mouth closed, smiling, happy.
                     with dissolve
 
                     em "What about this one?"
@@ -596,7 +596,7 @@ label v16s25:
                     scene v16s25_7a
                     with dissolve
 
-                    em "Aww, I was really excited to show you my sexy new outfits, though...."
+                    em "Aww, I was really excited to show you my sexy new outfits, though..."
 
                     em "But okay. If you're sure."
 
@@ -813,7 +813,7 @@ label v16s25:
                     scene v16s25_14b # TPP. In his Apes Frat Room, Show MC leaving his room in his underwear, slight smile, mouth closed.
                     with dissolve
 
-                    u "(Laptop... Laptop.... Let's check the living room first.)"
+                    u "(Laptop... Laptop... Let's check the living room first.)"
 
                     scene v16s25_21 # TPP. Show MC walking into the Apes Frat Living Room only in his underwear, slight smile, mouth closed.
                     with dissolve
@@ -1242,7 +1242,7 @@ label v16s25:
                     scene v16s25_20a
                     with dissolve
 
-                    em "Aww, I was really excited to show you my sexy new outfits, though...."
+                    em "Aww, I was really excited to show you my sexy new outfits, though..."
 
                     em "But okay. If you're sure."
 

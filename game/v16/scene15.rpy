@@ -328,7 +328,7 @@ label v16s15:
                         scene v16s15_18 # TPP. Show two random terrified children on horses, one of them is crying [CAROUSEL: Ride Location: Carousel1,  Camera: Carousel1] (IF YOU CAN'T MAKE THIS RENDER DUE TO AGE RESTRICTIONS OF CHARACTERS IN THIS GAME, THAN JUST JUST USE RENDER v16s15_11c IN THIS RENDERS PLACE)
                         with dissolve
 
-                        u "(Holy shit, dude.... There are kids here.)"
+                        u "(Holy shit, dude... There are kids here.)"
 
                         scene v16s15_12d
                         with dissolve
@@ -941,7 +941,7 @@ label v16s15:
         scene v16s15_30n # FPP. Show just Imre and Karen, Imre and Karen are looking at MC, both of them no expressions, Imre's mouth is open, Karen's mouth is closed [WHEEL]
         with dissolve
 
-        imre "I'm pretty sure that's what it is...."
+        imre "I'm pretty sure that's what it is..."
 
         scene v16s15_30j
         with dissolve
@@ -1486,7 +1486,7 @@ label v16s15:
         scene v16s15_58a # FPP. Mc looks diagonally and sees Karen (slight smile, mouth is open) looking at Imre [HOTDOG]. 
         with dissolve
 
-        dg3 "No, Imre.... I mean that my parents were both vegan, so I was raised that way. Meat is just kind of disgusting to me."
+        dg3 "No, Imre... I mean that my parents were both vegan, so I was raised that way. Meat is just kind of disgusting to me."
 
         scene v16s15_59
         with dissolve

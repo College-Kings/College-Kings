@@ -114,7 +114,7 @@ label v16s25a:
         scene v16s25a_5
         with dissolve
 
-        au "Anyway, I'm telling people it might be a good idea to stock up on candles or flashlights"
+        au "Anyway, I'm telling people it might be a good idea to stock up on candles or flashlights."
 
         scene v16s25a_5a
         with dissolve
@@ -304,7 +304,7 @@ label v16s25a:
         scene v16s25a_5
         with dissolve
 
-        au "Anyway, I'm telling people it might be a good idea to stock up on candles or flashlights"
+        au "Anyway, I'm telling people it might be a good idea to stock up on candles or flashlights."
 
         scene v16s25a_5a
         with dissolve

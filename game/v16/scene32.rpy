@@ -163,7 +163,7 @@ label v16s32:
                             scene v16s32_3a
                             with dissolve
 
-                            u "(What Lindsey doesn't know won't hurt her, right? Surely....)"
+                            u "(What Lindsey doesn't know won't hurt her, right? Surely...)"
 
                         "Cancel the booking":
                             

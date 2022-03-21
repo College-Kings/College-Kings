@@ -488,7 +488,7 @@ label v16s59:
                 scene v16s59_4d
                 with dissolve
 
-                li "And a little penny told us that you're performing at our college tonight,.. SVC?"
+                li "And a little penny told us that you're performing at our college tonight... SVC?"
 
                 scene v16s59_4f
                 with dissolve
@@ -571,7 +571,7 @@ label v16s59:
                 scene v16s59_4za # FPP. Show Lindsey (nervous expression, mouth closed, looking at Polly) just from the shoulders up (check with mozzart for clothing), Polly (concerned expression, mouth open, looking at PBG), Polly's Bodyguard (PBG) (VERY STERN Expression, mouth closed, looking at Polly) standing behind Lindsey closer to the doorway next to Polly
                 with dissolve
 
-                polly "Just a few fans who somehow found out where we're staying...."
+                polly "Just a few fans who somehow found out where we're staying..."
 
                 scene v16s59_4zb # FPP. Show Lindsey (nervous expression, mouth closed, looking at PBG) just from the shoulders up (check with mozzart for clothing), Polly (concerned expression, mouth closed, looking at MC), Polly's Bodyguard (PBG) (slightly angry expression, mouth closed, looking at MC) now standing closer to Lindsey, with one hand cupping a fist made with his other hand
                 with dissolve

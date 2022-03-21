@@ -680,7 +680,7 @@ label v16s44:
         scene v16s44_2
         with dissolve
 
-        u "And now, I need to go to the Chicks house for baby duty"
+        u "And now, I need to go to the Chicks house for baby duty..."
 
     else: ### -if partner is on baby duty
 

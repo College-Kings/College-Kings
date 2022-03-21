@@ -661,7 +661,7 @@ label v16s39:
                 scene v16s39_5b
                 with dissolve
 
-                u "Hey, I was going to order that... Cheater"
+                u "Hey, I was going to order that... Cheater."
 
                 scene v16s39_5a
                 with dissolve

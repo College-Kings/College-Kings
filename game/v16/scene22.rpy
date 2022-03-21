@@ -1178,7 +1178,7 @@ label v16s22:
             scene v16s22_9a
             with dissolve
 
-            u "You did give me a blowjob, though"
+            u "You did give me a blowjob, though."
 
             scene v16s22_9
             with dissolve

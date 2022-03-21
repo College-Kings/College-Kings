@@ -402,7 +402,7 @@ label v16s27:
             with dissolve
 
             menu:
-                "Plastic, it is":
+                "Plastic it is":
                     $ add_point(KCT.BRO)
 
                     $ v16_baby = "Plastic"

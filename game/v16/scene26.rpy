@@ -435,7 +435,7 @@ label v16s26:
 
     pe "But he's right. That was a smart sentence, I'm proud of you. *Giggles*"
 
-    scene v16s26_3e # FPP. Lindsey jokingly pretending tobe upset, MC looking at Lindsey, Lindsey slight smile, mouth open..
+    scene v16s26_3e # FPP. Lindsey jokingly pretending tobe upset, MC looking at Lindsey, Lindsey slight smile, mouth open.
     with dissolve
 
     li "Oh god... It's the therapy sessions!"

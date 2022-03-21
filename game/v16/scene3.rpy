@@ -169,7 +169,7 @@ label v16s3:
         scene v16s3_7 # FPP. MC looking down and seeing Riley's hand on his thigh.
         with dissolve
 
-        pause 0.75
+        pause 1.5
 
         scene v16s3_5f
         with dissolve
@@ -246,12 +246,12 @@ label v16s3:
                         scene v16s3_5e
                         with dissolve
 
-                        u "Humans. We're all a little unpredictable at times"
+                        u "Humans. We're all a little unpredictable at times."
 
                         scene v16s3_5d
                         with dissolve
 
-                        ri "Yeah, you're right"
+                        ri "Yeah, you're right."
 
                     scene v16s3_5d
                     with dissolve

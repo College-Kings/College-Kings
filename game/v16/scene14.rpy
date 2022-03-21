@@ -263,7 +263,7 @@ label v16s14:
             scene v16s14_12 # FPP. MC focusing only on Nora's ass while she does the cow pose
             with dissolve
 
-            ro "Now take a deep breath in... and"
+            ro "Now take a deep breath in... and..."
 
             ro "Hold it..."
 
@@ -321,7 +321,7 @@ label v16s14:
             scene v16s14_13 # FPP. MC focusing only on Ms. Rose's ass while she does the cow pose
             with dissolve
 
-            ro "Now take a deep breath in... and"
+            ro "Now take a deep breath in... and..."
 
             ro "Hold it..."
 
@@ -379,7 +379,7 @@ label v16s14:
             scene v16s14_10e # TPP. Same as v16s14_10d, all doing the cow pose
             with dissolve
 
-            ro "Now take a deep breath in... and"
+            ro "Now take a deep breath in... and..."
 
             ro "Hold it..."
 

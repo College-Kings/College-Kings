@@ -293,7 +293,7 @@ label v16s1_lose:
             scene v16s1_lose_4a # TPP. Same angle as v16s1_lose_4, Riley and MC walking away, Riley still supporting him with her arm around her as they walk away, MC in pain, Riley worried, mouths closed
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
     jump v16s1_end
 
