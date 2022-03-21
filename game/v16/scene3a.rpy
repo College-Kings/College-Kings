@@ -30,7 +30,7 @@ label v16s3a:
     scene v16s3a_2
     with dissolve
 
-    ri "Just relax. I'm going to take good care of you."
+    ri "Just relax. I've got this."
 
     scene v16s3a_2b # FPP. Sitting on Riley's bed, MC looking at Riley, Riley looking at MC, Riley leaned close biting her lip.
     with dissolve
