@@ -3,7 +3,6 @@
 # Characters: CHRIS (Outfit: 1), MC (Outfit: 2), IMRE (Outfit: 1), SEBASTIAN (Outfit: x)
 # Time: Thursday Morning
 
-
 label v16s56: # 56) Wolves Living Room, Chriss apologizes
     scene v16s56_1 # TPP Show MC entering Wolves' front door
     with fade
@@ -220,7 +219,6 @@ label v16s56: # 56) Wolves Living Room, Chriss apologizes
     with dissolve
 
     pause 0.75
-
 
     if v14_help_lindsey: # TODO: Variable PLACEHOLDER VARIABLE # -if helping Lindsey, transition to Scene 58-
         jump v16s58

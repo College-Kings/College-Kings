@@ -3,9 +3,7 @@
 # Characters: MC (Outfit: 2), JENNY (Outfit: Towel from s63), LINDSEY (Outfit: Towel from s63), NORA (Outfit: Towel from s63), CHLOE (Outfit: Towel from s63), AUBREY (Outfit: Towel from s63)
 # Time: Thursday Night 
 
-
 label v16s63b:
-
     scene v16s63b_1 # TPP. MC is sitting in the candlelit Chicks living room with Chloe, Jenny, Nora and Lindsey. Same positions as at end of Scene 63, Everyone (slight smiles, mouths are closed, looking at renderer's discretion)
     with dissolve
 
@@ -652,9 +650,7 @@ label v16s63b:
     with dissolve
 
     menu:
-
         "Applaud":
-
             scene v16s63b_15e
             with dissolve
 
@@ -701,7 +697,6 @@ label v16s63b:
             jen "Because if you did, I want a copy. *Laughs*"
 
         "Keep quiet":
-
             scene v16s63b_10d
             with dissolve
 
@@ -728,9 +723,7 @@ label v16s63b:
     with dissolve
 
     menu:
-
         "Suggest a do-over":
-
             scene v16s63b_2
             with dissolve
 
@@ -757,7 +750,6 @@ label v16s63b:
             no "Interesting that you chose not to speak up until after the kissing was over... Haha."
 
         "I'm the winner":
-
             scene v16s63b_2
             with dissolve
 
@@ -849,9 +841,7 @@ label v16s63b:
     with dissolve
 
     menu:
-
         "Another compliment":
-
             $ v16s63x_chloe_suggestion_set.add("v16s63b_compliment")
 
             scene v16s63b_31 # TPP. Show just MC (slight smile, mouth is closed, looking at the paper) writing on a piece of paper
@@ -865,7 +855,6 @@ label v16s63b:
             pause 0.75
 
         "Suggest a breath mint":
-
             $ v16s63x_chloe_suggestion_set.add("v16s63b_breath_mint")
 
             scene v16s63b_31b # TPP. Show just MC (smirking expression, mouth is closed, looking at the paper) on a piece of paper
@@ -879,7 +868,6 @@ label v16s63b:
             u "(Plus, after that kissing session, I'm the only one she won't expect to have written this. Perfect!)"
 
         "Don't add anything":
-        
             scene v16s63b_31c # TPP. Show just MC (slight smile, mouth is closed, looking at the suggestion box)
             with dissolve
 

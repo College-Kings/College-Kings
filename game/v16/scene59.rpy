@@ -4,14 +4,11 @@
 # Time: Thurdsay Afternoon
 
 label v16s59:
-
     if v16s28_lindsey_pb_pretend_roomservice: # -if MC chose Pretend to be room service
-
         scene v16s59_1 # TPP. MC (slight smile, mouth closed, looking forward) and Lindsey (slight smile, mouth closed, looking forward) in hotel uniforms appear from a distance, walking along a hallway, past hotel room doors. They are wearing room service uniforms and MC is carrying a food tray with a domed lid covering the food-
         with dissolve
 
     else: # -if MC chose Show up as yourselves
-
         scene v16s59_1a # TPP. same as v16s59_1 MC (slight smile, mouth closed, looking forward) and Lindsey (slight smile, mouth closed, looking forward) walking along the hallway in regular clothes with no food tray-
         with dissolve
 
@@ -32,7 +29,6 @@ label v16s59:
     u "Here we are."
 
     if v16s28_lindsey_pb_pretend_roomservice:  # -if Pretending to be room service
-
         scene v16s59_3 # TPP. Full body image of (ROOM SERVICE UNIFORMS) MC (no expression, mouth is open, looking at Lindsey) scratching his chest with one hand, carrying the tray of food in the other, Lindsey (no expression, mouth is closed, looking at MC)
         with dissolve
 
@@ -66,7 +62,6 @@ label v16s59:
     with dissolve
 
     menu:
-
         "Calm Lindsey down":
             $ add_point(KCT.BOYFRIEND)
             $ add_point(KCT.BRO)
@@ -138,7 +133,6 @@ label v16s59:
     polly "Um... Hi."
 
     if v13_penelope_backstage: # -if MC went backstage at Polly concert
-
         scene v16s59_4g # FPP. Show Lindsey (full smile, mouth closed, looking at Polly) just from the shoulders up (check with mozzart for clothing), Polly (staring/thinking expression, mouth open, looking at MC) tilts her head and stares at MC, with a hand on her chin
         with dissolve
 
@@ -165,7 +159,6 @@ label v16s59:
         with dissolve
 
         menu:
-
             "Coincidence":
                 $ add_point(KCT.BRO)
 
@@ -193,22 +186,18 @@ label v16s59:
                 polly "Oh... Okay. I have to say, that sounds a bit creepy... Ha."
 
     else: # -if mc did not meet Polly in Amsterdam
-
         scene v16s59_4f
         with dissolve
 
         polly "Can I... Help you guys with something?"
 
-
     if v16s28_lindsey_pb_pretend_roomservice: # -if Pretending to be room service
-
         scene v16s59_4d
         with dissolve
 
         li "We're here to deliver your meal!"
 
         if v13_penelope_backstage:  # TODO: Now clue what this means or how its different from meeting polly backstage so reusing it  # -if mc has already met Polly
-
             scene v16s59_4h
             with dissolve
 
@@ -260,9 +249,7 @@ label v16s59:
         with dissolve
 
         menu:
-
             "The hotel": # (SUCCESS)
-
                 $ v16s59_polly_endorse_lindsey = True 
                 $ add_point(KCT.BRO)
 
@@ -481,7 +468,6 @@ label v16s59:
                 polly "A favor?"
 
                 if v13_penelope_backstage: # -if mc met polly in Amsterdam
-
                     scene v16s59_4f
                     with dissolve
 
@@ -530,7 +516,6 @@ label v16s59:
                 polly "I'm not really sure if that would be appropriate..."
 
                 if v16s59_just_knock: # -if MC also chose Just knock
-
                     scene v16s59_4y # FPP. Show Lindsey (nervous expression, mouth open, looking at Polly) just from the shoulders up (check with mozzart for clothing), Polly (concerned expression, mouth closed, looking at Lindsey)
                     with dissolve
 
@@ -604,7 +589,6 @@ label v16s59:
                 u "Really?"
 
                 if v13_penelope_backstage: # -if mc met polly in amsterdam
-
                     scene v16s59_4zb
                     with dissolve
 
@@ -674,7 +658,6 @@ label v16s59:
         ### ERROR: [End of Checkpoint 1.2. Continue to Checkpoint 2]
 
     else: # -if Showing up as yourselves
-
         scene v16s59_4y
         with dissolve
 
@@ -741,9 +724,7 @@ label v16s59:
         with dissolve
 
         menu:
-
             "Interrupt Lindsey": # (SUCCESS)
-            
                 $ v16s59_polly_endorse_lindsey = True
                 $ add_point(KCT.BOYFRIEND)
                 $ add_point(KCT.BRO)
