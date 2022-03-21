@@ -348,6 +348,9 @@ label after_load:
             chloe.relationship = Relationship.MAD
 
         ## PHONE
+        try: phone.base_image
+        except AttributeError: phone.base_image = "images/phone/phone-icon.webp"
+
         ### APPLICATIONS
         try:
             messenger.contacts = contacts.copy()
