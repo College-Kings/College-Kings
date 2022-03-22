@@ -9,7 +9,7 @@ label v16s3a:
     scene v16s3a_1 # TPP. MC and Riley on the bed, Kissing.
     with dissolve
 
-    pause 0.75
+    pause 1.5
 
     scene v16s3a_2 # FPP. Sitting on Riley's bed, MC looking at Riley, Riley looking at MC, Riley smirking, mouth open.
     with dissolve
@@ -42,14 +42,14 @@ label v16s3a:
     scene v16s3a_1
     with dissolve
 
-    pause 0.75
+    pause 1
     
     play sound "sounds/kiss.mp3"
 
     scene v16s3a_1a # TPP. Riley kissing MC's neck, MC tilting his neck as Riley kisses it, MC slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v16s3a_3 # TPP. Close up of Riley's hand unziping MC's pants.
     with dissolve
@@ -60,9 +60,6 @@ label v16s3a:
     with dissolve
 
     pause 0.75
-
-    scene v16s3a_2b
-    with dissolve
 
     menu:
         "Let her continue":
