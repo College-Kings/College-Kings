@@ -441,6 +441,7 @@ default v16_baby_name = "Baby" # Used to store the player designated name of the
 default v16_wrong_key = True # This does default to True; not a typo. Used for baby menus
 default v16_wintom = False
 default v16_home_riley = False
+default v16_baby_key_attempt = 0 # tracks the total times MC uses a baby key on the baby; used in s87 
 
 # Chloe Planning Board 
 default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
@@ -475,7 +476,7 @@ default v16s34_joke_about_elijah = False # used and checked in v16s34
 default v16s34_knock_on_svc_door = False # False = walk in 
 default v16s34_get_aggressive_with_elijah = False # False = Laugh
 default v16s34_chloe_kiss_elijah_for_frontpage = False # False = Tell Elijah to fuck off 
-default v16s35_mc_spa_shopping = set() # Tracks what MC purchased during spa shopping for chloe
+default v16s35_mc_spa_shopping = set() # possible values are "tingle_mint_oil", "citrus_oil", "expensive_mask", "cheap_mask"  - Tracks what MC purchased during spa shopping for chloe
 default v16s38_tippped_driver = False
 default v16s39_fr_aubrey_date_list = set() # Tracks player selection during Aubrey date freeroam
 default v16s39_fr_aubrey_date_points = 0
@@ -490,6 +491,7 @@ default v16s57_agree_with_samantha_or_cameron = 0    # 0 = Stay out of it, 1 = S
 default v16s59_just_knock = False  #  True == just knock on polly's door / False = Calm Lindsey down before knocking
 default v16s59_polly_endorse_lindsey = False # True == Polly will endorse Lindsey for Pres / False = Polly does not endorse Lindsey for Pres.
 default v16s61_chloe_pb_override_mc_gives_massages = False   # True = Mc says yes to helping chloe give massages as Spa night / False = Mc helps Chloe, but does not give massages.
+default v16s63_mc_wear_facial_mask  = False  # True = MC decides to wear facial mask on MC during s63 / False = MC decides not to wear mask 
 default v16s63x_chloe_suggestion_set = set() # Possible values:  "v16s63_compliment", "v16s63b_compliment", "v16s63_breast_reduciton", "v16s63b_breath_mint"
 default v16s64_insulted_chloe = False  # True = Added an insult to suggestion box/ False = did not add insult to suggestion box - MC insults Chloe using suggestion box during Spa night
 default v16s64_confessed_insult = False  # True = Told Truth/ False = Denied it - MC tells the truth when confronted about insults from Spa Night.
