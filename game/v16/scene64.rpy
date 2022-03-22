@@ -116,6 +116,8 @@ label v16s64:
             scene v16s64_6 # TPP. Show MC and Lindsey (both laughing looking at Aubrey), Aubrey (laughing, mouth open, looking at MC) still has puffed out cheeks, and the marshmallow can be slightly seen in her mouth
             with dissolve
 
+            pause 0.75
+
     if v16s63breast_reduction and v16s63bbreath_mint: ###!!!PLACEHOLDER VARIABLE!!!### # -if MC chose insults in both 16.63 and 16.63b
         $ v16s64insulted_chloe = True ###!!!VARIABLE MUST BE ADDED FOR POSSIBLE CHLOE BREAK-UP!!!###
 
@@ -331,6 +333,8 @@ label v16s64:
                 scene v16s64_4m # FPP. Show just Aubrey (sad smile, mouth closed, trying not to look at MC) 
                 with dissolve
 
+                pause 0.75
+
             else:
                 scene v16s64_4n # FPP. Show just Aubrey (slight smile, mouth closed, looking at MC) 
                 with dissolve
@@ -434,6 +438,8 @@ label v16s64:
     if lindsey.relationship >= Relationship.FWB: # -if lindseyrs she winks at him-
         scene v16s64_3b # FPP. Show just Lindsey (slight smile, mouth closed, winking at MC)
         with dissolve
+
+        pause 0.75
 
     scene v16s64_2a
     with dissolve

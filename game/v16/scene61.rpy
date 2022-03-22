@@ -17,6 +17,8 @@ label v16s61:
         scene v16s61_2 # TPP. In wolves room. Show MC (slight smile, mouth closed) sitting on his bed.
         with dissolve
 
+        pause 0.75
+
         # -if Transitioning directly from Scene 56 (Wolves 2)
         if not v14_help_lindsey:
             scene v16s61_2
@@ -111,6 +113,8 @@ label v16s61:
         
         scene v16s61_6 # TPP. In wolves room. Close up of MC(bored, mouth closed) looking like he is falling asleep at his desk.
         with dissolve
+
+        pause 0.75
 
         if v14_help_chloe and not v16s12_chloe_planboard_decide_newspaper_cover:
             scene v16s61_6
@@ -302,6 +306,8 @@ label v16s61:
             scene v16s61_10 # TPP. Show MC(slight smile,mouth closed) leaving his wolves room.
             with dissolve                 
 
+            pause 0.75
+
             jump v16s62
 
         else:             
@@ -389,6 +395,8 @@ label v16s61:
             scene v16s61_10
             with dissolve
 
+            pause 0.75
+
             jump v16s66 
     else:
         play sound "sounds/dooropen.mp3"
@@ -402,6 +410,8 @@ label v16s61:
 
         scene v16s61_15 # TPP. In apes room. Show MC (slight smile, mouth closed) sitting on his bed.
         with dissolve
+
+        pause 0.75
 
         # -if Transitioning directly from Scene 57 (Apes 2)
         if not v14_help_lindsey:
@@ -496,6 +506,8 @@ label v16s61:
         
         scene v16s61_19 # TPP. In apes room. Close up of MC(bored, mouth closed) looking like he is falling asleep at his desk.
         with dissolve
+
+        pause 0.75
 
         if v14_help_chloe and not v16s12_chloe_planboard_decide_newspaper_cover:
             scene v16s61_19
@@ -687,6 +699,8 @@ label v16s61:
             scene v16s61_22 # TPP. Show MC(slight smile,mouth closed) leaving his apes room.
             with dissolve 
 
+            pause 0.75
+
             jump v16s62
 
         else: 
@@ -773,5 +787,7 @@ label v16s61:
 
             scene v16s61_22
             with dissolve
+
+            pause 0.75
 
             jump v16s66

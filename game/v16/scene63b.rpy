@@ -896,4 +896,6 @@ label v16s63b:
     scene v16s63b_30c # TPP. MC (slight smile, mouth is closed), picks up the suggestion box and exits with Lindsey (slight smile, mouth is closed) both of them are exiting the kitchen
     with dissolve
 
+    pause 0.75
+
     jump v16s64 # -Transition to Scene 64-

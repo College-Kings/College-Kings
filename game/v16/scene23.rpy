@@ -582,9 +582,6 @@ label v16s23: # 23) Meet Amber at strip club
 
                     u "(Yikes.)"
 
-                    scene v16s23_17d
-                    with dissolve
-
                     u "Well, he looks like a good kid."
 
                     scene v16s23_17a

@@ -294,12 +294,9 @@ label v16s40:
 
         au "And it's time for me to go home and put on something more comfortable!"
 
-        scene v16s40_3c
-        with dissolve
-
         au "Night, [name]."
 
-        scene v16s40_3g
+        scene v16s40_3c
         with dissolve
 
         u "Night, Aubrey."

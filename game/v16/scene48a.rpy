@@ -65,6 +65,8 @@ label v16s48a: ### ERROR: 48a) Chloe and MC sex scene
     scene v16s48a_4   # FPP Chloe (eager, slight smile, biting lip, mouth closed, looking at MC), laying on her side (facing MC) the long part of the couch (feet to the left, head to the right). [FreeRoam Screen screen highlights for Boobs, Feet, Vagina, Mouth = end freeroam]
     with dissolve
 
+    pause 0.75
+
     # -We enter the Foreplay Free Roam. MC can click on her Boobs, Feet, Vagina or Mouth. Clicking on her Mouth will end the free roam-
     call screen sex_overlay("v16s48a_continue")
 
@@ -325,7 +327,7 @@ label v16s48a_vagina:  # -if Vagina
 
             cl "I've never wanted you more than right now, [name], I-"
 
-            scene v16s48a_7k
+            scene v16s48a_7k ### check if matches mouth speaking
             with dissolve
 
             u "Still dying for me?"
@@ -465,6 +467,8 @@ label v16s48a_continue:
     scene v16s48a_10a  # TPP Chloe (eager, smiling, mouth closed) on hands and knees on the short side of the couch [head towards the corner of the couch], her body arched.  MC (smiling, mouth closed) stands guides his dick toward her pussy (doggie style)
     with dissolve
 
+    pause 0.75
+
     image v16chldg = Movie(play="images/v16/scene48a/v16chldg.webm", loop=True, image="images/v16/scene48a/v16chldgStart.webp", start_image="images/v16/scene48a/v16chldgStart.webp")
     image v16chldg2 = Movie(play="images/v16/scene48a/v16chldg2.webm", loop=True, image="images/v16/scene48a/v16chldg2Start.webp", start_image="images/v16/scene48a/v16chldg2Start.webp")
     image v16chldgf = Movie(play="images/v16/scene48a/v16chldgf.webm", loop=True, image="images/v16/scene48a/v16chldgStart.webp", start_image="images/v16/scene48a/v16chldgStart.webp")
@@ -518,6 +522,8 @@ label v16s48a_continue:
 
     scene v16s48a_11a  # TPP Chloe (no expression, mouth closed) squats in front of MC(no expresion, mouth closed) Chloe's right hand rests on her right thigh and her left hand reaches for MC erect dick. [The camera has a clear view of her pussy as she squats] 
     with dissolve
+
+    pause 0.75
 
     image v16chlfg = Movie(play="images/v16/scene48a/v16chlfg.webm", loop=True, image="images/v16/scene48a/v16chlfgStart.webp", start_image="images/v16/scene48a/v16chlfgStart.webp")
     image v16chlfg2 = Movie(play="images/v16/scene48a/v16chlfg2.webm", loop=True, image="images/v16/scene48a/v16chlfg2Start.webp", start_image="images/v16/scene48a/v16chlfg2Start.webp")
@@ -634,9 +640,9 @@ label v16s48a_continue:
     scene v16s48a_16  # TPP Chloe (sleepy, satisfied smile, mouth closed, looking at MC) laying on the long part of the couch [head toward the corner]. MC (tired, satisfied smile, mouth closed, looking at Chloe) sitting on the short side of the couch.
     with dissolve
 
-    # -Shots of MC's eyes gradually closing as he falls asleep too-
+    pause 0.75
 
-    pause 0.750
+    # -Shots of MC's eyes gradually closing as he falls asleep too-
 
     scene v16s48a_17  # FPP Chloe (satisifed smile, mouth closed, eyes closed) laying on the long part of the couch [head toward the corner] sleeping.
     with dissolve

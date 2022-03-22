@@ -163,22 +163,22 @@ label v16s15:
     # Start Free roam  
     # screen layout 
     #   v16s15_pier_entrance  => Preset 0 from the reference previz
-        
-    # 	v16s15_pier_entrance_1 - Hightlight left side walkway -> v16s15_pier_middle_carousel
-    # 	v16s15_pier_entrance_2 - Hightlight Hotdog stand  -> Invoke hotdog stand scene 
-    # 	v16s15_pier_entrance_3 - Hightlight right side walkway -> v16s15_pier_middle_carousel
+     
+    #   v16s15_pier_entrance_1 - Hightlight left side walkway -> v16s15_pier_middle_carousel
+    #   v16s15_pier_entrance_2 - Hightlight Hotdog stand  -> Invoke hotdog stand scene 
+    #   v16s15_pier_entrance_3 - Hightlight right side walkway -> v16s15_pier_middle_carousel
         
     # v16s15_pier_middle_carousel => Preset 2 from reference previz, facing the carousel
         
-    # 	v16s15_pier_middle_carousel_1 - Highlight wheel of chance - > invoke wheel scene  
-    # 	v16s15_pier_middle_carousel_2 - Hightlight bottom center of screen ->  v16s15_pier_middle_range
-    # 	v16s15_pier_middle_carousel_3 - Highlight carousel -> invoke carousel scene 
+    #   v16s15_pier_middle_carousel_1 - Highlight wheel of chance - > invoke wheel scene  
+    #   v16s15_pier_middle_carousel_2 - Hightlight bottom center of screen ->  v16s15_pier_middle_range
+    #   v16s15_pier_middle_carousel_3 - Highlight carousel -> invoke carousel scene 
 
 
     # v16s15_pier_middle_range => Preset 2 from reference previz, facing the shooting range/gallery
         
-    # 	v16s15_pier_middle_range_1 - Highlight shooting gallery -> invoke shooting range scene 
-    # 	v16s15_pier_middle_range_2 - Highlight bottom center  of screen -> v16s15_pier_middle_carousel
+    #   v16s15_pier_middle_range_1 - Highlight shooting gallery -> invoke shooting range scene 
+    #   v16s15_pier_middle_range_2 - Highlight bottom center  of screen -> v16s15_pier_middle_carousel
 
     # -A single-screen free-roam with all four now stood inside the carnival. We can select the Carousel, the Wheel of chance, the Hot dog stand, and the Shooting range. Selecting the Shooting range will end the free roam, don't show any characters
     call screen v16s15_pier_entrance 
@@ -836,7 +836,7 @@ label v16s15:
 
         imre "It's just common knowledge. Sugar kills germs. Back me up, [name]."
 
-        scene v16s15_30f
+        scene v16s15_30f ### mc speech with imre mouth open
         with dissolve
 
         u "It's literally the opposite, man..."

@@ -6,6 +6,7 @@
 label v16s57:
     scene v16s57_1 # TPP. Show MC (slightly shocked, mouth closed) enters through the Apes Frat House front door, the door is still open
     with vpunch
+
     sa "Ow! Fuck off!"
 
     scene v16s57_1a # TPP. Show Mc (exhausted expression, mouth closed, holding one hand to his forehead eyes are closed) shutting the front door.
@@ -143,6 +144,8 @@ label v16s57:
 
     scene v16s57_2f # TPP. MC (no expression, mouth is closed, looking at Samantha) sitting in the chair he placed in front of the table and the couch. Samantha (angry expression, mouth is closed, looking at Grayson) flipping off Grayson, she has taken her feet off of the table, Grayson's back is turned to the render leaving the living room, Cameron (annoyed expression, mouth is closed, looking at Samantha)
     with dissolve
+
+    pause 0.75
 
     if v14_SamanthaDrugs: # -if SamDrugs
         scene v16s57_4d # FPP. Show just Cameron (no expression, mouth open, looking at Samantha)

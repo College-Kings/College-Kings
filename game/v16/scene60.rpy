@@ -429,6 +429,8 @@ label v16s60:
 
         scene v16s60_7 # TPP. Show MC (slight smile, mouth closed), lindsey(slight smile, mouth closed), and Elijah(neutral face, mouth closed.) all standing up from their seats in the room.
         with dissolve
+
+        pause 0.75
         
         # -if MC chose More advice in Scene 55 (GAIN 1 POPULARITY)
         if "more_advice" in v16s55_lindsey_followup_question_set: 
@@ -482,6 +484,8 @@ label v16s60:
         scene v16s60_10 # TPP. Show MC(slight smile, mouth closed) and Lindsey(slight smile, mouth closed) leaving the SVC Times Office. Elijah(slight smile, mouth closed) behind them watching them leave.
         with dissolve
 
+        pause 0.75
+
     else:
         scene v16s60_4c # FPP. MC looking at Lindsey(slight smile, mouth closed) and Riley (slight smile, mouth open) sitting across from each other. Lindsey and Riley both looking at MC.
         with dissolve
@@ -525,6 +529,8 @@ label v16s60:
 
         scene v16s60_5a # TPP. Close up of Riley's hand grabbing her pen and notepad.
         with dissolve
+
+        pause 0.75
 
         # -Riley grabs a pen and notepad. MC sits a little further away from them to observe-
 
@@ -659,9 +665,9 @@ label v16s60:
             scene v16s60_11d
             with dissolve
 
-            # -Riley takes a further moment writing-
-
             u "(I don't think Riley was too impressed with that answer...)"
+
+            # -Riley takes a further moment writing-
 
         elif "important_quality" in v16s55_lindsey_question_set and "expand" in v16s55_lindsey_followup_question_set:
             # -if MC asked  'What is the most important quality of a good president?' and chose Expand on that in Scene 55 (GAIN 1 POPULARITY)
@@ -692,9 +698,8 @@ label v16s60:
             scene v16s60_11b
             with dissolve
 
-            # -Riley takes a further moment writing-
-
             li "Thanks, Riley."
+            # -Riley takes a further moment writing-
 
             scene v16s60_11d
             with dissolve
@@ -773,9 +778,8 @@ label v16s60:
             scene v16s60_11g # FPP. MC sitting to the side observing the interview. Lindsey (slight smile, mouth open) looking at Riley (rolling her eyes, neutral face, mouth closed). Riley looking and writing in her notepad.
             with dissolve
 
-            # -Riley takes a further moment writing-
-
             li "Well, let's just agree to disagree then."
+            # -Riley takes a further moment writing-
 
             # -if MC asked  'What was your last random act of kindness?' and chose Ask her why in Scene 55 (GAIN 1 POPULARITY)
         elif "random_kindness" in v16s55_lindsey_question_set and "ask_why" in v16s55_lindsey_followup_question_set:
@@ -823,6 +827,8 @@ label v16s60:
         scene v16s60_7a # TPP. Show MC (slight smile, mouth closed), lindsey (slight smile, mouth closed), and Riley (slight smile, mouth closed) all standing up from their seats in the room.
         with dissolve
 
+        pause 0.75
+
     # -if MC chose More advice in Scene 55 (GAIN 1 POPULARITY)
         if "more_advice" in v16s55_lindsey_followup_question_set: 
             $ set_presidency_percent(v14_lindsey_popularity + 1)
@@ -841,9 +847,9 @@ label v16s60:
             scene v16s60_9d # FPP. MC looking at Lindsey (slight smile, mouth open) standing infront of and looking at Riley(slight smile, mouth closed) who is looking back at Lindsey.
             with dissolve
 
-            # -Lindsey smiles back at that-
-
             li "Oh, and you must tell me what product you're using on your hair. It's on fire today!"
+
+            # -Lindsey smiles back at that-
 
             scene v16s60_9e # FPP. MC looking at Lindsey (slight smile, mouth closed) standing infront of and looking at Riley(slight smile, mouth open) who is looking back at Lindsey.
             with dissolve
@@ -879,6 +885,8 @@ label v16s60:
 
         scene v16s60_10a # TPP. Show MC(slight smile, mouth closed) and Lindsey (slight smile, mouth closed) leaving the SVC Times Office. Riley(slight smile, mouth closed) in the back watching them leave.
         with dissolve
+        
+        pause 0.75
         # [End of Checkpoint 1.2. Continue to Checkpoint 2]
 
     # -Regardless of who interviewed Lindsey-
@@ -937,5 +945,7 @@ label v16s60:
 
     scene v16s60_13 # TPP. Show MC(slight smile, mouth closed) looking at Lindsey(waving, slight smile, mouth closed) as she is walking away looking and waving at MC.
     with dissolve
+
+    pause 0.75
 
     jump v16s61

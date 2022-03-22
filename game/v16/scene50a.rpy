@@ -47,7 +47,8 @@ label v16s50a: ### ERROR: 50a) MC wakes up
         scene v16s50a_2    # TPP MC (no expression, mouth closed) siting on the edge of his bed near his nightstand (phone on the nightstand). [APE ROOM]
         with dissolve
 
-
+        pause 0.75
+        
         # -if MC has the baby
         if 1 & v16s27_mc_baby_duty_night == 1 or 2 & v16s27_mc_baby_duty_night == 2 or 4 & v16s27_mc_baby_duty_night == 4: # MC had the baby by himself 
             scene v16s50a_2a   # TPP MC (smile, mouth closed) siting on the edge of his bed near his nightstand (phone on the nightstand), raising his arms in victory [that made it through the night with a baby] [APE ROOM]
@@ -106,6 +107,8 @@ label v16s50a: ### ERROR: 50a) MC wakes up
 
             scene v16s50a_3a
             with dissolve
+
+            pause 0.75
             
             $ penelope.messenger.newMessage("Morning! Come meet me at the Dean's office? I'm looking after her new dog!", force_send=True)
             $ penelope.messenger.addReply("You're looking after Oscar?")
@@ -179,6 +182,8 @@ label v16s50a: ### ERROR: 50a) MC wakes up
         scene v16s50a_12    # TPP MC (no expression, mouth closed) siting on the edge of his bed near his nightstand (phone on the nightstand). [WOLF ROOM]
         with dissolve
 
+        pause 0.75
+
         # -if MC has the baby
         if 1 & v16s27_mc_baby_duty_night == 1 or 2 & v16s27_mc_baby_duty_night == 2 or 4 & v16s27_mc_baby_duty_night == 4: # MC had the baby by himself  ###???
             scene v16s50a_12a   # TPP MC (smile, mouth closed) siting on the edge of his bed near his nightstand (phone on the nightstand), raising his arms in victory [that made it through the night with a baby] [WOLF ROOM]
@@ -237,6 +242,8 @@ label v16s50a: ### ERROR: 50a) MC wakes up
 
             scene v16s50a_13a
             with dissolve
+            
+            pause 0.75
             
             $ penelope.messenger.newMessage("Morning! Come meet me at the Dean's office? I'm looking after her new dog!", force_send=True)
             $ penelope.messenger.addReply("You're looking after Oscar?")

@@ -107,10 +107,9 @@ label v16s48: # 48) Baby night: Chloe & MC
 
     u "Okay, um... which one's for feeding?"
 
+    play sound "sounds/babycry.mp3"
     scene v16s48_10 # FPP Show MC holding the doll and the keys in front of him
     with dissolve
-
-    play sound "sounds/babycry.mp3"
 
     baby "*Crying*"
 
@@ -272,6 +271,7 @@ label v16s48: # 48) Baby night: Chloe & MC
 
             scene v16s48_10
             with dissolve
+
             u "Now, let's see..."
             
             # -If MC chooses an incorrect key, the choice menu appears again for another attempt-

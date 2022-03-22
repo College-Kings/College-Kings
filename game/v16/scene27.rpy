@@ -65,6 +65,8 @@ label v16s27:
     scene v16s27_7
     with dissolve
 
+    pause 0.01
+
     menu (fail_label="v16s27_default_chloe_parent"): # 3 second timer default
         "Parent with Chloe":
             $ v16s27_parent_chloe = True
@@ -195,14 +197,12 @@ label v16s27:
         sexed "Hello, class. I'd like everyone to look at this baby."
 
         if not v16s27_parent_chloe: # Parent with Nora 
-
             scene v16s27_9b # FPP. Show just Nora (slight smile, mouth is open, looking at the (SET)) sitting in her seat, camera angle is from a seated positon
             with dissolve
 
             no "Awww!"
 
         else:
-
             scene v16s27_9c # FPP. Show just Nora (slight smile, mouth is open, looking at the (SET)) sitting in her seat, camera angle is from a seated positon, with multiple seats between MC and Nora (MC is not shown)
             with dissolve
 
@@ -448,28 +448,22 @@ label v16s27:
 
             no "Haha, no! Come on, let's do something cute like... Henry or..."
 
-            scene v16s27_9
-            with dissolve
-
             no "Scarlet?"
 
-            scene v16s27_9a
+            scene v16s27_9
             with dissolve
 
             u "Hmm, well, have we got a boy or a girl?"
 
-            scene v16s27_9
+            scene v16s27_9a
             with dissolve
 
             no "Umm, that doesn't really matter I don't think."
 
-            scene v16s27_9a
+            scene v16s27_9
             with dissolve
 
             u "Ha, okay... (Let her pick, or suggest something else?)"
-
-            scene v16s27_9
-            with dissolve
 
             menu:
                 "Scarlet or Henry?":
@@ -477,7 +471,7 @@ label v16s27:
                     $ v16_baby_name = "Henry"
 
                     scene v16s27_9
-                    with dissolve
+                    #with dissolve
 
                     u "So which one?"
 
@@ -680,6 +674,8 @@ label v16s27:
 
             scene v16s27_14c # TPP. Show MC (slight smile, mouth is closed, looking at Lindsey) with his hands in the air like he surrenders with his back turned to Lindsey and looking over his shoulder at Lindsey, while Lindsey (laughing, mouth is open, looking at MC) and playfully pushing MC out of the Amphitheatre exit
             with dissolve
+
+            pause 0.75
 
             jump v16s28 # -Transition to Scene 28-
 

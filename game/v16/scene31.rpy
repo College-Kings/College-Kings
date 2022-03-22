@@ -128,7 +128,7 @@ label v16s31:
             u "I do see where Grayson is coming from, Sam. Not many frats have girls living on their couches."
 
             if v14_SamanthaDrugs: # -if SamanthaDrugs
-                scene v16s31_3d # FPP. Show Just Samantha sitting on a stool, slightly annoyed expression, mouth is closeed, looking at MC
+                scene v16s31_3e # FPP. Show Just Samantha sitting on a stool, slightly annoyed expression, mouth is closeed, looking at MC
                 with dissolve
 
                 sa "Well, fuck you too, then."
@@ -143,7 +143,7 @@ label v16s31:
 
                 u "*Sighs* Sam-"
 
-                scene v16s31_3d
+                scene v16s31_3e
                 with dissolve
 
                 sa "Like I said, talk to Cameron about it!"
@@ -239,7 +239,7 @@ label v16s31:
 
     sa "Actually, no... He's an asshole all the time."
 
-    scene v16s31_3e
+    scene v16s31_3d
     with dissolve
 
     u "Haha, yeah. He definitely lets you know when he's pissed off."
@@ -256,7 +256,7 @@ label v16s31:
 
     sa "*Sighs* Power outages are so boring! There's nothing to do."
 
-    scene v16s31_3e
+    scene v16s31_3d
     with dissolve
 
     u "Maybe do some studying?"
@@ -268,7 +268,7 @@ label v16s31:
 
     sa "I'm gonna head out and see what people are up to. Catch you later, [name]."
 
-    scene v16s31_3e
+    scene v16s31_3d
     with dissolve
 
     u "Yeah, okay. Later, Sam."

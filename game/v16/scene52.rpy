@@ -35,10 +35,13 @@ label v16s52:
 
     scene v16s52_6 # TPP. Close up of the picture of Blue/dog_name with his new owner.
     with dissolve
+    
+    pause 0.75
 
     if not dog_name.lower() == "blue":
         scene v16s52_6
         with dissolve
+
         u "(Oh, awesome, [dog_name] got adopted! He looks so happy, ha.)"
 
     else:
@@ -270,6 +273,8 @@ label v16s52:
         scene v16s52_10f # FPP. MC looking at Lauren. Lauren turned around walking away.
         with dissolve
 
+        pause 0.75
+
     if v15_autumn_freemug: # TODO: Variable
         scene v16s52_9a
         with dissolve
@@ -312,6 +317,8 @@ label v16s52:
 
         scene v16s52_14 # TPP. MC and Autumn both laughing.
         with dissolve
+
+        pause 0.75
 
     scene v16s52_9a
     with dissolve
@@ -428,6 +435,8 @@ label v16s52:
 
             scene v16s52_15 # TPP. Show MC(slight smile, mouth closed) looking at his phone, Autumn (slight smile, mouth closed) infront of MC.
             with dissolve
+
+            pause 0.75
 
             $ aubrey.messenger.addReply("Hey, Aubrey. I'm with Autumn right now at the dog shelter for the re-opening, and we kind of need your help.", func = None, new_message = True)
             $ aubrey.messenger.newMessage("I'm not able to come, but can I help from here?")
@@ -555,12 +564,12 @@ label v16s52:
             aut "I wish... We need every dollar we can get."
 
             scene v16s52_16 # TPP. Show MC (Slight smile, mouth closed) playing with dogs in the play area.
-            with fade (1,0,1)
+            with fade
 
             pause 0.75
 
             scene v16s52_17 # TPP. Show MC (Slight smile, mouth closed) looking at a poster in the dog shelter
-            with fade (1,0,1)
+            with fade
 
             pause 0.75 
 
@@ -605,7 +614,7 @@ label v16s52:
             pause 0.75
 
             scene v16s52_20 # TPP. Show MC (slight smile, mouth closed) outside by the entrance of the Dog shelter holding a big arrow sign "Love dogs? Come say hello!" with a dog picture if possible.
-            with fade (1,0,1)
+            with fade
 
             pause 0.75 
 
@@ -1009,6 +1018,8 @@ label v16s52:
 
         scene v16s52_42 # TPP. Show MC kissing Autumn(blushing, smile, mouth closed)
         with dissolve
+
+        pause 0.75
 
     scene v16s52_41a 
     with dissolve

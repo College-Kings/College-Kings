@@ -20,6 +20,8 @@ label v16s53:
         scene v16s53_2a # TPP. Show MC (neutral face, mouth closed) holding his phone and looking at it.
         with dissolve
 
+        pause 0.75
+
         $ lindsey.messenger.newMessage("You're not going to believe this, but I found out that Polly is staying at a hotel where my friend works!", force_send=True)
         $ lindsey.messenger.addReply("That's not creepy at all... What's the plan?")
         $ lindsey.messenger.addReply("Oh, nice! So what's the plan? Just knock on the door? Lol")

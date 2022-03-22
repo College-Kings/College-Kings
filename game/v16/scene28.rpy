@@ -123,7 +123,7 @@ label v16s28:
         "Stay positive":
             u "I can't wait to get started, I feel good about this one, it's going to be interesting."
 
-            scene v16s28_3e
+            scene v16s28_3d
             with dissolve
 
             li "Yes! Phase three is a winner, no doubt."

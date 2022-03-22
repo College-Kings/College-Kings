@@ -55,6 +55,9 @@ label v16s17: # 17) MC catches up to Imre
             imre "I can't catch a fucking break."
 
         "Support Karen":
+            scene v16s17_4b
+            #with dissolve
+
             u "Well, don't take this personally, but..."
 
             u "You did try to shove a hotdog in her mouth, and she's vegan."

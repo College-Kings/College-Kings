@@ -133,6 +133,9 @@ label v16s56: # 56) Wolves Living Room, Chriss apologizes
         "Hold a grudge":
             $ add_point(KCT.TROUBLEMAKER)
 
+            scene v16s56_6b
+            #with dissolve
+
             u "An apology doesn't take the punch back, you know?"
 
             scene v16s56_7b

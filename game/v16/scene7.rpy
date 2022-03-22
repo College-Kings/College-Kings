@@ -455,6 +455,8 @@ label v16s7:
         scene v16s7_6e
         with dissolve
 
+        pause 0.75
+
         $ DOG_NAME = dog_name # apparently this is necessary
 
         menu:
@@ -469,6 +471,8 @@ label v16s7:
 
                 scene v16s7_6d
                 with dissolve
+
+                pause 0.01
 
                 if not dog_name.lower() == "blue":
                     aut "Oh, of course! *Chuckles*"

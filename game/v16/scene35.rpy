@@ -31,6 +31,7 @@ label v16s35:
     if "Tingling mint massage oil" in v16s35_mc_spa_shopping: # TODO: Variable #Placeholder
         scene v16s35_4 # FPP. MC focused on the massaging oils.
         with dissolve
+
         u "(Tingling mint. That sounds refreshing, right?)"
 
     else:

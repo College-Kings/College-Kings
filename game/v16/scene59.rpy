@@ -7,10 +7,14 @@ label v16s59:
     if v16s28_lindsey_pb_pretend_roomservice: # -if MC chose Pretend to be room service
         scene v16s59_1 # TPP. MC (slight smile, mouth closed, looking forward) and Lindsey (slight smile, mouth closed, looking forward) in hotel uniforms appear from a distance, walking along a hallway, past hotel room doors. They are wearing room service uniforms and MC is carrying a food tray with a domed lid covering the food-
         with dissolve
+        
+        pause 0.75
 
     else: # -if MC chose Show up as yourselves
         scene v16s59_1a # TPP. same as v16s59_1 MC (slight smile, mouth closed, looking forward) and Lindsey (slight smile, mouth closed, looking forward) walking along the hallway in regular clothes with no food tray-
         with dissolve
+        
+        pause 0.75
 
     # -Regardless of planning board choice, same dialogue/action for both unless stated-
 
@@ -57,9 +61,6 @@ label v16s59:
     with dissolve
 
     li "Oh, my God. I can't believe I'm about to meet Polly."
-
-    scene v16s59_4a # FPP. Show Lindsey (full smile, mouth closed, looking at MC) just from the shoulders up (check with mozzart for clothing)
-    with dissolve
 
     menu:
         "Calm Lindsey down":
@@ -412,6 +413,8 @@ label v16s59:
 
                 scene v16s59_10 # TPP. (ROOM SERVICE UNIFORMS) Show MC (full smile, mouth closed, looking at Lindsey) and Lindsey (full smile, mouth closed, looking at MC) walking away from Polly's hotel room door. The door is still closed. Polly's Bodyguard (VERY STERN Expression, mouth closed, looking at Lindsey and MC) is standing next to Polly's hotel room door
                 with dissolve
+
+                pause 0.75
 
             ### ERROR: [End of Checkpoint 1.1. Continue to Checkpoint 2]
 
@@ -849,6 +852,8 @@ label v16s59:
                 scene v16s59_10d # TPP. Exactly the same as v16s59_10 Except Mc and Lindsey are wearing their regular clothes
                 with dissolve
 
+                pause 0.75
+
                 ### ERROR: [End of Checkpoint 1.3. Continue to Checkpoint 2]
 
             "Let her talk": # (FAILURE)
@@ -969,7 +974,7 @@ label v16s59:
 
                 bdygd "I think it's time for the two of you to leave the building."
 
-                scene v16s59_10e # TPP. Exactly the same as v16s59_10a except Mc and Lindsey are wearing their regular clothes
+                scene v16s59_10e # TPP. Exactly the same as v16s59_10a except Mc and Lindsey are wearing their regular clothes ### check if matches mouth speaking
                 with dissolve
 
                 li "Polly! Polly, wait! Come back out, I can explain!"

@@ -190,6 +190,8 @@ label v16s49:
     scene v16s49_9
     with dissolve
 
+    pause 0.75
+
     $ v16_wrong_key = True
 
 # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
@@ -212,6 +214,8 @@ label v16s49:
 
                 scene v16s49_9
                 with dissolve
+
+                pause 0.75
                     
             "Green":
                 scene v16s49_9b # FPP. Show just the GREEN Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
@@ -550,6 +554,8 @@ label v16s49:
                         scene v16s49_17 # TPP. MC (slight smile, mouths is closed) is shown exiting the front door of the chicks sorority house
                         with dissolve
 
+                        pause 0.75
+
                         jump v16s49a # -Transition to Scene 49a-
 
                     "Keep it PG":
@@ -592,6 +598,8 @@ label v16s49:
 
                         scene v16s49_19 # TPP. Show Nora (sleeping) still holding the baby and in the same position as v16s49_6i as MC (slight smile, mouths is closed, looking at Nora) gets up from the couch
                         with dissolve
+
+                        pause 0.75
 
                         jump v16s49a # -Transition to Scene 49a-
 
@@ -706,5 +714,7 @@ label v16s49:
 
             scene v16s49_19
             with dissolve
+
+            pause 0.75
 
             jump v16s49a # -Transition to Scene 49a-

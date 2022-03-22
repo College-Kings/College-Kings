@@ -130,6 +130,9 @@ label v16s55: # 55) Prepare Lindsey for the interview
                 $ v16s55_lindsey_followup_question_set.add("sounds_great")
                 $ add_point(KCT.TROUBLEMAKER)
 
+                scene v16s55_3e
+                #with dissolve
+
                 u "Can't argue with that. "
 
                 scene v16s55_3b
@@ -142,13 +145,16 @@ label v16s55: # 55) Prepare Lindsey for the interview
 
                 li "Um... Oh, and I hear she's good at volleyball too. That's three things."
 
-                scene v16s55_3d
+                scene v16s55_3d ### check if 3d corresponds to mouth speaking
                 with dissolve
                 
                 u "Great job."
             
             "Make a suggestion":
                 $ v16s55_lindsey_followup_question_set.add("make_suggestion")
+
+                scene v16s55_3e
+                #with dissolve
 
                 u "Haha, anything that isn't about her physical appearance?"
 

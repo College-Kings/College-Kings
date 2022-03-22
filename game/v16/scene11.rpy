@@ -313,6 +313,7 @@ label v16s11:
     menu:
         "Sign up":
             $ v16s11_sign_up = True
+
             u "I hope I don't regret this."
 
             ri "Haha, come on! This will be so fun."
@@ -333,6 +334,9 @@ label v16s11:
             ri "*Laughs*"
 
         "Don't sign up":
+            scene v16s11_8
+            #with dissolve
+
             u "Nah, I'm good. Besides, I don't stand a chance against your creative eye and... superior intellect."
 
             ri "Haha, right. Whatever you say."
