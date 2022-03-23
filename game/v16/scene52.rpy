@@ -473,12 +473,16 @@ label v16s52:
 
                 #! v16s52kw_1  Aubrey in a comfy sweater and blue jeans, professional photo shoot photo with a puppy in her lap
 
-                $ v16s52_kiwiiPost1 = KiwiiPost(aubrey, "v16/v16s52kw_1.webp", "Good morning people! Today is such a huge day for a friend of mine. The re-opening of the local dog shelter is taking place right now, and they could use any help they can get! Head over there to donate, adopt, or even shop; They've got some really cute merchandise. #AdoptDon'tShop #OrDoBoth <3", numberLikes=3718)
+                $ v16s52_kiwiiPost1 = KiwiiPost(aubrey, "v16/v16s52_aubpost1.webp", "Good morning people! Today is such a huge day for a friend of mine. The re-opening of the local dog shelter is taking place right now, and they could use any help they can get! Head over there to donate, adopt, or even shop; They've got some really cute merchandise. #AdoptDon'tShop #OrDoBoth <3", numberLikes=3718)
                 $ v16s52_kiwiiPost1.new_comment(autumn, "Thank you Aubrey! <3 We can't wait to see everyone. Address is 0417 Alanis Street near SVC :)", numberLikes=1518, force_send=True)
                 $ v16s52_kiwiiPost1.new_comment(chloe, "When did you do this photoshoot, omg?!", numberLikes=417, force_send=True)
                 $ v16s52_kiwiiPost1.new_comment(imre, "Aw man! I want a puppy!", numberLikes=545, force_send=True)
                 $ v16s52_kiwiiPost1.new_comment(sebastian, "Hmm... A puppy, eh?", numberLikes=961, force_send=True)
                 $ v16s52_kiwiiPost1.new_comment(lauren, "This is so cool of you, Aubrey <3", numberLikes=1070, force_send=True)
+
+                if False: # For Lint
+                    scene v16s52_aubpost1
+                    with dissolve
 
             elif v16s25a_date_with_aubrey and aubrey.relationship < Relationship.TAMED:
                 $ aubrey.messenger.newMessage("Sorry, [name]... But I don't want to risk interfering with my brand. Lew's might not like me doing free dog shelter promoting, you know?", force_send=True)
@@ -530,9 +534,13 @@ label v16s52:
                 #! v16s52kw_2 A stock photo that mc found on the internet of a puppy
                 $ v16s52_mc_dogshelter_kiwii_post = True
 
-                $ v16s52_kiwiiPost2 = KiwiiPost(mc, "v16/v16s52kw_2.webp", "The puppies need you! Come to 0417 Alanis Street near SVC if you're looking to adopt or donate. We need all the help we can get! :)", numberLikes=479)
+                $ v16s52_kiwiiPost2 = KiwiiPost(mc, "v16/v16s52_post2.webp", "The puppies need you! Come to 0417 Alanis Street near SVC if you're looking to adopt or donate. We need all the help we can get! :)", numberLikes=479)
                 $ v16s52_kiwiiPost2.new_comment(autumn, "Yes, please come see us! We have merchandise too <3", numberLikes=47, force_send=True)
                 $ v16s52_kiwiiPost2.new_comment(lindsey, "Hope you got my donation!", numberLikes=25, force_send=True)
+                
+                if False: # For Lint
+                    scene v16s52_post2
+                    with dissolve
                 
                 if v16s26_lindsey_donation_money >= 10:
                     $ v16s52_kiwiiPost2.new_comment(autumn, "Yes, received! Thank you so so much :D", mentions=lindsey, numberLikes=146, force_send=True)

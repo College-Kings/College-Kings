@@ -32,6 +32,10 @@ label v16s50a: ### ERROR: 50a) MC wakes up
         $ v16s50a_kiwii_post.new_comment(aubrey, "Chloe on baby duty, that's the story. Lol", numberLikes=75, force_send=True)
         $ v16s50a_kiwii_post.new_comment(cameron, "What the hell?", numberLikes=13, force_send=True)
 
+    if False: # For Lint
+        scene v16s50a_aubpost1
+        with dissolve
+
     if not joinwolves:
         # -MC is asleep in bed, only his bottom half under the covers. He opens his eyes. (Even if baby is there, it's not in shot)-
         scene v16s50a_1    # TPP Close up MC (neutral expression, mouth closed, eyes closed) sleeping in bed [APE ROOM]

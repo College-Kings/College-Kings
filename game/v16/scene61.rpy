@@ -56,13 +56,17 @@ label v16s61:
                 #! v16s61kw_1  MC and Lindsey (both regular clothes) with Polly's bodyguard at the exit of the hotel, Lindsey being carried out over his shoulder
 
                 ###check force send
-                $ v16s61_kiwiiPost = KiwiiPost(chloe, "v16/v16s61kw_1", "Umm... Is this you, Lindsey? LOL #FuturePresident?", mentions=lindsey, numberLikes=645)
-                $ v16s61_kiwiiPost.newComment(aubrey, "Wait, what the hell? And [name]?", numberLikes=51, force_send=True)
-                $ v16s61_kiwiiPost.newComment(penelope, "Wait... Is that Polly's security guard?! What happened???", numberLikes=95, force_send=True)
-                $ v16s61_kiwiiPost.addReply("Just fooling around! Ha...", numberLikes=42)
-                $ v16s61_kiwiiPost.addReply("Uh, Lindsey will tell you. Right, Linds?", mentions=lindsey, numberLikes=46)
-                $ v16s61_kiwiiPost.newComment(lindsey, "Oh! I can't believe there was paparazzi! We were just having some fun :)", numberLikes=54, force_send=True)
-                $ v16s61_kiwiiPost.newComment(ryan, "He doesn't look very excited...", numberLikes=78, force_send=True)
+                $ v16s61_kiwiiPost1 = KiwiiPost(chloe, "v16/v16s61_chlpost1.webp", "Umm... Is this you, Lindsey? LOL #FuturePresident?", mentions=lindsey, numberLikes=645)
+                $ v16s61_kiwiiPost1.newComment(aubrey, "Wait, what the hell? And [name]?", numberLikes=51, force_send=True)
+                $ v16s61_kiwiiPost1.newComment(penelope, "Wait... Is that Polly's security guard?! What happened???", numberLikes=95, force_send=True)
+                $ v16s61_kiwiiPost1.addReply("Just fooling around! Ha...", numberLikes=42)
+                $ v16s61_kiwiiPost1.addReply("Uh, Lindsey will tell you. Right, Linds?", mentions=lindsey, numberLikes=46)
+                $ v16s61_kiwiiPost1.newComment(lindsey, "Oh! I can't believe there was paparazzi! We were just having some fun :)", numberLikes=54, force_send=True)
+                $ v16s61_kiwiiPost1.newComment(ryan, "He doesn't look very excited...", numberLikes=78, force_send=True)
+               
+                if False:
+                    scene v16s61_chlpost1
+                    with dissolve
                
                 $ set_presidency_percent(v14_lindsey_popularity - 3)
                 
@@ -449,13 +453,17 @@ label v16s61:
 
                     u "(It was nice of the bodyguard to let us change out of those uniforms first, but did he really have to pick Lindsey up again? I swear he did it just for the photos! What a prick.)"
                     
-                    $ v16s61_kiwiiPost = KiwiiPost(chloe, "v16/v16s61kw_1", "Umm... Is this you, Lindsey? LOL #FuturePresident?", mentions=lindsey, numberLikes=645)
-                    $ v16s61_kiwiiPost.newComment(aubrey, "Wait, what the hell? And [name]?", numberLikes=51, force_send=True)
-                    $ v16s61_kiwiiPost.newComment(penelope, "Wait... Is that Polly's security guard?! What happened???", numberLikes=95, force_send=True)
-                    $ v16s61_kiwiiPost.addReply("Just fooling around! Ha...", numberLikes=42)
-                    $ v16s61_kiwiiPost.addReply("Uh, Lindsey will tell you. Right, Linds?", mentions=lindsey, numberLikes=46)
-                    $ v16s61_kiwiiPost.newComment(lindsey, "Oh! I can't believe there was paparazzi! We were just having some fun :)", force_send=True)
-                    $ v16s61_kiwiiPost.newComment(ryan, "He doesn't look very excited...", numberLikes=78, force_send=True)
+                    $ v16s61_kiwiiPost2 = KiwiiPost(chloe, "v16/v16s61_chlpost2.webp", "Umm... Is this you, Lindsey? LOL #FuturePresident?", mentions=lindsey, numberLikes=645)
+                    $ v16s61_kiwiiPost2.newComment(aubrey, "Wait, what the hell? And [name]?", numberLikes=51, force_send=True)
+                    $ v16s61_kiwiiPost2.newComment(penelope, "Wait... Is that Polly's security guard?! What happened???", numberLikes=95, force_send=True)
+                    $ v16s61_kiwiiPost2.addReply("Just fooling around! Ha...", numberLikes=42)
+                    $ v16s61_kiwiiPost2.addReply("Uh, Lindsey will tell you. Right, Linds?", mentions=lindsey, numberLikes=46)
+                    $ v16s61_kiwiiPost2.newComment(lindsey, "Oh! I can't believe there was paparazzi! We were just having some fun :)", force_send=True)
+                    $ v16s61_kiwiiPost2.newComment(ryan, "He doesn't look very excited...", numberLikes=78, force_send=True)
+                
+                    if False: #For Lint
+                        scene v16s61_chlpost2
+                        with dissolve
                 
                     $ set_presidency_percent(v14_lindsey_popularity - 3)
                     
