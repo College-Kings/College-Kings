@@ -139,7 +139,7 @@ label v16s8:
     scene v16s8_3f # TPP. same as v16s8_3c Everyone has a disgusted expression on their face looking at Random Guy 1, Random Guy 2 has a "what did I do?" look on his face
     with dissolve
 
-    u "(Who the hell are these guys?)"
+    u "(Who the hell are these people?)"
         
     scene v16s8_3g # TPP. Everyone looks a little surprised and sees Lindsey approaching with an angry face, straight up to Chloe
     with dissolve
