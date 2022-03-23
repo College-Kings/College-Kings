@@ -556,8 +556,6 @@ label v16s49:
 
                         pause 0.75
 
-                        jump v16s49a # -Transition to Scene 49a-
-
                     "Keep it PG":
                         scene v16s49_13d # TPP. Show MC (no expression, mouths is open, looking at Nora) and Nora (slightly shocked expression, mouth is closed, looking at MC)  Nora is still holding the baby, sitting on the couch
                         with dissolve
@@ -600,8 +598,6 @@ label v16s49:
                         with dissolve
 
                         pause 0.75
-
-                        jump v16s49a # -Transition to Scene 49a-
 
         "Cover your ears":
             scene v16s49_10c
@@ -717,4 +713,4 @@ label v16s49:
 
             pause 0.75
 
-            jump v16s49a # -Transition to Scene 49a-
+    jump v16s49a # -Transition to Scene 49a-
