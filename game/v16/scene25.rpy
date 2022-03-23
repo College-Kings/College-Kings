@@ -250,7 +250,8 @@ label v16s25:
                                             with dissolve
 
                                             u "(Haha, no way... I'm in! Are we really that predictable guys?)"
-                    play sound "sounds/doorclosed.mp3"
+
+                    play sound "sounds/doorclose.mp3"
 
                     scene v16s25_1c # TPP. Show MC closing the door to his Wolves Room with the laptop in his other arm, slight smile, mouth closed.
                     with dissolve
@@ -904,7 +905,7 @@ label v16s25:
 
                                             u "(Haha, no way... I'm in! Are we really that predictable guys?)"
 
-                    play sound "sounds/doorclosed.mp3"
+                    play sound "sounds/doorclose.mp3"
 
                     scene v16s25_14c # TPP. Show MC closing the door to his Apes Room with the laptop in his other arm, slight smile, mouth closed.
                     with dissolve
