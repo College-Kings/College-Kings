@@ -342,7 +342,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     el "Is that really all you've got?"
 
     # IF mc did THREE OR MORE OF made fun of Elijah on day one OR Homecoming dance OR in the scene where we meet his mom OR chose Joke About Elijah in this scene
-    if v16s34_joke_about_elijah and elijah.Relationship <= Relationship.MAKEFUN:
+    if v16s34_joke_about_elijah and elijah.relationship <= Relationship.MAKEFUN:
         
         scene v16s34_7j # FPP Same angle as 7, Elijah (neutral expression, mouth open) looking at MC
         with dissolve
