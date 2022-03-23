@@ -336,7 +336,7 @@ label v16s10: # Econ class
 
                 la "*Whispers* I hope you enjoyed that as much as I did."
 
-                scene v16s10_3c ### check mouth
+                scene v16s10_3c
                 with dissolve
 
                 u "*Whispers* What was that all about, you sexy freak?"

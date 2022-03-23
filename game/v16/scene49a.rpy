@@ -37,7 +37,7 @@ label v16s49a:
 
         u "(Reminder to never let Chloe babysit!)"
 
-        if "v16_chloe" in sceneList: # -if MC also had sex with Chloe         ####VARIABLE NEEDS TO BE ADDED TO SCENE 48 FOR CHLOE AND MC HAVING SEX!###
+        if "v16_chloe" in sceneList: # -if MC also had sex with Chloe
             scene v16s49a_1b
             with dissolve
 
