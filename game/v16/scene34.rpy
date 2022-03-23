@@ -17,7 +17,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     scene v16s34_3 # FPP Show Chloe (slight smile, mouth closed) now closer, looking at MC
     with dissolve
 
-    u "When you say jump, I say how high."
+    u "When you say jump, I say \"how high?\"."
 
     scene v16s34_3a # FPP Same angle as 3, Chloe (slight smile, mouth open) looking at MC
     with dissolve
