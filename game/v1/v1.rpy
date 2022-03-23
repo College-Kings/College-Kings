@@ -1511,7 +1511,7 @@ label efra:
         if lauren.messenger.replies:
             call screen phone
         if lauren.messenger.replies:
-            "(I should reply to Lauren.)"
+            u "(I should reply to Lauren.)"
 
             scene s61
             with dissolve
