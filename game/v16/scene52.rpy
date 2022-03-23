@@ -530,18 +530,18 @@ label v16s52:
                 #! v16s52kw_2 A stock photo that mc found on the internet of a puppy
                 $ v16s52_mc_dogshelter_kiwii_post = True
 
-                $ kiwii_post = KiwiiPost(mc, "v16/v16s52kw_2.webp", "The puppies need you! Come to 0417 Alanis Street near SVC if you're looking to adopt or donate. We need all the help we can get! :)", numberLikes=479)
-                $ kiwii_post.new_comment(autumn, "Yes, please come see us! We have merchandise too <3", numberLikes=47, force_send=True)
-                $ kiwii_post.new_comment(lindsey, "Hope you got my donation!", numberLikes=25, force_send=True)
+                $ v16s52_kiwiiPost2 = KiwiiPost(mc, "v16/v16s52kw_2.webp", "The puppies need you! Come to 0417 Alanis Street near SVC if you're looking to adopt or donate. We need all the help we can get! :)", numberLikes=479)
+                $ v16s52_kiwiiPost2.new_comment(autumn, "Yes, please come see us! We have merchandise too <3", numberLikes=47, force_send=True)
+                $ v16s52_kiwiiPost2.new_comment(lindsey, "Hope you got my donation!", numberLikes=25, force_send=True)
                 
                 if v16s26_lindsey_donation_money >= 10:
-                    $ kiwii_post.new_comment(autumn, "Yes, received! Thank you so so much :D", mentions=Lindsey, numberLikes=146, force_send=True)
+                    $ v16s52_kiwiiPost2.new_comment(autumn, "Yes, received! Thank you so so much :D", mentions=Lindsey, numberLikes=146, force_send=True)
                 
                 elif v16s26_lindsey_donation_money == 0:
-                    $ kiwii_post.new_comment(autumn, "Must have missed it... Where did you send it?", mentions=Lindsey, numberLikes=119, force_send=True)
+                    $ v16s52_kiwiiPost2.new_comment(autumn, "Must have missed it... Where did you send it?", mentions=Lindsey, numberLikes=119, force_send=True)
                 
-                $ kiwii_post.new_comment(aubrey, "Good luck u guys :)", numberLikes=91, force_send=True)
-                $ kiwii_post.new_comment(lauren, "Sending everyone I run into over to you guys!", numberLikes=46, force_send=True)
+                $ v16s52_kiwiiPost2.new_comment(aubrey, "Good luck u guys :)", numberLikes=91, force_send=True)
+                $ v16s52_kiwiiPost2.new_comment(lauren, "Sending everyone I run into over to you guys!", numberLikes=46, force_send=True)
 
             scene v16s52_9
             with dissolve 
