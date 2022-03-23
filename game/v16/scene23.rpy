@@ -407,7 +407,7 @@ label v16s23: # 23) Meet Amber at strip club
 
                 am "Honestly, it's fun to read that stuff! Lauren got me into it, haha."
 
-                if lauren.relationship == Relationship.GIRLFRIEND: # TODO: Variable # -if LaurenGF (extra dialogue)
+                if lauren.relationship >= Relationship.GIRLFRIEND: # TODO: Variable # -if LaurenGF (extra dialogue)
                     scene v16s23_17
                     with dissolve
 
@@ -736,7 +736,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     # [End of Checkpoint 1.1. Continue to Checkpoint 2]]
 
-    elif amber.relationship == Relationship.FRIEND: # -if AmberFriend [Checkpoint 1.2]
+    else: # -if AmberFriend [Checkpoint 1.2]
         scene v16s23_18 
         with dissolve
 

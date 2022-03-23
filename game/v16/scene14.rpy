@@ -98,7 +98,7 @@ label v16s14:
 
     no "I said a friend was coming."
 
-    if ms_rose.relationship == Relationship.THREATEN or v16_ms_rose_breakup: # if broke up with ms. rose
+    if ms_rose.relationship <= Relationship.THREATEN or v16_ms_rose_breakup: # if broke up with ms. rose
         scene v16s14_6d # FPP. Same as v16s14_6, Ms. Rose slightly stunned, mouth open
         with dissolve
 
@@ -881,7 +881,7 @@ label v16s14:
 
     ro "Of course, thanks for joining us."
 
-    if ms_rose.relationship >= Relationship.FWB or (not ms_rose.relationship == Relationship.THREATEN and not v16_ms_rose_breakup): ### TODO Variable
+    if ms_rose.relationship >= Relationship.FWB or (not ms_rose.relationship <= Relationship.THREATEN and not v16_ms_rose_breakup): ### TODO Variable
         scene v16s14_20c
         with dissolve
 

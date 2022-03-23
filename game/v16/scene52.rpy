@@ -76,7 +76,7 @@ label v16s52:
 
     la "Morning!"
 
-    if lauren.relationship == Relationship.GIRLFRIEND:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v16s52_10 # FPP. MC looking at Lauren(slight smile, mouth closed), Lauren looking at MC, Autumn (slight smile, mouth closed.) standing next to Lauren. Autumn looking at MC. 
         with dissolve
 
@@ -140,7 +140,7 @@ label v16s52:
 
     aut "Oh, I see. Well, she's learning from the best, haha."
 
-    if lauren.relationship == Relationship.GIRLFRIEND:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v16s52_10
         with dissolve
 
@@ -238,7 +238,7 @@ label v16s52:
 
     la "Yup! I will. Bye, [name]!"
 
-    if lauren.relationship == Relationship.GIRLFRIEND:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v16s52_10d # FPP. MC looking at Lauren. Lauren backing away and blowing a kiss at MC. Autumn (slight smile, mouth closed) looking at Lauren.
         with dissolve
 

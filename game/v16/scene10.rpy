@@ -120,7 +120,6 @@ label v16s10: # Econ class
 
         u "(Damn, it feels really good.)"
 
-    ### elif lauren.relationship == Relationship.FRIEND: # -if LaurenFriend
     else:
         scene v16s10_2d # TPP Same angle as 2, Lauren passing MC a note under the table, Lauren with a slight smile, mouth closed
         with dissolve
@@ -237,13 +236,7 @@ label v16s10: # Econ class
             ro "Good, please concentrate. I'd hate to fail my students just because they can't focus."
 
     # -Regardless of choice-
-    if lauren.relationship == Relationship.FRIEND: # -if LaurenFriend
-        scene v16s10_4d
-        with dissolve
-
-        u "(I'd better concentrate now. I hate being called out like that...)"
-
-    elif lauren.relationship >= Relationship.GIRLFRIEND or "v15_lauren" in sceneList: # -if LaurenRS or LaurenSex        
+    if lauren.relationship >= Relationship.GIRLFRIEND or "v15_lauren" in sceneList: # -if LaurenRS or LaurenSex        
         scene v16s10_2c
         with dissolve
 
@@ -253,6 +246,12 @@ label v16s10: # Econ class
         with dissolve
 
         u "(*Moans* Fuck, Lauren...)"
+
+    else: # -if LaurenFriend
+        scene v16s10_4d
+        with dissolve
+
+        u "(I'd better concentrate now. I hate being called out like that...)"
 
         menu:
             "Stop her":

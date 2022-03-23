@@ -209,7 +209,8 @@ label v16s40:
     ### ERROR: END IF
 
     if v16s39aubrey_date_points <= 3: ### ERROR: IF MC scored 0-3 points (DATE FAIL = Loses AubreyTamed)        
-        $ aubrey.relationship == Relationship.FWB
+        if aubrey.relationship > Relationship.FWB:
+            $ aubrey.relationship == Relationship.FWB
 
         scene v16s40_3h # FPP. Show just Aubrey from the waist up, no expression, mouth is closed, looking at MC
         with dissolve

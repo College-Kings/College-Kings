@@ -174,7 +174,7 @@ label v16s28:
 
     li "Thanks for sticking to this with me."
 
-    if lindsey.relationship == Relationship.FWB: # TODO: Variable
+    if lindsey.relationship >= Relationship.FWB:
         scene v16s28_5 # TPP. Lindsey pulling MC by his shirt, Lindsey sexy smile, MC slightly surprised, both mouths closed
         with dissolve
 

@@ -27,7 +27,7 @@ label v16s47: # 47) MC goes to the Chicks house
 
         cl "We'll see."
 
-        if chloe.relationship == Relationship.GIRLFRIEND: # TODO: Variable IF chloeGF
+        if chloe.relationship >= Relationship.GIRLFRIEND: # IF chloeGF
             scene v16s47_3 # TPP Show MC kissing Chloe on the cheek as he enters the Chicks house
             with dissolve
 
@@ -62,7 +62,7 @@ label v16s47: # 47) MC goes to the Chicks house
 
         no "*Chuckles* Screw you! It's fun to pretend for one night."
 
-        if nora.relationship >= Relationship.FWB: # TODO: Variable VERIFY, SINCE RS NO LONGER MEANS ANYTHING ### ERROR: IF noraRS
+        if nora.relationship >= Relationship.FWB: # IF noraRS
             scene v16s47_3a # TPP Same angle as 3. Show MC kissing Nora on the cheek as he enters the Chicks house
             with dissolve
 

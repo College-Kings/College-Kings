@@ -330,7 +330,7 @@ label v16s22:
 
                 pause 0.75
 
-                if amber.relationship >= Relationship.FRIEND and kct == "popular": # TODO: Variable  # -if AmberRS AND AmberKCT amber passed
+                if amber.relationship >= Relationship.FWB and kct == "popular": # -if AmberRS AND AmberKCT amber passed
                     scene v16s22_9c # FPP. Show just Amber with no expression, mouth is open, looking at MC [LEWS STAFF ROOM]
                     with dissolve
 
@@ -413,7 +413,7 @@ label v16s22:
 
                     am "You're right, you shouldn't have. Lesson learned."
 
-                if amber.relationship >= Relationship.FRIEND and not kct == "popular": # TODO: Variable  # -if AmberRS BUT AmberKCT not passed
+                elif amber.relationship >= Relationship.FWB: # TODO: Variable  # -if AmberRS BUT AmberKCT not passed
                     scene v16s22_9c
                     with dissolve
 
@@ -484,7 +484,7 @@ label v16s22:
 
                     am "Good, thank you."
 
-                if amber.relationship <= Relationship.FRIEND: # TODO: Variable  # -if not AmberRS, regardless of KCT
+                else: # -if not AmberRS, regardless of KCT
                     scene v16s22_9i # FPP. Show just Amber with an angry expression, mouth is open, looking at MC [LEWS STAFF ROOM] 
                     with dissolve
 
@@ -583,7 +583,7 @@ label v16s22:
 
                 am "*Whispers* Oh my fucking God..."
 
-                if amber.relationship >= Relationship.FRIEND: # TODO: Variable  # -if AmberRS
+                if amber.relationship >= Relationship.FWB: # -if AmberRS
                     scene v16s22_9d
                     with dissolve
 
@@ -654,7 +654,7 @@ label v16s22:
 
                     pause 0.75
 
-                if amber.relationship <= Relationship.FRIEND: # TODO: Variable # -if NOT AmberRS
+                else: # -if NOT AmberRS
                     scene v16s22_9g
                     with dissolve
 
@@ -1098,7 +1098,7 @@ label v16s22:
 
         ### ERROR: [End of Checkpoint 1.1. Continue to Checkpoint 2]
 
-    elif amber.relationship >= Relationship.FRIEND: # -if AmberFriend [Checkpoint 1.2]
+    else: # -if AmberFriend [Checkpoint 1.2]
         scene v16s22_9
         with dissolve
 

@@ -169,7 +169,7 @@ label v16s16:
 
                     pause 0.75
 
-                    if penelope.relationship >= Relationship.RS: # TODO: Variable
+                    if penelope.relationship >= Relationship.LIKES: # TODO: Variable
 
                         scene v16s16_7 # TPP. Cute shot of just MC and Penelope, Penelope holding hands with MC and leaning into him, Penelope slight smile, blushing, MC slight smile, mouth closed.
                         with dissolve
@@ -228,7 +228,7 @@ label v16s16:
 
                     imre "Hmm... You're right!"
 
-                    if penelope.relationship >= Relationship.RS: # TODO: Variable
+                    if penelope.relationship >= Relationship.LIKES: # TODO: Variable
                         scene v16s16_5d # FPP. Imre (slight smile, mouth open) leaning closer to MC and whispering in his ear.
                         with dissolve
 
@@ -431,7 +431,7 @@ label v16s16:
 
     u "I don't know if I want to pull your trigger, but..."
 
-    if penelope.relationship >= Relationship.rs: #TODO: Variable
+    if penelope.relationship >= Relationship.LIKES: #TODO: Variable
         scene v16s16_9c # FPP. MC looking at Penelope (winking, slight smile, mouth open) standing up to the shooting range who is looking at MC
         with dissolve
 

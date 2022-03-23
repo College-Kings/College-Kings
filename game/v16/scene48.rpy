@@ -470,7 +470,7 @@ label v16s48: # 48) Baby night: Chloe & MC
 
             cl "Like, It's still ringing in my head."
 
-            if chloe.relationship == Relationship.GIRLFRIEND: # -if ChloeGF
+            if chloe.relationship >= Relationship.GIRLFRIEND: # -if ChloeGF
                 scene v16s48_16c # FPP Same angle as 16. Chloe (eyebrow raised, mouth open) looking at MC
                 with dissolve
 
@@ -599,28 +599,7 @@ label v16s48: # 48) Baby night: Chloe & MC
 
                     pause 0.75
 
-                    if chloe.relationship == Relationship.FRIEND: # -if ChloeFriend
-                        scene v16s48_28a # TPP Same angle as 28. Chloe (slight smile, mouth open) pointing her finger into MC's chest
-                        with dissolve
-
-                        cl "It pushed me too far!"
-
-                        scene v16s48_29 # FPP View of Chloe (slight smile, mouth closed) looking up at MC
-                        with dissolve
-
-                        u "I can tell."
-
-                        scene v16s48_29a # FPP Same angle as 29. Chloe (slight smile, mouth open) looking up at MC
-                        with dissolve
-
-                        cl "Let's get back to sleep. Now."
-
-                        scene v16s48_25
-                        with dissolve
-
-                        pause 0.75
-
-                    elif chloe.relationship == Relationship.GIRLFRIEND: # -if ChloeGF
+                    if chloe.relationship >= Relationship.GIRLFRIEND: # -if ChloeGF
                         scene v16s48_29b # FPP Same angle as 29. Chloe (flirty smile, eyebrow raised, mouth open) looking up at MC
                         with dissolve
 
@@ -667,6 +646,27 @@ label v16s48: # 48) Baby night: Chloe & MC
                                 with dissolve
 
                                 pause 0.75
+
+                    else: # -if ChloeFriend
+                        scene v16s48_28a # TPP Same angle as 28. Chloe (slight smile, mouth open) pointing her finger into MC's chest
+                        with dissolve
+
+                        cl "It pushed me too far!"
+
+                        scene v16s48_29 # FPP View of Chloe (slight smile, mouth closed) looking up at MC
+                        with dissolve
+
+                        u "I can tell."
+
+                        scene v16s48_29a # FPP Same angle as 29. Chloe (slight smile, mouth open) looking up at MC
+                        with dissolve
+
+                        cl "Let's get back to sleep. Now."
+
+                        scene v16s48_25
+                        with dissolve
+
+                        pause 0.75
 
     scene v16s48_30 # TPP MC sits in the small gap Chloe left at the end of the couch, looking sleepy
     with dissolve

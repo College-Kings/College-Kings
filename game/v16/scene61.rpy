@@ -145,7 +145,7 @@ label v16s61:
 
             # -You can show a couple of images, 2-3 max, of Chloe during this convo. I suggest that she's preparing the house and party supplies during the call (These images are not a priority and can be cut if needed, otherwise mc is just shown pacing his room during the call.)
             # -if ChloeGf 
-            if chloe.relationship == Relationship.GIRLFRIEND:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 scene v16s61_9 # TPP. Shot of Chloe(slight smile, mouth open) at the chicks house holding her phone to her ear. The house looks almost ready for the party
                 with dissolve 
 
@@ -538,7 +538,7 @@ label v16s61:
 
             # -You can show a couple of images, 2-3 max, of Chloe during this convo. I suggest that she's preparing the house and party supplies during the call (These images are not a priority and can be cut if needed, otherwise mc is just shown pacing his room during the call.)
             # -if ChloeGf 
-            if chloe.relationship == Relationship.GIRLFRIEND: 
+            if chloe.relationship >= Relationship.GIRLFRIEND: 
                 scene v16s61_9 
                 with dissolve 
 

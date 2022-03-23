@@ -190,7 +190,7 @@ label v16s64:
             "Tell the truth":
                 $ v16s64confessed_insult = True # -try to keep this variable as it will possibly avoid a breakup i assume, thank you
                 $ add_point(KCT.BRO)
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                if chloe.relationship >= Relationship.GIRLFRIEND:
                     $ add_point(KCT.BOYFRIEND)
 
                 scene v16s64_2e
@@ -211,7 +211,7 @@ label v16s64:
             "Deny it":
                 $ v16s64denied_insult = True # -try to keep this variable as it will impact a breakup i assume, thank you
                 $ add_point(KCT.TROUBLEMAKER)
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                if chloe.relationship >= Relationship.GIRLFRIEND:
                     $ add_point(KCT.TROUBLEMAKER)
 
                 scene v16s64_2e
@@ -317,7 +317,7 @@ label v16s64:
 
         au "Listen, babe. Everyone here knows that your body is impeccable."
 
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value: ### -if chloeGF (extra dialogue)
+        if chloe.relationship >= Relationship.GIRLFRIEND: # -if chloe GF (extra dialogue)
             scene v16s64_4k # FPP. Show just Aubrey (slightly angry, mouth open, looking at MC) 
             with dissolve
 

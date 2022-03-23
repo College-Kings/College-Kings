@@ -69,19 +69,19 @@ label v16s33: # 33) MC showers
     
     else: # -if MC not going on Aubrey date
         
-        if lauren.relationship == Relationship.FRIEND: # -if LaurenFriend
+        if lauren.relationship >= Relationship.FWB: # -if LaurenGF/RS ###fwb?
+            $ lauren.messenger.addReply("Better be worth it... ;)")
+            $ lauren.messenger.newMessage("A kiss is worth a thousand words...?")
+            $ lauren.messenger.addReply("Sold! I'm in.")
+            $ lauren.messenger.newMessage("Hehe, meet me at the park :)")
+
+        else: # -if LaurenFriend
             $ lauren.messenger.addReply("Sure, I'll come. But how big is this dog?")
             $ lauren.messenger.newMessage("Massive!")
             $ lauren.messenger.addReply("How massive?")
             $ lauren.messenger.newMessage("Just come, please!")
             $ lauren.messenger.addReply("Alright, alright, I'm coming.")
             $ lauren.messenger.newMessage("Yay! I'll meet you at the park :)")
-
-        elif lauren.relationship == Relationship.GIRLFRIEND: # -if LaurenGF/RS
-            $ lauren.messenger.addReply("Better be worth it... ;)")
-            $ lauren.messenger.newMessage("A kiss is worth a thousand words...?")
-            $ lauren.messenger.addReply("Sold! I'm in.")
-            $ lauren.messenger.newMessage("Hehe, meet me at the park :)")
 
         label v16s33_phone_continue2:
             if lauren.messenger.replies:

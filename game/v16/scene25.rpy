@@ -40,7 +40,7 @@ label v16s25:
         pause 0.75
 
         if v14_amber_clean: # [Checkpoint 1.1]
-            if amber.relationship >= Relationship.RS: # TODO: Variable
+            if amber.relationship >= Relationship.FWB: # TODO: Variable
                 scene v16s25_4
                 with dissolve
 
@@ -57,7 +57,7 @@ label v16s25:
                 # [End of Checkpoint 1.1. Continue to Checkpoint 2]
 
         else: # [Checkpoint 1.2]
-            if amber.relationship >= Relationship.RS and v16_amber_dance: # TODO: Variable
+            if amber.relationship >= Relationship.FWB and v16_amber_dance: # TODO: Variable
                 scene v16s25_4
                 with dissolve
 
@@ -693,7 +693,7 @@ label v16s25:
         pause 0.75
 
         if v14_amber_clean: # [Checkpoint 1.1]
-            if amber.relationship >= Relationship.RS: # TODO: Variable
+            if amber.relationship >= Relationship.FWB: # TODO: Variable
                 scene v16s25_17
                 with dissolve
 
@@ -708,7 +708,7 @@ label v16s25:
 
                 # [End of Checkpoint 1.1. Continue to Checkpoint 2]
         else: # [Checkpoint 1.2]
-            if amber.relationship >= Relationship.RS and v16_amber_dance: # TODO: Variable
+            if amber.relationship >= Relationship.FWB and v16_amber_dance: # TODO: Variable
                 scene v16s25_17
                 with dissolve
 
@@ -724,7 +724,7 @@ label v16s25:
 
                 u "(I'm glad she's happy.)"
 
-            elif amber.relationship == Relationship.Friend and v16_tell_amber_to_quit_stripping: # TODO: Variable #Placeholder:
+            elif amber.relationship == Relationship.FRIEND and v16_tell_amber_to_quit_stripping: # TODO: Variable #Placeholder: ###shouldn't need to use friend
                 scene v16s25_17
                 with dissolve
 
