@@ -305,7 +305,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     scene v16s34_7i # FPP Same angle as 7, Elijah (neutral expression, mouth closed) looking at MC
     with dissolve
 
-    u "Yeah, pretty much."
+    u "Pretty much, yes."
 
     play sound "sounds/vibrate.mp3"
 
@@ -878,7 +878,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
         scene v16s34_19
         with dissolve
 
-        cl "Yeah, you can. Quite literally."
+        cl "Oh, you can. Quite literally."
 
         scene v16s34_19b # FPP Same angle as 19, Chloe (slight smile, eyebrow raised, mouth open) leaning back with her arms crossed in front of her chest, looking at Elijah
         with dissolve
