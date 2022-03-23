@@ -167,6 +167,8 @@ label v16s4:
         with dissolve
 
         pause 0.75
+        
+        stop sound
 
         scene v16s4_10 # TPP. In wolves room, Show MC holding the phone to his ear, tired, mouth open.
         with dissolve
