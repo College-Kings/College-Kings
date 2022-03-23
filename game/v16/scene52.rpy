@@ -535,10 +535,10 @@ label v16s52:
                 $ v16s52_kiwiiPost2.new_comment(lindsey, "Hope you got my donation!", numberLikes=25, force_send=True)
                 
                 if v16s26_lindsey_donation_money >= 10:
-                    $ v16s52_kiwiiPost2.new_comment(autumn, "Yes, received! Thank you so so much :D", mentions=Lindsey, numberLikes=146, force_send=True)
+                    $ v16s52_kiwiiPost2.new_comment(autumn, "Yes, received! Thank you so so much :D", mentions=lindsey, numberLikes=146, force_send=True)
                 
                 elif v16s26_lindsey_donation_money == 0:
-                    $ v16s52_kiwiiPost2.new_comment(autumn, "Must have missed it... Where did you send it?", mentions=Lindsey, numberLikes=119, force_send=True)
+                    $ v16s52_kiwiiPost2.new_comment(autumn, "Must have missed it... Where did you send it?", mentions=lindsey, numberLikes=119, force_send=True)
                 
                 $ v16s52_kiwiiPost2.new_comment(aubrey, "Good luck u guys :)", numberLikes=91, force_send=True)
                 $ v16s52_kiwiiPost2.new_comment(lauren, "Sending everyone I run into over to you guys!", numberLikes=46, force_send=True)

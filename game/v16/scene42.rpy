@@ -13,7 +13,7 @@ label v16s42: # 42) MC changes into normal clothes ###check force send
     $ v16s42_kiwiiPost1.new_comment(lauren, "OMG, I think I know the perfect dog for you guys.", numberLikes=127, force_send=True)
     $ v16s42_kiwiiPost1.add_reply("I'll be there! Can't wait :)", numberLikes=54)
     $ v16s42_kiwiiPost1.new_comment(autumn, "See you then! :)", numberLikes=124, force_send=True)
-    $ v16s42_kiwiiPost1.add_reply("You're supporting this, Lauren?! Lol", mentions=Lauren, numberLikes=92)
+    $ v16s42_kiwiiPost1.add_reply("You're supporting this, Lauren?! Lol", mentions=lauren, numberLikes=92)
     $ v16s42_kiwiiPost1.new_comment(lauren, "Fully! <3", numberLikes=128, force_send=True)
 
     if v16s25a_date_with_aubrey: # TODO: Variable PLACEHOLDER VARIABLE # IF Transitioning from Scene 41 [Checkpoint 1.1]        
