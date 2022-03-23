@@ -184,7 +184,7 @@ label v16s14:
     scene v16s14_3
     with dissolve
 
-    u "You're right, sorry guys."
+    u "You're right, sorry ladies."
 
     scene v16s14_6
     with dissolve
