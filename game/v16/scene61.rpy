@@ -327,7 +327,7 @@ label v16s61:
             # -Fade to a nightmare. A black void all around MC. He looks confused for a moment. He turns to see a huge baby, standing up, towering over him (like the big baby from Spirited Away). It's five times the size of MC-
 
             scene v16s61_11 # TPP. Show MC(confused,mouth closed) standing in a black void nightmare and looking around.
-            with fade (1,0,1) 
+            with fade 
 
             pause 0.75 
 
@@ -403,7 +403,7 @@ label v16s61:
         play sound "sounds/dooropen.mp3"
         
         scene v16s61_14 # TPP. Show MC (slight smile, mouth closed) walking into his apes room.
-        with fade (1,0,1)
+        with fade
 
         pause 0.75
 
@@ -720,7 +720,7 @@ label v16s61:
             # -Fade to a nightmare. A black void all around MC. He looks confused for a moment. He turns to see a huge baby, standing up, towering over him (like the big baby from Spirited Away). It's five times the size of MC-
 
             scene v16s61_11 # TPP. Show MC(confused,mouth closed) standing in a black void nightmare and looking around.
-            with fade (1,0,1) 
+            with fade
 
             pause 0.75 
 
