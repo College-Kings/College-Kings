@@ -156,7 +156,7 @@ label v16s60:
 
             el "Okay... Interesting."
 
-            # -if MC asked  'Can you say three positive things about your opponent?' and chose Make a suggestion in Scene 55 (GAIN 1 POPULARITY)
+        # -if MC asked  'Can you say three positive things about your opponent?' and chose Make a suggestion in Scene 55 (GAIN 1 POPULARITY)
         elif "three_positives" in v16s55_lindsey_question_set and "make_suggestion" in v16s55_lindsey_followup_question_set:
             $ set_presidency_percent(v14_lindsey_popularity + 1)
         
@@ -197,8 +197,7 @@ label v16s60:
 
             el "I know people are going to want to hear your thoughts on this. Is there a specific quality that you feel every successful president should have?"
 
-            # -if MC did not ask 'What is the most important quality of a good president?' or did ask the question and chose That'll do in Scene 55 (LOSE 1 POPULARITY)
-
+        # -if MC did not ask 'What is the most important quality of a good president?' or did ask the question and chose That'll do in Scene 55 (LOSE 1 POPULARITY)
         if "important_quality" not in v16s55_lindsey_question_set or ("important_quality" in v16s55_lindsey_question_set and "thatll_do" in v16s55_lindsey_followup_question_set ):                    
             $ set_presidency_percent(v14_lindsey_popularity - 1)
 
@@ -269,8 +268,7 @@ label v16s60:
 
             el "Interesting..."
             
-            # -if MC asked  'What is the most important quality of a good president?' and chose Expand on that in Scene 55 (GAIN 1 POPULARITY)     
-            
+        # -if MC asked  'What is the most important quality of a good president?' and chose Expand on that in Scene 55 (GAIN 1 POPULARITY)         
         elif "important_quality" in v16s55_lindsey_question_set and "expand" in v16s55_lindsey_followup_question_set:            
             $ set_presidency_percent(v14_lindsey_popularity + 1)
 
@@ -371,7 +369,7 @@ label v16s60:
 
             li "I'm sorry, but I'm not lying to you. I donate to charity out of the kindness of my heart."
 
-            # -if MC asked  'What was your last random act of kindness?' and chose Ask her why in Scene 55 (GAIN 1 POPULARITY)
+        # -if MC asked  'What was your last random act of kindness?' and chose Ask her why in Scene 55 (GAIN 1 POPULARITY)
         elif "random_kindness" in v16s55_lindsey_question_set and "ask_why" in v16s55_lindsey_followup_question_set:
             $ set_presidency_percent(v14_lindsey_popularity + 1)
         
@@ -469,6 +467,7 @@ label v16s60:
             with dissolve
 
             u "(And there's the flirting that I suggested... She's a natural. *Laughs*)"
+
         scene v16s60_9a
         with dissolve
 
@@ -548,8 +547,7 @@ label v16s60:
 
         u "(Keep it friendly, Linds.)"
 
-        # -if MC did not ask 'Can you say three positive things about your opponent?' or did ask the question and chose Sounds great in Scene 55 (LOSE 1 POPULARITY)
-        
+        # -if MC did not ask 'Can you say three positive things about your opponent?' or did ask the question and chose Sounds great in Scene 55 (LOSE 1 POPULARITY) 
         if "three_positives" not in v16s55_lindsey_question_set or ("three_positives" in v16s55_lindsey_question_set and "sounds_great" in v16s55_lindsey_followup_question_set):
             $ set_presidency_percent(v14_lindsey_popularity - 1)
 
@@ -589,7 +587,6 @@ label v16s60:
             with dissolve
 
             u "(Damn, maybe I should've trained her better. But hindsight's 20/20!)"
-
 
         # -Riley takes a further moment writing-
         elif "three_positives" in v16s55_lindsey_question_set and "make_suggestion" in v16s55_lindsey_followup_question_set:
