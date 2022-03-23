@@ -758,6 +758,8 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
                 u "No one does. Except me."
 
+                play sound "sounds/kiss.mp3"
+
                 scene v16s34_15 # TPP Show Chloe giving MC a deep, passionate kiss
                 with dissolve
 
@@ -926,6 +928,8 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     cl "Way too much to do! I'll catch you later."
 
     if chloe.relationship >= Relationship.GIRLFRIEND: # IF ChloeGF
+        play sound "sounds/kiss.mp3"
+        
         scene v16s34_15
         with dissolve
 
