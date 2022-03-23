@@ -1,28 +1,39 @@
 # SCENE 68: Transition Walking back with Penelope
 # Locations: School Hallway
 # Characters: MC (Outfit: 2), PENELOPE (Outfit: 2)
-# Time: Night
+# Time: Thurdsay Night
 
 
 label v16s68:
-    ###!!!TRANSCRIBER NOTE!!!### The variables for MC having the "baby" or not have not yet been established
+    
 
     scene v16s68_1 # TPP. MC (slight smile, mouth is closed) exits the cafeteria doors, and is now in the hallway
     with dissolve
-
-    if penelope.relationship.value <= Relationship.FRIEND.value:    # -if PenelopeFriend and MC's partner is on baby duty alone or MC is on baby duty with partner
-
+    
+    # 0 = Unselected, 
+    # 1 = Wednesday_alone, 
+    # 2 = Thrusday_alone, 
+    # 4 = Friday_alone, 
+    # 0x10 = Wednesday_shared, 
+    # 0x20 = Thursday_shared, 
+    # 0x40 = Friday_shared	
+    # 
+    # -if PenelopeFriend and (MC's partner is on baby duty alone) or MC is on baby duty with partner Thursday 
+    if penelope.relationship == Relationship.FRIEND and ( (2 & v16s27_mc_baby_duty_night == 2 and 0x20 & v16s27_mc_baby_duty_night != 0x20) or 0x20 & v16s27_mc_baby_duty_night == 0x20):
+        
         scene v16s68_2 # TPP. MC (slight smile, mouth is closed) continues walking along the hallway alone, the cafetria is no longer in the render
         with dissolve
 
-    if penelope.relationship.value <= Relationship.FRIEND.value:    # -if PenelopeFriend and MC is on baby duty alone
+    # -if PenelopeFriend and MC is on baby duty alone Thurssday
+    if penelope.relationship == Relationship.FRIEND and 2 & v16s27_mc_baby_duty_night == 2: 
 
         scene v16s68_2
         with dissolve
 
-        u "*Sighs* (The fun's over. Now it's time to be a responsible father and go collect [baby_name].)"
+        u "*Sighs* (The fun's over. Now it's time to be a responsible father and go collect [v16_baby_name].)"
 
-    if penelope.relationship.value >= Relationship.GIRLFRIEND.value:    # -if PenelopeRS (if date in v14 went well) <---!!!Check to see if this is a separate variable from the relationship value!!!  ###!!!TRANSCRIBER NOTE###!!!
+    # -if PenelopeRS (if date in v14 went well) 
+    if penelope.relationship == Relationship.FRIEND:    
 
         scene v16s68_2a # TPP. MC (slight smile, mouth is closed, looks back and see's Penelope) and Penelope (slight smile, mouth is open, looking at MC) Penelope is waving at MC
         with dissolve
@@ -49,7 +60,8 @@ label v16s68:
 
         pe "*Laughs* I'll make an exception, just this once."
 
-        if penelope.relationship.value >= Relationship.GIRLFRIEND.value:    # -if PenelopeRS and MC has baby duty with partner tonight
+        # -if PenelopeRS and MC has baby duty with partner Thursday
+        if penelope.relationship == Relationship.FRIEND and 0x20 & v16s27_mc_baby_duty_night == 0x20: 
 
             scene v16s68_3
             with dissolve
@@ -64,7 +76,13 @@ label v16s68:
             scene v16s68_3c # FPP. Show just Penelope (no expression, mouth closed, looking at MC)
             with dissolve
 
-            u "I'm on baby duty tonight with [baby_partner]. I need to go collect it while I'm here."
+            if v16s27_parent_chloe:
+
+                u "I'm on baby duty tonight with Chloe. I need to go collect it while I'm here."
+
+            else: # Nora 
+            
+                u "I'm on baby duty tonight with Nora. I need to go collect it while I'm here."
 
             scene v16s68_3a
             with dissolve
@@ -104,7 +122,8 @@ label v16s68:
             scene v16s68_2b # TPP. MC (no expression, mouth closed) continues walking along the hallway away from Penelope, Penelope (dissapointed expression, mouth is closed, looking at MC walk away) standing still watching MC walk away
             with dissolve
 
-        if penelope.relationship.value >= Relationship.GIRLFRIEND.value:    # -if PenelopeRS and MC has baby duty alone tonight
+        # -if PenelopeRS and MC has baby duty alone Thrusday 
+        if penelope.relationship == Relationship.FRIEND and 2 & v16s27_mc_baby_duty_night == 2:
 
             scene v16s68_3
             with dissolve
@@ -149,12 +168,19 @@ label v16s68:
             scene v16s68_2c  # TPP. MC and Penelope (both slight smiles, mouths closed, looking down the hallway) walking side by side down the hallway
             with dissolve
 
-        if penelope.relationship.value >= Relationship.GIRLFRIEND.value:    # -if PenelopeRS and MC's partner is on baby duty alone
+        # -if PenelopeRS and MC's partner is on baby duty alone Thursday
+        if penelope.relationship == Relationship.FRIEND and (2 & v16s27_mc_baby_duty_night != 2 and 0x20 & v16s27_mc_baby_duty_night != 0x20):
 
             scene v16s68_3
             with dissolve
 
-            u "Lucky for you, [baby_partner] is on baby duty tonight."
+            if v16s27_parent_chloe:
+
+                u "Lucky for you, Chloe is on baby duty tonight."
+            
+            else: # Nora 
+
+                u "Lucky for you, Nora is on baby duty tonight."
 
             scene v16s68_3a
             with dissolve
@@ -176,18 +202,23 @@ label v16s68:
 
     # -Regardless of all that-
 
-    if penelope.relationship.value >= Relationship.GIRLFRIEND.value and :    # -if PenelopeRS and MC is not on baby duty with partner, transition to Scene 69-
+    # -if PenelopeRS and MC is not on baby duty with partner on Thursday, transition to Scene 69-
+    if penelope.relationship == Relationship.FRIEND and 0x20 & v16s27_mc_baby_duty_night != 0x20:    
 
         jump v16s69
 
-    elif penelope.relationship.value >= Relationship.GIRLFRIEND.value and :    # -if MC is on baby duty with partner, transition to Scene 47-
+    # -if MC is on baby duty with partner on Thursday, transition to Scene 47-
+    
+    elif 0x20 & v16s27_mc_baby_duty_night == 0x20:
 
         jump v16s47
 
-    else penelope.relationship.value >= Relationship.GIRLFRIEND.value and :    # -if PenelopeFriend and MC is on baby duty alone, transition to Scene 46-
+    # -if PenelopeFriend and MC is on baby duty alone Thursday, transition to Scene 46-
+    elif penelope.relationship == Relationship.FRIEND and 2 & v16s27_mc_baby_duty_night == 2:
 
         jump v16s46
 
-    else:    # -if PenelopeFriend and MC's partner is on baby duty alone, transition to Scene 42-
+    # -if PenelopeFriend and MC's partner is on baby duty alone, transition to Scene 42-
+    elif penelope.relationship == Relationship.FRIEND and (2 & v16s27_mc_baby_duty_night != 2 and 0x20 & v16s27_mc_baby_duty_night != 0x20):
 
         jump v16s42
