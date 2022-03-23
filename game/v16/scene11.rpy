@@ -313,6 +313,7 @@ label v16s11:
     menu:
         "Sign up":
             $ v16s11_sign_up = True
+            $ grant_achievement("extra_extra")
 
             u "I hope I don't regret this."
 

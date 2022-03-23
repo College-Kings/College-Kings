@@ -214,4 +214,6 @@ init python:
         
     #v16
     if renpy.loadable("v16/scene1.rpy"):
-        Achievement("the_answer_to_everything", "") #s10
+        Achievement("the_answer_to_everything", "Nice try, you were close") #s10
+        Achievement("extra_extra", "Join the Newspaper Squad") #s11
+        Achievement("must_resist_temptation", "Stay focused at the park") #s14

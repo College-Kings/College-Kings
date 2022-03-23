@@ -376,6 +376,8 @@ label v16s14:
             pause 0.75
             
         "Stay focused":
+            $ grant_achievement("must_resist_temptation")
+        
             scene v16s14_10e # TPP. Same as v16s14_10d, all doing the cow pose
             with dissolve
 
