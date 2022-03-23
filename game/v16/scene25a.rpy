@@ -69,7 +69,7 @@ label v16s25a:
 
         pause 0.75
         
-        play sound "sound/vibrate.mp3"
+        play sound "sounds/vibrate.mp3"
 
         scene v16s25a_4a # TPP. In wolves room. Show MC standing in the middle of his room looking at his phone, slight smile, mouth closed. 
         with dissolve
@@ -259,7 +259,7 @@ label v16s25a:
 
         pause 0.75
         
-        play sound "sound/vibrate.mp3"
+        play sound "sounds/vibrate.mp3"
 
         scene v16s25a_11a # TPP. In Apes room. Show MC standing in the middle of his room looking at his phone, slight smile, mouth closed. 
         with dissolve

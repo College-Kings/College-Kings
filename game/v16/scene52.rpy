@@ -11,7 +11,7 @@ label v16s52:
 
     pause 0.75
 
-    play sound "sound/doorclose.mp3"
+    play sound "sounds/doorclose.mp3"
 
     scene v16s52_2 # TPP. Show MC(neutral face, mouth closed.) walked inside of the shelter the door closing behind him.
     with dissolve

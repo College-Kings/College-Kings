@@ -374,7 +374,7 @@ label v16s16:
 
     pause 0.75
 
-    play sound "sound/gun.mp3"
+    play sound "sounds/gun.mp3"
 
     scene v16s16_11b # TPP. Shot of the tragets, the third one getting hit.
     with dissolve
