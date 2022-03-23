@@ -247,12 +247,6 @@ label v16s10: # Econ class
 
         u "(*Moans* Fuck, Lauren...)"
 
-    else: # -if LaurenFriend
-        scene v16s10_4d
-        with dissolve
-
-        u "(I'd better concentrate now. I hate being called out like that...)"
-
         menu:
             "Stop her":
                 scene v16s10_2g # TPP Same angle as 2, MC pushing Lauren's hand away, Lauren looks disappointed
