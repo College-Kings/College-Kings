@@ -28,7 +28,7 @@ label v16s28:
         scene v16s28_3
         with dissolve
 
-        li "You were there that night; you know what happened."
+        li "You were there that night, you know what happened."
 
         scene v16s28_3b # FPP. Same as v16s28_3, Lindsey worried, mouth closed
         with dissolve
