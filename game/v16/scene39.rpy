@@ -3,11 +3,6 @@
 # Characters: WAITER (Outfit: 1), AUBREY (Outfit: DATE NIGHT OUTFIT), MC (Outfit: DATE NIGHT OUTFIT)
 # Time: Evening
 
-# label v16s39_fr_aubrey_date_seen(backgroundImg, returnScreen):
-#     scene expression backgroundImg
-#     u "(We've already discussed that.)"
-#     scene black
-#     $ renpy.call_screen(returnScreen)
 
 label v16s39:
     scene v16s39_1 # TPP. Aubrey removes her jacket and hands it to the waiter, MC and Aubrey slight smiles, mouths are closed, looking at the waiter, The waiter has a creepy smile, mouth is closed taking Aubrey's jacket from her, the background includes a "coat room," and possibly a sign included to that effect
