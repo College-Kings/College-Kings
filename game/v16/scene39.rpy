@@ -111,7 +111,14 @@ label v16s39:
             scene v16s39_4b
             with dissolve
 
-            u "...Yeah, okay then. A fruity soda."
+            u "..."
+            u "Yeah, okay then. A fruity soda."
+
+            ### check which image makes sense here
+            if v15s24_nancy_dick: 
+                u "(It's probably for the best, I don't want to hear the name Nancy Dick ever again...)"
+            elif v15_lindsey_gamenight:
+                u "(It's probably for the best, I don't want to hear the name Andrew King ever again...)"
 
 # -Regardless-
     scene v16s39_4

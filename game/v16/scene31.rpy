@@ -188,7 +188,7 @@ label v16s31:
             scene v16s31_2e # FPP. Show just Grayson has closed the fridge, slightly angry expression, mouth is open, looking at MC
             with dissolve
 
-            gr "I don't care what it looks like or how it makes people feel. This is the Apes Fraternity house, I am the president of the Apes, and I want her out of here!"
+            gr "I don't care what it looks like or how it makes people feel. This is the Apes fraternity house, I am the president of the Apes, and I want her out of here!"
 
             if v14_SamanthaDrugs: # -if SamanthaDrugs
                 scene v16s31_3c
