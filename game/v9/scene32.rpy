@@ -166,7 +166,7 @@ label v9_sat_skip_gym:
             if riley.messenger.replies:
                 call screen phone
             if riley.messenger.replies:
-                "(I should reply to Riley.)"
+                u "(I should reply to Riley.)"
                 jump s32_PhoneContinue
 
         if v9_sex_with_riley:

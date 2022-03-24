@@ -101,7 +101,7 @@ label v9_room_sat_aft:
                 if chloe.messenger.replies:
                     call screen phone
                 if chloe.messenger.replies:
-                    "(I should reply to Chloe.)"
+                    u "(I should reply to Chloe.)"
                     jump s35_PhoneContinueW
 
             scene v9rsa3a # TPP. Same camera as v9rsa3, MC puts his phone down and yawns.
@@ -149,7 +149,7 @@ label v9_room_sat_aft:
                 if chloe.messenger.replies:
                     call screen phone
                 if chloe.messenger.replies:
-                    "(I should reply to Chloe.)"
+                    u "(I should reply to Chloe.)"
                     jump s35_PhoneContinueA
 
             scene v9rsa7a # TPP. Same camera as v9rsa3, MC puts his phone down and yawns.

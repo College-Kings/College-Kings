@@ -43,7 +43,7 @@ label v9_walk_li_txt:
         if lindsey.messenger.replies:
             call screen phone
         if lindsey.messenger.replies:
-            "(I should reply to Lindsey.)"
+            u "(I should reply to Lindsey.)"
             jump s38_PhoneContinue 
     
     scene v9wlt2 # TPP. Show MC putting his phone away and continue to walk on.

@@ -346,7 +346,7 @@ label v11_nora_chloe_hallway:
                 scene v11clhall1
                 with dissolve
 
-                "(I need to get home and pack.)"
+                u "(I need to get home and pack.)"
 
         "Say something":
             if chloe.relationship <= Relationship.MAD:
