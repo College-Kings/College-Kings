@@ -227,7 +227,7 @@ label v16s32:
 
         label v16s32_phoneContinue1:
             if chloe.messenger.replies:
-                call screen phones
+                call screen phone
             if chloe.messenger.replies:
                 jump v16s32_phoneContinue1
 
@@ -244,7 +244,7 @@ label v16s32:
         scene v16s32_3
         with dissolve
 
-        u "(Oh shit, I need to get started on shopping... Chloe would kick my ass if she knew what I was doing right now, haha."
+        u "(Oh shit, I need to get started on shopping... Chloe would kick my ass if she knew what I was doing right now, haha.)"
 
         scene v16s32_6 # TPP. Show a close-up shot of Mc's face, slight smile, mouth is closed, same position and background as v16s32_3
         with dissolve
