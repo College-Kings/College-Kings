@@ -59,7 +59,7 @@ screen v10s33_cakestatue():
             if "lauren" not in freeroam6:
                 action Jump("v10s33_laurenbake1")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v10cfrla1a", returnScreen="v10s33_cakestatue")
+                action Call("free_roam_spoken_too", "v10cfrla1a", "v10s33_cakestatue")
 
     # Lauren - Statue
     else:
@@ -70,7 +70,7 @@ screen v10s33_cakestatue():
             if "lauren" not in freeroam6:
                 action Jump("v10s33_laurenstatue1")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v10cfrla3", returnScreen="v10s33_cakestatue")
+                action Call("free_roam_spoken_too", "v10cfrla3", "v10s33_cakestatue")
 
     # Bench - Left
     imagebutton:
@@ -104,7 +104,7 @@ screen v10s33_bench():
         if not "emily" in freeroam6:
             action Jump("v10s33_emily1")
         else:
-            action Call("freeRoamSpokenToo", backgroundImg="v10cfrem1a", returnScreen="v10s33_bench")
+            action Call("free_roam_spoken_too", "v10cfrem1a", "v10s33_bench")
   
     # Centre aisle - Left
     imagebutton:
@@ -138,7 +138,7 @@ screen v10s33_toilet(): # NO
         if not "evelyn" in freeroam6:
             action Jump("v10s33_evelyn1")
         else:
-            action Call("freeRoamSpokenToo", backgroundImg="v10cfrev1a", returnScreen="v10s33_toilet")
+            action Call("free_roam_spoken_too", "v10cfrev1a", "v10s33_toilet")
 
     # Toilet Ryan
     if "ryan" in freeroam6:            
@@ -149,7 +149,7 @@ screen v10s33_toilet(): # NO
             if not "ryan2" in freeroam6:
                 action Jump("v10s33_toiletryan1")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v10cfrry5", returnScreen="v10s33_toilet")
+                action Call("free_roam_spoken_too", "v10cfrry5", "v10s33_toilet")
 
     # Body paint - Right
     imagebutton:
@@ -183,7 +183,7 @@ screen v10s33_bodypaint():
         if not "rose" in freeroam6:
             action Jump("v10s33_msrose1")
         else:
-            action Call("freeRoamSpokenToo", backgroundImg="v10cfrcfrro1", returnScreen="v10s33_bodypaint")
+            action Call("free_roam_spoken_too", "v10cfrcfrro1", "v10s33_bodypaint")
 
     # Lindsey
     imagebutton: 
@@ -193,7 +193,7 @@ screen v10s33_bodypaint():
         if not "lindsey" in freeroam6:
             action Jump("v10s33_lindsey1")
         else:
-            action Call("freeRoamSpokenToo", backgroundImg="v10cfrfrli1", returnScreen="v10s33_bodypaint")
+            action Call("free_roam_spoken_too", "v10cfrfrli1", "v10s33_bodypaint")
 
     # Thrift - Top
     imagebutton:
@@ -295,7 +295,7 @@ screen v10s33_stage():
             if not "aubrey" in freeroam6:
                 action Jump("v10s33_aubrey1")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v10cfrau1", returnScreen="v10s33_stage")
+                action Call("free_roam_spoken_too", "v10cfrau1", "v10s33_stage")
 
     # Aubrey & Riley
     else:   
@@ -306,7 +306,7 @@ screen v10s33_stage():
             if not v10s33_aubreyriley:
                 action Jump("v10s33_riley2")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v10cfrriau1", returnScreen="v10s33_stage")
+                action Call("free_roam_spoken_too", "v10cfrriau1", "v10s33_stage")
 
     # Deer girl 1
     imagebutton: 
@@ -316,7 +316,7 @@ screen v10s33_stage():
         if not "rachel" in freeroam6:
             action Jump("v10s33_deergirl11")
         else:
-            action Call("freeRoamSpokenToo", backgroundImg="v10cfrdg11", returnScreen="v10s33_stage")
+            action Call("free_roam_spoken_too", "v10cfrdg11", "v10s33_stage")
 
     # Stage from left - Left
     imagebutton:
@@ -357,7 +357,7 @@ screen v10s33_bagtoss():
         if not "eleanor" in freeroam6:
             action Jump("v10s33_deergirl21")
         else:
-            action Call("freeRoamSpokenToo", backgroundImg="v10cfrdg21", returnScreen="v10s33_bagtoss")
+            action Call("free_roam_spoken_too", "v10cfrdg21", "v10s33_bagtoss")
 
     # Chris
     imagebutton:
@@ -367,7 +367,7 @@ screen v10s33_bagtoss():
         if not "chris" in freeroam6:
             action Jump("v10s33_chris1")
         else:
-            action Call("freeRoamSpokenToo", backgroundImg="v10cfrch1", returnScreen="v10s33_bagtoss")
+            action Call("free_roam_spoken_too", "v10cfrch1", "v10s33_bagtoss")
 
     # Nora
     if not v10s33_toldChloe:
@@ -378,7 +378,7 @@ screen v10s33_bagtoss():
             if not "nora" in freeroam6:
                 action Jump("v10s33_nora1")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v10cfrno1", returnScreen="v10s33_bagtoss")
+                action Call("free_roam_spoken_too", "v10cfrno1", "v10s33_bagtoss")
 
     # Stage - Bottom
     imagebutton:
@@ -418,7 +418,7 @@ screen v10s33_centeraisle():
             if not "chloe" in freeroam6:
                 action Jump("v10s33_chloe1")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v10cfrcl1", returnScreen="v10s33_centeraisle")
+                action Call("free_roam_spoken_too", "v10cfrcl1", "v10s33_centeraisle")
 
     # Deer Girl 3
     imagebutton:
@@ -428,7 +428,7 @@ screen v10s33_centeraisle():
         if not "karen" in freeroam6:
             action Jump("v10s33_deergirl31")
         else:
-            action Call("freeRoamSpokenToo", backgroundImg="v10cfrdg31a", returnScreen="v10s33_centeraisle")
+            action Call("free_roam_spoken_too", "v10cfrdg31a", "v10s33_centeraisle")
     
     # Ryan
     if not "ryan" in freeroam6:
@@ -439,7 +439,7 @@ screen v10s33_centeraisle():
             if not "ryan" in freeroam6:
                 action Jump("v10s33_ryan1")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v10cfrry1", returnScreen="v10s33_centeraisle")
+                action Call("free_roam_spoken_too", "v10cfrry1", "v10s33_centeraisle")
 
     # Stage - Top
     imagebutton:
@@ -480,7 +480,7 @@ screen v10s33_mudwrestling():
         if not "amber" in freeroam6:
             action Jump("v10s33_amber1")
         else:
-            action Call("freeRoamSpokenToo", backgroundImg="v10cfram1", returnScreen="v10s33_mudwrestling")
+            action Call("free_roam_spoken_too", "v10cfram1", "v10s33_mudwrestling")
     
     # Autumn
     imagebutton: 

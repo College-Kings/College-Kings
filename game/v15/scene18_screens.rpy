@@ -33,7 +33,7 @@ screen v15s18a_room():
             imagebutton:
                 idle Transform("#0000", size=(436, 679))
                 hover image_path + "v15s18a_room_hover_amber2.webp"
-                action Call("freeRoamSpokenToo", backgroundImg="v15s18a_room_2", returnScreen="v15s18a_room")
+                action Call("free_roam_spoken_too", "v15s18a_room_2", "v15s18a_room")
                 pos (704, 48)
 
     else:
@@ -44,7 +44,7 @@ screen v15s18a_room():
             if not "imre_aubrey" in freeroam14:
                 action Jump("v15s18c_imre_aubrey")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v15s18a_room_3", returnScreen="v15s18a_room")
+                action Call("free_roam_spoken_too", "v15s18a_room_3", "v15s18a_room")
             pos (742, 57)
 
         # Imre
@@ -54,7 +54,7 @@ screen v15s18a_room():
             if not "imre_aubrey" in freeroam14:
                 action Jump("v15s18c_imre_aubrey")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v15s18a_room_3", returnScreen="v15s18a_room")
+                action Call("free_roam_spoken_too", "v15s18a_room_3", "v15s18a_room")
             pos (1039, 52)
     
     imagebutton:
@@ -117,7 +117,7 @@ screen v15s18a_livingroom():
                 if not "ryan" in freeroam14:
                     action Jump("v15s18c_ryan")
                 else:
-                    action Call("freeRoamSpokenToo", backgroundImg="v15s18a_livingroom_4", returnScreen="v15s18a_livingroom")
+                    action Call("free_roam_spoken_too", "v15s18a_livingroom_4", "v15s18a_livingroom")
                 pos (1279, 433) 
 
     # Pumpkin
@@ -160,7 +160,7 @@ screen v15s18a_bar():
             if not "aubrey" in freeroam13:
                 action Jump("v15s18a_Aubrey")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v15s18a_bar_1", returnScreen="v15s18a_bar")
+                action Call("free_roam_spoken_too", "v15s18a_bar_1", "v15s18a_bar")
             pos (510, 110)
 
     elif not "autumn_amber" in freeroam14:
@@ -171,7 +171,7 @@ screen v15s18a_bar():
             if not "autumn_amber" in freeroam14:
                 action Jump("v15s18c_autumn_amber")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v15s18a_bar_2", returnScreen="v15s18a_bar")
+                action Call("free_roam_spoken_too", "v15s18a_bar_2", "v15s18a_bar")
             pos (873, 28)
 
         # Amber
@@ -181,7 +181,7 @@ screen v15s18a_bar():
             if not "autumn_amber" in freeroam14:
                 action Jump("v15s18c_autumn_amber")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v15s18a_bar_2", returnScreen="v15s18a_bar")
+                action Call("free_roam_spoken_too", "v15s18a_bar_2", "v15s18a_bar")
             pos (440, 90)
 
     imagebutton:
@@ -205,7 +205,7 @@ screen v15s18a_kitchen():
             if not "riley" in freeroam13:
                 action Jump("v15s18a_Riley")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v15s18a_kitchen_1", returnScreen="v15s18a_kitchen")
+                action Call("free_roam_spoken_too", "v15s18a_kitchen_1", "v15s18a_kitchen")
             pos (554, 12)
 
     else:
@@ -249,7 +249,7 @@ screen v15s18a_upstairsroom():
             if not "chris_penelope" in freeroam14:
                 action Jump ("v15s18c_chris_penelope")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v15s18a_upstairsroom_2", returnScreen="v15s18a_upstairsroom")
+                action Call("free_roam_spoken_too", "v15s18a_upstairsroom_2", "v15s18a_upstairsroom")
             pos (1500, 200)
 
     # Door 1, Bathroom (Ryan, then Riley)
@@ -261,15 +261,15 @@ screen v15s18a_upstairsroom():
             if not "ryan" in freeroam13:
                 action Jump("v15s18a_Ryan")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v15s18a_upstairsroom_1", returnScreen="v15s18a_upstairsroom")
+                action Call("free_roam_spoken_too", "v15s18a_upstairsroom_1", "v15s18a_upstairsroom")
         else:
             if not "riley" in freeroam14:
                 action Jump("v15s18c_riley")
             else:
                 if "penelope" in freeroam14:
-                    action Call("freeRoamSpokenToo", backgroundImg="v15s18a_upstairsroom_1", returnScreen="v15s18a_upstairsroom")
+                    action Call("free_roam_spoken_too", "v15s18a_upstairsroom_1", "v15s18a_upstairsroom")
                 else:
-                    action Call("freeRoamSpokenToo", backgroundImg="v15s18a_upstairsroom_2", returnScreen="v15s18a_upstairsroom")
+                    action Call("free_roam_spoken_too", "v15s18a_upstairsroom_2", "v15s18a_upstairsroom")
         pos (247, 13)
 
     # Door 2
@@ -281,7 +281,7 @@ screen v15s18a_upstairsroom():
             if not "autumn_penelope" in freeroam13:
                 action Jump("v15s18a_AutumPenelope")
             else:
-                action Call("freeRoamSpokenToo", backgroundImg="v15s18a_upstairsroom_1", returnScreen="v15s18a_upstairsroom")
+                action Call("free_roam_spoken_too", "v15s18a_upstairsroom_1", "v15s18a_upstairsroom")
         else:
             if not "lauren" in freeroam14:
                 action Jump("v15s18c_lauren")
