@@ -10,7 +10,7 @@ screen message_reply(contact=None):
             button:
                 idle_background "reply_background_idle"
                 hover_background "reply_background_hover"
-                padding (100, 65)
+                padding (100, 75)
                 focus_mask reply_focus_mask
                 action [Hide("message_reply"), Function(contact.selected_reply, reply)]
 

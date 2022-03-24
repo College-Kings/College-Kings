@@ -56,8 +56,8 @@ image sleep_transition_fast = Movie(play="images/v15/sleep_transition_fast.webm"
 image contact_notification = "images/phone/common/contact-notification.webp"
 image back_button = "images/phone/common/back-button.webp"
 image message_background = Frame("images/phone/common/message-background.webp", 20, 20)
-image reply_background_idle = Frame("images/phone/common/reply-background-idle.webp", 20, 20)
-image reply_background_hover = Frame("images/phone/common/reply-background-hover.webp", 20, 20)
+image reply_background_idle = Frame("images/phone/common/reply-background-idle.webp")
+image reply_background_hover = Frame("images/phone/common/reply-background-hover.webp")
 image reply_button_idle = "images/phone/common/reply-button-idle.webp"
 
 ## Achievements
