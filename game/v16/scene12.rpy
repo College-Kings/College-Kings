@@ -16,6 +16,8 @@ label v16s12:
         cl "Phew! Now that we're in private, we can finally talk about how the announcement went, and..."
 
         if chloe.relationship >= Relationship.GIRLFRIEND:
+            play sound "sounds/kiss.mp3"
+
             scene v16s12_3 # TPP. Show Chloe giving MC a kiss
             with dissolve
 
@@ -268,6 +270,8 @@ label v16s12:
     cl "Now get out there and get to work."
 
     if chloe.relationship >= Relationship.GIRLFRIEND:
+        play sound "sounds/kiss.mp3"
+
         scene v16s12_3
         with dissolve
 

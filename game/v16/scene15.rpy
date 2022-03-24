@@ -979,6 +979,8 @@ label v16s15pier_date_wheel: # -if Wheel of chance
     pe "Such a gentleman..."
 
     if penelope.relationship >= Relationship.LIKES: # -penelopers kisses mc on the cheek- TODO: Variable
+        play sound "sounds/kiss.mp3"
+
         scene v16s15_37 # TPP. Show just Penelope Kissing Mc on the cheek in front of the WHEEL, both slight smiles [WHEEL]
         with dissolve
 
@@ -1703,15 +1705,9 @@ label v16s15pier_date_carousel_2: ### -if HotDog Stand
     scene v16s15_57c
     with dissolve
 
-    u "*Chuckles* ...Are you being serious right now?"
-
-    scene v16s15_57a
-    with dissolve
+    u "*Chuckles* Are you being serious right now?"
 
     pe "Mhmm."
-
-    scene v16s15_57c
-    with dissolve
 
     u "You have to tell me that story one day."
 

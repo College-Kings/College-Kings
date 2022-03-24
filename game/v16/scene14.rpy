@@ -32,6 +32,8 @@ label v16s14:
     u "Ha, yeah. It's refreshing."
 
     if nora.relationship >= Relationship.FWB:
+        play sound "sounds/kiss.mp3"
+    
         scene v16s14_4 # TPP. SHow MC giving Nora a kiss, she is still leaning on the tree
         with dissolve
 
@@ -671,6 +673,8 @@ label v16s14:
         linear 6.0 yalign 0.0
     with fade
 
+    pause
+
     scene v16s14_20 # FPP. MC, Nora and Ms. Rose standing on their mats, facing each other, MC looking at Ms. Rose, Ms. Rose looking at Nora, Ms. Rose smiling, mouth open
     with dissolve
 
@@ -782,6 +786,8 @@ label v16s14:
     with dissolve
 
     ro "Right. Of course."
+
+    play sound "sounds/vibrate.mp3"
 
     scene v16s14_23 # TPP. Show MC reaching into his pocket, slight smile, mouth open
     with vpunch
