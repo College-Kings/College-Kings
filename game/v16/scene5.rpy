@@ -29,7 +29,7 @@ label v16s5:
             scene v16s5_2a
             with dissolve
 
-            ro "But, when you came with Chloe to ask for my support, and you made those... promises to persuade me to sign, and I still don't know if you really meant it."
+            ro "But, when you came with Chloe to ask for my support, and you made those... promises to persuade me to sign. I still don't know if you really meant it."
         
         ro "I just need to know... Do you want to keep seeing me? Or is this..."
 
@@ -61,15 +61,16 @@ label v16s5:
 
                 ro "I'm so glad you said that. Because to celebrate that, I want to plan a little treat for us."
 
-                scene v16s5_2
-                with dissolve
+                if "v12_rose" in sceneList:
+                    scene v16s5_2
+                    with dissolve
 
-                u "Does it involve spiking my drink again?"
+                    u "Does it involve spiking my drink again?"
 
-                scene v16s5_2d # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose neutral face, rolling her eyes, mouth open [DO NOT SHOW FRAT HOUSE].
-                with dissolve
-                
-                ro "*Sighs* No..." 
+                    scene v16s5_2d # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose neutral face, rolling her eyes, mouth open [DO NOT SHOW FRAT HOUSE].
+                    with dissolve
+                    
+                    ro "*Sighs* No..." 
 
                 scene v16s5_2b
                 with dissolve
@@ -299,7 +300,7 @@ label v16s5:
                 scene v16s5_2c
                 with dissolve
 
-                ro "I think it'll be a lot of fun; I love going. I'm gonna book a private balcony for us too."
+                ro "I think it'll be a lot of fun, I love going. I'm gonna book a private balcony for us too."
 
                 scene v16s5_2b
                 with dissolve
