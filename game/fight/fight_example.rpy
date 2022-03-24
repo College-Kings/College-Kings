@@ -65,3 +65,7 @@ label fight_example:
             "hit_image": "",
             "blocked_image": ""
         })
+
+        fight = Fight(player, opponent, "v1_start")
+
+    call screen fight_overview(fight, "First Fight")

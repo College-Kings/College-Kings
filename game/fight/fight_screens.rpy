@@ -1,3 +1,47 @@
+screen fight_overview(fight, title):
+    modal True
+    style_prefix "fight_overview"
+
+    default image_path = "images/fight/overview/"
+
+    add image_path + "background.png"
+
+    text title style "fight_overview_title" xalign 0.5 ypos 50
+
+    # Player info
+    frame:
+        xysize (790, 662)
+        xpos 120
+        yalign 0.5
+
+        add "images/fight/overview/frame-background.png" pos (-54, -50)
+
+        fixed:
+            xysize (170, 30)
+            pos (568, -40)
+
+            text "COMPETITOR" size 16 align (0.5, 0.5)
+
+        hbox:
+            pos (20, -55)
+            spacing 10
+
+            add Transform(mc.profile_pictures[1], xysize=(100, 100)) yalign 0.5
+
+            vbox:
+                spacing 20
+
+                text fight.player.name size 34
+                text "VICTORIES: {}".format(fight.player.wins) size 19
+
+        # vbox:
+        #     hbox:
+                 
+
+
+    # Opponent info
+
+
 screen fight_player_turn(fight, player, opponent):
     style_prefix "fight_turn"
 
@@ -250,6 +294,9 @@ style fight_turn_text is text:
     color "#000"
     font "fonts/Montserrat-Regular.ttf"
 
+style fight_overview_title is montserrat_extra_bold_64:
+    color "#fff"
 
-
-    
+style fight_overview_text is text:
+    font "fonts/Montserrat-ExtraBold.ttf"
+    color "#fff"
