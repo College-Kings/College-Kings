@@ -4,12 +4,6 @@
 # Time: Night
 # Render Count: 17 Renders 4 Call Screens 1 clean background call screen with twazzlers present and 1 without. 1 dirty background call screen with twazzlers present and 1 without. 21 Total
 
-label v16s20_free_roam_alr_seen(backgroundImg, returnScreen):
-    scene expression backgroundImg
-    u "(I've already seen this...)"
-    scene black
-    $ renpy.call_screen(returnScreen)
-
 label v16s20:
     if v14_amber_clean:
         jump v16s20_amber_clean

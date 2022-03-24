@@ -1,3 +1,5 @@
+# Call("free_roam_spoken_too", "image", "label", dialog="(I've already seen this...)")
+
 screen v16s20_amber_living_room():
     tag free_roam
     modal True

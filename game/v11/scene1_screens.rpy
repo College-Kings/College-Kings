@@ -17,7 +17,7 @@ screen v11s1_hallway1():
             if not "delib" in freeroam7:
                 hotspot (18, 25, 282, 1049) action Jump("v11s1_delib") # Check door
             else:
-                hotspot (18, 25, 282, 1049) action Call("freeRoamSpokenToo", backgroundImg="hall1", returnScreen="v11s1_hallway1")
+                hotspot (18, 25, 282, 1049) action Call("free_roam_spoken_too", "hall1", "v11s1_hallway1")
 
             hotspot (1324, 201, 134, 406) action Show("v11s1_hallway2") # Hallway 2
         
@@ -37,7 +37,7 @@ screen v11s1_hallway1():
             if not "delib" in freeroam7:
                 hotspot (18, 25, 282, 1049) action Jump("v11s1_delib") # Check door
             else:
-                hotspot (18, 25, 282, 1049) action Call("freeRoamSpokenToo", backgroundImg="hall1a", returnScreen="v11s1_hallway1")
+                hotspot (18, 25, 282, 1049) action Call("free_roam_spoken_too", "hall1a", "v11s1_hallway1")
             hotspot (1324, 201, 134, 406) action Show("v11s1_hallway2") # Hallway 2
 
 screen v11s1_hallway2():
@@ -54,5 +54,5 @@ screen v11s1_hallway2():
         if not "mr rose" in freeroam7:
             hotspot (182, 221, 253, 555) action Jump("v11s1_mrrose") # Speak to Mr. Rose
         else:
-            hotspot (182, 221, 253, 555) action Call("freeRoamSpokenToo", backgroundImg="hall2", returnScreen="v11s1_hallway2")
+            hotspot (182, 221, 253, 555) action Call("free_roam_spoken_too", "hall2", "v11s1_hallway2")
         hotspot (246, 891, 1401, 188) action Show("v11s1_hallway1") # Hallway 1
