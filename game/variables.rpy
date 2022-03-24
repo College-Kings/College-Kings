@@ -461,6 +461,7 @@ default v16s11_sign_up = False
 default v16s15_fr_carnival = set() # Holds visited scenes for the free roam 
 default v16s20_take_twazzlers = False
 default vs16s15hotdog_coupon = False
+default v16s15_carousel_strong_spin = False
 default v16s23_mention_bills = False  # TODO: Variable
 default v16s23_mention_laptop = False # TODO: Variable
 default v16s23_support_amber = False # TODO: Variable
