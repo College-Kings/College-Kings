@@ -51,7 +51,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
 
                 u "(Nah, maybe she didn't bring them for a reason.)"
 
-                call screen v16s20_amber_living_room_clean # -Return to free roam-
+                call screen v16s20_amber_living_room # -Return to free roam-
 
     label v16s20_amber_living_room_unpaid_bills: # -if Unpaid Bills
         $ freeroam15.add("bills")
@@ -65,7 +65,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
             call screen v16s20_amber_living_room_twazzler_clean
 
         else:
-            call screen v16s20_amber_living_room_clean
+            call screen v16s20_amber_living_room
 
     label v16s20_amber_living_room_laptop: # -if Open Laptop
         $ freeroam15.add("laptop")
@@ -104,7 +104,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
             call screen v16s20_amber_living_room_twazzler_clean
 
         else:
-            call screen v16s20_amber_living_room_clean
+            call screen v16s20_amber_living_room
 
     label v16s20_amber_living_room_photos: # -if Photos
         $ freeroam15.add("photos")
@@ -138,7 +138,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
             call screen v16s20_amber_living_room_twazzler_clean
 
         else:
-            call screen v16s20_amber_living_room_clean
+            call screen v16s20_amber_living_room
 
     label v16s20_amber_living_room_phone_charger: # -if Phone charger (Ends Free Roam)
         $ freeroam15.add("charger")
@@ -198,7 +198,7 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
 
                 u "(Nah, maybe she didn't bring them for a reason.)"
 
-                call screen v16s20_amber_living_room_dirty
+                call screen v16s20_amber_living_room
 
     label v16s20_amber_living_room_unpaid_bills2: # -if Unpaid Bills
         $ freeroam15.add("bills")
@@ -212,7 +212,7 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
             call screen v16s20_amber_living_room_twazzler_dirty
 
         else:
-            call screen v16s20_amber_living_room_dirty
+            call screen v16s20_amber_living_room
 
     label v16s20_amber_living_room_laptop2: # -if Open Laptop
         $ freeroam15.add("laptop")
@@ -251,7 +251,7 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
             call screen v16s20_amber_living_room_twazzler_dirty
 
         else:
-            call screen v16s20_amber_living_room_dirty
+            call screen v16s20_amber_living_room
 
     label v16s20_amber_living_room_photos2: # -if Photos
         $ freeroam15.add("photos")
@@ -285,7 +285,7 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
             call screen v16s20_amber_living_room_twazzler_dirty
 
         else:
-            call screen v16s20_amber_living_room_dirty # -Return to free roam-
+            call screen v16s20_amber_living_room # -Return to free roam-
 
     label v16s20_amber_living_room_phone_charger2: # -if Phone charger (Ends Free Roam)
         $ freeroam15.add("charger")
