@@ -209,7 +209,7 @@ screen messenger_home():
 
                     for contact in messenger.contacts:
                         button:
-                            action [Function(renpy.retain_after_load), SetField(contact, "notification", False), Show("messager", contact=contact)]
+                            action [Function(renpy.retain_after_load), Show("messager", contact=contact)]
                             ysize 80
 
                             add Transform(contact.profile_picture, xysize=(65, 65)) xpos 20 yalign 0.5
@@ -228,6 +228,7 @@ screen messager(contact=None):
 
     python:
         yadj.value = yadjValue
+        contact.notification = False
 
     use base_phone:
         frame:
@@ -277,11 +278,13 @@ screen messager(contact=None):
 
                             elif isinstance(message, Reply):
                                 background "message_background"
+                                xalign 1.0
 
                                 text message.message  style "message_text"
 
                             elif isinstance(message, ImgReply):
                                 background "message_background"
+                                xalign 1.0
 
                                 imagebutton:
                                     idle Transform(message.image, ysize=216)
