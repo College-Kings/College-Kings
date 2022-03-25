@@ -557,7 +557,7 @@ label v16s14:
             if v16s14_focus == 2:
                 $ grant_achievement("must_resist_temptation")
             
-            ro "Lift your hips up, so you're making a triangle shape"
+            ro "Lift your hips up, so you're making a triangle shape."
 
             ro "You can bend your knees if it helps... *Moans* Feel the stretch."
 
