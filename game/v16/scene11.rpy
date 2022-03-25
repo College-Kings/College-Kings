@@ -526,8 +526,9 @@ label v16s11:
 
             u "*Laughs* You're welcome."
 
-        scene v16s11_11d
-        with dissolve
+        else:
+            scene v16s11_11d
+            with dissolve
 
         u "(So much for not wanting to talk about it.)"
 
