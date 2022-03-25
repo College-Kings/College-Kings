@@ -546,7 +546,7 @@ label v16s7:
         scene v16s7_6e
         with dissolve
 
-        u "Never a dull moment for you presidents, huh? Bye, Autumn."
+        u "Never a dull moment for you Presidents, huh? Bye, Autumn."
 
         scene v16s7_8
         with dissolve
