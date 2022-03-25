@@ -6,6 +6,7 @@ python early:
         "bugTesting/styles.rpy",
         "phone/applications.rpy"
         "phone/phonescript.rpy",
+        "phone/phone_msg.rpy",
         "phone/phone_script.rpy",
         "phone/phoneStyle.rpy",
         "sceneGallery/sceneGallery.rpy",

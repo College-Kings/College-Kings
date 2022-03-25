@@ -202,6 +202,6 @@ define character.kobe = Character("Kobe", who_color="#fd9426", who_outlines=[ (2
 define character.crowd = Character("Crowd", who_color="#a815f2", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.jog = Character("Jogger", who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.pa = Character("PA System", who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.pha = Character("pha") ### Kiwii Audio??
+define character.pha = Character("Phone audio", who_color="#53d769", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.tb = Character("The Bullseye", who_color="#fc3158", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.wa = Character("Wheel Attendant", who_color="#8b0000", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])

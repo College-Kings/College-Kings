@@ -10,258 +10,263 @@ label v16s7:
 
     pause 0.75
 
-    if v15_chloe_postkiwii: # -if MC chose Embarrass Lindsey, PA system announcement
-        scene v16s7_2 # TPP. MC and a few other random characters show up in frame, NO MAIN CHARACTERS, all of them stop walking and look up at the PA system speaker on the wall. All of them no expressions, mouths are closed
-        with dissolve
+    if v15_lindsey_recording > 0:
+        if (v15_chloe_lindseysabotage and not v15_chloe_postkiwii): # -if MC chose Embarrass Lindsey, PA system announcement
+            scene v16s7_2 # TPP. MC and a few other random characters show up in frame, NO MAIN CHARACTERS, all of them stop walking and look up at the PA system speaker on the wall. All of them no expressions, mouths are closed
+            with dissolve
 
-        pause 0.75
+            pause 0.75
 
-        if v15_lindsey_gamenight: # Game Night
-            if v15_lindsey_alcohol and v15bring_up_chloe:
-                scene v16s7_3 # FPP. Close up view of the PA system speaker on the wall
-                with dissolve
-
-                pa "*Drunk* What I don't like about Chloe?"
-
-                pa "*Drunk* *Giggles* do you want a list? I mean, where do I start?"
-
-                scene v16s7_2a # TPP MC has a slight smile, mouth is closed still looking at the PA system speaker on the wall. The other Random Characters are looking at each other and the PA system with excitement
-                with dissolve
-
-                u "(Oh, my fucking god, it's happening.)"
-
-                scene v16s7_3
-                with dissolve
-
-                pa "*Drunk* Her plastic boobs?"
-
-                pa "*Drunk* Or her plastic nose?"
-
-                if v15say_nothing: # -if MC also chose Say nothing on Games Night
-                    scene v16s7_2b # TPP. MC has a slight smile, mouth is closed, looking at the Random Characters, The Random Characters are now laughing, and looking at each other
+            if not (v14_help_lindsey and not v15_lindsey_gamenight): # Game Night (i.e. if not VIP night, because then Game Night always happens)
+                if v15_lindsey_recording == 1 or v15_lindsey_recording == 2:
+                    scene v16s7_3 # FPP. Close up view of the PA system speaker on the wall
                     with dissolve
 
-                    u "(Oh... This is it!)"
+                    pa "*Drunk* What I don't like about Chloe?"
+
+                    pa "*Drunk* *Giggles* do you want a list? I mean, where do I start?"
+
+                    scene v16s7_2a # TPP MC has a slight smile, mouth is closed still looking at the PA system speaker on the wall. The other Random Characters are looking at each other and the PA system with excitement
+                    with dissolve
+
+                    u "(Oh, my fucking god, it's happening.)"
 
                     scene v16s7_3
                     with dissolve
 
-                    pa "*Drunk* That's why she's doing everything she can to not lose her scholarship."
+                    pa "*Drunk* Her plastic boobs?"
 
-                    pa "*Drunk* She'd have to sell a good chunk of her body back to the surgeons in order to pay for school, ha!"
+                    $ set_presidency_percent(v14_lindsey_popularity - 2)
 
-                    scene v16s7_2c # TPP. MC has a slight smile, mouth is closed, looking at the Random Characters, One of the Random Characters is laughing so hard another Random Character has to hold him/her up to keep him/her from falling down.
+                    pa "*Drunk* Or her plastic nose?"
+
+                    if v15_lindsey_recording == 2: # -if MC also chose Say nothing on Games Night
+                        scene v16s7_2b # TPP. MC has a slight smile, mouth is closed, looking at the Random Characters, The Random Characters are now laughing, and looking at each other
+                        with dissolve
+
+                        u "(Oh... This is it!)"
+
+                        scene v16s7_3
+                        with dissolve
+
+                        pa "*Drunk* That's why she's doing everything she can to not lose her scholarship."
+
+                        $ set_presidency_percent(v14_lindsey_popularity - 2)
+
+                        pa "*Drunk* She'd have to sell a good chunk of her body back to the surgeons in order to pay for school, ha!"
+
+                        scene v16s7_2c # TPP. MC has a slight smile, mouth is closed, looking at the Random Characters, One of the Random Characters is laughing so hard another Random Character has to hold him/her up to keep him/her from falling down.
+                        with dissolve
+
+                        u "(Oh shit!)"
+
+                elif v15_lindsey_recording == 3: # Lindsey was not drunk, but MC passed a KCT Check
+                    scene v16s7_3
                     with dissolve
 
-                    u "(Oh shit!)"
+                    pa "...She's my campaign rival..."
 
-            elif v15game_night_kct_check: # Lindsey was not drunk, but MC passed a KCT Check
-                scene v16s7_3
-                with dissolve
+                    $ set_presidency_percent(v14_lindsey_popularity - 2)
 
-                pa "...She's my campaign rival..."
+                    pa "What do you want me to say? That her boobs are obviously fake? Everyone knows that..."
 
-                pa "What do you want me to say? That her boobs are obviously fake? Everyone knows that..."
-
-                scene v16s7_2b
-                with dissolve
-
-                u "(Oh, shit...)"
-
-        elif not v15_lindsey_gamenight: # VIP Night
-            if v15_lindsey_alcohol and v15_stay_on_topic:
-                scene v16s7_3
-                with dissolve
-
-                pa "*Tipsy* What I don't like about Chloe?"
-
-                pa "*Tipsy* What doesn't annoy me? Everything about her is annoying."
-
-                scene v16s7_2a
-                with dissolve
-
-                u "(Oh, my fucking god, it's happening.)"
-
-                scene v16s7_3
-                with dissolve
-
-                pa "*Tipsy* She gets everything handed to her, even her fucking boobs!"
-
-                pa "*Drunk* I mean no wonder she's such a bitch all the time..."
-
-                if v15say_nothing: # -if MC also chose Say nothing on VIP night
                     scene v16s7_2b
                     with dissolve
 
-                    u "(Oh... This is it!)"
+                    u "(Oh, shit...)"
+
+            else: # VIP Night
+                if v15_lindsey_recording == 4 or v15_lindsey_recording == 5:
+                    scene v16s7_3
+                    with dissolve
+
+                    pa "*Tipsy* What I don't like about Chloe?"
+
+                    pa "*Tipsy* What doesn't annoy me? Everything about her is annoying."
+
+                    scene v16s7_2a
+                    with dissolve
+
+                    u "(Oh, my fucking god, it's happening.)"
 
                     scene v16s7_3
                     with dissolve
 
-                    pa "*Drunk* She's constantly worried about losing her free ride to a degree."
+                    pa "*Tipsy* She gets everything handed to her, even her fucking boobs!"
 
-                    pa "*Drunk* Without the President's scholarship, she'd have to sell all of that plastic back to the surgeons... *Laughs*"
+                    $ set_presidency_percent(v14_lindsey_popularity - 2)
 
-                    scene v16s7_2c
+                    pa "*Drunk* I mean no wonder she's such a bitch all the time..."
+
+                    if v15_lindsey_recording == 5: # -if MC also chose Say nothing on VIP night
+                        scene v16s7_2b
+                        with dissolve
+
+                        u "(Oh... This is it!)"
+
+                        scene v16s7_3
+                        with dissolve
+
+                        pa "*Drunk* She's constantly worried about losing her free ride to a degree."
+
+                        $ set_presidency_percent(v14_lindsey_popularity - 2)
+
+                        pa "*Drunk* Without the President's scholarship, she'd have to sell all of that plastic back to the surgeons... *Laughs*"
+
+                        scene v16s7_2c
+                        with dissolve
+
+                        u "(Oh shit!)"
+
+                elif v15_lindsey_recording == 6: # Lindsey was not drunk, but MC passed a KCT Check
+                    pa "What do you want me to say? That she gets everything handed to her?"
+
+                    $ set_presidency_percent(v14_lindsey_popularity - 2)
+
+                    pa "Or that the only reason she wants to be President is because she can't afford tuition?"
+
+                    scene v16s7_2b
                     with dissolve
 
-                    u "(Oh shit!)"
+                    u "(Oh, shit...)"
 
-            elif v15_lindsey_recording == 1: # Lindsey was not drunk, but MC passed a KCT Check
-                pa "What do you want me to say? That she gets everything handed to her?"
+        elif v15_chloe_postkiwii: # -if MC chose Embarrass Lindsey, Kiwii post announcement
+            scene v16s7_1a # TPP. MC is still in the school hallway as v16s7_1 MC's phone vibrates and he pulls his phone from his pocket and looks at it
+            with dissolve
 
-                pa "Or that the only reason she wants to be President is because she can't afford tuition?"
+            pause 0.75
 
-                scene v16s7_2b
-                with dissolve
+            $ chloe.messenger.newMessage("Check out SVC's Kiwii page and play the audio ;)")
+            $ chloe.messenger.addReply("Oooh, interesting...")
+                
+            label v16s7_phoneContinue:
+                if chloe.messenger.replies:
+                    call screen phone
+                if chloe.messenger.replies:
+                    u "(I should check what Chloe wants.)"
+                    jump v16s7_phoneContinue
 
-                u "(Oh, shit...)"
+            # -MC opens his Kiwii app to view the SVC Kiwii page. The most recent post is an audio file posted by an anonymous user with an empty avatar. The audio autoplays-
 
-        scene v16s7_2d # TPP. MC is just looking at the random characters excitement, MC slight smile, mouth is closed, the random characters have different poses and are still all laughing, Show Autumn walking towards MC, concerned expression, mouth is closed
-        with dissolve
-
-        u "(Shit is about to hit the fan!)"
-
-        scene v16s7_2e # TPP. The Random Characters are walking away smiling and now MC and Autumn are face to face looking at each other. Mc has no expression mouth is closed, Autumn has a concerned expression mouth is closed
-        with dissolve
-
-        pause 0.75
-
-    elif v15_chloe_postkiwii: # -if MC chose Embarrass Lindsey, Kiwii post announcement
-        scene v16s7_1a # TPP. MC is still in the school hallway as v16s7_1 MC's phone vibrates and he pulls his phone from his pocket and looks at it
-        with dissolve
-
-        pause 0.75
-
-        $ chloe.messenger.newMessage("Check out SVC's Kiwii page and play the audio ;)")
-        $ chloe.messenger.addReply("Oooh, interesting...")
-            
-        label v16s7_phoneContinue:
-            if chloe.messenger.replies:
-                call screen phone
-            if chloe.messenger.replies:
-                u "(I should check what Chloe wants.)"
-                jump v16s7_phoneContinue
-
-        ### force open kiwii and/or check for Chloe message
-        # -MC opens his Kiwii app to view the SVC Kiwii page. The most recent post is an audio file posted by an anonymous user with an empty avatar. The audio autoplays-
-
-        if v15_lindsey_gamenight:
-            if v15_lindsey_alcohol and v15bring_up_chloe:
-                scene v16s7_4 # FPP. Close up shot of MC's phone, show something like "KIWI AUDIO" with the KIWI logo on the screen
-                with dissolve
-
-                pha "*Drunk* What I don't like about Chloe?"
-
-                pha "*Drunk* *Giggles* do you want a list? I mean, where do I start?"
-
-                scene v16s7_5 # TPP. close up shot of MC's face, slight smile, mouth is slightly open.
-                with dissolve
-
-                u "(Oh, my fucking god, it's happening.)"
-
-                scene v16s7_4
-                with dissolve
-
-                pha "*Drunk* Her plastic boobs?"
-
-                pha "*Drunk* Or her plastic nose?"
-
-                if v15say_nothing: # -if MC also chose Say nothing on Games Night
-                    scene v16s7_5a # TPP. close up shot of MC's Face, he has an excited expression, mouth is open
+            if not (v14_help_lindsey and not v15_lindsey_gamenight):
+                if v15_lindsey_recording == 1 or v15_lindsey_recording == 2:
+                    scene v16s7_4 # FPP. Close up shot of MC's phone, show something like "KIWI AUDIO" with the KIWI logo on the screen
                     with dissolve
 
-                    u "(Oh... This is it!)"
+                    pha "*Drunk* What I don't like about Chloe?"
+
+                    pha "*Drunk* *Giggles* do you want a list? I mean, where do I start?"
+
+                    scene v16s7_5 # TPP. close up shot of MC's face, slight smile, mouth is slightly open.
+                    with dissolve
+
+                    u "(Oh, my fucking god, it's happening.)"
 
                     scene v16s7_4
                     with dissolve
 
-                    pha "*Drunk* That's why she's doing everything she can to not lose her scholarship."
+                    pha "*Drunk* Her plastic boobs?"
 
-                    pha "*Drunk* She'd have to sell a good chunk of her body back to the surgeons in order to pay for school, ha!"
+                    pha "*Drunk* Or her plastic nose?"
+
+                    if v15_lindsey_recording == 2: # -if MC also chose Say nothing on Games Night
+                        scene v16s7_5a # TPP. close up shot of MC's Face, he has an excited expression, mouth is open
+                        with dissolve
+
+                        u "(Oh... This is it!)"
+
+                        scene v16s7_4
+                        with dissolve
+
+                        pha "*Drunk* That's why she's doing everything she can to not lose her scholarship."
+
+                        pha "*Drunk* She'd have to sell a good chunk of her body back to the surgeons in order to pay for school, ha!"
+
+                        scene v16s7_5
+                        with dissolve
+
+                        u "(Oh shit!)"
+
+                elif v15_lindsey_recording == 3: # Lindsey was not drunk, but MC passed a KCT Check
+                    scene v16s7_4
+                    with dissolve
+
+                    pha "...She's my campaign rival..."
+
+                    pha "What do you want me to say? That her boobs are obviously fake? Everyone knows that..."
 
                     scene v16s7_5
                     with dissolve
 
-                    u "(Oh shit!)"
+                    u "(Oh, shit...)"
 
-            elif v15game_night_kct_check: # Lindsey was not drunk, but MC passed a KCT Check
-                scene v16s7_4
-                with dissolve
-
-                pha "...She's my campaign rival..."
-
-                pha "What do you want me to say? That her boobs are obviously fake? Everyone knows that..."
-
-                scene v16s7_5
-                with dissolve
-
-                u "(Oh, shit...)"
-
-        elif not v15_lindsey_gamenight: # VIP Night
-            if v15_lindsey_alcohol and v15_stay_on_topic:
-                scene v16s7_4
-                with dissolve
-
-                pha "*Tipsy* What I don't like about Chloe?"
-
-                pha "*Tipsy* What doesn't annoy me? Everything about her is annoying."
-
-                scene v16s7_5
-                with dissolve
-
-                u "(Oh, my fucking god, it's happening.)"
-
-                scene v16s7_4
-                with dissolve
-
-                pha "*Tipsy* She gets everything handed to her, even her fucking boobs!"
-
-                pha "*Drunk* I mean no wonder she's such a bitch all the time..."
-
-                if v15say_nothing: # -if MC also chose Say nothing on VIP night
-                    scene v16s7_5a
+            else: # VIP Night
+                if v15_lindsey_recording == 4 or v15_lindsey_recording == 5:
+                    scene v16s7_4
                     with dissolve
 
-                    u "(Oh... This is it!)"
+                    pha "*Tipsy* What I don't like about Chloe?"
+
+                    pha "*Tipsy* What doesn't annoy me? Everything about her is annoying."
+
+                    scene v16s7_5
+                    with dissolve
+
+                    u "(Oh, my fucking god, it's happening.)"
 
                     scene v16s7_4
                     with dissolve
 
-                    pha "*Drunk* She's constantly worried about losing her free ride to a degree."
+                    pha "*Tipsy* She gets everything handed to her, even her fucking boobs!"
 
-                    pha "*Drunk* Without the President's scholarship, she'd have to sell all of that plastic back to the surgeons... *Laughs*"
+                    pha "*Drunk* I mean no wonder she's such a bitch all the time..."
+
+                    if v15_lindsey_recording == 5: # -if MC also chose Say nothing on VIP night
+                        scene v16s7_5a
+                        with dissolve
+
+                        u "(Oh... This is it!)"
+
+                        scene v16s7_4
+                        with dissolve
+
+                        pha "*Drunk* She's constantly worried about losing her free ride to a degree."
+
+                        pha "*Drunk* Without the President's scholarship, she'd have to sell all of that plastic back to the surgeons... *Laughs*"
+
+                        scene v16s7_5
+                        with dissolve
+
+                        u "(Oh shit!)"
+
+                elif v15_lindsey_recording == 6: # Lindsey was not drunk, but MC passed a KCT Check
+                    scene v16s7_4
+                    with dissolve
+
+                    pha "What do you want me to say? That she gets everything handed to her?"
+
+                    pha "Or that the only reason she wants to be President is because she can't afford tuition?"
 
                     scene v16s7_5
                     with dissolve
 
-                    u "(Oh shit!)"
+                    u "(Oh, shit...)"
 
-            elif v15_lindsey_recording == 1: # Lindsey was not drunk, but MC passed a KCT Check
-                scene v16s7_4
-                with dissolve
-
-                pha "What do you want me to say? That she gets everything handed to her?"
-
-                pha "Or that the only reason she wants to be President is because she can't afford tuition?"
-
-                scene v16s7_5
-                with dissolve
-
-                u "(Oh, shit...)"
-
-        scene v16s7_2d
-        with dissolve
-
-        u "(Shit is about to hit the fan!)"
-
-        scene v16s7_2e
-        with dissolve
-        
-        pause 0.75
+        else:
+            jump v16s7_did_not_sabotage_lindsey
 
     else: # -if MC not helping Chloe and/or did not get Lindsey drunk at Games night or VIP night
         jump v16s7_did_not_sabotage_lindsey
+
+    scene v16s7_2d # TPP. MC is just looking at the random characters excitement, MC slight smile, mouth is closed, the random characters have different poses and are still all laughing, Show Autumn walking towards MC, concerned expression, mouth is closed
+    with dissolve
+
+    u "(Shit is about to hit the fan!)"
+
+    scene v16s7_2e # TPP. The Random Characters are walking away smiling and now MC and Autumn are face to face looking at each other. Mc has no expression mouth is closed, Autumn has a concerned expression mouth is closed
+    with dissolve
+
+    pause 0.75
 
     scene v16s7_6 # FPP. Show Autumn with a concerned expression, mouth is open, looking at MC
     with dissolve
@@ -276,7 +281,10 @@ label v16s7:
     scene v16s7_6
     with dissolve
 
-    aut "Yeah, I remember that night, but there was no ill-intent behind it. Lindsey was drunk."
+    aut "Yeah, I remember that night, but there was no ill-intent behind it."
+    
+    if v15_lindsey_alcohol:
+        aut "She just drank a bit too much."
 
     scene v16s7_6a
     with dissolve
@@ -290,6 +298,8 @@ label v16s7:
 
     menu:
         "Defend Lindsey":
+            $ set_presidency_percent(v14_lindsey_popularity + 1)
+        
             scene v16s7_6a
             with dissolve
 
@@ -301,15 +311,16 @@ label v16s7:
 
             u "No idea. But there's no denying that Lindsey said those things about Chloe."
 
-            scene v16s7_6
-            with dissolve
+            if v15_lindsey_alcohol:
+                scene v16s7_6
+                with dissolve
 
-            aut "But she was drunk, [name]. She didn't mean any of it."
+                aut "But she was drunk, [name]. She didn't mean any of it."
 
-            scene v16s7_6a
-            with dissolve
+                scene v16s7_6a
+                with dissolve
 
-            u "I don't know. People are more honest when they're drunk. Drunk words are sober thoughts, you know?"
+                u "I don't know. People are more honest when they're drunk. Drunk words are sober thoughts, you know?"
 
             scene v16s7_6
             with dissolve
@@ -479,7 +490,7 @@ label v16s7:
                     
                 aut "He's still with us."
 
-                aut "There's been some interest in him though. There's a couple coming back to see him tomorrow."
+                aut "There's been some interest in him, though. There's a couple coming back to see him tomorrow."
 
                 scene v16s7_6e
                 with dissolve
@@ -535,7 +546,7 @@ label v16s7:
         scene v16s7_6e
         with dissolve
 
-        u "Never a dull moment for you presidents, huh? Bye, Autumn."
+        u "Never a dull moment for you Presidents, huh? Bye, Autumn."
 
         scene v16s7_8
         with dissolve

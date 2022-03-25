@@ -85,61 +85,63 @@ label v16s8:
 
             cl "I've never been bullied before. I guess this is what it feels like. *Cries*"
 
-    scene v16s8_4d
-    with dissolve
-
-    cl "It's not my fault I was born with such huge boobs. They're not even fake! They're completely natural!"
-
-    if chloe.relationship >= Relationship.GIRLFRIEND:
-        scene v16s8_4c
+    if not v15_lindsey_recording == 6:
+        scene v16s8_4d
         with dissolve
 
-        u "I know..."
+        cl "It's not my fault I was born with such huge boobs. They're not even fake! They're completely natural!"
 
-        scene v16s8_4f # FPP. Chloe raises an eyebrow at MC, and a "suspicious expression," mouth is still closed
+        if chloe.relationship >= Relationship.GIRLFRIEND:
+            scene v16s8_4c
+            with dissolve
+
+            u "I know..."
+
+            scene v16s8_4f # FPP. Chloe raises an eyebrow at MC, and a "suspicious expression," mouth is still closed
+            with dissolve
+
+            pause 0.75
+
+            scene v16s8_4g # FPP. Chloe gives MC a "don't you dare look," mouth is still closed
+            with dissolve
+
+            u "I mean, I can... I've felt... Nevermind."
+
+        scene v16s8_3d # TPP. Chloe still looks sad mouth is closed, MC Chloe Random Female and Random Guy 2 look at Random Guy 1 all of their mouths are closed no expressions, Random Guy 1's mouth is open and he has a slight smile
         with dissolve
 
-        pause 0.75
+        xav "Ignore Lindsey! We love your boobs!"
 
-        scene v16s8_4g # FPP. Chloe gives MC a "don't you dare look," mouth is still closed
+        scene v16s8_4h # FPP Show Chloe no expression, no tears in her eyes, mouth is closed
         with dissolve
 
-        u "I mean, I can... I've felt... Nevermind."
+        u "*Sighs* What he said."
 
-    scene v16s8_3d # TPP. Chloe still looks sad mouth is closed, MC Chloe Random Female and Random Guy 2 look at Random Guy 1 all of their mouths are closed no expressions, Random Guy 1's mouth is open and he has a slight smile
-    with dissolve
+        scene v16s8_4i # FPP. Chloe has a disgusted expression on her face, mouth is open, looking at MC
+        with dissolve
 
-    rg1 "Ignore Lindsey! We love your boobs!"
-
-    scene v16s8_4h # FPP Show Chloe no expression, no tears in her eyes, mouth is closed
-    with dissolve
-
-    u "*Sighs* What he said."
-
-    scene v16s8_4i # FPP. Chloe has a disgusted expression on her face, mouth is open, looking at MC
-    with dissolve
-
-    cl "*Scoffs*"
+        cl "*Scoffs*"
 
     scene v16s8_4h
     with dissolve
 
     u "Just ignore her. You need to stay strong."
 
-    scene v16s8_3e # TPP. same as v16s8_3c Random Guy 2's mouth is open slight smile looking at Chloe, and everyone is looking at him
-    with dissolve
+    if not v15_lindsey_recording == 6:
+        scene v16s8_3e # TPP. same as v16s8_3c Random Guy 2's mouth is open slight smile looking at Chloe, and everyone is looking at him
+        with dissolve
 
-    rg2 "That's right Chloe! We believe in you!"
+        be "That's right Chloe! We believe in you!"
 
-    scene v16s8_3c
-    with dissolve
+        scene v16s8_3c
+        with dissolve
 
-    rg1 "You and your non-fake tits!"
+        xav "You and your non-fake tits!"
 
-    scene v16s8_3f # TPP. same as v16s8_3c Everyone has a disgusted expression on their face looking at Random Guy 1, Random Guy 2 has a "what did I do?" look on his face
-    with dissolve
+        scene v16s8_3f # TPP. same as v16s8_3c Everyone has a disgusted expression on their face looking at Random Guy 1, Random Guy 2 has a "what did I do?" look on his face
+        with dissolve
 
-    u "(Who the hell are these people?)"
+        u "(Who the hell are these people?)"
         
     scene v16s8_3g # TPP. Everyone looks a little surprised and sees Lindsey approaching with an angry face, straight up to Chloe
     with dissolve
