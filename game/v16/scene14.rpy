@@ -310,12 +310,10 @@ label v16s14:
 
             u "Fantastic, thanks."
 
-            pause 0.75
-
             scene v16s14_12
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
         "Stay focused":
             $ grant_achievement("must_resist_temptation")
@@ -370,12 +368,10 @@ label v16s14:
 
             u "Fantastic, thanks."
 
-            pause 0.75
-
             scene v16s14_10e
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
         "Stare at Ms. Rose":
             scene v16s14_13 # FPP. MC focusing only on Ms. Rose's ass while she does the cow pose
@@ -428,12 +424,10 @@ label v16s14:
 
             u "Fantastic, thanks."
 
-            pause 0.75
-
             scene v16s14_13
             with dissolve
 
-            pause 0.75
+            pause 1.25
             
     scene v16s14_10b
     with dissolve
