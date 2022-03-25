@@ -555,9 +555,6 @@ label v16s11:
     cl "That's such a good idea! I could use this for my campaign!"
 
     if v14_help_chloe:
-        scene v16s11_11f
-        with dissolve
-
         cl "Come on. Let's go plan phase three, now!"
 
         scene v16s11_14 # TPP. Chloe leading MC by his arm along the hallway 
