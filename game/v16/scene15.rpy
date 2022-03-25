@@ -187,7 +187,7 @@ label v16s15pier_date_carousel: # -if Carousel
     $ v16s15_fr_carnival.add("carousel") # TODO: Variable
 
     scene v16s15_10 # TPP. Imre leads Karen by the hand (both smiling mouths closed) into the carousel and past An older male CARNIVAL WORKER stands behind the TICKET STAND to the side of the ride [CAROUSEL: Location: Carousel2, Camera: Carousel2].
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -704,7 +704,7 @@ label v16s15pier_date_wheel: # -if Wheel of chance
     $ v16s15_fr_carnival.add("wheel")
 
     scene v16s15_26 # TPP Imre and Karen (front, closet to the bench) & MC and Penelope( behind them, closest to the bench) stand by the [CAROUSEL BENCH] facing the [WHEEL OF CHANCE]. "Dylan", a short man wearing a pink 'respect women' t-shirt, angry, mouth open, yelling, stands [ON RIGHT OF THE WHEEL,(WHEN FACING IT)] in front of the Wheel yelling at the Wheel attendant [ON LEFT OF THE WHEEL, WHEN FACING IT].
-    with dissolve
+    #with dissolve
 
     pause 0.75
 
@@ -1273,7 +1273,7 @@ label v16s15pier_date_carousel_2: ### -if HotDog Stand
     $ v16s15_fr_carnival.add("hotdog")
 
     scene v16s15_47 # FPP. Imre and Karen, looking at each other with slight smiles mouths are closed, stand in front of HOT DOG STAND. HOTDOG VENDOR on the left of the HOT DOG STAND. Imre hands money To the VENDOR. [HOTDOG]
-    with dissolve
+    #with dissolve
 
     pause 0.75
 

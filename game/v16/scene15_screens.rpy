@@ -15,7 +15,7 @@ screen v16s15_pier_entrance():
     imagebutton:
         idle Transform("#0000", xysize=(237, 550))
         hover image_path + "Highlights/v16s15pier_entrance_left.webp"
-        action Jump("")
+        action Jump("v16s15pier_date_wheel")
         pos (354, 396)
 
     imagebutton:
