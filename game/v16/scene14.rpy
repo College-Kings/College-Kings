@@ -317,64 +317,6 @@ label v16s14:
 
             pause 0.75
 
-        "Stare at Ms. Rose":
-            scene v16s14_13 # FPP. MC focusing only on Ms. Rose's ass while she does the cow pose
-            with dissolve
-
-            ro "Now take a deep breath in... and..."
-
-            ro "Hold it..."
-
-            scene v16s14_13a # FPP. Same as v16s14_13, Ms. Rose curving her back into a catlike pose
-            with dissolve
-
-            ro "And on the exhale, curve your back to go into a cat-like pose."
-
-            u "(Ooh... I feel something burning. Is that good?)"
-
-            scene v16s14_13b # FPP. Same as v16s14_13, more neutral position, Ms. Rose inhaling before going into the cat or cow pose
-            with dissolve
-
-            ro "Now inhale... And hold."
-
-            scene v16s14_13a
-            with dissolve
-
-            ro "Now when we release, we form into our cow pose again."
-
-            ro "And repeat."
-
-            scene v16s14_13
-            with dissolve
-
-            no "I'm really... *Grunts* Feeling this."
-
-            ro "Does it feel okay?"
-
-            scene v16s14_13b
-            with dissolve
-
-            pause 0.75
-
-            scene v16s14_13a
-            with dissolve
-
-            no "Yeah. Just tight."
-
-            no "How's it going back there, [name]?"
-
-            scene v16s14_13b
-            with dissolve
-
-            u "Fantastic, thanks."
-
-            pause 0.75
-
-            scene v16s14_13
-            with dissolve
-
-            pause 0.75
-            
         "Stay focused":
             $ grant_achievement("must_resist_temptation")
         
@@ -435,6 +377,64 @@ label v16s14:
 
             pause 0.75
 
+        "Stare at Ms. Rose":
+            scene v16s14_13 # FPP. MC focusing only on Ms. Rose's ass while she does the cow pose
+            with dissolve
+
+            ro "Now take a deep breath in... and..."
+
+            ro "Hold it..."
+
+            scene v16s14_13a # FPP. Same as v16s14_13, Ms. Rose curving her back into a catlike pose
+            with dissolve
+
+            ro "And on the exhale, curve your back to go into a cat-like pose."
+
+            u "(Ooh... I feel something burning. Is that good?)"
+
+            scene v16s14_13b # FPP. Same as v16s14_13, more neutral position, Ms. Rose inhaling before going into the cat or cow pose
+            with dissolve
+
+            ro "Now inhale... And hold."
+
+            scene v16s14_13a
+            with dissolve
+
+            ro "Now when we release, we form into our cow pose again."
+
+            ro "And repeat."
+
+            scene v16s14_13
+            with dissolve
+
+            no "I'm really... *Grunts* Feeling this."
+
+            ro "Does it feel okay?"
+
+            scene v16s14_13b
+            with dissolve
+
+            pause 0.75
+
+            scene v16s14_13a
+            with dissolve
+
+            no "Yeah. Just tight."
+
+            no "How's it going back there, [name]?"
+
+            scene v16s14_13b
+            with dissolve
+
+            u "Fantastic, thanks."
+
+            pause 0.75
+
+            scene v16s14_13
+            with dissolve
+
+            pause 0.75
+            
     scene v16s14_10b
     with dissolve
 
