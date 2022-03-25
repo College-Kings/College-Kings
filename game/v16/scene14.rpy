@@ -289,7 +289,7 @@ label v16s14:
             scene v16s14_12
             with dissolve
 
-            no "I'm really... *Grunts* Feeling this."
+            no "I'm really... *Grunts* feeling this."
 
             ro "Does it feel okay?"
 
@@ -349,7 +349,7 @@ label v16s14:
             scene v16s14_10e
             with dissolve
 
-            no "I'm really... *Grunts* Feeling this."
+            no "I'm really... *Grunts* feeling this."
 
             ro "Does it feel okay?"
 
@@ -407,7 +407,7 @@ label v16s14:
             scene v16s14_13
             with dissolve
 
-            no "I'm really... *Grunts* Feeling this."
+            no "I'm really... *Grunts* feeling this."
 
             ro "Does it feel okay?"
 
