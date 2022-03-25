@@ -194,7 +194,7 @@ label v16s10: # Econ class
     scene v16s10_4b
     with dissolve
 
-    menu:
+    menu (fail_label="v16s10_dontknow"):
         "Forty-two?":
             $ grant_achievement("the_answer_to_everything")
 
@@ -213,6 +213,8 @@ label v16s10: # Econ class
             u "Right, yeah... Sorry."
 
         "I don't know":
+            label v16s10_dontknow:
+            
             u "Sorry, I don't know. I... was thinking about something else."
 
             scene v16s10_4a
