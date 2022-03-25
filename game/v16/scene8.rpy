@@ -220,7 +220,7 @@ label v16s8:
             scene v16s8_8a # FPP. Show Lindsey with an angry expression looking at MC, mouth is closed
             with dissolve
 
-            u "Seriously guys, calm down before this gets ugly."
+            u "Seriously girls, calm down before this gets ugly."
 
             scene v16s8_7
             with dissolve
