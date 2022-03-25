@@ -172,7 +172,7 @@ label v16s32:
                             scene v16s32_3a
                             with dissolve
 
-                            u "(I can't use someone else's money for my date, haha. I think Aubrey would understand."
+                            u "(I can't use someone else's money for my date, haha. I think Aubrey would understand.)"
 
             "She can manage":
                 scene v16s32_3

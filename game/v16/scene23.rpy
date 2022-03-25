@@ -969,8 +969,7 @@ label v16s23: # 23) Meet Amber at strip club
             pause 0.75
 
         "Give him a break":
-
-            u "(The dude's already drunk out of his mind, I'll let him go this time. Can't promise that no one else won't kick his ass tonight, haha."
+            u "(The dude's already drunk out of his mind, I'll let him go this time. Can't promise that no one else won't kick his ass tonight, haha.)"
 
             scene v16s23_37a # TPP Same angle as 37. MC walking away from the strip club [OUTSIDE ENTRANCE]
             with dissolve

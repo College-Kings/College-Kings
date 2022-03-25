@@ -389,7 +389,7 @@ label v16s48a_continue:
 
     cl "*Giggles* Mmm..."
 
-    u "(Oh, fuck... It's... She's... I can feel the back of her-"
+    u "(Oh, fuck... It's... She's... I can feel the back of her-)"
 
     u "*Moans* God, you're incredible, Chloe."
        
