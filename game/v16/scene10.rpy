@@ -259,7 +259,7 @@ label v16s10: # Econ class
                 scene v16s10_3d # FPP Same angle as 3, Lauren looking forward, arms crossed over her chest, pouting in disappointment
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
             "Let her continue":
                 label v16s10_sg:
