@@ -900,7 +900,7 @@ label v16s14:
     scene v16s14_22
     with dissolve
 
-    u "Bye guys!"
+    u "Bye ladies!"
 
     scene v16s14_21a
     with dissolve
