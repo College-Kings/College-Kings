@@ -41,8 +41,6 @@ label v16s10: # Econ class
     
     if "v15_lauren" in sceneList: # if MC and Lauren had sex after Lauren's party 
         #scene v16s10_3b # FPP Same angle as 3, Lauren looking down with a shy expression, slight smile, mouth open
-        scene v16s10_3a
-        with dissolve
 
         la "I was really looking forward to class today."
 
