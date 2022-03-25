@@ -40,7 +40,7 @@ label v16s44:
 
         u "Haha, it's okay."
 
-        if v16s10_let_lauren_continue_hj: # -if Lauren also gave MC a hand job in econ class
+        if "v16_lauren" in sceneList: # -if Lauren also gave MC a hand job in econ class
             scene v16s44_2
             with dissolve
 
