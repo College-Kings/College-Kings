@@ -442,7 +442,11 @@ default v16_wrong_key = True # This does default to True; not a typo. Used for b
 default v16_wintom = False
 default v16_home_riley = False
 
-# Chloe Planning Board 
+# Chloe Planning Board
+default v16_chloe_newspaper = False ##Approach A. Sparty = (v14_help_chloe and not v16_chloe_newspaper)
+default v16_chloe_on_cover = False ##Approach A2A. Chloe puts Lindsey on cover = (v16_chloe_newspaper and not v16_chloe_on_cover)
+default v16_chloe_real_masseuse = False ##Approach B2A. MC Masseuse = (v14_help_chloe and not v16_chloe_newspaper and not v16_chloe_real_masseuse)
+
 default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
 default v16s12_chloe_planboard_decide_promote_chloe_on_cover = False #  True = promote chloe on newspaper cover / False = Embarrass Lindsey on front of newspaper cover
 default v16s12_chloe_planboard_decide_mc_gives_massages = False   # True = Hire a professional to give messages / False = MC gives massages
