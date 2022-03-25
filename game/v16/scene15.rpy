@@ -6,7 +6,7 @@
 
 label v16s15:
     scene v16s15_1 # TPP. MC approaches left pier entrance, now back in regular clothes. Penelope waits for him, both of them slight smiles, mouths are closed, both looking at each other, MC is walking up to Penelope [LEFT PIER ENTRANCE]
-    with dissolve
+    with fade
 
     pause 0.75
 
