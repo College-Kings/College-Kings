@@ -777,7 +777,7 @@ label v16s14:
     scene v16s14_21
     with dissolve
 
-    no "Uh, yeah. Sure. But honestly, not for long, okay? I'm ready to relax and just forget about things with Chris."
+    no "Uh, yeah. Sure. But honestly, not for long, okay? I'm ready to relax and just forget about Chris."
 
     scene v16s14_20
     with dissolve
