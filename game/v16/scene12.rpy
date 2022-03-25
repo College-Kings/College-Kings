@@ -259,7 +259,7 @@ label v16s12:
         scene v16s12_2e
         with dissolve
 
-        u "Even Lindsey... That might make things interesting, you know. If you keep her happy all night?"
+        u "Even Lindsey... That might make things interesting, you know. Can you keep her happy all night?"
 
         scene v16s12_2c
         with dissolve
