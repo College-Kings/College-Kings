@@ -158,7 +158,7 @@ label v16s15:
     scene v16s15_8 # TPP Keeping in pairs, they all walk THROUGH the CENTER ENTRANCE, Imre and Karen leading in front, MC and Penelope are walking together behind them, camera angled from the to avoid facial features, all are looking where they are walking.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     # Start Free roam 
     # screen layout 
