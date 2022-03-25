@@ -16,12 +16,10 @@ label v16s12:
         cl "Phew! Now that we're in private, we can finally talk about how the announcement went, and..."
 
         if chloe.relationship >= Relationship.GIRLFRIEND:
-            play sound "sounds/kiss.mp3"
-
             scene v16s12_3 # TPP. Show Chloe giving MC a kiss
             with dissolve
-
-            pause 0.75
+            play sound "sounds/kiss.mp3"
+            pause 1.5
 
         scene v16s12_2a # FPP. Same as v16s12_2, Chloe smiling, mouth open
         with dissolve
