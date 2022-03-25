@@ -798,8 +798,8 @@ label v16s15pier_date_wheel: # -if Wheel of chance
 
     imre "What?"
 
-    scene v16s15_30f # FPP. Show just Imre and Karen, Imre and Karen are looking at MC, Imre's mouth is open with a piece of candy on his tongue with a slightly concerned expression, Karen has a slightly disgusted expression, mouth is closed [WHEEL]
-    with dissolve
+    #scene v16s15_30f # FPP. Show just Imre and Karen, Imre and Karen are looking at MC, Imre's mouth is open with a piece of candy on his tongue with a slightly concerned expression, Karen has a slightly disgusted expression, mouth is closed [WHEEL]
+    #with dissolve
 
     u "Imre, that was just a random piece of candy..."
 
