@@ -223,12 +223,12 @@ label v16s12:
         scene v16s12_2a
         with dissolve
 
-        cl "Mmm... You lost me at smart. *Laughs*"
+        cl "Mmm... You lost me at smart"
 
         scene v16s12_2g # FPP. Same as v16s12_2, Chloe laughing
         with dissolve
 
-        pause 0.75
+        cl "*Laughs*"
 
         scene v16s12_2 
         with dissolve
