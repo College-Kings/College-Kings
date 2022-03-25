@@ -263,8 +263,8 @@ label v16s11:
     menu:
         "Support her":
             $ add_point(KCT.BRO)
-            scene v16s11_6b
-            with dissolve
+            scene v16s11_6d
+            #with dissolve
 
             u "Ha, I agree. You should do it. Could be fun."
 
@@ -275,8 +275,8 @@ label v16s11:
 
         "Elijah sucks though":
             $ add_point(KCT.TROUBLEMAKER)
-            scene v16s11_6b
-            with dissolve
+            scene v16s11_6d
+            #with dissolve
 
             u "Elijah sucks though, Riley. Seriously."
 
