@@ -464,7 +464,7 @@ default v16s23_mention_laptop = False # TODO: Variable
 default v16s23_support_amber = False # TODO: Variable
 default v16s25a_date_with_aubrey = False
 default v16s26_lindsey_donation_money = 50 # Track if MC spends any of the money lindsey gives him (can be spend in s32 and s38)
-default v16s27_parent_chloe = False  # True = Chloe; False = Nora
+default v16s27_parent_chloe = False  # True = Chloe, False = Nora
 default v16s27_mc_baby_duty_night = 0 # 0 = Unselected, 1 = Wednesday_alone, 2 = Thrusday_alone, 4 = Friday_alone, 0x10 = Wednesday_shared, 0x20 = Thursday_shared, 0x40 = Friday_shared
 default v16s32_birthday_reservation = 0  # 0 = neither, 1 = standard_reserveration, 2 = birthday_reservation  
 default v16s32_aubrey_cab_and_flowers = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers
