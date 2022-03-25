@@ -1036,7 +1036,7 @@ label v16s15pier_date_wheel: # -if Wheel of chance
     scene v16s15_39 # TPP. Show just Penenlope and Karen looking at each other and laughing. the girls giggle- [WHEEL]
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v16s15_33c
     with dissolve
