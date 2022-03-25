@@ -352,7 +352,7 @@ label v16s15pier_carousel: # -if Carousel
 
                     u "(Wow, this guy is serious about his carousel. *Laughs*)"
 
-                    ### ERROR: [End of Checkpoint 1.1. Continue to Checkpoint 2]
+                    # [End of Checkpoint 1.1. Continue to Checkpoint 2]
 
         "Sit with Penelope":
             $ add_point(KCT.BOYFRIEND)
@@ -413,7 +413,7 @@ label v16s15pier_carousel: # -if Carousel
 
                 pe "Haha, [name], behave."
 
-                if "v15_penelope" in sceneList: # -if MC also gave Penelope oral at Lauren's party # TODO: Variable
+                if "v15_penelope" in sceneList: # -if MC also gave Penelope oral at Lauren's party
                     scene v16s15_20a
                     with dissolve
 
@@ -629,9 +629,9 @@ label v16s15pier_carousel: # -if Carousel
 
             pe "*Laughs* True."
 
-            ### ERROR: [End of Checkpoint 1.2. Continue to Checkpoint 2]
+            # [End of Checkpoint 1.2. Continue to Checkpoint 2]
 
-    ### ERROR: [Checkpoint 2 START]
+    # [Checkpoint 2 START]
 
     scene v16s15_23 # TPP. Show Imre (inside, his arm around Karen) and Karen (outside) sitting in their booth seat, Imre moves in for a kiss but Karen turns away [CAROUSEL: Ride Location: Carousel1, Camera: Carousel4]
     with dissolve
@@ -1259,7 +1259,7 @@ label v16s15pier_wheel: # -if Wheel of chance
 
     call screen v16s15_pier_middle_carousel # -Return to the second free roam screen-
 
-label v16s15pier_hotdog: ### -if HotDog Stand
+label v16s15pier_hotdog: # -if HotDog Stand
     $ freeroam15.add("hotdog")
 
     scene v16s15_47 # FPP. Imre and Karen, looking at each other with slight smiles mouths are closed, stand in front of HOT DOG STAND. HOTDOG VENDOR on the left of the HOT DOG STAND. Imre hands money To the VENDOR. [HOTDOG]
@@ -1356,7 +1356,7 @@ label v16s15pier_hotdog: ### -if HotDog Stand
 
             pause 0.75
 
-        else: # -if PenelopeFriend TODO: Variable
+        else: # -if PenelopeFriend
             scene v16s15_55 # FPP. Just show MC's hand with the hotdog coupon in it. [HOTDOG]
             with dissolve
 
@@ -1428,7 +1428,7 @@ label v16s15pier_hotdog: ### -if HotDog Stand
 
                 "Keep the coupon":
                     $ add_point(KCT.BRO)
-                    if penelope.relationship >= Relationship.GIRLFRIEND: ### TODO: Variable
+                    if penelope.relationship >= Relationship.LIKES: ### TODO: Variable
                         $ add_point(KCT.TROUBLEMAKER)
 
                     scene v16s15_55

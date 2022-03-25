@@ -462,7 +462,7 @@ label v16s11:
     u "(I think Riley's over the Chicks at the moment.)"
 
 # -if Announcement, and Chloe and Lindsey went to Mr. Lee's office
-    if v15_lindsey_recording > 0: ### VERIFY This gets us annoucenment (and I think that will flow to Mr. Lee's office, otherwise we can add sceen8 to sceneList and check for that)
+    if v15_lindsey_recording > 0:
         scene v16s11_11d
         #with dissolve
 
