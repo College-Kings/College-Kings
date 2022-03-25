@@ -413,7 +413,7 @@ label v16s22:
 
                     am "You're right, you shouldn't have. Lesson learned."
 
-                elif amber.relationship >= Relationship.FWB: # TODO: Variable  # -if AmberRS BUT AmberKCT not passed
+                elif amber.relationship >= Relationship.FWB: # TODO: Variable # -if AmberRS BUT AmberKCT not passed
                     scene v16s22_9c
                     with dissolve
 
@@ -996,7 +996,7 @@ label v16s22:
 
         pause 0.75
 
-        scene v16s22_8f # TPP. Amber throws her body quickly over MC, he falls back slightly on the couch, Amber is face to face with Mc looking at him seductively her mouth is closed, Both of them have the coffee cups in their hands but in a manner that it didn't spill, Mc is looking at Amber with a slightly shocked expression, mouth is open  [LEWS STAFF ROOM]
+        scene v16s22_8f # TPP. Amber throws her body quickly over MC, he falls back slightly on the couch, Amber is face to face with Mc looking at him seductively her mouth is closed, Both of them have the coffee cups in their hands but in a manner that it didn't spill, Mc is looking at Amber with a slightly shocked expression, mouth is open [LEWS STAFF ROOM]
         with dissolve
 
         pause 0.75

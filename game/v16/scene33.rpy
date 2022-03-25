@@ -54,7 +54,7 @@ label v16s33: # 33) MC showers
 
     $ lauren.messenger.newMessage("Hey. Autumn's too busy to walk the dogs tonight so I'm helping, and the dog is way bigger than I thought! Lol. I'm gonna need your help! Please come?")
 
-    if v16s25a_date_with_aubrey: # TODO: Variable  # PLACEHOLDER VARIABLE NAME # -if MC going on Aubrey date
+    if v16s25a_date_with_aubrey: # TODO: Variable # PLACEHOLDER VARIABLE NAME # -if MC going on Aubrey date
         
         $ lauren.messenger.addReply("I'm sorry but I already have plans and am about to head out. Good luck! :)")
         $ lauren.messenger.newMessage("Aw, okay. Thanks anyway!")

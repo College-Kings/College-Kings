@@ -319,7 +319,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     am "So, it went okay, getting into my place?"
 
-    scene v16s23_17 # FPP View of Amber next to MC in the private booth. She is looking at MC with a slight smile, mouth closed  [CHECKPOINT C]
+    scene v16s23_17 # FPP View of Amber next to MC in the private booth. She is looking at MC with a slight smile, mouth closed [CHECKPOINT C]
     with dissolve
 
     u "Oh, yeah. Found the key, went inside. Easy enough."

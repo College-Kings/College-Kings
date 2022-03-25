@@ -396,7 +396,7 @@ label v16s25:
 
                             em "I guess I can always return it."
 
-                            scene v16s25_11i # TPP. Laptop Screen, Video chat overlay with Emily  (lingerie1), Emily looking at MC on the video chat, Emily slight frown, mouth closed/ MC, mouth open, slight smile.
+                            scene v16s25_11i # TPP. Laptop Screen, Video chat overlay with Emily (lingerie1), Emily looking at MC on the video chat, Emily slight frown, mouth closed/ MC, mouth open, slight smile.
                             with dissolve
 
                             u "It's your call, it doesn't look horrible, haha."

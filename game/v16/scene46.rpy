@@ -56,9 +56,9 @@ label v16s46: # 46) Baby night, MC only
     u "(Let's see how long this lasts before I get woken up...)"
 
     if joinwolves:
-        scene v16s46_36 # FPP Show MCs glowing phone with the time of 1:17am  [WOLF ROOM]
+        scene v16s46_36 # FPP Show MCs glowing phone with the time of 1:17am [WOLF ROOM]
     else:
-        scene v16s46_6 # FPP Show MCs glowing phone with the time of 1:17am  [APE ROOM]
+        scene v16s46_6 # FPP Show MCs glowing phone with the time of 1:17am [APE ROOM]
     with fade
 
     u "*Snoring*"

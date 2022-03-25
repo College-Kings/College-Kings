@@ -120,7 +120,7 @@ label v16s11:
     # -Pinboard MUST include a notice about sex education week, and a note about how the nurse always has free condoms available to students in her office. MC reacts to this briefly.
     # -Pinboard MUST include chloe campaign poster, she reacts to it saying "its her bad side". We can use a photo that she's already posted for her campaign, or it can be new.
 
-    scene v16s11_4 # TPP. MC and Riley walking up to a pinboard thats in the hallways somewhere, on the pinboard there is a sign up sheet for the newspaper on the paper it says "Looking for one to two more students to join the Newspaper squad!", a notice paper about sex education and that the school nurse provides free condoms to students, and  Chloe's presidential campaign poster.
+    scene v16s11_4 # TPP. MC and Riley walking up to a pinboard thats in the hallways somewhere, on the pinboard there is a sign up sheet for the newspaper on the paper it says "Looking for one to two more students to join the Newspaper squad!", a notice paper about sex education and that the school nurse provides free condoms to students, and Chloe's presidential campaign poster.
     with dissolve
 
     pause 0.75

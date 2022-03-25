@@ -53,7 +53,7 @@ label v16s61:
 
                 u "(It was nice of the bodyguard to let us change out of those uniforms first, but did he really have to pick Lindsey up again? I swear he did it just for the photos! What a prick.)"
 
-                #! v16s61kw_1  MC and Lindsey (both regular clothes) with Polly's bodyguard at the exit of the hotel, Lindsey being carried out over his shoulder
+                #! v16s61kw_1 MC and Lindsey (both regular clothes) with Polly's bodyguard at the exit of the hotel, Lindsey being carried out over his shoulder
 
                 ###check force send
                 $ v16s61_kiwiiPost1 = KiwiiPost(chloe, "v16/v16s61_chlpost1.webp", "Umm... Is this you, Lindsey? LOL #FuturePresident?", mentions=lindsey, numberLikes=645)
@@ -309,7 +309,7 @@ label v16s61:
             play sound "sounds/dooropen.mp3"
 
             scene v16s61_10 # TPP. Show MC(slight smile,mouth closed) leaving his wolves room.
-            with dissolve                 
+            with dissolve 
 
             pause 0.75
 
