@@ -464,7 +464,7 @@ label v16s11:
 # -if Announcement, and Chloe and Lindsey went to Mr. Lee's office
     if v15_lindsey_recording > 0: ### VERIFY This gets us annoucenment (and I think that will flow to Mr. Lee's office, otherwise we can add sceen8 to sceneList and check for that)
         scene v16s11_11d
-        with dissolve
+        #with dissolve
 
         u "So, how did it go with Mr. Lee?"
 
