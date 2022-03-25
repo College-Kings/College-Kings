@@ -10,7 +10,7 @@ label v16s7:
 
     pause 0.75
 
-    if v15_chloe_postkiwii: # -if MC chose Embarrass Lindsey, PA system announcement
+    if (v15_chloe_lindseysabotage and not v15_chloe_postkiwii): # -if MC chose Embarrass Lindsey, PA system announcement
         scene v16s7_2 # TPP. MC and a few other random characters show up in frame, NO MAIN CHARACTERS, all of them stop walking and look up at the PA system speaker on the wall. All of them no expressions, mouths are closed
         with dissolve
 
