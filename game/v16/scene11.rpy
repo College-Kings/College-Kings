@@ -579,8 +579,6 @@ label v16s11:
         
         pause 0.75
         
-        ### check queue
-        
         $ nora.messenger.newMessage("Hey, it's too nice out to be inside all day. Come join me at the park for yoga?")
         $ nora.messenger.addReply("I do need a good stretch... lol. Got a few things left to do on campus, but I'll be there ASAP.", v16s11_reply1)
         $ nora.messenger.addReply("Sigh... If I have to... ;) Be there as soon as I finish up on campus.", v16s11_reply2)
