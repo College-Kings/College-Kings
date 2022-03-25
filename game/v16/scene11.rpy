@@ -338,10 +338,13 @@ label v16s11:
             ri "*Laughs*"
 
         "Don't sign up":
-            scene v16s11_8
-            #with dissolve
+            scene v16s11_6d
+            with dissolve
 
             u "Nah, I'm good. Besides, I don't stand a chance against your creative eye and... superior intellect."
+
+            scene v16s11_6c
+            with dissolve
 
             ri "Haha, right. Whatever you say."
 
