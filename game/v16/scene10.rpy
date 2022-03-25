@@ -395,10 +395,12 @@ label v16s10: # Econ class
 
             la "I hope you plan on making it up to me later."
 
+        play sound "sounds/kiss.mp3"
+
         scene v16s10_13 # TPP MC and Lauren standing at back of the classroom, Lauren kissing MC on the cheek
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
     # -regardless-
     jump v16s11 # -Transition to Scene 11-
