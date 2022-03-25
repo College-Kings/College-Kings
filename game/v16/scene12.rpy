@@ -299,7 +299,7 @@ label v16s12:
 
             cl "Haha, I'm so happy you're doing this with me."
 
-        "Be negative":
+        "Be wary":
             $ add_point(KCT.TROUBLEMAKER)
             scene v16s12_2d
             with dissolve
