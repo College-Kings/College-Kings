@@ -23,14 +23,9 @@ label v16s11:
     pause 0.75
 
     scene v16s11_2 # TPP. Show Riley running up to MC from behind, MC slightly turning toward Riley, MC slight smile, mouth closed, Riley slight smile, mouth open.
-    with vpunch
-
-    ri "Hey, wait up."
-
-    scene v16s11_1a # TPP. Show MC walking the SVC hallways with Riley, both slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    ri "Hey, wait up."
 
     scene v16s11_3 # FPP. Walking down the hallway, MC looking at Riley, Riley looking at MC, Riley slight smile, mouth closed.
     with dissolve
@@ -121,6 +116,11 @@ label v16s11:
                 with dissolve
 
                 ri "Okay."
+
+    scene v16s11_1a # TPP. Show MC walking the SVC hallways with Riley, both slight smile, mouth closed.
+    with dissolve
+
+    pause 0.75
 
     # -Pinboard MUST include a sign up sheet for the newspaper. Dialogue that is used for it is "Looking for one to two more students to join the Newspaper squad". This does not need to be shown, we can be looking at riley while shes reading this line.
     # -Pinboard MUST include a notice about sex education week, and a note about how the nurse always has free condoms available to students in her office. MC reacts to this briefly.
