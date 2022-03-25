@@ -493,3 +493,4 @@ default v16s59_polly_endorse_lindsey = False # True == Polly will endorse Lindse
 default v16s61_chloe_pb_override_mc_gives_massages = False   # True = Mc says yes to helping chloe give massages as Spa night / False = Mc helps Chloe, but does not give massages.
 default v16s63x_chloe_suggestion_set = set() # Possible values:  "v16s63_compliment", "v16s63b_compliment", "v16s63_breast_reduciton", "v16s63b_breath_mint"
 default v16_ms_rose_breakup = False
+default v16s4_dissnaomi = False

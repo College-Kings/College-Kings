@@ -8,6 +8,7 @@ init python:
         naomi.messenger.newMessage("That look? It's called motivation. I was motivated to prove how into me you are, and it looks like I've done just that. Buh- bye! <3")
         
     def v16s4_reply2():
+        setattr(store, "v16s4_dissnaomi", True)
         naomi.messenger.newMessage("Wtf??? You'll regret this, asshole.")
 
 label v16s4:
