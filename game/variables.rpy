@@ -447,10 +447,6 @@ default v16_chloe_newspaper = False ##Approach A. Sparty = (v14_help_chloe and n
 default v16_chloe_on_cover = False ##Approach A2A. Chloe puts Lindsey on cover = (v16_chloe_newspaper and not v16_chloe_on_cover)
 default v16_chloe_real_masseuse = False ##Approach B2A. MC Masseuse = (v14_help_chloe and not v16_chloe_newspaper and not v16_chloe_real_masseuse)
 
-default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
-default v16s12_chloe_planboard_decide_promote_chloe_on_cover = False #  True = promote chloe on newspaper cover / False = Embarrass Lindsey on front of newspaper cover
-default v16s12_chloe_planboard_decide_mc_gives_massages = False   # True = Hire a professional to give messages / False = MC gives massages
-# Check v16s60_chloe_pb_override_mc_gives_massages variable as well when determining if MC gives massages   
 
 # Lindsey Planning Board
 default v16s28_lindsey_pb_intereview_polly_choice = False # True = Interview / False = Polly
@@ -497,3 +493,9 @@ default v16s61_chloe_pb_override_mc_gives_massages = False   # True = Mc says ye
 default v16s63x_chloe_suggestion_set = set() # Possible values:  "v16s63_compliment", "v16s63b_compliment", "v16s63_breast_reduciton", "v16s63b_breath_mint"
 default v16_ms_rose_breakup = False
 default v16s4_dissnaomi = False
+
+
+#default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
+#default v16s12_chloe_planboard_decide_promote_chloe_on_cover = False #  True = promote chloe on newspaper cover / False = Embarrass Lindsey on front of newspaper cover
+#default v16s12_chloe_planboard_decide_mc_gives_massages = False   # True = Hire a professional to give messages / False = MC gives massages
+# Check v16s60_chloe_pb_override_mc_gives_massages variable as well when determining if MC gives massages   

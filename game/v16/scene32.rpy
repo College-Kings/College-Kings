@@ -140,7 +140,7 @@ label v16s32:
                 u "(Oh, shit. It says I have to pay the driver in cash. Can't use my card.)"
 
                 # -if helping Chloe with Spa day
-                if not v16s12_chloe_planboard_decide_newspaper_cover:
+                if (v14_help_chloe and not v16_chloe_newspaper):
                     scene v16s32_3b
                     with dissolve
 
@@ -155,8 +155,7 @@ label v16s32:
                     with dissolve
 
                     menu:
-                        "Use the money" if mc.money >= v16s32_cost_cab_and_flowers : 
-                            
+                        "Use the money" if mc.money >= v16s32_cost_cab_and_flowers:
                             $ mc.money -= v16s32_cost_cab_and_flowers
                             $ v16s26_lindsey_donation_money -= v16s32_cost_cab_and_flowers
 
@@ -210,7 +209,7 @@ label v16s32:
 
         jump v16s33 # -Transition to Scene 33-
 
-    elif v16s12_chloe_planboard_decide_newspaper_cover: # -if MC is helping Chloe with newspaper cover
+    elif v16_chloe_newspaper: # -if MC is helping Chloe with newspaper cover
         # -MC's phone vibrates. He checks it and sees a text from Chloe-
 
         scene v16s32_5 # FPP. Close up shot of MC's phone in his hand, with a new message text appearing on his phone
@@ -238,7 +237,7 @@ label v16s32:
 
         jump v16s34 # -Transition to Scene 34-
 
-    elif not v16s12_chloe_planboard_decide_newspaper_cover:# -if MC is helping Chloe with spa night # TODO: Variable
+    elif (v14_help_chloe and not v16_chloe_newspaper): # -if MC is helping Chloe with spa night
         # -MC checks his phone-
 
         scene v16s32_3

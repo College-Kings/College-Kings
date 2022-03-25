@@ -204,7 +204,7 @@ label v16s12:
 
     u "Both great ideas, but... I think this is the smartest move."
 
-    if v16s12_chloe_planboard_decide_newspaper_cover:
+    if v16_chloe_newspaper:
         scene v16s12_2e
         with dissolve
 

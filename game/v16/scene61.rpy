@@ -76,14 +76,14 @@ label v16s61:
                 u "(Paparazzi?! What the fuck...)"
         
         # -if helping Chloe with Spa evening
-        if not v16s12_chloe_planboard_decide_newspaper_cover:
+        if (v14_help_chloe and not v16_chloe_newspaper):
             scene v16s61_2 
             with dissolve
 
             u "(I've still got some time before I need to help Chloe with this spa thing. Definitely excited for that!)"
             
             # -if chose to be the masseuse on planning board
-            if v16s12_chloe_planboard_decide_mc_gives_massages:
+            if not v16_chloe_real_masseuse:
                 scene v16s61_2
                 with dissolve
 
@@ -121,7 +121,7 @@ label v16s61:
 
         pause 0.75
 
-        if v14_help_chloe and not v16s12_chloe_planboard_decide_newspaper_cover:
+        if (v14_help_chloe and not v16_chloe_newspaper):
             scene v16s61_6
             with dissolve
 
@@ -402,7 +402,8 @@ label v16s61:
 
             pause 0.75
 
-            jump v16s66 
+            jump v16s66
+
     else:
         play sound "sounds/dooropen.mp3"
         
@@ -473,14 +474,14 @@ label v16s61:
                     u "(Paparazzi?! What the fuck...)"
         
         # -if helping Chloe with Spa evening
-        if not v16s12_chloe_planboard_decide_newspaper_cover:
+        if (v14_help_chloe and not v16_chloe_newspaper):
             scene v16s61_15 
             with dissolve
 
             u "(I've still got some time before I need to help Chloe with this spa thing. Definitely excited for that!)"
             
             # -if chose to be the masseuse on planning board
-            if v16s12_chloe_planboard_decide_mc_gives_massages:
+            if not v16_chloe_real_masseuse:
                 scene v16s61_15
                 with dissolve
 
@@ -518,7 +519,7 @@ label v16s61:
 
         pause 0.75
 
-        if v14_help_chloe and not v16s12_chloe_planboard_decide_newspaper_cover:
+        if (v14_help_chloe and not v16_chloe_newspaper):
             scene v16s61_19
             with dissolve
 
