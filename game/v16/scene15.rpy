@@ -315,7 +315,7 @@ label v16s15pier_date_carousel: # -if Carousel
 
                     carni "If shitheads like you were in charge, it'd be cranked up to maximum speed and yourself and everyone else on this ride would be decapitated!"
 
-                    scene v16s15_11c # TPP. MC and Penelope sit on their own horses, next to each other, both of them looking at each other with slightly serious expressions, Mc's mouth is open, Penelope's mouth is closed [CAROUSEL: Ride Location: Carousel3,  Camera: Carousel2].
+                    scene v16s15_11c # TPP. MC and Penelope sit on their own horses, next to each other, both of them looking at each other with slightly serious expressions, Mc's mouth is open, Penelope's mouth is closed [CAROUSEL: Ride Location: Carousel3, Camera: Carousel2].
                     with dissolve
 
                     pause 0.75
@@ -325,7 +325,7 @@ label v16s15pier_date_carousel: # -if Carousel
 
                     carni "So maybe you should be more respectful to the man currently holding your fucking life in the palm of his hands!"
 
-                    scene v16s15_18 # TPP. Show two random terrified children on horses, one of them is crying [CAROUSEL: Ride Location: Carousel1,  Camera: Carousel1] (IF YOU CAN'T MAKE THIS RENDER DUE TO AGE RESTRICTIONS OF CHARACTERS IN THIS GAME, THAN JUST JUST USE RENDER v16s15_11c IN THIS RENDERS PLACE)
+                    scene v16s15_18 # TPP. Show two random terrified children on horses, one of them is crying [CAROUSEL: Ride Location: Carousel1, Camera: Carousel1] (IF YOU CAN'T MAKE THIS RENDER DUE TO AGE RESTRICTIONS OF CHARACTERS IN THIS GAME, THAN JUST JUST USE RENDER v16s15_11c IN THIS RENDERS PLACE)
                     with dissolve
 
                     u "(Holy shit, dude... There are kids here.)"
@@ -385,18 +385,18 @@ label v16s15pier_date_carousel: # -if Carousel
 
             u "Hey, what is that supposed to mean?"
 
-            scene v16s15_11e # TPP. penelope giggles and blushes, they get on the horse together, Penelope in front with MC behind, up close, no space between them, Mc slight smile, mouth is closed, both of them looking at each other [CAROUSEL: Ride Location: Carousel3,  Camera: Carousel3]
+            scene v16s15_11e # TPP. penelope giggles and blushes, they get on the horse together, Penelope in front with MC behind, up close, no space between them, Mc slight smile, mouth is closed, both of them looking at each other [CAROUSEL: Ride Location: Carousel3, Camera: Carousel3]
             with dissolve
 
             pause 0.75
 
             if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS # TODO: Variable
-                scene v16s15_20 # TPP. Show Penelope sitting in front of MC on the horse, looking over her shoulder back at MC, slight smile, mouth is open [CAROUSEL: Ride Location: Carousel3,  Camera: Carousel2]
+                scene v16s15_20 # TPP. Show Penelope sitting in front of MC on the horse, looking over her shoulder back at MC, slight smile, mouth is open [CAROUSEL: Ride Location: Carousel3, Camera: Carousel2]
                 with dissolve
 
                 pe "Um... *Giggles* I can feel something bulging..."
 
-                scene v16s15_20a # TPP. Show Penelope sitting in front of MC on the horse, looking over her shoulder back at MC, slight smile, mouth is closed [CAROUSEL: Ride Location: Carousel3,  Camera: Carousel2]
+                scene v16s15_20a # TPP. Show Penelope sitting in front of MC on the horse, looking over her shoulder back at MC, slight smile, mouth is closed [CAROUSEL: Ride Location: Carousel3, Camera: Carousel2]
                 with dissolve
 
                 u "Haha, sorry, it's just my... phone."
@@ -422,7 +422,7 @@ label v16s15pier_date_carousel: # -if Carousel
 
                     u "Oh, yeah? Like you behaved at Lauren's party?"
 
-                    scene v16s15_20b # TPP. Show Penelope sitting in front of MC on the horse, looking over her shoulder back at MC, full smile, mouth is open [CAROUSEL: Ride Location: Carousel3,  Camera: Carousel2] 
+                    scene v16s15_20b # TPP. Show Penelope sitting in front of MC on the horse, looking over her shoulder back at MC, full smile, mouth is open [CAROUSEL: Ride Location: Carousel3, Camera: Carousel2] 
                     with dissolve
 
                     pe "Oh, my God, [name]... Don't bring that up here, I'm gonna turn red!"
@@ -452,7 +452,7 @@ label v16s15pier_date_carousel: # -if Carousel
 
                     u "Ah, sitting around and fantasizing about me? That's what you've been doing these days?"
 
-                    scene v16s15_20c # TPP. Show Penelope (with puppy dog eyes, slight smile, mouth is open) sitting in front of MC on the horse, looking over her shoulder back at MC [CAROUSEL: Ride Location: Carousel3,  Camera: Carousel3]
+                    scene v16s15_20c # TPP. Show Penelope (with puppy dog eyes, slight smile, mouth is open) sitting in front of MC on the horse, looking over her shoulder back at MC [CAROUSEL: Ride Location: Carousel3, Camera: Carousel3]
                     with dissolve
 
                     pe "I didn't say that was all I was doing..."

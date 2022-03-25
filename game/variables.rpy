@@ -456,7 +456,6 @@ default v16s28_lindsey_pb_pretend_roomservice = False #  True =  Lindsey/MC wear
 
 default freeroam15 = set() #Amber
 default v16s1_win_fight_with_tom = False
-default v16s10_let_lauren_continue_hj = False
 default v16s11_sign_up = False
 default v16s15_fr_carnival = set() # Holds visited scenes for the free roam 
 default v16s20_take_twazzlers = False

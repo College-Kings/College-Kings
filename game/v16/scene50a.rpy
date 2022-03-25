@@ -23,7 +23,7 @@ label v16s50a: ### ERROR: 50a) MC wakes up
         
     pause 1
 
-    if v16s27_parent_chloe and not 1 & v16s27_mc_baby_duty_night == 1 and not 0x10 & v16s27_mc_baby_duty_night == 0x10:  # -if Chloe was alone Wed night with the baby and is MC partner 
+    if v16s27_parent_chloe and not 1 & v16s27_mc_baby_duty_night == 1 and not 0x10 & v16s27_mc_baby_duty_night == 0x10: # -if Chloe was alone Wed night with the baby and is MC partner 
         #! v16s50akw_1 "Chloe and MC's baby doll inside of a washing machine or dryer"
         
         $ v16s50a_kiwii_post = KiwiiPost(aubrey, "v16/v16s50a_aubpost1.webp", "Umm, good morning from the Chicks?", numberLikes=817)

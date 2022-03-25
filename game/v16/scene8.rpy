@@ -261,6 +261,14 @@ label v16s8:
 
             li "And you're a scheming psychopath! You've got no respect for my privacy or for me as a person in general."
 
+            if v14_help_lindsey and not v14_lindsey_sell:
+                u "(To be fair you were perfectly fine with me rummaging through Chloe's room...)"
+                
+                if "diary" in freeroam12stolen:
+                    u "(And taking her diary, no less.)"
+                
+                u "(Damn, it's getting hard to keep my mouth shut here...)"
+
             scene v16s8_5b
             with dissolve
 
@@ -269,7 +277,7 @@ label v16s8:
             scene v16s8_5c
             with dissolve
 
-            u "(Easy now... I'm not that low in life.)"
+            u "(Easy now... I'm not {i}that{/i} low in life.)"
 
             scene v16s8_5e
             with dissolve

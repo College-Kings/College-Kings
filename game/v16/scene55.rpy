@@ -321,7 +321,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
         li "Oh! I donated money to the dog shelter!"
 
         # -if mc didn't go on a date with aubrey and gave a full donation to lindsey
-        if not v16s25a_date_with_aubrey and v16s26_lindsey_donation_money == 50:  # TODO: Variables 
+        if not v16s25a_date_with_aubrey and v16s26_lindsey_donation_money == 50: # TODO: Variables 
             scene v16s55_3e
             with dissolve
 

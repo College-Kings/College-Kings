@@ -33,25 +33,25 @@ label v16s4:
     pause 0.75
 
     if joinwolves:
-        scene v16s4_3 # FPP. In wolves room,  MC looking at his bed.
+        scene v16s4_3 # FPP. In wolves room, MC looking at his bed.
     else:
-        scene v16s4_16 # FPP. In apes room,  MC looking at his bed.
+        scene v16s4_16 # FPP. In apes room, MC looking at his bed.
     with dissolve
 
     pause 0.75
 
     if joinwolves:
-        scene v16s4_4 # TPP. In wolves room,  Close up of just MC's face as he stands in his room, slight smile, mouth closed.
+        scene v16s4_4 # TPP. In wolves room, Close up of just MC's face as he stands in his room, slight smile, mouth closed.
     else:
-        scene v16s4_17 # TPP. In apes room,  Close up of just MC's face as he stands in his room, slight smile, mouth closed.
+        scene v16s4_17 # TPP. In apes room, Close up of just MC's face as he stands in his room, slight smile, mouth closed.
     with dissolve
 
     u "(Finally... My bed! I've missed you so much.)"
 
     if joinwolves:
-        scene v16s4_5 # TPP. In wolves room,  Show MC taking off his pants, only in his underwear and shirt, neutral face, mouth closed.
+        scene v16s4_5 # TPP. In wolves room, Show MC taking off his pants, only in his underwear and shirt, neutral face, mouth closed.
     else:
-        scene v16s4_18 # TPP. In apes room,  Show MC taking off his pants, only in his underwear and shirt, neutral face, mouth closed.
+        scene v16s4_18 # TPP. In apes room, Show MC taking off his pants, only in his underwear and shirt, neutral face, mouth closed.
     with dissolve
 
     pause 0.75

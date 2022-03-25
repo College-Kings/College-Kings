@@ -4,6 +4,12 @@
 # Time: Morning
 
 init python:
+    def v16s11_reply1():
+        nora.messenger.newMessage("Perfect :)")
+    
+    def v16s11_reply2():
+        nora.messenger.newMessage("Haha, sounds good.")
+
     def v16s11_reply3():
         nora.messenger.newMessage("Perfect :)")
 
@@ -443,7 +449,7 @@ label v16s11:
     scene v16s11_6l
     with dissolve
 
-    ri "Right... Oh- Look at the time! I've gotta go do some... work on the... Assignment."
+    ri "Right... Oh- Look at the time! I've gotta go do some... work on the... assignment."
 
     ri "Catch you guys later!"
 
@@ -583,10 +589,8 @@ label v16s11:
         ### check queue
         
         $ nora.messenger.newMessage("Hey, it's too nice out to be inside all day. Come join me at the park for yoga?")
-        $ nora.messenger.addReply("I do need a good stretch... lol. Got a few things left to do on campus, but I'll be there ASAP.")
-        $ nora.messenger.newMessage("Perfect :)")
-        $ nora.messenger.addReply("Sigh... If I have to... ;) Be there as soon as I finish up on campus.")
-        $ nora.messenger.newMessage("Haha, sounds good.")
+        $ nora.messenger.addReply("I do need a good stretch... lol. Got a few things left to do on campus, but I'll be there ASAP.", v16s11_reply1)
+        $ nora.messenger.addReply("Sigh... If I have to... ;) Be there as soon as I finish up on campus.", v16s11_reply2)
 
         label v16s11_phoneContinue:
             if nora.messenger.replies:

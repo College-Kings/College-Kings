@@ -54,7 +54,7 @@ label v16s60:
 
     li "[name] is here just to take notes for me, I don't want to miss anything."
 
-    if not v16s28_lindsey_pb_riley_interview:  # Elijah does the interview 
+    if not v16s28_lindsey_pb_riley_interview: # Elijah does the interview 
         scene v16s60_4 # FPP. MC looking at Lindsey(slight smile, mouth close) and Elijah (neutral face, mouth closed) sitting across from each other. Lindsey and Elijah both looking at MC.
         with dissolve
 
@@ -198,7 +198,7 @@ label v16s60:
             el "I know people are going to want to hear your thoughts on this. Is there a specific quality that you feel every successful president should have?"
 
         # -if MC did not ask 'What is the most important quality of a good president?' or did ask the question and chose That'll do in Scene 55 (LOSE 1 POPULARITY)
-        if "important_quality" not in v16s55_lindsey_question_set or ("important_quality" in v16s55_lindsey_question_set and "thatll_do" in v16s55_lindsey_followup_question_set ):                    
+        if "important_quality" not in v16s55_lindsey_question_set or ("important_quality" in v16s55_lindsey_question_set and "thatll_do" in v16s55_lindsey_followup_question_set ): 
             $ set_presidency_percent(v14_lindsey_popularity - 1)
 
             scene v16s60_6a
@@ -269,7 +269,7 @@ label v16s60:
             el "Interesting..."
             
         # -if MC asked 'What is the most important quality of a good president?' and chose Expand on that in Scene 55 (GAIN 1 POPULARITY)         
-        elif "important_quality" in v16s55_lindsey_question_set and "expand" in v16s55_lindsey_followup_question_set:            
+        elif "important_quality" in v16s55_lindsey_question_set and "expand" in v16s55_lindsey_followup_question_set: 
             $ set_presidency_percent(v14_lindsey_popularity + 1)
 
             scene v16s60_6a
@@ -627,7 +627,7 @@ label v16s60:
         ri "I'm interested to know, is there a specific quality that you feel every successful president should have?"
 
     # -if MC did not ask 'What is the most important quality of a good president?' or did ask the question and chose That'll do in Scene 55 (LOSE 1 POPULARITY)
-        if "important_quality" not in v16s55_lindsey_question_set or ("important_quality" in v16s55_lindsey_question_set and "thatll_do" in v16s55_lindsey_followup_question_set ):        
+        if "important_quality" not in v16s55_lindsey_question_set or ("important_quality" in v16s55_lindsey_question_set and "thatll_do" in v16s55_lindsey_followup_question_set ): 
             $ set_presidency_percent(v14_lindsey_popularity - 1)
 
             scene v16s60_11b

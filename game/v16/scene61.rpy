@@ -315,7 +315,7 @@ label v16s61:
 
             jump v16s62
 
-        else:             
+        else: 
             play sound "sounds/thud.mp3"
 
             scene v16s61_6a # TPP. Show MC fallen asleep his head hitting the book on his desk.

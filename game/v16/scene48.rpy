@@ -223,7 +223,7 @@ label v16s48: # 48) Baby night: Chloe & MC
     cl "Get it to stop!"
 
     menu:
-        "Care for baby":            
+        "Care for baby": 
             play sound "sounds/babycry.mp3"
 
             u "I'm guessing it needs the burping key now?"
@@ -382,7 +382,7 @@ label v16s48: # 48) Baby night: Chloe & MC
             scene v16s48_16b
             with dissolve
 
-            cl "No, and I don't care.  Just hurry up and make it stop."
+            cl "No, and I don't care. Just hurry up and make it stop."
 
             scene v16s48_10
             with dissolve

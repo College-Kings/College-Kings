@@ -155,7 +155,7 @@ label v16s32:
                     with dissolve
 
                     menu:
-                        "Use the money" if mc.money >= v16s32_cost_cab_and_flowers :                                                        
+                        "Use the money" if mc.money >= v16s32_cost_cab_and_flowers : 
                             
                             $ mc.money -= v16s32_cost_cab_and_flowers
                             $ v16s26_lindsey_donation_money -= v16s32_cost_cab_and_flowers
@@ -172,7 +172,7 @@ label v16s32:
                             scene v16s32_3a
                             with dissolve
 
-                            u "(I can't use someone else's money for my date, haha. I think Aubrey would understand."
+                            u "(I can't use someone else's money for my date, haha. I think Aubrey would understand.)"
 
             "She can manage":
                 scene v16s32_3

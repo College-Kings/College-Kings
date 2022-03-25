@@ -32,7 +32,7 @@ label v16s59:
 
     u "Here we are."
 
-    if v16s28_lindsey_pb_pretend_roomservice:  # -if Pretending to be room service
+    if v16s28_lindsey_pb_pretend_roomservice: # -if Pretending to be room service
         scene v16s59_3 # TPP. Full body image of (ROOM SERVICE UNIFORMS) MC (no expression, mouth is open, looking at Lindsey) scratching his chest with one hand, carrying the tray of food in the other, Lindsey (no expression, mouth is closed, looking at MC)
         with dissolve
 
@@ -198,7 +198,7 @@ label v16s59:
 
         li "We're here to deliver your meal!"
 
-        if v13_penelope_backstage:  # TODO: Now clue what this means or how its different from meeting polly backstage so reusing it # -if mc has already met Polly
+        if v13_penelope_backstage: # TODO: Now clue what this means or how its different from meeting polly backstage so reusing it # -if mc has already met Polly
             scene v16s59_4h
             with dissolve
 

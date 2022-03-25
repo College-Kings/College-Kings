@@ -260,7 +260,7 @@ label v16s10: # Econ class
                 pause 0.75
 
             "Let her continue":
-                $ v16s10_let_lauren_continue_hj = True
+                $ sceneList.add("v16_lauren")
                 $ add_point(KCT.BOYFRIEND)
 
                 scene v16s10_7a # FPP Same angle as 7, Lauren's hand is fumbling at MC's pants, pulling the top down to get to his dick
@@ -378,7 +378,7 @@ label v16s10: # Econ class
 
         pause 0.75
 
-        if v16s10_let_lauren_continue_hj:
+        if "v16_lauren" in sceneList:
             scene v16s10_12 # TPP MC and Lauren standing at back of the classroom, close up view of Lauren whispering in MC's ear, slight smile, mouth open
             with dissolve
 
