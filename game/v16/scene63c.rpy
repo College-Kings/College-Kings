@@ -506,7 +506,7 @@ label v16s63c_end_foreplay_fr: # -if Mouth / End of Foreplay freeroam
 
             li "Hehe! Stop it, mister..."
 
-            scene v16s63c_20 # TPP.  Lindsey (full smile, mouth open, looking at MC) wearing just a towel and MC (full smile, mouth closed, turned away from Lindsey) walking out of the room
+            scene v16s63c_20 # TPP. Lindsey (full smile, mouth open, looking at MC) wearing just a towel and MC (full smile, mouth closed, turned away from Lindsey) walking out of the room
             with dissolve
 
             jump v16s64 # -Transition to Scene 64-

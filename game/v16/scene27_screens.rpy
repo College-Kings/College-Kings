@@ -6,7 +6,7 @@ screen v16s27_baby_schedule():
     default image_path = "images/v16/temp/Scene 27/baby-schedule/"
     default schedule_grid = [
         ["Wednesday Night", "Thursday Night", "Friday Night"],
-        ["Date with Aubrey\n(optional)", "Polly's San Vallejo Acoustic Concert", "Ms Rose opera\n(optional)"],
+        ["Date with Aubrey\n(optional)", "Polly's San Vallejo Acoustic Concert", "Ms. Rose opera\n(optional)"],
         [
             "I can definitely go to the date regardless of who has the baby, but if I want anything to happen afterwards, I better not be on baby duty for the night.",
             "I can go to the concert regardless of who has the baby, but I may have to go home early and miss whatever happens afterwards if i'm on baby duty.",

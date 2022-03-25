@@ -1,6 +1,6 @@
 # SCENE 27: Sex Ed Event
 # Locations: Amphitheatre
-# Characters: MR LEE (Outfit: 1), PENELOPE (Outfit: 3), MC (Outfit: 9), CHLOE (Outfit: 3), NORA (Outfit: 1), SEX ED TEACHER (Outfit: 1), CAMERON (Outfit: 3), LINDSEY (Outfit: 1)
+# Characters: MR. LEE (Outfit: 1), PENELOPE (Outfit: 3), MC (Outfit: 9), CHLOE (Outfit: 3), NORA (Outfit: 1), SEX ED TEACHER (Outfit: 1), CAMERON (Outfit: 3), LINDSEY (Outfit: 1)
 # Time: Morning
 
 label v16s27:
@@ -14,7 +14,7 @@ label v16s27:
 
     pause 0.75
 
-    scene v16s27_3 # TPP. Mr Lee (slight smile, mouth is closed,) is standing at the front of the room. A Sex Ed teacher (slight smile, mouth is closed,) is sat at a desk at the front of the room
+    scene v16s27_3 # TPP. Mr. Lee (slight smile, mouth is closed,) is standing at the front of the room. A Sex Ed teacher (slight smile, mouth is closed,) is sat at a desk at the front of the room
     with dissolve
 
     pause 0.75
@@ -181,7 +181,7 @@ label v16s27:
 
         lee "Now that we have that out of the way, I'll leave you in the capable hands of your sex ed teacher."
 
-        scene v16s27_3a # TPP. Mr Lee (slight smile, mouth is closed, looking at the Sex Ed Teacher,) with an extended arm outstrecthed towards her in a "presenting" manner, The Sex Ed Teacher (slight smile, mouth is closed, looking at Mr. Lee,) holding a baby doll stands up from the desk and walks towards Mr. Lee
+        scene v16s27_3a # TPP. Mr. Lee (slight smile, mouth is closed, looking at the Sex Ed Teacher,) with an extended arm outstrecthed towards her in a "presenting" manner, The Sex Ed Teacher (slight smile, mouth is closed, looking at Mr. Lee,) holding a baby doll stands up from the desk and walks towards Mr. Lee
         with dissolve
 
         pause 0.75

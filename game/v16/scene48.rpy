@@ -382,7 +382,7 @@ label v16s48: # 48) Baby night: Chloe & MC
             scene v16s48_16b
             with dissolve
 
-            cl "No, and I don't care.  Just hurry up and make it stop."
+            cl "No, and I don't care. Just hurry up and make it stop."
 
             scene v16s48_10
             with dissolve

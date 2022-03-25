@@ -9,32 +9,32 @@ label v16s48a: ### ERROR: 48a) Chloe and MC sex scene
     $ sceneList.add("v16_chloe")
 
     # -Still standing, Chloe takes off all her clothes. MC stands and they kiss-
-    scene v16s48a_1 # TPP Chloe(frustrated, slighly angry,  mouth closed) standing in Living Room in front of couch removing her shirt [Show her full body]
+    scene v16s48a_1 # TPP Chloe(frustrated, slighly angry, mouth closed) standing in Living Room in front of couch removing her shirt [Show her full body]
     with dissolve
 
     pause 0.75
 
-    scene v16s48a_1a # FPP Chloe(frustrated, slightly angry,  mouth close, looking at MC) standing in Living Room in front of couch fully naked, hand oh hip, hip out to one side [Show her complete body]
+    scene v16s48a_1a # FPP Chloe(frustrated, slightly angry, mouth close, looking at MC) standing in Living Room in front of couch fully naked, hand oh hip, hip out to one side [Show her complete body]
     with dissolve
 
     pause 0.75
 
-    scene v16s48a_2 # FPP Chloe (frustrated, slightly angry,  mouth close, looking at MC) Camera chest and head only.
+    scene v16s48a_2 # FPP Chloe (frustrated, slightly angry, mouth close, looking at MC) Camera chest and head only.
     with dissolve
 
     u "What if someone walks in on us?"
 
-    scene v16s48a_2a # FPP Chloe (frustrated, slightly angry,  mouth open, looking at MC) Camera chest and head only.
+    scene v16s48a_2a # FPP Chloe (frustrated, slightly angry, mouth open, looking at MC) Camera chest and head only.
     with dissolve
 
     cl "*Heavy breathing* Who gives a fuck?"
 
-    scene v16s48a_3 # TPP Chloe (frustrated,  mouth closed, pulling MC's (face covered by shirt) shirt over his head. MC trying to help remove his shirt.
+    scene v16s48a_3 # TPP Chloe (frustrated, mouth closed, pulling MC's (face covered by shirt) shirt over his head. MC trying to help remove his shirt.
     with dissolve
 
     pause 0.75
 
-    scene v16s48a_3a # TPP Chloe (frustrated,  mouth closed, kneeling pulling of MC pants (at ankles). MC(slight smile, mouth closed, looking down at Chloe) shirtless, erect penis.
+    scene v16s48a_3a # TPP Chloe (frustrated, mouth closed, kneeling pulling of MC pants (at ankles). MC(slight smile, mouth closed, looking down at Chloe) shirtless, erect penis.
     with dissolve
 
     pause 0.75
@@ -464,7 +464,7 @@ label v16s48a_continue:
 
     pause 0.75
 
-    scene v16s48a_10a # TPP Chloe (eager, smiling, mouth closed) on hands and knees on the short side of the couch [head towards the corner of the couch], her body arched.  MC (smiling, mouth closed) stands guides his dick toward her pussy (doggie style)
+    scene v16s48a_10a # TPP Chloe (eager, smiling, mouth closed) on hands and knees on the short side of the couch [head towards the corner of the couch], her body arched. MC (smiling, mouth closed) stands guides his dick toward her pussy (doggie style)
     with dissolve
 
     pause 0.75
@@ -673,7 +673,7 @@ label v16s48a_continue:
 
     u "(She's still asleep. I think this'll be a good time for me to head home.)"
 
-    scene v16s48a_20 # TPP MC Closing the front door of the Chick's house behind him as he exits.    
+    scene v16s48a_20 # TPP MC Closing the front door of the Chick's house behind him as he exits.
     with dissolve
 
     pause 0.75

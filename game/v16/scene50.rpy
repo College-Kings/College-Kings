@@ -438,7 +438,7 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
                 scene v16s50_7e
                 with dissolve
 
-                u "Chloe, probably because you're yelling curse words!  It probably needs burping. Use the-"
+                u "Chloe, probably because you're yelling curse words! It probably needs burping. Use the-"
 
                 scene v16s50_7b
                 with dissolve
