@@ -1759,10 +1759,5 @@ label v16s15pier_hotdog: ### -if HotDog Stand
 
     call screen v16s15_pier_entrance # -Return to the first free roam screen-
 
-label v16s15pier_date_wheel_2: ### -if Shooting range # -Ends free roam-
-    if not len(freeroam15) == 3:
-        u "(We should probably check out the other attractions first)"
-        call screen v16s15_pier_middle_range
-
-    else:
-        jump v16s16
+label v16s15pier_date_wheel_2: # -if Shooting range, ends free roam-
+    jump v16s16
