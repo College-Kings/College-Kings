@@ -211,7 +211,7 @@ label v16s14:
     scene v16s14_7 # TPP. Show the three of them walking towards their mats, all slight smiles, mouths closed (MC is walking towards the mat that is behind the other 2)
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v16s14_8 # TPP. Camera looking at Ms. Rose, Ms. Rose looking at Nora's direction, Ms. Rose smiling, mouth open
     with dissolve
