@@ -195,14 +195,11 @@ label v16s11:
 
     u "Oh..."
 
-    scene v16s11_6b
-    with dissolve
-
     menu:
         "Be nice":
             $ add_point(KCT.BRO)
             scene v16s11_6b
-            with dissolve
+            #with dissolve
 
             u "Well, good for him. Maybe it could be cool."
 
@@ -214,7 +211,7 @@ label v16s11:
         "Joke about Elijah":
             $ add_point(KCT.TROUBLEMAKER)
             scene v16s11_6b
-            with dissolve
+            #with dissolve
 
             u "Ew..."
 
