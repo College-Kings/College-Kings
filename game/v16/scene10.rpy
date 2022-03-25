@@ -97,7 +97,7 @@ label v16s10: # Econ class
     
     ro "Sorry guys, no one said economics was fun!"
     
-    if lauren.relationship >= Relationship.GIRLFRIEND or "v15_lauren" in sceneList: # -if LaurenRS or LaurenSex
+    if lauren.relationship >= Relationship.FWB: # -if LaurenRS or LaurenSex
         scene v16s10_2b # TPP Same angle as 2, Lauren passing MC a note under the table, Lauren has a naughty smile
         with dissolve
 
@@ -238,7 +238,7 @@ label v16s10: # Econ class
             ro "Good, please concentrate. I'd hate to fail my students just because they can't focus."
 
     # -Regardless of choice-
-    if lauren.relationship >= Relationship.GIRLFRIEND or "v15_lauren" in sceneList: # -if LaurenRS or LaurenSex
+    if lauren.relationship >= Relationship.FWB: # -if LaurenRS or LaurenSex
         scene v16s10_2c
         with dissolve
 
@@ -378,7 +378,7 @@ label v16s10: # Econ class
 
     pause 0.75
 
-    if lauren.relationship >= Relationship.GIRLFRIEND or "v15_lauren" in sceneList: 
+    if lauren.relationship >= Relationship.FWB: 
         scene v16s10_11 # TPP MC walking toward the door to the classroom, Lauren catches him by grabbing his upper arm from behind
         with dissolve
 
