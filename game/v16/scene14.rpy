@@ -316,7 +316,7 @@ label v16s14:
             pause 1.25
 
         "Stay focused":
-            $ grant_achievement("must_resist_temptation")
+            $ v16s14_focus += 1
         
             scene v16s14_10e # TPP. Same as v16s14_10d, all doing the cow pose
             with dissolve
@@ -548,6 +548,55 @@ label v16s14:
 
             u "(Yeah, whatever... Feels... Good...)"
 
+        "Stay focused":
+            $ v16s14_focus += 1
+                    
+            scene v16s14_10o # TPP. Same as v16s14_10n, Ms. Rose doing the pose, Ms. Rose mouth open
+            with dissolve
+
+            if v16s14_focus == 2:
+                $ grant_achievement("must_resist_temptation")
+            
+            ro "Lift your hips up, so you're making a triangle shape"
+
+            ro "You can bend your knees if it helps... *Moans* Feel the stretch."
+
+            scene v16s14_10p # TPP. Same as v16s14_10o, Ms. Rose and Nora doing the pose, MC watching, Nora mouth slightly open
+            with dissolve
+
+            no "Oh, fuck..."
+
+            u "(Is this what people mean when they say \"hot yoga\"?)"
+
+            scene v16s14_10q # TPP. Same as v16s14_10p, all three doing the pose now, Ms. Rose mouth open
+            with dissolve
+
+            ro "Press your chest towards your legs, as far as possible without hurting yourself."
+
+            ro "Hold it for a moment longer."
+
+            scene v16s14_18 # TPP. Show all three doing the pose (focus more on Nora here), all mouths closed, Ms. Rose slight smile, MC and Nora slightly struggling
+            with dissolve
+
+            no "*Grunts*"
+
+            scene v16s14_19 # TPP. Show all three doing the pose (focus more on Ms. Rose here), Ms. Rose mouth open, MC and Nora mouths closed, Ms. Rose slight smile, MC and Nora slightly struggling
+            with dissolve
+
+            ro "Now..."
+
+            ro "Without standing up, just walk yourself to the top of your mat. Stay bent over."
+
+            scene v16s14_10q
+            with dissolve
+
+            ro "You can bend your knees a little, and feel free to sway side to side, whatever feels good."
+
+            scene v16s14_18
+            with dissolve
+
+            u "(This is more painful than I thought it was going to be... I might be sore tomorrow, haha.)"
+
         "Stare at Ms. Rose":
             scene v16s14_13c # FPP. Same as v16s14_12, now they are doing the downward-facing dog pose. Ms. Rose is lifting her hips up, as to make a triangle shape with her body
             with dissolve
@@ -594,50 +643,6 @@ label v16s14:
             with dissolve
 
             u "(Yeah, whatever... Feels... Good...)"
-
-        "Stay focused":
-            scene v16s14_10o # TPP. Same as v16s14_10n, Ms. Rose doing the pose, Ms. Rose mouth open
-            with dissolve
-
-            ro "Lift your hips up, so you're making a triangle shape"
-
-            ro "You can bend your knees if it helps... *Moans* Feel the stretch."
-
-            scene v16s14_10p # TPP. Same as v16s14_10o, Ms. Rose and Nora doing the pose, MC watching, Nora mouth slightly open
-            with dissolve
-
-            no "Oh, fuck..."
-
-            u "(Is this what people mean when they say \"hot yoga\"?)"
-
-            scene v16s14_10q # TPP. Same as v16s14_10p, all three doing the pose now, Ms. Rose mouth open
-            with dissolve
-
-            ro "Press your chest towards your legs, as far as possible without hurting yourself."
-
-            ro "Hold it for a moment longer."
-
-            scene v16s14_18 # TPP. Show all three doing the pose (focus more on Nora here), all mouths closed, Ms. Rose slight smile, MC and Nora slightly struggling
-            with dissolve
-
-            no "*Grunts*"
-
-            scene v16s14_19 # TPP. Show all three doing the pose (focus more on Ms. Rose here), Ms. Rose mouth open, MC and Nora mouths closed, Ms. Rose slight smile, MC and Nora slightly struggling
-            with dissolve
-
-            ro "Now..."
-
-            ro "Without standing up, just walk yourself to the top of your mat. Stay bent over."
-
-            scene v16s14_10q
-            with dissolve
-
-            ro "You can bend your knees a little, and feel free to sway side to side, whatever feels good."
-
-            scene v16s14_18
-            with dissolve
-
-            u "(This is more painful than I thought it was going to be... I might be sore tomorrow, haha.)"
 
     scene v16s14_10r # TPP. Same as v16s14_10q, all three of them pushing their stomachs in, Ms. Rose mouth open
     with dissolve

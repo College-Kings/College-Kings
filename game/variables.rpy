@@ -493,7 +493,7 @@ default v16s61_chloe_pb_override_mc_gives_massages = False   # True = Mc says ye
 default v16s63x_chloe_suggestion_set = set() # Possible values:  "v16s63_compliment", "v16s63b_compliment", "v16s63_breast_reduciton", "v16s63b_breath_mint"
 default v16_ms_rose_breakup = False
 default v16s4_dissnaomi = False
-
+default v16s14_focus = 0
 
 #default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
 #default v16s12_chloe_planboard_decide_promote_chloe_on_cover = False #  True = promote chloe on newspaper cover / False = Embarrass Lindsey on front of newspaper cover
