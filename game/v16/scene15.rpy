@@ -1039,7 +1039,6 @@ label v16s15pier_date_wheel: # -if Wheel of chance
     menu:
         "Gentle spin": # -MC spins. It lands on 'Hotdog'-
             $ freeroam15.add("wheel_gentle")
-            $ v16s15_hotdogcoupon = True # TODO:Variable
             $ add_point(KCT.BRO)
 
             scene v16s15_32b # FPP. Show just the top portion of the wheel with a dial pointing at a yellow portion of the wheel with an image of a coupoon with a hotdog on it [WHEEL]
@@ -1340,7 +1339,7 @@ label v16s15pier_hotdog: ### -if HotDog Stand
 
     hv "My powers never fail! One hotdog coming right up!"
 
-    if v16s15_hotdogcoupon: # -if MC already went to the Wheel of Chance and chose 'gentle spin' leading to a free hotdog coupon TODO: Variable
+    if "wheel_gentle" in freeroam15: # -if MC already went to the Wheel of Chance and chose 'gentle spin' leading to a free hotdog coupon TODO: Variable
         if penelope.relationship >= Relationship.LIKES: ### -if PenelopeRS TODO: Variable
             scene v16s15_53a # FPP. MC turning his head to his right, Show Just Penelope head turned looking at MC with with the HOT DOG STAND to her right, MC hands the hotdog coupon to Penelope, Penelope smiles, mouth is closed [HOTDOG]
             with dissolve

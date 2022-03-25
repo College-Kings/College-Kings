@@ -458,7 +458,6 @@ default freeroam16 = set() #Amber v16s20
 default v16s1_win_fight_with_tom = False
 default v16s11_sign_up = False
 default v16s20_take_twazzlers = False
-default v16s15_hotdogcoupon = False
 default v16s23_mention_bills = False  # TODO: Variable
 default v16s23_mention_laptop = False # TODO: Variable
 default v16s23_support_amber = False # TODO: Variable
