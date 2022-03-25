@@ -74,7 +74,7 @@ label v16s14:
     scene v16s14_5 # FPP. MC turns and sees Ms. Rose approaching from a distance, Ms. Rose smiling, waving, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     if nora.relationship >= Relationship.FWB and ms_rose.relationship >= Relationship.FWB:
         scene v16s14_5a
@@ -88,7 +88,6 @@ label v16s14:
 
         u "(Seriously? There goes my alone time with Nora.)"
     
-
     scene v16s14_6 # FPP. Ms. Rose now standing next to MC and Nora, MC looking at Ms. Rose, Ms. Rose looking at Nora, Ms. Rose slight smile, mouth open
     with dissolve
 
@@ -125,7 +124,7 @@ label v16s14:
 
         ro "I'm fine, I promise. But..."
 
-    elif ms_rose.relationship >= Relationship.FWB:# if still dating ms. rose
+    elif ms_rose.relationship >= Relationship.FWB: # if still dating ms. rose
         scene v16s14_6b
         with dissolve
 
@@ -175,7 +174,7 @@ label v16s14:
     scene v16s14_6a
     with dissolve
 
-    ro "Sorry [name] but, yoga is about relaxing, and I can't relax when we discuss work."
+    ro "Sorry, [name], but yoga is about relaxing. And I can't relax when we discuss work."
 
     scene v16s14_3a
     with dissolve
