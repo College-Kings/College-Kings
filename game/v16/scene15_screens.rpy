@@ -42,21 +42,29 @@ screen v16s15_pier_middle_carousel():
     imagebutton:
         idle Transform("#0000", xysize=(383, 668))
         hover image_path + "Highlights/v16s15pier_middle_carousel_carousel.webp"
-        action Jump("v16s15pier_date_carousel")
+        if not "carousel" in freeroam15:
+            action Jump("v16s15pier_date_carousel")
+        elif "wheel_strong" in freeroam15:
+            action Call("free_roam_spoken_too", "v16s15pier_middle_carousel_2", "v16s15_pier_middle_carousel")
+        else:
+            action Call("free_roam_spoken_too", "v16s15pier_middle_carousel", "v16s15_pier_middle_carousel")
         pos (1537, 330)
 
     if "wheel_strong" in freeroam15:
         imagebutton:
             idle Transform("#0000", xysize=(601, 762))
             hover image_path + "Highlights/v16s15pier_middle_carousel_2_wheel.webp"
-            action NullAction()
+            action Call("free_roam_spoken_too", "v16s15pier_middle_carousel_2", "v16s15_pier_middle_carousel")
             pos (204, 318)
 
     else:
         imagebutton:
             idle Transform("#0000", xysize=(514, 762))
             hover image_path + "Highlights/v16s15pier_middle_carousel_wheel.webp"
-            action Jump("v16s15pier_date_wheel")
+            if not "wheel_gentle" in freeroam15:
+                action Jump("v16s15pier_date_wheel")
+            else:
+                action Call("free_roam_spoken_too", "v16s15pier_middle_carousel", "v16s15_pier_middle_carousel")
             ypos 318
       
     imagebutton:

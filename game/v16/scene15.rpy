@@ -184,7 +184,7 @@ label v16s15:
     call screen v16s15_pier_entrance 
 
 label v16s15pier_date_carousel: # -if Carousel
-    $ freeroam15.add("carousel") # TODO: Variable
+    $ freeroam15.add("carousel")
 
     scene v16s15_10 # TPP. Imre leads Karen by the hand (both smiling mouths closed) into the carousel and past An older male CARNIVAL WORKER stands behind the TICKET STAND to the side of the ride [CAROUSEL: Location: Carousel2, Camera: Carousel2].
     #with dissolve
@@ -1134,44 +1134,44 @@ label v16s15pier_date_wheel: # -if Wheel of chance
 
                 u "Hey, you turned down her pocket candy. This hot dog is mine!"
 
-            if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS
-                scene v16s15_33g # FPP. Penelope uses puppy dog eyes and flutters her lashes at MC, looking at MC, with a cute pouting expression, mouth is open [similar to https://cf.girlsaskguys.com/q3609796/d3dd3773-8436-4133-88ff-62883d8eb1de.jpg WHEEL
-                with dissolve
+                if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS
+                    scene v16s15_33g # FPP. Penelope uses puppy dog eyes and flutters her lashes at MC, looking at MC, with a cute pouting expression, mouth is open [similar to https://cf.girlsaskguys.com/q3609796/d3dd3773-8436-4133-88ff-62883d8eb1de.jpg WHEEL
+                    with dissolve
 
-                pe "But... But..."
+                    pe "But... But..."
 
-                scene v16s15_33h # FPP. Penelope looks slightly shocked, mouth is closed, looking at MC [WHEEL]
-                with dissolve
+                    scene v16s15_33h # FPP. Penelope looks slightly shocked, mouth is closed, looking at MC [WHEEL]
+                    with dissolve
 
-                u "Those eye tricks don't work on me..."
+                    u "Those eye tricks don't work on me..."
 
-                scene v16s15_33i # FPP. Penelope pretends to cry, looking at Mc, mouth is closed [WHEEL]
-                with dissolve
+                    scene v16s15_33i # FPP. Penelope pretends to cry, looking at Mc, mouth is closed [WHEEL]
+                    with dissolve
 
-                pe "*Sniffles*"
+                    pe "*Sniffles*"
 
-                u "Okay, fine! Stop it with the tears! Jeez... *Sighs*"
+                    u "Okay, fine! Stop it with the tears! Jeez... *Sighs*"
 
-                scene v16s15_33j # FPP. Penelope acts cute, slight smile, mouth is open [WHEEL]
-                with dissolve
+                    scene v16s15_33j # FPP. Penelope acts cute, slight smile, mouth is open [WHEEL]
+                    with dissolve
 
-                pe "Hehe!"
+                    pe "Hehe!"
 
-            else: # -if PenelopeFriend
-                scene v16s15_33k # FPP. Penelope frowns, and pouts her bottom lip, looking at Mc, mouth is open [WHEEL]
-                with dissolve
+                else: # -if PenelopeFriend
+                    scene v16s15_33k # FPP. Penelope frowns, and pouts her bottom lip, looking at Mc, mouth is open [WHEEL]
+                    with dissolve
 
-                pe "Meanie..."
+                    pe "Meanie..."
 
-                scene v16s15_33c 
-                with dissolve
+                    scene v16s15_33c 
+                    with dissolve
 
-                u "Oh, really? I'm a meanie?"
+                    u "Oh, really? I'm a meanie?"
 
-                scene v16s15_33l # FPP. Penelope smirks, looks slightly away from MC, mouth is open [WHEEL]
-                with dissolve
+                    scene v16s15_33l # FPP. Penelope smirks, looks slightly away from MC, mouth is open [WHEEL]
+                    with dissolve
 
-                pe "No..."
+                    pe "No..."
 
             scene v16s15_33c
             with dissolve
@@ -1291,7 +1291,7 @@ label v16s15pier_hotdog: ### -if HotDog Stand
     scene v16s15_49
     with dissolve
 
-    dg3 "I asked, it's all real butter though. The one thing this place doesn't cheap out on is the food, can you believe it? *Laughs*"
+    dg3 "I asked, it's all real butter though. The one thing this place doesn't cheap out on is the food. Can you believe it? *Laughs*"
 
     scene v16s15_48
     with dissolve
