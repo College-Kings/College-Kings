@@ -3,62 +3,45 @@
 # Characters: MC (Outfit: Boxers/Underwear), [BABY_NAME] (Outfit: None), NORA (Outfit: 1), CHLOE (Outfit: 3)
 # Time: Wednesday Night
 
+# -reminder that [baby_name] with Nora can be Henry or PlayerChosen and Chloe's can be Plastic or PlayerChosen
+
 label v16s50:  ### ERROR: 50) Baby night, Partner only
-    if not joinwolves:        
-        # -reminder that [baby_name] with Nora can be Henry or PlayerChosen and Chloe's can be Plastic or PlayerChosen
-        # -MC's phone vibrates, making him jolt-
-        play sound "sounds/vibrate.mp3"
-        
-        scene v16s50_1   # TPP Close up on MC' face (surprised, eyes wide open, mouth open) laying in his bed [APE ROOM]
-        with vpunch
-        
-        u "(Huh? Who's calling this late?)"
+    play sound "sounds/vibrate.mp3" # -MC's phone vibrates, making him jolt-
 
-        scene v16s50_2   # TPP MC (no expression, mouth closed) sits up in his bed [APE ROOM]
-        with dissolve
-
-        pause 0.75
-
-        scene v16s50_3   # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] takes his phone off the night stand [APE ROOM]
-        with dissolve
-
-        pause 0.75
-
-        play sound "sounds/vibrate.mp3"
-        
-        # -MC looks at his phone-
-        scene v16s50_4   # TPP MC (no expression, mouth closed) sits on the his bed, his back against the corner looking at his phone [APE ROOM]
-        with dissolve
-
-        u "(Oh, shit. Must be about [v16_baby_name]...)"
-
-    else: # WOLF ROOM 
-        # -reminder that [baby_name] with Nora can be Henry or PlayerChosen and Chloe's can be Plastic or PlayerChosen
-        # -MC's phone vibrates, making him jolt-
-        play sound "sounds/vibrate.mp3"
-        
+    if joinwolves:
         scene v16s50_11   # TPP Close up on MC' face (surprised, eyes wide open, mouth open) laying in his bed [WOLF ROOM]
-        with vpunch
-        
-        u "(Huh? Who's calling this late?)"
+    else:
+        scene v16s50_1   # TPP Close up on MC' face (surprised, eyes wide open, mouth open) laying in his bed [APE ROOM]
+    with vpunch
+    
+    u "(Huh? Who's calling this late?)"
 
+    if joinwolves:
         scene v16s50_12   # TPP MC (no expression, mouth closed) sits up in his bed [WOLF ROOM]
-        with dissolve
+    else:
+        scene v16s50_2   # TPP MC (no expression, mouth closed) sits up in his bed [APE ROOM]
+    with dissolve
 
-        pause 0.75
+    pause 0.75
 
+    if joinwolves:
         scene v16s50_13   # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] takes his phone off the night stand [WOLF ROOM]
-        with dissolve
+    else:
+        scene v16s50_3   # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] takes his phone off the night stand [APE ROOM]
+    with dissolve
 
-        pause 0.75
+    pause 0.75
 
-        play sound "sounds/vibrate.mp3"
-        
-        # -MC looks at his phone-
+    play sound "sounds/vibrate.mp3"
+    
+    # -MC looks at his phone-
+    if joinwolves:
         scene v16s50_14   # TPP MC (no expression, mouth closed) sits on the his bed, his back against the corner looking at his phone [WOLF ROOM]
-        with dissolve
+    else:
+        scene v16s50_4   # TPP MC (no expression, mouth closed) sits on the his bed, his back against the corner looking at his phone [APE ROOM]
+    with dissolve
 
-        u "(Oh, shit. Must be about [v16_baby_name]...)"
+    u "(Oh, shit. Must be about [v16_baby_name]...)"
 
     if not v16s27_parent_chloe:  # -if partner is Nora [Checkpoint 1.1]
         # -Split-screen with Nora?-
@@ -95,7 +78,6 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
         # -event1 Blue (CORRECT)
         # -event2 Green
         # -event3 Orange
-
             "Blue": # -if Blue
                 scene v16s50_5
                 with dissolve
@@ -496,40 +478,30 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
 
     ### ERROR: [Checkpoint 2]
 
-    if not joinwolves:
-        # -MC puts the phone down, gets comfy for sleep again-
-        scene v16s50_8b   # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] places his phone on the night stand [APE ROOM]
-        with dissolve
-
-        pause 0.75
-
-        scene v16s50_8c    # TPP MC (no expression, mouth closed, eyes closed) under the covers laying in bed [APE ROOM].
-        with dissolve
-
-        u "(I really hope there's no more calls tonight...)"
-
-        scene v16s50_8d    # TPP MC Close up on MC's face (no expression, mouth closed, eyes) (OC under the covers laying in bed) [APE ROOM].
-        with dissolve
-
-        u "(I'd mute my phone but, this is part of the project, I guess... Let's see how the rest of the night goes.)"
-    
-    else: # Wolves
-        # -MC puts the phone down, gets comfy for sleep again-
-
+    # -MC puts the phone down, gets comfy for sleep again-
+    if joinwolves:
         scene v16s50_18b    # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] places his phone on the night stand [WOLF ROOM]
-        with dissolve
+    else:
+        scene v16s50_8b   # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] places his phone on the night stand [APE ROOM]
+    with dissolve
 
-        pause 0.75
+    pause 0.75
 
+    if joinwolves:
         scene v16s50_18c    # TPP MC (no expression, mouth closed, eyes closed) under the covers laying in bed [WOLF ROOM].
-        with dissolve
+    else:
+        scene v16s50_8c    # TPP MC (no expression, mouth closed, eyes closed) under the covers laying in bed [APE ROOM].
+    with dissolve
 
-        u "(I really hope there's no more calls tonight...)"
+    u "(I really hope there's no more calls tonight...)"
 
+    if joinwolves:
         scene v16s50_18d    # TPP MC Close up on MC's face (no expression, mouth closed, eyes) (OC under the covers laying in bed) [WOLF ROOM].
-        with dissolve
+    else:
+        scene v16s50_8d    # TPP MC Close up on MC's face (no expression, mouth closed, eyes) (OC under the covers laying in bed) [APE ROOM].
+    with dissolve
 
-        u "(I'd mute my phone but, this is part of the project, I guess... Let's see how the rest of the night goes.)"
+    u "(I'd mute my phone but, this is part of the project, I guess... Let's see how the rest of the night goes.)"
 
     # -Transition to Scene 50a-
 
