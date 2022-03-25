@@ -262,6 +262,8 @@ label v16s10: # Econ class
                 pause 0.75
 
             "Let her continue":
+                label v16s10_sg:
+            
                 $ sceneList.add("v16_lauren")
                 $ add_point(KCT.BOYFRIEND)
 
@@ -346,6 +348,8 @@ label v16s10: # Econ class
                 with dissolve
 
                 u "(She's gonna be the death of me. Lauren of all people... Damn.)"
+
+                $ renpy.end_replay()
 
     else: # -if LaurenFriend
         scene v16s10_4d
