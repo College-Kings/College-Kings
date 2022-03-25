@@ -174,7 +174,13 @@ label v16s8:
 
     li "And for everyone's information-"
 
-    li "I was drunk and talking shit, sue me! I didn't mean anything by it, and I definitely never intended for the entire campus to get involved."
+    if v15_lindsey_alcohol:
+        li "I was drunk and talking shit, sue me!"
+    
+    else:
+        li "I was talking shit, sue me!"
+    
+    li "I didn't mean anything by it, and I definitely never intended for the entire campus to get involved."
 
     scene v16s8_5c # FPP. same as v16s8_5b Chloe's mouth is open, Lindsey's mouth is closed
     with dissolve
