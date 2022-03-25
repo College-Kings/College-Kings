@@ -156,7 +156,7 @@ label v16s11:
 
     u "Oooh... Risky."
 
-    if riley.relationship >= Relationship.LIKES: ###???
+    if riley.relationship >= Relationship.FWB:
         scene v16s11_6c # FPP. At the pinboard, MC looking at Riley, Riley body facing the board, head turned toward MC, Riley laughing, mouth open.
         with dissolve
 
@@ -363,7 +363,7 @@ label v16s11:
 
         pause 0.75
 
-        if riley.relationship >= Relationship.LIKES: ###???
+        if riley.relationship >= Relationship.FWB:
             scene v16s11_12 # TPP. Close up of Riley facing MC and Chloe but her she looks away from seeing MC and Chloe kiss.
             with dissolve
 
