@@ -402,7 +402,7 @@ label v16s64:
 
         u "(Dammit...)"
 
-    elif not v16s63compliment or v16s63bcompliment or v16s63breast_reduction or v16s63bbreath_mint:  # -if MC chose to not write anything at all
+    elif not v16s63compliment or v16s63bcompliment or v16s63breast_reduction or v16s63bbreath_mint: # -if MC chose to not write anything at all
         scene v16s64_2
         with dissolve
 

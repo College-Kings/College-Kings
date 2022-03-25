@@ -5,7 +5,7 @@
 
 # -reminder that [baby_name] with Nora can be Henry or PlayerChosen and Chloe's can be Plastic or PlayerChosen
 
-label v16s50:  ### ERROR: 50) Baby night, Partner only
+label v16s50: ### ERROR: 50) Baby night, Partner only
     play sound "sounds/vibrate.mp3" # -MC's phone vibrates, making him jolt-
 
     if joinwolves:
@@ -43,7 +43,7 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
 
     u "(Oh, shit. Must be about [v16_baby_name]...)"
 
-    if not v16s27_parent_chloe:  # -if partner is Nora [Checkpoint 1.1]
+    if not v16s27_parent_chloe: # -if partner is Nora [Checkpoint 1.1]
         # -Split-screen with Nora?-
         scene v16s50_5 # SPLIT MC (worried, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth closed) holding phone with left hand [any Chicks room behind her].
         with dissolve

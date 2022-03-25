@@ -155,7 +155,7 @@ label v16s32:
                     with dissolve
 
                     menu:
-                        "Use the money" if mc.money >= v16s32_cost_cab_and_flowers :                                                        
+                        "Use the money" if mc.money >= v16s32_cost_cab_and_flowers : 
                             
                             $ mc.money -= v16s32_cost_cab_and_flowers
                             $ v16s26_lindsey_donation_money -= v16s32_cost_cab_and_flowers

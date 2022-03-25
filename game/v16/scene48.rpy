@@ -223,7 +223,7 @@ label v16s48: # 48) Baby night: Chloe & MC
     cl "Get it to stop!"
 
     menu:
-        "Care for baby":            
+        "Care for baby": 
             play sound "sounds/babycry.mp3"
 
             u "I'm guessing it needs the burping key now?"

@@ -29,9 +29,9 @@ label v16s53:
         $ lindsey.messenger.addReply("Okay, I'll see you soon.")
 
         label v16s53_PhoneContinueReply:
-            if lindsey.messenger.replies:                
+            if lindsey.messenger.replies: 
                 call screen phone
-            if lindsey.messenger.replies:                
+            if lindsey.messenger.replies: 
                 u "(I should reply to Lindsey.)"
                 jump v16s53_PhoneContinueReply
 

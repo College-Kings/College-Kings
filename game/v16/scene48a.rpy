@@ -1,5 +1,5 @@
 # SCENE 48a: Chloe and Mc sex after they've thrown their baby out the window
-# Locations:  Chick's Living Room
+# Locations: Chick's Living Room
 # Characters: MC (Outfit: 9), CHLOE (Outfit: 3)
 # Time: Wed Night
 
@@ -258,7 +258,7 @@ label v16s48a_feet: # -if Feet
             
     call screen sex_overlay("v16s48a_continue") # -Return to free roam-
 
-label v16s48a_vagina:  # -if Vagina
+label v16s48a_vagina: # -if Vagina
     # -MC chooses event1 or event2
     # -event1 Tease with kisses
     # -event2 Finger her
