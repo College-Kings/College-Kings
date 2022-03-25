@@ -108,7 +108,7 @@ label v16s12:
         scene v16s12_2e
         with dissolve
 
-        u "Even Lindsey??"
+        u "Even Lindsey?"
 
         scene v16s12_2
         with dissolve
