@@ -46,12 +46,12 @@ label v16s5:
                 
                 ro "So, you forgive me...?"
 
-                scene v16s5_2b # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose slight smile, mouth closed  [DO NOT SHOW FRAT HOUSE].
+                scene v16s5_2b # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose slight smile, mouth closed [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 u "I could never hold anything against you to the point where I'd push you out of my life. I want you in it. Forgiven and forgotten."
 
-                scene v16s5_3 # TPP. Show Ms. Rose with her arms wrapped around MC hugging him, One of her legs lifted back the generic happy lady hug (https://thumbs.dreamstime.com/z/close-up-couple-wearing-jeans-white-sneakers-standing-hugging-kissing-outdoors-park-romantic-young-girlfriend-124813754.jpg), Ms. Rose smile, mouth closed, MC slight smile, mouth closed  [DO NOT SHOW FRAT HOUSE].
+                scene v16s5_3 # TPP. Show Ms. Rose with her arms wrapped around MC hugging him, One of her legs lifted back the generic happy lady hug (https://thumbs.dreamstime.com/z/close-up-couple-wearing-jeans-white-sneakers-standing-hugging-kissing-outdoors-park-romantic-young-girlfriend-124813754.jpg), Ms. Rose smile, mouth closed, MC slight smile, mouth closed [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 pause 0.75

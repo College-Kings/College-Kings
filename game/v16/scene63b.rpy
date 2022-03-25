@@ -464,7 +464,7 @@ label v16s63b:
     scene v16s63b_22b # TPP. Chloe and Lindsey walk away from eachh other with pained expressions mouths are closed, looking away from each other
     with dissolve
 
-    pause 0.75  
+    pause 0.75
 
     scene v16s63b_15
     with dissolve

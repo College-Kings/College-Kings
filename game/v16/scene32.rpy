@@ -68,7 +68,7 @@ label v16s32:
 
         menu:
             "Standard reservation":
-                $ v16s32_birthday_reservation = 1 # TODO: Variable                
+                $ v16s32_birthday_reservation = 1 # TODO: Variable 
 
                 scene v16s32_3
                 with dissolve

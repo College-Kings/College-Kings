@@ -160,17 +160,17 @@ label v16s15:
 
     pause 0.75
 
-    # Start Free roam  
+    # Start Free roam 
     # screen layout 
-    #   v16s15_pier_entrance  => Preset 0 from the reference previz
+    #   v16s15_pier_entrance => Preset 0 from the reference previz
      
     #   v16s15_pier_entrance_1 - Hightlight left side walkway -> v16s15_pier_middle_carousel
-    #   v16s15_pier_entrance_2 - Hightlight Hotdog stand  -> Invoke hotdog stand scene 
+    #   v16s15_pier_entrance_2 - Hightlight Hotdog stand -> Invoke hotdog stand scene 
     #   v16s15_pier_entrance_3 - Hightlight right side walkway -> v16s15_pier_middle_carousel
         
     # v16s15_pier_middle_carousel => Preset 2 from reference previz, facing the carousel
         
-    #   v16s15_pier_middle_carousel_1 - Highlight wheel of chance - > invoke wheel scene  
+    #   v16s15_pier_middle_carousel_1 - Highlight wheel of chance - > invoke wheel scene 
     #   v16s15_pier_middle_carousel_2 - Hightlight bottom center of screen ->  v16s15_pier_middle_range
     #   v16s15_pier_middle_carousel_3 - Highlight carousel -> invoke carousel scene 
 
@@ -178,7 +178,7 @@ label v16s15:
     # v16s15_pier_middle_range => Preset 2 from reference previz, facing the shooting range/gallery
         
     #   v16s15_pier_middle_range_1 - Highlight shooting gallery -> invoke shooting range scene 
-    #   v16s15_pier_middle_range_2 - Highlight bottom center  of screen -> v16s15_pier_middle_carousel
+    #   v16s15_pier_middle_range_2 - Highlight bottom center of screen -> v16s15_pier_middle_carousel
 
     # -A single-screen free-roam with all four now stood inside the carnival. We can select the Carousel, the Wheel of chance, the Hot dog stand, and the Shooting range. Selecting the Shooting range will end the free roam, don't show any characters
     call screen v16s15_pier_entrance 
@@ -365,7 +365,7 @@ label v16s15pier_date_carousel: # -if Carousel
 
             u "Yeah, okay. Let's get on this one here."
 
-            scene v16s15_19 # FPP. Show just Penelope (slght smile, mouth open) from the waist up, with the tops of carousel horses in the background, she is looking at Mc  [CAROUSEL: Ride Location: Carousel3]
+            scene v16s15_19 # FPP. Show just Penelope (slght smile, mouth open) from the waist up, with the tops of carousel horses in the background, she is looking at Mc [CAROUSEL: Ride Location: Carousel3]
             with dissolve
 
             pe "Together?"
@@ -600,7 +600,7 @@ label v16s15pier_date_carousel: # -if Carousel
 
             u "Slowest ride ever... Haha!"
 
-            scene v16s15_22a # FPP. Show Just Penelope (slight smile, mouth is open) from the shoulders up, looking at Mc  [CAROUSEL: Ride Location: Carousel2].
+            scene v16s15_22a # FPP. Show Just Penelope (slight smile, mouth is open) from the shoulders up, looking at Mc [CAROUSEL: Ride Location: Carousel2].
             with dissolve
 
             pe "It really is, oh my... *Giggles*"
@@ -615,7 +615,7 @@ label v16s15pier_date_carousel: # -if Carousel
 
             pe "Karen invited me. I only realized there was more to it once I had already gotten here."
 
-            scene v16s15_22d # FPP. Show Just Penelope (slight smile, mouth is closed) from the shoulders up, looking at Mc  [CAROUSEL: Ride Location: Carousel4].
+            scene v16s15_22d # FPP. Show Just Penelope (slight smile, mouth is closed) from the shoulders up, looking at Mc [CAROUSEL: Ride Location: Carousel4].
             with dissolve
 
             u "It's a bit weird that she invited you on her date, no?"
@@ -1258,7 +1258,7 @@ label v16s15pier_date_wheel: # -if Wheel of chance
 
     # -the group walks away, karen looks grossed out by smiling imre, and penelope and mc are either holding hands and smiling if RS or they are just smiling if they are just friends
 
-    if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS  TODO: Variable
+    if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS TODO: Variable
         scene v16s15_46 # TPP. The group walks away from the Wheel Stand, karen (disgusted, mouth closed) walks next to and is looking at Imre. Imre (mouth closed) smiles back at Karen. Penelope and Mc are holding hands and smiling with mouths closed looking at each other as they are walking behind Imre and Karen [WHEEL]
         with dissolve
 
@@ -1662,7 +1662,7 @@ label v16s15pier_date_carousel_2: ### -if HotDog Stand
 
     dg3 "If you eat that hotdog off the ground...!"
 
-    scene v16s15_60f # FPP. Show Imre and Karen  next to each other from where MC is sitting, Imre has an anxious expression mouth is open, Karen is extremely angry, mouth is closed, both of them are looking at each other [HOTDOG]
+    scene v16s15_60f # FPP. Show Imre and Karen next to each other from where MC is sitting, Imre has an anxious expression mouth is open, Karen is extremely angry, mouth is closed, both of them are looking at each other [HOTDOG]
     with dissolve
 
     imre "Um..."
@@ -1738,7 +1738,7 @@ label v16s15pier_date_carousel_2: ### -if HotDog Stand
 
     pause 0.75
 
-    scene v16s15_62 # TPP. Show just Penelope and MC throwing away COKE cans  into TRASH CAN, Mc still has puffy cheeks, looking at Penelope, Penelope is laughing looking at MC [HOTDOG]
+    scene v16s15_62 # TPP. Show just Penelope and MC throwing away COKE cans into TRASH CAN, Mc still has puffy cheeks, looking at Penelope, Penelope is laughing looking at MC [HOTDOG]
     with dissolve
 
     pause 0.75
@@ -1750,7 +1750,7 @@ label v16s15pier_date_carousel_2: ### -if HotDog Stand
 
     call screen v16s15_pier_entrance # -Return to the first free roam screen-
 
-label v16s15pier_date_wheel_2: ### -if Shooting range     # -Ends free roam-
+label v16s15pier_date_wheel_2: ### -if Shooting range # -Ends free roam-
     if not len(v16s15_fr_carnival) == 3:
         u "(We should probably check out the other attractions first)"
         call screen v16s15_pier_middle_range

@@ -245,7 +245,7 @@ label v16s57:
             sa "Thanks, butt-munch."
 
         "Agree with Cameron":
-            $ v16s57_agree_with_samantha = 2 # TODO: Variable  # PlaceHolder Variable
+            $ v16s57_agree_with_samantha = 2 # TODO: Variable # PlaceHolder Variable
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
 

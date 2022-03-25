@@ -344,7 +344,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
         # -if MC spent all Lindsey's money and MC DID post on Kiwii about the dog shelter
         elif v16s26_lindsey_donation_money == 0 and v16s52_mc_dogshelter_kiwii_post: # PLACEHOLDER VARIABLES
             scene v16s55_3c
-            with dissolve    
+            with dissolve 
 
             li "Or, I wanted to ask you about that. Autumn replied to my comment and asked about the donation...?"
 

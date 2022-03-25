@@ -5,7 +5,7 @@
 
 label v16s41: # MC goes home dressed up
     
-    if v16s39_fr_aubrey_date_points >= 4 and aubrey.relationship < Relationship.TAMED: # TODO: Variable  # IF failed the date & lost AubreyTamed
+    if v16s39_fr_aubrey_date_points >= 4 and aubrey.relationship < Relationship.TAMED: # TODO: Variable # IF failed the date & lost AubreyTamed
         scene v16s41_1 # TPP MC walking down the street looking sad and upset
         with dissolve
 

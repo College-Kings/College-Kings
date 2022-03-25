@@ -236,7 +236,7 @@ label v16s10: # Econ class
             ro "Good, please concentrate. I'd hate to fail my students just because they can't focus."
 
     # -Regardless of choice-
-    if lauren.relationship >= Relationship.GIRLFRIEND or "v15_lauren" in sceneList: # -if LaurenRS or LaurenSex        
+    if lauren.relationship >= Relationship.GIRLFRIEND or "v15_lauren" in sceneList: # -if LaurenRS or LaurenSex
         scene v16s10_2c
         with dissolve
 
