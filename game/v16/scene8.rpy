@@ -143,10 +143,12 @@ label v16s8:
 
         u "(Who the hell are these people?)"
         
+    li "What the fuck, Chloe?! How the hell did you get that recording?"
+
     scene v16s8_3g # TPP. Everyone looks a little surprised and sees Lindsey approaching with an angry face, straight up to Chloe
     with dissolve
 
-    li "What the fuck, Chloe?! How the hell did you get that recording?"
+    pause 0.75
 
     scene v16s8_3h # TPP. Chloe stands up from the bench, Chloe and Lindsey have angry expressions looking at each other, mouths are closed, MC also stands up from the bench, MC and the others have stepped back from Chloe and Lindsey slightly shocked expressions looking at Chloe and Lindsey
     with dissolve
@@ -160,12 +162,7 @@ label v16s8:
 
     cl "I have no idea who recorded you, but at least now everyone knows what kind of person you are."
 
-    scene v16s8_5a # FPP Lindsey steps closer to Chloe, Lindsey's anger intensifies, both of their mouths are closed Chloe still has an angry expression
-    with dissolve
-
-    pause 0.75
-
-    scene v16s8_5b # FPP same v16s8_5a Chloe's mouth is closed, Lindsey's mouth is open
+    scene v16s8_5b # FPP Lindsey steps closer to Chloe, Lindsey's anger intensifies, both of their mouths are closed Chloe still has an angry expression
     with dissolve
 
     li "That's bullshit! You're such a fucking liar!"
