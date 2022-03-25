@@ -100,10 +100,11 @@ label v16s8:
             scene v16s8_4f # FPP. Chloe raises an eyebrow at MC, and a "suspicious expression," mouth is still closed
             with dissolve
 
-            pause 0.75
+            if False: ### looks strange
+                pause 0.75
 
-            scene v16s8_4g # FPP. Chloe gives MC a "don't you dare look," mouth is still closed
-            with dissolve
+                scene v16s8_4g # FPP. Chloe gives MC a "don't you dare look," mouth is still closed
+                with dissolve
 
             u "I mean, I can... I've felt... Nevermind."
 
