@@ -502,9 +502,6 @@ label v16s15pier_date_carousel: # -if Carousel
 
                 pe "Right..."
 
-            scene v16s15_12
-            with dissolve
-
             carni "Hold on tight! Away we g-"
 
             scene v16s15_12b
@@ -520,7 +517,7 @@ label v16s15pier_date_carousel: # -if Carousel
             scene v16s15_12b
             with dissolve
 
-            carni "You can't do that; you can't share one. We have weight limits for these horses."
+            carni "You can't do that! You can't share one. We have weight limits for these horses."
 
             scene v16s15_12c
             with dissolve
@@ -555,7 +552,7 @@ label v16s15pier_date_carousel: # -if Carousel
             scene v16s15_12b
             with dissolve
 
-            carni "I must keep you safe, no matter how much you spit on and boo and jeer me; For that is the oath I have taken."
+            carni "I must keep you safe, no matter how much you spit on and boo and jeer me. For that is the oath I have taken."
 
             scene v16s15_12e
             with dissolve
@@ -701,8 +698,6 @@ label v16s15pier_date_carousel: # -if Carousel
     call screen v16s15_pier_middle_carousel # -Return to second free roam screen-
 
 label v16s15pier_date_wheel: # -if Wheel of chance
-    $ freeroam15.add("wheel")
-
     scene v16s15_26 # TPP Imre and Karen (front, closet to the bench) & MC and Penelope( behind them, closest to the bench) stand by the [CAROUSEL BENCH] facing the [WHEEL OF CHANCE]. "Dylan", a short man wearing a pink 'respect women' t-shirt, angry, mouth open, yelling, stands [ON RIGHT OF THE WHEEL,(WHEN FACING IT)] in front of the Wheel yelling at the Wheel attendant [ON LEFT OF THE WHEEL, WHEN FACING IT].
     #with dissolve
 
@@ -976,12 +971,10 @@ label v16s15pier_date_wheel: # -if Wheel of chance
     pe "Such a gentleman..."
 
     if penelope.relationship >= Relationship.LIKES: # -penelopers kisses mc on the cheek- TODO: Variable
-        play sound "sounds/kiss.mp3"
-
         scene v16s15_37 # TPP. Show just Penelope Kissing Mc on the cheek in front of the WHEEL, both slight smiles [WHEEL]
         with dissolve
-
-        pause 0.75
+        play sound "sounds/kiss.mp3"
+        pause 1.25
 
     scene v16s15_32
     with dissolve
@@ -1045,6 +1038,7 @@ label v16s15pier_date_wheel: # -if Wheel of chance
 
     menu:
         "Gentle spin": # -MC spins. It lands on 'Hotdog'-
+            $ freeroam15.add("wheel_gentle")
             $ v16s15_hotdogcoupon = True # TODO:Variable
             $ add_point(KCT.BRO)
 
@@ -1195,8 +1189,8 @@ label v16s15pier_date_wheel: # -if Wheel of chance
             dg3 "Yes please!"
 
         "Strong spin":
+            $ freeroam15.add("wheel_strong")
             $ add_point(KCT.TROUBLEMAKER)
-            $ v16s15_carousel_strong_spin = True
 
             scene v16s15_43 # TPP. Show just MC in fromt of WHEEL (slight smile, mouth closed) grabbing the wheel with both hands. Wheel attendant to the LEFT of the wheel with a devious smile, mouth is closed, looking at MC [WHEEL]
             with dissolve
@@ -1272,12 +1266,12 @@ label v16s15pier_hotdog: ### -if HotDog Stand
     scene v16s15_47 # FPP. Imre and Karen, looking at each other with slight smiles mouths are closed, stand in front of HOT DOG STAND. HOTDOG VENDOR on the left of the HOT DOG STAND. Imre hands money To the VENDOR. [HOTDOG]
     #with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v16s15_47a # FPP. Imre and Karen turn around to face MC and Penelope. Imre has a hotdog in one hand and a soda in the other slight smile mouth is closed looking at Mc. Karen doesn't have a hotdog, just a soda in one hand, slight smile, mouth is closed, looking at MC [HOTDOG]
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v16s15_48 # FPP. Show just Penelope on MC's right looking at Karen, no expression, mouth is open [HOTDOG]
     with dissolve
@@ -1314,8 +1308,6 @@ label v16s15pier_hotdog: ### -if HotDog Stand
 
     imre "*Quietly* She might be vegan, but she'll be eating my meat later, haha."
 
-    pause 0.75
-
     scene v16s15_51 # FPP. Show just full body image of Imre holding his hotdog around his pant's like it's his penis, with a cocky expression, smiling, mouth is closed, looking at MC, Karen is seen walking away from Imre in the background with her back to the camera [ Waling towards the light post directly across from the HOTDOG STAND SIGN | HOTDOG] 
     with dissolve
 
@@ -1341,7 +1333,7 @@ label v16s15pier_hotdog: ### -if HotDog Stand
     scene v16s15_53 # FPP. Show Just Penelope [ to MC's RIGHT, HOTDOG STAND to her RIGHT] looking towards the Hotdog Vendor, slight smile, mouth is open [HOTDOG]
     with dissolve
 
-    pe "You guessed it, haha. Yes, please. ."
+    pe "You guessed it, haha. Yes, please."
 
     scene v16s15_52b # FPP. Show just the Hotdog Vendor, to the LEFT of the HOT DOG STAND , looking at Penelope, slight smile, mouth is open [HOTDOG ]
     with dissolve
@@ -1349,8 +1341,7 @@ label v16s15pier_hotdog: ### -if HotDog Stand
     hv "My powers never fail! One hotdog coming right up!"
 
     if v16s15_hotdogcoupon: # -if MC already went to the Wheel of Chance and chose 'gentle spin' leading to a free hotdog coupon TODO: Variable
-        if penelope.relationship >= Relationship.GIRLFRIEND: ### -if PenelopeRS TODO: Variable
-
+        if penelope.relationship >= Relationship.LIKES: ### -if PenelopeRS TODO: Variable
             scene v16s15_53a # FPP. MC turning his head to his right, Show Just Penelope head turned looking at MC with with the HOT DOG STAND to her right, MC hands the hotdog coupon to Penelope, Penelope smiles, mouth is closed [HOTDOG]
             with dissolve
 
@@ -1367,7 +1358,6 @@ label v16s15pier_hotdog: ### -if HotDog Stand
             pause 0.75
 
         else: # -if PenelopeFriend TODO: Variable
-
             scene v16s15_55 # FPP. Just show MC's hand with the hotdog coupon in it. [HOTDOG]
             with dissolve
 
@@ -1377,7 +1367,6 @@ label v16s15pier_hotdog: ### -if HotDog Stand
             with dissolve
 
             menu:
-
                 "Give her the coupon":
                     $ add_point(KCT.BOYFRIEND)
 
@@ -1411,6 +1400,33 @@ label v16s15pier_hotdog: ### -if HotDog Stand
 
                     pe "Thanks, [name]."
 
+                    scene v16s15_52c # FPP. The hotdog vendor hands Penelope her hotdog, both of them slight smiles, mouths are closed, looking at each other [HOTDOG]
+                    with dissolve
+
+                    pause 0.75
+
+                    scene v16s15_52a
+                    with dissolve
+
+                    hv "And now for you... I'm sensing a very powerful hunger for..."
+
+                    hv "A hotdog?"
+
+                    scene v16s15_52d # FPP. Show just the Hotdog Vendor, to the LEFT of the HOTDOG STAND, looking at MC, slight smile, mouth is closed [HOTDOG]
+                    with dissolve
+
+                    u "Is there anything else on the menu? *Laughs*"
+
+                    scene v16s15_52a
+                    with dissolve
+
+                    hv "Nope!"
+
+                    scene v16s15_55 # FPP. Just show MC's hand with the hotdog coupon in it. [HOTDOG]
+                    with dissolve
+
+                    u "One free hot dog then, please."
+
                 "Keep the coupon":
                     $ add_point(KCT.BRO)
                     if penelope.relationship >= Relationship.GIRLFRIEND: ### TODO: Variable
@@ -1423,32 +1439,32 @@ label v16s15pier_hotdog: ### -if HotDog Stand
 
                     u "(Sue me.)"
 
-    scene v16s15_52c # FPP. The hotdog vendor hands Penelope her hotdog, both of them slight smiles, mouths are closed, looking at each other [HOTDOG]
-    with dissolve
+                    scene v16s15_52c # FPP. The hotdog vendor hands Penelope her hotdog, both of them slight smiles, mouths are closed, looking at each other [HOTDOG]
+                    with dissolve
 
-    pause 0.75
+                    pause 0.75
 
-    scene v16s15_52a
-    with dissolve
+                    scene v16s15_52a
+                    with dissolve
 
-    hv "And now for you... I'm sensing a very powerful hunger for..."
+                    hv "And now for you... I'm sensing a very powerful hunger for..."
 
-    hv "A hotdog?"
+                    hv "A hotdog?"
 
-    scene v16s15_52d # FPP. Show just the Hotdog Vendor, to the LEFT of the HOTDOG STAND, looking at MC, slight smile, mouth is closed [HOTDOG]
-    with dissolve
+                    scene v16s15_52d # FPP. Show just the Hotdog Vendor, to the LEFT of the HOTDOG STAND, looking at MC, slight smile, mouth is closed [HOTDOG]
+                    with dissolve
 
-    u "Is there anything else on the menu? *Laughs*"
+                    u "Is there anything else on the menu? *Laughs*"
 
-    scene v16s15_52a
-    with dissolve
+                    scene v16s15_52a
+                    with dissolve
 
-    hv "Nope!"
+                    hv "Nope!"
 
-    scene v16s15_52d
-    with dissolve
+                    scene v16s15_52d
+                    with dissolve
 
-    u "One hotdog then, please!"
+                    u "One hotdog then, please!"
 
     scene v16s15_52e # FPP. Show the hotdog vendor handing MC a hotdog, slight smile, mouth is closed [HOTODOG]
     with dissolve

@@ -9,19 +9,22 @@ screen v16s15_pier_entrance():
     imagebutton:
         idle Transform("#0000", xysize=(613, 566))
         hover image_path + "Highlights/v16s15pier_entrance_hotdog.webp"
-        action Show("v16s15_pier_middle_carousel")
+        if not "hotdog" in freeroam15:
+            action Jump("v16s15pier_hotdog")
+        else:
+            action Call("free_roam_spoken_too", "v16s15pier_entrance", "v16s15_pier_entrance")
         pos (559, 478)
 
     imagebutton:
         idle Transform("#0000", xysize=(237, 550))
         hover image_path + "Highlights/v16s15pier_entrance_left.webp"
-        action Jump("v16s15pier_date_wheel")
+        action Show("v16s15_pier_middle_carousel")
         pos (354, 396)
 
     imagebutton:
         idle Transform("#0000", xysize=(237, 550))
         hover image_path + "Highlights/v16s15pier_entrance_right.webp"
-        action Show("v16s15_pier_middle_carousel")
+        action Show("v16s15_pier_middle_range")
         pos (1320, 396)
 
 
@@ -31,7 +34,7 @@ screen v16s15_pier_middle_carousel():
 
     default image_path = "images/v16/Scene 15/Free Roam Screens/"
 
-    if v16s15_carousel_strong_spin:
+    if "wheel_strong" in freeroam15:
         add image_path + "v16s15pier_middle_carousel_2.webp"
     else:
         add image_path + "v16s15pier_middle_carousel.webp"
@@ -42,7 +45,7 @@ screen v16s15_pier_middle_carousel():
         action Jump("v16s15pier_date_carousel")
         pos (1537, 330)
 
-    if v16s15_carousel_strong_spin:
+    if "wheel_strong" in freeroam15:
         imagebutton:
             idle Transform("#0000", xysize=(601, 762))
             hover image_path + "Highlights/v16s15pier_middle_carousel_2_wheel.webp"
@@ -59,7 +62,7 @@ screen v16s15_pier_middle_carousel():
     imagebutton:
         idle Transform("#0000", xysize=(1330, 180))
         hover "images/common/free-roam-highlights/bottom.webp"
-        action Show("v16s15_pier_middle_range")
+        action Show("v16s15_pier_entrance")
         align (0.5, 1.0)
 
 
@@ -72,16 +75,10 @@ screen v16s15_pier_middle_range():
     add image_path + "v16s15pier_middle_range.webp"
 
     imagebutton:
-        idle Transform("#0000", xysize=(272, 770))
-        hover image_path + "Highlights/v16s15pier_middle_range_left.webp"
-        action Jump("")
-        pos (125, 293)
-
-    imagebutton:
-        idle Transform("#0000", xysize=(272, 770))
-        hover image_path + "Highlights/v16s15pier_middle_range_right.webp"
-        action Jump("")
-        pos (1509, 293)
+        idle Transform("#0000", xysize=(1330, 180))
+        hover "images/common/free-roam-highlights/bottom.webp"
+        action Show("v16s15_pier_entrance")
+        align (0.5, 1.0)
 
     imagebutton:
         idle Transform("#0000", xysize=(850, 465))
