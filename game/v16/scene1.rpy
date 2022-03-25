@@ -402,7 +402,7 @@ label v16s1_win:
     scene v16s1_win_3e
     with dissolve
 
-    u "(Hmm, should I offer to stay with Riley? Or just enjoy a peaceful night at home?)"
+    u "(Hmm, should I offer to stay with Riley, or just enjoy a peaceful night at home?)"
 
     menu:
         "Go home alone":
