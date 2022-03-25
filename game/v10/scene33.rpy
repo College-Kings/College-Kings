@@ -1373,7 +1373,7 @@ label v10s33_deergirl21:
 
     menu:
         "Get a lottery ticket":
-            $ v10lottery_ticket = True
+            $ freeroam6.add("karen_ticket")
             $ add_point(KCT.BOYFRIEND)
             u "Well I'll take one."
 

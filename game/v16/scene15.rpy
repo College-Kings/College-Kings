@@ -94,7 +94,7 @@ label v16s15:
 
     u "Haha, nice!"
 
-    if v10lottery_ticket: # TODO: Variable
+    if "karen_ticket" in freeroam6:
         scene v16s15_6b
         with dissolve
 
