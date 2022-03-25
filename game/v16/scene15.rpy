@@ -903,7 +903,7 @@ label v16s15pier_date_wheel: # -if Wheel of chance
     scene v16s15_30k
     with dissolve
 
-    dg3 "... *Sighs* Fine."
+    dg3 "*Sighs* Fine..."
 
     scene v16s15_32a # FPP. Show just the top portion of the wheel with a dial pointing at a blue portion of the wheel with an image of a small piece of paper on it [WHEEL]
     with dissolve
