@@ -263,7 +263,6 @@ label v16s17: # 17) MC catches up to Imre
 
                 pause 0.75
 
-
             else: # -if Apes
                 scene v16s17_4d
                 with dissolve
