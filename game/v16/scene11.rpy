@@ -519,7 +519,7 @@ label v16s11:
             scene v16s11_11f
             with dissolve
 
-            cl "Thanks to you of course. That wonderful gift of yours gave him some terrific ideas."
+            cl "He mentioned you, by the way. He made a point of saying your gift had helped increase his collection." # don't forget Mr. Lee already had "tons of them all over my house and even in my office back on campus"
 
             scene v16s11_11d
             with dissolve
