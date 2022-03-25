@@ -129,12 +129,10 @@ label v16s5:
 
                 u "Okay, sounds great. I'll see you soon."
 
-                play sound "sounds/kiss.mp3"
-
                 scene v16s5_4 # TPP. Show MC and Ms. Rose sharing a kiss.
                 with dissolve
-
-                pause 0.75
+                play sound "sounds/kiss.mp3"
+                pause 1.25
 
                 scene v16s5_1a # TPP. Show MC walking the way he came from in v16s5_1, Ms. Rose in the background walking away from MC, MC neutral face, mouth closed [DO NOT SHOW FRAT HOUSE].
                 with dissolve
@@ -383,12 +381,10 @@ label v16s5:
 
         u "Yeah, for sure."
 
-        play sound "sounds/kiss.mp3"
-
         scene v16s5_4
         with dissolve
-
-        pause 0.75
+        play sound "sounds/kiss.mp3"
+        pause 1.25
 
         scene v16s5_1a
         with dissolve

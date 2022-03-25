@@ -4,11 +4,9 @@
 # Time: Night
 
 label v16s3a:
-    play sound "sounds/kiss.mp3"
-    
     scene v16s3a_1 # TPP. MC and Riley on the bed, Kissing.
     with dissolve
-
+    play sound "sounds/kiss.mp3"
     pause 1.5
 
     scene v16s3a_2 # FPP. Sitting on Riley's bed, MC looking at Riley, Riley looking at MC, Riley smirking, mouth open.
@@ -37,19 +35,15 @@ label v16s3a:
 
     pause 0.75
 
-    play sound "sounds/kiss.mp3"
-
     scene v16s3a_1
     with dissolve
-
-    pause 1
-    
     play sound "sounds/kiss.mp3"
-
+    pause 1.25
+    
     scene v16s3a_1a # TPP. Riley kissing MC's neck, MC tilting his neck as Riley kisses it, MC slight smile, mouth closed.
     with dissolve
-
-    pause 1.25
+    play sound "sounds/kiss.mp3"
+    pause 1.5
 
     scene v16s3a_3 # TPP. Close up of Riley's hand unziping MC's pants.
     with dissolve
@@ -213,11 +207,9 @@ label v16s3a:
 
             ri "Haha, okay, that sounds fun too."
 
-            play sound "sounds/kiss.mp3"
-
             scene v16s3a_1
             with dissolve
-
+            play sound "sounds/kiss.mp3"
             pause 0.75
 
         "I like being pleased":
@@ -241,11 +233,9 @@ label v16s3a:
 
             ri "I know I am."
 
-            play sound "sounds/kiss.mp3"
-
             scene v16s3a_1
             with dissolve
-            
+            play sound "sounds/kiss.mp3"            
             pause 0.75
 
     scene v16s3a_5 # TPP. MC getting off the bed, MC slight smile, mouth closed, Riley slight smile, mouth closed.
