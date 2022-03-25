@@ -183,9 +183,6 @@ label v16s15:
     # -A single-screen free-roam with all four now stood inside the carnival. We can select the Carousel, the Wheel of chance, the Hot dog stand, and the Shooting range. Selecting the Shooting range will end the free roam, don't show any characters
     call screen v16s15_pier_entrance 
 
-    
-
-    
 label v16s15pier_date_carousel: # -if Carousel
     $ v16s15_fr_carnival.add("carousel") # TODO: Variable
 
