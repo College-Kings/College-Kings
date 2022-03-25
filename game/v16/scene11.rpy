@@ -235,29 +235,29 @@ label v16s11:
 
     ri "*Giggles* Stop it!"
 
-    scene v16s11_6b
+    scene v16s11_6d
     with dissolve
 
     u "I tried!"
 
-    scene v16s11_6f
+    scene v16s11_6c
     with dissolve
 
     ri "I think I'm gonna do it."
 
-    scene v16s11_6b
+    scene v16s11_6d
     with dissolve
 
     u "Wait, really?"
 
-    scene v16s11_6f
+    scene v16s11_6c
     with dissolve
 
     ri "Yeah, why not? I could easily do some on-campus photography for it."
 
     ri "And honestly, it sounds kind of fun. Interviewing students and staff about important issues?"
 
-    scene v16s11_6b
+    scene v16s11_6d
     with dissolve
 
     menu:
