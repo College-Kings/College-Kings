@@ -358,24 +358,22 @@ label v16s11:
 
     cl "Hey guys!"
 
-    if chloe.relationship >= Relationship.GIRLFRIEND: 
-        play sound "sounds/kiss.mp3"
-
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v16s11_11a # TPP. At the pinboard, MC looking at Chloe, Chloe leaning forward and kissing MC on the cheek.
         with dissolve
-
-        pause 0.75
+        play sound "sounds/kiss.mp3"
+        pause 1.25
 
         if riley.relationship >= Relationship.FWB:
             scene v16s11_12 # TPP. Close up of Riley facing MC and Chloe but her she looks away from seeing MC and Chloe kiss.
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
     scene v16s11_10a # TPP. Show Chloe standing with MC and Riley at the pinboard.
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v16s11_11b # FPP. At the pinboard, MC looking at Chloe, Chloe looking at her campaign poster on the pinboard, Chloe neutral face, mouth open.
     with dissolve
