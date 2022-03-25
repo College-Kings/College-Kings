@@ -800,7 +800,7 @@ label v16s63b:
     scene v16s63b_7d
     with dissolve
 
-    cl "Just to remind you, there's a suggestion box on the table for any ideas you have; I want to go through them when we go outside."
+    cl "Just to remind you, there's a suggestion box on the table for any ideas you have. I want to go through them when we go outside."
 
     scene v16s63b_7h # FPP. Show just Chloe (slight smile, mouth is open, looking at MC)
     with dissolve

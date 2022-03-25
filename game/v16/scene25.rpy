@@ -1,6 +1,6 @@
 # SCENE 25: MC goes to bed WOLVES OR APES (both)
 # Locations: Wolves/Apes dorm room, Wolves/Apes living room
-# Characters: MC (Outfit: 5), EMILY (Robe; Lingerie1; Lingerie2)
+# Characters: MC (Outfit: 5), EMILY (Robe, Lingerie1, Lingerie2)
 # Time: Night
 
 label v16s25:

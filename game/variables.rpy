@@ -387,7 +387,7 @@ default v15_blame_nora = False # blame_chris = (v13_imre_disloyal, or maybe not)
 default v15_car_sold_price = 0
 default v15_emily_sext = False
 default v15_lindsey_alcohol = False
-default v15_lindsey_recording = 0 # (if recording happened in scene 35, value may be 1, 2 or 3; if recording happened in scene 39, value may be 4, 5 or 6)
+default v15_lindsey_recording = 0 # (if recording happened in scene 35, value may be 1, 2 or 3. If recording happened in scene 39, value may be 4, 5 or 6)
 default v15_mad_at_ms_rose = False
 default v15_nora_clue_camping = False
 default v15_nora_clue_ex = False
@@ -438,7 +438,7 @@ default pb_threesome = False
 
 # 16.0
 default v16_baby_name = "Baby" # Used to store the player designated name of the baby
-default v16_wrong_key = True # This does default to True; not a typo. Used for baby menus
+default v16_wrong_key = True # This does default to True, not a typo. Used for baby menus
 default v16_wintom = False
 default v16_home_riley = False
 
@@ -459,7 +459,6 @@ default v16s1_win_fight_with_tom = False
 default v16s11_sign_up = False
 default v16s20_take_twazzlers = False
 default v16s15_hotdogcoupon = False
-default v16s15_carousel_strong_spin = False
 default v16s23_mention_bills = False  # TODO: Variable
 default v16s23_mention_laptop = False # TODO: Variable
 default v16s23_support_amber = False # TODO: Variable

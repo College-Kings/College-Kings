@@ -92,12 +92,12 @@ label v16s23: # 23) Meet Amber at strip club
 
     u "Ha, no worries."
 
-    scene v16s23_6 # FPP MC's view as he looks around the inside of the strip club [standing at: CHECKPOINT A; Looking at: CHECKPOINT 1]
+    scene v16s23_6 # FPP MC's view as he looks around the inside of the strip club [standing at: CHECKPOINT A, Looking at: CHECKPOINT 1]
     with dissolve
 
     u "So, this is where the magic happens?"
 
-    scene v16s23_7 # FPP View from another angle of the interior of the strip club [standing at: CHECKPOINT A; Looking at CHECKPOINT 2]
+    scene v16s23_7 # FPP View from another angle of the interior of the strip club [standing at: CHECKPOINT A, Looking at CHECKPOINT 2]
     with dissolve
 
     am "Yeah, what do you think?"
@@ -117,17 +117,17 @@ label v16s23: # 23) Meet Amber at strip club
 
     u "So, are you enjoying it here?"
 
-    scene v16s23_11 # FPP Show Amber in her seat next to the catwalk, looking at MC with a slight smile, mouth open [CHECKPOINT B; MC left seat, Amber right seat]
+    scene v16s23_11 # FPP Show Amber in her seat next to the catwalk, looking at MC with a slight smile, mouth open [CHECKPOINT B, MC left seat, Amber right seat]
     with dissolve
 
     am "Honestly, yes. I mean-"
 
-    scene v16s23_11a # FPP Same angle as 11, Amber looking up at the catwalk, slight smile, mouth open [CHECKPOINT B; MC left seat, Amber right seat]
+    scene v16s23_11a # FPP Same angle as 11, Amber looking up at the catwalk, slight smile, mouth open [CHECKPOINT B, MC left seat, Amber right seat]
     with dissolve
 
     am "The crowd isn't so great on weekdays, but on weekends..."
 
-    scene v16s23_11b # FPP Same angle as 11, Amber leaning toward MC with a large, sneaky smile, mouth open [CHECKPOINT B; MC left seat, Amber right seat]
+    scene v16s23_11b # FPP Same angle as 11, Amber leaning toward MC with a large, sneaky smile, mouth open [CHECKPOINT B, MC left seat, Amber right seat]
     with dissolve
 
     am "I make bank!"
@@ -137,12 +137,12 @@ label v16s23: # 23) Meet Amber at strip club
 
     am "The louder the crowd, the higher the payout."
 
-    scene v16s23_12 # TPP They are interrupted as a drunk guy sits on the other side of Amber (right side). It's the same guy who was the Male Buyer in v15 scene 10 (MC selling Lindsey's car). His mouth is open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+    scene v16s23_12 # TPP They are interrupted as a drunk guy sits on the other side of Amber (right side). It's the same guy who was the Male Buyer in v15 scene 10 (MC selling Lindsey's car). His mouth is open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
     with dissolve
 
     ds "Hey sweetheart, aren't you gonna get up there and dance for me?"
 
-    scene v16s23_12a# TPP Same angle as 12, The drunk guy's mouth is closed. MC looks very annoyed [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+    scene v16s23_12a# TPP Same angle as 12, The drunk guy's mouth is closed. MC looks very annoyed [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
     with dissolve
 
     u "(The fuck?)"
@@ -151,12 +151,12 @@ label v16s23: # 23) Meet Amber at strip club
         "We're talking":
             $ add_point(KCT.TROUBLEMAKER)
             
-            scene v16s23_13 # FPP MC is looking up at the drunk guy, who sits on the other side of Amber (right side). The drunk guy is looking at Amber, Amber has a slight smile [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+            scene v16s23_13 # FPP MC is looking up at the drunk guy, who sits on the other side of Amber (right side). The drunk guy is looking at Amber, Amber has a slight smile [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
             with dissolve
 
             u "Um, we're in the middle of a conversation, dude. Do you mind?"
 
-            scene v16s23_13a # FPP Same angle as 13, Drunk guy is now looking at MC with an angry expression, mouth open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+            scene v16s23_13a # FPP Same angle as 13, Drunk guy is now looking at MC with an angry expression, mouth open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
             with dissolve
 
             ds "Yeah, I mind, you little twerp."
@@ -168,7 +168,7 @@ label v16s23: # 23) Meet Amber at strip club
 
             u "Dude, what the-"
 
-            scene v16s23_13b # FPP Same angle as 13, Drunk guy is looking back at Amber. If his face is visible, he is smiling with his mouth open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+            scene v16s23_13b # FPP Same angle as 13, Drunk guy is looking back at Amber. If his face is visible, he is smiling with his mouth open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
             with dissolve
 
             ds "Come on, angel... Let me see how good you are."
@@ -181,12 +181,12 @@ label v16s23: # 23) Meet Amber at strip club
 
     # -Regardless-
 
-    scene v16s23_13c # FPP Same angle as 13, Amber looking at the drunk guy, slight smile and mouth open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+    scene v16s23_13c # FPP Same angle as 13, Amber looking at the drunk guy, slight smile and mouth open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
     with dissolve
 
     am "Sorry, honey. I'm with another client right now. I'll come find you later, okay?"
 
-    scene v16s23_13d # FPP Same angle as 13. Drunk guy looking at Amber, but pointing at MC . His face has an annoyed expression, mouth open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+    scene v16s23_13d # FPP Same angle as 13. Drunk guy looking at Amber, but pointing at MC . His face has an annoyed expression, mouth open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
     with dissolve
 
     ds "This kid? *Scoffs* I've got two-hundred dollars to spend tonight, ha!"
@@ -201,7 +201,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     am "That sounds amazing, but it'll have to wait until later."
 
-    scene v16s23_13e # FPP Same angle as 13. Amber is still looking at Drunk Guy with a slight smile, but she is holding her hand up, palm out, in front of her [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+    scene v16s23_13e # FPP Same angle as 13. Amber is still looking at Drunk Guy with a slight smile, but she is holding her hand up, palm out, in front of her [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
     with dissolve
 
     am "But just so we're clear, all you're getting is a dance."
@@ -211,7 +211,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     ds "Haha... The future remains to be seen, sweetheart!"
 
-    scene v16s23_13f # FPP Same angle as 13. Drunk guy leaning over to whisper in Amber's (listening, mouth closed) ear, smiling with mouth open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+    scene v16s23_13f # FPP Same angle as 13. Drunk guy leaning over to whisper in Amber's (listening, mouth closed) ear, smiling with mouth open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
     with dissolve
 
     ds "*Whispers* You just haven't fallen for my charm yet."
@@ -227,24 +227,24 @@ label v16s23: # 23) Meet Amber at strip club
 
         u "Wait a minute... Didn't you buy Lindsey's car?"
 
-        scene v16s23_13g # FPP Same angle as 13. Drunk guy turning to look at MC, he has a drunken smile, mouth open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+        scene v16s23_13g # FPP Same angle as 13. Drunk guy turning to look at MC, he has a drunken smile, mouth open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
         with dissolve
 
         ds "Huh? Oh... Yeah!"
 
-        scene v16s23_13h # FPP Same angle as 13. Drunk guy now facing MC, he still has a drunken smile, mouth open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+        scene v16s23_13h # FPP Same angle as 13. Drunk guy now facing MC, he still has a drunken smile, mouth open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
         with dissolve
 
         ds "Hey, man, thanks again. That car cleaned up real nice. Fucked my girlfriend in the back seat a few nights ago."
 
         ds "Not as bad as you'd think."
 
-        scene v16s23_13i # FPP Same angle as 13. Drunk guy facing MC. Amber (disgusted expression, mouth open) is looking at Drunk guy [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+        scene v16s23_13i # FPP Same angle as 13. Drunk guy facing MC. Amber (disgusted expression, mouth open) is looking at Drunk guy [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
         with dissolve
 
         am "...Wow."
 
-        scene v16s23_13j # FPP Same angle as 13. Drunk guy facing MC with a drunken smile, mouth closed [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+        scene v16s23_13j # FPP Same angle as 13. Drunk guy facing MC with a drunken smile, mouth closed [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
         with dissolve
 
         u "You have a girlfriend and you're begging for a strip dance?"
@@ -264,12 +264,12 @@ label v16s23: # 23) Meet Amber at strip club
 
     ds "Come find me when you're finished with this loser."
 
-    scene v16s23_12b # TPP Same angle as 12. The drunk guy is walking away, MC and Amber watch him go [CHECKPOINT B; MC left seat, Amber right seat]
+    scene v16s23_12b # TPP Same angle as 12. The drunk guy is walking away, MC and Amber watch him go [CHECKPOINT B, MC left seat, Amber right seat]
     with dissolve
 
     pause 0.75
 
-    scene v16s23_11c # FPP Same angle as 11. Amber looking at MC with a slight smile, mouth closed [CHECKPOINT B; MC left seat, Amber right seat]
+    scene v16s23_11c # FPP Same angle as 11. Amber looking at MC with a slight smile, mouth closed [CHECKPOINT B, MC left seat, Amber right seat]
     with dissolve
 
     u "You showed a lot of self-control there."
@@ -309,7 +309,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     pause 0.75
 
-    scene v16s23_15 # TPP Show Amber and MC entering private booth [CHECKPOINT C: MC in the middle seat; Amber to his right (Amber and the stripper pole are in frame)]
+    scene v16s23_15 # TPP Show Amber and MC entering private booth [CHECKPOINT C: MC in the middle seat, Amber to his right (Amber and the stripper pole are in frame)]
     with dissolve
 
     pause 0.75

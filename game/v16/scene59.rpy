@@ -679,7 +679,7 @@ label v16s59:
         scene v16s59_4q
         with dissolve
 
-        u "I promise we'll be quick; we just have a favor to ask."
+        u "I promise we'll be quick we just have a favor to ask."
 
         scene v16s59_4d
         with dissolve

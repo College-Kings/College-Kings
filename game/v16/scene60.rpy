@@ -476,7 +476,7 @@ label v16s60:
         scene v16s60_9b
         with dissolve
 
-        el "I promise you; it's going to be great."
+        el "I promise you, it's going to be great."
 
         play sound "sounds/dooropen.mp3"
 

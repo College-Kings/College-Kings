@@ -19,7 +19,7 @@ label v16s41: # MC goes home dressed up
 
         # IF mc is dating chloe, lauren AND aubrey (all three GF variables)
         if (lauren.relationship >= Relationship.GIRLFRIEND and chloe.relationship >= Relationship.GIRLFRIEND) and aubrey.relationship >= Relationship.TAMED:
-            scene v16s41_3 # TPP Another angle of walking down the street; MC looking happy, but a little nervous
+            scene v16s41_3 # TPP Another angle of walking down the street, MC looking happy, but a little nervous
             with dissolve
 
             u "(And then there were three... What am I doing out here? *Laughs* I need to start being extra careful around my ladies...)"

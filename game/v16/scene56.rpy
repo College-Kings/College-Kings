@@ -64,7 +64,7 @@ label v16s56: # 56) Wolves Living Room, Chriss apologizes
     scene v16s56_6a # FPP Chris (sad expression, mouth open) standing in front of group, holding his fists in front of him, pleading
     with dissolve
 
-    ch "I promise you; I'm working on it."
+    ch "I promise you, I'm working on it."
 
     scene v16s56_6b # FPP Chris (sad expression, mouth closed) looking down at his feet
     with dissolve

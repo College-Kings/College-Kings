@@ -457,7 +457,7 @@ label v16s22:
                     scene v16s22_9g # FPP. Show just Amber slightly angry expression, mouth is open, Amber is looking at MC [LEWS STAFF ROOM]
                     with dissolve
 
-                    am "I'm sober, [name]! I have a decent job; I'm surrounded by great people."
+                    am "I'm sober, [name]! I have a decent job. I'm surrounded by great people."
 
                     scene v16s22_9h # FPP. Show just Amber slightly sad expression, mouth is open, Amber is looking slightly away from MC [LEWS STAFF ROOM]
                     with dissolve

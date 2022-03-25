@@ -803,7 +803,7 @@ label v16s16:
             scene v16s16_19e
             with dissolve
 
-            u "Well... I wouldn't blame the guy; I think he was just in the right place at the right time."
+            u "Well... I wouldn't blame the guy. I think he was just in the right place at the right time."
 
             scene v16s16_19f
             with dissolve
