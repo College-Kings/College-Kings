@@ -443,7 +443,7 @@ label v16s11:
     scene v16s11_6l
     with dissolve
 
-    ri "Right... Oh- Look at the time! I've gotta go do some... work on the... Assignment."
+    ri "Right... Oh- Look at the time! I've gotta go do some... work on the... assignment."
 
     ri "Catch you guys later!"
 
