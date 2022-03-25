@@ -13,8 +13,8 @@ label v16s15:
     if penelope.relationship >= Relationship.LIKES: # -if PenelopeRS # TODO: Variable
         scene v16s15_2 # TPP MC gives Penelope a quick kiss [LEFT PIER ENTRANCE]
         with dissolve
-
-        pause 0.75
+        play sound "sounds/kiss.mp3"
+        pause 1.25
 
         scene v16s15_3 # FPP. Penelope is looking at MC slight smile, mouth is closed [LEFT PIER ENTRANCE]
         with dissolve
