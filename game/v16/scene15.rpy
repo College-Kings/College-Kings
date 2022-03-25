@@ -113,7 +113,7 @@ label v16s15:
     scene v16s15_6
     with dissolve
 
-    imre "Are we going back in and hitting some rides or hanging out here like losers for the rest of the night?"
+    imre "Are we going back in and hitting some rides or hanging out here like losers?"
 
     scene v16s15_6a
     with dissolve
