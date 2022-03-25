@@ -142,49 +142,49 @@ label v16s12:
     u "Okay, show me what you've got."
 
     python:
-        chloe_board = PlanningBoard("images/v15/planning_boards/chloe_background.webp", money=chloe_board.money) ### to be replace with v16 board
+        chloe_board = PlanningBoard("images/v15/planning_boards/chloe_background.webp", money=chloe_board.money) ### to be replaced with v16 board
 
         chloe_board.add_approach("Newspaper",
-            "Subtitle",
+            "Decide the cover of the new student newspaper",
             opinion="\"Elijah is starting a school newspaper, and for the first edition, I NEED to have control over what or who is on the cover. We just have to convince him somehow to let us decide what goes on front.\"")
         
         chloe_board.add_approach("Sparty",
-            "Subtitle",
+            "Chicks spa day",
             opinion="\"I really want to treat the girls, and sadly... I mean all of them. I wanna put the drama aside for one night and have a relaxing Sparty! Get it? Spa party? No? Okay, anyway! They're gonna love it and they're gonna love me after it.\"")
 
         chloe_board.add_task("Newspaper",
-            "Subtitle",
+            "Convince Elijah to let us decide over the cover",
             opinion="\"Convincing Elijah really shouldn't be too hard. We can set up a meeting with him and see what he thinks, and maybe we can work out some sort of deal.\"",
             people=[elijah,chloe,mc])
 
         v16s12_chloe_on_cover = chloe_board.add_subtask("Newspaper",
-            "Subtitle",
+            "Promote Chloe on the cover",
             opinion="\"For the cover, promoting myself is the obvious choice I can get a good headshot, I already have a few, haha. Then we just have to decide what we want it to say, and what might be a good look.\"")
 
         chloe_board.add_subtask("Newspaper",
-            "Subtitle",
+            "Embarrass Lindsey on the cover",
             opinion="\"Instead of putting myself on the cover, we could use this to our advantage and really screw with Lindsey's campaign. Maybe we can find an interesting photo or even photoshop one.\"")
             
         chloe_board.add_task("Newspaper",
-            "Subtitle",
+            "Design cover",
             opinion="\"The final step is to design it the way we want. As long as i looks perfect, we just give the final image to the newspaper team.\"")
 
         chloe_board.add_task("Sparty",
-            "Subtitle",
+            "Buy items for spa day",
             opinion="\"Shopping for the items we want is the first step, we need to make sure we pick things that smell nice, aren't cheap, and are going to be fun to use during the party.\"",
             cost=100)
 
         v16s12_chloe_real_masseuse = chloe_board.add_subtask("Sparty",
-            "Subtitle",
+            "Hire professional masseuse",
             opinion="\"Massages are key and we want them to be mesmerized by professional hands. It costs a pretty dollar, but it means that you and I get to focus on the Sparty and the Sparty people.\"",
             cost=100)
 
         chloe_board.add_subtask("Sparty",
-            "Subtitle",
+            "[name] does the massages",
             opinion="\"If we wanna save some dime, you can be our masseuse for the night...? It's up to you, haha.\"")
 
         chloe_board.add_task("Sparty",
-            "Subtitle",
+            "Host spa day",
             opinion="\"Last but not least, we host the Sparty! Remember, I'm going to be on my best behavior and avoid drama at all costs, so please help me follow through with that, haha.\"",
             people=[chloe,nora,aubrey,lindsey,jenny])
 
