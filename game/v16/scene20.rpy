@@ -18,7 +18,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
     u "(Hmm, I could have a little look around first. Learn a little bit more about Amber. There's the phone charger though. She is in need after all...)"
 
     label v16s20_amber_living_room_twazzlers: # -if Twazzlers candy
-        $ freeroam15.add("twazzlers")
+        $ freeroam16.add("twazzlers")
 
         scene v16s20_2 # FPP. A close up shot of the Twazzlers in the location of the room from the call screen (REUSED: CANNOT INCLUDE TRASH).
         with dissolve
@@ -48,7 +48,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
                 call screen v16s20_amber_living_room # -Return to free roam-
 
     label v16s20_amber_living_room_unpaid_bills: # -if Unpaid Bills
-        $ freeroam15.add("bills")
+        $ freeroam16.add("bills")
 
         scene v16s20_3 # FPP. Close up shot of bills. A big red stamp on the top one: "OVERDUE" (REUSED: CANNOT INCLUDE TRASH).
         with dissolve
@@ -62,7 +62,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
             call screen v16s20_amber_living_room
 
     label v16s20_amber_living_room_laptop: # -if Open Laptop
-        $ freeroam15.add("laptop")
+        $ freeroam16.add("laptop")
 
         scene v16s20_4 # FPP. Close up shot of just the laptop and the screen (REUSED: CANNOT INCLUDE TRASH).
         with dissolve
@@ -101,7 +101,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
             call screen v16s20_amber_living_room
 
     label v16s20_amber_living_room_photos: # -if Photos
-        $ freeroam15.add("photos")
+        $ freeroam16.add("photos")
 
         scene v16s20_9 # FPP. There are three photos: One with Amber, Kim & Josh. One with Amber and her young brother, Damian. One of young Amber playing violin shown from left to right.
         with dissolve
@@ -135,7 +135,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
             call screen v16s20_amber_living_room
 
     label v16s20_amber_living_room_phone_charger: # -if Phone charger (Ends Free Roam)
-        $ freeroam15.add("charger")
+        $ freeroam16.add("charger")
 
         scene v16s20_13 # FPP. A close up shot of the phone charger in the location of the room from the call screen (REUSED: CANNOT INCLUDE TRASH).
         with dissolve
@@ -165,7 +165,7 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
     u "(Hmm, I could have a little look around first. Learn a little bit more about Amber. There's the phone charger though. She is in need after all...)"
 
     label v16s20_amber_living_room_twazzlers2: # -if Twazzlers candy
-        $ freeroam15.add("twazzlers")
+        $ freeroam16.add("twazzlers")
 
         scene v16s20_2
         with dissolve
@@ -195,7 +195,7 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
                 call screen v16s20_amber_living_room
 
     label v16s20_amber_living_room_unpaid_bills2: # -if Unpaid Bills
-        $ freeroam15.add("bills")
+        $ freeroam16.add("bills")
 
         scene v16s20_3
         with dissolve
@@ -209,7 +209,7 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
             call screen v16s20_amber_living_room
 
     label v16s20_amber_living_room_laptop2: # -if Open Laptop
-        $ freeroam15.add("laptop")
+        $ freeroam16.add("laptop")
 
         scene v16s20_4
         with dissolve
@@ -248,7 +248,7 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
             call screen v16s20_amber_living_room
 
     label v16s20_amber_living_room_photos2: # -if Photos
-        $ freeroam15.add("photos")
+        $ freeroam16.add("photos")
 
         scene v16s20_9
         with dissolve
@@ -282,7 +282,7 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
             call screen v16s20_amber_living_room # -Return to free roam-
 
     label v16s20_amber_living_room_phone_charger2: # -if Phone charger (Ends Free Roam)
-        $ freeroam15.add("charger")
+        $ freeroam16.add("charger")
 
         scene v16s20_13
         with dissolve

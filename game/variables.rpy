@@ -453,11 +453,10 @@ default v16s28_lindsey_pb_intereview_polly_choice = False # True = Interview / F
 default v16s28_lindsey_pb_riley_interview = False  # True = Riley interviews Lindsey / False = Elijah interviews Lindsey
 default v16s28_lindsey_pb_pretend_roomservice = False #  True =  Lindsey/MC wear roomservice disguises / Lindsey/MC go as themselves 
 
-
-default freeroam15 = set() #Amber
+default freeroam15 = set() #Pier v16s15
+default freeroam16 = set() #Amber v16s20
 default v16s1_win_fight_with_tom = False
 default v16s11_sign_up = False
-default v16s15_fr_carnival = set() # Holds visited scenes for the free roam 
 default v16s20_take_twazzlers = False
 default v16s15_hotdogcoupon = False
 default v16s15_carousel_strong_spin = False

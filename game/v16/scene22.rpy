@@ -215,7 +215,7 @@ label v16s22:
 
     ab "Even though she gets an employee discount here at Lew's..."
 
-    if "bills" in freeroam15: # if clicked on the bills at amber's house
+    if "bills" in freeroam16: # if clicked on the bills at amber's house
         scene v16s22_5b
         with dissolve
 
@@ -297,7 +297,7 @@ label v16s22:
 
     am "Ha! I'm glad."
 
-    if "bills" in freeroam15: # if MC looked at the Unpaid bills at amber's house
+    if "bills" in freeroam16: # if MC looked at the Unpaid bills at amber's house
         scene v16s22_9a
         with dissolve
 
@@ -555,7 +555,7 @@ label v16s22:
 
             # -Regardless-
 
-    if "laptop" in freeroam15: # if MC looked at the Open laptop
+    if "laptop" in freeroam16: # if MC looked at the Open laptop
         scene v16s22_9a
         with dissolve
 
@@ -736,7 +736,7 @@ label v16s22:
 
     # -Regardless-
 
-    if "photos" in freeroam15: # if MC looked at the Photos in amber's house
+    if "photos" in freeroam16: # if MC looked at the Photos in amber's house
         scene v16s22_9a
         with dissolve
 

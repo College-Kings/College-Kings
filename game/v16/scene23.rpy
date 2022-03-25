@@ -329,7 +329,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     am "Good. People tell me not to keep a key under the mat, but it's saved me so many times, haha."
 
-    if "bills" in freeroam15: # if MC looked at the Unpaid bills
+    if "bills" in freeroam16: # if MC looked at the Unpaid bills
         scene v16s23_17
         with dissolve
 
@@ -378,7 +378,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     # -Regardless-
     
-    if "laptop" in freeroam15: # if MC looked at the Open laptop
+    if "laptop" in freeroam16: # if MC looked at the Open laptop
         scene v16s23_17
         with dissolve
 
@@ -455,7 +455,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     # -Regardless-
     
-    if "photos" in freeroam15: # if MC looked at the Photos
+    if "photos" in freeroam16: # if MC looked at the Photos
         scene v16s23_17
         with dissolve
 
