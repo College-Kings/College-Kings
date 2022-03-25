@@ -706,12 +706,12 @@ label v16s15pier_date_wheel: # -if Wheel of chance
     scene v16s15_26 # TPP Imre and Karen (front, closet to the bench) & MC and Penelope( behind them, closest to the bench) stand by the [CAROUSEL BENCH] facing the [WHEEL OF CHANCE]. "Dylan", a short man wearing a pink 'respect women' t-shirt, angry, mouth open, yelling, stands [ON RIGHT OF THE WHEEL,(WHEN FACING IT)] in front of the Wheel yelling at the Wheel attendant [ON LEFT OF THE WHEEL, WHEN FACING IT].
     #with dissolve
 
-    pause 0.75
+    pause
 
     scene v16s15_26a # TPP. "Dylan" A short dude in a pink 'respect women' t-shirt, turns away from the stall, upset, mouth closed [RIGHT OF WHEEL (WHEN FACINGIT)] 
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v16s15_26b # TPP. "Dylan" (angry expression, mouth open) looks at Imre, Karen, MC, and Penelope (they look at him, neutral expression, mouths closed) as he passes by them [WHEEL, walking between SHOOTING GALLERY and CAROUSEL BENCH ]
     with dissolve
