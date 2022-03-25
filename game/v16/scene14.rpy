@@ -793,7 +793,7 @@ label v16s14:
 
     scene v16s14_24 # TPP. MC turning his back to the girls (don't show them in background), MC slight smile, putting his phone to his ear, mouth closed
     with dissolve
-
+    play sound "sounds/answercall.mp3"
     pause 0.75
 
     scene v16s14_25 # TPP. MC mouth closed, slight smile // Penelope at the pier, slightly annoyed, mouth open
