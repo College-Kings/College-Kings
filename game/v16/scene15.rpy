@@ -1043,9 +1043,6 @@ label v16s15pier_date_wheel: # -if Wheel of chance
 
     u "My turn! Let's win big..."
 
-    scene v16s15_33c
-    with dissolve
-
     menu:
         "Gentle spin": # -MC spins. It lands on 'Hotdog'-
             $ vs16s15hotdog_coupon = True # TODO:Variable
