@@ -184,7 +184,7 @@ label v16s15:
     call screen v16s15_pier_entrance 
 
 label v16s15pier_date_carousel: # -if Carousel
-    $ v16s15_fr_carnival.add("carousel") # TODO: Variable
+    $ freeroam15.add("carousel") # TODO: Variable
 
     scene v16s15_10 # TPP. Imre leads Karen by the hand (both smiling mouths closed) into the carousel and past An older male CARNIVAL WORKER stands behind the TICKET STAND to the side of the ride [CAROUSEL: Location: Carousel2, Camera: Carousel2].
     #with dissolve
@@ -701,7 +701,7 @@ label v16s15pier_date_carousel: # -if Carousel
     call screen v16s15_pier_middle_carousel # -Return to second free roam screen-
 
 label v16s15pier_date_wheel: # -if Wheel of chance
-    $ v16s15_fr_carnival.add("wheel")
+    $ freeroam15.add("wheel")
 
     scene v16s15_26 # TPP Imre and Karen (front, closet to the bench) & MC and Penelope( behind them, closest to the bench) stand by the [CAROUSEL BENCH] facing the [WHEEL OF CHANCE]. "Dylan", a short man wearing a pink 'respect women' t-shirt, angry, mouth open, yelling, stands [ON RIGHT OF THE WHEEL,(WHEN FACING IT)] in front of the Wheel yelling at the Wheel attendant [ON LEFT OF THE WHEEL, WHEN FACING IT].
     #with dissolve
@@ -1078,7 +1078,7 @@ label v16s15pier_date_wheel: # -if Wheel of chance
 
             wa "You can redeem it at the hotdog stand."
 
-            if "hotdog" in v16s15_fr_carnival:
+            if "hotdog" in freeroam15:
                 scene v16s15_34e # FPP. Show just the Stall attendant to the LEFT of the WHEEL with a slight smile, mouth is closed, looking at MC [WHEEL]
                 with dissolve
 
@@ -1266,8 +1266,8 @@ label v16s15pier_date_wheel: # -if Wheel of chance
 
     call screen v16s15_pier_middle_carousel # -Return to the second free roam screen-
 
-label v16s15pier_date_carousel_2: ### -if HotDog Stand
-    $ v16s15_fr_carnival.add("hotdog")
+label v16s15pier_hotdog: ### -if HotDog Stand
+    $ freeroam15.add("hotdog")
 
     scene v16s15_47 # FPP. Imre and Karen, looking at each other with slight smiles mouths are closed, stand in front of HOT DOG STAND. HOTDOG VENDOR on the left of the HOT DOG STAND. Imre hands money To the VENDOR. [HOTDOG]
     #with dissolve
@@ -1745,7 +1745,7 @@ label v16s15pier_date_carousel_2: ### -if HotDog Stand
     call screen v16s15_pier_entrance # -Return to the first free roam screen-
 
 label v16s15pier_date_wheel_2: ### -if Shooting range # -Ends free roam-
-    if not len(v16s15_fr_carnival) == 3:
+    if not len(freeroam15) == 3:
         u "(We should probably check out the other attractions first)"
         call screen v16s15_pier_middle_range
 
