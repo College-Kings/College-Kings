@@ -36,6 +36,8 @@ label v16s7:
 
                     pa "*Drunk* Her plastic boobs?"
 
+                    $ set_presidency_percent(v14_lindsey_popularity - 2)
+
                     pa "*Drunk* Or her plastic nose?"
 
                     if v15_lindsey_recording == 2: # -if MC also chose Say nothing on Games Night
@@ -49,6 +51,8 @@ label v16s7:
 
                         pa "*Drunk* That's why she's doing everything she can to not lose her scholarship."
 
+                        $ set_presidency_percent(v14_lindsey_popularity - 2)
+
                         pa "*Drunk* She'd have to sell a good chunk of her body back to the surgeons in order to pay for school, ha!"
 
                         scene v16s7_2c # TPP. MC has a slight smile, mouth is closed, looking at the Random Characters, One of the Random Characters is laughing so hard another Random Character has to hold him/her up to keep him/her from falling down.
@@ -61,6 +65,8 @@ label v16s7:
                     with dissolve
 
                     pa "...She's my campaign rival..."
+
+                    $ set_presidency_percent(v14_lindsey_popularity - 2)
 
                     pa "What do you want me to say? That her boobs are obviously fake? Everyone knows that..."
 
@@ -88,6 +94,8 @@ label v16s7:
 
                     pa "*Tipsy* She gets everything handed to her, even her fucking boobs!"
 
+                    $ set_presidency_percent(v14_lindsey_popularity - 2)
+
                     pa "*Drunk* I mean no wonder she's such a bitch all the time..."
 
                     if v15_lindsey_recording == 5: # -if MC also chose Say nothing on VIP night
@@ -101,6 +109,8 @@ label v16s7:
 
                         pa "*Drunk* She's constantly worried about losing her free ride to a degree."
 
+                        $ set_presidency_percent(v14_lindsey_popularity - 2)
+
                         pa "*Drunk* Without the President's scholarship, she'd have to sell all of that plastic back to the surgeons... *Laughs*"
 
                         scene v16s7_2c
@@ -110,6 +120,8 @@ label v16s7:
 
                 elif v15_lindsey_recording == 6: # Lindsey was not drunk, but MC passed a KCT Check
                     pa "What do you want me to say? That she gets everything handed to her?"
+
+                    $ set_presidency_percent(v14_lindsey_popularity - 2)
 
                     pa "Or that the only reason she wants to be President is because she can't afford tuition?"
 
@@ -283,6 +295,8 @@ label v16s7:
 
     menu:
         "Defend Lindsey":
+            $ set_presidency_percent(v14_lindsey_popularity + 1)
+        
             scene v16s7_6a
             with dissolve
 
@@ -472,7 +486,7 @@ label v16s7:
                     
                 aut "He's still with us."
 
-                aut "There's been some interest in him though. There's a couple coming back to see him tomorrow."
+                aut "There's been some interest in him, though. There's a couple coming back to see him tomorrow."
 
                 scene v16s7_6e
                 with dissolve
