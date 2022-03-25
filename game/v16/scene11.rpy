@@ -220,8 +220,8 @@ label v16s11:
 
             ri "Hey! Be nice."
 
-    scene v16s11_6a
-    with dissolve
+            scene v16s11_6a
+            with dissolve
 
     ri "\"Looking for one to two more students to join the Newspaper squad.\""
 
