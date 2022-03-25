@@ -7,9 +7,9 @@ label v16s12:
     scene v16s12_1 # TPP. Show Chloe and MC walking into the planning board room, both slight smiles, mouths closed, Chloe walking in in front of MC
     with dissolve
 
-    pause 0.75
+    pause 1
 
-    if v15_chloe_lindseysabotage and not v15_chloe_postkiwii: 
+    if (v15_chloe_lindseysabotage and not v15_chloe_postkiwii) and v15_lindsey_recording > 0: # if PA announcement 
         scene v16s12_2 # FPP. MC and Chloe in planning board room, standing in front of the board, next to each other, MC looking at Chloe, Chloe looking at MC, Chloe slight smile, mouth open
         with dissolve
 
