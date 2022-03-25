@@ -327,12 +327,10 @@ label v16s12:
     cl "Now get out there and get to work."
 
     if chloe.relationship >= Relationship.GIRLFRIEND:
-        play sound "sounds/kiss.mp3"
-
         scene v16s12_3
         with dissolve
-
-        pause 0.75
+        play sound "sounds/kiss.mp3"
+        pause 1.5
 
     scene v16s12_2b
     with dissolve
