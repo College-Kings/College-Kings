@@ -183,7 +183,7 @@ label v16s15:
     # -A single-screen free-roam with all four now stood inside the carnival. We can select the Carousel, the Wheel of chance, the Hot dog stand, and the Shooting range. Selecting the Shooting range will end the free roam, don't show any characters
     call screen v16s15_pier_entrance 
 
-label v16s15pier_date_carousel: # -if Carousel
+label v16s15pier_carousel: # -if Carousel
     $ freeroam15.add("carousel")
 
     scene v16s15_10 # TPP. Imre leads Karen by the hand (both smiling mouths closed) into the carousel and past An older male CARNIVAL WORKER stands behind the TICKET STAND to the side of the ride [CAROUSEL: Location: Carousel2, Camera: Carousel2].
@@ -697,7 +697,7 @@ label v16s15pier_date_carousel: # -if Carousel
 
     call screen v16s15_pier_middle_carousel # -Return to second free roam screen-
 
-label v16s15pier_date_wheel: # -if Wheel of chance
+label v16s15pier_wheel: # -if Wheel of chance
     scene v16s15_26 # TPP Imre and Karen (front, closet to the bench) & MC and Penelope( behind them, closest to the bench) stand by the [CAROUSEL BENCH] facing the [WHEEL OF CHANCE]. "Dylan", a short man wearing a pink 'respect women' t-shirt, angry, mouth open, yelling, stands [ON RIGHT OF THE WHEEL,(WHEN FACING IT)] in front of the Wheel yelling at the Wheel attendant [ON LEFT OF THE WHEEL, WHEN FACING IT].
     #with dissolve
 
@@ -1759,5 +1759,9 @@ label v16s15pier_hotdog: ### -if HotDog Stand
 
     call screen v16s15_pier_entrance # -Return to the first free roam screen-
 
-label v16s15pier_date_wheel_2: # -if Shooting range, ends free roam-
-    jump v16s16
+label v16s15pier_range: # -if Shooting range, Ends free roam-
+    scene v16s15pier_middle_range
+    #with dissolve
+
+    u "(We should probably check out the other attractions first)"
+    call screen v16s15_pier_middle_range

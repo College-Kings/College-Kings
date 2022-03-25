@@ -43,7 +43,7 @@ screen v16s15_pier_middle_carousel():
         idle Transform("#0000", xysize=(383, 668))
         hover image_path + "Highlights/v16s15pier_middle_carousel_carousel.webp"
         if not "carousel" in freeroam15:
-            action Jump("v16s15pier_date_carousel")
+            action Jump("v16s15pier_carousel")
         elif "wheel_strong" in freeroam15:
             action Call("free_roam_spoken_too", "v16s15pier_middle_carousel_2", "v16s15_pier_middle_carousel")
         else:
@@ -62,7 +62,7 @@ screen v16s15_pier_middle_carousel():
             idle Transform("#0000", xysize=(514, 762))
             hover image_path + "Highlights/v16s15pier_middle_carousel_wheel.webp"
             if not "wheel_gentle" in freeroam15:
-                action Jump("v16s15pier_date_wheel")
+                action Jump("v16s15pier_wheel")
             else:
                 action Call("free_roam_spoken_too", "v16s15pier_middle_carousel", "v16s15_pier_middle_carousel")
             ypos 318
@@ -91,5 +91,8 @@ screen v16s15_pier_middle_range():
     imagebutton:
         idle Transform("#0000", xysize=(850, 465))
         hover image_path + "Highlights/v16s15pier_middle_range_shoot.webp"
-        action Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v16s15pier_date_wheel_2")])
+        if len(freeroam15) == 3:
+            action Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump("v16s16")])
+        else:
+            action Jump("v16s15pier_range")
         pos (528, 348)
