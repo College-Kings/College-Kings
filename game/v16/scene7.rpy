@@ -118,16 +118,6 @@ label v16s7:
 
                     u "(Oh, shit...)"
 
-            scene v16s7_2d # TPP. MC is just looking at the random characters excitement, MC slight smile, mouth is closed, the random characters have different poses and are still all laughing, Show Autumn walking towards MC, concerned expression, mouth is closed
-            with dissolve
-
-            u "(Shit is about to hit the fan!)"
-
-            scene v16s7_2e # TPP. The Random Characters are walking away smiling and now MC and Autumn are face to face looking at each other. Mc has no expression mouth is closed, Autumn has a concerned expression mouth is closed
-            with dissolve
-
-            pause 0.75
-
         elif v15_chloe_postkiwii: # -if MC chose Embarrass Lindsey, Kiwii post announcement
             scene v16s7_1a # TPP. MC is still in the school hallway as v16s7_1 MC's phone vibrates and he pulls his phone from his pocket and looks at it
             with dissolve
@@ -250,21 +240,21 @@ label v16s7:
 
                     u "(Oh, shit...)"
 
-            scene v16s7_2d
-            with dissolve
-
-            u "(Shit is about to hit the fan!)"
-
-            scene v16s7_2e
-            with dissolve
-            
-            pause 0.75
-
         else:
             jump v16s7_did_not_sabotage_lindsey
 
     else: # -if MC not helping Chloe and/or did not get Lindsey drunk at Games night or VIP night
         jump v16s7_did_not_sabotage_lindsey
+
+    scene v16s7_2d # TPP. MC is just looking at the random characters excitement, MC slight smile, mouth is closed, the random characters have different poses and are still all laughing, Show Autumn walking towards MC, concerned expression, mouth is closed
+    with dissolve
+
+    u "(Shit is about to hit the fan!)"
+
+    scene v16s7_2e # TPP. The Random Characters are walking away smiling and now MC and Autumn are face to face looking at each other. Mc has no expression mouth is closed, Autumn has a concerned expression mouth is closed
+    with dissolve
+
+    pause 0.75
 
     scene v16s7_6 # FPP. Show Autumn with a concerned expression, mouth is open, looking at MC
     with dissolve
