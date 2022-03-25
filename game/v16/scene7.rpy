@@ -311,15 +311,16 @@ label v16s7:
 
             u "No idea. But there's no denying that Lindsey said those things about Chloe."
 
-            scene v16s7_6
-            with dissolve
+            if v15_lindsey_alcohol:
+                scene v16s7_6
+                with dissolve
 
-            aut "But she was drunk, [name]. She didn't mean any of it."
+                aut "But she was drunk, [name]. She didn't mean any of it."
 
-            scene v16s7_6a
-            with dissolve
+                scene v16s7_6a
+                with dissolve
 
-            u "I don't know. People are more honest when they're drunk. Drunk words are sober thoughts, you know?"
+                u "I don't know. People are more honest when they're drunk. Drunk words are sober thoughts, you know?"
 
             scene v16s7_6
             with dissolve
