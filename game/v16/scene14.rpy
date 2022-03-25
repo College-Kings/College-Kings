@@ -486,7 +486,7 @@ label v16s14:
     scene v16s14_10m # TPP. Same as v16s14_10j, ligting the left leg instead of the right leg, all mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v16s14_10b
     with dissolve
