@@ -248,9 +248,6 @@ label v16s8:
 
             lee "You're starting to take after your old Mr. Lee, [name]. I'm proud."
 
-            scene v16s8_6d
-            with dissolve
-
             u "(Oh, shit. Where did he come from?)"
 
         "Let it continue":
@@ -320,11 +317,6 @@ label v16s8:
             lee "Let's break it up, girls. In a few months you'll be painting each other's toenails again."
         
             scene v16s8_5k # FPP. Chloe and Lindsey look at each other disgustingly, Mr. Lee rolls his eyes
-            with dissolve
-
-            pause 0.75
-
-            scene v16s8_5k
             with dissolve
 
             u "(Oh, shit. Where did he come from?)"
