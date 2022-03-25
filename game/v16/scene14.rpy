@@ -867,12 +867,12 @@ label v16s14:
     scene v16s14_21a
     with dissolve
 
-    no "You're always saving someone, haha. We're going to grab coffee so, I'll catch up with you later?"
+    no "You're always saving someone, haha. We're going to grab coffee, so I'll catch up with you later?"
 
     scene v16s14_21b
     with dissolve
 
-    u "Absolutely, you will. Thanks for inviting me to my first ever yoga session."
+    u "Absolutely you will. Thanks for inviting me to my first ever yoga session."
 
     scene v16s14_21a
     with dissolve
