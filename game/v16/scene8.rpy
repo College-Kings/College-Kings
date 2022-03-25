@@ -110,7 +110,7 @@ label v16s8:
         scene v16s8_3d # TPP. Chloe still looks sad mouth is closed, MC Chloe Random Female and Random Guy 2 look at Random Guy 1 all of their mouths are closed no expressions, Random Guy 1's mouth is open and he has a slight smile
         with dissolve
 
-    rg1 "Ignore Lindsey! We love your boobs!"
+        rg1 "Ignore Lindsey! We love your boobs!"
 
         scene v16s8_4h # FPP Show Chloe no expression, no tears in her eyes, mouth is closed
         with dissolve
@@ -127,20 +127,21 @@ label v16s8:
 
     u "Just ignore her. You need to stay strong."
 
-    scene v16s8_3e # TPP. same as v16s8_3c Random Guy 2's mouth is open slight smile looking at Chloe, and everyone is looking at him
-    with dissolve
+    if not v15_lindsey_recording == 6:
+        scene v16s8_3e # TPP. same as v16s8_3c Random Guy 2's mouth is open slight smile looking at Chloe, and everyone is looking at him
+        with dissolve
 
-    rg2 "That's right Chloe! We believe in you!"
+        rg2 "That's right Chloe! We believe in you!"
 
-    scene v16s8_3c
-    with dissolve
+        scene v16s8_3c
+        with dissolve
 
-    rg1 "You and your non-fake tits!"
+        rg1 "You and your non-fake tits!"
 
-    scene v16s8_3f # TPP. same as v16s8_3c Everyone has a disgusted expression on their face looking at Random Guy 1, Random Guy 2 has a "what did I do?" look on his face
-    with dissolve
+        scene v16s8_3f # TPP. same as v16s8_3c Everyone has a disgusted expression on their face looking at Random Guy 1, Random Guy 2 has a "what did I do?" look on his face
+        with dissolve
 
-    u "(Who the hell are these people?)"
+        u "(Who the hell are these people?)"
         
     scene v16s8_3g # TPP. Everyone looks a little surprised and sees Lindsey approaching with an angry face, straight up to Chloe
     with dissolve
