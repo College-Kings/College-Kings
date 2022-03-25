@@ -5,7 +5,7 @@
 
 label v16s13: # 13) MC walks to the park
     scene v16s13_1 # TPP Show MC walking into the park
-    with dissolve
+    with fade
 
     u "(Good thing I had a clean change of clothes in my locker.)"
 
