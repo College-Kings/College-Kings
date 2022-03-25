@@ -200,11 +200,6 @@ label v16s8:
             scene v16s8_6 # TPP. Show MC from the back, MC steps between Chloe and Lindsey render can look like v16s8_5 just with MC stepping between them
             with dissolve
 
-            pause 0.75
-
-            scene v16s8_6
-            with dissolve
-
             u "Lindsey. Chloe. Both of you need to stop."
 
             scene v16s8_7 # FPP. Show Chloe with an angry expression looking at MC, mouth is open
