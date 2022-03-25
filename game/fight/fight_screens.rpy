@@ -1,19 +1,24 @@
-screen fight_overview(fight, title):
-    modal True
-    style_prefix "fight_overview"
-
+screen fight_overview_info(competitor, is_player=False):
     default image_path = "images/fight/overview/"
+    default special_attacks = [
+        Headbutt({
+            "start_image": "",
+            "hit_image": "",
+            "blocked_image": ""
+        }),
+        OverhandPunch({
+            "start_image": "",
+            "hit_image": "",
+            "blocked_image": ""
+        }),
+        Uppercut({
+            "start_image": "",
+            "hit_image": "",
+            "blocked_image": ""
+        }),
+    ]
 
-    add image_path + "background.png"
-
-    text title style "fight_overview_title" xalign 0.5 ypos 50
-
-    # Player info
     frame:
-        xysize (790, 662)
-        xpos 120
-        yalign 0.5
-
         add "images/fight/overview/frame-background.png" pos (-54, -50)
 
         fixed:
@@ -26,20 +31,132 @@ screen fight_overview(fight, title):
             pos (20, -55)
             spacing 10
 
-            add Transform(mc.profile_pictures[1], xysize=(100, 100)) yalign 0.5
+            add Transform(competitor.profile_picture, xysize=(100, 100)) yalign 0.5
 
             vbox:
                 spacing 20
 
-                text fight.player.name size 34
-                text "VICTORIES: {}".format(fight.player.wins) size 19
+                text competitor.name size 34
+                text "VICTORIES: {}".format(competitor.fighter.wins) size 19
 
-        # vbox:
-        #     hbox:
+        hbox:
+            xalign 0.5
+            ypos 55
+            spacing 2
+
+            for i in range(competitor.fighter.max_health):
+                add Transform("#f00", size=((750/competitor.fighter.max_health) - 2, 20))
+
+        vbox:
+            align (0.5, 0.5)
+            spacing 10
+
+            hbox:
+                spacing 50
+
+                text "BASIC ATTACKS" yalign 0.5
+
+                grid 2 2:
+                    spacing 10
+
+                    for attack in competitor.fighter.base_attacks:
+                        button:
+                            idle_background image_path + "attack-idle.png"
+                            hover_background image_path + "attack-idle.png"
+                            tooltip attack.description
+                            action NullAction()
+                            xysize (206, 58)
+                            padding (5, 5)
+
+                            text attack.name align (0.5, 0.5)
+
+            hbox:
+                spacing 35
+
+                text "SPECIAL ATTACK" yalign 0.5
+
+                vpgrid:
+                    cols 2
+                    spacing 10
+
+                    for attack in special_attacks:
+                        button:
+                            idle_background image_path + "attack-idle2.png"
+                            selected_background image_path + "attack-hover.png"
+                            selected (competitor.fighter.special_attack is not None and competitor.fighter.special_attack.name == attack.name)
+                            tooltip attack.description
+                            xysize (206, 58)
+                            padding (5, 5)
+                            if is_player:
+                                hover_background image_path + "attack-hover.png"
+                                action SetField(competitor.fighter, "special_attack", attack)
+                            else:
+                                hover_background image_path + "attack-idle2.png"
+                                action NullAction()
+
+                            text attack.name align (0.5, 0.5)
                  
+            hbox:
+                spacing 25
 
+                text "QUIRK" yalign 0.5
+
+                vpgrid:
+                    cols 3
+                    spacing 10
+
+                    for quirk in FightQuirk.quirks:
+                        button:
+                            idle_background image_path + "attack-idle2.png"
+                            selected_background image_path + "attack-hover.png"
+                            selected (competitor.fighter.quirk is not None and competitor.fighter.quirk.name == quirk.name)
+                            # tooltip attack.description
+                            xysize (206, 58)
+                            padding (5, 5)
+                            if is_player:
+                                hover_background image_path + "attack-hover.png"
+                                action SetField(competitor.fighter, "quirk", quirk)
+                            else:
+                                hover_background image_path + "attack-idle2.png"
+                                action NullAction()
+
+                            text quirk.name align (0.5, 0.5)
+
+        $ tooltip = GetTooltip()
+
+        fixed:
+            align (0.5, 1.0)
+            ysize 125
+
+            if tooltip:
+                text "[tooltip]" align (0.5, 0.5)
+
+
+screen fight_overview(fight, title):
+    modal True
+    style_prefix "fight_overview"
+
+    default image_path = "images/fight/overview/"
+
+    add image_path + "background.png"
+
+    text title style "fight_overview_title" xalign 0.5 ypos 50
+
+    # Player info
+    fixed:
+        xysize (790, 662)
+        xpos 100
+        yalign 0.5
+
+        use fight_overview_info(fight.player, is_player=True)
 
     # Opponent info
+    fixed:
+        xysize (790, 662)
+        align (1.0, 0.5)
+        xoffset -100
+
+        use fight_overview_info(fight.opponent, is_player=False)
 
 
 screen fight_player_turn(fight, player, opponent):
@@ -300,3 +417,5 @@ style fight_overview_title is montserrat_extra_bold_64:
 style fight_overview_text is text:
     font "fonts/Montserrat-ExtraBold.ttf"
     color "#fff"
+    size 20
+    text_align 0.5
