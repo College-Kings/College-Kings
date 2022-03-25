@@ -236,7 +236,7 @@ label v16s14:
     scene v16s14_10a # TPP. Same as v16s14_10. Show Ms. Rose getting on her hands and knees, Nora and MC watching Ms. Rose getting on her hands and knees
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v16s14_10b # TPP. Same as v16s14_10a, the three of them on their hands and knees, all smiling, Nora and MC mouths closed, Ms. Rose mouth open
     with dissolve
@@ -246,13 +246,13 @@ label v16s14:
     scene v16s14_10c # TPP. Same as v16s14_10b, Ms. Rose doing the "cow and cat pose", MC and Nora watching her do the pose (both on their hands and knees)
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v16s14_10d # TPP. Same as v16s14_10c, all three of them doing the "cow and cat pose"
     with dissolve
 
-    pause 0.75
-
+    pause 1
+    
     scene v16s14_11 # FPP. MC on his hands and knees, he looks forward, seeing both Nora and Ms. Rose with their asses sticking out from doing the pose
     with dissolve
 
