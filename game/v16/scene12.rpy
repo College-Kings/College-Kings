@@ -56,26 +56,26 @@ label v16s12:
 
         cl "Phase three!"
 
-        if v15_chloe_lindseysabotage and not v15_lindsey_alcohol:
-            scene v16s12_2c # FPP. Same as v16s12_2, Chloe slightly sad, mouth open
-            with dissolve
+    elif (v15_chloe_lindseysabotage and not v15_chloe_postkiwii): # if tried PA announcement but couldn't record anything useful
+        scene v16s12_2c # FPP. Same as v16s12_2, Chloe slightly sad, mouth open
+        with dissolve
 
-            cl "Okay, just a quick review of phase two. It sucked that you didn't manage to record anything I could use."
+        cl "Okay, just a quick review of phase two. It sucked that you didn't manage to record anything I could use."
 
-            scene v16s12_2d # FPP. Same as v16s12_2c, Chloe slightly sad, mouth closed
-            with dissolve
+        scene v16s12_2d # FPP. Same as v16s12_2c, Chloe slightly sad, mouth closed
+        with dissolve
 
-            u "Yeah, I'm sorry. I tried, but I couldn't get her drunk enough."
+        u "Yeah, I'm sorry. I tried, but I couldn't get her drunk enough."
 
-            scene v16s12_2c
-            with dissolve
+        scene v16s12_2c
+        with dissolve
 
-            cl "We need to succeed this time. We have no choice."
+        cl "We need to succeed this time. We have no choice."
 
-            scene v16s12_2
-            with dissolve
+        scene v16s12_2
+        with dissolve
 
-            cl "I think you'll like these ideas too."
+        cl "I think you'll like these ideas too."
 
     if v15s22_meeting_points >= 1:
         scene v16s12_2
