@@ -495,3 +495,4 @@ default v16s14_focus = 0
 #default v16s12_chloe_planboard_decide_promote_chloe_on_cover = False #  True = promote chloe on newspaper cover / False = Embarrass Lindsey on front of newspaper cover
 #default v16s12_chloe_planboard_decide_mc_gives_massages = False   # True = Hire a professional to give messages / False = MC gives massages
 # Check v16s60_chloe_pb_override_mc_gives_massages variable as well when determining if MC gives massages   
+default v16_win_range = False ### ???
