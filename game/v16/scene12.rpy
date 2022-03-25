@@ -56,6 +56,9 @@ label v16s12:
 
         cl "Phase three!"
 
+        scene v16s12_2e
+        with dissolve
+
     elif (v15_chloe_lindseysabotage and not v15_chloe_postkiwii): # if tried PA announcement but couldn't record anything useful
         scene v16s12_2c # FPP. Same as v16s12_2, Chloe slightly sad, mouth open
         with dissolve
@@ -76,6 +79,9 @@ label v16s12:
         with dissolve
 
         cl "I think you'll like these ideas too."
+
+        scene v16s12_2e
+        with dissolve
 
     if v15s22_meeting_points >= 1:
         scene v16s12_2
@@ -132,9 +138,6 @@ label v16s12:
         with dissolve
 
         u "(I can't tell if this competitive side of Chloe is scary hot or just scary.)"
-
-    scene v16s12_2e
-    with dissolve
 
     u "Okay, show me what you've got."
 
