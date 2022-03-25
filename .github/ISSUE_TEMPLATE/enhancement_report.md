@@ -1,7 +1,7 @@
 ---
 name: Enhancement report
 about: Create a report to help us improve
-title: 'ENHANCEMENT: '
+title: ''
 labels: enhancement
 
 ---
