@@ -230,7 +230,7 @@ label v16s11:
 
     u "Newspaper squad... *Snortles*"
 
-    scene v16s11_6a
+    scene v16s11_6c
     with dissolve
 
     ri "*Giggles* Stop it!"
