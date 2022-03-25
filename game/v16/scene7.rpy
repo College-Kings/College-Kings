@@ -281,7 +281,10 @@ label v16s7:
     scene v16s7_6
     with dissolve
 
-    aut "Yeah, I remember that night, but there was no ill-intent behind it. Lindsey was drunk."
+    aut "Yeah, I remember that night, but there was no ill-intent behind it."
+    
+    if v15_lindsey_alcohol:
+        aut "She just drank a bit too much."
 
     scene v16s7_6a
     with dissolve
