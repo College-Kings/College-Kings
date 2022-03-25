@@ -344,7 +344,7 @@ label v16s8:
     scene v16s8_9
     with dissolve
 
-    lee "Lindsey, please. We will discuss this in my office."
+    lee "Please. We will discuss this in my office."
 
     scene v16s8_10 # TPP. Mr. Lee walks away with Chloe and Lindsey following no expression his mouth is closed. Chloe and Lindsey look at each other with concerned expressions their mouths are closed, MC watches them go, no expression mouth is closed.
     with dissolve
