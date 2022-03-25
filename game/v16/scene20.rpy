@@ -126,7 +126,7 @@ label v16s20_amber_clean: # -if AmberSober, the room is fairly neat
         scene v16s20_9
         with dissolve
 
-        u "(I should do this more often. I feel like a detective, heh. .)"
+        u "(I should do this more often. I feel like a detective, heh.)"
 
         if v16s20_take_twazzlers:
             call screen v16s20_amber_living_room_twazzler_clean
@@ -273,7 +273,7 @@ label v16s20_amber_dirty: # -if AmberDrugs, the room is messier with some beer b
         scene v16s20_9
         with dissolve
 
-        u "(I should do this more often. I feel like a detective, heh. .)"
+        u "(I should do this more often. I feel like a detective, heh.)"
 
         if v16s20_take_twazzlers:
             call screen v16s20_amber_living_room_twazzler_dirty

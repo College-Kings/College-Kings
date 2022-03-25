@@ -425,7 +425,7 @@ label v16s25:
 
                     pause 0.75
 
-                    scene v16s25_11s # TPP. Laptop Screen, Video Chat Overlay with Emily, Emily standing a little back bent over showing her naked bottom as she pulls up the bottom part of lingerie2, Emily biting her lip/ MC, mouth closed, smiling, happy. .
+                    scene v16s25_11s # TPP. Laptop Screen, Video Chat Overlay with Emily, Emily standing a little back bent over showing her naked bottom as she pulls up the bottom part of lingerie2, Emily biting her lip/ MC, mouth closed, smiling, happy.
                     with dissolve
 
                     pause 0.75
