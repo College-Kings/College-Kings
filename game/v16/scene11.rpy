@@ -42,7 +42,7 @@ label v16s11:
 
     u "Glad to hear it."
 
-    if not v16s1_win_fight_with_tom:
+    if not v16s1_win_fight_with_tom: ### variable check
         scene v16s11_3a
         with dissolve
 
