@@ -844,7 +844,10 @@ label v16s14:
     scene v16s14_25c
     with dissolve
 
-    pe "Ugh, I seriously love you. Thank you! I'll meet you by the entrance."
+    if penelope.relationship >= Relationship.LIKES:
+        pe "Ugh, I seriously love you. Thank you! I'll meet you by the entrance."
+    else:
+        pe "Thank you! I'll meet you by the entrance."
 
     scene v16s14_25d
     with dissolve
