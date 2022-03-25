@@ -5,7 +5,6 @@
 
 label v16s14:
 # -MC gym outfit, Nora & Rose yoga outfits. Nora's wearing her fav color royal blue if possible (just bc she looks good af in it), i'm gonna assume we should take advantage of this situation and have them be barefoot, especially the girls (painted nails plz)-
-
     scene v16s14_1 # FPP. MC sees Nora in the distance, leaning on a tree in the park, Nora slight smile, looking at MC, waving at him, mouth closed, three yoga mats are on the ground, one of the mats is behind the other 2
     with dissolve
 
@@ -24,20 +23,13 @@ label v16s14:
     scene v16s14_3a # FPP. Same as v16s14_3, Nora slight smile, mouth open
     with dissolve
 
-    no "Hey, [name]. Can you believe this weather? It's the perfect day for yoga."
-
-    scene v16s14_3
-    with dissolve
-
-    u "Ha, yeah. It's refreshing."
-
-    if nora.relationship >= Relationship.FWB:
-        play sound "sounds/kiss.mp3"
+    no "Hey, [name]."
     
+    if nora.relationship >= Relationship.FWB:
         scene v16s14_4 # TPP. SHow MC giving Nora a kiss, she is still leaning on the tree
         with dissolve
-
-        pause 0.75
+        play sound "sounds/kiss.mp3"
+        pause 1.25
 
         scene v16s14_3a
         with dissolve
@@ -47,8 +39,15 @@ label v16s14:
         no "You'll have to control yourself though. We're expecting company."
     
     else:
+        scene v16s14_3a # FPP. Same as v16s14_3, Nora slight smile, mouth open
+        #with dissolve    
+        
+        no "Can you believe this weather? It's the perfect day for yoga."
+
         scene v16s14_3
-        #with dissolve
+        with dissolve
+
+        u "Ha, yeah. It's refreshing."
 
         u "Are we ready to start?"
 
