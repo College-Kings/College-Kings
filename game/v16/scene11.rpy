@@ -532,9 +532,6 @@ label v16s11:
 
         u "(So much for not wanting to talk about it.)"
 
-    scene v16s11_11d
-    with dissolve
-
     u "We were actually looking at the newspaper sign-up sheet, Riley and I."
 
     scene v16s11_11f
