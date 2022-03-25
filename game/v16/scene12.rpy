@@ -79,7 +79,7 @@ label v16s12:
 
             cl "I think you'll like these ideas too."
 
-    if v14_help_chloe and not v15_chloe_lindseysabotage:
+    if v15s22_meeting_points >= 1:
         scene v16s12_2
         with dissolve
 
