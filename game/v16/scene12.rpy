@@ -340,6 +340,6 @@ label v16s12:
     scene v16s12_5 # TPP. Show MC walking out, smiling, mouth closed, Chloe in background watching him walk out, mouth closed, smiling
     with dissolve
 
-    pause 0.75
+    pause 1
 
     jump v16s13
