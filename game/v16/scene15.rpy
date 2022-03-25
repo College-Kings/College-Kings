@@ -761,7 +761,7 @@ label v16s15pier_date_wheel: # -if Wheel of chance
     scene v16s15_31 # FPP. Show just Imre and the stall attendant, Imre (standing in front of the wheel, smile, mouth closed) grasps the top of the wheel, ready to spin it. The stall attendant (devious expresison and smile, mouth closed). [WHEEL]
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v16s15_32 # FPP. Show just the top portion of the wheel with a dial pointing at a yellow portion of the wheel that reads "Winner". [WHEEL]
     with dissolve
