@@ -768,6 +768,7 @@ label v16s22:
                     scene v16s22_9a
                     with dissolve
 
+                    $ grant_achievement("just_curious_about_you")
                     u "Ha, just curious about you."
 
                 # -continue regardless-
