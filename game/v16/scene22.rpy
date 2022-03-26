@@ -36,9 +36,6 @@ label v16s22:
     u "Ah, no problem."
 
     if v16s20_take_twazzlers: # -if MC also took the Twazzlers
-        scene v16s22_3b
-        with dissolve
-
         u "Also..."
 
         scene v16s22_3c # FPP. MC hands Amber the Twazzlers and Amber takes the Twazzlers out of his hand, Amber has a slight smile, mouth is closed
