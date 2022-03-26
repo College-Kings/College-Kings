@@ -23,7 +23,8 @@ label v16s50a: ### ERROR: 50a) MC wakes up
         
     pause 1
 
-    if v16s27_parent_chloe and not 1 & v16s27_mc_baby_duty_night == 1 and not 0x10 & v16s27_mc_baby_duty_night == 0x10: # -if Chloe was alone Wed night with the baby and is MC partner 
+    # if v16s27_parent_chloe and not 1 & v16s27_mc_baby_duty_night == 1 and not 0x10 & v16s27_mc_baby_duty_night == 0x10: # -if Chloe was alone Wed night with the baby and is MC partner 
+    if v16s27_parent_chloe and v16s27_mc_baby_schedule["wednesday"] == BabyDuty.PARTNER_ALONE:
         #! v16s50akw_1 "Chloe and MC's baby doll inside of a washing machine or dryer"
         
         $ v16s50a_kiwii_post = KiwiiPost(aubrey, "v16/v16s50a_aubpost1.webp", "Umm, good morning from the Chicks?", numberLikes=817)
@@ -54,7 +55,8 @@ label v16s50a: ### ERROR: 50a) MC wakes up
         pause 0.75
         
         # -if MC has the baby
-        if 1 & v16s27_mc_baby_duty_night == 1 or 2 & v16s27_mc_baby_duty_night == 2 or 4 & v16s27_mc_baby_duty_night == 4: # MC had the baby by himself 
+        # if 1 & v16s27_mc_baby_duty_night == 1 or 2 & v16s27_mc_baby_duty_night == 2 or 4 & v16s27_mc_baby_duty_night == 4: # MC had the baby by himself 
+        if any(value == BabyDuty.ALONE for value in v16s27_mc_baby_schedule.values()):
             scene v16s50a_2a # TPP MC (smile, mouth closed) siting on the edge of his bed near his nightstand (phone on the nightstand), raising his arms in victory [that made it through the night with a baby] [APE ROOM]
             with dissolve
             
@@ -189,7 +191,8 @@ label v16s50a: ### ERROR: 50a) MC wakes up
         pause 0.75
 
         # -if MC has the baby
-        if 1 & v16s27_mc_baby_duty_night == 1 or 2 & v16s27_mc_baby_duty_night == 2 or 4 & v16s27_mc_baby_duty_night == 4: # MC had the baby by himself ###???
+        # if 1 & v16s27_mc_baby_duty_night == 1 or 2 & v16s27_mc_baby_duty_night == 2 or 4 & v16s27_mc_baby_duty_night == 4: # MC had the baby by himself ###???
+        if any(value == BabyDuty.ALONE for value in v16s27_mc_baby_schedule.values()):
             scene v16s50a_12a # TPP MC (smile, mouth closed) siting on the edge of his bed near his nightstand (phone on the nightstand), raising his arms in victory [that made it through the night with a baby] [WOLF ROOM]
             with dissolve
             

@@ -669,13 +669,15 @@ label v16s44:
 
 # -Regardless of that-
 
-    if 1 & v16s27_mc_baby_duty_night == 1: ### -if on baby duty alone Wednesday
+    # if 1 & v16s27_mc_baby_duty_night == 1: ### -if on baby duty alone Wednesday
+    if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE:
         scene v16s44_2
         with dissolve
 
         u "And now, I need to go pick up a baby."
 
-    elif 0x10 & v16s27_mc_baby_duty_night == 0x10: ### -if sharing baby duty Wednesday
+    # elif 0x10 & v16s27_mc_baby_duty_night == 0x10: ### -if sharing baby duty Wednesday
+    elif v16s27_mc_baby_schedule["wednesday"] == BabyDuty.WITH_PARTNER:
 
         scene v16s44_2
         with dissolve
@@ -749,11 +751,12 @@ label v16s44:
     
     pause 0.75
 
-    if 1 & v16s27_mc_baby_duty_night == 1: ### -if on baby duty alone Wednesday, transition to Scene45-
-
+    # if 1 & v16s27_mc_baby_duty_night == 1: ### -if on baby duty alone Wednesday, transition to Scene45-
+    if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE:
         jump v16s45
 
-    elif 0x10 & v16s27_mc_baby_duty_night == 0x10: ### -if sharing baby duty Wednesday, transition to Scene47-
+    # elif 0x10 & v16s27_mc_baby_duty_night == 0x10: ### -if sharing baby duty Wednesday, transition to Scene47-
+    elif v16s27_mc_baby_schedule["wednesday"] == BabyDuty.WITH_PARTNER:
         
         jump v16s47
     else: ### -if partner is on baby duty Wednesday, transition to Scene42-

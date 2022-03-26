@@ -161,7 +161,8 @@ label v16s40:
 
         ### ERROR: IF MC has baby duties tonight 
         ### TRANSCRIBER NOTE!!! ### THERE IS NO ALTERNATIVE SCENE TO TRAVEL TO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO ### ATTENTION!!! ###
-        if 1 & v16s27_mc_baby_duty_night == 1: # MC has babby duty Wednesday night
+        # if 1 & v16s27_mc_baby_duty_night == 1: # MC has babby duty Wednesday night INFO: Using dictionary instead of bitmask for ease of use
+        if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE:
             scene v16s40_3c
             with dissolve
 
@@ -271,7 +272,8 @@ label v16s40:
 
             ### ERROR: IF MC has baby duties tonight
             ### TRANSCRIBER NOTE!!! ### THERE IS NO ALTERNATIVE SCENE TO TRAVEL TO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO ### ATTENTION!!! ###
-        if 1 & v16s27_mc_baby_duty_night == 1: # MC has babby duty Wednesday night
+        # if 1 & v16s27_mc_baby_duty_night == 1: # MC has babby duty Wednesday night INFO: Using dictionary instead of bitmask for ease of use
+        if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE:
 
             scene v16s40_3c
             with dissolve

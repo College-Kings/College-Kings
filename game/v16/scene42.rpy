@@ -43,7 +43,8 @@ label v16s42: # 42) MC changes into normal clothes ###check force send
 
         pause 0.75
 
-    if (1 & v16s27_mc_baby_duty_night == 1) or (0x10 & v16s27_mc_baby_duty_night == 0x10): # IF on baby duty alone or sharing baby duty 1 = alone_duty_on_Wed, 0x10 = shared_duty_on_Wed
+    # if (1 & v16s27_mc_baby_duty_night == 1) or (0x10 & v16s27_mc_baby_duty_night == 0x10): # IF on baby duty alone or sharing baby duty 1 = alone_duty_on_Wed, 0x10 = shared_duty_on_Wed
+    if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE or v16s27_mc_baby_schedule["wednesday"] == BabyDuty.WITH_PARTNER:
         if v16s25a_date_with_aubrey: # PLACEHOLDER VARIABLE
             if not joinwolves:
                 scene v16s42_1b # TPP Show MC Taking fancy clothes shirt off [APE ROOM]
@@ -95,7 +96,8 @@ label v16s42: # 42) MC changes into normal clothes ###check force send
 
             pause 0.75
 
-        if 1 & v16s27_mc_baby_duty_night == 1: # PLACEHOLDER VARIABLE # IF on baby duty alone on Wed, transition to Scene 45-
+        # if 1 & v16s27_mc_baby_duty_night == 1: # PLACEHOLDER VARIABLE # IF on baby duty alone on Wed, transition to Scene 45-
+        if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE:
         
             jump v16s45
         
