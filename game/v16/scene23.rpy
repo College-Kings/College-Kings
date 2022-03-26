@@ -373,7 +373,6 @@ label v16s23: # 23) Meet Amber at strip club
                 u "Right, yeah. I'm sorry."
 
             "Don't mention them":
-
                 u "(Not a good idea. I don't think she'd be happy to know I peeked at those.)"
 
     # -Regardless-

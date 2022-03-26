@@ -762,7 +762,7 @@ label v16s22:
                 if v16_amber_mention_bills and v16_amber_mention_laptop: # -if MC chose Ask about bills AND Mention her laptop (extra dialogue)
                     scene v16s22_9n
                     with dissolve
-
+                    
                     am "You really took your time in there, huh. *Laughs*"
 
                     scene v16s22_9a
