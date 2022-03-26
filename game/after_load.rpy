@@ -47,11 +47,6 @@ python early:
         except OSError:
             raise Exception("Deleting old files please RESTART GAME.")
 
-    # Helper function
-    def write_console(data):
-        with open("console.txt", "w") as f:
-            f.write(str(data))
-
 init 100 python:
     class CheatItem:
         pass
