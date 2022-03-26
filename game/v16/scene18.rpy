@@ -46,6 +46,13 @@ label v16s18: # MC goes home
     $ amber.messenger.addReply("Ughhhhh")
     $ amber.messenger.newMessage("Hurry, please. Battery's almost dead!!!!!!!")
 
+    label v16s18_phoneContinue:
+        if amber.messenger.replies:
+            call screen phone
+        if amber.messenger.replies:
+            u "(I should reply to Amber.)"
+            jump v16s18_phoneContinue
+
     if joinwolves:
         scene v16s18_4b # TPP Same angle as 4, MC putting his phone back into his pocket [WOLF ROOM].
     else:
