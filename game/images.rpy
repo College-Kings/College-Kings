@@ -72,7 +72,7 @@ image fight_guard_animation:
     "#000070" with Dissolve(0.5)
     pause 1.0
 
-    "#00000000" with Dissolve(0.5)
+    "#00f" with Dissolve(0.5)
     pause 1.0
 
     repeat
@@ -81,7 +81,7 @@ image fight_health_animation:
     "#700000" with Dissolve(0.5)
     pause 1.0
 
-    "#00000000" with Dissolve(0.5)
+    "#f00" with Dissolve(0.5)
     pause 1.0
 
     repeat
