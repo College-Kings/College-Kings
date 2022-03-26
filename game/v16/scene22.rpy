@@ -308,7 +308,7 @@ label v16s22:
 
         menu:
             "Ask about bills":
-                $ v16s22_mention_bills = True # TODO: Variable
+                $ v16_amber_mention_bills = True # TODO: Variable
 
                 scene v16s22_9a
                 with dissolve
@@ -566,7 +566,7 @@ label v16s22:
 
         menu:
             "Mention her laptop":
-                $ v16s22mention_laptop = True #  TODO: Variable
+                $ v16_amber_mention_laptop = True #  TODO: Variable
 
                 scene v16s22_9a
                 with dissolve
@@ -670,7 +670,7 @@ label v16s22:
 
                     am "So what? It's called privacy."
 
-                    if v16s22mention_bills: # -if chose to mention the unpaid bills he saw [LEWS STAFF ROOM]
+                    if v16_amber_mention_bills: # -if chose to mention the unpaid bills he saw [LEWS STAFF ROOM]
                         scene v16s22_9i
                         with dissolve
 
@@ -762,7 +762,7 @@ label v16s22:
 
                 u "Maybe..."
 
-                if v16s22mention_bills and v16s22mention_laptop: # -if MC chose Ask about bills AND Mention her laptop (extra dialogue)
+                if v16_amber_mention_bills and v16_amber_mention_laptop: # -if MC chose Ask about bills AND Mention her laptop (extra dialogue)
                     scene v16s22_9n
                     with dissolve
 
@@ -1228,7 +1228,7 @@ label v16s22:
 
     u "Of course."
 
-    if v16s22mention_bills and v16s22mention_laptop: # -if MC chose Ask about bills or Mention her laptop at all in this convo (extra dialogue)
+    if v16_amber_mention_bills and v16_amber_mention_laptop: # -if MC chose Ask about bills or Mention her laptop at all in this convo (extra dialogue)
         scene v16s22_10a # FPP. Show just Amber from the shoulders up, slight smiles, mouth is open, looking at MC [LEWS STAFF ROOM]
         with dissolve
 

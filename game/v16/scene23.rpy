@@ -337,7 +337,7 @@ label v16s23: # 23) Meet Amber at strip club
 
         menu:
             "Ask about bills":
-                $ v16s23_mention_bills = True
+                $ v16_amber_mention_bills = True
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "I did kind of notice that you had some unpaid bills. Is everything okay?"
@@ -386,7 +386,7 @@ label v16s23: # 23) Meet Amber at strip club
 
         menu:
             "Mention her laptop":
-                $ v16s23_mention_laptop = True
+                $ v16_amber_mention_laptop = True
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "So... Erotic fan fiction...?"
