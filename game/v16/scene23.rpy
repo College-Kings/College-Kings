@@ -406,7 +406,7 @@ label v16s23: # 23) Meet Amber at strip club
 
                 am "Honestly, it's fun to read that stuff! Lauren got me into it, haha."
 
-                if lauren.relationship >= Relationship.GIRLFRIEND: # TODO: Variable # -if LaurenGF (extra dialogue)
+                if lauren.relationship >= Relationship.GIRLFRIEND: # -if LaurenGF (extra dialogue)
                     scene v16s23_17
                     with dissolve
 
@@ -534,8 +534,8 @@ label v16s23: # 23) Meet Amber at strip club
                 u "I get it. We don't have to talk about it if you-"
 
                 # -If AmberRS, she opens up about her brother.
-                # -if not AmberRS but MC passes a Amber KCT check (i believe it's currently confident), Amber also opens up about her brother
-                if amber.relationship >= Relationship.FWB or (amber.relationship < Relationship.FWB and kct == "popular" ): # TODO: Variable # This is a guess based on the new relationship system. It would be nice if everyone was using the same language for relationship stuff
+                # -if not AmberRS but MC passes a Amber KCT check, Amber also opens up about her brother
+                if amber.relationship >= Relationship.FWB or kct == "popular":
                     scene v16s23_17d
                     with dissolve
 
@@ -588,7 +588,7 @@ label v16s23: # 23) Meet Amber at strip club
 
                     am "Yeah, he's something."
 
-                elif (amber.relationship < Relationship.FWB and not kct == "popular" ): # -if not AmberRS, and MC does not pass an Amber KCT check, she doesn't up about her brother
+                else: # -if not AmberRS, and MC does not pass an Amber KCT check, she doesn't up about her brother
                     scene v16s23_17d
                     with dissolve
 

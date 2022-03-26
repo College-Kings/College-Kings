@@ -410,7 +410,7 @@ label v16s22:
 
                     am "You're right, you shouldn't have. Lesson learned."
 
-                elif amber.relationship >= Relationship.FWB: # TODO: Variable # -if AmberRS BUT AmberKCT not passed
+                elif amber.relationship >= Relationship.FWB: # -if AmberRS BUT AmberKCT not passed
                     scene v16s22_9c
                     with dissolve
 
