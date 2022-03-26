@@ -69,4 +69,11 @@ label v16s18: # MC goes home
 
     pause 0.75
 
+    play sound "sounds/doorclose.mp3"
+
+    scene black
+    with vpunch
+    
+    pause 0.75
+
     jump v16s19 # -Transition to Scene 19-
