@@ -231,3 +231,31 @@ screen fightDamage():
         add "images/4 hits.webp"
     elif youDamage >= 5:
         add "images/5 hits.webp"
+
+
+screen whats_new(dialogue):
+    modal True
+    style_prefix "whats_new"
+
+    add "darker_80"
+
+    frame:
+        background "gui/whats-new/background.webp"
+        xysize (363, 758)
+        align (0.5, 0.5)
+        padding (20, 20)
+
+        viewport:
+            align (0.5, 0.5)
+
+            vbox:
+                xsize 323
+                
+                text "What's New:" xalign 0.5
+                text dialogue
+
+    button action Hide("whats_new")
+
+    on "hide" action SetVariable("persistent.previous_whats_new", dialogue)
+
+style whats_new_text is text

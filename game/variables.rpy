@@ -1,6 +1,3 @@
-init python:
-    import os
-
 # Init
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
@@ -11,6 +8,9 @@ default name = "Alex"
 default realmode = False
 default showkct = True
 default checklist = Checklist()
+
+# Persistent
+default persistent.previous_whats_new = None
 
     ## Phone
 define contacts_file_path = os.path.join(config.basedir, "game", "images", "nonplayable_characters")
