@@ -10,7 +10,7 @@ python early:
         "phone/phone_script.rpy",
         "phone/phoneStyle.rpy",
         "sceneGallery/sceneGallery.rpy",
-        "v14/chicks_presidency_race/planning_board.rpy"
+        "v14/chicks_presidency_race/planning_board.rpy",
         "customCharacters.rpy",
         "functions.rpy",
         "path_builder.rpy",
