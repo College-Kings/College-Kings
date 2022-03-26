@@ -407,7 +407,7 @@ screen main_menu():
         imagebutton:
             idle image_path + "whats-new-idle.webp"
             hover image_path + "whats-new-hover.webp"
-            action Show("whats_new")
+            action Show("whats_new", dialogue=whats_new_text)
             yalign 0.5
 
         # LEARN MORE
