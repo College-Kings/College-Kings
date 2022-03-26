@@ -8,12 +8,12 @@ screen v16s20_amber_living_room():
 
     if v14_amber_clean:
         if v16s20_take_twazzlers:
-            add image_path + "v16s20_1_t.webp"
+            add image_path + "v16s20_1c.webp"
         else:
             add image_path + "v16s20_1.webp"
     else:
         if v16s20_take_twazzlers:
-            add image_path + "v16s20_1a_t.webp"
+            add image_path + "v16s20_1b.webp"
         else:
             add image_path + "v16s20_1a.webp"
 
