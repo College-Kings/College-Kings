@@ -27,10 +27,10 @@ label fight_example:
         tom.fighter = Opponent("Tom", FightStance.AGGRESSIVE)
 
         tom.fighter.stance_images = {
-            FightStance.AGGRESSIVE: "",
-            FightStance.DEFENSIVE: "",
-            FightStance.FORWARD: "",
-            FightStance.SOLID: ""
+            FightStance.AGGRESSIVE: "images/v2/fight/tom-stances/tom-stance-aggresive.webp",
+            FightStance.DEFENSIVE: "images/v2/fight/tom-stances/tom-stance-defensive.webp",
+            FightStance.FORWARD: "images/v2/fight/tom-stances/tom-stance-forward.webp",
+            FightStance.SOLID: "images/v2/fight/tom-stances/tom-stance-solid.webp"
         }
 
         tom.fighter.base_attacks.append(BodyHook({
