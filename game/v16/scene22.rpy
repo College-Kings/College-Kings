@@ -676,7 +676,7 @@ label v16s22:
                         scene v16s22_9j
                         with dissolve
 
-                        u "There wasn't even a password, dude!"
+                        u "There wasn't even a password!"
 
                         scene v16s22_9i
                         with dissolve
