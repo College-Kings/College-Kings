@@ -121,7 +121,7 @@ define character.foxy = Character("Foxy", who_color="#fd9426", who_outlines=[ (2
 define character.hor = Character("Horse", who_color="#a815f2", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.jane = Character("Jane", who_color="#fc3d39", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.jud = Character("Judge", who_color="#db6f1c", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
-define character.mana = Character("Store Manager", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.mana = Character("Manager", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.ran = Character("Rancher", who_color="#fecb2e", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.sus = Character("Susan", who_color="#fd9426", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 
@@ -182,7 +182,7 @@ define character.rick = Character("Uncle Rick", who_color="#fecb2e", who_outline
 define character.wedoff = Character("Wedding Officiant", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 
 # 16.0
-define character.ab = Character("Amber's Boss", who_color="#ecd9c9", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
+define character.ab = Character("Store Manager", who_color="#ecd9c9", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.alls = Character("All Students", who_color="#ff1694", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.baby = Character("[v16_baby_name]", who_color="#5fc9f8", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])
 define character.bdygd = Character("Bodyguard", who_color="#800080", who_outlines=[ (2, "#000") ], what_outlines=[ (2, "#000") ])

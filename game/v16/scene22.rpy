@@ -125,7 +125,7 @@ label v16s22:
     scene v16s22_3a
     with dissolve
 
-    am "My boss."
+    am "Our store manager."
 
     scene v16s22_4b # TPP. Amber is still behind the counter and points across the room towards her store manager, Mc is looking in the direction Amber is pointing, they both have slight smiles, mouths are closed, The Store Manager is kneeling down stocking shelves, no expression, mouth is closed, not looking at Amber or MC
     with dissolve
@@ -1189,7 +1189,7 @@ label v16s22:
 
     # -Regardless-
 
-    ### ERROR: [Checkpoint 2]
+    # [Checkpoint 2]
 
     scene v16s22_8g # TPP. Show Amber (mouth open) and Mc (mouth closed) standing up from the couch and giving each other a hug, they are no longer holding their coffee cups, both slight smiles. [LEWS STAFF ROOM]
     with dissolve
@@ -1201,7 +1201,7 @@ label v16s22:
 
     u "Of course."
 
-    if v16_amber_mention_bills and v16_amber_mention_laptop: # -if MC chose Ask about bills or Mention her laptop at all in this convo (extra dialogue)
+    if v16_amber_mention_bills or v16_amber_mention_laptop: # -if MC chose Ask about bills or Mention her laptop at all in this convo (extra dialogue)
         scene v16s22_10a # FPP. Show just Amber from the shoulders up, slight smiles, mouth is open, looking at MC [LEWS STAFF ROOM]
         with dissolve
 
