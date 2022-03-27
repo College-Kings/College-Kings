@@ -1465,7 +1465,7 @@ label v16s15pier_hotdog: # -if HotDog Stand
 
                     u "One hotdog then, please!"
 
-    scene v16s15_52e # FPP. Show the hotdog vendor handing MC a hotdog, slight smile, mouth is closed [HOTODOG]
+    scene v16s15_52e # FPP. Show the hotdog vendor handing MC a hotdog, slight smile, mouth is closed [HOTDOG]
     with dissolve
 
     pause 0.75
