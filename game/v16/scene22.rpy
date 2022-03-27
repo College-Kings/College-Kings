@@ -547,7 +547,7 @@ label v16s22:
                 scene v16s22_9a
                 with dissolve
 
-                u "(Nah, not a good idea. It's not my place or my business. I shouldn't have even looked, to be honest.)"
+                u "(Nah, not a good idea. It's not my place or my business. I shouldn't even have looked, to be honest.)"
 
             # -Regardless-
 
