@@ -844,9 +844,9 @@ label v16s16:
 
     u "Are you sure?"
 
-    scene v16s16_16b
+    scene v16s16_22 # FPP. MC turned around facing towards the PIER ENTRANCE.
     with dissolve
-
+    
     pe "Yeah, I just want to make sure she's being safe. Just do your best to calm him down."
 
     scene v16s16_16c
@@ -854,7 +854,7 @@ label v16s16:
 
     u "Okay, I'll try."
 
-    scene v16s16_22 # FPP. MC turned around facing towards the PIER ENTRANCE.
+    scene v16s16_16b
     with dissolve
 
     pe "Hey!"
