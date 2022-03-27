@@ -244,7 +244,7 @@ label v16s28:
 
         pause 0.75
 
-    else: ### if Lindsey Friend
+    else:
         scene v16s28_6 # TPP. Lindsey giving MC a hug
         with dissolve
 

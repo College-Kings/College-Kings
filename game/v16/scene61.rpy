@@ -40,7 +40,7 @@ label v16s61:
             u "(Well, that was embarrassing...)"
 
             # -if also wore room service uniforms
-            if v16s28_lindsey_pb_pretend_roomservice: # TODO: placeholder
+            if v16_lindsey_roomservice:
                 play sound "sounds/vibrate.mp3"
                 
                 scene v16s61_2a # TPP. In wolves room. Show MC (slight smile, mouth closed) sitting on his bed pulling out his phone from his pocket
@@ -441,7 +441,7 @@ label v16s61:
                 u "(Well, that was embarrassing...)"
 
                 # -if also wore room service uniforms
-                if v16s28_lindsey_pb_pretend_roomservice:
+                if v16_lindsey_roomservice:
                     play sound "sounds/vibrate.mp3"
                     
                     scene v16s61_15a # TPP. In apes room. Show MC (slight smile, mouth closed) sitting on his bed pulling out his phone from his pocket

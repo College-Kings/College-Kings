@@ -450,7 +450,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
     li "Oh, okay, sure."
 
     # -if Lindsey is being interviewed by Elijah
-    if not v16s28_lindsey_pb_riley_interview: #TODO: PLACEHOLDER VARIABLE
+    if v16_lindsey_elijah:
         scene v16s55_3b
         with dissolve
 
@@ -462,7 +462,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
         u "Just make sure you don't get pulled into ranting about Chloe or sounding like you have a big ego."
 
     # -if Lindsey is being interviewed by Riley
-    else:
+    elif v16_lindsey_newspaper:
         scene v16s55_3b
         with dissolve
 
@@ -495,12 +495,10 @@ label v16s55: # 55) Prepare Lindsey for the interview
 
             u "Don't worry if you want to think for a whole minute before answering. It's better than saying something you'll regret."
 
-            if not v16s28_lindsey_pb_riley_interview: # PLACEHOLDER VARIABLE # -if being interviewed by Elijah
-
+            if v16_lindsey_elijah: # -if being interviewed by Elijah
                 u "And if all else fails, try flirting with him, but keep it subtle. Just give him a little bit of attention and he'll be putty in your hands."
 
-            else: # -if being interviewed by Riley
-
+            elif v16_lindsey_newspaper: # -if being interviewed by Riley
                 u "I know Riley is treating her role seriously, so just make sure you're professional and it should go well. Even if she does crack a little joke, don't get over-friendly in the interview."
 
                 u "Still, a few well-placed compliments will help too."

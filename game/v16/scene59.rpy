@@ -4,7 +4,7 @@
 # Time: Thurdsay Afternoon
 
 label v16s59:
-    if v16s28_lindsey_pb_pretend_roomservice: # -if MC chose Pretend to be room service
+    if v16_lindsey_roomservice: # -if MC chose Pretend to be room service
         scene v16s59_1 # TPP. MC (slight smile, mouth closed, looking forward) and Lindsey (slight smile, mouth closed, looking forward) in hotel uniforms appear from a distance, walking along a hallway, past hotel room doors. They are wearing room service uniforms and MC is carrying a food tray with a domed lid covering the food-
         with dissolve
         
@@ -32,7 +32,7 @@ label v16s59:
 
     u "Here we are."
 
-    if v16s28_lindsey_pb_pretend_roomservice: # -if Pretending to be room service
+    if v16_lindsey_roomservice: # -if Pretending to be room service
         scene v16s59_3 # TPP. Full body image of (ROOM SERVICE UNIFORMS) MC (no expression, mouth is open, looking at Lindsey) scratching his chest with one hand, carrying the tray of food in the other, Lindsey (no expression, mouth is closed, looking at MC)
         with dissolve
 
@@ -192,7 +192,7 @@ label v16s59:
 
         polly "Can I... Help you guys with something?"
 
-    if v16s28_lindsey_pb_pretend_roomservice: # -if Pretending to be room service
+    if v16_lindsey_roomservice: # -if Pretending to be room service
         scene v16s59_4d
         with dissolve
 

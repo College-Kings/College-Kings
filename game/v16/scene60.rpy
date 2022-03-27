@@ -54,7 +54,7 @@ label v16s60:
 
     li "[name] is here just to take notes for me, I don't want to miss anything."
 
-    if not v16s28_lindsey_pb_riley_interview: # Elijah does the interview 
+    if v16_lindsey_elijah: # Elijah does the interview 
         scene v16s60_4 # FPP. MC looking at Lindsey(slight smile, mouth close) and Elijah (neutral face, mouth closed) sitting across from each other. Lindsey and Elijah both looking at MC.
         with dissolve
 
@@ -485,7 +485,7 @@ label v16s60:
 
         pause 0.75
 
-    else:
+    elif v16_lindsey_newspaper:
         scene v16s60_4c # FPP. MC looking at Lindsey(slight smile, mouth closed) and Riley (slight smile, mouth open) sitting across from each other. Lindsey and Riley both looking at MC.
         with dissolve
 
