@@ -325,6 +325,8 @@ label v16s22:
                 pause 0.75
 
                 if amber.relationship >= Relationship.FWB and kct == "popular": # -if AmberRS AND AmberKCT amber passed
+                    call screen kct_popup
+                    
                     scene v16s22_9c # FPP. Show just Amber with no expression, mouth is open, looking at MC [LEWS STAFF ROOM]
                     with dissolve
 
