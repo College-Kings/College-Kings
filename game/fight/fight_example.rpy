@@ -1,67 +1,67 @@
 label fight_example:
     python:
-        player = Player(name, FightStance.FORWARD)
-        opponent = Opponent("Tom", FightStance.AGGRESSIVE)
+        mc.fighter = Player(name, FightStance.FORWARD)
 
         # Player base attacks
-        player.base_attacks.append(BodyHook({
+        mc.fighter.base_attacks.append(BodyHook({
             "start_image": "",
             "hit_image": "",
             "blocked_image": ""
         }))
-        player.base_attacks.append(Jab({
+        mc.fighter.base_attacks.append(Jab({
             "start_image": "",
             "hit_image": "",
             "blocked_image": ""
         }))
-        player.base_attacks.append(Hook({
+        mc.fighter.base_attacks.append(Hook({
             "start_image": "",
             "hit_image": "",
             "blocked_image": ""
         }))
-        player.base_attacks.append(Kick({
+        mc.fighter.base_attacks.append(Kick({
             "start_image": "",
             "hit_image": "",
             "blocked_image": ""
         }))
 
-        # Player special attacks
-        player.special_attack = Headbutt({
-            "start_image": "",
-            "hit_image": "",
-            "blocked_image": ""
-        })
+        tom.fighter = Opponent("Tom", FightStance.AGGRESSIVE)
 
-        opponent.stance_images = {
-            FightStance.AGGRESSIVE: "",
-            FightStance.DEFENSIVE: "",
-            FightStance.FORWARD: "",
-            FightStance.SOLID: ""
+        tom.fighter.stance_images = {
+            FightStance.AGGRESSIVE: "images/v2/fight/tom-stances/tom-stance-aggresive.webp",
+            FightStance.DEFENSIVE: "images/v2/fight/tom-stances/tom-stance-defensive.webp",
+            FightStance.FORWARD: "images/v2/fight/tom-stances/tom-stance-forward.webp",
+            FightStance.SOLID: "images/v2/fight/tom-stances/tom-stance-solid.webp"
         }
 
-        opponent.base_attacks.append(BodyHook({
+        tom.fighter.base_attacks.append(BodyHook({
             "start_image": "",
             "hit_image": "",
             "blocked_image": ""
         }))
-        opponent.base_attacks.append(Jab({
+        tom.fighter.base_attacks.append(Jab({
             "start_image": "",
             "hit_image": "",
             "blocked_image": ""
         }))
-        opponent.base_attacks.append(Hook({
+        tom.fighter.base_attacks.append(Hook({
             "start_image": "",
             "hit_image": "",
             "blocked_image": ""
         }))
-        opponent.base_attacks.append(Kick({
+        tom.fighter.base_attacks.append(Kick({
             "start_image": "",
             "hit_image": "",
             "blocked_image": ""
         }))
         
-        opponent.special_attack = Headbutt({
+        tom.fighter.special_attack = Headbutt({
             "start_image": "",
             "hit_image": "",
             "blocked_image": ""
         })
+
+        tom.fighter.quirk = seeing_red
+
+        fight = Fight(mc, tom, "v1_start")
+
+    call screen fight_overview(fight, "First Fight")
