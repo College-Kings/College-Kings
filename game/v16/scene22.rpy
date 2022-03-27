@@ -644,6 +644,9 @@ label v16s22:
 
                     pause 0.75
 
+                    scene v16s22_9d
+                    with dissolve
+
                 else: # -if NOT AmberRS
                     scene v16s22_9g
                     with dissolve
@@ -676,15 +679,12 @@ label v16s22:
 
                         am "I haven't been able to think of one!"
 
-                        scene v16s22_9d ### check if matches mouth speaking
+                        scene v16s22_9d
                         with dissolve
 
                         am "*Sighs*"
 
                 # -regardless of RS or not, continue on mention her laptop path
-
-                scene v16s22_9d
-                with dissolve
 
                 u "Haha, it's fine. I promise your secret is safe with me."
 
