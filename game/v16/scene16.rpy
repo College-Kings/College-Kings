@@ -493,7 +493,7 @@ label v16s16:
 
     pause 0.75
 
-    if v16_win_range: ### TODO: Variable
+    if v16_win_range: ### TODO: mini game in general
         scene v16s16_9e
         with dissolve
 
