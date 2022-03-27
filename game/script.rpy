@@ -15,7 +15,7 @@ define _quit_slot = "99-1"
 # The game starts here.
 label start:
     $ setup()
-    jump fight_example
+
     call screen real_life_mode
 
 label end_credits: # for compatibility
