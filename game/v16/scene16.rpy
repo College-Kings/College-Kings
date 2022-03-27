@@ -51,9 +51,6 @@ label v16s16:
         "Nah, it's fine":
             $ add_point(KCT.BRO)
 
-            scene v16s16_5a
-            with dissolve
-
             u "Haha, honestly? I think it's fine."
 
             scene v16s16_5
@@ -91,9 +88,6 @@ label v16s16:
         "Definitely":
             $ add_point(KCT.TROUBLEMAKER)
 
-            scene v16s16_5a
-            with dissolve
-
             u "*Laughs* Definitely."
 
             scene v16s16_5
@@ -127,9 +121,6 @@ label v16s16:
             menu:
                 "It's not over yet":
                     $ add_point(KCT.BRO)
-
-                    scene v16s16_5a
-                    with dissolve
 
                     u "I mean, yeah, you did. But that doesn't mean it's over."
 
@@ -193,9 +184,6 @@ label v16s16:
 
                 "Yeah, it's over":
                     $ add_point(KCT.TROUBLEMAKER)
-
-                    scene v16s16_5a
-                    with dissolve
 
                     u "Big time, yeah. I think it's over."
 
