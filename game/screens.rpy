@@ -224,7 +224,7 @@ screen choice(items, seconds=3, fail_label=None):
                 action item.action
                 minimum (550, 131)
                 
-                text "[item.caption!ui]":
+                text "[item.caption!uit]":
                     align (0.5, 0.5)
 
     if fail_label is not None:
@@ -349,7 +349,7 @@ screen main_menu():
 
     add image_path + "background.webp"
 
-    textbutton ("Test Language") action Language("template_lang")
+    textbutton _("Test Language") action Language("francais")
 
     # Patreon
     if not config.enable_steam:
