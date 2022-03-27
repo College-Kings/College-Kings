@@ -223,7 +223,7 @@ label v16s56: # 56) Wolves Living Room, Chriss apologizes
 
     pause 0.75
 
-    if v14_help_lindsey: # TODO: Variable PLACEHOLDER VARIABLE # -if helping Lindsey, transition to Scene 58-
+    if v14_help_lindsey: # -if helping Lindsey, transition to Scene 58-
         jump v16s58
 
     else: # -if not helping Lindsey, transition to Scene 61-

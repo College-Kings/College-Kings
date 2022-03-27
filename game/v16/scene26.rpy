@@ -59,7 +59,7 @@ label v16s26:
 
     u "Hmph. Agree to disagree."
 
-    if v15_lindsey_recording >= 1: # TODO: Variable
+    if v15_lindsey_recording > 0:
         scene v16s26_3a
         with dissolve
 
@@ -271,7 +271,7 @@ label v16s26:
 
         u "We went to her concert in Amsterdam."
 
-        if v12s7_victims >= 5: # TODO: Variable
+        if len(v12s7_killList) >= 5:
             scene v16s26_5b
             with dissolve
 

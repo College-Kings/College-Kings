@@ -48,7 +48,7 @@ label v16s25a:
         $ riley.messenger.newMessage("MEEEEEEEEE!")
         $ riley.messenger.addReply("Haha, congrats!", v16s25a_reply_thankyou) 
         
-        if v16s11_sign_up: # TODO: Variable
+        if v16s11_sign_up:
             $ riley.messenger.addReply("What about me? Do you know?", v16s25a_reply_sorry) 
             $ riley.messenger.addReply("Ouch. There go my journalist dreams :(")
             $ riley.messenger.addReply("Ah, nice. I was kind of hoping I didn't get it, haha.", v16s25a_reply_assistant) 
@@ -238,7 +238,7 @@ label v16s25a:
         
         ### call phone and check for replies
         
-        if v16s11_sign_up: # TODO: Variable
+        if v16s11_sign_up:
             $ riley.messenger.addReply("What about me? Do you know?", v16s25a_reply_sorry) 
             $ riley.messenger.addReply("Ouch. There go my journalist dreams :(")
             $ riley.messenger.addReply("Ah, nice. I was kind of hoping I didn't get it, haha.", v16s25a_reply_assistant) 

@@ -37,7 +37,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     pause 0.75
 
-    if v16s20_take_twazzlers: # -if MC also took the Twazzlers # TODO:Variable
+    if v16s20_take_twazzlers: # -if MC also took the Twazzlers
         scene v16s23_2c # FPP Same angle as 2, Amber with a slight smile, mouth closed, MC is holding Twazzlers package out to her [OUTSIDE ENTRANCE]
         with dissolve
 
@@ -221,7 +221,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     am "Hmm... Maybe."
 
-    if v14_pics_with_linds: # TODO: VARIABLE # PLACEHOLDER VARIABLE # -if MC met Male Buyer in v15 scene10
+    if v14_pics_with_linds: # -if MC met Male Buyer in v15 scene10
         scene v16s23_13
         with dissolve
 

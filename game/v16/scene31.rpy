@@ -278,7 +278,7 @@ label v16s31:
 
     pause 0.75
 
-    if v14_SamanthaDrugs: # TODO: Variable # -if SamanthaDrugs and MC had sex
+    if "v14_samantha" in sceneList: # -if SamanthaDrugs and MC had sex
         scene v16s31_5a # TPP. As Sam passes MC, she stops for a moment and leans in towards Mc's ear, both slight smiles, Samantha's mouth is open, Mc's mouth is closed
         with dissolve
 

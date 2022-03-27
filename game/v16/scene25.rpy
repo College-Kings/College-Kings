@@ -40,7 +40,7 @@ label v16s25:
         pause 0.75
 
         if v14_amber_clean: # [Checkpoint 1.1]
-            if amber.relationship >= Relationship.FWB: # TODO: Variable
+            if amber.relationship >= Relationship.FWB:
                 scene v16s25_4
                 with dissolve
 
@@ -694,40 +694,30 @@ label v16s25:
         pause 0.75
 
         if v14_amber_clean: # [Checkpoint 1.1]
-            if amber.relationship >= Relationship.FWB: # TODO: Variable
-                scene v16s25_17
-                with dissolve
+            if amber.relationship >= Relationship.FWB:
 
                 u "(Is Amber relationship material? Definitely something to think about...)"
 
                 u "(I never thought Amber would be the type for a serious relationship... Maybe things have changed.)"
-            elif amber.relationship == Relationship.FRIEND: # TODO: Variable
-                scene v16s25_17
-                with dissolve
+            else:
 
                 u "(Amber's still thinking about detective stuff... Haha, I think she has a fetish!)"
 
                 # [End of Checkpoint 1.1. Continue to Checkpoint 2]
         else: # [Checkpoint 1.2]
             if amber.relationship >= Relationship.FWB and v16_amber_dance: # TODO: Variable
-                scene v16s25_17
-                with dissolve
 
                 u "(Holy shit, I can't get Amber's body out of my mind now...)"
 
                 u "(Maybe being a stripper is her true calling... *Laughs*)"
 
             elif amber.relationship == Relationship.FRIEND and AmberLoyal: #TODO: Variable
-                scene v16s25_17
-                with dissolve
 
                 u "(If anyone can handle getting harassed by douchebags every night, it's Amber...)"
 
                 u "(I'm glad she's happy.)"
 
             elif amber.relationship == Relationship.FRIEND and v16_tell_amber_to_quit_stripping: # TODO: Variable #Placeholder: ###shouldn't need to use friend
-                scene v16s25_17
-                with dissolve
 
                 u "(I hope Amber doesn't stay pissed at me for too long...)"
 
@@ -742,7 +732,7 @@ label v16s25:
             play sound "sounds/vibrate.mp3"
 
             scene v16s25_17
-            with vpunch
+            with vpunch ### check
 
             pause 0.75
 

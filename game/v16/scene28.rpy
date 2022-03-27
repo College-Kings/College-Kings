@@ -14,7 +14,7 @@ label v16s28:
 
     pause 0.75
 
-    if (v15_chloe_lindseysabotage and not v15_chloe_postkiwii) and v15_lindsey_recording > 0: ### TODO: Variable
+    if v15_lindsey_recording > 0:
         scene v16s28_3 # FPP. MC and Lindsey standing in front of the planning board, MC looking at Lindsey, Lindsey looking at MC, Lindsey worried expression, mouth open
         with dissolve
 

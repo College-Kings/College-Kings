@@ -305,7 +305,7 @@ label v16s22:
 
         menu:
             "Ask about bills":
-                $ v16_amber_mention_bills = True # TODO: Variable
+                $ v16_amber_mention_bills = True
 
                 scene v16s22_9a
                 with dissolve
@@ -563,7 +563,7 @@ label v16s22:
 
         menu:
             "Mention her laptop":
-                $ v16_amber_mention_laptop = True #  TODO: Variable
+                $ v16_amber_mention_laptop = True
 
                 scene v16s22_9a
                 with dissolve
