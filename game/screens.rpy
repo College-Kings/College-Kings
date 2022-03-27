@@ -224,7 +224,7 @@ screen choice(items, seconds=3, fail_label=None):
                 action item.action
                 minimum (550, 131)
                 
-                text item.caption.upper():
+                text "[item.caption!ui]":
                     align (0.5, 0.5)
 
     if fail_label is not None:

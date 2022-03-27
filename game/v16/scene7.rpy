@@ -468,8 +468,6 @@ label v16s7:
 
         pause 0.75
 
-        $ DOG_NAME = dog_name # apparently this is necessary
-
         menu:
             "Ask about [dog_name]":
                 scene v16s7_6e
