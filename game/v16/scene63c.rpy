@@ -5,7 +5,6 @@
 
 label v16s63c:
 
-    $ sex_overlay_options = []
     $ sex_overlay_options = [
         [("Boobs", "v16s63c_boobs"), ("Feet", "v16s63c_feet"), ("Vagina", "v16s63c_vagina")],
     ]
