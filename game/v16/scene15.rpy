@@ -1723,7 +1723,7 @@ label v16s15pier_hotdog: # -if HotDog Stand
     scene v16s15_57a
     with dissolve
 
-    pe "Deal, ha."
+    pe "Deal!"
 
     scene v16s15_61 # TPP. Show just MC and Penelope sitting down from Imre and Karens viewpoint (Imre and Karen are not shown) MC bites half his hot dog while looking at Penelope, Penelope is looking at and smiling at MC but is acting like she's not impressed by MC [HOTDOG]
     with dissolve
