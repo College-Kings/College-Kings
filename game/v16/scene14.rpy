@@ -826,10 +826,10 @@ label v16s14:
 
     u "But why are you at the pier with them anyway?"
 
-    scene v16s14_25b
-    with dissolve
+    #scene v16s14_25b
+    #with dissolve
 
-    pe "Not with them, I was just here and Imre basically cuffed me to his wrist when he saw me."
+    #pe "Not with them, I was just here and Imre basically cuffed me to his wrist when he saw me."
 
     scene v16s14_25c # TPP. Same as v16s14_25b, MC mouth closed, slight smile // Penelope slight smile, mouth open
     with dissolve

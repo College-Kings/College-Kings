@@ -36,9 +36,6 @@ label v16s22:
     u "Ah, no problem."
 
     if v16s20_take_twazzlers: # -if MC also took the Twazzlers
-        scene v16s22_3b
-        with dissolve
-
         u "Also..."
 
         scene v16s22_3c # FPP. MC hands Amber the Twazzlers and Amber takes the Twazzlers out of his hand, Amber has a slight smile, mouth is closed
@@ -308,7 +305,7 @@ label v16s22:
 
         menu:
             "Ask about bills":
-                $ v16s22_mention_bills = True # TODO: Variable
+                $ v16_amber_mention_bills = True # TODO: Variable
 
                 scene v16s22_9a
                 with dissolve
@@ -413,7 +410,7 @@ label v16s22:
 
                     am "You're right, you shouldn't have. Lesson learned."
 
-                elif amber.relationship >= Relationship.FWB: # TODO: Variable # -if AmberRS BUT AmberKCT not passed
+                elif amber.relationship >= Relationship.FWB: # -if AmberRS BUT AmberKCT not passed
                     scene v16s22_9c
                     with dissolve
 
@@ -566,7 +563,7 @@ label v16s22:
 
         menu:
             "Mention her laptop":
-                $ v16s22mention_laptop = True #  TODO: Variable
+                $ v16_amber_mention_laptop = True #  TODO: Variable
 
                 scene v16s22_9a
                 with dissolve
@@ -670,7 +667,7 @@ label v16s22:
 
                     am "So what? It's called privacy."
 
-                    if v16s22mention_bills: # -if chose to mention the unpaid bills he saw [LEWS STAFF ROOM]
+                    if v16_amber_mention_bills: # -if chose to mention the unpaid bills he saw [LEWS STAFF ROOM]
                         scene v16s22_9i
                         with dissolve
 
@@ -679,7 +676,7 @@ label v16s22:
                         scene v16s22_9j
                         with dissolve
 
-                        u "There wasn't even a password, dude!"
+                        u "There wasn't even a password!"
 
                         scene v16s22_9i
                         with dissolve
@@ -762,15 +759,16 @@ label v16s22:
 
                 u "Maybe..."
 
-                if v16s22mention_bills and v16s22mention_laptop: # -if MC chose Ask about bills AND Mention her laptop (extra dialogue)
+                if v16_amber_mention_bills and v16_amber_mention_laptop: # -if MC chose Ask about bills AND Mention her laptop (extra dialogue)
                     scene v16s22_9n
                     with dissolve
-
+                    
                     am "You really took your time in there, huh. *Laughs*"
 
                     scene v16s22_9a
                     with dissolve
 
+                    $ grant_achievement("just_curious_about_you")
                     u "Ha, just curious about you."
 
                 # -continue regardless-
@@ -1228,7 +1226,7 @@ label v16s22:
 
     u "Of course."
 
-    if v16s22mention_bills and v16s22mention_laptop: # -if MC chose Ask about bills or Mention her laptop at all in this convo (extra dialogue)
+    if v16_amber_mention_bills and v16_amber_mention_laptop: # -if MC chose Ask about bills or Mention her laptop at all in this convo (extra dialogue)
         scene v16s22_10a # FPP. Show just Amber from the shoulders up, slight smiles, mouth is open, looking at MC [LEWS STAFF ROOM]
         with dissolve
 

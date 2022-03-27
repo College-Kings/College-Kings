@@ -221,5 +221,6 @@ default ryan = NonPlayableCharacter("Ryan", "Ryanator")
 default samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam") # Relationship progression: FRIEND, MOVE, FWB
 default satin = NonPlayableCharacter("Satin") # Relationship progression: FRIEND, FWB
 default sebastian = NonPlayableCharacter("Sebastian", "Big Seb")
+default tom = NonPlayableCharacter("Tom")
 default trainer = NonPlayableCharacter("Trainer")
 default wolf = NonPlayableCharacter("Wolf")

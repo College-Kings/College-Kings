@@ -179,9 +179,6 @@ label move_attack(fight, target, attacker, move, move_damage):
 label fight_start_turn(fight, target, attacker):
     hide screen phone_icon
 
-    if attacker == fight.player:
-        hide screen fight_opponent_turn
-
     scene black
 
     if attacker == fight.player:
@@ -194,8 +191,6 @@ label fight_start_turn(fight, target, attacker):
     $ overwhelmed_multiplier = 1
 
     if attacker == fight.opponent:
-        show screen fight_opponent_turn
-
         # Overwhelmed
         if len(fight.move_list[-1][target.name]) >= 4:
             if opponent.health / opponent.max_health <= 0.25:
@@ -212,8 +207,8 @@ label fight_start_turn(fight, target, attacker):
 
     $ fight.move_list.append({attacker.name: []})
 
-    if attacker == fight.player:
-        call screen fight_player_turn(fight, fight.player, fight.opponent)
+    if attacker == fight.player.fighter:
+        call screen fight_player_turn(fight, attacker, target)
     else:
         call fight_attack_turn(fight, target, attacker)
 
