@@ -855,7 +855,7 @@ label v16s16:
     u "Okay, I'll try."
 
     scene v16s16_22 # FPP. MC turned around facing towards the PIER ENTRANCE.
-    with vpunch
+    with dissolve
 
     pe "Hey!"
 
