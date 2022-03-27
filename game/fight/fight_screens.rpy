@@ -19,7 +19,7 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
     ]
 
     frame:
-        add "images/fight/overview/frame-background.png" pos (-54, -50)
+        add "images/fight/overview/frame-background.webp" pos (-54, -50)
 
         fixed:
             xysize (170, 30)
@@ -61,8 +61,8 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
 
                     for attack in competitor.base_attacks:
                         button:
-                            idle_background image_path + "attack-idle.png"
-                            hover_background image_path + "attack-idle.png"
+                            idle_background image_path + "attack-idle.webp"
+                            hover_background image_path + "attack-idle.webp"
                             tooltip attack.description
                             action NullAction()
                             xysize (206, 58)
@@ -81,17 +81,17 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
 
                     for attack in special_attacks:
                         button:
-                            idle_background image_path + "attack-idle2.png"
-                            selected_background image_path + "attack-hover.png"
+                            idle_background image_path + "attack-idle2.webp"
+                            selected_background image_path + "attack-hover.webp"
                             selected (competitor.special_attack is not None and competitor.special_attack.name == attack.name)
                             tooltip attack.description
                             xysize (206, 58)
                             padding (5, 5)
                             if is_player:
-                                hover_background image_path + "attack-hover.png"
+                                hover_background image_path + "attack-hover.webp"
                                 action SetField(competitor, "special_attack", attack)
                             else:
-                                hover_background image_path + "attack-idle2.png"
+                                hover_background image_path + "attack-idle2.webp"
                                 action NullAction()
 
                             text attack.name align (0.5, 0.5)
@@ -107,17 +107,17 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
 
                     for quirk in FightQuirk.quirks:
                         button:
-                            idle_background image_path + "attack-idle2.png"
-                            selected_background image_path + "attack-hover.png"
+                            idle_background image_path + "attack-idle2.webp"
+                            selected_background image_path + "attack-hover.webp"
                             selected (competitor.quirk is not None and competitor.quirk.name == quirk.name)
                             # tooltip attack.description
                             xysize (206, 58)
                             padding (5, 5)
                             if is_player:
-                                hover_background image_path + "attack-hover.png"
+                                hover_background image_path + "attack-hover.webp"
                                 action SetField(competitor, "quirk", quirk)
                             else:
-                                hover_background image_path + "attack-idle2.png"
+                                hover_background image_path + "attack-idle2.webp"
                                 action NullAction()
 
                             text quirk.name align (0.5, 0.5)
@@ -128,7 +128,7 @@ screen fight_overview_info(competitor, profile_picture, is_player=False):
             align (0.5, 1.0)
             ysize 125
 
-            if tooltip:
+            if tooltip and is_player:
                 text "[tooltip]" align (0.5, 0.5)
 
 
@@ -144,7 +144,7 @@ screen fight_overview(fight, title):
         player = fight.player.fighter
         opponent = fight.opponent.fighter
 
-    add image_path + "background.png"
+    add image_path + "background.webp"
 
     text title style "fight_overview_title" xalign 0.5 ypos 50
 
@@ -173,7 +173,7 @@ screen fight_overview(fight, title):
         text "DIFFICULTY:"
 
         imagebutton:
-            idle Transform("gui/common/left-arrow.png", xysize=(10, 15))
+            idle Transform("gui/common/left-arrow.webp", xysize=(10, 15))
             if difficulty_index > 0:
                 action [SetScreenVariable("difficulty_index", difficulty_index - 1),
                     SetField(opponent, "max_health", opponent.max_health * 1/1.25),
@@ -188,7 +188,7 @@ screen fight_overview(fight, title):
             text difficulties[difficulty_index] xalign 0.5
 
         imagebutton:
-            idle Transform("gui/common/right-arrow.png", xysize=(10, 15))
+            idle Transform("gui/common/right-arrow.webp", xysize=(10, 15))
             if difficulty_index < len(difficulties) - 1:
                 action [SetScreenVariable("difficulty_index", difficulty_index + 1),
                     SetField(opponent, "max_health", opponent.max_health * 1.25),
@@ -202,16 +202,16 @@ screen fight_overview(fight, title):
         spacing 20
 
         imagebutton:
-            idle image_path + "play-fight-idle.png"
-            hover image_path + "play-fight-hover.png"
+            idle image_path + "play-fight-idle.webp"
+            hover image_path + "play-fight-hover.webp"
             action [SetField(opponent, "max_health", int(opponent.max_health)),
                 SetField(opponent, "max_stamina", int(opponent.max_stamina)),
                 Call("fight_start_turn", fight, opponent, player)]
             yalign 0.5
 
         imagebutton:
-            idle image_path + "skip-fight-idle.png"
-            hover image_path + "skip-fight-hover.png"
+            idle image_path + "skip-fight-idle.webp"
+            hover image_path + "skip-fight-hover.webp"
             action [SetField(opponent, "max_health", int(opponent.max_health)),
                 SetField(opponent, "max_stamina", int(opponent.max_stamina)),
                 Jump(fight.end_label)]
@@ -221,6 +221,7 @@ screen fight_overview(fight, title):
 screen fight_player_turn(fight, player, opponent):
     style_prefix "fight_turn"
 
+    default image_path = "images/fight/player-turn/"
     default selected_move = None
     default max_stamina = player.stamina
 
@@ -228,89 +229,148 @@ screen fight_player_turn(fight, player, opponent):
 
     use health_bars(fight.player, fight.opponent, selected_move)
 
-    vbox:
+    frame:
+        background image_path + "stance1.webp"
+        xalign 0.5
+        ypos 50
+        xysize (568, 63)
+        style_prefix "fight_turn_stance"
+
+        hbox:
+            align (0.5, 0.5)
+
+            for i in FightStance:
+                frame:
+                    align (0.5, 0.5)
+
+                    if i == player.stance:
+                        xysize (164, 81)
+
+                        add image_path + "stance-current.webp"
+
+                        vbox:
+                            align (0.5, 0.5)
+
+                            text "CURRENT STANCE" size 14 xalign 0.5
+                            text i.name xalign 0.5
+
+                    elif selected_move is not None and i == selected_move.ideal_stance:
+                        xysize (135, 63)
+
+                        add image_path + "stance-ideal.webp"
+
+                        vbox:
+                            align (0.5, 0.5)
+
+                            text "END STANCE" size 14 xalign 0.5
+                            text i.name xalign 0.5
+ 
+                    elif selected_move is not None and i == selected_move.end_stance:
+                        xysize (135, 63)
+
+                        add image_path + "stance-end.webp"
+
+                        vbox:
+                            align (0.5, 0.5)
+
+                            text "IDEAL STANCE" size 14 xalign 0.5
+                            text i.name xalign 0.5
+
+                    else:
+                        xysize (135, 63)
+
+                        text i.name align (0.5, 0.5)
+
+    hbox:
         xalign 0.5
         yalign 1.0
         yoffset -50
-        spacing 20
+        spacing -17
 
-        hbox:
-            spacing 5
-            xalign 0.5
-
-            for i in range(1, max_stamina + 1):
-                if i > player.stamina:
-                    add "gui/fight_prototype/fight_circle_idle.png" yalign 0.5
-                elif selected_move is None or i <= (player.stamina - selected_move.stamina_cost):
-                    add "gui/fight_prototype/fight_circle_hover.png" yalign 0.5
+        for move in player.base_attacks + player.turn_moves:
+            button:
+                if move.ideal_stance == player.stance:
+                    idle_background image_path + "actions-ideal-idle.webp"
+                    hover_background image_path + "actions-ideal-hover.webp"
+                    selected_background image_path + "actions-ideal-hover.webp"
                 else:
-                    add "gui/fight_prototype/fight_circle_gold_hover.png" yalign 0.5
-                
-        hbox:
-            spacing 30
-            xalign 0.5
+                    idle_background image_path + "actions-idle.webp"
+                    hover_background image_path + "actions-hover.webp"
+                    selected_background image_path + "actions-hover.webp"
+                insensitive_background "#a7a7a7"
+                sensitive (player.stamina >= move.stamina_cost)
+                selected (selected_move == move)
+                if selected_move == move:
+                    action [SetScreenVariable("selected_move", None), Hide("action_info")]
+                else:
+                    action [SetScreenVariable("selected_move", move), Show("action_info", None, fight, player, opponent, move)]
+                xysize (234, 172)
+                padding (45, 45)
 
-            for move in player.base_attacks + player.turn_moves:
-                button:
-                    xysize (100, 100)
-                    if move.ideal_stance == player.stance:
-                        idle_background "#7cf87c"
-                    else:
-                        idle_background "#fff"
-                    hover_background "#ffd000"
-                    selected_background "#ffd000"
-                    insensitive_background "#a7a7a7"
-                    sensitive (player.stamina >= move.stamina_cost)
-                    selected (selected_move == move)
-                    if selected_move == move:
-                        action [SetScreenVariable("selected_move", None), Hide("action_info")]
-                    else:
-                        action [SetScreenVariable("selected_move", move), Show("action_info", None, fight, player, opponent, move)]
+                vbox:
+                    align (0.5, 0.5)
+                    spacing 5
 
-                    text str(move.stamina_cost) xalign 1.0 font "fonts/Montserrat-Bold.ttf"
-                    text move.name align (0.5, 0.5) text_align 0.5
+                    text move.name xalign 0.5
 
-            if player.special_attack is not None:
-                button:
-                    xysize (100, 100)
-                    if player.special_attack.ideal_stance == player.stance:
-                        idle_background "#7cf87c"
-                    else:
-                        idle_background "#fff"
-                    hover_background "#ffd000"
-                    selected_background "#ffd000"
-                    insensitive_background "#a7a7a7"
-                    sensitive player.special_attack.is_sensitive(fight, opponent, player)
-                    selected (selected_move == player.special_attack)
-                    if selected_move == player.special_attack:
-                        action [SetScreenVariable("selected_move", None), Hide("action_info")]
-                    else:
-                        action [SetScreenVariable("selected_move", player.special_attack), Show("action_info", None, fight, player, opponent, player.special_attack)]
+                    hbox:
+                        xalign 0.5
+                        spacing 5
 
-                    text str(player.special_attack.stamina_cost) xalign 1.0 font "fonts/Montserrat-Bold.ttf"
-                    text player.special_attack.name align (0.5, 0.5) text_align 0.5
+                        for i in range(1, player.max_stamina + 1):
+                            if i > move.stamina_cost:
+                                add image_path + "action-stamina-empty.webp"
+                            else:
+                                add image_path + "action-stamina-filled.webp"
+
+        if player.special_attack is not None or False: # INFO: Disabled for act 1 (missing images)
+            button:
+                xysize (100, 100)
+                if player.special_attack.ideal_stance == player.stance:
+                    idle_background "#7cf87c"
+                else:
+                    idle_background "#fff"
+                hover_background "#ffd000"
+                selected_background "#ffd000"
+                insensitive_background "#a7a7a7"
+                sensitive player.special_attack.is_sensitive(fight, opponent, player)
+                selected (selected_move == player.special_attack)
+                if selected_move == player.special_attack:
+                    action [SetScreenVariable("selected_move", None), Hide("action_info")]
+                else:
+                    action [SetScreenVariable("selected_move", player.special_attack), Show("action_info", None, fight, player, opponent, player.special_attack)]
+
+                text str(player.special_attack.stamina_cost) xalign 1.0 font "fonts/Montserrat-Bold.ttf"
+                text player.special_attack.name align (0.5, 0.5) text_align 0.5
 
     vbox:
-        xpos 35
+        xpos 50
         yalign 1.0
         yoffset -35
         spacing 5
 
-        for stance in FightStance:
-            frame:
-                background "#fff"
-                xysize (250, 50)
+        text "STAMINA" size 15
 
-                text stance.name align (0.5, 0.5)
+        hbox:
+            spacing 5
 
-                if player.stance == stance:
-                    add "#ffd000" xysize (35, 50)
+            for i in range(1, player.max_stamina + 1):
+                if i > player.stamina:
+                    add image_path + "stamina-empty.webp"
+                else:
+                    add image_path + "stamina-filled.webp"
 
-                if selected_move is not None and selected_move.ideal_stance == stance:
-                    add "#7cf87c" xysize (35, 50)
+style fight_turn_text is text:
+    size 26
+    color "#fff"
+    font "fonts/Montserrat-Regular.ttf"
+    text_align 0.5
 
-                if (selected_move is not None) and ((selected_move.end_stance is None and player.stance == stance) or (selected_move.end_stance == stance)):
-                    add "#ffd000" xysize (35, 50) xalign 1.0
+style fight_turn_stance_text is text:
+    size 24
+    color "#fff"
+    font "fonts/BebasNeue-Regular.ttf"
+    text_align 0.5
 
 
 screen health_bars(player, opponent, move=None):
@@ -409,34 +469,62 @@ screen health_bars(player, opponent, move=None):
 
 
 screen action_info(fight, player, opponent, move):
-    zorder 100
     style_prefix "fight_turn"
 
-    frame:
-        xalign 0.5
-        ypos 700
-        background Frame("#fff")
-        padding (10, 10)
+    default image_path = "images/fight/player-turn/"
 
-        vbox:
-            spacing 20
+    vbox:
+        align (0.5, 1.0)
+        yoffset -250
+        spacing 35
 
-            hbox:
-                spacing 20
+        if move.ideal_stance == player.stance:
+            frame:
+                xysize (428, 132)
+                background image_path + "action-stance-info.webp"
+                padding (12, 48, 12, 12)
 
-                button:
-                    xalign 0.5
-                    idle_background "#a8a8a8"
-                    hover_background "#ffd000"
-                    action [Hide("action_info"), Function(player.set_stance_bonus, move), Call("fight_attack_turn", fight, opponent, player, move)]
-                    
-                    text ">>> {} <<<".format(move.name) size 30 font "fonts/Montserrat-Bold.ttf" align (0.5, 0.5)
+                text move.effect align (0.5, 0.5) text_align 0.5 size 13
 
-                if hasattr(move, "damage") and move.damage is not None:
-                    text "{{font=fonts/Montserrat-Bold.ttf}}Damage:{{/font}} {}".format(move.damage) xalign 0.5
+        frame:
+            xysize (428, 142)
+            background image_path + "action-info.webp"
+            padding (15, 15)
 
-            text move.description
-            text "{{font=fonts/Montserrat-Bold.ttf}}Stance Bonus:{{/font}} {}".format(move.effect)
+            vbox:
+                xalign 0.5
+                spacing 15
+
+                frame:
+                    ysize 30
+
+                    if hasattr(move, "damage") and move.damage is not None:
+                        text "Damage: {}".format(move.damage) size 15 yalign 0.5
+
+                    text move.name size 30 align (0.5, 0.5)
+
+                    hbox:
+                        align (1.0, 0.5)
+                        spacing 2
+
+                        for i in range(1, player.max_stamina + 1):
+                            if i > move.stamina_cost:
+                                add Transform(image_path + "stamina-empty.webp", zoom=0.4)
+                            else:
+                                add Transform(image_path + "stamina-filled.webp", zoom=0.4)
+
+                text move.description size 13 text_align 0.5 xalign 0.5
+
+            button:
+                align (0.5, 1.0)
+                yoffset 60
+                idle_background image_path + "action-use-idle.webp"
+                hover_background image_path + "action-use-hover.webp"
+                action [Hide("action_info"), Function(player.set_stance_bonus, move), Call("fight_attack_turn", fight, opponent, player, move)]
+                xysize (160, 96)
+                padding (32, 32)
+
+                text "USE" align (0.5, 0.5)
 
 
 screen fight_debug(player, opponent):
@@ -460,11 +548,6 @@ screen fight_debug(player, opponent):
             text "Opponent Stance: {}".format(opponent.stance) 
             text "Opponent Stamina: {}".format(opponent.stamina)
 
-
-style fight_turn_text is text:
-    size 20
-    color "#000"
-    font "fonts/Montserrat-Regular.ttf"
 
 style fight_overview_title is montserrat_extra_bold_64:
     color "#fff"
