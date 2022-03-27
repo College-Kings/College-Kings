@@ -66,7 +66,7 @@ label v16s22:
         scene v16s22_4 # TPP. Amber leans over the Lews counter and gives MC a hug, both of them slight smiles, mouths are closed
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         scene v16s22_3a
         with dissolve
@@ -88,7 +88,7 @@ label v16s22:
     scene v16s22_4a # FPP. MC leaning over the counter looking at Amber's ass as she's on her knees plugging int her phone.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v16s22_3a
     with dissolve
