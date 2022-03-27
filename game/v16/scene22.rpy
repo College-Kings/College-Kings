@@ -869,9 +869,6 @@ label v16s22:
 
                 u "(I'm not gonna tell her. I'm not crushing that dream today.)"
 
-                scene v16s22_9a
-                with dissolve
-
                 u "So, who's the little dude in one of the photos with you?"
 
                 scene v16s22_9n
