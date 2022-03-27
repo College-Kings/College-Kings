@@ -18,7 +18,7 @@ label v16s17: # 17) MC catches up to Imre
     u "Imre, wait!"
 
     scene v16s17_3 # TPP Show MC next to Imre on the bridge. Imre has his hands on the stone railing, looking out, angry expression, mouth open
-    with dissolve
+    with vpunch
 
     imre "It never works out!"
 
