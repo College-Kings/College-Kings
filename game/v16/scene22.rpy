@@ -300,9 +300,6 @@ label v16s22:
 
         u "(Should I bring up the stack of bills that I saw? Even though it's really none of my business...)"
 
-        scene v16s22_9
-        with dissolve
-
         menu:
             "Ask about bills":
                 $ v16_amber_mention_bills = True
@@ -558,15 +555,9 @@ label v16s22:
 
         u "(I kinda want to hear the story behind that erotic novel she's been reading... Should I mention it?)"
 
-        scene v16s22_9
-        with dissolve
-
         menu:
             "Mention her laptop":
                 $ v16_amber_mention_laptop = True
-
-                scene v16s22_9a
-                with dissolve
 
                 u "I also caught a glimpse of your latest web browser..."
 
@@ -726,9 +717,6 @@ label v16s22:
                 pause 0.75
 
             "Keep it a secret":
-                scene v16s22_9a
-                with dissolve
-
                 u "(Nah, her guilty pleasure secret is safe with me... For now.)"
 
     # -Regardless-
@@ -739,14 +727,8 @@ label v16s22:
 
         u "(I don't think she'll mind if I talk about the pictures she has up in her house... Will she?)"
 
-        scene v16s22_9a
-        with dissolve
-
         menu:
             "Ask about photos":
-                scene v16s22_9a
-                with dissolve
-
                 u "So, you used to play violin?"
 
                 scene v16s22_9
@@ -966,9 +948,6 @@ label v16s22:
                 pause 0.75
 
             "Leave it alone":
-                scene v16s22_9a
-                with dissolve
-
                 u "(I'll mind my own business, maybe she'll tell me about them on her own one day.)"
 
                 scene v16s22_8e # TPP. Show Amber and Mc sitting down on a couch together, Amber is looking in a direction away from MC, both of them taking a sip from their coffee cups, both slight smiles [LEWS STAFF ROOM]
