@@ -17,6 +17,7 @@ python early:
         "scriptv06.rpy",
         "scriptv07.rpy",
         "screen.rpy",
+        "sex_overlay.rpy"
     }
 
     restart_game = False # NEVER CHANGE
