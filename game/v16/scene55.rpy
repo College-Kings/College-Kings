@@ -335,14 +335,14 @@ label v16s55: # 55) Prepare Lindsey for the interview
             u "(Well, you donated a little less than you think...)"
 
         # -if MC spent all Lindsey's money and mc DID NOT post on Kiwii about the dog shelter
-        elif v16s26_lindsey_donation_money == 0 and not v16s52_mc_dogshelter_kiwii_post: # PLACEHOLDER VARIABLE
+        elif v16s26_lindsey_donation_money == 0 and not v16s52_mc_dogshelter_kiwii_post: # TODO: PLACEHOLDER VARIABLE
             scene v16s55_3e
             with dissolve
 
             u "(Well, at least you think you did.)"
 
         # -if MC spent all Lindsey's money and MC DID post on Kiwii about the dog shelter
-        elif v16s26_lindsey_donation_money == 0 and v16s52_mc_dogshelter_kiwii_post: # PLACEHOLDER VARIABLES
+        elif v16s26_lindsey_donation_money == 0 and v16s52_mc_dogshelter_kiwii_post: # TODO: PLACEHOLDER VARIABLES
             scene v16s55_3c
             with dissolve 
 
@@ -450,7 +450,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
     li "Oh, okay, sure."
 
     # -if Lindsey is being interviewed by Elijah
-    if not v16s28_lindsey_pb_riley_interview: # PLACEHOLDER VARIABLE
+    if not v16s28_lindsey_pb_riley_interview: #TODO: PLACEHOLDER VARIABLE
         scene v16s55_3b
         with dissolve
 

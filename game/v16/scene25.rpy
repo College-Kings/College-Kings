@@ -73,7 +73,7 @@ label v16s25:
 
                 u "(I'm glad she's happy.)"
 
-            elif amber.relationship == Relationship.FRIEND and v16_tell_amber_to_quit_stripping: # TODO: Variable Placeholder:
+            elif amber.relationship == Relationship.FRIEND and v16_tell_amber_to_quit_stripping: ### TODO: Variable
                 scene v16s25_4
                 with dissolve
 

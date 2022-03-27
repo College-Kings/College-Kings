@@ -27,7 +27,7 @@ label v16s61:
             u "*Sighs* (What are we going to do about Chris and Imre? I feel like this whole house could use some anger management training.)"
         
         # -if Succeeded with Polly at hotel
-        if v16s59_polly_endorse_lindsey: #placeholder
+        if v16s59_polly_endorse_lindsey: #TODO: placeholder
             scene v16s61_2
             with dissolve
 
@@ -40,7 +40,7 @@ label v16s61:
             u "(Well, that was embarrassing...)"
 
             # -if also wore room service uniforms
-            if v16s28_lindsey_pb_pretend_roomservice: # placeholder
+            if v16s28_lindsey_pb_pretend_roomservice: # TODO: placeholder
                 play sound "sounds/vibrate.mp3"
                 
                 scene v16s61_2a # TPP. In wolves room. Show MC (slight smile, mouth closed) sitting on his bed pulling out his phone from his pocket

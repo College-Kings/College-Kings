@@ -419,8 +419,7 @@ label v16s44:
             u "Yeah, I think it was that old taco."
 
             # -if mc gagged at ryan in the bathroom at laurens birthday party
-            if v15s18a_gag: # PlaceHOLDER 
-
+            if v15s18a_gag:
                 scene v16s44_14a # FPP. Close up shot of the taco and the promo leaflet for the Blue Lounge, alleyway background
                 with dissolve
 
