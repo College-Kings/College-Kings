@@ -757,9 +757,6 @@ label v16s22:
 
                 # -continue regardless-
 
-                scene v16s22_9a
-                with dissolve
-
                 u "You were a little Tchaikovsky in the making. *Laughs*"
 
                 scene v16s22_9
