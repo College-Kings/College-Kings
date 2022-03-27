@@ -1069,7 +1069,7 @@ label v16s22:
 
         am "I've gotta get back, and you need to get home."
 
-        ### ERROR: [End of Checkpoint 1.1. Continue to Checkpoint 2]
+        # [End of Checkpoint 1.1. Continue to Checkpoint 2]
 
     else: # -if AmberFriend [Checkpoint 1.2]
         scene v16s22_9
