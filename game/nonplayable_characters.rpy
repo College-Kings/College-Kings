@@ -216,6 +216,7 @@ default naomi = NonPlayableCharacter("Naomi", "NaomiXMarie") # Relationship prog
 default nora = NonPlayableCharacter("Nora", "Nora_12") # Relationship progression: MAD, FRIEND, MOVE, LIKES, FWB
 default parker = NonPlayableCharacter("Parker")
 default penelope = NonPlayableCharacter("Penelope", "Penelopeeps") # Relationship progression: FRIEND, LIKES, LOYAL
+default polly = NonPlayableCharacter("Polly")
 default riley = NonPlayableCharacter("Riley", "RileyReads") # Relationship progression: FRIEND, MOVE, LIKES, FWB, LOYAL
 default ryan = NonPlayableCharacter("Ryan", "Ryanator")
 default samantha = NonPlayableCharacter("Samantha", "SamFromSpaceJam") # Relationship progression: FRIEND, MOVE, FWB

@@ -446,11 +446,11 @@ default v16_chloe_newspaper = False ##Approach A. Sparty = (v14_help_chloe and n
 default v16_chloe_on_cover = False ##Approach A2A. Chloe puts Lindsey on cover = (v16_chloe_newspaper and not v16_chloe_on_cover)
 default v16_chloe_real_masseuse = False ##Approach B2A. MC Masseuse = (v14_help_chloe and not v16_chloe_newspaper and not v16_chloe_real_masseuse)
 
-
 # Lindsey Planning Board
-default v16s28_lindsey_pb_intereview_polly_choice = False # True = Interview / False = Polly
-default v16s28_lindsey_pb_riley_interview = False  # True = Riley interviews Lindsey / False = Elijah interviews Lindsey
-default v16s28_lindsey_pb_pretend_roomservice = False #  True =  Lindsey/MC wear roomservice disguises / Lindsey/MC go as themselves 
+default v16_lindsey_newspaper = False ##Approach A. Polly endorsement = (v16_help_lindsey and not v16_lindsey_newspaper)
+default v16_lindsey_elijah = False ##Approach A1A. Riley interview = (v16_lindsey_newspaper and not v16_lindsey_elijah)
+default v16_lindsey_roomservice = False ##Approach B2A. Show up as yourselves = (v16_help_lindsey and not v16_lindsey_newspaper and not v16_lindsey_roomservice)
+
 
 default freeroam15 = set() #Pier v16s15
 default freeroam16 = set() #Amber v16s20

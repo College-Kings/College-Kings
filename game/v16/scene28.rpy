@@ -60,14 +60,71 @@ label v16s28:
 
     li "I had some other ideas but I think these are the strongest, especially after hearing what Penelope said earlier."
 
-    call screen planningboard # TODO: PLANNING BOARD CODE 
+    python:
+        lindsey_board = PlanningBoard("images/v15/planning_boards/lindsey_background.webp", money=lindsey_board.money, style="lindsey_board") ### to be replaced with v16 board
+
+        lindsey_board.add_approach("Newspaper",
+            "Lindsey gets interviewed for the student newspaper",
+            opinion="\"The student newspaper is going to be really popular, especially the first one. It'd be great to have an entire story in there dedicated to my campaign. We can tell whatever story we want, whether it's positively about me or negatively about my opponent.\"")
+
+        lindsey_board.add_approach("Polly",
+            "Get Polly to endorse Lindsey",
+            opinion="\"A major pop star is in town, and ew have to take advantage of that. Can you imagine if Polly endorsed my campaign? Maybe we can even get her to perform! This would be insane.\"")
+
+        v16s28_lindsey_elijah = lindsey_board.add_subtask("Newspaper",
+            "Have Elijah interview Lindsey",
+            opinion="\"Elijah is the nead of the newspaper so it makes sense to ask him for an interview. Although... He's such a fucking prick. I wouldn't put it past him to agree to this idea simply because he'll want to twist my words into some gossipy blog. We have to be prepared when we meet with him.\"",
+            people=[elijah])
+
+        lindsey_board.add_subtask("Newspaper",
+            "Have Riley interview Lindsey",
+            opinion="\"Riley is new to the newspaper scene, plus she's one of the girls. I'd definitely be more comfortable having Riley interview me, but then again, we want to make sure the article comes across professional, so we'll need to prepare our topics.\"",
+            people=[riley])
+
+        lindsey_board.add_task("Newspaper",
+            "Prepare Lindsey for interview",
+            opinion="\"You're going to be my PR coach, okay? We're even going to have a list of mock interview questions, so we can really test how I do under pressure and you can give me tips on what might be best to say to our interviewer.\"",
+            people=[lindsey,mc])
+
+        lindsey_board.add_task("Newspaper",
+            "Lindsey does the interview",
+            opinion="\"I have to do this interview alone, because they'd definitely write that in there. \"She can't even do an interview on her own, how can she run a sorority?\", so... yeah. You can watch and listen from a distance or something. I can call you while I'm in the room maybe? Whatever it is, they have to think I've done this alone.\"",
+            people=[lindsey])
+
+        lindsey_board.add_task("Polly",
+            "Find out where Polly is staying",
+            opinion="\"The first step to this amazing idea is to find out where Polly is staying. I have a friend or two who might be able to help us track her down. It will take some effort to find her, but I promise you. I will find her.\"")
+
+        v16s28_lindsey_roomservice = lindsey_board.add_subtask("Polly",
+            "Pretend to be room service",
+            opinion="\"Once we know where she's staying, we can get our hands on some matching employee uniforms, and go up to her room as Room Service. We just have to be smart about what we say, we don't want her to think we're crazy stalkers, you know?\"")
+
+        lindsey_board.add_subtask("Polly",
+            "Show up as yourselves",
+            opinion="\"Once we know where she's staying, we take our chances by knocking on her door. Polly isn't a horrible person, so she won't turn down two really big fans, but we have to be careful not to freak her out.\"")
+
+        lindsey_board.add_task("Polly",
+            "Convince Polly to endorse Lindsey at her acoustic concert",
+            opinion="\"Finally, we ask Polly to consider supporting my campaign. I have no idea if she'll perform, or post something, or what we can get her to do... But hopefully we can get something.\"",
+            people=[lindsey,mc,polly])
+
+    call screen planning_board(lindsey_board)
+    
+    if lindsey_board.approach is not None:
+        $ v16_lindsey_newspaper = lindsey_board.approach.id == "Newspaper"
+
+    if lindsey_board.selected_task is not None:
+        $ v16_lindsey_elijah = lindsey_board.selected_task == v16s28_lindsey_elijah
+        $ v16_lindsey_roomservice = lindsey_board.selected_task == v16s28_lindsey_roomservice
+
+    # End planning board (screen disappears)
 
     scene v16s28_4 # TPP. Show MC pointing at something on the board (don't show the actual board, maybe just the back part of it where nothing is written), slight smile, Lindsey looking at where he's pointing with a curious expression, MC mouth open, Lindsey mouth closed
     with dissolve
 
     u "I think this idea is the strongest."
 
-    if v16s28_lindsey_pb_intereview_polly_choice: # Interview 
+    if v16_lindsey_newspaper: # Interview 
         scene v16s28_3e # FPP. Same as v16s28_3d, Lindsey slight smile, mouth closed
         with dissolve
 
