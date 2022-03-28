@@ -272,7 +272,7 @@ label v16s26:
 
     li "How the hell did you make friends with her?"
 
-    if v13_penelope_concert:
+    if v13_penelope_concert: # if Concert with Penelope
         scene v16s26_3a
         with dissolve
 
@@ -284,7 +284,7 @@ label v16s26:
 
             pe "Yeah, backstage passes and all!"
 
-        elif v13_penelope_backstage: # TODO: Variable
+        elif v13_penelope_backstage:
             scene v16s26_5b
             with dissolve
 
@@ -305,7 +305,18 @@ label v16s26:
 
         li "I'm so fucking jealous."
 
-    elif not v13_penelope_concert: # TODO: Variable
+    elif not v13_aubrey_concert: # if no Concert
+        scene v16s26_5a
+        with dissolve
+
+        u "Polly?"
+
+        scene v16s26_5
+        with dissolve
+
+        pe "A pop sensation, [name]."
+
+    else: # if Concert with Aubrey
         scene v16s26_5b
         with dissolve
 
@@ -318,17 +329,6 @@ label v16s26:
             with dissolve
 
             u "(Polly's in town? Huh. I wonder if she'd recognize me?)"
-
-    elif not v13_penelope_concert and not v13_aubrey_concert:
-        scene v16s26_5a
-        with dissolve
-
-        u "Polly?"
-
-        scene v16s26_5
-        with dissolve
-
-        pe "A pop sensation, [name]."
 
     scene v16s26_3d
     with dissolve
