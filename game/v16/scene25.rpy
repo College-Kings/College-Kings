@@ -752,4 +752,9 @@ label v16s25:
             
             # [Checkpoint 3]
             
+        scene black
+        with fade
+        
+        pause 2
+        
         jump v16s25a
