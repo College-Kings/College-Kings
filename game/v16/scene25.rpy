@@ -72,19 +72,19 @@ label v16s25:
 
             u "(Maybe being a stripper is her true calling... *Laughs*)"
 
-        elif amber.relationship == Relationship.FRIEND and AmberLoyal: # TODO: Variable
-            u "(If anyone can handle getting harassed by douchebags every night, it's Amber...)"
-
-            u "(I'm glad she's happy.)"
-
-        elif amber.relationship == Relationship.FRIEND and v16_tell_amber_to_quit_stripping: ### TODO: Variable
+        elif not v16s23_support_amber: # if told Amber to quit stripping (i.e. not FWB and not supported her)
             u "(I hope Amber doesn't stay pissed at me for too long...)"
 
             u "(I just... I can't stand by and watch her ruin her life.)"
 
             u "(Especially since I'm the one who could've prevented her from getting this job in the first place.) *Sighs*"
 
-            #[End of Checkpoint 1.2. Continue to Checkpoint 2]
+        else:
+            u "(If anyone can handle getting harassed by douchebags every night, it's Amber...)"
+
+            u "(I'm glad she's happy.)"
+
+        #[End of Checkpoint 1.2. Continue to Checkpoint 2]
 
     #[Checkpoint 2]
 
