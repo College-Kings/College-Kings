@@ -88,7 +88,7 @@ label v16s23: # 23) Meet Amber at strip club
     scene v16s23_5 # FPP Show Amber barely visible behind the bar, she is bending over to plug in her phone. Her face is not visible, MC looking at her ass. [CHECKPOINT A]
     with dissolve
 
-    am "I'm so glad you brought my charger. My phone has been dead for hours now."
+    am "I'm so glad you brought my charger. My phone is dead by now."
 
     u "Ha, no worries."
 
@@ -142,7 +142,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     ds "Hey sweetheart, aren't you gonna get up there and dance for me?"
 
-    scene v16s23_12a# TPP Same angle as 12, The drunk guy's mouth is closed. MC looks very annoyed [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
+    scene v16s23_12a # TPP Same angle as 12, The drunk guy's mouth is closed. MC looks very annoyed [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
     with dissolve
 
     u "(The fuck?)"
@@ -242,12 +242,12 @@ label v16s23: # 23) Meet Amber at strip club
         scene v16s23_13i # FPP Same angle as 13. Drunk guy facing MC. Amber (disgusted expression, mouth open) is looking at Drunk guy [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
         with dissolve
 
-        am "...Wow."
+        am "Wow..."
 
         scene v16s23_13j # FPP Same angle as 13. Drunk guy facing MC with a drunken smile, mouth closed [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
         with dissolve
 
-        u "You have a girlfriend and you're begging for a strip dance?"
+        u "You have a girlfriend and you're begging for a dance?"
 
         scene v16s23_13h
         with dissolve
@@ -400,7 +400,6 @@ label v16s23: # 23) Meet Amber at strip club
 
                 u "*Laughs* Yeah... I mean to each their own, as they say."
 
-
                 scene v16s23_17a
                 with dissolve
 
@@ -421,7 +420,6 @@ label v16s23: # 23) Meet Amber at strip club
                     with dissolve
 
                     u "Haha, okay. Thanks for the advice."
-
 
                     scene v16s23_17a
                     with dissolve
@@ -462,6 +460,9 @@ label v16s23: # 23) Meet Amber at strip club
 
         menu:
             "Ask about photos":
+                if v16_amber_mention_bills and v16_amber_mention_laptop:
+                    $ grant_achievement("just_curious_about_you")
+            
                 u "Those photos on your wall..."
 
                 scene v16s23_17a
@@ -536,6 +537,9 @@ label v16s23: # 23) Meet Amber at strip club
                 # -If AmberRS, she opens up about her brother.
                 # -if not AmberRS but MC passes a Amber KCT check, Amber also opens up about her brother
                 if amber.relationship >= Relationship.FWB or kct == "popular":
+                    if amber.relationship < Relationship.FWB:
+                        call screen kct_popup
+                    
                     scene v16s23_17d
                     with dissolve
 
@@ -564,7 +568,7 @@ label v16s23: # 23) Meet Amber at strip club
                     scene v16s23_17a
                     with dissolve
 
-                    am "Yeah. He's the coolest, ha. I don't get to see him as often as I'd like to, but he's safe with my dad and our bitch of a stepmother."
+                    am "Yeah. He's the coolest. I don't get to see him as often as I'd like to, but he's safe with my dad and our bitch of a stepmother."
 
                     scene v16s23_17e
                     with dissolve
@@ -701,10 +705,10 @@ label v16s23: # 23) Meet Amber at strip club
 
                 am "Haha, fuck off. You need to get that wallet out if you want any more out of me."
 
-        # -Regardless-
+                scene v16s23_26a
+                with dissolve
 
-        scene v16s23_26a
-        with dissolve
+        # -Regardless-
 
         am "Come on. Out you go. I'm sure you can find some other girl to strip for you for free."
 
@@ -796,7 +800,7 @@ label v16s23: # 23) Meet Amber at strip club
         scene v16s23_17a
         with dissolve
 
-        am "Of course, it gets annoying. But the money I go home with in my pocket is worth having to fake a smile during their bullshit."
+        am "Of course it gets annoying. But the money I go home with in my pocket is worth having to fake a smile during their bullshit."
 
         menu:
             "Support her":
@@ -827,7 +831,8 @@ label v16s23: # 23) Meet Amber at strip club
                 scene v16s23_17
                 with dissolve
 
-                u "Amber, I know I supported you in the beginning of this, but you shouldn't have to deal with all these creeps just because you make a good amount of money."
+                u "Amber, I know I supported you in the beginning of this..."
+                u "But you shouldn't have to deal with all these creeps just because you make a good amount of money."
 
                 scene v16s23_17e
                 with dissolve
@@ -906,12 +911,12 @@ label v16s23: # 23) Meet Amber at strip club
             scene v16s23_27
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v16s23_28
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
         else:
             scene v16s23_28a # TPP Same angle as 28. MC is leaving the booth toward the entrance, Amber watching him go with a neutral expression.
@@ -939,7 +944,7 @@ label v16s23: # 23) Meet Amber at strip club
     u "(What a dickhead.)"
 
     menu:
-        "Knock him out":
+        "Punch him":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene v16s23_34 # TPP Show MC walking toward the drunk guy, who is zipping his pants. MC looks angry and is yelling [OUTSIDE ENTRANCE]
@@ -949,7 +954,9 @@ label v16s23: # 23) Meet Amber at strip club
 
             scene v16s23_35 # TPP Show MC sucker-punching the drunk guy right in the jaw [OUTSIDE ENTRANCE]
             with dissolve
-            play sound "sounds/facepunch1.mp3" ### play sound
+            
+            play sound "sounds/facepunch1.mp3"
+
             pause 0.75
 
             scene v16s23_36 # FPP MC looking down at drunk guy, who is on the ground rubbing his jaw, mouth closed [OUTSIDE ENTRANCE]
@@ -965,7 +972,7 @@ label v16s23: # 23) Meet Amber at strip club
             scene v16s23_37 # TPP MC walking away from the strip club, a self-satisfied smirk on his face, rubbing the knuckles of the hand he used to punch the drunk guy [OUTSIDE ENTRANCE]
             with dissolve
 
-            pause 0.75
+            pause 1.5
 
         "Give him a break":
             u "(The dude's already drunk out of his mind, I'll let him go this time. Can't promise that no one else won't kick his ass tonight, haha.)"
@@ -973,7 +980,7 @@ label v16s23: # 23) Meet Amber at strip club
             scene v16s23_37a # TPP Same angle as 37. MC walking away from the strip club [OUTSIDE ENTRANCE]
             with dissolve
 
-            pause 0.75
+            pause 1.5
 
     # -regardless of choice-
     jump v16s24 # -Transition to Scene 24-
