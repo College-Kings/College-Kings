@@ -803,9 +803,34 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
     # -Penelope returns to MC, sitting next to him on the couch. They watch as Oscar's eyes gradually close as he falls asleep-
     scene v16s71_12e  # TPP MC(smiling, mouth closed) on one side of the couch, Oscar (sleeping) in the middle with his head on Penelope's (smiling, mouth closed) lap. MC and Penelope are watching Oscar sleep.
-    with dissolve
+    with fade
 
-    jump v16s71b
+    play sound "sounds/vibrate.mp3"
+
+    pause 0.25
+
+    play sound "sounds/vibrate.mp3"
+
+    $ ryan.messnger.newMessage("HOLY SHIT!", force_send =True)
+    $ ryan.messenger.newMessage("DUDE, HAVE YOU SEEN WHAT ELIJAH PUT IN THE FIRST EDITION OF THE SVC TIMES???", force_send=True)
+
+    call screen messenger(ryan.messenger)
+
+    scene v16s71_14e  # TPP MC(concerned, mouth closed) sitting on the couch next to Oscar (off camera or his butt and tail in camera) looking at his phone in his hand. 
+    with fade
+
+    u "(What the hell did Elijah do?)"
+
+    label v16_end_1:
+        if not renpy.loadable("v17/scene1.rpy"):
+            show screen save_now(17)
+            with Fad(1,0,1)
+
+            " "
+        jump v17start
+
+
+    # jump v16s71b
 
     # -Transition to Scene 71b-
 

@@ -509,83 +509,92 @@ label v16s71a_continue:
 
     # -Then Penelope looks over to the door, suddenly in shock-
 
-    scene v16s71a_14d # FPP Same position as v16s71a_14, Penelope(concerned, mouth open) looking towards the door of the Dean's office.
+    scene v16s71a_14d # FPP Same position as v16s71a_14, Penelope(shocked, concenred, mouth open big) looking towards the door of the Dean's office.
     with dissolve
 
     pe "Oh, shit! The door is open!"
 
-    scene v16s71a_14e # TPP Same position as v16s71a_14d, Penelope(concerned, mouth closed if shown) and MC(concerned, mouth open if shown) looking toward the door (don't show the door) of the Dean's office.
-    with dissolve
+    label v16_end_2:
+        show screen(17)
+        with Fade(1,0,1)
 
-    # -MC looks to the door-
+        " "
+    jump v17start
 
-    u "How the fuck did that happen?"
 
-    scene v16s71a_15  # TPP Close on the Dean's office door that is cracked open enough for a dog to fit through it. 
-    with dissolve
 
-    # -The door is open but it's only a small gap. Penelope rushes over to shut the door-
+    # scene v16s71a_14e # TPP Same position as v16s71a_14d, Penelope(concerned, mouth closed if shown) and MC(concerned, mouth open if shown) looking toward the door (don't show the door) of the Dean's office.
+    # with dissolve
 
-    u "I guess it just wasn't latched properly."
+    # # -MC looks to the door-
 
-    scene v16s71a_15a # FPP Penelope (concerned, mouth closed) pushing the Dean's door closed.
-    with dissolve
+    # u "How the fuck did that happen?"
 
-    pause 0.75
+    # scene v16s71a_15  # TPP Close on the Dean's office door that is cracked open enough for a dog to fit through it. 
+    # with dissolve
 
-    scene v16s71a_15b # FPP Penelope (concerned, mouth open) looking at MC.
-    with dissolve
+    # # -The door is open but it's only a small gap. Penelope rushes over to shut the door-
 
-    pe "What if someone was watching us?!"
+    # u "I guess it just wasn't latched properly."
 
-    scene v16s71a_15c # FPP Penelope (concerned, mouth closed) looking at MC.
-    with dissolve
+    # scene v16s71a_15a # FPP Penelope (concerned, mouth closed) pushing the Dean's door closed.
+    # with dissolve
 
-    u "Ah, don't worry. I think we would know if someone was standing there."
+    # pause 0.75
+
+    # scene v16s71a_15b # FPP Penelope (concerned, mouth open) looking at MC.
+    # with dissolve
+
+    # pe "What if someone was watching us?!"
+
+    # scene v16s71a_15c # FPP Penelope (concerned, mouth closed) looking at MC.
+    # with dissolve
+
+    # u "Ah, don't worry. I think we would know if someone was standing there."
     
-    # -Penelope looks from side to side, around the room-
+    # # -Penelope looks from side to side, around the room-
 
-    scene v16s71a_15d # FPP Penelope (concerned, mouth closed) looks left. 
-    with dissolve
+    # scene v16s71a_15d # FPP Penelope (concerned, mouth closed) looks left. 
+    # with dissolve
 
-    pause 0.75
+    # pause 0.75
 
-    scene v16s71a_15e # FPP Penelope (concerned, mouth closed) looks right.
-    with dissolve
+    # scene v16s71a_15e # FPP Penelope (concerned, mouth closed) looks right.
+    # with dissolve
 
-    pause 0.75
+    # pause 0.75
 
-    scene v16s71a_15b
-    with dissolve
+    # scene v16s71a_15b
+    # with dissolve
 
-    pe "Oh, no...  Where's Oscar?!"
+    # pe "Oh, no...  Where's Oscar?!"
     
-    # -They both walk around the room quickly, still naked, looking for Oscar-
+    # # -They both walk around the room quickly, still naked, looking for Oscar-
 
-    scene v16s71a_16 # TPP Wide shot of Penelope and MC(concerned, mouths closed) each on one side of the Dean's office, looking for Oscar (they are still naked-- MC does not have a hard on at this point).
-    with dissolve
+    # scene v16s71a_16 # TPP Wide shot of Penelope and MC(concerned, mouths closed) each on one side of the Dean's office, looking for Oscar (they are still naked-- MC does not have a hard on at this point).
+    # with dissolve
 
-    pause 0.75
+    # pause 0.75
 
-    scene v16s71a_15b
-    with dissolve
+    # scene v16s71a_15b
+    # with dissolve
     
-    pe "Is he behind the couch?"
+    # pe "Is he behind the couch?"
 
-    scene v16s71a_15c
-    with dissolve    
+    # scene v16s71a_15c
+    # with dissolve    
 
-    u "No, he must have gotten out!"
+    # u "No, he must have gotten out!"
 
-    scene v16s71a_15b
-    with dissolve
+    # scene v16s71a_15b
+    # with dissolve
 
-    pe "We need to go find him, [name]. Now!"
+    # pe "We need to go find him, [name]. Now!"
 
-    scene v16s71a_17 # TPP Penelope(concerned, mouth closed, already wearing her skirt), putting on her bra while MC(concerned, mouth closed, already wearing pants) puts on his shirt. Both of them are standing by the Dean's couch.
-    with dissolve
+    # scene v16s71a_17 # TPP Penelope(concerned, mouth closed, already wearing her skirt), putting on her bra while MC(concerned, mouth closed, already wearing pants) puts on his shirt. Both of them are standing by the Dean's couch.
+    # with dissolve
 
-    # -MC and Penelope start getting dressed over by the couch-
+    # # -MC and Penelope start getting dressed over by the couch-
 
-    # -Transition to Scene 71b-
+    # # -Transition to Scene 71b-
 
