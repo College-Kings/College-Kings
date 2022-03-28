@@ -387,7 +387,7 @@ label v16s64:
 
         cl "Umm, don't take this the wrong way, but... Your handwriting looks like chicken scratches. *Giggles*"
 
-        scene v16s64_4o # FPP. Show just Aubrey (slight smile, mouth open, looking at Chloe)
+        scene v16s64_4 # FPP. Show just Aubrey (slight smile, mouth open, looking at Chloe)
         with dissolve
 
         au "Haha, hey! It could be mine."
@@ -414,7 +414,7 @@ label v16s64:
 
         cl "*Laughs* Communal vibrators? Thanks for a laugh, Aubrey!"
 
-        scene v16s64_4o
+        scene v16s64_4
         with dissolve
 
         au "Wha- It's a serious suggestion!"
@@ -463,7 +463,7 @@ label v16s64:
 
     jen "Things are about to get WILD!"
 
-    scene v16s64_4o
+    scene v16s64_4
     with dissolve
 
     au "Yessssss!"
