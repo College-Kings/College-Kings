@@ -100,12 +100,6 @@ label v16s8:
             scene v16s8_4f # FPP. Chloe raises an eyebrow at MC, and a "suspicious expression," mouth is still closed
             with dissolve
 
-            if False: ### looks strange
-                pause 0.75
-
-                scene v16s8_4g # FPP. Chloe gives MC a "don't you dare look," mouth is still closed
-                with dissolve
-
             u "I mean, I can... I've felt... Nevermind."
 
         scene v16s8_3d # TPP. Chloe still looks sad mouth is closed, MC Chloe Random Female and Random Guy 2 look at Random Guy 1 all of their mouths are closed no expressions, Random Guy 1's mouth is open and he has a slight smile
