@@ -20,9 +20,7 @@ label v16s42: # 42) MC changes into normal clothes ###check force send
         scene v16s42_autpost1 ### "Autumn holding Oscar the dog inside the dog shelter, you can see the re-opening decorations in the background, Oscar is making a funny face if possible"
         with dissolve
 
-
-
-    if v16s25a_date_with_aubrey: # TODO: Variable PLACEHOLDER VARIABLE # IF Transitioning from Scene 41 [Checkpoint 1.1]        
+    if v16_aubrey_date: # IF Transitioning from Scene 41 [Checkpoint 1.1]        
         if not joinwolves:
             scene v16s42_1 # TPP Show MC entering his room in fancy clothes (DATE NIGHT CLOTHES s41) [APE ROOM]
             with dissolve
@@ -45,7 +43,7 @@ label v16s42: # 42) MC changes into normal clothes ###check force send
 
     # if (1 & v16s27_mc_baby_duty_night == 1) or (0x10 & v16s27_mc_baby_duty_night == 0x10): # IF on baby duty alone or sharing baby duty 1 = alone_duty_on_Wed, 0x10 = shared_duty_on_Wed
     if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE or v16s27_mc_baby_schedule["wednesday"] == BabyDuty.WITH_PARTNER:
-        if v16s25a_date_with_aubrey: # TODO: PLACEHOLDER VARIABLE
+        if v16_aubrey_date:
             if not joinwolves:
                 scene v16s42_1b # TPP Show MC Taking fancy clothes shirt off [APE ROOM]
                 with dissolve
@@ -106,7 +104,7 @@ label v16s42: # 42) MC changes into normal clothes ###check force send
             jump v16s47
 
     else: # IF partner is on baby duty alone
-        if v16s25a_date_with_aubrey: # TODO: PLACEHOLDER VARIABLE
+        if v16_aubrey_date:
             if not joinwolves:
                 scene v16s42_1b # TPP Show MC Taking fancy clothes shirt off [APE ROOM]
                 with dissolve

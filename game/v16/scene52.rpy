@@ -484,7 +484,7 @@ label v16s52:
                     scene v16s52_aubpost1
                     with dissolve
 
-            elif v16s25a_date_with_aubrey and aubrey.relationship < Relationship.TAMED:
+            elif v16_aubrey_date and aubrey.relationship < Relationship.TAMED:
                 $ aubrey.messenger.newMessage("Sorry, [name]... But I don't want to risk interfering with my brand. Lew's might not like me doing free dog shelter promoting, you know?", force_send=True)
                 $ aubrey.messenger.addReply("Oh, yeah. I get it, that's okay. Thanks")
                 $ aubrey.messenger.newMessage("Good luck")

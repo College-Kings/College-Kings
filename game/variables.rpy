@@ -456,7 +456,7 @@ default v16s20_take_twazzlers = False
 default v16_amber_mention_bills = False
 default v16_amber_mention_laptop = False
 default v16s23_support_amber = False
-default v16s25a_date_with_aubrey = False
+default v16_aubrey_date = False
 default v16s26_lindsey_donation_money = 50 # Track if MC spends any of the money lindsey gives him (can be spend in s32 and s38)
 default v16s27_parent_chloe = False  # True = Chloe, False = Nora
 # default v16s27_mc_baby_duty_night = 0 # 0 = Unselected, 1 = Wednesday_alone, 2 = Thrusday_alone, 4 = Friday_alone, 0x10 = Wednesday_shared, 0x20 = Thursday_shared, 0x40 = Friday_shared
