@@ -278,16 +278,16 @@ screen sex_overlay(continue_label):
         null height 150
 
         if show_sex_overlay:
-            for row in sex_overlay_options:
-                for cell in row:
-                    button:
-                        idle_background image_path + "sex-button-idle.png"
-                        hover_background image_path + "sex-button-hover.png"
-                        action Jump(cell[1])
-                        xysize (366, 191)
-                        xpos -25
+            for option in sex_overlay_options:
+                button:
+                    idle_background image_path + "sex-button-idle.png"
+                    hover_background image_path + "sex-button-hover.png"
+                    focus_mask True
+                    action Jump(option[1])
+                    xysize (366, 191)
+                    xpos -25
 
-                        text cell[0] align (0.5, 0.5)
+                    text option[0] align (0.5, 0.5)
 
     imagebutton:
         idle image_path + "continue-idle.png"
