@@ -135,7 +135,7 @@ label v15s49:
             play sound "sounds/hs.mp3"
 
             scene v15s49_12 # TPP. Show MC charging into Tom and pushing him further from Riley.
-            with dissolve
+            with hpunch
 
             pause 0.75
 
