@@ -256,7 +256,7 @@ label v16s14:
     scene v16s14_11 # FPP. MC on his hands and knees, he looks forward, seeing both Nora and Ms. Rose with their asses sticking out from doing the pose
     with dissolve
 
-    u "(Holyyyyy... We've got the best seat in the house!)"
+    u "(Holyyyyy... This is the best seat in the house!)"
 
     menu:
         "Stare at Nora":
