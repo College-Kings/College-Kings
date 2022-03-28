@@ -411,7 +411,7 @@ label v16s27:
                 "A different name":
                     # -Player gets to type baby name-
 
-                    $ v16_baby_name = renpy.input("What's your baby's name?", default=("Plastic").strip())
+                    $ v16_baby_name = renpy.input("What's your baby's name?", default=("Plastic").strip()) or _("Plastic")
 
                     scene v16s27_8c
                     with dissolve
@@ -494,7 +494,7 @@ label v16s27:
                 "Something else":
                     # -Player gets to type baby name-
 
-                    $ v16_baby_name = renpy.input("What's your baby's name?", default=("Henry").strip())
+                    $ v16_baby_name = renpy.input("What's your baby's name?", default=("Henry").strip()) or _("Henry")
 
                     scene v16s27_9g # FPP. Show just Nora (slight smile, mouth is closed, looking in the air) in a thinking pose sitting in her seat, camera angle is from a seated positon
                     with dissolve
