@@ -31,7 +31,7 @@ label v16s32:
         pause 0.75
 
     # -if AubreyTamed and having date
-    if aubrey.relationship >= Relationship.TAMED and v16s25a_date_with_aubrey: # TODO:Variable
+    if v16_aubrey_date:
         scene v16s32_3 # TPP. Show just Mc looking at his phone, slight smile, mouth is closed, (generic white wall) for the background
         with dissolve
 
