@@ -453,52 +453,52 @@ label v16s46: # 46) Baby night, MC only
 
             u "*Sighs* Finally..."
 
-        if joinwolves:
-            scene v16s46_52 # TPP MC (relieved, mouth closed) placing the baby doll on the chair with the keys next to it [WOLF ROOM]
-        else:
-            scene v16s46_22 # TPP MC (relieved, mouth closed) placing the baby doll on the chair with the keys next to it [APE ROOM]
+    if joinwolves:
+        scene v16s46_52 # TPP MC (relieved, mouth closed) placing the baby doll on the chair with the keys next to it [WOLF ROOM]
+    else:
+        scene v16s46_22 # TPP MC (relieved, mouth closed) placing the baby doll on the chair with the keys next to it [APE ROOM]
+    with dissolve
+
+    pause 0.75
+
+    if not joinwolves:
+        ca "Well done, dad!"
+
+        scene v16s46_14
         with dissolve
 
-        pause 0.75
-    
-        if not joinwolves:
-            ca "Well done, dad!"
+        sa "If I wake up because of that kid one more time tonight, I'm calling child protective services."
 
-            scene v16s46_14
-            with dissolve
+        gr "Wait, does [name] actually have a baby?"
 
-            sa "If I wake up because of that kid one more time tonight, I'm calling child protective services."
+        sa "I'll explain tomorrow."
 
-            gr "Wait, does [name] actually have a baby?"
-
-            sa "I'll explain tomorrow."
-
-            scene v16s46_23 # TPP MC (exhausted, mouth closed) sitting on the edge of the bed with his head in his hands [APE ROOM]
-            with dissolve
-
-            gr "Wha- Cam?"
-
-            ca "Back to bed, kids."
-
-            scene v16s46_14
-            with dissolve
-
-            gr "What the hell is happening around here?"
-
-        if joinwolves:
-            scene v16s46_54 # FPP MC shutting off the light [WOLF ROOM]
-        else:
-            scene v16s46_24 # FPP MC shutting off the light [APE ROOM]
+        scene v16s46_23 # TPP MC (exhausted, mouth closed) sitting on the edge of the bed with his head in his hands [APE ROOM]
         with dissolve
 
-        pause 0.75
+        gr "Wha- Cam?"
 
-        if joinwolves:
-            scene v16s46_55 # TPP MC (eyes closed, mouth open) lays in bed with his arm across his face [WOLF ROOM]
-        else:
-            scene v16s46_25 # TPP MC (eyes closed, mouth open) lays in bed with his arm across his face [APE ROOM]
+        ca "Back to bed, kids."
+
+        scene v16s46_14
         with dissolve
 
-        u "Okay, I don't want any more of that, [v16_baby_name]... Please, let's get some sleep now."
+        gr "What the hell is happening around here?"
+
+    if joinwolves:
+        scene v16s46_54 # FPP MC shutting off the light [WOLF ROOM]
+    else:
+        scene v16s46_24 # FPP MC shutting off the light [APE ROOM]
+    with dissolve
+
+    pause 0.75
+
+    if joinwolves:
+        scene v16s46_55 # TPP MC (eyes closed, mouth open) lays in bed with his arm across his face [WOLF ROOM]
+    else:
+        scene v16s46_25 # TPP MC (eyes closed, mouth open) lays in bed with his arm across his face [APE ROOM]
+    with dissolve
+
+    u "Okay, I don't want any more of that, [v16_baby_name]... Please, let's get some sleep now."
     
     jump v16s50a # -Transition to Scene 50a-
