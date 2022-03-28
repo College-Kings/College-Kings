@@ -722,12 +722,12 @@ label v16s25:
                     "Hang up":
                         $ add_point(KCT.TROUBLEMAKER)
 
-                        play sound "sounds/hangup.mp3"
+                        play sound "sounds/answercall.mp3"
 
                         if joinwolves:
-                            scene v16s25_7
+                            scene v16s25_6
                         else:
-                            scene v16s25_20
+                            scene v16s25_19
                         with dissolve
 
                         pause 0.75
