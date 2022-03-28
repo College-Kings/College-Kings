@@ -1,8 +1,9 @@
 init python:
     class BabyDuty(Enum):
-        ALONE = "Baby Duty Alone"
+        ALONE = "Baby Duty alone"
         WITH_PARTNER = "Baby Duty with Partner"
-        PARTNER_ALONE = "Parter alone Baby Duty"
+        PARTNER_ALONE = "Parter has Baby Duty alone"
+        NULL = ""
 
 
 screen v16s27_baby_schedule():
@@ -57,6 +58,10 @@ style baby_schedule_text is text:
 label v16s27_baby_schedule:
     show screen v16s27_baby_schedule
 
+    $ v16s27_mc_baby_schedule["wednesday"] = BabyDuty.NULL
+    $ v16s27_mc_baby_schedule["thursday"] = BabyDuty.NULL
+    $ v16s27_mc_baby_schedule["friday"] = BabyDuty.NULL
+
     "Which night do you want to share the baby with your Partner?"
 
     menu:
@@ -75,11 +80,26 @@ label v16s27_baby_schedule:
         "Wednesday" if v16s27_mc_baby_schedule["wednesday"] != BabyDuty.WITH_PARTNER:
             $ v16s27_mc_baby_schedule["wednesday"] = BabyDuty.ALONE
 
+            if v16s27_mc_baby_schedule["thursday"] == BabyDuty.WITH_PARTNER:
+                $ v16s27_mc_baby_schedule["friday"] = BabyDuty.PARTNER_ALONE
+            else:
+                $ v16s27_mc_baby_schedule["thursday"] = BabyDuty.PARTNER_ALONE
+
         "Thursday" if v16s27_mc_baby_schedule["thursday"] != BabyDuty.WITH_PARTNER:
             $ v16s27_mc_baby_schedule["thursday"] = BabyDuty.ALONE
+            
+            if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.WITH_PARTNER:
+                $ v16s27_mc_baby_schedule["friday"] = BabyDuty.PARTNER_ALONE
+            else:
+                $ v16s27_mc_baby_schedule["wednesday"] = BabyDuty.PARTNER_ALONE            
 
         "Friday" if v16s27_mc_baby_schedule["friday"] != BabyDuty.WITH_PARTNER:
             $ v16s27_mc_baby_schedule["friday"] = BabyDuty.ALONE
+            
+            if v16s27_mc_baby_schedule["thursday"] == BabyDuty.WITH_PARTNER:
+                $ v16s27_mc_baby_schedule["wednesday"] = BabyDuty.PARTNER_ALONE
+            else:
+                $ v16s27_mc_baby_schedule["thursday"] = BabyDuty.PARTNER_ALONE
 
     pause
 

@@ -351,7 +351,7 @@ label v16s27:
 
         u "(Okay, let's see what's best...)"
 
-        ### TODO: UI SCREEN #!#!#!#!# -The UI pops up, showing the three nights, and MC can choose the baby-duty schedule- #!#!#!#!#
+        call v16s27_baby_schedule
 
         scene v16s27_11b
         with dissolve
