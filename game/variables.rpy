@@ -317,7 +317,6 @@ default v14_date_distraction = False ###APPROACH B1B (v14_concert_distraction = 
 # Animated Bar
 default animated_value_percent = 0
 
-default AmberLoyal = False #????
 default chrissus = 0
 default irisStrikes = 0
 default v13_threesomeending = False
