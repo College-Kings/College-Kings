@@ -470,6 +470,7 @@ label v16s52:
                 $ v16s52_kiwiiPost1.new_comment(imre, "Aw man! I want a puppy!", numberLikes=545, force_send=True)
                 $ v16s52_kiwiiPost1.new_comment(sebastian, "Hmm... A puppy, eh?", numberLikes=961, force_send=True)
                 $ v16s52_kiwiiPost1.new_comment(lauren, "This is so cool of you, Aubrey <3", numberLikes=1070, force_send=True)
+                $ v16s52_aubrey_kiwii_post_for_donations = True
 
             elif v16s25a_date_with_aubrey and aubrey.relationship < Relationship.TAMED:
                 $ aubrey.messenger.newMessage("Sorry, [name]... But I don't want to risk interfering with my brand. Lew's might not like me doing free dog shelter promoting, you know?", force_send=True)
@@ -586,9 +587,9 @@ label v16s52:
             aut "Guess we'll find out."
 
         "Spin sign":
-            $ add_Point(KCT.BRO)
+            $ add_Point(KCT.BRO)            
             scene v16s52_9
-            with dissolve
+            with dissolve            
 
             u "I'll take the sign out for a spin, I guess."
 

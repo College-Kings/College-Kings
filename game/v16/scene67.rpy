@@ -1,7 +1,7 @@
 # SCENE 67: Polly Acoustic Event in Cafeteria
 # Locations: School Cafeteria
-# Characters: POLLY (Outfit: Concert Outfit), LINDSEY (Outfit: 3), MC (Outfit: 2), CROWD (Outfit: Random), KOBE (Outfit: 1), AUTUMN (Outfit: 1), RILEY (Outfit: 3)
-# Time: Evening
+# Characters: POLLY (Outfit: Concert Outfit), LINDSEY (Outfit: 3), MC (Outfit: 2), CROWD (Outfit: Random), KOBE (Outfit: 1), AUTUMN (Outfit: 2), RILEY (Outfit: 3), PENELOPE (Outfit: 2)
+# Time: Thursday Evening
 
 
 label v16s67:
@@ -9,14 +9,14 @@ label v16s67:
     scene v16s67_1 # TPP. The whole room is candlelit as the power outage is still going on. People (no expressions, and mouths open or closed, and looking at renderer's discretion) are sat at the tables. Penelope (no expression, mouth is closed, looking at the stage) is sitting at the front. Everyone is watching as Polly (slight smile, mouth is closed, looking at the crowd) enters the room from another door, carrying an acoustic guitar
     with dissolve
 
-    if # -if MC walked with Lindsey in Scene 66
+    if not v16s12_chloe_planboard_decide_newspaper_cover: # -if MC walked with Lindsey in Scene 66
 
         scene v16s67_2 # TPP. MC and Lindsey (both slight smiles, mouths are closed, looking towards the stage (stage is not shown)) enter the cafeteria and stay standing by the main entrance door to watch for the moment. At least 5 other people (no expressions, mouths open or closed, and looking at the (stage is not shown)) leaning against the wall in the background
         with dissolve
 
         pause 0.75
 
-    if # -if MC walked alone in Scene 66
+    else: # -if MC walked alone in Scene 66
 
         scene v16s67_2a # TPP. same as v16s67_2 just remove Lindsey from the render
         with dissolve
@@ -45,7 +45,7 @@ label v16s67:
 
     polly "And luckily, I always have my trusty acoustic guitar with me wherever I go."
 
-    if # -if MC is with Lindsey but did not go to Polly's hotel room
+    if not v16s12_chloe_planboard_decide_newspaper_cover and v16s28_lindsey_pb_intereview_polly_choice: # -if MC is with Lindsey but did not go to Polly's hotel room
 
         scene v16s67_4 # FPP. Show just Lindsey (slight smile, mouth is open, looking at MC) 
         with dissolve
@@ -60,7 +60,7 @@ label v16s67:
         scene v16s67_2b # TPP. same as v16s67_2 Just MC is standing still and Lindsey is walking away
         with dissolve
 
-    elif # -if MC is with Lindsey and they went to Polly's hotel room
+    elif not v16s12_chloe_planboard_decide_newspaper_cover and not v16s28_lindsey_pb_intereview_polly_choice: # -if MC is with Lindsey and they went to Polly's hotel room
 
         scene v16s67_3
         with dissolve
@@ -72,7 +72,7 @@ label v16s67:
 
         li "Oh, my God! It's happening!"
 
-        if # -if MC and Lindsey went to Polly's hotel room and succeeded
+        if v16s59_polly_endorse_lindsey: # -if MC and Lindsey went to Polly's hotel room and succeeded
 
             scene v16s67_3
             with dissolve
@@ -81,7 +81,7 @@ label v16s67:
 
             polly "If I was a member of the Chicks, she'd have my vote. So, if you're eligible to vote for Lindsey, I suggest you do it."
 
-            # -(LindseyPopularity gains 5)
+            $ set_presidency_percent( v14_lindsey_popularity + 5) # -(LindseyPopularity gains 5)
 
             scene v16s67_4b # FPP. Show just Lindsey (full smile, mouth is open with excitement, looking at MC) 
             with dissolve
@@ -128,7 +128,7 @@ label v16s67:
 
             pause 0.75
 
-        elif # -if MC and Lindsey went to Polly's hotel room and failed
+        else: # -if MC and Lindsey went to Polly's hotel room and failed
 
             scene v16s67_3
             with dissolve
@@ -150,7 +150,7 @@ label v16s67:
 
             pause 0.75
 
-            # (LindseyPopularity loses 3)
+            $ set_presidency_percent (v14_lindsey_popularity -3) # (LindseyPopularity loses 3)
 
             scene v16s67_4e # FPP. Show just Lindsey (fully shocked expression, mouth is open, looking at MC) 
             with dissolve
@@ -278,12 +278,12 @@ label v16s67:
 
         "Keep talking to him":
 
-            scene v16s67_6e # FPP. Show just Kobe (sinister smile, mouth is closed, looking towards the stage (stage is still not shown)) takes out his phone and holds it up to film Polly (Not Shown)
+            scene v16s67_6e # FPP. Show just Kobe (sinister smile, mouth is closed, looking towards the stage (stage is still not shown)) takes out his phone and holds it up to film Polly (off camera)
             with dissolve
 
             pause 0.75
 
-            scene v16s67_6
+            scene v16s67_5a
             with dissolve
 
             polly "*Singing* Then the rain comes again, and I suddenly see..."
@@ -355,7 +355,7 @@ label v16s67:
 
             pause 0.75
 
-# -Regardless-
+    # -Regardless-
 
     scene v16s67_7 # TPP. MC (slight smile, mouth is closed, looking into the crowd) sees two spare seats One is next to Autumn (slight smile, mouth is open, looking at and cheering on Polly) And further away, the other one is next to Riley (slight smile, mouth is open, looking at and cheering on Polly,) Place random characters (all slight smiles, all mouth are opens, looking at and cheering on Polly) in other seats besides the spare seats to fill them up
     with dissolve
@@ -384,7 +384,7 @@ label v16s67:
 
             polly "*Singing* To your heeeart! To your heeeart! Yeah, yeah, yeah..."
 
-            if autumn.relationship.value >= Relationship.GIRLFRIEND.value:  # -if AutumnRS
+            if autumn.relationship == Relationship.KISS:  # -if AutumnRS
 
                 scene v16s67_9a 
                 with dissolve
@@ -412,20 +412,15 @@ label v16s67:
                 menu:
 
                     "Yeah, I am":
-
-                        scene v16s67_9a
-                        with dissolve
-
+                        $ v15s67_mc_remains_interested_autumn_sex = 2
+                        
                         u "Yeah, I'm in if you are."
 
-                        scene v16s67_9b
+                        scene v16s67_9a
                         with dissolve
 
                         aut "Good. I wanted to talk about taking things beyond a kiss..."
-
-                        scene v16s67_9a
-                        with dissolve
-
+                        
                         aut "Let's sort something out soon?"
 
                         scene v16s67_9b
@@ -439,10 +434,8 @@ label v16s67:
                         aut "Great."
 
                     "Not anymore":  # -this takes away AutumnRS, giving the players the option to back out if they want to-
-                        $ autumn.relationship.value == Relationship.FRIEND.value:
-
-                        scene v16s67_9b
-                        with dissolve
+                        $ autumn.relationship = Relationship.TRUST
+                        $ v15s67_mc_remains_interested_autumn_sex = 1
 
                         u "Not anymore...? I think I've changed my mind about being more than friends. I'm sorry."
 
@@ -524,7 +517,7 @@ label v16s67:
 
             u "Apparently, yeah."
 
-            if # -if Aubrey posted about donations in scene 52 ###!!!TRANSCRIBER NOTE###!!! VARIABLE NEEDS TO BE ADDED TO SCENE 52 FOR THIS STATEMENT
+            if v16s52_aubrey_kiwii_post_for_donations: # -if Aubrey posted about donations in scene 52
 
                 scene v16s67_9a
                 with dissolve
@@ -561,7 +554,7 @@ label v16s67:
 
                 aut "*Laughs*"
 
-            else: # -if MC posted about donations or did sign spinning in scene 52
+            elif v16s52_mc_dogshelter_kiwii_post or ( not v16s52_mc_dogshelter_kiwii_post and not v16s52_aubrey_kiwii_post_for_donations): # -if MC posted about donations or did sign spinning in scene 52
 
                 scene v16s67_9a
                 with dissolve
@@ -632,7 +625,7 @@ label v16s67:
 
             polly "*Singing* To your heeeart! To your heeeart! Yeah, yeah, yeah..."
 
-            if # -if Riley blowjob in Scene 3a  ###!!!TRANSCRIBER NOTE###!!! VARIABLE NEEDS TO BE ADDED TO SCENE 3 FOR THIS STATEMENT
+            if "v16_riley_bj" in sceneList: # -if Riley blowjob in Scene 3a  ###!!!TRANSCRIBER NOTE###!!! VARIABLE NEEDS TO BE ADDED TO SCENE 3 FOR THIS STATEMENT
 
                 scene v16s67_13b # FPP. Show just Riley (slight smile, mouth is closed, looking at MC)
                 with dissolve
@@ -654,7 +647,7 @@ label v16s67:
 
                 ri "Keep it in your pants, tiger. Good things come to those who wait. *Chuckles*"
 
-        # -Regardless of Riley blowjob in Scene 3a-
+            # -Regardless of Riley blowjob in Scene 3a-
 
             scene v16s67_10b
             with dissolve
