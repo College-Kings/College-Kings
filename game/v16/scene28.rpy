@@ -61,7 +61,7 @@ label v16s28:
     li "I had some other ideas but I think these are the strongest, especially after hearing what Penelope said earlier."
 
     python:
-        lindsey_board = PlanningBoard("images/v15/planning_boards/lindsey_background.webp", money=lindsey_board.money, style="lindsey_board") ### to be replaced with v16 board
+        lindsey_board = PlanningBoard("images/v16/planning_boards/lindsey_background.webp", money=lindsey_board.money, style="lindsey_board") ### to be replaced with v16 board
 
         lindsey_board.add_approach("Newspaper",
             "Lindsey gets interviewed for the student newspaper",

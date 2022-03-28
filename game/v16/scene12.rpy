@@ -142,7 +142,7 @@ label v16s12:
     u "Okay, show me what you've got."
 
     python:
-        chloe_board = PlanningBoard("images/v15/planning_boards/chloe_background.webp", money=chloe_board.money) ### to be replaced with v16 board
+        chloe_board = PlanningBoard("images/v16/planning_boards/chloe_background.webp", money=chloe_board.money) ### to be replaced with v16 board
 
         chloe_board.add_approach("Newspaper",
             "Decide the cover of the new student newspaper",
