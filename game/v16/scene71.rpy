@@ -3,10 +3,10 @@
 # Characters: PENELOPE (Outfit: 1), MC (Outfit: 5), DEAN (Outfit: 1)
 # Time: Friday Morning
 
-
 label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
     # -Penelope enters first with MC following. The Dean is standing by her desk. Oscar is one side of the room, sitting on a dog bed/comfy blanket. Next to his bed is a bowl of water, and a food bowl (currently empty)-
+    
     scene v16s71_1    # TPP Penelope(smile, mouth closed) walkining into the Dean's office with MC (smile, mouth closed) following behind her. 
     with dissolve
 
@@ -183,7 +183,8 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
     
     # -if MC spent last night at Penelope's
     # This is the same condition used in s68 to branch to s69 (spend night with penelope) s68:206
-    if penelope.relationship == Relationship.LOYAL and 0x20 & v16s27_mc_baby_duty_night != 0x20:
+    # if penelope.relationship == Relationship.LOYAL and 0x20 & v16s27_mc_baby_duty_night != 0x20:
+    if penelope.relationship == Relationship.LOYAL and v16s27_mc_baby_schedule["thursday"] != BabyDuty.WITH_PARTNER:
 
         scene v16s71_6a
         with dissolve
@@ -304,7 +305,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
                 menu:
                     "Kiss her": # -if Kiss her
 
-                        scene v16s71_7d   # TPP MC (smiling, eyes open, mouth closed) standing, leaning over the desk, looking into Penelope's eyes; Penelope(smiling, horny, eyes open, mouth open) with her hands under MCs shirt, looking it MCs eyes.
+                        scene v16s71_7d   # TPP MC (smiling, eyes open, mouth open) standing, leaning over the desk, looking into Penelope's eyes; Penelope(smiling, horny, eyes open, mouth closed) with her hands under MCs shirt, looking it MCs eyes.
                         with dissolve
 
                         u "I guess he can wait..."
@@ -394,10 +395,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
                 with dissolve
 
                 pe "Alright, let's play with some toys instead."
-
-                scene v16s71_
-                with dissolve
-
+                
     # -Regardless of if MC spent last night at Penelope's-
 
     # -MC and Penelope go to look in the basket of dog food and toys-
@@ -426,7 +424,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
     pe "I think that's a yes, haha."
 
-    scene v16s71_3g
+    scene v16s71_3g   # FPP Penelope(smiling, mouth closed) shoulders up looking at MC [location: standing by the basket of dog toys]
     with dissolve
 
     u "Alright, let's throw..."
@@ -506,10 +504,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
             scene v16s71_10f  # FPP Oscar laying down, chewing on the ball.
             with dissolve
 
-            u "That's... Not how you play fetch, bud."
-
-            scene v16s71_
-            with dissolve
+            u "That's... Not how you play fetch, bud."            
 
             # -MC retrieves the ball and throws it again. Oscar just goes to it again, sits down with it and chews at it-
             scene v16s71_10g  # TPP MC's hand reaching down and taking the ball away from Oscar who is laying down.
@@ -572,7 +567,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
     # -A few different shots for passage of time: MC, Penelope and Oscar in different positions around the room, stroking Oscar, sitting down with him on the couch, Penelope takes a selfie with MC and Oscar and posts it on Kiwii
 
     scene v16s71_12   # TPP MC and Penelope(smiling, mouths closed) sitting in the floor petting Oscar (tounge out, happy) laying down.
-    with fase 
+    with fade 
 
     pause 0.75
 
@@ -634,10 +629,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
     with dissolve
 
     u "Wow, they should put that on the can. *Laughs*"
-
-    scene v16s71_
-    with dissolve
-
+    
     # -Penelope smiles wider-
 
     scene v16s71_13d  # FPP Penelope (big Smile, mouth open) holding the open can of dog food in front of MC
@@ -676,7 +668,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
             pause 0.75
 
-            scene v16s71_13g  # FPP Penelope (smiling, mouth open, nose crinkled as if saying "gross") holding an open can of dog food.
+            scene v16s71_13h  # FPP Penelope (smiling, mouth open, nose crinkled as if saying "gross") holding an open can of dog food.
             with dissolve
             
             pe "Oh, ew! I can't believe you just did that! *Laughs*"
@@ -726,10 +718,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
             scene v16s71_13b
             with dissolve
 
-            u "Say no to a dare? I have too much honor for that."
-
-            scene v16s71_
-            with dissolve
+            u "Say no to a dare? I have too much honor for that."            
 
         "Fuck no": # -if Fuck no!
 
@@ -797,7 +786,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
     pause 0.75
 
     # -After eating Oscar goes to his bed and settles down for a nap-
-    scene v16s71_12d  # FPP Oscar curled up sleeping in middle of the couch.
+    scene v16s71_12f  # FPP Oscar curled up sleeping in middle of the couch.
     with dissolve
 
     u "And now it's time for a nap. *Sighs*I wish I could just play, eat, and sleep all day."
