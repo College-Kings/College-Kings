@@ -29,9 +29,9 @@ label v16s25a:
         scene v16s25a_8 # TPP. In Apes room. Show MC sitting up from bed and yawning his arms stretched, MC yawning.
     with dissolve
 
-    pause 0.75
-
     play sound "sounds/vibrate.mp3"
+
+    pause 0.75
 
     if joinwolves:
         scene v16s25a_2 # TPP. In wolves room. Show MC grabbing his phone from off his nightstand, MC neutral face, mouth closed.
@@ -49,7 +49,7 @@ label v16s25a:
 
     $ riley.messenger.newMessage("Guess who got the newspaper job?", force_send=True)
     $ riley.messenger.newMessage("MEEEEEEEEE!", force_send=True)
-    $ riley.messenger.addReply("Haha, congrats!", v16s25a_reply_thankyou) 
+    $ riley.messenger.addReply("Haha, congrats!")
     $ riley.messenger.newMessage("Thank you! :)")
     
     if v16s11_sign_up:
