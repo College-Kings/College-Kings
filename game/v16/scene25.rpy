@@ -224,16 +224,10 @@ label v16s25:
 
                 u "(Yes!)"
 
-                if joinwolves:
-                    scene v16s25_10 # TPP. In the wolves frat room, Show MC. mouth closed, looking at the lock screen on the laptop.
-                else:
-                    scene v16s25_23 # TPP. In the Apes frat room, Show MC looking at the lock screen on the laptop.
+                scene v16s25_11 # TPP. Just the laptop password screen so we can use it for the Apes version too.
                 with dissolve
 
                 u "(Dammit, of course it's locked. Um, let's try...)"
-
-                scene v16s25_11 # TPP. Just the laptop password screen so we can use it for the Apes version too.
-                with dissolve
 
                 menu:
                     "i<3chloe":
@@ -305,6 +299,14 @@ label v16s25:
                         with dissolve
 
                         u "(Haha, no way... I'm in! Are we really that predictable guys?)"
+
+                if joinwolves:
+                    scene v16s25_11c
+                else:
+                    scene v16s25_14c
+                with dissolve
+                
+                pause 0.75
 
                 if joinwolves:
                     scene v16s25_6
