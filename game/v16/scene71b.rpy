@@ -375,7 +375,7 @@ label v16s71b: ### ERROR: 71b) The Dean returns
         pause 0.75
 
         scene v16s71a_8g
-        with dissolve
+        with fade
         
         pause 0.75
 
