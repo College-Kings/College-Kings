@@ -86,7 +86,7 @@ label v16s25:
                 #[End of Checkpoint 1.2. Continue to Checkpoint 2]
 
         #[Checkpoint 2]
-        if v15_emily_sext:
+        if "v15_emily" in sceneList:
             play sound "sounds/vibrate.mp3"
 
             scene v16s25_4
@@ -728,7 +728,7 @@ label v16s25:
                 #[End of Checkpoint 1.2. Continue to Checkpoint 2]
 
         #[Checkpoint 2]
-        if v15_emily_sext:
+        if "v15_emily" in sceneList:
             play sound "sounds/vibrate.mp3"
 
             scene v16s25_17

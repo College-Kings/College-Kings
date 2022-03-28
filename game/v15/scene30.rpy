@@ -93,7 +93,7 @@ label v15s30:
             "Sext Emily":
                 $ add_point(KCT.TROUBLEMAKER)
                 $ add_point(KCT.BRO)
-                $ v15_emily_sext = True
+                $ sceneList.add("v15_emily")
                 
                 if config_censored:
                     call screen censored_popup("v15s30_nsfwSkipLabel1")
