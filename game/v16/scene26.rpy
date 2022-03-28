@@ -324,11 +324,10 @@ label v16s26:
 
         pe "We just hit it off, I don't even know how to explain it. She said we were like long lost sisters or something, haha!"
         
-        if v13_aubrey_concert: # TODO: Variable
-            scene v16s26_5c # FPP. MC looking at Penelope, Penelope looking at Lindesy, Penelope slight smile, mouth closed.
-            with dissolve
+        scene v16s26_5c # FPP. MC looking at Penelope, Penelope looking at Lindesy, Penelope slight smile, mouth closed.
+        with dissolve
 
-            u "(Polly's in town? Huh. I wonder if she'd recognize me?)"
+        u "(Polly's in town? Huh. I wonder if she'd recognize me?)"
 
     scene v16s26_3d
     with dissolve
