@@ -441,7 +441,7 @@ default v16_baby_name = "Baby" # Used to store the player designated name of the
 default v16_wrong_key = True # This does default to True; not a typo. Used for baby menus
 default v16_wintom = False
 default v16_home_riley = False
-default v16_baby_key_attempt = 0 # tracks the total times MC uses a baby key on the baby; used in s87 
+default v16_baby_key_attempts = 0 # tracks the total times MC uses a baby key on the baby; used in s87 
 
 # Chloe Planning Board 
 default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
@@ -484,7 +484,8 @@ default v16s39_food_critic = False
 default v16s44_rubius_park_walk = False
 default v16s48_chloe_throws_baby = False
 default v16s50a_dotw = 0   # 0 = nothing, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday
-default v16s52_mc_dogshelter_kiwii_post = False  
+default v16s52_mc_dogshelter_kiwii_post = False
+default v16s52_aubrey_kiwii_post_for_donations = False # True = Aubrey makes kiwii post to raise donations for dog shelter/ False = Aubrey declines posting to Kiwii
 default v16s55_lindsey_question_set = set() # Possible values: three_positives  , important_quality  , random_kindness
 default v16s55_lindsey_followup_question_set = set() # Possible values: sounds_great or make_suggestion, thatll_do or expand, thats_good or ask_why, more_advice or finish_up
 default v16s57_agree_with_samantha_or_cameron = 0    # 0 = Stay out of it, 1 = Samantha, 2 = Cameron 
@@ -492,6 +493,10 @@ default v16s59_just_knock = False  #  True == just knock on polly's door / False
 default v16s59_polly_endorse_lindsey = False # True == Polly will endorse Lindsey for Pres / False = Polly does not endorse Lindsey for Pres.
 default v16s61_chloe_pb_override_mc_gives_massages = False   # True = Mc says yes to helping chloe give massages as Spa night / False = Mc helps Chloe, but does not give massages.
 default v16s63_mc_wear_facial_mask  = False  # True = MC decides to wear facial mask on MC during s63 / False = MC decides not to wear mask 
+default v16s63a_mc_influence_aubreys_vote = 0  # 0 = Noobdy, 1 = Chloe, 2 = Lindsey (just in case this is used later to help decide the winner of the election Aubrey's vote)
+default v16s63a_mc_choose_keep_convo_friendly = False # True == MC chose not to talk sexy to Lindsey during massage/ False = MC chose Turn up the heat to get Lindsey all hot and bothered out
+default v16s63a_mc_choose_cool_convo = False  # True = MC chose not to take care of Lindsey's sexual needs/ False = MC chose to take care of Lindsey's sexual needs
 default v16s63x_chloe_suggestion_set = set() # Possible values:  "v16s63_compliment", "v16s63b_compliment", "v16s63_breast_reduciton", "v16s63b_breath_mint"
 default v16s64_insulted_chloe = False  # True = Added an insult to suggestion box/ False = did not add insult to suggestion box - MC insults Chloe using suggestion box during Spa night
 default v16s64_confessed_insult = False  # True = Told Truth/ False = Denied it - MC tells the truth when confronted about insults from Spa Night.
+default v15s67_mc_remains_interested_autumn_sex = 0 # 0 = MC did not get asked, 1 = Autumn asked and MC turned her down, 2 = Autumn asked and MC said he was still interested
