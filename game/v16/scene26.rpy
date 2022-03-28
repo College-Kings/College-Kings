@@ -4,6 +4,11 @@
 # Time: Morning
 
 label v16s26:
+    scene v11coc1x
+    with fade
+    
+    pause 0.75
+
     scene v16s26_1 # TPP. Show MC walking down the hallway of SVC, neutral face, mouth closed.
     with dissolve
 

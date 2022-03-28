@@ -164,6 +164,7 @@ label v16s25a:
 
     if aubrey.relationship >= Relationship.TAMED:
         $ v16_aubrey_date = True
+        
         scene v16s25a_5b # TPP. Aubrey in the Chicks house in her room on the phone, slight smile, blushing, mouth open.
         with dissolve
 
@@ -236,7 +237,7 @@ label v16s25a:
 
     u "Let's get this day started, shall we?"
 
-    play sound "sounds/dooropen.mp3"
+    #play sound "sounds/dooropen.mp3"
 
     if joinwolves:
         scene v16s25a_7 # TPP. In wolves room, show MC leaving his room.
