@@ -829,8 +829,3 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
             " "
         jump v17start
 
-
-    # jump v16s71b
-
-    # -Transition to Scene 71b-
-
