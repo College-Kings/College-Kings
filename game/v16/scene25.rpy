@@ -11,7 +11,7 @@ label v16s25:
         scene v16s25_14 # TPP. Show MC entering his Apes Frat Room, slight smile, mouth closed.
     with fade
 
-    pause 0.75
+    pause 1
 
     if joinwolves:
         scene v16s25_1a # TPP. Show MC inside his Wolves Frat Room, closing the door now that he is inside, slight smile, mouth closed.
@@ -19,7 +19,7 @@ label v16s25:
         scene v16s25_14a # TPP. Show MC inside his Apes Frat Room, closing the door now that he is inside, slight smile, mouth closed.
     with dissolve
     
-    pause 0.75
+    pause 1
 
     play sound "sounds/doorclose.mp3"
 
@@ -29,7 +29,7 @@ label v16s25:
         scene v16s25_15 # TPP. Show MC taking off his shirt in the middle of his Apes Frat Room, face obscured by shirt.
     with dissolve
 
-    pause 0.75
+    pause 1
     
     if joinwolves:
         scene v16s25_2a # TPP. In his Wolves Frat Room, Show MC taking off his pants about to just be in his underwear, slight smile, mouth closed.
@@ -37,7 +37,7 @@ label v16s25:
         scene v16s25_15a # TPP. In his Apes Frat Room, Show MC taking off his pants about to just be in his underwear, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1
 
     if joinwolves:
         scene v16s25_3 # TPP. In his Wolves Frat Room, Show MC getting into bed, slight smile, mouth closed.
@@ -45,7 +45,7 @@ label v16s25:
         scene v16s25_16 # TPP. In his Apes Frat Room, Show MC getting into bed, slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1
 
     if joinwolves:
         scene v16s25_4 # TPP. In MC's Wolves Frat Room, Camera looking down from the ceiling as MC looks up at the ceiling where the camera is, *thinking* MC slight smile, mouth closed.
@@ -53,7 +53,7 @@ label v16s25:
         scene v16s25_17 # TPP. In MC's Apes Frat Room, Camera looking down from the ceiling as MC looks up at the ceiling where the camera is, *thinking* MC slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1
 
     if v14_amber_clean: # [Checkpoint 1.1]
         if amber.relationship >= Relationship.FWB:
