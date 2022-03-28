@@ -203,7 +203,7 @@ label v16s68:
     # -Regardless of all that-
 
     # -if PenelopeRS and MC is not on baby duty with partner on Thursday, transition to Scene 69-
-    if penelope.relationship == Relationship.FRIEND and 0x20 & v16s27_mc_baby_duty_night != 0x20:    
+    if penelope.relationship == Relationship.LOYAL and 0x20 & v16s27_mc_baby_duty_night != 0x20:    
 
         jump v16s69
 
