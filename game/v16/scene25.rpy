@@ -4,7 +4,6 @@
 # Time: Night
 
 label v16s25:
-
     if joinwolves:
         scene v16s25_1 # TPP. Show MC entering his Wolves Frat Room, slight smile, mouth closed.
     else:
@@ -269,7 +268,7 @@ label v16s25:
                                 with dissolve
 
                                 menu:
-                                    "boobiez123:":
+                                    "boobiez123":
                                         scene v16s25_11a
                                         with dissolve
 
@@ -301,7 +300,7 @@ label v16s25:
                                 with dissolve
                                 
                                 menu:
-                                    "boobiez123:":
+                                    "boobiez123":
                                         scene v16s25_11a
                                         with dissolve
 
