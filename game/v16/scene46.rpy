@@ -390,66 +390,68 @@ label v16s46: # 46) Baby night, MC only
     u "(Okay, it's time for a diaper change. Which key was it?)"
 
     # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
-    while v16_wrong_key: ### NOT SURE IF THIS IS THE BEST WAY TO IMPLIMENT THIS
-        menu:
-            "Blue":
-                play sound "sounds/babycry.mp3" 
 
-                if joinwolves:
-                    scene v16s46_50 # TPP MC (frustrated expression, mouth closed) using the blue key on the baby doll [WOLF ROOM]
-                else:
-                    scene v16s46_20 # TPP MC (frustrated expression, mouth closed) using the blue key on the baby doll [APE ROOM]
-                with dissolve
+    menu v16_wrong_key_1:
+        "Blue":
+            play sound "sounds/babycry.mp3" 
 
-                baby "*Cries*"
+            if joinwolves:
+                scene v16s46_50 # TPP MC (frustrated expression, mouth closed) using the blue key on the baby doll [WOLF ROOM]
+            else:
+                scene v16s46_20 # TPP MC (frustrated expression, mouth closed) using the blue key on the baby doll [APE ROOM]
+            with dissolve
 
-                if joinwolves:
-                    scene v16s46_49
-                else:
-                    scene v16s46_19
-                with dissolve
+            baby "*Cries*"
 
-                u "(Dammit... Not blue.)"
+            if joinwolves:
+                scene v16s46_49
+            else:
+                scene v16s46_19
+            with dissolve
 
-            "Green":
-                play sound "sounds/babyscream.mp3"
+            u "(Dammit... Not blue.)"
 
-                if joinwolves:
-                    scene v16s46_50a # TPP Same angle as 20, MC (frustrated expression, mouth closed) using the green key on the baby doll [WOLF ROOM]
-                else:
-                    scene v16s46_20a # TPP Same angle as 20, MC (frustrated expression, mouth closed) using the green key on the baby doll [APE ROOM]
-                with dissolve
+            jump v16_wrong_key_1
 
-                baby "*Scream crying*"
+        "Green":
+            play sound "sounds/babyscream.mp3"
 
-                if joinwolves:
-                    scene v16s46_49
-                else:
-                    scene v16s46_19
-                with dissolve
+            if joinwolves:
+                scene v16s46_50a # TPP Same angle as 20, MC (frustrated expression, mouth closed) using the green key on the baby doll [WOLF ROOM]
+            else:
+                scene v16s46_20a # TPP Same angle as 20, MC (frustrated expression, mouth closed) using the green key on the baby doll [APE ROOM]
+            with dissolve
 
-                u "(Ah, for fuck's sake...) Okay, okay! Wrong one, got it. Shhhh..."
+            baby "*Scream crying*"
 
-            "Orange":
-                $ v16_wrong_key = False
+            if joinwolves:
+                scene v16s46_49
+            else:
+                scene v16s46_19
+            with dissolve
 
-                play sound "sounds/babycoo.mp3"
+            u "(Ah, for fuck's sake...) Okay, okay! Wrong one, got it. Shhhh..."
 
-                if joinwolves:
-                    scene v16s46_50b # TPP Same angle as 20, MC (relieved expression, mouth closed) using the orange key on the baby doll [WOLF ROOM]
-                else:
-                    scene v16s46_20b # TPP Same angle as 20, MC (relieved expression, mouth closed) using the orange key on the baby doll [APE ROOM]
-                with dissolve
+            jump v16_wrong_key_1
 
-                baby "*Cooing*"
+        "Orange":
+            play sound "sounds/babycoo.mp3"
 
-                if joinwolves:
-                    scene v16s46_51 # FPP MC holding baby doll up in front of him in both hands [WOLF ROOM]
-                else:
-                    scene v16s46_21 # FPP MC holding baby doll up in front of him in both hands [APE ROOM]
-                with dissolve
+            if joinwolves:
+                scene v16s46_50b # TPP Same angle as 20, MC (relieved expression, mouth closed) using the orange key on the baby doll [WOLF ROOM]
+            else:
+                scene v16s46_20b # TPP Same angle as 20, MC (relieved expression, mouth closed) using the orange key on the baby doll [APE ROOM]
+            with dissolve
 
-                u "*Sighs* Finally..."
+            baby "*Cooing*"
+
+            if joinwolves:
+                scene v16s46_51 # FPP MC holding baby doll up in front of him in both hands [WOLF ROOM]
+            else:
+                scene v16s46_21 # FPP MC holding baby doll up in front of him in both hands [APE ROOM]
+            with dissolve
+
+            u "*Sighs* Finally..."
 
         if joinwolves:
             scene v16s46_52 # TPP MC (relieved, mouth closed) placing the baby doll on the chair with the keys next to it [WOLF ROOM]

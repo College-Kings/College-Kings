@@ -436,7 +436,6 @@ default pb_threesome = False
 
 # 16.0
 default v16_baby_name = "Baby" # Used to store the player designated name of the baby
-default v16_wrong_key = True # This does default to True, not a typo. Used for baby menus
 default v16_wintom = False
 default v16_home_riley = False
 
