@@ -349,27 +349,27 @@ label v16s25:
                 scene v16s25_11e # TPP. Laptop screen, Video chat overlay with Emily, Emily stood back so MC can see her whole body, Emily's robe falls off revealing her naked, Emily slight smile/MC mouth closed, smiling, surprised.
                 with dissolve
 
-                pause 0.75
+                pause
 
                 scene v16s25_27 # TPP. Laptop screen, Video chat overlay with Emily, Emily slight smile, looking at camera, arching her back a little (pushing out chest/boobs) as she turns her body away from the camera)/MC mouth closed, smiling, happy.
                 with dissolve
 
-                pause 0.75
+                pause
 
                 scene v16s25_27a # TPP. Laptop screen, Video chat overlay with Emily, Emily bending over at the hips, pushing her nude ass (a slight view of her pussy is optional at Mozzart's direction) out a little towards the camera, while pulling up the bottoms of lingerie1/MC mouth closed, smiling, surprised.
                 with dissolve
 
-                pause 0.75
+                pause
 
                 scene v16s25_27b # TPP. Laptop screen, Video chat overlay with Emily, Emily slight smile, looking at camera over shoulder, while pulling the strap to her bra of lingerie1 over her shoulder/MC mouth closed, smiling, happy.
                 with dissolve
 
-                pause 0.75
+                pause
 
                 scene v16s25_27c # TPP. Laptop screen, Video chat overlay with Emily, Emily posing sexy for the camera, slight smile, mouth closed//MC mouth closed, smiling, happy.
                 with dissolve
 
-                pause 0.75
+                pause
 
                 scene v16s25_11f # TPP. Laptop screen, Video chat overlay with Emily (lingerie1), Emily close to the camera with one hand on her boob, Emily smirking, mouth open/ MC mouth closed, smiling, happy
                 with dissolve
@@ -455,7 +455,7 @@ label v16s25:
 
                 em "Okay, next!"
 
-                scene v16s25_11q # TPP. Close up of MC laying in bed ,dark, looking at the laptop screen, smiling, enjoying what he sees on the screen. The light from the laptop shines on MC's face.
+                scene v16s25_11q # TPP. Close up of MC laying in bed, dark, looking at the laptop screen, smiling, enjoying what he sees on the screen. The light from the laptop shines on MC's face.
                 with dissolve
 
                 pause 0.75
@@ -463,18 +463,18 @@ label v16s25:
                 scene v16s25_11k # TPP. Laptop Screen, Video chat overlay with Emily, Show Emily reaching off the screen to grab her lingerie2 her boobs right in front of her laptop camera, Emily slight smile, mouth closed/ MC, mouth closed, smiling, happy.
                 with dissolve
 
-                pause 0.75
+                pause
 
                 scene v16s25_11r # TPP. Laptop Screen, Video Chat overlay with Emily, Emily putting on the top of lingerie2 on while winking at MC on the chat, Emily smirking, mouth closed/ MC, mouth closed, smiling, happy.
                 with dissolve
 
-                pause 0.75
+                pause
 
                 scene v16s25_11s # TPP. Laptop Screen, Video Chat Overlay with Emily, Emily standing a little back bent over showing her naked bottom as she pulls up the bottom part of lingerie2, Emily biting her lip/ MC, mouth closed, smiling, happy.
                 with dissolve
 
-                pause 0.75
-
+                pause
+                
                 scene v16s25_11l # TPP. Laptop screen, Video chat overlay With Emily, Emily close to her screen using her arms to push up her boobs, Emily smirking, mouth open/ MC, mouth closed, smiling, happy.
                 with dissolve
 
@@ -580,7 +580,7 @@ label v16s25:
                 scene v16s25_11c
                 with dissolve
 
-                u "Of course, I did."
+                u "Of course I did."
 
                 scene v16s25_11d
                 with dissolve
@@ -620,7 +620,7 @@ label v16s25:
 
                 u "(I'd better get this laptop back before it's missed. Then it's time for sleep!)"
 
-                play sound "sounds/dooropen.mp3"
+                #play sound "sounds/dooropen.mp3"
 
                 if joinwolves:
                     scene v16s25_1d # TPP. In his wolves frat room, MC opening the door to his room with the laptop in his arm, only in his underwear, slight smile, mouth closed.
@@ -638,7 +638,7 @@ label v16s25:
 
                 pause 0.75
 
-                play sound "sounds/doorclose.mp3"
+                #play sound "sounds/doorclose.mp3"
 
                 if joinwolves:
                     scene v16s25_1e # TPP. In his wolves frat room closing the door to his room in just his underwear, slight smile, mouth closed.
