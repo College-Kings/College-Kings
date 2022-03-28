@@ -6,7 +6,7 @@
 
 # NOTE
 # This secne is called multiple times in the story timeline
-# Before making the "jump v15s50a" statement
+# Before making the "jump v16s50a" statement
 # The previous scene must set the v16s50a_dotw variable to the FOLLOWING day of the week
 # Example if the scene that jumps to s50a happens on Wednesday evening
 # then the v16s50a_dotw variable MUST be set to Thursday.
@@ -93,7 +93,7 @@ label v16s50a: ### ERROR: 50a) MC wakes up
             pause 0.75
 
             # -Transition to Scene 51-
-            jump v15s51
+            jump v16s51
 
         ### ERROR: [End of Checkpoint 1.1]
 
@@ -229,7 +229,7 @@ label v16s50a: ### ERROR: 50a) MC wakes up
             pause 0.75
 
             # -Transition to Scene 51-
-            jump v15s51
+            jump v16s51
 
         ### ERROR: [End of Checkpoint 1.1]
 

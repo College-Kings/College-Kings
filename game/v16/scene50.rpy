@@ -237,7 +237,7 @@ label v16s50: ### ERROR: 50) Baby night, Partner only
                 scene v16s50_6a
                 with dissolve
 
-                u "All parents make mistakes occasionally, ha. I'm sure we'll be okay."
+                u "All parents make mistakes occasionally, right? I'm sure we'll be okay."
 
         # -Regardless of color choice-
         scene v16s50_6
@@ -314,7 +314,7 @@ label v16s50: ### ERROR: 50) Baby night, Partner only
         # -event1 Be calm
         # -event2 Be frustrated
 
-            "Be calm": # -if Be calm
+            "Just relax...":
                 scene v16s50_7c # SPLIT MC (worried, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth closed) holding phone with right hand [any Chicks room behind her].
                 with dissolve
 
@@ -348,7 +348,7 @@ label v16s50: ### ERROR: 50) Baby night, Partner only
                 # -Chloe hangs up-
                 play sound "sounds/hangup.mp3"
 
-            "Be frustrated": # -if Be frustrated
+            "Stop yelling, Chloe!":
                 scene v16s50_7e # SPLIT MC (frustrated, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth closed) holding phone with right hand [any Chicks room behind her].
                 with dissolve
                 

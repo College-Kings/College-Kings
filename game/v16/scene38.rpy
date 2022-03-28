@@ -302,7 +302,7 @@ label v16s38:
         scene v16s38_11
         with dissolve
 
-        au "Eh, I'm kind of allergic to bee stings, so it was pretty horrific... *Laughs* I'm so anxious already, ha."
+        au "Eh, I'm kind of allergic to bee stings, so it was pretty horrific... *Laughs* I'm so anxious already..."
 
         scene v16s38_11a
         with dissolve

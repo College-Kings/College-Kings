@@ -488,7 +488,7 @@ label v16s63c_end_foreplay_fr: # -if Mouth / End of Foreplay freeroam
             scene v16s63c_18a
             with dissolve
 
-            u "It's a bit late to worry about it now, ha. I think we're fine. No one knocked."
+            u "It's a bit late to worry about it now, Linds. I think we're fine. No one knocked."
 
             scene v16s63c_18
             with dissolve

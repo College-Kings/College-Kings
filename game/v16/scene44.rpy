@@ -348,7 +348,7 @@ label v16s44:
             scene v16s44_11
             with dissolve
 
-            la "I hope not. I wouldn't have any time left to study, ha."
+            la "I hope not. I wouldn't have any time left to study."
 
             scene v16s44_11a
             with dissolve

@@ -287,7 +287,7 @@ label v16s12:
         cl "Haha, have fun!"
     
     menu:
-        "Be enthusiastic":
+        "Always do!":
             $ add_point(KCT.BOYFRIEND)
             scene v16s12_2b
             with dissolve
@@ -299,7 +299,7 @@ label v16s12:
 
             cl "Haha, I'm so happy you're doing this with me."
 
-        "Be wary":
+        "I'll try...":
             $ add_point(KCT.TROUBLEMAKER)
             scene v16s12_2d
             with dissolve

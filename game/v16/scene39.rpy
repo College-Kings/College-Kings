@@ -1446,7 +1446,7 @@ label v16s39:
                     scene v16s39_5r
                     with dissolve
 
-                    au "What the fuck, [name]? I hated that, ha."
+                    au "What the fuck, [name]? I hated that."
 
                     scene v16s39_5s
                     with dissolve

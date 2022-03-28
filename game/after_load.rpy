@@ -903,6 +903,10 @@ label after_load:
         try:
             if v9_sex_with_riley: sceneList.add("v9_riley")
         except NameError: pass
+        try:
+            if v15_emily_sext: sceneList.add("v15_emily")
+            del v15_emily_sext
+        except NameError: pass
 
 
         # v12 Renpy Fixes:

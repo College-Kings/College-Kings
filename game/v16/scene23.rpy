@@ -675,7 +675,7 @@ label v16s23: # 23) Meet Amber at strip club
         with dissolve
 
         menu:
-            "Be thankful":
+            "Appreciate it":
                 $ add_point(KCT.BOYFRIEND)
 
                 scene v16s23_26 # FPP MC's view standing in front of Amber. Amber has a slight smile, mouth closed [CHECKPOINT C]
@@ -688,7 +688,7 @@ label v16s23: # 23) Meet Amber at strip club
 
                 am "You're most welcome. But next time you're going to pay me, haha."
 
-            "Complain":
+            "Aww, come on...":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene v16s23_26

@@ -42,7 +42,7 @@ label v16s52:
         scene v16s52_6
         with dissolve
 
-        u "(Oh, awesome, [dog_name] got adopted! He looks so happy, ha.)"
+        u "(Oh, awesome, [dog_name] got adopted! He looks so happy now.)"
 
     else:
         scene v16s52_6
