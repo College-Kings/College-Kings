@@ -256,6 +256,12 @@ screen whats_new(dialogue):
 
     button action Hide("whats_new")
 
+    textbutton "Exit":
+        action Hide("whats_new")
+        xpos 50
+        yalign 1.0
+        yoffset -50
+
     on "hide" action SetVariable("persistent.previous_whats_new", dialogue)
 
 style whats_new_text is text
