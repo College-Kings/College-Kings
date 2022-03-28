@@ -1,7 +1,7 @@
 # SCENE 71b: The Dean returns
 # Locations: Dean's Office, Hallway outside Dean's Office
 # Characters: DEAN (Outfit: 1), PENELOPE (Outfit: 1), MC (Outfit: 5)
-# Time: 
+# Time: Friday Morning
 
 
 label v16s71b: ### ERROR: 71b) The Dean returns
@@ -89,7 +89,7 @@ label v16s71b: ### ERROR: 71b) The Dean returns
 
         play sound "sounds/dooropen.mp3"
 
-        scene v16s71a_5a     # TPP Same as v16s71a_5 butPenelope and MC(concerned, mouths closed) both heads turned toward the direction of the Dean's door (OC)
+        scene v16s71a_5a     # TPP Same as v16s71a_5 but Penelope and MC(concerned, mouths closed) both heads turned toward the direction of the Dean's door (OC)
         with dissolve
 
         pause 0.75
@@ -132,9 +132,7 @@ label v16s71b: ### ERROR: 71b) The Dean returns
 
         # -If time runs out before choice is made, MC will Be honest-
 
-            "Lie": # -if Lie
-
-                label v16s71b_honest:
+            "Lie": # -if Lie                
 
                 u "Um, we were just trying to train him to come back to us if he was ever lost."
 
@@ -168,6 +166,8 @@ label v16s71b: ### ERROR: 71b) The Dean returns
                 de "It sounds rather foolish in all honesty. I would've thought that you two are more intelligent than that."                
 
             "Be honest": # -if Be honest
+
+                label v16s71b_honest:
 
                 u "We're sorry, Dean Harrison. We just got distracted and didn't notice that he slipped out."
 
@@ -381,5 +381,19 @@ label v16s71b: ### ERROR: 71b) The Dean returns
 
 # -Regardless-
 
-# -Transition to Scene 72-
-jump v16s72
+# if still dating Ms. Rose, transition to scene 76
+if not v16_ms_rose_breakup:
+
+    jump v16s76
+
+else:
+    if v16s27_mc_baby_schedule["thursday"] == BabyDuty.ALONE:
+        jump v16s46
+
+    elif v16s27_mc_baby_schedule["thursday"] == BabyDuty.WITH_PARTNER:
+        jump v16s47
+
+    elif v16s27_mc_baby_sche["thursday"] == BabyDuty.PARTNER_ALONE:
+        jump v16s42
+
+
