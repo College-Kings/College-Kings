@@ -167,7 +167,7 @@ label v16s27:
         scene v16s27_8b
         with dissolve
 
-        cl "It's possible, but that's a concern for me in the future me."
+        cl "It's possible, but that's a concern for future me."
 
         scene v16s27_8
         with dissolve
