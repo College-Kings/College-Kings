@@ -422,7 +422,7 @@ label v16s16:
 
     u "I don't know if I want to pull your trigger, but..."
 
-    if penelope.relationship >= Relationship.LIKES: ###TODO: Variable
+    if penelope.relationship >= Relationship.LIKES: ### TODO: Variable
         scene v16s16_9c # FPP. MC looking at Penelope (winking, slight smile, mouth open) standing up to the shooting range who is looking at MC
         with dissolve
 

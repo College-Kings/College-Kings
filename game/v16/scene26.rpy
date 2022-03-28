@@ -114,6 +114,7 @@ label v16s26:
     menu:
         "Yeah, it's great":
             $ add_point(KCT.BRO)
+            
             scene v16s26_3a
             with dissolve
 
@@ -121,6 +122,7 @@ label v16s26:
 
         "Yeah, she's great":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v16s26_3a
             with dissolve
 

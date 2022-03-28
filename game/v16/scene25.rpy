@@ -60,7 +60,7 @@ label v16s25:
 
             u "(I never thought Amber would be the type for a serious relationship... Maybe things have changed.)"
 
-        else: ### if Amber Friend
+        else:
             u "(Amber's still thinking about detective stuff... Haha, I think she has a fetish!)"
 
             # [End of Checkpoint 1.1. Continue to Checkpoint 2]
