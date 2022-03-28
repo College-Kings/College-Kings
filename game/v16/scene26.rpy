@@ -272,7 +272,7 @@ label v16s26:
 
     li "How the hell did you make friends with her?"
 
-    if v13_penelope_concert: # TODO: Variable
+    if v13_penelope_concert:
         scene v16s26_3a
         with dissolve
 
