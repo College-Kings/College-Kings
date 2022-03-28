@@ -20,7 +20,7 @@ screen v16s27_baby_schedule():
     ]
 
     frame:
-        background image_path + "schedule-background.png"
+        background image_path + "schedule-background.webp"
         xysize (1732, 973)
         align (0.5, 0.5)
         yoffset -25
@@ -34,7 +34,7 @@ screen v16s27_baby_schedule():
             for row in schedule_grid:
                 for item in row:
                     frame:
-                        background image_path + "frame-background.png"
+                        background image_path + "frame-background.webp"
                         xysize (485, 208)
                         padding (40, 40)
 
@@ -42,7 +42,7 @@ screen v16s27_baby_schedule():
 
             for i in ("wednesday", "thursday", "friday"):
                 frame:
-                    background image_path + "frame-background.png"
+                    background image_path + "frame-background.webp"
                     xysize (485, 208)
                     padding (40, 40)
 

@@ -276,9 +276,9 @@ screen sex_overlay(continue_label):
         spacing -100
 
         imagebutton:
-            idle image_path + "sex-positions-idle.png"
-            hover image_path + "sex-positions-hover.png"
-            selected_idle image_path + "sex-positions-selected.png"
+            idle image_path + "sex-positions-idle.webp"
+            hover image_path + "sex-positions-hover.webp"
+            selected_idle image_path + "sex-positions-selected.webp"
             action ToggleScreenVariable("show_sex_overlay")
 
         null height 150
@@ -286,8 +286,8 @@ screen sex_overlay(continue_label):
         if show_sex_overlay:
             for option in sex_overlay_options:
                 button:
-                    idle_background image_path + "sex-button-idle.png"
-                    hover_background image_path + "sex-button-hover.png"
+                    idle_background image_path + "sex-button-idle.webp"
+                    hover_background image_path + "sex-button-hover.webp"
                     focus_mask True
                     action Jump(option[1])
                     xysize (366, 191)
@@ -296,8 +296,8 @@ screen sex_overlay(continue_label):
                     text option[0] align (0.5, 0.5)
 
     imagebutton:
-        idle image_path + "continue-idle.png"
-        hover image_path + "continue-hover.png"
+        idle image_path + "continue-idle.webp"
+        hover image_path + "continue-hover.webp"
         action Show("confirm", message="Are you sure you want to end the free roam?", yes_action=[Hide("confirm"), Jump(continue_label)])
         xalign 1.0
         xoffset -100
