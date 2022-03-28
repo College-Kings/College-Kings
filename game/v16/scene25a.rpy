@@ -85,10 +85,12 @@ label v16s25a:
         scene v16s25a_11 # TPP. In Apes room. Show MC standing in the middle of his room putting on his shirt for the day, face obscured by the shirt.
     with dissolve
 
-    pause 0.75
-    
     play sound "sounds/vibrate.mp3"
 
+    u "(What now?)"
+
+    play sound "sounds/answercall.mp3"
+ 
     if joinwolves:
         scene v16s25a_4a # TPP. In wolves room. Show MC standing in the middle of his room looking at his phone, slight smile, mouth closed. 
     else:

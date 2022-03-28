@@ -167,7 +167,7 @@ label v16s12:
             
         chloe_board.add_task("Newspaper",
             "Design cover",
-            opinion="\"The final step is to design it the way we want. As long as i looks perfect, we just give the final image to the newspaper team.\"")
+            opinion="\"The final step is to design it the way we want. As long as it looks perfect, we just give the final image to the newspaper team.\"")
 
         chloe_board.add_task("Sparty",
             "Buy items for spa day",
