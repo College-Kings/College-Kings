@@ -515,7 +515,7 @@ label v16s71a_continue:
     pe "Oh, shit! The door is open!"
 
     label v16_end_2:
-        show screen(17)
+        show screen save_now(17)
         with Fade(1,0,1)
 
         " "
