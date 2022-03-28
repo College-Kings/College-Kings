@@ -452,7 +452,6 @@ default v16_lindsey_roomservice = False ##Approach B2A. Show up as yourselves = 
 
 default freeroam15 = set() #Pier v16s15
 default freeroam16 = set() #Amber v16s20
-default v16s1_win_fight_with_tom = False
 default v16s11_sign_up = False
 default v16s20_take_twazzlers = False
 default v16_amber_mention_bills = False

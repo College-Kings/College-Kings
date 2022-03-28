@@ -75,7 +75,7 @@ label v16s3:
 
     pause 0.75
 
-    if v16_wintom: ### Placeholder variable
+    if v16_wintom:
         scene v16s3_5a # FPP. MC's hand taking the icepack from Riley, Riley looking at MC, MC looking at Riley, Riley slight smile, mouth closed.
         with dissolve
 
