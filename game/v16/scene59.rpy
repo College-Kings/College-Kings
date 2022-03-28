@@ -364,7 +364,7 @@ label v16s59:
                 scene v16s59_4o
                 with dissolve
 
-                polly "Haha, it's no problem at all. Just don't make me regret it, ha."
+                polly "Haha, it's no problem at all. Just don't make me regret it."
 
                 scene v16s59_8 # FPP. Show full body image of Lindsey (ROOM SERVICE UNIFORM) (nervous expression, mouth closed, looking at MC), and Polly's BodyGuard (PBG) (VERY STERN Expression, mouth closed, looking down at Lindsey) HUGE bodyguard appears directly behind Lindsey, if possible a panning up image like the chloe after hoco scene showing the size differnece between the body guard and Lindsey
                 with dissolve
@@ -740,7 +740,7 @@ label v16s59:
                 scene v16s59_4z
                 with dissolve
 
-                polly "Oh, ha. Is she? I couldn't tell there for a second."
+                polly "Oh is she? I couldn't tell there for a second."
 
                 scene v16s59_4y
                 with dissolve

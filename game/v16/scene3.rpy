@@ -243,7 +243,7 @@ label v16s3:
                         scene v16s3_5d
                         with dissolve
 
-                        ri "Yeah, people change, I guess. It's just a little confusing, ha."
+                        ri "Yeah, people change, I guess. It's just a little confusing, you know..."
 
                         ri "You think you have a good understanding of someone and what they want, and then..."
 

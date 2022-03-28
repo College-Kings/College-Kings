@@ -237,7 +237,7 @@ label v16s50: ### ERROR: 50) Baby night, Partner only
                 scene v16s50_6a
                 with dissolve
 
-                u "All parents make mistakes occasionally, ha. I'm sure we'll be okay."
+                u "All parents make mistakes occasionally, right? I'm sure we'll be okay."
 
         # -Regardless of color choice-
         scene v16s50_6

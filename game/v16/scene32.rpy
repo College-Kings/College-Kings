@@ -177,7 +177,7 @@ label v16s32:
                 scene v16s32_3
                 with dissolve
 
-                u "(She can find her own way there, ha. She's a tough girl.)"
+                u "(She can find her own way there. She's a tough girl.)"
 
                 scene v16s32_3a
                 with dissolve

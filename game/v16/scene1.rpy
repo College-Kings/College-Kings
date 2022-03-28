@@ -118,7 +118,7 @@ label v16s1_lose:
     scene v16s1_lose_2a
     with dissolve
 
-    u "I'm just going to sleep, ha. Are you going to watch me sleep?"
+    u "I'm just going to sleep. Are you going to watch me sleep?"
 
     scene v16s1_lose_2
     with dissolve
@@ -476,7 +476,7 @@ label v16s1_win:
             scene v16s1_win_3
             with dissolve
 
-            u "Of course. I can't let you walk home alone in the dark, especially if you're not feeling safe, ha."
+            u "Of course. I can't let you walk home alone in the dark, especially if you're not feeling safe."
 
             scene v16s1_win_3b
             with dissolve
