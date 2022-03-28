@@ -74,8 +74,6 @@ label v16s27:
             jump v16s27_choose_chloe_parent
         
         "Parent with Nora":
-            $ v16s27_parent_chloe = False
-
             scene v16s27_9 # FPP. Show just Nora (slight smile, mouth is closed, looking at MC) sitting in her seat, camera angle is from a seated positon
             with dissolve
 
