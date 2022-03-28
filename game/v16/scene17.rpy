@@ -109,7 +109,7 @@ label v16s17: # 17) MC catches up to Imre
     u "(For fuck's sake...)"
 
     menu:
-        "Be brutally honest":
+        "You didn't even like her":
             scene v16s17_4f # FPP Same angle as 4, Imre looking out over the side of the bridge, leaning over the stone rail (if possible), neutral expression, mouth closed
             with dissolve
 
@@ -162,7 +162,7 @@ label v16s17: # 17) MC catches up to Imre
 
             u "*Sighs* (Let's go home.)"
 
-        "Keep him calm":
+        "There's plenty of fish":
             scene v16s17_4f
             with dissolve
 
