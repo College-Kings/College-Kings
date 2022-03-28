@@ -765,32 +765,39 @@ label v16s23: # 23) Meet Amber at strip club
 
         pause 0.75
 
-        scene v16s23_17
-        with dissolve
+        if "v15_amber" in sceneList:
+            scene v16s23_17
+            with dissolve
 
-        u "You know, seeing you like this tonight, I'm starting to get flashbacks to Lauren's party."
+            u "You know, seeing you like this tonight, I'm starting to get flashbacks to Lauren's party."
 
-        scene v16s23_17a
-        with dissolve
+            scene v16s23_17a
+            with dissolve
 
-        am "Haha! I was just helping you out with that list, [name]. It was a one-time deal."
+            am "Haha! I was just helping you out with that list, [name]. It was a one-time deal."
 
-        scene v16s23_17i # FPP Amber looking at MC, smiling while raising one eyebrow, mouth open
-        with dissolve
+            scene v16s23_17i # FPP Amber looking at MC, smiling while raising one eyebrow, mouth open
+            with dissolve
 
-        am "No blowjobs happening in the private booth."
+            am "No blowjobs happening in the private booth."
 
-        scene v16s23_17
-        with dissolve
+            scene v16s23_17
+            with dissolve
 
-        u "Ha, no, I didn't mean-"
+            u "Ha, no, I didn't mean-"
 
-        scene v16s23_17a
-        with dissolve
+            scene v16s23_17a
+            with dissolve
 
-        am "I know what you meant. Don't worry."
+            am "I know what you meant. Don't worry."
 
-        am "But the guys here are always trying to pay me to blow them or fuck them."
+            am "But the guys here are always trying to pay me to blow them or fuck them."
+
+        else:
+            scene v16s23_17a
+            with dissolve
+
+            am "It's hard to manoeuver sometimes with all the guys here always trying to get me to blow them or fuck them."
 
         scene v16s23_17
         with dissolve
