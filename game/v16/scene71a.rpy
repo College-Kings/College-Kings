@@ -39,7 +39,8 @@ label v16s71a: ### ERROR: 71a) Penelope sex scene
     
     # -if MC woke up with Penelope
     # This is the same condition used in s68 to branch to s69 (spend night with penelope) s68:206
-    if penelope.relationship == Relationship.LOYAL and 0x20 & v16s27_mc_baby_duty_night != 0x20:
+    # if penelope.relationship == Relationship.LOYAL and 0x20 & v16s27_mc_baby_duty_night != 0x20: v16s27_mc_baby_schedule["wednesday"] == BabyDuty.WITH_PARTNER
+    if penelope.relationship == Relationship.LOYAL and v16s27_mc_baby_schedule["thursday"] != BabyDuty.WITH_PARTNER: 
 
         scene v16s71a_1d
         with dissolve
@@ -52,9 +53,6 @@ label v16s71a: ### ERROR: 71a) Penelope sex scene
     with dissolve
     
     u "I approve."
-
-    scene v16s71a_
-    with dissolve
 
     # -Penelope sits on the edge of the Dean's desk. They kiss passionately. MC's hand around her throat while they kiss (Penelope is submissive and MC is dominant in this sex scene - Community voted scene)-
     # -MC pulls off Penelope's lingerie and she is now naked. Then MC takes his clothes off-
@@ -145,10 +143,7 @@ label v16s71a_neck:
             pe "I-I do."            
 
             pe "I want you to take control."
-
-            scene v16s71a_
-            with dissolve
-
+            
     # -Return to free roam-
     call screen sex_overlay("v16s71a_continue")
 
@@ -285,7 +280,7 @@ label v16s71a_continue:
     image v16pensex2f = Movie(play="images/v16/scene71a/v16pensex2f.webm", loop=True, image="images/v16/scene71a/v16pensex2Start.webp", start_image="images/v16/scene71a/v16pensex2Start.webp")
  
 
-    scene v16s71a_10  # TPP Penelope(excitedly anxious, horny smiling, mouth closed) looking into MC's eyes laying back on the dean's desk, while MC(smiling, mouth open) stands between her spread legs with his penis positioned to enter her vagina looking into her v15_emily_sext
+    scene v16s71a_10  # TPP Penelope(excitedly anxious, horny smiling, mouth closed) looking into MC's eyes laying back on the dean's desk, while MC(smiling, mouth open) stands between her spread legs with his penis positioned to enter her vagina looking into her eyes
     with dissolve
 
     u "I've been looking forward to this since the day I met you, Penelope."
@@ -293,25 +288,23 @@ label v16s71a_continue:
     scene v16s71a_10a # FPP Penelope(excited, horny, smiling, mouth open) looking into MC eyes, MC's hands around her neck and throat can be seen.
     with dissolve
 
-    u "I've been looking forward to this since the day I met you, Penelope."
+    pe "Ha... Yeah, I've... *Gasps*"    
+
+    pe "I've been waiting for this, too."
     
     # -ANIMATION 1: MC with hand around Penelope's throat, penetrating her while she is lying on her back on the desk-
 
     scene v16pensex # ignore as animation
     with dissolve
     
-    pe "Ha... Yeah, I've... *Gasps*"    
-
-    pe "I've been waiting for this, too."
-
+    pe "And your dick is so fucking... big. *Moans*"
+   
     scene v16pensex2 # ignore as animation
     with dissolve
 
-    pe "And your dick is so fucking... big. *Moans*"
-   
     u "You like how it feels?"
 
-    scene v16pensexf #igore as animation
+    scene v16pensexf # ignore as animation
     with dissolve
 
     pe "Mmhmm."
@@ -388,7 +381,7 @@ label v16s71a_continue:
 
     pe "*Panting* Oh, fuck..."
 
-    scene v16pensdg2
+    scene v16pensdg2 # ignore as animation
     with dissolve
 
     pe "This feels so bad..."
@@ -436,15 +429,16 @@ label v16s71a_continue:
     with dissolve
 
     pe "*Panting* Here, let me finish you off."
+    
+    scene v16s71a_13  # TPP MC (smiling, mouth open) pushing Penelope (smiling, mouth closed) to sit down in the Dean's chair
 
-    scene v16s71a_13  # TPP Penelope(smiling, mouth open) pushing MC (smiling, mouth closed) to sit down on the Dean's desk
     with dissolve
     
     # -MC sits on the Dean's desk-
 
     u "Sit down."
 
-    scene v16s71a_13a # TPP Penelope(smiling, seductive eyes looking up at MC, mouth closed) siting in the Dean's chair (between MC's legs ) while her right hand holds MC's dick, her thumb on the head of MC's dick. MC(smiling, mouth open) looking down at Penelope.
+    scene v16s71a_13a # TPP Penelope(smiling, seductive eyes looking up at MC, mouth open) siting in the Dean's chair (between MC's legs ) while her right hand holds MC's dick, her thumb on the head of MC's dick. MC(smiling, mouth closed) looking down at Penelope.
     with dissolve
 
     pe "Yes sir."
@@ -457,7 +451,7 @@ label v16s71a_continue:
     image v16penbjf = Movie(play="images/v16/scene71a/v16penbjf.webm", loop=True, image="images/v16/scene71a/v16penbjStart.webp", start_image="images/v16/scene71a/v16penbjStart.webp")
     image v16pensdbj2f = Movie(play="images/v16/scene71a/v16penbj2f.webm", loop=True, image="images/v16/scene71a/v16penbj2Start.webp", start_image="images/v16/scene71a/v16penbj2Start.webp")
 
-    scene v16penbj #ignore as animation
+    scene v16penbj # ignore as animation
     with dissolve
 
     u "*Groans* Holy..."
