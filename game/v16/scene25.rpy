@@ -695,7 +695,6 @@ label v16s25:
 
         if v14_amber_clean: # [Checkpoint 1.1]
             if amber.relationship >= Relationship.FWB:
-
                 u "(Is Amber relationship material? Definitely something to think about...)"
 
                 u "(I never thought Amber would be the type for a serious relationship... Maybe things have changed.)"
@@ -706,19 +705,16 @@ label v16s25:
                 # [End of Checkpoint 1.1. Continue to Checkpoint 2]
         else: # [Checkpoint 1.2]
             if amber.relationship >= Relationship.FWB and v16_amber_dance: # TODO: Variable
-
                 u "(Holy shit, I can't get Amber's body out of my mind now...)"
 
                 u "(Maybe being a stripper is her true calling... *Laughs*)"
 
             elif amber.relationship == Relationship.FRIEND and AmberLoyal: #TODO: Variable
-
                 u "(If anyone can handle getting harassed by douchebags every night, it's Amber...)"
 
                 u "(I'm glad she's happy.)"
 
             elif amber.relationship == Relationship.FRIEND and v16_tell_amber_to_quit_stripping: # TODO: Variable #Placeholder: ###shouldn't need to use friend
-
                 u "(I hope Amber doesn't stay pissed at me for too long...)"
 
                 u "(I just... I can't stand by and watch her ruin her life.)"
