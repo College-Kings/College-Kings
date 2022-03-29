@@ -77,7 +77,7 @@ label v16s68:
             scene v16s68_3c # FPP. Show just Penelope (no expression, mouth closed, looking at MC)
             with dissolve
             
-            if v16s27_parent_chloe:
+            if v16_parent_chloe:
                 u "I'm on baby duty tonight with Chloe. I need to go collect it while I'm here."
 
             else: # Nora 
@@ -179,7 +179,7 @@ label v16s68:
             
             pause 0.75
 
-            if v16s27_parent_chloe:
+            if v16_parent_chloe:
                 u "Lucky for you, Chloe is on baby duty tonight."
             
             else: # Nora 
