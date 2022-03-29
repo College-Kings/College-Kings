@@ -102,15 +102,13 @@ label v16s63: # 63) Chloe's Spa Day
 
     pause 0.75
 
-    if v16s12_chloe_planboard_decide_mc_gives_massages or v16s61_chloe_pb_override_mc_gives_massages: # -if MC is Masseuse
-
+    if (not v16_chloe_real_masseuse) or v16s61_chloe_pb_override_mc_gives_massages: # -if MC is Masseuse
         scene v16s63_5a # FPP Same angle as 5. Chloe (slight smile, mouth open) looking at MC
         with dissolve
         
         cl "Girls, our masseuse is here!"
 
     else: # -if MC is Standard help
-
         scene v16s63_5a
         with dissolve
 
@@ -813,8 +811,7 @@ label v16s63: # 63) Chloe's Spa Day
 
     pause 0.75
 
-    if v16s12_chloe_planboard_decide_mc_gives_massages or v16s61_chloe_pb_override_mc_gives_massages: # -if MC is masseuse
-
+    if (not v16_chloe_real_masseuse) or v16s61_chloe_pb_override_mc_gives_massages: # -if MC is masseuse
         scene v16s63_32 # FPP View of all the girls, Aubrey standing, all with slight smiles, looking at MC
         with dissolve
 
@@ -826,7 +823,6 @@ label v16s63: # 63) Chloe's Spa Day
         jen "Haha, we're making no promises."
 
         if v16s63_mc_wear_facial_mask: # -if applied a mask
-
             scene v16s63_33 # TPP Show MC (in facemask, mouth closed) feeling the facemask
             with dissolve
 

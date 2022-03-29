@@ -275,7 +275,7 @@ label v16s52:
 
         pause 0.75
 
-    if v15_autumn_freemug: # TODO: Variable
+    if v15_autumn_freemug:
         scene v16s52_9a
         with dissolve
 

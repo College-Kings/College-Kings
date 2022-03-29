@@ -51,14 +51,11 @@ label v16s65:
 
     u "Funny. I walked right into that one..."
 
-    # The UI pops up for the player to choose the cover design
-    # call UI screen =? UI screen needs to set the v16s12_chloe_planboard_decide_promote_chloe_on_cover variable to True or False 
-    # 
-
-    # -We exit the UI when the player has made their choices-
+    # player already made a subtask choice in s12
+    ### The UI pops up for the player to choose the cover design
+    ### -We exit the UI when the player has made their choices-
     
-    if v16s12_chloe_planboard_decide_promote_chloe_on_cover: # -if MC chose Promote Chloe on the cover
-
+    if v16_chloe_on_cover : # -if MC chose Promote Chloe on the cover
         # -(Photo one: mid-shot of Chloe smiling and waving a "Vote for Chloe flag", wearing a Chicks t-shirt. Photo two: Chloe in a white bikini with white toenails, posing by Jenny's lagoon from v14, hand on hip. Headline one: Great leadership starts with a beautiful smile! Headline two: I'm ready to dive in, I just need your vote!)
 
         scene v16s65_4

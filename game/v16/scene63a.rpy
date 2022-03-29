@@ -46,7 +46,7 @@ label v16s63a: ### ERROR: 63a) Massages
     # -if MC bought Calming citrus in Scene 35, or is not helping Chloe and was invited to help
     # MC is not helping chloe if v16s60_chloe_pb_override_mc_gives_massages is true (it means chloe invited him to help and he decided to give massages)
     
-    if "citrus_oil0" in v16s35_mc_spa_shopping or v16s60_chloe_pb_override_mc_gives_massages:
+    if "citrus_oil" in v16s35_mc_spa_shopping or v16s60_chloe_pb_override_mc_gives_massages:
         
         scene v16s63a_2b # FPP Aubrey(eyes closed, smiling, mouth open) laying on her stomach on the massage table in POSITION A (Only show Aubrey, her boobs against the table and some of her back in the shot).
         with dissolve
@@ -987,7 +987,7 @@ label v16s63a: ### ERROR: 63a) Massages
             
             # -Lindsey opens her eyes-
 
-            if len(mc.girlfriends) > 0: # -if MC also has a GF
+            if len(mc.girlfriends) > 0: ### -if MC also has a GF
 
                 scene v16s63a_21f # TPP MC(smiling, mouth closed) behind and to the side of Lindsey(eyes open, glancing back toward MC, neutral, mouth open) laying on her stomach on the massage table in POSITION /SHOT b resting her chin on her folded arms in front of her.
                 with dissolve
@@ -1024,7 +1024,7 @@ label v16s63a: ### ERROR: 63a) Massages
 
                 li "*Sighs* Anyway."
 
-            elif len(mc.girlfriends) == 0 and lindsey.relationship == Relationship.FWB: # -if no GF and LindseyRS
+            elif len(mc.girlfriends) == 0 and lindsey.relationship == Relationship.FWB: ### -if no GF and LindseyRS
                 scene v16s63a_20
                 with dissolve
 

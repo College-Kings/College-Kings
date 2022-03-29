@@ -121,7 +121,7 @@ label v16s61:
 
         pause 0.75
 
-        if (v14_help_chloe and not v16_chloe_newspaper):
+        if (v14_help_chloe and not v16_chloe_newspaper): # if helping Chloe with spa day
             scene v16s61_6
             with dissolve
 
@@ -134,7 +134,7 @@ label v16s61:
 
             jump v16s62
 
-        elif not v14_help_chloe: # -if not helping Chloe with her campaign
+        elif not v14_help_chloe: # -if not helping Chloe at all
             play sound "sounds/vibrate.mp3"
 
             scene v16s61_7
@@ -315,7 +315,7 @@ label v16s61:
 
             jump v16s62
 
-        else: 
+        else: # if helping Chloe with newspaper
             play sound "sounds/thud.mp3"
 
             scene v16s61_6a # TPP. Show MC fallen asleep his head hitting the book on his desk.
@@ -519,7 +519,7 @@ label v16s61:
 
         pause 0.75
 
-        if (v14_help_chloe and not v16_chloe_newspaper):
+        if (v14_help_chloe and not v16_chloe_newspaper): # if helping Chloe with spa day
             scene v16s61_19
             with dissolve
 
@@ -532,7 +532,7 @@ label v16s61:
 
             jump v16s62
         
-        elif not v14_help_chloe: # -if not helping Chloe with her campaign
+        elif not v14_help_chloe: # -if not helping Chloe at all
             play sound "sounds/vibrate.mp3"
 
             scene v16s61_20
@@ -713,7 +713,7 @@ label v16s61:
 
             jump v16s62
 
-        else: 
+        else: # if helping Chloe with newspaper
             play sound "sounds/thud.mp3"
 
             scene v16s61_19a # TPP. Show MC fallen asleep his head hitting the book on his desk.
