@@ -498,7 +498,6 @@ default v16s64_insulted_chloe = False  # True = Added an insult to suggestion bo
 default v16s64_confessed_insult = False  # True = Told Truth/ False = Denied it - MC tells the truth when confronted about insults from Spa Night.
 default v16s67_mc_remains_interested_autumn_sex = 0 # 0 = MC did not get asked, 1 = Autumn asked and MC turned her down, 2 = Autumn asked and MC said he was still interested
 default v16s78_rose_ask_mc_contnue_dating = 0 # N 0 = Never asked, 1 = MC answered "If we want to", 2 = MC answered "Probably not"
-default v16s63x_chloe_suggestion_set = set() # Possible values:  "v16s63_compliment", "v16s63b_compliment", "v16s63_breast_reduciton", "v16s63b_breath_mint"
 default v16_ms_rose_breakup = False
 default v16s4_dissnaomi = False
 default v16s14_focus = 0
