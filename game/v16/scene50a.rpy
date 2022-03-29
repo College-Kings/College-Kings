@@ -97,7 +97,7 @@ label v16s50a: ### ERROR: 50a) MC wakes up
 
         ### ERROR: [End of Checkpoint 1.1]
 
-        if v16s50a_dotw == 6: # -if Friday morning [Checkpoint 1.2]  Outfit 5 
+        if v16s50a_dotw == 6: # -if Friday morning [Checkpoint 1.2] Outfit 5 
             # -MC's phone vibrates. He looks at his phone to see a text from Penelope-
             scene v16s50a_2
             with dissolve
@@ -233,7 +233,7 @@ label v16s50a: ### ERROR: 50a) MC wakes up
 
         ### ERROR: [End of Checkpoint 1.1]
 
-        if v16s50a_dotw == 6: # -if Friday morning [Checkpoint 1.2]  Outfit 5 
+        if v16s50a_dotw == 6: # -if Friday morning [Checkpoint 1.2] Outfit 5 
             # -MC's phone vibrates. He looks at his phone to see a text from Penelope-
             scene v16s50a_12
             with dissolve
