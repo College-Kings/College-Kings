@@ -452,6 +452,9 @@ default v16_lindsey_roomservice = False ##Approach B2A. Show up as yourselves = 
 
 default freeroam15 = set() #Pier v16s15
 default freeroam16 = set() #Amber v16s20
+default freeroam17 = set() #Aubrey date v16s39
+
+
 default v16s11_sign_up = False
 default v16s20_take_twazzlers = False
 default v16_amber_mention_bills = False
@@ -472,8 +475,7 @@ default v16s34_joke_about_elijah = False
 default v16s34_get_aggressive_with_elijah = False # False = Laugh
 default v16s35_mc_spa_shopping = set() # possible values are "tingle_mint_oil", "citrus_oil", "expensive_mask", "cheap_mask"  - Tracks what MC purchased during spa shopping for chloe
 default v16s38_tippped_driver = False
-default v16s39_fr_aubrey_date_list = set() # Tracks player selection during Aubrey date freeroam
-default v16s39_fr_aubrey_date_points = 0
+default v16_aubrey_date_points = 0
 default v16s39_food_critic = False
 default v16s44_rubius_park_walk = False
 default v16s48_chloe_throws_baby = False
