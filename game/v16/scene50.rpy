@@ -3,9 +3,7 @@
 # Characters: MC (Outfit: Boxers/Underwear), [BABY_NAME] (Outfit: None), NORA (Outfit: 1), CHLOE (Outfit: 3)
 # Time: Wednesday Night
 
-# -reminder that [baby_name] with Nora can be Henry or PlayerChosen and Chloe's can be Plastic or PlayerChosen
-
-label v16s50: ### ERROR: 50) Baby night, Partner only
+label v16s50: # 50) Baby night, Partner only
     play sound "sounds/vibrate.mp3" # -MC's phone vibrates, making him jolt-
 
     if joinwolves:
@@ -43,221 +41,7 @@ label v16s50: ### ERROR: 50) Baby night, Partner only
 
     u "(Oh, shit. Must be about [v16_baby_name]...)"
 
-    if not v16s27_parent_chloe: # -if partner is Nora [Checkpoint 1.1]
-        # -Split-screen with Nora?-
-        scene v16s50_5 # SPLIT MC (worried, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth closed) holding phone with left hand [any Chicks room behind her].
-        with dissolve
-
-        u "Hey, Nora. Everything okay with [v16_baby_name]?"
-
-        play sound "sounds/babycry.mp3"
-
-        scene v16s50_5a # SPLIT MC (worried, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth open) holding phone with left hand [any Chicks room behind her].
-        with dissolve
-
-        baby "*Crying*"
-        
-        no "No, not really! All I want to do is sleep and the baby won't let me..."
-
-        scene v16s50_5
-        with dissolve
-
-        u "You can't make it stop?"
-
-        play sound "sounds/babycry.mp3"
-        
-        baby "*Crying*"
-
-        scene v16s50_5a
-        with dissolve
-
-        no "I'm just too tired right now to remember what key we use for feeding it... I'm so sorry to have woken you up, but- Can you remember?"
-        
-        menu: 
-        # -MC chooses event1, event2 or event3
-        # -event1 Blue (CORRECT)
-        # -event2 Green
-        # -event3 Orange
-            "Blue": # -if Blue
-                scene v16s50_5
-                with dissolve
-
-                u "It's the blue one, I think."
-
-                play sound "sounds/babycry.mp3"
-
-                baby "*Crying*"
-                
-                scene v16s50_5b # SPLIT MC (worried, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth open) holding phone with left hand, looking down [At baby OC in her lap]) [any Chicks room behind her].
-                with dissolve
-
-                no "Blue? Let's see..."
-
-                play sound "sounds/babycoo.mp3"
-
-                scene v16s50_6 # SPLIT MC (slight smile, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (relieved, smiling, mouth open) holding phone with left hand. [any Chicks room behind her].
-                with dissolve
-
-                no "Yes! It stopped crying! Okay, so it's blue for feeding, green for burping, orange for diaper change, right?"
-
-                scene v16s50_6a # SPLIT MC (slight smile, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (relieved, smiling, mouth closed) holding phone with left hand. [any Chicks room behind her].
-                with dissolve
-
-                u "Yeah, think that's right."
-
-                scene v16s50_6 
-                with dissolve
-
-                no "I've got it clear in my head again now, thank you!"
-                
-            "Green": # -if Green
-                scene v16s50_5
-                with dissolve
-
-                u "Green? I think?"
-
-                scene v16s50_5a
-                with dissolve
-
-                no "You think?"
-
-                play sound "sounds/babycry.mp3"
-                
-                baby "*Crying*"
-
-                scene v16s50_5
-                with dissolve
-
-                u "I'm pretty sure."
-
-                scene v16s50_5b
-                with dissolve
-
-                no "Okay, let's see..."
-
-                play sound "sounds/babycry.mp3"
-
-                baby "*Crying*"
-
-                scene v16s50_5a
-                with dissolve
-
-                no "No, it didn't work."
-
-                play sound "sounds/babycry.mp3"
-
-                baby "*Crying*"
-
-                scene v16s50_5b
-                with dissolve
-                
-                no "Maybe it's blue...?"
-
-                play sound "sounds/babycoo.mp3"
-
-                scene v16s50_6
-                with dissolve
-
-                no "Ah ha! There. It stopped."
-                
-                no "Damn, I hope using the wrong key this one time doesn't affect our evaluation too much."
-
-                scene v16s50_6a
-                with dissolve
-
-                u "Hmm, yeah, I don't know how we're being graded."
-
-                scene v16s50_6
-                with dissolve
-
-                no "I think green is for burping, since I'm pretty sure orange is for diaper change."
-
-                scene v16s50_6a
-                with dissolve
-
-                u "Okay, got it. Next time we'll get it right."
-                
-            "Orange": # -if Orange
-                scene v16s50_5
-                with dissolve
-
-                u "Let's go with orange."
-
-                scene v16s50_5a
-                with dissolve
-
-                no "That doesn't sound right."
-
-                scene v16s50_5
-                with dissolve
-
-                u "I'm pretty sure, Nora."
-
-                play sound "sounds/babycry.mp3"
-                
-                baby "*Crying*"
-
-                scene v16s50_5b
-                with dissolve
-
-                no "Okay..."
-
-                play sound "sounds/babycry.mp3"
-
-                baby "*Crying*"
-
-                scene v16s50_5a
-                with dissolve
-
-                no "Nope! I knew that wasn't it, fuck..."
-
-                scene v16s50_5
-                with dissolve
-
-                u "Shit. Sorry."
-
-                play sound "sounds/babycry.mp3"
-
-                baby "*Crying*"
-
-                scene v16s50_5b
-                with dissolve
-
-                no "It must be blue, let's see..."
-
-                play sound "sounds/babycoo.mp3"
-
-                scene v16s50_6
-                with dissolve
-
-                no "It worked! Okay, so... Yeah, I think orange is for diaper change, and green is for burping."
-                
-                no "I hope that didn't affect our evaluation too much."
-
-                scene v16s50_6a
-                with dissolve
-
-                u "All parents make mistakes occasionally, right? I'm sure we'll be okay."
-
-        # -Regardless of color choice-
-        scene v16s50_6
-        with dissolve
-
-        no "Well, thank you, [name]. Sorry for waking you."
-
-        scene v16s50_6a
-        with dissolve
-
-        u "No problem. I need to get used to being woken up, anyway. Dad life."
-
-        scene v16s50_6
-        with dissolve
-
-        no "*Laughs* Right, goodnight dad!"
-
-    ### ERROR: [End of Checkpoint 1.1. Continue to Checkpoint 2]
-
-    else: # -if partner is Chloe [Checkpoint 1.2]
+    if v16_parent_chloe: # -if partner is Chloe
         # -Split-screen with Chloe, she's pissed and tired-
         scene v16s50_7 # SPLIT MC (worried, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth closed) holding phone with left hand [any Chicks room behind her].
         with dissolve
@@ -470,13 +254,223 @@ label v16s50: ### ERROR: 50) Baby night, Partner only
 
                     u "(Jeez... Poor [v16_baby_name]... At least she's not yelling at me anymore.)"
 
-        # -Regardless of response-
+    else: # -if partner is Nora
+        # -Split-screen with Nora?-
+        scene v16s50_5 # SPLIT MC (worried, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth closed) holding phone with left hand [any Chicks room behind her].
+        with dissolve
 
-    ### ERROR: [End of Checkpoint 1.2. Continue to Checkpoint 2]
+        u "Hey, Nora. Everything okay with [v16_baby_name]?"
+
+        play sound "sounds/babycry.mp3"
+
+        scene v16s50_5a # SPLIT MC (worried, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth open) holding phone with left hand [any Chicks room behind her].
+        with dissolve
+
+        baby "*Crying*"
+        
+        no "No, not really! All I want to do is sleep and the baby won't let me..."
+
+        scene v16s50_5
+        with dissolve
+
+        u "You can't make it stop?"
+
+        play sound "sounds/babycry.mp3"
+        
+        baby "*Crying*"
+
+        scene v16s50_5a
+        with dissolve
+
+        no "I'm just too tired right now to remember what key we use for feeding it... I'm so sorry to have woken you up, but- Can you remember?"
+        
+        menu: 
+        # -MC chooses event1, event2 or event3
+        # -event1 Blue (CORRECT)
+        # -event2 Green
+        # -event3 Orange
+            "Blue": # -if Blue
+                scene v16s50_5
+                with dissolve
+
+                u "It's the blue one, I think."
+
+                play sound "sounds/babycry.mp3"
+
+                baby "*Crying*"
+                
+                scene v16s50_5b # SPLIT MC (worried, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth open) holding phone with left hand, looking down [At baby OC in her lap]) [any Chicks room behind her].
+                with dissolve
+
+                no "Blue? Let's see..."
+
+                play sound "sounds/babycoo.mp3"
+
+                scene v16s50_6 # SPLIT MC (slight smile, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (relieved, smiling, mouth open) holding phone with left hand. [any Chicks room behind her].
+                with dissolve
+
+                no "Yes! It stopped crying! Okay, so it's blue for feeding, green for burping, orange for diaper change, right?"
+
+                scene v16s50_6a # SPLIT MC (slight smile, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (relieved, smiling, mouth closed) holding phone with left hand. [any Chicks room behind her].
+                with dissolve
+
+                u "Yeah, think that's right."
+
+                scene v16s50_6 
+                with dissolve
+
+                no "I've got it clear in my head again now, thank you!"
+                
+            "Green": # -if Green
+                scene v16s50_5
+                with dissolve
+
+                u "Green? I think?"
+
+                scene v16s50_5a
+                with dissolve
+
+                no "You think?"
+
+                play sound "sounds/babycry.mp3"
+                
+                baby "*Crying*"
+
+                scene v16s50_5
+                with dissolve
+
+                u "I'm pretty sure."
+
+                scene v16s50_5b
+                with dissolve
+
+                no "Okay, let's see..."
+
+                play sound "sounds/babycry.mp3"
+
+                baby "*Crying*"
+
+                scene v16s50_5a
+                with dissolve
+
+                no "No, it didn't work."
+
+                play sound "sounds/babycry.mp3"
+
+                baby "*Crying*"
+
+                scene v16s50_5b
+                with dissolve
+                
+                no "Maybe it's blue...?"
+
+                play sound "sounds/babycoo.mp3"
+
+                scene v16s50_6
+                with dissolve
+
+                no "Ah ha! There. It stopped."
+                
+                no "Damn, I hope using the wrong key this one time doesn't affect our evaluation too much."
+
+                scene v16s50_6a
+                with dissolve
+
+                u "Hmm, yeah, I don't know how we're being graded."
+
+                scene v16s50_6
+                with dissolve
+
+                no "I think green is for burping, since I'm pretty sure orange is for diaper change."
+
+                scene v16s50_6a
+                with dissolve
+
+                u "Okay, got it. Next time we'll get it right."
+                
+            "Orange": # -if Orange
+                scene v16s50_5
+                with dissolve
+
+                u "Let's go with orange."
+
+                scene v16s50_5a
+                with dissolve
+
+                no "That doesn't sound right."
+
+                scene v16s50_5
+                with dissolve
+
+                u "I'm pretty sure, Nora."
+
+                play sound "sounds/babycry.mp3"
+                
+                baby "*Crying*"
+
+                scene v16s50_5b
+                with dissolve
+
+                no "Okay..."
+
+                play sound "sounds/babycry.mp3"
+
+                baby "*Crying*"
+
+                scene v16s50_5a
+                with dissolve
+
+                no "Nope! I knew that wasn't it, fuck..."
+
+                scene v16s50_5
+                with dissolve
+
+                u "Shit. Sorry."
+
+                play sound "sounds/babycry.mp3"
+
+                baby "*Crying*"
+
+                scene v16s50_5b
+                with dissolve
+
+                no "It must be blue, let's see..."
+
+                play sound "sounds/babycoo.mp3"
+
+                scene v16s50_6
+                with dissolve
+
+                no "It worked! Okay, so... Yeah, I think orange is for diaper change, and green is for burping."
+                
+                no "I hope that didn't affect our evaluation too much."
+
+                scene v16s50_6a
+                with dissolve
+
+                u "All parents make mistakes occasionally, right? I'm sure we'll be okay."
+
+        # -Regardless of color choice-
+        scene v16s50_6
+        with dissolve
+
+        no "Well, thank you, [name]. Sorry for waking you."
+
+        scene v16s50_6a
+        with dissolve
+
+        u "No problem. I need to get used to being woken up, anyway. Dad life."
+
+        scene v16s50_6
+        with dissolve
+
+        no "*Laughs* Right, goodnight dad!"
+
+        # -Regardless of response-
 
     #-Regardless-
 
-    ### ERROR: [Checkpoint 2]
+    # [Checkpoint 2]
 
     # -MC puts the phone down, gets comfy for sleep again-
     if joinwolves:
