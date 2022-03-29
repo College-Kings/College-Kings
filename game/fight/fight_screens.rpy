@@ -164,7 +164,7 @@ screen fight_overview(fight, title):
         align (1.0, 0.5)
         xoffset -100
 
-        use fight_overview_info(opponent, fight.player.profile_picture, is_player=False)
+        use fight_overview_info(opponent, fight.opponent.profile_picture, is_player=False)
 
     hbox:
         xpos 100
