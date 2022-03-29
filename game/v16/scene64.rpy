@@ -116,8 +116,9 @@ label v16s64:
             scene v16s64_6 # TPP. Show MC and Lindsey (both laughing looking at Aubrey), Aubrey (laughing, mouth open, looking at MC) still has puffed out cheeks, and the marshmallow can be slightly seen in her mouth
             with dissolve
 
-    if "v16s63_breast_reduciton" in v16s63x_chloe_suggestion_set or "v16s63b_breath_mint" in v16s63x_chloe_suggestion_set:
-        
+            pause 0.75
+
+    if "v16s63_breast_reduciton" in v16s63x_chloe_suggestion_set or "v16s63b_breath_mint" in v16s63x_chloe_suggestion_set: 
         $ v16s64insulted_chloe = True
 
         scene v16s64_2d # FPP. Show just Chloe (angry expression, mouth open, looking at MC)

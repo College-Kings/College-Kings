@@ -70,4 +70,6 @@ label v16s70:
     scene v16s70_3 # TPP. Penelope (slight smile, mouth is closed) and MC (slight smile, mouth is closed) enter the Dean's office
     with dissolve
 
+    pause 0.75
+
     jump v16s71 # -Transition to Scene 71-

@@ -61,7 +61,7 @@ label v16s81: # 81) MC undresses/changes into normal clothes
 
             jump v16s50 # -Transition to Scene 50-
     
-    else:  # Wolf Dorm room 
+    else: # Wolf Dorm room 
 
         scene v16s81_8 # TPP Show MC entering his room in his fancy homecoming suit [WOLF DORM ROOM]
         with dissolve

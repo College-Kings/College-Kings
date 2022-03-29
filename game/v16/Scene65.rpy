@@ -59,14 +59,14 @@ label v16s65:
 
     # -We exit the UI when the player has made their choices-
     
-    if v16s12_chloe_planboard_decide_promote_chloe_on_cover:  # -if MC chose Promote Chloe on the cover
+    if v16s12_chloe_planboard_decide_promote_chloe_on_cover: # -if MC chose Promote Chloe on the cover
 
         # -(Photo one: mid-shot of Chloe smiling and waving a "Vote for Chloe flag", wearing a Chicks t-shirt. Photo two: Chloe in a white bikini with white toenails, posing by Jenny's lagoon from v14, hand on hip. Headline one: Great leadership starts with a beautiful smile! Headline two: I'm ready to dive in, I just need your vote!)
 
         scene v16s65_4
         with dissolve
 
-        cl "Aw, yay! I was hoping you'd choose that photo, it's my favorite.."
+        cl "Aw, yay! I was hoping you'd choose that photo, it's my favorite..."
 
         scene v16s65_4a
         with dissolve
@@ -106,7 +106,7 @@ label v16s65:
         scene v16s65_4
         with dissolve
 
-        cl "Haha, I'm just joking.... Still though, who wouldn't want to pick up a newspaper with me on the cover?"
+        cl "Haha, I'm just joking... Still though, who wouldn't want to pick up a newspaper with me on the cover?"
 
         scene v16s65_4a
         with dissolve
@@ -290,5 +290,7 @@ label v16s65:
 
     scene v16s65_6 # TPP. Chloe (slight smile, mouth closed) watches MC (slight smile, mouth closed) exit the room.
     with dissolve
+
+    pause 0.75
 
     jump v16s65 # -Transition to Scene 66-

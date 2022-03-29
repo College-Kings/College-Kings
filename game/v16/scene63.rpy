@@ -3,13 +3,11 @@
 # Characters: MC (Outfit: 2), JENNY (Outfit: teal towel), CHLOE (Outfit: pink towel), AUBREY (Outfit: dark red towel), NORA (Outfit: royal blue towel), LINDSEY (Outfit: purple towel)
 # Time: Thursday Evening
 
-
 label v16s63: # 63) Chloe's Spa Day
+    play sound "sounds/knock.mp3"
 
     scene v16s63_1 # TPP Show MC knocking on the Chicks' front door
     with fade
-
-    play sound "sounds/knock.mp3"
 
     pause 0.75
 
@@ -204,7 +202,6 @@ label v16s63: # 63) Chloe's Spa Day
 
     menu:
         "Maybe later":
-
             u "Haha, damn, pouncing on me as soon as I'm through the door, ladies? Maybe later, if you're lucky."
 
             scene v16s63_8d
@@ -217,9 +214,11 @@ label v16s63: # 63) Chloe's Spa Day
 
             cl "Hah, okay, okay... Enough booing our volunteer!"
 
-        "I'm expensive":
-            
+        "I'm expensive": 
             $ add_point(KCT.TROUBLEMAKER)
+
+            scene v16s63_5
+            #with dissolve
 
             u "I hate to break it to you ladies but, I'm expensive. I don't think you can afford this."
 
@@ -744,7 +743,9 @@ label v16s63: # 63) Chloe's Spa Day
             cl "Ugh, Aubrey..."
 
         "Don't mask":
-
+            scene v16s63_28
+            #with dissolve
+        
             u "No, I'm okay. Not a huge fan of chemical burns myself."
 
             scene v16s63_6h

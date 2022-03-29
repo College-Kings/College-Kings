@@ -40,7 +40,7 @@ label v16s14:
     
     else:
         scene v16s14_3a # FPP. Same as v16s14_3, Nora slight smile, mouth open
-        #with dissolve    
+        #with dissolve
         
         no "Can you believe this weather? It's the perfect day for yoga."
 

@@ -1,5 +1,5 @@
 # SCENE 71: Penelope & Mc dog sitting
-# Locations:  Dean's Office
+# Locations: Dean's Office
 # Characters: PENELOPE (Outfit: 1), MC (Outfit: 5), DEAN (Outfit: 1)
 # Time: Friday Morning
 
@@ -12,12 +12,12 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
     pause 0.75
 
-    scene v16s71_1a   # FPP Dean (smile, mouth closed) standing in front of her desk looking at the other side of the room (not at MC or Penelope).
+    scene v16s71_1a # FPP Dean (smile, mouth closed) standing in front of her desk looking at the other side of the room (not at MC or Penelope).
     with dissolve
 
     pause 0.75 
 
-    scene v16s71_1b   # FPP Oscar (the dog) on the other side of the room, sitting on his dog bed/blanket. Next to him is a bowl of water and an empty food bowl.
+    scene v16s71_1b # FPP Oscar (the dog) on the other side of the room, sitting on his dog bed/blanket. Next to him is a bowl of water and an empty food bowl.
     with dissolve
 
     pause 0.75
@@ -27,12 +27,12 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
     pe "Good morning, Dean Harrison."
 
-    scene v16s71_2b   # FPP Penelope (smiling, mouth closed) looking at Dean (smiling. mouth closed) who is looking at MC.
+    scene v16s71_2b # FPP Penelope (smiling, mouth closed) looking at Dean (smiling. mouth closed) who is looking at MC.
     with dissolve
 
     u "Hi, Dean Harrison."
 
-    scene v16s71_2a   # FPP Penelope(smiling, mouth closed) looking at Dean (smiling. mouth open) who is looking at Penelope.
+    scene v16s71_2a # FPP Penelope(smiling, mouth closed) looking at Dean (smiling. mouth open) who is looking at Penelope.
     with dissolve
 
     de "Good morning. I appreciate you being on time."
@@ -49,7 +49,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
     
     # -On the coffee table is a basket full of dog food and toys -
     scene v16s71_3    # TPP Close up of a basket full of various dog toys sitting somewhere in the Dean's office relatively close to Oscar.
-    with dissolve    
+    with dissolve
 
     de "I need to leave for my meeting now, so."
 
@@ -82,7 +82,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
     # -The Dean bends down to stroke Oscar; the dean only smiles when interacting with Oscar-
 
-    scene v16s71_3a   # FPP Dean (smiling, mouth open) bends down and pets Oscar's head (still sitting on his bed/blanket). 
+    scene v16s71_3a # FPP Dean (smiling, mouth open) bends down and pets Oscar's head (still sitting on his bed/blanket). 
     with dissolve
 
     de "Okay, Oscar. Be a good boy for Penelope and I'll give you an extra sausage for dinner."
@@ -94,9 +94,11 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
     scene v16s71_4    # FPP The Dean exiting through her office door (back to camera). 
     with dissolve
 
+    pause 0.75
+
     # -Penelope strokes Oscar-
 
-    scene v16s71_3b   # FPP Penelope (smiling, mouth open) petting Oscar's head (still setting on his bed/blanket). 
+    scene v16s71_3b # FPP Penelope (smiling, mouth open) petting Oscar's head (still setting on his bed/blanket). 
     with dissolve
 
     pe "Hello, Oscar. Pleased to meet you."
@@ -107,17 +109,17 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
     pause 0.75
 
-    scene v16s71_5a   # FPP Penelope (smiling, mouth closed) walking around the desk toward the Dean's chair
+    scene v16s71_5a # FPP Penelope (smiling, mouth closed) walking around the desk toward the Dean's chair
     with dissolve
 
     pause 0.75
 
-    scene v16s71_5b   # FPP Penelope (smiling, mouth closed) sitting in the Dean's chair looking at MC (OC is standing in front of the desk)
+    scene v16s71_5b # FPP Penelope (smiling, mouth closed) sitting in the Dean's chair looking at MC (OC is standing in front of the desk)
     with dissolve
 
     u "*Laughs* Comfortable?"
 
-    scene v16s71_5c   # FPP Penelope (smiling, mouth open) sitting in the Dean's chair looking at Mc (OC is standing in front of the desk)
+    scene v16s71_5c # FPP Penelope (smiling, mouth open) sitting in the Dean's chair looking at Mc (OC is standing in front of the desk)
     with dissolve
 
     pe "Yeah, I could get used to this!"
@@ -159,14 +161,14 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
     u "So, how did you get roped into this anyway?"
 
-    scene v16s71_6a   # FPP Penelope (smiling, mouth open) sitting in the Dean's chair looking at MC (OC is sitting in front of the desk)
+    scene v16s71_6a # FPP Penelope (smiling, mouth open) sitting in the Dean's chair looking at MC (OC is sitting in front of the desk)
     with dissolve
 
     pe "Well, I ran into her when she was coming in one day, and she had Oscar."
     
     pe "She noticed that he didn't hate me, I guess, and asked if I could stop by sometimes to check on him."
 
-    scene v16s71_6b   # FPP Penelope (smiling, mouth closed) sitting in the Dean's chair looking at MC (OC is standing in front of the desk)
+    scene v16s71_6b # FPP Penelope (smiling, mouth closed) sitting in the Dean's chair looking at MC (OC is standing in front of the desk)
     with dissolve
 
     u "And you said yes?"
@@ -254,6 +256,8 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
                 scene v16s71_7    # TPP MC (smiling, eyes closed) standing, leaning over the desk; Penelope (smiling, eyes closed) leaning over the desk kissing. 
                 with dissolve
 
+                pause 0.75
+
                 # -Oscar gets up and walks around the room, restless-
 
                 scene v16s71_8    # TPP Oscar, in front of his bed area, walking from the left to the right of the screen.
@@ -261,7 +265,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
                 pause 0.75  
 
-                scene v16s71_8a   # TPP Oscar, in front of his bed area, walking from the right to the left of hte screen.  
+                scene v16s71_8a # TPP Oscar, in front of his bed area, walking from the right to the left of hte screen.
                 with dissolve
 
                 pause 0.75 
@@ -276,25 +280,25 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
                 pause 0.75
 
-                scene v16s71_8b   # TPP Oscar( toungue out slightly), sitting IN FRONT of his bed looking off camera (in the direction of MC and Penelope)
+                scene v16s71_8b # TPP Oscar( toungue out slightly), sitting IN FRONT of his bed looking off camera (in the direction of MC and Penelope)
                 with dissolve
 
                 pause 0.75
 
                 # -mc looks at Oscar but Penelope is still kissing his neck
-                scene v16s71_7a   # TPP MC (neutral, eyes open, mouth open) standing, leaning over the desk, head turned looking at Oscar (off camera); Penelope(smiling, eyes closed) leaning over, kissing MC's neck.
+                scene v16s71_7a # TPP MC (neutral, eyes open, mouth open) standing, leaning over the desk, head turned looking at Oscar (off camera); Penelope(smiling, eyes closed) leaning over, kissing MC's neck.
                 with dissolve
                 
                 u "I think Oscar wants attention..."
 
                 # -Penelope starts slipping her hands under MC's clothing
 
-                scene v16s71_7b   # TPP MC (neutral, eyes open, mouth open) standing, leaning over the desk, head turned looking at Oscar (off camera); Penelope (smiling, eyes open, mouth closed) with her hands under MCs shirt looking at MC).
+                scene v16s71_7b # TPP MC (neutral, eyes open, mouth open) standing, leaning over the desk, head turned looking at Oscar (off camera); Penelope (smiling, eyes open, mouth closed) with her hands under MCs shirt looking at MC).
                 with dissolve
                 
                 u "Should we play with him a little?"
 
-                scene v16s71_7c   # TPP MC (neutral, eyes open, mouth closed) standing, leaning over the desk, head turned looking at Oscar (off camera); Penelope(smiling, horny, eyes open, mouth open) with her hands under MCs shirt looking at MC.
+                scene v16s71_7c # TPP MC (neutral, eyes open, mouth closed) standing, leaning over the desk, head turned looking at Oscar (off camera); Penelope(smiling, horny, eyes open, mouth open) with her hands under MCs shirt looking at MC.
                 with dissolve
 
                 pe "*Panting* I think you should kiss me again."
@@ -305,7 +309,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
                 menu:
                     "Kiss her": # -if Kiss her
 
-                        scene v16s71_7d   # TPP MC (smiling, eyes open, mouth open) standing, leaning over the desk, looking into Penelope's eyes; Penelope(smiling, horny, eyes open, mouth closed) with her hands under MCs shirt, looking it MCs eyes.
+                        scene v16s71_7d # TPP MC (smiling, eyes open, mouth open) standing, leaning over the desk, looking into Penelope's eyes; Penelope(smiling, horny, eyes open, mouth closed) with her hands under MCs shirt, looking it MCs eyes.
                         with dissolve
 
                         u "I guess he can wait..."
@@ -317,8 +321,10 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
                         pause 0.75
 
-                        scene v16s71_9a   # TPP MC(eyes closed) standing, leaning down towards Penelope(eyes closed) looking upward toward MC, kissing passionately with a little bit of tongue showing.
+                        scene v16s71_9a # TPP MC(eyes closed) standing, leaning down towards Penelope(eyes closed) looking upward toward MC, kissing passionately with a little bit of tongue showing.
                         with dissolve
+
+                        pause 0.75
 
                         # -Transition to Scene 71a-
                         jump v16s71a
@@ -342,7 +348,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
                         pause 0.75
 
                         # -penelope stops kissing mc and get serious again
-                        scene v16s71_7e   # TPP MC (neutral, eyes open, mouth closed) standing, leaning over the desk, head turned looking at Oscar (off camera); Penelope(disappointed, eyes open, mouth Open) with her hands back to herself.
+                        scene v16s71_7e # TPP MC (neutral, eyes open, mouth closed) standing, leaning over the desk, head turned looking at Oscar (off camera); Penelope(disappointed, eyes open, mouth Open) with her hands back to herself.
                         with dissolve
                         
                         pe "*Sighs* You're right."
@@ -379,14 +385,14 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
                 pe "That's part of the f-"
 
-                scene v16s71_6c   # FPP Penelope (disappointed, mouth open) sitting in the Dean's chair looking at MC (OC is sitting in front of the desk)
+                scene v16s71_6c # FPP Penelope (disappointed, mouth open) sitting in the Dean's chair looking at MC (OC is sitting in front of the desk)
                 with dissolve
 
                 pe "*Sighs* Okay... I guess you're right."                
 
                 pe "She'd murder us."
 
-                scene v16s71_6d   # FPP Penelope (neutral, mouth closed) sitting in the Dean's chair looking at MC (OC is standing in front of the desk)
+                scene v16s71_6d # FPP Penelope (neutral, mouth closed) sitting in the Dean's chair looking at MC (OC is standing in front of the desk)
                 with dissolve
 
                 u "Instantly. And we'd both be expelled."
@@ -404,27 +410,27 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
     pe "Look at all the things she bought for him. He's spoiled already!"
 
-    scene v16s71_3c   # TPP MC(smiling, mouth open) and Penelope(smiling, mouth closed) standing by the basket of toys, looking at Oscar(neutral) sitting in front of his bed. 
+    scene v16s71_3c # TPP MC(smiling, mouth open) and Penelope(smiling, mouth closed) standing by the basket of toys, looking at Oscar(neutral) sitting in front of his bed. 
     with dissolve
 
     u "Hey, Oscar! Wanna play fetch?"
 
-    scene v16s71_3d   # TPP MC(smiling, mouth closed) and Penelope(smiling, mouth closed) standing by the basket of toys, watching Oscar(excited, smiling) jump in the air in front of them.
+    scene v16s71_3d # TPP MC(smiling, mouth closed) and Penelope(smiling, mouth closed) standing by the basket of toys, watching Oscar(excited, smiling) jump in the air in front of them.
     with dissolve
 
     pause 0.75
 
-    scene v16s71_3e   # TPP MC(smiling, mouth closed) and Penelope(smiling, mouth closed) standing by the basket of toys, watching Oscar(excited, smiling) sit politely in front of them.
+    scene v16s71_3e # TPP MC(smiling, mouth closed) and Penelope(smiling, mouth closed) standing by the basket of toys, watching Oscar(excited, smiling) sit politely in front of them.
     with dissolve
     
     pause 0.75
 
-    scene v16s71_3f   # FPP Penelope(smiling, mouth open) shoulders up looking at MC [location: standing by the basket of dog toys]
+    scene v16s71_3f # FPP Penelope(smiling, mouth open) shoulders up looking at MC [location: standing by the basket of dog toys]
     with dissolve
 
     pe "I think that's a yes, haha."
 
-    scene v16s71_3g   # FPP Penelope(smiling, mouth closed) shoulders up looking at MC [location: standing by the basket of dog toys]
+    scene v16s71_3g # FPP Penelope(smiling, mouth closed) shoulders up looking at MC [location: standing by the basket of dog toys]
     with dissolve
 
     u "Alright, let's throw..."
@@ -432,11 +438,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
     scene v16s71_3
     with dissolve
 
-    # -MC chooses event1 or event2
-    # -event1 Squeaky toy
-    # -event2 Tennis ball
     menu:
-
         "Squeaky toy": # -if Squeaky toy
 
             # -MC throws a squeaky toy (an animal like a squirrel, if possible). Oscar pounces on it. He bites into it and throws it around, tearing the toy into pieces. MC and Penelope are a bit shocked-
@@ -445,22 +447,22 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
             
             pause 0.75
 
-            scene v16s71_10a  # FPP Oscar running inside the Dean's office.
+            scene v16s71_10a # FPP Oscar running inside the Dean's office.
             with dissolve
 
             pause 0.75
 
-            scene v16s71_10b  # FPP Oscar poucning on the squeaky took that sits on the floor.
+            scene v16s71_10b # FPP Oscar poucning on the squeaky took that sits on the floor.
             with dissolve
 
             pause 0.75
 
-            scene v16s71_10c  # FPP Oscar laying down, chewing on the body of the sqeaky toy while the head and a (leg or arm) is dismembered on the floor a few centimeters away).
+            scene v16s71_10c # FPP Oscar laying down, chewing on the body of the sqeaky toy while the head and a (leg or arm) is dismembered on the floor a few centimeters away).
             with dissolve
 
             pause 0.75
             
-            scene v16s71_10d  # TPP Close on MC and Penelope( shocked, mouth closed) waist up shot.
+            scene v16s71_10d # TPP Close on MC and Penelope( shocked, mouth closed) waist up shot.
             with dissolve
             
             pause 0.75
@@ -491,7 +493,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
         "Ball": # -if Tennis ball
 
             # -MC throws the tennis ball (can be any color). Oscar runs to it, then sits down with it, starts chewing the ball-
-            scene v16s71_10e   # TPP MC and Penelope (smiling, mouth closed) stand by the basket of toys while MC throws a ball (Oscar is off camera).
+            scene v16s71_10e # TPP MC and Penelope (smiling, mouth closed) stand by the basket of toys while MC throws a ball (Oscar is off camera).
             with dissolve
 
             pause 0.75
@@ -501,13 +503,13 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
             pause 0.75
 
-            scene v16s71_10f  # FPP Oscar laying down, chewing on the ball.
+            scene v16s71_10f # FPP Oscar laying down, chewing on the ball.
             with dissolve
 
             u "That's... Not how you play fetch, bud."            
 
             # -MC retrieves the ball and throws it again. Oscar just goes to it again, sits down with it and chews at it-
-            scene v16s71_10g  # TPP MC's hand reaching down and taking the ball away from Oscar who is laying down.
+            scene v16s71_10g # TPP MC's hand reaching down and taking the ball away from Oscar who is laying down.
             with dissolve
 
             pause 0.75
@@ -571,27 +573,27 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
     pause 0.75
 
-    scene v16s71_12a  # TPP Oscar sitting, licking Penelope's (eye closed, mouth closed, happy) cheek as she turns her head away from him. MC watching (smiling, mouth closed).
+    scene v16s71_12a # TPP Oscar sitting, licking Penelope's (eye closed, mouth closed, happy) cheek as she turns her head away from him. MC watching (smiling, mouth closed).
     with fade
 
     pause 0.75
 
-    scene v16s71_12b  # TPP Penelope(smiling, mouth closed) pointing at MC(smiling, mouth closed) and Oscar (both in downward dog position, staring at each other)
+    scene v16s71_12b # TPP Penelope(smiling, mouth closed) pointing at MC(smiling, mouth closed) and Oscar (both in downward dog position, staring at each other)
     with fade
 
     pause 0.75
 
-    scene v16s71_12c  # TPP Penelope(smiling, mouth closed) sitting on the couch with Oscar laying next to her, resting his head on her lap.
+    scene v16s71_12c # TPP Penelope(smiling, mouth closed) sitting on the couch with Oscar laying next to her, resting his head on her lap.
     with fade
     
     pause 0.75
 
-    scene v16s71_12d  # TPP Penelope(smiling, mouth closed) sitting on the couch taking a selfie with Oscar sitting next to her.
+    scene v16s71_12d # TPP Penelope(smiling, mouth closed) sitting on the couch taking a selfie with Oscar sitting next to her.
     with fade
 
     pause 0.75
 
-    #! v16s71_kiwii_post1 Description=Penelope selfie with mc and oscar  |  (PENELOPE KIWII POST? Autumn can comment)-
+    #! v16s71_kiwii_post1 Description=Penelope selfie with mc and oscar | (PENELOPE KIWII POST? Autumn can comment)-
 
     $ v16s71_kiwii_post1 = KiwiiPost(penelope, "v16/v16s71_kiwii_post1.webp", "Having a fun morning with two stinky boys, hehe!", mentions=MC, numberLikes=213)
     $ kiwii_post.new_comment(autumn, "OMG! Oscar! He looks so happy <3", numberLikes=45, force_send=True)
@@ -610,17 +612,17 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
     pe "And on today's menu, we have some delicious beef stew!"
 
-    scene v16s71_13a  # FPP Penelope (smiling, mouth open) smelling the open can of dog food.
+    scene v16s71_13a # FPP Penelope (smiling, mouth open) smelling the open can of dog food.
     with dissolve
 
     pe "Hmm. It smells pretty good, actually."
 
-    scene v16s71_13b  # FPP Penelope (smiling, mouth closed) holding an open can of dog food.
+    scene v16s71_13b # FPP Penelope (smiling, mouth closed) holding an open can of dog food.
     with dissolve
 
     u "Gonna have a taste?"
 
-    scene v16s71_13c  # FPP Penelope (smiling, mouth open) holding an open can of dog food.
+    scene v16s71_13c # FPP Penelope (smiling, mouth open) holding an open can of dog food.
     with dissolve
 
     pe "Haha, no... But if I was starving and I had to eat dog food, I'd go with this brand."
@@ -632,12 +634,12 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
     
     # -Penelope smiles wider-
 
-    scene v16s71_13d  # FPP Penelope (big Smile, mouth open) holding the open can of dog food in front of MC
+    scene v16s71_13d # FPP Penelope (big Smile, mouth open) holding the open can of dog food in front of MC
     with dissolve
     
     pe "I dare you to taste it."
 
-    scene v16s71_13e  # FPP Penelope (big Smile, mouth closed) holding the open can of dog food in front of MC
+    scene v16s71_13e # FPP Penelope (big Smile, mouth closed) holding the open can of dog food in front of MC
     with dissolve
     
     u "Damn, usually I never turn down a dare, but..."
@@ -645,11 +647,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
     scene v16s71_13d
     with dissolve
 
-    # -MC chooses event1 or event2
-    # -event1 Taste it
-    # -event2 Fuck no!
     menu:
-
         "Taste it": # -if Taste it
 
             scene v16s71_13e
@@ -658,17 +656,17 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
             u "Fine, fuck it."
             
             # -MC sticks his finger in the dog food and licks his finger-
-            scene v16s71_13f  # TPP MC(neutral, mouth closed) sticks his finger in the open can of dog food that Penelope(smiling, mouth closed) holds.
+            scene v16s71_13f # TPP MC(neutral, mouth closed) sticks his finger in the open can of dog food that Penelope(smiling, mouth closed) holds.
             with dissolve
 
             pause 0.75
 
-            scene v16s71_13g  # TPP MC(neutral, slight surprise) finger in his mouth while Penelope holds the open can of dog food.
+            scene v16s71_13g # TPP MC(neutral, slight surprise) finger in his mouth while Penelope holds the open can of dog food.
             with dissolve
 
             pause 0.75
 
-            scene v16s71_13h  # FPP Penelope (smiling, mouth open, nose crinkled as if saying "gross") holding an open can of dog food.
+            scene v16s71_13h # FPP Penelope (smiling, mouth open, nose crinkled as if saying "gross") holding an open can of dog food.
             with dissolve
             
             pe "Oh, ew! I can't believe you just did that! *Laughs*"
@@ -765,28 +763,28 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
 
     pause 0.75
 
-    scene v16s71_14a  # FPP Penelope(neutral, mouth closed) squats by Oscar's food bowl turns the open can of dog food upside down over the bowl. The dog bowl now has food in it. 
+    scene v16s71_14a # FPP Penelope(neutral, mouth closed) squats by Oscar's food bowl turns the open can of dog food upside down over the bowl. The dog bowl now has food in it. 
     with dissolve
 
     pause 0.75
 
-    scene v16s71_14b  # FPP Penelope (neutral, mouth open) squats by Oscar's food bowl and watches Oscar eat his food (she no longer has the can of food)
+    scene v16s71_14b # FPP Penelope (neutral, mouth open) squats by Oscar's food bowl and watches Oscar eat his food (she no longer has the can of food)
     with dissolve
 
     pe "Wow, hungry boy!"
 
-    scene v16s71_14c  # FPP Penelope(neutral, mouth closed) squats by Oscar's food bowl and watches Oscar eat his food. 
+    scene v16s71_14c # FPP Penelope(neutral, mouth closed) squats by Oscar's food bowl and watches Oscar eat his food. 
     with fade
 
     pause 0.75
 
-    scene v16s71_14d  # FPP Penelope(neutral, mouth closed) squats by Oscar's empty food bowl [Oscar off camera])
+    scene v16s71_14d # FPP Penelope(neutral, mouth closed) squats by Oscar's empty food bowl [Oscar off camera])
     with dissolve
 
     pause 0.75
 
     # -After eating Oscar goes to his bed and settles down for a nap-
-    scene v16s71_12f  # FPP Oscar curled up sleeping in middle of the couch.
+    scene v16s71_12f # FPP Oscar curled up sleeping in middle of the couch.
     with dissolve
 
     u "And now it's time for a nap. *Sighs*I wish I could just play, eat, and sleep all day."
@@ -802,21 +800,17 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
     u "He deserves it."
 
     # -Penelope returns to MC, sitting next to him on the couch. They watch as Oscar's eyes gradually close as he falls asleep-
-    scene v16s71_12e  # TPP MC(smiling, mouth closed) on one side of the couch, Oscar (sleeping) in the middle with his head on Penelope's (smiling, mouth closed) lap. MC and Penelope are watching Oscar sleep.
+    scene v16s71_12e # TPP MC(smiling, mouth closed) on one side of the couch, Oscar (sleeping) in the middle with his head on Penelope's (smiling, mouth closed) lap. MC and Penelope are watching Oscar sleep.
     with fade
-
     play sound "sounds/vibrate.mp3"
-
-    pause 0.25
-
-    play sound "sounds/vibrate.mp3"
+    pause 0.75
 
     $ ryan.messnger.newMessage("HOLY SHIT!", force_send =True)
     $ ryan.messenger.newMessage("DUDE, HAVE YOU SEEN WHAT ELIJAH PUT IN THE FIRST EDITION OF THE SVC TIMES???", force_send=True)
 
     call screen messenger(ryan.messenger)
 
-    scene v16s71_14e  # TPP MC(concerned, mouth closed) sitting on the couch next to Oscar (off camera or his butt and tail in camera) looking at his phone in his hand. 
+    scene v16s71_14e # TPP MC(concerned, mouth closed) sitting on the couch next to Oscar (off camera or his butt and tail in camera) looking at his phone in his hand. 
     with fade
 
     u "(What the hell did Elijah do?)"
@@ -824,7 +818,7 @@ label v16s71: ### ERROR: 71) Penelope dog sits for the dean
     label v16_end_1:
         if not renpy.loadable("v17/scene1.rpy"):
             show screen save_now(17)
-            with Fad(1,0,1)
+            with fade
 
             " "
         jump v17start

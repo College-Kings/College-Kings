@@ -128,15 +128,13 @@ label v16s69:
     with dissolve
 
     menu:
-
         "Kiss her neck":
-
             scene v16s69_6d # TPP. Penelope (slightly laughing, eyes closed, mouth closed), wearing just her bra and panties, still being spooned by MC (slight smile, mouth open, looking at Penelope), wearing just his boxers, kisses Penelope on the neck using a little bit of tongue
             with dissolve
 
             pause 0.75
 
-            scene v16s69_7c
+            scene v16s69_7c ### check mouth speaking 7c
             with dissolve
 
             pe "*Giggles* That tickles, haha... I like it."
@@ -152,7 +150,6 @@ label v16s69:
             pe "I feel so safe..."
 
         "Whisper in her ear":
-
             scene v16s69_6f # TPP. Penelope (slight smile, eyes closed, mouth closed), wearing just her bra and panties, still being spooned by MC (slight smile, mouth open, looking at Penelope), wearing just his boxers, leans in to whisper into Penelope's ear
             with dissolve
 
@@ -180,6 +177,8 @@ label v16s69:
 
             scene v16s69_6b
             with dissolve
+            
+            pause 0.75
 
     if 2 & v16s27_mc_baby_duty_night != 2: # -if MC does not have baby [Checkpoint 1.1]
 
@@ -190,6 +189,8 @@ label v16s69:
 
         scene v16s69_6h # TPP. Penelope (slight smile, sleeping, mouth closed), wearing just her bra and panties, still being spooned by MC, MC (slight smile, sleeping, mouth closed), wearing just his boxers, holding Penelope Gently
         with dissolve
+        
+        pause 0.75
 
         jump v16s69a # -Transition to Scene 69a-
 
@@ -291,13 +292,10 @@ label v16s69:
                 with dissolve
 
                 pe "Stop it, stop it. Don't even tell me about it, I don't want to know. *Giggles*"
-            
 
         scene v16s69_8
         with vpunch
-
         play sound "sounds/babycry.mp3"
-
         baby "*Crying*"
 
         scene v16s69_7d # FPP. Show just Penelope (slight smile, mouth closed, looking at MC), wearing just her bra and panties, cutely covering her ears, body and head facing away from MC, but you can still slightly see her face and eyes looking back at MC
@@ -322,9 +320,7 @@ label v16s69:
 
         scene v16s69_9a # FPP. Camera angle is from Mc laying on Penelope's bed, Show just Penelope (slightly shocked, mouth is closed, looking at the baby), wearing just her bra and panties, holding the baby wrapped up in the blanket she put on it
         with vpunch
-
         play sound "sounds/babycry.mp3"
-
         baby "*Crying*"
 
         scene v16s69_9b # FPP. Camera angle is from Mc laying on Penelope's bed, Show just Penelope (slight smile, mouth is closed, looking at MC), wearing just her bra and panties, holding the baby wrapped up in the blanket she put on it
@@ -359,9 +355,7 @@ label v16s69:
 
         scene v16s69_10a # FPP. Camera angle is now a standing position, Show just Penelope (slightly shocked, mouth closed, looking at the baby), wearing just her bra and panties, holding the baby wrapped up in the blanket she put on it
         with vpunch
-
         play sound "sounds/babycry.mp3"
-
         baby "*Crying*"
 
         scene v16s69_10
@@ -369,16 +363,11 @@ label v16s69:
 
         $ v16_wrong_key = True # Reset to force the loop until the correct key is picked. 
         while v16_wrong_key:
-
             menu:
-
                 "Blue": # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
-
                     scene v16s69_11 # FPP. Show just the baby wrapped up in the blanket Penelope put on it, in Penelopes arms (Only Penelopes arms and the baby are showing), With MC Placing the BLUE FOB key to the baby's lower back (only Mc's arm and hand is shown)
                     with vpunch
-
                     play sound "sounds/babycry.mp3"
-
                     baby "*Cries*"
 
                     scene v16s69_10
@@ -391,13 +380,11 @@ label v16s69:
 
                     pe "Well, it's not that one. Try another."
                 
-                "Green":    # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
+                "Green": # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
 
                     scene v16s69_11
                     with vpunch
-
                     play sound "sounds/babycry.mp3"
-
                     baby "*Crying*"
 
                     scene v16s69_10
@@ -455,5 +442,7 @@ label v16s69:
 
         scene v16s69_6h
         with dissolve
+
+        pause 0.75
 
         jump v16s69a # -Transition to Scene 69a-

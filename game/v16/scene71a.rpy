@@ -12,27 +12,27 @@ label v16s71a: ### ERROR: 71a) Penelope sex scene
 
     # -MC and Penelope are kissing passionately by the Dean's desk-
     # -Then Penelope starts taking her clothes off, revealing sexy lingerie underneath-
-    scene v16s71a_1    # TPP  MC(eyes closed), Penelope (eyes closed) standing by Dean's chair and bookshelf, kissing passionately with tongue.
+    scene v16s71a_1    # TPP MC(eyes closed), Penelope (eyes closed) standing by Dean's chair and bookshelf, kissing passionately with tongue.
     with dissolve
 
     pause 0.75
 
-    scene v16s71a_1a   # TPP  Close on the floot of Penelope's feet where we see her skit on the ground by her ankles.
+    scene v16s71a_1a # TPP Close on the floot of Penelope's feet where we see her skit on the ground by her ankles.
     with dissolve
 
     pause 0.75
 
-    scene v16s71a_1b   # TPP  Close on Penleope's head (smiling sexy, mouth closed if in the shot) (no body in the shot) showing her taking off her shirt.
+    scene v16s71a_1b # TPP Close on Penleope's head (smiling sexy, mouth closed if in the shot) (no body in the shot) showing her taking off her shirt.
     with dissolve
 
     pause 0.75
     
-    scene v16s71a_1c   # FPP  Wide view of Penelope (smiling sexy, fuck me eyes, mouth closed) posing sexy for MC by the Dean's chair in lingerie.
+    scene v16s71a_1c # FPP Wide view of Penelope (smiling sexy, fuck me eyes, mouth closed) posing sexy for MC by the Dean's chair in lingerie.
     with dissolve
 
     u "Oh, wow. Did you plan this?"
 
-    scene v16s71a_1d   # FPP  Penelope( smiling sexy, mouth open) looking at MC.
+    scene v16s71a_1d # FPP Penelope( smiling sexy, mouth open) looking at MC.
     with dissolve
 
     pe "*Giggles* Maybe."
@@ -49,7 +49,7 @@ label v16s71a: ### ERROR: 71a) Penelope sex scene
 
     # -Regardless of that-
 
-    scene v16s71a_1e   # FPP  Penelope( smiling sexy, mouth closed) looking at MC.
+    scene v16s71a_1e # FPP Penelope( smiling sexy, mouth closed) looking at MC.
     with dissolve
     
     u "I approve."
@@ -57,43 +57,43 @@ label v16s71a: ### ERROR: 71a) Penelope sex scene
     # -Penelope sits on the edge of the Dean's desk. They kiss passionately. MC's hand around her throat while they kiss (Penelope is submissive and MC is dominant in this sex scene - Community voted scene)-
     # -MC pulls off Penelope's lingerie and she is now naked. Then MC takes his clothes off-
     # -With his hand around her throat, MC eases her back so she's lying down on the desk-
-    scene v16s71a_2    # TPP  Penelope (eyes closed) sits on the front corner of the Dean's desk kissing MC(eyes closed) passionately with tongue. MC slightly dominates her with his hand around her throat while they kiss.
+    scene v16s71a_2    # TPP Penelope (eyes closed) sits on the front corner of the Dean's desk kissing MC(eyes closed) passionately with tongue. MC slightly dominates her with his hand around her throat while they kiss.
     with dissolve
 
     pause 0.75
 
-    scene v16s71a_2a   # TPP  Alternate angle of v16s71a_2.
+    scene v16s71a_2a # TPP Alternate angle of v16s71a_2.
     with dissolve
 
     pause 0.75
 
-    scene v16s71a_2b   # TPP  MC(smiling, mouth closed) removing Penelope(smiling sexy, mouth closed, looking at MC with fuck me eyes) bra.
+    scene v16s71a_2b # TPP MC(smiling, mouth closed) removing Penelope(smiling sexy, mouth closed, looking at MC with fuck me eyes) bra.
     with dissolve
 
     pause 0.75
 
-    scene v16s71a_2c   # TPP  Penelope naked (smiling sexy, mouth closed) helping MC (smiling, mouth closed) remove his shirt.
+    scene v16s71a_2c # TPP Penelope naked (smiling sexy, mouth closed) helping MC (smiling, mouth closed) remove his shirt.
     with dissolve
 
     pause 0.75
 
-    scene v16s71a_2d   # Same as v16s71a_2 but MC and Penelope naked.
+    scene v16s71a_2d # Same as v16s71a_2 but MC and Penelope naked.
     with dissolve
 
     pause 0.75
 
-    scene v16s71a_2e   # same as v16s71a_2a but MC and Penlope naked.
+    scene v16s71a_2e # same as v16s71a_2a but MC and Penlope naked.
     with dissolve
 
     pause 0.75
 
-    scene v16s71a_2f   # MC(smiling, mouth closed) eases Penlope (smiling, fuck me eyes, mouth closed, looking at MC) to lie back on the Dean's desk by her throat.
+    scene v16s71a_2f # MC(smiling, mouth closed) eases Penlope (smiling, fuck me eyes, mouth closed, looking at MC) to lie back on the Dean's desk by her throat.
     with dissolve
 
     pause 0.75
 
     # -We enter the Foreplay Free Roam. MC can click on her Neck, Boobs, Feet or Vagina. Clicking on her Vagina will end the free roam-
-    #!  v16s71a_sex_screen     Penelope(smiling sexy, fuck me eyes, mouth closed) laying on her back on the Dean's desk, legs draped over each side of the corner showing her vagina and feet, looking at the camera. MC can click on her Neck, Boobs, Feet or Vagina. Clicking on her Vagina will end the free roam-
+    #! v16s71a_sex_screen Penelope(smiling sexy, fuck me eyes, mouth closed) laying on her back on the Dean's desk, legs draped over each side of the corner showing her vagina and feet, looking at the camera. MC can click on her Neck, Boobs, Feet or Vagina. Clicking on her Vagina will end the free roam-
     call screen sex_overlay("v16s71a_continue")
 
     # -if Neck
@@ -112,12 +112,12 @@ label v16s71a_neck:
             
             pe "Mmm, yeah, I like that."
 
-            scene v16s71a_3a   # TPP Penelope(eyes closed, smiling, mouth open) head turned toward camera, enjoying MC(eyes closed) kissing the middle of her neck.
+            scene v16s71a_3a # TPP Penelope(eyes closed, smiling, mouth open) head turned toward camera, enjoying MC(eyes closed) kissing the middle of her neck.
             with dissolve
 
             pe "I cannot get enough of your kisses, [name]."
 
-            scene v16s71a_3b   # TPP Penelope (eyes closed, smiling, mouth open) head turned, back arched, enjoying MC(eyes closed) kissing where her neck and ear meet. 
+            scene v16s71a_3b # TPP Penelope (eyes closed, smiling, mouth open) head turned, back arched, enjoying MC(eyes closed) kissing where her neck and ear meet. 
             with dissolve
 
             pe "Mmm, this is making me so... horny."
@@ -132,12 +132,12 @@ label v16s71a_neck:
 
             pe "Oh... Ha. *Moans*"
 
-            scene v16s71a_4a   # TPP Penelope (eyes open, fuck me eyes, smiling, mouth closed) looking at MC (eyes open looking at Penelope, smiling, mouth open) who has his hand gripped firmly around her throat.
+            scene v16s71a_4a # TPP Penelope (eyes open, fuck me eyes, smiling, mouth closed) looking at MC (eyes open looking at Penelope, smiling, mouth open) who has his hand gripped firmly around her throat.
             with dissolve
 
             u "You like that?"
 
-            scene v16s71a_4b   # TPP Penelope (eyes open, fuck me eyes, smiling, mouth open) with both hands grasping MC's hand that chokes her looking at MC (eyes open looking at Penelope, smiling, mouth closed) who has his hand gripped firmly around her throat (maybe he her cheeks/face just turn slightly pinkish to show mild choking-- not much; he's not trying to kill her--subtle).
+            scene v16s71a_4b # TPP Penelope (eyes open, fuck me eyes, smiling, mouth open) with both hands grasping MC's hand that chokes her looking at MC (eyes open looking at Penelope, smiling, mouth closed) who has his hand gripped firmly around her throat (maybe he her cheeks/face just turn slightly pinkish to show mild choking-- not much; he's not trying to kill her--subtle).
             with dissolve
 
             pe "I-I do."            
@@ -163,12 +163,12 @@ label v16s71a_boobs:
             
             pe "Do you like my boobs?"
 
-            scene v16s71a_5a   # TPP Penelope (smiling, mouth closed, head back biting her lip) enjoying MC (smiling, mouth open, looking at Penelope) massaging her boobs (erect nipples) with his hands.
+            scene v16s71a_5a # TPP Penelope (smiling, mouth closed, head back biting her lip) enjoying MC (smiling, mouth open, looking at Penelope) massaging her boobs (erect nipples) with his hands.
             with dissolve
 
             u "Yeah, a lot."
 
-            scene v16s71a_5b   # TPP Penelope (smiling, mouth open, looking at MC's thumbs on her nipples) enjoying MC (smiling, mouth closed, looking at Penelope) massaging her boobs (erect nipples) with his hands and thumbs on her nipples.
+            scene v16s71a_5b # TPP Penelope (smiling, mouth open, looking at MC's thumbs on her nipples) enjoying MC (smiling, mouth closed, looking at Penelope) massaging her boobs (erect nipples) with his hands and thumbs on her nipples.
             with dissolve
 
             pe "*Giggles* I like it when you play with them."            
@@ -183,24 +183,24 @@ label v16s71a_boobs:
 
             pe "Oh, fuck... your mouth feels so good."
 
-            scene v16s71a_6a   # TPP Penelope (eyes closed, aroused/excited, smiling, head back, bitting lip) holding on to the back of MC's head while MC (eyes closed) sucking on her other erect nipple.
+            scene v16s71a_6a # TPP Penelope (eyes closed, aroused/excited, smiling, head back, bitting lip) holding on to the back of MC's head while MC (eyes closed) sucking on her other erect nipple.
             with dissolve
 
             u "Mm-hmm."
             
             pe "Mmm..."
 
-            scene v16s71a_6b   # TPP Penelope (aroused/excited, smiling, mouth open) looking at MC (eyes closed) sucking on her erect nipple. 
+            scene v16s71a_6b # TPP Penelope (aroused/excited, smiling, mouth open) looking at MC (eyes closed) sucking on her erect nipple. 
             with dissolve
 
             pe "You're making me really wet, [name]."
 
-            scene v16s71a_6c   # FPP Penelope (aroused/excited, smiling, mouth closed) looking at MC who has a view full of her boobs and her face.
+            scene v16s71a_6c # FPP Penelope (aroused/excited, smiling, mouth closed) looking at MC who has a view full of her boobs and her face.
             with dissolve
 
             u "Am I?"
 
-            scene v16s71a_6d   # FPP Penelope (aroused/excited, smiling, fuck me eyes, mouth open) looking at MC who has a view full of her boobs and her face.
+            scene v16s71a_6d # FPP Penelope (aroused/excited, smiling, fuck me eyes, mouth open) looking at MC who has a view full of her boobs and her face.
             with dissolve
 
             pe "Yes... And you need to do something about it."            
@@ -226,7 +226,7 @@ label v16s71a_feet:
             
             pe "You're really spoiling me, [name]. *Giggles*"
 
-            scene v16s71a_7a  # TPP Penelope (excited, smiling mouth closed) looking at MC (smiling, mouth open) who holds her leg in front of him and is massaging her foot.
+            scene v16s71a_7a # TPP Penelope (excited, smiling mouth closed) looking at MC (smiling, mouth open) who holds her leg in front of him and is massaging her foot.
             with dissolve
 
             u "I need to give you some attention before it's my turn."
@@ -249,19 +249,19 @@ label v16s71a_feet:
 
             pe "Oh, fuck, [name]."
 
-            scene v16s71a_8a  # TPP Penelope (smiling, mouth closed) enjoying MC (looking at Penelop) lick the bottom of Penelope's foot that he holds up in the air.
+            scene v16s71a_8a # TPP Penelope (smiling, mouth closed) enjoying MC (looking at Penelop) lick the bottom of Penelope's foot that he holds up in the air.
             with dissolve
 
             pe "Mmm..."
 
-            scene v16s71a_8b  # TPP Penelope (eyes closed, aroused/excited, mouth open, head back, enjoying MC(only showing his mouth) suck on her big toe.
+            scene v16s71a_8b # TPP Penelope (eyes closed, aroused/excited, mouth open, head back, enjoying MC(only showing his mouth) suck on her big toe.
             with dissolve
 
             pe "I didn't even know this would feel like this... *Gasps*"            
 
             pe "That feels... amazing."
 
-            scene v16s71a_8c  # Same as v16s71a_8b, but Penleope arching her back in pleasure.
+            scene v16s71a_8c # Same as v16s71a_8b, but Penleope arching her back in pleasure.
             with dissolve
 
             pe "*Moans* Oh, fuck."            
@@ -341,7 +341,7 @@ label v16s71a_continue:
     scene v16penst # ignore as animation
     with dissolve
 
-    pe "Shiiit... You're so deep.... *Gasps*"
+    pe "Shiiit... You're so deep... *Gasps*"
 
     scene v16penst2 # ignore as animation
     with dissolve
@@ -431,12 +431,11 @@ label v16s71a_continue:
     pe "*Panting* Here, let me finish you off."
     
     scene v16s71a_13  # TPP MC (smiling, mouth open) pushing Penelope (smiling, mouth closed) to sit down in the Dean's chair
-
     with dissolve
     
-    # -MC sits on the Dean's desk-
-
     u "Sit down."
+
+    # -MC sits on the Dean's desk-
 
     scene v16s71a_13a # TPP Penelope(smiling, seductive eyes looking up at MC, mouth open) siting in the Dean's chair (between MC's legs ) while her right hand holds MC's dick, her thumb on the head of MC's dick. MC(smiling, mouth closed) looking down at Penelope.
     with dissolve
@@ -460,7 +459,7 @@ label v16s71a_continue:
 
     pe "Mmhmm!"    
 
-    scene v16pensdbj2 # ignore as animation  
+    scene v16pensdbj2 # ignore as animation
     with dissolve
 
     pe "*Gagging*"
@@ -516,8 +515,7 @@ label v16s71a_continue:
 
     label v16_end_2:
         show screen save_now(17)
-        with Fade(1,0,1)
+        with fade
 
         " "
     jump v17start
-

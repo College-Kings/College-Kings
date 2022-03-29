@@ -3,11 +3,11 @@
 # Characters: POLLY (Outfit: Concert Outfit), LINDSEY (Outfit: 3), MC (Outfit: 2), CROWD (Outfit: Random), KOBE (Outfit: 1), AUTUMN (Outfit: 2), RILEY (Outfit: 3), PENELOPE (Outfit: 2)
 # Time: Thursday Evening
 
-
 label v16s67:
-
     scene v16s67_1 # TPP. The whole room is candlelit as the power outage is still going on. People (no expressions, and mouths open or closed, and looking at renderer's discretion) are sat at the tables. Penelope (no expression, mouth is closed, looking at the stage) is sitting at the front. Everyone is watching as Polly (slight smile, mouth is closed, looking at the crowd) enters the room from another door, carrying an acoustic guitar
     with dissolve
+
+    pause 0.75
 
     if not v16s12_chloe_planboard_decide_newspaper_cover: # -if MC walked with Lindsey in Scene 66
 
@@ -59,6 +59,8 @@ label v16s67:
 
         scene v16s67_2b # TPP. same as v16s67_2 Just MC is standing still and Lindsey is walking away
         with dissolve
+
+        pause 0.75
 
     elif not v16s12_chloe_planboard_decide_newspaper_cover and not v16s28_lindsey_pb_intereview_polly_choice: # -if MC is with Lindsey and they went to Polly's hotel room
 
@@ -384,7 +386,7 @@ label v16s67:
 
             polly "*Singing* To your heeeart! To your heeeart! Yeah, yeah, yeah..."
 
-            if autumn.relationship == Relationship.KISS:  # -if AutumnRS
+            if autumn.relationship == Relationship.KISS: # -if AutumnRS
 
                 scene v16s67_9a 
                 with dissolve
@@ -410,7 +412,6 @@ label v16s67:
                 with dissolve
 
                 menu:
-
                     "Yeah, I am":
                         $ v15s67_mc_remains_interested_autumn_sex = 2
                         
@@ -433,9 +434,12 @@ label v16s67:
 
                         aut "Great."
 
-                    "Not anymore":  # -this takes away AutumnRS, giving the players the option to back out if they want to-
+                    "Not anymore": # -this takes away AutumnRS, giving the players the option to back out if they want to-
                         $ autumn.relationship = Relationship.TRUST
                         $ v15s67_mc_remains_interested_autumn_sex = 1
+
+                        scene v16s67_9b
+                        #with dissolve
 
                         u "Not anymore...? I think I've changed my mind about being more than friends. I'm sorry."
 
@@ -517,8 +521,7 @@ label v16s67:
 
             u "Apparently, yeah."
 
-            if v16s52_aubrey_kiwii_post_for_donations: # -if Aubrey posted about donations in scene 52
-
+            if v16s52_aubrey_kiwii_post_for_donations: # -if Aubrey posted about donations in s52
                 scene v16s67_9a
                 with dissolve
 
@@ -554,7 +557,7 @@ label v16s67:
 
                 aut "*Laughs*"
 
-            elif v16s52_mc_dogshelter_kiwii_post or ( not v16s52_mc_dogshelter_kiwii_post and not v16s52_aubrey_kiwii_post_for_donations): # -if MC posted about donations or did sign spinning in scene 52
+            elif v16s52_mc_dogshelter_kiwii_post or ( not v16s52_mc_dogshelter_kiwii_post and not v16s52_aubrey_kiwii_post_for_donations): # -if MC posted about donations or did sign spinning in s52
 
                 scene v16s67_9a
                 with dissolve
@@ -625,8 +628,7 @@ label v16s67:
 
             polly "*Singing* To your heeeart! To your heeeart! Yeah, yeah, yeah..."
 
-            if "v16_riley_bj" in sceneList: # -if Riley blowjob in Scene 3a  ###!!!TRANSCRIBER NOTE###!!! VARIABLE NEEDS TO BE ADDED TO SCENE 3 FOR THIS STATEMENT
-
+            if "v16_riley" in sceneList: # -if Riley blowjob in Scene 3a
                 scene v16s67_13b # FPP. Show just Riley (slight smile, mouth is closed, looking at MC)
                 with dissolve
 
@@ -748,6 +750,8 @@ label v16s67:
             scene v16s67_14 # TPP. Show just MC and Riley (both slight smiles, mouths are closed, looking at Polly) They continue watching, enjoying the music-
             with dissolve
 
+            pause 0.75
+
         # -Regardless of who MC sat next to-
 
     scene v16s67_10a
@@ -779,5 +783,7 @@ label v16s67:
 
     scene v16s67_15 # TPP. Show MC (slight smile, mouth is closed, looking at the exit) walking towards the exit of the cafeteria alone, other random characters (slight smiles, mouths are closed) are also shown exiting the cafeteria
     with fade
+
+    pause 0.75
 
     jump v16s68 # -Transition to Scene 68-

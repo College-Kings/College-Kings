@@ -31,4 +31,4 @@ label v16s77: # 77) MC arrives at the opera
 
     u "(Either way, I'm sure Lorraine will keep me entertained, ha.)"
 
-    jump v16s78 # -Transition to scene 78-
+    jump v16s78 # -Transition to s78-

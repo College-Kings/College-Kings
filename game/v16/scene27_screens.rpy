@@ -91,7 +91,7 @@ label v16s27_baby_schedule:
             if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.WITH_PARTNER:
                 $ v16s27_mc_baby_schedule["friday"] = BabyDuty.PARTNER_ALONE
             else:
-                $ v16s27_mc_baby_schedule["wednesday"] = BabyDuty.PARTNER_ALONE            
+                $ v16s27_mc_baby_schedule["wednesday"] = BabyDuty.PARTNER_ALONE
 
         "Friday" if v16s27_mc_baby_schedule["friday"] != BabyDuty.WITH_PARTNER:
             $ v16s27_mc_baby_schedule["friday"] = BabyDuty.ALONE

@@ -3,10 +3,9 @@
 # Characters: MC (Outfit: 6)
 # Time: Friday night
 
-
 label v16s76: # 76) MC dresses up for the opera
     
-    if not joinapes: # if joinwolves:
+    if joinwolves: # if joinwolves:
         
         scene v16s76_1 # TPP Show MC getting into his homecoming suit [WOLF DORM ROOM ]
         with dissolve
@@ -28,7 +27,7 @@ label v16s76: # 76) MC dresses up for the opera
 
         pause 0.75
     
-    else:  # joined apes 
+    else: # joined apes 
         
         scene v16s76_5 # TPP Show MC getting into his homecoming suit [APE DORM ROOM ]
         with dissolve

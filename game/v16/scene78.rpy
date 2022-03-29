@@ -50,6 +50,8 @@ label v16s78: # 78) At the Opera with Ms Rose
             ro "You clean up nice."
 
         "Mention the long ride":
+            scene v16s78_4
+            #with dissolve
 
             u "That was a longer ride than I had expected, haha."
 
@@ -152,7 +154,7 @@ label v16s78: # 78) At the Opera with Ms Rose
 
             u "(Fuck off Grandma, you've upset my date!)"
 
-            scene v16s78_12 # TPP Show MC (concerned, mouth open) putting  a hand on Ms Rose's (slight smile, mouth closed) waist as they walk, he is looking at her
+            scene v16s78_12 # TPP Show MC (concerned, mouth open) putting a hand on Ms Rose's (slight smile, mouth closed) waist as they walk, he is looking at her
             with dissolve
 
             u "Hey, all good?"

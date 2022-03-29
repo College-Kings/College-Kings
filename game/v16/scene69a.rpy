@@ -126,4 +126,6 @@ label v16s69a:
     scene v16s69a_1b # TPP. Show Mc (slight smile, mouth closed, looking at Penelope) getting dressed (outfit 2), and Penelope (slight smile, mouth closed, looking at MC) getting dressed
     with dissolve
 
+    pause 0.75
+
     jump v16s70 # -Transition to Scene 70-
