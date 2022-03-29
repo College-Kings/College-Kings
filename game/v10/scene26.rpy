@@ -365,9 +365,9 @@ label v10_amber_skatepark:
     u "*Laughs*"
 
     if amber.relationship >= Relationship.FWB or kct == "popular":
+        label v10_amber_skatepark_sg:
+        
         if _in_replay:
-            label v10_amber_skatepark_sg:
-
             $ amber.relationship = Relationship.FWB
 
     if amber.relationship >= Relationship.FWB:

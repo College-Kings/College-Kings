@@ -1,6 +1,6 @@
 # SCENE 27: Sex Ed Event
 # Locations: Amphitheatre
-# Characters: MR LEE (Outfit: 1), PENELOPE (Outfit: 3), MC (Outfit: 9), CHLOE (Outfit: 3), NORA (Outfit: 1), SEX ED TEACHER (Outfit: 1), CAMERON (Outfit: 3), LINDSEY (Outfit: 1)
+# Characters: MR. LEE (Outfit: 1), PENELOPE (Outfit: 3), MC (Outfit: 9), CHLOE (Outfit: 3), NORA (Outfit: 1), SEX ED TEACHER (Outfit: 1), CAMERON (Outfit: 3), LINDSEY (Outfit: 1)
 # Time: Morning
 
 label v16s27:
@@ -14,7 +14,7 @@ label v16s27:
 
     pause 0.75
 
-    scene v16s27_3 # TPP. Mr Lee (slight smile, mouth is closed,) is standing at the front of the room. A Sex Ed teacher (slight smile, mouth is closed,) is sat at a desk at the front of the room
+    scene v16s27_3 # TPP. Mr. Lee (slight smile, mouth is closed,) is standing at the front of the room. A Sex Ed teacher (slight smile, mouth is closed,) is sat at a desk at the front of the room
     with dissolve
 
     pause 0.75
@@ -65,6 +65,8 @@ label v16s27:
     scene v16s27_7
     with dissolve
 
+    pause 0.01
+
     menu (fail_label="v16s27_default_chloe_parent"): # 3 second timer default
         "Parent with Chloe":
             $ v16s27_parent_chloe = True
@@ -72,8 +74,6 @@ label v16s27:
             jump v16s27_choose_chloe_parent
         
         "Parent with Nora":
-            $ v16s27_parent_chloe = False
-
             scene v16s27_9 # FPP. Show just Nora (slight smile, mouth is closed, looking at MC) sitting in her seat, camera angle is from a seated positon
             with dissolve
 
@@ -165,21 +165,20 @@ label v16s27:
         scene v16s27_8b
         with dissolve
 
-        cl "It's possible, but that's a concern for me in the future me."
+        cl "It's possible, but that's a concern for future me."
 
         scene v16s27_8
         with dissolve
 
         u "(Perhaps she'll show more interest once we know exactly what we've got to do.)"
 
-    label v16s27_continue_after_parent_choice:# -Regardless of parent choice-
-
+    label v16s27_continue_after_parent_choice: # -Regardless of parent choice-
         scene v16s27_4
         with dissolve
 
         lee "Now that we have that out of the way, I'll leave you in the capable hands of your sex ed teacher."
 
-        scene v16s27_3a # TPP. Mr Lee (slight smile, mouth is closed, looking at the Sex Ed Teacher,) with an extended arm outstrecthed towards her in a "presenting" manner, The Sex Ed Teacher (slight smile, mouth is closed, looking at Mr. Lee,) holding a baby doll stands up from the desk and walks towards Mr. Lee
+        scene v16s27_3a # TPP. Mr. Lee (slight smile, mouth is closed, looking at the Sex Ed Teacher,) with an extended arm outstrecthed towards her in a "presenting" manner, The Sex Ed Teacher (slight smile, mouth is closed, looking at Mr. Lee,) holding a baby doll stands up from the desk and walks towards Mr. Lee
         with dissolve
 
         pause 0.75
@@ -194,16 +193,14 @@ label v16s27:
 
         sexed "Hello, class. I'd like everyone to look at this baby."
 
-        if not v16s27_parent_chloe: # Parent with Nora 
-
-            scene v16s27_9b # FPP. Show just Nora (slight smile, mouth is open, looking at the (SET)) sitting in her seat, camera angle is from a seated positon
+        if v16s27_parent_chloe:
+            scene v16s27_9c # FPP. Show just Nora (slight smile, mouth is open, looking at the (SET)) sitting in her seat, camera angle is from a seated positon, with multiple seats between MC and Nora (MC is not shown)
             with dissolve
 
             no "Awww!"
 
-        else:
-
-            scene v16s27_9c # FPP. Show just Nora (slight smile, mouth is open, looking at the (SET)) sitting in her seat, camera angle is from a seated positon, with multiple seats between MC and Nora (MC is not shown)
+        else: # Parent with Nora 
+            scene v16s27_9b # FPP. Show just Nora (slight smile, mouth is open, looking at the (SET)) sitting in her seat, camera angle is from a seated positon
             with dissolve
 
             no "Awww!"
@@ -261,9 +258,6 @@ label v16s27:
 
             u "(Is she paying attention to any of this?)"
 
-            scene v16s27_8
-            with dissolve
-
             menu:
                 "Say something":
                     $ add_point(KCT.TROUBLEMAKER)
@@ -291,12 +285,9 @@ label v16s27:
                 "Keep quiet":
                     $ add_point(KCT.BRO)
 
-                    scene v16s27_8
-                    with dissolve
-
                     u "(She's obviously not, and I don't feel like starting an argument.)"
 
-        else:# -if MC is parenting with Nora
+        else: # -if MC is parenting with Nora
             scene v16s27_9d # FPP. Show just Nora (slight smile, mouth is closed, looking at the (SET)) sitting in her seat, camera angle is from a seated positon
             with dissolve
 
@@ -360,7 +351,7 @@ label v16s27:
 
         u "(Okay, let's see what's best...)"
 
-        # TODO: UI SCREEN #!#!#!#!# -The UI pops up, showing the three nights, and MC can choose the baby-duty schedule- #!#!#!#!#
+        call v16s27_baby_schedule
 
         scene v16s27_11b
         with dissolve
@@ -402,10 +393,10 @@ label v16s27:
             with dissolve
 
             menu:
-                "Plastic, it is":
+                "Plastic it is":
                     $ add_point(KCT.BRO)
 
-                    $ v16_baby = "Plastic"
+                    $ v16_baby_name = "Plastic"
 
                     scene v16s27_8a
                     with dissolve
@@ -420,7 +411,7 @@ label v16s27:
                 "A different name":
                     # -Player gets to type baby name-
 
-                    $ baby.username = v16_baby_name = renpy.input("What's your baby's name?", default=("Plastic").strip())
+                    $ v16_baby_name = renpy.input("What's your baby's name?", default=("Plastic").strip()) or _("Plastic")
 
                     scene v16s27_8c
                     with dissolve
@@ -448,28 +439,22 @@ label v16s27:
 
             no "Haha, no! Come on, let's do something cute like... Henry or..."
 
-            scene v16s27_9
-            with dissolve
-
             no "Scarlet?"
 
-            scene v16s27_9a
+            scene v16s27_9
             with dissolve
 
             u "Hmm, well, have we got a boy or a girl?"
 
-            scene v16s27_9
+            scene v16s27_9a
             with dissolve
 
             no "Umm, that doesn't really matter I don't think."
 
-            scene v16s27_9a
+            scene v16s27_9
             with dissolve
 
             u "Ha, okay... (Let her pick, or suggest something else?)"
-
-            scene v16s27_9
-            with dissolve
 
             menu:
                 "Scarlet or Henry?":
@@ -477,7 +462,7 @@ label v16s27:
                     $ v16_baby_name = "Henry"
 
                     scene v16s27_9
-                    with dissolve
+                    #with dissolve
 
                     u "So which one?"
 
@@ -509,7 +494,7 @@ label v16s27:
                 "Something else":
                     # -Player gets to type baby name-
 
-                    $ baby.username = v16_baby_name = renpy.input("What's your baby's name?", default=("Henry").strip())
+                    $ v16_baby_name = renpy.input("What's your baby's name?", default=("Henry").strip()) or _("Henry")
 
                     scene v16s27_9g # FPP. Show just Nora (slight smile, mouth is closed, looking in the air) in a thinking pose sitting in her seat, camera angle is from a seated positon
                     with dissolve
@@ -680,6 +665,8 @@ label v16s27:
 
             scene v16s27_14c # TPP. Show MC (slight smile, mouth is closed, looking at Lindsey) with his hands in the air like he surrenders with his back turned to Lindsey and looking over his shoulder at Lindsey, while Lindsey (laughing, mouth is open, looking at MC) and playfully pushing MC out of the Amphitheatre exit
             with dissolve
+
+            pause 0.75
 
             jump v16s28 # -Transition to Scene 28-
 

@@ -4,7 +4,7 @@
 # Time: Night
 
 label v16_start:
-    play music "<from 28>music/v15/Track Scene 49.mp3" fadein 2 ### from 28 ?
+    play music "<from 28>music/v15/Track Scene 49.mp3" fadein 2
 label v16s1:
 ### ERROR: 1) Fight with Tom
 
@@ -118,7 +118,7 @@ label v16s1_lose:
     scene v16s1_lose_2a
     with dissolve
 
-    u "I'm just going to sleep, ha. Are you going to watch me sleep?"
+    u "I'm just going to sleep. Are you going to watch me sleep?"
 
     scene v16s1_lose_2
     with dissolve
@@ -293,7 +293,7 @@ label v16s1_lose:
             scene v16s1_lose_4a # TPP. Same angle as v16s1_lose_4, Riley and MC walking away, Riley still supporting him with her arm around her as they walk away, MC in pain, Riley worried, mouths closed
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
     jump v16s1_end
 
@@ -402,7 +402,7 @@ label v16s1_win:
     scene v16s1_win_3e
     with dissolve
 
-    u "(Hmm, should I offer to stay with Riley? Or just enjoy a peaceful night at home?)"
+    u "(Hmm, should I offer to stay with Riley, or just enjoy a peaceful night at home?)"
 
     menu:
         "Go home alone":
@@ -476,7 +476,7 @@ label v16s1_win:
             scene v16s1_win_3
             with dissolve
 
-            u "Of course. I can't let you walk home alone in the dark, especially if you're not feeling safe, ha."
+            u "Of course. I can't let you walk home alone in the dark, especially if you're not feeling safe."
 
             scene v16s1_win_3b
             with dissolve

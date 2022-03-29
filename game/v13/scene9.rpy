@@ -588,7 +588,7 @@ label v13s9:
 
     ry "Yeah, man."
 
-    if v13_penelope_concert or v13_aubrey_concert: # -If concert # TODO: Update to correct variable later 
+    if v13_penelope_concert or v13_aubrey_concert: # -If concert
         scene v13s9_16a
         with dissolve
         

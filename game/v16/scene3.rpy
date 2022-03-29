@@ -4,6 +4,7 @@
 # Time: Night
 
 label v16s3:
+    play music "music/v15/Track Scene 1_3.mp3" fadein 2
     play sound "sounds/dooropen.mp3"
 
     scene v16s3_1 # TPP. Show Riley walking into her dorm while opening the door, MC following in right behind her, both neutral face, mouth closed.
@@ -74,7 +75,7 @@ label v16s3:
 
     pause 0.75
 
-    if v16_wintom: # Placeholder variable
+    if v16_wintom:
         scene v16s3_5a # FPP. MC's hand taking the icepack from Riley, Riley looking at MC, MC looking at Riley, Riley slight smile, mouth closed.
         with dissolve
 
@@ -149,10 +150,13 @@ label v16s3:
     u "Me too."
 
     if riley.relationship >= Relationship.FWB: # [Checkpoint 1.1]
-        scene v16s3_5f # FPP. MC looking at Riley, Riley looking at MC, Riley winking, slight smile, mouth open.
+        scene v16s3_5d
         with dissolve
 
         ri "The way you fought for me... I've never been so..."
+
+        scene v16s3_5f # FPP. MC looking at Riley, Riley looking at MC, Riley winking, slight smile, mouth open.
+        with dissolve
 
         ri "Turned on. By like, fighting... Haha."
 
@@ -169,9 +173,9 @@ label v16s3:
         scene v16s3_7 # FPP. MC looking down and seeing Riley's hand on his thigh.
         with dissolve
 
-        pause 0.75
+        pause 1.5
 
-        scene v16s3_5f
+        scene v16s3_5d
         with dissolve
 
         ri "You proved how much you really care about me."
@@ -239,19 +243,19 @@ label v16s3:
                         scene v16s3_5d
                         with dissolve
 
-                        ri "Yeah, people change, I guess. It's just a little confusing, ha."
+                        ri "Yeah, people change, I guess. It's just a little confusing, you know..."
 
                         ri "You think you have a good understanding of someone and what they want, and then..."
 
                         scene v16s3_5e
                         with dissolve
 
-                        u "Humans. We're all a little unpredictable at times"
+                        u "Humans. We're all a little unpredictable at times."
 
                         scene v16s3_5d
                         with dissolve
 
-                        ri "Yeah, you're right"
+                        ri "Yeah, you're right."
 
                     scene v16s3_5d
                     with dissolve

@@ -52,7 +52,7 @@ label v9_room_fri_morn:
             if lauren.messenger.replies:
                 call screen phone
             if lauren.messenger.replies:
-                "(I should text Lauren.)"
+                u "(I should text Lauren.)"
                 jump s17_PhoneContinueW
 
         u "(I better get ready and head over there. Hope it's not too much work.)"
@@ -93,7 +93,7 @@ label v9_room_fri_morn:
             if lauren.messenger.replies:
                 call screen phone
             if lauren.messenger.replies:
-                "(I should text Lauren.)"
+                u "(I should text Lauren.)"
                 jump s17_PhoneContinueA
 
         u "(I better get ready and head over there. Hope it's not too much work.)"

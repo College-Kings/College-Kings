@@ -333,6 +333,8 @@ label v16s64:
                 scene v16s64_4m # FPP. Show just Aubrey (sad smile, mouth closed, trying not to look at MC) 
                 with dissolve
 
+                pause 0.75
+
             else:
 
                 scene v16s64_4n # FPP. Show just Aubrey (slight smile, mouth closed, looking at MC)

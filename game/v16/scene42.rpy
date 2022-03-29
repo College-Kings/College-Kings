@@ -5,18 +5,22 @@
 
 # THE INSTRUCTIONS FOR THIS SCENE WERE COMPLETELY INCOMPREHENSIBLE. I DID MY BEST TO FIGURE OUT WHAT THE WRITER WANTED
 
-label v16s42: # 42) MC changes into normal clothes
-    $ v16s42_kiwiiPost1 = KiwiiPost(Autumn, "Autumn holding Oscar the dog inside the dog shelter, you can see the re-opening decorations in the background, Oscar is making a funny face if possible", "Tomorrow is our biggest day of the year: Our grand re-opening! Stop by to drop off a small donation to support our non-profit and spend some time with our babies! *The animal shown is currently available for adoption* <3", numberLikes=842)
-    $ v16s42_kiwiiPost1.new_comment(Lindsey, "OMG! I'm so upset that I can't make it... I probably would end up leaving with a pup!", numberLikes=98, force_send=True)
-    $ v16s42_kiwiiPost1.new_comment(Chris, "Oh... my... I think the Wolves need a mascot!", numberLikes=154, force_send=True)
-    $ v16s42_kiwiiPost1.new_comment(Sebastian, "You know damn well I'd be the one cleaning up after it... But hell yeah, let's do it!", numberLikes=115, force_send=True)
-    $ v16s42_kiwiiPost1.new_comment(Lauren, "OMG, I think I know the perfect dog for you guys.", numberLikes=127, force_send=True)
+label v16s42: # 42) MC changes into normal clothes ###check force send
+    $ v16s42_kiwiiPost1 = KiwiiPost(autumn, "v16/v16s42_autpost1.webp", "Tomorrow is our biggest day of the year: Our grand re-opening! Stop by to drop off a small donation to support our non-profit and spend some time with our babies! *The animal shown is currently available for adoption* <3", numberLikes=842)
+    $ v16s42_kiwiiPost1.new_comment(lindsey, "OMG! I'm so upset that I can't make it... I probably would end up leaving with a pup!", numberLikes=98, force_send=True)
+    $ v16s42_kiwiiPost1.new_comment(chris, "Oh... my... I think the Wolves need a mascot!", numberLikes=154, force_send=True)
+    $ v16s42_kiwiiPost1.new_comment(sebastian, "You know damn well I'd be the one cleaning up after it... But hell yeah, let's do it!", numberLikes=115, force_send=True)
+    $ v16s42_kiwiiPost1.new_comment(lauren, "OMG, I think I know the perfect dog for you guys.", numberLikes=127, force_send=True)
     $ v16s42_kiwiiPost1.add_reply("I'll be there! Can't wait :)", numberLikes=54)
-    $ v16s42_kiwiiPost1.new_comment(Autumn, "See you then! :)", numberLikes=124, force_send=True)
-    $ v16s42_kiwiiPost1.add_reply("You're supporting this, Lauren?! Lol", mentions=Lauren, numberLikes=92)
-    $ v16s42_kiwiiPost1.new_comment(Lauren, "Fully! <3", numberLikes=128, force_send=True)
+    $ v16s42_kiwiiPost1.new_comment(autumn, "See you then! :)", numberLikes=124, force_send=True)
+    $ v16s42_kiwiiPost1.add_reply("You're supporting this, Lauren?! Lol", mentions=lauren, numberLikes=92)
+    $ v16s42_kiwiiPost1.new_comment(lauren, "Fully! <3", numberLikes=128, force_send=True)
 
-    if v16s25a_date_with_aubrey: # TODO: Variable PLACEHOLDER VARIABLE # IF Transitioning from Scene 41 [Checkpoint 1.1]        
+    if False: # For Lint
+        scene v16s42_autpost1 ### "Autumn holding Oscar the dog inside the dog shelter, you can see the re-opening decorations in the background, Oscar is making a funny face if possible"
+        with dissolve
+
+    if v16_aubrey_date: # IF Transitioning from Scene 41 [Checkpoint 1.1]        
         if not joinwolves:
             scene v16s42_1 # TPP Show MC entering his room in fancy clothes (DATE NIGHT CLOTHES s41) [APE ROOM]
             with dissolve
@@ -37,8 +41,9 @@ label v16s42: # 42) MC changes into normal clothes
 
         pause 0.75
 
-    if (1 & v16s27_mc_baby_duty_night == 1) or (0x10 & v16s27_mc_baby_duty_night = 0x10): # IF on baby duty alone or sharing baby duty 1 = alone_duty_on_Wed, 0x10 = shared_duty_on_Wed
-        if v16s25a_date_with_aubrey: # PLACEHOLDER VARIABLE
+    # if (1 & v16s27_mc_baby_duty_night == 1) or (0x10 & v16s27_mc_baby_duty_night == 0x10): # IF on baby duty alone or sharing baby duty 1 = alone_duty_on_Wed, 0x10 = shared_duty_on_Wed
+    if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE or v16s27_mc_baby_schedule["wednesday"] == BabyDuty.WITH_PARTNER:
+        if v16_aubrey_date:
             if not joinwolves:
                 scene v16s42_1b # TPP Show MC Taking fancy clothes shirt off [APE ROOM]
                 with dissolve
@@ -89,7 +94,8 @@ label v16s42: # 42) MC changes into normal clothes
 
             pause 0.75
 
-        if 1 & v16s27_mc_baby_duty_night == 1: # PLACEHOLDER VARIABLE # IF on baby duty alone on Wed, transition to Scene 45-
+        # if 1 & v16s27_mc_baby_duty_night == 1: # PLACEHOLDER VARIABLE # IF on baby duty alone on Wed, transition to Scene 45-
+        if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE:
         
             jump v16s45
         
@@ -98,7 +104,7 @@ label v16s42: # 42) MC changes into normal clothes
             jump v16s47
 
     else: # IF partner is on baby duty alone
-        if v16s25a_date_with_aubrey: # PLACEHOLDER VARIABLE
+        if v16_aubrey_date:
             if not joinwolves:
                 scene v16s42_1b # TPP Show MC Taking fancy clothes shirt off [APE ROOM]
                 with dissolve

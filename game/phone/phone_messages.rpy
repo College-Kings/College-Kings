@@ -179,13 +179,6 @@ init python:
             self.disabled = disabled
 
 
-    def reply_focus_mask(x_offset, y_offset):    
-        if y_offset > 50 and x_offset > 50:
-            return True
-
-        return False
-
-
 screen messenger_home():
     tag phone_tag
 
@@ -209,7 +202,7 @@ screen messenger_home():
 
                     for contact in messenger.contacts:
                         button:
-                            action [Function(renpy.retain_after_load), SetField(contact, "notification", False), Show("messager", contact=contact)]
+                            action [Function(renpy.retain_after_load), Show("messager", contact=contact)]
                             ysize 80
 
                             add Transform(contact.profile_picture, xysize=(65, 65)) xpos 20 yalign 0.5
@@ -228,6 +221,7 @@ screen messager(contact=None):
 
     python:
         yadj.value = yadjValue
+        contact.notification = False
 
     use base_phone:
         frame:
@@ -255,9 +249,9 @@ screen messager(contact=None):
                 xysize (416, 686)
 
                 vbox:
-                    spacing 5
+                    spacing -25
 
-                    null height 5
+                    null height 25
 
                     for message in contact.sent_messages:
                         frame:
@@ -276,16 +270,20 @@ screen messager(contact=None):
                                     action Show("phone_image", img=message.image)
 
                             elif isinstance(message, Reply):
-                                background "message_background"
+                                background "reply_background"
+                                xalign 1.0
 
-                                text message.message  style "message_text"
+                                text message.message  style "reply_text"
 
                             elif isinstance(message, ImgReply):
-                                background "message_background"
+                                background "reply_background"
+                                xalign 1.0
 
                                 imagebutton:
                                     idle Transform(message.image, ysize=216)
                                     action Show("phone_image", img=message.image)
+
+                    null height 75
 
             if contact.replies:
                 fixed:

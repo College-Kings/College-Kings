@@ -17,7 +17,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     scene v16s34_3 # FPP Show Chloe (slight smile, mouth closed) now closer, looking at MC
     with dissolve
 
-    u "When you say jump, I say how high."
+    u "When you say jump, I say \"how high?\"."
 
     scene v16s34_3a # FPP Same angle as 3, Chloe (slight smile, mouth open) looking at MC
     with dissolve
@@ -305,7 +305,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     scene v16s34_7i # FPP Same angle as 7, Elijah (neutral expression, mouth closed) looking at MC
     with dissolve
 
-    u "Yeah, pretty much."
+    u "Pretty much, yes."
 
     play sound "sounds/vibrate.mp3"
 
@@ -342,7 +342,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
     el "Is that really all you've got?"
 
     # IF mc did THREE OR MORE OF made fun of Elijah on day one OR Homecoming dance OR in the scene where we meet his mom OR chose Joke About Elijah in this scene
-    if v16s34_joke_about_elijah and elijah.Relationship == Relationship.MAKEFUN:
+    if v16s34_joke_about_elijah and elijah.relationship <= Relationship.MAKEFUN:
         
         scene v16s34_7j # FPP Same angle as 7, Elijah (neutral expression, mouth open) looking at MC
         with dissolve
@@ -463,7 +463,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
             el "Of course, I'm serious."
 
-            if chloe.relationship == Relationship.GIRLFRIEND: # IF ChloeGF
+            if chloe.relationship >= Relationship.GIRLFRIEND: # IF ChloeGF
                 scene v16s34_7i
                 with dissolve
 
@@ -503,7 +503,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
             el "No, I don't think-"
 
-            if chloe.relationship == Relationship.GIRLFRIEND: # IF ChloeGF
+            if chloe.relationship >= Relationship.GIRLFRIEND: # IF ChloeGF
                 scene v16s34_7i
                 with dissolve
 
@@ -555,7 +555,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     cl "What do you mean?"
 
-    if (v16s34_get_aggressive_with_elijah or chloe.relationship == Relationship.GIRLFRIEND): # IF chose Get Aggressive, or ChloeGF
+    if (v16s34_get_aggressive_with_elijah or chloe.relationship >= Relationship.GIRLFRIEND): # IF chose Get Aggressive, or ChloeGF
         scene v16s34_13c # FPP Same angle as 13, Chloe (curious expression, eyebrow raised, mouth open) looking at MC (no phone)
         with dissolve
 
@@ -678,7 +678,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     u "Eww."
 
-    if chloe.relationship == Relationship.GIRLFRIEND: # IF ChloeGf
+    if chloe.relationship >= Relationship.GIRLFRIEND: # IF ChloeGf
         scene v16s34_14 # TPP Show Chloe (slight smile, mouth open) placing her hand on MC's (slightly angry, mouth closed) chest to comfort him
         with dissolve
 
@@ -752,11 +752,13 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
             cl "Yeah, that creepy little prick doesn't even deserve the satisfaction of my lips..."
 
-            if chloe.relationship == Relationship.GIRLFRIEND:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 scene v16s34_13b
                 with dissolve
 
                 u "No one does. Except me."
+
+                play sound "sounds/kiss.mp3"
 
                 scene v16s34_15 # TPP Show Chloe giving MC a deep, passionate kiss
                 with dissolve
@@ -878,7 +880,7 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
         scene v16s34_19
         with dissolve
 
-        cl "Yeah, you can. Quite literally."
+        cl "Oh, you can. Quite literally."
 
         scene v16s34_19b # FPP Same angle as 19, Chloe (slight smile, eyebrow raised, mouth open) leaning back with her arms crossed in front of her chest, looking at Elijah
         with dissolve
@@ -925,7 +927,9 @@ label v16s34: # 34) Talk to Elijah about the cover with Chloe
 
     cl "Way too much to do! I'll catch you later."
 
-    if chloe.relationship == Relationship.GIRLFRIEND: # IF ChloeGF
+    if chloe.relationship >= Relationship.GIRLFRIEND: # IF ChloeGF
+        play sound "sounds/kiss.mp3"
+        
         scene v16s34_15
         with dissolve
 

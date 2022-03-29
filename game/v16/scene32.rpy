@@ -31,7 +31,7 @@ label v16s32:
         pause 0.75
 
     # -if AubreyTamed and having date
-    if aubrey.relationship == Relationship.TAMED and v16s25a_date_with_aubrey: # TODO:Variable
+    if v16_aubrey_date:
         scene v16s32_3 # TPP. Show just Mc looking at his phone, slight smile, mouth is closed, (generic white wall) for the background
         with dissolve
 
@@ -68,7 +68,7 @@ label v16s32:
 
         menu:
             "Standard reservation":
-                $ v16s32_birthday_reservation = 1 # TODO: Variable                
+                $ v16s32_birthday_reservation = 1 # TODO: Variable 
 
                 scene v16s32_3
                 with dissolve
@@ -140,7 +140,7 @@ label v16s32:
                 u "(Oh, shit. It says I have to pay the driver in cash. Can't use my card.)"
 
                 # -if helping Chloe with Spa day
-                if not v16s12_chloe_planboard_decide_newspaper_cover:
+                if (v14_help_chloe and not v16_chloe_newspaper):
                     scene v16s32_3b
                     with dissolve
 
@@ -155,15 +155,14 @@ label v16s32:
                     with dissolve
 
                     menu:
-                        "Use the money" if mc.money >= v16s32_cost_cab_and_flowers :                                                        
-                            
+                        "Use the money" if mc.money >= v16s32_cost_cab_and_flowers:
                             $ mc.money -= v16s32_cost_cab_and_flowers
                             $ v16s26_lindsey_donation_money -= v16s32_cost_cab_and_flowers
 
                             scene v16s32_3a
                             with dissolve
 
-                            u "(What Lindsey doesn't know won't hurt her, right? Surely....)"
+                            u "(What Lindsey doesn't know won't hurt her, right? Surely...)"
 
                         "Cancel the booking":
                             
@@ -172,13 +171,13 @@ label v16s32:
                             scene v16s32_3a
                             with dissolve
 
-                            u "(I can't use someone else's money for my date, haha. I think Aubrey would understand."
+                            u "(I can't use someone else's money for my date, haha. I think Aubrey would understand.)"
 
             "She can manage":
                 scene v16s32_3
                 with dissolve
 
-                u "(She can find her own way there, ha. She's a tough girl.)"
+                u "(She can find her own way there. She's a tough girl.)"
 
                 scene v16s32_3a
                 with dissolve
@@ -210,7 +209,7 @@ label v16s32:
 
         jump v16s33 # -Transition to Scene 33-
 
-    elif v16s12_chloe_planboard_decide_newspaper_cover: # -if MC is helping Chloe with newspaper cover
+    elif v16_chloe_newspaper: # -if MC is helping Chloe with newspaper cover
         # -MC's phone vibrates. He checks it and sees a text from Chloe-
 
         scene v16s32_5 # FPP. Close up shot of MC's phone in his hand, with a new message text appearing on his phone
@@ -227,7 +226,7 @@ label v16s32:
 
         label v16s32_phoneContinue1:
             if chloe.messenger.replies:
-                call screen phones
+                call screen phone
             if chloe.messenger.replies:
                 jump v16s32_phoneContinue1
 
@@ -238,13 +237,13 @@ label v16s32:
 
         jump v16s34 # -Transition to Scene 34-
 
-    elif not v16s12_chloe_planboard_decide_newspaper_cover:# -if MC is helping Chloe with spa night # TODO: Variable
+    elif (v14_help_chloe and not v16_chloe_newspaper): # -if MC is helping Chloe with spa night
         # -MC checks his phone-
 
         scene v16s32_3
         with dissolve
 
-        u "(Oh shit, I need to get started on shopping... Chloe would kick my ass if she knew what I was doing right now, haha."
+        u "(Oh shit, I need to get started on shopping... Chloe would kick my ass if she knew what I was doing right now, haha.)"
 
         scene v16s32_6 # TPP. Show a close-up shot of Mc's face, slight smile, mouth is closed, same position and background as v16s32_3
         with dissolve

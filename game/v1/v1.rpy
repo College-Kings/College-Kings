@@ -1511,7 +1511,7 @@ label efra:
         if lauren.messenger.replies:
             call screen phone
         if lauren.messenger.replies:
-            "(I should reply to Lauren.)"
+            u "(I should reply to Lauren.)"
 
             scene s61
             with dissolve
@@ -1529,7 +1529,7 @@ label efra:
         if julia.messenger.replies:
             call screen phone
         if julia.messenger.replies:
-            "(I should reply to Julia as well, by the way.)"
+            u "(I should reply to Julia as well, by the way.)"
             jump v1_phoneCheck2
 
     scene s61a
@@ -4157,7 +4157,7 @@ label fr2end: #for compatibility only
 
     cl "I remember being so nervous in my first year."
 
-    cl "One time a guy stole my underwear and somehow the dean found out about it."
+    cl "One time a guy stole my underwear and somehow the Dean found out about it."
 
     scene s116a
     with dissolve
@@ -4165,7 +4165,7 @@ label fr2end: #for compatibility only
     scene s116
     with dissolve
 
-    cl "Both of us then had to come to his office, so that the guy could apologize and give me my panties back right in front of the dean."
+    cl "Both of us then had to come to his office, so that the guy could apologize and give me my panties back right in front of the Dean."
 
     cl "It was sooo embarrassing."
 
@@ -4186,7 +4186,7 @@ label fr2end: #for compatibility only
         "Poke fun":
             $ add_point(KCT.TROUBLEMAKER)
 
-            u "Hahaha, sounds like the dean was into you."
+            u "Hahaha, sounds like the Dean was into you."
 
             scene s116d
             with dissolve

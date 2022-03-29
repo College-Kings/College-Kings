@@ -7,9 +7,7 @@ label v16s63c:
 
     $ sceneList.add("v16s63c_lindsey_sex") # MC had sex with Lindsey during Chloe spa night during massage
     $ sex_overlay_options = []
-    $ sex_overlay_options = [
-        [("Boobs", "v16s63c_boobs"), ("Feet", "v16s63c_feet"), ("Vagina", "v16s63c_vagina")],
-    ]    
+    $ sex_overlay_options = [("Boobs", "v16s63c_boobs"), ("Feet", "v16s63c_feet"), ("Vagina", "v16s63c_vagina")] 
 
     scene v16s63c_1 # TPP. Lindsey (seductive expression, mouth closed, looking at MC) still laying on the massage table grabs MC's hand and pulls it off her towel, MC (full smile, mouth closed, looking at Lindsey) still standing 
     with dissolve
@@ -19,7 +17,7 @@ label v16s63c:
     scene v16s63c_1a # TPP. Lindsey (seductive expression, mouth closed, looking at MC) she is now totally naked and has pulled the towel off of her and it is dangling over the edge of the table in 2 fingers as she is laying on her back, she is biting the finger of her other hand, with the leg closest to MC laying flat on the table, and the other bent at the knee to expose more of her pussy, MC (full smile, mouth closed, looking at Lindsey)
     with dissolve
 
-    pause 0.75    
+    pause 0.75
 
     # -We enter the Foreplay Free Roam. MC can click on her Boobs, Feet, Vagina or Mouth. Clicking on her Mouth will end the free roam-
 
@@ -120,7 +118,7 @@ label v16s63c_feet:     # -if Feet
 
             li "Fuck, that's hot."
 
-            scene v16s63c_6c
+            scene v16s63c_6c ### check if matches mouth speaking
             with dissolve
 
             li "I love feeling your hands all over me, [name]."
@@ -151,7 +149,7 @@ label v16s63c_feet:     # -if Feet
 
             li "So wet and warm..."
 
-            scene v16s63c_7b  # TPP. same as v16s63c_7 Lindsey (almost orgasmic expression, mouth open, eyes closed) and now gripping the table harder with her back slightly arched, and Mc (slight smile, mouth open, sucking harder on her big toe)
+            scene v16s63c_7b # TPP. same as v16s63c_7 Lindsey (almost orgasmic expression, mouth open, eyes closed) and now gripping the table harder with her back slightly arched, and Mc (slight smile, mouth open, sucking harder on her big toe)
             with dissolve
 
             li "Mmm, fuck..."
@@ -272,9 +270,9 @@ label v16s63c_end_foreplay_fr: # -if Mouth / End of Foreplay freeroam
             image v16linbj = Movie(play="images/v16/Scene63c/v16linbj.webm", loop=True, image="images/v16/Scene63c/v16linbjStart.webp", start_image="images/v16/Scene63c/v16linbjStart.webp") # Lindsey Blowjob TPP1 Slow
             image v16linbj2 = Movie(play="images/v16/Scene63c/v16linbj2.webm", loop=True, image="images/v16/Scene63c/v16linbj2Start.webp", start_image="images/v16/Scene63c/v16linbj2Start.webp") # Lindsey Blowjob TPP2 Slow
             image v16linbjf = Movie(play="images/v16/Scene63c/v16linbjf.webm", loop=True, image="images/v16/Scene63c/v16linbjStart.webp", start_image="images/v16/Scene63c/v16linbjStart.webp") # Lindsey Blowjob TPP1 Fast
-            image v16linbj2f = Movie(play="images/v16/Scene63c/v16linbj2f.webm", loop=True, image="images/v16/Scene63c/v16linbj2Start.webp", start_image="images/v16/Scene63c/v16linbj2Start.webp") # Lindsey Blowjob  TPP2 Fast
+            image v16linbj2f = Movie(play="images/v16/Scene63c/v16linbj2f.webm", loop=True, image="images/v16/Scene63c/v16linbj2Start.webp", start_image="images/v16/Scene63c/v16linbj2Start.webp") # Lindsey Blowjob TPP2 Fast
 
-            scene v16linbj # ignore as animation  Animation 1 Angle 1 Slow
+            scene v16linbj # ignore as animation Animation 1 Angle 1 Slow
             with dissolve
 
             u "*Gasps*"
@@ -492,7 +490,7 @@ label v16s63c_end_foreplay_fr: # -if Mouth / End of Foreplay freeroam
             scene v16s63c_18a
             with dissolve
 
-            u "It's a bit late to worry about it now, ha. I think we're fine. No one knocked."
+            u "It's a bit late to worry about it now, Linds. I think we're fine. No one knocked."
 
             scene v16s63c_18
             with dissolve
@@ -509,7 +507,7 @@ label v16s63c_end_foreplay_fr: # -if Mouth / End of Foreplay freeroam
 
             li "Hehe! Stop it, mister..."
 
-            scene v16s63c_20 # TPP.  Lindsey (full smile, mouth open, looking at MC) wearing just a towel and MC (full smile, mouth closed, turned away from Lindsey) walking out of the room
+            scene v16s63c_20 # TPP. Lindsey (full smile, mouth open, looking at MC) wearing just a towel and MC (full smile, mouth closed, turned away from Lindsey) walking out of the room
             with dissolve
 
             jump v16s64 # -Transition to Scene 64-

@@ -13,6 +13,8 @@ init python:
         def __init__(self, name):
             self.name = name
 
+            FightQuirk.quirks.append(self)
+
         def effect(self):
             pass
 
@@ -20,6 +22,8 @@ init python:
     class TheGreatEqualizer(FightQuirk):
         def __init__(self, name):
             self.name = name
+
+            FightQuirk.quirks.append(self)
 
         def effect(self, target, attacker):
             if target.health > attacker.health:
@@ -34,6 +38,8 @@ init python:
         def __init__(self, name):
             self.name = name
 
+            FightQuirk.quirks.append(self)
+
         def effect(self, attacker, move):
             if attacker.stance == move.ideal_stance:
                 return 1.2
@@ -45,6 +51,8 @@ init python:
         def __init__(self, name):
             self.name = name
 
+            FightQuirk.quirks.append(self)
+
         def effect(self):
             pass
 
@@ -52,6 +60,8 @@ init python:
     class DoubleTime(FightQuirk):
         def __init__(self, name):
             self.name = name
+
+            FightQuirk.quirks.append(self)
 
         def effect(self):
             pass
@@ -61,5 +71,15 @@ init python:
         def __init__(self, name):
             self.name = name
 
+            FightQuirk.quirks.append(self)
+
         def effect(self):
             pass
+
+
+define seeing_red = SeeingRed("Seeing Red")
+define the_great_equalizer = TheGreatEqualizer("The Great Equalizer")
+define in_the_zone = InTheZone("In The Zone")
+define backlash = Backlash("Backlash")
+define double_time = DoubleTime("Double Time")
+define all_in = AllIn("All In")

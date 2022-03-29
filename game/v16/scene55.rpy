@@ -130,6 +130,9 @@ label v16s55: # 55) Prepare Lindsey for the interview
                 $ v16s55_lindsey_followup_question_set.add("sounds_great")
                 $ add_point(KCT.TROUBLEMAKER)
 
+                scene v16s55_3e
+                #with dissolve
+
                 u "Can't argue with that. "
 
                 scene v16s55_3b
@@ -142,13 +145,16 @@ label v16s55: # 55) Prepare Lindsey for the interview
 
                 li "Um... Oh, and I hear she's good at volleyball too. That's three things."
 
-                scene v16s55_3d
+                scene v16s55_3d ### check if 3d corresponds to mouth speaking
                 with dissolve
                 
                 u "Great job."
             
             "Make a suggestion":
                 $ v16s55_lindsey_followup_question_set.add("make_suggestion")
+
+                scene v16s55_3e
+                #with dissolve
 
                 u "Haha, anything that isn't about her physical appearance?"
 
@@ -315,7 +321,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
         li "Oh! I donated money to the dog shelter!"
 
         # -if mc didn't go on a date with aubrey and gave a full donation to lindsey
-        if not v16s25a_date_with_aubrey and v16s26_lindsey_donation_money == 50:  # TODO: Variables 
+        if not v16_aubrey_date and v16s26_lindsey_donation_money == 50: # TODO: Variables 
             scene v16s55_3e
             with dissolve
 
@@ -329,16 +335,16 @@ label v16s55: # 55) Prepare Lindsey for the interview
             u "(Well, you donated a little less than you think...)"
 
         # -if MC spent all Lindsey's money and mc DID NOT post on Kiwii about the dog shelter
-        elif v16s26_lindsey_donation_money == 0 and not v16s52_mc_dogshelter_kiwii_post: # PLACEHOLDER VARIABLE
+        elif v16s26_lindsey_donation_money == 0 and not v16s52_mc_dogshelter_kiwii_post: # TODO: PLACEHOLDER VARIABLE
             scene v16s55_3e
             with dissolve
 
             u "(Well, at least you think you did.)"
 
         # -if MC spent all Lindsey's money and MC DID post on Kiwii about the dog shelter
-        elif v16s26_lindsey_donation_money == 0 and v16s52_mc_dogshelter_kiwii_post: # PLACEHOLDER VARIABLES
+        elif v16s26_lindsey_donation_money == 0 and v16s52_mc_dogshelter_kiwii_post: # TODO: PLACEHOLDER VARIABLES
             scene v16s55_3c
-            with dissolve    
+            with dissolve 
 
             li "Or, I wanted to ask you about that. Autumn replied to my comment and asked about the donation...?"
 
@@ -444,7 +450,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
     li "Oh, okay, sure."
 
     # -if Lindsey is being interviewed by Elijah
-    if not v16s28_lindsey_pb_riley_interview: # PLACEHOLDER VARIABLE
+    if v16_lindsey_elijah:
         scene v16s55_3b
         with dissolve
 
@@ -456,7 +462,7 @@ label v16s55: # 55) Prepare Lindsey for the interview
         u "Just make sure you don't get pulled into ranting about Chloe or sounding like you have a big ego."
 
     # -if Lindsey is being interviewed by Riley
-    else:
+    elif v16_lindsey_newspaper:
         scene v16s55_3b
         with dissolve
 
@@ -489,12 +495,10 @@ label v16s55: # 55) Prepare Lindsey for the interview
 
             u "Don't worry if you want to think for a whole minute before answering. It's better than saying something you'll regret."
 
-            if not v16s28_lindsey_pb_riley_interview: # PLACEHOLDER VARIABLE # -if being interviewed by Elijah
-
+            if v16_lindsey_elijah: # -if being interviewed by Elijah
                 u "And if all else fails, try flirting with him, but keep it subtle. Just give him a little bit of attention and he'll be putty in your hands."
 
-            else: # -if being interviewed by Riley
-
+            elif v16_lindsey_newspaper: # -if being interviewed by Riley
                 u "I know Riley is treating her role seriously, so just make sure you're professional and it should go well. Even if she does crack a little joke, don't get over-friendly in the interview."
 
                 u "Still, a few well-placed compliments will help too."

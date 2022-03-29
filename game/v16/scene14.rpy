@@ -5,7 +5,6 @@
 
 label v16s14:
 # -MC gym outfit, Nora & Rose yoga outfits. Nora's wearing her fav color royal blue if possible (just bc she looks good af in it), i'm gonna assume we should take advantage of this situation and have them be barefoot, especially the girls (painted nails plz)-
-
     scene v16s14_1 # FPP. MC sees Nora in the distance, leaning on a tree in the park, Nora slight smile, looking at MC, waving at him, mouth closed, three yoga mats are on the ground, one of the mats is behind the other 2
     with dissolve
 
@@ -24,18 +23,13 @@ label v16s14:
     scene v16s14_3a # FPP. Same as v16s14_3, Nora slight smile, mouth open
     with dissolve
 
-    no "Hey, [name]. Can you believe this weather? It's the perfect day for yoga."
-
-    scene v16s14_3
-    with dissolve
-
-    u "Ha, yeah. It's refreshing."
-
+    no "Hey, [name]."
+    
     if nora.relationship >= Relationship.FWB:
         scene v16s14_4 # TPP. SHow MC giving Nora a kiss, she is still leaning on the tree
         with dissolve
-
-        pause 0.75
+        play sound "sounds/kiss.mp3"
+        pause 1.25
 
         scene v16s14_3a
         with dissolve
@@ -45,8 +39,15 @@ label v16s14:
         no "You'll have to control yourself though. We're expecting company."
     
     else:
+        scene v16s14_3a # FPP. Same as v16s14_3, Nora slight smile, mouth open
+        #with dissolve    
+        
+        no "Can you believe this weather? It's the perfect day for yoga."
+
         scene v16s14_3
-        #with dissolve
+        with dissolve
+
+        u "Ha, yeah. It's refreshing."
 
         u "Are we ready to start?"
 
@@ -73,7 +74,7 @@ label v16s14:
     scene v16s14_5 # FPP. MC turns and sees Ms. Rose approaching from a distance, Ms. Rose smiling, waving, mouth closed
     with dissolve
 
-    pause 0.75
+    pause 1
 
     if nora.relationship >= Relationship.FWB and ms_rose.relationship >= Relationship.FWB:
         scene v16s14_5a
@@ -87,7 +88,6 @@ label v16s14:
 
         u "(Seriously? There goes my alone time with Nora.)"
     
-
     scene v16s14_6 # FPP. Ms. Rose now standing next to MC and Nora, MC looking at Ms. Rose, Ms. Rose looking at Nora, Ms. Rose slight smile, mouth open
     with dissolve
 
@@ -98,7 +98,7 @@ label v16s14:
 
     no "I said a friend was coming."
 
-    if ms_rose.relationship == Relationship.THREATEN or v16_ms_rose_breakup: # if broke up with ms. rose
+    if ms_rose.relationship <= Relationship.THREATEN or v16_ms_rose_breakup: # if broke up with ms. rose
         scene v16s14_6d # FPP. Same as v16s14_6, Ms. Rose slightly stunned, mouth open
         with dissolve
 
@@ -124,7 +124,7 @@ label v16s14:
 
         ro "I'm fine, I promise. But..."
 
-    elif ms_rose.relationship >= Relationship.FWB:# if still dating ms. rose
+    elif ms_rose.relationship >= Relationship.FWB: # if still dating ms. rose
         scene v16s14_6b
         with dissolve
 
@@ -174,7 +174,7 @@ label v16s14:
     scene v16s14_6a
     with dissolve
 
-    ro "Sorry [name] but, yoga is about relaxing, and I can't relax when we discuss work."
+    ro "Sorry, [name], but yoga is about relaxing. And I can't relax when we discuss work."
 
     scene v16s14_3a
     with dissolve
@@ -184,7 +184,7 @@ label v16s14:
     scene v16s14_3
     with dissolve
 
-    u "You're right, sorry guys."
+    u "You're right, sorry ladies."
 
     scene v16s14_6
     with dissolve
@@ -211,7 +211,7 @@ label v16s14:
     scene v16s14_7 # TPP. Show the three of them walking towards their mats, all slight smiles, mouths closed (MC is walking towards the mat that is behind the other 2)
     with dissolve
 
-    pause 
+    pause 0.75
 
     scene v16s14_8 # TPP. Camera looking at Ms. Rose, Ms. Rose looking at Nora's direction, Ms. Rose smiling, mouth open
     with dissolve
@@ -236,7 +236,7 @@ label v16s14:
     scene v16s14_10a # TPP. Same as v16s14_10. Show Ms. Rose getting on her hands and knees, Nora and MC watching Ms. Rose getting on her hands and knees
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v16s14_10b # TPP. Same as v16s14_10a, the three of them on their hands and knees, all smiling, Nora and MC mouths closed, Ms. Rose mouth open
     with dissolve
@@ -246,24 +246,24 @@ label v16s14:
     scene v16s14_10c # TPP. Same as v16s14_10b, Ms. Rose doing the "cow and cat pose", MC and Nora watching her do the pose (both on their hands and knees)
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v16s14_10d # TPP. Same as v16s14_10c, all three of them doing the "cow and cat pose"
     with dissolve
 
-    pause 0.75
-
+    pause 1
+    
     scene v16s14_11 # FPP. MC on his hands and knees, he looks forward, seeing both Nora and Ms. Rose with their asses sticking out from doing the pose
     with dissolve
 
-    u "(Holyyyyy... We've got the best seat in the house!)"
+    u "(Holyyyyy... This is the best seat in the house!)"
 
     menu:
         "Stare at Nora":
             scene v16s14_12 # FPP. MC focusing only on Nora's ass while she does the cow pose
             with dissolve
 
-            ro "Now take a deep breath in... and"
+            ro "Now take a deep breath in... and..."
 
             ro "Hold it..."
 
@@ -289,7 +289,7 @@ label v16s14:
             scene v16s14_12
             with dissolve
 
-            no "I'm really... *Grunts* Feeling this."
+            no "I'm really... *Grunts* feeling this."
 
             ro "Does it feel okay?"
 
@@ -310,76 +310,18 @@ label v16s14:
 
             u "Fantastic, thanks."
 
-            pause 0.75
-
             scene v16s14_12
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
-        "Stare at Ms. Rose":
-            scene v16s14_13 # FPP. MC focusing only on Ms. Rose's ass while she does the cow pose
-            with dissolve
-
-            ro "Now take a deep breath in... and"
-
-            ro "Hold it..."
-
-            scene v16s14_13a # FPP. Same as v16s14_13, Ms. Rose curving her back into a catlike pose
-            with dissolve
-
-            ro "And on the exhale, curve your back to go into a cat-like pose."
-
-            u "(Ooh... I feel something burning. Is that good?)"
-
-            scene v16s14_13b # FPP. Same as v16s14_13, more neutral position, Ms. Rose inhaling before going into the cat or cow pose
-            with dissolve
-
-            ro "Now inhale... And hold."
-
-            scene v16s14_13a
-            with dissolve
-
-            ro "Now when we release, we form into our cow pose again."
-
-            ro "And repeat."
-
-            scene v16s14_13
-            with dissolve
-
-            no "I'm really... *Grunts* Feeling this."
-
-            ro "Does it feel okay?"
-
-            scene v16s14_13b
-            with dissolve
-
-            pause 0.75
-
-            scene v16s14_13a
-            with dissolve
-
-            no "Yeah. Just tight."
-
-            no "How's it going back there, [name]?"
-
-            scene v16s14_13b
-            with dissolve
-
-            u "Fantastic, thanks."
-
-            pause 0.75
-
-            scene v16s14_13
-            with dissolve
-
-            pause 0.75
-            
         "Stay focused":
+            $ v16s14_focus += 1
+        
             scene v16s14_10e # TPP. Same as v16s14_10d, all doing the cow pose
             with dissolve
 
-            ro "Now take a deep breath in... and"
+            ro "Now take a deep breath in... and..."
 
             ro "Hold it..."
 
@@ -405,7 +347,7 @@ label v16s14:
             scene v16s14_10e
             with dissolve
 
-            no "I'm really... *Grunts* Feeling this."
+            no "I'm really... *Grunts* feeling this."
 
             ro "Does it feel okay?"
 
@@ -426,13 +368,67 @@ label v16s14:
 
             u "Fantastic, thanks."
 
-            pause 0.75
-
             scene v16s14_10e
+            with dissolve
+
+            pause 1.25
+
+        "Stare at Ms. Rose":
+            scene v16s14_13 # FPP. MC focusing only on Ms. Rose's ass while she does the cow pose
+            with dissolve
+
+            ro "Now take a deep breath in... and..."
+
+            ro "Hold it..."
+
+            scene v16s14_13a # FPP. Same as v16s14_13, Ms. Rose curving her back into a catlike pose
+            with dissolve
+
+            ro "And on the exhale, curve your back to go into a cat-like pose."
+
+            u "(Ooh... I feel something burning. Is that good?)"
+
+            scene v16s14_13b # FPP. Same as v16s14_13, more neutral position, Ms. Rose inhaling before going into the cat or cow pose
+            with dissolve
+
+            ro "Now inhale... And hold."
+
+            scene v16s14_13a
+            with dissolve
+
+            ro "Now when we release, we form into our cow pose again."
+
+            ro "And repeat."
+
+            scene v16s14_13
+            with dissolve
+
+            no "I'm really... *Grunts* feeling this."
+
+            ro "Does it feel okay?"
+
+            scene v16s14_13b
             with dissolve
 
             pause 0.75
 
+            scene v16s14_13a
+            with dissolve
+
+            no "Yeah. Just tight."
+
+            no "How's it going back there, [name]?"
+
+            scene v16s14_13b
+            with dissolve
+
+            u "Fantastic, thanks."
+
+            scene v16s14_13
+            with dissolve
+
+            pause 1.25
+            
     scene v16s14_10b
     with dissolve
 
@@ -490,7 +486,7 @@ label v16s14:
     scene v16s14_10m # TPP. Same as v16s14_10j, ligting the left leg instead of the right leg, all mouths closed
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v16s14_10b
     with dissolve
@@ -552,6 +548,55 @@ label v16s14:
 
             u "(Yeah, whatever... Feels... Good...)"
 
+        "Stay focused":
+            $ v16s14_focus += 1
+                    
+            scene v16s14_10o # TPP. Same as v16s14_10n, Ms. Rose doing the pose, Ms. Rose mouth open
+            with dissolve
+
+            if v16s14_focus == 2:
+                $ grant_achievement("must_resist_temptation")
+            
+            ro "Lift your hips up, so you're making a triangle shape."
+
+            ro "You can bend your knees if it helps... *Moans* Feel the stretch."
+
+            scene v16s14_10p # TPP. Same as v16s14_10o, Ms. Rose and Nora doing the pose, MC watching, Nora mouth slightly open
+            with dissolve
+
+            no "Oh, fuck..."
+
+            u "(Is this what people mean when they say \"hot yoga\"?)"
+
+            scene v16s14_10q # TPP. Same as v16s14_10p, all three doing the pose now, Ms. Rose mouth open
+            with dissolve
+
+            ro "Press your chest towards your legs, as far as possible without hurting yourself."
+
+            ro "Hold it for a moment longer."
+
+            scene v16s14_18 # TPP. Show all three doing the pose (focus more on Nora here), all mouths closed, Ms. Rose slight smile, MC and Nora slightly struggling
+            with dissolve
+
+            no "*Grunts*"
+
+            scene v16s14_19 # TPP. Show all three doing the pose (focus more on Ms. Rose here), Ms. Rose mouth open, MC and Nora mouths closed, Ms. Rose slight smile, MC and Nora slightly struggling
+            with dissolve
+
+            ro "Now..."
+
+            ro "Without standing up, just walk yourself to the top of your mat. Stay bent over."
+
+            scene v16s14_10q
+            with dissolve
+
+            ro "You can bend your knees a little, and feel free to sway side to side, whatever feels good."
+
+            scene v16s14_18
+            with dissolve
+
+            u "(This is more painful than I thought it was going to be... I might be sore tomorrow, haha.)"
+
         "Stare at Ms. Rose":
             scene v16s14_13c # FPP. Same as v16s14_12, now they are doing the downward-facing dog pose. Ms. Rose is lifting her hips up, as to make a triangle shape with her body
             with dissolve
@@ -599,50 +644,6 @@ label v16s14:
 
             u "(Yeah, whatever... Feels... Good...)"
 
-        "Stay focused":
-            scene v16s14_10o # TPP. Same as v16s14_10n, Ms. Rose doing the pose, Ms. Rose mouth open
-            with dissolve
-
-            ro "Lift your hips up, so you're making a triangle shape"
-
-            ro "You can bend your knees if it helps... *Moans* Feel the stretch."
-
-            scene v16s14_10p # TPP. Same as v16s14_10o, Ms. Rose and Nora doing the pose, MC watching, Nora mouth slightly open
-            with dissolve
-
-            no "Oh, fuck..."
-
-            u "(Is this what people mean when they say \"hot yoga\"?)"
-
-            scene v16s14_10q # TPP. Same as v16s14_10p, all three doing the pose now, Ms. Rose mouth open
-            with dissolve
-
-            ro "Press your chest towards your legs, as far as possible without hurting yourself."
-
-            ro "Hold it for a moment longer."
-
-            scene v16s14_18 # TPP. Show all three doing the pose (focus more on Nora here), all mouths closed, Ms. Rose slight smile, MC and Nora slightly struggling
-            with dissolve
-
-            no "*Grunts*"
-
-            scene v16s14_19 # TPP. Show all three doing the pose (focus more on Ms. Rose here), Ms. Rose mouth open, MC and Nora mouths closed, Ms. Rose slight smile, MC and Nora slightly struggling
-            with dissolve
-
-            ro "Now..."
-
-            ro "Without standing up, just walk yourself to the top of your mat. Stay bent over."
-
-            scene v16s14_10q
-            with dissolve
-
-            ro "You can bend your knees a little, and feel free to sway side to side, whatever feels good."
-
-            scene v16s14_18
-            with dissolve
-
-            u "(This is more painful than I thought it was going to be... I might be sore tomorrow, haha.)"
-
     scene v16s14_10r # TPP. Same as v16s14_10q, all three of them pushing their stomachs in, Ms. Rose mouth open
     with dissolve
 
@@ -668,6 +669,8 @@ label v16s14:
         yalign 1.0
         linear 6.0 yalign 0.0
     with fade
+
+    pause
 
     scene v16s14_20 # FPP. MC, Nora and Ms. Rose standing on their mats, facing each other, MC looking at Ms. Rose, Ms. Rose looking at Nora, Ms. Rose smiling, mouth open
     with dissolve
@@ -774,12 +777,14 @@ label v16s14:
     scene v16s14_21
     with dissolve
 
-    no "Uh, yeah. Sure. But honestly, not for long, okay? I'm ready to relax and just forget about things with Chris."
+    no "Uh, yeah. Sure. But honestly, not for long, okay? I'm ready to relax and just forget about Chris."
 
     scene v16s14_20
     with dissolve
 
     ro "Right. Of course."
+
+    play sound "sounds/vibrate.mp3"
 
     scene v16s14_23 # TPP. Show MC reaching into his pocket, slight smile, mouth open
     with vpunch
@@ -788,7 +793,7 @@ label v16s14:
 
     scene v16s14_24 # TPP. MC turning his back to the girls (don't show them in background), MC slight smile, putting his phone to his ear, mouth closed
     with dissolve
-
+    play sound "sounds/answercall.mp3"
     pause 0.75
 
     scene v16s14_25 # TPP. MC mouth closed, slight smile // Penelope at the pier, slightly annoyed, mouth open
@@ -821,10 +826,10 @@ label v16s14:
 
     u "But why are you at the pier with them anyway?"
 
-    scene v16s14_25b
-    with dissolve
+    #scene v16s14_25b
+    #with dissolve
 
-    pe "Not with them, I was just here and Imre basically cuffed me to his wrist when he saw me."
+    #pe "Not with them, I was just here and Imre basically cuffed me to his wrist when he saw me."
 
     scene v16s14_25c # TPP. Same as v16s14_25b, MC mouth closed, slight smile // Penelope slight smile, mouth open
     with dissolve
@@ -839,7 +844,10 @@ label v16s14:
     scene v16s14_25c
     with dissolve
 
-    pe "Ugh, I seriously love you. Thank you! I'll meet you by the entrance."
+    if penelope.relationship >= Relationship.LIKES:
+        pe "Ugh, I seriously love you. Thank you! I'll meet you by the entrance."
+    else:
+        pe "Thank you! I'll meet you by the entrance."
 
     scene v16s14_25d
     with dissolve
@@ -859,12 +867,12 @@ label v16s14:
     scene v16s14_21a
     with dissolve
 
-    no "You're always saving someone, haha. We're going to grab coffee so, I'll catch up with you later?"
+    no "You're always saving someone, haha. We're going to grab coffee, so I'll catch up with you later?"
 
     scene v16s14_21b
     with dissolve
 
-    u "Absolutely, you will. Thanks for inviting me to my first ever yoga session."
+    u "Absolutely you will. Thanks for inviting me to my first ever yoga session."
 
     scene v16s14_21a
     with dissolve
@@ -881,10 +889,7 @@ label v16s14:
 
     ro "Of course, thanks for joining us."
 
-    if ms_rose.relationship >= Relationship.FWB or (not ms_rose.relationship == Relationship.THREATEN and not v16_ms_rose_breakup): ### TODO Variable
-        scene v16s14_20c
-        with dissolve
-
+    if ms_rose.relationship >= Relationship.FWB or (not ms_rose.relationship <= Relationship.THREATEN and not v16_ms_rose_breakup): # if relationship or at least not awkward
         ro "Enjoy the rest of your day."
 
         scene v16s14_20a
@@ -895,7 +900,7 @@ label v16s14:
     scene v16s14_22
     with dissolve
 
-    u "Bye guys!"
+    u "Bye ladies!"
 
     scene v16s14_21a
     with dissolve

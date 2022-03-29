@@ -33,7 +33,7 @@ label v11_thurs_night_room:
             if riley.messenger.replies:
                 call screen phone
             if riley.messenger.replies:
-                "(I should reply to Riley.)"
+                u "(I should reply to Riley.)"
                 jump v11s6_PhoneContinue
 
         u "(This is kinda weird... First I have no idea who this guy is and now he's in my circle? *Sighs* I'm not gonna stress about it, I just need to relax. Getting some sleep will be nice.)"
@@ -76,7 +76,7 @@ label v11_thurs_night_room:
             if riley.messenger.replies:
                 call screen phone
             if riley.messenger.replies:
-                "(I should reply to Riley.)"
+                u "(I should reply to Riley.)"
                 jump v11s6_PhoneContinue1
                 
         u "(This is kinda weird... First I have no idea who this guy is and now he's in my circle? *Sighs* I'm not gonna stress about it, I just need to relax. Getting some sleep will be nice.)"

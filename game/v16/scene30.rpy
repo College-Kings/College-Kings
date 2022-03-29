@@ -3,6 +3,8 @@
 # Characters: MC (Outfit: 9), CHRIS (Outfit: 2), SEBASTIAN (Outfit: 1), IMRE (Outfit: 2)
 # Time: Afternoon
 
+### needs punching sounds
+
 label v16s30:
     scene v16s30_1 # TPP. MC walking into the Wolves house, slight smile, mouth closed
     with fade
@@ -112,7 +114,7 @@ label v16s30:
     scene v16s30_7a
     with dissolve
 
-    ch "I want to tell you guys something, because it'd be good to get it off of my chest. But don't get pissed off, ha."
+    ch "I want to tell you guys something, because it'd be good to get it off of my chest. But don't get pissed off..."
 
     scene v16s30_8c # FPP. Same as v16s30_8b, Sebastian slight smile, mouth open
     with dissolve

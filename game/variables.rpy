@@ -1,6 +1,3 @@
-init python:
-    import os
-
 # Init
 define flash = Fade(.25, 0, .75, color="#fff")
 define config.default_music_volume = 1
@@ -11,6 +8,9 @@ default name = "Alex"
 default realmode = False
 default showkct = True
 default checklist = Checklist()
+
+# Persistent
+default persistent.previous_whats_new = None
 
     ## Phone
 define contacts_file_path = os.path.join(config.basedir, "game", "images", "nonplayable_characters")
@@ -214,7 +214,6 @@ default v10s33_ev_date_now = False
 default v10s33_laurenBakeSale = False
 default v10s33_ryan_flirt_emily = False
 default v10s33_toldChloe = False
-default v10lottery_ticket = False # Needed for v16S20
 
 # 11.0
 default candyLike = 0
@@ -318,7 +317,6 @@ default v14_date_distraction = False ###APPROACH B1B (v14_concert_distraction = 
 # Animated Bar
 default animated_value_percent = 0
 
-default AmberLoyal = False #????
 default chrissus = 0
 default irisStrikes = 0
 default v13_threesomeending = False
@@ -385,9 +383,8 @@ default v15_autumn_lunchbreak = False
 default v15_autumn_smoke = False
 default v15_blame_nora = False # blame_chris = (v13_imre_disloyal, or maybe not) and not v15_blame_nora
 default v15_car_sold_price = 0
-default v15_emily_sext = False
 default v15_lindsey_alcohol = False
-default v15_lindsey_recording = 0 # (if recording happened in scene 35, value may be 1, 2 or 3; if recording happened in scene 39, value may be 4, 5 or 6)
+default v15_lindsey_recording = 0 # (if recording happened in scene 35, value may be 1, 2 or 3. If recording happened in scene 39, value may be 4, 5 or 6)
 default v15_mad_at_ms_rose = False
 default v15_nora_clue_camping = False
 default v15_nora_clue_ex = False
@@ -438,37 +435,37 @@ default pb_threesome = False
 
 # 16.0
 default v16_baby_name = "Baby" # Used to store the player designated name of the baby
-default v16_wrong_key = True # This does default to True; not a typo. Used for baby menus
 default v16_wintom = False
 default v16_home_riley = False
 default v16_baby_key_attempts = 0 # tracks the total times MC uses a baby key on the baby; used in s87 
 
-# Chloe Planning Board 
-default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
-default v16s12_chloe_planboard_decide_promote_chloe_on_cover = False #  True = promote chloe on newspaper cover / False = Embarrass Lindsey on front of newspaper cover
-default v16s12_chloe_planboard_decide_mc_gives_massages = False   # True = Hire a professional to give messages / False = MC gives massages
-# Check v16s60_chloe_pb_override_mc_gives_massages variable as well when determining if MC gives massages   
+# Chloe Planning Board
+default v16_chloe_newspaper = False ##Approach A. Sparty = (v14_help_chloe and not v16_chloe_newspaper)
+default v16_chloe_on_cover = False ##Approach A2A. Chloe puts Lindsey on cover = (v16_chloe_newspaper and not v16_chloe_on_cover)
+default v16_chloe_real_masseuse = False ##Approach B2A. MC Masseuse = (v14_help_chloe and not v16_chloe_newspaper and not v16_chloe_real_masseuse)
 
 # Lindsey Planning Board
-default v16s28_lindsey_pb_intereview_polly_choice = False # True = Interview / False = Polly
-default v16s28_lindsey_pb_riley_interview = False  # True = Riley interviews Lindsey / False = Elijah interviews Lindsey
-default v16s28_lindsey_pb_pretend_roomservice = False #  True =  Lindsey/MC wear roomservice disguises / Lindsey/MC go as themselves 
+default v16_lindsey_newspaper = False ##Approach A. Polly endorsement = (v16_help_lindsey and not v16_lindsey_newspaper)
+default v16_lindsey_elijah = False ##Approach A1A. Riley interview = (v16_lindsey_newspaper and not v16_lindsey_elijah)
+default v16_lindsey_roomservice = False ##Approach B2A. Show up as yourselves = (v16_help_lindsey and not v16_lindsey_newspaper and not v16_lindsey_roomservice)
 
 
-default freeroam15 = set() #Amber
-default v16s1_win_fight_with_tom = False
-default v16s10_let_lauren_continue_hj = False
+default freeroam15 = set() #Pier v16s15
+default freeroam16 = set() #Amber v16s20
 default v16s11_sign_up = False
-default v16s15_fr_carnival = set() # Holds visited scenes for the free roam 
 default v16s20_take_twazzlers = False
-default vs16s15hotdog_coupon = False
-default v16s23_mention_bills = False  # TODO: Variable
-default v16s23_mention_laptop = False # TODO: Variable
-default v16s23_support_amber = False # TODO: Variable
-default v16s25a_date_with_aubrey = False
+default v16_amber_mention_bills = False
+default v16_amber_mention_laptop = False
+default v16s23_support_amber = False
+default v16_aubrey_date = False
 default v16s26_lindsey_donation_money = 50 # Track if MC spends any of the money lindsey gives him (can be spend in s32 and s38)
-default v16s27_parent_chloe = False  # True = Chloe; False = Nora
-default v16s27_mc_baby_duty_night = 0 # 0 = Unselected, 1 = Wednesday_alone, 2 = Thrusday_alone, 4 = Friday_alone, 0x10 = Wednesday_shared, 0x20 = Thursday_shared, 0x40 = Friday_shared
+default v16s27_parent_chloe = False  # True = Chloe, False = Nora
+# default v16s27_mc_baby_duty_night = 0 # 0 = Unselected, 1 = Wednesday_alone, 2 = Thrusday_alone, 4 = Friday_alone, 0x10 = Wednesday_shared, 0x20 = Thursday_shared, 0x40 = Friday_shared
+default v16s27_mc_baby_schedule = {
+    "wednesday": BabyDuty.PARTNER_ALONE,
+    "thursday": BabyDuty.PARTNER_ALONE,
+    "friday": BabyDuty.PARTNER_ALONE
+}
 default v16s32_birthday_reservation = 0  # 0 = neither, 1 = standard_reserveration, 2 = birthday_reservation  
 default v16s32_aubrey_cab_and_flowers = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers
 default v16s32_cost_cab_and_flowers = 0 # Tracks the cost of Aubrey's cab ride to MC date
@@ -499,5 +496,15 @@ default v16s63a_mc_choose_cool_convo = False  # True = MC chose not to take care
 default v16s63x_chloe_suggestion_set = set() # Possible values:  "v16s63_compliment", "v16s63b_compliment", "v16s63_breast_reduciton", "v16s63b_breath_mint"
 default v16s64_insulted_chloe = False  # True = Added an insult to suggestion box/ False = did not add insult to suggestion box - MC insults Chloe using suggestion box during Spa night
 default v16s64_confessed_insult = False  # True = Told Truth/ False = Denied it - MC tells the truth when confronted about insults from Spa Night.
-default v15s67_mc_remains_interested_autumn_sex = 0 # 0 = MC did not get asked, 1 = Autumn asked and MC turned her down, 2 = Autumn asked and MC said he was still interested
+default v16s67_mc_remains_interested_autumn_sex = 0 # 0 = MC did not get asked, 1 = Autumn asked and MC turned her down, 2 = Autumn asked and MC said he was still interested
 default v16s78_rose_ask_mc_contnue_dating = 0 # N 0 = Never asked, 1 = MC answered "If we want to", 2 = MC answered "Probably not"
+default v16s63x_chloe_suggestion_set = set() # Possible values:  "v16s63_compliment", "v16s63b_compliment", "v16s63_breast_reduciton", "v16s63b_breath_mint"
+default v16_ms_rose_breakup = False
+default v16s4_dissnaomi = False
+default v16s14_focus = 0
+
+#default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
+#default v16s12_chloe_planboard_decide_promote_chloe_on_cover = False #  True = promote chloe on newspaper cover / False = Embarrass Lindsey on front of newspaper cover
+#default v16s12_chloe_planboard_decide_mc_gives_massages = False   # True = Hire a professional to give messages / False = MC gives massages
+# Check v16s60_chloe_pb_override_mc_gives_massages variable as well when determining if MC gives massages   
+default v16_win_range = False ### ???

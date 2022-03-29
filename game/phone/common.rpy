@@ -1,21 +1,21 @@
 screen message_reply(contact=None):
     vbox:
-        xsize 600
+        xsize 500
         xpos 1200
         yalign 1.0
         yoffset -100
-        spacing -75
+        spacing 10
 
         for reply in contact.replies:
             button:
-                idle_background "reply_background_idle"
-                hover_background "reply_background_hover"
-                padding (100, 65)
-                focus_mask reply_focus_mask
+                background "reply_background_idle"
                 action [Hide("message_reply"), Function(contact.selected_reply, reply)]
+                ysize 100
+                padding (15, 15)
+                size_group "reply_buttons"
 
                 if isinstance(reply, Reply):
-                    text reply.message style "reply_text"
+                    text reply.message style "reply_text" yalign 0.5
 
                 elif isinstance(reply, ImgReply):
                     add Transform(reply.image, zoom=0.15)

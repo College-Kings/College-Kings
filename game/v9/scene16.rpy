@@ -76,7 +76,7 @@ label v9_room_thur_night:
                 if emily.messenger.replies:
                     call screen phone
                 if emily.messenger.replies:
-                    "(I should reply to Emily.)"
+                    u "(I should reply to Emily.)"
                     jump s16_PhoneContinueW
 
             scene v9emi2 # TPP. Show MC getting up from his bed and leaving his Wolves room.
@@ -111,7 +111,7 @@ label v9_room_thur_night:
                 if emily.messenger.replies:
                     call screen phone
                 if emily.messenger.replies:
-                    "(I should reply to Emily.)"
+                    u "(I should reply to Emily.)"
                     jump s16_PhoneContinueA
 
             scene v9emi5 # TPP. Show MC getting up from his bed and leaving his Apes room.
@@ -870,7 +870,7 @@ label v9_thur_night_aft_em_w:
         if lindsey.messenger.replies:
             call screen phone
         if lindsey.messenger.replies:
-            "(I should reply to Lindsey.)"
+            u "(I should reply to Lindsey.)"
             jump s16_ContinueW1
 
         
@@ -917,7 +917,7 @@ label v9_thur_night_aft_em_a:
         if lindsey.messenger.replies:
             call screen phone
         if lindsey.messenger.replies:
-            "(I should reply to Lindsey.)"
+            u "(I should reply to Lindsey.)"
             jump s16_ContinueA1
 
     scene v9emi6a # TPP. Same camera as v9emi6, MC puts his phone down and smiles.

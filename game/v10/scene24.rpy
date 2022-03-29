@@ -9,7 +9,7 @@ label v10_lauren_room:
     play music "music/v10/Track Scene 24_1.mp3" fadein 2
     play sound "sounds/knock.mp3"
     
-    pause 0.5
+    pause 0.75
     
     scene v10lar2 # FPP Show Lauren answering the door smiling, mouth open
     with dissolve
@@ -22,7 +22,7 @@ label v10_lauren_room:
 
         play sound "sounds/kiss.mp3"
 
-        pause 0.5
+        pause 0.75
 
     scene v10lar2a # FPP Same angle and expression as v10lar2, Lauren mouth closed
     with dissolve
@@ -218,7 +218,7 @@ label v10_lauren_room:
         scene v10lar4 # TPP Show Lauren tackling MC, both smiling, Lauren climbing on top
         with dissolve
 
-        pause 0.5
+        pause 0.75
 
         scene v10lar4a # TPP Same angle as v10lar4, Lauren and MC wrestling in a sexy way on the floor, Lauren mouth open
         with dissolve
@@ -314,7 +314,7 @@ label v10_lauren_room:
                     scene v10lar7d # TPP Same angle as v10lar7d, Lauren topless, MC and Lauren kissing with eyes closed
                     with dissolve
 
-                    pause 0.5
+                    pause 0.75
 
                     scene v10lar7e # TPP Same angle as v10lar7, MC smiling, Lauren looks shy but happy, mouth open
                     with dissolve
@@ -329,7 +329,7 @@ label v10_lauren_room:
                     scene v10lar9 # FPP Show Lauren standing up and beginning to put her bra and shirt back on, Lauren smiling
                     with dissolve
 
-                    pause 0.5
+                    pause 0.75
 
                     # Back sitting on the bed
                     scene v10lar3b
@@ -393,7 +393,7 @@ label v10_lauren_room:
                 scene v10lar7d
                 with dissolve
 
-                pause 0.5
+                pause 0.75
 
                 # -Lauren eventually pulls back and appears slightly shy but happy-
                 scene v10lar7e
@@ -410,7 +410,7 @@ label v10_lauren_room:
                 scene v10lar9
                 with dissolve
 
-                pause 0.5
+                pause 0.75
                 label v10s24_nsfwSkipLabel1:
                     # Back sitting on the bed
                     scene v10lar3b

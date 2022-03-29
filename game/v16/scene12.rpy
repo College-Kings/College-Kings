@@ -7,9 +7,9 @@ label v16s12:
     scene v16s12_1 # TPP. Show Chloe and MC walking into the planning board room, both slight smiles, mouths closed, Chloe walking in in front of MC
     with dissolve
 
-    pause 0.75
+    pause 1
 
-    if v15_chloe_lindseysabotage and not v15_chloe_postkiwii: 
+    if (v15_chloe_lindseysabotage and not v15_chloe_postkiwii) and v15_lindsey_recording > 0: # if PA announcement 
         scene v16s12_2 # FPP. MC and Chloe in planning board room, standing in front of the board, next to each other, MC looking at Chloe, Chloe looking at MC, Chloe slight smile, mouth open
         with dissolve
 
@@ -18,8 +18,8 @@ label v16s12:
         if chloe.relationship >= Relationship.GIRLFRIEND:
             scene v16s12_3 # TPP. Show Chloe giving MC a kiss
             with dissolve
-
-            pause 0.75
+            play sound "sounds/kiss.mp3"
+            pause 1.5
 
         scene v16s12_2a # FPP. Same as v16s12_2, Chloe smiling, mouth open
         with dissolve
@@ -56,28 +56,34 @@ label v16s12:
 
         cl "Phase three!"
 
-        if v15_chloe_lindseysabotage and not v15_lindsey_alcohol:
-            scene v16s12_2c # FPP. Same as v16s12_2, Chloe slightly sad, mouth open
-            with dissolve
+        scene v16s12_2e
+        with dissolve
 
-            cl "Okay, just a quick review of phase two. It sucked that you didn't manage to record anything I could use."
+    elif (v15_chloe_lindseysabotage and not v15_chloe_postkiwii): # if tried PA announcement but couldn't record anything useful
+        scene v16s12_2c # FPP. Same as v16s12_2, Chloe slightly sad, mouth open
+        with dissolve
 
-            scene v16s12_2d # FPP. Same as v16s12_2c, Chloe slightly sad, mouth closed
-            with dissolve
+        cl "Okay, just a quick review of phase two. It sucked that you didn't manage to record anything I could use."
 
-            u "Yeah, I'm sorry. I tried, but I couldn't get her drunk enough."
+        scene v16s12_2d # FPP. Same as v16s12_2c, Chloe slightly sad, mouth closed
+        with dissolve
 
-            scene v16s12_2c
-            with dissolve
+        u "Yeah, I'm sorry. I tried, but I couldn't get her drunk enough."
 
-            cl "We need to succeed this time. We have no choice."
+        scene v16s12_2c
+        with dissolve
 
-            scene v16s12_2
-            with dissolve
+        cl "We need to succeed this time. We have no choice."
 
-            cl "I think you'll like these ideas too."
+        scene v16s12_2
+        with dissolve
 
-    if v14_help_chloe and not v15_chloe_lindseysabotage:
+        cl "I think you'll like these ideas too."
+
+        scene v16s12_2e
+        with dissolve
+
+    if v15s22_meeting_points >= 1:
         scene v16s12_2
         with dissolve
 
@@ -106,7 +112,7 @@ label v16s12:
         scene v16s12_2e
         with dissolve
 
-        u "Even Lindsey??"
+        u "Even Lindsey?"
 
         scene v16s12_2
         with dissolve
@@ -133,19 +139,72 @@ label v16s12:
 
         u "(I can't tell if this competitive side of Chloe is scary hot or just scary.)"
 
-    scene v16s12_2e
-    with dissolve
-
     u "Okay, show me what you've got."
 
-    call screen planningboard
+    python:
+        chloe_board = PlanningBoard("images/v16/planning_boards/chloe_background.webp", money=chloe_board.money) ### to be replaced with v16 board
+
+        chloe_board.add_approach("Newspaper",
+            "Decide the cover of the new student newspaper",
+            opinion="\"Elijah is starting a school newspaper, and for the first edition, I NEED to have control over what or who is on the cover. We just have to convince him somehow to let us decide what goes on front.\"")
+        
+        chloe_board.add_approach("Sparty",
+            "Chicks spa day",
+            opinion="\"I really want to treat the girls, and sadly... I mean all of them. I wanna put the drama aside for one night and have a relaxing Sparty! Get it? Spa party? No? Okay, anyway! They're gonna love it and they're gonna love me after it.\"")
+
+        chloe_board.add_task("Newspaper",
+            "Convince Elijah to let us decide over the cover",
+            opinion="\"Convincing Elijah really shouldn't be too hard. We can set up a meeting with him and see what he thinks, and maybe we can work out some sort of deal.\"",
+            people=[elijah,chloe,mc])
+
+        v16s12_chloe_on_cover = chloe_board.add_subtask("Newspaper",
+            "Promote Chloe on the cover",
+            opinion="\"For the cover, promoting myself is the obvious choice I can get a good headshot, I already have a few, haha. Then we just have to decide what we want it to say, and what might be a good look.\"")
+
+        chloe_board.add_subtask("Newspaper",
+            "Embarrass Lindsey on the cover",
+            opinion="\"Instead of putting myself on the cover, we could use this to our advantage and really screw with Lindsey's campaign. Maybe we can find an interesting photo or even photoshop one.\"")
+            
+        chloe_board.add_task("Newspaper",
+            "Design cover",
+            opinion="\"The final step is to design it the way we want. As long as it looks perfect, we just give the final image to the newspaper team.\"")
+
+        chloe_board.add_task("Sparty",
+            "Buy items for spa day",
+            opinion="\"Shopping for the items we want is the first step, we need to make sure we pick things that smell nice, aren't cheap, and are going to be fun to use during the party.\"",
+            cost=100)
+
+        v16s12_chloe_real_masseuse = chloe_board.add_subtask("Sparty",
+            "Hire professional masseuse",
+            opinion="\"Massages are key and we want them to be mesmerized by professional hands. It costs a pretty dollar, but it means that you and I get to focus on the Sparty and the Sparty people.\"",
+            cost=100)
+
+        chloe_board.add_subtask("Sparty",
+            "[name] does the massages",
+            opinion="\"If we wanna save some dime, you can be our masseuse for the night...? It's up to you, haha.\"")
+
+        chloe_board.add_task("Sparty",
+            "Host spa day",
+            opinion="\"Last but not least, we host the Sparty! Remember, I'm going to be on my best behavior and avoid drama at all costs, so please help me follow through with that, haha.\"",
+            people=[chloe,nora,aubrey,lindsey,jenny])
+
+    call screen planning_board(chloe_board)
+
+    if chloe_board.approach is not None:
+        $ v16_chloe_newspaper = chloe_board.approach.id == "Newspaper"
+
+    if chloe_board.selected_task is not None:
+        $ v16_chloe_on_cover = chloe_board.selected_task == v16s12_chloe_on_cover
+        $ v16_chloe_real_masseuse = chloe_board.selected_task == v16s12_chloe_real_masseuse
+
+    # End planning board (screen disappears)
 
     scene v16s12_4 # TPP. Show MC pointing at something on the board (show the board from behind so we don't have to draw anything on the board), MC serious expression, other hand on chin, mouth open
     with dissolve
 
     u "Both great ideas, but... I think this is the smartest move."
 
-    if v16s12_chloe_planboard_decide_newspaper_cover:
+    if v16_chloe_newspaper:
         scene v16s12_2e
         with dissolve
 
@@ -164,12 +223,12 @@ label v16s12:
         scene v16s12_2a
         with dissolve
 
-        cl "Mmm... You lost me at smart. *Laughs*"
+        cl "Mmm... You lost me at smart"
 
         scene v16s12_2g # FPP. Same as v16s12_2, Chloe laughing
         with dissolve
 
-        pause 0.75
+        cl "*Laughs*"
 
         scene v16s12_2 
         with dissolve
@@ -200,7 +259,7 @@ label v16s12:
         scene v16s12_2e
         with dissolve
 
-        u "Even Lindsey... That might make things interesting, you know. If you keep her happy all night?"
+        u "Even Lindsey... That might make things interesting, you know. Can you keep her happy all night?"
 
         scene v16s12_2c
         with dissolve
@@ -228,7 +287,7 @@ label v16s12:
         cl "Haha, have fun!"
     
     menu:
-        "Be enthusiastic":
+        "Always do!":
             $ add_point(KCT.BOYFRIEND)
             scene v16s12_2b
             with dissolve
@@ -240,7 +299,7 @@ label v16s12:
 
             cl "Haha, I'm so happy you're doing this with me."
 
-        "Be negative":
+        "I'll try...":
             $ add_point(KCT.TROUBLEMAKER)
             scene v16s12_2d
             with dissolve
@@ -270,8 +329,8 @@ label v16s12:
     if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v16s12_3
         with dissolve
-
-        pause 0.75
+        play sound "sounds/kiss.mp3"
+        pause 1.5
 
     scene v16s12_2b
     with dissolve
@@ -281,6 +340,6 @@ label v16s12:
     scene v16s12_5 # TPP. Show MC walking out, smiling, mouth closed, Chloe in background watching him walk out, mouth closed, smiling
     with dissolve
 
-    pause 0.75
+    pause 1
 
     jump v16s13

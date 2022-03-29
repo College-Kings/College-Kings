@@ -4,13 +4,17 @@
 # Time: Thurdsay Afternoon
 
 label v16s59:
-    if v16s28_lindsey_pb_pretend_roomservice: # -if MC chose Pretend to be room service
+    if v16_lindsey_roomservice: # -if MC chose Pretend to be room service
         scene v16s59_1 # TPP. MC (slight smile, mouth closed, looking forward) and Lindsey (slight smile, mouth closed, looking forward) in hotel uniforms appear from a distance, walking along a hallway, past hotel room doors. They are wearing room service uniforms and MC is carrying a food tray with a domed lid covering the food-
         with dissolve
+        
+        pause 0.75
 
     else: # -if MC chose Show up as yourselves
         scene v16s59_1a # TPP. same as v16s59_1 MC (slight smile, mouth closed, looking forward) and Lindsey (slight smile, mouth closed, looking forward) walking along the hallway in regular clothes with no food tray-
         with dissolve
+        
+        pause 0.75
 
     # -Regardless of planning board choice, same dialogue/action for both unless stated-
 
@@ -28,7 +32,7 @@ label v16s59:
 
     u "Here we are."
 
-    if v16s28_lindsey_pb_pretend_roomservice:  # -if Pretending to be room service
+    if v16_lindsey_roomservice: # -if Pretending to be room service
         scene v16s59_3 # TPP. Full body image of (ROOM SERVICE UNIFORMS) MC (no expression, mouth is open, looking at Lindsey) scratching his chest with one hand, carrying the tray of food in the other, Lindsey (no expression, mouth is closed, looking at MC)
         with dissolve
 
@@ -57,9 +61,6 @@ label v16s59:
     with dissolve
 
     li "Oh, my God. I can't believe I'm about to meet Polly."
-
-    scene v16s59_4a # FPP. Show Lindsey (full smile, mouth closed, looking at MC) just from the shoulders up (check with mozzart for clothing)
-    with dissolve
 
     menu:
         "Calm Lindsey down":
@@ -191,13 +192,13 @@ label v16s59:
 
         polly "Can I... Help you guys with something?"
 
-    if v16s28_lindsey_pb_pretend_roomservice: # -if Pretending to be room service
+    if v16_lindsey_roomservice: # -if Pretending to be room service
         scene v16s59_4d
         with dissolve
 
         li "We're here to deliver your meal!"
 
-        if v13_penelope_backstage:  # TODO: Now clue what this means or how its different from meeting polly backstage so reusing it  # -if mc has already met Polly
+        if v13_penelope_backstage: # TODO: No clue what this means or how its different from meeting polly backstage so reusing it # -if mc has already met Polly ### (what about Aubrey backstage)
             scene v16s59_4h
             with dissolve
 
@@ -363,7 +364,7 @@ label v16s59:
                 scene v16s59_4o
                 with dissolve
 
-                polly "Haha, it's no problem at all. Just don't make me regret it, ha."
+                polly "Haha, it's no problem at all. Just don't make me regret it."
 
                 scene v16s59_8 # FPP. Show full body image of Lindsey (ROOM SERVICE UNIFORM) (nervous expression, mouth closed, looking at MC), and Polly's BodyGuard (PBG) (VERY STERN Expression, mouth closed, looking down at Lindsey) HUGE bodyguard appears directly behind Lindsey, if possible a panning up image like the chloe after hoco scene showing the size differnece between the body guard and Lindsey
                 with dissolve
@@ -412,6 +413,8 @@ label v16s59:
 
                 scene v16s59_10 # TPP. (ROOM SERVICE UNIFORMS) Show MC (full smile, mouth closed, looking at Lindsey) and Lindsey (full smile, mouth closed, looking at MC) walking away from Polly's hotel room door. The door is still closed. Polly's Bodyguard (VERY STERN Expression, mouth closed, looking at Lindsey and MC) is standing next to Polly's hotel room door
                 with dissolve
+
+                pause 0.75
 
             ### ERROR: [End of Checkpoint 1.1. Continue to Checkpoint 2]
 
@@ -488,7 +491,7 @@ label v16s59:
                 scene v16s59_4d
                 with dissolve
 
-                li "And a little penny told us that you're performing at our college tonight,.. SVC?"
+                li "And a little penny told us that you're performing at our college tonight... SVC?"
 
                 scene v16s59_4f
                 with dissolve
@@ -571,7 +574,7 @@ label v16s59:
                 scene v16s59_4za # FPP. Show Lindsey (nervous expression, mouth closed, looking at Polly) just from the shoulders up (check with mozzart for clothing), Polly (concerned expression, mouth open, looking at PBG), Polly's Bodyguard (PBG) (VERY STERN Expression, mouth closed, looking at Polly) standing behind Lindsey closer to the doorway next to Polly
                 with dissolve
 
-                polly "Just a few fans who somehow found out where we're staying...."
+                polly "Just a few fans who somehow found out where we're staying..."
 
                 scene v16s59_4zb # FPP. Show Lindsey (nervous expression, mouth closed, looking at PBG) just from the shoulders up (check with mozzart for clothing), Polly (concerned expression, mouth closed, looking at MC), Polly's Bodyguard (PBG) (slightly angry expression, mouth closed, looking at MC) now standing closer to Lindsey, with one hand cupping a fist made with his other hand
                 with dissolve
@@ -676,7 +679,7 @@ label v16s59:
         scene v16s59_4q
         with dissolve
 
-        u "I promise we'll be quick; we just have a favor to ask."
+        u "I promise we'll be quick we just have a favor to ask."
 
         scene v16s59_4d
         with dissolve
@@ -737,7 +740,7 @@ label v16s59:
                 scene v16s59_4z
                 with dissolve
 
-                polly "Oh, ha. Is she? I couldn't tell there for a second."
+                polly "Oh is she? I couldn't tell there for a second."
 
                 scene v16s59_4y
                 with dissolve
@@ -848,6 +851,8 @@ label v16s59:
 
                 scene v16s59_10d # TPP. Exactly the same as v16s59_10 Except Mc and Lindsey are wearing their regular clothes
                 with dissolve
+
+                pause 0.75
 
                 ### ERROR: [End of Checkpoint 1.3. Continue to Checkpoint 2]
 
@@ -969,7 +974,7 @@ label v16s59:
 
                 bdygd "I think it's time for the two of you to leave the building."
 
-                scene v16s59_10e # TPP. Exactly the same as v16s59_10a except Mc and Lindsey are wearing their regular clothes
+                scene v16s59_10e # TPP. Exactly the same as v16s59_10a except Mc and Lindsey are wearing their regular clothes ### check if matches mouth speaking
                 with dissolve
 
                 li "Polly! Polly, wait! Come back out, I can explain!"

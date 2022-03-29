@@ -37,7 +37,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     pause 0.75
 
-    if v16s20_take_twazzlers: # -if MC also took the Twazzlers # TODO:Variable
+    if v16s20_take_twazzlers: # -if MC also took the Twazzlers
         scene v16s23_2c # FPP Same angle as 2, Amber with a slight smile, mouth closed, MC is holding Twazzlers package out to her [OUTSIDE ENTRANCE]
         with dissolve
 
@@ -88,16 +88,16 @@ label v16s23: # 23) Meet Amber at strip club
     scene v16s23_5 # FPP Show Amber barely visible behind the bar, she is bending over to plug in her phone. Her face is not visible, MC looking at her ass. [CHECKPOINT A]
     with dissolve
 
-    am "I'm so glad you brought my charger. My phone has been dead for hours now."
+    am "I'm so glad you brought my charger. My phone is dead by now."
 
     u "Ha, no worries."
 
-    scene v16s23_6 # FPP MC's view as he looks around the inside of the strip club [standing at: CHECKPOINT A; Looking at: CHECKPOINT 1]
+    scene v16s23_6 # FPP MC's view as he looks around the inside of the strip club [standing at: CHECKPOINT A, Looking at: CHECKPOINT 1]
     with dissolve
 
     u "So, this is where the magic happens?"
 
-    scene v16s23_7 # FPP View from another angle of the interior of the strip club [standing at: CHECKPOINT A; Looking at CHECKPOINT 2]
+    scene v16s23_7 # FPP View from another angle of the interior of the strip club [standing at: CHECKPOINT A, Looking at CHECKPOINT 2]
     with dissolve
 
     am "Yeah, what do you think?"
@@ -117,17 +117,17 @@ label v16s23: # 23) Meet Amber at strip club
 
     u "So, are you enjoying it here?"
 
-    scene v16s23_11 # FPP Show Amber in her seat next to the catwalk, looking at MC with a slight smile, mouth open [CHECKPOINT B; MC left seat, Amber right seat]
+    scene v16s23_11 # FPP Show Amber in her seat next to the catwalk, looking at MC with a slight smile, mouth open [CHECKPOINT B, MC left seat, Amber right seat]
     with dissolve
 
     am "Honestly, yes. I mean-"
 
-    scene v16s23_11a # FPP Same angle as 11, Amber looking up at the catwalk, slight smile, mouth open [CHECKPOINT B; MC left seat, Amber right seat]
+    scene v16s23_11a # FPP Same angle as 11, Amber looking up at the catwalk, slight smile, mouth open [CHECKPOINT B, MC left seat, Amber right seat]
     with dissolve
 
     am "The crowd isn't so great on weekdays, but on weekends..."
 
-    scene v16s23_11b # FPP Same angle as 11, Amber leaning toward MC with a large, sneaky smile, mouth open [CHECKPOINT B; MC left seat, Amber right seat]
+    scene v16s23_11b # FPP Same angle as 11, Amber leaning toward MC with a large, sneaky smile, mouth open [CHECKPOINT B, MC left seat, Amber right seat]
     with dissolve
 
     am "I make bank!"
@@ -137,12 +137,12 @@ label v16s23: # 23) Meet Amber at strip club
 
     am "The louder the crowd, the higher the payout."
 
-    scene v16s23_12 # TPP They are interrupted as a drunk guy sits on the other side of Amber (right side). It's the same guy who was the Male Buyer in v15 scene 10 (MC selling Lindsey's car). His mouth is open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+    scene v16s23_12 # TPP They are interrupted as a drunk guy sits on the other side of Amber (right side). It's the same guy who was the Male Buyer in v15 scene 10 (MC selling Lindsey's car). His mouth is open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
     with dissolve
 
     ds "Hey sweetheart, aren't you gonna get up there and dance for me?"
 
-    scene v16s23_12a# TPP Same angle as 12, The drunk guy's mouth is closed. MC looks very annoyed [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+    scene v16s23_12a # TPP Same angle as 12, The drunk guy's mouth is closed. MC looks very annoyed [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
     with dissolve
 
     u "(The fuck?)"
@@ -151,12 +151,12 @@ label v16s23: # 23) Meet Amber at strip club
         "We're talking":
             $ add_point(KCT.TROUBLEMAKER)
             
-            scene v16s23_13 # FPP MC is looking up at the drunk guy, who sits on the other side of Amber (right side). The drunk guy is looking at Amber, Amber has a slight smile [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+            scene v16s23_13 # FPP MC is looking up at the drunk guy, who sits on the other side of Amber (right side). The drunk guy is looking at Amber, Amber has a slight smile [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
             with dissolve
 
             u "Um, we're in the middle of a conversation, dude. Do you mind?"
 
-            scene v16s23_13a # FPP Same angle as 13, Drunk guy is now looking at MC with an angry expression, mouth open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+            scene v16s23_13a # FPP Same angle as 13, Drunk guy is now looking at MC with an angry expression, mouth open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
             with dissolve
 
             ds "Yeah, I mind, you little twerp."
@@ -168,7 +168,7 @@ label v16s23: # 23) Meet Amber at strip club
 
             u "Dude, what the-"
 
-            scene v16s23_13b # FPP Same angle as 13, Drunk guy is looking back at Amber. If his face is visible, he is smiling with his mouth open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+            scene v16s23_13b # FPP Same angle as 13, Drunk guy is looking back at Amber. If his face is visible, he is smiling with his mouth open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
             with dissolve
 
             ds "Come on, angel... Let me see how good you are."
@@ -181,12 +181,12 @@ label v16s23: # 23) Meet Amber at strip club
 
     # -Regardless-
 
-    scene v16s23_13c # FPP Same angle as 13, Amber looking at the drunk guy, slight smile and mouth open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+    scene v16s23_13c # FPP Same angle as 13, Amber looking at the drunk guy, slight smile and mouth open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
     with dissolve
 
     am "Sorry, honey. I'm with another client right now. I'll come find you later, okay?"
 
-    scene v16s23_13d # FPP Same angle as 13. Drunk guy looking at Amber, but pointing at MC . His face has an annoyed expression, mouth open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+    scene v16s23_13d # FPP Same angle as 13. Drunk guy looking at Amber, but pointing at MC . His face has an annoyed expression, mouth open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
     with dissolve
 
     ds "This kid? *Scoffs* I've got two-hundred dollars to spend tonight, ha!"
@@ -201,7 +201,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     am "That sounds amazing, but it'll have to wait until later."
 
-    scene v16s23_13e # FPP Same angle as 13. Amber is still looking at Drunk Guy with a slight smile, but she is holding her hand up, palm out, in front of her [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+    scene v16s23_13e # FPP Same angle as 13. Amber is still looking at Drunk Guy with a slight smile, but she is holding her hand up, palm out, in front of her [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
     with dissolve
 
     am "But just so we're clear, all you're getting is a dance."
@@ -211,7 +211,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     ds "Haha... The future remains to be seen, sweetheart!"
 
-    scene v16s23_13f # FPP Same angle as 13. Drunk guy leaning over to whisper in Amber's (listening, mouth closed) ear, smiling with mouth open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+    scene v16s23_13f # FPP Same angle as 13. Drunk guy leaning over to whisper in Amber's (listening, mouth closed) ear, smiling with mouth open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
     with dissolve
 
     ds "*Whispers* You just haven't fallen for my charm yet."
@@ -221,33 +221,33 @@ label v16s23: # 23) Meet Amber at strip club
 
     am "Hmm... Maybe."
 
-    if v14_pics_with_linds: # TODO: VARIABLE # PLACEHOLDER VARIABLE # -if MC met Male Buyer in v15 scene10
+    if v14_pics_with_linds: # -if MC met Male Buyer in v15 scene10
         scene v16s23_13
         with dissolve
 
         u "Wait a minute... Didn't you buy Lindsey's car?"
 
-        scene v16s23_13g # FPP Same angle as 13. Drunk guy turning to look at MC, he has a drunken smile, mouth open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+        scene v16s23_13g # FPP Same angle as 13. Drunk guy turning to look at MC, he has a drunken smile, mouth open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
         with dissolve
 
         ds "Huh? Oh... Yeah!"
 
-        scene v16s23_13h # FPP Same angle as 13. Drunk guy now facing MC, he still has a drunken smile, mouth open [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+        scene v16s23_13h # FPP Same angle as 13. Drunk guy now facing MC, he still has a drunken smile, mouth open [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
         with dissolve
 
         ds "Hey, man, thanks again. That car cleaned up real nice. Fucked my girlfriend in the back seat a few nights ago."
 
         ds "Not as bad as you'd think."
 
-        scene v16s23_13i # FPP Same angle as 13. Drunk guy facing MC. Amber (disgusted expression, mouth open) is looking at Drunk guy [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+        scene v16s23_13i # FPP Same angle as 13. Drunk guy facing MC. Amber (disgusted expression, mouth open) is looking at Drunk guy [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
         with dissolve
 
-        am "...Wow."
+        am "Wow..."
 
-        scene v16s23_13j # FPP Same angle as 13. Drunk guy facing MC with a drunken smile, mouth closed [CHECKPOINT B; MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk; to the right of Amber]
+        scene v16s23_13j # FPP Same angle as 13. Drunk guy facing MC with a drunken smile, mouth closed [CHECKPOINT B, MC left seat, Amber right seat, CHECKPOINT C, Sleazy Drunk, to the right of Amber]
         with dissolve
 
-        u "You have a girlfriend and you're begging for a strip dance?"
+        u "You have a girlfriend and you're begging for a dance?"
 
         scene v16s23_13h
         with dissolve
@@ -264,12 +264,12 @@ label v16s23: # 23) Meet Amber at strip club
 
     ds "Come find me when you're finished with this loser."
 
-    scene v16s23_12b # TPP Same angle as 12. The drunk guy is walking away, MC and Amber watch him go [CHECKPOINT B; MC left seat, Amber right seat]
+    scene v16s23_12b # TPP Same angle as 12. The drunk guy is walking away, MC and Amber watch him go [CHECKPOINT B, MC left seat, Amber right seat]
     with dissolve
 
     pause 0.75
 
-    scene v16s23_11c # FPP Same angle as 11. Amber looking at MC with a slight smile, mouth closed [CHECKPOINT B; MC left seat, Amber right seat]
+    scene v16s23_11c # FPP Same angle as 11. Amber looking at MC with a slight smile, mouth closed [CHECKPOINT B, MC left seat, Amber right seat]
     with dissolve
 
     u "You showed a lot of self-control there."
@@ -309,7 +309,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     pause 0.75
 
-    scene v16s23_15 # TPP Show Amber and MC entering private booth [CHECKPOINT C: MC in the middle seat; Amber to his right (Amber and the stripper pole are in frame)]
+    scene v16s23_15 # TPP Show Amber and MC entering private booth [CHECKPOINT C: MC in the middle seat, Amber to his right (Amber and the stripper pole are in frame)]
     with dissolve
 
     pause 0.75
@@ -319,7 +319,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     am "So, it went okay, getting into my place?"
 
-    scene v16s23_17 # FPP View of Amber next to MC in the private booth. She is looking at MC with a slight smile, mouth closed  [CHECKPOINT C]
+    scene v16s23_17 # FPP View of Amber next to MC in the private booth. She is looking at MC with a slight smile, mouth closed [CHECKPOINT C]
     with dissolve
 
     u "Oh, yeah. Found the key, went inside. Easy enough."
@@ -329,7 +329,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     am "Good. People tell me not to keep a key under the mat, but it's saved me so many times, haha."
 
-    if "bills" in freeroam15: # if MC looked at the Unpaid bills
+    if "bills" in freeroam16: # if MC looked at the Unpaid bills
         scene v16s23_17
         with dissolve
 
@@ -337,7 +337,7 @@ label v16s23: # 23) Meet Amber at strip club
 
         menu:
             "Ask about bills":
-                $ v16s23_mention_bills = True
+                $ v16_amber_mention_bills = True
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "I did kind of notice that you had some unpaid bills. Is everything okay?"
@@ -373,12 +373,11 @@ label v16s23: # 23) Meet Amber at strip club
                 u "Right, yeah. I'm sorry."
 
             "Don't mention them":
-
                 u "(Not a good idea. I don't think she'd be happy to know I peeked at those.)"
 
     # -Regardless-
     
-    if "laptop" in freeroam15: # if MC looked at the Open laptop
+    if "laptop" in freeroam16: # if MC looked at the Open laptop
         scene v16s23_17
         with dissolve
 
@@ -386,7 +385,7 @@ label v16s23: # 23) Meet Amber at strip club
 
         menu:
             "Mention her laptop":
-                $ v16s23_mention_laptop = True
+                $ v16_amber_mention_laptop = True
                 $ add_point(KCT.TROUBLEMAKER)
 
                 u "So... Erotic fan fiction...?"
@@ -401,13 +400,12 @@ label v16s23: # 23) Meet Amber at strip club
 
                 u "*Laughs* Yeah... I mean to each their own, as they say."
 
-
                 scene v16s23_17a
                 with dissolve
 
                 am "Honestly, it's fun to read that stuff! Lauren got me into it, haha."
 
-                if lauren.relationship == Relationship.GIRLFRIEND: # TODO: Variable # -if LaurenGF (extra dialogue)
+                if lauren.relationship >= Relationship.GIRLFRIEND: # -if LaurenGF (extra dialogue)
                     scene v16s23_17
                     with dissolve
 
@@ -422,7 +420,6 @@ label v16s23: # 23) Meet Amber at strip club
                     with dissolve
 
                     u "Haha, okay. Thanks for the advice."
-
 
                     scene v16s23_17a
                     with dissolve
@@ -455,7 +452,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     # -Regardless-
     
-    if "photos" in freeroam15: # if MC looked at the Photos
+    if "photos" in freeroam16: # if MC looked at the Photos
         scene v16s23_17
         with dissolve
 
@@ -463,6 +460,9 @@ label v16s23: # 23) Meet Amber at strip club
 
         menu:
             "Ask about photos":
+                if v16_amber_mention_bills and v16_amber_mention_laptop:
+                    $ grant_achievement("just_curious_about_you")
+            
                 u "Those photos on your wall..."
 
                 scene v16s23_17a
@@ -535,8 +535,11 @@ label v16s23: # 23) Meet Amber at strip club
                 u "I get it. We don't have to talk about it if you-"
 
                 # -If AmberRS, she opens up about her brother.
-                # -if not AmberRS but MC passes a Amber KCT check (i believe it's currently confident), Amber also opens up about her brother
-                if amber.relationship >= Relationship.FWB or (amber.relationship < Relationship.FWB and kct == "popular" ): # TODO: Variable # This is a guess based on the new relationship system. It would be nice if everyone was using the same language for relationship stuff
+                # -if not AmberRS but MC passes a Amber KCT check, Amber also opens up about her brother
+                if amber.relationship >= Relationship.FWB or kct == "popular":
+                    if amber.relationship < Relationship.FWB:
+                        call screen kct_popup
+                    
                     scene v16s23_17d
                     with dissolve
 
@@ -565,7 +568,7 @@ label v16s23: # 23) Meet Amber at strip club
                     scene v16s23_17a
                     with dissolve
 
-                    am "Yeah. He's the coolest, ha. I don't get to see him as often as I'd like to, but he's safe with my dad and our bitch of a stepmother."
+                    am "Yeah. He's the coolest. I don't get to see him as often as I'd like to, but he's safe with my dad and our bitch of a stepmother."
 
                     scene v16s23_17e
                     with dissolve
@@ -582,9 +585,6 @@ label v16s23: # 23) Meet Amber at strip club
 
                     u "(Yikes.)"
 
-                    scene v16s23_17d
-                    with dissolve
-
                     u "Well, he looks like a good kid."
 
                     scene v16s23_17a
@@ -592,7 +592,7 @@ label v16s23: # 23) Meet Amber at strip club
 
                     am "Yeah, he's something."
 
-                elif (amber.relationship < Relationship.FWB and not kct == "popular" ): # -if not AmberRS, and MC does not pass an Amber KCT check, she doesn't up about her brother
+                else: # -if not AmberRS, and MC does not pass an Amber KCT check, she doesn't up about her brother
                     scene v16s23_17d
                     with dissolve
 
@@ -679,7 +679,7 @@ label v16s23: # 23) Meet Amber at strip club
         with dissolve
 
         menu:
-            "Be thankful":
+            "Appreciate it":
                 $ add_point(KCT.BOYFRIEND)
 
                 scene v16s23_26 # FPP MC's view standing in front of Amber. Amber has a slight smile, mouth closed [CHECKPOINT C]
@@ -692,7 +692,7 @@ label v16s23: # 23) Meet Amber at strip club
 
                 am "You're most welcome. But next time you're going to pay me, haha."
 
-            "Complain":
+            "Aww, come on...":
                 $ add_point(KCT.TROUBLEMAKER)
 
                 scene v16s23_26
@@ -705,10 +705,10 @@ label v16s23: # 23) Meet Amber at strip club
 
                 am "Haha, fuck off. You need to get that wallet out if you want any more out of me."
 
-        # -Regardless-
+                scene v16s23_26a
+                with dissolve
 
-        scene v16s23_26a
-        with dissolve
+        # -Regardless-
 
         am "Come on. Out you go. I'm sure you can find some other girl to strip for you for free."
 
@@ -739,7 +739,7 @@ label v16s23: # 23) Meet Amber at strip club
 
     # [End of Checkpoint 1.1. Continue to Checkpoint 2]]
 
-    elif amber.relationship == Relationship.FRIEND: # -if AmberFriend [Checkpoint 1.2]
+    else: # -if AmberFriend [Checkpoint 1.2]
         scene v16s23_18 
         with dissolve
 
@@ -765,32 +765,39 @@ label v16s23: # 23) Meet Amber at strip club
 
         pause 0.75
 
-        scene v16s23_17
-        with dissolve
+        if "v15_amber" in sceneList:
+            scene v16s23_17
+            with dissolve
 
-        u "You know, seeing you like this tonight, I'm starting to get flashbacks to Lauren's party."
+            u "You know, seeing you like this tonight, I'm starting to get flashbacks to Lauren's party."
 
-        scene v16s23_17a
-        with dissolve
+            scene v16s23_17a
+            with dissolve
 
-        am "Haha! I was just helping you out with that list, [name]. It was a one-time deal."
+            am "Haha! I was just helping you out with that list, [name]. It was a one-time deal."
 
-        scene v16s23_17i # FPP Amber looking at MC, smiling while raising one eyebrow, mouth open
-        with dissolve
+            scene v16s23_17i # FPP Amber looking at MC, smiling while raising one eyebrow, mouth open
+            with dissolve
 
-        am "No blowjobs happening in the private booth."
+            am "No blowjobs happening in the private booth."
 
-        scene v16s23_17
-        with dissolve
+            scene v16s23_17
+            with dissolve
 
-        u "Ha, no, I didn't mean-"
+            u "Ha, no, I didn't mean-"
 
-        scene v16s23_17a
-        with dissolve
+            scene v16s23_17a
+            with dissolve
 
-        am "I know what you meant. Don't worry."
+            am "I know what you meant. Don't worry."
 
-        am "But the guys here are always trying to pay me to blow them or fuck them."
+            am "But the guys here are always trying to pay me to blow them or fuck them."
+
+        else:
+            scene v16s23_17a
+            with dissolve
+
+            am "It's hard to manoeuver sometimes with all the guys here always trying to get me to blow them or fuck them."
 
         scene v16s23_17
         with dissolve
@@ -800,7 +807,7 @@ label v16s23: # 23) Meet Amber at strip club
         scene v16s23_17a
         with dissolve
 
-        am "Of course, it gets annoying. But the money I go home with in my pocket is worth having to fake a smile during their bullshit."
+        am "Of course it gets annoying. But the money I go home with in my pocket is worth having to fake a smile during their bullshit."
 
         menu:
             "Support her":
@@ -831,7 +838,8 @@ label v16s23: # 23) Meet Amber at strip club
                 scene v16s23_17
                 with dissolve
 
-                u "Amber, I know I supported you in the beginning of this, but you shouldn't have to deal with all these creeps just because you make a good amount of money."
+                u "Amber, I know I supported you in the beginning of this..."
+                u "But you shouldn't have to deal with all these creeps just because you make a good amount of money."
 
                 scene v16s23_17e
                 with dissolve
@@ -910,12 +918,12 @@ label v16s23: # 23) Meet Amber at strip club
             scene v16s23_27
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
             scene v16s23_28
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
         else:
             scene v16s23_28a # TPP Same angle as 28. MC is leaving the booth toward the entrance, Amber watching him go with a neutral expression.
@@ -943,7 +951,7 @@ label v16s23: # 23) Meet Amber at strip club
     u "(What a dickhead.)"
 
     menu:
-        "Knock him out":
+        "Punch him":
             $ add_point(KCT.TROUBLEMAKER)
 
             scene v16s23_34 # TPP Show MC walking toward the drunk guy, who is zipping his pants. MC looks angry and is yelling [OUTSIDE ENTRANCE]
@@ -953,7 +961,9 @@ label v16s23: # 23) Meet Amber at strip club
 
             scene v16s23_35 # TPP Show MC sucker-punching the drunk guy right in the jaw [OUTSIDE ENTRANCE]
             with dissolve
-            play sound "sounds/facepunch1.mp3" ### play sound
+            
+            play sound "sounds/facepunch1.mp3"
+
             pause 0.75
 
             scene v16s23_36 # FPP MC looking down at drunk guy, who is on the ground rubbing his jaw, mouth closed [OUTSIDE ENTRANCE]
@@ -969,16 +979,15 @@ label v16s23: # 23) Meet Amber at strip club
             scene v16s23_37 # TPP MC walking away from the strip club, a self-satisfied smirk on his face, rubbing the knuckles of the hand he used to punch the drunk guy [OUTSIDE ENTRANCE]
             with dissolve
 
-            pause 0.75
+            pause 1.5
 
         "Give him a break":
-
-            u "(The dude's already drunk out of his mind, I'll let him go this time. Can't promise that no one else won't kick his ass tonight, haha."
+            u "(The dude's already drunk out of his mind, I'll let him go this time. Can't promise that no one else won't kick his ass tonight, haha.)"
 
             scene v16s23_37a # TPP Same angle as 37. MC walking away from the strip club [OUTSIDE ENTRANCE]
             with dissolve
 
-            pause 0.75
+            pause 1.5
 
     # -regardless of choice-
     jump v16s24 # -Transition to Scene 24-

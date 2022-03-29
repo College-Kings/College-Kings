@@ -1,5 +1,5 @@
 screen v1_freeRoam1_1():
-    tag v1_freeRoam1
+    tag free_roam
 
     add "images/v1/s50.webp"
 
@@ -35,7 +35,7 @@ screen v1_freeRoam1_1():
 
 
 screen v1_freeRoam1_2():
-    tag v1_freeRoam1
+    tag free_roam
 
     if not "chris" in freeroam1:
         add "images/v1/s55.webp"
@@ -79,7 +79,7 @@ screen v1_freeRoam1_2():
 
 
 screen v1_freeRoam1_3():
-    tag v1_freeRoam1
+    tag free_roam
 
     add "images/v1/s58.webp"
 

@@ -190,58 +190,61 @@ label v16s49:
     scene v16s49_9
     with dissolve
 
-    $ v16_wrong_key = True
+    pause 0.75
 
 # -If MC chooses an incorrect key, the choice menu appears again for another attempt-
-    while v16_wrong_key:
-        menu:
-            "Blue":
-                scene v16s49_9a # FPP. Show just the BLUE Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
-                with dissolve
+    menu v16_wrong_key_5:
+        "Blue":
+            scene v16s49_9a # FPP. Show just the BLUE Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
+            with dissolve
 
-                pause 0.75
+            pause 0.75
 
-                play sound "sounds/babycry.mp3"
+            play sound "sounds/babycry.mp3"
 
-                scene v16s49_8
-                with vpunch
+            scene v16s49_8
+            with vpunch
 
-                baby "*Crying*"
+            baby "*Crying*"
+            
+            u "(Nope! I think blue is for feeding.)"
+
+            scene v16s49_9
+            with dissolve
+
+            pause 0.75
+
+            jump v16_wrong_key_5
                 
-                u "(Nope! I think blue is for feeding.)"
+        "Green":
+            scene v16s49_9b # FPP. Show just the GREEN Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
+            with dissolve
 
-                scene v16s49_9
-                with dissolve
-                    
-            "Green":
-                scene v16s49_9b # FPP. Show just the GREEN Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
-                with dissolve
+            pause 0.75
 
-                pause 0.75
+            play sound "sounds/babycry.mp3"
 
-                play sound "sounds/babycry.mp3"
+            scene v16s49_8
+            with vpunch
 
-                scene v16s49_8
-                with vpunch
+            baby "*Crying*"
+            
+            u "(Come on, [v16_baby_name]! Please stop...)"
 
-                baby "*Crying*"
-                
-                u "(Come on, [v16_baby_name]! Please stop...)"
+            jump v16_wrong_key_5
 
-            "Orange": # (CORRECT)
-                $ v16_wrong_key = False
+        "Orange": # (CORRECT)
+            play sound "sounds/babycoo.mp3"
 
-                play sound "sounds/babycoo.mp3"
+            scene v16s49_9c # FPP. Show just the ORANGE Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
+            with dissolve
 
-                scene v16s49_9c # FPP. Show just the ORANGE Fob Key in MC's hand pressing it to the baby's lower back (Baby is in MCs lap)
-                with dissolve
+            u "Got it! Diaper successfully changed."
 
-                u "Got it! Diaper successfully changed."
+            scene v16s49_3d
+            with dissolve
 
-                scene v16s49_3d
-                with dissolve
-
-                no "Nice, good job!"
+            no "Nice, good job!"
 
     scene v16s49_7
     with fade
@@ -550,7 +553,7 @@ label v16s49:
                         scene v16s49_17 # TPP. MC (slight smile, mouths is closed) is shown exiting the front door of the chicks sorority house
                         with dissolve
 
-                        jump v16s49a # -Transition to Scene 49a-
+                        pause 0.75
 
                     "Keep it PG":
                         scene v16s49_13d # TPP. Show MC (no expression, mouths is open, looking at Nora) and Nora (slightly shocked expression, mouth is closed, looking at MC)  Nora is still holding the baby, sitting on the couch
@@ -593,7 +596,7 @@ label v16s49:
                         scene v16s49_19 # TPP. Show Nora (sleeping) still holding the baby and in the same position as v16s49_6i as MC (slight smile, mouths is closed, looking at Nora) gets up from the couch
                         with dissolve
 
-                        jump v16s49a # -Transition to Scene 49a-
+                        pause 0.75
 
         "Cover your ears":
             scene v16s49_10c
@@ -707,4 +710,6 @@ label v16s49:
             scene v16s49_19
             with dissolve
 
-            jump v16s49a # -Transition to Scene 49a-
+            pause 0.75
+
+    jump v16s49a # -Transition to Scene 49a-

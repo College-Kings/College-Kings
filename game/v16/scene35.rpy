@@ -11,7 +11,7 @@ label v16s35:
 
     u "(Okay, spa supplies...)"
 
-    play sound "sound/doorclose.mp3"
+    play sound "sounds/doorclose.mp3"
 
     scene v16s35_2 # TPP. Show MC walking through the store, MC slight smile, mouth closed.
     with dissolve
@@ -32,6 +32,7 @@ label v16s35:
     if "tingle_mint_oil" in v16s35_mc_spa_shopping: # TODO: Variable #Placeholder
         scene v16s35_4 # FPP. MC focused on the massaging oils.
         with dissolve
+
         u "(Tingling mint. That sounds refreshing, right?)"
 
     else:        
