@@ -122,6 +122,7 @@ init python:
     if renpy.loadable("v16/scene1.rpy"):
         SceneGallery("As yet untitled", "images/v16/scene 3a/v16s3a_1a.webp", "v16s3a") # 3a, Riley
         SceneGallery("As yet untitled", "images/v16/scene 10/v16s10_2g.webp", "v16s10_sg") # 10, Lauren
+        SceneGallery("As yet untitled", "images/v16/scene 25/v16s25_11h.webp", "v16s25_sg") # 25, Emily
         SceneGallery("As yet untitled", "images/3 hits.webp", "") # 48, Chloe
         SceneGallery("As yet untitled", "images/3 hits.webp", "") # 63a, Nora
         SceneGallery("As yet untitled", "images/3 hits.webp", "") # 63c, Lindsey

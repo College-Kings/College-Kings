@@ -88,6 +88,8 @@ label v16s25:
     #[Checkpoint 2]
 
     if "v15_emily" in sceneList:
+        label v16s25_sg:
+    
         play sound "sounds/vibrate.mp3"
 
         if joinwolves:
@@ -181,6 +183,7 @@ label v16s25:
         menu:
             "Find a laptop": # [Checkpoint 2.1]
                 $ add_point(KCT.BOYFRIEND)
+                $ sceneList.add("v16_emily")
 
                 if joinwolves:
                     scene v16s25_7
@@ -745,6 +748,8 @@ label v16s25:
         else:
             scene v16s25_17a # TPP. Show MC with his eyes closed as he falls asleep, neutral face, mouth closed.
         with fade
+
+        $ renpy.end_replay()
         
         pause 0.75
             
