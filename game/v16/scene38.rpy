@@ -26,7 +26,7 @@ label v16s38:
 
     scene v16s38_4a # TPP. Show MC and Aubrey exchanging a quick kiss.
     with dissolve
-
+    play sound "sounds/kiss.mp3"
     pause 0.75
 
     scene v16s38_3a # FPP. Show just Aubrey from the waist up, no expression, mouth is open, looking at MC
@@ -134,7 +134,7 @@ label v16s38:
         scene v16s38_6 # FPP. Show just the driver from the waist up, slight smile, mouth is closed, accepting money that MC is handing him
         with dissolve
 
-        u "Here you go, sir."
+        u "Here you go."
 
         scene v16s38_6a # FPP. Show just the driver from the waist up, slight smile, mouth is open, the driver has put away the money
         with dissolve
@@ -144,18 +144,23 @@ label v16s38:
         scene v16s38_6b # FPP. Show just the driver from the waist up, slight smile, mouth is closed, the driver has put away the money
         with dissolve
 
-        u "(Ten bucks left for Lindsey's donation... Ha.)"
+        if v16_aubrey_date_cab == 2:
+            u "(Ten bucks left for Lindsey's donation... Ha.)"
 
-        u "(Should I just give him the rest as a tip?)"
+            u "(Should I just give him the rest as a tip?)"
+
+        else:
+            u "(This was supposed to be Lindsey's donation... Ha.)"
+
+            u "(Should I give this guy a tip?)"
 
         scene v16s38_6b
         with dissolve
 
         menu:
-            "Tip ten dollars" if mc.money >= 10:
+            "Tip ten dollars":
                 $ v16s38_tippped_driver = True
-                $ mc.money -= 10
-                $ v16s26_lindsey_donation_money -= 10
+                $ v16_lindsey_donation -= 10
                 $ add_point(KCT.BRO)
 
                 scene v16s38_6b
@@ -266,7 +271,7 @@ label v16s38:
 
                 u "(Then again... Maybe I am a dick.)"
             
-    else: ### ERROR: IF did not order Aubrey a cab
+    else: # IF did not order Aubrey a cab
         scene v16s38_3b
         with dissolve
 
@@ -349,7 +354,7 @@ label v16s38:
 
         au "All paid?"
 
-    if v16s38_tippped_driver: ### ERROR: IF tipped the driver
+    if v16s38_tippped_driver: # IF tipped the driver
         scene v16s38_11a
         with dissolve
 
