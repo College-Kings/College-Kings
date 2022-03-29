@@ -859,7 +859,7 @@ label v16s39:
                 scene v16s39_5k # FPP. Show just Aubrey sitting down in her chair at the table, no expression, mouth is open, looking at MC
                 with dissolve
 
-                au "*Sighs* I don't care about Chick's drama anymore. Not right now at least."
+                au "*Sighs* I don't care about Chicks drama anymore. Not right now at least."
 
                 au "I'm seriously at the point where I just want to ignore that it's even happening."
 

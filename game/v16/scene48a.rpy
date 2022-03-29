@@ -1,5 +1,5 @@
 # SCENE 48a: Chloe and Mc sex after they've thrown their baby out the window
-# Locations: Chick's Living Room
+# Locations: Chicks' Living Room
 # Characters: MC (Outfit: 9), CHLOE (Outfit: 3)
 # Time: Wed Night
 
@@ -672,7 +672,7 @@ label v16s48a_continue:
 
     u "(She's still asleep. I think this'll be a good time for me to head home.)"
 
-    scene v16s48a_20 # TPP MC Closing the front door of the Chick's house behind him as he exits.
+    scene v16s48a_20 # TPP MC Closing the front door of the Chicks house behind him as he exits.
     with dissolve
 
     pause 0.75

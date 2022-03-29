@@ -466,7 +466,7 @@ default v16s27_mc_baby_schedule = {
     "thursday": BabyDuty.PARTNER_ALONE,
     "friday": BabyDuty.PARTNER_ALONE
 }
-default v16s32_birthday_reservation = 0  # 0 = neither, 1 = standard_reserveration, 2 = birthday_reservation  
+default v16s32_birthday_reservation = 0 # 0 = neither, 1 = standard_reserveration, 2 = birthday_reservation  
 default v16s32_aubrey_cab_and_flowers = 0 #  0 = neither, 1 = cab only, 2 = cab and flowers
 default v16s32_cost_cab_and_flowers = 0 # Tracks the cost of Aubrey's cab ride to MC date
 default v16s34_joke_about_elijah = False # used and checked in v16s34 
@@ -480,17 +480,17 @@ default v16s39_fr_aubrey_date_points = 0
 default v16s39_food_critic = False
 default v16s44_rubius_park_walk = False
 default v16s48_chloe_throws_baby = False
-default v16s50a_dotw = 0   # 0 = nothing, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday
+default v16s50a_dotw = 0 # 0 = nothing, 1 = Sunday, 2 = Monday, 3 = Tuesday, 4 = Wednesday, 5 = Thursday, 6 = Friday, 7 = Saturday
 default v16s52_mc_dogshelter_kiwii_post = False
 default v16s52_aubrey_kiwii_post_for_donations = False # True = Aubrey makes kiwii post to raise donations for dog shelter/ False = Aubrey declines posting to Kiwii
 default v16s55_lindsey_question_set = set() # Possible values: three_positives  , important_quality  , random_kindness
 default v16s55_lindsey_followup_question_set = set() # Possible values: sounds_great or make_suggestion, thatll_do or expand, thats_good or ask_why, more_advice or finish_up
-default v16s57_agree_with_samantha_or_cameron = 0    # 0 = Stay out of it, 1 = Samantha, 2 = Cameron 
+default v16s57_agree_with_samantha_or_cameron = 0 # 0 = Stay out of it, 1 = Samantha, 2 = Cameron 
 default v16s59_just_knock = False  #  True == just knock on polly's door / False = Calm Lindsey down before knocking
 default v16s59_polly_endorse_lindsey = False # True == Polly will endorse Lindsey for Pres / False = Polly does not endorse Lindsey for Pres.
 default v16s61_chloe_pb_override_mc_gives_massages = False   # True = Mc says yes to helping chloe give massages as Spa night / False = Mc helps Chloe, but does not give massages.
 default v16s63_mc_wear_facial_mask  = False  # True = MC decides to wear facial mask on MC during s63 / False = MC decides not to wear mask 
-default v16s63a_mc_influence_aubreys_vote = 0  # 0 = Noobdy, 1 = Chloe, 2 = Lindsey (just in case this is used later to help decide the winner of the election Aubrey's vote)
+default v16s63a_mc_influence_aubreys_vote = 0 # 0 = Noobdy, 1 = Chloe, 2 = Lindsey (just in case this is used later to help decide the winner of the election Aubrey's vote)
 default v16s63a_mc_choose_keep_convo_friendly = False # True == MC chose not to talk sexy to Lindsey during massage/ False = MC chose Turn up the heat to get Lindsey all hot and bothered out
 default v16s63a_mc_choose_cool_convo = False  # True = MC chose not to take care of Lindsey's sexual needs/ False = MC chose to take care of Lindsey's sexual needs
 default v16s63x_chloe_suggestion_set = set() # Possible values:  "v16s63_compliment", "v16s63b_compliment", "v16s63_breast_reduciton", "v16s63b_breath_mint"
@@ -502,7 +502,7 @@ default v16_ms_rose_breakup = False
 default v16s4_dissnaomi = False
 default v16s14_focus = 0
 
-#default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chick's Spa Day
+#default v16s12_chloe_planboard_decide_newspaper_cover = False # True=Decide Newspaper Cover/False = Chicks Spa Day
 #default v16s12_chloe_planboard_decide_promote_chloe_on_cover = False #  True = promote chloe on newspaper cover / False = Embarrass Lindsey on front of newspaper cover
 #default v16s12_chloe_planboard_decide_mc_gives_massages = False   # True = Hire a professional to give messages / False = MC gives massages
 # Check v16s60_chloe_pb_override_mc_gives_massages variable as well when determining if MC gives massages   

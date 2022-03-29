@@ -78,7 +78,7 @@ label v16s8:
 
             cl "I can't believe she said those things about me. It's so... disappointing. *Sobbing*"
 
-            cl "I'm just trying my best, you know? I do everything I can for the Chick's, and this..."
+            cl "I'm just trying my best, you know? I do everything I can for the Chicks, and this..."
 
             scene v16s8_4e # FPP. Chloe starts crying again holding her hands to her face
             with dissolve

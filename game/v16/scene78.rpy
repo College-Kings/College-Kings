@@ -469,7 +469,7 @@ label v16s78: # 78) At the Opera with Ms Rose
         scene v16s78_26 # TPP Show Ms Rose (upset expression, mouth closed, if visible) walking away toward the exit of the Opera House.
         with dissolve
 
-        pause 0.75        
+        pause 0.75
 
     elif v16s78_rose_ask_mc_contnue_dating == 1: # -if MC chose If we want to
         

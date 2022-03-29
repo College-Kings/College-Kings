@@ -1,5 +1,5 @@
 # SCENE 63a: Massages
-# Locations: Chick's Theatre room 
+# Locations: Chicks Theatre room 
 # Characters: MC (Outfit: x), AUBREY (Outfit: dark red towel), NORA (Outfit: royal blue towel), LINDSEY (Outfit: purple towel)
 # Time: Thursday Afternoon
 
@@ -7,12 +7,12 @@
 label v16s63a: ### ERROR: 63a) Massages
 
     # -MC enters the candlelit Chicks theatre room. The coffee table has been moved out to make plenty of room for a massage table. Aubrey is already lying down on it, on her front, towel still around her but lowered so her back is exposed-
-    scene v16s63a_1     # TPP MC enters through the door of the candlelit Chick's Theatre room that has been convereted for massages.
+    scene v16s63a_1 # TPP MC enters through the door of the candlelit Chicks Theatre room that has been convereted for massages.
     with dissolve
 
     pause 0.75
     
-    scene v16s63a_2     # TPP wide Aubrey(eyes open, smiling ,mouth closed,[OC looking the door where MC entered]) in lays on her stomach on the massage table in position A (https://www.hhhexpos.com/wp-content/uploads/Couples-Massage-640x427.jpg)[arms folded in front of her, head turned to camera side] Her back exposed, boobs squished into the table, side boob visible, and her towel draped over her butt.
+    scene v16s63a_2 # TPP wide Aubrey(eyes open, smiling ,mouth closed,[OC looking the door where MC entered]) in lays on her stomach on the massage table in position A (https://www.hhhexpos.com/wp-content/uploads/Couples-Massage-640x427.jpg)[arms folded in front of her, head turned to camera side] Her back exposed, boobs squished into the table, side boob visible, and her towel draped over her butt.
     with dissolve
 
     u "Haha, ready to go already?"
@@ -32,7 +32,7 @@ label v16s63a: ### ERROR: 63a) Massages
 
     au "Haha, yes, please."
     
-    scene v16s63a_3     # TPP MC(smiling, mouth closed) pouring oil onto the palm of his opposite hand.
+    scene v16s63a_3 # TPP MC(smiling, mouth closed) pouring oil onto the palm of his opposite hand.
     with dissolve
 
     pause 0.75
@@ -53,7 +53,7 @@ label v16s63a: ### ERROR: 63a) Massages
         
         au "Mmm, it smells so nice."
 
-        scene v16s63a_4     # TPP MC(smiling, mouth open) behind and to the side of Aubrey(eyes closed, smiling, mouth closed) laying on her stomach on the massage table in POSITION /SHOT B (https://twohandsmobilemassage.com/wp-content/uploads/2020/02/015Joannie2020.jpg) resting her chin on her folded arms in front of her. [The only change from A to B is head position]
+        scene v16s63a_4 # TPP MC(smiling, mouth open) behind and to the side of Aubrey(eyes closed, smiling, mouth closed) laying on her stomach on the massage table in POSITION /SHOT B (https://twohandsmobilemassage.com/wp-content/uploads/2020/02/015Joannie2020.jpg) resting her chin on her folded arms in front of her. [The only change from A to B is head position]
         with dissolve
 
         u "It's called \"Calming Citrus.\""
@@ -106,7 +106,7 @@ label v16s63a: ### ERROR: 63a) Massages
 
     # -MC concentrates on massaging for a moment, moving to her lower back-
 
-    scene v16s63a_5     # TPP MC's hands rubbing Aubrey's lower back close to where the towel covers her ass.
+    scene v16s63a_5 # TPP MC's hands rubbing Aubrey's lower back close to where the towel covers her ass.
     with dissolve
 
     u "So, Chloe and Lindsey seem to be getting along tonight."
@@ -213,7 +213,7 @@ label v16s63a: ### ERROR: 63a) Massages
     au "*Laughs* Wow..."
 
     # -Aubrey moves to sit up on the table-
-    scene v16s63a_6     # FPP Aubrey(smiling, mouth open) sitting on the table wrapped in her towel.
+    scene v16s63a_6 # FPP Aubrey(smiling, mouth open) sitting on the table wrapped in her towel.
     with dissolve
 
     au "Alright, I should probably head back down now. I don't want to get accused of hogging you for hours."
@@ -243,7 +243,7 @@ label v16s63a: ### ERROR: 63a) Massages
 
         pause 0.75
 
-        scene v16s63a_8     # FPP Aubrey(smiling sexy, mouth open) looking at MC-- Camera shows Aubrey and her boobs (uncovered). 
+        scene v16s63a_8 # FPP Aubrey(smiling sexy, mouth open) looking at MC-- Camera shows Aubrey and her boobs (uncovered). 
         with dissolve
         
         au "Oops, my towel fell."
@@ -278,24 +278,24 @@ label v16s63a: ### ERROR: 63a) Massages
     # -Regardless of AubreyTamed-
 
     # -Aubrey leaves the room. MC watches her go. Both smiling-
-    scene v16s63a_9     # TPP Aubrey(smiling, mouth closed) walking towards the door, giving a slight way to MC (smiling, mouth open) who is slightly behind her near the massage table. 
+    scene v16s63a_9 # TPP Aubrey(smiling, mouth closed) walking towards the door, giving a slight way to MC (smiling, mouth open) who is slightly behind her near the massage table. 
     with dissolve
     
     u "Have fun out there!"
 
-    scene v16s63a_10    # TPP MC(smiling, mouth clsoed) thinking to himself.
+    scene v16s63a_10 # TPP MC(smiling, mouth clsoed) thinking to himself.
     with dissolve
 
     u "(I'm really getting the hang of this masseuse thing! Who's next?)"
     
     # -In walks Nora-
 
-    scene v16s63a_11     # FPP Nora(smiling, mouth open) enters through the door of the candlelit Chick's Theatre room that has been convereted for massages in her towel.
+    scene v16s63a_11 # FPP Nora(smiling, mouth open) enters through the door of the candlelit Chicks Theatre room that has been convereted for massages in her towel.
     with dissolve
 
     no "Hey."
 
-    scene v16s63a_11a # FPP Nora(smiling, mouth closed) enters through the door of the candlelit Chick's Theatre room that has been convereted for massages in her towel.
+    scene v16s63a_11a # FPP Nora(smiling, mouth closed) enters through the door of the candlelit Chicks Theatre room that has been convereted for massages in her towel.
     with dissolve
 
     u "Good evening, Miss. Please make yourself comfortable on my massage table."
@@ -307,7 +307,7 @@ label v16s63a: ### ERROR: 63a) Massages
 
     # -Nora lies down, same position as Aubrey with lowered towel. MC starts massaging her upper back. She closes her eyes, relaxed smile-
 
-    scene v16s63a_12     # TPP wide Nora(eyes open, glancing back toward MC[OC behind her] smiling ,mouth open), lays on her stomach on the massage table in position A [arms folded in front of her, head turned to camera side] Her back exposed, boobs squished into the table, side boob visible, and her towel draped over her butt.
+    scene v16s63a_12 # TPP wide Nora(eyes open, glancing back toward MC[OC behind her] smiling ,mouth open), lays on her stomach on the massage table in position A [arms folded in front of her, head turned to camera side] Her back exposed, boobs squished into the table, side boob visible, and her towel draped over her butt.
     with dissolve
 
     no "You'll never guess what's going on in the living room."
@@ -368,7 +368,7 @@ label v16s63a: ### ERROR: 63a) Massages
 
     if nora.relationship == Relationship.FRIEND: # -if NoraFriend
 
-        scene v16s63a_13     # TPP MC(smiling, mouth open) behind and to the side of Nora(eyes closed, smiling, mouth closed) laying on her stomach on the massage table in POSITION /SHOT b resting her chin on her folded arms in front of her. [The only change from A to B is head position]
+        scene v16s63a_13 # TPP MC(smiling, mouth open) behind and to the side of Nora(eyes closed, smiling, mouth closed) laying on her stomach on the massage table in POSITION /SHOT b resting her chin on her folded arms in front of her. [The only change from A to B is head position]
         with dissolve
 
         u "You've really been unwinding these last few days, huh?"
@@ -378,7 +378,7 @@ label v16s63a: ### ERROR: 63a) Massages
 
         no "Starting with yoga, yes. *Chuckles* I love it now."
 
-        scene v16s63a_14     # TPP MC's hands massaging Nora's lower back close to where the towel covers her ass.
+        scene v16s63a_14 # TPP MC's hands massaging Nora's lower back close to where the towel covers her ass.
         with dissolve
 
         no "I should do more relaxing things for myself like spa treatments and massages."
@@ -620,7 +620,7 @@ label v16s63a: ### ERROR: 63a) Massages
 
                             no "Hehe... I love that idea. Less talking, more fingering."
 
-                            scene v16s63a_15     # TPP Nora(smiling, sexy, mouth closed, looking at MC) turned over on her back, naked, legs spread apart, pussy showing (her towel is under her) directing MC's (smiling mouth closed) hand towards her pussy.
+                            scene v16s63a_15 # TPP Nora(smiling, sexy, mouth closed, looking at MC) turned over on her back, naked, legs spread apart, pussy showing (her towel is under her) directing MC's (smiling mouth closed) hand towards her pussy.
                             with dissolve
 
                             u "Yes, ma'am..."
@@ -774,7 +774,7 @@ label v16s63a: ### ERROR: 63a) Massages
 
     # -Then he's finished. Nora stands up-
 
-    scene v16s63a_16     # TPP Nora(smiling, mouth open) sitting on the table, wrapped in her towel looking at MC (smiling, mouth closed) looking at Nora.
+    scene v16s63a_16 # TPP Nora(smiling, mouth open) sitting on the table, wrapped in her towel looking at MC (smiling, mouth closed) looking at Nora.
     with dissolve
 
     no "*Moans* Thanks, [name]. That was a massage to remember."
@@ -825,12 +825,12 @@ label v16s63a: ### ERROR: 63a) Massages
 
     # -In walks Lindsey-
     
-    scene v16s63a_18     # FPP Lindsey(smiling, mouth open) enters through the door of the candlelit Chick's Theatre room that has been convereted for massages in her towel.
+    scene v16s63a_18 # FPP Lindsey(smiling, mouth open) enters through the door of the candlelit Chicks Theatre room that has been convereted for massages in her towel.
     with dissolve
 
     li "I'm sure you're ready for me now that you've warmed up on those two."
 
-    scene v16s63a_18a # FPP Lindsey(smiling, mouth closed) enters through the door of the candlelit Chick's Theatre room that has been convereted for massages in her towel.
+    scene v16s63a_18a # FPP Lindsey(smiling, mouth closed) enters through the door of the candlelit Chicks Theatre room that has been convereted for massages in her towel.
     with dissolve
 
     u "Haha, oh yeah. Best for last, just for you."
@@ -839,12 +839,12 @@ label v16s63a: ### ERROR: 63a) Massages
 
     pause 0.75
 
-    scene v16s63a_20     # TPP MC's hands massaging Lindsey's lower back close to where the towel covers her ass.
+    scene v16s63a_20 # TPP MC's hands massaging Lindsey's lower back close to where the towel covers her ass.
     with dissolve
 
     pause 0.75
         
-    scene v16s63a_19     # TPP wide Lindsey(eyes open, glancing back toward MC[OC behind her] smiling ,mouth open), lays on her stomach on the massage table in position A [arms folded in front of her, head turned to camera side] Her back exposed, boobs squished into the table, side boob visible, and her towel draped over her butt.
+    scene v16s63a_19 # TPP wide Lindsey(eyes open, glancing back toward MC[OC behind her] smiling ,mouth open), lays on her stomach on the massage table in position A [arms folded in front of her, head turned to camera side] Her back exposed, boobs squished into the table, side boob visible, and her towel draped over her butt.
     with dissolve
     
     li "Ooh... I haven't been touched this much in so long, haha. Sorry if I'm ticklish."
@@ -874,7 +874,7 @@ label v16s63a: ### ERROR: 63a) Massages
 
     li "I haven't even- Never mind, haha."
 
-    scene v16s63a_21     # TPP MC(smiling, mouth open) behind and to the side of Lindsey(eyes closed, smiling, mouth closed) laying on her stomach on the massage table in POSITION /SHOT b resting her chin on her folded arms in front of her. [The only change from A to B is head position]
+    scene v16s63a_21 # TPP MC(smiling, mouth open) behind and to the side of Lindsey(eyes closed, smiling, mouth closed) laying on her stomach on the massage table in POSITION /SHOT b resting her chin on her folded arms in front of her. [The only change from A to B is head position]
     with dissolve
 
     u "Haven't even what?"
@@ -1092,12 +1092,12 @@ label v16s63a: ### ERROR: 63a) Massages
 
         u "Oh, okay. Guess I'm done here?"
 
-        scene v16s63a_22     # TPP Lindsey(smiling, mouth open) sitting on the table, wrapped in her towel looking at MC (smiling, mouth closed) looking at Lindsey.
+        scene v16s63a_22 # TPP Lindsey(smiling, mouth open) sitting on the table, wrapped in her towel looking at MC (smiling, mouth closed) looking at Lindsey.
         with dissolve
 
         li "Yup, you're free!"
 
-        scene v16s63a_23    # FPP Lindsey(smiling, mouth closed) standing, wrapped in her towel looking at MC (smiling, mouth open) looking at Lindsey.
+        scene v16s63a_23 # FPP Lindsey(smiling, mouth closed) standing, wrapped in her towel looking at MC (smiling, mouth open) looking at Lindsey.
         with dissolve
 
         u "While we're on the subject, you two seem to be getting along tonight."
@@ -1152,7 +1152,7 @@ label v16s63a: ### ERROR: 63a) Massages
 
     # -MC and Lindsey exit the room-
 
-    scene v16s63a_24     # TPP Lindsey(smiling, mouth closed) exiting through the the door, with MC (smiling, mouth open) following behind her.
+    scene v16s63a_24 # TPP Lindsey(smiling, mouth closed) exiting through the the door, with MC (smiling, mouth open) following behind her.
     with dissolve
 
     pause 0.75

@@ -11,7 +11,7 @@ label v16s71b: ### ERROR: 71b) The Dean returns
         # -Continuing from Scene 71, MC and Penelope are sat on the couch looking at Oscar sleeping-
 
         # -The Dean enters, looking straight over to Oscar-
-        scene v16s71b_1     # TPP Dean enters through her office door
+        scene v16s71b_1 # TPP Dean enters through her office door
         with dissolve
 
         pause 0.75
@@ -21,7 +21,7 @@ label v16s71b: ### ERROR: 71b) The Dean returns
 
         de "Aw, he's having his mid-morning nap."        
 
-        scene v16s71b_2     # FPP Dean(neutral, mouth open) looking at MC and Penelope (OC)
+        scene v16s71b_2 # FPP Dean(neutral, mouth open) looking at MC and Penelope (OC)
         with dissolve
 
         de "Has he been good for you?"
@@ -32,7 +32,7 @@ label v16s71b: ### ERROR: 71b) The Dean returns
 
         pause 0.75
         
-        scene v16s71b_3     # FPP Penelope (smiling, mouth open) looking the Dean (nuetral, mouth closed). 
+        scene v16s71b_3 # FPP Penelope (smiling, mouth open) looking the Dean (nuetral, mouth closed). 
         with dissolve
 
         pe "He's been perfect."
@@ -73,7 +73,7 @@ label v16s71b: ### ERROR: 71b) The Dean returns
         de "Great. You guys are free to go now, thanks!"
 
         # -Penelope and MC exit with the Dean watching them go, all smiling. Oscar sound asleep-
-        scene v16s71b_4     # TPP Penelope(smiling, mouth closed) and MC (smiling, mouth closed) exiting through the Dean's office door (POV from Hallway). The Dean in the background, smiling, watching them leave.
+        scene v16s71b_4 # TPP Penelope(smiling, mouth closed) and MC (smiling, mouth closed) exiting through the Dean's office door (POV from Hallway). The Dean in the background, smiling, watching them leave.
         with dissolve
 
         pause 0.75
@@ -82,7 +82,7 @@ label v16s71b: ### ERROR: 71b) The Dean returns
 
         # -Continuing from Scene 71a, MC and Penelope are sat on the couch pulling on their last item of clothing, then they're full dressed again-
         
-        scene v16s71a_5     # TPP Same as v16s71a_17(not a typo-- used this is the base image). Penelope and MC(concerned, mouths closed) now have their shirts on (fully clothed) looking at each other 
+        scene v16s71a_5 # TPP Same as v16s71a_17(not a typo-- used this is the base image). Penelope and MC(concerned, mouths closed) now have their shirts on (fully clothed) looking at each other 
         with dissolve
 
         pause 0.75
@@ -95,7 +95,7 @@ label v16s71b: ### ERROR: 71b) The Dean returns
         pause 0.75
                
         # -The Dean enters, carrying Oscar. She puts him on the ground, and he goes to sit on his bed-        
-        scene v16s71b_6     # FPP Dean (angry, mouth closed) stands in front of her closed door, holding Oscar.
+        scene v16s71b_6 # FPP Dean (angry, mouth closed) stands in front of her closed door, holding Oscar.
         with dissolve
 
         pause 0.75
@@ -193,7 +193,7 @@ label v16s71b: ### ERROR: 71b) The Dean returns
         # -Regardless of lying or not-
         
         # -The Dean looks over to Oscar's empty food bowl-
-        scene v16s71a_7     # TPP Close on Oscar's empty food bowl.
+        scene v16s71a_7 # TPP Close on Oscar's empty food bowl.
         with dissolve
 
         pause 0.75
@@ -271,7 +271,7 @@ label v16s71b: ### ERROR: 71b) The Dean returns
 
         play sound "sounds/doorclose.mp3"
 
-        scene v16s71a_8     # TPP MC and Penelope(smiling, mouths closed) looking at each other in front of the Dean's office door (Closed).
+        scene v16s71a_8 # TPP MC and Penelope(smiling, mouths closed) looking at each other in front of the Dean's office door (Closed).
         with dissolve
 
         pause 0.75
@@ -306,7 +306,7 @@ label v16s71b: ### ERROR: 71b) The Dean returns
 
         play sound "sounds/doorclose.mp3"
         
-        scene v16s71a_9     # Same as v16s71a_8 but MC and Penlope concerned.
+        scene v16s71a_9 # Same as v16s71a_8 but MC and Penlope concerned.
         with dissolve
 
         pause 0.75
@@ -385,7 +385,6 @@ label v16s71b: ### ERROR: 71b) The Dean returns
 
 # if still dating Ms. Rose, transition to scene 76
 if not v16_ms_rose_breakup:
-
     jump v16s76
 
 else:

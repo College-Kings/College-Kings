@@ -12,7 +12,7 @@ label v16s71a: ### ERROR: 71a) Penelope sex scene
 
     # -MC and Penelope are kissing passionately by the Dean's desk-
     # -Then Penelope starts taking her clothes off, revealing sexy lingerie underneath-
-    scene v16s71a_1    # TPP MC(eyes closed), Penelope (eyes closed) standing by Dean's chair and bookshelf, kissing passionately with tongue.
+    scene v16s71a_1 # TPP MC(eyes closed), Penelope (eyes closed) standing by Dean's chair and bookshelf, kissing passionately with tongue.
     with dissolve
 
     pause 0.75
@@ -57,7 +57,7 @@ label v16s71a: ### ERROR: 71a) Penelope sex scene
     # -Penelope sits on the edge of the Dean's desk. They kiss passionately. MC's hand around her throat while they kiss (Penelope is submissive and MC is dominant in this sex scene - Community voted scene)-
     # -MC pulls off Penelope's lingerie and she is now naked. Then MC takes his clothes off-
     # -With his hand around her throat, MC eases her back so she's lying down on the desk-
-    scene v16s71a_2    # TPP Penelope (eyes closed) sits on the front corner of the Dean's desk kissing MC(eyes closed) passionately with tongue. MC slightly dominates her with his hand around her throat while they kiss.
+    scene v16s71a_2 # TPP Penelope (eyes closed) sits on the front corner of the Dean's desk kissing MC(eyes closed) passionately with tongue. MC slightly dominates her with his hand around her throat while they kiss.
     with dissolve
 
     pause 0.75
@@ -107,7 +107,7 @@ label v16s71a_neck:
         "Kiss neck": # -if Kiss neck
 
             # -MC kisses Penelope's neck-
-            scene v16s71a_3    # TPP Penelope (eyes closed, smiling, mouth open) enjoying MC(eyes closed) kissing her neck where it meets the shoulder.
+            scene v16s71a_3 # TPP Penelope (eyes closed, smiling, mouth open) enjoying MC(eyes closed) kissing her neck where it meets the shoulder.
             with dissolve
             
             pe "Mmm, yeah, I like that."
@@ -125,7 +125,7 @@ label v16s71a_neck:
         "Choke her": # -if Choke her
 
             # -MC puts his hand around Penelope's neck, squeezing-
-            scene v16s71a_4    # TPP Penelope (eyes open, shocked, smiling, mouth slight gasping) suprised, looking at MC(eyes open looking at Penelope, smiling, mouth closed) who has his hand gripped firmly around her throat.
+            scene v16s71a_4 # TPP Penelope (eyes open, shocked, smiling, mouth slight gasping) suprised, looking at MC(eyes open looking at Penelope, smiling, mouth closed) who has his hand gripped firmly around her throat.
             with dissolve
 
             pe "*Gasps*"            
@@ -158,7 +158,7 @@ label v16s71a_boobs:
         "Massage boobs": # -if Massage boobs
 
             # -MC massages Penelope's boobs-
-            scene v16s71a_5    # TPP Penelope (smiling, mouth open,looking at MC) enjoying MC (smiling, mouth closed, looking at Penelope) massaging her boobs (erect nipples) with his hands.
+            scene v16s71a_5 # TPP Penelope (smiling, mouth open,looking at MC) enjoying MC (smiling, mouth closed, looking at Penelope) massaging her boobs (erect nipples) with his hands.
             with dissolve
             
             pe "Do you like my boobs?"
@@ -178,7 +178,7 @@ label v16s71a_boobs:
         "Suck boobs": # -if Suck boobs
 
             # -MC sucks on Penelope's boobs-
-            scene v16s71a_6    # TPP Penelope (aroused/excited, smiling, mouth slight gasped open) looking at MC (eyes closed) sucking on her erect nipple. 
+            scene v16s71a_6 # TPP Penelope (aroused/excited, smiling, mouth slight gasped open) looking at MC (eyes closed) sucking on her erect nipple. 
             with dissolve
 
             pe "Oh, fuck... your mouth feels so good."
@@ -219,7 +219,7 @@ label v16s71a_feet:
         "Massage feet": # -if Massage feet
 
             # -MC massages Penelope's foot-
-            scene v16s71a_7   # TPP Penelope (excited, smiling mouth open) looking at MC (smiling, mouth closed) who holds her leg in front of him and is massaging her foot.
+            scene v16s71a_7 # TPP Penelope (excited, smiling mouth open) looking at MC (smiling, mouth closed) who holds her leg in front of him and is massaging her foot.
             with dissolve
             
             pe "Ooh, a foot massage?"
@@ -244,7 +244,7 @@ label v16s71a_feet:
         "Suck toes": # -if Suck toes
 
             # -MC sucks on Penelope's toes-
-            scene v16s71a_8   # TPP Penelope (smiling, mouth open,looking at MC) taken by surprise as MC (looking at Penelop) licks the bottom of Penelope's foot that he holds up in the air.
+            scene v16s71a_8 # TPP Penelope (smiling, mouth open,looking at MC) taken by surprise as MC (looking at Penelop) licks the bottom of Penelope's foot that he holds up in the air.
             with dissolve
 
             pe "Oh, fuck, [name]."
@@ -280,7 +280,7 @@ label v16s71a_continue:
     image v16pensex2f = Movie(play="images/v16/scene71a/v16pensex2f.webm", loop=True, image="images/v16/scene71a/v16pensex2Start.webp", start_image="images/v16/scene71a/v16pensex2Start.webp")
  
 
-    scene v16s71a_10  # TPP Penelope(excitedly anxious, horny smiling, mouth closed) looking into MC's eyes laying back on the dean's desk, while MC(smiling, mouth open) stands between her spread legs with his penis positioned to enter her vagina looking into her eyes
+    scene v16s71a_10 # TPP Penelope(excitedly anxious, horny smiling, mouth closed) looking into MC's eyes laying back on the dean's desk, while MC(smiling, mouth open) stands between her spread legs with his penis positioned to enter her vagina looking into her eyes
     with dissolve
 
     u "I've been looking forward to this since the day I met you, Penelope."
@@ -317,7 +317,7 @@ label v16s71a_continue:
     # -END ANIMATION 1-
 
     # -MC lifts Penelope up, and he turns to the shelves behind them, carrying her, face to face-
-    scene v16s71a_11  # TPP MC(smiling, mouth closed) by the corner of the desk, now holds Penelope(excited, looking at MC, mouth closed) while his penis remains inside her vagina.
+    scene v16s71a_11 # TPP MC(smiling, mouth closed) by the corner of the desk, now holds Penelope(excited, looking at MC, mouth closed) while his penis remains inside her vagina.
     with dissolve
 
     pause 0.75
@@ -369,7 +369,7 @@ label v16s71a_continue:
     image v16pendgf = Movie(play="images/v16/scene71a/v16pendgf.webm", loop=True, image="images/v16/scene71a/v16pendgStart.webp", start_image="images/v16/scene71a/v16pendgStart.webp")
     image v16pensdg2f = Movie(play="images/v16/scene71a/v16pendg2f.webm", loop=True, image="images/v16/scene71a/v16pendg2Start.webp", start_image="images/v16/scene71a/v16pendg2Start.webp")
 
-    scene v16s71a_12  # TPP Penelope(smiling, mouth open) standing by the right bookshelf facing the Dean's chair, with MC(smiling, mouth closed) standing behind her. Penelope is slightly looking back at MC.
+    scene v16s71a_12 # TPP Penelope(smiling, mouth open) standing by the right bookshelf facing the Dean's chair, with MC(smiling, mouth closed) standing behind her. Penelope is slightly looking back at MC.
     with dissolve
     
     pe "Yes! *Moans* Fuck me on the Dean's chair..."
@@ -430,7 +430,7 @@ label v16s71a_continue:
 
     pe "*Panting* Here, let me finish you off."
     
-    scene v16s71a_13  # TPP MC (smiling, mouth open) pushing Penelope (smiling, mouth closed) to sit down in the Dean's chair
+    scene v16s71a_13 # TPP MC (smiling, mouth open) pushing Penelope (smiling, mouth closed) to sit down in the Dean's chair
     with dissolve
     
     u "Sit down."
@@ -484,7 +484,7 @@ label v16s71a_continue:
 
     # -END OF ANIMATION 4-
 
-    scene v16s71a_14  # TPP frame from v16penbjf where Penelope has MC's dick deep in her mouth, MC (orgasming hard, eyes closed, mouth closed) has his hands on the back of Penelope's head.
+    scene v16s71a_14 # TPP frame from v16penbjf where Penelope has MC's dick deep in her mouth, MC (orgasming hard, eyes closed, mouth closed) has his hands on the back of Penelope's head.
     with vpunch
 
     u "*Groans* Fuuuck..."    

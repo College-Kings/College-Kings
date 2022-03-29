@@ -32,7 +32,7 @@ label v16s63: # 63) Chloe's Spa Day
     scene v16s63_2
     with dissolve
 
-    u "A little bit. I thought this was a Chick's only thing."
+    u "A little bit. I thought this was a Chicks only thing."
 
     scene v16s63_2a
     with dissolve

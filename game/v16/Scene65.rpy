@@ -3,9 +3,7 @@
 # Characters: CHLOE (Outfit: 1), MC (Outfit: 2)
 # Time: Thursday Evening
 
-
 label v16s65:
-
     scene v16s65_1 # TPP. Show MC (slight smile, mouth closed, looking atr the door) knocking on the front door of the chicks sorority house
     with dissolve
 
@@ -213,7 +211,6 @@ label v16s65:
             u "Fair point, moving on..."
 
         "Don't bring it up":
-
             scene v16s65_4a
             with dissolve
 
@@ -227,7 +224,6 @@ label v16s65:
     cl "Sent."
 
     if chloe.relationship == Relationship.GIRLFRIEND: # -if ChloeGF
-
         scene v16s65_4b
         with dissolve
 
@@ -244,7 +240,6 @@ label v16s65:
         u "Mmm, it's always a pleasure."
 
     else: # -if not chloegf
-
         scene v16s65_4
         with dissolve
 
@@ -293,4 +288,4 @@ label v16s65:
 
     pause 0.75
 
-    jump v16s65 # -Transition to Scene 66-
+    jump v16s66 # -Transition to Scene 66-

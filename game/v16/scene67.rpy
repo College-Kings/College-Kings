@@ -10,14 +10,12 @@ label v16s67:
     pause 0.75
 
     if not v16s12_chloe_planboard_decide_newspaper_cover: # -if MC walked with Lindsey in Scene 66
-
         scene v16s67_2 # TPP. MC and Lindsey (both slight smiles, mouths are closed, looking towards the stage (stage is not shown)) enter the cafeteria and stay standing by the main entrance door to watch for the moment. At least 5 other people (no expressions, mouths open or closed, and looking at the (stage is not shown)) leaning against the wall in the background
         with dissolve
 
         pause 0.75
 
     else: # -if MC walked alone in Scene 66
-
         scene v16s67_2a # TPP. same as v16s67_2 just remove Lindsey from the render
         with dissolve
 
@@ -46,7 +44,6 @@ label v16s67:
     polly "And luckily, I always have my trusty acoustic guitar with me wherever I go."
 
     if not v16s12_chloe_planboard_decide_newspaper_cover and v16s28_lindsey_pb_intereview_polly_choice: # -if MC is with Lindsey but did not go to Polly's hotel room
-
         scene v16s67_4 # FPP. Show just Lindsey (slight smile, mouth is open, looking at MC) 
         with dissolve
 
@@ -63,7 +60,6 @@ label v16s67:
         pause 0.75
 
     elif not v16s12_chloe_planboard_decide_newspaper_cover and not v16s28_lindsey_pb_intereview_polly_choice: # -if MC is with Lindsey and they went to Polly's hotel room
-
         scene v16s67_3
         with dissolve
 
@@ -75,7 +71,6 @@ label v16s67:
         li "Oh, my God! It's happening!"
 
         if v16s59_polly_endorse_lindsey: # -if MC and Lindsey went to Polly's hotel room and succeeded
-
             scene v16s67_3
             with dissolve
 

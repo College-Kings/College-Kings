@@ -1,5 +1,5 @@
 # SCENE 25a: MC wakes up
-# Locations: MC's Wolves Room/Apes Room, Aubrey's room at the Chick's house.
+# Locations: MC's Wolves Room/Apes Room, Aubrey's room at the Chicks' house.
 # Characters: MC (Outfit: Underwear to 9), AUBREY (Outfit: 3)
 # Time: Morning
 
