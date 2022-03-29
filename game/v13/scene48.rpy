@@ -613,7 +613,7 @@ label v13s48:
 
             u "*Chuckles* Yes ma'am."
 
-        "(That's too much...)":
+        "That's too much...":
             u "(I'm not getting her chocolates. *Chuckles* That's doing too much.)"
 
     u "You know what would be really cool to do in Amsterdam?"

@@ -12,7 +12,7 @@ screen v12s18_room1():
             idle "images/v12/scene 18/Screens/v12s18Room1a.webp" # Nora no longer sitting on the floor
             hover "images/v12/scene 18/Screens/v12s18Room1aHover.webp"
 
-            hotspot (182, 174, 1495, 691) action Call("freeRoamSpokenToo", backgroundImg="v12/scene 18/Screens/v12s18Room1a.webp", returnScreen="v12s18_room1") # Already played with the girls
+            hotspot (182, 174, 1495, 691) action Call("free_roam_spoken_too", "v12/scene 18/Screens/v12s18Room1a.webp", "v12s18_room1") # Already played with the girls
 
         hotspot (0, 30, 126, 1020) action Show("v12s18_room2") # Room 2
 

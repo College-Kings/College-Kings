@@ -11,7 +11,7 @@ label v16s52:
 
     pause 0.75
 
-    play sound "sound/doorclose.mp3"
+    play sound "sounds/doorclose.mp3"
 
     scene v16s52_2 # TPP. Show MC(neutral face, mouth closed.) walked inside of the shelter the door closing behind him.
     with dissolve
@@ -35,11 +35,14 @@ label v16s52:
 
     scene v16s52_6 # TPP. Close up of the picture of Blue/dog_name with his new owner.
     with dissolve
+    
+    pause 0.75
 
     if not dog_name.lower() == "blue":
         scene v16s52_6
         with dissolve
-        u "(Oh, awesome, [dog_name] got adopted! He looks so happy, ha.)"
+
+        u "(Oh, awesome, [dog_name] got adopted! He looks so happy now.)"
 
     else:
         scene v16s52_6
@@ -73,7 +76,7 @@ label v16s52:
 
     la "Morning!"
 
-    if lauren.relationship == Relationship.GIRLFRIEND:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v16s52_10 # FPP. MC looking at Lauren(slight smile, mouth closed), Lauren looking at MC, Autumn (slight smile, mouth closed.) standing next to Lauren. Autumn looking at MC. 
         with dissolve
 
@@ -137,7 +140,7 @@ label v16s52:
 
     aut "Oh, I see. Well, she's learning from the best, haha."
 
-    if lauren.relationship == Relationship.GIRLFRIEND:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v16s52_10
         with dissolve
 
@@ -188,7 +191,7 @@ label v16s52:
             aut "Thanks, [name]. That's really kind of her!"
 
             if mc.money >= 10:
-                $ mc.money -= 10                
+                $ mc.money -= 10 
 
         elif v16s26_lindsey_donation_money == 50:
             if mc.money >= 50:
@@ -235,7 +238,7 @@ label v16s52:
 
     la "Yup! I will. Bye, [name]!"
 
-    if lauren.relationship == Relationship.GIRLFRIEND:
+    if lauren.relationship >= Relationship.GIRLFRIEND:
         scene v16s52_10d # FPP. MC looking at Lauren. Lauren backing away and blowing a kiss at MC. Autumn (slight smile, mouth closed) looking at Lauren.
         with dissolve
 
@@ -269,6 +272,8 @@ label v16s52:
 
         scene v16s52_10f # FPP. MC looking at Lauren. Lauren turned around walking away.
         with dissolve
+
+        pause 0.75
 
     if v15_autumn_freemug: # TODO: Variable
         scene v16s52_9a
@@ -312,6 +317,8 @@ label v16s52:
 
         scene v16s52_14 # TPP. MC and Autumn both laughing.
         with dissolve
+
+        pause 0.75
 
     scene v16s52_9a
     with dissolve
@@ -429,6 +436,8 @@ label v16s52:
             scene v16s52_15 # TPP. Show MC(slight smile, mouth closed) looking at his phone, Autumn (slight smile, mouth closed) infront of MC.
             with dissolve
 
+            pause 0.75
+
             $ aubrey.messenger.addReply("Hey, Aubrey. I'm with Autumn right now at the dog shelter for the re-opening, and we kind of need your help.", func = None, new_message = True)
             $ aubrey.messenger.newMessage("I'm not able to come, but can I help from here?")
             $ aubrey.messenger.addReply("Yeah, we don't need much at all. The thing is, we need more donations. Well, more people with donations...")
@@ -462,16 +471,20 @@ label v16s52:
 
                 u "Haha, she's pretty great."
 
-                #! v16s52kw_1  Aubrey in a comfy sweater and blue jeans, professional photo shoot photo with a puppy in her lap
+                #! v16s52kw_1 Aubrey in a comfy sweater and blue jeans, professional photo shoot photo with a puppy in her lap
 
-                $ v16s52_kiwiiPost1 = KiwiiPost(aubrey, "v16/v16s52kw_1.webp", "Good morning people! Today is such a huge day for a friend of mine. The re-opening of the local dog shelter is taking place right now, and they could use any help they can get! Head over there to donate, adopt, or even shop; They've got some really cute merchandise. #AdoptDon'tShop #OrDoBoth <3", numberLikes=3718)
+                $ v16s52_kiwiiPost1 = KiwiiPost(aubrey, "v16/v16s52_aubpost1.webp", "Good morning people! Today is such a huge day for a friend of mine. The re-opening of the local dog shelter is taking place right now, and they could use any help they can get! Head over there to donate, adopt, or even shop; They've got some really cute merchandise. #AdoptDon'tShop #OrDoBoth <3", numberLikes=3718)
                 $ v16s52_kiwiiPost1.new_comment(autumn, "Thank you Aubrey! <3 We can't wait to see everyone. Address is 0417 Alanis Street near SVC :)", numberLikes=1518, force_send=True)
                 $ v16s52_kiwiiPost1.new_comment(chloe, "When did you do this photoshoot, omg?!", numberLikes=417, force_send=True)
                 $ v16s52_kiwiiPost1.new_comment(imre, "Aw man! I want a puppy!", numberLikes=545, force_send=True)
                 $ v16s52_kiwiiPost1.new_comment(sebastian, "Hmm... A puppy, eh?", numberLikes=961, force_send=True)
                 $ v16s52_kiwiiPost1.new_comment(lauren, "This is so cool of you, Aubrey <3", numberLikes=1070, force_send=True)
 
-            elif v16s25a_date_with_aubrey and aubrey.relationship < Relationship.TAMED:
+                if False: # For Lint
+                    scene v16s52_aubpost1
+                    with dissolve
+
+            elif v16_aubrey_date and aubrey.relationship < Relationship.TAMED:
                 $ aubrey.messenger.newMessage("Sorry, [name]... But I don't want to risk interfering with my brand. Lew's might not like me doing free dog shelter promoting, you know?", force_send=True)
                 $ aubrey.messenger.addReply("Oh, yeah. I get it, that's okay. Thanks")
                 $ aubrey.messenger.newMessage("Good luck")
@@ -521,18 +534,22 @@ label v16s52:
                 #! v16s52kw_2 A stock photo that mc found on the internet of a puppy
                 $ v16s52_mc_dogshelter_kiwii_post = True
 
-                $ kiwii_post = KiwiiPost(mc, "v16/v16s52kw_2.webp", "The puppies need you! Come to 0417 Alanis Street near SVC if you're looking to adopt or donate. We need all the help we can get! :)", numberLikes=479)
-                $ kiwii_post.new_comment(autumn, "Yes, please come see us! We have merchandise too <3", numberLikes=47, force_send=True)
-                $ kiwii_post.new_comment(lindsey, "Hope you got my donation!", numberLikes=25, force_send=True)
+                $ v16s52_kiwiiPost2 = KiwiiPost(mc, "v16/v16s52_post2.webp", "The puppies need you! Come to 0417 Alanis Street near SVC if you're looking to adopt or donate. We need all the help we can get! :)", numberLikes=479)
+                $ v16s52_kiwiiPost2.new_comment(autumn, "Yes, please come see us! We have merchandise too <3", numberLikes=47, force_send=True)
+                $ v16s52_kiwiiPost2.new_comment(lindsey, "Hope you got my donation!", numberLikes=25, force_send=True)
+                
+                if False: # For Lint
+                    scene v16s52_post2
+                    with dissolve
                 
                 if v16s26_lindsey_donation_money >= 10:
-                    $ kiwii_post.new_comment(autumn, "Yes, received! Thank you so so much :D", mentions=Lindsey, numberLikes=146, force_send=True)
+                    $ v16s52_kiwiiPost2.new_comment(autumn, "Yes, received! Thank you so so much :D", mentions=lindsey, numberLikes=146, force_send=True)
                 
                 elif v16s26_lindsey_donation_money == 0:
-                    $ kiwii_post.new_comment(autumn, "Must have missed it... Where did you send it?", mentions=Lindsey, numberLikes=119, force_send=True)
+                    $ v16s52_kiwiiPost2.new_comment(autumn, "Must have missed it... Where did you send it?", mentions=lindsey, numberLikes=119, force_send=True)
                 
-                $ kiwii_post.new_comment(aubrey, "Good luck u guys :)", numberLikes=91, force_send=True)
-                $ kiwii_post.new_comment(lauren, "Sending everyone I run into over to you guys!", numberLikes=46, force_send=True)
+                $ v16s52_kiwiiPost2.new_comment(aubrey, "Good luck u guys :)", numberLikes=91, force_send=True)
+                $ v16s52_kiwiiPost2.new_comment(lauren, "Sending everyone I run into over to you guys!", numberLikes=46, force_send=True)
 
             scene v16s52_9
             with dissolve 
@@ -555,12 +572,12 @@ label v16s52:
             aut "I wish... We need every dollar we can get."
 
             scene v16s52_16 # TPP. Show MC (Slight smile, mouth closed) playing with dogs in the play area.
-            with fade (1,0,1)
+            with fade
 
             pause 0.75
 
             scene v16s52_17 # TPP. Show MC (Slight smile, mouth closed) looking at a poster in the dog shelter
-            with fade (1,0,1)
+            with fade
 
             pause 0.75 
 
@@ -605,7 +622,7 @@ label v16s52:
             pause 0.75
 
             scene v16s52_20 # TPP. Show MC (slight smile, mouth closed) outside by the entrance of the Dog shelter holding a big arrow sign "Love dogs? Come say hello!" with a dog picture if possible.
-            with fade (1,0,1)
+            with fade
 
             pause 0.75 
 
@@ -1009,6 +1026,8 @@ label v16s52:
 
         scene v16s52_42 # TPP. Show MC kissing Autumn(blushing, smile, mouth closed)
         with dissolve
+
+        pause 0.75
 
     scene v16s52_41a 
     with dissolve

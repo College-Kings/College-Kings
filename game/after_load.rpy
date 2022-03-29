@@ -4,17 +4,20 @@ python early:
         "bugTesting/bugTesting_typoNotes.rpy",
         "bugTesting/bugTesting_cheats.rpy",
         "bugTesting/styles.rpy",
+        "phone/applications.rpy"
         "phone/phonescript.rpy",
+        "phone/phone_msg.rpy",
         "phone/phone_script.rpy",
         "phone/phoneStyle.rpy",
         "sceneGallery/sceneGallery.rpy",
-        "v14/chicks_presidency_race/planning_board.rpy"
+        "v14/chicks_presidency_race/planning_board.rpy",
         "customCharacters.rpy",
         "functions.rpy",
         "path_builder.rpy",
         "scriptv06.rpy",
         "scriptv07.rpy",
         "screen.rpy",
+        "sex_overlay.rpy"
     }
 
     restart_game = False # NEVER CHANGE
@@ -44,11 +47,6 @@ python early:
             renpy.quit()
         except OSError:
             raise Exception("Deleting old files please RESTART GAME.")
-
-    # Helper function
-    def write_console(data):
-        with open("console.txt", "w") as f:
-            f.write(str(data))
 
 init 100 python:
     class CheatItem:
@@ -904,6 +902,10 @@ label after_load:
         except NameError: pass
         try:
             if v9_sex_with_riley: sceneList.add("v9_riley")
+        except NameError: pass
+        try:
+            if v15_emily_sext: sceneList.add("v15_emily")
+            del v15_emily_sext
         except NameError: pass
 
 

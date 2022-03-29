@@ -29,7 +29,7 @@ label v16s5:
             scene v16s5_2a
             with dissolve
 
-            ro "But, when you came with Chloe to ask for my support, and you made those... promises to persuade me to sign, and I still don't know if you really meant it."
+            ro "But, when you came with Chloe to ask for my support, and you made those... promises to persuade me to sign. I still don't know if you really meant it."
         
         ro "I just need to know... Do you want to keep seeing me? Or is this..."
 
@@ -46,12 +46,12 @@ label v16s5:
                 
                 ro "So, you forgive me...?"
 
-                scene v16s5_2b # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose slight smile, mouth closed  [DO NOT SHOW FRAT HOUSE].
+                scene v16s5_2b # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose slight smile, mouth closed [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 u "I could never hold anything against you to the point where I'd push you out of my life. I want you in it. Forgiven and forgotten."
 
-                scene v16s5_3 # TPP. Show Ms. Rose with her arms wrapped around MC hugging him, One of her legs lifted back the generic happy lady hug (https://thumbs.dreamstime.com/z/close-up-couple-wearing-jeans-white-sneakers-standing-hugging-kissing-outdoors-park-romantic-young-girlfriend-124813754.jpg), Ms. Rose smile, mouth closed, MC slight smile, mouth closed  [DO NOT SHOW FRAT HOUSE].
+                scene v16s5_3 # TPP. Show Ms. Rose with her arms wrapped around MC hugging him, One of her legs lifted back the generic happy lady hug (https://thumbs.dreamstime.com/z/close-up-couple-wearing-jeans-white-sneakers-standing-hugging-kissing-outdoors-park-romantic-young-girlfriend-124813754.jpg), Ms. Rose smile, mouth closed, MC slight smile, mouth closed [DO NOT SHOW FRAT HOUSE].
                 with dissolve
 
                 pause 0.75
@@ -61,15 +61,16 @@ label v16s5:
 
                 ro "I'm so glad you said that. Because to celebrate that, I want to plan a little treat for us."
 
-                scene v16s5_2
-                with dissolve
+                if "v12_rose" in sceneList:
+                    scene v16s5_2
+                    with dissolve
 
-                u "Does it involve spiking my drink again?"
+                    u "Does it involve spiking my drink again?"
 
-                scene v16s5_2d # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose neutral face, rolling her eyes, mouth open [DO NOT SHOW FRAT HOUSE].
-                with dissolve
-                
-                ro "*Sighs* No..." 
+                    scene v16s5_2d # FPP. MC standing infront of Ms. Rose, MC looking at Ms. Rose, Ms. Rose looking at MC, Ms. Rose neutral face, rolling her eyes, mouth open [DO NOT SHOW FRAT HOUSE].
+                    with dissolve
+                    
+                    ro "*Sighs* No..." 
 
                 scene v16s5_2b
                 with dissolve
@@ -128,12 +129,10 @@ label v16s5:
 
                 u "Okay, sounds great. I'll see you soon."
 
-                play sound "sounds/kiss.mp3"
-
                 scene v16s5_4 # TPP. Show MC and Ms. Rose sharing a kiss.
                 with dissolve
-
-                pause 0.75
+                play sound "sounds/kiss.mp3"
+                pause 1.25
 
                 scene v16s5_1a # TPP. Show MC walking the way he came from in v16s5_1, Ms. Rose in the background walking away from MC, MC neutral face, mouth closed [DO NOT SHOW FRAT HOUSE].
                 with dissolve
@@ -289,7 +288,7 @@ label v16s5:
         ro "There's a performance Friday evening at the Opera house. It's the one just out of town."
 
         menu:
-            "Be excited":
+            "Sounds exciting":
                 $ add_point(KCT.BOYFRIEND)
                 scene v16s5_2b
                 with dissolve
@@ -299,7 +298,7 @@ label v16s5:
                 scene v16s5_2c
                 with dissolve
 
-                ro "I think it'll be a lot of fun; I love going. I'm gonna book a private balcony for us too."
+                ro "I think it'll be a lot of fun, I love going. I'm gonna book a private balcony for us too."
 
                 scene v16s5_2b
                 with dissolve
@@ -311,7 +310,7 @@ label v16s5:
 
                 ro "Only the best for my baby. *Laughs quietly*"
 
-            "Be unsure":
+            "Uhm... opera?":
                 $ add_point(KCT.TROUBLEMAKER)
                 scene v16s5_2b
                 with dissolve
@@ -382,12 +381,10 @@ label v16s5:
 
         u "Yeah, for sure."
 
-        play sound "sounds/kiss.mp3"
-
         scene v16s5_4
         with dissolve
-
-        pause 0.75
+        play sound "sounds/kiss.mp3"
+        pause 1.25
 
         scene v16s5_1a
         with dissolve

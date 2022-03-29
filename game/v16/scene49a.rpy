@@ -7,6 +7,8 @@ label v16s49a:
     scene v16s49a_1 # TPP. MC (slight smile, mouth closed) exits the chicks house front door
     with dissolve
 
+    pause 0.75
+
     if v16s27_parent_chloe and v16s48_chloe_throws_baby: # -if parent with Chloe and she threw baby out the window
         scene v16s49a_2 # FPP. Show just the baby doll on the ground in the grass
         with dissolve
@@ -35,7 +37,7 @@ label v16s49a:
 
         u "(Reminder to never let Chloe babysit!)"
 
-        if "v16_chloe" in sceneList: # -if MC also had sex with Chloe         ####VARIABLE NEEDS TO BE ADDED TO SCENE 48 FOR CHLOE AND MC HAVING SEX!###
+        if "v16_chloe" in sceneList: # -if MC also had sex with Chloe
             scene v16s49a_1b
             with dissolve
 
@@ -43,6 +45,8 @@ label v16s49a:
 
     scene v16s49a_3 # TPP. Show MC (slight smile, mouth closed) walking away from the house on the sidewalk
     with dissolve
+
+    pause 0.75
 
     # Set v16s50a_dotw to Thursday for s50a
     $ v16s50a_dotw = 5

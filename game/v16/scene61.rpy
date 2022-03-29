@@ -17,6 +17,8 @@ label v16s61:
         scene v16s61_2 # TPP. In wolves room. Show MC (slight smile, mouth closed) sitting on his bed.
         with dissolve
 
+        pause 0.75
+
         # -if Transitioning directly from Scene 56 (Wolves 2)
         if not v14_help_lindsey:
             scene v16s61_2
@@ -25,7 +27,7 @@ label v16s61:
             u "*Sighs* (What are we going to do about Chris and Imre? I feel like this whole house could use some anger management training.)"
         
         # -if Succeeded with Polly at hotel
-        if v16s59_polly_endorse_lindsey: #placeholder
+        if v16s59_polly_endorse_lindsey: #TODO: placeholder
             scene v16s61_2
             with dissolve
 
@@ -38,7 +40,7 @@ label v16s61:
             u "(Well, that was embarrassing...)"
 
             # -if also wore room service uniforms
-            if v16s28_lindsey_pb_pretend_roomservice: # placeholder
+            if v16_lindsey_roomservice:
                 play sound "sounds/vibrate.mp3"
                 
                 scene v16s61_2a # TPP. In wolves room. Show MC (slight smile, mouth closed) sitting on his bed pulling out his phone from his pocket
@@ -51,15 +53,20 @@ label v16s61:
 
                 u "(It was nice of the bodyguard to let us change out of those uniforms first, but did he really have to pick Lindsey up again? I swear he did it just for the photos! What a prick.)"
 
-                #! v16s61kw_1  MC and Lindsey (both regular clothes) with Polly's bodyguard at the exit of the hotel, Lindsey being carried out over his shoulder
+                #! v16s61kw_1 MC and Lindsey (both regular clothes) with Polly's bodyguard at the exit of the hotel, Lindsey being carried out over his shoulder
 
-                $ v16s61_kiwiiPost = KiwiiPost(Chloe, "v16/v16s61kw_1", "Umm... Is this you, Lindsey? LOL #FuturePresident?", mentions=Lindsey, numberLikes=645)
-                $ v16s61_kiwiiPost.newComment(Aubrey, "Wait, what the hell? And [name]?", numberLikes=51, force_send=True)
-                $ v16s61_kiwiiPost.newComment(Penelope, "Wait... Is that Polly's security guard?! What happened???", numberLikes=95, force_send=True)
-                $ v16s61_kiwiiPost.addReply("Just fooling around! Ha...", numberLikes=42)
-                $ v16s61_kiwiiPost.addReply("Uh, Lindsey will tell you. Right, Linds?", mentions=Lindsey, numberLikes=46)
-                $ v16s61_kiwiiPost.newComment(Lindsey, "Oh! I can't believe there was paparazzi! We were just having some fun :)", numberLikes=54, force_send=True)
-                $ v16s61_kiwiiPost.newComment(Ryan, "He doesn't look very excited...", numberLikes=78, force_send=True)
+                ###check force send
+                $ v16s61_kiwiiPost1 = KiwiiPost(chloe, "v16/v16s61_chlpost1.webp", "Umm... Is this you, Lindsey? LOL #FuturePresident?", mentions=lindsey, numberLikes=645)
+                $ v16s61_kiwiiPost1.newComment(aubrey, "Wait, what the hell? And [name]?", numberLikes=51, force_send=True)
+                $ v16s61_kiwiiPost1.newComment(penelope, "Wait... Is that Polly's security guard?! What happened???", numberLikes=95, force_send=True)
+                $ v16s61_kiwiiPost1.addReply("Just fooling around! Ha...", numberLikes=42)
+                $ v16s61_kiwiiPost1.addReply("Uh, Lindsey will tell you. Right, Linds?", mentions=lindsey, numberLikes=46)
+                $ v16s61_kiwiiPost1.newComment(lindsey, "Oh! I can't believe there was paparazzi! We were just having some fun :)", numberLikes=54, force_send=True)
+                $ v16s61_kiwiiPost1.newComment(ryan, "He doesn't look very excited...", numberLikes=78, force_send=True)
+               
+                if False:
+                    scene v16s61_chlpost1
+                    with dissolve
                
                 $ set_presidency_percent(v14_lindsey_popularity - 3)
                 
@@ -69,14 +76,14 @@ label v16s61:
                 u "(Paparazzi?! What the fuck...)"
         
         # -if helping Chloe with Spa evening
-        if not v16s12_chloe_planboard_decide_newspaper_cover:
+        if (v14_help_chloe and not v16_chloe_newspaper):
             scene v16s61_2 
             with dissolve
 
             u "(I've still got some time before I need to help Chloe with this spa thing. Definitely excited for that!)"
             
             # -if chose to be the masseuse on planning board
-            if v16s12_chloe_planboard_decide_mc_gives_massages:
+            if not v16_chloe_real_masseuse:
                 scene v16s61_2
                 with dissolve
 
@@ -112,7 +119,9 @@ label v16s61:
         scene v16s61_6 # TPP. In wolves room. Close up of MC(bored, mouth closed) looking like he is falling asleep at his desk.
         with dissolve
 
-        if v14_help_chloe and not v16s12_chloe_planboard_decide_newspaper_cover:
+        pause 0.75
+
+        if (v14_help_chloe and not v16_chloe_newspaper):
             scene v16s61_6
             with dissolve
 
@@ -140,7 +149,7 @@ label v16s61:
 
             # -You can show a couple of images, 2-3 max, of Chloe during this convo. I suggest that she's preparing the house and party supplies during the call (These images are not a priority and can be cut if needed, otherwise mc is just shown pacing his room during the call.)
             # -if ChloeGf 
-            if chloe.relationship == Relationship.GIRLFRIEND:
+            if chloe.relationship >= Relationship.GIRLFRIEND:
                 scene v16s61_9 # TPP. Shot of Chloe(slight smile, mouth open) at the chicks house holding her phone to her ear. The house looks almost ready for the party
                 with dissolve 
 
@@ -300,11 +309,13 @@ label v16s61:
             play sound "sounds/dooropen.mp3"
 
             scene v16s61_10 # TPP. Show MC(slight smile,mouth closed) leaving his wolves room.
-            with dissolve                 
+            with dissolve 
+
+            pause 0.75
 
             jump v16s62
 
-        else:             
+        else: 
             play sound "sounds/thud.mp3"
 
             scene v16s61_6a # TPP. Show MC fallen asleep his head hitting the book on his desk.
@@ -320,7 +331,7 @@ label v16s61:
             # -Fade to a nightmare. A black void all around MC. He looks confused for a moment. He turns to see a huge baby, standing up, towering over him (like the big baby from Spirited Away). It's five times the size of MC-
 
             scene v16s61_11 # TPP. Show MC(confused,mouth closed) standing in a black void nightmare and looking around.
-            with fade (1,0,1) 
+            with fade 
 
             pause 0.75 
 
@@ -389,12 +400,15 @@ label v16s61:
             scene v16s61_10
             with dissolve
 
-            jump v16s66 
+            pause 0.75
+
+            jump v16s66
+
     else:
         play sound "sounds/dooropen.mp3"
         
         scene v16s61_14 # TPP. Show MC (slight smile, mouth closed) walking into his apes room.
-        with fade (1,0,1)
+        with fade
 
         pause 0.75
 
@@ -402,6 +416,8 @@ label v16s61:
 
         scene v16s61_15 # TPP. In apes room. Show MC (slight smile, mouth closed) sitting on his bed.
         with dissolve
+
+        pause 0.75
 
         # -if Transitioning directly from Scene 57 (Apes 2)
         if not v14_help_lindsey:
@@ -425,7 +441,7 @@ label v16s61:
                 u "(Well, that was embarrassing...)"
 
                 # -if also wore room service uniforms
-                if v16s28_lindsey_pb_pretend_roomservice:
+                if v16_lindsey_roomservice:
                     play sound "sounds/vibrate.mp3"
                     
                     scene v16s61_15a # TPP. In apes room. Show MC (slight smile, mouth closed) sitting on his bed pulling out his phone from his pocket
@@ -438,13 +454,17 @@ label v16s61:
 
                     u "(It was nice of the bodyguard to let us change out of those uniforms first, but did he really have to pick Lindsey up again? I swear he did it just for the photos! What a prick.)"
                     
-                    $ v16s61_kiwiiPost = KiwiiPost(chloe, "v16/v16s61kw_1", "Umm... Is this you, Lindsey? LOL #FuturePresident?", mentions=lindsey, numberLikes=645)
-                    $ v16s61_kiwiiPost.newComment(aubrey, "Wait, what the hell? And [name]?", numberLikes=51, force_send=True)
-                    $ v16s61_kiwiiPost.newComment(penelope, "Wait... Is that Polly's security guard?! What happened???", numberLikes=95, force_send=True)
-                    $ v16s61_kiwiiPost.addReply("Just fooling around! Ha...", numberLikes=42)
-                    $ v16s61_kiwiiPost.addReply("Uh, Lindsey will tell you. Right, Linds?", mentions=lindsey, numberLikes=46)
-                    $ v16s61_kiwiiPost.newComment(lindsey, "Oh! I can't believe there was paparazzi! We were just having some fun :)", force_send=True)
-                    $ v16s61_kiwiiPost.newComment(ryan, "He doesn't look very excited...", numberLikes=78, force_send=True)
+                    $ v16s61_kiwiiPost2 = KiwiiPost(chloe, "v16/v16s61_chlpost2.webp", "Umm... Is this you, Lindsey? LOL #FuturePresident?", mentions=lindsey, numberLikes=645)
+                    $ v16s61_kiwiiPost2.newComment(aubrey, "Wait, what the hell? And [name]?", numberLikes=51, force_send=True)
+                    $ v16s61_kiwiiPost2.newComment(penelope, "Wait... Is that Polly's security guard?! What happened???", numberLikes=95, force_send=True)
+                    $ v16s61_kiwiiPost2.addReply("Just fooling around! Ha...", numberLikes=42)
+                    $ v16s61_kiwiiPost2.addReply("Uh, Lindsey will tell you. Right, Linds?", mentions=lindsey, numberLikes=46)
+                    $ v16s61_kiwiiPost2.newComment(lindsey, "Oh! I can't believe there was paparazzi! We were just having some fun :)", force_send=True)
+                    $ v16s61_kiwiiPost2.newComment(ryan, "He doesn't look very excited...", numberLikes=78, force_send=True)
+                
+                    if False: #For Lint
+                        scene v16s61_chlpost2
+                        with dissolve
                 
                     $ set_presidency_percent(v14_lindsey_popularity - 3)
                     
@@ -454,14 +474,14 @@ label v16s61:
                     u "(Paparazzi?! What the fuck...)"
         
         # -if helping Chloe with Spa evening
-        if not v16s12_chloe_planboard_decide_newspaper_cover:
+        if (v14_help_chloe and not v16_chloe_newspaper):
             scene v16s61_15 
             with dissolve
 
             u "(I've still got some time before I need to help Chloe with this spa thing. Definitely excited for that!)"
             
             # -if chose to be the masseuse on planning board
-            if v16s12_chloe_planboard_decide_mc_gives_massages:
+            if not v16_chloe_real_masseuse:
                 scene v16s61_15
                 with dissolve
 
@@ -497,7 +517,9 @@ label v16s61:
         scene v16s61_19 # TPP. In apes room. Close up of MC(bored, mouth closed) looking like he is falling asleep at his desk.
         with dissolve
 
-        if v14_help_chloe and not v16s12_chloe_planboard_decide_newspaper_cover:
+        pause 0.75
+
+        if (v14_help_chloe and not v16_chloe_newspaper):
             scene v16s61_19
             with dissolve
 
@@ -525,7 +547,7 @@ label v16s61:
 
             # -You can show a couple of images, 2-3 max, of Chloe during this convo. I suggest that she's preparing the house and party supplies during the call (These images are not a priority and can be cut if needed, otherwise mc is just shown pacing his room during the call.)
             # -if ChloeGf 
-            if chloe.relationship == Relationship.GIRLFRIEND: 
+            if chloe.relationship >= Relationship.GIRLFRIEND: 
                 scene v16s61_9 
                 with dissolve 
 
@@ -687,6 +709,8 @@ label v16s61:
             scene v16s61_22 # TPP. Show MC(slight smile,mouth closed) leaving his apes room.
             with dissolve 
 
+            pause 0.75
+
             jump v16s62
 
         else: 
@@ -705,7 +729,7 @@ label v16s61:
             # -Fade to a nightmare. A black void all around MC. He looks confused for a moment. He turns to see a huge baby, standing up, towering over him (like the big baby from Spirited Away). It's five times the size of MC-
 
             scene v16s61_11 # TPP. Show MC(confused,mouth closed) standing in a black void nightmare and looking around.
-            with fade (1,0,1) 
+            with fade
 
             pause 0.75 
 
@@ -773,5 +797,7 @@ label v16s61:
 
             scene v16s61_22
             with dissolve
+
+            pause 0.75
 
             jump v16s66

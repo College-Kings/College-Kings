@@ -5,19 +5,21 @@
 
 label v16s19: # MC goes to Amber's house
     scene v16s19_1 # TPP MC arrives at Amber's front door.
-    with dissolve
+    with fade
     
-    pause 0.75
+    pause 1
         
     scene v16s19_2 # FPP MC looks down at the doormat. It has text on it that reads: WIPE YOUR FUCKING FEET. (If this isn't possible, do whatever is.) 
     with dissolve
     
-    pause 0.75
-        
+    pause 1
+    
     scene v16s19_3 # TPP MC lifts up the doormat and grabs the key
     with dissolve
 
-    pause 0.75
+    pause 1
+    
+    play sound "sounds/dooropen.mp3"
 
     scene v16s19_1a # TPP Same angle as 1. MC letting himself into Amber's house
     with dissolve

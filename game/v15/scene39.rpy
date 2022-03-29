@@ -1133,7 +1133,7 @@ label v15s39:
 
                         gr "Don't be surprised if there's no drinks left when you get back, haha."
 
-    if not v15_chloe_lindseysabotage:
+    else:
         scene v15s39_12
         with dissolve
 

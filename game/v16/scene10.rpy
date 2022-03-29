@@ -40,8 +40,7 @@ label v16s10: # Econ class
     la "I think we all did."
     
     if "v15_lauren" in sceneList: # if MC and Lauren had sex after Lauren's party 
-        scene v16s10_3b # FPP Same angle as 3, Lauren looking down with a shy expression, slight smile, mouth open
-        with dissolve
+        #scene v16s10_3b # FPP Same angle as 3, Lauren looking down with a shy expression, slight smile, mouth open
 
         la "I was really looking forward to class today."
 
@@ -97,7 +96,7 @@ label v16s10: # Econ class
     
     ro "Sorry guys, no one said economics was fun!"
     
-    if lauren.relationship >= Relationship.GIRLFRIEND or "v15_lauren" in sceneList: # -if LaurenRS or LaurenSex
+    if lauren.relationship >= Relationship.FWB: # -if LaurenRS or LaurenSex
         scene v16s10_2b # TPP Same angle as 2, Lauren passing MC a note under the table, Lauren has a naughty smile
         with dissolve
 
@@ -120,7 +119,6 @@ label v16s10: # Econ class
 
         u "(Damn, it feels really good.)"
 
-    ### elif lauren.relationship == Relationship.FRIEND: # -if LaurenFriend
     else:
         scene v16s10_2d # TPP Same angle as 2, Lauren passing MC a note under the table, Lauren with a slight smile, mouth closed
         with dissolve
@@ -195,7 +193,7 @@ label v16s10: # Econ class
     scene v16s10_4b
     with dissolve
 
-    menu:
+    menu (fail_label="v16s10_dontknow"):
         "Forty-two?":
             $ grant_achievement("the_answer_to_everything")
 
@@ -214,6 +212,8 @@ label v16s10: # Econ class
             u "Right, yeah... Sorry."
 
         "I don't know":
+            label v16s10_dontknow:
+            
             u "Sorry, I don't know. I... was thinking about something else."
 
             scene v16s10_4a
@@ -237,13 +237,7 @@ label v16s10: # Econ class
             ro "Good, please concentrate. I'd hate to fail my students just because they can't focus."
 
     # -Regardless of choice-
-    if lauren.relationship == Relationship.FRIEND: # -if LaurenFriend
-        scene v16s10_4d
-        with dissolve
-
-        u "(I'd better concentrate now. I hate being called out like that...)"
-
-    elif lauren.relationship >= Relationship.GIRLFRIEND or "v15_lauren" in sceneList: # -if LaurenRS or LaurenSex        
+    if lauren.relationship >= Relationship.FWB: # -if LaurenRS or LaurenSex
         scene v16s10_2c
         with dissolve
 
@@ -264,10 +258,12 @@ label v16s10: # Econ class
                 scene v16s10_3d # FPP Same angle as 3, Lauren looking forward, arms crossed over her chest, pouting in disappointment
                 with dissolve
 
-                pause 0.75
+                pause 1.25
 
             "Let her continue":
-                $ v16s10_let_lauren_continue_hj = True
+                label v16s10_sg:
+            
+                $ sceneList.add("v16_lauren")
                 $ add_point(KCT.BOYFRIEND)
 
                 scene v16s10_7a # FPP Same angle as 7, Lauren's hand is fumbling at MC's pants, pulling the top down to get to his dick
@@ -337,7 +333,7 @@ label v16s10: # Econ class
 
                 la "*Whispers* I hope you enjoyed that as much as I did."
 
-                scene v16s10_3c ### check mouth
+                scene v16s10_3c
                 with dissolve
 
                 u "*Whispers* What was that all about, you sexy freak?"
@@ -351,6 +347,8 @@ label v16s10: # Econ class
                 with dissolve
 
                 u "(She's gonna be the death of me. Lauren of all people... Damn.)"
+
+                $ renpy.end_replay()
 
     else: # -if LaurenFriend
         scene v16s10_4d
@@ -379,13 +377,13 @@ label v16s10: # Econ class
 
     pause 0.75
 
-    if lauren.relationship >= Relationship.GIRLFRIEND or "v15_lauren" in sceneList: 
+    if lauren.relationship >= Relationship.FWB: 
         scene v16s10_11 # TPP MC walking toward the door to the classroom, Lauren catches him by grabbing his upper arm from behind
         with dissolve
 
         pause 0.75
 
-        if v16s10_let_lauren_continue_hj:
+        if "v16_lauren" in sceneList:
             scene v16s10_12 # TPP MC and Lauren standing at back of the classroom, close up view of Lauren whispering in MC's ear, slight smile, mouth open
             with dissolve
 
@@ -399,8 +397,8 @@ label v16s10: # Econ class
 
         scene v16s10_13 # TPP MC and Lauren standing at back of the classroom, Lauren kissing MC on the cheek
         with dissolve
-
-        pause 0.75
+        play sound "sounds/kiss.mp3"
+        pause 1.25
 
     # -regardless-
     jump v16s11 # -Transition to Scene 11-

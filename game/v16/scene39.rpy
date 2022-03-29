@@ -3,11 +3,6 @@
 # Characters: WAITER (Outfit: 1), AUBREY (Outfit: DATE NIGHT OUTFIT), MC (Outfit: DATE NIGHT OUTFIT)
 # Time: Evening
 
-# label v16s39_fr_aubrey_date_seen(backgroundImg, returnScreen):
-#     scene expression backgroundImg
-#     u "(We've already discussed that.)"
-#     scene black
-#     $ renpy.call_screen(returnScreen)
 
 label v16s39:
     scene v16s39_1 # TPP. Aubrey removes her jacket and hands it to the waiter, MC and Aubrey slight smiles, mouths are closed, looking at the waiter, The waiter has a creepy smile, mouth is closed taking Aubrey's jacket from her, the background includes a "coat room," and possibly a sign included to that effect
@@ -116,7 +111,14 @@ label v16s39:
             scene v16s39_4b
             with dissolve
 
-            u "...Yeah, okay then. A fruity soda."
+            u "..."
+            u "Yeah, okay then. A fruity soda."
+
+            ### check which image makes sense here
+            if v15s24_nancy_dick: 
+                u "(It's probably for the best, I don't want to hear the name Nancy Dick ever again...)"
+            elif v15_lindsey_gamenight:
+                u "(It's probably for the best, I don't want to hear the name Andrew King ever again...)"
 
 # -Regardless-
     scene v16s39_4
@@ -661,7 +663,7 @@ label v16s39:
                 scene v16s39_5b
                 with dissolve
 
-                u "Hey, I was going to order that... Cheater"
+                u "Hey, I was going to order that... Cheater."
 
                 scene v16s39_5a
                 with dissolve
@@ -1444,7 +1446,7 @@ label v16s39:
                     scene v16s39_5r
                     with dissolve
 
-                    au "What the fuck, [name]? I hated that, ha."
+                    au "What the fuck, [name]? I hated that."
 
                     scene v16s39_5s
                     with dissolve

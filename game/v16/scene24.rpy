@@ -5,7 +5,7 @@
 
 label v16s24: # 24) MC goes home
     scene v16s24_1 # -MC walks along the street
-    with dissolve
+    with fade
 
     pause 0.75
 

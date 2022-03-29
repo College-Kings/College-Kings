@@ -34,7 +34,7 @@ label v9_room_fri_eve:
                 if lauren.messenger.replies:
                     call screen phone
                 if lauren.messenger.replies:
-                    "(I should text Lauren.)"
+                    u "(I should text Lauren.)"
                     jump s25_ContinueW
 
         scene v9rfe2 # TPP. Show MC's door.
@@ -78,7 +78,7 @@ label v9_room_fri_eve:
                 if lauren.messenger.replies:
                     call screen phone
                 if lauren.messenger.replies:
-                    "(I should text Lauren.)"
+                    u "(I should text Lauren.)"
                     jump s25_ContinueA
 
         scene v9rfe4 # TPP. Show MC's door.

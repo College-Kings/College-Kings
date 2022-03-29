@@ -260,7 +260,7 @@ label v16s38:
                 scene v16s38_8 # TPP. MC walks away from the Driver, MC has a guilty expression mouth is closed, The Driver has a disgusted/angry expression, hand still extended out, looking at MC as he walks away
                 with dissolve
 
-                u "(Now I look like a dick because I didn't tip the man... But, fuck man, it's charity money!"
+                u "(Now I look like a dick because I didn't tip the man... But, fuck man, it's charity money!)"
 
                 scene v16s38_9 # TPP. Show just a close up shot of MC's face, with a guilty expression, mouth is closed
                 with dissolve
@@ -302,7 +302,7 @@ label v16s38:
         scene v16s38_11
         with dissolve
 
-        au "Eh, I'm kind of allergic to bee stings, so it was pretty horrific... *Laughs* I'm so anxious already, ha."
+        au "Eh, I'm kind of allergic to bee stings, so it was pretty horrific... *Laughs* I'm so anxious already..."
 
         scene v16s38_11a
         with dissolve

@@ -3,73 +3,56 @@
 # Characters: MC (Outfit: Boxers/Underwear), [BABY_NAME] (Outfit: None), NORA (Outfit: 1), CHLOE (Outfit: 3)
 # Time: Wednesday Night
 
-label v16s50:  ### ERROR: 50) Baby night, Partner only
-    if not joinwolves:        
-        # -reminder that [baby_name] with Nora can be Henry or PlayerChosen and Chloe's can be Plastic or PlayerChosen
-        # -MC's phone vibrates, making him jolt-
-        play sound "sounds/vibrate.mp3"
-        
-        scene v16s50_1   # TPP Close up on MC' face (surprised, eyes wide open, mouth open) laying in his bed [APE ROOM]
-        with vpunch
-        
-        u "(Huh? Who's calling this late?)"
+# -reminder that [baby_name] with Nora can be Henry or PlayerChosen and Chloe's can be Plastic or PlayerChosen
 
-        scene v16s50_2   # TPP MC (no expression, mouth closed) sits up in his bed [APE ROOM]
-        with dissolve
+label v16s50: ### ERROR: 50) Baby night, Partner only
+    play sound "sounds/vibrate.mp3" # -MC's phone vibrates, making him jolt-
 
-        pause 0.75
+    if joinwolves:
+        scene v16s50_11 # TPP Close up on MC' face (surprised, eyes wide open, mouth open) laying in his bed [WOLF ROOM]
+    else:
+        scene v16s50_1 # TPP Close up on MC' face (surprised, eyes wide open, mouth open) laying in his bed [APE ROOM]
+    with vpunch
+    
+    u "(Huh? Who's calling this late?)"
 
-        scene v16s50_3   # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] takes his phone off the night stand [APE ROOM]
-        with dissolve
+    if joinwolves:
+        scene v16s50_12 # TPP MC (no expression, mouth closed) sits up in his bed [WOLF ROOM]
+    else:
+        scene v16s50_2 # TPP MC (no expression, mouth closed) sits up in his bed [APE ROOM]
+    with dissolve
 
-        pause 0.75
+    pause 0.75
 
-        play sound "sounds/vibrate.mp3"
-        
-        # -MC looks at his phone-
-        scene v16s50_4   # TPP MC (no expression, mouth closed) sits on the his bed, his back against the corner looking at his phone [APE ROOM]
-        with dissolve
+    if joinwolves:
+        scene v16s50_13 # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] takes his phone off the night stand [WOLF ROOM]
+    else:
+        scene v16s50_3 # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] takes his phone off the night stand [APE ROOM]
+    with dissolve
 
-        u "(Oh, shit. Must be about [v16_baby_name]...)"
+    pause 0.75
 
-    else: # WOLF ROOM 
-        # -reminder that [baby_name] with Nora can be Henry or PlayerChosen and Chloe's can be Plastic or PlayerChosen
-        # -MC's phone vibrates, making him jolt-
-        play sound "sounds/vibrate.mp3"
-        
-        scene v16s50_11   # TPP Close up on MC' face (surprised, eyes wide open, mouth open) laying in his bed [WOLF ROOM]
-        with vpunch
-        
-        u "(Huh? Who's calling this late?)"
+    play sound "sounds/vibrate.mp3"
+    
+    # -MC looks at his phone-
+    if joinwolves:
+        scene v16s50_14 # TPP MC (no expression, mouth closed) sits on the his bed, his back against the corner looking at his phone [WOLF ROOM]
+    else:
+        scene v16s50_4 # TPP MC (no expression, mouth closed) sits on the his bed, his back against the corner looking at his phone [APE ROOM]
+    with dissolve
 
-        scene v16s50_12   # TPP MC (no expression, mouth closed) sits up in his bed [WOLF ROOM]
-        with dissolve
+    u "(Oh, shit. Must be about [v16_baby_name]...)"
 
-        pause 0.75
-
-        scene v16s50_13   # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] takes his phone off the night stand [WOLF ROOM]
-        with dissolve
-
-        pause 0.75
-
-        play sound "sounds/vibrate.mp3"
-        
-        # -MC looks at his phone-
-        scene v16s50_14   # TPP MC (no expression, mouth closed) sits on the his bed, his back against the corner looking at his phone [WOLF ROOM]
-        with dissolve
-
-        u "(Oh, shit. Must be about [v16_baby_name]...)"
-
-    if not v16s27_parent_chloe:  # -if partner is Nora [Checkpoint 1.1]
+    if not v16s27_parent_chloe: # -if partner is Nora [Checkpoint 1.1]
         # -Split-screen with Nora?-
-        scene v16s50_5   # SPLIT MC (worried, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth closed) holding phone with left hand [any Chicks room behind her].
+        scene v16s50_5 # SPLIT MC (worried, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth closed) holding phone with left hand [any Chicks room behind her].
         with dissolve
 
         u "Hey, Nora. Everything okay with [v16_baby_name]?"
 
         play sound "sounds/babycry.mp3"
 
-        scene v16s50_5a  # SPLIT MC (worried, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth open) holding phone with left hand [any Chicks room behind her].
+        scene v16s50_5a # SPLIT MC (worried, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth open) holding phone with left hand [any Chicks room behind her].
         with dissolve
 
         baby "*Crying*"
@@ -95,7 +78,6 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
         # -event1 Blue (CORRECT)
         # -event2 Green
         # -event3 Orange
-
             "Blue": # -if Blue
                 scene v16s50_5
                 with dissolve
@@ -106,24 +88,24 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
 
                 baby "*Crying*"
                 
-                scene v16s50_5b   # SPLIT MC (worried, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth open) holding phone with left hand, looking down [At baby OC in her lap]) [any Chicks room behind her].
+                scene v16s50_5b # SPLIT MC (worried, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (tired, mouth open) holding phone with left hand, looking down [At baby OC in her lap]) [any Chicks room behind her].
                 with dissolve
 
                 no "Blue? Let's see..."
 
                 play sound "sounds/babycoo.mp3"
 
-                scene v16s50_6   # SPLIT MC (slight smile, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (relieved, smiling, mouth open) holding phone with left hand. [any Chicks room behind her].
+                scene v16s50_6 # SPLIT MC (slight smile, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (relieved, smiling, mouth open) holding phone with left hand. [any Chicks room behind her].
                 with dissolve
 
                 no "Yes! It stopped crying! Okay, so it's blue for feeding, green for burping, orange for diaper change, right?"
 
-                scene v16s50_6a   # SPLIT MC (slight smile, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (relieved, smiling, mouth closed) holding phone with left hand. [any Chicks room behind her].
+                scene v16s50_6a # SPLIT MC (slight smile, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Nora (relieved, smiling, mouth closed) holding phone with left hand. [any Chicks room behind her].
                 with dissolve
 
                 u "Yeah, think that's right."
 
-                scene v16s50_6  
+                scene v16s50_6 
                 with dissolve
 
                 no "I've got it clear in my head again now, thank you!"
@@ -255,7 +237,7 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
                 scene v16s50_6a
                 with dissolve
 
-                u "All parents make mistakes occasionally, ha. I'm sure we'll be okay."
+                u "All parents make mistakes occasionally, right? I'm sure we'll be okay."
 
         # -Regardless of color choice-
         scene v16s50_6
@@ -277,7 +259,7 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
 
     else: # -if partner is Chloe [Checkpoint 1.2]
         # -Split-screen with Chloe, she's pissed and tired-
-        scene v16s50_7   # SPLIT MC (worried, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth closed) holding phone with left hand [any Chicks room behind her].
+        scene v16s50_7 # SPLIT MC (worried, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth closed) holding phone with left hand [any Chicks room behind her].
         with dissolve
 
         u "Hey, Chloe. How-"
@@ -286,7 +268,7 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
 
         baby "*Crying*"
 
-        scene v16s50_7a  # SPLIT MC (worried, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth open) holding phone with left hand [any Chicks room behind her].
+        scene v16s50_7a # SPLIT MC (worried, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth open) holding phone with left hand [any Chicks room behind her].
         with dissolve
 
         cl "Help me turn this fucking thing off [name]!"
@@ -322,7 +304,7 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
 
         u "Maybe we should figure out what it wants. When did you last feed it?"
 
-        scene v16s50_7b  # SPLIT MC (worried, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth open, screaming) holding phone in front of her mouth with her left hand. [any Chicks room behind her].
+        scene v16s50_7b # SPLIT MC (worried, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth open, screaming) holding phone in front of her mouth with her left hand. [any Chicks room behind her].
         with dissolve
 
         cl "I've tried all the keys! Why aren't you listening?"
@@ -332,13 +314,13 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
         # -event1 Be calm
         # -event2 Be frustrated
 
-            "Be calm": # -if Be calm
-                scene v16s50_7c   # SPLIT MC (worried, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth closed) holding phone with right hand [any Chicks room behind her].
+            "Just relax...":
+                scene v16s50_7c # SPLIT MC (worried, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth closed) holding phone with right hand [any Chicks room behind her].
                 with dissolve
 
                 u "Just relax and think for a second... When did you last feed it?"
 
-                scene v16s50_7d  # SPLIT MC (worried, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth open) holding phone with right hand [any Chicks room behind her].
+                scene v16s50_7d # SPLIT MC (worried, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth open) holding phone with right hand [any Chicks room behind her].
                 with dissolve
 
                 cl "I haven't fed it once! It won't let me!"
@@ -366,13 +348,13 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
                 # -Chloe hangs up-
                 play sound "sounds/hangup.mp3"
 
-            "Be frustrated": # -if Be frustrated
-                scene v16s50_7e   # SPLIT MC (frustrated, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth closed) holding phone with right hand [any Chicks room behind her].
+            "Stop yelling, Chloe!":
+                scene v16s50_7e # SPLIT MC (frustrated, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth closed) holding phone with right hand [any Chicks room behind her].
                 with dissolve
                 
                 u "I'm trying to help you, Chloe. Stop yelling and think for a second! Have any of the keys worked since you picked up the baby?"
 
-                scene v16s50_7f  # SPLIT MC (frustrated, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth open) holding phone with right hand [any Chicks room behind her].
+                scene v16s50_7f # SPLIT MC (frustrated, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth open) holding phone with right hand [any Chicks room behind her].
                 with dissolve
 
                 cl "No! I just told you-"
@@ -405,29 +387,29 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
 
                 cl "O-fucking-kay!"
 
-                scene v16s50_7g   # SPLIT MC (frustrated, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth closed) holding phone with right hand, slightly looking down [At baby OC in her lap] [any Chicks room behind her].
+                scene v16s50_7g # SPLIT MC (frustrated, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (angry, mouth closed) holding phone with right hand, slightly looking down [At baby OC in her lap] [any Chicks room behind her].
                 with dissolve
 
                 cl "..."
 
-                scene v16s50_7h   # SPLIT MC (frustrated, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (surprised, mouth closed) holding phone with right hand, slightly looking down [At baby OC in her lap] [any Chicks room behind her].
+                scene v16s50_7h # SPLIT MC (frustrated, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (surprised, mouth closed) holding phone with right hand, slightly looking down [At baby OC in her lap] [any Chicks room behind her].
                 with dissolve
 
                 u "So?"
 
-                scene v16s50_7i   # SPLIT MC (frustrated, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (surprised, mouth closed) holding phone with right hand [any Chicks room behind her].
+                scene v16s50_7i # SPLIT MC (frustrated, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (surprised, mouth closed) holding phone with right hand [any Chicks room behind her].
                 with dissolve
 
                 pause 0.75
 
                 play sound "sounds/babycoo.mp3"
 
-                scene v16s50_7j   # SPLIT MC (neutral, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (surprised, mouth open) holding phone with right hand [any Chicks room behind her].
+                scene v16s50_7j # SPLIT MC (neutral, mouth closed) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (surprised, mouth open) holding phone with right hand [any Chicks room behind her].
                 with dissolve
 
                 cl "It stopped."
 
-                scene v16s50_7k   # SPLIT MC (neutral, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (surprised, mouth closed) holding phone with right hand, [any Chicks room behind her].
+                scene v16s50_7k # SPLIT MC (neutral, mouth open) holding his phone with his right hand to his ear [generic wall behind him]/ Chloe (surprised, mouth closed) holding phone with right hand, [any Chicks room behind her].
                 with dissolve
 
                 u "Hmm. Interesting."
@@ -456,7 +438,7 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
                 scene v16s50_7e
                 with dissolve
 
-                u "Chloe, probably because you're yelling curse words!  It probably needs burping. Use the-"
+                u "Chloe, probably because you're yelling curse words! It probably needs burping. Use the-"
 
                 scene v16s50_7b
                 with dissolve
@@ -467,23 +449,23 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
                 
             # -Chloe hangs up-
                 if not joinwolves:
-                    scene v16s50_8    # TPP MC (neutral, mouth open) looking at his phone that he holds in his right hand [APE ROOM].
+                    scene v16s50_8 # TPP MC (neutral, mouth open) looking at his phone that he holds in his right hand [APE ROOM].
                     with dissolve
 
                     u "Chloe? *Sighs*"
 
-                    scene v16s50_8a    # TPP MC (neutral, mouth closed) looking at his phone that he holds in his right hand [APE ROOM]
+                    scene v16s50_8a # TPP MC (neutral, mouth closed) looking at his phone that he holds in his right hand [APE ROOM]
                     with dissolve
 
                     u "(Jeez... Poor [v16_baby_name]... At least she's not yelling at me anymore.)"
 
                 else: # WOLF
-                    scene v16s50_18    # TPP MC (neutral, mouth open) looking at his phone that he holds in his right hand [WOLF ROOM].
+                    scene v16s50_18 # TPP MC (neutral, mouth open) looking at his phone that he holds in his right hand [WOLF ROOM].
                     with dissolve
 
                     u "Chloe? *Sighs*"
 
-                    scene v16s50_18a    # TPP MC (neutral, mouth closed) looking at his phone that he holds in his right hand [WOLF ROOM]
+                    scene v16s50_18a # TPP MC (neutral, mouth closed) looking at his phone that he holds in his right hand [WOLF ROOM]
                     with dissolve
 
                     u "(Jeez... Poor [v16_baby_name]... At least she's not yelling at me anymore.)"
@@ -496,40 +478,30 @@ label v16s50:  ### ERROR: 50) Baby night, Partner only
 
     ### ERROR: [Checkpoint 2]
 
-    if not joinwolves:
-        # -MC puts the phone down, gets comfy for sleep again-
-        scene v16s50_8b   # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] places his phone on the night stand [APE ROOM]
-        with dissolve
+    # -MC puts the phone down, gets comfy for sleep again-
+    if joinwolves:
+        scene v16s50_18b # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] places his phone on the night stand [WOLF ROOM]
+    else:
+        scene v16s50_8b # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] places his phone on the night stand [APE ROOM]
+    with dissolve
 
-        pause 0.75
+    pause 0.75
 
-        scene v16s50_8c    # TPP MC (no expression, mouth closed, eyes closed) under the covers laying in bed [APE ROOM].
-        with dissolve
+    if joinwolves:
+        scene v16s50_18c # TPP MC (no expression, mouth closed, eyes closed) under the covers laying in bed [WOLF ROOM].
+    else:
+        scene v16s50_8c # TPP MC (no expression, mouth closed, eyes closed) under the covers laying in bed [APE ROOM].
+    with dissolve
 
-        u "(I really hope there's no more calls tonight...)"
+    u "(I really hope there's no more calls tonight...)"
 
-        scene v16s50_8d    # TPP MC Close up on MC's face (no expression, mouth closed, eyes) (OC under the covers laying in bed) [APE ROOM].
-        with dissolve
+    if joinwolves:
+        scene v16s50_18d # TPP MC Close up on MC's face (no expression, mouth closed, eyes) (OC under the covers laying in bed) [WOLF ROOM].
+    else:
+        scene v16s50_8d # TPP MC Close up on MC's face (no expression, mouth closed, eyes) (OC under the covers laying in bed) [APE ROOM].
+    with dissolve
 
-        u "(I'd mute my phone but, this is part of the project, I guess... Let's see how the rest of the night goes.)"
-    
-    else: # Wolves
-        # -MC puts the phone down, gets comfy for sleep again-
-
-        scene v16s50_18b    # TPP MC (no expression, mouth closed) [sitting on edge of bed near nightstand] places his phone on the night stand [WOLF ROOM]
-        with dissolve
-
-        pause 0.75
-
-        scene v16s50_18c    # TPP MC (no expression, mouth closed, eyes closed) under the covers laying in bed [WOLF ROOM].
-        with dissolve
-
-        u "(I really hope there's no more calls tonight...)"
-
-        scene v16s50_18d    # TPP MC Close up on MC's face (no expression, mouth closed, eyes) (OC under the covers laying in bed) [WOLF ROOM].
-        with dissolve
-
-        u "(I'd mute my phone but, this is part of the project, I guess... Let's see how the rest of the night goes.)"
+    u "(I'd mute my phone but, this is part of the project, I guess... Let's see how the rest of the night goes.)"
 
     # -Transition to Scene 50a-
 

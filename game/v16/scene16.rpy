@@ -51,9 +51,6 @@ label v16s16:
         "Nah, it's fine":
             $ add_point(KCT.BRO)
 
-            scene v16s16_5a
-            with dissolve
-
             u "Haha, honestly? I think it's fine."
 
             scene v16s16_5
@@ -91,9 +88,6 @@ label v16s16:
         "Definitely":
             $ add_point(KCT.TROUBLEMAKER)
 
-            scene v16s16_5a
-            with dissolve
-
             u "*Laughs* Definitely."
 
             scene v16s16_5
@@ -106,7 +100,7 @@ label v16s16:
 
             pe "Imre... You tried to shove a piece of meat into her mouth."
 
-            scene v16s16_5b # FPP. MC looking at Imre, Imre looking at Penelope, Imre neutral face, mouth closed.
+            scene v16s16_5 # FPP. MC looking at Imre, Imre looking at Penelope, Imre neutral face, mouth closed.
             with dissolve
 
             imre "It was just a joke! I was trying to flirt..."
@@ -127,8 +121,6 @@ label v16s16:
             menu:
                 "It's not over yet":
                     $ add_point(KCT.BRO)
-                    scene v16s16_5a
-                    with dissolve
 
                     u "I mean, yeah, you did. But that doesn't mean it's over."
 
@@ -142,7 +134,7 @@ label v16s16:
 
                     pe "Imre, do you like the girl?"
 
-                    scene v16s16_5b
+                    scene v16s16_5
                     with dissolve
 
                     imre "Yeah, of course."
@@ -152,7 +144,7 @@ label v16s16:
 
                     pe "And is she worth the trouble of apologizing, and attempting to fix your mistakes?"
 
-                    scene v16s16_5b
+                    scene v16s16_5
                     with dissolve
 
                     imre "Well, I thought so... But-"
@@ -169,12 +161,11 @@ label v16s16:
 
                     pause 0.75
 
-                    if penelope.relationship >= Relationship.RS: # TODO: Variable
-
+                    if penelope.relationship >= Relationship.LIKES: ### TODO: Variable
                         scene v16s16_7 # TPP. Cute shot of just MC and Penelope, Penelope holding hands with MC and leaning into him, Penelope slight smile, blushing, MC slight smile, mouth closed.
                         with dissolve
 
-                        pause 0.75
+                        pause 1.25
 
                     scene v16s16_5
                     with dissolve
@@ -193,8 +184,6 @@ label v16s16:
 
                 "Yeah, it's over":
                     $ add_point(KCT.TROUBLEMAKER)
-                    scene v16s16_5a
-                    with dissolve
 
                     u "Big time, yeah. I think it's over."
 
@@ -208,7 +197,7 @@ label v16s16:
 
                     pe "Oh?"
 
-                    scene v16s16_5b
+                    scene v16s16_5
                     with dissolve
 
                     imre "It takes a lot for me to want to share my food with someone."
@@ -228,7 +217,7 @@ label v16s16:
 
                     imre "Hmm... You're right!"
 
-                    if penelope.relationship >= Relationship.RS: # TODO: Variable
+                    if penelope.relationship >= Relationship.LIKES: ### TODO: Variable
                         scene v16s16_5d # FPP. Imre (slight smile, mouth open) leaning closer to MC and whispering in his ear.
                         with dissolve
 
@@ -323,7 +312,7 @@ label v16s16:
     # -The shooting range vendor is wearing a cowboy costume (or normal clothes with cowboy hat), the "gun" is described as a rifle, if renders cannot match that description, please change it accordingly, cheex can help if needed-
     tb "Howdy partners! Welcome to the gallery made for shooting."
 
-    tb "You can call me The Bullseye. Step right up to test y'all's rootin' tootin' shootin' skills and maybe you'll win yourself a prize!"
+    tb "You can call me The Bullseye. Step right up to test y'all's rootin' tootin' shootin' skills and maybe you'll win yourselves a prize!"
 
     scene v16s16_9 # FPP. [OC Penelope and MC stand between BULLSEYE and IMRE at the RANGE] MC Imre (Imre slight smile, mouth open) stepping up to BULLSEYE.
     with dissolve
@@ -332,8 +321,10 @@ label v16s16:
 
     scene v16s16_8
     with dissolve
+    
+    tb "Hit three targets with three shots and we might just make that happen, partner."
 
-    tb "It's not impossible to get on your first try, just believe in yourself."
+    tb "It's not impossible to get it on your first try, just believe in yourself."
 
     scene v16s16_8a # FPP. Show the BULLSEYE putting the gun on some table at the gallery to pick up (LEFT SIDE FACING GALLERY), BULLSEYE (slight smile, mouth closed).
     with dissolve
@@ -348,38 +339,38 @@ label v16s16:
     scene v16s16_10 # TPP. Close up of Imre aiming with the gun, Imre neutral face, mouth closed.
     with dissolve
 
-    pause 0.75
+    pause 1
 
     play sound "sounds/gun.mp3"
 
     scene v16s16_11 # TPP. Shot of the targets, the first one getting hit.
-    with dissolve
+    with vpunch
 
-    pause 0.75
+    pause 2
 
-    scene v16s16_10
-    with dissolve
+    #scene v16s16_10
+    #with dissolve
 
-    pause 0.75
+    #pause 0.75
     
     play sound "sounds/gun.mp3"
 
     scene v16s16_11a # TPP. Shot of the targets, the second one getting hit.
-    with dissolve
+    with vpunch
 
-    pause 0.75
+    pause 2
 
-    scene v16s16_10
-    with dissolve
+    #scene v16s16_10
+    #with dissolve
 
-    pause 0.75
+    #pause 0.75
 
-    play sound "sound/gun.mp3"
+    play sound "sounds/gun.mp3"
 
     scene v16s16_11b # TPP. Shot of the tragets, the third one getting hit.
-    with dissolve
+    with vpunch
 
-    pause 0.75
+    pause 2
 
     scene v16s16_9b # FPP. Show Imre cheering with the gun in one hand, slight smile, mouth open.
     with dissolve
@@ -431,7 +422,7 @@ label v16s16:
 
     u "I don't know if I want to pull your trigger, but..."
 
-    if penelope.relationship >= Relationship.rs: #TODO: Variable
+    if penelope.relationship >= Relationship.LIKES: ### TODO: Variable
         scene v16s16_9c # FPP. MC looking at Penelope (winking, slight smile, mouth open) standing up to the shooting range who is looking at MC
         with dissolve
 
@@ -450,7 +441,7 @@ label v16s16:
     scene v16s16_8
     with dissolve
 
-    tb "Ah, come on! You've got to win a lady as pretty as she, a wonderful prize in order to make her happy."
+    tb "Ah, come on! With a pretty lady as she, you've got to win a wonderful prize in order to make her happy."
 
     scene v16s16_8b
     with dissolve
@@ -502,7 +493,7 @@ label v16s16:
 
     pause 0.75
 
-    if v16_win_range: # TODO: Variable
+    if v16_win_range: ### TODO: mini game in general
         scene v16s16_9e
         with dissolve
 
@@ -518,13 +509,11 @@ label v16s16:
             with dissolve
 
             pe "*Sighs* You know what I mean. You're amazing with a gun!"
-
-            play sound "sounds/kiss.mp3"
-            
+           
             scene v16s16_7b # TPP. Show MC and Penelope kissing.
             with dissolve
-
-            pause 0.75
+            play sound "sounds/kiss.mp3"
+            pause 1.5
             
             scene v16s16_9d
             with dissolve
@@ -607,7 +596,7 @@ label v16s16:
 
         tb "Why wouldn't it have a wrap-"
 
-        if penelope.relationship >= Relationship.LIKES: # TODO: Variable, if Penelope RS
+        if penelope.relationship >= Relationship.LIKES: ### TODO: Variable, if Penelope RS
             scene v16s16_9e
             with dissolve
 
@@ -743,14 +732,14 @@ label v16s16:
 
     u "Imre, wait-"
 
-    play sound "sounds/thud.mp3"
+    #play sound "sounds/thud.mp3"
 
     scene v16s16_19b # FPP. At the bathrooms, Imre ripping his arm out of MC's grasp, Imre angry, mouth open.
     with vpunch
 
     imre "No! Wait for what?!"
 
-    scene v16s16_16a # FPP. MC, Penelope, and Imre standing together at the bathrooms, MC looking at Penelope (neutral face, mouth closed) looking at Imre (off Camera).
+    scene v16s16_16b # FPP. MC, Penelope, and Imre standing together at the bathrooms, MC looking at Penelope (neutral face, mouth closed) looking at Imre (off Camera).
     with dissolve
 
     pe "Imre-"
@@ -793,7 +782,7 @@ label v16s16:
 
             imre "Ha! And let them continue?!"
 
-            scene v16s16_16a
+            scene v16s16_16b
             with dissolve
 
             pe "If that's what she wants, Imre... Let her do it. Let her learn from this mistake. You deserve better than that."
@@ -803,14 +792,14 @@ label v16s16:
             scene v16s16_19e
             with dissolve
 
-            u "Well... I wouldn't blame the guy; I think he was just in the right place at the right time."
+            u "Well... I wouldn't blame the guy. I think he was just in the right place at the right time."
 
             scene v16s16_19f
             with dissolve
 
             imre "For real? The right place? The hot dog stand?"
 
-            scene v16s16_16a
+            scene v16s16_16b
             with dissolve
 
             pe "Yeah... Why was she even- Nevermind..."
@@ -855,9 +844,9 @@ label v16s16:
 
     u "Are you sure?"
 
-    scene v16s16_16b
+    scene v16s16_22 # FPP. MC turned around facing towards the PIER ENTRANCE.
     with dissolve
-
+    
     pe "Yeah, I just want to make sure she's being safe. Just do your best to calm him down."
 
     scene v16s16_16c
@@ -865,8 +854,8 @@ label v16s16:
 
     u "Okay, I'll try."
 
-    scene v16s16_22 # FPP. MC turned around facing towards the PIER ENTRANCE.
-    with vpunch
+    scene v16s16_16b
+    with dissolve
 
     pe "Hey!"
 
@@ -881,12 +870,10 @@ label v16s16:
 
         pe "Thanks for coming today."
 
-        play sound "sounds/kiss.mp3"
-
         scene v16s16_16e # TPP. Penelope leaned forward kissing MC.
         with dissolve
-        
-        pause 0.75
+        play sound "sounds/kiss.mp3"        
+        pause 1.5
         
     else:
         scene v16s16_16d
@@ -912,7 +899,7 @@ label v16s16:
     u "You too."
 
     scene v16s16_21a # TPP. Dylan taking the teddy bear out of the trashcan, Dylan full smile, mouth open.
-    with dissolve
+    with fade
 
     dy "Together at last..."
 

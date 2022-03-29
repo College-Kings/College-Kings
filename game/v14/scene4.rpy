@@ -25,12 +25,12 @@ label v14s04:
     with dissolve
 
     menu:
-        "(I'll talk to him later)":
+        "I'll talk to him later":
             $ v14s4_tell_imre = True
             $ add_point(KCT.BRO)
             u "(Fuck it, I'll talk to him later I guess.)"
 
-        "(It's not that important)":
+        "It's not that important":
             $ add_point(KCT.TROUBLEMAKER)
             u "(Fuck it, I'll talk to him later I guess.)"
 

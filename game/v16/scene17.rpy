@@ -8,7 +8,7 @@ label v16s17: # 17) MC catches up to Imre
     # (This scene's tone is drama with some humor. Slightly adjusted from original Miro outline, we need to avoid any suggestion of suicidal thoughts or making fun/being dismissive of suicidal thoughts)
 
     scene v16s17_1 # TPP Show Imre walking along the street, MC a ways behind him, rushing to catch up
-    with dissolve
+    with fade
 
     pause 0.75
 
@@ -18,7 +18,7 @@ label v16s17: # 17) MC catches up to Imre
     u "Imre, wait!"
 
     scene v16s17_3 # TPP Show MC next to Imre on the bridge. Imre has his hands on the stone railing, looking out, angry expression, mouth open
-    with dissolve
+    with vpunch
 
     imre "It never works out!"
 
@@ -55,6 +55,9 @@ label v16s17: # 17) MC catches up to Imre
             imre "I can't catch a fucking break."
 
         "Support Karen":
+            scene v16s17_4b
+            #with dissolve
+
             u "Well, don't take this personally, but..."
 
             u "You did try to shove a hotdog in her mouth, and she's vegan."
@@ -106,7 +109,7 @@ label v16s17: # 17) MC catches up to Imre
     u "(For fuck's sake...)"
 
     menu:
-        "Be brutally honest":
+        "You didn't even like her":
             scene v16s17_4f # FPP Same angle as 4, Imre looking out over the side of the bridge, leaning over the stone rail (if possible), neutral expression, mouth closed
             with dissolve
 
@@ -159,7 +162,7 @@ label v16s17: # 17) MC catches up to Imre
 
             u "*Sighs* (Let's go home.)"
 
-        "Keep him calm":
+        "There's plenty of fish":
             scene v16s17_4f
             with dissolve
 
@@ -259,7 +262,6 @@ label v16s17: # 17) MC catches up to Imre
                 with dissolve
 
                 pause 0.75
-
 
             else: # -if Apes
                 scene v16s17_4d

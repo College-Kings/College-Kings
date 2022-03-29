@@ -3,6 +3,11 @@
 # Characters: CHRIS (Outfit: 1), MC (Outfit: 2), IMRE (Outfit: 1), SEBASTIAN (Outfit: x)
 # Time: Thursday Morning
 
+# SCENE 58: Transition Mc leaves the house
+# Locations: Sidewalk
+# Characters: MC (Outfit: 2)
+# Time: Thursday Afternoon
+
 label v16s56: # 56) Wolves Living Room, Chriss apologizes
     scene v16s56_1 # TPP Show MC entering Wolves' front door
     with fade
@@ -64,7 +69,7 @@ label v16s56: # 56) Wolves Living Room, Chriss apologizes
     scene v16s56_6a # FPP Chris (sad expression, mouth open) standing in front of group, holding his fists in front of him, pleading
     with dissolve
 
-    ch "I promise you; I'm working on it."
+    ch "I promise you, I'm working on it."
 
     scene v16s56_6b # FPP Chris (sad expression, mouth closed) looking down at his feet
     with dissolve
@@ -132,6 +137,9 @@ label v16s56: # 56) Wolves Living Room, Chriss apologizes
 
         "Hold a grudge":
             $ add_point(KCT.TROUBLEMAKER)
+
+            scene v16s56_6b
+            #with dissolve
 
             u "An apology doesn't take the punch back, you know?"
 
@@ -220,8 +228,19 @@ label v16s56: # 56) Wolves Living Room, Chriss apologizes
 
     pause 0.75
 
-    if v14_help_lindsey: # TODO: Variable PLACEHOLDER VARIABLE # -if helping Lindsey, transition to Scene 58-
-        jump v16s58
+    if v14_help_lindsey: # -if helping Lindsey, transition to Scene 58-
+        scene v16s58_1 # TPP. Show MC (no expression, mouth is closed) walking along a sidewalk, plain background (something easy to render)
+        with dissolve
+
+        u "(I was hoping to fit in a quick nap, but frat drama bullshit strikes again... *Sighs*)"
+
+        u "(Time to meet Lindsey.)"
+
+        if v16_lindsey_newspaper: # -if helping Lindsey with interview, transition to Scene 60-
+            jump v16s60
+
+        else: # -if helping Lindsey with Polly endorsement, transition to Scene 59-
+            jump v16s59
 
     else: # -if not helping Lindsey, transition to Scene 61-
         jump v16s61

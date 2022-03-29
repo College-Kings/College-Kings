@@ -4,6 +4,11 @@
 # Time: Morning
 
 label v16s26:
+    scene v11coc1x
+    with fade
+    
+    pause 0.75
+
     scene v16s26_1 # TPP. Show MC walking down the hallway of SVC, neutral face, mouth closed.
     with dissolve
 
@@ -59,7 +64,7 @@ label v16s26:
 
     u "Hmph. Agree to disagree."
 
-    if v15_lindsey_recording >= 1: # TODO: Variable
+    if v15_lindsey_recording > 0:
         scene v16s26_3a
         with dissolve
 
@@ -109,6 +114,7 @@ label v16s26:
     menu:
         "Yeah, it's great":
             $ add_point(KCT.BRO)
+            
             scene v16s26_3a
             with dissolve
 
@@ -116,6 +122,7 @@ label v16s26:
 
         "Yeah, she's great":
             $ add_point(KCT.BOYFRIEND)
+            
             scene v16s26_3a
             with dissolve
 
@@ -265,19 +272,19 @@ label v16s26:
 
     li "How the hell did you make friends with her?"
 
-    if v13_penelope_concert: # TODO: Variable
+    if v13_penelope_concert: # if Concert with Penelope
         scene v16s26_3a
         with dissolve
 
         u "We went to her concert in Amsterdam."
 
-        if v12s7_victims >= 5: # TODO: Variable
+        if len(v12s7_killList) >= 5:
             scene v16s26_5b
             with dissolve
 
             pe "Yeah, backstage passes and all!"
 
-        elif v13_penelope_backstage: # TODO: Variable
+        elif v13_penelope_backstage:
             scene v16s26_5b
             with dissolve
 
@@ -298,21 +305,7 @@ label v16s26:
 
         li "I'm so fucking jealous."
 
-    elif not v13_penelope_concert: # TODO: Variable
-        scene v16s26_5b
-        with dissolve
-
-        pe "There was a meet and greet recently where she was signing stuff and promoting her new single."
-
-        pe "We just hit it off, I don't even know how to explain it. She said we were like long lost sisters or something, haha!"
-        
-        if v13_aubrey_concert: # TODO: Variable
-            scene v16s26_5c # FPP. MC looking at Penelope, Penelope looking at Lindesy, Penelope slight smile, mouth closed.
-            with dissolve
-
-            u "(Polly's in town? Huh. I wonder if she'd recognize me?)"
-
-    elif not v13_penelope_concert and not v13_aubrey_concert:
+    elif not v13_aubrey_concert: # if no Concert
         scene v16s26_5a
         with dissolve
 
@@ -322,6 +315,19 @@ label v16s26:
         with dissolve
 
         pe "A pop sensation, [name]."
+
+    else: # if Concert with Aubrey
+        scene v16s26_5b
+        with dissolve
+
+        pe "There was a meet and greet recently where she was signing stuff and promoting her new single."
+
+        pe "We just hit it off, I don't even know how to explain it. She said we were like long lost sisters or something, haha!"
+        
+        scene v16s26_5c # FPP. MC looking at Penelope, Penelope looking at Lindesy, Penelope slight smile, mouth closed.
+        with dissolve
+
+        u "(Polly's in town? Huh. I wonder if she'd recognize me?)"
 
     scene v16s26_3d
     with dissolve
@@ -435,7 +441,7 @@ label v16s26:
 
     pe "But he's right. That was a smart sentence, I'm proud of you. *Giggles*"
 
-    scene v16s26_3e # FPP. Lindsey jokingly pretending tobe upset, MC looking at Lindsey, Lindsey slight smile, mouth open..
+    scene v16s26_3e # FPP. Lindsey jokingly pretending tobe upset, MC looking at Lindsey, Lindsey slight smile, mouth open.
     with dissolve
 
     li "Oh god... It's the therapy sessions!"

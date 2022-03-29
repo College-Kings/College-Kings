@@ -161,7 +161,8 @@ label v16s40:
 
         ### ERROR: IF MC has baby duties tonight 
         ### TRANSCRIBER NOTE!!! ### THERE IS NO ALTERNATIVE SCENE TO TRAVEL TO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO ### ATTENTION!!! ###
-        if 1 & v16s27_mc_baby_duty_night == 1: # MC has babby duty Wednesday night
+        # if 1 & v16s27_mc_baby_duty_night == 1: # MC has babby duty Wednesday night INFO: Using dictionary instead of bitmask for ease of use
+        if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE:
             scene v16s40_3c
             with dissolve
 
@@ -209,7 +210,8 @@ label v16s40:
     ### ERROR: END IF
 
     if v16s39aubrey_date_points <= 3: ### ERROR: IF MC scored 0-3 points (DATE FAIL = Loses AubreyTamed)        
-        $ aubrey.relationship == Relationship.FWB
+        if aubrey.relationship > Relationship.FWB:
+            $ aubrey.relationship == Relationship.FWB
 
         scene v16s40_3h # FPP. Show just Aubrey from the waist up, no expression, mouth is closed, looking at MC
         with dissolve
@@ -270,7 +272,8 @@ label v16s40:
 
             ### ERROR: IF MC has baby duties tonight
             ### TRANSCRIBER NOTE!!! ### THERE IS NO ALTERNATIVE SCENE TO TRAVEL TO, REGARDLESS OF "BABY DUTIES" MC FIRST HAS TO GO HOME TO CHANGE BEFORE EITHER "BABY DUTY" SCENE HAPPENS MAKING THIS "IF STATEMENT" UNNECESSARY, IF IT IS SCENE DEPENDENT DIALOGUE THEN IT REQUIRES CLARIFICATION AS TO WHICH "BABY DUTY" SCENE THIS DIALOGUE REFERS TOO ### ATTENTION!!! ###
-        if 1 & v16s27_mc_baby_duty_night == 1: # MC has babby duty Wednesday night
+        # if 1 & v16s27_mc_baby_duty_night == 1: # MC has babby duty Wednesday night INFO: Using dictionary instead of bitmask for ease of use
+        if v16s27_mc_baby_schedule["wednesday"] == BabyDuty.ALONE:
 
             scene v16s40_3c
             with dissolve
@@ -294,12 +297,9 @@ label v16s40:
 
         au "And it's time for me to go home and put on something more comfortable!"
 
-        scene v16s40_3c
-        with dissolve
-
         au "Night, [name]."
 
-        scene v16s40_3g
+        scene v16s40_3c
         with dissolve
 
         u "Night, Aubrey."

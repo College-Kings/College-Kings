@@ -116,6 +116,8 @@ label v16s64:
             scene v16s64_6 # TPP. Show MC and Lindsey (both laughing looking at Aubrey), Aubrey (laughing, mouth open, looking at MC) still has puffed out cheeks, and the marshmallow can be slightly seen in her mouth
             with dissolve
 
+            pause 0.75
+
     if v16s63breast_reduction and v16s63bbreath_mint: ###!!!PLACEHOLDER VARIABLE!!!### # -if MC chose insults in both 16.63 and 16.63b
         $ v16s64insulted_chloe = True ###!!!VARIABLE MUST BE ADDED FOR POSSIBLE CHLOE BREAK-UP!!!###
 
@@ -188,7 +190,7 @@ label v16s64:
             "Tell the truth":
                 $ v16s64confessed_insult = True # -try to keep this variable as it will possibly avoid a breakup i assume, thank you
                 $ add_point(KCT.BRO)
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                if chloe.relationship >= Relationship.GIRLFRIEND:
                     $ add_point(KCT.BOYFRIEND)
 
                 scene v16s64_2e
@@ -209,7 +211,7 @@ label v16s64:
             "Deny it":
                 $ v16s64denied_insult = True # -try to keep this variable as it will impact a breakup i assume, thank you
                 $ add_point(KCT.TROUBLEMAKER)
-                if chloe.relationship.value >= Relationship.GIRLFRIEND.value:
+                if chloe.relationship >= Relationship.GIRLFRIEND:
                     $ add_point(KCT.TROUBLEMAKER)
 
                 scene v16s64_2e
@@ -315,7 +317,7 @@ label v16s64:
 
         au "Listen, babe. Everyone here knows that your body is impeccable."
 
-        if chloe.relationship.value >= Relationship.GIRLFRIEND.value: ### -if chloeGF (extra dialogue)
+        if chloe.relationship >= Relationship.GIRLFRIEND: # -if chloe GF (extra dialogue)
             scene v16s64_4k # FPP. Show just Aubrey (slightly angry, mouth open, looking at MC) 
             with dissolve
 
@@ -330,6 +332,8 @@ label v16s64:
             
                 scene v16s64_4m # FPP. Show just Aubrey (sad smile, mouth closed, trying not to look at MC) 
                 with dissolve
+
+                pause 0.75
 
             else:
                 scene v16s64_4n # FPP. Show just Aubrey (slight smile, mouth closed, looking at MC) 
@@ -398,7 +402,7 @@ label v16s64:
 
         u "(Dammit...)"
 
-    elif not v16s63compliment or v16s63bcompliment or v16s63breast_reduction or v16s63bbreath_mint:  # -if MC chose to not write anything at all
+    elif not v16s63compliment or v16s63bcompliment or v16s63breast_reduction or v16s63bbreath_mint: # -if MC chose to not write anything at all
         scene v16s64_2
         with dissolve
 
@@ -434,6 +438,8 @@ label v16s64:
     if lindsey.relationship >= Relationship.FWB: # -if lindseyrs she winks at him-
         scene v16s64_3b # FPP. Show just Lindsey (slight smile, mouth closed, winking at MC)
         with dissolve
+
+        pause 0.75
 
     scene v16s64_2a
     with dissolve

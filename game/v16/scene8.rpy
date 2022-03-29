@@ -85,66 +85,65 @@ label v16s8:
 
             cl "I've never been bullied before. I guess this is what it feels like. *Cries*"
 
-    scene v16s8_4d
-    with dissolve
-
-    cl "It's not my fault I was born with such huge boobs. They're not even fake! They're completely natural!"
-
-    if chloe.relationship >= Relationship.GIRLFRIEND:
-        scene v16s8_4c
+    if not v15_lindsey_recording == 6:
+        scene v16s8_4d
         with dissolve
 
-        u "I know..."
+        cl "It's not my fault I was born with such huge boobs. They're not even fake! They're completely natural!"
 
-        scene v16s8_4f # FPP. Chloe raises an eyebrow at MC, and a "suspicious expression," mouth is still closed
+        if chloe.relationship >= Relationship.GIRLFRIEND:
+            scene v16s8_4c
+            with dissolve
+
+            u "I know..."
+
+            scene v16s8_4f # FPP. Chloe raises an eyebrow at MC, and a "suspicious expression," mouth is still closed
+            with dissolve
+
+            u "I mean, I can... I've felt... Nevermind."
+
+        scene v16s8_3d # TPP. Chloe still looks sad mouth is closed, MC Chloe Random Female and Random Guy 2 look at Random Guy 1 all of their mouths are closed no expressions, Random Guy 1's mouth is open and he has a slight smile
         with dissolve
 
-        pause 0.75
+        xav "Ignore Lindsey! We love your boobs!"
 
-        scene v16s8_4g # FPP. Chloe gives MC a "don't you dare look," mouth is still closed
+        scene v16s8_4h # FPP Show Chloe no expression, no tears in her eyes, mouth is closed
         with dissolve
 
-        u "I mean, I can... I've felt... Nevermind."
+        u "*Sighs* What he said."
 
-    scene v16s8_3d # TPP. Chloe still looks sad mouth is closed, MC Chloe Random Female and Random Guy 2 look at Random Guy 1 all of their mouths are closed no expressions, Random Guy 1's mouth is open and he has a slight smile
-    with dissolve
+        scene v16s8_4i # FPP. Chloe has a disgusted expression on her face, mouth is open, looking at MC
+        with dissolve
 
-    rg1 "Ignore Lindsey! We love your boobs!"
-
-    scene v16s8_4h # FPP Show Chloe no expression, no tears in her eyes, mouth is closed
-    with dissolve
-
-    u "*Sighs* What he said."
-
-    scene v16s8_4i # FPP. Chloe has a disgusted expression on her face, mouth is open, looking at MC
-    with dissolve
-
-    cl "*Scoffs*"
+        cl "*Scoffs*"
 
     scene v16s8_4h
     with dissolve
 
     u "Just ignore her. You need to stay strong."
 
-    scene v16s8_3e # TPP. same as v16s8_3c Random Guy 2's mouth is open slight smile looking at Chloe, and everyone is looking at him
-    with dissolve
+    if not v15_lindsey_recording == 6:
+        scene v16s8_3e # TPP. same as v16s8_3c Random Guy 2's mouth is open slight smile looking at Chloe, and everyone is looking at him
+        with dissolve
 
-    rg2 "That's right Chloe! We believe in you!"
+        be "That's right Chloe! We believe in you!"
 
-    scene v16s8_3c
-    with dissolve
+        scene v16s8_3c
+        with dissolve
 
-    rg1 "You and your non-fake tits!"
+        xav "You and your non-fake tits!"
 
-    scene v16s8_3f # TPP. same as v16s8_3c Everyone has a disgusted expression on their face looking at Random Guy 1, Random Guy 2 has a "what did I do?" look on his face
-    with dissolve
+        scene v16s8_3f # TPP. same as v16s8_3c Everyone has a disgusted expression on their face looking at Random Guy 1, Random Guy 2 has a "what did I do?" look on his face
+        with dissolve
 
-    u "(Who the hell are these guys?)"
+        u "(Who the hell are these people?)"
         
+    li "What the fuck, Chloe?! How the hell did you get that recording?"
+
     scene v16s8_3g # TPP. Everyone looks a little surprised and sees Lindsey approaching with an angry face, straight up to Chloe
     with dissolve
 
-    li "What the fuck, Chloe?! How the hell did you get that recording?"
+    pause 0.75
 
     scene v16s8_3h # TPP. Chloe stands up from the bench, Chloe and Lindsey have angry expressions looking at each other, mouths are closed, MC also stands up from the bench, MC and the others have stepped back from Chloe and Lindsey slightly shocked expressions looking at Chloe and Lindsey
     with dissolve
@@ -158,12 +157,7 @@ label v16s8:
 
     cl "I have no idea who recorded you, but at least now everyone knows what kind of person you are."
 
-    scene v16s8_5a # FPP Lindsey steps closer to Chloe, Lindsey's anger intensifies, both of their mouths are closed Chloe still has an angry expression
-    with dissolve
-
-    pause 0.75
-
-    scene v16s8_5b # FPP same v16s8_5a Chloe's mouth is closed, Lindsey's mouth is open
+    scene v16s8_5b # FPP Lindsey steps closer to Chloe, Lindsey's anger intensifies, both of their mouths are closed Chloe still has an angry expression
     with dissolve
 
     li "That's bullshit! You're such a fucking liar!"
@@ -175,7 +169,13 @@ label v16s8:
 
     li "And for everyone's information-"
 
-    li "I was drunk and talking shit, sue me! I didn't mean anything by it, and I definitely never intended for the entire campus to get involved."
+    if v15_lindsey_alcohol:
+        li "I was drunk and talking shit, sue me!"
+    
+    else:
+        li "I was talking shit, sue me!"
+    
+    li "I didn't mean anything by it, and I definitely never intended for the entire campus to get involved."
 
     scene v16s8_5c # FPP. same as v16s8_5b Chloe's mouth is open, Lindsey's mouth is closed
     with dissolve
@@ -193,11 +193,6 @@ label v16s8:
     menu:
         "Stop the argument":
             scene v16s8_6 # TPP. Show MC from the back, MC steps between Chloe and Lindsey render can look like v16s8_5 just with MC stepping between them
-            with dissolve
-
-            pause 0.75
-
-            scene v16s8_6
             with dissolve
 
             u "Lindsey. Chloe. Both of you need to stop."
@@ -220,7 +215,7 @@ label v16s8:
             scene v16s8_8a # FPP. Show Lindsey with an angry expression looking at MC, mouth is closed
             with dissolve
 
-            u "Seriously guys, calm down before this gets ugly."
+            u "Seriously girls, calm down before this gets ugly."
 
             scene v16s8_7
             with dissolve
@@ -247,9 +242,6 @@ label v16s8:
 
             lee "You're starting to take after your old Mr. Lee, [name]. I'm proud."
 
-            scene v16s8_6d
-            with dissolve
-
             u "(Oh, shit. Where did he come from?)"
 
         "Let it continue":
@@ -263,6 +255,14 @@ label v16s8:
 
             li "And you're a scheming psychopath! You've got no respect for my privacy or for me as a person in general."
 
+            if v14_help_lindsey and not v14_lindsey_sell:
+                u "(To be fair you were perfectly fine with me rummaging through Chloe's room...)"
+                
+                if "diary" in freeroam12stolen:
+                    u "(And taking her diary, no less.)"
+                
+                u "(Damn, it's getting hard to keep my mouth shut here...)"
+
             scene v16s8_5b
             with dissolve
 
@@ -271,7 +271,7 @@ label v16s8:
             scene v16s8_5c
             with dissolve
 
-            u "(Easy now... I'm not that low in life.)"
+            u "(Easy now... I'm not {i}that{/i} low in life.)"
 
             scene v16s8_5e
             with dissolve
@@ -321,11 +321,6 @@ label v16s8:
             scene v16s8_5k # FPP. Chloe and Lindsey look at each other disgustingly, Mr. Lee rolls his eyes
             with dissolve
 
-            pause 0.75
-
-            scene v16s8_5k
-            with dissolve
-
             u "(Oh, shit. Where did he come from?)"
 
     scene v16s8_9 # FPP. Show just the top halves of Mr. Lee, Chloe and Lindsey, Mr. Lee is looking at Chloe and Lindsey no expression, mouth is open. Chloe and Lindsey are looking at Mr. Lee no expressions mouths are closed. Chloe and Lindsey are standing next to each other
@@ -351,7 +346,7 @@ label v16s8:
     scene v16s8_9
     with dissolve
 
-    lee "Lindsey, please. We will discuss this in my office."
+    lee "Please. We will discuss this in my office."
 
     scene v16s8_10 # TPP. Mr. Lee walks away with Chloe and Lindsey following no expression his mouth is closed. Chloe and Lindsey look at each other with concerned expressions their mouths are closed, MC watches them go, no expression mouth is closed.
     with dissolve

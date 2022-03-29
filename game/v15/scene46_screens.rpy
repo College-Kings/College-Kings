@@ -1,6 +1,4 @@
 screen v15s46_chooselocation():
-    zorder -1
-
     modal True
 
     add "darker_80"

@@ -6,6 +6,7 @@
 label v16s57:
     scene v16s57_1 # TPP. Show MC (slightly shocked, mouth closed) enters through the Apes Frat House front door, the door is still open
     with vpunch
+
     sa "Ow! Fuck off!"
 
     scene v16s57_1a # TPP. Show Mc (exhausted expression, mouth closed, holding one hand to his forehead eyes are closed) shutting the front door.
@@ -144,6 +145,8 @@ label v16s57:
     scene v16s57_2f # TPP. MC (no expression, mouth is closed, looking at Samantha) sitting in the chair he placed in front of the table and the couch. Samantha (angry expression, mouth is closed, looking at Grayson) flipping off Grayson, she has taken her feet off of the table, Grayson's back is turned to the render leaving the living room, Cameron (annoyed expression, mouth is closed, looking at Samantha)
     with dissolve
 
+    pause 0.75
+
     if v14_SamanthaDrugs: # -if SamDrugs
         scene v16s57_4d # FPP. Show just Cameron (no expression, mouth open, looking at Samantha)
         with dissolve
@@ -242,7 +245,7 @@ label v16s57:
             sa "Thanks, butt-munch."
 
         "Agree with Cameron":
-            $ v16s57_agree_with_samantha = 2 # TODO: Variable  # PlaceHolder Variable
+            $ v16s57_agree_with_samantha = 2 # TODO: Variable # PlaceHolder Variable
             $ add_point(KCT.BRO)
             $ add_point(KCT.TROUBLEMAKER)
 
@@ -323,7 +326,7 @@ label v16s57:
 
     ca "Later, dickweed."
 
-    if samantha.relationship >= Relationship.FWB:# -samanthaRS winks at mc on his way out, Cameron sees it, mc can hear them arguing on his way out
+    if samantha.relationship >= Relationship.FWB: # -samanthaRS winks at mc on his way out, Cameron sees it, mc can hear them arguing on his way out
         scene v16s57_7c # FPP. Show both Samantha (slight smile, mouth is closed, winking at MC) sitting in her spot from v16s57_2 renders and Cameron (confused expression, mouth is closed, looking at Samantha) sitting in her spot from v16s57_2 renders and Cameron
         with dissolve
 
@@ -352,7 +355,18 @@ label v16s57:
     pause 0.75
 
     if v14_help_lindsey: # -if helping Lindsey, transition to Scene 58-
-        jump v16s58
+        scene v16s58_1 # TPP. Show MC (no expression, mouth is closed) walking along a sidewalk, plain background (something easy to render)
+        with dissolve
 
+        u "(I was hoping to fit in a quick nap, but frat drama bullshit strikes again... *Sighs*)"
+
+        u "(Time to meet Lindsey.)"
+
+        if v16_lindsey_newspaper: # -if helping Lindsey with interview, transition to Scene 60-
+            jump v16s60
+
+        else: # -if helping Lindsey with Polly endorsement, transition to Scene 59-
+            jump v16s59
+        
     else: # -if not helping Lindsey, transition to Scene 61-
         jump v16s61

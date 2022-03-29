@@ -4,6 +4,12 @@
 # Time: Morning
 
 init python:
+    def v16s11_reply1():
+        nora.messenger.newMessage("Perfect :)")
+    
+    def v16s11_reply2():
+        nora.messenger.newMessage("Haha, sounds good.")
+
     def v16s11_reply3():
         nora.messenger.newMessage("Perfect :)")
 
@@ -17,14 +23,9 @@ label v16s11:
     pause 0.75
 
     scene v16s11_2 # TPP. Show Riley running up to MC from behind, MC slightly turning toward Riley, MC slight smile, mouth closed, Riley slight smile, mouth open.
-    with vpunch
-
-    ri "Hey, wait up."
-
-    scene v16s11_1a # TPP. Show MC walking the SVC hallways with Riley, both slight smile, mouth closed.
     with dissolve
 
-    pause 0.75
+    ri "Hey, wait up."
 
     scene v16s11_3 # FPP. Walking down the hallway, MC looking at Riley, Riley looking at MC, Riley slight smile, mouth closed.
     with dissolve
@@ -41,7 +42,7 @@ label v16s11:
 
     u "Glad to hear it."
 
-    if not v16s1_win_fight_with_tom:
+    if not v16_wintom:
         scene v16s11_3a
         with dissolve
 
@@ -116,11 +117,16 @@ label v16s11:
 
                 ri "Okay."
 
+    scene v16s11_1a # TPP. Show MC walking the SVC hallways with Riley, both slight smile, mouth closed.
+    with dissolve
+
+    pause 0.75
+
     # -Pinboard MUST include a sign up sheet for the newspaper. Dialogue that is used for it is "Looking for one to two more students to join the Newspaper squad". This does not need to be shown, we can be looking at riley while shes reading this line.
     # -Pinboard MUST include a notice about sex education week, and a note about how the nurse always has free condoms available to students in her office. MC reacts to this briefly.
     # -Pinboard MUST include chloe campaign poster, she reacts to it saying "its her bad side". We can use a photo that she's already posted for her campaign, or it can be new.
 
-    scene v16s11_4 # TPP. MC and Riley walking up to a pinboard thats in the hallways somewhere, on the pinboard there is a sign up sheet for the newspaper on the paper it says "Looking for one to two more students to join the Newspaper squad!", a notice paper about sex education and that the school nurse provides free condoms to students, and  Chloe's presidential campaign poster..
+    scene v16s11_4 # TPP. MC and Riley walking up to a pinboard thats in the hallways somewhere, on the pinboard there is a sign up sheet for the newspaper on the paper it says "Looking for one to two more students to join the Newspaper squad!", a notice paper about sex education and that the school nurse provides free condoms to students, and Chloe's presidential campaign poster.
     with dissolve
 
     pause 0.75
@@ -150,7 +156,7 @@ label v16s11:
 
     u "Oooh... Risky."
 
-    if riley.relationship >= Relationship.LIKES: ###???
+    if riley.relationship >= Relationship.FWB:
         scene v16s11_6c # FPP. At the pinboard, MC looking at Riley, Riley body facing the board, head turned toward MC, Riley laughing, mouth open.
         with dissolve
 
@@ -189,14 +195,11 @@ label v16s11:
 
     u "Oh..."
 
-    scene v16s11_6b
-    with dissolve
-
     menu:
         "Be nice":
             $ add_point(KCT.BRO)
             scene v16s11_6b
-            with dissolve
+            #with dissolve
 
             u "Well, good for him. Maybe it could be cool."
 
@@ -208,7 +211,7 @@ label v16s11:
         "Joke about Elijah":
             $ add_point(KCT.TROUBLEMAKER)
             scene v16s11_6b
-            with dissolve
+            #with dissolve
 
             u "Ew..."
 
@@ -217,8 +220,8 @@ label v16s11:
 
             ri "Hey! Be nice."
 
-    scene v16s11_6a
-    with dissolve
+            scene v16s11_6a
+            with dissolve
 
     ri "\"Looking for one to two more students to join the Newspaper squad.\""
 
@@ -227,41 +230,41 @@ label v16s11:
 
     u "Newspaper squad... *Snortles*"
 
-    scene v16s11_6a
+    scene v16s11_6c
     with dissolve
 
     ri "*Giggles* Stop it!"
 
-    scene v16s11_6b
+    scene v16s11_6d
     with dissolve
 
     u "I tried!"
 
-    scene v16s11_6f
+    scene v16s11_6c
     with dissolve
 
     ri "I think I'm gonna do it."
 
-    scene v16s11_6b
+    scene v16s11_6d
     with dissolve
 
     u "Wait, really?"
 
-    scene v16s11_6f
+    scene v16s11_6c
     with dissolve
 
     ri "Yeah, why not? I could easily do some on-campus photography for it."
 
     ri "And honestly, it sounds kind of fun. Interviewing students and staff about important issues?"
 
-    scene v16s11_6b
+    scene v16s11_6d
     with dissolve
 
     menu:
         "Support her":
             $ add_point(KCT.BRO)
-            scene v16s11_6b
-            with dissolve
+            scene v16s11_6d
+            #with dissolve
 
             u "Ha, I agree. You should do it. Could be fun."
 
@@ -272,8 +275,8 @@ label v16s11:
 
         "Elijah sucks though":
             $ add_point(KCT.TROUBLEMAKER)
-            scene v16s11_6b
-            with dissolve
+            scene v16s11_6d
+            #with dissolve
 
             u "Elijah sucks though, Riley. Seriously."
 
@@ -305,7 +308,7 @@ label v16s11:
     scene v16s11_6k # FPP. At the pinboard, MC looking at Riley, Riley looking at MC, MC reaching for the PEN, Riley slight smile, mouth closed.
     with dissolve
 
-    u "Hmm... (She's not wrong though... It would look good on a resume if I took part in a student club.)"
+    u "Hmm... (She's not wrong, though... It would look good on a resume if I took part in a student club.)"
 
     scene v16s11_8 # FPP. At the pinboard, MC at the sign up sheet, holding the PEN in his hand.
     with dissolve
@@ -313,6 +316,8 @@ label v16s11:
     menu:
         "Sign up":
             $ v16s11_sign_up = True
+            $ grant_achievement("extra_extra")
+
             u "I hope I don't regret this."
 
             ri "Haha, come on! This will be so fun."
@@ -333,7 +338,13 @@ label v16s11:
             ri "*Laughs*"
 
         "Don't sign up":
+            scene v16s11_6d
+            with dissolve
+
             u "Nah, I'm good. Besides, I don't stand a chance against your creative eye and... superior intellect."
+
+            scene v16s11_6c
+            with dissolve
 
             ri "Haha, right. Whatever you say."
 
@@ -347,24 +358,22 @@ label v16s11:
 
     cl "Hey guys!"
 
-    if chloe.relationship >= Relationship.GIRLFRIEND: 
-        play sound "sounds/kiss.mp3"
-
+    if chloe.relationship >= Relationship.GIRLFRIEND:
         scene v16s11_11a # TPP. At the pinboard, MC looking at Chloe, Chloe leaning forward and kissing MC on the cheek.
         with dissolve
+        play sound "sounds/kiss.mp3"
+        pause 1.25
 
-        pause 0.75
-
-        if riley.relationship >= Relationship.LIKES: ###???
+        if riley.relationship >= Relationship.FWB:
             scene v16s11_12 # TPP. Close up of Riley facing MC and Chloe but her she looks away from seeing MC and Chloe kiss.
             with dissolve
 
-            pause 0.75
+            pause 1.25
 
     scene v16s11_10a # TPP. Show Chloe standing with MC and Riley at the pinboard.
     with dissolve
 
-    pause 0.75
+    pause 1
 
     scene v16s11_11b # FPP. At the pinboard, MC looking at Chloe, Chloe looking at her campaign poster on the pinboard, Chloe neutral face, mouth open.
     with dissolve
@@ -438,7 +447,7 @@ label v16s11:
     scene v16s11_6l
     with dissolve
 
-    ri "Right... Oh- Look at the time! I've gotta go do some... work on the... Assignment."
+    ri "Right... Oh- Look at the time! I've gotta go do some... work on the... assignment."
 
     ri "Catch you guys later!"
 
@@ -453,9 +462,9 @@ label v16s11:
     u "(I think Riley's over the Chicks at the moment.)"
 
 # -if Announcement, and Chloe and Lindsey went to Mr. Lee's office
-    if v15_lindsey_recording > 0: ### VERIFY This gets us annoucenment (and I think that will flow to Mr. Lee's office, otherwise we can add sceen8 to sceneList and check for that)
+    if v15_lindsey_recording > 0:
         scene v16s11_11d
-        with dissolve
+        #with dissolve
 
         u "So, how did it go with Mr. Lee?"
 
@@ -510,20 +519,18 @@ label v16s11:
             scene v16s11_11f
             with dissolve
 
-            cl "Thanks to you of course. That wonderful gift of yours gave him some terrific ideas."
+            cl "He mentioned you, by the way. He made a point of saying your gift had helped increase his collection." # don't forget Mr. Lee already had "tons of them all over my house and even in my office back on campus"
 
             scene v16s11_11d
             with dissolve
 
             u "*Laughs* You're welcome."
 
-        scene v16s11_11d
-        with dissolve
+        else:
+            scene v16s11_11d
+            with dissolve
 
         u "(So much for not wanting to talk about it.)"
-
-    scene v16s11_11d
-    with dissolve
 
     u "We were actually looking at the newspaper sign-up sheet, Riley and I."
 
@@ -548,9 +555,6 @@ label v16s11:
     cl "That's such a good idea! I could use this for my campaign!"
 
     if v14_help_chloe:
-        scene v16s11_11f
-        with dissolve
-
         cl "Come on. Let's go plan phase three, now!"
 
         scene v16s11_14 # TPP. Chloe leading MC by his arm along the hallway 
@@ -575,13 +579,9 @@ label v16s11:
         
         pause 0.75
         
-        ### check queue
-        
         $ nora.messenger.newMessage("Hey, it's too nice out to be inside all day. Come join me at the park for yoga?")
-        $ nora.messenger.addReply("I do need a good stretch... lol. Got a few things left to do on campus, but I'll be there ASAP.")
-        $ nora.messenger.newMessage("Perfect :)")
-        $ nora.messenger.addReply("Sigh... If I have to... ;) Be there as soon as I finish up on campus.")
-        $ nora.messenger.newMessage("Haha, sounds good.")
+        $ nora.messenger.addReply("I do need a good stretch... lol. Got a few things left to do on campus, but I'll be there ASAP.", v16s11_reply1)
+        $ nora.messenger.addReply("Sigh... If I have to... ;) Be there as soon as I finish up on campus.", v16s11_reply2)
 
         label v16s11_phoneContinue:
             if nora.messenger.replies:

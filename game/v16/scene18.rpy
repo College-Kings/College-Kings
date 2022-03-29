@@ -39,12 +39,17 @@ label v16s18: # MC goes home
 
     pause 0.75
 
-    ### check queue
-
-    $ amber.messenger.newMessage("Hey. You know how much you love me? ;) I'm at work all night tonight and forgot my phone charger at home! Grab it for me please? Key is under the mat.")
+    $ amber.messenger.newMessage("Hey. You know how much you love me? ;) I'm at work all night tonight and forgot my phone charger at home! Grab it for me please? Key is under the mat.", force_send=True)
     $ amber.messenger.addReply("Yeah, I guess I can help you out this one time :P")
     $ amber.messenger.addReply("Ughhhhh")
     $ amber.messenger.newMessage("Hurry, please. Battery's almost dead!!!!!!!")
+
+    label v16s18_phoneContinue:
+        if amber.messenger.replies:
+            call screen phone
+        if amber.messenger.replies:
+            u "(I should reply to Amber.)"
+            jump v16s18_phoneContinue
 
     if joinwolves:
         scene v16s18_4b # TPP Same angle as 4, MC putting his phone back into his pocket [WOLF ROOM].
@@ -60,6 +65,13 @@ label v16s18: # MC goes home
         scene v16s18_1a # TPP Same angle as 1, MC leaving his room [APE ROOM].
     with dissolve
 
+    pause 0.75
+
+    play sound "sounds/doorclose.mp3"
+
+    scene black
+    with vpunch
+    
     pause 0.75
 
     jump v16s19 # -Transition to Scene 19-

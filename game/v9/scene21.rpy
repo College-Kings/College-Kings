@@ -87,7 +87,7 @@ label v9_room_w_chris:
         if julia.messenger.replies:
             call screen phone
         if julia.messenger.replies:
-            "(I should text Julia.)"
+            u "(I should text Julia.)"
             jump s21_PhoneContinue
 
     u "(I should probably head over to Ms. Roses.)"

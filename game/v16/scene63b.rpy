@@ -464,7 +464,7 @@ label v16s63b:
     scene v16s63b_22b # TPP. Chloe and Lindsey walk away from eachh other with pained expressions mouths are closed, looking away from each other
     with dissolve
 
-    pause 0.75  
+    pause 0.75
 
     scene v16s63b_15
     with dissolve
@@ -800,7 +800,7 @@ label v16s63b:
     scene v16s63b_7d
     with dissolve
 
-    cl "Just to remind you, there's a suggestion box on the table for any ideas you have; I want to go through them when we go outside."
+    cl "Just to remind you, there's a suggestion box on the table for any ideas you have. I want to go through them when we go outside."
 
     scene v16s63b_7h # FPP. Show just Chloe (slight smile, mouth is open, looking at MC)
     with dissolve
@@ -895,5 +895,7 @@ label v16s63b:
 
     scene v16s63b_30c # TPP. MC (slight smile, mouth is closed), picks up the suggestion box and exits with Lindsey (slight smile, mouth is closed) both of them are exiting the kitchen
     with dissolve
+
+    pause 0.75
 
     jump v16s64 # -Transition to Scene 64-

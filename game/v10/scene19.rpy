@@ -32,7 +32,7 @@ label v10_walk_jenny_text:
         if jenny.messenger.replies:
             call screen phone
         if jenny.messenger.replies:
-            "(I should reply to Jenny.)"
+            u "(I should reply to Jenny.)"
             jump v10s19_PhoneContinue
 
     u "(Hmm, maybe I should invite Penelope too, otherwise it's just me and Jenny.)"
@@ -57,7 +57,7 @@ label v10_walk_jenny_text:
                 if penelope.messenger.replies:
                     call screen phone
                 if penelope.messenger.replies:
-                    "(I should text to Penelope.)"
+                    u "(I should text Penelope.)"
                     jump v10s19_PhoneContinue1
 
             u "(I hope this goes smooth, Jenny hearing it from Penelope will probably help them both process the situation.)"

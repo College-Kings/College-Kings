@@ -224,7 +224,7 @@ screen choice(items, seconds=3, fail_label=None):
                 action item.action
                 minimum (550, 131)
                 
-                text item.caption.upper():
+                text "[item.caption!uit]":
                     align (0.5, 0.5)
 
     if fail_label is not None:
@@ -345,10 +345,11 @@ screen main_menu():
     style_prefix "main_menu"
 
     default image_path = "gui/main_menu/"
+    default whats_new_text = get_file_contents(os.path.join(config.basedir, "game", "whats-new.txt"))
 
     add image_path + "background.webp"
 
-    textbutton ("Test Language") action Language("template_lang")
+    textbutton _("Test Language") action Language("francais")
 
     # Patreon
     if not config.enable_steam:
@@ -397,12 +398,24 @@ screen main_menu():
         action ShowMenu("load")
         pos (1096, 880)
 
-    # LEARN MORE
-    imagebutton:
-        idle image_path + "learn_more_idle.webp"
-        hover Transform(image_path + "learn_more_hover.webp", pos=(-40, -33))
-        action OpenURL("http://collegekingsgame.com")
-        pos (303, 976)
+    hbox:
+        yalign 1.0
+        yoffset -20
+        spacing -20
+
+        # WHAT'S NEW
+        imagebutton:
+            idle image_path + "whats-new-idle.webp"
+            hover image_path + "whats-new-hover.webp"
+            action Show("whats_new", dialogue=whats_new_text)
+            yalign 0.5
+
+        # LEARN MORE
+        imagebutton:
+            idle image_path + "learn_more_idle.webp"
+            hover image_path + "learn_more_hover.webp"
+            action OpenURL("http://collegekingsgame.com")
+            yalign 0.5
 
     hbox:
         align (1.0, 1.0)
@@ -421,6 +434,9 @@ screen main_menu():
             action Quit()
 
     text "v" + config.version.split(" ")[0] align (1.0, 1.0) xoffset -20 color "#4e628f" size 30
+
+    if whats_new_text != persistent.previous_whats_new:
+        on "show" action Show("whats_new", dialogue=whats_new_text)
 
 
 ## Game Menu screen ############################################################

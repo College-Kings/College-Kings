@@ -36,9 +36,6 @@ label v16s22:
     u "Ah, no problem."
 
     if v16s20_take_twazzlers: # -if MC also took the Twazzlers
-        scene v16s22_3b
-        with dissolve
-
         u "Also..."
 
         scene v16s22_3c # FPP. MC hands Amber the Twazzlers and Amber takes the Twazzlers out of his hand, Amber has a slight smile, mouth is closed
@@ -69,7 +66,7 @@ label v16s22:
         scene v16s22_4 # TPP. Amber leans over the Lews counter and gives MC a hug, both of them slight smiles, mouths are closed
         with dissolve
 
-        pause 0.75
+        pause 1.25
 
         scene v16s22_3a
         with dissolve
@@ -91,7 +88,7 @@ label v16s22:
     scene v16s22_4a # FPP. MC leaning over the counter looking at Amber's ass as she's on her knees plugging int her phone.
     with dissolve
 
-    pause 0.75
+    pause 1.25
 
     scene v16s22_3a
     with dissolve
@@ -128,7 +125,7 @@ label v16s22:
     scene v16s22_3a
     with dissolve
 
-    am "My boss."
+    am "Our store manager."
 
     scene v16s22_4b # TPP. Amber is still behind the counter and points across the room towards her store manager, Mc is looking in the direction Amber is pointing, they both have slight smiles, mouths are closed, The Store Manager is kneeling down stocking shelves, no expression, mouth is closed, not looking at Amber or MC
     with dissolve
@@ -215,7 +212,7 @@ label v16s22:
 
     ab "Even though she gets an employee discount here at Lew's..."
 
-    if "bills" in freeroam15: # if clicked on the bills at amber's house
+    if "bills" in freeroam16: # if clicked on the bills at amber's house
         scene v16s22_5b
         with dissolve
 
@@ -297,18 +294,15 @@ label v16s22:
 
     am "Ha! I'm glad."
 
-    if "bills" in freeroam15: # if MC looked at the Unpaid bills at amber's house
+    if "bills" in freeroam16: # if MC looked at the Unpaid bills at amber's house
         scene v16s22_9a
         with dissolve
 
         u "(Should I bring up the stack of bills that I saw? Even though it's really none of my business...)"
 
-        scene v16s22_9
-        with dissolve
-
         menu:
             "Ask about bills":
-                $ v16s22_mention_bills = True # TODO: Variable
+                $ v16_amber_mention_bills = True
 
                 scene v16s22_9a
                 with dissolve
@@ -330,7 +324,9 @@ label v16s22:
 
                 pause 0.75
 
-                if amber.relationship >= Relationship.FRIEND and kct == "popular": # TODO: Variable  # -if AmberRS AND AmberKCT amber passed
+                if amber.relationship >= Relationship.FWB and kct == "popular": # -if AmberRS AND AmberKCT amber passed
+                    call screen kct_popup
+                    
                     scene v16s22_9c # FPP. Show just Amber with no expression, mouth is open, looking at MC [LEWS STAFF ROOM]
                     with dissolve
 
@@ -413,7 +409,7 @@ label v16s22:
 
                     am "You're right, you shouldn't have. Lesson learned."
 
-                if amber.relationship >= Relationship.FRIEND and not kct == "popular": # TODO: Variable  # -if AmberRS BUT AmberKCT not passed
+                elif amber.relationship >= Relationship.FWB: # -if AmberRS BUT AmberKCT not passed
                     scene v16s22_9c
                     with dissolve
 
@@ -457,7 +453,7 @@ label v16s22:
                     scene v16s22_9g # FPP. Show just Amber slightly angry expression, mouth is open, Amber is looking at MC [LEWS STAFF ROOM]
                     with dissolve
 
-                    am "I'm sober, [name]! I have a decent job; I'm surrounded by great people."
+                    am "I'm sober, [name]! I have a decent job. I'm surrounded by great people."
 
                     scene v16s22_9h # FPP. Show just Amber slightly sad expression, mouth is open, Amber is looking slightly away from MC [LEWS STAFF ROOM]
                     with dissolve
@@ -484,7 +480,7 @@ label v16s22:
 
                     am "Good, thank you."
 
-                if amber.relationship <= Relationship.FRIEND: # TODO: Variable  # -if not AmberRS, regardless of KCT
+                else: # -if not AmberRS, regardless of KCT
                     scene v16s22_9i # FPP. Show just Amber with an angry expression, mouth is open, looking at MC [LEWS STAFF ROOM] 
                     with dissolve
 
@@ -551,25 +547,19 @@ label v16s22:
                 scene v16s22_9a
                 with dissolve
 
-                u "(Nah, not a good idea. It's not my place or my business. I shouldn't have even looked, to be honest.)"
+                u "(Nah, not a good idea. It's not my place or my business. I shouldn't even have looked, to be honest.)"
 
             # -Regardless-
 
-    if "laptop" in freeroam15: # if MC looked at the Open laptop
+    if "laptop" in freeroam16: # if MC looked at the Open laptop
         scene v16s22_9a
         with dissolve
 
         u "(I kinda want to hear the story behind that erotic novel she's been reading... Should I mention it?)"
 
-        scene v16s22_9
-        with dissolve
-
         menu:
             "Mention her laptop":
-                $ v16s22mention_laptop = True #  TODO: Variable
-
-                scene v16s22_9a
-                with dissolve
+                $ v16_amber_mention_laptop = True
 
                 u "I also caught a glimpse of your latest web browser..."
 
@@ -583,7 +573,7 @@ label v16s22:
 
                 am "*Whispers* Oh my fucking God..."
 
-                if amber.relationship >= Relationship.FRIEND: # TODO: Variable  # -if AmberRS
+                if amber.relationship >= Relationship.FWB: # -if AmberRS
                     scene v16s22_9d
                     with dissolve
 
@@ -654,7 +644,10 @@ label v16s22:
 
                     pause 0.75
 
-                if amber.relationship <= Relationship.FRIEND: # TODO: Variable # -if NOT AmberRS
+                    scene v16s22_9d
+                    with dissolve
+
+                else: # -if NOT AmberRS
                     scene v16s22_9g
                     with dissolve
 
@@ -670,7 +663,7 @@ label v16s22:
 
                     am "So what? It's called privacy."
 
-                    if v16s22mention_bills: # -if chose to mention the unpaid bills he saw [LEWS STAFF ROOM]
+                    if v16_amber_mention_bills: # -if chose to mention the unpaid bills he saw [LEWS STAFF ROOM]
                         scene v16s22_9i
                         with dissolve
 
@@ -679,7 +672,7 @@ label v16s22:
                         scene v16s22_9j
                         with dissolve
 
-                        u "There wasn't even a password, dude!"
+                        u "There wasn't even a password!"
 
                         scene v16s22_9i
                         with dissolve
@@ -692,9 +685,6 @@ label v16s22:
                         am "*Sighs*"
 
                 # -regardless of RS or not, continue on mention her laptop path
-
-                scene v16s22_9d
-                with dissolve
 
                 u "Haha, it's fine. I promise your secret is safe with me."
 
@@ -729,27 +719,18 @@ label v16s22:
                 pause 0.75
 
             "Keep it a secret":
-                scene v16s22_9a
-                with dissolve
-
                 u "(Nah, her guilty pleasure secret is safe with me... For now.)"
 
     # -Regardless-
 
-    if "photos" in freeroam15: # if MC looked at the Photos in amber's house
+    if "photos" in freeroam16: # if MC looked at the Photos in amber's house
         scene v16s22_9a
         with dissolve
 
         u "(I don't think she'll mind if I talk about the pictures she has up in her house... Will she?)"
 
-        scene v16s22_9a
-        with dissolve
-
         menu:
             "Ask about photos":
-                scene v16s22_9a
-                with dissolve
-
                 u "So, you used to play violin?"
 
                 scene v16s22_9
@@ -762,21 +743,19 @@ label v16s22:
 
                 u "Maybe..."
 
-                if v16s22mention_bills and v16s22mention_laptop: # -if MC chose Ask about bills AND Mention her laptop (extra dialogue)
+                if v16_amber_mention_bills and v16_amber_mention_laptop: # -if MC chose Ask about bills AND Mention her laptop (extra dialogue)
                     scene v16s22_9n
                     with dissolve
-
+                    
                     am "You really took your time in there, huh. *Laughs*"
 
                     scene v16s22_9a
                     with dissolve
 
+                    $ grant_achievement("just_curious_about_you")
                     u "Ha, just curious about you."
 
                 # -continue regardless-
-
-                scene v16s22_9a
-                with dissolve
 
                 u "You were a little Tchaikovsky in the making. *Laughs*"
 
@@ -890,9 +869,6 @@ label v16s22:
 
                 u "(I'm not gonna tell her. I'm not crushing that dream today.)"
 
-                scene v16s22_9a
-                with dissolve
-
                 u "So, who's the little dude in one of the photos with you?"
 
                 scene v16s22_9n
@@ -968,9 +944,6 @@ label v16s22:
                 pause 0.75
 
             "Leave it alone":
-                scene v16s22_9a
-                with dissolve
-
                 u "(I'll mind my own business, maybe she'll tell me about them on her own one day.)"
 
                 scene v16s22_8e # TPP. Show Amber and Mc sitting down on a couch together, Amber is looking in a direction away from MC, both of them taking a sip from their coffee cups, both slight smiles [LEWS STAFF ROOM]
@@ -996,7 +969,7 @@ label v16s22:
 
         pause 0.75
 
-        scene v16s22_8f # TPP. Amber throws her body quickly over MC, he falls back slightly on the couch, Amber is face to face with Mc looking at him seductively her mouth is closed, Both of them have the coffee cups in their hands but in a manner that it didn't spill, Mc is looking at Amber with a slightly shocked expression, mouth is open  [LEWS STAFF ROOM]
+        scene v16s22_8f # TPP. Amber throws her body quickly over MC, he falls back slightly on the couch, Amber is face to face with Mc looking at him seductively her mouth is closed, Both of them have the coffee cups in their hands but in a manner that it didn't spill, Mc is looking at Amber with a slightly shocked expression, mouth is open [LEWS STAFF ROOM]
         with dissolve
 
         pause 0.75
@@ -1096,9 +1069,9 @@ label v16s22:
 
         am "I've gotta get back, and you need to get home."
 
-        ### ERROR: [End of Checkpoint 1.1. Continue to Checkpoint 2]
+        # [End of Checkpoint 1.1. Continue to Checkpoint 2]
 
-    elif amber.relationship >= Relationship.FRIEND: # -if AmberFriend [Checkpoint 1.2]
+    else: # -if AmberFriend [Checkpoint 1.2]
         scene v16s22_9
         with dissolve
 
@@ -1178,7 +1151,7 @@ label v16s22:
             scene v16s22_9a
             with dissolve
 
-            u "You did give me a blowjob, though"
+            u "You did give me a blowjob, though."
 
             scene v16s22_9
             with dissolve
@@ -1216,7 +1189,7 @@ label v16s22:
 
     # -Regardless-
 
-    ### ERROR: [Checkpoint 2]
+    # [Checkpoint 2]
 
     scene v16s22_8g # TPP. Show Amber (mouth open) and Mc (mouth closed) standing up from the couch and giving each other a hug, they are no longer holding their coffee cups, both slight smiles. [LEWS STAFF ROOM]
     with dissolve
@@ -1228,7 +1201,7 @@ label v16s22:
 
     u "Of course."
 
-    if v16s22mention_bills and v16s22mention_laptop: # -if MC chose Ask about bills or Mention her laptop at all in this convo (extra dialogue)
+    if v16_amber_mention_bills or v16_amber_mention_laptop: # -if MC chose Ask about bills or Mention her laptop at all in this convo (extra dialogue)
         scene v16s22_10a # FPP. Show just Amber from the shoulders up, slight smiles, mouth is open, looking at MC [LEWS STAFF ROOM]
         with dissolve
 

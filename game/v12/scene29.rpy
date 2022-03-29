@@ -1070,6 +1070,9 @@ label v12_lauren_sex:
                 if lauren.relationship >= Relationship.GIRLFRIEND and (amber.relationship < Relationship.FWB) and (aubrey.relationship < Relationship.FWB) and (candy.relationship < Relationship.FWB) and (chloe.relationship < Relationship.FWB) and (emily.relationship < Relationship.FWB) and (evelyn.relationship < Relationship.LIKES) and (lindsey.relationship < Relationship.KISS) and (ms_rose.relationship < Relationship.FWB) and (penelope.relationship < Relationship.LIKES) and (riley.relationship < Relationship.FWB) and (samantha.relationship < Relationship.MOVE):
                     $ grant_achievement("worth_the_wait")
 
+                if lauren.relationship < Relationship.GIRLFRIEND and chloe.relationship >= Relationship.GIRLFRIEND:
+                    $ grant_achievement("two_timer")
+
                 $ lauren.relationship = Relationship.GIRLFRIEND
 
                 la "Phew! Haha... That was absolutely perfect."
